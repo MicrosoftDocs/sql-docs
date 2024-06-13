@@ -115,6 +115,12 @@ StatusDescription : OK
 
 This one should return a 200 as there is an unauthenticated route.
 
+## Probe connectivity to all regions
+
+You can probe connectivity to all regions with the [test-connectivity.ps1](https://github.com/microsoft/sql-server-samples/samples/features/azure-arc/troubleshooting/test-connectivity.ps1) PowerShell script.
+
+:::code language="powershell" source="~/../sql-server-samples/samples/features/azure-arc/troubleshooting/test-connectivity.ps1":::
+
 ## Endpoint reference
 
 Beginning with [March, 12 2024](release-notes.md#march-12-2024), the Azure Extension for SQL Server uses the following endpoints:

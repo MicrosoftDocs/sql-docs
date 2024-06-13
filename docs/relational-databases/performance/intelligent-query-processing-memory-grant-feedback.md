@@ -4,7 +4,7 @@ description: Learn about Memory grant feedback, part of the Intelligent Query Pr
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: derekw
-ms.date: 01/19/2024
+ms.date: 06/11/2024
 ms.service: sql
 ms.subservice: configuration
 ms.topic: conceptual
@@ -26,7 +26,7 @@ This feature has been released in three waves. Batch mode memory grant feedback,
 
 ## Batch mode memory grant feedback
 
-**Applies to:** [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)]), [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]
+**Applies to:** [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)]), [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)] (Starting with database compatibility level 140)
 
 A query's execution plan includes the minimum required memory needed for execution and the ideal memory grant size to have all rows fit in memory. Performance suffers when memory grant sizes are incorrectly sized. Excessive grants result in wasted memory and reduced concurrency. Insufficient memory grants cause expensive spills to disk. By addressing repeating workloads, batch mode memory grant feedback recalculates the actual memory required for a query and then updates the grant value for the cached plan. When an identical query statement is executed, the query uses the revised memory grant size, reducing excessive memory grants that impact concurrency and fixing underestimated memory grants that cause expensive spills to disk.
 
@@ -129,7 +129,7 @@ A USE HINT query hint takes precedence over a [database scoped configuration](..
 
 ## Row mode memory grant feedback
 
-**Applies to:** [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE [sql-server-2019](../../includes/sssql19-md.md)]), [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]
+**Applies to:** [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE [sql-server-2019](../../includes/sssql19-md.md)]), [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)] (Starting with database compatibility level 150)
 
 Row mode memory grant feedback expands on the batch mode memory grant feedback feature by adjusting memory grant sizes for both batch and row mode operators.
 
@@ -165,7 +165,7 @@ Values surfaced in this attribute are as follows:
 
 ## Percentile and persistence mode memory grant feedback
 
-**Applies to:** [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]), [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]
+**Applies to:** [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]), [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)] (Currently, persistence only)
 
 This feature was introduced in [!INCLUDE [ssSQL22](../../includes/sssql22-md.md)], however this performance enhancement is available for queries that operate in the database compatibility level 140 (introduced in SQL Server 2017) or higher, or the `QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_n` hint of 140 and higher, and when Query Store is enabled for the database and is in a "read write" state.
 

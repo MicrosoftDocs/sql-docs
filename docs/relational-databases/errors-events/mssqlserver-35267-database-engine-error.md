@@ -4,7 +4,7 @@ description: "MSSQLSERVER_35267"
 author: pijocoder
 ms.author: jopilov
 ms.reviewer: mathoma, randolphwest
-ms.date: 02/17/2023
+ms.date: 06/12/2024
 ms.service: sql
 ms.subservice: supportability
 ms.topic: "reference"
@@ -41,9 +41,9 @@ Always On Availability Groups connection with primary database terminated for se
 
 As you can see the error can appear on the Primary replica indicating that it lost communication with the Secondary replica, or vice versa.
 
-Error 35267 is typically intermittent and may resolve itself the moment the underlying cause resolves itself. For example, an intermittent network issue may resolve itself and the connection may re-establish itself.
+Error 35267 is typically intermittent and might resolve itself the moment the underlying cause resolves itself. For example, an intermittent network issue might resolve itself and the connection might re-establish itself.
 
-In many cases, the remote node to which the local node is trying to connect may not even be aware of the connection failure. Therefore, you may only see this error raised on one of the replicas, not both.
+In many cases, the remote node to which the local node is trying to connect might not even be aware of the connection failure. Therefore, you might only see this error raised on one of the replicas, not both.
 
 Error 35267 can sometimes occur together with error 35206, which is raised when a significant period has elapsed without a successful connection (for example, more than 10 seconds).
 
@@ -55,7 +55,7 @@ Always On Availability Groups connection with primary database terminated for se
 Always On Availability Groups connection with primary database terminated for secondary database 'ContosoMktngDb' on the availability replica 'PRODSQL' with Replica ID: {xxxxxxxx-xxxx-xxxx-xxxxx-xxxxxxxxxxxx}. This is an informational message only. No user action is required.
 ```
 
-The AG connection termination with the remote replica may lead to various issues local replica. For example, if  the AG uses SYNCHRONOUS mode and the connection is lost, the local replica may end up waiting for confirmation from the remote. As a result, transaction log isn't truncated and the transaction log to run out of space (error [9002](mssqlserver-9002-database-engine-error.md)) and later to become unavailable (error [9001](mssqlserver-9001-database-engine-error.md)). Here's an example of group of errors where this occurred. Notice that the reason for transaction log being full is 'AVAILABILITY_REPLICA', which means this replica is waiting for the remote one to acknowledge it has applied log records.
+The AG connection termination with the remote replica can lead to various issues local replica. For example, if the AG uses SYNCHRONOUS mode and the connection is lost, the local replica might end up waiting for confirmation from the remote. As a result, transaction log isn't truncated and the transaction log to run out of space (error [MSSQLSERVER_9002](mssqlserver-9002-database-engine-error.md)) and later to become unavailable (error [MSSQLSERVER_9001](mssqlserver-9001-database-engine-error.md)). Here's an example of group of errors where this occurred. The reason for transaction log being full is 'AVAILABILITY_REPLICA', which means this replica is waiting for the remote one to acknowledge it's applied log records.
 
 ```output
 Error: 9002, Severity: 17, State: 9.
@@ -77,7 +77,7 @@ Recovery of database 'ContosoAnalyticsDb' (6) is 0% complete (approximately 6017
 
 ## Cause
 
-- Network connection issues may exist between the primary and secondary replicas
+- Network connection issues can exist between the primary and secondary replicas
 - SQL Server or OS issues on the primary or secondary replicas causing threads not to be able to run. Examples include:
   - SQL OS Scheduler issues (non-yielding or deadlock schedulers)
   - Low memory on the machine leading to Working set trimming of all processes on the system including SQL Server
@@ -86,11 +86,11 @@ Recovery of database 'ContosoAnalyticsDb' (6) is 0% complete (approximately 6017
 
 ## User action
 
-The information below outlines the more common scenarios but isn't an exhaustive list of troubleshooting steps. The specific reasons for the occurrence of this problem may include a long list of possibilities.
+The information below outlines the more common scenarios but isn't an exhaustive list of troubleshooting steps. The specific reasons for the occurrence of this problem can include a long list of possibilities.
 
 ### Connection issues
 
-To check for connection issues from the SQL Server where the error is raised to the remote SQL Server, you may consider the following steps:
+To check for connection issues from the SQL Server where the error is raised to the remote SQL Server, you can consider the following steps:
 
 #### Step 1. Ensure the endpoint on the remote SQL Server is active
 
@@ -111,7 +111,7 @@ Run the following query to discover the endpoint
 
 #### Step 2. Test connectivity to the remote endpoint
 
-Use  **[Test-NetConnection](/powershell/module/nettcpip/test-netconnection)** to validate connectivity. If the Endpoint is listening and connection is successful, look for the `TcpTestSucceeded        : True`. Replace ServerName or IP_Address with remote SQL Server and the port number with that of the database mirroring endpoint.
+Use **[Test-NetConnection](/powershell/module/nettcpip/test-netconnection)** to validate connectivity. If the Endpoint is listening and connection is successful, look for the `TcpTestSucceeded        : True`. Replace ServerName or IP_Address with remote SQL Server and the port number with that of the database mirroring endpoint.
 
   ```powershell
   Test-NetConnection -ComputerName <ServerName> -Port <port_number>
@@ -124,7 +124,7 @@ Intermittent network errors are often difficult to track down unless you capture
 
 ### SQL Server scheduler issues
 
-If the SQL Server worker threads are running into scheduler problems for various reasons, then the threads that service incoming requests may stop responding temporarily while the scheduler issues last.
+If the SQL Server worker threads are running into scheduler problems for various reasons, then the threads that service incoming requests can stop responding temporarily while the scheduler issues last.
 
 #### Step 4. Check for scheduler issues on SQL Server
 
@@ -134,19 +134,19 @@ Here's how you can check for short-lived occurrences of scheduler issues that do
 **Use the [System Health](../extended-events/use-the-system-health-session.md) extended event file**
 
 1. Locate the [System Health](../extended-events/use-the-system-health-session.md) extended event file from the time of the event.
-1. Double-click on the  `system_health_0_xxxxxxxxxxxxxxxxxx.xel` to open it in SQL Server Management Studio (SSMS). Alternatively, you can use `sys.fn_xe_file_target_read_file` to view or import the file as a table for easier filtering.
+1. Double-click on the `system_health_0_xxxxxxxxxxxxxxxxxx.xel` to open it in SQL Server Management Studio (SSMS). Alternatively, you can use `sys.fn_xe_file_target_read_file` to view or import the file as a table for easier filtering.
 1. Search for any occurrences of **scheduler_monitor_non_yielding_ring_buffer_recorded** event. If you find any, that's an indication that SQL Server detected non-yielding scheduler events and is recording them. These events are recorded earlier than the actual non-yiedling scheduler memory dumps and error log entries, which occur after 60-70 seconds of non-yielding state. In other words, you can use the **scheduler_monitor_non_yielding_ring_buffer_recorded** to detect short-lived non-yielding scheduler issues that aren't logged in the Error log but still occurred. Those could be reasons for intermittent, or short-lived lack of connectivity between AG nodes.
 
-**Use the [SQLDIAG Extended events log](../../sql-server/failover-clusters/windows/view-and-read-failover-cluster-instance-diagnostics-log.md)**
+**Use the [Diagnostics Log](../../sql-server/failover-clusters/windows/view-and-read-failover-cluster-instance-diagnostics-log.md)**
 
-1. Locate the [SQLDIAG Extended events log](../../sql-server/failover-clusters/windows/view-and-read-failover-cluster-instance-diagnostics-log.md) in the \Log directory from the time of the event (applicable to Windows Cluster systems). The file name format is like this `SERVERNAME_MSSQLSERVER_SQLDIAG_x_xxxxxxxxxxxxxxxxxx.xel`.
+1. Locate the [Diagnostics Log](../../sql-server/failover-clusters/windows/view-and-read-failover-cluster-instance-diagnostics-log.md) in the \Log directory from the time of the event (applicable to Windows Cluster systems). The file name format is like this `SERVERNAME_MSSQLSERVER_SQLDIAG_x_xxxxxxxxxxxxxxxxxx.xel`.
 1. Double-click to open the file in SQL Server Management Studio (SSMS). Alternatively, you can use `sys.fn_xe_file_target_read_file` to view or import the file as a table for easier filtering.
 1. Once opened in SSMS, locate an instance of **component_health_result** event and right-click on the following and choose **Show Column in Table**: **component**, **state_desc**
 1. Then right-click on each column and choose **Filter by this value** to apply the following filters:
     - the **component_health_result** event to be the only one displayed
     - **component** field='query processing'
     - **state_desc** <> 'clean'.
-1. Then double-click on the  **data** column to open the XML data and look `trackingNonYieldingScheduler` value in the first row.
+1. Then double-click on the **data** column to open the XML data and look `trackingNonYieldingScheduler` value in the first row.
 1. If the value is different from `0x0` that means SQL Server has detected early signs of a non-yielding scheduler and reporting it here.
 
    Here's an example where SQL Server has detected a non-yielding condition with a scheduler address "0x4fedb840040":
@@ -170,14 +170,14 @@ There could be various issues at the operating system (OS) level that trigger su
 
    For detailed t-shooting steps, see [MSSQLSERVER_17890](mssqlserver-17890-database-engine-error.md)
 
-#### Step 6. Configure Max Server Memory and Locked Pages in memory correctly
+#### Step 6. Configure Max Server Memory and Lock pages in memory correctly
 
 1. Configure SQL Server Max Server Memory to a value that allows for the OS and other process use have memory available. A recommended value in to set SQL Server max server memory to no more than 75% of RAM size on the system. For more information, see [Server memory configuration options](../../database-engine/configure-windows/server-memory-server-configuration-options.md)
-1. [Enable the Lock Pages in Memory Option (Windows)](../../database-engine/configure-windows/enable-the-lock-pages-in-memory-option-windows.md) to prevent massive paging of the SQL Server buffer cache.
+1. [Enable the Lock pages in memory option (Windows)](../../database-engine/configure-windows/enable-the-lock-pages-in-memory-option-windows.md) to prevent massive paging of the SQL Server buffer cache.
 
 ### Slow disk I/O
 
-In some cases excessively slow I/O may cause the SQL Server threads to stop responding temporarily, which may cause the other AG replica to disconnect.
+In some cases excessively slow I/O can cause the SQL Server threads to stop responding temporarily, which might cause the other AG replica to disconnect.
 
 #### Step 7. Resolve any slow I/O issues
 

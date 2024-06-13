@@ -4275,8 +4275,9 @@ items:
       - name: Work with Server Events
         href: relational-databases/wmi-provider-server-events/working-with-the-wmi-provider-for-server-events.md
 - name: Internals & architecture
-  href: relational-databases/sql-server-guides.md
   items:
+  - name: Overview
+    href: relational-databases/sql-server-guides.md
   - name: Ghost record cleanup process
     href: relational-databases/ghost-record-cleanup-process-guide.md
   - name: Index architecture & design
@@ -4293,6 +4294,8 @@ items:
     href: relational-databases/post-migration-validation-and-optimization-guide.md
   - name: Query processing architecture
     href: relational-databases/query-processing-architecture-guide.md
+  - name: SQL Server I/O fundamentals
+    href: relational-databases/sql-server-storage-guide.md
   - name: Thread & task architecture
     href: relational-databases/thread-and-task-architecture-guide.md
   - name: Transaction log architecture & management guide
@@ -13831,6 +13834,8 @@ items:
         href: relational-databases/system-functions/sys-fn-check-object-signatures-transact-sql.md
       - name: sys.fn_get_audit_file
         href: relational-databases/system-functions/sys-fn-get-audit-file-transact-sql.md
+      - name: sys.fn_get_audit_file_v2
+        href: relational-databases/system-functions/sys-fn-get-audit-file-v2-transact-sql.md
       - name: sys.fn_my_permissions
         href: relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md
       - name: sys.fn_translate_permissions
@@ -17539,13 +17544,14 @@ items:
         - name: MATCH
           href: t-sql/queries/match-sql-graph.md
       - name: Hints
-        href: t-sql/queries/hints-transact-sql.md
         items:
-        - name: Join
+        - name: Overview
+          href: t-sql/queries/hints-transact-sql.md
+        - name: Join hints
           href: t-sql/queries/hints-transact-sql-join.md
-        - name: Query
+        - name: Query hints
           href: t-sql/queries/hints-transact-sql-query.md
-        - name: Hints - Table
+        - name: Table hints
           href: t-sql/queries/hints-transact-sql-table.md
       - name: Predicates
         href: t-sql/queries/predicates.md

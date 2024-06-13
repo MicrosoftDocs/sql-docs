@@ -30,8 +30,12 @@ In this tutorial, you:
 
 You can group data in your SQL Server Reporting Services (SSRS) report. Grouping data helps organize related rows of data into sections, making your report easier to read and interpret.
 
+1. Make sure your Sales Order report is open in Visual Studio.
+
 1. Select the **Design** tab.
+
 1. If you don't see the **Row Groups** pane, right-click the design surface and select **View** > **Grouping**.
+
 1. From the **Report Data** pane, drag the `[Date]` field to the **Row Groups** pane. Place it above the row displayed as **= (Details)**.
 
     > [!NOTE]

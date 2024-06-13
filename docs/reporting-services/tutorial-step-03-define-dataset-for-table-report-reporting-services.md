@@ -23,14 +23,14 @@ In this tutorial, you:
 
 ## Prerequisites
 
-* A [report server and an associated report definition file](docs\reporting-services\tutorial-step-01-create-report-server-project-reporting-services.md) on your local computer.
-* A defined [data source](docs\reporting-services\tutorial-step-02-specify-connection-information-reporting-services.md).
+* A defined [data source] for your report.(docs\reporting-services\tutorial-step-02-specify-connection-information-reporting-services.md).
 
 ## Define a Transact-SQL query for report data  
 
 Create a Transact-SQL query that retrieves sales order information from the [!INCLUDE [sssampledbobject-md](../includes/sssampledbobject-md.md)] database.
 
 1. Make sure your Sales Order report is open in Visual Studio.
+
 1. In the **Report Data** pane, select **New** > **Dataset...**. The **Dataset Properties** dialog opens with the **Query** section highlighted.
 
     :::image type="content" source="media/lesson-3-defining-a-dataset-for-the-table-report-reporting-services/vs-dataset-properties-dialog.png" alt-text="Screenshot of the Dataset Properties dialog with the query option highlighted.":::

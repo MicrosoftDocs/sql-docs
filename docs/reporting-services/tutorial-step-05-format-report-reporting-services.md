@@ -24,11 +24,13 @@ In this tutorial, you:
 
 ## Prerequisites
 
-* Your report has a data table region and fields defined.
+* A [data table region configured and fields defined](docs\reporting-services\tutorial-step-04-add-table-to-report-reporting-services.md) for your report.
 
 ## Format the date
 
 The `[Date]` field expression displays date and time information by default. You can format it to display only the date.
+
+1. Make sure your Sales Order report is open in Visual Studio.
 
 1. On the **Design** tab, right-click the cell with the `[Date]` field expression and then select **Text Box Properties**.
 

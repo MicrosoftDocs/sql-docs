@@ -31,7 +31,9 @@ In this tutorial, you:
 
 Here, you add a table data region to your report layout and populate it with fields from your dataset to display organized data.
 
-1. Select the **Toolbox** tab in the left pane of the Report Designer in Visual Studio. If you don't see the **Toolbox** tab, select **View** menu > **Toolbox**.
+1. Make sure your Sales Order report is open in Visual Studio.
+
+1. Select the **Toolbox** tab in the left pane of the Report Designer. If you don't see the **Toolbox** tab, select **View** menu > **Toolbox**.
 
 1. Choose the **Table** object and drag it to the report design surface. You can also add a table to the report from the design surface. Right-click the design surface and select **Insert** > **Table**.
 

@@ -3,7 +3,7 @@ title: "Publish Reports to a Report Server"
 description: Learn how to use the deployment features in SQL Server Data Tools (SSDT) to publish multiple reports or a report server project to a report server.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 06/10/2024
+ms.date: 06/14/2024
 ms.service: reporting-services
 ms.subservice: reports
 ms.topic: how-to
@@ -48,7 +48,7 @@ By default, SSDT provides three project configurations:
 | **Debug**| Publish reports to a test server.|
 |**Release**| Publish reports to a production server.|
 
-**The solution configurations drop-down list** on the Standard toolbar shows the active configuration. To use a different configuration, select it from the list.
+**The Solution Configurations drop-down list** on the Standard toolbar shows the active configuration. To use a different configuration, select it from the list.
 
 :::image type="content" source="../../reporting-services/reports/media/ssrs-project-properties.png" alt-text="Screenshot of the tutorial Property Pages window, highlighting the Configuration drop-down list.":::
 
@@ -63,7 +63,7 @@ For more information, see:
 You can view the publishing process in the output window by using one of the following methods:
 
 - On the SSDT **Build** menu, select **Deploy Solution**. OR,
-- in Solution Explorer, right-click the report project and then select **Deploy Solution**.
+- In Solution Explorer, right-click the report project and then select **Deploy Solution**.
 
 When you deploy a report server project, the shared data sources in the report project are also deployed. All reports are deployed from the same project configuration: to the same report server, the same folder on the server, and so on. To publish reports to different servers, either publish them one at a time or include only the reports you want to in the report server project. A solution can include multiple report server projects. Multiple projects might make it easier to manage the deployment of reports because you can use a different configuration to deploy different projects.
 

@@ -1,5 +1,5 @@
 ---
-title: "blocked process threshold (server configuration option)"
+title: "Blocked process threshold (server configuration option)"
 description: Learn how to use the blocked process threshold option to specify the interval at which SQL Server generates blocked process reports and issues alerts.
 author: rwestMSFT
 ms.author: randolphwest
@@ -11,7 +11,7 @@ helpviewer_keywords:
   - "thresholds [SQL Server]"
   - "blocked process threshold option"
 ---
-# blocked process threshold (server configuration option)
+# Blocked process threshold (server configuration option)
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 

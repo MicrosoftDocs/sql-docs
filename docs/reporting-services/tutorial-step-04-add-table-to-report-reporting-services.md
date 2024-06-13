@@ -25,9 +25,9 @@ In this tutorial, you:
 
 ## Prerequisites
 
-* A [report server and an associated report definition file](docs\reporting-services\tutorial-step-01-create-report-server-project-reporting-services.md) on your local computer.
-* A defined [data source](docs\reporting-services\tutorial-step-02-specify-connection-information-reporting-services.md) for your report.
-* A [defined dataset and Transact-SQL query](docs\reporting-services\tutorial-step-03-define-dataset-for-table-report-reporting-services.md) for your report data.
+* Completion of [Step 1: Create a report server project](docs\reporting-services\tutorial-step-01-create-report-server-project-reporting-services.md).
+* Completion of [Step 2: Specify connection information](docs\reporting-services\tutorial-step-02-specify-connection-information-reporting-services.md).
+* Completion of [Step 3: Define a dataset for the table report](docs\reporting-services\tutorial-step-03-define-dataset-for-table-report-reporting-services.md).
 
 ## Add a table data region and fields to a report layout
 

@@ -11,7 +11,7 @@ ms.custom: updatefrequency5
 #customer intent: As a SQL server user, I want to use SQL Server Data Tools (SSDT) to define a dataset so that I can generate a table report.
 
 ---
-# Tutorial: Define a dataset for the table report - SQL Server Reporting Services
+# Tutorial: Define a dataset for the table report (Reporting Services)
 
 In this tutorial, you define a dataset for a data source. In [!INCLUDE[ssrsnoversion](../includes/ssrsnoversion-md.md)], a *dataset* contains data that you use in reports. A dataset includes a pointer to a data source and a query for use by the report, calculated fields, and variables.
 
@@ -23,8 +23,8 @@ In this tutorial, you:
 
 ## Prerequisites
 
-* A [report server and an associated report definition file](docs\reporting-services\tutorial-step-01-create-report-server-project-reporting-services.md) on your local computer.
-* A defined [data source](docs\reporting-services\tutorial-step-02-specify-connection-information-reporting-services.md) for your report.
+* Completion of [Step 1: Create a report server project](docs\reporting-services\tutorial-step-01-create-report-server-project-reporting-services.md).
+* Completion of [Step 2: Specify connection information](docs\reporting-services\tutorial-step-02-specify-connection-information-reporting-services.md).
 
 ## Define a Transact-SQL query for report data  
 

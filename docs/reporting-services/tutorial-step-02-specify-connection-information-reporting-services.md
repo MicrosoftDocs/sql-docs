@@ -23,7 +23,7 @@ In this tutorial, you:
 
 ## Prerequisites
 
-* A [report server and an associated report definition file](docs\reporting-services\tutorial-step-01-create-report-server-project-reporting-services.md) on your local computer.
+* Completion of [Step 1: Create a report server project](docs\reporting-services\tutorial-step-01-create-report-server-project-reporting-services.md).
 * Ensure the database is in the default instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] and installed on your local computer.
 * Access to the AdventureWorks2022 sample database.   
 

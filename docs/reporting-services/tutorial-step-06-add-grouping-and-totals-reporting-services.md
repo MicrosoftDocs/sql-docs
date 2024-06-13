@@ -24,9 +24,11 @@ In this tutorial, you:
 
 ## Prerequisites
 
-* A [report server and an associated report definition file](docs\reporting-services\tutorial-step-01-create-report-server-project-reporting-services.md) on your local computer.
-* A defined [data source](docs\reporting-services\tutorial-step-02-specify-connection-information-reporting-services.md) for your report.
-* A [defined dataset and Transact-SQL query](docs\reporting-services\tutorial-step-03-define-dataset-for-table-report-reporting-services.md) for your report data.* A [data table region configured and fields defined](docs\reporting-services\tutorial-step-04-add-table-to-report-reporting-services.md) for your report.
+* Completion of [Step 1: Create a report server project](docs\reporting-services\tutorial-step-01-create-report-server-project-reporting-services.md).
+* Completion of [Step 2: Specify connection information](docs\reporting-services\tutorial-step-02-specify-connection-information-reporting-services.md).
+* Completion of [Step 3: Define a dataset for the table report](docs\reporting-services\tutorial-step-03-define-dataset-for-table-report-reporting-services.md).
+* Completion of [Step 4: Add a table to the report](docs\reporting-services\tutorial-step-04-add-table-to-report-reporting-services.md).
+* Completion of [Step 5: Format a report](docs\reporting-services\tutorial-step-05-format-report-reporting-services.md).
 
 ## Group data in a report
 
@@ -60,7 +62,7 @@ You can group data in your SQL Server Reporting Services (SSRS) report. Grouping
 1. Select **Number** in the left-most box, and **Date** from the **Category** box.
 1. In the **Type** box, select **January 31, 2000**.
 1. Select **OK** to apply the format.
-1. Preview the report. It should look like the following:
+1. Preview the report on the **Preview** tab.
 
     :::image type="content" source="media/rs-basictablegroupspreview.png" alt-text="Screenshot of the preview report for the table.":::
 
@@ -126,27 +128,27 @@ Publish your completed report to the Report Server. This process is optional and
 5. Select **Build** > **Deploy Tutorial**.
 
     If you see a message similar the following **Output** window, it indicates a successful deployment.
+    
+    ```
+    ------ Build started: Project: tutorial, Configuration: Debug ------  
+    Skipping 'Sales Orders.rdl'. Item is up to date.  
+    Build complete -- 0 errors, 0 warnings  
+    ------ Deploy started: Project: tutorial, Configuration: Debug ------  
+    Deploying to `https://[server name]/reportserver`  
+    Deploying report '/tutorial/Sales Orders'.  
+    Deploy complete -- 0 errors, 0 warnings  
+    ========== Build: 1 succeeded or up-to-date, 0 failed, 0 skipped ==========  
+    ========== Deploy: 1 succeeded, 0 failed, 0 skipped ========== 
+    ``` 
 
-    > ------ Build started: Project: tutorial, Configuration: Debug ------  
-    > Skipping 'Sales Orders.rdl'. Item is up to date.  
-    > Build complete -- 0 errors, 0 warnings  
-    > ------ Deploy started: Project: tutorial, Configuration: Debug ------  
-    > Deploying to `https://[server name]/reportserver`  
-    > Deploying report '/tutorial/Sales Orders'.  
-    > Deploy complete -- 0 errors, 0 warnings  
-    > ========== Build: 1 succeeded or up-to-date, 0 failed, 0 skipped ==========  
-    > ========== Deploy: 1 succeeded, 0 failed, 0 skipped ==========  
-
-    If you an error message, verify you have the appropriate permissions on the report server and you started [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] with administrator privileges.
-    >
-    > "The permissions granted to user 'XXXXXXXX\\[your user name]' are insufficient for performing this operation"
+    If you see an error message, verify you have the appropriate permissions on the report server and you started [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] with administrator privileges.
 
 6. Open a browser with administrator privileges. For example, right-click the icon for Internet Explorer and select **Run as administrator**.
 7. Browse to the web portal URL.
    - `https://<server name>/reports`.
    - `http://localhost/reports` works if you're designing the report on the report server.
 
-8. Select the **Tutorial** folder, and then choose the **Sales Orders** report to view the report.
+8. Select the **Tutorial** folder, and then open the **Sales Orders** report.
 
     :::image type="content" source="media/ssrs-tutorial-tutorialfolder.png" alt-text="Screenshot of the Tutorial folder in the Home panel.":::
 

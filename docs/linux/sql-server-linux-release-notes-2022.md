@@ -4,7 +4,7 @@ description: This article contains the release notes and supported features for 
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: amitkh, vanto
-ms.date: 05/16/2024
+ms.date: 06/13/2024
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual

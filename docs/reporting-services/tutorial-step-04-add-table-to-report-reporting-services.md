@@ -66,11 +66,11 @@ Here, you add a table data region to your report layout and populate it with fie
 
 While designing, preview your report frequently. By doing so, you validate the design and data connections and you can correct errors and issues as you go.
 
-1. Select the **Preview** tab. Report Designer runs the report and displays it in the **Preview** view.
+1. Select the **Preview** tab. 
 
     :::image type="content" source="./media/ssrs-ssdt-preview.png" alt-text="Screenshot of the Preview tab in Report Designer.":::
 
-    The following diagram shows part of the report in **Preview** view.
+    Report Designer runs the report and displays it in the **Preview** view. The following diagram shows part of the report in **Preview** view.
 
     :::image type="content" source="./media/rs-basictabledetailspreview.png" alt-text="Diagram of part of the report in the Preview view.":::
 

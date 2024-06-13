@@ -13,7 +13,7 @@ ms.custom: updatefrequency5
 ---
 # Tutorial: Format a report (Reporting Services)
 
-Now that you have a data region and some fields to the Sales Orders report, you can format the date and currency fields and the column headers.
+In this tutorial, you use SQL Server Data Tools (SSDT) to format the date and currency fields and the column headers in the Sales Orders report.
 
 In this tutorial, you:
 

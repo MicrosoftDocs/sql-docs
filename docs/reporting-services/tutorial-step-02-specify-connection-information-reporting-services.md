@@ -23,7 +23,7 @@ In this tutorial, you:
 
 ## Prerequisites
 
-* A report server and an associated report definition file on your local computer.
+* A [report server and an associated report definition file](docs\reporting-services\tutorial-step-01-create-report-server-project-reporting-services.md) on your local computer.
 * Ensure the database is in the default instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] and installed on your local computer.
 * Access to the AdventureWorks2022 sample database.   
 
@@ -31,7 +31,8 @@ In this tutorial, you:
 
 When you create reports in SQL Server Reporting Services (SSRS), establishing a data source is crucial. Follow these steps to set up a connection between a data source and your reports.
 
-1. In the **Report Data** pane of Visual Studio, select **New** > **Data Source**. If the **Report Data** pane isn't visible, then select **View** > **Report Data**.
+1. Make sure your Sales Order report is open in Visual Studio.
+1. In the **Report Data** pane, select **New** > **Data Source**. If the **Report Data** pane isn't visible, then select **View** > **Report Data**.
 
     :::image type="content" source="media/ssrs-table-tutorial-2-new-data-source.png" alt-text="Screenshot of the Report Data pane with the Data Source option highlighted.":::
 
@@ -43,7 +44,7 @@ When you create reports in SQL Server Reporting Services (SSRS), establishing a 
 
 1. Select the **Embedded connection** option.
 
-1. In the **Type** list, select **Microsoft SQL Server**.
+1. From the **Type** list, select **Microsoft SQL Server**.
   
 1. In the **Connection string** box, enter:
 

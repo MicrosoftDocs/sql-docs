@@ -89,7 +89,7 @@ To achieve a predictable time for database migrations, consider configuring a [m
 > - After the migration finishes, the migration process is final and can't be resumed with additional differential backups.
 
 > [!NOTE]
-> - After the cutover, availability of SQL Managed Instance with Business Critical service tier only can take significantly longer than General Purpose as three secondary replicas have to be seeded for Always On High Availability group. This operation duration depends on the size of data, for more information, see [Management operations duration](/azure/azure-sql/managed-instance/management-operations-overview#duration).
+> After the cutover, SQL Managed Instance with Business Critical service tier can take significantly longer than General Purpose to be available as three secondary replicas have to be seeded for the availability group. The operation duration depends on the size of data. For more information, see [Management operations duration](/azure/azure-sql/managed-instance/management-operations-overview#duration).
 
 ## Migrate multiple databases
 

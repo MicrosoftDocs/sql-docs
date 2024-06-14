@@ -13,14 +13,14 @@ ms.custom: updatefrequency5
 
 # Tutorial: Add grouping and totals (Reporting Services)
 
-In this tutorial, you add grouping and totals to your [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] report to organize and summarize your data.  
+After you format the report fields, you add grouping and totals to your [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] report to organize and summarize your data.  
 
 In this tutorial, you:
 
 > [!div class="checklist"]
-> * Group data in a report to organize related information
-> * Add totals to summarize data at different levels
-> * Format grouped data and totals for better readability
+> * Group data in a report to organize related information.
+> * Add totals to summarize data at different levels.
+> * Format grouped data and totals for better readability.
 
 ## Prerequisites
 
@@ -34,7 +34,7 @@ In this tutorial, you:
 
 You can group data in your SQL Server Reporting Services (SSRS) report. Grouping data helps organize related rows of data into sections, making your report easier to read and interpret.
 
-1. Make sure your Sales Order report is open in Visual Studio.
+1. Open your Sales Order report definition file (*.rdl*) in Visual Studio.
 
 1. Select the **Design** tab.
 
@@ -52,7 +52,7 @@ You can group data in your SQL Server Reporting Services (SSRS) report. Grouping
     :::image type="content" source="media/ssrs-ssdt-addorderfield.png" alt-text="Screenshot of the Order field in the Report data field between Date and Details.":::
 
     > [!NOTE]
-    > Now the row handle has two brackets in it, :::image type="icon" source="media/ssrs-ssdt-rowgroupdoublehandles.png"::: to indicate two groups. The table also has two `[Order]` expression columns.
+    > Now the row handle has two brackets in it, :::image type="icon" source="media/ssrs-ssdt-rowgroupdoublehandles.png"::: to indicate two groups. The table has two `[Order]` expression columns.
 
 1. Delete the original `[Date]` and `[Order]` expression columns to the right of the double line. Select the column handles for the two columns, right-click and choose **Delete Columns**. Report Designer removes the individual row expressions, so that only the group expressions are displayed.
 
@@ -61,7 +61,7 @@ You can group data in your SQL Server Reporting Services (SSRS) report. Grouping
 1. To format the new `[Date]` column, right-click the data region cell that contains the `[Date]` expression, and select **Text Box Properties**.
 1. Select **Number** in the left-most box, and **Date** from the **Category** box.
 1. In the **Type** box, select **January 31, 2000**.
-1. Select **OK** to apply the format.
+1. Select **OK**.
 1. Preview the report on the **Preview** tab.
 
     :::image type="content" source="media/rs-basictablegroupspreview.png" alt-text="Screenshot of the preview report for the table.":::
@@ -76,7 +76,7 @@ You can add totals to your report to summarize data. Totals help you quickly und
 1. In the empty cell to the left of the `Sum[Qty]` cell, enter "Order Total".
 1. Select the two sum cells and the label cell in the row where you added the total cells.  
 1. Select **Format** > **Background Color** > **Light Gray**.
-1. Select **OK** to apply the format.
+1. Select **OK**.
 
     :::image type="content" source="media/rs-basictablesumlinetotaldesign.gif" alt-text="Screenshot of the formatted table with the order total.":::
 
@@ -88,7 +88,7 @@ You can add a daily total to your report. This step provides a daily summary at 
 1. Enter the word "Daily" before the word "Total" in the same cell, so it reads "Daily Total".
 1. Select that cell and the two adjacent total cells to the right side and the empty cell in between them.
 1. Select **Format** > **Background Color** > **Orange**.
-1. Select **OK** to apply the format.
+1. Select **OK**.
 
     :::image type="content" source="media/rs-basictablesumdaytotaldesign.gif" alt-text="Screenshot of the formatted table with the daily total.":::
 
@@ -100,17 +100,17 @@ You can add a grand total to your report to summarize all the data across the en
 1. Enter the string "Grand" before the word "Total" in the same cell, so it reads "Grand Total".
 1. Select the cell with "Grand Total", the two `Sum()` expression cells and the empty cells between them.
 1. Select **Format** > **Background Color** > **Light Blue**.
-1. Select **OK** to apply the format.
+1. Select **OK**.
 
     :::image type="content" source="media/rs-basictablesumgrandtotaldesign.gif" alt-text="Screenshot of the formatted table with grand total.":::
 
 ## Preview the report
 
-Switch to the **Preview** tab so you can view the report as it appears when published. Look for any errors or adjustments that should be made before finalizing the report.
+Switch to the **Preview** tab so you can view the report as it appears when published. Look for any errors or issues you can fix before finalizing the report.
 
 1. Select the **Preview** tab. 
 
-1. In the **Preview** toolbar, choose **Last Page**, which looks like :::image type="icon" source="media/ssrs-ssdt-viewertoolbar-lastpage.png"::: The results should display as shown in the following image:
+1. In the **Preview** toolbar, choose **Last Page**, which looks like :::image type="icon" source="media/ssrs-ssdt-viewertoolbar-lastpage.png":::. The **Grand Total** values display at the end of the report.
 
    :::image type="content" source="./media/rs-basictablesumgrandtotalpreview.gif" alt-text="Screenshot of the full preview for the formatted table.":::
 

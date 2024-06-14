@@ -13,14 +13,14 @@ ms.custom: updatefrequency5
 ---
 # Tutorial: Format a report (Reporting Services)
 
-In this tutorial, you use SQL Server Data Tools (SSDT) to format the date and currency fields and the column headers in the Sales Orders report.
+After you add the table to your report, you use SQL Server Data Tools (SSDT) to format the date field, currency field, and the column headers in the Sales Orders report.
 
 In this tutorial, you:
 
 > [!div class="checklist"]
-> * Format the date field to display only the date
-> * Format the currency field to display as currency
-> * Change text style and adjust column widths
+> * Format the date field to display only the date.
+> * Format the currency field to display as currency.
+> * Change text style and adjust column widths.
 
 ## Prerequisites
 
@@ -33,7 +33,7 @@ In this tutorial, you:
 
 The `[Date]` field expression displays date and time information by default. You can format it to display only the date.
 
-1. Make sure your Sales Order report is open in Visual Studio.
+1. Open your Sales Order report definition file (*.rdl*) in Visual Studio.
 
 1. On the **Design** tab, right-click the cell with the `[Date]` field expression and then select **Text Box Properties**.
 
@@ -41,13 +41,13 @@ The `[Date]` field expression displays date and time information by default. You
 
 1. In the **Type** box, select **January 31, 2000**.
 
-1. Select **OK** to apply the format.
+1. Select **OK**.
 
-1. Preview the report to see the change to the `[Date]` field formatting, and then change back to the **Design** tab.
+1. Preview the report to see the change to the `[Date]` field formatting, and then go back to the **Design** tab.
 
 ## Format the currency
 
-The `[LineTotal]` field expression displays a general number. You can format it to display the number as currency.
+The `[LineTotal]` field expression displays a general number. You can format the field to display the number as currency.
 
 1. Right-click the cell with the `[LineTotal]` expression, and select **Text Box Properties**.
 
@@ -61,9 +61,9 @@ The `[LineTotal]` field expression displays a general number. You can format it 
 
 1. Select **Use 1000 separator (,)**. If the sample text displays **$12,345.00**, then your settings are correct.
 
-1. Select **OK** to apply the format.
+1. Select **OK**.
 
-1. Preview the report to see the change to the `[LineTotal]` expression column and then change back to the **Design** tab.  
+1. Preview the report to see the change to the `[LineTotal]` expression column and then go back to the **Design** tab.  
 
 ## Change text style and column widths
 
@@ -77,7 +77,7 @@ You can add other formatting to your report by highlighting the header, and then
 
 1. Highlight the row containing column header labels and then select **Format** > **Font** > **Bold**.
 
-1. Preview your report. It should appear as shown in the following image:
+1. Preview the report on the **Preview** tab.
 
     :::image type="content" source="media/rs-basictabledetailsformattedpreview.png" alt-text="Screenshot of a table preview with bold column headers as well as updated currency and date values.":::
 

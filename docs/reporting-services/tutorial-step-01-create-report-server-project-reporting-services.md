@@ -18,8 +18,8 @@ This tutorial is the first step in a six-step process that demonstrates how to c
 In this tutorial, you:
 
 > [!div class="checklist"]
-> * Start a new report server project
-> * Create a Sales Orders report definition file (RDL)
+> * Start a new report server project.
+> * Create a Sales Orders report definition file (RDL).
 
 ## Create a report server project
 

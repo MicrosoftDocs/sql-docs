@@ -13,13 +13,13 @@ ms.custom: updatefrequency5
 ---
 # Tutorial: Define a dataset for the table report (Reporting Services)
 
-In this tutorial, you define a dataset for a data source. In [!INCLUDE[ssrsnoversion](../includes/ssrsnoversion-md.md)], a *dataset* contains data that you use in reports. A dataset includes a pointer to a data source and a query for use by the report, calculated fields, and variables.
+After you define the data source for the paginated report, you define a dataset for a data source. In [!INCLUDE[ssrsnoversion](../includes/ssrsnoversion-md.md)], a *dataset* contains data that you use in reports. A dataset includes a pointer to a data source and a query for use by the report, calculated fields, and variables.
 
 In this tutorial, you:
 
 > [!div class="checklist"]
-> * Define a dataset for the table report
-> * Create a Transact-SQL query to retrieve sales order information
+> * Define a dataset for the table report.
+> * Create a Transact-SQL query to retrieve sales order information.
 
 ## Prerequisites
 
@@ -30,7 +30,7 @@ In this tutorial, you:
 
 Create a Transact-SQL query that retrieves sales order information from the [!INCLUDE [sssampledbobject-md](../includes/sssampledbobject-md.md)] database.
 
-1. Make sure your Sales Order report is open in Visual Studio.
+1. Open your Sales Order report definition file (*.rdl*) in Visual Studio.
 
 1. In the **Report Data** pane, select **New** > **Dataset...**. The **Dataset Properties** dialog opens with the **Query** section highlighted.
 
@@ -76,8 +76,6 @@ Create a Transact-SQL query that retrieves sales order information from the [!IN
 1. Select **OK** to exit the **Dataset Properties** dialog. The **Report Data** pane displays the AdventureWorksDataset dataset and fields.
 
    :::image type="content" source="media/ssrs-adventureworksdataset.png" alt-text="Screenshot of the Datasets folder showing the AdventureWorksDataset and its fields.":::
-
-You successfully specified a query that retrieves data for your report. 
 
 ## Next step
 

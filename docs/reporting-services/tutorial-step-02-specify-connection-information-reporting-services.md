@@ -13,13 +13,13 @@ ms.custom: updatefrequency5
 ---
 # Tutorial: Specify connection information (Reporting Services)
   
-In this tutorial, you learn how to connect your reports to data sources, ensuring they can access the necessary data. 
+AFter you create your project and report definition file, you define a data source and configure connection information for the report to access data from a relational database or other sources.
 
 In this tutorial, you:
 
 > [!div class="checklist"]
-> * Add the [!INCLUDE [sssampledbobject-md](../includes/sssampledbobject-md.md)] sample database as your data source
-> * Configure the connection string for the data source
+> * Add the [!INCLUDE [sssampledbobject-md](../includes/sssampledbobject-md.md)] sample database as your data source.
+> * Configure the connection string for the data source.
 
 ## Prerequisites
 
@@ -31,7 +31,8 @@ In this tutorial, you:
 
 When you create reports in SQL Server Reporting Services (SSRS), establishing a data source is crucial. Follow these steps to set up a connection between a data source and your reports.
 
-1. Make sure your Sales Order report is open in Visual Studio.
+1. Open your Sales Order report definition file (*.rdl*) in Visual Studio.
+
 1. In the **Report Data** pane, select **New** > **Data Source**. If the **Report Data** pane isn't visible, then select **View** > **Report Data**.
 
     :::image type="content" source="media/ssrs-table-tutorial-2-new-data-source.png" alt-text="Screenshot of the Report Data pane with the Data Source option highlighted.":::
@@ -42,7 +43,7 @@ When you create reports in SQL Server Reporting Services (SSRS), establishing a 
 
 1. In the **Name** box, enter "AdventureWorks2022".
 
-1. Select the **Embedded connection** option.
+1. Select **Embedded connection**.
 
 1. From the **Type** list, select **Microsoft SQL Server**.
   

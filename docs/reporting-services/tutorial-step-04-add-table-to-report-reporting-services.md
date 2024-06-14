@@ -12,16 +12,16 @@ ms.custom: updatefrequency5
 ---
 # Tutorial: Add a table to the report (Reporting Services)
 
-In this tutorial, you can design a paginated report. You create a report layout by dragging and dropping report objects from the **Toolbox** pane to the **Design surface**. 
+After you define the dataset, you can design a paginated report. You create a report layout by dragging and dropping report objects from the **Toolbox** pane to the **Design surface**. 
 
-Items that contain repeated rows of data from underlying datasets are called *data regions*. After you add a data region, you can add fields. A basic report has only one data region. You can add extras to display more information such as a chart.
+Items that contain repeated rows of data from underlying datasets are called *data regions*. After you add a data region, you can add fields. A basic report has only one data region. You can add extras, like a chart, to display more information.
 
 In this tutorial, you:
 
 > [!div class="checklist"]
-> * Add a table data region to the report layout
-> * Populate the table with fields from the dataset
-> * Preview your report to validate design and data connections
+> * Add a table data region to the report layout.
+> * Populate the table with fields from the dataset.
+> * Preview your report to validate design and data connections.
 
 ## Prerequisites
 
@@ -31,11 +31,11 @@ In this tutorial, you:
 
 ## Add a table data region and fields to a report layout
 
-Here, you add a table data region to your report layout and populate it with fields from your dataset to display organized data.
+In this section, you add a table data region to your report layout and populate it with fields from your dataset to display organized data.
 
-1. Make sure your Sales Order report is open in Visual Studio.
+1. Open your Sales Order report definition file (*.rdl*) in Visual Studio.
 
-1. Select the **Toolbox** tab in the left pane of the Report Designer. If you don't see the **Toolbox** tab, select **View** menu > **Toolbox**.
+1. Select the **Toolbox** tab in the left pane of the Report Designer. If you don't see the **Toolbox** tab, select **View** > **Toolbox**.
 
 1. Choose the **Table** object and drag it to the report design surface. You can also add a table to the report from the design surface. Right-click the design surface and select **Insert** > **Table**.
 
@@ -56,7 +56,7 @@ Here, you add a table data region to your report layout and populate it with fie
 
 1. Drag the `Product` field from the **Report Data** pane to the third column in the table.
 
-1. Drag the `Qty` field to the right edge of the third column until you get a vertical cursor and the pointer shows a plus sign [+]. When you drop the field, you create a fourth column for the `Qty` field expression.
+1. Drag the `Qty` field to the right edge of the third column until you get a vertical cursor and the pointer shows a plus sign [+]. Drop the field to create a fourth column for the `Qty` field expression.
 
     :::image type="content" source="media/ssrs-tutorial-addcolumn.png" alt-text="Screenshot of the Product field in the table.":::
 

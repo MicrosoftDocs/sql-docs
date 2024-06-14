@@ -1,12 +1,12 @@
 ---
-title: "Reporting Services tutorial checklist"
-description: Learn about the capabilities of SQL Server 2016 Reporting Services or later (SSRS), SQL Server Data Tools (SSDT), and Report Builder with sample data.
+title: "Reporting Services tutorials checklist"
+description: Use this checklist to learn about the capabilities of SQL Server 2022 Reporting Services or later (SSRS), SQL Server Data Tools (SSDT), and Report Builder with sample data.
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 06/12/2024
 ms.service: reporting-services
 ms.subservice: reporting-services
-ms.topic: overview
+ms.topic: checklist
 ms.custom: updatefrequency5
 helpviewer_keywords:
   - "tutorials [Reporting Services]"
@@ -14,7 +14,7 @@ helpviewer_keywords:
 
 ---
 
-# Reporting Services tutorials (SSRS)
+# Reporting Services tutorials checklist (SSRS)
 
 [!INCLUDE[ssrs-appliesto-sql2016-preview](../includes/ssrs-appliesto-sql2016-preview.md)]
 

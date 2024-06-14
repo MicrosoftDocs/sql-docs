@@ -27,7 +27,7 @@ helpviewer_keywords:
 
 After you design and test a report or set of reports, use the deployment features in SQL Server Data Tools (SSDT) to publish the reports to a report server. You can publish individual reports or a report server project, which can include multiple reports and data sources. Publishing a report server project is the easiest way to publish multiple reports. SSDT uses the term *deploy*, instead of the term *publish*. The two terms are interchangeable.
 
-SSDT provides project configurations for managing report publications. The configuration specify:
+SSDT provides project configurations for managing report publications. Configurations specify:
 
 - The location of the report server and the version of SQL Server Reporting Services (SSRS) installed on the report server.
 - Whether the data sources are published to the report server or are overwritten. For example, the "Debug" configuration can publish to a different server than the "release" configuration. In addition, you can create more configurations.

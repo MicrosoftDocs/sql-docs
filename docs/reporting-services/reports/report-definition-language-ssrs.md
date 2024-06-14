@@ -23,15 +23,15 @@ helpviewer_keywords:
 
 Report Definition Language (RDL) is an XML representation of a SQL Server Reporting Services (SSRS) report definition. A report definition contains data retrieval and layout information for a report. RDL is composed of XML elements that match an XML grammar created for Reporting Services. You can customize functions for controlling report item values, styles, and formatting by accessing code assemblies within report definition files.
 
-RDL promotes the interoperability of commercial reporting products by defining a common schema that enables the interchange of report definitions.
-
-## Prerequisites
-
-Any protocol or programmatic interface that works with XML can be used with RDL. RDL is:
+RDL promotes the interoperability of commercial reporting products by defining a common schema that enables the interchange of report definitions. RDL is:
 
 - An XML schema for report definitions.
 - An interchange format for businesses and third parties.
 - An extensible and open schema that supports more namespaces and custom elements.
+
+## Prerequisites
+
+Any protocol or programmatic interface that works with XML can be used with RDL.
 
 ## <a name="bkmk_RDL_Specifications"></a> RDL Specifications
 
@@ -41,19 +41,28 @@ To download specifications for specific schema versions, see [Report Definition 
 
 An SSRS RDL file is validated by using an XML Schema Definition (XSD) file. The schema defines the rules for where RDL elements can occur in an .rdl file. An element includes its data type and cardinality, which is the number of occurrences that are allowed. An element can be simple or complex. A simple element doesn't have child elements or attributes. A complex element has child elements and can have attributes.
 
-For example, the schema includes the RDL element **ReportParameters**, which is the complex type **ReportParametersType**. By convention, a complex type for an element is the name of the element followed by the word **Type**. A **ReportParameters** element can be contained by the **Report** element (a complex type), and can contain **ReportParameter** elements. A **ReportParameterType** is a simple type that can only be one of the following values: **Boolean**, **DateTime**, **Integer**, **Float**, or **String**. For more information about XML Schema datatypes, see [XML Schema Part 2: Datatypes Second Edition](https://go.microsoft.com/fwlink/?linkid=4871).
+For example, the schema includes the RDL element **ReportParameters**, which is the complex type **ReportParametersType**.
+
+- By convention, a complex type for an element is the name of the element followed by the word **Type**.
+- A **ReportParameters** element can be contained by the **Report** element (a complex type), and can contain **ReportParameter** elements.
+- A **ReportParameterType** is a simple type that can only be one of the following values: **Boolean**, **DateTime**, **Integer**, **Float**, or **String**.
+
+For more information about XML Schema datatypes, see [XML Schema Part 2: Datatypes Second Edition](https://go.microsoft.com/fwlink/?linkid=4871).
 
 The RDL XSD is available in the ReportDefinition.xsd file, located in the Extras folder on the product CD-ROM. It's also available on the report server through the following URL: `https://servername/reportserver/reportdefinition.xsd`.
 
 ## <a name="bkmk_Creating_RDL"></a> Create RDL
 
-You can build tools and applications that generate RDL based on their XML schema because of the open and extensible nature of RDL.
+Build tools and applications that generate RDL based on their XML schema because of the open and extensible nature of RDL.
 
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] provides multiple tools to build RDL files. For more information, see [Reporting Services Tools](../../reporting-services/tools/reporting-services-tools.md).
 
-You can generate RDL from an application by using the Microsoft .NET Framework classes of the <xref:System.Xml> and <xref:System.Linq> namespaces. You can use the **XmlTextWriter** to write RDL. With **XmlTextWriter**, you can generate a complete report definition from start to finish in any .NET Framework application. Developers can also extend RDL by adding custom report items with custom properties. For more on the **XmlTextWriter** class and the <xref:System.Xml> namespace, see the [Microsoft .NET Framework Developer's Guide](/dotnet/framework/development-guide). For more information about Language-Integrated Query (LINQ), search for "LINQ to XML" on Microsoft Developer Network.
+- Generate RDL from an application by using the Microsoft .NET Framework classes of the <xref:System.Xml> and <xref:System.Linq> namespaces.
+- Use the **XmlTextWriter** to write RDL. With **XmlTextWriter**, you can generate a complete report definition from start to finish in any .NET Framework application. For more on the **XmlTextWriter** class and the <xref:System.Xml> namespace, see the [Microsoft .NET Framework Developer's Guide](/dotnet/framework/development-guide). 
 
-The standard file extension for report definition files is **.rdl**. You can also develop client report definition files, which have the extensions **.rdlc**. The MIME type for both extensions is text/xml. For more information, see [Reporting Services Reports &#40;SSRS&#41;](../../reporting-services/reports/reporting-services-reports-ssrs.md).
+Developers can extend RDL by adding custom report items with custom properties. For more information about Language-Integrated Query (LINQ), search for "LINQ to XML" on Microsoft Developer Network.
+
+The standard file extension for a report definition files is **.rdl**. You can develop client report definition files, which have the extensions **.rdlc**. The MIME type for both extensions is text/xml. For more information, see [Reporting Services Reports &#40;SSRS&#41;](../../reporting-services/reports/reporting-services-reports-ssrs.md).
 
 ## <a name="bkmk_RDL_Types"></a> RDL Types
 

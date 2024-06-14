@@ -3,7 +3,7 @@ title: "Report Builder tutorials checklist"
 description: Use this checklist to learn how to create basic SQL Server Reporting Services (SSRS) paginated reports, including ways to connect to data sources.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 06/12/2024
+ms.date: 06/17/2024
 ms.service: reporting-services
 ms.subservice: reporting-services
 ms.topic: checklist

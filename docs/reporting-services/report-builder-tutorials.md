@@ -17,11 +17,10 @@ ms.custom: updatefrequency5
 
 The [Report Builder](../reporting-services/report-builder/report-builder-in-sql-server-2016.md) tutorials help you learn how to create basic [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] paginated reports.  
 
-Before you begin the tutorials, make sure you have read-only access to a SQL Server database and permissions to access a [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] report server.
-
 | Tutorial | Description |
 | ----- | ----- |
-|[Tutorial: Create a basic table report &#40;Report Builder&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)|Learn how to create your first report. This tutorial shows you how to work with Report Builder. You can create a data source connection, define a query, build a layout to contain your data, format your report, and add grouping and totals.| 
+| [Prerequisites for tutorials &#40;Report Builder&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md)|To use these tutorials, you must have read-only access to a SQL Server database and permissions to access a SQL Server 2016 (13.x) Reporting Services or later (SSRS) report server.|
+|[Tutorial: Create a basic table report &#40;Report Builder&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)|Learn how to create your first report. You can create a data source connection, define a query, build a layout to contain your data, format your report, and add grouping and totals.| 
 |[Tutorial: Create a matrix report &#40;Report Builder&#41;](../reporting-services/tutorial-creating-a-matrix-report-report-builder.md)|Learn how to add and configure a matrix. You use the Table or Matrix Wizard to create the report data source, dataset, and layout, and then enhance the matrix within the **Design** view of Report Builder.|  
 |[Tutorial: Create a free form report &#40;Report Builder&#41;](../reporting-services/tutorial-creating-a-free-form-report-report-builder.md)|Learn how to create a free-form report from scratch. Free-form reports allow for a flexible layout, making it easy to design visually appealing reports in various formats.|
 |[Tutorial: Format text &#40;Report Builder&#41;](../reporting-services/tutorial-format-text-report-builder.md)|Learn some of the many ways you can format text in your reports. Proper text formatting enhances readability and helps present data in a clear, professional manner.|
@@ -37,8 +36,7 @@ Before you begin the tutorials, make sure you have read-only access to a SQL Ser
 
 ## Related content
 
-- [Report design view](../reporting-services/report-builder/report-design-view-report-builder.md)  
-- [Prerequisites for tutorials &#40;Report Builder&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md) 
+- [Report design view](../reporting-services/report-builder/report-design-view-report-builder.md)   
 - [Alternative ways to get a data connection &#40;Report Builder&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md)
 
 More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231).

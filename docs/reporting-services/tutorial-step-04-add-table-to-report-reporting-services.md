@@ -62,8 +62,6 @@ In this section, you add a table data region to your report layout and populate 
 
 1. Add the `LineTotal` field in the same way, creating a fifth column. The column label shows as "Line Total". Report Designer automatically creates a friendly name for the column by splitting "LineTotal" into two words.
 
-    The following diagram shows a table data region populated with these fields: `Date`, `Order`, `Product`, `Qty`, and `Line Total`.
-
     :::image type="content" source="./media/rs-basictabledetailsdesign.png" alt-text="Diagram of a table data region populated with the fields: Date, Order, Product, Qty, and Line Total.":::
 
 ## Preview your report
@@ -74,7 +72,7 @@ While designing, preview your report frequently. By doing so, you validate the d
 
     :::image type="content" source="./media/ssrs-ssdt-preview.png" alt-text="Screenshot of the Preview tab in Report Designer.":::
 
-    Report Designer runs the report and displays it in the **Preview** view. The following diagram shows part of the report in **Preview** view.
+    Report Designer runs the report and displays it in the **Preview** view.
 
     :::image type="content" source="./media/rs-basictabledetailspreview.png" alt-text="Diagram of part of the report in the Preview view.":::
 

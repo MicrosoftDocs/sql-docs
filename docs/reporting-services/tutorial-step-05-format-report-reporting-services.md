@@ -81,7 +81,7 @@ You can add other formatting to your report by highlighting the header, and then
 
     :::image type="content" source="media/rs-basictabledetailsformattedpreview.png" alt-text="Screenshot of a table preview with bold column headers as well as updated currency and date values.":::
 
-1. From the **File** menu, select **Save All** to save the report.
+1. Select **File** > **Save All** to save the report.
 
 ## Next step
 

@@ -27,7 +27,7 @@ Let's understand both the inner and outer loop in detail:
 
 ### Inner Loop
 
-- The inner loop represents the local development cycle. It’s where developers write code, test it, and debug it on their local machines.
+- The inner loop represents the local development cycle. It's where developers write code, test it, and debug it on their local machines.
 
 - During this phase, developers interact with a local instance of SQL Database. This allows them to quickly iterate on their code with immediate feedback, without needing to deploy changes to the cloud.
 

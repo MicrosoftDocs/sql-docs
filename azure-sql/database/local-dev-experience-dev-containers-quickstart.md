@@ -14,22 +14,24 @@ ms.topic: quickstart
 
 Dev Containers provide a comprehensive solution for enhancing local development for Azure SQL Database. Dev Container templates offer developers a seamless and efficient development environment, enabling them to build applications for Azure SQL Database with ease and confidence. Dev Containers can be utilized in any development environment whether is local or in the cloud, you can promote consistency across teams and workflows.
 
-## Capabilities / features
+## Capabilities and features
 
 The Dev Container for Azure SQL Database is packed with powerful tools and configurations to streamline your development process. Here are the key features:
 
-### Visual Studio Code Extensions
+### Visual Studio Code extensions
 
-- **ms-mssql.mssql**: SQL Server extension for connecting and querying SQL databases.
-- **ms-mssql.sql-database-projects**: Extension for managing SQL Database projects, allowing for streamlined schema changes and deployment.
-- **github.copilot**: AI-powered code completion for enhanced productivity.
-- **ms-azuretools.vscode-docker**: Docker extension for managing containers directly from Visual Studio Code.
-- **ms-dotnettools.csdevkit** and **ms-dotnettools.csharp**: Essential extensions for .NET development.
-- **ms-azuretools.vscode-bicep**: Bicep extension for managing Azure resources.
-- **ms-azuretools.vscode-docker**: Docker extension for managing containers.
-- **github.codespaces**: Extension for working with GitHub Codespaces.
+- `ms-mssql.mssql`: SQL Server extension for connecting and querying SQL databases.
+- `ms-mssql.sql-database-projects`: Extension for managing SQL Database projects, allowing for streamlined schema changes and deployment.
+- `github.copilot`: AI-powered code completion for enhanced productivity.
+- `ms-azuretools.vscode-docker`: Docker extension for managing containers directly from Visual Studio Code.
+- `ms-dotnettools.csdevkit` and `ms-dotnettools.csharp`: Essential extensions for .NET development.
+- `ms-azuretools.vscode-bicep`: Bicep extension for managing Azure resources.
+- `ms-azuretools.vscode-docker`: Docker extension for managing containers.
+- `github.codespaces`: Extension for working with GitHub Codespaces.
 
-### Preconfigured Environment
+### Preconfigured environment
+
+All of the below tools and utilities are pre-loaded in the Dev Container. You don't need to download or install!
 
 - **.NET / .NET Aspire**: The environment includes your preferred programming language/framework preinstalled and configured, ready for development.
 - **Azure CLI**: Tools for managing Azure resources and deployments.
@@ -54,10 +56,10 @@ A set of predefined tasks in Visual Studio Code to simplify common actions:
 
 ### Automation and Efficiency
 
-- **Automated Database Deployment**: The Dev Container initialization process handles the deployment of the sample database using a DAC (Data-tier application) package.
-- **Container Configuration**: Includes Docker configurations for setting up the development environment with minimal effort.
+- **Automated database deployment**: The Dev Container initialization process handles the deployment of the sample database using a DAC (Data-tier application) package.
+- **Container configuration**: Includes Docker configurations for setting up the development environment with minimal effort.
 
-### Customization and Flexibility
+### Customization and flexibility
 
 - **Forwarded Ports**: Preconfigured to forward necessary ports for seamless local development.
 - **Docker Compose**: Uses Docker Compose to manage multiple services and ensure they work together efficiently.
@@ -77,36 +79,36 @@ Additionally, you need:
 
 ## Steps to set up the development environment
 
-1. Clone the Dev Container Repository
+1. Clone the Dev Container repository.
 
     ```bash
     git clone https://github.com/your-repository/azure-sql-dev-container-template.git
     cd azure-sql-dev-container-template
     ```  
 
-2. Open the Project in Visual Studio Code  
+1. Open the project in Visual Studio Code.
 
-    - Open Visual Studio Code.
-    - Use the File > Open Folder menu, then open the cloned repository folder.
+    1. Open Visual Studio Code.
+    1. Under **File, select **Open Folder**, then open the cloned repository folder.
 
-3. Reopen in Container
+1. Use the **Reopen in Container** feature.
  
-    - Press `F1` to open the command palette.
-    - Type Remote-Containers: Reopen in Container and select the command.
+    1. Press `F1` to open the command palette.
+    1. Type `Remote-Containers: Reopen in Container`. Select the command.
 
-4. Wait for the Container to Build
+1. Wait for the container to build.
 
     - Visual Studio Code builds the container based on the `devcontainer.json` configuration.
     - The build process might take a few minutes the first time.
 
-5. Verify the Setup
+1. Verify.
 
     - Once the container is ready, you can start using the preinstalled tools and extensions.
     - Open a terminal in Visual Studio Code and run `sqlcmd --version`, `dotnet --version`, `az --version` to verify the installations.
 
-6. Run the Predefined Tasks
+6. Run predefined tasks.
 
-    - To run any of the predefined tasks, open the command palette (`F1`), type Run Task, and select the desired task (for example, Execute SQL Query, Build SQL Database Project).
+    - To run any of the predefined tasks, open the command palette (`F1`), type `Run Task`, and select the desired task. For example, **Execute SQL Query**, **Build SQL Database Project**.
 
 ## Related content
 

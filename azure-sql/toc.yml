@@ -431,7 +431,7 @@
       items: 
       - name: Local development experience 
         href: database/local-dev-experience-overview.md
-      - name: Azure SQL Database Dev Container Templates
+      - name: Azure SQL Database Dev Container templates
         href: database/local-dev-experience-dev-containers.md
       - name: Set up an Azure SQL Database Dev Container template
         href: database/local-dev-experience-dev-containers-quickstart.md

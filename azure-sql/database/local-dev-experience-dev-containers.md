@@ -22,9 +22,9 @@ The Azure SQL Database Dev Container templates simplify the development process 
 The local development environment mimics Azure SQL Database, allowing you to manage data and test applications efficiently. Once ready, **GitHub Actions** automate the deployment process, transitioning seamlessly your application to **Azure Static Web Apps** or **Azure Web App Service** and **Azure SQL Database**. This streamlined workflow enhances productivity, reduces setup time, and ensures consistency between local and production environments, helping you deliver high-quality applications faster.
 
 > [!TIP]
-> A GitHub Action and an Azure DevOps Task are available in [devcontainers/ci](https://github.com/devcontainers/ci) for running a repository’s dev container in continuous integration (CI) builds. This allows you to reuse the same setup that you are using for local development to also build and test your code in CI.
+> A GitHub Action and an Azure DevOps Task are available in [devcontainers/ci](https://github.com/devcontainers/ci) for running a repository's dev container in continuous integration (CI) builds. This allows you to reuse the same setup that you are using for local development to also build and test your code in CI.
 
-## How Dev Containers Work
+## How Dev Containers work
 
 Dev Containers are preconfigured, containerized environments designed to provide a consistent development experience no matter where they're used. They utilize the Development Container Specification (`devcontainer.json`) to define necessary tools, settings, and configurations for the development environment.
 
@@ -60,7 +60,7 @@ Local development with Dev Containers reduces cloud costs associated with develo
 
 Dev Containers support cloud-native development scenarios, aligning with modern application architectures and frameworks. This ensures compatibility with Azure SQL Database and facilitates seamless deployment to Azure environments. By embracing cloud-native trends, we position Azure SQL Database as the platform of choice for modern, cloud-native applications, driving long-term adoption and revenue growth.
 
-## Available Templates
+## Available templates
 
 The Azure SQL Database Dev Container Templates are available for the following programming languages / frameworks:
 

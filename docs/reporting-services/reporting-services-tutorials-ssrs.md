@@ -1,5 +1,5 @@
 ---
-title: "Reporting Services tutorials"
+title: "Reporting Services tutorial checklist"
 description: Learn about the capabilities of SQL Server 2016 Reporting Services or later (SSRS), SQL Server Data Tools (SSDT), and Report Builder with sample data.
 author: maggiesMSFT
 ms.author: maggies
@@ -20,14 +20,10 @@ helpviewer_keywords:
 
 The Reporting Services tutorials allow you to explore the capabilities of [!INCLUDE[ssRSCurrent_md](../includes/ssrscurrent-md.md)], [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], and Report Builder by using guided assistance and sample data.
 
-## Tutorials
-
-[Tutorial: Create a basic table report (SSRS Tutorial)](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)
-Learn how to create your first report. This tutorial guides you through working with [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] to create a data connection, define a query, and configure a data region for your data.
-
-[Tutorial: Create a data-driven subscription (SSRS Tutorial)](../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md) 
-
-Learn how to use data-driven subscriptions to customize report distribution based on a dynamic list of subscribers. Though report server administrators typically manage data-driven subscriptions, you need to learn about building queries, subscriber data sources, and elevated permissions.
+| Tutorial | Description |
+| ----- | ----- |
+|[Create a basic table report (SSRS Tutorial)](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)|Learn how to create your first report. This tutorial guides you through working with [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] to create a data connection, define a query, and configure a data region for your data.|
+|[Tutorial: Create a data-driven subscription (SSRS Tutorial)](../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)|Learn how to use data-driven subscriptions to customize report distribution based on a dynamic list of subscribers. Though report server administrators typically manage data-driven subscriptions, you need to learn about building queries, subscriber data sources, and elevated permissions.
 
 [Tutorial: Create drillthrough (RDLC) report with parameters - ReportViewer](../reporting-services/create-drillthrough-rdlc-report-with-parameters-reportviewer.md) 
 

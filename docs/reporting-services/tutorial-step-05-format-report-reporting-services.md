@@ -24,10 +24,10 @@ In this tutorial, you:
 
 ## Prerequisites
 
-* Completion of [Step 1: Create a report server project](docs\reporting-services\tutorial-step-01-create-report-server-project-reporting-services.md).
-* Completion of [Step 2: Specify connection information](docs\reporting-services\tutorial-step-02-specify-connection-information-reporting-services.md).
-* Completion of [Step 3: Define a dataset for the table report](docs\reporting-services\tutorial-step-03-define-dataset-for-table-report-reporting-services.md).
-* Completion of [Step 4: Add a table to the report](docs\reporting-services\tutorial-step-04-add-table-to-report-reporting-services.md).
+* Completion of [Step 1: Create a report server project](tutorial-step-01-create-report-server-project-reporting-services.md).
+* Completion of [Step 2: Specify connection information](tutorial-step-02-specify-connection-information-reporting-services.md).
+* Completion of [Step 3: Define a dataset for the table report](tutorial-step-03-define-dataset-for-table-report-reporting-services.md).
+* Completion of [Step 4: Add a table to the report](tutorial-step-04-add-table-to-report-reporting-services.md).
 
 ## Format the date
 

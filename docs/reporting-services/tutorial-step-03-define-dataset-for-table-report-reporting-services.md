@@ -23,8 +23,8 @@ In this tutorial, you:
 
 ## Prerequisites
 
-* Completion of [Step 1: Create a report server project](docs\reporting-services\tutorial-step-01-create-report-server-project-reporting-services.md).
-* Completion of [Step 2: Specify connection information](docs\reporting-services\tutorial-step-02-specify-connection-information-reporting-services.md).
+* Completion of [Step 1: Create a report server project](tutorial-step-01-create-report-server-project-reporting-services.md).
+* Completion of [Step 2: Specify connection information](tutorial-step-02-specify-connection-information-reporting-services.md).
 
 ## Define a Transact-SQL query for report data  
 

@@ -13,7 +13,7 @@ ms.custom: updatefrequency5
 ---
 # Tutorial: Specify connection information (Reporting Services)
   
-In this tutorial, you learn how to connect your reports to data sources, ensuring they can access the necessary data when its needed. 
+In this tutorial, you learn how to connect your reports to data sources, ensuring they can access the necessary data. 
 
 In this tutorial, you:
 

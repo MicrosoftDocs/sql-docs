@@ -69,7 +69,7 @@ The `[LineTotal]` field expression displays a general number. You can format it 
 
 You can add other formatting to your report by highlighting the header, and then adjusting the widths of the data columns.
 
-1. Select the table so that column and row handles appear above and next to the table. The gray bars along the top and side of the table are the column and row handles.
+1. Select the table so that column and row handles appear on the top and side of the table. The gray bars along the top and side of the table are the column and row handles.
 
 1. Hover over the line between column handles so that the cursor changes into a double arrow. Drag the columns to the size you want.
 
@@ -79,7 +79,7 @@ You can add other formatting to your report by highlighting the header, and then
 
 1. Preview your report. It should appear as shown in the following image:
 
-    :::image type="content" source="media/rs-basictabledetailsformattedpreview.png" alt-text="Screenshot of a table preview with bold column headers, currency and date values are updated.":::
+    :::image type="content" source="media/rs-basictabledetailsformattedpreview.png" alt-text="Screenshot of a table preview with bold column headers as well as updated currency and date values.":::
 
 1. From the **File** menu, select **Save All** to save the report.
 

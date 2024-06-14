@@ -73,7 +73,7 @@ You can add totals to your report to summarize data. Totals help you quickly und
 1. Switch to the **Design** view.
 1. Right-click the data region cell that contains the `[LineTotal]` expression, and select **Add Total**. Report Designer adds a row with a sum of the dollar amount for each order.
 1. Right-click the cell that contains the field `[Qty]`, and select **Add Total**. Report Designer adds a sum of the quantity for each order to the totals row.
-1. In the empty cell to the left of the `Sum[Qty]` cell, enter the string "Order Total".
+1. In the empty cell to the left of the `Sum[Qty]` cell, enter "Order Total".
 1. Select the two sum cells and the label cell in the row where you added the total cells.  
 1. Select **Format** > **Background Color** > **Light Gray**.
 1. Select **OK** to apply the format.

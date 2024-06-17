@@ -792,7 +792,7 @@ The following table covers these SLOs: `HS_MOPRMS_4`, `HS_MOPRMS_6`, `HS_MOPRMS_
 | vCores | 4 | 6 | 8 | 10 | 12 | 14 |
 |-:|-:|-:|-:|-:|-:|-:|
 | Hardware | Premium-series | Premium-series | Premium-series | Premium-series | Premium-series | Premium-series |
-| Memory (GB) | 20.8 | 31.1 | 41.5 | 51.9 | 62.3 | 72.7 |
+| Memory (GB) | 41.5 | 62.3 | 83 | 103.8 | 124.5 | 145.3 |
 | Max number DBs per pool <sup>1</sup> | 25 | 25 | 25 | 25 | 25 | 25 |
 | Columnstore support | Yes | Yes | Yes | Yes | Yes | Yes |
 | In-memory OLTP storage (GB) | N/A | N/A | N/A | N/A | N/A | N/A |
@@ -834,7 +834,7 @@ The following table covers these SLOs: `HS_MOPRMS_16`, `HS_MOPRMS_18`, `HS_MOPRM
 |:-|-:|-:|-:|-:|-:|-:|
 | Hardware | Premium-series | Premium-series | Premium-series | Premium-series | Premium-series | Premium-series | 
 | Max number DBs per pool <sup>1</sup> | 25 | 25 | 25 | 25 | 25 | 25 | 
-| Memory (GB) | 83 | 93.4 | 103.8 |249.1 | 166.1 | 207.6 | 
+| Memory (GB) | 166.1 | 186.8 | 207.6 |249.1 | 332.1 | 415.2 | 
 | Columnstore support | Yes | Yes | Yes | Yes | Yes | Yes |
 | In-memory OLTP storage (GB) | N/A | N/A | N/A | N/A | N/A | N/A | 
 | Max data size per pool (TB) | 100 | 100 | 100 | 100 | 100 | 100 | 

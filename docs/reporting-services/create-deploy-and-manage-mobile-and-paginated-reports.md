@@ -72,7 +72,7 @@ As you build your visualizations, Mobile Report Publisher automatically generate
 
 :::image type="content" source="../reporting-services/media/report-server-2022-web-portal.png" alt-text="Screenshot of the Reporting Services web portal.":::
 
-For Reporting Services, the front door is a modern web portal. The web portal is a complete redesign of Report Manager.  Now, you can access all your Reporting Services reports and KPIs in the new portal. KPIs can surface key business metrics immediately in the browser without opening a report. 
+For Reporting Services, the front door is a modern web portal. The web portal is a complete redesign of Report Manager. Now, you can access all your Reporting Services reports and KPIs in the new portal. KPIs can surface key business metrics immediately in the browser without opening a report. 
 
 The web portal is a sleek, single-page, standards-based HTML5 app that works with all major browsers, including Microsoft Edge, Internet Explorer 10 and 11, Chrome, Firefox, and Safari. Access your SSRS reports and KPIs in one place. The content on the web portal is organized by type:
 
@@ -85,9 +85,9 @@ The web portal is a sleek, single-page, standards-based HTML5 app that works wit
 * Mobile reports 
 ::: moniker-end
 
-Store and manage your content securelyin the traditional folder hierarchy. Tag your favorite reports for quick access. Those with appropriate permissions can manage and administer SSRS content. Schedule report processing, access reports on demand, and subscribe to published reports
+Store and manage your content securely the traditional folder hierarchy. Tag your favorite reports for quick access. Those users with appropriate permissions can manage and administer SSRS content. Schedule report processing, access reports on demand, and subscribe to published reports
 
-To learn mor, see [The web portal of a report server - SSRS Native mode](../reporting-services/web-portal-ssrs-native-mode.md).
+To learn more, see [The web portal of a report server - SSRS Native mode](../reporting-services/web-portal-ssrs-native-mode.md).
 
 ::: moniker range="=sql-server-2016"
 

@@ -1,6 +1,6 @@
 ---
 title: Assess migration readiness (preview)
-description: Explains how SQL Server enabled by Azure Arc helps assess the SQL Servers migrating to Azure SQL.
+description: Select the optimal Azure SQL target using migration assessment (preview) with SQL Server enabled by Azure Arc.
 author: pochiraju
 ms.author: rajpo
 ms.reviewer: mikeray, randolphwest
@@ -8,7 +8,7 @@ ms.date: 02/13/2024
 ms.topic: conceptual
 ---
 
-# Select the optimal Azure SQL target using Migration assessment (preview) - SQL Server enabled by Azure Arc
+# Assess migration readiness (preview) - SQL Server enabled by Azure Arc
 
 [!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
@@ -24,9 +24,9 @@ The assessment:
 
 You can obtain a migration assessment for SQL Servers located anywhere:
 
-- In your data center
-- At edge site locations, such as retail stores
-- Any public cloud or hosting provider
+- Your data center
+- Edge site locations, such as retail stores
+- Public cloud or hosting provider
 
 The assessment is available for any instance of SQL Server enabled by Azure Arc.
 
@@ -70,6 +70,8 @@ The Azure SQL extension for SQL Server performs the assessment data collection b
 
    :::image type="content" source="media/migration-assessment/assessment-main.png" alt-text="Screenshot showing how to get to the SQL Server migration assessment report an SQL Server resource.":::
 
+The *Last assessment time* indicates when the assessment was started. To trigger an assessment immediately, select **Run assessment**.
+
 ## Review readiness
 
 The assessment indicates the different migration strategies that you can consider for your SQL Server deployments:
@@ -82,7 +84,7 @@ Review the readiness for target deployment types and the Azure SQL size recommen
 
 - **Ready**: The SQL Server instance or database is ready to be migrated to the specific Azure SQL target deployment option without any migration blockers. Should there be any warnings, address these issues using the provided remediation guidance.
 
-- **Not ready**: The assessment couldn't find a SQL Server on Azure Virtual Machine, Azure SQL Managed Instance, or Azure SQL Database configuration meeting the desired compatibility, configuration, and performance characteristics. Select the hyperlink to review the recommendation to make the SQL Server instance/databases ready for the desired target deployment type.
+- **Not ready**: The assessment couldn't find a configuration to meet the compatibility, configuration, and performance characteristics on Azure Virtual Machine, Azure SQL Managed Instance, or Azure SQL Database. Select the hyperlink to review the recommendation to make the SQL Server instance/databases ready for the desired target deployment type.
 
    :::image type="content" source="media/migration-assessment/not-ready.png" alt-text="Screenshot showing how to get to the mitigation guidance when SQL Server isn't ready to migrate.":::
 
@@ -90,7 +92,7 @@ Review the readiness for target deployment types and the Azure SQL size recommen
 
 ## Review confidence rating
 
-SQL Migration assessment assigns a confidence rating to SQL Server migration assessment based on the availability of the performance/utilization data points needed to compute the assessment for all the assessed SQL instances and databases. Rating is from one star (lowest) to five stars (highest). The confidence rating is projected to reach its peak (five stars) approximately after 30 days of continuous data collection. It should increase by one star for each week of data collection. The confidence rating helps you estimate the reliability of size recommendations in the assessment. Confidence ratings are as follows:
+The confidence rating is a scale from one star (lowest) to five stars (highest). The confidence rating is projected to reach its peak (five stars) approximately after 30 days of continuous data collection. It should increase by one star for each week of data collection. The confidence rating helps you estimate the reliability of size recommendations in the assessment. The value is based on the availability of the performance/utilization data points needed to compute the assessment for all the assessed SQL instances and databases. Confidence ratings are as follows:
 
 | **Data point availability**	 | **Confidence rating** |
 | ---------------------------- | --------------------- |
@@ -117,6 +119,12 @@ SQL Server extension for Azure collects performance data for compute settings wi
 
     [!INCLUDE [extension-logs](includes/extension-logs.md)]
 
+## Run migration assessment
+
+You can trigger a fresh assessment at any time. Select **Run Assessment**.
+
+After the new assessment is complete, it replaces the last successful assessment. Scheduled migration assessments continue on schedule every Sunday at 11:00 PM (23:00) according to the local time on the SQL Server machine.
+
 ## Disable migration assessment
 
 The SQL Server migration assessment automatically gets generated for every SQL Server enabled by Arc. You can disable the assessment by using, **Disable** option on the top menu bar.
@@ -140,7 +148,7 @@ Use **Enable Assessment** button to re-enable the SQL Server migration assessmen
 
 Contact [Microsoft support](/azure/azure-portal/supportability/how-to-create-azure-support-request) if you run into any of the issues below.
 
-- The assessment reports are not appearing on the portal, even after the scheduled time of Sunday 11:00 PM (2300), according to the local time of the SQL Server machine.
+- The assessment reports don't appear on the portal even after the scheduled time.
 - Confidence rating doesn't increase after one week of data gathering. The confidence should increase after the first week.
 
 ## Related content

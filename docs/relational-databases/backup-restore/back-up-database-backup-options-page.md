@@ -38,8 +38,8 @@ f1_keywords:
  For information about backup sets, see [Media Sets, Media Families, and Backup Sets &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md).  
   
  **Description**  
- Enter a description of the backup set.  
-  
+Enter a description of the backup set. The description value is available in the `description` column of [`backupset` (Transact-SQL)](/sql/relational-databases/system-tables/backupset-transact-sql).
+
  **Backup set will expire**  
  Choose one of the following expiration options. This option is disabled if **URL** is chosen as the backup destination.  
   

@@ -1,6 +1,6 @@
 ---
 title: "What is SQL Server Reporting Services?"
-description: "Learn how to create, deploy, and manage reports using SQL Server Reporting Services (SSRS) to deliver data insights through paginated reports and modern web portals."
+description: "Learn how to create, deploy, and manage reports by using SQL Server Reporting Services (SSRS) to deliver data insights through paginated reports to web portals."
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 06/12/2024
@@ -16,7 +16,7 @@ helpviewer_keywords:
   - "reports [Reporting Services], about reports"
   - "Reporting Services"
   - "SQL Server Reporting Services"
-#customer intent: As a SQL Server user, I want to learn how to create, deploy, and manage reports using SQL Server Reporting Services (SSRS) to deliver data insights through paginated reports and modern web portals.
+#customer intent: As a SQL Server user, I want to learn how I can manage reports by using SQL Server Reporting Services (SSRS) paginated reports.
 ---
 
 # What is SQL Server Reporting Services (SSRS)?
@@ -31,7 +31,7 @@ Looking for Power BI Report Server? See [What is Power BI Report Server?](/power
 
 ## Create, deploy, and manage reports
 
-SSRS makes it easy to deliver the right information to the right users. You can view reports in a web browser on your computer or mobile device, or receive them via email.
+SSRS makes it easy to deliver the right information to the right users. You can view reports in a web browser on your computer, mobile device, or receive them via email.
 
 SSRS offers an updated suite of products:
 
@@ -41,16 +41,14 @@ SSRS offers an updated suite of products:
 * **New mobile reports**: Create reports with responsive layouts that adapt to different devices and orientations.
 ::: moniker-end
 
-Learn more about each feature in the following sections.
-
 ## Paginated reports
 
 :::image type="content" source="../reporting-services/media/ssrs-paginated-reports.png" alt-text="Diagram of paginated reports on a desktop screen and a tablet device.":::
 
-Paginated reports are perfect for fixed-layout documents optimized for printing, such as PDFs and Word files. You can create modern-looking reports with newly updated features, by using [Report Builder](../reporting-services/install-windows/install-report-builder.md), or [Report Designer](../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md) in [SQL Server Data Tools (SSDT)](../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md). We modernized this core BI workload with:
+Paginated reports are perfect for fixed-layout documents optimized for printing, such as PDFs and Word files. You can create innovative reports with newly updated features, by using [Report Builder](../reporting-services/install-windows/install-report-builder.md), or [Report Designer](../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md) in [SQL Server Data Tools (SSDT)](../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md). We updated this core BI workload with:
 
 * **New styles and color palettes**: Create reports with a fresh, minimalist style by default.
-* **Updated Parameter pane**: Arrange parameters as you like.
+* **Updated Parameter pane**: Arrange parameters exactly the way you want them.
 * **Export to new formats**: Export reports to PowerPoint with live, editable visualizations.
 * **Hybrid Power BI/SSRS experience**: Pin visuals from SSRS reports to your Power BI dashboards and monitor everything in one place.
 
@@ -74,7 +72,9 @@ As you build your visualizations, Mobile Report Publisher automatically generate
 
 :::image type="content" source="../reporting-services/media/report-server-2022-web-portal.png" alt-text="Screenshot of the Reporting Services web portal.":::
 
-The new web portal is a sleek, single-page HTML5 app that works with all major browsers, including Microsoft Edge, Internet Explorer 10 and 11, Chrome, Firefox, and Safari. Access all your SSRS reports and KPIs in one place, and organize content by type:
+For Reporting Services, the front door is a modern web portal. The web portal is a complete redesign of Report Manager.  Now, you can access all your Reporting Services reports and KPIs in the new portal. KPIs can surface key business metrics immediately in the browser without opening a report. 
+
+The web portal is a sleek, single-page, standards-based HTML5 app that works with all major browsers, including Microsoft Edge, Internet Explorer 10 and 11, Chrome, Firefox, and Safari. Access your SSRS reports and KPIs in one place. The content on the web portal is organized by type:
 
 * Paginated reports
 * KPIs
@@ -85,9 +85,9 @@ The new web portal is a sleek, single-page HTML5 app that works with all major b
 * Mobile reports 
 ::: moniker-end
 
-Store and manage your content securely, schedule report processing, access reports on demand, and subscribe to published reports. Tag your favorite reports for quick access, and manage SSRS content with appropriate permissions.
+Store and manage your content securelyin the traditional folder hierarchy. Tag your favorite reports for quick access. Those with appropriate permissions can manage and administer SSRS content. Schedule report processing, access reports on demand, and subscribe to published reports
 
-Learn more about the [Web portal](../reporting-services/web-portal-ssrs-native-mode.md).
+To learn mor, see [The web portal of a report server - SSRS Native mode](../reporting-services/web-portal-ssrs-native-mode.md).
 
 ::: moniker range="=sql-server-2016"
 
@@ -95,17 +95,18 @@ Learn more about the [Web portal](../reporting-services/web-portal-ssrs-native-m
 
 With Reporting Services in SharePoint integrated mode, you can easily publish your reports. Schedule report processing, access reports on demand, subscribe to published reports, and export them to applications like Microsoft Excel. You can also create data alerts on reports published to a SharePoint site and receive email notifications when report data changes.
 
-Learn more about [Reporting Services report server in SharePoint integrated mode](../reporting-services/report-server-sharepoint/reporting-services-report-server-sharepoint-mode.md).
+To learn more, see [Reporting Services report server in SharePoint integrated mode](../reporting-services/report-server-sharepoint/reporting-services-report-server-sharepoint-mode.md).
 
 ::: moniker-end
 
 ## [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] programming features
 
-Enhance and customize your reporting with [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] programming features. Use the SSRS APIs to integrate or extend data and report processing in your custom applications.
+Extend and customize your reporting functionality with [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] programming features. Use the SSRS APIs to integrate or extend data and report processing in your custom applications.
 
-Learn more about [Reporting Services developer documentation](../reporting-services/reporting-services-developer-documentation.md).
+To learn more, see [Reporting Services developer documentation](../reporting-services/reporting-services-developer-documentation.md).
 
 ## Related content
 
- - More questions? [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user).
-- Stay up-to-date with new SSRS features by visiting [What's new in Reporting Services](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md).
+- Keep up with new SSRS features: [What's new in Reporting Services](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md).
+
+More questions? [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user).

@@ -59,3 +59,5 @@ The license terms are displayed for review and acceptance in the Setup user inte
 - [Business continuity and database recovery - SQL Server](../../database-engine/sql-server-business-continuity-dr.md)
 - [Before Installing Failover Clustering](../failover-clusters/install/before-installing-failover-clustering.md)
 - [Upgrade SQL Server Using the Installation Wizard (Setup)](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)
+- [How to license SQL Server](https://www.microsoft.com/sql-server/sql-server-2022-pricing)
+- [SQL Server Licensing Resources and Documents](https://www.microsoft.com/licensing/docs/view/SQL-Server)

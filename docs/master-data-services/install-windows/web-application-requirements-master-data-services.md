@@ -29,9 +29,11 @@ keywords: master data services
     
 -   [Hardware and Software Requirements for Installing SQL Server 2016 and 2017](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)    
 -   [Hardware and Software Requirements for Installing SQL Server 2019](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2019.md)    
-  
+
+::: moniker range="=sql-server-2016 || =sql-server-2017"
 ### Microsoft Silverlight  
  To work in the [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] web application, Silverlight 5 must be installed on the client computer. If you do not have the required version of Silverlight, you will be prompted to install it when you navigate to an area of the web application that requires it. You can install Silverlight 5 from [here](https://go.microsoft.com/fwlink/?LinkId=243096).  
+ :::moniker-end
   
 ### Role and Role Services  
  On Windows Server 2012 or Windows Server 2012 R2, you can use **Server Manager**, which is available in the Microsoft Management Console (MMC), to install the **Web Server (IIS)** role, and required role services.  

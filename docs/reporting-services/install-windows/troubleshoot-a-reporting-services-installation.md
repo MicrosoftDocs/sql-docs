@@ -81,21 +81,13 @@ ms.custom: updatefrequency5
   
  **Workaround:** To register and start the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint Services, complete the following steps:  
   
-1.  On the computer that runs SharePoint 2013/2016 Central Administration  
+1.  On the computer that runs SharePoint 2013/2016 Central Administration, open the SharePoint 2013/2016 Management Shell with administrator privileges. Right-click the icon and click **Run As Administrator**. Run the following three cmdlets from the shell:  
   
-    1.  Open the SharePoint 2013/2016 Management Shell with administrator privileges. Right-click the icon and click **Run As Administrator**. Run the following three cmdlets from the shell:  
-  
-    2.  ```  
-        Install-SPRSService  
-        ```  
-  
-    3.  ```  
-        Install-SPRSServiceProxy  
-        ```  
-  
-    4.  ```  
-        Get-SPServiceInstance -all |where {$_.TypeName -like "SQL Server Reporting*"} | Start-SPServiceInstance  
-        ```  
+    ```powershell
+    Install-SPRSService  
+    Install-SPRSServiceProxy  
+    Get-SPServiceInstance -all |where {$_.TypeName -like "SQL Server Reporting*"} | Start-SPServiceInstance  
+    ```  
   
 2.  Verify the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Service shows status as "**Started**" on the page: SharePoint 2013/2016 Central Administration -> "**Application Management**" -> "**Manage Services on Server**"  
   

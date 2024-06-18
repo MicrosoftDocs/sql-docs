@@ -3,7 +3,7 @@ title: "What is SQL Server Reporting Services"
 description: "Learn about tools and services for Reporting Services reports on premises."
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 09/16/2022
+ms.date: 06/18/2024
 ms.service: reporting-services
 ms.subservice: reporting-services
 ms.topic: conceptual

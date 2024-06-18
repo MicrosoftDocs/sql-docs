@@ -3,7 +3,7 @@ title: "Create data connection strings - Report Builder & SSRS"
 description: Learn how to create data connection strings and learn important information related to data source credentials.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 12/02/2021
+ms.date: 06/18/2024
 ms.service: reporting-services
 ms.subservice: report-data
 ms.topic: conceptual
@@ -13,7 +13,7 @@ ms.custom: updatefrequency5
 
 [!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
 
-To include data in [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] and  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] paginated reports, you must first create a *connection string* to your *data source*. This article explains how to create data connection strings and important information related to data source credentials. A data source includes the data source type, connection information, and the type of credentials to use. For more background, see [Intro to Report Data in SQL Server Reporting Services (SSRS)](report-data-ssrs.md).
+To include data in [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] and [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] paginated reports, you must first create a *connection string* to your *data source*. This article explains how to create data connection strings and important information related to data source credentials. A data source includes the data source type, connection information, and the type of credentials to use. For more background, see [Intro to Report Data in SQL Server Reporting Services (SSRS)](report-data-ssrs.md).
 
 ## <a name="bkmk_DataConnections"></a> Built-in data extensions
 

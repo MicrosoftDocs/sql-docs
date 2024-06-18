@@ -3,7 +3,7 @@ title: "Get started with Report Viewer controls"
 description: The Report Viewer controls can be used to integrate Reporting Services RDL reports into WebForms and WinForms apps.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 09/01/2020
+ms.date: 06/18/2024
 ms.service: reporting-services
 ms.subservice: application-integration
 ms.topic: conceptual
@@ -61,7 +61,7 @@ The final page should look like the following example.
 </head>
 <body>
     <form id="form1" runat="server">
-    <asp:ScriptManager runat="server"></asp:ScriptManager>        
+    <asp:ScriptManager runat="server"></asp:ScriptManager>
         <rsweb:ReportViewer ID="ReportViewer1" runat="server" ProcessingMode="Remote">
             <ServerReport ReportServerUrl="https://AContosoDepartment/ReportServer" ReportPath="/LatestSales" />
         </rsweb:ReportViewer>

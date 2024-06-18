@@ -40,7 +40,7 @@ A REST API request/response pair can be separated into five components:
   - Although the request URI is included in the request message header, most languages or frameworks require you to pass it separately from the request message.
   - Consists of `{URI-scheme} :// {URI-host} / {resource-path} ? {query-string}`.
 
-  |Request URI parts|Description|
+  |Request URI fragments|Description|
   |---|---|
   |URI scheme|Indicates the protocol used to transmit the request. For example, `http` or `https`.|
   |URI host| Specifies the domain name or IP address of the server where the REST service endpoint is hosted, such as `myserver.contoso.com`.|

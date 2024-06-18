@@ -4,7 +4,7 @@ description: "Learn how to migrate a SQL Server Always On availability group fro
 author: tarynpratt
 ms.author: tarynpratt
 ms.reviewer: mathoma, randolphwest
-ms.date: 04/27/2023
+ms.date: 06/18/2024
 ms.service: virtual-machines-sql
 ms.subservice: hadr
 ms.topic: how-to

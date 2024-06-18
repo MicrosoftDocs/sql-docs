@@ -4,7 +4,7 @@ description: This article explains the Automated Patching feature for SQL Server
 author: tarynpratt
 ms.author: tarynpratt
 ms.reviewer: mathoma, randolphwest
-ms.date: 03/28/2024
+ms.date: 06/18/2024
 ms.service: virtual-machines-sql
 ms.subservice: management
 ms.topic: article
@@ -113,6 +113,14 @@ Update-AzSqlVM -ResourceGroupName 'resourcegroupname' -Name 'vmname' -AutoPatchi
 
 ## Understand which updates will be applied with Automated Patching
 To understand which updates will be applied through Automated Patching, review the [update guide](https://msrc.microsoft.com/update-guide) and apply the **Severity** filter to identify Critical and Important updates.
+
+## Considerations
+
+Consider the following:
+
+- Automated Patching isn't aware of Always On availability group configurations for your SQL Server VM, so be cautious when creating patching schedules for availability group replicas to avoid unexpected failovers.
+- If your SQL Server VMs are in an availability set and you've configured an Always On availability group, both nodes might be restarted if patches are applied at the same time, so it's important the patching schedules are set for a different day/time for each node. 
+
 
 ## Migrate from Automated Patching to Azure Update Manager
 

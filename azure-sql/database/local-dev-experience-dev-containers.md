@@ -60,6 +60,44 @@ Local development with Dev Containers reduces cloud costs associated with develo
 
 Dev Containers support cloud-native development scenarios, aligning with modern application architectures and frameworks. This ensures compatibility with Azure SQL Database and facilitates seamless deployment to Azure environments. By embracing cloud-native trends, we position Azure SQL Database as the platform of choice for modern, cloud-native applications, driving long-term adoption and revenue growth.
 
+Here are the key features:
+
+### Visual Studio Code extensions
+
+- `ms-mssql.mssql`: SQL Server extension for connecting and querying SQL databases.
+- `ms-mssql.sql-database-projects`: Extension for managing SQL Database projects, allowing for streamlined schema changes and deployment.
+- `github.copilot`: AI-powered code completion for enhanced productivity.
+- `ms-azuretools.vscode-docker`: Docker extension for managing containers directly from Visual Studio Code.
+- `ms-dotnettools.csdevkit` and `ms-dotnettools.csharp`: Essential extensions for .NET development.
+- `ms-azuretools.vscode-bicep`: Bicep extension for managing Azure resources.
+- `ms-azuretools.vscode-docker`: Docker extension for managing containers.
+- `github.codespaces`: Extension for working with GitHub Codespaces.
+
+### Preconfigured environment
+
+All of the below tools and utilities are pre-loaded in the Dev Container. You don't need to download or install!
+
+- **.NET / .NET Aspire**: The environment includes your preferred programming language/framework preinstalled and configured, ready for development.
+- **Azure CLI**: Tools for managing Azure resources and deployments.
+- **Azure Developer CLI:** A command-line interface providing a unified scripting experience for managing and developing Azure resources.
+- **Docker CLI**: Allows building and managing Docker containers from within another container.
+- **Azure SQL Database**: The `library` database was created and validated and ready for use. This database gives you full compatibility with Azure SQL Database.
+- **SQLCMD**: A command-line utility you can use to interact with the database, run queries, and more.
+- **SqlPackage**: Command-line utility for deploying database changes, including schema updates and data migrations.
+
+> [!IMPORTANT]
+> While the SQL Server container employs a standard version of SQL Server, all database development within this Dev Container can be validated for Azure SQL Database using the SQL Database Project. The SQL Database project is preconfigured with the target platform set as Azure SQL Database.
+
+### Visual Studio Code Tasks
+
+A set of predefined tasks in Visual Studio Code to simplify common actions:
+
+- **Execute SQL Query**: Opens and executes a SQL file to validate the database schema.
+- **Build SQL Database Project**: Builds the SQL Database project using `dotnet build`.
+- **Deploy SQL Database Project**: Deploys the SQL Database project to the database container.
+- **Update .NET SDK**: Updates the .NET SDK to ensure the latest features and compatibility.
+- **Trust .NET HTTPS Certificate**: Trusts the HTTPS certificate for secure development with .NET Aspire.
+
 ## Available templates
 
 The Azure SQL Database Dev Container Templates are available for the following programming languages / frameworks:

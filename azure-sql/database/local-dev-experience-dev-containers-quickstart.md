@@ -14,56 +14,6 @@ ms.topic: quickstart
 
 Dev Containers provide a comprehensive solution for enhancing local development for Azure SQL Database. Dev Container templates offer developers a seamless and efficient development environment, enabling them to build applications for Azure SQL Database with ease and confidence. Dev Containers can be utilized in any development environment whether is local or in the cloud, you can promote consistency across teams and workflows.
 
-## Capabilities and features
-
-The Dev Container for Azure SQL Database is packed with powerful tools and configurations to streamline your development process. Here are the key features:
-
-### Visual Studio Code extensions
-
-- `ms-mssql.mssql`: SQL Server extension for connecting and querying SQL databases.
-- `ms-mssql.sql-database-projects`: Extension for managing SQL Database projects, allowing for streamlined schema changes and deployment.
-- `github.copilot`: AI-powered code completion for enhanced productivity.
-- `ms-azuretools.vscode-docker`: Docker extension for managing containers directly from Visual Studio Code.
-- `ms-dotnettools.csdevkit` and `ms-dotnettools.csharp`: Essential extensions for .NET development.
-- `ms-azuretools.vscode-bicep`: Bicep extension for managing Azure resources.
-- `ms-azuretools.vscode-docker`: Docker extension for managing containers.
-- `github.codespaces`: Extension for working with GitHub Codespaces.
-
-### Preconfigured environment
-
-All of the below tools and utilities are pre-loaded in the Dev Container. You don't need to download or install!
-
-- **.NET / .NET Aspire**: The environment includes your preferred programming language/framework preinstalled and configured, ready for development.
-- **Azure CLI**: Tools for managing Azure resources and deployments.
-- **Azure Developer CLI:** A command-line interface providing a unified scripting experience for managing and developing Azure resources.
-- **Docker CLI**: Allows building and managing Docker containers from within another container.
-- **Azure SQL Database**: The `library` database was created and validated and ready for use. This database gives you full compatibility with Azure SQL Database.
-- **SQLCMD**: A command-line utility you can use to interact with the database, run queries, and more.
-- **SqlPackage**: Command-line utility for deploying database changes, including schema updates and data migrations.
-
-> [!IMPORTANT]
-> While the SQL Server container employs a standard version of SQL Server, all database development within this Dev Container can be validated for Azure SQL Database using the SQL Database Project. The SQL Database project is preconfigured with the target platform set as Azure SQL Database.
-
-### Visual Studio Code Tasks
-
-A set of predefined tasks in Visual Studio Code to simplify common actions:
-
-- **Execute SQL Query**: Opens and executes a SQL file to validate the database schema.
-- **Build SQL Database Project**: Builds the SQL Database project using `dotnet build`.
-- **Deploy SQL Database Project**: Deploys the SQL Database project to the database container.
-- **Update .NET SDK**: Updates the .NET SDK to ensure the latest features and compatibility.
-- **Trust .NET HTTPS Certificate**: Trusts the HTTPS certificate for secure development with .NET Aspire.
-
-### Automation and Efficiency
-
-- **Automated database deployment**: The Dev Container initialization process handles the deployment of the sample database using a DAC (Data-tier application) package.
-- **Container configuration**: Includes Docker configurations for setting up the development environment with minimal effort.
-
-### Customization and flexibility
-
-- **Forwarded Ports**: Preconfigured to forward necessary ports for seamless local development.
-- **Docker Compose**: Uses Docker Compose to manage multiple services and ensure they work together efficiently.
-
 ## Prerequisites
 
 Before you begin, ensure you have the following installed on your local machine:
@@ -73,42 +23,79 @@ Before you begin, ensure you have the following installed on your local machine:
 - **Dev Containers extension for Visual Studio Code**: Enables working with Dev Containers. [Install the extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
 - **Git**: For version control. [Download Git](https://git-scm.com/)
 
-Additionally, you need:
-
-- An Azure account: If you don't have one, you can create a free account at [Azure Free Account](https://azure.microsoft.com/free/).
-
 ## Steps to set up the development environment
 
-1. Clone the Dev Container repository.
+1. Open Visual Studio Code.
 
-    ```bash
-    git clone https://github.com/your-repository/azure-sql-dev-container-template.git
-    cd azure-sql-dev-container-template
-    ```  
+2. Open the Command Palette.
 
-1. Open the project in Visual Studio Code.
+    - Press `F1` or `Ctrl+Shift+P` to open the command palette.
 
-    1. Open Visual Studio Code.
-    1. Under **File, select **Open Folder**, then open the cloned repository folder.
+3. Select Dev Container Configuration.
 
-1. Use the **Reopen in Container** feature.
- 
-    1. Press `F1` to open the command palette.
-    1. Type `Remote-Containers: Reopen in Container`. Select the command.
+    - Type `Dev Containers: Select Dev Container Configuration`.
+    - Select the desired Dev Container template for Azure SQL Database:
+        - .NET with Aspire and Azure SQL (dotnet-aspire)
+        - .NET and Azure SQL (dotnet)
+        - Python and Azure SQL (python)
+        - Node.js and Azure SQL (node)
 
-1. Wait for the container to build.
+4. Wait for the container to build.
 
-    - Visual Studio Code builds the container based on the `devcontainer.json` configuration.
+    - Visual Studio Code will build the container based on the selected configuration.
     - The build process might take a few minutes the first time.
 
-1. Verify.
+5. Verify the setup.
 
     - Once the container is ready, you can start using the preinstalled tools and extensions.
-    - Open a terminal in Visual Studio Code and run `sqlcmd --version`, `dotnet --version`, `az --version` to verify the installations.
+    - Open a terminal in Visual Studio Code and run the following commands to verify the installations:
+
+        ```bash
+        # Verify SQL Command Line Tool
+        sqlcmd --version   
+        
+        # Verify Azure CLI
+        az --version       
+        
+        # Verify .NET SDK
+        dotnet --version   
+        
+        # Verify Python installation (if applicable)
+        python --version   
+        
+        # Verify Node.js installation (if applicable)
+        node --version     
+        ```
+
+    - For .NET projects, verify the build and restore process:
+
+        ```bash
+        # Restore NuGet packages
+        dotnet restore
+
+        # Build the project    
+        dotnet build      
+        ```
+
+    - For Python projects, verify the virtual environment setup:
+
+        ```bash
+        # Verify installed Python packages
+        pip list   
+        ```
+
+    - For Node.js projects, verify package installations:
+
+        ```bash
+        # Verify installed Node.js packages
+        npm list   
+        ```
 
 6. Run predefined tasks.
 
     - To run any of the predefined tasks, open the command palette (`F1`), type `Run Task`, and select the desired task. For example, **Execute SQL Query**, **Build SQL Database Project**.
+
+For more information about a specific template, see [Azure SQL Database Dev Container templates](./local-dev-experience-dev-containers.md).
 
 ## Related content
 

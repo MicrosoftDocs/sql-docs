@@ -31,14 +31,13 @@ Subsequent management operations on managed instances can impact the underlying 
 
 ## Fast provisioning
 
-Subnets that have the [November 2022 feature wave](november-2022-feature-wave-enroll.md) enabled can benefit from fast SQL Managed Instance provisioning, which reduces the time it takes to create your first instance in a subnet to 30 minutes, down from an average of 45-60 minutes. 
+Instances with certain configurations can benefit from fast SQL Managed Instance provisioning, which reduces the time it takes to create your first instance in a subnet to 30 minutes (down from an average of 45-60 minutes). To learn more about operation duration times, review [management operations](management-operations-overview.md).
 
 Fast provisioning only applies: 
 
 - to the first instance provisioned in the subnet. 
 - to instances with 4-8 vCores. 
 - to instances that use the default maintenance window. 
-- to instances that are deployed into subnets that have the November 2022 feature wave enabled, which includes both dev/test and production subscriptions.
 - to instances that are not zone redundant.
 
 ## Duration

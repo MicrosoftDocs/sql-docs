@@ -72,7 +72,7 @@ This article lists the currently known issues with [Azure SQL Managed Instance](
 
 Long-term backups can be listed and managed on Azure portal page for an Azure SQL Managed Instance on _Backups_ tab. The page lists active or deleted databases, basic information about their long-term backups, and link for managing backups. Clicking on the _Manage_ link opens a new side blade with list of backups. Due to an issue with the filtering logic, the list shows backups for both active database and deleted databases with the same name. This requires a special attention when selecting backups for deletion, to avoid deleting backups for a wrong database.
 
-**Workaround**: Use displayed _Backup time (UTC)_ information in the list to differentiate backups belonging to databases with the same name that existed on the instance at different periods. Alternatively, use PowerShell commands [Get-AzSqlInstanceDatabaseLongTermRetentionBackup](/powershell/module/az.sql/get-azsqlinstancedatabaselongtermretentionbackup) and [Remove-AzSqlInstanceDatabaseLongTermRetentionBackup](/powershell/module/az.sql/remove-azsqlinstancedatabaselongtermretentionbackup), or CLI commands [az sql midb ltr-backup list](/cli/azure/sql/midb/ltr-backup?view=azure-cli-latest#az-sql-midb-ltr-backup-list) and [az sql midb ltr-backup delete](/cli/azure/sql/midb/ltr-backup?view=azure-cli-latest#az-sql-midb-ltr-backup-delete) to manage long-term backups using _DatabaseState_ parameter and _DatabaseDeletionTime_ return value to filter backups for a database.
+**Workaround**: Use displayed _Backup time (UTC)_ information in the list to differentiate backups belonging to databases with the same name that existed on the instance at different periods. Alternatively, use PowerShell commands [Get-AzSqlInstanceDatabaseLongTermRetentionBackup](/powershell/module/az.sql/get-azsqlinstancedatabaselongtermretentionbackup) and [Remove-AzSqlInstanceDatabaseLongTermRetentionBackup](/powershell/module/az.sql/remove-azsqlinstancedatabaselongtermretentionbackup), or CLI commands [az sql midb ltr-backup list](/cli/azure/sql/midb/ltr-backup#az-sql-midb-ltr-backup-list) and [az sql midb ltr-backup delete](/cli/azure/sql/midb/ltr-backup#az-sql-midb-ltr-backup-delete) to manage long-term backups using _DatabaseState_ parameter and _DatabaseDeletionTime_ return value to filter backups for a database.
 
 ### The event_file target of the system_health event session is not accessible
 
@@ -80,9 +80,9 @@ When you attempt to read the contents of the `event_file` target of the `system_
 
 This change in behavior is an unintended consequence of a recent required security fix. We are investigating the feasibility of an additional change that would allow customers to continue using the `system_health` session on Azure SQL Managed Instance securely. In the meantime, customers can work around this issue by creating their own equivalent of the `system_health` session with an `event_file` target in Azure blob storage. For more information, including a T-SQL script to create the `system_health` session that can be modified to create your own equivalent of `system_health`, see [Use the system_health session](/sql/relational-databases/extended-events/use-the-system-health-session).
 
-### <a id="procedure-sp_send_dbmail-may-fail-when-query-parameter-is-used-on-nov22fw-enabled-managed-instances"></a> Procedure sp_send_dbmail might fail when @query parameter is used on Nov22FW enabled managed instances
+### <a id="procedure-sp_send_dbmail-may-fail-when-query-parameter-is-used-on-nov22fw-enabled-managed-instances"></a> Procedure sp_send_dbmail might fail when @query parameter
 
-Procedure `sp_send_dbmail` might fail when `@query` parameter is used, and this affects instances that have November 2022 feature wave enabled. Failures happen when the stored procedure is executed under sysadmin account.
+Procedure `sp_send_dbmail` might fail when `@query` parameter is used.. Failures happen when the stored procedure is executed under sysadmin account.
 
 This problem is caused by a known bug related to how `sp_send_dbmail` is using impersonation.
 

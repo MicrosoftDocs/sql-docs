@@ -593,19 +593,16 @@ sections:
 
   - name: November 2022 feature wave
     questions:
-      - question: What Azure offers and subscription types are enrolled in the November 2022 feature wave?
+      - question: I can no longer see the November 2022 feature wave in the Azure portal. Why?
         answer: |
-          All regions, offers, and subscription types have the [feature wave](november-2022-feature-wave-enroll.md) enabled starting November 2023.
+          Changes and capabilities that were introduced in the November 2022 feature wave have been integrated to majority of instances and are now available by default. Since taking separate action to enroll an instance is no longer necessary, options that mention the November 2022 feature wave have been removed from the Azure portal.
 
-      - question: I have the feature wave enabled in my subscription but my existing instance can't use the new features. Why?
+      - question: My instance isn't able to use features introduced by the November 2022 feature wave. Why?
         answer: |
-          The feature wave is available to instances in eligible subnets. If you don't see new features, it's likely that the subnet where your SQL managed instance is deployed isn't eligible.
+          The feature wave is available to instances in [eligible subnets](doc-changes-updates-release-notes-whats-new.md#november-2022-feature-wave). If you don't see new features, it's likely the subnet that contains your SQL managed instance isn't eligible as it's still in the enrollment process. Instances in subnets not enrolled in the wave continue to see the Feature Wave page in the Azure Portal.
 
   - name: Next-gen General Purpose service tier upgrade
     questions:
-      - question: Why can't I enable the Next-gen General Purpose upgrade for my existing General Purpose instance?
-        answer: |
-          This is likely because your instance doesn't have the [November 2022 Feature Wave](november-2022-feature-wave-enroll.md) enabled. To work around this, create a new instance in an empty subnet that has the November 2022 feature wave enabled, and then [move or copy](database-copy-move-how-to.md) the data from your existing instance to the new one.
 
       - question: My instance is part of a failover group and when I tried to enable the Next-gen General Purpose upgrade for my instance, it failed. Why? 
         answer: |

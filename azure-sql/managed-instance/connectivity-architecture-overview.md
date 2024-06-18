@@ -5,7 +5,7 @@ description: Learn about Azure SQL Managed Instance communication and connectivi
 author: zoran-rilak-msft
 ms.author: zoranrilak
 ms.reviewer: mathoma, bonova
-ms.date: 08/02/2023
+ms.date: 06/22/2024
 ms.service: sql-managed-instance
 ms.subservice: service-overview
 ms.topic: conceptual
@@ -27,21 +27,7 @@ In SQL Managed Instance, an instance is placed inside the Azure virtual network 
 - The ability to connect SQL Managed Instance to a linked server or to another on-premises data store.
 - The ability to connect SQL Managed Instance to Azure resources.
 
-> [!NOTE]
-> The November 2022 feature wave introduced changes to the default connectivity structure of SQL Managed Instance. This article provides information about the current architecture and the architecture of instances that haven't yet enrolled in the feature wave. For more information, see [November 2022 feature wave](november-2022-feature-wave-enroll.md).
-
-## November 2022 feature wave
-
-The November 2022 feature wave introduced the following changes to the SQL Managed Instance connectivity architecture:
-
-- Removed the management endpoint.
-- Simplified mandatory network security group rules (removed one mandatory rule).
-- Revised mandatory network security group rules so they no longer include outbound to AzureCloud on port 443.
-- Simplified the route table (reduced mandatory routes from 13 to 5).
-
 ## High-level connectivity architecture
-
-## [Current architecture](#tab/current)
 
 SQL Managed Instance is made of up service components hosted on a dedicated set of isolated virtual machines that are grouped together by similar configuration attributes and joined to a [virtual cluster](virtual-cluster-architecture.md). Some service components are deployed inside the customer's virtual network subnet while other services operate within a secure network environment that Microsoft manages.
 
@@ -59,34 +45,6 @@ The *data plane* is deployed inside the customer's subnet for compatibility, con
 
 The *control plane* carries the deployment, management, and core service maintenance functions via automated agents. These agents have exclusive access to the compute resources that operate the service. You can't use `ssh` or Remote Desktop Protocol to access those hosts. All control plane communications are encrypted and signed by using certificates. To check the trustworthiness of communicating parties, SQL Managed Instance constantly verifies these certificates by using certificate revocation lists.
 
-## [Architecture prior to November 2022](#tab/before-feature-wave)
-
-SQL Managed Instance is a set of service components that are hosted on a dedicated set of isolated virtual machines that are joined to a [virtual cluster](virtual-cluster-architecture.md). Some service components are deployed inside the customer's virtual network subnet. Other services operate in a secure network environment that Microsoft manages.
-
-:::image type="content" source="media/connectivity-architecture-overview/02-connectivity-architecture-sql-managed-instance.png" border="false" alt-text="Diagram that shows the high-level connectivity architecture for Azure SQL Managed Instance before November 2022.":::
-
-Customer applications can connect to SQL Managed Instance and can query and update databases inside the virtual network, peered virtual network, or network connected by VPN or Azure ExpressRoute.
-
-The following diagram shows entities that connect to SQL Managed Instance. It also shows the resources that need to communicate with a managed instance. The communication process at the bottom of the diagram represents customer applications and tools that connect to SQL Managed Instance as data sources.  
-
-:::image type="content" source="media/connectivity-architecture-overview/01-connectivity-architecture-entities.png" border="false" alt-text="Diagram that shows entities in the connectivity architecture for SQL Managed Instance before November 2022.":::
-
-SQL Managed Instance is a single-tenant, platform as a service (PaaS) offering. Its compute and networking elements are deployed inside the customer's subnet. SQL Managed Instance typically is accessed via its [VNet-local endpoint](connectivity-architecture-overview.md#vnet-local-endpoint). SQL Managed Instance depends on Azure services like Azure Storage, Microsoft Entra ID, Azure Key Vault, Azure Event Hubs, and telemetry collection services. Traffic that originates in subnets that contain SQL Managed Instance might go to those services.
-
-Deployment, management, and core service maintenance operations are carried out via automated agents. These agents have exclusive access to the compute resources that operate the service. You can't use `ssh` or Remote Desktop Protocol to access those hosts. All internal communications are encrypted and signed by using certificates. To check the trustworthiness of communicating parties, SQL Managed Instance constantly verifies these certificates by using certificate revocation lists.
-
-### Management endpoint
-
-To facilitate communication between the control plane and the components deployed inside the customer's subnet, managed instances not yet enrolled in the November 2022 Feature Wave employ a management endpoint. This means that elements of the virtual network's infrastructure can harm management traffic by making the instance fail and become unavailable. Management and deployment services connect to SQL Managed Instance's management endpoint, which is mapped to an external load balancer. Traffic is routed to the nodes only if it's received on a predefined set of ports that only the management components of SQL Managed Instance use. A built-in firewall on the nodes is set up to allow traffic only from Microsoft IP ranges. Certificates mutually authenticate all communication between management components and the management plane.
-
-> [!NOTE]
-> Traffic that goes to Azure services that are inside the SQL Managed Instance region is optimized. Because the traffic is optimized, traffic isn't sent by Network Address Translation (NAT) to the public IP address for the management endpoint. If you need to use IP-based firewall rules, most commonly for storage, the service must be in a different region than SQL Managed Instance.
-
-The Azure SQL Managed Instance [mandatory inbound security rules](connectivity-architecture-overview.md#mandatory-security-rules-with-service-aided-subnet-configuration) require management ports 9000, 9003, 1438, 1440, and 1452 to be open from *any source* on the network security group (NSG) that protects SQL Managed Instance. Although these ports are open at the network security group level, they're protected at the network level by the built-in firewall.
-
-The management endpoint is protected by a built-in firewall on the network level. On the application level, it's protected by mutual certificate verification. When connections start inside SQL Managed Instance, like in backups and audit logs, traffic appears to start from the management endpoint's public IP address.
-
----
 
 ## Communication overview
 
@@ -132,15 +90,7 @@ Learn more about private endpoints and how to configure them in [Azure Private L
 
 This section provides a closer look at the virtual cluster connectivity architecture of SQL Managed Instance. The following diagram shows the conceptual layout of the virtual cluster:
 
-## [Current architecture](#tab/current)
-
 :::image type="content" source="media/connectivity-architecture-overview/3-connectivity-architecture-diagram-virtual-cluster.png" border="false" alt-text="Diagram that shows the virtual cluster connectivity architecture for Azure SQL Managed Instance after November 2022.":::
-
-## [Architecture prior to November 2022](#tab/before-feature-wave)
-
-:::image type="content" source="media/connectivity-architecture-overview/03-connectivity-architecture-virtual-cluster.png" border="false" alt-text="Diagram that shows the virtual cluster connectivity architecture for Azure SQL Managed Instance before November 2022.":::
-
----
 
 The domain name of the VNet-local endpoint resolves to the private IP address of an internal load balancer. Although this domain name is registered in a public Domain Name System (DNS) zone and is publicly resolvable, its IP address belongs to the subnet's address range and can only be reached from inside its virtual network by default.
 
@@ -179,8 +129,6 @@ The subnet in which SQL Managed Instance is deployed must have the following cha
 
 ### Mandatory security rules with service-aided subnet configuration
 
-## [Current architecture](#tab/current)
-
 To ensure inbound management traffic flow, the rules described in the following table are required. The rules are enforced by the network intent policy and don't need to be deployed by the customer. For more information about the connectivity architecture and management traffic, see [High-level connectivity architecture](#high-level-connectivity-architecture).
 
 |Name          |Port                        |Protocol|Source           |Destination|Action|
@@ -198,30 +146,9 @@ To ensure outbound management traffic flow, the rules described in the following
 |StorageP-out       |443           |Any     |_subnet_         |Storage._primaryRegion_   |Allow |
 |StorageS-out       |443           |Any     |_subnet_         |Storage._secondaryRegion_ |Allow |
 
-## [Architecture prior to November 2022](#tab/before-feature-wave)
 
-To ensure inbound management traffic flow, the rules described in the following table are required:
-
-| Name       |Port                        |Protocol|Source           |Destination|Action|
-|------------|----------------------------|--------|-----------------|-----------|------|
-|management  |9000, 9003, 1438, 1440, 1452|TCP     |SqlManagement    |MI SUBNET  |Allow |
-|            |9000, 9003                  |TCP     |CorpnetSaw       |MI SUBNET  |Allow |
-|            |9000, 9003                  |TCP     |CorpnetPublic    |MI SUBNET  |Allow |
-|mi_subnet   |Any                         |Any     |MI SUBNET        |MI SUBNET  |Allow |
-|health_probe|Any                         |Any     |AzureLoadBalancer|MI SUBNET  |Allow |
-
-To ensure outbound management traffic flow, the rules described in the following table are required:
-
-| Name       |Port          |Protocol|Source           |Destination|Action|
-|------------|--------------|--------|-----------------|-----------|------|
-|management  |443, 12000    |TCP     |MI SUBNET        |AzureCloud |Allow |
-|mi_subnet   |Any           |Any     |MI SUBNET        |MI SUBNET  |Allow |
-
----
 
 ### Mandatory routes with service-aided subnet configuration
-
-## [Current architecture](#tab/current)
 
 The routes that are described in the following table are necessary to ensure that management traffic is routed directly to a destination. The routes are enforced by the network intent policy and don't need to be deployed by the customer. For more information about connectivity architecture and management traffic, see [High-level connectivity architecture](#high-level-connectivity-architecture).
 
@@ -238,27 +165,6 @@ The routes that are described in the following table are necessary to ensure tha
 
 You also can add entries to the route table to route traffic that has on-premises private IP ranges as a destination through the virtual network gateway or virtual network appliance.
 
-## [Architecture prior to November 2022](#tab/before-feature-wave)
-
-The routes that are described in the following table are necessary to ensure that management traffic is routed directly to a destination:
-
-|Name|Address prefix|Next hop <sup>2</sup>|
-|----|--------------|-------|
-|subnet-to-vnetlocal|MI SUBNET <sup>1</sup>|Virtual network|
-|mi-azurecloud-REGION-internet|AzureCloud.REGION|Internet|
-|mi-azurecloud-REGION_PAIR-internet|AzureCloud.REGION_PAIR|Internet|
-|mi-azuremonitor-internet|AzureMonitor|Internet|
-|mi-corpnetpublic-internet|CorpNetPublic|Internet|
-|mi-corpnetsaw-internet|CorpNetSaw|Internet|
-|mi-eventhub-REGION-internet|EventHub.REGION|Internet|
-|mi-eventhub-REGION_PAIR-internet|EventHub.REGION_PAIR|Internet|
-|mi-sqlmanagement-internet|SqlManagement|Internet|
-|mi-storage-internet|Storage|Internet|
-|mi-storage-REGION-internet|Storage.REGION|Internet|
-|mi-storage-REGION_PAIR-internet|Storage.REGION_PAIR|Internet|
-|mi-azureactivedirectory-internet|AzureActiveDirectory|Internet|
-
----
 
 ### Networking constraints
 

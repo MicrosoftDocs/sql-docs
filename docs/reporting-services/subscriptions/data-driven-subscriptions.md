@@ -1,9 +1,9 @@
 ---
 title: "Data-driven subscriptions in Reporting Services"
-description: Learn about data-driven subscriptions, which provide a way to use dynamic subscription data that you retrieve from an external data source at run time.
+description: Learn how data-driven subscriptions, which provide a way to use dynamic subscription data that you retrieve from an external data source at run time.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 05/20/2019
+ms.date: 06/18/2024
 ms.service: reporting-services
 ms.subservice: subscriptions
 ms.topic: conceptual
@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "subscriptions [Reporting Services], data-driven"
   - "data-driven subscriptions"
 
-#customer intent: As a SQL Server user, I want learn how to use data-driven subscriptions so that I can manage constantly changing data from my data sources.
+#customer intent: As a SQL Server user, I want to learn how to use data-driven subscriptions so that I can manage constantly changing data from my data sources.
 ---
 # Data-driven subscriptions in Reporting Services
 
@@ -30,17 +30,17 @@ A data-driven subscription is composed of multiple parts. The fixed aspects of a
   
 - The delivery extension used to distribute the report. You can specify report server e-mail delivery, file share delivery, or the null delivery provider used for preloading the cache. You can also specify a custom delivery extension. You can't specify multiple delivery extensions within a single subscription.  
   
-- The subscriber data source. You must specify a connection string to the data source that contains subscriber data when you define the subscription. The subscriber data source can't be specified dynamically at run time.  
+- The subscriber data source. Specify a connection string to the data source that contains subscriber data when you define the subscription. The subscriber data source can't be specified dynamically at run time.  
   
 - The query that you use to select subscriber data must be specified when you define the subscription. You can't change the query at run time.  
   
-Dynamic values used in a data-driven subscription are obtained when the subscription is processed. Examples of variable data that you might use in a subscription include the subscriber name, e-mail address, preferred report output format, or any value that is valid for a report parameter. To use dynamic values in a data-driven subscription, you define a mapping between the fields that are returned in the query to specific delivery options and to report parameters. Variable data is retrieved from a subscriber data source each time the subscription is processed.  
+Dynamic values used in a data-driven subscription are obtained when the subscription is processed. Examples of variable data that you might use in a subscription include the subscriber name, e-mail address, preferred report output format, or any value that's valid for a report parameter. To use dynamic values in a data-driven subscription, you define a mapping between the fields that are returned in the query to specific delivery options and to report parameters. Variable data is retrieved from a subscriber data source each time the subscription is processed.  
   
 ## Requirements for data-driven subscriptions
 
-Data-driven subscription functionality isn't available in all editions. There are also limitations on the kinds of data sources that you can use to retrieve subscription data at run time. The following list provides more information about the requirements:  
+Data-driven subscription functionality isn't available in all editions. There are limitations on the kinds of data sources that you can use to retrieve subscription data at run time. The following list provides more information about the requirements:  
 
-- For more information about the editions of SQL Server that support Data-driven subscription functionality, see [SQL Server Reporting Services features supported by its editions](../reporting-services-features-supported-by-the-editions-of-sql-server-2016.md).  
+- For more information about the editions of SQL Server that support data-driven subscription functionality, see [SQL Server Reporting Services features supported by its editions](../reporting-services-features-supported-by-the-editions-of-sql-server-2016.md).  
 
 - For subscription data, choose a data source that can provide schema information to the report server. Examples of supported data source types include:
   - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] relational data,

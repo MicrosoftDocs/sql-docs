@@ -89,6 +89,20 @@ conceptualContent:
         - text: Azure SQL Database
           url: /azure/azure-sql/migration-guides/database/mysql-to-sql-database-guide
           itemType: how-to-guide
+    - title: "PostgreSQL to"
+      links:
+        - text: Azure Database for PostgreSQL - Single Server to Flexible Server
+          url: /azure/postgresql/migrate/migration-service/tutorial-migration-service-single-to-flexible
+          itemType: tutorial
+        - text: Azure Virtual machine PostgreSQL to Azure Database for PostgreSQL
+          url: /azure/postgresql/migrate/migration-service/tutorial-migration-service-iaas-offline
+          itemType: tutorial
+        - text: On-premises PostgreSQL to Azure Database for PostgreSQL
+          url: /azure/postgresql/migrate/migration-service/tutorial-migration-service-iaas-offline
+          itemType: tutorial
+        - text: AWS RDS PostgreSQL to Azure Database for PostgreSQL
+          url: /azure/postgresql/migrate/migration-service/tutorial-migration-service-aws-offline
+          itemType: tutorial
     - title: "SAP ASE to"
       links:
         - text: SQL Server
@@ -96,17 +110,6 @@ conceptualContent:
           itemType: how-to-guide
         - text: Azure SQL Database
           url:  /azure/azure-sql/migration-guides/database/sap-ase-to-sql-database
-          itemType: how-to-guide
-    - title: "Open-source"
-      links:
-        - text: PostgreSQL to Azure Database for PostgreSQL
-          url: /azure/postgresql/howto-migrate-using-dump-and-restore
-          itemType: how-to-guide
-        - text: MySQL to Azure Database for MySQL
-          url: /azure/mysql/concepts-migrate-import-export
-          itemType: how-to-guide
-        - text: MariaDB to Azure Database for MariaDB
-          url: /azure/mariadb/howto-migrate-dump-restore
           itemType: how-to-guide
     - title: "NoSQL"
       links:

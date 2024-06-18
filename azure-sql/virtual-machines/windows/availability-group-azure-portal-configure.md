@@ -4,7 +4,7 @@ description: "Use the Azure portal to create SQL Server VMs in multiple subnets,
 author: tarynpratt
 ms.author: tarynpratt
 ms.reviewer: mathoma, randolphwest
-ms.date: 08/24/2023
+ms.date: 06/18/2024
 ms.service: virtual-machines-sql
 ms.subservice: hadr
 ms.topic: how-to

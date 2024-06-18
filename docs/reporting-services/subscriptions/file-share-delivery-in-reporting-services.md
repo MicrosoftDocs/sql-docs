@@ -40,13 +40,13 @@ When specifying the target folder in a subscription, use Uniform Naming Conventi
 \\<servername>\reportarchive\operations\2014  
 ```  
   
-When you create the folder, consider the connection limits you require. The report server requires two connections.Include enough connections to accommodate other users who want to open reports on the shared folder.  
+When you create the folder, consider the connection limits you require. The report server requires two connections. Include enough connections to accommodate other users who want to open reports on the shared folder.  
   
 ## <a name="bkmk_file_formats"></a> File formats  
 
-Reports can be rendered in various file formats, such as HTML, DOCX, and Excel. To save the report in a specific file format, select that rendering format when creating your subscription. For example, choosing **Excel** saves the report as a [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] file. Although you can choose from any supported rendering format, some formats work better than others when rendering to a file.  
+Reports can be rendered in various formats, such as MHTML, Word, and Excel. To save the report in a specific file format, select **Render format** when creating your subscription. For example, choosing **Excel** saves the report as a [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] file. Although you can choose from any supported rendering format, some formats work better than others when rendering to a file.  
   
-For file share delivery, choose a format that delivers the report in a single file, where all images and related content are included in the report. Suitable formats include Web archive, PDF, TIFF, and Excel. Avoid HTML 4.0. If your report includes images, the HTML 4.0 formats don't include them in the file.  
+For file share delivery, choose a format that delivers the report in a single file, where all images and related content are included in the report. Suitable formats include MHTML, PDF, TIFF, and Excel.
   
 ## <a name="bkmk_file_options"></a> File options  
 

@@ -16,7 +16,7 @@ helpviewer_keywords:
 ---
 # Data-driven subscriptions in Reporting Services
 
-A data-driven subscription provides a way to use dynamic subscription data that's retrieved from an external data source at run time. A data-driven subscription can also use static text and default values that you specify when you define the subscription. You can use data-driven subscriptions to:  
+A data-driven subscription provides a way to use dynamic subscription data retrieved from an external data source at run time. A data-driven subscription can also use static text and default values that you specify when you define the subscription. You can use data-driven subscriptions to:  
   
 - Distribute a report to a fluctuating list of subscribers. For example, you can use data-driven subscriptions to distribute a report throughout a large organization where subscribers vary from one month to the next. Or, you can use other criteria that determine group membership from an existing set of users.  
   

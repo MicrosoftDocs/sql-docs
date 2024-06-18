@@ -18,7 +18,7 @@ ms.custom: updatefrequency5
 
 Microsoft SQL Server 2017 Reporting Services supports Representational State Transfer (REST) APIs. REST APIs are service endpoints that support a set of HTTP operations (methods). These methods provide create, retrieve, update, or delete access for resources within a report server.
 
-The REST API provides programmatic access to the objects in a SQL Server 2017 Reporting Services report server catalog. The following are examples of objects:
+A REST API provides programmatic access to the objects in a SQL Server 2017 Reporting Services report server catalog. The following are examples of objects:
 
 - Folders
 - Reports
@@ -28,7 +28,7 @@ The REST API provides programmatic access to the objects in a SQL Server 2017 Re
 - Refresh plans
 - Subscriptions
 
-When you use the REST API, you can navigate the folder hierarchy, discover the contents of a folder, or download a report definition. You can also create, update, and delete objects.
+When you use a REST API, you can navigate the folder hierarchy, discover the contents of a folder, or download a report definition. You can also create, update, and delete objects.
 
 [!INCLUDE [GDPR-related guidance](../../includes/gdpr-hybrid-note.md)]
 
@@ -65,7 +65,7 @@ A REST API request/response pair can be separated into five components:
 
 ## API documentation
 
-A modern REST API calls for modern API documentation. The REST API is built on the OpenAPI specification, which is also called the swagger specification. Documentation is available on [Microsoft Learn](/rest/api/power-bi-report/).
+A modern REST API calls for modern API documentation. A REST API is built on the OpenAPI specification, which is also called the swagger specification. Documentation is available on [Microsoft Learn](/rest/api/power-bi-report/).
 
 ## Test API calls
 

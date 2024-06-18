@@ -82,7 +82,7 @@ To preview the format changes, select the **Preview** tab. In the **Preview** to
 
 :::image type="content" source="./media/rs-basictablesumgrandtotalpreview.gif" alt-text="Screenshot of the full preview for the formatted table.":::
 
-## Publish the report to the *Report Server* (Optional)
+## Publish the report to the Report Server (optional)
 
 An optional step is to publish the completed report to the Report Server so you can view the report in the web portal.
 

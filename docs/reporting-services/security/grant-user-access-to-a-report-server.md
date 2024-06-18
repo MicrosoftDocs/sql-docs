@@ -29,7 +29,7 @@ helpviewer_keywords:
 
 - System-level roles grant access to site-wide operations that aren't bound to any specific item. Examples include how to use Report Builder and shared schedules.
 
-The two types of roles complement each other and should be used together. For this reason, adding a user to a report server is a two-part operation. If you assign a user to an item-level role, you should also assign them to a system-level role. When assigning a user to a role, you must select a role that is already defined. To create, modify, or delete roles, use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. For more information, see [Create, Delete, or Modify a Role (Management Studio)](../../reporting-services/security/role-definitions-create-delete-or-modify.md).
+  The two types of roles complement each other and should be used together. For this reason, adding a user to a report server is a two-part operation. If you assign a user to an item-level role, you should also assign them to a system-level role. When assigning a user to a role, you must select a role that is already defined. To create, modify, or delete roles, use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. For more information, see [Create, Delete, or Modify a Role (Management Studio)](../../reporting-services/security/role-definitions-create-delete-or-modify.md).
 
 ## Before you start
 

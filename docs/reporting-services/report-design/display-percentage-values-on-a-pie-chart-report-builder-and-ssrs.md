@@ -40,6 +40,6 @@ In paginated reports, by default the legend shows categories. You might also wan
 ## Related content
 
 * [Tutorial: Add a Pie Chart to Your Report (Report Builder)](../tutorial-add-a-pie-chart-to-your-report-report-builder.md)
-* [Pie Charts (Report Builder and SSRS)](../../reporting-services/report-design/pie-charts-report-builder-and-ssrs.md)
-* [Formatting the Legend on a Chart (Report Builder and SSRS)](../../reporting-services/report-design/chart-legend-formatting-report-builder.md)
-* [Display Data Point Labels Outside a Pie Chart (Report Builder and SSRS)](../../reporting-services/report-design/display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)
+* [Pie Charts (Report Builder)](../../reporting-services/report-design/pie-charts-report-builder-and-ssrs.md)
+* [Formatting the Legend on a Chart (Report Builder)](../../reporting-services/report-design/chart-legend-formatting-report-builder.md)
+* [Display Data Point Labels Outside a Pie Chart (Report Builder)](../../reporting-services/report-design/display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)

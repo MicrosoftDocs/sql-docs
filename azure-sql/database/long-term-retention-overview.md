@@ -5,7 +5,7 @@ description: Learn how Azure SQL Database & Azure SQL Managed Instance support s
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: dinethi, mathoma, randolphwest
-ms.date: 12/20/2023
+ms.date: 06/18/2024
 ms.service: sql-db-mi
 ms.subservice: backup-restore
 ms.topic: conceptual
@@ -25,8 +25,8 @@ Many applications have regulatory, compliance, or other business reasons that re
 By using the LTR feature, you can store specified full SQL Database and SQL Managed Instance backups in redundant Azure Blob storage with a configurable retention policy of up to 10 years. LTR backups can then be restored as a new database. If an LTR policy is configured, automated backups are copied to different blobs for long-term storage which you can then use to restore your database to a specific point in time. The copy is a background job that has no performance impact on the database workload. The LTR policy for each database in SQL Database can also specify how frequently the LTR backups are created. 
 
 > [!NOTE]  
-> - It's not currently possible to configure backups of Azure SQL Database and Azure SQL Managed Instance as [immutable](/azure/storage/blobs/immutable-storage-overview). 
-> - In Azure SQL Managed Instance, use SQL Agent jobs to schedule [copy-only database backups](/sql/relational-databases/backup-restore/copy-only-backups-sql-server?view=azuresqldb-mi-current&preserve-view=true) as an alternative to LTR beyond 35 days.
+> - It's not currently possible to configure backups of Azure SQL Database and Azure SQL Managed Instance as [immutable](/azure/storage/blobs/immutable-storage-overview). LTR backups are non-modifiable, but you can be delete them through Azure portal, Azure CLI, PowerShell or REST API. For more information, see [Configure LTR backups](../managed-instance/long-term-backup-retention-configure.md).
+> - In Azure SQL Managed Instance, use SQL Agent jobs to schedule [copy-only database backups](/sql/relational-databases/backup-restore/copy-only-backups-sql-server?view=azuresqldb-mi-current&preserve-view=true) and keep them on your own storage account. This could be an alternative to LTR functionality that can keep your backups up to 10 years.
 
 To enable LTR, you can define a policy using a combination of four parameters: weekly backup retention (W), monthly backup retention (M), yearly backup retention (Y), and week of the year (WeekOfYear). If you specify W, one backup every week is copied to long-term storage. If you specify M, the first backup of each month is copied to the long-term storage. If you specify Y, one backup during the week specified by WeekOfYear is copied to the long-term storage. If the specified WeekOfYear is in the past when the policy is configured, the first LTR backup is created the following year. Each backup is kept in long-term storage according to the policy parameters that are configured when the LTR backup is created.
 

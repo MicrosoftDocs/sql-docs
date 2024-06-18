@@ -4,7 +4,7 @@ description: This release notes article describes the changes in each release of
 author: v-chojas
 ms.author: v-chojas
 ms.reviewer: v-davidengel
-ms.date: 04/09/2024
+ms.date: 06/13/2024
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: conceptual
@@ -29,7 +29,8 @@ For the ARM64 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?li
 
 | Feature added | Details |
 | :------- | :------ |
-| Bug fixes. | [Bug fixes](../bug-fixes.md). |
+| Bug fixes | [Bug fixes](../bug-fixes.md). |
+| Security updates | [KB5037571](https://support.microsoft.com/kb/5037571) |
 
 ## 17.10.6
 
@@ -45,7 +46,8 @@ For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?link
 
 | Feature added | Details |
 | :------- | :------ |
-| Bug fixes. | [Bug fixes](../bug-fixes.md). |
+| Bug fixes | [Bug fixes](../bug-fixes.md). |
+| Security updates | [KB5037570](https://support.microsoft.com/kb/5037570) |
 
 ## Previous Releases
 
@@ -65,7 +67,7 @@ For the ARM64 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?li
 
 | Feature added | Details |
 | :------- | :------ |
-| Bug fixes. | [Bug fixes](../bug-fixes.md). |
+| Bug fixes | [Bug fixes](../bug-fixes.md). |
 
 ## 17.10.5
 
@@ -83,7 +85,7 @@ For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?link
 | :------- | :------ |
 | Improved Performance | More efficient packet buffer memory allocation |
 | New Managed Identity (MSI) Authentication Support | Support for MSI authentication for Azure Arc and Azure Cloud Shell and updated to a newer Azure App Service API version |
-| Bug fixes. | [Bug fixes](../bug-fixes.md). |
+| Bug fixes | [Bug fixes](../bug-fixes.md). |
 
 ## 18.3.1
 
@@ -103,7 +105,7 @@ For the ARM64 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?li
 | :------- | :------ |
 | Improved Performance | More efficient packet buffer memory allocation |
 | New Managed Identity (MSI) Authentication Support | Support for MSI authentication for Azure Arc and Azure Cloud Shell and updated to a newer Azure App Service API version |
-| Bug fixes. | [Bug fixes](../bug-fixes.md). |
+| Bug fixes | [Bug fixes](../bug-fixes.md). |
 
 ## 18.2.2
 
@@ -121,7 +123,7 @@ For the ARM64(Preview) driver: [Chinese (Simplified)](https://go.microsoft.com/f
 
 | Feature added | Details |
 | :------- | :------ |
-| Bug fixes. | [Bug fixes](../bug-fixes.md). |
+| Bug fixes | [Bug fixes](../bug-fixes.md). |
 
 ## 17.10.4.1
 
@@ -137,7 +139,7 @@ For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?link
 
 | Feature added | Details |
 | :------- | :------ |
-| Bug fixes. | [Bug fixes](../bug-fixes.md). |
+| Bug fixes | [Bug fixes](../bug-fixes.md). |
 
 ## 18.2
 
@@ -156,7 +158,7 @@ For the ARM64(Preview) driver: [Chinese (Simplified)](https://go.microsoft.com/f
 | Feature added | Details |
 | :------- | :------ |
 | New distribution supported | Windows ARM64(Preview) |
-| Bug fixes. | [Bug fixes](../bug-fixes.md). |
+| Bug fixes | [Bug fixes](../bug-fixes.md). |
 
 ## 17.10.3
 
@@ -172,7 +174,7 @@ For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?link
 
 | Feature added | Details |
 | :------- | :------ |
-| Bug fixes. | [Bug fixes](../bug-fixes.md). |
+| Bug fixes | [Bug fixes](../bug-fixes.md). |
 
 ## 18.1.2
 
@@ -188,7 +190,7 @@ For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?link
 
 | Feature added | Details |
 | :------- | :------ |
-| Bug fixes. | [Bug fixes](../bug-fixes.md). |
+| Bug fixes | [Bug fixes](../bug-fixes.md). |
 
 ## 17.10.2
 
@@ -205,7 +207,7 @@ For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?link
 | Feature added | Details |
 | :------- | :------ |
 | Fix custom action DLL signing | Fix custom action DLL signing |
-| Bug fixes. | [Bug fixes](../bug-fixes.md). |
+| Bug fixes | [Bug fixes](../bug-fixes.md). |
 
 ## 18.1
 
@@ -226,8 +228,8 @@ For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?link
 | VBS-NONE enclave attestation protocol | New enclave attestation option to not attest the enclave. See [Using Always Encrypted](../using-always-encrypted-with-the-odbc-driver.md) |
 | Wildcard matching of HostnameInCertificate | Now able to use wildcard for specifying hostname, if different from default value found in Addr/Address/Server. |
 | ServerCertificate option | See [DSN and Connection String Attributes and Keywords](../dsn-connection-string-attribute.md). |
-| TrustedConnection_UseAAD option | Now only Kerberos integrated authentication is enabled when specifying Trusted_Connection=yes. Use the TrustedConnection_UseAAD option to enable the previous behavior of using either Kerberos or Azure Active Directory integrated. See [Using Azure Active Directory](../using-azure-active-directory.md) for more information. |
-| Bug fixes. | [Bug fixes](../bug-fixes.md). |
+| TrustedConnection_UseAAD option | Now only Kerberos integrated authentication is enabled when specifying Trusted_Connection=yes. Use the TrustedConnection_UseAAD option to enable the previous behavior of using either Kerberos or Azure Active Directory integrated. For more information, see [Using Azure Active Directory](../using-azure-active-directory.md). |
+| Bug fixes | [Bug fixes](../bug-fixes.md). |
 
 ## 17.10
 
@@ -244,7 +246,7 @@ For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?link
 | Feature added | Details |
 | :------- | :------ |
 | TrustedConnection_UseAAD option | Now only Kerberos integrated authentication is enabled when specifying Trusted_Connection=yes. Use the TrustedConnection_UseAAD option to enable the previous behavior of using either Kerberos or Azure Active Directory integrated. |
-| Bug fixes. | [Bug fixes](../bug-fixes.md). |
+| Bug fixes | [Bug fixes](../bug-fixes.md). |
 
 ## 18.0
 
@@ -265,7 +267,7 @@ For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?link
 | Secure by default | **BREAKING CHANGE**<br />Default Encrypt to Yes/Mandatory. Changed certificate validation behavior to validate when encryption is negotiated from either the client or the server side, not just the client side. For more information, see the [ODBC Driver 18.0 release announcement](https://techcommunity.microsoft.com/t5/sql-server-blog/odbc-driver-18-0-for-sql-server-released/ba-p/3169228).
 | Support for TDS 8.0 | See [Features of the Microsoft ODBC Driver for SQL Server on Windows](features-of-the-microsoft-odbc-driver-for-sql-server-on-windows.md). |
 | Compatibility extensions for SQLGetData | See [Features of the Microsoft ODBC Driver for SQL Server on Windows](features-of-the-microsoft-odbc-driver-for-sql-server-on-windows.md). |
-| Bug fixes. | [Bug fixes](../bug-fixes.md). |
+| Bug fixes | [Bug fixes](../bug-fixes.md). |
 
 ## 17.9
 
@@ -301,7 +303,7 @@ For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?link
 | Ability to modify KeyStoreAuthentication and KeyStorePrincipalId in DSN configuration UI | See [Using Always Encrypted](../using-always-encrypted-with-the-odbc-driver.md). |
 | Replication option added to the connection string | See [DSN and Connection String Attributes and Keywords](../dsn-connection-string-attribute.md). |
 | KeepAlive and KeepAliveInterval options added to the connection string | See [DSN and Connection String Attributes and Keywords](../dsn-connection-string-attribute.md). |
-| Bug fixes. | [Bug fixes](../bug-fixes.md). |
+| Bug fixes | [Bug fixes](../bug-fixes.md). |
 
 ## 17.7.2
 
@@ -317,7 +319,7 @@ For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?link
 
 | Feature added | Details |
 | :------- | :------ |
-| Bug fixes. | [Bug fixes](../bug-fixes.md). |
+| Bug fixes | [Bug fixes](../bug-fixes.md). |
 
 ## 17.7
 
@@ -336,7 +338,7 @@ For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?link
 | Azure Key Vault Interactive Authentication | See [Using Always Encrypted](../using-always-encrypted-with-the-odbc-driver.md). |
 | Service Principal Authentication | See [DSN and Connection String Attributes and Keywords](../dsn-connection-string-attribute.md). |
 | Ability to insert into encrypted money and smallmoney columns | See [Using Always Encrypted](../using-always-encrypted-with-the-odbc-driver.md). |
-| Bug fixes. | [Bug fixes](../bug-fixes.md). |
+| Bug fixes | [Bug fixes](../bug-fixes.md). |
 
 ## 17.6
 
@@ -354,7 +356,7 @@ For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?link
 | :------- | :------ |
 | Metadata caching for prepared statements | See [Using Always Encrypted](../using-always-encrypted-with-the-odbc-driver.md). |
 | SQL_COPT_SS_AUTOBEGINTXN connection attribute to control whether automatic BEGIN TRANSACTION happens after ROLLBACK or COMMIT | See [DSN and Connection String Attributes and Keywords](../dsn-connection-string-attribute.md). |
-| Bug fixes. | [Bug fixes](../bug-fixes.md). |
+| Bug fixes | [Bug fixes](../bug-fixes.md). |
 
 ## 17.5.2
 
@@ -374,7 +376,7 @@ For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?link
 | :------------ | :------ |
 | Support authentication with Managed Identity for Azure Key Vault | See [Using Always Encrypted with the ODBC Driver](../using-always-encrypted-with-the-odbc-driver.md). |
 | Support for more Azure Key Vault endpoints | See [Using Always Encrypted with the ODBC Driver](../using-always-encrypted-with-the-odbc-driver.md). |
-| Bug fixes. | See [Bug fixes](../bug-fixes.md). |
+| Bug fixes | See [Bug fixes](../bug-fixes.md). |
 
 Download previous ODBC Driver versions by clicking the download links in the following sections:
 
@@ -395,7 +397,7 @@ For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?link
 | Feature added | Details |
 | :------------ | :------ |
 | SQL_COPT_SS_SPID connection attribute to retrieve SPID without round trip to server | See [DSN and Connection String Attributes and Keywords](../dsn-connection-string-attribute.md). |
-| Bug fixes. | See [Bug fixes](../bug-fixes.md). |
+| Bug fixes | See [Bug fixes](../bug-fixes.md). |
 
 ## 17.4.2
 
@@ -415,8 +417,8 @@ For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?link
 | :------------ | :------ |
 | Support for more Azure Key Vault endpoints | See [Using Always Encrypted with the ODBC Driver](../using-always-encrypted-with-the-odbc-driver.md). |
 | Support for setting data classification version | See [Data Classification](../data-classification.md#bkmk-version). |
-| Include Azure Active Directory Authentication Library (adal.dll) in the installer | Now included in the base driver installation, the ODBC installer will upgrade existing installations of the Microsoft Active Directory Authentication Library for SQL Server, removing it from the list of installed applications in Windows. |
-| Bug fixes. | See [Bug fixes](../bug-fixes.md). |
+| Include Azure Active Directory Authentication Library (adal.dll) in the installer | Now included in the base driver installation, the ODBC installer upgrades existing installations of the Microsoft Active Directory Authentication Library for SQL Server, removing it from the list of installed applications in Windows. |
+| Bug fixes | See [Bug fixes](../bug-fixes.md). |
 
 ## 17.4
 
@@ -436,7 +438,7 @@ For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?link
 | :------------ | :------ |
 | Always Encrypted with secure enclaves. | See [Using Always Encrypted with the ODBC Driver](../using-always-encrypted-with-the-odbc-driver.md). |
 | Configurable TCP Keep Alive settings. | See [Connecting to SQL Server](../linux-mac/connection-string-keywords-and-data-source-names-dsns.md). |
-| Bug fixes. | See [Bug fixes](../bug-fixes.md). |
+| Bug fixes | See [Bug fixes](../bug-fixes.md). |
 
 ## 17.3
 
@@ -458,7 +460,7 @@ For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?link
 | Ability to stream input parameters against Always Encrypted columns. | See [Limitations of the ODBC driver when using Always Encrypted](../using-always-encrypted-with-the-odbc-driver.md#limitations-of-the-odbc-driver-when-using-always-encrypted). |
 | XA distributed transactions. | [Using XA Transactions](../use-xa-with-dtc.md). |
 | Updated Visual C++ Redistributable | Upgraded the runtime dependency to the Visual C++ 2017 Redistributable ([x64 Download](https://aka.ms/vs/15/release/vc_redist.x64.exe), [x86 Download](https://aka.ms/vs/15/release/vc_redist.x86.exe)) |
-| Bug fixes. | See [Bug fixes](../bug-fixes.md). |
+| Bug fixes | See [Bug fixes](../bug-fixes.md). |
 
 ## 17.2
 
@@ -478,7 +480,7 @@ For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?link
 | :------------ | :------ |
 | Data Classification for Azure SQL Database and SQL Server. | See [Data Classification](../data-classification.md). |
 | Support for UTF-8 server encoding. | &nbsp; |
-| Bug fixes. | See [Bug fixes](../bug-fixes.md). |
+| Bug fixes | See [Bug fixes](../bug-fixes.md). |
 
 ## 17.1
 
@@ -498,7 +500,7 @@ For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?link
 | :------------ | :------ |
 | Support for `SQL_COPT_SS_CEKCACHETTL` and `SQL_COPT_SS_TRUSTEDCMKPATHS` connection attributes. | &bull; &nbsp; `SQL_COPT_SS_CEKCACHETTL`<br/>Allows controlling the time that the local cache of Column Encryption Keys exists, and flushing it.<br/><br/>&bull; &nbsp; `SQL_COPT_SS_TRUSTEDCMKPATHS`<br/>Allows the application to restrict AE operations to only use the specified list of Column Master Keys.<br/><br/> For more information, see [Using Always Encrypted with the ODBC Driver for SQL Server](../using-always-encrypted-with-the-odbc-driver.md). |
 | Azure Active Directory Interactive Authentication Support | &nbsp; |
-| Bug fixes. | See [Bug fixes](../bug-fixes.md). |
+| Bug fixes | See [Bug fixes](../bug-fixes.md). |
 
 ## 17.0
 
@@ -522,7 +524,7 @@ For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?link
 
 | Dependency changed | Details |
 | :------------ | :------ |
-| Removed Microsoft online service sign-in assistant | The dependency has been removed. |
+| Removed Microsoft online service sign-in assistant | The dependency is removed. |
 
 ### <a name="diffs-managed-instance-17"></a> Differences when using Managed Instance (ODBC version 17)
 
@@ -560,7 +562,7 @@ For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?link
 | Feature added | Details |
 | :------------ | :------ |
 | ODBC Driver 13.1 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] adds support for [Always Encrypted](../using-always-encrypted-with-the-odbc-driver.md) and [Azure Active Directory](../using-azure-active-directory.md). | These added supports are available when connecting to Microsoft SQL Server 2016, or to a later version. |
-| There are connection pooling keywords and attributes, that correspond to the supports for Always Encrypted and Azure Active Directory. | These keywords and attributes are described in [Driver Aware Connection Pooling in the ODBC Driver for SQL Server](driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server.md). |
+| There are connection pooling keywords and attributes that correspond to the supports for Always Encrypted and Azure Active Directory. | These keywords and attributes are described in [Driver Aware Connection Pooling in the ODBC Driver for SQL Server](driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server.md). |
 
 ## 13
 

@@ -1,6 +1,6 @@
 ---
 title: Predefined roles in Reporting Services
-description: Learn how to use predefined rolls in Reporting Services to quickly assign permissions for the people you want using your report server.
+description: Learn how to use predefined rolls in Reporting Services to quickly assign permissions for the people you want to use your report server.
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 02/04/2021

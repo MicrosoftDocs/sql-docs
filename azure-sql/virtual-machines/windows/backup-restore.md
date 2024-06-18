@@ -4,7 +4,7 @@ description: Describes backup and restore considerations for SQL Server database
 author: tarynpratt
 ms.author: tarynpratt
 ms.reviewer: mathoma, randolphwest
-ms.date: 07/31/2023
+ms.date: 06/18/2024
 ms.service: virtual-machines-sql
 ms.subservice: backup
 ms.topic: conceptual

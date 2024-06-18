@@ -29,7 +29,7 @@ The `common criteria compliance enabled` configuration setting aligns with the f
 |The ability to view login statistics | Login auditing is enabled after the common criteria compliance option is enabled.</br></br></br> Login times that are made available on a per-session basis each time a user successfully logs in to SQL Server: </br> - Information about the last successful login time </br> - The last unsuccessful login time </br> - The number of attempts between the last successful login and the current login</br></br></br> To view these login statistics, query [sys.dm_exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md). |
 |That column `GRANT` shouldn't override table `DENY` | After the common criteria compliance enabled option is enabled, a table-level `DENY` takes precedence over a column-level `GRANT`. When the option isn't enabled, a column-level `GRANT` takes precedence over a table-level `DENY`. |
 
-Common criteria compliance is only evaluated and certified for the Enterprise edition and Datacenter edition.
+Common criteria compliance is only evaluated and certified for Enterprise Edition.
 
 The `common criteria compliance enabled` setting is an advanced option. To view the setting, enable [`show advanced options`](show-advanced-options-server-configuration-option.md).
 

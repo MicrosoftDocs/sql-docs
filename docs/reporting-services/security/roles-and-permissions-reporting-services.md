@@ -1,6 +1,6 @@
 ---
 title: Roles and permissions in Reporting Services
-description: Learn about how you can use the roles and permissions tools in Reporting Services to manage your report servers.
+description: Learn how you can use the roles and permissions tools in Reporting Services to manage your report servers.
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 06/13/2024
@@ -46,7 +46,7 @@ Report servers have two types of roles that you can define: **Roles** and **Syst
 |View Folders                     |View folder items in the folder hierarchy; and view folder properties.                                                           |
 |Manage folders                   |Create, view, and delete folders; and view and modify folder properties.                                                         |
 |Manage report history            |Create, view, and delete report history snapshots; and modify report history properties.                                         |
-|Manage individual subscriptions  |Each user can create, view, modify and delete subscriptions that he or she owns.                                                 |
+|Manage individual subscriptions  |Each user can create, view, modify, and delete subscriptions that they own.                                                 |
 |Manage all subscriptions         |View, modify, and delete any subscription regardless of who owns the subscription.                                               |
 |View data sources                |View shared data source items in the folder hierarchy; and view data source properties.                                          |
 |Manage data sources              |Create and delete shared data source items; and modify data source properties.                                                   |
@@ -64,7 +64,7 @@ Report servers have two types of roles that you can define: **Roles** and **Syst
 |Manage report server security  |View and modify system-wide role assignments.                                                        |
 |View report server properties  |View properties that apply to the report server.                                                     |
 |Manage report server properties|View and modify properties that apply to the report server and to items managed by the report server.|
-|View shared schedules          |View a predefined schedule that has been made available for general use.                             |
+|View shared schedules          |View a predefined schedule that made available for general use.                             |
 |Manage shared schedules        |Create, view, modify and delete shared schedules used to run reports or refresh a report.            |
 |Generate events                |Provides an application with the ability to generate events within the report server namespace.      |
 |Manage jobs                    |View and cancel running jobs.                                                                        |

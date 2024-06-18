@@ -1,0 +1,84 @@
+{
+  "redirections": [
+    {
+      "source_path": "docs/powershell/download-sql-server-ps-module.md",
+      "redirect_url": "/docs/powershell/sql-server/download-sql-server-ps-module",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/powershell/encode-and-decode-sql-server-identifiers.md",
+      "redirect_url": "/docs/powershell/sql-server/encode-and-decode-sql-server-identifiers",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/powershell/escape-sql-server-identifiers.md",
+      "redirect_url": "/docs/powershell/sql-server/escape-sql-server-identifiers",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/powershell/how-to-enable-tcp-sqlps.md",
+      "redirect_url": "/docs/powershell/sql-server/how-to-enable-tcp-sqlps",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/powershell/load-the-smo-assemblies-in-windows-powershell.md",
+      "redirect_url": "/docs/powershell/sql-server/load-the-smo-assemblies-in-windows-powershell",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/powershell/manage-authentication-in-database-engine-powershell.md",
+      "redirect_url": "/docs/powershell/sql-server/manage-authentication-in-database-engine-powershell",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/powershell/manage-tab-completion-sql-server-powershell.md",
+      "redirect_url": "/docs/powershell/sql-server/manage-tab-completion-sql-server-powershell",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/powershell/navigate-sql-server-powershell-paths.md",
+      "redirect_url": "/docs/powershell/sql-server/navigate-sql-server-powershell-paths",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/powershell/query-expressions-and-uniform-resource-names.md",
+      "redirect_url": "/docs/powershell/sql-server/query-expressions-and-uniform-resource-names",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/powershell/run-windows-powershell-from-sql-server-management-studio.md",
+      "redirect_url": "/docs/powershell/sql-server/run-windows-powershell-from-sql-server-management-studio",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/powershell/run-windows-powershell-steps-in-sql-server-agent.md",
+      "redirect_url": "/docs/powershell/sql-server/run-windows-powershell-steps-in-sql-server-agent",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/powershell/specify-instances-in-the-sql-server-powershell-provider.md",
+      "redirect_url": "/docs/powershell/sql-server/specify-instances-in-the-sql-server-powershell-provider",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/powershell/sql-server-identifiers-in-powershell.md",
+      "redirect_url": "/docs/powershell/sql-server/sql-server-identifiers-in-powershell",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/powershell/sql-server-powershell-provider.md",
+      "redirect_url": "/docs/powershell/sql-server/sql-server-powershell-provider",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/powershell/sql-server-powershell.md",
+      "redirect_url": "/docs/powershell/sql-server/sql-server-powershell",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/powershell/work-with-sql-server-powershell-paths.md",
+      "redirect_url": "/docs/powershell/sql-server/work-with-sql-server-powershell-paths",
+      "redirect_document_id": false
+    }
+  ]
+}

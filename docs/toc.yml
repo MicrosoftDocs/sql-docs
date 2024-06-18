@@ -4748,8 +4748,6 @@ items:
         href: database-engine/configure-windows/hide-an-instance-of-sql-server-database-engine.md
       - name: Configure the Database Engine to listen on multiple TCP ports
         href: database-engine/configure-windows/configure-the-database-engine-to-listen-on-multiple-tcp-ports.md
-      - name: How to enable the TCP protocol with SQLPS
-        href: powershell/how-to-enable-tcp-sqlps.md
       - name: Determine if the Database Engine is installed and started
         href: database-engine/configure-windows/determine-whether-the-database-engine-is-installed-and-started.md
       - name: Connect to the Database Engine using Extended Protection
@@ -8152,8 +8150,6 @@ items:
       href: tools/sqllogship-application.md
     - name: sqlmaint
       href: tools/sqlmaint-utility.md
-    - name: sqlps
-      href: tools/sqlps-utility.md
     - name: sqlservr Application
       href: tools/sqlservr-application.md
     - name: tablediff

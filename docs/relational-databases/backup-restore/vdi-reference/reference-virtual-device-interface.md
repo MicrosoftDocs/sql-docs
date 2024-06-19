@@ -36,4 +36,4 @@ Review the VDI reference documentation in this section.
 
 Download the full specification and the supporting source files:
 
-[SQL Server 2005 Virtual Backup Device Interface (VDI) Specification](https://www.microsoft.com/download/details.aspx?id=17282)
+[GitHub: sql-server-samples/samples/features/sqlvdi](https://github.com/microsoft/sql-server-samples/tree/master/samples/features/sqlvdi)

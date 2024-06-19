@@ -4,7 +4,7 @@ description: Step-by-step instructions for creating a listener for an Always On 
 author: tarynpratt
 ms.author: tarynpratt
 ms.reviewer: mathoma, randolphwest
-ms.date: 05/28/2024
+ms.date: 06/18/2024
 ms.service: virtual-machines-sql
 ms.subservice: hadr
 ms.topic: how-to

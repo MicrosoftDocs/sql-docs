@@ -10,7 +10,7 @@ metadata:
   ms.author: wiassaf
   ms.reviewer: scottkim, mathoma, urosmil
   ms.custom: azure-sql-split
-  ms.date: 05/28/2024
+  ms.date: 06/19/2024
   monikerRange: "=azuresql||=azuresql-mi"
 
 title: Maintenance window FAQ for Azure SQL Managed Instance
@@ -126,7 +126,7 @@ sections:
 
       - question: Can I check the list of resources that will be impacted by the event that I got notified for?
         answer: |
-          Yes, this information is available in Azure Monitor under the Service Health Planned Maintenance page, by visiting the single event. Another way is to [retrieve the list of impacted resources](advance-notifications.md#retrieve-the-list-of-impacted-resources) by using [Azure Resource Graph Explorer](/azure/governance/resource-graph/overview). You will receive an advance notification email that contains the notification ID and a link to the Azure Resource Graph Explorer. 
+          Yes, this information is available in Azure Monitor under the Service Health Planned Maintenance page, by visiting the single event. Another way is to [retrieve the list of impacted resources](advance-notifications.md#programmatically-retrieve-the-list-of-impacted-resources) by using [Azure Resource Graph Explorer](/azure/governance/resource-graph/overview). You will receive an advance notification email that contains the notification ID and a link to the Azure Resource Graph Explorer. 
 
   - name: Maintenance window monitoring
     questions:

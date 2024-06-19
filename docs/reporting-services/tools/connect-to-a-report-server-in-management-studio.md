@@ -75,7 +75,7 @@ helpviewer_keywords:
 
 1. Select the **Reporting Services** icon.
 
-1. Expand **Reporting Services** and right-click **Local Server Groups**. Select **New Server Registration...** option. The **New Server Registration** dialog box appears.
+1. Expand **Reporting Services** and right-click **Local Server Groups**. Select the **New Server Registration...** option. The **New Server Registration** dialog box appears.
 
 1. For **Server name**, enter a value. You specify the value depending on the server mode:
 

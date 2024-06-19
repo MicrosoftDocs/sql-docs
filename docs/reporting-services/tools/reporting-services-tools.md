@@ -40,7 +40,7 @@ helpviewer_keywords:
 
 [!INCLUDE [ssrs-mobile-report-deprecated](../../includes/ssrs-mobile-report-deprecated.md)]
 >
->Report parts are deprecated for all releases of SQL Server Reporting Services after SQL Server Reporting Services 2019.
+> Report parts are deprecated for all releases of SQL Server Reporting Services after SQL Server Reporting Services 2019.
 
 ## Tools for report server administration  
 
@@ -83,7 +83,7 @@ helpviewer_keywords:
   
 ## Related content  
 
- [Comparing native and SharePoint Reporting Services report servers](../../reporting-services/report-server-sharepoint/reporting-services-report-server.md)
- [Reporting Services concepts &#40;SSRS&#41;](../../reporting-services/reporting-services-concepts-ssrs.md)
- [What is SQL Server Reporting Services (SSRS)](../../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)  
+- [Comparing native and SharePoint Reporting Services report servers](../../reporting-services/report-server-sharepoint/reporting-services-report-server.md)
+- [Reporting Services concepts &#40;SSRS&#41;](../../reporting-services/reporting-services-concepts-ssrs.md)
+- [What is SQL Server Reporting Services (SSRS)](../../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)  
   

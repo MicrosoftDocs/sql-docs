@@ -63,11 +63,11 @@ You're all set. Next time there's a planned Azure SQL maintenance event, you'll 
 
 [Azure Service Health](/azure/service-health/service-health-overview) is a combination of three separate smaller services with a purpose of keeping you informed about the health of your cloud resources. This information includes current and upcoming issues such as service affecting events, planned maintenance, and other changes that might affect your availability. Service health (a sub-service) provides a personalized view of the health of the Azure services and regions you're using. This is the best place to look for service affecting planned maintenance activities.
 
-Under the Service Health you can find a **Planned maintenance** page for listing all maintenance activities happening on your subscriptions. You can use built in filters to narrow the list of events and scope them to tenant, subscription, region, or resource type. 
+Under the Service Health you can find a **Planned maintenance** page for listing all maintenance activities happening on your subscriptions. You can use built-in filters to narrow the list of events and scope them to tenant, subscription, region, or resource type. 
 
 :::image type="content" source="media/advance-notifications/service-health-planned-maintenance.png" alt-text="Screenshot of the Azure Monitor Service Health page where you can list all maintenance events." lightbox="media/advance-notifications/service-health-planned-maintenance.png":::
 
-From the list of events on **Service Health | Planned Maintenance** page you can further navigate into each maintenance event and check the details. All maintenance events with the same tracking ID will appear in the **Issue Updates** tab. In the **Impacted Resources**, resources impacted by published maintenance events are listed. 
+From the list of events on the **Service Health | Planned Maintenance** page you can further navigate into each maintenance event and check the details. All maintenance events with the same tracking ID will appear in the **Issue Updates** tab. In the **Impacted Resources**, resources impacted by published maintenance events are listed. 
 
 :::image type="content" source="media/advance-notifications/service-health-planned-maintenance-event.png" alt-text="Screenshot of the Azure Monitor Service Health page with opened single maintenance event containing full event details." lightbox="media/advance-notifications/service-health-planned-maintenance-event.png":::
 

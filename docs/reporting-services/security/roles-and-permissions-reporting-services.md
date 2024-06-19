@@ -31,9 +31,9 @@ Authorization is based on roles that you assign to a principal. Each role consis
 
 ### Roles and System Roles
 
-Report servers have two types of roles that you can define: **Roles** and **System Roles**.
+Report servers have two types of roles that you can define: **Item Roles** and **System Roles**.
 
-**Roles** come with the following tasks that you can assign:
+**Item Roles** come with the following tasks that you can assign:
 
 |Task                             |Description                                                                                                                      |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------|

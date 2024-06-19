@@ -16,7 +16,7 @@ helpviewer_keywords:
   - "reports [Reporting Services], about reports"
   - "Reporting Services"
   - "SQL Server Reporting Services"
-#customer intent: As a SQL Server user, I want to learn how I can manage reports by using SQL Server Reporting Services (SSRS) paginated reports.
+#customer intent: As a SQL Server user, I want to learn how I can manage reports by using SQL Server Reporting Services (SSRS) paginated reports so that I can deliver paginated reports.
 ---
 
 # What is SQL Server Reporting Services (SSRS)?
@@ -45,7 +45,7 @@ SSRS offers an updated suite of products:
 
 :::image type="content" source="../reporting-services/media/ssrs-paginated-reports.png" alt-text="Diagram of paginated reports on a desktop screen and a tablet device.":::
 
-Paginated reports are perfect for fixed-layout documents optimized for printing, such as PDFs and Word files. You can create innovative reports with newly updated features, by using [Report Builder](../reporting-services/install-windows/install-report-builder.md), or [Report Designer](../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md) in [SQL Server Data Tools (SSDT)](../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md). We updated this core BI workload with:
+Paginated reports are perfect for fixed-layout documents optimized for printing, such as PDFs and Word files. You can create innovative reports with newly updated features, by using [Report Builder](../reporting-services/install-windows/install-report-builder.md), or [Report Designer](../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md) in [SQL Server Data Tools (SSDT)](../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md). We updated the core BI workload with:
 
 * **New styles and color palettes**: Create reports with a fresh, minimalist style by default.
 * **Updated Parameter pane**: Arrange parameters exactly the way you want them.

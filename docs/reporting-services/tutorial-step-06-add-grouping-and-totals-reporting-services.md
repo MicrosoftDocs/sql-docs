@@ -114,7 +114,7 @@ Switch to the **Preview** tab so you can view the report as it appears when publ
 
    :::image type="content" source="./media/rs-basictablesumgrandtotalpreview.gif" alt-text="Screenshot of the full preview for the formatted table.":::
 
-## Publish the report to the Report Server (Optional)
+## Publish the report to the Report Server (optional)
 
 Publish your completed report to the Report Server. This process is optional and involves configuring the report properties, setting the target server URL, and deploying the report. This step is crucial for making your report available to a broader audience through the web portal and ensuring the information is easily accessible.
 

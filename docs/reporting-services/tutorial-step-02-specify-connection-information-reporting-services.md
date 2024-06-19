@@ -13,7 +13,7 @@ ms.custom: updatefrequency5
 ---
 # Tutorial: Specify connection information (Reporting Services)
   
-AFter you create your project and report definition file, you define a data source and configure connection information for the report to access data from a relational database or other sources.
+After you create your project and report definition file, you define a data source and configure connection information for the report to access data from a relational database or other sources.
 
 In this tutorial, you:
 

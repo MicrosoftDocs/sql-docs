@@ -4,17 +4,19 @@ titleSuffix: Azure SQL Database & Azure SQL Managed Instance
 description: Learn how to prepare for planned maintenance events in Azure SQL Database and Azure SQL Managed Instance.
 author: aamalvea
 ms.author: aamalvea
-ms.reviewer: wiassaf, mathoma
-ms.date: 05/21/2024
+ms.reviewer: wiassaf, mathoma, urosmil
+ms.date: 06/19/2024
 ms.service: sql-db-mi
 ms.subservice: service-overview
 ms.topic: conceptual
-ms.custom: sqldbrb=1, build-2024
-monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
+ms.custom:
+  - sqldbrb=1
+  - build-2024
+monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
 ---
 
 # Plan for Azure maintenance events in Azure SQL Database and Azure SQL Managed Instance
-[!INCLUDE[appliesto-sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi.md)]
+[!INCLUDE [appliesto-sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi.md)]
 
 Learn how to prepare for planned maintenance events on your database in Azure SQL Database and Azure SQL Managed Instance.
 
@@ -35,16 +37,18 @@ Maintenance event can produce single or multiple reconfigurations, depending on 
 
 If a new connection is attempted while the database is undergoing a reconfiguration before the new primary replica is online, you get error 40613 (Database Unavailable): `Database '{databasename}' on server '{servername}' is not currently available. Please retry the connection later.` If your database has a long-running query, this query will be interrupted during a reconfiguration and will need to be restarted.
 
-## Maintenance window feature
+## Maintenance windows and advance notifications
 
-The [maintenance window feature](maintenance-window.md) allows for the configuration of predictable maintenance window schedules for eligible Azure SQL databases and SQL managed instances. [Maintenance window advance notifications](../database/advance-notifications.md) are available for databases configured to use a non-default [maintenance window](maintenance-window.md).
+The maintenance window feature allows for the configuration of predictable maintenance window schedules for eligible Azure SQL databases and SQL managed instances. You can also configure advance notifications before maintenance windows. For more information, see:
 
-- For Azure SQL Database, maintenance windows and advance notifications for maintenance windows are generally available.
-- For Azure SQL Managed Instance, maintenance windows are generally available, but advance notifications are a [preview feature](https://azure.microsoft.com/support/legal/preview-supplemental-terms/).
+- [Maintenance windows for Azure SQL Database](maintenance-window.md)
+- [Configure advance notifications for maintenance windows for Azure SQL Database](advance-notifications.md)
+- [Maintenance windows for Azure SQL Managed Instance](../managed-instance/maintenance-window.md)
+- [Configure advance notifications for maintenance windows for Azure SQL Managed Instance](../managed-instance/advance-notifications.md)
 
 ## How to simulate a planned maintenance event
 
-Ensure that your client application is resilient to maintenance events before deploying to production. 
+Ensure that your client application is resilient to maintenance events before deploying to production.
 
 Testing will mitigate the risk of application faults and contributes to application availability for your end users. You can test behavior of your client application during planned maintenance events by [Testing Application Fault Resiliency](./high-availability-sla.md#testing-application-fault-resiliency) via PowerShell, CLI, or REST API.
 

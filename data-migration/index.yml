@@ -1,18 +1,16 @@
 ### YamlMime:Hub
 title: Azure Database Migration Guides
-summary: "Step-by-step guidance for modernizing your data assets. "
+summary: Step-by-step guidance for modernizing your data assets.
 brand: sql
 metadata:
-   title: Azure Database Migration Guides | Microsoft Docs
-   description: "Step-by-step guidance for modernizing your data assets by migrating to SQL Server, Azure SQL Database, Azure SQL Managed Instance, Azure Database, Azure Cosmos DB, SQL Server on Azure VMs and Azure Synapse Analytics. "
-   ms.topic: hub-page
-   ms.service: sql
-   ms.subservice: migration-guide
-   author: rwestMSFT
-   ms.author: randolphwest
-
+  title: Azure Database Migration Guides | Microsoft Docs
+  description: Step-by-step guidance for modernizing your data assets by migrating to SQL Server, Azure SQL Database, Azure SQL Managed Instance, Azure Database, Azure Cosmos DB, SQL Server on Azure VMs and Azure Synapse Analytics.
+  author: rwestMSFT
+  ms.author: randolphwest
+  ms.service: sql
+  ms.subservice: migration-guide
+  ms.topic: hub-page
 # itemType: how-to-guide | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
-
 
 conceptualContent:
   items:
@@ -35,7 +33,7 @@ conceptualContent:
           itemType: how-to-guide
         - text: Migrate SQL Server to Azure video
           url: /shows/data-exposed/migrate-sql-server-to-azure?WT.mc_id=dataexposed-c9-niner-mighub
-          itemType: video          
+          itemType: video
     - title: "Oracle to"
       links:
         - text: Azure Database for PostgreSQL
@@ -48,7 +46,7 @@ conceptualContent:
           url: /azure/azure-sql/migration-guides/database/oracle-to-sql-database-guide
           itemType: how-to-guide
         - text: Azure SQL Managed Instance
-          url: /azure/azure-sql/migration-guides/managed-instance/oracle-to-managed-instance-guide 
+          url: /azure/azure-sql/migration-guides/managed-instance/oracle-to-managed-instance-guide
           itemType: how-to-guide
         - text: SQL Server on Azure VMs
           url: /azure/azure-sql/migration-guides/virtual-machines/oracle-to-sql-on-azure-vm-guide
@@ -89,12 +87,15 @@ conceptualContent:
         - text: Azure SQL Database
           url: /azure/azure-sql/migration-guides/database/mysql-to-sql-database-guide
           itemType: how-to-guide
+        - text: Azure Database for MySQL - Flexible Server
+          url: /azure/mysql/flexible-server/concepts-migrate-import-export
+          itemType: how-to-guide
     - title: "PostgreSQL to"
       links:
         - text: Azure Database for PostgreSQL - Single Server to Flexible Server
           url: /azure/postgresql/migrate/migration-service/tutorial-migration-service-single-to-flexible
           itemType: tutorial
-        - text: Azure Virtual machine PostgreSQL to Azure Database for PostgreSQL
+        - text: Azure Virtual Machine PostgreSQL to Azure Database for PostgreSQL
           url: /azure/postgresql/migrate/migration-service/tutorial-migration-service-iaas-offline
           itemType: tutorial
         - text: On-premises PostgreSQL to Azure Database for PostgreSQL
@@ -109,7 +110,7 @@ conceptualContent:
           url: /sql/sql-server/migrate/guides/sap-ase-to-sql-server
           itemType: how-to-guide
         - text: Azure SQL Database
-          url:  /azure/azure-sql/migration-guides/database/sap-ase-to-sql-database
+          url: /azure/azure-sql/migration-guides/database/sap-ase-to-sql-database
           itemType: how-to-guide
     - title: "NoSQL"
       links:
@@ -130,7 +131,7 @@ conceptualContent:
           itemType: how-to-guide
         - text: HBase to Azure Cosmos DB
           url: /azure/cosmos-db/sql/migrate-hbase-to-cosmos-db
-          itemType: how-to-guide      
+          itemType: how-to-guide
         - text: Azure Table Storage to Azure Cosmos DB
           url: /azure/cosmos-db/table-import
           itemType: how-to-guide
@@ -195,40 +196,10 @@ additionalContent:
   sections:
     - title: Recent customer case studies
       items:
-        # Card
-        - title: Ferguson (United States)
-          summary: Largest US plumbing wholesaler uses Azure Arc SQL Managed Instance to extend Azure services on-premises.
-          url: https://customers.microsoft.com/story/844232-ferguson-enterprises-retailers-azure-arc
-        # Card
-        - title: Clearsale (Brazil)
-          summary: ClearSale builds foundation for growth and innovation by migrating to Azure with the Azure SQL Database hyperscale service tier.
-          url: https://customers.microsoft.com/story/773410-clearsale-partner-professional-services-azure
-        # Card
-        - title: Willis Towers Watson (United Kingdom)
-          summary: Willis Towers Watson achieves seamless scalability in the cloud by migrating to Azure SQL Database.
-          url: https://customers.microsoft.com/story/willis-towers-watson-partner-professional-services-azure
-        # Card
-        - title: Paychex (United States)
-          summary: Paychex relies on Azure SQL Database Elastic Pools to handle explosive growth.
-          url: https://customers.microsoft.com/story/paychex-azure-sql-database-us
-        # Card
-        - title: Innovative Systems (United States)
-          summary: Innovative Systems unites its far-flung databases in the cloud by powering migrations using Azure Database Migration Service.
-          url: https://customers.microsoft.com/story/innovative-systems-partner-professional-services-azure-sql-database
-        # Card
-        - title: Capita Group (United Kingdom)
-          summary: Capita Reading Cloud migrates 10,000 databases and finds new scalability with Azure.
-          url: https://customers.microsoft.com/story/724217-capita-uk-professional-services-azure-sql-database
-        # Card
         - title: Intershop (United States)
-          summary: Intershop, an e-commerce leader, migrates to SQL Server and Azure SQL Database from Oracle, boosts product performance and opens markets. 
+          summary: Intershop, an e-commerce leader, migrates to SQL Server and Azure SQL Database from Oracle, boosts product performance and opens markets.
           url: https://customers.microsoft.com/story/intershop-partner-professional-services-azure-sql-database
         # Card
         - title: Minecraft Realms (United States)
-          summary: Minecraft Realms migrates from AWS to Azure with minimal disruption to the user base. 
+          summary: Minecraft Realms migrates from AWS to Azure with minimal disruption to the user base.
           url: https://developer.microsoft.com/games/blog/migrating-minecraft-realms-from-aws-to-azure/
-        # Card
-        - title: CCC Marketing (Japan)
-          summary: CCC Marketing switched its data analytics infrastructure from Oracle to Microsoft Azure. 
-          url: https://customers.microsoft.com/story/843276-ccc-marketing-professional-services-azure-en-japan
-          

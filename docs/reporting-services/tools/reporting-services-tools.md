@@ -39,7 +39,6 @@ helpviewer_keywords:
 |Report Builder|Use this tool to design reports. It includes the following features:<br /><br /> Deploy to a native mode or SharePoint mode report server.<br /><br /> [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office-like authoring environment. <br /><br />[!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)].<br /><br /> Save report items as report parts.<br /><br /> A wizard for creating maps.<br /><br /> Aggregates of aggregates.<br /><br /> Enhanced support for expressions.<br /><br /> Query designers to help specify which data to retrieve from a selection of built-in data sources types.<br /><br /> For more information, see [Microsoft Report Builder in SQL Server](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md).|Download the [standalone version of Report Builder](https://go.microsoft.com/fwlink/?LinkID=219138).<br /><br /> Or you can open it from the web portal/SharePoint.|  
 
 [!INCLUDE [ssrs-mobile-report-deprecated](../../includes/ssrs-mobile-report-deprecated.md)]
->
 > Report parts are deprecated for all releases of SQL Server Reporting Services after SQL Server Reporting Services 2019.
 
 ## Tools for report server administration  

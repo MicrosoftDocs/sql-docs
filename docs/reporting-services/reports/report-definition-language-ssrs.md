@@ -62,7 +62,7 @@ Build tools and applications that generate RDL based on their XML schema because
 
 Developers can extend RDL by adding custom report items with custom properties. For more information about Language-Integrated Query (LINQ), search for "LINQ to XML" on Microsoft Developer Network.
 
-The standard file extension for a report definition files is **.rdl**. You can develop client report definition files, which have the extensions **.rdlc**. The MIME type for both extensions is text/xml. For more information, see [Reporting Services Reports &#40;SSRS&#41;](../../reporting-services/reports/reporting-services-reports-ssrs.md).
+The standard file extension for a report definition file is **.rdl**. You can develop client report definition files, which have the extensions **.rdlc**. The MIME type for both extensions is text/xml. For more information, see [Reporting Services Reports &#40;SSRS&#41;](../../reporting-services/reports/reporting-services-reports-ssrs.md).
 
 ## <a name="bkmk_RDL_Types"></a> RDL Types
 

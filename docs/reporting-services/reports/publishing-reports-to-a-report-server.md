@@ -1,5 +1,5 @@
 ---
-title: "Publish Reports to a Report Server"
+title: "Publish reports to a report server"
 description: Learn how to use the deployment features in SQL Server Data Tools (SSDT) to publish multiple reports or a report server project to a report server.
 author: maggiesMSFT
 ms.author: maggies
@@ -80,6 +80,6 @@ After the target server URL of the report server is specified, you can change th
 
 ## Related content
 
- [Project property pages dialog box](../../reporting-services/tools/project-property-pages-dialog-box.md)
- [Report Server content management &#40;SSRS Native Mode&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)
- [Upgrade reports](../../reporting-services/install-windows/upgrade-reports.md)
+- [Project property pages dialog box](../../reporting-services/tools/project-property-pages-dialog-box.md)
+- [Report Server content management &#40;SSRS Native Mode&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)
+- [Upgrade reports](../../reporting-services/install-windows/upgrade-reports.md)

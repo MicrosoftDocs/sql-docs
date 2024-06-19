@@ -3,7 +3,7 @@ title: What are REST APIs for Reporting Services?
 description: Learn how REST APIs provide programmatic access to the objects in a SQL Server 2017 Reporting Services report server catalog.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 06/18/2024
+ms.date: 06/19/2024
 ms.service: reporting-services
 ms.subservice: developer
 ms.topic: overview
@@ -40,7 +40,7 @@ A REST API request/response pair can be separated into five components:
   - Although the request URI is included in the request message header, most languages or frameworks require you to pass it separately from the request message.
   - Consists of `{URI-scheme} :// {URI-host} / {resource-path} ? {query-string}`.
 
-  |Request URI fragments|Description|
+  |Request URI|Description|
   |---|---|
   |URI scheme|Indicates the protocol used to transmit the request. For example, `http` or `https`.|
   |URI host| Specifies the domain name or IP address of the server where the REST service endpoint is hosted, such as `myserver.contoso.com`.|

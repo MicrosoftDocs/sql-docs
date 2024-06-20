@@ -39,9 +39,9 @@ Released: June 20, 2024
 
 Fixed issues in 12.6.3:
 
-- Check that money and small money are within correct range for bulkcopy
-- Check if TDSCommand counter is null before incrementing
-- Clear prepared statement cache when resetting statement pool connection
+- Fixed issue where TokenCredential class was required to be imported
+- Fixed timestamp string conversion regression
+- Fixed SQLServerCallableStatement default value regression
 
 :::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft JDBC Driver 12.6.3 for SQL Server (zip)](https://go.microsoft.com/fwlink/?linkid=2276808)**  
 :::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft JDBC Driver 12.6.3 for SQL Server (tar.gz)](https://go.microsoft.com/fwlink/?linkid=2276509)**

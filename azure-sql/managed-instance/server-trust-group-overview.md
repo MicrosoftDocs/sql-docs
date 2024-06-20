@@ -14,12 +14,12 @@ ms.topic: conceptual
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
 
 Server trust group (also known as SQL trust group) is a concept used for managing trust between instances in Azure SQL Managed Instance. By creating a group, a certificate-based trust is established between its members. This trust can be used for different cross-instance scenarios. Removing servers from the group or deleting the group removes the trust between the servers. To create or delete a server trust group, the user needs to have write permissions on the managed instance.
-[Server trust group](/azure/templates/microsoft.sql/allversions) is an Azure Resource Manager object which has been labeled as **SQL trust group** in Azure portal.
+[Server trust group](/azure/templates/microsoft.sql/allversions) is an Azure Resource Manager object, which has been labeled as **SQL trust group** in Azure portal.
 
 
 ## Set up group
 
-Server trust group can be setup via [Azure PowerShell](/powershell/module/az.sql/new-azsqlservertrustgroup) or [Azure CLI](/cli/azure/sql/stg). 
+Server trust group can be set up via [Azure PowerShell](/powershell/module/az.sql/new-azsqlservertrustgroup) or [Azure CLI](/cli/azure/sql/stg). 
 
 To create a server trust group by using the Azure portal, follow these steps: 
 
@@ -35,7 +35,7 @@ To create a server trust group by using the Azure portal, follow these steps:
 
    :::image type="content" source="./media/server-trust-group-overview/new-sql-trust-group-button.png" alt-text="Screenshot shows SQL trust groups page with New Group selected.":::
 
-5. On the **SQL trust group** create pane set the **Group name**. It needs to be unique in the group's subscription, resource group and region. **Trust scope** defines the type of cross-instance scenario that is enabled with the server trust group. Trust scope is fixed - all available functionalities are preselected and this cannot be changed. Select **Subscription** and **Resource group** to choose the managed instances that will be members of the group.
+5. On the **SQL trust group**, create pane set the **Group name**. It needs to be globally unique in its Azure region. **Trust scope** defines the type of cross-instance scenario that is enabled with the server trust group. Trust scope is fixed - all available functionalities are preselected and this can't be changed. Select **Subscription** and **Resource group** to choose the managed instances that will be members of the group.
 
    :::image type="content" source="./media/server-trust-group-overview/new-sql-trust-group.png" alt-text="Screenshot shows the Create SQL trust group create page with values.":::
 
@@ -62,7 +62,7 @@ To delete a server trust group, follow these steps:
 
 1. Go to the Azure portal.
 1. Navigate to a managed instance that belongs to the SQL trust group.
-1. On the **Security** settings select the **SQL trust groups** tab.
+1. On the **Security** settings, select the **SQL trust groups** tab.
 1. Select the trust group you want to delete.
 
    :::image type="content" source="./media/server-trust-group-overview/select-delete-sql-trust-group.png" alt-text="Screenshot shows SQL trust groups page with a group highlighted.":::
@@ -83,8 +83,8 @@ To delete a server trust group, follow these steps:
 Following limitations apply to Server Trust Groups: 
 
  * Group can contain only instances of Azure SQL Managed Instance.
- * Trust scope cannot be changed when a group is created or modified.
- * The name of the server trust group must be unique for its subscription, resource group and region.
+ * Trust scope can't be changed when a group is created or modified.
+ * The name of the server trust group must be unique for its subscription, resource group, and region.
 
 ## Next steps
 

@@ -58,13 +58,13 @@ Paginated reports are perfect for fixed-layout documents optimized for printing,
 
 :::image type="content" source="../reporting-services/media/ssrs-mobile-reports.png" alt-text="Diagram of mobile reports on a desktop screen and a tablet device.":::
 
-Mobile computing transformed how we work, creating new reporting needs. Fixed-layout reports just don't work well on tablets and phones. They're designed for wide PC screens, not small, portrait, or landscape screens.
+Mobile computing transforms how we work, creating new reporting needs. Fixed-layout reports don't work well on tablets and phones. They're designed for wide PC screens, not small, portrait, or landscape screens.
 
-To meet these new demands, we introduced mobile reports with responsive layouts that adapt to different devices and orientations. Based on Datazen technology, these reports ensure your data looks great no matter where you view it. You can even migrate your existing Datazen reports to Reporting Services with the [SQL Server Migration Assistant for Datazen](https://www.microsoft.com/download/details.aspx?id=53128).
+To meet these demands, mobile reports have responsive layouts that adapt to different devices and orientations. Based on Datazen technology, these reports ensure your data looks great no matter where you view it. You can even migrate existing Datazen reports to Reporting Services with the [SQL Server Migration Assistant for Datazen](https://www.microsoft.com/download/details.aspx?id=53128).
 
-Create these mobile reports easily with the new  [Mobile Report Publisher](../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md) app. Whether you're on Windows, iOS, Android, or HTML5, you can access your data in Power BI, the cloud, or SSRS through the [Power BI apps for mobile devices](https://powerbi.microsoft.com/documentation/powerbi-power-bi-apps-for-mobile-devices/).
+Create these mobile reports with the [Mobile Report Publisher](../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md) app. Whether you're on Windows, iOS, Android, or HTML5, you can access your data in Power BI, the cloud, or SSRS through the [Power BI apps for mobile devices](https://powerbi.microsoft.com/documentation/powerbi-power-bi-apps-for-mobile-devices/).
 
-As you build your visualizations, Mobile Report Publisher automatically generates sample data, so you can see exactly how your data looks and which types of data work best in each visualization. This update makes designing beautiful, effective reports a breeze.
+As you build your visualizations, Mobile Report Publisher automatically generates sample data, so you can see exactly how your data looks and which types of data work best in each visualization.
 
 ::: moniker-end
 
@@ -93,7 +93,7 @@ To learn more, see [The web portal of a report server - SSRS Native mode](../rep
 
 ## Reporting Services in SharePoint integrated mode
 
-With Reporting Services in SharePoint integrated mode, you can easily publish your reports. Schedule report processing, access reports on demand, subscribe to published reports, and export them to applications like Microsoft Excel. You can also create data alerts on reports published to a SharePoint site and receive email notifications when report data changes.
+You can publish your reports with Reporting Services in SharePoint integrated mode. Schedule report processing, access reports on demand, subscribe to published reports, and export them to applications like Microsoft Excel. You can also create data alerts on reports published to a SharePoint site and receive email notifications when report data changes.
 
 To learn more, see [Reporting Services report server in SharePoint integrated mode](../reporting-services/report-server-sharepoint/reporting-services-report-server-sharepoint-mode.md).
 

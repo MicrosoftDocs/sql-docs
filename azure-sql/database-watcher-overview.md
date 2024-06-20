@@ -5,7 +5,7 @@ description: An overview of database watcher for Azure SQL, a managed monitoring
 author: dimitri-furman
 ms.author: dfurman
 ms.reviewer: wiassaf
-ms.date: 6/13/2024
+ms.date: 6/19/2024
 ms.service: sql-db-mi
 ms.subservice: monitoring
 ms.topic: conceptual
@@ -182,9 +182,9 @@ To collect monitoring data, database watcher requires specific, limited access t
 > 
 > When configuring watcher access to a SQL target, always [create a dedicated login using provided scripts](database-watcher-manage.md#grant-access-to-sql-targets-with-t-sql-scripts). Do not add the watcher login or user to any SQL roles or grant any SQL permissions other than the ones listed in the table.
 
-If you [deny](/sql/t-sql/statements/deny-transact-sql) required permissions to the database watcher login or user, or to the `public` database role in any database, database watcher will not collect monitoring data. Depending on which permissions are denied, this might affect some or all datasets.
+If you [deny](/sql/t-sql/statements/deny-transact-sql) the required permissions to the database watcher login or user, or to a role that has the database watcher login or user as a member (including the `public` database role), then database watcher might not collect monitoring data. Depending on which permissions are denied, this might affect some or all datasets.
 
-Conversely, if you grant unnecessary permissions to the database watcher login or user directly or indirectly, for example by granting permissions to the `public` database role or to another role that contains the database watcher login or user, database watcher will not collect monitoring data.
+Conversely, if you [grant](/sql/t-sql/statements/grant-transact-sql) unnecessary permissions to the database watcher login or user, or to a role that has the database watcher login or user as a member, then database watcher might not collect monitoring data for some or all datasets. Similarly, data might not be collected if you add the database watcher login or user to a built-in server or database role.
 
 ## What's new
 

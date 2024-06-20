@@ -38,7 +38,7 @@ Your computer must have the following installed to use this tutorial:
   
 - SQL Server Agent service.  
   
-- A report that includes parameters. The tutorial requires the sample report, `Sales Orders` created in the tutorial [Create a basic table report &#40;SSRS tutorial&#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md).  
+- A report that includes parameters. The tutorial requires the sample report, `Sales Orders`, created in the tutorial [Create a basic table report &#40;SSRS tutorial&#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md).  
   
 - The [!INCLUDE [sssampledbobject-md](../includes/sssampledbobject-md.md)] sample database.  
   

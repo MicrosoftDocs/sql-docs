@@ -53,6 +53,7 @@ Your computer must have the following installed to use this tutorial:
 The tutorial is divided into three steps:
 
 | Step | Description |
+|------|------------ |
 | [Step 1: Create a sample subscriber database](../reporting-services/lesson-1-creating-a-sample-subscriber-database.md) | Create a table in the local SQL Server database that contains subscriber information. This information includes the order numbers to use for filtering and output file formats. |
 | [Step 2: Configure report data source properties](../reporting-services/lesson-2-modifying-the-report-data-source-properties.md) | Configure a report data source to run a report unattended and on a schedule. Modify the report dataset to include a parameter supplied by the subscriber data. |
 | [Step 3: Define a data-driven subscription](../reporting-services/lesson-3-defining-a-data-driven-subscription.md) | Create a data-driven subscription by using the Data-Driven Subscription Wizard. |

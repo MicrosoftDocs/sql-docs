@@ -38,10 +38,6 @@ Your computer must have the following installed to use this tutorial:
   
 - SQL Server Agent service.  
   
-- A report that includes parameters. The tutorial requires the sample report, `Sales Orders`, created in the tutorial [Create a basic table report &#40;SSRS tutorial&#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md).  
-  
-- The [!INCLUDE [sssampledbobject-md](../includes/sssampledbobject-md.md)] sample database.  
-  
 - A [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] role assignment that includes the **Manage all subscriptions** task on the sample report. This task defines a data-driven subscription. If you're an administrator on the computer, the default role assignment for local administrators provides the permissions necessary for creating data-driven subscriptions. For more information, see [Grant permissions on a native mode report server](../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md).  
   
 - Write permissions to a shared folder that’s accessible over a network connection.

@@ -58,7 +58,7 @@ The tutorial is divided into three lessons:
 | [Lesson 2: Configure report data source properties](../reporting-services/lesson-2-modifying-the-report-data-source-properties.md) | Configure a report data source to run a report unattended and on a schedule. Modify the report dataset to include a parameter supplied by the subscriber data. |
 | [Lesson 3: Define a data-driven subscription](../reporting-services/lesson-3-defining-a-data-driven-subscription.md) | Create a data-driven subscription by using the Data-Driven Subscription Wizard. |
 
-This section provides an overview of the workflow to create a data-driven subscription in SQL Server Reporting Services (SSRS). The following diagram illustrates the basic workflow of the process:
+The following diagram illustrates the basic workflow of the process:
 
 | Step    | Description |
 | --------|------------ |
@@ -71,6 +71,6 @@ This section provides an overview of the workflow to create a data-driven subscr
   
 ## Related content
 
-- [Step 1: Create a sample subscriber database](../reporting-services/lesson-1-creating-a-sample-subscriber-database.md)
-- [Step 2: Configure report data source properties](../reporting-services/lesson-2-modifying-the-report-data-source-properties.md)
-- [Step 3: Define a data-driven subscription](../reporting-services/lesson-3-defining-a-data-driven-subscription.md)
+- [Lesson 1: Create a sample subscriber database](../reporting-services/lesson-1-creating-a-sample-subscriber-database.md)
+- [Lesson 2: Configure report data source properties](../reporting-services/lesson-2-modifying-the-report-data-source-properties.md)
+- [Lesson 3: Define a data-driven subscription](../reporting-services/lesson-3-defining-a-data-driven-subscription.md)

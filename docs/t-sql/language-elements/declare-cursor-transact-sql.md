@@ -3,7 +3,7 @@ title: "DECLARE CURSOR (Transact-SQL)"
 description: Defines the attributes of a Transact-SQL server cursor, such as its scrolling behavior and the query used to build the result set on which the cursor operates.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 04/01/2024
+ms.date: 06/20/2024
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -37,7 +37,7 @@ ISO syntax:
 ```syntaxsql
 DECLARE cursor_name [ INSENSITIVE ] [ SCROLL ] CURSOR
     FOR select_statement
-    [ FOR { READ ONLY | UPDATE [ OF column_name [ , ...n ] ] } ]
+    [ FOR { READ_ONLY | UPDATE [ OF column_name [ , ...n ] ] } ]
 [ ; ]
 ```
 
@@ -76,7 +76,7 @@ A standard `SELECT` statement that defines the result set of the cursor. The key
 
 [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] implicitly converts the cursor to another type if clauses in *select_statement* conflict with the functionality of the requested cursor type.
 
-#### READ ONLY
+#### READ_ONLY
 
 Prevents updates made through this cursor. The cursor can't be referenced in a `WHERE CURRENT OF` clause in an `UPDATE` or `DELETE` statement. This option overrides the default capability of a cursor to be updated.
 
@@ -192,10 +192,10 @@ After a cursor is declared, these system stored procedures can be used to determ
 
 | System stored procedures | Description |
 | --- | --- |
-| [sp_cursor_list (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-cursor-list-transact-sql.md) | Returns a list of cursors currently visible on the connection and their attributes. |
-| [sp_describe_cursor (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-describe-cursor-transact-sql.md) | Describes the attributes of a cursor, such as whether it's a forward-only or scrolling cursor. |
-| [sp_describe_cursor_columns (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-describe-cursor-columns-transact-sql.md) | Describes the attributes of the columns in the cursor result set. |
-| [sp_describe_cursor_tables (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-describe-cursor-tables-transact-sql.md) | Describes the base tables accessed by the cursor. |
+| [sp_cursor_list](../../relational-databases/system-stored-procedures/sp-cursor-list-transact-sql.md) | Returns a list of cursors currently visible on the connection and their attributes. |
+| [sp_describe_cursor](../../relational-databases/system-stored-procedures/sp-describe-cursor-transact-sql.md) | Describes the attributes of a cursor, such as whether it's a forward-only or scrolling cursor. |
+| [sp_describe_cursor_columns](../../relational-databases/system-stored-procedures/sp-describe-cursor-columns-transact-sql.md) | Describes the attributes of the columns in the cursor result set. |
+| [sp_describe_cursor_tables](../../relational-databases/system-stored-procedures/sp-describe-cursor-tables-transact-sql.md) | Describes the base tables accessed by the cursor. |
 
 Variables might be used as part of the *select_statement* that declares a cursor. Cursor variable values don't change after a cursor is declared.
 

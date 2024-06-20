@@ -16,7 +16,7 @@ helpviewer_keywords:
 ---
 # Create a data-driven subscription (SSRS Tutorial)
 
-This [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] tutorial shows how you create a data-driven subscription by using the SQL Server Report Service (SSRS) tutorial. The tutorial walks you through a simple example that creates a data-driven subscription to generate and save filtered report output to a shared file. 
+This [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] tutorial is a three-step process that shows how you create a data-driven subscription by using the SQL Server Report Service (SSRS) tutorial. The tutorial walks you through a simple example that creates a data-driven subscription to generate and save filtered report output to a shared file. 
 
 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] data-driven subscriptions allow you to customize and automate the distribution of a report based on dynamic subscriber data. Use [data-driven subscriptions](../reporting-services/subscriptions/data-driven-subscriptions.md) in the following scenarios:  
   
@@ -50,13 +50,13 @@ Your computer must have the following installed to use this tutorial:
 
 ## Tutorial workflow
 
-The tutorial is divided into three steps:
+The tutorial is divided into three lessons:
 
-| Step | Description |
+| Lesson | Description |
 |------|------------ |
-| [Step 1: Create a sample subscriber database](../reporting-services/lesson-1-creating-a-sample-subscriber-database.md) | Create a table in the local SQL Server database that contains subscriber information. This information includes the order numbers to use for filtering and output file formats. |
-| [Step 2: Configure report data source properties](../reporting-services/lesson-2-modifying-the-report-data-source-properties.md) | Configure a report data source to run a report unattended and on a schedule. Modify the report dataset to include a parameter supplied by the subscriber data. |
-| [Step 3: Define a data-driven subscription](../reporting-services/lesson-3-defining-a-data-driven-subscription.md) | Create a data-driven subscription by using the Data-Driven Subscription Wizard. |
+| [Lesson 1: Create a sample subscriber database](../reporting-services/lesson-1-creating-a-sample-subscriber-database.md) | Create a table in the local SQL Server database that contains subscriber information. This information includes the order numbers to use for filtering and output file formats. |
+| [Lesson 2: Configure report data source properties](../reporting-services/lesson-2-modifying-the-report-data-source-properties.md) | Configure a report data source to run a report unattended and on a schedule. Modify the report dataset to include a parameter supplied by the subscriber data. |
+| [Lesson 3: Define a data-driven subscription](../reporting-services/lesson-3-defining-a-data-driven-subscription.md) | Create a data-driven subscription by using the Data-Driven Subscription Wizard. |
 
 This section provides an overview of the workflow to create a data-driven subscription in SQL Server Reporting Services (SSRS). The following diagram illustrates the basic workflow of the process:
 

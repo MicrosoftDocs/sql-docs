@@ -4,7 +4,7 @@ description: "Learn how to configure a disk witness, cloud witness, or a file sh
 author: tarynpratt
 ms.author: tarynpratt
 ms.reviewer: mathoma
-ms.date: "06/01/2021"
+ms.date: 06/18/2024
 ms.service: virtual-machines-sql
 ms.subservice: hadr
 ms.topic: conceptual
@@ -21,7 +21,7 @@ This article teaches you to configure one of the three quorum options for a Wind
 
 The quorum for a cluster is determined by the number of voting elements that must be part of active cluster membership for the cluster to start properly or continue running. Configuring a quorum resource allows a two-node cluster to continue with only one node online. The Windows Server Failover Cluster is the underlying technology for the SQL Server on Azure VMs high availability options: [failover cluster instances (FCIs)](failover-cluster-instance-overview.md) and [availability groups (AGs)](availability-group-overview.md). 
 
-The disk witness is the most resilient quorum option, but to use a disk witness on a SQL Server on Azure VM, you must use an Azure shared disk which imposes some limitations to the high availability solution. As such, use a disk witness when you're configuring your failover cluster instance with Azure shared disks, otherwise use a cloud witness whenever possible. If you are using Windows Server 2012 R2 or older which does not support cloud witness, you can use a file share witness. 
+The disk witness is the most resilient quorum option, but to use a disk witness on a SQL Server on Azure VM, you must use an Azure shared disk, which imposes some limitations to the high availability solution. As such, use a disk witness when you're configuring your failover cluster instance with Azure shared disks, otherwise use a cloud witness whenever possible. If you're using Windows Server 2012 R2 or older, which doesn't support a cloud witness, you can use a file share witness. 
 
 The following quorum options are available to use for SQL Server on Azure VMs: 
 
@@ -40,11 +40,11 @@ The following table provides additional information and considerations about the
 
 | Witness type  | Description  | Requirements and recommendations  |
 | ---------    |---------        |---------                        |
-| Cloud witness     |  <ul><li> Uses Azure storage as the cloud witness, contains just the time stamp. </li><li> Ideal for deployments in multiple sites, multiple zones, and multiple regions.</li> <li> Creates well-known container `msft-cloud-witness` under the Microsoft Storage Account. </li> <li> Writes a single blob file with corresponding cluster's unique ID used as the file name of the blob file under the container </li>      |  <ul><li>Default size is 1 MB.</li><li> Use **General Purpose** for the account kind. Blob storage is not supported. </li><li> Use Standard storage. Azure Premium Storage is not supported. </li><li> Failover Clustering uses the blob file as the arbitration point, which requires some consistency guarantees when reading the data. Therefore you must select **Locally redundant storage** for **Replication** type.</li><li> Should be excluded from backups and antivirus scanning</li><li> A Disk witness isn't supported with Storage Spaces Direct</li> <li> Cloud Witness uses HTTPS (default port 443) to establish communication with Azure Blob Storage. Ensure that HTTPS port is accessible via network Proxy. </li>|
+| Cloud witness     |  <ul><li> Uses Azure storage as the cloud witness, contains just the time stamp. </li><li> Ideal for deployments in multiple sites, multiple zones, and multiple regions.</li> <li> Creates well-known container `msft-cloud-witness` under the Microsoft Storage Account. </li> <li> Writes a single blob file with corresponding cluster's unique ID used as the file name of the blob file under the container </li>      |  <ul><li>Default size is 1 MB.</li><li> Use **General Purpose** for the account kind. Blob storage isn't supported. </li><li> Use Standard storage. Azure Premium Storage isn't supported. </li><li> Failover Clustering uses the blob file as the arbitration point, which requires some consistency guarantees when reading the data. Therefore you must select **Locally redundant storage** for **Replication** type.</li><li> Should be excluded from backups and antivirus scanning</li><li> A Disk witness isn't supported with Storage Spaces Direct</li> <li> Cloud Witness uses HTTPS (default port 443) to establish communication with Azure Blob Storage. Ensure that HTTPS port is accessible via network Proxy. </li>|
 
 When configuring a Cloud Witness quorum resource for your Failover Cluster, consider:
-- Instead of storing the Access Key, your Failover Cluster will generate and securely store a Shared Access Security (SAS) token.
-- The generated SAS token is valid as long as the Access Key remains valid. When rotating the Primary Access Key, it is important to first update the Cloud Witness (on all your clusters that are using that Storage Account) with the Secondary Access Key before regenerating the Primary Access Key.
+- Instead of storing the Access Key, your Failover Cluster generates and securely stores a Shared Access Security (SAS) token.
+- The generated SAS token is valid as long as the Access Key remains valid. When rotating the Primary Access Key, it's important to first update the Cloud Witness (on all your clusters that are using that Storage Account) with the Secondary Access Key before regenerating the Primary Access Key.
 - Cloud Witness uses HTTPS REST interface of the Azure Storage Account service. This means it requires the HTTPS port to be open on all cluster nodes.
 
 
@@ -53,7 +53,7 @@ A cloud witness requires an Azure Storage Account. To configure a storage accoun
 1. Sign in to the [Azure portal](https://portal.azure.com).
 2. On the Hub menu, select New -> Data + Storage -> Storage account.
 3. In the Create a storage account page, do the following:
-    1. Enter a name for your storage account. Storage account names must be between 3 and 24 characters in length and may contain numbers and lowercase letters only. The storage account name must also be unique within Azure.
+    1. Enter a name for your storage account. Storage account names must be between 3 and 24 characters in length and can contain numbers and lowercase letters only. The storage account name must also be unique within Azure.
     2. For **Account kind**, select **General Purpose**.
     3. For **Performance**, select **Standard**.
     2. For **Replication**, select **Local-redundant storage (LRS)**.
@@ -130,7 +130,7 @@ The following table provides additional information and considerations about the
 | ---------    |---------        |---------                        |
 | Disk witness     |  <ul><li> Dedicated LUN that stores a copy of the cluster database</li><li> Most useful for clusters with shared (not replicated) storage</li>       |  <ul><li>Size of LUN must be at least 512 MB</li><li> Must be dedicated to cluster use and not assigned to a clustered role</li><li> Must be included in clustered storage and pass storage validation tests</li><li> Can't be a disk that is a Cluster Shared Volume (CSV)</li><li> Basic disk with a single volume</li><li> Doesn't need to have a drive letter</li><li> Can be formatted with NTFS or ReFS</li><li> Can be optionally configured with hardware RAID for fault tolerance</li><li> Should be excluded from backups and antivirus scanning</li><li> A Disk witness isn't supported with Storage Spaces Direct</li>|
 
-To use an Azure shared disk for the disk witness, you must first create the disk and mount it. To do so, follow the steps in the [Mount disk](failover-cluster-instance-azure-shared-disks-manually-configure.md#add-azure-shared-disk) section of the Azure shared disk failover cluster instance guide. The disk does not need to be premium. 
+To use an Azure shared disk for the disk witness, you must first create the disk and mount it. To do so, follow the steps in the [Mount disk](failover-cluster-instance-azure-shared-disks-manually-configure.md#add-azure-shared-disk) section of the Azure shared disk failover cluster instance guide. The disk doesn't need to be premium. 
 
 After your disk has been mounted, add it to the cluster storage with the following steps: 
 
@@ -163,7 +163,7 @@ The following table provides additional information and considerations about the
 
 | Witness type  | Description  | Requirements and recommendations  |
 | ---------    |---------        |---------                        |
-| File share witness     | <ul><li>SMB file share that is configured on a file server running Windows Server</li><li> Does not store a copy of the cluster database</li><li> Maintains cluster information only in a witness.log file</li><li> Most useful for multisite clusters with replicated storage </li>       |  <ul><li>Must have a minimum of 5 MB of free space</li><li> Must be dedicated to the single cluster and not used to store user or application data</li><li> Must have write permissions enabled for the computer object for the cluster name</li></ul><br>The following are additional considerations for a file server that hosts the file share witness:<ul><li>A single file server can be configured with file share witnesses for multiple clusters.</li><li> The file server must be on a site that is separate from the cluster workload. This allows equal opportunity for any cluster site to survive if site-to-site network communication is lost. If the file server is on the same site, that site becomes the primary site, and it is the only site that can reach the file share.</li><li> The file server can run on a virtual machine if the virtual machine is not hosted on the same cluster that uses the file share witness.</li><li> For high availability, the file server can be configured on a separate failover cluster. </li>      |
+| File share witness     | <ul><li>SMB file share that is configured on a file server running Windows Server</li><li> Doesn't store a copy of the cluster database</li><li> Maintains cluster information only in a witness.log file</li><li> Most useful for multisite clusters with replicated storage </li>       |  <ul><li>Must have a minimum of 5 MB of free space</li><li> Must be dedicated to the single cluster and not used to store user or application data</li><li> Must have write permissions enabled for the computer object for the cluster name</li></ul><br>The following are additional considerations for a file server that hosts the file share witness:<ul><li>A single file server can be configured with file share witnesses for multiple clusters.</li><li> The file server must be on a site that is separate from the cluster workload. This allows equal opportunity for any cluster site to survive if site-to-site network communication is lost. If the file server is on the same site, that site becomes the primary site, and it's the only site that can reach the file share.</li><li> The file server can run on a virtual machine if the virtual machine isn't hosted on the same cluster that uses the file share witness.</li><li> For high availability, the file server can be configured on a separate failover cluster. </li>      |
 
 Once you have created your file share and properly configured permissions, mount the file share to your clustered nodes. You can follow the same general steps to mount the file share as described in the [mount file share](failover-cluster-instance-premium-file-share-manually-configure.md) section of the premium file share failover cluster instance how-to guide. 
 
@@ -173,7 +173,7 @@ After your file share has been properly configured and mounted, use PowerShell t
 Set-ClusterQuorum -FileShareWitness <UNC path to file share> -Credential $(Get-Credential)
 ```
 
-You will be prompted for an account and password for a local (to the file share) non-admin account that has full admin rights to the share.  The cluster will keep the name and password encrypted and not accessible by anyone.
+You'll be prompted for an account and password for a local (to the file share) nonadmin account that has full admin rights to the share.  The cluster keeps the name and password encrypted and not accessible by anyone.
 
 You can also use the Failover Cluster manager; follow the same steps as for the cloud witness, but choose the file share witness as the quorum option instead. 
 
@@ -188,9 +188,9 @@ When modifying the node vote settings, follow these guidelines:
 |-|
 | Start with each node having no vote by default. Each node should only have a vote with explicit justification.|
 | Enable votes for cluster nodes that host the primary replica of an availability group, or the preferred owners of a failover cluster instance. |
-| Enable votes for automatic failover owners. Each node that may host a primary replica or FCI as a result of an automatic failover should have a vote. | 
+| Enable votes for automatic failover owners. Each node that might host a primary replica or FCI as a result of an automatic failover should have a vote. | 
 | If an availability group has more than one secondary replica, only enable votes for the replicas that have automatic failover. | 
-| Disable votes for nodes that are in secondary disaster recovery sites. Nodes in secondary sites should not contribute to the decision of taking a cluster offline if there's nothing wrong with the primary site. | 
+| Disable votes for nodes that are in secondary disaster recovery sites. Nodes in secondary sites shouldn't contribute to the decision of taking a cluster offline if there's nothing wrong with the primary site. | 
 | Have an odd number of votes, with three quorum votes minimum. Add a [quorum witness](hadr-cluster-quorum-configure-how-to.md) for an additional vote if necessary in a two-node cluster. | 
 | Reassess vote assignments post-failover. You don't want to fail over into a cluster configuration that doesn't support a healthy quorum. |
 

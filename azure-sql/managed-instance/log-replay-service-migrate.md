@@ -88,6 +88,9 @@ To achieve a predictable time for database migrations, consider configuring a [m
 > - LRS doesn't support read-only access to databases during the migration.
 > - After the migration finishes, the migration process is final and can't be resumed with additional differential backups.
 
+> [!NOTE]
+> After the cutover, SQL Managed Instance with Business Critical service tier can take significantly longer than General Purpose to be available as three secondary replicas have to be seeded for the availability group. The operation duration depends on the size of data. For more information, see [Management operations duration](/azure/azure-sql/managed-instance/management-operations-overview#duration).
+
 ## Migrate multiple databases
 
 If you're migrating multiple databases by using the same Azure Blob Storage container, you must place backup files for different databases in separate folders inside the container. All backup files for a single database must be placed in a flat-file structure inside a database folder, and the folders can't be nested. Nesting folders inside database folders isn't supported. 

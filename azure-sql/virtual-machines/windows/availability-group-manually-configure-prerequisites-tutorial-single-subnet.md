@@ -4,7 +4,7 @@ description: "This tutorial shows how to configure the prerequisites for creatin
 author: tarynpratt
 ms.author: tarynpratt
 ms.reviewer: mathoma
-ms.date: 04/18/2023
+ms.date: 06/18/2024
 ms.service: virtual-machines-sql
 ms.subservice: hadr
 ms.topic: how-to

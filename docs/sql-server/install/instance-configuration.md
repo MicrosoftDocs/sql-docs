@@ -324,7 +324,7 @@ The following recommendations apply to SMB file servers:
   * To a directory where system files are located
   * On a mapped network drive on a failover cluster instance  
   
-## <a name="tempdb"><a/> Database Engine Configuration - TempDB page
+## <a id="tempdb"></a> Database Engine Configuration - TempDB page
 
 Use this page to specify the **tempdb** data and log file location, size, growth settings, and number of files for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Based on the type of installation, the supported storage may include local disk, shared storage, or an SMB file server.  
   
@@ -411,7 +411,7 @@ The MaxDOP setting applies only to SQL Server 2019 and later.
 
 ::: moniker range=">=sql-server-ver15"
 
-## <a name="maxdop"><a/> Database Engine Configuration - MaxDOP page
+## <a id="maxdop"></a> Database Engine Configuration - MaxDOP page
 
 **Max degree of parallelism (MaxDOP)** determines the maximum number of processors that a single statement can use. [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] introduces the ability to configure this option during installation. [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] also automatically detects the recommended MaxDOP setting for the server based on the number of cores.  
 
@@ -421,7 +421,7 @@ If this page is skipped during setup, the default MaxDOP value is the recommende
 
 * **Max degree of parallelism (MaxDOP)** is the value for the maximum number of processors to use during parallel execution of a single statement. The default value will align with the max degree of parallelism guidelines in [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#recommendations).
 
-## <a name="memory"><a/> Database Engine Configuration - Memory page
+## <a id="memory"></a> Database Engine Configuration - Memory page
 
 **min server memory** determines the lower memory limit that the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] will use for the buffer pool and other caches. The default value is 0 and the recommended value is also 0. For more information on the effects of **min server memory**, see the [Memory Management Architecture Guide](../../relational-databases/memory-management-architecture-guide.md#effects-of-min-and-max-server-memory).
 

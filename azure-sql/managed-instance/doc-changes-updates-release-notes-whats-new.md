@@ -5,14 +5,17 @@ description: Learn about the new features and documentation improvements for Azu
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: wiassaf, mathoma
-ms.date: 05/25/2024
+ms.date: 06/19/2024
 ms.service: sql-managed-instance
 ms.subservice: service-overview
 ms.topic: whats-new
-ms.custom: references_regions, ignite-2023, build-2024
+ms.custom:
+  - references_regions
+  - ignite-2023
+  - build-2024
 ---
 # What's new in Azure SQL Managed Instance?
-[!INCLUDE[appliesto-sqldb-sqlmi](../includes/appliesto-sqlmi.md)]
+[!INCLUDE [appliesto-sqldb-sqlmi](../includes/appliesto-sqlmi.md)]
 
 > [!div class="op_single_selector"]
 > * [Azure SQL Database](../database/doc-changes-updates-release-notes-whats-new.md?view=azuresql&preserve-view=true)
@@ -20,7 +23,6 @@ ms.custom: references_regions, ignite-2023, build-2024
 > * [SQL Server on Azure VMs](../virtual-machines/windows/doc-changes-updates-release-notes-whats-new.md?view=azuresql&preserve-view=true)
 
 This article summarizes the documentation changes associated with new features and improvements in the recent releases of [Azure SQL Managed Instance](https://azure.microsoft.com/updates/?product=sql-database&query=sql%20managed%20instance). To learn more about Azure SQL Managed Instance, see [What is Azure SQL Managed Instance?](sql-managed-instance-paas-overview.md)
-
 
 [!INCLUDE [entra-id](../includes/entra-id.md)]
 
@@ -40,7 +42,6 @@ The following table lists the features of Azure SQL Managed Instance that are cu
 |[Link from SQL MI to SQL Server](managed-instance-link-feature-overview.md) | Configure a link from Azure SQL Managed Instance to SQL Server 2022. |
 |[Microsoft Entra nonunique name support](../database/authentication-microsoft-entra-create-users-with-nonunique-names.md) |  The [CREATE USER](/sql/t-sql/statements/create-user-transact-sql) Transact-SQL (T-SQL) syntax has been extended to include `WITH OBJECT_ID` to support creating Microsoft Entra logins and users in Azure SQL Managed Instance that have nonunique names. |
 |[Next-gen General Purpose](service-tiers-next-gen-general-purpose-use.md) | An architectural upgrade of the General Purpose service tier that uses managed disks for greater resource flexibility, and improved performance while maintaining the same baseline cost as the General Purpose service tier.  |
-|[Maintenance window advance notifications](advance-notifications.md)| Advance notifications for instance [maintenance window](maintenance-window.md).  |
 |[SDK-style SQL project](/sql/azure-data-studio/extensions/sql-database-project-extension-sdk-style-projects) | Use [Microsoft.Build.Sql](https://www.nuget.org/packages/Microsoft.Build.Sql) for SDK-style SQL projects in the SQL Database Projects extension in Azure Data Studio or Visual Studio Code. SDK-style SQL projects are especially advantageous for applications shipped through pipelines or built in cross-platform environments.|
 |[Service Broker](/sql/database-engine/configure-windows/sql-server-service-broker) | Support for cross-instance message exchange using Service Broker between instances of Azure SQL Managed Instance, and between SQL Server and Azure SQL Managed Instance. |
 |[Two-way DR with SQL Server 2022](managed-instance-link-disaster-recovery.md) | In the event of a disaster, you can fail your SQL Server 2022 workloads to Azure SQL Managed Instance using the link, and then, once the disaster is mitigated, you can fail back to SQL Server. |
@@ -54,6 +55,7 @@ The following table lists features of Azure SQL Managed Instance that have been 
 
 | Feature | GA Month | Details |
 | ---| --- |--- |
+|[Maintenance window advance notifications](advance-notifications.md)| June 2024 | Advance notifications for SQL managed instance [maintenance window](maintenance-window.md) are now generally available.  |
 |[Update policy](update-policy.md) | May 2024 | Use the update policy to control your internal database format alignment and access to the latest SQL Database Engine features. You can choose to either limit the feature set to features that are available in SQL Server 2022, or ensure your instance takes advantage of all the latest features of Azure SQL Managed Instance.| 
 |[Azure SQL triggers for Azure Functions](/azure/azure-functions/functions-bindings-azure-sql) | March 2024 | Azure Functions supports function triggers for Azure SQL Managed Instance. | 
 |[Cross-subscription database copy and move](database-copy-move-how-to.md)| December 2023 | Refresh of database copy and move functionality with added support for cross-subscription operations. |
@@ -82,6 +84,12 @@ The features and benefits provided by the November 2022 feature wave are now gen
 ## Documentation changes
 
 Learn about significant changes to the Azure SQL Managed Instance documentation. For previous years, see the [What's new archive](doc-changes-updates-release-notes-whats-new-archive.md).
+
+### June 2024
+
+| Changes | Details |
+| --- | --- |
+|**Advance notifications GA**| [Advance notifications](advance-notifications.md) for upcoming SQL managed instance [maintenance windows](maintenance-window.md) are now generally available. |
 
 ### May 2024
 

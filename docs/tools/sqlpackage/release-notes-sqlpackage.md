@@ -35,7 +35,7 @@ dotnet tool install -g microsoft.sqlpackage --version 162.3.566
 ### Fixes
 |Feature|Details|
 |:---|:---|
-|Deployment|Fixes an issue where the deployment contributor [API DeploymentPlanModifier](https://learn.microsoft.com/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentplanmodifier?view=sql-dacfx-162) methods are set as static methods. [GitHub issue](https://github.com/microsoft/DacFx/issues/461)|
+|Deployment|Fixes an issue where the deployment contributor [API DeploymentPlanModifier](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentplanmodifier?view=sql-dacfx-162) methods are set as static methods. [GitHub issue](https://github.com/microsoft/DacFx/issues/461)|
 |Platform|The SqlPackage .zip build .NET SDK is updated from 8.0.301 to 8.0.302|
 
 ### Known Issues

@@ -3,7 +3,7 @@ title: "What is SQL Server Reporting Services?"
 description: "Learn how to create, deploy, and manage reports by using SQL Server Reporting Services (SSRS) to deliver data insights through paginated reports to web portals."
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 06/17/2024
+ms.date: 06/20/2024
 ms.service: reporting-services
 ms.subservice: reporting-services
 ms.topic: overview
@@ -82,7 +82,7 @@ The web portal is a sleek, single-page, standards-based HTML5 app that works wit
 * Shared datasets
 * Shared data sources
 ::: moniker range="<=sql-server-ver15"
-* Mobile reports 
+* Mobile reports
 ::: moniker-end
 
 Store and manage your content securely the traditional folder hierarchy. Tag your favorite reports for quick access. Those users with appropriate permissions can manage and administer SSRS content. Schedule report processing, access reports on demand, and subscribe to published reports

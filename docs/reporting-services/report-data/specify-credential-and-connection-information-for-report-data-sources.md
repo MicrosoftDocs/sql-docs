@@ -29,7 +29,7 @@ helpviewer_keywords:
 ---
 # Specify credential and connection information for report data sources
 
-A report server uses credentials to connect to external data sources that provide content to reports or recipient information to a data-driven subscription. You can specify credentials that use Windows Authentication, database authentication, no authentication, or custom authentication. When the report server sends a connection request over the network, it either impersonates a user account or the unattended execution account. For more information about the security context under which a connection request is made, see [Data source configuration and network connections](#data-source-configuration-and-network-connections) in this article.
+A report server uses credentials to connect to external data sources that provide content to reports or recipient information to a data-driven subscription. You can specify credentials that use Windows Authentication, database authentication, no authentication, or custom authentication. When the report server sends a connection request over the network, it either impersonates a user account or the unattended execution account. For more information about the security context under which a connection request is made, see [Data source configuration and network connections](#DataSourceConfigurationConnections) in this article.
 
 > [!NOTE]
 > Credentials are also used to authenticate users who access a report server. Information about authenticating users to a report server is provided in another topic.
@@ -116,7 +116,7 @@ If the report retrieves data from a remote database server, you must verify:
 
 1. Select **Add User or Group**.
 
-1. Select **Locations**, specify a domain or other location that you want to search, and then select **OK**
+1. Select **Locations**, specify a domain or other location that you want to search, and then select **OK**.
 
 1. Enter the Windows account for which you want to allow interactive login, and then select **OK**.
 

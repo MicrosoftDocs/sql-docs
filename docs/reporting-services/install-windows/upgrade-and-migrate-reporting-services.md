@@ -34,20 +34,20 @@ This article is an overview of the upgrade and migration options for SQL Server 
 > [!NOTE]
 > Reporting Services integration with SharePoint isn't available after SQL Server 2016.
 
-## <a name="bkmk_known_issues"></a> Known Upgrade Issues and Best Practices
+## <a name="bkmk_known_issues"></a> Known upgrade issues and best practices
 
- For a detailed list of the supported editions and versions you can upgrade, see [Supported Version and Edition Upgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md).
+ For a detailed list of the supported editions and versions you can upgrade, see [Supported version and edition upgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md).
 
 > [!TIP]
-> For the latest information regarding issues with SQL Server, see [SQL Server 2016 Release Notes](../../sql-server/sql-server-2016-release-notes.md).
+> For the latest information regarding issues with SQL Server, see [SQL Server 2016 release notes](../../sql-server/sql-server-2016-release-notes.md).
 
-## <a name="bkmk_side_by_side"></a> Side By Side Installations
+## <a name="bkmk_side_by_side"></a> Side by side installations
 
 SQL Server Reporting Services Native mode can be installed side-by-side with a [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] or [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Native mode deployment.
 
  There's no support for side-by-side deployments of SQL Server Reporting Services in SharePoint mode and any previous versions of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode components.
 
-## <a name="bkmk_inplace_upgrade"></a> In-place Upgrade
+## <a name="bkmk_inplace_upgrade"></a> In-place upgrades
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup completes the upgrade. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup can be used to upgrade any or all [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] components, including [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Setup detects the existing instances and prompts you to upgrade. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup provides upgrade options that you can specify as a command-line argument or in the Setup wizard.
 
@@ -64,10 +64,12 @@ When you run [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup, yo
 For more information on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see:
 
 - [Upgrade to SQL Server 2016](../../database-engine/install-windows/upgrade-sql-server.md)
+
 - [Upgrade to SQL Server 2016 Using the Installation Wizard &#40;Setup&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)
+
 - [Install SQL Server 2016 from the Command Prompt](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)
 
-## <a name="bkmk_upgrade_checklist"></a> Pre-Upgrade Checklist
+## <a name="bkmk_upgrade_checklist"></a> Pre-upgrade checklist
 
  Before upgrading to SQL Server Reporting Services:
 
@@ -90,7 +92,7 @@ Before you upgrade a production environment, always run a test upgrade in a prep
 > [!IMPORTANT]
 > These steps must be completed in full for a later rollback to be possible. Microsoft Support cannot recover backups, encryption keys, or configuration files that were not backed up.
 
-## Overview of Migration Scenarios
+## Overview of migration scenarios
 
 If you're upgrading from a supported version of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you can usually run the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup Wizard to upgrade the report server program files, database, and all application data.
 
@@ -102,9 +104,9 @@ However, **migrating** a report server installation manually is required if you 
 
 - You want to migrate a SharePoint 2010 deployment of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] to SharePoint 2013/2016. SharePoint 2013/2016 doesn't support in-place upgrade from SharePoint 2010. For more information, see [Migrate a Reporting Services Installation &#40;SharePoint Mode&#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-sharepoint-mode.md).
 
-## <a name="bkmk_native_scenarios"></a> Native Mode Upgrade and Migration Scenarios
+## <a name="bkmk_native_scenarios"></a> Native mode upgrade and migration scenarios
 
-**Upgrade:** In-place upgrade for native mode is the same process for each of the supported versions that are listed earlier in this article. Run the SQL Server installation wizard or a command line installation. Following installation, the report server database automatically upgrades to the new report server database schema. For more information, see [In-place Upgrade](#bkmk_inplace_upgrade) in this article.
+**Upgrade:** In-place upgrade for Native mode is the same process for each of the supported versions that are listed earlier in this article. Run the SQL Server installation wizard or a command line installation. Following installation, the report server database automatically upgrades to the new report server database schema. For more information, see [In-place Upgrade](#bkmk_inplace_upgrade) in this article.
 
  The upgrade process begins when you select an existing report server instance to upgrade.
 
@@ -134,7 +136,7 @@ However, **migrating** a report server installation manually is required if you 
 
  **Migration:** Migrating a previous version of a native mode installation to SQL Server Reporting Services is the same steps for all of the supported versions that are listed earlier in this article. For more information, see [Migrate a Reporting Services Installation &#40;Native Mode&#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md)
 
-## <a name="bkmk_native_scaleout"></a> Upgrade a Reporting Services Native Mode Scale-out Deployment
+## <a name="bkmk_native_scaleout"></a> Upgrade a Reporting Services Native mode scale-out deployment
 
 The following summary explains how to upgrade a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Native mode deployment that is scaled-out to more than one report server. This process requires downtime of the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] deployment:
 
@@ -148,7 +150,7 @@ The following summary explains how to upgrade a [!INCLUDE[ssRSnoversion](../../i
 
    For each server, repeat the upgrade and Scale-out steps.
 
-## <a name="rollback_native"></a> Roll back a Reporting Services Cumulative Update
+## <a name="rollback_native"></a> Roll back a Reporting Services cumulative update
 
 Cumulative Updates in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] versions 2017 and later support in-place upgrade but can't be selectively uninstalled. To roll back an upgrade, you must uninstall the entire service and reinstall the prior version:
 
@@ -171,7 +173,7 @@ Cumulative Updates in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.m
 
 1. In a scale-out deployment, repeat steps 4 through 7 for all other nodes in the scale-out deployment.
 
-## <a name="bkmk_sharePoint_scenarios"></a> SharePoint Mode Upgrade and Migration Scenarios
+## <a name="bkmk_sharePoint_scenarios"></a> SharePoint mode upgrade and migration scenarios
 
 The following sections describe the issues and basic steps needed to upgrade or migrate from specified versions of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode to SQL Server Reporting Services [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode.
 
@@ -223,7 +225,7 @@ For detailed steps on Migrating a SharePoint mode installation, see [Migrate a R
 
 - Run SQL Server Reporting Services installation to upgrade SharePoint mode for each 'report server'. The SQL Server installation wizard installs the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Service and creates a new Service application.
 
-## <a name="bkmk_migration_considerations"></a> Considerations for a Migration
+## <a name="bkmk_migration_considerations"></a> Considerations for a migration
 
  When moving application data, you should be aware of the following concerns and restrictions:
 
@@ -231,7 +233,7 @@ For detailed steps on Migrating a SharePoint mode installation, see [Migrate a R
 
 - Report server database names are fixed and can't be renamed on new computer.
 
-### Encryption Key Considerations
+### Encryption key considerations
 
 Always back up the encryption keys before moving a report server database to a new computer.
 
@@ -243,7 +245,7 @@ To re-establish reversible encryption on the new report server computer, you mus
 
 - Native Mode: See [Back Up and Restore Reporting Services Encryption Keys](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)
 
-### Fixed Database Name
+### Fixed database name
 
 You can't rename the report server database. The identity of the database is recorded in report server stored procedures when the database is created. Renaming either the report server primary or temporary databases cause errors when the procedures run, invalidating your report server installation.
 

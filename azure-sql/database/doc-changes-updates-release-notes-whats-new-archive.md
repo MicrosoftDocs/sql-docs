@@ -5,7 +5,7 @@ description: Learn about the features and documentation improvements for Azure S
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma
-ms.date: 12/15/2023
+ms.date: 06/20/2024
 ms.service: sql-database
 ms.subservice: service-overview
 ms.topic: whats-new
@@ -24,10 +24,16 @@ Return to [What's new in Azure SQL Database?](doc-changes-updates-release-notes-
 
 ## 2023
 
-
 | Changes | Month |  Details |
 | --- | --- | --- |
-| **Intelligent applications**| October | Learn how to use AI integration with Azure SQL Database, such as OpenAI, to build intelligent applications. To learn more, review [intelligent applications](ai-artificial-intelligence-intelligent-applications.md). | 
+| **Lower, simplified Hyperscale pricing** | December | Simplified [pricing for Azure SQL Database Hyperscale](service-tier-hyperscale.md?view=azuresql-db&preserve-view=true#hyperscale-pricing-model) has arrived! Review the [new pricing tier for Azure SQL Database Hyperscale announcement](https://aka.ms/hsignite2023), and for pricing change details, see [Azure SQL Database Hyperscale – lower, simplified pricing!](https://techcommunity.microsoft.com/t5/azure-sql-blog/azure-sql-database-hyperscale-lower-simplified-pricing/ba-p/3982209).|
+|**Use Azure Monitor metrics to monitor databases and elastic pools**| November | A new reference for monitoring Azure SQL Database with Azure Monitor is available, including [a set of recommended alert rules to monitor Azure SQL Database with Azure Monitor metrics and alerts](monitoring-metrics-alerts.md).|
+|**Always Encrypted with VBS enclaves GA** | November |  Take advantage of rich confidential queries and in-place encryption operations for Azure SQL Database with Always Encrypted with virtualization-based security (VBS) enclaves. This feature is now generally available. Review [Always Encrypted with VBS enclaves](always-encrypted-enclaves-getting-started-vbs.md) to get started. |
+|**DC-series hardware up to 40 vCores GA** | November |  DC-series hardware from 10 to 40 vCores is now generally available for General Purpose, Business Critical, and Hyperscale provisioned compute. Review [Resource limits](resource-limits-vcore-single-databases.md) for more information. |
+| **Elastic jobs preview refresh** | November |  [Updated with a preview refresh and new capabilities](https://techcommunity.microsoft.com/t5/azure-sql-blog/azure-sql-database-elastic-jobs-preview-refresh/ba-p/3965759), [elastic jobs](elastic-jobs-overview.md) are the SQL Server Agent replacement for Azure SQL Database. Elastic jobs now support Microsoft Entra ID (formerly Azure Active Directory) authentication, private endpoints, management via REST APIs, Azure Alerts, and new capabilities and user interface in the Azure portal. Job Agents now provide four capacity tiers to scale concurrency for job execution. |
+|**License-free standby replica preview** | November | Save on licensing costs by configuring your secondary database replica for disaster recovery standby. This feature is currently in preview. Review [License-free standby replica](standby-replica-how-to-configure.md) to learn more.  | 
+|**Premium-series hardware for Hyperscale elastic pools preview** | November | Premium-series and premium-series memory optimized hardware is now in preview for [Hyperscale elastic pools](hyperscale-elastic-pool-overview.md). |
+| **Intelligent applications**| October | Learn how to use AI integration with Azure SQL Database, such as OpenAI, to build intelligent applications. To learn more, review [intelligent applications](ai-artificial-intelligence-intelligent-applications.md). |
 | **BASE64_ENCODE and BASE64_DECODE support** | September | The [BASE64_ENCODE](/sql/t-sql/functions/base64-encode-transact-sql) and [BASE64_DECODE](/sql/t-sql/functions/base64-decode-transact-sql) are now available in Azure SQL Database. |
 | **Database level CMK with TDE GA** | September |  [Database level CMK](transparent-data-encryption-byok-database-level-overview.md) allows setting the TDE protector as a customer-managed key individually for each database within the server. This feature is now generally available. |
 | **Hyperscale short-term and long-term retention GA** | September |  [Long-term retention](long-term-retention-overview.md) and [short-term retention](hyperscale-automated-backups-overview.md#data-and-backup-storage-redundancy) are now both generally available for Hyperscale databases. For more information, read about [the GA of long-term retention (LTR) for Hyperscale](https://techcommunity.microsoft.com/t5/azure-sql-blog/announcing-general-availability-of-sql-database-hyperscale-long/ba-p/3930616) and [the GA of short-term retention for Hyperscale](https://techcommunity.microsoft.com/t5/azure-sql-blog/announcing-general-availability-of-sql-database-hyperscale-short/ba-p/3930640). |

@@ -445,10 +445,6 @@ Export your report to Excel with these steps:
   
 1. On the **Home** tab, select **Run** to preview your report.
 
-   Confirm the table shows the updated title:
-
-   :::image type="content" source="../reporting-services/media/ssrs-tutorial-custom-title.png" alt-text="Screenshot that shows the updated title for the table report.":::
-  
 1. On the toolbar, select **Export** > **Excel**.
   
 1. In the **Save As** dialog, browse to where you want to save the file.  

@@ -24,7 +24,7 @@ The Reporting Services tutorials allow you to explore the capabilities of [!INCL
 | ----- | ----- |
 |[Tutorial: Create a basic table report (SSRS Tutorial)](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)|This tutorial guides you through working with [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] to create a data connection, define a query, and configure a data region for your data.|
 |[Tutorial: Create a data-driven subscription (SSRS Tutorial)](../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)|Use data-driven subscriptions to customize report distribution based on a dynamic list of subscribers. Though report server administrators typically manage data-driven subscriptions, you need to learn about building queries, subscriber data sources, and elevated permissions.|
-|[Tutorial: Create drillthrough (RDLC) report with parameters - ReportViewer](../reporting-services/create-drillthrough-rdlc-report-with-parameters-reportviewer.md)|Create a drillthrough report with parameters and filters using the ReportViewer control.|
+|[Tutorial: Create drillthrough (RDLC) report with parameters - ReportViewer](../reporting-services/create-drillthrough-rdlc-report-with-parameters-reportviewer.md)|Create a drillthrough report with parameters and filters by using the ReportViewer control.|
 |[Report Builder tutorials](../reporting-services/report-builder-tutorials.md)|Learn about the various visualizations that you can create in Report Builder, such as maps and sparklines. Also, explore how to use parameters and expressions.|
 
 ## Related content

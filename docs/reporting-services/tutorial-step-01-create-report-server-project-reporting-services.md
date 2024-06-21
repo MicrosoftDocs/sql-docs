@@ -18,8 +18,8 @@ This tutorial is the first step in a six-step process that demonstrates how to c
 In this tutorial, you:
 
 > [!div class="checklist"]
-> * Start a new report server project
-> * Create a Sales Orders report definition file (RDL)
+> * Start a new report server project.
+> * Create a Sales Orders report definition file (RDL).
 
 ## Create a report server project
 
@@ -77,5 +77,5 @@ Next, you create a report definition file (RDL). This process involves setting u
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Step 2: Specify connection information &#40;Reporting Services&#41;](../reporting-services/lesson-2-specifying-connection-information-reporting-services.md)
+> [Step 2: Specify connection information &#40;Reporting Services&#41;](../reporting-services/tutorial-step-02-specify-connection-information-reporting-services.md)
 

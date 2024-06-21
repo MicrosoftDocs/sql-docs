@@ -15,7 +15,7 @@ helpviewer_keywords:
 ---
 # Cardinality estimation (CE) feedback
 
-**Applies to:** [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later.
+**Applies to:** [!INCLUDE [sqlserver2022-and-later](../../includes/applies-to-version/sqlserver2022-and-later.md)], [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].
 <!---
 Currently in preview for [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [ssazuremi](../../includes/ssazuremi-md.md)].
 -->
@@ -140,7 +140,8 @@ Starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], when Query 
 
 ## Persistence for cardinality estimation (CE) feedback
 
-**Applies to:** [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)])
+**Applies to:** [!INCLUDE [sqlserver2022-and-later](../../includes/applies-to-version/sqlserver2022-and-later.md)], [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]
+<!-- [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]) -->
 
 Cardinality estimation (CE) feedback can detect scenarios when the row goal optimization should be persisted, and keep this change by persisting it in the query store in the form of a query store hint. The new optimization is used for future executions of the query. CE feedback persists other scenarios outside of row goal optimization query patterns, as detailed in [feedback scenarios](#cardinality-estimation-ce-feedback-scenarios). CE feedback currently handles predicate selectivity scenarios that are used by the CE's correlation model, and join predicate scenarios that are handled by the CE's containment model.
 
@@ -150,7 +151,7 @@ This feature was introduced in [!INCLUDE [ssSQL22](../../includes/sssql22-md.md)
 
 | Issue | Date discovered | Status | Date resolved |
 | --- | --- | --- | --- |
-| Slow SQL Server performance after you apply Cumulative Update 8 for [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] under certain conditions. You might encounter dramatic Plan Cache memory utilization along with unexpected increases in CPU utilization when CE feedback is enabled. | December 2023 | (Updated May 2024) Has [workaround](#workaround) | |
+| Slow SQL Server performance after you apply Cumulative Update 8 for [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] under certain conditions. You might encounter dramatic Plan Cache memory utilization along with unexpected increases in CPU utilization when CE feedback is enabled. | December 2023 | Resolved | April 22, 2024 (CU 12) |
 
 ### Known issues details
 

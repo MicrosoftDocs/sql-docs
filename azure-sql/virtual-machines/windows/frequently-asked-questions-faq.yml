@@ -164,7 +164,7 @@ sections:
       - question: |
           What scenarios can utilize the Disaster Recovery (DR) benefit?
         answer: |
-             The [licensing guide](https://aka.ms/sql2019licenseguide) provides scenarios in which the Disaster Recovery Benefit can be utilized. Refer to your Product Terms and talk to your licensing contacts or account manager for more information.
+             The [SQL Server Licensing Guide](https://go.microsoft.com/fwlink/p/?linkid=2215573) provides scenarios in which the Disaster Recovery Benefit can be utilized. Refer to your Product Terms and talk to your licensing contacts or account manager for more information.
           
       - question: |
           Which subscriptions support the Disaster Recovery (DR) benefit?

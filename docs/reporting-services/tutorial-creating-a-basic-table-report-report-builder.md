@@ -6,7 +6,7 @@ ms.author: maggies
 ms.date: 06/20/2024
 ms.service: reporting-services
 ms.subservice: reporting-services
-ms.topic: concept-article
+ms.topic: tutorial
 ms.custom: updatefrequency5
 
 #customer intent: As a developer, I want to create a table report with Report Builder in SSRS, so I can organize, format, save, and export my SQL Server data.
@@ -26,17 +26,17 @@ In this tutorial, you:
 > * Design and save the report
 > * Review the exported report in Microsoft Excel
 
+The estimated time to complete this tutorial is 20 minutes. 
+
 The following illustration shows the table report you create in this tutorial:
 
 :::image type="content" source="../reporting-services/media/ssrs-tutorial-basic-table-report.png" border="false" alt-text="Screenshot of the sample table report prepared in this tutorial that shows product sales data." lightbox="../reporting-services/media/ssrs-tutorial-basic-table-report.png":::
-
-The estimated time to complete this tutorial is 20 minutes.  
   
 ## Prerequisites  
 
 For more information about requirements, see [Prerequisites for tutorials (Report Builder)](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
   
-## Start the wizard to create a report  
+## Create report with Table or Matrix Wizard
 
 You can create a table report by using the **Table or Matrix** wizard. The wizard has two design modes: _Report_ and _Shared dataset_. In Report design mode, you specify data in the **Report Data** pane and configure the report layout on the design surface. In Shared dataset design mode, you create dataset queries to share with others. In this tutorial, you use Report design mode.
 
@@ -50,7 +50,7 @@ Start the wizard and create a basic table report:
 
    :::image type="content" source="../reporting-services/media/ssrs-tutorial-open-wizard.png" border="false" alt-text="Screenshot that shows how to select New Report in the Table or Matrix Wizard.":::
   
-### Specify a data connection 
+### Specify data connection 
 
 A data connection contains the information to connect to an external data source such as a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database. Usually, you get the connection information and the type of credentials to use from the data source owner. To specify a data connection, you can use a shared data source from the report server or create an embedded data source used only in this report.  
   
@@ -90,7 +90,7 @@ Create an embedded data source for the data connection:
 
 1. To continue in the wizard, select **Next**.
   
-### Create a query
+### Create query
 
 In a report, you can use a shared dataset that has a predefined query, or you can create an embedded dataset for use only in this specific report. In this tutorial, you create an embedded dataset.  
   
@@ -205,112 +205,181 @@ Follow these steps to add subtotals and totals for the table data:
   
 1. Select **Next** to preview the table, and then select **Finish**.  
   
-   Report Builder adds your table to the design surface. The table has five columns and five rows. The Row Groups pane shows three row groups: SalesDate, Subcategory, and Details. Detail data is all the data that the dataset query retrieves.  
+   **Report Builder** adds your table to the design surface. The table has five columns and five rows. The **Row Groups** pane shows three row groups: SalesDate, Subcategory, and Details. Detail data is all the data that the dataset query retrieves.  
 
    :::image type="content" source="../reporting-services/media/ssrs-tutorial-design-surface-new-table.png" border="false" alt-text="Screenshot of the new table report open on the design surface in Report Builder." lightbox="../reporting-services/media/ssrs-tutorial-design-surface-new-table.png":::
 
-## Format data as currency
+The wizard process is complete, and you now have a table report with sample data. In the following sections, you format specific table data to display values in a form that's useful for the reader.
 
-By default, the summary data for the Sales field displays a general number. Format it to display the number as currency.   
-  
-Format a currency field by following these steps:
-  
-1. To see formatted text boxes and placeholder text as sample values in Design View, on the **Home** tab, in the **Number** group, select the arrow next to the **Placeholder Styles** icon > **Sample Values**.  
-  
-1. Select the cell in the second row (under the column headings row) in the Sales column and drag down to select all cells that contain `[Sum(Sales)]`.  
-  
-1. On the **Home** tab, in the **Number** group, select the **Currency** button. The cells change to show the formatted currency.  
-  
-   If your regional setting is English (United States), the default sample text is [**$12,345.00**]. If you don't see an example currency value, on the **Home** tab, in the **Number** group, select the arrow next to the **Placeholder Styles** icon > **Sample Values**.  
-  
-1. Select **Run** to preview your report.  
-  
-The summary values for Sales display as currency.  
-  
-## Format data as date
+## Format table data
 
-By default, the SalesDate field displays both date and time. You can format them to display only the date.  
-  
-Format a date field as the default format:
-  
-1. Select **Design** to return to design view.  
-  
-1. Select the cell that contains `[SalesDate]`.  
-  
-1. On the Ribbon, on the **Home** tab, in the **Number** group, select the arrow and choose **Date**.  
-  
-   The cell displays the example date **[1/31/2000]**. If you don't see an example date, on the **Home** tab, in the **Number** group, select the arrow next to the **Placeholder Styles** icon > **Sample Values**.  
-  
-1. Select **Run** to preview the report.  
-  
-The SalesDate values display in the default date format.  
-  
-### Change the date format to a custom format  
-  
-You can also change the date format for the field to a custom format:
+**Report Builder** displays table data values in the report by using default formats, such as numbers, dates, times, and so on. You can use the formatting features on the **Home** tab to change how table data displays.  
 
-1. Select **Design** to return to design view.  
-  
-1. Select the cell that contains `[SalesDate]`.  
-  
-1. On the **Home** tab, in the **Number** group, select the arrow in the lower-right corner to open the dialog.  
-  
-   The **Text Box Properties** dialog opens.  
-  
-1. In the Category pane, verify that **Date** is selected.  
-  
-1. In the **Type** pane, select **January 31, 2000**.  
-  
-1. Select **OK**.
-  
-   The cell displays the example date **[January 31, 2000]**.  
-  
-1. Select **Run** to preview your report.  
-  
-The SalesDate value displays the name of the month instead of the number for the month.  
-  
-## Change column widths 
+It can be helpful to format monetary values in the local currency rather than as general numbers. Another scenario is for table data that summarizes changes in value over a short period of short time. It can be more useful to display the data only in minutes or hours, and not also show the month, day, and year.
 
-By default, each cell in a table contains a text box. A text box expands vertically to accommodate text when the page is rendered. In the rendered report, each row expands to the height of the tallest rendered text box in the row. The height of the row on the design surface has no effect on the height of the row in the rendered report.  
+The following sections demonstrate how to use the formatting features to change how table date displays in the report. The formatted text boxes and placeholder text are shown as sample values in **Design View**.
+
+### Show currency values
+
+By default, the summary data for the Sales field displays as a general number in the table report. The value can be more properly expressed by applying the currency format.   
+
+Follow these steps to format table data as currency:
+
+1. In **Report Builder**, select the Sales column header in your table report:
+
+   :::image type="content" source="../reporting-services/media/ssrs-tutorial-select-sales-header.png" border="false" alt-text="Screenshot that shows how to select the Sales column header in the open table report in Report Builder.":::
+
+1. On the **Home** tab, in the **Number** group, select **Placeholder Styles** (**[123]**), and then select **Sample Values**:
+
+   :::image type="content" source="../reporting-services/media/ssrs-tutorial-select-sample-values.png" border="false" alt-text="Screenshot that shows how to select the Sample Values option for placeholders in Report Builder.":::
   
-To reduce the amount of vertical space each row takes, expand the column width to accommodate the expected contents of the text boxes in the column on one line.  
+1. In your table report, in the Sales column, multi-select the four cells that contain the `[Sum(Sales)]` value.
+  
+1. On the **Home** tab, in the **Number** group, select **Currency** (**$**). The selected cells change to show the data values by using the currency format.  
+
+   :::image type="content" source="../reporting-services/media/ssrs-tutorial-currency-format.png" alt-text="Screenshot that shows how to change the format for the selected table cells to display as currency.":::
+
+   If your regional setting is English (United States), the default sample text shows the value in dollars `[$12,345.00]`.
+   
+   If you don't see an example currency value, check the placeholder style for the cells. On the **Home** tab, in the **Number** group, confirm the **Placeholder Styles** (**[123]**) option is set to **Sample Values**.  
+  
+1. On the **Home** tab, select **Run** to preview your report.
+
+   Confirm the summary values in the Sales column display as currency. Here's an example from the report:
+
+   :::image type="content" source="../reporting-services/media/ssrs-tutorial-sales-currency.png" alt-text="Screenshot that shows a portion of the table report where the Sales data is shown as currency values rather than general numbers.":::
+
+### Show dates (month, day, year)
+
+By default, the SalesDate field displays both date (month, day, year) and time (hour, minute, second) data. You can change the format of these values to show only the date.
+  
+Format the values to display the date only:
+  
+1. On the **Run** tab, select **Design** to return to design view.  
+
+1. In your table report, select the cell that contains the `[SalesDate]` value.  
+  
+1. On the **Home** tab, in the **Number** group, expand the **Format** dropdown menu, and select **Date**:  
+
+   :::image type="content" source="../reporting-services/media/ssrs-tutorial-date-format.png" alt-text="Screenshot that shows how to change the format for the selected table cell to display as date only.":::
+
+   The cell displays the example date `[1/31/2000]`.
+   
+   If you don't see an example date value, check the placeholder style. On the **Home** tab, in the **Number** group, confirm the **Placeholder Styles** (**[123]**) option is set to **Sample Values**.    
+  
+1. On the **Home** tab, select **Run** to preview your report.
+
+   Confirm the values in the SalesDate column display as dates (month, day, year) only. Here's an example from the report:
+
+   :::image type="content" source="../reporting-services/media/ssrs-tutorial-date-only.png" alt-text="Screenshot that shows a portion of the table report where only the date is displayed and no time value.":::
+
+### Use custom date formats  
+  
+You can also specify a custom format for a specific field in the table:
+
+1. On the **Run** tab, select **Design** to return to design view.  
+  
+1. In your table report, go to the cell that previously contained the `[SalesDate]` value.  
+
+1. Right-click the cell and select **Text Box Properties**:
+
+   :::image type="content" source="../reporting-services/media/ssrs-tutorial-open-text-properties.png" border="false" alt-text="Screenshot that shows how to open the Text Box Properties dialog for the selected cell."::: 
+  
+1. In the **Text Box Properties** dialog, configure the cell formatting:
+
+   :::image type="content" source="../reporting-services/media/ssrs-tutorial-text-properties.png" border="false" alt-text="Screenshot that shows how to change the format for the selected table cell to a custom format by using the Text Box Properties.":::
+
+   1. In the tab pane, select **Number**.
+
+   1. In the **Category** list, select **Date**.
+   
+   1. In the **Type** list, select **January 31, 2000**.
+   
+      The **Sample** section shows a preview of your formatting configuration.
+
+   1. Select **OK** to apply your custom formatting.
+  
+   The table cell updates to display the example date `[January 31, 2000]`.  
+  
+1. On the **Home** tab, select **Run** to preview your report.
+
+   Confirm the values in the SalesDate column display the month name rather than the month number. Here's an example from the report:
+
+   :::image type="content" source="../reporting-services/media/ssrs-tutorial-month-name.png" alt-text="Screenshot that shows a portion of the table report where the date is shown with the month name of January rather than the month number 1.":::
+
+## Format the table
+
+In addition to applying specific formats to the data in your table, you can also configure attributes of the entire, such as column width, row height, and the table title. The following sections demonstrate these procedures.
+
+### Change column width
+
+By default, each cell in a table contains a text box. A text box expands vertically to accommodate the text when the page is rendered. In the rendered report, each row expands to the height of the tallest rendered text box in the row. The height of the row on the design surface has no effect on the height of the row in the rendered report.  
+  
+To reduce the amount of vertical space for each row, you can expand the column width to accommodate the expected contents of the text boxes in the column on a single line.  
   
 Follow these steps to change the width of the table columns:
   
-1. Select **Design** to return to design view.  
+1. On the **Run** tab, select **Design** to return to design view.  
   
-1. Select the table so that column and row handles appear above the table and next it  
-  
-   The gray bars along the top and side of the table are the column and row handles.  
-  
-1. Point to the line between column handles so that the cursor changes into a double arrow. Drag the columns to the width you want. For example, expand the column for Product so that the product name displays on one line.  
-  
-1. Select **Run** to preview your report.  
-  
-## Add a report title
+1. On the design surface, select your table to display the row and column _handles_. The handles appear as gray bars along the edges of the table.  
 
-A report title appears at the top of the report. You can place the report title in a report header or if the report doesn't use one, in a text box at the top of the report body. In this tutorial, you use the text box that is automatically placed at the top of the report body.  
+   :::image type="content" source="../reporting-services/media/ssrs-tutorial-display-handles.png" border="false" alt-text="Screenshot that shows the row and column handles for a table on the design surface in Report Builder.":::
+
+1. Use the handles to increase the table width.
+
+   > [!TIP]
+   > You can expand the width of the design surface to increase the visible area for working on your table. When the table is wider than the design surface, you need to use scroll bars to view the full table.
+
+1. Point to the line between the Subcategory and Product columns to display the double arrow cursor. :::image type="icon" source="../reporting-services/media/ssrs-tutorial-double-arrow.png":::
+
+1. Select and drag the line to increase the width for the Product column. Increase the width so product names in the column display on a single line in the rendered report.
   
-The text can be further enhanced by applying different font styles, sizes, and colors to phrases and individual characters of the text. For more information, see [Format text in a text box in paginated reports (Report Builder)](../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md).  
+1. On the **Home** tab, select **Run** to preview your report.
+
+   Confirm the values in the Product column display on a single line. Here's an example from the report:
+
+   :::image type="content" source="../reporting-services/media/ssrs-tutorial-wide-category.png" alt-text="Screenshot that shows a portion of the table report where the width of the Product column is increased to allow product names to display on a single line.":::
+
+### Customize report title
+
+A report title appears at the top of the report. You can place the report title in a report header. If the report doesn't use a header, you can place the title in a text box at the top of the report body. In this tutorial, you use the text box that is automatically placed at the top of the report body.
   
-Add a report title:
+There are many ways you can customize the report title, such as using different font style, text sizes, and colors. Portions of the title and even individual characters can use separate formatting. For more information, see [Format text in a text box in paginated reports (Report Builder)](../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md).  
   
-1. On the design surface, select **Click to add title**.  
+Follow these steps to customize your report title:
   
-1. Enter **Product Sales**, and then select outside the text box.  
+1. On the **Run** tab, select **Design** to return to design view.  
+
+1. On the design surface, select the **Click to add title** text box:
+
+   :::image type="content" source="../reporting-services/media/ssrs-tutorial-add-title.png" alt-text="Screenshot that shows how to select the Click to add title text box on the design surface.":::
+
+1. In the **Click to add title** text box, enter the text _Product Sales_, and then select outside the text box.
   
-1. Right-click the text box that contains **Product Sales** and select **Text Box Properties**.  
-  
-1. In the **Text Box Properties** dialog, select **Font**.  
-  
-1. In the **Size** list, select **18pt**.  
-  
-1. In the **Color** list, select **Cornflower Blue**.  
-  
-1. Select **Bold**.  
-  
-1. Select **OK**.
-  
+1. Right-click the text box and select **Text Box Properties**.  
+
+1. In the **Text Box Properties** dialog, configure the text formatting:
+
+   1. In the tab pane, select **Font**.
+
+   1. In the **Font** list, select **Arial**.
+   
+   1. In the **Size** list, select **18pt**.
+
+   1. In the **Color** list, select **Blue**.
+
+   1. For the **Style**, select **Bold**. 
+   
+      The **Sample** section shows a preview of your formatting configuration.
+
+   1. Select **OK** to apply the title formatting.
+
+1. On the **Home** tab, select **Run** to preview your report.
+
+   Confirm the table shows the updated title:
+
+   :::image type="content" source="../reporting-services/media/ssrs-tutorial-custom-title.png" alt-text="Screenshot that shows the updated title for the table report.":::
+
 ## Save the report
 
 Save the report to a report server or your computer. If you don't save the report to the report server, many [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] features such as subreports aren't available.  
@@ -319,13 +388,13 @@ Follow these steps to save the report on a report server:
   
 1. Select **File** > **Save As**.  
   
-1. Select **Recent Sites and Servers**.  
+1. In the **Save As Report** dialog, select **Recent Sites and Servers** in the right pane.  
   
 1. Select or enter the name of the report server where you have permission to save reports.  
   
-   The message "Connecting to report server" appears. When the connection is complete, you see the contents of the report folder that the report server administrator specified as the default location for reports.  
+   The message "Connecting to report server" appears. When the connection completes, the default report folder opens. The report server administrator specifies the default folder location.
   
-1. In **Name**, replace **Untitled** with **Product_Sales**.  
+1. For the report **Name**, replace the default value _Untitled_ with _Product_Sales_.  
   
 1. Select **Save**.  
   
@@ -339,37 +408,52 @@ You can also save the report on your computer:
   
 1. Select **Desktop**, **My Documents**, or **My computer**, and browse to the folder where you want to save the report.  
   
-1. In **Name**, replace **Untitled** with **Product Sales**.  
+1. For the report **Name**, replace the default value _Untitled_ with _Product_Sales_.  
   
 1. Select **Save**.  
   
 ## Export the report
 
-Reports can be exported to different formats such Microsoft Excel and comma separated value (CSV) files. For more information, see [Export paginated reports (Report Builder)](../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md).  
+Reports can be exported to different formats, such as Microsoft Excel and comma separated value (CSV) files. For more information, see [Export paginated reports (Report Builder)](../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md).  
   
 In this tutorial, you export the report to Excel and set a property on the report to provide a custom name for the workbook tab.  
+
+### Set Excel workbook tab name
+
+Follow these steps to specify the Excel workbook tab name:
   
-Specify the workbook tab name:
+1. Select **Design** to return to design view.
+
+1. Select the **View** tab, and select **Properties** to expose the **Properties** pane.
   
-1. Select **Design** to return to design view.  
+1. Select anywhere on the design surface, but outside the table report.
+
+   The items listed in the **Properties** pane correspond to where you select on the design surface. For this procedure, you want to select outside the report area.
   
-1. Select anywhere on the design surface, outside the report.  
+1. In the **Properties** pane, expand the **Other** group, and locate the **InitialPageName** property.
+
+   > [!TIP]  
+   > If you don't see a property in the **Properties** pane, select **Alphabetical** at the top of the pane to order all properties alphabetically.  
+
+1. For the **InitialPageName** property, enter the workbook tab name _Product Sales Excel_.  
+
+   :::image type="content" source="../reporting-services/media/ssrs-tutorial-initial-page-name.png" border="false" alt-text="Screenshot that shows how to set the Initial Page Name for the table report in the Properties pane." lightbox="../reporting-services/media/ssrs-tutorial-custom-title.png" :::
+
+### Export your report to Excel
+
+Export your report to Excel with these steps:
   
-1. In the Properties pane, locate the InitialPageName property and enter **Product Sales Excel**.  
+1. On the **Home** tab, select **Run** to preview your report.
+
+   Confirm the table shows the updated title:
+
+   :::image type="content" source="../reporting-services/media/ssrs-tutorial-custom-title.png" alt-text="Screenshot that shows the updated title for the table report.":::
   
-   > [!NOTE]  
-   > If the Properties pane isn't visible, on the **View** tab, select **Properties**.  
-   > If you don't see a property in the Properties pane, try selecting the **Alphabetical** button at the top of the pane to order all the properties alphabetically.   
-  
-Export a report to Excel by following these steps:
-  
-1. Select **Run** to preview the report.  
-  
-1. On the ribbon, select **Export** > **Excel**.
+1. On the toolbar, select **Export** > **Excel**.
   
 1. In the **Save As** dialog, browse to where you want to save the file.  
   
-1. In the **File name** box, enter **Product_Sales_Excel**.  
+1. For the **File name**, enter _Product\_Sales\_Excel_.  
   
 1. Verify that the file type is **Excel (\*.xlsx)**.  
   
@@ -377,11 +461,11 @@ Export a report to Excel by following these steps:
   
 ### View the report in Excel
 
-Now you're ready to view your report in Excel:
+Now you can view your table report in Excel:
   
-1. Open the folder where you save the workbook and double-click **Product_Sales_Excel.xlsx**.  
+1. Open the folder where you saved the workbook, and double-click the file, _Product\_Sales\_Excel.xlsx_.  
   
-1. Verify that the name of the workbook tab is **Product Sales Excel**.  
+1. Verify the name of the workbook tab is **Product Sales Excel**.  
 
 ## Related content
 

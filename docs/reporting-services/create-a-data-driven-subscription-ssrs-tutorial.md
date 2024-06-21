@@ -16,7 +16,7 @@ helpviewer_keywords:
 ---
 # Create a data-driven subscription (SSRS Tutorial)
 
-This [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] tutorial is a three-step process that shows how you create a data-driven subscription by using the SQL Server Report Service (SSRS) tutorial. The tutorial walks you through a simple example that creates a data-driven subscription to generate and save filtered report output to a shared file. 
+Learn about how you create a data-driven subscription by using the SQL Server Report Service (SSRS) tutorial. The tutorial walks you through a simple example that creates a data-driven subscription to generate and save filtered report output to a shared file. 
 
 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] data-driven subscriptions allow you to customize and automate the distribution of a report based on dynamic subscriber data. Use [data-driven subscriptions](../reporting-services/subscriptions/data-driven-subscriptions.md) in the following scenarios:  
   
@@ -58,7 +58,7 @@ The following diagram illustrates the basic workflow of the process:
 
 | Step    | Description |
 | --------|------------ |
-| (1)     | The subscription configuration sets up the source report, schedule, and the field mapping to the subscribers Database. |
+| (1)     | The subscription configuration sets the source report, schedule, and the field mapping to the subscribers Database. |
 | (2)     | The **OrderInfo** table contains four order numbers to use for filtering, 1 per file. The table also contains the file formats for the generated reports. |
 | (3)     | Information from the [!INCLUDE [sssampledbobject-md](../includes/sssampledbobject-md.md)] database is filtered and returned in the report. |
 | (4)     | Reports created in the file formats specified by the **OrderInfo** table. |

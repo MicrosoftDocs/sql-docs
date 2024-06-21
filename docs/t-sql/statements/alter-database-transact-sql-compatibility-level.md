@@ -4,7 +4,7 @@ description: Sets Transact-SQL and query processing behaviors to be compatible w
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 05/09/2024
+ms.date: 06/20/2024
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -101,9 +101,13 @@ To use database compatibility level 120 or higher for a database overall, but op
 
 ### Remarks for Azure SQL
 
-The default compatibility level is SQL Server 2019 (150) for newly created databases in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)]. [!INCLUDE [msCoName](../../includes/msconame-md.md)] doesn't automatically update database compatibility level for existing databases. It is up to customers to do at their own discretion. [!INCLUDE [msCoName](../../includes/msconame-md.md)] highly recommends that customers plan to upgrade to the latest compatibility level in order to use the latest query optimization improvements.
+The default compatibility level is SQL Server 2022 (160) for newly created databases in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].
 
-For tips about how to assess the performance differences of your most important queries between two different compatibility levels on [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], see [Improved Query Performance with Compatibility Level 130 in Azure SQL Database](https://techcommunity.microsoft.com/t5/azure-sql-blog/improved-query-performance-with-compatibility-level-130-in-azure/ba-p/386100). This article refers to compatibility level 130 and [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)], but the same methodology applies for upgrades to 140 or higher levels in [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].
+The default compatibility level is SQL Server 2019 (150) for newly created databases in [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)].
+
+[!INCLUDE [msCoName](../../includes/msconame-md.md)] doesn't automatically update database compatibility level for existing databases. It is up to customers to do at their own discretion. 
+
+[!INCLUDE [msCoName](../../includes/msconame-md.md)] highly recommends that customers plan to upgrade to the latest compatibility level in order to use the latest query optimization improvements. For tips about how to assess the performance differences of your most important queries between two different compatibility levels on [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], see [Improved Query Performance with Compatibility Level 130 in Azure SQL Database](https://techcommunity.microsoft.com/t5/azure-sql-blog/improved-query-performance-with-compatibility-level-130-in-azure/ba-p/386100). This article refers to compatibility level 130 and [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)], but the same methodology applies for upgrades to 140 or higher levels in [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].
 
 Not all features that vary by compatibility level are supported on [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].
 

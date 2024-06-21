@@ -26,16 +26,16 @@ dotnet tool install -g microsoft.sqlpackage --version 162.3.566
 
 |Platform|Download|
 |:---|:---|
-|Windows .NET 8 |[.zip file](https://go.microsoft.com/fwlink/?linkid=2273950)|
-|Windows|[.msi file](https://go.microsoft.com/fwlink/?linkid=2274058)|
-|macOS .NET 8 |[.zip file](https://go.microsoft.com/fwlink/?linkid=2274060)|
-|Linux .NET 8 |[.zip file](https://go.microsoft.com/fwlink/?linkid=2274059)|
+|Windows .NET 8 |[.zip file](https://go.microsoft.com/fwlink/?linkid=2277003)|
+|Windows|[.msi file](https://go.microsoft.com/fwlink/?linkid=2276908)|
+|macOS .NET 8 |[.zip file](https://go.microsoft.com/fwlink/?linkid=2276909)|
+|Linux .NET 8 |[.zip file](https://go.microsoft.com/fwlink/?linkid=2277004)|
 
 
 ### Fixes
 |Feature|Details|
 |:---|:---|
-|Deployment|Fixes an issue where the deployment contributor [API DeploymentPlanModifier](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentplanmodifier?view=sql-dacfx-162) methods are set as static methods. [GitHub issue](https://github.com/microsoft/DacFx/issues/461)|
+|Deployment|Fixes an issue where the deployment contributor [API DeploymentPlanModifier](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentplanmodifier?view=sql-dacfx-162&preserve-view=true) methods are set as static methods. [GitHub issue](https://github.com/microsoft/DacFx/issues/461)|
 |Platform|The SqlPackage .zip build .NET SDK is updated from 8.0.301 to 8.0.302|
 
 ### Known Issues

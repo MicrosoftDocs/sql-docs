@@ -18,7 +18,7 @@ You can control whether to repeat row and column headers on every page of a pagi
 
 How you control the rows and columns depends on whether the tablix data region has group headers. When you select a tablix data region that has group headers, a dotted line shows the tablix areas, as shown in the following figure:
 
-![Tablix data region areas](../../reporting-services/report-design/media/rs-tablixareas.gif "Tablix data region areas")
+![Tablix data region areas](../../reporting-services/report-design/media/rs-tablixareas.png "Tablix data region areas")
 
 Row and column group headers are created automatically when you add groups by using the New Table or Matrix wizard, or the New Chart wizard, by adding fields to the Grouping pane, or by using context menus. If the tablix data region has only a tablix body area and no group headers, the rows and columns are tablix members.
 

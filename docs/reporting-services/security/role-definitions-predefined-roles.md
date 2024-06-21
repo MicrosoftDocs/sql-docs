@@ -23,11 +23,11 @@ helpviewer_keywords:
   
 ## Use predefined roles  
   
-- Review the predefined roles to determine whether you can use them as is. If you need to adjust the tasks or define other roles, you should do adjust them before you begin assigning users to specific roles. To create or edit custom roles, use SQL Server Management Studio. For more information, see [Create, delete, or modify a role &#40;Management Studio&#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md).
+Review the predefined roles to determine whether you can use them without modification. If you need to adjust the tasks or define other roles, you should adjust them before you begin assigning users to specific roles. To create or edit custom roles, use SQL Server Management Studio. For more information, see [Create, delete, or modify a role &#40;Management Studio&#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md).
   
-- Identify which users and groups require access to the report server, and at what level. Most users should be assigned to the **Browser** role or the **Report Builder** role. A smaller number of users should be assigned to the **Publisher** role. Few users should be assigned to **Content Manager**.  
+When you're ready to start assigning roles, identify which users and groups require access and privileges to the report server. Most users should be assigned to the **Browser** role or the **Report Builder** role. A smaller number of users should be assigned to the **Publisher** role. Few users should be assigned to **Content Manager**.  
 
-- When you're ready to assign user and group accounts to specific roles, use the web portal. For more information, see [Grant user access to a report server](../../reporting-services/security/grant-user-access-to-a-report-server.md).  
+When you're ready to assign user and group accounts to specific roles, use the web portal. For more information, see [Grant user access to a report server](../../reporting-services/security/grant-user-access-to-a-report-server.md).  
   
 ## <a name="bkmk_rolelist"></a> Predefined role definitions  
 
@@ -49,7 +49,7 @@ The following table describes the predefined scope of the roles:
   
 ## <a name="bkmk_content"></a> Content Manager role  
 
-The **Content Manager** role is a predefined role that includes tasks that are useful for a user who manages reports and Web content but doesn't necessarily author reports or manage a web server or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance. A content manager deploys reports, manages report models and data source connections, and makes decisions about how reports are used. All item-level tasks are selected by default for the **Content Manager** role definition.  
+The **Content Manager** role is a predefined role that includes tasks that are useful for a user who manages reports and web content but doesn't necessarily author reports or manage a web server or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance. A content manager deploys reports, manages report models and data source connections, and makes decisions about how reports are used. All item-level tasks are selected by default for the **Content Manager** role definition.  
   
 The **Content Manager** role is often used with the **System Administrator** role. Together, the two role definitions provide a complete set of tasks for users who require full access to all items on a report server. Although the **Content Manager** role provides full access to reports, report models, folders, and other items within the folder hierarchy, it doesn't provide access to site-level items or operations. Tasks such as creating and managing shared schedules, setting server properties, and managing role definitions are system-level tasks that are included in the **System Administrator** role. For this reason, you should create a second role assignment at the site level that provides access to shared schedules.  
   
@@ -71,7 +71,7 @@ The following table lists the tasks that are included in the **Content Manager**
 |Manage report history|Create, view, and delete report history, and view report history properties. Also includes view and modify settings that determine snapshot history limits and how caching works.|  
 |Manage reports|Add and delete reports, modify report parameters, view, and modify report properties. Also includes view and modify data sources that provide content to the report, view and modify report definitions, and set security policies at the report level.|  
 |Manage resources|Create, modify, and delete resources, and view and modify resource properties.|  
-|Set security for individual items|Define security policies for reports, linked reports, folders, resources, and data sources. For more information, see [Securable Items](../../reporting-services/security/securable-items.md).|  
+|Set security for individual items|Define security policies for reports, linked reports, folders, resources, and data sources. For more information, see [Securable items](../../reporting-services/security/securable-items.md).|  
 |View data sources|View shared data source items in the folder hierarchy.|  
 |View folders|View folder contents, and navigate through the folder hierarchy.|  
 |View models|View models in the folder hierarchy, use models as data sources for a report, and run queries against the model to retrieve data.|  
@@ -237,12 +237,10 @@ The following table lists tasks that are included in the **System User** role de
 |View report server properties|View properties that apply to the report server, such as the application name, whether the My Reports setting is enabled, and report history defaults.<br /><br /> If you remove this task from the **System User** role, the **Site settings** page isn't available. Also, the application title isn't displayed at the top of each page. By default, the title for the web portal is "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]."|  
 |View shared schedules|View shared schedules that are used to run reports or refresh a report.<br /><br /> If you remove this task from the **System User** role, users can't select shared schedules to use with subscriptions and other scheduled operations.|  
   
-The **System User** role can be used to supplement default security. You can include the role in new role assignments that extend report server access to report users. For more information, see [Granting Permissions on a Native Mode Report Server](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md).  
+The **System User** role can be used to supplement default security. You can include the role in new role assignments that extend report server access to report users. For more information, see [Grant permissions on a native mode report server](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md).  
   
 ## Related content
 
 - [Create, delete, or modify a role &#40;Management Studio&#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)  
 - [Grant user access to a report server](../../reporting-services/security/grant-user-access-to-a-report-server.md)  
-- [Modify or delete a role assignment &#40;SSRS web portal&#41;](../../reporting-services/security/role-assignments-modify-or-delete.md)  
-- [Grant permissions on a native mode report server](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
 - [Tasks and permissions](../../reporting-services/security/tasks-and-permissions.md)

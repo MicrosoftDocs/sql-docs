@@ -27,7 +27,7 @@ In this tutorial, you:
 
 * Completion of [Step 1: Create a report server project](tutorial-step-01-create-report-server-project-reporting-services.md).
 * Completion of [Step 2: Specify connection information](tutorial-step-02-specify-connection-information-reporting-services.md).
-* Completion of [Step 3: Define a dataset for the table report](tutorial-step-03-define-dataset-for-table-report-reporting-services.md).
+* Completion of [Step 3: Define a dataset for the table report](tutorial-step-03-define-dataset-table-report-reporting-services.md).
 
 ## Add a table data region and fields to a report layout
 

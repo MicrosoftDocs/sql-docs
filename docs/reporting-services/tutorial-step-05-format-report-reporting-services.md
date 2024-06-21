@@ -26,8 +26,8 @@ In this tutorial, you:
 
 * Completion of [Step 1: Create a report server project](tutorial-step-01-create-report-server-project-reporting-services.md).
 * Completion of [Step 2: Specify connection information](tutorial-step-02-specify-connection-information-reporting-services.md).
-* Completion of [Step 3: Define a dataset for the table report](tutorial-step-03-define-dataset-for-table-report-reporting-services.md).
-* Completion of [Step 4: Add a table to the report](tutorial-step-04-add-table-to-report-reporting-services.md).
+* Completion of [Step 3: Define a dataset for the table report](tutorial-step-03-define-dataset-table-report-reporting-services.md).
+* Completion of [Step 4: Add a table to the report](tutorial-step-04-add-table-report-reporting-services.md).
 
 ## Format the date
 
@@ -73,7 +73,7 @@ You can add other formatting to your report by highlighting the header, and then
 
 1. Hover over the line between column handles so that the cursor changes into a double arrow. Drag the columns to the size you want.
 
-    :::image type="content" source="media/rs-basictabledetailsdesignarrow.png" alt-text="Screenshot of a table showing the double arrow cursor between two columns.":::
+    :::image type="content" source="media/rs-basic-table-details-design-arrow.png" alt-text="Screenshot of a table showing the double arrow cursor between two columns.":::
 
 1. Highlight the row containing column header labels and then select **Format** > **Font** > **Bold**.
 
@@ -86,4 +86,4 @@ You can add other formatting to your report by highlighting the header, and then
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Step 6: Add Grouping and Totals &#40;Reporting Services&#41;](tutorial-step-06-add-grouping-and-totals-reporting-services.md)
+> [Step 6: Add Grouping and Totals &#40;Reporting Services&#41;](tutorial-step-06-add-grouping-totals-reporting-services.md)

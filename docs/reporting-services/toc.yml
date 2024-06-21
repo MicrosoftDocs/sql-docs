@@ -39,13 +39,13 @@
       - name: "2. Specify Connection Information"
         href: ../reporting-services/tutorial-step-02-specify-connection-information-reporting-services.md
       - name: "3. Define a Dataset for the Table Report"
-        href: ../reporting-services/tutorial-step-03-define-dataset-for-table-report-reporting-services.md
+        href: ../reporting-services/tutorial-step-03-define-dataset-table-report-reporting-services.md
       - name: "4. Add a Table to the Report"
-        href: ../reporting-services/tutorial-step-04-add-table-to-report-reporting-services.md
+        href: ../reporting-services/tutorial-step-04-add-table-report-reporting-services.md
       - name: "5. Format a Report"
         href: ../reporting-services/tutorial-step-05-format-report-reporting-services.md
       - name: "6. Add Grouping and Totals"
-        href: ../reporting-services/tutorial-step-06-add-grouping-and-totals-reporting-services.md
+        href: ../reporting-services/tutorial-step-06-add-grouping-totals-reporting-services.md
     - name: Create a Data-Driven Subscription (SSRS Tutorial)
       href: ../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md
       items:

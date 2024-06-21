@@ -80,4 +80,4 @@ Create a Transact-SQL query that retrieves sales order information from the [!IN
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Step 4: Add a table to the report &#40;Reporting Services&#41;](tutorial-step-04-add-table-to-report-reporting-services.md)
+> [Step 4: Add a table to the report &#40;Reporting Services&#41;](tutorial-step-04-add-table-report-reporting-services.md)

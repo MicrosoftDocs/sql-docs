@@ -63,9 +63,9 @@ When you create reports in SQL Server Reporting Services (SSRS), establishing a 
 
 1. Select **OK**. Report Designer adds the **AdventureWorks2022** data source to the **Report Data** pane.
 
-   :::image type="content" source="media/lesson-2-specifying-connection-information-reporting-services/ssrs-adventureworks-datasource2022.png" alt-text="Screenshot of the Report Data pane that highlights the AdventureWorks2022 data source.":::
+   :::image type="content" source="media/lesson-2-specifying-connection-information-reporting-services/ssrs-adventureworks-data-source-2022.png.png" alt-text="Screenshot of the Report Data pane that highlights the AdventureWorks2022 data source.":::
 
 ## Next step 
 
 > [!div class="nextstepaction"]
-> [Step 3: Define a dataset for the table report &#40;Reporting Services&#41;](tutorial-step-03-define-dataset-for-table-report-reporting-services.md)
+> [Step 3: Define a dataset for the table report &#40;Reporting Services&#41;](tutorial-step-03-define-dataset-table-report-reporting-services.md)

@@ -4,7 +4,7 @@ description: The bulk copy program (bcp) utility bulk copies data between an ins
 author: markingmyname
 ms.author: maghan
 ms.reviewer: v-davidengel, randolphwest
-ms.date: 11/15/2023
+ms.date: 06/21/2024
 ms.service: sql
 ms.subservice: tools-other
 ms.topic: conceptual
@@ -31,21 +31,16 @@ monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >
 
 [!INCLUDE [SQL Server Azure SQL Database Synapse Analytics PDW](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-The **b**ulk **c**opy **p**rogram utility (**bcp**) bulk copies data between an instance of [!INCLUDE [msCoName](../includes/msconame-md.md)] [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] and a data file in a user-specified format.
+The bulk copy program utility (**bcp**) bulk copies data between an instance of [!INCLUDE [msCoName](../includes/msconame-md.md)] [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] and a data file in a user-specified format.
 
-> [!NOTE]  
-> For using **bcp** on Linux, see [Install the SQL Server command-line tools sqlcmd and bcp on Linux](../linux/sql-server-linux-setup-tools.md).
->  
-> For detailed information about using **bcp** with Azure Synapse Analytics, see [Load data with bcp](/azure/sql-data-warehouse/sql-data-warehouse-load-with-bcp).
+For using **bcp** on Linux, see [Install the SQL Server command-line tools sqlcmd and bcp on Linux](../linux/sql-server-linux-setup-tools.md). For detailed information about using **bcp** with Azure Synapse Analytics, see [Load data with bcp](/azure/sql-data-warehouse/sql-data-warehouse-load-with-bcp).
 
 The **bcp** utility can be used to import large numbers of new rows into [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] tables or to export data out of tables into data files. Except when used with the `queryout` option, the utility requires no knowledge of [!INCLUDE [tsql](../includes/tsql-md.md)]. To import data into a table, you must either use a format file created for that table or understand the structure of the table and the types of data that are valid for its columns.
-
-:::image type="icon" source="../includes/media/topic-link-icon.svg" border="false"::: For the syntax conventions that are used for the **bcp** syntax, see [Transact-SQL syntax conventions](../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
 
 > [!NOTE]  
 > If you use **bcp** to back up your data, create a format file to record the data format. **bcp** data files **don't include** any schema or format information, so if a table or view is dropped and you don't have a format file, you might be unable to import the data.
 
-[!INCLUDE [entra-id](../includes/entra-id.md)]
+:::image type="icon" source="../includes/media/topic-link-icon.svg" border="false"::: For the syntax conventions that are used for the **bcp** syntax, see [Transact-SQL syntax conventions](../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
 
 ## Download the latest version of the bcp utility
 
@@ -67,9 +62,9 @@ See [Install the SQL Server command-line tools sqlcmd and bcp on Linux](../linux
 - Build number: 15.0.4298.1
 - Release date: April 7, 2023
 
-The new version of **sqlcmd** supports Microsoft Entra authentication, including multifactor authentication (MFA) support for Azure SQL Database, Azure Synapse Analytics, and Always Encrypted features.
+**bcp** supports Microsoft Entra authentication, including multifactor authentication (MFA) support for Azure SQL Database and Azure Synapse Analytics.
 
-The new **bcp** supports Microsoft Entra authentication, including multifactor authentication (MFA) support for Azure SQL Database and Azure Synapse Analytics.
+[!INCLUDE [entra-id](../includes/entra-id.md)]
 
 ### System requirements
 
@@ -143,17 +138,17 @@ The name of the destination table when importing data into [!INCLUDE [ssNoVersio
 
 #### view_name
 
-The name of the destination view when copying data into [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] (`in`), and the source view when copying data from [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] (`out`). Only views in which all columns refer to the same table can be used as destination views. For more information on the restrictions for copying data into views, see [INSERT (Transact-SQL)](../t-sql/statements/insert-transact-sql.md).
+The name of the destination view when copying data into [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] (`in`), and the source view when copying data from [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] (`out`). Only views in which all columns refer to the same table can be used as destination views. For more information on the restrictions for copying data into views, see [INSERT](../t-sql/statements/insert-transact-sql.md).
 
 #### "query"
 
 A [!INCLUDE [tsql](../includes/tsql-md.md)] query that returns a result set. If the query returns multiple result sets, only the first result set is copied to the data file; subsequent result sets are ignored. Use double quotation marks around the query and single quotation marks around anything embedded in the query. `queryout` must also be specified when bulk copying data from a query.
 
-The query can reference a stored procedure as long as all tables referenced inside the stored procedure exist prior to executing the **bcp** statement. For example, if the stored procedure generates a temp table, the **bcp** statement fails because the temp table is available only at run time and not at statement execution time. In this case, consider inserting the results of the stored procedure into a table and then use **bcp** to copy the data from the table into a data file.
+The query can reference a stored procedure as long as all tables referenced inside the stored procedure exist before executing the **bcp** statement. For example, if the stored procedure generates a temp table, the **bcp** statement fails because the temp table is available only at run time and not at statement execution time. In this case, consider inserting the results of the stored procedure into a table and then use **bcp** to copy the data from the table into a data file.
 
 #### in
 
-copies from a file into the database table or view. Specifies the direction of the bulk copy.
+Copies from a file into the database table or view. Specifies the direction of the bulk copy.
 
 #### out
 
@@ -175,7 +170,7 @@ Creates a format file based on the option specified (`-n`, `-c`, `-w`, or `-N`) 
 
 #### -a packet_size
 
-Specifies the number of bytes, per network packet, sent to and from the server. A server configuration option can be set by using [!INCLUDE [ssManStudioFull](../includes/ssmanstudiofull-md.md)] (or the `sp_configure` system stored procedure). However, the server configuration option can be overridden on an individual basis by using this option. *packet_size* can be from 4096 bytes to 65,535 bytes; the default is `4096`.
+Specifies the number of bytes, per network packet, sent to and from the server. A server configuration option can be set by using [!INCLUDE [ssManStudioFull](../includes/ssmanstudiofull-md.md)] (or the `sp_configure` system stored procedure). However, the server configuration option can be overridden on an individual basis by using this option. *packet_size* can be from 4,096 bytes to 65,535 bytes; the default is `4096`.
 
 Increased packet size can enhance performance of bulk-copy operations. If a larger packet is requested but can't be granted, the default is used. The performance statistics generated by the **bcp** utility show the packet size used.
 
@@ -203,15 +198,15 @@ Specifies the code page of the data in the data file. *code_page* is relevant on
 | ACP | [!INCLUDE [vcpransi](../includes/vcpransi-md.md)]/Microsoft Windows (ISO 1252). |
 | OEM | Default code page used by the client. This is the default code page used if `-C` isn't specified. |
 | RAW | No conversion from one code page to another occurs. This is the fastest option because no conversion occurs. |
-| *code_page* | Specific code page number; for example, 850.<br /><br />Versions prior to version 13 ([!INCLUDE [sssql15-md](../includes/sssql16-md.md)]) don't support code page 65001 (UTF-8 encoding). Versions beginning with 13 can import UTF-8 encoding to earlier versions of [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)]. |
+| *code_page* | Specific code page number; for example, 850.<br /><br />Versions before version 13 ([!INCLUDE [sssql15-md](../includes/sssql16-md.md)]) don't support code page 65001 (UTF-8 encoding). Versions beginning with 13 can import UTF-8 encoding to earlier versions of [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)]. |
 
 #### -d database_name
 
-Specifies the database to connect to. By default, **bcp** connects to the user's default database. If -d database_name and a three part name (database_name.schema.table, passed as the first parameter to **bcp**) are specified, an error occurs because you can't specify the database name twice. If *database_name* begins with a hyphen (`-`) or a forward slash (`/`), don't add a space between `-d` and the database name.
+Specifies the database to connect to. By default, **bcp** connects to the user's default database. If `-d <database_name>` and a three part name (database_name.schema.table, passed as the first parameter to **bcp**) are specified, an error occurs because you can't specify the database name twice. If *database_name* begins with a hyphen (`-`) or a forward slash (`/`), don't add a space between `-d` and the database name.
 
 #### -D
 
-Causes the value passed to the `bcp` `-S` option to be interpreted as a data source name (DSN). A DSN can be used to embed driver options to simplify command lines, enforce driver options that aren't otherwise accessible from the command line such as MultiSubnetFailover, or to help protect sensitive credentials from being discoverable as command line arguments. For more information, see *DSN Support in sqlcmd and bcp* in [Connecting with sqlcmd](../connect/odbc/linux-mac/connecting-with-sqlcmd.md).
+Causes the value passed to the `bcp -S` option to be interpreted as a data source name (DSN). A DSN can be used to embed driver options to simplify command lines, enforce driver options that aren't otherwise accessible from the command line such as MultiSubnetFailover, or to help protect sensitive credentials from being discoverable as command line arguments. For more information, see *DSN Support in sqlcmd and bcp* in [Connecting with sqlcmd](../connect/odbc/linux-mac/connecting-with-sqlcmd.md).
 
 #### -e err_file
 
@@ -253,7 +248,7 @@ Specifies the number of the first row to export from a table or import from a da
 This switch is used by the client when connecting to Azure SQL Database or Azure Synapse Analytics to specify that the user be authenticated with Microsoft Entra ID. The -G switch requires [version 14.0.3008.27](https://go.microsoft.com/fwlink/?LinkID=825643) or later versions. To determine your version, execute `bcp -v`. For more information, see [Use Microsoft Entra authentication with SQL Database or Azure Synapse Analytics](/azure/sql-database/sql-database-aad-authentication).
 
 > [!IMPORTANT]  
-> Microsoft Entra interactive authentication is not currently supported on Linux or macOS. Microsoft Entra integrated authentication requires [Microsoft ODBC Driver 17 for SQL Server](../connect/odbc/download-odbc-driver-for-sql-server.md) version 17.6.1 and later versions, and a properly [configured Kerberos environment](../connect/odbc/linux-mac/using-integrated-authentication.md#configure-kerberos).
+> Microsoft Entra interactive authentication isn't currently supported on Linux or macOS. Microsoft Entra integrated authentication requires [Microsoft ODBC Driver 17 for SQL Server](../connect/odbc/download-odbc-driver-for-sql-server.md) version 17.6.1 and later versions, and a properly [configured Kerberos environment](../connect/odbc/linux-mac/using-integrated-authentication.md#configure-kerberos).
 
 > [!TIP]  
 > To check if your version of **bcp** includes support for Microsoft Entra authentication, type `bcp --help` and verify that you see `-G` in the list of available arguments.
@@ -290,6 +285,81 @@ This switch is used by the client when connecting to Azure SQL Database or Azure
   bcp bcptest in "c:\last\data2.dat" -S aadserver.database.windows.net -d testdb -G -c
   ```
 
+- **Microsoft Entra Managed Service Identity**
+
+  > [!IMPORTANT]  
+  > **bcp** is tightly coupled with the driver. The major versions of both **bcp** and the driver a DSN is created with must be the same. To determine your version, execute `bcp -v`.
+
+  ### [Windows](#tab/windows)
+
+  Exporting data via **bcp** using a Managed Service Identity on Windows requires a DSN be configured.
+
+  To configure a DSN on a machine running Windows:
+
+  1. Press the Windows key on your keyboard
+  1. Type `ODBC` and select the appropriate version of the **ODBC Data Source Administrator**
+  1. Select either the **User DSN** or **System DSN** tab
+  1. Select **Add** and follow the prompts
+  1. When asked for an authentication type select **Azure Managed Service Identity authentication**
+  1. If you have a User Assigned Managed Identity, paste the `Object (principal) ID` of the identity into the **Login ID** box at the bottom of the   authentication tab
+  1. Continue following the prompts to configure your DSN
+
+  For a full walkthrough including screenshots, see [Creating and editing DSNs in the UI](../connect/odbc/using-azure-active-directory.  md#creating-and-editing-dsns-in-the-ui).
+
+  Once the DSN is configured, **bcp** can then be called using `-D` flag to indicate the value passed for `-S` is a DSN.
+
+  ```cmd
+  bcp bcptest out "c:\last\data1.dat" -c -D -S myDSN -d testdb
+  ```
+
+  #### [Linux](#tab/linux)
+
+  Exporting data via **bcp** using a Managed Service Identity on Linux can be configured using a DSN.
+
+  For this example, a user DSN was created by editing the user `.odbc.ini` file using the following command. `odbcinst -j` can be used to view where   DSN files are located.
+
+  ```bash
+  vi /home/<user>/.odbc.ini
+  ```
+
+  Here's an example of the lines to add after any existing DSNs in the file. The line with `LastUser` should be removed when using System Assigned Managed Identities.
+
+  ```ini
+  [myDSN]
+  Driver = ODBC Driver 18 for SQL Server
+  Server = aadserver.database.windows.net
+  Database = testdb
+  Encrypt = yes
+  LastUser = <object_id_of_user_assigned_managed_identity>
+  Authentication = ActiveDirectoryMSI
+  ```
+
+  Once the DSN is configured, **bcp** can then be called using `-D` flag to indicate the value passed for `-S` is a DSN.
+
+  ```bash
+  bcp bcptest out data1.dat -c -D -S myDSN -d testdb
+  ```
+
+  Users of **bcp** (17.8 and later versions) can also authenticate with a token. The following examples use [PowerShell on Linux](/powershell/scripting/install/installing-powershell-on-linux) to retrieve an access token.
+
+  This example retrieves an access token and places it into a file to export data using a System Assigned Managed Identity.
+
+  ```bash
+  Connect-AzAccount -Identity
+  $access_token | cut -f 1 | tr -d '\n' | iconv -f ascii -t UTF-16LE > /tmp/tokenFile
+  bcp bcptest out data2.dat -S aadserver.database.windows.net -d testdb -G -P /tmp/tokenFile -c
+  ```
+
+  This example passes a `Client ID` to the `-AccountId` parameter of `Connect-AzAccount` to retrieve an access token and place it into a token file. The token is then used to export data using the specified User Assigned Managed Identity.
+
+  ```bash
+  Connect-AzAccount -Identity -AccountId 'client_id_of_user_assigned_managed_identity'
+  $access_token | cut -f 1 | tr -d '\n' | iconv -f ascii -t UTF-16LE > /tmp/tokenFile
+  bcp bcptest out data2.dat -S aadserver.database.windows.net -d testdb -G -P /tmp/tokenFile -c
+  ```
+
+  ---
+
 - **Microsoft Entra interactive**
 
   Microsoft Entra interactive authentication, available for all Azure SQL and SQL Server 2022+, allows you to use an interactive dialog to authenticate, which also supports multifactor authentication.
@@ -320,7 +390,7 @@ Specifies the hint or hints to be used during a bulk import of data into a table
 
 - **ORDER (*column* [ASC | DESC] [, ...*n*])**
 
-  The sort order of the data in the data file. Bulk import performance is improved if the data being imported is sorted according to the clustered index on the table, if any. If the data file is sorted in a different order, that is other than the order of a clustered index key, or if there's no clustered index on the table, the ORDER clause is ignored. The column names supplied must be valid column names in the destination table. By default, **bcp** assumes the data file is unordered. For optimized bulk import, [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] also validates that the imported data is sorted.
+  The sort order of the data in the data file. Bulk import performance is improved if the data being imported is sorted according to the clustered index on the table, if any. If the data file is sorted in a different order, that is, other than the order of a clustered index key, or if there's no clustered index on the table, the ORDER clause is ignored. The column names supplied must be valid column names in the destination table. By default, **bcp** assumes the data file is unordered. For optimized bulk import, [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] also validates that the imported data is sorted.
 
 - **ROWS_PER_BATCH = *bb***
 
@@ -332,7 +402,7 @@ Specifies the hint or hints to be used during a bulk import of data into a table
 
 - **TABLOCK**
 
-  Specifies that a bulk update table-level lock is acquired for the duration of the bulkload operation; otherwise, a row-level lock is acquired. This hint significantly improves performance because holding a lock for the duration of the bulk-copy operation reduces lock contention on the table. A table can be loaded concurrently by multiple clients if the table has no indexes and TABLOCK is specified. By default, locking behavior is determined by the table option **table lock on bulkload**.
+  Specifies that a bulk update table-level lock is acquired for the duration of the bulkload operation; otherwise, a row-level lock is acquired. This hint significantly improves performance because holding a lock for the duration of the bulk-copy operation reduces lock contention on the table. A table can be loaded concurrently from multiple clients if the table has no indexes and TABLOCK is specified. By default, locking behavior is determined by the table option **table lock on bulkload**.
 
   > [!NOTE]  
   > If the target table is clustered columnstore index, TABLOCK hint isn't required for loading by multiple concurrent clients because each concurrent thread is assigned a separate rowgroup within the index and loads data into it. Please refer to columnstore index conceptual articles for details,
@@ -356,7 +426,7 @@ Specifies the hint or hints to be used during a bulk import of data into a table
 
 - **FIRE_TRIGGERS**
 
-  Specified with the `in` argument, any insert triggers defined on the destination table will run during the bulk-copy operation. If FIRE_TRIGGERS isn't specified, no insert triggers will run. FIRE_TRIGGERS is ignored for the `out`, `queryout`, and `format` arguments.
+  When specified with the *in* argument, any insert triggers defined on the destination table run during the bulk-copy operation. If FIRE_TRIGGERS isn't specified, no insert triggers will run. FIRE_TRIGGERS is ignored for the `out`, `queryout`, and `format` arguments.
 
 #### -i input_file
 
@@ -370,11 +440,11 @@ Specifies that empty columns should retain a null value during the operation, ra
 
 #### -K application_intent
 
-Declares the application workload type when connecting to a server. The only value that is possible is **ReadOnly**. If `-K` isn't specified, the **bcp** utility doesn't support connectivity to a secondary replica in an Always On availability group. For more information, see [Offload read-only workload to secondary replica of an Always On availability group](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).
+Declares the application workload type when connecting to a server. The only value that is possible is `ReadOnly`. If `-K` isn't specified, the **bcp** utility doesn't support connectivity to a secondary replica in an Always On availability group. For more information, see [Offload read-only workload to secondary replica of an Always On availability group](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).
 
 #### -l login_timeout
 
-Specifies a login timeout. The -l option specifies the number of seconds before a login to SQL Server times out when you try to connect to a server. The default login timeout is 15 seconds. The login timeout must be a number between 0 and 65534. If the value supplied isn't numeric or doesn't fall into that range, **bcp** generates an error message. A value of 0 specifies an infinite timeout.
+Specifies a login timeout. The `-l` option specifies the number of seconds before a login to SQL Server times out when you try to connect to a server. The default login timeout is 15 seconds. The login timeout must be a number between 0 and 65534. If the value supplied isn't numeric or doesn't fall into that range, **bcp** generates an error message. A value of 0 specifies an infinite timeout.
 
 #### -L last_row
 
@@ -460,15 +530,14 @@ If *field_term* begins with a hyphen (`-`) or a forward slash (`/`), don't inclu
 
 #### -T
 
-Specifies that the **bcp** utility connects to [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] with a trusted connection using integrated security. The security credentials of the network user, *login_id*, and *password* aren't required. If `-T` isn't specified, you need to specify `-U` and `-P` to successfully log in.
+Specifies that the **bcp** utility connects to [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] with a trusted connection using integrated security. The security credentials of the network user, *login_id*, and *password* aren't required. If `-T` isn't specified, you need to specify `-U` and `-P` to successfully connect.
 
 > [!IMPORTANT]  
-> When the **bcp** utility is connecting to [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] with a trusted connection using integrated security, use the `-T` option (trusted connection) instead of the *username* and *password* combination. When the **bcp** utility is connecting to SQL Database or Azure Synapse Analytics, using Windows authentication or Microsoft Entra authentication is not supported. Use the `-U` and `-P` options.
+> When the **bcp** utility is connecting to [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] with a trusted connection using integrated security, use the `-T` option (trusted connection) instead of the *username* and *password* combination. When the **bcp** utility is connecting to SQL Database or Azure Synapse Analytics, using Windows authentication or Microsoft Entra authentication isn't supported. Use the `-U` and `-P` options.
 
 #### -U login_id
 
 Specifies the login ID used to connect to [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)].
-
 
 #### -v
 
@@ -478,25 +547,17 @@ Reports the **bcp** utility version number and copyright.
 
 Performs the bulk-copy operation using data types from an earlier version of [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)]. This option doesn't prompt for each field; it uses the default values.
 
-`80` = [!INCLUDE [ssVersion2000](../includes/ssversion2000-md.md)]
+- `80` = [!INCLUDE [ssVersion2000](../includes/ssversion2000-md.md)]
+- `90` = [!INCLUDE [ssVersion2005](../includes/ssversion2005-md.md)]
+- `100` = [!INCLUDE [sql2008-md](../includes/sql2008-md.md)] and [!INCLUDE [sql2008r2](../includes/sql2008r2-md.md)]
+- `110` = [!INCLUDE [ssSQL11](../includes/sssql11-md.md)]
+- `120` = [!INCLUDE [ssSQL14](../includes/sssql14-md.md)]
+- `130` = [!INCLUDE [sssql15-md](../includes/sssql16-md.md)]
+- `140` = [!INCLUDE [sssql17-md](../includes/sssql17-md.md)]
+- `150` = [!INCLUDE [sssql19-md](../includes/sssql19-md.md)]
+- `160` = [!INCLUDE [sssql22-md](../includes/sssql22-md.md)]
 
-`90` = [!INCLUDE [ssVersion2005](../includes/ssversion2005-md.md)]
-
-`100` = [!INCLUDE [sql2008-md](../includes/sql2008-md.md)] and [!INCLUDE [sql2008r2](../includes/sql2008r2-md.md)]
-
-`110` = [!INCLUDE [ssSQL11](../includes/sssql11-md.md)]
-
-`120` = [!INCLUDE [ssSQL14](../includes/sssql14-md.md)]
-
-`130` = [!INCLUDE [sssql15-md](../includes/sssql16-md.md)]
-
-`140` = [!INCLUDE [sssql17-md](../includes/sssql17-md.md)]
-
-`150` = [!INCLUDE [sssql19-md](../includes/sssql19-md.md)]
-
-`160` = [!INCLUDE [sssql22-md](../includes/sssql22-md.md)]
-
-For example, to generate data for types not supported by [!INCLUDE [ssVersion2000](../includes/ssversion2000-md.md)], but were introduced in later versions of [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)], use the -V80 option.
+For example, to generate data for types not supported by [!INCLUDE [ssVersion2000](../includes/ssversion2000-md.md)], but were introduced in later versions of [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)], use the `-V80` option.
 
 For more information, see [Import native and character format data from earlier versions of SQL Server](../relational-databases/import-export/import-native-and-character-format-data-from-earlier-versions-of-sql-server.md).
 
@@ -613,13 +674,13 @@ This section has recommendations for character mode (`-c`) and native mode (`-n`
 
 - (Administrator/User) When possible, use native format (`-n`) to avoid the separator issue. Use the native format to export and import using [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)]. Export data from [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] using the `-c` or `-w` option if the data will be imported to a non-[!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] database.
 
-- (Administrator) Verify data when using BCP OUT. For example, when you use BCP OUT, BCP IN, and then BCP OUT verify that the data is properly exported and the terminator values aren't used as part of some data value. Consider overriding the default terminators (using -t and -r options) with random hexadecimal values to avoid conflicts between terminator values and data values.
+- (Administrator) Verify data when using BCP OUT. For example, when you use BCP OUT, BCP IN, and then BCP OUT verify that the data is properly exported and the terminator values aren't used as part of some data value. Consider overriding the default terminators (using `-t` and `-r` options) with random hexadecimal values to avoid conflicts between terminator values and data values.
 
-- (User) Use a long and unique terminator (any sequence of bytes or characters) to minimize the possibility of a conflict with the actual string value. This can be done by using the -t and -r options.
+- (User) Use a long and unique terminator (any sequence of bytes or characters) to minimize the possibility of a conflict with the actual string value. This can be done by using the `-t` and `-r` options.
 
 ## Examples
 
-The examples in this section make use of the `WideWorldImporters` sample database for [!INCLUDE [sssql16-md](../includes/sssql16-md.md)] and later versions, Azure SQL Database, and Azure SQL Managed Instance. `WideWorldImporters` can be downloaded from [https://github.com/Microsoft/sql-server-samples/releases/tag/wide-world-importers-v1.0](https://github.com/Microsoft/sql-server-samples/releases/tag/wide-world-importers-v1.0). See [RESTORE (Transact-SQL)](../t-sql/statements/restore-statements-transact-sql.md) for the syntax to restore the sample database.
+The examples in this section make use of the `WideWorldImporters` sample database for [!INCLUDE [sssql16-md](../includes/sssql16-md.md)] and later versions, Azure SQL Database, and Azure SQL Managed Instance. `WideWorldImporters` can be downloaded from [https://github.com/Microsoft/sql-server-samples/releases/tag/wide-world-importers-v1.0](https://github.com/Microsoft/sql-server-samples/releases/tag/wide-world-importers-v1.0). See [RESTORE Statements](../t-sql/statements/restore-statements-transact-sql.md) for the syntax to restore the sample database.
 
 ### Example test conditions
 
@@ -645,10 +706,11 @@ BEGIN
 END
 ```
 
-> [!NOTE]  
-> Truncate the `StockItemTransactions_bcp` table as needed.
->  
-> TRUNCATE TABLE WideWorldImporters.Warehouse.StockItemTransactions_bcp;
+You can truncate the `StockItemTransactions_bcp` table as needed:
+
+```sql
+TRUNCATE TABLE WideWorldImporters.Warehouse.StockItemTransactions_bcp;
+```
 
 ### A. Identify bcp utility version
 
@@ -841,7 +903,7 @@ This example shows two sample files, generated by **bcp** using custom field and
 
 1. Generate an output file from the example table `dbo.T1`, using a custom field terminator and custom row terminator.
 
-   In this example, the server name is `MYSERVER`, the custom field terminator is specified by `-t ,`, and the custom row terminator is specified by `-r :`.
+   In this example, the server name is `MYSERVER`, the custom field terminator is specified by `-t`, \`, and the custom row terminator is specified by `-r :`.
 
    ```cmd
    bcp dbo.T1 out T1.txt -T -S MYSERVER -d tempdb -w -t , -r :

@@ -36,10 +36,10 @@ Dev Containers are preconfigured, containerized environments designed to provide
 
 ### How Dev Containers work
 
-1. **Initialization**: Developers start with a Dev Container template that includes all necessary configurations.
-2. **Environment Setup**: The container is built using Docker, setting up the environment based on the `devcontainer.json` specifications.
-3. **Coding and Testing**: Developers write and test code within this consistent environment, ensuring compatibility with the final production setup.
-4. **Deployment**: Once development and testing are complete, the application can be seamlessly deployed using CI/CD pipelines like GitHub Actions.
+- **Initialization**: Developers start with a Dev Container template that includes all necessary configurations.
+- **Environment Setup**: The container is built using Docker, setting up the environment based on the `devcontainer.json` specifications.
+- **Coding and Testing**: Developers write and test code within this consistent environment, ensuring compatibility with the final production setup.
+- **Deployment**: Once development and testing are complete, the application can be seamlessly deployed using CI/CD pipelines like GitHub Actions.
 
 ## Azure SQL Database and Dev Containers
 
@@ -104,8 +104,10 @@ The Azure SQL Database Dev Container Templates are available for the following p
 
 | Programming Language / Framework | Description |
 |----------------------------------|-------------|
-| [.NET](https://github.com/microsoft/azuresql-devcontainers/tree/main/src/dotnet)                             | A development environment for .NET and Azure SQL, enabling streamlined local development and testing. |
-| [.NET Aspire](https://github.com/microsoft/azuresql-devcontainers/tree/main/src/dotnet-aspire)                      | A development environment for .NET Aspire and Azure SQL, enabling streamlined local development and testing. |
+| [.NET](https://github.com/microsoft/azuresql-devcontainers/tree/main/src/dotnet) | A development environment for .NET and Azure SQL, enabling streamlined local development and testing. |
+| [.NET Aspire](https://github.com/microsoft/azuresql-devcontainers/tree/main/src/dotnet-aspire) | A development environment for .NET Aspire and Azure SQL, enabling streamlined local development and testing. |
+| [Node.sa](https://github.com/microsoft/azuresql-devcontainers/tree/main/src/javascript-node) | A development environment for Node.js (Javascript) and Azure SQL, enabling streamlined local development and testing. |
+| [Python](https://github.com/microsoft/azuresql-devcontainers/tree/main/src/python) | A development environment for .Python and Azure SQL, enabling streamlined local development and testing. |
 
 > [!TIP]
 > Each template comes with a pre-configured Azure SQL Database, making it easy to start developing right away!

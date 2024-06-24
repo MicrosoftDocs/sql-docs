@@ -27,26 +27,23 @@ Before you begin, ensure you have the following installed on your local machine:
 
 1. Open Visual Studio Code.
 
-2. Open the Command Palette.
+1. Press `F1` or `Ctrl+Shift+P` to open the command palette.
 
-    - Press `F1` or `Ctrl+Shift+P` to open the command palette.
+1. Select the **Dev Containers: New Dev Container** command.
 
-3. Select Dev Container Configuration.
+1. Select the desired Dev Container template for Azure SQL Database, typing `*Azure SQL*`.
 
-    - Type `Dev Containers: Select Dev Container Configuration`.
-    - Select the desired Dev Container template for Azure SQL Database:
+1. Select one of the following templates:
         - .NET with Aspire and Azure SQL (dotnet-aspire)
         - .NET and Azure SQL (dotnet)
         - Python and Azure SQL (python)
         - Node.js and Azure SQL (node)
 
-4. Wait for the container to build.
-
+1. Wait for the container to build.
     - Visual Studio Code will build the container based on the selected configuration.
     - The build process might take a few minutes the first time.
 
-5. Verify the setup.
-
+1. Verify the setup.
     - Once the container is ready, you can start using the preinstalled tools and extensions.
     - Open a terminal in Visual Studio Code and run the following commands to verify the installations:
 

@@ -10,13 +10,13 @@ ms.topic: install-set-up-deploy
 ms.custom:
   - intro-installation
   - updatefrequency5
-#customer intent: As an administrator or user, I want to install Microsoft Report Builder so that I can provide my team with the necessary tools for report authoring.
+#customer intent: As a user, I want to install Microsoft Report Builder so that I have the necessary tools for report authoring.
 ---
 # Install Microsoft Report Builder
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
 
-Microsoft Report Builder is an essential tool for users and administrators who need robust capabilities for creating detailed, customized paginated reports. 
+Microsoft Report Builder is an essential tool for people who need robust capabilities for creating detailed, customized paginated reports. 
 
 For organizations with administrators, you can ask an administrator to install and configure Report Builder through the [Microsoft Endpoint Configuration Manager](#install-report-builder-with-microsoft-endpoint-configuration-manager). Administrators can manage permissions, download Report Builder from the web portal, and oversee folders and shared datasets saved to the report server.
 

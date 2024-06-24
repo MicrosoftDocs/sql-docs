@@ -304,7 +304,7 @@ This switch is used by the client when connecting to Azure SQL Database or Azure
   1. If you have a User Assigned Managed Identity, paste the `Object (principal) ID` of the identity into the **Login ID** box at the bottom of the   authentication tab
   1. Continue following the prompts to configure your DSN
 
-  For a full walkthrough including screenshots, see [Creating and editing DSNs in the UI](../connect/odbc/using-azure-active-directory.  md#creating-and-editing-dsns-in-the-ui).
+  For a full walkthrough including screenshots, see [Creating and editing DSNs in the UI](../connect/odbc/using-azure-active-directory.md#creating-and-editing-dsns-in-the-ui).
 
   Once the DSN is configured, **bcp** can then be called using `-D` flag to indicate the value passed for `-S` is a DSN.
 

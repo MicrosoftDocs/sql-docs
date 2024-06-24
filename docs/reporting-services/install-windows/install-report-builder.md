@@ -1,9 +1,9 @@
 ---
 title: "Install Microsoft Report Builder"
-description: Learn how to install Microsoft Report Builder with various methods including Microsoft Endpoint Configuration Manager, the web portal, and the command line. 
+description: Install Microsoft Report Builder by using various methods including Microsoft Endpoint Configuration Manager, the web portal, and the command line. 
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 06/19/2024
+ms.date: 06/25/2024
 ms.service: reporting-services
 ms.subservice: report-server
 ms.topic: install-set-up-deploy
@@ -15,7 +15,6 @@ ms.custom:
 # Install Microsoft Report Builder
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
-
 
 Microsoft Report Builder is essential for users and administrators who need robust tools for creating detailed and customized paginated reports. 
 
@@ -68,9 +67,7 @@ Whether you're setting up the software for your own use or deploying it across m
   
 1. On  the [Report Builder page of the Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkID=734968) , select **Download**.  
   
-1. After Report Builder finishes downloading, select **Run**.  
-  
-     This step launches the Microsoft Report Builder Installation Wizard.  
+1. After Report Builder finishes downloading, open the `ReportBuilder.msi` file.  
   
 1. Select **Next**.
 
@@ -89,21 +86,19 @@ Whether you're setting up the software for your own use or deploying it across m
   
 1. Contact your administrator for the location of the `ReportBuilder.msi` that you run to install Report Builder on your local computer.  
   
-1. Browse to locate `ReportBuilder.msi`, the Windows Installer Package (MSI) for Report Builder, and select it.  
-  
-     This step launches the Microsoft Report Builder Installation Wizard.  
+1. Browse to locate `ReportBuilder.msi`, the Windows Installer Package (MSI) for Report Builder, and open the file.  
   
 1. Complete the rest of the steps in the [Install Report Builder from the download site](#download) section.  
   
 ## Install Report Builder from the command line
 
- You can also perform a command line installation of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] and provide arguments to customize the installation. In addition to the standard MSI intrinsic parameters, you can use the custom parameters that [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] provides: RBINSTALLDIR and RBSERVERURL. RBINSTALLDIR specifies the root installation folder for [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. RBSERVERURL specifies the default report server that [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] uses to save reports on the server.  
+ You can also perform a command line installation of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] and provide arguments to customize the installation. In addition to the standard MSI intrinsic parameters, you can use the custom parameters that [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] provides: `RBINSTALLDIR` and `RBSERVERURL`. `RBINSTALLDIR` specifies the root installation folder for [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. `RBSERVERURL` specifies the default report server that [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] uses to save reports on the server.  
   
- If you want a silent installation, with no user interface interaction at all, specify the **/quiet** option. By design, the quiet option flag suppresses installation errors. We therefore recommended that you include the **/l** option, which specifies logging, when you use the quiet option.
+ If you want a silent installation, with no user interface interaction at all, specify the `/quiet` option. By design, the quiet option flag suppresses installation errors. We therefore recommended that you include the `/l` option, which specifies logging, when you use the quiet option.
   
 1. On  the [Report Builder page of the Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkID=734968), select **Download**.  
   
-1. After [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] finishes downloading, select  **Save**.  
+1. After Report Builder finishes downloading, select  **Save**.  
   
 1. On the **Start** menu, select **Run**.  
   
@@ -121,15 +116,12 @@ Whether you're setting up the software for your own use or deploying it across m
   
 1. Select **Enter** to run the command.  
   
-## Set [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] defaults  
+## Set Report Builder defaults  
+
+After you install Report Builder, you can set some default options. Select **File** > **Options**.  
   
-- After you install [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], you can set some default options. Select **File** > **Options**.  
+Setting the default report server or SharePoint site is the most useful. For more information, see [Set default options for Report Builder](../../reporting-services/report-builder/set-default-options-for-report-builder.md).  
   
-     Setting the default [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] web portal or SharePoint site is the most useful. For more information, see [Set default options for Report Builder](../../reporting-services/report-builder/set-default-options-for-report-builder.md).  
-  
-- Select **Report Builder** .  
-  
-     If you don't see the report server in the list of existing servers, close the **Open Report** dialog box and then select **Connect** at the bottom of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] to connect to the server.  
 
 ## Microsoft Report Builder in a virtualized environment
 

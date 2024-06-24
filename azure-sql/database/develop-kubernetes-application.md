@@ -436,5 +436,5 @@ del c:\users\ReplaceWith_YourUserName\.kube\config
 
 - [Application development overview - SQL Database & SQL Managed Instance](develop-overview.md?view=azuresqldb-current&preserve-view=true)
 - [Connect to and query Azure SQL Database using Python and the pyodbc driver](azure-sql-python-quickstart.md?view=azuresqldb-current&preserve-view=true&tabs=windows%2Csql-inter)
-- [Publish a Database Project for Azure SQL Database to the local emulator](local-dev-experience-publish-emulator.md?view=azuresqldb-current&preserve-view=true)
+- [Azure SQL Database dev container template](local-dev-experience-dev-containers.md)
 - [Browse code samples for Azure SQL Database](/samples/browse/?products=azure-sql-database%2Cazure-sql-managed-instance%2Cazure-sqlserver-vm&expanded=azure)

@@ -1,9 +1,9 @@
 ---
 title: Predefined roles in Reporting Services
-description: Learn how to use predefined rolls in Reporting Services to quickly assign permissions for the people you want to use your report server.
+description: Learn how to use predefined roles in Reporting Services to quickly assign permissions for the people you want to use your report server.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 02/04/2021
+ms.date: 06/24/2024
 ms.service: reporting-services
 ms.subservice: security
 ms.topic: conceptual
@@ -25,7 +25,7 @@ helpviewer_keywords:
   
 Review the predefined roles to determine whether you can use them without modification. If you need to adjust the tasks or define other roles, you should adjust them before you begin assigning users to specific roles. To create or edit custom roles, use SQL Server Management Studio. For more information, see [Create, delete, or modify a role &#40;Management Studio&#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md).
   
-When you're ready to start assigning roles, identify which users and groups require access and privileges to the report server. Most users should be assigned to the **Browser** role or the **Report Builder** role. A smaller number of users should be assigned to the **Publisher** role. Few users should be assigned to **Content Manager**.  
+When you're ready to assign roles, identify which users and groups require access and privileges to the report server. You should assign most users to the **Browser** role or the **Report Builder** role. A few users should be assigned to the **Publisher** role. Few users should be assigned to **Content Manager**.  
 
 When you're ready to assign user and group accounts to specific roles, use the web portal. For more information, see [Grant user access to a report server](../../reporting-services/security/grant-user-access-to-a-report-server.md).  
   
@@ -80,7 +80,7 @@ The following table lists the tasks that are included in the **Content Manager**
   
 ### Customize the Content Manager role  
 
-This role is intended for trusted users who have overall responsibility for managing and maintaining report server content. You can remove tasks from this definition, but doing so might introduce ambiguity into what can be managed. For example, removing the **View reports** task from this role definition prevents a **Content Manager** from viewing report contents and prevents them from verifying changes to parameter and credential settings.  
+This role is intended for trusted users who have the overall responsibility for managing and maintaining report server content. You can remove tasks from this definition, but doing so might introduce ambiguity into what can be managed. For example, removing the **View reports** task from this role definition prevents a **Content Manager** from viewing report contents and prevents them from verifying changes to parameter and credential settings.  
   
 The **Content Manager** role is used in default security.  
   

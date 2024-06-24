@@ -92,7 +92,7 @@ Whether you're setting up the software for your own use or deploying it across m
   
 ## Install Report Builder from the command line
 
- You can also perform a command line installation of Report Builder and provide arguments to customize the installation. In addition to the standard MSI intrinsic parameters, you can use the custom parameters that Report Builder provides: `RBINSTALLDIR` and `RBSERVERURL`. `RBINSTALLDIR` specifies the root installation folder for Report Builder. `RBSERVERURL` specifies the default report server that Report Builder uses to save reports on the server.  
+ You can also perform a command line installation of Report Builder and provide arguments to customize the installation. In addition to the standard Microsoft Installer (msi) intrinsic parameters, you can use the custom parameters that Report Builder provides: `RBINSTALLDIR` and `RBSERVERURL`. `RBINSTALLDIR` specifies the root installation folder for Report Builder. `RBSERVERURL` specifies the default report server that Report Builder uses to save reports on the server.  
   
  If you want a silent installation, with no user interface interaction at all, specify the `/quiet` option. By design, the `quiet` option flag suppresses installation errors. Therefore, we recommended that you include the `/l` option to specify logging when you use the `quiet` option.
   

@@ -1,9 +1,9 @@
 ---
 title: "Tables, matrices, and lists in paginated reports"
-description: Learn about tables, matrices, and lists, the tablix data regions that display paginated report data organized into rows and columns in Report Builder.
+description: Learn about how tables, matrices, and lists tablix data regions display paginated report data organized into rows and columns in Report Builder.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 06/21/2024
+ms.date: 06/24/2024
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: conceptual
@@ -33,6 +33,8 @@ f1_keywords:
   - "10103"
   - "10043"
   - "sql13.rtp.rptdesigner.groupproperties.pagebreaks.f1"
+
+#customer intent: As a SQL Server user, I want to learn how to use tables, matrices, and lists in Report Builder so that I can organize my data neatly by rows and columns when I design reports.
 ---
 # Tables, matrices, and lists in paginated reports (Report Builder)
 
@@ -42,13 +44,13 @@ In Report Builder, tables, matrices, and lists are data regions that display pag
   
 The table, matrix, and list templates are built on the tablix data region, which is a flexible grid that can display data in cells. In the table and matrix templates, cells are organized into rows and columns. Templates are variations of the underlying generic tablix data region. So you can display data in a combination of template formats and change the table, matrix, or list to include the features of another data region as you develop your report. For example, if you add a table and find it doesn't serve your needs, you can add column groups to make the table a matrix.  
   
-The table and matrix data regions can display complex data relationships by including nested tables, matrices, lists, charts, and gauges. Tables and matrices have a tabular layout and their data comes from a single dataset,\ built on a single data source. The key difference between tables and matrices is that tables can include only row groups, but matrices have row groups and column groups.  
+The table and matrix data regions can display complex data relationships by including nested tables, matrices, lists, charts, and gauges. Tables and matrices have a tabular layout and their data comes from a single dataset, built on a single data source. The key difference between tables and matrices is that tables can include only row groups, but matrices have row groups and column groups.  
   
-Lists are a little different. They support a free-layout that and can include multiple peer tables or matrices, each using data from a different dataset. Lists can also be used for forms, such as invoices.  
+Lists are a little different. They support a free-layout that can include multiple peer tables or matrices, each using data from a different dataset. Lists can also be used for forms, such as invoices.  
   
 The following images show simple reports with a table, matrix, or list:
   
-:::image type="content" source="../../reporting-services/report-design/media/rs-tablematrixlist.gif" alt-text="Screenshot that shows different labelled examples of a table, matrix, and list.":::
+:::image type="content" source="../../reporting-services/report-design/media/rs-tablematrixlist.gif" alt-text="Screenshot that shows different labeled examples of a table, matrix, and list.":::
   
 To quickly get started with tables, matrices, and lists, see [Tutorial: Create a basic table report (Report Builder)](../../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md), [Tutorial: Create a matrix report (Report Builder)](../../reporting-services/tutorial-creating-a-matrix-report-report-builder.md), and [Tutorial: Create a free form report (Report Builder)](../../reporting-services/tutorial-creating-a-free-form-report-report-builder.md).  
   
@@ -71,7 +73,7 @@ For more information, see [Tables in paginated reports (Report Builder)](../../r
 
 Use a matrix to display aggregated data summaries, grouped in rows and columns, similar to a PivotTable or crosstab. The number of unique values for each row and column group determines the number of rows and columns. The following figure shows the initial matrix template, selected on the design surface:  
 
-:::image type="content" source="../../reporting-services/report-design/media/rs-matrixtemplatenewselected.gif" alt-text="Screenshot that shows an empty matrix in Report Builder."::: 
+:::image type="content" source="../../reporting-services/report-design/media/rs-matrixtemplatenewselected.gif" alt-text="Screenshot that shows an empty matrix in Report Builder.":::
   
 You can group data by multiple fields or expressions in row and column groups. At run time, when the report data and data regions combine, a matrix grows horizontally and vertically on the page as you add columns for column groups and rows for row groups. The matrix cells display aggregate values that are scoped to the intersection of the row and column groups to which the cell belongs. For example, you might have a matrix that has a row group called Category and two column groups called Territory and Year that display the sum of sales. The report displays two cells with sums of sales for each value in the Category group. The cells at the two intersections each are scoped. One cell is "Category and Territory" and the other is "Category and Year." The matrix can include nested and adjacent groups. Nested groups have a parent-child relationship, and adjacent groups have a peer relationship. You can add subtotals for any level of nested row and column groups within the matrix.  
   

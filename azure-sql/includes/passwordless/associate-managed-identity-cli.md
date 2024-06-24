@@ -4,7 +4,7 @@ ms.author: rotabor
 ms.date: 06/01/2023
 ms.service: sql-database
 ms.topic: include
-ms.custom: generated
+ms.custom: generated, devx-track-azurecli
 ---
 
 Use the following Azure CLI commands to associate an identity with your app:

@@ -3,7 +3,7 @@ title: Groups in a Report Builder paginated report
 description: Learn how you can use a group to organize the view of a report dataset in a paginated report in Report Builder.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 06/19/2024
+ms.date: 06/24/2024
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: conceptual

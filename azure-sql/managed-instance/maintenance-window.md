@@ -5,7 +5,7 @@ description: Understand how the Azure SQL Managed Instance maintenance window ca
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma, urosmil, scottkim
-ms.date: 05/27/2024
+ms.date: 06/19/2024
 ms.service: sql-managed-instance
 ms.subservice: service-overview
 ms.topic: conceptual
@@ -43,7 +43,7 @@ The maintenance window is free of charge and can be configured on creation or fo
 
 By default, Azure SQL maintenance policy blocks most impactful updates during the period **8AM to 5PM local time every day** to avoid any disruptions during typical peak business hours. Local time is determined by the location of [Azure region](https://azure.microsoft.com/global-infrastructure/geographies/) that hosts the resource and might observe daylight saving time in accordance with local time zone definition. 
 
-During maintenance, databases remain available, but some updates may require a failover. The system default maintenance window (5pm to 8am) limits most activities to this time, but urgent updates may occur outside of it. To ensure all updates occur only during the maintenance window, select a non-default option.
+During maintenance, databases remain available, but some updates might require a failover. The system default maintenance window (5pm to 8am) limits most activities to this time, but urgent updates might occur outside of it. To ensure all updates occur only during the maintenance window, select a non-default option.
 
 You can adjust the window for maintenance updates to a time suitable to your Azure SQL resources by choosing from two non-default maintenance window slots:
  
@@ -145,7 +145,7 @@ For the full reference of the sample queries and how to use them across tools li
 ## Related content
 
 - [Configure maintenance window](maintenance-window-configure.md)
-- [Advance notifications for planned maintenance events (Preview)](advance-notifications.md)
+- [Configure advance notifications for planned maintenance events](advance-notifications.md)
 - [Maintenance window FAQ](maintenance-window-faq.yml)
 - [Azure SQL Managed Instance](sql-managed-instance-paas-overview.md)
 - [Plan for Azure maintenance events in Azure SQL Database and Azure SQL Managed Instance](../database/planned-maintenance.md)

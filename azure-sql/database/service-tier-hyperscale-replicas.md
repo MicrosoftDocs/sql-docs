@@ -79,12 +79,9 @@ Aside from the main scenarios listed above, named replicas offer flexibility and
 - Workload-dependent routing: with up to 30 named replicas, it is possible to use named replicas in groups so that an application can be isolated from another. For example, a group of four named replicas could be used to serve requests coming from mobile applications, while another group two named replicas can be used to serve requests coming from a web application. This approach would allow a fine-grained tuning of performance and costs for each group.
 
 > [!NOTE]  
-> For frequently asked questions on Hyperscale named replicas, see [Azure SQL Database Hyperscale named replicas FAQ](service-tier-hyperscale-named-replicas-faq.yml).
+> For frequently asked questions on Hyperscale named replicas, see [Azure SQL Database Hyperscale named replicas FAQ](service-tier-hyperscale-frequently-asked-questions-faq.yml#read-scale-out-questions).
 
 ### Zone redundancy for Hyperscale named replicas
-
-> [!NOTE]
-> Zone redundancy for Azure SQL Database Hyperscale named replicas is currently in preview.
 
 Zone redundancy for Azure SQL Database Hyperscale named replicas uses [Azure Availability Zones](/azure/availability-zones/az-overview#availability-zones) to distribute named replicas compute nodes across different physical locations within an Azure region. By choosing zone redundancy for named replicas, you can enhance the resilience of all layers of your Hyperscale databases to a wider range of failures, including datacenter outages, without any modifications of the application logic. For more information, see [Hyperscale zone redundant availability](high-availability-sla.md#hyperscale-service-tier-zone-redundant-availability).
 

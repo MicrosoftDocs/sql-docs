@@ -41,7 +41,7 @@ In most cases, Report Builder and Report Designer automatically create a group f
 
 After you create a group, you can set data region-specific properties, such as filter and sort expressions, page breaks, and group variables to hold scope-specific data. For more information, see [Filter, group, and sort data in paginated reports (Report Builder)](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md).  
   
-To modify an existing group, open the appropriate **Group Properties** dialog box. You can change the name of the group. Also, you can specify group expressions based on a single field or multiple fields, or on a report parameter that specifies a value at run time. You can also base a group on a set of expressions, such as the set of expressions that specify age ranges for demographic data. For more information, see [Group expression examples in paginated reports (Report Builder)](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md).  
+To modify an existing group, open the appropriate **Group Properties** dialog box. You can change the name of the group. You can specify group expressions based on a single field or multiple fields, or on a report parameter that specifies a value at run time. You can also base a group on a set of expressions, such as the set of expressions that specify age ranges for demographic data. For more information, see [Group expression examples in paginated reports (Report Builder)](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 > If you change the name of a group, you must manually update any group expressions that refer to the previous name of the group.  
@@ -69,7 +69,7 @@ Data regions that expand as a grid support different groups compared to data reg
 
 As shown earlier in this article, a tablix data region enables you to organize data into groups by rows or columns. However, row and column groups aren't the only groups available in a tablix data region. This data region can have the following types of groups:  
   
-- **Details group** The **Details** group consists of all data from a report dataset after Report Builder or Report Designer apply dataset and data region filters. Thus, the **Details** group is the only group that has no group expression.  
+- The **Details** group consists of all data from a report dataset after Report Builder or Report Designer apply dataset and data region filters. Thus, the **Details** group is the only group that has no group expression.  
   
     The **Details** group specifies the data that you would see when you run a dataset query in a query designer. For example, you have a query that retrieves all columns from a sales order table. The data in this detail group includes all the values for every row for all the columns in the table. The data in this detail group also includes values for any calculated dataset fields that you create.  
   
@@ -78,19 +78,19 @@ As shown earlier in this article, a tablix data region enables you to organize d
   
     By default, when you add a table or list to your report, Report Builder and Report Designer automatically create the **Details** group for you. It then adds a row to display the detail data. By default, when you add dataset fields to cells in this row, you see simple expressions for the fields, for example, `Sales`. When you view the data region, the **Details** row repeats once for every value in the result set.  
   
-- **Row groups and column groups** You can organize data into groups by rows or columns. Row groups expand vertically on a page. Column groups expand horizontally on a page. Groups can be nested, for example, group first by `Year`, then by `Quarter`, then by `Month`. Groups can also be adjacent, for example, group on `Territory` and independently on `ProductCategory`.  
+- **Row groups and column groups** let you organize data into groups by rows or columns. Row groups expand vertically on a page. Column groups expand horizontally on a page. Groups can be nested, for example, group first by `Year`, then by `Quarter`, then by `Month`. Groups can also be adjacent, for example, group on `Territory` and independently on `ProductCategory`.  
   
     When you create a group for a data region, Report Builder and Report Designer automatically add rows or columns to the data region and use these rows or columns to display group data.  
   
-- **Recursive hierarchy groups** A recursive hierarchy group organizes data from a single report dataset that includes multiple levels. For example, a recursive hierarchy group could display an organization hierarchy, for example, `Employee` that reports to `Employee`. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] provides group properties and built-in functions to enable you to create groups for this kind of report data. For more information, see [Create recursive hierarchy groups in a paginated report (Report Builder)](../../reporting-services/report-design/creating-recursive-hierarchy-groups-report-builder-and-ssrs.md).  
+- **Recursive hierarchy groups** organize data from a single report dataset that includes multiple levels. For example, a recursive hierarchy group could display an organization hierarchy, for example, `Employee` that reports to `Employee`. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] provides group properties and built-in functions to enable you to create groups for this kind of report data. For more information, see [Create recursive hierarchy groups in a paginated report (Report Builder)](../../reporting-services/report-design/creating-recursive-hierarchy-groups-report-builder-and-ssrs.md).  
   
 The following list summarizes the way you work with groups for each data region:  
   
-- **Table** Define nested row groups, adjacent row groups, and recursive hierarchy row groups (such as for an organizational chart). By default, a table includes a details group. Add groups by dragging dataset fields to the Grouping pane for a selected table.  
+- **Table** defines nested row groups, adjacent row groups, and recursive hierarchy row groups (such as for an organizational chart). By default, a table includes a details group. Add groups by dragging dataset fields to the Grouping pane for a selected table.  
   
-- **Matrix** Define nested row and column groups, and adjacent row and column groups. Add groups by dragging dataset fields to the **Grouping** pane for a selected matrix.  
+- **Matrix** defines nested row and column groups, and adjacent row and column groups. Add groups by dragging dataset fields to the **Grouping** pane for a selected matrix.  
   
-- **List** By default supports the details group. Typical use is to support one level of grouping. Add groups by dragging dataset fields to the **Grouping** pane for a selected list.  
+- **List** by default supports the details group. Typical use is to support one level of grouping. Add groups by dragging dataset fields to the **Grouping** pane for a selected list.  
   
 After you add a group, the row and column handles of the data region change to reflect group membership. When you delete a group, you have the choice between deleting the group definition only or deleting the group and all its associated rows and columns. For more information, see [Cells, rows, & columns in a tablix in a paginated report (Report Builder)](../../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md).  
   

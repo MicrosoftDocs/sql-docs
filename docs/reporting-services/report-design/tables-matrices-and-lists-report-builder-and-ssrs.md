@@ -120,7 +120,7 @@ You aren't limited by your initial tablix template choice. As you add groups, to
   
 You can continue to develop a table, matrix, or list by adding any tablix feature. Tablix features include displaying detail data or aggregates for grouped data on rows and columns. You can create nested groups, independent adjacent groups, or recursive groups. You can filter and sort grouped data, and easily combine groups by including multiple group expressions in a group definition  
   
-You can also add totals for a group or grand totals for the data region. You can hide rows or columns to simplify a report and enable the user to toggle the display of the hidden data, as in a drilldown report. For more information, see [Control the tablix data region display on a paginated report page (Report Builder)](../../reporting-services/report-design/controlling-the-tablix-data-region-display-on-a-report-page.md).
+You can add totals for a group or grand totals for the data region. You can hide rows or columns to simplify a report and enable the user to toggle the display of the hidden data, as in a drilldown report. For more information, see [Control the tablix data region display on a paginated report page (Report Builder)](../../reporting-services/report-design/controlling-the-tablix-data-region-display-on-a-report-page.md).
   
 ## <a name="InThisSection"></a> Work with tablix data regions
 

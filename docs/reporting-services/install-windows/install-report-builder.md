@@ -93,13 +93,13 @@ Whether you're setting up the software for your own use or deploying it across m
   
      This step launches the Microsoft Report Builder Installation Wizard.  
   
-1. Complete rest of the steps in [Install Report Builder from the download site](#download).  
+1. Complete the rest of the steps in the [Install Report Builder from the download site](#download) section.  
   
 ## Install Report Builder from the command line
 
  You can also perform a command line installation of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] and provide arguments to customize the installation. In addition to the standard MSI intrinsic parameters, you can use the custom parameters that [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] provides: RBINSTALLDIR and RBSERVERURL. RBINSTALLDIR specifies the root installation folder for [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. RBSERVERURL specifies the default report server that [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] uses to save reports on the server.  
   
- If you want a silent installation, with no user interface interaction at all, specify the **/quiet** option. By design, the quiet option flag suppresses installation errors. It's therefore recommended that you include the **/l** option, which specifies logging, when you use the quiet option.
+ If you want a silent installation, with no user interface interaction at all, specify the **/quiet** option. By design, the quiet option flag suppresses installation errors. We therefore recommended that you include the **/l** option, which specifies logging, when you use the quiet option.
   
 1. On  the [Report Builder page of the Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkID=734968), select **Download**.  
   
@@ -109,13 +109,13 @@ Whether you're setting up the software for your own use or deploying it across m
   
 1. In the **Open** box, enter **cmd.**  
   
-1. In the Command Prompt window, navigate to the folder where you saved ReportBuilder.msi.  
+1. In the Command Prompt window, navigate to the folder where you saved `ReportBuilder.msi`.  
   
 1. Enter a command with the following format:  
   
      `msiexec /i ReportBuilder.msi OPTION=OptionValue [OPTION=OptionValue]`  
   
-     The two options specific to installing [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] are: RBINSTALLDIR and RBSERVERURL. You don't have to include these arguments in the command line. The following example is the baseline command:  
+     The two options specific to installing [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] are: `RBINSTALLDIR` and `RBSERVERURL`. You don't have to include these arguments in the command line. The following example is the baseline command:  
   
      `msiexec /i ReportBuilder3_x86.msi /quiet`  
   

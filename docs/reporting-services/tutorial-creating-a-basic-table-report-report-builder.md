@@ -30,7 +30,7 @@ The estimated time to complete this tutorial is 20 minutes.
 
 The following illustration shows the table report you create in this tutorial:
 
-:::image type="content" source="../reporting-services/media/ssrs-tutorial-basic-table-report.png" alt-text="Screenshot of the sample table report prepared in this tutorial that shows product sales data." lightbox="../reporting-services/media/ssrs-tutorial-basic-table-report.png":::
+:::image type="content" source="../reporting-services/media/ssrs-tutorial-basic-table-report.png" alt-text="Screenshot of the sample table report prepared in this tutorial that shows product sales data." lightbox="../reporting-services/media/ssrs-tutorial-basic-table-report-large.png":::
   
 ## Prerequisites  
 

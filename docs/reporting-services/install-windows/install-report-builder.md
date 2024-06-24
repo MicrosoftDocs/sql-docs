@@ -18,7 +18,7 @@ ms.custom:
 
 Microsoft Report Builder is essential for users and administrators who need robust tools for creating detailed and customized paginated reports. 
 
-If you have an administrator in your organization, you can ask them to install and configure Report Builder through the [Microsoft Endpoint Configuration Manager](#install-report-builder-with-microsoft-endpoint-configuration-manager). Administrators grant permission to download [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] from the web portal, and manage folders and permissions to reports and shared datasets saved to the report server.
+If you have an administrator in your organization, you can ask them to install and configure Report Builder through the [Microsoft Endpoint Configuration Manager](#install-report-builder-with-microsoft-endpoint-configuration-manager). Administrators grant permission to download Report Builder from the web portal, and manage folders and permissions to reports and shared datasets saved to the report server.
 
 If you don't have an administrator and want to install Report Builder yourself, you can use other methods, including:
 
@@ -53,7 +53,7 @@ Whether you're setting up the software for your own use or deploying it across m
 > You can install Report Builder from a SharePoint library integrated with Reporting Services through SQL Server 2016.
 ::: moniker-end
 
- You can start Microsoft Report Builder from a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] web portal or a SharePoint site integrated with [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. For information, see [Start Report Builder](../../reporting-services/report-builder/start-report-builder.md).  
+ You can start Microsoft Report Builder from a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] web portal or a SharePoint site integrated with [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. For information, see [Start Microsoft Report Builder](../../reporting-services/report-builder/start-report-builder.md).  
 
 ::: moniker range="=sql-server-2016"
   
@@ -78,7 +78,7 @@ Whether you're setting up the software for your own use or deploying it across m
 1. On the **Default Target Server** page, optionally provide the URL to the target report server if it's different from the default. Select **Next**.  
   
     > [!NOTE]  
-    >  If you'd like to work with Report Server when it's connected to a report server, it's convenient to provide the URL to the server at this time. You can also do this from the **Options** dialog box in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
+    >  If you'd like to work with Report Server when it's connected to a report server, it's convenient to provide the URL to the server at this time. You can also do this from the **Options** dialog in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
 1. Select **Install** to complete the installation of Microsoft Report Builder.  
   
@@ -92,7 +92,7 @@ Whether you're setting up the software for your own use or deploying it across m
   
 ## Install Report Builder from the command line
 
- You can also perform a command line installation of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] and provide arguments to customize the installation. In addition to the standard MSI intrinsic parameters, you can use the custom parameters that [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] provides: `RBINSTALLDIR` and `RBSERVERURL`. `RBINSTALLDIR` specifies the root installation folder for [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. `RBSERVERURL` specifies the default report server that [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] uses to save reports on the server.  
+ You can also perform a command line installation of Report Builder and provide arguments to customize the installation. In addition to the standard MSI intrinsic parameters, you can use the custom parameters that Report Builder provides: `RBINSTALLDIR` and `RBSERVERURL`. `RBINSTALLDIR` specifies the root installation folder for Report Builder. `RBSERVERURL` specifies the default report server that Report Builder uses to save reports on the server.  
   
  If you want a silent installation, with no user interface interaction at all, specify the `/quiet` option. By design, the quiet option flag suppresses installation errors. We therefore recommended that you include the `/l` option, which specifies logging, when you use the quiet option.
   
@@ -110,7 +110,7 @@ Whether you're setting up the software for your own use or deploying it across m
   
      `msiexec /i ReportBuilder.msi OPTION=OptionValue [OPTION=OptionValue]`  
   
-     The two options specific to installing [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] are: `RBINSTALLDIR` and `RBSERVERURL`. You don't have to include these arguments in the command line. The following example is the baseline command:  
+     The two options specific to installing Report Builder are: `RBINSTALLDIR` and `RBSERVERURL`. You don't have to include these arguments in the command line. The following example is the baseline command:  
   
      `msiexec /i ReportBuilder3_x86.msi /quiet`  
   
@@ -131,5 +131,5 @@ Running Microsoft Report Builder as a virtualized application (for example, as a
 
 ## Related content
 
-- [Start Report Builder](../../reporting-services/report-builder/start-report-builder.md)
+- [Start Microsoft Report Builder](../../reporting-services/report-builder/start-report-builder.md)
 - [Uninstall Report Builder](../../reporting-services/install-windows/uninstall-report-builder.md)

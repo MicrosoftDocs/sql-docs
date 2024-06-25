@@ -11,7 +11,7 @@ ms.custom:
   - intro-installation
   - updatefrequency5
 monikerRange: ">= sql-server-2016"
-#customer intent: As a <role>, I want <what> so that <why>.
+#customer intent: As a user, I want to install and configure SQL Server Reporting Services so that I can ... .
 
 ---
 # Install SQL Server Reporting Services
@@ -82,13 +82,13 @@ To complete the Reporting Services install, you need to [create a report server 
 
 ### Create a database on a different server
 
-If you're creating the report server database on a database server on a different server, you need to change the service account for the report server to a credential that is recognized on the database server.
+If you're creating the report server database on a separate database server, you need to change the service account for the report server to a credential recognized on the database server.
 
-By default, the report server uses the virtual service account. If you try to create a database on a different server, you may receive the following error on the **Applying connection rights** step.
+By default, the report server uses the virtual service account. Attempting to create a database on a different server may lead to the following error during the **Applying connection rights** step:
 
 `System.Data.SqlClient.SqlException (0x80131904): Windows NT user or group '(null)' not found. Check the name again.`
 
-To work around the error, you can change the service account to either Network Service or a domain account. Changing the service account to Network Service applies rights in the context of the machine account for the report server.
+To address this issue, you can change the service account to either Network Service or a domain account. Opting for Network Service applies rights in the context of the report server's machine account.
 
 For more information, see [Configure the report server service account](configure-the-report-server-service-account-ssrs-configuration-manager.md).
 
@@ -121,26 +121,24 @@ You need to open up the TCP port that you've configured for your Web Service URL
 
 ## Additional configuration
 
-- To configure integration with the Power BI service so you can pin report items to a Power BI dashboard, see [Integrate with the Power BI service](power-bi-report-server-integration-configuration-manager.md).
+To configure integration with the Power BI service so you can pin report items to a Power BI dashboard, see [Integrate with the Power BI service](power-bi-report-server-integration-configuration-manager.md).
 
-- To configure email for subscriptions processing, see [E-Mail settings](e-mail-settings-reporting-services-native-mode-configuration-manager.md) and [E-Mail delivery in a report server](../subscriptions/e-mail-delivery-in-reporting-services.md).
+To configure email for subscriptions processing, see [E-Mail settings](e-mail-settings-reporting-services-native-mode-configuration-manager.md) and [E-Mail delivery in a report server](../subscriptions/e-mail-delivery-in-reporting-services.md).
 
-- To configure the web portal so you can access it on a remote computer to view and manage reports, see [Configure a firewall for report server access](../report-server/configure-a-firewall-for-report-server-access.md) and [Configure a report server for remote administration](../report-server/configure-a-report-server-for-remote-administration.md).
+To configure the web portal so you can access it on a remote computer to view and manage reports, see [Configure a firewall for report server access](../report-server/configure-a-firewall-for-report-server-access.md) and [Configure a report server for remote administration](../report-server/configure-a-report-server-for-remote-administration.md).
 
-## Related information
+## Related content
 
-For information on how to install SQL Server Reporting Services native mode, see [Install Reporting Services native mode report server](install-reporting-services-native-mode-report-server.md). 
+- For information on how to install SQL Server Reporting Services native mode, see [Install Reporting Services native mode report server](install-reporting-services-native-mode-report-server.md). 
+
+- With your report server installed, begin to create reports and deploy those to your report server. For information on how to start with Report Builder, see [Install Report Builder](../../reporting-services/install-windows/install-report-builder.md).
+
+- To create reports using SQL Server Data Tools, [download SQL Server Data Tools](../../ssdt/download-sql-server-data-tools-ssdt.md).
 
 ::: moniker range="=sql-server-2016"
 
-For information on how to install SQL Server 2016 Reporting Services (and earlier) in SharePoint integration mode, see [Install the first Report Server in SharePoint mode](install-the-first-report-server-in-sharepoint-mode.md).
+- For information on how to install SQL Server 2016 Reporting Services (and earlier) in SharePoint integration mode, see [Install the first Report Server in SharePoint mode](install-the-first-report-server-in-sharepoint-mode.md).
 
 ::: moniker-end
 
-## Next steps
-
-With your report server installed, begin to create reports and deploy those to your report server. For information on how to start with Report Builder, see [Install Report Builder](../../reporting-services/install-windows/install-report-builder.md).
-
-To create reports using SQL Server Data Tools, [download SQL Server Data Tools](../../ssdt/download-sql-server-data-tools-ssdt.md).
-
-More questions? [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)
+More questions? [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user).

@@ -2,7 +2,7 @@
 title: "Setup Program"
 description: "Setup Program"
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: "08/31/2016"
 ms.service: sql
 ms.subservice: connectivity

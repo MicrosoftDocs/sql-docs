@@ -2,7 +2,7 @@
 title: "Executing a command"
 description: Describes the Microsoft SqlClient Data Provider for SQL Server `Command` object and how to use it to execute queries and commands against a data source.
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.reviewer: v-chmalh
 ms.date: "11/25/2020"
 ms.service: sql

@@ -2,7 +2,7 @@
 title: "Using holdability"
 description: "Using holdability"
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: "08/12/2019"
 ms.service: sql
 ms.subservice: connectivity

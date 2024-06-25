@@ -2,7 +2,7 @@
 title: "Finding More OLE DB Driver for SQL Server Information"
 description: Use these resources for more information about OLE DB Driver for SQL Server and other types of data access programming.
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: "06/14/2018"
 ms.service: sql
 ms.subservice: connectivity

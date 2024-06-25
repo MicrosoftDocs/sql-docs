@@ -2,7 +2,7 @@
 title: Features of the Microsoft ODBC Driver
 description: Learn about the different features supported by the Microsoft ODBC Driver for SQL Server on Windows.
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: 01/31/2023
 ms.service: sql
 ms.subservice: connectivity

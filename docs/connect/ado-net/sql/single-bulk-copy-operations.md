@@ -2,7 +2,7 @@
 title: "Single bulk copy operations"
 description: "Describes how to do a single bulk copy of data into an instance of SQL Server using the SqlBulkCopy class, and how to perform the bulk copy operation using Transact-SQL statements and the SqlCommand class."
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.reviewer: v-kaywon
 ms.date: "08/15/2019"
 ms.service: sql

@@ -2,7 +2,7 @@
 title: "Optimistic concurrency"
 description: "Describes optimistic and pessimistic concurrency, and how you can test for concurrency violations."
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.reviewer: v-chmalh
 ms.date: "11/25/2020"
 ms.service: sql

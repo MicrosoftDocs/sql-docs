@@ -2,7 +2,7 @@
 title: Support for High Availability, disaster recovery
 description: This article discusses Microsoft JDBC Driver for SQL Server support for high-availability, disaster recovery (Always On Availability Groups).
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: 01/26/2022
 ms.service: sql
 ms.subservice: connectivity

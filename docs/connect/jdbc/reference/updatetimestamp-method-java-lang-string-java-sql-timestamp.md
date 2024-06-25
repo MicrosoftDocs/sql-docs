@@ -2,7 +2,7 @@
 title: "updateTimestamp Method (java.lang.String, java.sql.Timestamp)"
 description: "updateTimestamp Method (java.lang.String, java.sql.Timestamp)"
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: "01/19/2017"
 ms.service: sql
 ms.subservice: connectivity

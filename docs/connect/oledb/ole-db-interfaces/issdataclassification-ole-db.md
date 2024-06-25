@@ -2,7 +2,7 @@
 title: "ISSDataClassification"
 description: "ISSDataClassification interface"
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.reviewer: v-davidengel
 ms.date: "09/30/2020"
 ms.service: sql

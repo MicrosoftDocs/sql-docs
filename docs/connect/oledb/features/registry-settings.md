@@ -2,7 +2,7 @@
 title: "Registry Settings"
 description: "Registry Settings"
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: "08/31/2022"
 ms.service: sql
 ms.subservice: connectivity

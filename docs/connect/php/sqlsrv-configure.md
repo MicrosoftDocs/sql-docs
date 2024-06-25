@@ -2,7 +2,7 @@
 title: "sqlsrv_configure"
 description: "sqlsrv_configure"
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: "03/26/2018"
 ms.service: sql
 ms.subservice: connectivity

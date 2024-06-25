@@ -2,7 +2,7 @@
 title: "Using result set metadata"
 description: "Using result set metadata"
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: "08/12/2019"
 ms.service: sql
 ms.subservice: connectivity

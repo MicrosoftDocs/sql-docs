@@ -2,7 +2,7 @@
 title: "Specifying XML values as parameters"
 description: "Demonstrates how to pass XML data as a parameter to a command."
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.reviewer: v-kaywon
 ms.date: "08/15/2019"
 ms.service: sql

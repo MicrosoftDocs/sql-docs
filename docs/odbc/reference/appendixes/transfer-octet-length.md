@@ -2,7 +2,7 @@
 title: "Transfer Octet Length"
 description: "Transfer Octet Length"
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: "10/28/2019"
 ms.service: sql
 ms.subservice: connectivity

@@ -2,7 +2,7 @@
 title: Establish connection to data source (OLE DB driver)
 description: Learn how a consumer establishes a connection to a data source by using OLE DB Driver for SQL Server.
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: 04/02/2024
 ms.service: sql
 ms.subservice: connectivity

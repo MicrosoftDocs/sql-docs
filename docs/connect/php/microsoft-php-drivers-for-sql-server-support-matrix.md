@@ -2,7 +2,7 @@
 title: "Microsoft Drivers for PHP Support Matrix"
 description: "This page contains the support matrix and support lifecycle policy for the Microsoft PHP Drivers for SQL Server."
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: 01/31/2024
 ms.service: sql
 ms.subservice: connectivity

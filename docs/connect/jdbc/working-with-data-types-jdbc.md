@@ -2,7 +2,7 @@
 title: "Working with data types (JDBC)"
 description: "Learn how to work with data types in the JDBC Driver for SQL Server through these sample applications."
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: "08/12/2019"
 ms.service: sql
 ms.subservice: connectivity

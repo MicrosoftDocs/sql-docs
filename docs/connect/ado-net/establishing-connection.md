@@ -2,7 +2,7 @@
 title: "Establishing connection"
 description: Guideline for connecting to a SQL Server by SqlClient provider.
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.reviewer: v-chmalh
 ms.date: "11/13/2020"
 ms.service: sql

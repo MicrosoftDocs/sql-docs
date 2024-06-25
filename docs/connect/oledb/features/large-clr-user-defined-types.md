@@ -2,7 +2,7 @@
 title: "Large CLR User-Defined Types"
 description: Learn about size restrictions and related behavior for user-defined types in the common language runtime for different versions of SQL Server.
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: "06/12/2018"
 ms.service: sql
 ms.subservice: connectivity

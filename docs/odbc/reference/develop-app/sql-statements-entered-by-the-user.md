@@ -2,7 +2,7 @@
 title: "SQL Statements Entered by the User"
 description: "SQL Statements Entered by the User"
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: "01/19/2017"
 ms.service: sql
 ms.subservice: connectivity

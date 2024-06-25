@@ -2,7 +2,7 @@
 title: "SQL Server and ADO.NET"
 description: "Provides an overview of Microsoft.Data.SqlClient features and functionality that are specific to SQL Server."
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.reviewer: v-kaywon
 ms.date: "10/15/2019"
 ms.service: sql

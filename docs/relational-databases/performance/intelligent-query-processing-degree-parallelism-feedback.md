@@ -36,7 +36,11 @@ Instead of incurring in the pains of an all-encompassing default or manual adjus
 
 Parallelism is often beneficial for reporting and analytical queries, or queries that otherwise handle large amounts of data. Conversely, OLTP-centric queries that are executed in parallel could experience performance issues when the time spent coordinating all threads outweighs the advantages of using a parallel plan. For more information, see [parallel plan execution](../../relational-databases/query-processing-architecture-guide.md#parallel-query-processing).
 
-- To enable DOP feedback, enable the `DOP_FEEDBACK` [database scoped configuration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md#dop_feedback---on--off-) in a database.
+- To enable DOP feedback, enable the `DOP_FEEDBACK` [database scoped configuration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md#dop_feedback---on--off-) in a database. For example, in the user database:
+
+    ```sql
+    ALTER DATABASE SCOPED CONFIGURATION SET DOP_FEEDBACK = ON;
+    ```
 
 - To disable DOP feedback at the database level, use the `DOP_FEEDBACK` [database scoped configuration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md#ce_feedback---on--off-). For example, in the user database:
 

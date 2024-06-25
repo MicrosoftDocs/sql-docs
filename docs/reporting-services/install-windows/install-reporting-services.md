@@ -88,13 +88,13 @@ By default, the report server uses the virtual service account. Attempting to cr
 
 `System.Data.SqlClient.SqlException (0x80131904): Windows NT user or group '(null)' not found. Check the name again.`
 
-To address this issue, you can change the service account to either Network Service or a domain account. Opting for Network Service applies rights in the context of the report server's machine account.
+To address this issue, you can change the service account to either Network Service or a domain account. Choosing Network Service applies rights in the context of the report server's computer account.
 
 For more information, see [Configure the report server service account](configure-the-report-server-service-account-ssrs-configuration-manager.md).
 
 ## Windows Service
 
-A Windows service is created as part of the installation. It's displayed as **SQL Server Reporting Services**. The service name is **SQLServerReportingServices**.
+The installation creates a Windows service as a part of the process. The service displays as **SQL Server Reporting Services**. The service name is **SQLServerReportingServices**.
 
 ## Default URL reservations
 
@@ -102,20 +102,20 @@ URL reservations are composed of a prefix, host name, port, and virtual director
 
 |Part|Description|
 |----------|-----------------|
-|Prefix|The default prefix is HTTP. If you previously installed a Transport Layer Security (TLS), previously known as Secure Sockets Layer (SSL), certificate, Setup tries to create URL reservations that use the HTTPS prefix.|
+|Prefix|The default prefix is `HTTP`. If you installed a Transport Layer Security (TLS), previously known as Secure Sockets Layer (SSL), certificate, Setup tries to create URL reservations that use the `HTTPS` prefix.|
 |Host name|The default host name is a strong wildcard (+). It specifies that the report server accepts any HTTP request on the designated port for any host name that resolves to the computer, including `https://<computername>/reportserver`, `https://localhost/reportserver`, or `https://<IPAddress>/reportserver.`|
-|Port|The default port is 80. If you use any port other than port 80, you have to explicitly add it to the URL when you open web portal in a browser window.|
-|Virtual directory|By default, virtual directories are created in the format of ReportServer for the Report Server Web service and Reports for the web portal. For the Report Server Web service, the default virtual directory is **reportserver**. For the web portal, the default virtual directory is **reports**.|
+|Port|The default port is 80. If you use any other port, you have to explicitly add the port to the URL when you open web portal in a browser window.|
+|Virtual directory|By default, virtual directories are created in the format of `ReportServer` for the Report Server Web service and Reports for the web portal. For the Report Server Web service, the default virtual directory is `reportserver`. For the web portal, the default virtual directory is `reports`.|
 
-An example of the complete URL string might be as follows:
+Examples of the complete URL string are:
 
-- `https://+:80/reportserver`, provides access to the report server.
+- `https://+:80/reportserver`: This string provides access to the report server.
 
-- `https://+:80/reports`, provides access to the web portal.
+- `https://+:80/reports`: This string provides access to the web portal.
 
 ## Firewall
 
-If you're accessing the report server from a remote machine, you want to make sure you've configured any firewall rules if there's a firewall present.
+If you're accessing the report server from a remote computer, you want to make sure you've configured any firewall rules if there's a firewall present.
 
 You need to open up the TCP port that you've configured for your Web Service URL and Web Portal URL. By default, these are configured on TCP port 80.
 

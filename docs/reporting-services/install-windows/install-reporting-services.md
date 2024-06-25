@@ -1,22 +1,24 @@
 ---
 title: "Install SQL Server Reporting Services"
-description: "Install SQL Server Reporting Services"
+description: "Install and configure SQL Server Reporting Services (SSRS) components for storing report items, rendering reports, and processing other report services."
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 09/16/2022
+ms.date: 06/25/2024
 ms.service: reporting-services
 ms.subservice: report-server
-ms.topic: conceptual
+ms.topic: install-set-up-deploy
 ms.custom:
   - intro-installation
   - updatefrequency5
 monikerRange: ">= sql-server-2016"
+#customer intent: As a <role>, I want <what> so that <why>.
+
 ---
 # Install SQL Server Reporting Services
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2017-and-later](../../includes/ssrs-appliesto-2017-and-later.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)]
 
-SQL Server Reporting Services installation involves server components for storing report items, rendering reports, and processing of subscription and other report services.
+In this article, learn how to download, install, and configure SQL Server Reporting Services (SSRS). SSRS installation involves server components for storing report items, rendering reports, and processing of subscription and other report services.
 
 ::: moniker range="=sql-server-ver16"
 Download [**SQL Server 2022 Reporting Services**](https://www.microsoft.com/download/details.aspx?id=104502) from the Microsoft Download Center.
@@ -36,11 +38,11 @@ Download [**SQL Server 2017 Reporting Services**](https://www.microsoft.com/down
 > [!NOTE]
 > Looking for Power BI Report Server? See [Install Power BI Report Server](https://powerbi.microsoft.com/documentation/reportserver-install-report-server/).
 > 
-> Upgrading or migrating from a SQL Server 2016 or earlier version of Reporting Services? See [Upgrade and Migrate Reporting Services](upgrade-and-migrate-reporting-services.md).
+> Upgrading or migrating from a SQL Server 2016 or earlier version of Reporting Services? See [Upgrade and migrate Reporting Services](upgrade-and-migrate-reporting-services.md).
 
-## Before you begin
+## Prerequisites
 
-Before you install Reporting Services, review the [Hardware and software requirements for installing SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).
+Review the [Hardware and software requirements for installing SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).
 
 ## Install your report server
 
@@ -49,40 +51,40 @@ Installing a report server is straightforward. There are only a few steps to ins
 > [!NOTE]
 > You don't need a SQL Server Database Engine server available at the time of install. You do need one to configure Reporting Services after install.
 
-1. Find the location of SQLServerReportingServices.exe and launch the installer.
+1. Find the location of `SQLServerReportingServices.exe` and launch the installer.
 
-2. Select **Install Reporting Services**.
+1. Select **Install Reporting Services**.
 
-3. Choose an edition to install and then select **Next**.
+1. Choose an edition to install and then select **Next**.
 
-    For a free edition, choose either Evaluation or Developer from the drop-down.
+    For a free edition, choose either Evaluation or Developer from the list.
 
-    ![Evaluation or developer editions](media/install-reporting-services/report-server-install-edition-select.png)
+    :::image type="content" source="media/install-reporting-services/report-server-install-edition-select.png" alt-text="Screenshot of the Reporting Services editions that are available for download.":::
 
-    Otherwise, enter a product key. [Find the product key for SQL Server Reporting Services](find-reporting-services-product-key-ssrs.md).
+    Otherwise, enter a product key. For more information, see [Find the product key for SQL Server Reporting Services](find-reporting-services-product-key-ssrs.md).
 
-4. Read and agree to the license terms and conditions and then select **Next**.
+1. Accept the license terms and conditions, and then select **Next**.
 
-5. You need to have a Database Engine available to store the report server database. Select **Next** to install the report server only.
+1. Select **Next** to install the report server.
 
-6. Specify the install location for the report server. Select **Install** to continue.
+1. Specify the install location for the report server. Select **Install** to continue.
 
     > [!NOTE]
-    > The default path is C:\Program Files\Microsoft SQL Server Reporting Services.
+    > The default path is `C:\Program Files\Microsoft SQL Server Reporting Services`.
 
-7. After a successful setup, select **Configure Report Server** to launch the Report Server Configuration Manager.
+1. After a successful setup, select **Configure Report Server** to launch the Report Server Configuration Manager.
 
 ## Configure your report server
 
-After you select **Configure Report Server** in the setup, you're' presented with **Report Server Configuration Manager**. For more information, see [Report Server Configuration Manager](reporting-services-configuration-manager-native-mode.md).
+After you select **Configure Report Server** in the setup, the **Report Server Configuration Manager** appears. For more information, see [Report Server Configuration Manager](reporting-services-configuration-manager-native-mode.md).
 
-You need to [create a report server database](ssrs-report-server-create-a-report-server-database.md) to complete the initial configuration of Reporting Services. A SQL Server Database server is required to complete this step.
+To complete the Reporting Services install, you need to [create a report server database](ssrs-report-server-create-a-report-server-database.md) to complete the initial configuration of Reporting Services. A SQL Server Database server is required to complete this step.
 
-### Creating a database on a different server
+### Create a database on a different server
 
-If you're creating the report server database on a database server on a different machine, you need to change the service account for the report server to a credential that is recognized on the database server.
+If you're creating the report server database on a database server on a different server, you need to change the service account for the report server to a credential that is recognized on the database server.
 
-By default, the report server uses the virtual service account. If you try to create a database on a different server, you may receive the following error on the Applying connection rights step.
+By default, the report server uses the virtual service account. If you try to create a database on a different server, you may receive the following error on the **Applying connection rights** step.
 
 `System.Data.SqlClient.SqlException (0x80131904): Windows NT user or group '(null)' not found. Check the name again.`
 

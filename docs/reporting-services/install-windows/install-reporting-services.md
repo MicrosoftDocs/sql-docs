@@ -11,7 +11,7 @@ ms.custom:
   - intro-installation
   - updatefrequency5
 monikerRange: ">= sql-server-2016"
-#customer intent: As a user, I want to install and configure SQL Server Reporting Services so that I can ... .
+#customer intent: As a SQL Server user, I want to install and configure SQL Server Reporting Services so I can better leverage data and generate robust reports.
 
 ---
 # Install SQL Server Reporting Services
@@ -48,14 +48,11 @@ Review the [Hardware and software requirements for installing SQL Server](../../
 
 Installing a report server is straightforward. There are only a few steps to install the files.
 
-> [!NOTE]
-> You don't need a SQL Server Database Engine server available at the time of install. You do need one to configure Reporting Services after install.
-
 1. Find the location of `SQLServerReportingServices.exe` and launch the installer.
 
 1. Select **Install Reporting Services**.
 
-1. Choose an edition to install and then select **Next**.
+1. Choose an edition to install and select **Next**.
 
     For a free edition, choose either Evaluation or Developer from the list.
 
@@ -72,13 +69,13 @@ Installing a report server is straightforward. There are only a few steps to ins
     > [!NOTE]
     > The default path is `C:\Program Files\Microsoft SQL Server Reporting Services`.
 
-1. After a successful setup, select **Configure Report Server** to launch the Report Server Configuration Manager.
+1. After a successful installation, select **Configure Report Server** to launch the Report Server Configuration Manager.
 
 ## Configure your report server
 
-After you select **Configure Report Server** in the setup, the **Report Server Configuration Manager** appears. For more information, see [Report Server Configuration Manager](reporting-services-configuration-manager-native-mode.md).
+After you select **Configure Report Server** in the installer, the **Report Server Configuration Manager** appears. For more information, see [Report Server Configuration Manager](reporting-services-configuration-manager-native-mode.md).
 
-To complete the Reporting Services install, you need to [create a report server database](ssrs-report-server-create-a-report-server-database.md) to complete the initial configuration of Reporting Services. A SQL Server Database server is required to complete this step.
+To complete the Reporting Services installation, you need to [create a report server database](ssrs-report-server-create-a-report-server-database.md) to complete the initial configuration of Reporting Services. A SQL Server Database server is required to complete this step.
 
 ### Create a database on a different server
 
@@ -88,7 +85,7 @@ By default, the report server uses the virtual service account. Attempting to cr
 
 `System.Data.SqlClient.SqlException (0x80131904): Windows NT user or group '(null)' not found. Check the name again.`
 
-To address this issue, you can change the service account to either Network Service or a domain account. Choosing Network Service applies rights in the context of the report server's computer account.
+To address this issue, you can change the service account to either Network Service or a domain account. Choosing **Network Service** applies rights in the context of the report server's computer account.
 
 For more information, see [Configure the report server service account](configure-the-report-server-service-account-ssrs-configuration-manager.md).
 
@@ -102,10 +99,10 @@ URL reservations are composed of a prefix, host name, port, and virtual director
 
 |Part|Description|
 |----------|-----------------|
-|Prefix|The default prefix is `HTTP`. If you installed a Transport Layer Security (TLS), previously known as Secure Sockets Layer (SSL), certificate, Setup tries to create URL reservations that use the `HTTPS` prefix.|
-|Host name|The default host name is a strong wildcard (+). It specifies that the report server accepts any HTTP request on the designated port for any host name that resolves to the computer, including `https://<computername>/reportserver`, `https://localhost/reportserver`, or `https://<IPAddress>/reportserver.`|
+|Prefix|The default prefix is `HTTP`. If you installed a Transport Layer Security (TLS) certificate, the installer creates URL reservations that use the `HTTPS` prefix.|
+|Host name|The default host name is a strong wildcard (+). It specifies that the report server accepts any HTTP request on the designated port for any host name that resolves to the computer, including `https://<computername>/reportserver`, `https://localhost/reportserver`, or `https://<IPAddress>/reportserver`.|
 |Port|The default port is 80. If you use any other port, you have to explicitly add the port to the URL when you open web portal in a browser window.|
-|Virtual directory|By default, virtual directories are created in the format of `ReportServer` for the Report Server Web service and Reports for the web portal. For the Report Server Web service, the default virtual directory is `reportserver`. For the web portal, the default virtual directory is `reports`.|
+|Virtual directory|By default, the Report Server web service virtual directory is `reportserver`. For the web portal, the default virtual directory is `reports`.|
 
 Examples of the complete URL string are:
 

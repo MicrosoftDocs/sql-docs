@@ -84,7 +84,7 @@ To complete the Reporting Services install, you need to [create a report server 
 
 If you're creating the report server database on a separate database server, you need to change the service account for the report server to a credential recognized on the database server.
 
-By default, the report server uses the virtual service account. Attempting to create a database on a different server may lead to the following error during the **Applying connection rights** step:
+By default, the report server uses the virtual service account. Attempting to create a database on a different server might lead to the following error during the **Applying connection rights** step:
 
 `System.Data.SqlClient.SqlException (0x80131904): Windows NT user or group '(null)' not found. Check the name again.`
 
@@ -115,23 +115,23 @@ Examples of the complete URL string are:
 
 ## Firewall
 
-If you're accessing the report server from a remote computer, you want to make sure you've configured any firewall rules if there's a firewall present.
+If you're accessing the report server from a remote computer, you want to make sure you configured any firewall rules if there's a firewall present.
 
-You need to open up the TCP port that you've configured for your Web Service URL and Web Portal URL. By default, these are configured on TCP port 80.
+You need to open up the TCP port that you configured for your Web Service URL and Web Portal URL. By default, these are configured on TCP port 80.
 
-## Additional configuration
+## Other configuration
 
-To configure integration with the Power BI service so you can pin report items to a Power BI dashboard, see [Integrate with the Power BI service](power-bi-report-server-integration-configuration-manager.md).
+You might need to configure other features for better report access and usability. You can configure integration with the Power BI service so you can pin report items to a Power BI dashboard. For more information, see [Integrate with the Power BI service](power-bi-report-server-integration-configuration-manager.md).
 
 To configure email for subscriptions processing, see [E-Mail settings](e-mail-settings-reporting-services-native-mode-configuration-manager.md) and [E-Mail delivery in a report server](../subscriptions/e-mail-delivery-in-reporting-services.md).
 
-To configure the web portal so you can access it on a remote computer to view and manage reports, see [Configure a firewall for report server access](../report-server/configure-a-firewall-for-report-server-access.md) and [Configure a report server for remote administration](../report-server/configure-a-report-server-for-remote-administration.md).
+You can also set up the web portal so you can access and manage reports from a remote computer. For more information, see [Configure a firewall for report server access](../report-server/configure-a-firewall-for-report-server-access.md) and [Configure a report server for remote administration](../report-server/configure-a-report-server-for-remote-administration.md).
 
 ## Related content
 
 - For information on how to install SQL Server Reporting Services native mode, see [Install Reporting Services native mode report server](install-reporting-services-native-mode-report-server.md). 
 
-- With your report server installed, begin to create reports and deploy those to your report server. For information on how to start with Report Builder, see [Install Report Builder](../../reporting-services/install-windows/install-report-builder.md).
+- With your report server installed, begin to create reports and deploy the reports to your report server. For information on how to start with Report Builder, see [Install Report Builder](../../reporting-services/install-windows/install-report-builder.md).
 
 - To create reports using SQL Server Data Tools, [download SQL Server Data Tools](../../ssdt/download-sql-server-data-tools-ssdt.md).
 

@@ -2,7 +2,7 @@
 title: Bulk copy operations in SQL Server
 description: Describes bulk copy functionality in the SqlClient .NET Data Provider for SQL Server. Bulk copy is a fast way to load large amounts of data into SQL Server.
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.reviewer: v-kaywon
 ms.date: 04/20/2021
 ms.service: sql

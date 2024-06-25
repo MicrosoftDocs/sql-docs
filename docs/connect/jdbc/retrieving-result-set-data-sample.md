@@ -2,7 +2,7 @@
 title: Retrieving result set data sample
 description: Learn how to retrieve a set of data from a SQL database and display that information in a Java application.
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: 08/12/2019
 ms.service: sql
 ms.subservice: connectivity

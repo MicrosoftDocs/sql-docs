@@ -2,7 +2,7 @@
 title: Connection resiliency
 description: Connection resiliency can transparently restore broken idle connections. This feature improves application behavior when the server closes idle connections.
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: 01/30/2022
 ms.service: sql
 ms.subservice: connectivity

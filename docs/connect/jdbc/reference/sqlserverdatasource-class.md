@@ -2,7 +2,7 @@
 title: "SQLServerDataSource Class"
 description: "Learn the public API details for the SQLServerDataSource class in the JDBC Driver for SQL Server."
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: "01/19/2017"
 ms.service: sql
 ms.subservice: connectivity

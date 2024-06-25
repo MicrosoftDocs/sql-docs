@@ -2,7 +2,7 @@
 title: "What the Driver Manager Does"
 description: "What the Driver Manager Does"
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: "01/19/2017"
 ms.service: sql
 ms.subservice: connectivity

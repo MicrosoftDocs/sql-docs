@@ -2,7 +2,7 @@
 title: "Bulk copy example setup"
 description: "Describes the tables used in the bulk copy examples and provides SQL scripts for creating the tables in the AdventureWorks database."
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.reviewer: v-kaywon
 ms.date: "09/30/2019"
 ms.service: sql

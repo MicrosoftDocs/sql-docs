@@ -2,7 +2,7 @@
 title: "executeUpdate Method (java.lang.String) (SQLServerStatement)"
 description: "executeUpdate Method (java.lang.String) (SQLServerStatement)"
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: "01/19/2017"
 ms.service: sql
 ms.subservice: connectivity

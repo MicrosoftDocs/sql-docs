@@ -648,7 +648,7 @@
           href: database/connect-query-vscode.md
       - name: Connect and query from apps
         items:
-        - name: .NET with Active Directory MFA
+        - name: .NET with Microsoft Entra MFA
           href: database/active-directory-interactive-connect-azure-sql-db.md
         - name: Java
           href: database/connect-query-java.md

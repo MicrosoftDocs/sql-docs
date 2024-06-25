@@ -2,7 +2,7 @@
 title: "Mapping Replacement Functions for Compatibility of Apps - ODBC"
 description: "Mapping Replacement Functions for Backward Compatibility of Applications"
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: "01/19/2017"
 ms.service: sql
 ms.subservice: connectivity

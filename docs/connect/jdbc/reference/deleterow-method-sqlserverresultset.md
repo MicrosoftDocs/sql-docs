@@ -2,7 +2,7 @@
 title: "deleteRow Method (SQLServerResultSet)"
 description: "deleteRow Method (SQLServerResultSet)"
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: "01/20/2017"
 ms.service: sql
 ms.subservice: connectivity

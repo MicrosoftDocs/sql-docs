@@ -2,7 +2,7 @@
 title: "Get schema and schema collections"
 description: "Describes using GetSchema method to retrieve and restrict schema information from a database."
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.reviewer: v-chmalh
 ms.date: "11/26/2020"
 ms.service: sql

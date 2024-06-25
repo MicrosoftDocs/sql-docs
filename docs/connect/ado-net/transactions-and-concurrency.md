@@ -2,7 +2,7 @@
 title: "Transactions and concurrency"
 description: "Describes how to use Microsoft SqlClient Data Provider for SQL Server with transactions and concurrency."
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.reviewer: v-chmalh
 ms.date: "11/24/2020"
 ms.service: sql

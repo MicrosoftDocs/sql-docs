@@ -2,7 +2,7 @@
 title: "Schema restrictions"
 description: "Describes schema restrictions that can be used with GetSchema when using the Microsoft SqlClient Data Provider for SQL Server."
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.reviewer: v-chmalh
 ms.date: "11/26/2020"
 ms.service: sql

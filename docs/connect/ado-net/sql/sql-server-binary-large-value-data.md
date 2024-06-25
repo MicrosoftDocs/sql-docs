@@ -2,7 +2,7 @@
 title: "SQL Server binary and large-value data"
 description: "Describes how to work with large value data in SQL Server."
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.reviewer: v-kaywon
 ms.date: "08/15/2019"
 ms.service: sql

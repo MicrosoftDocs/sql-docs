@@ -2,7 +2,7 @@
 title: "Bulk Copy Changes for Enhanced Date and Time Types (OLE DB)"
 description: Learn about the date/time enhancements to support bulk copy functionality in OLE DB Driver for SQL Server.
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: "06/14/2018"
 ms.service: sql
 ms.subservice: connectivity

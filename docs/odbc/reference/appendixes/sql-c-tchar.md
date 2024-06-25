@@ -2,7 +2,7 @@
 title: "SQL_C_TCHAR"
 description: "SQL_C_TCHAR"
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: "01/19/2017"
 ms.service: sql
 ms.subservice: connectivity

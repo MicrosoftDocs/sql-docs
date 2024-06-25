@@ -2,7 +2,7 @@
 title: "How to: Send and Retrieve UTF-8 Data Using Built-In UTF-8 Support"
 description: "Learn how to send and retrieve UTF-8 encoded data using UTF-8 support built in to the drivers for PHP."
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: "03/23/2018"
 ms.service: sql
 ms.subservice: connectivity

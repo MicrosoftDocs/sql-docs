@@ -2,7 +2,7 @@
 title: Connecting and retrieving data
 description: Learn how to connect to a SQL database and retrieve data using the Microsoft JDBC Driver for SQL Server and these code samples.
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: 08/12/2019
 ms.service: sql
 ms.subservice: connectivity

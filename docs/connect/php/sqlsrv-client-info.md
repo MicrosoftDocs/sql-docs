@@ -2,7 +2,7 @@
 title: "sqlsrv_client_info"
 description: "API reference for the sqlsrv_client_info function in the Microsoft SQLSRV Driver for PHP for SQL Server."
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: "01/19/2017"
 ms.service: sql
 ms.subservice: connectivity

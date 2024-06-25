@@ -2,7 +2,7 @@
 title: "Fetch columns using IRow::GetColumns (OLE DB driver)"
 description: "Learn to fetch columns using the IRow::GetColumns method in OLE DB Driver for SQL Server. This example gets one column at a time from a row."
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: "06/14/2018"
 ms.service: sql
 ms.subservice: connectivity

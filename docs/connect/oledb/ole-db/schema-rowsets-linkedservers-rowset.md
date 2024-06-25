@@ -2,7 +2,7 @@
 title: "LINKEDSERVERS Rowset (OLE DB)"
 description: The LINKEDSERVERS rowset enumerates organization data sources that can participate in distributed queries in OLE DB Driver for SQL Server.
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: "06/12/2018"
 ms.service: sql
 ms.subservice: connectivity

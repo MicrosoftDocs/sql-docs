@@ -2,7 +2,7 @@
 title: "Event counters in SqlClient"
 description: Use Microsoft SqlClient Data Provider for SQL Server event counters to monitor your application status and its connection resources in .NET Core and .NET Standard.
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.reviewer: v-deshtehari
 ms.date: "05/31/2021"
 ms.service: sql

@@ -2,7 +2,7 @@
 title: Enabling query notifications
 description: Learn how to use query notifications, including the requirements for enabling and using them.
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.reviewer: v-kaywon
 ms.date: 04/20/2021
 ms.service: sql

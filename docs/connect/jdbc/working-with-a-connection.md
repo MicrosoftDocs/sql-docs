@@ -2,7 +2,7 @@
 title: "Working with a JDBC connection"
 description: "Examples of the different ways to connect to a SQL Server database by using the SQLServerConnection class of the Microsoft JDBC Driver for SQL Server."
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: "08/12/2019"
 ms.service: sql
 ms.subservice: connectivity

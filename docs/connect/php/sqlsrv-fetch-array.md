@@ -2,7 +2,7 @@
 title: "sqlsrv_fetch_array"
 description: "API reference for the sqlsrv_fetch_array function in the Driver for PHP for SQL Server."
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: "03/26/2018"
 ms.service: sql
 ms.subservice: connectivity

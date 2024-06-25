@@ -2,7 +2,7 @@
 title: High availability and disaster recovery on Linux and macOS
 description: Learn about how the Microsoft ODBC Driver for Linux and macOS supports Always On availability groups and failover clusters.
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: 05/06/2020
 ms.service: sql
 ms.subservice: connectivity

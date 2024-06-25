@@ -2,7 +2,7 @@
 title: "ISSAbort::Abort (OLE DB driver)"
 description: "Learn how the ISSAbort::Abort method cancels the current rowset and any batched commands associated with the current command in OLE DB Driver for SQL Server."
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: "06/14/2018"
 ms.service: sql
 ms.subservice: connectivity

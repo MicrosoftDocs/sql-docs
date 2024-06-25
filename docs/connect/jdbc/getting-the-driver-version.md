@@ -2,7 +2,7 @@
 title: Getting the driver version
 description: Learn how and where to find the version of the Microsoft JDBC Driver for SQL Server.
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: 05/03/2021
 ms.service: sql
 ms.subservice: connectivity

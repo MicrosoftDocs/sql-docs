@@ -2,7 +2,7 @@
 title: Building the connection URL
 description: Article about formatting the connection string used by the Microsoft JDBC Driver for SQL Server. Samples of connection strings are included in the examples section.
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: 08/09/2023
 ms.service: sql
 ms.subservice: connectivity

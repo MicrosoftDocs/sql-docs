@@ -2,7 +2,7 @@
 title: JDBC 4.2 compliance
 description: Read about how the JDBC Driver for SQL Server is compliant with the JDBC 4.2 specification.
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: 08/12/2019
 ms.service: sql
 ms.subservice: connectivity

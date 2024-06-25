@@ -2,7 +2,7 @@
 title: "Performing catalog operations"
 description: Describes how to execute commands that modify database schema.
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.reviewer: v-chmalh
 ms.date: "11/25/2020"
 ms.service: sql

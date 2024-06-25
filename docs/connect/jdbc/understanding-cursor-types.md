@@ -2,7 +2,7 @@
 title: Understanding cursor types
 description: Learn about the different cursor types you can use for your application queries and when to use them.
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: 03/22/2021
 ms.service: sql
 ms.subservice: connectivity

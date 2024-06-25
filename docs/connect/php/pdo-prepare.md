@@ -2,7 +2,7 @@
 title: "PDO::prepare"
 description: "API reference for the PDO::prepare function in the Microsoft PDO_SQLSRV Driver for PHP for SQL Server."
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.reviewer: randolphwest
 ms.date: 06/06/2024
 ms.service: sql

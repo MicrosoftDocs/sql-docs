@@ -42,7 +42,7 @@ Download [**SQL Server 2017 Reporting Services**](https://www.microsoft.com/down
 
 ## Prerequisites
 
-Review the [Hardware and software requirements for installing SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).
+Review the [Hardware and software requirements for installing SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md). Ensure that the computer where you're installing SSRS meets the appropriate hardware and software prerequisites for the version you want to install.
 
 ## Install your report server
 

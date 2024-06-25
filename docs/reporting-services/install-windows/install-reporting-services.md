@@ -48,7 +48,7 @@ Review the [Hardware and software requirements for installing SQL Server](../../
 
 Installing a report server is straightforward. There are only a few steps to install the files.
 
-1. Find the location of `SQLServerReportingServices.exe` and launch the installer.
+1. Locate `SQLServerReportingServices.exe` and launch the installer.
 
 1. Select **Install Reporting Services**.
 

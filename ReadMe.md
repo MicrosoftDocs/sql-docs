@@ -31,3 +31,4 @@ Explore the following resources:
 
 - [How to contribute to SQL Server Documentation](https://aka.ms/editsqldocs)
 - [SQL Server documentation home](https://learn.microsoft.com/sql/index)
+typt of docoments

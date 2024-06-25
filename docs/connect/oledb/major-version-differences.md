@@ -2,7 +2,7 @@
 title: "MSOLEDBSQL major version differences"
 description: A description of the differences between the OLE DB Driver 19 for SQL Server and the OLE DB Driver for SQL Server
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: "02/16/2022"
 ms.service: sql
 ms.subservice: connectivity

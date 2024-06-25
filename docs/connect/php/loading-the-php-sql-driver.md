@@ -2,7 +2,7 @@
 title: "Loading the Microsoft Drivers for PHP"
 description: "This page provides instructions for loading the Microsoft Drivers for PHP for SQL Server into the PHP process space."
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: 02/28/2023
 ms.service: sql
 ms.subservice: connectivity

@@ -2,7 +2,7 @@
 title: "SQL Server Login Dialog Box (ODBC)"
 description: "The SQL Server Login dialog may appear when an application makes an ODBC connection without specifying enough information to connect to the database."
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.reviewer: v-davidengel
 ms.date: "03/29/2024"
 ms.service: sql

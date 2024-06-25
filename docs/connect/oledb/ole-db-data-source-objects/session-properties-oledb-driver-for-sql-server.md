@@ -2,7 +2,7 @@
 title: "Session Properties - OLE DB Driver for SQL Server"
 description: Learn about how the OLE DB Driver for SQL Server interprets OLE DB session properties, including a provider-specific property set.
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: "06/14/2018"
 ms.service: sql
 ms.subservice: connectivity

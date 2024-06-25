@@ -2,7 +2,7 @@
 title: "Character Data and C Strings"
 description: "Character Data and C Strings"
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: "01/19/2017"
 ms.service: sql
 ms.subservice: connectivity

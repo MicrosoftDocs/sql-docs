@@ -2,7 +2,7 @@
 title: "Fetching rows (OLE DB driver)"
 description: Learn how consumers in OLE DB Driver for SQL Server use the IRowset interface to fetch rows, get data from rows, and manage rows.
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: "06/14/2018"
 ms.service: sql
 ms.subservice: connectivity

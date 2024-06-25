@@ -2,7 +2,7 @@
 title: "Converting Data from SQL to C Data Types"
 description: "Converting Data from SQL to C Data Types"
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: "01/19/2017"
 ms.service: sql
 ms.subservice: connectivity

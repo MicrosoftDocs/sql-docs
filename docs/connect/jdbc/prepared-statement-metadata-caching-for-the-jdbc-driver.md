@@ -2,7 +2,7 @@
 title: Prepared statement metadata caching
 description: Learn how the JDBC Driver for SQL Server caches prepared statements to improve performance by minimizing calls to the database and how you can control its behavior.
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: 08/08/2022
 ms.service: sql
 ms.subservice: connectivity

@@ -2,7 +2,7 @@
 title: Using the JDBC driver
 description: This section provides quick start instructions to make a simple connection to a SQL Server database using the Microsoft JDBC Driver for SQL Server.
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: 01/31/2024
 ms.service: sql
 ms.subservice: connectivity

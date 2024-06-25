@@ -2,7 +2,7 @@
 title: SqlClient troubleshooting guide
 description: Page that provides resolutions to commonly observed problems.
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: 03/06/2023
 ms.service: sql
 ms.subservice: connectivity

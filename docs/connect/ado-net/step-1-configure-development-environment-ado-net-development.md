@@ -2,7 +2,7 @@
 title: "Step 1: Configure development environment for ADO.NET development"
 description: "Describes how to configure the environment for ADO.NET development."
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.reviewer: v-kaywon
 ms.date: "08/15/2019"
 ms.service: sql

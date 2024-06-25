@@ -2,7 +2,7 @@
 title: "Considering Database Features to Use"
 description: "Considering Database Features to Use"
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: "01/19/2017"
 ms.service: sql
 ms.subservice: connectivity

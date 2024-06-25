@@ -2,7 +2,7 @@
 title: "Data Type Identifiers and Descriptors"
 description: "Data Type Identifiers and Descriptors"
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: "02/02/2019"
 ms.service: sql
 ms.subservice: connectivity

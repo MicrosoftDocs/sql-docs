@@ -2,7 +2,7 @@
 title: "SqlClient support for LocalDB"
 description: "Describes SqlClient support for LocalDB databases."
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.reviewer: v-kaywon
 ms.date: "08/28/2023"
 ms.service: sql

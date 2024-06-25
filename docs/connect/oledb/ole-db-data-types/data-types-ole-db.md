@@ -2,7 +2,7 @@
 title: "Data types (OLE DB driver)"
 description: Learn how OLE DB Driver for SQL Server maps SQL Server data types to OLE DB types for binding parameters/columns and creating tables using ITableDefinition.
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: "06/14/2018"
 ms.service: sql
 ms.subservice: connectivity

@@ -2,7 +2,7 @@
 title: "Hardware and Software Requirements (ODBC)"
 description: "Hardware and Software Requirements (ODBC)"
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: "01/19/2017"
 ms.service: sql
 ms.subservice: connectivity

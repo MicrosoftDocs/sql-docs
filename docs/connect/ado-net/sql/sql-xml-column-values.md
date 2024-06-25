@@ -2,7 +2,7 @@
 title: "SQL XML column values"
 description: "Demonstrates how to retrieve and work with XML data retrieved from SQL Server."
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.reviewer: v-kaywon
 ms.date: "08/15/2019"
 ms.service: sql

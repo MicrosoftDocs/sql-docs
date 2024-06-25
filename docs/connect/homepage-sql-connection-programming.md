@@ -2,7 +2,7 @@
 title: Homepage for SQL client programming
 description: Annotated links to downloads and documentation for different languages and operating systems, for connecting to SQL Server or to Azure SQL Database.
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.reviewer: v-daveng, randolphwest
 ms.date: 09/15/2022
 ms.service: sql

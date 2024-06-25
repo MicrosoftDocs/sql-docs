@@ -2,7 +2,7 @@
 title: "sqlsrv_get_field"
 description: "sqlsrv_get_field"
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: "06/26/2018"
 ms.service: sql
 ms.subservice: connectivity

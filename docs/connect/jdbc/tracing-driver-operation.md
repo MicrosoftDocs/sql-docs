@@ -2,7 +2,7 @@
 title: Tracing driver operation (logging)
 description: Learn how to use tracing to log details and resolve issues and problems when using the JDBC Driver for SQL Server.
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: 01/31/2024
 ms.service: sql
 ms.subservice: connectivity

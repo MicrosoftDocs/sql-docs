@@ -2,7 +2,7 @@
 title: Spatial data types sample
 description: This JDBC Driver for SQL Server sample application demonstrates how to create, insert, and retrieve Geometry and Geography spatial data types from the database.
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: 04/20/2021
 ms.service: sql
 ms.subservice: connectivity

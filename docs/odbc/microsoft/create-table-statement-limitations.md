@@ -2,7 +2,7 @@
 title: CREATE TABLE statement limitations
 description: CREATE TABLE statement limitations.
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.reviewer: randolphwest
 ms.date: 12/14/2023
 ms.service: sql

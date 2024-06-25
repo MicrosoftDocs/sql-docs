@@ -2,7 +2,7 @@
 title: "Transaction and bulk copy operations"
 description: "Describes how to perform a bulk copy operation within a transaction, including how to commit or rollback the transaction."
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.reviewer: v-kaywon
 ms.date: "08/15/2019"
 ms.service: sql

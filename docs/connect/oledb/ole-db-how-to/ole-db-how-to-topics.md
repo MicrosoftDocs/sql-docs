@@ -2,7 +2,7 @@
 title: How-to articles (OLE DB driver)
 description: Use these how-to articles to understand how the OLE DB Driver for SQL Server connects to a server, runs a command, and processes results.
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.reviewer: randolphwest
 ms.date: 10/02/2023
 ms.service: sql

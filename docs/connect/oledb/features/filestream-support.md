@@ -2,7 +2,7 @@
 title: FILESTREAM support in OLE DB Driver for SQL Server
 description: SQL Server supports the enhanced FILESTREAM feature, which lets you store and access large binary values, either through SQL Server or the file system.
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.reviewer: randolphwest
 ms.date: 10/02/2023
 ms.service: sql

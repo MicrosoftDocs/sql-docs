@@ -2,7 +2,7 @@
 title: "Read a FILESTREAM Column to File Using IBCPSession (OLE DB)"
 description: Learn how to read a FILESTREAM column to a file using the IBCPSession interface in OLE DB Driver for SQL Server and write a format file with this example.
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: "06/14/2018"
 ms.service: sql
 ms.subservice: connectivity

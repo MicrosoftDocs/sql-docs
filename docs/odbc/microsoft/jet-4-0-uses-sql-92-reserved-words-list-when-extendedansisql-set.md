@@ -2,7 +2,7 @@
 title: "Jet 4.0 Uses SQL-92 Reserved Words List when ExtendedAnsiSQL_Set"
 description: "Jet 4.0 Uses SQL-92 Reserved Words List when ExtendedAnsiSQL_Set"
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: "01/19/2017"
 ms.service: sql
 ms.subservice: connectivity

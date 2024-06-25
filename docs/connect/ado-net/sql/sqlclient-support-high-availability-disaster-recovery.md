@@ -2,7 +2,7 @@
 title: "SqlClient support for high availability, disaster recovery"
 description: "Describes SqlClient support for high-availability, disaster recovery (Always On) availability groups."
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.reviewer: v-kaywon
 ms.date: "08/15/2019"
 ms.service: sql

@@ -2,7 +2,7 @@
 title: "Notification of Asynchronous Function Completion"
 description: "Notification of Asynchronous Function Completion"
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: "01/19/2017"
 ms.service: sql
 ms.subservice: connectivity

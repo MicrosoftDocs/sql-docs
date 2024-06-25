@@ -2,7 +2,7 @@
 title: "Does Data Definition Statement Force Transaction Commit."
 description: "dataDefinitionCausesTransactionCommit Method (SQLServerDatabaseMetaData)"
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: "01/19/2017"
 ms.service: sql
 ms.subservice: connectivity

@@ -2,7 +2,7 @@
 title: "sqlsrv_num_fields"
 description: "sqlsrv_num_fields"
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: "03/23/2017"
 ms.service: sql
 ms.subservice: connectivity

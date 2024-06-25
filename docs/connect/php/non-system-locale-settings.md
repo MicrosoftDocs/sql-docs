@@ -2,7 +2,7 @@
 title: "Non-system locale settings"
 description: "Learn how different locale settings in Linux and macOS affect the Microsoft Drivers for PHP for SQL Server"
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: "08/10/2020"
 ms.service: sql
 ms.subservice: connectivity

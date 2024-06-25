@@ -2,7 +2,7 @@
 title: SqlClient driver support lifecycle
 description: Product support lifecycle information for the Microsoft.Data.SqlClient .NET library.
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: 02/28/2024
 ms.service: sql
 ms.subservice: connectivity

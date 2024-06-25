@@ -10405,8 +10405,6 @@ items:
           href: sql-server/azure-arc/manage-configuration.md
         - name: Licensing & billing
           href: sql-server/azure-arc/manage-license-billing.md
-        - name: Automate patching
-          href: sql-server/azure-arc/patch.md
         - name: Automate updates
           href: sql-server/azure-arc/update.md
         - name: Disconnect & unregister from Azure Arc

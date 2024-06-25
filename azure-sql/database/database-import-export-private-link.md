@@ -1,5 +1,5 @@
 ---
-title: Import or export an Azure SQL Database using Private link
+title: Import or export a database using Private link
 description: Import or export an Azure SQL Database using Private Link without requiring Azure services to access the server.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
@@ -14,9 +14,11 @@ ms.custom:
 ---
 # Import or export an Azure SQL Database using private link
 
-[!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
+[!INCLUDE [appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
-Running Import or Export via Azure PowerShell or Azure portal requires you to set [Allow Access to Azure Services](network-access-controls-overview.md) to ON, otherwise the Import or Export operation fails with an error. Often, users want to perform Import or Export using a private endpoint without requiring access to all Azure services. This article explains how to import or export an Azure SQL Database using [Private Link](private-endpoint-overview.md) and leave the *Allow Access to Azure Services* set to *OFF* on the Azure SQL [logical server](logical-servers.md).
+This article explains how to import or export an Azure SQL Database using [Private Link](private-endpoint-overview.md) by using the Azure portal or Azure PowerShell with *Allow Access to Azure Services* set to *OFF* on the Azure SQL [logical server](logical-servers.md).
+
+Running Import or Export requires you to set [Allow Access to Azure Services](network-access-controls-overview.md) to ON, otherwise the Import or Export operation fails with an error. Often, users want to perform Import or Export using a private endpoint without requiring access to all Azure services.
 
 > [!NOTE]  
 > Import/export using private link for Azure SQL Database is currently in preview.
@@ -84,7 +86,7 @@ Import/Export Private Link can be configured via Azure portal, PowerShell, or us
 
 ### Import a database using private link in PowerShell
 
-Use the [New-AzSqlDatabaseImport](/PowerShell/module/az.sql/new-azsqldatabaseimport) cmdlet to submit an import database request to Azure. Depending on database size, the import may take some time to complete. The DTU based provisioning model supports select database max size values for each tier. When importing a database [use one of these supported values](/sql/t-sql/statements/create-database-transact-sql).
+Use the [New-AzSqlDatabaseImport](/PowerShell/module/az.sql/new-azsqldatabaseimport) cmdlet to submit an import database request to Azure. Depending on database size, the import might take some time to complete. The DTU based provisioning model supports select database max size values for each tier. When importing a database [use one of these supported values](/sql/t-sql/statements/create-database-transact-sql).
 
 ```PowerShell
 $importRequest = New-AzSqlDatabaseImport -ResourceGroupName "<resourceGroupName>" `
@@ -102,7 +104,7 @@ $importRequest = New-AzSqlDatabaseImport -ResourceGroupName "<resourceGroupName>
 
 ### Export a database using private link in PowerShell
 
-Use the [New-AzSqlDatabaseExport](/PowerShell/module/az.sql/new-azsqldatabaseexport) cmdlet to submit an export database request to the Azure SQL Database service. Depending on the size of your database, the export operation may take some time to complete.
+Use the [New-AzSqlDatabaseExport](/PowerShell/module/az.sql/new-azsqldatabaseexport) cmdlet to submit an export database request to the Azure SQL Database service. Depending on the size of your database, the export operation might take some time to complete.
 
 ```PowerShell
 $importRequest = New-AzSqlDatabaseExport -ResourceGroupName "<resourceGroupName>" `
@@ -138,7 +140,7 @@ Currently, the private link for import/export has the following limitations:
 
 - Import using REST API with private link can only be completed for an existing database since the API uses database extensions. As a workaround, create an empty database with the desired name, then call the Import REST API with private link.
 
-## Next steps
+## Related content
 
 - [Import or Export Azure SQL Database without allowing Azure services to access the server](database-import-export-azure-services-off.md)
 - [Import a database from a BACPAC file](database-import.md)

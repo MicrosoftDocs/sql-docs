@@ -1,5 +1,5 @@
 ---
-title: Configure Azure SQL Managed Instance for Windows Authentication for Microsoft Entra ID
+title: Configure Windows Authentication with Microsoft Entra ID
 titleSuffix: Azure SQL Managed Instance
 description: Learn how to configure Azure SQL Managed Instance for Windows Authentication for Microsoft Entra ID.
 author: sravanisaluru
@@ -13,10 +13,9 @@ ms.topic: how-to
 ---
 
 # Configure Azure SQL Managed Instance for Windows Authentication for Microsoft Entra ID
+[!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
 
 This article describes how to configure a managed instance to support [Windows Authentication for principals](winauth-azuread-overview.md) in Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)). The steps to set up Azure SQL Managed Instance are the same for both the [incoming trust-based authentication flow](winauth-azuread-setup-incoming-trust-based-flow.md) and the [modern interactive authentication flow](winauth-azuread-setup-modern-interactive-flow.md). 
-
-[!INCLUDE [entra-id](../includes/entra-id.md)]
 
 ## Prerequisites
 
@@ -39,7 +38,7 @@ To enable Windows Authentication for Microsoft Entra principals, you need to ena
 To enable a system assigned service principal for a managed instance:
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
-1. Navigate to your managed instance
+1. Navigate to your managed instance.
 1. Select **Identity**.
 1. Set **System assigned service principal** to **On**.
     :::image type="content" source="media/winauth-azuread/azure-portal-managed-instance-identity-enable-system-assigned-service-principal.png" alt-text="Screenshot of the identity pane for a managed instance in the Azure portal, with 'System assigned service principal' set to 'On'."  lightbox="media/winauth-azuread/azure-portal-managed-instance-identity-enable-system-assigned-service-principal.png":::

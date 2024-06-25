@@ -2,7 +2,7 @@
 title: "Binding Parameters by Name (Named Parameters)"
 description: "Binding Parameters by Name (Named Parameters)"
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: "01/19/2017"
 ms.service: sql
 ms.subservice: connectivity

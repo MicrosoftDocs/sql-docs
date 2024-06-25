@@ -2,7 +2,7 @@
 title: "SQLGetCursorName Function"
 description: "SQLGetCursorName Function"
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: "06/12/2020"
 ms.service: sql
 ms.subservice: connectivity

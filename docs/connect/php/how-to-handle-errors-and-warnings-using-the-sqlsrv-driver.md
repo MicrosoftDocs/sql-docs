@@ -2,7 +2,7 @@
 title: "How to: Handle Errors and Warnings Using the SQLSRV Driver"
 description: "Learn how to handle errors and warnings when using the Microsoft SQLSRV Driver for PHP for SQL Server"
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: "08/10/2020"
 ms.service: sql
 ms.subservice: connectivity

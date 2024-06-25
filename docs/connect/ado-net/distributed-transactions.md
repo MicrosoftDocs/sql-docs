@@ -2,7 +2,7 @@
 title: "Distributed transactions"
 description: "Describes how to perform distributed transactions in ADO.NET"
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.reviewer: v-chmalh
 ms.date: "11/25/2020"
 ms.service: sql

@@ -2,7 +2,7 @@
 title: Data access tracing on Linux and macOS
 description: Learn how to enable tracing on Linux and macOS with the Microsoft ODBC Driver for SQL Server. You can output a log file when you're troubleshooting application behavior.
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: 09/01/2020
 ms.service: sql
 ms.subservice: connectivity

@@ -2,7 +2,7 @@
 title: Understanding timeouts
 description: Learn about the timeouts used by JDBC. LoginTimeout, queryTimeout, cancelQueryTimeout, and socketTimeout can be used to ensure application responsiveness.
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: 06/05/2023
 ms.service: sql
 ms.subservice: connectivity

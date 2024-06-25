@@ -2,7 +2,7 @@
 title: "ISQLServerErrorInfo::GetErrorInfo (OLE DB driver)"
 description: "Learn how the ISQLServerErrorInfo::GetErrorInfo method returns a pointer to an OLE DB Driver for SQL Server SSERRORINFO structure with SQL Server error details."
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: "06/14/2018"
 ms.service: sql
 ms.subservice: connectivity

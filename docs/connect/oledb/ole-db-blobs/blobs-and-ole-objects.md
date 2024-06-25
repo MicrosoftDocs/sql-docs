@@ -2,7 +2,7 @@
 title: "BLOBs and OLE Objects (OLE DB driver)"
 description: Learn how the ISequentialStream interface supports consumer access to SQL Server data types as binary large objects in OLE DB Driver for SQL Server.
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: "05/25/2020"
 ms.service: sql
 ms.subservice: connectivity

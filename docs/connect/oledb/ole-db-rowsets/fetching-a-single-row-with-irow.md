@@ -2,7 +2,7 @@
 title: "Fetch single row with IRow (OLE DB driver)"
 description: IRow allows direct access to columns of a single row object. The IRow interface in the OLE DB Driver for SQL Server is simplified to increase performance.
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: "06/14/2018"
 ms.service: sql
 ms.subservice: connectivity

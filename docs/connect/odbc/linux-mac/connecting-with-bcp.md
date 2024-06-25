@@ -2,7 +2,7 @@
 title: Connecting with bcp
 description: Learn the options and commands available in the bcp utility, available in the mssql-tools package on Linux and macOS.
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: 02/15/2022
 ms.service: sql
 ms.subservice: connectivity

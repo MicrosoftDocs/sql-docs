@@ -2,7 +2,7 @@
 title: "SQL Data Developer"
 description: "Use Microsoft's SQL data platform to create data-centric solutions across mobile devices and desktops for web servers, enterprise servers, and the cloud."
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: "08/05/2020"
 ms.service: sql
 ms.subservice: connectivity

@@ -2,7 +2,7 @@
 title: "Cursor Types (SQLSRV Driver)"
 description: "Learn how to use cursor types to create a result set that you can access in any order using the Microsoft Drivers for PHP for SQL Server."
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: "02/11/2019"
 ms.service: sql
 ms.subservice: connectivity

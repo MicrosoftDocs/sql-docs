@@ -2,7 +2,7 @@
 title: Connection URL sample
 description: This Microsoft JDBC Driver for SQL Server sample application demonstrates how to connect to a SQL Server database by using a connection URL.
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: 08/12/2019
 ms.service: sql
 ms.subservice: connectivity

@@ -2,7 +2,7 @@
 title: Validating user input
 description: Learn why validating user input is critical to securing your application from SQL injection attacks.
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: 03/31/2021
 ms.service: sql
 ms.subservice: connectivity

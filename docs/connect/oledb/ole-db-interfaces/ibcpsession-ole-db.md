@@ -2,7 +2,7 @@
 title: "IBCPSession (OLE DB driver)"
 description: Learn how OLE DB Driver for SQL Server uses IBCPSession to support SQL Server file-based bulk copy operations, and about its members.
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: "06/14/2018"
 ms.service: sql
 ms.subservice: connectivity

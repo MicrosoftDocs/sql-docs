@@ -2,7 +2,7 @@
 title: "Step 2: Create a SQL database for ADO.NET development"
 description: "Learn how to create a SQL database for ADO.NET development using Microsoft.Data.SqlClient."
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.reviewer: v-kaywon
 ms.date: "08/15/2019"
 ms.service: sql

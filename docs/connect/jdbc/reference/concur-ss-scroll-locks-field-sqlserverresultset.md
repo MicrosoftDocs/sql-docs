@@ -2,7 +2,7 @@
 title: "CONCUR_SS_SCROLL_LOCKS Field (SQLServerResultSet)"
 description: "CONCUR_SS_SCROLL_LOCKS Field (SQLServerResultSet)"
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: "01/19/2017"
 ms.service: sql
 ms.subservice: connectivity

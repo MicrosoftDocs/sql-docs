@@ -2,7 +2,7 @@
 title: JDBC driver API reference
 description: The technical API reference for the JDBC classes in the JDBC Driver for SQL Server.
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: 01/11/2022
 ms.service: sql
 ms.subservice: connectivity

@@ -117,7 +117,7 @@ Examples of the complete URL string are:
 
 If you're accessing the report server from a remote computer, you want to make sure you configured any firewall rules if there's a firewall present.
 
-You need to open up the TCP port that you configured for your Web Service URL and Web Portal URL. By default, these are configured on TCP port 80.
+You need to open up the TCP port that you configured for your Web Service URL and Web Portal URL. By default, these URLs are configured on TCP port 80.
 
 ## Other configuration
 

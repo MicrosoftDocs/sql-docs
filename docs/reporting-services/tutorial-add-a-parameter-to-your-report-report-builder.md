@@ -6,7 +6,7 @@ ms.author: maggies
 ms.date: 06/26/2024
 ms.service: reporting-services
 ms.subservice: reporting-services
-ms.topic: conceptual
+ms.topic: tutorial
 ms.custom: updatefrequency5
 
 #customer intent: As a developer, I want to add parameters to paginated reports with Report Builder in SSRS, so I can support multiple-value parameters, report data filters, and data visibility.
@@ -24,7 +24,7 @@ In this tutorial, you:
 
 > [!div class="checklist"]
 > * Create a paginated report with an embedded data source and query
-> * Use query parameters to create report parameters and configure the properties
+> * Use query parameters to create report parameters and configure properties
 > * Work with datasets to control the visible data for report parameters
 > * Define default values and custom values for parameters
 
@@ -143,7 +143,7 @@ Organize table data into groups on the **Arrange fields** page:
 
 In the current matrix design, the column headings display the store identifier but not the store name. Later, you add an expression to look up the store name in a dataset that contains store identifier/store name pairs.
 
-## Create query parameters, report parameters, and properties
+## Create query parameters, report parameters, and configure properties
 
 In the **Query Designer**, you can edit your query and add parameters. When you add a query parameter, **Report Builder** automatically creates a single-valued parameter to your report. Each parameter has several properties with default values, such as the name, prompt, and data type. You can configure these properties according to your report requirements.
 
@@ -192,7 +192,7 @@ Follow these steps to add a query parameter:
 
    The node now contains a report parameter named **StoreID**. When you select the parameter, the properties for the parameter display in the **Parameters** pane on the design surface. You can use this pane to format the layout of the report parameters.
 
-   :::image type="content" source="../reporting-services/media/ssrb-parameter-tutorial-parameter-pane.png" border="false" alt-text="Screenshot of the Parameters node in the Report Data pane and the Parameters pane on the design surface." lightbox="../reporting-services/media/ssrb-parameter-tutorial-parameter-pane-large.png":::
+   :::image type="content" source="../reporting-services/media/ssrb-parameter-tutorial-parameter-pane.png" border="false" alt-text="Screenshot of the Parameters node in the Report Data pane and the Parameters pane on the design surface.":::
 
    > [!TIP]
    > If the **Parameters** pane isn't visible, select **View** and then select the **Parameters** checkbox.
@@ -256,7 +256,7 @@ Follow these steps to create a dataset that lists valid values for a parameter:
 
    The **Report Data** pane adds the **Stores** dataset under the **Datasets** node with the **StoreID** and **StoreName** properties.
 
-### Specify available values to list
+### Specify list of available values
 
 After you have a dataset with available values, you can update the report properties to identify the dataset and property to populate the list of available values on the **Report Viewer** toolbar.
 

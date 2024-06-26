@@ -3,7 +3,7 @@ title: "Tutorial: Add parameters to your report (Report Builder)"
 description: Learn how to add parameters to a Reporting Services paginated report to support multiple-value parameters, report data filters, and data visibility.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 06/25/2024
+ms.date: 06/26/2024
 ms.service: reporting-services
 ms.subservice: reporting-services
 ms.topic: conceptual
@@ -338,7 +338,7 @@ Follow these steps to look up a value for a name from a dataset:
 
 1. Select **OK** to apply your changes.
 
-   The column header changes to a complex expression, **<<Expr>>**.
+   The column header changes to a complex expression, **\<\<Expr>>**.
 
 1. Select **Run** to preview the report.
 

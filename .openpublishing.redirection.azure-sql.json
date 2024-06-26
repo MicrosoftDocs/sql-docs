@@ -101,6 +101,16 @@
       "redirect_document_id": false
     },
     {
+      "source_path_from_root": "/azure-sql/database/high-availability-sla.md",
+      "redirect_url": "/azure/azure-sql/database/high-availability-sla-local-zone-redundancy",
+      "redirect_document_id": true
+    },
+    {
+      "source_path_from_root": "/azure-sql/managed-instance/high-availability-sla.md",
+      "redirect_url": "/azure/azure-sql/managed-instance/high-availability-sla-local-zone-redundancy",
+      "redirect_document_id": true
+    },
+    {
       "source_path_from_root": "/azure-sql/managed-instance/azure-app-sync-network-configuration.md",
       "redirect_url": "/azure/azure-sql/managed-instance/",
       "redirect_document_id": false

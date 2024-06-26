@@ -199,7 +199,7 @@ The following table covers these SLOs: `HS_S_Gen5_2`, `HS_S_Gen5_4`, `HS_S_Gen5_
 | Max concurrent logins | 150 | 300 | 450 | 600 | 750 | 900 | 1050 |
 | Max concurrent sessions | 30,000 | 30,000 | 30,000 | 30,000 | 30,000 | 30,000 | 30,000 |
 | Secondary replicas | 0-4 | 0-4 | 0-4 | 0-4 | 0-4 | 0-4 | 0-4 |
-| Multi-AZ | [Yes](high-availability-sla.md#hyperscale-service-tier) | [Yes](high-availability-sla.md#hyperscale-service-tier) | [Yes](high-availability-sla.md#hyperscale-service-tier) | [Yes](high-availability-sla.md#hyperscale-service-tier) | [Yes](high-availability-sla.md#hyperscale-service-tier) | [Yes](high-availability-sla.md#hyperscale-service-tier) | [Yes](high-availability-sla.md#hyperscale-service-tier) |
+| Multi-AZ | [Yes](high-availability-sla-local-zone-redundancy.md#hyperscale-service-tier) | [Yes](high-availability-sla-local-zone-redundancy.md#hyperscale-service-tier) | [Yes](high-availability-sla-local-zone-redundancy.md#hyperscale-service-tier) | [Yes](high-availability-sla-local-zone-redundancy.md#hyperscale-service-tier) | [Yes](high-availability-sla-local-zone-redundancy.md#hyperscale-service-tier) | [Yes](high-availability-sla-local-zone-redundancy.md#hyperscale-service-tier) | [Yes](high-availability-sla-local-zone-redundancy.md#hyperscale-service-tier) |
 | Read Scale-out | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
 | Backup storage retention | 7 days | 7 days | 7 days | 7 days | 7 days | 7 days | 7 days |
 
@@ -232,7 +232,7 @@ The following table covers these SLOs: `HS_S_Gen5_16`, `HS_S_Gen5_18`, `HS_S_Gen
 | Max concurrent logins | 1200 | 1350 | 1500 | 1800 | 2400 | 3000 | 6000 |
 | Max concurrent sessions | 30,000 | 30,000 | 30,000 | 30,000 | 30,000 | 30,000 | 30,000 |
 | Secondary replicas | 0-4 | 0-4 | 0-4 | 0-4 | 0-4 | 0-4 | 0-4 |
-| Multi-AZ | [Yes](high-availability-sla.md#hyperscale-service-tier) | [Yes](high-availability-sla.md#hyperscale-service-tier) | [Yes](high-availability-sla.md#hyperscale-service-tier) | [Yes](high-availability-sla.md#hyperscale-service-tier) | [Yes](high-availability-sla.md#hyperscale-service-tier) | [Yes](high-availability-sla.md#hyperscale-service-tier) | [Yes](high-availability-sla.md#hyperscale-service-tier) |
+| Multi-AZ | [Yes](high-availability-sla-local-zone-redundancy.md#hyperscale-service-tier) | [Yes](high-availability-sla-local-zone-redundancy.md#hyperscale-service-tier) | [Yes](high-availability-sla-local-zone-redundancy.md#hyperscale-service-tier) | [Yes](high-availability-sla-local-zone-redundancy.md#hyperscale-service-tier) | [Yes](high-availability-sla-local-zone-redundancy.md#hyperscale-service-tier) | [Yes](high-availability-sla-local-zone-redundancy.md#hyperscale-service-tier) | [Yes](high-availability-sla-local-zone-redundancy.md#hyperscale-service-tier) |
 | Read Scale-out | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
 | Backup storage retention | 7 days | 7 days | 7 days | 7 days | 7 days | 7 days | 7 days |
 

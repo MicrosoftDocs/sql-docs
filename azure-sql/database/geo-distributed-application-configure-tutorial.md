@@ -368,7 +368,7 @@ Review the [high availability and disaster recovery checklist](high-availability
 Related Azure SQL Database content: 
 
 - [Business continuity with](business-continuity-high-availability-disaster-recover-hadr-overview.md)
-- [High availability](high-availability-sla.md)
+- [High availability](high-availability-sla-local-zone-redundancy.md)
 - [Failover groups](failover-group-sql-db.md)
 - [Active geo-replication](active-geo-replication-overview.md)
 

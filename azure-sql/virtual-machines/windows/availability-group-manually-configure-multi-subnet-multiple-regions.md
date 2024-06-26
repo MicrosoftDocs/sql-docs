@@ -1,8 +1,8 @@
 ---
 title: "Tutorial: Configure a multi-subnet availability group across regions"
 description: "This tutorial explains how to configure a multi-subnet Always On availability group for SQL Server on Azure Virtual Machines with a replica in a different region from the primary replica."
-author: tarynpratt
-ms.author: tarynpratt
+author: AbdullahMSFT
+ms.author: amamun
 ms.reviewer: mathoma, randolphwest
 ms.date: 06/18/2024
 ms.service: virtual-machines-sql

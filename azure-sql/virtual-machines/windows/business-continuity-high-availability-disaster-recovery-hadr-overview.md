@@ -1,8 +1,8 @@
 ---
 title: High availability, disaster recovery, business continuity
 description: Learn about the high availability, disaster recovery (HADR), and business continuity options available for SQL Server on Azure VMs, such as Always On availability groups, failover cluster instance, database mirroring, log shipping, and back up and restore to Azure Storage.
-author: tarynpratt
-ms.author: tarynpratt
+author: AbdullahMSFT
+ms.author: amamun
 ms.reviewer: mathoma, randolphwest
 ms.date: 06/18/2024
 ms.service: virtual-machines-sql

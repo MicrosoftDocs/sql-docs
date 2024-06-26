@@ -1,8 +1,8 @@
 ---
 title: Configure a multi-subnet availability group (PowerShell & Az CLI)
 description: "Use either PowerShell or the Azure CLI to create the Windows failover cluster, and the availability group listener on a SQL Server VM in Azure."
-author: tarynpratt
-ms.author: tarynpratt
+author: AbdullahMSFT
+ms.author: amamun
 ms.reviewer: mathoma
 ms.date: 04/29/2024
 ms.service: virtual-machines-sql

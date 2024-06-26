@@ -1,8 +1,8 @@
 ---
 title: "Migrate SQL Server availability group from a single subnet to a multi-subnet"
 description: "Learn how to migrate a SQL Server Always On availability group from a single subnet to a multiple subnet (multi-subnet) environment)."
-author: tarynpratt
-ms.author: tarynpratt
+author: AbdullahMSFT
+ms.author: amamun
 ms.reviewer: mathoma, randolphwest
 ms.date: 06/18/2024
 ms.service: virtual-machines-sql

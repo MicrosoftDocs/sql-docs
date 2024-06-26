@@ -75,7 +75,7 @@ Installing SSRS is straightforward. There are only a few steps to install the fi
 
 After you select **Configure Report Server** in the installer, the **Report Server Configuration Manager** appears. For more information, see [Report Server Configuration Manager](reporting-services-configuration-manager-native-mode.md).
 
-To complete the Reporting Services installation, you need to create a report server database. Follow the instructions in the [Create a report server database](ssrs-report-server-create-a-report-server-database.md) article to complete the initial Reporting Services configuration process. 
+Follow the instructions to [Create a report server database](ssrs-report-server-create-a-report-server-database.md) to complete the initial Reporting Services configuration process. 
 
 ### Create a database on a different server
 

@@ -1,8 +1,8 @@
 ---
 title: Create an FCI with a premium file share
 description: "Use a premium file share (PFS) to create a failover cluster instance (FCI) with SQL Server on Azure virtual machines."
-author: tarynpratt
-ms.author: tarynpratt
+author: AbdullahMSFT
+ms.author: amamun
 ms.reviewer: mathoma, randolphwest
 ms.date: 10/02/2023
 ms.service: virtual-machines-sql

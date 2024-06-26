@@ -1,8 +1,8 @@
 ---
 title: Configure availability group (Azure quickstart template)
 description: "Use Azure quickstart templates to create the Windows Failover Cluster, join SQL Server VMs to the cluster, create the listener, and configure the internal load balancer in Azure."
-author: tarynpratt
-ms.author: tarynpratt
+author: AbdullahMSFT
+ms.author: amamun
 ms.reviewer: mathoma
 ms.date: 06/18/2024
 ms.service: virtual-machines-sql

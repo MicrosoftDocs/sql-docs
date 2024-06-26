@@ -96,7 +96,7 @@ Maintenance window for Hyperscale elastic pools is in preview and is available i
 
 Choosing a maintenance window for Azure SQL Database other than the default is currently available in the following regions, organized by purchasing model.
 
-The following table is for databases that are not [zone-redundant](high-availability-sla.md#zone-redundant-availability). For databases in an [Azure Availability Zone](high-availability-sla.md#zone-redundant-availability), see [the table for zone-redundant databases.](#ZR-maintenance-window-availability)
+The following table is for databases that are not [zone-redundant](high-availability-sla-local-zone-redundancy.md#zone-redundant-availability). For databases in an [Azure Availability Zone](high-availability-sla-local-zone-redundancy.md#zone-redundant-availability), see [the table for zone-redundant databases.](#ZR-maintenance-window-availability)
 
 | Azure Region | Hyperscale premium-series and premium-series memory optimized | Hyperscale standard-series | All other Azure SQL Database purchasing models and tiers |
 |:---|:---|:---|:---|
@@ -138,9 +138,9 @@ The following table is for databases that are not [zone-redundant](high-availabi
 
 <a id="ZR-maintenance-window-availability"></a>
 
-The following table is for [zone-redundant](high-availability-sla.md#zone-redundant-availability) databases.
+The following table is for [zone-redundant](high-availability-sla-local-zone-redundancy.md#zone-redundant-availability) databases.
 
-| Azure Region  | Hyperscale premium-series and premium-series memory optimized | Hyperscale standard-series | All other Azure SQL Database purchasing models and tiers in an [Azure Availability Zone](high-availability-sla.md#zone-redundant-availability) |
+| Azure Region  | Hyperscale premium-series and premium-series memory optimized | Hyperscale standard-series | All other Azure SQL Database purchasing models and tiers in an [Azure Availability Zone](high-availability-sla-local-zone-redundancy.md#zone-redundant-availability) |
 |:---|:---|:---|:---|
 | Australia East | Yes | Yes | Yes |
 | Canada Central  |  Yes | Yes | Yes |

@@ -10,27 +10,27 @@ ms.topic: install-set-up-deploy
 ms.custom:
   - intro-installation
   - updatefrequency5
-#customer intent: As a user, I want to install Microsoft Report Builder so that I have the necessary tools for report authoring.
+#customer intent: As a SQL Server user, I want to install Microsoft Report Builder so that I have the necessary tools for report authoring.
 ---
 # Install Microsoft Report Builder
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
 
-Microsoft Report Builder is an essential tool for people who need robust capabilities for creating detailed, customized paginated reports. 
+Microsoft Report Builder is an essential tool for people who create detailed, customized paginated reports. 
 
 For organizations with administrators, you can ask an administrator to install and configure Report Builder through the [Microsoft Endpoint Configuration Manager](#install-report-builder-with-microsoft-endpoint-configuration-manager). Administrators can manage permissions, download Report Builder from the web portal, and oversee folders and shared datasets saved to the report server.
 
 If you don't have an administrator and need to install Report Builder yourself, several methods are available:
 
-- [Microsoft Download Center](#download).
-- [A report server web portal](#install-report-builder-from-the-web-portal).
-- [A shared network folder](#install-report-builder-from-a-shared-network-folder).
-- [The command line](#install-report-builder-from-the-command-line).
+- [Microsoft Download Center](#download)
+- [A report server web portal](#install-report-builder-from-the-web-portal)
+- [A shared network folder](#install-report-builder-from-a-shared-network-folder)
+- [The command line](#install-report-builder-from-the-command-line)
 
 Whether you're setting up the software for your own use or deploying it across multiple machines, these methods ensure a smooth installation process.
 
 > [!NOTE]
-> Are you looking for *Power BI Report Builder* instead? Head to the [Microsoft Power BI Report Builder](https://www.microsoft.com/download/details.aspx?id=105942) page on the Download Center.
+> For information on *Power BI Report Builder* instead, see [Microsoft Power BI Report Builder](https://www.microsoft.com/download/details.aspx?id=105942) page on the Download Center.
 
 ## Prerequisites
   
@@ -41,10 +41,7 @@ Whether you're setting up the software for your own use or deploying it across m
 
 ## Install Report Builder with Microsoft Endpoint Configuration Manager
   
- Administrators can use Microsoft Endpoint Configuration Manager to push Report Builder to your computer. To learn how to use specific software to install Report Builder with Configuration Manager, see [Microsoft Endpoint Configuration Manager documentation](/configmgr/).  
-  
-> [!IMPORTANT]  
-> Windows Vista and Windows 7 security features require elevated permissions to run command line operations and prompt for permission to run the command line. The installation is not silent. To make the installation silent, you need to run the command line as an administrator.  
+ Administrators can use Microsoft Endpoint Configuration Manager to push Report Builder to your computer. To learn how to use specific software to install Report Builder with Configuration Manager, see [Microsoft Endpoint Configuration Manager documentation](/configmgr/).   
 
 ## Install Report Builder from the web portal
 
@@ -78,7 +75,7 @@ Whether you're setting up the software for your own use or deploying it across m
 1. On the **Default Target Server** page, you can provide the URL to the target report server if it's different from the default. Select **Next**.  
   
     > [!NOTE]  
-    >  If you'd like to work with Report Server when it's connected to a report server, it's convenient to provide the URL to the server at this time. You can also do this from the **Options** dialog in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
+    >  If you'd like to work with Report Builder when it's connected to a report server, provide the URL to the server at this time. You can also do this from the **Options** dialog in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
 1. Select **Install** to complete the installation.  
   
@@ -116,7 +113,7 @@ Whether you're setting up the software for your own use or deploying it across m
   
 ## Set Report Builder defaults  
 
-After you install Report Builder, you can set some default options. Open Report Builder and select **File** > **Options**.  
+After you install Report Builder, you can set default options. Open Report Builder and select **File** > **Options**.  
   
 Setting the default report server or SharePoint site is the most useful. For more information, see [Set default options for Report Builder](../../reporting-services/report-builder/set-default-options-for-report-builder.md).  
   

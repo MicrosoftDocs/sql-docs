@@ -18,17 +18,15 @@ You can add parameters to [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-
 
 The following image shows a paginated report with data filtered according to selected parameters:
 
-:::image type="content" source="../reporting-services/media/ssrb-parameter-tutorial-parameterized-report.png" border="false" alt-text="Screenshot that shows a paginated report with data filtered according to selected parameters." lightbox="../reporting-services/media/ssrb-parameter-tutorial-parameterized-report.png":::
+:::image type="content" source="../reporting-services/media/ssrb-parameter-tutorial-parameterized-report.png" border="false" alt-text="Screenshot that shows a paginated report with data filtered according to selected parameters." lightbox="../reporting-services/media/ssrb-parameter-tutorial-parameterized-report-large.png":::
 
 In this tutorial, you:
 
 > [!div class="checklist"]
-> * Follow wizard steps to create a paginated report
-> * Identify an embedded source for the report data
-> * Run a query to get the data values
-> * Organize and format the report data, and add totals
-> * Design and save the report
-> * Review the exported report in Microsoft Excel
+> * Create a paginated report with an embedded data source and query
+> * Use query parameters to create report parameters and configure the properties
+> * Work with datasets to control the visible data for report parameters
+> * Define default values and custom values for parameters
 
 The estimated time to complete this tutorial is 25 minutes. 
 
@@ -49,10 +47,6 @@ Follow these steps to create a paginated (matrix) report by using the **Table or
   
 1. Select the **New Report** tab, and select **Table or Matrix Wizard** on the right pane.
 
-### Specify data connection 
-
-Create an embedded data source for the data connection by following these steps:
-  
 1. On the **Choose a dataset** page, select the **Create a dataset** option, and then select **Next**. 
   
 1. On the **Choose a connection to a data source** page, select a data source. You can select a data source from the dropdown list, or browse to the report server and select a source. The data source must be of type **SQL Server**.
@@ -61,17 +55,7 @@ Create an embedded data source for the data connection by following these steps:
 
    You should see a popup message: "Connection created successfully." Select **OK** to clear the popup message.
 
-1. To complete the data source setup, select **OK**.
-
-1. To continue in the wizard, select **Next**.
-  
-### Create query
-
-In this tutorial, you create an embedded dataset by using a query that contains the data values. In a standard business environment, the query doesn't contain the data values.
-
-The following query combines the results of several [!INCLUDE[tsql_md](../includes/tsql-md.md)] SELECT statements inside a common table expression. The expression specifies values based on simplified sales data for cameras from the Contoso sample database. The subcategories are digital cameras, digital single lens reflex (SLR) cameras, camcorders, and accessories.
-
-Create a query with the report data values by following these steps: 
+1. To complete the data source setup, select **OK**, and then select **Next**.
   
 1. On the **Design a query** page, select **Edit As Text**.
   
@@ -95,6 +79,8 @@ Create a query with the report data values by following these steps:
    FROM CTE  
    ```  
 
+   This query combines the results of several [!INCLUDE[tsql_md](../includes/tsql-md.md)] SELECT statements inside a common table expression. The expression specifies values based on simplified sales data for cameras from the Contoso sample database. The subcategories are digital cameras, digital single lens reflex (SLR) cameras, camcorders, and accessories.
+
 1. On the **Query Designer** toolbar, select **Run** (**!**).
 
    The query runs and displays the result set for the fields StoreID, Subcategory, and Quantity.
@@ -105,7 +91,7 @@ Create a query with the report data values by following these steps:
   
 1. To continue in the wizard, select **Next**.
 
-### Organize data and choose layout
+### Format the report layout and add totals
 
 The wizard provides an initial design for displaying the data in the report. In the following procedure, you organize the Quantity sold values in rows grouped by Subcategory, with one column for each StoreID. The preview pane helps you visualize the result of grouping data before you complete the report design.
 
@@ -117,15 +103,9 @@ Organize table data into groups on the **Arrange fields** page:
 
 1. Drag the Quantity field to the **Values** box.
 
-   The Sum function automatically aggregates the Quantity data, which is the default aggregate for numeric fields. The value is [Sum(Quantity)]. 
+   The Sum function automatically aggregates the Quantity data, which is the default aggregate for numeric fields. The value is `[Sum(Quantity)]`. 
 
 1. To continue in the wizard, select **Next**.
-
-### Add and format totals rows
-
-After you create groups, you can add and format rows on which to display aggregate values for the fields. You can choose whether to show all the data or to allow the user to expand and collapse grouped data interactively.  
-  
-Follow these steps to add subtotals and totals for the table data:
   
 1. On the **Choose the layout** page, under **Options**, select the **Show subtotals and grand totals** option.  
 
@@ -202,7 +182,7 @@ Follow these steps to add a query parameter:
 
 1. In the **Parameter Value** box, enter _200_, and then select **OK**:
 
-   :::image type="content" source="../reporting-services/media/ssrb-parameter-tutorial-add-value.png" border="false" alt-text="Screenshot that shows how to add the parameter value in the Query Designer dialog.":::
+   :::image type="content" source="../reporting-services/media/ssrb-parameter-tutorial-add-value.png" alt-text="Screenshot that shows how to add the parameter value in the Query Designer dialog.":::
 
    The result set displays the quantities sold for Accessories, Camcorders, and Digital SLR Cameras for the store identifier **200**.
 
@@ -212,7 +192,7 @@ Follow these steps to add a query parameter:
 
    The node now contains a report parameter named **StoreID**. When you select the parameter, the properties for the parameter display in the **Parameters** pane on the design surface. You can use this pane to format the layout of the report parameters.
 
-   :::image type="content" source="../reporting-services/media/ssrb-parameter-tutorial-parameter-pane.png" border="false" alt-text="Screenshot of the Parameters node in the Report Data pane and the Parameters pane on the design surface.":::
+   :::image type="content" source="../reporting-services/media/ssrb-parameter-tutorial-parameter-pane.png" border="false" alt-text="Screenshot of the Parameters node in the Report Data pane and the Parameters pane on the design surface." lightbox="../reporting-services/media/ssrb-parameter-tutorial-parameter-pane-large.png":::
 
    > [!TIP]
    > If the **Parameters** pane isn't visible, select **View** and then select the **Parameters** checkbox.
@@ -259,7 +239,7 @@ Follow these steps to create a dataset that lists valid values for a parameter:
    
    1. Select the **Use a dataset embedded in my report** option.
    
-   1. Expand the **Data source** dropdown list, and select the [data source specified earlier](#specify-data-connection) in this tutorial.
+   1. Expand the **Data source** dropdown list, and select the [data source specified earlier](#create-report-with-table-or-matrix-wizard) in this tutorial.
 
    1. For the **Query type** property, verify that the **Text** option is selected.
 
@@ -356,7 +336,7 @@ Follow these steps to configure default values by using a dataset:
 
 1. In the **Report Data** pane, under the **Parameters** node, right-click the **StoreID** parameter, and then select **Parameter Properties**.
 
-1. In the **Report Parameter Properties** dialog, configure the following properties on the **Default Values*** tab:
+1. In the **Report Parameter Properties** dialog, configure the following properties on the **Default Values** tab:
 
    1. Select the **Get values from a query** option.
 
@@ -378,7 +358,7 @@ You can also provide a custom value to use as the default value for the paramete
 
 1. In the **Report Data** pane, under the **Parameters** node, right-click the **StoreID** parameter, and then select **Parameter Properties**.
 
-1. In the **Report Parameter Properties** dialog, configure the following properties on the **Default Values*** tab:
+1. In the **Report Parameter Properties** dialog, configure the following properties on the **Default Values** tab:
 
    1. Select the **Specify values** option, and then select **Add**. A new value row is added to the **Value** box. The default value in the dropdown list is **(Null)**.
 
@@ -417,9 +397,7 @@ Follow these steps to display the selected parameter value with a label on the p
 
 1. Update the text box to add a label for the parameter value:
 
-   1. Select in the text box until the insert cursor appears after the existing expression.
-   
-   1. Enter a space.
+   1. Select in the text box until the insert cursor appears after the existing expression, and then enter a space.
    
    1. Drag another copy of the **StoreID** parameter from the **Report Data** pane to the text box. The text box updates to display `[@StoreID] [@StoreID]`.
 
@@ -479,23 +457,23 @@ Follow these steps to change an existing single-value parameter to support multi
 
 1. On the **General** tab, select the **Allow multiple values** option, and select **OK**.
 
-After you update the parameter properties to support multiple values, you need to update the query to correctly process the values:
+Update the query to correctly process the values:
 
 1. In the **Report Data** pane, in the **Datasets** node, right-click the **DataSet1** dataset, and then select **Query**.
 
 1. In the **Query Designer** dialog, scroll to the bottom of the query in the top box.
    
-1. In the [!INCLUDE[tsql](../includes/tsql-md.md)] `WHERE` clause in the last line in the query, change the **equals** (=) symbol to **IN**:
+1. In the [!INCLUDE[tsql](../includes/tsql-md.md)] `WHERE` clause in the last line in the query, change the **equals** (`=`) symbol to `IN`:
 
    ```sql
    WHERE StoreID IN (@StoreID)
    ```  
 
-   The **IN** operator tests a value for inclusion in a set of values.
+   The `IN` operator tests a value for inclusion in a set of values.
 
 1. Select **OK** to apply the change.
 
-In addition to updating the query, you also need to update the parameter filter to correctly handle multiple values:
+Update the parameter filter to correctly handle multiple values:
 
 1. In the report matrix, right-click a column header, and then select **Tablix Properties**.
 
@@ -505,7 +483,7 @@ In addition to updating the query, you also need to update the parameter filter 
 
 1. Select **OK** to apply the change.
 
-Next, update the page footer to properly display the multi-value parameter data:
+Update the page footer to properly display the multi-value parameter data:
 
 1. In the page footer in the matrix, select the text box that displays the parameter.
 
@@ -523,7 +501,7 @@ Next, update the page footer to properly display the multi-value parameter data:
 
 1. Select **OK** to apply the change.
 
-   The text box in the page footer changes to a complex expression, **<<Expr>>**.
+   The text box in the page footer changes to a complex expression, **\<\<Expr>>**.
 
 1. In the page footer, select in the text box and use the handles to increase the width of the box.
 
@@ -578,7 +556,7 @@ Follow these steps to add a Boolean parameter to your report:
 
 1. Select **OK** to apply the property changes.
 
-After you create the Boolean parameter, you can control the visibility based on the parameter setting:
+Now you can control the visibility based on the parameter setting:
 
 1. In the page footer in the matrix, right-click the text box that displays the parameter, and select **Text Box Properties**.
 
@@ -596,7 +574,7 @@ After you create the Boolean parameter, you can control the visibility based on 
       =Not Parameters!ShowSelections.Value
       ```
 
-      The **Hidden** property controls the text box **Visibility** option. When the **Not** operator is present and the reader selects the parameter, the **Hidden** property is False, and the text box displays the parameter data.
+      The **Hidden** property controls the text box **Visibility** option. When the **Not** (`!`) operator is present and the reader selects the parameter, the **Hidden** property is False, and the text box displays the parameter data.
 
    1. Select **OK** to apply the expression.
 

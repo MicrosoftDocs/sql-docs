@@ -149,7 +149,7 @@ Follow these steps to add subtotals and totals for the table data:
 
    1. On the design surface, select in your matrix to display the row and column _handles_. The handles appear as gray bars along the edges of the table.  
    
-   1. Point to the line between the Subcategory and StoredID columns to display the double arrow cursor. :::image type="icon" source="../reporting-services/media/ssrs-tutorial-double-arrow.png":::
+   1. Point to the line between the Subcategory and StoredID columns to display the double arrow cursor. :::image type="icon" source="../reporting-services/media/double-arrow-icon.png":::
 
    1. Select and drag the line to increase the width for the Subcategory column:
 

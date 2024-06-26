@@ -44,9 +44,9 @@ Download [**SQL Server 2017 Reporting Services**](https://www.microsoft.com/down
 
 Review the [Hardware and software requirements for installing SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md). Ensure that the computer where you're installing SSRS meets the appropriate hardware and software prerequisites for the version you want to install.
 
-## Install your report server
+## Install SSRS
 
-Installing a report server is straightforward. There are only a few steps to install the files.
+Installing SSRS is straightforward. There are only a few steps to install the files.
 
 1. Locate `SQLServerReportingServices.exe` and launch the installer.
 
@@ -62,14 +62,14 @@ Installing a report server is straightforward. There are only a few steps to ins
 
 1. Accept the license terms and conditions, and then select **Next**.
 
-1. Select **Next** to install the report server.
+1. Select **Next** to install SSRS.
 
 1. Specify the install location for the report server. Select **Install** to continue.
 
     > [!NOTE]
     > The default path is `C:\Program Files\Microsoft SQL Server Reporting Services`.
 
-1. After a successful installation, select **Configure Report Server** to launch the Report Server Configuration Manager.
+1. After a successful installation, select **Configure report server** to launch the Report Server Configuration Manager.
 
 ## Configure your report server
 

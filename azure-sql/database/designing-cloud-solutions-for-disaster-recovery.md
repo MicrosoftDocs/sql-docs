@@ -22,7 +22,7 @@ keywords:
 When building and deploying cloud services with Azure SQL Database, you use [active geo-replication](active-geo-replication-overview.md) or [failover groups](failover-group-sql-db.md) to provide resilience to regional outages and catastrophic failures. The same feature allows you to create globally distributed applications optimized for local access to the data. This article discusses common application patterns, including the benefits and trade-offs of each option.
 
 > [!NOTE]
-> If you are using Premium or Business Critical databases and elastic pools, you can make them resilient to regional outages by converting them to zone redundant deployment configuration. See [Zone-redundant databases](high-availability-sla.md).  
+> If you are using Premium or Business Critical databases and elastic pools, you can make them resilient to regional outages by converting them to zone redundant deployment configuration. See [Zone-redundant databases](high-availability-sla-local-zone-redundancy.md).  
 
 ## Scenario 1: Using two Azure regions for business continuity with minimal downtime
 

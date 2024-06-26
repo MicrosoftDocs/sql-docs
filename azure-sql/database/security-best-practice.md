@@ -792,15 +792,15 @@ Today, Azure SQL Database and SQL Managed Instance offers the following techniqu
 
 Most security standards address data availability in terms of operational continuity, achieved by implementing redundancy and fail-over capabilities to avoid single points of failure. For disaster scenarios, it's a common practice to keep backups of Data and Log files. The following section provides a high-level overview of the capabilities that are built-into Azure. It also provides additional options that can be configured to meet specific needs:
 
-- Azure offers built-in high-availability: [High-availability with SQL Database and SQL Managed Instance](high-availability-sla.md)
+- Azure offers built-in high-availability: [High-availability with SQL Database and SQL Managed Instance](high-availability-sla-local-zone-redundancy.md)
 
 - The Business Critical tier includes failover groups, full and differential log backups, and point-in-time-restore backups enabled by default:
   - [Automated backups](automated-backups-overview.md)
   - [Recover a database using automated database backups - Point-in-time restore](recovery-using-backups.md#point-in-time-restore)
 
 - Additional business continuity features such as the zone redundant configuration and failover groups across different Azure geos can be configured:  
-  - [High-availability - Zone redundant configuration for Premium & Business Critical service tiers](high-availability-sla.md#zone-redundant-availability)
-  - [High-availability - Zone redundant configuration for General Purpose service tier](high-availability-sla.md#zone-redundant-availability)
+  - [High-availability - Zone redundant configuration for Premium & Business Critical service tiers](high-availability-sla-local-zone-redundancy.md#zone-redundant-availability)
+  - [High-availability - Zone redundant configuration for General Purpose service tier](high-availability-sla-local-zone-redundancy.md#zone-redundant-availability)
   - [Overview of business continuity](business-continuity-high-availability-disaster-recover-hadr-overview.md)
 
 ## Next steps

@@ -43,7 +43,7 @@ Azure SQL Managed Instance comes with a core resiliency and reliability promise 
 
 ### High Availability
 
-To achieve high availability in the Azure cloud environment, enable [zone redundancy](high-availability-sla.md#zone-redundant-availability) so the instance uses [availability zones](/azure/reliability/availability-zones-overview) to ensure resilience to zonal failures. Many Azure regions provide availability zones, which are separated groups of data centers within a region that have independent power, cooling, and networking infrastructure. Availability zones are designed to provide regional services, capacity, and high availability in the remaining zones if one zone experiences an outage. By enabling zone redundancy, the instance is resilient to zonal hardware and software failures and the recovery is transparent to applications. When high availability is enabled, the Azure SQL Managed Instance service is able to provide a higher availability SLA of 99.995%. 
+To achieve high availability in the Azure cloud environment, enable [zone redundancy](high-availability-sla-local-zone-redundancy.md#zone-redundant-availability) so the instance uses [availability zones](/azure/reliability/availability-zones-overview) to ensure resilience to zonal failures. Many Azure regions provide availability zones, which are separated groups of data centers within a region that have independent power, cooling, and networking infrastructure. Availability zones are designed to provide regional services, capacity, and high availability in the remaining zones if one zone experiences an outage. By enabling zone redundancy, the instance is resilient to zonal hardware and software failures and the recovery is transparent to applications. When high availability is enabled, the Azure SQL Managed Instance service is able to provide a higher availability SLA of 99.99%. 
 
 ### Disaster recovery
 
@@ -58,9 +58,9 @@ For an instance, there are four major potential disruption scenarios. The follow
 
 | Business disruption scenario | Business continuity feature |
 |:--|:--|
-| Local hardware or software failures affecting the database node. | To mitigate local hardware and software failures, SQL Managed Instance includes an [availability architecture](high-availability-sla.md), which guarantees automatic recovery from these failures with up to 99.99% availability SLA. |
+| Local hardware or software failures affecting the database node. | To mitigate local hardware and software failures, SQL Managed Instance includes an [availability architecture](high-availability-sla-local-zone-redundancy.md), which guarantees automatic recovery from these failures with up to 99.99% availability SLA. |
 | Data corruption or deletion typically caused by an application bug or human error. Such failures are application-specific and typically can't be detected by the service. | To protect your business from data loss, SQL Managed Instance automatically creates full database backups weekly, differential database backups every 12 or 24 hours, and transaction log backups every 5 - 10 minutes. By default, backups are stored in [geo-redundant storage](automated-backups-overview.md#backup-storage-redundancy) for seven days, and support a configurable backup retention period for [point-in-time restore](recovery-using-backups.md#point-in-time-restore) of up to 35 days. You can [restore a deleted database](recovery-using-backups.md#deleted-database-restore) to the point at which it was deleted if the instance hasn't been deleted, or if you've configured [long-term retention](../database/long-term-retention-overview.md). |
-| Rare datacenter or availability zone outage, possibly caused by a natural disaster event, configuration change, software bug or hardware component failure. | To mitigate datacenter or availability zone level outage, enable [zone redundancy](high-availability-sla.md#zone-redundant-availability) for the SQL Managed Instance to use [Azure Availability Zones](/azure/reliability/availability-zones-overview) and provide redundancy across multiple physical zones within an Azure region. Enabling zone redundancy ensures the managed instance is resilient to zonal failures with up to 99.995% high availability SLA. |
+| Rare datacenter or availability zone outage, possibly caused by a natural disaster event, configuration change, software bug or hardware component failure. | To mitigate datacenter or availability zone level outage, enable [zone redundancy](high-availability-sla-local-zone-redundancy.md#zone-redundant-availability) for the SQL Managed Instance to use [Azure Availability Zones](/azure/reliability/availability-zones-overview) and provide redundancy across multiple physical zones within an Azure region. Enabling zone redundancy ensures the managed instance is resilient to zonal failures with up to 99.99% high availability SLA. |
 | Rare region outage impacting all availability zones and the datacenters comprising it, possibly caused by catastrophic natural disaster event. | To mitigate a region-wide outage, enable disaster recovery using one of the options: <br /> - Continuous data synchronization with [failover groups](failover-group-sql-mi.md) to replicas in a secondary region used for failover. <br /> - Setting backup storage redundancy to geo-redundant backup storage to use [geo-restore](recovery-using-backups.md#geo-restore).  | 
 
 ## RTO and RPO
@@ -75,6 +75,12 @@ The following table compares RPO and RTO of each business continuity option:
 | Disaster Recovery </br>(Enabling failover groups) | 1 hour| 5 seconds </br> (Depends on data changes before the disruptive event that haven't been replicated) |
 | Disaster Recovery </br>(Using geo-restore) | 12 hours | 1 hour|
 
+## Business continuity checklists
+
+For prescriptive recommendations to maximize availability and achieve higher business continuity, refer to the: 
+- [Availability checklist](high-availability-disaster-recovery-checklist.md#availability-checklist)
+- [High availability checklist](high-availability-disaster-recovery-checklist.md#high-availability-checklist)
+- [Disaster recovery checklist](high-availability-disaster-recovery-checklist.md#disaster-recovery-checklist)
 
 ## Recover a database within the same Azure region
 
@@ -161,4 +167,4 @@ The following diagram demonstrates the benefit for each scenario:
 
 ## Next steps
 
-To learn more about business continuity features, see [Automated backups](automated-backups-overview.md), and [failover groups](failover-group-sql-mi.md#terminology-and-capabilities). In the event of a disaster, see [recover a database](recovery-using-backups.md). 
+To learn more about business continuity features, see [Automated backups](automated-backups-overview.md), and [failover groups](failover-group-sql-mi.md#terminology-and-capabilities). For disaster recovery, see [recover a database](recovery-using-backups.md) and [enable zone redundancy](instance-zone-redundancy-configure.md) for Azure SQL Managed Instance. 

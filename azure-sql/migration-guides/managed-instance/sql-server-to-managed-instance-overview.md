@@ -145,7 +145,7 @@ Alternatively, you can consider migrating your on-premises Analysis Services tab
 
 ### High availability
 
-The SQL Server high-availability features Always On failover cluster instances and Always On availability groups become obsolete on the target SQL managed instance. High-availability architecture is already built into both [General Purpose (standard availability model)](../../database/high-availability-sla.md#locally-redundant-availability) and [Business Critical (premium availability model)](../../database/high-availability-sla.md#locally-redundant-availability) service tiers for SQL Managed Instance. The premium availability model also provides read scale-out that allows connecting into one of the secondary nodes for read-only purposes.     
+The SQL Server high-availability features Always On failover cluster instances and Always On availability groups become obsolete on the target SQL managed instance. High-availability architecture is already built into both [General Purpose (standard availability model)](../../database/high-availability-sla-local-zone-redundancy.md#locally-redundant-availability) and [Business Critical (premium availability model)](../../database/high-availability-sla-local-zone-redundancy.md#locally-redundant-availability) service tiers for SQL Managed Instance. The premium availability model also provides read scale-out that allows connecting into one of the secondary nodes for read-only purposes.     
 
 Beyond the high-availability architecture that's included in SQL Managed Instance, the [failover groups](../../managed-instance/failover-group-sql-mi.md) feature allows you to manage the replication and failover of databases in a managed instance to another region. 
 
@@ -203,7 +203,7 @@ To learn more about in-memory technologies, see [Optimize performance by using i
 
 ## Advanced features
 
-Be sure to take advantage of the advanced cloud-based features in SQL Managed Instance. For example, you don't need to worry about managing backups because the service does it for you. You can restore to any [point in time within the retention period](../../database/recovery-using-backups.md#point-in-time-restore). Additionally, you don't need to worry about setting up high availability, because [high availability is built in](../../database/high-availability-sla.md). 
+Be sure to take advantage of the advanced cloud-based features in SQL Managed Instance. For example, you don't need to worry about managing backups because the service does it for you. You can restore to any [point in time within the retention period](../../database/recovery-using-backups.md#point-in-time-restore). Additionally, you don't need to worry about setting up high availability, because [high availability is built in](../../database/high-availability-sla-local-zone-redundancy.md). 
 
 To strengthen security, consider using [Microsoft Entra authentication](../../database/authentication-aad-overview.md), [auditing](../../managed-instance/auditing-configure.md), [threat detection](../../database/azure-defender-for-sql.md), [row-level security](/sql/relational-databases/security/row-level-security), and [dynamic data masking](/sql/relational-databases/security/dynamic-data-masking).
 

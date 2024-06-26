@@ -28,7 +28,7 @@ To get started using the feature, review [Configure a failover group for Azure S
 
 The failover groups feature allows you to manage the replication and failover of user databases in a managed instance to a managed instance in another Azure region. Failover groups are designed to simplify deployment and management of geo-replicated databases at scale.
 
-For more information, see [High availability for Azure SQL Managed Instance](high-availability-sla.md). For geo-failover RPO and RTO, see [overview of business continuity](business-continuity-high-availability-disaster-recover-hadr-overview.md#rto-and-rpo).
+For more information, see [High availability for Azure SQL Managed Instance](high-availability-sla-local-zone-redundancy.md). For geo-failover RPO and RTO, see [overview of business continuity](business-continuity-high-availability-disaster-recover-hadr-overview.md#rto-and-rpo).
 
 [!INCLUDE [failover-groups-overview](../includes/failover-group-overview.md)]
 

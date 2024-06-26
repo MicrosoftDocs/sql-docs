@@ -3,7 +3,7 @@ title: "Tutorial: Create a basic table report (Report Builder)"
 description: Create a basic table report from sample sales data by using the SSRS Report Builder, and organize, format, save, and export your report.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 06/20/2024
+ms.date: 06/26/2024
 ms.service: reporting-services
 ms.subservice: reporting-services
 ms.topic: tutorial
@@ -70,7 +70,7 @@ Create an embedded data source for the data connection:
   
    1. For the **Select a connection type** property, confirm **Microsoft SQL Server** is selected.  
   
-   1. For the **Connection string** property, enter the following value, where `\<servername>` is the name of an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:  
+   1. For the **Connection string** property, enter the following value, where `<servername>` is the name of an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:  
   
       ```sql
       Data Source=<servername>  
@@ -190,8 +190,8 @@ Follow these steps to add subtotals and totals for the table data:
    1. Clear the **Expand/collapse groups** option.
    
       In this tutorial, the report you create doesn't use the drilldown feature that lets users expand a parent group hierarchy and display child group rows and detail rows. 
-  
-1. Review the table layout in the **Preview** pane. You should see five rows that demonstrate the table layout when you run the report:
+
+1. Select **Next** to check the table in the **Preview** pane. You should see five rows that demonstrate the table layout when you run the report:
 
    - The first row repeats once for the table to show the column headings.
 
@@ -203,7 +203,7 @@ Follow these steps to add subtotals and totals for the table data:
 
    - The fifth row repeats once for the table to show the grand totals.
   
-1. Select **Next** to preview the table, and then select **Finish**.  
+1. Select **Finish**.  
   
    **Report Builder** adds your table to the design surface. The table has five columns and five rows. The **Row Groups** pane shows three row groups: SalesDate, Subcategory, and Details. Detail data is all the data that the dataset query retrieves.  
 
@@ -321,16 +321,16 @@ Follow these steps to change the width of the table columns:
   
 1. On the **Run** tab, select **Design** to return to design view.  
   
-1. On the design surface, select your table to display the row and column _handles_. The handles appear as gray bars along the edges of the table.  
+1. On the design surface, select in your table to display the row and column _handles_. The handles appear as gray bars along the edges of the table.  
 
    :::image type="content" source="../reporting-services/media/ssrs-tutorial-display-handles.png" border="false" alt-text="Screenshot that shows the row and column handles for a table on the design surface in Report Builder.":::
 
-1. Use the handles to increase the table width.
+1. Hold and drag the handles to increase the table width.
 
    > [!TIP]
    > You can expand the width of the design surface to increase the visible area for working on your table. When the table is wider than the design surface, you need to use scroll bars to view the full table.
 
-1. Point to the line between the Subcategory and Product columns to display the double arrow cursor. :::image type="icon" source="../reporting-services/media/ssrs-tutorial-double-arrow.png":::
+1. Point to the line between the Subcategory and Product columns to display the double arrow cursor. :::image type="icon" source="../reporting-services/media/double-arrow-icon.png":::
 
 1. Select and drag the line to increase the width for the Product column. Increase the width so product names in the column display on a single line in the rendered report.
   

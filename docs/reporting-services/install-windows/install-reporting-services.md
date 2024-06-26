@@ -75,7 +75,7 @@ Installing a report server is straightforward. There are only a few steps to ins
 
 After you select **Configure Report Server** in the installer, the **Report Server Configuration Manager** appears. For more information, see [Report Server Configuration Manager](reporting-services-configuration-manager-native-mode.md).
 
-To complete the Reporting Services installation, you need to [create a report server database](ssrs-report-server-create-a-report-server-database.md) to complete the initial configuration of Reporting Services. A SQL Server Database server is required to complete this step.
+To complete the Reporting Services installation, you need to create a report server database. Follow the instructions in the [Create a report server database](ssrs-report-server-create-a-report-server-database.md) article to complete the initial Reporting Services configuration process. 
 
 ### Create a database on a different server
 
@@ -89,7 +89,7 @@ To address this issue, you can change the service account to either Network Serv
 
 For more information, see [Configure the report server service account](configure-the-report-server-service-account-ssrs-configuration-manager.md).
 
-## Windows Service
+## Windows service
 
 The installation creates a Windows service as a part of the process. The service displays as **SQL Server Reporting Services**. The service name is **SQLServerReportingServices**.
 
@@ -112,15 +112,15 @@ Examples of the complete URL string are:
 
 ## Firewall
 
-If you're accessing the report server from a remote computer, you want to make sure you configured any firewall rules if there's a firewall present.
+If you're accessing the report server from a remote computer, make sure you configured any firewall rules if there's a firewall present.
 
-You need to open up the TCP port that you configured for your Web Service URL and Web Portal URL. By default, these URLs are configured on TCP port 80.
+Open up the TCP port that you configured for your web service URL and web portal URL. By default, these URLs are configured on TCP port 80.
 
-## Other configuration
+## Configure other features
 
-You might need to configure other features for better report access and usability. You can configure integration with the Power BI service so you can pin report items to a Power BI dashboard. For more information, see [Integrate with the Power BI service](power-bi-report-server-integration-configuration-manager.md).
+You might need to configure other features for better report access and usability. You can configure integration with the Power BI service so you can pin report items to a Power BI dashboard. For more information, see [Power BI Report Server Integration (Configuration Manager)](power-bi-report-server-integration-configuration-manager.md).
 
-To configure email for subscriptions processing, see [E-Mail settings](e-mail-settings-reporting-services-native-mode-configuration-manager.md) and [E-Mail delivery in a report server](../subscriptions/e-mail-delivery-in-reporting-services.md).
+To configure email for subscriptions processing, see [Email settings in SSRS native mode](e-mail-settings-reporting-services-native-mode-configuration-manager.md) and [Email delivery in Reporting Services](../subscriptions/e-mail-delivery-in-reporting-services.md).
 
 You can also set up the web portal so you can access and manage reports from a remote computer. For more information, see [Configure a firewall for report server access](../report-server/configure-a-firewall-for-report-server-access.md) and [Configure a report server for remote administration](../report-server/configure-a-report-server-for-remote-administration.md).
 
@@ -128,9 +128,9 @@ You can also set up the web portal so you can access and manage reports from a r
 
 - For information on how to install SQL Server Reporting Services native mode, see [Install Reporting Services native mode report server](install-reporting-services-native-mode-report-server.md). 
 
-- With your report server installed, begin to create reports and deploy the reports to your report server. For information on how to start with Report Builder, see [Install Report Builder](../../reporting-services/install-windows/install-report-builder.md).
+- With your report server installed, begin to create reports and deploy the reports to your report server. For information on how to start with Report Builder, see [Install Microsoft Report Builder](../../reporting-services/install-windows/install-report-builder.md).
 
-- To create reports using SQL Server Data Tools, [download SQL Server Data Tools](../../ssdt/download-sql-server-data-tools-ssdt.md).
+- For information on how to create reports using SQL Server Data Tools, [download SQL Server Data Tools](../../ssdt/download-sql-server-data-tools-ssdt.md).
 
 ::: moniker range="=sql-server-2016"
 

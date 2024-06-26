@@ -34,7 +34,7 @@ We recommended you use an account that:
 
 - Is a `Standard general-purpose v2` account.
 - Has its redundancy type matching the redundancy of the Azure SQL database, elastic pool, or managed instance where event sessions are created.
-  - For [locally redundant](high-availability-sla.md#locally-redundant-availability) Azure SQL resources, use LRS, GRS, or RA-GRS. For [zone-redundant](high-availability-sla.md#zone-redundant-availability) Azure SQL resources, use ZRS, GZRS, or RA-GZRS. For more information, see [Azure Storage redundancy](/azure/storage/common/storage-redundancy).
+  - For [locally redundant](high-availability-sla-local-zone-redundancy.md#locally-redundant-availability) Azure SQL resources, use LRS, GRS, or RA-GRS. For [zone-redundant](high-availability-sla-local-zone-redundancy.md#zone-redundant-availability) Azure SQL resources, use ZRS, GZRS, or RA-GZRS. For more information, see [Azure Storage redundancy](/azure/storage/common/storage-redundancy).
 - Uses the `Hot` [blob access tier](/azure/storage/blobs/access-tiers-overview).
 - Is in the same Azure region as the Azure SQL database, elastic pool, or managed instance.
 

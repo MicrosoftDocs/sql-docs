@@ -526,7 +526,7 @@
       - name: Overview
         href: database/business-continuity-high-availability-disaster-recover-hadr-overview.md
       - name: High availability
-        href: database/high-availability-sla.md
+        href: database/high-availability-sla-local-zone-redundancy.md
       - name: HA/DR checklist
         href: database/high-availability-disaster-recovery-checklist.md
       - name: Automated backups
@@ -1198,7 +1198,7 @@
       - name: Overview
         href: managed-instance/business-continuity-high-availability-disaster-recover-hadr-overview.md
       - name: High availability
-        href: managed-instance/high-availability-sla.md
+        href: managed-instance/high-availability-sla-local-zone-redundancy.md
       - name: Automated backups
         href: managed-instance/automated-backups-overview.md 
       - name: Backup transparency
@@ -1535,31 +1535,47 @@
         href: managed-instance/managed-instance-link-configure-how-to-ssms.md
       - name: Configure link with scripts
         href: managed-instance/managed-instance-link-configure-how-to-scripts.md
+      - name: Fail over a Link
+        href: managed-instance/managed-instance-link-failover-how-to.md
+      - name: Migrate with the link 
+        href: managed-instance/managed-instance-link-migrate.md
       - name: Disaster recovery
         href: managed-instance/managed-instance-link-disaster-recovery.md
       - name: Best practices
         href: managed-instance/managed-instance-link-best-practices.md
 
-    - name: Configure business continuity 
+    - name: Manage business continuity 
       items: 
-      - name: Change backup settings
-        href: managed-instance/automated-backups-change-settings.md
-      - name: Recover using backups
-        href: managed-instance/recovery-using-backups.md
-      - name: Restore to a point in time
-        href: managed-instance/point-in-time-restore.md
-      - name: Restore database to SQL Server
-        href: managed-instance/restore-database-to-sql-server.md
-      - name: Monitor backup
-        href: managed-instance/backup-activity-monitor.md
-      - name: Manually initiate a failover
-        href: managed-instance/user-initiated-failover.md
-      - name: Failover groups
+      - name: Backup & restore
         items: 
-        - name: Create failover group
-          href: managed-instance/failover-group-configure-sql-mi.md
-        - name: Configure standby replica
-          href: managed-instance/failover-group-standby-replica-how-to-configure.md        
+        - name: Change backup settings
+          href: managed-instance/automated-backups-change-settings.md
+        - name: Recover using backups
+          href: managed-instance/recovery-using-backups.md
+        - name: Restore to a point in time
+          href: managed-instance/point-in-time-restore.md
+        - name: Restore database to SQL Server
+          href: managed-instance/restore-database-to-sql-server.md
+        - name: Monitor backups
+          href: managed-instance/backup-activity-monitor.md
+      - name: High availability & disaster recovery
+        items: 
+        - name: HA/DR checklist
+          href: managed-instance/high-availability-disaster-recovery-checklist.md
+        - name: Configure zone redundancy
+          href: managed-instance/instance-zone-redundancy-configure.md
+        - name: Manually initiate a failover
+          href: managed-instance/user-initiated-failover.md
+        - name: Disaster recovery guidance
+          href: managed-instance/disaster-recovery-guidance.md
+        - name: Disaster recovery drills
+          href: managed-instance/disaster-recovery-drills.md
+        - name: Failover groups
+          items: 
+          - name: Create failover group
+            href: managed-instance/failover-group-configure-sql-mi.md
+          - name: Configure standby replica
+            href: managed-instance/failover-group-standby-replica-how-to-configure.md
   - name: Samples
     items:
     - name: Azure CLI

@@ -123,7 +123,7 @@ landingContent:
           - text: Business continuity 
             url: business-continuity-high-availability-disaster-recover-hadr-overview.md
           - text: High availability
-            url: high-availability-sla.md
+            url: high-availability-sla-local-zone-redundancy.md
           - text: Active-geo replication
             url: active-geo-replication-overview.md 
           - text: Failover groups

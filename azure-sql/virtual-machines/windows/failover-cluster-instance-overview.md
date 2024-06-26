@@ -4,7 +4,7 @@ description: "Learn about failover cluster instances (FCIs) with SQL Server on A
 author: AbdullahMSFT
 ms.author: amamun
 ms.reviewer: randolphwest, mathoma
-ms.date: 06/18/2024
+ms.date: 08/05/2024
 ms.service: virtual-machines-sql
 ms.subservice: hadr
 ms.topic: overview
@@ -40,17 +40,17 @@ To learn more, see [Quorum best practices with SQL Server VMs in Azure](hadr-clu
 
 ## Storage
 
-In traditional on-premises clustered environments, a Windows failover cluster uses a storage area network (SAN) that's accessible by both nodes as the shared storage. SQL Server files are hosted on the shared storage, and only the active node can access the files at one time.
+In traditional on-premises clustered environments, a Windows failover cluster uses a storage area network (SAN) that's accessible by all nodes as the shared storage. SQL Server files are hosted on the shared storage, and only the active node can access the files at one time.
 
 SQL Server on Azure VMs offers various options as a shared storage solution for a deployment of SQL Server failover cluster instances:
 
-| | [Azure shared disks](/azure/virtual-machines/disks-shared) | [Premium file shares](/azure/storage/files/storage-how-to-create-file-share) | [Storage Spaces Direct (S2D)](/windows-server/storage/storage-spaces/storage-spaces-direct-overview) |
-| --- | --- | --- | --- |
-| **Minimum OS version** | All | Windows Server 2012 | Windows Server 2016 |
-| **Minimum SQL Server version** | All | SQL Server 2012 | SQL Server 2016 |
-| **Supported VM availability** | [Premium SSD LRS](/azure/virtual-machines/disks-redundancy#locally-redundant-storage-for-managed-disks): Availability Sets with or without [proximity placement group](/azure/virtual-machines/windows/proximity-placement-groups-portal)<br />[Premium SSD ZRS](/azure/virtual-machines/disks-redundancy#zone-redundant-storage-for-managed-disks): Availability Zones<br />[Ultra disks](/azure/virtual-machines/disks-enable-ultra-ssd): Same availability zone | Availability sets and availability zones | Availability sets |
-| **Supports FileStream** | Yes | No | Yes |
-| **Azure blob cache** | No | No | Yes |
+| | [Azure shared disks](/azure/virtual-machines/disks-shared) | [Premium file shares](/azure/storage/files/storage-how-to-create-file-share) | [Storage Spaces Direct (S2D)](/windows-server/storage/storage-spaces/storage-spaces-direct-overview) | [Azure Elastic SAN](/azure/storage/elastic-san/elastic-san-introduction) | 
+| --- | --- | --- | --- | --- |
+| **Minimum OS version** | All | Windows Server 2012 | Windows Server 2016 | Windows Server 2022 |
+| **Minimum SQL Server version** | All | SQL Server 2012 | SQL Server 2016 |SQL Server 2022 | 
+| **Supported VM availability** | [Premium SSD LRS](/azure/virtual-machines/disks-redundancy#locally-redundant-storage-for-managed-disks): Availability Sets with or without [proximity placement group](/azure/virtual-machines/windows/proximity-placement-groups-portal)<br />[Premium SSD ZRS](/azure/virtual-machines/disks-redundancy#zone-redundant-storage-for-managed-disks): Availability zones<br />[Ultra disks](/azure/virtual-machines/disks-enable-ultra-ssd): Same availability zone | Availability sets and availability zones | Availability sets | Availability zones |
+| **Supports FileStream** | Yes | No | Yes | No | 
+| **Azure blob cache** | No | No | Yes | No | 
 
 The rest of this section lists the benefits and limitations of each storage option available for SQL Server on Azure VMs.
 
@@ -69,7 +69,7 @@ The rest of this section lists the benefits and limitations of each storage opti
 - Can use a single shared disk or stripe multiple shared disks to create a shared storage pool.
 - Supports FILESTREAM.
 - Premium SSDs support availability sets.
-- Premium SSDs Zone Redundant Storage (ZRS) supports Availability Zones. VMs part of FCI can be placed in different availability zones.
+- Premium SSDs Zone Redundant Storage (ZRS) supports availability zones. VMs part of FCI can be placed in different availability zones.
 
 > [!NOTE]  
 > While Azure shared disks also support [Standard SSD sizes](/azure/virtual-machines/disks-shared#disk-sizes), we do not recommend using Standard SSDs for SQL Server workloads due to the performance limitations.
@@ -109,7 +109,7 @@ To get started, see [SQL Server failover cluster instance with Storage Spaces Di
 
 [Premium file shares](/azure/storage/files/storage-how-to-create-file-share) are a feature of [Azure Files](/azure/storage/files/index). Premium file shares are SSD backed and have consistently low latency. They're fully supported for use with failover cluster instances for SQL Server 2012 or later on Windows Server 2012 or later. Premium file shares give you greater flexibility, because you can resize and scale a file share without any downtime.
 
-**Supported OS**: Windows Server 2012 and later  
+**Supported OS**: Windows Server 2012 and later   
 **Supported SQL version**: SQL Server 2012 and later
 
 **Benefits:**
@@ -124,6 +124,32 @@ To get started, see [SQL Server failover cluster instance with Storage Spaces Di
 - FileStream isn't supported.
 
 To get started, see [SQL Server failover cluster instance with Premium file share](failover-cluster-instance-premium-file-share-manually-configure.md).
+
+### Azure Elastic SAN
+
+[Azure Elastic SAN](/azure/storage/elastic-san/elastic-san-introduction) is a network-attached storage offering that provides customers a flexible and scalable solution with the potential to reduce cost through storage consolidation. Azure Elastic SAN delivers a cost-effective, performant, and reliable block storage solution that connects to a variety of Azure compute services over the iSCSI protocol. Elastic SAN enables a seamless transition from an existing SAN storage estate to the cloud without having to refactor application architecture. 
+
+> [!NOTE]
+> Configuring your failover cluster instance with an Azure Elastic SAN is currently in preview for SQL Server on Azure VMs. 
+
+**Supported OS**: Windows Server 2019 and later   
+**Supported SQL version**: SQL Server 2022 and later
+
+**Benefits:**
+
+- Elastic SAN isn't limited by VM disk throughput limits, which means you can save on cost by achieving a desired throughput with smaller VMs. 
+- Storage consolidation and dynamic performance sharing - it's possible to save on cost by consolidating low to mid-tier performant workloads with SQL Server workloads since the storage pool is provisioned at the SAN level and performance is shared across workloads. 
+- Supports SCSI Persistent Reservations (SCSI PR), which means you can migrate clustered applications to Azure as is.
+- Can use a single shared volume, or stripe multiple shared volumes to create a shared storage pool. 
+- Elastic SAN zone-redundant storage supports availability zones. VMs part of a failover cluster instance can be placed in different availability zones.
+
+
+**Limitations:**
+
+- Cloud witness isn't currently supported.
+- Doesn't support submillisecond latency workloads. 
+- Filestream isn't supported.
+
 
 ### Partner
 
@@ -153,7 +179,7 @@ If you deploy your SQL Server VMs to a single subnet, you can configure a virtua
 
 The distributed network name is recommended, if possible, as failover is faster, and the overhead and cost of managing the load balancer is eliminated.
 
-Most SQL Server features work transparently with FCIs when using the DNN, but there are certain features that may require special consideration. For more information, see [FCI and DNN interoperability](failover-cluster-instance-dnn-interoperability.md).
+Most SQL Server features work transparently with FCIs when using the DNN, but there are certain features that might require special consideration. For more information, see [FCI and DNN interoperability](failover-cluster-instance-dnn-interoperability.md).
 
 > [!NOTE]
 > If you have multiple AGs or FCIs on the same cluster and you use either a DNN or VNN listener, then each AG or FCI needs its own independent connection point.
@@ -179,9 +205,6 @@ On Azure Virtual Machines, MSDTC isn't supported for Windows Server 2016 or earl
 - The clustered MSDTC resource can't be configured to use shared storage. On Windows Server 2016, if you create an MSDTC resource, it doesn't show any shared storage available for use, even if storage is available. This issue has been fixed in Windows Server 2019.
 - The basic load balancer doesn't handle RPC ports.
 
-### Azure Elastic SAN
-
-[Azure Elastic SAN](performance-guidelines-best-practices-storage.md#azure-elastic-san) is not currently supported on Windows Server Failover Cluster so SQL Server failover cluster instances (FCIs) are unsupported. 
 
 ## Related content
 

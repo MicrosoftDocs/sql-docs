@@ -1,6 +1,6 @@
 ---
-title: "Report Server Configuration Manager (Native Mode)"
-description: "Report Server Configuration Manager (Native Mode)"
+title: "What is Report Server Configuration Manager (Native Mode)?"
+description: "Learn how to use the Report Server Configuration Manager to configure a SQL Server Reporting Services (SSRS) Native mode installation."
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 06/27/2024
@@ -13,15 +13,16 @@ helpviewer_keywords:
   - "configuration options [Reporting Services]"
   - "report servers [Reporting Services], configuring"
   - "components [Reporting Services], Reporting Services Configuration tool"
+#customer intent: As a SQL Server user, I want use Report Server Configuration Manager so that I can .
 ---
 
-# Report Server Configuration Manager (Native Mode)
+# What is Report Server Configuration Manager (Native Mode)?
 
 [!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
 
 [!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
 
-Use the Report Server Configuration Manager to configure a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Native Mode installation perform the following tasks:  
+Use the Report Server Configuration Manager to configure a SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (SSRS) Native mode installation perform the following tasks:  
   
 - **Configure the Report Server service account**: The account is initially configured during setup. Modify the account by by using the Report Server Configuration Manager if you update the password or want to use a different account.  
   
@@ -29,17 +30,17 @@ Use the Report Server Configuration Manager to configure a [!INCLUDE[ssRSnoversi
   
 - **Create and configure the report server database**: The report server is a stateless server that requires a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database for internal storage. Use the Report Server Configuration Manager to create and configure a connection to the report server database. You can select an existing report server database that already contains the content you want to use.  
   
-- Configure a Native mode scale-out deployment. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] supports a deployment topology that allows multiple report server instances use a single, shared report server database. To deploy a report server scale-out deployment, you use the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager to connect each report server to the shared report server database.  
+- **Configure a Native mode scale-out deployment**: [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] supports a deployment topology that allows multiple report server instances use a single, shared report server database. To deploy a report server scale-out deployment, you use the Report Server Configuration Manager to connect each report server to the shared report server database.  
   
-- Backup, restore, or replace the symmetric key that is used to encrypt stored connection strings and credentials. You must have a backup of the symmetric key if you change the service account, or move a report server database to another computer.  
+- **Backup, restore, or replace the symmetric key**: A symmetric key is used to encrypt stored connection strings and credentials. You must have a backup of the symmetric key if you change the service account, or move a report server database to another computer.  
   
-- Configure the unattended execution account. This account is used for remote connections during scheduled operations or when user credentials are not available.  
+- **Configure the unattended execution account**. This account is used for remote connections during scheduled operations or when user credentials are not available.  
   
-- Configure report server e-mail. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] includes a report server e-mail delivery extension that uses a Simple Mail Transfer Protocol (SMTP) to deliver reports or report processing notification to an electronic mailbox. You can use the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager to specify which SMTP server or gateway on your network to use for e-mail delivery.  
+- **Configure report server email**: [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] includes a report server email delivery extension that uses a Simple Mail Transfer Protocol (SMTP) to deliver reports or report processing notification to an electronic mailbox. Use the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager to specify which SMTP server or gateway on your network to use for email delivery.  
   
- The [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager does not help you manage report server content, enable additional features, or grant access to the server. Full deployment requires that you also use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] to enable additional features or modify default values, and the web portal to grant user access to the server.
+  Full deployment requires that you also use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] to enable additional features or modify default values. These features include managing report server content and enabling additional features. You can also use the web portal to grant access to the server.
 
-##  <a name="bkmk_requirements"></a> Requirements
+##  <a name="bkmk_requirements"></a> Prerequisites
 
 The [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager is version-specific. The [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager that installs with this version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cannot be used to configure an earlier version of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. If you are running older and newer versions of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] side-by-side on the same computer, you must use the Reporting Service Configuration manager that comes with each version to configure each instance.  
 

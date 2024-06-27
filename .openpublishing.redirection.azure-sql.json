@@ -721,6 +721,81 @@
       "redirect_document_id": false
     },
     {
+      "source_path_from_root": "/azure-sql/migration-guides/managed-instance/sql-server-to-managed-instance-guide.md",
+      "redirect_url": "/data-migration/sql-server/managed-instance/guide",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/azure-sql/migration-guides/managed-instance/sql-server-to-managed-instance-overview.md",
+      "redirect_url": "/data-migration/sql-server/managed-instance/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/azure-sql/migration-guides/managed-instance/sql-server-to-sql-managed-instance-assessment-rules.md",
+      "redirect_url": "/data-migration/sql-server/managed-instance/assessment-rules",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/azure-sql/migration-guides/managed-instance/sql-server-to-managed-instance-performance-baseline.md",
+      "redirect_url": "/data-migration/sql-server/managed-instance/performance-baseline",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/azure-sql/migration-guides/database/sql-server-to-sql-database-guide.md",
+      "redirect_url": "/data-migration/sql-server/database/guide",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/azure-sql/migration-guides/database/sql-server-to-sql-database-overview.md",
+      "redirect_url": "/data-migration/sql-server/database/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/azure-sql/migration-guides/database/sql-server-to-sql-database-assessment-rules.md",
+      "redirect_url": "/data-migration/sql-server/database/assessment-rules",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/azure-sql/migration-guides/virtual-machines/sql-server-to-sql-on-azure-vm-individual-databases-guide.md",
+      "redirect_url": "/data-migration/sql-server/virtual-machines/guide",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/azure-sql/migration-guides/virtual-machines/sql-server-to-sql-on-azure-vm-migration-overview.md",
+      "redirect_url": "/data-migration/sql-server/virtual-machines/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/azure-sql/migration-guides/virtual-machines/sql-server-availability-group-to-sql-on-azure-vm.md",
+      "redirect_url": "/data-migration/sql-server/virtual-machines/availability-group-migrate",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/azure-sql/migration-guides/virtual-machines/sql-server-distributed-availability-group-complete-migration.md",
+      "redirect_url": "/data-migration/sql-server/virtual-machines/distributed-availability-group-migrate-complete",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/azure-sql/migration-guides/virtual-machines/sql-server-distributed-availability-group-migrate-ag.md",
+      "redirect_url": "/data-migration/sql-server/virtual-machines/distributed-availability-group-migrate-availability-group",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/azure-sql/migration-guides/virtual-machines/sql-server-distributed-availability-group-migrate-prerequisites.md",
+      "redirect_url": "/data-migration/sql-server/virtual-machines/distributed-availability-group-prerequisites",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/azure-sql/migration-guides/virtual-machines/sql-server-distributed-availability-group-migrate-standalone-instance.md",
+      "redirect_url": "/data-migration/sql-server/virtual-machines/distributed-availability-group-migrate-standalone-instance",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/azure-sql/migration-guides/virtual-machines/sql-server-failover-cluster-instance-to-sql-on-azure-vm.md",
+      "redirect_url": "/data-migration/sql-server/virtual-machines/failover-cluster-instance-migrate",
+      "redirect_document_id": false
+    },
+    {
       "source_path_from_root": "/azure-sql/managed-instance/virtual-cluster-delete.md",
       "redirect_url": "/azure/azure-sql/managed-instance/virtual-cluster-architecture",
       "redirect_document_id": false

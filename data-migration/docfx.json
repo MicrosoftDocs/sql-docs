@@ -4,19 +4,16 @@
       {
         "files": [
           "**/*.md",
-          "**/*.yml"
+          "**/*.yml",
+          "breadcrumb/toc.yml"
         ],
         "exclude": [
-          "**/obj/**",
           "**/includes/**",
-          "_themes/**",
-          "_themes.pdf/**",
-          "**/docfx.json",
-          "_repo.en-us/**",
+          "**/mref/**",
+          "**/obj/**",
           "README.md",
           "LICENSE",
-          "LICENSE-CODE",
-          "ThirdPartyNotices.md"
+          "LICENSE-CODE"
         ]
       }
     ],
@@ -29,12 +26,7 @@
           "**/*.svg"
         ],
         "exclude": [
-          "**/obj/**",
-          "**/includes/**",
-          "_themes/**",
-          "_themes.pdf/**",
-          "**/docfx.json",
-          "_repo.en-us/**"
+          "**/obj/**"
         ]
       }
     ],

@@ -276,7 +276,7 @@ To configure [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on RHEL 
    Optionally, if you want to run [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] as a confined application, install the `mssql-server-selinux` package, which enables custom policies.
 
    ```bash
-   sudo yum install -y mssql-server
+   sudo yum install -y mssql-server-selinux
    ```
 
 1. After the package installation finishes, run `mssql-conf setup` using its full path, and follow the prompts to set the SA password and choose your edition. As a reminder, the following [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] editions are freely licensed: Evaluation, Developer, and Express.

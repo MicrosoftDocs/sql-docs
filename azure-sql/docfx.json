@@ -75,6 +75,8 @@
     },
     "fileMetadata": {
       "layout": {
+          "**/toc.md": null,
+          "**/toc.yml": null,
           "**/*.md": "Conceptual",
           "**/*.yml": "Conceptual" 
       },

@@ -52,7 +52,7 @@ The **Windows** authentication metadata mode helps modernize authentication for 
 
 ### Windows authentication for Microsoft Entra principals
 
-As long as the environment is synchronized between AD and Microsoft Entra ID, the **Windows** authentication metadata mode can be used to authenticate users to SQL Managed Instance using a Windows login or Microsoft Entra login, provided that the login is created from a Windows principal (`CREATE LOGIN FROM WINDOWS`).
+As long as the environment is synchronized between AD and Microsoft Entra ID, the **Windows** authentication metadata mode can be used to authenticate users to SQL Managed Instance using a Windows login or Microsoft Entra login, if that the login is created from a Windows principal (`CREATE LOGIN FROM WINDOWS`).
 
 This feature is especially useful for customers who have applications that use Windows authentication and are migrating to Azure SQL Managed Instance. The **Windows** authentication metadata mode allows customers to continue using Windows authentication for their applications without having to make any changes to the application code. For example, applications like BizTalk server, which runs `CREATE LOGIN FROM WINDOWS` and `CREATE USER FROM WINDOWS` commands, can continue to work without any changes when migrating to Azure SQL Managed Instance. Other users can use a Microsoft Entra login that is synced to AD to authenticate to SQL Managed Instance.
 
@@ -93,7 +93,7 @@ For synchronized users, the authentication fails or works based on the following
 
 ### Example scenarios
 
-Previously, customers who had synchronized users between AD and Microsoft Entra ID would not be able to authenticate with a login created from a Windows principal, whether they used Windows authentication or Microsoft Entra authentication that was synced from AD. With the **Windows** authentication cache mode, customers can now authenticate with a login created from a Windows principal using Windows authentication or the synchronized Microsoft Entra principal. Here are some detailed examples that shows the outcome of the authentication process based on the authentication cache mode and the login type:
+Previously, customers who had synchronized users between AD and Microsoft Entra ID wouldn't be able to authenticate with a login created from a Windows principal, whether they used Windows authentication or Microsoft Entra authentication that was synced from AD. With the **Windows** authentication cache mode, customers can now authenticate with a login created from a Windows principal using Windows authentication or the synchronized Microsoft Entra principal. Here are some detailed examples that show the outcome of the authentication process based on the authentication cache mode and the login type:
 
 - **Scenario 1**: A customer has a Windows login that is synchronized between AD and Microsoft Entra ID. The authentication cache mode is set to **Windows**. The customer can connect using Windows authentication and Microsoft Entra authentication.
 

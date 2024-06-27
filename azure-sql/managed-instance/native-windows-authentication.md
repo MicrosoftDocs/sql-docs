@@ -16,11 +16,11 @@ ms.topic: conceptual
 
 The following **Authentication Cache Modes** are available for Azure SQL Managed Instance:
 
-- **Windows** (New Mode): This mode allows authentication using existing Windows users within MI.
-- **Microsoft Entra ID** (SQL MI Default): The default mode for authentication using Microsoft Entra IDs.
-- **Paired** (SQL Server Default): The default mode for SQL Server authentication.
+- **Windows** (New Mode): This mode allows authentication using existing Windows users within SQL Managed Instance.
+- **Microsoft Entra ID** (SQL Managed Instance default): This mode allows authentication using Microsoft Entra principals using Windows user metadata.
+- **Paired** (SQL Server default): The default mode for SQL Server authentication.
 
-The **Windows** authentication cache mode is a new mode that allows users to use Windows authentication (using a Windows principal) with Azure SQL Managed Instance. This mode is available for Azure SQL Managed Instance only. The **Windows** mode isn't available for Azure SQL Database.
+The **Windows** authentication cache mode is a new mode that allows users to use Windows authentication (using a Windows principal) with Azure SQL Managed Instance. This mode is available for Azure SQL Managed Instance only. The **Windows** authentication cache mode isn't available for Azure SQL Database.
 
 The syntax `CREATE LOGIN FROM WINDOWS` and `CREATE USER FROM WINDOWS` can be used to create a login or user in SQL Managed Instance, respectively for a Windows principal in the **Windows** authentication cache mode. The Windows principal can be a Windows user or a Windows group.
 

@@ -48,7 +48,6 @@
       "feedback_system": "Standard",
       "feedback_github_repo": "MicrosoftDocs/azure-docs",
       "feedback_product_url": "https://aka.ms/sqlfeedback",
-      "layout": "Conceptual",
       "uhfHeaderId": "Azure",
       "contributors_to_exclude": [
         "hexiaokai",
@@ -75,6 +74,10 @@
       }
     },
     "fileMetadata": {
+      "layout": {
+          "**/*.md": "Conceptual",
+          "**/*.yml": "Conceptual" 
+      },
       "breadcrumb_path": {
         "**/*.md": "/azure/azure-sql/breadcrumb/toc.json"
       },

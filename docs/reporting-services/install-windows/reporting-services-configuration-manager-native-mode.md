@@ -3,7 +3,7 @@ title: "Report Server Configuration Manager (Native Mode)"
 description: "Report Server Configuration Manager (Native Mode)"
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 09/20/2017
+ms.date: 06/27/2024
 ms.service: reporting-services
 ms.subservice: report-server
 ms.topic: conceptual

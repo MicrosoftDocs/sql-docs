@@ -8474,7 +8474,7 @@ items:
     items:
     - name: SQL Server Data Tools Overview
       href: ssdt/sql-server-data-tools.md
-    - name: Download SSDT
+    - name: Install SSDT
       href: ssdt/download-sql-server-data-tools-ssdt.md
     - name: Previous releases of SSDT & SSDT-BI
       href: ssdt/previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi.md

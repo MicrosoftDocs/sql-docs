@@ -11,12 +11,13 @@ ms.subservice: security
 ms.topic: conceptual
 ---
 
-
 # Native Windows principals
+
+[!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
 
 The **Windows** authentication metadata mode is a new mode that allows users to use Windows authentication or Microsoft Entra authentication (using a Windows principal metadata) with Azure SQL Managed Instance. This mode is available for Azure SQL Managed Instance only. The **Windows** authentication metadata mode isn't available for Azure SQL Database.
 
-When your environment is synchronized between Active Directory (AD) and Microsoft Entra ID, user Windows accounts in AD are synchronized to the Microsoft Entra user accounts in Microsoft Entra ID.
+When your environment is synchronized between Active Directory (AD) and Microsoft Entra ID, Windows user accounts in AD are synchronized to the Microsoft Entra user accounts in Microsoft Entra ID.
 
 The authentication for SQL Managed Instance and SQL Server is based on metadata that are tied to logins. For Windows authentication logins, the metadata is created when the login is created from the `CREATE LOGIN FROM WINDOWS` command. For Microsoft Entra logins, the metadata is created when the login is created from the `CREATE LOGIN FROM EXTERNAL PROVIDER` command. For SQL authentication logins, the metadata is created when the `CREATE LOGIN WITH PASSWORD` command is executed. The authentication process is tightly coupled with the metadata stored in SQL Managed Instance or SQL Server.
 
@@ -32,6 +33,15 @@ The syntax `CREATE LOGIN FROM WINDOWS` and `CREATE USER FROM WINDOWS` can be use
 
 In order to use the **Windows** authentication metadata mode, the user environment must [Synchronize Active Directory (AD) with Microsoft Entra ID](winauth-azuread-setup.md#synchronize-ad-with-microsoft-entra-id).
 
+## Configure authentication metadata modes
+
+1. Go to the [Azure portal](https://portal.azure.com) and navigate to your SQL Managed Instance resource.
+1. Go to Settings > Microsoft Entra ID.
+1. Choose your preferred **Authentication metadata** mode from the dropdown list.
+1. Select **Save authentication metadata configuration**.
+
+:::image type="content" source="media/native-windows-principals/authentication-metadata-mode-configure.png" alt-text="Screenshot of the Azure portal showing the configuration of the authentication metadata mode.":::
+
 ## Addressing migration challenges using Windows authentication metadata mode
 
 The **Windows** authentication metadata mode helps modernize authentication for application, and unblocks migration challenges to SQL Managed Instance. Here are some common scenarios where the **Windows** authentication metadata mode can be used to address customer challenges:
@@ -42,9 +52,9 @@ The **Windows** authentication metadata mode helps modernize authentication for 
 
 ### Windows authentication for Microsoft Entra principals
 
-As long as the environment is synchronized between AD and Microsoft Entra ID, the **Windows** authentication metadata mode can be used to authenticate users to SQL Managed Instance using a Windows login. The user needs a login (created from a Windows or Microsoft Entra principal that is synched) in SQL Managed Instance to authenticate using Windows authentication.
+As long as the environment is synchronized between AD and Microsoft Entra ID, the **Windows** authentication metadata mode can be used to authenticate users to SQL Managed Instance using a Windows login or Microsoft Entra login, provided that the login is created from a Windows principal (`CREATE LOGIN FROM WINDOWS`).
 
-This feature is especially useful for customers who have applications that use Windows authentication and are migrating to Azure SQL Managed Instance. The **Windows** authentication metadata mode allows customers to continue using Windows authentication for their applications without having to make any changes to the application code. Applications like BizTalk server, which runs `CREATE LOGIN FROM WINDOWS` and `CREATE USER FROM WINDOWS` commands, can continue to work without any changes when migrating to Azure SQL Managed Instance.
+This feature is especially useful for customers who have applications that use Windows authentication and are migrating to Azure SQL Managed Instance. The **Windows** authentication metadata mode allows customers to continue using Windows authentication for their applications without having to make any changes to the application code. For example, applications like BizTalk server, which runs `CREATE LOGIN FROM WINDOWS` and `CREATE USER FROM WINDOWS` commands, can continue to work without any changes when migrating to Azure SQL Managed Instance. Other users can use a Microsoft Entra login that is synced to AD to authenticate to SQL Managed Instance.
 
 ### Managed Instance link
 
@@ -60,7 +70,7 @@ SQL Server doesn't understand the synchronization between Active Directory and M
 
 Here's the flow chart that explains how the authentication metadata mode works with SQL Managed Instance:
 
-:::image type="content" source="media/authentication-metadata-mode-flow.png" alt-text="Diagram of the authentication metadata mode flowchart.":::
+:::image type="content" source="media/native-windows-principals/authentication-metadata-mode-flowchart.png" alt-text="Diagram of the authentication metadata mode flowchart.":::
 
 Previously, customers who synchronize users between AD and Microsoft Entra ID wouldn't be able to authenticate with a login created from a Windows principal, whether they used Windows authentication or Microsoft Entra authentication that was synced from AD. With the **Windows** authentication metadata mode, customers can now authenticate with a login created from a Windows principal using Windows authentication or the synchronized Microsoft Entra principal.
 
@@ -80,6 +90,22 @@ For synchronized users, the authentication fails or works based on the following
 |----------|----------|----------|
 | Microsoft Entra authentication    | Fails     | Works     |
 | Windows authentication    | Works     | Fails     |
+
+### Example scenarios
+
+Previously, customers who had synchronized users between AD and Microsoft Entra ID would not be able to authenticate with a login created from a Windows principal, whether they used Windows authentication or Microsoft Entra authentication that was synced from AD. With the **Windows** authentication cache mode, customers can now authenticate with a login created from a Windows principal using Windows authentication or the synchronized Microsoft Entra principal. Here are some detailed examples that shows the outcome of the authentication process based on the authentication cache mode and the login type:
+
+- **Scenario 1**: A customer has a Windows login that is synchronized between AD and Microsoft Entra ID. The authentication cache mode is set to **Windows**. The customer can connect using Windows authentication and Microsoft Entra authentication.
+
+- **Scenario 2**: A customer has a Microsoft Entra login that is synchronized between AD and Microsoft Entra ID. The authentication cache mode is set to **Windows**. The customer can't connect using Windows authentication or Microsoft Entra authentication.
+
+- **Scenario 3**: A customer has a Microsoft Entra login that is synchronized between AD and Microsoft Entra ID. The authentication cache mode is set to **Microsoft Entra**. The customer can connect using Windows authentication and Microsoft Entra authentication.
+
+- **Scenario 4**: A customer has a Windows login that is synchronized between AD and Microsoft Entra ID. The authentication cache mode is set to **Microsoft Entra**. The customer can't connect using Windows authentication or Microsoft Entra authentication.
+
+- **Scenario 5**: A customer has a Windows login that is synchronized between AD and Microsoft Entra ID. The authentication cache mode is set to **Paired**. The customer can connect using Windows authentication, but not Microsoft Entra authentication.
+
+- **Scenario 6**: A customer has a Microsoft Entra login that is synchronized between AD and Microsoft Entra ID. The authentication cache mode is set to **Paired**. The customer can connect using Microsoft Entra authentication, but not Windows authentication.
 
 ## Related content
 

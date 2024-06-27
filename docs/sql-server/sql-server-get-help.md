@@ -10,6 +10,7 @@ ms.subservice: release-landing
 ms.topic: conceptual
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017"
 ---
+
 # SQL Server help and feedback
 
 This article explains different ways to get assistance with an issue or provide feedback for SQL Server or the SQL Server technical documentation.

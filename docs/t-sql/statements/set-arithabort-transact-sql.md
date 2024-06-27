@@ -59,7 +59,11 @@ When SET ARITHABORT is ON and SET ANSI WARNINGS is OFF, these error conditions c
 If SET ARITHABORT and SET ANSI WARNINGS are OFF and one of these errors occurs, a warning message appears, and the result of the arithmetic operation is NULL.  
   
 > [!NOTE]  
->  If neither SET ARITHABORT nor SET ARITHIGNORE is ON, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] returns NULL and a warning message appears after the query runs.  
+>  If neither SET ARITHABORT nor SET ARITHIGNORE is ON, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] returns NULL and a warning message appears after the query runs.
+
+ 
+> [!NOTE]  
+>   SET ARITHABORT OFF is not supported in Synapse dedicated sql pool.
   
 When ANSI_WARNINGS has a value of ON and the database compatibility level is set to 90 or higher then ARITHABORT is implicitly ON regardless of its value setting. If the database compatibility level is set to 80 or earlier, the ARITHABORT option must be explicitly set to ON.  
   

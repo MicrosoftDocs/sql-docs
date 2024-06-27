@@ -19,9 +19,9 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 [!INCLUDE [sql-asdb-asa](../includes/applies-to-version/sql-asdb-asa.md)]
 
-**SQL Server Data Tools (SSDT)** is a set of development tooling for building SQL Server databases, Azure SQL databases, Analysis Services (AS) data models, Integration Services (IS) packages, and Reporting Services (RS) reports. With SSDT, you can design and deploy SQL objects with the same project concept as other application development tools.  The **SQL projects** capability extends to CI/CD pipelines, enabling you to automate the build and deployment of your database projects with the [SqlPackage CLI](../tools/sqlpackage/sqlpackage.md).
+**SQL Server Data Tools (SSDT)** is a set of development tooling for building SQL Server databases, Azure SQL databases, Analysis Services (AS) data models, Integration Services (IS) packages, and Reporting Services (RS) reports. With SSDT, you can design and deploy SQL objects with the same project concept as other application development tools. The **SQL projects** capability extends to CI/CD pipelines, enabling you to automate the build and deployment of your database projects with the [SqlPackage CLI](../tools/sqlpackage/sqlpackage.md).
 
-The release notes for SSDT and its components are available for [Visual Studio 2017, 2019, and 2022](sql-server-data-tools.md#release-notes).  An overview of the core SSDT functionality is provided in the [SSDT Overview](sql-server-data-tools.md#core-sql-server-data-tools).
+The release notes for SSDT and its components are available for [Visual Studio 2017, 2019, and 2022](sql-server-data-tools.md#release-notes). An overview of the core SSDT functionality is provided in the [SSDT Overview](sql-server-data-tools.md#core-sql-server-data-tools).
 
 > [!NOTE]  
 > There's no SSDT standalone installer for Visual Studio. SSDT is installed as a Visual Studio component, both for [online installation](#install-ssdt-with-visual-studio-2022) and [offline installation](#offline-installation). Analysis Services, Integration Services, and Reporting Services projects are available as separate extensions for each version.
@@ -33,7 +33,7 @@ If [Visual Studio 2022](/visualstudio/install/install-visual-studio?preserve-vie
 
 To modify the installed Visual Studio workloads to include SSDT, use the Visual Studio Installer.
 
-1. Launch the Visual Studio Installer. In the Windows Start menu, you can search for "installer".
+1. Launch the Visual Studio Installer. In the Windows Start menu, you can search for "installer."
 
 2. In the installer, select for the edition of Visual Studio that you want to add SSDT to, and then choose **Modify**.
 
@@ -55,7 +55,7 @@ Visual Studio is available as a [native Arm64 application](/visualstudio/install
 
 ## Install extensions for Analysis Services, Integration Services, and Reporting Services
 
-For Analysis Services, Integration Services, or Reporting Services projects, you can install the appropriate [extensions](/visualstudio/ide/finding-and-using-visual-studio-extensions) from within Visual Studio with **Extensions** > **Manage Extensions** or from the [Marketplace](https://marketplace.visualstudio.com/search?term=services&target=VS&category=All%20categories&vsVersion=&sortBy=Relevance).
+For Analysis Services (SSAS), Integration Services (SSIS), or Reporting Services (SSRS) projects, you can install the appropriate [extensions](/visualstudio/ide/finding-and-using-visual-studio-extensions) from within Visual Studio with **Extensions** > **Manage Extensions** or from the [Marketplace](https://marketplace.visualstudio.com/search?term=services&target=VS&category=All%20categories&vsVersion=&sortBy=Relevance).
 
 ### Extensions for Visual Studio 2022
 
@@ -89,16 +89,16 @@ For Analysis Services, Integration Services, or Reporting Services projects, you
 
 ## Offline installation
 
-For scenarios where offline installation is required, such as low bandwidth or isolated networks, SSDT is available for offline installation.  Two approaches are available:
+For scenarios where offline installation is required, such as low bandwidth or isolated networks, SSDT is available for offline installation. Two approaches are available:
 
 - For a single machine, [Download All, then install](/visualstudio/install/create-an-offline-installation-of-visual-studio#use-the-download-all-then-install-feature)
 - For installation on one or more machines, [use the Visual Studio bootstrapper from the command line](/visualstudio/install/create-an-offline-installation-of-visual-studio#use-the-command-line-to-create-a-local-layout)
 
-For more details you can follow the [Step-by-Step Guidelines for Offline Installation](/visualstudio/install/create-an-offline-installation-of-visual-studio)
+For more details, you can follow the [Step-by-Step Guidelines for Offline Installation](/visualstudio/install/create-an-offline-installation-of-visual-studio)
 
 ## License terms for Visual Studio
 
-To understand the license terms and use cases for Visual Studio, refer to [Visual Studio License Directory](https://visualstudio.microsoft.com/license-terms/). For example, if you are using the Community Edition of Visual Studio for SQL Server Data Tools, review the EULA for that specific edition of Visual Studio in the Visual Studio License Directory.
+To understand the license terms and use cases for Visual Studio, refer to [Visual Studio License Directory](https://visualstudio.microsoft.com/license-terms/). For example, if you're using the Community Edition of Visual Studio for SQL Server Data Tools, review the end user licensing agreement (EULA) for that specific edition of Visual Studio in the Visual Studio License Directory.
 
 ## Previous versions
 
@@ -106,13 +106,13 @@ To download and install SSDT for Visual Studio 2017, or an older version of SSDT
 
 ## See also
 
-- [SSDT MSDN Forum](https://social.msdn.microsoft.com/Forums/sqlserver/home?forum=ssdt)
-
 - [SSDT Team Blog](/archive/blogs/ssdt/)
 
-- [DACFx API Reference](/previous-versions/sql/sql-server-2014/dn645454(v=sql.120))
+- [DACFx API Reference](/dotnet/api/microsoft.sqlserver.dac)
 
 - [Download SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)
+
+- [SQL projects in Azure Data Studio and VS Code](/azure-data-studio/extensions/sql-database-project-extension)
 
 ## Next steps
 

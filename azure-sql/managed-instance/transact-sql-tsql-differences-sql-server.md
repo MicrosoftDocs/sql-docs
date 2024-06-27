@@ -42,7 +42,7 @@ Temporary known issues that are discovered in SQL Managed Instance and will be r
 
 ### <a id="always-on-availability-groups"></a> Always On availability groups
 
-[High availability](../database/high-availability-sla.md) is built into SQL Managed Instance and can't be controlled by users. The following statements aren't supported:
+[High availability](../database/high-availability-sla-local-zone-redundancy.md) is built into SQL Managed Instance and can't be controlled by users. The following statements aren't supported:
 
 - [CREATE ENDPOINT … FOR DATABASE_MIRRORING](/sql/t-sql/statements/create-endpoint-transact-sql)
 - [CREATE AVAILABILITY GROUP](/sql/t-sql/statements/create-availability-group-transact-sql)

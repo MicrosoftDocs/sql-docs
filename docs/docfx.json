@@ -114,7 +114,8 @@
         "data-quality-services/**/*.md": "Data Quality Services (DQS)",
         "azdata/**/*.md": "Azure Data CLI (azdata)",
         "tools/synapse-pathway/**/*.md": "Azure Synapse Pathway",
-        "sql-server/azure-arc/**/*.md": "SQL Server enabled by Azure Arc"
+        "sql-server/azure-arc/**/*.md": "SQL Server enabled by Azure Arc",
+        "sql-server/azure-arc/**/*.yml": "SQL Server enabled by Azure Arc"
       },
       "breadcrumb_path": {
         "**/*.md": "~/breadcrumb/toc.yml"

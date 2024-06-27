@@ -1,8 +1,8 @@
 ---
 title: Azure Update Manager
 description: Learn how to use the Azure Update Manager to automatically update and patch your SQL Server on Azure VMs, either individually, or at scale, including Cumulative Updates.
-author: tarynpratt
-ms.author: tarynpratt
+author: dplessMSFT
+ms.author: dpless
 ms.reviewer: mathoma, randolphwest
 ms.date: 04/09/2024
 ms.service: virtual-machines-sql

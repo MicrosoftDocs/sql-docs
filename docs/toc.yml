@@ -8478,7 +8478,7 @@ items:
     items:
     - name: SQL Server Data Tools Overview
       href: ssdt/sql-server-data-tools.md
-    - name: Download SSDT
+    - name: Install SSDT
       href: ssdt/download-sql-server-data-tools-ssdt.md
     - name: Previous releases of SSDT & SSDT-BI
       href: ssdt/previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi.md
@@ -13336,14 +13336,14 @@ items:
         href: relational-databases/system-dynamic-management-views/sys-dm-fts-population-ranges-transact-sql.md
       - name: sys.dm_fts_semantic_similarity_population
         href: relational-databases/system-dynamic-management-views/sys-dm-fts-semantic-similarity-population-transact-sql.md
-    - name: Geo-Replication (Azure SQL Database)
+    - name: Geo-Replication (Azure SQL)
       href: relational-databases/system-dynamic-management-views/geo-replication-dynamic-management-views-and-functions-azure-sql-database.md
       items:
       - name: sys.geo_replication_links (Azure SQL Database)
         href: relational-databases/system-dynamic-management-views/sys-geo-replication-links-azure-sql-database.md
-      - name: sys.dm_geo_replication_link_status (Azure SQL Database)
+      - name: sys.dm_geo_replication_link_status (Azure SQL)
         href: relational-databases/system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md
-      - name: sys.dm_continuous_copy_status (Azure SQL Database)
+      - name: sys.dm_continuous_copy_status (Azure SQL)
         href: relational-databases/system-dynamic-management-views/sys-dm-continuous-copy-status-azure-sql-database.md
     - name: Index
       href: relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md

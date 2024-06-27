@@ -1,8 +1,8 @@
 ---
 title: Feature interoperability with availability groups and DNN listener
 description: "Learn about the additional considerations when working with certain SQL Server features and a distributed network name (DNN) listener with an Always On availability group on SQL Server on Azure VMs."
-author: tarynpratt
-ms.author: tarynpratt
+author: AbdullahMSFT
+ms.author: amamun
 ms.reviewer: mathoma, randolphwest
 ms.date: 10/02/2023
 ms.service: virtual-machines-sql

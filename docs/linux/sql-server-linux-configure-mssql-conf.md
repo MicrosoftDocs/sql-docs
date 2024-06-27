@@ -3,7 +3,7 @@ title: Configure SQL Server settings on Linux
 description: This article describes how to use the mssql-conf tool to configure SQL Server settings on Linux.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 10/29/2023
+ms.date: 06/25/2024
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
@@ -110,6 +110,7 @@ ms.custom:
 | [Machine Learning Services EULAs](#mlservices-eula) | Accept R and Python EULAs for `mlservices` packages. Applies to [!INCLUDE [sssql19-md](../includes/sssql19-md.md)] only. |
 | [Network settings](#network) | Additional network settings for [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)]. |
 | [Outbound network access](#mlservices-outbound-access) | Enable outbound network access for [Machine Learning Services](sql-server-linux-setup-machine-learning.md) R, Python, and Java extensions. |
+| [SQL Server Connector](#sqlconnector) | Configure logging level for [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] Connector. |
 | [TCP port](#tcpport) | Change the port where [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] listens for connections. |
 | [TLS](#tls) | Configure Transport Level Security. |
 | [Trace flags](#traceflags) | Set the trace flags that the service is going to use. |
@@ -552,7 +553,7 @@ The first phase capture is controlled by the `coredump.coredumptype` setting, wh
     | `filtered` | Filtered uses a subtraction-based design where all memory in the process is included unless specifically excluded. The design understands the internals of SQLPAL and the host environment, excluding certain regions from the dump. |
     | `full` | Full is a complete process dump that includes all regions located in `/proc/$pid/maps`. This isn't controlled by the `coredump.captureminiandfull` setting. |
 
-## <a id="edition"></a> Edition
+## Edition
 
 The edition of [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] can be changed using the `set-edition` option. To change the edition of [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)], the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] service first needs to be stopped. For more information on available [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on Linux editions, see [SQL Server editions](sql-server-linux-editions-and-components-2019.md#sql-server-editions).
 
@@ -664,7 +665,7 @@ The `network.rpcport` and `distributedtransaction.servertcpport` settings are us
 
 In addition to setting these values, you must also configure routing and update the firewall for port 135. For more information on how to do this, see [How to configure the Microsoft Distributed Transaction Coordinator (MSDTC) on Linux](sql-server-linux-configure-msdtc.md).
 
-There are several other settings for **mssql-conf** that you can use to monitor and troubleshoot MSDTC. The following table briefly describes these settings. For more information on their use, see the details in the Windows support article, [How to enable diagnostic tracing for MS DTC](/troubleshoot/windows/win32/enable-diagnostic-tracing-ms-dtc).
+There are several other settings for **mssql-conf** that you can use to monitor and troubleshoot MSDTC. The following table briefly describes these settings. For more information on their use, see the details in the Windows support article, [Enable diagnostic tracing for MS DTC on a Windows 10 computer](/troubleshoot/windows/win32/enable-diagnostic-tracing-ms-dtc).
 
 | Option | Description |
 | --- | --- |
@@ -746,6 +747,24 @@ outboundnetworkaccess = 1
 ```
 
 ::: moniker-end
+
+## <a id="sqlconnector"></a> Change logging level for SQL Server Connector for Azure Key Vault
+
+In [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] CU 14 and later versions, [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on Linux supports TDE Extensible Key Management with Azure Key Vault. You can set the logging level to one of the following values:
+
+| Level | Description |
+| --- | --- |
+| `0` (default) | Information |
+| `1` | Error |
+| `2` | No log |
+
+To change the logging level for the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] Connector, use the following example:
+
+```bash
+sudo /opt/mssql/bin/mssql-conf set sqlconnector.logginglevel 1
+```
+
+For more information, see [Use SQL Server Connector with SQL Encryption Features](../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md).
 
 ## <a id="tcpport"></a> Change the TCP port
 

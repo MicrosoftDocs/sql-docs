@@ -23,16 +23,16 @@ ms.custom: updatefrequency5
 ## Syntax  
   
 ``` basic
-  
 Lookup(source_expression, destination_expression, result_expression, dataset)  
 ```  
   
 ### Parameters  
 
 |Parameter               |Definition                                                                                                                                                                                                        |
-|*source_expression*     |(**Variant**) An expression that is evaluated in the current scope and that specifies the name or key to look up. For example, `=Fields!ProdID.Value`.                                                            |
-|*destination_expression*|(**Variant**) An expression that is evaluated for each row in a dataset and that specifies the name or key to match on. For example, `=Fields!ProductID.Value`.                                                   |
-|*result_expression*     |(**Variant**) An expression that is evaluated for the row in the dataset where *source_expression* = *destination_expression*, and that specifies the value to retrieve. For example, `=Fields!ProductName.Value`.|
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|*source_expression*     |(**Variant**) An expression that's evaluated in the current scope and that specifies the name or key to look up. For example, `=Fields!ProdID.Value`.                                                            |
+|*destination_expression*|(**Variant**) An expression that's evaluated for each row in a dataset and that specifies the name or key to match on. For example, `=Fields!ProductID.Value`.                                                   |
+|*result_expression*     |(**Variant**) An expression that's evaluated for the row in the dataset where *source_expression* = *destination_expression* and that specifies the value to retrieve. For example, `=Fields!ProductName.Value`.|
 |*dataset*               |A constant that specifies the name of a dataset in the report. "Products" might be an example of a dataset you use.                                                                                               |
   
 ## Return  

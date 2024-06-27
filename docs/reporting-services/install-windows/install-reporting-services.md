@@ -11,14 +11,14 @@ ms.custom:
   - intro-installation
   - updatefrequency5
 monikerRange: ">= sql-server-2016"
-#customer intent: As a SQL Server user, I want to install and configure SQL Server Reporting Services so I can better leverage data and generate robust reports.
+#customer intent: As a SQL Server user, I want to install and configure SQL Server Reporting Services so that I can better leverage data and generate robust reports.
 
 ---
 # Install SQL Server Reporting Services
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2017-and-later](../../includes/ssrs-appliesto-2017-and-later.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)]
 
-In this article, learn how to download, install, and configure SQL Server Reporting Services (SSRS). SSRS installation involves server components for storing report items, rendering reports, and processing of subscription and other report services.
+This article helps you download, install, and configure SQL Server Reporting Services (SSRS). SSRS installation involves server components for storing report items, rendering reports, and processing of subscription and other report services. Alternatively, an administrator can install Report Builder with Microsoft Endpoint Configuration Manager.
 
 ::: moniker range="=sql-server-ver16"
 Download [**SQL Server 2022 Reporting Services**](https://www.microsoft.com/download/details.aspx?id=104502) from the Microsoft Download Center.
@@ -46,7 +46,7 @@ Review the [Hardware and software requirements for installing SQL Server](../../
 
 ## Install SSRS
 
-Installing SSRS is straightforward. There are only a few steps to install the files.
+Use the following steps to install SSRS.
 
 1. Locate `SQLServerReportingServices.exe` and launch the installer.
 
@@ -54,7 +54,7 @@ Installing SSRS is straightforward. There are only a few steps to install the fi
 
 1. Choose an edition to install and select **Next**.
 
-    For a free edition, choose either Evaluation or Developer from the list.
+    For a free edition, choose either Evaluation or Developer.
 
     :::image type="content" source="media/install-reporting-services/report-server-install-edition-select.png" alt-text="Screenshot of the Reporting Services editions that are available for download.":::
 
@@ -62,24 +62,24 @@ Installing SSRS is straightforward. There are only a few steps to install the fi
 
 1. Accept the license terms and conditions, and then select **Next**.
 
-1. Select **Next** to install SSRS.
+1. Select **Next**.
 
-1. Specify the install location for the report server. Select **Install** to continue.
+1. Specify the installation location for the report server. Select **Install** to continue.
 
     > [!NOTE]
     > The default path is `C:\Program Files\Microsoft SQL Server Reporting Services`.
 
-1. After a successful installation, select **Configure report server** to launch the Report Server Configuration Manager.
+1. After the installation completes, select **Configure report server** to launch the Report Server Configuration Manager.
 
 ## Configure your report server
 
-After you select **Configure Report Server** in the installer, the **Report Server Configuration Manager** appears. For more information, see [Report Server Configuration Manager](reporting-services-configuration-manager-native-mode.md).
+After you select **Configure Report Server**, the **Report Server Configuration Manager** appears. For more information, see [Report Server Configuration Manager](reporting-services-configuration-manager-native-mode.md).
 
 Follow the instructions to [Create a report server database](ssrs-report-server-create-a-report-server-database.md) to complete the initial Reporting Services configuration process. 
 
 ### Create a database on a different server
 
-If you're creating the report server database on a separate database server, you need to change the service account for the report server to a credential recognized on the database server.
+If you're creating the report server database on a separate database server, change the service account for the report server to a credential recognized on the database server.
 
 By default, the report server uses the virtual service account. Attempting to create a database on a different server might lead to the following error during the **Applying connection rights** step:
 
@@ -101,7 +101,7 @@ URL reservations are composed of a prefix, host name, port, and virtual director
 |----------|-----------------|
 |Prefix|The default prefix is `HTTP`. If you installed a Transport Layer Security (TLS) certificate, the installer creates URL reservations that use the `HTTPS` prefix.|
 |Host name|The default host name is a strong wildcard (+). It specifies that the report server accepts any HTTP request on the designated port for any host name that resolves to the computer, including `https://<computername>/reportserver`, `https://localhost/reportserver`, or `https://<IPAddress>/reportserver`.|
-|Port|The default port is 80. If you use any other port, you have to explicitly add the port to the URL when you open web portal in a browser window.|
+|Port|The default port is 80. If you use any other port, you must explicitly add the port to the URL when you open web portal in a browser window.|
 |Virtual directory|By default, the Report Server web service virtual directory is `reportserver`. For the web portal, the default virtual directory is `reports`.|
 
 Examples of the complete URL string are:
@@ -112,17 +112,17 @@ Examples of the complete URL string are:
 
 ## Firewall
 
-If you're accessing the report server from a remote computer, make sure you configured any firewall rules if there's a firewall present.
+If you're accessing the report server from a remote computer and there's a firewall present, make sure you configured any firewall rules.
 
-Open up the TCP port that you configured for your web service URL and web portal URL. By default, these URLs are configured on TCP port 80.
+Open the TCP port that you configured for your web service URL and web portal URL. By default, these URLs are configured on TCP port 80.
 
 ## Configure other features
 
-You might need to configure other features for better report access and usability. You can configure integration with the Power BI service so you can pin report items to a Power BI dashboard. For more information, see [Power BI Report Server Integration (Configuration Manager)](power-bi-report-server-integration-configuration-manager.md).
+You might need to configure other features for better report access and usability. You can configure integration with the Power BI service so that you can pin report items to a Power BI dashboard. For more information, see [Power BI Report Server Integration (Configuration Manager)](power-bi-report-server-integration-configuration-manager.md).
 
 To configure email for subscriptions processing, see [Email settings in SSRS native mode](e-mail-settings-reporting-services-native-mode-configuration-manager.md) and [Email delivery in Reporting Services](../subscriptions/e-mail-delivery-in-reporting-services.md).
 
-You can also set up the web portal so you can access and manage reports from a remote computer. For more information, see [Configure a firewall for report server access](../report-server/configure-a-firewall-for-report-server-access.md) and [Configure a report server for remote administration](../report-server/configure-a-report-server-for-remote-administration.md).
+You can also set up the web portal so that you can access and manage reports from a remote computer. For more information, see [Configure a firewall for report server access](../report-server/configure-a-firewall-for-report-server-access.md) and [Configure a report server for remote administration](../report-server/configure-a-report-server-for-remote-administration.md).
 
 ## Related content
 

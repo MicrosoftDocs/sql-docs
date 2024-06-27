@@ -1,6 +1,6 @@
 ---
-title: "Paginated report parameters"
-description: Learn the common uses for Reporting Services paginated report parameters and the properties you can set.
+title: Paginated report parameters in Report Builder
+description: Learn how you can take advantage of common uses for Reporting Services paginated report parameters and their properties.
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 06/27/2024
@@ -12,7 +12,7 @@ ms.custom: updatefrequency5
 #customer intent: As a Report Builder user, I want to learn how to use parameters so that I can control and manage my report data.
 ---
 
-# Paginated report parameters (Report Builder)
+# Paginated report parameters in Report Builder
 
 ::: moniker range="=sql-server-2016"
 

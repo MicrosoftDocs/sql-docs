@@ -308,7 +308,7 @@ on $left.machineId == $right.machineIdHasSQLServerExtensionInstalled
 
 #### List Arc-enabled servers that host a billable SQL Server instance
 
-This query identifies the machines (virtual or physical) that host SQL Server instances that are billable or require a license for SQL Server software. It povides the details of the SQL Server confifuration, including the license type, ESU setting, size in v-core or p-cores and other relevant parameters.
+This query identifies the machines (virtual or physical) that host SQL Server instances that are billable or require a license for SQL Server software. It provides the details of the SQL Server configuration, including the license type, ESU setting, size in v-core or p-cores and other relevant parameters.
 
 ```kusto
 resources

@@ -61,29 +61,29 @@ To use the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configu
 
 The Report Server Configuration Manager is installed automatically when you install SQL Server Reporting Services.
 
-##  <a name="bkmk_start_configuration_manager"></a> To Start the Report Server Configuration Manager
+##  <a name="bkmk_start_configuration_manager"></a> Start the Report Server Configuration Manager
 
 1.  Use the following step that is appropriate for your version of Microsoft Windows:
 
-    - From the Windows Start menu, type **Reporting** and select **Report Server Configuration Manager** from the search results.
+    - From the Windows Start menu, enter **Report Server** and select **Report Server Configuration Manager** from the search results.
 
-    - Select **Start**, point to **All Programs**, point to [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], and then point to **Configuration Tools**.
+    - Select **Start**, point to **All Programs**, point to [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)] Reporting Services, and then select **Report Server Configuration Manager**.
 
          If you want to configure a report server instance from a previous version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], open the program folder for that version. For example, point to [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] instead of [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)] to open the configuration tools for [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] server components.
 
          Select **Report Server Configuration Manager**.
 
-2. The **Reporting Services Configuration Connection** dialog box appears so that you can select the report server instance you want to configure. Select **Connect**.
+2. The **Reporting Services Configuration Connection** dialog appears so that you can select the report server instance you want to configure. Select **Connect**.
 
 3. In **Server Name**, specify the name of the computer on which the report server instance is installed. The name of the local computer appears by default, but you can type the name of a remote [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance if you want to connect to a report server that is installed on a remote computer.
 
 4. If you specify a remote computer, select **Find** to establish a connection.
 
-5. In **Report Server Instance**, select the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] instance that you want to configure. Only report server instances for this version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] appear in the list. You cannot configure earlier versions of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].
+5. In **Report Server Instance**, select the report server instance that you want to configure. Only report server instances for this version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] appear in the list. You can't configure earlier versions of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].
 
 6. Select **Connect**.
 
-## Next steps
+## Related content
 
 [Web portal](../../reporting-services/web-portal-ssrs-native-mode.md)   
 [Reporting Services Tools](../../reporting-services/tools/reporting-services-tools.md)   

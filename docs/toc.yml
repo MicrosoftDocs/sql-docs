@@ -10401,6 +10401,8 @@ items:
           href: sql-server/azure-arc/manage-configuration.md
         - name: Licensing & billing
           href: sql-server/azure-arc/manage-license-billing.md
+        - name: Extended Security Updates
+          href: sql-server/azure-arc/extended-security-updates.md
         - name: Automate updates
           href: sql-server/azure-arc/update.md
         - name: Disconnect & unregister from Azure Arc
@@ -10431,8 +10433,6 @@ items:
           href: sql-server/azure-arc/configure-advanced-data-security.md
         - name: Certificate rotation
           href: sql-server/azure-arc/rotate-certificates.md
-        - name: Extended Security Updates
-          href: sql-server/azure-arc/extended-security-updates.md
         - name: Roles, permissions, & files
           items:
           - name: Agent roles

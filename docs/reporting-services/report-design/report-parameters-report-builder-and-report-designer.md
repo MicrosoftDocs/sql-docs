@@ -3,7 +3,7 @@ title: "Paginated report parameters"
 description: Learn the common uses for Reporting Services paginated report parameters and the properties you can set.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 06/24/2024
+ms.date: 06/27/2024
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: conceptual
@@ -36,9 +36,9 @@ For more information about how to add a parameter to a report, see [Tutorial: Ad
 
 Common uses for parameters include:
 
-    - Control your data with filters that you can adjust with a customizeable interface. For more information, see [Control paginated and mobile report data](#control-paginated-and-mobile-report-data).
-    - Connect your main report with drillthrough reports that each solve a specific question. For more information, see [Connect related reports](#connect-related-reports).
-    - Vary the presentation of your report by adjusting the rendering. For more information, see [Vary report presentation](#vary-report-presentation).
+- Control your data with filters that you can adjust with a customizable interface. For more information, see [Control paginated and mobile report data](#control-paginated-and-mobile-report-data).
+- Connect your main report with drillthrough reports that each solve a specific question. For more information, see [Connect related reports](#connect-related-reports).
+- Vary the presentation of your report by adjusting the rendering. For more information, see [Vary report presentation](#vary-report-presentation).
   
 ### Control paginated and mobile report data
 
@@ -92,9 +92,9 @@ When you view a report that has parameters, the **Parameters** pane displays eac
 
 You can create report parameters in a few different ways:
 
-    - Use a dataset query with variables or stored procedures containing parameters. For more information, see [Dataset query or stored procedure with parameters](#dataset-query-or-stored-procedure-with-parameters).
-    - Manually create a parameter. For more information see [Create a parameter manually](#create-a-parameter-manually).
-    - Add a report part containing references to a parameter. For more information, see [Report part with a parameter](#report-part-with-a-parameter).
+- Use a dataset query with variables or stored procedures containing parameters. For more information, see [Dataset query or stored procedure with parameters](#dataset-query-or-stored-procedure-with-parameters).
+- Manually create a parameter. For more information, see [Create a parameter manually](#create-a-parameter-manually).
+- Add a report part containing references to a parameter. For more information, see [Report part with a parameter](#report-part-with-a-parameter).
   
 > [!NOTE]
 > Not all data sources support parameters.
@@ -208,9 +208,9 @@ Report execution options can affect how parameters are processed. A report that 
 
 You can define a subscription for an on demand or for a snapshot and specify parameter values to use during subscription processing.  
   
-- **On-demand report.**  For an on-demand report, you can specify a different parameter value than the published value for each parameter listed for the report. For example, suppose you have a Call Service report that uses a *Time Period* parameter to return customer service requests for the current day, week, or month. If the default parameter value for the report is set to **today**, your subscription can use a different parameter value (such as **week** or **month**) to produce a report that contains weekly or monthly figures.  
+- **On-demand report**:  For an on-demand report, you can specify a different parameter value than the published value for each parameter listed for the report. For example, suppose you have a Call Service report that uses a *Time Period* parameter to return customer service requests for the current day, week, or month. If the default parameter value for the report is set to **today**, your subscription can use a different parameter value (such as **week** or **month**) to produce a report that contains weekly or monthly figures.  
   
-- **Snapshot.**  For a snapshot, your subscription must use the parameter values defined for the snapshot. Your subscription can't override a parameter value that is defined for a snapshot. For example, suppose you're subscribing to a Western regional sales report that runs as a report snapshot, and the snapshot specifies **Western** as a regional parameter value. In this case, if you create a subscription to this report, you must use the parameter value **Western** in your subscription. To provide a visual indication that the parameter is ignored, the parameter fields on the subscription page are set to read-only fields.  
+- **Snapshot**:  For a snapshot, your subscription must use the parameter values defined for the snapshot. Your subscription can't override a parameter value that is defined for a snapshot. For example, suppose you're subscribing to a Western regional sales report that runs as a report snapshot, and the snapshot specifies **Western** as a regional parameter value. In this case, if you create a subscription to this report, you must use the parameter value **Western** in your subscription. To provide a visual indication that the parameter is ignored, the parameter fields on the subscription page are set to read-only fields.  
   
 - Report execution options can affect how parameters are processed. Parameterized reports that run as report snapshots use the parameter values defined for the report snapshot. Parameter values are defined in the **Parameter Properties** page of the report. A report that runs as a snapshot can't use parameters that are derived from a query unless the query includes default values for the parameters.  
   
@@ -230,7 +230,7 @@ A secure alternative to using parameters for employee or personal data is to sel
 > [!IMPORTANT]  
 > In any report that includes a parameter of type **String**, be sure to use an available values list (also known as a valid values list) and ensure that any user running the report has only the permissions necessary to view the data in the report. When you define a parameter of type **String**, the user is presented with a text box that can take any value. An available values list limits the values that can be entered. If the report parameter is tied to a dataset parameter and you do not use an available values list, it is possible for a report user to type SQL syntax into the text box, potentially opening the report and your server to a SQL injection attack. If the user has sufficient permissions to execute the new SQL statement, it may produce unwanted results on the server.  
 >
-> If a report parameter is not tied to a dataset parameter and the parameter values are included in the report, it is possible for a report user to type expression syntax or a URL into the parameter value, and render the report to Excel or HTML. If another user then views the report and clicks the rendered parameter contents, the user may inadvertently execute the malicious script or link.  
+> If a report parameter isn't tied to a dataset parameter and the parameter values are included in the report, it's possible for a report user to type expression syntax or a URL into the parameter value, and render the report to Excel or HTML. If another user then views the report and clicks the rendered parameter contents, the user may inadvertently execute the malicious script or link.  
 >
 > To mitigate the risk of inadvertently running malicious scripts, open rendered reports only from trusted sources. For more information about securing reports, see [Secure reports and resources](../../reporting-services/security/secure-reports-and-resources.md).  
 

@@ -1,0 +1,62 @@
+- name: Database migration documentation
+  items:
+  - name: Azure Database Migration Guides
+    href: index.yml
+- name: Migrate from SQL Server
+  items:
+  - name: Overview
+    href: sql-server/overview.md
+  - name: Pre-migration
+    href: sql-server/pre-migration.md
+  - name: To Azure SQL Managed Instance
+    items:
+    - name: Overview
+      href: sql-server/managed-instance/overview.md
+    - name: Assessment rules
+      href: sql-server/managed-instance/assessment-rules.md
+    - name: Performance baseline
+      href: sql-server/managed-instance/performance-baseline.md
+    - name: Custom roles
+      href: sql-server/managed-instance/custom-roles.md
+    - name: Migration guide
+      href: sql-server/managed-instance/guide.md
+    - name: Migration tutorial
+      href: sql-server/managed-instance/database-migration-service.md
+  - name: To SQL Server on Azure VMs
+    items:
+    - name: Overview
+      href: sql-server/virtual-machines/overview.md
+    - name: Custom roles
+      href: sql-server/virtual-machines/custom-roles.md
+    - name: Migration guide
+      href: sql-server/virtual-machines/guide.md
+    - name: Migration tutorial
+      href: sql-server/virtual-machines/database-migration-service.md
+    - name: Migrate with distributed availability group
+      items:
+      - name: Prerequisites
+        href: sql-server/virtual-machines/distributed-availability-group-prerequisites.md
+      - name: Migrate standalone instance with distributed AG
+        href: sql-server/virtual-machines/distributed-availability-group-migrate-standalone-instance.md
+      - name: Migrate availability group with distributed AG
+        href: sql-server/virtual-machines/distributed-availability-group-migrate-availability-group.md
+      - name: Finalize AG migration
+        href: sql-server/virtual-machines/distributed-availability-group-migrate-complete.md
+    - name: High availability
+      items:
+      - name: Migrate an availability group
+        href: sql-server/virtual-machines/availability-group-migrate.md
+      - name: Migrate a failover cluster instance
+        href: sql-server/virtual-machines/failover-cluster-instance-migrate.md
+  - name: To Azure SQL Database
+    items:
+    - name: Overview
+      href: sql-server/database/overview.md
+    - name: Assessment rules
+      href: sql-server/database/assessment-rules.md
+    - name: Custom roles
+      href: sql-server/database/custom-roles.md
+    - name: Migration guide
+      href: sql-server/database/guide.md
+    - name: Migration tutorial
+      href: sql-server/database/database-migration-service.md

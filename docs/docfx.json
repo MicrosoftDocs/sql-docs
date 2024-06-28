@@ -37,7 +37,6 @@
     "overwrite": [],
     "externalReference": [],
     "globalMetadata": {
-      "layout": "Conceptual",
       "uhfHeaderId": "MSDocsHeader-DocsSQL",
       "contributors_to_exclude": [
         "hexiaokai",
@@ -121,7 +120,11 @@
         "**/*.md": "~/breadcrumb/toc.yml"
       },
       "layout": {
-        "**/index.yml": "LandingPage"
+          "**/*.md": "Conceptual",
+          "**/*.yml": "Conceptual",
+          "**/toc.md": null,
+          "**/toc.yml": null,
+          "**/index.yml": "LandingPage"
       },
       "monikerRange": {
         "ado/**/*.md": ">= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-current || = azuresqldb-mi-current || = azure-sqldw-latest || >= aps-pdw-2016",

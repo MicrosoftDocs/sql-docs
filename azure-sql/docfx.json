@@ -75,10 +75,10 @@
     },
     "fileMetadata": {
       "layout": {
-          "**/toc.md": null,
-          "**/toc.yml": null,
           "**/*.md": "Conceptual",
-          "**/*.yml": "Conceptual" 
+          "**/*.yml": "Conceptual",
+          "**/toc.md": null,
+          "**/toc.yml": null
       },
       "breadcrumb_path": {
         "**/*.md": "/azure/azure-sql/breadcrumb/toc.json"

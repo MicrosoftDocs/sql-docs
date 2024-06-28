@@ -16,7 +16,7 @@ helpviewer_keywords:
 #customer intent: As a SQL Server user, I want to use Report Server Configuration Manager so that I can efficiently manage and configure SQL Server Reporting Services (SSRS) Native mode.
 ---
 
-# What is Report Server Configuration Manager (Native Mode)?
+# What is Report Server Configuration Manager (Native mode)?
 
 [!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
 

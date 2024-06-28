@@ -146,7 +146,7 @@ Use this page to specify how you want this wizard to generate scripts. Many diff
 
 **General** - The following options apply to the entire script.
 
-- **ANSI Padding** - Includes **ANSI PADDING ON** in the script. The default is **True**.
+- **ANSI Padding** - Includes **ANSI PADDING ON** in the script. The default is **False**.
 
 - **Append to file** - When **True**, this script is added to the bottom of an existing script, specified on the **Set Scripting Options** page. When **False**, the new script overwrites a previous script. The default is **False**.
 
@@ -156,7 +156,7 @@ Use this page to specify how you want this wizard to generate scripts. Many diff
 
 - **Convert UDDTs to base types** - When **True**, user-defined data types (UDDT) are converted into the underlying base data types that were used to create them. Use **True** when the UDDT does not exist in the database where the script runs. When **False**, UDDTs are used. The default is **False**.
 
-- **Generate script for dependent objects** - Generates a script for any object that is required to be present when the script for the selected object is executed. The default is **True**.
+- **Generate script for dependent objects** - Generates a script for any object that is required to be present when the script for the selected object is executed. The default is **True** for script entire database option and **False** for Select specific database objects.
 
 - **Include descriptive headers** - When **True**, descriptive comments are added to the script separating the script into sections for each object. The default is **False**.
 
@@ -204,7 +204,7 @@ Use this page to specify how you want this wizard to generate scripts. Many diff
 
 - **Script full-text indexes** - Scripts the creation of full-text indexes. The default is **False**.
 
-- **Script indexes** - Scripts the creation of indexes. The default is **True**. Indexes help you find data quickly.
+- **Script indexes** - Scripts the creation of indexes. The default is **True** for script entire database option and **False** for Select specific database objects. Indexes help you find data quickly.
 
 - **Script primary keys** - Scripts the creation of primary keys on tables. The default is **True**. Primary keys uniquely identify each row of a table.
 

@@ -3,7 +3,8 @@ title: Support matrix
 description: This page contains the support matrix and support life-cycle policy for the Microsoft JDBC Driver for SQL Server.
 author: David-Engel
 ms.author: davidengel
-ms.date: 01/31/2024
+ms.reviewer: randolphwest
+ms.date: 06/28/2024
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: conceptual
@@ -11,9 +12,6 @@ ms.topic: conceptual
 # Microsoft JDBC Driver for SQL Server support matrix
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
-
-> [!CAUTION]
-> This article references CentOS, a Linux distribution that is nearing End Of Life (EOL) status. Please consider your use and plan accordingly. For more information, see the [CentOS End Of Life guidance](/azure/virtual-machines/workloads/centos/centos-end-of-life).
 
 This page contains the support matrix and support lifecycle policy for the Microsoft JDBC Driver for SQL Server.
 
@@ -25,7 +23,7 @@ Extended and custom support options aren't available for the Microsoft JDBC Driv
 
 The following Microsoft JDBC Drivers are supported, until the indicated End of Support date.
 
-|Driver Name|Driver Package Version|Applicable JAR(s)|End of Mainstream Support|
+|Driver Name|Driver Package Version|Applicable JARs|End of Mainstream Support|
 |-|-|-|-|
 |Microsoft JDBC Driver 12.6 for SQL Server|12.6|mssql-jdbc-12.6.0.jre11.jar<br> mssql-jdbc-12.6.0.jre8.jar|January 31, 2029|
 |Microsoft JDBC Driver 12.4 for SQL Server|12.4|mssql-jdbc-12.4.0.jre11.jar<br> mssql-jdbc-12.4.0.jre8.jar|July 31, 2028|
@@ -128,8 +126,8 @@ The following Microsoft JDBC Drivers are supported, until the indicated End of S
 
 The Microsoft JDBC driver is designed to work on any operating system that supports the use of a Java Virtual Machine (JVM). Some commonly used platforms include Windows, Windows Server, Linux, Unix, AIX, macOS, and others.
 
-The JDBC product team tests our driver on Windows, Ubuntu Linux, CentOS Linux, and macOS.
+The JDBC product team tests our driver on Windows, Ubuntu Linux, and macOS.
 
 ## Application server support
 
-The Microsoft JDBC Driver for SQL Server is tested with various application servers.  Consult your application server vendor for more details on which driver version is compatible with their product.
+The Microsoft JDBC Driver for SQL Server is tested with various application servers. Consult your application server vendor for more details on which driver version is compatible with their product.

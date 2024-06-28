@@ -18,7 +18,7 @@ monikerRange: ">= sql-server-2016"
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2017-and-later](../../includes/ssrs-appliesto-2017-and-later.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)]
 
-This article helps you download, install, and configure SQL Server Reporting Services (SSRS). SSRS installation involves server components for storing report items, rendering reports, and processing of subscription and other report services. Alternatively, an administrator can install Report Services with [Microsoft Endpoint Configuration Manager](https://learn.microsoft.com/en-us/configmgr/).
+This article helps you download, install, and configure SQL Server Reporting Services (SSRS). SSRS installation involves server components for storing report items, rendering reports, and processing of subscription and other report services. Alternatively, an administrator can install Reporting Services with [Microsoft Endpoint Configuration Manager](/configmgr/).
 
 ::: moniker range="=sql-server-ver16"
 Download [**SQL Server 2022 Reporting Services**](https://www.microsoft.com/download/details.aspx?id=104502) from the Microsoft Download Center.

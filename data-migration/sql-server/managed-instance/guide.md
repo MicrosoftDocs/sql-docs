@@ -125,7 +125,7 @@ To migrate using backup and restore, follow these steps:
    ```sql
    CREATE CREDENTIAL [https://mitutorials.blob.core.windows.net/databases]
        WITH IDENTITY = 'SHARED ACCESS SIGNATURE',
-           SECRET = 'sv=2017-11-09&ss=bfqt&srt=sco&sp=rwdlacup&se=2028-09-06T02:52:55Z&st=2018-09-04T18:52:55Z&spr=https&sig=WOTiM%2FS4GVF%2FEEs9DGQR9Im0W%2BwndxW2CQ7%2B5fHd7Is%3D'
+           SECRET = '<secret>'
    ```
 
 1. Restore the backup from the Azure storage blob container. For example:

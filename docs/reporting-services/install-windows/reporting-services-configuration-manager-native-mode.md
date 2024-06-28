@@ -52,9 +52,7 @@ The Report Server Configuration Manager is version-specific. The Report Server C
 1. From the Windows **Start** menu, enter **Report Server** and select **Report Server Configuration Manager** from the search results to start the Report Server Configuration Manager. Alternately, depending on your version of Microsoft Windows, you can select **Start**, point to **All Programs**, point to [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)] Reporting Services, and then select **Report Server Configuration Manager**.
 
     
-   If you want to configure a report server instance from a previous version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], open the program folder for that version. For example, point to [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] instead of [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)] to open the configuration tools for [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] server components.
-
-   Select **Report Server Configuration Manager**.
+   If you want to configure a report server instance from a previous version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], open the program folder for that version. For example, point to [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] instead of [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)] to open the configuration tools for [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] server components and select **Report Server Configuration Manager**.
 
 1. In **Server Name**, specify the name of the computer on which the report server instance is installed. The name of the local computer appears by default. Enter the name of a remote [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance if you want to connect to a report server that is installed on a remote computer.
 

@@ -44,7 +44,7 @@ DISTINCT
 Specifies that AVG operates only on one unique instance of each value, regardless of how many times that value occurs.
   
 *expression*  
-An [expression](../../t-sql/language-elements/expressions-transact-sql.md) of the exact numeric or approximate numeric data type category, except for the **bit** data type. Aggregate functions and subqueries are not permitted.
+An [expression](../../t-sql/language-elements/expressions-transact-sql.md) of the exact numeric or approximate numeric data type category, except for the **bit** data type. Aggregate functions and subqueries aren't permitted.
   
 OVER **(** [ *partition_by_clause* ] _order\_by\_clause_**)**  
 *partition_by_clause* divides the result set produced by the FROM clause into partitions to which the function is applied. If not specified, the function treats all rows of the query result set as a single group. The *order_by_clause* determines the logical order in which the operation is performed. The *order_by_clause* is required. For more information, see [OVER Clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).
@@ -63,11 +63,11 @@ The evaluated result of *expression* determines the return type.
 |**float** and **real** category|**float**|  
   
 ## Remarks  
-If the data type of *expression* is an alias data type, the return type is also of the alias data type. However, if the base data type of the alias data type is promoted, for example from **tinyint** to **int**, the return value will take the promoted data type, and not the alias data type.
+If the data type of *expression* is an alias data type, the return type is also of the alias data type. However, if the base data type of the alias data type is promoted, for example from **tinyint** to **int**, the return value takes the promoted data type, and not the alias data type.
   
-AVG () computes the average of a set of values by dividing the sum of those values by the count of nonnull values. If the sum exceeds the maximum value for the data type of the return value, AVG() will return an error.
+AVG () computes the average of a set of values by dividing the sum of those values by the count of non-null values. If the sum exceeds the maximum value for the data type of the return value, AVG() returns an error.
   
-AVG is a deterministic function when used without the OVER and ORDER BY clauses. It is nondeterministic when specified with the OVER and ORDER BY clauses. For more information, see [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).
+AVG is a deterministic function when used without the OVER and ORDER BY clauses. It's nondeterministic when specified with the OVER and ORDER BY clauses. For more information, see [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md). Also, AVG may appear to behave as a nondeterministic function when you use it with [float and real](../data-types/float-and-real-transact-sql.md) data types. But the underlying reason is the approximate nature of these data types.
   
 ## Examples  
   
@@ -122,7 +122,7 @@ NULL        0.00                  1252127.9471
 ```  
   
 ### C. Using AVG with DISTINCT  
-This statement returns the average list price of products in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database. Through the use of DISTINCT, the calculation considers only unique values.
+This statement returns the average list price of products in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database. By using DISTINCT, the calculation considers only unique values.
   
 ```sql
 SELECT AVG(DISTINCT ListPrice)  
@@ -193,7 +193,7 @@ BusinessEntityID TerritoryID SalesYear   SalesYTD             MovingAvg         
   
 ```  
   
-In this example, the OVER clause does not include PARTITION BY. This means that the function will apply to all rows returned by the query. The ORDER BY clause specified in the OVER clause determines the logical order to which the AVG function applies. The query returns a moving average of sales, by year, for all sales territories specified in the WHERE clause. The ORDER BY clause specified in the SELECT statement determines the order in which the SELECT statement displays the rows of the query.
+In this example, the OVER clause doesn't include PARTITION BY. This means that the function applies to all rows returned by the query. The ORDER BY clause specified in the OVER clause determines the logical order to which the AVG function applies. The query returns a moving average of sales, by year, for all sales territories specified in the WHERE clause. The ORDER BY clause specified in the SELECT statement determines the order in which the SELECT statement displays the rows of the query.
   
 ```sql
 SELECT BusinessEntityID, TerritoryID   

@@ -91,22 +91,6 @@ For synchronized users, the authentication fails or works based on the following
 | Microsoft Entra authentication    | Fails     | Works     |
 | Windows authentication    | Works     | Fails     |
 
-### Example scenarios
-
-Previously, customers who had synchronized users between AD and Microsoft Entra ID wouldn't be able to authenticate with a login created from a Windows principal, whether they used Windows authentication or Microsoft Entra authentication that was synced from AD. With the **Windows** authentication cache mode, customers can now authenticate with a login created from a Windows principal using Windows authentication or the synchronized Microsoft Entra principal. Here are some detailed examples that show the outcome of the authentication process based on the authentication cache mode and the login type:
-
-- **Scenario 1**: A customer has a Windows login that is synchronized between AD and Microsoft Entra ID. The authentication cache mode is set to **Windows**. The customer can connect using Windows authentication and Microsoft Entra authentication.
-
-- **Scenario 2**: A customer has a Microsoft Entra login that is synchronized between AD and Microsoft Entra ID. The authentication cache mode is set to **Windows**. The customer can't connect using Windows authentication or Microsoft Entra authentication.
-
-- **Scenario 3**: A customer has a Microsoft Entra login that is synchronized between AD and Microsoft Entra ID. The authentication cache mode is set to **Microsoft Entra**. The customer can connect using Windows authentication and Microsoft Entra authentication.
-
-- **Scenario 4**: A customer has a Windows login that is synchronized between AD and Microsoft Entra ID. The authentication cache mode is set to **Microsoft Entra**. The customer can't connect using Windows authentication or Microsoft Entra authentication.
-
-- **Scenario 5**: A customer has a Windows login that is synchronized between AD and Microsoft Entra ID. The authentication cache mode is set to **Paired**. The customer can connect using Windows authentication, but not Microsoft Entra authentication.
-
-- **Scenario 6**: A customer has a Microsoft Entra login that is synchronized between AD and Microsoft Entra ID. The authentication cache mode is set to **Paired**. The customer can connect using Microsoft Entra authentication, but not Windows authentication.
-
 ## Related content
 
 Learn more about implementing Windows Authentication for Microsoft Entra principals on Azure SQL Managed Instance:

@@ -36,7 +36,7 @@ To install a trial version of SQL Server, go to [SQL Server evaluations](https:/
 
 - PolyBase can be installed on only one SQL Server instance per machine.
 
-- The PolyBase service requires a domain account.
+- PolyBase installation does not support NT AUTHORITY\SYSTEM.
 
 - You cannot add features to a failover cluster instance after creation. For example, you cannot add the PolyBase feature to an existing failover cluster instance.
 

@@ -4,7 +4,7 @@ description: Learn how to configure settings for the Data Migration Assistant by
 author: ajithkr-ms
 ms.author: ajithkr
 ms.reviewer: randolphwest
-ms.date: 07/25/2022
+ms.date: 06/28/2024
 ms.service: sql
 ms.subservice: dma
 ms.topic: conceptual
@@ -16,15 +16,17 @@ helpviewer_keywords:
 
 # Configure settings for Data Migration Assistant
 
+[!INCLUDE [deprecation-notice](includes/deprecation-notice.md)]
+
 You can fine-tune certain behavior of Data Migration Assistant by setting configuration values in the dma.exe.config file. This article describes key configuration values.
 
-You can find the dma.exe.config file for the Data Migration Assistant desktop application and the command-line utility, in the following folders on your machine.
+You can find the `dma.exe.config` file for the Data Migration Assistant desktop application and the command-line utility, in the following folders on your machine.
 
-- Desktop Application
+- Desktop application
 
   `%ProgramFiles%\Microsoft Data Migration Assistant\dma.exe.config`
 
-- Command-Line Utility
+- Command-line utility
 
   `%ProgramFiles%\Microsoft Data Migration Assistant\dmacmd.exe.config`
 
@@ -46,7 +48,7 @@ Starting with Data Migration Assistant v2.0, you can control this by setting the
 
 ## Number of databases to migrate in parallel
 
-Data Migration Assistant migrates multiple databases in parallel, before migrating logins. During migration, Data Migration Assistant will take a backup of the source database, optionally copy the backup, and then restore it on the target server. You may encounter timeout failures when several databases are selected for migration.
+Data Migration Assistant migrates multiple databases in parallel, before migrating logins. During migration, Data Migration Assistant will take a backup of the source database, optionally copy the backup, and then restore it on the target server. You might encounter timeout failures when several databases are selected for migration.
 
 Starting with Data Migration Assistant v2.0, if you experience this problem you can reduce the parallelDatabases configuration value. You can increase the value to reduce the overall migration time.
 
@@ -62,7 +64,7 @@ Starting with Data Migration Assistant v2.0, if you experience this problem you 
 
 During assessment, Data Migration Assistant extracts data-tier application (dacpac) to understand the database schema. This operation can fail with time-outs for large databases, or if the server is under load. Starting with Data Migration v1.0, you can modify the following configuration values to avoid errors.
 
-> [!NOTE]
+> [!NOTE]  
 > The entire `<dacfx>` entry is commented by default. Remove the comments and then modify the value as needed.
 
 - commandTimeout
@@ -71,7 +73,7 @@ During assessment, Data Migration Assistant extracts data-tier application (dacp
 
 - databaseLockTimeout
 
-  This parameter is equivalent to [SET LOCK\_TIMEOUT timeout\_period](../t-sql/statements/set-lock-timeout-transact-sql.md) in *milliseconds*. (Default=5000)
+  This parameter is equivalent to [SET LOCK_TIMEOUT](../t-sql/statements/set-lock-timeout-transact-sql.md) in *milliseconds*. (Default=5000)
 
 - maxDataReaderDegreeOfParallelism
 
@@ -113,6 +115,6 @@ Each rule has an error code in its title. If you don't need rules and want to ig
 </workflowSettings>
 ```
 
-## See also
+## Related content
 
 - [Data Migration Assistant Download](https://www.microsoft.com/download/details.aspx?id=53595)

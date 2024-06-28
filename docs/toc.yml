@@ -6059,9 +6059,10 @@ items:
     - name: Run at command prompt
       href: dea/database-experimentation-assistant-run-command-prompt.md
   - name: Database Migration Assistant (DMA)
-    href: dma/dma-overview.md
     items:
-    - name: Usage and Diagnostic Data
+    - name: Overview
+      href: dma/dma-overview.md
+    - name: Usage and diagnostic data
       href: dma/dma-diagnostic-data-collection.md
     - name: What's new
       href: dma/dma-whats-new.md

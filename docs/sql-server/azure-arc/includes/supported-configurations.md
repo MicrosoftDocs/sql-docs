@@ -9,7 +9,7 @@ ms.topic: include
 
 ### SQL Server version
 
-[!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] enabled by Azure Arc supports [!INCLUDE [sssql11-md](../../../includes/sssql11-md.md)] and later versions, running on one of the following versions of the Windows or Linux operating system:
+[!INCLUDE [sssql11-md](../../../includes/sssql11-md.md)] and later versions.
 
 ### Operating systems
 
@@ -23,7 +23,9 @@ ms.topic: include
 
 ### .NET Framework
 
-On Windows, .NET Framework 4.7.2 and later. This requirement begins with extension version `1.1.2504.99` (November, 14 2023 release). Without this version, the extension might not function as intended. Windows Server 2012 R2 does not come with .NET Framework 4.7.2 by default and must be updated accordingly.
+On Windows, .NET Framework 4.7.2 and later.
+
+This requirement begins with extension version `1.1.2504.99` (November, 14 2023 release). Without this version, the extension might not function as intended. Windows Server 2012 R2 does not come with .NET Framework 4.7.2 by default and must be updated accordingly.
 
 ### Support on VMware
 

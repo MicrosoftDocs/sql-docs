@@ -6,6 +6,7 @@ ms.author: sashan
 ms.reviewer: mikeray, randolphwest
 ms.date: 02/16/2024
 ms.topic: conceptual
+ms.custom: references_regions
 ---
 
 # SQL Server enabled by Azure Arc
@@ -43,7 +44,7 @@ You can optimize the configuration of your SQL Server instances for best perform
 
 [!INCLUDE [entra-id](../../includes/entra-id.md)]
 
-Starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], Azure Arc enabled SQL Servers can utilize Microsoft Entra ID for authentication, bringing a modern centralized identity and access management solution to SQL Server. Microsoft Entra authentication provides greatly enhanced security over traditional username and password-based authentication, which is **not recommended**. For more information about the risks and challenges passwords pose, refer to ["What’s the solution to the growing problem of passwords?](https://news.microsoft.com/features/whats-solution-growing-problem-passwords-says-microsoft/) Microsoft Entra authentication removes the need for self-managed secrets entirely when communicating with Azure resources, through managed identity authentication. For user-based authentication, Microsoft Entra ID supports enhanced security measures including multi-factor authentication (MFA), single sign-on (SSO), and modern identity practices.
+Starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], Azure Arc enabled SQL Servers can utilize Microsoft Entra ID for authentication, bringing a modern centralized identity and access management solution to SQL Server. Microsoft Entra authentication provides greatly enhanced security over traditional username and password-based authentication, which is **not recommended**. For more information about the risks and challenges passwords pose, refer to ["What’s the solution to the growing problem of passwords?"](https://news.microsoft.com/features/whats-solution-growing-problem-passwords-says-microsoft/). Microsoft Entra authentication removes the need for self-managed secrets entirely when communicating with Azure resources, through managed identity authentication. For user-based authentication, Microsoft Entra ID supports enhanced security measures including multifactor authentication (MFA), single sign-on (SSO), and modern identity practices.
 
 ## Microsoft Defender for Cloud
 

@@ -116,7 +116,7 @@ Assignment operation between **table** variables isn't supported.
 Because **table** variables have limited scope and aren't part of the persistent database, transaction rollbacks don't affect them.
 Table variables can't be altered after creation.
 
-Tables variables can't be used in an INSERT EXEC or SELECT INTO statement.
+Tables variables can't be used as the target of the `INTO` clause in a `SELECT ... INTO` statement.
 
 You can't use the EXEC statement or the `sp_executesql` stored procedure to run a dynamic SQL Server query that refers a table variable, if the table variable was created outside the EXEC statement or the `sp_executesql` stored procedure. Because table variables can be referenced in their local scope only, an EXEC statement and a `sp_executesql` stored procedure would be outside the scope of the table variable. However, you can create the table variable and perform all processing inside the EXEC statement or the `sp_executesql` stored procedure because then the table variables local scope is in the EXEC statement or the `sp_executesql` stored procedure.
 

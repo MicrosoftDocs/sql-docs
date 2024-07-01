@@ -1,12 +1,12 @@
 ---
-title: "What's new in Reporting Services"
-description: Learn about what's new in the different versions of SQL Server Reporting Services, including changes to the major feature areas.
+title: "What's new in SQL Server Reporting Services (SSRS)"
+description: Learn about what's new in the different versions of SQL Server Reporting Services (SSRS), including changes to the major feature areas.
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 09/16/2022
 ms.service: reporting-services
 ms.subservice: reporting-services
-ms.topic: conceptual
+ms.topic: whats-new
 ms.custom:
   - intro-whats-new
   - updatefrequency5
@@ -24,7 +24,14 @@ For information about Power BI Report Server, see [What's new in Power BI Report
 
 ## SQL Server 2022 Reporting Services
 
-This release introduces the new [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] Reporting Services (SSRS). We continue to innovate, create, and design in a way that gives everyone the ability to achieve more. Designing for inclusivity reflects how people adapt to the world around them. In this new release of SSRS, we've done a lot of accessibility work to make sure we're empowering people to achieve more. The release includes enhanced Windows Narrator support for the new Windows OS (Operating Systems) and Windows Server, security enhancements, browser performance improvements with Angular, accessibility bug fixes, support for [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] instances report server catalog and reliability updates.
+This release introduces the new [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] Reporting Services (SSRS). We continue to innovate, create, and design in a way that gives everyone the ability to achieve more. Designing for inclusivity reflects how people adapt to the world around them. In this new release of SSRS, we made significant accessibility improvements to make sure we're empowering people to achieve more. The release includes:
+
+- Windows Narrator support enhancements for the new Windows OS (Operating Systems) and Windows Server 
+- Security enhancements
+- Browser performance improvements with Angular
+- Accessibility bug fixes
+- Support for [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] instances report server catalog
+- Reliability updates
 
 Download [**SQL Server 2022 Reporting Services**](https://www.microsoft.com/download/details.aspx?id=104502) from the Microsoft Download Center.
 
@@ -32,11 +39,11 @@ Download [**SQL Server 2022 Reporting Services**](https://www.microsoft.com/down
 
 The web portal received a face lift.
 
-:::image type="content" source="../reporting-services/media/report-server-2022-web-portal.png" alt-text="Screenshot that shows the new updated [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] Reporting Services web portal." lightbox="../reporting-services/media/report-server-2022-web-portal.png":::
+:::image type="content" source="../reporting-services/media/report-server-2022-web-portal.png" alt-text="Screenshot of the updated [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] Reporting Services web portal." lightbox="../reporting-services/media/report-server-2022-web-portal.png":::
 
 ### Deprecated features
 
-In 2020, we announced the upcoming deprecation of Report Server features [Pin to Power BI, Mobile Reports, and Mobile Report Publisher](deprecated-features-in-sql-server-reporting-services-ssrs.md). These features will be removed from versions of SQL Server starting with [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] and will no longer be supported. Only the last three releases, SQL Server 2016, SQL Server 2017, and SQL Server 2019, will be supported in maintenance mode until EOL (End of Life) for existing customers.
+In 2020, we announced the upcoming deprecation of Report Server features [Pin to Power BI, Mobile Reports, and Mobile Report Publisher](deprecated-features-in-sql-server-reporting-services-ssrs.md). These features were removed from versions of SQL Server starting with [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] and are no longer supported. SQL Server 2016, SQL Server 2017, and SQL Server 2019 are supported in maintenance mode until EOS (End of Service) for existing customers.
 
 When we mark a feature as deprecated, it means:
 
@@ -209,13 +216,13 @@ For more information, see:
 
 For more information on browser support, see [Browser Support for Reporting Services and Power View](../reporting-services/browser-support-for-reporting-services-and-power-view.md).  
 
-**Modern paginated reports:** Design beautifully modern paginated reports with new, modern styles for charts, gauges, maps, and other data visualizations.
+**Modern paginated reports**: Design beautifully modern paginated reports with new, modern styles for charts, gauges, maps, and other data visualizations.
 
-**Tree Map and Sunburst Charts:** Enhance your reports with Tree Map ![ssrs_treemap_icon](../reporting-services/media/ssrs-treemap-icon.png "ssrs_treemap_icon") and Sunburst ![ssrs_sunburst_icon](../reporting-services/media/ssrs-sunburst-icon.png "ssrs_sunburst_icon") charts, great ways to display hierarchical data. For more information, see [Treemap and sunburst charts in a paginated report in SQL Server Reporting Services (Report Builder)](../reporting-services/report-design/tree-map-and-sunburst-charts-in-reporting-services.md).  
+**Tree Map and Sunburst Charts**: Enhance your reports with Tree Map ![ssrs_treemap_icon](../reporting-services/media/ssrs-treemap-icon.png "ssrs_treemap_icon") and Sunburst ![ssrs_sunburst_icon](../reporting-services/media/ssrs-sunburst-icon.png "ssrs_sunburst_icon") charts, great ways to display hierarchical data. For more information, see [Treemap and sunburst charts in a paginated report in SQL Server Reporting Services (Report Builder)](../reporting-services/report-design/tree-map-and-sunburst-charts-in-reporting-services.md).  
 
-**Report embedding:** You can now embed mobile and paginated reports in other web pages, and applications by using an IFrame, along with URL parameters.  
+**Report embedding**: You can now embed mobile and paginated reports in other web pages, and applications by using an IFrame, along with URL parameters.  
 
-**Pin Report Items to a Power BI Dashboard:** While viewing a report in the [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)], you can select report items and pin them to a [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] dashboard. The items you can pin are charts, gauge panels, maps, and images. You can:
+**Pin Report Items to a Power BI Dashboard**: While viewing a report in the [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)], you can select report items and pin them to a [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] dashboard. The items you can pin are charts, gauge panels, maps, and images. You can:
 
 1. Select the group that contains the dashboard you want to pin to.
 2. Select the dashboard you want to pin the item to.
@@ -228,7 +235,7 @@ For more information on browser support, see [Browser Support for Reporting Serv
 
 For more information, see [Power BI report server integration &#40;Configuration Manager&#41;](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md) and [Pin Reporting Services paginated report items to dashboards in Power BI](../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md).  
 
-**PowerPoint Rendering and Export:** The Microsoft PowerPoint (PPTX) format is a new [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] rendering extension. You can export reports in the PPTX format from the usual applications; Report Builder, Report Designer (in SSDT), and the [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]. For the example, the following image shows the export menu from the [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]. 
+**PowerPoint Rendering and Export**: The Microsoft PowerPoint (PPTX) format is a new [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] rendering extension. You can export reports in the PPTX format from the usual applications; Report Builder, Report Designer (in SSDT), and the [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]. For the example, the following image shows the export menu from the [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]. 
 
 :::image type="content" source="../reporting-services/media/ssrs-export-powerpoint.png" alt-text="Screenshot that shows the Export dropdown list with the PowerPoint option called out.":::
 
@@ -240,7 +247,7 @@ https://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freport
 
 For more information, see [Export a report by using URL access](../reporting-services/export-a-report-using-url-access.md).
 
-**PDF Replaces ActiveX for Remote Printing:** The report viewer toolbar now prints Via PDF instead of ActiveX controls. The new report viewer is supported by most modern browsers, including Microsoft Edge. There are no more ActiveX controls to download. Depending on the browser you use and the PDF viewing applications and services you've installed, [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] either a print dialog box opens to print your report, or you're prompted to download a .PDF file. As an administrator, you can still disable client-side printing from [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].
+**PDF Replaces ActiveX for Remote Printing**: The report viewer toolbar now prints Via PDF instead of ActiveX controls. The new report viewer is supported by most modern browsers, including Microsoft Edge. There are no more ActiveX controls to download. Depending on the browser you use and the PDF viewing applications and services you installed, [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] either a print dialog box opens to print your report, or you're prompted to download a .PDF file. As an administrator, you can still disable client-side printing from [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].
 
 For more information, see [Enable and disable client-side printing for Reporting Services](../reporting-services/report-server/enable-and-disable-client-side-printing-for-reporting-services.md).
 
@@ -261,17 +268,17 @@ The new release of SSDT includes the project templates for [!INCLUDE[ssRSCurrent
 
 ### Report Builder improvements
 
-**New Report Builder User Interface:** The core [!INCLUDE[ssRBnoversion](../includes/ssrbnoversion.md)] user interface is now a modern look and feel with streamlined UI elements.  
+**New Report Builder User Interface**: The core [!INCLUDE[ssRBnoversion](../includes/ssrbnoversion.md)] user interface is now a modern look and feel with streamlined UI elements.  
 
 |New|Previous|  
 |-|-|  
-|:::image type="content" source="../reporting-services/media/ssrs-rbfacelift-new.png" alt-text="Screenshot of the new Report Builder interface.":::|:::image type="content" source="../reporting-services/media/ssrs-rbfacelift-old.png" alt-text="Screenshot of the old Report Builder interface.":::|  
+|:::image type="content" source="../reporting-services/media/ssrs-rbfacelift-new.png" alt-text="Screenshot of the new Report Builder interface.":::|:::image type="content" source="../reporting-services/media/ssrs-rbfacelift-old.png" alt-text="Screenshot of the previous Report Builder interface.":::|  
 
-**Custom Parameters Pane:** You can now customize the parameters pane. Using the design surface in Report Builder, you can drag a parameter to a specific column and row in the parameters pane. You can add and remove columns to change the layout of the pane. For more information, see [Customize the parameters pane in a paginated report (Report Builder)](../reporting-services/report-design/customize-the-parameters-pane-in-a-report-report-builder.md).  
+**Custom Parameters Pane**: You can now customize the parameters pane. Using the design surface in Report Builder, you can drag a parameter to a specific column and row in the parameters pane. You can add and remove columns to change the layout of the pane. For more information, see [Customize the parameters pane in a paginated report (Report Builder)](../reporting-services/report-design/customize-the-parameters-pane-in-a-report-report-builder.md).  
 
 :::image type="content" source="../reporting-services/media/ssrs-customizeparameter-parameterlist-reportdatapane.png" alt-text="Screenshot of the Parameter list in the Report Data pane and the parameters pane for a selected parameter." lightbox="../reporting-services/media/ssrs-customizeparameter-parameterlist-reportdatapane.png":::
 
-**High DPI Support:** [!INCLUDE[ssRBnoversion](../includes/ssrbnoversion.md)] supports High DPI (Dots Per Inch) scaling and devices.  For more information on High DPI, see the following sources:  
+**High DPI Support**: [!INCLUDE[ssRBnoversion](../includes/ssrbnoversion.md)] supports High DPI (Dots Per Inch) scaling and devices.  For more information on High DPI, see the following sources:  
 
 - [Windows 8.1 DPI Scaling Enhancements](https://blogs.windows.com/windowsexperience/2013/07/15/windows-8-1-dpi-scaling-enhancements/)  
 

@@ -54,7 +54,8 @@ The [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] **float**[**(n)**
 | **float** | - 1.79E+308 to -2.23E-308, 0 and 2.23E-308 to 1.79E+308 | Depends on the value of *n* |
 | **real** | - 3.40E + 38 to -1.18E - 38, 0 and 1.18E - 38 to 3.40E + 38 | 4 Bytes |
 
-The float and real data types are known as approximate data types. The behavior of float and real follows the [IEEE 754](https://ieeexplore.ieee.org/document/4610935) specification on approximate numeric data types.
+The float and real data types are known as approximate data types. The behavior of float and real follows the [IEEE 754](https://ieeexplore.ieee.org/document/4610935) specification on approximate numeric data types. To understand how the Microsoft Visual C (MSVC) compiler uses the IEEE 754 standard, see [IEEE Floating-Point Representation](/cpp/build/ieee-floating-point-representation)
+
 
 Approximate numeric data types don't store the exact values specified for many numbers; they store a close approximation of the value. For some applications, the tiny difference between the specified value and the stored approximation isn't relevant. For others though, the difference is important. Because of the approximate nature of the float and real data types, don't use these data types when exact numeric behavior is required. Examples that require precise numeric values are financial or business data, operations involving rounding, or equality checks. In those cases, use the integer, decimal, numeric, money, or smallmoney data types.
 

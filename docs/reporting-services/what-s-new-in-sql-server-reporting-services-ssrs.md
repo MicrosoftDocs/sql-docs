@@ -44,11 +44,11 @@ The web portal received a face lift.
 
 ### Deprecated features
 
-In 2020, we announced the upcoming deprecation of Report Server features [Pin to Power BI, Mobile Reports, and Mobile Report Publisher](deprecated-features-in-sql-server-reporting-services-ssrs.md). These features were removed from versions of SQL Server starting with [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] and are no longer supported. SQL Server 2016, SQL Server 2017, and SQL Server 2019 are supported in maintenance mode until EOS (End of Service) for existing customers.
+In 2020, we announced the upcoming deprecation of Report Server features [Pin to Power BI, Mobile Reports, and Mobile Report Publisher](deprecated-features-in-sql-server-reporting-services-ssrs.md). These features were removed from versions of SQL Server starting with [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] and are no longer supported. SQL Server 2016, SQL Server 2017, and SQL Server 2019 are supported in maintenance mode until End of Service (EOS) for existing customers.
 
 When we mark a feature as deprecated, it means:
 
-- The feature is in maintenance mode only. We'll make no new changes, including changes related to interoperability with new features.
+- The feature is in maintenance mode only. There's no new feature development, including changes related to interoperability with new features.
 - We strive not to remove a deprecated feature from future releases, to make upgrades easier. However, in rare situations, we might choose to permanently remove the feature from Reporting Services if it limits future innovations.
 - For new development work, we don't recommend using deprecated features.
 
@@ -62,15 +62,15 @@ Download [SQL Server 2019 Reporting Services](https://www.microsoft.com/download
 
 ### Azure SQL Managed Instance support
 
-You can now host a database catalog used for SQL Server Reporting Services (SSRS) in an Azure SQL Managed Instance (MI) that's hosted either in a VM or in your data center. Support is limited to using database credentials for the connection to SQL MI.
+You can now host a database catalog used for SSRS in an Azure SQL Managed Instance (MI) that's hosted either in a VM or in your data center. Support is limited to using database credentials for the connection to SQL MI.
 
 ### Power BI Premium dataset support
 
-You can connect to Power BI datasets using either Microsoft Report Builder or SQL Server Data Tools (SSDT). Then you can publish those reports to SSRS 2019 using SQL Server Analysis Services connectivity. Users need to use a stored Windows user name and password to enable the scenario.
+You can connect to Power BI datasets using either Microsoft Report Builder or SQL Server Data Tools (SSDT). Then, you can publish those reports to SSRS 2019 using SQL Server Analysis Services connectivity and use a stored Windows user name and password to enable the scenario.
 
 ### AltText (alternative text) support for report elements
 
-When authoring reports, you can use tooltips to specify text for each element on the report. Screen reader technology identifies these tooltips properly.
+When you author reports, use tooltips to specify text for each element on the report. Screen reader technology identifies these tooltips properly.
 
 <a name='azure-active-directory-application-proxy-support'></a>
 
@@ -78,7 +78,7 @@ When authoring reports, you can use tooltips to specify text for each element on
 
 [!INCLUDE [entra-id](../includes/entra-id.md)]
 
-With Microsoft Entra application proxy, you no longer need to manage your own web application proxy in order to allow secure access via the web or mobile apps.
+With Microsoft Entra application proxy, you no longer need to manage your own web application proxy to allow secure access through the web or mobile apps.
 
 ### Custom headers
 

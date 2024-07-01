@@ -3,13 +3,14 @@ title: "What's new in SQL Server Reporting Services (SSRS)"
 description: Learn about what's new in the different versions of SQL Server Reporting Services (SSRS), including changes to the major feature areas.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 09/16/2022
+ms.date: 07/02/2024
 ms.service: reporting-services
 ms.subservice: reporting-services
 ms.topic: whats-new
 ms.custom:
   - intro-whats-new
   - updatefrequency5
+#customer intent:  As a SQL Server user, I want to stay updated with the latest features and enhancements in SQL Server Reporting Services (SSRS) so that I can leverage new capabilities, improve report performance, and ensure my reporting infrastructure is up-to-date and secure.
 
 ---
 
@@ -46,11 +47,10 @@ The web portal received a face lift.
 
 In 2020, we announced the upcoming deprecation of Report Server features [Pin to Power BI, Mobile Reports, and Mobile Report Publisher](deprecated-features-in-sql-server-reporting-services-ssrs.md). These features were removed from versions of SQL Server starting with [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] and are no longer supported. SQL Server 2016, SQL Server 2017, and SQL Server 2019 are supported in maintenance mode until End of Service (EOS) for existing customers.
 
-When we mark a feature as deprecated, it means:
+When we mark a feature as deprecated, it means that the feature is in maintenance mode only. There's no new feature development, including changes related to interoperability with new features. We strive to keep deprecated features in future releases, to make upgrades easier. However, in rare situations, we might choose to permanently remove the feature from Reporting Services if it limits future innovations.
 
-- The feature is in maintenance mode only. There's no new feature development, including changes related to interoperability with new features.
-- We strive not to remove a deprecated feature from future releases, to make upgrades easier. However, in rare situations, we might choose to permanently remove the feature from Reporting Services if it limits future innovations.
-- For new development work, we don't recommend using deprecated features.
+> [!NOTE]
+> For new development work, we don't recommend using deprecated features.
 
 ::: moniker-end
 
@@ -62,7 +62,7 @@ Download [SQL Server 2019 Reporting Services](https://www.microsoft.com/download
 
 ### Azure SQL Managed Instance support
 
-You can now host a database catalog used for SSRS in an Azure SQL Managed Instance (MI) that's hosted either in a VM or in your data center. Support is limited to using database credentials for the connection to SQL MI.
+You can now host a database catalog used for SSRS in an Azure SQL Managed Instance (MI) hosted either in a virtual machine (VM) or in your data center. Support is limited to using database credentials for the connection to SQL MI.
 
 ### Power BI Premium dataset support
 
@@ -112,7 +112,7 @@ For more information, see [Add comments to a report in a report server - Power B
 
 To enable development of modern applications and customization, SQL Server Reporting Services now supports a fully OpenAPI compliant RESTful API. The full API specification and documentation can now be found on [SwaggerHub](https://app.swaggerhub.com/apis/microsoft-rs/SSRS/2.0).
 
-### Query designer support for DAX now in Report Builder and SQL Server Data Tools
+### Query designer support for data analysis expressions (DAX) now in Report Builder and SQL Server Data Tools
 
 In Report Builder and SQL Server Data Tools, you can now create native DAX queries against supported SQL Server Analysis Services tabular data models. You can use the query designer in both tools to drag and drop the fields you want. The DAX query is then generated for you.
 
@@ -162,7 +162,7 @@ For more information about custom branding, see [Branding the web portal](./bran
 
 You create KPIs directly in the [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] that are contextual to the current folder. When creating KPIs, you can choose dataset fields, and summarize their values. You can also select related content to drill-through to expose more details.
 
-:::image type="content" source="../reporting-services/media/ssrs-webportal-kpi.png" alt-text="Screenshot that shows KPIS in the SQL Server Reporting Services portal.":::
+:::image type="content" source="../reporting-services/media/ssrs-webportal-kpi.png" alt-text="Screenshot that shows KPIs in the SQL Server Reporting Services portal.":::
 
 For more information, see [Working with KPIs in the web portal](./working-with-kpis-in-reporting-services.md).
 
@@ -173,7 +173,7 @@ Reporting Services mobile reports are dedicated reports optimized for a wide var
 - iPad
 - iPhones
 - Android phones
-- or any Windows device
+- Any Windows device
 
 #### Mobile Report Publisher  
 
@@ -217,7 +217,7 @@ For more information on browser support, see [Browser Support for Reporting Serv
 
 **Tree Map and Sunburst Charts**: Enhance your reports with Tree Map ![ssrs_treemap_icon](../reporting-services/media/ssrs-treemap-icon.png "ssrs_treemap_icon") and Sunburst ![ssrs_sunburst_icon](../reporting-services/media/ssrs-sunburst-icon.png "ssrs_sunburst_icon") charts, great ways to display hierarchical data. For more information, see [Treemap and sunburst charts in a paginated report in SQL Server Reporting Services (Report Builder)](../reporting-services/report-design/tree-map-and-sunburst-charts-in-reporting-services.md).  
 
-**Report embedding**: You can now embed mobile and paginated reports in other web pages, and applications by using an IFrame, along with URL parameters.  
+**Report embedding**: You can now embed mobile and paginated reports in other web pages, and applications by using an iframe, along with URL parameters.  
 
 **Pin Report Items to a Power BI Dashboard**: While viewing a report in the [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)], you can select report items and pin them to a [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] dashboard. The items you can pin are charts, gauge panels, maps, and images. You can:
 
@@ -244,7 +244,7 @@ https://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freport
 
 For more information, see [Export a report by using URL access](../reporting-services/export-a-report-using-url-access.md).
 
-**PDF Replaces ActiveX for Remote Printing**: The report viewer toolbar now prints Via PDF instead of ActiveX controls. The new report viewer is supported by most modern browsers, including Microsoft Edge. There are no more ActiveX controls to download. Depending on the browser you use and the PDF viewing applications and services you installed, [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] either a print dialog box opens to print your report, or you're prompted to download a .PDF file. As an administrator, you can still disable client-side printing from [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].
+**PDF Replaces ActiveX for Remote Printing**: The report viewer toolbar now prints Via PDF instead of ActiveX controls. Most browsers support the new report viewer, including Microsoft Edge. There are no more ActiveX controls to download. Depending on the browser you use and the PDF viewing applications and services you installed, [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] either a print dialog opens to print your report, or you can download a .PDF file. As an administrator, you can still disable client-side printing from [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].
 
 For more information, see [Enable and disable client-side printing for Reporting Services](../reporting-services/report-server/enable-and-disable-client-side-printing-for-reporting-services.md).
 
@@ -269,13 +269,13 @@ The new release of SSDT includes the project templates for [!INCLUDE[ssRSCurrent
 
 |New|Previous|  
 |-|-|  
-|:::image type="content" source="../reporting-services/media/ssrs-rbfacelift-new.png" alt-text="Screenshot of the new Report Builder interface.":::|:::image type="content" source="../reporting-services/media/ssrs-rbfacelift-old.png" alt-text="Screenshot of the previous Report Builder interface.":::|  
+| :::image type="content" source="../reporting-services/media/ssrs-rbfacelift-new.png" alt-text="Screenshot of the new Report Builder interface."::: | :::image type="content" source="../reporting-services/media/ssrs-rbfacelift-old.png" alt-text="Screenshot of the previous Report Builder interface."::: |  
 
 **Custom Parameters Pane**: You can now customize the parameters pane. Using the design surface in Report Builder, you can drag a parameter to a specific column and row in the parameters pane. You can add and remove columns to change the layout of the pane. For more information, see [Customize the parameters pane in a paginated report (Report Builder)](../reporting-services/report-design/customize-the-parameters-pane-in-a-report-report-builder.md).  
 
 :::image type="content" source="../reporting-services/media/ssrs-customizeparameter-parameterlist-reportdatapane.png" alt-text="Screenshot of the Parameter list in the Report Data pane and the parameters pane for a selected parameter." lightbox="../reporting-services/media/ssrs-customizeparameter-parameterlist-reportdatapane.png":::
 
-**High DPI Support**: [!INCLUDE[ssRBnoversion](../includes/ssrbnoversion.md)] supports High DPI (Dots Per Inch) scaling and devices.  For more information on High DPI, see the following sources:  
+**High DPI Support**: [!INCLUDE[ssRBnoversion](../includes/ssrbnoversion.md)] supports High DPI (Dots Per Inch) scaling and devices. For more information on High DPI, see the following sources:  
 
 - [Windows 8.1 DPI Scaling Enhancements](https://blogs.windows.com/windowsexperience/2013/07/15/windows-8-1-dpi-scaling-enhancements/)  
 

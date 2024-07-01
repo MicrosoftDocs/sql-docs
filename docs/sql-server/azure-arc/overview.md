@@ -117,8 +117,6 @@ The following diagram illustrates the architecture of [!INCLUDE [ssazurearc](../
 
 [!INCLUDE [features-edition](includes/features-edition.md)]
 
-## Supported SQL Server versions and environments
-
 [!INCLUDE [supported-configurations](includes/supported-configurations.md)]
 
 ## Unsupported configurations

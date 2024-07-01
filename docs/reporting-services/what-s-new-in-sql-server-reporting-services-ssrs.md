@@ -10,6 +10,7 @@ ms.topic: whats-new
 ms.custom:
   - intro-whats-new
   - updatefrequency5
+
 ---
 
 # What's new in SQL Server Reporting Services (SSRS)
@@ -24,6 +25,8 @@ For information about Power BI Report Server, see [What's new in Power BI Report
 
 ## SQL Server 2022 Reporting Services
 
+Download [SQL Server 2022 Reporting Services](https://www.microsoft.com/download/details.aspx?id=104502) from the Microsoft Download Center.
+
 This release introduces the new [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] Reporting Services (SSRS). We continue to innovate, create, and design in a way that gives everyone the ability to achieve more. Designing for inclusivity reflects how people adapt to the world around them. In this new release of SSRS, we made significant accessibility improvements to make sure we're empowering people to achieve more. The release includes:
 
 - Windows Narrator support enhancements for the new Windows OS (Operating Systems) and Windows Server 
@@ -32,8 +35,6 @@ This release introduces the new [!INCLUDE [sssql22-md](../includes/sssql22-md.md
 - Accessibility bug fixes
 - Support for [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] instances report server catalog
 - Reliability updates
-
-Download [**SQL Server 2022 Reporting Services**](https://www.microsoft.com/download/details.aspx?id=104502) from the Microsoft Download Center.
 
 ### Updated web portal
 
@@ -57,9 +58,7 @@ When we mark a feature as deprecated, it means:
 
 ## SQL Server 2019 Reporting Services
 
-**Download** :::image type="icon" source="../includes/media/download.svg" border="false":::
-
-[SQL Server 2019 Reporting Services](https://www.microsoft.com/download/details.aspx?id=100122) is available for download from the Microsoft Download Center.
+Download [SQL Server 2019 Reporting Services](https://www.microsoft.com/download/details.aspx?id=100122) from the Microsoft Download Center.
 
 ### Azure SQL Managed Instance support
 
@@ -99,9 +98,7 @@ The newly released version of Report Builder is fully compatible with the 2016, 
 
 ## SQL Server 2017 Reporting Services
 
-**Download** :::image type="icon" source="../includes/media/download.svg" border="false":::
-
-To download SQL Server 2017 Reporting Services, go to the  **[Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=55252)**.
+Download [SQL Server 2017 Reporting Services](https://www.microsoft.com/download/details.aspx?id=55252) from the Microsoft Download Center.
 
 ### Comments on reports
 
@@ -133,7 +130,7 @@ SharePoint integrated mode is deprecated after SQL Server 2016. To add Reporting
 
 ::: moniker-end
 
-## SSRS 2016
+## SQL Server 2016 Reporting Services
 
 ### Reporting Services [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]  
 

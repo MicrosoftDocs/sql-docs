@@ -22,7 +22,7 @@ helpviewer_keywords:
 
 Use the Report Server Configuration Manager to configure a SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (SSRS) Native mode installation to perform the following tasks:  
   
-- **Configure the Report Server service account**: The account is configured during setup. Modify the account by using the Report Server Configuration Manager if you update the password or want to use a different account.  
+- **Configure the Report Server service account**: The account is configured during setup, but you can modify it by using the Report Server Configuration Manager if you update the password or want to use a different account.  
   
 - **Create and configure URLs**: The report server and the [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] are [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] applications accessed through URLs. The report server URL provides access to the SOAP endpoints of the report server. The [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] URL opens the [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]. Use the Report Server Configuration Manager to configure a single URL or multiple URLs for each application.  
   
@@ -49,7 +49,7 @@ The Report Server Configuration Manager is version-specific. The Report Server C
 
 1. Ensure that your system and permissions are set up correctly. For more information, see [Hardware and software requirements for installing SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).
  
-1. From the Windows **Start** menu, enter **Report Server** and select **Report Server Configuration Manager** from the search results to start the Report Server Configuration Manager. Alternately, depending on your version of Microsoft Windows, you can select **Start**, go to **All Programs**, point to [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)] Reporting Services and select **Report Server Configuration Manager**.
+1. From the Windows **Start** menu, enter **Report Server** and select **Report Server Configuration Manager** from the search results to start the Report Server Configuration Manager. Alternately, depending on your version of Microsoft Windows, you can select **Start**, go to **All Programs**, go to [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)] Reporting Services and select **Report Server Configuration Manager**.
     
    If you want to configure a report server instance from a previous version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], open the program folder for that version. For example, go to [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] instead of [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)] to open the configuration tools for [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] server components and select **Report Server Configuration Manager**.
 

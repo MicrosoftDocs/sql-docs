@@ -32,7 +32,7 @@ Use the Report Server Configuration Manager to configure a SQL Server [!INCLUDE[
   
 - **Backup, restore, or replace the symmetric key**: A symmetric key encrypts stored connection strings and credentials. You must have a backup of the symmetric key if you change the service account or move a report server database to another computer.  
   
-- **Configure the unattended execution account**: This account provides remote connections during scheduled operations or when user credentials aren't available.  
+- **Configure the unattended execution account**: This account enables remote connections during scheduled operations or when user credentials aren't available.  
   
 - **Configure report server email**: [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] includes a report server email delivery extension that uses a Simple Mail Transfer Protocol (SMTP) to deliver reports or report processing notifications to an electronic mailbox. Use the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager to specify which SMTP server or gateway on your network to use for email delivery.  
   
@@ -53,7 +53,7 @@ The Report Server Configuration Manager is version-specific. The Report Server C
     
    If you want to configure a report server instance from a previous version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], open the program folder for that version. For example, go to [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] instead of [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)] to open the configuration tools for [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] server components and select **Report Server Configuration Manager**.
 
-1. In **Server Name**, specify the name of the computer where the report server instance is installed. The name of the local computer appears by default. Enter the name of a remote [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance if you want to connect to a report server that's installed on a remote computer.
+1. In **Server Name**, specify the name of the computer where the report server instance is installed. The name of the local computer appears by default. Enter the name of a remote [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance if you want to connect to a report server installed on a remote computer.
 
 1. If you specify a remote computer, select **Find** to establish a connection.
 

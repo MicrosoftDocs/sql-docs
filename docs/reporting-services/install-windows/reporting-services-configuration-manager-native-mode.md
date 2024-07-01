@@ -45,7 +45,7 @@ A full deployment requires that you also use [!INCLUDE[ssNoVersion](../../includ
 
 The Report Server Configuration Manager is version-specific. The Report Server Configuration Manager that installs with this version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can't be used to configure an earlier version of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. If you're running older and newer versions of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] side-by-side on the same computer, you must use the Report Server Configuration Manager that comes with each version to configure each instance.  
 
-## Get Started
+## Get started
 
 1. Ensure that your system and permissions are set up correctly. For more information, see [Hardware and software requirements for installing SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).
  

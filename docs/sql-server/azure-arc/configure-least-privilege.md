@@ -110,10 +110,10 @@ To verify that your SQL Server enabled by Azure Arc is configured to run with le
 
 1. Open task scheduler in the server and check that an event driven task with name `SqlServerExtensionPermissionProvider` is created under `Microsoft\SqlServerExtension`.
 
-  > [!NOTE]
-  > Prior to the July, 2024 release, `SqlServerExtensionPermissionProvider` is a scheduled task. It runs hourly.
-  >
-  > Open task scheduler in the server and check that a scheduled task with name `SqlServerExtensionPermissionProvider` is created under `Microsoft\SqlServerExtension`.
+   > [!NOTE]
+   > Prior to the July, 2024 release, `SqlServerExtensionPermissionProvider` is a scheduled task. It runs hourly.
+   >
+   > Open task scheduler in the server and check that a scheduled task with name `SqlServerExtensionPermissionProvider` is created under `Microsoft\SqlServerExtension`.
 
 1. Open SQL Server Management Studio and check the login named `NT Service\SqlServerExtension`. Verify that the account is assigned these permissions:
 

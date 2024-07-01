@@ -91,40 +91,38 @@ You can use [Azure PowerShell](/powershell/azure/install-azure-powershell) to gr
 
 [!INCLUDE [Azure AD PowerShell deprecation note](~/../azure-sql/reusable-content/msgraph-powershell/includes/aad-powershell-deprecation-note.md)]
 
-1. Search for Microsoft Graph 
+1. Connect to Microsoft Graph
 
    ```powershell
-   $AAD_SP = Get-AzureADServicePrincipal -Filter "DisplayName eq 'Microsoft Graph'"
+   Connect-MgGraph -Scopes "AppRoleAssignment.ReadWrite.All" -TenantId "<tenant id>"
    ```
 
 1. Retrieve the managed identity: 
 
    ```powershell
-   $MSI = Get-AzureADServicePrincipal -Filter "DisplayName eq '<your managed identity display name>'"
+   $Graph_SP = Get-MgServicePrincipal -Filter "DisplayName eq 'Microsoft Graph'"
+   $MSI = Get-MgServicePrincipal -Filter "displayName eq '<your managed identity display name>'"
    ```
 
 1. Assign the `User.Read.All` role to the identity: 
 
    ```powershell
-   $AAD_AppRole = $AAD_SP.AppRoles | Where-Object {$_.Value -eq "User.Read.All"}
-   New-AzureADServiceAppRoleAssignment -ObjectId $MSI.ObjectId  -PrincipalId $MSI.ObjectId  
-   -ResourceId $AAD_SP.ObjectId  -Id $AAD_AppRole.Id
+   $AAD_AppRole = $Graph_SP.AppRoles | Where-Object {$_.Value -eq "User.Read.All"}  
+   New-MgServicePrincipalAppRoleAssignment -ServicePrincipalId $MSI.Id -BodyParameter @{principalId=$MSI.Id; resourceId=$Graph_SP.Id; appRoleId=$AAD_AppRole.Id}
    ```
 
 1. Assign `GroupMember.Read.All` role to the identity: 
 
     ```powershell
-    $AAD_AppRole = $AAD_SP.AppRoles | Where-Object {$_.Value -eq "GroupMember.Read.All"}  
-    New-AzureADServiceAppRoleAssignment -ObjectId $MSI.ObjectId  -PrincipalId $MSI.ObjectId  
-    -ResourceId $AAD_SP.ObjectId  -Id $AAD_AppRole.Id 
+    $AAD_AppRole = $Graph_SP.AppRoles | Where-Object {$_.Value -eq "GroupMember.Read.All"}  
+    New-MgServicePrincipalAppRoleAssignment -ServicePrincipalId $MSI.Id -BodyParameter @{principalId=$MSI.Id; resourceId=$Graph_SP.Id; appRoleId=$AAD_AppRole.Id}
     ```
 
 1. Assign `Application.Read.All` role to the identity: 
 
    ```powershell
-   $AAD_AppRole = $AAD_SP.AppRoles | Where-Object {$_.Value -eq "Application.Read.All"}  
-   New-AzureADServiceAppRoleAssignment -ObjectId $MSI.ObjectId  -PrincipalId $MSI.ObjectId  
-   -ResourceId $AAD_SP.ObjectId  -Id $AAD_AppRole.Id 
+   $AAD_AppRole = $Graph_SP.AppRoles | Where-Object {$_.Value -eq "Application.Read.All"}  
+   New-MgServicePrincipalAppRoleAssignment -ServicePrincipalId $MSI.Id -BodyParameter @{principalId=$MSI.Id; resourceId=$Graph_SP.Id; appRoleId=$AAD_AppRole.Id}
    ```
 
 You can validate permissions were assigned to the managed identity by doing the following:

@@ -17,6 +17,9 @@ Support for Azure Arc-enabled [!INCLUDE [ssnoversion-md](../../../includes/ssnov
 > [!IMPORTANT]  
 > Windows Server 2012 and Windows Server 2012 R2 support ended on October 10, 2023. For more information, see [SQL Server 2012 and Windows Server 2012/2012 R2 end of support](/lifecycle/announcements/sql-server-2012-windows-server-2012-2012-r2-end-of-support).
 
+> [!NOTE]
+> Since extension version `1.1.2504.99`, the minimum required version of the .NET Framework to run the extension is 4.7.2. Without this version, the extension might not function as intended. Note that Windows Server 2012 R2 does not come with .NET Framework 4.7.2 by default and must be updated accordingly.
+
 ### Support on VMware
 
 You can deploy SQL Server enabled by Azure Arc in VMware VMs running:

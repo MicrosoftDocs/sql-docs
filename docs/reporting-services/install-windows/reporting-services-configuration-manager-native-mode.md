@@ -3,10 +3,10 @@ title: "What is Report Server Configuration Manager (Native mode)?"
 description: "Learn about the Report Server Configuration Manager so that you can configure a SQL Server Reporting Services (SSRS) Native mode installation."
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 06/28/2024
+ms.date: 07/01/2024
 ms.service: reporting-services
 ms.subservice: report-server
-ms.topic: conceptual
+ms.topic: overview
 ms.custom: updatefrequency5
 helpviewer_keywords:
   - "Reporting Services Configuration tool"

@@ -22,15 +22,15 @@ How you control the rows and columns depends on whether you have a table or a ma
 If you export the report to Excel, the header doesn't freeze automatically. You can freeze the pane in Excel. For more information, see the **Page Headers and Footers** section of [Export a paginated report to Microsoft Excel (Report Builder)](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
-> Even if a table has row and column groups, you cannot keep those group headers visible while scrolling  
+> Even if a table has row and column groups, you can't keep those group headers visible while scrolling  
   
 The following image shows a table:
+
+:::image type="content" source="../../reporting-services/report-design/media/table.png" alt-text="Screenshot of an empty table in Report Builder.":::
   
- ![Screenshot of a table.](../../reporting-services/report-design/media/table.png "Table")  
-  
-The following image shows a matrix.  
-  
- ![Screenshot of a matrix.](../../reporting-services/report-design/media/matrix.png "Matrix")  
+The following image shows a matrix:
+
+:::image type="content" source="../../reporting-services/report-design/media/matrix.png" alt-text="Screenshot of a matrix in Report Builder highlighting row and column groups.":::
   
 > [!NOTE]  
 > [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -40,22 +40,24 @@ The following image shows a matrix.
 1. Right-click the row, column, or corner handle of a tablix data region, and then select **Tablix Properties**.  
   
 1. On the **General** tab, under **Row Headers** or **Column Headers**, select **Header should remain visible while scrolling**.  
-  
+
+    :::image type="content" source="../../reporting-services/report-design/media/header-should-remain-visible-while-scrolling.png" alt-text="Screenshot of the Tablix Properties dialog box highlighting the options to select Keep header visible while scrolling.":::
+
 1. Select **OK**.
   
 ## Keep a static tablix member (row or column) visible while scrolling  
   
 1. On the design surface, select anywhere in the table to display static members, and groups, in the grouping pane.  
+
+    :::image type="content" source="../../reporting-services/report-design/media/grouppane-updated.png" alt-text="Screenshot of Report Builder showing a matrix with groups shown in the Grouping pane.":::
+
+    The **Row Groups** pane displays the hierarchical static and dynamic members for the row groups hierarchy, and the **Column Groups** pane shows a similar display for the column groups hierarchy.  
   
-     ![Grouping pane](../../reporting-services/report-design/media/grouppane-updated.png "Grouping pane")  
+1. On the right side of the **Grouping** pane, select the dropdown, and then select **Advanced Mode**.  
   
-    The Row Groups pane displays the hierarchical static and dynamic members for the row groups hierarchy, and the Column groups pane shows a similar display for the column groups hierarchy.  
-  
-1. On the right side of the grouping pane, select the down arrow, and then select **Advanced Mode**.  
-  
-1. Select the static member (row or column) that you want to remain visible while scrolling. The Properties pane displays the **Tablix Member** properties.  
-  
-     ![Tablix Member properties](../../reporting-services/report-design/media/grouppane-tablixmember-updated.png "Tablix Member properties")  
+1. Select the static member (row or column) that you want to remain visible while scrolling. The **Properties** pane displays the **Tablix Member** properties.  
+
+    :::image type="content" source="../../reporting-services/report-design/media/grouppane-tablixmember-updated.png" alt-text="Screenshot of Report Builder highligting a group in the Grouping pane and its FixedData property in the Properties pane":::
   
 1. In the Properties pane, set **FixedData** to **True**.  
   

@@ -110,7 +110,7 @@ Specifies the name of the primary file for an attachable database. This database
 
 ### Use ANSI quoted identifiers
 
-Specifies that `QUOTED_IDENTIFIERS` is set to on when the ODBC driver for SQL Server connects. When this check box is selected, SQL Server enforces ANSI rules regarding quote marks. Double quotes can only be used for identifiers, such as column and table names. Character strings must be enclosed in single quotes:
+Specifies that `QUOTED_IDENTIFIER` is set to on when the ODBC driver for SQL Server connects. When this check box is selected, SQL Server enforces ANSI rules regarding quote marks. Double quotes can only be used for identifiers, such as column and table names. Character strings must be enclosed in single quotes:
 
 ```sql
 SELECT "LastName"

@@ -269,13 +269,9 @@ You can use verbose logging to see more detailed information about errors occurr
     
 1. To disable verbose logging, follow the same previous steps to remove the entire `-Output` line that you added earlier. 
 
-
-
 ## Related content
 
 - [Transactional replication overview](../../relational-databases/replication/transactional/transactional-replication.md)
 - [Replication tutorials](../../relational-databases/replication/replication-tutorials.md)
-- [ReplTalk blog](https://blogs.msdn.microsoft.com/repltalk)
 
 [!INCLUDE[get-help-options](../../includes/paragraph-content/get-help-options.md)]
-

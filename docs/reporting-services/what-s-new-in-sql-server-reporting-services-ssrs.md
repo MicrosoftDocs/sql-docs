@@ -11,7 +11,6 @@ ms.custom:
   - intro-whats-new
   - updatefrequency5
 #customer intent:  As a SQL Server user, I want to stay updated with the latest features and enhancements in SQL Server Reporting Services (SSRS) so that I can leverage new capabilities, improve report performance, and ensure my reporting infrastructure is up-to-date and secure.
-
 ---
 
 # What's new in SQL Server Reporting Services (SSRS)
@@ -62,7 +61,7 @@ Download [SQL Server 2019 Reporting Services](https://www.microsoft.com/download
 
 ### Azure SQL Managed Instance support
 
-You can now host a database catalog used for SSRS in an Azure SQL Managed Instance (MI) hosted either in a virtual machine (VM) or in your data center. Support is limited to using database credentials for the connection to SQL MI.
+You can now host a database catalog used for SSRS in an Azure SQL Managed Instance (MI) either on a virtual machine (VM) or in your data center. Support is limited to using database credentials for the connection to SQL MI.
 
 ### Power BI Premium dataset support
 
@@ -82,7 +81,7 @@ With Microsoft Entra application proxy, you no longer need to manage your own we
 
 ### Custom headers
 
-Sets header values for all URLs matching the specified regex pattern. Users can update the custom header value with valid XML to set header values for selected request URLs. Admins can add any number of headers in the XML. See [Custom headers](tools/server-properties-advanced-page-reporting-services.md#customheaders) in the **Server Properties Advanced Page** article for details.
+Sets header values for all URLs matching the specified regex pattern. You can update the custom header value with valid XML to set header values for selected request URLs. Administrators can add any number of headers in the XML. For more information, see [Custom headers](tools/server-properties-advanced-page-reporting-services.md#customheaders).
 
 ### Transparent data encryption
 

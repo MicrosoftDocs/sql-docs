@@ -147,7 +147,7 @@ To create mobile reports, you need the [!INCLUDE[SS_MobileReptPub_Short](../incl
 
 [!INCLUDE [ssrs-mobile-report-deprecated](../includes/ssrs-mobile-report-deprecated.md)]
 
-For more information about the [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)], see [The web portal of a report server (Native Mode)](../reporting-services/web-portal-ssrs-native-mode.md).  
+For more information about the [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)], see [The web portal of a report server (Native mode)](../reporting-services/web-portal-ssrs-native-mode.md).  
 
 :::image type="content" source="../reporting-services/media/ssrsportal.png" alt-text="Screenshot of the SQL Server Reporting Services portal.":::
 
@@ -167,7 +167,9 @@ For more information, see [Work with KPIs in Reporting Services](./working-with-
 
 ### Mobile reports
 
-Reporting Services mobile reports are dedicated reports optimized for a wide variety of form factors. They provide an optimal experience for users who access reports on mobile devices. Mobile reports feature an assortment of visualizations, from time, category, and comparison charts, to tree maps and custom maps. Connect your mobile reports to a range of data sources, including on-premises SQL Server Analysis Services multidimensional and tabular data. You can place fields for mobile reports on a design surface that has adjustable grid rows and columns. The flexible mobile report elements automatically scale to fit any screen size. Save the mobile reports to a Reporting Service server, and view and interact with them in a browser or the Power BI mobile app. You can use the following mobile devices to access the reports:
+Reporting Services mobile reports are dedicated reports optimized for a wide variety of form factors. They provide an optimal experience for users who access reports on mobile devices. Mobile reports feature an assortment of visualizations, from time, category, and comparison charts, to tree maps and custom maps. 
+
+Connect your mobile reports to a range of data sources, including on-premises SQL Server Analysis Services multidimensional and tabular data. You can place fields for mobile reports on a design surface that has adjustable grid rows and columns. The flexible mobile report elements automatically scale to fit any screen size. Save the mobile reports to a Reporting Service server, and view and interact with them in a browser or the Power BI mobile app. You can use the following mobile devices to access the reports:
 
 - iPad
 - iPhones
@@ -214,15 +216,15 @@ For more information on browser support, see [Browser support for Reporting Serv
 
 **Paginated reports**: Design beautifully paginated reports with updated styles for charts, gauges, maps, and other data visualizations.
 
-**Treemap and Sunburst Charts**: Enhance your reports with Treemap ![ssrs_treemap_icon](../reporting-services/media/ssrs-treemap-icon.png "ssrs_treemap_icon") and Sunburst ![ssrs_sunburst_icon](../reporting-services/media/ssrs-sunburst-icon.png "ssrs_sunburst_icon") charts, great ways to display hierarchical data. For more information, see [Treemap and sunburst charts in a paginated report in SQL Server Reporting Services](../reporting-services/report-design/tree-map-and-sunburst-charts-in-reporting-services.md).  
+**Treemap and Sunburst Charts**: Enhance your reports with Treemap :::image type="icon" source="../reporting-services/media/ssrs-treemap-icon.png" border="false"::: and Sunburst :::image type="icon" source="../reporting-services/media/ssrs-sunburst-icon.png "ssrs_sunburst_icon"" border="false"::: charts, great ways to display hierarchical data. For more information, see [Treemap and sunburst charts in a paginated report in SQL Server Reporting Services](../reporting-services/report-design/tree-map-and-sunburst-charts-in-reporting-services.md).  
 
 **Embed reports**: Embed mobile and paginated reports in other web pages and applications by using an iframe and URL parameters.  
 
 **Pin Report Items to a Power BI Dashboard**: While viewing a report in the [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)], select report items and pin them to a [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] dashboard. The items you can pin are charts, gauge panels, maps, and images. You can:
 
-- Select the group that contains the dashboard you want to pin to.
-- Select the dashboard you want to pin the item to.
-- Select how frequently you want the tile updated in the dashboard.
+- **Select a group** that contains the dashboard you want to pin to.
+- **Select a dashboard** you want to pin the item to.
+- **Select a frequency of updates** you want to schedule.
 
 > [!NOTE]
 > [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] subscriptions manage the report refresh. After the item is pinned, you can edit the subscription and configure a different refresh schedule.

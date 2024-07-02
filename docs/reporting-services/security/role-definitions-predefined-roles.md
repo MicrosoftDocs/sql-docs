@@ -3,7 +3,7 @@ title: Predefined roles in Reporting Services
 description: Learn how to use predefined roles in Reporting Services to quickly assign permissions for the people you want to use your report server.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 06/24/2024
+ms.date: 07/02/2024
 ms.service: reporting-services
 ms.subservice: security
 ms.topic: conceptual
@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "default security"
   - "role-based security [Reporting Services], defaults"
  
-#customer intent: As a Reporting Services administrator, I want learn what the differences are between the predefined roles so that I can quickly use them to set up access in my report server.
+#customer intent: As a Reporting Services administrator, I want to learn the differences between the predefined roles so that I can quickly use them to set up access in my report server.
 ---
 # Predefined roles in Reporting Services
 
@@ -25,7 +25,7 @@ helpviewer_keywords:
   
 Review the predefined roles to determine whether you can use them without modification. If you need to adjust the tasks or define other roles, you should adjust them before you begin assigning users to specific roles. To create or edit custom roles, use SQL Server Management Studio. For more information, see [Create, delete, or modify a role &#40;Management Studio&#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md).
   
-When you're ready to assign roles, identify which users and groups require access and privileges to the report server. You should assign most users to the **Browser** role or the **Report Builder** role. A few users should be assigned to the **Publisher** role. Few users should be assigned to **Content Manager**.  
+When you're ready to assign roles, identify which users and groups require access and privileges to the report server. You should assign most users to the **Browser** role or the **Report Builder** role. Only a few users should be assigned to the **Publisher** role. Few users should be assigned to **Content Manager**.  
 
 When you're ready to assign user and group accounts to specific roles, use the web portal. For more information, see [Grant user access to a report server](../../reporting-services/security/grant-user-access-to-a-report-server.md).  
   
@@ -39,11 +39,11 @@ The following table describes the predefined scope of the roles:
   
 |Predefined role|Scope|Description|  
 |---------------------|-----------|-----------------|  
-|[Content Manager Role](#bkmk_content)|Item|Able to manage content in the Report Server. This access includes folders, reports, and resources.|  
-|[Publisher Role](#bkmk_publisher)|Item|Able to publish reports and linked reports to the Report Server.|  
-|[Browser Role](#bkmk_browser)|Item|Able to view folders, reports, and subscribe to reports.|  
-|[Report Builder Role](#bkmk_reportbuilder)|Item|Able to view report definitions.|  
-|[My Reports Role](#bkmk_myreports)|Item|Able to publish reports and linked reports; manage folders, reports, and resources in a users My Reports folder.|  
+|[Content Manager Role](#bkmk_content)|Item|Manage content in the Report Server. This access includes folders, reports, and resources.|  
+|[Publisher Role](#bkmk_publisher)|Item|Publish reports and linked reports to the Report Server.|  
+|[Browser Role](#bkmk_browser)|Item|View folders, reports, and subscribe to reports.|  
+|[Report Builder Role](#bkmk_reportbuilder)|Item|View report definitions.|  
+|[My Reports Role](#bkmk_myreports)|Item|Publish reports and linked reports; manage folders, reports, and resources in a user's My Reports folder.|  
 |[System Administrator Role](#bkmk_systemadministrator)|System|View and modify system role assignments, system role definitions, system properties, and shared schedules, in addition to create role definitions, and manage jobs in Management Studio.|  
 |[System User Role](#bkmk_systemuser)|System|View system properties, shared schedules, and allow use of Report Builder or other clients that execute report definitions.|  
   
@@ -142,7 +142,7 @@ At a minimum, this role should support both the **View reports** task and the **
   
 ## <a name="bkmk_reportbuilder"></a> Report Builder role  
 
-The **Report Builder** role is a predefined role that includes tasks for loading reports in Report Builder and viewing and navigating the folder hierarchy. You must also have a system role assignment that includes the **Execute report definitions** task to create and modify reports in Report Builder. This task is required for processing reports locally in Report Builder.  
+The **Report Builder** role is a predefined role that includes tasks for loading reports in Report Builder and viewing and navigating the folder hierarchy. You need a system role assignment that includes the **Execute report definitions** task to create and modify reports in Report Builder. This task is required for processing reports locally in Report Builder.  
   
 ### Report Builder tasks  
 
@@ -181,9 +181,9 @@ The following table lists tasks that are included in the **My Reports** role:
 |Task|Description|  
 |----------|-----------------|  
 |Comment on reports|Create, view, edit, and delete comments on reports.|
-|Create linked reports|Create linked reports that are based on reports that are stored in the user's My Reports folder.|  
+|Create linked reports|Create linked reports based on reports that are stored in the user's My Reports folder.|  
 |Manage comments|Delete other users' comments on reports.|
-|Manage data sources|Create and delete shared data source items, view, and modify data source properties and content.|  
+|Manage data sources|Create and delete shared data source items. View and modify data source properties and content.|  
 |Manage folders|Create, view, and delete folders, and view and modify folder properties.|  
 |Manage individual subscriptions|Create, view, modify, and delete subscriptions for reports and linked reports.|  
 |Manage report history|Create, view, and delete report history, view report history properties. Also includes view and modify settings that determine snapshot history limits and how caching works.|  
@@ -191,12 +191,12 @@ The following table lists tasks that are included in the **My Reports** role:
 |Manage resources|Create, modify, and delete resources, and view and modify resource properties.|  
 |View data sources|View shared data source items in the folder hierarchy.|  
 |View folders|View folder contents.|  
-|View reports|Run reports that are stored in the user's My Reports folder and view report properties.|  
+|View reports|Run reports stored in the user's My Reports folder and view report properties.|  
 |View resources|View resources and resource properties.|  
   
 ### Customize the My Reports role  
 
-You can modify this role to suit your needs. However, you should keep the **Manage reports** task and the **Manage folders** task to enable basic content management. In addition, this role should support all view-based tasks so that users can see folder contents and run the reports that they manage.  
+You can modify this role to suit your needs. However, you should keep the **Manage reports** task and the **Manage folders** task to enable basic content management. This role should support all view-based tasks so that users can see folder contents and run the reports that they manage.  
   
 Although the **Set security for individual items** task isn't part of the role definition by default, you can add this task to the **My Reports** role so that users can customize security settings for subfolders and reports.  
   
@@ -206,7 +206,7 @@ The **System Administrator** role is a predefined role that includes tasks that 
   
 To create a role assignment that includes this role, use the **Site settings** page in the web portal, or right-click the **System Administrator** role from the **Object Explorer** in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
-The **System Administrator** role doesn't convey the same full range of permissions that a local administrator might have on a computer. Rather, the **System Administrator** role includes operations that are performed at the site level, and not the item level. For users who require access to both site-wide operations and items stored on the report server, create a second role assignment on the **Roles** folder that includes the **Content Manager** role. Together, the two role definitions provide a complete set of tasks for users who require full access to all items on a report server.  
+The **System Administrator** role doesn't convey the same full range of permissions that a local administrator might have on a computer. Instead, the **System Administrator** role includes operations that are performed at the site level, and not the item level. For users who require access to both site-wide operations and items stored on the report server, create a second role assignment on the **Roles** folder that includes the **Content Manager** role. Together, the two role definitions provide a complete set of tasks for users who require full access to all items on a report server.  
   
 ### System Administrator tasks  
 
@@ -214,11 +214,11 @@ The following table lists tasks that are included in the **System Administrator*
   
 |Task|Description|  
 |----------|-----------------|  
-|Execute report definitions|Start execution for report definition without publishing it to a report server.|  
+|Execute report definitions|Run report definition without publishing it to a report server.|  
 |Manage jobs|View and cancel jobs that are running. For more information, see [Manage a running process](../../reporting-services/subscriptions/manage-a-running-process.md).|  
 |Manage report server properties|View and modify properties that apply to the report server and to items that the report server manages.<br /><br /> This task supports renaming the web portal, enabling My Reports, and setting report history defaults.|  
 |Manage report server security|View and modify system-wide role assignments|  
-|Manage roles|Create, view, and modify, and delete role definitions.<br /><br /> Members of the **System Administrator** role can use the **Site settings** page to manage roles.|  
+|Manage roles|Create, view, modify, and delete role definitions.<br /><br /> Members of the **System Administrator** role can use the **Site settings** page to manage roles.|  
 |Manage shared schedules|Create, view, modify, and delete shared schedules that are used to run or refresh reports.|  
   
 The **System Administrator** role is used in default security.  
@@ -234,7 +234,7 @@ The following table lists tasks that are included in the **System User** role de
 |Task|Description|  
 |----------|-----------------|  
 |Execute report definitions|Run a report without publishing it to a report server.|  
-|View report server properties|View properties that apply to the report server, such as the application name, whether the My Reports setting is enabled, and report history defaults.<br /><br /> If you remove this task from the **System User** role, the **Site settings** page isn't available. Also, the application title isn't displayed at the top of each page. By default, the title for the web portal is "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]."|  
+|View report server properties|View properties that apply to the report server, such as the application name, whether the My Reports setting is enabled, and report history defaults.<br /><br /> If you remove this task from the **System User** role, the **Site settings** page isn't available. The application title isn't displayed at the top of each page. By default, the title for the web portal is "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]."|  
 |View shared schedules|View shared schedules that are used to run reports or refresh a report.<br /><br /> If you remove this task from the **System User** role, users can't select shared schedules to use with subscriptions and other scheduled operations.|  
   
 The **System User** role can be used to supplement default security. You can include the role in new role assignments that extend report server access to report users. For more information, see [Grant permissions on a native mode report server](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md).  

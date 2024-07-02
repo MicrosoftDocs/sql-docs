@@ -75,7 +75,6 @@ This switch is used by the client when connecting to Azure SQL Database, Azure S
 
 > [!IMPORTANT]
 > The `-G` option only applies to Azure SQL Database, Azure SQL Managed Instance, and Azure Synapse Analytics.
-
 > Microsoft Entra interactive authentication is not currently supported on Linux or macOS. Microsoft Entra integrated authentication requires [Microsoft ODBC Driver 17 for SQL Server](../download-odbc-driver-for-sql-server.md) version 17.6.1 or higher and a properly [configured Kerberos environment](using-integrated-authentication.md#configure-kerberos).
 
 

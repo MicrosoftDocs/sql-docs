@@ -270,7 +270,8 @@ For information, see [Using Connection String Keywords with OLE DB Driver for SQ
 |**User ID**|DBPROP_AUTH_USERID|The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] login name.|  
 |**Workstation ID**|SSPROP_INIT_WSID|The workstation identifier.|  
   
- **Note** In the connection string, the "Old Password" property sets SSPROP_AUTH_OLD_PASSWORD, which is the current (possibly expired) password that is not available via a provider string property.  
+ > [!Note]
+ > In the connection string, the "Old Password" property sets SSPROP_AUTH_OLD_PASSWORD, which is the current (possibly expired) password that is not available via a provider string property.  
   
 ## See also  
  [Building Applications with SQL Server Native Client](../../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)  

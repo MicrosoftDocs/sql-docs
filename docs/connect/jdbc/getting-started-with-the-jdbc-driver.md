@@ -2,7 +2,7 @@
 title: Getting started
 description: Learn how to get started with Java development and database connectivity using the Microsoft JDBC Driver for SQL Server.
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: 08/12/2019
 ms.service: sql
 ms.subservice: connectivity

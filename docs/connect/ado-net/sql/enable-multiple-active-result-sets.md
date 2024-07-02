@@ -2,7 +2,7 @@
 title: "Enabling Multiple Active Result Sets"
 description: "Discusses how to use MARS with SQL Server."
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.reviewer: v-kaywon
 ms.date: "09/30/2019"
 ms.service: sql

@@ -1,8 +1,8 @@
 ---
 title: "Configure Log Shipping"
 description: This article teaches you to configure Log Shipping for your SQL Server on Azure VMs.
-author: tarynpratt
-ms.author: tarynpratt
+author: AbdullahMSFT
+ms.author: amamun
 ms.reviewer: mathoma, randolphwest
 ms.date: 02/26/2024
 ms.service: virtual-machines-sql

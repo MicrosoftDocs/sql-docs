@@ -2,7 +2,7 @@
 title: "setString Method (long, java.lang.String, int, int) - NClob"
 description: "setString Method (long, java.lang.String, int, int) (SQLServerNClob)"
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: "01/19/2017"
 ms.service: sql
 ms.subservice: connectivity

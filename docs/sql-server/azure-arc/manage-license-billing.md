@@ -18,25 +18,27 @@ You can use one of the three licensing options.
 
 - [License by virtual cores](#license-vcores)
 
-   Use Enterprise or Standard license for the vCPUs (v-cores) of the virtual machine that runs one or multiple instances of SQL Server.
+   Use Enterprise or Standard license for the vCPUs (v-cores) of the virtual machine that runs one or multiple instances of SQL Server. Each virtual machine is billed individually for the v-core allocated to it. The following diagram illustrates this licensing method and shows its cost implications.
 
    :::image type="content" source="media/billing/virtual-core-licensing.svg" alt-text="Screenshot illustrating the virtual core licensing option.":::
 
 - [License by physical cores without virtual machines option](#license-pcores-without-vms)
 
-   Use Enterprise or Standard Edition license for the physical cores (p-cores) of the host that runs one or multiple instances of SQL installed directly on the host without using VMs.
+   Use Enterprise or Standard Edition license for the physical cores (p-cores) of the host that runs one or multiple instances of SQL installed directly on the host without using VMs. Each instance has access to all p-cores supported by the installed edition limits up to all p-cores of the host. Regardless of the instance limits though, the host is billed for all the p-cores based on the highest SQL Server edition installed on it. For details, review [Compute capacity limits by edition](../compute-capacity-limits-by-edition-of-sql-server.md).
+
+   The following diagram illustrates the cost implications of deploying two standard edition instances on a physical host without using VMs.
 
    :::image type="content" source="media/billing/physical-core-licensing-without-vms.svg" alt-text="Screenshot illustrating the physical core licensing without using virtual machines.":::
 
 - [License by physical cores with unlimited virtualization](#unlimited-virtualization)
 
-   Use Enterprise Edition license for the physical cores (p-cores) of the host that runs any number of virtual machines with any number of instances of SQL Server.
+   Use Enterprise Edition license for the physical cores (p-cores) of the host that runs any number of virtual machines with any number of instances of SQL Server. A single p-core license is a separate Azure resource representing all licensed p-cores and is billed independently. The following diagram illustrates the cost implications of licensing a physical host and using unlimited virtualization.
 
    :::image type="content" source="media/billing/physical-core-licensing-with-vms.svg" alt-text="Screenshot illustrating the physical core licensing using unlimited virtualization.":::
 
 > [!NOTE]
 >
-> *Normalized cores* (NC) illustrates the cost implications of different licensing options. One Standard Edition core license is an equivalent of one NC. One Enterprise Edition core license is an equivalent of four NCs. For more information, see  [How licenses apply to Azure resources](/azure/cost-management-billing/scope-level/overview-azure-hybrid-benefit-scope#how-licenses-apply-to-azure-resources).
+> *Normalized cores* (NC) are used to illustrate the cost implications of different licensing options. One Standard Edition core license is an equivalent of one NC. One Enterprise Edition core license is an equivalent of four NCs. For more information, see  [How licenses apply to Azure resources](/azure/cost-management-billing/scope-level/overview-azure-hybrid-benefit-scope#how-licenses-apply-to-azure-resources).
 
 For each of these options, you have to decide how you want to pay for the license. The following table shows your payment options.
 
@@ -161,7 +163,7 @@ The **Billing plan** property provides a choice between paying for the license o
 > 1.  has the **Physical core license** property set to True. 
 > 1.  has the **License type** property set to match the selected **Billing plan** of the p-core license. 
 >
-> For more details, see [Apply physical core license](manage-configuration.md#apply-physical-core-license).
+> For more details, see [Apply physical core license](manage-configuration.md#use-physical-core-license).
 
 The **Activation state** property controls when the license takes effect. The license can be activated during creation, or created first and then activated at a later time. The delayed activation allows you to coordinate it with other events in the licensing lifecycle, such as the expiration of an existing Enterprise Agreement. The **Last activated** and **Last deactivated** timestamp properties show when the license was last activated and deactivated. For more details, see [Change SQL Server license properties](manage-configuration.md#change-license-resource).
 

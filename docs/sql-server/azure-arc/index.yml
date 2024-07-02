@@ -3,7 +3,7 @@ title: SQL Server enabled by Azure Arc
 summary: Index of articles about SQL Server enabled by Azure Arc.
 
 metadata:
-  title: SQL Server enabled by Azure Arc
+  title: Documentation
   description: Learn how to connect and manage on-premises, edge, and multicloud instances of SQL Server in Azure.
   ms.service: sql
   ms.topic: landing-page
@@ -11,7 +11,7 @@ metadata:
 
 landingContent:
  # Card
-  - title: About SQL Server enabled by Azure Arc
+  - title: About
     linkLists: 
       - linkListType: overview
         links:
@@ -35,7 +35,7 @@ landingContent:
             url: ../end-of-support/sql-server-extended-security-updates.md
  
  # Card
-  - title: Arc-enable SQL Server
+  - title: Configure
     linkLists: 
       - linkListType: concept
         links:

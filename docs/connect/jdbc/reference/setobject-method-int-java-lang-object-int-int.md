@@ -2,7 +2,7 @@
 title: "setObject Method (int, java.lang.Object, int, int)"
 description: "setObject Method (int, java.lang.Object, int, int)"
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: "01/19/2017"
 ms.service: sql
 ms.subservice: connectivity

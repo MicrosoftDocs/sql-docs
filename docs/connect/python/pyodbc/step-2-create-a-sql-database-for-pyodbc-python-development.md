@@ -2,7 +2,7 @@
 title: Step 2 - Create an SQL database for pyodbc
 description: Step 2 of this getting started guide involves creating a database in SQL Server or Azure SQL Database for this pyodbc sample.
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: 08/22/2023
 ms.service: sql
 ms.subservice: connectivity

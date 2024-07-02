@@ -2,7 +2,7 @@
 title: Connect to an Azure SQL database
 description: This article discusses issues when you use the Microsoft JDBC Driver for SQL Server to connect to an Azure SQL Database.
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: 07/26/2022
 ms.service: sql
 ms.subservice: connectivity

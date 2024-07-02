@@ -2,7 +2,7 @@
 title: "SQL Server security"
 description: "Provides an overview of SQL Server security features, and application scenarios for creating secure ADO.NET applications that target SQL Server."
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.reviewer: v-kaywon
 ms.date: "09/26/2019"
 ms.service: sql

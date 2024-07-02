@@ -2,7 +2,7 @@
 title: "Performing Asynchronous Operations"
 description: OLE DB Driver for SQL Server supports asynchronous database operations, which enables methods to return without blocking on the calling thread.
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: "06/12/2018"
 ms.service: sql
 ms.subservice: connectivity

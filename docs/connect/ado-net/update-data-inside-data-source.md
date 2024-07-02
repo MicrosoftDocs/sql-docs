@@ -2,7 +2,7 @@
 title: "Updating data in a data source"
 description: Describes how to execute commands or stored procedures that modify data in a database.
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.reviewer: v-chmalh
 ms.date: "11/25/2020"
 ms.service: sql

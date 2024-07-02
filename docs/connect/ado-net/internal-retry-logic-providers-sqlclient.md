@@ -2,7 +2,7 @@
 title: Internal retry logic providers in SqlClient
 description: Learn how to use the built-in configurable retry logic providers in your application to handle transient errors against your database.
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.reviewer: v-deshtehari
 ms.date: 03/22/2021
 ms.service: sql

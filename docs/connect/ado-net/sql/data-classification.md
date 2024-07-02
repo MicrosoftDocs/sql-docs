@@ -2,7 +2,7 @@
 title: Data discovery and classification in SqlClient
 description: Describes how to check if a SQL Server database supports data classification and how to access data classification information through a SqlDataReader object.
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.reviewer: v-davidengel
 ms.date: 06/01/2022
 ms.service: sql

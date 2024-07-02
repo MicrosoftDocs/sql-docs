@@ -2,7 +2,7 @@
 title: Step 3 - Connecting to SQL using pymssql
 description: Step 3 is a PoC, which shows how you can connect to SQL Server using Python and pymssql. The basic examples demonstrate selecting and inserting data.
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: 08/22/2023
 ms.service: sql
 ms.subservice: connectivity

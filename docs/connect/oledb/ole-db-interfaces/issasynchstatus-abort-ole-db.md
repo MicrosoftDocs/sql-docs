@@ -2,7 +2,7 @@
 title: "ISSAsynchStatus::Abort (OLE DB driver)"
 description: "Learn how the ISSAsynchStatus::Abort method cancels an asynchronously executing operation in OLE DB Driver for SQL Server."
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: "06/14/2018"
 ms.service: sql
 ms.subservice: connectivity

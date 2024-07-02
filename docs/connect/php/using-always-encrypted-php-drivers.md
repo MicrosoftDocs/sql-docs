@@ -2,7 +2,7 @@
 title: Using Always Encrypted
 description: Learn how to use Always Encrypted with the PHP Drivers for SQL Server to protect sensitive data in your application.
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: 12/12/2019
 ms.service: sql
 ms.subservice: connectivity

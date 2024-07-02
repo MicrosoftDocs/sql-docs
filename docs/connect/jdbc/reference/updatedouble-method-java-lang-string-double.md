@@ -2,7 +2,7 @@
 title: "updateDouble Method (java.lang.String, double)"
 description: "updateDouble Method (java.lang.String, double)"
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: "01/19/2017"
 ms.service: sql
 ms.subservice: connectivity

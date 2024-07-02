@@ -25,7 +25,7 @@ Azure SQL Managed Instance offers the following two update policies:
 - **Always-up-to-date** update policy: The instance has access to all SQL engine features as soon as they're available in Azure. The internal database format is no longer aligned with the latest version of SQL Server, and instead evolves with each newly introduced feature.
 
 > [!IMPORTANT]
-> Regardless of the configured update policy, all instances will continue receiving updates and features that _don't_ require changes to the SQL engine, such as the following features:  [zone redundancy](high-availability-sla.md#zone-redundant-availability), [instance stop and start](instance-stop-start-how-to.md), and [fast provisioning](management-operations-overview.md?#fast-provisioning). 
+> Regardless of the configured update policy, all instances will continue receiving updates and features that _don't_ require changes to the SQL engine, such as the following features:  [zone redundancy](high-availability-sla-local-zone-redundancy.md#zone-redundant-availability), [instance stop and start](instance-stop-start-how-to.md), and [fast provisioning](management-operations-overview.md?#fast-provisioning). 
 
 ## SQL Server 2022 update policy
 

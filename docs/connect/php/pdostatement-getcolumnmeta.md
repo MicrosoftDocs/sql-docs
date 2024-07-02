@@ -2,7 +2,7 @@
 title: "PDOStatement::getColumnMeta"
 description: "API reference for the PDOStatement::getColumnMeta function in the Microsoft PDO_SQLSRV Driver for PHP for SQL Server."
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: "01/29/2021"
 ms.service: sql
 ms.subservice: connectivity

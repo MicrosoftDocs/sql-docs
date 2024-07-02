@@ -1,10 +1,10 @@
 - name: Azure SQL Documentation
   href: index.yml
-- name: Azure SQL 
-  items: 
-  - name: What is Azure SQL? 
+- name: Azure SQL
+  items:
+  - name: What is Azure SQL?
     href: azure-sql-iaas-vs-paas-what-is-overview.md
-  - name: Migrate to Azure SQL 
+  - name: Migrate to Azure SQL
     href: migration-guides/index.yml
   - name: Migrating SQL Server Workloads FAQ
     href: migration-guides/modernization.md
@@ -18,8 +18,8 @@
     - name: Reserved capacity
       href: database/reserved-capacity-overview.md
 
-  - name: Shared concepts 
-    items: 
+  - name: Shared concepts
+    items:
     - name: Feature comparison
       href: database/features-comparison.md
     - name: Multi-model features
@@ -105,7 +105,7 @@
       displayName: Backup, back up, restore, recovery
       items:
 
-        - name: Backup and recovery 
+        - name: Backup and recovery
           items:
           - name: Accelerated database recovery
             href: accelerated-database-recovery.md
@@ -178,15 +178,14 @@
       - name: Ruby
         href: database/connect-query-ruby.md
 
-
-    - name: Business continuity  
-      items: 
+    - name: Business continuity
+      items:
       - name: Configure temporal retention policy
         href: database/temporal-tables-retention-policy.md
       - name: Configure long-term backup retention
         href: database/long-term-backup-retention-configure.md
 
-    - name: Security  
+    - name: Security
       items:
       - name: Microsoft Entra authentication
         items:
@@ -201,16 +200,16 @@
         - name: Create server with Microsoft Entra-only authentication enabled
           href: database/authentication-azure-ad-only-authentication-create-server.md
         - name: Create and utilize Microsoft Entra server logins
-          href: database/authentication-azure-ad-logins-tutorial.md  
+          href: database/authentication-azure-ad-logins-tutorial.md
       - name: Configure TDE with BYOK
         href: database/transparent-data-encryption-byok-configure.md
       - name: Always Encrypted
-        items: 
+        items:
         - name: Getting started with Always Encrypted
           href: /sql/relational-databases/security/encryption/always-encrypted-tutorial-getting-started
-  
+
     - name: Monitor & tune
-      items: 
+      items:
       - name: Identify query performance issues
         href: identify-query-performance-issues.md
       - name: Troubleshoot performance issues
@@ -249,7 +248,7 @@
         href: /azure/connectors/connectors-create-api-sqlazure?toc=/azure/azure-sql/toc.json
       - name: Index with Azure Cognitive Search
         href: /azure/search/search-howto-connecting-azure-sql-database-to-azure-search-using-indexers?toc=/azure/azure-sql/toc.json
-      - name: Server-side CLR/.NET integration 
+      - name: Server-side CLR/.NET integration
         href: /sql/relational-databases/clr-integration/common-language-runtime-integration-overview
       - name: Java
         items:
@@ -268,7 +267,7 @@
     href: database/index.yml
   - name: Overview
     items:
-    - name: What is SQL Database? 
+    - name: What is SQL Database?
       href: database/sql-database-paas-overview.md
     - name: What's new?
       href: database/doc-changes-updates-release-notes-whats-new.md
@@ -283,7 +282,7 @@
     - name: Natural language to SQL
       href: copilot/query-editor-natural-language-to-sql-copilot.md
     - name: Intelligent applications and AI
-      href: database/ai-artificial-intelligence-intelligent-applications.md      
+      href: database/ai-artificial-intelligence-intelligent-applications.md
   - name: Quickstarts
     href: database/quickstart-content-reference-guide.md
     items:
@@ -324,7 +323,7 @@
         href: database/azure-sql-python-quickstart.md
       - name: Node.js with mssql
         href: database/azure-sql-javascript-mssql-quickstart.md
-      - name: Use the Azure portal query editor 
+      - name: Use the Azure portal query editor
         href: database/connect-query-portal.md
     - name: GitHub Actions
       href: database/connect-github-actions-sql-db.md
@@ -340,7 +339,7 @@
       - name: Design database using .NET
         href: database/design-first-database-csharp-tutorial.md
     - name: Business continuity
-      items: 
+      items:
         - name: Geo-distributed application
           href: database/geo-distributed-application-configure-tutorial.md
         - name: Active geo-replication
@@ -349,7 +348,7 @@
       items:
       - name: Always Encrypted with secure enclaves
         href: database/always-encrypted-enclaves-getting-started.md
-        items: 
+        items:
         - name: Always Encrypted with secure enclaves using SGX
           href: database/always-encrypted-enclaves-getting-started-sgx.md
         - name: Always Encrypted with secure enclaves using VBS
@@ -359,7 +358,7 @@
       - name: Create users using service principals
         href: database/authentication-aad-service-principal-tutorial.md
     - name: Move data
-      items: 
+      items:
       - name: Migrate using DMS
         href: /azure/dms/tutorial-sql-server-to-azure-sql?toc=/azure/azure-sql/toc.json
       - name: Set up SQL Data Sync
@@ -367,7 +366,7 @@
       - name: Migrate SQLite to serverless
         href: database/migrate-sqlite-db-to-azure-sql-serverless-offline-tutorial.md
     - name: Scale out
-      items: 
+      items:
       - name: Configure Hyperscale named replicas
         href: database/hyperscale-named-replica-configure.md
       - name: Configure isolated access for Hyperscale named replicas
@@ -395,7 +394,7 @@
       - name: Monitor In-memory OLTP space
         href: database/in-memory-oltp-monitor-space.md
     - name: Hyperscale
-      items: 
+      items:
       - name: Overview
         displayName: Hyperscale service tier
         href: database/service-tier-hyperscale.md
@@ -403,7 +402,7 @@
         href: database/hyperscale-architecture.md
       - name: Elastic pools
         href: database/hyperscale-elastic-pool-overview.md
-      - name: Hyperscale backups 
+      - name: Hyperscale backups
         href: database/hyperscale-automated-backups-overview.md
       - name: Replicas
         displayName: Hyperscale replicas
@@ -412,30 +411,30 @@
         displayName: Hyperscale frequently asked questions
         href: database/service-tier-hyperscale-frequently-asked-questions-faq.yml
     - name: Purchasing models
-      items: 
+      items:
       - name: Overview
         href: database/purchasing-models.md
       - name: vCore model
         displayName: provisioned compute tier
         href: database/service-tiers-sql-database-vcore.md
-      - name: DTU model 
+      - name: DTU model
         href: database/service-tiers-dtu.md
 
     - name: Connectivity
-      items: 
+      items:
       - name: Connectivity architecture
         href: database/connectivity-architecture.md
       - name: Connectivity settings
         href: database/connectivity-settings.md
     - name: Local development
-      items: 
-      - name: Local dev experience 
+      items:
+      - name: Local dev experience
         href: database/local-dev-experience-overview.md
       - name: The Azure SQL DB emulator
-        href: database/local-dev-experience-sql-database-emulator.md      
-      - name: SQL Database Projects extension >> 
+        href: database/local-dev-experience-sql-database-emulator.md
+      - name: SQL Database Projects extension >>
         href: /azure-data-studio/extensions/sql-database-project-extension
-      - name: The mssql extension >> 
+      - name: The mssql extension >>
         href: /sql/tools/visual-studio-code/sql-server-develop-use-vscode
 
     - name: Security
@@ -520,19 +519,18 @@
         - name: Server roles
           href: database/security-server-roles.md
 
-
     - name: Business continuity
-      items: 
+      items:
       - name: Overview
         href: database/business-continuity-high-availability-disaster-recover-hadr-overview.md
       - name: High availability
-        href: database/high-availability-sla.md
+        href: database/high-availability-sla-local-zone-redundancy.md
       - name: HA/DR checklist
         href: database/high-availability-disaster-recovery-checklist.md
       - name: Automated backups
         href: database/automated-backups-overview.md
       - name: Disaster recovery
-        items: 
+        items:
         - name: Active geo-replication
           href: database/active-geo-replication-overview.md
         - name: Failover groups
@@ -541,7 +539,6 @@
           href: database/disaster-recovery-guidance.md
         - name: Recovery drills
           href: database/disaster-recovery-drills.md
-
 
     - name: SQL Data Sync
       items:
@@ -553,7 +550,6 @@
         href: database/sql-data-sync-best-practices.md
       - name: Troubleshoot Data Sync
         href: database/sql-data-sync-troubleshoot.md
-
 
     - name: Database sharding
       items:
@@ -578,12 +574,12 @@
       - name: Glossary
         href: database/elastic-scale-glossary.md
 
-    - name: Resource limits 
-      items: 
+    - name: Resource limits
+      items:
       - name: Logical server limits
         href: database/resource-limits-logical-server.md
       - name: Single database resources
-        items:        
+        items:
         - name: vCore resource limits
           href: database/resource-limits-vcore-single-databases.md
         - name: DTU resource limits
@@ -607,7 +603,7 @@
         href: database/advance-notifications.md
 
   - name: Migration guides
-    items: 
+    items:
 
     - name: From Access
       href: migration-guides/database/access-to-sql-database-guide.md
@@ -617,23 +613,22 @@
       href: migration-guides/database/oracle-to-sql-database-guide.md
     - name: From MySQL
       href: migration-guides/database/mysql-to-sql-database-guide.md
-    - name: From SAP ASE 
+    - name: From SAP ASE
       href: migration-guides/database/sap-ase-to-sql-database.md
     - name: From SQL Server
-      items: 
+      items:
       - name: Overview
-        href: migration-guides/database/sql-server-to-sql-database-overview.md
+        href: /data-migration/sql-server/database/overview?toc=/azure/azure-sql/toc.json&bc=/azure/bread/toc.json
       - name: Migrate
-        href: migration-guides/database/sql-server-to-sql-database-guide.md
-      - name: Assessment rules 
-        href: migration-guides/database/sql-server-to-sql-database-assessment-rules.md
-
+        href: /data-migration/sql-server/database/guide?toc=/azure/azure-sql/toc.json&bc=/azure/bread/toc.json
+      - name: Assessment rules
+        href: /data-migration/sql-server/database/assessment-rules?toc=/azure/azure-sql/toc.json&bc=/azure/bread/toc.json
 
   - name: How to
     href: database/how-to-content-reference-guide.md
     items:
-    - name: Plan and manage costs 
-      href: database/cost-management.md      
+    - name: Plan and manage costs
+      href: database/cost-management.md
     - name: Connect and query
       items:
       - name: Connect and run ad hoc queries
@@ -648,7 +643,7 @@
           href: database/connect-query-vscode.md
       - name: Connect and query from apps
         items:
-        - name: .NET with Active Directory MFA
+        - name: .NET with Microsoft Entra MFA
           href: database/active-directory-interactive-connect-azure-sql-db.md
         - name: Java
           href: database/connect-query-java.md
@@ -660,9 +655,9 @@
           href: /azure/developer/java/spring-framework/configure-spring-data-r2dbc-with-azure-sql-server?toc=/azure/azure-sql/toc.json&bc=/azure/bread/toc.json
     - name: Develop locally
       items:
-      - name: Set up local dev environment 
+      - name: Set up local dev environment
         href: database/local-dev-experience-set-up-dev-environment.md
-      - name: Create a database project 
+      - name: Create a database project
         href: database/local-dev-experience-create-database-project.md
       - name: Publish a database project to the local emulator
         href: database/local-dev-experience-publish-emulator.md
@@ -710,7 +705,7 @@
         href: database/elastic-jobs-tsql-create-manage.md
 
     - name: Business continuity
-      items: 
+      items:
       - name: Change automated backup settings
         href: database/automated-backups-change-settings.md
       - name: Configure backup retention using Azure Blob storage
@@ -721,21 +716,21 @@
         href: database/failover-group-configure-sql-db.md
       - name: Configure security for geo-replicas
         href: database/active-geo-replication-security-configure.md
-      - name: Configure license-free standby replica 
+      - name: Configure license-free standby replica
         href: database/standby-replica-how-to-configure.md
 
     - name: Monitor & Tune
       items:
         - name: Monitor
-          href: database/monitoring-sql-database-azure-monitor.md 
+          href: database/monitoring-sql-database-azure-monitor.md
         - name: Identify query performance bottlenecks
           href: database/identify-query-performance-issues.md
         - name: Use DMVs to monitor performance
           href: database/monitoring-with-dmvs.md
         - name: Azure Monitor metrics and alerts for SQL Database
-          href: database/monitoring-metrics-alerts.md          
+          href: database/monitoring-metrics-alerts.md
     - name: Hyperscale databases
-      items: 
+      items:
       - name: Manage Hyperscale databases
         href: database/manage-hyperscale-database.md
       - name: Create zone-redundant database
@@ -744,10 +739,9 @@
         href: database/hyperscale-performance-diagnostics.md
       - name: Use command-line with Hyperscale elastic pool
         href: database/hyperscale-elastic-pool-command-line.md
-        
 
     - name: Security
-      items: 
+      items:
       - name: Audit to storage account behind VNet or firewall
         href: database/audit-write-storage-account-behind-vnet-firewall.md
       - name: Configure threat detection
@@ -831,7 +825,7 @@
         href: /sql/relational-databases/performance/optimized-locking
 
     - name: Migrate
-      items: 
+      items:
       - name: Migrate DTU to vCore
         href: database/migrate-dtu-to-vcore.md
       - name: Manage SQL Database after migration
@@ -839,7 +833,7 @@
       - name: Migrate to availability zone
         href: /azure/reliability/migrate-sql-database?toc=/azure/azure-sql/toc.json&bc=/azure/bread/toc.json
       - name: Migrate to passwordless
-        items: 
+        items:
         - name: Migrate a .NET application
           href: database/azure-sql-passwordless-migration.md
         - name: Migrate a Node.js application
@@ -847,12 +841,12 @@
         - name: Migrate a Python application
           href: database/azure-sql-passwordless-migration-python.md
 
-    - name: Load and move data 
-      items: 
+    - name: Load and move data
+      items:
       - name: Import/export (allow Azure services disabled)
         href: database/database-import-export-azure-services-off.md
       - name: Import/export using Private endpoints
-        href: database/database-import-export-private-link.md  
+        href: database/database-import-export-private-link.md
       - name: Import a database from a BACPAC file
         href: database/database-import.md
       - name: Copy a database within Azure
@@ -1004,7 +998,7 @@
         - name: Pooled database
           href: database/scripts/setup-geodr-failover-pool-cli.md
       - name: Configure failover group
-        items: 
+        items:
         - name: Failover group
           href: database/scripts/setup-geodr-failover-group-cli.md
         - name: Single database
@@ -1025,36 +1019,36 @@
         items:
         - name: Set up Data Sync with REST API
           href: database/scripts/sql-data-sync-sync-data-between-sql-databases-rest-api.md
-    - name: Azure PowerShell 
-      items: 
+    - name: Azure PowerShell
+      items:
         - name: Azure PowerShell samples guide
           href: database/powershell-script-content-guide.md
         - name: Create databases
-          items: 
+          items:
           - name: Create single Azure SQL Database
             href: database/scripts/create-and-configure-database-powershell.md
           - name: Create elastic pools and move databases
             href: database/scripts/move-database-between-elastic-pools-powershell.md
-        - name: Configure geo-replication 
+        - name: Configure geo-replication
           items:
           - name: Configure and fail over a single database
             href: database/scripts/setup-geodr-and-failover-database-powershell.md
           - name: Configure and fail over a pooled database
             href: database/scripts/setup-geodr-and-failover-elastic-pool-powershell.md
         - name: Configure a failover group
-          items: 
+          items:
           - name: Configure failover group for single database
             href: database/scripts/add-database-to-failover-group-powershell.md
           - name: Configure failover group for elastic pool
             href: database/scripts/add-elastic-pool-to-failover-group-powershell.md
         - name: Scale databases
-          items: 
+          items:
           - name: Scale single database
             href: database/scripts/monitor-and-scale-database-powershell.md
           - name: Scale elastic pool
             href: database/scripts/monitor-and-scale-pool-powershell.md
         - name: Database back up, restore, copy, and import
-          items: 
+          items:
           - name: Copy database to new server
             href: database/scripts/copy-database-to-new-server-powershell.md
           - name: Import from BACPAC
@@ -1062,7 +1056,7 @@
           - name: Restore a database
             href: database/scripts/restore-database-powershell.md
         - name: Sync database between databases
-          items: 
+          items:
           - name: Sync data between databases
             href: database/scripts/sql-data-sync-sync-data-between-sql-databases.md
           - name: Sync data from on-premises
@@ -1083,7 +1077,7 @@
     href: managed-instance/index.yml
   - name: Overview
     items:
-    - name: What is Azure SQL Managed Instance? 
+    - name: What is Azure SQL Managed Instance?
       href: managed-instance/sql-managed-instance-paas-overview.md
     - name: What's new?
       href: managed-instance/doc-changes-updates-release-notes-whats-new.md
@@ -1146,22 +1140,21 @@
         href: managed-instance/replication-two-instances-and-sql-server-configure-tutorial.md
 
   - name: Migration guides
-    items: 
+    items:
     - name: From Db2
       href: migration-guides/managed-instance/db2-to-managed-instance-guide.md
     - name: From Oracle
       href: migration-guides/managed-instance/oracle-to-managed-instance-guide.md
     - name: From SQL Server
-      items: 
+      items:
       - name: Overview
-        href: migration-guides/managed-instance/sql-server-to-managed-instance-overview.md
+        href: /data-migration/sql-server/managed-instance/overview?toc=/azure/azure-sql/toc.json&bc=/azure/bread/toc.json
       - name: Migrate
-        href: migration-guides/managed-instance/sql-server-to-managed-instance-guide.md
+        href: /data-migration/sql-server/managed-instance/guide?toc=/azure/azure-sql/toc.json&bc=/azure/bread/toc.json
       - name: Performance baseline
-        href: migration-guides/managed-instance/sql-server-to-managed-instance-performance-baseline.md
-      - name: Assessment rules 
-        href: migration-guides/managed-instance/sql-server-to-sql-managed-instance-assessment-rules.md
-
+        href: /data-migration/sql-server/managed-instance/performance-baseline?toc=/azure/azure-sql/toc.json&bc=/azure/bread/toc.json
+      - name: Assessment rules
+        href: /data-migration/sql-server/managed-instance/assessment-rules?toc=/azure/azure-sql/toc.json&bc=/azure/bread/toc.json
 
   - name: Concepts
     items:
@@ -1178,10 +1171,10 @@
     - name: Managed Instance link
       href: managed-instance/managed-instance-link-feature-overview.md
     - name: Log Replay Service (LRS)
-      href: managed-instance/log-replay-service-overview.md      
+      href: managed-instance/log-replay-service-overview.md
     - name: Instance pools
       href: managed-instance/instance-pools-overview.md
-    - name: Data virtualization 
+    - name: Data virtualization
       href: managed-instance/data-virtualization-overview.md
     - name: In-memory OLTP in Azure SQL Managed Instance
       items:
@@ -1194,13 +1187,13 @@
       - name: Try in-memory features
         href: managed-instance/in-memory-oltp-sample.md
     - name: Business continuity
-      items: 
+      items:
       - name: Overview
         href: managed-instance/business-continuity-high-availability-disaster-recover-hadr-overview.md
       - name: High availability
-        href: managed-instance/high-availability-sla.md
+        href: managed-instance/high-availability-sla-local-zone-redundancy.md
       - name: Automated backups
-        href: managed-instance/automated-backups-overview.md 
+        href: managed-instance/automated-backups-overview.md
       - name: Backup transparency
         href: managed-instance/backup-transparency.md
       - name: Failover groups
@@ -1341,7 +1334,7 @@
             href: /sql/machine-learning/tutorials/python-ski-rental-linear-regression-deploy-model?view=azuresqldb-mi-current&preserve-view=true
           - name: Convert R code for SQL Server
             href: /sql/machine-learning/deploy/modify-r-python-code-to-run-in-sql-server?view=azuresqldb-mi-current&preserve-view=true
-          - name: Create a stored procedure using sqlrutils 
+          - name: Create a stored procedure using sqlrutils
             href: /sql/machine-learning/r/reference/sqlrutils/how-to-create-stored-procedure-from-r
         - name: Predictions
           items:
@@ -1382,7 +1375,7 @@
         - name: Security
           items:
           - name: Give users permission
-            href: /sql/machine-learning/security/user-permission?context=%2fazure%2fazure-sql%2fmanaged-instance%2fcontext%2fml-context&preserve-view=true&view=azuresqldb-mi-current   
+            href: /sql/machine-learning/security/user-permission?context=%2fazure%2fazure-sql%2fmanaged-instance%2fcontext%2fml-context&preserve-view=true&view=azuresqldb-mi-current
     - name: Features
       items:
       - name: Transactional replication
@@ -1442,11 +1435,11 @@
   - name: How to
     items:
     - name: How-to documentation
-      href: managed-instance/how-to-content-reference-guide.md      
+      href: managed-instance/how-to-content-reference-guide.md
     - name: Connect applications
       href: managed-instance/connect-application-instance.md
     - name: Distributed transactions with DTC
-      displayName: distributed transaction coordinator 
+      displayName: distributed transaction coordinator
       href: managed-instance/distributed-transaction-coordinator-dtc.md
     - name: Enroll in November 2022 feature wave
       href: managed-instance/november-2022-feature-wave-enroll.md
@@ -1457,7 +1450,7 @@
       items:
       - name: Azure Automation
         href: managed-instance/automation-manage.md
-      - name: Job automation with SQL Agent 
+      - name: Job automation with SQL Agent
         href: managed-instance/job-automation-managed-instance.md
 
     - name: Manage
@@ -1465,7 +1458,7 @@
       - name: Start & stop instance
         href: managed-instance/instance-stop-start-how-to.md
       - name: Change update policy
-        href: managed-instance/update-policy.md 
+        href: managed-instance/update-policy.md
       - name: Copy or move a database
         href: managed-instance/database-copy-move-how-to.md
       - name: Manage file space
@@ -1476,7 +1469,7 @@
     - name: Monitor & Tune
       items:
         - name: Monitor
-          href: managed-instance/monitoring-sql-managed-instance-azure-monitor.md 
+          href: managed-instance/monitoring-sql-managed-instance-azure-monitor.md
         - name: Tune applications and databases for performance
           href: managed-instance/performance-guidance.md
         - name: Identify query performance bottlenecks
@@ -1484,7 +1477,7 @@
         - name: Use DMVs to monitor performance
           href: managed-instance/monitoring-with-dmvs.md
     - name: Configure settings
-      items: 
+      items:
       - name: tempdb
         href: managed-instance/tempdb-configure.md
       - name: Customize time zone
@@ -1495,7 +1488,7 @@
         href: managed-instance/threat-detection-configure.md
 
     - name: Configure networking
-      items: 
+      items:
       - name: Determine size of SQL MI subnet
         href: managed-instance/vnet-subnet-determine-size.md
       - name: Create new VNet and subnet for SQL MI
@@ -1516,18 +1509,18 @@
         href: managed-instance/resolve-private-domain-names.md
       - name: Find management endpoint IP address
         href: managed-instance/management-endpoint-find-ip-address.md
-    
+
     - name: Migrate
-      items: 
+      items:
       - name: Database using Log Replay Service
         href: managed-instance/log-replay-service-migrate.md
       - name: TDE certificate
         href: managed-instance/tde-certificate-migrate.md
       - name: To availability zone support
         href: /azure/reliability/migrate-sql-managed-instance?toc=/azure/azure-sql/toc.json&bc=/azure/bread/toc.json
-    - name: Managed Instance link 
+    - name: Managed Instance link
       items:
-      - name: Prepare environment for link 
+      - name: Prepare environment for link
         href: managed-instance/managed-instance-link-preparation.md
       - name: Prepare SQL Server 2016 environment
         href: managed-instance/managed-instance-link-preparation-wsfc.md
@@ -1535,31 +1528,47 @@
         href: managed-instance/managed-instance-link-configure-how-to-ssms.md
       - name: Configure link with scripts
         href: managed-instance/managed-instance-link-configure-how-to-scripts.md
+      - name: Fail over a Link
+        href: managed-instance/managed-instance-link-failover-how-to.md
+      - name: Migrate with the link
+        href: managed-instance/managed-instance-link-migrate.md
       - name: Disaster recovery
         href: managed-instance/managed-instance-link-disaster-recovery.md
       - name: Best practices
         href: managed-instance/managed-instance-link-best-practices.md
 
-    - name: Configure business continuity 
-      items: 
-      - name: Change backup settings
-        href: managed-instance/automated-backups-change-settings.md
-      - name: Recover using backups
-        href: managed-instance/recovery-using-backups.md
-      - name: Restore to a point in time
-        href: managed-instance/point-in-time-restore.md
-      - name: Restore database to SQL Server
-        href: managed-instance/restore-database-to-sql-server.md
-      - name: Monitor backup
-        href: managed-instance/backup-activity-monitor.md
-      - name: Manually initiate a failover
-        href: managed-instance/user-initiated-failover.md
-      - name: Failover groups
-        items: 
-        - name: Create failover group
-          href: managed-instance/failover-group-configure-sql-mi.md
-        - name: Configure standby replica
-          href: managed-instance/failover-group-standby-replica-how-to-configure.md        
+    - name: Manage business continuity
+      items:
+      - name: Backup & restore
+        items:
+        - name: Change backup settings
+          href: managed-instance/automated-backups-change-settings.md
+        - name: Recover using backups
+          href: managed-instance/recovery-using-backups.md
+        - name: Restore to a point in time
+          href: managed-instance/point-in-time-restore.md
+        - name: Restore database to SQL Server
+          href: managed-instance/restore-database-to-sql-server.md
+        - name: Monitor backups
+          href: managed-instance/backup-activity-monitor.md
+      - name: High availability & disaster recovery
+        items:
+        - name: HA/DR checklist
+          href: managed-instance/high-availability-disaster-recovery-checklist.md
+        - name: Configure zone redundancy
+          href: managed-instance/instance-zone-redundancy-configure.md
+        - name: Manually initiate a failover
+          href: managed-instance/user-initiated-failover.md
+        - name: Disaster recovery guidance
+          href: managed-instance/disaster-recovery-guidance.md
+        - name: Disaster recovery drills
+          href: managed-instance/disaster-recovery-drills.md
+        - name: Failover groups
+          items:
+          - name: Create failover group
+            href: managed-instance/failover-group-configure-sql-mi.md
+          - name: Configure standby replica
+            href: managed-instance/failover-group-standby-replica-how-to-configure.md
   - name: Samples
     items:
     - name: Azure CLI
@@ -1596,7 +1605,7 @@
   - name: What's new?
     href: virtual-machines/windows/doc-changes-updates-release-notes-whats-new.md
   - name: Windows
-    items: 
+    items:
     - name: Overview
       items:
       - name: What is a SQL Server VM?
@@ -1616,7 +1625,6 @@
         displayName: Resource Manager
         href: virtual-machines/windows/create-sql-vm-resource-manager-template.md
 
-        
     - name: Concepts
       items:
       - name: Business continuity
@@ -1643,14 +1651,14 @@
           href: virtual-machines/windows/performance-guidelines-best-practices-vm-size.md
         - name: Storage
           href: virtual-machines/windows/performance-guidelines-best-practices-storage.md
-        - name: Security 
+        - name: Security
           href: virtual-machines/windows/security-considerations-best-practices.md
         - name: HADR configuration
           href: virtual-machines/windows/hadr-cluster-best-practices.md
           displayName: failover cluster instance, fci, availability group, ag, always on
         - name: Application patterns
           href: virtual-machines/windows/application-patterns-development-strategies.md
-        - name: Collect baseline 
+        - name: Collect baseline
           href: virtual-machines/windows/performance-guidelines-best-practices-collect-baseline.md
       - name: Management
         items:
@@ -1674,7 +1682,7 @@
           href: virtual-machines/windows/sql-vm-create-confidential-vm-how-to.md
 
       - name: Manage
-        items: 
+        items:
         - name: With the Azure portal
           href: virtual-machines/windows/manage-sql-vm-portal.md
         - name: License model
@@ -1711,7 +1719,7 @@
           - name: Known issues and troubleshooting
             href: virtual-machines/windows/sql-agent-extension-troubleshoot-known-issues.md
       - name: Optimize performance
-        items: 
+        items:
         - name: SQL best practices assessment
           href: virtual-machines/windows/sql-assessment-for-sql-vm.md
         - name: Analyze I/O performance
@@ -1724,7 +1732,7 @@
           href: virtual-machines/windows/move-sql-vm-different-region.md
       - name: Business continuity
         items:
-        - name: Configure cluster quorum 
+        - name: Configure cluster quorum
           href: virtual-machines/windows/hadr-cluster-quorum-configure-how-to.md
         - name: Configure log shipping
           href: virtual-machines/windows/log-shipping-configure.md
@@ -1739,7 +1747,7 @@
           items:
           - name: Configure AG (multi-subnet)
             displayName: Always On, alwayson, availability group
-            items: 
+            items:
             - name: Azure portal
               displayName: Always On, alwayson, availability group
               href: virtual-machines/windows/availability-group-azure-portal-configure.md
@@ -1748,7 +1756,7 @@
             - name: Migrate single subnet to multi-subnet
               href: virtual-machines/windows/availability-group-manually-migrate-multi-subnet.md
             - name: Manually
-              items: 
+              items:
               - name: Prerequisites
                 href: virtual-machines/windows/availability-group-manually-configure-prerequisites-tutorial-multi-subnet.md
                 displayName: Always On, alwayson, availability group
@@ -1757,10 +1765,10 @@
                 href: virtual-machines/windows/availability-group-manually-configure-tutorial-multi-subnet.md
               - name: Extend AG to multiple regions
                 href: virtual-machines/windows/availability-group-manually-configure-multi-subnet-multiple-regions.md
-              
+
           - name: Configure AG (single subnet)
             displayName: Always On, alwayson, availability group
-            items:               
+            items:
             - name: PowerShell or Az CLI
               href: virtual-machines/windows/availability-group-az-commandline-configure.md
               displayName: Always On, alwayson, availability group
@@ -1774,7 +1782,7 @@
               href: virtual-machines/windows/availability-group-clusterless-workgroup-configure.md
               displayName: Always On, alwayson, availability group
             - name: Manually
-              items: 
+              items:
               - name: Prerequisites
                 href: virtual-machines/windows/availability-group-manually-configure-prerequisites-tutorial-single-subnet.md
                 displayName: Always On, alwayson, availability group
@@ -1785,7 +1793,7 @@
               - name: Load balancer - Azure PowerShell
                 href: virtual-machines/windows/availability-group-listener-powershell-configure.md
             - name: Configure connectivity
-              items:  
+              items:
               - name: VNN listener
                 displayName: virtual network name
                 href: virtual-machines/windows/availability-group-vnn-azure-load-balancer-configure.md
@@ -1797,10 +1805,10 @@
 
         - name: Failover cluster instance (FCI)
           items:
-          - name: Prepare VM for FCI 
+          - name: Prepare VM for FCI
             href: virtual-machines/windows/failover-cluster-instance-prepare-vm.md
-          - name: Create FCI 
-            items: 
+          - name: Create FCI
+            items:
             - name: Azure shared disks
               href: virtual-machines/windows/failover-cluster-instance-azure-shared-disks-manually-configure.md
             - name: Storage Spaces Direct (Win2016+)
@@ -1808,10 +1816,10 @@
             - name: Premium file share (Win2012+)
               href: virtual-machines/windows/failover-cluster-instance-premium-file-share-manually-configure.md
           - name: Configure connectivity (Single subnet)
-            items: 
+            items:
             - name: Virtual network name (VNN)
               href: virtual-machines/windows/failover-cluster-instance-vnn-azure-load-balancer-configure.md
-            - name: Distributed network name (DNN) 
+            - name: Distributed network name (DNN)
               href: virtual-machines/windows/failover-cluster-instance-distributed-network-name-dnn-configure.md
             - name: DNN interoperability
               href: virtual-machines/windows/failover-cluster-instance-dnn-interoperability.md
@@ -1832,7 +1840,7 @@
       items:
       - name: FAQ
         href: virtual-machines/windows/frequently-asked-questions-faq.yml
-      - name: Archived classic RM docs 
+      - name: Archived classic RM docs
         href: /previous-versions/azure/virtual-machines/windows/sqlclassic/virtual-machines-windows-classic-ps-sql-create
       - name: SQL Server Data Tools (SSDT)
         href: /sql/ssdt/download-sql-server-data-tools-ssdt
@@ -1848,7 +1856,7 @@
         href: https://stackoverflow.com/search?q=%5Bazure-virtual-machine%5D+sql+server
 
   - name: Linux
-    items: 
+    items:
     - name: Overview
       items:
       - name: About Linux SQL Server VMs
@@ -1859,12 +1867,12 @@
         href: virtual-machines/linux/sql-vm-create-portal-quickstart.md
 
     - name: Concepts
-      items: 
-      - name: SQL IaaS Agent extension 
+      items:
+      - name: SQL IaaS Agent extension
         href: virtual-machines/linux/sql-server-iaas-agent-extension-linux.md
     - name: "How-to guides"
-      items: 
-      - name: Register with SQL IaaS extension 
+      items:
+      - name: Register with SQL IaaS extension
         href: virtual-machines/linux/sql-iaas-agent-extension-register-vm-linux.md
     - name: Tutorials
       items:
@@ -1892,35 +1900,94 @@
         href: https://azure.microsoft.com/roadmap/?category=compute
       - name: Stack Overflow
         href: https://stackoverflow.com/search?q=%5Bazure-virtual-machine%5D+sql+server
-  
+
   - name: Migration guides
-    items: 
+    items:
       - name: From Db2
         href: migration-guides/virtual-machines/db2-to-sql-on-azure-vm-guide.md
       - name: From Oracle
         href: migration-guides/virtual-machines/oracle-to-sql-on-azure-vm-guide.md
       - name: From SQL Server
-        items: 
+        items:
         - name: Overview
-          href: migration-guides/virtual-machines/sql-server-to-sql-on-azure-vm-migration-overview.md
+          href: /data-migration/sql-server/virtual-machines/overview?toc=/azure/azure-sql/toc.json&bc=/azure/bread/toc.json
         - name: Migration guide
-          href: migration-guides/virtual-machines/sql-server-to-sql-on-azure-vm-individual-databases-guide.md
+          href: /data-migration/sql-server/virtual-machines/guide?toc=/azure/azure-sql/toc.json&bc=/azure/bread/toc.json
         - name: Availability group (AG)
-          href: migration-guides/virtual-machines/sql-server-availability-group-to-sql-on-azure-vm.md
+          href: /data-migration/sql-server/virtual-machines/availability-group-migrate?toc=/azure/azure-sql/toc.json&bc=/azure/bread/toc.json
         - name: Failover cluster instance (FCI)
           href: migration-guides/virtual-machines/sql-server-failover-cluster-instance-to-sql-on-azure-vm.md
         - name: Using distributed AG
-          items: 
+          items:
           - name: Prerequisites
-            href: migration-guides/virtual-machines/sql-server-distributed-availability-group-migrate-prerequisites.md
+            href: /data-migration/sql-server/virtual-machines/distributed-availability-group-prerequisites?toc=/azure/azure-sql/toc.json&bc=/azure/bread/toc.json
           - name: Standalone instance
-            href: migration-guides/virtual-machines/sql-server-distributed-availability-group-migrate-standalone-instance.md
+            href: /data-migration/sql-server/virtual-machines/distributed-availability-group-migrate-standalone-instance?toc=/azure/azure-sql/toc.json&bc=/azure/bread/toc.json
           - name: Availability group
-            href: migration-guides/virtual-machines/sql-server-distributed-availability-group-migrate-ag.md
-          - name: Complete migration 
-            href: migration-guides/virtual-machines/sql-server-distributed-availability-group-complete-migration.md
-         
-        
+            href: /data-migration/sql-server/virtual-machines/distributed-availability-group-migrate-availability-group?toc=/azure/azure-sql/toc.json&bc=/azure/bread/toc.json
+          - name: Complete migration
+            href: /data-migration/sql-server/virtual-machines/distributed-availability-group-migrate-complete?toc=/azure/azure-sql/toc.json&bc=/azure/bread/toc.json
+
+- name: Migrate from SQL Server
+  items:
+  - name: Overview
+    href: /data-migration/sql-server/overview?toc=/azure/azure-sql/toc.json&bc=/azure/bread/toc.json
+  - name: Pre-migration
+    href: /data-migration/sql-server/pre-migration?toc=/azure/azure-sql/toc.json&bc=/azure/bread/toc.json
+  - name: To Azure SQL Managed Instance
+    items:
+    - name: Overview
+      href: /data-migration/sql-server/managed-instance/overview?toc=/azure/azure-sql/toc.json&bc=/azure/bread/toc.json
+    - name: Assessment rules
+      href: /data-migration/sql-server/managed-instance/assessment-rules?toc=/azure/azure-sql/toc.json&bc=/azure/bread/toc.json
+    - name: Performance baseline
+      href: /data-migration/sql-server/managed-instance/performance-baseline?toc=/azure/azure-sql/toc.json&bc=/azure/bread/toc.json
+    - name: Custom roles
+      href: /data-migration/sql-server/managed-instance/custom-roles?toc=/azure/azure-sql/toc.json&bc=/azure/bread/toc.json
+    - name: Migration guide
+      href: /data-migration/sql-server/managed-instance/guide?toc=/azure/azure-sql/toc.json&bc=/azure/bread/toc.json
+    - name: Migration tutorial
+      href: /data-migration/sql-server/managed-instance/database-migration-service?toc=/azure/azure-sql/toc.json&bc=/azure/bread/toc.json
+  - name: To SQL Server on Azure VMs
+    items:
+    - name: Overview
+      href: /data-migration/sql-server/virtual-machines/overview?toc=/azure/azure-sql/toc.json&bc=/azure/bread/toc.json
+    - name: Custom roles
+      href: /data-migration/sql-server/virtual-machines/custom-roles?toc=/azure/azure-sql/toc.json&bc=/azure/bread/toc.json
+    - name: Migration guide
+      href: /data-migration/sql-server/virtual-machines/guide?toc=/azure/azure-sql/toc.json&bc=/azure/bread/toc.json
+    - name: Migration tutorial
+      href: /data-migration/sql-server/virtual-machines/database-migration-service?toc=/azure/azure-sql/toc.json&bc=/azure/bread/toc.json
+    - name: Migrate with a distributed AG
+      items:
+      - name: Prerequisites
+        href: /data-migration/sql-server/virtual-machines/distributed-availability-group-prerequisites?toc=/azure/azure-sql/toc.json&bc=/azure/bread/toc.json
+      - name: Migrate standalone instance with distributed AG
+        href: /data-migration/sql-server/virtual-machines/distributed-availability-group-migrate-standalone-instance?toc=/azure/azure-sql/toc.json&bc=/azure/bread/toc.json
+      - name: Migrate availability group with distributed AG
+        href: /data-migration/sql-server/virtual-machines/distributed-availability-group-migrate-availability-group?toc=/azure/azure-sql/toc.json&bc=/azure/bread/toc.json
+      - name: Finalize AG migration
+        href: /data-migration/sql-server/virtual-machines/distributed-availability-group-migrate-complete?toc=/azure/azure-sql/toc.json&bc=/azure/bread/toc.json
+    - name: Migrate high availability
+      items:
+      - name: Migrate an availability group
+        href: /data-migration/sql-server/virtual-machines/availability-group-migrate?toc=/azure/azure-sql/toc.json&bc=/azure/bread/toc.json
+      - name: Migrate a failover cluster instance
+        href: /data-migration/sql-server/virtual-machines/failover-cluster-instance-migrate?toc=/azure/azure-sql/toc.json&bc=/azure/bread/toc.json
+
+  - name: To Azure SQL Database
+    items:
+    - name: Overview
+      href: /data-migration/sql-server/database/overview?toc=/azure/azure-sql/toc.json&bc=/azure/bread/toc.json
+    - name: Assessment rules
+      href: /data-migration/sql-server/database/assessment-rules?toc=/azure/azure-sql/toc.json&bc=/azure/bread/toc.json
+    - name: Custom roles
+      href: /data-migration/sql-server/database/custom-roles?toc=/azure/azure-sql/toc.json&bc=/azure/bread/toc.json
+    - name: Migration guide
+      href: /data-migration/sql-server/database/guide?toc=/azure/azure-sql/toc.json&bc=/azure/bread/toc.json
+    - name: Migration tutorial
+      href: /data-migration/sql-server/database/database-migration-service?toc=/azure/azure-sql/toc.json&bc=/azure/bread/toc.json
+
 - name: Reference
   items:
   - name: Azure SQL glossary of terms
@@ -1978,9 +2045,9 @@
     href: ./database/policy-reference.md
   - name: DTU benchmark
     href: database/dtu-benchmark.md
-  - name: SQL Database monitoring data reference 
+  - name: SQL Database monitoring data reference
     href: database/monitoring-sql-database-azure-monitor-reference.md
-  - name: SQL Managed Instance monitoring data reference 
+  - name: SQL Managed Instance monitoring data reference
     href: managed-instance/monitoring-sql-managed-instance-azure-monitor-reference.md
 - name: Resources
   items:
@@ -2001,13 +2068,13 @@
   - name: Stack Overflow
     href: https://stackoverflow.com/questions/tagged/azure-sql-database
   - name: Microsoft Q&A
-    items: 
+    items:
     - name: Azure SQL Database
       href: /answers/tags/51/azure-sql-database
     - name: SQL Server on Azure VMs
       href: /answers/tags/19/azure-sql-virtual-machines
   - name: What's New Archives
-    items: 
+    items:
     - name: Azure SQL Database
       href: database/doc-changes-updates-release-notes-whats-new-archive.md
     - name: Azure SQL Managed Instance
@@ -2016,7 +2083,7 @@
       href: virtual-machines/windows/doc-changes-updates-release-notes-whats-new-archive.md
   - name: Troubleshoot
     items:
-    - name: Known issues with Azure SQL Managed Instance 
+    - name: Known issues with Azure SQL Managed Instance
       href: managed-instance/doc-changes-updates-known-issues.md
     - name: Capacity errors during deployment
       href: capacity-errors-troubleshoot.md

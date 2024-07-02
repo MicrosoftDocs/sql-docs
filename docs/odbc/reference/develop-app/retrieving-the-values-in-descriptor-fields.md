@@ -2,7 +2,7 @@
 title: "Retrieving the Values in Descriptor Fields"
 description: "Retrieving the Values in Descriptor Fields"
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: "01/19/2017"
 ms.service: sql
 ms.subservice: connectivity

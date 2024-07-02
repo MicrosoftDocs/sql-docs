@@ -104,7 +104,7 @@ az account get-access-token --resource https://database.windows.net --output tsv
 ```
 
 **-q**  
-Executes the SET QUOTED_IDENTIFIERS ON statement in the connection between the `bcp` utility and an instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].
+Executes the SET QUOTED_IDENTIFIER ON statement in the connection between the `bcp` utility and an instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].
 
 **-r** *row_terminator*  
 Specifies the row terminator.

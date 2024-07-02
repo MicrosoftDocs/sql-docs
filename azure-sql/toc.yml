@@ -1392,6 +1392,8 @@
         href: database/always-encrypted-landing.yml
       - name: Auditing
         href: managed-instance/auditing-configure.md
+      - name: Native Windows principals
+        href: managed-instance/native-windows-principals.md
       - name: Secure public endpoints
         href: managed-instance/public-endpoint-overview.md
       - name: Server trust groups

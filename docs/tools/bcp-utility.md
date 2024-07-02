@@ -496,7 +496,7 @@ If *password* begins with a hyphen (`-`) or a forward slash (`/`), don't add a s
 
 #### -q
 
-Executes the SET QUOTED_IDENTIFIERS ON statement in the connection between the **bcp** utility and an instance of [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)]. Use this option to specify a database, owner, table, or view name that contains a space or a single quotation mark. Enclose the entire three-part table or view name in quotation marks ("").
+Executes the SET QUOTED_IDENTIFIER ON statement in the connection between the **bcp** utility and an instance of [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)]. Use this option to specify a database, owner, table, or view name that contains a space or a single quotation mark. Enclose the entire three-part table or view name in quotation marks ("").
 
 To specify a database name that contains a space or single quotation mark, you must use the `-q` option.
 

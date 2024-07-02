@@ -4,7 +4,7 @@ description: Latest release notes for SQL Server enabled by Azure Arc
 author: anosov1960
 ms.author: sashan
 ms.reviewer: mikeray, randolphwest
-ms.date: 06/14/2024
+ms.date: 07/09/2024
 ms.topic: conceptual
 ms.custom: ignite-2023
 ---
@@ -21,6 +21,14 @@ This article lists:
 - Links to additional feature documentation
 
 Extension versions are cumulative. Higher extension versions include all of the updates from previous versions. A release may include internal features. If the version release notes don't describe features, then the updates were internal.
+
+## July  09, 2024
+
+**Extension version**: `1.1.2725.199`
+
+### Azure extension for SQL Server
+
+- `SqlServerExtensionPermissionProvider` task no longer runs hourly. The task is triggered by specific events. For details, review [Roles](permissions-granted-agent-extension.md#roles). 
 
 ## June  14, 2024
 

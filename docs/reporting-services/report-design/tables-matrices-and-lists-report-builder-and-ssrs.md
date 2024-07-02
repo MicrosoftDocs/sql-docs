@@ -1,9 +1,9 @@
 ---
 title: "Tables, matrices, and lists in paginated reports"
-description: Learn about how tables, matrices, and lists tablix data regions display paginated report data organized into rows and columns in Report Builder.
+description:  Learn about how tablix data regions, including tables, matrices, and lists, display paginated report data organized into rows and columns in Report Builder.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 06/24/2024
+ms.date: 07/02/2024
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: conceptual
@@ -44,22 +44,22 @@ In Report Builder, tables, matrices, and lists are data regions that display pag
   
 The table, matrix, and list templates are built on the tablix data region, which is a flexible grid that can display data in cells. In the table and matrix templates, cells are organized into rows and columns. Templates are variations of the underlying generic tablix data region. So you can display data in a combination of template formats and change the table, matrix, or list to include the features of another data region as you develop your report. For example, if you add a table and find it doesn't serve your needs, you can add column groups to make the table a matrix.  
   
-The table and matrix data regions can display complex data relationships by including nested tables, matrices, lists, charts, and gauges. Tables and matrices have a tabular layout and their data comes from a single dataset, built on a single data source. The key difference between tables and matrices is that tables can include only row groups, but matrices have row groups and column groups.  
+The table and matrix data regions can display complex data relationships by including nested tables, matrices, lists, charts, and gauges. Tables and matrices have a tabular layout, and their data comes from a single dataset, built on a single data source. The key difference between tables and matrices is that tables can include only row groups, but matrices have row groups and column groups.  
   
-Lists are a little different. They support a free-layout that can include multiple peer tables or matrices, each using data from a different dataset. Lists can also be used for forms, such as invoices.  
+Lists are different. They support a free layout that can include multiple peer tables or matrices, where each uses data from a different dataset. Lists can also be used for forms, such as invoices.  
   
 The following images show simple reports with a table, matrix, or list:
   
 :::image type="content" source="../../reporting-services/report-design/media/rs-tablematrixlist.gif" alt-text="Screenshot that shows different labeled examples of a table, matrix, and list.":::
   
-To quickly get started with tables, matrices, and lists, see [Tutorial: Create a basic table report (Report Builder)](../../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md), [Tutorial: Create a matrix report (Report Builder)](../../reporting-services/tutorial-creating-a-matrix-report-report-builder.md), and [Tutorial: Create a free form report (Report Builder)](../../reporting-services/tutorial-creating-a-free-form-report-report-builder.md).  
+To get started with tables, matrices, and lists, see [Tutorial: Create a basic table report (Report Builder)](../../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md), [Tutorial: Create a matrix report (Report Builder)](../../reporting-services/tutorial-creating-a-matrix-report-report-builder.md), and [Tutorial: Create a free form report (Report Builder)](../../reporting-services/tutorial-creating-a-free-form-report-report-builder.md).  
   
 > [!NOTE]  
 > You can publish tables, matrices, and lists separately from a report as report parts. For more information, see [Report Parts (Report Builder and SSRS)](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md). However, report parts are deprecated for all releases of SQL Server Reporting Services after SQL Server Reporting Services 2019, and it's discontinued starting in SQL Server Reporting Services 2022 and Power BI Report Server.
   
 ## <a name="Table"></a> Use a table
 
-Use a table to display detail data, organize the data in row groups, or both. The **Table** template contains three columns with a table header row and a details row for data. The following figure shows the initial **Table** template, selected on the design surface:  
+Use a table to display detail data, organize the data in row groups, or do both. The **Table** template contains three columns with a table header row and a details row for data. The following figure shows the initial **Table** template, selected on the design surface:  
 
 :::image type="content" source="../../reporting-services/report-design/media/rs-tabletemplatenewselected.gif" alt-text="Screenshot that shows an empty table in Report Builder.":::
   
@@ -114,7 +114,7 @@ The wizard guides you through the steps to quickly build and configure a table o
 - filters
 - sorting
 
-But the tablix data region provides a wealth of other properties, which you can set only in the **Properties** pane of Report Builder. For example, if you want to display a message when the dataset for a table, matrix, or list is empty, you specify the message text in the `NoRowsMessage` tablix property in the **Properties** pane.  
+The tablix data region provides a wealth of other properties, which you can set only in the **Properties** pane of Report Builder. For example, if you want to display a message when the dataset for a table, matrix, or list is empty, you specify the message text in the `NoRowsMessage` tablix property in the **Properties** pane.  
   
 ## <a name="ChangingBetweenTablixTemplates"></a> Change between tablix templates  
 
@@ -131,7 +131,7 @@ You can add totals for a group or grand totals for the data region. You can hide
 |Article                                                                                                                                                                                               |Description                                                                                                                                                                  |
 |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |[Tablix data region in a paginated report (Report Builder)](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)                                                          |Explains key concepts related to the tablix data region: tablix, detail and grouped data, column and row groups, and static and dynamic rows and columns.|
-|[Add data to a tablix data region in a paginated report (Report Builder)](../../reporting-services/report-design/adding-data-to-a-tablix-data-region-report-builder-and-ssrs.md)                        |Provides detailed information about adding detail and grouped data, subtotals and totals, and labels to a tablix data region.                                                |
+|[Add data to a tablix data region in a paginated report (Report Builder)](../../reporting-services/report-design/adding-data-to-a-tablix-data-region-report-builder-and-ssrs.md)                        |Provides information about adding detailed and grouped data, subtotals and totals, and labels to a tablix data region.                                                |
 |[Control the tablix data region display on a paginated report page (Report Builder)](../../reporting-services/report-design/controlling-the-tablix-data-region-display-on-a-report-page.md)|Describes properties for a tablix data region that you can modify to change the way it appears when you view it in a report.                               |
 |[Control row & column headings in a paginated report (Report Builder)](../../reporting-services/report-design/controlling-row-and-column-headings-report-builder-and-ssrs.md)                        |Describes how to control row and column headings when a table, matrix, or list data region span multiple pages horizontally or vertically.                              |
 |[Create recursive hierarchy groups in a paginated report (Report Builder)](../../reporting-services/report-design/creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)                        |Describes how to display recursive data where fields represent the relationship between parent and child in the dataset.                                             |

@@ -54,14 +54,6 @@ On a new installation, only local administrators have sufficient permissions to 
 
 ## Get started
 
-The web portal is a web application that you open by typing the [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] URL in the address bar of the browser window. When you start the [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)], the pages, links, and options that you see vary based on the permissions you have on the report server. 
-
-To perform a task, you must be assigned to a role that includes the task. A user who is assigned to a role that has full permissions has access to the complete set of application menus and pages available for managing a report server. A user assigned to a role that has permissions to view and run reports sees only the menus and pages that support those activities. Each user can have different role assignments for different report servers, or even for the various reports and folders that are stored on a single report server.
-
-For more information about roles, see [Grant permissions on a native mode report server](../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md).
-
-### Use the web portal
-
 To start the web portal from a browser, follow these steps:
 
 1. Open your web browser. For a list of supported web browsers, see [Browser support for Reporting Services and Power View](../reporting-services/browser-support-for-reporting-services-and-power-view.md).
@@ -71,6 +63,12 @@ To start the web portal from a browser, follow these steps:
     By default, the URL is ``https://[ComputerName]/reports``.
 
     The report server might be configured to use a specific port. For example, ``https://[ComputerName]:80/reports`` or ``https://[ComputerName]:8080/reports``.
+
+When you start the [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)], the pages, links, and options that you see vary based on the permissions you have on the report server. 
+
+To perform a task, you must be assigned to a role that includes the task. A user who is assigned to a role that has full permissions has access to the complete set of application menus and pages available for managing a report server. A user assigned to a role that has permissions to view and run reports sees only the menus and pages that support those activities. Each user can have different role assignments for different report servers, or even for the various reports and folders that are stored on a single report server.
+
+For more information about roles, see [Grant permissions on a native mode report server](../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md).
 
 ### Group by categories
 
@@ -87,11 +85,11 @@ The web portal groups items into different categories. The available categories 
 - Mobile reports
 ::: moniker-end
 
-You can control what is displayed by selecting **View** in the upper right. If you select Show Hidden, those items display in a lighter color.
+You can control what is displayed by selecting **View** in the upper right. If you select **Show Hidden**, those items display in a lighter color.
 
-:::image type="content" source="../reporting-services/media/ssrswebportal-view.png" alt-text="Screenshot of the View dropdown with the Show hidden items option selected.":::
+:::image type="content" source="../reporting-services/media/ssrswebportal-view.png" alt-text="Screenshot of the View list with the Show hidden items option selected.":::
 
-:::image type="content" source="../reporting-services/media/ssrswebportal-hidden.png" alt-text="Screenshot that shows the unavailable Paginated Reports option.":::
+:::image type="content" source="../reporting-services/media/ssrswebportal-hidden.png" alt-text="Screenshot of the unavailable Paginated Reports option.":::
 
 ### Power BI Desktop reports and Excel workbooks
 

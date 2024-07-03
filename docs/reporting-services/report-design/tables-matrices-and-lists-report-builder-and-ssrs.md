@@ -1,5 +1,5 @@
 ---
-title: "Tables, matrices, and lists in paginated reports"
+title: "Tables, matrices, and lists in Report Builder paginated reports"
 description:  Learn about how tablix data regions, including tables, matrices, and lists, display paginated report data organized into rows and columns in Report Builder.
 author: maggiesMSFT
 ms.author: maggies
@@ -36,7 +36,7 @@ f1_keywords:
 
 #customer intent: As a SQL Server user, I want to learn how to use tables, matrices, and lists in Report Builder so that I can organize my data neatly by rows and columns when I design reports.
 ---
-# Tables, matrices, and lists in paginated reports (Report Builder)
+# Tables, matrices, and lists in Report Builder paginated reports
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
 

@@ -5,7 +5,7 @@ description: Learn how to rotate the Transparent data encryption (TDE) protector
 author: GithubMirek
 ms.author: mireks
 ms.reviewer: wiassaf, vanto, mathoma
-ms.date: 01/16/2024
+ms.date: 07/03/2024
 ms.service: sql-db-mi
 ms.subservice: security
 ms.topic: how-to

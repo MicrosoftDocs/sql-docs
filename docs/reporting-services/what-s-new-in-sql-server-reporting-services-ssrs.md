@@ -216,7 +216,7 @@ For more information on browser support, see [Browser support for Reporting Serv
 
 **Paginated reports**: Design beautifully paginated reports with updated styles for charts, gauges, maps, and other data visualizations.
 
-**Treemap and Sunburst Charts**: Enhance your reports with Treemap :::image type="content" source="../reporting-services/media/ssrs-treemap-icon.png" border="false"::: and Sunburst :::image type="content" source="../reporting-services/media/ssrs-sunburst-icon.png "ssrs_sunburst_icon"" border="false"::: charts, great ways to display hierarchical data. For more information, see [Treemap and sunburst charts in a paginated report in SQL Server Reporting Services](../reporting-services/report-design/tree-map-and-sunburst-charts-in-reporting-services.md).  
+**Treemap and Sunburst Charts**: Enhance your reports with Treemap :::image type="content" source="../reporting-services/media/ssrs-treemap-icon.png" alt-text="Icon of the button for creating a treemap chart."::: and Sunburst :::image type="content" source="../reporting-services/media/ssrs-sunburst-icon.png" alt-text="Icon of the button for creating a treemap chart."::: charts, great ways to display hierarchical data. For more information, see [Treemap and sunburst charts in a paginated report in SQL Server Reporting Services](../reporting-services/report-design/tree-map-and-sunburst-charts-in-reporting-services.md).  
 
 **Embed reports**: Embed mobile and paginated reports in other web pages and applications by using an iframe and URL parameters.  
 

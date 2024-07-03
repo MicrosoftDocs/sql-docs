@@ -39,8 +39,6 @@ Use the web portal for these and other tasks:
 - View a report, its general properties, and past copies of the report that are captured in report history.
 - Subscribe to reports for delivery to an email inbox or a shared folder on the file system, depending on your access permissions.
 
-For information on supported browsers and versions, see [Browser support for Reporting Services and Power View](../reporting-services/browser-support-for-reporting-services-and-power-view.md).
-
 ## Feature availability
 
 The web portal is used only for a report server that runs in Native mode. It isn't supported for a report server that you configure for SharePoint integrated mode.
@@ -50,7 +48,7 @@ Some web portal features are only available in specified editions of [!INCLUDE[s
 On a new installation, only local administrators have sufficient permissions to work with content and settings. To grant permissions to other users, a local administrator must create role assignments that provide access to the report server. The application pages and tasks that a user can then access depend on the role assignments for that user. For more information, see [Grant user access to a report server](./security/grant-user-access-to-a-report-server.md).
 
 > [!NOTE]
-> If you are browsing to the web portal on the local machine that the server is running on, you may see a message indicating that you are not allowed to view this folder. This is due to Universal Access Control (UAC) and that you aren't running the browser as an admin. You need to give your account content manager rights on the folder by either browsing to the server remotely, or use Edge locally to configure the permissions. You aren't able to run Microsoft Edge as an admin via the **Run as administrator** context menu. However, you can run Edge as the local administrator account by holding SHIFT + right-clicking on the edge shortcut and selecting **Run as a different user**, then providing the local machine administrator account information in the login dialog. If you want to use the web portal remotely, you need to give your account content manager rights on the folder.  
+> If you are browsing to the web portal on the local machine that the server is running on, you might see a message indicating that you aren't allowed to view this folder. This is due to Universal Access Control (UAC) and that you aren't running the browser as an administrator. You need to give your account content manager rights on the folder by either browsing to the server remotely, or by using Edge locally to configure the permissions. You can't run Edge as an administrator with the **Run as administrator** menu option. However, you can run Edge as the local administrator account by holding SHIFT + right-clicking on the Edge shortcut, selecting **Run as a different user**, then providing the local machine administrator account information. If you want to use the web portal remotely, give your account content manager rights on the folder.  
 
 ## Get started
 
@@ -85,7 +83,7 @@ The web portal groups items into different categories. The available categories 
 - Mobile reports
 ::: moniker-end
 
-You can control what is displayed by selecting **View** in the upper right. 
+You can control what is displayed by selecting **View**. 
 
 :::image type="content" source="../reporting-services/media/ssrswebportal-view.png" alt-text="Screenshot of the View list with the Show hidden items option selected.":::
 
@@ -105,7 +103,7 @@ The files are stored within Reporting Services, similar to other resource files.
 
 Enter a search term and see everything you can access. The results are categorized into KPIs, reports, datasets, and other items. You can then interact with the results and add them to your favorites.
 
-:::image type="content" source="../reporting-services/media/web-portal-ssrs-native-mode/ssrs-web-portal-search.png" alt-text="Screenshot of the SQL Server Reporting Servers portal with the Search box called out." lightbox="../reporting-services/media/web-portal-ssrs-native-mode/ssrs-web-portal-search.png":::
+:::image type="content" source="../reporting-services/media/web-portal-ssrs-native-mode/ssrs-web-portal-search.png" alt-text="Screenshot of the SQL Server Reporting Services portal with the Search box highlighted." lightbox="../reporting-services/media/web-portal-ssrs-native-mode/ssrs-web-portal-search.png":::
 
 ## Related content
 

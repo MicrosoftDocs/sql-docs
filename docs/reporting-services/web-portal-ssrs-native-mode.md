@@ -8,7 +8,7 @@ ms.service: reporting-services
 ms.subservice: reporting-services
 ms.topic: overview
 ms.custom: updatefrequency5
-#customer intent: As a SQL Server user, I want to understand the SSRS web portal so that I can effectively view, manage, and configure reports and other items within my report server instance.
+#customer intent: As a SQL Server user, I want to understand the SSRS web portal features so that I can view and configure reports in my report server instance.
 
 ---
 # What is the report server web portal (Native mode)?
@@ -93,7 +93,7 @@ You can control what is displayed by selecting **View** in the upper right. If y
 
 ### Power BI Desktop reports and Excel workbooks
 
-You can upload, organize, and manage permissions for Power BI Desktop reports and Excel workbooks. They're grouped together within the web portal.
+You can upload, organize, and manage permissions for Power BI Desktop reports and Excel workbooks. The reports are grouped together within the web portal.
 
 :::image type="content" source="../reporting-services/media/web-portal-ssrs-native-mode/ssrs-web-portal-view-power-bi-excel.png" alt-text="Screenshot of the Power BI Desktop Reports section and the Excel Workbooks section.":::
 

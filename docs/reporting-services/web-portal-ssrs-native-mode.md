@@ -85,9 +85,11 @@ The web portal groups items into different categories. The available categories 
 - Mobile reports
 ::: moniker-end
 
-You can control what is displayed by selecting **View** in the upper right. If you select **Show Hidden**, those items display in a lighter color.
+You can control what is displayed by selecting **View** in the upper right. 
 
 :::image type="content" source="../reporting-services/media/ssrswebportal-view.png" alt-text="Screenshot of the View list with the Show hidden items option selected.":::
+
+If you select **Show Hidden**, those items display in a lighter color.
 
 :::image type="content" source="../reporting-services/media/ssrswebportal-hidden.png" alt-text="Screenshot of the unavailable Paginated Reports option.":::
 
@@ -101,9 +103,9 @@ The files are stored within Reporting Services, similar to other resource files.
 
 ### Search for items
 
-Enter a search term, and see everything you can access. The results are categorized into KPIs, reports, datasets, and other items. You can then interact with the results and add them to your favorites.
+Enter a search term and see everything you can access. The results are categorized into KPIs, reports, datasets, and other items. You can then interact with the results and add them to your favorites.
 
-:::image type="content" source="../reporting-services/media/web-portal-ssrs-native-mode/ssrs-web-portal-search.png" alt-text="Screenshot of the SQL Server Reporting Servers portal with the Search text box called out." lightbox="../reporting-services/media/web-portal-ssrs-native-mode/ssrs-web-portal-search.png":::
+:::image type="content" source="../reporting-services/media/web-portal-ssrs-native-mode/ssrs-web-portal-search.png" alt-text="Screenshot of the SQL Server Reporting Servers portal with the Search box called out." lightbox="../reporting-services/media/web-portal-ssrs-native-mode/ssrs-web-portal-search.png":::
 
 ## Related content
 

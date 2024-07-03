@@ -3,7 +3,7 @@ title: Paginated report parameters in Report Builder
 description: Learn how you can take advantage of common uses for Reporting Services paginated report parameters and their properties.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 06/27/2024
+ms.date: 07/3/2024
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: conceptual
@@ -26,7 +26,7 @@ ms.custom: updatefrequency5
 
 ::: moniker-end
 
-This article describes the common uses for paginated report parameters, the properties you can set, and more. Report parameters enable you to control report data, connect related reports together, and vary report presentation. You can use report parameters in paginated reports that you create in [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] and Report Designer. You can also use report paramterers in mobile reports that you create in [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]. For more information, see [Report parameters concepts in paginated reports (Report Builder)](../../reporting-services/report-design/report-parameters-concepts-report-builder-and-ssrs.md).  
+This article describes the common uses for paginated report parameters, the properties you can set, and more. Report parameters enable you to control report data, connect related reports together, and vary report presentation. You can use report parameters in paginated reports that you create in [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] and Report Designer. You can also use report parameters in mobile reports that you create in [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]. For more information, see [Report parameters concepts in paginated reports (Report Builder)](../../reporting-services/report-design/report-parameters-concepts-report-builder-and-ssrs.md).  
 
 [!INCLUDE [ssrs-mobile-report-deprecated](../../includes/ssrs-mobile-report-deprecated.md)]
 
@@ -59,12 +59,14 @@ Use parameters to relate main reports to drillthrough reports, subreports, and l
 Customize sets of parameters for multiple users. Create two linked reports based on a sales report on the report server. One linked report uses predefined parameter values for sales persons. The second linked report uses predefined parameter values for sales managers. Both reports use the same report definition.  
   
 ### Vary report presentation
+
+Report Builder provides tools you can use to vary your presentations:
+
+- To customize the rendering of a report, send commands to a report server through a URL request. For more information, see [URL access (SSRS)](../../reporting-services/url-access-ssrs.md) and [Pass a report parameter within a URL](../../reporting-services/pass-a-report-parameter-within-a-url.md).  
   
-To customize the rendering of a report, send commands to a report server through a URL request. For more information, see [URL access (SSRS)](../../reporting-services/url-access-ssrs.md) and [Pass a report parameter within a URL](../../reporting-services/pass-a-report-parameter-within-a-url.md).  
+- You can give users the option to specify values so they can customize the appearance of a report. For example, provide a Boolean parameter to indicate whether to expand or collapse all nested row groups in a table.  
   
-Enable users to specify values to help customize the appearance of a report. For example, provide a Boolean parameter to indicate whether to expand or collapse all nested row groups in a table.  
-  
-Enable users to customize report data and appearance by including parameters in an expression. For more information, see [Parameters collection references in a paginated report (Report Builder)](../../reporting-services/report-design/built-in-collections-parameters-collection-references-report-builder.md).  
+- You can give users the option to customize report data and appearance by including parameters in an expression. For more information, see [Parameters collection references in a paginated report (Report Builder)](../../reporting-services/report-design/built-in-collections-parameters-collection-references-report-builder.md).  
   
 ## <a name="UserInterface"></a> View a report with parameters
 
@@ -204,9 +206,9 @@ Report execution options can affect how parameters are processed. A report that 
 
 You can define a subscription for an on-demand report or for a snapshot and specify parameter values to use during subscription processing.  
   
-- **On-demand report**:  For an on-demand report, you can specify a different parameter value than the published value for each parameter listed for the report. For example, suppose you have a Call Service report that uses a *Time Period* parameter to return customer service requests for the current day, week, or month. If the default parameter value for the report is set to **today**, your subscription can use a different parameter value (such as **week** or **month**) to produce a report that contains weekly or monthly figures.  
+- **On-demand report**:  For an on-demand report, you can specify a different parameter value than the published value for each parameter listed for the report. For example, suppose you have a Call Service report that uses a **Time Period** parameter to return customer service requests for the current day, week, or month. If the default parameter value for the report is set to **today**, your subscription can use a different parameter value (such as **week** or **month**) to produce a report that contains weekly or monthly figures.  
   
-- **Snapshot**:  For a snapshot, your subscription must use the parameter values defined for the snapshot. Your subscription can't override a parameter value that's defined for a snapshot. For example, suppose you're subscribing to a Western regional sales report that runs as a report snapshot, and the snapshot specifies **Western** as a regional parameter value. In this case, if you create a subscription to this report, you must use the parameter value **Western** in your subscription. To provide a visual indication that the parameter is ignored, the parameter fields on the subscription page are set to read-only fields.  
+- **Snapshot**:  For a snapshot, your subscription must use the parameter values defined for the snapshot. Your subscription can't override a parameter value defined for a snapshot. For example, suppose you're subscribing to a Western regional sales report that runs as a report snapshot, and the snapshot specifies **Western** as a regional parameter value. In this case, if you create a subscription to this report, you must use the parameter value **Western** in your subscription. To provide a visual indication that the parameter is ignored, the parameter fields on the subscription page are set to read-only fields.  
   
 - Report execution options can affect how parameters are processed. Parameterized reports that run as report snapshots use the parameter values defined for the report snapshot. Parameter values are defined in the **Parameter Properties** page of the report. A report that runs as a snapshot can't use parameters that are derived from a query unless the query includes default values for the parameters.  
   

@@ -1058,8 +1058,6 @@ items:
           href: relational-databases/databases/use-the-copy-database-wizard.md
         - name: Backup & Restore
           href: relational-databases/databases/copy-databases-with-backup-and-restore.md
-        - name: Publish a Database
-          href: relational-databases/databases/publish-a-database-sql-server-management-studio.md
         - name: Detach & attach (T-SQL)
           href: relational-databases/databases/move-a-database-using-detach-and-attach-transact-sql.md
         - name: Upgrade a Database (T-SQL)
@@ -8841,15 +8839,15 @@ items:
         items:
         - name: Generate scripts
           items:
-          - name: Generate Scripts
+          - name: Overview
             href: ssms/scripting/generate-scripts-sql-server-management-studio.md
-          - name: Generate & Publish Scripts Wizard
+          - name: Generate Scripts Wizard
             href: ssms/scripting/generate-and-publish-scripts-wizard.md
-          - name: Objects Supported by the Generate Scripts Wizard
+          - name: Objects supported by the Generate Scripts Wizard
             href: ssms/scripting/objects-supported-by-the-generate-scripts-wizard.md
-          - name: XML Editor
+          - name: XML editor
             href: ssms/scripting/xml-editor-sql-server-management-studio.md
-          - name: Color Coding in Query Editors
+          - name: Color coding in query editors
             href: ssms/scripting/color-coding-in-query-editors.md
         - name: Code outlining
           href: ssms/scripting/code-outlining.md

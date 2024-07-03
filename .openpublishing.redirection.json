@@ -20221,6 +20221,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "docs/relational-databases/databases/publish-a-database-sql-server-management-studio.md",
+      "redirect_url": "/previous-versions/sql/2014/relational-databases/databases/publish-a-database-sql-server-management-studio",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "docs/2014/relational-databases/databases/rebuild-system-databases.md",
       "redirect_url": "/previous-versions/sql/2014/relational-databases/databases/rebuild-system-databases",
       "redirect_document_id": false

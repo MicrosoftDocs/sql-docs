@@ -19,6 +19,8 @@ ms.custom:
 
 Learn about what's new in the different versions of SQL Server [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. This article covers the major feature areas and is updated as new items are released.
 
+For more information about SSRS, see [What is SQL Server Reporting Services (SSRS)](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md).  
+
 For information about Power BI Report Server, see [What's new in Power BI Report Server](/power-bi/report-server/whats-new).
 
 ::: moniker range="=sql-server-ver16"
@@ -65,7 +67,8 @@ You can now host a database catalog used for SSRS in an Azure SQL Managed Instan
 
 ### Power BI Premium dataset support
 
-You can connect to Power BI datasets using either Microsoft Report Builder or SQL Server Data Tools (SSDT). Then, you can publish those reports to SSRS 2019 using SQL Server Analysis Services connectivity and use a stored Windows user name and password to enable the scenario.
+You can connect to Power BI datasets using either Microsoft Report Builder or SQL Server Data Tools (SSDT). Then, you can publish those reports to SSRS 2019 using SQL Server Analysis Services (SSAS) connectivity and use a stored Windows user name and password to enable the scenario. For more information about SSAS, see - [What's new in SQL Server Analysis Services](/analysis-services/what-s-new-in-sql-server-analysis-services?viewFallbackFrom=sql-server-ver15)  
+
 
 ### AltText (alternative text) support for report elements
 
@@ -113,7 +116,7 @@ To enable development of modern applications and customization, SSRS supports a 
 
 ### Query designer support for data analysis expressions (DAX)
 
-In Report Builder and SSDT, you can create native DAX queries against supported SQL Server Analysis Services (SSAS)tabular data models. Use the query designer in both tools to drag and drop the fields you want. The DAX query is then generated for you.
+In Report Builder and SSDT, you can create native DAX queries against supported SSAS tabular data models. Use the query designer in both tools to drag and drop the fields you want. The DAX query is then generated for you.
 
 For more information, see [Reporting Services blog](/archive/blogs/sqlrsteamblog/query-designer-support-for-dax-now-available-in-report-builder-and-sql-server-data-tools).
 
@@ -199,9 +202,7 @@ You can't connect by default without some configuration changes. For more inform
 For more information, see:  
 
 - [Supported combinations of SharePoint and Reporting Services server](../reporting-services/install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md)  
-
 - [Where to find the Reporting Services add-in for SharePoint Products](../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)  
-
 - [Install Reporting Services 2016 in SharePoint mode](../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)  
 
 ### Microsoft .NET Framework 4 support  
@@ -216,7 +217,7 @@ For more information on browser support, see [Browser support for Reporting Serv
 
 **Paginated reports**: Design beautifully paginated reports with updated styles for charts, gauges, maps, and other data visualizations.
 
-**Treemap and Sunburst Charts**: Enhance your reports with Treemap :::image type="content" source="../reporting-services/media/ssrs-treemap-icon.png" alt-text="Icon of the button for creating a Treemap chart."::: and Sunburst :::image type="content" source="../reporting-services/media/ssrs-sunburst-icon.png" alt-text="Icon of the button for creating a Sunburst chart."::: charts, great ways to display hierarchical data. For more information, see [Treemap and sunburst charts in a paginated report in SQL Server Reporting Services](../reporting-services/report-design/tree-map-and-sunburst-charts-in-reporting-services.md).  
+**Treemap and sunburst Charts**: Enhance your reports with Treemap :::image type="content" source="../reporting-services/media/ssrs-treemap-icon.png" alt-text="Icon of the button for creating a treemap chart."::: and Sunburst :::image type="content" source="../reporting-services/media/ssrs-sunburst-icon.png" alt-text="Icon of the button for creating a sunburst chart."::: charts, great ways to display hierarchical data. For more information, see [Treemap and sunburst charts in a paginated report in SQL Server Reporting Services](../reporting-services/report-design/tree-map-and-sunburst-charts-in-reporting-services.md).  
 
 **Embed reports**: Embed mobile and paginated reports in other web pages and applications by using an iframe and URL parameters.  
 
@@ -226,10 +227,10 @@ For more information on browser support, see [Browser support for Reporting Serv
 - **Select a dashboard** you want to pin the item to.
 - **Select a frequency of updates** you want to schedule.
 
+:::image type="content" source="../reporting-services/media/ssrs-pin-to-powerbi.png" alt-text="Screenshot of the Pin to Power BI Dashboard dialog.":::
+
 > [!NOTE]
 > [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] subscriptions manage the report refresh. After the item is pinned, you can edit the subscription and configure a different refresh schedule.
-
-:::image type="content" source="../reporting-services/media/ssrs-pin-to-powerbi.png" alt-text="Screenshot of the Pin to Power BI Dashboard dialog.":::
 
 For more information, see [Power BI report server integration &#40;Configuration Manager&#41;](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md) and [Pin Reporting Services paginated report items to dashboards in Power BI](../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md).  
 
@@ -283,10 +284,8 @@ The new release of SSDT includes the project templates for [!INCLUDE[ssRSCurrent
 
 ## Related content
 
-- [What's new in SQL Server Analysis Services](/analysis-services/what-s-new-in-sql-server-analysis-services?viewFallbackFrom=sql-server-ver15)  
 - [Reporting Services backward compatibility](reporting-services-backward-compatibility.md)  
 - [SQL Server Reporting Services features supported by editions](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md)  
 - [Upgrade and migrate Reporting Services](../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)  
-- [What is SQL Server Reporting Services (SSRS)](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)  
 
 More questions? [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user).

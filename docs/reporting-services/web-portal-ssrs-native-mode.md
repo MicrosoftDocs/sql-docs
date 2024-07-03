@@ -1,15 +1,16 @@
 ---
-title: "The web portal of a report server (Native Mode)"
-description: The web portal of a Reporting Services report server is a web-based experience for viewing reports, KPIs, and navigating through the elements in your report server instance.
+title: "What is the report server web portal (Native mode)?"
+description: The SQL Server Reporting Services (SSRS) web portal is a web-based experience for viewing reports and KPIs, and navigating through elements on your report server.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 08/16/2022
+ms.date: 07/03/2024
 ms.service: reporting-services
 ms.subservice: reporting-services
-ms.topic: conceptual
+ms.topic: what-is
 ms.custom: updatefrequency5
+
 ---
-# The web portal of a report server (SSRS Native Mode)
+# What is the report server web portal (Native mode)?
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 

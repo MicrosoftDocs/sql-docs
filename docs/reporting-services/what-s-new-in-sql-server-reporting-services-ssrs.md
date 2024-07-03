@@ -183,7 +183,7 @@ Connect your mobile reports to a range of data sources, including on-premises SQ
 
 The [!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long.md)] allows you to create and publish SQL Server mobile reports to your [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)].  
 
-:::image type="content" source="../reporting-services/media/ss-mrp-layouttabsm.png" alt-text="Screenshot of the SQL Server Mobile Report Publisher interface." lightbox="../reporting-services/media/ss-mrp-layouttabsm.png":::
+:::image type="content" source="../reporting-services/media/ss-mrp-layouttabsm.png" alt-text="Screenshot of the SQL Server Mobile Report Publisher interface.":::
 
 For more information, see [Create mobile reports with SQL Server Mobile Report Publisher](../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md).  
 
@@ -191,7 +191,7 @@ For more information, see [Create mobile reports with SQL Server Mobile Report P
 
 The Power BI Mobile app for iOS on iPad and iPhone can display SQL Server mobile reports hosted on your local report server.  
 
-:::image type="content" source="../reporting-services/media/ss-mrp-ipad-homesm.png" alt-text="Screenshot of the interface for the Power BI Mobile app for iOS." lightbox="../reporting-services/media/ss-mrp-ipad-homesm.png":::
+:::image type="content" source="../reporting-services/media/ss-mrp-ipad-homesm.png" alt-text="Screenshot of the interface for the Power BI Mobile app for iOS.":::
 
 You can't connect by default without some configuration changes. For more information on how to allow the Power BI Mobile app to connect to your report server, see [Enable a report server for Power BI Mobile access](../reporting-services/report-server/enable-a-report-server-for-power-bi-mobile-access.md).
 

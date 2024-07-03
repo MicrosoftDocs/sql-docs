@@ -173,7 +173,7 @@ When specified with WAIT_AT_LOW_PRIORITY, the shrink operation's Sch-M lock requ
 
 In Azure Synapse SQL pools, running a shrink command is not recommended as this is an I/O intensive operation and can take your dedicated SQL pool (formerly SQL DW) offline. In addition, there will be costing implications to your data warehouse snapshots after running this command.
 
-In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] Hyperscale, shrinking files is supported as a preview feature. Because of the architecture of Hyperscale, `DBCC SHRINKDATABASE` is supported but not recommended for [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] Hyperscale, instead use [DBCC SHRINKFILE](dbcc-shrinkfile-transact-sql.md).
+[Database and file shrink operations](/azure/azure-sql/database/file-space-manage) are currently in preview for Azure SQL Database Hyperscale. For more information on the preview, see [Shrink for Azure SQL Database Hyperscale](https://aka.ms/hs-shrink-preview).
 
 ## Known issues
 

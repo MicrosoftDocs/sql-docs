@@ -188,6 +188,9 @@ Using the [Azure portal](https://portal.azure.com):
 
 When the key is rotated on the primary server, it's automatically transferred to the secondary server.
 
+> [!NOTE]
+> If the same key vault key on the **primary** server is used as the default TDE protector on the secondary server, then ensure **Auto-rotate key** is enabled for **both** servers. Failure to do so may lead to the auto-rotation workflows entering an error state, and prevent further manual key rotation operations.  
+
 # [PowerShell](#tab/azure-powershell-geo)
 
 The `<keyVaultKeyId>` can be [retrieved from Key Vault](/azure/key-vault/keys/quick-create-portal#retrieve-a-key-from-key-vault).

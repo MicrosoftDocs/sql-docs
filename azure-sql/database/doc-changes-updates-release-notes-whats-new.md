@@ -5,14 +5,14 @@ description: Learn about the new features and documentation improvements for Azu
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma, randolphwest
-ms.date: 06/20/2024
+ms.date: 07/02/2024
 ms.service: sql-database
 ms.subservice: service-overview
 ms.topic: whats-new
 ms.custom:
   - ignite-2023
   - build-2024
-monikerRange: "=azuresql || =azuresql-db"
+monikerRange: "=azuresql||=azuresql-db"
 ---
 # What's new in Azure SQL Database?
 
@@ -52,6 +52,7 @@ The following table lists the features of Azure SQL Database that are currently 
 | [Hyperscale elastic pool maintenance window support](maintenance-window.md) | You can now configure a non-default [maintenance window](maintenance-window.md) for a [Hyperscale elastic pool](hyperscale-elastic-pool-overview.md). For more information, read [Blog: Maintenance window support for Azure SQL Database Hyperscale elastic pools](https://aka.ms/hsep-fmw). |
 | [Hyperscale elastic pools Premium-series hardware](hyperscale-elastic-pool-overview.md) | Premium-series and premium-series memory optimized hardware is in preview for Hyperscale elastic pools. |
 | [Hyperscale elastic pools with zone redundancy](hyperscale-elastic-pool-overview.md) | You can now create zone redundant elastic pools in the Hyperscale service tier. You can migrate existing zone-redundant Hyperscale databases into elastic pools. For more information, read [Blog post: Zone redundant Hyperscale elastic pools](https://aka.ms/hsep-zr). |
+| [Hyperscale support for database and file shrink](file-space-manage.md)  | Database and file shrink commands are supported in preview for Azure SQL Database Hyperscale. For more information, see [Shrink for Azure SQL Database Hyperscale](https://aka.ms/hs-shrink-preview). |
 | [Import and export using Private Link](database-import-export-private-link.md) | Leave *Allow Access to Azure Services* off when you import or export a database using a service-managed endpoint. |
 | [JSON native data type](/sql/t-sql/data-types/json-data-type?view=azuresqldb-current&preserve-view=true) | The new native **json** data type and new JSON aggregate functions are currently in preview. For more information, see [JSON Type and aggregates preview](https://aka.ms/json-type-aggregates-public-preview). |
 | [JSON aggregate functions](/sql/relational-databases/json/json-data-sql-server?view=azuresqldb-current&preserve-view=true#json-data-from-aggregates) | Two new **json** aggregate functions `JSON_OBJECTAGG` and `JSON_ARRAYAGG` enable construction of JSON objects or arrays based on an aggregate from SQL data. For more information, see [JSON Type and aggregates preview](https://aka.ms/json-type-aggregates-public-preview). |
@@ -83,6 +84,12 @@ The following table lists features of Azure SQL Database that have been made gen
 ## Documentation changes
 
 Learn about significant changes to the Azure SQL Database documentation. For previous years, see the [What's new archive](doc-changes-updates-release-notes-whats-new-archive.md).
+
+### July 2024
+
+| Changes | Details |
+| --- | --- |
+| **Hyperscale support for database and file shrink** | Database and file shrink commands are supported in preview for Azure SQL Database Hyperscale. For more information, see [Shrink for Azure SQL Database Hyperscale](https://aka.ms/hs-shrink-preview). |
 
 ### June 2024
 

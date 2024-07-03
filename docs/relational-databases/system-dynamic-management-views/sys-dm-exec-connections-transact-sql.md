@@ -36,7 +36,7 @@ Returns information about the connections established to this instance of the da
 |protocol_type|**nvarchar(40)**|Specifies the protocol type of the payload. It currently distinguishes between TDS ("TSQL"), "SOAP", and "Database Mirroring". Is nullable.|  
 |protocol_version|**int**|Version of the data access protocol associated with this connection. Is nullable.|  
 |endpoint_id|**int**|An identifier that describes what type of connection it is. This `endpoint_id` can be used to query the `sys.endpoints` view. Is nullable.|  
-|encrypt_option|**nvarchar(40)**|Boolean value to describe whether encryption is enabled for this connection. Is not nullable.|  
+|encrypt_option|**nvarchar(40)**|Boolean value to describe whether encryption is enabled for this connection. Is not nullable.<br /><br />For HADR mirroring endpoints, this column always returns NULL. Use the `sys.database_mirroring_endpoints` DMV instead to check if connections to a HADR mirroring endpoint are encrypted.|
 |auth_scheme|**nvarchar(40)**|Specifies [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/Windows Authentication scheme used with this connection. Is not nullable.|  
 |node_affinity|**smallint**|Identifies the memory node to which this connection has affinity. Is not nullable.|  
 |num_reads|**int**|Number of byte reads that have occurred over this connection. Is nullable.|  

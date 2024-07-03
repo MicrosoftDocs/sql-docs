@@ -172,7 +172,7 @@ Other users can work in the database during file shrinking; the database doesn't
 
 When specified with WAIT_AT_LOW_PRIORITY, the shrink operation's Sch-M lock request will wait with low priority when executing the command for 1 minute. If the operation is blocked for the duration, the specified ABORT_AFTER_WAIT action will be executed.
 
-In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] Hyperscale, `DBCC SHRINKFILE` is supported as a preview feature. Because of the architecture of Hyperscale, `DBCC SHRINKDATABASE` is supported but not recommended for [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] Hyperscale.
+[Database and file shrink operations](/azure/azure-sql/database/file-space-manage) are currently in preview for Azure SQL Database Hyperscale. For more information on the preview, see [Shrink for Azure SQL Database Hyperscale](https://aka.ms/hs-shrink-preview).
 
 ### Known issues
 

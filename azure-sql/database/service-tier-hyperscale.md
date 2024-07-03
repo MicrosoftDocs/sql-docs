@@ -165,7 +165,7 @@ Learn more in [restoring a Hyperscale database to a different region](hyperscale
 
 ## Shrink
 
-The [DBCC SHRINKFILE](/sql/t-sql/database-console-commands/dbcc-shrinkfile-transact-sql?view=azuresqldb-current&preserve-view=true) feature is supported in preview for Azure SQL Database Hyperscale. Because of the architecture of Hyperscale, `DBCC SHRINKDATABASE` is supported but not recommended. For more information, see [Shrink for Azure SQL Database Hyperscale](https://aka.ms/hs-shrink-preview).
+[Database and file shrink operations](file-space-manage.md) are currently in preview for Azure SQL Database Hyperscale. For more information on the preview, see [Shrink for Azure SQL Database Hyperscale](https://aka.ms/hs-shrink-preview).
 
 ## Known limitations
 
@@ -173,7 +173,7 @@ These are the current limitations of the Hyperscale service tier. We're actively
 
 | Issue | Description |
 | :--- | :--- |
-| Shrink is blocked when TDE is disabled | Currently, `DBCC SHRINKFILE` option is not supported when Transparent Data Encryption (TDE) is disabled in Azure SQL Database Hyperscale.|
+| Shrink is blocked when TDE is disabled | Currently, database and file shrink operations are not supported when Transparent Data Encryption (TDE) is disabled in Azure SQL Database Hyperscale.|
 | Restore database from other service tiers | A non-Hyperscale database can't be restored as a Hyperscale database, and a Hyperscale database can't be restored as a non-Hyperscale database.<br /><br />For databases migrated to Hyperscale from other Azure SQL Database service tiers, pre-migration backups are kept for the duration of [backup retention](automated-backups-overview.md#backup-retention) period of the source database, including long-term retention policies. Restoring a pre-migration backup within the backup retention period of the database is supported [via the command line](recovery-using-backups.md#point-in-time-restore). You can restore these backups to any non-Hyperscale service tier. |
 | Migration of databases with In-Memory OLTP objects | Hyperscale supports a subset of In-Memory OLTP objects, including memory-optimized table types, table variables, and natively compiled modules. However, when any In-Memory OLTP objects are present in the database being migrated, migration from Premium and Business Critical service tiers to Hyperscale isn't supported. To migrate such a database to Hyperscale, all In-Memory OLTP objects and their dependencies must be dropped. After the database is migrated, these objects can be recreated. Durable and non-durable memory-optimized tables aren't currently supported in Hyperscale and must be changed to disk tables. |
 | Database integrity check | DBCC CHECKDB isn't currently supported for Hyperscale databases. DBCC CHECKTABLE ('TableName') WITH TABLOCK and DBCC CHECKFILEGROUP WITH TABLOCK might be used as a workaround. See [Data Integrity in Azure SQL Database](https://azure.microsoft.com/blog/data-integrity-in-azure-sql-database/) for details on data integrity management in Azure SQL Database. |

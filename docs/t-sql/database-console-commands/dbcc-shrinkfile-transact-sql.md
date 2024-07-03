@@ -4,7 +4,7 @@ description: "DBCC SHRINKFILE shrinks the size of a database file."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: umajay, dpless, randolphwest
-ms.date: 02/01/2024
+ms.date: 07/02/2024
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: "language-reference"
@@ -33,7 +33,10 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 
 [!INCLUDE [SQL Server SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
-Shrinks the current database's specified data or log file size. You can use it to move data from one file to other files in the same filegroup, which empties the file and allows for its database removal. You can shrink a file to less than its size at creation, resetting the minimum file size to the new value.
+Shrinks the current database's specified data or log file size. You can use it to move data from one file to other files in the same filegroup, which empties the file and allows for its database removal. You can shrink a file to less than its size at creation, resetting the minimum file size to the new value. Use DBCC SHRINKFILE only when necessary.
+
+> [!NOTE]
+> Shrink operations should not be considered a regular maintenance operation. Data and log files that grow due to regular, recurring business operations do not require shrink operations.
 
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
@@ -93,6 +96,8 @@ If specified, `DBCC SHRINKFILE` tries to shrink the file to *target_size*. Used 
 Migrates all data from the specified file to other files in the *same filegroup*. In other words, `EMPTYFILE` migrates data from a specified file to other files in the same filegroup. `EMPTYFILE` assures you that no new data gets added to the file, despite this file not being read-only. You can use the [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) statement to remove a file. If you use the [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) statement to change file size, the read-only flag is reset, and data can be added.
 
 For FILESTREAM filegroup containers, you can't use `ALTER DATABASE` to remove a file until the FILESTREAM Garbage Collector has run and deleted all the unnecessary filegroup container files that `EMPTYFILE` has copied to another container. For more information, see [sp_filestream_force_garbage_collection](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-filestream-force-garbage-collection.md). For information on removing a FILESTREAM container, see the corresponding section in [ALTER DATABASE File and Filegroup Options (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)
+
+EMPTYFILE is not supported in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] or [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] Hyperscale.
 
 #### NOTRUNCATE
 
@@ -167,11 +172,13 @@ Other users can work in the database during file shrinking; the database doesn't
 
 When specified with WAIT_AT_LOW_PRIORITY, the shrink operation's Sch-M lock request will wait with low priority when executing the command for 1 minute. If the operation is blocked for the duration, the specified ABORT_AFTER_WAIT action will be executed.
 
+In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] Hyperscale, `DBCC SHRINKFILE` is supported as a preview feature. Because of the architecture of Hyperscale, `DBCC SHRINKDATABASE` is supported but not recommended for [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] Hyperscale.
+
 ### Known issues
 
-**Applies to:** [!INCLUDE [sql-server](../../includes/ssnoversion-md.md)], [!INCLUDE[ssazure-sqldb](../../includes/ssazure-sqldb.md)], [!INCLUDE[ssazuremi-md](../../includes/ssazuremi-md.md)], [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] dedicated SQL pool
+**Applies to:** [!INCLUDE [sql-server](../../includes/ssnoversion-md.md)], [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)], [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] dedicated SQL pool
 
-- Currently, LOB columns (varbinary(max), varchar(max), and nvarchar(max)) in compressed columnstore segments are not affected by DBCC SHRINKDATABASE and DBCC SHRINKFILE.
+- Currently, LOB column types (**varbinary(max)**, **varchar(max)**, and **nvarchar(max)**) in compressed columnstore segments are not affected by `DBCC SHRINKDATABASE` and `DBCC SHRINKFILE`.
 
 ### Understand concurrency issues with DBCC SHRINKFILE
 

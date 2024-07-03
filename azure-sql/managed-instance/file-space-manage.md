@@ -3,8 +3,8 @@ title: Database file space management
 description: This page describes how to manage file space with databases in Azure SQL Managed Instance.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: mathoma
-ms.date: 09/11/2023
+ms.reviewer: mathoma, blakhani
+ms.date: 07/02/2024
 ms.service: sql-managed-instance
 ms.subservice: deployment-configuration
 ms.topic: conceptual
@@ -34,7 +34,7 @@ Understanding the following storage space quantities are important for managing 
 
 The following diagram illustrates the relationship between the different types of storage space for a database.
 
-:::image type="content" source="./media/file-space-manage/understand-database-space-quantities.png" alt-text="Diagram that demonstrates the size of difference database space concepts in the database quantity table.":::
+:::image type="content" source="media/file-space-manage/understand-database-space-quantities.png" alt-text="Diagram that demonstrates the size of difference database space concepts in the database quantity table.":::
 
 ### Query a single database for file space information
 
@@ -69,7 +69,7 @@ Be aware of the potential negative performance impact of shrinking database file
  
 Before shrinking the transaction log, keep in mind [Factors that can delay log truncation](/sql/relational-databases/logs/the-transaction-log-sql-server?view=azuresqldb-mi-current&preserve-view=true#FactorsThatDelayTruncation). If the storage space is required again after a log shrink, the transaction log will grow again and by doing that, introduce performance overhead during log growth operations. For more information, see the [Recommendations](#Recommendations).
 
-You can shrink a log file only while the database is online, and at least one [virtual log file (VLF)](/sql/relational-databases/sql-server-transaction-log-architecture-and-management-guide?view=azuresqldb-mi-current&preserve-view=true#physical_arch) is free. In some cases, shrinking the log may not be possible until after the next log truncation.  
+You can shrink a log file only while the database is online, and at least one [virtual log file (VLF)](/sql/relational-databases/sql-server-transaction-log-architecture-and-management-guide?view=azuresqldb-mi-current&preserve-view=true#physical_arch) is free. In some cases, shrinking the log might not be possible until after the next log truncation.  
   
 Factors, such as a long-running transaction, can keep [VLFs](/sql/relational-databases/sql-server-transaction-log-architecture-and-management-guide?view=azuresqldb-mi-current&preserve-view=true#physical_arch) active for an extended period, can restrict log shrinkage, or even prevent the log from shrinking at all. For information, see [Factors that can delay log truncation](/sql/relational-databases/logs/the-transaction-log-sql-server?view=azuresqldb-mi-current&preserve-view=true#FactorsThatDelayTruncation).  
   
@@ -95,13 +95,13 @@ For more information on shrink operations, review the following:
 
 ### Index maintenance after shrink
 
-After a shrink operation is completed against data files, indexes may become fragmented. This reduces their performance optimization effectiveness for certain workloads, such as queries using large scans. If performance degradation occurs after the shrink operation is complete, consider index maintenance to rebuild indexes. Keep in mind that index rebuilds require free space in the database, and hence may cause the allocated space to increase, counteracting the effect of shrink.
+After a shrink operation is completed against data files, indexes can become fragmented. This reduces their performance optimization effectiveness for certain workloads, such as queries using large scans. If performance degradation occurs after the shrink operation is complete, consider index maintenance to rebuild indexes. Keep in mind that index rebuilds require free space in the database, and hence might cause the allocated space to increase, counteracting the effect of shrink.
 
 For more information about index maintenance, see [Optimize index maintenance to improve query performance and reduce resource consumption](/sql/relational-databases/indexes/reorganize-and-rebuild-indexes?view=azuresqldb-mi-current&preserve-view=true).
 
 ### Evaluate index page density
 
-If truncating data files did not result in a sufficient reduction in allocated space, you may decide to shrink database data files to reclaim unused space from those files. However, as an optional but recommended step, you should first determine average page density for indexes in the database. For the same amount of data, shrink will complete faster if page density is high, because it will have to move fewer pages. If page density is low for some indexes, consider performing maintenance on these indexes to increase page density before shrinking data files. This will also let shrink achieve a deeper reduction in allocated storage space.
+If truncating data files did not result in a sufficient reduction in allocated space, you might decide to shrink database data files to reclaim unused space from those files. However, as an optional but recommended step, you should first determine average page density for indexes in the database. For the same amount of data, shrink will complete faster if page density is high, because it will have to move fewer pages. If page density is low for some indexes, consider performing maintenance on these indexes to increase page density before shrinking data files. This will also let shrink achieve a deeper reduction in allocated storage space.
 
 To determine page density for all indexes in the database, use the following query. Page density is reported in the `avg_page_space_used_in_percent` column.
 
@@ -126,9 +126,9 @@ ORDER BY page_count DESC;
 If there are indexes with high page count that have page density lower than 60-70%, consider rebuilding or reorganizing these indexes before shrinking data files.
 
 > [!NOTE]
-> For larger databases, the query to determine page density may take a long time (hours) to complete. Additionally, rebuilding or reorganizing large indexes also requires substantial time and resource usage. There is a tradeoff between spending extra time on increasing page density on one hand, and reducing shrink duration and achieving higher space savings on another.
+> For larger databases, the query to determine page density can take a long time (hours) to complete. Additionally, rebuilding or reorganizing large indexes also requires substantial time and resource usage. There is a tradeoff between spending extra time on increasing page density on one hand, and reducing shrink duration and achieving higher space savings on another.
 
-If there are multiple indexes with low page density, you may be able to rebuild them in parallel on multiple database sessions to speed up the process. However, make sure that you are not approaching database resource limits by doing so, and leave sufficient resource headroom for application workloads that may be running. Monitor resource consumption (CPU, Data IO, Log IO) in Azure portal or using the [sys.dm_db_resource_stats](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database?view=azuresqldb-mi-current&preserve-view=true) view, and start additional parallel rebuilds only if resource utilization on each of these dimensions remains substantially lower than 100%. If CPU, Data IO, or Log IO utilization is at 100%, you can scale up the database to have more CPU cores and increase IO throughput. This may enable additional parallel rebuilds to complete the process faster.
+If there are multiple indexes with low page density, you might be able to rebuild them in parallel on multiple database sessions to speed up the process. However, make sure that you are not approaching database resource limits by doing so, and leave sufficient resource headroom for application workloads. Monitor resource consumption (CPU, Data IO, Log IO) in Azure portal or using the [sys.dm_db_resource_stats](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database?view=azuresqldb-mi-current&preserve-view=true) view, and start additional parallel rebuilds only if resource utilization on each of these dimensions remains substantially lower than 100%. If CPU, Data IO, or Log IO utilization is at 100%, you can scale up the database to have more CPU cores and increase IO throughput, allowing for additional parallel rebuilds to complete the process faster.
 
 #### Sample index rebuild command
 
@@ -161,7 +161,7 @@ If you want to reduce allocated space for the file to the minimum possible, exec
 DBCC SHRINKFILE (4);
 ```
 
-If a workload is running concurrently with shrink, it may start using the storage space freed by shrink before shrink completes and truncates the file. In this case, shrink will not be able to reduce allocated space to the specified target.
+If a workload is running concurrently with shrink, it might start using the storage space freed by shrink before shrink completes and truncates the file. In this case, shrink will not be able to reduce allocated space to the specified target.
 
 You can mitigate this by shrinking each file in smaller steps. This means that in the `DBCC SHRINKFILE` command, you set the target that is slightly smaller than the current allocated space for the file. For example, if allocated space for file with file_id 4 is 200,000 MB, and you want to shrink it to 100,000 MB, you can first set the target to 170,000 MB:
 
@@ -193,9 +193,9 @@ WHERE r.command IN ('DbccSpaceReclaim','DbccFilesCompact','DbccLOBCompact','DBCC
 ```
 
 > [!NOTE]
-> Shrink progress may be non-linear, and the value in the `percent_complete` column may remain virtually unchanged for long periods of time, even though shrink is still in progress.
+> Shrink progress can be non-linear, and the value in the `percent_complete` column might remain virtually unchanged for long periods of time, even though shrink is still in progress.
 
-Once shrink has completed for all data files, use the [space usage query](#query-a-single-database-for-file-space-information) to determine the resulting reduction in allocated storage size. If there is still a large difference between used space and allocated space, you can [rebuild indexes](#sample-index-rebuild-command). This may temporarily increase allocated space further, however shrinking data files again after rebuilding indexes should result in a deeper reduction in allocated space.
+Once shrink has completed for all data files, use the [space usage query](#query-a-single-database-for-file-space-information) to determine the resulting reduction in allocated storage size. If there is still a large difference between used space and allocated space, you can [rebuild indexes](#sample-index-rebuild-command). This can temporarily increase allocated space further, however shrinking data files again after rebuilding indexes should result in a deeper reduction in allocated space.
 
 ## Enlarge a log file
 
@@ -238,7 +238,7 @@ Following are some general recommendations when you are working with transaction
     - The file is shrunk either to the size at which only 25 percent of the file is unused space or to the original size of the file, whichever is larger. 
     - For information about changing the setting of the **auto_shrink** property, see [View or Change the Properties of a Database](/sql/relational-databases/databases/view-or-change-the-properties-of-a-database?view=azuresqldb-mi-current&preserve-view=true) and [ALTER DATABASE SET Options (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql-set-options?view=azuresqldb-mi-current&preserve-view=true).
   
-## Next steps
+## Related content
 
 - [Automated backups in Azure SQL Managed Instance](automated-backups-overview.md)
 - [ALTER DATABASE (Transact-SQL) File and Filegroup options](/sql/t-sql/statements/alter-database-transact-sql-file-and-filegroup-options?view=azuresqldb-mi-current&preserve-view=true)

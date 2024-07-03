@@ -38,9 +38,9 @@ This release introduces the new [!INCLUDE [sssql22-md](../includes/sssql22-md.md
 
 ### Updated web portal
 
-The web portal received a face lift.
+The web portal was updated with a contemporary look.
 
-:::image type="content" source="../reporting-services/media/report-server-2022-web-portal.png" alt-text="Screenshot of the updated [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] Reporting Services web portal." lightbox="../reporting-services/media/report-server-2022-web-portal.png":::
+:::image type="content" source="../reporting-services/media/report-server-2022-web-portal.png" alt-text="Screenshot of the updated [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] Reporting Services web portal.":::
 
 ### Deprecated features
 
@@ -101,7 +101,7 @@ Download [SQL Server 2017 Reporting Services](https://www.microsoft.com/download
 
 ### Comments on reports
 
-Comments are available for reports, to add perspective, and collaborate with others. You can also include attachments with comments.
+Comments are available for reports. Comments can add perspective and help you collaborate with others. You can also include attachments with comments.
 
 :::image type="content" source="media/what-s-new-in-sql-server-reporting-services-ssrs/report-server-comments.png" alt-text="Screenshot of the Comments button on a report.":::
 
@@ -109,11 +109,11 @@ For more information, see [Add comments to a report in a report server - Power B
 
 ### REST API support
 
-To enable development of modern applications and customization, SQL Server Reporting Services supports a fully OpenAPI compliant RESTful API. The full API specification and documentation can be found on [SwaggerHub](https://app.swaggerhub.com/apis/microsoft-rs/SSRS/2.0).
+To enable development of modern applications and customization, SSRS supports a fully OpenAPI-compliant RESTful API. For information about the full API specification, see [SwaggerHub](https://app.swaggerhub.com/apis/microsoft-rs/SSRS/2.0).
 
 ### Query designer support for data analysis expressions (DAX)
 
-In Report Builder and SQL Server Data Tools, you can create native DAX queries against supported SQL Server Analysis Services tabular data models. Use the query designer in both tools to drag and drop the fields you want. The DAX query is then generated for you.
+In Report Builder and SSDT, you can create native DAX queries against supported SQL Server Analysis Services (SSAS)tabular data models. Use the query designer in both tools to drag and drop the fields you want. The DAX query is then generated for you.
 
 For more information, see [Reporting Services blog](/archive/blogs/sqlrsteamblog/query-designer-support-for-dax-now-available-in-report-builder-and-sql-server-data-tools).
 
@@ -125,7 +125,7 @@ For more information, see [Reporting Services blog](/archive/blogs/sqlrsteamblog
 
 ### SharePoint integrated mode is deprecated
 
-SharePoint integrated mode is deprecated after SQL Server 2016. To add Reporting Services reports to SharePoint, use the [Report Viewer web part](../reporting-services/report-server-sharepoint/report-viewer-web-part-sharepoint-site.md).
+SharePoint integrated mode is deprecated after SQL Server 2016. To add Reporting Services reports to SharePoint, use the [Report Viewer web part on a SharePoint site - Reporting Services](../reporting-services/report-server-sharepoint/report-viewer-web-part-sharepoint-site.md).
 
 ::: moniker-end
 
@@ -169,7 +169,7 @@ For more information, see [Work with KPIs in Reporting Services](./working-with-
 
 Reporting Services mobile reports are dedicated reports optimized for a wide variety of form factors. They provide an optimal experience for users who access reports on mobile devices. Mobile reports feature an assortment of visualizations, from time, category, and comparison charts, to tree maps and custom maps. 
 
-Connect your mobile reports to a range of data sources, including on-premises SQL Server Analysis Services multidimensional and tabular data. You can place fields for mobile reports on a design surface that has adjustable grid rows and columns. The flexible mobile report elements automatically scale to fit any screen size. Save the mobile reports to a Reporting Service server, and view and interact with them in a browser or the Power BI mobile app. You can use the following mobile devices to access the reports:
+Connect your mobile reports to a range of data sources, including on-premises SQL Server Analysis Services multidimensional and tabular data. You can place fields for mobile reports on a design surface that has adjustable grid rows and columns. The flexible mobile report elements automatically scale to fit any screen size. Save the mobile reports to a Reporting Service server, and view and interact with them in a browser or the Power BI mobile app. You can use the following mobile device types to access the reports:
 
 - iPad
 - iPhones
@@ -180,7 +180,7 @@ Connect your mobile reports to a range of data sources, including on-premises SQ
 
 The [!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long.md)] allows you to create and publish SQL Server mobile reports to your [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)].  
 
-:::image type="content" source="../reporting-services/media/ss-mrp-layouttabsm.png" alt-text="Screenshot of the SQL Server Mobile Report Publisher interface.":::
+:::image type="content" source="../reporting-services/media/ss-mrp-layouttabsm.png" alt-text="Screenshot of the SQL Server Mobile Report Publisher interface." lightbox="../reporting-services/media/ss-mrp-layouttabsm.png":::
 
 For more information, see [Create mobile reports with SQL Server Mobile Report Publisher](../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md).  
 
@@ -188,7 +188,7 @@ For more information, see [Create mobile reports with SQL Server Mobile Report P
 
 The Power BI Mobile app for iOS on iPad and iPhone can display SQL Server mobile reports hosted on your local report server.  
 
-:::image type="content" source="../reporting-services/media/ss-mrp-ipad-homesm.png" alt-text="Screenshot of the interface for the Power BI Mobile app for iOS.":::
+:::image type="content" source="../reporting-services/media/ss-mrp-ipad-homesm.png" alt-text="Screenshot of the interface for the Power BI Mobile app for iOS." lightbox="../reporting-services/media/ss-mrp-ipad-homesm.png":::
 
 You can't connect by default without some configuration changes. For more information on how to allow the Power BI Mobile app to connect to your report server, see [Enable a report server for Power BI Mobile access](../reporting-services/report-server/enable-a-report-server-for-power-bi-mobile-access.md).
 

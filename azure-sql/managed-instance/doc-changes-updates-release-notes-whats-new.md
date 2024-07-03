@@ -86,6 +86,12 @@ The features and benefits provided by the November 2022 feature wave are now gen
 
 Learn about significant changes to the Azure SQL Managed Instance documentation. For previous years, see the [What's new archive](doc-changes-updates-release-notes-whats-new-archive.md).
 
+### July 2024
+
+| Changes | Details |
+| --- | --- |
+|**Native Windows principals**| [Native Windows principals](native-windows-principals.md) in SQL Managed Instance is in preview. |
+
 ### June 2024
 
 | Changes | Details |

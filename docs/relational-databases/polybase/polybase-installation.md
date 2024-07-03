@@ -3,7 +3,7 @@ title: "Install PolyBase on Windows"
 description: Learn to install PolyBase as a single node or PolyBase scale-out group. You can use an installation wizard or a command prompt. Finally, enable PolyBase.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: 06/18/2024
+ms.date: 07/03/2024
 ms.service: sql
 ms.subservice: polybase
 ms.topic: conceptual
@@ -36,7 +36,7 @@ To install a trial version of SQL Server, go to [SQL Server evaluations](https:/
 
 - PolyBase can be installed on only one SQL Server instance per machine.
 
-- PolyBase installation does not support NT AUTHORITY\SYSTEM.
+- PolyBase installation does not support using `NT AUTHORITY\SYSTEM` as the service account.
 
 - You cannot add features to a failover cluster instance after creation. For example, you cannot add the PolyBase feature to an existing failover cluster instance.
 
@@ -206,5 +206,4 @@ To change the service accounts for the PolyBase Engine and PolyBase Data Movemen
 ## Related content
 
 - [PolyBase configuration](../../relational-databases/polybase/polybase-configuration.md)
-
 - [Big data options on the Microsoft SQL Server platform](../../big-data-cluster/big-data-options.md)

@@ -233,11 +233,11 @@ For more information on browser support, see [Browser support for Reporting Serv
 
 For more information, see [Power BI report server integration &#40;Configuration Manager&#41;](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md) and [Pin Reporting Services paginated report items to dashboards in Power BI](../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md).  
 
-**PowerPoint Rendering and Export**: The Microsoft PowerPoint (PPTX) format is a new [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] rendering extension. You can export reports in the PPTX format from the usual applications: Report Builder, Report Designer (in SSDT), and the [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]. For the example, the following image shows the export menu from the [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]. 
+**PowerPoint Rendering and Export**: The Microsoft PowerPoint (`.pptx`) format is a new [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] rendering extension. You can export reports in the `.pptx` format from the usual applications: Report Builder, Report Designer (in SSDT), and the [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]. For the example, the following image shows the export menu from the [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]. 
 
 :::image type="content" source="../reporting-services/media/ssrs-export-powerpoint.png" alt-text="Screenshot of the Export list with the PowerPoint option highlighted.":::
 
-You can also select the PPTX format for subscription output and use Report Server URL access to render and export a report. For example, add the following URL command t0 your browser to export a report from a named instance of the report server.  
+You can also select the `.pptx` format for subscription output and use Report Server URL access to render and export a report. For example, add the following URL command t0 your browser to export a report from a named instance of the report server.  
 
 ```https
 https://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freportfolder%2freport+name+with+spaces&rs:Format=pptx  
@@ -253,16 +253,16 @@ For more information, see [Enable and disable client-side printing for Reporting
 
 ### Subscription improvements  
 
-|Feature|Supported server mode|  
-|-------------|---------------------------|  
-|**Enable and disable subscriptions**: New user interface options that allow you to quickly disable and enable subscriptions. The disabled subscriptions maintain their other configuration properties, such as schedule, and can be easily enabled.<br /><br /> :::image type="content" source="../reporting-services/media/ssrs-enable-disable-subscriptions.png" alt-text="Screenshot of the Enable, Disable, and Delete options." lightbox="../reporting-services/media/ssrs-enable-disable-subscriptions.png":::<br /><br /> For more information, see [Disable or pause report and subscription processing](../reporting-services/subscriptions/disable-or-pause-report-and-subscription-processing.md).|Native mode|  
-|**Subscription description**: When you create a new subscription, you can include a description of the report as part of the subscription properties. The description is included on the subscription summary page.|SharePoint and Native mode|  
-|**Change subscription owner**: Enhanced user interface to allow you to change the owner of a subscription. Previous versions of [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] allow administrators to change subscription owners using script. Starting with the [!INCLUDE[sssql15-md](../includes/sssql16-md.md)] release, you can change subscription owners by using the user interface or script. Changing the subscription owner is a common administrative task when users leave or change roles in your organization.|SharePoint and Native mode|  
-|**Shared credential for file share subscriptions**: Two workflows now exist with [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] file share subscriptions:<br /><br /> New in this release, your [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] administrator can configure a single file share account that you can use for multiple subscriptions. The file share account is configured in the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Native mode configuration manager **Specify a file share account**. On the subscription configuration page, select **Use file share account**.<br /><br /> You configure individual subscriptions with specific credentials for the destination file share.<br /><br /> You can also mix the two approaches and have some file share subscriptions use the central file share account while other subscriptions use specific credentials.|Native mode|
+|Feature|Description|Supported server mode|  
+|-------------|------|---------------------|  
+|**Enable and disable subscriptions**|New user interface options that allow you to quickly disable and enable subscriptions. The disabled subscriptions maintain their other configuration properties, such as schedule, and can be easily enabled.<br /><br /> :::image type="content" source="../reporting-services/media/ssrs-enable-disable-subscriptions.png" alt-text="Screenshot of the Enable, Disable, and Delete options.":::<br /><br /> For more information, see [Disable or pause report and subscription processing](../reporting-services/subscriptions/disable-or-pause-report-and-subscription-processing.md).|Native mode|  
+|**Subscription description**|When you create a new subscription, you can include a description of the report as part of the subscription properties. The description is included on the subscription summary page.|SharePoint and Native mode|  
+|**Change subscription owner**|Enhanced user interface to allow you to change the owner of a subscription. Previous versions of [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] allow administrators to change subscription owners using script. Starting with the [!INCLUDE[sssql15-md](../includes/sssql16-md.md)] release, you can change subscription owners by using the user interface or script. Changing the subscription owner is a common administrative task when users leave or change roles in your organization.|SharePoint and Native mode|  
+|**Shared credential for file share subscriptions**|Two workflows now exist with [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] file share subscriptions:<br /><br /> New in this release, your [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] administrator can configure a single file share account that you can use for multiple subscriptions. The file share account is configured in the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Native mode configuration manager **Specify a file share account**. On the subscription configuration page, select **Use file share account**.<br /><br /> You configure individual subscriptions with specific credentials for the destination file share.<br /><br /> You can also mix the two approaches and have some file share subscriptions use the central file share account while other subscriptions use specific credentials.|Native mode|
 
 ### SQL Server Data Tools (SSDT)
 
-The new release of SSDT includes the project templates for [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]: Report Server Project Wizard and Report Server Project. For information about downloading SSDT, see [Install SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md).  
+The new release of SSDT includes the project templates for [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)], Report Server Project Wizard, and Report Server Project. For information about downloading SSDT, see [Install SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md).  
 
 ### Report Builder improvements
 
@@ -279,7 +279,6 @@ The new release of SSDT includes the project templates for [!INCLUDE[ssRSCurrent
 **High Dots Per Inch (DPI) Support**: [!INCLUDE[ssRBnoversion](../includes/ssrbnoversion.md)] supports High DPI scaling and devices. For more information on High DPI, see:  
 
 - [Windows 8.1 DPI Scaling Enhancements](https://blogs.windows.com/windowsexperience/2013/07/15/windows-8-1-dpi-scaling-enhancements/)  
-
 - [High DPI and Windows 8.1](/previous-versions/windows/it-pro/windows-8.1-and-8/dn528848(v=win.10))  
 
 ## Related content

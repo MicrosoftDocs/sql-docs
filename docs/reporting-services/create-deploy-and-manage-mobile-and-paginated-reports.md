@@ -3,7 +3,7 @@ title: "What is SQL Server Reporting Services?"
 description: "Learn how to create, deploy, and manage reports by using SQL Server Reporting Services (SSRS) to deliver data insights through paginated reports to web portals."
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 06/20/2024
+ms.date: 07/03/2024
 ms.service: reporting-services
 ms.subservice: reporting-services
 ms.topic: overview
@@ -38,7 +38,7 @@ SSRS offers an updated suite of products:
 * **Paginated reports**: Create modern-looking reports with updated tools and new features.
 * **A modern web portal**: Organize and display paginated Reporting Services reports and KPIs in any modern browser. Store Excel workbooks on the portal as well.
 ::: moniker range="<=sql-server-ver15"
-* **New mobile reports**: Create reports with responsive layouts that adapt to different devices and orientations.
+* **Mobile reports**: Create reports with responsive layouts that adapt to different devices and orientations.
 ::: moniker-end
 
 ## Paginated reports

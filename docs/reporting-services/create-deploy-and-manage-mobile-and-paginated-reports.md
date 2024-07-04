@@ -36,6 +36,7 @@ SSRS makes it easy to deliver the right information to the right users. You can 
 SSRS offers an updated suite of products:
 
 * **Paginated reports**: Create modern-looking reports with updated tools and new features.
+
 * **A modern web portal**: Organize and display paginated Reporting Services reports and KPIs in any modern browser. Store Excel workbooks on the portal as well.
 ::: moniker range="<=sql-server-ver15"
 * **Mobile reports**: Create reports with responsive layouts that adapt to different devices and orientations.

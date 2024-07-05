@@ -3,7 +3,7 @@ title: "What is the report server web portal (Native mode)?"
 description: The SQL Server Reporting Services (SSRS) web portal is a web-based experience for viewing reports and KPIs, and navigating through elements on your report server.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 07/03/2024
+ms.date: 07/05/2024
 ms.service: reporting-services
 ms.subservice: reporting-services
 ms.topic: overview
@@ -36,7 +36,7 @@ Use the web portal for these and other tasks:
 - Work with [shared datasets](../reporting-services/work-with-shared-datasets-web-portal.md).
 - Send feedback or make feature requests.
 - Browse the report server folders or search for specific reports. 
-- View a report, its general properties, and past copies of the report that are captured in report history.
+- View a report, its general properties, and paste copies of the report that are captured in the report history.
 - Subscribe to reports for delivery to an email inbox or a shared folder on the file system, depending on your access permissions.
 
 ## Feature availability
@@ -48,7 +48,7 @@ Some web portal features are only available in specified editions of [!INCLUDE[s
 On a new installation, only local administrators have sufficient permissions to work with content and settings. To grant permissions to other users, a local administrator must create role assignments that provide access to the report server. The application pages and tasks that a user can then access depend on the role assignments for that user. For more information, see [Grant user access to a report server](./security/grant-user-access-to-a-report-server.md).
 
 > [!NOTE]
-> If you are browsing to the web portal on the local machine that the server is running on, you might see a message indicating that you aren't allowed to view this folder. This is due to Universal Access Control (UAC) and that you aren't running the browser as an administrator. You need to give your account content manager rights on the folder by either browsing to the server remotely, or by using Edge locally to configure the permissions. You can't run Edge as an administrator with the **Run as administrator** menu option. However, you can run Edge as the local administrator account by holding SHIFT + right-clicking on the Edge shortcut, selecting **Run as a different user**, then providing the local machine administrator account information. If you want to use the web portal remotely, give your account content manager rights on the folder.  
+> If you're browsing the web portal on the local machine that the server is running on, you might see a message indicating that you aren't allowed to view this folder. This is due to Universal Access Control (UAC) and that you aren't running the browser as an administrator. You need to give your account content manager rights on the folder by either browsing to the server remotely, or by using Edge locally to configure the permissions. You can't run Edge as an administrator with the **Run as administrator** menu option. However, you can run Edge as the local administrator account by holding SHIFT + right-clicking on the Edge shortcut, selecting **Run as a different user**, then providing the local machine administrator account information. If you want to use the web portal remotely, give your account content manager rights on the folder.  
 
 ## Get started
 
@@ -64,7 +64,7 @@ To start the web portal from a browser, follow these steps:
 
 When you start the [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)], the pages, links, and options that you see vary based on the permissions you have on the report server. 
 
-To perform a task, you must be assigned to a role that includes the task. A user who is assigned to a role that has full permissions has access to the complete set of application menus and pages available for managing a report server. A user assigned to a role that has permissions to view and run reports sees only the menus and pages that support those activities. Each user can have different role assignments for different report servers, or even for the various reports and folders that are stored on a single report server.
+To perform a task, you must be assigned to a role that includes the task. A user assigned to a role with full permissions has access to the complete set of application menus and pages available for managing a report server. A user assigned to a role with permissions to view and run reports sees only the menus and pages that support those activities. Each user can have different role assignments for different report servers, or even for the various reports and folders that are stored on a single report server.
 
 For more information about roles, see [Grant permissions on a native mode report server](../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md).
 

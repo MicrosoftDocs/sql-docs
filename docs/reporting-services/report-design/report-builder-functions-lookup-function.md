@@ -9,7 +9,7 @@ ms.subservice: report-design
 ms.topic: concept-article
 ms.custom: updatefrequency5
 
-#customer intent: As a Report Builder user, I want learn how to use the Lookup function so that I can programatically find data in my datasets.
+#customer intent: As a Report Builder user, I want to learn how to use the Lookup function so that I can programmatically find data in my datasets.
 ---
 # Report Builder functions - Lookup function in a paginated report (Report Builder)
 

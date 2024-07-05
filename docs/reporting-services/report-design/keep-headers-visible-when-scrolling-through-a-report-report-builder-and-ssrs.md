@@ -1,6 +1,6 @@
 ---
 title: Keep headers visible when scrolling through a paginated report in Report Builder
-description: Learn how to freeze the row or column headings to prevent row and column labels from scrolling out of view after rendering a paginated report in Report Builder.
+description: Learn how to freeze the row or column headings in Report Builder to prevent row and column labels from scrolling out of view after rendering a paginated report.
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 06/27/2024
@@ -9,13 +9,13 @@ ms.subservice: report-design
 ms.topic: how-to
 ms.custom: updatefrequency5
 
-#customer intent: As a Report Builder user, I want learn how to freeze row or column headings so that I can keep useful day visible on my rendered reports.
+#customer intent: As a Report Builder user, I want to learn how to freeze row or column headings so that I can keep useful day visible on my rendered reports.
 ---
 # Keep headers visible when scrolling through a paginated report in Report Builder
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
 
-To prevent row and column labels from scrolling out of view after rendering a paginated report, you can freeze the row or column headings.  
+You can prevent row and column labels from scrolling out of view after rendering a paginated report by freezing the row or column headings.
   
 How you control the rows and columns depends on whether you have a table or a matrix. If you have a table, you configure static members (row and column headings) to remain visible. If you have a matrix, you configure row and column group headers to remain visible.  
   
@@ -55,7 +55,7 @@ The following image shows a matrix:
   
 1. On the right side of the **Grouping** pane, select the dropdown, and then select **Advanced Mode**.  
   
-1. Select the static member (row or column) that you want to remain visible while scrolling. The **Properties** pane displays the **Tablix Member** properties.  
+1. Select the row or column static member that you want to remain visible while scrolling. The **Properties** pane displays the **Tablix Member** properties.  
 
     :::image type="content" source="../../reporting-services/report-design/media/grouppane-tablixmember-updated.png" alt-text="Screenshot of Report Builder highligting a group in the Grouping pane and its FixedData property in the Properties pane":::
   

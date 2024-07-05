@@ -456,10 +456,8 @@ datetime2 ( n )
 | char [ ( n ) ]
 | varbinary [ ( n ) ]
 | uniqueidentifier
-```
 
-```syntaxsql
--- Syntax for Warehouse in Microsoft Fabric
+-- Syntax for ADD and DROP of PRIMARY KEY, UNIQUE and FOREIGN_KEY column constraints 
 
 ALTER TABLE { database_name.schema_name.source_table_name | schema_name.source_table_name | source_table_name }
 {

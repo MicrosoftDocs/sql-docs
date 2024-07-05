@@ -74,8 +74,8 @@ Requires VIEW SERVER PERFORMANCE STATE permission on the server.
 |unnest failed|Internal only|Internal only|  
 |tables|Total number of optimizations.|Average number of tables referenced per query optimized.|  
 |hints|Number of times some hint was specified. Hints counted include: JOIN, GROUP, UNION and FORCE ORDER query hints, FORCE PLAN set option, and join hints.|Not applicable|  
-|order hint|Number of times a force order hint was specified.|Not applicable|  
-|join hint|Number of times the join algorithm was forced by a join hint.|Not applicable|  
+|order hint|Number of times where join order was forced. This counter isn't restricted to the FORCE ORDER hint. Specifying a join algorithm within a query, such as an INNER HASH JOIN, also forces the join order, which increments the counter.|Not applicable|  
+|join hint|Number of times the join algorithm was forced by a join hint. The FORCE ORDER query hint doesn't increment this counter.|Not applicable|  
 |view reference|Number of times a view has been referenced in a query.|Not applicable|  
 |remote query|Number of optimizations where the query referenced at least one remote data source, such as a table with a four-part name or an OPENROWSET result.|Not applicable|  
 |maximum DOP|Total number of optimizations.|Average effective MAXDOP value for an optimized plan. By default, effective MAXDOP is determined by the **max degree of parallelism** server configuration option, and may be overridden for a specific query by the value of the MAXDOP query hint.|  
@@ -121,6 +121,46 @@ SELECT (SELECT CAST (occurrence AS float) FROM sys.dm_exec_query_optimizer_info 
        (SELECT CAST (occurrence AS float)   
         FROM sys.dm_exec_query_optimizer_info WHERE counter = 'optimizations')  
         AS ContainsSubqueryFraction;  
+```  
+
+### E. Viewing the total number of hints during optimization  
+ How many hints are counted when FORCE ORDER is included as a query hint? 
+  
+```sql
+-- Check hint count before query execution
+SELECT ISNULL('', 0) AS [Before],
+    [counter],
+    occurrence
+FROM sys.dm_exec_query_optimizer_info
+WHERE [counter] IN (
+    'hints',
+    'order hint',
+    'join hint'
+);
+
+SELECT poh.PurchaseOrderID,
+    poh.OrderDate,
+    pod.ProductID,
+    pod.DueDate,
+    poh.VendorID
+FROM Purchasing.PurchaseOrderHeader AS poh
+INNER MERGE JOIN Purchasing.PurchaseOrderDetail AS pod
+    ON poh.PurchaseOrderID = pod.PurchaseOrderID
+OPTION (
+    FORCE ORDER,
+    RECOMPILE
+);
+
+-- check hint count after query execution
+SELECT ISNULL('', 0) AS [After],
+    [counter],
+    occurrence
+FROM sys.dm_exec_query_optimizer_info
+WHERE [counter] IN (
+    'hints',
+    'order hint',
+    'join hint'
+);
 ```  
   
 ## See Also  

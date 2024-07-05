@@ -4,7 +4,7 @@ description: ALTER TABLE modifies a table definition by altering, adding, or dro
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 04/25/2024
+ms.date: 07/05/2024
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -426,14 +426,13 @@ ALTER TABLE { database_name.schema_name.source_table_name | schema_name.source_t
 ## Syntax for Warehouse in Fabric
 
 ```syntaxsql
--- Syntax for ALTER TABLE to ADD NULLABLE columns to a user table in Microsoft Fabric Warehouse:
+-- Syntax for Warehouse om Microsoft Fabric:
 
 ALTER TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name }
 {
-ADD
-{
-{ column_name <data_type> [COLLATE collation_name] [ <column_options> ] } [ ,...n ]
-}
+  ADD  { column_name <data_type> [COLLATE collation_name] [ <column_options> ] } [ ,...n ]
+| ADD { <column_constraint> FOR column_name} [ ,...n ]
+| DROP { [CONSTRAINT] constraint_name } [ ,...n ]
 }
 [ ; ]
 
@@ -456,16 +455,6 @@ datetime2 ( n )
 | char [ ( n ) ]
 | varbinary [ ( n ) ]
 | uniqueidentifier
-
--- Syntax for ADD and DROP of PRIMARY KEY, UNIQUE and FOREIGN_KEY column constraints 
-
-ALTER TABLE { database_name.schema_name.source_table_name | schema_name.source_table_name | source_table_name }
-{
-    ADD { <column_constraint> FOR column_name} [ ,...n ]
-    | DROP { [CONSTRAINT] constraint_name } [ ,...n ]
-    
-}
-[;]
 
 <column_constraint>::=
     [ CONSTRAINT constraint_name ]

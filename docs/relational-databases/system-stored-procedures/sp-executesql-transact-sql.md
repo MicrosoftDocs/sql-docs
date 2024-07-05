@@ -59,7 +59,7 @@ Each parameter included in *@stmt* must have a corresponding entry in both the *
 
 #### [ @params = ] N'*@parameter_name* *data_type* [ ,... *n* ]'
 
-One string that contains the definitions of all parameters that are embedded in *@stmt*. The string must be either a Unicode constant or a Unicode variable. Each parameter definition consists of a parameter name and a data type. *n* is a placeholder that indicates more parameter definitions. Every parameter specified in *@stmt* must be defined in *@params*. If the [!INCLUDE [tsql](../../includes/tsql-md.md)] statement or batch in *@stmt* doesn't contain parameters, *@params* isn't required. The default value for this parameter is `NULL`.
+A string that contains the definitions of all parameters that are embedded in *@stmt*. The string must be either a Unicode constant or a Unicode variable. Each parameter definition consists of a parameter name and a data type. *n* is a placeholder that indicates more parameter definitions. Every parameter specified in *@stmt* must be defined in *@params*. If the [!INCLUDE [tsql](../../includes/tsql-md.md)] statement or batch in *@stmt* doesn't contain parameters, *@params* isn't required. The default value for this parameter is `NULL`.
 
 #### [ @param1 = ] '*value1*'
 

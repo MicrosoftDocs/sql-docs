@@ -39,7 +39,7 @@ The following image shows a matrix:
   
 1. Right-click the row, column, or corner handle of a tablix data region, and then select **Tablix Properties**.  
   
-1. On the **General** tab, under **Row Headers** or **Column Headers**, select **Header should remain visible while scrolling**.  
+1. On the **General** tab, under **Row Headers** or **Column Headers**, select **Keep header visible while scrolling**.  
 
     :::image type="content" source="../../reporting-services/report-design/media/header-should-remain-visible-while-scrolling.png" alt-text="Screenshot of the Tablix Properties dialog box highlighting the options to select Keep header visible while scrolling.":::
 
@@ -57,7 +57,7 @@ The following image shows a matrix:
   
 1. Select the row or column static member that you want to remain visible while scrolling. The **Properties** pane displays the **Tablix Member** properties.  
 
-    :::image type="content" source="../../reporting-services/report-design/media/grouppane-tablixmember-updated.png" alt-text="Screenshot of Report Builder highligting a group in the Grouping pane and its FixedData property in the Properties pane":::
+    :::image type="content" source="../../reporting-services/report-design/media/grouppane-tablixmember-updated.png" alt-text="Screenshot of Report Builder highligting a group in the Grouping pane and its FixedData property in the Properties pane" lightbox="../../reporting-services/report-design/media/grouppane-tablixmember-updated.png":::
   
 1. In the Properties pane, set **FixedData** to **True**.  
   

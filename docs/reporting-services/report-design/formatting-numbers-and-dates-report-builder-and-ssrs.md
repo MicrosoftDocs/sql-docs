@@ -30,7 +30,7 @@ To specify format strings within a text box report item, you need to select the 
   
 A chart data region commonly shows dates along the category (x) axis and values along the value (y) axis. To specify formatting in a chart, right-click an axis and select **Axis Properties**. On the value axis, you can specify formats only for numbers. For more information, see [Format axis labels on a paginated report chart (Report Builder)](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md).  
   
-To specify formatting in a Gauge data region, right-click the scale of the gauge and select **Radial Scale Properties** or **Linear Scale Properties**.  
+To specify formatting in a **Gauge** data region, right-click the scale of the gauge and select **Radial Scale Properties** or **Linear Scale Properties**.  
   
 > [!NOTE]  
 > If some formatting options you want to use are grayed out, it means that those formatting options aren't compatible with the field's data type, which is set in the data source. For example, if the field contains number values but the field's data type is String, you can't apply numerical data formatting options such as currency or decimals.
@@ -38,7 +38,7 @@ To specify formatting in a Gauge data region, right-click the scale of the gauge
 > [!NOTE]  
 > [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## Considerations for Formatting Numbers and Dates  
+## Considerations for formatting numbers and dates  
 
 Before you format numbers and dates in your report, consider the following details:  
   

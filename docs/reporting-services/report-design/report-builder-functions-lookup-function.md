@@ -53,7 +53,7 @@ Use **Lookup** to retrieve the value from the specified dataset for a name/value
   
 - Returns the result expression value.  
   
-To retrieve multiple values for a single name or key field where there's a 1-to-many relationship, use [Report Builder functions - LookupSet function in a paginated report (Report Builder)](../../reporting-services/report-design/report-builder-functions-lookupset-function.md). To call **Lookup** for a set of values, use [Keep headers visible when scrolling through a paginated report (Report Builder)](../../reporting-services/report-design/report-builder-functions-multilookup-function.md).  
+To retrieve multiple values for a single name or key field where there's a 1-to-many relationship, use [Report Builder functions - LookupSet function in a paginated report (Report Builder)](../../reporting-services/report-design/report-builder-functions-lookupset-function.md). To call **Lookup** for a set of values, use [Report Builder functions - Multilookup function in a paginated report (Report Builder)](../../reporting-services/report-design/report-builder-functions-multilookup-function.md).  
   
 The following restrictions apply:  
   

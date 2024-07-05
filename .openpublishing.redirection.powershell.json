@@ -79,11 +79,6 @@
       "source_path": "docs/powershell/work-with-sql-server-powershell-paths.md",
       "redirect_url": "/powershell/sql-server/work-with-sql-server-powershell-paths",
       "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/database-engine/install-windows/install-sql-server-powershell.md",
-      "redirect_url": "https://learn.microsoft.com/powershell/sql-server/download-sql-server-ps-module",
-      "redirect_document_id": false
     }
   ]
 }

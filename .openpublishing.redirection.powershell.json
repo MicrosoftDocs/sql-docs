@@ -82,7 +82,7 @@
     },
     {
       "source_path": "docs/database-engine/install-windows/install-sql-server-powershell.md",
-      "redirect_url": "powershell/sql-server/download-sql-server-ps-module",
+      "redirect_url": "https://learn.microsoft.com/powershell/sql-server/download-sql-server-ps-module",
       "redirect_document_id": false
     }
   ]

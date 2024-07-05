@@ -426,6 +426,39 @@ ALTER TABLE { database_name.schema_name.source_table_name | schema_name.source_t
 ## Syntax for Warehouse in Fabric
 
 ```syntaxsql
+-- Syntax for ALTER TABLE to ADD NULLABLE columns to a user table in Microsoft Fabric Warehouse:
+
+ALTER TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name }
+{
+ADD
+{
+{ column_name <data_type> [COLLATE collation_name] [ <column_options> ] } [ ,...n ]
+}
+}
+[ ; ]
+
+<column_options> ::=
+[ NULL ] -- default is NULL
+
+<data type> ::=
+datetime2 ( n )
+| date
+| time ( n )
+| float [ ( n ) ]
+| real [ ( n ) ]
+| decimal [ ( precision [ , scale ] ) ]
+| numeric [ ( precision [ , scale ] ) ]
+| bigint
+| int
+| smallint
+| bit
+| varchar [ ( n ) ]
+| char [ ( n ) ]
+| varbinary [ ( n ) ]
+| uniqueidentifier
+```
+
+```syntaxsql
 -- Syntax for Warehouse in Microsoft Fabric
 
 ALTER TABLE { database_name.schema_name.source_table_name | schema_name.source_table_name | source_table_name }

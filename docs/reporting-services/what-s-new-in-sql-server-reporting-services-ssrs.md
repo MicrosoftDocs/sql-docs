@@ -29,7 +29,7 @@ For information about Power BI Report Server, see [What's new in Power BI Report
 
 Download [SQL Server 2022 Reporting Services](https://www.microsoft.com/download/details.aspx?id=104502) from the Microsoft Download Center.
 
-This release introduces the new [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] Reporting Services (SSRS). We continue to innovate, create, and design in a way that gives everyone the ability to achieve more. Designing for inclusivity reflects how people adapt to the world around them. In this new release of SSRS, we made significant accessibility improvements to make sure we're empowering people to achieve more. The release includes:
+This release introduces the new [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] Reporting Services (SSRS). Innovation, creation, and design efforts focus on giving everyone the ability to achieve more. Designing for inclusivity reflects how people adapt to the world around them. In this new release of SSRS, significant accessibility improvements ensure broader empowerment and usability for users. The release includes:
 
 - Windows Narrator support enhancements for the new Windows OS (Operating Systems) and Windows Server 
 - Security enhancements
@@ -46,12 +46,13 @@ The web portal was updated with a contemporary look.
 
 ### Deprecated features
 
-In 2020, we announced the upcoming deprecation of Report Server features [Pin to Power BI, Mobile Reports, and Mobile Report Publisher](deprecated-features-in-sql-server-reporting-services-ssrs.md). These features were removed from versions of SQL Server starting with [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] and are no longer supported. SQL Server 2016, SQL Server 2017, and SQL Server 2019 are supported in maintenance mode until End of Service (EOS) for existing customers.
+In 2020, deprecation of Report Server features [Pin to Power BI, Mobile Reports, and Mobile Report Publisher](deprecated-features-in-sql-server-reporting-services-ssrs.md) was announced. These features were removed from versions of SQL Server starting with [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] and are no longer supported. SQL Server 2016, SQL Server 2017, and SQL Server 2019 are supported in maintenance mode until End of Service (EOS) for existing customers.
 
-When we mark a feature as deprecated, it means that the feature is in maintenance mode only. There's no new feature development, including changes related to interoperability with new features. We strive to keep deprecated features in future releases, to make upgrades easier. However, in rare situations, we might choose to permanently remove the feature from Reporting Services if it limits future innovations.
+When a feature is deprecated, it's in maintenance mode only. There's no new feature development, including changes related to interoperability with new features. Deprecated features usually remain 
+in future releases to make upgrades easier. However, in rare situations, the feature might be permanently removed from Reporting Services if it limits future innovations.
 
 > [!NOTE]
-> For new development work, we don't recommend using deprecated features.
+> For new development work, don't use deprecated features.
 
 ::: moniker-end
 
@@ -63,11 +64,11 @@ Download [SQL Server 2019 Reporting Services](https://www.microsoft.com/download
 
 ### Azure SQL Managed Instance support
 
-You can now host a database catalog used for SSRS in an Azure SQL Managed Instance (MI) either on a virtual machine (VM) or in your data center. Support is limited to using database credentials for the connection to SQL MI.
+You can now host a database catalog used for SSRS in an Azure SQL Managed Instance (MI) either on a virtual machine (VM) or in your data center. Support is limited to database credentials for the connection to SQL MI.
 
 ### Power BI Premium dataset support
 
-You can connect to Power BI datasets using either Microsoft Report Builder or SQL Server Data Tools (SSDT). Then, you can publish those reports to SSRS 2019 using SQL Server Analysis Services (SSAS) connectivity and use a stored Windows user name and password to enable the scenario. For more information about SSAS, see - [What's new in SQL Server Analysis Services](/analysis-services/what-s-new-in-sql-server-analysis-services?viewFallbackFrom=sql-server-ver15)  
+You can connect to Power BI datasets by using either Microsoft Report Builder or SQL Server Data Tools (SSDT). Then you can publish those reports to SSRS 2019 by using SQL Server Analysis Services (SSAS) connectivity and use a stored Windows username and password to enable the scenario. For more information about SSAS, see - [What's new in SQL Server Analysis Services](/analysis-services/what-s-new-in-sql-server-analysis-services?viewFallbackFrom=sql-server-ver15)  
 
 
 ### AltText (alternative text) support for report elements
@@ -162,7 +163,7 @@ For more information about custom branding, see [Brand the web portal](./brandin
 
 #### KPIs in the [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] 
 
-Create KPIs directly in the [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] sp that they are contextual to the current folder. When creating KPIs, you can choose dataset fields and summarize their values. You can also select related content to drill-through to expose more details.
+Create KPIs directly in the [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] so that they are contextual to the current folder. When creating KPIs, you can choose dataset fields and summarize their values. You can also select related content to drill-through to expose more details.
 
 :::image type="content" source="../reporting-services/media/ssrs-webportal-kpi.png" alt-text="Screenshot of the KPIs in the SQL Server Reporting Services portal.":::
 
@@ -170,7 +171,7 @@ For more information, see [Work with KPIs in Reporting Services](./working-with-
 
 ### Mobile reports
 
-Reporting Services mobile reports are dedicated reports optimized for a wide variety of form factors. They provide an optimal experience for users who access reports on mobile devices. Mobile reports feature an assortment of visualizations, from time, category, and comparison charts, to tree maps and custom maps. 
+Reporting Services mobile reports are dedicated reports that are optimized for a wide variety of form factors. They provide an optimal experience for users who access reports on mobile devices. Mobile reports feature an assortment of visualizations, from time, category, and comparison charts, to tree maps and custom maps. 
 
 Connect your mobile reports to a range of data sources, including on-premises SQL Server Analysis Services multidimensional and tabular data. You can place fields for mobile reports on a design surface that has adjustable grid rows and columns. The flexible mobile report elements automatically scale to fit any screen size. Save the mobile reports to a Reporting Service server, and view and interact with them in a browser or the Power BI mobile app. You can use the following mobile device types to access the reports:
 
@@ -187,7 +188,7 @@ The [!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long.md)] allo
 
 For more information, see [Create mobile reports with SQL Server Mobile Report Publisher](../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md).  
 
-#### SQL Server mobile reports hosted in Reporting Services available in Power BI Mobile app  
+#### SQL Server mobile reports hosted in Reporting Services are available in Power BI Mobile app  
 
 The Power BI Mobile app for iOS on iPad and iPhone can display SQL Server mobile reports hosted on your local report server.  
 
@@ -207,7 +208,7 @@ For more information, see:
 
 ### Microsoft .NET Framework 4 support  
 
-[!INCLUDE[ssRSCurrent-md](../includes/ssrscurrent-md.md)] supports the current versions of Microsoft .NET Framework 4, including version 4.0 and 4.5.1. If a 4.x version of .NET Framework isn't already installed, [!INCLUDE[ssNoVersion-md](../includes/ssnoversion-md.md)] setup installs .NET 4.0 during the feature installation step.  
+SSRS supports the current versions of Microsoft .NET Framework 4, including version 4.0 and 4.5.1. If a 4.x version of .NET Framework isn't already installed, [!INCLUDE[ssNoVersion-md](../includes/ssnoversion-md.md)] setup installs .NET 4.0 during the feature installation step.  
 
 ### Report improvements
 
@@ -234,7 +235,7 @@ For more information on browser support, see [Browser support for Reporting Serv
 
 For more information, see [Power BI report server integration &#40;Configuration Manager&#41;](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md) and [Pin Reporting Services paginated report items to dashboards in Power BI](../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md).  
 
-**PowerPoint Rendering and Export**: The Microsoft PowerPoint (`.pptx`) format is a new [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] rendering extension. You can export reports in the `.pptx` format from the usual applications: Report Builder, Report Designer (in SSDT), and the [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]. For the example, the following image shows the export menu from the [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]. 
+**PowerPoint Rendering and Export**: The Microsoft PowerPoint (`.pptx`) format is a new [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] rendering extension. You can export reports in the `.pptx` format from the usual applications: Report Builder, Report Designer (in SSDT), and the [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]. For example, the following image shows the export menu from the [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]. 
 
 :::image type="content" source="../reporting-services/media/ssrs-export-powerpoint.png" alt-text="Screenshot of the Export list with the PowerPoint option highlighted.":::
 
@@ -256,10 +257,10 @@ For more information, see [Enable and disable client-side printing for Reporting
 
 |Feature|Description|Supported server mode|  
 |-------------|------|---------------------|  
-|**Enable and disable subscriptions**|New user interface options that allow you to quickly disable and enable subscriptions. The disabled subscriptions maintain their other configuration properties, such as schedule, and can be easily enabled.<br /><br /> :::image type="content" source="../reporting-services/media/ssrs-enable-disable-subscriptions.png" alt-text="Screenshot of the Enable, Disable, and Delete options.":::<br /><br /> For more information, see [Disable or pause report and subscription processing](../reporting-services/subscriptions/disable-or-pause-report-and-subscription-processing.md).|Native mode|  
+|**Enable and disable subscriptions**|New user interface options allow you to quickly disable and enable subscriptions. The disabled subscriptions maintain their other configuration properties, such as schedule, and can be easily enabled.<br /><br /> :::image type="content" source="../reporting-services/media/ssrs-enable-disable-subscriptions.png" alt-text="Screenshot of the Enable, Disable, and Delete options.":::<br /><br /> For more information, see [Disable or pause report and subscription processing](../reporting-services/subscriptions/disable-or-pause-report-and-subscription-processing.md).|Native mode|  
 |**Subscription description**|When you create a new subscription, you can include a description of the report as part of the subscription properties. The description is included on the subscription summary page.|SharePoint and Native mode|  
 |**Change subscription owner**|Enhanced user interface to allow you to change the owner of a subscription. Previous versions of [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] allow administrators to change subscription owners using script. Starting with the [!INCLUDE[sssql15-md](../includes/sssql16-md.md)] release, you can change subscription owners by using the user interface or script. Changing the subscription owner is a common administrative task when users leave or change roles in your organization.|SharePoint and Native mode|  
-|**Shared credential for file share subscriptions**|Two workflows now exist with [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] file share subscriptions:<br /><br /> New in this release, your [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] administrator can configure a single file share account that you can use for multiple subscriptions. The file share account is configured in the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Native mode configuration manager **Specify a file share account**. On the subscription configuration page, select **Use file share account**.<br /><br /> You configure individual subscriptions with specific credentials for the destination file share.<br /><br /> You can also mix the two approaches and have some file share subscriptions use the central file share account while other subscriptions use specific credentials.|Native mode|
+|**Shared credential for file share subscriptions**|New in this release, your [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] administrator can configure a single file share account that you can use for multiple subscriptions. The file share account is configured in the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Native mode configuration manager **Specify a file share account**. On the subscription configuration page, select **Use file share account**.<br /><br /> You configure individual subscriptions with specific credentials for the destination file share.<br /><br /> You can also mix these two approaches and have some file share subscriptions use the central file share account while other subscriptions use specific credentials.|Native mode|
 
 ### SQL Server Data Tools (SSDT)
 

@@ -1,9 +1,10 @@
 ---
 title: "sp_cursorunprepare (Transact-SQL)"
-description: "sp_cursorunprepare (Transact-SQL)"
+description: sp_cursorunprepare discards the execution plan developed in the sp_cursorprepare stored procedure.
 author: markingmyname
 ms.author: maghan
-ms.date: "03/14/2017"
+ms.reviewer: randolphwest
+ms.date: 07/05/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -16,25 +17,27 @@ dev_langs:
   - "TSQL"
 ---
 # sp_cursorunprepare (Transact-SQL)
+
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  Discards the execution plan developed in the sp_cursorprepare stored procedure. sp_cursorunprepare is invoked by specifying ID = 6 in a tabular data stream (TDS) packet.  
-  
- :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
-  
-## Syntax  
-  
-```  
-  
-sp_cursorunprepare handle  
-```  
-  
-## Arguments  
- *handle*  
- Is the *handle* value that is returned by sp_cursorprepare when the statement is prepared.  
-  
-## See Also  
- [sp_cursorprepare &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursorprepare-transact-sql.md)   
- [System Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
-  
-  
+Discards the execution plan developed in the `sp_cursorprepare` stored procedure. `sp_cursorunprepare` is invoked by specifying `ID = 6` in a tabular data stream (TDS) packet.
+
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+
+## Syntax
+
+```syntaxsql
+sp_cursorunprepare handle
+[ ; ]
+```
+
+## Arguments
+
+#### *handle*
+
+The *handle* value returned by `sp_cursorprepare` when the statement is prepared.
+
+## Related content
+
+- [sp_cursorprepare (Transact-SQL)](sp-cursorprepare-transact-sql.md)
+- [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)

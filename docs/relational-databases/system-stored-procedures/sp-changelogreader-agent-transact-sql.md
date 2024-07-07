@@ -56,7 +56,7 @@ The password for the account under which the agent runs. *@job_password* is **sy
 
 #### [ @publisher_security_mode = ] *publisher_security_mode*
 
-The the security mode used by the agent when connecting to the Publisher. *@publisher_security_mode* is **smallint**, with a default of `NULL`. The following values define the security mode:
+The security mode used by the agent when connecting to the Publisher. *@publisher_security_mode* is **smallint**, with a default of `NULL`. The following values define the security mode:
 
 - `0` specifies [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] authentication.
 - `1` specifies Windows authentication.

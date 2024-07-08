@@ -38,6 +38,7 @@ If you need to download the installer in a language other than the one detected 
 
 | Bug fixed | Details |
 | :-------- | :------ |
+| Security updates | [KB5040712](https://support.microsoft.com/kb/5040712) |
 | Fixed potential crashes. | Fixed potential crashes when invalid metadata is received from the server. |
 
 ## Previous releases
@@ -213,6 +214,7 @@ If you need to download the installer in a language other than the one detected 
 
 | Bug fixed | Details |
 | :-------- | :------ |
+| Security updates | [KB5040711](https://support.microsoft.com/kb/5040711) |
 | Fixed potential crashes. | Fixed potential crashes when invalid metadata is received from the server. |
 
 ## 18.7.2

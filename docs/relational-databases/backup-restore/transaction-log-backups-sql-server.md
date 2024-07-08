@@ -4,7 +4,7 @@ description: Independent of the database backups, you can back up the SQL Server
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest
-ms.date: 10/05/2023
+ms.date: 07/08/2024
 ms.service: sql
 ms.subservice: backup-restore
 ms.topic: conceptual
@@ -18,7 +18,7 @@ helpviewer_keywords:
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-This article is relevant only for [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] databases that are using the full or bulk-logged recovery models. This article discusses backing up the transaction log of a [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] database.
+This article is relevant only for [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] databases that are using the full or bulk-logged recovery models. This article discusses [backing up the transaction log](back-up-a-transaction-log-sql-server.md) of a [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] database.
 
 Minimally, you must have created at least one full backup before you can create any log backups. After that, the transaction log can be backed up at any time unless the log is already being backed up.
 
@@ -44,7 +44,7 @@ The transaction log backup created at 8:00 PM contains transaction log records f
 
 If a transaction log is damaged, work that is performed since the most recent valid backup is lost. Therefore we strongly recommend that you put your log files on fault-tolerant storage.
 
-If a database is damaged, or you are about to restore the database, we recommend that you create a [tail-log backup](tail-log-backups-sql-server.md) to enable you to restore the database to the current point in time.
+If a database is damaged, or you're about to restore the database, we recommend that you create a [tail-log backup](tail-log-backups-sql-server.md) to enable you to restore the database to the current point in time.
 
 > [!CAUTION]  
 > [!INCLUDE [known-issue-memory-optimized](../../includes/paragraph-content/known-issue-memory-optimized.md)]
@@ -63,10 +63,8 @@ Take frequent enough log backups to support your business requirements, specific
 
 ## Related tasks
 
-- [Back Up a Transaction Log](back-up-a-transaction-log-sql-server.md)
-
+- [Back up a transaction log](back-up-a-transaction-log-sql-server.md)
 - <xref:Microsoft.SqlServer.Management.Smo.Backup.SqlBackup%2A> (SMO)
-
 - [Use the Maintenance Plan Wizard](../maintenance-plans/use-the-maintenance-plan-wizard.md)
 
 ## Related content

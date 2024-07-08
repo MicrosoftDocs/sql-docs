@@ -15,7 +15,7 @@ ms.custom: updatefrequency5
 
 [!INCLUDE[ssrs-appliesto-sql2016-preview](../includes/ssrs-appliesto-sql2016-preview.md)]
 
-The [Report Builder](../reporting-services/report-builder/report-builder-in-sql-server-2016.md) tutorials help you learn how to create basic [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] paginated reports. See the other [Reporting Services tutorials](reporting-services-tutorials-ssrs.md) for more.
+The [Report Builder](../reporting-services/report-builder/report-builder-in-sql-server-2016.md) tutorials help you learn how to create basic [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] paginated reports.
 
 | Tutorial | Description |
 | ----- | ----- |
@@ -32,7 +32,8 @@ The [Report Builder](../reporting-services/report-builder/report-builder-in-sql-
 |[Map report &#40;Report Builder&#41;](../reporting-services/tutorial-map-report-report-builder.md)|Add a map to a report. Use the map to display data on a geographic background in a Reporting Services paginated report.|
 |[Add a parameter to your report &#40;Report Builder&#41;](../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)|Customize the appearance and content of a report by using parameters. The parameters allow report readers to filter report data for one or more values.| 
 |[Create drillthrough and main reports &#40;Report Builder&#41;](../reporting-services/tutorial-creating-drillthrough-and-main-reports-report-builder.md)|Create reports for a drillthrough scenario based on an Analysis Services cube. You create the main report and enable it for drillthrough and the report that's the target of the drillthrough action. |
-|[Introduce expressions](../reporting-services/tutorial-introducing-expressions.md)|Use expressions to concatenate, calculate, and look up field values and show them a report. You learn how to conditionally display different images and indicator states by using expressions.|  
+|[Introduce expressions](../reporting-services/tutorial-introducing-expressions.md)|Use expressions to concatenate, calculate, and look up field values and show them a report. You learn how to conditionally display different images and indicator states by using expressions.|
+|[Reporting Services tutorials](reporting-services-tutorials-ssrs.md) |See the other Reporting Services tutorials to learn more about how to create basic Reporting Services paginated reports. |
 
 ## Related content
 

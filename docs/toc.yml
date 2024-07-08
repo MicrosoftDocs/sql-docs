@@ -16589,8 +16589,9 @@ items:
         - name: "@@VERSION"
           href: t-sql/functions/version-transact-sql-configuration-functions.md
       - name: Conversion
-        href: t-sql/functions/conversion-functions-transact-sql.md
         items:
+        - name: Overview
+          href: t-sql/functions/conversion-functions-transact-sql.md
         - name: CAST & CONVERT
           href: t-sql/functions/cast-and-convert-transact-sql.md
         - name: PARSE

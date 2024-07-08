@@ -29,16 +29,16 @@ Default authentication is based on Windows authentication and integrated securit
   
 Authorization is based on roles that you assign to a principal. Each role consists of a set of related tasks, which are in turn composed of related operations. For example, the **Content Manager** role has the **Manage reports** task. This task grants access to the following report server operations: view reports, add reports, update reports, delete reports, schedule reports, and update report properties.
 
-### Roles and System Roles
+### Roles and system roles
 
 Report servers have two types of roles that you can define: 
 
-- [**Item Roles**](#item-roles)
-- [**System Roles**](#system-roles)
+- [**Item roles**](#item-roles)
+- [**System roles**](#system-roles)
 
-### Item Roles
+### Item roles
 
-Item Roles come with the following tasks that you can assign:
+Item roles come with the following tasks that you can assign:
 
 |Task                             |Description                                                                                                                      |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -61,9 +61,9 @@ Item Roles come with the following tasks that you can assign:
 |Comment on reports               |Create, view, edit, and delete comments on reports.                                                                              |
 |Manage comments                  |Delete other users' comments on reports.                                                                                         |
 
-### System Roles
+### System roles
 
-System Roles come with the following tasks that you can assign:
+System roles come with the following tasks that you can assign:
 
 |Task                           |Descriptions                                                                                         |
 |-------------------------------|-----------------------------------------------------------------------------------------------------|

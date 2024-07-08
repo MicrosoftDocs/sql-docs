@@ -112,13 +112,10 @@ The `Sku` parameter accepts the following editions: Developer, Express, Standard
 - The ability to change the edition is a feature of the SQL IaaS Agent extension. Deploying an Azure Marketplace image through the Azure portal automatically registers a SQL Server VM with the SQL IaaS Agent extension. However, customers who are self-installing SQL Server will need to manually [register their SQL Server VM](sql-agent-extension-manually-register-single-vm.md).
 - Adding a SQL Server VM to an availability set requires re-creating the VM. Any VMs added to an availability set will go back to the default edition, and the edition will need to be modified again.
 
-## Next steps
+## Related content
 
-For more information, see the following articles: 
-
-* [Overview of SQL Server on Windows VMs](sql-server-on-azure-vm-iaas-what-is-overview.md)
-* [FAQ for SQL Server on Windows VMs](frequently-asked-questions-faq.yml)
-* [Pricing guidance for SQL Server on Windows VMs](pricing-guidance.md)
-* [What's new for SQL Server on Azure VMs](doc-changes-updates-release-notes-whats-new.md)
-
-
+- [Overview of SQL Server on Windows VMs](sql-server-on-azure-vm-iaas-what-is-overview.md)
+- [FAQ for SQL Server on Windows VMs](frequently-asked-questions-faq.yml)
+- [SQL Server Licensing Resources and Documents](https://www.microsoft.com/licensing/docs/view/SQL-Server)
+- [Pricing guidance for SQL Server on Windows VMs](pricing-guidance.md)
+- [What's new for SQL Server on Azure VMs](doc-changes-updates-release-notes-whats-new.md)

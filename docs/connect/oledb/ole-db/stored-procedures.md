@@ -2,7 +2,7 @@
 title: "Stored Procedures"
 description: Learn how you can run stored procedures in a SQL database using the OLE DB Driver for SQL Server.
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: "06/12/2018"
 ms.service: sql
 ms.subservice: connectivity

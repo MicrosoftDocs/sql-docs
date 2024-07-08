@@ -4,7 +4,7 @@ description: Learn about the differences between the service tiers available to 
 author: urosmil
 ms.author: urmilano
 ms.reviewer: wiassaf, mathoma
-ms.date: 03/23/2024
+ms.date: 05/27/2024
 ms.service: sql-managed-instance
 ms.subservice: service-overview
 ms.topic: conceptual
@@ -58,7 +58,6 @@ You can use the Next-gen General Purpose tier upgrade for new instances when you
 1. Fill out the rest of the values to configure your new instance. 
 1. Select **Review + create** to review your settings, and then select **Create** to deploy your new instance using the Next-gen General purpose tier upgrade. 
 
-
 ## Next steps
 
 - To get started, see [Creating a SQL Managed Instance using the Azure portal](instance-create-quickstart.md)
@@ -67,3 +66,4 @@ You can use the Next-gen General Purpose tier upgrade for new instances when you
     - [Azure SQL Managed Instance pools pricing page](https://azure.microsoft.com/pricing/details/azure-sql-managed-instance/pools/)
 - For details about the specific compute and storage sizes available in the General Purpose and Business Critical service tiers, see [vCore-based resource limits for Azure SQL Managed Instance](resource-limits.md).
 - [SLA for Azure SQL Managed Instance](https://azure.microsoft.com/support/legal/sla/azure-sql-sql-managed-instance/)
+- [Frequently asked questions](frequently-asked-questions-faq.yml#next-gen-general-purpose-service-tier-upgrade)

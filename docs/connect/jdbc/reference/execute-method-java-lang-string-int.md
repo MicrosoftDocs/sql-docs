@@ -2,7 +2,7 @@
 title: "execute Method (java.lang.String, int[])"
 description: "execute Method (java.lang.String, int[])"
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: "02/07/2017"
 ms.service: sql
 ms.subservice: connectivity

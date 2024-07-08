@@ -5,7 +5,7 @@ author: Madhumitatripathy
 ms.author: matripathy
 ms.reviewer: vanto
 ms.date: 03/09/2022
-ms.service: sql-database
+ms.service: sql
 ms.topic: conceptual
 ms.custom: security
 ---
@@ -97,7 +97,7 @@ The classification includes two metadata attributes:
 > [!NOTE]
 > Microsoft Information Protection ( abbreviated as MIP) has been rebranded as Microsoft Purview Information Protection. Both the terms MIP and Microsoft Purview Information Protection are often used interchangeably in this document but both refer to the same concept.
 
-Microsoft Purview Information Protection labels provide a simple and uniform way for your users to classify sensitive data in SQL Server. MIP sensitivity labels are created and managed in the [Microsoft 365 compliance center](https://compliance.microsoft.com/) [rebranded as **Microsoft Purview Compliance Portal**]. To learn how to create and publish MIP sensitive labels in Microsoft Purview Compliance Portal, see the article, [Microsoft Information Protection sensitivity labels](/microsoft-365/compliance/sensitivity-labels).
+Microsoft Purview Information Protection labels provide a simple and uniform way for your users to classify sensitive data in SQL Server. MIP sensitivity labels are created and managed in the [Microsoft 365 compliance center](https://compliance.microsoft.com/) [rebranded as **Microsoft Purview compliance portal**]. To learn how to create and publish MIP sensitive labels in Microsoft Purview Compliance Portal, see the article, [Microsoft Information Protection sensitivity labels](/microsoft-365/compliance/sensitivity-labels).
 
 Now you can use SSMS to classify data at the source (SQL Server) using Microsoft Purview Information Protection labels, which are used in Power BI, Office, and other Microsoft products. These sensitivity labels are applied at the column level in a database, same as the SQL Information Protection policy.
 

@@ -2,7 +2,7 @@
 title: "Limitations of using keyset-driven cursors"
 description: "Limitations of using keyset-driven cursors"
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.reviewer: randolphwest
 ms.date: 12/14/2023
 ms.service: sql

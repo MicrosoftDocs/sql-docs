@@ -2,7 +2,7 @@
 title: Microsoft JDBC Driver for SQL Server
 description: Article on JDBC driver with SQL Server and Azure SQL Database, enabling connectivity from any Java application, server, or applet.
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: 08/09/2023
 ms.service: sql
 ms.subservice: connectivity

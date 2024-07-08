@@ -2,7 +2,7 @@
 title: "Connecting to a Data Source or Driver"
 description: "Connecting to a Data Source or Driver"
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: "01/19/2017"
 ms.service: sql
 ms.subservice: connectivity

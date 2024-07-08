@@ -2,7 +2,7 @@
 title: Updating data
 description: Here's a set of sample code snippets for common use cases where you need to update data in PHP.
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: 03/26/2018
 ms.service: sql
 ms.subservice: connectivity

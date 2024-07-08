@@ -2,8 +2,8 @@
 title: Release notes for OLE DB Driver
 description: This release notes article describes the changes in each release of the Microsoft OLE DB Driver for SQL Server.
 author: David-Engel
-ms.author: v-davidengel
-ms.date: 04/09/2024
+ms.author: davidengel
+ms.date: 06/13/2024
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: conceptual
@@ -38,6 +38,7 @@ If you need to download the installer in a language other than the one detected 
 
 | Bug fixed | Details |
 | :-------- | :------ |
+| Security updates | [KB5037573](https://support.microsoft.com/kb/5037573) |
 | Fixed potential crashes. | Fixed potential crashes when invalid metadata is received from the server. |
 | Fixed a bug in UDL dialog. | Fixed a screen reader double read bug in UDL. |
 | Fixed a bug in connection recovery mode. | Fixed a race condition during disconnect while in connection recovery mode. |
@@ -105,7 +106,7 @@ If you need to download the installer in a language other than the one detected 
 
 | Feature added | Details |
 | :------------ | :------ |
-| Windows Arm64 support | The Arm64 driver is for 64-bit ARM applications only and does not include 32-bit ARM nor x86/x64 emulation drivers. |
+| Windows Arm64 support | The Arm64 driver is for 64-bit ARM applications only and doesn't include 32-bit ARM nor x86/x64 emulation drivers. |
 | Visual Studio 2022 build toolset upgrade | The driver now requires [Microsoft Visual C++ Redistributable for Visual Studio 2022](https://go.microsoft.com/fwlink/?linkid=2219560) (version 14.34 at minimum). |
 
 ### Bugs fixed
@@ -130,8 +131,8 @@ If you need to download the installer in a language other than the one detected 
 
 | Feature added | Details |
 | :------------ | :------ |
-| Support for TLS 1.3 | TDS 8.0 connections can now be configured to use TLS 1.3. For more details, see [TLS 1.3 support](../../relational-databases/security/networking/tls-1-3.md). |
-| Support for the `Server Certificate` connection string keyword, and the `SSPROP_INIT_SERVER_CERTIFICATE` initialization property | The user may now specify the path to a certificate file to match against the SQL Server TLS/SSL certificate. <br/><br/>For more information, see: [Using connection string keywords](applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md). |
+| Support for TLS 1.3 | TDS 8.0 connections can now be configured to use TLS 1.3. For more information, see [TLS 1.3 support](../../relational-databases/security/networking/tls-1-3.md). |
+| Support for the `Server Certificate` connection string keyword, and the `SSPROP_INIT_SERVER_CERTIFICATE` initialization property | The user can now specify the path to a certificate file to match against the SQL Server TLS/SSL certificate. <br/><br/>For more information, see: [Using connection string keywords](applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md). |
 
 ## 19.1.0
 
@@ -176,7 +177,7 @@ If you need to download the installer in a language other than the one detected 
 | :------------ | :------ |
 | TDS 8.0 support | The encryption connection string keyword/property now includes the option for strict encryption, which encrypts the whole connection (including PRELOGIN packets). |
 | Secure by default | **BREAKING CHANGE**<br />The driver now defaults to secure-by-default options. Encrypted connections are enabled by default. The server certificate is now validated when client-side encryption is off but the server requires encryption.<br /><br />To restore previous version behavior, you need to opt in to non-encrypted connections (`Encrypt` or `Use Encryption for Data` option) and trust the server certificate (`Trust Server Certificate` option), if the server uses a self-signed certificate. For more information, see [Encryption and certificate validation](features/encryption-and-certificate-validation.md). |
-| Support for the `Host Name In Certificate` connection string keyword, and the `SSPROP_INIT_HOST_NAME_CERTIFICATE` initialization property. | The user may now specify the host name to be used when validating the SQL Server TLS/SSL certificate. |
+| Support for the `Host Name In Certificate` connection string keyword, and the `SSPROP_INIT_HOST_NAME_CERTIFICATE` initialization property. | The user can now specify the host name to be used when validating the SQL Server TLS/SSL certificate. |
 
 ## 18.7.2
 
@@ -193,6 +194,7 @@ If you need to download the installer in a language other than the one detected 
 
 | Bug fixed | Details |
 | :-------- | :------ |
+| Security updates | [KB5037572](https://support.microsoft.com/kb/5037572) |
 | Fixed potential crashes. | Fixed potential crashes when invalid metadata is received from the server. |
 | Fixed a bug in UDL dialog. | Fixed a screen reader double read bug in UDL. |
 | Fixed a bug in connection recovery mode. | Fixed a race condition during disconnect while in connection recovery mode. |
@@ -282,7 +284,7 @@ If you need to download the installer in a language other than the one detected 
 | Feature added | Details |
 | :------------ | :------ |
 | Removal of dependency on vcruntime140_1.dll | To remove the requirement to install Visual Studio in some scenarios, we removed all dependencies to vcruntime140_1.dll. |
-| Enable querying server SPN from connection | During a connection attempt where Azure AD authentication has been selected, the server will send a FEDAUTHINFO packet. This packet contains the server's SPN that must be used to generate the access token. Clients can query this value after a connection attempt is made (on success or failure) through the SSPROP_INIT_DISCOVERDSERVERSPN property in DBPROPSET_SQLSERVERDBINIT. |
+| Enable querying server SPN from connection | During a connection attempt where Azure AD authentication is selected, the server sends a FEDAUTHINFO packet. This packet contains the server's SPN that must be used to generate the access token. Clients can query this value after a connection attempt is made (on success or failure) through the SSPROP_INIT_DISCOVERDSERVERSPN property in DBPROPSET_SQLSERVERDBINIT. |
 
 ### Bugs fixed
 
@@ -313,7 +315,7 @@ If you need to download the installer in a language other than the one detected 
 | Bug fixed | Details |
 | :-------- | :------ |
 | Fixed an issue with endianness of port numbers in data access trace logs. | Fixed a bug, which resulted in port numbers logged having incorrect endianness while doing [Data Access Tracing](/previous-versions/sql/sql-server-2008/cc765421(v=sql.100)). |
-| Fixed an accessibility issue. | Fixed an accessibility issue in the user interface of [Universal Data Link (UDL)](help-topics\data-link-pages.md). This accessibility issue resulted in the *Browse* button not being announced by screen reader software. |
+| Fixed an accessibility issue. | Fixed an accessibility issue in the user interface of [Universal Data Link (UDL)](help-topics\data-link-pages.md). This accessibility issue resulted in screen reader software no announcing the *Browse* button. |
 | Fixed crash in scenarios involving Multiple Active Result Sets. | Fixed a bug, which could result in the driver crashing in some scenarios involving [Multiple Active Result Sets (MARS)](features/using-multiple-active-result-sets-mars.md).|
 
 ## 18.5.0
@@ -341,7 +343,7 @@ If you need to download the installer in a language other than the one detected 
 | Fixed an issue with embedded NUL characters. | Fixed a bug, which resulted in the driver returning an incorrect length of strings with embedded NUL characters. |
 | Fixed a memory leak in the [IBCPSession](ole-db-interfaces/ibcpsession-ole-db.md) interface. | Fixed a memory leak in the [IBCPSession](ole-db-interfaces/ibcpsession-ole-db.md) interface involving bulk copy operations of `sql_variant` data type. |
 | Fixed bugs, which resulted in incorrect values being returned for `SSPROP_INTEGRATEDAUTHENTICATIONMETHOD` and `SSPROP_MUTUALLYAUTHENTICATED` properties. | Previous versions of the driver returned truncated values of the `SSPROP_INTEGRATEDAUTHENTICATIONMETHOD` property. Also, in the `ActiveDirectoryIntegrated` authentication case, the returned value of the `SSPROP_MUTUALLYAUTHENTICATED` property was `VARIANT_FALSE` even when both sides were mutually authenticated.|
-| Fixed a linked server remote table insert bug. | Fixed a bug which caused a linked server remote table insert to fail if the [NOCOUNT server configuration option](../../database-engine/configure-windows/configure-the-user-options-server-configuration-option.md) has been enabled. |
+| Fixed a linked server remote table insert bug. | Fixed a bug that caused a linked server remote table insert to fail if the [NOCOUNT server configuration option](../../database-engine/configure-windows/configure-the-user-options-server-configuration-option.md) is enabled. |
 
 ## 18.4.0
 
@@ -367,7 +369,7 @@ For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?link
 | :-------- | :------ |
 | Fixed various bugs in the [ISequentialStream](/previous-versions/windows/desktop/ms718035(v=vs.85)) interface | A few bugs affecting multibyte code pages resulted in the interface prematurely reporting the end of the stream during the read operation.|
 | Fixed a memory leak in the [IOpenRowset::OpenRowset](/previous-versions/windows/desktop/ms716724(v=vs.85)) interface | Fixed a memory leak in the [IOpenRowset::OpenRowset](/previous-versions/windows/desktop/ms716724(v=vs.85)) interface when the `SSPROP_IRowsetFastLoad` property was enabled. |
-| Fixed a bug in scenarios involving a `sql_variant` data type and non-ASCII strings. | Executing certain scenarios involving a `sql_variant` data type and non-ASCII strings may result in data corruption. For details, see: [Known issues](ole-db-data-types/ssvariant-structure.md#known-issues). |
+| Fixed a bug in scenarios involving a `sql_variant` data type and non-ASCII strings. | Executing certain scenarios involving a `sql_variant` data type and non-ASCII strings might result in data corruption. For details, see: [Known issues](ole-db-data-types/ssvariant-structure.md#known-issues). |
 | Fixed issues with the *Test Connection* button in the [UDL configuration dialog](help-topics/data-link-pages.md). | The *Test Connection* button in the [UDL configuration dialog](help-topics/data-link-pages.md) now honors initialization properties set in the *All* tab. |
 | Fixed the `SSPROP_INIT_PACKETSIZE` property default value handling. | Fixed an unexpected error when the `SSPROP_INIT_PACKETSIZE` property was set to its default value of `0`. For details about this property, see [Initialization and Authorization Properties](ole-db-data-source-objects/initialization-and-authorization-properties.md). |
 | Fixed buffer overflow issues in [IBCPSession](ole-db-interfaces/ibcpsession-ole-db.md). | Fixed buffer overflow issues when using malformed data files. |
@@ -389,7 +391,7 @@ For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?link
 | Feature added | Details |
 | :------------ | :------ |
 | Azure Active Directory authentication support (`ActiveDirectoryInteractive`, `ActiveDirectoryMSI`) | [Using Azure Active Directory](features/using-azure-active-directory.md) |
-| Include Azure Active Directory Authentication Library (adal.dll) in the installer | Now included in the base driver installation, the OLE DB installer will upgrade existing installations of the Microsoft Active Directory Authentication Library for SQL Server, removing it from the list of installed applications in Windows. |
+| Include Azure Active Directory Authentication Library (adal.dll) in the installer | Now included in the base driver installation, the OLE DB installer upgrades existing installations of the Microsoft Active Directory Authentication Library for SQL Server, removing it from the list of installed applications in Windows. |
 
 ### Bugs fixed
 
@@ -472,7 +474,7 @@ For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?link
 
 | Bug fixed | Details |
 | :-------- | :------ |
-| Fixed incorrect version of the BCP format file. | The OLE DB Driver 18.0 incorrectly sets the version of the BCP format file to 18.0, instead of to 11.0.<br/>Format files generated by the OLE DB Driver 18.0 cannot be read by the OLE DB Driver 18.1.<br/>If you need to use format files generated by the previous version of the driver with the new driver, you can manually edit the files to change the version to 11.0. |
+| Fixed incorrect version of the BCP format file. | The OLE DB Driver 18.0 incorrectly sets the version of the BCP format file to 18.0, instead of to 11.0.<br/>Format files generated by the OLE DB Driver 18.0 can't be read by the OLE DB Driver 18.1.<br/>If you need to use format files generated by the previous version of the driver with the new driver, you can manually edit the files to change the version to 11.0. |
 
 ## 18.0.2
 

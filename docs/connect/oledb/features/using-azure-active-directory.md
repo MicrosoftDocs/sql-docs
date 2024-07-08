@@ -2,7 +2,7 @@
 title: Using Microsoft Entra ID
 description: Learn about the Microsoft Entra authentication methods available in the Microsoft OLE DB Driver for SQL Server that enable connecting to Azure SQL databases.
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.reviewer: v-davidengel
 ms.date: 02/18/2022
 ms.service: sql

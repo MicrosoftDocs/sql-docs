@@ -1,10 +1,10 @@
 ---
 title: Automated Backup for SQL Server 2016 + Azure VMs
 description: This article explains the Automated Backup feature for SQL Server 2016 and later VMs running on Azure. This article is specific to VMs using the Resource Manager.
-author: tarynpratt
-ms.author: tarynpratt
+author: AbdullahMSFT
+ms.author: amamun
 ms.reviewer: mathoma
-ms.date: 04/22/2024
+ms.date: 06/18/2024
 ms.service: virtual-machines-sql
 ms.subservice: backup
 ms.topic: how-to
@@ -65,6 +65,9 @@ The following table describes the options that can be configured for Automated B
 | **Full backup start time** | 00:00 – 23:00 (01:00) | Start time of a given day during which full backups can take place. |
 | **Full backup time window** | 1 – 23 hours (1 hour) | Duration of the time window of a given day during which full backups can take place. |
 | **Log backup frequency** | 5 – 60 minutes (60 minutes) | Frequency of log backups. |
+
+> [!NOTE]
+> The Automated backup schedule takes backups based on log growth. Using Automated Backups when your databases are in [simple recovery mode](/sql/relational-databases/backup-restore/recovery-models-sql-server) is not recommended. 
 
 ## Understanding full backup frequency
 

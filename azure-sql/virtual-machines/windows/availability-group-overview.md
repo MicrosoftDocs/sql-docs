@@ -1,10 +1,10 @@
 ---
 title: Overview of SQL Server Always On availability groups
 description: This article introduces SQL Server Always On availability groups on Azure Virtual Machines.
-author: tarynpratt
-ms.author: tarynpratt
+author: AbdullahMSFT
+ms.author: amamun
 ms.reviewer: mathoma
-ms.date: 03/29/2023
+ms.date: 06/18/2024
 ms.service: virtual-machines-sql
 ms.subservice: hadr
 ms.topic: overview
@@ -55,6 +55,9 @@ Additionally, there are some behavior differences between the functionality of t
 - **Failover time**: Failover time is faster when using a DNN listener since there's no need to wait for the network load balancer to detect the failure event and change its routing. 
 - **Existing connections**: Connections made to a *specific database* within a failing-over availability group will close, but other connections to the primary replica will remain open since the DNN stays online during the failover process. This is different than a traditional VNN environment where all connections to the primary replica typically close when the availability group fails over, the listener goes offline, and the primary replica transitions to the secondary role. When using a DNN listener, you may need to adjust application connection strings to ensure that connections are redirected to the new primary replica upon failover.
 - **Open transactions**: Open transactions against a database in a failing-over availability group will close and roll back, and you need to *manually* reconnect. For example, in SQL Server Management Studio, close the query window and open a new one. 
+
+> [!NOTE]
+> If you have multiple AGs or FCIs on the same cluster and you use either a DNN or VNN listener, then each AG or FCI needs its own independent connection point.
 
 Setting up a VNN listener in Azure requires a load balancer. There are two main options for load balancers in Azure: external (public) or internal. The external (public) load balancer is internet-facing and is associated with a public virtual IP that's accessible over the internet. An internal load balancer supports only clients within the same virtual network. For either load balancer type, you must enable [Direct Server Return](/azure/load-balancer/load-balancer-multivip-overview#rule-type-2-backend-port-reuse-by-using-floating-ip). 
 

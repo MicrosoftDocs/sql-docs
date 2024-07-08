@@ -2,7 +2,7 @@
 title: "DataAdapter, DataTable, and DataColumn mappings"
 description: Describes how to set up DataTableMappings and ColumnMappings for a DataAdapter.
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: "11/30/2020"
 ms.service: sql
 ms.subservice: connectivity

@@ -2,7 +2,7 @@
 title: "Adding and Modifying Data Sources Using Setup"
 description: "Adding and Modifying Data Sources Using Setup"
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: "01/19/2017"
 ms.service: sql
 ms.subservice: connectivity

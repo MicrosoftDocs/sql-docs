@@ -2,7 +2,7 @@
 title: Using database mirroring (JDBC)
 description: Learn about using database mirroring with the JDBC Driver for SQL Server and things you need to consider when failover happens.
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: "08/12/2019"
 ms.service: sql
 ms.subservice: connectivity

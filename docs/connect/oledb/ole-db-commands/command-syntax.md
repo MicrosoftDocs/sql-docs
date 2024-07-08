@@ -2,7 +2,7 @@
 title: Command syntax (OLE DB driver)
 description: Learn about command syntax that the OLE DB Driver for SQL Server recognizes and how to run a SQL Server stored procedure.
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: 04/20/2021
 ms.service: sql
 ms.subservice: connectivity

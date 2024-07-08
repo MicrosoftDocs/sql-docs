@@ -2,7 +2,7 @@
 title: "SQLNumParams Function"
 description: "SQLNumParams Function"
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: "07/18/2019"
 ms.service: sql
 ms.subservice: connectivity

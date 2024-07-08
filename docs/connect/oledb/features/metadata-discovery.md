@@ -2,7 +2,7 @@
 title: "Metadata Discovery"
 description: Learn how metadata discovery improvements allow OLE DB Driver for SQL Server applications to ensure metadata compatibility.
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: "06/12/2018"
 ms.service: sql
 ms.subservice: connectivity

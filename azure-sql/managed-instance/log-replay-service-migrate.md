@@ -82,11 +82,13 @@ System updates for SQL Managed Instance take precedence over database migrations
 
 To achieve a predictable time for database migrations, consider configuring a [maintenance window](maintenance-window.md) to schedule system updates for a specific day and time, and run and complete migration jobs outside the designated maintenance window timeframe.
 
-
 > [!IMPORTANT]
 > - You can't use databases that are being restored through LRS until the migration process finishes. 
 > - LRS doesn't support read-only access to databases during the migration.
 > - After the migration finishes, the migration process is final and can't be resumed with additional differential backups.
+
+> [!NOTE]
+> After the cutover, SQL Managed Instance with Business Critical service tier can take significantly longer than General Purpose to be available as three secondary replicas have to be seeded for the availability group. The operation duration depends on the size of data. For more information, see [Management operations duration](/azure/azure-sql/managed-instance/management-operations-overview#duration).
 
 ## Migrate multiple databases
 
@@ -108,7 +110,6 @@ https://<mystorageaccountname>.blob.core.windows.net/<containername>/<database2>
 https://<mystorageaccountname>.blob.core.windows.net/<containername>/<database3>/<all-database3-backup-files>
 ```
 
-
 ## Create a storage account
 
 You use an Azure Blob Storage account as intermediary storage for backup files between your SQL Server instance and your SQL Managed Instance deployment. To create a new storage account and a blob container inside the storage account:
@@ -120,7 +121,7 @@ You use an Azure Blob Storage account as intermediary storage for backup files b
 
 Using Azure Blob storage that's protected behind a firewall is supported, but requires additional configuration. To enable read / write access to Azure Storage with Azure Firewall turned on, you have to add the subnet of the SQL managed instance to the firewall rules of the vNet for the storage account by using MI subnet delegation and the Storage service endpoint. The storage account and the managed instance must be in the same region, or two paired regions. 
 
-If your Azure storage is behind a firewall, you] may see the following message in the SQL managed instance error log: 
+If your Azure storage is behind a firewall, you may see the following message in the SQL managed instance error log: 
 
 ```
 Audit: Storage access denied user fault. Creating an email notification:

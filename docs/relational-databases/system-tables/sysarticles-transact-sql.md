@@ -20,7 +20,7 @@ dev_langs:
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-Contains a row for each article defined in the local database. This table is stored in the published database.  
+Contains a row for each table article defined in the local database. This table is stored in the published database. For other types of articles, refer to [sysschemaarticles &#40;Transact-SQL&#41;](../../relational-databases/system-tables/sysschemaarticles-transact-sql.md).
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
@@ -54,5 +54,5 @@ Contains a row for each article defined in the local database. This table is sto
  [sp_addarticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
  [sp_changearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)   
  [sp_helparticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)  
-  
+ [sysschemaarticles &#40;Transact-SQL&#41;](../../relational-databases/system-tables/sysschemaarticles-transact-sql.md) 
   

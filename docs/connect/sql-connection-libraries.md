@@ -2,7 +2,7 @@
 title: Connection libraries for Microsoft SQL Database
 description: Provides download links for modules, which enable connection to Microsoft SQL Server and Azure SQL Database, from various client programming languages.
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: 08/21/2023
 ms.reviewer: vanto
 ms.service: sql
@@ -25,7 +25,7 @@ This article provides download links to connection modules or *drivers* that you
 
 The present article devotes separate sections to these two kinds of connection drivers.
 
-<a name="anchor-20-drivers-relational-access" />
+<a name="anchor-20-drivers-relational-access"></a>
 
 ## Drivers for relational access
 
@@ -40,7 +40,7 @@ The present article devotes separate sections to these two kinds of connection d
 | Python | [pyodbc, install instructions](./python/pyodbc/step-1-configure-development-environment-for-pyodbc-python-development.md)<br />[Download ODBC](./odbc/download-odbc-driver-for-sql-server.md) |
 | Ruby | [Ruby driver, install instructions](./ruby/step-1-configure-development-environment-for-ruby-development.md)<br />[Ruby download page](https://rubyinstaller.org/downloads/) |
 
-<a name="anchor-40-drivers-orm-access" />
+<a name="anchor-40-drivers-orm-access"></a>
 
 ## Drivers for ORM access
 

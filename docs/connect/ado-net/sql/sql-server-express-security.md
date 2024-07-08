@@ -2,7 +2,7 @@
 title: "SQL Server Express security"
 description: "Describes security considerations for SQL Server Express."
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.reviewer: v-kaywon
 ms.date: "09/26/2019"
 ms.service: sql

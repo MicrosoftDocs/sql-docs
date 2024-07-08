@@ -4274,40 +4274,50 @@ items:
         href: relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-classes-and-properties.md
       - name: Work with Server Events
         href: relational-databases/wmi-provider-server-events/working-with-the-wmi-provider-for-server-events.md
-- name: Internals & Architecture
-  href: relational-databases/sql-server-guides.md
+- name: Internals & architecture
   items:
+  - name: Overview
+    href: relational-databases/sql-server-guides.md
   - name: Ghost record cleanup process
     href: relational-databases/ghost-record-cleanup-process-guide.md
-  - name: Index Architecture & Design
+  - name: Index architecture & design
     href: relational-databases/sql-server-index-design-guide.md
-  - name: Pages & Extents Architecture
-    href: relational-databases/pages-and-extents-architecture-guide.md
+  - name: Pages & extents architecture
     items:
+    - name: Overview
+      href: relational-databases/pages-and-extents-architecture-guide.md
     - name: Reading pages
       href: relational-databases/reading-pages.md
     - name: Writing pages
       href: relational-databases/writing-pages.md
-  - name: Post-migration Validation & Optimization
+  - name: Post-migration validation & optimization
     href: relational-databases/post-migration-validation-and-optimization-guide.md
-  - name: Query Processing Architecture
+  - name: Query processing architecture
     href: relational-databases/query-processing-architecture-guide.md
-  - name: Thread & Task Architecture
+  - name: SQL Server I/O fundamentals
+    href: relational-databases/sql-server-storage-guide.md
+  - name: Thread & task architecture
     href: relational-databases/thread-and-task-architecture-guide.md
-  - name: Transaction Log Architecture & Management Guide
+  - name: Transaction log architecture & management guide
     href: relational-databases/sql-server-transaction-log-architecture-and-management-guide.md
-  - name: Transaction Locking & Row Versioning Guide
+  - name: Transaction locking & row versioning guide
     href: relational-databases/sql-server-transaction-locking-and-row-versioning-guide.md
   - name: Optimized locking
     href: relational-databases/performance/optimized-locking.md
   - name: Deadlocks guide
     href: relational-databases/sql-server-deadlocks-guide.md
-  - name: Memory Management Architecture
+  - name: Memory management architecture
     href: relational-databases/memory-management-architecture-guide.md
   - name: Diagnosing latch contention
     href: relational-databases/diagnose-resolve-latch-contention.md
   - name: Diagnosing spinlock contention
     href: relational-databases/diagnose-resolve-spinlock-contention.md
+  - name: Database connection network trace
+    items:
+    - name: Trace a network authentication sequence
+      href: relational-databases/database-engine-connection-open-network-trace.md
+    - name: Trace a network connection close sequence
+      href: relational-databases/database-engine-connection-close-network-trace.md
 - name: Installation
   items:
   - name: Overview
@@ -6051,9 +6061,10 @@ items:
     - name: Run at command prompt
       href: dea/database-experimentation-assistant-run-command-prompt.md
   - name: Database Migration Assistant (DMA)
-    href: dma/dma-overview.md
     items:
-    - name: Usage and Diagnostic Data
+    - name: Overview
+      href: dma/dma-overview.md
+    - name: Usage and diagnostic data
       href: dma/dma-diagnostic-data-collection.md
     - name: What's new
       href: dma/dma-whats-new.md
@@ -8468,7 +8479,7 @@ items:
     items:
     - name: SQL Server Data Tools Overview
       href: ssdt/sql-server-data-tools.md
-    - name: Download SSDT
+    - name: Install SSDT
       href: ssdt/download-sql-server-data-tools-ssdt.md
     - name: Previous releases of SSDT & SSDT-BI
       href: ssdt/previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi.md
@@ -10395,8 +10406,8 @@ items:
           href: sql-server/azure-arc/manage-configuration.md
         - name: Licensing & billing
           href: sql-server/azure-arc/manage-license-billing.md
-        - name: Automate patching
-          href: sql-server/azure-arc/patch.md
+        - name: Extended Security Updates
+          href: sql-server/azure-arc/extended-security-updates.md
         - name: Automate updates
           href: sql-server/azure-arc/update.md
         - name: Disconnect & unregister from Azure Arc
@@ -10413,9 +10424,9 @@ items:
           href: sql-server/azure-arc/backup-local.md
         - name: Point-in-time restore (preview)
           href: sql-server/azure-arc/point-in-time-restore.md
-        - name: View Always On failover cluster instances (preview)
+        - name: View Always On failover cluster
           href: sql-server/azure-arc/support-for-fci.md  
-        - name: View Always On availability group (preview)
+        - name: Manage Always On availability group
           href: sql-server/azure-arc/manage-availability-group.md
       - name: Secure
         items:
@@ -10427,8 +10438,6 @@ items:
           href: sql-server/azure-arc/configure-advanced-data-security.md
         - name: Certificate rotation
           href: sql-server/azure-arc/rotate-certificates.md
-        - name: Extended Security Updates
-          href: sql-server/azure-arc/extended-security-updates.md
         - name: Roles, permissions, & files
           items:
           - name: Agent roles
@@ -13328,14 +13337,14 @@ items:
         href: relational-databases/system-dynamic-management-views/sys-dm-fts-population-ranges-transact-sql.md
       - name: sys.dm_fts_semantic_similarity_population
         href: relational-databases/system-dynamic-management-views/sys-dm-fts-semantic-similarity-population-transact-sql.md
-    - name: Geo-Replication (Azure SQL Database)
+    - name: Geo-Replication (Azure SQL)
       href: relational-databases/system-dynamic-management-views/geo-replication-dynamic-management-views-and-functions-azure-sql-database.md
       items:
       - name: sys.geo_replication_links (Azure SQL Database)
         href: relational-databases/system-dynamic-management-views/sys-geo-replication-links-azure-sql-database.md
-      - name: sys.dm_geo_replication_link_status (Azure SQL Database)
+      - name: sys.dm_geo_replication_link_status (Azure SQL)
         href: relational-databases/system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md
-      - name: sys.dm_continuous_copy_status (Azure SQL Database)
+      - name: sys.dm_continuous_copy_status (Azure SQL)
         href: relational-databases/system-dynamic-management-views/sys-dm-continuous-copy-status-azure-sql-database.md
     - name: Index
       href: relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md
@@ -13824,6 +13833,8 @@ items:
         href: relational-databases/system-functions/sys-fn-check-object-signatures-transact-sql.md
       - name: sys.fn_get_audit_file
         href: relational-databases/system-functions/sys-fn-get-audit-file-transact-sql.md
+      - name: sys.fn_get_audit_file_v2
+        href: relational-databases/system-functions/sys-fn-get-audit-file-v2-transact-sql.md
       - name: sys.fn_my_permissions
         href: relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md
       - name: sys.fn_translate_permissions
@@ -17532,13 +17543,14 @@ items:
         - name: MATCH
           href: t-sql/queries/match-sql-graph.md
       - name: Hints
-        href: t-sql/queries/hints-transact-sql.md
         items:
-        - name: Join
+        - name: Overview
+          href: t-sql/queries/hints-transact-sql.md
+        - name: Join hints
           href: t-sql/queries/hints-transact-sql-join.md
-        - name: Query
+        - name: Query hints
           href: t-sql/queries/hints-transact-sql-query.md
-        - name: Hints - Table
+        - name: Table hints
           href: t-sql/queries/hints-transact-sql-table.md
       - name: Predicates
         href: t-sql/queries/predicates.md

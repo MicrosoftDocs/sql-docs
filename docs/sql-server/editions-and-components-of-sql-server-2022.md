@@ -163,7 +163,7 @@ SQL Server 2022 includes features for connecting to [Azure Synapse Analytics](/a
 
 <sup>3</sup> Witness only
 
-<sup>4</sup> On Enterprise edition, the number of nodes is the operating system maximum. On Standard edition there is support for two nodes.
+<sup>4</sup> On Enterprise edition, the maximum number of nodes is 16. On Standard edition there is support for two nodes.
 
 <sup>5</sup> On Enterprise edition, provides support for up to 8 secondary replicas, including 5 synchronous secondary replicas.
 

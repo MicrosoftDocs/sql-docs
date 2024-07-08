@@ -33,7 +33,7 @@ Scenarios to use an elastic pool with your Hyperscale databases:
 - When you want to scale out the compute resources allocated to the elastic pool by adding one or more read-scale replicas.
 - If you want to use high transaction log throughput for write-intensive workloads, even with lower compute resources.
 
-Migrating non-Hyperscale databases to a Hyperscale elastic pool upgrades the databases to the Hyperscale service tier.
+Adding non-Hyperscale databases to a Hyperscale elastic pool converts the databases to the Hyperscale service tier.
 
 ## Architecture
 
@@ -68,15 +68,15 @@ You can use the following client tools to manage your Hyperscale databases in an
 - The Azure CLI: [Az version 2.40.0 or higher](/cli/azure/install-azure-cli).
 - Transact-SQL (T-SQL) starting with: [SQL Server Management Studio (SSMS) v18.12.1](/sql/ssms/download-sql-server-management-studio-ssms) or [Azure Data Studio v1.39.1](/azure-data-studio/download-azure-data-studio).
 
-## Migrate non-Hyperscale databases to Hyperscale elastic pools
+## Convert non-Hyperscale databases to Hyperscale elastic pools
 
-When migrating a database to Hyperscale, you can add the database to an existing Hyperscale elastic pool. For these migrations, the Hyperscale elastic pool needs to exist on the same logical server as the source database.
+When converting a database to Hyperscale, you can add the database to an existing Hyperscale elastic pool. For these conversions, the Hyperscale elastic pool needs to exist on the same logical server as the source database.
 
-When migrating databases to Hyperscale elastic pools, be aware of the [maximum number of databases per Hyperscale elastic pool](#resource-limits).
+When converting databases to Hyperscale elastic pools, be aware of the [maximum number of databases per Hyperscale elastic pool](#resource-limits).
 
-### Migrate non-Hyperscale databases to Hyperscale elastic pools using T-SQL
+### Convert non-Hyperscale databases to Hyperscale elastic pools using T-SQL
 
-You can use T-SQL commands to migrate multiple General Purpose databases and add them to an existing Hyperscale elastic pool named `hsep1`:
+You can use T-SQL commands to convert multiple General Purpose databases and add them to an existing Hyperscale elastic pool named `hsep1`:
 
 ```sql
 ALTER DATABASE gpepdb1 MODIFY (SERVICE_OBJECTIVE = ELASTIC_POOL(NAME = [hsep1]))
@@ -85,25 +85,25 @@ ALTER DATABASE gpepdb3 MODIFY (SERVICE_OBJECTIVE = ELASTIC_POOL(NAME = [hsep1]))
 ALTER DATABASE gpepdb4 MODIFY (SERVICE_OBJECTIVE = ELASTIC_POOL(NAME = [hsep1]))
 ```
 
-In this example, you're implicitly requesting a migration from General Purpose to Hyperscale, by specifying that the target `SERVICE_OBJECTIVE` is a Hyperscale elastic pool. Each of the above commands starts migrating the respective General Purpose database to Hyperscale. These `ALTER DATABASE` commands return quickly and don't wait for the migration to complete. In the example shown, you would have four such migrations from General Purpose to Hyperscale running in parallel. 
+In this example, you're implicitly requesting a conversion from General Purpose to Hyperscale, by specifying that the target `SERVICE_OBJECTIVE` is a Hyperscale elastic pool. Each of the above commands starts converting the respective General Purpose database to Hyperscale. These `ALTER DATABASE` commands return quickly and don't wait for the conversion to complete. In the example shown, you would have four such conversions from General Purpose to Hyperscale running in parallel. 
 
-You can query the [sys.dm_operation_status](/sql/relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database?view=azuresqldb-current&preserve-view=true) dynamic management view to monitor the status of these background migration operations.
+You can query the [sys.dm_operation_status](/sql/relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database?view=azuresqldb-current&preserve-view=true) dynamic management view to monitor the status of these background conversion operations.
 
-### Migrate non-Hyperscale databases to Hyperscale elastic pools using PowerShell
+### Convert non-Hyperscale databases to Hyperscale elastic pools using PowerShell
 
-You can use PowerShell commands to migrate multiple General Purpose databases and add them to an existing Hyperscale elastic pool named `hsep1`. For example, the following sample script performs these steps:
+You can use PowerShell commands to convert multiple General Purpose databases and add them to an existing Hyperscale elastic pool named `hsep1`. For example, the following sample script performs these steps:
 
 1. Use the [Get-AzSqlElasticPoolDatabase](/powershell/module/az.sql/get-azsqlelasticpooldatabase) cmdlet to list all the databases in the General Purpose elastic pool named `gpep1`.
 1. The `Where-Object` cmdlet filters the list to only those database names starting with `gpepdb`.
-1. For each database, [Set-AzSqlDatabase](/powershell/module/az.sql/set-azsqldatabase) cmdlet starts a migration. In this case, you're implicitly requesting a migration to the Hyperscale service tier by specifying the target Hyperscale elastic pool named `hsep1`.
-   - The `-AsJob` parameter allows each of the `Set-AzSqlDatabase` requests to run in parallel. If you prefer to run the migrations one-by-one, you can remove the `-AsJob` parameter.
+1. For each database, [Set-AzSqlDatabase](/powershell/module/az.sql/set-azsqldatabase) cmdlet starts a conversion. In this case, you're implicitly requesting a conversion to the Hyperscale service tier by specifying the target Hyperscale elastic pool named `hsep1`.
+   - The `-AsJob` parameter allows each of the `Set-AzSqlDatabase` requests to run in parallel. If you prefer to run the conversions one-by-one, you can remove the `-AsJob` parameter.
 
 ```powershell
 $dbs = Get-AzSqlElasticPoolDatabase -ResourceGroupName "myResourceGroup" -ServerName "mylogicalserver" -ElasticPoolName "gpep1"
 $dbs | Where-Object { $_.DatabaseName -like "gpepdb*" } | % { Set-AzSqlDatabase -ResourceGroupName "myResourceGroup" -ServerName "mylogicalserver" -DatabaseName ($_.DatabaseName) -ElasticPoolName "hsep1" -AsJob }
 ```
 
-In addition to the [sys.dm_operation_status](/sql/relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database?view=azuresqldb-current&preserve-view=true) dynamic management view, you can use the PowerShell cmdlet [Get-AzSqlDatabaseActivity](/powershell/module/az.sql/get-azsqldatabaseactivity) to monitor the status of these background migration operations.
+In addition to the [sys.dm_operation_status](/sql/relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database?view=azuresqldb-current&preserve-view=true) dynamic management view, you can use the PowerShell cmdlet [Get-AzSqlDatabaseActivity](/powershell/module/az.sql/get-azsqldatabaseactivity) to monitor the status of these background conversion operations.
 
 ## Resource limits
 
@@ -126,9 +126,9 @@ For greater detail, see the resource limits of Hyperscale elastic pools for [sta
 
 Consider the following limitations:
 
-- Changing an existing non-Hyperscale elastic pool to the Hyperscale edition isn't supported. The [migration section](#migrate-non-hyperscale-databases-to-hyperscale-elastic-pools) provides some alternatives you can use.
+- Changing an existing non-Hyperscale elastic pool to the Hyperscale edition isn't supported. The [conversion section](#convert-non-hyperscale-databases-to-hyperscale-elastic-pools) provides some alternatives you can use.
 - Changing the edition of a Hyperscale elastic pool to a non-Hyperscale edition isn't supported.
-- In order to [reverse migrate](./manage-hyperscale-database.md#reverse-migrate-from-hyperscale) an eligible database, which is in a Hyperscale elastic pool, it must first be removed from the Hyperscale elastic pool. The standalone Hyperscale database can then be reverse migrated to a General Purpose standalone database.
+- In order to ["reverse migrate"](./manage-hyperscale-database.md#reverse-migrate-from-hyperscale) an eligible database, which is in a Hyperscale elastic pool, it must first be removed from the Hyperscale elastic pool. The standalone Hyperscale database can then be "reverse migrated" to a General Purpose standalone database.
 - For the Hyperscale service tier, zone redundancy support can only be specified during database or elastic pool creation and can't be modified once the resource is provisioned. For more information, see [Migrate Azure SQL Database to availability zone support](/azure/reliability/migrate-sql-database#downtime-requirements).
 - Adding a [named replica](./service-tier-hyperscale-replicas.md#named-replica) into a Hyperscale elastic pool isn't supported. Attempting to add a named replica of a Hyperscale database to a Hyperscale elastic pool results in an `UnsupportedReplicationOperation` error. Instead, create the named replica as a single Hyperscale database.
 
@@ -142,7 +142,7 @@ For zone redundant elastic pools, consider the following:
 - Only databases with zone-redundant storage redundancy (ZRS or GZRS) can be added to Hyperscale elastic pools with zone redundancy.
 - A standalone Hyperscale database must be created with zone redundancy and zone-redundant backup storage (ZRS or GZRS) in order to add it to a zone-redundant Hyperscale elastic pool.  For Hyperscale databases without zone redundancy, perform a data transfer to a new Hyperscale database with the zone redundancy option enabled. A clone must be created using database copy, point-in-time restore, or geo-replica. For more information, see [Redeployment (Hyperscale)](/azure/reliability/migrate-sql-database#redeployment-hyperscale).
 - To move a Hyperscale database from one elastic pool to another, the zone redundancy and zone-redundant backup storage settings must match.
-- To migrate a database from another non-Hyperscale service tier into a Hyperscale elastic pool with zone redundancy: 
+- To convert a database from another non-Hyperscale service tier into a Hyperscale elastic pool with zone redundancy: 
   - Via the Azure portal, first enable both zone redundancy and zone redundant backup storage (ZRS). Then, you can add the database to the zone redundant Hyperscale elastic pool. 
   - Via PowerShell, first enable zone redundancy. Then, with [Set-AzSqlDatabase](/powershell/module/az.sql/set-azsqldatabase), ensure that the `-BackupStorageRedundancy` parameter is used to specify zone redundant backup storage (ZRS or GZRS).
 

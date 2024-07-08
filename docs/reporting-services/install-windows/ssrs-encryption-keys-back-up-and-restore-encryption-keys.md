@@ -1,47 +1,45 @@
 ---
-title: "Back Up and Restore Reporting Services Encryption Keys"
-description: "SSRS Encryption Keys - Back Up and Restore Encryption Keys"
+title: "Back Up and Restore SQL Server Reporting Services (SSRS) Encryption Keys"
+description: "Learn how to back up and restore SSRS encryption keys Learn how to back up and restore SSRS encryption keys by using Report Server Configuration Manager."
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 05/31/2016
+ms.date: 07/10/2024
 ms.service: reporting-services
 ms.subservice: report-server
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: updatefrequency5
 helpviewer_keywords:
   - "backing up encryption keys [Reporting Services]"
   - "restoring encryption keys [Reporting Services]"
   - "encryption keys [Reporting Services]"
   - "symmetric keys [Reporting Services]"
----
-# SSRS Encryption Keys - Back Up and Restore Encryption Keys
-[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
+#customer intent: As a SQL Server system administrator, I want to ensure the security and recoverability of my SSRS encryption keys so that I can maintain the integrity and availability of encrypted data within my report server environment.
 
-  An important part of report server configuration is creating a backup copy of the symmetric key used for encrypting sensitive information. A backup copy of the key is required for many routine operations, and enables you to reuse an existing report server database in a new installation.  
+---
+# Back Up and Restore SQL Server Reporting Services (SSRS) Encryption Keys
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Native Mode | [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode
+
+Learn how to back up and restore SSRS encryption keys by using the Report Server Configuration Manager and the rskeymgmt utility. You back up these keys so you can maintain the security and recoverability of your encrypted data. This process is essential when you change service account credentials, migrate installations, or recover from hardware failures, so that you can ensure the integrity and availability of your report server environment.
   
- **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Native Mode | [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode  
+ **[!INCLUDE[applies](../../includes/applies-md.md)]**    
 
 > [!NOTE]
 > Reporting Services integration with SharePoint is no longer available after SQL Server 2016.
   
- It is necessary to restore the backup copy of the encryption key when any of the following events occur:  
+ You must restore the backup copy of the encryption key when you:  
   
--   Changing the Report Server Windows service account name or resetting the password. When you use the Report Server Configuration Manager, backing up the key is part of a service account name change operation.  
-  
+- Change the Report Server Windows service account name or reset the password. When you use the Report Server Configuration Manager, backing up the key is part of a service account name change operation.  
     > [!NOTE]
     > Resetting the password is not the same as changing the password. A password reset requires permission to overwrite account information on the domain controller. Password resets are performed by a system administrator when you forget or do not know a particular password. Only password resets require symmetric key restoration. Periodically changing an account password does not require you to reset the symmetric key.  
+- Rename the computer or instance that hosts the report server (a report server instance is based on a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance name).  
+- Migrate a report server installation or configure a report server to use a different report server database.  
+- Recover a report server installation due to hardware failure.  
   
--   Renaming the computer or instance that hosts the report server (a report server instance is based on a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance name).  
-  
--   Migrating a report server installation or configuring a report server to use a different report server database.  
-  
--   Recovering a report server installation due to hardware failure.  
-  
- You only need to back up one copy of the symmetric key. There is a one-to-one correspondence between a report server database and a symmetric key. Although you only need to back up one copy, you might need to restore the key multiple times if you are running multiple report servers in a scale-out deployment model. Each report server instance will need its copy of the symmetric key to lock and unlock data in the report server database.
+You only need to back up one copy of the symmetric key. There is a one-to-one correspondence between a report server database and a symmetric key. Although you only need to back up one copy, you might need to restore the key multiple times if you are running multiple report servers in a scale-out deployment model. Each report server instance needs its copy of the symmetric key to lock and unlock data in the report server database.
 
- Backing up the symmetric key is a process that writes the key to a file that you specify, and then scrambles the key using a password that you provide. The symmetric key can never be stored in an unencrypted state so you must provide a password to encrypt the key when you save it to disk. After the file is created, you must store it in a secure location **and remember the password** that is used to unlock the file. To backup the symmetric key, you can use the following tools:  
+Backing up the symmetric key is a process that writes the key to a file that you specify, and then scrambles the key using a password that you provide. The symmetric key can never be stored in an unencrypted state so you must provide a password to encrypt the key when you save it to disk. After the file is created, you must store it in a secure location **and remember the password** that is used to unlock the file. To backup the symmetric key, you can use the following tools:  
   
- **Native mode:** Either the Report Server Configuration Manager or the **rskeymgmt** utility.  
+**Native mode:** Either the Report Server Configuration Manager or the **rskeymgmt** utility.  
 
 ::: moniker range="=sql-server-2016"
   

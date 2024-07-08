@@ -3,7 +3,7 @@ title: Configure SQL Server settings on Linux
 description: This article describes how to use the mssql-conf tool to configure SQL Server settings on Linux.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 06/25/2024
+ms.date: 07/10/2024
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
@@ -382,7 +382,7 @@ To change these settings, use the following steps:
    ```
 
    > [!NOTE]  
-   > If [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] can't find `master.mdf` and `mastlog.ldf` files in the specified directory, a templated copy of the system databases will be automatically created in the specified directory, and [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] will successfully start up. However, metadata such as user databases, server logins, server certificates, encryption keys, SQL agent jobs, or old SA login password will not be updated in the new `master` database. You'll have to stop [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] and move your old `master.mdf` and `mastlog.ldf` to the new specified location and start [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] to continue using the existing metadata.
+   > If [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] can't find `master.mdf` and `mastlog.ldf` files in the specified directory, a templated copy of the system databases is automatically created in the specified directory, and [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] successfully starts up. However, metadata such as user databases, server logins, server certificates, encryption keys, SQL agent jobs, or old SA login password aren't updated in the new `master` database. You'll have to stop [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] and move your old `master.mdf` and `mastlog.ldf` to the new specified location and start [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] to continue using the existing metadata.
 
 ## <a id="masterdatabasename"></a> Change the name of `master` database files
 
@@ -643,9 +643,9 @@ The following options are available to the memory settings.
 
 | Option | Description |
 | --- | --- |
-| `memory.disablememorypressure` | [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] disable memory pressure. Values can be `true` or `false`. |
+| `memory.disablememorypressure` | [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] disable memory pressure. Values can be `true` (default) or `false`. Disabling memory pressure inhibits the signals [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] uses to limit its physical memory usage to `memory.memorylimitmb`, which causes the usage to eventually go beyond that limit. |
 | `memory.memory_optimized` | Enable or disable [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] memory optimized features - persistent memory file enlightenment, memory protection. Values can be `true` or `false`. |
-| `memory.enablecontainersharedmemory` | Applicable for [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] containers only. Use this setting to enable shared memory inside [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] containers. By default, this is set to `false`. Values can be `true` or `false`. |
+| `memory.enablecontainersharedmemory` | Applicable for [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] containers only. Use this setting to enable shared memory inside [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] containers. For more information, see ­[Enable VDI backup and restore in containers](sql-server-linux-docker-container-configure.md#enable-vdi-backup-and-restore-in-containers). Values can be `true` or `false` (default). |
 
 ## <a id="msdtc"></a> Configure MSDTC
 
@@ -1002,6 +1002,6 @@ traceflag = 3456
 
 - [Configure SQL Server settings with environment variables on Linux](sql-server-linux-configure-environment-variables.md)
 - [Choose the right tool to manage SQL Server on Linux](sql-server-linux-management-overview.md)
-- [Configure and customize SQL Server Docker containers](sql-server-linux-docker-container-configure.md)
+- [Configure and customize SQL Server Linux containers](sql-server-linux-docker-container-configure.md)
 
 [!INCLUDE [contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]

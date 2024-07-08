@@ -17,12 +17,10 @@ helpviewer_keywords:
 
 ---
 # Back Up and Restore SQL Server Reporting Services (SSRS) Encryption Keys
-[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)] [!INCLUDE [ssRSnoversion](../../includes/ssrsnoversion-md.md)] Native Mode [!INCLUDE [ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode
 
 Learn how to back up and restore SSRS encryption keys by using the Report Server Configuration Manager and the rskeymgmt utility. You back up these keys so you can maintain the security and recoverability of your encrypted data. This process is essential when you change service account credentials, migrate installations, or recover from hardware failures, so that you can ensure the integrity and availability of your report server environment.
   
- **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Native Mode | [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode  
-
 > [!NOTE]
 > Reporting Services integration with SharePoint is no longer available after SQL Server 2016.
   

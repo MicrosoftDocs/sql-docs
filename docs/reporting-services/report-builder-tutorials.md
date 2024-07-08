@@ -1,6 +1,6 @@
 ---
 title: "Report Builder tutorials"
-description: Use thse tutorials to learn how to create basic SQL Server Reporting Services (SSRS) paginated reports, including ways to connect to data sources.
+description: Use these tutorials to learn how to create basic SQL Server Reporting Services (SSRS) paginated reports, including ways to connect to data sources.
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 07/08/2024

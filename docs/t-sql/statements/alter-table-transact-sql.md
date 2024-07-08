@@ -68,7 +68,7 @@ Modifies a table definition by altering, adding, or dropping columns and constra
 
 ::: moniker range="=fabric"
 > [!NOTE]
-> Currently, `ALTER TABLE` in Fabric Warehouse is only supported for constraints. See [Syntax for Warehouse in Fabric](#syntax-for-warehouse-in-fabric).
+> Currently, `ALTER TABLE` in Fabric Warehouse is only supported for constraints and adding nullable columns. See [Syntax for Warehouse in Fabric](#syntax-for-warehouse-in-fabric).
 ::: moniker-end
 
 > [!IMPORTANT]  

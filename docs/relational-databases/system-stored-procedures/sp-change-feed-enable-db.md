@@ -44,11 +44,16 @@ GO
 
 #### @maxtrans 
 
-Data type is **int**. Indicates the maximum number of transactions to process in each scan cycle. Default value if not specified is `10000`. If specified, the value must be a positive integer.
+Data type is **int**. Indicates the maximum number of transactions to process in each scan cycle. 
+
+- For Azure Synapse Link, the default value if not specified is `10000`. If specified, the value must be a positive integer.
+- For Fabric mirroring, this value is dynamically determined and automatically set.
 
 #### @pollinterval 
 
-Data type is **int**. Describes the frequency, or polling interval, that the log is scanned for any new changes in seconds. Default interval if not specified is 5 seconds. The value must be `5` or larger.
+Data type is **int**. Describes the frequency, or polling interval, that the log is scanned for any new changes in seconds.
+- For Azure Synapse Link, the default interval if not specified is 5 seconds. The value must be `5` or larger. 
+- For Fabric mirroring, this value is dynamically determined and automatically set.
 
 #### @destination_type
 

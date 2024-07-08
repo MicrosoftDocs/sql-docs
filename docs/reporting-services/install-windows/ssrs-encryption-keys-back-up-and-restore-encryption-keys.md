@@ -17,14 +17,14 @@ helpviewer_keywords:
 
 ---
 # Back Up and Restore SQL Server Reporting Services (SSRS) Encryption Keys
-[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)] [!INCLUDE [ssRSnoversion](../../includes/ssrsnoversion-md.md)] Native Mode [!INCLUDE [ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)] **[!INCLUDE[applies](../../includes/applies-md.md)]** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Native Mode | [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode 
 
 Learn how to back up and restore SSRS encryption keys by using the Report Server Configuration Manager and the rskeymgmt utility. You back up these keys so you can maintain the security and recoverability of your encrypted data. This process is essential when you change service account credentials, migrate installations, or recover from hardware failures, so that you can ensure the integrity and availability of your report server environment.
   
 > [!NOTE]
 > Reporting Services integration with SharePoint is no longer available after SQL Server 2016.
   
- You must restore the backup copy of the encryption key when you:  
+You must restore the backup copy of the encryption key when you:  
   
 - Change the Report Server Windows service account name or reset the password. When you use the Report Server Configuration Manager, backing up the key is part of a service account name change operation.  
     > [!NOTE]
@@ -43,24 +43,24 @@ Backing up the symmetric key is a process that writes the key to a file that you
   
  **SharePoint mode:** SharePoint Central Administration pages or PowerShell.  
   
-##  <a name="bkmk_backup_sharepoint"></a> Backup SharePoint Mode Report Servers  
+##  <a name="bkmk_backup_sharepoint"></a> Back up SharePoint mode report servers  
  For SharePoint mode report servers you can either use PowerShell commands or use the management pages for the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service application. For more information, see the "Key Management" section of [Manage a Reporting Services SharePoint Service Application](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md)  
 
 ::: moniker-end
   
-##  <a name="bkmk_backup_configuration_manager"></a> Back up encryption keys -Report Server Configuration Manager (Native Mode)  
+##  <a name="bkmk_backup_configuration_manager"></a> Back up encryption keys - Report Server Configuration Manager (Native mode)  
   
 1.  Start the Report Server Configuration Manager, and then connect to the report server instance you want to configure.  
   
-2.  Click **Encryption Keys**, and then select **Back Up**.  
+1.  Click **Encryption Keys**, and then select **Back Up**.  
   
-3.  Type a strong password.  
+1.  Type a strong password.  
   
-4.  Specify a file to contain the stored key. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] appends a .snk file extension to the file. Consider storing the file on a disk separate from the report server.  
+1.  Specify a file to contain the stored key. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] appends a .snk file extension to the file. Consider storing the file on a disk separate from the report server.  
   
-5.  Select **OK**.  
+1.  Select **OK**.  
   
-###  <a name="bkmk_backup_rskeymgmt"></a> Back up encryption keys -rskeymgmt (Native Mode)  
+###  <a name="bkmk_backup_rskeymgmt"></a> Back up encryption keys -rskeymgmt (Native mode)  
   
 1.  Run **rskeymgmt.exe** locally on the computer that hosts the report server. You must use the **-e** extract argument to copy the key, provide a file name, and specify a password. The following example illustrates the arguments you must specify:  
   
@@ -68,40 +68,38 @@ Backing up the symmetric key is a process that writes the key to a file that you
     rskeymgmt -e -f d:\rsdbkey.snk -p<password>  
     ```  
   
-## Restore Encryption Keys  
+## Restore encryption keys  
  Restoring the symmetric key overwrites the existing symmetric key that is stored in the report server database. Restoring an encryption key replaces an unusable key with a copy that you previously saved to disk. Restoring encryption keys results in the following actions:  
   
--   The symmetric key is opened from the password protected backup file.  
+- The symmetric key is opened from the password protected backup file.  
+- The symmetric key is encrypted using the public key of the Report Server Windows service.  
+- The encrypted symmetric key is stored in the report server database.  
+- The previously stored symmetric key data (for example, key information that was already in the report server database from a previous deployment) is deleted.  
   
--   The symmetric key is encrypted using the public key of the Report Server Windows service.  
-  
--   The encrypted symmetric key is stored in the report server database.  
-  
--   The previously stored symmetric key data (for example, key information that was already in the report server database from a previous deployment) is deleted.  
-  
- To restore the encryption key, you must have a copy of the encryption key on file. You must also know the password that unlocks the stored copy. If you have the key and the password, you can run the Reporting Services Configuration tool or **rskeymgmt** utility to restore the key. The symmetric key must be the same one that locks and unlocks encrypted data currently stored in the report server database. If you restore a copy that is not valid, the report server cannot access the encrypted data currently stored in the report server database. If this occurs, you might need to delete all encrypted values if you cannot restore a valid key. If for some reason you cannot restore the encryption key (for example, if you do not have a backup copy), you must delete the existing key and encrypted content. For more information, see [Delete and Re-create Encryption Keys  &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md). For more information about creating symmetric keys, see [Initialize a Report Server &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md).  
+ To restore the encryption key, you must have a copy of the encryption key on file. You must also know the password that unlocks the stored copy. If you have the key and the password, you can run the Reporting Services Configuration tool or **rskeymgmt** utility to restore the key. The symmetric key must be the same one that locks and unlocks encrypted data currently stored in the report server database. If you restore a copy that isn't valid, the report server can't access the encrypted data currently stored in the report server database. If this occurs, you might need to delete all encrypted values if you can't restore a valid key. If for some reason you can't restore the encryption key (for example, if you do not have a backup copy), you must delete the existing key and encrypted content. For more information, see [Delete and Re-create Encryption Keys  &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md). For more information about creating symmetric keys, see [Initialize a Report Server &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md).  
   
 ###  <a name="bkmk_restore_configuration_manager"></a> Restore encryption keys -Report Server Configuration Manager (Native Mode)  
   
 1.  Start the Report Server Configuration Manager, and then connect to the report server instance you want to configure.  
   
-2.  On the Encryption Keys page, select **Restore**.  
+1.  On the Encryption Keys page, select **Restore**.  
   
-3.  Select the .snk file that contains the back up copy.  
+1.  Select the .snk file that contains the back up copy.  
   
-4.  Type the password that unlocks the file.  
+1.  Type the password that unlocks the file.  
   
-5.  Select **OK**. 
+1.  Select **OK**. 
   
-###  <a name="bkmk_restore_rskeymgmt"></a> Restore encryption keys - rskeymgmt (Native Mode)  
+###  <a name="bkmk_restore_rskeymgmt"></a> Restore encryption keys - rskeymgmt (Native mode)  
   
-1.  Run **rskeymgmt.exe** locally on the computer that hosts the report server. Use the **-a** argument to restore the keys. You must provide a fully-qualified file name and specify a password. The following example illustrates the arguments you must specify:  
+1.  Run **rskeymgmt.exe** locally on the computer that hosts the report server. Use the **-a** argument to restore the keys. You must provide a fully qualified file name and specify a password. The following example illustrates the arguments you must specify:  
   
     ```  
     rskeymgmt -a -f d:\rsdbkey.snk -p<password>  
     ```  
   
-## See Also  
- [Configure and Manage Encryption Keys &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
+## Related content
+ 
+- [Configure and manage encryption keys &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
   
   

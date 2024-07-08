@@ -3,7 +3,7 @@ title: What are REST APIs for Reporting Services?
 description: Learn how REST APIs provide programmatic access to the objects in a SQL Server 2017 Reporting Services report server catalog.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 06/19/2024
+ms.date: 07/08/2024
 ms.service: reporting-services
 ms.subservice: developer
 ms.topic: overview
@@ -65,7 +65,7 @@ A REST API request/response pair can be separated into five components:
 
 ## API documentation
 
-A modern REST API calls for modern API documentation. A REST API is built on the OpenAPI specification, which is also called the swagger specification. Documentation is available on [Microsoft Learn](/rest/api/power-bi-report/).
+A modern REST API calls for modern API documentation. A REST API is built on the OpenAPI specification, which is also called the swagger specification. [Power BI Report Server REST API](/rest/api/power-bi-report/) documentation is available on Microsoft Learn.
 
 ## Test API calls
 

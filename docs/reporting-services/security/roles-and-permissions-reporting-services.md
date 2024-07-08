@@ -3,7 +3,7 @@ title: Roles and permissions in Reporting Services
 description: Learn how you can use the roles and permissions tools in Reporting Services to manage your report servers.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 06/19/2024
+ms.date: 07/08/2024
 ms.service: reporting-services
 ms.subservice: security
 ms.topic: conceptual
@@ -31,9 +31,14 @@ Authorization is based on roles that you assign to a principal. Each role consis
 
 ### Roles and System Roles
 
-Report servers have two types of roles that you can define: **Item Roles** and **System Roles**.
+Report servers have two types of roles that you can define: 
 
-**Item Roles** come with the following tasks that you can assign:
+- [**Item Roles**](#item-roles)
+- [**System Roles**](#system-roles)
+
+### Item Roles
+
+Item Roles come with the following tasks that you can assign:
 
 |Task                             |Description                                                                                                                      |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -56,7 +61,9 @@ Report servers have two types of roles that you can define: **Item Roles** and *
 |Comment on reports               |Create, view, edit, and delete comments on reports.                                                                              |
 |Manage comments                  |Delete other users' comments on reports.                                                                                         |
 
-**System Roles** come with the following tasks that you can assign:
+### System Roles
+
+System Roles come with the following tasks that you can assign:
 
 |Task                           |Descriptions                                                                                         |
 |-------------------------------|-----------------------------------------------------------------------------------------------------|

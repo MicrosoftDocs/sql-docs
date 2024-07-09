@@ -22,7 +22,7 @@ In a paginated report, a group is a named set of data from the report dataset bo
   
 To help visualize what a group is, refer to the following figure that shows the tablix data region in **Preview**. In this figure, the row groups categorize the dataset by product type, and the column groups categorize the dataset by geographic region and year.
 
-:::image type="content" source="../../reporting-services/report-design/media/rs-tablixareas.png" alt-text="Screenshot of a tablix data region that highlights the different areas and groups.":::
+:::image type="content" source="../../reporting-services/report-design/media/rs-tablix-areas.png" alt-text="Screenshot of a tablix data region that highlights the different areas and groups.":::
   
  The following sections help describe the various aspects of groups.  
   

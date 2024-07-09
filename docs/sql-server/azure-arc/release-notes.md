@@ -32,7 +32,7 @@ Extended Security Updates (ESU) subscription for [!INCLUDE [sssql14-md](../../in
 
 ### Azure extension for SQL Server
 
-- `SqlServerExtensionPermissionProvider` task no longer runs hourly. The task is triggered by specific events. For details, review [Roles](permissions-granted-agent-extension.md#roles). 
+`SqlServerExtensionPermissionProvider` task no longer runs hourly. The task is triggered by specific events. For details, review [Roles](permissions-granted-agent-extension.md#roles). 
 
 ## June  14, 2024
 

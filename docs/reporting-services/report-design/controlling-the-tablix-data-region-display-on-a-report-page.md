@@ -46,8 +46,8 @@ Table, matrix, and list data regions are all examples of *tablix* data regions. 
   
 ## Controlling How Tablix Row and Column Groups Render  
  To control how a tablix data region groups render depends on the group structure. A tablix data region can have four areas, as shown in the following figure:  
-  
- ![Tablix data region areas](../../reporting-services/report-design/media/rs-tablixareas.png "Tablix data region areas")  
+
+:::image type="content" source="../../reporting-services/report-design/media/rs-tablix-areas.png" alt-text="Screenshot of a tablix data region that highlights the different areas and groups.":::
   
  The row group area and column group area contain group headers. When a tablix data region has group headers, you control how rows and columns repeat by setting properties on the **General** page of the **Tablix Properties** dialog Box.  
   

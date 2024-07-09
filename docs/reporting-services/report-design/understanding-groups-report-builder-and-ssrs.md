@@ -3,7 +3,7 @@ title: Groups in a Report Builder paginated report
 description: Learn how you can create and use groups to organize the view of a report dataset in a paginated report in Report Builder.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 07/02/2024
+ms.date: 07/09/2024
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: conceptual
@@ -96,7 +96,7 @@ To limit the data to display or use in calculations for detail or group data, se
   
 By default, when you create a group, the sort expression for the group is the same as the group expression. To change the sort order, change the sort expression. For more information, see [Filter, group, and sort data in paginated reports (Report Builder)](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md).  
   
-#### Understand Group Membership for Tablix Cells  
+#### Understand group membership for tablix cells  
 
 Cells in a row or column of a tablix data region can belong to multiple row and column groups. When you define an expression in the text box of a cell that uses an aggregate function (for example, `=Sum(Fields!FieldName.Value`), the default group scope for a cell is the inner most child group to which it belongs. When a cell belongs to both row and column groups, the scope is both innermost groups. You can also write expressions that calculate aggregate subtotals scoped to a group relative to another set of data. For example, you can calculate the percent of a group relative to the column group or to all data for the data region (such as `=Sum(Fields!FieldName.Value)/Sum(Fields!FieldName.Value,"ColumnGroup")`). For more information, see [Tablix data region in a paginated report (Report Builder)](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md) and [Expression scope for totals, aggregates, and built-in collections in a paginated report (Report Builder)](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md).  
   

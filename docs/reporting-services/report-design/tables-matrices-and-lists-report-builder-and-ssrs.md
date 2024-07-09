@@ -3,7 +3,7 @@ title: "Tables, matrices, and lists in Report Builder paginated reports"
 description:  Learn about how tablix data regions, including tables, matrices, and lists, display paginated report data organized into rows and columns in Report Builder.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 07/02/2024
+ms.date: 07/09/2024
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: conceptual
@@ -91,7 +91,7 @@ Use a list to create a free-form layout. You aren't limited to a grid layout, so
   
 For more information, see [Create invoices and forms with lists in a paginated report (Report Builder)](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md).  
   
-## <a name="PreparingData"></a> Prepare Data  
+## <a name="PreparingData"></a> Prepare data  
 
 A table, matrix, and list data regions display data from a dataset. You can prepare the data in the query that retrieves the data for the dataset or by setting properties in the table, matrix, or list.  
   

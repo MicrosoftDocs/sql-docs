@@ -88,9 +88,9 @@ Before you begin, ensure you have the following installed on your local machine:
         npm list   
         ```
 
-6. Run predefined tasks.
+1. Run predefined tasks.
 
-    - To run any of the predefined tasks, open the command palette (`F1`), type `Run Task`, and select the desired task. For example, **Execute SQL Query**, **Build SQL Database Project**.
+    - To run any of the predefined tasks, open the command palette (`F1`), type `Run Task`, and select the desired task. For example, **Verify database schema and data**, **Build SQL Database Project**.
 
 For more information about a specific template, see [Azure SQL Database Dev Container templates](./local-dev-experience-dev-containers.md).
 

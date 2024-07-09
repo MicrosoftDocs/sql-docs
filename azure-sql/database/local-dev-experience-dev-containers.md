@@ -86,15 +86,15 @@ All of the below tools and utilities are pre-loaded in the Dev Container. You do
 - **SqlPackage**: Command-line utility for deploying database changes, including schema updates and data migrations.
 
 > [!IMPORTANT]
-> While the SQL Server container employs a standard version of SQL Server, all database development within this Dev Container can be validated for Azure SQL Database using the SQL Database Project. The SQL Database project is preconfigured with the target platform set as Azure SQL Database.
+> While the container now uses the `mcr.microsoft.com/azure-sql-edge` image, designed for edge computing scenarios and offering a subset of SQL Server's features along with built-in AI, all database development within this Dev Container can still be validated for Azure SQL Database using the SQL Database Project. The SQL Database project is preconfigured with the target platform set as Azure SQL Database.
 
 ### Visual Studio Code Tasks
 
 A set of predefined tasks in Visual Studio Code to simplify common actions:
 
-- **Execute SQL Query**: Opens and executes a SQL file to validate the database schema.
-- **Build SQL Database Project**: Builds the SQL Database project using `dotnet build`.
-- **Deploy SQL Database Project**: Deploys the SQL Database project to the database container.
+- **Verify database schema and data**: Opens and executes a SQL file to validate the database schema.
+- **Build SQL Database project**: Builds the SQL Database project using `dotnet build`.
+- **Publish SQL Database Project**: Publish the SQL Database project to the database container.
 - **Update .NET SDK**: Updates the .NET SDK to ensure the latest features and compatibility.
 - **Trust .NET HTTPS Certificate**: Trusts the HTTPS certificate for secure development with .NET Aspire.
 

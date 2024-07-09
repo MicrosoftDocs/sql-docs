@@ -38,7 +38,7 @@ When you start [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] from t
 
 - SQL Server 2016 (13.x) or later.
 - Connection to a report server database.
-- Access to Reporting Services web portal. 
+- Access to the Reporting Services web portal. 
 
 ## Start Report Builder from the Reporting Services web portal
 

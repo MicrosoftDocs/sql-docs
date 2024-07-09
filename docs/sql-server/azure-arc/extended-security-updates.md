@@ -130,7 +130,7 @@ The **License Activation** tab controls when the license takes effect or deactiv
 > [!IMPORTANT]
 > - After the license is activated the core size and version of the license cannot be changed.  If you want to increase the core count, you will need to create another license resource.
 > - After the license is terminated it cannot be re-activated. You can delete the resource if not needed.  
-> - After the license is terminated, the ESU subscriptions for the VMs in scope will remain active and will become billable at the VM level. To stop all ESU charges, make sure to unsubscribe them before terminating the license. For details, see [Manage resources in scope](manage-configuration.md#manage-esu-license-resources.
+> - After the license is terminated, the ESU subscriptions for the VMs in scope will remain active and will become billable at the VM level. To stop all ESU charges, make sure to unsubscribe them before terminating the license. For details, see [Manage resources in scope](manage-configuration.md#manage-esu-license-resources).
 
 The **Tenant ID** property is automatically set when the tenant scope is selected. 
 
@@ -263,8 +263,6 @@ If your [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instance l
 - [Review the Extended Security Updates: Frequently asked questions](../end-of-support/extended-security-updates-frequently-asked-questions.md).
 - [Learn about the prerequisites to connect your SQL Server to Azure Arc](prerequisites.md)
 - [Automatically connect your SQL Server to Azure Arc](automatically-connect.md)
-- [Configure your VMs to use a p-core ESU license]()
-- 
 
 ## Related content
 

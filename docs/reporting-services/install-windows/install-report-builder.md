@@ -3,7 +3,7 @@ title: "Install Microsoft Report Builder"
 description: Install Microsoft Report Builder by using various methods including Microsoft Endpoint Configuration Manager, the web portal, and the command line. 
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 06/25/2024
+ms.date: 07/08/2024
 ms.service: reporting-services
 ms.subservice: report-server
 ms.topic: install-set-up-deploy
@@ -41,7 +41,10 @@ Whether you're setting up the software for your own use or deploying it across m
 
 ## Install Report Builder with Microsoft Endpoint Configuration Manager
   
- Administrators can use Microsoft Endpoint Configuration Manager to push Report Builder to your computer. To learn how to use specific software to install Report Builder with Configuration Manager, see [Microsoft Endpoint Configuration Manager documentation](/configmgr/).   
+ Administrators can use Microsoft Endpoint Configuration Manager to push Report Builder to your computer. To learn how to use specific software to install Report Builder with Configuration Manager, see [Microsoft Endpoint Configuration Manager documentation](/configmgr/).
+
+> [!IMPORTANT]  
+> Security features in Windows versions 10 and later require elevated permissions to run command line operations and prompt for permission to run the command line. The installation isn't silent. To make the installation silent, you need to run the command line as an administrator.  
 
 ## Install Report Builder from the web portal
 

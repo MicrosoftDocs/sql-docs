@@ -57,13 +57,9 @@ Backing up the symmetric key is a process that writes the key to a file that you
 ##  <a name="bkmk_backup_configuration_manager"></a> Back up encryption keys with the Report Server Configuration Manager (Native mode)  
   
 1.  Start the Report Server Configuration Manager and connect to the report server instance you want to configure.  
-  
-1.  Select **Encryption Keys**, and then select **Back Up**.  
-  
-1.  Enter a strong password.  
-  
+1.  Select **Encryption Keys**, and then select **Backup**.   
 1.  Specify a file to contain the stored key. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] appends a `.snk` file extension to the file. Consider storing the file on a disk separate from the report server.  
-  
+1.  Enter a strong password.  
 1.  Select **OK**.  
   
 ### <a name="bkmk_backup_rskeymgmt"></a> Back up encryption keys with the rskeymgmt utility (Native mode)  
@@ -95,13 +91,9 @@ For more information about creating symmetric keys, see [Initialize a Report Ser
 ###  <a name="bkmk_restore_configuration_manager"></a> Restore encryption keys with the Report Server Configuration Manager (Native Mode)  
   
 1.  Start the Report Server Configuration Manager and connect to the report server instance you want to configure.  
-  
 1.  On the Encryption Keys page, select **Restore**.  
-  
 1.  Select the `.snk` file that contains the backup copy.  
-  
 1.  Enter the password that unlocks the file.  
-  
 1.  Select **OK**. 
   
 ###  <a name="bkmk_restore_rskeymgmt"></a> Restore encryption keys with the rskeymgmt utility (Native mode)  

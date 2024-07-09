@@ -18,11 +18,15 @@ When you install Azure extension for SQL Server, the installation:
 
 In addition, Azure extension for SQL Server revokes permissions for these roles when they're no longer needed for specific features.
 
-`SqlServerExtensionPermissionProvider` is a Windows scheduled task. It runs hourly. It grants or revokes privileges in SQL Server when it detects:
+`SqlServerExtensionPermissionProvider` is a Windows task. It grants or revokes privileges in SQL Server when it detects:
 
 - A new SQL Server instance is installed on the host
-- A new database is created
-- A feature is enabled or disabled
+- SQL Server instance is uninstalled from host
+- An instance level feature is enabled or disabled or settings are updated
+- Extension service is restarted
+
+> [!NOTE]
+> Prior to the July, 2024 release, `SqlServerExtensionPermissionProvider` is a scheduled task. It runs hourly.
 
 For details, review [Configure Windows service accounts and permissions for Azure extension for SQL Server](../sql-server/azure-arc/configure-windows-accounts-agent.md).
 

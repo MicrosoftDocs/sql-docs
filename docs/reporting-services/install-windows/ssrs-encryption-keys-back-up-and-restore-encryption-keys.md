@@ -35,10 +35,7 @@ You must restore the backup copy of the encryption key when you:
 
 You only need to back up one copy of the symmetric key. There's a one-to-one relationship between a report server database and a symmetric key. Although you only need to back up one copy, you might need to restore the key multiple times if you're running multiple report servers in a scale-out deployment model. Each report server instance needs its copy of the symmetric key to lock and unlock data in the report server database.
 
-Backing up the symmetric key is a process that writes the key to a file that you specify, and then scrambles the key by using a password that you provide. The symmetric key can never be stored in an unencrypted state so you must provide a password to encrypt the key when you save it to disk. After you create the file, you must store it in a secure location **and remember the password** that's used to unlock the file. To back up the symmetric key, you can use the following tools:  
-  
-- Report Server Configuration Manager
-- `rskeymgmt` utility  
+Backing up the symmetric key is a process that writes the key to a file that you specify, and then scrambles the key by using a password that you provide. The symmetric key can never be stored in an unencrypted state so you must provide a password to encrypt the key when you save it to disk. After you create the file, you must store it in a secure location **and remember the password** that's used to unlock the file. 
 
 ::: moniker range="=sql-server-2016"
   
@@ -79,7 +76,7 @@ When you restore the symmetric key, you replace the existing key in the report s
 - The newly encrypted symmetric key is stored in the report server database.  
 - The previous symmetric key data is deleted.  
   
-To restore the encryption key, you must have the encryption key backup and the password you used to protect it. If you have the key and the password, you can run the Reporting Services Configuration tool or **rskeymgmt** utility to restore the key. Keep in mind:
+To restore the encryption key, you must have the encryption key backup and the password you used to protect it. If you have the key and the password, you can run the Reporting Services Configuration Manager or rskeymgmt utility to restore the key. Keep in mind:
 
 - The symmetric key must match the one currently used to lock and unlock the encrypted data in the report server database. 
 - If the restored key is valid, the report server can't access the encrypted data. 

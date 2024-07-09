@@ -42,7 +42,7 @@ When you start [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] from t
 
      :::image type="content" source="media/start-report-builder/web-portal-new-paginated-report.png" alt-text="Screenshot of the New Paginated Report menu.":::
 
-     The first time, you're prompted to [install Report Builder](../../reporting-services/install-windows/install-report-builder.md).
+     The first time you start Report Builder with the **Paginated Report** option, you receive the prompt to [install Report Builder](../../reporting-services/install-windows/install-report-builder.md).
 
      After the first time, [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] opens, and you can create a paginated report or open a report from the report server.
 

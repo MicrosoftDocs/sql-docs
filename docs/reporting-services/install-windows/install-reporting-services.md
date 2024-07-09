@@ -3,7 +3,7 @@ title: "Install SQL Server Reporting Services"
 description: "Install and configure SQL Server Reporting Services (SSRS) components for storing report items, rendering reports, and processing other report services."
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 06/25/2024
+ms.date: 07/08/2024
 ms.service: reporting-services
 ms.subservice: report-server
 ms.topic: install-set-up-deploy
@@ -120,9 +120,19 @@ Open the TCP port that you configured for your web service URL and web portal UR
 
 You might need to configure other features for better report access and usability. You can configure integration with the Power BI service so that you can pin report items to a Power BI dashboard. For more information, see [Power BI Report Server Integration (Configuration Manager)](power-bi-report-server-integration-configuration-manager.md).
 
-To configure email for subscriptions processing, see [Email settings in SSRS native mode](e-mail-settings-reporting-services-native-mode-configuration-manager.md) and [Email delivery in Reporting Services](../subscriptions/e-mail-delivery-in-reporting-services.md).
+### Configure email for subscriptions processing
 
-You can also set up the web portal so that you can access and manage reports from a remote computer. For more information, see [Configure a firewall for report server access](../report-server/configure-a-firewall-for-report-server-access.md) and [Configure a report server for remote administration](../report-server/configure-a-report-server-for-remote-administration.md).
+To configure email for subscriptions processing, see:
+
+- [Email settings in SSRS native mode](e-mail-settings-reporting-services-native-mode-configuration-manager.md)
+- [Email delivery in Reporting Services](../subscriptions/e-mail-delivery-in-reporting-services.md)
+
+### Set up reports from a remote computer
+
+You can also set up the web portal so that you can access and manage reports from a remote computer. For more information, see:
+
+- [Configure a firewall for report server access](../report-server/configure-a-firewall-for-report-server-access.md)
+- [Configure a report server for remote administration](../report-server/configure-a-report-server-for-remote-administration.md)
 
 ## Related content
 

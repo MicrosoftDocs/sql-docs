@@ -17,7 +17,7 @@ helpviewer_keywords:
 
 ---
 # Back Up and restore SQL Server Reporting Services (SSRS) encryption keys
-[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)] :::image type="icon" source="/includes/media/yes-icon.svg" border="false"::: [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Native Mode :::image type="icon" source="../../includes/media/yes-icon.svg" border="false"::: [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode 
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)] :::image type="icon" source="../../includes/media/yes-icon.svg" border="false"::: [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Native Mode :::image type="icon" source="../../includes/media/yes-icon.svg" border="false"::: [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode 
 
 Learn how to back up and restore SSRS encryption keys by using the Report Server Configuration Manager and the rskeymgmt utility. You back up these keys so you can maintain the security and recoverability of your encrypted data. This process is essential when you change service account credentials, migrate installations, or recover from hardware failures, so that you can ensure the integrity and availability of your report server environment.
   

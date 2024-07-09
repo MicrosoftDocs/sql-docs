@@ -34,6 +34,13 @@ You or an administrator can also install Report Builder on your computer from th
 
 When you start [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] from the web portal or SharePoint site, if an earlier version of [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] opens, contact your administrator. The administrator can update the version on the web portal or SharePoint site.
 
+## Prerequisites
+
+- SQL Server 2016 (13.x) or later.
+- Connection to a report server database.
+- Microsoft Report Builder downloaded, installed, and configured.
+- Access to Reporting Services web portal. 
+
 ## Start Report Builder from the Reporting Services web portal
 
 1. In your web browser, go to the URL for your report server. By default, the URL is `https://<servername>/reports`.

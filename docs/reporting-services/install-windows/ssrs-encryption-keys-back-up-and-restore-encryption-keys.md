@@ -33,10 +33,6 @@ You must restore the backup copy of the encryption key when you:
 - Migrate a report server installation or configure a report server to use a different report server database.  
 - Recover a report server installation due to hardware failure.
 
-You only need to back up one copy of the symmetric key. There's a one-to-one relationship between a report server database and a symmetric key. Although you only need to back up one copy, you might need to restore the key multiple times if you're running multiple report servers in a scale-out deployment model. Each report server instance needs its copy of the symmetric key to lock and unlock data in the report server database.
-
-Backing up the symmetric key is a process that writes the key to a file that you specify, and then scrambles the key by using a password that you provide. The symmetric key can never be stored in an unencrypted state so you must provide a password to encrypt the key when you save it to disk. After you create the file, you must store it in a secure location **and remember the password** that's used to unlock the file. 
-
 ::: moniker range="=sql-server-2016"
   
 ###  <a name="bkmk_backup_sharepoint"></a> Back up SharePoint mode report servers  
@@ -51,7 +47,13 @@ Backing up the symmetric key is a process that writes the key to a file that you
 - Access to the Report Server Configuration Manager or the rskeymgmt utility.
 - Secure storage location for the backup file.
  
-##  <a name="bkmk_backup_configuration_manager"></a> Back up encryption keys with the Report Server Configuration Manager (Native mode)  
+##  <a name="bkmk_backup_configuration_manager"></a> Back up encryption keys 
+
+You only need to back up one copy of the symmetric key. There's a one-to-one relationship between a report server database and a symmetric key. Although you only need to back up one copy, you might need to restore the key multiple times if you're running multiple report servers in a scale-out deployment model. Each report server instance needs its copy of the symmetric key to lock and unlock data in the report server database.
+
+Backing up the symmetric key is a process that writes the key to a file that you specify, and then scrambles the key by using a password that you provide. The symmetric key can never be stored in an unencrypted state so you must provide a password to encrypt the key when you save it to disk. After you create the file, you must store it in a secure location **and remember the password** that's used to unlock the file.
+
+### Back up encryption keys with the Report Server Configuration Manager (Native mode)  
   
 1.  Start the Report Server Configuration Manager and connect to the report server instance you want to configure.  
 1.  Select **Encryption Keys**, and then select **Backup**.   
@@ -88,8 +90,8 @@ For more information about creating symmetric keys, see [Initialize a Report Ser
 ###  <a name="bkmk_restore_configuration_manager"></a> Restore encryption keys with the Report Server Configuration Manager (Native Mode)  
   
 1.  Start the Report Server Configuration Manager and connect to the report server instance you want to configure.  
-1.  On the Encryption Keys page, select **Restore**.  
-1.  Select the `.snk` file that contains the backup copy.  
+1.  Select **Encryption Keys**, and then select **Restore**.  
+1.  Select the `.snk` file that contains the backup copy of the encryption keys.  
 1.  Enter the password that unlocks the file.  
 1.  Select **OK**. 
   

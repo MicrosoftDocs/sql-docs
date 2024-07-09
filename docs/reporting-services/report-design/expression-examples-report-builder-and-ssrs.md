@@ -3,7 +3,7 @@ title: Expression examples in Report Builder paginated reports
 description: Learn how to control content and paginated report appearance using built-in functions, custom code, report and group variables, and user-defined variables in Report Builder.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 04/06/2017
+ms.date: 07/09/2024
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: conceptual
@@ -262,7 +262,7 @@ You can use [!INCLUDE[visual-basic](../../includes/visual-basic-md.md)] function
   
 ### <a name="DecisionFunctions"></a> Decision Functions  
   
-- The **IIF** function returns one of two values depending on whether the expression is true or not. The following expression uses the **IIF** function to return a Boolean value of TRUE if the value of **LineTotal** exceeds 100. Otherwise it returns FALSE:  
+- The **IIF** function returns one of two values depending on whether the expression is true or not. The following expression uses the **IIF** function to return a Boolean value of "True" if the value of **LineTotal** exceeds 100. Otherwise it returns a value of "False":  
   
     ``` basic
     =IIF(Fields!LineTotal.Value > 100, True, False)  
@@ -377,11 +377,11 @@ The following examples describe how to display the first and last values from a 
     =Last(ReportItems("LastName").Value)  
     ```  
   
-The following example describes how to display a page total. The example assumes a data region that contains a text box named Cost. When you place this expression in the page header or footer, it provides the sum of the values in the Cost text box for the page:
+- The following example describes how to display a page total. The example assumes a data region that contains a text box named Cost. When you place this expression in the page header or footer, it provides the sum of the values in the Cost text box for the page:
 
     ``` basic
     =Sum(ReportItems("Cost").Value)  
-    ```
+    ``` 
 
 > [!NOTE]  
 > You can refer to only one report item per expression in a page header or footer. Also, you can refer to the text box name, but not the actual data expression within the text box, in page header and footer expressions.  

@@ -468,7 +468,7 @@ You can customize URLs by using report data and also conditionally control wheth
 - The following expression, when used as an action on a text box, generates a customized URL that specifies the dataset field **EmployeeID** as a URL parameter:
   
     ``` basic
-    ="https://adventure-works/MyInfo?ID=" & Fields!EmployeeID.Value  
+    ="https://contoso/MyInfo?ID=" & Fields!EmployeeID.Value  
     ```  
   
      For more information, see [Add a hyperlink to a URL in a paginated report (Report Builder)](../../reporting-services/report-design/add-a-hyperlink-to-a-url-report-builder-and-ssrs.md).  
@@ -476,7 +476,7 @@ You can customize URLs by using report data and also conditionally control wheth
 - The following expression conditionally controls whether to add a URL in a text box. This expression depends on a parameter named *IncludeURLs* that allows a user to decide whether to include active URLs in a report. This expression is set as an action on a text box. By setting the parameter to FALSE and then viewing the report, you can export the report Microsoft Excel without hyperlinks:
   
     ``` basic
-    =IIF(Parameters!IncludeURLs.Value,"https://adventure-works.com/productcatalog",Nothing)  
+    =IIF(Parameters!IncludeURLs.Value,"https://contoso.com/productcatalog",Nothing)  
     ```  
   
 ## <a name="ReportData"></a> Report data  

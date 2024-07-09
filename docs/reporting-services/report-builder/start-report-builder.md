@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "launching Report Builder"
   - "SharePoint integration [Reporting Services], starting Report Builder"
   - "starting Report Builder"
-#customer intent: As a SQL Server report author, I want to start Microsoft Report Builder from the Reporting Services web portal so that I can create and manage my reports.
+#customer intent: As a SQL Server report author, I want to start Microsoft Report Builder from the Reporting Services web portal so that I can create and manage reports.
 ---
 # Start Microsoft Report Builder
 

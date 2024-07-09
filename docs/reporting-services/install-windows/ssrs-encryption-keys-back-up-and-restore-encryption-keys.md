@@ -51,7 +51,7 @@ Backing up the symmetric key is a process that writes the key to a file that you
 
 - SQL Server 2016 (13.x) or later.
 - Connection to a report server database.
-- Access to the Report Server Configuration Manager installed on the machine hosting the SSRS instance or the rskeymgmt utility available on the machine hosting the SSRS instance.
+- Access to the Report Server Configuration Manager or the rskeymgmt utility.
 - Secure storage location for the backup file.
  
 ##  <a name="bkmk_backup_configuration_manager"></a> Back up encryption keys with the Report Server Configuration Manager (Native mode)  

@@ -87,7 +87,7 @@ To restore the encryption key, you must have the encryption key backup and the p
 
 For more information about creating symmetric keys, see [Initialize a Report Server &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md).  
   
-###  <a name="bkmk_restore_configuration_manager"></a> Restore encryption keys with the Report Server Configuration Manager (Native Mode)  
+###  <a name="bkmk_restore_configuration_manager"></a> Restore encryption keys with the Report Server Configuration Manager (Native mode)  
   
 1.  Start the Report Server Configuration Manager and connect to the report server instance you want to configure.  
 1.  Select **Encryption Keys**, and then select **Restore**.  

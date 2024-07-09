@@ -24,11 +24,15 @@ Extension versions are cumulative. Higher extension versions include all of the 
 
 ## July  09, 2024
 
-**Extension version**: `1.1.2725.199`
+**Extension version**: `1.1.2735.199`
+
+### Extended Security Updates enabled for SQL Server 2014
+
+Extended Security Updates (ESU) subscription for [!INCLUDE [sssql14-md](../../includes/sssql14-md.md)] will automatically start billing when SQL Server 2014 ESU program starts. Requires [!INCLUDE [sssql14-md](../../includes/sssql14-md.md)] be enabled for ESU.
 
 ### Azure extension for SQL Server
 
-- `SqlServerExtensionPermissionProvider` task no longer runs hourly. The task is triggered by specific events. For details, review [Roles](permissions-granted-agent-extension.md#roles). 
+`SqlServerExtensionPermissionProvider` task no longer runs hourly. The task is triggered by specific events. For details, review [Roles](permissions-granted-agent-extension.md#roles). 
 
 ## June  14, 2024
 

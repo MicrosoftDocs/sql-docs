@@ -26,7 +26,7 @@ Microsoft [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] is a stand-
 > Reporting Services integration with SharePoint is no longer available after SQL Server 2016.
 ::: moniker-end
 
-The first time you start [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] from the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] web portal, you can [download Report Builder](https://www.microsoft.com/download/details.aspx?id=53613) from the Microsoft Download Center.
+The first time you start [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] from the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] web portal, you can [download Report Builder](https://www.microsoft.com/download/details.aspx?id=53613) from the Microsoft Download Center by selecting **Get Report Builder**.
 
 :::image type="content" source="media/start-report-builder/report-builder-get-report-builder.png" alt-text="Screenshot of the We're opening Report Builder message.":::
 
@@ -38,7 +38,7 @@ When you start [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] from t
 
 1. In your web browser, go to the URL for your report server. By default, the URL is `https://<servername>/reports`.
 
-1. In the top bar of the web portal, select **New** and choose **Paginated Report**.
+1. In the web portal's menu bar, select **New** and choose **Paginated Report**.
 
      :::image type="content" source="media/start-report-builder/web-portal-new-paginated-report.png" alt-text="Screenshot of the New Paginated Report menu.":::
 

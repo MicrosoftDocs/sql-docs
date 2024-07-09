@@ -1,6 +1,6 @@
 ---
 title: "Start Microsoft Report Builder"
-description: Report Builder is a stand-alone report authoring environment. The first time you start it, Microsoft Download Center prompts you to download it.
+description: Learn how to start Microsoft Report Builder from the SQL Server Reporting Services (SSRS) web portal and create paginated reports.
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 07/10/2024
@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "launching Report Builder"
   - "SharePoint integration [Reporting Services], starting Report Builder"
   - "starting Report Builder"
-
+#customer intent: As a SQL Server report author, I want to start Microsoft Report Builder from the Reporting Services web portal so that I can create and manage my reports.
 ---
 # Start Microsoft Report Builder
 
@@ -26,7 +26,7 @@ Microsoft [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] is a stand-
 > Reporting Services integration with SharePoint is no longer available after SQL Server 2016.
 ::: moniker-end
 
-The first time you start [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] from the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] web portal, you're prompted to [download Report Builder](https://www.microsoft.com/download/details.aspx?id=53613) from the Microsoft Download Center.
+The first time you start [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] from the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] web portal, you can [download Report Builder](https://www.microsoft.com/download/details.aspx?id=53613) from the Microsoft Download Center.
 
 :::image type="content" source="media/start-report-builder/report-builder-get-report-builder.png" alt-text="Screenshot of the We're opening Report Builder message.":::
 

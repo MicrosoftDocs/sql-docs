@@ -18,7 +18,7 @@ f1_keywords:
   - "sql13.rtp.rptdesigner.seriesgroupproperties.sorting.f1"
   - "10412"
 
-#customer intent: As a Report Builder user, I want learn how to use expressions so that control, organize, and sort the data in my reports.
+#customer intent: As a Report Builder user, I want to learn how to use expressions so that control, organize, and sort the data in my reports.
 ---
 # Expressions in Report Builder paginated reports
 
@@ -28,10 +28,10 @@ In a paginated report, expressions are used to help control, organize, and sort 
   
 - **Filter expressions**: A filter expression tests data for inclusion or exclusion based on a comparison that you specify. Filters are applied to data in a report after the data is retrieved from a data connection. You can add any combination of filters to the following items:
 
-- shared dataset definition on the report server.
-- shared dataset instance or embedded dataset in a report.
-- data region, such as a table or a chart.
-- data region group, such as a row group in a table or a category group in a chart.  
+- Shared dataset definition on the report server.
+- Shared dataset instance or embedded dataset in a report.
+- Data region, such as a table or a chart.
+- Data region group, such as a row group in a table or a category group in a chart.  
   
 - **Group expressions**: A group expression organizes data based on a dataset field or other value. Group expressions are created automatically as you build the report layout. The report processor evaluates group expressions after filters are applied to the data and as report data and data regions are combined. You can customize a group expression after you create it.  
   
@@ -64,19 +64,19 @@ When it's possible, build dataset queries that return only the data that you nee
   
 After the data is retrieved from the external data source, you can add filters to:
 
-- datasets
-- data regions
-- data region groups, including detail groups.
+- Datasets.
+- Data regions.
+- Data region groups, including detail groups.
 
 Filters are applied at run time first on the dataset. Then it proceeds to the data region. Then the filter is applied to the group, in top-down order for group hierarchies. In a table, matrix, or list, filters for row groups, column groups, and adjacent groups are applied independently. In a chart, filters for category groups and series groups are applied independently. For more information, see [Add dataset filters, data region filters, and group filters to a paginated report (Report Builder)](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md).  
   
 For each filter, you specify a filter equation. A filter equation includes three elements:
 
-- Dataset field or expression that specifies the data to filter
-- Operator
+- Dataset field or expression that specifies the data to filter.
+- Operator.
 - Value to compare.
 
-Only those data values that match the filter condition are included when the item is processed.  
+Only data values that match the filter condition are included when the item is processed.  
   
 To help your users control the data in a report, you can include parameters in filter expressions. For more information, see [Parameters collection references in a paginated report (Report Builder)](../../reporting-services/report-design/built-in-collections-parameters-collection-references-report-builder.md).  
   
@@ -99,10 +99,10 @@ In a table or matrix data region, you can create multiple row groups and column 
   
 The group name identifies an expression scope. You can specify the name of a group as a scope in which to:
 
-- calculate aggregates.
-- organize data hierarchically and toggle the display of child nodes from parent nodes in a drilldown report.
-- display different views of the same data on multiple data regions.
-- visualize summary data in a table, matrix, chart, gauge, or map.
+- Calculate aggregates.
+- Organize data hierarchically and toggle the display of child nodes from parent nodes in a drilldown report.
+- Display different views of the same data on multiple data regions.
+- Visualize summary data in a table, matrix, chart, gauge, or map.
 
 For more information, see [Expression scope for totals, aggregates, and built-in collections in a paginated report (Report Builder)](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md).  
   
@@ -136,7 +136,7 @@ For expressions that contain aggregate functions, sort order doesn't affect most
 
 To presort data before it gets retrieved for a report, include sort order in the dataset query. By sorting data in the query, the sorting work is done by the data source instead of by the report processor.  
   
-For a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data source type, you can add an ORDER BY clause to the dataset query. For example, the following [!INCLUDE[tsql](../../includes/tsql-md.md)] query sorts the columns Sales and Region by Sales in descending order from the table SalesOrders: `SELECT Sales, Region FROM SalesOrders ORDER BY Sales DESC`.  
+For a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data source type, you can add an **ORDER BY** clause to the dataset query. For example, the following [!INCLUDE[tsql](../../includes/tsql-md.md)] query sorts the columns Sales and Region by Sales in descending order from the table SalesOrders: `SELECT Sales, Region FROM SalesOrders ORDER BY Sales DESC`.  
   
 > [!NOTE]  
 > Not all data sources support the ability to specify sort order in the query.  
@@ -149,21 +149,21 @@ To sort data in the report after it gets retrieved from the data source, you can
   
 - **Tablix data region group**: Set sort expressions for each group, including the **Details** group, to control the sort order of group instances. For example, for the details group, you control the order of the detail rows. For a child group, you control the order of group instances for the child group within the parent group. By default, when you create a group, the sort expression is set to the group expression and to ascending order.  
   
-    If you have only one **Details** group, you can define a sort expression in the query, on the data region, or on the details group to the same effect.  
+    If you have only one **Details** group, you can define a sort expression in the query, on the data region, or on the **Details** group to the same effect.  
   
 - **Chart data region**: Set a sort expression for the category and series groups to control the sort order for data points. By default, the order of data points is also the order of the colors in the chart legend. For more information, see [Format series colors on a paginated report chart (Report Builder)](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md).  
   
-- **Map report item.** You don't typically need to sort data for a map data region because the map groups data to display on map elements.  
+- **Map report item**: You don't typically need to sort data for a map data region because the map groups data to display on map elements.  
   
-- **Gauge data region.** You don't typically need to sort data for a gauge data region because the gauge displays a single value relative to a range. If you do need sort data in a gauge, you must first define a group, and then set a sort expression for the group.  
+- **Gauge data region**: You don't typically need to sort data for a gauge data region because the gauge displays a single value relative to a range. If you do need sort data in a gauge, you must first define a group, and then set a sort expression for the group.  
   
 #### Sort by a different value  
 
-You might want to sort the rows in a data region by a value other than the field value. For example, suppose that the field `Size` contains text values that correspond to small, medium, large, and extra large. By default, the sort expression for a row group based on `Size` is also called `[Size]`. To have more control over your sorted data, you can add a field to the dataset query that defines the sort order that you want.  
+You might want to sort the rows in a data region by a value other than the field value. For example, suppose that the field **Size** contains text values that correspond to small, medium, large, and extra large. By default, the sort expression for a row group based on **Size** is also called `[Size]`. To have more control over your sorted data, you can add a field to the dataset query that defines the sort order that you want.  
   
 Alternatively, you can define a dataset that includes only the sizes and a value that specifies the order that you want. You can change the sort expression to use the Lookup function for the sort order value.  
   
-For example, assume that the following [!INCLUDE[tsql](../../includes/tsql-md.md)] query defines a dataset named Sizes. The query uses a CASE statement to define a sort order value SizeSortOrder for each value of Size:  
+For example, assume that the following [!INCLUDE[tsql](../../includes/tsql-md.md)] query defines a dataset named Sizes. The query uses a **CASE** statement to define a sort order value SizeSortOrder for each value of `Size`:  
   
 ``` tsql
 SELECT Size,   
@@ -177,7 +177,7 @@ SELECT Size,
 FROM Production.Product  
 ```  
   
-In a table that has a row group based on `[Size]`, you can change the group sort expression to use a Lookup function to find the numeric field that corresponds to the size value. The expression would be similar to this example:  
+In a table that has a row group based on **Size**, you can change the group sort expression to use a **Lookup** function to find the numeric field that corresponds to the size value. The expression would be similar to this example:  
   
 ``` basic
 =Lookup(Fields!Size.Value, Fields!Size.Value, Fields!SizeSortOrder.Value, "Sizes")  

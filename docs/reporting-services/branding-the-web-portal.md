@@ -8,24 +8,22 @@ ms.service: reporting-services
 ms.subservice: reporting-services
 ms.topic: how-to
 ms.custom: updatefrequency5
-#customer intent: As a system administrator or IT professional, I want to customize the appearance of my SQL Server Reporting Services or Power BI Report Server web portal to align with my organization's branding. 
+#customer intent: As a SQL Server system administrator, I want to customize the appearance of my SQL Server Reporting Services or Power BI Report Server web portal to align with my organization's branding. 
 ---
 
 # Brand the web portal
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirs](../includes/ssrs-appliesto-pbirs.md)]
 
-Learn how to customize the appearance of your SQL Server Reporting Services (SSRS) or Power BI Report Server web portal by creating and applying a brand package. You can alter the appearance of the web portal by branding it to your business without requireing deep cascading stylesheet (CSS) knowledge to create it.
+Learn how to customize the appearance of your SQL Server Reporting Services (SSRS) or Power BI Report Server web portal by creating and applying a brand package. A brand package allows you to change the web portal's appearance to match your business's branding. It includes colors, logos, and other styling elements packaged into a zip file. This package is then uploaded to the web portal to apply the custom branding.
 
 > [!VIDEO https://www.youtube-nocookie.com/embed/m08kLuofwFA]
 
-## What is a brand package?
-
-A brand package allows you to change the web portal's appearance to match your business's branding. It includes colors, logos, and other styling elements packaged into a zip file. This package is then uploaded to the web portal to apply the custom branding.
-
 ## Create the brand package
 
-A brand package for Reporting Services consists of three items that you package as a zip file. Name the files as follows:
+A brand package consists of three items that you package as a zip file. The following sections describe the items in the brand package and provide examples of the contents. 
+
+Start by naming the files in your brand package as follows:
 
 - `metadata.xml`
 - `colors.json`
@@ -39,7 +37,17 @@ The `metadata.xml` file specifies the name of the brand package, and references 
 
 To change the name of your brand package, change the **name** attribute of the **SystemResourcePackage** element.
 
-You can optionally include a logo picture in your brand package. This item would be listed within the Contents element.
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<SystemResourcePackage xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/systemresourcepackagemetadata"
+    type="UniversalBrand"
+    version="2.0.2"
+    name="Multicolored example brand"
+    >
+</SystemResourcePackage>
+```
+
+You can include a logo in your brand package. This item is contained in the **Contents** element.
 
 The following example doesn't include a logo file:
 
@@ -77,11 +85,11 @@ The following example includes a logo file:
 
 The `colors.json` file defines the color scheme for your brand package. When you upload the brand package, the server extracts the name/value pairs from this file and merges them with the primary LESS stylesheet, `brand.less`. It processes the stylesheet, and serves the resulting CSS file to the client. All colors in the stylesheet follow the six-character hexadecimal representation of a color.
 
-Here’s an example of how the `colors.json` file might look:
+Here’s an example of the `colors.json` file:
 
 ```json
 {
-    "name": "YourBrandName",
+    "name": "Multicolored example brand",
     "version": "1.0",
     "interface": {
         "primary": "#009900",
@@ -166,7 +174,7 @@ The theme section is broken down into the following groupings:
 
 ::: moniker range="<=sql-server-ver15"
 
-The first time you connect to a server with the Mobile Report Publisher that has a brand package deployed, the theme is added to the available themes you can use in the upper right-hand menu of the app.
+The first time you connect to a server with a Mobile Report Publisher that has a brand package deployed, the publisher adds the theme to the list of available themes.
 
 :::image type="content" source="../reporting-services/media/ssrsbrandingmobilereportpublisher.png" alt-text="Screenshot of the Choose a color palette dialog.":::
 
@@ -175,9 +183,9 @@ You can then use that theme for any mobile reports that you create, even if they
 
 ### Use a logo
 
-If you include a logo with your brand package, it appears in the web portal in place of the name you set for the web portal in the **Site Settings** menu.
+If you include a logo with your brand package, it appears in the web portal in place of the name you originally set for the web portal.
 
-Make sure the logo is in the PNG file format. The file dimensions scale once uploaded to the server. It should scale to approximately 290 px x 60 px.
+Make sure the logo is in the PNG file format. The file dimensions scale once uploaded to the server. The logo scales to approximately 290 x 60 pixels.
 
 ## <a name="#applying-the-brand-package-to-the-web-portal"></a>Apply the brand package to the web portal
 
@@ -193,7 +201,7 @@ Make sure the logo is in the PNG file format. The file dimensions scale once upl
 
    **Currently installed brand package** either displays the name of the uploaded package, or it displays **None**.
 
-1. Select **Upload brand package** to upload the brand package zip file from a local folder and apply the brand package to the web portal.
+1. Select **Upload brand package**. The brand package uploads to the report server and the web portal renders the updated branding immediately.
 
 ## Download or remove the brand package
 
@@ -329,10 +337,10 @@ If you see a brand package listed in the **Currently installed brand package** b
 }
 ```
 
-## <a name="bkmk_download_samples"></a> Download the Sample Branding Packages
+## <a name="bkmk_download_samples"></a> Download the sample branding packages
 
- Download the samples from the GitHub site [Sample Branding Packages](https://github.com/microsoft/sql-server-samples/tree/master/samples/features/reporting-services/branding) to a local folder. For more information, see [Apply the brand package to the web portal](#apply-the-brand-package-to-the-web-portal) in this article.
+You can download and update two sample brand packages for Reporting Services. You can use these to brand the web portal to fit your needs. These can be used as a starting place for you to further customize.
 
-## Related content
+Download the samples from the GitHub site [Sample Branding Packages](https://github.com/microsoft/sql-server-samples/tree/master/samples/features/reporting-services/branding) to a local folder. For more information, see [Apply the brand package to the web portal](#apply-the-brand-package-to-the-web-portal) in this article.
 
 More questions? Try asking the [Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user).

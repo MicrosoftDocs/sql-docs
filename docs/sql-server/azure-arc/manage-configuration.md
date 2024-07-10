@@ -276,7 +276,7 @@ For more examples of Azure Resource Graph Queries, see [Starter Resource Graph q
 
 #### List Arc-enabled SQL Server instances subscribed to ESU
 
-The following example shows how you can view all eligible [!INCLUDE [sssql11-md](../../includes/sssql11-md.md)] instances and their ESU subscription status.
+The following example shows how you can view all eligible [!INCLUDE [sssql11-md](../../includes/sssql11-md.md)] or [!INCLUDE [sssql14-md](../../includes/sssql14-md.md)] instances and their ESU subscription status.
 
 ```kusto
 resources
@@ -284,7 +284,7 @@ resources
 | extend Version = properties.version
 | extend Edition = properties.edition
 | extend containerId = tolower(tostring (properties.containerResourceId))
-| where Version contains "2012"
+| where Version in ("2012", "2014")
 | where Edition in ("Enterprise", "Standard")
 | where isnotempty(containerId)
 | project containerId, SQL_instance = name, Version, Edition

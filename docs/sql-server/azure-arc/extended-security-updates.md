@@ -138,7 +138,7 @@ The **License Activation** tab controls when the license takes effect or deactiv
 > - The license cannot be re-activated. You can delete the resource if not needed.  
 > - The ESU subscriptions for the VMs in scope will remain active and will become billable at the VM level. 
 > 
-> To stop all ESU charges, unsubscribe from ESU them before you terminate the license. For details, review [Manage resources in scope](manage-configuration.md#manage-esu-license-resources).
+> To stop all ESU charges, unsubscribe from ESU on all virtual machines before you terminate the license. For details, review [Manage resources in scope](manage-configuration.md#manage-esu-license-resources).
 
 The **Tenant ID** property is automatically set when the tenant scope is selected. 
 

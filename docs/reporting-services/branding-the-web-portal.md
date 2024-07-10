@@ -6,7 +6,7 @@ ms.author: maggies
 ms.date: 07/11/2024
 ms.service: reporting-services
 ms.subservice: reporting-services
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: updatefrequency5
 #customer intent: As a system administrator or IT professional, I want to customize the appearance of my SQL Server Reporting Services or Power BI Report Server web portal to align with my organization's branding. 
 ---
@@ -25,48 +25,85 @@ A brand package allows you to change the web portal's appearance to match your b
 
 ## Create the brand package
 
-A brand package for Reporting Services consists of three items. Name the files as follows:
+A brand package for Reporting Services consists of three items that you package as a zip file. Name the files as follows:
 
 - `metadata.xml`
 - `colors.json`
 - `logo.png` (optional)
 
-Package these files into a zip file. The zip file can be named however you like.
+ The zip file can be named anything you like.
 
 ### metadata.xml
 
-The `metadata.xml` file specifies the name of the brand package, and references the colors.json and logo.png files.
+The `metadata.xml` file specifies the name of the brand package, and references the `colors.json` and `logo.png` files.
 
 To change the name of your brand package, change the **name** attribute of the **SystemResourcePackage** element.
 
-```xml
-    name="Multicolored example brand"
-```
-
 You can optionally include a logo picture in your brand package. This item would be listed within the Contents element.
 
-Example without a logo file:
+The following example doesn't include a logo file:
 
 ```xml
-<Contents>
-    <Item key="colors" path="colors.json" />
-</Contents>
+<?xml version="1.0" encoding="utf-8"?>
+<SystemResourcePackage xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/systemresourcepackagemetadata"
+    type="UniversalBrand"
+    version="2.0.2"
+    name="Multicolored example brand"
+    >
+    <Contents>
+        <Item key="colors" path="colors.json" />
+    </Contents>
+</SystemResourcePackage>
+
 ```
 
-Example with a logo file:
+The following example includes a logo file:
 
 ```xml
-<Contents>
-    <Item key="colors" path="colors.json" />
-    <Item key="logo" path="logo.png" />
-</Contents>
+<?xml version="1.0" encoding="utf-8"?>
+<SystemResourcePackage xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/systemresourcepackagemetadata"
+    type="UniversalBrand"
+    version="2.0.2"
+    name="Multicolored example brand"
+    >
+    <Contents>
+        <Item key="colors" path="colors.json" />
+        <Item key="logo" path="logo.png" />
+    </Contents>
+</SystemResourcePackage>
 ```
 
-### colors.json
+### `colors.json`
 
-When the brand package is uploaded, the server extracts the appropriate name/value pairs from the colors.json file and merges them with the primary LESS stylesheet, brand.less. This LESS file is then processed and the resulting CSS file is served to the client. All colors in the stylesheet follow the six-character hexadecimal representation of a color.
+The `colors.json` file defines the color scheme for your brand package. When you upload the brand package, the server extracts the name/value pairs from this file and merges them with the primary LESS stylesheet, `brand.less`. It processes the stylesheet, and serves the resulting CSS file to the client. All colors in the stylesheet follow the six-character hexadecimal representation of a color.
 
-The LESS stylesheet contains blocks that reference some predefined LESS variables like the following example.
+Here’s an example of how the `colors.json` file might look:
+
+```json
+{
+    "name": "YourBrandName",
+    "version": "1.0",
+    "interface": {
+        "primary": "#009900",
+        "primaryContrast": "#ffffff",
+        "secondary": "#042200",
+        "neutralPrimary": "#d8edff",
+        "neutralSecondary": "#e9d8eb",
+        "danger": "#ff0000",
+        "success": "#00ff00",
+        "warning": "#ff8800"
+    },
+    "theme": {
+        "dataPoints": ["#0072c6", "#f68c1f", "#269657"],
+        "good": "#85ba00",
+        "bad": "#e90000",
+        "neutral": "#edb327"
+    }
+}
+```
+#### How LESS variables work
+
+The LESS stylesheet contains blocks that reference predefined LESS variables. The following example shows how the stylesheet uses LESS variables:
 
 ```css
 /* primary buttons */
@@ -76,30 +113,32 @@ The LESS stylesheet contains blocks that reference some predefined LESS variable
 }
 ```
 
-While this syntax resembles CSS, the color values prefixed with the @symbol are unique to LESS. The json file sets these variables.
+While this syntax resembles CSS, the color values prefixed with the `@` symbol are unique to LESS. The `colors.json` file sets these variables.
 
-For example, if the colors.json file had the following values:
+For example, the `colors.json` file might include following values:
 
 ```json
 "primary":"#009900",
 "primaryContrast":"#ffffff"
 ```
 
-The processed output would look up the **\@primaryButtonBg** LESS variable and see that it maps to the json property called **primary**, which in this example is #009900. It would therefore output the proper CSS:
+When processed, the LESS variables map to the corresponding values in the `colors.json` file. The resulting CSS looks like the following:
 
 ```css
-    .btn-primary {
-        color:#ffffff;
-        background-color:#009900;
-    }  
+.btn-primary {
+    color: #ffffff;
+    background-color: #009900;
+} 
 ```
 
-All of the primary buttons would be rendered dark green with white text.
+All of the primary buttons then render dark green with white text.
 
-The colors.json file, for Reporting Services, has two main categories in which items are grouped:
+#### Categories in `colors.json`
 
-- **Interface** includes items that are specific to the Reporting Services web portal.
-- **Theme** includes items that are specific to mobile reports that you create.
+The `colors.json` file includes two main categories:
+
+- **Interface**: Items specific to the web portal.
+- **Theme**: Items specific to the mobile reports that you create.
 
 The interface section is broken down into the following groupings:
 
@@ -113,11 +152,23 @@ The interface section is broken down into the following groupings:
 |Danger/Warning/Success messages|Colors for those messages.|
 |KPI|Controls the colors for a good (1), neutral (0), neutral (-1), and none.|
 
+The theme section is broken down into the following groupings:
+
+|Section|Description|
+|---|---|
+|Data Points|Colors for data points in charts and visualizations.|
+|Good/Bad/Neutral|Colors indicating status.|
+|Background|Overall background color.|
+|Foreground|Overall foreground color.|
+|Map Base|Base color for maps.|
+|Panel Background/Foreground/Accent|Colors for panels.|
+|Table Accents|Accent colors for tables.|
+
 ::: moniker range="<=sql-server-ver15"
 
 The first time you connect to a server with the Mobile Report Publisher that has a brand package deployed, the theme is added to the available themes you can use in the upper right-hand menu of the app.
 
-:::image type="content" source="../reporting-services/media/ssrsbrandingmobilereportpublisher.png" alt-text="Screenshot of the Choose a color palette dialog box.":::
+:::image type="content" source="../reporting-services/media/ssrsbrandingmobilereportpublisher.png" alt-text="Screenshot of the Choose a color palette dialog.":::
 
 You can then use that theme for any mobile reports that you create, even if they aren't for the same server that you have the theme deployed on.
 ::: moniker-end
@@ -126,27 +177,27 @@ You can then use that theme for any mobile reports that you create, even if they
 
 If you include a logo with your brand package, it appears in the web portal in place of the name you set for the web portal in the **Site Settings** menu.
 
-The file you include for the logo must use the PNG file format. The file dimensions are scaled once uploaded to the server. It should scale to around 290 px x 60 px.
+Make sure the logo is in the PNG file format. The file dimensions scale once uploaded to the server. It should scale to approximately 290 px x 60 px.
 
 ## <a name="#applying-the-brand-package-to-the-web-portal"></a>Apply the brand package to the web portal
 
-To add, download, or remove a brand package:
+1. Access the web portal.
 
-1. Select the gear in the upper right.
+1. Select the gear icon in the upper right, and then choose **Site Settings**.
 
-1. Select **Site Settings**.
+    :::image type="content" source="../reporting-services/media/ssrsgearmenu.png" alt-text="Screenshot of the Settings list with Site Settings option highlighted.":::
 
-    :::image type="content" source="../reporting-services/media/ssrsgearmenu.png" alt-text="Screenshot of the Settings dropdown list with Site Settings option called out.":::
+1. Select **Branding**.
 
-1. Select **Branding**. The screen shows the following elements:
+    :::image type="content" source="../reporting-services/media/ssrsbranding.png" alt-text="Screenshot of the Site Settings page with the Branding tab highlighted.":::
 
-    :::image type="content" source="../reporting-services/media/ssrsbranding.png" alt-text="Screenshot of the Site Settings page with the Branding option selected.":::
+   **Currently installed brand package** either displays the name of the uploaded package, or it displays **None**.
 
-   - **Currently installed brand package** either displays the name of the package that was uploaded, or it displays None.
+1. Select **Upload brand package** to upload the brand package zip file from a local folder and apply the brand package to the web portal.
 
-   - **Upload brand package** prompts you to select a zip file from a local folder and then apply the package to the web portal. You see it take effect immediately.
+## Download or remove the brand package
 
-   - You can also **Download** or **Remove** the package. Removing the package resets the web portal to the default brand immediately.
+If you see a brand package listed in the **Currently installed brand package** box, you can choose to download or remove the package. You might want to download the package if you want to make adjustments to the existing package and apply those changes. If you remove the package, the web portal resets to the default brand immediatley. Choose either **Download** or **Remove** depending on the action you want to take.
 
 ## metadata.xml example
 

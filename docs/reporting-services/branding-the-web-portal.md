@@ -1,41 +1,36 @@
 ---
 title: "Brand the web portal"
-description: Learn to brand your SQL Server Reporting Services (SSRS) or Power BI Report Server web portal's appearance to your business through a brand package.
+description: Learn to brand your web portal's appearance to your business through a brand package. The brand package is designed so that you don't need deep CSS knowledge.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 07/11/2024
+ms.date: 06/19/2024
 ms.service: reporting-services
 ms.subservice: reporting-services
 ms.topic: conceptual
 ms.custom: updatefrequency5
-#customer intent: As a system administrator or IT professional, I want to customize the appearance of my SQL Server Reporting Services or Power BI Report Server web portal to align with my organization's branding. 
 ---
 
 # Brand the web portal
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirs](../includes/ssrs-appliesto-pbirs.md)]
 
-Learn how to customize the appearance of your SQL Server Reporting Services (SSRS) or Power BI Report Server web portal by creating and applying a brand package. You can alter the appearance of the web portal by branding it to your business without requireing deep cascading stylesheet (CSS) knowledge to create it.
+You can alter the appearance of the web portal by branding it to your business, which you can do through a brand package. The brand package is designed so you don't need deep cascading stylesheet (CSS) knowledge to create it.
 
 > [!VIDEO https://www.youtube-nocookie.com/embed/m08kLuofwFA]
 
-## What is a brand package?
-
-A brand package allows you to change the web portal's appearance to match your business's branding. It includes colors, logos, and other styling elements packaged into a zip file. This package is then uploaded to the web portal to apply the custom branding.
-
 ## Create the brand package
 
-A brand package for Reporting Services consists of three items. Name the files as follows:
+A brand package for Reporting Services consists of three items and is packaged as a zip file. The files must have the following names:
 
-- `metadata.xml`
-- `colors.json`
-- `logo.png` (optional)
+- colors.json
+- metadata.xml
+- logo.png (optional)
 
 Package these files into a zip file. The zip file can be named however you like.
 
 ### metadata.xml
 
-The `metadata.xml` file specifies the name of the brand package, and references the colors.json and logo.png files.
+The metadata.xml file allows you to set the name of the brand package, and has a reference entry for both your colors.json and logo.png files.
 
 To change the name of your brand package, change the **name** attribute of the **SystemResourcePackage** element.
 

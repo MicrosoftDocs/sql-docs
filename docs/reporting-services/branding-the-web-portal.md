@@ -130,7 +130,7 @@ For example, the `colors.json` file might include following values:
 "primaryContrast":"#ffffff"
 ```
 
-When processed, the LESS variables map to the corresponding values in the `colors.json` file. The resulting CSS looks like the following:
+When processed, the LESS variables map to the corresponding values in the `colors.json` file. The resulting CSS looks like the following example:
 
 ```css
 .btn-primary {
@@ -205,7 +205,7 @@ Make sure the logo is in the PNG file format. The file dimensions scale once upl
 
 ## Download or remove the brand package
 
-If you see a brand package listed in the **Currently installed brand package** box, you can choose to download or remove the package. You might want to download the package if you want to make adjustments to the existing package and apply those changes. If you remove the package, the web portal resets to the default brand immediatley. Choose either **Download** or **Remove** depending on the action you want to take.
+If you see a brand package listed in the **Currently installed brand package** box, you can choose to download or remove the package. You might want to download the package if you want to make adjustments to the existing package and apply those changes. If you remove the package, the web portal resets to the default brand immediately. Choose either **Download** or **Remove** depending on the action you want to take.
 
 ## metadata.xml example
 
@@ -339,7 +339,7 @@ If you see a brand package listed in the **Currently installed brand package** b
 
 ## <a name="bkmk_download_samples"></a> Download the sample branding packages
 
-You can download and update two sample brand packages for Reporting Services. You can use these to brand the web portal to fit your needs. These can be used as a starting place for you to further customize.
+You can download two sample brand packages for Reporting Services. Use these samples to brand your web portal to fit your needs.
 
 Download the samples from the GitHub site [Sample Branding Packages](https://github.com/microsoft/sql-server-samples/tree/master/samples/features/reporting-services/branding) to a local folder. For more information, see [Apply the brand package to the web portal](#apply-the-brand-package-to-the-web-portal) in this article.
 

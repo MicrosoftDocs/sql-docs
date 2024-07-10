@@ -53,13 +53,13 @@ To learn how to write expressions that use many of the functions and operators a
 
 Many expressions in a report contain functions. You can format data, apply logic, and access report metadata by using these functions. You can write expressions that use functions from the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[visual-basic](../../includes/visual-basic-md.md)] run-time library, and from the <xref:System.Convert> and <xref:System.Math> namespaces. You can add references to functions from other assemblies or custom code. You can also use classes from the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], including <xref:System.Text.RegularExpressions>.  
   
-## <a name="VisualBasicFunctions"></a> Visual Basic Functions  
+## <a name="VisualBasicFunctions"></a> Visual Basic functions  
 
 You can use [!INCLUDE[visual-basic](../../includes/visual-basic-md.md)] functions to manipulate the data that displays in text boxes or you use for parameters, properties, or other areas of the report. This section provides examples demonstrating some of these functions. For more information, see [Visual Basic runtime library members](/dotnet/visual-basic/language-reference/runtime-library-members).  
   
 The [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] provides many custom format options, for example, for specific date formats.
   
-### Math Functions  
+### Math munctions  
   
 - The **Round** function is useful to round numbers to the nearest integer. The following expression rounds a 1.3 to 1:  
   
@@ -73,7 +73,7 @@ The [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] provides many cust
     = Round(1.3*5)/5  
     ```  
   
-### <a name="DateFunctions"></a> Date Functions  
+### <a name="DateFunctions"></a> Date functions  
   
 - The **Today** function provides the current date. This expression can be used in a text box to display the date on the report or in a parameter to filter data based on the current date:
   
@@ -178,7 +178,7 @@ The [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] provides many cust
 |One Year Ago|`=DateSerial(Year(Parameters!TodaysDate.Value)-1,Month(Parameters!TodaysDate.Value),Day(Parameters!TodaysDate.Value))`|  
 |Two Years Ago|`=DateSerial(Year(Parameters!TodaysDate.Value)-2,Month(Parameters!TodaysDate.Value),Day(Parameters!TodaysDate.Value))`|  
   
-### <a name="StringFunctions"></a> String Functions  
+### <a name="StringFunctions"></a> String functions  
   
 - Combine more than one field by using concatenation operators and [!INCLUDE[visual-basic](../../includes/visual-basic-md.md)] constants. The following expression returns two fields, each on a separate line in the same text box:
 
@@ -244,7 +244,7 @@ The [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] provides many cust
     =Join(LookupSet(Fields!ContactID.Value, Fields!PersonID.Value, Fields!PhoneNumber.Value, "PhoneList"),",")  
     ```  
   
-### <a name="ConversionFunctions"></a> Conversion Functions  
+### <a name="ConversionFunctions"></a> Conversion functions  
 
 You can use [!INCLUDE[visual-basic](../../includes/visual-basic-md.md)] functions to convert a field from the one data type to a different data type. You can use conversion functions to convert the default data type for a field to the data type needed for calculations or to combine text.  
   
@@ -260,7 +260,7 @@ You can use [!INCLUDE[visual-basic](../../includes/visual-basic-md.md)] function
     =CStr(Parameters!MySelection.Count)  
     ```  
   
-### <a name="DecisionFunctions"></a> Decision Functions  
+### <a name="DecisionFunctions"></a> Decision functions  
   
 - The **IIF** function returns one of two values depending on whether the expression is true or not. The following expression uses the **IIF** function to return a Boolean value of "True" if the value of **LineTotal** exceeds 100. Otherwise it returns a value of "False":  
   
@@ -315,7 +315,7 @@ You can use [!INCLUDE[visual-basic](../../includes/visual-basic-md.md)] function
   
     ```  
   
-## <a name="ReportFunctions"></a> Report Functions  
+## <a name="ReportFunctions"></a> Report functions  
 
 In an expression, you can add a reference to more report functions that manipulate data in a report. This section provides examples for two of these functions. For more information about report functions and examples, see [Report Builder functions - aggregate functions reference in paginated reports (Report Builder)](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md).  
   

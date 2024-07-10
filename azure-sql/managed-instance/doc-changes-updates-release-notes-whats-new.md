@@ -5,7 +5,7 @@ description: Learn about the new features and documentation improvements for Azu
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: wiassaf, mathoma
-ms.date: 07/03/2024
+ms.date: 07/10/2024
 ms.service: sql-managed-instance
 ms.subservice: service-overview
 ms.topic: whats-new
@@ -80,7 +80,27 @@ The following table lists features of Azure SQL Managed Instance that have been 
 
 ## November 2022 feature wave
 
-The features and benefits provided by the November 2022 feature wave are now generally available. All new instances in eligible subnets in both dev/test and production subscriptions are eligible for the feature wave. Existing instances will be enrolled gradually as part of regular updates during configured maintenance windows. To learn more, see [November 2022 feature wave](november-2022-feature-wave-enroll.md).
+Changes and capabilities that were introduced in the November 2022 feature wave have been integrated to the majority of instances and are now available by default. Since taking separate action to enroll an instance is no longer necessary, options that mention the November 2022 feature wave have been removed from the Azure portal for instances that have enrolled in the feature wave. The last remaining instances are currently in the enrollment process. 
+
+All new instances on production subscriptions are enrolled in the feature wave by default if they are created in eligible subnets. The following subnet types are eligible:
+
+- Newly created subnet (default)
+- Existing subnets that are empty
+- Existing subnets that already have the feature wave enabled, and contain only instances **with** the feature wave enabled
+- Existing subnets that don't have the feature wave enabled, and contain only instances **without** the feature wave
+
+The benefits in the feature wave include:
+
+- [**Fast instance provisioning**](management-operations-overview.md#fast-provisioning) -  It takes less time to deploy an instance.
+- [**Improved network security**](connectivity-architecture-overview.md) - Internal service traffic is now isolated and secured by Microsoft. 
+- [**Enhanced virtual cluster**](virtual-cluster-architecture.md) -  The functionality of the underlying virtual cluster is enhanced.
+
+The features available in the wave are:
+
+- [Instance stop/start](instance-stop-start-how-to.md): You can start and stop your instance at your discretion to save on billing costs for vCores and SQL Server licensing.
+- [Zone redundancy for Business Critical tier](..//managed-instance/high-availability-sla.md): You can deploy your Business Critical tier managed instance across multiple availability zones to improve the availability of your service.
+- [Managed DTC](distributed-transaction-coordinator-dtc.md): Run distributed transactions in mixed environments.
+
 
 ## Documentation changes
 
@@ -97,12 +117,14 @@ Learn about significant changes to the Azure SQL Managed Instance documentation.
 | Changes | Details |
 | --- | --- |
 |**Advance notifications GA**| [Advance notifications](advance-notifications.md) for upcoming SQL managed instance [maintenance windows](maintenance-window.md) are now generally available. |
+|**November 2022 feature wave integration** | Changes and capabilities introduced in the November 2022 feature wave are now default for all instances. November 2022 feature selection options are being removed from areas in the Azure portal.| 
+
 
 ### May 2024
 
 | Changes | Details |
 | --- | --- |
-| **Instance pool in the portal** | It's now possible to create a new instance pool, or a new instance inside an existing instance pool, by using the Azure portal. Review [Configure instance pool](instance-pools-configure.md?view=azure-portal&preserve-view=true#create-instance-pool) to learn more. The instance pool feature remains in preview.  |
+|**Instance pool in the portal** | It's now possible to create a new instance pool, or a new instance inside an existing instance pool, by using the Azure portal. Review [Configure instance pool](instance-pools-configure.md?view=azure-portal&preserve-view=true#create-instance-pool) to learn more. The instance pool feature remains in preview.  |
 |**Update policy GA** | Use the update policy to control your internal database format alignment and access to the latest SQL Database Engine features. You can choose to either limit the feature set to features that are available in SQL Server 2022, or ensure your instance takes advantage of all the latest features of Azure SQL Managed Instance. This feature is generally available. Review [Update policy](update-policy.md) to learn more.  | 
 | **Zone redundancy guide** | We've published a guide making it easier for you to enable [zone redundancy](instance-zone-redundancy-configure.md) for Azure SQL Managed Instance. | 
 

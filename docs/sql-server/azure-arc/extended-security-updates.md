@@ -15,7 +15,7 @@ ms.custom: references_regions
 
 Once [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] reaches the end of its support lifecycle, you can sign up for an Extended Security Update (ESU) subscription for your servers and remain protected for up to three years. When you upgrade to a newer version of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)], you can terminate your ESU subscription and stop paying for it. When you [migrate to Azure SQL](/azure/azure-sql/migration-guides/), the ESU charges automatically stop but you continue to have access to the ESUs. This article explains how to manage SQL Server subscription to Extended Security Updates (ESU) enabled by Azure Arc. For details, see [What are Extended Security Updates for SQL Server?](../end-of-support/sql-server-extended-security-updates.md)
 
-## Subscribing to Extended Security Updates in production environment
+## Subscribe to Extended Security Updates in production environment
 
 You can use one of the three options to subscribe to ESUs in production environment.
 
@@ -57,7 +57,7 @@ To subscribe to ESUs, you must have active Software Assurance (SA) or enable a p
 >
 > Your choice of payment options above may impact your outsourcing options. For more information, please see [Product Terms](https://www.microsoft.com/licensing/terms/productoffering/MicrosoftAzure/eaeas#ServiceSpecificTerms) and [Flexible Virtualization Benefit Licensing Guide](https://wwlpdocumentsearch.blob.core.windows.net/prodv2/Licensing_guide_PLT_Flexible_Virtualization_Benefit_Nov2022.pdf).
 
-For information about licensing your non-production out-of-support SQL Server instances for ESU through Azure Arc, see [Managing SQL Server ESUs for non-production use](extended-security-updates.md#non-production-esu-licensing).
+For information about licensing your non-production out-of-support SQL Server instances for ESU through Azure Arc, see [Manage SQL Server ESUs for non-production use](extended-security-updates.md#non-production-esu-licensing).
 
 ## <a id="license-esu-vcores"></a> Subscribe to SQL Server ESUs by virtual cores
 
@@ -79,7 +79,7 @@ This option is optimized for the following scenario:
 - Your out-of-support SQL Server instances are installed directly on a physical server to maximize the performance of your databases application.
 - You are not running virtual machines on that physical server.
 
-In this scenario, the ESU subscription requirements are similar to [Subscribing to SQL Server USEs by virtual cores](#license-esu-vcores), which is managed for each host using [SQL Server configuration](manage-configuration.md) panel. The main difference is that the SQL Server software usage is reported based on the physical cores available to the OSE of that server. For details, see [Metering software usage](extended-security-updates.md#esu-usage-metering).
+In this scenario, the ESU subscription requirements are similar to [Subscribing to SQL Server ESUs by virtual cores](#license-esu-vcores), which is managed for each host using [SQL Server configuration](manage-configuration.md) panel. The main difference is that the SQL Server software usage is reported based on the physical cores available to the OSE of that server. For details, see [Metering software usage](extended-security-updates.md#esu-usage-metering).
 
 Standard Edition ESU subscription is limited to a maximum of 24 p-cores even if the OSE is installed on a larger machine. Details in [Compute capacity limits by edition of SQL Server](../compute-capacity-limits-by-edition-of-sql-server.md).
 
@@ -128,32 +128,40 @@ The **License Activation** tab controls when the license takes effect or deactiv
 
 
 > [!IMPORTANT]
-> - After the license is activated the core size and version of the license cannot be changed.  If you want to increase the core count, you will need to create another license resource.
-> - After the license is terminated it cannot be re-activated. You can delete the resource if not needed.  
-> - After the license is terminated, the ESU subscriptions for the VMs in scope will remain active and will become billable at the VM level. To stop all ESU charges, make sure to unsubscribe them before terminating the license. For details, see [Manage resources in scope](manage-configuration.md#manage-esu-license-resources).
+> After the license is activated:
+>
+> - The license version cannot be changed. 
+> - The core count can be decreased, but not increased. To increase the core count, create another license resource.
+>
+> After the license is terminated:
+>
+> - The license cannot be re-activated. You can delete the resource if not needed.  
+> - The ESU subscriptions for the VMs in scope will remain active and will become billable at the VM level. 
+> 
+> To stop all ESU charges, unsubscribe from ESU on all virtual machines before you terminate the license. For details, review [Manage resources in scope](manage-configuration.md#manage-esu-license-resources).
 
 The **Tenant ID** property is automatically set when the tenant scope is selected. 
 
 For more information about licensing by physical cores with unlimited virtualization, see section *Licensing for maximum virtualization* in [SQL Server licensing guide](https://download.microsoft.com/download/e/2/9/e29a9331-965d-4faa-bd2e-7c1db7cd8348/SQL_Server_2019_Licensing_guide.pdf).
 
-## <a id="non-production-esu-licensing"></a> Managing SQL Server USE subscriptions for non-production use
+## <a id="non-production-esu-licensing"></a> Manage SQL Server ESU subscriptions for non-production use
 
 If you enabled ESU subscription in your production environment managed through Azure Arc, you can enable SQL Server ESU subscription in the non-production environment for free. There are two ways you can take advantage of this benefit.
 
-### Using SQL Server Developer Edition
+### Use SQL Server Developer Edition
 
 SQL Server Developer Edition itself is free and can be used in any Azure subscription. If you enable the ESU subscription on the VM hosting a Developer Edition, The Azure extension for SQL Server detects it and reports the usage via a $0 *Dev edition* meter. It does not generate the ESU charges. At the same time, it installs the ESUs when released as long as the ESU subscription is active. The Developer Edition has the same feature set as Enterprise Edition.
 
 > [!IMPORTANT]
 > If the Developer Edition is co-located on the same host with a Standard or Enterprise edition instance, the latter will take billing precedence as a production edition and the active ESU subscription with generate the ESU charges according to that edition.
 
-### Using Azure dev/test subscription
+### Use Azure dev/test subscription
 
 If you configure your non-production environment as a mirror of the production environment, and want to use the same editions as in production, you must onboard the hosting machines and the SQL Server instances to an Azure dev/test subscription. The production SQL Server meters are enabled to support the dev/test subscriptions and are automatically nullified when emitted from a dev/test subscription. The same applies to the ESU meters. So it's safe to enable ESU subscription on these machines even if they run the Standard or Enterprise Editions. For information on how to create a dev/test subscription on Azure, see [Create an EA subscription](/azure/cost-management-billing/manage/create-enterprise-subscription#create-an-ea-subscription).
 
 For more information, see section *Licensing SQL Server for non-production use* in [SQL Server licensing guide](https://download.microsoft.com/download/e/2/9/e29a9331-965d-4faa-bd2e-7c1db7cd8348/SQL_Server_2019_Licensing_guide.pdf).
 
-## Managing SQL Server ESU subscriptions on high availability and disaster recovery replicas.
+## Manage SQL Server ESU subscriptions on high availability and disaster recovery replicas.
 
 If your out-of-service SQL Server instance is a passive replica created as part of your high availability or disaster recovery configuration, you are entitled to the failover benefits that are included if your **License type** is set to `Paid` or `PAYG`. For more information about the failover benefits, see section *Licensing SQL Server for high availability and disaster recovery* in [SQL Server licensing guide](https://download.microsoft.com/download/e/2/9/e29a9331-965d-4faa-bd2e-7c1db7cd8348/SQL_Server_2019_Licensing_guide.pdf).
 
@@ -162,11 +170,11 @@ To help you manage the failover benefits and remain compliant, Azure extension f
 > [!NOTE]
 > During the failovers, the extension is aware of the transition and automatically switches the ESU billing to the active replica without new bill-back charges. 
 
-## <a id="server-cal"></a> Managing SQL Server instances with a Server+CAL license
+## <a id="server-cal"></a> Manage SQL Server instances with a Server+CAL license
 
 You can connect any licensed SQL Server instance to Azure Arc, including the ones that are licensed with the Server+CAL licensing model. However the ESU subscription enabled by Azure Arc is not available for out-of-support the Server+CAL licensing model. If you wish to receive ESUs, you can set the license type to `PAYG` and then enable the ESU subscription.
 
-## <a id="license-transition"></a> Managing transition from p-core ESU license to v-core ESU license
+## <a id="license-transition"></a> Manage transition from p-core ESU license to v-core ESU license
 
 Because the p-core ESU license is billed with an Enterprise edition ESU meter, it is cost-effective when the out-of-support SQL Server instances are co-located on a set of designated physical hosts. As you upgrade the individual instances or migrate them to Azure, you may lose the cost-effectiveness of the p-core ESU license and using the v-core ESU licensing may become more attractive. You have an option to terminate the p-core ESU license and switch to billing the individual VMs for the ESUs subscriptions. To properly manage this transition, use the following best practices:
 
@@ -179,7 +187,7 @@ Because the p-core ESU license is billed with an Enterprise edition ESU meter, i
 > 1. If the VMs in scope have been configured to use a ESU subscription *while the p-core ESU license was active* (as described in step 1), after the p-core license termination they will automatically switch to billing for ESU based on the installed SQL Server edition and the v-core count of each VM. There will no additional bill-back charges.  
 > 1. If the VM is configured to use the ESU subscription *after the p-core ESU license was terminated*, it will be treated as a new subscription and the appropriate bill-back chargess will apply.   
 
-## <a id="esu-usage-metering"></a> Metering ESU usage
+## <a id="esu-usage-metering"></a> ESU usage meters
 
 The usage of the SQL Server ESU subscription is reported once an hour. The specific meter is automatically selected based on the SQL Server edition and the number v-cores or p-cores visible to the Operating System Environment (OSE). The following rules apply:
 
@@ -263,6 +271,7 @@ If your [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instance l
 - [Review the Extended Security Updates: Frequently asked questions](../end-of-support/extended-security-updates-frequently-asked-questions.md).
 - [Learn about the prerequisites to connect your SQL Server to Azure Arc](prerequisites.md)
 - [Automatically connect your SQL Server to Azure Arc](automatically-connect.md)
+- [Manage unlimited virtualization benefit for SQL Server ESU subscription](manage-configuration.md#manage-pcore-esu-license)
 
 ## Related content
 

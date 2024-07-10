@@ -30,7 +30,7 @@ The first time you start [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.m
 
 :::image type="content" source="media/start-report-builder/report-builder-get-report-builder.png" alt-text="Screenshot of the We're opening Report Builder message.":::
 
-You or an administrator can also install Report Builder on your computer from the Microsoft Download Center. For more information, see [Install Report Builder](../../reporting-services/install-windows/install-report-builder.md).
+You or an administrator can install Report Builder on your computer from the Microsoft Download Center. For more information, see [Install Report Builder](../../reporting-services/install-windows/install-report-builder.md).
 
 When you start [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] from the web portal or SharePoint site, if an earlier version of [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] opens, contact your administrator. The administrator can update the version on the web portal or SharePoint site.
 

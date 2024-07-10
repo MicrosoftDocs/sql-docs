@@ -34,7 +34,7 @@ You can add a page break to rectangles, data regions, or groups within data regi
   
     - **Keep together on one page if possible**: Select this option when you want the data to stay on one page.
 
-:::image type="content" source="../../reporting-services/report-design/media/add-page-break-to-data-region.png" alt-text="Screenshot of the Tablix Properties dialog box that on the General tab highlighting the Page break options.":::
+:::image type="content" source="../../reporting-services/report-design/media/add-page-break-to-data-region.png" alt-text="Screenshot of the Tablix Properties dialog box on the General tab highlighting the Page break options.":::
   
 ## Add a page break to a rectangle  
   
@@ -50,7 +50,7 @@ You can add a page break to rectangles, data regions, or groups within data regi
   
     - **Keep contents together on a single page, if possible**: Select this option when you want contents inside the rectangle to stay on one page.
 
-:::image type="content" source="../../reporting-services/report-design/media/add-page-break-to-rectangle.png" alt-text="Screenshot of the Rectangle Properties dialog box that on the General tab highlighting the Page break options.":::
+:::image type="content" source="../../reporting-services/report-design/media/add-page-break-to-rectangle.png" alt-text="Screenshot of the Rectangle Properties dialog box on the General tab highlighting the Page break options.":::
   
 ## Add a page break to a row group in a table, matrix, or list  
   
@@ -63,7 +63,7 @@ You can add a page break to rectangles, data regions, or groups within data regi
   
 1. Optionally, select **Also at the start of a group** or **Also at the end of a group** to specify that a page break is added when a group starts or ends in the table.  
 
-:::image type="content" source="../../reporting-services/report-design/media/add-page-break-to-group.png" alt-text="Screenshot of the Rectangle Properties dialog box that on the General tab highlighting the Page break options.":::
+:::image type="content" source="../../reporting-services/report-design/media/add-page-break-to-group.png" alt-text="Screenshot of the Group Properties dialog box on the Page Breaks tab highlighting the Page break options.":::
 
 ## Related content  
 

@@ -1,17 +1,18 @@
 ---
 title: Enable service-aided subnet configuration
-description: Learn how you can enable the service-aided subnet configuration for Azure SQL Managed Instance with subnet delegation. 
+description: Learn how you can enable the service-aided subnet configuration for Azure SQL Managed Instance with subnet delegation.
 author: zoran-rilak-msft
 ms.author: zoranrilak
-ms.date: 06/15/2024
 ms.reviewer: mathoma
+ms.date: 07/10/2024
 ms.service: sql-managed-instance
 ms.subservice: deployment-configuration
 ms.topic: how-to
-ms.custom: ignite-2023
+ms.custom:
+  - ignite-2023
 ---
 # Enable service-aided subnet configuration for Azure SQL Managed Instance
-[!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
+[!INCLUDE [appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
 
 This article provides an overview of the service-aided subnet configuration and how to enable it with subnet delegation for Azure SQL Managed Instance.
 
@@ -86,7 +87,7 @@ The following table lists the mandatory rules and routes that are enforced and a
 | Route | Microsoft.Sql-managedInstances_UseOnly_mi-subnet-_\<range\>_-to-vnetlocal | Ensures there's always a route for the internal nodes to reach each other. |
 
 > [!NOTE]
-> Some subnets may contain additional mandatory network security rules and routes that aren't listed in either of the above two sections. Such rules are considered obsolete and will be removed from their subnets.
+> Some subnets contain additional mandatory network security rules and routes that aren't listed in either of the above two sections. Such rules are considered obsolete and will be removed from their subnets.
 
 
 ## Optional security rules and routes
@@ -107,8 +108,6 @@ The following table lists the optional rules and routes that can be modified or 
 | Route | Microsoft.Sql-managedInstances_UseOnly_mi-optional-AzureCloud._\<geo-paired\>_ | Optional route to AzureCloud services in the secondary region. |
 
 ## Related content
-
-For related Azure SQL Managed Instance content, review the following articles:
 
 - [Connectivity architecture](connectivity-architecture-overview.md)
 - [Virtual cluster architecture](virtual-cluster-architecture.md)

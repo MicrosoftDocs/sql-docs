@@ -111,6 +111,11 @@
       "redirect_document_id": true
     },
     {
+      "source_path_from_root": "/azure-sql/managed-instance/november-2022-feature-wave-enroll.md",
+      "redirect_url": "/azure/azure-sql/managed-instance/doc-changes-updates-release-notes-whats-new#november-2022-feature-wave",
+      "redirect_document_id": false
+    },    
+    {
       "source_path_from_root": "/azure-sql/managed-instance/azure-app-sync-network-configuration.md",
       "redirect_url": "/azure/azure-sql/managed-instance/",
       "redirect_document_id": false

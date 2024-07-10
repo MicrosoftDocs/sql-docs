@@ -31,7 +31,7 @@ Start by naming the files in your brand package as follows:
 
  The zip file can be named anything you like.
 
-### metadata.xml
+### Define brand metadata (`metadata.xml`)
 
 The `metadata.xml` file specifies the name of the brand package, and references the `colors.json` and `logo.png` files.
 
@@ -81,7 +81,7 @@ The following example includes a logo file:
 </SystemResourcePackage>
 ```
 
-### `colors.json`
+### Define the color scheme (`colors.json`)
 
 The `colors.json` file defines the color scheme for your brand package. When you upload the brand package, the server extracts the name/value pairs from this file and merges them with the primary LESS stylesheet, `brand.less`. It processes the stylesheet, and serves the resulting CSS file to the client. All colors in the stylesheet follow the six-character hexadecimal representation of a color.
 
@@ -181,7 +181,7 @@ The first time you connect to a server with a Mobile Report Publisher that has a
 You can then use that theme for any mobile reports that you create, even if they aren't for the same server that you have the theme deployed on.
 ::: moniker-end
 
-### Use a logo
+### Use a logo (`logo.png`)
 
 If you include a logo with your brand package, it appears in the web portal in place of the name you originally set for the web portal.
 
@@ -207,7 +207,7 @@ Make sure the logo is in the PNG file format. The file dimensions scale once upl
 
 If you see a brand package listed in the **Currently installed brand package** box, you can choose to download or remove the package. You might want to download the package if you want to make adjustments to the existing package and apply those changes. If you remove the package, the web portal resets to the default brand immediately. Choose either **Download** or **Remove** depending on the action you want to take.
 
-## metadata.xml example
+## `metadata.xml` example
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -223,7 +223,7 @@ If you see a brand package listed in the **Currently installed brand package** b
 </SystemResourcePackage>
 ```
 
-## colors.json example
+## `colors.json` example
 
 ```json
 {

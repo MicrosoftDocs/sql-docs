@@ -2,7 +2,7 @@
 title: "ODBC Driver for Oracle Programmer's Reference"
 description: "ODBC Driver for Oracle Programmer's Reference"
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: "01/19/2017"
 ms.service: sql
 ms.subservice: connectivity

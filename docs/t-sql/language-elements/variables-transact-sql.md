@@ -3,7 +3,7 @@ title: "Variables (Transact-SQL)"
 description: A Transact-SQL local variable is an object that can hold a single data value of a specific type.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 05/09/2024
+ms.date: 07/08/2024
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -52,6 +52,14 @@ For example, the following `DECLARE` statement creates three local variables nam
 ```sql
 DECLARE @LastName NVARCHAR(30), @FirstName NVARCHAR(20), @StateProvince NCHAR(2);
 ```
+
+In another example, the following `DECLARE` statement creates a Boolean variable called `@IsActive`, which is declared as **bit** with a value of `0` (`false`):
+
+```sql
+DECLARE @IsActive BIT = 0;
+```
+
+## Variable scope
 
 The scope of a variable is the range of Transact-SQL statements that can reference the variable. The scope of a variable lasts from the point it's declared until the end of the batch or stored procedure in which it's declared. For example, the following script generates a syntax error because the variable is declared in one batch (separated by the `GO` keyword) and referenced in another:
 
@@ -140,7 +148,7 @@ SELECT @EmpIDVariable;
 GO
 ```
 
-## Example
+## Examples
 
 The following script creates a small test table and populates it with 26 rows. The script uses a variable to do three things:
 

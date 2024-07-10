@@ -4,7 +4,7 @@ description: "Microsoft ADO.NET, for SQL Server and Azure SQL, is the core data 
 
 
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.reviewer: v-kaywon
 ms.date: "05/06/2020"
 ms.service: sql

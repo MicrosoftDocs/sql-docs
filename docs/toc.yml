@@ -4275,8 +4275,9 @@ items:
       - name: Work with Server Events
         href: relational-databases/wmi-provider-server-events/working-with-the-wmi-provider-for-server-events.md
 - name: Internals & architecture
-  href: relational-databases/sql-server-guides.md
   items:
+  - name: Overview
+    href: relational-databases/sql-server-guides.md
   - name: Ghost record cleanup process
     href: relational-databases/ghost-record-cleanup-process-guide.md
   - name: Index architecture & design
@@ -4293,6 +4294,8 @@ items:
     href: relational-databases/post-migration-validation-and-optimization-guide.md
   - name: Query processing architecture
     href: relational-databases/query-processing-architecture-guide.md
+  - name: SQL Server I/O fundamentals
+    href: relational-databases/sql-server-storage-guide.md
   - name: Thread & task architecture
     href: relational-databases/thread-and-task-architecture-guide.md
   - name: Transaction log architecture & management guide
@@ -4755,8 +4758,6 @@ items:
         href: database-engine/configure-windows/hide-an-instance-of-sql-server-database-engine.md
       - name: Configure the Database Engine to listen on multiple TCP ports
         href: database-engine/configure-windows/configure-the-database-engine-to-listen-on-multiple-tcp-ports.md
-      - name: How to enable the TCP protocol with SQLPS
-        href: powershell/how-to-enable-tcp-sqlps.md
       - name: Determine if the Database Engine is installed and started
         href: database-engine/configure-windows/determine-whether-the-database-engine-is-installed-and-started.md
       - name: Connect to the Database Engine using Extended Protection
@@ -6058,9 +6059,10 @@ items:
     - name: Run at command prompt
       href: dea/database-experimentation-assistant-run-command-prompt.md
   - name: Database Migration Assistant (DMA)
-    href: dma/dma-overview.md
     items:
-    - name: Usage and Diagnostic Data
+    - name: Overview
+      href: dma/dma-overview.md
+    - name: Usage and diagnostic data
       href: dma/dma-diagnostic-data-collection.md
     - name: What's new
       href: dma/dma-whats-new.md
@@ -8159,8 +8161,6 @@ items:
       href: tools/sqllogship-application.md
     - name: sqlmaint
       href: tools/sqlmaint-utility.md
-    - name: sqlps
-      href: tools/sqlps-utility.md
     - name: sqlservr Application
       href: tools/sqlservr-application.md
     - name: tablediff
@@ -8475,7 +8475,7 @@ items:
     items:
     - name: SQL Server Data Tools Overview
       href: ssdt/sql-server-data-tools.md
-    - name: Download SSDT
+    - name: Install SSDT
       href: ssdt/download-sql-server-data-tools-ssdt.md
     - name: Previous releases of SSDT & SSDT-BI
       href: ssdt/previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi.md
@@ -10402,8 +10402,8 @@ items:
           href: sql-server/azure-arc/manage-configuration.md
         - name: Licensing & billing
           href: sql-server/azure-arc/manage-license-billing.md
-        - name: Automate patching
-          href: sql-server/azure-arc/patch.md
+        - name: Extended Security Updates
+          href: sql-server/azure-arc/extended-security-updates.md
         - name: Automate updates
           href: sql-server/azure-arc/update.md
         - name: Disconnect & unregister from Azure Arc
@@ -10420,9 +10420,9 @@ items:
           href: sql-server/azure-arc/backup-local.md
         - name: Point-in-time restore (preview)
           href: sql-server/azure-arc/point-in-time-restore.md
-        - name: View Always On failover cluster instances (preview)
+        - name: View Always On failover cluster
           href: sql-server/azure-arc/support-for-fci.md  
-        - name: View Always On availability group (preview)
+        - name: Manage Always On availability group
           href: sql-server/azure-arc/manage-availability-group.md
       - name: Secure
         items:
@@ -10434,8 +10434,6 @@ items:
           href: sql-server/azure-arc/configure-advanced-data-security.md
         - name: Certificate rotation
           href: sql-server/azure-arc/rotate-certificates.md
-        - name: Extended Security Updates
-          href: sql-server/azure-arc/extended-security-updates.md
         - name: Roles, permissions, & files
           items:
           - name: Agent roles
@@ -12186,46 +12184,6 @@ items:
       href: native-interfaces/getsvcinstanceidfromname.md
     - name: GetSQLInstanceRegStringByID
       href: native-interfaces/getsqlinstanceregstringbyid.md
-  - name: SQL PowerShell
-    items:
-    - name: Install SQL PowerShell module
-      href: powershell/download-sql-server-ps-module.md
-    - name: SQL Server PowerShell overview
-      href: powershell/sql-server-powershell.md
-      items:
-      - name: SQL Server PowerShell Provider
-        href: powershell/sql-server-powershell-provider.md
-      - name: Query Expressions & Uniform Resource Names
-        href: powershell/query-expressions-and-uniform-resource-names.md
-    - name: How to access SQL Server Objects
-      href: powershell/navigate-sql-server-powershell-paths.md
-    - name: How to load the SMO Assemblies in Windows PowerShell
-      href: powershell/load-the-smo-assemblies-in-windows-powershell.md
-    - name: How to run PowerShell in SSMS
-      href: powershell/run-windows-powershell-from-sql-server-management-studio.md
-    - name: How to run PowerShell with SQL Server Agent
-      href: powershell/run-windows-powershell-steps-in-sql-server-agent.md
-    - name: How to manage authentication
-      href: powershell/manage-authentication-in-database-engine-powershell.md
-    - name: How to manage tab completion
-      href: powershell/manage-tab-completion-sql-server-powershell.md
-    - name: Work With SQL Server PowerShell Paths
-      href: powershell/work-with-sql-server-powershell-paths.md
-    - name: SQL Server Identifiers in PowerShell
-      href: powershell/sql-server-identifiers-in-powershell.md
-      items:
-      - name: Specify Instances in the SQL Server PowerShell Provider
-        href: powershell/specify-instances-in-the-sql-server-powershell-provider.md
-      - name: Encode & Decode SQL Server Identifiers
-        href: powershell/encode-and-decode-sql-server-identifiers.md
-      - name: Escape SQL Server Identifiers
-        href: powershell/escape-sql-server-identifiers.md
-    - name: Cmdlet reference
-      items:
-      - name: SqlServer cmdlets
-        href: /powershell/module/sqlserver/
-      - name: SQLPS cmdlets
-        href: /powershell/module/sqlps/
   - name: System catalog views
     href: relational-databases/system-catalog-views/catalog-views-transact-sql.md
     items:
@@ -13335,14 +13293,14 @@ items:
         href: relational-databases/system-dynamic-management-views/sys-dm-fts-population-ranges-transact-sql.md
       - name: sys.dm_fts_semantic_similarity_population
         href: relational-databases/system-dynamic-management-views/sys-dm-fts-semantic-similarity-population-transact-sql.md
-    - name: Geo-Replication (Azure SQL Database)
+    - name: Geo-Replication (Azure SQL)
       href: relational-databases/system-dynamic-management-views/geo-replication-dynamic-management-views-and-functions-azure-sql-database.md
       items:
       - name: sys.geo_replication_links (Azure SQL Database)
         href: relational-databases/system-dynamic-management-views/sys-geo-replication-links-azure-sql-database.md
-      - name: sys.dm_geo_replication_link_status (Azure SQL Database)
+      - name: sys.dm_geo_replication_link_status (Azure SQL)
         href: relational-databases/system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md
-      - name: sys.dm_continuous_copy_status (Azure SQL Database)
+      - name: sys.dm_continuous_copy_status (Azure SQL)
         href: relational-databases/system-dynamic-management-views/sys-dm-continuous-copy-status-azure-sql-database.md
     - name: Index
       href: relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md
@@ -13831,6 +13789,8 @@ items:
         href: relational-databases/system-functions/sys-fn-check-object-signatures-transact-sql.md
       - name: sys.fn_get_audit_file
         href: relational-databases/system-functions/sys-fn-get-audit-file-transact-sql.md
+      - name: sys.fn_get_audit_file_v2
+        href: relational-databases/system-functions/sys-fn-get-audit-file-v2-transact-sql.md
       - name: sys.fn_my_permissions
         href: relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md
       - name: sys.fn_translate_permissions
@@ -16629,8 +16589,9 @@ items:
         - name: "@@VERSION"
           href: t-sql/functions/version-transact-sql-configuration-functions.md
       - name: Conversion
-        href: t-sql/functions/conversion-functions-transact-sql.md
         items:
+        - name: Overview
+          href: t-sql/functions/conversion-functions-transact-sql.md
         - name: CAST & CONVERT
           href: t-sql/functions/cast-and-convert-transact-sql.md
         - name: PARSE

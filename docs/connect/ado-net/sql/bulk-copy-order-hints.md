@@ -2,7 +2,7 @@
 title: Order hints for bulk copy operations
 description: Describes how to use order hints in bulk copy operations.
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.reviewer: v-davidengel
 ms.date: 06/01/2022
 ms.service: sql

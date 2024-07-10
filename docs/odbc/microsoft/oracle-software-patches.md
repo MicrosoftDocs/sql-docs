@@ -2,7 +2,7 @@
 title: "Oracle Software Patches"
 description: "Oracle Software Patches"
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: "01/19/2017"
 ms.service: sql
 ms.subservice: connectivity

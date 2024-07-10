@@ -2,7 +2,7 @@
 title: "Floating-point numbers"
 description: Learn some of the issues when working with floating-point numbers in the Microsoft SqlClient Data Provider for SQL Server.
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.reviewer: v-chmalh
 ms.date: "11/13/2020"
 ms.service: sql

@@ -2,7 +2,7 @@
 title: "PDO::__construct"
 description: "API reference for the PDO::__construct function in the Microsoft PDO_SQLSRV Driver for PHP for SQL Server."
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: "08/10/2020"
 ms.service: sql
 ms.subservice: connectivity

@@ -2,7 +2,7 @@
 title: "setAsciiStream Method  to input stream bytes - int"
 description: "setAsciiStream Method  (java.lang.String, java.io.InputStream, int)"
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: "01/19/2017"
 ms.service: sql
 ms.subservice: connectivity

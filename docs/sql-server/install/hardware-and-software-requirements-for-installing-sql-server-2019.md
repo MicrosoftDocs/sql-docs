@@ -87,6 +87,8 @@ The following requirements apply to all installations:
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup installs the following software components required by the product:  
   
+   - Microsoft ODBC Driver 17 for [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]
+   - Microsoft OLE DB Driver for [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]
    - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client
    - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup application support files  
 

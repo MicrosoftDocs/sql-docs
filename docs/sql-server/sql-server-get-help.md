@@ -10,6 +10,7 @@ ms.subservice: release-landing
 ms.topic: conceptual
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017"
 ---
+
 # SQL Server help and feedback
 
 This article explains different ways to get assistance with an issue or provide feedback for SQL Server or the SQL Server technical documentation.
@@ -99,7 +100,6 @@ The following SQL Server blogs provide the latest information about SQL Server:
 - [SQL Server Blog](https://cloudblogs.microsoft.com/sqlserver/)
 - [Azure SQL Blog](https://techcommunity.microsoft.com/t5/azure-sql-blog/bg-p/AzureSQLBlog)
 - [SQL Support Team](https://techcommunity.microsoft.com/t5/SQL-Server-Support/bg-p/SQLServerSupport/)
-- [SQL ReplTalk](https://blogs.msdn.microsoft.com/repltalk/)
 
 ## SQL Server license information
 

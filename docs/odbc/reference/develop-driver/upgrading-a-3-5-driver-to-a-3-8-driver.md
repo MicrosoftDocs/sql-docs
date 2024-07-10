@@ -2,7 +2,7 @@
 title: "Upgrading a 3.5 Driver to a 3.8 Driver"
 description: "Upgrading a 3.5 Driver to a 3.8 Driver"
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: "01/19/2017"
 ms.service: sql
 ms.subservice: connectivity

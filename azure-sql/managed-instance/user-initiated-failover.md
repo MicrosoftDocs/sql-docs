@@ -23,9 +23,9 @@ This article explains how to manually fail over a primary node on SQL Managed In
 
 ## When to use manual failover
 
-[High availability](high-availability-sla.md) is a fundamental part of SQL Managed Instance platform that works transparently for your database applications. Failovers from primary to secondary nodes in case of node degradation or fault detection, or during regular monthly software updates are an expected occurrence for all applications using SQL Managed Instance in Azure.
+[High availability](high-availability-sla-local-zone-redundancy.md) is a fundamental part of SQL Managed Instance platform that works transparently for your database applications. Failovers from primary to secondary nodes in case of node degradation or fault detection, or during regular monthly software updates are an expected occurrence for all applications using SQL Managed Instance in Azure.
 
-You might consider executing a [manual failover](high-availability-sla.md#testing-application-fault-resiliency) on SQL Managed Instance for some of the following reasons:
+You might consider executing a [manual failover](high-availability-sla-local-zone-redundancy.md#testing-application-fault-resiliency) on SQL Managed Instance for some of the following reasons:
 - Test application for failover resiliency before deploying to production
 - Test end-to-end systems for fault resiliency on automatic failovers
 - Test how failover impacts existing database sessions
@@ -155,5 +155,5 @@ The short loss of connectivity from your client during the failover, typically l
 
 ## Next steps
 - Learn more about testing your applications for cloud readiness with [Testing App Cloud Readiness for Failover Resiliency with SQL Managed Instance](https://youtu.be/FACWYLgYDL8) video recording.
-- Learn more about high availability of managed instance [High availability for Azure SQL Managed Instance](high-availability-sla.md).
+- Learn more about high availability of managed instance [High availability for Azure SQL Managed Instance](high-availability-sla-local-zone-redundancy.md).
 - For an overview, see [What is Azure SQL Managed Instance?](sql-managed-instance-paas-overview.md).

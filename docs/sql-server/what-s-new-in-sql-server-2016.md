@@ -90,9 +90,9 @@ See [Reporting Services (SSRS)](../reporting-services/what-s-new-in-sql-server-r
 
 ## Related content
 
-- [SQL Server setup](../database-engine/install-windows/install-sql-server.md)   
-- [SQL Server 2016 Release Notes](../sql-server/sql-server-2016-release-notes.md) 
-- [SQL Server 2016 datasheet](https://download.microsoft.com/download/C/5/3/C53C3AEF-653C-4598-8721-D522E8AC6A3A/SQL_Server_2016_Everything_Built-In_Datasheet_EN_US.pdf)
+- [SQL Server setup](../database-engine/install-windows/install-sql-server.md)
+- [SQL Server 2016 Release Notes](../sql-server/sql-server-2016-release-notes.md)
+- [SQL Server Licensing Resources and Documents](https://www.microsoft.com/licensing/docs/view/SQL-Server)
 - [Editions and supported features of SQL Server 2016](editions-and-components-of-sql-server-2016.md)
 - [Hardware and Software Requirements for Installing SQL Server 2016](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)
 - [Install SQL Server 2016 from the Installation Wizard](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)

@@ -2,7 +2,7 @@
 title: "Block and Scrollable Cursors Compatibility for ODBC 3.x"
 description: "Block Cursors, Scrollable Cursors, and Backward Compatibility for ODBC 3.x Applications"
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: "01/19/2017"
 ms.service: sql
 ms.subservice: connectivity

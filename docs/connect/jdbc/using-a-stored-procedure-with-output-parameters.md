@@ -2,7 +2,7 @@
 title: "Using a stored procedure with output parameters"
 description: "Using a stored procedure with output parameters"
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: "01/31/2024"
 ms.service: sql
 ms.subservice: connectivity

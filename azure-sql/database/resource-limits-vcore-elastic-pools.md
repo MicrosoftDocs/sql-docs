@@ -4,41 +4,44 @@ description: This page describes some common vCore resource limits for elastic p
 author: dimitri-furman
 ms.author: dfurman
 ms.reviewer: wiassaf, mathoma
-ms.date: 10/23/2023
+ms.date: 07/03/2024
 ms.service: sql-database
 ms.subservice: elastic-pools
 ms.topic: reference
-ms.custom: sqldbrb=1, references_regions, ignite-2023
+ms.custom:
+  - sqldbrb=1
+  - references_regions
+  - ignite-2023
 ---
 # Resource limits for elastic pools using the vCore purchasing model
-[!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
+[!INCLUDE [appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
 This article provides the detailed resource limits for Azure SQL Database elastic pools and pooled databases using the vCore purchasing model.
 
-* For DTU purchasing model limits for single databases on a server, see [Overview of resource limits on a server](resource-limits-logical-server.md).
-* For DTU purchasing model resource limits for Azure SQL Database, see [DTU resource limits single databases](resource-limits-dtu-single-databases.md) and [DTU resource limits elastic pools](resource-limits-dtu-elastic-pools.md).
-* For vCore resource limits, see [vCore resource limits - Azure SQL Database](resource-limits-vcore-single-databases.md) and [vCore resource limits - elastic pools](resource-limits-vcore-elastic-pools.md).
-* For more information regarding the different purchasing models, see [Purchasing models and service tiers](purchasing-models.md).
+- For DTU purchasing model limits for single databases on a server, see [Overview of resource limits on a server](resource-limits-logical-server.md).
+- For DTU purchasing model resource limits for Azure SQL Database, see [DTU resource limits single databases](resource-limits-dtu-single-databases.md) and [DTU resource limits elastic pools](resource-limits-dtu-elastic-pools.md).
+- For vCore resource limits, see [vCore resource limits - Azure SQL Database](resource-limits-vcore-single-databases.md) and [vCore resource limits - elastic pools](resource-limits-vcore-elastic-pools.md).
+- For more information regarding the different purchasing models, see [Purchasing models and service tiers](purchasing-models.md).
 
 > [!IMPORTANT]
-> Under some circumstances, you may need to shrink a database to reclaim unused space. For more information, see [Manage file space in Azure SQL Database](file-space-manage.md).
+> Shrink operations should not be considered a regular maintenance operation. Data and log files that grow due to regular, recurring business operations do not require shrink operations. Under some circumstances, you might need to shrink a database to reclaim unused space. For more information, see [Manage file space in Azure SQL Database](file-space-manage.md).
 
 Each read-only replica of an elastic pool has its own resources, such as vCores, memory, data IOPS, `tempdb`, workers, and sessions. Each read-only replica is subject to elastic pool resource limits detailed later in this article.
 
 You can set the service tier, compute size (service objective), and storage amount using:
 
-* [Transact-SQL](elastic-pool-scale.md) via [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql?view=azuresqldb-current&preserve-view=true#overview-sql-database)
-* [Azure portal](elastic-pool-manage.md#azure-portal)
-* [PowerShell](elastic-pool-manage.md#powershell)
-* [Azure CLI](elastic-pool-manage.md#azure-cli)
-* [REST API](elastic-pool-manage.md#rest-api)
+- [Transact-SQL](elastic-pool-scale.md) via [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql?view=azuresqldb-current&preserve-view=true#overview-sql-database)
+- [Azure portal](elastic-pool-manage.md#azure-portal)
+- [PowerShell](elastic-pool-manage.md#powershell)
+- [Azure CLI](elastic-pool-manage.md#azure-cli)
+- [REST API](elastic-pool-manage.md#rest-api)
 
 > [!IMPORTANT]
 > For scaling guidance and considerations, see [Scale an elastic pool](elastic-pool-scale.md).
 
 If all vCores of an elastic pool are busy, then each database in the pool receives an equal amount of compute resources to process queries. Azure SQL Database provides resource sharing fairness between databases by ensuring equal slices of compute time. Elastic pool resource sharing fairness is in addition to any amount of resource otherwise guaranteed to each database when the vCore min per database is set to a non-zero value.
 
-For the same number of vCores, resources provided to an elastic pool may exceed the resources provided to a single database outside of an elastic pool. This means it's possible for the CPU, Data IO, and Log write utilization of an elastic pool to be less than the summation of CPU, Data IO, and Log write utilization across databases within the pool, depending on workload patterns. For example, in an extreme case with only one database in an elastic pool where database Data IO utilization is 100%, it's possible for pool Data IO utilization to be 50% for certain workload patterns. This can happen even if max vCores per database remains at the maximum supported value for the given pool size.
+For the same number of vCores, resources provided to an elastic pool can exceed the resources provided to a single database outside of an elastic pool. This means it's possible for the CPU, Data IO, and Log write utilization of an elastic pool to be less than the summation of CPU, Data IO, and Log write utilization across databases within the pool, depending on workload patterns. For example, in an extreme case with only one database in an elastic pool where database Data IO utilization is 100%, it's possible for pool Data IO utilization to be 50% for certain workload patterns. This can happen even if max vCores per database remains at the maximum supported value for the given pool size.
 
 > [!NOTE]
 > The Gen5 hardware in the vCore purchasing model has been renamed to **standard-series (Gen5)**.
@@ -569,7 +572,7 @@ The following table covers these SLOs: `BC_DC_14`, `BC_DC_16`, `BC_DC_18`, `BC_D
 
 ## Hyperscale - provisioned compute - standard-series (Gen5)
 
-Although the published Hyperscale resource limits for standard-series and premium-series are the same, premium-series offers faster CPU performance compared to standard-series, and scales up to 128 vCores, compared to 80 vCores for standard-series. Resources using premium-series are guaranteed to run on hardware with newer CPUs. Standard-series does not provide this guarantee and, depending on availability, resources may be placed on older hardware. There is no price difference between the two, but premium-series may not be available in all regions.
+Although the published Hyperscale resource limits for standard-series and premium-series are the same, premium-series offers faster CPU performance compared to standard-series, and scales up to 128 vCores, compared to 80 vCores for standard-series. Resources using premium-series are guaranteed to run on hardware with newer CPUs. Standard-series does not provide this guarantee and, depending on availability, resources might be placed on older hardware. There is no price difference between the two, but premium-series might not be available in all regions.
 
 > [!NOTE]
 > Elastic pools for Hyperscale databases are currently in preview.
@@ -792,7 +795,7 @@ The following table covers these SLOs: `HS_MOPRMS_4`, `HS_MOPRMS_6`, `HS_MOPRMS_
 | vCores | 4 | 6 | 8 | 10 | 12 | 14 |
 |-:|-:|-:|-:|-:|-:|-:|
 | Hardware | Premium-series | Premium-series | Premium-series | Premium-series | Premium-series | Premium-series |
-| Memory (GB) | 20.8 | 31.1 | 41.5 | 51.9 | 62.3 | 72.7 |
+| Memory (GB) | 41.5 | 62.3 | 83 | 103.8 | 124.5 | 145.3 |
 | Max number DBs per pool <sup>1</sup> | 25 | 25 | 25 | 25 | 25 | 25 |
 | Columnstore support | Yes | Yes | Yes | Yes | Yes | Yes |
 | In-memory OLTP storage (GB) | N/A | N/A | N/A | N/A | N/A | N/A |
@@ -834,7 +837,7 @@ The following table covers these SLOs: `HS_MOPRMS_16`, `HS_MOPRMS_18`, `HS_MOPRM
 |:-|-:|-:|-:|-:|-:|-:|
 | Hardware | Premium-series | Premium-series | Premium-series | Premium-series | Premium-series | Premium-series | 
 | Max number DBs per pool <sup>1</sup> | 25 | 25 | 25 | 25 | 25 | 25 | 
-| Memory (GB) | 83 | 93.4 | 103.8 |249.1 | 166.1 | 207.6 | 
+| Memory (GB) | 166.1 | 186.8 | 207.6 |249.1 | 332.1 | 415.2 |
 | Columnstore support | Yes | Yes | Yes | Yes | Yes | Yes |
 | In-memory OLTP storage (GB) | N/A | N/A | N/A | N/A | N/A | N/A | 
 | Max data size per pool (TB) | 100 | 100 | 100 | 100 | 100 | 100 | 
@@ -916,8 +919,8 @@ The following table describes per database properties for pooled databases.
 
 | Property | Description |
 |:--- |:--- |
-| Max vCores per database |The maximum number of vCores that any database in the pool may use, if available based on utilization by other databases in the pool. Max vCores per database isn't a resource guarantee for a database. If the workload in each database doesn't need all available pool resources to perform adequately, consider setting max vCores per database to prevent a single database from monopolizing pool resources. Some degree of over-committing is expected since the pool generally assumes hot and cold usage patterns for databases, where all databases aren't simultaneously peaking. |
-| Min vCores per database |The minimum number of vCores reserved for any database in the pool. Consider setting a min vCores per database when you want to guarantee resource availability for each database regardless of resource consumption by other databases in the pool. The min vCores per database may be set to 0, and is also the default value. This property is set to anywhere between 0 and the average vCores utilization per database.|
+| Max vCores per database |The maximum number of vCores that any database in the pool might use, if available based on utilization by other databases in the pool. Max vCores per database isn't a resource guarantee for a database. If the workload in each database doesn't need all available pool resources to perform adequately, consider setting max vCores per database to prevent a single database from monopolizing pool resources. Some degree of over-committing is expected since the pool generally assumes hot and cold usage patterns for databases, where all databases aren't simultaneously peaking. |
+| Min vCores per database |The minimum number of vCores reserved for any database in the pool. Consider setting a min vCores per database when you want to guarantee resource availability for each database regardless of resource consumption by other databases in the pool. The min vCores per database might be set to 0, and is also the default value. This property is set to anywhere between 0 and the average vCores utilization per database.|
 | Max storage per database |The maximum database size set by the user for a database in a pool. Pooled databases share allocated pool storage, so the size a database can reach is limited to the smaller of remaining pool storage and maximum database size. Maximum database size refers to the maximum size of the data files and doesn't include the space used by the log file. |
 
 > [!IMPORTANT]
@@ -938,7 +941,7 @@ This section includes details on previously available hardware.
 
 - Gen4 hardware has been retired and isn't available for provisioning, upscaling, or downscaling. Migrate your database to a supported hardware generation for a wider range of vCore and storage scalability, accelerated networking, best IO performance, and minimal latency. For more information, see [Support has ended for Gen 4 hardware on Azure SQL Database](https://azure.microsoft.com/updates/support-has-ended-for-gen-4-hardware-on-azure-sql-database/).
 
-[!INCLUDE[identify-gen4-hardware](../includes/identify-gen4-hardware.md)]
+[!INCLUDE [identify-gen4-hardware](../includes/identify-gen4-hardware.md)]
 
 <!---
 vCore resource limits are listed in the following articles, please be sure to update all of them: 

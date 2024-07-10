@@ -4,7 +4,7 @@ description: Latest release notes for SQL Server enabled by Azure Arc
 author: anosov1960
 ms.author: sashan
 ms.reviewer: mikeray, randolphwest
-ms.date: 05/04/2024
+ms.date: 07/09/2024
 ms.topic: conceptual
 ms.custom: ignite-2023
 ---
@@ -21,6 +21,35 @@ This article lists:
 - Links to additional feature documentation
 
 Extension versions are cumulative. Higher extension versions include all of the updates from previous versions. A release may include internal features. If the version release notes don't describe features, then the updates were internal.
+
+## July  09, 2024
+
+**Extension version**: `1.1.2735.199`
+
+### Extended Security Updates enabled for SQL Server 2014
+
+Extended Security Updates (ESU) subscription for [!INCLUDE [sssql14-md](../../includes/sssql14-md.md)] will automatically start billing when SQL Server 2014 ESU program starts. Requires [!INCLUDE [sssql14-md](../../includes/sssql14-md.md)] be enabled for ESU.
+
+### Azure extension for SQL Server
+
+`SqlServerExtensionPermissionProvider` task no longer runs hourly. The task is triggered by specific events. For details, review [Roles](permissions-granted-agent-extension.md#roles). 
+
+## June  14, 2024
+
+**Extension version**: `1.1.2717.190`
+
+### Licensing and billing
+
+Support Extended Security Updates (ESU) subscription for [!INCLUDE [sssql11-md](../../includes/sssql11-md.md)] with an option to bill back to year 1 of extended support (for managed accounts only).
+
+### Business continuity
+
+- Inventory and manual failover of availability groups is now generally available. For details, review [Always On availability groups inventory and status](manage-availability-group.md).
+- Inventory of failover cluster instance is now generally available. Failover cluster instance in portal now shows instance name, instance type, network name, active node, and passive nodes. For details, review [View Always On failover cluster instances in Azure Arc](support-for-fci.md).
+
+### Migration
+
+Run assessment on demand (preview): The SQL Server migration assessment runs every Sunday around 11:00 PM. Beginning with this release, you can initiate the SQL Server migration assessment whenever you want. This immediate assessment shows readiness evaluations and Azure SQL configuration assessments right away. For details, review [Assess migration readiness](migration-assessment.md).
 
 ## May 15, 2024
 
@@ -172,7 +201,7 @@ For more information, review [Monitor [!INCLUDE [ssazurearc](../../includes/ssaz
 
 #### High availability
 
-- Manage Always On availability group - manual failover - public preview.
+- Manage Always On availability group - manual failover - preview.
   - Perform a planned, manual failover on an availability group replica, using Azure portal.
 - Availability group status - Track the availability upload status | public preview.
   - Beginning with this release, track the status and see the last time that the availability group inventory data is updated.  The portal shows two new properties, **Upload status** and **Last collected time** in the **Availability Groups** tab of the Arc-enabled SQL Server.

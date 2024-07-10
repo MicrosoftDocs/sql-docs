@@ -33,7 +33,6 @@ Backup or restore operations that use the Microsoft SQL Server Virtual Device In
 ## Next steps
 
 Review the VDI reference documentation in this section.
+Download SQL Server 2005 VDI specification (Does not include VDC_Complete, but otherwise complete): [SQL Server 2005 Virtual Backup Device Interface Specification](https://www.microsoft.com/en-us/download/details.aspx?id=17282)
 
-Download the full specification and the supporting source files:
-
-[SQL Server 2005 Virtual Backup Device Interface (VDI) Specification](https://www.microsoft.com/download/details.aspx?id=17282)
+Download supporting examples: [GitHub: sql-server-samples/samples/features/sqlvdi](https://github.com/microsoft/sql-server-samples/tree/master/samples/features/sqlvdi)

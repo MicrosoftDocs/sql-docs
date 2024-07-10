@@ -2,7 +2,7 @@
 title: updateCharacterStream method (int, java.io.Reader, int)
 description: "updateCharacterStream Method (int, java.io.Reader, int)"
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: "01/19/2017"
 ms.service: sql
 ms.subservice: connectivity

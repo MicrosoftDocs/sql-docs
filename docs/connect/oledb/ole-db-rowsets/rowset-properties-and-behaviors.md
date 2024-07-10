@@ -2,7 +2,7 @@
 title: Rowset properties and behaviors (OLE DB driver)
 description: These are the OLE DB Driver for SQL Server rowset properties, including property name and description.
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: "09/30/2020"
 ms.service: sql
 ms.subservice: connectivity

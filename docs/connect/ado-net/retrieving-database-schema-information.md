@@ -2,7 +2,7 @@
 title: "Retrieving database schema information"
 description: "Learn about using Microsoft SqlClient Data Provider for SQL Server to retrieve database schema information."
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.reviewer: v-chmalh
 ms.date: "11/26/2020"
 ms.service: sql

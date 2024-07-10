@@ -5,7 +5,7 @@ description: Setup and configuration details for database watcher
 author: dimitri-furman
 ms.author: dfurman
 ms.reviewer: wiassaf
-ms.date: 05/28/2024
+ms.date: 06/19/2024
 ms.service: sql-db-mi
 ms.subservice: monitoring
 ms.topic: how-to
@@ -89,7 +89,7 @@ To use database watcher, the following prerequisites are required.
 1. On the **Review + create** tab, review watcher configuration, and select **Create**. If you select the default option to create a new Azure Data Explorer cluster, the deployment typically takes 15-20 minutes. If you select a database on an existing Azure Data Explorer cluster, on a free Azure Data Explorer cluster, or in Real-Time Analytics, the deployment typically takes up to five minutes.
 
 1. Once the deployment completes, grant the watcher [access to SQL targets](#grant-access-to-sql-targets).
-    - Access to a database on a new or existing Azure Data Explorer cluster is granted automatically when the watcher is created.
+    - Access to a database on a new or existing Azure Data Explorer cluster is granted automatically when the watcher is created if the user creating the watcher is a member of the **Owner** RBAC role for the cluster.
     - However, you must [grant access to data store using a KQL command](#grant-access-to-data-store) if you select a database in:
         - Real-Time Analytics in Microsoft Fabric
         - A free Azure Data Explorer cluster
@@ -221,7 +221,7 @@ When you delete a watcher, its system-assigned managed identity is also deleted.
 
 You must grant access to a recreated watcher, even if you use the same watcher name.
 
-When you delete a watcher, the Azure resources referenced as its targets and data store are not deleted. You retain collected SQL monitoring data in the data store, and you can use the same database as the data store if you create a new watcher later.
+When you delete a watcher, the Azure resources referenced as its targets and data store are not deleted. You retain collected SQL monitoring data in the data store, and you can use the same Azure Data Explorer or Real-Time Analytics database as the data store if you create a new watcher later.
 
 ## Grant access to SQL targets
 
@@ -368,7 +368,7 @@ To configure database watcher to connect to a target using SQL authentication, f
 
     If you want to use public connectivity, the vault must have public access from all networks enabled. Restricting public vault connectivity to specific networks is not supported in database watcher.
 
-1. Create a SQL authentication login on each Azure SQL logical server or managed instance you want to monitor, and grant required permissions. Use provided [access scripts](#grant-access-to-sql-targets) for SQL authentication, and replace login name, user name, and password placeholders with the actual values. Use a strong password.
+1. Create a SQL authentication login on each Azure SQL logical server or managed instance you want to monitor, and grant the specific, limited permissions. Use provided [access scripts](#grant-access-to-sql-targets) for SQL authentication, and replace login name, user name, and password placeholders with the actual values. Use a strong password.
 1. In the vault, create two secrets: a [secret](/azure/key-vault/secrets/about-secrets) for the login name, and a *separate* secret for the password. Use any valid name as the **secret name**, and enter the login name or password you used in the T-SQL script as the **secret value**.
 
     For example, the names for the two secrets might be `database-watcher-login-name` and `database-watcher-password`. The secret values would be a login name and a strong password.
@@ -377,18 +377,18 @@ To configure database watcher to connect to a target using SQL authentication, f
 
 1. From the **Access control (IAM)** page of each secret, add a role assignment for the managed identity of the watcher in the **Key Vault Secrets User** RBAC role. To follow the principle of least privilege, add this role assignment for each secret, rather than for the entire vault. The **Access control (IAM)** page appears only if the vault is configured to use the **RBAC** permission model.
 
-1. [Add the SQL target](#add-sql-targets-to-a-watcher) to a watcher. When adding a target, check the **Use SQL authentication** box, and select the vault where the login name and password secrets are stored. Enter the secret names for login name and password.
+1. [Add a SQL target](#add-sql-targets-to-a-watcher) to a watcher. When adding the target, check the **Use SQL authentication** box, and select the vault where the login name and password secrets are stored. Enter the secret names for login name and password in the corresponding fields.
 
     When adding a SQL target, *do not* enter the actual login name and password. Using the earlier example, you would enter the `database-watcher-login-name` and `database-watcher-password` secret names.
 
-If you want to use different logins on different SQL targets, you can use the same vault to store all secrets.
+If you want to use different SQL authentication credentials on different SQL targets, you can use the same vault to store all secrets.
 
 > [!NOTE]
 > If you update the secret value for a login name or a password in the key vault while a watcher is running, the watcher reconnects to targets using the new SQL authentication credentials within 15 minutes. If you want to start using the new credentials right away, stop and restart the watcher.
 
 ## Grant access to data store
 
-To create and manage database schema over time, and to ingest monitoring data, database watcher requires membership in the **Admins** RBAC role in the data store database. Database watcher does not require any cluster-level access to the Azure Data Explorer cluster, or any access to other databases that might exist on the same cluster.
+To create and manage database schema over time, and to ingest monitoring data, database watcher requires membership in the **Admins** RBAC role in the data store database on an Azure Data Explorer cluster or in Real-Time Analytics. Database watcher does not require any cluster-level access to the Azure Data Explorer cluster, or any access to other databases that might exist on the same cluster.
 
 If you create a new Azure Data Explorer cluster and database, or select a database on an existing cluster while creating a watcher, this access is granted automatically if the user creating the watcher is a member of the **Owner** RBAC role for the cluster.
 
@@ -405,11 +405,11 @@ You can use the Azure portal to grant access to a database on the Azure Data Exp
 
 ### Grant access to an Azure Data Explorer database using KQL
 
-Instead of using Azure portal, you can also grant access to the database using a KQL command.
+Instead of using Azure portal, you can also grant access to the database using a KQL command. Use this method to grant access to a database in Real-Time Analytics or on a free Azure Data Explorer cluster.
 
-1. Connect to a database on the Azure Data Explorer cluster using [Kusto Explorer](/azure/data-explorer/kusto/tools/kusto-explorer) or the Azure Data Explorer [web UI](https://dataexplorer.azure.com/). Use this method to grant access to a database in Real-Time Analytics or on a free Azure Data Explorer cluster.
+1. Connect to a database on the Azure Data Explorer cluster using [Kusto Explorer](/azure/data-explorer/kusto/tools/kusto-explorer) or the Azure Data Explorer [web UI](https://dataexplorer.azure.com/).
 
-1. In the following sample KQL command, replace three placeholders:
+1. In the following sample KQL command, replace three placeholders as noted in the table:
 
     ```kusto
     .add database [adx-database-name-placeholder] admins ('aadapp=watcher-object-id-placeholder;tenant-primary-domain-placeholder');
@@ -419,7 +419,7 @@ Instead of using Azure portal, you can also grant access to the database using a
     |:--|:--|
     | `adx-database-name-placeholder` | The name of a database on an Azure Data Explorer cluster or in Real-Time Analytics. |
     | `watcher-object-id-placeholder` | **Object (principal) ID** value (a GUID), found on the **Identity** page of the watcher. |
-    | `tenant-primary-domain-placeholder` | The domain name of the Microsoft Entra ID tenant of the watcher. Find this on the Microsoft Entra ID **Overview** page in Azure portal. Instead of tenant primary domain, the **Tenant ID** GUID value can be used as well.</br></br>You can omit this part of the command (and the preceding semicolon) if the watcher and the Azure Data Explorer cluster are in the same Microsoft Entra ID tenant. |
+    | `tenant-primary-domain-placeholder` | The domain name of the Microsoft Entra ID tenant of the watcher. Find this on the Microsoft Entra ID **Overview** page in the Azure portal. Instead of tenant primary domain, the **Tenant ID** GUID value can be used as well.</br></br>You can omit this part of the command (and the preceding semicolon) if the watcher and the Azure Data Explorer cluster are in the same Microsoft Entra ID tenant. |
 
     For example:
 
@@ -433,7 +433,7 @@ For more information, see [Kusto role-based access control](/azure/data-explorer
 
 You can use Azure portal or a KQL command to grant users and groups access to a database on an Azure Data Explorer cluster or in Real-Time Analytics. To grant access, you must be a member of the **Admin** RBAC role in the database.
 
-Use a KQL command to grant access to a database on the free Azure Data Explorer cluster or in Real-Time Analytics. To follow the principle of least privilege, we recommend that you do not add users and groups to any RBAC role other than **Viewer**.
+Use a KQL command to grant access to a database on the free Azure Data Explorer cluster or in Real-Time Analytics. To follow the principle of least privilege, we recommend that you do not add users and groups to any RBAC role other than **Viewer** by default.
 
 > [!IMPORTANT]
 > Carefully consider your data privacy and security requirements when granting access to view SQL monitoring data collected by database watcher.
@@ -494,7 +494,7 @@ However, if you run analytical queries spanning longer time ranges, they might b
     - You can enable [optimized autoscale](/azure/data-explorer/manage-cluster-horizontal-scaling#optimized-autoscale-recommended-option) to automatically reduce or increase the number of instances in response to changes in workload or to seasonal trends.
 
 - You might find that even after you scale the cluster out horizontally, some queries still do not perform as expected. This might happen if query performance is bound by the resources available on an instance (node) of the cluster. In that case, scale up the cluster **vertically**.
-    - Vertical cluster scaling takes several minutes. During that process, there is a period of downtime, which can interrupt data collection. If that happens, [stop and restart](#start-and-stop-a-watcher) your watcher after the scaling operation is complete.
+    - Vertical cluster scaling takes several minutes. During that process, there is a period of downtime, which can interrupt data collection by the watcher. If that happens, [stop and restart](#start-and-stop-a-watcher) your watcher after the scaling operation is complete.
 
 You cannot scale a free Azure Data Explorer cluster. If you find that the [specifications](/azure/data-explorer/start-for-free#specifications) of the free cluster are insufficient for your requirements, [upgrade to a full Azure Data Explorer cluster](/azure/data-explorer/start-for-free-upgrade). The upgrade process retains all collected data. Because there might be a period of downtime during the upgrade, you might need to stop and restart your watcher to resume data collection once the upgrade is complete.
 
@@ -531,7 +531,7 @@ You can [disable the automatic stop behavior](/azure/data-explorer/auto-stop-clu
 
 Database watcher requires that the Azure Data Explorer cluster containing the data store database has [streaming ingestion](/azure/data-explorer/ingest-data-streaming) enabled. Streaming ingestion is automatically enabled for the new Azure Data Explorer cluster created when you create a new watcher. It is also enabled in Real-Time Analytics and on the free Azure Data Explorer cluster.
 
-If you want to use an existing Azure Data Explorer cluster, make sure to enable streaming ingestion first. This takes a few minutes and requires a restart of the cluster.
+If you want to use an existing Azure Data Explorer cluster, make sure to enable streaming ingestion first. This takes a few minutes and restarts the cluster.
 
 ## Monitor large estates
 

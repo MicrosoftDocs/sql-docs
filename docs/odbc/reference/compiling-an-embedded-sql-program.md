@@ -2,7 +2,7 @@
 title: "Compiling an Embedded SQL Program"
 description: "Compiling an Embedded SQL Program"
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: "01/19/2017"
 ms.service: sql
 ms.subservice: connectivity

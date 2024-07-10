@@ -100,7 +100,7 @@ landingContent:
           - text: Business continuity 
             url: ../database/business-continuity-high-availability-disaster-recover-hadr-overview.md
           - text: High availability
-            url: ../database/high-availability-sla.md
+            url: ../database/high-availability-sla-local-zone-redundancy.md
           - text: Failover groups
             url: failover-group-sql-mi.md 
           - text: Automated backups

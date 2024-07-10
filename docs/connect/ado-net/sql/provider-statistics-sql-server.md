@@ -2,7 +2,7 @@
 title: "Provider statistics for SQL Server"
 description: "Describes support for obtaining SQL Server run-time statistics."
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.reviewer: v-kaywon
 ms.date: "08/15/2019"
 ms.service: sql

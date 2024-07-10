@@ -4,7 +4,7 @@ description: This article discusses compute capacity limits for SQL Server 2019 
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: randolphwest
-ms.date: 04/12/2024
+ms.date: 07/09/2024
 ms.service: sql
 ms.subservice: release-landing
 ms.topic: conceptual
@@ -64,7 +64,7 @@ The following definitions apply to the terms used in this article:
 
 [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] limits the number of logical processors per NUMA node to 64. On servers with more than 64 logical processors per NUMA node, you can use a BIOS / firmware configuration to change the number of NUMA nodes per physical socket presented to the operating system, to limit to a maximum of 64 logical processors.
 
-You can also consider disabling SMT. On Intel CPUs, SMT is called *Hyper-Threading*.
+You can consider reducing the number of logical cores per NUMA node. For more information, see [Reduce logical core count per NUMA node](#reduce-logical-core-count-per-numa-node).
 
 ## Remarks
 
@@ -97,7 +97,54 @@ In a virtualized environment, the compute capacity limit is based on the number 
 
 For example, a server that has four sockets populated with quad-core processors and the ability to enable two SMT threads per core contains 32 logical processors with SMT enabled. But it contains only 16 logical processors with SMT disabled. These logical processors can be mapped to virtual machines on the server. The virtual machines' compute load on that logical processor is mapped to a thread of execution on the physical processor in the host server.
 
-You might want to disable SMT when the performance for each virtual processor is important. You can enable or disable SMT by using a BIOS setting for the processor during the BIOS setup, but it's typically a server-scoped operation that affects all workloads running on the server. You might consider separating workloads that run in virtualized environments, from workloads that would benefit from the SMT performance boost in a physical operating system environment.
+You might want to disable SMT when the performance for each virtual processor is important. You can configure SMT by using a BIOS setting for the processor during the BIOS setup, but it's typically a server-scoped operation that affects all workloads running on the server. You might consider separating workloads that run in virtualized environments, from workloads that would benefit from the SMT performance boost in a physical operating system environment.
+
+## Reduce logical core count per NUMA node
+
+You can reduce the logical core count per NUMA node on virtual machines, including Azure VMs, or on bare-metal [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] instances.
+
+### Disable SMT in a virtual machine
+
+[!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] has a supported limit of 64 logical cores per NUMA node. In some cases, the Azure Mv3-series VM might exceed this limit, which prevents [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] from starting, or allowing it to run with degraded performance. To disable SMT, make the following changes using **[wmic](/windows/win32/wmisdk/wmic)** and the **Registry Editor** (`reg.exe`). Be sure to back up your registry before editing it.
+
+1. Check the number of logical cores. SMT is enabled if the ratio is 2:1 (the number of logical cores is twice the number of cores).
+
+   ```cmd
+   wmic CPU Get NumberOfCores,NumberOfLogicalProcessors /Format:List
+   ```
+
+1. Disable SMT with the following two registry changes, then reboot the VM.
+
+   ```cmd
+   reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management" /v FeatureSettingsOverride /t REG_DWORD /d 8264 /f
+   reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management" /v FeatureSettingsOverrideMask /t REG_DWORD /d 3 /f
+   ```
+
+1. Check the number of logical cores once again. The number of logical cores should match the number of cores.
+
+   ```cmd
+   wmic CPU Get NumberOfCores,NumberOfLogicalProcessors /Format:List
+   ```
+
+### Reduce logical core count on bare-metal instances
+
+The following tables describe how to reduce the logical core count on bare-metal instances of [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)].
+
+On **Intel CPUs**, you can enable sub-NUMA clustering (SNC), formerly called Cluster-on-Die (CoD), resulting in two NUMA domains within a single physical socket.
+
+| Configuration&nbsp;setting | Description |
+| --- | --- |
+| SNC disabled (default) | Disables sub-NUMA clustering. |
+| SNC enabled | Enables sub-NUMA clustering. |
+
+On **AMD CPUs**, you can enable various Nodes per Socket (NPS) options.
+
+| Configuration&nbsp;setting | Description |
+| --- | --- |
+| `NPS0` | In a dual socket system, NUMA presents as a single node with all memory channels interleaved across the node. |
+| `NPS1` (default) | This configuration presents one NUMA node per socket. |
+| `NPS2` | This configuration presents two NUMA nodes per socket, similar to SNC. |
+| `NPS4` | This configuration presents four NUMA nodes per socket. |
 
 ## Related content
 

@@ -11,7 +11,7 @@ metadata:
   author: dimitri-furman
   ms.author: dfurman
   ms.reviewer: wiassaf, mathoma
-  ms.date: 05/08/2024
+  ms.date: 07/03/2024
 title: Azure SQL Database Hyperscale FAQ
 summary: |
   [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
@@ -201,7 +201,7 @@ sections:
       - question: |
           Is database shrink supported?
         answer: |
-          Not at this time.
+          Yes, [database and file shrink operations](file-space-manage.md) are currently in preview. For more information on the preview, see [Shrink for Azure SQL Database Hyperscale](https://aka.ms/hs-shrink-preview).
 
       - question: |
           Is data compression supported?

@@ -312,11 +312,13 @@ sections:
     questions:
       - question: What are the current inbound/outbound NSG constraints on the managed instance subnet?
         answer: |
-          The required NSG and UDR rules are documented [here](connectivity-architecture-overview.md#mandatory-security-rules-with-service-aided-subnet-configuration), and automatically set by the service.
-          Keep in mind that these rules are just the ones we need for maintaining the service. To connect to your instance and use different features you need to set additional, feature specific rules, that you need to maintain.
-
-      - question: How can I set inbound NSG rules on management ports?
-        answer: |
+          ### What are the current inbound/outbound NSG constraints on the managed instance subnet?
+          
+          The required NSG and UDR rules are documented in [subnet service-aided configuration](subnet-service-aided-configuration-enable.md#mandatory-security-rules-and-routes), and automatically set by the service.
+          Please keep in mind that these rules are just the ones we need for maintaining the service. To connect to managed instance and use different features you will need to set additional, feature specific rules, that you need to maintain.
+          
+          ### How can I set inbound NSG rules on management ports?
+          
           SQL Managed Instance is responsible for setting rules on management ports. This is achieved through functionality named [service-aided subnet configuration](connectivity-architecture-overview.md#service-aided-subnet-configuration).
           This is to ensure uninterrupted flow of management traffic in order to fulfill an SLA.
 

@@ -44,7 +44,7 @@ Working in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], y
 
 - Save copies of packages to the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] `msdb` database, the [!INCLUDE[ssIS](../includes/ssis-md.md)] Package Store, and the file system.
 
-For more information about [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], see [SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md#ssdt-for-visual-studio-2019).
+For more information about [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], see [SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md).
 
 ## SQL Server Management Studio
 

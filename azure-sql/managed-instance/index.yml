@@ -60,8 +60,6 @@ landingContent:
         links:
         - text: Migrate from SQL Server
           url: ../migration-guides/managed-instance/sql-server-to-managed-instance-guide.md
-        - text: November 2022 feature wave
-          url:  november-2022-feature-wave-enroll.md
         - text: Management operations
           url:  management-operations-overview.md
         - text: Start and stop instance 

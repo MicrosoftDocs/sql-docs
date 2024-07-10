@@ -106,12 +106,9 @@ Consider the following limitations:
 
 ## Prerequisites
 
-To use the instance stop and start feature, your instance must meet the following prerequisites: 
+To use the instance stop and start feature, your instance must meet be in the General Purpose service tier. 
 
-- Your instance has to be part of a subnet with the November 2022 feature wave enabled. 
-- Your instance has to be in the General Purpose service tier. 
-
-Instances that don't meet the prerequisites won't see the stop and start controls on the **Overview** page for the SQL managed instance resource. 
+Instances that don't meet the prerequisite have the stop and start controls disabled on the **Overview** page for the SQL managed instance resource in the Azure portal. Hovering over the control explains why the feature can't be used by the instance. 
 
 ## Prepare command line environment
 

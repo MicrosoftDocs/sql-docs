@@ -1443,8 +1443,6 @@
     - name: Distributed transactions with DTC
       displayName: distributed transaction coordinator
       href: managed-instance/distributed-transaction-coordinator-dtc.md
-    - name: Enroll in November 2022 feature wave
-      href: managed-instance/november-2022-feature-wave-enroll.md
     - name: Use Next-gen General Purpose tier
       href: managed-instance/service-tiers-next-gen-general-purpose-use.md
 

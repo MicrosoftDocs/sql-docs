@@ -9,12 +9,16 @@ ms.date: 07/10/2024
 ms.service: sql-managed-instance
 ms.subservice: service-overview
 ms.topic: conceptual
-ms.custom: fasttrack-edit, build-2023, build-2023-dataai, ignite-2023
+ms.custom:
+  - fasttrack-edit
+  - build-2023
+  - build-2023-dataai
+  - ignite-2023
 ---
 
 # Connectivity architecture for Azure SQL Managed Instance
 
-[!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
+[!INCLUDE [appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
 
 This article describes the connectivity architecture in Azure SQL Managed Instance and how components direct communication traffic for a managed instance.  
 
@@ -31,13 +35,13 @@ In SQL Managed Instance, an instance is placed inside the Azure virtual network 
 
 SQL Managed Instance is made of up service components hosted on a dedicated set of isolated virtual machines that are grouped together by similar configuration attributes and joined to a [virtual cluster](virtual-cluster-architecture.md). Some service components are deployed inside the customer's virtual network subnet while other services operate within a secure network environment that Microsoft manages.
 
-:::image type="content" source="media/connectivity-architecture-overview/2-connectivity-architecture-diagram-sql-managed-instance.png" border="false" alt-text="Diagram that shows the high-level connectivity architecture for Azure SQL Managed Instance after November 2022.":::
+:::image type="content" source="media/connectivity-architecture-overview/2-connectivity-architecture-diagram-sql-managed-instance.png" alt-text="Diagram that shows the high-level connectivity architecture for Azure SQL Managed Instance after November 2022." lightbox="media/connectivity-architecture-overview/2-connectivity-architecture-diagram-sql-managed-instance.png":::
 
 Customer applications can connect to SQL Managed Instance and can query and update databases inside the virtual network, peered virtual network, or network connected by VPN or Azure ExpressRoute.
 
 The following diagram shows entities that connect to SQL Managed Instance. It also shows the resources that need to communicate with a managed instance. The communication process at the bottom of the diagram represents customer applications and tools that connect to SQL Managed Instance as data sources.  
 
-:::image type="content" source="media/connectivity-architecture-overview/1-connectivity-architecture-diagram-entities.png" border="false" alt-text="Diagram that shows entities in the connectivity architecture for Azure SQL Managed Instance after November 2022.":::
+:::image type="content" source="media/connectivity-architecture-overview/1-connectivity-architecture-diagram-entities.png" alt-text="Diagram that shows entities in the connectivity architecture for Azure SQL Managed Instance after November 2022." lightbox="media/connectivity-architecture-overview/1-connectivity-architecture-diagram-entities.png":::
 
 SQL Managed Instance is a single-tenant, platform as a service offering that operates in two planes: a data plane and a control plane.
 
@@ -54,7 +58,7 @@ Applications can connect to SQL Managed Instance via three types of endpoints. T
 - [Public endpoint](#public-endpoint)
 - [Private endpoints](#private-endpoints)
 
-:::image type="content" source="media/connectivity-architecture-overview/4-connectivity-architecture-endpoints.png" border="false" alt-text="Diagram that shows the scope of visibility for VNet-local, public, and private endpoints to an Azure SQL Managed Instance.":::
+:::image type="content" source="media/connectivity-architecture-overview/4-connectivity-architecture-endpoints.png" alt-text="Diagram that shows the scope of visibility for VNet-local, public, and private endpoints to an Azure SQL Managed Instance." lightbox="media/connectivity-architecture-overview/4-connectivity-architecture-endpoints.png":::
 
 ### VNet-local endpoint
 
@@ -88,7 +92,7 @@ Learn more about private endpoints and how to configure them in [Azure Private L
 
 The following diagram shows the conceptual layout of the [virtual cluster architecture](virtual-cluster-architecture.md):
 
-:::image type="content" source="media/connectivity-architecture-overview/3-connectivity-architecture-diagram-virtual-cluster.png" border="false" alt-text="Diagram that shows the virtual cluster connectivity architecture for Azure SQL Managed Instance.":::
+:::image type="content" source="media/connectivity-architecture-overview/3-connectivity-architecture-diagram-virtual-cluster.png" alt-text="Diagram that shows the virtual cluster connectivity architecture for Azure SQL Managed Instance." lightbox="media/connectivity-architecture-overview/3-connectivity-architecture-diagram-virtual-cluster.png":::
 
 The domain name of the VNet-local endpoint resolves to the private IP address of an internal load balancer. Although this domain name is registered in a public Domain Name System (DNS) zone and is publicly resolvable, its IP address belongs to the subnet's address range and can only be reached from inside its virtual network by default.
 
@@ -125,10 +129,11 @@ The subnet in which SQL Managed Instance is deployed must meet the following req
 To improve service security, manageability, and availability, SQL Managed Instance uses service-aided subnet configuration and network intent policy on the Azure virtual network infrastructure to configure the network, associated components, and route table to ensure that minimum requirements for SQL Managed Instance are met.
 
 Automatically configured network security and route table rules are visible to the customer and annotated with one of these prefixes:
-* `Microsoft.Sql-managedInstances_UseOnly_mi-` for mandatory rules and routes;
-* `Microsoft.Sql-managedInstances_UseOnly_mi-optional-` for optional rules and routes.
 
-For additional details, review [service-aided subnet configuration](subnet-service-aided-configuration-enable.md). 
+- `Microsoft.Sql-managedInstances_UseOnly_mi-` for mandatory rules and routes
+- `Microsoft.Sql-managedInstances_UseOnly_mi-optional-` for optional rules and routes
+
+For additional details, review [service-aided subnet configuration](subnet-service-aided-configuration-enable.md).
 
 For more information about the connectivity architecture and management traffic, see [High-level connectivity architecture](#high-level-connectivity-architecture).
 

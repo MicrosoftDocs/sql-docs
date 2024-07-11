@@ -25,7 +25,7 @@ Learn how to export reports from SQL Server Reporting Services (SSRS) by using U
 
 ## Specify the export format
 
-Specify the format in which to render a report by using the ``rs:Format`` URL parameter. The HTML4.0 and HTM5 formats render in the browser, while other formats prompt you to save the report output to a local file. 
+Specify the format in which to render a report by using the `rs:Format` URL parameter. The HTML4.0 and HTM5 formats render in the browser, while other formats prompt you to save the report output to a local file. 
 
 ## Export a PDF report 
   

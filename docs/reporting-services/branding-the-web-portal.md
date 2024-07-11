@@ -22,8 +22,8 @@ Learn how to customize the appearance of your SQL Server Reporting Services (SSR
 ## Prerequisites
 
 - SQL Server Reporting Services (SSRS) or Power BI Report Server installed and configured.
-- Access to the Reporting Services Web Portal and the Site Settings option.
-- Basic knowledge of JSON and XML.
+- Access to the Reporting Services Web Portal.
+- Connection to a report server database.
 
 ## Create the brand package
 

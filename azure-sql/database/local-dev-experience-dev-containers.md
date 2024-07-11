@@ -68,16 +68,17 @@ Here are the key features:
 - `ms-mssql.sql-database-projects`: Extension for managing SQL Database projects, allowing for streamlined schema changes and deployment.
 - `github.copilot`: AI-powered code completion for enhanced productivity.
 - `ms-azuretools.vscode-docker`: Docker extension for managing containers directly from Visual Studio Code.
-- `ms-dotnettools.csdevkit` and `ms-dotnettools.csharp`: Essential extensions for .NET development.
-- `ms-azuretools.vscode-bicep`: Bicep extension for managing Azure resources.
-- `ms-azuretools.vscode-docker`: Docker extension for managing containers.
 - `github.codespaces`: Extension for working with GitHub Codespaces.
+- `ms-azuretools.vscode-docker`: Docker extension for managing containers.
+
+> [!TIP]
+> There will be more extensions available depending on the template you choose.
 
 ### Preconfigured environment
 
 All of the below tools and utilities are pre-loaded in the Dev Container. You don't need to download or install!
 
-- **.NET / .NET Aspire**: The environment includes your preferred programming language/framework preinstalled and configured, ready for development.
+- **.NET / .NET Aspire / Node / Python**: The environment includes your preferred programming language/framework preinstalled and configured, ready for development.
 - **Azure CLI**: Tools for managing Azure resources and deployments.
 - **Azure Developer CLI:** A command-line interface providing a unified scripting experience for managing and developing Azure resources.
 - **Docker CLI**: Allows building and managing Docker containers from within another container.
@@ -92,11 +93,12 @@ All of the below tools and utilities are pre-loaded in the Dev Container. You do
 
 A set of predefined tasks in Visual Studio Code to simplify common actions:
 
-- **Verify database schema and data**: Opens and executes a SQL file to validate the database schema.
-- **Build SQL Database project**: Builds the SQL Database project using `dotnet build`.
-- **Publish SQL Database Project**: Publish the SQL Database project to the database container.
-- **Update .NET SDK**: Updates the .NET SDK to ensure the latest features and compatibility.
-- **Trust .NET HTTPS Certificate**: Trusts the HTTPS certificate for secure development with .NET Aspire.
+- **1. Verify database schema and data**: Opens and executes a SQL file to validate the database schema.
+- **2. Build SQL Database project**: Builds the SQL Database project using `dotnet build`.
+- **3. Publish SQL Database Project**: Publish the SQL Database project to the database container.
+
+> [!TIP]
+> There will be specific tasks available depending on the template you choose.
 
 ## Available templates
 
@@ -106,7 +108,7 @@ The Azure SQL Database Dev Container Templates are available for the following p
 |----------------------------------|-------------|
 | [.NET](https://github.com/microsoft/azuresql-devcontainers/tree/main/src/dotnet) | A development environment for .NET and Azure SQL, enabling streamlined local development and testing. |
 | [.NET Aspire](https://github.com/microsoft/azuresql-devcontainers/tree/main/src/dotnet-aspire) | A development environment for .NET Aspire and Azure SQL, enabling streamlined local development and testing. |
-| [Node.sa](https://github.com/microsoft/azuresql-devcontainers/tree/main/src/javascript-node) | A development environment for Node.js (Javascript) and Azure SQL, enabling streamlined local development and testing. |
+| [Node.js](https://github.com/microsoft/azuresql-devcontainers/tree/main/src/javascript-node) | A development environment for Node.js (Javascript) and Azure SQL, enabling streamlined local development and testing. |
 | [Python](https://github.com/microsoft/azuresql-devcontainers/tree/main/src/python) | A development environment for .Python and Azure SQL, enabling streamlined local development and testing. |
 
 > [!TIP]

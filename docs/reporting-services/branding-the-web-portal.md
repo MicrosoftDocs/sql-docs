@@ -19,6 +19,12 @@ Learn how to customize the appearance of your SQL Server Reporting Services (SSR
 
 > [!VIDEO https://www.youtube-nocookie.com/embed/m08kLuofwFA]
 
+## Prerequisites
+
+- SQL Server Reporting Services (SSRS) or Power BI Report Server installed and configured.
+- Access to the Reporting Services Web Portal and the Site Settings option.
+- Basic knowledge of JSON and XML.
+
 ## Create the brand package
 
 A brand package consists of three items that you package as a zip file. The following sections describe the items in the brand package and provide examples of the contents. 
@@ -339,7 +345,7 @@ If you see a brand package listed in the **Currently installed brand package** b
 
 ## <a name="bkmk_download_samples"></a> Download the sample branding packages
 
-You can download two sample brand packages for Reporting Services. Use these samples to brand your web portal to fit your needs.
+You can download two sample brand packages for Reporting Services. Use these samples to brand your web portal based on your needs.
 
 Download the samples from the GitHub site [Sample Branding Packages](https://github.com/microsoft/sql-server-samples/tree/master/samples/features/reporting-services/branding) to a local folder. For more information, see [Apply the brand package to the web portal](#apply-the-brand-package-to-the-web-portal) in this article.
 

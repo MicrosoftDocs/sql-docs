@@ -96,12 +96,12 @@ Select this checkbox if you're configuring a virtual machine, and you're using t
 > If the physical core license is configured with a pay-as-you-go billing plan, the selected **License type** should be set as pay-as-you-go. This will not trigger additional charges at the VM level, but it will ensure the uninterrupted licensing and billing in an event of the p-core license's de-activation or deletion. 
 #### <a id="subscribe-esu"></a> Subscribe to Extended Security Updates
 
-This section allows you to subscribe to Extended Security Updates (ESU) for the individual host. To qualify for ESU subscription, the host must have **License type** set to **Pay-as-you-go** or **License with Software assurance**. This option allows you to license ESU using vCPUs or physical cores of the host (when running without using virtual machines). Select **Subscribe to Extended Security Updates**. It will set the Host configuration property `EnabelExtendedSecurityUpdates` to `True`. The subscription will be activated after you click **Save**.
+This section allows you to subscribe to Extended Security Updates (ESU) for the individual host. To qualify for ESU subscription, the host must have **License type** set to **Pay-as-you-go** or **License with Software assurance**. This option allows you to license ESU using vCPUs (v-cores) when the host is a virtual machine, or physical cores when the host is a physical server running without using virtual machines. Select **Subscribe to Extended Security Updates**. It will set the Host configuration property `EnabelExtendedSecurityUpdates` to `True`. The subscription will be activated after you click **Save**.
 
 For more information about ESU licensing options, see [Subscribe to Extended Security Updates in production environment](extended-security-updates.md#subscribe-to-extended-security-updates-in-production-environment). 
 
 > [!NOTE]
-> - Unlike the p-core ESU license, when subscribing to ESU activation at the host level you don't need to define the number of billable cores for each machine. Azure extension for SQL Server will detect the size and type of host and bill accordingly.
+> - Unlike the p-core ESU license, when subscribing to ESU activation at the host level you don't need to define the number of billable cores for each machine. Azure extension for SQL Server detects the size and type of the host (virtual or physical), SQL Server edition, and bills according to these parameters.
 > - If ESU is enabled, **License Type** cannot be changed to **License only** until the ESU subscription is canceled.
 #### <a id="use-physical-core-esu-license"></a> Use physical core ESU license
 

@@ -34,9 +34,9 @@ The following regular expressions can replace characters or digits in the **Find
 
 1. To enable the use of regular expressions in the **Find what** field during **Quick Find**, **Find in Files**, **Quick Replace**, or **Replace in Files** operations, select the **Use** option under **Find Options** and then choose **Use Regular Expressions**.
 
-1. The **Expression Builder** button next to the **Find what** field then becomes available. Select this button to display a list of the available regular expressions. When you choose any item from the **Expression Builder**, it is inserted into the **Find what** string.
+1. The **Expression Builder** button next to the **Find what** field then becomes available. Select this button to display a list of the available regular expressions. When you choose any item from the **Expression Builder**, it's inserted into the **Find what** string.
 
-The following table describes the regular expressions available in the **Expression Builder**.
+The following table describes some of the regular expressions in the **Expression Builder**.
 
 | Expression | Description |
 | --- | --- |
@@ -47,7 +47,7 @@ The following table describes the regular expressions available in the **Express
 | `[^abc]` | Match any character not in the set `abc` |
 | `\d` | Match any numeric character |
 | `(?([^\r\n])\s)` | Match any whitespace character |
-| `\b` | Match at beginning or end of word |
+| `\b` | Match at the beginning or end of the word |
 | `^` | Match at beginning of line |
 | `.$` | Match any line break |
 | `\w\r?\n` | Match a word character at end of line |

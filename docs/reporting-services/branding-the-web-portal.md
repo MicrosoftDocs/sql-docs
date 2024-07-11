@@ -15,7 +15,7 @@ ms.custom: updatefrequency5
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirs](../includes/ssrs-appliesto-pbirs.md)]
 
-Learn how to customize the appearance of your SQL Server Reporting Services (SSRS) or Power BI Report Server web portal by creating and applying a brand package. A brand package allows you to change the web portal's appearance to match your business's branding. It includes colors, logos, and other styling elements packaged into a zip file. Then you upload the brand package to the web portal to apply the custom branding.
+Learn how to customize your SQL Server Reporting Services (SSRS) or Power BI Report Server web portal to match your business’s branding. By using an uploaded brand package, you can change colors, logos, and other styling elements on your web portal. A brand package consists of three items that you package as a zip file. The following sections describe the items in the brand package and provide examples of the contents. 
 
 > [!VIDEO https://www.youtube-nocookie.com/embed/m08kLuofwFA]
 
@@ -27,9 +27,7 @@ Learn how to customize the appearance of your SQL Server Reporting Services (SSR
 
 ## Create the brand package
 
-A brand package consists of three items that you package as a zip file. The following sections describe the items in the brand package and provide examples of the contents. 
-
-You can create your own files from scratch or you can download samples from the GitHub site [Sample Branding Packages](https://github.com/microsoft/sql-server-samples/tree/master/samples/features/reporting-services/branding) to a local folder. 
+To create the brand package, you can use create files from scratch or [download samples from the GitHub site](https://github.com/microsoft/sql-server-samples/tree/master/samples/features/reporting-services/branding). 
 
 If you start from scratch, start by creating each file and naming the files in your brand package as follows:
 
@@ -39,7 +37,7 @@ If you start from scratch, start by creating each file and naming the files in y
 
 The zip file can be named anything you like.
 
-If you choose to use a sample branding package, download the zip file and extract the files so that you can edit them to according to your needs.
+If you choose to use a sample branding package, download the zip file and extract the files so that you can edit them according to your needs.
 
 ### Define brand metadata (`metadata.xml`)
 

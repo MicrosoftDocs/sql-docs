@@ -182,57 +182,6 @@ The `theme` object is broken down into the following properties:
 |Panel Background/Foreground/Accent|Colors for panels.|
 |Table Accents|Accent colors for tables.|
 
-::: moniker range="<=sql-server-ver15"
-
-The first time you connect to a server with a Mobile Report Publisher that has a brand package deployed, the publisher adds the theme to the list of available themes.
-
-:::image type="content" source="../reporting-services/media/ssrsbrandingmobilereportpublisher.png" alt-text="Screenshot of the Choose a color palette dialog.":::
-
-You can then use that theme for any mobile reports that you create, even if they aren't for the same server that you have the theme deployed on.
-::: moniker-end
-
-### Use a logo (`logo.png`)
-
-If you include a logo with your brand package, it appears in the web portal in place of the name you originally set for the web portal.
-
-Make sure the logo is in the PNG file format. The file dimensions scale once uploaded to the server. The logo scales to approximately 290 x 60 pixels.
-
-## <a name="#applying-the-brand-package-to-the-web-portal"></a>Apply the brand package to the web portal
-
-1. Access the web portal.
-
-1. Select the gear icon in the upper right, and then choose **Site Settings**.
-
-    :::image type="content" source="../reporting-services/media/ssrsgearmenu.png" alt-text="Screenshot of the Settings list with Site Settings option highlighted.":::
-
-1. Select **Branding**.
-
-    :::image type="content" source="../reporting-services/media/ssrsbranding.png" alt-text="Screenshot of the Site Settings page with the Branding tab highlighted.":::
-
-   **Currently installed brand package** either displays the name of the uploaded package, or it displays **None**.
-
-1. Select **Upload brand package**. The brand package uploads to the report server and the web portal renders the updated branding immediately.
-
-## Download or remove the brand package
-
-If you see a brand package listed in the **Currently installed brand package** box, you can choose to download or remove the package. You might want to download the package if you want to make adjustments to the existing package and apply those changes. If you remove the package, the web portal resets to the default brand immediately. Choose either **Download** or **Remove** depending on the action you want to take.
-
-## `metadata.xml` example
-
-```xml
-<?xml version="1.0" encoding="utf-8"?>
-<SystemResourcePackage xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/systemresourcepackagemetadata"
-    type="UniversalBrand"
-    version="2.0.2"
-    name="Multicolored example brand"
-    >
-    <Contents>
-        <Item key="colors" path="colors.json" />
-        <Item key="logo" path="logo.png" />
-    </Contents>
-</SystemResourcePackage>
-```
-
 ## `colors.json` example
 
 ```json
@@ -346,5 +295,41 @@ If you see a brand package listed in the **Currently installed brand package** b
     }
 }
 ```
+
+::: moniker range="<=sql-server-ver15"
+
+The first time you connect to a server with a Mobile Report Publisher that has a brand package deployed, the publisher adds the theme to the list of available themes.
+
+:::image type="content" source="../reporting-services/media/ssrsbrandingmobilereportpublisher.png" alt-text="Screenshot of the Choose a color palette dialog.":::
+
+You can then use that theme for any mobile reports that you create, even if they aren't for the same server that you have the theme deployed on.
+::: moniker-end
+
+### Use a logo (`logo.png`)
+
+If you include a logo with your brand package, it appears in the web portal in place of the name you originally set for the web portal.
+
+Make sure the logo is in the PNG file format. The file dimensions scale once uploaded to the server. The logo scales to approximately 290 x 60 pixels.
+
+## <a name="#applying-the-brand-package-to-the-web-portal"></a>Apply the brand package to the web portal
+
+1. Access the web portal.
+
+1. Select the gear icon in the upper right, and then choose **Site Settings**.
+
+    :::image type="content" source="../reporting-services/media/ssrsgearmenu.png" alt-text="Screenshot of the Settings list with Site Settings option highlighted.":::
+
+1. Select **Branding**.
+
+    :::image type="content" source="../reporting-services/media/ssrsbranding.png" alt-text="Screenshot of the Site Settings page with the Branding tab highlighted.":::
+
+   **Currently installed brand package** either displays the name of the uploaded package, or it displays **None**.
+
+1. Select **Upload brand package**. The brand package uploads to the report server and the web portal renders the updated branding immediately.
+
+## Download or remove the brand package
+
+If you see a brand package listed in the **Currently installed brand package** box, you can choose to download or remove the package. You might want to download the package if you want to make adjustments to the existing package and apply those changes. If you remove the package, the web portal resets to the default brand immediately. Choose either **Download** or **Remove** depending on the action you want to take.
+
 
 More questions? Try asking the [Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user).

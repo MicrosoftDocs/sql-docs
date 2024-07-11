@@ -29,13 +29,17 @@ Learn how to customize the appearance of your SQL Server Reporting Services (SSR
 
 A brand package consists of three items that you package as a zip file. The following sections describe the items in the brand package and provide examples of the contents. 
 
-Start by naming the files in your brand package as follows:
+You can create your own files from scratch or you can download samples from the GitHub site [Sample Branding Packages](https://github.com/microsoft/sql-server-samples/tree/master/samples/features/reporting-services/branding) to a local folder. 
+
+If you start from scratch, start by creating each file and naming the files in your brand package as follows:
 
 - `metadata.xml`
 - `colors.json`
 - `logo.png` (optional file)
 
- The zip file can be named anything you like.
+The zip file can be named anything you like.
+
+If you choose to use a sample branding package, download the zip file and extract the files so that you can edit them to according to your needs.
 
 ### Define brand metadata (`metadata.xml`)
 
@@ -342,11 +346,5 @@ If you see a brand package listed in the **Currently installed brand package** b
     }
 }
 ```
-
-## <a name="bkmk_download_samples"></a> Download the sample branding packages
-
-You can download two sample brand packages for Reporting Services. Use these samples to brand your web portal based on your needs.
-
-Download the samples from the GitHub site [Sample Branding Packages](https://github.com/microsoft/sql-server-samples/tree/master/samples/features/reporting-services/branding) to a local folder. For more information, see [Apply the brand package to the web portal](#apply-the-brand-package-to-the-web-portal) in this article.
 
 More questions? Try asking the [Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user).

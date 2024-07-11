@@ -4,7 +4,7 @@ titleSuffix: Azure SQL Database & SQL Managed Instance
 description: A detailed description of SQL monitoring data collected by database watcher
 author: dimitri-furman
 ms.author: dfurman
-ms.date: 04/26/2024
+ms.date: 07/10/2024
 ms.service: sql-db-mi
 ms.subservice: monitoring
 ms.topic: conceptual
@@ -206,6 +206,8 @@ For each target type, datasets have common columns, as described in the followin
 
 | Column name | Description |
 |:--|:--|
+| `subscription_id` | The Azure subscription ID of the SQL database. |
+| `resource_group_name` | The resource group name of the SQL database. |
 | `sample_time_utc` | The time when the values in the row were observed, in UTC. |
 | `collection_time_utc` | The time when the row was collected by the watcher, in UTC. This column is present in datasets where collection time might be different from sample time. |
 | `replica_type` | One of: **Primary**, **HA secondary**, **Geo-replication forwarder**, **Named secondary**. |
@@ -220,6 +222,8 @@ For each target type, datasets have common columns, as described in the followin
 
 | Column name | Description |
 |:--|:--|
+| `subscription_id` | The Azure subscription ID of the SQL elastic pool. |
+| `resource_group_name` | The resource group name of the SQL elastic pool. |
 | `sample_time_utc` | The time when the values in the row were observed, in UTC. |
 | `collection_time_utc` | The time when the row was collected by the watcher, in UTC. This column is present in datasets where collection time might be different from sample time. |
 | `replica_type` | One of: **Primary**, **HA secondary**. |
@@ -235,6 +239,8 @@ For each target type, datasets have common columns, as described in the followin
 
 | Column name | Description |
 |:--|:--|
+| `subscription_id` | The Azure subscription ID of the SQL managed instance. |
+| `resource_group_name` | The resource group name of the SQL managed instance. |
 | `sample_time_utc` | The time when the values in the row were observed, in UTC. |
 | `collection_time_utc` | The time when the row was collected by the watcher, in UTC. This column is present in datasets where collection time might be different from sample time. |
 | `replica_type` | One of: **Primary**, **HA secondary**, **Geo-replication forwarder**. |

@@ -4,7 +4,7 @@ titleSuffix: Azure SQL Database & SQL Managed Instance
 description: Examples of analytical queries that use database watcher monitoring data
 author: dimitri-furman
 ms.author: dfurman
-ms.date: 03/21/2024
+ms.date: 07/10/2024
 ms.service: sql-db-mi
 ms.subservice: monitoring
 ms.topic: how-to
@@ -166,7 +166,7 @@ sqlmi_instance_properties
 
 ---
 
-### Use KQL to query runtime statistics
+### Use KQL to view query runtime statistics
 
 This query returns the top resource consuming queries in your Azure SQL estate. Change a variable to rank queries by any [Query Store](/sql/relational-databases/performance/monitoring-performance-by-using-the-query-store) metric, including CPU time, elapsed time, execution count, etc. You can also set variables to filter by a time interval, query execution type, and query text. Set variables to focus on a specific logical server, elastic pool, SQL managed instance, or database.
 
@@ -283,7 +283,7 @@ sqldb_database_query_runtime_stats
 
 The **Query runtime statistics** [dataset](database-watcher-data.md#datasets) is available only for databases and SQL managed instances. This example does not apply to elastic pools.
 
-The *Databases* example also applies to databases in elastic pools.
+The *SQL database* example also applies to databases in elastic pools.
 
 # [SQL managed instance](#tab/sqlmi)
 
@@ -640,8 +640,8 @@ This example shows how to chart top SQL wait types over a time interval. The que
 
 The query uses two techniques to improve performance:
 
-- Use the [partition](/azure/data-explorer/kusto/query/partitionoperator) KQL operator with the `shuffle` strategy to spread query processing over multiple cluster nodes, if present.
-- Use the [materialize()](/azure/data-explorer/kusto/query/materializefunction) function to persist an intermediate result set that is reused for calculating the top waits and for building the time series to be charted.
+- The [partition](/azure/data-explorer/kusto/query/partitionoperator) KQL operator with the `shuffle` strategy to spread query processing over multiple cluster nodes, if present.
+- The [materialize()](/azure/data-explorer/kusto/query/materializefunction) function to persist an intermediate result set that is reused for calculating the top waits and for building the time series to be charted.
 
 # [SQL database](#tab/sqldb)
 
@@ -995,7 +995,7 @@ ORDER BY LOWER(managed_instance_name) ASC,
 
 ---
 
-### Use T-SQL to query runtime statistics
+### Use T-SQL to view query runtime statistics
 
 This query returns the top resource consuming queries across your Azure SQL estate. Change the `@TopQueriesBy` variable to find top queries by any [Query Store](/sql/relational-databases/performance/monitoring-performance-by-using-the-query-store) metric, including CPU time, elapsed time, execution count, etc. You can also set variables to filter by a time interval, query execution type, and query hash of a specific query, or to focus on databases from a specific logical server, elastic pool, or SQL managed instance.
 

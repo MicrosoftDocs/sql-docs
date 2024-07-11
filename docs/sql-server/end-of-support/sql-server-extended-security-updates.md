@@ -44,25 +44,16 @@ The method of receiving Extended Security Updates depends on where your [!INCLUD
 
 ### Azure
 
-If you migrate to an Azure service (for more information, see the [Overview](#overview) section), you'll have access to ESUs for [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)] and [!INCLUDE [ssSQL14](../../includes/sssql14-md.md)] for up to three years after the end of support, at **no additional charge** above the cost of running the Azure service.
+On Azure, services have access to ESUs for [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)] and [!INCLUDE [ssSQL14](../../includes/sssql14-md.md)] for up to three years after the end of support, at **no additional charge** above the cost of running the Azure service.
 
-Azure services running [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] receive ESUs automatically through existing [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] update channels or Windows Update. You don't need to install the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] IaaS Agent extension to download ESU patches on an Azure SQL Virtual Machine.
+To configure Azure services to receive ESUs, review the documentation for the specific service:
 
-Services include:
-
-- SQL Server on Azure VMs
-- Azure VMware Solution (AVS)
+- [SQL Server on Azure VMs](/azure/azure-sql/virtual-machines/windows/sql-server-iaas-agent-extension-automate-management#feature-benefits)
+- [Azure VMware Solution (AVS)](/azure/azure-vmware/extended-security-updates-windows-sql-server)
 - Azure Stack Hub
-- Azure Stack HCI
+- [Azure Stack HCI](/azure-stack/hci/manage/azure-benefits?#enable-azure-benefits)
 
 ### On-premises or hosted environments
-
-If you deploy your SQL Server instances to an Azure service, you can access ESUs for [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)] and [!INCLUDE [ssSQL14](../../includes/sssql14-md.md)] for up to three years after the end of support, at no additional charge above the cost of running the Azure service. This applies to SQL Server on Azure VMs, Azure VMware Solution, Azure Stack Hub, or Azure Stack HCI.
-
-> [!NOTE]  
-> Azure Stack HCI customers must [enable Azure benefits](/azure-stack/hci/manage/azure-benefits?#enable-azure-benefits) to receive free ESUs.
-
-To configure ESUs in Azure VMware Solution, review [ESUs for SQL Server and Windows Server in Azure VMware Solution VMs](/azure/azure-vmware/extended-security-updates-windows-sql-server).
 
 In all other cases, you can purchase Extended Security Updates if you qualify. To qualify for receiving Extended Security Updates (ESU), you must have Software Assurance under one of the following agreements:
 

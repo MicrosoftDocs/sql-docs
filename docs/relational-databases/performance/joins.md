@@ -3,7 +3,7 @@ title: "Joins (SQL Server)"
 description: Learn about the types of join operations that SQL Server employs. SQL Server supports vertical table partitioning, or columnar storage, using join operations.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: 07/13/2023
+ms.date: 07/11/2024
 ms.service: sql
 ms.subservice: performance
 ms.topic: conceptual
@@ -63,7 +63,11 @@ Specifying the join conditions in the `FROM` clause helps separate them from any
 FROM first_table < join_type > second_table [ ON ( join_condition ) ]
 ```
 
-The *join_type* specifies what kind of join is performed: an inner, outer, or cross join. *join_condition* defines the predicate to be evaluated for each pair of joined rows. The following is an example of a `FROM` clause join specification:
+- The *join_type* specifies what kind of join is performed: an inner, outer, or cross join.
+    - For explanations of the different types of joins, see [FROM clause](../../t-sql/queries/from-transact-sql.md#arguments).
+- The *join_condition* defines the predicate to be evaluated for each pair of joined rows.
+
+The following is an example of a `FROM` clause join specification:
 
 ```sql
 FROM Purchasing.ProductVendor INNER JOIN Purchasing.Vendor

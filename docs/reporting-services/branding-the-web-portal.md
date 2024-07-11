@@ -182,7 +182,7 @@ The `theme` object is broken down into the following properties:
 |Panel Background/Foreground/Accent|Colors for panels.|
 |Table Accents|Accent colors for tables.|
 
-## `colors.json` example
+#### `colors.json` example
 
 ```json
 {

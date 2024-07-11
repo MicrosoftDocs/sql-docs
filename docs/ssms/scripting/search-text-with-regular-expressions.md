@@ -7,7 +7,7 @@ ms.reviewer: randolphwest
 ms.date: 07/11/2024
 ms.service: sql
 ms.subservice: ssms
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
   - "vswildcardsbuilder"
   - "vsregexbuilder"
@@ -24,17 +24,25 @@ helpviewer_keywords:
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
-# Search text with regular expressions
+# How to search text with regular expressions
 
 [!INCLUDE [SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 The following regular expressions can replace characters or digits in the **Find what** field of the [!INCLUDE [ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **Find and Replace** dialog box.
 
-## Search using regular expressions
+## Prerequisites
 
-1. To enable the use of regular expressions in the **Find what** field during **Quick Find**, **Find in Files**, **Quick Replace**, or **Replace in Files** operations, select the **Use** option under **Find Options** and then choose **Use Regular Expressions**.
+- [Download SSMS](../download-sql-server-management-studio-ssms.md)
 
-1. The **Expression Builder** button next to the **Find what** field then becomes available. Select this button to display a list of the available regular expressions. When you choose any item from the **Expression Builder**, it's inserted into the **Find what** string.
+## How to enable regular expressions
+
+Here are steps to enable regular expressions in search.
+
+1. Go to **Edit** > **Find and Replace** > **Quick Find**.
+1. Next to the search bar select the *down arrow* > **Find in Files**.
+1. In the **Find and Replace** window expand **Find options** and select **Use Regular Expressions**.
+
+The **Expression Builder** button next to the **Find what** field then becomes available. Select this button to display a list of the available regular expressions. When you choose any item from the **Expression Builder**, it's inserted into the **Find what** string.
 
 The following table describes some of the regular expressions in the **Expression Builder**.
 

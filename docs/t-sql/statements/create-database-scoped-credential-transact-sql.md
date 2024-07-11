@@ -3,7 +3,7 @@ title: "CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)"
 description: CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
-ms.date: 01/18/2024
+ms.date: 07/11/2024
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference

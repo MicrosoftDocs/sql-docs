@@ -77,9 +77,9 @@ $result | Format-Table -Property ExtensionHealth, LastUpdloadTimestamp, LastUplo
 
 To identify possible specific problems, review the value in the **Message** column from the results.
 
-## Identify unhealthy extension history
+## Identify extensions missing updates
 
-This example identify when a possibly crashed extension was last healthy.
+Identify extensions that have not updated status recently. This query returns a list of Azure extensions for SQL Server ordered by the number of days since the extension last updated its status. A value of '-1' indicates that the extension has crashed and there is a callstack in the extension status.
 
 ```kusto
 // Show the timestamp extracted
@@ -98,7 +98,7 @@ resources
 | order by ['agentHeartbeatLagInDays'] asc
 ```
 
-This example groups unhealthy extensions by timestamp.
+This query returns a count of extensions grouped by the number of days since the extension last updated its status. A value of '-1' indicates that the extension has crashed and there is a callstack in the extension status.
 
 ```kusto
 // Aggregate by timestamp

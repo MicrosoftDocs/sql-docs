@@ -47,8 +47,6 @@ Let's understand both the inner and outer loop in detail:
 
 To streamline the local development experience, several tools and extensions are available. The following table provides a high-level overview of these options, each tailored for different aspects of the development lifecycle.
 
-Here's the markdown source code for the table:
-
 | Tool/Extension | Description | Compatible with |
 |--|--|--|
 | [**Azure SQL Database Dev Container Templates**](https://aka.ms/azuresql-devcontainers) | Provides preconfigured development environments, eliminating manual setup and ensuring consistency. Supports multiple popular languages. | [Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)<br>[GitHub Codespaces](https://docs.github.com/en/codespaces/setting-up-your-project-for-codespaces/adding-a-dev-container-configuration/introduction-to-dev-containers) |

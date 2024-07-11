@@ -39,11 +39,11 @@ Before you begin, ensure you have the following installed on your local machine:
 
     This process sets up the environment based on the chosen configuration and ensures that all required tools and dependencies are included. So, the build process may take a few minutes, especially the first time, as it downloads and configures everything.
 
-:::image type="content" source="media/local-dev-experience-dev-containers-quickstart/vscode-azure-sql-devcontainers-build.png" border="false" alt-text="Dev Container creating log" lightbox="media/local-dev-experience-dev-container/azure-sql-db-dev-containers.png":::
+    :::image type="content" source="media/local-dev-experience-dev-containers-quickstart/vscode-azure-sql-devcontainers-build.png" border="false" alt-text="Dev Container creating log" lightbox="media/local-dev-experience-dev-container/azure-sql-db-dev-containers.png":::
 
     Visual Studio Code will build the container based on the selected configuration. The build process might take a few minutes the first time.
 
-:::image type="content" source="media/local-dev-experience-dev-containers-quickstart/vscode-azure-sql-devcontainers-features.png" border="false" alt-text="Dev Container creating log - MSSSQL feature" lightbox="media/local-dev-experience-dev-container/azure-sql-db-dev-containers.png":::
+    :::image type="content" source="media/local-dev-experience-dev-containers-quickstart/vscode-azure-sql-devcontainers-features.png" border="false" alt-text="Dev Container creating log - MSSSQL feature" lightbox="media/local-dev-experience-dev-container/azure-sql-db-dev-containers.png":::
 
 5. Once the dev container is built, you can start exploring and verifying the setup. Open a terminal within Visual Studio Code to check that all necessary tools are installed and working correctly.
 :::image type="content" source="media/local-dev-experience-dev-containers-quickstart/vscode-azure-sql-devcontainers-terminal.png" border="false" alt-text="Dev Container verification" lightbox="media/local-dev-experience-dev-container/azure-sql-db-dev-containers.png":::
@@ -69,37 +69,13 @@ Before you begin, ensure you have the following installed on your local machine:
         node --version     
         ```
 
-    - For .NET projects, verify the build and restore process:
-
-        ```bash
-        # Restore NuGet packages
-        dotnet restore
-
-        # Build the project    
-        dotnet build      
-        ```
-
-    - For Python projects, verify the virtual environment setup:
-
-        ```bash
-        # Verify installed Python packages
-        pip list   
-        ```
-
-    - For Node.js projects, verify package installations:
-
-        ```bash
-        # Verify installed Node.js packages
-        npm list   
-        ```
-
 7. As an optional step, you can also run predefined tasks directly from the command palette, streamlining your development workflow and allowing you to focus on writing code.
 
-:::image type="content" source="media/local-dev-experience-dev-containers-quickstart/vscode-azure-sql-devcontainers-tasks.png" border="false" alt-text="Dev Container run a VS Code task" lightbox="media/local-dev-experience-dev-container/azure-sql-db-dev-containers.png":::
-
-:::image type="content" source="media/local-dev-experience-dev-containers-quickstart/vscode-azure-sql-devcontainers-task-list.png" border="false" alt-text="List of VS Code tasks" lightbox="media/local-dev-experience-dev-container/azure-sql-db-dev-containers.png":::
-
-For more information about a specific template, see [Azure SQL Database Dev Container templates](./local-dev-experience-dev-containers.md).
+    :::image type="content" source="media/local-dev-experience-dev-containers-quickstart/vscode-azure-sql-devcontainers-tasks.png" border="false" alt-text="Dev Container run a VS Code task" lightbox="media/local-dev-experience-dev-container/azure-sql-db-dev-containers.png":::
+    
+    :::image type="content" source="media/local-dev-experience-dev-containers-quickstart/vscode-azure-sql-devcontainers-task-list.png" border="false" alt-text="List of VS Code tasks" lightbox="media/local-dev-experience-dev-container/azure-sql-db-dev-containers.png":::
+    
+For more information about a specific template, see [GitHub - azuresql-devcontainers](https://aka.ms/azuresql-devcontainers-repo).
 
 ## Related content
 

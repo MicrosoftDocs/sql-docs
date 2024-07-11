@@ -49,7 +49,6 @@ The **Always-up-to-date** update policy configures your instance to receive all 
 When using the **Always-up-to-date** update policy, consider the following:
 
 - You're able to use all the new features and benefits available to Azure SQL Managed Instance. 
-- The **Always-up-to-date** update policy is only available to instances within subnets that have enabled the [November 2022 feature wave](november-2022-feature-wave-enroll.md). 
 - Once the **Always-up-to-date** policy is enabled, you can't go back to the **SQL Server 2022** update policy.
 - You lose some of the benefits provided by database format alignment with SQL Server 2022, such as the ability to restore your database to SQL Server 2022, and bidirectional failover between your instance and SQL Server 2022 with the [link](managed-instance-link-disaster-recovery.md) feature. 
 

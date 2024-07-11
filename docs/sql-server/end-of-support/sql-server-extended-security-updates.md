@@ -44,7 +44,7 @@ The method of receiving Extended Security Updates depends on where your [!INCLUD
 
 ### Azure
 
-Services on Azure have access to ESUs for [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)] and [!INCLUDE [ssSQL14](../../includes/sssql14-md.md)] for up to three years after the end of support, at **no additional charge** above the cost of running the Azure service.
+On Azure, services have access to ESUs for [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)] and [!INCLUDE [ssSQL14](../../includes/sssql14-md.md)] for up to three years after the end of support, at **no additional charge** above the cost of running the Azure service.
 
 To configure Azure services to receive ESUs, review the documentation for the specific service:
 

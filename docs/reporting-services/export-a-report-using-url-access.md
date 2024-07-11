@@ -1,6 +1,6 @@
 ---
 title: "Export a report by using URL access"
-description: "Learn how to export a report from SQL Server Reporting Services (SSRS) by using URL access and the rs:Format URL parameter."
+description: "Learn how to export a report from SQL Server Reporting Services (SSRS) in different formats by using URL access."
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 07/12/2024
@@ -55,7 +55,7 @@ https://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freport
 
 ## Valid values for the `rs:Format` parameter
 
-The rs:Format parameter accepts the following common values based on the report rendering extensions installed on the report server:
+The `rs:Format` parameter accepts the following common values based on the report rendering extensions installed on the report server:
 
 - HTML4.0
 - HTML5
@@ -70,7 +70,7 @@ The rs:Format parameter accepts the following common values based on the report 
 
 If a specified rendering extension isn't installed on the report server, an error displays in the browser.  
   
-If you don't include the *Format* parameter as part of the URL, the report server detects the browser and renders the report in the appropriate HTML format.  
+If you don't include the `rs:Format` parameter as part of the URL, the report server detects the browser and renders the report in the appropriate HTML format.  
   
 ## Related content
 

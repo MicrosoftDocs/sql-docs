@@ -4,7 +4,7 @@ titleSuffix: Azure SQL Database & SQL Managed Instance
 description: A detailed description of SQL monitoring data collected by database watcher
 author: dimitri-furman
 ms.author: dfurman
-ms.date: 04/26/2024
+ms.date: 07/10/2024
 ms.service: sql-db-mi
 ms.subservice: monitoring
 ms.topic: conceptual

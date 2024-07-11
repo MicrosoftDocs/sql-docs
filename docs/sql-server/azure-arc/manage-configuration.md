@@ -93,16 +93,19 @@ Choose one of the license types. See [License types](manage-license-billing.md#l
 Select this checkbox if you're configuring a virtual machine, and you're using the unlimited virtualization benefit for licensing the SQL Server software or for your SQL subscription. It will set the Host configuration property `UsePhysicalCoreLicense` to `True`. If selected, the p-core license takes precedence, and the SQL Server software costs will be nullified.
 
 > [!IMPORTANT]
-> If the physical core license is configured with a pay-as-you-go billing plan, the selected **License type** should be set as pay-as-you-go. This will not trigger additional charges at the VM level, but it will ensure the uninterrupted licensing and billing in an event of the p-core license's de-activation or deletion. 
+> If the physical core license is configured with a pay-as-you-go billing plan, the selected **License type** should be set as **Pay-as-you-go**. This won't trigger additional charges at the VM level, but it will ensure the uninterrupted licensing and billing if the p-core license is deactivated or deleted. 
 #### <a id="subscribe-esu"></a> Subscribe to Extended Security Updates
 
-This section allows you to subscribe to Extended Security Updates (ESU) for the individual host. To qualify for ESU subscription, the host must have **License type** set to **Pay-as-you-go** or **License with Software assurance**. This option allows you to subscribe using vCPUs (v-cores) when the host is a virtual machine, or physical cores when the host is a physical server running without using virtual machines. Select **Subscribe to Extended Security Updates**. It will set the Host configuration property `EnabelExtendedSecurityUpdates` to `True`. The subscription will be activated after you click **Save**.
+This section allows you to subscribe to Extended Security Updates (ESU) for the individual host. To qualify for ESU subscription, the host must have **License type** set to **Pay-as-you-go** or **License with Software assurance**. This option allows you to subscribe using vCPUs (v-cores) when the host is a virtual machine, or physical cores when the host is a physical server running without using virtual machines. 
+
+Select **Subscribe to Extended Security Updates**. It will set the Host configuration property `EnabelExtendedSecurityUpdates` to `True`. The subscription will be activated after you click **Save**.
 
 For more information about ESU licensing options, see [Subscribe to Extended Security Updates in production environment](extended-security-updates.md#subscribe-to-extended-security-updates-in-production-environment). 
 
 > [!NOTE]
-- Unlike the p-core ESU license, when subscribing to ESU for a host you don't need to define the number of billable cores for each machine. Azure extension for SQL Server detects the size and type of the host (virtual or physical), SQL Server edition, and bills according to these parameters.
+- Unlike the p-core ESU license, when subscribing to ESU for a host, you don't need to define the number of billable cores for each machine. Azure extension for SQL Server detects the size and type of the host (virtual or physical), SQL Server edition, and bills according to these parameters.
 > - Once ESU is enabled, **License Type** of the host cannot be changed to **License only** until the ESU subscription is canceled.
+
 #### <a id="use-physical-core-esu-license"></a> Use physical core ESU license
 
 Select this checkbox if you're configuring a virtual machine, and you're using the unlimited virtualization benefit when enabling the ESU subscription. It sets `UseEsuPhysicalCoreLicense` to `true`. If selected, the p-core license takes precedence, and the SQL Server ESU charges at the VM level will be nullified.
@@ -699,5 +702,4 @@ resources
 - [Install SQL Server 2022 using the pay-as-you-go activation option](../../database-engine/install-windows/install-sql-server.md)
 - [What are Extended Security Updates for SQL Server?](../end-of-support/sql-server-extended-security-updates.md)
 - [Frequently asked questions](faq.yml#billing)
-
 - [Configure automatic updates for SQL Server instances enabled for Azure Arc](update.md)

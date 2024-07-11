@@ -15,7 +15,7 @@ ms.custom: updatefrequency5
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirs](../includes/ssrs-appliesto-pbirs.md)]
 
-Learn how to customize the appearance of your SQL Server Reporting Services (SSRS) or Power BI Report Server web portal by creating and applying a brand package. A brand package allows you to change the web portal's appearance to match your business's branding. It includes colors, logos, and other styling elements packaged into a zip file. This package is then uploaded to the web portal to apply the custom branding.
+Learn how to customize the appearance of your SQL Server Reporting Services (SSRS) or Power BI Report Server web portal by creating and applying a brand package. A brand package allows you to change the web portal's appearance to match your business's branding. It includes colors, logos, and other styling elements packaged into a zip file. Then you upload the brand package to the web portal to apply the custom branding.
 
 > [!VIDEO https://www.youtube-nocookie.com/embed/m08kLuofwFA]
 
@@ -33,7 +33,7 @@ Start by naming the files in your brand package as follows:
 
 - `metadata.xml`
 - `colors.json`
-- `logo.png` (optional)
+- `logo.png` (optional file)
 
  The zip file can be named anything you like.
 
@@ -147,14 +147,14 @@ When processed, the LESS variables map to the corresponding values in the `color
 
 All of the primary buttons then render dark green with white text.
 
-#### Categories in `colors.json`
+#### Objects in `colors.json`
 
-The `colors.json` file includes two main categories:
+The `colors.json` file includes two main objects:
 
-- **Interface**: Items specific to the web portal.
-- **Theme**: Items specific to the mobile reports that you create.
+- **Interface**: Properties specific to the web portal.
+- **Theme**: Properties specific to the mobile reports that you create.
 
-The interface section is broken down into the following groupings:
+The `interface` object is broken down into the following properties:
 
 |Section|Description|
 |---|---|
@@ -166,7 +166,7 @@ The interface section is broken down into the following groupings:
 |Danger/Warning/Success messages|Colors for those messages.|
 |KPI|Controls the colors for a good (1), neutral (0), neutral (-1), and none.|
 
-The theme section is broken down into the following groupings:
+The `theme` object is broken down into the following properties:
 
 |Section|Description|
 |---|---|

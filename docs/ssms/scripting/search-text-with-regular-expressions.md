@@ -74,7 +74,7 @@ You want to find all SELECT statements in your SQL scripts.
   SELECT\s+.*\s+FROM
   ```
 
-#### Explanation example 1
+#### Explanation for example 1
 
 - SELECT\s+: Matches the word "SELECT" followed by one or more whitespace characters.
 - .*: Matches any character (except for line terminators) zero or more times.
@@ -88,7 +88,7 @@ You want to find all stored procedures that start with "usp_" in your SQL script
   CREATE\s+PROCEDURE\s+usp_[A-Za-z0-9_]+
   ```
 
-#### Explanation example 2
+#### Explanation for example 2
 
 - CREATE\s+PROCEDURE\s+: Matches the words "CREATE PROCEDURE" followed by one or more whitespace characters.
 - usp_: Matches the literal string "usp_".
@@ -102,7 +102,7 @@ You want to identify all single-line comments (starting with --) in your SQL scr
   --.*
   ```
 
-#### Explanation example 3
+#### Explanation for example 3
 
 - --: Matches the literal string "--".
 - .*: Matches any character (except for line terminators) zero or more times.
@@ -115,7 +115,7 @@ You want to find all the UPDATE statements in your SQL scripts.
   UPDATE\s+.*\s+SET
   ```
 
-#### Explanation example 4
+#### Explanation for example 4
 
 - UPDATE\s+: Matches the word "UPDATE" followed by one or more whitespace characters.
 - .*: Matches any character (except for line terminators) zero or more times.
@@ -129,7 +129,7 @@ You want to extract table names from CREATE TABLE statements in your SQL scripts
 CREATE\s+TABLE\s+(\w+)
 ```
 
-#### Explanation example 5
+#### Explanation for example 5
 
 - CREATE\s+TABLE\s+: Matches the words "CREATE TABLE" followed by one or more whitespace characters.
 - (\w+): Matches one or more word characters (alphanumeric and underscore) and captures them for extraction.

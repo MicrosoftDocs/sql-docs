@@ -67,14 +67,14 @@ FROM first_table < join_type > second_table [ ON ( join_condition ) ]
 - The *join_type* specifies what kind of join is performed: an inner, outer, or cross join. For explanations of the different types of joins, see [FROM clause](../../t-sql/queries/from-transact-sql.md#arguments).
 - The *join_condition* defines the predicate to be evaluated for each pair of joined rows.
 
-The following is an example of a `FROM` clause join specification:
+The following code is an example of a `FROM` clause join specification:
 
 ```sql
 FROM Purchasing.ProductVendor INNER JOIN Purchasing.Vendor
      ON ( ProductVendor.BusinessEntityID = Vendor.BusinessEntityID )
 ```
 
-The following is a simple `SELECT` statement using this join:
+The following code is a simple `SELECT` statement using this join:
 
 ```sql
 SELECT ProductID, Purchasing.Vendor.BusinessEntityID, Name
@@ -89,7 +89,7 @@ The `SELECT` statement returns the product and supplier information for any comb
 
 When multiple tables are referenced in a single query, all column references must be unambiguous. In the previous example, both the `ProductVendor` and `Vendor` table have a column named `BusinessEntityID`. Any column name that is duplicated between two or more tables referenced in the query must be qualified with the table name. All references to the `Vendor` columns in the example are qualified.   
 
-When a column name is not duplicated in two or more tables used in the query, references to it do not have to be qualified with the table name. This is shown in the previous example. Such a `SELECT` clause is sometimes difficult to understand because there is nothing to indicate the table that provided each column. The readability of the query is improved if all columns are qualified with their table names. The readability is further improved if table aliases are used, especially when the table names themselves must be qualified with the database and owner names. The following is the same example, except that table aliases have been assigned and the columns qualified with table aliases to improve readability:
+When a column name is not duplicated in two or more tables used in the query, references to it do not have to be qualified with the table name. This is shown in the previous example. Such a `SELECT` clause is sometimes difficult to understand because there is nothing to indicate the table that provided each column. The readability of the query is improved if all columns are qualified with their table names. The readability is further improved if table aliases are used, especially when the table names themselves must be qualified with the database and owner names. The following code is the same example, except that table aliases have been assigned and the columns qualified with table aliases to improve readability:
 
 ```sql
 SELECT pv.ProductID, v.BusinessEntityID, v.Name

@@ -77,7 +77,7 @@ Attempt a connection using the listed values.
 
 ### Options
 
-Select to hide the **Connection Properties** and **[Additional Connection Parameters](connect-to-server-additional-connection-parameters-page-database-engine.md)** tabs and view the **Login** tab.
+Select to hide the **[Connection Properties](/dotnet/api/microsoft.data.sqlclient.sqlconnection.connectionstring)** and **[Additional Connection Parameters](connect-to-server-additional-connection-parameters-page-database-engine.md)** tabs and view the **Login** tab.
 
 ### Test
 

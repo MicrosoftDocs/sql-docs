@@ -82,7 +82,7 @@ Ensure the SQL Server built-in login NT AUTHORITY\SYSTEM is a member of the SQL 
 
 If this isn't allowed, you can configure a least privilege account for the Azure extension for SQL Server service on your SQL Server machine. Least privilege account is available for preview.
 
-To configure your server, follow the steps in [Operate SQL Server enabled by Azure Arc with least privilege (preview)](configure-least-privilege.md).
+To configure your server, follow the steps in [Operate SQL Server enabled by Azure Arc with least privilege](configure-least-privilege.md).
 
 ### Azure Monitor Agent upload failed
 

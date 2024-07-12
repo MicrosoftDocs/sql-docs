@@ -3,7 +3,7 @@ title: Expression examples in Report Builder paginated reports
 description: Learn how to control content and paginated report appearance using built-in functions, custom code, report and group variables, and user-defined variables in Report Builder.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 07/09/2024
+ms.date: 07/12/2024
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: conceptual
@@ -51,17 +51,17 @@ To learn how to write expressions that use many of the functions and operators a
 
 ## Functions  
 
-Many expressions in a report contain functions. You can format data, apply logic, and access report metadata by using these functions. You can write expressions that use functions from the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[visual-basic](../../includes/visual-basic-md.md)] run-time library, and from the <xref:System.Convert> and <xref:System.Math> namespaces. You can add references to functions from other assemblies or custom code. You can also use classes from the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], including <xref:System.Text.RegularExpressions>.  
+Many expressions in a report contain functions. You can format data, apply logic, and access report metadata by using these functions. You can write expressions that use functions from the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[visual-basic](../../includes/visual-basic-md.md)] run-time library and from the <xref:System.Convert> and <xref:System.Math> namespaces. You can add references to functions from other assemblies or custom code. You can also use classes from the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], including <xref:System.Text.RegularExpressions>.  
   
 ## <a name="VisualBasicFunctions"></a> Visual Basic functions  
 
-You can use [!INCLUDE[visual-basic](../../includes/visual-basic-md.md)] functions to manipulate the data that displays in text boxes or you use for parameters, properties, or other areas of the report. This section provides examples demonstrating some of these functions. For more information, see [Visual Basic runtime library members](/dotnet/visual-basic/language-reference/runtime-library-members).  
+You can use [!INCLUDE[visual-basic](../../includes/visual-basic-md.md)] functions to manipulate the data that displays in text boxes or your parameters, properties, or other areas of your report. This section provides examples demonstrating some of these functions. For more information, see [Visual Basic runtime library members](/dotnet/visual-basic/language-reference/runtime-library-members).  
   
 The [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] provides many custom format options, for example, for specific date formats.
   
-### Math munctions  
+### Math functions  
   
-- The **Round** function is useful to round numbers to the nearest integer. The following expression rounds a 1.3 to 1:  
+- The **Round** function is useful to round numbers to the nearest integer. The following expression rounds 1.3 to 1:  
   
     ``` basic
     = Round(1.3)  
@@ -106,7 +106,7 @@ The [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] provides many cust
     =DateAdd(DateInterval.Month, 6, Parameters!StartDate.Value)  
     ```  
   
-- The **Year** function displays the year for a particular date. You can use this function to group dates together or to display the year as a label for a set of dates. This expression provides the year for a given group of sales order dates. The **Month** function and other functions can also be used to manipulate dates. For more information, see the [!INCLUDE[visual-basic](../../includes/visual-basic-md.md)] documentation.  
+- The **Year** function displays the year for a particular date. You can use this function to group dates together or to display the year as a label for a set of dates. This expression provides the year for a given group of sales order dates. The **Month** function and other functions can also be used to manipulate dates. For more information, see the [!INCLUDE[visual-basic](../../includes/visual-basic-md.md)](/dotnet/visual-basic/) documentation:
   
     ``` basic
     =Year(Fields!OrderDate.Value)  
@@ -212,7 +212,7 @@ The [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] provides many cust
     = Join(Parameters!MySelection.Value)  
     ```  
   
-    The following example does the same as the previous example and displays a text string before the list of selected values.  
+    The following example does the same as the previous example and displays a text string before the list of selected values:
   
     ``` basic
     ="Report for " & JOIN(Parameters!MySelection.Value, " & ")  
@@ -327,7 +327,7 @@ In an expression, you can add a reference to more report functions that manipula
     =Sum(Fields!LineTotal.Value, "Order")  
     ```  
   
-- You can also use the **Sum** function for conditional aggregate calculations. For example, imagine you have a dataset has a field named **State** with possible values Not Started, Started, Finished. The following expression, when placed in a group header, calculates the aggregate sum for only the value Finished:  
+- You can also use the **Sum** function for conditional aggregate calculations. For example, imagine you have a dataset that has a field named **State** with possible values Not Started, Started, and Finished. The following expression, when placed in a group header, calculates the aggregate sum for only the value Finished:  
   
     ``` basic
     =Sum(IIF(Fields!State.Value = "Finished", 1, 0))  
@@ -335,9 +335,9 @@ In an expression, you can add a reference to more report functions that manipula
   
 ### <a name="RowNumber"></a> RowNumber  
   
-- The **RowNumber** function, when used in a text box within a data region, displays the row number for each instance of the text box in which the expression appears. This function can be useful to number rows in a table. It can also be useful for more complex tasks, such as providing page breaks based on number of rows. For more information, see [Page Breaks](#PageBreaks).  
+- The **RowNumber** function, when used in a text box within a data region, displays the row number for each instance of the text box in which the expression appears. This function can be useful to number rows in a table. It can also be useful for more complex tasks, such as providing page breaks based on number of rows. For more information, see [Page breaks](#PageBreaks).  
   
-    The scope you specify for **RowNumber** controls when renumbering begins. The **Nothing** keyword indicates that the function starts counting at the first row in the outermost data region. To start counting within nested data regions, use the name of the data region. To start counting within a group, use the name of the group.  
+    The scope you specify for **RowNumber** controls when renumbering begins. The **Nothing** keyword indicates that the function starts counting at the first row in the outermost data region. To start counting within nested data regions, use the name of the data region. To start counting within a group, use the name of the group:
   
     ``` basic
     =RowNumber(Nothing)  
@@ -527,7 +527,7 @@ To avoid this condition, use one of the following strategies:
     =IIF(Field!B.Value=0, 0, Field!A.Value / IIF(Field!B.Value =0, 1, Field!B.Value))  
     ```  
   
-- Use a custom code function to return the value for the expression. The following example returns the percentage difference between a current value and a previous value. This value can be used to calculate the difference between any two successive values. It handles the edge case of the first comparison when there's no previous value, and it works in cases whether either the previous value or the current value is a null value, called **Nothing** in [!INCLUDE[visual-basic](../../includes/visual-basic-md.md)].  
+- Use a custom code function to return the value for the expression. The following example returns the percentage difference between a current value and a previous value. This value can be used to calculate the difference between any two successive values. It handles the edge case of the first comparison when there's no previous value, and it works in cases whether either the previous value or the current value is a null value, called **Nothing** in [!INCLUDE[visual-basic](../../includes/visual-basic-md.md)]:
   
     ``` basic
     Public Function GetDeltaPercentage(ByVal PreviousValue, ByVal CurrentValue) As Object  

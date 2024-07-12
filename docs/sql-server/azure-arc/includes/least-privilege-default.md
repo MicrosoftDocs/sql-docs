@@ -7,8 +7,7 @@ ms.author: mikeray
 ---
 
 Beginning with the August 2024 release, any extensions deployed via auto-onboarding will automatically have the least privilege configuration.
-Least privileged configuration will be applied to already installed extensions.
 
-To prevent automatic application of least privilege, block extension upgrades to version 1.1.2717.190 or later.
+Existing servers with extension `1.1.2717.190` (June 2024) or later will have least privileged configuration automatically applied. This application will happen gradually.
 
-Beginning with the August 2024 release, the agent will automatically have the least privilege configuration.
+To prevent automatic application of least privilege, block extension upgrades to version `1.1.2717.190` or later.

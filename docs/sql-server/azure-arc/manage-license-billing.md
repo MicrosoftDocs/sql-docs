@@ -181,7 +181,7 @@ SQL Server Developer Edition is free and can be used in any Azure subscription. 
 
 ### Use Azure dev/test subscription
 
-If you configure the non-production environment as a mirror of the production environment, and want to use the same editions as in production, you must connect the hosting machines and SQL Server instances to an Azure dev/test subscription. The production SQL Server meters are enabled to support the dev/test subscriptions and will be nullified. For information on how to create a dev/test subscription on Azure, see [Creating Enterprise and Organization Azure Dev/Test Subscriptions](/azure/devtest/offer/quickstart-create-enterprise-devtest-subscriptions).
+If you configure the non-production environment as a mirror of the production environment, and want to use the same editions as in production, you must connect the hosting machines and SQL Server instances to an Azure dev/test subscription. The SQL Server meters in a dev/test subscription will be nullified. For information on how to create a dev/test subscription on Azure, see [Creating Enterprise and Organization Azure Dev/Test Subscriptions](/azure/devtest/offer/quickstart-create-enterprise-devtest-subscriptions).
 
 For more information, see section *Licensing SQL Server for non-production use* in the [SQL Server Licensing Guide](https://go.microsoft.com/fwlink/p/?linkid=2215573).
 

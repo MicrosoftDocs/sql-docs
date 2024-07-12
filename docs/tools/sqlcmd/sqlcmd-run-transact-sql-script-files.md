@@ -63,6 +63,13 @@ A list of [!INCLUDE [ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)]
 
 No output is returned in the Command Prompt window. Instead, the output is sent to the EmpAdds.txt file. You can verify this output by opening the EmpAdds.txt file.
 
+## Output to Command Prompt window
+
+1. Open a command prompt window.
+2. In the Command Prompt window, type: `sqlcmd -S myServer\instanceName -U system_administrator_username -P password -i C:\myScript.sql -e`
+3. Press ENTER.
+
+
 ## Next steps
 
 - [Start the sqlcmd Utility](sqlcmd-start-utility.md)

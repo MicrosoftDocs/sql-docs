@@ -62769,6 +62769,16 @@
       "source_path": "docs/ssdt/how-to-clone-an-existing-database.md",
       "redirect_url": "/sql/t-sql/statements/create-table-as-clone-of-transact-sql",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssdt/how-to-create-test-conditions-for-the-sql-server-unit-test-designer.md",
+      "redirect_url": "/sql/t-sql/statements/download-sql-server-data-tools-ssdt",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssdt/how-to-create-a-test-project-for-sql-server-database-unit-testing.md",
+      "redirect_url": "/sql/t-sql/statements/download-sql-server-data-tools-ssdt",
+      "redirect_document_id": false
     }
   ]
 }

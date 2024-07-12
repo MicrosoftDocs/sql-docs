@@ -8539,8 +8539,6 @@ items:
           href: ssdt/how-to-view-and-edit-data-in-a-table.md
         - name: "How to: Delete Objects & Resolve Dependencies"
           href: ssdt/how-to-delete-objects-and-resolve-dependencies.md
-        - name: "How to: Clone an Existing Database"
-          href: ssdt/how-to-clone-an-existing-database.md
         - name: Extract, Publish, & Register .dacpac Files
           href: ssdt/extract-publish-and-register-dacpac-files.md
       - name: Compare & Synchronize Data in One or More Tables with Data in a Reference Database
@@ -8587,8 +8585,6 @@ items:
             href: ssdt/using-test-conditions-in-sql-server-unit-tests.md
           - name: Using T-SQL Assertions in SQL Server Unit Tests
             href: ssdt/using-transact-sql-assertions-in-sql-server-unit-tests.md
-          - name: "How to: Create a Test Project for SQL Server Database Unit Testing"
-            href: ssdt/how-to-create-a-test-project-for-sql-server-database-unit-testing.md
           - name: "How to: Create an Empty SQL Server Unit Test"
             href: ssdt/how-to-create-an-empty-sql-server-unit-test.md
           - name: "How to: Create SQL Server Unit Tests for Functions, Triggers, & Stored Procedures"
@@ -8621,8 +8617,6 @@ items:
         - name: Custom Test Conditions  for SQL Server Unit Tests
           href: ssdt/custom-test-conditions-for-sql-server-unit-tests.md
           items:
-          - name: "How to: Create Test Conditions for the SQL Server Unit Test Designer"
-            href: ssdt/how-to-create-test-conditions-for-the-sql-server-unit-test-designer.md
           - name: "Walkthrough: Using a Custom Test Condition to Verify the Results of a Stored Procedure"
             href: ssdt/walkthrough-use-custom-test-condition-to-verify-stored-procedure-results.md
           - name: "How to: Upgrade a Visual Studio 2010 Custom Test Condition from a Previous Release to SQL Server Data Tools"

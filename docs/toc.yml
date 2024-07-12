@@ -8539,8 +8539,6 @@ items:
           href: ssdt/how-to-view-and-edit-data-in-a-table.md
         - name: "How to: Delete Objects & Resolve Dependencies"
           href: ssdt/how-to-delete-objects-and-resolve-dependencies.md
-        - name: "How to: Clone an Existing Database"
-          href: ssdt/how-to-clone-an-existing-database.md
         - name: Extract, Publish, & Register .dacpac Files
           href: ssdt/extract-publish-and-register-dacpac-files.md
       - name: Compare & Synchronize Data in One or More Tables with Data in a Reference Database

@@ -62764,6 +62764,11 @@
       "source_path": "docs/connect/php/configuring-iis-for-php-sql-driver.md",
       "redirect_url": "/sql/connect/php/download-drivers-php-sql-server",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssdt/how-to-clone-an-existing-database.md",
+      "redirect_url": "/sql/t-sql/statements/create-table-as-clone-of-transact-sql",
+      "redirect_document_id": false
     }
   ]
 }

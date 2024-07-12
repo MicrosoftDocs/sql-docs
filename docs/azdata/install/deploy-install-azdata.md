@@ -33,6 +33,8 @@ To find your installed version and see if you need to update, run `azdata --vers
 
 [!INCLUDE [azdata-package-installation-remove-pip-install](../../includes/azdata-package-installation-remove-pip-install.md)]
 
+For a list of commands and more information, see [Azure Data CLI (azdata) reference](../reference/reference-azdata.md)
+
 ## Related content
 
 - [What are [!INCLUDE[big-data-clusters-2019](../../includes/ssbigdataclusters-ver15.md)]?](../../big-data-cluster/big-data-cluster-overview.md)

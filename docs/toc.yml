@@ -8682,7 +8682,9 @@ items:
       items:
       - name: SSMS Configuration
         href: ssms/tutorials/ssms-configuration.md
-      - name: Use other tips & tricks
+      - name: Import and export SSMS settings
+        href: ssms/tutorials/import-export-settings.md        
+      - name: SSMS tips & tricks
         href: ssms/tutorials/ssms-tricks.md
       - name: Script objects
         href: ssms/tutorials/scripting-ssms.md

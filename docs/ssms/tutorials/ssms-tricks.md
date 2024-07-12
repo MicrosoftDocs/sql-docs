@@ -1,9 +1,10 @@
 ---
 title: Tips and tricks using SSMS
 description: Learn to comment & uncomment code, indent text, filter objects, access error logs, & find SQL Server instance names with SQL Server Management Studio.
-author: markingmyname
-ms.author: maghan
-ms.date: 03/13/2018
+author: erinstellato-ms
+ms.author: erinstellato
+ms.reviewer: maghan, randolphwest
+ms.date: 07/12/2024
 ms.service: sql
 ms.subservice: ssms
 ms.topic: tutorial
@@ -20,9 +21,10 @@ helpviewer_keywords:
 
 # Tips and tricks for using SQL Server Management Studio (SSMS)
 
-This article gives you some tips and tricks for using SQL Server Management Studio (SSMS). This article shows you how to: 
+This article includes some tips and tricks for using SQL Server Management Studio (SSMS). This article shows you how to:
 
 > [!div class="checklist"]
+>
 > * Comment/uncomment your Transact-SQL (T-SQL) text
 > * Indent your text
 > * Filter objects in Object Explorer
@@ -31,11 +33,11 @@ This article gives you some tips and tricks for using SQL Server Management Stud
 
 ## Prerequisites
 
-To test out the steps provided in this article, you need SQL Server Management Studio, access to a SQL Server Database Engine, and an AdventureWorks database. 
+To test the steps provided in this article, you need SQL Server Management Studio, access to a SQL Server Database Engine, and an AdventureWorks database.
 
 * Install [SQL Server Management Studio](../download-sql-server-management-studio-ssms.md).
 * Install [[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
-* Download an [AdventureWorks sample database](https://github.com/Microsoft/sql-server-samples/releases). To learn how to restore a database in SSMS, see [Restoring a database](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md). 
+* Download an [AdventureWorks sample database](https://github.com/Microsoft/sql-server-samples/releases). To learn how to restore a database in SSMS, see [Restoring a database](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md).
 
 ## Comment/uncomment your T-SQL code
 
@@ -43,11 +45,11 @@ You can comment and uncomment portions of your text by using the **Comment** but
 
 1. Open SQL Server Management Studio.
 
-2. Connect to your SQL Server.
+1. Connect to your SQL Server.
 
-3. Open a New Query window.
+1. Open a New Query window.
 
-4. Paste the following [!INCLUDE[tsql](../../includes/tsql-md.md)] code in your text window.
+1. Paste the following [!INCLUDE[tsql](../../includes/tsql-md.md)] code in your text window.
 
     ```sql
     USE master
@@ -70,26 +72,26 @@ You can comment and uncomment portions of your text by using the **Comment** but
         GO
    ```
 
-5. Highlight the **Alter Database** portion of the text, and then select the **Comment** button on the toolbar: 
+1. Highlight the **Alter Database** portion of the text, and then select the **Comment** button on the toolbar:
 
     ![The Comment button](media/ssms-tricks/comment.png)
-6. Select **Execute** to run the uncommented portion of the text. 
+1. Select **Execute** to run the uncommented portion of the text.
 
-7. Highlight everything except for the **Alter Database** command, and then select the **Comment** button:
+1. Highlight everything except for the **Alter Database** command, and then select the **Comment** button:
 
     ![Comment everything](media/ssms-tricks/commenteverything.png)
 
     > [!NOTE]
     > The keyboard shortcut to comment text is **CTRL + K, CTRL + C**.
 
-8. Highlight the **Alter Database** portion of the text, and then select the **Uncomment** button to uncomment it:
+1. Highlight the **Alter Database** portion of the text, and then select the **Uncomment** button to uncomment it:
 
     ![Uncomment text](media/ssms-tricks/uncomment.png)
 
     > [!NOTE]
     > The keyboard shortcut to uncomment text is **CTRL + K, CTRL + U**.
 
-9. Select **Execute** to run the uncommented portion of the text.
+1. Select **Execute** to run the uncommented portion of the text.
 
 ## Indent your text
 
@@ -97,7 +99,7 @@ You can use the indentation buttons on the toolbar to increase or decrease the i
 
 1. Open a New Query window.
 
-2. Paste the following [!INCLUDE[tsql](../../includes/tsql-md.md)] code in your text window:
+1. Paste the following [!INCLUDE[tsql](../../includes/tsql-md.md)] code in your text window:
 
     ```sql
     USE master
@@ -105,10 +107,10 @@ You can use the indentation buttons on the toolbar to increase or decrease the i
 
       --Drop the database if it already exists
       IF  EXISTS (
-    	    SELECT name
-    		    FROM sys.databases
-    		    WHERE name = N'TutorialDB'
-              )
+         SELECT name
+         FROM sys.databases
+         WHERE name = N'TutorialDB'
+         )
 
       DROP DATABASE TutorialDB
       GO
@@ -120,11 +122,11 @@ You can use the indentation buttons on the toolbar to increase or decrease the i
       GO
     ```
 
-3. Highlight the **Alter Database** portion of the text, and then select the **Increase Indent** button on the toolbar to move this text forward:
+1. Highlight the **Alter Database** portion of the text, and then select the **Increase Indent** button on the toolbar to move this text forward:
 
     ![Increase the indent](media/ssms-tricks/increaseindent.png)
 
-4. Highlight the **Alter Database** portion of the text again, and then select the **Decrease Indent** button to move this text back.
+1. Highlight the **Alter Database** portion of the text again, and then select the **Decrease Indent** button to move this text back.
 
     ![Decrease the indent](media/ssms-tricks/decreaseindent.png)
 
@@ -134,14 +136,14 @@ In databases that have many objects, you can use filtering to search for specifi
 
 1. Connect to your SQL Server.
 
-2. Expand **Databases** > **AdventureWorks** > **Tables**. All the tables in the database appear.
+1. Expand **Databases** > **AdventureWorks** > **Tables**. All the tables in the database appear.
 
-3. Right-click **Tables**, and then select **Filter** > **Filter Settings**:
+1. Right-click **Tables**, and then select **Filter** > **Filter Settings**:
 
     ![Filter settings](media/ssms-tricks/filtersettings.png)
 
-4. In the **Filter Settings** window, you can modify some of the following filter settings:
-    * Filter by name: 
+1. In the **Filter Settings** window, you can modify some of the following filter settings:
+    * Filter by name:
 
       ![Filter by name](media/ssms-tricks/filterbyname.png)
 
@@ -149,21 +151,21 @@ In databases that have many objects, you can use filtering to search for specifi
 
       ![Filter by schema](media/ssms-tricks/filterbyschema.png)
 
-5. To clear the filter, right-click **Tables**, and then select **Remove Filter**.
+1. To clear the filter, right-click **Tables**, and then select **Remove Filter**.
 
     ![Remove filter](media/ssms-tricks/removefilter.png)
 
 ## Access your SQL Server error log
 
-The error log is a file that contains details about things that occur in your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance. You can browse and query the error login SSMS. The error log is a .log file that's located on your disk.
+The error log is a file that contains details about things that occur in your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance. You can browse and query the error login SSMS. The error log is a .log file that exists on disk.
 
 ### Open the error log in SSMS
 
 1. Connect to your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
 
-2. Expand **Management** > **SQL Server Logs**. 
+1. Expand **Management** > **SQL Server Logs**.
 
-3. Right-click the **Current** error log, and then select **View SQL Server Log**:
+1. Right-click the **Current** error log, and then select **View SQL Server Log**:
 
     ![View the error log in SSMS](media/ssms-tricks/viewerrorloginssms.png)
 
@@ -171,17 +173,17 @@ The error log is a file that contains details about things that occur in your [!
 
 1. Connect to your SQL Server.
 
-2. Open a New Query window.
+1. Open a New Query window.
 
-3. Paste the following [!INCLUDE[tsql](../../includes/tsql-md.md)] code in your query window:
+1. Paste the following [!INCLUDE[tsql](../../includes/tsql-md.md)] code in your query window:
 
      ```sql
        sp_readerrorlog 0,1,'Server process ID'
       ```
 
-4. Modify the text in the single quotes to text you want to search for.
+1. Modify the text in the single quotes to text you want to search for.
 
-5. Execute the query, and then review the results:
+1. Execute the query, and then review the results:
 
     ![Query the error log](media/ssms-tricks/queryerrorlog.png)
 
@@ -189,39 +191,39 @@ The error log is a file that contains details about things that occur in your [!
 
 1. Connect to your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
-2. Open a New Query window.
+1. Open a New Query window.
 
-3. Paste the following [!INCLUDE[tsql](../../includes/tsql-md.md)] code in your query window, and then select **Execute**:
+1. Paste the following [!INCLUDE[tsql](../../includes/tsql-md.md)] code in your query window, and then select **Execute**:
 
      ```sql
         SELECT SERVERPROPERTY('ErrorLogFileName') AS 'Error log file location'  
       ```
 
-4. The results show the location of the error log in the file system: 
+1. The results show the location of the error log in the file system: 
 
     ![Find the error log by query](media/ssms-tricks/finderrorlogquery.png)
 
 ### Find the error log location if you can't connect to SQL Server
 
-The path for your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log can vary depending on your configuration settings. The path for the error log location can be found in the startup parameters within the SQL Server Configuration Manager. Follow the steps below to locate the relevant startup parameter identifying the location of your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log. *Your path may vary from the path indicated below*.
+The path for your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log can vary depending on your configuration settings. The path for the error log location can be found in the startup parameters within the SQL Server Configuration Manager. Follow these steps to locate the relevant startup parameter identifying the location of your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log. *Your path may vary from the path indicated in the example*.
 
 1. Open SQL Server Configuration Manager.
 
-2. Expand **Services**.
+1. Expand **Services**.
 
-3. Right-click your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance, and then select **Properties**:
+1. Right-click your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance, and then select **Properties**:
 
     ![Configuration Manager server properties](media/ssms-tricks/serverproperties.PNG)
 
-4. Select the **Startup Parameters** tab.
+1. Select the **Startup Parameters** tab.
 
-5. In the **Existing Parameters** area, the path after "-e" is the location of the error log: 
+1. In the **Existing Parameters** area, the path after "-e" is the location of the error log:
 
     ![Error log](media/ssms-tricks/errorlog.png)
 
     There are several error log files in this location. The file name that ends with *log is the current error log file. File names that end with numbers are previous log files. A new log is created every time the SQL Server restarts.
 
-6. Open the errorlog.log file in Notepad.
+1. Open the errorlog.log file in Notepad.
 
 ## Find SQL Server instance name
 
@@ -231,11 +233,11 @@ You have a few options for finding the name of your SQL Server before and after 
 
 1. Follow the steps to locate the [SQL Server error log on disk](#find-the-error-log-location-if-you-cant-connect-to-sql-server). Your path may vary from the path in the image below.
 
-2. Open the errorlog.log file in Notepad.
+1. Open the errorlog.log file in Notepad.
 
-3. Search for the text *Server name is*.
+1. Search for the text *Server name is*.
 
-    Whatever is listed in the single quotes is the name of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance that you'll be connecting to:
+    The text listed in the single quotes is the name of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance to use in the connection:
 
     ![Find the server name in the error log](media/ssms-tricks/servernameinlog.png)
 
@@ -243,15 +245,15 @@ You have a few options for finding the name of your SQL Server before and after 
 
 ### When you're connected to SQL Server
 
-When you're connected to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you can find the server name in three locations: 
+When you're connected to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you can find the server name in three locations:
 
 1. The name of the server is listed in Object Explorer:
 
     ![SQL Server instance name in Object Explorer](media/ssms-tricks/nameinobjectexplorer.png)
-2. The name of the server is listed in the Query window:
+1. The name of the server is listed in the Query window:
 
     ![SQL Server instance name in the Query window](media/ssms-tricks/nameinquerywindow.png)
-3. The name of the server is listed in **Properties**.
+1. The name of the server is listed in **Properties**.
     * In the **View** menu, select **Properties Window**:
 
       ![SQL Server instance name in the Properties window](media/ssms-tricks/nameinproperties.png)
@@ -262,21 +264,21 @@ If you're connected to an alias or to an Availability Group listener, that infor
 
 1. Connect to your SQL Server.
 
-2. Open a New Query window.
+1. Open a New Query window.
 
-3. Paste the following [!INCLUDE[tsql](../../includes/tsql-md.md)] code in the window:
+1. Paste the following [!INCLUDE[tsql](../../includes/tsql-md.md)] code in the window:
 
       ```sql
        select @@Servername
      ```
 
-4. View the results of the query to identify the name of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance you're connected to: 
+1. View the results of the query to identify the name of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance you're connected to:
 
     ![Query the SQL Server name](media/ssms-tricks/queryservername.png)
 
 ## Next steps
 
-The best way to get acquainted with SSMS is through hands-on practice. These *tutorial* and *how-to* articles help you with various features available within SSMS.  These articles teach you how to manage the components of SSMS and how to find the features that you use regularly.
+The best way to get acquainted with SSMS is through hands-on use. These *tutorial* and *how-to* articles help you with various features available within SSMS. These articles teach you how to manage the components of SSMS and how to find the features that you use regularly.
 
 * [Connect to and query an instance](../quickstarts/ssms-connect-query-sql-server.md)
 * [Scripting](scripting-ssms.md)

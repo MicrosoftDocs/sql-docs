@@ -112,4 +112,4 @@ If you didn't install the extension in least privilege mode, the agent uses **NT
 
 Disabling or deleting the extension doesn't remove **NTAUTHORITY\SYSTEM** login from any databases because other applications may require this login. You have to manually remove the role from each user database.
 
-**NTAUTHORITY\SYSTEM** account doesn't apply to installations with least privilege. For details about least privilege mode, see [Operate SQL Server enabled by Azure Arc with least privilege (preview)](configure-least-privilege.md).
+**NTAUTHORITY\SYSTEM** account doesn't apply to installations with least privilege. For details about least privilege mode, see [Operate SQL Server enabled by Azure Arc with least privilege](configure-least-privilege.md).

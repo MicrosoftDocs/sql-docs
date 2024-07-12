@@ -10,7 +10,7 @@ ms.topic: conceptual
 
 # Manage licensing and billing of SQL Server enabled by Azure Arc
 
-This article explains how to manage licensing and billing of SQL Server enabled by Azure Arc. Only the core-based licensing methods are directly supported by SQL Server enabled by Azure Arc. For information about how you can manage SQL Server instances with a Server+CAL license, see [Managing SQL Server instances with a Server+CAL license](manage-license-billing.md#server-cal).  The full range of the licensing options is described in the [SQL Server Licensing Guide](https://go.microsoft.com/fwlink/p/?linkid=2215573).
+This article explains how to manage licensing and billing of SQL Server enabled by Azure Arc. Only the core-based licensing methods are directly supported by SQL Server enabled by Azure Arc. For information about how you can manage SQL Server instances with a Server+CAL license, see [Manage SQL Server instances with a Server+CAL license](manage-license-billing.md#server-cal).  The full range of the licensing options is described in the [SQL Server Licensing Guide](https://go.microsoft.com/fwlink/p/?linkid=2215573).
 
 ## Licensing and billing in production environment
 
@@ -56,7 +56,7 @@ For each of these options, you have to decide how you want to pay for the licens
 >
 > Your choice of payment options above may impact your outsourcing options. For more information, please see [Product Terms](https://www.microsoft.com/licensing/terms/productoffering/MicrosoftAzure/eaeas#ServiceSpecificTerms) and [Flexible Virtualization Benefit Licensing Guide](https://wwlpdocumentsearch.blob.core.windows.net/prodv2/Licensing_guide_PLT_Flexible_Virtualization_Benefit_Nov2022.pdf).
 
-For information about licensing your non-production or test SQL Server instances through Azure Arc, see [Managing SQL Server licensed for non-production use](manage-license-billing.md#non-production-licensing).
+For information about licensing your non-production or test SQL Server instances through Azure Arc, see [Manage SQL Server licensed for non-production use](manage-license-billing.md#non-production-licensing).
 
 
 
@@ -171,28 +171,28 @@ The **Tenant ID** property is automatically set when the tenant scope is selecte
 
 For more information about licensing by physical cores with unlimited virtualization, see section *Licensing for maximum virtualization* in the [SQL Server Licensing Guide](https://go.microsoft.com/fwlink/p/?linkid=2215573).
 
-## <a id="non-production-licensing"></a> Managing SQL Server licensed for non-production use
+## <a id="non-production-licensing"></a> Manage SQL Server licensed for non-production use
 
 If you have your production environment managed through Azure Arc using one of the supported licensing options, you can use SQL Server for non-production purposes for free. There are two ways you can take advantage of this benefit when using SQL Server enabled by Azure Arc.
 
-### Using SQL Server Developer Edition
+### Use SQL Server Developer Edition
 
 SQL Server Developer Edition is free and can be used in any Azure subscription. The Azure extension for SQL Server will detect it and report the usage via a $0 *Dev edition* meter even if the *License type* of the host is set to `Paid` or `PAYG` . The Developer Edition has the same feature set as Enterprise Edition. For more details, see [Metering software usage](manage-license-billing.md#usage-metering).
 
-### Using Azure dev/test subscription
+### Use Azure dev/test subscription
 
-If you configure your non-production as a mirror of the production environment, and want to use the same Editions as in production, you must onboard the hosting machines and SQL Server instances to an Azure dev/test subscription. The production SQL Server meters are enabled to support the dev/test subscriptions and will be nullified. For information on how to create a dev/test subscription on Azure, see [Create an EA subscription](/azure/cost-management-billing/manage/create-enterprise-subscription#create-an-ea-subscription).
+If you configure the non-production environment as a mirror of the production environment, and want to use the same editions as in production, you must connect the hosting machines and SQL Server instances to an Azure dev/test subscription. The SQL Server meters in a dev/test subscription will be nullified. For information on how to create a dev/test subscription on Azure, see [Creating Enterprise and Organization Azure Dev/Test Subscriptions](/azure/devtest/offer/quickstart-create-enterprise-devtest-subscriptions).
 
 For more information, see section *Licensing SQL Server for non-production use* in the [SQL Server Licensing Guide](https://go.microsoft.com/fwlink/p/?linkid=2215573).
 
-## Managing SQL Server licensed for high availability and disaster recovery
+## Manage SQL Server licensed for high availability and disaster recovery
 
 If your SQL Server instance is a passive replica created as part of your high availability or disaster recovery configuration, you are entitled to the failover benefits that are included if your *license type* is set to `Paid` or `PAYG`. For more information about the failover benefits, see section *Licensing SQL Server for high availability and disaster recovery* in the [SQL Server Licensing Guide](https://go.microsoft.com/fwlink/p/?linkid=2215573).
 
 To help you manage the failover benefits and remain compliant, Azure extension for SQL Server automatically detects the passive instances and reflects the use of the SQL Server software by emitting special $0 disaster recovery (DR) meters, as long as you properly configured the *license type* property. For more details, see [Metering software usage](manage-license-billing.md#usage-metering).
 
 
-## <a id="server-cal"></a> Managing SQL Server instances with a Server+CAL license
+## <a id="server-cal"></a> Manage SQL Server instances with a Server+CAL license
 
 You can connect any licensed SQL Server instance to Azure Arc, including the ones that are licensed with the Server+CAL licensing model. If your instance uses this license you must set the license type to `LicenseOnly` even if you have active Software assurance for it.  
 
@@ -242,7 +242,7 @@ The next table shows the meter SKUs that are used for metering and billing for S
 | Web | Web | Any | n/a | n/a | `Web edition` |
 | Express | Express | Any | n/a | n/a | `Express edition` |
 
-<sup>1</sup> When Enterprise Edition is installed, it indicates that the Server/CAL licensing model is used. See [Managing SQL Server instances with a Server+CAL license](manage-license-billing.md#server-cal) for more information. 
+<sup>1</sup> When Enterprise Edition is installed, it indicates that the Server/CAL licensing model is used. See [Manage SQL Server instances with a Server+CAL license](manage-license-billing.md#server-cal) for more information. 
 
 <sup>2</sup> This meter reflects the software usage covered by the p-core license and the unlimited virtualization benefit. The SQL Server instance must be installed on a virtual machine to be covered.
 

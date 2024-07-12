@@ -19,7 +19,6 @@ keywords:
 This tutorial describes the various window components in SQL Server Management Studio (SSMS), and a set of basic configuration options for your workspace. In this article, you learn how to:
 
 > [!div class="checklist"]
-
 > * Identify the components that make up the SSMS environment
 > * Change the environment layout, and reset it to the default
 > * Maximize the query editor

@@ -1,5 +1,5 @@
 ---
-title: Expressions in Report Builder paginated reports
+title: Filter, group, and sort data in Report Builder paginated reports
 description: Learn how to control, organize, and sort paginated report data with expressions based on dataset fields and parameters in the Report Data pane of Report Builder.
 author: maggiesMSFT
 ms.author: maggies
@@ -20,7 +20,7 @@ f1_keywords:
 
 #customer intent: As a Report Builder user, I want to learn how to use expressions so that I can control, organize, and sort the data in my reports.
 ---
-# Expressions in Report Builder paginated reports
+# Filter, group, and sort data in Report Builder paginated reports
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
 

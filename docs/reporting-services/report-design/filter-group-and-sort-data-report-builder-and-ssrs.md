@@ -60,7 +60,7 @@ For more information and examples, see the following articles:
 
 Filters are parts of a report that help control report data after it gets retrieved from the data connection. Use filters when you can't change a dataset query to filter data before it gets retrieved from an external data source.  
   
-When it's possible, build dataset queries that return only the data that you need to display in the report. When you reduce the amount of the data that must be retrieved and processed, you're helping to improve report performance. For more information, see [Report embedded datasets and shared datasets &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).  
+When it's possible, build dataset queries that return only the data that you need to display in the report. When you reduce the amount of the data that must be retrieved and processed, you're helping to improve report performance. For more information, see [Report embedded datasets and shared datasets (Report Builder and SSRS)](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).  
   
 After the data is retrieved from the external data source, you can add filters to:
 
@@ -190,11 +190,41 @@ For more information, see [Sort data in a data region in a paginated report (Rep
 To enable a user to change the sort order of report data in a table or matrix, you can add interactive sort buttons to column headers or group headers. Users can select the button to toggle the sort order. Interactive sort is supported in rendering formats that allow user interaction, such as HTML.  
   
 You add interactive sort buttons to a text box in a tablix data region cell. By default, every cell contains a text box. In the text box properties, you specify which part of a table or matrix data region to sort (the parent group values, the child group values, or the detail rows). You specify what to sort by and whether to apply the sort expression to other report items that have a peer relationship. For example, if a table and a chart that provide views on the same dataset are contained in a rectangle, they're peer data regions. When a user toggles the sort order in the table, the sort order for the chart also toggles. For more information, see [Interactive sort in a paginated report (Report Builder)](../../reporting-services/report-design/interactive-sort-report-builder-and-ssrs.md).
+
+##  <a name="HowTo"></a> How-to topics
+
+- [Keep Headers Visible When Scrolling Through a Report (Report Builder and SSRS)](../../reporting-services/report-design/keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs.md)  
+
+- [Display Headers and Footers with a Group (Report Builder and SSRS)](../../reporting-services/report-design/display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)  
+
+- [Add Interactive Sort to a Table or Matrix (Report Builder and SSRS)](../../reporting-services/report-design/add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md)  
+
+- [Set a No Data Message for a Data Region (Report Builder and SSRS)](../../reporting-services/report-data/set-a-no-data-message-for-a-data-region-report-builder-and-ssrs.md)  
+
+- [Create a Recursive Hierarchy Group (Report Builder and SSRS)](../../reporting-services/report-design/create-a-recursive-hierarchy-group-report-builder-and-ssrs.md)  
+
+- [Add or Delete a Group in a Data Region (Report Builder and SSRS)](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)  
+
+- [Display Headers and Footers with a Group (Report Builder and SSRS)](../../reporting-services/report-design/display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)  
+
+- [Add or Delete a Group in a Chart (Report Builder and SSRS)](../../reporting-services/report-design/add-or-delete-a-group-in-a-chart-report-builder-and-ssrs.md)  
+
+- [Add a Total to a Group or Tablix Data Region (Report Builder and SSRS)](../../reporting-services/report-design/add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md)
+
+- [Add Dataset Filters, Data Region Filters, and Group Filters (Report Builder and SSRS)](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)
   
+- [Create recursive hierarchy groups in a paginated report (Report Builder)](../../reporting-services/report-design/creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)  
+
+- [Display a Series with Multiple Data Ranges on a Chart (Report Builder and SSRS)](../../reporting-services/report-design/displaying-a-series-with-multiple-data-ranges-on-a-chart.md)  
+
 ## <a name="Related"></a> Related content
+
+- [Group Expression Examples (Report Builder and SSRS)](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md)  
+
+- [Filter Equation Examples (Report Builder and SSRS)](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md)  
 
 - [Understand groups in a paginated report (Report Builder)](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md)  
   
-- [Create recursive hierarchy groups in a paginated report (Report Builder)](../../reporting-services/report-design/creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)  
-  
 - [Expression scope for totals, aggregates, and built-in collections in a paginated report (Report Builder)](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)
+
+- [Report and Group Variables Collections References (Report Builder and SSRS)](../../reporting-services/report-design/built-in-collections-report-and-group-variables-references-report-builder.md)  

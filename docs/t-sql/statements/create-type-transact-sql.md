@@ -109,6 +109,7 @@ column_name AS computed_column_expression
 < table_index > ::=
   INDEX index_name
      [ CLUSTERED | NONCLUSTERED ] (column [ ASC | DESC ] [ , ...n ] )
+     [INCLUDE (column, ...n)]
 ```
 
 User-defined memory optimized table types syntax:

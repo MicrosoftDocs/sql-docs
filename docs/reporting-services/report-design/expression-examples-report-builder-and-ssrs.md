@@ -106,7 +106,7 @@ The [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] provides many cust
     =DateAdd(DateInterval.Month, 6, Parameters!StartDate.Value)  
     ```  
   
-- The **Year** function displays the year for a particular date. You can use this function to group dates together or to display the year as a label for a set of dates. This expression provides the year for a given group of sales order dates. The **Month** function and other functions can also be used to manipulate dates. For more information, see the [!INCLUDE[visual-basic](../../includes/visual-basic-md.md)](/dotnet/visual-basic/) documentation:
+- The **Year** function displays the year for a particular date. You can use this function to group dates together or to display the year as a label for a set of dates. This expression provides the year for a given group of sales order dates. The **Month** function and other functions can also be used to manipulate dates:
   
     ``` basic
     =Year(Fields!OrderDate.Value)  

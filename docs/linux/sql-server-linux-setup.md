@@ -3,7 +3,7 @@ title: Installation guidance for SQL Server on Linux
 description: Install, update, and uninstall SQL Server on Linux. This article covers online, offline, and unattended scenarios.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 06/12/2024
+ms.date: 07/15/2024
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
@@ -25,12 +25,21 @@ For other deployment scenarios, see:
 
 This guide covers several deployment scenarios. If you only need step-by-step installation instructions, jump to one of the quickstarts:
 
-> - [Quickstart: Install SQL Server and create a database on Red Hat](quickstart-install-connect-red-hat.md)
-> - [Quickstart: Install SQL Server and create a database on SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
-> - [Quickstart: Install SQL Server and create a database on Ubuntu](quickstart-install-connect-ubuntu.md)
-> - [Quickstart: Run SQL Server Linux container images with Docker](quickstart-install-connect-docker.md)
+- [Quickstart: Install SQL Server and create a database on Red Hat](quickstart-install-connect-red-hat.md)
+- [Quickstart: Install SQL Server and create a database on SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
+- [Quickstart: Install SQL Server and create a database on Ubuntu](quickstart-install-connect-ubuntu.md)
+- [Quickstart: Run SQL Server Linux container images with Docker](quickstart-install-connect-docker.md)
 
 For answers to frequently asked questions, see the [SQL Server on Linux FAQ](sql-server-linux-faq.yml).
+
+## Support policy
+
+[!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] is supported on an operating system (OS) distribution until either the OS distribution reaches end of mainstream support, or [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] reaches end of mainstream support, whichever comes first.
+
+| Term | Definition |
+| --- | --- |
+| **Servicing** | Microsoft releases GDR, hotfixes, and security fixes within lifecycle of product for supported distributions. |
+| **Support** | Microsoft supports users with problems pertaining to supported distributions. |
 
 ## <a id="supportedplatforms"></a> Supported platforms
 

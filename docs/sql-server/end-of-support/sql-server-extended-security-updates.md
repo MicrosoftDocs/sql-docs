@@ -3,7 +3,7 @@ title: "What are Extended Security Updates?"
 description: Learn about Extended Security Updates enabled by Azure Arc, for your end-of-support and end-of-life SQL Server products such as SQL Server 2012.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 04/26/2024
+ms.date: 07/15/2024
 ms.service: sql
 ms.subservice: install
 ms.topic: conceptual
@@ -18,7 +18,7 @@ monikerRange: ">=sql-server-2016"
 
 This article provides information how to receive Extended Security Updates (ESUs) for versions of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] that are out of extended support.
 
-Extended Security Updates (ESUs) are available for [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)].
+Extended Security Updates (ESUs) are available for [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)] and [!INCLUDE [sssql14-md](../../includes/sssql14-md.md)].
 
 [!INCLUDE [esu-table](includes/esu-table.md)]
 

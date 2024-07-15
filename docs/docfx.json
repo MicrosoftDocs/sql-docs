@@ -196,10 +196,12 @@
         "machine-learning/**/*.md": "machine-learning/machine-learning-zone-pivot-groups.json"
       },
       "author": {
-        "azdata/**/*.md": "swells"
+        "azdata/**/*.md": "swells",
+        "**/*/index.yml": "MikeRayMSFT"
       },
       "ms.author": {
-        "azdata/**/*.md": "seanw"
+        "azdata/**/*.md": "seanw",
+        "**/*/index.yml": "mikeray"
       },
       "ms.date": {
         "azdata/**/*.md": "02/09/2021"

@@ -229,6 +229,7 @@ Consider the following limitations of the copy and move feature:
 - You can't copy or move a database that's part of a [failover group](failover-group-sql-mi.md), or that's using the [Managed Instance link](managed-instance-link-feature-overview.md).
 - The source or destination managed instance shouldn't be configured with a failover group (geo-disaster recovery) setup.
 - You'll need to reconfigure transactional replication, change data capture (CDC), or distributed transactions after you move a database that relies on these features.
+- When the source database uses a customer-managed key (CMK) as the TDE protector, to copy or move the database to the target SQL Managed Instance, the target instance must have access to the same key used to encrypt the source database in Azure Key Vault.
 - A database from an instance configured with the [Always-up-to-date update policy](update-policy.md#always-up-to-date-update-policy) can't be copied or moved to an instance configured with the [SQL Server 2022 update policy](update-policy.md#sql-server-2022-update-policy). Once a database from an instance configured with the SQL Server 2022 update policy is copied or moved to an instance with the Always-up-to-date update policy, it can't be copied or moved to an instance configured with the SQL Server 2022 update policy. 
 
 

@@ -9,7 +9,7 @@ ms.subservice: report-data
 ms.topic: how-to
 ms.custom: updatefrequency5
 
-#customer intent: As a <role>, I want <what> so that <why>.
+#customer intent: As a Report Builder user, I want to learn how to add filters to my datasets so that can limit the data in a report that's retrieved from a shared data source.
 ---
 # Add a filter to a Report Builder dataset
 
@@ -42,7 +42,7 @@ To add a filter, you must specify one or more conditions that are filter equatio
   
 1. In the **Operator** box, select the operator that you want the filter to use to compare the values in the **Expression** box and the **Value** box. The operator you choose determines the number of values that are used from the next step.  
   
-1. In the **Value** box, enter the expression or value against which you want the filter to evaluate the value in **Expression**.  To edit the value, select the expression (**fx**) button.
+1. In the **Value** box, enter the expression or value against which you want the filter to evaluate the value in **Expression**. To edit the value, select the expression (**fx**) button.
   
      For examples of filter equations, see [Filter equation examples in a paginated report (Report Builder)](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md).  
   

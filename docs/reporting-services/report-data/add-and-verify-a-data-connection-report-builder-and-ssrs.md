@@ -8,6 +8,8 @@ ms.service: reporting-services
 ms.subservice: report-data
 ms.topic: how-to
 ms.custom: updatefrequency5
+
+#customer intent: As a Report Builder user, I want to learn how to add and verify data sources so that I can use the shared data sources from my report servers.
 ---
 
 # Add and verify a data connection in Report Builder

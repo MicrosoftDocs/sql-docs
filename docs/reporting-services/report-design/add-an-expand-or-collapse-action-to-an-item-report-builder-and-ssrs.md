@@ -3,7 +3,7 @@ title: Add an expand or collapse action to a Report Builder paginated report
 description: Learn how to expand or collapse items, rows, and columns associated with a group for a table or matrix in a paginated report in Report Builder.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 07/10/2024
+ms.date: 07/16/2024
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: how-to
@@ -15,9 +15,9 @@ ms.custom: updatefrequency5
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-not-pbi-rb](../../includes/ssrs-appliesto-not-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
 
-You can let users interactively expand or collapse items in a paginated report or expand or collapse rows and columns associated with a group for a table or matrix. To allow users to expand or collapse an item, you set the visibility properties for that item. Setting visibility works in an HTML report viewer, and is sometimes called a drilldown action.  
+You can let users interactively expand or collapse items in a paginated report or expand or collapse rows and columns associated with a group for a table or matrix. To allow users to expand or collapse an item, you set the visibility properties for that item. Setting visibility works in an HTML report viewer, sometimes called a drilldown action.  
   
-In **Design** view, you specify the name of the text box where you want to display the expand and collapse toggle icons. In the rendered report, the text box displays a plus (+) or minus (-) sign in addition to its contents. When the user selects the toggle, the report display refreshes to show or hide the report item, based on the current visibility settings for items in the report.  
+In **Design** view, you specify the name of the text box where you want to display the expand and collapse toggle icons. In the rendered report, the text box displays a plus (+) or minus (-) sign in addition to its contents. When the user selects the toggle, the report display refreshes to show or hide the report item based on the current visibility settings for items in the report.  
   
 Typically, the expand and collapse action is used to initially display only summary data and to let the user select the plus sign to show detail data. For example, you can initially hide a table that displays values for a chart, or hide child groups for a table with nested row or column groups, like in a drilldown report.  
   
@@ -47,7 +47,7 @@ Typically, the expand and collapse action is used to initially display only summ
   
     - Select **True** to hide the report item.  
   
-    - Select **\<Expression>** to open the **Expression** dialog to create an expression evaluated at run time to determine the visibility.  
+    - Select **\<Expression>** to open the **Expression** dialog box to create an expression evaluated at run time to determine the visibility.  
   
 1. In **ToggleItem**, from the dropdown list, select the name of a text box you want to add a toggle to.  
   

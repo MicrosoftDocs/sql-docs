@@ -3,19 +3,19 @@ title: Add a page break to a Report Builder paginated report
 description: Learn how to add a page break to rectangles, data regions, or groups within data regions in Report Builder to control the information on each page.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 07/10/2024
+ms.date: 07/16/2024
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: how-to
 ms.custom: updatefrequency5
 
-#customer intent: As a Report Builder user, I want to learn how to add page breaks elements in my reports so that I can better control the information on the page.
+#customer intent: As a Report Builder user, I want to learn how to add page break elements in my reports so that I can better control the information on the page.
 ---
 # Add a page break to a Report Builder paginated report
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
 
-You can add a page break to rectangles, data regions, or groups within data regions in paginated reports, to control the amount of information on each page. Adding page breaks can improve the performance of published reports, because only the items on each page have to be processed as you view the report. When the whole report is a single page, all items must be processed before you can view the report.  
+You can add a page break to rectangles, data regions, or groups within data regions in paginated reports to control the amount of information on each page. Adding page breaks can improve the performance of published reports, because only the items on each page have to be processed as you view the report. When the whole report is a single page, all items must be processed before you can view the report.  
   
 > [!NOTE]  
 > [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

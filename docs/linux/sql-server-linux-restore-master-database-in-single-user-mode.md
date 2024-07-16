@@ -1,9 +1,9 @@
 ---
-title: "Restore master database on SQL Server in single-user mode on Linux"
+title: Restore master database on SQL Server in single-user mode on Linux
 description: "Learn how to restore the master database using single-user mode in SQL Server on Linux."
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 08/09/2022
+ms.date: 07/15/2024
 ms.service: sql
 ms.subservice: configuration
 ms.topic: how-to
@@ -18,24 +18,23 @@ helpviewer_keywords:
 
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
-Under certain circumstances, you might need to restore the `master` database on an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in single-user mode on Linux. Scenarios include migrating to a new instance, or recovering from inconsistencies.
+Under certain circumstances, you might need to restore the `master` database on an instance of [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] in single-user mode on Linux. Scenarios include migrating to a new instance, or recovering from inconsistencies.
 
 > [!NOTE]  
 > [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] will automatically shut down after the restore is complete. This behavior is by design.
 
-Restoring the `master` database requires starting [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in single-user mode, by using the **startup option** `-m` from the command line.
+To restore the `master` database, you must start [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] in single-user mode, by using the startup option `-m` from the command line.
 
-For starting a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance in single-user mode on Windows, see [Start SQL Server in single-user mode](../database-engine/configure-windows/start-sql-server-in-single-user-mode.md).
+For starting a [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] instance in single-user mode on Windows, see [Single-user mode for SQL Server](../database-engine/configure-windows/start-sql-server-in-single-user-mode.md).
 
 ## Prerequisites
 
-Starting [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in single-user mode enables any member of the local administrator group to connect to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] as a member of the **sysadmin** fixed server role. For more information, see [Connect to SQL Server when system administrators are locked out](../database-engine/configure-windows/connect-to-sql-server-when-system-administrators-are-locked-out.md).
+Starting [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] in single-user mode enables any member of the local administrator group to connect to [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] as a member of the **sysadmin** fixed server role. For more information, see [Connect to SQL Server when system administrators are locked out](../database-engine/configure-windows/connect-to-sql-server-when-system-administrators-are-locked-out.md).
 
-When you start an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in single-user mode, note the following:
+When you start an instance of [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] in single-user mode:
 
 - Only one user can connect to the server.
-
-- The CHECKPOINT process isn't executed. By default, it is executed automatically at startup.
+- The `CHECKPOINT` process isn't executed. By default, it runs automatically at startup.
 
 ## Stop the SQL Server service
 
@@ -47,7 +46,7 @@ When you start an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.
 
 ## Change current user to `mssql`
 
-1. [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on Linux runs under the `mssql` user, so you'll need to switch to this user first. You'll be prompted for the `root` password when running this command.
+1. [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on Linux runs under the `mssql` user, so you need to switch to this user first. You're prompted for the `root` password when running this command.
 
    ```bash
    su mssql
@@ -61,17 +60,17 @@ When you start an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.
    /opt/mssql/bin/sqlservr -m"SQLCMD"
    ```
 
-   In the previous example, `-m"SQLCMD"` limits connections to a single connection and that connection must identify itself as the **sqlcmd** client program. Use this option when you're starting [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in single-user mode to restore a `master` database.
+   In the previous example, `-m"SQLCMD"` limits connections to a single connection and that connection must identify itself as the **sqlcmd** client program. Use this option when you're starting [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] in single-user mode to restore a `master` database.
 
-1. When SQL Server starts up, it generates several log entries. You can confirm that it is running in single-user mode by looking for the following lines in the output:
+1. When SQL Server starts up, it generates several log entries. You can confirm that it's running in single-user mode by looking for the following lines in the output:
 
    ```output
    [...]
-   2022-05-24 04:26:27.24 Server      Command Line Startup Parameters: 
-            -m "SQLCMD" 
+   2022-05-24 04:26:27.24 Server      Command Line Startup Parameters:
+            -m "SQLCMD"
    [...]
    2022-05-24 04:26:28.20 spid8s      Warning ******************
-   2022-05-24 04:26:28.21 spid8s      SQL Server started in single-user mode. This an informational message only. No user action is required. 
+   2022-05-24 04:26:28.21 spid8s      SQL Server started in single-user mode. This an informational message only. No user action is required.
    ```
 
 ## Connect to the SQL Server instance
@@ -79,7 +78,7 @@ When you start an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.
 1. Use **sqlcmd** to connect to the SQL Server instance:
 
    ```bash
-   /opt/mssql-tools/bin/sqlcmd -S <ServerName> -U sa -P <StrongPassword> 
+   /opt/mssql-tools/bin/sqlcmd -S <ServerName> -U sa -P <StrongPassword>
    ```
 
    In the previous example, `<ServerName>` is the name of the host running SQL Server if you're connecting remotely. If you're connecting directly on the host where SQL Server is running, you can skip this parameter, or use `localhost`. `<StringPassword>` is the password for the **SA** account.
@@ -90,15 +89,15 @@ When you start an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.
 
    ```sql
    use [master];
-   RESTORE DATABASE [master] FROM DISK = N'/var/opt/mssql/data/master.bak' WITH FILE=1, 
-   MOVE N'master' to N'/var/opt/mssql/data/master.mdf', 
+   RESTORE DATABASE [master] FROM DISK = N'/var/opt/mssql/data/master.bak' WITH FILE=1,
+   MOVE N'master' to N'/var/opt/mssql/data/master.mdf',
    MOVE N'mastlog' to N'/var/opt/mssql/data/mastlog.ldf', NOUNLOAD, REPLACE, STATS=5;
    GO
    ```
 
-   In the previous example, the path to the `master` database backup file is `/var/opt/mssql/data/master.bak`. You'll need to replace this value with the correct path to your `master` database backup file.
+   In the previous example, the path to the `master` database backup file is `/var/opt/mssql/data/master.bak`. You must replace this value with the correct path to your `master` database backup file.
 
-2. You should see output similar to the following example, if the restore is successful.
+1. You should see output similar to the following example, if the restore is successful.
 
    ```output
    Processed 456 pages for database 'master', file 'master' on file 1.
@@ -117,10 +116,10 @@ When you start an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.
 
 ## Remarks
 
-When you restore a `master` database backup, any existing user databases that were added to the instance after the backup was taken, won't be visible after restoring `master`. The files should still exist on the storage layer, so you'll need to manually reattach those user database files to bring those databases online. See [Attach a Database](../relational-databases/databases/attach-a-database.md) for more information.
+When you restore a `master` database backup, any existing user databases that were added to the instance after the backup was taken, won't be visible after restoring `master`. The files should still exist on the storage layer, so you need to manually reattach those user database files to bring those databases online. For more information, see [Attach a Database](../relational-databases/databases/attach-a-database.md).
 
 ## Related content
 
 - [Troubleshoot SQL Server on Linux](sql-server-linux-troubleshooting-guide.md)
-- [sqlcmd Utility](../tools/sqlcmd/sqlcmd-utility.md)
+- [sqlcmd utility](../tools/sqlcmd/sqlcmd-utility.md)
 - [Start, stop, and restart SQL Server services on Linux](sql-server-linux-start-stop-restart-sql-server-services.md)

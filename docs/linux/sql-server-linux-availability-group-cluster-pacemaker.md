@@ -26,12 +26,12 @@ The following sections walk through the steps to set up a Pacemaker cluster and 
 
 # [Red Hat Enterprise Linux](#tab/rhel)
 
-The clustering layer is based on Red Hat Enterprise Linux (RHEL) [HA add-on](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/pdf/high_availability_add-on_overview/red_hat_enterprise_linux-7-high_availability_add-on_overview-en-us.pdf) built on top of [Pacemaker](https://clusterlabs.org/).
+The clustering layer is based on Red Hat Enterprise Linux (RHEL) [HA add-on](https://docs.redhat.com/documentation/red_hat_enterprise_linux/7/pdf/high_availability_add-on_overview/red_hat_enterprise_linux-7-high_availability_add-on_overview-en-us.pdf) built on top of [Pacemaker](https://clusterlabs.org/).
 
 > [!NOTE]  
 > Access to Red Hat full documentation requires a valid subscription.
 
-For more information on cluster configuration, resource agents options, and management, visit [RHEL reference documentation](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/high_availability_add-on_reference/index).
+For more information on cluster configuration, resource agents options, and management, visit [RHEL reference documentation](https://docs.redhat.com/documentation/red_hat_enterprise_linux/7/html/high_availability_add-on_reference/index).
 
 ### Roadmap
 
@@ -123,7 +123,7 @@ For information about fencing a failed node, see the following articles:
 
 - [Pacemaker Clusters from Scratch](https://clusterlabs.org/pacemaker/doc/deprecated/en-US/Pacemaker/1.1/html/Clusters_from_Scratch/index.html)
 - [Fencing and STONITH](https://clusterlabs.org/pacemaker/doc/crm_fencing.html)
-- [Red Hat High Availability Add-On with Pacemaker: Fencing](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/high_availability_add-on_administration/s1-fenceconfig-haaa)
+- [Red Hat High Availability Add-On with Pacemaker: Fencing](https://docs.redhat.com/documentation/red_hat_enterprise_linux/7/html/high_availability_add-on_administration/s1-fenceconfig-haaa)
 
 > [!NOTE]  
 > Because the node level fencing configuration depends heavily on your environment, disable it for this tutorial (it can be configured later). The following script disables node level fencing:
@@ -160,7 +160,7 @@ To update the `ag_cluster` resource property `failure-timeout` to `60s`, run:
 pcs resource update ag_cluster meta failure-timeout=60s
 ```
 
-For information on Pacemaker cluster properties, see [Pacemaker Clusters Properties](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/high_availability_add-on_reference/ch-clusteropts-haar).
+For information on Pacemaker cluster properties, see [Pacemaker Clusters Properties](https://docs.redhat.com/documentation/red_hat_enterprise_linux/7/html/high_availability_add-on_reference/ch-clusteropts-haar).
 
 ### Create a SQL Server login for Pacemaker
 

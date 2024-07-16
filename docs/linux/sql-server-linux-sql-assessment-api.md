@@ -4,7 +4,7 @@ description: This article describes how to run the SQL Assessment API for SQL Se
 author: aravindmahadevan-ms
 ms.author: armaha
 ms.reviewer: amitkh-msft, randolphwest
-ms.date: 08/31/2023
+ms.date: 07/15/2024
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
@@ -15,9 +15,9 @@ ms.custom:
 
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
-The [SQL Assessment API](../tools/sql-assessment-api/sql-assessment-api-overview.md) provides a mechanism to evaluate configuration of [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] for best practices. The API is delivered with a ruleset containing best practices recommended by the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] team. This ruleset is enhanced with the release of new versions. It is useful to make sure your [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] configuration is in line with the recommended best practices.
+The [SQL Assessment API](../tools/sql-assessment-api/sql-assessment-api-overview.md) provides a mechanism to evaluate configuration of [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] for best practices. The API is delivered with a rule set containing best practices recommended by the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] team. This rule set is enhanced with the release of new versions. It's useful to make sure your [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] configuration is in line with the recommended best practices.
 
-The Microsoft's shipped ruleset is available on GitHub. You can view the [entire ruleset](https://github.com/microsoft/sql-server-samples/blob/567d49a42d4cf10e4942b19290ab80828b451b77/samples/manage/sql-assessment-api/DefaultRuleset.csv) in the [samples repository](https://aka.ms/sql-assessment-api).
+The Microsoft's shipped rule set is available on GitHub. You can view the [entire ruleset](https://github.com/microsoft/sql-server-samples/blob/567d49a42d4cf10e4942b19290ab80828b451b77/samples/manage/sql-assessment-api/DefaultRuleset.csv) in the [samples repository](https://aka.ms/sql-assessment-api).
 
 In this article, we look at two ways to run the SQL Assessment API for [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on Linux and containers:
 
@@ -35,7 +35,7 @@ With this preview version, you can:
 - Export assessment results and the list of applicable rules as a script to store it in a SQL table
 - Create HTML reports on assessments results
 
-:::image type="content" source="media/tutorial-sql-assessment-api/azure-data-studio-extension.png" alt-text="Screenshot showing the SQL Assessment extension in Azure Data Studio.":::
+:::image type="content" source="media/sql-server-linux-sql-assessment-api/azure-data-studio-extension.png" alt-text="Screenshot showing the SQL Assessment extension in Azure Data Studio." lightbox="media/sql-server-linux-sql-assessment-api/azure-data-studio-extension.png":::
 
 ### Start a SQL Assessment
 
@@ -50,7 +50,7 @@ A second option is to use PowerShell to run the SQL Assessment API script.
 
 ### Prerequisites
 
-1. Make sure that you have [installed PowerShell on Linux](/powershell/scripting/install/installing-powershell-on-linux).
+1. Make sure that you [install PowerShell on Linux](/powershell/scripting/install/installing-powershell-on-linux).
 
 1. Install the `SqlServer` PowerShell module from the PowerShell Gallery, running as the `mssql` user.
 
@@ -60,26 +60,26 @@ A second option is to use PowerShell to run the SQL Assessment API script.
 
 ### Set up the assessment
 
-The SQL Assessment API output is available in JSON format. You will need to take the following steps to configure the SQL Assessment API as follows:
+The SQL Assessment API output is available in JSON format. You must take the following steps to configure the SQL Assessment API as follows:
 
-1. In the instance you wish to assess, create a login for SQL Server assessments using SQL Authentication. You can use the following Transact-SQL (T-SQL) script to create a login and strong password. Replace `<*PASSWORD*>` with a strong password of your choosing.
+1. In the instance you wish to assess, create a login for SQL Server assessments using SQL Authentication. You can use the following Transact-SQL (T-SQL) script to create a login and strong password. Replace `<secure_password>` with a strong password of your choosing.
 
    ```sql
    USE [master];
    GO
 
-   CREATE LOGIN [assessmentLogin] WITH PASSWORD = N'<*PASSWORD*>';
+   CREATE LOGIN [assessmentLogin] WITH PASSWORD = N'<secure_password>';
    ALTER SERVER ROLE [CONTROL SERVER] ADD MEMBER [assessmentLogin];
    GO
    ```
 
-   The **CONTROL SERVER** role works for most of the assessments. However, there are a few assessments that might need **sysadmin** privileges. If you aren't running those rules, we recommend using **CONTROL SERVER** permissions.
+   The `CONTROL SERVER` role works for most of the assessments. However, there are a few assessments that might need **sysadmin** privileges. If you aren't running those rules, we recommend using `CONTROL SERVER` permissions.
 
-1. Store the credentials for login on the system as follows, again replacing `<*PASSWORD*>` with the password you used in the previous step.
+1. Store the credentials for login on the system as follows, again replacing `<secure_password>` with the password you used in the previous step.
 
    ```bash
    echo "assessmentLogin" > /var/opt/mssql/secrets/assessment
-   echo "<*PASSWORD*>" >> /var/opt/mssql/secrets/assessment
+   echo "<secure_password>" >> /var/opt/mssql/secrets/assessment
    ```
 
 1. Secure the new assessment credentials by ensuring that only the `mssql` user can access the credentials.
@@ -91,7 +91,7 @@ The SQL Assessment API output is available in JSON format. You will need to take
 
 ### Download the assessment script
 
-Following is a sample script that calls the SQL Assessment API, using the credentials created in the preceding steps. The script will generate an output file in JSON format at this location: `/var/opt/mssql/log/assessments`.
+Following is a sample script that calls the SQL Assessment API, using the credentials created in the preceding steps. The script generates an output file in JSON format at this location: `/var/opt/mssql/log/assessments`.
 
 > [!NOTE]  
 > The SQL Assessment API can also generate output in CSV and XML formats.
@@ -199,14 +199,13 @@ try {
     $securePassword = ConvertTo-SecureString $pwd -AsPlainText -Force
     $credential = New-Object System.Management.Automation.PSCredential ($login, $securePassword)
     $securePassword.MakeReadOnly()
-    
+
     Write-Verbose "Acquired credentials"
 
     $serverInstance = '.'
 
     if (Test-Path /var/opt/mssql/mssql.conf) {
         $port = Get-ConfSetting /var/opt/mssql/mssql.conf network tcpport
-
 
         if (-not [string]::IsNullOrWhiteSpace($port)) {
             Write-Verbose "Using port $($port)"
@@ -243,8 +242,9 @@ finally {
     }
 }
 ```
+
 > [!NOTE]  
-> When you run the previous script in trusted environments, and you get a prelogin handshake error, add the `-TrustServerCertificate` flag in the commands for `$serverName`, `$hostName` and `Get-SqlInstance` lines in the code.
+> When you run this script in trusted environments, and you get a prelogin handshake error, add the `-TrustServerCertificate` flag in the commands for `$serverName`, `$hostName` and `Get-SqlInstance` lines in the code.
 
 ### Run the assessment
 
@@ -269,7 +269,7 @@ finally {
    su mssql -c "pwsh -File /opt/mssql/bin/runassessment.ps1"
    ```
 
-1. Once the command completes, the output will be generated in JSON format. This output can be integrated with any third party tool that supports parsing JSON files. One such example tool is [Red Hat Insights](https://www.redhat.com/en/blog/sql-server-database-best-practices-now-available-through-red-hat-insights).
+1. Once the command completes, the output is generated in JSON format. This output can be integrated with any tool that supports parsing JSON files. One such example tool is [Red Hat Insights](https://www.redhat.com/en/blog/sql-server-database-best-practices-now-available-through-red-hat-insights).
 
 ## Related content
 

@@ -3,8 +3,8 @@ title: Configure a read-scale availability group (SQL Server on Linux)
 description: Learn about configuring a SQL Server Always On Availability Group (AG) for read-scale workloads on Linux.
 author: rwestMSFT
 ms.author: randolphwest
-ms.reviewer: vanto, randolphwest
-ms.date: 04/11/2022
+ms.reviewer: vanto
+ms.date: 06/28/2024
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
@@ -39,14 +39,14 @@ CREATE AVAILABILITY GROUP [ag1]
             FAILOVER_MODE = MANUAL,
             SEEDING_MODE = AUTOMATIC,
                     SECONDARY_ROLE (ALLOW_CONNECTIONS = ALL)
-            ),
-        N'<node2>' WITH ( 
-            ENDPOINT_URL = N'tcp://<node2>:<5022>', 
+        ),
+        N'<node2>' WITH (
+            ENDPOINT_URL = N'tcp://<node2>:<5022>',
             AVAILABILITY_MODE = ASYNCHRONOUS_COMMIT,
             FAILOVER_MODE = MANUAL,
             SEEDING_MODE = AUTOMATIC,
             SECONDARY_ROLE (ALLOW_CONNECTIONS = ALL)
-            );
+        );
 
 ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE;
 ```
@@ -63,21 +63,21 @@ ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE;
 
 [!INCLUDE [Create post](includes/cluster-availability-group-create-post.md)]
 
-This AG isn't a high-availability configuration. If you need high availability, follow the instructions at [Configure an Always On Availability Group for SQL Server on Linux](sql-server-linux-availability-group-configure-ha.md). Specifically, create the AG with `CLUSTER_TYPE=WSFC` (in Windows) or `CLUSTER_TYPE=EXTERNAL` (in Linux). You can then integrate with a cluster manager, by using either Windows Server failover clustering on Windows, or Pacemaker on Linux.
+This AG isn't a high-availability configuration. If you need high availability, follow the instructions at [Configure SQL Server Always On Availability Group for high availability on Linux](sql-server-linux-availability-group-configure-ha.md). Specifically, create the AG with `CLUSTER_TYPE=WSFC` (in Windows) or `CLUSTER_TYPE=EXTERNAL` (in Linux). You can then integrate with a cluster manager, by using either Windows Server failover clustering on Windows, or Pacemaker on Linux.
 
 ## Connect to read-only secondary replicas
 
 There are two ways to connect to read-only secondary replicas. Applications can connect directly to the SQL Server instance that hosts the secondary replica and query the databases. They also can use read-only routing, which requires a listener.
 
-- [Readable secondary replicas](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)
+- [Offload read-only workload to secondary replica of an Always On availability group](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)
 - [Read-only routing](../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md#ConnectToSecondary)
 
 ## Fail over the primary replica on a read-scale AG
 
-[!INCLUDE[Force failover](../includes/ss-force-failover-read-scale-out.md)]
+[!INCLUDE [Force failover](../includes/ss-force-failover-read-scale-out.md)]
 
 ## Related content
 
-- [Configure a distributed Availability Group](../database-engine/availability-groups/windows/distributed-availability-groups.md)
-- [Learn more about availability groups](../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)
-- [Perform a forced manual failover](../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)
+- [Distributed availability groups](../database-engine/availability-groups/windows/distributed-availability-groups.md)
+- [What is an Always On availability group?](../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)
+- [Perform a Forced Manual Failover of an Always On Availability Group (SQL Server)](../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)

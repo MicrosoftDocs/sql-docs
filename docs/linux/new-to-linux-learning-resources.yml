@@ -8,9 +8,9 @@ metadata:
   description: A collection of resources meant to teach you to use SQL Server on Linux for new-to-Linux users. 
   ms.service: sql
   ms.topic: landing-page
-  author: MashaMSFT
-  ms.author: mathoma
-  ms.date: 10/21/2021  
+  author: rwestMSFT
+  ms.author: randolphwest
+  ms.date: 07/15/2024  
 
 landingContent:
   - title: "Module 1: Introduction to SQL Server on Linux"
@@ -50,7 +50,7 @@ landingContent:
       - text: Tools overview
         url: ../tools/overview-sql-tools.md
       - text: Azure Data Studio (tool)
-        url: ../azure-data-studio/what-is-azure-data-studio.md
+        url: /azure-data-studio/what-is-azure-data-studio
 
 
   - title: "Module 4: Configure SQL Server on Linux"

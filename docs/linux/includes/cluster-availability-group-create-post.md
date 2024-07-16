@@ -10,7 +10,7 @@ ms.custom:
 ---
 ## Add a database to the availability group
 
-Ensure that the database you add to the availability group is in the full recovery model and has a valid log backup. If this is a test database or a newly created database, take a database backup. On the primary SQL Server, run the following Transact-SQL script to create and back up a database called `db1`:
+Ensure that the database you add to the availability group is in the full recovery model and has a valid log backup. If this is a test database or a newly created database, take a database backup. On the primary [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)], run the following Transact-SQL script to create and back up a database called `db1`:
 
 ```sql
 CREATE DATABASE [db1];
@@ -19,7 +19,7 @@ BACKUP DATABASE [db1]
    TO DISK = N'/var/opt/mssql/data/db1.bak';
 ```
 
-On the primary SQL Server replica, run the following Transact-SQL script to add a database called `db1` to an availability group called `ag1`:
+On the primary [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] replica, run the following Transact-SQL script to add a database called `db1` to an availability group called `ag1`:
 
 ```sql
 ALTER AVAILABILITY GROUP [ag1] ADD DATABASE [db1];
@@ -27,7 +27,7 @@ ALTER AVAILABILITY GROUP [ag1] ADD DATABASE [db1];
 
 ### Verify that the database is created on the secondary servers
 
-On each secondary SQL Server replica, run the following query to see if the `db1` database was created and is synchronized:
+On each secondary [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] replica, run the following query to see if the `db1` database was created and is synchronized:
 
 ```sql
 SELECT * FROM sys.databases WHERE name = 'db1';

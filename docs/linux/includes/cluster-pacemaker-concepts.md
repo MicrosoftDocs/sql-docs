@@ -70,7 +70,7 @@ The following tables describe the outcome of an outage for primary or secondary 
 | `REQUIRED_COPIES_TO_COMMIT = 0` | User has to issue a manual `FAILOVER`.<br />Might have data loss.<br />New primary is R/W | Primary is R/W, running exposed to data loss. |
 | `REQUIRED_COPIES_TO_COMMIT = 1` <sup>1</sup> | Cluster automatically issues `FAILOVER`<br />No data loss.<br />New primary rejects all connections until former primary recovers and joins availability group as secondary. | Primary rejects all connections until secondary recovers. |
 
-<sup>1</sup> SQL Server resource agent for Pacemaker default behavior.
+<sup>1</sup> [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] resource agent for Pacemaker default behavior.
 
 ### Availability group - three sync replicas
 
@@ -79,4 +79,4 @@ The following tables describe the outcome of an outage for primary or secondary 
 | `REQUIRED_COPIES_TO_COMMIT = 0` | User has to issue a manual `FAILOVER`.<br />Might have data loss.<br />New primary is R/W | Primary is R/W |
 | `REQUIRED_COPIES_TO_COMMIT = 1` <sup>1</sup> | Cluster automatically issues `FAILOVER`.<br />No data loss.<br />New primary is RW | Primary is R/W |
 
-<sup>1</sup> SQL Server resource agent for Pacemaker default behavior.
+<sup>1</sup> [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] resource agent for Pacemaker default behavior.

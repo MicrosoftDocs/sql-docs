@@ -4,8 +4,7 @@ titleSuffix: SQL Server
 description: Use a sample bash script to install SQL Server on SUSE Linux Enterprise Server (SLES) without interactive input.
 author: rwestMSFT
 ms.author: randolphwest
-ms.reviewer: randolphwest
-ms.date: 05/20/2022
+ms.date: 07/15/2024
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
@@ -18,8 +17,8 @@ ms.custom:
 
 This sample bash script installs [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on SUSE Linux Enterprise Server (SLES) without interactive input. It provides examples of installing the [!INCLUDE [ssde-md](../includes/ssde-md.md)], the SQL Server command-line tools, SQL Server Agent, and performs post-install steps. You can optionally install full-text search and create an administrative user.
 
-> [!TIP]
-> If you do not need an unattended installation script, the fastest way to install SQL Server is to follow the [quickstart for SLES](quickstart-install-connect-suse.md). For other setup information, see [Installation guidance for SQL Server on Linux](sql-server-linux-setup.md).
+> [!TIP]  
+> If you don't need an unattended installation script, the fastest way to install SQL Server is to follow the [quickstart for SLES](quickstart-install-connect-suse.md). For other setup information, see [Installation guidance for SQL Server on Linux](sql-server-linux-setup.md).
 
 ## Prerequisites
 
@@ -27,14 +26,14 @@ This sample bash script installs [!INCLUDE [ssnoversion-md](../includes/ssnovers
 - The file system must be **XFS** or **EXT4**. Other file systems, such as **BTRFS**, are unsupported.
 - For other system requirements, see [System requirements for SQL Server on Linux](sql-server-linux-setup.md#system).
 
-> [!IMPORTANT]
-> [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] requires `libsss_nss_idmap0`, which is not provided by the default SLES repositories. You can install it from the SLES SDK.
+> [!IMPORTANT]  
+> [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] requires `libsss_nss_idmap0`, which isn't provided by the default SLES repositories. You can install it from the SLES SDK.
 
 ## Sample script
 
 This example installs [!INCLUDE [sssql19-md](../includes/sssql19-md.md)] on SLES v15 SP3. If you want to install a different version of [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] or SLES, change the Microsoft repository paths accordingly.
 
-Save the sample script to a file and then to customize it. You'll need to replace the variable values in the script. You can also set any of the scripting variables as environment variables, as long as you remove them from the script file.
+Save the sample script to a file and then to customize it. You must replace the variable values in the script. You can also set any of the scripting variables as environment variables, as long as you remove them from the script file.
 
 > [!IMPORTANT]  
 > The `SA_PASSWORD` environment variable is deprecated. Use `MSSQL_SA_PASSWORD` instead.
@@ -70,7 +69,7 @@ fi
 
 echo Adding Microsoft repositories...
 sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/15/mssql-server-2019.repo
-sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/15/prod.repo 
+sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/15/prod.repo
 sudo zypper --gpg-auto-import-keys refresh
 
 #Add the SLES v15 SP3 SDK to obtain libsss_nss_idmap0
@@ -181,7 +180,7 @@ To run the script:
 
 ## Understand the script
 
-The first thing the bash script does is set a few variables. These variables can be either scripting variables, like the sample, or environment variables. The variable `MSSQL_SA_PASSWORD` is **required** by SQL Server installation, the others are custom variables created for the script. The sample script performs the following steps:
+The first thing the bash script does is set a few variables. These variables can be either scripting variables, like the sample, or environment variables. The variable `MSSQL_SA_PASSWORD` is **required** by SQL Server installation. The others are custom variables created for the script. The sample script performs the following steps:
 
 1. Import the public Microsoft GPG keys.
 
@@ -232,4 +231,4 @@ Then run the bash script as follows:
 
 ## Related content
 
-- [SQL Server on Linux overview](sql-server-linux-overview.md)
+- [What is SQL Server on Linux?](sql-server-linux-overview.md)

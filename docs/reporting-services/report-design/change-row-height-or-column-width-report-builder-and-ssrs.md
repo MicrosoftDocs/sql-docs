@@ -3,7 +3,7 @@ title: Change row height or column width in a Report Builder paginated report
 description: Learn how to set the column width or fixed row height with text box properties for rendered paginated reports in Report Builder.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 07/12/2024
+ms.date: 07/16/2024
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: how-to
@@ -15,7 +15,7 @@ ms.custom: updatefrequency5
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
 
-When you set a row height, you're specifying the maximum height for the row in the rendered paginated report. However, text boxes in the row are set to grow vertically to accommodate their data at run-time by default. This setting can cause a row to expand beyond the height that you specify. To set a fixed row height, you must change the text box properties so they don't automatically expand.  
+When you set a row height, you're specifying the maximum height for the row in the rendered paginated report. However, by default text boxes in the row are set to grow vertically to accommodate their data at run-time. This setting can cause a row to expand beyond the height that you specify. To set a fixed row height, you must change the text box properties so they don't automatically expand.  
   
 When you set a column width, you specify the maximum width for the column in the rendered report. Columns don't automatically adjust horizontally to accommodate text.  
   
@@ -52,7 +52,7 @@ If a cell in a row or column contains a rectangle or data region, the height and
   
 1. Select the row handle and choose the row.  
   
-1. In the **Properties** pane, set **CanGrow** to **False**.
+1. In the **Properties** pane under **General**, set **CanGrow** to **False**.
 
     :::image type="content" source="../../reporting-services/report-design/media/can-grow.png" alt-text="Screenshot of the Properties Pane for the selected table cell highlighting the CanGrow property.":::
   
@@ -67,7 +67,7 @@ If a cell in a row or column contains a rectangle or data region, the height and
 
     :::image type="content" source="../../reporting-services/report-design/media/row-handles.png" alt-text="Screenshot of a table highlighting the double-headed arrow at the edge of a column.":::
   
-1. Select the edge of the column and move it left or right to adjust the column width.  
+1. Select the edge of the column, and move it left or right to adjust the column width.  
   
 ## Related content  
 

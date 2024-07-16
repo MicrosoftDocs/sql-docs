@@ -3,7 +3,7 @@ title: Add a subreport and parameters to a Report Builder paginated report
 description: Learn how to add a subreport to a paginated report when you want to create a main report as a container for multiple related reports in Report Builder.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 07/12/2024
+ms.date: 07/16/2024
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: how-to
@@ -18,7 +18,7 @@ f1_keywords:
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
 
-Add subreports to a paginated report when you want to create a main report that is a container for multiple related reports. A subreport is a reference to another report. To relate the reports through data values, you must design a parameterized report as the subreport. For example, to have multiple reports show data for the same customer you could create a report that shows the details for a specific customer. When you add a subreport to the main report, you can specify parameters to pass to the subreport.  
+Add subreports to a paginated report when you want to create a main report that's a container for multiple related reports. A subreport is a reference to another report. To relate the reports through data values, you must design a parameterized report as the subreport. For example, to have multiple reports show data for the same customer you could create a report that shows the details for a specific customer. When you add a subreport to the main report, you can specify parameters to pass to the subreport.  
   
 You can also add subreports to dynamic rows or columns in a table or matrix. When the main report is processed, the subreport is processed for each row. In this case, consider whether you can achieve the desired effect by using data regions or nested data regions.
 
@@ -41,7 +41,7 @@ You can also add subreports to dynamic rows or columns in a table or matrix. Whe
 
     :::image type="content" source="../../reporting-services/report-design/media/subreport-properties-name.png" alt-text="Screenshot of the Subreport Properties dialog box highlighting the Name field on the General tab.":::
   
-1. In the **Use this report as a subreport** box, select **Browse**, or enter the name of the report. Selecting **Browse** is preferred because the path to the subreport is specified automatically. You can specify the report in the several ways. For more information, see [Specify paths to external items in a paginated report (Report Builder)](../../reporting-services/report-design/specifying-paths-to-external-items-report-builder-and-ssrs.md).  
+1. In the **Use this report as a subreport** box, select **Browse**, or enter the name of the report. Selecting **Browse** is preferred because the path to the subreport is specified automatically. You can specify the report in several ways. For more information, see [Specify paths to external items in a paginated report (Report Builder)](../../reporting-services/report-design/specifying-paths-to-external-items-report-builder-and-ssrs.md).  
   
 1. (Optional) Choose **Yes** for **Omit border on page break** to prevent a border from being rendered in the middle of the subreport if the subreport spans more than one page.  
   
@@ -70,7 +70,7 @@ You can also add subreports to dynamic rows or columns in a table or matrix. Whe
   
 1. To delete a subreport parameter, select the parameter in the parameter grid, and then choose **Delete**.  
   
-1. To change the order of a subreport parameter, select the parameter, and then choose the up button or the down button.  
+1. To change the order of a subreport parameter, select the parameter, and then choose the up or down button.  
   
      Changing the order of a subreport parameter doesn't affect the processing of the subreport.  
   

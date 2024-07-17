@@ -24,7 +24,7 @@ Typically, the expand and collapse action is used to initially display only summ
 > [!NOTE]  
 > [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## Add expand and collapse action to a group
+## Add an expand and collapse action to a group
   
 1. In **Design** view, select your table or matrix. The **Grouping** pane displays the row and column groups.  
   
@@ -47,22 +47,22 @@ Typically, the expand and collapse action is used to initially display only summ
   
     - Select **True** to hide the report item.  
   
-    - Select **\<Expression>** to open the **Expression** dialog box to create an expression evaluated at run time to determine the visibility.  
+    - Select **\<Expression>** to open the **Expression** dialog box. Create an expression evaluated at run time to determine the visibility.  
   
-1. In **ToggleItem**, from the dropdown list, select the name of a text box you want to add a toggle to.  
+1. In **ToggleItem**, from the dropdown list, select the name of a text box to which you want to add a toggle.  
   
      In the following image, the **Details** row group is configured to let users expand and collapse associated rows:
   
      :::image type="content" source="../../reporting-services/report-design/media/expand-collapse-config-hidden-toggle-item-with-numbers.png" alt-text="Screenshot of Report Builder highlighting the Details group and its Visibility property in the Properties pane.":::
   
     > [!NOTE]  
-    > The text box with the toggle image can't be the row or column group you want to hide the associated rows or columns. It must either be in the same group as the item being hidden or in an ancestor group. For example, to toggle visibility of rows associated with a child group, select a text box in a row associated with the parent group.  
+    > The text box with the toggle image can't be the row or column group you want to hide the associated rows or columns. It must be in the same group as the item being hidden or in an ancestor group. For example, to toggle visibility of rows associated with a child group, select a text box in a row associated with the parent group.  
   
 1. To test the toggle, run the report and select the text box with toggle. The report display refreshes to show row groups and column groups with their toggled visibility.  
   
      :::image type="content" source="../../reporting-services/report-design/media/expand-collapse-run-report-row-group.png" alt-text="Screenshot of a running report with an expandable row group.":::  
   
-## Add expand and collapse action to a report item  
+## Add an expand and collapse action to a report item  
   
 1. In **Design** view, right-click the report item to show or hide, and then select `<report item>` **Properties**. The `<report item>` **Properties** dialog for the report item opens.  
   

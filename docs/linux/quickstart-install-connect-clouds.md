@@ -4,8 +4,7 @@ titleSuffix: SQL Server
 description: Learn how to install SQL Server on Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES), or Ubuntu in the cloud of your choice.
 author: rwestMSFT
 ms.author: randolphwest
-ms.reviewer: randolphwest
-ms.date: 08/17/2022
+ms.date: 07/15/2024
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
@@ -17,10 +16,10 @@ ms.custom:
 
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
-In this quickstart, you will install SQL Server on Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES), or Ubuntu in the cloud of your choice. Go to [Provision a Linux SQL Server virtual machine in the Azure portal](/azure/azure-sql/virtual-machines/linux/sql-vm-create-portal-quickstart?toc=%252fsql%252ftoc%252ftoc.json) to run SQL Server on Linux in Azure.
+In this quickstart, you install [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES), or Ubuntu in the cloud of your choice. To run [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on Linux in Azure, see [Provision a Linux SQL Server virtual machine in the Azure portal](/azure/azure-sql/virtual-machines/linux/sql-vm-create-portal-quickstart).
 
 > [!NOTE]  
-> If you choose to run a paid edition of SQL Server, then you need to bring your own license (BYOL).
+> If you choose to run a paid edition of [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)], then you need to bring your own license (BYOL).
 
 ## Amazon Web Services
 
@@ -30,24 +29,24 @@ In this quickstart, you will install SQL Server on Red Hat Enterprise Linux (RHE
    - [Ubuntu 18.04](https://aws.amazon.com/marketplace/pp/prodview-pkjqrkcfgcaog)
 1. Connect to the AMI with **ssh**
 1. Follow the quickstart for the Linux distribution you chose:
-   - [RHEL](quickstart-install-connect-red-hat.md)
-   - [SLES](quickstart-install-connect-suse.md)
-   - [Ubuntu](quickstart-install-connect-ubuntu.md)
+   - [Quickstart: Install SQL Server and create a database on Red Hat](quickstart-install-connect-red-hat.md)
+   - [Quickstart: Install SQL Server and create a database on SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
+   - [Quickstart: Install SQL Server and create a database on Ubuntu](quickstart-install-connect-ubuntu.md)
 1. Configure for remote connections:
    - Open the [Amazon EC2 console]( https://console.aws.amazon.com/ec2/)
    - In the navigation pane, choose **Security Groups**.
    - Choose **Inbound, Edit, Add Rule**
-   - Add an inbound rule to allow traffic on the port on which SQL Server listens (default TCP port 1433)
+   - Add an inbound rule to allow traffic on the port on which [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] listens (default TCP port 1433)
 
 ## Digital Ocean
 
-1. Log in to the [control panel](https://cloud.digitalocean.com/login) and select **Create a droplet**
+1. Sign in to the [control panel](https://cloud.digitalocean.com/login) and select **Create a droplet**
 1. Choose an Ubuntu 18.04 droplet with at least 2 GB of memory
 1. Connect to the droplet with **ssh**
 1. Follow the [Ubuntu quickstart](quickstart-install-connect-ubuntu.md)
 1. Configure for remote connections:
    - At the top of the Control Panel, follow the **Networking** link and then select **Firewalls**
-   - Add an inbound rule to allow traffic on the port on which SQL Server listens (default TCP port 1433)
+   - Add an inbound rule to allow traffic on the port on which [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] listens (default TCP port 1433)
 
 ## Google Cloud Platform
 
@@ -57,9 +56,9 @@ In this quickstart, you will install SQL Server on Red Hat Enterprise Linux (RHE
    - [Ubuntu 18.04](https://console.cloud.google.com/marketplace/details/ubuntu-os-cloud/ubuntu-bionic)
 1. Connect to the image with **ssh**
 1. Follow the quickstart for the Linux distribution you chose:
-   - [RHEL](quickstart-install-connect-red-hat.md)
-   - [SLES](quickstart-install-connect-suse.md)
-   - [Ubuntu](quickstart-install-connect-ubuntu.md)
+   - [Quickstart: Install SQL Server and create a database on Red Hat](quickstart-install-connect-red-hat.md)
+   - [Quickstart: Install SQL Server and create a database on SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
+   - [Quickstart: Install SQL Server and create a database on Ubuntu](quickstart-install-connect-ubuntu.md)
 1. Configure for remote connections:
    - Go to the [Firewall Rules](https://console.cloud.google.com/networking/firewalls)
-   - Add an inbound rule to allow traffic on the port on which SQL Server listens (default TCP port 1433)
+   - Add an inbound rule to allow traffic on the port on which [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] listens (default TCP port 1433)

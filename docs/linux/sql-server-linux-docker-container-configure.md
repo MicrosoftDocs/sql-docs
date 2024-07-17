@@ -317,7 +317,7 @@ To remove a data volume container, use the `docker volume rm` command.
 
 ### Backup and restore
 
-In addition to these container techniques, you can also use standard [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] backup and restore techniques. You can use backup files to protect your data or to move the data to another [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] instance. For more information, see [Backup and restore SQL Server databases on Linux](sql-server-linux-backup-and-restore-database.md).
+In addition to these container techniques, you can also use standard [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] backup and restore techniques. You can use backup files to protect your data or to move the data to another [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] instance. For more information, see [Back up and restore SQL Server databases on Linux](sql-server-linux-backup-and-restore-database.md).
 
 > [!WARNING]  
 > If you do create backups, make sure to create or copy the backup files outside of the container. Otherwise, if the container is removed, the backup files are also deleted.

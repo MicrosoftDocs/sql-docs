@@ -3,8 +3,7 @@ title: How to use distributed transactions with SQL Server Linux containers
 description: Learn to use the Microsoft Distributed Transaction Coordinator (MSDTC) for distributed transactions in a SQL Server container on Linux.
 author: rwestMSFT
 ms.author: randolphwest
-ms.reviewer: randolphwest
-ms.date: 09/21/2022
+ms.date: 07/15/2024
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
@@ -27,8 +26,8 @@ SQL Server container images can use the Microsoft Distributed Transaction Coordi
 
 To enable MSDTC transaction in SQL Server containers, you must set two new environment variables:
 
-- **MSSQL_RPC_PORT**: the TCP port that RPC endpoint mapper service binds to and listens on.  
-- **MSSQL_DTC_TCP_PORT**: the port that MSDTC service is configured to listen on.
+- `MSSQL_RPC_PORT`: the TCP port that RPC endpoint mapper service binds to and listens on.
+- `MSSQL_DTC_TCP_PORT`: the port that MSDTC service is configured to listen on.
 
 ### Pull and run
 
@@ -83,7 +82,7 @@ docker run `
 
 ::: moniker-end
 
-In this command, the **RPC Endpoint Mapper** service has been bound to port 135, and the **MSDTC** service has been bound to port 51000 within the container's virtual network. SQL Server TDS communication occurs on port 1433, also within the container's virtual network. These ports have been externally exposed to host as TDS port 51433, RPC endpoint mapper port 135, and MSDTC port 51000.
+In this command, the **RPC Endpoint Mapper** service is bound to port 135, and the **MSDTC** service is bound to port 51000 within the container's virtual network. SQL Server TDS communication occurs on port 1433, also within the container's virtual network. These ports are externally exposed to host as TDS port 51433, RPC endpoint mapper port 135, and MSDTC port 51000.
 
 The RPC Endpoint Mapper and MSDTC port don't have to be the same on the host and the container. So while RPC Endpoint Mapper port was configured to be 135 on container, it could potentially be mapped to port 13501 or any other available port on the host server.
 
@@ -118,13 +117,13 @@ For more information about routing ports, see [Configure port routing](sql-serve
 
 ## SQL Server containers with MSDTC on Kubernetes
 
-If you're deploying SQL Server containers on a Kubernetes platform, see the example YAML deployment manifest below. In this example, the Kubernetes platform is Azure Kubernetes Service (AKS).
+If you're deploying SQL Server containers on a Kubernetes platform, see the following example YAML deployment manifest. In this example, the Kubernetes platform is Azure Kubernetes Service (AKS).
 
 ### Scenario 1: MSDTC client connecting to SQL Server in a Kubernetes container
 
 The following diagram shows the process when an MSDTC client connects to MSDTC on SQL Server running inside a Linux container on Kubernetes.
 
-:::image type="content" source="media/sql-server-linux-configure-msdtc-docker/msdtc-single.png" alt-text="Diagram showing the process when an MSDTC client connects to MSDTC on SQL Server running inside a Linux container.":::
+:::image type="content" source="media/sql-server-linux-configure-msdtc-docker/msdtc-single.png" alt-text="Diagram showing the process when an MSDTC client connects to MSDTC on SQL Server running inside a Linux container." lightbox="media/sql-server-linux-configure-msdtc-docker/msdtc-single.png":::
 
 1. The MSDTC client makes a connection to port 135 on the Kubernetes host.
 1. The connection is forwarded to port 135 on the container.
@@ -142,25 +141,25 @@ The following diagram shows the process when one SQL Server Linux container conn
 1. The connection is forwarded to port 135 on the second instance's container.
 1. The container forwards the connection to the RPC endpoint mapper, which is on port 13500 in this example.
 1. The endpoint mapper tells the first SQL Server instance which port MSDTC is running inside the second container (port 51000 in this example).
-1. The first SQL Server instance makes a connection directly to MSDTC on the second instance by connecting to the second host on port 51000, which is forwarded to SQL Server inside the container.
+1. The first SQL Server instance makes a connection directly to MSDTC on the second instance, by connecting to the second host on port 51000, which is forwarded to SQL Server inside the container.
 
 ### Deploy SQL Server containers with MSDTC configured on a Kubernetes platform
 
-Before running the sample deployment YAML script, create the necessary secret to store the `sa` password. A typical command is as shown below:
+Before running the sample deployment YAML script, create the necessary secret to store the `sa` password, using the following example command:
 
 ```bash
 kubectl create secret generic mssql --from-literal=MSSQL_SA_PASSWORD="MyC0m9l&xP@ssw0rd"
 ```
 
-You'll notice the following points in the manifest file:
+You notice the following points in the manifest file:
 
-1. In the cluster, we create the following objects: StorageClass, two SQL Server pods deployed as `statefulset` deployments, and two load balancer services to connect to the respective SQL Server instances.
+1. In the cluster, we create the following objects: `StorageClass`, two SQL Server pods deployed as `statefulset` deployments, and two load balancer services to connect to the respective SQL Server instances.
 
-1. You'll also notice that the load balancer services are deployed with static IP addresses, which can be configured on Azure Kubernetes Service. See [Use a static public IP address and DNS label with the Azure Kubernetes Service (AKS) load balancer](/azure/aks/static-ip). Creating the load balancer services with static IP addresses ensures that the external IP address doesn't change if the load balancer service is deleted and recreated.
+1. You also notice that the load balancer services are deployed with static IP addresses, which can be configured on Azure Kubernetes Service. See [Use a static public IP address and DNS label with the Azure Kubernetes Service (AKS) load balancer](/azure/aks/static-ip). Creating the load balancer services with static IP addresses ensures that the external IP address doesn't change if the load balancer service is deleted and recreated.
 
-1. In the script below, you can see that port 13500 is used for the `MSSQL_RPC_PORT` environment variable, and port 51000 for the `MSSQL_DTC_TCP_PORT` environment variable, both of which are required for MSDTC.
+1. In the following script, you can see that port 13500 is used for the `MSSQL_RPC_PORT` environment variable, and port 51000 for the `MSSQL_DTC_TCP_PORT` environment variable, both of which are required for MSDTC.
 
-1. The port routing (that is, routing port 135 to 13500) is configured in the load balancer script by appropriately configuring the `port` and `targetPort` as shown below:
+1. The port routing (that is, routing port 135 to 13500) is configured in the load balancer script by appropriately configuring the `port` and `targetPort` as shown in the following example:
 
 ```yaml
 kind: StorageClass
@@ -277,7 +276,7 @@ spec:
     name: nonrootport
 ```
 
-Assuming you created the resource in the default namespace, when you run the `kubectl get all` command after the above deployment to see all the resources created, you should see the output shown below.
+Assuming you created the resource in the default namespace, when you run the `kubectl get all` command after the previous deployment to see all the resources created, you should see the output shown in the following example.
 
 ```output
 NAME          READY   STATUS    RESTARTS   AGE
@@ -293,7 +292,7 @@ NAME                     READY   AGE
 statefulset.apps/mssql   2/2     5d1h
 ```
 
-You can use tools like SQL Server Management Studio (SSMS) to connect to either of the above two SQL Server instances and run a sample DTC transaction. In this example, you will connect to `mssql-1` (20.72.137.129) and create the linked server to `mssql-0` (40.88.213.209) to run the distributed transaction, as shown below.
+You can use tools like SQL Server Management Studio (SSMS) to connect to either of the previous two SQL Server instances and run a sample DTC transaction. In this example, you connect to `mssql-1` (20.72.137.129) and create the linked server to `mssql-0` (40.88.213.209) to run the distributed transaction, as shown in the following example.
 
 ```sql
 USE [master]
@@ -305,7 +304,7 @@ EXEC master.dbo.sp_addlinkedsrvlogin @rmtsrvname = N'40.88.213.209', @rmtuser = 
 GO
 ```
 
-Now you can start the distributed transaction, and this code sample will show you the `sys.sysprocesses` from the `mssql-0` instance:
+Now you can start the distributed transaction, and this code sample shows you the `sys.sysprocesses` from the `mssql-0` instance:
 
 ```sql
 SET XACT_ABORT ON;

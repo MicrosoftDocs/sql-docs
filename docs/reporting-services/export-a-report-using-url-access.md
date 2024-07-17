@@ -1,21 +1,21 @@
 ---
-title: "Export a report by using URL access"
-description: "Learn how to export a report from SQL Server Reporting Services (SSRS) in different formats by using URL access."
+title: "Export a report by using the rs:Format URL parameter"
+description: "Learn how to export a report from SQL Server Reporting Services (SSRS) in different file formats by using the rs:Format URL parameter."
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 07/12/2024
+ms.date: 07/17/2024
 ms.service: reporting-services
 ms.subservice: reporting-services
-ms.topic: how-to
+ms.topic: conceptual
 ms.custom: updatefrequency5
 helpviewer_keywords:
   - "formats [Reporting Services], URL rendering"
   - "URL access [Reporting Services], rendering formats"
-#customer intent: As a SQL Server report user or administrator, I want to export reports from SSRS by using URL access to easily obtain reports in different formats.
+#customer intent: As a SQL Server report user or administrator, I want to learn about the rs:Format parameter so I can export reports in different file formats. 
 ---
 # Export a report by using URL access
 
-Learn how to export reports from SQL Server Reporting Services (SSRS) by using URL access and the `rs:Format` URL parameter. This method allows you to render reports in various formats, such as PDF and PPTX, directly from the report server.
+Learn how you can export reports from SQL Server Reporting Services (SSRS) by using URL access and the `rs:Format` URL parameter. This method allows you to render reports in various file formats, such as PDF and PPTX, directly from the report server.
 
 ## Prerequisites
 
@@ -25,7 +25,7 @@ Learn how to export reports from SQL Server Reporting Services (SSRS) by using U
 
 ## Specify the export format
 
-Specify the format in which to render a report by using the `rs:Format` URL parameter. The HTML4.0 and HTM5 formats render in the browser, while other formats prompt you to save the report output to a local file. 
+Specify the format in which to render a report by using the `rs:Format` URL parameter. The HTML4.0 and HTML 5 formats render in the browser, while other formats prompt you to save the report output to a local file. 
 
 ## Export a PDF report 
   
@@ -53,7 +53,7 @@ To export a PPTX report from a named instance of the report server, use the foll
 https://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freportfolder%2freport+name+with+spaces&rs:Format=pptx  
 ```  
 
-## Valid values for the `rs:Format` parameter
+## Common values for the `rs:Format` parameter
 
 The `rs:Format` parameter accepts the following common values based on the report rendering extensions installed on the report server:
 

@@ -1,104 +1,131 @@
 ---
 title: "Pass a report parameter within a URL"
-description: Learn how to pass report parameters directly to the report processing engine by including them in a report URL.
+description: Learn how to pass report parameters directly to the SQL Server Reporting Services (SSRS) report server in a URL.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/01/2017
+ms.date: 07/17/2024
 ms.service: reporting-services
 ms.subservice: reporting-services
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: updatefrequency5
 helpviewer_keywords:
   - "URL access [Reporting Services], passing parameters"
   - "passing parameters [Reporting Services]"
+#customer intent: As a SQL Server report user or administrator, I want to pass parameters within a URL to customize report outputs and streamline report generation in SSRS.
 ---
 # Pass a report parameter within a URL
-  You can pass report parameters to a report by including them in a report URL. These URL parameters aren't prefixed because they're passed directly to the report processing engine.  
 
-> [!NOTE]
-> Reporting Services integration with SharePoint is no longer available after SQL Server 2016.
+Learn how to pass report parameters to a SQL Server Reporting Services (SSRS) report server by including them in a report URL. These URL parameters aren't prefixed because they're passed directly to the report processing engine.   
   
-> [!IMPORTANT]  
->  It is important the URL include the `_vti_bin` proxy syntax to route the request through SharePoint and the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] HTTP proxy. The proxy adds some context to the HTTP request, context that is required to ensure proper execution of the report for SharePoint mode report servers.  
->   
->  If you don't include the proxy syntax, then you need to prefix the parameter with *rp:*.  
+All query parameters can have corresponding report parameters. You pass a query parameter to a report by passing the corresponding report parameter. For more information, see [Build a query in the Relational Query Designer &#40;Report Builder and SSRS&#41;](../reporting-services/report-data/build-a-query-in-the-relational-query-designer-report-builder-and-ssrs.md).  
+
+Report parameters are case-sensitive. 
+
+### Basic syntax
   
- All query parameters can have corresponding report parameters. You pass a query parameter to a report by passing the corresponding report parameter. For more information, see [Build a query in the Relational Query Designer &#40;Report Builder and SSRS&#41;](../reporting-services/report-data/build-a-query-in-the-relational-query-designer-report-builder-and-ssrs.md).  
-  
-> [!IMPORTANT]
->  Report parameters are case-sensitive.  
-> 
-> [!NOTE]
->  Report parameters are case-sensitive and utilize the following special characters:  
-> 
->  -   Any space characters in the URL string are replaced with the characters "%20," according to URL encoding standards.  
-> -   A space character in the parameter portion of the URL is replaced with a plus character (+).  
-> -   A semicolon in any portion of the string is replaced with the characters "%3A."  
-> -   Browsers should automatically perform the proper URL encoding. You do not have to encode any of the characters manually.  
-  
- To set a report parameter within a URL, use the following syntax:  
+To set a report parameter within a URL, use the following syntax:  
   
 ```  
   
 parameter=value  
 ```  
+
+## Pass a URL that contains special characters
+
+To pass a URL that contains special characters, be sure to:   
+- Replace any space characters in the URL string with the characters `%20`.  
+- Replace space character in the parameter portion of the URL with a plus character `+`.  
+- Replace a semicolon in any portion of the string with the characters `%3A`.
+
+Browsers typically handle URL encoding automatically, so you do not need to encode characters manually. 
+
+The following URL example includes spaces and multiple parameters:  
   
- For example, to specify two parameters, "ReportMonth" and "ReportYear", defined in a report, use the following URL for a native mode report server:  
+- Folder name of `SQL Server User Education Team` includes spaces, so the `+` replaces each space.  
+- Report name of team project report includes spaces and therefore the "+" replaces each space.    
+  
+```  
+https://myrshost/ReportServer?/AdventureWorks2022/Employee%20Sales%20Summary%202022&EmployeeName=John+Doe%3A+Manager
+``` 
+
+In this example:
+
+- The URL, `https://myrshost/ReportServer?/AdventureWorks2022/Employee%20Sales%20Summary%202022` replaces spaces in the report path with `%20`.
+- The parameter, `EmployeeName=John+Doe%3A+Manager` replaces spaces in the parameter value with `+` and the semicolon with `%3A`.
+
+## Pass `ReportMonth` and `ReportYear` parameters
+
+To pass specific month and year parameters (`ReportMonth` and `ReportYear`) to get a filtered report based on those values, use the following syntax:   
   
 ```  
 https://myrshost/ReportServer?/AdventureWorks2022/Employee_Sales_Summary_2022&ReportMonth=3&ReportYear=2008  
 ```  
-  
- For example, to specify the same two parameters defined in a report, use the following URL for a SharePoint integrated mode report server. Note the `/_vti_bin`:  
+
+### Pass parameters to a SharePoint integrated report server
+
+> [!NOTE]
+> SSRS integration with SharePoint is no longer available after SQL Server 2016.  
+
+It's important the URL include the `_vti_bin` proxy syntax to route the request through SharePoint and the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] HTTP proxy. The proxy adds some context to the HTTP request, context that is required to ensure proper execution of the report for SharePoint mode report servers. If you don't include the proxy syntax, then you need to prefix the parameter with *rp:*.  
+
+To specify the `ReportMonth` and `ReportYear` parameters for a similar repot on a SharePoint Integrated report server, use the following URL for a SharePoint integrated mode report server: 
   
 ```  
 https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/AdventureWorks2022/Employee_Sales_Summary_2022.rdl&ReportMonth=3&ReportYear=2008  
 ```  
   
- To pass a null value for a parameter, use the following syntax:  
+### Pass a null value 
+
+To pass a null value for a parameter, use the following syntax:  
   
 ```  
-  
 parameter  
 :isnull=true  
-  
 ```  
   
- For example,  
+For example,  
   
 ```  
 SalesOrderNumber:isnull=true  
 ```  
   
- To pass a **Boolean** value, use 0 for false and 1 for true. To pass a **Float** value, include the decimal separator of the server locale  
+### Pass a Boolean value
+
+To pass a **Boolean** value, use `0` for false and `1` for true. For example, to pass a Boolean parameter, `ShowDetails`, that determines whether to show detailed information in the report:
+
+```
+https://myrshost/ReportServer?/AdventureWorks2022/Employee_Sales_Summary_2022&ShowDetails=1
+```
+In this example:
+
+- `ShowDetails=1` sets the `ShowDetails` parameter to true, indicating that the report should display detailed information.
+
+### Pass a Float value
+
+To pass a float value, include the decimal separator of the server locale. For example, the following URL includes the float parameter, `DiscountRate`, that specifies the discount rate to apply in the report:
+
+```
+https://myrshost/ReportServer?/AdventureWorks2022/Employee_Sales_Summary_2022&DiscountRate=0.05
+```
+
+In this example:
+
+- `DiscountRate=0.05` sets the `DiscountRate` parameter to 0.05, representing a 5% discount rate to be applied in the report.
   
 > [!NOTE]  
->  If your report contains a report parameter that has a default value and the value of the **Prompt** property is **false** (that is, the Prompt User property is not selected in Report Manager), then you cannot pass a value for that report parameter within a URL. This provides administrators an option for preventing end users from adding or modifying the values of certain report parameters.  
+>  If your report contains a report parameter that has a default value and the value of the **Prompt** property is **false**, then you can't pass a value for that report parameter within a URL. This option allows administrators to prevent end users from adding or modifying the values of certain report parameters.  
   
-##  <a name="bkmk_examples"></a> More examples  
- The following URL example includes spaces and multiple parameters  
+## Pass multi-value parameters  
   
--   Folder name of "SQL Server User Education Team" includes spaces and therefore the "+" replaces each space.  
-  
--   Report name of "team project report" includes spaces and therefore the "+" replaces each space.  
-  
--   Passes two parameters of "teamgrouping2" with a value of ``xgroup`` and "teamgrouping1" with a value of ``ygroup``.  
-  
-```  
-https://myserver/Reportserver?/SQL+Server+User+Education+Team/_ContentTeams/folder123/team+project+report&teamgrouping2=xgroup&teamgrouping1=ygroup  
-```  
-  
- The following URL example includes a multi-value parameter "OrderID. The format for a Multi-Value parameter is to repeat the parameter name for each value.  
+To pass multi-value parameters, repeat the parameter name for each value, as in the following URL:  
   
 ```  
 https://myserver/Reportserver?/SQL+Server+User+Education+Team/_ContentTeams/folder123/team+project+report&teamgrouping2=xgroup&teamgrouping1=ygroup&OrderID=747&OrderID=787&OrderID=12  
 ```  
-  
- The following URL example passes a single parameter of *SellStartDate* with a value of "7/1/2005", for a native mode report server.  
-  
-```  
-https://myserver/ReportServer/Pages/ReportViewer.aspx?%2fProduct_and_Sales_Report_AdventureWorks&SellStartDate=7/1/2005  
-```  
+
+In this example:
+
+- `&OrderID=747&OrderID=787&OrderID=12` repeats the `OrderID` parameter for each value. The report receives the three `OrderID` values: 747, 787, and 12.
   
 ## Related content
 

@@ -32,14 +32,22 @@ This guide covers several deployment scenarios. If you only need step-by-step in
 
 For answers to frequently asked questions, see the [SQL Server on Linux FAQ](sql-server-linux-faq.yml).
 
-## Support policy
-
-[!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] is supported on an operating system (OS) distribution until either the OS distribution reaches end of mainstream support, or [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] reaches end of mainstream support, whichever comes first.
+## SQL Server support policy
 
 | Term | Definition |
 | --- | --- |
 | **Servicing** | Microsoft releases GDR, hotfixes, and security fixes within lifecycle of product for supported distributions. |
 | **Support** | Microsoft supports users with problems pertaining to supported distributions. |
+
+### Support policy
+
+[!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] is supported on Linux distributions until the earlier of two events: the end of the distribution's support lifecycle, or the end of the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] support lifecycle.
+
+### Servicing policy
+
+During the Mainstream support phase of [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)], we provide Cumulative Updates (CUs) for all Linux distributions that are also within their Mainstream support period. For Linux distributions that move from Mainstream to Extended support and are still recognized as supported platforms, [!INCLUDE [msconame-md](../includes/msconame-md.md)] can release CUs and bug fixes at its discretion.
+
+Once [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] moves beyond Mainstream support and into the Extended support phase, we continue to publish security updates and General Distribution Release (GDR) fixes. However, these updates aren't extended to Linux distributions that conclude their support period.
 
 ## <a id="supportedplatforms"></a> Supported platforms
 
@@ -108,7 +116,7 @@ You can install [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on Li
 
 You can also run [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on Linux in an Azure virtual machine. For more information, see [Provision a SQL VM in Azure](/azure/azure-sql/virtual-machines/linux/sql-vm-create-portal-quickstart?toc=/sql/toc/toc.json).
 
-After installing, consider making additional configuration changes for optimal performance. For more information, see [Performance best practices and configuration guidelines for SQL Server on Linux](sql-server-linux-performance-best-practices.md).
+After installing, consider making extra configuration changes for optimal performance. For more information, see [Performance best practices and configuration guidelines for SQL Server on Linux](sql-server-linux-performance-best-practices.md).
 
 ## <a id="upgrade"></a> Update or upgrade SQL Server
 
@@ -122,7 +130,7 @@ To update the `mssql-server` package to the latest release, use one of the follo
 
 These commands download the newest package and replace the binaries located under `/opt/mssql/`. The user generated databases and system databases aren't affected by this operation.
 
-To upgrade [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)], first [change your configured repository](sql-server-linux-change-repo.md) to the desired version of [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)]. Then use the same `update` command to upgrade your version of [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)]. This is only possible if the upgrade path is supported between the two repositories.
+To upgrade [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)], first [change your configured repository](sql-server-linux-change-repo.md) to the desired version of [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)]. Then use the same `update` command to upgrade your version of [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)]. This step is only possible if the upgrade path is supported between the two repositories.
 
 ## <a id="rollback"></a> Roll back SQL Server
 

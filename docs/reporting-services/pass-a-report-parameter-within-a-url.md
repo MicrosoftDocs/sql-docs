@@ -19,9 +19,8 @@ Learn how to pass report parameters to a SQL Server Reporting Services (SSRS) re
   
 All query parameters can have corresponding report parameters. You pass a query parameter to a report by passing the corresponding report parameter. For more information, see [Build a query in the Relational Query Designer &#40;Report Builder and SSRS&#41;](../reporting-services/report-data/build-a-query-in-the-relational-query-designer-report-builder-and-ssrs.md).  
 
-Report parameters are case-sensitive. 
 
-### Basic syntax
+## Basic syntax
   
 To set a report parameter within a URL, use the following syntax:  
   
@@ -30,6 +29,9 @@ To set a report parameter within a URL, use the following syntax:
 parameter=value  
 ```  
 
+> [!NOTE]
+> Report parameters are case-sensitive. 
+
 ## Pass a URL that contains special characters
 
 To pass a URL that contains special characters, be sure to:   
@@ -37,7 +39,7 @@ To pass a URL that contains special characters, be sure to:
 - Replace space character in the parameter portion of the URL with a plus character `+`.  
 - Replace a semicolon in any portion of the string with the characters `%3A`.
 
-Browsers typically handle URL encoding automatically, so you do not need to encode characters manually. 
+Browsers typically handle URL encoding automatically, so you don't need to encode characters manually. 
 
 The following URL example includes spaces and multiple parameters:  
   
@@ -89,7 +91,7 @@ For example,
 SalesOrderNumber:isnull=true  
 ```  
   
-### Pass a Boolean value
+### Pass a boolean value
 
 To pass a **Boolean** value, use `0` for false and `1` for true. For example, to pass a Boolean parameter, `ShowDetails`, that determines whether to show detailed information in the report:
 
@@ -100,7 +102,7 @@ In this example:
 
 - `ShowDetails=1` sets the `ShowDetails` parameter to true, indicating that the report should display detailed information.
 
-### Pass a Float value
+### Pass a float value
 
 To pass a float value, include the decimal separator of the server locale. For example, the following URL includes the float parameter, `DiscountRate`, that specifies the discount rate to apply in the report:
 

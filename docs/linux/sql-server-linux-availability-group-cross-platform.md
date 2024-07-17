@@ -4,7 +4,7 @@ description: Learn how to create a SQL Server Always On Availability Group (AG) 
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: vanto
-ms.date: 09/19/2023
+ms.date: 07/15/2024
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
@@ -39,8 +39,7 @@ In this scenario, two servers are on different operating systems. A Windows Serv
 
 The steps to create the AG are the same as the steps to create an AG for [read-scale workloads](sql-server-linux-availability-group-configure-rs.md). The AG cluster type is NONE, because there's no cluster manager.
 
-> [!NOTE]  
-> For the scripts in this article, angle brackets `<` and `>` identify values that you need to replace for your environment. The angle brackets themselves aren't required for the scripts.
+For the scripts in this article, angle brackets `<` and `>` identify values that you must replace for your environment. The angle brackets themselves aren't required for the scripts.
 
 1. Install [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] on Windows Server 2022, enable **Always On Availability Groups** from SQL Server Configuration Manager, and set mixed mode authentication.
 
@@ -49,9 +48,9 @@ The steps to create the AG are the same as the steps to create an AG for [read-s
 
    **Enable Availability Groups**
 
-   For instructions, see [Enable and disable Always On Availability Groups (SQL Server)](../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md).
+   For instructions, see [Enable or disable Always On availability group feature](../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md).
 
-   :::image type="content" source="media/sql-server-linux-availability-group-cross-platform/configuration-manager.png" alt-text="Screenshot showing how to enable Availability Groups.":::
+   :::image type="content" source="media/sql-server-linux-availability-group-cross-platform/configuration-manager.png" alt-text="Screenshot showing how to enable Availability Groups." lightbox="media/sql-server-linux-availability-group-cross-platform/configuration-manager.png":::
 
    SQL Server Configuration Manager notes that the computer isn't a node in a failover cluster.
 
@@ -61,7 +60,7 @@ The steps to create the AG are the same as the steps to create an AG for [read-s
 
    For instructions, see [Change server authentication mode](../database-engine/configure-windows/change-server-authentication-mode.md#change-authentication-mode-with-ssms).
 
-1. Install [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] on Linux. For instructions, see [Install SQL Server](sql-server-linux-setup.md). Enable `hadr` with **mssql-conf**.
+1. Install [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] on Linux. For instructions, see [Installation guidance for SQL Server on Linux](sql-server-linux-setup.md). Enable `hadr` with **mssql-conf**.
 
    To enable `hadr` via **mssql-conf** from a shell prompt, issue the following command:
 
@@ -200,7 +199,7 @@ The steps to create the AG are the same as the steps to create an AG for [read-s
    GO
    ```
 
-   For more information, see [CREATE AVAILABILITY GROUP (Transact-SQL)](../t-sql/statements/create-availability-group-transact-sql.md).
+   For more information, see [CREATE AVAILABILITY GROUP](../t-sql/statements/create-availability-group-transact-sql.md).
 
 1. On the secondary replica, join the AG.
 
@@ -251,5 +250,5 @@ This article reviewed the steps to create a cross-platform AG to support migrati
 
 ## Related content
 
-- [Overview of Always On Availability Groups](../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)
+- [What is an Always On availability group?](../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)
 - [SQL Server availability basics for Linux deployments](sql-server-linux-ha-basics.md)

@@ -37,7 +37,7 @@ To pass specific month and year parameters (`ReportMonth` and `ReportYear`) to g
 https://myrshost/ReportServer?/AdventureWorks2022/Employee_Sales_Summary_2022&ReportMonth=3&ReportYear=2008  
 ```  
 
-### Pass parameters to a SharePoint integrated report server
+## Pass `ReportMonth` and `ReportYear` to an SSRS SharePoint mode report server
 
 > [!NOTE]
 > SSRS integration with SharePoint is no longer available after SQL Server 2016.  
@@ -50,7 +50,7 @@ To specify the `ReportMonth` and `ReportYear` parameters for a similar report on
 https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/AdventureWorks2022/Employee_Sales_Summary_2022.rdl&ReportMonth=3&ReportYear=2008  
 ```  
   
-### Pass a null value 
+## Pass a null value 
 
 To pass a null value for a parameter in a URL, use the following syntax:  
   
@@ -65,7 +65,7 @@ For example,
 SalesOrderNumber:isnull=true  
 ```  
   
-### Pass a boolean value
+## Pass a boolean value
 
 To pass a **Boolean** value in a URL, use `0` for false and `1` for true:
 
@@ -76,7 +76,7 @@ In this example:
 
 - `ShowDetails=1` sets the `ShowDetails` parameter to true, indicating that the report should display detailed information.
 
-### Pass a float value
+## Pass a float value
 
 To pass a float value in a URL, include the decimal separator of the server locale:
 

@@ -1,23 +1,23 @@
 ---
-title: "ADR cleaner retry timeout (min) (server configuration option)"
+title: "Server configuration: ADR cleaner retry timeout (min)"
 description: "Explains the SQL Server instance configuration setting for ADR cleaner retry timeout."
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: randolphwest
-ms.date: 05/16/2023
+ms.date: 07/18/2024
 ms.service: sql
 ms.subservice: configuration
 ms.topic: conceptual
 helpviewer_keywords:
   - "ADR cleaner retry timeout (min)"
 ---
-# ADR cleaner retry timeout (min) (server configuration option)
+# Server configuration: ADR cleaner retry timeout (min)
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 [!INCLUDE [sssql19-starting-md](../../includes/sssql19-starting-md.md)], this configuration setting is required for [accelerated database recovery](../../relational-databases/accelerated-database-recovery-concepts.md) (ADR). The cleaner is the asynchronous process that wakes up periodically and cleans page versions that aren't needed.
 
-Occasionally the cleaner runs into issues while acquiring object level locks due to conflicts with user workload during its sweep. It tracks such pages in a separate list. **ADR cleaner retry timeout (min)** controls the amount of time the cleaner would spend exclusively retrying object lock acquisition and cleanup of page before abandoning the sweep. Completion of a sweep with 100 percent success is essential to keep the growth of aborted transactions in the aborted transactions map. If the separate list can't be cleaned up in the prescribed timeout, then the current sweep will be abandoned and the next sweep will start.
+Occasionally the cleaner runs into issues while acquiring object level locks due to conflicts with user workload during its sweep. It tracks such pages in a separate list. `ADR cleaner retry timeout (min)` controls the amount of time the cleaner would spend exclusively retrying object lock acquisition and cleanup of page before abandoning the sweep. Completion of a sweep with 100 percent success is essential to keep the growth of aborted transactions in the aborted transactions map. If the separate list can't be cleaned up in the prescribed timeout, then the current sweep will be abandoned and the next sweep will start.
 
 | Version | Default value |
 | --- | --- |
@@ -32,17 +32,17 @@ The cleaner is single threaded in [!INCLUDE [sssql19-md](../../includes/sssql19-
 
 ## Known issue
 
-For [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] CU 12 and previous versions, this value may be set to `0`. We recommend that you manually reset the value to `120`, which is the designed default, using the example in this article.
+For [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] CU 12 and previous versions, this value might be set to `0`. We recommend that you manually reset the value to `120`, which is the designed default, using the example in this article.
 
 ## Examples
 
 The following example sets the cleaner retry timeout to the default value.
 
 ```sql
-sp_configure 'show advanced options', 1;
+EXEC sp_configure 'show advanced options', 1;
 RECONFIGURE;
 GO
-sp_configure 'ADR cleaner retry timeout', 120;
+EXEC sp_configure 'ADR cleaner retry timeout', 120;
 RECONFIGURE;
 GO
 ```
@@ -56,18 +56,18 @@ GO
 The following example sets the cleaner retry timeout to the default value.
 
 ```sql
-sp_configure 'show advanced options', 1;
+EXEC sp_configure 'show advanced options', 1;
 RECONFIGURE;
 GO
-sp_configure 'ADR cleaner retry timeout', 15;
+EXEC sp_configure 'ADR cleaner retry timeout', 15;
 RECONFIGURE;
 GO
 ```
 
 ::: moniker-end
 
-## See also
+## Related content
 
-- [Server Configuration Options (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md)
+- [Server configuration options](server-configuration-options-sql-server.md)
 - [Accelerated database recovery](../../relational-databases/accelerated-database-recovery-concepts.md)
 - [Manage accelerated database recovery](../../relational-databases/accelerated-database-recovery-management.md)

@@ -18,7 +18,7 @@ helpviewer_keywords:
 Learn how to pass report parameters to a SQL Server Reporting Services (SSRS) report server by including them in a report URL. All query parameters can have corresponding report parameters. You pass a query parameter to a report by passing the corresponding report parameter. For more information, see [Build a query in the Relational Query Designer &#40;Report Builder and SSRS&#41;](../reporting-services/report-data/build-a-query-in-the-relational-query-designer-report-builder-and-ssrs.md).  
 
 
-## Basic syntax
+## Basic parameter syntax
   
 To set a report parameter within a URL, use the following syntax:  
   
@@ -73,14 +73,13 @@ https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Adventur
 To pass a null value for a parameter in a URL, use the following syntax:  
   
 ```  
-parameter  
-:isnull=true  
+parameter:isnull=true  
 ```  
   
 For example,  
   
 ```  
-SalesOrderNumber:isnull=true  
+https://myserver/Reportserver?/AdventureWorks2022/Order_Summary&SalesOrderNumber:isnull=true
 ```  
   
 ## Pass a boolean value

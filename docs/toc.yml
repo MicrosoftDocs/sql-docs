@@ -12444,6 +12444,8 @@ items:
       items:
       - name: queryinsights.exec_requests_history
         href: relational-databases/system-views/queryinsights-exec-requests-history-transact-sql.md
+      - name: queryinsights.exec_sessions_history
+        href: relational-databases/system-views/queryinsights-exec-sessions-history-transact-sql.md
       - name: queryinsights.frequently_run_queries
         href: relational-databases/system-views/queryinsights-frequently-run-queries-transact-sql.md
       - name: queryinsights.long_running_queries

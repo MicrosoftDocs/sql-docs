@@ -15,9 +15,7 @@ helpviewer_keywords:
 ---
 # Pass a report parameter within a URL
 
-Learn how to pass report parameters to a SQL Server Reporting Services (SSRS) report server by including them in a report URL. These URL parameters aren't prefixed because you pass them directly to the report processing engine.   
-  
-All query parameters can have corresponding report parameters. You pass a query parameter to a report by passing the corresponding report parameter. For more information, see [Build a query in the Relational Query Designer &#40;Report Builder and SSRS&#41;](../reporting-services/report-data/build-a-query-in-the-relational-query-designer-report-builder-and-ssrs.md).  
+Learn how to pass report parameters to a SQL Server Reporting Services (SSRS) report server by including them in a report URL. All query parameters can have corresponding report parameters. You pass a query parameter to a report by passing the corresponding report parameter. For more information, see [Build a query in the Relational Query Designer &#40;Report Builder and SSRS&#41;](../reporting-services/report-data/build-a-query-in-the-relational-query-designer-report-builder-and-ssrs.md).  
 
 
 ## Basic syntax

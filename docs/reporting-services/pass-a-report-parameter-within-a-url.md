@@ -52,7 +52,7 @@ In this example:
 - The URL, `https://myrshost/ReportServer?/AdventureWorks2022/Employee%20Sales%20Summary%202022` replaces spaces in the report path with `%20`.
 - The parameter, `EmployeeName=John+Doe%3A+Manager`, replaces spaces in the parameter value with `+` and the semicolon with `%3A`.
 
-## Pass `ReportMonth` and `ReportYear` parameters to an SSRS Native mode server
+## Pass `ReportMonth` and `ReportYear` parameters to an SSRS Native mode report server
 
 To pass specific month and year parameters (`ReportMonth` and `ReportYear`) to get a filtered report based on those values, use the following syntax:   
   
@@ -67,7 +67,7 @@ https://myrshost/ReportServer?/AdventureWorks2022/Employee_Sales_Summary_2022&Re
 
 It's important the URL include the `_vti_bin` proxy syntax to route the request through SharePoint and the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] HTTP proxy. The proxy adds some context to the HTTP request, context that is required to ensure proper execution of the report for SharePoint mode report servers. If you don't include the proxy syntax, then you need to prefix the parameter with `rp:`.  
 
-To specify the `ReportMonth` and `ReportYear` parameters for a similar repot on a SharePoint Integrated report server, use the following URL for a SharePoint integrated mode report server: 
+To specify the `ReportMonth` and `ReportYear` parameters for a similar report on a SSRS SharePoint Integrated report server, use the following syntax: 
   
 ```  
 https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/AdventureWorks2022/Employee_Sales_Summary_2022.rdl&ReportMonth=3&ReportYear=2008  
@@ -90,7 +90,7 @@ SalesOrderNumber:isnull=true
   
 ### Pass a boolean value
 
-To pass a **Boolean** value in a URL, use `0` for false and `1` for true. For example, to pass a Boolean parameter, `ShowDetails`, that determines whether to show detailed information in the report:
+To pass a **Boolean** value in a URL, use `0` for false and `1` for true:
 
 ```
 https://myrshost/ReportServer?/AdventureWorks2022/Employee_Sales_Summary_2022&ShowDetails=1
@@ -101,7 +101,7 @@ In this example:
 
 ### Pass a float value
 
-To pass a float value in a URL, include the decimal separator of the server locale. For example, the following URL includes the float parameter, `DiscountRate`, that specifies the discount rate to apply in the report:
+To pass a float value in a URL, include the decimal separator of the server locale:
 
 ```
 https://myrshost/ReportServer?/AdventureWorks2022/Employee_Sales_Summary_2022&DiscountRate=0.05

@@ -62,7 +62,7 @@ https://myrshost/ReportServer?/AdventureWorks2022/Employee_Sales_Summary_2022&Re
 
 It's important the URL include the `_vti_bin` proxy syntax to route the request through SharePoint and the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] HTTP proxy. The proxy adds some context to the HTTP request, context that is required to ensure proper execution of the report for SharePoint mode report servers. If you don't include the proxy syntax, then you need to prefix the parameter with `rp:`.  
 
-To specify the `ReportMonth` and `ReportYear` parameters for a similar report on a SSRS SharePoint Integrated report server, use the following syntax: 
+To specify the `ReportMonth` and `ReportYear` parameters for a similar report on an SSRS SharePoint Integrated report server, use the following syntax: 
   
 ```  
 https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/AdventureWorks2022/Employee_Sales_Summary_2022.rdl&ReportMonth=3&ReportYear=2008  

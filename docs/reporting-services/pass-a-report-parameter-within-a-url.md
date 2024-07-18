@@ -6,7 +6,7 @@ ms.author: maggies
 ms.date: 07/17/2024
 ms.service: reporting-services
 ms.subservice: reporting-services
-ms.topic: how-to
+ms.topic: conceptual
 ms.custom: updatefrequency5
 helpviewer_keywords:
   - "URL access [Reporting Services], passing parameters"

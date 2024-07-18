@@ -6572,33 +6572,33 @@ items:
     - name: SQL Trace
       href: relational-databases/sql-trace/sql-trace.md
       items:
-      - name: Create & Run Traces Using T-SQL Stored Procedures
+      - name: Create & run traces using T-SQL stored procedures
         href: relational-databases/sql-trace/create-and-run-traces-using-transact-sql-stored-procedures.md
-      - name: Create Manual Traces using Stored Procedures
+      - name: Create manual traces using stored procedures
         href: relational-databases/sql-trace/create-manual-traces-using-stored-procedures.md
-      - name: Save Trace Results to a File
+      - name: Save trace results to a file
         href: relational-databases/sql-trace/save-trace-results-to-a-file.md
-      - name: Improve Access to Trace Data
+      - name: Improve access to trace data
         href: relational-databases/sql-trace/improve-access-to-trace-data.md
-      - name: Create a Trace (T-SQL)
+      - name: Create a trace (T-SQL)
         href: relational-databases/sql-trace/create-a-trace-transact-sql.md
-      - name: Set a Trace Filter (T-SQL)
+      - name: Set a trace filter (T-SQL)
         href: relational-databases/sql-trace/set-a-trace-filter-transact-sql.md
-      - name: Modify an Existing Trace (T-SQL)
+      - name: Modify an existing Trace (T-SQL)
         href: relational-databases/sql-trace/modify-an-existing-trace-transact-sql.md
-      - name: View a Saved Trace (T-SQL)
+      - name: View a saved trace (T-SQL)
         href: relational-databases/sql-trace/view-a-saved-trace-transact-sql.md
-      - name: View Filter Information (T-SQL)
+      - name: View filter information (T-SQL)
         href: relational-databases/sql-trace/view-filter-information-transact-sql.md
-      - name: Delete a Trace (T-SQL)
+      - name: Delete a trace (T-SQL)
         href: relational-databases/sql-trace/delete-a-trace-transact-sql.md
-      - name: Optimize SQL Trace
+      - name: Optimize SQL trace
         href: relational-databases/sql-trace/optimize-sql-trace.md
-      - name: Filter a Trace
+      - name: Filter a trace
         href: relational-databases/sql-trace/filter-a-trace.md
-      - name: Limit Trace File & Table Sizes
+      - name: Limit trace file & table sizes
         href: relational-databases/sql-trace/limit-trace-file-and-table-sizes.md
-      - name: Schedule Traces
+      - name: Schedule traces
         href: relational-databases/sql-trace/schedule-traces.md
     - name: Query Store
       items:
@@ -9897,20 +9897,21 @@ items:
         href: tools/sql-server-profiler/analyze-deadlocks-with-sql-server-profiler.md
       - name: Analyze Queries with SHOWPLAN Results in SQL Server Profiler
         href: tools/sql-server-profiler/analyze-queries-with-showplan-results-in-sql-server-profiler.md
-    - name: Filter Traces
-      href: tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md
+    - name: Filter traces
       items:
-      - name: Filter Events in a Trace
+      - name: Overview
+        href: tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md
+      - name: Filter events in a trace
         href: tools/sql-server-profiler/filter-events-in-a-trace-sql-server-profiler.md
-      - name: View Filter Information
+      - name: View filter information
         href: tools/sql-server-profiler/view-filter-information-sql-server-profiler.md
-      - name: Modify a Filter
+      - name: Modify a filter
         href: tools/sql-server-profiler/modify-a-filter-sql-server-profiler.md
-      - name: Filter Events Based on the Event Start Time
+      - name: Filter events based on the event start time
         href: tools/sql-server-profiler/filter-events-based-on-the-event-start-time-sql-server-profiler.md
-      - name: Filter Events Based on the Event End Time
+      - name: Filter events based on the event end time
         href: tools/sql-server-profiler/filter-events-based-on-the-event-end-time-sql-server-profiler.md
-      - name: Filter Server Process IDs (SPIDs) in a Trace
+      - name: Filter server process IDs (SPIDs) in a trace
         href: tools/sql-server-profiler/filter-server-process-ids-spids-in-a-trace-sql-server-profiler.md
     - name: Save traces & templates
       href: tools/sql-server-profiler/save-traces-and-trace-templates.md
@@ -12444,6 +12445,8 @@ items:
       items:
       - name: queryinsights.exec_requests_history
         href: relational-databases/system-views/queryinsights-exec-requests-history-transact-sql.md
+      - name: queryinsights.exec_sessions_history
+        href: relational-databases/system-views/queryinsights-exec-sessions-history-transact-sql.md
       - name: queryinsights.frequently_run_queries
         href: relational-databases/system-views/queryinsights-frequently-run-queries-transact-sql.md
       - name: queryinsights.long_running_queries

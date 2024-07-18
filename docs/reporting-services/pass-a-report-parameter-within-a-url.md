@@ -24,17 +24,16 @@ All query parameters can have corresponding report parameters. You pass a query 
   
 To set a report parameter within a URL, use the following syntax:  
   
-```  
-  
+``` 
 parameter=value  
 ```  
 
 > [!NOTE]
 > Report parameters are case-sensitive. 
 
-## Pass a URL that contains special characters
+## Pass parameters in a URL that contains special characters
 
-To pass a URL that contains special characters, be sure to:   
+To pass parameters in a URL that contains special characters, be sure to:   
 - Replace any space characters in the URL string with the characters `%20`.  
 - Replace space character in the parameter portion of the URL with a plus character `+`.  
 - Replace a semicolon in any portion of the string with the characters `%3A`.
@@ -53,9 +52,9 @@ https://myrshost/ReportServer?/AdventureWorks2022/Employee%20Sales%20Summary%202
 In this example:
 
 - The URL, `https://myrshost/ReportServer?/AdventureWorks2022/Employee%20Sales%20Summary%202022` replaces spaces in the report path with `%20`.
-- The parameter, `EmployeeName=John+Doe%3A+Manager` replaces spaces in the parameter value with `+` and the semicolon with `%3A`.
+- The parameter, `EmployeeName=John+Doe%3A+Manager`, replaces spaces in the parameter value with `+` and the semicolon with `%3A`.
 
-## Pass `ReportMonth` and `ReportYear` parameters
+## Pass `ReportMonth` and `ReportYear` parameters to a SSRS Native mode server
 
 To pass specific month and year parameters (`ReportMonth` and `ReportYear`) to get a filtered report based on those values, use the following syntax:   
   
@@ -78,7 +77,7 @@ https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Adventur
   
 ### Pass a null value 
 
-To pass a null value for a parameter, use the following syntax:  
+To pass a null value for a parameter in a URL, use the following syntax:  
   
 ```  
 parameter  
@@ -93,7 +92,7 @@ SalesOrderNumber:isnull=true
   
 ### Pass a boolean value
 
-To pass a **Boolean** value, use `0` for false and `1` for true. For example, to pass a Boolean parameter, `ShowDetails`, that determines whether to show detailed information in the report:
+To pass a **Boolean** value in a URL, use `0` for false and `1` for true. For example, to pass a Boolean parameter, `ShowDetails`, that determines whether to show detailed information in the report:
 
 ```
 https://myrshost/ReportServer?/AdventureWorks2022/Employee_Sales_Summary_2022&ShowDetails=1
@@ -104,7 +103,7 @@ In this example:
 
 ### Pass a float value
 
-To pass a float value, include the decimal separator of the server locale. For example, the following URL includes the float parameter, `DiscountRate`, that specifies the discount rate to apply in the report:
+To pass a float value in a URL, include the decimal separator of the server locale. For example, the following URL includes the float parameter, `DiscountRate`, that specifies the discount rate to apply in the report:
 
 ```
 https://myrshost/ReportServer?/AdventureWorks2022/Employee_Sales_Summary_2022&DiscountRate=0.05
@@ -119,7 +118,7 @@ In this example:
   
 ## Pass multi-value parameters  
   
-To pass multi-value parameters, repeat the parameter name for each value, as in the following URL:  
+To pass multi-value parameters in a URL, repeat the parameter name for each value, as in the following URL:  
   
 ```  
 https://myserver/Reportserver?/SQL+Server+User+Education+Team/_ContentTeams/folder123/team+project+report&teamgrouping2=xgroup&teamgrouping1=ygroup&OrderID=747&OrderID=787&OrderID=12  

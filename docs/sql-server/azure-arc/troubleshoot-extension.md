@@ -11,7 +11,13 @@ ms.topic: troubleshooting-general
 
 [!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
-This article provides two examples that return a list of servers with unhealthy extensions.
+Query Azure Resource Graph to identify the state the Azure extension for SQL Server on your Azure Arc-enabled servers. This article demonstrates queries that identify unhealthy extensions. 
+
+> [!TIP] 
+> If you're not already familiar, learn about Azure Resource Graph:
+> 
+> - [What is Azure Resource Graph](/azure/governance/resource-graph/overview)
+> - [Quickstart: Run Resource Graph query using Azure portal](/azure/governance/resource-graph/first-query-portal)
 
 ## Identify unhealthy extensions
 

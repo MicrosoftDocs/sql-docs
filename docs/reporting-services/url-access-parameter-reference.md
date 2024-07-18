@@ -1,6 +1,6 @@
 ---
 title: "URL access parameter reference"
-description: Use the parameters in this article as part of a URL to configure the look and feel of your Reporting Services reports.
+description: Learn how you can use parameters as part of a URL to configure the look and feel of your Reporting Services reports.
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 07/19/2024
@@ -23,6 +23,25 @@ You can use the following parameters as part of a URL to configure the look and 
   
 
 ##  <a name="bkmk_htmlviewer"></a> HTML Viewer commands (rc:)
+
+## HTML Viewer Commands (rc:)
+
+HTML Viewer commands target the HTML Viewer and are prefixed with *rc:*.
+
+| Parameter    | Description | Example |
+|--------------|-------------|---------|
+| **Toolbar**  | Shows or hides the toolbar. If set to **false**, all remaining options are ignored. Default is **true**. | `https://myrshost/reportserver?/Sales&rc:Toolbar=false`|
+| **Parameters** | Shows or hides the parameters area of the toolbar. Options are **true**, **false**, or **Collapsed**. Default is **true**. | `https://myrshost/reportserver?/Sales&rc:Parameters=Collapsed` |
+| **Zoom**     | Sets the report zoom value. Options include percentage values, **Page Width**, and **Whole Page**. Default is **100**. | `https://myrshost/reportserver?/Sales&rc:Zoom=Page Width` |
+| **Section**  | Sets which page in the report to display. Values less than 0 display page 1. Default is **1**. | `https://myrshost/reportserver?/Sales&rc:Section=2` |
+| **FindString** | Searches for specific text in the report and highlights it. Must include *rc:Toolbar=false*. | `https://myrshost/reportserver?/Sales&rc:Toolbar=false&rc:FindString=Mountain-400` |
+| **StartFind** | Specifies the first page to search. Default is the first page. | `https://server/Reportserver?/SampleReports/Product Catalog&rs:Command=Render&rc:StartFind=1&rc:EndFind=5&rc:FindString=Mountain-400` |
+| **EndFind**   | Sets the number of the last page to use in the search. Default is the number of the current page. Use with *StartFind*. | `https://server/Reportserver?/SampleReports/Product Catalog&rs:Command=Render&rc:StartFind=1&rc:EndFind=5&rc:FindString=Mountain-400` |
+| **FallbackPage** | Sets the number of the page to display if a search or document map selection fails. Default is the number of the current page. |    |
+| **GetImage**  | Gets a particular icon for the HTML Viewer user interface. |   |
+| **Icon**      | Gets the icon of a particular rendering extension. |  |
+| **Stylesheet** | Specifies a style sheet to be applied to the HTML Viewer. | | 
+
  - HTML Viewer commands are used to target the HTML Viewer and are prefixed with *rc:*:
   
 -   **Toolbar**: Shows or hides the toolbar. If the value of this parameter is **false**, all remaining options are ignored. If you omit this parameter, the toolbar is automatically displayed for rendering formats that support it. The default of this parameter is **true**.

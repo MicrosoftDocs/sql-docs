@@ -29,6 +29,24 @@ parameter=value
 > [!NOTE]
 > Report parameters are case-sensitive. 
 
+## Pass parameters in a URL that contains special characters
+
+To pass parameters in a URL that contains special characters, be sure to:   
+- Replace any space characters in the URL string with the characters `%20`.  
+- Replace space character in the parameter portion of the URL with a plus character `+`.  
+- Replace a semicolon in any portion of the string with the characters `%3A`.
+
+Browsers typically handle URL encoding automatically, so you don't need to encode characters manually. 
+
+In this example:
+
+- The URL, `https://myrshost/ReportServer?/AdventureWorks2022/Employee%20Sales%20Summary%202022` replaces spaces in the report path with `%20`.
+- The parameter, `EmployeeName=John+Doe%3A+Manager`, replaces spaces in the parameter value with `+` and the semicolon with `%3A`.
+  
+```  
+https://myrshost/ReportServer?/AdventureWorks2022/Employee%20Sales%20Summary%202022&EmployeeName=John+Doe%3A+Manager
+``` 
+
 ## Pass `ReportMonth` and `ReportYear` parameters to an SSRS Native mode report server
 
 To pass specific month and year parameters (`ReportMonth` and `ReportYear`) to get a filtered report based on those values, use the following syntax:   
@@ -90,24 +108,6 @@ In this example:
   
 > [!NOTE]  
 >  If your report contains a report parameter that has a default value and the value of the **Prompt** property is **false**, then you can't pass a value for that report parameter within a URL. This option allows administrators to prevent end users from adding or modifying the values of certain report parameters.  
-  
-## Pass parameters in a URL that contains special characters
-
-To pass parameters in a URL that contains special characters, be sure to:   
-- Replace any space characters in the URL string with the characters `%20`.  
-- Replace space character in the parameter portion of the URL with a plus character `+`.  
-- Replace a semicolon in any portion of the string with the characters `%3A`.
-
-Browsers typically handle URL encoding automatically, so you don't need to encode characters manually. 
-
-In this example:
-
-- The URL, `https://myrshost/ReportServer?/AdventureWorks2022/Employee%20Sales%20Summary%202022` replaces spaces in the report path with `%20`.
-- The parameter, `EmployeeName=John+Doe%3A+Manager`, replaces spaces in the parameter value with `+` and the semicolon with `%3A`.
-  
-```  
-https://myrshost/ReportServer?/AdventureWorks2022/Employee%20Sales%20Summary%202022&EmployeeName=John+Doe%3A+Manager
-``` 
 
 ## Pass multi-value parameters  
   

@@ -15,7 +15,7 @@ helpviewer_keywords:
 ---
 # Pass a report parameter within a URL
 
-Learn how to pass report parameters to a SQL Server Reporting Services (SSRS) report server by including them in a report URL. These URL parameters aren't prefixed because they're passed directly to the report processing engine.   
+Learn how to pass report parameters to a SQL Server Reporting Services (SSRS) report server by including them in a report URL. These URL parameters aren't prefixed because you pass them directly to the report processing engine.   
   
 All query parameters can have corresponding report parameters. You pass a query parameter to a report by passing the corresponding report parameter. For more information, see [Build a query in the Relational Query Designer &#40;Report Builder and SSRS&#41;](../reporting-services/report-data/build-a-query-in-the-relational-query-designer-report-builder-and-ssrs.md).  
 
@@ -54,7 +54,7 @@ In this example:
 - The URL, `https://myrshost/ReportServer?/AdventureWorks2022/Employee%20Sales%20Summary%202022` replaces spaces in the report path with `%20`.
 - The parameter, `EmployeeName=John+Doe%3A+Manager`, replaces spaces in the parameter value with `+` and the semicolon with `%3A`.
 
-## Pass `ReportMonth` and `ReportYear` parameters to a SSRS Native mode server
+## Pass `ReportMonth` and `ReportYear` parameters to an SSRS Native mode server
 
 To pass specific month and year parameters (`ReportMonth` and `ReportYear`) to get a filtered report based on those values, use the following syntax:   
   
@@ -67,7 +67,7 @@ https://myrshost/ReportServer?/AdventureWorks2022/Employee_Sales_Summary_2022&Re
 > [!NOTE]
 > SSRS integration with SharePoint is no longer available after SQL Server 2016.  
 
-It's important the URL include the `_vti_bin` proxy syntax to route the request through SharePoint and the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] HTTP proxy. The proxy adds some context to the HTTP request, context that is required to ensure proper execution of the report for SharePoint mode report servers. If you don't include the proxy syntax, then you need to prefix the parameter with *rp:*.  
+It's important the URL include the `_vti_bin` proxy syntax to route the request through SharePoint and the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] HTTP proxy. The proxy adds some context to the HTTP request, context that is required to ensure proper execution of the report for SharePoint mode report servers. If you don't include the proxy syntax, then you need to prefix the parameter with `rp:`.  
 
 To specify the `ReportMonth` and `ReportYear` parameters for a similar repot on a SharePoint Integrated report server, use the following URL for a SharePoint integrated mode report server: 
   

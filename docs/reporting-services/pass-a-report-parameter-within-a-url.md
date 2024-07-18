@@ -38,7 +38,7 @@ To pass parameters in a URL that contains special characters, be sure to:
 
 Browsers typically handle URL encoding automatically, so you don't need to encode characters manually. 
 
-The following URL example includes spaces and multiple parameters:  
+The following URL example includes spaces in the URL and in the parameters:  
   
 - Folder name of `SQL Server User Education Team` includes spaces, so the `+` replaces each space.  
 - Report name of team project report includes spaces and therefore the "+" replaces each space.    

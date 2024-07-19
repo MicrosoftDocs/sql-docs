@@ -27,44 +27,46 @@ The Linux and macOS drivers SQL version compatibility is the same as the [Window
 
 Versions 18, 17, 13.1, and 13 of the Linux and macOS drivers are supported on the x64 architecture of the following operating systems. The ARM64 architecture on macOS is supported starting with version 17.8. The ARM64 architecture on Red Hat 8, 9, Debian 11, and Ubuntu 20.04, 22.04 is supported starting with version 18.1. ARM64 on Alpine is supported starting with version 18.3.
 
-|Driver version&nbsp;&#8594;<br />&#8595; Operating System     |18.3|18.2|18.1|18.0|17.10|17.9|17.8|17.7|17.6|17.5|17.4|17.3|17.2|17.1|17.0|13.1|13|
+|Driver version&nbsp;&#8594;<br />&#8595; Operating System     |18.4|18.3|18.2|18.1|18.0|17.10|17.9|17.8|17.7|17.6|17.5|17.4|17.3|17.2|17.1|17.0|13.1|13|
 |-------------------------------|----|----|----|----|----|----|----|----|----|----|----|----|----|----|---|---|---|
-|Apple OS X 10.11 (El Capitan)  |    |    |    |    |    |    |    |    |    |    |Yes |Yes |Yes |Yes |Yes |Yes |Yes|
-|Apple macOS 10.12 (Sierra)     |    |    |    |    |    |    |    |    |    |    |Yes |Yes |Yes |Yes |Yes |Yes |Yes|
-|Apple macOS 10.13 (High Sierra)|    |    |    |    |    |    |    |    |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes|
-|Apple macOS 10.14 (Mojave)     |    |    |    |    |    |    |Yes |Yes |Yes |Yes |Yes |Yes |    |    |    |    |   |
-|Apple macOS 10.15 (Catalina)   |    |    |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |    |    |    |    |    |    |   |
-|Apple macOS 11.0 (Big Sur)     |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |    |    |    |    |    |    |    |    |   |
-|Apple macOS 12.0 (Monterey)    |Yes |Yes |Yes |Yes |Yes |Yes |    |    |    |    |    |    |    |    |    |    |   |
-|Apple macOS 13.0 (Ventura)     |Yes |Yes |    |    |    |    |    |    |    |    |    |    |    |    |    |    |   |
-|Alpine Linux 3.11              |    |    |    |    |    |    |Yes |Yes |Yes |Yes |    |    |    |    |    |    |   |
-|Alpine Linux 3.12              |    |    |    |Yes |Yes |Yes |Yes |Yes |    |    |    |    |    |    |    |    |   |
-|Alpine Linux 3.13              |    |    |Yes |Yes |Yes |Yes |Yes |Yes |    |    |    |    |    |    |    |    |   |
-|Alpine Linux 3.14              |    |Yes |Yes |Yes |Yes |Yes |Yes |Yes |    |    |    |    |    |    |    |    |   |
-|Alpine Linux 3.15              |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |    |    |    |    |    |    |    |    |   |
-|Alpine Linux 3.16              |Yes |Yes |    |    |    |    |    |    |    |    |    |    |    |    |    |    |   |
-|Alpine Linux 3.17              |Yes |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |   |
-|Alpine Linux 3.18              |Yes |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |   |
+|Apple OS X 10.11 (El Capitan)  |    |    |    |    |    |    |    |    |    |    |    |Yes |Yes |Yes |Yes |Yes |Yes |Yes|
+|Apple macOS 10.12 (Sierra)     |    |    |    |    |    |    |    |    |    |    |    |Yes |Yes |Yes |Yes |Yes |Yes |Yes|
+|Apple macOS 10.13 (High Sierra)|    |    |    |    |    |    |    |    |    |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes|
+|Apple macOS 10.14 (Mojave)     |    |    |    |    |    |    |    |Yes |Yes |Yes |Yes |Yes |Yes |    |    |    |    |   |
+|Apple macOS 10.15 (Catalina)   |    |    |    |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |    |    |    |    |    |    |   |
+|Apple macOS 11.0 (Big Sur)     |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |    |    |    |    |    |    |    |    |   |
+|Apple macOS 12.0 (Monterey)    |Yes |Yes |Yes |Yes |Yes |Yes |Yes |    |    |    |    |    |    |    |    |    |    |   |
+|Apple macOS 13.0 (Ventura)     |Yes |Yes |Yes |    |    |    |    |    |    |    |    |    |    |    |    |    |    |   |
+|Alpine Linux 3.11              |    |    |    |    |    |    |    |Yes |Yes |Yes |Yes |    |    |    |    |    |    |   |
+|Alpine Linux 3.12              |    |    |    |    |Yes |Yes |Yes |Yes |Yes |    |    |    |    |    |    |    |    |   |
+|Alpine Linux 3.13              |    |    |    |Yes |Yes |Yes |Yes |Yes |Yes |    |    |    |    |    |    |    |    |   |
+|Alpine Linux 3.14              |    |    |Yes |Yes |Yes |Yes |Yes |Yes |Yes |    |    |    |    |    |    |    |    |   |
+|Alpine Linux 3.15              |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |    |    |    |    |    |    |    |    |   |
+|Alpine Linux 3.16              |Yes |Yes |Yes |    |    |    |    |    |    |    |    |    |    |    |    |    |    |   |
+|Alpine Linux 3.17              |Yes |Yes |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |   |
+|Alpine Linux 3.18              |Yes |Yes |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |   |
+|Alpine Linux 3.19              |Yes |Yes |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |   |
 |Debian Linux 8                 |    |    |    |    |    |    |    |    |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes|
-|Debian Linux 9                 |    |    |    |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes|
-|Debian Linux 10                |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |    |    |    |    |    |   |
-|Debian Linux 11                |Yes |Yes |Yes |Yes |Yes |Yes |    |    |    |    |    |    |    |    |    |    |   |
-|Debian Linux 12                |Yes |    |    |    |Yes |    |    |    |    |    |    |    |    |    |    |    |   |
-|Oracle Linux 7                 |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |    |    |    |    |    |    |    |    |   |
-|Oracle Linux 8                 |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |    |    |    |    |    |    |   |
-|Red Hat Enterprise Linux 6     |    |    |    |    |    |    |    |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes|
-|Red Hat Enterprise Linux 7     |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes|
-|Red Hat Enterprise Linux 8     |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |    |    |    |    |    |   |
-|Red Hat Enterprise Linux 9     |Yes |Yes |Yes |    |Yes |    |    |    |    |   |    |    |    |    |    |    |   |
-|SUSE Linux Enterprise Server 11<sup>1</sup>|    |    |    |    |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes|
-|SUSE Linux Enterprise Server 12|Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes|
-|SUSE Linux Enterprise Server 15|Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |    |    |    |    |   |
-|Ubuntu Linux 14.04             |    |    |    |    |    |    |    |    |    |    |Yes |Yes |Yes |Yes |Yes |Yes |Yes|
-|Ubuntu Linux 16.04             |    |    |    |    |    |    |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes|
-|Ubuntu Linux 18.04             |    |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |    |    |    |   |
-|Ubuntu Linux 20.04             |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |    |    |    |    |    |    |    |   |
-|Ubuntu Linux 22.04             |Yes |Yes |Yes |    |Yes |    |    |    |    |    |    |    |    |    |    |    |   |
-|Ubuntu Linux 23.04             |Yes |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |   |
+|Debian Linux 9                 |    |    |    |    |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes|
+|Debian Linux 10                |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |    |    |    |    |    |   |
+|Debian Linux 11                |Yes |Yes |Yes |Yes |Yes |Yes |Yes |    |    |    |    |    |    |    |    |    |    |   |
+|Debian Linux 12                |Yes |Yes |    |    |    |Yes |    |    |    |    |    |    |    |    |    |    |    |   |
+|Oracle Linux 7                 |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |    |    |    |    |    |    |    |    |   |
+|Oracle Linux 8                 |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |    |    |    |    |    |    |   |
+|Red Hat Enterprise Linux 6     |    |    |    |    |    |    |    |    |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes|
+|Red Hat Enterprise Linux 7     |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes|
+|Red Hat Enterprise Linux 8     |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |    |    |    |    |    |   |
+|Red Hat Enterprise Linux 9     |Yes |Yes |Yes |Yes |    |Yes |    |    |    |    |   |    |    |    |    |    |    |   |
+|SUSE Linux Enterprise Server 11<sup>1</sup>|    |    |    |    |    |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes|
+|SUSE Linux Enterprise Server 12|Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes|
+|SUSE Linux Enterprise Server 15|Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |    |    |    |    |   |
+|Ubuntu Linux 14.04             |    |    |    |    |    |    |    |    |    |    |    |Yes |Yes |Yes |Yes |Yes |Yes |Yes|
+|Ubuntu Linux 16.04             |    |    |    |    |    |    |    |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes|
+|Ubuntu Linux 18.04             |    |    |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |    |    |    |   |
+|Ubuntu Linux 20.04             |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |    |    |    |    |    |    |    |   |
+|Ubuntu Linux 22.04             |Yes |Yes |Yes |Yes |    |Yes |    |    |    |    |    |    |    |    |    |    |    |   |
+|Ubuntu Linux 23.04             |Yes |Yes |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |   |
+|Ubuntu Linux 24.04             |Yes |Yes |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |   |
 
 <sup>1</sup> ODBC Driver 17 supports SUSE Linux Enterprise Server 11 SP4 only
 

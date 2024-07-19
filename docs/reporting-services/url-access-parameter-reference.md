@@ -90,7 +90,7 @@ HTML Viewer commands target the HTML Viewer and are prefixed with `rc:`.
     https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales&rc:Toolbar=false&rc:FindString=Mountain-400  
     ```  
   
-- **StartFind**: Specifies the last section to search. The default value of this parameter is the last page of the report.  
+- **StartFind**: Specifies the last section to search. The default value is the last page of the report.  
   
      For an example in native mode that searches for the first occurrence of the text "Mountain-400" in the Product Catalog sample report starting with page 1 and ending with page 5:
   
@@ -98,7 +98,7 @@ HTML Viewer commands target the HTML Viewer and are prefixed with `rc:`.
     https://server/Reportserver?/SampleReports/Product Catalog&rs:Command=Render&rc:StartFind=1&rc:EndFind=5&rc:FindString=Mountain-400  
     ```  
   
-- **EndFind**: Sets the number of the last page to use in the search. For example, a value of **5** indicates that the last page to be searched is page 5 of the report. The default value is the number of the current page. Use this parameter with the *StartFind* parameter. See the previous example.
+- **EndFind**: Sets the number of the last page to use in the search. For example, a value of **5** indicates that the last page to be searched is page 5 of the report. The default value is the number of the current page. Use this parameter with the `StartFind` parameter. See the previous example.
   
 - **FallbackPage**: Sets the number of the page to display if a search or a document map selection fails. The default value is the number of the current page.
   
@@ -110,8 +110,8 @@ HTML Viewer commands target the HTML Viewer and are prefixed with `rc:`.
   
 - **Device Information Setting**: Specifies a device information setting in the form of `rc:tag=value`, where `tag` is the name of a device information setting specific to the rendering extension. (See the description for the `Format` parameter.) For example, you can use the `OutputFormat` device information setting for the IMAGE rendering extension to render the report to a JPEG image by using the following parameters in the URL access string: `...&rs:Format=IMAGE&rc:OutputFormat=JPEG`. For more information on all extension-specific device information settings, see [Device information settings for rendering extensions &#40;Reporting Services&#41;](../reporting-services/device-information-settings-for-rendering-extensions-reporting-services.md).
   
-##  <a name="bkmk_reportserver"></a> Report server commands (rs:)
- Report server commands are prefixed with *rs:* and are used to target the report server:
+##  <a name="bkmk_reportserver"></a> Report server commands (`rs:`)
+ Report server commands are prefixed with `rs:` and are used to target the report server:
   
 - **Command**: Performs an action on a catalog item, depending on its item type. The type of the catalog item referenced in the URL access string determines the default value. Valid values are:
   
@@ -135,7 +135,7 @@ HTML Viewer commands target the HTML Viewer and are prefixed with `rc:`.
         https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales&rs:Command=GetChildren  
         ```  
   
-    -   **Render**: The report is rendered in the browser so that you can view it.
+    - **Render**: The report renders in the browser so that you can view it.
   
          For example, in native mode:
   
@@ -157,7 +157,7 @@ HTML Viewer commands target the HTML Viewer and are prefixed with `rc:`.
         https://localhost/reportserver/?/DataSet1&rs:command=GetShareddatasetDefinition  
         ```  
   
-    -   **GetDataSourceContents**: Displays the properties of a given shared data source as XML. If your browser supports XML and if you're an authenticated user with **Read Contents** permission on the data source, the data source definition is displayed.
+    -   **GetDataSourceContents**: Displays the properties of a given shared data source as XML. If your browser supports XML and if you're an authenticated user with **Read Contents** permission on the data source, the data source definition displays.
   
          For example, in native mode:
   
@@ -215,9 +215,9 @@ HTML Viewer commands target the HTML Viewer and are prefixed with `rc:`.
   
     -   **XML**  
   
-     The default value is **HTML5**. For more information, see [Export a report using URL access](../reporting-services/export-a-report-using-url-access.md).
+     The default value is **HTML5**. For more information, see [Export a report by using URL access](../reporting-services/export-a-report-using-url-access.md).
   
-     For a complete list, see the **\<Render>** extension section of the report server rsreportserver.config file. For information on where to find the file, see [RsReportServer.config configuration file](../reporting-services/report-server/rsreportserver-config-configuration-file.md).
+     For a complete list, see the `\<Render>` extension section of the report server `rsreportserver.config` file. For more information, see [RsReportServer.config configuration file](../reporting-services/report-server/rsreportserver-config-configuration-file.md).
   
      For example, to get a PDF copy of a report directly from a native mode report server:
   
@@ -233,7 +233,7 @@ HTML Viewer commands target the HTML Viewer and are prefixed with `rc:`.
   
 -   **ParameterLanguage**: Provides a language for parameters passed in a URL that's independent of the browser language. The default value is the browser language. The value can be a culture value, such as **en-us** or **de-DE**.
   
-     For example, in native mode, to override the browser language and specify a culture value of de-DE:
+     For example, in native mode, to override the browser language and specify a culture value of **de-DE**:
   
     ```  
     https://myrshost/Reportserver?/SampleReports/Product+Line+Sales&rs:Command=Render&StartDate=4/10/2008&EndDate=11/10/2008&rs:ParameterLanguage=de-DE  
@@ -247,7 +247,7 @@ HTML Viewer commands target the HTML Viewer and are prefixed with `rc:`.
     https://myrshost/reportserver?/SampleReports/Company Sales&rs:Snapshot=2003-04-07T13:40:02  
     ```  
   
--   **PersistStreams**: Renders a report in a single persisted stream. This parameter is used by the Image renderer to transmit the rendered report one chunk at a time. After using this parameter in a URL access string, use the same URL access string with the *GetNextStream* parameter instead of the *PersistStreams* parameter to get the next chunk in the persisted stream. This URL command eventually returns a 0-byte stream to indicate the end of the persisted stream. The default value is **false**.
+-   **PersistStreams**: Renders a report in a single persisted stream. The Image renderer uses this parameter to transmit the rendered report one chunk at a time. After using this parameter in a URL access string, use the same URL access string with the *GetNextStream* parameter instead of the *PersistStreams* parameter to get the next chunk in the persisted stream. This URL command eventually returns a 0-byte stream to indicate the end of the persisted stream. The default value is **false**.
   
 -   **GetNextStream**: Gets the next data chunk in a persisted stream that's accessed by using the *PersistStreams* parameter. For more information, see the description for *PersistStreams*. The default value is **false**.
   

@@ -1,9 +1,9 @@
 ---
-title: "Use Table-Valued Parameters (Database Engine)"
-description: "Use Table-Valued Parameters (Database Engine)"
+title: "Use table-valued parameters (Database Engine)"
+description: "Learn how to use table-valued parameters."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: "03/16/2017"
+ms.date: 07/19/2024
 ms.service: sql
 ms.subservice: table-view-index
 ms.topic: conceptual
@@ -14,29 +14,19 @@ helpviewer_keywords:
   - "TVP See table-valued parameters"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# Use Table-Valued Parameters (Database Engine)
+# Use table-valued parameters (Database Engine)
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
-Table-valued parameters are declared by using user-defined table types. You can use table-valued parameters to send multiple rows of data to a [!INCLUDE[tsql](../../includes/tsql-md.md)] statement or a routine, such as a stored procedure or function, without creating a temporary table or many parameters.
+Table-valued parameters are declared by using user-defined table types. You can use table-valued parameters to send multiple rows of data to a [!INCLUDE [tsql](../../includes/tsql-md.md)] statement or a routine, such as a stored procedure or function, without creating a temporary table or many parameters.
 
-Table-valued parameters are like parameter arrays in OLE DB and ODBC, but offer more flexibility and closer integration with [!INCLUDE[tsql](../../includes/tsql-md.md)]. Table-valued parameters also have the benefit of being able to participate in set-based operations.
+Table-valued parameters are like parameter arrays in OLE DB and ODBC, but offer more flexibility and closer integration with [!INCLUDE [tsql](../../includes/tsql-md.md)]. Table-valued parameters also have the benefit of being able to participate in set-based operations.
 
-[!INCLUDE[tsql](../../includes/tsql-md.md)] passes table-valued parameters to routines by reference to avoid making a copy of the input data. You can create and execute [!INCLUDE[tsql](../../includes/tsql-md.md)] routines with table-valued parameters, and call them from [!INCLUDE[tsql](../../includes/tsql-md.md)] code, managed and native clients in any managed language.
+[!INCLUDE [tsql](../../includes/tsql-md.md)] passes table-valued parameters to routines by reference to avoid making a copy of the input data. You can create and execute [!INCLUDE [tsql](../../includes/tsql-md.md)] routines with table-valued parameters, and call them from [!INCLUDE [tsql](../../includes/tsql-md.md)] code, managed and native clients in any managed language.
 
- **In This Topic:**
+## <a id="Benefits"></a> Benefits
 
-[Benefits](#Benefits)
-
-[Restrictions](#Restrictions)
-
-[Table-Valued Parameters vs. BULK INSERT Operations](#BulkInsert)
-
-[Example](#Example)
-
-## <a name="Benefits"></a> Benefits
-
-A table-valued parameter is scoped to the stored procedure, function, or dynamic [!INCLUDE[tsql](../../includes/tsql-md.md)] text, exactly like other parameters. Similarly, a variable of table type has scope like any other local variable that is created by using a DECLARE statement. You can declare table-valued variables within dynamic [!INCLUDE[tsql](../../includes/tsql-md.md)] statements and pass these variables as table-valued parameters to stored procedures and functions.
+A table-valued parameter is scoped to the stored procedure, function, or dynamic [!INCLUDE [tsql](../../includes/tsql-md.md)] text, exactly like other parameters. Similarly, a variable of table type has scope like any other local variable that is created by using a DECLARE statement. You can declare table-valued variables within dynamic [!INCLUDE [tsql](../../includes/tsql-md.md)] statements and pass these variables as table-valued parameters to stored procedures and functions.
 
 Table-valued parameters offer more flexibility and in some cases better performance than temporary tables or other ways to pass a list of parameters. Table-valued parameters offer the following benefits:
 
@@ -47,30 +37,31 @@ Table-valued parameters offer more flexibility and in some cases better performa
 - Can have a table structure of different cardinality.
 - Are strongly typed.
 - Enable the client to specify sort order and unique keys.
-- Are cached like a temp table when used in a stored procedure. Starting with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], table-valued parameters are also cached for parameterized queries.
+- Are cached like a temp table when used in a stored procedure. Starting with [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)] and later versions, table-valued parameters are also cached for parameterized queries.
 
-## <a name="Permissions"></a> Permissions
-To create an instance of a User-Defined Table Type or call a stored procedure with a Table-valued parameter the user must have EXECUTE and REFERENCES permissions on the type, or on the schema or database containing the type.
+## Permissions
 
-## <a name="Restrictions"></a> Restrictions
+To create an instance of a **user-defined table type**, or call a stored procedure with a table-valued parameter, the user must have EXECUTE and REFERENCES permissions on the type, or on the schema or database containing the type.
+
+## <a id="Restrictions"></a> Limitations
 
 Table-valued parameters have the following restrictions:
 
-- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] does not maintain statistics on columns of table-valued parameters.
-- Table-valued parameters must be passed as input READONLY parameters to [!INCLUDE[tsql](../../includes/tsql-md.md)] routines. You cannot perform DML operations such as UPDATE, DELETE, or INSERT on a table-valued parameter in the body of a routine.
-- You cannot use a table-valued parameter as target of a SELECT INTO or INSERT EXEC statement. A table-valued parameter can be in the FROM clause of SELECT INTO or in the INSERT EXEC string or stored procedure.
+- [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] does not maintain statistics on columns of table-valued parameters.
+- Table-valued parameters must be passed as input READONLY parameters to [!INCLUDE [tsql](../../includes/tsql-md.md)] routines. You cannot perform DML operations such as UPDATE, DELETE, or INSERT on a table-valued parameter in the body of a routine.
+- You cannot use a table-valued parameter as target of a `SELECT INTO` or `INSERT EXEC` statement. A table-valued parameter can be in the `FROM` clause of `SELECT INTO` or in the `INSERT EXEC` string or stored procedure.
 
-## <a name="BulkInsert"></a> Table-Valued Parameters vs. BULK INSERT Operations
+## <a id="BulkInsert"></a> Table-valued parameters vs. BULK INSERT Operations
 
 Using table-valued parameters is comparable to other ways of using set-based variables; however, using table-valued parameters frequently can be faster for large data sets. Compared to bulk operations that have a greater startup cost than table-valued parameters, table-valued parameters perform well for inserting less than 1000 rows.
 
-Table-valued parameters that are reused benefit from temporary table caching. This table caching enables better scalability than equivalent BULK INSERT operations. By using small row-insert operations a small performance benefit might be gained by using parameter lists or batched statements instead of BULK INSERT operations or table-valued parameters. However, these methods are less convenient to program, and performance decreases quickly as rows increase.
+Table-valued parameters that are reused benefit from temporary table caching. This table caching enables better scalability than equivalent bulk insert operations. By using small row-insert operations a small performance benefit might be gained by using parameter lists or batched statements instead of `BULK INSERT` operations or table-valued parameters. However, these methods are less convenient to program, and performance decreases quickly as rows increase.
 
 Table-valued parameters perform equally well or better than an equivalent parameter array implementation.
 
-## <a name="Example"></a> Example
+## <a id="Example"></a> Examples
 
-The following example uses [!INCLUDE[tsql](../../includes/tsql-md.md)] and shows you how to create a table-valued parameter type, declare a variable to reference it, fill the parameter list, and then pass the values to a stored procedure in the AdventureWorks database.
+The following example uses [!INCLUDE [tsql](../../includes/tsql-md.md)] and shows you how to create a table-valued parameter type, declare a variable to reference it, fill the parameter list, and then pass the values to a stored procedure in the sample `AdventureWorks` database.
 
 ```sql
 /* Create a table type. */
@@ -105,7 +96,13 @@ INSERT INTO @LocationTVP (LocationName, CostRate)
 EXEC usp_InsertProductionLocation @LocationTVP;
 ```
 
-## See Also
+The expected resultset is:
+
+```output
+(181 rows affected)
+```
+
+## Related content
 
 - [CREATE TYPE](../../t-sql/statements/create-type-transact-sql.md)
 - [DECLARE @local_variable](../../t-sql/language-elements/declare-local-variable-transact-sql.md)
@@ -113,4 +110,4 @@ EXEC usp_InsertProductionLocation @LocationTVP;
 - [sys.parameters](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md)
 - [sys.parameter_type_usages](../../relational-databases/system-catalog-views/sys-parameter-type-usages-transact-sql.md)
 - [CREATE PROCEDURE](../../t-sql/statements/create-procedure-transact-sql.md)
-- [CREATE FUNCTION](../../t-sql/statements/create-function-transact-sql.md)  
+- [CREATE FUNCTION](../../t-sql/statements/create-function-transact-sql.md)

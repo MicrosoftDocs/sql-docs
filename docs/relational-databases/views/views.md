@@ -1,9 +1,9 @@
 ---
 title: "Views"
-description: "Views"
+description: "Learn about views, important database objects whose contents are defined by a query."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: 10/04/2023
+ms.date: 07/19/2024
 ms.service: sql
 ms.subservice: table-view-index
 ms.topic: conceptual
@@ -25,15 +25,15 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 Besides the standard role of basic user-defined views, [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] provides the following types of views that serve special purposes in a database.  
   
-### Indexed views  
+### Indexed views
 
  An indexed view is a view that has been materialized. This means the view definition has been computed and the resulting data stored just like a table. You index a view by creating a unique clustered index on it. Indexed views can dramatically improve the performance of some types of queries. Indexed views work best for queries that aggregate many rows. They are not well-suited for underlying data sets that are frequently updated.  
   
-### Partitioned views  
+### Partitioned views
 
 A partitioned view joins horizontally partitioned data from a set of member tables across one or more servers. This makes the data appear as if from one table. A view that joins member tables on the same instance of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] is a local partitioned view.  
   
-### System views  
+### System views
 
 System views expose catalog metadata. You can use system views to return information about the instance of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] or the objects defined in the instance. For example, you can query the `sys.databases` catalog view to return information about the user-defined databases available in the instance. For more information, see [System Views (Transact-SQL)](../../t-sql/language-reference.md).
   

@@ -208,13 +208,13 @@ Displays the contents of a folder. The folder items are displayed within a gener
     https://myrshost/reportserver?/Sales/StorePicture&rs:Command=GetResourceContents  
     ```  
   
-         For example, in SharePoint mode:
+    For example, in SharePoint mode:
   
-        ```  
-        https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales/StorePicture.jpg&rs:Command=GetResourceContents  
-        ```  
+    ```  
+    https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales/StorePicture.jpg&rs:Command=GetResourceContents  
+    ```  
   
-    -   **GetComponentDefinition**: Displays the XML definition associated with a published report item. You must have **Read Contents** permission on a published report item to use this value.
+- **GetComponentDefinition**: Displays the XML definition associated with a published report item. You must have **Read Contents** permission on a published report item to use this value.
   
 ### Format
 
@@ -349,7 +349,7 @@ For example, in SharePoint mode, to collapse the parameter prompt area:
 https://myspsite/_vti_bin/reportserver?https://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:ParamMode=Collapsed  
 ```  
   
-###vDocMapMode
+### DocMapMode
 
 Controls how the Report Viewer web part's document map area is displayed in full-page view. The default value is **Full**. Valid values are:
   

@@ -3,7 +3,7 @@ title: "MSSQLSERVER_7399"
 description: "MSSQLSERVER_7399"
 author: PiJoCoder
 ms.author: jopilov
-ms.reviewer: prmadhes, v-jayaramanp, randolphwest
+ms.reviewer: prmadhes, randolphwest
 ms.date: 11/20/2023
 ms.service: sql
 ms.subservice: supportability

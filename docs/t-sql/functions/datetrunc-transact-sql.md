@@ -1,9 +1,9 @@
 ---
 title: "DATETRUNC (Transact-SQL)"
 description: "Transact-SQL reference for the DATETRUNC function. This function returns an input date-related value truncated to a specified datepart."
-author: aashnabafna-ms
-ms.author: aashnabafna
-ms.reviewer: derekw, maghan, randolphwest
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: derekw, maghan
 ms.date: 09/13/2022
 ms.service: sql
 ms.subservice: t-sql

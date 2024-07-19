@@ -3,7 +3,7 @@ title: "Create a Login"
 description: Learn how to create a login in SQL Server or Azure SQL Database by using SQL Server Management Studio or Transact-SQL.
 author: VanMSFT
 ms.author: vanto
-ms.date: "07/31/2023"
+ms.date: "07/18/2024"
 ms.service: sql
 ms.subservice: security
 ms.topic: conceptual
@@ -283,7 +283,7 @@ After creating a login, the login can connect to [!INCLUDE[ssNoVersion](../../..
   
 - To grant a permission to a login, see [Grant a Permission to a Principal](../../../relational-databases/security/authentication-access/grant-a-permission-to-a-principal.md).  
   
-## See also
+## Related content
 
 - [Security Center for SQL Server Database Engine and Azure SQL Database](../../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
 - [Microsoft Entra server principals (logins)](/azure/azure-sql/database/authentication-azure-ad-logins)

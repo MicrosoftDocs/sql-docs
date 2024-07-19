@@ -52,10 +52,14 @@ The following images show simple reports with a table, matrix, or list:
   
 :::image type="content" source="../../reporting-services/report-design/media/rs-tablematrixlist.gif" alt-text="Screenshot that shows different labeled examples of a table, matrix, and list.":::
   
-To get started with tables, matrices, and lists, see [Tutorial: Create a basic table report (Report Builder)](../../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md), [Tutorial: Create a matrix report (Report Builder)](../../reporting-services/tutorial-creating-a-matrix-report-report-builder.md), and [Tutorial: Create a free form report (Report Builder)](../../reporting-services/tutorial-creating-a-free-form-report-report-builder.md).  
+To get started with tables, matrices, and lists, see these tutorials:
+
+- [Tutorial: Create a basic table report (Report Builder)](../../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)
+- [Tutorial: Create a matrix report (Report Builder)](../../reporting-services/tutorial-creating-a-matrix-report-report-builder.md)
+- [Tutorial: Create a free form report (Report Builder)](../../reporting-services/tutorial-creating-a-free-form-report-report-builder.md)
   
 > [!NOTE]  
-> You can publish tables, matrices, and lists separately from a report as report parts. For more information, see [Report Parts (Report Builder and SSRS)](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md). However, report parts are deprecated for all releases of SQL Server Reporting Services after SQL Server Reporting Services 2019, and it's discontinued starting in SQL Server Reporting Services 2022 and Power BI Report Server.
+> You can publish tables, matrices, and lists separately from a report as *report parts*. For more information, see [Report Parts (Report Builder and SSRS)](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md). However, report parts are deprecated for all releases of SQL Server Reporting Services after SQL Server Reporting Services 2019, and they're discontinued starting in SQL Server Reporting Services 2022 and Power BI Report Server.
   
 ## <a name="Table"></a> Use a table
 

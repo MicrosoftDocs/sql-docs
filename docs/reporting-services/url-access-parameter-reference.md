@@ -284,106 +284,110 @@ Specifies an established active report session between the client application an
   
 You can specify the session ID as a cookie or as part of the URL. When you configure the report server to not use session cookies, the first request without a specified session ID results in a redirection with a session ID. For more information about report server sessions, see [Identify execution state](../reporting-services/report-server-web-service-net-framework-soap-headers/identifying-execution-state.md).
   
--   **ClearSession**: A value of **true** directs the report server to remove a report from the report session. All report instances associated with an authenticated user are removed from the report session. (A report instance is defined as the same report run multiple times with different report parameter values.) The default value is **false**.
+### ClearSession
+
+A value of **true** directs the report server to remove a report from the report session. All report instances associated with an authenticated user are removed from the report session. (A report instance is defined as the same report run multiple times with different report parameter values.) The default value is **false**.
   
--   **ResetSession**: A value of **true** directs the report server to reset the report session by removing the report session's association with all report snapshots. The default value is **false**.
+### ResetSession
+
+A value of **true** directs the report server to reset the report session by removing the report session's association with all report snapshots. The default value is **false**.
   
--   **ShowHideToggle**: Toggles the show and hide state of a section of the report. Specify a positive integer to represent the section to toggle.
+### ShowHideToggle
+
+Toggles the show and hide state of a section of the report. Specify a positive integer to represent the section to toggle.
   
 ##  <a name="bkmk_webpart"></a> Report Viewer web part commands (`rv:`)
  The following [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] reserved report parameter names are used to target the Report Viewer web part that integrates with SharePoint. These parameter names are prefixed with `rv:`. The Report Viewer web part also accepts the *rs:ParameterLanguage* parameter.
   
--   **Toolbar**: Controls the toolbar display for the Report Viewer web part. The default value is **Full**. Values can be:
+### Toolbar
+
+Controls the toolbar display for the Report Viewer web part. The default value is **Full**. Values can be:
   
-    -   **Full**: Displays the complete toolbar.
+- **Full**: Displays the complete toolbar. 
+- **Navigation**: Displays only pagination in the toolbar.
+- **None**: Doesn't display the toolbar.
   
-    -   **Navigation**: Displays only pagination in the toolbar.
+For example, in SharePoint mode, to display only pagination in the toolbar:
   
-    -   **None**: Doesn't display the toolbar.
+```  
+https://myspsite/_vti_bin/reportserver?https://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:Toolbar=Navigation  
+```  
   
-     For example, in SharePoint mode, to display only pagination in the toolbar:
+### HeaderArea
+
+Controls the header display for the Report Viewer web part. The default value is **Full**. Values can be:
   
-    ```  
-    https://myspsite/_vti_bin/reportserver?https://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:Toolbar=Navigation  
-    ```  
+- **Full**: Displays the complete header.  
+- **BreadCrumbsOnly**: Displays only the breadcrumb navigation in the header to inform the user where they are in the application.
+- **None**: Doesn't display the header.
   
--   **HeaderArea**: Controls the header display for the Report Viewer web part. The default value is **Full**. Values can be:
+For example, in SharePoint mode, to display only the breadcrumb navigation in the header:
   
-    -   **Full**: Displays the complete header.
+```  
+https://myspsite/_vti_bin/reportserver?https://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:HeaderArea=BreadCrumbsOnly  
+```  
   
-    -   **BreadCrumbsOnly**: Displays only the breadcrumb navigation in the header to inform the user where they are in the application.
+### DocMapAreaWidth
+
+Controls the display width, in pixels, of the parameter area in the Report Viewer web part. The default value is the same as the Report Viewer web part default. The value must be a non-negative integer.
   
-    -   **None**: Doesn't display the header.
+### AsyncRender
+
+Controls whether a report is rendered asynchronously. The default value is **true**, which specifies that a report be rendered asynchronously. The value must be a Boolean value of **true** or **false**.
   
-     For example, in SharePoint mode, to display only the breadcrumb navigation in the header:
+### ParamMode
+
+Controls how the Report Viewer web part's parameter prompt area is displayed in full-page view. The default value is **Full**. Valid values are:
   
-    ```  
-    https://myspsite/_vti_bin/reportserver?https://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:HeaderArea=BreadCrumbsOnly  
-    ```  
+- **Full**: Displays the parameter prompt area. 
+- **Collapsed**: Collapses the parameter prompt area.  
+- **Hidden**: Hides the parameter prompt area.
   
--   **DocMapAreaWidth**: Controls the display width, in pixels, of the parameter area in the Report Viewer web part. The default value is the same as the Report Viewer web part default. The value must be a non-negative integer.
+For example, in SharePoint mode, to collapse the parameter prompt area:
   
--   **AsyncRender**: Controls whether a report is rendered asynchronously. The default value is **true**, which specifies that a report be rendered asynchronously. The value must be a Boolean value of **true** or **false**.
+```  
+https://myspsite/_vti_bin/reportserver?https://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:ParamMode=Collapsed  
+```  
   
--   **ParamMode**: Controls how the Report Viewer web part's parameter prompt area is displayed in full-page view. The default value is **Full**. Valid values are:
+###vDocMapMode
+
+Controls how the Report Viewer web part's document map area is displayed in full-page view. The default value is **Full**. Valid values are:
   
-    -   **Full**: Displays the parameter prompt area.
+- **Full**: Displays the document map area. 
+- **Collapsed**: Collapses the document map area.  
+- **Hidden**: Hides the document map area.
   
-    -   **Collapsed**: Collapses the parameter prompt area.
+### DockToolBar
+
+Controls whether the Report Viewer web part's toolbar is docked to the top or bottom. Valid values are **Top** and **Bottom**. The default value is **Top**.
   
-    -   **Hidden**: Hides the parameter prompt area.
+For example, in SharePoint mode, to dock the toolbar to the bottom:
   
-     For example, in SharePoint mode, to collapse the parameter prompt area:
+```  
+https://myspsite/_vti_bin/reportserver?https://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:DockToolBar=Bottom  
+```  
+ 
+### ToolBarItemsDisplayMode
+
+Controls which toolbar items are displayed. This value is a bitwise enumeration value. To include a toolbar item, add the item's value to the total value. For example, for no **Actions** menu, use *rv:ToolBarItemsDisplayMode=63* (or 0x3F), which is 1+2+4+8+16+32. For **Actions** menu items only, use *rv:ToolBarItemsDisplayMode=960* (or 0x3C0). The default value is **-1**, which includes all toolbar items. Valid values are:
   
-    ```  
-    https://myspsite/_vti_bin/reportserver?https://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:ParamMode=Collapsed  
-    ```  
+- **1 (0x1)**: The **Back** button   
+- **2 (0x2)**: The text search controls    
+- **4 (0x4)**: The page navigation controls  
+- **8 (0x8)**: The **Refresh** button  
+- **16 (0x10)**: The **Zoom** list box  
+- **32 (0x20)**: The **Atom Feed** button  
+- **64 (0x40)**: The **Print** menu option in **Actions**  
+- **128 (0x80)**: The **Export** submenu in **Actions**  
+- **256 (0x100)**: The **Open with Report Builder** menu option in **Actions**  
+- **512 (0x200)**: The **Subscribe** menu option in **Actions**  
+- **1024 (0x400)**: The **New Data Alert** menu option in **Actions**  
   
--   **DocMapMode**: Controls how the Report Viewer web part's document map area is displayed in full-page view. The default value is **Full**. Valid values are:
+For example, in SharePoint mode to display only the **Back** button, text search controls, page navigation controls, and the **Refresh** button:
   
-    -   **Full**: Displays the document map area.
-  
-    -   **Collapsed**: Collapses the document map area.
-  
-    -   **Hidden**: Hides the document map area.
-  
--   **DockToolBar**: Controls whether the Report Viewer web part's toolbar is docked to the top or bottom. Valid values are **Top** and **Bottom**. The default value is **Top**.
-  
-     For example, in SharePoint mode, to dock the toolbar to the bottom:
-  
-    ```  
-    https://myspsite/_vti_bin/reportserver?https://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:DockToolBar=Bottom  
-    ```  
-  
--   **ToolBarItemsDisplayMode**: Controls which toolbar items are displayed. This value is a bitwise enumeration value. To include a toolbar item, add the item's value to the total value. For example, for no **Actions** menu, use *rv:ToolBarItemsDisplayMode=63* (or 0x3F), which is 1+2+4+8+16+32. For **Actions** menu items only, use *rv:ToolBarItemsDisplayMode=960* (or 0x3C0). The default value is **-1**, which includes all toolbar items. Valid values are:
-  
-    -   **1 (0x1)**: The **Back** button  
-  
-    -   **2 (0x2)**: The text search controls  
-  
-    -   **4 (0x4)**: The page navigation controls  
-  
-    -   **8 (0x8)**: The **Refresh** button  
-  
-    -   **16 (0x10)**: The **Zoom** list box  
-  
-    -   **32 (0x20)**: The **Atom Feed** button  
-  
-    -   **64 (0x40)**: The **Print** menu option in **Actions**  
-  
-    -   **128 (0x80)**: The **Export** submenu in **Actions**  
-  
-    -   **256 (0x100)**: The **Open with Report Builder** menu option in **Actions**  
-  
-    -   **512 (0x200)**: The **Subscribe** menu option in **Actions**  
-  
-    -   **1024 (0x400)**: The **New Data Alert** menu option in **Actions**  
-  
-     For example, in SharePoint mode to display only the **Back** button, text search controls, page navigation controls, and the **Refresh** button:
-  
-    ```  
-    https://myspsite/_vti_bin/reportserver?https://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:ToolBarItemsDisplayMode=15  
-    ```  
+```  
+https://myspsite/_vti_bin/reportserver?https://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:ToolBarItemsDisplayMode=15  
+```  
   
 ## Related content
 

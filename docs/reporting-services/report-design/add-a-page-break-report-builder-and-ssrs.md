@@ -3,7 +3,7 @@ title: Add a page break to a Report Builder paginated report
 description: Learn how to add a page break to rectangles, data regions, or groups within data regions in Report Builder to control the information on each page.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 07/16/2024
+ms.date: 07/19/2024
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: how-to
@@ -24,7 +24,7 @@ You can add a page break to rectangles, data regions, or groups within data regi
   
 1. On the **Design** surface, right-click the corner handle of the data region, and then select **Tablix Properties**.
 
-:::image type="content" source="../../reporting-services/report-design/media/tablix-properties.png" alt-text="Screenshot of the context menu for a data region highlighting the Tablix Properties option.":::
+    :::image type="content" source="../../reporting-services/report-design/media/tablix-properties.png" alt-text="Screenshot of the context menu for a data region highlighting the Tablix Properties option.":::
   
 1. On the **General** tab, under **Page break options**, select one of the following options:
   
@@ -50,7 +50,7 @@ You can add a page break to rectangles, data regions, or groups within data regi
   
     - **Keep contents together on a single page, if possible**: Select this option when you want contents inside the rectangle to stay on one page.
 
-:::image type="content" source="../../reporting-services/report-design/media/add-page-break-to-rectangle.png" alt-text="Screenshot of the Rectangle Properties dialog box on the General tab highlighting the Page break options.":::
+    :::image type="content" source="../../reporting-services/report-design/media/add-page-break-to-rectangle.png" alt-text="Screenshot of the Rectangle Properties dialog box on the General tab highlighting the Page break options.":::
   
 ## Add a page break to a row group in a table, matrix, or list  
   
@@ -63,7 +63,7 @@ You can add a page break to rectangles, data regions, or groups within data regi
   
 1. Optionally, select **Also at the start of a group** or **Also at the end of a group** to specify that a page break is added when a group starts or ends in the table.  
 
-:::image type="content" source="../../reporting-services/report-design/media/add-page-break-to-group.png" alt-text="Screenshot of the Group Properties dialog box on the Page Breaks tab highlighting the Page break options.":::
+    :::image type="content" source="../../reporting-services/report-design/media/add-page-break-to-group.png" alt-text="Screenshot of the Group Properties dialog box on the Page Breaks tab highlighting the Page break options.":::
 
 ## Related content  
 

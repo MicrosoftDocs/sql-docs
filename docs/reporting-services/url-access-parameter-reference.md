@@ -15,7 +15,15 @@ helpviewer_keywords:
 ---
 # URL access parameter reference
 
-You can use the following parameters as part of a URL to configure the look and feel of your [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] reports. This article lists the most common parameters. Parameters are case-insensitive and begin with the parameter prefix `rs:` if directed to the report server and `rc:` if directed to an HTML Viewer. You can also specify parameters that are specific to devices or rendering extensions. For more information about device-specific parameters, see [Specify device information settings in a URL](../reporting-services/specify-device-information-settings-in-a-url.md).
+You can use the following parameters as part of a URL to configure the look and feel of your [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] reports. This article describes the most common parameters. 
+
+Parameters are case-insensitive and the parameters need a specific prefix depending on what you want to modify:
+
+- `rs:`: Targets the report server.
+- `rc:`: Targets an HTML Viewer.
+- `rv:`: Targets the Report Viewer web part.
+
+You can also specify parameters that are specific to devices or rendering extensions. For more information about device-specific parameters, see [Specify device information settings in a URL](../reporting-services/specify-device-information-settings-in-a-url.md).
   
 > [!IMPORTANT]  
 >  For a SharePoint mode report server it's important that the URL includes the `_vti_bin` proxy syntax to route the request through SharePoint and the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] HTTP proxy. The proxy adds context to the HTTP request that's required to ensure proper execution of the report for SharePoint mode report servers. For examples, see [Access report server items by using URL access](../reporting-services/access-report-server-items-using-url-access.md).
@@ -25,7 +33,7 @@ You can use the following parameters as part of a URL to configure the look and 
 
 ##  <a name="bkmk_htmlviewer"></a> HTML Viewer commands (`rc:`)
 
-HTML Viewer commands target the HTML Viewer and are prefixed with `rc:`.
+HTML Viewer commands target the HTML Viewer and you prefix them with `rc:`.
 
 ### Toolbar
   
@@ -133,7 +141,7 @@ Gets the icon of a particular rendering extension.
 
 ### Stylesheet
 
-Specifies a style sheet to be applied to the HTML Viewer.
+Specifies a style sheet you want to apply to the HTML Viewer.
   
 ### Device Information Setting
 
@@ -143,13 +151,13 @@ You can use the `OutputFormat` device information setting for the IMAGE renderin
   
 ##  <a name="bkmk_reportserver"></a> Report server commands (`rs:`)
 
-Report server commands are prefixed with `rs:` and are used to target the report server:
+Report server target the report server and you prefix them with `rs:`.
   
 ### Command
 
 Performs an action on a catalog item, depending on its item type. The type of the catalog item referenced in the URL access string determines the default value. Valid values are:
   
-- **ListChildren** and **GetChildren**: Displays the contents of a folder. The folder items are displayed within a generic item-navigation page.
+- **ListChildren** and **GetChildren**: Displays the contents of a folder. The folder items display within a generic item-navigation page.
   
     For example, in native mode:
   
@@ -259,7 +267,7 @@ https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/myrerepo
 
 Provides a language for parameters passed in a URL that's independent of the browser language. The default value is the browser language. The value can be a culture value, such as **en-us** or **de-DE**.
   
-For example, in native mode, to override the browser language and specify a culture value of **de-DE**:
+For example, to override the browser language and specify a culture value of **de-DE** on a report server in native mode:
   
 ```  
 https://myrshost/Reportserver?/SampleReports/Product+Line+Sales&rs:Command=Render&StartDate=4/10/2008&EndDate=11/10/2008&rs:ParameterLanguage=de-DE  
@@ -269,7 +277,7 @@ https://myrshost/Reportserver?/SampleReports/Product+Line+Sales&rs:Command=Rende
 
 Renders a report based on a report history snapshot. For more information, see [Render a report history snapshot using URL access](../reporting-services/render-a-report-history-snapshot-using-url-access.md).
   
-For example, in native mode, retrieve a report history snapshot dated `2003-04-07` with a time stamp of `13:40:02`:
+For example, to retrieve a report history snapshot dated `2003-04-07` with a time stamp of `13:40:02` on a report server in native mode:
   
 ```  
 https://myrshost/reportserver?/SampleReports/Company Sales&rs:Snapshot=2003-04-07T13:40:02  
@@ -277,11 +285,11 @@ https://myrshost/reportserver?/SampleReports/Company Sales&rs:Snapshot=2003-04-0
   
 ### PersistStreams
 
-Renders a report in a single persisted stream. The Image renderer uses this parameter to transmit the rendered report one chunk at a time. After using this parameter in a URL access string, use the same URL access string with the *GetNextStream* parameter instead of the *PersistStreams* parameter to get the next chunk in the persisted stream. This URL command eventually returns a 0-byte stream to indicate the end of the persisted stream. The default value is **false**.
+Renders a report in a single persisted stream. The Image renderer uses this parameter to transmit the rendered report one chunk at a time. After using this parameter in a URL access string, use the same URL access string with the `GetNextStream` parameter instead of the `PersistStreams` parameter to get the next chunk in the persisted stream. This URL command eventually returns a 0-byte stream to indicate the end of the persisted stream. The default value is **false**.
   
 ### GetNextStream
 
-Gets the next data chunk in a persisted stream that's accessed by using the `PersistStreams` parameter. For more information, see the description for [PersistStreams](#persiststreams). The default value is **false**.
+Gets the next data chunk in a persisted stream that's accessed by using the `PersistStreams` parameter. For more information, see the [PersistStreams](#persiststreams) description. The default value is **false**.
   
 ### SessionID
 
@@ -325,7 +333,7 @@ Controls the header display for the Report Viewer web part. The default value is
   
 - **Full**: Displays the complete header.  
 - **BreadCrumbsOnly**: Displays only the breadcrumb navigation in the header to inform the user where they are in the application.
-- **None**: Doesn't display the header.
+- **None**: Hides the header.
   
 For example, to display only the breadcrumb navigation in the header on a report server in SharePoint mode:
   
@@ -376,18 +384,20 @@ https://myspsite/_vti_bin/reportserver?https://myspsite002%fShared+Documents%2fm
 ### ToolBarItemsDisplayMode
 
 Controls which toolbar items to display. This value is a bitwise enumeration value. To include a toolbar item, add the item's value to the total value. For example, for no **Actions** menu, use `rv:ToolBarItemsDisplayMode=63` (or `0x3F`), which is 1+2+4+8+16+32. For **Actions** menu items only, use `rv:ToolBarItemsDisplayMode=960` (or `0x3C0`). The default value is **-1**, which includes all toolbar items. Valid values are:
-  
-- **1 (0x1)**: Displays the **Back** button.   
-- **2 (0x2)**: Displays the text search controls.   
-- **4 (0x4)**: Displays the page navigation controls.  
-- **8 (0x8)**: Displays the **Refresh** button.  
-- **16 (0x10)**: Displays the **Zoom** list box.  
-- **32 (0x20)**: Displays the **Atom Feed** button.  
-- **64 (0x40)**: Displays the **Print** menu option in **Actions**.
-- **128 (0x80)**: Displays the **Export** submenu in **Actions**.  
-- **256 (0x100)**: Displays the **Open with Report Builder** menu option in **Actions**.  
-- **512 (0x200)**: Displays the **Subscribe** menu option in **Actions**. 
-- **1024 (0x400)**: Displays the **New Data Alert** menu option in **Actions**.
+ 
+|Value|Toolbar item|
+|-----|------------|
+|1 (0x1)|**Back** button|
+|2 (0x2)|Text search controls|
+|4 (0x4)|Page navigation controls|
+|8 (0x8)|**Refresh** button|
+|16 (0x10)|**Zoom** list box|
+|32 (0x20)|**Atom Feed** button|
+|64 (0x40)|**Print** menu option in **Actions**|
+|128 (0x80)|**Export** submenu in **Actions**|
+|256 (0x100)|**Open with Report Builder** menu option in **Actions**|
+|512 (0x200)|**Subscribe** menu option in **Actions**|
+|1024 (0x400)|**New Data Alert** menu option in **Actions**|
   
 For example, in SharePoint mode to display only the **Back** button, text search controls, page navigation controls, and the **Refresh** button:
   

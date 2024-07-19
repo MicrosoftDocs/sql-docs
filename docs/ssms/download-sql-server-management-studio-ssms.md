@@ -7,7 +7,7 @@ ms.reviewer: maghan, randolphwest
 ms.date: 07/09/2024
 ms.service: sql
 ms.subservice: ssms
-ms.topic: conceptual
+ms.topic: overview
 keywords:
   - "install ssms, download ssms, latest ssms"
   - "SQL Server Management Studio"

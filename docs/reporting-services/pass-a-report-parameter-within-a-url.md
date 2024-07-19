@@ -46,7 +46,7 @@ You can pass report parameters to a SQL Server Reporting Services (SSRS) report 
 - Pass a Boolean value. Possible values are `0` for false and `1` for true.
     - Example: `https://myrshost/ReportServer?/AdventureWorks2022/Employee_Sales_Summary_2022&ShowDetails=1` 
 - Pass a float value. Include the decimal separator of the server locale. 
-\  
+ 
 ## Related content
 
 - [URL access &#40;SSRS&#41;](../reporting-services/url-access-ssrs.md)   

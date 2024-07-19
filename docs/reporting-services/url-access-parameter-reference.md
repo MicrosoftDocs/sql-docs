@@ -1,6 +1,6 @@
 ---
 title: "URL access parameter reference"
-description: Learn how you can use parameters as part of a URL to configure the look and feel of your Reporting Services reports.
+description: Learn how you can use parameters as part of a URL to configure the look and feel of your SQL Server Reporting Services (SSRS) reports.
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 07/19/2024
@@ -14,7 +14,7 @@ helpviewer_keywords:
 ---
 # URL access parameter reference
 
-You can use the following parameters as part of a URL to configure the look and feel of your [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] reports. The most common parameters are listed in this section. Parameters are case-insensitive and begin with the parameter prefix *rs:* if directed to the report server and *rc:* if directed to an HTML Viewer. You can also specify parameters that are specific to devices or rendering extensions. For more information about device-specific parameters, see [Specify device information settings in a URL](../reporting-services/specify-device-information-settings-in-a-url.md).
+You can use the following parameters as part of a URL to configure the look and feel of your [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] reports. The most common parameters are listed in this section. Parameters are case-insensitive and begin with the parameter prefix `rs:` if directed to the report server and `rc:` if directed to an HTML Viewer. You can also specify parameters that are specific to devices or rendering extensions. For more information about device-specific parameters, see [Specify device information settings in a URL](../reporting-services/specify-device-information-settings-in-a-url.md).
   
 > [!IMPORTANT]  
 >  For a SharePoint mode report server it's important that the URL includes the `_vti_bin` proxy syntax to route the request through SharePoint and the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] HTTP proxy. The proxy adds context to the HTTP request that's required to ensure proper execution of the report for SharePoint mode report servers. For examples, see [Access report server items by using URL access](../reporting-services/access-report-server-items-using-url-access.md).
@@ -22,32 +22,16 @@ You can use the following parameters as part of a URL to configure the look and 
 > Reporting Services integration with SharePoint is no longer available after SQL Server 2016.
   
 
-##  <a name="bkmk_htmlviewer"></a> HTML Viewer commands (rc:)
+##  <a name="bkmk_htmlviewer"></a> HTML Viewer commands (`rc:`)
 
-HTML Viewer commands target the HTML Viewer and are prefixed with *rc:*.
-
-| Parameter    | Description | Example |
-|--------------|-------------|---------|
-| **Toolbar**  | Shows or hides the toolbar. If the value of this parameter is **false**, all remaining options are ignored. If you omit this parameter, the toolbar is automatically displayed for rendering formats that support it. The default is **true**. | `https://myrshost/reportserver?/Sales&rc:Toolbar=false`|
-| **Parameters** | Shows or hides the parameters area of the toolbar. If you set this parameter to **true**, the parameters area of the toolbar is displayed. If you set this parameter to **false**, the parameters area isn't displayed and can't be displayed by the user. If you set this parameter to a value of **Collapsed**, the parameters area aren't displayed but can be toggled by the user. The default value of this parameter is **true**.
-| **Zoom**     | Sets the report zoom value. Options include percentage values, **Page Width**, and **Whole Page**. Default is **100**. | `https://myrshost/reportserver?/Sales&rc:Zoom=Page Width` |
-| **Section**  | Sets which page in the report to display. Values less than 0 display page 1. Default is **1**. | `https://myrshost/reportserver?/Sales&rc:Section=2` |
-| **FindString** | Searches for specific text in the report and highlights it. Must include *rc:Toolbar=false*. | `https://myrshost/reportserver?/Sales&rc:Toolbar=false&rc:FindString=Mountain-400` |
-| **StartFind** | Specifies the first page to search. Default is the first page. | `https://server/Reportserver?/SampleReports/Product Catalog&rs:Command=Render&rc:StartFind=1&rc:EndFind=5&rc:FindString=Mountain-400` |
-| **EndFind**   | Sets the number of the last page to use in the search. Default is the number of the current page. Use with *StartFind*. | `https://server/Reportserver?/SampleReports/Product Catalog&rs:Command=Render&rc:StartFind=1&rc:EndFind=5&rc:FindString=Mountain-400` |
-| **FallbackPage** | Sets the number of the page to display if a search or document map selection fails. Default is the number of the current page. |    |
-| **GetImage**  | Gets a particular icon for the HTML Viewer user interface. |   |
-| **Icon**      | Gets the icon of a particular rendering extension. |  |
-| **Stylesheet** | Specifies a style sheet to be applied to the HTML Viewer. | | 
-
- - HTML Viewer commands are used to target the HTML Viewer and are prefixed with *rc:*:
+HTML Viewer commands target the HTML Viewer and are prefixed with `rc:`.
   
--   **Toolbar**: Shows or hides the toolbar. If the value of this parameter is **false**, all remaining options are ignored. If you omit this parameter, the toolbar is automatically displayed for rendering formats that support it. The default of this parameter is **true**.
+- **Toolbar**: Shows or hides the toolbar. If the value of this parameter is **false**, all remaining options are ignored. If you omit this parameter, the toolbar is automatically displayed for rendering formats that support it. The default of this parameter is **true**.
   
     > [!IMPORTANT]  
     >  *rc:Toolbar*=**false** doesn't work for URL access strings that use an IP address, instead of a domain name, to target a report hosted on a SharePoint site.
   
--   **Parameters**: Shows or hides the parameters area of the toolbar. If you set this parameter to **true**, the parameters area of the toolbar is displayed. If you set this parameter to **false**, the parameters area isn't displayed and can't be displayed by the user. If you set this parameter to a value of **Collapsed**, the parameters area aren't displayed but can be toggled by the user. The default value of this parameter is **true**.  
+- **Parameters**: Shows or hides the parameters area of the toolbar. If you set this parameter to **true**, the parameters area of the toolbar is displayed. If you set this parameter to **false**, the parameters area isn't displayed and can't be displayed by the user. If you set this parameter to a value of **Collapsed**, the parameter's area doesn't display but can be toggled by the user. The default value is **true**.  
   
      For example, in native mode:
   
@@ -61,7 +45,7 @@ HTML Viewer commands target the HTML Viewer and are prefixed with *rc:*.
     https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales&rc:Parameters=Collapsed  
     ```  
   
--   **Zoom**: Sets the report zoom value as an integer percentage or a string constant. Standard string values include **Page Width** and **Whole Page**. Versions of Internet Explorer earlier than Internet Explorer 5.0 and all non-[!INCLUDE[msCoName](../includes/msconame-md.md)] browsers ignore this parameter. The default value of this parameter is **100**.
+- **Zoom**: Sets the report zoom value as an integer percentage or a string constant. Standard string values include **Page Width** and **Whole Page**. Versions of Internet Explorer earlier than Internet Explorer 5.0 and all non-[!INCLUDE[msCoName](../includes/msconame-md.md)] browsers ignore this parameter. The default value is **100**.
   
      For example, in native mode:
   
@@ -75,7 +59,7 @@ HTML Viewer commands target the HTML Viewer and are prefixed with *rc:*.
     https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales&rc:Zoom=Page Width  
     ```  
   
--   **Section**: Sets which page in the report to display. Any value that's greater than the number of pages in the report displays the last page. Any value that's less than **0** displays page 1 of the report. The default value of this parameter is **1**.
+- **Section**: Sets which page in the report to display. Any value that's greater than the number of pages in the report displays the last page. Any value that's less than **0** displays page 1 of the report. The default value is **1**.
   
      For an example in native mode, to display page 2 of the report:
   
@@ -89,7 +73,7 @@ HTML Viewer commands target the HTML Viewer and are prefixed with *rc:*.
     https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales&rc:Section=2  
     ```  
   
--   **FindString**: Searches a report for a specific set of text and highlights the text.
+- **FindString**: Searches a report for a specific set of text and highlights the text.
     
     > [!IMPORTANT]  
     >  *rc:FindString* doesn't work unless you include *rc:Toolbar*=**false** to the URL access string.
@@ -106,7 +90,7 @@ HTML Viewer commands target the HTML Viewer and are prefixed with *rc:*.
     https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales&rc:Toolbar=false&rc:FindString=Mountain-400  
     ```  
   
--   **StartFind**: Specifies the last section to search. The default value of this parameter is the last page of the report.  
+- **StartFind**: Specifies the last section to search. The default value of this parameter is the last page of the report.  
   
      For an example in native mode that searches for the first occurrence of the text "Mountain-400" in the Product Catalog sample report starting with page 1 and ending with page 5:
   
@@ -114,24 +98,24 @@ HTML Viewer commands target the HTML Viewer and are prefixed with *rc:*.
     https://server/Reportserver?/SampleReports/Product Catalog&rs:Command=Render&rc:StartFind=1&rc:EndFind=5&rc:FindString=Mountain-400  
     ```  
   
--   **EndFind**: Sets the number of the last page to use in the search. For example, a value of **5** indicates that the last page to be searched is page 5 of the report. The default value is the number of the current page. Use this parameter with the *StartFind* parameter. See the previous example.
+- **EndFind**: Sets the number of the last page to use in the search. For example, a value of **5** indicates that the last page to be searched is page 5 of the report. The default value is the number of the current page. Use this parameter with the *StartFind* parameter. See the previous example.
   
--   **FallbackPage**: Sets the number of the page to display if a search or a document map selection fails. The default value is the number of the current page.
+- **FallbackPage**: Sets the number of the page to display if a search or a document map selection fails. The default value is the number of the current page.
   
--   **GetImage**: Gets a particular icon for the HTML Viewer user interface.
+- **GetImage**: Gets a particular icon for the HTML Viewer user interface.
   
--   **Icon**: Gets the icon of a particular rendering extension.
+- **Icon**: Gets the icon of a particular rendering extension.
   
--   **Stylesheet**: Specifies a style sheet to be applied to the HTML Viewer.
+- **Stylesheet**: Specifies a style sheet to be applied to the HTML Viewer.
   
--   **Device Information Setting**: Specifies a device information setting in the form of `rc:tag=value`, where *tag* is the name of a device information setting specific to the rendering extension that's currently used. (See the description for the *Format* parameter.) For example, you can use the *OutputFormat* device information setting for the IMAGE rendering extension to render the report to a JPEG image by using the following parameters in the URL access string: `...&rs:Format=IMAGE&rc:OutputFormat=JPEG`. For more information on all extension-specific device information settings, see [Device information settings for rendering extensions &#40;Reporting Services&#41;](../reporting-services/device-information-settings-for-rendering-extensions-reporting-services.md).
+- **Device Information Setting**: Specifies a device information setting in the form of `rc:tag=value`, where `tag` is the name of a device information setting specific to the rendering extension. (See the description for the `Format` parameter.) For example, you can use the `OutputFormat` device information setting for the IMAGE rendering extension to render the report to a JPEG image by using the following parameters in the URL access string: `...&rs:Format=IMAGE&rc:OutputFormat=JPEG`. For more information on all extension-specific device information settings, see [Device information settings for rendering extensions &#40;Reporting Services&#41;](../reporting-services/device-information-settings-for-rendering-extensions-reporting-services.md).
   
 ##  <a name="bkmk_reportserver"></a> Report server commands (rs:)
  Report server commands are prefixed with *rs:* and are used to target the report server:
   
--   **Command**: Performs an action on a catalog item, depending on its item type. The default value is determined by the type of the catalog item referenced in the URL access string. Valid values are:
+- **Command**: Performs an action on a catalog item, depending on its item type. The type of the catalog item referenced in the URL access string determines the default value. Valid values are:
   
-    -   **ListChildren** and **GetChildren**: Displays the contents of a folder. The folder items are displayed within a generic item-navigation page.
+    - **ListChildren** and **GetChildren**: Displays the contents of a folder. The folder items are displayed within a generic item-navigation page.
   
          For example, in native mode:
   
@@ -165,7 +149,7 @@ HTML Viewer commands target the HTML Viewer and are prefixed with *rc:*.
         https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales/YearlySalesByCategory&rs:Command=Render  
         ```  
   
-    -   **GetSharedDatasetDefinition**: Displays the XML definition associated with a shared dataset. Shared dataset properties, including the query, dataset parameters, default values, dataset filters, and data options such as collation and case sensitivity, are saved in the definition. You must have **Read Report Definition** permission on a shared dataset to use this value.
+    -   **GetSharedDatasetDefinition**: Displays the XML definition associated with a shared dataset. Shared dataset properties are saved in the definition. These properties include the query, dataset parameters, default values, dataset filters, and data options such as collation and case sensitivity. You must have **Read Report Definition** permission on a shared dataset to use this value.
   
          For example, in native mode:
   
@@ -187,7 +171,7 @@ HTML Viewer commands target the HTML Viewer and are prefixed with *rc:*.
         https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales/AdventureWorks2022&rs:Command=GetDataSourceContents  
         ```  
   
-    -   **GetResourceContents**: Renders a resource and displays it in an HTML page if the resource is compatible with the browser. Otherwise, you're prompted to open or save the file or resource to disk.  
+    -   **GetResourceContents**: Renders a resource and displays it in an HTML page if the resource is compatible with the browser. Otherwise, you can choose to open or save the file or resource to disk.  
   
          For example, in native mode:
   
@@ -247,7 +231,7 @@ HTML Viewer commands target the HTML Viewer and are prefixed with *rc:*.
     https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/myrereport.rdl&rs:Format=PDF  
     ```  
   
--   **ParameterLanguage**: Provides a language for parameters passed in a URL that's independent of the browser language. The default value is the browser language. The value can be a culture value, such as **en-us** or **de-de.**
+-   **ParameterLanguage**: Provides a language for parameters passed in a URL that's independent of the browser language. The default value is the browser language. The value can be a culture value, such as **en-us** or **de-DE**.
   
      For example, in native mode, to override the browser language and specify a culture value of de-DE:
   
@@ -257,7 +241,7 @@ HTML Viewer commands target the HTML Viewer and are prefixed with *rc:*.
   
 -   **Snapshot**: Renders a report based on a report history snapshot. For more information, see [Render a report history snapshot using URL access](../reporting-services/render-a-report-history-snapshot-using-url-access.md).
   
-     For example, in native mode, retrieve a report history snapshot dated 2003-04-07 with a time stamp of 13:40:02:
+     For example, in native mode, retrieve a report history snapshot dated `2003-04-07` with a time stamp of `13:40:02`:
   
     ```  
     https://myrshost/reportserver?/SampleReports/Company Sales&rs:Snapshot=2003-04-07T13:40:02  
@@ -269,7 +253,7 @@ HTML Viewer commands target the HTML Viewer and are prefixed with *rc:*.
   
 -   **SessionID**: Specifies an established active report session between the client application and the report server. The value of this parameter is set to the session identifier.
   
-     You can specify the session ID as a cookie or as part of the URL. When the report server has been configured not to use session cookies, the first request without a specified session ID results in a redirection with a session ID. For more information about report server sessions, see [Identify execution state](../reporting-services/report-server-web-service-net-framework-soap-headers/identifying-execution-state.md).
+     You can specify the session ID as a cookie or as part of the URL. When you configure the report server to not use session cookies, the first request without a specified session ID results in a redirection with a session ID. For more information about report server sessions, see [Identify execution state](../reporting-services/report-server-web-service-net-framework-soap-headers/identifying-execution-state.md).
   
 -   **ClearSession**: A value of **true** directs the report server to remove a report from the report session. All report instances associated with an authenticated user are removed from the report session. (A report instance is defined as the same report run multiple times with different report parameter values.) The default value is **false**.
   
@@ -277,8 +261,8 @@ HTML Viewer commands target the HTML Viewer and are prefixed with *rc:*.
   
 -   **ShowHideToggle**: Toggles the show and hide state of a section of the report. Specify a positive integer to represent the section to toggle.
   
-##  <a name="bkmk_webpart"></a> Report Viewer web part commands (rv:)
- The following [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] reserved report parameter names are used to target the Report Viewer web part that's integrated with SharePoint. These parameter names are prefixed with *rv:*. The Report Viewer web part also accepts the *rs:ParameterLanguage* parameter.
+##  <a name="bkmk_webpart"></a> Report Viewer web part commands (`rv:`)
+ The following [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] reserved report parameter names are used to target the Report Viewer web part that integrates with SharePoint. These parameter names are prefixed with `rv:`. The Report Viewer web part also accepts the *rs:ParameterLanguage* parameter.
   
 -   **Toolbar**: Controls the toolbar display for the Report Viewer web part. The default value is **Full**. Values can be:
   
@@ -342,7 +326,7 @@ HTML Viewer commands target the HTML Viewer and are prefixed with *rc:*.
     https://myspsite/_vti_bin/reportserver?https://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:DockToolBar=Bottom  
     ```  
   
--   **ToolBarItemsDisplayMode**: Controls which toolbar items are displayed. This is a bitwise enumeration value. To include a toolbar item, add the item's value to the total value. For example, for no **Actions** menu, use *rv:ToolBarItemsDisplayMode=63* (or 0x3F), which is 1+2+4+8+16+32. For **Actions** menu items only, use *rv:ToolBarItemsDisplayMode=960* (or 0x3C0). The default value is **-1**, which includes all toolbar items. Valid values are:
+-   **ToolBarItemsDisplayMode**: Controls which toolbar items are displayed. This value is a bitwise enumeration value. To include a toolbar item, add the item's value to the total value. For example, for no **Actions** menu, use *rv:ToolBarItemsDisplayMode=63* (or 0x3F), which is 1+2+4+8+16+32. For **Actions** menu items only, use *rv:ToolBarItemsDisplayMode=960* (or 0x3C0). The default value is **-1**, which includes all toolbar items. Valid values are:
   
     -   **1 (0x1)**: The **Back** button  
   

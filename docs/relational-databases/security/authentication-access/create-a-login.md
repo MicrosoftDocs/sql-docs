@@ -55,9 +55,9 @@ A login is a security principal, or an entity that can be authenticated by a sec
   
 1. In Object Explorer, expand the folder of the server instance in which you want to create the new login.  
   
-2. Right-click the **Security** folder, point to **New**, and select **Login...**.  
+1. Right-click the **Security** folder, point to **New**, and select **Login...**.  
   
-3. In the **Login - New** dialog box, on the **General** page, enter the name of a user in the **Login name** box. Alternately, select **Search...** to open the **Select User or Group** dialog box.  
+1. In the **Login - New** dialog box, on the **General** page, enter the name of a user in the **Login name** box. Alternately, select **Search...** to open the **Select User or Group** dialog box.  
 
    > [!NOTE]
    > Certain ports must be allowed communicate with the domain controller if you are searching for a Windows principal. If you are having trouble getting results for the search, see [Service overview and network port requirements for Windows](/troubleshoot/windows-server/networking/service-overview-and-network-port-requirements).
@@ -74,9 +74,9 @@ A login is a security principal, or an entity that can be authenticated by a sec
   
    5. Select **OK**.  
   
-3. To create a login based on a Windows principal, select **Windows authentication**. This is the default selection.  
+1. To create a login based on a Windows principal, select **Windows authentication**. This is the default selection.  
   
-4. To create a login that is saved on a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] database, select **SQL Server authentication**.  
+1. To create a login that is saved on a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] database, select **SQL Server authentication**.  
   
    1. In the **Password** box, enter a password for the new user. Enter that password again into the **Confirm Password** box.  
   
@@ -88,17 +88,17 @@ A login is a security principal, or an entity that can be authenticated by a sec
   
    5. To force the user to create a new password after the first time the login is used, select **User must change password at next login**. **Enforce password expiration** must be selected to enable this checkbox. This is a default option when **SQL Server authentication** is selected.  
   
-5. To associate the login with a stand-alone security certificate, select **Mapped to certificate** and then select the name of an existing certificate from the list.  
+1. To associate the login with a stand-alone security certificate, select **Mapped to certificate** and then select the name of an existing certificate from the list.  
   
-6. To associate the login with a stand-alone asymmetric key, select **Mapped to asymmetric key** to, and then select the name of an existing key from the list.  
+1. To associate the login with a stand-alone asymmetric key, select **Mapped to asymmetric key** to, and then select the name of an existing key from the list.  
   
-7. To associate the login with a security credential, select the **Mapped to Credential** check box, and then either select an existing credential from the list or select **Add** to create a new credential. To remove a mapping to a security credential from the login, select the credential from **Mapped Credentials** and select **Remove**. For more information about credentials in general, see [Credentials &#40;Database Engine&#41;](../../../relational-databases/security/authentication-access/credentials-database-engine.md).  
+1. To associate the login with a security credential, select the **Mapped to Credential** check box, and then either select an existing credential from the list or select **Add** to create a new credential. To remove a mapping to a security credential from the login, select the credential from **Mapped Credentials** and select **Remove**. For more information about credentials in general, see [Credentials &#40;Database Engine&#41;](../../../relational-databases/security/authentication-access/credentials-database-engine.md).  
   
-8. From the **Default database** list, select a default database for the login. **Master** is the default for this option.  
+1. From the **Default database** list, select a default database for the login. **Master** is the default for this option.  
   
-9. From the **Default language** list, select a default language for the login.  
+1. From the **Default language** list, select a default language for the login.  
   
-10. Select **OK**.
+1. Select **OK**.
 
 ### Additional options
 

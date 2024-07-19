@@ -125,7 +125,7 @@ https://server/Reportserver?/SampleReports/Product Catalog&rs:Command=Render&rc:
   
 ### EndFind
 
-Set the number of the last page to use in the search. For example, a value of **5** indicates that the last page to be searched is page 5 of the report. The default value is the number of the current page. Use this parameter with the `StartFind` parameter. For more information, see the [StartFind](#startfind) example.
+Set the number of the last page you want to use in the search. For example, a value of **5** indicates that the last page to be searched is page 5 of the report. The default value is the number of the current page. Use this parameter with the `StartFind` parameter. For more information, see the [StartFind](#startfind) example.
 
 ### FallbackPage
 

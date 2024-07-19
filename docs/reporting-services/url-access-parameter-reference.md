@@ -56,15 +56,15 @@ Sets the report zoom value as an integer percentage or a string constant. Standa
   
 Example in native mode:
   
-    ```  
-    https://myrshost/reportserver?/Sales&rc:Zoom=Page Width  
-    ```  
+```  
+https://myrshost/reportserver?/Sales&rc:Zoom=Page Width  
+```  
   
 Example in SharePoint mode:
   
-    ```  
-    https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales&rc:Zoom=Page Width  
-    ```  
+```  
+https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales&rc:Zoom=Page Width  
+```  
   
 ### Section
 
@@ -143,8 +143,8 @@ Specifies a device information setting in the form of `rc:tag=value`, where `tag
 
 Performs an action on a catalog item, depending on its item type. The type of the catalog item referenced in the URL access string determines the default value. Valid values are:
   
-    - **ListChildren** and **GetChildren**
-    Displays the contents of a folder. The folder items are displayed within a generic item-navigation page.
+- **ListChildren** and **GetChildren**
+Displays the contents of a folder. The folder items are displayed within a generic item-navigation page.
   
     For example, in native mode:
   

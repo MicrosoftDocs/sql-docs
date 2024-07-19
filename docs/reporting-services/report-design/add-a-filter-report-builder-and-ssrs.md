@@ -3,21 +3,21 @@ title: Add a filter to a Report Builder paginated report
 description: Learn how to add a filter to a dataset, data region, or group when you want to include or exclude specific values for calculations in a paginated report.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 07/11/2024
+ms.date: 07/19/2024
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: how-to
 ms.custom: updatefrequency5
 
-#customer intent: As a Report Builder user, I want to learn how to add filters to my reports so that interactively include and exclude values in my report calculations.
+#customer intent: As a Report Builder user, I want to learn how to add filters to my reports so that I can interactively include and exclude values in my report calculations.
 ---
 # Add a filter to a Report Builder paginated report
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
 
-Add a filter to a dataset, data region, or group to a paginated report when you want to include or exclude specific values for calculations or display. Filters are applied at run time first on the dataset. Then, the filters are applied on the data region and then on the group, in top-down order for group hierarchies. In a table, matrix, or list, filters for row groups, column groups, and adjacent groups are applied independently. In a chart, filters for category groups and series groups are applied independently.  
+Add a filter to a dataset, data region, or group to a paginated report when you want to include or exclude specific values for calculations or display. Filters are applied at run time first on the dataset. Then, the filters are applied on the data region, and then on the group, in top-down order for group hierarchies. In a table, matrix, or list, filters for row groups, column groups, and adjacent groups are applied independently. In a chart, filters for category groups and series groups are applied independently.  
   
-To add a filter, you must specify one or more filter equations. A filter equation consists of an expression that identifies the data that you want to filter, an operator, and the value to compare to. The data types of the filtered data and the value must match. Filtering on aggregate values for a dataset or data region isn't supported.  
+To add a filter, specify one or more filter equations. A filter equation consists of an expression that identifies the data that you want to filter, an operator, and the value to compare to. The data types of the filtered data and the value must match. Filtering on aggregate values for a dataset or data region isn't supported.  
   
 To filter data points in a chart, you can set a filter on a category group or a series group. By default, the chart uses the built-in function **Sum** to aggregate values that belong to the same group into an individual data point in the series. If you change the aggregate function of a series, you must change the aggregate function in the filter expression.  
   

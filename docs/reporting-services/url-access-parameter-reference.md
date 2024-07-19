@@ -24,8 +24,6 @@ You can use the following parameters as part of a URL to configure the look and 
 
 ##  <a name="bkmk_htmlviewer"></a> HTML Viewer commands (rc:)
 
-## HTML Viewer Commands (rc:)
-
 HTML Viewer commands target the HTML Viewer and are prefixed with *rc:*.
 
 | Parameter    | Description | Example |

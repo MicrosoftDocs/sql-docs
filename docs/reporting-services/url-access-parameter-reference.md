@@ -152,61 +152,61 @@ Displays the contents of a folder. The folder items are displayed within a gener
     https://myrshost/reportserver?/Sales&rs:Command=GetChildren  
     ```  
   
-         For example, a named instance in native mode:
+    For example, a named instance in native mode:
   
-        ```  
-        https://myssrshost/Reportserver_THESQLINSTANCE?/reportfolder&rs:Command=listChildren  
-        ```  
+    ```  
+    https://myssrshost/Reportserver_THESQLINSTANCE?/reportfolder&rs:Command=listChildren  
+    ```  
   
-         For example, in SharePoint mode:
+    For example, in SharePoint mode:
   
-        ```  
-        https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales&rs:Command=GetChildren  
-        ```  
+    ```  
+    https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales&rs:Command=GetChildren  
+    ```  
   
-    - **Render**: The report renders in the browser so that you can view it.
+- **Render**: The report renders in the browser so that you can view it.
   
-         For example, in native mode:
+    For example, in native mode:
   
-        ```  
-        https://myrshost/reportserver?/Sales/YearlySalesByCategory&rs:Command=Render  
-        ```  
+    ```  
+    https://myrshost/reportserver?/Sales/YearlySalesByCategory&rs:Command=Render  
+    ```  
   
-         For example, in SharePoint mode:
+    For example, in SharePoint mode:
   
-        ```  
-        https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales/YearlySalesByCategory&rs:Command=Render  
-        ```  
+    ```  
+    https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales/YearlySalesByCategory&rs:Command=Render  
+    ```  
   
-    -   **GetSharedDatasetDefinition**: Displays the XML definition associated with a shared dataset. Shared dataset properties are saved in the definition. These properties include the query, dataset parameters, default values, dataset filters, and data options such as collation and case sensitivity. You must have **Read Report Definition** permission on a shared dataset to use this value.
+- **GetSharedDatasetDefinition**: Displays the XML definition associated with a shared dataset. Shared dataset properties are saved in the definition. These properties include the query, dataset parameters, default values, dataset filters, and data options such as collation and case sensitivity. You must have **Read Report Definition** permission on a shared dataset to use this value.
   
-         For example, in native mode:
+    For example, in native mode:
   
-        ```  
-        https://localhost/reportserver/?/DataSet1&rs:command=GetShareddatasetDefinition  
-        ```  
+    ```  
+    https://localhost/reportserver/?/DataSet1&rs:command=GetShareddatasetDefinition  
+    ```  
   
-    -   **GetDataSourceContents**: Displays the properties of a given shared data source as XML. If your browser supports XML and if you're an authenticated user with **Read Contents** permission on the data source, the data source definition displays.
+- **GetDataSourceContents**: Displays the properties of a given shared data source as XML. If your browser supports XML and if you're an authenticated user with **Read Contents** permission on the data source, the data source definition displays.
   
-         For example, in native mode:
+    For example, in native mode:
   
-        ```  
-        https://myrshost/reportserver?/Sales/AdventureWorks2022&rs:Command=GetDataSourceContents  
-        ```  
+    ```  
+    https://myrshost/reportserver?/Sales/AdventureWorks2022&rs:Command=GetDataSourceContents  
+    ```  
   
-         For example, in SharePoint mode:
+    For example, in SharePoint mode:
   
-        ```  
-        https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales/AdventureWorks2022&rs:Command=GetDataSourceContents  
-        ```  
+    ```  
+    https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales/AdventureWorks2022&rs:Command=GetDataSourceContents  
+    ```  
   
-    -   **GetResourceContents**: Renders a resource and displays it in an HTML page if the resource is compatible with the browser. Otherwise, you can choose to open or save the file or resource to disk.  
+- **GetResourceContents**: Renders a resource and displays it in an HTML page if the resource is compatible with the browser. Otherwise, you can choose to open or save the file or resource to disk.  
   
-         For example, in native mode:
+    For example, in native mode:
   
-        ```  
-        https://myrshost/reportserver?/Sales/StorePicture&rs:Command=GetResourceContents  
-        ```  
+    ```  
+    https://myrshost/reportserver?/Sales/StorePicture&rs:Command=GetResourceContents  
+    ```  
   
          For example, in SharePoint mode:
   
@@ -216,73 +216,73 @@ Displays the contents of a folder. The folder items are displayed within a gener
   
     -   **GetComponentDefinition**: Displays the XML definition associated with a published report item. You must have **Read Contents** permission on a published report item to use this value.
   
--   **Format**: Specifies the format in which to render and view a report. Common values include:
+### Format
+
+Specifies the format in which to render and view a report. Common values include:
   
-    -   **HTML5**  
+- **HTML5**    
+- **PPTX**    
+- **ATOM**    
+- **HTML4.0**   
+- **MHTML**    
+- **IMAGE**    
+- **EXCEL** (for .xls)    
+- **EXCELOPENXML** (for .xlsx)  
+- **WORD** (for .doc)    
+- **WORDOPENXML** (for .docx)  
+- **CSV**  
+- **PDF**  
+- **XML**  
   
-    -   **PPTX**  
+The default value is **HTML5**. For more information, see [Export a report by using URL access](../reporting-services/export-a-report-using-url-access.md).
   
-    -   **ATOM**  
+For a complete list, see the `\<Render>` extension section of the report server `rsreportserver.config` file. For more information, see [RsReportServer.config configuration file](../reporting-services/report-server/rsreportserver-config-configuration-file.md).
   
-    -   **HTML4.0**  
+For example, to get a PDF copy of a report directly from a native mode report server:
   
-    -   **MHTML**  
+```  
+https://myrshost/ReportServer?/myreport&rs:Format=PDF  
+```  
   
-    -   **IMAGE**  
+ For example, to get a PDF copy of a report directly from a SharePoint mode report server:
+ 
+```  
+https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/myrereport.rdl&rs:Format=PDF  
+```  
   
-    -   **EXCEL** (for .xls)
-    
-    -   **EXCELOPENXML** (for .xlsx)
+### ParameterLanguage
+
+Provides a language for parameters passed in a URL that's independent of the browser language. The default value is the browser language. The value can be a culture value, such as **en-us** or **de-DE**.
   
-    -   **WORD** (for .doc)
-    
-    -   **WORDOPENXML** (for .docx)
+For example, in native mode, to override the browser language and specify a culture value of **de-DE**:
   
-    -   **CSV**  
+```  
+https://myrshost/Reportserver?/SampleReports/Product+Line+Sales&rs:Command=Render&StartDate=4/10/2008&EndDate=11/10/2008&rs:ParameterLanguage=de-DE  
+```  
   
-    -   **PDF**  
+### Snapshot
+
+Renders a report based on a report history snapshot. For more information, see [Render a report history snapshot using URL access](../reporting-services/render-a-report-history-snapshot-using-url-access.md).
   
-    -   **XML**  
+For example, in native mode, retrieve a report history snapshot dated `2003-04-07` with a time stamp of `13:40:02`:
   
-     The default value is **HTML5**. For more information, see [Export a report by using URL access](../reporting-services/export-a-report-using-url-access.md).
+```  
+https://myrshost/reportserver?/SampleReports/Company Sales&rs:Snapshot=2003-04-07T13:40:02  
+```  
   
-     For a complete list, see the `\<Render>` extension section of the report server `rsreportserver.config` file. For more information, see [RsReportServer.config configuration file](../reporting-services/report-server/rsreportserver-config-configuration-file.md).
+### PersistStreams
+
+Renders a report in a single persisted stream. The Image renderer uses this parameter to transmit the rendered report one chunk at a time. After using this parameter in a URL access string, use the same URL access string with the *GetNextStream* parameter instead of the *PersistStreams* parameter to get the next chunk in the persisted stream. This URL command eventually returns a 0-byte stream to indicate the end of the persisted stream. The default value is **false**.
   
-     For example, to get a PDF copy of a report directly from a native mode report server:
+### GetNextStream
+
+Gets the next data chunk in a persisted stream that's accessed by using the *PersistStreams* parameter. For more information, see the description for *PersistStreams*. The default value is **false**.
   
-    ```  
-    https://myrshost/ReportServer?/myreport&rs:Format=PDF  
-    ```  
+### SessionID
+
+Specifies an established active report session between the client application and the report server. The value of this parameter is set to the session identifier.
   
-     For example, to get a PDF copy of a report directly from a SharePoint mode report server:
-  
-    ```  
-    https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/myrereport.rdl&rs:Format=PDF  
-    ```  
-  
--   **ParameterLanguage**: Provides a language for parameters passed in a URL that's independent of the browser language. The default value is the browser language. The value can be a culture value, such as **en-us** or **de-DE**.
-  
-     For example, in native mode, to override the browser language and specify a culture value of **de-DE**:
-  
-    ```  
-    https://myrshost/Reportserver?/SampleReports/Product+Line+Sales&rs:Command=Render&StartDate=4/10/2008&EndDate=11/10/2008&rs:ParameterLanguage=de-DE  
-    ```  
-  
--   **Snapshot**: Renders a report based on a report history snapshot. For more information, see [Render a report history snapshot using URL access](../reporting-services/render-a-report-history-snapshot-using-url-access.md).
-  
-     For example, in native mode, retrieve a report history snapshot dated `2003-04-07` with a time stamp of `13:40:02`:
-  
-    ```  
-    https://myrshost/reportserver?/SampleReports/Company Sales&rs:Snapshot=2003-04-07T13:40:02  
-    ```  
-  
--   **PersistStreams**: Renders a report in a single persisted stream. The Image renderer uses this parameter to transmit the rendered report one chunk at a time. After using this parameter in a URL access string, use the same URL access string with the *GetNextStream* parameter instead of the *PersistStreams* parameter to get the next chunk in the persisted stream. This URL command eventually returns a 0-byte stream to indicate the end of the persisted stream. The default value is **false**.
-  
--   **GetNextStream**: Gets the next data chunk in a persisted stream that's accessed by using the *PersistStreams* parameter. For more information, see the description for *PersistStreams*. The default value is **false**.
-  
--   **SessionID**: Specifies an established active report session between the client application and the report server. The value of this parameter is set to the session identifier.
-  
-     You can specify the session ID as a cookie or as part of the URL. When you configure the report server to not use session cookies, the first request without a specified session ID results in a redirection with a session ID. For more information about report server sessions, see [Identify execution state](../reporting-services/report-server-web-service-net-framework-soap-headers/identifying-execution-state.md).
+You can specify the session ID as a cookie or as part of the URL. When you configure the report server to not use session cookies, the first request without a specified session ID results in a redirection with a session ID. For more information about report server sessions, see [Identify execution state](../reporting-services/report-server-web-service-net-framework-soap-headers/identifying-execution-state.md).
   
 -   **ClearSession**: A value of **true** directs the report server to remove a report from the report session. All report instances associated with an authenticated user are removed from the report session. (A report instance is defined as the same report run multiple times with different report parameter values.) The default value is **false**.
   

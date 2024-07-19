@@ -11,7 +11,7 @@ ms.custom: updatefrequency5
 helpviewer_keywords:
   - "reports [Reporting Services], display options"
   - "URL access [Reporting Services], report display parameters"
-# customer-intent: 
+# customer-intent: As an SSRS user, I want to learn how to use URL parameters so that I can customize how reports look and function.
 ---
 # URL access parameter reference
 

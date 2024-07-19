@@ -3,7 +3,7 @@ title: "Choose an authentication mode"
 description: Choose between Windows Authentication mode and mixed mode authentication for the SQL Server Database Engine at setup time.
 author: VanMSFT
 ms.author: vanto
-ms.date: "09/27/2023"
+ms.date: "07/18/2024"
 ms.service: sql
 ms.subservice: security
 ms.topic: conceptual
@@ -36,7 +36,9 @@ helpviewer_keywords:
   
 ## Connecting through Windows Authentication
 
- When a user connects through a Windows user account, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] validates the account name and password using the Windows principal token in the operating system. This means that the user identity is confirmed by Windows. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doesn't ask for the password, and doesn't perform the identity validation. Windows Authentication is the default authentication mode, and is much more secure than [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication. Windows Authentication uses Kerberos security protocol, provides password policy enforcement with regard to complexity validation for strong passwords, provides support for account lockout, and supports password expiration. A connection made using Windows Authentication is sometimes called a trusted connection, because [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] trusts the credentials provided by Windows.  
+ When a user connects through a Windows user account, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] validates the account name and password using the Windows principal token in the operating system. This means that the user identity is confirmed by Windows. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doesn't ask for the password, and doesn't perform the identity validation. Windows Authentication is the default authentication mode, and is much more secure than [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication. Windows Authentication uses New Technology LAN Manager (NTLM) or Kerberos security protocol, provides password policy enforcement with regard to complexity validation for strong passwords, provides support for account lockout, and supports password expiration. A connection made using Windows Authentication is sometimes called a trusted connection, because [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] trusts the credentials provided by Windows.
+
+For information on configuring Kerberos, see [Register a Service Principal Name for Kerberos connections](../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md).
   
  By using Windows Authentication, Windows groups can be created at the domain level, and a login can be created on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for the entire group. Managing access at the domain level can simplify account administration.  
   
@@ -96,6 +98,6 @@ helpviewer_keywords:
   > [!NOTE]  
   >  Using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication does not limit the permissions of local administrators on the computer where [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is installed.  
   
-## See also
+## Related content
 
 - [Security Considerations for a SQL Server Installation](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)  

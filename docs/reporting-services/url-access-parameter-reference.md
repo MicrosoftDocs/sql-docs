@@ -50,83 +50,107 @@ Example in SharePoint mode:
 https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales&rc:Parameters=Collapsed  
 ```  
   
-- **Zoom**: Sets the report zoom value as an integer percentage or a string constant. Standard string values include **Page Width** and **Whole Page**. Versions of Internet Explorer earlier than Internet Explorer 5.0 and all non-[!INCLUDE[msCoName](../includes/msconame-md.md)] browsers ignore this parameter. The default value is **100**.
+### Zoom
+
+Sets the report zoom value as an integer percentage or a string constant. Standard string values include **Page Width** and **Whole Page**. Versions of Internet Explorer earlier than Internet Explorer 5.0 and all non-[!INCLUDE[msCoName](../includes/msconame-md.md)] browsers ignore this parameter. The default value is **100**.
   
-     For example, in native mode:
+Example in native mode:
   
     ```  
     https://myrshost/reportserver?/Sales&rc:Zoom=Page Width  
     ```  
   
-     For example, in SharePoint mode:
+Example in SharePoint mode:
   
     ```  
     https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales&rc:Zoom=Page Width  
     ```  
   
-- **Section**: Sets which page in the report to display. Any value that's greater than the number of pages in the report displays the last page. Any value that's less than **0** displays page 1 of the report. The default value is **1**.
+### Section
+
+Sets which page in the report to display. Any value that's greater than the number of pages in the report displays the last page. Any value that's less than **0** displays page 1 of the report. The default value is **1**.
   
-     For an example in native mode, to display page 2 of the report:
+Example in native mode to display page 2 of the report:
   
-    ```  
-    https://myrshost/reportserver?/Sales&rc:Section=2  
-    ```  
+```  
+https://myrshost/reportserver?/Sales&rc:Section=2  
+```  
   
-     For an example in SharePoint mode, to display page 2 of the report:
+Example in SharePoint mode to display page 2 of the report:
   
-    ```  
-    https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales&rc:Section=2  
-    ```  
+```  
+https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales&rc:Section=2  
+```  
   
-- **FindString**: Searches a report for a specific set of text and highlights the text.
+### FindString
+
+Searches a report for a specific set of text and highlights the text.
     
-    > [!IMPORTANT]  
-    >  *rc:FindString* doesn't work unless you include *rc:Toolbar*=**false** to the URL access string.
+> [!IMPORTANT]  
+>  *rc:FindString* doesn't work unless you include *rc:Toolbar*=**false** to the URL access string.
   
-     For example, in native mode:
+For example, in native mode:
   
-    ```  
-    https://myrshost/reportserver?/Sales&rc:Toolbar=false&rc:FindString=Mountain-400  
-    ```  
+```  
+https://myrshost/reportserver?/Sales&rc:Toolbar=false&rc:FindString=Mountain-400  
+```  
   
-     For example, in SharePoint mode:
+For example, in SharePoint mode:
   
-    ```  
-    https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales&rc:Toolbar=false&rc:FindString=Mountain-400  
-    ```  
+```  
+https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales&rc:Toolbar=false&rc:FindString=Mountain-400  
+```  
   
-- **StartFind**: Specifies the last section to search. The default value is the last page of the report.  
+### StartFind
+
+Specifies the last section to search. The default value is the last page of the report.  
   
-     For an example in native mode that searches for the first occurrence of the text "Mountain-400" in the Product Catalog sample report starting with page 1 and ending with page 5:
+Eample in native mode that searches for the first occurrence of the text "Mountain-400" in the Product Catalog sample report starting with page 1 and ending with page 5:
   
-    ```  
-    https://server/Reportserver?/SampleReports/Product Catalog&rs:Command=Render&rc:StartFind=1&rc:EndFind=5&rc:FindString=Mountain-400  
-    ```  
+```  
+https://server/Reportserver?/SampleReports/Product Catalog&rs:Command=Render&rc:StartFind=1&rc:EndFind=5&rc:FindString=Mountain-400  
+```  
   
-- **EndFind**: Sets the number of the last page to use in the search. For example, a value of **5** indicates that the last page to be searched is page 5 of the report. The default value is the number of the current page. Use this parameter with the `StartFind` parameter. See the previous example.
+### EndFind
+
+Sets the number of the last page to use in the search. For example, a value of **5** indicates that the last page to be searched is page 5 of the report. The default value is the number of the current page. Use this parameter with the `StartFind` parameter. See the previous example.
   
-- **FallbackPage**: Sets the number of the page to display if a search or a document map selection fails. The default value is the number of the current page.
+
+### FallbackPage
+
+Sets the number of the page to display if a search or a document map selection fails. The default value is the number of the current page.
   
-- **GetImage**: Gets a particular icon for the HTML Viewer user interface.
+### GetImage
+
+Gets a particular icon for the HTML Viewer user interface.
   
-- **Icon**: Gets the icon of a particular rendering extension.
+### Icon
+
+Gets the icon of a particular rendering extension.
+
+### Stylesheet
+
+Specifies a style sheet to be applied to the HTML Viewer.
   
-- **Stylesheet**: Specifies a style sheet to be applied to the HTML Viewer.
-  
-- **Device Information Setting**: Specifies a device information setting in the form of `rc:tag=value`, where `tag` is the name of a device information setting specific to the rendering extension. (See the description for the `Format` parameter.) For example, you can use the `OutputFormat` device information setting for the IMAGE rendering extension to render the report to a JPEG image by using the following parameters in the URL access string: `...&rs:Format=IMAGE&rc:OutputFormat=JPEG`. For more information on all extension-specific device information settings, see [Device information settings for rendering extensions &#40;Reporting Services&#41;](../reporting-services/device-information-settings-for-rendering-extensions-reporting-services.md).
+### Device Information Setting
+
+Specifies a device information setting in the form of `rc:tag=value`, where `tag` is the name of a device information setting specific to the rendering extension. (See the description for the `Format` parameter.) For example, you can use the `OutputFormat` device information setting for the IMAGE rendering extension to render the report to a JPEG image by using the following parameters in the URL access string: `...&rs:Format=IMAGE&rc:OutputFormat=JPEG`. For more information on all extension-specific device information settings, see [Device information settings for rendering extensions &#40;Reporting Services&#41;](../reporting-services/device-information-settings-for-rendering-extensions-reporting-services.md).
   
 ##  <a name="bkmk_reportserver"></a> Report server commands (`rs:`)
  Report server commands are prefixed with `rs:` and are used to target the report server:
   
-- **Command**: Performs an action on a catalog item, depending on its item type. The type of the catalog item referenced in the URL access string determines the default value. Valid values are:
+### Command
+
+Performs an action on a catalog item, depending on its item type. The type of the catalog item referenced in the URL access string determines the default value. Valid values are:
   
-    - **ListChildren** and **GetChildren**: Displays the contents of a folder. The folder items are displayed within a generic item-navigation page.
+    - **ListChildren** and **GetChildren**
+    Displays the contents of a folder. The folder items are displayed within a generic item-navigation page.
   
-         For example, in native mode:
+    For example, in native mode:
   
-        ```  
-        https://myrshost/reportserver?/Sales&rs:Command=GetChildren  
-        ```  
+    ```  
+    https://myrshost/reportserver?/Sales&rs:Command=GetChildren  
+    ```  
   
          For example, a named instance in native mode:
   

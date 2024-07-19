@@ -38,13 +38,13 @@ Shows or hides the toolbar. If the value of this parameter is **false**, all rem
 
 Shows or hides the parameters area of the toolbar. If you set this parameter to **true**, the parameters area of the toolbar is displayed. If you set this parameter to **false**, the parameters area isn't displayed and can't be displayed by the user. If you set this parameter to a value of **Collapsed**, the parameter's area doesn't display but can be toggled by the user. The default value is **true**.  
   
-Example in native mode:
+For example, in native mode:
 
 ```  
 https://myrshost/reportserver?/Sales&rc:Parameters=Collapsed  
 ```  
 
-Example in SharePoint mode:
+For example, in SharePoint mode:
   
 ```  
 https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales&rc:Parameters=Collapsed  
@@ -54,13 +54,13 @@ https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales&rc
 
 Sets the report zoom value as an integer percentage or a string constant. Standard string values include **Page Width** and **Whole Page**. Versions of Internet Explorer earlier than Internet Explorer 5.0 and all non-[!INCLUDE[msCoName](../includes/msconame-md.md)] browsers ignore this parameter. The default value is **100**.
   
-Example in native mode:
+For example, in native mode:
   
 ```  
 https://myrshost/reportserver?/Sales&rc:Zoom=Page Width  
 ```  
   
-Example in SharePoint mode:
+For example, in SharePoint mode:
   
 ```  
 https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales&rc:Zoom=Page Width  
@@ -70,13 +70,13 @@ https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales&rc
 
 Sets which page in the report to display. Any value that's greater than the number of pages in the report displays the last page. Any value that's less than **0** displays page 1 of the report. The default value is **1**.
   
-Example in native mode to display page 2 of the report:
+For example, in native mode to display page 2 of the report:
   
 ```  
 https://myrshost/reportserver?/Sales&rc:Section=2  
 ```  
   
-Example in SharePoint mode to display page 2 of the report:
+For example, in SharePoint mode to display page 2 of the report:
   
 ```  
 https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales&rc:Section=2  
@@ -105,7 +105,7 @@ https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales&rc
 
 Specifies the last section to search. The default value is the last page of the report.  
   
-Eample in native mode that searches for the first occurrence of the text "Mountain-400" in the Product Catalog sample report starting with page 1 and ending with page 5:
+An example in native mode that searches for the first occurrence of the text "Mountain-400" in the Product Catalog sample report starting with page 1 and ending with page 5:
   
 ```  
 https://server/Reportserver?/SampleReports/Product Catalog&rs:Command=Render&rc:StartFind=1&rc:EndFind=5&rc:FindString=Mountain-400  
@@ -114,7 +114,6 @@ https://server/Reportserver?/SampleReports/Product Catalog&rs:Command=Render&rc:
 ### EndFind
 
 Sets the number of the last page to use in the search. For example, a value of **5** indicates that the last page to be searched is page 5 of the report. The default value is the number of the current page. Use this parameter with the `StartFind` parameter. See the previous example.
-  
 
 ### FallbackPage
 
@@ -134,17 +133,19 @@ Specifies a style sheet to be applied to the HTML Viewer.
   
 ### Device Information Setting
 
-Specifies a device information setting in the form of `rc:tag=value`, where `tag` is the name of a device information setting specific to the rendering extension. (See the description for the `Format` parameter.) For example, you can use the `OutputFormat` device information setting for the IMAGE rendering extension to render the report to a JPEG image by using the following parameters in the URL access string: `...&rs:Format=IMAGE&rc:OutputFormat=JPEG`. For more information on all extension-specific device information settings, see [Device information settings for rendering extensions &#40;Reporting Services&#41;](../reporting-services/device-information-settings-for-rendering-extensions-reporting-services.md).
+Specifies a device information setting in the form of `rc:tag=value`, where `tag` is the name of a device information setting specific to the rendering extension. For more information see [Format](#format). 
+
+You can use the `OutputFormat` device information setting for the IMAGE rendering extension to render the report to a JPEG image by using the following parameters in the URL access string: `...&rs:Format=IMAGE&rc:OutputFormat=JPEG`. For more information on all extension-specific device information settings, see [Device information settings for rendering extensions &#40;Reporting Services&#41;](../reporting-services/device-information-settings-for-rendering-extensions-reporting-services.md).
   
 ##  <a name="bkmk_reportserver"></a> Report server commands (`rs:`)
- Report server commands are prefixed with `rs:` and are used to target the report server:
+
+Report server commands are prefixed with `rs:` and are used to target the report server:
   
 ### Command
 
 Performs an action on a catalog item, depending on its item type. The type of the catalog item referenced in the URL access string determines the default value. Valid values are:
   
-- **ListChildren** and **GetChildren**
-Displays the contents of a folder. The folder items are displayed within a generic item-navigation page.
+- **ListChildren** and **GetChildren**: Displays the contents of a folder. The folder items are displayed within a generic item-navigation page.
   
     For example, in native mode:
   
@@ -244,7 +245,7 @@ For example, to get a PDF copy of a report directly from a native mode report se
 https://myrshost/ReportServer?/myreport&rs:Format=PDF  
 ```  
   
- For example, to get a PDF copy of a report directly from a SharePoint mode report server:
+For example, to get a PDF copy of a report directly from a SharePoint mode report server:
  
 ```  
 https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/myrereport.rdl&rs:Format=PDF  
@@ -276,7 +277,7 @@ Renders a report in a single persisted stream. The Image renderer uses this para
   
 ### GetNextStream
 
-Gets the next data chunk in a persisted stream that's accessed by using the *PersistStreams* parameter. For more information, see the description for *PersistStreams*. The default value is **false**.
+Gets the next data chunk in a persisted stream that's accessed by using the `PersistStreams` parameter. For more information, see the description for [PersistStreams](#persiststreams). The default value is **false**.
   
 ### SessionID
 
@@ -286,7 +287,7 @@ You can specify the session ID as a cookie or as part of the URL. When you confi
   
 ### ClearSession
 
-A value of **true** directs the report server to remove a report from the report session. All report instances associated with an authenticated user are removed from the report session. (A report instance is defined as the same report run multiple times with different report parameter values.) The default value is **false**.
+A value of **true** directs the report server to remove a all report instances associated with an authenticated user from the report session. A report instance is defined as the same report run multiple times with different report parameter values. The default value is **false**.
   
 ### ResetSession
 
@@ -297,17 +298,18 @@ A value of **true** directs the report server to reset the report session by rem
 Toggles the show and hide state of a section of the report. Specify a positive integer to represent the section to toggle.
   
 ##  <a name="bkmk_webpart"></a> Report Viewer web part commands (`rv:`)
- The following [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] reserved report parameter names are used to target the Report Viewer web part that integrates with SharePoint. These parameter names are prefixed with `rv:`. The Report Viewer web part also accepts the *rs:ParameterLanguage* parameter.
+
+Use the following [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] reserved report parameters to target the Report Viewer web part that integrates with SharePoint. These parameter names are prefixed with `rv:`. The Report Viewer web part also accepts the `rs:ParameterLanguage` parameter.
   
 ### Toolbar
 
-Controls the toolbar display for the Report Viewer web part. The default value is **Full**. Values can be:
+Controls the toolbar display for the Report Viewer web part. The default value is **Full**. Valid values are:
   
 - **Full**: Displays the complete toolbar. 
 - **Navigation**: Displays only pagination in the toolbar.
 - **None**: Doesn't display the toolbar.
   
-For example, in SharePoint mode, to display only pagination in the toolbar:
+For example, to display only pagination in the toolbar on a report server in SharePoint mode:
   
 ```  
 https://myspsite/_vti_bin/reportserver?https://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:Toolbar=Navigation  
@@ -315,13 +317,13 @@ https://myspsite/_vti_bin/reportserver?https://myspsite002%fShared+Documents%2fm
   
 ### HeaderArea
 
-Controls the header display for the Report Viewer web part. The default value is **Full**. Values can be:
+Controls the header display for the Report Viewer web part. The default value is **Full**. Valid values are:
   
 - **Full**: Displays the complete header.  
 - **BreadCrumbsOnly**: Displays only the breadcrumb navigation in the header to inform the user where they are in the application.
 - **None**: Doesn't display the header.
   
-For example, in SharePoint mode, to display only the breadcrumb navigation in the header:
+For example, to display only the breadcrumb navigation in the header on a report server in SharePoint mode:
   
 ```  
 https://myspsite/_vti_bin/reportserver?https://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:HeaderArea=BreadCrumbsOnly  
@@ -351,7 +353,7 @@ https://myspsite/_vti_bin/reportserver?https://myspsite002%fShared+Documents%2fm
   
 ### DocMapMode
 
-Controls how the Report Viewer web part's document map area is displayed in full-page view. The default value is **Full**. Valid values are:
+Controls how the Report Viewer web part's document map area displays in full-page view. The default value is **Full**. Valid values are:
   
 - **Full**: Displays the document map area. 
 - **Collapsed**: Collapses the document map area.  
@@ -359,9 +361,9 @@ Controls how the Report Viewer web part's document map area is displayed in full
   
 ### DockToolBar
 
-Controls whether the Report Viewer web part's toolbar is docked to the top or bottom. Valid values are **Top** and **Bottom**. The default value is **Top**.
+Controls whether the Report Viewer web part's toolbar docks at the top or bottom. Valid values are **Top** and **Bottom**. The default value is **Top**.
   
-For example, in SharePoint mode, to dock the toolbar to the bottom:
+For example, to dock the toolbar to the bottom on a report server in SharePoint mode:
   
 ```  
 https://myspsite/_vti_bin/reportserver?https://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:DockToolBar=Bottom  
@@ -369,19 +371,19 @@ https://myspsite/_vti_bin/reportserver?https://myspsite002%fShared+Documents%2fm
  
 ### ToolBarItemsDisplayMode
 
-Controls which toolbar items are displayed. This value is a bitwise enumeration value. To include a toolbar item, add the item's value to the total value. For example, for no **Actions** menu, use *rv:ToolBarItemsDisplayMode=63* (or 0x3F), which is 1+2+4+8+16+32. For **Actions** menu items only, use *rv:ToolBarItemsDisplayMode=960* (or 0x3C0). The default value is **-1**, which includes all toolbar items. Valid values are:
+Controls which toolbar items to display. This value is a bitwise enumeration value. To include a toolbar item, add the item's value to the total value. For example, for no **Actions** menu, use `rv:ToolBarItemsDisplayMode=63` (or `0x3F`), which is 1+2+4+8+16+32. For **Actions** menu items only, use `rv:ToolBarItemsDisplayMode=960` (or `0x3C0`). The default value is **-1**, which includes all toolbar items. Valid values are:
   
-- **1 (0x1)**: The **Back** button   
-- **2 (0x2)**: The text search controls    
-- **4 (0x4)**: The page navigation controls  
-- **8 (0x8)**: The **Refresh** button  
-- **16 (0x10)**: The **Zoom** list box  
-- **32 (0x20)**: The **Atom Feed** button  
-- **64 (0x40)**: The **Print** menu option in **Actions**  
-- **128 (0x80)**: The **Export** submenu in **Actions**  
-- **256 (0x100)**: The **Open with Report Builder** menu option in **Actions**  
-- **512 (0x200)**: The **Subscribe** menu option in **Actions**  
-- **1024 (0x400)**: The **New Data Alert** menu option in **Actions**  
+- **1 (0x1)**: Displays the **Back** button.   
+- **2 (0x2)**: Displays the text search controls.   
+- **4 (0x4)**: Displays the page navigation controls.  
+- **8 (0x8)**: Displays the **Refresh** button.  
+- **16 (0x10)**: Displays the **Zoom** list box.  
+- **32 (0x20)**: Displays the **Atom Feed** button.  
+- **64 (0x40)**: Displays the **Print** menu option in **Actions**.
+- **128 (0x80)**: Displays the **Export** submenu in **Actions**.  
+- **256 (0x100)**: Displays the **Open with Report Builder** menu option in **Actions**.  
+- **512 (0x200)**: Displays the **Subscribe** menu option in **Actions**. 
+- **1024 (0x400)**: Displays the **New Data Alert** menu option in **Actions**.
   
 For example, in SharePoint mode to display only the **Back** button, text search controls, page navigation controls, and the **Refresh** button:
   

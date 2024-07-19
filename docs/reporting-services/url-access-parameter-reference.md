@@ -28,8 +28,8 @@ HTML Viewer commands target the HTML Viewer and are prefixed with *rc:*.
 
 | Parameter    | Description | Example |
 |--------------|-------------|---------|
-| **Toolbar**  | Shows or hides the toolbar. If set to **false**, all remaining options are ignored. Default is **true**. | `https://myrshost/reportserver?/Sales&rc:Toolbar=false`|
-| **Parameters** | Shows or hides the parameters area of the toolbar. Options are **true**, **false**, or **Collapsed**. Default is **true**. | `https://myrshost/reportserver?/Sales&rc:Parameters=Collapsed` |
+| **Toolbar**  | Shows or hides the toolbar. If the value of this parameter is **false**, all remaining options are ignored. If you omit this parameter, the toolbar is automatically displayed for rendering formats that support it. The default is **true**. | `https://myrshost/reportserver?/Sales&rc:Toolbar=false`|
+| **Parameters** | Shows or hides the parameters area of the toolbar. If you set this parameter to **true**, the parameters area of the toolbar is displayed. If you set this parameter to **false**, the parameters area isn't displayed and can't be displayed by the user. If you set this parameter to a value of **Collapsed**, the parameters area aren't displayed but can be toggled by the user. The default value of this parameter is **true**.
 | **Zoom**     | Sets the report zoom value. Options include percentage values, **Page Width**, and **Whole Page**. Default is **100**. | `https://myrshost/reportserver?/Sales&rc:Zoom=Page Width` |
 | **Section**  | Sets which page in the report to display. Values less than 0 display page 1. Default is **1**. | `https://myrshost/reportserver?/Sales&rc:Section=2` |
 | **FindString** | Searches for specific text in the report and highlights it. Must include *rc:Toolbar=false*. | `https://myrshost/reportserver?/Sales&rc:Toolbar=false&rc:FindString=Mountain-400` |

@@ -35,10 +35,14 @@ When you want to add parameters to a URL, consider the following guidance:
 > [!NOTE]
 > SSRS integration with SharePoint is no longer available after SQL Server 2016. 
 
-|Scenario|Syntax|Example| 
-|--------|------|-------|
-| Set a report parameter within a URL. | `parameter=value` | `https://myrshost/ReportServer?/AdventureWorks2022/Employee_Sales_Summary_2022&TotalOrders=500`|
-| Specify two parameters defined in a report. | `ReportMonth=#` and `ReportYear=YYYY` | - Example for an SSRS SharePoint mode server: `https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/AdventureWorks2022/Employee_Sales_Summary_2022.rdl&ReportMonth=3&ReportYear=2008` - Example for an SSRS Native mode server: `https://myrshost/ReportServer?/AdventureWorks2022/Employee_Sales_Summary_2022&ReportMonth=3&ReportYear=2008`  |
+|Scenario|Example| 
+|--------|-------|
+| Set a report parameter within a URL. | `https://myrshost/ReportServer?/AdventureWorks2022/Employee_Sales_Summary_2022&TotalOrders=500`|
+| Specify two parameters defined in a report on an SSRS SharePoint mode server | `https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/AdventureWorks2022/Employee_Sales_Summary_2022.rdl&ReportMonth=3&ReportYear=2008` - Example for an SSRS Native mode server. `https://myrshost/ReportServer?/AdventureWorks2022/Employee_Sales_Summary_2022&ReportMonth=3&ReportYear=2008`  |
+| Specify two parameters defined in a report on an SSRS Native mode server. | `https://myrshost/ReportServer?/AdventureWorks2022/Employee_Sales_Summary_2022&ReportMonth=3&ReportYear=2008`  |
+| Pass a null value for a parameter. | `https://myrshost/ReportServer?/AdventureWorks2022/Employee_Sales_Summary_2022&SalesOrderNumber:isnull=true` |
+| Pass a Boolean value. Possible values are `0` for false and `1` for true. | `https://myrshost/ReportServer?/AdventureWorks2022/Employee_Sales_Summary_2022&ShowDetails=1`  |
+| Pass a float value. Include the decimal separator of the server locale. | `https://myrshost/ReportServer?/AdventureWorks2022/Employee_Sales_Summary_2022&DiscountRate=0.05` |
 
 - Set a report parameter within a URL.
     - Syntax: `parameter=value`

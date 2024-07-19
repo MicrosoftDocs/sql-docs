@@ -35,12 +35,10 @@ When you want to add parameters to a URL, consider the following guidance:
 > [!NOTE]
 > SSRS integration with SharePoint is no longer available after SQL Server 2016. 
 
-| Scenario | Syntax | Example | 
-|---------|--------|----------|
+|Scenario|Syntax|Example| 
+|--------|------|-------|
 | Set a report parameter within a URL. | `parameter=value` | `https://myrshost/ReportServer?/AdventureWorks2022/Employee_Sales_Summary_2022&TotalOrders=500`|
-| Specify two parameters defined in a report. | `ReportMonth=#` and `ReportYear=YYYY` | Example for an SSRS SharePoint mode server: `https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/AdventureWorks2022/Employee_Sales_Summary_2022.rdl&ReportMonth=3&ReportYear=2008`  
-    - Example for an SSRS Native mode server: 
-    `https://myrshost/ReportServer?/AdventureWorks2022/Employee_Sales_Summary_2022&ReportMonth=3&ReportYear=2008`  |
+| Specify two parameters defined in a report. | `ReportMonth=#` and `ReportYear=YYYY` | - Example for an SSRS SharePoint mode server: `https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/AdventureWorks2022/Employee_Sales_Summary_2022.rdl&ReportMonth=3&ReportYear=2008` - Example for an SSRS Native mode server: `https://myrshost/ReportServer?/AdventureWorks2022/Employee_Sales_Summary_2022&ReportMonth=3&ReportYear=2008`  |
 - Set a report parameter within a URL.
     - Syntax: `parameter=value`
 - Specify two parameters defined in a report.

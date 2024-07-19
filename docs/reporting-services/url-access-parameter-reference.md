@@ -11,10 +11,11 @@ ms.custom: updatefrequency5
 helpviewer_keywords:
   - "reports [Reporting Services], display options"
   - "URL access [Reporting Services], report display parameters"
+# customer-intent: 
 ---
 # URL access parameter reference
 
-You can use the following parameters as part of a URL to configure the look and feel of your [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] reports. The most common parameters are listed in this section. Parameters are case-insensitive and begin with the parameter prefix `rs:` if directed to the report server and `rc:` if directed to an HTML Viewer. You can also specify parameters that are specific to devices or rendering extensions. For more information about device-specific parameters, see [Specify device information settings in a URL](../reporting-services/specify-device-information-settings-in-a-url.md).
+You can use the following parameters as part of a URL to configure the look and feel of your [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] reports. This article lists the most common parameters. Parameters are case-insensitive and begin with the parameter prefix `rs:` if directed to the report server and `rc:` if directed to an HTML Viewer. You can also specify parameters that are specific to devices or rendering extensions. For more information about device-specific parameters, see [Specify device information settings in a URL](../reporting-services/specify-device-information-settings-in-a-url.md).
   
 > [!IMPORTANT]  
 >  For a SharePoint mode report server it's important that the URL includes the `_vti_bin` proxy syntax to route the request through SharePoint and the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] HTTP proxy. The proxy adds context to the HTTP request that's required to ensure proper execution of the report for SharePoint mode report servers. For examples, see [Access report server items by using URL access](../reporting-services/access-report-server-items-using-url-access.md).
@@ -25,25 +26,29 @@ You can use the following parameters as part of a URL to configure the look and 
 ##  <a name="bkmk_htmlviewer"></a> HTML Viewer commands (`rc:`)
 
 HTML Viewer commands target the HTML Viewer and are prefixed with `rc:`.
+
+### Toolbar
   
-- **Toolbar**: Shows or hides the toolbar. If the value of this parameter is **false**, all remaining options are ignored. If you omit this parameter, the toolbar is automatically displayed for rendering formats that support it. The default of this parameter is **true**.
+Shows or hides the toolbar. If the value of this parameter is **false**, all remaining options are ignored. If you omit this parameter, the toolbar is automatically displayed for rendering formats that support it. The default of this parameter is **true**.
   
-    > [!IMPORTANT]  
-    >  *rc:Toolbar*=**false** doesn't work for URL access strings that use an IP address, instead of a domain name, to target a report hosted on a SharePoint site.
+> [!IMPORTANT]  
+>  *rc:Toolbar*=**false** doesn't work for URL access strings that use an IP address, instead of a domain name, to target a report hosted on a SharePoint site.
   
-- **Parameters**: Shows or hides the parameters area of the toolbar. If you set this parameter to **true**, the parameters area of the toolbar is displayed. If you set this parameter to **false**, the parameters area isn't displayed and can't be displayed by the user. If you set this parameter to a value of **Collapsed**, the parameter's area doesn't display but can be toggled by the user. The default value is **true**.  
+### Parameters
+
+Shows or hides the parameters area of the toolbar. If you set this parameter to **true**, the parameters area of the toolbar is displayed. If you set this parameter to **false**, the parameters area isn't displayed and can't be displayed by the user. If you set this parameter to a value of **Collapsed**, the parameter's area doesn't display but can be toggled by the user. The default value is **true**.  
   
-     For example, in native mode:
+Example in native mode:
+
+```  
+https://myrshost/reportserver?/Sales&rc:Parameters=Collapsed  
+```  
+
+Example in SharePoint mode:
   
-    ```  
-    https://myrshost/reportserver?/Sales&rc:Parameters=Collapsed  
-    ```  
-  
-     For example, in SharePoint mode:
-  
-    ```  
-    https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales&rc:Parameters=Collapsed  
-    ```  
+```  
+https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales&rc:Parameters=Collapsed  
+```  
   
 - **Zoom**: Sets the report zoom value as an integer percentage or a string constant. Standard string values include **Page Width** and **Whole Page**. Versions of Internet Explorer earlier than Internet Explorer 5.0 and all non-[!INCLUDE[msCoName](../includes/msconame-md.md)] browsers ignore this parameter. The default value is **100**.
   

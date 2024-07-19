@@ -36,7 +36,11 @@ Shows or hides the toolbar. If the value of this parameter is **false**, all rem
   
 ### Parameters
 
-Shows or hides the parameters area of the toolbar. If you set this parameter to **true**, the parameters area of the toolbar is displayed. If you set this parameter to **false**, the parameters area isn't displayed and can't be displayed by the user. If you set this parameter to a value of **Collapsed**, the parameter's area doesn't display but can be toggled by the user. The default value is **true**.  
+Shows or hides the parameters area of the toolbar. The default value is **true**. Valid values are:
+
+- **True**: Displays the parameters area of the toolbar. 
+- **False**: Hides the parameters area and the user can't be display them. 
+- **Collapsed**: Hides the parameters area, but the user can toggle to see it.  
   
 For example, in native mode:
 
@@ -113,7 +117,7 @@ https://server/Reportserver?/SampleReports/Product Catalog&rs:Command=Render&rc:
   
 ### EndFind
 
-Sets the number of the last page to use in the search. For example, a value of **5** indicates that the last page to be searched is page 5 of the report. The default value is the number of the current page. Use this parameter with the `StartFind` parameter. See the previous example.
+Sets the number of the last page to use in the search. For example, a value of **5** indicates that the last page to be searched is page 5 of the report. The default value is the number of the current page. Use this parameter with the `StartFind` parameter. For more information, see the [StartFind](#startfind) example.
 
 ### FallbackPage
 
@@ -133,7 +137,7 @@ Specifies a style sheet to be applied to the HTML Viewer.
   
 ### Device Information Setting
 
-Specifies a device information setting in the form of `rc:tag=value`, where `tag` is the name of a device information setting specific to the rendering extension. For more information see [Format](#format). 
+Specifies a device information setting in the form of `rc:tag=value`, where `tag` is the name of a device information setting specific to the rendering extension. For more information, see the [Format](#format) section. 
 
 You can use the `OutputFormat` device information setting for the IMAGE rendering extension to render the report to a JPEG image by using the following parameters in the URL access string: `...&rs:Format=IMAGE&rc:OutputFormat=JPEG`. For more information on all extension-specific device information settings, see [Device information settings for rendering extensions &#40;Reporting Services&#41;](../reporting-services/device-information-settings-for-rendering-extensions-reporting-services.md).
   

@@ -3,7 +3,7 @@ title: "Pass a report parameter within a URL"
 description: Learn about how you can pass report parameters directly to the SQL Server Reporting Services (SSRS) report server in a URL.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 07/17/2024
+ms.date: 07/19/2024
 ms.service: reporting-services
 ms.subservice: reporting-services
 ms.topic: conceptual
@@ -46,8 +46,7 @@ You can pass report parameters to a SQL Server Reporting Services (SSRS) report 
 - Pass a Boolean value. Possible values are `0` for false and `1` for true.
     - Example: `https://myrshost/ReportServer?/AdventureWorks2022/Employee_Sales_Summary_2022&ShowDetails=1` 
 - Pass a float value. Include the decimal separator of the server locale. 
-    - Example: `https://myrshost/ReportServer?/AdventureWorks2022/Employee_Sales_Summary_2022&DiscountRate=0.05`
-  
+\  
 ## Related content
 
 - [URL access &#40;SSRS&#41;](../reporting-services/url-access-ssrs.md)   

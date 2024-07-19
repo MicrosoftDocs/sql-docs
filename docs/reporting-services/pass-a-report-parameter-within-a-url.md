@@ -39,67 +39,21 @@ When you want to add parameters to a URL, consider the following guidance:
 |--------|------|-------|
 | Set a report parameter within a URL. | `parameter=value` | `https://myrshost/ReportServer?/AdventureWorks2022/Employee_Sales_Summary_2022&TotalOrders=500`|
 | Specify two parameters defined in a report. | `ReportMonth=#` and `ReportYear=YYYY` | - Example for an SSRS SharePoint mode server: `https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/AdventureWorks2022/Employee_Sales_Summary_2022.rdl&ReportMonth=3&ReportYear=2008` - Example for an SSRS Native mode server: `https://myrshost/ReportServer?/AdventureWorks2022/Employee_Sales_Summary_2022&ReportMonth=3&ReportYear=2008`  |
+
 - Set a report parameter within a URL.
     - Syntax: `parameter=value`
 - Specify two parameters defined in a report.
-    - Syntax: `ReportMonth=#` and `ReportYear=YYYY`
     - Example for an SSRS SharePoint mode server: 
     `https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/AdventureWorks2022/Employee_Sales_Summary_2022.rdl&ReportMonth=3&ReportYear=2008`  
     - Example for an SSRS Native mode server: 
     `https://myrshost/ReportServer?/AdventureWorks2022/Employee_Sales_Summary_2022&ReportMonth=3&ReportYear=2008`  
-    
-=
-## Pass a null value 
-
-To pass a null value for a parameter in a URL, use the following syntax:  
-  
-```  
-parameter:isnull=true  
-```  
-  
-For example,  
-  
-```  
-https://myserver/Reportserver?/AdventureWorks2022/Order_Summary&SalesOrderNumber:isnull=true
-```  
-  
-## Pass a boolean value
-
-To pass a **Boolean** value in a URL, use `0` for false and `1` for true:
-
-```
-https://myrshost/ReportServer?/AdventureWorks2022/Employee_Sales_Summary_2022&ShowDetails=1
-```
-In this example:
-
-- `ShowDetails=1` sets the `ShowDetails` parameter to true, indicating that the report should display detailed information.
-
-## Pass a float value
-
-To pass a float value in a URL, include the decimal separator of the server locale:
-
-```
-https://myrshost/ReportServer?/AdventureWorks2022/Employee_Sales_Summary_2022&DiscountRate=0.05
-```
-
-In this example:
-
-- `DiscountRate=0.05` sets the `DiscountRate` parameter to 0.05, representing a 5% discount rate to be applied in the report.
-  
-> [!NOTE]  
->  If your report contains a report parameter that has a default value and the value of the **Prompt** property is **false**, then you can't pass a value for that report parameter within a URL. This option allows administrators to prevent end users from adding or modifying the values of certain report parameters.  
-
-## Pass multi-value parameters  
-  
-To pass multi-value parameters in a URL, repeat the parameter name for each value, as in the following URL:  
-  
-```  
-https://myserver/Reportserver?/SQL+Server+User+Education+Team/_ContentTeams/folder123/team+project+report&teamgrouping2=xgroup&teamgrouping1=ygroup&OrderID=747&OrderID=787&OrderID=12  
-```  
-
-In this example:
-
-- `&OrderID=747&OrderID=787&OrderID=12` repeats the `OrderID` parameter for each value. The report receives the three `OrderID` values: 747, 787, and 12.
+- Pass a null value for a parameter. 
+    - Syntax: `parameter:isnull=true` 
+    - Example: `SalesOrderNumber:isnull=true` 
+- Pass a Boolean value. Possible values are `0` for false and `1` for true.
+    - Example: `ShowDetails=1` 
+- Pass a float value. Include the decimal separator of the server locale. 
+    - Example: `https://myrshost/ReportServer?/AdventureWorks2022/Employee_Sales_Summary_2022&DiscountRate=0.05`
   
 ## Related content
 

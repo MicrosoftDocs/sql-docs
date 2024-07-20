@@ -1,9 +1,9 @@
 ---
-title: "Get Information About a View"
-description: "Get Information About a View"
+title: "Get information about a view"
+description: "Learn how to view information about a view from SSMS or T-SQL."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: "08/19/2021"
+ms.date: 07/19/2024
 ms.service: sql
 ms.subservice: table-view-index
 ms.topic: conceptual
@@ -20,39 +20,21 @@ helpviewer_keywords:
   - "view dependencies"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# Get Information About a View
+# Get information about a view
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-  You can gain information about a view's definition or properties in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. You may need to see the definition of the view to understand how its data is derived from the source tables or to see the data defined by the view.  
+
+  You can gain information about a view's definition or properties in [!INCLUDE [ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE [ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE [tsql](../../includes/tsql-md.md)]. You might need to see the definition of the view to understand how its data is derived from the source tables or to see the data defined by the view.  
   
 > [!IMPORTANT]  
 >  If you change the name of an object referenced by a view, you must modify the view so that its text reflects the new name. Therefore, before renaming an object, display the dependencies of the object first to determine if any views are affected by the proposed change.  
   
- **In This Topic**  
+## <a id="SSMSProcedure"></a> Use SQL Server Management Studio
   
--   **Before you begin:**  
+#### Get view properties by using Object Explorer
   
-     [Security](#Security)  
+1. In **Object Explorer**, select the plus sign next to the database that contains the view to which you want to view the properties, and then select the plus sign to expand the **Views** folder.  
   
--   **To get information about a view, using:**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-##  <a name="BeforeYouBegin"></a> Before You Begin  
-  
-###  <a name="Security"></a> Security  
-  
-####  <a name="Permissions"></a> Permissions  
- Using `sp_helptext` to return the definition of a view requires membership in the **public** role. Using `sys.sql_expression_dependencies` to find all the dependencies on a view requires VIEW DEFINITION permission on the database and SELECT permission on `sys.sql_expression_dependencies` for the database. System object definitions, like the ones returned in SELECT OBJECT_DEFINITION, are publicly visible.  
-  
-##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
-  
-#### Get view properties by using Object Explorer  
-  
-1.  In **Object Explorer**, select the plus sign next to the database that contains the view to which you want to view the properties, and then click the plus sign to expand the **Views** folder.  
-  
-2.  Right-click the view of which you want to view the properties and select **Properties**.  
+1. Right-click the view of which you want to view the properties and select **Properties**.  
 
      The following properties show in the **View Properties** dialog box.  
   
@@ -87,15 +69,15 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
      Indicates if the object was created with the quoted identifier option.  
   
      **Schema bound**  
-     Indicates whether the view is schema-bound. Values are True and False. For information about schema-bound views, see the SCHEMABINDING portion of [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md).  
+     Indicates whether the view is schema-bound. Values are True and False. For information about schema-bound views, see the SCHEMABINDING portion of [CREATE VIEW (Transact-SQL)](../../t-sql/statements/create-view-transact-sql.md).  
   
-#### Getting view properties by using the View Designer tool  
+#### <a id="getting-view-properties-by-using-the-view-designer-tool"></a> Get view properties by using the View Designer tool
   
-1.  In **Object Explorer**, expand the database that contains the view to which you want to view the properties, and then expand the **Views** folder.  
+1. In **Object Explorer**, expand the database that contains the view to which you want to view the properties, and then expand the **Views** folder.  
   
-2.  Right-click the view of which you want to view the properties and select **Design**.  
+1. Right-click the view of which you want to view the properties and select **Design**.  
   
-3.  Right-click in the blank space of the Diagram pane and select **Properties**.  
+1. Right-click in the blank space of the Diagram pane and select **Properties**.  
   
      The following properties show in the **Properties** pane.  
   
@@ -158,25 +140,33 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
      **Check Option**  
      Indicates that when you open this view and modify the **Results** pane, the data source checks whether the added or modified data satisfies the **WHERE** clause of the view definition. If your modification does not satisfy the **WHERE** clause, you will see an error with more information.  
   
-#### To get dependencies on the view  
+#### <a id="to-get-dependencies-on-the-view"></a> Get dependencies on the view
   
-1.  In **Object Explorer**, expand the database that contains the view to which you want to view the properties, and then expand the **Views** folder.  
+1. In **Object Explorer**, expand the database that contains the view to which you want to view the properties, and then expand the **Views** folder.  
   
-2.  Right-click the view of which you want to view the properties and select **View Dependencies**.  
+1. Right-click the view of which you want to view the properties and select **View Dependencies**.  
   
-3.  Select **Objects that depend on [view name]** to display the objects that refer to the view.  
+1. Select **Objects that depend on [view name]** to display the objects that refer to the view.  
   
-4.  Select **Objects on which [view name] depends** to display the objects that are referenced by the view.  
+1. Select **Objects on which [view name] depends** to display the objects that are referenced by the view.  
   
-##  <a name="TsqlProcedure"></a> Using Transact-SQL  
+## <a id="TsqlProcedure"></a> Use Transact-SQL
+
+## Use Transact-SQL
   
-#### To get the definition and properties of a view  
+In T-SQL, you can use one of the following three commands:
+
+- [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)
+- [OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md)
+- [sp_helptext](../../relational-databases/system-stored-procedures/sp-helptext-transact-sql.md)
+
+#### <a id="to-get-the-definition-and-properties-of-a-view"></a> Get the definition and properties of a view
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1. In **Object Explorer**, connect to an instance of [!INCLUDE [ssDE](../../includes/ssde-md.md)].  
   
-2.  On the Standard bar, select **New Query**.  
+1. On the Standard bar, select **New Query**.  
   
-3.  Copy and paste one of the following examples into the query window and select **Execute**.  
+1. Copy and paste one of the following examples into the query window and select **Execute**.  
   
     ```sql  
     USE AdventureWorks2022;  
@@ -197,19 +187,16 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
     ```sql  
     EXEC sp_helptext 'HumanResources.vEmployee';  
     ```  
-  
- For more information, see [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md), [OBJECT_DEFINITION &#40;Transact-SQL&#41;](../../t-sql/functions/object-definition-transact-sql.md) and [sp_helptext &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptext-transact-sql.md).  
-
 > [!NOTE]
 > The system stored procedure `sp_helptext` is not supported in Azure Synapse Analytics. Instead, use the `sys.sql_modules` object catalog view.
   
-#### To get the dependencies of a view  
+#### <a id="to-get-the-dependencies-of-a-view"></a> Get the dependencies of a view
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1. In **Object Explorer**, connect to an instance of [!INCLUDE [ssDE](../../includes/ssde-md.md)].  
   
-2.  On the Standard bar, select **New Query**.  
+1. On the Standard bar, select **New Query**.  
   
-3.  Copy and paste the following example into the query window and select **Execute**.  
+1. Copy and paste the following example into the query window and select **Execute**.  
   
     ```sql  
     USE AdventureWorks2022;  
@@ -228,6 +215,9 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
     GO  
     ```  
   
- For more information, see [sys.sql_expression_dependencies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) and [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).  
+ For more information, see [sys.sql_expression_dependencies (Transact-SQL)](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) and [sys.objects (Transact-SQL)](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).  
   
-  
+## Related content
+
+- [Views](views.md)
+- [Create views](create-views.md)

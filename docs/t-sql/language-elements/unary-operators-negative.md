@@ -112,7 +112,7 @@ SELECT TOP (1) - 17 FROM DimEmployee;
 -17  
 ```  
 
-  Notice the same result returned as if the unary negative applied to a value with unary positive applied.
+  Notice the same result returned as if the unary negative is applied to a value with unary [+ (Positive)](../../t-sql/language-elements/unary-operators-positive.md) applied.
 
 ```sql  
 USE ssawPDW;  

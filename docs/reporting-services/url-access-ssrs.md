@@ -39,7 +39,9 @@ The report server processes parameters contained in URL requests to the report s
 
 ## URL access syntax
 
-URL requests can contain multiple parameters that are listed in any order. You separate the parameters by an ampersand (`&`) and the name/value pairs by an equal sign (`=`).
+URL requests can contain multiple parameters that are listed in any order. You separate the parameters by an ampersand (`&`) and the name/value pairs by an equal sign (`=`). 
+
+Understanding the different components of a URL access string is essential for effectively sending commands to a SSRS report server. The URL structure begins with the `rswebserviceurl`, which specifies the web service URL of the report server. This component is followed by a question mark (`?`) that indicates the start of the query string containing parameters. The `pathinfo` component specifies the path to the report or item on the server. Finally, the URL includes one or more parameters (`&prefix:param=value`), each of which may have an optional prefix to customize the report's rendering or behavior. The following sections provide a more detailed description of each piece within the URL access string.
 
 ```
 https://[rswebserviceurl]?[pathinfo][&prefix:param=value]...[&prefix:param=value]
@@ -51,8 +53,6 @@ https://[rswebserviceurl]?[pathinfo][&prefix:param=value]...[&prefix:param=value
 - `[&prefix:param=value]`: One or more parameters with optional prefixes that customize the report rendering or behavior.
 
 For a complete list of the available URL access parameters, see [URL access parameter reference](../reporting-services/url-access-parameter-reference.md). For examples passing report parameters on the URL, see [Pass a report parameter within a URL](../reporting-services/pass-a-report-parameter-within-a-url.md).
-
-## URL access details
 
 ### `rswebserviceurl`
 
@@ -92,25 +92,20 @@ For SharePoint integrated mode, it's the fully qualified URL of the item in the 
 https://myspsite/subsite/AdventureWorks2022/Employee_Sales_Summary_2022.rdl
 ```
 
-### `&`
+### `&prefix:param=value`
 
-Used to separate name and value pairs of URL access parameters.
+In a URL access string, you add parameters and their corresponding values to customize the report rendering or behavior. You construct parameters in name/value pairs, separated by an ampersand (`&`). Optional prefixes, such as `rs:` or `rc:`, can be used to target specific processes within the report server. The following table provides a detailed description of each component and the exmaple shows how to use each one in a URL:
 
-### `prefix`
+|Component|Description|
+|---------|-----------|
+|`&`|Used to separate name and value pairs of URL access parameters.|
+|`prefix`| Optional. A prefix for the URL access parameter (for example, `rs:` or `rc:`) that accesses a specific process running within the report server.|
+|`param`|The parameter name.|
+|`value`|URL text corresponding to the value of the parameter that you use.|
 
-Optional. A prefix for the URL access parameter (for example, `rs:` or `rc:`) that accesses a specific process running within the report server.
-
-> [!NOTE]
-> If a prefix for a URL access parameter is not included, the parameter is processed by the report server as a report parameter. Report parameters do not use a parameter prefix and are case-sensitive.
-
-### `param`
-
-The parameter name.
-
-### `value`
-
-URL text corresponding to the value of the parameter being used.
-
+```
+https://myrshost/reportserver?/AdventureWorks2022/Employee_Sales_Summary_2022&rs:Command=Render&rc:Toolbar=false&ReportMonth=3&ReportYear=2008
+```
 ## Related tasks
 
 |Task Descriptions|Links|

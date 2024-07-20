@@ -111,6 +111,20 @@ SELECT TOP (1) - 17 FROM DimEmployee;
 ```  
 -17  
 ```  
+
+  Notice the same result returned as if the unary negative is applied to a value with unary [+ (Positive)](../../t-sql/language-elements/unary-operators-positive.md) applied.
+
+```sql  
+USE ssawPDW;  
+  
+SELECT TOP (1) - ( + 17) FROM DimEmployee;  
+```  
+  
+ Returns  
+  
+```  
+-17  
+```  
   
 ### D. Returning the positive of a negative constant  
  The following example returns the positive of a negative constant.  
@@ -128,6 +142,8 @@ SELECT TOP (1) - ( - 17) FROM DimEmployee;
 ```  
   
 ### E. Returning the negative of a column  
+ The unary negative will reverse the numeric operator of a column's values. As result, the negative values will be returned from a postive values, and vice versa.
+ 
  The following example returns the negative of the `BaseRate` value for each employee in the `dimEmployee` table.  
   
 ```sql  

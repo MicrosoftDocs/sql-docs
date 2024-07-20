@@ -19,18 +19,16 @@ helpviewer_keywords:
 ---
 # URL access (SSRS)
 
-URL access of the report server in SQL Server Reporting Services (SSRS) enables you to send commands to a report server through a URL request. For example, you can customize the rendering of a report on a native mode report server or in a SharePoint library. You might view the report by using a specific set of report parameter values, or you might view a particular page of interest in the report. You can encapsulate this information in the URL using predefined URL access parameters. You can further customize how the report server processes the report by embedding parameters for rendering formats or for the look and feel of the report viewer. You can then paste this URL directly into an email or Web page to let others access your report in the same manner in the browser.
+URL access of the report server in SQL Server Reporting Services (SSRS) enables you to send commands to a report server through a URL request. This functionality lets you customize how you render reports on a native mode report server or in a SharePoint library. For example, you might view the report by using a specific set of report parameter values, or you might view a particular page of interest in the report. You can define these parameters in a URL by using predefined URL access parameters. 
 
-Other actions you can perform through URL access:
+You can further customize how the report server processes the report by including other parameters for rendering formats or for specifying the look and feel of the report viewer. You can then send this URL to others so they can access your report in the same manner in the browser.
+
+Other actions you can perform through URL access include:
 
 - Send commands to the HTML viewer, such as adjusting its look and feel.
-
 - List the children of a catalog folder.
-
 - Retrieve the XML definition of a catalog item.
-
 - Render a specific report history snapshot.
-
 - Manage report sessions.
 
 For the complete list of commands and settings available through URL access, see [URL access parameter reference](../reporting-services/url-access-parameter-reference.md).

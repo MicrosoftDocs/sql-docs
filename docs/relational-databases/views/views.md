@@ -1,6 +1,6 @@
 ---
 title: "Views"
-description: "Learn about views, important database objects whose contents are defined by a query."
+description: "Learn about views, important database objects where the result set is defined by a query."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: 07/19/2024
@@ -19,7 +19,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
  A view acts as a filter on the underlying tables referenced in the view. The query that defines the view can be from one or more tables or from other views in the current or other databases. Distributed queries can also be used to define views that use data from multiple heterogeneous sources. This is useful, for example, if you want to combine similarly structured data from different servers, each of which stores data for a different region of your organization.  
   
- Views are generally used to focus, simplify, and customize the perception each user has of the database. Views can be used as security mechanisms by letting users access data through the view, without granting the users permissions to directly access the underlying base tables of the view. Views can be used to provide a backward compatible interface to emulate a table that used to exist but whose schema has changed. Views can also be used when you copy data to and from [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] to improve performance and to partition data.  
+ Views are generally used to focus, simplify, and customize the perception each user has of the database. Views can be used as security mechanisms by letting users access data through the view, without granting users permissions to directly access the underlying tables of the query. Views can be used to provide a backward compatible interface to emulate a table that used to exist but whose schema has changed. Views can also be used when you copy data to and from [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] to improve performance and to partition data.  
   
 ## Types of views
 
@@ -27,11 +27,11 @@ Besides the standard role of basic user-defined views, [!INCLUDE [ssNoVersion](.
   
 ### Indexed views
 
- An indexed view is a view that has been materialized. This means the view definition has been computed and the resulting data stored just like a table. You index a view by creating a unique clustered index on it. Indexed views can dramatically improve the performance of some types of queries. Indexed views work best for queries that aggregate many rows. They are not well-suited for underlying data sets that are frequently updated.  
+ An indexed view is a materialized view. This means the view definition has been computed and the resulting data stored just like a table. You index a view by creating a unique clustered index on it. Indexed views can dramatically improve the performance of some types of queries. Indexed views work best for queries that aggregate many rows. They are not well-suited for underlying data sets that are frequently updated.  
   
 ### Partitioned views
 
-A partitioned view joins horizontally partitioned data from a set of member tables across one or more servers. This makes the data appear as if from one table. A view that joins member tables on the same instance of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] is a local partitioned view.  
+A partitioned view joins horizontally partitioned data from a set of member tables across one or more servers. A partitioned view makes the data appear as if from one table. A view that joins member tables on the same instance of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] is a local partitioned view.  
   
 ### System views
 
@@ -41,7 +41,7 @@ System views expose catalog metadata. You can use system views to return informa
 
  The following table provides links to common tasks associated with creating or modifying a view.  
   
-|View Tasks|Topic|  
+|View Tasks|Article|  
 |----------------|-----------|  
 |Describes how to create a view.|[Create Views](../../relational-databases/views/create-views.md)|  
 |Describes how to create an indexed view.|[Create Indexed Views](../../relational-databases/views/create-indexed-views.md)|  

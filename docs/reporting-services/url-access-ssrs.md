@@ -52,29 +52,31 @@ https://[rswebserviceurl]?[pathinfo][&prefix:param=value]...[&prefix:param=value
 
 For a complete list of the available URL access parameters, see [URL access parameter reference](../reporting-services/url-access-parameter-reference.md). For examples passing report parameters on the URL, see [Pass a report parameter within a URL](../reporting-services/pass-a-report-parameter-within-a-url.md).
 
-### URL access details
+## URL access details
 
-- `rswebserviceurl`: The web service URL of the report server. For native mode, it's the report server instance web service URL configured in Reporting Services Configuration Manager. For more information,  see [Configure report server URLs &#40;Report Server Configuration Manager&#41;](../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)). 
+### `rswebserviceurl`
 
-    For example:
+The web service URL of the report server. For native mode, it's the report server instance web service URL configured in Reporting Services Configuration Manager. For more information,  see [Configure report server URLs &#40;Report Server Configuration Manager&#41;](../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)). 
 
-    ```
-    https://myrshost/reportserver
-    https://machine.adventure-works.com/reportserver_MYNAMEDINSTANCE
-    ```
+For example:
 
-    For SharePoint integrated mode, it's the URL of the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] proxy at a SharePoint site integrated with [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. 
+```
+https://myrshost/reportserver
+https://machine.adventure-works.com/reportserver_MYNAMEDINSTANCE
+```
 
-    For example:
+For SharePoint integrated mode, it's the URL of the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] proxy at a SharePoint site integrated with [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. 
 
-    ```
-    https://myspsite/subsite/_vti_bin/reportserver
-    ```
+For example:
 
-    > [!TIP]
-    > It is important the URL include the `_vti_bin` proxy syntax to route the request through SharePoint and the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] HTTP proxy. The proxy adds some context to the HTTP request, context that is required to ensure proper execution of the report for SharePoint mode report servers.
+```
+https://myspsite/subsite/_vti_bin/reportserver
+```
 
-#### *pathinfo*
+> [!TIP]
+> It is important the URL include the `_vti_bin` proxy syntax to route the request through SharePoint and the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] HTTP proxy. The proxy adds some context to the HTTP request, context that is required to ensure proper execution of the report for SharePoint mode report servers.
+
+### `pathinfo`
 
 The relative path name of the item in the native mode report server database, or the fully qualified URL of the item in a SharePoint catalog.
 
@@ -90,22 +92,22 @@ For SharePoint integrated mode, it's the fully qualified URL of the item in the 
 https://myspsite/subsite/AdventureWorks2022/Employee_Sales_Summary_2022.rdl
 ```
 
-#### **&**
+### `&`
 
 Used to separate name and value pairs of URL access parameters.
 
-#### **prefix**
+### `prefix`
 
 Optional. A prefix for the URL access parameter (for example, `rs:` or `rc:`) that accesses a specific process running within the report server.
 
 > [!NOTE]
 > If a prefix for a URL access parameter is not included, the parameter is processed by the report server as a report parameter. Report parameters do not use a parameter prefix and are case-sensitive.
 
-#### **param**
+### `param`
 
 The parameter name.
 
-#### *value*
+### `value`
 
 URL text corresponding to the value of the parameter being used.
 
@@ -123,7 +125,5 @@ URL text corresponding to the value of the parameter being used.
 
 ## Related content
 
-- [Pass a report parameter within a URL](../reporting-services/pass-a-report-parameter-within-a-url.md)
-- [URL access parameter reference](../reporting-services/url-access-parameter-reference.md)
 - [Integrate Reporting Services by using URL access](../reporting-services/application-integration/integrating-reporting-services-using-url-access.md)
 - [Find, view, and manage reports &#40;Report Builder and SSRS&#41;](../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)

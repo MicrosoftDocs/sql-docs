@@ -314,8 +314,8 @@ Regardless of whether you choose **Move** or **Copy**, **Detach and Attach** or 
 
 1. **Select a Destination Server** page: Specify the server where the database will be moved or copied to. Select the authentication method. If **Use SQL Server Authentication** is chosen, enter your credentials. Select **Next** to establish the connection to the source server. This connection remains open throughout the session.
 
-        > [!NOTE] 
-        > You can launch the Copy Database Wizard from any database. You can use the Copy Database Wizard from either the source or destination server.
+> [!NOTE]
+> You can launch the Copy Database Wizard from any database. You can use the Copy Database Wizard from either the source or destination server.
 
 ### A. Move database using detach and attach method to an instance on a different physical server. A login and SQL Server Agent job will be moved as well.
 
@@ -335,9 +335,9 @@ The following example will move the `Sales` database, a Windows login named `con
   
 12. **Configure the Package** page:  In the **Package name:** text box, enter `SalesFromServer1toServer2_Move`. Check the **Save transfer logs?** box. In the **Logging options** drop-down list, select **Text file**. Note the **Error log file path**; revise as desired. Select **Next**. 
   
-        > [!NOTE]
-        > The **Error log file path** is the path on the destination server.
-  
+    > [!NOTE]
+    > The **Error log file path** is the path on the destination server.
+      
 13. **Schedule the Package** page: Select the relevant proxy from the **Integration Services Proxy account** drop-down list. Select **Next**.
 
 14. **Complete the Wizard** page:  Review the summary of the selected options. Select **Back** to change an option. Select **Finish** to execute the task. During the transfer, the **Performing operation** page monitors status information about the execution of the **Wizard**.
@@ -347,19 +347,19 @@ The following example will move the `Sales` database, a Windows login named `con
 16. **Post Move Steps**
 Consider executing the following T-SQL statements on the new host, `Server2`:
   
-        ```sql 
-        ALTER AUTHORIZATION ON DATABASE::Sales TO sa;
-        GO
-        ALTER DATABASE Sales 
-        SET COMPATIBILITY_LEVEL = 130;
-        GO
-        
-        USE [Sales]
-        GO
-        EXEC sp_updatestats;
-        GO
-        ```
- 
+     ```sql 
+     ALTER AUTHORIZATION ON DATABASE::Sales TO sa;
+     GO
+     ALTER DATABASE Sales 
+     SET COMPATIBILITY_LEVEL = 130;
+     GO
+     
+     USE [Sales]
+     GO
+     EXEC sp_updatestats;
+     GO
+     ```
+
 17. **Post Move Steps Cleanup**
 Since `Server1` will be moved to a different team and the **Move** operation will not be repeated, consider executing the following steps:
 
@@ -382,10 +382,10 @@ In this example, the `Sales` database is copied and created as `SalesCopy` on th
 
 10. **Schedule the Package** page: Select the **Schedule:** radio button and then select the **Change Schedule** button.
  
-        1. **New Job Schedule** page: In the **Name** text box, enter "Weekly on Sunday". 
-
-        1. Select **OK**.
-
+    1. **New Job Schedule** page: In the **Name** text box, enter "Weekly on Sunday". 
+    
+    1. Select **OK**.
+    
 11. Select the relevant proxy from the **Integration Services Proxy account** dropdown list. Select **Next**.
 
 12. **Complete the Wizard** page: Review the summary of the selected options. Select **Back** to change an option. Select **Finish** to execute the task. During the package creation, the **Performing operation** page monitors status information about the execution of the **Wizard**.

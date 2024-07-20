@@ -88,7 +88,7 @@ Each user session might have one or more tasks running on its behalf where each 
   
 ## <a id="deadlock_detection"></a> Deadlock detection
 
-All of the resources listed in the [Resources that can deadlock](#resources-that-can-deadlock) section participate in the [!INCLUDE [ssDEnoversion](../includes/ssdenoversion-md.md)] deadlock detection scheme. Deadlock detection is performed by a lock monitor thread that periodically initiates a search through all of the tasks in an instance of the [!INCLUDE [ssDEnoversion](../includes/ssdenoversion-md.md)]. The following points describe the search process:  
+All of the resources listed in the [Resources that can deadlock](#deadlock_resources) section participate in the [!INCLUDE [ssDEnoversion](../includes/ssdenoversion-md.md)] deadlock detection scheme. Deadlock detection is performed by a lock monitor thread that periodically initiates a search through all of the tasks in an instance of the [!INCLUDE [ssDEnoversion](../includes/ssdenoversion-md.md)]. The following points describe the search process:  
   
 -   The default interval is 5 seconds.  
 -   If the lock monitor thread finds deadlocks, the deadlock detection interval drops from 5 seconds to as low as 100 milliseconds depending on the frequency of deadlocks.  

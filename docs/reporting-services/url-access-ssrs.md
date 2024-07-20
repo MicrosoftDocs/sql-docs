@@ -35,40 +35,44 @@ For the complete list of commands and settings available through URL access, see
 
 ## URL access concepts
 
-The report server processes parameters contained in URL requests to the report server. The way in which the report server handles URL requests depends on the parameters, parameter prefixes, and types of items that are included in the URL. Report server URLs adhere to the URL formatting guidelines as proposed by the joint World Wide Web Consortium W3C/IETF draft standard. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] URL functionality is compatible with most Internet browsers or applications that support standard URL addressing.
+The report server processes parameters contained in URL requests to the report server. How the report server handles URL requests depends on the parameters, parameter prefixes, and types of items that are included in the URL. Report server URLs adhere to the URL formatting guidelines proposed by the joint World Wide Web Consortium W3C/IETF draft standard. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] URL functionality is compatible with most internet browsers or applications that support standard URL addressing.
 
-### URL access syntax
+## URL access syntax
 
-URL requests can contain multiple parameters that are listed in any order. Parameters are separated by an ampersand (&) and name/value pairs are separated by an equal sign (=).
+URL requests can contain multiple parameters that are listed in any order. You separate the parameters by an ampersand (`&`) and the name/value pairs by an equal sign (`=`).
 
 ```
-rswebserviceurl
-?
-reportpath
-      [&prefix:param=value]...n]
+https://[rswebserviceurl]?[pathinfo][&prefix:param=value]...[&prefix:param=value]
 ```
 
-### Syntax description
+- `https://[rswebserviceurl]`: The web service URL of the report server.
+- `?`: Indicates the start of the query string that contains parameters.
+- `[pathinfo]`: The path to the report or item on the server.
+- `[&prefix:param=value]`: One or more parameters with optional prefixes that customize the report rendering or behavior.
 
 For a complete list of the available URL access parameters, see [URL access parameter reference](../reporting-services/url-access-parameter-reference.md). For examples passing report parameters on the URL, see [Pass a report parameter within a URL](../reporting-services/pass-a-report-parameter-within-a-url.md).
 
-#### *rswebserviceurl*
+### URL access details
 
-The Web service URL of the report server. For native mode, it's the Web service URL of the report server instance configured in Reporting Services Configuration Manager (see [Configure report server URLs &#40;Report Server Configuration Manager&#41;](../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)). For example:
+- `rswebserviceurl`: The web service URL of the report server. For native mode, it's the report server instance web service URL configured in Reporting Services Configuration Manager. For more information,  see [Configure report server URLs &#40;Report Server Configuration Manager&#41;](../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)). 
 
-```
-https://myrshost/reportserver
-https://machine.adventure-works.com/reportserver_MYNAMEDINSTANCE
-```
+    For example:
 
-For SharePoint integrated mode, it's the URL of the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] proxy at a SharePoint site integrated with [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. For example:
+    ```
+    https://myrshost/reportserver
+    https://machine.adventure-works.com/reportserver_MYNAMEDINSTANCE
+    ```
 
-```
-https://myspsite/subsite/_vti_bin/reportserver
-```
+    For SharePoint integrated mode, it's the URL of the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] proxy at a SharePoint site integrated with [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. 
 
-> [!TIP]
-> It is important the URL include the `_vti_bin` proxy syntax to route the request through SharePoint and the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] HTTP proxy. The proxy adds some context to the HTTP request, context that is required to ensure proper execution of the report for SharePoint mode report servers.
+    For example:
+
+    ```
+    https://myspsite/subsite/_vti_bin/reportserver
+    ```
+
+    > [!TIP]
+    > It is important the URL include the `_vti_bin` proxy syntax to route the request through SharePoint and the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] HTTP proxy. The proxy adds some context to the HTTP request, context that is required to ensure proper execution of the report for SharePoint mode report servers.
 
 #### *pathinfo*
 

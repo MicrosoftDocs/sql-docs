@@ -21,7 +21,7 @@ helpviewer_keywords:
 
 URL access of the report server in SQL Server Reporting Services (SSRS) enables you to send commands to a report server through a URL request. This functionality lets you customize how you render reports on a native mode report server or in a SharePoint library. For example, you might view the report by using a specific set of report parameter values, or you might view a particular page of interest in the report. You can define these parameters in a URL by using predefined URL access parameters. 
 
-You can further customize how the report server processes the report by including other parameters for rendering formats or for specifying the look and feel of the report viewer. You can then send this URL to others so they can access your report in the same manner in the browser.
+You can customize how the report server processes the report by including parameters for rendering formats or for specifying the look and feel of the report viewer. You can then send this URL to others so they can access your report in the same manner in the browser.
 
 Other actions you can perform through URL access include:
 
@@ -41,7 +41,7 @@ The report server processes parameters contained in URL requests to the report s
 
 URL requests can contain multiple parameters that are listed in any order. You separate the parameters by an ampersand (`&`) and the name/value pairs by an equal sign (`=`). 
 
-Understanding the different components of a URL access string is essential for effectively sending commands to a SSRS report server. The URL access string includes: 
+Understanding the different components of a URL access string is essential for effectively sending commands to an SSRS report server. The URL access string includes: 
 
 - `https://[rswebserviceurl]`: The web service URL of the report server.
 - `?`: Indicates the start of the query string that contains parameters.
@@ -73,13 +73,13 @@ https://myspsite/subsite/_vti_bin/reportserver
 ```
 
 > [!TIP]
-> It is important the URL include the `_vti_bin` proxy syntax to route the request through SharePoint and the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] HTTP proxy. The proxy adds some context to the HTTP request, context that is required to ensure proper execution of the report for SharePoint mode report servers.
+> It's important the URL include the `_vti_bin` proxy syntax to route the request through SharePoint and the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] HTTP proxy. The proxy adds some context to the HTTP request, context that'ss required to ensure proper execution of the report for SharePoint mode report servers.
 
 ### `pathinfo`
 
 The relative path name of the item in the native mode report server database, or the fully qualified URL of the item in a SharePoint catalog.
 
-The path of the catalog item. For native mode, it's the relative path of the item in the report server database, beginning with a slash (**/**). For example:
+The path of the catalog item. For native mode, it's the relative path of the item in the report server database, beginning with a slash (`/`). For example:
 
 ```
 /AdventureWorks2022/Employee_Sales_Summary_2022
@@ -93,14 +93,14 @@ https://myspsite/subsite/AdventureWorks2022/Employee_Sales_Summary_2022.rdl
 
 ### `&prefix:param=value`
 
-In a URL access string, you add parameters and their corresponding values to customize the report rendering or behavior. You construct parameters in name/value pairs, separated by an ampersand (`&`). Optional prefixes, such as `rs:` or `rc:`, can be used to target specific processes within the report server. The following table provides a detailed description of each component and the exmaple shows how to use each one in a URL:
+In a URL access string, you add parameters and their corresponding values to customize the report rendering or behavior. You construct parameters in name/value pairs by using the syntax `param=value`, separated by an ampersand (`&`).
 
-|Component|Description|
-|---------|-----------|
-|`&`|Used to separate name and value pairs of URL access parameters.|
-|`prefix`| Optional. A prefix for the URL access parameter (for example, `rs:` or `rc:`) that accesses a specific process running within the report server.|
-|`param`|The parameter name.|
-|`value`|URL text corresponding to the value of the parameter that you use.|
+Use optional prefixes like `rs:` or `rc:` to target specific processes within the report server. 
+
+> [!Note]
+> If a prefix for a URL access parameter is not included, the parameter is processed by the report server as a report parameter. Report parameters do not use a parameter prefix and are case-sensitive.
+
+The following example shows all parts of the URL as described in this article:
 
 ```
 https://myrshost/reportserver?/AdventureWorks2022/Employee_Sales_Summary_2022&rs:Command=Render&rc:Toolbar=false&ReportMonth=3&ReportYear=2008

@@ -25,11 +25,11 @@ You can further customize how the report server processes the report by includin
 
 Other actions you can perform through URL access include:
 
-- Send commands to the HTML viewer, such as adjusting its look and feel.
-- List the children of a catalog folder.
-- Retrieve the XML definition of a catalog item.
-- Render a specific report history snapshot.
-- Manage report sessions.
+- [Access report server items by using URL access](../reporting-services/access-report-server-items-using-url-access.md).
+- [Specify device information settings in a URL](../reporting-services/specify-device-information-settings-in-a-url.md)
+- [Set the language for report parameters in a URL](../reporting-services/set-the-language-for-report-parameters-in-a-url.md)
+- [Render a report history snapshot by using URL access](../reporting-services/render-a-report-history-snapshot-using-url-access.md).
+- [Search a report by using URL access](../reporting-services/search-a-report-using-url-access.md).
 
 For the complete list of commands and settings available through URL access, see [URL access parameter reference](../reporting-services/url-access-parameter-reference.md).
 
@@ -41,18 +41,17 @@ The report server processes parameters contained in URL requests to the report s
 
 URL requests can contain multiple parameters that are listed in any order. You separate the parameters by an ampersand (`&`) and the name/value pairs by an equal sign (`=`). 
 
-Understanding the different components of a URL access string is essential for effectively sending commands to a SSRS report server. The URL structure begins with the `rswebserviceurl`, which specifies the web service URL of the report server. This component is followed by a question mark (`?`) that indicates the start of the query string containing parameters. The `pathinfo` component specifies the path to the report or item on the server. Finally, the URL includes one or more parameters (`&prefix:param=value`), each of which may have an optional prefix to customize the report's rendering or behavior. The following sections provide a more detailed description of each piece within the URL access string.
-
-```
-https://[rswebserviceurl]?[pathinfo][&prefix:param=value]...[&prefix:param=value]
-```
+Understanding the different components of a URL access string is essential for effectively sending commands to a SSRS report server. The URL access string includes: 
 
 - `https://[rswebserviceurl]`: The web service URL of the report server.
 - `?`: Indicates the start of the query string that contains parameters.
 - `[pathinfo]`: The path to the report or item on the server.
 - `[&prefix:param=value]`: One or more parameters with optional prefixes that customize the report rendering or behavior.
+```
+https://[rswebserviceurl]?[pathinfo][&prefix:param=value]...[&prefix:param=value]
+```
 
-For a complete list of the available URL access parameters, see [URL access parameter reference](../reporting-services/url-access-parameter-reference.md). For examples passing report parameters on the URL, see [Pass a report parameter within a URL](../reporting-services/pass-a-report-parameter-within-a-url.md).
+The following sections provide a more detailed description of each piece within the URL access string.
 
 ### `rswebserviceurl`
 
@@ -106,19 +105,12 @@ In a URL access string, you add parameters and their corresponding values to cus
 ```
 https://myrshost/reportserver?/AdventureWorks2022/Employee_Sales_Summary_2022&rs:Command=Render&rc:Toolbar=false&ReportMonth=3&ReportYear=2008
 ```
-## Related tasks
 
-|Task Descriptions|Links|
-|-----------------------|-----------|
-|Access report server items, such as reports, shared data sources, and resources.|[Access report server items by using URL access](../reporting-services/access-report-server-items-using-url-access.md)|
-|Pass report parameters to a report.|[Pass a report parameter within a URL](../reporting-services/pass-a-report-parameter-within-a-url.md)|
-|Set the locale of the report parameters in the URL access string, which defines the locale-specific interpretations of dates, currencies, and so on.|[Set the language for report parameters in a URL](../reporting-services/set-the-language-for-report-parameters-in-a-url.md)|
-|Send rendering extension specific settings that customize how the report is rendered.|[Specify device information settings in a URL](../reporting-services/specify-device-information-settings-in-a-url.md)|
-|Export a report directly to a file format without viewing it in the browser.|[Export a report by using URL access](../reporting-services/export-a-report-using-url-access.md)|
-|Open a report and navigate directly to the location of a string.|[Search a report by using URL access](../reporting-services/search-a-report-using-url-access.md)|
-|Render a specific report history snapshot.|[Render a report history snapshot by using URL access](../reporting-services/render-a-report-history-snapshot-using-url-access.md)|
+For a complete list of the available URL access parameters, see [URL access parameter reference](../reporting-services/url-access-parameter-reference.md). For examples passing report parameters on the URL, see [Pass a report parameter within a URL](../reporting-services/pass-a-report-parameter-within-a-url.md).
 
 ## Related content
 
 - [Integrate Reporting Services by using URL access](../reporting-services/application-integration/integrating-reporting-services-using-url-access.md)
 - [Find, view, and manage reports &#40;Report Builder and SSRS&#41;](../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)
+- [Pass a report parameter within a URL](../reporting-services/pass-a-report-parameter-within-a-url.md)
+- [Export a report by using URL access](../reporting-services/export-a-report-using-url-access.md)

@@ -151,10 +151,8 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 1. Select **Objects on which [view name] depends** to display the objects that are referenced by the view.  
   
 ## <a id="TsqlProcedure"></a> Use Transact-SQL
-
-## Use Transact-SQL
   
-In T-SQL, you can use one of the following three commands:
+In T-SQL, use one of the following commands:
 
 - [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)
 - [OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md)

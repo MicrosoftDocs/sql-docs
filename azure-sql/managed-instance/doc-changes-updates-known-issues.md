@@ -310,7 +310,7 @@ Impersonation using `EXECUTE AS USER` or `EXECUTE AS LOGIN` of the following Mic
 
 ### Transactional replication must be reconfigured after geo-failover
 
-If transactional replication is enabled on a database in a failover group, the SQL Managed Instance administrator must clean up all publications on the old primary and reconfigure them on the new primary after a failover to another region occurs. For more information, see [Replication]((../managed-instance/transact-sql-tsql-differences-sql-server.md#replication).
+If transactional replication is enabled on a database in a failover group, the SQL Managed Instance administrator must clean up all publications on the old primary and reconfigure them on the new primary after a failover to another region occurs. For more information, see [Replication](../managed-instance/transact-sql-tsql-differences-sql-server.md#replication).
 
 ### `tempdb` structure and content is re-created
 

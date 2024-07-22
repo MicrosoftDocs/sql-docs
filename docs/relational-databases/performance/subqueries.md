@@ -3,7 +3,7 @@ title: "Subqueries (SQL Server)"
 description: Look at an example of a subquery, which is a query that is nested in a SELECT, INSERT, UPDATE, or DELETE statement, or inside another subquery in SQL Server.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: 08/21/2023
+ms.date: 07/19/2024
 ms.service: sql
 ms.subservice: performance
 ms.topic: conceptual
@@ -17,7 +17,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ---
 # Subqueries (SQL Server)
 
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 A subquery is a query that is nested inside a `SELECT`, `INSERT`, `UPDATE`, or `DELETE` statement, or inside another subquery.
 
@@ -40,7 +40,7 @@ GO
 
 A subquery is also called an inner query or inner select, while the statement containing a subquery is also called an outer query or outer select.
 
-Many [!INCLUDE[tsql](../../includes/tsql-md.md)] statements that include subqueries can be alternatively formulated as joins. Other questions can be posed only with subqueries. In [!INCLUDE[tsql](../../includes/tsql-md.md)], there's usually no performance difference between a statement that includes a subquery and a semantically equivalent version that doesn't. For architectural information on how SQL Server processes queries, see [SQL statement processing](../query-processing-architecture-guide.md#sql-statement-processing). However, in some cases where existence must be checked, a join yields better performance. Otherwise, the nested query must be processed for each result of the outer query to ensure elimination of duplicates. In such cases, a join approach would yield better results.
+Many [!INCLUDE [tsql](../../includes/tsql-md.md)] statements that include subqueries can be alternatively formulated as joins. Other questions can be posed only with subqueries. In [!INCLUDE [tsql](../../includes/tsql-md.md)], there's usually no performance difference between a statement that includes a subquery and a semantically equivalent version that doesn't. For architectural information on how SQL Server processes queries, see [SQL statement processing](../query-processing-architecture-guide.md#sql-statement-processing). However, in some cases where existence must be checked, a join yields better performance. Otherwise, the nested query must be processed for each result of the outer query to ensure elimination of duplicates. In such cases, a join approach would yield better results.
 
 The following example shows both a subquery `SELECT` and a join `SELECT` that return the same result set and execution plan:
 
@@ -75,9 +75,9 @@ A subquery nested in the outer SELECT statement has the following components:
 - An optional `GROUP BY` clause.
 - An optional `HAVING` clause.
 
-The SELECT query of a subquery is always enclosed in parentheses. It can't include a `COMPUTE` or `FOR BROWSE` clause, and may only include an `ORDER BY` clause when a TOP clause is also specified.
+The SELECT query of a subquery is always enclosed in parentheses. It can't include a `COMPUTE` or `FOR BROWSE` clause, and can only include an `ORDER BY` clause when a TOP clause is also specified.
 
-A subquery can be nested inside the `WHERE` or `HAVING` clause of an outer `SELECT`, `INSERT`, `UPDATE`, or `DELETE` statement, or inside another subquery. Up to 32 levels of nesting is possible, although the limit varies based on available memory and the complexity of other expressions in the query. Individual queries may not support nesting up to 32 levels. A subquery can appear anywhere an expression can be used, if it returns a single value.
+A subquery can be nested inside the `WHERE` or `HAVING` clause of an outer `SELECT`, `INSERT`, `UPDATE`, or `DELETE` statement, or inside another subquery. Up to 32 levels of nesting is possible, although the limit varies based on available memory and the complexity of other expressions in the query. Individual queries do not support nesting up to 32 levels. A subquery can appear anywhere an expression can be used, if it returns a single value.
 
 If a table appears only in a subquery and not in the outer query, then columns from that table can't be included in the output (the select list of the outer query).
 
@@ -87,7 +87,7 @@ Statements that include a subquery usually take one of these formats:
 - `WHERE expression comparison_operator [ANY | ALL] (subquery)`
 - `WHERE [NOT] EXISTS (subquery)`
 
-In some [!INCLUDE[tsql](../../includes/tsql-md.md)] statements, the subquery can be evaluated as if it were an independent query. Conceptually, the subquery results are substituted into the outer query (although this isn't necessarily how [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] actually processes [!INCLUDE[tsql](../../includes/tsql-md.md)] statements with subqueries).
+In some [!INCLUDE [tsql](../../includes/tsql-md.md)] statements, the subquery can be evaluated as if it were an independent query. Conceptually, the subquery results are substituted into the outer query (although this isn't necessarily how [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] actually processes [!INCLUDE [tsql](../../includes/tsql-md.md)] statements with subqueries).
 
 There are three basic types of subqueries. Those that:
 
@@ -111,7 +111,7 @@ A subquery is subject to the following restrictions:
 
 ## <a id="qualifying"></a> Qualify column names in subqueries
 
-In the following example, the *BusinessEntityID* column in the `WHERE` clause of the outer query is implicitly qualified by the table name in the outer query `FROM` clause (*Sales.Store*). The reference to *CustomerID* in the select list of the subquery is qualified by the subquery `FROM` clause, that is, by the *Sales.Customer* table.
+In the following example, the `BusinessEntityID` column in the `WHERE` clause of the outer query is implicitly qualified by the table name in the outer query `FROM` clause (`Sales.Store`). The reference to `CustomerID` in the select list of the subquery is qualified by the subquery `FROM` clause, that is, by the `Sales.Customer` table.
 
 ```sql
 USE AdventureWorks2022;
@@ -144,7 +144,7 @@ GO
 It's never wrong to state the table name explicitly, and it's always possible to override implicit assumptions about table names with explicit qualifications.
 
 > [!IMPORTANT]  
-> If a column is referenced in a subquery that does not exist in the table referenced by the subquery's `FROM` clause, but exists in a table referenced by the outer query's `FROM` clause, the query executes without error. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] implicitly qualifies the column in the subquery with the table name in the outer query.
+> If a column is referenced in a subquery that does not exist in the table referenced by the subquery's `FROM` clause, but exists in a table referenced by the outer query's `FROM` clause, the query executes without error. [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] implicitly qualifies the column in the subquery with the table name in the outer query.
 
 ## <a id="nesting"></a> Multiple levels of nesting
 
@@ -167,7 +167,7 @@ WHERE BusinessEntityID IN
 GO
 ```
 
-[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
+[!INCLUDE [ssResult](../../includes/ssresult-md.md)]
 
 ```output
 LastName                                           FirstName
@@ -212,7 +212,8 @@ GO
 ## <a id="correlated"></a> Correlated subqueries
 
 Many queries can be evaluated by executing the subquery once and substituting the resulting value or values into the `WHERE` clause of the outer query. In queries that include a correlated subquery (also known as a repeating subquery), the subquery depends on the outer query for its values. This means that the subquery is executed repeatedly, once for each row that might be selected by the outer query.
-This query retrieves one instance of each employee's first and last name for which the bonus in the *SalesPerson* table is 5000 and for which the employee identification numbers match in the *Employee* and *SalesPerson* tables.
+
+This query retrieves one instance of each employee's first and last name for which the bonus in the `SalesPerson` table is 5000 and for which the employee identification numbers match in the `Employee` and `SalesPerson` tables.
 
 ```sql
 USE AdventureWorks2022;
@@ -227,7 +228,7 @@ WHERE 5000.00 IN
 GO
 ```
 
-[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
+[!INCLUDE [ssResult](../../includes/ssresult-md.md)]
 
 ```output
 LastName FirstName BusinessEntityID
@@ -238,9 +239,9 @@ Saraiva José 282
 (2 row(s) affected)
 ```
 
-The previous subquery in this statement can't be evaluated independently of the outer query. It needs a value for *Employee.BusinessEntityID*, but this value changes as [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] examines different rows in *Employee*.
-That is exactly how this query is evaluated: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] considers each row of the Employee table for inclusion in the results by substituting the value in each row into the inner query.
-For example, if [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] first examines the row for `Syed Abbas`, the variable *Employee.BusinessEntityID* takes the value 285, which [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] substitutes into the inner query. These two query samples represent a decomposition of the previous sample with the correlated subquery.
+The previous subquery in this statement can't be evaluated independently of the outer query. It needs a value for `Employee.BusinessEntityID`, but this value changes as [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] examines different rows in `Employee`.
+That is exactly how this query is evaluated: [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] considers each row of the `Employee` table for inclusion in the results by substituting the value in each row into the inner query.
+For example, if [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] first examines the row for `Syed Abbas`, the variable `Employee.BusinessEntityID` takes the value `285`, which [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] substitutes into the inner query. These two query samples represent a decomposition of the previous sample with the correlated subquery.
 
 ```sql
 USE AdventureWorks2022;
@@ -251,7 +252,7 @@ WHERE BusinessEntityID = 285;
 GO
 ```
 
-The result is 0.00 (`Syed Abbas` didn't receive a bonus because they aren't a sales person), so the outer query evaluates to:
+The result is 0.00 (`Syed Abbas` didn't receive a bonus because they aren't a salesperson), so the outer query evaluates to:
 
 ```sql
 USE AdventureWorks2022;
@@ -296,7 +297,7 @@ WHERE AddressID IN
 GO
 ```
 
-[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
+[!INCLUDE [ssResult](../../includes/ssresult-md.md)]
 
 ```output
 StateProvinceID AddressID
@@ -336,9 +337,9 @@ WHERE e1.AddressID IN
 GO
 ```
 
-Explicit table aliases make it clear that a reference to *Person.Address* in the subquery doesn't mean the same thing as the reference in the outer query.
+Explicit table aliases make it clear that a reference to `Person.Address` in the subquery doesn't mean the same thing as the reference in the outer query.
 
-### <a id="in"></a> Subqueries with `IN`
+### <a id="in"></a> Subqueries with IN
 
 The result of a subquery introduced with `IN` (or with `NOT IN`) is a list of zero or more values. After the subquery returns results, the outer query makes use of them.
 The following query finds the names of all the wheel products that Adventure Works Cycles makes.
@@ -355,7 +356,7 @@ WHERE ProductSubcategoryID IN
 GO
 ```
 
-[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
+[!INCLUDE [ssResult](../../includes/ssresult-md.md)]
 
 ```output
 Name
@@ -378,7 +379,7 @@ Touring Rear Wheel
 (14 row(s) affected)
 ```
 
-This statement is evaluated in two steps. First, the inner query returns the subcategory identification number that matches the name 'Wheel' (17). Second, this value is substituted into the outer query, which finds the product names that go with the subcategory identification numbers in `Production.Product`.
+This statement is evaluated in two steps. First, the inner query returns the subcategory identification number that matches the name `Wheel` (`17`). Second, this value is substituted into the outer query, which finds the product names that go with the subcategory identification numbers in `Production.Product`.
 
 ```sql
 USE AdventureWorks2022;
@@ -402,7 +403,7 @@ AND s.[Name] = 'Wheels';
 GO
 ```
 
-[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
+[!INCLUDE [ssResult](../../includes/ssresult-md.md)]
 
 ```output
 Name
@@ -440,7 +441,7 @@ AND BusinessEntityID IN
 GO
 ```
 
-[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
+[!INCLUDE [ssResult](../../includes/ssresult-md.md)]
 
 ```output
 Name
@@ -462,7 +463,7 @@ Compete, Inc.
 (13 row(s) affected)
 ```
 
-The inner query is evaluated, producing the ID numbers of the vendors who meet the subquery qualifications. The outer query is then evaluated. Notice that you can include more than one condition in the `WHERE` clause of both the inner and the outer query.
+The inner query is evaluated, producing the ID numbers of the vendors who meet the subquery qualifications. The outer query is then evaluated. You can include more than one condition in the `WHERE` clause of both the inner and the outer query.
 
 Using a join, the same query is expressed like this:
 
@@ -479,9 +480,9 @@ WHERE CreditRating = 1
 GO
 ```
 
-A join can always be expressed as a subquery. A subquery can often, but not always, be expressed as a join. This is because joins are symmetric: you can join table A to B in either order and get the same answer. The same isn't true if a subquery is involved.
+A join can always be expressed as a subquery. A subquery can often, but not always, be expressed as a join. This is because joins are symmetric: you can join table `A` to `B` in either order and get the same answer. The same isn't true if a subquery is involved.
 
-### <a id="notin"></a> Subqueries with `NOT IN`
+### <a id="notin"></a> Subqueries with NOT IN
 
 Subqueries introduced with the keyword `NOT IN` also return a list of zero or more values.
 The following query finds the names of the products that aren't finished bicycles.
@@ -502,11 +503,11 @@ GO
 
 This statement can't be converted to a join. The analogous not-equal join has a different meaning: It finds the names of products that are in some subcategory that isn't a finished bicycle.
 
-### <a id="upsert"></a> Subqueries in `UPDATE`, `DELETE`, and `INSERT` statements
+### <a id="upsert"></a> Subqueries in UPDATE, DELETE, and INSERT statements
 
-Subqueries can be nested in the `UPDATE`, `DELETE`, `INSERT` and `SELECT` data manipulation (DML) statements.
+Subqueries can be nested in the `UPDATE`, `DELETE`, `INSERT`, and `SELECT` data manipulation (DML) statements.
 
-The following example doubles the value in the *ListPrice* column in the *Production.Product* table. The subquery in the `WHERE` clause references the *Purchasing.ProductVendor* table to restrict the rows updated in the *Product* table to just those supplied by *BusinessEntity* 1540.
+The following example doubles the value in the `ListPrice` column in the `Production.Product` table. The subquery in the `WHERE` clause references the `Purchasing.ProductVendor` table to restrict the rows updated in the *Product* table to just those supplied by `BusinessEntity` `1540`.
 
 ```sql
 USE AdventureWorks2022;
@@ -554,7 +555,7 @@ A subquery introduced with an unmodified comparison operator (a comparison opera
 
 To use a subquery introduced with an unmodified comparison operator, you must be familiar enough with your data and with the nature of the problem to know that the subquery will return exactly one value.
 
-For example, if you assume each sales person only covers one sales territory, and you want to find the customers located in the territory covered by Linda Mitchell, you can write a statement with a subquery introduced with the simple `=` comparison operator.
+For example, if you assume each sales person only covers one sales territory, and you want to find the customers located in the territory covered by `Linda Mitchell`, you can write a statement with a subquery introduced with the simple `=` comparison operator.
 
 ```sql
 USE AdventureWorks2022;
@@ -583,7 +584,7 @@ WHERE ListPrice >
 GO
 ```
 
-Because subqueries introduced with unmodified comparison operators must return a single value, they can't include `GROUP BY` or `HAVING` clauses unless you know the `GROUP BY` or `HAVING` clause itself returns a single value. For example, the following query finds the products priced higher than the lowest-priced product that is in ProductSubcategoryID 14.
+Because subqueries introduced with unmodified comparison operators must return a single value, they can't include `GROUP BY` or `HAVING` clauses unless you know the `GROUP BY` or `HAVING` clause itself returns a single value. For example, the following query finds the products priced higher than the lowest-priced product that is in `ProductSubcategoryID` `14`.
 
 ```sql
 USE AdventureWorks2022;
@@ -706,9 +707,7 @@ You can get the same results with the `<> ALL` operator, which is equivalent to 
 
 When a subquery is introduced with the keyword `EXISTS`, the subquery functions as an existence test. The `WHERE` clause of the outer query tests whether the rows that are returned by the subquery exist. The subquery doesn't actually produce any data; it returns a value of `TRUE` or `FALSE`.
 
-A subquery introduced with EXISTS has the following syntax:
-
-`WHERE [NOT] EXISTS (subquery)`
+A subquery introduced with EXISTS has the following syntax: `WHERE [NOT] EXISTS (subquery)`
 
 The following query finds the names of all products that are in the Wheels subcategory:
 
@@ -726,7 +725,7 @@ WHERE EXISTS
 GO
 ```
 
-[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
+[!INCLUDE [ssResult](../../includes/ssresult-md.md)]
 
 ```output
 Name
@@ -751,12 +750,12 @@ Touring Rear Wheel
 
 To understand the results of this query, consider the name of each product in turn. Does this value cause the subquery to return at least one row? In other words, does the query cause the existence test to evaluate to `TRUE`?
 
-Notice that subqueries that are introduced with EXISTS are a bit different from other subqueries in the following ways:
+Subqueries that are introduced with EXISTS are a bit different from other subqueries in the following ways:
 
 - The keyword `EXISTS` isn't preceded by a column name, constant, or other expression.
 - The select list of a subquery introduced by `EXISTS` almost always consists of an asterisk (*). There's no reason to list column names because you're just testing whether rows that meet the conditions specified in the subquery exist.
 
-The `EXISTS` keyword is important because frequently there's no alternative formulation without subqueries. Although some queries that are created with EXISTS can't be expressed any other way, many queries can use `IN` or a comparison operator modified by `ANY` or `ALL` to achieve similar results.
+The `EXISTS` keyword is important because frequently there's no alternative formulation without subqueries. Although some queries that are created with `EXISTS` can't be expressed any other way, many queries can use `IN` or a comparison operator modified by `ANY` or `ALL` to achieve similar results.
 
 For example, the preceding query can be expressed by using `IN`:
 
@@ -774,7 +773,7 @@ GO
 
 ### <a id="notexists"></a> Subqueries with `NOT EXISTS`
 
-`NOT EXISTS` works like `EXISTS`, except the `WHERE` clause in which it's used is satisfied if no rows are returned by the subquery.
+`NOT EXISTS` works like `EXISTS`, except the `WHERE` clause is satisfied if no rows are returned by the subquery.
 
 For example, to find the names of products that aren't in the wheels subcategory:
 
@@ -794,7 +793,7 @@ GO
 
 ### <a id="expression"></a> Subqueries used in place of an expression
 
-In [!INCLUDE[tsql](../../includes/tsql-md.md)], a subquery can be substituted anywhere an expression can be used in `SELECT`, `UPDATE`, `INSERT`, and `DELETE` statements, except in an `ORDER BY` list.
+In [!INCLUDE [tsql](../../includes/tsql-md.md)], a subquery can be substituted anywhere an expression can be used in `SELECT`, `UPDATE`, `INSERT`, and `DELETE` statements, except in an `ORDER BY` list.
 
 The following example illustrates how you might use this enhancement. This query finds the prices of all mountain bike products, their average price, and the difference between the price of each mountain bike and the average price.
 
@@ -810,20 +809,14 @@ WHERE ProductSubcategoryID = 1;
 GO
 ```
 
-## See also
+## Related content
 
-### Syntax
-
-- [IN &#40;Transact-SQL&#41;](../../t-sql/language-elements/in-transact-sql.md)
-- [EXISTS &#40;Transact-SQL&#41;](../../t-sql/language-elements/exists-transact-sql.md)
-- [ALL &#40;Transact-SQL&#41;](../../t-sql/language-elements/all-transact-sql.md)
-- [SOME | ANY &#40;Transact-SQL&#41;](../../t-sql/language-elements/some-any-transact-sql.md)
-- [IS [NOT] DISTINCT FROM (Transact-SQL)](../../t-sql/queries/is-distinct-from-transact-sql.md)
+- [IN (Transact-SQL)](../../t-sql/language-elements/in-transact-sql.md)
+- [EXISTS (Transact-SQL)](../../t-sql/language-elements/exists-transact-sql.md)
+- [ALL (Transact-SQL)](../../t-sql/language-elements/all-transact-sql.md)
+- [SOME | ANY (Transact-SQL)](../../t-sql/language-elements/some-any-transact-sql.md)
 - [Joins](../../relational-databases/performance/joins.md)
-- [Comparison Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/comparison-operators-transact-sql.md)
-
-### Query performance concepts
-
+- [Comparison Operators (Transact-SQL)](../../t-sql/language-elements/comparison-operators-transact-sql.md)
 - [Query Processing Architecture Guide](../query-processing-architecture-guide.md)
 - [Best practices with Query Store](best-practice-with-the-query-store.md)
 - [Intelligent query processing in SQL databases](intelligent-query-processing.md)

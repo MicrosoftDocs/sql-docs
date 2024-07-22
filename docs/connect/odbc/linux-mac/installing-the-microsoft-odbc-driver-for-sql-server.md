@@ -4,7 +4,7 @@ description: Learn how to install the Microsoft ODBC Driver for SQL Server on Li
 author: David-Engel
 ms.author: davidengel
 ms.reviewer: randolphwest
-ms.date: 06/28/2024
+ms.date: 07/31/2024
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: conceptual
@@ -23,7 +23,7 @@ This article provides commands for installing the ODBC driver from the bash shel
 
 ## <a id="18"></a> Microsoft ODBC 18
 
-The following sections explain how to install the Microsoft ODBC driver 18 from the bash shell for different Linux distributions. Supported distributions are Alpine Linux, Debian, Red Hat Enterprise Linux (RHEL), Oracle Linux, SUSE Linux Enterprise Server (SLES), and Ubuntu.
+The following sections explain how to install the Microsoft ODBC driver 18 from the bash shell for different Linux distributions. Supported distributions are Alpine Linux, Debian, Red Hat Enterprise Linux (RHEL), Oracle Linux, SUSE Linux Enterprise Server (SLES), and Ubuntu. Note that you can automatically accept the EULA agreement automatically if the file '/opt/microsoft/msodbcsql18/ACCEPT_EULA' exists in Debian, Ubuntu, Redhat and Oracle Linux systems.
 
 ### [Alpine](#tab/alpine18-install)
 

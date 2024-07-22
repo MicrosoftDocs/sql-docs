@@ -206,7 +206,7 @@ We see that the DTU elastic pool has 4 logical CPUs (vCores), with 5.4 GB of mem
 
 ## Migrate geo-replicated databases
 
-Migrating from the DTU-based model to the vCore-based purchasing model is similar to upgrading or downgrading the geo-replication relationships between databases in the Standard and Premium service tiers. During migration, you don't have to stop geo-replication, but you must follow these sequencing rules:
+Migrating from the DTU-based model to the vCore-based purchasing model is similar to upgrading or downgrading the geo-replication relationships between databases in the Standard and Premium service tiers. During migration, you don't have to stop geo-replication for General Purpose and Business Critical Service tiers, but you must follow these sequencing rules:
 
 - When upgrading, you must upgrade the secondary database first, and then upgrade the primary.
 - When downgrading, reverse the order: you must downgrade the primary database first, and then downgrade the secondary.
@@ -225,7 +225,8 @@ The following table provides guidance for specific migration scenarios:
 |General Purpose|Premium|Upgrade|Must migrate secondary first|
 |Business Critical|General Purpose|Downgrade|Must migrate primary first|
 |General Purpose|Business Critical|Upgrade|Must migrate secondary first|
-
+|Standard|Hyperscale|Lateral|Geo-replication to be turned off before migration to Hyperscale|
+|Premium|Hyperscale|Lateral|Geo-replication to be turned off before migration to Hyperscale|
 
 ## Migrate failover groups
 

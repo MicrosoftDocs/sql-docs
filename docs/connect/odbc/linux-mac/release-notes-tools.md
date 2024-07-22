@@ -4,7 +4,7 @@ description: "Learn what's new and changed in released versions of the Microsoft
 author: David-Engel
 ms.author: davidengel
 ms.reviewer: v-davidengel
-ms.date: 08/11/2023
+ms.date: 07/31/2024
 ms.service: sql
 ms.subservice: connectivity
 ms.custom: linux-related-content

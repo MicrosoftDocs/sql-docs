@@ -46,6 +46,22 @@ When a user attempts to connect to a database, they provide a user account and a
 
   > [!NOTE]  
   > Azure SQL Database only enforces [password complexity](/sql/relational-databases/security/password-policy#password-complexity) for [password policy](/sql/relational-databases/security/password-policy). For password policy in Azure SQL Managed Instance, see [Azure SQL Managed Instance frequently asked questions (FAQ)](../managed-instance/frequently-asked-questions-faq.yml#password-policy).
+  >For Azure SQL Database, SQL users' password policies and expiration dates can be reviewed using the query below.
+  > Connect to the server using SSMS and execute it on the master database 
+SELECT  name ,
+        Is_Policy_Checked ,
+        Is_Expiration_Checked ,
+        LOGINPROPERTY(name, 'IsMustChange') AS Is_Must_Change ,
+        LOGINPROPERTY(name, 'IsLocked') AS [Account Locked] ,
+        LOGINPROPERTY(name, 'LockoutTime') AS LockoutTime ,
+        LOGINPROPERTY(name, 'PasswordLastSetTime') AS PasswordLastSetTime ,
+        LOGINPROPERTY(name, 'IsExpired') AS IsExpired ,
+        LOGINPROPERTY(name, 'BadPasswordCount') AS BadPasswordCount ,
+        LOGINPROPERTY(name, 'BadPasswordTime') AS BadPasswordTime ,
+        LOGINPROPERTY(name, 'HistoryLength') AS HistoryLength ,
+        Modify_date
+FROM    sys.sql_logins
+ 
 
 - [Microsoft Entra authentication](authentication-aad-overview.md)
 

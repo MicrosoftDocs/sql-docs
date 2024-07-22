@@ -283,7 +283,7 @@ PSP with query hints and plan forcing behavior can be summarized in the followin
   The following query shows all of the possible reasons why PSP was skipped:
 
   ```sql
-  SELECT name, map_value FROM sys.dm_xe_map_values WHERE name ='psp_skipped_reason_enum' ORDER BY map_key;
+  SELECT map_value FROM sys.dm_xe_map_values WHERE [name] ='psp_skipped_reason_enum' ORDER BY map_key;
   ```
 
 - `parameter_sensitive_plan_optimization`: Occurs when a query uses PSP optimization feature. Debug channel only. Some fields of interest might be:

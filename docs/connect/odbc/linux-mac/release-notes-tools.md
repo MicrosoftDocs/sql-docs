@@ -16,6 +16,13 @@ ms.topic: conceptual
 
 This article lists and describes what's new in the versioned releases of the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQL Server Tools on Linux and macOS.
 
+## 18.4.1.1, July 2024
+
+| New item | Details |
+| :------- | :------ |
+| Sqlcmd AAD rename | Renamed Azure Active Directory to Entra ID. |
+| BCP AAD rename | Renamed Azure Active Directory to Entra ID. |
+
 ## 18.3.1.1, July 2023
 
 | New item | Details |

@@ -3,13 +3,13 @@ title: Add a filter to a Report Builder dataset
 description: Learn how to add a filter to a dataset to limit the data in a report after the data is retrieved from an external data source.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 07/15/2024
+ms.date: 07/12/2024
 ms.service: reporting-services
 ms.subservice: report-data
 ms.topic: how-to
 ms.custom: updatefrequency5
 
-#customer intent: As a Report Builder user, I want to learn how to add filters to my datasets so that can limit the data in a report that's retrieved from a shared data source.
+#customer intent: As a Report Builder user, I want to learn how to add filters to my datasets so that I can limit the data in a report that's retrieved from a shared data source.
 ---
 # Add a filter to a Report Builder dataset
 

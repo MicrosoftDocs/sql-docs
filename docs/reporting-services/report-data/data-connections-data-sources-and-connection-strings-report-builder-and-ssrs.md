@@ -3,7 +3,7 @@ title: Create data connection strings in Report Builder
 description: Learn how to create data connection strings and learn important information related to data source credentials.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 07/16/2024
+ms.date: 07/22/2024
 ms.service: reporting-services
 ms.subservice: report-data
 ms.topic: conceptual

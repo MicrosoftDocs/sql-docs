@@ -3,7 +3,7 @@ title: Add and verify a data connection in Report Builder
 description: Learn how to use Report Builder to add and verify a data connection to verify that the credentials you specify are sufficient.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 07/16/2024
+ms.date: 07/22/2024
 ms.service: reporting-services
 ms.subservice: report-data
 ms.topic: how-to
@@ -20,14 +20,14 @@ To add a shared data source to your report, browse to a report server and select
 
 To create an embedded data source, you must have connection information to the external source of data and you must know which permissions you need to access the data. This information usually comes from the owner of the data source. You can test the connection to verify that the credentials that are specified are sufficient.
 
-For more information, see [Create data connection strings in Report Builder](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) and [Specify credential and connection information for report data sources](./specify-credential-and-connection-information-for-report-data-sources.md)
+For more information, see [Create data connection strings in Report Builder](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) and [Specify credential and connection information for report data sources](./specify-credential-and-connection-information-for-report-data-sources.md).
 
 > [!NOTE]  
 > [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]
 
 ## Create a connection to a shared data source in Report Builder
 
-1. On the menu in the Report Data pane, select **New,** and then select **Data Source**. The **Data Source Properties** dialog box opens.
+1. On the menu in the **Report Data** pane, select **New,** and then select **Data Source**. The **Data Source Properties** dialog box opens.
 
 1. In the **Name** text box, enter a name for the data source.
 

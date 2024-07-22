@@ -5,7 +5,7 @@ description: Learn about the local development experience for Azure SQL Database
 author: croblesm
 ms.author: roblescarlos
 ms.reviewer: wiassaf
-ms.date: 06/06/2024
+ms.date: 07/22/2024
 ms.service: sql-database
 ms.topic: overview
 ---

@@ -1,16 +1,16 @@
 ---
-title: What are the Azure SQL Database Dev Container templates?
+title: What are the Dev Container templates for Azure SQL Database?
 titleSuffix: Azure SQL Database
 description: Learn about the local development experience for Azure SQL Database with Dev Container templates.
 author: croblesm
 ms.author: roblescarlos
 ms.reviewer: wiassaf
-ms.date: 06/06/2024
+ms.date: 07/22/2024
 ms.service: sql-database
 ms.topic: overview
 ---
 
-# What are the Azure SQL Database Dev Container templates?
+# What are the Dev Container templates for Azure SQL Database?
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
 Dev Containers provide a comprehensive solution for enhancing local development for Azure SQL Database. Dev container templates offer developers a seamless and efficient development environment, enabling them to build applications for Azure SQL Database with ease and confidence. Dev containers can be utilized in any development environment whether is local or in the cloud, you can promote consistency across teams and workflows.

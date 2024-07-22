@@ -4,7 +4,7 @@ description: Create a new table, name it, and add it to an existing database usi
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: randolphwest
-ms.date: 01/19/2023
+ms.date: 07/19/2024
 ms.service: sql
 ms.subservice: table-view-index
 ms.topic: conceptual
@@ -16,19 +16,19 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
 
-You can create a new table, name it, and add it to an existing database, by using the table designer in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS), or [!INCLUDE[tsql](../../includes/tsql-md.md)].
+You can create a new table, name it, and add it to an existing database, by using the table designer in [!INCLUDE [ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS), or [!INCLUDE [tsql](../../includes/tsql-md.md)].
 
 ## Permissions
 
-This task requires CREATE TABLE permission in the database, and ALTER permission on the schema in which the table is being created.
+This task requires `CREATE TABLE` permission in the database, and ALTER permission on the schema in which the table is being created.
 
-If any columns in the CREATE TABLE statement are defined as a CLR user-defined type, either ownership of the type, or REFERENCES permission on it is required.
+If any columns in the `CREATE TABLE` statement are defined as a CLR user-defined type, either ownership of the type, or REFERENCES permission on it is required.
 
-If any columns in the CREATE TABLE statement have an XML schema collection associated with them, either ownership of the XML schema collection or REFERENCES permission on it is required.
+If any columns in the `CREATE TABLE` statement have an XML schema collection associated with them, either ownership of the XML schema collection or REFERENCES permission on it is required.
 
 ## Use table designer in SQL Server Management Studio
 
-1. In SSMS, in **Object Explorer**, connect to the instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)] that contains the database to be modified.
+1. In SSMS, in **Object Explorer**, connect to the instance of [!INCLUDE [ssDE](../../includes/ssde-md.md)] that contains the database to be modified.
 
 1. In **Object Explorer**, expand the **Databases** node and then expand the database that will contain the new table.
 
@@ -48,7 +48,7 @@ If any columns in the CREATE TABLE statement have an XML schema collection assoc
 
    For more information about these objects, see [Create Foreign Key Relationships](../../relational-databases/tables/create-foreign-key-relationships.md), [Create Check Constraints](../../relational-databases/tables/create-check-constraints.md) and [Indexes](../../relational-databases/indexes/indexes.md).
 
-1. By default, the table is contained in the **dbo** schema. To specify a different schema for the table, right-click in the Table Designer pane and select **Properties** as shown in the following illustration. From the **Schema** drop-down list, select the appropriate schema.
+1. By default, the table is contained in the `dbo` schema. To specify a different schema for the table, right-click in the **Table Designer** pane and select **Properties** as shown in the following illustration. From the **Schema** dropdown list, select the appropriate schema.
 
    :::image type="content" source="media/create-tables-database-engine/specify-table-schema.gif" alt-text="Screenshot of the Properties pane showing the Schema option.":::
 
@@ -62,7 +62,7 @@ If any columns in the CREATE TABLE statement have an XML schema collection assoc
 
 ## Use Transact-SQL
 
-1. In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].
+1. In **Object Explorer**, connect to an instance of [!INCLUDE [ssDE](../../includes/ssde-md.md)].
 
 1. On the Standard bar, select **New Query**.
 
@@ -81,6 +81,7 @@ If any columns in the CREATE TABLE statement have an XML schema collection assoc
    );
    ```
 
-## Next steps
+## Next step
 
-- [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)
+> [!div class="nextstepaction"]
+> [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)

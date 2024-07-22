@@ -1,9 +1,9 @@
 ---
-title: "Specify parameters"
+title: "Specify parameters in a stored procedure"
 description: Learn how to pass values into parameters and about how each of the parameter attributes is used during a procedure call.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: 05/19/2023
+ms.date: 07/19/2024
 ms.service: sql
 ms.subservice: stored-procedures
 ms.topic: conceptual
@@ -16,7 +16,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ---
 # Specify parameters in a stored procedure
 
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   By specifying procedure parameters, calling programs are able to pass values into the body of the procedure. Those values can be used for a variety of purposes during procedure execution. Procedure parameters can also return values to the calling program if the parameter is marked as an OUTPUT parameter.  
   
@@ -75,7 +75,7 @@ GO
 > If one parameter value is supplied in the form `@parameter = value`, all subsequent parameters must be supplied in this manner. If the parameter values are not passed in the form `@parameter = value`, the values must be supplied in the identical order (left to right) as the parameters are listed in the CREATE PROCEDURE statement. It is a good practice to specify parameter names, both for superior readability and compatibility with future versions of the stored procedure.
   
 > [!WARNING]  
->  Any parameter passed in the form `@parameter = value` with the parameter misspelled, will cause [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to generate an error and prevent procedure execution.  
+>  Any parameter passed in the form `@parameter = value` with the parameter misspelled, will cause [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] to generate an error and prevent procedure execution.  
   
 ## <a id="#specifying-parameter-data-types"></a> Specify parameter data types
 
@@ -94,7 +94,7 @@ GO
 > If the default value is a character string that contains embedded blanks or punctuation, or if it starts with a number (for example, `6abc`), it must be enclosed in single, straight quotation marks.  
 
 > [!NOTE]
-> Default parameters are not supported in [!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse-md.md)] or [!INCLUDE[sspdw-md](../../includes/sspdw-md.md)].
+> Default parameters are not supported in [!INCLUDE [ssazuresynapse_md](../../includes/ssazuresynapse-md.md)] or [!INCLUDE [sspdw-md](../../includes/sspdw-md.md)].
   
  If no value can be specified appropriately as a default for the parameter, specify `NULL` as the default. It is a good idea to have the procedure return a customized message if the procedure is executed without a value for the parameter.  
   
@@ -197,7 +197,7 @@ EXEC Production.uspSearchList @ListPrice = 150, 4, 1498;
   
  To specify an output parameter, the OUTPUT keyword must be specified in the definition of the parameter in the CREATE PROCEDURE statement. The procedure returns the current value of the output parameter to the calling program when the procedure exits. The calling program must also use the OUTPUT keyword when executing the procedure to save the parameter's value in a variable that can be used in the calling program.  
   
- The following example creates the `Production.usp_GetList` procedure, which returns a list of products that have prices that do not exceed a specified amount. The example shows using multiple SELECT statements and multiple OUTPUT parameters. OUTPUT parameters allow an external procedure, a batch, or more than one [!INCLUDE[tsql](../../includes/tsql-md.md)] statement to access a value set during the procedure execution.  
+ The following example creates the `Production.usp_GetList` procedure, which returns a list of products that have prices that do not exceed a specified amount. The example shows using multiple SELECT statements and multiple OUTPUT parameters. OUTPUT parameters allow an external procedure, a batch, or more than one [!INCLUDE [tsql](../../includes/tsql-md.md)] statement to access a value set during the procedure execution.  
   
 ```sql
 USE AdventureWorks2022;  
@@ -228,7 +228,7 @@ SET @ComparePrice = @MaxPrice;
 GO  
 ```  
   
- Execute `usp_GetList` to return a list of [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] products (`Bikes`) that cost less than $700. The OUTPUT parameters `@cost` and `@compareprices` are used with control-of-flow language to return a message in the **Messages** window.  
+ Execute `usp_GetList` to return a list of [!INCLUDE [ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] products (`Bikes`) that cost less than $700. The OUTPUT parameters `@cost` and `@compareprices` are used with control-of-flow language to return a message in the **Messages** window.  
   
 > [!NOTE]  
 > The OUTPUT variable must be defined during the procedure creation and also during the use of the variable. The parameter name and variable name do not have to match. However, the data type and parameter positioning must match (unless `@listprice = variable` is used).  
@@ -264,9 +264,9 @@ Road-750 Black, 52                                 539.99
 (14 row(s) affected)  
   
 These items can be purchased for less than $700.00.  
-```  
+```
   
-## Next steps
+## Related content
 
 - [CREATE PROCEDURE (Transact-SQL)](../../t-sql/statements/create-procedure-transact-sql.md)
 - [Parameters](parameters.md)

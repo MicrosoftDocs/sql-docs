@@ -25,26 +25,39 @@ For a list of commonly used metrics for Azure SQL Database, see [Azure SQL Datab
 ### Supported metrics for Microsoft.Sql/servers/databases
 The following table lists the metrics available for the Microsoft.Sql/servers/databases resource type.
 [!INCLUDE [horz-monitor-ref-metrics-tableheader](~/../azure-sql/reusable-content/ce-skilling/azure/includes/azure-monitor/horizontals/horz-monitor-ref-metrics-tableheader.md)]
-[!INCLUDE [Microsoft.Sql/servers/databases](~/../azure-reference-other-repo/azure-monitor-ref/supported-metrics/includes/microsoft-sql-servers-databases-metrics-include.md)]
+[!INCLUDE [microsoft-sql-servers-databases-metrics-include](~/../azure-sql/reusable-content/ce-skilling/azure/includes/azure-monitor/reference/metrics/microsoft-sql-servers-databases-metrics-include.md)]
 
 ### Supported metrics for Microsoft.Sql/servers/elasticpools
 The following table lists the metrics available for the Microsoft.Sql/servers/elasticpools resource type.
 [!INCLUDE [horz-monitor-ref-metrics-tableheader](~/../azure-sql/reusable-content/ce-skilling/azure/includes/azure-monitor/horizontals/horz-monitor-ref-metrics-tableheader.md)]
-[!INCLUDE [Microsoft.Sql/servers/elasticpools](~/../azure-reference-other-repo/azure-monitor-ref/supported-metrics/includes/microsoft-sql-servers-elasticpools-metrics-include.md)]
+[!INCLUDE [microsoft-sql-servers-elasticpools-metrics-include](~/../azure-sql/reusable-content/ce-skilling/azure/includes/azure-monitor/reference/metrics/microsoft-sql-servers-elasticpools-metrics-include.md)]
 
 ### Supported metrics for Microsoft.Sql/servers/jobAgents
 The following table lists the metrics available for the Microsoft.Sql/servers/jobAgents resource type.
 [!INCLUDE [horz-monitor-ref-metrics-tableheader](~/../azure-sql/reusable-content/ce-skilling/azure/includes/azure-monitor/horizontals/horz-monitor-ref-metrics-tableheader.md)]
-[!INCLUDE [Microsoft.Sql/servers/jobAgents](~/../azure-reference-other-repo/azure-monitor-ref/supported-metrics/includes/microsoft-sql-servers-jobagents-metrics-include.md)]
+[!INCLUDE [microsoft-sql-servers-jobagents-metrics-include](~/../azure-sql/reusable-content/ce-skilling/azure/includes/azure-monitor/reference/metrics/microsoft-sql-servers-jobagents-metrics-include.md)]
 
 [!INCLUDE [horz-monitor-ref-metrics-dimensions-intro](~/../azure-sql/reusable-content/ce-skilling/azure/includes/azure-monitor/horizontals/horz-monitor-ref-metrics-dimensions-intro.md)]
 
-[!INCLUDE [horz-monitor-ref-no-metrics-dimensions](~/../azure-sql/reusable-content/ce-skilling/azure/includes/azure-monitor/horizontals/horz-monitor-ref-no-metrics-dimensions.md)]
+[!INCLUDE [horz-monitor-ref-metrics-dimensions](~/../azure-sql/reusable-content/ce-skilling/azure/includes/azure-monitor/horizontals/horz-monitor-ref-metrics-dimensions.md)]
+
+| Metric | Dimension |
+| ------ | --------- |
+| Failed Connections : System Errors | `Error` <br> `ValidatedDriverNameAndVersion` |
+| Failed Connections : User Errors | `Error` <br> `ValidatedDriverNameAndVersion` |
+| Successful Connections | `SslProtocol` <br> `ValidatedDriverNameAndVersion` |
+| Workload group active queries | `WorkloadGroupName` <br> `IsUserDefined` |
+| Workload group query timeouts | `WorkloadGroupName` <br> `IsUserDefined` |
+| Workload group allocation by system percent | `WorkloadGroupName` <br> `IsUserDefined` |
+| Workload group allocation by cap resource percent | `WorkloadGroupName` <br> `IsUserDefined` |
+| Effective cap resource percent | `WorkloadGroupName` <br> `IsUserDefined` |
+| Effective min resource percent | `WorkloadGroupName` <br> `IsUserDefined` |
+| Workload group queued queries | `WorkloadGroupName` <br> `IsUserDefined` |
 
 [!INCLUDE [horz-monitor-ref-resource-logs](~/../azure-sql/reusable-content/ce-skilling/azure/includes/azure-monitor/horizontals/horz-monitor-ref-resource-logs.md)]
 
 ### Supported resource logs for Microsoft.Sql/servers/databases
-[!INCLUDE [Microsoft.Sql/servers/databases](~/../azure-reference-other-repo/azure-monitor-ref/supported-logs/includes/microsoft-sql-servers-databases-logs-include.md)]
+[!INCLUDE [microsoft-sql-servers-databases-logs-include](~/../azure-sql/reusable-content/ce-skilling/azure/includes/azure-monitor/reference/logs/microsoft-sql-servers-databases-logs-include.md)]
 
 [!INCLUDE [horz-monitor-ref-logs-tables](~/../azure-sql/reusable-content/ce-skilling/azure/includes/azure-monitor/horizontals/horz-monitor-ref-logs-tables.md)]
 

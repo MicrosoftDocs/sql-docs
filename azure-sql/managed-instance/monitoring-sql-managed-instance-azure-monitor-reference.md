@@ -23,7 +23,7 @@ See [Monitor Azure SQL Managed Instance](monitoring-sql-managed-instance-azure-m
 ### Supported metrics for Microsoft.Sql/managedInstances
 The following table lists the metrics available for the Microsoft.Sql/managedInstances resource type.
 [!INCLUDE [horz-monitor-ref-metrics-tableheader](~/../azure-sql/reusable-content/ce-skilling/azure/includes/azure-monitor/horizontals/horz-monitor-ref-metrics-tableheader.md)]
-[!INCLUDE [Microsoft.Sql/managedInstances](~/../azure-reference-other-repo/azure-monitor-ref/supported-metrics/includes/microsoft-sql-managedinstances-metrics-include.md)]
+[!INCLUDE [microsoft-sql-managedinstances-metrics-include](~/../azure-sql/reusable-content/ce-skilling/azure/includes/azure-monitor/reference/metrics/microsoft-sql-managedinstances-metrics-include.md)]
 
 [!INCLUDE [horz-monitor-ref-metrics-dimensions-intro](~/../azure-sql/reusable-content/ce-skilling/azure/includes/azure-monitor/horizontals/horz-monitor-ref-metrics-dimensions-intro.md)]
 [!INCLUDE [horz-monitor-ref-no-metrics-dimensions](~/../azure-sql/reusable-content/ce-skilling/azure/includes/azure-monitor/horizontals/horz-monitor-ref-no-metrics-dimensions.md)]
@@ -31,10 +31,10 @@ The following table lists the metrics available for the Microsoft.Sql/managedIns
 [!INCLUDE [horz-monitor-ref-resource-logs](~/../azure-sql/reusable-content/ce-skilling/azure/includes/azure-monitor/horizontals/horz-monitor-ref-resource-logs.md)]
 
 ### Supported resource logs for Microsoft.Sql/managedInstances
-[!INCLUDE [Microsoft.Sql/managedInstances](~/../azure-reference-other-repo/azure-monitor-ref/supported-logs/includes/microsoft-sql-managedinstances-logs-include.md)]
+[!INCLUDE [microsoft-sql-managedinstances-logs-include](~/../azure-sql/reusable-content/ce-skilling/azure/includes/azure-monitor/reference/logs/microsoft-sql-managedinstances-logs-include.md)]
 
 ### Supported resource logs for Microsoft.Sql/managedInstances/databases
-[!INCLUDE [Microsoft.Sql/managedInstances/databases](~/../azure-reference-other-repo/azure-monitor-ref/supported-logs/includes/microsoft-sql-managedinstances-databases-logs-include.md)]
+[!INCLUDE [microsoft-sql-managedinstances-databases-logs-include](~/../azure-sql/reusable-content/ce-skilling/azure/includes/azure-monitor/reference/logs/microsoft-sql-managedinstances-databases-logs-include.md)]
 
 [!INCLUDE [horz-monitor-ref-logs-tables](~/../azure-sql/reusable-content/ce-skilling/azure/includes/azure-monitor/horizontals/horz-monitor-ref-logs-tables.md)]
 

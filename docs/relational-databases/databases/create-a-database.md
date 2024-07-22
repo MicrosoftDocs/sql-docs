@@ -4,7 +4,7 @@ description: Create a database in SQL Server by using SQL Server Management Stud
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: randolphwest
-ms.date: 03/30/2023
+ms.date: 07/19/2024
 ms.service: sql
 ms.subservice: configuration
 ms.topic: conceptual
@@ -17,36 +17,33 @@ helpviewer_keywords:
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-This article describes how to create a database in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].
+This article describes how to create a database in [!INCLUDE [ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE [ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE [tsql](../../includes/tsql-md.md)].
 
-> [!NOTE]  
-> To create a database in Azure SQL Database using T-SQL, see [Create database in Azure SQL Database](../../t-sql/statements/create-database-transact-sql.md).
+To create a database in Azure SQL Database using T-SQL, see [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md).
 
-## <a id="Restrictions"></a> Limitations and restrictions
+## Limitations
 
-- A maximum of 32,767 databases can be specified on an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+A maximum of 32,767 databases can be specified on an instance of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)].
 
 ## Prerequisites
 
-- The CREATE DATABASE statement must run in autocommit mode (the default transaction management mode) and isn't allowed in an explicit or implicit transaction.
+The `CREATE DATABASE` statement must run in autocommit mode (the default transaction management mode) and isn't allowed in an explicit or implicit transaction.
 
 ## Recommendations
 
-- The [master](../../relational-databases/databases/master-database.md) database should be backed up whenever a user database is created, modified, or dropped.
+The [master](master-database.md) database should be backed up whenever a user database is created, modified, or dropped.
 
-- When you create a database, make the data files as large as possible based on the maximum amount of data you expect in the database.
+When you create a database, make the data files as large as possible based on the maximum amount of data you expect in the database.
 
 ## Permissions
 
-Requires CREATE DATABASE permission in the `master` database, or requires CREATE ANY DATABASE, or ALTER ANY DATABASE permission.
+Requires `CREATE DATABASE` permission in the `master` database, or requires `CREATE ANY DATABASE`, or `ALTER ANY DATABASE` permission.
 
-To maintain control over disk use on an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], permission to create databases is typically limited to a few SQL Server login.
+To maintain control over disk use on an instance of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)], permission to create databases is typically limited to a few [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] logins.
 
 ## <a id="SSMSProcedure"></a> Use SQL Server Management Studio
 
-#### Create a database
-
-1. In **Object Explorer**, connect to an instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] and then expand that instance.
+1. In **Object Explorer**, connect to an instance of the [!INCLUDE [ssDEnoversion](../../includes/ssdenoversion-md.md)] and then expand that instance.
 
 1. Right-click **Databases**, and then select **New Database**.
 
@@ -57,15 +54,15 @@ To maintain control over disk use on an instance of [!INCLUDE[ssNoVersion](../..
 1. To change the owner name, select (**...**) to select another owner.
 
    > [!NOTE]  
-   >  The **Use full-text indexing** option is always checked and dimmed because, beginning in [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)], all user databases are full-text enabled.
+   > The **Use full-text indexing** option is always checked and dimmed because all user databases are full-text enabled.
 
-1. To change the default values of the primary data and transaction log files, in the **Database files** grid, select the appropriate cell and enter the new value. For more information, see [Add Data or Log Files to a Database](../../relational-databases/databases/add-data-or-log-files-to-a-database.md).
+1. To change the default values of the primary data and transaction log files, in the **Database files** grid, select the appropriate cell and enter the new value. For more information, see [Add Data or Log Files to a Database](add-data-or-log-files-to-a-database.md).
 
 1. To change the collation of the database, select the **Options** page, and then select a collation from the list.
 
 1. To change the recovery model, select the **Options** page and select a recovery model from the list.
 
-1. To change database options, select the **Options** page, and then modify the database options. For a description of each option, see [ALTER DATABASE SET Options (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md).
+1. To change database options, select the **Options** page, and then modify the database options. For a description of each option, see [ALTER DATABASE SET options](../../t-sql/statements/alter-database-transact-sql-set-options.md).
 
 1. To add a new filegroup, select the **Filegroups** page. Select **Add** and then enter the values for the filegroup.
 
@@ -79,9 +76,7 @@ To maintain control over disk use on an instance of [!INCLUDE[ssNoVersion](../..
 
 ## <a id="TsqlProcedure"></a> Use Transact-SQL
 
-#### Create a database
-
-1. Connect to the [!INCLUDE[ssDE](../../includes/ssde-md.md)].
+1. Connect to the [!INCLUDE [ssDE](../../includes/ssde-md.md)].
 
 1. From the Standard bar, select **New Query**.
 
@@ -106,11 +101,11 @@ LOG ON
 GO
 ```
 
-For more examples, see [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-transact-sql.md).
+For more examples, see [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md).
 
-## Next steps
+## Related content
 
-- [Database Files and Filegroups](../../relational-databases/databases/database-files-and-filegroups.md)
-- [Database Detach and Attach (SQL Server)](../../relational-databases/databases/database-detach-and-attach-sql-server.md)
+- [Database Files and Filegroups](database-files-and-filegroups.md)
+- [Database detach and attach (SQL Server)](database-detach-and-attach-sql-server.md)
 - [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)
-- [Add Data or Log Files to a Database](../../relational-databases/databases/add-data-or-log-files-to-a-database.md)
+- [Add Data or Log Files to a Database](add-data-or-log-files-to-a-database.md)

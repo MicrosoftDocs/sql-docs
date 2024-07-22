@@ -1,5 +1,5 @@
 ---
-title: PowerShell example-monitor-scale-elastic pool-Azure SQL Database
+title: PowerShell example-monitor-scale-elastic pool
 description: Azure PowerShell example script to monitor and scale an elastic pool in Azure SQL Database
 author: WilliamDAssafMSFT
 ms.author: wiassaf

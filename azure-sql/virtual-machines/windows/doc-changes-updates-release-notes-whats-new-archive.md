@@ -38,6 +38,7 @@ Return to [What's new in SQL Server on Azure VMs?](doc-changes-updates-release-n
 | **Extend your multi-subnet AG to multiple regions** | January | Extend an existing multi-subnet availability group, either on Azure virtual machines, or on-premises, to another region in Azure. To learn more, review [Multi-subnet availability group in multiple regions](availability-group-manually-configure-multi-subnet-multiple-regions.md). | 
 
 
+
 ## 2022
 
 | Changes | Details |

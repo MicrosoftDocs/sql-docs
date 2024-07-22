@@ -4,7 +4,7 @@ description: Learn details about the changes in SQL Server Reporting Services (S
 author: casualoak
 ms.author: petebro
 ms.reviewer: maggies
-ms.date: 01/10/2024
+ms.date: 05/01/2024
 ms.service: reporting-services
 ms.subservice: reporting-services
 ms.topic: conceptual
@@ -49,6 +49,18 @@ GeneMi, DevOps = 1467988 (MsEng > TechnicalContent) , 2019/03/19
 
 ::: moniker range="=sql-server-ver16"
 ## SQL Server 2022 Reporting Services
+
+## 16.0.8898.18912, 2024/05/20
+*(Product Version: 16.0.1115.96)*
+
+- Fixed issue with WMI provider on some calls.
+
+## 16.0.8886.1775, 2024/05/01
+*(Product Version: 16.0.1115.92)*
+
+- Improved support for GB18030-2022 Chinese government standard.
+- Added TLS 1.3 support.
+- Fixed issue with subscription properties in some scenarios.
 
 ## 16.0.8784.14010, 2024/01/23
 *(Product Version: 16.0.1115.61)*
@@ -111,6 +123,13 @@ Release Candidate 0 (RC0)
 ::: moniker-end
 
 ## SQL Server 2019 Reporting Services
+
+## 15.0.8863.19101, 2024/04/10
+*(Product Version: 15.0.1102.1167)*
+- Fixed issue where some reports will fail to render after enable the verbose log
+- Fixed an error some users expereienced when editing subscriptions 
+- Fixed and issue where some links were missing when exporting to PDF
+- Added support for server property 'RestrictedResourceMimeTypeForUpload'
 
 ## 15.0.8760.20928, 2023/12/26
 *(Product Version: 15.0.1102.1140)*

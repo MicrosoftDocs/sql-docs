@@ -10,6 +10,8 @@ ms.topic: conceptual
 ---
 # Oracle CDC Instance Data Types
 
+[!INCLUDE [oracle-cdc-retirement](../includes/attunity-oracle-cdc-retirement.md)]
+
   The Oracle CDC Instance supports most Oracle data types. The following sections describe the supported data types and the non-supported data types.  
   
 ## Supported Data Types  

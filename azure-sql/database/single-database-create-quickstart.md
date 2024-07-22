@@ -18,6 +18,11 @@ ms.custom:
 
 In this quickstart, you create a [single database](single-database-overview.md) in Azure SQL Database using either the Azure portal, a PowerShell script, or an Azure CLI script. You then query the database using **Query editor** in the Azure portal.
 
+
+Watch this video in the [Azure SQL Database essentials series](/shows/azure-sql-database-essentials/) for an overview of the deployment process: 
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=0c5d0700-b422-4a46-99bd-84c09ba65804]
+
+
 ## Prerequisites
 
 - An active Azure subscription. If you don't have one, [create a free account](https://azure.microsoft.com/free/).

@@ -1,9 +1,9 @@
 ---
 title: "Saas app: Monitor performance of many databases"
 description: Monitor and manage performance of Azure SQL Database in a multi-tenant SaaS app
-author: WilliamDAssafMSFT
-ms.author: wiassaf
-ms.reviewer: mathoma
+author: bgavrilMS
+ms.author: bogavril
+ms.reviewer: mathoma, wiassaf
 ms.date: 01/25/2019
 ms.service: sql-database
 ms.subservice: scenario

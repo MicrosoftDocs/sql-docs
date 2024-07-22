@@ -141,7 +141,7 @@ void AbsolutePositionX() {
          PrintProviderError(vtConnect);  
          break;  
       default:  
-         printf("Errors occured.");  
+         printf("Errors occurred.");  
          break;  
       }  
    }  
@@ -216,7 +216,7 @@ void AbsolutePosition2X() {
          PrintProviderError(vtConnect);  
          break;  
       default:  
-         printf("Errors occured.");  
+         printf("Errors occurred.");  
          break;  
       }  
    }  

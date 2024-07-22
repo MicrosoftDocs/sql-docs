@@ -2,7 +2,7 @@
 title: "Using an SQL statement to modify database objects"
 description: "Using an SQL statement to modify database objects"
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: "08/12/2019"
 ms.service: sql
 ms.subservice: connectivity

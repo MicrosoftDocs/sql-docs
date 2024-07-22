@@ -141,7 +141,7 @@ SET @myDoc.modify('
 insert attribute LaborHours {".5" }             
 into (/Root/Location[@LocationID=10])[1] ');           
 SELECT @myDoc;          
--- insert MachineHours attribute but its value is retrived from a sql variable @Hrs             
+-- insert MachineHours attribute but its value is retrieved from a sql variable @Hrs             
 DECLARE @Hrs FLOAT;            
 SET @Hrs =.2;          
 SET @myDoc.modify('             

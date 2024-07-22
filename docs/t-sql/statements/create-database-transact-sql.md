@@ -256,7 +256,7 @@ The following options are allowable only when CONTAINMENT has been set to PARTIA
 
   **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later
 
-  See [transform noise words Server Configuration Option](../../database-engine/configure-windows/transform-noise-words-server-configuration-option.md)for a full description of this option.
+  See [transform noise words Server Configuration Option](../../database-engine/configure-windows/transform-noise-words-server-configuration-option.md) for a full description of this option.
 
 #### TWO_DIGIT_YEAR_CUTOFF = { 2049 | <any year between 1753 and 9999> }
 
@@ -1683,7 +1683,7 @@ Takes a shared lock on the DATABASE object.
 
 ## Metadata
 
-After this operation succeeds, an entry for this database will appear in the [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) and [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)metadata views.
+After this operation succeeds, an entry for this database will appear in the [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) and [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) metadata views.
 
 ## Examples: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 

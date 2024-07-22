@@ -12,6 +12,8 @@ f1_keywords:
 ---
 # Edit the Advanced Properties
 
+[!INCLUDE [oracle-cdc-retirement](../includes/attunity-oracle-cdc-retirement.md)]
+
   Use the **Advanced** tab to add special properties to the CDC instance.  
   
 #### To add advanced properties to the CDC instance  

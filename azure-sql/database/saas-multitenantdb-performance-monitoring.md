@@ -1,9 +1,9 @@
 ---
 title: Monitor performance of a sharded multi-tenant database
 description: Monitor and manage performance of sharded multi-tenant Azure SQL Database in a multi-tenant SaaS app
-author: WilliamDAssafMSFT
-ms.author: wiassaf
-ms.reviewer: mathoma
+author: bgavrilMS
+ms.author: bogavril
+ms.reviewer: mathoma, wiassaf
 ms.date: 06/05/2023
 ms.service: sql-database
 ms.subservice: scenario

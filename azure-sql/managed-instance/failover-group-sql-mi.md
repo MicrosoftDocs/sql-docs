@@ -4,7 +4,7 @@ description: Failover groups let you manage geo-replication and coordinated fail
 author: Stralle
 ms.author: strrodic
 ms.reviewer: mathoma, randolphwest
-ms.date: 01/05/2024
+ms.date: 05/31/2024
 ms.service: sql-managed-instance
 ms.subservice: high-availability
 ms.topic: conceptual
@@ -28,7 +28,7 @@ To get started using the feature, review [Configure a failover group for Azure S
 
 The failover groups feature allows you to manage the replication and failover of user databases in a managed instance to a managed instance in another Azure region. Failover groups are designed to simplify deployment and management of geo-replicated databases at scale.
 
-For more information, see [High availability for Azure SQL Managed Instance](high-availability-sla.md). For geo-failover RPO and RTO, see [overview of business continuity](business-continuity-high-availability-disaster-recover-hadr-overview.md#rto-and-rpo).
+For more information, see [High availability for Azure SQL Managed Instance](high-availability-sla-local-zone-redundancy.md). For geo-failover RPO and RTO, see [overview of business continuity](business-continuity-high-availability-disaster-recover-hadr-overview.md#rto-and-rpo).
 
 [!INCLUDE [failover-groups-overview](../includes/failover-group-overview.md)]
 
@@ -201,8 +201,10 @@ You can scale up or scale down the primary and secondary instance to a different
 
 The sequence is recommended specifically to avoid the problem where the geo-secondary at a lower SKU gets overloaded and must be reseeded during an upgrade or downgrade process.
 
-> [!NOTE]
-> There's a [known issue](doc-changes-updates-known-issues.md#temporary-instance-inaccessibility-using-the-failover-group-listener-during-scaling-operation) which can impact accessibility of the instance being scaled using the associated failover group listener. 
+> [!IMPORTANT] 
+> - For instances inside of a failover group, changing the service tier to, or from, the Next-gen General Purpose tier is not supported. You must first delete the failover group before modifying either replica, and then re-create the failover group after the change takes effect.
+> - There's a [known issue](doc-changes-updates-known-issues.md#temporary-instance-inaccessibility-using-the-failover-group-listener-during-scaling-operation) which can impact accessibility of the instance being scaled using the associated failover group listener. 
+
 
 ## Prevent loss of critical data
 
@@ -244,6 +246,24 @@ Review the configure failover group guide for a list of [permissions](failover-g
 ## Programmatically manage failover groups
 
 Failover groups can also be managed programmatically using Azure PowerShell, Azure CLI, and REST API. Review [configure failover group](failover-group-configure-sql-mi.md) to learn more.
+
+## Disaster recovery drills
+
+The recommended way to perform a DR drill is using the manual planned failover, as per the following tutorial: [Test failover](failover-group-configure-sql-mi.md#test-failover).
+
+Performing a drill using forced failover is **not recommended**, as this operation doesn't provide guardrails against the data loss. Nevertheless, it's possible to achieve data lossless forced failover by ensuring the following conditions are met prior to initiating the forced failover:
+
+- The workload is stopped on the primary managed instance.
+- All long running transactions have completed.
+- All client connections to the primary managed instance have been disconnected.
+- [Failover group status](failover-group-sql-mi.md#failover-group-status) is 'Synchronizing'.
+
+Please ensure the two managed instances have switched roles and that the failover group status has switched from 'Failover in progress' to 'Synchronizing' before optionally establishing connections to the new primary managed instance and starting read-write workload.
+
+To perform a data lossless failback to the original managed instance roles, using manual planned failover instead of forced failover is **strongly recommended**. To proceed with forced failback:
+
+- Follow the same steps as for the data lossless failover.
+- Longer failback execution time is expected if the forced failback is executed **shortly after** the initial forced failover is completed, as it has to wait for completion of outstanding automatic backup operations on the former primary managed instance.
 
 ## Related content
 

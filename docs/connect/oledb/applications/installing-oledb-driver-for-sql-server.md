@@ -2,8 +2,8 @@
 title: Installing OLE DB Driver for SQL Server
 description: Installing and uninstalling OLE DB Driver for SQL Server. To install the OLE DB Driver for SQL Server, you need the msoledbsql.msi installer.
 author: David-Engel
-ms.author: v-davidengel
-ms.date: 03/30/2022
+ms.author: davidengel
+ms.date: 05/29/2024
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: "reference"
@@ -25,6 +25,15 @@ helpviewer_keywords:
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
+
+> [!NOTE]
+> Starting with version 19.3, installation of the [Microsoft Visual C++ Redistributable](/cpp/windows/latest-supported-vc-redist) is a prerequisite for installing the Microsoft OLE DB Driver 19 for SQL Server.
+> 
+> For the ARM64 driver installer, install the ARM64 Microsoft Visual C++ Redistributable package.
+> 
+> For the x86 driver installer, install the X86 Microsoft Visual C++ Redistributable package.
+> 
+> For the x64 driver installer, install **both** the X86 and X64 Microsoft Visual C++ Redistributable packages.
 
 To install the OLE DB Driver for SQL Server, you need the msoledbsql.msi installer.
 Run the installer and make your preferred selections. The OLE DB Driver for SQL Server can be installed side-by-side with earlier versions of Microsoft OLE DB providers.

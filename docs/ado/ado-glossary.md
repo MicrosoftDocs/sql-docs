@@ -242,7 +242,7 @@ This topic defines terms relevant to ADO.
 
 ## R
  relative URL
- A partially qualified URL that specifies a resource on the Internet or an intranet whose location is relative to a starting point specified by an absolute URL or equivalent ADO Connection object. In effect, the concatenated absolute and relative URLs consitute a complete URL. See also URL and absolute URL.
+ A partially qualified URL that specifies a resource on the Internet or an intranet whose location is relative to a starting point specified by an absolute URL or equivalent ADO Connection object. In effect, the concatenated absolute and relative URLs constitute a complete URL. See also URL and absolute URL.
 
  remote data source
  A data source that exists on another computer, rather than on the local system (where the client application runs).

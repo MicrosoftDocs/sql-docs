@@ -11,6 +11,7 @@ ms.subservice: backup-restore
 ms.topic: how-to
 ms.custom:
   - azure-sql-split
+  - build-2024
 monikerRange: "=azuresql||=azuresql-mi"
 ---
 # Restore a database from a backup in Azure SQL Managed Instance
@@ -209,15 +210,15 @@ For more information about business continuity choices, see [Overview of busines
 Consider the following limitations when working with backups and Azure SQL Managed Instance: 
 
 - Geo-restore of a database can only be performed to an instance in the same subscription as the source SQL managed instance. 
-- Azure SQL Managed Instance databases can only be [restored to SQL Server 2022](restore-database-to-sql-server.md) (either on-premises, or on a virtual machine) if the source SQL Managed Instance has enrolled in the [November 2022 feature wave](november-2022-feature-wave-enroll.md).
 - Azure SQL Managed Instance databases are encrypted with TDE by default. When the source database uses a customer-managed key (CMK) as the TDE protector, to restore your database to an instance other than the source SQL Managed Instance, the target instance must have access to the same key used to encrypt the source database in Azure Key Vault, or you must disable TDE encryption on the source database before taking the backup.
 - You can only track the progress of the restore process by using the [sys.dm_exec_requests](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql) and [sys.dm_operation_status](/sql/relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database) dynamic management views.
-- When [service endpoint policies](service-endpoint-policies-configure.md) are enabled on Azure SQL Managed Instance, placing a service endpoint policy on a subnet prevents point-in-time restores (PITR) from instances in different subnets.
+- When [service endpoint policies](service-endpoint-policies-configure.md) are present on a subnet delegated to Azure SQL Managed Instance, point-in-time restore (PITR) to managed instances in that subnet cannot be performed from instances in different regions.
 - Recovery point objective (RPO) is up to 1 hour.
 - Recovery time objective (RTO) is approximately 12 hours, but might vary based on database size and activity could go beyond this timeframe.
 - Secondary (paired) region can't be changed.
 - Newly created/restored databases might not immediately appear as restorable in other regions due to a lag in populating new data. It can take up to 24 hours for backups of new database to become visible.
 - The maximum number of databases you can restore in parallel is 200 per single subscription. In some cases, it's possible to increase this limit by opening a support ticket. 
+- Database backups taken from instances configured with the SQL Server 2022 [update policy](update-policy.md) can be restored to instances configured with either the SQL Server 2022 or Always-up-to-date update policy. Database backups taken from instances configured with the Always-up-to-date update policy can only be restored to instances also configured with the Always-up-to-date update policy. 
 
 ## Related content
 

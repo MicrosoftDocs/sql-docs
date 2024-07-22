@@ -1,7 +1,7 @@
 ---
 title: "sys.dm_geo_replication_link_status"
 titleSuffix: Azure SQL Database and Azure SQL Managed Instance
-description: sys.dm_geo_replication_link_status (Azure SQL Database and Azure SQL Managed Instance)
+description: Contains a row for each replication link between primary and secondary databases in a geo-replication partnership for Azure SQL Database and Azure SQL Managed Instance. 
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: 06/10/2022
@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "sys.dm_geo_replication_link_status dynamic management view"
 dev_langs:
   - "TSQL"
-monikerRange: "=azuresqldb-current"
+monikerRange: "=azuresqldb-current||=azuresqldb-mi-current"
 ---
 # sys.dm_geo_replication_link_status (Azure SQL Database and Azure SQL Managed Instance)
 

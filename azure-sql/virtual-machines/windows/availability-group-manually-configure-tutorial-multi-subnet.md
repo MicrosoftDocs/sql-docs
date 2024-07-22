@@ -1,10 +1,10 @@
 ---
 title: "Tutorial: Configure availability group in multiple subnets"
 description: "This tutorial shows how to create an Always On availability group within multiple subnets for SQL Server on Azure Virtual Machines (VMs). "
-author: tarynpratt
-ms.author: tarynpratt
+author: AbdullahMSFT
+ms.author: amamun
 ms.reviewer: mathoma
-ms.date: 07/10/2023
+ms.date: 06/18/2024
 ms.service: virtual-machines-sql
 ms.subservice: hadr
 ms.topic: tutorial

@@ -23,13 +23,13 @@ dev_langs:
 
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
-Requests [!INCLUDE [ss_smartbackup](../../includes/ss-smartbackup-md.md)] to perform a backup of the specified database.
+Requests [!INCLUDE [ss-managed-backup](../../includes/ss-managed-backup-md.md)] to perform a backup of the specified database.
 
-Use this stored procedure to perform ad hoc backups for a database configured with [!INCLUDE [ss_smartbackup](../../includes/ss-smartbackup-md.md)]. This prevents any break in the backup chain and [!INCLUDE [ss_smartbackup](../../includes/ss-smartbackup-md.md)] processes are aware and the backup is stored in the same Azure Blob storage container.
+Use this stored procedure to perform ad hoc backups for a database configured with [!INCLUDE [ss-managed-backup](../../includes/ss-managed-backup-md.md)]. This prevents any break in the backup chain and [!INCLUDE [ss-managed-backup](../../includes/ss-managed-backup-md.md)] processes are aware and the backup is stored in the same Azure Blob storage container.
 
 Upon successful completion of the backup, the full backup file path is returned. This includes the name and location of the new backup file resulting from the backup operation.
 
-An error is returned if [!INCLUDE [ss_smartbackup](../../includes/ss-smartbackup-md.md)] is in the process of executing a backup of given type for the specified database. In this case, the error message returned includes the full backup file path where the current backup is being uploaded to.
+An error is returned if [!INCLUDE [ss-managed-backup](../../includes/ss-managed-backup-md.md)] is in the process of executing a backup of given type for the specified database. In this case, the error message returned includes the full backup file path where the current backup is being uploaded to.
 
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
@@ -62,7 +62,7 @@ Requires membership in **db_backupoperator** database role, with ALTER ANY CREDE
 
 ## Examples
 
-The following example makes a database backup request for the database `TestDB`. This database has [!INCLUDE [ss_smartbackup](../../includes/ss-smartbackup-md.md)] enabled.
+The following example makes a database backup request for the database `TestDB`. This database has [!INCLUDE [ss-managed-backup](../../includes/ss-managed-backup-md.md)] enabled.
 
 ```sql
 USE msdb;

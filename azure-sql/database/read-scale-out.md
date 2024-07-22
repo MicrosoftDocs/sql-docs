@@ -18,7 +18,7 @@ monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 
 [!INCLUDE[appliesto-sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi.md)]
 
-As part of [High Availability architecture](high-availability-sla.md#locally-redundant-availability), each single database or elastic pool database in the Premium and Business Critical service tier is automatically provisioned with a primary read-write replica and one or more secondary read-only replicas. The secondary replicas are provisioned with the same compute size as the primary replica. The *read scale-out* feature allows you to offload read-only workloads using the compute capacity of one of the read-only replicas, instead of running them on the read-write replica. This way, some read-only workloads can be isolated from the read-write workloads, and don't affect their performance. The feature is intended for the applications that include logically separated read-only workloads, such as analytics. In the Premium and Business Critical service tiers, applications could gain performance benefits using this additional capacity at no extra cost.
+As part of [High Availability architecture](high-availability-sla-local-zone-redundancy.md#locally-redundant-availability), each single database or elastic pool database in the Premium and Business Critical service tier is automatically provisioned with a primary read-write replica and one or more secondary read-only replicas. The secondary replicas are provisioned with the same compute size as the primary replica. The *read scale-out* feature allows you to offload read-only workloads using the compute capacity of one of the read-only replicas, instead of running them on the read-write replica. This way, some read-only workloads can be isolated from the read-write workloads, and don't affect their performance. The feature is intended for the applications that include logically separated read-only workloads, such as analytics. In the Premium and Business Critical service tiers, applications could gain performance benefits using this additional capacity at no extra cost.
 
 The *read scale-out* feature is also available in the Hyperscale service tier when at least one [secondary replica](service-tier-hyperscale-replicas.md) is added. Hyperscale secondary [named replicas](service-tier-hyperscale-replicas.md#named-replica) provide independent scaling, access isolation, workload isolation, support for various read scale-out scenarios, and other benefits. Multiple secondary [HA replicas](service-tier-hyperscale-replicas.md#high-availability-replica) can be used for load-balancing read-only workloads that require more resources than available on one secondary HA replica.
 
@@ -112,9 +112,16 @@ The following views are commonly used for replica monitoring and troubleshooting
 
 ### Monitor read-only replicas with Extended Events
 
-An extended event session can't be created when connected to a read-only replica. However, in Azure SQL Database, the definitions of database-scoped [Extended Event](xevent-db-diff-from-svr.md) sessions created and altered on the primary replica replicate to read-only replicas, including geo-replicas, and capture events on read-only replicas.
+An extended event session can't be created when connected to a read-only replica. However, in Azure SQL Database and Azure SQL Managed Instance, the definitions of database-scoped [Extended Event](xevent-db-diff-from-svr.md) sessions created and altered on the primary replica replicate to read-only replicas, including geo-replicas, and capture events on read-only replicas.
 
-An extended event session on a read-only replica that is based on a session definition from the primary replica can be started and stopped independently of the session on the primary replica.
+In Azure SQL Database, an extended event session on a read-only replica that is based on a session definition from the primary replica can be started and stopped independently of the session on the primary replica.
+ 
+In Azure SQL Managed Instance, to start a trace on a read-only replica, you must first start the trace on the primary replica before you can start the trace on the read-only replica. If you don't first start the trace on the primary replica, you receive the following error when attempting to start the trace on the read-only replica:
+
+> Msg 3906, Level 16, State 2, Line 1
+> Failed to update database "master" because the database is read-only.
+
+After starting the trace first on the primary replica, then on the read-only replica, you may stop the trace on the primary replica.
 
 To drop an event session on a read-only replica, follow these steps:
 

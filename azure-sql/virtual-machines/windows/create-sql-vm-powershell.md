@@ -35,6 +35,14 @@ If you don't have an Azure subscription, create a [free account](https://azure.m
 
 To reuse values and simplify script creation, start by defining a number of variables. Change the parameter values as you want, but be aware of naming restrictions related to name lengths and special characters when modifying the values provided.
 
+It's possible to deploy an older image of SQL Server that isn't available in the Azure portal by using PowerShell. To view all available images by using PowerShell, use the following command:
+
+```powershell
+$Location = "<location>"
+Get-AzVMImageOffer -Location $Location -Publisher 'MicrosoftSQLServer'
+```
+
+
 ### Location and resource group
 
 Define the data region and the resource group where you want to create the other VM resources.

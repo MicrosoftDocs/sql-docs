@@ -37,7 +37,8 @@ In [part four](python-ski-rental-linear-regression-deploy-model.md), you'll lear
 
 ## Prerequisites
 
-* Part three of this tutorial assumes you have completed [part one](python-ski-rental-linear-regression.md) and its prerequisites.
+* Part three of this tutorial assumes you have completed [part one](python-ski-rental-linear-regression.md) and its prerequisites, including [installing the necessary Python packages](python-ski-rental-linear-regression.md#prerequisites).
+
 
 ## Train the model
 
@@ -46,6 +47,10 @@ In order to predict, you have to find a function (model) that best describes the
 You will train model `lin_model` using a linear regression algorithm.
 
 ```python
+
+from sklearn.linear_model import LinearRegression
+from sklearn.metrics import mean_squared_error
+
 # Store the variable we'll be predicting on.
 target = "Rentalcount"
 

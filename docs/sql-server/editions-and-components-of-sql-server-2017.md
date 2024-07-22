@@ -151,7 +151,7 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
 
 <sup>1</sup> For more information on installing SQL Server on Server Core,  see [Install SQL Server on Server Core](../database-engine/install-windows/install-sql-server-on-server-core.md).
 
-<sup>2</sup> On Enterprise Edition, the number of nodes is the operating system maximum. On Standard edition there is support for two nodes.
+<sup>2</sup> On Enterprise Edition, the maximum number of nodes is 16. On Standard edition there is support for two nodes.
 
 <sup>3</sup> On Enterprise Edition, provides support for up to 8 secondary replicas - including 2 synchronous secondary replicas.
 
@@ -165,18 +165,18 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
 
 | Feature | Enterprise | Standard | Web | Express<br />with<br />Advanced<br />Services | Express |
 | --- | :---: | :---: | :---: | :---: | :---: |
-| Columnstore <sup>1</sup> <sup>2</sup> | Yes | Yes | Yes | Yes | Yes |
+| Columnstore <sup>1, 2</sup> | Yes | Yes | Yes | Yes | Yes |
 | Large object binaries in clustered columnstore indexes | Yes | Yes | Yes | Yes | Yes |
 | Online nonclustered columnstore index rebuild | Yes | No | No | No | No |
-| In-Memory OLTP <sup>1</sup> | Yes | Yes | Yes | Yes <sup>3</sup> | Yes |
+| In-Memory OLTP <sup>1, 2</sup> | Yes | Yes | Yes | Yes <sup>3</sup> | Yes |
 | Stretch Database | Yes | Yes | Yes | Yes | Yes |
 | Persistent Main Memory | Yes | Yes | Yes | Yes | Yes |
 | Multi-instance support | 50 | 50 | 50 | 50 | 50 |
-| Table and index partitioning | Yes | Yes | Yes | Yes | Yes |
-| Data compression | Yes | Yes | Yes | Yes | Yes |
+| Table and index partitioning <sup>2</sup> | Yes | Yes | Yes | Yes | Yes |
+| Data compression <sup>2</sup> | Yes | Yes | Yes | Yes | Yes |
 | Resource Governor | Yes | No | No | No | No |
-| Partitioned Table Parallelism | Yes | Yes | Yes | No | No |
-| Multiple Filestream containers | Yes | Yes | Yes | Yes | Yes |
+| Partitioned Table Parallelism <sup>2</sup> | Yes | Yes | Yes | No | No |
+| Multiple Filestream containers <sup>2</sup> | Yes | Yes | Yes | Yes | Yes |
 | NUMA Aware Large Page Memory and Buffer Array Allocation | Yes | No | No | No | No |
 | Buffer pool extension | Yes | Yes | No | No | No |
 | I/O Resource Governance | Yes | No | No | No | No |

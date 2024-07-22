@@ -13,58 +13,58 @@ ms.custom: updatefrequency5
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
 
-  When you set a row height, you are specifying the maximum height for the row in the rendered paginated report. However, by default, text boxes in the row are set to grow vertically to accommodate their data at run-time, and this can cause a row to expand beyond the height that you specify. To set a fixed row height, you must change the text box properties so they do not automatically expand.  
+  When you set a row height, you're specifying the maximum height for the row in the rendered paginated report. However, text boxes in the row are set to grow vertically to accommodate their data at run-time by default. This setting can cause a row to expand beyond the height that you specify. To set a fixed row height, you must change the text box properties so they don't automatically expand.  
   
- When you set a column width, you are specifying the maximum width for the column in the rendered report. Columns do not automatically adjust horizontally to accommodate text.  
+ When you set a column width, you're specifying the maximum width for the column in the rendered report. Columns don't automatically adjust horizontally to accommodate text.  
   
- If a cell in a row or column contains a rectangle or data region, the minimum height and width of the cell is determined by the height and width of the contained item. For more information, see [Rendering Behaviors &#40;Report Builder  and SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md).  
+ If a cell in a row or column contains a rectangle or data region, the height and width of the contained item determines the minimum height and width of the cell. For more information, see [Renderer behaviors &#40;Report Builder&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-### To change row height by moving row handles  
+### Change row height by moving row handles  
   
-1.  In Design view, click anywhere in the tablix data region to select it. Gray row handles appear on the outside border of the tablix data region.  
+1.  In Design view, choose anywhere in the tablix data region to select it. Gray row handles appear on the outside border of the tablix data region.  
   
-2.  Hover over the row handle edge that you want to expand. A double-headed arrow appears.  
+1.  Hover over the row handle edge that you want to expand. A double-headed arrow appears.  
   
-3.  Click to grab the edge of the row and move it higher or lower to adjust the row height.  
+1.  Select the edge of the row and move it higher or lower to adjust the row height.  
   
-### To change row height by setting cell properties  
+### Change row height by setting cell properties  
   
-1.  In Design view, click a cell in the table row.  
+1.  In Design view, choose a cell in the table row.  
   
      ![Selected Cell in a Table](../../reporting-services/report-design/media/table-selectcell.png "Selected Cell in a Table")  
   
-2.  In the **Properties** pane that displays, modify the **Height** property, and then click anywhere outside the **Properties** pane.  
+1.  In the **Properties** pane that displays, modify the **Height** property, and then select anywhere outside the **Properties** pane.  
   
-     ![Properties Pane for selected table cell](../../reporting-services/report-design/media/cell-propertiespane.png "Properties Pane for selected table cell")  
+     :::image type="content" source="../../reporting-services/report-design/media/cell-propertiespane.png" alt-text="Screenshot of the Properties Pane for the selected table cell":::
+ 
+### Prevent a row from automatically expanding vertically  
   
-### To prevent a row from automatically expanding vertically  
+1.  In Design view, choose anywhere in the tablix data region to select it. Gray row handles appear on the outside border of the tablix data region.  
   
-1.  In Design view, click anywhere in the tablix data region to select it. Gray row handles appear on the outside border of the tablix data region.  
+1.  Select the row handle and choose the row.  
   
-2.  Click the row handle to select the row.  
-  
-3.  In the Properties pane, set CanGrow to **False**.  
+1.  In the **Properties** pane, set `CanGrow` to **False**.  
   
     > [!NOTE]  
-    >  If you cannot see the Properties pane, from the **View** menu, click **Properties**.  
+    >  If you can't see the **Properties** pane, from the **View** menu, select **Properties**.  
   
-### To change column width  
+### Change column width  
   
-1.  In Design view, click anywhere in the tablix data region to select it. Gray column handles appear on the outside border of the tablix data region.  
+1.  In Design view, select anywhere in the tablix data region to select it. Gray column handles appear on the outside border of the tablix data region.  
   
-2.  Hover over the column handle edge that you want to expand. A double-headed arrow appears.  
+1.  Hover over the column handle edge that you want to expand. A double-headed arrow appears.  
   
-3.  Click to grab the edge of the column and move it left or right to adjust the column width.  
+1.  Select the edge of the column and move it left or right to adjust the column width.  
   
-## See Also  
- [Tablix Data Region (Report Builder and SSRS)](tablix-data-region-report-builder-and-ssrs.md)   
- [Tablix Data Region Cells, Rows, and Columns (Report Builder) and SSRS](tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)   
- [Tables (Report Builder and SSRS)](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   
- [Matrices (Report Builder and SSRS)](create-a-matrix-report-builder-and-ssrs.md)   
- [Lists (Report Builder and SSRS)](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
- [Tables, Matrices, and Lists (Report Builder and SSRS)](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+## Related content  
+ [Tablix data region (Report Builder)](tablix-data-region-report-builder-and-ssrs.md)   
+ [Tablix data region cells, rows, and columns (Report Builder)](tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)   
+ [Tables (Report Builder)](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   
+ [Matrices (Report Builder)](create-a-matrix-report-builder-and-ssrs.md)   
+ [Lists (Report Builder)](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
+ [Tables, matrices, and lists (Report Builder)](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   

@@ -75,7 +75,7 @@ When `SET ANSI_DEFAULTS` is ON, QUOTED_IDENTIFIER is also ON.
 
 `SET QUOTED_IDENTIFIER` takes effect at [!INCLUDE[tsql](../../includes/tsql-md.md)] parse-time and only affects parsing, not query optimization or query execution.
 
-For a top-level ad hoc batch parsing begins using the session's current setting for QUOTED_IDENTIFIER. As the batch is parsed any occurrence of `SET QUOTED_IDENTIFIER` will change the parsing behavior from that point on, and save that setting for the session. So after the batch is parsed and executed, the session's QUOTED_IDENTIFER setting will be set according to the last occurrence of `SET QUOTED_IDENTIFIER` in the batch.
+For a top-level ad hoc batch parsing begins using the session's current setting for QUOTED_IDENTIFIER. As the batch is parsed any occurrence of `SET QUOTED_IDENTIFIER` will change the parsing behavior from that point on, and save that setting for the session. So after the batch is parsed and executed, the session's QUOTED_IDENTIFIER setting will be set according to the last occurrence of `SET QUOTED_IDENTIFIER` in the batch.
 
 Static [!INCLUDE[tsql](../../includes/tsql-md.md)] in a stored procedure is parsed using the QUOTED_IDENTIFIER setting in effect for the batch that created or altered the stored procedure. `SET QUOTED_IDENTIFIER` has no effect when it appears in the body of a stored procedure as static [!INCLUDE[tsql](../../includes/tsql-md.md)].
 

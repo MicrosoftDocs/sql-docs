@@ -2,7 +2,7 @@
 title: "Data tracing in SqlClient"
 description: Describes how Microsoft SqlClient Data Provider for SQL Server provides built-in data tracing functionality.
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: "12/04/2020"
 ms.service: sql
 ms.subservice: connectivity

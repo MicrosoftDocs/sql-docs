@@ -26,12 +26,12 @@ The following sections walk through the steps to set up a Pacemaker cluster and 
 
 # [Red Hat Enterprise Linux](#tab/rhel)
 
-The clustering layer is based on Red Hat Enterprise Linux (RHEL) [HA add-on](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/pdf/high_availability_add-on_overview/red_hat_enterprise_linux-7-high_availability_add-on_overview-en-us.pdf) built on top of [Pacemaker](https://clusterlabs.org/).
+The clustering layer is based on Red Hat Enterprise Linux (RHEL) [HA add-on](https://docs.redhat.com/documentation/red_hat_enterprise_linux/7/pdf/high_availability_add-on_overview/red_hat_enterprise_linux-7-high_availability_add-on_overview-en-us.pdf) built on top of [Pacemaker](https://clusterlabs.org/).
 
 > [!NOTE]  
 > Access to Red Hat full documentation requires a valid subscription.
 
-For more information on cluster configuration, resource agents options, and management, visit [RHEL reference documentation](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/high_availability_add-on_reference/index).
+For more information on cluster configuration, resource agents options, and management, visit [RHEL reference documentation](https://docs.redhat.com/documentation/red_hat_enterprise_linux/7/html/high_availability_add-on_reference/index).
 
 ### Roadmap
 
@@ -123,7 +123,7 @@ For information about fencing a failed node, see the following articles:
 
 - [Pacemaker Clusters from Scratch](https://clusterlabs.org/pacemaker/doc/deprecated/en-US/Pacemaker/1.1/html/Clusters_from_Scratch/index.html)
 - [Fencing and STONITH](https://clusterlabs.org/pacemaker/doc/crm_fencing.html)
-- [Red Hat High Availability Add-On with Pacemaker: Fencing](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/high_availability_add-on_administration/s1-fenceconfig-haaa)
+- [Red Hat High Availability Add-On with Pacemaker: Fencing](https://docs.redhat.com/documentation/red_hat_enterprise_linux/7/html/high_availability_add-on_administration/s1-fenceconfig-haaa)
 
 > [!NOTE]  
 > Because the node level fencing configuration depends heavily on your environment, disable it for this tutorial (it can be configured later). The following script disables node level fencing:
@@ -146,7 +146,7 @@ sudo pcs property set cluster-recheck-interval=2min
 
 If you already have an availability group resource managed by a Pacemaker cluster, Pacemaker package 1.1.18-11.el7 introduced a behavior change for the `start-failure-is-fatal` cluster setting when its value is `false`. This change affects the failover workflow. If a primary replica experiences an outage, the cluster is expected to fail over to one of the available secondary replicas. Instead, users notice that the cluster keeps trying to start the failed primary replica. If that primary never comes online (because of a permanent outage), the cluster never fails over to another available secondary replica. Because of this change, a previously recommended configuration to set `start-failure-is-fatal` is no longer valid, and the setting needs to be reverted back to its default value of `true`.
 
-Additionally, the AG resource needs to be updated to include the `failover-timeout` property.
+Additionally, the AG resource needs to be updated to include the `failure-timeout` property.
 
 To update the property value to `true` run:
 
@@ -160,7 +160,7 @@ To update the `ag_cluster` resource property `failure-timeout` to `60s`, run:
 pcs resource update ag_cluster meta failure-timeout=60s
 ```
 
-For information on Pacemaker cluster properties, see [Pacemaker Clusters Properties](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/high_availability_add-on_reference/ch-clusteropts-haar).
+For information on Pacemaker cluster properties, see [Pacemaker Clusters Properties](https://docs.redhat.com/documentation/red_hat_enterprise_linux/7/html/high_availability_add-on_reference/ch-clusteropts-haar).
 
 ### Create a SQL Server login for Pacemaker
 
@@ -438,7 +438,7 @@ crm configure property cluster-recheck-interval=2min
 
 If you already have an availability group resource managed by a Pacemaker cluster, Pacemaker package 1.1.18-11.el7 introduced a behavior change for the `start-failure-is-fatal` cluster setting when its value is `false`. This change affects the failover workflow. If a primary replica experiences an outage, the cluster is expected to fail over to one of the available secondary replicas. Instead, users notice that the cluster keeps trying to start the failed primary replica. If that primary never comes online (because of a permanent outage), the cluster never fails over to another available secondary replica. Because of this change, a previously recommended configuration to set `start-failure-is-fatal` is no longer valid, and the setting needs to be reverted back to its default value of `true`.
 
-Additionally, the AG resource needs to be updated to include the `failover-timeout` property.
+Additionally, the AG resource needs to be updated to include the `failure-timeout` property.
 
 To update the property value to `true` run:
 
@@ -468,7 +468,7 @@ Node level fencing ensures that a node doesn't run any resources. This is done b
 
 For more information, see:
 
-- [Pacemaker Clusters from Scratch](https://clusterlabs.org/pacemaker/doc/deprecated/en-US/Pacemaker/1.1/html/Clusters_from_Scratch)
+- [Pacemaker Clusters from Scratch](https://clusterlabs.org/pacemaker/doc/deprecated/en-US/Pacemaker/1.1/html/Clusters_from_Scratch/index.html)
 - [Fencing and STONITH](https://clusterlabs.org/pacemaker/doc/crm_fencing.html)
 - [SUSE HA documentation: Fencing and STONITH](https://documentation.suse.com/sle-ha/15-SP1/)
 
@@ -739,7 +739,7 @@ Resource level fencing ensures that no data corruption occurs if there's an outa
 
 Node level fencing ensures that a node doesn't run any resources. This is done by resetting the node, and the Pacemaker implementation is called STONITH. Pacemaker supports a great variety of fencing devices, for example, an uninterruptible power supply or management interface cards for servers.
 
-For more information, see [Pacemaker Clusters from Scratch](https://clusterlabs.org/pacemaker/doc/deprecated/en-US/Pacemaker/1.1/html/Clusters_from_Scratch) and [Fencing and Stonith](https://clusterlabs.org/pacemaker/doc/crm_fencing.html).
+For more information, see [Pacemaker Clusters from Scratch](https://clusterlabs.org/pacemaker/doc/deprecated/en-US/Pacemaker/1.1/html/Clusters_from_Scratch/index.html) and [Fencing and Stonith](https://clusterlabs.org/pacemaker/doc/crm_fencing.html).
 
 Because the node level fencing configuration depends heavily on your environment, we disable it for this tutorial (it can be configured at a later time). Run the following script on the primary node:
 
@@ -761,7 +761,7 @@ sudo crm configure property cluster-recheck-interval=2min
 
 If you already have an availability group resource managed by a Pacemaker cluster, Pacemaker package 1.1.18-11.el7 introduced a behavior change for the `start-failure-is-fatal` cluster setting when its value is `false`. This change affects the failover workflow. If a primary replica experiences an outage, the cluster is expected to fail over to one of the available secondary replicas. Instead, users notice that the cluster keeps trying to start the failed primary replica. If that primary never comes online (because of a permanent outage), the cluster never fails over to another available secondary replica. Because of this change, a previously recommended configuration to set `start-failure-is-fatal` is no longer valid, and the setting needs to be reverted back to its default value of `true`.
 
-Additionally, the AG resource needs to be updated to include the `failover-timeout` property.
+Additionally, the AG resource needs to be updated to include the `failure-timeout` property.
 
 To update the property value to `true` run:
 

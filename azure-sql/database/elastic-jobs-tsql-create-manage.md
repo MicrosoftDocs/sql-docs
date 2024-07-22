@@ -4,7 +4,7 @@ description: Learn how to create an elastic job agent and run scripts across man
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: srinia, mathoma
-ms.date: 12/04/2023
+ms.date: 04/03/2024
 ms.service: sql-database
 ms.subservice: elastic-jobs
 ms.topic: how-to
@@ -12,7 +12,7 @@ ms.custom: sqldbrb=1
 dev_langs:
   - "TSQL"
 ---
-# Create and manage elastic jobs by using T-SQL (preview)
+# Create and manage elastic jobs by using T-SQL
 
 [!INCLUDE [appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
@@ -31,9 +31,6 @@ In this end-to-end tutorial, you learn the steps required to run a query across 
 > * Add job steps to a job
 > * Start execution of a job
 > * Monitor a job
-
-> [!NOTE]
-> Elastic jobs are in preview. Features currently in preview are available under [supplemental terms of use](https://azure.microsoft.com/support/legal/preview-supplemental-terms/), review for legal terms that apply to Azure features that are in preview. Azure SQL Database provides previews to give you a chance to evaluate and [share feedback with the product group](https://feedback.azure.com/d365community/forum/ef2b2b38-2f25-ec11-b6e6-000d3a4f0f84) on features before they become generally available (GA).
 
 ## Create the elastic job agent
 
@@ -538,4 +535,4 @@ The following views are available in the [jobs database](elastic-jobs-overview.m
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Create and manage elastic jobs by using PowerShell (preview)](elastic-jobs-powershell-create.md)
+> [Create and manage elastic jobs by using PowerShell](elastic-jobs-powershell-create.md)

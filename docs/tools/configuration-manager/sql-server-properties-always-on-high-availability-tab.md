@@ -32,6 +32,7 @@ monikerRange: ">=sql-server-2016"
  Displays the name of the WSFC cluster in which the local computer is a node.  
   
  **Enable Always On Availability Groups**  
+ 
  Use this check box to enable or disable Always On Availability Groups on this instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], as follows:  
   
 -   If this check box is empty, Always On Availability Groups is currently disabled. To enable Always On Availability Groups, select this check box, click **OK**, and manually restart the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service.  
@@ -39,7 +40,8 @@ monikerRange: ">=sql-server-2016"
 -   If this check box is already selected, Always On Availability Groups is currently enabled. To disable Always On Availability Groups, uncheck the check box and click **OK**. This causes the server instance to restart.  
   
     > [!TIP]  
-    >  After disabling Always On Availability Groups, you should remove any local availability replicas from the server instance. If you remove the last replica of a given availability group, you should also remove the group.  
+    >  - After disabling Always On Availability Groups, you should remove any local availability replicas from the server instance. If you remove the last replica of a given availability group, you should also remove the group.
+    >  - If the **Always On Availability Groups** tab is missing, or the option to enable is grayed out, either your environment isn't [supported](../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md), or hasn't been properly configured. 
   
 ## UI element list  
   

@@ -13,12 +13,12 @@ ms.custom: devx-track-azurecli, devx-track-azurepowershell
 # Enable SQL Server managed backup to Azure
 
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  This topic describes how to enable [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] with default settings at both the database and instance level. It also describes how to enable email notifications and how to monitor backup activity.  
+  This topic describes how to enable [!INCLUDE[ss-managed-backup](../../includes/ss-managed-backup-md.md)] with default settings at both the database and instance level. It also describes how to enable email notifications and how to monitor backup activity.  
   
  This tutorial uses Azure PowerShell. Before starting the tutorial, [download and install Azure PowerShell](/powershell/azure/).  
   
 > [!IMPORTANT]  
->  If you also want to enable advanced options or use a custom schedule, configure those settings first before enabling [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. For more information, see [ Configure advanced options for SQL Server managed backup to Microsoft Azure](../../relational-databases/backup-restore/configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure.md).  
+>  If you also want to enable advanced options or use a custom schedule, configure those settings first before enabling [!INCLUDE[ss-managed-backup](../../includes/ss-managed-backup-md.md)]. For more information, see [ Configure advanced options for SQL Server managed backup to Microsoft Azure](../../relational-databases/backup-restore/configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure.md).  
   
 ## Create the Azure Blob Storage container
 
@@ -109,11 +109,11 @@ Record the container URL and SAS for use in creating a SQL CREDENTIAL. For more 
     SECRET = 'sv=2014-02-14&sr=c&sig=xM2LXVo1Erqp7LxQ%9BxqK9QC6%5Qabcd%9LKjHGnnmQWEsDf%5Q%se=2015-05-14T14%3B93%4V20X&sp=rwdl'  
     ```  
   
-2.  **Ensure SQL Server Agent service is Started and Running:** Start SQL Server Agent if it is not currently running.  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] requires SQL Server Agent to be running on the instance to perform backup operations.  You may want to set SQL Server Agent to run automatically to make sure that backup operations can occur regularly.  
+2.  **Ensure SQL Server Agent service is Started and Running:** Start SQL Server Agent if it is not currently running.  [!INCLUDE[ss-managed-backup](../../includes/ss-managed-backup-md.md)] requires SQL Server Agent to be running on the instance to perform backup operations.  You may want to set SQL Server Agent to run automatically to make sure that backup operations can occur regularly.  
   
 3.  **Determine the retention period:** Determine the retention period for the backup files. The retention period is specified in days and can range from 1 to 30.  
   
-4.  **Enable and configure [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] :** Start SQL Server Management Studio and connect to the target SQL Server instance. From the query window run the following statement after you modify the values for the database name, container url, and retention period per your requirements:  
+4.  **Enable and configure [!INCLUDE[ss-managed-backup](../../includes/ss-managed-backup-md.md)] :** Start SQL Server Management Studio and connect to the target SQL Server instance. From the query window run the following statement after you modify the values for the database name, container url, and retention period per your requirements:  
   
     > [!IMPORTANT]  
     >  To enable managed backup at the instance level, specify `NULL` for the `database_name` parameter.  
@@ -129,7 +129,7 @@ Record the container URL and SAS for use in creating a SQL CREDENTIAL. For more 
     GO  
     ```  
   
-     [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] is now enabled on the database you specified. It may take up to 15 minutes for the backup operations on the database to start to run.  
+     [!INCLUDE[ss-managed-backup](../../includes/ss-managed-backup-md.md)] is now enabled on the database you specified. It may take up to 15 minutes for the backup operations on the database to start to run.  
   
 5.  **Review Extended Event Default Configuration:** Review the Extended Event settings by running the following Transact-SQL statement.  
   
@@ -137,9 +137,9 @@ Record the container URL and SAS for use in creating a SQL CREDENTIAL. For more 
     SELECT * FROM msdb.managed_backup.fn_get_current_xevent_settings()  
     ```  
   
-     You should see that Admin, Operational, and Analytical channel events are enabled by default and cannot be disabled. This should be sufficient to monitor the events that require manual intervention.  You can enable debug events, but the debug channels include informational and debug events that [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] uses to detect issues and solve them.  
+     You should see that Admin, Operational, and Analytical channel events are enabled by default and cannot be disabled. This should be sufficient to monitor the events that require manual intervention.  You can enable debug events, but the debug channels include informational and debug events that [!INCLUDE[ss-managed-backup](../../includes/ss-managed-backup-md.md)] uses to detect issues and solve them.  
   
-6.  **Enable and Configure Notification for Health Status:** [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] has a stored procedure that creates an agent job to send out e-mail notifications of errors or warnings that may require attention. The following steps describe the process to enable and configure e-mail notifications:  
+6.  **Enable and Configure Notification for Health Status:** [!INCLUDE[ss-managed-backup](../../includes/ss-managed-backup-md.md)] has a stored procedure that creates an agent job to send out e-mail notifications of errors or warnings that may require attention. The following steps describe the process to enable and configure e-mail notifications:  
   
     1.  Setup Database Mail if it is not already enabled on the instance. For more information, see [Configure Database Mail](../../relational-databases/database-mail/configure-database-mail.md).  
   
@@ -153,7 +153,7 @@ Record the container URL and SAS for use in creating a SQL CREDENTIAL. For more 
         @parameter_value = '<email1;email2>'  
         ```  
   
-7.  **View backup files in the Azure Storage Account:** Connect to the storage account from SQL Server Management Studio or the Azure portal. You will see any backup files in the container you specified. Note that you might see a database and a log backup within 5 minutes of enabling [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] for the database.  
+7.  **View backup files in the Azure Storage Account:** Connect to the storage account from SQL Server Management Studio or the Azure portal. You will see any backup files in the container you specified. Note that you might see a database and a log backup within 5 minutes of enabling [!INCLUDE[ss-managed-backup](../../includes/ss-managed-backup-md.md)] for the database.  
   
 8.  **Monitor the Health Status:**  You can monitor through e-mail notifications you configured previously, or actively monitor the events logged. The following are some example Transact-SQL Statements used to view the events:  
   
@@ -199,7 +199,7 @@ Record the container URL and SAS for use in creating a SQL CREDENTIAL. For more 
     EXEC managed_backup.sp_get_backup_diagnostics @begin_time = @startofweek, @end_time = @endofweek;  
     ```
   
-The steps described in this section are specifically for configuring [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] for the first time on the database. You can modify the existing configurations using the same system stored procedures and provide the new values.  
+The steps described in this section are specifically for configuring [!INCLUDE[ss-managed-backup](../../includes/ss-managed-backup-md.md)] for the first time on the database. You can modify the existing configurations using the same system stored procedures and provide the new values.  
   
 ## See also  
  [SQL Server managed backup to Azure](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)

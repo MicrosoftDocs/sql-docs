@@ -10,6 +10,8 @@ ms.topic: conceptual
 ---
 # How to Use the CDC Service Command-Line Interface
 
+[!INCLUDE [oracle-cdc-retirement](../includes/attunity-oracle-cdc-retirement.md)]
+
   The Oracle CDC service program, xdbcdcsvc.exe, normally runs the Oracle CDC Windows service but it can be invoked directly from the command line to create, or delete an Oracle CDC Windows service.  
   
 ### To use the command line  

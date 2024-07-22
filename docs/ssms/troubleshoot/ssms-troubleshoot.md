@@ -1,85 +1,74 @@
 ---
-title: Troubleshooting an unresponsive system or crash with SSMS
+title: Advanced troubleshooting for SSMS
 description: "Get diagnostic data after a SQL Server Management Studio (SSMS) crash"
-author: markingmyname
-ms.author: maghan
-ms.reviewer: drskwier
-ms.date: 09/18/2019
+author: erinstellato-ms
+ms.author: erinstellato
+ms.reviewer: maghan, randolphwest
+ms.date: 05/10/2024
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
 ---
 
-# Get diagnostic data after a SQL Server Management Studio (SSMS) crash
+# Advanced troubleshooting for SQL Server Management Studio (SSMS)
 
 [!INCLUDE[Applies to](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-## Get full memory dump after an unresponsive system or crash
+There are scenarios where trying to capture a [memory dump](get-full-memory-dump.md) for SSMS doesn't generate the expected output, and it requires advanced troubleshooting.
 
-Get a full memory dump of SQL Server Management Studio (SSMS) when it stops responding or crashes.
+The following steps require [Visual Studio](https://visualstudio.microsoft.com/vs/community/)(Community Edition or higher) to be installed.
 
-To capture diagnostic information to troubleshoot a crash or an unresponsive SSMS, use the following steps:
+To capture a diagnostic information with Visual Studio to troubleshoot a crash or an unresponsive SSMS, use the following steps:
 
-1. Download [ProcDump](/sysinternals/downloads/procdump).
+1. Open Visual Studio.
+1. Select **Continue without code** to open an empty window.
+1. Start SSMS, if it's not already open.
+1. Select **Debug > Attach to Process...**.
+1. In the **Attach to Process** dialog, within the **Filter processes** box, enter SSMS.
+1. In the list of processes select SSMS.exe and then **Attach**.
+1. An Output window appears, with **Debug** selected for **Show output from:**.
+1. Recreate the problematic behavior in SSMS.
+1. Once SSMS closes, select **Debug > Save Dump As...** in Visual Studio and save the .dmp file to a folder.
+1. Zip up the folder.
+1. Stop debugging before closing Visual Studio.
 
-2. Unzip the download into a folder.
+## Share the information
 
-3. Open the command prompt and run the following command.
+1. To share the information with the SSMS Team, log the issue at https://aka.ms/sqlfeedback.
+1. Then share the memory dump file collected to OneDrive (or equivalent) where the file can be collected.
 
-    ```console
-    <PathToProcDumpFolder>\procdump.exe -e -h -ma -w ssms.exe
+    > [!Important]
+    > Memory dump files may contain sensitive information.
+
+## Enable verbose logging
+
+The information logged from SSMS doesn't always provide enough detail for troubleshooting, and verbose logging can be enabled to capture more details.
+
+1. Determine the location of the SSMS executable (ssms.exe). The default location for SSMS 20 is C:\Program Files (x86)\Microsoft SQL Server Management Studio 20\Common7\IDE, but may be different on your machine.
+1. Open a command prompt and run the following, using the ssms.exe location in the previous step for the second line.
+
+    ```cmd
+    SET VsLogActivity=1
+    "C:\Program Files (x86)\Microsoft SQL Server Management Studio 20\Common7\IDE\ssms.exe"
     ```
 
-    If it prompts you to accept a license agreement, select *Agree*.
+1. SSMS starts.
+1. Open Windows Explorer and navigate to %USERPROFILE%\AppData\Roaming\Microsoft\AppEnv\15.0.
+1. Close SSMS to stop the verbose logging.
+1. Inspect the ActivityLog.xml file which now contains more details that can assist with troubleshooting.
 
-4. Start SSMS, if it isn't running already.
+## Clear SSMS cache files
 
-5. Reproduce the issue.
+Data stored in cache files may unexpectedly interfere with SSMS behavior. To rule out this problem, you can clear the files manually.  
 
-6. Wait as the text appears in the cmd prompt about writing the dump file, don't proceed until it has finished.
+1. Close all instances of SSMS.
+1. Remove all files in the following folders (it's recommended to make a copy of the RegSrvr*.xml file if you want to retain any entries under **Local Server Groups** in **Registered Servers**).
 
-7. Create a new folder and copy the *.dmp file that is written out to that folder.
+    * "%USERPROFILE%\AppData\Local\Microsoft\SQL Server Management Studio"
+    * "%USERPROFILE%\AppData\Roaming\Microsoft\SQL Server Management Studio"
 
-8. Copy the following files into the same folder.
+1. Start SSMS and observe if removing the cache files resolved the issue.
 
-    * "C:\Windows\Microsoft.NET\Framework\v4.0.30319\mscordacwks.dll"
-    * "C:\Windows\Microsoft.NET\Framework\v4.0.30319\SOS.dll"
-    * "C:\Windows\Microsoft.NET\Framework\v4.0.30319\clr.dll"
+## Related content
 
-9. Zip up the folder
-
-## Get full memory dump for an OutOfMemoryException
-
-Get a full memory dump of SSMS when it throws an OutOfMemoryException.
-
-You can get a full memory dump with any managed exception.
-
-To capture diagnostic information to troubleshoot an OutOfMemoryException from SSMS, use the following steps:
-
-1. Download [ProcDump](/sysinternals/downloads/procdump).
-
-2. Unzip the download into a folder.
-
-3. Open Command Prompt and run the following command.
-
-    ```console
-    <PathToProcDumpFolder>\procdump.exe -e 1 -f System.OutOfMemoryException -ma -w ssms.exe
-    ```
-
-    If it prompts you to accept a license agreement, select *Agree*.
-
-4. Start SQL Server Management Studio if not started already.
-
-5. Reproduce the issue.
-
-6. Wait as the text appears in the cmd prompt about writing the dump file, don't proceed until it has finished.
-
-7. Create a new folder and copy the *.dmp file that is written out to that folder.
-
-8. Copy the following files into the same folder.
-
-    * "C:\Windows\Microsoft.NET\Framework\v4.0.30319\mscordacwks.dll"
-    * "C:\Windows\Microsoft.NET\Framework\v4.0.30319\SOS.dll"
-    * "C:\Windows\Microsoft.NET\Framework\v4.0.30319\clr.dll"
-
-9. Zip up the folder.
+[SQL Server Management Studio](../sql-server-management-studio-ssms.md)

@@ -8,10 +8,11 @@ ms.date: 07/30/2023
 ms.service: sql-managed-instance
 ms.subservice: service-overview
 ms.topic: overview
-ms.custom: sqldbrb=1, build-2023, build-2023-dataai, ignite-2023
+ms.custom: sqldbrb=1, build-2023, build-2023-dataai, ignite-2023, build-2024
 ---
 
 # What is Azure SQL Managed Instance?
+
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
 
 This article provides an overview of Azure SQL Managed Instance, a fully managed platform as a service (PaaS) database engine that handles most database management functions such as upgrading, patching, backups, and monitoring without user involvement.
@@ -28,7 +29,7 @@ If you're new to Azure SQL Managed Instance, check out the *Azure SQL Managed In
 
 ## Overview
 
-Azure SQL Managed Instance is a PaaS service that has near 100% compatibility with the latest Enterprise Edition SQL Server database engine, providing a native [virtual network (VNet)](/azure/virtual-network/virtual-networks-overview) implementation that addresses common security concerns, and a [business model](https://azure.microsoft.com/pricing/details/sql-database/) favorable to existing SQL Server customers. SQL Managed Instance allows existing SQL Server customers to lift and shift their on-premises applications to the cloud with minimal application and database changes. At the same time, SQL Managed Instance provides all PaaS capabilities (automatic patching and version updates, [automated backups](automated-backups-overview.md), [high availability](high-availability-sla.md)) to drastically reduce management overhead and the total cost of ownership (TCO).
+Azure SQL Managed Instance is a PaaS service that has near 100% compatibility with the latest Enterprise Edition SQL Server database engine, providing a native [virtual network (VNet)](/azure/virtual-network/virtual-networks-overview) implementation that addresses common security concerns, and a [business model](https://azure.microsoft.com/pricing/details/sql-database/) favorable to existing SQL Server customers. SQL Managed Instance allows existing SQL Server customers to lift and shift their on-premises applications to the cloud with minimal application and database changes. At the same time, SQL Managed Instance provides all PaaS capabilities (automatic patching and version updates, [automated backups](automated-backups-overview.md), [high availability](high-availability-sla-local-zone-redundancy.md)) to drastically reduce management overhead and the total cost of ownership (TCO).
 
 SQL Managed Instance is designed for customers looking to migrate a large number of apps from an on-premises or IaaS, self-built, or ISV provided environment to a fully managed PaaS cloud environment, with as low a migration effort as possible. Using the fully automated [Azure Data Migration Service](/azure/dms/tutorial-sql-server-to-managed-instance#create-an-azure-database-migration-service-instance), or the [Managed Instance link](managed-instance-link-feature-overview.md), customers can lift and shift their existing SQL Server database or SQL Server instance to Azure SQL Managed Instance, which offers compatibility with SQL Server and complete isolation of customer instances with native VNet support. 
 
@@ -53,7 +54,7 @@ SQL Managed Instance combines the best features that are available both in Azure
 
 | **PaaS benefits** | **Business continuity** |
 | --- | --- |
-|No purchasing or managing hardware <br>No management overhead to manage underlying infrastructure <br>Quick provisioning and service scaling <br> Automated patching and version upgrade <br /> You can [stop and start](instance-stop-start-how-to.md) the instance to save on costs <br>Integration with other PaaS data services |99.99% uptime SLA  <br>Built-in [high availability](high-availability-sla.md) <br> [SQL Server disaster recovery to SQL Managed Instance](managed-instance-link-feature-overview.md) <br> Data protected with [automated backups](automated-backups-overview.md) <br>Customer configurable backup retention period <br>User-initiated [backups](/sql/t-sql/statements/backup-transact-sql?preserve-view=true&view=azuresqldb-mi-current) that can be [restored to SQL Server 2022](restore-database-to-sql-server.md) <br>[Point-in-time database restore](../database/recovery-using-backups.md#point-in-time-restore) capability |
+|No purchasing or managing hardware <br>No management overhead to manage underlying infrastructure <br>Quick provisioning and service scaling <br> Automated patching and version upgrade <br /> You can [stop and start](instance-stop-start-how-to.md) the instance to save on costs <br>Integration with other PaaS data services |99.99% uptime SLA  <br>Built-in [high availability](high-availability-sla-local-zone-redundancy.md) <br> [SQL Server disaster recovery to SQL Managed Instance](managed-instance-link-feature-overview.md) <br> Data protected with [automated backups](automated-backups-overview.md) <br>Customer configurable backup retention period <br>User-initiated [backups](/sql/t-sql/statements/backup-transact-sql?preserve-view=true&view=azuresqldb-mi-current) that can be [restored to SQL Server 2022](restore-database-to-sql-server.md) <br>[Point-in-time database restore](../database/recovery-using-backups.md#point-in-time-restore) capability |
 |**Security and compliance** | **Management**|
 |Isolated environment ([VNet integration](connectivity-architecture-overview.md), single tenant service, dedicated compute and storage) <br> Adheres to the same compliance standards as Azure SQL Database <br>[Transparent data encryption (TDE)](/sql/relational-databases/security/encryption/transparent-data-encryption-azure-sql)<br>[Microsoft Entra authentication](../database/authentication-aad-overview.md), single sign-on support <br> [Microsoft Entra server principals (logins)](/sql/t-sql/statements/create-login-transact-sql?view=azuresqldb-mi-current&preserve-view=true) <br>[Windows authentication for Microsoft Entra principals](winauth-azuread-overview.md)  <br>[SQL auditing](auditing-configure.md) <br>[Advanced Threat Protection](threat-detection-configure.md) |Azure Resource Manager API for automating service provisioning and scaling <br>Azure portal functionality for manual service provisioning and scaling <br>Data Migration Service
 
@@ -65,7 +66,7 @@ The following table shows key details of SQL Managed Instance:
 |Feature | Description|
 |---|---|
 | Azure portal management | Yes|
-| SQL Server version/build | The latest stable SQL Server database engine  |
+| SQL Server version/build | The latest stable SQL Server database engine<sup>1</sup> |
 | Managed automated backups | Yes |
 | Automatic software patching | Yes |
 | The latest database engine features | Yes |
@@ -75,6 +76,8 @@ The following table shows key details of SQL Managed Instance:
 | Number of log files (LOG) per database | 1 |
 | VNet - Azure Resource Manager deployment | Yes |
 | VNet - Classic deployment model | No |
+
+<sup>1</sup> Based on the [**Always-up-to-date** update policy](update-policy.md#always-up-to-date-update-policy). Instances configured with the **SQL Server 2022** update policy have updates from the latest stable SQL Server 2022 database engine. 
 
 ## Supported SQL features
 
@@ -128,7 +131,11 @@ The following briefly lists SQL Server features that are compatible with Azure S
     :::column-end:::
 :::row-end:::
 
-For a thorough list comparing compatible features between SQL Server and Azure SQL Managed Instance, see [SQL Managed Instance feature comparison](../database/features-comparison.md), and for a list of T-SQL differences in SQL Managed Instance versus SQL Server, see [SQL Managed Instance T-SQL differences from SQL Server](transact-sql-tsql-differences-sql-server.md).
+For a comprehensive list of SQL Server and Azure SQL Managed Instance features, review [SQL Managed Instance feature comparison](../database/features-comparison.md).   
+For a list of T-SQL differences between SQL Managed Instance and SQL Server, review [SQL Managed Instance T-SQL differences from SQL Server](transact-sql-tsql-differences-sql-server.md).
+
+> [!NOTE]
+> Some SQL Managed Instance feature availability depends on the configured [update policy](update-policy.md). 
 
 
 ### Key differences between SQL Server on-premises and SQL Managed Instance
@@ -156,7 +163,7 @@ Azure SQL Managed Instance doesn't have the Business Intelligence suite natively
 
 ### Administration features
 
-SQL Managed Instance enables system administrators to spend less time on administrative tasks because the service either performs them for you or greatly simplifies those tasks. For example, [OS/RDBMS installation and patching](../database/high-availability-sla.md), [dynamic instance resizing and configuration](../database/single-database-scale.md), [backups](automated-backups-overview.md), [database replication](replication-between-two-instances-configure-tutorial.md) (including system databases), [high availability configuration](high-availability-sla.md), and configuration of health and [performance monitoring](/azure/azure-monitor/insights/azure-sql) data streams.
+SQL Managed Instance enables system administrators to spend less time on administrative tasks because the service either performs them for you or greatly simplifies those tasks. For example, [OS/RDBMS installation and patching](../database/high-availability-sla-local-zone-redundancy.md), [dynamic instance resizing and configuration](../database/single-database-scale.md), [backups](automated-backups-overview.md), [database replication](replication-between-two-instances-configure-tutorial.md) (including system databases), [high availability configuration](high-availability-sla-local-zone-redundancy.md), and configuration of health and [performance monitoring](/azure/azure-monitor/insights/azure-sql) data streams.
 
 For more information, see [a list of supported and unsupported SQL Managed Instance features](../database/features-comparison.md), and [T-SQL differences between SQL Managed Instance and SQL Server](transact-sql-tsql-differences-sql-server.md).
 
@@ -263,7 +270,7 @@ SQL Managed Instance targets user scenarios with mass database migration from on
 The migration approach leverages SQL backups to Azure Blob storage. Backups stored in Azure Blob Storage can be directly restored into a managed instance using the [T-SQL RESTORE command](/sql/t-sql/statements/restore-statements-transact-sql?preserve-view=true&view=azuresqldb-mi-current).
 
 - For a quickstart showing how to restore the Wide World Importers - Standard database backup file, see [Restore a backup file to a managed instance](restore-sample-database-quickstart.md). This quickstart shows that you have to upload a backup file to Azure Blob Storage and secure it using a shared access signature (SAS).
-- For information about restore from URL, see [Native RESTORE from URL](../migration-guides/managed-instance/sql-server-to-managed-instance-guide.md#backup-and-restore).
+- For information about restore from URL, see [Native RESTORE from URL](../migration-guides/managed-instance/sql-server-to-managed-instance-guide.md#back-up-and-restore).
 
 > [!IMPORTANT]
 > Backups from a managed instance can only be restored to other managed instances, or to SQL Server 2022. They cannot be restored to other versions of SQL Server, or to Azure SQL Database.
@@ -291,9 +298,11 @@ The following table shows several properties, accessible through Transact-SQL, t
 |Property|Value|Comment|
 |---|---|---|
 |`@@VERSION`|Microsoft SQL Azure (RTM) - 12.0.2000.8 2018-03-07 Copyright (C) 2018 Microsoft Corporation.|This value is same as in SQL Database. This **does not** indicate SQL engine version 12 (SQL Server 2014). SQL Managed Instance always runs the latest stable SQL engine version, which is equal to or higher than latest available RTM version of SQL Server.  |
-|`SERVERPROPERTY ('Edition')`|SQL Azure|This value is same as in SQL Database.|
+|`SERVERPROPERTY('Edition')`|SQL Azure|This value is same as in SQL Database.|
 |`SERVERPROPERTY('EngineEdition')`|8|This value uniquely identifies a managed instance.|
-|`@@SERVERNAME`, `SERVERPROPERTY ('ServerName')`|Full instance DNS name in the following format:`<instanceName>`.`<dnsPrefix>`.database.windows.net, where `<instanceName>` is name provided by the customer, while `<dnsPrefix>` is autogenerated part of the name guaranteeing global DNS name uniqueness ("wcus17662feb9ce98", for example)|Example: my-managed-instance.wcus17662feb9ce98.database.windows.net|
+|`@@SERVERNAME`, `SERVERPROPERTY('ServerName')`|Full instance DNS name in the following format:`<instanceName>`.`<dnsPrefix>`.database.windows.net, where `<instanceName>` is name provided by the customer, while `<dnsPrefix>` is autogenerated part of the name guaranteeing global DNS name uniqueness ("wcus17662feb9ce98", for example)|Example: my-managed-instance.wcus17662feb9ce98.database.windows.net|
+| `SERVERPROPERTY('ProductUpdateType')`| CU, or Continuous | Update cadence the instance follows. Corresponds to the Azure SQL Managed Instance [update policy](/azure/azure-sql/managed-instance/update-policy). <br /><br />CU = Updates are deployed via cumulative updates (CUs) for the corresponding major SQL Server release (**SQL Server 2022** update policy).<br /><br />Continuous = New features are brought to Azure SQL Managed Instance as soon as they are available, independent of the SQL Server release cadence (**Always-up-to-date** update policy).|
+
 
 ## Next steps
 

@@ -4,7 +4,7 @@ description: This page contains a listing of bugs fixed in each release, startin
 author: v-chojas
 ms.author: v-chojas
 ms.reviewer: v-davidengel
-ms.date: 10/10/2023
+ms.date: 04/09/2024
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: conceptual
@@ -14,6 +14,20 @@ helpviewer_keywords:
 # List of bugs fixed
 
 This page contains a listing of bugs fixed in each release, starting with [!INCLUDE[msCoName](../../includes/msconame-md.md)] ODBC Driver 17 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+
+### Bug fixes in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] ODBC Driver 18.3.3.1 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+
+- Fix crashes when receiving invalid data from server
+- Fix infinite loop when receiving invalid data from server
+- Fix App Service Containers MSI Authentication
+
+### Bug fixes in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] ODBC Driver 17.10.6.1 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+
+- Fix crashes when receiving invalid data from server
+- Fix infinite loop when receiving invalid data from server
+- Fix a crash when attempting to connect under low-memory conditions
+- Fix memory leak upon reconnect
+- Fix App Service Containers MSI Authentication
 
 ### Bug fixes in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] ODBC Driver 18.3.2 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
@@ -28,6 +42,7 @@ This page contains a listing of bugs fixed in each release, starting with [!INCL
 ### Bug fixes in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] ODBC Driver 18.3.1 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 - Fix a bug in setting of data classification version attribute
+
 
 ### Bug fixes in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] ODBC Driver 18.2.2 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
@@ -151,11 +166,11 @@ This page contains a listing of bugs fixed in each release, starting with [!INCL
 
 ### Bug fixes in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] ODBC Driver 17.4.2 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
- - Fix for an issue where process ID and application name would not be sent correctly to SQL Server (for sys.dm_exec_sessions analysis) (Linux)
- - Removed redundant dependency on libuuid (Linux)
- - Fix for a bug with sending UTF8 data to SQL Server 2019
- - Fix for a bug where locales that end in "@euro" were not being correctly detected (Linux)
- - Fix for XML data being returned incorrectly when fetched as an output parameter while using Always Encrypted
+- Fix for an issue where process ID and application name wouldn't be sent correctly to SQL Server (for sys.dm_exec_sessions analysis) (Linux)
+- Removed redundant dependency on libuuid (Linux)
+- Fix for a bug with sending UTF8 data to SQL Server 2019
+- Fix for a bug where locales that end in "@euro" weren't being correctly detected (Linux)
+- Fix for XML data being returned incorrectly when fetched as an output parameter while using Always Encrypted
 
 ### Bug fixes in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] ODBC Driver 17.4 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
@@ -166,7 +181,7 @@ This page contains a listing of bugs fixed in each release, starting with [!INCL
 - Fix COM initialization error during Microsoft Entra interactive authentication
 - Fix SQLGetData() for multi-byte UTF8 data
 - Fix retrieving length of sql_variant columns using SQLGetData()
-- Fix importing of sql_variant columns containing more than 7992 bytes using bcp
+- Fix importing of sql_variant columns containing more than 7,992 bytes using bcp
 - Fix sending of correct encoding to server for narrow character data
 
 ### Bug fixes in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] ODBC Driver 17.3 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
@@ -186,22 +201,22 @@ This page contains a listing of bugs fixed in each release, starting with [!INCL
 - Fixed incorrect uninstallation behavior when both version 13 and 17 are installed on Windows
 - Fixed decryption behavior on older Windows platform (Windows 7, 8 and Server 2012)
 - Fixed a cache issue when using ADAL Authentication on Windows
-- Fixed an issue which was locking and overwriting trace logs on Windows
+- Fixed an issue that was locking and overwriting trace logs on Windows
 
 ### Bug fixes in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] ODBC Driver 17.1 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 - Fixed 1-second delay when calling SQLFreeHandle with MARS enabled and connection attribute "Encrypt=yes"
-- Fixed an error 22003 crash in SQLGetData when the size of the buffer passed in is smaller then the data being retrieved (Windows)
+- Fixed an error 22003 crash in SQLGetData when the size of the buffer passed in is smaller than the data being retrieved (Windows)
 - Fixed truncated ADAL error messages
 - Fixed a rare bug on 32-bit Windows when converting a floating point number to an integer
 - Fixed an issue where inserting double into decimal field with Always Encrypted on would return data truncation error
 - Fixed a warning on macOS installer
-- Fixed sending incorrect state to SQL Server during Session Recovery attempt when Connection Resiliency and Connection Pooling both are enabled, causing session to be dropped by the Server
+- Fixed sending incorrect state to SQL Server during Session Recovery attempt when Connection Resiliency and Connection Pooling both are enabled, causing the server to drop the session
 
 ### Bug fixes in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] ODBC Driver 17 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 - Fixed a bug where when using Kerberos authentication, bulk insert could fail with "access denied" error
-- Removed workaround for a unixODBC bug present in version below 2.3.1 (driver doubled the sizes of certain buffers passed to unixODBC)
+- Removed workaround for a unixODBC bug present in versions older than 2.3.1 (driver doubled the sizes of certain buffers passed to unixODBC)
 - Fixed Connection Resiliency (reconnect) stopping to respond when using ColumnEncryption=enabled
 - Fixed DSN creation bug, where when using "Active Directory Interactive authentication" option Azure Authentication window could become unresponsive (Windows)
 - Fixed a rare crash during ODBC shutdown when asynchronous execution is enabled (happened when clearing connection handle)

@@ -1,8 +1,8 @@
 ---
 title: Create an FCI with a premium file share
 description: "Use a premium file share (PFS) to create a failover cluster instance (FCI) with SQL Server on Azure virtual machines."
-author: tarynpratt
-ms.author: tarynpratt
+author: AbdullahMSFT
+ms.author: amamun
 ms.reviewer: mathoma, randolphwest
 ms.date: 10/02/2023
 ms.service: virtual-machines-sql
@@ -185,7 +185,7 @@ If you deployed your SQL Server VMs in multiple subnets, skip this step. If you 
 
 - Microsoft Distributed Transaction Coordinator (MSDTC) isn't supported on Windows Server 2016 and earlier.
 - FILESTREAM isn't supported for a failover cluster with a premium file share. To use filestream, deploy your cluster by using [Storage Spaces Direct](failover-cluster-instance-storage-spaces-direct-manually-configure.md) or [Azure shared disks](failover-cluster-instance-azure-shared-disks-manually-configure.md) instead.
-- SQL Server FCIs registered with the extension don't support features that require the agent, such as automated backup, patching, and advanced portal management. See the [table of benefits](sql-server-iaas-agent-extension-automate-management.md#feature-benefits).
+- SQL Server FCIs registered with the SQL IaaS Agent extension don't support features that require the agent, such as automated backup, patching, Microsoft Entra authentication and advanced portal management. See the [table of benefits](sql-server-iaas-agent-extension-automate-management.md#feature-benefits) for more information.
 - Database Snapshots aren't currently supported with [Azure Files due to sparse files limitations](/rest/api/storageservices/features-not-supported-by-the-azure-file-service).
 - Since database snapshots aren't supported, CHECKDB for user databases falls back to CHECKDB WITH TABLOCK. TABLOCK limits the checks that are performed - DBCC CHECKCATALOG isn't run on the database, and Service Broker data isn't validated.
 - DBCC CHECKDB on `master` and `msdb` database isn't supported.

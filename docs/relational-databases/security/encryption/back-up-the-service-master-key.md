@@ -4,7 +4,7 @@ description: Learn how to back up the service master key in SQL Server by using 
 author: jaszymas
 ms.author: jaszymas
 ms.reviewer: vanto
-ms.date: "04/02/2021"
+ms.date: "04/05/2024"
 ms.service: sql
 ms.subservice: security
 ms.topic: conceptual
@@ -13,7 +13,7 @@ helpviewer_keywords:
 ---
 # Back Up the Service Master Key
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  This article describes how to back up the Service Master key in [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] by using [!INCLUDE[tsql](../../../includes/tsql-md.md)]. The service master key is the root of the encryption hierarchy. It should be backed up and stored in a secure, off-site location. Creating this backup should be one of the first administrative actions performed on the server.  
+  This article describes how to back up the Service Master key in [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] by using [!INCLUDE[tsql](../../../includes/tsql-md.md)]. The service master key is the root of the encryption hierarchy. The service master key directly or indirectly protects all other keys and secrets in the tree. It should be backed up and stored in a secure, off-site location. Creating this backup should be one of the first administrative actions performed on the server.  
   
 We recommend that you back up the master key as soon as it is created, and store the backup in a secure, off-site location.  
   

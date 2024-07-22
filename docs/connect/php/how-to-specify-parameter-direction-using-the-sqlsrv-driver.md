@@ -2,7 +2,7 @@
 title: "How to: specify parameter direction using the SQLSRV driver"
 description: "Learn how to specify parameter direction when calling a stored procedure using the Microsoft SQLSRV Driver for PHP for SQL Server"
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: "08/10/2020"
 ms.service: sql
 ms.subservice: connectivity

@@ -466,7 +466,7 @@ VALUES (N'Square Yards', N'Y2', GETDATE());
 ```  
   
 ###  <a name="ColumnValues"></a> Handling Column Values  
- Examples in this section demonstrate methods of inserting values into columns that are defined with an IDENTITY property, DEFAULT value, or are defined with data types such as **uniqueidentifer** or user-defined type columns.  
+ Examples in this section demonstrate methods of inserting values into columns that are defined with an IDENTITY property, DEFAULT value, or are defined with data types such as **uniqueidentifier** or user-defined type columns.  
   
 #### D. Inserting data into a table with columns that have default values  
  The following example shows inserting rows into a table with columns that automatically generate a value or have a default value. `Column_1` is a computed column that automatically generates a value by concatenating a string with the value inserted into `column_2`. `Column_2` is defined with a default constraint. If a value is not specified for this column, the default value is used. `Column_3` is defined with the **rowversion** data type, which automatically generates a unique, incrementing binary number. `Column_4` does not automatically generate a value. When a value for this column is not specified, NULL is inserted. The INSERT statements insert rows that contain values for some of the columns but not all. In the last INSERT statement, no columns are specified and only the default values are inserted by using the DEFAULT VALUES clause.  

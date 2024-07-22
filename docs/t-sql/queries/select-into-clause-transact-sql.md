@@ -99,7 +99,7 @@ The `SELECT...INTO` statement operates in two parts - the new table is created, 
 `SELECT...INTO` statements that contain user-defined functions (UDFs) are fully logged operations. If the user-defined functions that are used in the `SELECT...INTO` statement don't perform any data access operations, you can specify the SCHEMABINDING clause for the user-defined functions, which will set the derived UserDataAccess property for those user-defined functions to 0. After this change, `SELECT...INTO` statements will be minimally logged. If the `SELECT...INTO` statement still references at least one user-defined function that has this property set to 1, the operation is fully logged.
   
 ## Permissions  
- Requires CREATE TABLE permission in the destination database.  
+ Requires CREATE TABLE permission in the database and ALTER permission on the schema in which the table is being created.
   
 ## Examples  
   

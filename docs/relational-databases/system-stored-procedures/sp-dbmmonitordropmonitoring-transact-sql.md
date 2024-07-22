@@ -34,7 +34,7 @@ sp_dbmmonitordropmonitoring
 
 ## Arguments
 
-None
+None.
 
 ## Return code values
 

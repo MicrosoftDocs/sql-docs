@@ -2,7 +2,7 @@
 title: "How to: perform transactions"
 description: "This topic explains and demonstrates how to perform transactions when using the Microsoft Drivers for PHP for SQL Server"
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: "08/10/2020"
 ms.service: sql
 ms.subservice: connectivity

@@ -2,7 +2,7 @@
 title: Persisted data source objects (OLE DB driver)
 description: Learn about OLE DB Driver for SQL Server support for persisted data source objects with the IPersistFile interface in these examples.
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: "06/14/2018"
 ms.service: sql
 ms.subservice: connectivity

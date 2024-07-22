@@ -21,9 +21,9 @@ dev_langs:
 # managed_backup.fn_is_master_switch_on (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
-  Returns the state of the [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] operations on the instance of SQL Server.  
+  Returns the state of the [!INCLUDE[ss-managed-backup](../../includes/ss-managed-backup-md.md)] operations on the instance of SQL Server.  
   
- Use this function to get the current state of [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].  
+ Use this function to get the current state of [!INCLUDE[ss-managed-backup](../../includes/ss-managed-backup-md.md)].  
   
  
  :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -40,7 +40,7 @@ managed_backup.fn_is_master_switch_on ()
 ## Return Type  
  **BIT**  
   
- 1 = [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] is active, 0 = [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] is paused.  
+ 1 = [!INCLUDE[ss-managed-backup](../../includes/ss-managed-backup-md.md)] is active, 0 = [!INCLUDE[ss-managed-backup](../../includes/ss-managed-backup-md.md)] is paused.  
   
 ## Security  
   

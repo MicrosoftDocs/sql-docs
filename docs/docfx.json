@@ -37,7 +37,6 @@
     "overwrite": [],
     "externalReference": [],
     "globalMetadata": {
-      "layout": "Conceptual",
       "uhfHeaderId": "MSDocsHeader-DocsSQL",
       "contributors_to_exclude": [
         "hexiaokai",
@@ -114,13 +113,18 @@
         "data-quality-services/**/*.md": "Data Quality Services (DQS)",
         "azdata/**/*.md": "Azure Data CLI (azdata)",
         "tools/synapse-pathway/**/*.md": "Azure Synapse Pathway",
-        "sql-server/azure-arc/**/*.md": "SQL Server enabled by Azure Arc"
+        "sql-server/azure-arc/**/*.md": "SQL Server enabled by Azure Arc",
+        "sql-server/azure-arc/**/*.yml": "SQL Server enabled by Azure Arc"
       },
       "breadcrumb_path": {
         "**/*.md": "~/breadcrumb/toc.yml"
       },
       "layout": {
-        "**/index.yml": "LandingPage"
+          "**/*.md": "Conceptual",
+          "**/*.yml": "Conceptual",
+          "**/toc.md": null,
+          "**/toc.yml": null,
+          "**/index.yml": "LandingPage"
       },
       "monikerRange": {
         "ado/**/*.md": ">= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-current || = azuresqldb-mi-current || = azure-sqldw-latest || >= aps-pdw-2016",
@@ -192,10 +196,12 @@
         "machine-learning/**/*.md": "machine-learning/machine-learning-zone-pivot-groups.json"
       },
       "author": {
-        "azdata/**/*.md": "swells"
+        "azdata/**/*.md": "swells",
+        "**/*/index.yml": "MikeRayMSFT"
       },
       "ms.author": {
-        "azdata/**/*.md": "seanw"
+        "azdata/**/*.md": "seanw",
+        "**/*/index.yml": "mikeray"
       },
       "ms.date": {
         "azdata/**/*.md": "02/09/2021"
@@ -207,7 +213,8 @@
         "sql-server/azure-arc/**/*.md": "sql"
       },
       "ms.subservice": {
-        "sql-server/azure-arc/**/*.md": "azure-arc-sql-server"
+        "sql-server/azure-arc/**/*.md": "azure-arc-sql-server",
+        "sql-server/azure-arc/**/*.yml": "azure-arc-sql-server"       
       },
       "ms.custom": {
         "ado/*.md": "UpdateFrequency5",

@@ -91,40 +91,38 @@ You can use [Azure PowerShell](/powershell/azure/install-azure-powershell) to gr
 
 [!INCLUDE [Azure AD PowerShell deprecation note](~/../azure-sql/reusable-content/msgraph-powershell/includes/aad-powershell-deprecation-note.md)]
 
-1. Search for Microsoft Graph 
+1. Connect to Microsoft Graph
 
    ```powershell
-   $AAD_SP = Get-AzureADServicePrincipal -Filter "DisplayName eq 'Microsoft Graph'"
+   Connect-MgGraph -Scopes "AppRoleAssignment.ReadWrite.All" -TenantId "<tenant id>"
    ```
 
 1. Retrieve the managed identity: 
 
    ```powershell
-   $MSI = Get-AzureADServicePrincipal -Filter "DisplayName eq '<your managed identity display name>'"
+   $Graph_SP = Get-MgServicePrincipal -Filter "DisplayName eq 'Microsoft Graph'"
+   $MSI = Get-MgServicePrincipal -Filter "displayName eq '<your managed identity display name>'"
    ```
 
 1. Assign the `User.Read.All` role to the identity: 
 
    ```powershell
-   $AAD_AppRole = $AAD_SP.AppRoles | Where-Object {$_.Value -eq "User.Read.All"}
-   New-AzureADServiceAppRoleAssignment -ObjectId $MSI.ObjectId  -PrincipalId $MSI.ObjectId  
-   -ResourceId $AAD_SP.ObjectId  -Id $AAD_AppRole.Id
+   $AAD_AppRole = $Graph_SP.AppRoles | Where-Object {$_.Value -eq "User.Read.All"}  
+   New-MgServicePrincipalAppRoleAssignment -ServicePrincipalId $MSI.Id -BodyParameter @{principalId=$MSI.Id; resourceId=$Graph_SP.Id; appRoleId=$AAD_AppRole.Id}
    ```
 
 1. Assign `GroupMember.Read.All` role to the identity: 
 
     ```powershell
-    $AAD_AppRole = $AAD_SP.AppRoles | Where-Object {$_.Value -eq "GroupMember.Read.All"}  
-    New-AzureADServiceAppRoleAssignment -ObjectId $MSI.ObjectId  -PrincipalId $MSI.ObjectId  
-    -ResourceId $AAD_SP.ObjectId  -Id $AAD_AppRole.Id 
+    $AAD_AppRole = $Graph_SP.AppRoles | Where-Object {$_.Value -eq "GroupMember.Read.All"}  
+    New-MgServicePrincipalAppRoleAssignment -ServicePrincipalId $MSI.Id -BodyParameter @{principalId=$MSI.Id; resourceId=$Graph_SP.Id; appRoleId=$AAD_AppRole.Id}
     ```
 
 1. Assign `Application.Read.All` role to the identity: 
 
    ```powershell
-   $AAD_AppRole = $AAD_SP.AppRoles | Where-Object {$_.Value -eq "Application.Read.All"}  
-   New-AzureADServiceAppRoleAssignment -ObjectId $MSI.ObjectId  -PrincipalId $MSI.ObjectId  
-   -ResourceId $AAD_SP.ObjectId  -Id $AAD_AppRole.Id 
+   $AAD_AppRole = $Graph_SP.AppRoles | Where-Object {$_.Value -eq "Application.Read.All"}  
+   New-MgServicePrincipalAppRoleAssignment -ServicePrincipalId $MSI.Id -BodyParameter @{principalId=$MSI.Id; resourceId=$Graph_SP.Id; appRoleId=$AAD_AppRole.Id}
    ```
 
 You can validate permissions were assigned to the managed identity by doing the following:
@@ -270,7 +268,7 @@ The following output indicates Microsoft Entra authentication has been enabled w
 
 Consider the following limitations: 
 
-- Microsoft Entra authentication is only supported with SQL Server 2022 running on Windows VMs registered with the [SQL IaaS Agent extension](sql-server-iaas-agent-extension-automate-management.md) and deployed to the public cloud. Only supported scenarios of the SQL IaaS Agent extension are supported, such as a default instance, or a single named instance.
+- Microsoft Entra authentication is only supported with SQL Server 2022 running on Windows VMs registered with the [SQL IaaS Agent extension](sql-server-iaas-agent-extension-automate-management.md) and deployed to the public cloud. Only supported scenarios of the SQL IaaS Agent extension are supported, such as a default instance, or a single named instance. Failover cluster instances are not supported. 
 - The identity you choose to authenticate to SQL Server has to have either the **Directory Readers** role in Microsoft Entra ID or the following three Microsoft Graph application permissions (app roles): `User.Read.All`, `GroupMember.Read.All`, and `Application.Read.All`. 
 - Once Microsoft Entra authentication is enabled, there's no way to disable it. 
 - Currently, authenticating to SQL Server on Azure VMs through Microsoft Entra authentication using the [FIDO2 method](/azure/active-directory/authentication/howto-authentication-passwordless-faqs) isn't supported. 

@@ -1,6 +1,6 @@
 ---
-title: "Quickstart: Create an Azure SQL Managed Instance"
-description: Create an Azure SQL Managed Instance by using the Azure portal, PowerShell, and the Azure CLI. 
+title: "Quickstart: Create Azure SQL Managed Instance"
+description: Create Azure SQL Managed Instance by using the Azure portal, PowerShell, and the Azure CLI. 
 author: urosran
 ms.author: urandjelovic
 ms.reviewer: mathoma
@@ -10,10 +10,10 @@ ms.subservice: deployment-configuration
 ms.topic: quickstart
 ms.custom: mode-ui, devx-track-azurecli
 ---
-# Quickstart: Create an Azure SQL Managed Instance
+# Quickstart: Create Azure SQL Managed Instance
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
 
-This quickstart teaches you to create an [Azure SQL Managed Instance](sql-managed-instance-paas-overview.md) by using the Azure portal, PowerShell, and the Azure CLI. 
+This quickstart teaches you to create a deployment of [Azure SQL Managed Instance](sql-managed-instance-paas-overview.md) by using the Azure portal, PowerShell, and the Azure CLI. 
 
 [!INCLUDE [azure-sql-managed-instance-free-offer-note](../includes/azure-sql-managed-instance-free-offer-note.md)]
 
@@ -24,9 +24,9 @@ This quickstart teaches you to create an [Azure SQL Managed Instance](sql-manage
 
 For limitations, see [Supported regions](resource-limits.md#supported-regions) and [Supported subscription types](resource-limits.md#supported-subscription-types).
 
-## Create an Azure SQL Managed Instance
+## Create Azure SQL Managed Instance
 
-You can create an Azure SQL Managed Instance by using the Azure portal, PowerShell, and the Azure CLI. 
+You can create a deployment of Azure SQL Managed Instance by using the Azure portal, PowerShell, and the Azure CLI. 
 
 Consider the following:
 
@@ -67,8 +67,9 @@ The following table provides details for the required information on the **Basic
    | **Resource group** | A new or existing resource group.|For valid resource group names, see [Naming rules and restrictions](/azure/architecture/best-practices/resource-naming).|
    | **Managed Instance name** | Any valid name.|For valid names, see [Naming rules and restrictions](/azure/architecture/best-practices/resource-naming).|
    | **Region** |The region in which you want to create the managed instance.|For information about regions, see [Azure regions](https://azure.microsoft.com/regions/).|
+   | **Belongs to an instance pool?** | Select **Yes** if you want this instance to be created inside an [instance pool](instance-pools-configure.md). | 
    | **Authentication method** | Use SQL authentication | For the purpose of this quickstart, use SQL authentication. But you can also choose to use both SQL and [Microsoft Entra](../database/authentication-aad-overview.md) authentication. | 
-   | **Managed instance admin login** | Any valid username. | For valid names, see [Naming rules and restrictions](/azure/architecture/best-practices/resource-naming). Don't use "serveradmin" because that's a reserved server-level role.|
+   | **Managed instance admin login** | Any valid username. | For valid names, see [Naming rules and restrictions](/azure/architecture/best-practices/resource-naming). Don't use `serveradmin` because that's a reserved server-level role.|
    | **Password** | Any valid password.| The password must be at least 16 characters long and meet the [defined complexity requirements](/azure/virtual-machines/windows/faq#what-are-the-password-requirements-when-creating-a-vm-).|
 
 Under **Managed Instance details**, select **Configure Managed Instance** in the **Compute + storage** section to open the **Compute + storage** page. 
@@ -103,13 +104,11 @@ The following table provides details for information on the **Networking** tab:
 
 Select **Review + create** to review your choices before you create a managed instance. Or, configure security settings by selecting **Next: Security settings**.
 
-
 ### Security tab
 
 For the purpose of this quickstart, leave the settings on the **Security** tab at their default values. 
 
 Select **Review + create** to review your choices before you create a managed instance.  Or, configure more custom settings by selecting **Next: Additional settings**.
-
 
 ### Additional settings
 
@@ -150,7 +149,6 @@ Once deployment completes, navigate to your resource group to view your managed 
 
 > [!TIP]
 > If you closed your web browser or moved away from the deployment progress screen, you can [monitor the provisioning operation](management-operations-monitor.md#monitor-operations) via the managed instance's **Overview** page in the Azure portal, PowerShell or the Azure CLI. 
-
 
 ### [PowerShell](#tab/powershell)
 
@@ -197,7 +195,7 @@ And finally, create your instance:
 
 ## Review network settings 
 
-Select the **Route table** resource in your resource group to review the default [user-defined route table object and entries to route traffic](connectivity-architecture-overview.md#mandatory-routes-with-service-aided-subnet-configuration) from, and within, the SQL Managed Instance virtual network. To change or add routes, open the **Routes** in the Route table settings. 
+Select the **Route table** resource in your resource group to review the default [user-defined route table object and entries to route traffic](subnet-service-aided-configuration-enable.md#mandatory-security-rules-and-routes) from, and within, the SQL Managed Instance virtual network. To change or add routes, open the **Routes** in the Route table settings.
 
 :::image type="content" source="./media/instance-create-quickstart/azure-sql-managed-instance-route-table-user-defined-route.png" alt-text="Screenshot of the Entry for a SQL Managed Instance subnet to local in the Azure portal. ":::
 

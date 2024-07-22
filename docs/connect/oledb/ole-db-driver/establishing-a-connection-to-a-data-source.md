@@ -2,8 +2,8 @@
 title: Establish connection to data source (OLE DB driver)
 description: Learn how a consumer establishes a connection to a data source by using OLE DB Driver for SQL Server.
 author: David-Engel
-ms.author: v-davidengel
-ms.date: 04/20/2021
+ms.author: davidengel
+ms.date: 04/02/2024
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: reference
@@ -20,7 +20,7 @@ helpviewer_keywords:
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-To access the OLE DB Driver for SQL Server, the consumer must first create an instance of a data source object by calling the `CoCreateInstance` method. A unique class identifier (CLSID) identifies each OLE DB provider. For the OLE DB Driver for SQL Server, the class identifier is CLSID_MSOLEDBSQL. You can also use the symbol, MSOLEDBSQL_CLSID, that resolves to the OLE DB Driver for SQL Server used in the referenced `msoledbsql.h` file.
+To access the OLE DB Driver for SQL Server, the consumer must first create an instance of a data source object by calling the `CoCreateInstance` method. A unique class identifier (CLSID) identifies each OLE DB provider. For the OLE DB Driver for SQL Server, you can use the MSOLEDBSQL_CLSID symbol defined in the `msoledbsql.h` file.
 
 The data source object exposes the `IDBProperties` interface, which the consumer uses to provide basic authentication information such as server name, database name, user ID, and password. The `IDBProperties::SetProperties` method is called to set these properties.
 
@@ -29,14 +29,14 @@ If there are multiple instances of [!INCLUDE[ssNoVersion](../../../includes/ssno
 The data source object also exposes the `IDBInitialize` interface. After the properties are set, connection to the data source is established by calling the `IDBInitialize::Initialize` method. For example:
 
 ```cpp
-CoCreateInstance(CLSID_MSOLEDBSQL,
+CoCreateInstance(MSOLEDBSQL_CLSID,
                  NULL,
                  CLSCTX_INPROC_SERVER,
                  IID_IDBInitialize,
                  (void **) &pIDBInitialize)
 ```
 
- This call to `CoCreateInstance` creates a single object of the class associated with CLSID_MSOLEDBSQL (CSLID associated with the data and code that will be used to create the object). IID_IDBInitialize is a reference to the identifier of the interface (`IDBInitialize`) to be used to communicate with the object.
+ This call to `CoCreateInstance` creates a single object of the class associated with MSOLEDBSQL_CLSID (CSLID associated with the data and code that will be used to create the object). IID_IDBInitialize is a reference to the identifier of the interface (`IDBInitialize`) to be used to communicate with the object.
 
  The following sample shows how to initialize and establish a connection to the data source.
 
@@ -81,7 +81,7 @@ HRESULT InitializeAndEstablishConnection(IDBInitialize *&pIDBInitialize) {
     HRESULT         hr = S_OK;
 
     // Obtain access to the OLE DB Driver for SQL Server.
-    hr = CoCreateInstance(CLSID_MSOLEDBSQL,
+    hr = CoCreateInstance(MSOLEDBSQL_CLSID,
                           NULL,
                           CLSCTX_INPROC_SERVER,
                           IID_IDBInitialize,

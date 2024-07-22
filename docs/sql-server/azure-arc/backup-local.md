@@ -30,7 +30,7 @@ To enable automated backups, set the retention days to a nonzero value.
 
 ### Supported license types
 
-Automated backups are only available for licenses with Software Assurance, SQL subscription, or pay-as-you-go. For details, see [Feature availability depending on license type](overview.md#feature-availability-depending-on-license-type).
+Automated backups are only available for licenses with Software Assurance, SQL subscription, or pay-as-you-go. For details, see [Feature availability depending on license type](overview.md#feature-differentiation).
 
 ## Backup frequency and retention days
 
@@ -61,6 +61,9 @@ If both database and instance level backup schedule is set, database level sched
 ## Assign permissions
 
 The backup service within the Azure extension for Arc-enabled SQL Server uses [NT AUTHORITY\SYSTEM] account to perform the backups. If you're [operating SQL Server enabled by Arc with least privilege](configure-least-privilege.md), A local Windows account - [NT Service\SQLServerExtension] - performs the backup.
+
+> [!NOTE]
+> [!INCLUDE [least-privilege-default](includes/least-privilege-default.md)]
 
 If you use Azure extension for SQL Server [version 1.1.2504.99](release-notes.md#november-14-2023) or later, the necessary permissions are granted to [NT AUTHORITY\SYSTEM] automatically. You don't need to assign permissions manually.
 
@@ -316,7 +319,7 @@ When the built-in automated backups are enabled on an instance of [!INCLUDE [ssn
 - The user databases need to be in full recovery model for the backups to be performed. Databases that aren't in full recovery model aren't automatically backed up.
 - Automated backups are currently not supported for Always On failover cluster instances (FCI).
 - Automated backups aren't supported on any instance that hosts an availability group (AG) replica.
-- Automated backups are only available for licenses with Software Assurance, SQL subscription, or pay-as-you-go. For details, see [Feature availability depending on license type](overview.md#feature-availability-depending-on-license-type).
+- Automated backups are only available for licenses with Software Assurance, SQL subscription, or pay-as-you-go. For details, see [Feature availability depending on license type](overview.md#feature-differentiation).
 
 ## Related tasks
 

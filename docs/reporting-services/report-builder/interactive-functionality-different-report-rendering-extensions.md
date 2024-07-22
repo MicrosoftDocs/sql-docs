@@ -1,5 +1,5 @@
 ---
-title: "Interactive Functionality - Different Report Rendering Extensions"
+title: "Interactive functionality - different report rendering extensions"
 description: Reporting Services allows you to interact with a paginated report at runtime. This article describes how the interactive features work in specific formats.
 author: maggiesMSFT
 ms.author: maggies
@@ -9,18 +9,18 @@ ms.subservice: report-builder
 ms.topic: conceptual
 ms.custom: updatefrequency5
 ---
-# Interactive Functionality - Different Report Rendering Extensions
+# Interactive functionality - different report rendering extensions
 
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] provides features for interacting with a paginated report at run time. Not all of the report rendering formats support the full range of interactive features. Use the following table to understand how each interactive feature works in specific formats.
 
 > [!NOTE]  
 > [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]
 
-## Interactive Features in Different Output Formats
+## Interactive features in different output formats
 
-Paginated reports that are rendered to XML, CSV, or Image formats do not support interactive features.
+Paginated reports that are rendered to XML, CSV, or Image formats don't support interactive features.
 
-Reports that you view in the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] web portal, SharePoint Web parts, or in a browser are rendered in HTML. HTML and Windows Forms are the only report output formats that fully support all interactive features. Alternate HTML formats (such as MHTML) support many interactive features. If exceptions for MHTML exist, they are noted in the following table.
+Reports that you view in the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] web portal, SharePoint Web parts, or in a browser are rendered in HTML. HTML and Windows Forms are the only report output formats that fully support all interactive features. Alternate HTML formats (such as MHTML) support many interactive features. If exceptions for MHTML exist, they're noted in the following table.
 
 ### Document maps
 
@@ -37,7 +37,7 @@ Reports that you view in the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversi
 | Export Option | Support Information |
 | --- | --- |
 | Preview/Report Viewer, HTML | Users select on data values in the report to view related data in another report. |
-| PDF | Drillthrough links are not available in PDF. Consider using hyperlinks for PDF reports that link to other pages. |
+| PDF | Drillthrough links aren't available in PDF. Consider using hyperlinks for PDF reports that link to other pages. |
 | Excel | Drillthrough links are rendered in Excel.<br /><br />The link becomes a hyperlink pointing to the report referenced by the drillthrough link. Selecting the link opens a report in a browser window. |
 | Word | Drillthrough links are rendered in Word.<br /><br />The link becomes a hyperlink pointing to the report referenced by the drillthrough link. Selecting the link opens a report in a browser window. |
 | Other | Not available in XML, CSV, or Image. |
@@ -47,10 +47,10 @@ Reports that you view in the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversi
 | Export Option | Support Information |
 | --- | --- |
 | Preview/Report Viewer, HTML | Users select expand and collapse icons to view sections of a report. |
-| PDF | The report server exports the current show or hide state of the report to PDF. Interactive toggling is not supported |
-| Excel | Drilldown links and items that can be toggled are rendered as collapsible outlines in Excel. You can expand and collapse sections of the report in Excel. For more information about Excel-imposed limitations, see [Exporting to Microsoft Excel (Report Builder and SSRS)](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md). |
-| Word | The report server exports the current show or hide state of the report to PDF. Interactive toggling is not supported |
-| Other | Not available in MHTML, XML, or CSV. When you export to an Image format, the report server exports the current show or hide stated of the report to PDF. Interactive toggling is not supported. |
+| PDF | The report server exports the current show or hide state of the report to PDF. Interactive toggling isn't supported |
+| Excel | Drilldown links and items that can be toggled are rendered as collapsible outlines in Excel. You can expand and collapse sections of the report in Excel. For more information about Excel-imposed limitations, see [Exporting to Microsoft Excel (Report Builder)](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md). |
+| Word | The report server exports the current show or hide state of the report to PDF. Interactive toggling isn't supported |
+| Other | Not available in MHTML, XML, or CSV. When you export to an Image format, the report server exports the current show or hide stated of the report to PDF. Interactive toggling isn't supported. |
 
 ### Interactive sorting
 
@@ -67,10 +67,10 @@ Reports that you view in the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversi
 | Export Option | Support Information |
 | --- | --- |
 | Preview/Report Viewer, HTML | Users select links to open external Web pages in a new browser window. |
-| PDF | Hyperlinks are rendered by the PDF rendering extension. When a user selects on a hyperlink, the linked pages are opened in the browser. |
+| PDF | The PDF rendering extension renders the hyperlinks. When a user selects on a hyperlink, the linked pages are opened in the browser. |
 | Excel | Hyperlinks are rendered in Excel. |
 | Word | Hyperlinks are rendered in Word. |
-| Other | Hyperlinks are not available in MHTML, XML, CSV, or Image.<br /><br />For MHTML, and Image, external images are rendered as a static picture. |
+| Other | Hyperlinks aren't available in MHTML, XML, CSV, or Image.<br /><br />For MHTML, and Image, external images are rendered as a static picture. |
 
 ### Bookmark or anchor
 
@@ -102,10 +102,10 @@ Reports that you view in the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversi
 | Word | The report server exports the report to Word using filtered data in the current report. |
 | Other | The report server exports the report to other formats using filtered data in the current report. |
 
-## See also
+## Related content
 
-- [Export Reports (Report Builder and SSRS)](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)
-- [Interactive Sort, Document Maps, and Links (Report Builder and SSRS)](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)
+- [Export reports (Report Builder)](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)
+- [Interactive sort, document maps, and links (Report Builder)](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)
 
-- [Tables, Matrices, and Lists (Report Builder and SSRS)](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)
-- [Charts (Report Builder and SSRS)](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)
+- [Tables, matrices, and lists (Report Builder)](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)
+- [Charts (Report Builder)](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)

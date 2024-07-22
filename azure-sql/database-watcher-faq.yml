@@ -5,7 +5,7 @@ metadata:
   description: Frequently asked questions about database watcher for Azure SQL
   author: dimitri-furman
   ms.author: dfurman
-  ms.date: 03/21/2024
+  ms.date: 07/12/2024
   ms.reviewer: wiassaf
   ms.service: sql-db-mi
   ms.subservice: monitoring
@@ -67,11 +67,19 @@ sections:
           Can I monitor a large Azure SQL estate?
         answer: Yes. For more information, see [Monitor large estates](database-watcher-manage.md#monitor-large-estates).
 
+      - question: |
+          Does it support cross-subscription and cross-tenant monitoring?
+        answer: The watcher and the SQL targets it monitors can be in different subscriptions within the same Microsoft Entra ID tenant. Similarly, if the watcher is using a database on an Azure Data Explorer cluster as its data store, the cluster must be in any subscription within the same tenant as the watcher. If you want to monitor SQL targets in multiple tenants using a single data store, create a watcher in each tenant, and use a database in either [Real-Time Analytics](/fabric/real-time-analytics/overview) or on a [free Azure Data Explorer cluster](/azure/data-explorer/start-for-free) as the data store for all watchers. For more information, see [Monitor large estates](database-watcher-manage.md#monitor-large-estates).
+
   - name: Watcher
     questions:
       - question: |
+          Can I create and configure a watcher using Bicep or an ARM template?
+        answer: Yes. See [Create a database watcher](/samples/azure/azure-quickstart-templates/create-watcher/) for an example you can customize to your needs.
+
+      - question: |
           Can I create and configure a watcher with PowerShell or Azure CLI?
-        answer: Not at this time. You can create and configure watchers in the Azure portal, using ARM and Bicep templates, or using [REST API](/rest/api/databasewatcher). For planned improvements to database watcher, see the roadmap section in the database watcher [preview announcement](https://aka.ms/dbwatcher-preview-announcement).
+        answer: Not at this time. You can create and configure watchers in the Azure portal, using [Bicep](/azure/azure-resource-manager/bicep/overview) and ARM templates, or using [REST API](/rest/api/databasewatcher). For planned improvements to database watcher, see the roadmap section in the database watcher [preview announcement](https://aka.ms/dbwatcher-preview-announcement).
 
       - question: |
           Does a watcher have an identity I can use to grant it access to my Azure resources?
@@ -83,7 +91,11 @@ sections:
 
       - question: |
           Are there any built-in RBAC roles or actions specific to database watcher?
-        answer: Not at this time. Operations such as creating, starting, stopping a watcher, or creating/removing targets and the data store require the assignment of **Contributor** or **Owner** Azure RBAC roles on the watcher, resource group, or subscription.
+        answer: Not at this time. Viewing the watcher resource requires the assignment of the **Reader** RBAC role. Operations such as creating, starting, stopping a watcher, or creating/removing targets and the data store require the assignment of **Contributor** or **Owner** Azure RBAC roles. Role assignments can be made at the watcher, resource group, subscription, or management group level.
+
+      - question: |
+          What permissions are required to access database watcher dashboards?
+        answer: To access dashboards, users require the [assignment](/azure/role-based-access-control/role-assignments-portal) of the RBAC **Reader** role on the watcher resource or on a higher scope such as resource group, subscription, or management group. They also require the [assignment](database-watcher-manage.md#grant-users-and-groups-access-to-the-data-store) of the **Viewer** RBAC role on the Azure Data Explorer or Real-Time Analytics database. These assignments can be made directly or via Microsoft Entra ID group membership.
 
   - name: Data store
     questions:

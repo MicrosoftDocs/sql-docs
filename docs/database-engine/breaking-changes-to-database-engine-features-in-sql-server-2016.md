@@ -27,7 +27,7 @@ This article describes breaking changes in the [!INCLUDE[sssql15-md](../includes
 
 - Under database compatibility level 130, implicit conversions from **datetime** to **datetime2** data types show improved accuracy by accounting for the fractional milliseconds, resulting in different converted values. Use explicit casting to datetime2 datatype whenever a mixed comparison scenario between datetime and datetime2 datatypes exists. For more information, see this [Microsoft Support Article](https://support.microsoft.com/help/4010261).
 
-- Under database compatibility level 130, operations that perform implicit conversions between certain numeric and datetime data types show improved accuracy and can result in different converted values. This includes usage of functions that require calculations such as, for example, `DATEDIFF` and `ROUND`. For more information, see this [Microsoft Support Article](https://support.microsoft.com/help/4010261).
+- Under database compatibility level 130, operations that perform implicit conversions between certain numeric and datetime data types show improved accuracy and can result in different converted values. This includes usage of functions that require calculations such as `DATEDIFF` and `ROUND`. For more information, see this [Microsoft Support Article](https://support.microsoft.com/help/4010261).
 
 ## Previous versions
 

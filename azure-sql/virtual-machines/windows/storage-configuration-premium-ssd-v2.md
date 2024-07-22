@@ -56,7 +56,7 @@ The following table provides the scale of IOPS and throughput when using Premium
 
 
 > [!NOTE]
-> Currently, Premium SSD v2 offers up to 32 TiBs per region per subscription by default, but supports higher capacity by request. To increase capacity, [contact Azure Support to request a quota increase](https://go.microsoft.com/fwlink/p/?LinkId=2234556). 
+> Currently, Premium SSD v2 offers up to 100 TiB per region per subscription by default, but supports higher capacity by request. To increase capacity, [contact Azure Support to request a quota increase](https://go.microsoft.com/fwlink/p/?LinkId=2234556). 
 
 ## Determine workload requirements 
 

@@ -3,8 +3,8 @@ title: vCore purchasing model
 description: The vCore purchasing model lets you independently scale compute and storage resources, match on-premises performance, and optimize price for Azure SQL Database
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: sashan, moslake, mathoma, dfurman
-ms.date: 03/18/2024
+ms.reviewer: sashan, moslake, mathoma, dfurman, srinia
+ms.date: 06/11/2024
 ms.service: sql-database
 ms.subservice: performance
 ms.topic: conceptual
@@ -133,7 +133,7 @@ In the architectural model for the General Purpose service tier, there are two l
 - A stateless compute layer that is running the `sqlservr.exe` process and contains only transient and cached data (for example – plan cache, buffer pool, columnstore pool). This stateless node is operated by Azure Service Fabric that initializes process, controls health of the node, and performs failover to another place if necessary.
 - A stateful data layer with database files (.mdf/.ldf) that are stored in Azure Blob storage. Azure Blob storage guarantees that there's no data loss of any record that is placed in any database file. Azure Storage has built-in data availability/redundancy that ensures that every record in log file or page in data file is preserved even if the process crashes.
 
-Whenever the database engine or operating system is upgraded, some part of underlying infrastructure fails, or if some critical issue is detected in the `sqlservr.exe` process, Azure Service Fabric moves the stateless process to another stateless compute node. There's a set of spare nodes that is waiting to run new compute service if a failover of the primary node happens in order to minimize failover time. Data in Azure storage layer isn't affected, and data/log files are attached to newly initialized process. This process guarantees 99.99% availability by default and 99.995% availability when [zone redundancy](high-availability-sla.md#zone-redundant-availability) is enabled. There might be some performance impacts to heavy workloads that are in-flight due to transition time and the fact the new node starts with cold cache.
+Whenever the database engine or operating system is upgraded, some part of underlying infrastructure fails, or if some critical issue is detected in the `sqlservr.exe` process, Azure Service Fabric moves the stateless process to another stateless compute node. There's a set of spare nodes that is waiting to run new compute service if a failover of the primary node happens in order to minimize failover time. Data in Azure storage layer isn't affected, and data/log files are attached to newly initialized process. This process guarantees 99.99% availability by default and 99.995% availability when [zone redundancy](high-availability-sla-local-zone-redundancy.md#zone-redundant-availability) is enabled. There might be some performance impacts to heavy workloads that are in-flight due to transition time and the fact the new node starts with cold cache.
 
 ### When to choose this service tier
 
@@ -188,7 +188,14 @@ Besides its advanced scaling capabilities, Hyperscale is a great option for any 
 
 Common hardware configurations in the vCore model include standard-series (Gen5), Fsv2-series, and DC-series. Hyperscale also provides an option for premium-series and premium-series memory optimized hardware. Hardware configuration defines compute and memory limits and other characteristics that affect workload performance.
 
-Certain hardware configurations such as standard-series (Gen5) can use more than one type of processor (CPU), as described in [Compute resources (CPU and memory)](#compute-resources-cpu-and-memory). While a given database or elastic pool tends to stay on the hardware with the same CPU type for a long time (commonly for multiple months), there are certain events that can cause a database or pool to be moved to hardware that uses a different CPU type. For example, a database or pool can be moved if you scale up or down to a different service objective, or if the current infrastructure in a datacenter is approaching its capacity limits, or if the currently used hardware is being decommissioned due to its end of life.
+Certain hardware configurations such as standard-series (Gen5) can use more than one type of processor (CPU), as described in [Compute resources (CPU and memory)](#compute-resources-cpu-and-memory). While a given database or elastic pool tends to stay on the hardware with the same CPU type for a long time (commonly for multiple months), there are certain events that can cause a database or pool to be moved to hardware that uses a different CPU type. 
+
+A database or pool could be moved for a variety of scenarios, including but not limited to when:
+
+- The service objective is changed
+- The current infrastructure in a datacenter is approaching capacity limits
+- The currently used hardware is being decommissioned due to its end of life
+- Zone-redundant configuration is enabled, moving to a different hardware due to available capacity
 
 For some workloads, a move to a different CPU type can change performance. SQL Database configures hardware with the goal to provide predictable workload performance even if CPU type changes, keeping performance changes within a narrow band. However, across the wide spectrum of customer workloads in SQL Database, and as new types of CPUs become available, it's occasionally possible to see more noticeable changes in performance, if a database or pool moves to a different CPU type.
 
@@ -310,7 +317,7 @@ Hyperscale service tier premium-series and premium-series memory optimized hardw
 - UK West \*
 - US Central \*\*
 - US East \*\*
-- US East 2
+- US East 2 \*\*
 - US North Central
 - US South Central
 - US West Central
@@ -320,7 +327,7 @@ Hyperscale service tier premium-series and premium-series memory optimized hardw
 
 \* Premium-series memory optimized hardware is not currently available.
 
-\*\* Includes support for [zone redundancy](high-availability-sla.md#zone-redundant-availability).
+\*\* Includes support for [zone redundancy](high-availability-sla-local-zone-redundancy.md#zone-redundant-availability).
 
 #### Fsv2-series
 

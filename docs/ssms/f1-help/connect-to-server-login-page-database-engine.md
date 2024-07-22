@@ -4,7 +4,7 @@ description: This article shows how to use the Connect to Server (Login page) Da
 author: erinstellato-ms
 ms.author: erinstellato
 ms.reviewer: maghan, randolphwest
-ms.date: 02/29/2024
+ms.date: 04/18/2024
 ms.service: sql
 ms.subservice: ssms
 ms.topic: ui-reference
@@ -98,7 +98,7 @@ Enter the password for the login. This option is only editable if you choose to 
 
 Select this option for [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] to store the password entered. This option is displayed for the same authentication methods mentioned for the **Password** option.
 
-### Encryption level
+### Encryption
 
 Select the level of encryption for the connection. The options for [!INCLUDE [ssms20-md](../../includes/ssms20-md.md)] are *Strict (SQL Server 2022 and Azure SQL)*, *Mandatory*, and *Optional*. When enabled, [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] uses TLS encryption for all the data sent between the client and server. For more information, see [SQL Server and client encryption summary](../../database-engine/configure-windows/sql-server-and-client-encryption-summary.md).
 
@@ -106,13 +106,19 @@ Select the level of encryption for the connection. The options for [!INCLUDE [ss
 
 *Mandatory* encryption can be used for [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] when the instance has **Force Encryption** enabled. It can also be used when no encryption is configured for the instance, if **Trust server certificate** is enabled.  While this method is less secure than installing a trusted certificate, it does support an encrypted connection.
 
+The **Encryption** property appears on the Login page for SSMS 20.x and later versions.
+
 ### Trust server certificate
 
 When enabled, with *Optional* or *Mandatory* encryption selected, or if the server is configured to force encryption, [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] doesn't validate the server certificate on the client machine when encryption is enabled for the network communication between client and server.
 
+The **Trust server certificate** property appears on the Login page for SSMS 20.x and later versions.
+
 ### Host name in the certificate
 
 The value provided in this option is used to specify a different, but expected, CN or SAN in the server certificate for the server to which SSMS is connecting. This option can be left blank, so that certificate validation ensures that the Common Name (CN) or Subject Alternate Name (SAN) in the certificate matches the server name to which you're connecting. This parameter can be populated when the server name doesn't match the CN or SAN, for example, when using DNS aliases. For more information, see [Encryption and certificate validation in Microsoft.Data.SqlClient](../../connect/ado-net/encryption-and-certificate-validation.md). |
+
+The Encryption property appears on the Login page for SSMS 20.x and later versions.
 
 ### Connect
 

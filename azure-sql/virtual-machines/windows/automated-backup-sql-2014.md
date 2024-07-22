@@ -1,10 +1,10 @@
 ---
 title: Automated Backup for SQL Server 2014 Azure virtual machines
 description: Explains the Automated Backup feature for SQL Server 2014 VMs running in Azure. This article is specific to VMs using the Resource Manager.
-author: tarynpratt
-ms.author: tarynpratt
+author: AbdullahMSFT
+ms.author: amamun
 ms.reviewer: mathoma
-ms.date: 09/12/2023
+ms.date: 06/18/2024
 ms.service: virtual-machines-sql
 ms.subservice: backup
 ms.topic: how-to
@@ -56,14 +56,14 @@ The following table describes the options that can be configured for Automated B
 | **Encryption** | Enable/Disable (Disabled) | Enables or disables backup encryption. When backup encryption is enabled, the certificates used to restore the backup are located in the specified storage account in the same `automaticbackup` container using the same naming convention. If the password changes, a new certificate is generated with that password, but the old certificate remains to restore prior backups. |
 | **Password** | Password text | A password for encryption keys. This is only required if encryption is enabled. In order to restore an encrypted backup, you must have the correct password and related certificate that was used at the time the backup was taken. |
 
-
 ## Configure new VMs
 
 Use the Azure portal to configure Automated Backup when you create a new SQL Server 2014 virtual machine in the Resource Manager deployment model.
 
 On the **SQL Server settings** tab, scroll down to **Automated backup** and select **Enable**. The following Azure portal screenshot shows the **SQL Automated Backup** settings.
 
-![SQL Automated Backup configuration in the Azure portal](./media/automated-backup-sql-2014/azure-sql-arm-autobackup.png)
+:::image type="content" source="./media/automated-backup-sql-2014/azure-sql-arm-autobackup.png" alt-text="Screenshot of SQL Automated Backup configuration in the Azure portal.":::
+
 
 ## Configure existing VMs
 
@@ -71,7 +71,8 @@ For existing SQL Server VMs, you can enable and disable automated backups, chang
 
 Navigate to the [SQL virtual machines resource](manage-sql-vm-portal.md#access-the-resource) for your SQL Server 2014 virtual machine and then select **Backups**. 
 
-![SQL Automated Backup for existing VMs](./media/automated-backup-sql-2014/azure-sql-rm-autobackup-existing-vms.png)
+:::image type="content" source="./media/automated-backup-sql-2014/azure-sql-rm-autobackup-existing-vms.png" alt-text="Screenshot of SQL Automated Backup for existing VMs.":::
+
 
 When finished, select the **Apply** button on the bottom of the **Backups** page to save your changes.
 
@@ -255,6 +256,32 @@ Update-AzSqlVM -ResourceGroupName $resourcegroupname -Name $vmname -AutoBackupSe
 -AutoBackupSettingRetentionPeriod $retentionperiod `
 -AutoBackupSettingStorageContainerName $storage_container 
 ```
+
+## Backup with encryption certificates
+
+If you decide to encrypt your backups, an encryption certificate will be generated and saved in the same storage account as the backups. In this scenario, you will also need to enter a password which will be used to protect the encryption certificates used for encrypting and decrypting your backups. This allows you to not worry about your backups beyond the configuration of this feature, and also ensures you can trust that your backups are secure.
+
+When backup encryption is enabled, we strongly recommend that you ascertain whether the encryption certificate has been successfully created and uploaded to ensure restorability of your databases. You can do so by creating a database right away and checking the encryption certificates and data were backed up to the newly created container properly. This will show that everything was configured correctly and no anomalies took place.
+
+If the certificate failed to upload for some reason, you can use the certificate manager to export the certificate and save it. You do not want to save it on the same VM, however, as this does not ensure you have access to the certificate when the VM is down. To know if the certificate was backed up properly after changing or creating the Automated Backup configuration, you can check the event logs in the VM,  and if it failed you will see this error message:
+
+:::image type="content" source="./media/automated-backup-sql-2014/automated-backup-event-log.png" alt-text="Screenshot of the error message shown in the Event Log in VM.":::
+
+If the certificates were backed up correctly, you will see this message in the Event Logs:
+
+:::image type="content" source="./media/automated-backup-sql-2014/automated-backup-success.png" alt-text="Screenshot of the successful backup of encryption certificate in event logs.":::
+
+As a general practice, it is recommended to check on the health of your backups from time to time. In order to be able to restore your backups, you should do the following:
+
+1. Confirm that your encryption certificates have been backed up and you remember your password. If you do not do this, you will not be able to decrypt and restore your backups. If for some reason your certificates were not properly backed up, you can accomplish this manually by executing the following T-SQL query:
+
+   ```sql
+   BACKUP MASTER KEY TO FILE = <file_path> ENCRYPTION BY PASSWORD = <password>
+   BACKUP CERTIFICATE [AutoBackup_Certificate] TO FILE = <file_path> WITH PRIVATE KEY (FILE = <file_path>, ENCRYPTION BY PASSWORD = <password>)
+   ```
+
+1. Confirm that your backup files are uploaded with at least 1 full backup. Because mistakes happen, you should be sure you always have at least one full backup before deleting your VM, or in case your VM gets corrupted, so you know you can still access your data. You should make sure the backup in storage is safe and recoverable before deleting your VM’s data disks.
+
 
 ## Monitoring
 

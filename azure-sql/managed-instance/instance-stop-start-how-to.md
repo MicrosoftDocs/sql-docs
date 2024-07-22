@@ -4,7 +4,7 @@ description: This article describes the stop and start feature of Azure SQL Mana
 author: urosmil
 ms.author: urmilano
 ms.reviewer: mathoma, randolphwest
-ms.date: 11/14/2023
+ms.date: 05/21/2024
 ms.service: sql-managed-instance
 ms.subservice: deployment-configuration
 ms.custom: ignite-2023, devx-track-azurecli, devx-track-azurepowershell
@@ -93,11 +93,22 @@ Consider the following limitations:
   - Have an ongoing [management operation](management-operations-overview.md) (such as an ongoing restore, vCore scaling, and so on)
   - Are part of a [failover group](failover-group-sql-mi.md)
   - Use the [Managed Instance link](managed-instance-link-feature-overview.md)
-  - have [zone redundancy enabled](high-availability-sla.md)
+  - have [zone redundancy enabled](high-availability-sla-local-zone-redundancy.md)
   - are part of [Instance pool](instance-pools-overview.md)
 - While a managed instance is in a stopped state, it's not possible to change its configuration properties. To change any properties, you must start the instance.
 - While the instance is in a stopped state, it's not possible to take backups. For example, let's say that you have [long-term backups](long-term-backup-retention-configure.md) configured, with yearly backups in place. If you stop the instance during the defined yearly backup period, the backup is skipped. We recommend that you keep the instance up and running during the yearly backup period.
 - It's not possible to cancel the stop or start operation after it's been initiated.
+- If there is a vulnerability assessment scan scheduled for SQL Managed Instance and instance is stopped, the scan operation will still be initiated and the scan execution will fail.
+- [Maintenance notifications](advance-notifications.md) will not be fired for instances that are in stopped state. This results with:
+  - Incomplete sequence of notifications (for example, advanced notification is not sent, in progress notification is sent).
+  - SQL Managed Instance is missing from the list of impacted resources in the notification content.
+- Error logs that are available in SQL Managed Instance [aren't persisted](doc-changes-updates-known-issues.md#error-logs-arent-persisted) and are automatically erased on instance stop.
+
+## Prerequisites
+
+To use the instance stop and start feature, your instance must meet be in the General Purpose service tier. 
+
+Instances that don't meet the prerequisite have the stop and start controls disabled on the **Overview** page for the SQL managed instance resource in the Azure portal. Hovering over the control explains why the feature can't be used by the instance. 
 
 ## Prepare command line environment
 

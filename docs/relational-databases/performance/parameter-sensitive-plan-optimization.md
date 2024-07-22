@@ -16,7 +16,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-ver16||>=sql-server-linux-ver16
 ---
 # Parameter Sensitive Plan optimization
 
-[!INCLUDE [sqlserver2022-and-later](../../includes/applies-to-version/sqlserver2022-and-later.md)]
+[!INCLUDE [sqlserver2022-and-later](../../includes/applies-to-version/sqlserver2022-and-later.md)], [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)]
 
 Parameter Sensitive Plan (PSP) optimization is part of the [Intelligent query processing](intelligent-query-processing.md) family of features. It addresses the scenario where a single cached plan for a parameterized query isn't optimal for all possible incoming parameter values. This is the case with non-uniform data distributions. For more information, see [Parameter Sensitivity](../query-processing-architecture-guide.md#parameter-sensitivity) and [Parameters and Execution Plan Reuse](../query-processing-architecture-guide.md#parameters-and-execution-plan-reuse).
 
@@ -283,7 +283,7 @@ PSP with query hints and plan forcing behavior can be summarized in the followin
   The following query shows all of the possible reasons why PSP was skipped:
 
   ```sql
-  SELECT name, map_value FROM sys.dm_xe_map_values WHERE name ='psp_skipped_reason_enum' ORDER BY map_key;
+  SELECT map_value FROM sys.dm_xe_map_values WHERE [name] ='psp_skipped_reason_enum' ORDER BY map_key;
   ```
 
 - `parameter_sensitive_plan_optimization`: Occurs when a query uses PSP optimization feature. Debug channel only. Some fields of interest might be:

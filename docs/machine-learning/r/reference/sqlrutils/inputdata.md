@@ -46,7 +46,7 @@ the embedded R function takes in a data frame input parameter.
 
 
  ### `query`
- A character string specifing the query that will be used to retrieve the data in the next run of the stored procedure. 
+ A character string specifying the query that will be used to retrieve the data in the next run of the stored procedure. 
 
 
 
@@ -93,7 +93,7 @@ InputData Object
   registerStoredProcedure(sp_df_op, conStr)
 
   # execute the stored procedure, note: non-data frame variables inside the
-  # return list are not returned to R. However, if the execution is not sucessful
+  # return list are not returned to R. However, if the execution is not successful
   # the error will be displayed
   model <- executeStoredProcedure(sp_df_op, connectionString = conStr)
   # get the linear model

@@ -2,7 +2,7 @@
 title: "SQLExecute Function"
 description: "SQLExecute Function"
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: "01/19/2017"
 ms.service: sql
 ms.subservice: connectivity
@@ -67,7 +67,7 @@ SQLRETURN SQLExecute(
 |22019|Invalid escape  character|The prepared statement associated with *StatementHandle* contained a **LIKE** predicate with an **ESCAPE** in the **WHERE** clause, and the length of the escape character following **ESCAPE** was not equal to 1.|  
 |22025|Invalid escape  sequence|The prepared statement associated with *StatementHandle* contained "**LIKE** _pattern value_ **ESCAPE** _escape character_" in the **WHERE** clause, and the character following the escape character in the pattern value was not one of "%" or "_".|  
 |23000|Integrity constraint violation|The prepared statement associated with the *StatementHandle* contained a parameter. The parameter value was NULL for a column defined as NOT NULL in the associated table column, a duplicate value was supplied for a column constrained to contain only unique values, or some other integrity constraint was violated.|  
-|24000|Invalid cursor state|A cursor was positioned on the *StatementHandle* by **SQLFetch** or **SQLFetchScroll**. This error is returned by the Driver Manager if **SQLFetch** or **SQLFetchScroll** has not returned SQL_NO_DATA, and is returned by the driver if **SQLFetch** or **SQLFetchScroll** has returned SQL_NO_DATA.<br /><br /> A cursor was open on the *StatementHandle*.<br /><br /> The prepared statement associated with the *StatementHandle* contained a positioned update or delete statemen,t and the cursor was positioned before the start of the result set or after the end of the result set.|  
+|24000|Invalid cursor state|A cursor was positioned on the *StatementHandle* by **SQLFetch** or **SQLFetchScroll**. This error is returned by the Driver Manager if **SQLFetch** or **SQLFetchScroll** has not returned SQL_NO_DATA, and is returned by the driver if **SQLFetch** or **SQLFetchScroll** has returned SQL_NO_DATA.<br /><br /> A cursor was open on the *StatementHandle*.<br /><br /> The prepared statement associated with the *StatementHandle* contained a positioned update or delete statement, and the cursor was positioned before the start of the result set or after the end of the result set.|  
 |40001|Serialization failure|The transaction was rolled back due to a resource deadlock with another transaction.|  
 |40003|Statement completion unknown|The associated connection failed during the execution of this function, and the state of the transaction cannot be determined.|  
 |42000|Syntax error or access violation|The user did not have permission to execute the prepared statement associated with the *StatementHandle*.|  

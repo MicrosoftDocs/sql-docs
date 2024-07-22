@@ -10,7 +10,7 @@ metadata:
   ms.author: wiassaf
   ms.reviewer: scottkim, mathoma
   ms.custom: azure-sql-split
-  ms.date: 02/22/2024
+  ms.date: 04/22/2024
   monikerRange: "=azuresql||=azuresql-db"
 
 title: Maintenance window FAQ in Azure SQL Database
@@ -115,7 +115,7 @@ sections:
       
       - question: What can I expect during a maintenance event?
         answer: |
-          Maintenance event represents a period during which the updates are applied on the resource. Maintenance event happens inside the defined maintenance window. During a maintenance event, databases are **fully available** and accessible but some of the maintenance updates require a reconfiguration as Azure takes SQL Databases **offline for a short time** to apply the maintenance updates (generally a few seconds in duration), and only during the maintenance window slots selected by the customer. However, planned maintenance events are never executed outside of defined maintenance windows.
+          Maintenance event represents a period during which the updates are applied on the resource. Maintenance event happens inside the defined maintenance window. During a maintenance event, databases are **fully available** and accessible but some of the maintenance updates require a reconfiguration as Azure takes SQL Databases **offline for a short time** to apply the maintenance updates (generally a few seconds in duration) during the maintenance window selected by the customer. 
 
       - question: How many reconfigurations can I expect during a maintenance event?
         answer: |

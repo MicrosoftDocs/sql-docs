@@ -2,7 +2,7 @@
 title: "Send Data to a FILESTREAM Column Using IRowsetFastUpload (OLE DB)"
 description: Learn how to use the IRowsetFastUpload interface to send between 4MB and 4GB of data to a FILESTREAM column in OLE DB Driver for SQL Server with this example.
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: "06/14/2018"
 ms.service: sql
 ms.subservice: connectivity
@@ -220,7 +220,7 @@ Clear();
 return E_OUTOFMEMORY;  
 }  
   
-// Copy callers memory to internal bufffer and update write position.  
+// Copy callers memory to internal buffer and update write position.  
 memcpy( (void*)((BYTE*)m_pBuffer + m_iWritePos), pv, cb );  
 m_iWritePos += cb;  
   

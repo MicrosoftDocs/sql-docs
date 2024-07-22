@@ -26,7 +26,7 @@ sections:
 
              1. **Will SQL Server on Linux work on other platforms**?
 
-                SQL Server is tested and supported on Linux for the previously listed distributions. Other Linux distributions are closely related and might be able to run SQL Server (for example, CentOS is closely related to Red Hat Enterprise Server). If you choose to install SQL Server on an unsupported operating system, review the **Support policy** section of the [Technical support policy for Microsoft SQL Server](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server) to understand the support implications. Also note that some community-maintained Linux distributions don't have a formal way to receive support if the underlying operating system is the problem.
+                SQL Server is tested and supported on Linux for the previously listed distributions. Other Linux distributions are closely related and might be able to run SQL Server. If you choose to install SQL Server on an unsupported operating system, review the **Support policy** section of the [Technical support policy for Microsoft SQL Server](https://support.microsoft.com/help/4047326/) to understand the support implications. Also note that some community-maintained Linux distributions don't have a formal way to receive support if the underlying operating system is the problem.
 
              1. **Is SQL Server on Linux the same as on Windows?**
 
@@ -44,7 +44,7 @@ sections:
           answer: |
              1. **How does licensing work on Linux?**
 
-                SQL Server is licensed the same way for both Windows and Linux. In fact, you license SQL Server and then you can choose to use that license on the platform of your choice. For more information, see [How to license SQL Server](https://www.microsoft.com/sql-server/sql-server-2022-pricing).
+                SQL Server is licensed the same way for both Windows and Linux. In fact, you license SQL Server and then you can choose to use that license on the platform of your choice. For more information, see [How to license SQL Server](https://www.microsoft.com/sql-server/sql-server-2022-pricing), and [SQL Server Licensing Resources and Documents](https://www.microsoft.com/licensing/docs/view/SQL-Server).
 
              1. **What edition of SQL Server should I choose when I already purchased it?**
 

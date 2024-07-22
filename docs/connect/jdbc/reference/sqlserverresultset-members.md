@@ -2,7 +2,7 @@
 title: "SQLServerResultSet Members"
 description: "SQLServerResultSet Members"
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: "01/19/2017"
 ms.service: sql
 ms.subservice: connectivity
@@ -72,7 +72,7 @@ ms.topic: reference
 |[getLong](../../../connect/jdbc/reference/getlong-method-sqlserverresultset.md)|Retrieves the value of the designated column in the current row of this [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) object as a **long** in the Java programming language.|  
 |[getMetaData](../../../connect/jdbc/reference/getmetadata-method-sqlserverresultset.md)|Retrieves the number, types, and properties of this [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) object's columns.|  
 |[getNCharacterStream](../../../connect/jdbc/reference/getncharacterstream-method-sqlserverresultset.md)|Retrieves the value of the designated column in the current row of the [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) object as a Reader object.|  
-|[getNClob](../../../connect/jdbc/reference/getnclob-method-sqlserverresultset.md)|Retrieves the value of the designated column in the current row of the  [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)object as an **NClob** object in the Java programming language.|  
+|[getNClob](../../../connect/jdbc/reference/getnclob-method-sqlserverresultset.md)|Retrieves the value of the designated column in the current row of the  [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) object as an **NClob** object in the Java programming language.|  
 |[getNString](../../../connect/jdbc/reference/getnstring-method-sqlserverresultset.md)|Retrieves the value of the designated column in the current row of the [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) object as a String in the Java programming language.|  
 |[getObject](../../../connect/jdbc/reference/getobject-method-sqlserverresultset.md)|Gets the value of the designated column in the current row of this [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) object as an object in the Java programming language.|  
 |[getRef](../../../connect/jdbc/reference/getref-method-sqlserverresultset.md)|Retrieves the value of the designated column in the current row of this [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) object as a Ref object in the Java programming language.|  

@@ -102,7 +102,7 @@ You generally restore a database to an earlier point for recovery purposes. You 
 
 To recover a database to a point in time by using the Azure portal, open the database overview page and select **Restore** on the toolbar. Choose the backup source, and then select the point-in-time backup point from which a new database will be created.
 
-:::image type="content" source="./media/recovery-using-backups/pitr-backup-sql-database-annotated.png" alt-text="Screenshot of database restore options for SQL Database.":::
+:::image type="content" source="./media/recovery-using-backups/pitr-backup-sql-database-annotated.png" alt-text="Screenshot of database restore options for SQL Database." lightbox="./media/recovery-using-backups/pitr-backup-sql-database-annotated.png":::
 
 ### [Azure CLI](#tab/azure-cli)
 
@@ -138,11 +138,11 @@ To restore a database by using the REST API:
 
 ## Long-term backup restore
 
-To perform a restore operation on a long-term backup, you can use the Azure portal, the Azure CLI, Azure PowerShell, or the REST API. For more information, see [Restore a long-term backup](long-term-backup-retention-configure.md#view-backups-and-restore-from-a-backup). Long-term retention isn't applicable to Hyperscale databases. 
+To perform a restore operation on a long-term backup, you can use the Azure portal, the Azure CLI, Azure PowerShell, or the REST API. For more information, see [Restore a long-term backup](long-term-backup-retention-configure.md#view-backups-and-restore-from-a-backup). 
 
 ### [Azure portal](#tab/azure-portal)
 
-To recover a long-term backup by using the Azure portal, go to your logical server. Select **Backups** under **Settings**, and then select **Manage** under **Available LTR backups** for the database you're trying to restore. 
+To recover a long-term backup by using the Azure portal, go to your logical server. Select **Backups** under **Data Management**, and then select **Manage** under **Available LTR backups** for the database you're trying to restore. 
 
 :::image type="content" source="media/long-term-backup-retention-configure/ltr-available-backups-tab.png" alt-text="Screenshot of the Azure portal that shows available long-term retention backups.":::
 
@@ -240,7 +240,7 @@ From the Azure portal, you create a new single database and select an available 
 
 To geo-restore a single database from the Azure portal in the region and server of your choice, follow these steps:
 
-1. From **Dashboard**, select **Add** > **Create SQL Database**. On the **Basics** tab, enter the required information.
+1. Open the [**Create SQL Database**](https://portal.azure.com/#create/Microsoft.SQLDatabase) pane in the Azure portal. On the **Basics** tab, enter the required information.
 2. Select **Additional settings**.
 3. For **Use existing data**, select **Backup**.
 4. Select a backup from the list of available geo-restore backups.

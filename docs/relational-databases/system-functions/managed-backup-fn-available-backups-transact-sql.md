@@ -21,7 +21,7 @@ dev_langs:
 # managed_backup.fn_available_backups (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
-  Returns a table of 0, one or more rows of the available backup files for the specified database. The backup files returned are backups created by [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].  
+  Returns a table of 0, one or more rows of the available backup files for the specified database. The backup files returned are backups created by [!INCLUDE[ss-managed-backup](../../includes/ss-managed-backup-md.md)].  
   
  :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -50,7 +50,7 @@ If there are gaps in LSN meaning that there is a break in the log chain, the tab
 |last_lsn|NUMERIC(25, 0)|Log sequence number of the next log record after the backup set. Can be NULL.|  
 |backup_start_date|DATETIME|Date and time the backup operation started.|  
 |backup_finish_date|NVARCHAR(128)|Date and time the backup operation finished.|  
-|machine_name|NVARCHAR(128)|Name of the computer where the SQL Server instance is installed and running [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|  
+|machine_name|NVARCHAR(128)|Name of the computer where the SQL Server instance is installed and running [!INCLUDE[ss-managed-backup](../../includes/ss-managed-backup-md.md)].|  
 |last_recovery_fork_id|UNIQUEIDENTIFIER|Identification number for the ending recovery fork.|  
 |first_recovery_fork_id|UNIQUEIDENTIFIER|ID of the starting recovery fork. For data backups, first_recovery_fork_guid equals last_recovery_fork_guid.|  
 |fork_point_lsn|NUMERIC(25, 0)|If first_recovery_fork_id is not equal to last_recovery_fork_id, this is the log sequence number of the fork point. Otherwise, this value is NULL.|  
@@ -65,7 +65,7 @@ If there are gaps in LSN meaning that there is a break in the log chain, the tab
  Requires **SELECT** permissions on this function.  
   
 ## Examples  
- The following example lists all the available backups backed up through [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] for the database 'MyDB'  
+ The following example lists all the available backups backed up through [!INCLUDE[ss-managed-backup](../../includes/ss-managed-backup-md.md)] for the database 'MyDB'  
   
 ```  
 SELECT *   

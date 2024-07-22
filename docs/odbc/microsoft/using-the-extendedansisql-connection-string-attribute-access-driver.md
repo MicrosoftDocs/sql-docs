@@ -2,7 +2,7 @@
 title: "Using the ExtendedAnsiSQL Connection String Attribute"
 description: "Using the ExtendedAnsiSQL Connection String Attribute (Access Driver)"
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: "01/19/2017"
 ms.service: sql
 ms.subservice: connectivity
@@ -23,6 +23,6 @@ Jet 4.0 has several new features that are not enabled by default in the ODBC Des
   
 -   [Creating and Dropping Views and Procedures Using ExtendedAnsiSQL](../../odbc/microsoft/creating-and-dropping-views-and-procedures-using-extendedansisql.md)  
   
--   [Data Trunctation Detection Enabled Using ExtendedAnsiSQL](../../odbc/microsoft/data-truncation-detection-enabled-using-extendedansisql.md)  
+-   [Data Truncation Detection Enabled Using ExtendedAnsiSQL](../../odbc/microsoft/data-truncation-detection-enabled-using-extendedansisql.md)  
   
 -   [Jet 4.0 Uses SQL-92 Reserved Words List when ExtendedAnsiSQL Set](../../odbc/microsoft/jet-4-0-uses-sql-92-reserved-words-list-when-extendedansisql-set.md)

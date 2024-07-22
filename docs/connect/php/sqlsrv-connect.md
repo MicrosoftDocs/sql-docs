@@ -2,7 +2,7 @@
 title: "sqlsrv_connect"
 description: "Creates a connection resource and opens a connection using the sql_srv driver for PHP. By default, the connection is attempted using Windows Authentication."
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: "03/26/2018"
 ms.service: sql
 ms.subservice: connectivity

@@ -2,7 +2,7 @@
 title: "Limitations"
 description: "Limitations"
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.reviewer: randolphwest
 ms.date: 12/14/2023
 ms.service: sql
@@ -58,7 +58,7 @@ This section describes limitations of the ODBC Desktop Database Drivers regardin
 | `FROM` clause | The maximum number of tables in a `FROM` clause is 16. |
 | `HAVING` clause | The maximum number of search conditions in a `HAVING` clause is 40. |
 | `LIKE` predicate | For more information, see [LIKE predicate limitations](like-predicate-limitations.md). |
-| `NOT NULL` | The `NOT `NULL`` constraint in the `CREATE TABLE` statement isn't supported. |
+| `NOT NULL` | The `NOT NULL` constraint in the `CREATE TABLE` statement isn't supported. |
 | `ORDER BY` clause | If a `SELECT` statement contains a `GROUP BY` clause and an `ORDER BY` clause, the `ORDER BY` clause can contain only a column in the result set or an expression in the `GROUP BY` clause. |
 | Table names | For more information, see [Table name limitations](table-name-limitations.md). |
 | Table references | A maximum of 16 table references can be included in any query statement. |

@@ -73,7 +73,7 @@ helpviewer_keywords:
     ```  
   
 ##  <a name="FollowUp"></a> Follow Up: After Removing the Witness  
- Turning off the witness changes the [operating mode](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)in accordance with the transaction-safety setting:  
+ Turning off the witness changes the [operating mode](../../database-engine/database-mirroring/database-mirroring-operating-modes.md) in accordance with the transaction-safety setting:  
   
 -   If transaction safety is set to FULL (the default), the session uses high-safety, synchronous mode without automatic failover.  
   

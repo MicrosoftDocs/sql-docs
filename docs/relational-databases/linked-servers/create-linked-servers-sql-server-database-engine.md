@@ -3,7 +3,7 @@ title: "Create linked servers"
 description: "Create linked servers (SQL Server Database Engine)"
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: "07/31/2023"
+ms.date: "05/08/2024"
 ms.service: sql
 ms.topic: conceptual
 f1_keywords:
@@ -92,7 +92,7 @@ Under **Local server login to remote server login mappings**, repeat the followi
   
 1. Specify a **Local login**.
 
-    Specify the local login that can connect to the linked server. The local login can be either a login using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] authentication or a Windows authentication login. Using a Windows group isn't supported. Use this list to restrict the connection to specific logins, or to allow some logins to connect as a different login.
+    Specify the local login that can connect to the linked server. The local login can be either a login using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] authentication or a Windows authentication login. Using a Windows group or a contained database user isn't supported. Use this list to restrict the connection to specific logins, or to allow some logins to connect as a different login.
 
    > [!NOTE]
    > Common issues with linked servers using Windows authentication to a remote SQL Server instance arise from issues with service principal names (SPNs). For more information, see [Service Principal Name (SPN) Support in Client Connections](../../connect/oledb/features/service-principal-name-spn-support-in-client-connections.md). **Microsoft Kerberos Configuration Manager for SQL Server** is a diagnostic tool that helps troubleshoot Kerberos related connectivity issues with SQL Server. For more information, see [Microsoft Kerberos Configuration Manager for SQL Server](https://www.microsoft.com/download/details.aspx?id=39046).
@@ -130,6 +130,11 @@ Select one of the following options:
 
 - **Be made using this security context**  
     A connection will be made using the login and password specified in the **Remote login** and **With password** boxes for logins not defined in the list. The remote login must be a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication login on the remote server.  
+
+  > [!CAUTION]  
+  > If a linked server is configured with option **Be made using this security context**, *any* user on the instance can access the remote linked server using this context. This may have the unintended potential for abuse or malicious internal access.
+  > The SQL authenticated **Remote login** provided to the linked server should be granted minimum necessary permissions on the remote server, to ensure a principle of least privilege and to reduce attack surface. 
+
 
 ### Edit the Server Options page in linked server properties (optional)
   

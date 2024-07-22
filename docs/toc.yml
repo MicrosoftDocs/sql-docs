@@ -1058,8 +1058,6 @@ items:
           href: relational-databases/databases/use-the-copy-database-wizard.md
         - name: Backup & Restore
           href: relational-databases/databases/copy-databases-with-backup-and-restore.md
-        - name: Publish a Database
-          href: relational-databases/databases/publish-a-database-sql-server-management-studio.md
         - name: Detach & attach (T-SQL)
           href: relational-databases/databases/move-a-database-using-detach-and-attach-transact-sql.md
         - name: Upgrade a Database (T-SQL)
@@ -2644,14 +2642,20 @@ items:
         href: language-extensions/csharp-overview.md
       - name: What's new?
         href: language-extensions/language-extensions-whats-new.md
+      - name: Security
+        href: machine-learning/concepts/security.md
     - name: Install
       items:
       - name: Install Java Language Extension on Windows
         href: language-extensions/install/windows-java.md
+      - name: Install .NET Language Extension on Windows
+        href: language-extensions/install/windows-c-sharp.md
     - name: Tutorials
       items:
       - name: Search for string using RegEx in Java
         href: language-extensions/tutorials/search-for-string-using-regular-expressions-in-java.md
+      - name: Search for string using RegEx in C#
+        href: language-extensions/tutorials/search-for-string-using-regular-expressions-in-c-sharp.md
     - name: Concepts
       items:
       - name: Extensibility framework
@@ -2660,14 +2664,26 @@ items:
         href: language-extensions/concepts/compare-extensibility-to-clr.md
     - name: How-to guides
       items:
-      - name: Call Java from SQL Server
-        href: language-extensions/how-to/call-java-from-sql.md
-      - name: Extensibility SDK for Java
-        href: language-extensions/how-to/extensibility-sdk-java-sql-server.md
-      - name: Java to SQL data types
-        href: language-extensions/how-to/java-to-sql-data-types.md
-      - name: Create a Java jar file
-        href: language-extensions/how-to/create-a-java-jar-file-from-class-files.md
+      - name: Java
+        items:
+        - name: Call Java from SQL Server
+          href: language-extensions/how-to/call-java-from-sql.md
+        - name: Extensibility SDK for Java
+          href: language-extensions/how-to/extensibility-sdk-java-sql-server.md
+        - name: Java to SQL data types
+          href: language-extensions/how-to/java-to-sql-data-types.md
+        - name: Create a Java jar file
+          href: language-extensions/how-to/create-a-java-jar-file-from-class-files.md
+      - name: C#
+        items:
+        - name: Call C# from SQL Server
+          href: language-extensions/how-to/call-c-sharp-from-sql.md
+        - name: Extensibility SDK for C#
+          href: language-extensions/how-to/extensibility-sdk-c-sharp-sql-server.md
+        - name: C# to SQL data types
+          href: language-extensions/how-to/c-sharp-to-sql-data-types.md
+        - name: Create a .NET DLL file
+          href: language-extensions/how-to/create-a-c-sharp-library.md
     - name: Reference
       items:
       - name: Extensibility Framework API
@@ -4256,40 +4272,50 @@ items:
         href: relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-classes-and-properties.md
       - name: Work with Server Events
         href: relational-databases/wmi-provider-server-events/working-with-the-wmi-provider-for-server-events.md
-- name: Internals & Architecture
-  href: relational-databases/sql-server-guides.md
+- name: Internals & architecture
   items:
+  - name: Overview
+    href: relational-databases/sql-server-guides.md
   - name: Ghost record cleanup process
     href: relational-databases/ghost-record-cleanup-process-guide.md
-  - name: Index Architecture & Design
+  - name: Index architecture & design
     href: relational-databases/sql-server-index-design-guide.md
-  - name: Pages & Extents Architecture
-    href: relational-databases/pages-and-extents-architecture-guide.md
+  - name: Pages & extents architecture
     items:
+    - name: Overview
+      href: relational-databases/pages-and-extents-architecture-guide.md
     - name: Reading pages
       href: relational-databases/reading-pages.md
     - name: Writing pages
       href: relational-databases/writing-pages.md
-  - name: Post-migration Validation & Optimization
+  - name: Post-migration validation & optimization
     href: relational-databases/post-migration-validation-and-optimization-guide.md
-  - name: Query Processing Architecture
+  - name: Query processing architecture
     href: relational-databases/query-processing-architecture-guide.md
-  - name: Thread & Task Architecture
+  - name: SQL Server I/O fundamentals
+    href: relational-databases/sql-server-storage-guide.md
+  - name: Thread & task architecture
     href: relational-databases/thread-and-task-architecture-guide.md
-  - name: Transaction Log Architecture & Management Guide
+  - name: Transaction log architecture & management guide
     href: relational-databases/sql-server-transaction-log-architecture-and-management-guide.md
-  - name: Transaction Locking & Row Versioning Guide
+  - name: Transaction locking & row versioning guide
     href: relational-databases/sql-server-transaction-locking-and-row-versioning-guide.md
   - name: Optimized locking
     href: relational-databases/performance/optimized-locking.md
   - name: Deadlocks guide
     href: relational-databases/sql-server-deadlocks-guide.md
-  - name: Memory Management Architecture
+  - name: Memory management architecture
     href: relational-databases/memory-management-architecture-guide.md
   - name: Diagnosing latch contention
     href: relational-databases/diagnose-resolve-latch-contention.md
   - name: Diagnosing spinlock contention
     href: relational-databases/diagnose-resolve-spinlock-contention.md
+  - name: Database connection network trace
+    items:
+    - name: Trace a network authentication sequence
+      href: relational-databases/database-engine-connection-open-network-trace.md
+    - name: Trace a network connection close sequence
+      href: relational-databases/database-engine-connection-close-network-trace.md
 - name: Installation
   items:
   - name: Overview
@@ -4730,8 +4756,6 @@ items:
         href: database-engine/configure-windows/hide-an-instance-of-sql-server-database-engine.md
       - name: Configure the Database Engine to listen on multiple TCP ports
         href: database-engine/configure-windows/configure-the-database-engine-to-listen-on-multiple-tcp-ports.md
-      - name: How to enable the TCP protocol with SQLPS
-        href: powershell/how-to-enable-tcp-sqlps.md
       - name: Determine if the Database Engine is installed and started
         href: database-engine/configure-windows/determine-whether-the-database-engine-is-installed-and-started.md
       - name: Connect to the Database Engine using Extended Protection
@@ -6033,9 +6057,10 @@ items:
     - name: Run at command prompt
       href: dea/database-experimentation-assistant-run-command-prompt.md
   - name: Database Migration Assistant (DMA)
-    href: dma/dma-overview.md
     items:
-    - name: Usage and Diagnostic Data
+    - name: Overview
+      href: dma/dma-overview.md
+    - name: Usage and diagnostic data
       href: dma/dma-diagnostic-data-collection.md
     - name: What's new
       href: dma/dma-whats-new.md
@@ -6547,33 +6572,33 @@ items:
     - name: SQL Trace
       href: relational-databases/sql-trace/sql-trace.md
       items:
-      - name: Create & Run Traces Using T-SQL Stored Procedures
+      - name: Create & run traces using T-SQL stored procedures
         href: relational-databases/sql-trace/create-and-run-traces-using-transact-sql-stored-procedures.md
-      - name: Create Manual Traces using Stored Procedures
+      - name: Create manual traces using stored procedures
         href: relational-databases/sql-trace/create-manual-traces-using-stored-procedures.md
-      - name: Save Trace Results to a File
+      - name: Save trace results to a file
         href: relational-databases/sql-trace/save-trace-results-to-a-file.md
-      - name: Improve Access to Trace Data
+      - name: Improve access to trace data
         href: relational-databases/sql-trace/improve-access-to-trace-data.md
-      - name: Create a Trace (T-SQL)
+      - name: Create a trace (T-SQL)
         href: relational-databases/sql-trace/create-a-trace-transact-sql.md
-      - name: Set a Trace Filter (T-SQL)
+      - name: Set a trace filter (T-SQL)
         href: relational-databases/sql-trace/set-a-trace-filter-transact-sql.md
-      - name: Modify an Existing Trace (T-SQL)
+      - name: Modify an existing Trace (T-SQL)
         href: relational-databases/sql-trace/modify-an-existing-trace-transact-sql.md
-      - name: View a Saved Trace (T-SQL)
+      - name: View a saved trace (T-SQL)
         href: relational-databases/sql-trace/view-a-saved-trace-transact-sql.md
-      - name: View Filter Information (T-SQL)
+      - name: View filter information (T-SQL)
         href: relational-databases/sql-trace/view-filter-information-transact-sql.md
-      - name: Delete a Trace (T-SQL)
+      - name: Delete a trace (T-SQL)
         href: relational-databases/sql-trace/delete-a-trace-transact-sql.md
-      - name: Optimize SQL Trace
+      - name: Optimize SQL trace
         href: relational-databases/sql-trace/optimize-sql-trace.md
-      - name: Filter a Trace
+      - name: Filter a trace
         href: relational-databases/sql-trace/filter-a-trace.md
-      - name: Limit Trace File & Table Sizes
+      - name: Limit trace file & table sizes
         href: relational-databases/sql-trace/limit-trace-file-and-table-sizes.md
-      - name: Schedule Traces
+      - name: Schedule traces
         href: relational-databases/sql-trace/schedule-traces.md
     - name: Query Store
       items:
@@ -8134,8 +8159,6 @@ items:
       href: tools/sqllogship-application.md
     - name: sqlmaint
       href: tools/sqlmaint-utility.md
-    - name: sqlps
-      href: tools/sqlps-utility.md
     - name: sqlservr Application
       href: tools/sqlservr-application.md
     - name: tablediff
@@ -8450,7 +8473,7 @@ items:
     items:
     - name: SQL Server Data Tools Overview
       href: ssdt/sql-server-data-tools.md
-    - name: Download SSDT
+    - name: Install SSDT
       href: ssdt/download-sql-server-data-tools-ssdt.md
     - name: Previous releases of SSDT & SSDT-BI
       href: ssdt/previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi.md
@@ -8514,8 +8537,6 @@ items:
           href: ssdt/how-to-view-and-edit-data-in-a-table.md
         - name: "How to: Delete Objects & Resolve Dependencies"
           href: ssdt/how-to-delete-objects-and-resolve-dependencies.md
-        - name: "How to: Clone an Existing Database"
-          href: ssdt/how-to-clone-an-existing-database.md
         - name: Extract, Publish, & Register .dacpac Files
           href: ssdt/extract-publish-and-register-dacpac-files.md
       - name: Compare & Synchronize Data in One or More Tables with Data in a Reference Database
@@ -8659,7 +8680,9 @@ items:
       items:
       - name: SSMS Configuration
         href: ssms/tutorials/ssms-configuration.md
-      - name: Use other tips & tricks
+      - name: Import and export SSMS settings
+        href: ssms/tutorials/import-export-settings.md        
+      - name: SSMS tips & tricks
         href: ssms/tutorials/ssms-tricks.md
       - name: Script objects
         href: ssms/tutorials/scripting-ssms.md
@@ -8816,17 +8839,17 @@ items:
         items:
         - name: Generate scripts
           items:
-          - name: Generate Scripts
+          - name: Overview
             href: ssms/scripting/generate-scripts-sql-server-management-studio.md
-          - name: Generate & Publish Scripts Wizard
+          - name: Generate Scripts Wizard
             href: ssms/scripting/generate-and-publish-scripts-wizard.md
-          - name: Objects Supported by the Generate Scripts Wizard
+          - name: Objects supported by the Generate Scripts Wizard
             href: ssms/scripting/objects-supported-by-the-generate-scripts-wizard.md
-          - name: XML Editor
+          - name: XML editor
             href: ssms/scripting/xml-editor-sql-server-management-studio.md
-          - name: Color Coding in Query Editors
+          - name: Color coding in query editors
             href: ssms/scripting/color-coding-in-query-editors.md
-        - name: Code Outlining
+        - name: Code outlining
           href: ssms/scripting/code-outlining.md
         - name: Drag & Drop Text
           href: ssms/scripting/drag-and-drop-text.md
@@ -8954,12 +8977,12 @@ items:
         href: ssms/troubleshoot/workaround-move-tabs.md
       - name: Troubleshoot
         items:
-        - name: Get full memory dump 
-          href: ssms/troubleshoot/get-full-memory-dump.md
-        - name: Get diagnostic data
-          href: ssms/troubleshoot/ssms-troubleshoot.md
         - name: Install failed or requires restart
           href: ssms/troubleshoot/install-failed-requires-restart.md
+        - name: Get full memory dump 
+          href: ssms/troubleshoot/get-full-memory-dump.md
+        - name: Advanced troubleshooting for SSMS
+          href: ssms/troubleshoot/ssms-troubleshoot.md
       - name: SQL Server Agent
         items:
         - name: Configure
@@ -9782,6 +9805,10 @@ items:
       href: tools/sqlpackage/sqlpackage-download.md
     - name: Release notes
       href: tools/sqlpackage/release-notes-sqlpackage.md
+    - name: CLI reference
+      href: tools/sqlpackage/cli-reference.md
+    - name: SqlPackage in development pipelines
+      href: tools/sqlpackage/sqlpackage-pipelines.md
     - name: SqlPackage Actions
       items:
       - name: SqlPackage Extract
@@ -9796,12 +9823,12 @@ items:
         href: tools/sqlpackage/sqlpackage-deploy-drift-report.md
       - name: SqlPackage Script
         href: tools/sqlpackage/sqlpackage-script.md
-    - name: SqlPackage in development pipelines
-      href: tools/sqlpackage/sqlpackage-pipelines.md
-    - name: SqlPackage with data in Parquet files
-      href: tools/sqlpackage/sqlpackage-with-data-in-parquet-files.md
-    - name: SqlPackage for Azure Synapse Analytics
-      href: tools/sqlpackage/sqlpackage-for-azure-synapse-analytics.md
+    - name: Database portability
+      items:
+      - name: SqlPackage with data in Parquet files
+        href: tools/sqlpackage/sqlpackage-with-data-in-parquet-files.md
+      - name: SqlPackage for Azure Synapse Analytics
+        href: tools/sqlpackage/sqlpackage-for-azure-synapse-analytics.md
     - name: Troubleshooting SqlPackage
       href: tools/sqlpackage/troubleshooting-issues-and-performance-with-sqlpackage.md
   - name: SQL Server Profiler
@@ -9870,20 +9897,21 @@ items:
         href: tools/sql-server-profiler/analyze-deadlocks-with-sql-server-profiler.md
       - name: Analyze Queries with SHOWPLAN Results in SQL Server Profiler
         href: tools/sql-server-profiler/analyze-queries-with-showplan-results-in-sql-server-profiler.md
-    - name: Filter Traces
-      href: tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md
+    - name: Filter traces
       items:
-      - name: Filter Events in a Trace
+      - name: Overview
+        href: tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md
+      - name: Filter events in a trace
         href: tools/sql-server-profiler/filter-events-in-a-trace-sql-server-profiler.md
-      - name: View Filter Information
+      - name: View filter information
         href: tools/sql-server-profiler/view-filter-information-sql-server-profiler.md
-      - name: Modify a Filter
+      - name: Modify a filter
         href: tools/sql-server-profiler/modify-a-filter-sql-server-profiler.md
-      - name: Filter Events Based on the Event Start Time
+      - name: Filter events based on the event start time
         href: tools/sql-server-profiler/filter-events-based-on-the-event-start-time-sql-server-profiler.md
-      - name: Filter Events Based on the Event End Time
+      - name: Filter events based on the event end time
         href: tools/sql-server-profiler/filter-events-based-on-the-event-end-time-sql-server-profiler.md
-      - name: Filter Server Process IDs (SPIDs) in a Trace
+      - name: Filter server process IDs (SPIDs) in a trace
         href: tools/sql-server-profiler/filter-server-process-ids-spids-in-a-trace-sql-server-profiler.md
     - name: Save traces & templates
       href: tools/sql-server-profiler/save-traces-and-trace-templates.md
@@ -10247,6 +10275,8 @@ items:
           href: linux/quickstart-sql-server-containers-azure.md
         - name: Deploy AGs with DH2i DxEnterprise
           href: linux/tutorial-sql-server-containers-kubernetes-dh2i.md
+        - name: Deploy AGs with DH2i DxOperator
+          href: linux/tutorial-sql-server-containers-kubernetes-dxoperator.md
     - name: Security
       items:
       - name: Overview
@@ -10369,59 +10399,68 @@ items:
           href: sql-server/azure-arc/view-databases.md
         - name: Configure SQL Server
           href: sql-server/azure-arc/manage-configuration.md
-        - name: Automate patching
-          href: sql-server/azure-arc/patch.md
-        - name: Disconnect and unregister from Azure Arc
+        - name: Licensing & billing
+          href: sql-server/azure-arc/manage-license-billing.md
+        - name: Extended Security Updates
+          href: sql-server/azure-arc/extended-security-updates.md
+        - name: Automate updates
+          href: sql-server/azure-arc/update.md
+        - name: Disconnect & unregister from Azure Arc
           href: sql-server/azure-arc/delete-from-azure-arc.md
         - name: Monitor (preview)
           href: sql-server/azure-arc/sql-monitoring.md
         - name: Use activity logs
           href: sql-server/azure-arc/activity-logs.md
+        - name: Move resources
+          href: sql-server/azure-arc/move-resources.md
       - name: Business continuity
         items:
         - name: Automated backups to local storage (preview)
           href: sql-server/azure-arc/backup-local.md
         - name: Point-in-time restore (preview)
           href: sql-server/azure-arc/point-in-time-restore.md
-        - name: View Always On failover cluster instances (preview)
+        - name: View Always On failover cluster
           href: sql-server/azure-arc/support-for-fci.md  
-        - name: View Always On availability group (preview)
+        - name: Manage Always On availability group
           href: sql-server/azure-arc/manage-availability-group.md
       - name: Secure
         items:
-        - name: Agent permissions
-          items:
-          - name: Agent roles
-            href: sql-server/azure-arc/permissions-granted-agent-extension.md
-          - name: Configure least privilege
-            href: sql-server/azure-arc/configure-least-privilege.md
-          - name: Required permissions
-            href: sql-server/azure-arc/configure-windows-accounts-agent.md
+        - name: Best practices
+          href: sql-server/azure-arc/secure-best-practices.md
+        - name: Configure least privilege
+          href: sql-server/azure-arc/configure-least-privilege.md
         - name: Configure advanced data Security
           href: sql-server/azure-arc/configure-advanced-data-security.md
         - name: Certificate rotation
           href: sql-server/azure-arc/rotate-certificates.md
-        - name: Extended Security Updates
-          href: sql-server/azure-arc/extended-security-updates.md
+        - name: Roles, permissions, & files
+          items:
+          - name: Agent roles
+            href: sql-server/azure-arc/permissions-granted-agent-extension.md
+          - name: Required permissions
+            href: sql-server/azure-arc/configure-windows-accounts-agent.md
+          - name: System object reference
+            href: sql-server/azure-arc/agent-extension-files.md
       - name: Migrate
         items:
-        - name: Discover and assess
+        - name: Discover & assess
           href: sql-server/azure-arc/migration-assessment.md
       - name: FAQ
         href: sql-server/azure-arc/faq.yml
-      - name: Data collection and reporting
+      - name: Data collection & reporting
         href: sql-server/azure-arc/data-collection.md
       - name: Troubleshoot
         items:
         - name: Troubleshoot deployment
           href: sql-server/azure-arc/troubleshoot-deployment.md
+        - name: Troubleshoot extension
+          href: sql-server/azure-arc/troubleshoot-extension.md
         - name: Troubleshoot connectivity to DPS or telemetry endpoints
           href: sql-server/azure-arc/troubleshoot-telemetry-endpoint.md
         - name: Troubleshoot best practices assessment
           href: sql-server/azure-arc/troubleshoot-assessment.md
     - name: Azure Arc-enabled data services >
       href: /azure/azure-arc/data/overview
-
 
 - name: Big Data Clusters
   items:
@@ -12144,46 +12183,6 @@ items:
       href: native-interfaces/getsvcinstanceidfromname.md
     - name: GetSQLInstanceRegStringByID
       href: native-interfaces/getsqlinstanceregstringbyid.md
-  - name: SQL PowerShell
-    items:
-    - name: Install SQL PowerShell module
-      href: powershell/download-sql-server-ps-module.md
-    - name: SQL Server PowerShell overview
-      href: powershell/sql-server-powershell.md
-      items:
-      - name: SQL Server PowerShell Provider
-        href: powershell/sql-server-powershell-provider.md
-      - name: Query Expressions & Uniform Resource Names
-        href: powershell/query-expressions-and-uniform-resource-names.md
-    - name: How to access SQL Server Objects
-      href: powershell/navigate-sql-server-powershell-paths.md
-    - name: How to load the SMO Assemblies in Windows PowerShell
-      href: powershell/load-the-smo-assemblies-in-windows-powershell.md
-    - name: How to run PowerShell in SSMS
-      href: powershell/run-windows-powershell-from-sql-server-management-studio.md
-    - name: How to run PowerShell with SQL Server Agent
-      href: powershell/run-windows-powershell-steps-in-sql-server-agent.md
-    - name: How to manage authentication
-      href: powershell/manage-authentication-in-database-engine-powershell.md
-    - name: How to manage tab completion
-      href: powershell/manage-tab-completion-sql-server-powershell.md
-    - name: Work With SQL Server PowerShell Paths
-      href: powershell/work-with-sql-server-powershell-paths.md
-    - name: SQL Server Identifiers in PowerShell
-      href: powershell/sql-server-identifiers-in-powershell.md
-      items:
-      - name: Specify Instances in the SQL Server PowerShell Provider
-        href: powershell/specify-instances-in-the-sql-server-powershell-provider.md
-      - name: Encode & Decode SQL Server Identifiers
-        href: powershell/encode-and-decode-sql-server-identifiers.md
-      - name: Escape SQL Server Identifiers
-        href: powershell/escape-sql-server-identifiers.md
-    - name: Cmdlet reference
-      items:
-      - name: SqlServer cmdlets
-        href: /powershell/module/sqlserver/
-      - name: SQLPS cmdlets
-        href: /powershell/module/sqlps/
   - name: System catalog views
     href: relational-databases/system-catalog-views/catalog-views-transact-sql.md
     items:
@@ -12446,6 +12445,8 @@ items:
       items:
       - name: queryinsights.exec_requests_history
         href: relational-databases/system-views/queryinsights-exec-requests-history-transact-sql.md
+      - name: queryinsights.exec_sessions_history
+        href: relational-databases/system-views/queryinsights-exec-sessions-history-transact-sql.md
       - name: queryinsights.frequently_run_queries
         href: relational-databases/system-views/queryinsights-frequently-run-queries-transact-sql.md
       - name: queryinsights.long_running_queries
@@ -13293,14 +13294,14 @@ items:
         href: relational-databases/system-dynamic-management-views/sys-dm-fts-population-ranges-transact-sql.md
       - name: sys.dm_fts_semantic_similarity_population
         href: relational-databases/system-dynamic-management-views/sys-dm-fts-semantic-similarity-population-transact-sql.md
-    - name: Geo-Replication (Azure SQL Database)
+    - name: Geo-Replication (Azure SQL)
       href: relational-databases/system-dynamic-management-views/geo-replication-dynamic-management-views-and-functions-azure-sql-database.md
       items:
       - name: sys.geo_replication_links (Azure SQL Database)
         href: relational-databases/system-dynamic-management-views/sys-geo-replication-links-azure-sql-database.md
-      - name: sys.dm_geo_replication_link_status (Azure SQL Database)
+      - name: sys.dm_geo_replication_link_status (Azure SQL)
         href: relational-databases/system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md
-      - name: sys.dm_continuous_copy_status (Azure SQL Database)
+      - name: sys.dm_continuous_copy_status (Azure SQL)
         href: relational-databases/system-dynamic-management-views/sys-dm-continuous-copy-status-azure-sql-database.md
     - name: Index
       href: relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md
@@ -13789,6 +13790,8 @@ items:
         href: relational-databases/system-functions/sys-fn-check-object-signatures-transact-sql.md
       - name: sys.fn_get_audit_file
         href: relational-databases/system-functions/sys-fn-get-audit-file-transact-sql.md
+      - name: sys.fn_get_audit_file_v2
+        href: relational-databases/system-functions/sys-fn-get-audit-file-v2-transact-sql.md
       - name: sys.fn_my_permissions
         href: relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md
       - name: sys.fn_translate_permissions
@@ -15926,6 +15929,10 @@ items:
         href: t-sql/data-types/tostring-database-engine.md
       - name: Write
         href: t-sql/data-types/write-database-engine.md
+    - name: JSON
+      items:
+      - name: JSON data type
+        href: t-sql/data-types/json-data-type.md
     - name: Numeric
       href: t-sql/data-types/numeric-types.md
       items:
@@ -16583,8 +16590,9 @@ items:
         - name: "@@VERSION"
           href: t-sql/functions/version-transact-sql-configuration-functions.md
       - name: Conversion
-        href: t-sql/functions/conversion-functions-transact-sql.md
         items:
+        - name: Overview
+          href: t-sql/functions/conversion-functions-transact-sql.md
         - name: CAST & CONVERT
           href: t-sql/functions/cast-and-convert-transact-sql.md
         - name: PARSE
@@ -16753,18 +16761,22 @@ items:
         items:
         - name: ISJSON
           href: t-sql/functions/isjson-transact-sql.md
-        - name: JSON_OBJECT
-          href: t-sql/functions/json-object-transact-sql.md
         - name: JSON_ARRAY
           href: t-sql/functions/json-array-transact-sql.md
-        - name: JSON_VALUE
-          href: t-sql/functions/json-value-transact-sql.md
-        - name: JSON_QUERY
-          href: t-sql/functions/json-query-transact-sql.md
+        - name: JSON_ARRAYAGG
+          href: t-sql/functions/json-arrayagg-transact-sql.md
         - name: JSON_MODIFY
           href: t-sql/functions/json-modify-transact-sql.md
+        - name: JSON_OBJECT
+          href: t-sql/functions/json-object-transact-sql.md
+        - name: JSON_OBJECTAGG
+          href: t-sql/functions/json-objectagg-transact-sql.md
         - name: JSON_PATH_EXISTS
           href: t-sql/functions/json-path-exists-transact-sql.md
+        - name: JSON_QUERY
+          href: t-sql/functions/json-query-transact-sql.md
+        - name: JSON_VALUE
+          href: t-sql/functions/json-value-transact-sql.md
       - name: Mathematical
         href: t-sql/functions/mathematical-functions-transact-sql.md
         items:
@@ -17042,6 +17054,8 @@ items:
           href: t-sql/functions/trim-transact-sql.md
         - name: UNICODE
           href: t-sql/functions/unicode-transact-sql.md
+        - name: UNISTR
+          href: t-sql/functions/unistr-transact-sql.md
         - name: UPPER
           href: t-sql/functions/upper-transact-sql.md
       - name: System
@@ -17203,8 +17217,6 @@ items:
           href: t-sql/language-elements/begin-end-transact-sql.md
         - name: BREAK
           href: t-sql/language-elements/break-transact-sql.md
-        - name: CONTINUE
-          href: t-sql/language-elements/continue-transact-sql.md
         - name: ELSE (IF...ELSE)
           href: t-sql/language-elements/else-if-else-transact-sql.md
         - name: END (BEGIN...END)
@@ -17221,7 +17233,7 @@ items:
           href: t-sql/language-elements/try-catch-transact-sql.md
         - name: WAITFOR
           href: t-sql/language-elements/waitfor-transact-sql.md
-        - name: WHILE
+        - name: WHILE (and CONTINUE)
           href: t-sql/language-elements/while-transact-sql.md
       - name: Cursors
         href: t-sql/language-elements/cursors-transact-sql.md
@@ -17379,6 +17391,10 @@ items:
             href: t-sql/language-elements/string-comparison-assignment.md
           - name: "+ (String concatenation)"
             href: t-sql/language-elements/string-concatenation-transact-sql.md
+          - name: "|| (String concatenation)"
+            href: t-sql/language-elements/string-concatenation-pipes-transact-sql.md
+          - name: "||= (Compound assignment)"
+            href: t-sql/language-elements/compound-assignment-pipes-transact-sql.md
           - name: "+= (String concatenation assignment)"
             href: t-sql/language-elements/string-concatenation-equal-transact-sql.md
           - name: "% (Wildcard - character(s) to match)"
@@ -17485,13 +17501,14 @@ items:
         - name: MATCH
           href: t-sql/queries/match-sql-graph.md
       - name: Hints
-        href: t-sql/queries/hints-transact-sql.md
         items:
-        - name: Join
+        - name: Overview
+          href: t-sql/queries/hints-transact-sql.md
+        - name: Join hints
           href: t-sql/queries/hints-transact-sql-join.md
-        - name: Query
+        - name: Query hints
           href: t-sql/queries/hints-transact-sql-query.md
-        - name: Hints - Table
+        - name: Table hints
           href: t-sql/queries/hints-transact-sql-table.md
       - name: Predicates
         href: t-sql/queries/predicates.md

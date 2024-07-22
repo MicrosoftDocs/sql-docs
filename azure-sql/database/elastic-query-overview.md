@@ -1,8 +1,8 @@
 ---
 title: Elastic query overview
 description: Elastic query enables you to run a Transact-SQL query that spans multiple databases.
-author: scoriani
-ms.author: scoriani
+author: bgavrilMS
+ms.author: bogavril
 ms.reviewer: wiassaf, mathoma
 ms.date: 12/15/2021
 ms.service: sql-database
@@ -113,7 +113,7 @@ More information on the steps required for the horizontal partitioning scenario 
 To begin coding, see [Getting started with elastic query for horizontal partitioning (sharding)](elastic-query-getting-started.md).
 
 > [!IMPORTANT]
-> Successful execution of elastic query over a large set of databases relies heavily on the availability of each of databases during the query execution. If one of databases is not available, entire query will fail. If you plan to query hundreds or thousands of databases at once, make sure your client application has retry logic embedded, or consider leveraging [Elastic Database Jobs](./job-automation-overview.md) (preview) and querying smaller subsets of databases, consolidating results of each query into a single destination.
+> Successful execution of elastic query over a large set of databases relies heavily on the availability of each of databases during the query execution. If one of databases is not available, entire query will fail. If you plan to query hundreds or thousands of databases at once, make sure your client application has retry logic embedded, or consider leveraging [elastic jobs](./job-automation-overview.md) and querying smaller subsets of databases, consolidating results of each query into a single destination.
 
 ## T-SQL querying
 

@@ -2,7 +2,7 @@
 title: "Using User-Defined Types"
 description: The OLE DB Driver for SQL Server supports user-defined types as binary types with metadata information, which allows you to manage them as objects.
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: "06/12/2018"
 ms.service: sql
 ms.subservice: connectivity

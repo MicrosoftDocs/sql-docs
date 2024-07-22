@@ -217,6 +217,6 @@ EXEC jobs.sp_add_jobstep
 
 ## Related content
 
-- [Elastic jobs in Azure SQL Database (preview)](/azure/azure-sql/database/elastic-jobs-overview?view=azuresql-db&preserve-view=true)
-- [Create, configure, and manage elastic jobs (preview)](/azure/azure-sql/database/elastic-jobs-tutorial?view=azuresql-db&preserve-view=true)
-- [Create and manage elastic jobs by using T-SQL (preview)](/azure/azure-sql/database/elastic-jobs-tsql-create-manage?view=azuresql-db&preserve-view=true)
+- [Elastic jobs in Azure SQL Database](/azure/azure-sql/database/elastic-jobs-overview?view=azuresql-db&preserve-view=true)
+- [Create, configure, and manage elastic jobs](/azure/azure-sql/database/elastic-jobs-tutorial?view=azuresql-db&preserve-view=true)
+- [Create and manage elastic jobs by using T-SQL](/azure/azure-sql/database/elastic-jobs-tsql-create-manage?view=azuresql-db&preserve-view=true)

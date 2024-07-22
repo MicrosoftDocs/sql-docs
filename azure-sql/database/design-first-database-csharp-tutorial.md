@@ -4,7 +4,7 @@ description: "Learn to design your first relational database in Azure SQL Databa
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma
-ms.date: 01/26/2024
+ms.date: 06/25/2024
 ms.service: sql-database
 ms.subservice: development
 ms.topic: tutorial
@@ -50,19 +50,27 @@ SQL Database creates an IP firewall at the server-level. This firewall prevents 
 
 1. Copy this fully qualified server name for use to connect to your server and databases from SQL Server Management Studio.
 
-   :::image type="content" source="media\design-first-database-csharp-tutorial\server-name.png" alt-text="Screenshot of the Azure portal, database overview page, with the server name highlighted." lightbox="media\design-first-database-csharp-tutorial\server-name.png":::
+   :::image type="content" source="media/design-first-database-csharp-tutorial/server-name.png" alt-text="Screenshot of the Azure portal, database overview page, with the server name highlighted." lightbox="media/design-first-database-csharp-tutorial/server-name.png":::
 
-1. Select **Networking** under **Settings**. Choose the **Public Access** tab, and then select **Selected networks** under **Public network access** to display the **Firewall rules** section. 
+1. In the Azure portal, navigate to the logical SQL server for your Azure SQL Database. The easiest way is to select the **Server name** value on the SQL database page.
 
-   :::image type="content" source="media\design-first-database-csharp-tutorial\server-firewall-rule.png" alt-text="Screenshot of the Azure portal, networking page, showing where to set the server-level IP firewall rule." lightbox="media\design-first-database-csharp-tutorial\server-firewall-rule.png":::
+1. In the resource menu, under **Settings**, select **Networking**.
 
-1. Select **Add client IP** on the toolbar to add your current IP address to a new IP firewall rule. An IP firewall rule can open port 1433 for a single IP address or a range of IP addresses.
+1. Choose the **Public Access** tab, and then select **Selected networks** under **Public network access**.
+
+   :::image type="content" source="media/design-first-database-csharp-tutorial/server-firewall-rule.png" alt-text="Screenshot of the Azure portal, Networking page, showing that public network access is enabled." lightbox="media/design-first-database-csharp-tutorial/server-firewall-rule.png":::
+
+1. Scroll down to the **Firewall rules** section.
+
+   :::image type="content" source="media/design-first-database-csharp-tutorial/firewall-ip-address.png" alt-text="Screenshot of the Azure portal, Networking page, Firewall rules section." lightbox="media/design-first-database-csharp-tutorial/firewall-ip-address.png":::
+
+1. Select **Add your client IPv4 address** to add your current IP address to a new IP firewall rule. An IP firewall rule can open port 1433 for a single IP address or a range of IP addresses.
 
 1. Select **Save**. A server-level IP firewall rule is created for your current IP address opening port 1433 on the server.
 
 1. Select **OK** and then close the **Firewall settings** page.
 
-Your IP address can now pass through the IP firewall. You can now connect to your database using SQL Server Management Studio or another tool of your choice. Be sure to use the server admin account you created previously.
+   Your IP address can now pass through the IP firewall. You can now connect to your database using SQL Server Management Studio or another tool of your choice. Be sure to use the server admin account you created previously.
 
 > [!IMPORTANT]
 > By default, access through the SQL Database IP firewall is enabled for all Azure services. Select **OFF** on this page to disable access for all Azure services.

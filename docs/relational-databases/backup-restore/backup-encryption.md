@@ -17,7 +17,7 @@ This article provides an overview of the encryption options for [!INCLUDE [ssNoV
 
 ## Overview
 
-Starting in [!INCLUDE [ssSQL14](../../includes/sssql14-md.md)], SQL Server has the ability to encrypt the data while creating a backup. By specifying the encryption algorithm and the encryptor (a Certificate or Asymmetric Key) when creating a backup, you can create an encrypted backup file. All storage destinations: on-premises and Azure storage are supported. In addition, encryption options can be configured for [!INCLUDE [ss_smartbackup](../../includes/ss-smartbackup-md.md)] operations, a new feature introduced in [!INCLUDE [ssSQL14](../../includes/sssql14-md.md)].
+Starting in [!INCLUDE [ssSQL14](../../includes/sssql14-md.md)], SQL Server has the ability to encrypt the data while creating a backup. By specifying the encryption algorithm and the encryptor (a Certificate or Asymmetric Key) when creating a backup, you can create an encrypted backup file. All storage destinations: on-premises and Azure storage are supported. In addition, encryption options can be configured for [!INCLUDE [ss-managed-backup](../../includes/ss-managed-backup-md.md)] operations, a new feature introduced in [!INCLUDE [ssSQL14](../../includes/sssql14-md.md)].
 
 To encrypt during backup, you must specify an encryption algorithm, and an encryptor to secure the encryption key. The following are the supported encryption options:
 
@@ -44,7 +44,7 @@ If you're restoring a backup from a TDE encrypted database, the TDE certificate 
 
 1. Encryption can also be used for databases that are encrypted using TDE.
 
-1. Encryption is supported for backups done by [!INCLUDE [ss_smartbackup](../../includes/ss-smartbackup-md.md)], which provides additional security for off-site backups.
+1. Encryption is supported for backups done by [!INCLUDE [ss-managed-backup](../../includes/ss-managed-backup-md.md)], which provides additional security for off-site backups.
 
 1. This feature supports multiple encryption algorithms up to AES 256 bit. This gives you the option to select an algorithm that aligns with your requirements.
 

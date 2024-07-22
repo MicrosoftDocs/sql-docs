@@ -1,5 +1,5 @@
 ---
-title: "Print a Report (Report Builder)"
+title: "Print a report (Report Builder)"
 description: You can view and print a report from a browser, the Reporting Services web portal, or any application that you use to view an exported report.
 author: maggiesMSFT
 ms.author: maggies
@@ -9,24 +9,24 @@ ms.subservice: report-builder
 ms.topic: conceptual
 ms.custom: updatefrequency5
 ---
-# Print a Report (Report Builder and SSRS)
+# Print a report (Report Builder)
 
   After you save a report to a report server, you can view and print the report from a browser, the Reporting Services web portal, or any application that you use to view an exported report. Before saving a report, you can print it when you preview it.
 
-When you print a report, you can specify the size of the paper to use. The size of the paper determines the number of pages in a report and which report data fits on each page. Paper size affects only reports that are rendered with hard page-break renders: PDF, Image, and Print. Setting the paper size has no effect on other renderers. For more information, see [Rendering Behaviors (Report Builder  and SSRS)](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md).
+When you print a report, you can specify the size of the paper to use. The size of the paper determines the number of pages in a report and which report data fits on each page. Paper size affects only reports that are rendered with hard page-break renders: PDF, Image, and Print. Setting the paper size has no effect on other renderers. For more information, see [Renderer behaviors (Report Builder)](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md).
 
-From the report viewer toolbar in the Reporting Services web portal or in preview in Report Builder, you can export a report to a hard page-break renderer or select the Print button to print a copy of the report. You might need to set the paper size or other page setup properties. Use the **Report Properties** dialog box to change page setup properties, including paper size.
+From the report viewer toolbar in the Reporting Services web portal or in preview in Report Builder, you can export a report to a hard page-break renderer. Or, you can select the Print button to print a copy of the report. You might need to set the paper size or other page setup properties. Use the **Report Properties** dialog to change page setup properties, including paper size.
 
-You can specify print page margins in two different locations: in design mode and in run mode.
+You can specify print page margins in two different locations. Those locations are in design mode and in run mode.
 
-- **Design mode.** When you set page margins in design mode, these settings are saved in the report definition when you save the report.
+- **Design mode**: When you set page margins in design mode, these settings are saved in the report definition when you save the report.
 
-- **Run mode.** When you set page margins in run mode, this information is not saved in the report definition. The next time you print the report, you will get the settings from the report definition, unless you indicate your print margins again.
+- **Run mode**: When you set page margins in run mode, this information isn't saved in the report definition. The next time you print the report, you get the settings from the report definition, unless you indicate your print margins again.
 
     > [!NOTE]  
     >  Print margins are not displayed in design or run modes. There is no relationship between the design surface area and the print area of your report. To see print margins, in run mode, select Print Layout on the **Run** tab on the Ribbon.
 
-For more information about report paging, see [Pagination in Reporting Services (Report Builder  and SSRS)](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md).
+For more information about report paging, see [Pagination in Reporting Services (Report Builder)](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md).
 
 > [!NOTE]  
 > [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]
@@ -37,18 +37,18 @@ For more information about report paging, see [Pagination in Reporting Services 
 
 1. On the Home tab, select **Run**.
 
-1. (optional) Select **Print Layout** to see how the report will look when it is printed.
+1. (optional) Select **Print Layout** to see how the report looks when it prints.
 
 1. (optional) Select **Page Setup** to set paper, orientation, and margins.
 
     > [!NOTE]  
-    >  The default values for these come from the report properties, which are set in Design view. The values you set here in the **Page Setup** dialog box are for this session only. When you close this report and reopen it, it will have the default values again.
+    >  The default values for these come from the report properties, which are set in Design view. The values you set here in the **Page Setup** dialog are for this session only. When you close this report and reopen it, it will have the default values again.
 
 1. Select **Print**.
 
-1. In the **Print** dialog box, select a printer and specify other printing options.
+1. In the **Print** dialog, select a printer, and specify other printing options.
 
-### Print a report from a Web browser application
+### Print a report from a web browser application
 
 1. In the Reporting Services web portal, navigate to the report that you want to print. Open the report.
 
@@ -57,7 +57,7 @@ For more information about report paging, see [Pagination in Reporting Services 
     > [!NOTE]  
     >  The first time you print an HTML report, the report server prompts you to install an ActiveX control used for printing. You must install and configure the control to print.
 
-1. In the **Print** dialog box, select a printer, and then select **Prin**t.
+1. In the **Print** dialog, select a printer, and then select **Print**.
 
 ### Print a report from other applications
 
@@ -86,9 +86,9 @@ For more information about report paging, see [Pagination in Reporting Services 
 
 - Select **Page Setup** on the **Run** tab.
 
-## See also
+## Related content
 
-- [Print Reports (Report Builder and SSRS)](../../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md)
-- [Export Reports (Report Builder and SSRS)](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)
-- [Report Properties Dialog Box, Page Setup (Report Builder)](/previous-versions/sql/sql-server-2016/dd220640(v=sql.130))
-- [Report Design View (Report Builder)](../../reporting-services/report-builder/report-design-view-report-builder.md)
+- [Print reports (Report Builder)](../../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md)
+- [Export reports (Report Builder)](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)
+- [Report Properties dialog, page setup (Report Builder)](/previous-versions/sql/sql-server-2016/dd220640(v=sql.130))
+- [Report design view (Report Builder)](../../reporting-services/report-builder/report-design-view-report-builder.md)

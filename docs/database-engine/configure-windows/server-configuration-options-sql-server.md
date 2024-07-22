@@ -1,10 +1,11 @@
 ---
-title: Server configuration options (SQL Server)
-description: Find out how to manage and optimize SQL Server resources. View available configuration options, possible settings, default values, and restart requirements.
+title: Server configuration options
+titleSuffix: SQL Server, Azure SQL Managed Instance
+description: Find out how to manage and optimize SQL Server and Azure SQL Managed Instance resources. View available configuration options, possible settings, default values, and restart requirements.
 author: rwestMSFT
 ms.author: randolphwest
-ms.reviewer: mikeray
-ms.date: 03/04/2024
+ms.reviewer: mikeray, randolphwest
+ms.date: 05/10/2024
 ms.service: sql
 ms.subservice: configuration
 ms.topic: conceptual
@@ -27,7 +28,7 @@ helpviewer_keywords:
   - "administering SQL Server, configuration options"
 keywords: server configuration (SQL Server)
 ---
-# Server configuration options (SQL Server)
+# Server configuration options
 
 [!INCLUDE [sql-asdbmi](../../includes/applies-to-version/sql-asdbmi.md)]
 
@@ -40,7 +41,7 @@ You can manage and optimize [!INCLUDE [ssnoversion-md](../../includes/ssnoversio
 
 If you don't see the effect of a configuration change, it might not be installed. Check to see that the `run_value` of the configuration option has changed.
 
-Configuration options take effect immediately after setting the option and issuing the `RECONFIGURE` (or in some cases, `RECONFIGURE WITH OVERRIDE`) statement. Reconfiguring certain options invalidates plans in the plan cache, causing new plans to be compiled. For more information, see [DBCC FREEPROCCACHE (Transact-SQL)](../../t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md).
+Configuration options take effect immediately after setting the option and issuing the `RECONFIGURE` (or in some cases, `RECONFIGURE WITH OVERRIDE`) statement. Reconfiguring certain options invalidates plans in the plan cache, causing new plans to be compiled. For more information, see [DBCC FREEPROCCACHE](../../t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md).
 
 You can use the `sys.configurations` catalog view to determine the `config_value` (the `value` column) and the `run_value` (the `value_in_use` column), and whether the configuration option requires a [!INCLUDE [ssde-md](../../includes/ssde-md.md)] restart (the `is_dynamic` column).
 
@@ -73,6 +74,9 @@ The `is_dynamic` column can be used to determine if the configuration option req
 
 For a configuration option that isn't dynamic there's no way to tell if the `RECONFIGURE` command has been run to apply the configuration change. Before you restart SQL Server to apply the configuration change, run the `RECONFIGURE` command to ensure all configuration changes will take effect when SQL Server next restarts.
 
+> [!NOTE]
+> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] was the last version available on a 32-bit operating system.
+
 ## Configuration options
 
 The following table lists all available configuration options, the range of possible settings, the default values, and the supported product ([!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] or [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)]). Configuration options are marked with letter codes as follows:
@@ -86,7 +90,7 @@ The following table lists all available configuration options, the range of poss
 - **SC** = Self-configuring options.
 
 > [!NOTE]  
-> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] was the last version available on a 32-bit operating system.
+> [!INCLUDE [ssSQL14](../../includes/sssql14-md.md)] was the last version available on a 32-bit operating system.
 
 | Configuration&nbsp;option | Possible values | SQL&nbsp;Server | Azure&nbsp;SQL Managed Instance |
 | --- | --- | --- | --- |
@@ -94,6 +98,7 @@ The following table lists all available configuration options, the range of poss
 | [access check cache quota](access-check-cache-server-configuration-options.md) (A) | **Minimum**: `0`<br />**Maximum**: `2147483647`<br />**Default**: `0` | Yes | Yes |
 | [Ad Hoc Distributed Queries](ad-hoc-distributed-queries-server-configuration-option.md) (A) | **Minimum**: `0`<br />**Maximum**: `1`<br />**Default**: `0` | Yes | Yes |
 | [ADR cleaner retry timeout (min)](adr-cleaner-retry-timeout-configuration-option.md) (A) | **Minimum**: `0`<br />**Maximum**: `32767`<br />**Default**: `120` | [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] and later versions | Yes |
+| ADR Cleaner Thread Count (A) | **Minimum**: 1<br />**Maximum**: 32767<br />**Default**: 1 | [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] and later versions | Yes |
 | [ADR Preallocation Factor](adr-preallocation-factor-server-configuration-option.md) (A) | **Minimum**: `0`<br />**Maximum**: `32767`<br />**Default**: `4` | [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] and later versions | Yes |
 | [affinity I/O mask](affinity-input-output-mask-server-configuration-option.md) (A, RR) | **Minimum**: `-2147483648`<br />**Maximum**: `2147483647`<br />**Default**: `0` | Yes (64-bit only) | No |
 | [affinity mask](affinity-mask-server-configuration-option.md) (A) | **Minimum**: `-2147483648`<br />**Maximum**: `2147483647`<br />**Default**: `0` | Yes (64-bit only) | Yes |
@@ -116,6 +121,9 @@ The following table lists all available configuration options, the range of poss
 | [cost threshold for parallelism](configure-the-cost-threshold-for-parallelism-server-configuration-option.md) (A) | **Minimum**: `0`<br />**Maximum**: `32767`<br />**Default**: `5` | Yes | Yes |
 | [cross db ownership chaining](cross-db-ownership-chaining-server-configuration-option.md) | **Minimum**: `0`<br />**Maximum**: `1`<br />**Default**: `0` | Yes | Yes |
 | [cursor threshold](configure-the-cursor-threshold-server-configuration-option.md) (A) | **Minimum**: `-1`<br />**Maximum**: `2147483647`<br />**Default**: `-1` | Yes | Yes |
+| Data processed daily limit in TB | **Minimum**: 0<br />**Maximum**: 2147483647<br />**Default**: 2147483647 | Yes | Yes |
+| Data processed monthly limit in TB | **Minimum**: 0<br />**Maximum**: 2147483647<br />**Default**: 2147483647 | Yes | Yes |
+| Data processed weekly limit in TB | **Minimum**: 0<br />**Maximum**: 2147483647<br />**Default**: 2147483647 | Yes | Yes |
 | [Database Mail XPs](database-mail-xps-server-configuration-option.md) (A) | **Minimum**: `0`<br />**Maximum**: `1`<br />**Default**: `0` | Yes | Yes |
 | [default full-text language](configure-the-default-full-text-language-server-configuration-option.md) (A) | **Minimum**: `0`<br />**Maximum**: `2147483647`<br />**Default**: `1033` | Yes | Yes |
 | [default language](configure-the-default-language-server-configuration-option.md) | **Minimum**: `0`<br />**Maximum**: `9999`<br />**Default**: `0` | Yes | Yes |
@@ -130,13 +138,16 @@ The following table lists all available configuration options, the range of poss
 | [ft notify bandwidth (max)](ft-notify-bandwidth-server-configuration-option.md) (A) | **Minimum**: `0`<br />**Maximum**: `32767`<br />**Default**: `100` | Yes | Yes |
 | [ft notify bandwidth (min)](ft-notify-bandwidth-server-configuration-option.md) (A) | **Minimum**: `0`<br />**Maximum**: `32767`<br />**Default**: `0` | Yes | Yes |
 | [hadoop connectivity](polybase-connectivity-configuration-transact-sql.md) (RP) | **Minimum**: `0`<br />**Maximum**: `7`<br />**Default**: `0` | [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)] and later versions | Yes |
+| hardware offload config (A, RR) | **Minimum**: 0<br />**Maximum**: 255<br />**Default**: 0 | [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later versions | Yes |
 | [hardware offload enabled](hardware-offload-enable-configuration-option.md) (A, RR) | **Minimum**: `0`<br />**Maximum**: `1`<br />**Default**: `0` | [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later versions | Yes |
+| hardware offload mode (A, RR) | **Minimum**: 0<br />**Maximum**: 255<br />**Default**: 0 | [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later versions | Yes |
 | [in-doubt xact resolution](in-doubt-xact-resolution-server-configuration-option.md) (A) | **Minimum**: `0`<br />**Maximum**: `2`<br />**Default**: `0` | Yes | Yes |
 | [index create memory (KB)](configure-the-index-create-memory-server-configuration-option.md) (A, SC) | **Minimum**: `704`<br />**Maximum**: `2147483647`<br />**Default**: `0` | Yes | Yes |
 | [lightweight pooling](lightweight-pooling-server-configuration-option.md) (A, RR) | **Minimum**: `0`<br />**Maximum**: `1`<br />**Default**: `0` | Yes | No |
 | [locks](configure-the-locks-server-configuration-option.md) (A, RR, SC) | **Minimum**: `5000`<br />**Maximum**: `2147483647`<br />**Default**: `0` | Yes | No |
 | [max degree of parallelism](configure-the-max-degree-of-parallelism-server-configuration-option.md) (A) | **Minimum**: `0`<br />**Maximum**: `32767`<br />**Default**: `0` | Yes | No |
 | [max full-text crawl range](max-full-text-crawl-range-server-configuration-option.md) (A) | **Minimum**: `0`<br />**Maximum**: `256`<br />**Default**: `4` | Yes | Yes |
+| max RPC request params (KB) (A) | **Minimum**: `0`<br />**Maximum**: `2147483647`<br />**Default**: `0` | [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] CU 26 and later versions, and [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] CU 13 and later versions | No |
 | [max server memory (MB)](server-memory-server-configuration-options.md) (A, SC) | **Minimum**: `16`<br />**Maximum**: `2147483647`<br />**Default**: `2147483647` | Yes | Yes |
 | [max text repl size (B)](configure-the-max-text-repl-size-server-configuration-option.md) | **Minimum**: `0`<br />**Maximum**: `2147483647`<br />**Default**: `65536` | Yes | Yes |
 | [max worker threads](configure-the-max-worker-threads-server-configuration-option.md) (A) <sup>2</sup> | **Minimum**: `128`<br />**Maximum**: `32767`<br />**Default**: `0`<br /><br />`2048` is the [recommended maximum](configure-the-max-worker-threads-server-configuration-option.md#recommendations) for 64-bit SQL Server (`1024` for 32-bit) | Yes | Yes |
@@ -174,6 +185,8 @@ The following table lists all available configuration options, the range of poss
 | [two digit year cutoff](configure-the-two-digit-year-cutoff-server-configuration-option.md) (A) | **Minimum**: `1753`<br />**Maximum**: `9999`<br />**Default**: `2049` | Yes | Yes |
 | [user connections](configure-the-user-connections-server-configuration-option.md) (A, RR, SC) | **Minimum**: `0`<br />**Maximum**: `32767`<br />**Default**: `0` | Yes | No |
 | [user options](configure-the-user-options-server-configuration-option.md) | **Minimum**: `0`<br />**Maximum**: `32767`<br />**Default**: `0` | Yes | Yes |
+| version high part of SQL Server (A) | **Minimum**: -2147483648<br />**Maximum**: 2147483647<br />**Default**: 0 | Yes | Yes |
+| version low part of SQL Server (A) | **Minimum**: -2147483648<br />**Maximum**: 2147483647<br />**Default**: 0 | Yes | Yes |
 | [xp_cmdshell](xp-cmdshell-server-configuration-option.md) (A) | **Minimum**: `0`<br />**Maximum**: `1`<br />**Default**: `0` | Yes | Yes |
 
 <sup>1</sup> Changes to `1` when SQL Server Agent is started. Default value is `0` if SQL Server Agent is set to automatic start during Setup.

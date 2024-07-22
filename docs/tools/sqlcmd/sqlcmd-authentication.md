@@ -59,7 +59,19 @@ This method launches a web browser to authenticate the user.
 
 #### ActiveDirectoryManagedIdentity
 
-Use this method when running **sqlcmd** (Go) on an Azure VM that has either a system-assigned or user-assigned managed identity. If using a user-assigned managed identity, set the user name to the ID of the managed identity. If using a system-assigned identity, leave user name empty.
+Use this method when running **sqlcmd** (Go) on an Azure VM that has either a system-assigned or user-assigned managed identity. If using a user-assigned managed identity, set the user name to the Client ID of the managed identity. If using a system-assigned identity, leave user name empty.
+
+This example shows how to connect using a Service Assigned Managed Identity (SAMI):
+
+```console
+-S testsrv.database.windows.net -d Target_DB_or_DW --authentication-method ActiveDirectoryManagedIdentity
+```
+
+This example shows how to connect with a User Assigned Managed Identity (UAMI) by adding the Client Id of the user assigned managed identity:
+
+```console
+-S testsrv.database.windows.net -d Target_DB_or_DW --authentication-method ActiveDirectoryManagedIdentity -U <user-assigned-managed-identity-client-id>
+```
 
 #### ActiveDirectoryServicePrincipal
 

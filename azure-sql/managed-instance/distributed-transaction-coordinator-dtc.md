@@ -17,9 +17,6 @@ ms.topic: how-to
 
 This article provides an overview of Distributed Transaction Coordinator (DTC) for Azure SQL Managed Instance. You can use DTC to run distributed transactions in mixed environments, including across managed instances, SQL Server instances, other relational database management systems (RDBMSs), custom applications, and other transaction participants that are hosted in any environment that can establish network connectivity to Azure.
 
-> [!NOTE]
-> DTC for Azure SQL Managed Instance is part of the November 2022 feature wave. To learn more about the timeline for the feature wave rollout, see [November 2022 feature wave](https://aka.ms/sqlmi-fwnov2022).
-
 ## Scenarios
 
 You can enable DTC for Azure SQL Managed Instance to run distributed transactions across multiple environments that can establish network connectivity to Azure. DTC for SQL Managed Instance is *managed*, which means that Azure takes care of management and maintenance, like logging, storage, DTC availability, and networking. Aside from the managed aspect, DTC for SQL Managed Instance is the same [DTC Windows service](/previous-versions/windows/desktop/ms684146(v=vs.85)) that supports traditional distributed transactions for SQL Server.
@@ -38,8 +35,6 @@ To run distributed transactions, complete these tasks:
 ## Requirements
 
 To change DTC settings, you must have write permissions for `Microsoft.Sql/managedInstances/dtc` resource. To view DTC settings, you must have read permissions for `Microsoft.Sql/managedInstances/dtc` resource.
-
----
 
 ## Configure DTC
 
@@ -86,7 +81,7 @@ az sql mi dtc update --id /subscriptions/00000000-0000-0000-0000-000000000000/re
 
 To use DTC, all transaction participants must have a network connection to Azure. Because managed instances are always deployed to a dedicated virtual network in Azure, you must connect your external environment to the virtual network of your managed instance. In this context, *external* refers to any object or process that isn't your managed instance. If your external resource also uses a virtual network in Azure, you can use virtual network peering. Otherwise, establish connectivity by using your preferred method, such as point-to-site VPN, Azure ExpressRoute, or another network connectivity technology that meets your business needs.
 
-Port 135 and port 1024-65535 must allow both inbound and outbound communication in both the virtual network [network security group](/azure/virtual-network/network-security-groups-overview) for the managed instance and in any firewall that's set up in the external environment.
+Port 135 must allow both inbound and outbound communication, port range 14000-15000 must allow inbound, and 49152-65535 must allow outbound communication, in both the virtual network [network security group](/azure/virtual-network/network-security-groups-overview) for the managed instance and in any firewall that's set up in the external environment.
 
 ## DNS settings
 

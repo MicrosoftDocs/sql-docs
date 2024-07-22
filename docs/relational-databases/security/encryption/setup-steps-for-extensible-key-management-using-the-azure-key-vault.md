@@ -4,7 +4,7 @@ description: Install and configure the SQL Server Connector for Azure Key Vault.
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: vanto, randolphwest
-ms.date: 03/07/2024
+ms.date: 04/30/2024
 ms.service: sql
 ms.subservice: security
 ms.topic: conceptual
@@ -23,7 +23,7 @@ In this article, you install and configure the [!INCLUDE[ssNoVersion](../../../i
 
 [!INCLUDE [entra-id](../../../includes/entra-id.md)]
 
-Extensible Key Management using Azure Key Vault is available for SQL Server on Linux environments, starting with [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)] CU 12. Follow the same instructions, but skip steps 3 and 4.
+Extensible Key Management using Azure Key Vault (AKV) is available for SQL Server on Linux environments, starting with [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)] Cumulative Update 12. Follow the same instructions, but skip steps 3 and 4.
 
 ## Prerequisites
 
@@ -48,6 +48,9 @@ Before you begin using Azure Key Vault with your SQL Server instance, be sure th
 
 - Familiarize yourself with [Access Azure Key Vault behind a firewall](/azure/key-vault/general/access-behind-firewall) if you plan to use the SQL Server Connector for Azure Key Vault behind a firewall or with a proxy server.
 
+> [!NOTE]  
+> In [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)] CU 14 and later versions, [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] on Linux supports TDE Extensible Key Management with Azure Key Vault. Steps 3 and 4 in this guide aren't required for [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] on Linux.
+
 <a name='step-1-set-up-an-azure-ad-service-principal'></a>
 
 ## Step 1: Set up a Microsoft Entra service principal
@@ -60,19 +63,17 @@ To grant your SQL Server instance access permissions to your Azure key vault, yo
 
       :::image type="content" source="media/ekm/ekm-part1-login-portal.png" alt-text="Screenshot of the Azure services pane.":::
 
-    - Select **More services** and then, in the **All services** box, type **Microsoft Entra ID**.
+    - Select **More services** and then, in the **All services** pane, type **Microsoft Entra ID**.
 
-      :::image type="content" source="media/ekm/ekm-part1-select-aad.png" alt-text="Screenshot of the All Azure services pane.":::
+1. Register an application with Microsoft Entra ID by doing the following. For detailed step-by-step instructions, see the **Get an identity for the application** section of the Azure Key Vault blog post, [Azure Key Vault – Step by Step](/archive/blogs/kv/azure-key-vault-step-by-step#get-an-identity-for-the-application).
 
-1. Register an application with Microsoft Entra ID by doing the following. (For detailed step-by-step instructions, see the "Get an identity for the application" section of the [Azure Key Vault blog post](/archive/blogs/kv/azure-key-vault-step-by-step).)
-
-   1. On the **Overview** page of your **Microsoft Entra ID** resource, select **App registrations**.
+   1. On the **Manage** section of your **Microsoft Entra ID** resource, select **App registrations**.
 
       :::image type="content" source="media/ekm/ekm-part1-azure-active-directory-app-register.png" alt-text="Screenshot of the Microsoft Entra ID Overview page in the Azure portal.":::
 
    1. On the **App registrations** page, select **New registration**.
 
-      :::image type="content" source="media/ekm/ekm-part1-azure-active-directory-new-registration.png" alt-text="Screenshot of the App registrations pane.":::
+      :::image type="content" source="media/ekm/ekm-part1-azure-active-directory-new-registration.png" alt-text="Screenshot of the App registrations pane in the Azure portal.":::
 
    1. On the **Register an application** pane, enter the user-facing name for the app, and then select **Register**.
 
@@ -80,15 +81,15 @@ To grant your SQL Server instance access permissions to your Azure key vault, yo
 
    1. In the left pane, select **Certificates & secrets > Client secrets > New client secret**.
 
-      :::image type="content" source="media/ekm/ekm-part1-azure-active-directory-certificates-secrets.png" alt-text="Screenshot of the Certificates & secrets pane.":::
+      :::image type="content" source="media/ekm/ekm-part1-azure-active-directory-certificates-secrets.png" alt-text="Screenshot of the Certificates & secrets pane for the App in the Azure portal.":::
 
    1. Under **Add a client secret**, enter a description and an appropriate expiration, and then select **Add**. You can't choose an expiration period greater than 24 months. For more information, see [Add a client secret](/azure/active-directory/develop/quickstart-register-app#add-a-client-secret).
 
-      :::image type="content" source="media/ekm/ekm-part1-azure-active-directory-add-secret.png" alt-text="Screenshot of the Add a client secret section.":::
+      :::image type="content" source="media/ekm/ekm-part1-azure-active-directory-add-secret.png" alt-text="Screenshot of the Add a client secret section for the App in the Azure portal.":::
 
-   1. On the **Certificates & secrets** pane, under **"Value"**, select the **Copy** button next to the value of the client secret to be used to create an asymmetric key in SQL Server.
+   1. On the **Certificates & secrets** pane, under **Value**, select the **Copy** button next to the value of the client secret to be used to create an asymmetric key in SQL Server.
 
-      :::image type="content" source="media/ekm/ekm-part1-azure-active-directory-new-secret.png" alt-text="Screenshot of the secret value.":::
+      :::image type="content" source="media/ekm/ekm-part1-azure-active-directory-new-secret.png" alt-text="Screenshot of the secret value in the Azure portal.":::
 
    1. In the left pane, select **Overview** and then, in the **Application (client) ID** box, copy the value to be used to create an asymmetric key in SQL Server.
 
@@ -106,56 +107,72 @@ You can use the Azure portal to create the key vault and then add a Microsoft En
 
 1. Create a resource group.
 
-   All Azure resources that you create via the Azure portal must be contained in a resource group, which you create to house your key vault. The resource name in this example is *ContosoDevRG*. Choose your own resource group and key vault name, because all key vault names must be globally unique.
+   All Azure resources that you create via the Azure portal must be contained in a resource group, which you create to house your key vault. The resource name in this example is *DocsSampleRG*. Choose your own resource group and key vault name, because all key vault names must be globally unique.
 
    On the **Create a resource group** pane, under **Project details**, enter the values, and then select **Review + create**.
 
-   :::image type="content" source="media/ekm/ekm-part2-create-resource-group.png" alt-text="Screenshot of the Create a resource group pane.":::
+   :::image type="content" source="media/ekm/ekm-part2-create-resource-group.png" alt-text="Screenshot of the Create a resource group pane in the Azure portal.":::
 
-1. Create a key vault.
+1. In the Azure portal, search or select the **Key vaults** services to create a key vault. Select **Create**.
 
-    On the **Create key vault** pane, select the **Basics** tab, enter the appropriate values, and then select **Review + create**.
+    On the **Create a key vault** pane, select the **Basics** tab, enter the appropriate values for the tab. We also recommend enabling purge protection.
 
-    :::image type="content" source="media/ekm/ekm-part2-create-key-vault.png" alt-text="Screenshot of the Create key vault pane.":::
+    :::image type="content" source="media/ekm/ekm-part2-create-key-vault.png" alt-text="Screenshot of the Create key vault pane in the Azure portal.":::
 
-1. On the **Access policies** pane, select **Add Access Policy**.
+1. On the **Access configuration** tab, you have the option of selecting **Azure role-based access control** or **Vault access policy**. We go over both options, but the **Azure role-based access control** option is recommended. For more information, see [Access model overview](/azure/key-vault/general/security-features#access-model-overview).
+
+    :::image type="content" source="media/ekm/ekm-part2-access-configuration.png" alt-text="Screenshot of the Create key vault pane and Access configuration tab in the Azure portal.":::
+
+1. Select **Review + create** and create the key vault.
+
+#### Azure role-based access control
+
+The recommended method is to use [Azure role-based access control (RBAC)](/azure/role-based-access-control/overview) to assign permissions to the key vault. This method allows you to assign permissions to users, groups, and applications at a more granular level. You can assign permissions to the key vault at the management plane (Azure role assignments), and at the data plane (key vault access policies). If you're only able to use access policy, you can skip this section and go to the [Vault access policy](#vault-access-policy) section. For more information on Azure Key Vault RBAC permissions, see [Azure built-in roles for Key Vault data plane operations](/azure/key-vault/general/rbac-guide#azure-built-in-roles-for-key-vault-data-plane-operations).
+
+1. Go to the key vault resource that you created, and select the **Access control (IAM)** setting.
+
+1. Select **Add** > **Add role assignment**.
+
+   :::image type="content" source="media/ekm/ekm-part2-add-role-assignment.png" alt-text="Screenshot of the Add role assignment button on the Access control (IAM) pane in the Azure portal.":::
+
+1. The EKM application needs the **Key Vault Crypto Service Encryption User** role to perform wrap and unwrap operations. Search for **Key Vault Crypto Service Encryption User** and select the role. Select **Next**.
+
+   :::image type="content" source="media/ekm/ekm-part2-select-role-assignment.png" alt-text="Screenshot of selecting a role assignment in the Azure portal.":::
+
+1. In the **Members** tab, select the **Select members** option, and then search for the Microsoft Entra application that you created in Step 1. Select the application and then the **Select** button.
+
+   :::image type="content" source="media/ekm/ekm-part2-add-app-to-role.png" alt-text="Screenshot of the Select members pane for adding a role assignment in the Azure portal.":::
+
+1. Select **Review + assign** twice to complete the role assignment.
+
+1. The user creating the key needs the **Key Vault Administrator** role. Search for **Key Vault Administrator** and select the role. Select **Next**.
+
+1. Just like the previous steps, add the member creating the key and assign the role.
+
+#### Vault access policy
+
+> [!NOTE]
+> If you are using the **Azure role-based access control** option, you can skip this section. If you are changing the permission model, you can do so by going to the **Access configuration** menu of the key vault. Make sure you have the correct permissions to manage the key vault. For more information, see [Enable Azure RBAC permissions on Key Vault](/azure/key-vault/general/rbac-guide#enable-azure-rbac-permissions-on-key-vault).
+
+1. From the **Access configuration** tab, select **Vault access policy**. If you're using an existing Key vault, you can select the **Access policies** menu from the Key vault resource, and select **Create**.
+
+1. On the **Create an access policy** pane, select *Get* and *List* permissions from the **Key Management Operations** options. Select *Unwrap Key* and *Wrap Key* permissions from the **Cryptographic Operations** options. Select **Next**
 
     :::image type="content" source="media/ekm/ekm-part2-add-access-policy.png" alt-text="Screenshot of the Add Access Policy link on the Access policies pane.":::
 
-    > [!NOTE]  
-    > SQL Server Connector for Azure Key Vault doesn't support Azure Key Vault access using RBAC.
+1. On the **Principal** tab, select the application that was created in Step 1.
 
-1. On the **Add access policy** pane, do the following:
+   :::image type="content" source="media/ekm/ekm-part2-select-principal.png" alt-text="Screenshot of application search box on the Principal pane.":::
 
-   1. In the **Configure from template (optional)** drop-down list, select **Key Management**.
+1. Select **Next** and then **Create**.
 
-   1. In the left pane, select the **Key permissions** tab, and then verify the **Get**, **List**, **Unwrap Key**, and **Wrap Key** check boxes are selected.
+#### Create a key
 
-   1. Select **Add**.
+1. On the **Key Vault** pane, select **Keys** and then select the option **Generate/Import**. This opens the **Create a key** pane. Enter a key vault name. Select the **Generate** option, and enter a name for the key. The [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)] Connector requires the key name to only use the characters "a-z", "A-Z", "0-9", and "-", with a 26-character limit.
 
-      :::image type="content" source="media/ekm/ekm-part2-access-policy-permission.png" alt-text="Screenshot of the Add access policy pane.":::
-
-1. In the left pane, select the **Select principal** tab, and then do the following:
-
-   1. In the **Principal** pane, under **Select**, start typing the name of your Microsoft Entra application and then, in the results list, select the application you want to add.
-
-      :::image type="content" source="media/ekm/ekm-part2-select-principal.png" alt-text="Screenshot of application search box on the Principal pane.":::
-
-   1. Select the **Select** button to add the principal to your key vault.
-
-      :::image type="content" source="media/ekm/ekm-part2-save-principal.png" alt-text="Screenshot of the Select button on the Principal pane.":::
-
-   1. At the lower left, select **Add** to save your changes.
-
-      :::image type="content" source="media/ekm/ekm-part2-select-principal-new.png" alt-text="Screenshot of the Add button on the Add access policy pane.":::
-
-1. On the **Key Vault** pane, select **Keys** and enter a key vault name. Use key type **RSA** and RSA Key Size **2048**. Set activation and expiration dates as appropriate and set **Enabled?** as **Yes**.
+1. Use key type **RSA** and **RSA key size** as **2048**. EKM currently only supports an RSA key. Set activation and expiration dates as appropriate and set **Enabled** as **Yes**.
 
    :::image type="content" source="media/ekm/ekm-part2-add-key-vault-key.png" alt-text="Screenshot of the Create Key pane.":::
-
-1. On the **Access policies** pane, select **Save**.
-
-   :::image type="content" source="media/ekm/ekm-part2-save-access-policy.png" alt-text="Screenshot of the Save button on the Add access policy pane.":::
 
 ### Best practices
 
@@ -201,21 +218,21 @@ The key vault and key that you create here are used by the [!INCLUDE [ssdenovers
 
 1. Create a resource group.
 
-   All Azure resources that you create via PowerShell must be contained in resource groups, which you create to house your key vault. The resource name in this example is *ContosoDevRG*. Choose your own resource group and key vault name, because all key vault names must be globally unique.
+   All Azure resources that you create via PowerShell must be contained in resource groups, which you create to house your key vault. The resource name in this example is *DocsSampleRG*. Choose your own resource group and key vault name, because all key vault names must be globally unique.
 
    ```powershell
-   New-AzResourceGroup -Name ContosoDevRG -Location 'East Asia'
+   New-AzResourceGroup -Name DocsSampleRG -Location 'East US'
    ```
 
    The statement returns:
 
    ```console
-   ResourceGroupName: ContosoDevRG
-   Location         : eastasia
+   ResourceGroupName: DocsSampleRG
+   Location         : eastus
    ProvisioningState: Succeeded
    Tags             :
    ResourceId       : /subscriptions/<subscription_id>/
-                       resourceGroups/ContosoDevRG
+                       resourceGroups/DocsSampleRG
    ```
 
    > [!NOTE]  
@@ -223,11 +240,11 @@ The key vault and key that you create here are used by the [!INCLUDE [ssdenovers
 
 1. Create a key vault.
 
-   The `New-AzKeyVault` cmdlet requires a resource group name, a key vault name, and a geographic location. For example, for a key vault named `ContosoEKMKeyVault`, run:
+   The `New-AzKeyVault` cmdlet requires a resource group name, a key vault name, and a geographic location. For example, for a key vault named `DocsSampleEKMKeyVault`, run:
 
    ```powershell
-   New-AzKeyVault -VaultName 'ContosoEKMKeyVault' `
-      -ResourceGroupName 'ContosoDevRG' -Location 'East Asia'
+   New-AzKeyVault -VaultName 'DocsSampleEKMKeyVault' `
+      -ResourceGroupName 'DocsSampleRG' -Location 'East US'
    ```
 
    Record the name of your key vault.
@@ -235,13 +252,13 @@ The key vault and key that you create here are used by the [!INCLUDE [ssdenovers
    The statement returns:
 
    ```console
-   Vault Name                       : ContosoEKMKeyVault
-   Resource Group Name              : ContosoDevRG
-   Location                         : East Asia
+   Vault Name                       : DocsSampleEKMKeyVault
+   Resource Group Name              : DocsSampleRG
+   Location                         : East US
    ResourceId                       : /subscriptions/<subscription_id>/
-                                       resourceGroups/ContosoDevRG/providers/
-                                       Microsoft/KeyVault/vaults/ContosoEKMKeyVault
-   Vault URI: https://ContosoEKMKeyVault.vault.azure.net
+                                       resourceGroups/DocsSampleRG/providers/
+                                       Microsoft/KeyVault/vaults/DocsSampleEKMKeyVault
+   Vault URI: https://DocsSampleEKMKeyVault.vault.azure.net
    Tenant ID                        : <tenant_id>
    SKU                              : Standard
    Enabled For Deployment?          : False
@@ -268,7 +285,7 @@ The key vault and key that you create here are used by the [!INCLUDE [ssdenovers
    As shown in the following command, you use the **App (Client) ID** from [Step 1: Set up a Microsoft Entra service principal](#step-1-set-up-an-azure-ad-service-principal) for the `ServicePrincipalName` parameter. `Set-AzKeyVaultAccessPolicy` runs silently with no output if it runs successfully.
 
    ```powershell
-   Set-AzKeyVaultAccessPolicy -VaultName 'ContosoEKMKeyVault' `
+   Set-AzKeyVaultAccessPolicy -VaultName 'DocsSampleEKMKeyVault' `
      -ServicePrincipalName 9A57CBC5-4C4C-40E2-B517-EA677 `
      -PermissionsToKeys get, list, wrapKey, unwrapKey
    ```
@@ -285,16 +302,16 @@ The key vault and key that you create here are used by the [!INCLUDE [ssdenovers
 To ensure quick key recovery and be able to access your data outside of Azure, we recommend the following best practices:
 
 - Create your encryption key locally on a local hardware security module (HSM) device. Be sure to use an asymmetric RSA 2048 or 3072 key so that it's supported by SQL Server.
-- Import the encryption key to your Azure key vault. This process is described in the next sections.
-- Before you use the key in your Azure key vault for the first time, do an Azure key vault key backup using the `Backup-AzureKeyVaultKey` PowerShell cmdlet.
-- Whenever you make any changes to the key (for example, adding ACLs, tags, or key attributes), be sure to do another Azure key vault key backup.
+- Import the encryption key to your Azure Key Vault. This process is described in the next sections.
+- Before you use the key in your Azure Key Vault for the first time, do an Azure Key Vault key backup using the `Backup-AzureKeyVaultKey` PowerShell cmdlet.
+- Whenever you make any changes to the key (for example, adding ACLs, tags, or key attributes), be sure to do another Azure Key Vault key backup.
 
   > [!NOTE]  
   > Backing up a key is an Azure Key Vault key operation which returns a file that can be saved anywhere.
 
 ### Types of keys
 
-You can generate four types of keys in an Azure key vault that will work with SQL Server. Asymmetric 2048-bit & 3072-bit RSA keys and  2048-bit & 3072-bit RSA-HSM keys.
+You can generate four types of keys in an Azure Key Vault that will work with SQL Server. Asymmetric 2048-bit & 3072-bit RSA keys and  2048-bit & 3072-bit RSA-HSM keys.
 
 - **Software-protected**: Processed in software and encrypted at rest. Operations on software-protected keys occur on Azure virtual machines. We recommend this type for keys that aren't used in a production deployment.
 
@@ -302,13 +319,13 @@ You can generate four types of keys in an Azure key vault that will work with SQ
 
   > [!IMPORTANT]  
   > For the SQL Server Connector, use only the characters a-z, A-Z, 0-9, and hyphens (-), with a 26-character limit.
-  > Different key versions under the same key name in an Azure key vault don't work with the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector. To rotate an Azure key vault key that's being used by [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], see the Key Rollover steps in the "A. Maintenance Instructions for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector" section of [SQL Server Connector Maintenance & Troubleshooting](sql-server-connector-maintenance-troubleshooting.md).
+  > Different key versions under the same key name in an Azure Key Vault don't work with the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector. To rotate an Azure Key Vault key that's being used by [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], see the Key Rollover steps in the "A. Maintenance Instructions for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector" section of [SQL Server Connector Maintenance & Troubleshooting](sql-server-connector-maintenance-troubleshooting.md).
   >
   > When rotating versions of the key, do not disable the version originally used to encrypt the database. SQL Server will be unable to recover the database (it will be in a 'recovery pending' state) and may generate a 'Crypto Exception' memory dump until the old version is enabled.
 
 ### Import an existing key
 
-If you have an existing 2048-bit RSA software-protected key, you can upload the key to your Azure key vault. For example, if you have a PFX file saved to your `C:\` drive in a file named `softkey.pfx` that you want to upload to the Azure key vault, run the following command to set the variable `securepfxpwd` for a password of `12987553` for the PFX file:
+If you have an existing 2048-bit RSA software-protected key, you can upload the key to your Azure Key Vault. For example, if you have a PFX file saved to your `C:\` drive in a file named `softkey.pfx` that you want to upload to the Azure Key Vault, run the following command to set the variable `securepfxpwd` for a password of `12987553` for the PFX file:
 
 ```powershell
 $securepfxpwd = ConvertTo-SecureString -String '12987553' `
@@ -318,8 +335,8 @@ $securepfxpwd = ConvertTo-SecureString -String '12987553' `
 Then you can run the following command to import the key from the PFX file, which protects the key by hardware (recommended) in the Key Vault service:
 
 ```powershell
-    Add-AzureKeyVaultKey -VaultName 'ContosoKeyVault' `
-      -Name 'ContosoFirstKey' -KeyFilePath 'C:\softkey.pfx' `
+    Add-AzureKeyVaultKey -VaultName 'DocsSampleEKMKeyVault' `
+      -Name 'DocsFirstKey' -KeyFilePath 'C:\softkey.pfx' `
       -KeyFilePassword $securepfxpwd $securepfxpwd  -Destination 'HSM'
 ```
 
@@ -328,10 +345,10 @@ Then you can run the following command to import the key from the PFX file, whic
 
 ### Create a new key
 
-Alternatively, you can create a new encryption key directly in your Azure key vault and make it either software-protected or HSM-protected. In this example, let's create a software-protected key by using the `Add-AzureKeyVaultKey` cmdlet:
+Alternatively, you can create a new encryption key directly in your Azure Key Vault and make it either software-protected or HSM-protected. In this example, let's create a software-protected key by using the `Add-AzureKeyVaultKey` cmdlet:
 
 ```powershell
-Add-AzureKeyVaultKey -VaultName 'ContosoEKMKeyVault' `
+Add-AzureKeyVaultKey -VaultName 'DocsSampleEKMKeyVault' `
   -Name 'ContosoRSAKey0' -Destination 'Software'
 ```
 
@@ -339,12 +356,12 @@ The statement returns:
 
 ```console
 Attributes : Microsoft.Azure.Commands.KeyVault.Models.KeyAttributes
-Key        :  {"kid":"https:contosoekmkeyvault.azure.net/keys/
+Key        :  {"kid":"https:DocsSampleEKMKeyVault.azure.net/keys/
                 ContosoRSAKey0/<guid>","dty":"RSA:,"key_ops": ...
 VaultName  : contosodevkeyvault
 Name       : contosoRSAKey0
 Version    : <guid>
-Id         : https://contosoekmkeyvault.vault.azure.net:443/
+Id         : https://DocsSampleEKMKeyVault.vault.azure.net:443/
               keys/ContosoRSAKey0/<guid>
 ```
 
@@ -364,8 +381,8 @@ Download the SQL Server Connector from the [Microsoft Download Center](https://g
 > - Starting with version 1.0.4.0, there is support for private Azure clouds, including Azure operated by 21Vianet, Azure Germany, and Azure Government.
 > - There is a breaking change in version 1.0.5.0 in terms of the thumbprint algorithm. You may experience database restore failures after upgrading to 1.0.5.0. For more information, see [KB article 447099](https://support.microsoft.com/help/4470999/db-backup-problems-to-sql-server-connector-for-azure-1-0-5-0).
 > - Starting with version 1.0.5.0 (TimeStamp: September 2020), the SQL Server Connector supports filtering messages and network request retry logic.
-> - **Starting with updated version 1.0.5.0 (TimeStamp: November 2020), the SQL Server Connector supports RSA 2048, RSA 3072, RSA-HSM 2048 and RSA-HSM 3072 keys.**
-> - SQL Server Connector supports Azure Key Vault access using Access Policies only and not RBAC.
+> - Starting with updated version 1.0.5.0 (TimeStamp: November 2020), the SQL Server Connector supports RSA 2048, RSA 3072, RSA-HSM 2048 and RSA-HSM 3072 keys.
+> - Starting with updated version 1.0.5.0 (TimeStamp: November 2020), you can refer to a specific key version in the Azure Key Vault.
 
 :::image type="content" source="media/ekm/ekm-connector-install.png" alt-text="Screenshot of the SQL Server Connector installation wizard.":::
 
@@ -432,7 +449,7 @@ For a note about the minimum permission levels needed for each action in this se
 
 1. Register the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector as an EKM provider with [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].
 
-   Create a cryptographic provider by using the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector, which is an EKM provider for the Azure key vault.
+   Create a cryptographic provider by using the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector, which is an EKM provider for the Azure Key Vault.
    In this example, the provider name is `AzureKeyVault_EKM`.
 
    ```sql
@@ -456,25 +473,25 @@ For a note about the minimum permission levels needed for each action in this se
 
    Modify this [!INCLUDE[tsql](../../../includes/tsql-md.md)] script in the following ways:
 
-   - Edit the `IDENTITY` argument (`ContosoEKMKeyVault`) to point to your Azure key vault.
-     - If you're using *global Azure*, replace the `IDENTITY` argument with the name of your Azure key vault from [Step 2: Create a key vault](#step-2-create-a-key-vault).
-     - If you're using a *private Azure cloud* (for example, Azure Government, Microsoft Azure operated by 21Vianet, or Azure Germany), replace the `IDENTITY` argument with the Vault URI that's returned in step 3 of the [Create a key vault and key by using PowerShell](#create-a-key-vault-and-key-by-using-powershell) section. Don't include "https://" in the Vault URI.
-   - Replace the first part of the `SECRET` argument with the Microsoft Entra Client ID from [Step 1: Set up a Microsoft Entra service principal](#step-1-set-up-an-azure-ad-service-principal). In this example, the **Client ID** is `9A57CBC54C4C40E2B517EA677E0EFA00`.
+   - Edit the `IDENTITY` argument (`DocsSampleEKMKeyVault`) to point to your Azure Key Vault.
+     - If you're using *global Azure*, replace the `IDENTITY` argument with the name of your Azure Key Vault from [Step 2: Create a key vault](#step-2-create-a-key-vault).
+     - If you're using a *private Azure cloud* (for example, Azure Government, Microsoft Azure operated by 21Vianet, or Azure Germany), replace the `IDENTITY` argument with the Vault URI that's returned in step 3 of the [Create a key vault and key by using PowerShell](#create-a-key-vault-and-key-by-using-powershell) section. Don't include `https://` in the key vault URI.
+   - Replace the first part of the `SECRET` argument with the Microsoft Entra Client ID from [Step 1: Set up a Microsoft Entra service principal](#step-1-set-up-an-azure-ad-service-principal). In this example, the **Client ID** is `d956f6b9xxxxxxx`.
 
      > [!IMPORTANT]  
      > Be sure to remove the hyphens from the App (Client) ID.
 
-   - Complete the second part of the `SECRET` argument with **Client Secret** from [Step 1: Set up a Microsoft Entra service principal](#step-1-set-up-an-azure-ad-service-principal). In this example, the Client Secret is `08:k?[:XEZFxcwIPvVVZhTjHWXm7w1?m`. The final string for the `SECRET` argument will be a long sequence of letters and numbers, without hyphens (except for the Client Secret section, in case the Client Secret contains any hyphens).
+   - Complete the second part of the `SECRET` argument with **Client Secret** from [Step 1: Set up a Microsoft Entra service principal](#step-1-set-up-an-azure-ad-service-principal). In this example, the Client Secret is `yrA8X~PldtMCvUZPxxxxxxxx`. The final string for the `SECRET` argument will be a long sequence of letters and numbers, without hyphens (except for the Client Secret section, in case the Client Secret contains any hyphens).
 
      ```sql
      USE master;
      CREATE CREDENTIAL sysadmin_ekm_cred
-         WITH IDENTITY = 'ContosoEKMKeyVault',                            -- for public Azure
-         -- WITH IDENTITY = 'ContosoEKMKeyVault.vault.usgovcloudapi.net', -- for Azure Government
-         -- WITH IDENTITY = 'ContosoEKMKeyVault.vault.azure.cn',          -- for Microsoft Azure operated by 21Vianet
-         -- WITH IDENTITY = 'ContosoEKMKeyVault.vault.microsoftazure.de', -- for Azure Germany
-                --<----Application (Client) ID ---><--Azure AD app (Client) ID secret-->
-         SECRET = '9A57CBC54C4C40E2B517EA677E0EFA0008:k?[:XEZFxcwIPvVVZhTjHWXm7w1?m'
+         WITH IDENTITY = 'DocsSampleEKMKeyVault',                            -- for public Azure
+         -- WITH IDENTITY = 'DocsSampleEKMKeyVault.vault.usgovcloudapi.net', -- for Azure Government
+         -- WITH IDENTITY = 'DocsSampleEKMKeyVault.vault.azure.cn',          -- for Microsoft Azure operated by 21Vianet
+         -- WITH IDENTITY = 'DocsSampleEKMKeyVault.vault.microsoftazure.de', -- for Azure Germany
+                --<----Application (Client) ID ---><--Microsoft Entra app (Client) ID secret-->
+         SECRET = 'd956f6b9xxxxxxxyrA8X~PldtMCvUZPxxxxxxxx'
      FOR CRYPTOGRAPHIC PROVIDER AzureKeyVault_EKM;
   
      -- Add the credential to the SQL Server administrator's domain login
@@ -484,7 +501,7 @@ For a note about the minimum permission levels needed for each action in this se
 
     For an example of using variables for the `CREATE CREDENTIAL` argument and programmatically removing the hyphens from the Client ID, see [CREATE CREDENTIAL (Transact-SQL)](../../../t-sql/statements/create-credential-transact-sql.md).
 
-1. Open your Azure key vault key in your SQL Server instance.
+1. Open your Azure Key Vault key in your SQL Server instance.
 
    Whether you created a new key or imported an asymmetric key, as described in [Step 2: Create a key vault](#step-2-create-a-key-vault), you need to open the key. Open it by providing your key name in the following [!INCLUDE[tsql](../../../includes/tsql-md.md)] script.
 
@@ -492,7 +509,7 @@ For a note about the minimum permission levels needed for each action in this se
      > Be sure to first complete the Registry prerequisites for this step.
 
    - Replace `EKMSampleASYKey` with the name you'd like the key to have in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].
-   - Replace `ContosoRSAKey0` with the name of your key in your Azure key vault.
+   - Replace `ContosoRSAKey0` with the name of your key in your Azure Key Vault. Below is an example of a version-less key.
 
    ```sql
    CREATE ASYMMETRIC KEY EKMSampleASYKey
@@ -501,7 +518,7 @@ For a note about the minimum permission levels needed for each action in this se
    CREATION_DISPOSITION = OPEN_EXISTING;
    ```
 
-   Beginning with updated version 1.0.5.0 of the SQL Server connector, you can refer to a specific key version in the Azure key vault:
+   Beginning with updated version 1.0.5.0 of the SQL Server connector, you can refer to a specific key version in the Azure Key Vault:
 
    ```sql
    CREATE ASYMMETRIC KEY EKMSampleASYKey
@@ -538,10 +555,10 @@ For a note about the minimum permission levels needed for each action in this se
 
 ### Configure the user database to be encrypted
 
-1. Create a test database that will be encrypted with the Azure key vault key.
+1. Create a test database that will be encrypted with the Azure Key Vault key.
 
    ```sql
-   --Create a test database that will be encrypted with the Azure key vault key
+   --Create a test database that will be encrypted with the Azure Key Vault key
    CREATE DATABASE TestTDE;
    ```
 
@@ -619,7 +636,7 @@ For a note about the minimum permission levels needed for each action in this se
    GO
    ```
 
-For sample scripts, see the blog at [SQL Server Transparent Data Encryption and Extensible Key Management with Azure Key Vault](https://techcommunity.microsoft.com/t5/sql-server/intro-sql-server-transparent-data-encryption-and-extensible-key/ba-p/1427549).
+   For sample scripts, see the blog at [SQL Server Transparent Data Encryption and Extensible Key Management with Azure Key Vault](https://techcommunity.microsoft.com/t5/sql-server/intro-sql-server-transparent-data-encryption-and-extensible-key/ba-p/1427549).
 
 1. The `SQL Server Cryptographic Provider` registry key isn't cleaned up automatically after a key or all EKM keys are deleted. It must be cleaned up manually. Cleaning the registry key should be done with extreme caution, since cleaning the registry prematurely can break the EKM functionality. To clean up the registry key, delete the `SQL Server Cryptographic Provider` registry key on `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft`.
 
@@ -649,7 +666,7 @@ If the credential has a client secret that is about to expire, a new secret can 
 
    ```sql
    ALTER CREDENTIAL sysadmin_ekm_cred
-   WITH IDENTITY = 'ContosoEKMKeyVault',
+   WITH IDENTITY = 'DocsSampleEKMKeyVault',
    SECRET = '<New Secret>';
    ```
 
@@ -660,35 +677,84 @@ If the credential has a client secret that is about to expire, a new secret can 
 
 ## Rotate asymmetric key with a new AKV key or a new AKV key version
 
-SQL Server doesn't have a mechanism to automatically rotate the certificate or asymmetric key used for TDE. The steps to rotate an asymmetric key manually are as follows.
+> [!NOTE]
+>
+> - When manually rotating an AKV key, SQL Server supports both AKV version-less key or versioned key and there's no need to use a different AKV key.
+> - The original AKV key can be rotated creating a new version that can replace the previous key created in SQL Server.
+> - For manual key rotation, a new SQL Server asymmetric key must be created referring to the version-less key or versioned key that was rotated in AKV. For the new SQL Server asymmetric key, the version-less AKV key will automatically be chosen using the highest key version in AKV. For the versioned key, you must indicate the highest version in AKV using the syntax `WITH PROVIDER_KEY_NAME = <key_name>/<version>`. You can alter the database encryption key to re-encrypt with the new asymmetric key. The same key name (versioned or version-less) can be used with AKV rotation policy. For versioned key, the current version must be added. For version-less key, use the same key name.
 
-1. Create NEW_ASYMMETRIC_KEY pointing to same AKV key (points to most recent valid key version) or a new AKV key.
+SQL Server doesn't have a mechanism to automatically rotate the asymmetric key used for TDE. The steps to rotate an asymmetric key manually are as follows.
+
+1. The credential used in our initial setup (`sysadmin_ekm_cred`) can also be reused for the key rotation. Optionally, create a new credential for the new asymmetric key.
+
+   ```sql
+   CREATE CREDENTIAL <new_credential_name>
+       WITH IDENTITY = <key vault>,
+       SECRET = 'existing/new secret'
+       FOR CRYPTOGRAPHIC PROVIDER AzureKeyVault_EKM;
+   ```
+
+1. Add the credential to the principal:
+
+   ```sql
+   ALTER LOGIN [domain\userName];
+   ADD CREDENTIAL <new_credential_name>;
+   ```
+
+1. Create the new asymmetric key based on the new key (after rotating the key). The new key could be a version-less key (`ContosoRSAKey0` in our example) or a versioned key (`ContosoRSAKey0/1a4d3b9b393c4678831ccc60def75379` where `1a4d3b9b393c4678831ccc60def75379` is the version of the updated key in AKV):
+
+   ```sql
+   CREATE ASYMMETRIC KEY <new_ekm_key_name>
+    FROM PROVIDER [AzureKeyVault_EKM]  
+    WITH PROVIDER_KEY_NAME = <new_key_from_key_vault>,  
+    CREATION_DISPOSITION = OPEN_EXISTING;
+   ```
+
 1. Create a new login from the new asymmetric key:
 
    ```sql
-   CREATE LOGIN TDE_LOGIN_NEW FROM ASYMMETRIC KEY NEW_ASYMMETRIC_KEY;
+   CREATE LOGIN <new_login_name>
+   FROM ASYMMETRIC KEY <new_ekm_key_name>;
+   ```
+
+1. Drop the credential from the principal:
+
+   ```sql
+   ALTER LOGIN [domain\username]
+   DROP CREDENTIAL <new_credential_name>;
    ```
 
 1. Map AKV credential to the new login:
 
    ```sql
-   ALTER LOGIN TDE_LOGIN_NEW;
-   ADD CREDENTIAL AKV_Credential;
+   ALTER LOGIN <new_login_name>;
+   ADD CREDENTIAL <new_credential_name>;
    ```
 
 1. Alter the database encryption key (DEK) to re-encrypt with the new asymmetric key:
 
    ```sql
-   ALTER DATABASE ENCRYPTION KEY ENCRYPTION BY SERVER ASYMMETRIC KEY NEW_ASYMMETRIC_KEY;
+   USE [databaseName];
+   GO
+   ALTER DATABASE ENCRYPTION KEY ENCRYPTION BY SERVER ASYMMETRIC KEY <new_ekm_key_name>;
    ```
 
-> [!NOTE]  
-> Rotating the logical TDE protector for a server means switching to a new asymmetric key or certificate that protects the database encryption key (DEK). Key rotation is an online operation and should only take a few seconds to complete, because this only decrypts and re-encrypts the DEK, not the entire database.
+1. You can verify the new asymmetric key and the encryption key used in the database:
 
-> [!IMPORTANT]  
-> Don't delete previous versions of the key after rotation. When keys are rotated, some data is still encrypted with the previous keys, such as older database backups, backed-up log files, and transaction log files.
+   ```sql
+   SELECT encryptor_type, encryption_state_desc, encryptor_thumbprint 
+   FROM sys.dm_database_encryption_keys 
+   WHERE database_id = DB_ID('databaseName');
+   ```
 
-## Next steps
+   This thumbprint should match the registry key under the path `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SQL Server Cryptographic Provider\Azure Key Vault\<key_vault_url>\<thumbprint>` and give you the `KeyUri` for your rotated key.
+
+> [!IMPORTANT]
+> Rotating the logical TDE protector for a server means switching to a new asymmetric key or certificate that protects the database encryption key (DEK). Key rotation is an online operation and should only take a few seconds to complete, because this only decrypts and re-encrypts the DEK and not the entire database.
+>
+> Don't delete previous versions of the key after rotation. When keys are rotated, some data is still encrypted with the previous keys, such as older database backups, backed-up log files, virtual log files (VLF), and transaction log files. Previous keys might also be required for a database recovery or a database restore.
+
+## Related content
 
 - [Use the SQL Server Connector with SQL encryption features](use-sql-server-connector-with-sql-encryption-features.md)
 - [Extensible Key Management with Azure Key Vault](extensible-key-management-using-azure-key-vault-sql-server.md)

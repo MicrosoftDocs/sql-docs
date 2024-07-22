@@ -2,7 +2,7 @@
 title: "setNCharacterStream Method to Reader object| Microsoft Docs"
 description: "setNCharacterStream Method (SQLServerCallableStatement)"
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: "01/19/2017"
 ms.service: sql
 ms.subservice: connectivity

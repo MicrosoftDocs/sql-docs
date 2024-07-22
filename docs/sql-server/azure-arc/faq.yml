@@ -1,14 +1,12 @@
 ### YamlMime:FAQ
 metadata:
-  title: SQL Server enabled by Azure Arc | Microsoft Docs
+  title: Frequently asked questions
   description: Provides questions and answers frequently asked about SQL Server enabled by Azure Arc.
-  ms.service: sql
   ms.topic: faq
-  services: azure-arc
   ms.date: 12/09/2022
   ms.author: mikeray
   author: MikeRayMSFT
-title: SQL Server enabled by Azure Arc FAQ
+title: Frequently asked questions - SQL Server enabled by Azure Arc
 summary: |
 
 sections:
@@ -29,10 +27,6 @@ sections:
         answer: |
            No. Microsoft only captures metadata and information about your SQL Server to help troubleshoot and inventory. The data sent doesn't include user data or about your utilization of SQL Server.
 
-      - question: Does SQL Server enabled by Azure Arc support Private Link?
-        answer: |
-           Yes. SQL Server enabled by Azure Arc supports Private Link for most endpoints, but some endpoints don't require Private Link and some endpoints aren't supported. For specific information, see [Connected Machine agent network requirements](/azure/azure-arc/servers/network-requirements?tabs=azure-cloud#urls).
-           
   - name: Billing
     questions:
       - question: Does pay-as-you-go billing stop charging when connectivity between the SQL Server resource and Azure is temporarily interrupted?
@@ -56,8 +50,44 @@ sections:
       - question: Can I switch from pay-as-you-go to license and vice versa?
         answer: Yes, you can change your selection. To change, run SQL Server Setup again, and choose the **Maintenance** tab, then select **Edition Upgrade**. The mode is now changed to Enterprise license. To revert back to pay-as-you-go, you can use the same steps and change the setting.
 
+  - name: Security
+    questions:
+      - question: What are the best practices for security?
+        answer: Review and implement [SQL Server enabled by Azure Arc best practices](secure-best-practices.md).
+
+      - question: Is TDE with Azure Key Vault supported?
+        answer: No. TDE with Azure Key Vault is not supported today SQL Server enabled by Azure Arc. You can manually set up TDE for your own instances.
+
+      - question: Is there key vault support?
+        answer: Yes, there is key vault support today for SQL Server enabled by Azure Arc for storing the Entra ID certificate.
+
+      - question: Does SQL Server enabled by Azure Arc support Private Link?
+        answer: |
+           Yes. SQL Server enabled by Azure Arc supports Private Link for most endpoints, but some endpoints don't require Private Link and some endpoints aren't supported. For specific information, see [Connected Machine agent network requirements](/azure/azure-arc/servers/network-requirements?tabs=azure-cloud#urls).
+  
+      - question: What configuration changes are made?
+        answer: You can find details on the roles created by the Azure extension for SQL Server at [Roles created by Azure extension for SQL Server installation](permissions-granted-agent-extension.md).
+
+      - question: What is the URL list of endpoints that need to be opened up?
+        answer: You need to open up the endpoint at `*.<region>.arcdataservices.com`. For specific information, review [Prerequisites - Connect to Azure Arc data processing service](prerequisites.md#connect-to-azure-arc-data-processing-service).
+
+      - question: What are the details on the permissions assigned?
+        answer: Review [Configure Windows service accounts and permissions for Azure extension for SQL Server](configure-windows-accounts-agent.md).
+
+      - question: What user is the Microsoft SQL Server extension service running as?
+        answer: When the least privileges mode is enabled, then it runs as the NT Service\SQLServerExtension account. When it is disabled, it runs as Local System. To enable least privilege mode, review [Least privilege mode (preview)](configure-least-privilege.md).
+
+      - question: Is least privilege mode supported for SQL Server enabled by Azure Arc?
+        answer: Yes, least privilege mode is currently in preview for SQL Server enabled by Azure Arc. When this mode is generally available, least privilege mode will become the default configuration. Existing deployments will also be migrated automatically to least privilege mode to bolster security. Learn more about the permission assigned at [Configure Windows service accounts and permissions for Azure extension for SQL Server](configure-windows-accounts-agent.md).
+
+      - question: How do I set the minimum permissions to deploy SQL Server enabled by Azure Arc?
+        answer: Least privileges mode uses the minimum amount of permissions to deploy SQL Server enabled by Azure Arc.
+
 additionalContent: |
 
-     ## Next steps
+     ## Related content
 
-     [Azure Arc-enabled data services FAQ](/azure/azure-arc/data/faq)
+     - [SQL Server enabled by Azure Arc - Overview](overview.md)
+     - [Automatically connect your SQL Server to Azure Arc](automatically-connect.md)
+     - [Azure Arc-enabled data services FAQ](/azure/azure-arc/data/faq)
+

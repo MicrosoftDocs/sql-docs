@@ -7,7 +7,7 @@ ms.date: 08/20/2018
 ms.service: sql
 ms.subservice: integration-services
 ms.topic: conceptual
-ms.custom: loading
+ms.custom: loading, linux-related-content
 ---
 # Load data into SQL Server or Azure SQL Database with SQL Server Integration Services (SSIS)
 

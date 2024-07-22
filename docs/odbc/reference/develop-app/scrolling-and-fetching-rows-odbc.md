@@ -2,7 +2,7 @@
 title: "Scrolling and Fetching Rows (ODBC)"
 description: "Scrolling and Fetching Rows (ODBC)"
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: "01/19/2017"
 ms.service: sql
 ms.subservice: connectivity
@@ -31,4 +31,4 @@ When using a scrollable cursor, applications call **SQLFetchScroll** to position
  After the rowset has been retrieved, the application can call **SQLSetPos** to position to a particular row in the rowset or refresh rows in the rowset. For more information on using **SQLSetPos**, see [Updating Data with SQLSetPos](../../../odbc/reference/develop-app/updating-data-with-sqlsetpos.md).  
   
 > [!NOTE]  
->  Scrolling is supported in ODBC 2.*x* drivers by **SQLExtendedFetch**. For more information, see [Block Cursors, Scrollable Cursors, and Backward Compatibility](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md)in Appendix G: Driver Guidelines for Backward Compatibility.
+>  Scrolling is supported in ODBC 2.*x* drivers by **SQLExtendedFetch**. For more information, see [Block Cursors, Scrollable Cursors, and Backward Compatibility](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md) in Appendix G: Driver Guidelines for Backward Compatibility.

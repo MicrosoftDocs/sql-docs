@@ -2,7 +2,7 @@
 title: "updateArray Method (java.lang.String, java.sql.Array)"
 description: "updateArray Method (java.lang.String, java.sql.Array)"
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: "01/19/2017"
 ms.service: sql
 ms.subservice: connectivity

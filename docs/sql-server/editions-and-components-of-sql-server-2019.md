@@ -162,7 +162,7 @@ The Developer edition continues to support only 1 client for [[!INCLUDE[ssNoVers
 
 <sup>3</sup> Witness only
 
-<sup>4</sup> On Enterprise edition, the number of nodes is the operating system maximum. On Standard edition there is support for two nodes.
+<sup>4</sup> On Enterprise edition, the maximum number of nodes is 16. On Standard edition there is support for two nodes.
 
 <sup>5</sup> On Enterprise edition, provides support for up to 8 secondary replicas - including 5 synchronous secondary replicas.
 
@@ -174,20 +174,20 @@ The Developer edition continues to support only 1 client for [[!INCLUDE[ssNoVers
 
 | Feature | Enterprise | Standard | Web | Express<br />with<br />Advanced<br />Services | Express |
 | --- | :---: | :---: | :-: | :---: | :---: |
-| Columnstore <sup>1</sup> <sup>2</sup> | Yes | Yes | Yes | Yes | Yes |
+| Columnstore <sup>1, 2</sup> | Yes | Yes | Yes | Yes | Yes |
 | Large object binaries in clustered columnstore indexes | Yes | Yes | Yes | Yes | Yes |
 | Online non-clustered columnstore index rebuild | Yes | No | No | No | No |
-| In-Memory Database: In-Memory OLTP <sup>1</sup> | Yes | Yes | Yes | Yes <sup>3</sup> | Yes |
+| In-Memory Database: In-Memory OLTP <sup>1, 2</sup> | Yes | Yes | Yes | Yes <sup>3</sup> | Yes |
 | In-Memory Database: hybrid buffer pool | Yes | Yes | No | No | No |
 | In-Memory Database: Memory-optimized TempDB metadata | Yes | No | No | No | No |
 | In-Memory Database: persistent memory support | Yes | Yes | Yes | Yes | Yes |
 | Stretch Database | Yes | Yes | Yes | Yes | Yes |
 | Multi-instance support | 50 | 50 | 50 | 50 | 50 |
-| Table and index partitioning | Yes | Yes | Yes | Yes | Yes |
-| Data compression | Yes | Yes | Yes | Yes | Yes |
+| Table and index partitioning <sup>2</sup> | Yes | Yes | Yes | Yes | Yes |
+| Data compression <sup>2</sup> | Yes | Yes | Yes | Yes | Yes |
 | Resource governor | Yes | No | No | No | No |
-| Partitioned table parallelism | Yes | Yes | Yes | No | No |
-| Multiple filestream containers | Yes | Yes | Yes | Yes | Yes |
+| Partitioned table parallelism <sup>2</sup> | Yes | Yes | Yes | No | No |
+| Multiple filestream containers <sup>2</sup> | Yes | Yes | Yes | Yes | Yes |
 | NUMA aware and large page memory and buffer array allocation | Yes | No | No | No | No |
 | Buffer pool extension | Yes | Yes | No | No | No |
 | I/O resource governance | Yes | No | No | No | No |

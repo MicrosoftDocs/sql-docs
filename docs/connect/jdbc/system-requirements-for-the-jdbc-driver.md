@@ -2,8 +2,9 @@
 title: System requirements
 description: Find the system requirements for the JDBC driver. Including what Java, operation system, and database versions are supported.
 author: David-Engel
-ms.author: v-davidengel
-ms.date: 01/31/2024
+ms.author: davidengel
+ms.reviewer: randolphwest
+ms.date: 06/28/2024
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: conceptual
@@ -12,7 +13,7 @@ ms.topic: conceptual
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  To use the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] to access data from a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], you must have the following components installed on your computer:
+To use the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] to access data from a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], you must have the following components installed on your computer:
 
 - [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] ([download](download-microsoft-jdbc-driver-for-sql-server.md))
 - Java Runtime Environment
@@ -419,14 +420,14 @@ The JDBC Driver 6.4 is available on the Maven Central Repository and can be adde
   
 ## Operating System requirements  
 
- The JDBC driver is designed to work on any operating system that supports the use of a Java Virtual Machine (JVM). However, only Sun Solaris, SUSE Linux, Ubuntu Linux, CentOS Linux, macOS, and Windows operating systems have officially been tested.  
+ The JDBC driver is designed to work on any operating system that supports the use of a Java Virtual Machine (JVM). However, only Sun Solaris, SUSE Linux, Ubuntu Linux, macOS, and Windows operating systems have officially been tested.  
   
 ## Supported languages  
 
  The JDBC driver supports all [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] column collations. For more information about the collations supported by the JDBC driver, see [International features of the JDBC driver](international-features-of-the-jdbc-driver.md).  
   
  For more information about collations, see "Working with Collations" in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  
-  
-## See also  
 
- [Overview of the JDBC driver](overview-of-the-jdbc-driver.md)  
+## Related content
+
+- [Overview of the JDBC driver](overview-of-the-jdbc-driver.md)

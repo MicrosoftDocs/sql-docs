@@ -23,9 +23,9 @@ dev_langs:
 
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
-Pauses or resumes the [!INCLUDE [ss_smartbackup](../../includes/ss-smartbackup-md.md)].
+Pauses or resumes the [!INCLUDE [ss-managed-backup](../../includes/ss-managed-backup-md.md)].
 
-Use `managed_backup.sp_backup_master_switch` to temporarily pause and then resume [!INCLUDE [ss_smartbackup](../../includes/ss-smartbackup-md.md)]. This procedure makes sure that all the configurations settings remain, and are retained when the operations resume. When [!INCLUDE [ss_smartbackup](../../includes/ss-smartbackup-md.md)] is paused the retention period isn't enforced.
+Use `managed_backup.sp_backup_master_switch` to temporarily pause and then resume [!INCLUDE [ss-managed-backup](../../includes/ss-managed-backup-md.md)]. This procedure makes sure that all the configurations settings remain, and are retained when the operations resume. When [!INCLUDE [ss-managed-backup](../../includes/ss-managed-backup-md.md)] is paused the retention period isn't enforced.
 
 In other words, there's no check to determine:
 
@@ -46,7 +46,7 @@ EXEC managed_backup.sp_backup_master_switch [ @new_state = ] { 0 | 1 }
 
 #### [ @new_state = ] { 0 | 1 }
 
-Set the state of [!INCLUDE [ss_smartbackup](../../includes/ss-smartbackup-md.md)]. *@new_state* is **bit**. When set to a value of `0`, the operations are paused, and when set to a value of `1`, the operation resume.
+Set the state of [!INCLUDE [ss-managed-backup](../../includes/ss-managed-backup-md.md)]. *@new_state* is **bit**. When set to a value of `0`, the operations are paused, and when set to a value of `1`, the operation resume.
 
 ## Return code values
 
@@ -58,7 +58,7 @@ Requires membership in **db_backupoperator** database role, with ALTER ANY CREDE
 
 ## Examples
 
-The following example can be used to pause [!INCLUDE [ss_smartbackup](../../includes/ss-smartbackup-md.md)] on the instance it is executed on:
+The following example can be used to pause [!INCLUDE [ss-managed-backup](../../includes/ss-managed-backup-md.md)] on the instance it is executed on:
 
 ```sql
 USE msdb;
@@ -67,7 +67,7 @@ EXEC managed_backup.sp_backup_master_switch @new_state = 0;
 Go
 ```
 
-The following example can be used to resume [!INCLUDE [ss_smartbackup](../../includes/ss-smartbackup-md.md)].
+The following example can be used to resume [!INCLUDE [ss-managed-backup](../../includes/ss-managed-backup-md.md)].
 
 ```sql
 USE msdb;

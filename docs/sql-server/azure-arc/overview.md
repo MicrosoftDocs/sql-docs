@@ -6,6 +6,7 @@ ms.author: sashan
 ms.reviewer: mikeray, randolphwest
 ms.date: 02/16/2024
 ms.topic: conceptual
+ms.custom: references_regions
 ---
 
 # SQL Server enabled by Azure Arc
@@ -43,7 +44,7 @@ You can optimize the configuration of your SQL Server instances for best perform
 
 [!INCLUDE [entra-id](../../includes/entra-id.md)]
 
-Starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], Azure Arc enabled SQL Servers can utilize Microsoft Entra ID for authentication, bringing a modern centralized identity and access management solution to SQL Server. Microsoft Entra authentication provides greatly enhanced security over traditional username and password-based authentication, which is **not recommended**. For more information about the risks and challenges passwords pose, refer to ["What’s the solution to the growing problem of passwords?](https://news.microsoft.com/features/whats-solution-growing-problem-passwords-says-microsoft/) Microsoft Entra authentication removes the need for self-managed secrets entirely when communicating with Azure resources, through managed identity authentication. For user-based authentication, Microsoft Entra ID supports enhanced security measures including multi-factor authentication (MFA), single sign-on (SSO), and modern identity practices.
+Starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], Azure Arc enabled SQL Servers can utilize Microsoft Entra ID for authentication, bringing a modern centralized identity and access management solution to SQL Server. Microsoft Entra authentication provides greatly enhanced security over traditional username and password-based authentication, which is **not recommended**. For more information about the risks and challenges passwords pose, refer to ["What’s the solution to the growing problem of passwords?"](https://news.microsoft.com/features/whats-solution-growing-problem-passwords-says-microsoft/). Microsoft Entra authentication removes the need for self-managed secrets entirely when communicating with Azure resources, through managed identity authentication. For user-based authentication, Microsoft Entra ID supports enhanced security measures including multifactor authentication (MFA), single sign-on (SSO), and modern identity practices.
 
 ## Microsoft Defender for Cloud
 
@@ -68,6 +69,29 @@ Now, with [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)], you have the op
 
 Once [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] has reached the end of its support lifecycle, you can sign up for an Extended Security Update (ESU) subscription for your servers and remain protected for up to three years. When you upgrade to a newer version of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)], your ESU subscription is automatically canceled. When you [migrate to Azure SQL](/azure/azure-sql/migration-guides/), the ESU charges automatically stop but you continue to have access to the ESUs.
 
+## Performance dashboards
+
+Monitor SQL Server instances from Azure portal with performance dashboards. Performance dashboards simplify performance monitoring in Azure portal.
+
+:::image type="content" source="media/overview/performance-dashboard.png" alt-text="Screenshot of performance dashboard for SQL Server enabled by Azure Arc." lightbox="media/overview/performance-dashboard.png":::
+
+For details, see [Monitor SQL Server enabled by Azure Arc (preview)](sql-monitoring.md).
+
+## Migration assessment
+
+[!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] migration assessment is a crucial tool for your cloud migration and modernization journey. It simplifies the discovery and readiness assessment for migration by providing:
+
+- Cloud readiness analysis
+- Identification of risks and mitigation strategies
+- Recommendations for the specific service tier and Azure SQL configuration (SKU size) that best fits the workload needs
+- Automatic generation of the assessment
+- Continuous running on a default schedule of once per week
+- Availability for all SQL Server editions
+
+Migration assessment is for SQL Servers located in various environments, including your data center, edge sites, or any public cloud or hosting provider. It is available for any instance of SQL Server that is enabled by Azure Arc.
+
+For details, review [Configure SQL best practices assessment - SQL Server enabled by Azure Arc](assess.md).
+
 ## Architecture
 
 The SQL Server instance that you want to enable with Azure Arc can be installed in a virtual or physical machine running Windows or Linux. The [Azure Connected Machine agent](/azure/azure-arc/servers/agent-overview) and the Azure Extension for SQL Server securely connect to Azure to establish communication channels with multiple Azure services using only outbound HTTPS traffic on TCP port 443 using Transport Layer Security (TLS). The Azure Connected Machine agent can communicate through a configurable HTTPS proxy server over Azure Express Route, Azure Private Link or over the Internet. Review the [overview](/azure/azure-arc/servers/agent-overview), [network requirements](/azure/azure-arc/servers/network-requirements), and [prerequisites](/azure/azure-arc/servers/prerequisites) for the Azure Connected Machine agent.
@@ -78,7 +102,7 @@ The following diagram illustrates the architecture of [!INCLUDE [ssazurearc](../
 
 :::image type="content" source="media/overview/architecture.png" alt-text="Diagram of the architecture for [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)]" lightbox="media/overview/architecture.png":::
 
-## Feature availability depending on license type
+## <a id="feature-differentiation"></a> Feature availability depending on license type
 
 [!INCLUDE [license-types](includes/license-types.md)]
 
@@ -93,8 +117,6 @@ The following diagram illustrates the architecture of [!INCLUDE [ssazurearc](../
 ## Feature availability by edition
 
 [!INCLUDE [features-edition](includes/features-edition.md)]
-
-## Supported SQL Server versions and environments
 
 [!INCLUDE [supported-configurations](includes/supported-configurations.md)]
 

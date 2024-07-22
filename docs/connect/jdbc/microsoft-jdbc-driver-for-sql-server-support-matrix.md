@@ -2,8 +2,9 @@
 title: Support matrix
 description: This page contains the support matrix and support life-cycle policy for the Microsoft JDBC Driver for SQL Server.
 author: David-Engel
-ms.author: v-davidengel
-ms.date: 01/31/2024
+ms.author: davidengel
+ms.reviewer: randolphwest
+ms.date: 06/28/2024
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: conceptual
@@ -22,7 +23,7 @@ Extended and custom support options aren't available for the Microsoft JDBC Driv
 
 The following Microsoft JDBC Drivers are supported, until the indicated End of Support date.
 
-|Driver Name|Driver Package Version|Applicable JAR(s)|End of Mainstream Support|
+|Driver Name|Driver Package Version|Applicable JARs|End of Mainstream Support|
 |-|-|-|-|
 |Microsoft JDBC Driver 12.6 for SQL Server|12.6|mssql-jdbc-12.6.0.jre11.jar<br> mssql-jdbc-12.6.0.jre8.jar|January 31, 2029|
 |Microsoft JDBC Driver 12.4 for SQL Server|12.4|mssql-jdbc-12.4.0.jre11.jar<br> mssql-jdbc-12.4.0.jre8.jar|July 31, 2028|
@@ -85,7 +86,7 @@ The following Microsoft JDBC Drivers are supported, until the indicated End of S
 
  <sup>2</sup> Support for Azure SQL Database was introduced in the 3.0 driver as a hotfix. We recommend that Azure SQL Database customers use the latest driver version available.
 
- <sup>3</sup> Microsoft SQL Server JDBC Driver version 2.0 and Microsoft SQL Server 2005 JDBC Driver version 1.2 can connect to SQL Server 2008 as a down-level client. When down-level conversions are allowed, applications can execute queries and perform updates on the new SQL Server 2008 data types, such as time, date, datetime2, datetimeoffset, and FILESTREAM. For more information about how to use these new data types with the JDBC driver, see  [Working with SQL Server 2008 Date/Time Data Types using JDBC Driver](/archive/blogs/jdbcteam/) and  [Working with SQL Server 2008 FileStream using JDBC Driver](/archive/blogs/jdbcteam/). For more information about the down-level compatibility of these new data types, see  [Using Date and Time Data](/previous-versions/sql/sql-server-2008-r2/ms180878(v=sql.105))and  [FILESTREAM Support](../../relational-databases/native-client/features/filestream-support.md) articles in SQL Server Books Online.
+ <sup>3</sup> Microsoft SQL Server JDBC Driver version 2.0 and Microsoft SQL Server 2005 JDBC Driver version 1.2 can connect to SQL Server 2008 as a down-level client. When down-level conversions are allowed, applications can execute queries and perform updates on the new SQL Server 2008 data types, such as time, date, datetime2, datetimeoffset, and FILESTREAM. For more information about how to use these new data types with the JDBC driver, see  [Working with SQL Server 2008 Date/Time Data Types using JDBC Driver](/archive/blogs/jdbcteam/) and  [Working with SQL Server 2008 FileStream using JDBC Driver](/archive/blogs/jdbcteam/). For more information about the down-level compatibility of these new data types, see  [Using Date and Time Data](/previous-versions/sql/sql-server-2008-r2/ms180878(v=sql.105)) and [FILESTREAM Support](../../relational-databases/native-client/features/filestream-support.md) articles in SQL Server Books Online.
 
  <sup>4</sup> Support for connections between the Microsoft JDBC Driver and Parallel Data Warehouse was first introduced in the Microsoft JDBC Driver 4.0 for SQL Server and Microsoft SQL Server 2008 R2 Parallel Data Warehouse Appliance Update 3.
 
@@ -125,8 +126,8 @@ The following Microsoft JDBC Drivers are supported, until the indicated End of S
 
 The Microsoft JDBC driver is designed to work on any operating system that supports the use of a Java Virtual Machine (JVM). Some commonly used platforms include Windows, Windows Server, Linux, Unix, AIX, macOS, and others.
 
-The JDBC product team tests our driver on Windows, Ubuntu Linux, CentOS Linux, and macOS.
+The JDBC product team tests our driver on Windows, Ubuntu Linux, and macOS.
 
 ## Application server support
 
-The Microsoft JDBC Driver for SQL Server is tested with various application servers.  Consult your application server vendor for more details on which driver version is compatible with their product.
+The Microsoft JDBC Driver for SQL Server is tested with various application servers. Consult your application server vendor for more details on which driver version is compatible with their product.

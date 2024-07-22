@@ -99,17 +99,26 @@ You can use the following quickstart template to deploy a SQL Server VM using st
 ## Existing VMs
 
 > [!NOTE]
-> Storage is only configurable for SQL Server VMs that were deployed from a SQL Server image in Azure Marketplace, and not currently supported for [Premium SSD v2](storage-configuration-premium-ssd-v2.md) disks.
+> Storage is only configurable for SQL Server VMs that were deployed from a SQL Server image in Azure Marketplace, and not currently supported for [Premium SSD v2](storage-configuration-premium-ssd-v2.md) disks. To modify disk configurations on an Azure virtual machine with self-installed SQL Server, use the [Disks pane](/azure/virtual-machines/windows/expand-os-disk#expand-the-volume-in-the-operating-system). 
 
-For existing SQL Server VMs that have been deployed through Azure Marketplace, you can modify some storage settings in the Azure portal. 
+### Modify existing drives
 
-To modify the storage settings, open your [SQL virtual machines resource](manage-sql-vm-portal.md#access-the-resource), and select **Storage configuration** under **Settings**.
+For existing SQL Server VMs that have been deployed through Azure Marketplace, you can modify some storage settings in the Azure portal through the SQL virtual machines resource, or on the [Disks pane](/azure/virtual-machines/windows/expand-os-disk#expand-the-volume-in-the-operating-system). 
+
+To modify the storage settings, open your [SQL virtual machines resource](manage-sql-vm-portal.md#access-the-resource), and select **Storage configuration** under **Settings**, where you can:
+
+- Add additional disks
+- Configure or expand existing disks
 
 :::image type="content" source="./media/storage-configuration/sql-vm-storage-configuration-existing.png" alt-text="Screenshot that highlights the Configure option and the Storage Usage section.":::
 
-You can modify the disk settings for the drives that were configured during the SQL Server VM creation process. Selecting **Configure** opens the **Extend Data drive** page, allowing you to change the disk type, as well as add additional disks.
+Selecting **Configure** opens the **Extend Data drive** page, allowing you to change the disk type, as well as add additional disks. You can also add disks through the [Disks pane](/azure/virtual-machines/windows/attach-managed-disk-portal). 
 
 :::image type="content" source="./media/storage-configuration/sql-vm-storage-extend-drive.png" alt-text="A screenshot from the Azure portal showing the Extend Data drive page, used to configure storage for an existing SQL Server VM.":::
+
+If you've already reached the maximum disks supported for a particular VM size, you may need to [Resize the VM](/azure/virtual-machines/sizes/resize-vm). 
+
+### Modifying tempdb
 
 It's also possible to modify your `tempdb` settings using the **Storage configuration** page, such as the number of `tempdb` files, as well as the initial size, and the autogrowth ratio. Select **Configure** next to **tempdb** to open the **tempdb Configuration** page.
 
@@ -119,6 +128,9 @@ Choose **Yes** next to **Configure tempdb data files** to modify your settings, 
 
 Restart your SQL Server service to apply your changes.
 
+### Increasing temporary disk size
+
+To increase the temporary disk size, resize the VM to a SKU that supports a higher disk size for temporary storage. 
 
 ## Automated changes
 
@@ -250,11 +262,23 @@ In Windows Server 2008 to 2012 R2, the default value for `-StorageSubsystemFrien
 
 The **Storage Configuration** pane can be grayed out in the Azure portal if your SQL IaaS Agent extension is in a failed state. [Repair the SQL IaaS Agent extension](sql-agent-extension-troubleshoot-known-issues.md#repair-extension). 
 
-**Configure** on the Storage Configuration pane can be grayed out if you've customized your storage pool, or if you are using a non-Marketplace image. 
+**Configure** on the Storage Configuration pane can be grayed out if you've customized your storage pool, or if you're using a non-Marketplace image. 
 
 ### I have a disk with 1 TB of unallocated space that I can't remove from storage pool
 
 There's no option to remove the unallocated space from a disk that belongs to a storage pool.
+
+### My transaction log is full 
+
+Review [Troubleshoot a full transaction log](/sql/relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002) if your log becomes full. 
+
+### Unable to configure storage with the SQL virtual machines resource 
+
+The Storage configuration pane for the SQL virtual machines resource in the Azure portal may be unavailable, grayed out, or selecting **Extend disks** does nothing, in the following scenarios: 
+
+- Virtual machines with self-installed SQL Server instances. Currently, only SQL Server VM images from Azure Marketplace are supported.  
+- SQL Server VMs using Premium SSDv2. Currently, only SQL Server VMs with Premium SSD are supported. 
+- When TCP/IP is disabled in SQL Server Configuration Manager. 
 
 ## Related content
 

@@ -12,6 +12,8 @@ f1_keywords:
 ---
 # Edit Tables
 
+[!INCLUDE [oracle-cdc-retirement](../includes/attunity-oracle-cdc-retirement.md)]
+
   Use the **Tables** tab to make changes to the tables and columns that you selected from the Oracle source database. This tab has the following elements:  
   
  **Table list**  

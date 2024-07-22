@@ -32,7 +32,7 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
 ```  
   
 ## Arguments  
- *\<table column reference>*, *\<scalar column referenc>*  
+ *\<table column reference>*, *\<scalar column reference>*  
  Specifies the name of the column to predict. The column can contain either scalar or tabular data.  
   
  *n*  

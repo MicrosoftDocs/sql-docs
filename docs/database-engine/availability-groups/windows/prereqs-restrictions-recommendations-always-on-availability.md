@@ -57,6 +57,8 @@ To support the [!INCLUDE [ssHADR](../../../includes/sshadr-md.md)] feature, ensu
 
 - **Sufficient disk space:** Every computer on which a server instance hosts an availability replica must possess sufficient disk space for all the databases in the availability group. Keep in mind that as primary databases grow, their corresponding secondary databases grow the same amount.
 
+- **Identical disk layout:** Every computer on which a server instance hosts an availability replica should have an identical disk layout (with exact disk drive letters and sizes) to ensure file paths for database files (mdf,ldf) are mirrored, preventing complications during seeding and synchronization.  Review [Restrictions (availability databases)](#RestrictionsDb) for disk layouts that differ. 
+
 ### <a id="PermissionsWindows"></a> Permissions (Windows system)
 
 To administer a WSFC, the user must be a system administrator on every cluster node.
@@ -347,7 +349,7 @@ To be eligible to be added to an availability group, a database must:
 
 - If the file path (including the drive letter) of a secondary database differs from the path of the corresponding primary database, the following restrictions apply:
 
-  - **[!INCLUDE [ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]/[!INCLUDE [ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)]:** The **Full** option isn't supported (on the[Select Initial Data Synchronization Page (Always On Availability Group Wizards)](select-initial-data-synchronization-page-always-on-availability-group-wizards.md) page),
+  - **[!INCLUDE [ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]/[!INCLUDE [ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)]:** The **Full** option isn't supported (on the [Select Initial Data Synchronization Page (Always On Availability Group Wizards)](select-initial-data-synchronization-page-always-on-availability-group-wizards.md) page),
 
   - **RESTORE WITH MOVE:** To create the secondary databases, the database files must be RESTORED WITH MOVE on each instance of [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)] that hosts a secondary replica.
 

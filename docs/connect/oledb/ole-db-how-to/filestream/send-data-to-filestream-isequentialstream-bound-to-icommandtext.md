@@ -2,7 +2,7 @@
 title: "Send Data to FILESTREAM - ISequentialStream Bound to ICommandText"
 description: Learn how to use the ISequentialStream interface bound to an ICommandText parameter to send from 4 MB to 4 GB of data to a filestream column with this example.
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: "06/14/2018"
 ms.service: sql
 ms.subservice: connectivity
@@ -217,7 +217,7 @@ HRESULT CISSHelper::Write( const void *pv, ULONG cb, ULONG* pcbWritten ) {
       return E_OUTOFMEMORY;  
    }  
   
-   // Copy callers memory to internal bufffer and update write position.  
+   // Copy callers memory to internal buffer and update write position.  
    memcpy( (void*)((BYTE*)m_pBuffer + m_iWritePos), pv, cb );  
    m_iWritePos += cb;  
   

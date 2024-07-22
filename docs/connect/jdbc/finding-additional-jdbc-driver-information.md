@@ -2,7 +2,7 @@
 title: Finding additional information
 description: For more information about the Microsoft JDBC Driver for SQL Server and SQL development in general, see these other resources.
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: 08/12/2019
 ms.service: sql
 ms.subservice: connectivity

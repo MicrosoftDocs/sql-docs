@@ -7,7 +7,7 @@ ms.date: 02/01/2023
 ms.topic: troubleshooting-general
 ---
 
-# Troubleshoot Azure extension for SQL Server
+# Troubleshoot Azure extension for SQL Server deployment
 
 [!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
@@ -17,17 +17,7 @@ Before you start, note the logs locations.
 
 ### Extension log
 
-The extension log file is at:
-
-   `C:\ProgramData\GuestConfig\extension_logs\Microsoft.AzureData.WindowsAgent.SqlServer\`
-
-The log file name depends on the version Azure Extension for SQL Server, for the latest version of Azure Extension for SQL Server, the log file is:
-
-   `unifiedagent.log`
-
-For extension version `1.1.24724.69` and earlier, the log file is:
-
-   `ExtensionLog_0.log`
+[!INCLUDE [extension-logs](includes/extension-logs.md)]
 
 ### Deployer logs
 
@@ -92,5 +82,5 @@ Make sure to migrate the Arc-enabled SQL Server resource to `Microsoft.AzureArcD
 
 ## If extension is stuck in an odd state (Creating/Deleting) for long time
 
-Remove and reinstall the extension using `azcmagent` commands. For details, see [`azcmagent` extension remove](/azure/azure-arc/servers/azcmagent-extension#azcmagent-extension-remove).
+[Disconnect your SQL Server instances from Azure Arc](delete-from-azure-arc.md)
 

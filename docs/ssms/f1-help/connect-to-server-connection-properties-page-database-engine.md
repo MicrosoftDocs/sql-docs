@@ -4,7 +4,7 @@ description: Learn how to use the connect to the server (Connection Properties p
 author: erinstellato-ms
 ms.author: erinstellato
 ms.reviewer: maghan, randolphwest
-ms.date: 02/29/2024
+ms.date: 07/12/2024
 ms.service: sql
 ms.subservice: ssms
 ms.topic: ui-reference
@@ -45,6 +45,18 @@ Enter the number of seconds to wait for a connection to be established before ti
 
 Enter the time in seconds to wait before the execution of a query is completed on the server. The default value is zero seconds, which indicates there's no time-out.
 
+### Encrypt connection
+
+Forces encryption of the connection. When enabled, [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] uses TLS encryption for all the data sent between the client and server. For more information, see [SQL Server and client encryption summary](../../database-engine/configure-windows/sql-server-and-client-encryption-summary.md).
+
+The **Encrypt connection** property appears on the Connection Properties for SSMS 19.x and earlier versions.
+
+### Trust server certificate
+
+When enabled, with **Encrypt connection** also enabled or if the server is configured to force encryption, [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] doesn't validate the server certificate on the client machine when you enable encryption on the network connection between client and server.
+
+The **Trust server certificate** property appears on the Connection Properties page for SSMS 19.x and earlier versions.
+
 ### Use custom color
 
 Select to specify the background color for the status bar in a [!INCLUDE [ssDE](../../includes/ssde-md.md)] Query Editor window. To specify the color, choose **Select**. In the **Color** dialog box, select a predefined color from the **Basic Colors** grid or select **Define Custom Colors** to define and use a custom color.
@@ -65,7 +77,7 @@ Attempt a connection using the listed values.
 
 ### Options
 
-Select to hide the **Connection Properties** and **Additional Connection Parameters** tabs and view the **Login** tab.
+Select to hide the **[Connection Properties](/dotnet/api/microsoft.data.sqlclient.sqlconnection.connectionstring)** and **[Additional Connection Parameters](connect-to-server-additional-connection-parameters-page-database-engine.md)** tabs and view the **Login** tab.
 
 ### Test
 

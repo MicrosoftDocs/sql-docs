@@ -113,7 +113,7 @@ In the Azure portal for Azure Synapse Analytics, there is no option to explicitl
 
 - If the storage account is behind a VNet or firewall, auditing is automatically configured using SMI authentication.
 
-- If the storage account isn't behind a VNet or firewall, then auditing is automatically configured using SAS key based authentication.
+- If the storage account isn't behind a VNet or firewall, auditing is automatically configured using SAS key based authentication. However, managed identity cannot be used if the storage account isn't behind a VNet or firewall.
 
 To force the use of SMI authentication, regardless of whether the storage account is behind a VNet or firewall, use REST API or PowerShell, as follows:
 

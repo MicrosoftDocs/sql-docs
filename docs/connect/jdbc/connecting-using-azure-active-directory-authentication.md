@@ -2,7 +2,7 @@
 title: Connect using Microsoft Entra authentication
 description: Learn how to develop Java applications that use the Microsoft Entra authentication feature with the Microsoft JDBC Driver for SQL Server.
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: 01/31/2024
 ms.service: sql
 ms.subservice: connectivity
@@ -67,11 +67,11 @@ The following table lists required library dependencies for each authentication 
 | `ActiveDirectoryPassword`<br/>`ActiveDirectoryIntegrated`<br/>`ActiveDirectoryInteractive`<br/>`ActiveDirectoryServicePrincipal` | 10.2 | `msal4j` 1.11.0 |
 | `ActiveDirectoryPassword`<br/>`ActiveDirectoryIntegrated`<br/>`ActiveDirectoryInteractive`<br/>`ActiveDirectoryServicePrincipal` | 11.2 | `msal4j` 1.11.3 |
 | `ActiveDirectoryPassword`<br/>`ActiveDirectoryIntegrated`<br/>`ActiveDirectoryInteractive`<br/>`ActiveDirectoryServicePrincipal` | 12.2 | `msal4j` 1.13.3 |
-| `ActiveDirectoryManagedIdentity`<br/>`ActiveDirectoryMSI` | 12.2 | `azure-identity` 1.7.0 |
-| `ActiveDirectoryPassword`<br/>`ActiveDirectoryIntegrated`<br/>`ActiveDirectoryInteractive`<br/>`ActiveDirectoryServicePrincipal` | 12.4 | `msal4j` 1.13.8 |
-| `ActiveDirectoryManagedIdentity`<br/>`ActiveDirectoryMSI` | 12.4 | `azure-identity` 1.9.0 |
-| `ActiveDirectoryPassword`<br/>`ActiveDirectoryIntegrated`<br/>`ActiveDirectoryInteractive`<br/>`ActiveDirectoryServicePrincipal` | 12.6 | `msal4j` 1.14.1 |
-| `ActiveDirectoryManagedIdentity`<br/>`ActiveDirectoryMSI` | 12.6 | `azure-identity` 1.11.1 |
+| `ActiveDirectoryManagedIdentity`<br/>`ActiveDirectoryMSI`<br/>`ActiveDirectoryDefault` | 12.2 | `azure-identity` 1.7.0 |
+| `ActiveDirectoryPassword`<br/>`ActiveDirectoryIntegrated`<br/>`ActiveDirectoryInteractive`<br/>`ActiveDirectoryServicePrincipal`<br/>`ActiveDirectoryServicePrincipalCertificate` | 12.4 | `msal4j` 1.13.8 |
+| `ActiveDirectoryManagedIdentity`<br/>`ActiveDirectoryMSI`<br/>`ActiveDirectoryDefault` | 12.4 | `azure-identity` 1.9.0 |
+| `ActiveDirectoryPassword`<br/>`ActiveDirectoryIntegrated`<br/>`ActiveDirectoryInteractive`<br/>`ActiveDirectoryServicePrincipal`<br/>`ActiveDirectoryServicePrincipalCertificate` | 12.6 | `msal4j` 1.14.1 |
+| `ActiveDirectoryManagedIdentity`<br/>`ActiveDirectoryMSI`<br/>`ActiveDirectoryDefault` | 12.6 | `azure-identity` 1.11.1 |
 
 ## Connect using ActiveDirectoryManagedIdentity authentication mode
 

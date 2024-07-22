@@ -2,7 +2,7 @@
 title: "Retrieve data from FILESTREAM with ISequentialStream (OLE DB)"
 description: Learn how to use an ISequentialStream interface in an ICommandText interface to retrieve a record from a FILESTREAM column in OLE DB Driver for SQL Server.
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.reviewer: randolphwest
 ms.date: 10/02/2023
 ms.service: sql
@@ -226,7 +226,7 @@ HRESULT CISSHelper::Write( const void *pv, ULONG cb, ULONG* pcbWritten ) {
       return E_OUTOFMEMORY;
    }
 
-   // Copy callers memory to internal bufffer and update write position.
+   // Copy callers memory to internal buffer and update write position.
    memcpy( (void*)((BYTE*)m_pBuffer + m_iWritePos), pv, cb );
    m_iWritePos += cb;
 

@@ -3,7 +3,7 @@ title: "Optimized locking"
 description: "Learn about the optimized locking enhancement to the Database Engine."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: randolphwest, peskount
+ms.reviewer: randolphwest, peskount, praspu
 ms.date: 02/22/2024
 ms.service: sql
 ms.subservice: performance

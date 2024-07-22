@@ -2,7 +2,7 @@
 title: "SQL to C: Character"
 description: "SQL to C: Character"
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: "01/19/2019"
 ms.service: sql
 ms.subservice: connectivity

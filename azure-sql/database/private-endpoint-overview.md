@@ -5,7 +5,7 @@ description: Overview of private endpoint feature.
 author: rohitnayakmsft
 ms.author: rohitna
 ms.reviewer: wiassaf, vanto, mathoma, randolphwest
-ms.date: 01/30/2024
+ms.date: 07/03/2024
 ms.service: sql-database
 ms.subservice: security
 ms.topic: overview
@@ -39,8 +39,11 @@ Once the network admin creates the Private Endpoint (PE), the SQL admin can mana
 
 1. Navigate to the server resource in the [Azure portal](https://portal.azure.com).
 
-1. Select **Networking** in the left pane.
-1. Select the **Private access** tab. The page shows the following:
+1. Navigate to the private endpoint approval page:
+    - In the **SQL server** resource, under **Security**, select **Networking**. Select the **Private access** tab.
+    - In Synapse workspace, under **Security** in the resource menu, select **Private endpoint connections**.
+
+1. The page shows the following:
 
    - A list of all Private Endpoint Connections (PECs)
    - Private endpoints (PE) created
@@ -76,7 +79,7 @@ Once the network admin creates the Private Endpoint (PE), the SQL admin can mana
 
 ## Disable public access to your logical server
 
-For this scenario, assume you want to disable all public access to your logical server and allow connections only from your virtual network.
+In Azure SQL Database logical SQL server, assume you want to disable all public access to your logical server and allow connections only from your virtual network.
 
 First, ensure that your private endpoint connections are enabled and configured. Then, to disable public access to your logical server:
 
@@ -96,7 +99,7 @@ For this scenario, assume you've created an Azure Virtual Machine (VM) running a
    - Telnet
    - PsPing
    - Nmap
-   - SQL Server Management Studio (SSMS)
+   - [SQL Server Management Studio (SSMS)](https://aka.ms/ssms)
 
 ### Check connectivity using Telnet
 
@@ -177,7 +180,7 @@ WHERE session_id = @@SPID;
 
 ## Use Redirect connection policy with private endpoints
 
-We recommend that customers use the private link with the **Redirect connection policy** for reduced latency and improved throughput. For connections to use this mode, clients need to meet the following pre-requisites:
+We recommend that customers use the private link with the **Redirect connection policy** for reduced latency and improved throughput. For connections to use this mode, clients need to meet the following prerequisites:
 
 - Allow **inbound** communication to the VNET hosting the private endpoint to port range 1433 to 65535.
 
@@ -185,12 +188,14 @@ We recommend that customers use the private link with the **Redirect connection 
 
 - Use the **latest version of drivers that have redirect support built in.** Redirect support is included in ODBC, OLEDB, NET SqlClient Data Provider, Core .NET SqlClient Data Provider, and JDBC (version 9.4 or above) drivers. Connections originating from all other drivers are proxied.
 
-After meeting the pre-requisite, clients need to explcitly [choose **Redirect** connection policy](connectivity-architecture.md#connection-policy).
+After meeting the prerequisite, clients need to explicitly [choose **Redirect** connection policy](connectivity-architecture.md#connection-policy).
 
 If it isn't feasible to modify the firewall settings to allow outbound access on the 1433-65535 port range, an alternative solution is to change the connection policy to **Proxy**.
 
-Existing private endpoints using **Default** connection policy shall be proxied i.e. they will use the Proxy connection policy with port 1433. The reason for doing this is is to avoid any disruption to client's traffic from reaching Sql Database due to requisite port ranges for redirection not being open.
+Existing private endpoints using **Default** connection policy will be using the Proxy connection policy with port 1433. The reason for doing this is to avoid any disruption to client traffic from reaching SQL Database due to requisite port ranges for redirection not being open.
 
+> [!NOTE]
+> For dedicated SQL pools, the connection policy when using private endpoints is always **Proxy**. Changing the setting will not affect to dedicated SQL pools when using private endpoints.
 
 ## On-premises connectivity over private peering
 
@@ -226,11 +231,11 @@ Consider [DNS configuration scenarios](/azure/private-link/private-endpoint-dns#
 
 ## Connect from Azure Synapse Analytics to Azure Storage using PolyBase and the COPY statement
 
-PolyBase and the COPY statement are commonly used to load data into Azure Synapse Analytics from Azure Storage accounts. If the Azure Storage account, which you're loading data from, limits access only to a set of virtual network subnets via Private Endpoints, Service Endpoints, or IP-based firewalls, the connectivity from PolyBase and the COPY statement to the account will break. For enabling both import and export scenarios with Azure Synapse Analytics connecting to Azure Storage that's secured to a virtual network, follow the steps provided [here](vnet-service-endpoint-rule-overview.md#impact-of-using-virtual-network-service-endpoints-with-azure-storage).
+PolyBase and the COPY statement are commonly used to load data into Azure Synapse Analytics from Azure Storage accounts. If the Azure Storage account that you're loading data from limits access only to a set of virtual network subnets via Private Endpoints, Service Endpoints, or IP-based firewalls, the connectivity from PolyBase and the COPY statement to the account will break. For enabling both import and export scenarios with Azure Synapse Analytics connecting to Azure Storage that's secured to a virtual network, follow the steps provided [here](vnet-service-endpoint-rule-overview.md#impact-of-using-virtual-network-service-endpoints-with-azure-storage).
 
 ## Data exfiltration prevention
 
-Data exfiltration in Azure SQL Database is when a user, such as a database admin is able extract data from one system and move it another location or system outside the organization. For example, the user moves the data to a storage account owned by a third party.
+Data exfiltration in Azure SQL Database is when a user, such as a database admin is able extract data from one system and move it another location or system outside the organization. For example, the user moves the data to a storage account owned by a non-Microsoft entity.
 
 Consider a scenario with a user running SQL Server Management Studio (SSMS) inside an Azure virtual machine connecting to a database in SQL Database. This database is in the West US data center. The following example shows how to limit access with public endpoints on SQL Database using network access controls.
 

@@ -4,9 +4,11 @@ description: "Use AI options such as OpenAI and vectors to build intelligent app
 author: damauri
 ms.author: damauri
 ms.reviewer: damauri, josephsack, randolphwest, mathoma
-ms.date: 03/13/2024
+ms.date: 05/08/2024
 ms.service: sql-database
 ms.topic: conceptual
+ms.collection: ce-skilling-ai-copilot
+monikerRange: "=azuresql||=azuresql-db"
 ---
 
 # Intelligent applications with Azure SQL Database
@@ -16,6 +18,10 @@ ms.topic: conceptual
 This article provides an overview of using artificial intelligence (AI) options, such as OpenAI and vectors, to build intelligent applications with Azure SQL Database.
 
 For samples and examples, please visit the [SQL AI Samples repository](https://aka.ms/sqlaisamples).
+
+Watch this video in the [Azure SQL Database essentials series](/shows/azure-sql-database-essentials/) for a brief overview of building an AI ready application:  
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=466d4554-4747-45dd-8f21-5ae73b1fa981]
+
 
 ## Overview
 
@@ -31,7 +37,7 @@ The following links provide sample code of various Azure SQL Database options to
 | **[Vectors](#vectors)** | Learn how to store and query vectors in Azure SQL Database. |
 | **[Azure AI Search](#azure-ai-search)** | Use Azure SQL Database together with Azure AI Search to train LLM on your data. |
 | **[Intelligent applications](#intelligent-applications)** | Learn how to create an end-to-end solution using a common pattern that can be replicated in any scenario. |
-| **[Copilot for Azure SQL Database](#copilot-for-azure-sql-database-preview)** | Learn about the set of AI-assisted experiences designed to streamline the design, operation, optimization, and health of Azure SQL Database-driven applications. |
+| **[Copilot skills in Azure SQL Database](#microsoft-copilot-skills-in-azure-sql-database)** | Learn about the set of AI-assisted experiences designed to streamline the design, operation, optimization, and health of Azure SQL Database-driven applications. |
 
 ## Key concepts
 
@@ -175,9 +181,9 @@ For an example that shows how LangChain can be used to create a Chatbot on your 
 - [Semantic Kernel & Kernel Memory - SQL Connector](https://github.com/kbeaugrand/SemanticKernel.Connectors.Memory.SqlServer) - Provides a connection to a SQL database for the Semantic Kernel for the memories.
 - [OpenAI Embeddings Sample](https://github.com/marcominerva/OpenAIEmbeddingSample): An example that shows how to use Semantic Kernel and Kernel Memory to work with embeddings in a .NET application using SQL Server as Vector Database.
 
-## Copilot for Azure SQL Database (preview)
+## Microsoft Copilot skills in Azure SQL Database
 
-[Copilot in Azure SQL Database (preview)](../copilot/copilot-azure-sql-overview.md) is a set of AI-assisted experiences designed to streamline the design, operation, optimization, and health of Azure SQL Database-driven applications. Copilot can improve productivity by offering natural language to SQL conversion and self-help for database administration.
+[Microsoft Copilot skills in Azure SQL Database (preview)](../copilot/copilot-azure-sql-overview.md) is a set of AI-assisted experiences designed to streamline the design, operation, optimization, and health of Azure SQL Database-driven applications. Copilot can improve productivity by offering natural language to SQL conversion and self-help for database administration.
 
 Copilot provides relevant answers to user questions, simplifying database management by leveraging database context, documentation, dynamic management views, Query Store, and other knowledge sources. For example:
 
@@ -185,20 +191,21 @@ Copilot provides relevant answers to user questions, simplifying database manage
 - Developers can ask questions about their data as they would in text or conversation to generate a T-SQL query. Developers can also learn to write queries faster through detailed explanations of the generated query.
 
 > [!NOTE]
-> Copilot in Azure SQL Database is currently in preview for a limited number of early adopters. To sign up for this program, visit [Request Access to Copilot in Azure SQL Database: Preview](https://aka.ms/sqlcopilot-signup).
+> Microsoft Copilot skills in Azure SQL Database are currently in preview for a limited number of early adopters. To sign up for this program, visit [Request Access to Copilot in Azure SQL Database: Preview](https://aka.ms/sqlcopilot-signup).
+
 The preview of Copilot for Azure SQL Database includes two Azure portal experiences:
 
 | Portal location | Experiences |
 | :-- |:-- |
 | **Azure portal Query Editor** | [Natural language to SQL](../copilot/copilot-azure-sql-overview.md?view=azuresql-db&preserve-view=true#natural-language-to-sql-query): This experience within the [Azure portal query editor for Azure SQL Database](../database/query-editor.md) translates natural language queries into SQL, making database interactions more intuitive. For a tutorial and examples of natural language to SQL capabilities, see [Natural language to SQL in the Azure portal Query editor (preview)](../copilot/query-editor-natural-language-to-sql-copilot.md). |
-| **Microsoft Copilot for Azure** | [Azure Copilot integration](../copilot/copilot-azure-sql-overview.md?view=azuresql-db&preserve-view=true#microsoft-copilot-for-azure-enhanced-scenarios): This experience adds Azure SQL skills into [Microsoft Copilot for Azure](/azure/copilot/overview), providing customers with self-guided assistance, empowering them to manage their databases and solve issues independently.|
+| **Microsoft Copilot for Azure** | [Azure Copilot integration](../copilot/copilot-azure-sql-overview.md?view=azuresql-db&preserve-view=true#microsoft-copilot-in-azure-enhanced-scenarios): This experience adds Azure SQL skills into [Microsoft Copilot for Azure](/azure/copilot/overview), providing customers with self-guided assistance, empowering them to manage their databases and solve issues independently.|
 
-For more information, see [Frequently asked questions about Copilot in Microsoft Azure SQL (preview)](../copilot/copilot-azure-sql-faq.yml).
+For more information, see [Frequently asked questions about Microsoft Copilot skills in Azure SQL Database (preview)](../copilot/copilot-azure-sql-faq.yml).
 
 ## Related content
 
 - [Create and deploy an Azure OpenAI Service resource](/azure/ai-services/openai/how-to/create-resource?pivots=web-portal)
 - [Embeddings models](/azure/ai-services/openai/concepts/models#embeddings-models)
 - [SQL AI Samples and Examples](https://aka.ms/sqlaisamples)
-- [Frequently asked questions about Copilot in Azure SQL Database (preview)](../copilot/copilot-azure-sql-faq.yml)
+- [Frequently asked questions about Microsoft Copilot skills in Azure SQL Database (preview)](../copilot/copilot-azure-sql-faq.yml)
 - [Responsible AI FAQ for Microsoft Copilot for Azure (preview)](/azure/copilot/responsible-ai-faq)

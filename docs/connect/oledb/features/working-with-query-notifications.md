@@ -2,7 +2,7 @@
 title: Working with query notifications
 description: Learn how query notifications allow applications to be notified when data has changed in the OLE DB Driver for SQL Server.
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: 04/20/2021
 ms.service: sql
 ms.subservice: connectivity

@@ -4,7 +4,7 @@ description: "The LEAST logical function returns the minimum value from a list o
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: randolphwest
-ms.date: 03/06/2023
+ms.date: 04/04/2024
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "LEAST function"
 dev_langs:
   - "TSQL"
-monikerRange: ">=sql-server-ver16 || >=sql-server-linux-ver16 || = azuresqldb-current || = azuresqldb-mi-current || = azure-sqldw-latest||=fabric"
+monikerRange: ">=sql-server-ver16||>=sql-server-linux-ver16||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||=fabric"
 ---
 # Logical functions - LEAST (Transact-SQL)
 
@@ -71,7 +71,7 @@ For example, **varchar(max)** can support up to 8,000 characters if using a sing
 
 ## Examples
 
-### A. Return maximum value from a list of constants
+### A. Return minimum value from a list of constants
 
 The following example returns the minimum value from the list of constants that is provided.
 
@@ -82,7 +82,7 @@ SELECT LEAST('6.62', 3.1415, N'7') AS LeastVal;
 GO
 ```
 
-[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
+[!INCLUDE [ssResult](../../includes/ssresult-md.md)]
 
 ```output
 LeastVal
@@ -101,7 +101,7 @@ SELECT LEAST('Glacier', N'Joshua Tree', 'Mount Rainier') AS LeastString;
 GO
 ```
 
-[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
+[!INCLUDE [ssResult](../../includes/ssresult-md.md)]
 
 ```output
 LeastString
@@ -130,7 +130,7 @@ WHERE LEAST(P.SellStartDate, P.DiscontinuedDate, PM.ModifiedDate) >= '2007-01-01
 ORDER BY P.Name;
 ```
 
-[!INCLUDE[ssResult](../../includes/ssresult-md.md)] `EarliestDate` chooses the least date value of the three values, ignoring `NULL`.
+[!INCLUDE [ssResult](../../includes/ssresult-md.md)] `EarliestDate` chooses the least date value of the three values, ignoring `NULL`.
 
 ```output
 Name                   SellStartDate           DiscontinuedDate    ModelModifiedDate       EarliestDate
@@ -168,7 +168,7 @@ WHERE Correlation < LEAST(@PredictionA, @PredictionB);
 GO
 ```
 
-[!INCLUDE[ssResult](../../includes/ssresult-md.md)] Only values less than 0.65 are displayed.
+[!INCLUDE [ssResult](../../includes/ssresult-md.md)] Only values less than 0.65 are displayed.
 
 ```output
 VarX       Correlation
@@ -204,7 +204,7 @@ FROM dbo.Studies;
 GO
 ```
 
-[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
+[!INCLUDE [ssResult](../../includes/ssresult-md.md)]
 
 ```output
 VarX       Correlation           LeastVar
@@ -216,7 +216,7 @@ Var3       0.610                 0.590
 (3 rows affected)
 ```
 
-## Next steps
+## Related content
 
 - [GREATEST (Transact-SQL)](../../t-sql/functions/logical-functions-greatest-transact-sql.md)
 - [MAX (Transact-SQL)](../../t-sql/functions/max-transact-sql.md)

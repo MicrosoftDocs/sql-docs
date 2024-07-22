@@ -88,22 +88,29 @@ If you're deploying your SQL Server VM by using the Azure portal and want to use
 
 ## Azure Elastic SAN
 
-[Azure Elastic SAN](/azure/storage/elastic-san/elastic-san-introduction) delivers a massively scalable, cost-effective, highly performant, and reliable block storage solution that connects to a variety of Azure compute services over iSCSI protocol. Elastic SAN enables a seamless transition from an existing SAN storage estate to the cloud without having to refactor customer application architecture. This solution can achieve massive scale - up to millions of IOPS, double-digit GB/s of throughput, and low single-digit millisecond latencies with built-in resiliency to minimize downtime. This makes it a great fit for customers looking to consolidate storage, customers working with multiple compute services, or those who have workloads that require high throughput levels achieved by driving storage over network bandwidth.  
+[Azure Elastic SAN](/azure/storage/elastic-san/elastic-san-introduction) is a network-attached storage offering that provides customers a flexible and scalable solution with the potential to reduce cost through storage consolidation. Azure Elastic SAN delivers a cost-effective, performant, and reliable block storage solution that connects to a variety of Azure compute services over iSCSI protocol. Elastic SAN enables a seamless transition from an existing SAN storage estate to the cloud without having to refactor customer application architecture. 
 
-> [!NOTE]
-> - VM sizing with Elastic SAN should accommodate production (VM to VM) network throughput requirements along with storage throughput. 
+This solution can scale up to millions of IOPS, double-digit GB/s of throughput, and low single-digit millisecond latencies, with built-in resiliency to minimize downtime. Use Azure Elastic SAN if you need to consolidate storage, work with multiple compute services, or have workloads that require high throughput levels when driving storage over network bandwidth. However, since achieving desired IOPS/throughput for SQL Server workloads often requires overprovisioning capacity, _it's not typically appropriate for single SQL Server workloads_. Combining other low-performance workloads with SQL Server might be necessary to attain the most cost-effective solution. 
+
+When considering VM sizing and performance for Azure Elastic SAN, it's important to understand that storage communication occurs over the network. For example, the VM size E4d_v5 does not support Azure Premium Storage but works well with Azure Elastic SAN as it supports up to 12,500-Mbps network throughput. When using Azure Elastic SAN with this VM size, you must ensure the network and storage throughput requirements for your workload fall under the 12,500-Mbps network throughput limit. 
+
+Determine your network and storage requirements before deploying your SQL Server VM with an Azure Elastic SAN, and then carefully monitor network and storage utilization to confirm the chosen VM can accommodate the workload. To learn more, review [VM performance with Elastic SAN volumes](/azure/storage/elastic-san/elastic-san-performance) and [Elastic SAN metrics](/azure/storage/elastic-san/elastic-san-metrics). 
+
+> [!CAUTION]
+> - VM sizing with Elastic SAN must accommodate production (VM to VM) network throughput requirements in addition to storage throughput. When using Elastic SAN, VM sizes that optimize for IO throughput might not be as cost-effective as VM sizes that optimize for network bandwidth. 
+> - Azure Elastic SAN does not currently support Windows Server Failover Clusters so SQL Server failover cluster instances (FCIs) are unsupported. 
 
 Consider placing SQL Server workloads on Elastic SAN for better cost efficiency because: 
 
-- **Storage consolidation and dynamic performance sharing**: Normally for SQL Server on Azure VM workloads, disk storage is provisioned on a per VM basis based on customer’s capacity and peak performance requirements for that VM. This overprovisioned performance is available when needed but the unused performance cannot be shared with workloads on other VMs. Elastic SAN, similar to on-premises SAN, allows consolidating storage needs of multiple SQL and non-SQL workloads to achieve better cost efficiency, with the ability to dynamically share provisioned performance across the volumes provisioned to these different workloads based on IO demands. For example, in East US, if you have 10 workloads that require 2 TiB capacity and 10K IOPS each, but collectively they don’t need more than 60K IOPS at any point in time. You can configure an Elastic SAN with 12 base units (1 base unit = $0.08 per GiB/month) that will give you 12 TiB capacity and the needed 60K IOPS, and 8 capacity-only units (1 capacity-only unit = $0.06 per GiB/month) that will give you the remaining 8 TiB capacity at a cheaper price. This optimal storage configuration provides better cost efficiency while providing the necessary performance (10K IOPS) to each of these workloads. For more information on Elastic SAN base and capacity-only provisioning units, please visit [Planning for an Azure Elastic SAN](/azure/storage/elastic-san/elastic-san-planning#storage-and-performance)  and for pricing, visit [Azure Elastic SAN - Pricing](https://azure.microsoft.com/pricing/details/elastic-san/).
-- **To drive higher storage throughput**: SQL Server on Azure VM deployments occasionally require overprovisioning a VM due disk throughput limits for that VM. You can avoid this with Elastic SAN, since you drive higher storage throughput over compute network bandwidth with the iSCSI protocol. For example, a Standard_E32bds_v5 (SCSI) VM is capped at 88,000 IOPS and 2,500 MBps for disk/storage throughput, but it can achieve up to a maximum of 16,000 MBps network throughput. If the storage throughput requirement for your workload is greater than 2,500 MBps, you won't have to upgrade the VM a higher SKU since it can now support up to 16,000 MBps by using Elastic SAN. 
+- **Storage consolidation and dynamic performance sharing**: Normally for SQL Server on Azure VM workloads, disk storage is provisioned on a per VM basis based on your capacity and peak performance requirements for that VM. This overprovisioned performance is available when needed but the unused performance can't be shared with workloads on other VMs. Elastic SAN, similar to on-premises SAN, allows consolidating storage needs of multiple SQL and non-SQL workloads to achieve better cost efficiency, with the ability to dynamically share provisioned performance across the volumes provisioned to these different workloads based on IO demands. For example, in the East US region, say you have 10 workloads that require 2-TiB capacity and 10K IOPS each, but collectively they don't need more than 60,000 IOPS at any point in time. You can configure an Elastic SAN with 12 base units (1 base unit = $0.08 per GiB/month) that will give you 12 TiB capacity and the needed 60K IOPS, and 8 capacity-only units (1 capacity-only unit = $0.06 per GiB/month), which gives you the remaining 8-TiB capacity at a lower cost. This optimal storage configuration provides better cost efficiency while providing the necessary performance (10K IOPS) to each of these workloads. For more information on Elastic SAN base and capacity-only provisioning units, see [Planning for an Azure Elastic SAN](/azure/storage/elastic-san/elastic-san-planning#storage-and-performance) and for pricing, visit [Azure Elastic SAN - Pricing](https://azure.microsoft.com/pricing/details/elastic-san/).
+- **To drive higher storage throughput**: SQL Server on Azure VM deployments occasionally require overprovisioning a VM due disk throughput limits for that VM. You can avoid this with Elastic SAN, since you drive higher storage throughput over compute network bandwidth with the iSCSI protocol. For example, a Standard_E32bds_v5 (SCSI) VM is capped at 88,000 IOPS and 2,500 MBps for disk/storage throughput, but it can achieve up to a maximum of 16,000-MBps network throughput. If the storage throughput requirement for your workload is greater than 2,500 MBps, you won't have to upgrade the VM a higher SKU since it can now support up to 16,000 MBps by using Elastic SAN. 
 
 
 ## Premium SSD
 
 Use Premium SSDs for data and log files for production SQL Server workloads. Premium SSD IOPS and bandwidth vary based on the [disk size and type](/azure/virtual-machines/disks-types).
 
-For production workloads, use the P30 and/or P40 disks for SQL Server data files to ensure caching support and use the P30 up to P80 for SQL Server transaction log files.  For the best total cost of ownership, start with P30s (5000 IOPS/200 MBPS) for data and log files and only choose higher capacities when you need to control the VM disk count. For dev/test or small systems you can choose to use sizes smaller than P30 as these do support caching, but they don't offer reserved pricing.
+For production workloads, use the P30 and/or P40 disks for SQL Server data files to ensure caching support and use the P30 up to P80 for SQL Server transaction log files. For the best total cost of ownership, start with P30s (5000 IOPS/200 MBps) for data and log files and only choose higher capacities when you need to control the VM disk count. For dev/test or small systems you can choose to use sizes smaller than P30 as these do support caching, but they don't offer reserved pricing.
 
 For OLTP workloads, match the target IOPS per disk (or storage pool) with your performance requirements using workloads at peak times and the `Disk Reads/sec` + `Disk Writes/sec` performance counters. For data warehouse and reporting workloads, match the target throughput using workloads at peak times and the `Disk Read Bytes/sec` + `Disk Write Bytes/sec`.
 
@@ -176,7 +183,7 @@ Only certain VMs support both premium storage and premium storage caching (which
 
 :::image type="content" source="./media/performance-guidelines-best-practices/m-series-table-premium-support.png" alt-text="Screenshot showing M-Series Premium Storage support.":::
 
-The limits of the cache vary based on the VM size. For example, the Standard_M8ms VM supports 10000 cached disk IOPS and 1000-MBps cached disk throughput with a total cache size of 793 GiB. Similarly, the Standard_M32ts VM supports 40000 cached disk IOPS and 400-MBps cached disk throughput with a total cache size of 3174 GiB.
+The limits of the cache vary based on the VM size. For example, the Standard_M8ms VM supports 10000 cached disk IOPS and 1000-MBps cached disk throughput with a total cache size of 793 GiB. Similarly, the Standard_M32ts VM supports 40000 cached disk IOPS and 400-MBps cached disk throughput with a total cache size of 3,174 GiB.
 
 :::image type="content" source="./media/performance-guidelines-best-practices/m-series-table-cached-temp.png" alt-text="Screenshot showing M-series cached disk throughput documentation." lightbox="./media/performance-guidelines-best-practices/m-series-table-cached-temp.png":::
 
@@ -202,7 +209,7 @@ To learn more, see [Disk caching](/azure/virtual-machines/premium-storage-perfor
 
 ## Disk striping
 
-Analyze the throughput and bandwidth required for your SQL data files to determine the number of data disks, including the log file and `tempdb`. Throughput and bandwidth limits vary by VM size. To learn more, see [VM Size](/azure/virtual-machines/sizes)
+Analyze the throughput and bandwidth required for your SQL data files to determine the number of data disks, including the log file and `tempdb`. Throughput and bandwidth limits vary by VM size. For more information, see [VM sizes](/azure/virtual-machines/sizes).
 
 Add more data disks and use disk striping for more throughput. For example, an application that needs 12,000 IOPS and 180-MB/s throughput can use three striped P30 disks to deliver 15,000 IOPS and 600-MB/s throughput.
 
@@ -269,6 +276,15 @@ There are specific Azure Monitor metrics that are invaluable for discovering cap
 
 > [!NOTE]  
 > Azure Monitor doesn't currently offer disk-level metrics for the ephemeral temp drive `(D:\)`. VM Cached IOPS Consumed Percentage and VM Cached Bandwidth Consumed Percentage will reflect IOPS and throughput from both the ephemeral temp drive `(D:\)` and host caching together.
+
+## Monitor transaction log growth
+
+Since a full transaction log can lead to performance issues and outages, it's important to monitor the available space in your transaction log, as well as the utilized disk space of the drive that holds your transaction log. Address transaction log issues before they impact your workload. 
+
+Review [Troubleshoot a full transaction log](/sql/relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002) if your log becomes full. 
+
+If you need to extend your disk, you can do so on the [Storage pane](storage-configuration.md#modify-existing-drives) of the [SQL virtual machines resource](manage-sql-vm-portal.md) if you deployed a SQL Server image from Azure Marketplace, or on the [Disks pane](/azure/virtual-machines/windows/expand-os-disk#expand-the-volume-in-the-operating-system) for your Azure virtual machine and self-installed SQL Server. 
+
 
 ## Next steps
 

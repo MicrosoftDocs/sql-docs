@@ -9,7 +9,7 @@ ms.date: 07/12/2023
 ms.service: sql-managed-instance
 ms.subservice: backup-restore
 ms.topic: conceptual
-ms.custom: references_regions, azure-sql-split
+ms.custom: references_regions, azure-sql-split, build-2024
 monikerRange: "= azuresql || = azuresql-mi"
 ---
 # Automated backups in Azure SQL Managed Instance
@@ -104,23 +104,24 @@ This table summarizes the capabilities and features of [point-in-time restore](r
 | Backup properties | PITR | Geo-restore | LTR |
 |---|---|---|---|
 | **Types of SQL backup** | Full, differential, and transaction log backups. | Replicated copies of PITR backups. | Full backups only. |
-| **Recovery point objective (RPO)** | Approximately 10 minutes, based on compute size and amount of database activity. | Up to 1 hour, based on geo-replication. <sup>1<sup>  | One week (or user's policy). |
+| **Recovery point objective (RPO)** | Approximately 10 minutes, based on compute size and amount of database activity. | Up to 1 hour, based on geo-replication. <sup>1</sup>  | One week (or user's policy). |
 | **Recovery time objective (RTO)** | Restore usually takes less than 12 hours but could take longer, depending on size and activity. See [Recovery](recovery-using-backups.md#recovery-time). | Restore usually takes less than 12 hours but could take longer, depending on size and activity. See [Recovery](recovery-using-backups.md#recovery-time). | Restore usually takes less than 12 hours but could take longer, depending on size and activity. See [Recovery](recovery-using-backups.md#recovery-time). |
-| **Retention** | 1 to 35 days. | Enabled by default, same as source. <sup>2<sup> | Not enabled by default. Retention is up to 10 years. |
+| **Retention** | 1 to 35 days. | Enabled by default, same as source. <sup>2</sup> | Not enabled by default. Retention is up to 10 years. |
 | **Azure storage**  | Geo-redundant by default. You can optionally configure zone-redundant or locally redundant storage. | Available when PITR backup storage redundancy is set to geo-redundant. Not available when PITR backup storage is zone-redundant or locally redundant. | Geo-redundant by default. You can configure zone-redundant or locally redundant storage. |
 | **Configure backups as [immutable](/azure/storage/blobs/immutable-storage-overview)** | Not supported | Not supported | Not supported | 
+| **Update policy**<sup>3</sup> | Must match, or upgrade | Must match, or upgrade | Must match, or upgrade | 
 | **Restoring a new database in the same region** | Supported | Supported | Supported |
 | **Restoring a new database in another region** | Not supported | Supported in any Azure region | Supported in any Azure region |
-| **Restoring a new database in another subscription** | Supported  | Not supported <sup>3<sup> | Not supported <sup>3<sup> |
+| **Restoring a new database in another subscription** | Supported  | Not supported <sup>4</sup> | Not supported <sup>4</sup> |
 | **Restoring via Azure portal**|Yes|Yes|Yes|
 | **Restoring via PowerShell** |Yes|Yes|Yes|
 | **Restoring via Azure CLI** |Yes|Yes|Yes|
 
-<sup>1<sup> For business-critical applications that require large databases and must ensure business continuity, see [failover groups](failover-group-sql-mi.md).
+<sup>1</sup> For business-critical applications that require large databases and must ensure business continuity, see [failover groups](failover-group-sql-mi.md).   
+<sup>2</sup> All PITR backups are stored on geo-redundant storage by default, meaning geo-restore is enabled by default.   
+<sup>3</sup> Database backups taken from instances configured with the SQL Server 2022 [update policy](update-policy.md) can be restored to instances configured with either the SQL Server 2022 or Always-up-to-date update policy. Database backups taken from instances configured with the Always-up-to-date update policy can only be restored to instances also configured with the Always-up-to-date update policy.   
+<sup>4</sup> The workaround is to restore to a new server and use Resource Move to move the server to another subscription.   
 
-<sup>2<sup> All PITR backups are stored on geo-redundant storage by default, meaning geo-restore is enabled by default.
-
-<sup>3<sup> The workaround is to restore to a new server and use Resource Move to move the server to another subscription.
 
 ## Restore a database from backup
 

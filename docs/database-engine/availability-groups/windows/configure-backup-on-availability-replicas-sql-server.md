@@ -27,7 +27,7 @@ helpviewer_keywords:
  You must be connected to the server instance that hosts the primary replica in SSMS. The secondary replica must be healthy, which includes being connected to the current primary replica and in the secondary role.
  
    > [!NOTE]
-   > The secondary replica does not need to be readable to offload backups to it. Backups will still succeed on the secondary replica even if `Readable Secondary` is set to `no`. 
+   > The secondary replica does not need to be readable to offload backups to it. Backups will still succeed on the secondary replica even if `Readable Secondary` is set to `no`, with the exception of [managed backups](../../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md#Prereqs). 
   
   
 ##  <a name="Permissions"></a> Permissions  
@@ -169,7 +169,7 @@ BACKUP DATABASE @DBNAME TO DISK = '<path to backup file>'
  Scripting a backup job with this logic enables you to schedule the job to run on every availability replica on the same schedule. Each of these jobs looks at the same data to determine which job should run, so only one of the scheduled job actually proceeds to the backup stage.  In the event of a failover, none of the scripts or jobs needs to be modified. Also, if you reconfigure an availability group to add an availability replica, managing the backup job requires simply copying or scheduling the backup job. If you remove an availability replica, simply delete the backup job from the server instance that hosted that replica.  
   
 > [!TIP]  
->  If you use the[Maintenance Plan Wizard](../../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md)to create a given backup job, the job will automatically include the scripting logic that calls and checks the **sys.fn_hadr_backup_is_preferred_replica** function. However, the backup job will not return the "This is not the preferred replica..." message.Be sure to create the job(s) for each availability database on every server instance that hosts an availability replica for the availability group.  
+>  If you use the [Maintenance Plan Wizard](../../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md) to create a given backup job, the job will automatically include the scripting logic that calls and checks the **sys.fn_hadr_backup_is_preferred_replica** function. However, the backup job will not return the "This is not the preferred replica..." message.Be sure to create the job(s) for each availability database on every server instance that hosts an availability replica for the availability group.  
   
 ##  <a name="ForInfoAboutBuPref"></a> To Obtain Information About Backup Preference Settings  
  The following are useful for obtaining information that is relevant for backup on secondary.  

@@ -4,7 +4,7 @@ description: ALTER TABLE modifies a table definition by altering, adding, or dro
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 12/13/2023
+ms.date: 07/05/2024
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -66,9 +66,14 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 Modifies a table definition by altering, adding, or dropping columns and constraints. ALTER TABLE also reassigns and rebuilds partitions, or disables and enables constraints and triggers.
 
+::: moniker range="=fabric"
+> [!NOTE]
+> Currently, `ALTER TABLE` in Fabric Warehouse is only supported for constraints and adding nullable columns. See [Syntax for Warehouse in Fabric](#syntax-for-warehouse-in-fabric).
+::: moniker-end
+
 > [!IMPORTANT]  
 > The syntax for ALTER TABLE is different for disk-based tables and memory-optimized tables. Use the following links to take you directly to the appropriate syntax block for your table types and to the appropriate syntax examples:
->  
+> 
 > - Disk-based tables:
 >  
 > - [Syntax](#syntax-for-disk-based-tables)
@@ -418,18 +423,38 @@ ALTER TABLE { database_name.schema_name.source_table_name | schema_name.source_t
 
 [!INCLUDE[synapse-analytics-od-supported-tables](../../includes/synapse-analytics-od-supported-tables.md)]
 
-## Syntax for [!INCLUDE [fabricdw](../../includes/fabric-dw.md)] in [!INCLUDE [fabric](../../includes/fabric.md)]
+## Syntax for Warehouse in Fabric
 
 ```syntaxsql
--- Syntax for Warehouse in Microsoft Fabric
+-- Syntax for Warehouse om Microsoft Fabric:
 
-ALTER TABLE { database_name.schema_name.source_table_name | schema_name.source_table_name | source_table_name }
+ALTER TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name }
 {
-    ADD { <column_constraint> FOR column_name} [ ,...n ]
-    | DROP { [CONSTRAINT] constraint_name } [ ,...n ]
-    
+  ADD  { column_name <data_type> [COLLATE collation_name] [ <column_options> ] } [ ,...n ]
+| ADD { <column_constraint> FOR column_name} [ ,...n ]
+| DROP { [CONSTRAINT] constraint_name } [ ,...n ]
 }
-[;]
+[ ; ]
+
+<column_options> ::=
+[ NULL ] -- default is NULL
+
+<data type> ::=
+datetime2 ( n )
+| date
+| time ( n )
+| float [ ( n ) ]
+| real [ ( n ) ]
+| decimal [ ( precision [ , scale ] ) ]
+| numeric [ ( precision [ , scale ] ) ]
+| bigint
+| int
+| smallint
+| bit
+| varchar [ ( n ) ]
+| char [ ( n ) ]
+| varbinary [ ( n ) ]
+| uniqueidentifier
 
 <column_constraint>::=
     [ CONSTRAINT constraint_name ]
@@ -2218,15 +2243,12 @@ After the split, the `OrdersHistory` table has the following partitions:
 - Partition 2 (empty): '2004-01-01' < '2005-01-01'
 - Partition 3 (empty): '2005-01-01' <= OrderDate
 
-## See also
+## Related content
 
 - [sys.tables](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md)
 - [sp_rename](../../relational-databases/system-stored-procedures/sp-rename-transact-sql.md)
 - [sp_help](../../relational-databases/system-stored-procedures/sp-help-transact-sql.md)
 - [EVENTDATA](../../t-sql/functions/eventdata-transact-sql.md)
-
-## Next steps
-
 - [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md)
 - [DROP TABLE](../../t-sql/statements/drop-table-transact-sql.md)
 - [ALTER TABLE column_constraint](alter-table-column-constraint-transact-sql.md)

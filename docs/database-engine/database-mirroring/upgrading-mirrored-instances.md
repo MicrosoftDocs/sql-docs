@@ -132,7 +132,7 @@ helpviewer_keywords:
   
     -   In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: Change the **Operating mode** option to **High performance (asynchronous)** by using the [Mirroring Page](../../relational-databases/databases/database-properties-mirroring-page.md) of the **Database Properties** dialog box.  
   
-    -   In [!INCLUDE[tsql](../../includes/tsql-md.md)]: Use [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md)to set transaction safety to OFF.  
+    -   In [!INCLUDE[tsql](../../includes/tsql-md.md)]: Use [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md) to set transaction safety to OFF.  
   
 ### To add a witness back into a mirroring session  
   

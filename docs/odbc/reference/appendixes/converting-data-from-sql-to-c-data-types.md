@@ -2,7 +2,7 @@
 title: "Converting Data from SQL to C Data Types"
 description: "Converting Data from SQL to C Data Types"
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: "01/19/2017"
 ms.service: sql
 ms.subservice: connectivity
@@ -31,7 +31,7 @@ When an application calls **SQLFetch**, **SQLFetchScroll**, or **SQLGetData**, t
   
  If the *TargetType* argument in **SQLBindCol** or **SQLGetData** contains an identifier for an ODBC C data type not shown in the table for a given ODBC SQL data type, **SQLFetch**, **SQLFetchScroll**, or **SQLGetData** returns SQLSTATE 07006 (Restricted data type attribute violation). If the *TargetType* argument contains an identifier that specifies a conversion from a driver-specific SQL data type to an ODBC C data type and this conversion is not supported by the driver, **SQLFetch**, **SQLFetchScroll**, or **SQLGetData** returns SQLSTATE HYC00 (Optional feature not implemented).  
   
- Although it is not shown in the tables, the driver returns SQL_NULL_DATA in the buffer specified by the *StrLen_or_IndPtr* argument when the SQL data value is NULL. For an explanation of the use of *StrLen_or_IndPtr* when multiple calls are made to retrieve data, see the [SQLGetData](../../../odbc/reference/syntax/sqlgetdata-function.md)function description. When SQL data is converted to character C data, the character count returned in \**StrLen_or_IndPtr* does not include the null-termination byte. If *TargetValuePtr* is a null pointer, **SQLGetData** returns SQLSTATE HY009 (Invalid use of null pointer); in **SQLBindCol**, this unbinds the column.  
+ Although it is not shown in the tables, the driver returns SQL_NULL_DATA in the buffer specified by the *StrLen_or_IndPtr* argument when the SQL data value is NULL. For an explanation of the use of *StrLen_or_IndPtr* when multiple calls are made to retrieve data, see the [SQLGetData](../../../odbc/reference/syntax/sqlgetdata-function.md) function description. When SQL data is converted to character C data, the character count returned in \**StrLen_or_IndPtr* does not include the null-termination byte. If *TargetValuePtr* is a null pointer, **SQLGetData** returns SQLSTATE HY009 (Invalid use of null pointer); in **SQLBindCol**, this unbinds the column.  
   
  The following terms and conventions are used in the tables:  
   

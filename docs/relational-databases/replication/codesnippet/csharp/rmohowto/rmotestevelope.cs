@@ -291,7 +291,7 @@ namespace Microsoft.Samples.SqlServer.Replication.Rmo
 			}
 			catch (Exception ex)
 			{
-				Console.WriteLine("The following error occured: " + ex.ToString());
+				Console.WriteLine("The following error occurred: " + ex.ToString());
 			}
 			finally
 			{
@@ -361,7 +361,7 @@ namespace Microsoft.Samples.SqlServer.Replication.Rmo
 			catch (Exception ex)
 			{
 				// Implement appropriate error handling here.
-				throw new ApplicationException("An error occured when installing distribution and publishing.", ex);
+				throw new ApplicationException("An error occurred when installing distribution and publishing.", ex);
 			}
 			finally
 			{
@@ -428,7 +428,7 @@ namespace Microsoft.Samples.SqlServer.Replication.Rmo
 			catch (Exception ex)
 			{
 				// Implement the appropriate error handling here. 
-				throw new ApplicationException("An error occured when changing Distributor " +
+				throw new ApplicationException("An error occurred when changing Distributor " +
 					" or distribution database properties.", ex);
 			}
 			finally
@@ -3311,7 +3311,7 @@ namespace Microsoft.Samples.SqlServer.Replication.Rmo
 			{
 				// Implement the appropriate error handling here. 
 				throw new ApplicationException(String.Format(
-					"An error occured when changing agent login " +
+					"An error occurred when changing agent login " +
 					" credentials on {0}.",serverName), ex);
 			}
 			finally

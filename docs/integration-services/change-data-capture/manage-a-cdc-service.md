@@ -12,6 +12,8 @@ f1_keywords:
 ---
 # Manage a CDC Service
 
+[!INCLUDE [oracle-cdc-retirement](../includes/attunity-oracle-cdc-retirement.md)]
+
   You can use the CDC Designer Console to view the services you created with the CDC Service Configuration Console and manage all of the instances in the Oracle CDC Service.  
   
  Click the name of the service in the left pane to display information about the service and to manage it.  

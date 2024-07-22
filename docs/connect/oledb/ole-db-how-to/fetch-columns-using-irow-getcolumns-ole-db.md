@@ -2,7 +2,7 @@
 title: "Fetch columns using IRow::GetColumns (OLE DB driver)"
 description: "Learn to fetch columns using the IRow::GetColumns method in OLE DB Driver for SQL Server. This example gets one column at a time from a row."
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: "06/14/2018"
 ms.service: sql
 ms.subservice: connectivity
@@ -319,7 +319,7 @@ HRESULT GetColumns(IRow* pUnkRow, ULONG iStart, ULONG iEnd) {
   
    hr = pUnkRow->GetColumns(cUserCols, prgColumns);   // cUserCols = 1  
    if (FAILED(hr))  
-      printf("Error occured\n");  
+      printf("Error occurred\n");  
   
    // Show data.  
    PrintData(cUserCols, iStart, prgInfo, prgColumns);  
@@ -376,7 +376,7 @@ HRESULT GetColumnSize(IRow* pUnkRow, ULONG iCol) {
    // We know which column to get. The column.columnid gives the column no.  
    hr = pUnkRow->GetColumns(1, &column);   
    if (FAILED(hr))  
-      printf("Errors occured\n");  
+      printf("Errors occurred\n");  
   
    // Show data  
    PrintData(1, iCol, prgInfo, &column);  

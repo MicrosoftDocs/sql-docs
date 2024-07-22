@@ -174,7 +174,7 @@ There's no limit to the number of startup procedures you can have, but each star
 > Don't return any result sets from a procedure that's executed automatically. Because the procedure is being executed by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instead of an application or user, there's nowhere for result sets to go.  
   
 > [!NOTE]
-> Azure SQL Database is designed to isolate features from dependencies on the `master` database. As such, [!INCLUDE[tsql](../../includes/tsql-md.md)] statements that configure server-level options aren't available in Azure SQL. You can often find appropriate alternatives from other Azure services such as [Elastic jobs (preview)](/azure/azure-sql/database/elastic-jobs-overview) or [Azure Automation](/azure/azure-sql/database/automation-manage).  
+> Azure SQL Database is designed to isolate features from dependencies on the `master` database. As such, [!INCLUDE[tsql](../../includes/tsql-md.md)] statements that configure server-level options aren't available in Azure SQL. You can often find appropriate alternatives from other Azure services such as [Elastic jobs](/azure/azure-sql/database/elastic-jobs-overview) or [Azure Automation](/azure/azure-sql/database/automation-manage).  
   
 ### Set a procedure to execute automatically at startup
   

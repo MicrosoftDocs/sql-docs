@@ -73,26 +73,27 @@ In most cases, you can use the New Availability Group Wizard to complete all of 
   
 5.  On the **Specify Availability Group Options** page, enter the name of the new availability group in the **Availability group name** field. This name must be a valid [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] identifier that is unique on the cluster and in your domain as a whole. The maximum length for an availability group name is 128 characters.
 
-6. Next, specify the cluster type. The possible cluster types depend on the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] version and operating system. Choose either **WSFC**, **EXTERNAL**, or **NONE**. For details see [Specify Availability Group Name Page](specify-availability-group-name-page.md)
+6. Next, specify the cluster type. The possible cluster types depend on the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] version and operating system. Choose either **WSFC**, **EXTERNAL**, or **NONE**. For details, review [Clusters](../../sql-server-business-continuity-dr.md#availability-group-cluster-types).
  
 6.  On the **Select Databases** page, the grid lists user databases on the connected server instance that are eligible to become the *availability databases*. Select one or more of the listed databases to participate in the new availability group. These databases will initially be the initial *primary databases*.  
   
-     For each listed database, the **Size** column displays the database size, if known. The **Status** column indicates whether a given database meets the [prerequisites](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)for availability databases. It the prerequisites are not met, a brief status description indicates the reason that the database is ineligible; for example, if it does not use the full recovery model. For more information, click the status description.  
+     For each listed database, the **Size** column displays the database size, if known. The **Status** column indicates whether a given database meets the [prerequisites](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md) for availability databases. It the prerequisites are not met, a brief status description indicates the reason that the database is ineligible; for example, if it does not use the full recovery model. For more information, click the status description.  
   
      If you change a database to make it eligible, click **Refresh** to update the databases grid.  
   
      If the database contains a database master key, enter the password for the database master key in the **Password** column.  
   
-7.  On the **Specify Replicas** page, specify and configure one or more replicas for the new availability group. This page contains four tabs. The following table introduces these tabs. For more information, see the [Specify Replicas Page &#40;New Availability Group Wizard: Add Replica Wizard&#41;](../../../database-engine/availability-groups/windows/specify-replicas-page-new-availability-group-wizard-add-replica-wizard.md) topic.  
+7.  On the **Specify Replicas** page, specify and configure one or more replicas for the new availability group. The following table details the information in the tabs found on the **Specify Replicas** page: 
   
     |Tab|Brief Description|  
     |---------|-----------------------|  
-    |**Replicas**|Use this tab to specify each instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] that will host a secondary replica. Note that the server instance to which you are currently connected must host the primary replica.|  
-    |**Endpoints**|Use this tab to verify any existing database mirroring endpoints and also, if this endpoint is lacking on a server instance whose service accounts use Windows Authentication, to create the endpoint automatically.<br /><br /> Note: If any server instance is running under a non-domain user account, you need to do make a manual change to your server instance before you can proceed in the wizard. For more information, see [Prerequisites](#Prerequisites), earlier in this topic.|  
-    |**Backup Preferences**|Use this tab to specify your backup preference for the availability group as a whole and your backup priorities for the individual availability replicas.|  
-    |**Listener**|Use this tab to create an availability group listener. By default, the wizard does not create a listener.|  
+    |**Replicas**|Use this tab to specify each instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] that will host a secondary replica, as well as additional settings such as [required_synchronized_secondaries_to_commit](../../sql-server-business-continuity-dr.md#required_synchronized_secondaries_to_commit). Note that the server instance to which you are currently connected must host the primary replica.|  
+    |**Endpoints**|Use this tab to verify any existing [database mirroring endpoints](specify-endpoint-url-adding-or-modifying-availability-replica.md) and also, if this endpoint is lacking on a server instance whose service accounts use Windows Authentication, to create the endpoint automatically.<br /><br /> Note: If any server instance is running under a non-domain user account, you need to do make a manual change to your server instance before you can proceed in the wizard. For more information, see [Prerequisites](#Prerequisites), earlier in this topic.|  
+    |**Backup Preferences**|Use this tab to specify your [backup preference](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md) for the availability group as a whole and your backup priorities for the individual availability replicas.|  
+    |**Listener**|Use this tab to create an [availability group listener](create-or-configure-an-availability-group-listener-sql-server.md). By default, the wizard does not create a listener.|
+    |**Read-only routing** | Use this tab to configure [read-only routing](configure-read-only-routing-for-an-availability-group-sql-server.md) for the replicas within the availability group. By default, no read-only routing is configured.|
   
-8.  On the **Select Initial Data Synchronization** page, choose how you want your new secondary databases to be created and joined to the availability group. Choose one of the following options:  
+9.  On the **Select Initial Data Synchronization** page, choose how you want your new secondary databases to be created and joined to the availability group. Choose one of the following options:  
   
     -   **Automatic seeding**  
   
@@ -114,18 +115,18 @@ In most cases, you can use the New Availability Group Wizard to complete all of 
   
          Select this option if you want to use your own database and log backups of your primary databases. For more information, see [Start Data Movement on an Always On Secondary Database &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md).  
   
-9. The **Validation** page verifies whether the values you specified in this Wizard meet the requirements of the New Availability Group Wizard. To make a change, click **Previous** to return to an earlier wizard page to change one or more values. The click **Next** to return to the **Validation** page, and click **Re-run Validation**.  
+10. The **Validation** page verifies whether the values you specified in this Wizard meet the requirements of the New Availability Group Wizard. To make a change, click **Previous** to return to an earlier wizard page to change one or more values. The click **Next** to return to the **Validation** page, and click **Re-run Validation**.  
   
-10. On the **Summary** page, review your choices for the new availability group. To make a change, click **Previous** to return to the relevant page. After making the change, click **Next** to return to the **Summary** page.  
+11. On the **Summary** page, review your choices for the new availability group. To make a change, click **Previous** to return to the relevant page. After making the change, click **Next** to return to the **Summary** page.  
   
     > [!IMPORTANT]  
     >  When the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] service account of a server instance that will host a new availability replica does not already exist as a login, the New Availability Group Wizard needs to create the login. On the **Summary** page, the wizard displays the information for the login that is to be created. If you click **Finish**, the wizard creates this login for the SQL Server service account and grants the login CONNECT permission.  
   
      If you are satisfied with your selections, optionally click **Script** to create a script of the steps the wizard will execute. Then, to create and configure the new availability group, click **Finish**.  
   
-11. The **Progress** page displays the progress of the steps for creating the availability group (configuring endpoints, creating the availability group, and joining the secondary replica to the group).  
+12. The **Progress** page displays the progress of the steps for creating the availability group (configuring endpoints, creating the availability group, and joining the secondary replica to the group).  
   
-12. When these steps complete, the **Results** page displays the result of each step. If all these steps succeed, the new availability group is completely configured. If any of the steps result in an error, you might need to manually complete the configuration or use a wizard for the failed step. For information about the cause of a given error, click the associated "Error" link in the **Result** column.  
+13. When these steps complete, the **Results** page displays the result of each step. If all these steps succeed, the new availability group is completely configured. If any of the steps result in an error, you might need to manually complete the configuration or use a wizard for the failed step. For information about the cause of a given error, click the associated "Error" link in the **Result** column.  
   
      When the wizard completes, click **Close** to exit.  
   

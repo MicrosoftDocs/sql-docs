@@ -19,25 +19,25 @@ The CSV rendering extension uses a string character delimiter to separate fields
 
 If you want to work with data related to charts, data bars, sparklines, gauges, and indicators in [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)], export the report to a CSV file, and then open the file in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel.
 
-See [Export Reports (Report Builder and SSRS)](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md) for details on how to export to CSV format.
+See [Export reports (Report Builder and SSRS)](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md) for details on how to export to CSV format.
 
 > [!NOTE]  
 > [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]
 
-## <a id="CSVRendering"></a> CSV Rendering
+## <a id="CSVRendering"></a> CSV rendering
 
 When rendered using the default settings, a CSV report has the following characteristics:
 
-- The default field delimiter string is a comma (,).
+- The default field delimiter string is a comma (`,`).
 
     > [!NOTE]  
-    >  You can change the field delimiter to any character that you want, including TAB, by changing the device information settings. For more information, see [CSV Device Information Settings](../../reporting-services/csv-device-information-settings.md).
+    >  You can change the field delimiter to any character that you want, including Tab, by changing the device information settings. For more information, see [CSV device information settings](../../reporting-services/csv-device-information-settings.md).
 
-- The record delimiter string is the carriage return and line feed (\<cr>\<lf>).
+- The record delimiter string is the carriage return and line feed (`<cr><lf>`).
 
-- The text qualifier string is a quotation mark (").
+- The text qualifier string is a quotation mark (`"`).
 
-     The CSV renderer does not add qualifiers around all text strings. Text qualifiers are added only when the value contains the delimiter character or when the value has a line break.
+     The CSV renderer doesn't add qualifiers around all text strings. Text qualifiers are added only when the value contains the delimiter character or when the value has a line break.
 
 - If the text contains an embedded delimiter string or qualifier string, the text qualifier is placed around the text, and the embedded qualifier strings are doubled.
 
@@ -65,19 +65,19 @@ The following table indicates the appearance of report items when rendered:
 
 | Item | Rendering behavior |
 | --- | --- |
-| Text box | Renders the contents of the text box. In default mode, items are formatted based on the item's formatting properties. In compliant mode, formatting can be changed by device information settings. For more information about CSV rendering modes, see below. |
-| Table | Renders by expanding the table and creating a row and column for each row and column at the lowest level of detail. Subtotal rows and columns do not have column or row headings. Drillthrough reports are not supported. |
-| Matrix | Renders by expanding the matrix and creating a row and column for each row and column at the lowest level of detail. Subtotal rows and columns do not have column or row headings. |
+| Text box | Renders the contents of the text box. In default mode, items are formatted based on the item's formatting properties. In compliant mode, device information settings can change formatting. For more information about CSV rendering modes, see later in this article. |
+| Table | Renders by expanding the table and creating a row and column for each row and column at the lowest level of detail. Subtotal rows and columns don't have column or row headings. Drillthrough reports aren't supported. |
+| Matrix | Renders by expanding the matrix and creating a row and column for each row and column at the lowest level of detail. Subtotal rows and columns don't have column or row headings. |
 | List | Renders a record for each detail row or instance in the list. |
 | Subreport | The parent item is repeated for each instance of the contents. |
 | Chart | Renders by creating a row for each chart value and member labels. Labels from series and categories in hierarchies are flattened and included in the row for a chart value. |
-| Data bar | Renders like a chart. Typically, a data bar does not include hierarchies or labels. |
-| Sparkline | Renders like a chart. Typically, a sparkline does not do not include hierarchies or labels. |
+| Data bar | Renders like a chart. Typically, a data bar doesn't include hierarchies or labels. |
+| Sparkline | Renders like a chart. Typically, a sparkline doesn't include hierarchies or labels. |
 | Gauge | Renders as a single record with the minimum and maximum values of the linear scale, start and end values of the range, and the value of the pointer. |
 | Indicator | Renders as a single record with the active state name, available states, and the data value. |
-| Map | Renders a row with the labels and values for each map member of a map layer.<br /><br />If the map has multiple layers the values in the rows varies depending on whether the map layers use the same or different map data regions. If multiple map layers use the same data region, the rows contain data from all layers. |
+| Map | Renders a row with the labels and values for each map member of a map layer.<br /><br />When the map has multiple layers, the values in the rows vary depending on whether the map layers use the same or different map data regions. If multiple map layers use the same data region, the rows contain data from all layers. |
 
-### Hierarchical and Grouped Data
+### Hierarchical and grouped data
 
 Hierarchical and grouped data must be flattened in order to be represented in the CSV format.
 
@@ -91,15 +91,15 @@ The rendering extension flattens the report into a tree structure that represent
 
 - Peer data regions are data regions or dynamic groups that share a common data region or dynamic ancestor. Peer data is identified by branching of the flattened tree.
 
-For more information, see [Tables, Matrices, and Lists (Report Builder and SSRS)](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md).
+For more information, see [Tables, matrices, and lists (Report Builder and SSRS)](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md).
 
-## <a id="RenderingModes"></a> Renderer Modes
+## <a id="RenderingModes"></a> Renderer modes
 
-The CSV rendering extension can operate in two modes: one is optimized for Excel and the other is optimized for third-party applications that require strict CSV compliance with the CSV specification in RFC 4180. Depending on which mode you use, peer data regions are handled differently.
+The CSV rendering extension can operate in two modes: one is optimized for Excel and the other is optimized for non-Microsoft applications that require strict CSV compliance with the CSV specification in RFC 4180. Depending on which mode you use, peer data regions are handled differently.
 
-### Default Mode
+### Default mode
 
-The default mode is optimized for Excel. When rendered in default mode, the report is rendered as a CSV file with multiple sections of CSV-rendered data. Each peer data region is delimited by an empty line. Peer data regions within the report body are rendered as separate blocks of data within the CSV file. The result is a CSV file in which:
+The default mode is optimized for Excel. When rendered in default mode, the report is rendered as a CSV file with multiple sections of CSV-rendered data. Each peer data region is empty line delimited. Peer data regions within the report body are rendered as separate blocks of data within the CSV file. The result is a CSV file in which:
 
 - Individual text boxes within the report body are rendered once as the first block of data within the CSV file.
 
@@ -111,9 +111,9 @@ The default mode is optimized for Excel. When rendered in default mode, the repo
 
 Numeric values are rendered in their formatted state. Excel can recognize formatted numeric values, such as currency, percentage and date, and format the cells appropriately when importing the CSV file.
 
-### Compliant Mode
+### Compliant mode
 
-Compliant mode is optimized for third-party applications.
+Compliant mode is optimized for non-Microsoft applications.
 
 #### Data Regions
 
@@ -125,7 +125,7 @@ Values are unformatted.
 
 ## <a id="Interactivity"></a> Interactivity
 
-Interactivity is not supported by either CSV formats generated by this renderer. The following interactive elements are not rendered:
+This renderer doesn't support interactivity in the generated CSV formats. The following interactive elements aren't rendered:
 
 - Hyperlinks
 
@@ -141,14 +141,14 @@ Interactivity is not supported by either CSV formats generated by this renderer.
 
 - Bookmarks
 
-## <a id="DeviceInfo"></a> Device Information Settings
+## <a id="DeviceInfo"></a> Device information settings
 
-You can change some default settings for this renderer, including which mode to render in, which characters to use as delimiters and which characters to use as the text qualifier default string, by changing the device information settings. For more information, see [CSV Device Information Settings](../../reporting-services/csv-device-information-settings.md).
+You can change some default settings for this renderer. These settings include which mode to render in, which characters to use as delimiters, and which characters to use as the text qualifier default string. You can change these settings by modifying the device information settings. For more information, see [CSV device information settings](../../reporting-services/csv-device-information-settings.md).
 
 ## See also
 
 - [Pagination in Reporting Services (Report Builder  and SSRS)](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)
-- [Rendering Behaviors (Report Builder  and SSRS)](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)
-- [Interactive Functionality for Different Report Rendering Extensions (Report Builder and SSRS)](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)
-- [Rendering Report Items (Report Builder and SSRS)](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)
-- [Tables, Matrices, and Lists (Report Builder and SSRS)](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)
+- [Renderer behaviors (Report Builder  and SSRS)](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)
+- [Interactive functionality for different report rendering extensions (Report Builder and SSRS)](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)
+- [Render report items (Report Builder and SSRS)](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)
+- [Tables, matrices, and lists (Report Builder and SSRS)](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)

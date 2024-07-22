@@ -4,7 +4,7 @@ titleSuffix: Azure SQL Database & SQL Managed Instance
 description: A detailed description of SQL monitoring data collected by database watcher
 author: dimitri-furman
 ms.author: dfurman
-ms.date: 03/21/2024
+ms.date: 07/18/2024
 ms.service: sql-db-mi
 ms.subservice: monitoring
 ms.topic: conceptual
@@ -139,13 +139,14 @@ This section describes the datasets available for each target type, including co
 | Replicas | `sqldb_database_replicas` | `00:00:10` | Each row represents a database replica, including replication metadata and statistics. Includes the primary replica and geo-replicas when collected on the primary, and secondary replicas when collected on a secondary. |
 | Resource utilization | `sqldb_database_resource_utilization` | `00:00:15` | Each row represents CPU, Data IO, Log IO, and other resource consumption statistics for a database in a time interval. |
 | Session statistics | `sqldb_database_session_stats` | `00:01:00` | Each row represents a summary of session statistics for a database, aggregated by non-additive session attributes such as login name, host name, application name, etc. |
+| SOS schedulers | `sqldb_database_sos_schedulers` | `00:01:00` | Each row represents a SOS scheduler and includes statistics for the scheduler, CPU node, and memory node. |
 | Storage IO | `sqldb_database_storage_io` | `00:00:10` | Each row represents a database file and includes cumulative IOPS, throughput, and latency statistics for the file. |
 | Storage utilization | `sqldb_database_storage_utilization` | `00:01:00` | Each row represents a database and includes its storage usage, including `tempdb`, Query Store, and Persistent Version Store. |
 | Table metadata | `sqldb_database_table_metadata` | `00:30:00` | Each row represents a table or an indexed view, and includes metadata such as row count, space usage, data compression, columns, and constraints.  |
 | Wait statistics | `sqldb_database_wait_stats` | `00:00:10` | Each row represents a wait type and includes cumulative wait statistics of the database engine instance. For databases in an elastic pool, only database-scoped wait statistics are collected. |
 
 > [!NOTE]
-> For databases in an elastic pool, the **SQL Database** datasets containing pool-level data are not collected. This includes the **Memory utilization**, **Out-of-memory events**, **Performance counters (common)**, and **Performance counters (detailed)** datasets. The **Wait statistics** dataset is collected but contains only database-scoped waits. This avoids collection of the same data from every database in the pool.
+> For databases in an elastic pool, the **SQL database** datasets containing pool-level data are not collected. This includes the **Memory utilization**, **Out-of-memory events**, **Performance counters (common)**, and **Performance counters (detailed)** datasets. The **Wait statistics** dataset is collected but contains only database-scoped waits. This avoids collection of the same data from every database in the pool.
 >
 > Pool-level data is collected in the **SQL elastic pool** datasets. For a given elastic pool, the **Performance counters (common)** and **Performance counters (detailed)** datasets contain pool-level metrics and certain database-level metrics such as **CPU**, **Data IO**, **Log write**, **Requests**, **Transactions**, etc.
 
@@ -159,6 +160,7 @@ This section describes the datasets available for each target type, including co
 | Performance counters (detailed) | `sqldb_elastic_pool_performance_counters_detailed` | `00:01:00` | Each row represents a performance counter of the database engine instance. This dataset includes counters that might be needed for detailed monitoring and troubleshooting. |
 | Properties | `sqldb_elastic_pool_properties` | `00:05:00` | Each row represents an elastic pool, and includes resource governance limits and other metadata for the elastic pool. |
 | Resource utilization | `sqldb_elastic_pool_resource_utilization` | `00:00:20` | Each row represents CPU, Data IO, Log IO, and other resource consumption statistics for an elastic pool in a time interval. |
+| SOS schedulers | `sqldb_elastic_pool_sos_schedulers` | `00:01:00` | Each row represents a SOS scheduler and includes statistics for the scheduler, CPU node, and memory node. |
 | Storage IO | `sqldb_elastic_pool_storage_io` | `00:00:10` | Each row represents a database file and includes cumulative IOPS, throughput, and latency statistics for the file. Files for all databases in the elastic pool are included. |
 | Storage utilization | `sqldb_elastic_pool_storage_utilization` | `00:01:00` | Each row represents an elastic pool and includes its storage usage statistics, including `tempdb`. |
 | Wait statistics | `sqldb_elastic_pool_wait_stats` | `00:00:10` | Each row represents a wait type and includes wait statistics of the database engine instance. |
@@ -187,6 +189,7 @@ This section describes the datasets available for each target type, including co
 | Query wait statistics | `sqlmi_query_wait_stats` | `00:15:00` | Each row represents a Query Store runtime interval and includes wait category statistics for a database. |
 | Resource utilization | `sqlmi_resource_utilization` | `00:00:20` | Each row represents CPU, Data IO, Log IO and other resource consumption statistics in a time interval. |
 | Session statistics | `sqlmi_session_stats` | `00:01:00` | Each row represents a summary of session statistics for a managed instance, aggregated by non-additive session attributes such as login name, host name, application name, etc. |
+| SOS schedulers | `sqlmi_sos_schedulers` | `00:01:00` | Each row represents a SOS scheduler and includes statistics for the scheduler, CPU node, and memory node. |
 | SQL Agent job history | `sqlmi_sqlagent_job_history` | `00:01:00` | Each row represents a SQL Agent job history entry. |
 | SQL Agent job state | `sqlmi_sqlagent_job_state` | `00:00:20` | Each row represents the state of a SQL Agent job at a point in time. |
 | Storage IO | `sqlmi_storage_io` | `00:00:10` | Each row represents a database file and includes cumulative IOPS, throughput, and latency statistics for the file. |
@@ -203,6 +206,9 @@ For each target type, datasets have common columns, as described in the followin
 
 | Column name | Description |
 |:--|:--|
+| `subscription_id` | The Azure subscription ID of the SQL database. |
+| `resource_group_name` | The resource group name of the SQL database. |
+| `resource_id` | The Azure resource ID of the SQL database. |
 | `sample_time_utc` | The time when the values in the row were observed, in UTC. |
 | `collection_time_utc` | The time when the row was collected by the watcher, in UTC. This column is present in datasets where collection time might be different from sample time. |
 | `replica_type` | One of: **Primary**, **HA secondary**, **Geo-replication forwarder**, **Named secondary**. |
@@ -217,6 +223,9 @@ For each target type, datasets have common columns, as described in the followin
 
 | Column name | Description |
 |:--|:--|
+| `subscription_id` | The Azure subscription ID of the SQL elastic pool. |
+| `resource_group_name` | The resource group name of the SQL elastic pool. |
+| `resource_id` | The Azure resource ID of the SQL elastic pool. |
 | `sample_time_utc` | The time when the values in the row were observed, in UTC. |
 | `collection_time_utc` | The time when the row was collected by the watcher, in UTC. This column is present in datasets where collection time might be different from sample time. |
 | `replica_type` | One of: **Primary**, **HA secondary**. |
@@ -232,6 +241,9 @@ For each target type, datasets have common columns, as described in the followin
 
 | Column name | Description |
 |:--|:--|
+| `subscription_id` | The Azure subscription ID of the SQL managed instance. |
+| `resource_group_name` | The resource group name of the SQL managed instance. |
+| `resource_id` | The Azure resource ID of the SQL managed instance. |
 | `sample_time_utc` | The time when the values in the row were observed, in UTC. |
 | `collection_time_utc` | The time when the row was collected by the watcher, in UTC. This column is present in datasets where collection time might be different from sample time. |
 | `replica_type` | One of: **Primary**, **HA secondary**, **Geo-replication forwarder**. |

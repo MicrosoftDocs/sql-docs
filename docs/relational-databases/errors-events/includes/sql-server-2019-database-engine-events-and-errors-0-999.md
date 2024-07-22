@@ -1,7 +1,7 @@
 ---
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 02/15/2024
+ms.date: 04/11/2024
 ms.topic: include
 ---
 | Error | Severity | Event logged | Description |
@@ -571,6 +571,8 @@ ms.topic: include
 | 893 | 10 | Yes | Failed to release latch. BUF address %p. Database ID %d. File ID %d. Page %S_PGID. |
 | 894 | 10 | No | Buffer Pool: Allocating %I64u bytes for %I64d hashPages. |
 | 895 | 10 | No | Hybrid buffer Pool: proposing %I64d hashPages for %I64u GiB of %S_MSG Persistent Memory. |
+| 896 | 10 | Yes | Failed to disable buffer pool extension. |
+| 897 | 10 | Yes | Buffer pool extension was paused due to error. |
 | [898](../mssqlserver-898-database-engine-error.md) | 10 | No | Buffer Pool scan took %I64d seconds: database ID %d, command '%ls', operation '%ls', scanned buffers %I64d, total iterated buffers %I64d, wait time %I64d ms. See 'https://go.microsoft.com/fwlink/?linkid=2132602' for more information. |
 | 902 | 16 | No | To change the %ls, the database must be in state in which a checkpoint can be executed. |
 | 904 | 16 | No | Database %ld cannot be autostarted during server shutdown or startup. |

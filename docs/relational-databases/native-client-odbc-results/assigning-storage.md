@@ -24,7 +24,7 @@ helpviewer_keywords:
 
   An application can assign storage for results before or after it executes a SQL statement. If an application prepares or executes the SQL statement first, it can inquire about the result set before it assigns storage for results. For example, if the result set is unknown, the application must retrieve the number of columns before it can assign storage for them.  
   
- To associate storage for a column of data, an application calls [SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md)and passes it:  
+ To associate storage for a column of data, an application calls [SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md) and passes it:  
   
 -   The data type to which the data is to be converted.  
   

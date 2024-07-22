@@ -54,7 +54,7 @@ You can create XML schema collections in the database and associate them with va
 
 To use an XML schema collection and the schemas it contains, you must first create the collection and the schemas by using the CREATE XML SCHEMA COLLECTION statement. After the schema collection is created, you can then create variables and columns of **xml** type and associate the schema collection with them. After a schema collection is created, various schema components are stored in the metadata. You can also use the ALTER XML SCHEMA COLLECTION to add more components to the existing schemas or add new schemas to an existing collection.
 
-To drop the schema collection, use the DROP XML SCHEMA COLLECTION statement. This drops all schemas that are contained in the collection and removes the collection object. Before you can drop a schema collection, the conditions described in [DROP XML SCHEMA COLLECTION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-xml-schema-collection-transact-sql.md)must be met.
+To drop the schema collection, use the DROP XML SCHEMA COLLECTION statement. This drops all schemas that are contained in the collection and removes the collection object. Before you can drop a schema collection, the conditions described in [DROP XML SCHEMA COLLECTION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-xml-schema-collection-transact-sql.md) must be met.
 
 ## <a id="components"></a> Understand schema components
 

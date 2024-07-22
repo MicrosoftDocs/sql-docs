@@ -148,7 +148,7 @@ The Developer edition continues to support only one client for [SQL Server Distr
 | Contained databases | Yes | Yes | Yes | Yes |
 | Encryption for backups | Yes | Yes | No | No |
 
-<sup>1</sup> EKM using Azure Key Vault is available for [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on Linux, starting with [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] CU 12. For more information, see [Set up SQL Server TDE Extensible Key Management by using Azure Key Vault](../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md#step-5-configure-sql-server).
+<sup>1</sup> EKM using Azure Key Vault is available for [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on Linux, starting with [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] CU 12. For more information, see [Set up SQL Server TDE Extensible Key Management by using Azure Key Vault](../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md).
 
 ## RDBMS manageability
 

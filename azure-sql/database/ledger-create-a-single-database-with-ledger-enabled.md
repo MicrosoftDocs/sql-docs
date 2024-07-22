@@ -236,7 +236,7 @@ To  protect the digests from being deleted or updated, it is recommended you con
 > The below example uses the immutability period value of 1 day. In a production environment, you should use a much larger value. 
 
 > [!NOTE]
-> Once database digests begin to be uploaded to the storage account, you will not be able to delete the storage account until the immutability policy expires.  Setting the immutability policy can be skipped if you plan to clean-up resources immediatly after this QuickStart.
+> Once database digests begin to be uploaded to the storage account, you will not be able to delete the storage account until the immutability policy expires.  Setting the immutability policy can be skipped if you plan to clean-up resources immediately after this QuickStart.
 
 For more information about time-based retention policy for containers, see [Configure immutability policies for containers](/azure/storage/blobs/immutable-policy-configure-container-scope).
 

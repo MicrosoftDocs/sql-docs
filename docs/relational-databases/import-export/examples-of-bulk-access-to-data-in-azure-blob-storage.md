@@ -12,11 +12,11 @@ helpviewer_keywords:
   - "Azure Blob Storage, bulk import to SQL Server"
   - "BULK INSERT, Azure Blob Storage"
   - "OPENROWSET, Azure Blob Storage"
-monikerRange: ">=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
+monikerRange: ">=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =azuresqldb-current"
 ---
 # Examples of bulk access to data in Azure Blob Storage
 
-[!INCLUDE [sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
+[!INCLUDE [sqlserver2017-asdb-asdbmi](../../includes/applies-to-version/sqlserver2017-asdb-asdbmi.md)]
 
 The `BULK INSERT` and `OPENROWSET` statements can directly access a file in Azure Blob Storage. The following examples use data from a CSV (comma separated value) file (named `inv-2017-01-19.csv`), stored in a container (named `Week3`), stored in a storage account (named `newinvoices`).
 

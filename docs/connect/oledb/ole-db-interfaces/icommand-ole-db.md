@@ -2,7 +2,7 @@
 title: "ICommand (OLE DB driver)"
 description: "Learn about behavior of the ICommand::Execute method that is specific to OLE DB Driver for SQL Server."
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: "06/14/2018"
 ms.service: sql
 ms.subservice: connectivity

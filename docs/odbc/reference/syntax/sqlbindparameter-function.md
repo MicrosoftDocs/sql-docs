@@ -2,7 +2,7 @@
 title: "SQLBindParameter Function"
 description: "SQLBindParameter Function"
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: "01/19/2019"
 ms.service: sql
 ms.subservice: connectivity
@@ -432,7 +432,7 @@ SQLRETURN SQLBindParameter(
 
  Rebinding of parameters is especially useful when an application has a buffer area setup that can contain many parameters but a call to **SQLExecDirect** or **SQLExecute** uses only a few of the parameters. The remaining space in the buffer area can be used for the next set of parameters by modifying the existing binding by an offset.  
   
- The SQL_DESC_BIND_OFFSET_PTR header field in the APD points to the binding offset. If the field is non-null, the driver dereferences the pointer and, if none of the values in the SQL_DESC_DATA_PTR, SQL_DESC_INDICATOR_PTR, and SQL_DESC_OCTET_LENGTH_PTR fields is a null pointer, adds the dereferenced value to those fields in the descriptor records at execution time. The new pointer values are used when the SQL statements are executed. The offset remains valid after rebinding. Because SQL_DESC_BIND_OFFSET_PTR is a pointer to the offset rather than the offset itself, an application can change the offset directly, without having to call [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md) or [SQLSetDescRec](../../../odbc/reference/syntax/sqlsetdescrec-function.md) to change the descriptor field. The pointer is set to null by default. The SQL_DESC_BIND_OFFSET_PTR field of the ARD can be set by a call to [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md) or by a call to [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)with an *fAttribute* of SQL_ATTR_PARAM_BIND_OFFSET_PTR.  
+ The SQL_DESC_BIND_OFFSET_PTR header field in the APD points to the binding offset. If the field is non-null, the driver dereferences the pointer and, if none of the values in the SQL_DESC_DATA_PTR, SQL_DESC_INDICATOR_PTR, and SQL_DESC_OCTET_LENGTH_PTR fields is a null pointer, adds the dereferenced value to those fields in the descriptor records at execution time. The new pointer values are used when the SQL statements are executed. The offset remains valid after rebinding. Because SQL_DESC_BIND_OFFSET_PTR is a pointer to the offset rather than the offset itself, an application can change the offset directly, without having to call [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md) or [SQLSetDescRec](../../../odbc/reference/syntax/sqlsetdescrec-function.md) to change the descriptor field. The pointer is set to null by default. The SQL_DESC_BIND_OFFSET_PTR field of the ARD can be set by a call to [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md) or by a call to [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md) with an *fAttribute* of SQL_ATTR_PARAM_BIND_OFFSET_PTR.  
   
  The binding offset is always added directly to the values in the SQL_DESC_DATA_PTR, SQL_DESC_INDICATOR_PTR, and SQL_DESC_OCTET_LENGTH_PTR fields. If the offset is changed to a different value, the new value is still added directly to the value in each descriptor field. The new offset is not added to the sum of the field value and any earlier offsets.  
   

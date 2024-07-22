@@ -31,7 +31,7 @@ Contains version history about jobs in the [Azure Elastic Jobs service for Azure
 
 ## Permissions
 
-Members of the *jobs_reader* role can SELECT from this view. For more information, see [Elastic jobs in Azure SQL Database (preview)](/azure/azure-sql/database/elastic-jobs-overview?view=azuresql-db&preserve-view=true#elastic-job-database-permissions).
+Members of the *jobs_reader* role can SELECT from this view. For more information, see [Elastic jobs in Azure SQL Database](/azure/azure-sql/database/elastic-jobs-overview?view=azuresql-db&preserve-view=true#elastic-job-database-permissions).
 
 > [!CAUTION]
 > You should not update internal catalog views in the *job database*. Manually changing these catalog views can corrupt the *job database* and cause failure. These views are for read-only querying only. You can use the stored procedures on your *job database*.
@@ -42,6 +42,6 @@ All times in elastic jobs are in the UTC time zone.
 
 ## Related content
 
-- [Elastic jobs in Azure SQL Database (preview)](/azure/azure-sql/database/elastic-jobs-overview?view=azuresql-db&preserve-view=true)
-- [Create, configure, and manage elastic jobs (preview)](/azure/azure-sql/database/elastic-jobs-tutorial?view=azuresql-db&preserve-view=true)
-- [Create and manage elastic jobs by using T-SQL (preview)](/azure/azure-sql/database/elastic-jobs-tsql-create-manage?view=azuresql-db&preserve-view=true)
+- [Elastic jobs in Azure SQL Database](/azure/azure-sql/database/elastic-jobs-overview?view=azuresql-db&preserve-view=true)
+- [Create, configure, and manage elastic jobs](/azure/azure-sql/database/elastic-jobs-tutorial?view=azuresql-db&preserve-view=true)
+- [Create and manage elastic jobs by using T-SQL](/azure/azure-sql/database/elastic-jobs-tsql-create-manage?view=azuresql-db&preserve-view=true)

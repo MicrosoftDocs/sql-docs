@@ -41,7 +41,7 @@ sp_syscollector_update_collection_item
 
 #### [ @collection_item_id = ] *collection_item_id*
 
-The unique identifer that identifies the collection item. *@collection_item_id* is **int**, with a default of `NULL`. *@collection_item_id* must have a value if *@name* is `NULL`.
+The unique identifier that identifies the collection item. *@collection_item_id* is **int**, with a default of `NULL`. *@collection_item_id* must have a value if *@name* is `NULL`.
 
 #### [ @name = ] N'*name*'
 

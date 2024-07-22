@@ -10,6 +10,8 @@ ms.topic: conceptual
 ---
 # Change Data Capture Designer for Oracle by Attunity How to Guide
 
+[!INCLUDE [oracle-cdc-retirement](../includes/attunity-oracle-cdc-retirement.md)]
+
   This section describes how to carry out tasks in the Change Data Capture Designer for Oracle by Attunity.  
   
 ## Learn how to use the Oracle CDC Designer Console  

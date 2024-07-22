@@ -25,7 +25,7 @@ dev_langs:
 |[query&#40;&#41; Method &#40;xml Data Type&#41;](../../t-sql/xml/query-method-xml-data-type.md)|Describes how to use the query() method to query over an XML instance.|  
 |[value&#40;&#41; Method &#40;xml Data Type&#41;](../../t-sql/xml/value-method-xml-data-type.md)|Describes how to use the value() method to retrieve a value of SQL type from an XML instance.|  
 |[exist&#40;&#41; Method &#40;xml Data Type&#41;](../../t-sql/xml/exist-method-xml-data-type.md)|Describes how to use the exist() method to determine whether a query returns a nonempty result.|  
-|[modify&#40;&#41; Method &#40;xml Data Type&#41;](../../t-sql/xml/modify-method-xml-data-type.md)|Describes how to use the modify() method to specify [XML Data Modification Language &#40;XML DML&#41;](../../t-sql/xml/xml-data-modification-language-xml-dml.md)statements to perform updates.|  
+|[modify&#40;&#41; Method &#40;xml Data Type&#41;](../../t-sql/xml/modify-method-xml-data-type.md)|Describes how to use the modify() method to specify [XML Data Modification Language &#40;XML DML&#41;](../../t-sql/xml/xml-data-modification-language-xml-dml.md) statements to perform updates.|  
 |[nodes&#40;&#41; Method &#40;xml Data Type&#41;](../../t-sql/xml/nodes-method-xml-data-type.md)|Describes how to use the nodes() method to shred XML into multiple rows, which propagates parts of XML documents into rowsets.|  
 |[Binding Relational Data Inside XML Data](../../t-sql/xml/binding-relational-data-inside-xml-data.md)|Describes how to bind non-XML data inside XML.|  
 |[Guidelines for Using xml Data Type Methods](../../t-sql/xml/guidelines-for-using-xml-data-type-methods.md)|Describes guidelines for using the **xml** data type methods.|  

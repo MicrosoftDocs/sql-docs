@@ -1,10 +1,10 @@
 ---
 title: Configure a domain-independent workgroup availability group
 description: Learn how to configure an Active Directory domain-independent workgroup Always On availability group on a SQL Server virtual machine in Azure.
-author: tarynpratt
-ms.author: tarynpratt
+author: AbdullahMSFT
+ms.author: amamun
 ms.reviewer: mathoma
-ms.date: 01/29/2020
+ms.date: 06/18/2024
 ms.service: virtual-machines-sql
 ms.subservice: hadr
 ms.topic: how-to
@@ -129,6 +129,10 @@ In this step, enable the availability group feature. If you're unfamiliar with t
 ## Create keys and certificates
 
 In this step, create certificates that a SQL login uses on the encrypted endpoint. Create a folder on each node to hold the certificate backups, such as `c:\certs`. 
+
+   > [!NOTE]
+   >  If you don't specify an expiration date for the certificate, its validity will be one year from the date of creation. If the certificate expires, the connection between endpoints will fail.
+
 
 To configure the first node, follow these steps: 
 

@@ -95,7 +95,7 @@ srcdata
   
  To change the location and length of the source data in column rows before the complete result set has been sent, use **srv_setcoldata** and **srv_setcollen**, respectively.  
   
- For a description of data types and Extended Store Procedure API data type conversions, see[Data Types &#40;Extended Stored Procedure API&#41;](../../relational-databases/extended-stored-procedures-reference/data-types-extended-stored-procedure-api.md).  
+ For a description of data types and Extended Store Procedure API data type conversions, see [Data Types &#40;Extended Stored Procedure API&#41;](../../relational-databases/extended-stored-procedures-reference/data-types-extended-stored-procedure-api.md).  
   
  If the column name in your application is in Unicode, you need to convert it to the multibyte code page of the server before calling **srv_describe**. For more information, see [Unicode Data and Server Code Pages](../../relational-databases/extended-stored-procedures-programming/unicode-data-and-server-code-pages.md).  
   

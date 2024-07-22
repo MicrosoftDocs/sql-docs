@@ -1,63 +1,66 @@
 ### YamlMime:FAQ
 metadata:
-  title: "Frequently asked questions about Copilot in Microsoft Azure SQL Database (preview)"
-  description: "Frequently asked questions about Copilot in Azure SQL Database."
+  title: "Frequently asked questions about Microsoft Copilot skills in Azure SQL Database (preview)"
+  description: "Frequently asked questions about Microsoft Copilot skills in Azure SQL Database."
   author: WilliamDAssafMSFT
   ms.author: wiassaf
   ms.reviewer: josephsack
   ms.service: sql-database
   ms.subservice: ai-copilot
+  ms.collection: ce-skilling-ai-copilot
+  ms.custom:
+    - build-2024
   ms.topic: faq
-  ms.date: 03/13/2024
+  ms.date: 05/09/2024
   monikerRange: "= azuresql || = azuresql-db"
-
-title: "Frequently asked questions about Copilot in Microsoft Azure SQL Database (preview)"
+title: "Frequently asked questions about Microsoft Copilot skills in Azure SQL Database (preview)"
 summary: |
-  Frequently asked questions about Copilot in Microsoft Azure SQL, currently in preview. 
+  Frequently asked questions about Microsoft Copilot capabilities in Azure SQL, currently in preview. 
 
-  Copilot in Azure SQL Database is a set of AI-assisted experiences designed to streamline the design, operation, optimization, and health of Azure SQL Database-driven applications. It improves productivity by offering natural language to SQL conversion and self-help for database administration.
-
-  > [!NOTE]
-  > Copilot in Azure SQL Database is currently in preview for a limited number of early adopters. To sign up for this program, visit [Request Access to Copilot in Azure SQL Database: Preview](https://aka.ms/sqlcopilot-signup).
+  Microsoft Copilot in Azure is now integrated with Azure SQL Database, enhancing the management and operation of SQL-dependent applications. It improves productivity by offering natural language to SQL conversion and self-help for database administration.
 
 sections:
   - name: General # Name of first section.
     questions:
       - question: |
-          Where can I find and use Copilot for Azure SQL Database?
+          In Azure SQL Database, where can I find Microsoft Copilot in Azure?
         answer: |
-          The preview of Copilot for Azure SQL Database includes two Azure portal experiences:
+          The preview of Copilot capabilities in Azure SQL Database includes two Azure portal experiences:
 
           | Azure portal location | Experiences |
           | --- | --- |
-          | **Azure portal Query Editor** | [Natural language to SQL](copilot-azure-sql-overview.md#natural-language-to-sql-query): This experience within the [Azure portal query editor for Azure SQL Database](../database/query-editor.md) translates natural language queries into SQL, making database interactions more intuitive.<br/> For a tutorial and examples of natural language to SQL capabilities of the Copilot in Azure SQL Database, see [Natural language to SQL in the Azure portal Query editor (preview)](../copilot/query-editor-natural-language-to-sql-copilot.md). |
-          | **Microsoft Copilot for Azure** | [Azure Copilot integration](copilot-azure-sql-overview.md#microsoft-copilot-for-azure-enhanced-scenarios): This experience adds Azure SQL skills into [Microsoft Copilot for Azure](/azure/copilot/overview), providing customers with self-guided assistance, empowering them to manage their databases and solve issues independently.|
+          | **Azure portal Query Editor** | [Natural language to SQL](copilot-azure-sql-overview.md#natural-language-to-sql-query): This experience within the [Azure portal query editor](../database/query-editor.md) translates natural language queries into SQL, making database interactions more intuitive.<br/> For a tutorial and examples of Copilot's natural language to SQL capabilities in Azure SQL Database, see [Natural language to SQL in the Azure portal Query editor (preview)](../copilot/query-editor-natural-language-to-sql-copilot.md). |
+          | **Microsoft Copilot in Azure** | [Azure Copilot integration](copilot-azure-sql-overview.md#microsoft-copilot-in-azure-enhanced-scenarios): This experience adds Azure SQL skills into [Microsoft Copilot in Azure](/azure/copilot/overview), providing customers with self-guided assistance, empowering them to manage their databases and solve issues independently.|
       - question: |
-          Are the results from Copilot for Azure SQL Database reliable?
+          How do I enable Microsoft Copilot in Azure for my Azure tenant?
         answer: |
-          Copilot for Azure SQL Database is designed to generate the best possible responses with the database context it has access to. However, like any AI system, responses aren't perfect. All of Copilot for Azure SQL Database's responses should be carefully tested, reviewed, and vetted before making changes to your Azure SQL Database environment.
+          Review the steps in [Enable Microsoft Copilot in Azure for your Azure tenant](copilot-azure-sql-overview.md#enable-microsoft-copilot-in-your-azure-tenant).
       - question: |
-          Does Copilot for Azure SQL Database write perfect or optimal queries?
+          Are the results from Copilot reliable?
         answer: |
-          Copilot for Azure SQL Database aims to provide accurate and informative responses based on the available data. The answers generated are based on patterns and probabilities in language data, which means that they might not always be accurate. Humans should carefully review, test, and validate all content generated by Copilot.
+          Copilot is designed to generate the best possible responses with the database context it has access to. However, like any AI system, responses aren't perfect. All of Copilot's responses should be carefully tested, reviewed, and vetted before making changes to your Azure SQL Database environment.
       - question: |
-          How does Copilot for Azure SQL Database (preview) use data from my Azure SQL Database environment?
+          Does Copilot write perfect or optimal queries?
         answer: |
-          Copilot for Azure SQL Database generates responses grounded in your Azure SQL Database environment. Copilot for Azure SQL Database only has access to resources that you have access to and can only perform analysis and actions that you have the permissions to perform. Copilot for Azure SQL Database respects all existing access management and protections.
+          Copilot aims to provide accurate and informative responses based on the available data. The answers generated are based on patterns and probabilities in language data, which means that they might not always be accurate. Humans should carefully review, test, and validate all content generated by Copilot.
       - question: |
-          What data does Copilot for Azure SQL Database collect?
+          How does Copilot use data from my Azure SQL Database environment?
         answer: |
-          User-provided prompts and Copilot for Azure SQL Database's responses aren't used to further train, retrain, or improve Azure OpenAI Service foundation models that generate responses. User-provided prompts and Copilot for Azure SQL Database's responses are collected and used to improve Microsoft products and services only when users have given explicit consent to include this information within feedback. We collect user engagement data, such as, number of chat sessions and session duration, the skill used in a particular session, thumbs up, thumbs down, feedback, etc. This information is retained and used as set forth in the [Microsoft Privacy Statement](https://privacy.microsoft.com/privacystatement).
+          Copilot generates responses grounded in your Azure SQL Database environment. Copilot only has access to resources that you have access to and can only perform analysis and actions that you have the permissions to perform. Copilot respects all existing access management and protections.
+      - question: |
+          What data does Copilot collect?
+        answer: |
+          User-provided prompts and Copilot's responses aren't used to further train, retrain, or improve Azure OpenAI Service foundation models that generate responses. User-provided prompts and Copilot's responses are collected and used to improve Microsoft products and services only when users have given explicit consent to include this information within feedback. We collect user engagement data, such as, number of chat sessions and session duration, the skill used in a particular session, thumbs up, thumbs down, feedback, etc. This information is retained and used as set forth in the [Microsoft Privacy Statement](https://privacy.microsoft.com/privacystatement).
       - question: |
           What should I do if I see unexpected or offensive content?
         answer: |
-          The Azure team built Copilot for Azure SQL Database guided by our AI principles and Responsible AI Standard. We have prioritized mitigating exposing customers to offensive content. However, you might still see unexpected results. We're constantly working to improve our technology in preventing harmful content.
+          The Azure team built Copilot guided by our AI principles and Responsible AI Standard. We have prioritized mitigating exposing customers to offensive content. However, you might still see unexpected results. We're constantly working to improve our technology in preventing harmful content.
 
           If you encounter harmful or inappropriate content in the system, you can provide feedback or report a concern by selecting the downvote button on the response. We're constantly working to improve our technology to proactively address issues in line with our [responsible AI principles](https://www.microsoft.com/ai/our-approach)
       - question: |
-          How much does Copilot for Azure SQL cost?
+          How much does Copilot cost?
         answer: |
-          Copilot for Azure SQL Database is offered at no additional cost during the preview.
+          Copilot skills in Azure SQL Database is offered at no additional cost during the preview.
       - question: |
           What Azure SQL Database offerings are supported in preview?
         answer: |
@@ -79,6 +82,5 @@ sections:
 additionalContent: |
     ## Related content
 
-    - [Copilot in Azure SQL (preview)](copilot-azure-sql-overview.md)
+    - [Microsoft Copilot skills and Azure SQL Database (preview)](copilot-azure-sql-overview.md)
     - [Natural language to SQL in the Azure portal Query editor (preview)](../copilot/query-editor-natural-language-to-sql-copilot.md)
-

@@ -5,9 +5,10 @@ description: Learn how to run T-SQL queries all from within the browser via the 
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: ivujic, mathoma
-ms.date: 03/13/2024
+ms.date: 04/15/2024
 ms.service: sql-database
 ms.subservice: development
+ms.collection: ce-skilling-ai-copilot
 ms.topic: conceptual
 ms.custom:
   - sqldbrb=1
@@ -28,7 +29,7 @@ The Query editor (preview) is a tool to run T-SQL queries in the Azure portal in
 
 - For a quickstart on the Azure portal query editor, see [Quickstart: Use the Azure portal query editor (preview)](connect-query-portal.md).
 - For more advanced object explorer capabilities and management functions, use [Azure Data Studio](/azure-data-studio/quickstart-sql-database) or [SQL Server Management Studio (SSMS)](connect-query-ssms.md).
-- For more information about Microsoft Copilot in Azure SQL Database (preview), see [Copilot in Azure SQL Database (preview)](../copilot/copilot-azure-sql-overview.md). For a tutorial and examples, visit [Natural language to SQL in the Azure portal query editor (preview)](../copilot/query-editor-natural-language-to-sql-copilot.md).
+- For more information about Microsoft Copilot skills in Azure SQL Database (preview), see [Microsoft Copilot skills in Azure SQL Database (preview)](../copilot/copilot-azure-sql-overview.md). For a tutorial and examples, visit [Natural language to SQL in the Azure portal query editor (preview)](../copilot/query-editor-natural-language-to-sql-copilot.md).
 - If you don't already have an Azure SQL Database created, visit [Quickstart: Create a single database](single-database-create-quickstart.md). Look for the option to use your offer to [try Azure SQL Database for free (preview)](free-offer.md).
 
 ## Query your Azure SQL Database from the Azure portal
@@ -51,7 +52,7 @@ For examples, see [Quickstart: Use the Azure portal query editor (preview) to qu
 - To use SQL Authentication to connect to an Azure SQL database via the query editor, you must have a login in the logical server's `master` database or a contained SQL user in the desired user database. For more information, see [Logins](logins-create-manage.md).
     - Enter your username and password, then select **OK**.
 - To use Microsoft Entra authentication to connect to an Azure SQL database via the query editor, your database must be configured with Microsoft Entra authentication, and you must have a [Microsoft Entra user created in the database](authentication-azure-ad-logins-tutorial.md).
-    - Select `Continue as <user@domain>`.
+    - Select **Continue as \<user@domain>**.
 
 ### Permissions required to access the query editor
 
@@ -66,7 +67,7 @@ There are four main sections of the query editor:
 - Query window
 - Copilot for Azure SQL Database
 
-   :::image type="content" source="media/query-editor/query-editor.png" alt-text="Screenshot from the Azure portal showing red rectangles highlighting the Query editor in the main menu and the Navigation bar, Object Explorer, and Query window.":::
+   :::image type="content" source="media/query-editor/query-editor.png" alt-text="Screenshot from the Azure portal showing red rectangles highlighting the Query editor in the main menu and the Navigation bar, Object Explorer, and Query window." lightbox="media/query-editor/query-editor.png":::
 
 ### Navigation bar
 
@@ -97,13 +98,13 @@ The **Export data as** button allows you to export the query results to your com
 
 The query execution time, or errors, are shown in the status bar.
 
-### Copilot for Azure SQL Database (preview)
+### Microsoft Copilot skills in Azure SQL Database (preview)
 
-[Copilot in Azure SQL Database](../copilot/copilot-azure-sql-overview.md) is an AI assistant designed to streamline the design, operation, optimization, and health of Azure SQL Database-driven applications. It improves productivity in the Azure portal by offering natural language to SQL conversion and self-help for database administration.
+[Microsoft Copilot](../copilot/copilot-azure-sql-overview.md) is an AI assistant designed to streamline the design, operation, optimization, and health of Azure SQL Database-driven applications. It improves productivity in the Azure portal by offering natural language to SQL conversion and self-help for database administration.
 
 The [Natural language to SQL](../copilot/copilot-azure-sql-overview.md?view=azuresql-db&preserve-view=true#natural-language-to-sql-query) experience within the Azure portal query editor for Azure SQL Database translates natural language queries into SQL, making database interactions more intuitive.
 
-For a tutorial and examples of natural language to SQL capabilities of the Copilot in Azure SQL Database, see [Natural language to SQL in the Azure portal query editor (preview)](../copilot/query-editor-natural-language-to-sql-copilot.md). For more information, see [Frequently asked questions about Copilot in Microsoft Azure SQL (preview)](../copilot/copilot-azure-sql-faq.yml).
+For a tutorial and examples of natural language to SQL capabilities of Copilot, see [Natural language to SQL in the Azure portal query editor (preview)](../copilot/query-editor-natural-language-to-sql-copilot.md). For more information, see [Frequently asked questions about Microsoft Copilot skills in Azure SQL Database (preview)](../copilot/copilot-azure-sql-faq.yml).
 
 ## Data editor
 
@@ -190,7 +191,7 @@ These errors occur because the query editor is unable to communicate through por
    1. Keep **Domain**, **Private**, and **Public** selected.
    1. Give the rule a name, for example *Access Azure SQL query editor*, and optionally provide a description. Then select **Finish**.
 
-#### Allow 443 and 1443 in MacOS
+#### Allow 443 and 1443 in macOS
 
 1. On the Apple menu, open **System Preferences**.
 1. Select **Security & Privacy**, and then select **Firewall**.
@@ -221,4 +222,3 @@ When using Azure VMs, you have an [Azure network security group](/azure/virtual-
 - [What is Azure SQL?](../azure-sql-iaas-vs-paas-what-is-overview.md)
 - [Azure SQL glossary of terms](../glossary-terms.md)
 - [T-SQL differences between SQL Server and Azure SQL Database](transact-sql-tsql-differences-sql-server.md)
-

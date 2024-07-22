@@ -2,7 +2,7 @@
 title: ODBC DSN and connection string keywords
 description: How to connect using the ODBC driver. Find keywords for connection strings and DSNs, and connection attributes for SQLSetConnectAttr and SQLGetConnectAttr.
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.reviewer: v-chojas
 ms.date: 07/31/2023
 ms.service: sql
@@ -275,7 +275,7 @@ Combining all 3 above components together to use in a connection string would be
 
 `RetryExec={1000,2000:3,10+7:SELECT}`
 
-Which would mean: "For errors 1000 and 2000, on a query that starts with SELECT. Retry twice with an intial delay of 10 seconds and adding 7 seconds for each following attempt"
+Which would mean: "For errors 1000 and 2000, on a query that starts with SELECT. Retry twice with an initial delay of 10 seconds and adding 7 seconds for each following attempt"
 
 **Examples**
 

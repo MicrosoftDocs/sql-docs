@@ -22,14 +22,11 @@ helpviewer_keywords:
 
 # Degree of parallelism (DOP) feedback
 
-**Applies to:** [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] (Preview), [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)] (Preview), [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] (Preview)
+**Applies to:** [!INCLUDE [sqlserver2022-and-later](../../includes/applies-to-version/sqlserver2022-and-later.md)], [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]
 
 [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] introduced a new feature called degree of parallelism (DOP) feedback to improve query performance by identifying parallelism inefficiencies for repeating queries, based on elapsed time and waits. DOP feedback is part of the [intelligent query processing](../../relational-databases/performance/intelligent-query-processing.md) family of features, and addresses suboptimal usage of parallelism for repeating queries. This scenario helps with optimizing resource usage and improving scalability of workloads, when excessive parallelism can cause performance issues. 
 
 Instead of incurring in the pains of an all-encompassing default or manual adjustments to each query, DOP feedback self-adjusts DOP to avoid these issues.
-
-> [!NOTE]
-> This feature is currently available in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] as a limited preview. For more information and how to apply for the preview, see [Announcing Degree of Parallelism Feedback Limited Preview](https://techcommunity.microsoft.com/t5/azure-sql-blog/announcing-degree-of-parallelism-feedback-limited-preview/ba-p/3806924).
 
 For other query feedback features, see [Memory grant feedback](intelligent-query-processing-memory-grant-feedback.md) and [Cardinality estimation (CE) feedback](intelligent-query-processing-cardinality-estimation-feedback.md).
 
@@ -39,7 +36,11 @@ Instead of incurring in the pains of an all-encompassing default or manual adjus
 
 Parallelism is often beneficial for reporting and analytical queries, or queries that otherwise handle large amounts of data. Conversely, OLTP-centric queries that are executed in parallel could experience performance issues when the time spent coordinating all threads outweighs the advantages of using a parallel plan. For more information, see [parallel plan execution](../../relational-databases/query-processing-architecture-guide.md#parallel-query-processing).
 
-- To enable DOP feedback, enable the `DOP_FEEDBACK` [database scoped configuration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md#dop_feedback---on--off-) in a database.
+- To enable DOP feedback, enable the `DOP_FEEDBACK` [database scoped configuration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md#dop_feedback---on--off-) in a database. For example, in the user database:
+
+    ```sql
+    ALTER DATABASE SCOPED CONFIGURATION SET DOP_FEEDBACK = ON;
+    ```
 
 - To disable DOP feedback at the database level, use the `DOP_FEEDBACK` [database scoped configuration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md#ce_feedback---on--off-). For example, in the user database:
 
@@ -93,7 +94,8 @@ The following XEs are available for degree of parallelism (DOP) feedback:
 
 ## Persistence for degree of parallelism (DOP) feedback
 
-**Applies to:** [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]) 
+**Applies to:** [!INCLUDE [sqlserver2022-and-later](../../includes/applies-to-version/sqlserver2022-and-later.md)], [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]
+<!---[!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)])  -->
 
 If the DOP feedback mechanism finds that the new degree of parallelism is good, this optimization is persisted inside the query store and will be applied appropriately to a query for future executions.
 

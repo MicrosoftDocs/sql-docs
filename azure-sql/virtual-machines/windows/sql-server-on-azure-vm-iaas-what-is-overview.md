@@ -44,9 +44,9 @@ To get started with SQL Server on Azure VMs, review the following resources:
 
 - **Create SQL VM**: To create your SQL Server on Azure VM, review the Quickstarts using the [Azure portal](sql-vm-create-portal-quickstart.md), [Azure PowerShell](sql-vm-create-powershell-quickstart.md) or an [ARM template](create-sql-vm-resource-manager-template.md). For more thorough guidance, review the [Provisioning guide](create-sql-vm-portal.md).
 - **Connect to SQL VM**: To connect to your SQL Server on Azure VMs, review the [ways to connect](ways-to-connect-to-sql.md).
+- **Manage SQL VM from the portal**: You can manage SQL Server settings directly from the Azure portal by using the [SQL virtual machines](manage-sql-vm-portal.md) resource. 
 - **Migrate data**: Migrate your data to SQL Server on Azure VMs from [SQL Server](../../migration-guides/virtual-machines/sql-server-to-sql-on-azure-vm-migration-overview.md), [Oracle](../../migration-guides/virtual-machines/oracle-to-sql-on-azure-vm-guide.md), or [Db2](../../migration-guides/virtual-machines/db2-to-sql-on-azure-vm-guide.md).
-- **Storage configuration**: For information about configuring storage for your SQL Server on Azure VMs, review [Storage configuration](storage-configuration.md).
-- **Performance**: Fine-tune the performance of your SQL Server on Azure VM by reviewing the [Performance best practices checklist](performance-guidelines-best-practices-checklist.md).
+- **Best practices**: View the [Best practices checklist](performance-guidelines-best-practices-checklist.md) to configure your SQL Server VM for optimized security and performance. 
 - **Pricing**: For information about the pricing structure of your SQL Server on Azure VM, review the [Pricing guidance](pricing-guidance.md).
 - **Frequently asked questions**: For commonly asked questions, and scenarios, review the [FAQ](frequently-asked-questions-faq.yml).
 
@@ -97,9 +97,10 @@ To see the available SQL Server on Linux virtual machine images, see [Overview o
 
 It's possible to deploy an older image of SQL Server that isn't available in the Azure portal by using PowerShell. To view all available images by using PowerShell, use the following command:
 
-  ```powershell
-  Get-AzVMImageOffer -Location $Location -Publisher 'MicrosoftSQLServer'
-  ```
+```powershell
+$Location = "<location>"
+Get-AzVMImageOffer -Location $Location -Publisher 'MicrosoftSQLServer'
+```
 
 For more information about deploying SQL Server VMs using PowerShell, view [How to provision SQL Server virtual machines with Azure PowerShell](create-sql-vm-powershell.md).
 
@@ -119,7 +120,7 @@ Since SQL Server on Azure VMs is integrated into the Azure platform, review reso
 - **Networking**: [Virtual Network overview](/azure/virtual-network/virtual-networks-overview), [IP addresses in Azure](/azure/virtual-network/ip-services/public-ip-addresses), [Create a Fully Qualified Domain Name in the Azure portal](/azure/virtual-machines/create-fqdn)
 - **SQL**: [SQL Server documentation](/sql/index), [Azure SQL Database comparison](../../azure-sql-iaas-vs-paas-what-is-overview.md)
 
-## Next steps
+## Related content
 
 Get started with SQL Server on Azure Virtual Machines:
 

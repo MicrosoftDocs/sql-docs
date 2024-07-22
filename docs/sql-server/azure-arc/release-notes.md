@@ -4,7 +4,7 @@ description: Latest release notes for SQL Server enabled by Azure Arc
 author: anosov1960
 ms.author: sashan
 ms.reviewer: mikeray, randolphwest
-ms.date: 03/12/2024
+ms.date: 07/09/2024
 ms.topic: conceptual
 ms.custom: ignite-2023
 ---
@@ -13,7 +13,83 @@ ms.custom: ignite-2023
 
 [!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
-## March, 12 2024
+This article lists:
+
+- Release dates
+- Extension version numbers
+- High level feature descriptions
+- Links to additional feature documentation
+
+Extension versions are cumulative. Higher extension versions include all of the updates from previous versions. A release may include internal features. If the version release notes don't describe features, then the updates were internal.
+
+## July  09, 2024
+
+**Extension version**: `1.1.2735.199`
+
+### Extended Security Updates enabled for SQL Server 2014
+
+Extended Security Updates (ESU) subscription for [!INCLUDE [sssql14-md](../../includes/sssql14-md.md)] will automatically start billing when SQL Server 2014 ESU program starts. Requires [!INCLUDE [sssql14-md](../../includes/sssql14-md.md)] be enabled for ESU.
+
+### Azure extension for SQL Server
+
+`SqlServerExtensionPermissionProvider` task no longer runs hourly. The task is triggered by specific events. For details, review [Roles](permissions-granted-agent-extension.md#roles). 
+
+## June  14, 2024
+
+**Extension version**: `1.1.2717.190`
+
+### Licensing and billing
+
+Support Extended Security Updates (ESU) subscription for [!INCLUDE [sssql11-md](../../includes/sssql11-md.md)] with an option to bill back to year 1 of extended support (for managed accounts only).
+
+### Business continuity
+
+- Inventory and manual failover of availability groups is now generally available. For details, review [Always On availability groups inventory and status](manage-availability-group.md).
+- Inventory of failover cluster instance is now generally available. Failover cluster instance in portal now shows instance name, instance type, network name, active node, and passive nodes. For details, review [View Always On failover cluster instances in Azure Arc](support-for-fci.md).
+
+### Migration
+
+Run assessment on demand (preview): The SQL Server migration assessment runs every Sunday around 11:00 PM. Beginning with this release, you can initiate the SQL Server migration assessment whenever you want. This immediate assessment shows readiness evaluations and Azure SQL configuration assessments right away. For details, review [Assess migration readiness](migration-assessment.md).
+
+## May 15, 2024
+
+**Extension version**: `1.1.2689.159`
+
+This version reintroduces features previously released in version `1.1.2656.138` (April 9, 2024).
+
+### Move resources
+
+- Move instances or databases to a different subscription or resource group (preview). Review [Move SQL Server enabled by Azure Arc resources to a new resource group or subscription - preview](move-resources.md).
+
+### Updated licensing and configuration support
+
+- Support licensing SQL Server by physical cores with unlimited virtualization
+- Support ESU subscriptions for [!INCLUDE [sssql14-md](../../includes/sssql14-md.md)]
+- Database inventory feature for all license types
+
+For details, review:
+
+- [Manage licensing and billing of SQL Server enabled by Azure Arc](manage-license-billing.md).
+- [Configure SQL Server enabled by Azure Arc](manage-configuration.md)
+
+### Updated performance dashboard
+
+- New built-in role and action available to manage access to the performance dashboard
+  - Review [Monitor [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] (preview)](sql-monitoring.md).
+
+## April 16, 2024
+
+**Extension version**: `1.1.2656.138`
+
+ This version is no longer available.
+
+## April 9, 2024
+
+**Extension version**: `1.1.2647.136`
+
+ This version is no longer available. The features in this version are updated and released in [May 15, 2024](#may-15-2024).
+
+## March 12, 2024
 
 **Extension version**: `1.1.2620.127`
 
@@ -125,7 +201,7 @@ For more information, review [Monitor [!INCLUDE [ssazurearc](../../includes/ssaz
 
 #### High availability
 
-- Manage Always On availability group - manual failover - public preview.
+- Manage Always On availability group - manual failover - preview.
   - Perform a planned, manual failover on an availability group replica, using Azure portal.
 - Availability group status - Track the availability upload status | public preview.
   - Beginning with this release, track the status and see the last time that the availability group inventory data is updated.  The portal shows two new properties, **Upload status** and **Last collected time** in the **Availability Groups** tab of the Arc-enabled SQL Server.
@@ -175,7 +251,7 @@ With SQL Server enabled by Azure Arc, you can run the agent extension service wi
 
 ### Azure extension for SQL Server
 
-- Automatic patching generally available
+- Automatic updates generally available
 
 ## August 10, 2023
 
@@ -187,7 +263,7 @@ With SQL Server enabled by Azure Arc, you can run the agent extension service wi
 
    [!INCLUDE [entra-id](../../includes/entra-id.md)]
 
-- Configure patching in Azure portal. Review [Configure in the Azure portal](patch.md#configure-in-the-azure-portal).
+- Configure automatic updates in Azure portal. Review [Configure in the Azure portal](update.md#configure-in-the-azure-portal).
 
 ## July 13, 2023
 
@@ -245,7 +321,7 @@ With SQL Server enabled by Azure Arc, you can run the agent extension service wi
 ### Azure extension for SQL Server
 
 - [Best practices assessment](assess.md) supports multiple instances of SQL Server on a physical or virtual server host.
-- Support for Microsoft Update to patch an Arc-enabled SQL Server. Automatically installs updates marked as Critical or Important. Doesn't automatically install other updates.
+- Support for Microsoft Update to update an Arc-enabled SQL Server. Automatically installs updates marked as Critical or Important. Doesn't automatically install other updates.
 
 ## February 17, 2023
 
@@ -284,47 +360,4 @@ With SQL Server enabled by Azure Arc, you can run the agent extension service wi
 - Support to view databases as a resource added for [!INCLUDE [sssql14-md](../../includes/sssql14-md.md)], and [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)]. Review [View SQL Server databases - Azure Arc](view-databases.md).
 - Support for Web and Express editions.
 
-## November 13, 2022
 
-**Extension version**: `1.1.2132.21`
-
-> [!IMPORTANT]
-> Billing for this extension will not be enabled until December 1, 2022.
-
-### Azure extension for SQL Server
-
-- Both Linux (`LinuxAgent.SqlServer`) and Windows (`WindowsAgent.SqlServer`) versions of Azure extension for SQL Server now support billing through Azure when pay-as-you-go activation is selected in [SQL 2022[!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] setup wizard](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md) or [command prompt](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md).
-- [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] includes the pay-as-you-go activation option that forces the installation of Azure extension for SQL Server during setup.
-- Billing meters are introduced to support pay-as-you-go billing through Azure
-- SQL Server Azure Arc instance now shows the databases registered to the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instance. To view databases, navigate to the data management tab of the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] Azure Arc resource. For more details, review [View databases](view-databases.md).
-
-### Other changes
-
-The *LicenseType* property of `SQL Server - Azure Arc` has been extended to provide more granular license information. The values now include:
-
-| **Value** | **Description** |
-|:--|:--|
-|Paid|SQL Server instance is installed using a product key with Software Assurance or SQL subscription|
-|LicenseOnly|SQL Server instance is installed using a product key without Software Assurance or SQL subscription|
-|PAYG|SQL Server instance is installed using a pay-as-you-go activation option (new in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)])|
-|Free|Indicates that the instance uses Evaluation or Developer edition of SQL Server|
-|HADR|Indicates that the instance is a replica in an availability group. If it's covered by Software Assurance, it might not require a license. For more information, review [SQL Server Commercial Licensing Terms](https://www.microsoft.com/licensing/terms/productoffering/SQLServer/EAEAS).|
-
-### Known issues and limitations
-
-- Feature use requires Azure extension for SQL Server version `v1.1.2132.21` or higher.
-- The pay-as-you-go billing is limited to SQL Server 2022[!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]
-- Azure extension for SQL Server is not supported in the following environments:
-  - SQL Server in Azure VMs. If a custom VM image is migrated to Azure VM, Azure extension for SQL Server will stop working. Delete your Arc-enabled SQL Server resource and enable automatic registration with SQL IaaS Agent extension. (This step is no longer required, beginning with April, 2023 release.)
-  - SQL Server in Linux containers
-  - SQL Server Azure VMware Solution
-> [!NOTE]
-> Azure extension for SQL Server fully supports VMware clusters outside of Azure.
-
-## October 12, 2022
-
-**Extension version**: `1.1.2104.14`
-
-### Azure extension for SQL Server
-
-SQL Server Onboarding Role is no longer needed for onboarding SQL Server instances onto Azure Arc.

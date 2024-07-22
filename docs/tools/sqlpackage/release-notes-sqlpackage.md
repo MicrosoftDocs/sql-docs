@@ -4,7 +4,7 @@ description: Release notes for Microsoft SqlPackage.
 author: dzsquared
 ms.author: drskwier
 ms.reviewer: "llali"
-ms.date: 02/27/2024
+ms.date: 06/24/2024
 ms.service: sql
 ms.topic: conceptual
 ms.custom: tools|sos
@@ -14,6 +14,76 @@ ms.custom: tools|sos
 **[Download the latest version](sqlpackage-download.md)**
 
 This article lists the features and fixes delivered by the released versions of SqlPackage.
+
+
+## 162.3.566 SqlPackage
+
+**Release date:** June 24, 2024
+
+```bash
+dotnet tool install -g microsoft.sqlpackage --version 162.3.566
+```
+
+|Platform|Download|
+|:---|:---|
+|Windows .NET 8 |[.zip file](https://go.microsoft.com/fwlink/?linkid=2277003)|
+|Windows|[.msi file](https://go.microsoft.com/fwlink/?linkid=2276908)|
+|macOS .NET 8 |[.zip file](https://go.microsoft.com/fwlink/?linkid=2276909)|
+|Linux .NET 8 |[.zip file](https://go.microsoft.com/fwlink/?linkid=2277004)|
+
+
+### Fixes
+|Feature|Details|
+|:---|:---|
+|Deployment|Fixes an issue where the deployment contributor [API DeploymentPlanModifier](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentplanmodifier?view=sql-dacfx-162&preserve-view=true) methods are set as static methods. [GitHub issue](https://github.com/microsoft/DacFx/issues/461)|
+|Platform|The SqlPackage .zip build .NET SDK is updated from 8.0.301 to 8.0.302|
+
+### Known Issues
+| Feature | Details | Workaround |
+| :------ | :------ |:------ |
+| Deployment | The Azure Synapse Analytics Workload Management feature (Workload Groups and Workload Classifiers) isn't yet supported. | N/A |
+| Import | A bacpac file created with SqlPackage export, except when installed by the .msi file, may fail to import with the Azure portal and Azure PowerShell when larger than 4 GB. | Import the bacpac with SqlPackage or create the bacpac file with SqlPackage installed by the .msi file.|
+| ScriptDOM | Parsing a very large file can result in a stack overflow. | None |
+
+## 162.3.563 SqlPackage
+
+**Release date:** June 6, 2024
+
+```bash
+dotnet tool install -g microsoft.sqlpackage --version 162.3.563
+```
+
+|Platform|Download|
+|:---|:---|
+|Windows .NET 8 |[.zip file](https://go.microsoft.com/fwlink/?linkid=2273950)|
+|Windows|[.msi file](https://go.microsoft.com/fwlink/?linkid=2274058)|
+|macOS .NET 8 |[.zip file](https://go.microsoft.com/fwlink/?linkid=2274060)|
+|Linux .NET 8 |[.zip file](https://go.microsoft.com/fwlink/?linkid=2274059)|
+
+### Features
+|Feature|Details|
+|:---|:---|
+|Microsoft Fabric|Adds preview support for the target platform `SqlDbFabricDatabaseSchemaProvider`, representing Microsoft Fabric mirrored SQL databases. The [data types supported](../../t-sql/statements/create-external-table-as-select-transact-sql.md#supported-data-types) in this target platform are limited to those supported for mirroring to Microsoft Fabric.|
+|Platform|References [Microsoft.Data.SqlClient](https://www.nuget.org/packages/Microsoft.Data.SqlClient/5.1.5) v5.1.5.|
+|ScriptDOM|References [ScriptDOM 161.9109](https://github.com/microsoft/SqlScriptDOM/blob/main/release-notes/161.91/161.9109.0.md).|
+
+### Fixes
+|Feature|Details|
+|:---|:---|
+|Code analysis|Fixes an issue where the build output from code analysis rules was not formed consistent with MSBuild diagnostic format guidelines. [GitHub issue](https://github.com/microsoft/DacFx/issues/415)|
+|Deployment|Fixes an issue where the deployment of an index with the ONLINE property set and a [large object type](../../t-sql/data-types/data-types-transact-sql.md#data-type-categories) (LOB) would fail.|
+|Deployment|Fixes an issue where the deployment of column encryption fails on a temporal table. [GitHub issue](https://github.com/microsoft/DacFx/issues/440)|
+|Deployment|Reverts the changes made to avoid storing absolute paths of referenced dacpacs after project build due to issues with backwards compatibility in new behavior. [GitHub issue](https://github.com/microsoft/DacFx/issues/329)|
+|Extract| Fixes an issue where columns used in a multi-column distribution (MCD) table were incorrectly scripting as allowing `NULL` values.|
+|ScriptDOM|Fixes an issue where selecting unspecified (`*`) columns from the table-valued function `OPEN_JSON` would cause the SQL project fail to build. [GitHub issue](https://github.com/microsoft/DacFx/issues/420)|
+
+### Known Issues
+| Feature | Details | Workaround |
+| :------ | :------ |:------ |
+| Deployment | The Azure Synapse Analytics Workload Management feature (Workload Groups and Workload Classifiers) isn't yet supported. | N/A |
+| Deployment | The deployment contributor API DeploymentPlanModifier methods are set as static methods. | Fixed in SqlPackage 162.3.566. |
+| Import | A bacpac file created with SqlPackage export, except when installed by the .msi file, may fail to import with the Azure portal and Azure PowerShell when larger than 4 GB. | Import the bacpac with SqlPackage or create the bacpac file with SqlPackage installed by the .msi file.|
+| ScriptDOM | Parsing a very large file can result in a stack overflow. | None |
 
 ## 162.2.111 SqlPackage
 

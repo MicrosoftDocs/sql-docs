@@ -2676,7 +2676,7 @@
       "redirect_document_id": false
     },
     {
-      "source_path_from_root": "/docs/database-engine/determining-the-correct-bucket-count-for-hash-indexes.md",
+      "source_path": "docs/database-engine/determining-the-correct-bucket-count-for-hash-indexes.md",
       "redirect_url": "/sql/relational-databases/sql-server-index-design-guide",
       "redirect_document_id": false
     },
@@ -20221,6 +20221,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "docs/relational-databases/databases/publish-a-database-sql-server-management-studio.md",
+      "redirect_url": "/previous-versions/sql/2014/relational-databases/databases/publish-a-database-sql-server-management-studio",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "docs/2014/relational-databases/databases/rebuild-system-databases.md",
       "redirect_url": "/previous-versions/sql/2014/relational-databases/databases/rebuild-system-databases",
       "redirect_document_id": false
@@ -33571,6 +33576,41 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "docs/reporting-services/lesson-1-creating-a-report-server-project-reporting-services.md",
+      "redirect_url": "/sql/reporting-services/tutorial-step-01-create-report-server-project-reporting-services",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/reporting-services/lesson-2-specifying-connection-information-reporting-services.md",
+      "redirect_url": "/sql/reporting-services/tutorial-step-02-specify-connection-information-reporting-services",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/reporting-services/tutorial-step-01-creating-report-server-project-reporting-services.md",
+      "redirect_url": "/sql/reporting-services/docs/reporting-services/tutorial-step-01-create-report-server-project-reporting-services",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/reporting-services/lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md",
+      "redirect_url": "/sql/reporting-services/tutorial-step-03-define-dataset-for-table-report-reporting-services",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/reporting-services/lesson-4-adding-a-table-to-the-report-reporting-services.md",
+      "redirect_url": "/sql/reporting-services/tutorial-step-04-add-table-to-the-report-reporting-services",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/reporting-services/lesson-5-formatting-a-report-reporting-services.md",
+      "redirect_url": "/sql/reporting-services/tutorial-step-05-format-report-reporting-services",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md",
+      "redirect_url": "/sql/reporting-services/tutorial-step-06-add-grouping-and-totals-reporting-services",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "docs/2014/reporting-services/lesson-1-creating-a-report-server-project-reporting-services.md",
       "redirect_url": "/previous-versions/sql/2014/reporting-services/lesson-1-creating-a-report-server-project-reporting-services",
       "redirect_document_id": false
@@ -41724,7 +41764,7 @@
       "source_path": "docs/tools/sql-server-profiler/sql-server-profiler-f1-help.md",
       "redirect_url": "/sql/tools/sql-server-profiler/sql-server-profiler",
       "redirect_document_id": false
-    },    
+    },
     {
       "source_path": "docs/2014/ssms/visual-db-tools/modify-join-operators-visual-database-tools.md",
       "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/modify-join-operators-visual-database-tools",
@@ -44261,6 +44301,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "docs/sql-server/azure-arc/patch.md",
+      "redirect_url": "/sql/sql-server/azure-arc/update",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "docs/azdata/reference/reference-azdata-arc.md",
       "redirect_url": "/azure/azure-arc/data/reference/overview",
       "redirect_document_id": false
@@ -46067,7 +46112,7 @@
     },
     {
       "source_path": "docs/2014/2014-toc/books-online-for-sql-server-2014.md",
-      "redirect_url": "/sql/2014-toc/index?view=sql-server-2014",
+      "redirect_url": "/sql/sql-server/previous-versions-sql-server?view=sql-server-ver16",
       "redirect_document_id": false
     },
     {
@@ -62584,7 +62629,7 @@
       "source_path": "docs/ssdt/release-notes-ssdt.md",
       "redirect_url": "/sql/ssdt/previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi",
       "redirect_document_id": false
-    },    
+    },
     {
       "source_path": "docs/odbc/microsoft/aggregate-function-limitations.md",
       "redirect_url": "/sql/odbc/microsoft/limitations",
@@ -62714,6 +62759,21 @@
       "source_path": "docs/ssms/release-notes-ssms-20.md",
       "redirect_url": "/sql/ssms/release-notes-ssms",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/t-sql/language-elements/continue-transact-sql.md",
+      "redirect_url": "/sql/t-sql/language-elements/while-transact-sql",
+      "redirect_document_id": false
+	},
+    {
+      "source_path": "docs/connect/php/configuring-iis-for-php-sql-driver.md",
+      "redirect_url": "/sql/connect/php/download-drivers-php-sql-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssdt/how-to-clone-an-existing-database.md",
+      "redirect_url": "/sql/t-sql/statements/create-table-as-clone-of-transact-sql",
+      "redirect_document_id": false
     }
- ]
+  ]
 }

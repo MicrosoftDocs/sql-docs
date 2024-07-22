@@ -4,7 +4,7 @@ description: Learn about maintenance instructions and common troubleshooting ste
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: vanto, maghan
-ms.date: 09/09/2023
+ms.date: 04/30/2024
 ms.service: sql
 ms.subservice: security
 ms.topic: conceptual
@@ -16,79 +16,15 @@ helpviewer_keywords:
 
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
-  Supplemental information about the [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)] Connector is provided in this topic. For more information about the [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)] connector, see [Extensible Key Management Using Azure Key Vault (SQL Server)](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md), [Setup Steps for Extensible Key Management Using the Azure Key Vault](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md),  and [Use SQL Server Connector with SQL Encryption Features](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md).
-
+  Supplemental information about the [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)] Connector is provided in this article. For more information about the [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)] connector, see [Extensible Key Management Using Azure Key Vault (SQL Server)](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md), [Setup Steps for Extensible Key Management Using the Azure Key Vault](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md),  and [Use SQL Server Connector with SQL Encryption Features](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md).
 
 [!INCLUDE [entra-id](../../../includes/entra-id-hard-coded.md)]
 
 ## <a id="AppendixA"></a> A. Maintenance Instructions for [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)] Connector
 
-### Key Rollover
+### Key Rotation
 
-> [!IMPORTANT]  
-> - The [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)] Connector requires the key name to only use the characters "a-z", "A-Z", "0-9", and "-", with a 26-character limit. Different key versions under the same key name in Azure Key Vault will not work with [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)] Connector. To rotate an Azure Key Vault key that's being used by [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)], a new key with a new key name must be created.  
-> -  When rotating versions of the key, do not disable the version originally used to encrypt the database. SQL Server will be unable to recover the database as it may get stuck in a 'recovery pending' state and generate a **Crypto Exception** memory dump until the original version is enabled.
-
-Typically, server asymmetric keys for [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)] encryption need to be versioned every 1-2 years. It's important to note that although the Key Vault allows keys to be versioned, customers shouldn't use that feature to implement versioning. The [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)] Connector can't deal with changes in Key Vault key version. To implement key versioning, create a new key in the Key Vault and then re-encrypt the data encryption key in [!INCLUDE [ssManStudio](../../../includes/ssmanstudio-md.md)].
-
-For TDE, this is how this would be achieved:
-
-- **In PowerShell:** Create a new asymmetric key (with a different name from your current TDE asymmetric key) in the Key Vault.
-
-    ```powershell
-    Add-AzKeyVaultKey -VaultName 'ContosoDevKeyVault' `
-      -Name 'Key2' -Destination 'Software'
-    ```
-
-- **Using [!INCLUDE [ssManStudio](../../../includes/ssmanstudio-md.md)] or sqlcmd.exe:** Use the following statements as shown in Step 3, section 3.
-
-     Import the new asymmetric key.
-
-    ```sql
-    USE master
-    CREATE ASYMMETRIC KEY [MASTER_KEY2]
-    FROM PROVIDER [EKM]
-    WITH PROVIDER_KEY_NAME = 'Key2',
-    CREATION_DISPOSITION = OPEN_EXISTING
-    GO
-    ```
-
-     Create a new login to be associated with the new asymmetric key (as shown under the TDE instructions).
-
-    ```sql
-    USE master
-    CREATE LOGIN TDE_Login2
-    FROM ASYMMETRIC KEY [MASTER_KEY2]
-    GO
-    ```
-
-     Create a new credential to be mapped to the login.
-
-    ```sql
-    CREATE CREDENTIAL Azure_EKM_TDE_cred2
-        WITH IDENTITY = 'ContosoDevKeyVault',
-       SECRET = 'EF5C8E094D2A4A769998D93440D8115DAADsecret123456789='
-    FOR CRYPTOGRAPHIC PROVIDER EKM;
-
-    ALTER LOGIN TDE_Login2
-    ADD CREDENTIAL Azure_EKM_TDE_cred2;
-    GO
-    ```
-
-     Choose the database whose database encryption key you would like to re-encrypt.
-
-    ```sql
-    USE [database]
-    GO
-    ```
-
-     Re-encrypt the database encryption key.
-
-    ```sql
-    ALTER DATABASE ENCRYPTION KEY
-    ENCRYPTION BY SERVER ASYMMETRIC KEY [MASTER_KEY2];
-    GO
-    ```
+Azure Key Vault supports key rotation, which is the process of creating a new key and updating the applications to use the new key. Key rotation is a security best practice that helps protect data in case the key is compromised. The SQL Server Connector supports key rotation. Old keys shouldn't be deleted since it might be required to restore a database using an old key. To rotate a key, follow the steps in [Rotate asymmetric key with a new AKV key or a new AKV key version](setup-steps-for-extensible-key-management-using-the-azure-key-vault.md#rotate-asymmetric-key-with-a-new-akv-key-or-a-new-akv-key-version).
 
 ### Upgrade of [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)] Connector
 
@@ -100,12 +36,12 @@ Versions 1.0.0.440 and older have been replaced and are no longer supported in p
 1. Uninstall the old version using **Control Panel\Programs\Programs and Features**
     1. Application name: SQL Server Connector for Microsoft Azure Key Vault
     1. Version: 15.0.300.96 (or older)
-    1. DLL file date: 01/30/2018 3:00 PM (or older)
+    1. DLL file date: 01/30/2018 (or older)
 1. Install (upgrade) new SQL Server Connector for Microsoft Azure Key Vault
     1. Version: 15.0.2000.440
-    1. DLL file date: 09/11/2020 ‏‎5:17 AM
+    1. DLL file date: 09/11/2020
 1. Start SQL Server service
-1. Test encrypted DB(s) is/are accessible
+1. Test encrypted databases are accessible
 
 ### Rollback
 
@@ -114,22 +50,22 @@ Versions 1.0.0.440 and older have been replaced and are no longer supported in p
 1. Uninstall the new version using **Control Panel\Programs\Programs and Features**
     1. Application name: SQL Server Connector for Microsoft Azure Key Vault
     1. Version: 15.0.2000.440
-    1. DLL file date: 09/11/2020 ‏‎5:17 AM
+    1. DLL file date: 11/24/2020
 
 1. Install old version of SQL Server Connector for Microsoft Azure Key Vault
     1. Version: 15.0.300.96
-    1. DLL file date: 01/30/2018 3:00 PM
+    1. DLL file date: 01/30/2018
 1. Start SQL Server service
 
-1. Check that the databases using TDE are accessible.
+1. Check that the databases using TDE are accessible
 
-1. After validating that the update works, you may delete the old [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)] Connector folder (if you chose to rename it instead of uninstalling in Step 3.)
+1. After validating that the update works, you can delete the old [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)] Connector folder (if you chose to rename it instead of uninstalling in Step 3)
 
 ### Older versions of the SQL Server Connector
 
 Deep links to older versions of the SQL Server Connector
 
-- Current: [1.0.5.0 (version 15.0.2000.440) – File date September 11, 2020](https://download.microsoft.com/download/8/0/9/809494f2-bac9-4388-ad07-7eaf9745d77b/1033_15.0.2000.440/SQLServerConnectorforMicrosoftAzureKeyVault.msi)
+- Current: [1.0.5.0 (version 15.0.2000.440) – File date November 24, 2020](https://download.microsoft.com/download/8/0/9/809494f2-bac9-4388-ad07-7eaf9745d77b/1033_15.0.2000.440/SQLServerConnectorforMicrosoftAzureKeyVault.msi)
 - [1.0.5.0 (version 15.0.300.96) – File date January 30, 2018](https://download.microsoft.com/download/8/0/9/809494f2-bac9-4388-ad07-7eaf9745d77b/SQL%20Server%20Connector%20for%20Microsoft%20Azure%20Key%20Vault%201.0.5.0.msi)
 - [1.0.4.0: (version 13.0.811.168)](https://download.microsoft.com/download/8/0/9/809494f2-bac9-4388-ad07-7eaf9745d77b/SQL%20Server%20Connector%20for%20Microsoft%20Azure%20Key%20Vault%201.0.4.0.msi)
 
@@ -176,7 +112,7 @@ Additionally, checking the certificate revocation list might create HTTP traffic
 > Using the SQL Server Connector for Azure Key Vault behind a firewall or proxy server can affect performance if traffic is delayed or blocked. Familiarize yourself with [Access Azure Key Vault behind a firewall](/azure/key-vault/general/access-behind-firewall) to ensure the correct rules are in place.
 
 **How do I connect to Azure Key Vault through an HTTP(S) Proxy Server?**
-  The Connector uses Internet Explorer's Proxy configuration settings. These settings can be controlled via [Group Policy](/archive/blogs/askie/how-to-configure-proxy-settings-for-ie10-and-ie11-as-iem-is-not-available) or via the Registry, but it's important to note that they aren't system-wide settings and will need to be targeted to the service account running the [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)] instance. If a Database Administrator views or edits the settings in Internet Explorer, they'll only affect the Database Administrator's account rather than the [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)] engine. Logging on to the server interactively using the service account isn't recommended and is blocked in many secure environments. Changes to the configured proxy settings may require restarting the [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)] instance to take effect as they're cached when the Connector first attempts to connect to a key vault.
+  The Connector uses Internet Explorer's Proxy configuration settings. These settings can be controlled via [Group Policy](/archive/blogs/askie/how-to-configure-proxy-settings-for-ie10-and-ie11-as-iem-is-not-available) or via the Registry, but it's important to note that they aren't system-wide settings and will need to be targeted to the service account running the [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)] instance. If a Database Administrator views or edits the settings in Internet Explorer, they'll only affect the Database Administrator's account rather than the [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)] engine. Logging on to the server interactively using the service account isn't recommended and is blocked in many secure environments. Changes to the configured proxy settings might require restarting the [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)] instance to take effect as they're cached when the Connector first attempts to connect to a key vault.
 
 **Which key sizes in Azure Key Vault are supported by the SQL Server Connector?**
   The latest build of SQL Server Connector supports Azure Key Vault keys of sizes 2048 and 3072.
@@ -209,7 +145,7 @@ Though you could perform all the configuration steps as a member of the sysadmin
     > [!NOTE]  
     > You may not have permissions to actually change the default directory on your Azure subscription. In this case, create the Microsoft Entra service principal within your default directory so that it is in the same directory as the Azure Key Vault used later.
 
-To learn more about Microsoft Entra ID, read [How Azure subscriptions are related to Microsoft Entra ID](/azure/active-directory/fundamentals/active-directory-how-subscriptions-associated-directory)
+To learn more about Microsoft Entra ID, read [How Azure subscriptions are related to Microsoft Entra ID.](/azure/active-directory/fundamentals/active-directory-how-subscriptions-associated-directory)
 
 ## <a id="AppendixC"></a> C. Error Code Explanations for SQL Server Connector
 
@@ -427,7 +363,7 @@ Azure Key Vault documentation:
 
 - PowerShell [Azure Key Vault Cmdlets](/powershell/module/azurerm.keyvault/) reference
 
-## See also
+## Related content
 
 - [Extensible Key Management Using Azure Key Vault](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)
 - [Use SQL Server Connector with SQL Encryption Features](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md)

@@ -2,7 +2,7 @@
 title: Preparing commands (OLE DB driver)
 description: For a single command that is run multiple times, the OLE DB Driver for SQL Server supports command preparation to improve performance.
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: "06/14/2018"
 ms.service: sql
 ms.subservice: connectivity

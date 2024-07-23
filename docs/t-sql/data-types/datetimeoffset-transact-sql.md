@@ -20,11 +20,11 @@ helpviewer_keywords:
   - "time zones [SQL Server]"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current ||=fabric"
 ---
 # datetimeoffset (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw.md)]
 
 Defines a date that is combined with a time of a day based on a 24-hour clock like [datetime2](datetime2-transact-sql.md), and adds time zone awareness based on Coordinated Universal Time (UTC).
 
@@ -132,6 +132,15 @@ Some down-level clients don't support the **time**, **date**, **datetime2**, and
 | **date** | yyyy-MM-dd | `SQL_WVARCHAR` or `SQL_VARCHAR` | `DBTYPE_WSTRor DBTYPE_STR` | `Java.sql.String` | `String` or `SqString` |
 | **datetime2** | yyyy-MM-dd HH:mm:ss[.nnnnnnn] | `SQL_WVARCHAR` or `SQL_VARCHAR` | `DBTYPE_WSTRor DBTYPE_STR` | `Java.sql.String` | `String` or `SqString` |
 | **datetimeoffset** | yyyy-MM-dd HH:mm:ss[.nnnnnnn] [+&#124;-]hh:mm | `SQL_WVARCHAR` or `SQL_VARCHAR` | `DBTYPE_WSTRor DBTYPE_STR` | `Java.sql.String` | `String` or `SqString` |
+
+## Microsoft Fabric support
+
+In Microsoft Fabric, currently you cannot create columns with the **datetimeoffset** data type, but you can use **datetimeoffset** for converting data with the [AT TIME ZONE (Transact-SQL)](../queries/at-time-zone-transact-sql.md) function, for example:
+
+```sql
+SELECT
+CAST(CAST('2024-07-03 00:00:00' AS DATETIMEOFFSET) AT TIME ZONE 'Pacific Standard Time' AS datetime2) AS PST
+```
 
 ## Convert date and time data
 

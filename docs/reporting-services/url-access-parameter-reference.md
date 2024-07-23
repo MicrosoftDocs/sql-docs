@@ -3,7 +3,7 @@ title: "URL access parameter reference"
 description: Learn how you can use parameters as part of a URL to configure the look and feel of your SQL Server Reporting Services (SSRS) reports.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 07/19/2024
+ms.date: 07/22/2024
 ms.service: reporting-services
 ms.subservice: reporting-services
 ms.topic: conceptual
@@ -17,7 +17,7 @@ helpviewer_keywords:
 
 You can use parameters as part of a URL to configure the look and feel of your [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] reports. This article describes the most commonly used parameters. 
 
-Parameters are case-insensitive and they need a specific prefix depending on what you want to modify:
+Parameters aren't case sensitive. They require a prefix:
 
 - `rs:`: Targets the report server.
 - `rc:`: Targets an HTML Viewer.
@@ -26,7 +26,7 @@ Parameters are case-insensitive and they need a specific prefix depending on wha
 You can also specify parameters that are specific to devices or rendering extensions. For more information about device-specific parameters, see [Specify device information settings in a URL](../reporting-services/specify-device-information-settings-in-a-url.md).
   
 > [!IMPORTANT]  
->  For a SharePoint mode report server it's important that the URL includes the `_vti_bin` proxy syntax to route the request through SharePoint and the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] HTTP proxy. The proxy adds context to the HTTP request that's required to ensure proper execution of the report for SharePoint mode report servers. For examples, see [Access report server items by using URL access](../reporting-services/access-report-server-items-using-url-access.md).
+>  For a SharePoint mode report server, it's important that the URL includes the `_vti_bin` proxy syntax to route the request through SharePoint and the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] HTTP proxy. The proxy adds context to the HTTP request that's required to ensure proper execution of the report for SharePoint mode report servers. For examples, see [Access report server items by using URL access](../reporting-services/access-report-server-items-using-url-access.md).
 > 
 > Reporting Services integration with SharePoint is no longer available after SQL Server 2016.
   
@@ -35,16 +35,31 @@ You can also specify parameters that are specific to devices or rendering extens
 
 Target the HTML Viewer by using the prefix `rc:`.
 
-### `Toolbar`
+|Commands|Description|
+|---|---|
+|`Toolbar`| Show or hide the toolbar. If the value of this parameter is **false**, all remaining options are ignored. If you omit this parameter, the toolbar is automatically displayed for rendering formats that support it. The default of this parameter is **true**.|
+|`Parameters`|Show or hide the parameters area of the toolbar. The default value is **true**. Values include: <br><br><li>**True**: Displays the parameters area of the toolbar.<br> <li>**False**: Hides the parameters area and the user can't display them. <br><li>**Collapsed**: Hides the parameters area, but the user can toggle to see it.<br> <br>**Examples**: <br><br> *Native Mode*: ```https://myrshost/reportserver?/Sales&rc:Parameters=Collapsed``` <br><br> *SharePoint mode*: ```https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales&rc:Parameters=Collapsed```|
+|`Zoom`|Set the report zoom value as an integer percentage or a string constant. Standard string values include **Page Width** and **Whole Page**. The default value is **100**.<br><br>**Examples**:<br><br> *Native Mode*: ```https://myrshost/reportserver?/Sales&rc:Zoom=Page%20Width```<br><br> *SharePoint mode*: ```https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales&rc:Zoom=Page%20Width```|
+|`Section`|Set which page in the report to display. Any value greater than the number of pages in the report displays the last page. Any value less than **0** displays page 1 of the report. The default value is **1**.<br><br>**Examples**:<br><br> *Native Mode*: ```https://myrshost/reportserver?/Sales&rc:Section=2```<br><br> *SharePoint mode*: ```https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales&rc:Section=2```|
+|`FindString`|Search a report for a specific set of text and highlight the text. **Note:** `rc:FindString` doesn't work unless you include `rc:Toolbar=false` in the URL access string.<br><br>**Examples**:<br><br> *Native Mode*: ```https://myrshost/reportserver?/Sales&rc:Toolbar=false&rc:FindString=Mountain-400```<br><br> *SharePoint mode*: ```https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales&rc:Toolbar=false&rc:FindString=Mountain-400```|
+|`StartFind`|Specify the last section to search. The default value is the last page of the report.<br><br>**Example**:<br><br> *Native Mode*: ```https://server/Reportserver?/SampleReports/Product Catalog&rs:Command=Render&rc:StartFind=1&rc:EndFind=5&rc:FindString=Mountain-400```|
+|`EndFind`|Set the number of the last page you want to use in the search. The default value is the number of the current page. Use this parameter with the `StartFind` parameter.<br><br>**Example**: See the `StartFind` example.|
+|`FallbackPage`|Set the number of the page to display if a search or a document map selection fails. The default value is the number of the current page.|
+|`GetImage`|Get a particular icon for the HTML Viewer user interface.|
+|`Icon`|Get the icon of a particular rendering extension.|
+|`Stylesheet`|Specify a style sheet you want to apply to the HTML Viewer.|
+|Device Information Setting| Specify a device information setting in the form of `rc:tag=value`, where `tag` is the name of a device information setting specific to the rendering extension. For more information, see the [Format](#format) section.<br><br>You can use the `OutputFormat` device information setting for the IMAGE rendering extension to render the report to a JPEG image by using the following parameters in the URL access string: `...&rs:Format=IMAGE&rc:OutputFormat=JPEG`. For more information on all extension-specific device information settings, see [Device information settings for rendering extensions &#40;Reporting Services&#41;](../reporting-services/device-information-settings-for-rendering-extensions-reporting-services.md).
+
+### Toolbar
   
 Show or hide the toolbar. If the value of this parameter is **false**, all remaining options are ignored. If you omit this parameter, the toolbar is automatically displayed for rendering formats that support it. The default of this parameter is **true**.
   
 > [!IMPORTANT]  
 >  *rc:Toolbar*=**false** doesn't work for URL access strings that use an IP address, instead of a domain name, to target a report hosted on a SharePoint site.
   
-### `Parameters`
+### Parameters
 
-Show or hide the parameters area of the toolbar. The default value is **true**. Valid values are:
+Show or hide the parameters area of the toolbar. The default value is **true**. Values include:
 
 - **True**: Displays the parameters area of the toolbar. 
 - **False**: Hides the parameters area and the user can't be display them. 
@@ -152,6 +167,12 @@ You can use the `OutputFormat` device information setting for the IMAGE renderin
 ##  <a name="bkmk_reportserver"></a> Report server commands (`rs:`)
 
 Target the report server by using the prefix `rs:`.
+
+|Command|Parameter|Description|
+|-------|---------|-----------|
+|Command|`ListChildren` and `GetChildren`|Display the contents of a folder. The folder items display within a generic item-navigation page. <br><br>*Native mode*: `https://myrshost/reportserver?/Sales&rs:Command=GetChildren`<br><br>*A named instance in native mode*: `https://myssrshost/Reportserver_THESQLINSTANCE?/reportfolder&rs:Command=listChildren`<br><br>*SharePoint mode*:`https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales&rs:Command=GetChildren`|
+| |Render| The report renders in the browser so that you can view it.<br><br>*Native mode*:`https://myrshost/reportserver?/Sales/YearlySalesByCategory&rs:Command=Render`<br><br>`SharePoint mode`:`https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales/YearlySalesByCategory&rs:Command=Render`|
+| |`GetSharedDatasetDefinition`|Display the XML definition associated with a shared dataset. Shared dataset properties are saved in the definition. These properties include the query, dataset parameters, default values, dataset filters, and data options such as collation and case sensitivity. You must have **Read Report Definition** permission on a shared dataset to use this value.<br><br>*Native mode*: `https://localhost/reportserver/?/DataSet1&rs:command=GetShareddatasetDefinition`| 
   
 ### `Command`
 

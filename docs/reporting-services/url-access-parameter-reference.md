@@ -50,6 +50,28 @@ Target the HTML Viewer by using the prefix `rc:`.
 |`Stylesheet`|Specify a style sheet you want to apply to the HTML Viewer.|
 |Device Information Setting| Specify a device information setting in the form of `rc:tag=value`, where `tag` is the name of a device information setting specific to the rendering extension. For more information, see the [Format](#format) section.<br><br>You can use the `OutputFormat` device information setting for the IMAGE rendering extension to render the report to a JPEG image by using the following parameters in the URL access string: `...&rs:Format=IMAGE&rc:OutputFormat=JPEG`. For more information on all extension-specific device information settings, see [Device information settings for rendering extensions &#40;Reporting Services&#41;](../reporting-services/device-information-settings-for-rendering-extensions-reporting-services.md).
 
+
+|Command|Parameter|Description|
+|---|---|---|
+|`Toolbar`|`True`|Displays the toolbar. The default value is **true**.|
+| |`False`|Hides the toolbar. If this parameter is false, all remaining options are ignored.|
+| |`Navigation`|Displays only pagination in the toolbar.|
+|`Parameters`|`True`|Displays the parameters area of the toolbar. The default value is **true**.<br><br>**Examples**:<br><br> *Native Mode*: ```https://myrshost/reportserver?/Sales&rc:Parameters=Collapsed```<br><br> *SharePoint mode*: ```https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales&rc:Parameters=Collapsed```|
+| |`False`|Hides the parameters area, and the user can't display it.|
+| |`Collapsed`|Hides the parameters area, but the user can toggle to see it.<br><br>**Examples**:<br><br> *Native Mode*: ```https://myrshost/reportserver?/Sales&rc:Parameters=Collapsed```<br><br> *SharePoint mode*: ```https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales&rc:Parameters=Collapsed```|
+|`Zoom`|`Page Width`|Set the report zoom to fit the page width.<br><br>**Examples**:<br><br> *Native Mode*: ```https://myrshost/reportserver?/Sales&rc:Zoom=Page%20Width```<br><br> *SharePoint mode*: ```https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales&rc:Zoom=Page%20Width```|
+| |`Whole Page`|Set the report zoom to fit the whole page.|
+| |`<percentage>`|Set the report zoom to a specific percentage. The default value is **100**.|
+|`Section`|`<page number>`|Set which page in the report to display. Any value greater than the number of pages in the report displays the last page. Any value less than **0** displays page 1 of the report. The default value is **1**.<br><br>**Examples**:<br><br> *Native Mode*: ```https://myrshost/reportserver?/Sales&rc:Section=2```<br><br> *SharePoint mode*: ```https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales&rc:Section=2```|
+|`FindString`|`<text>`|Search a report for a specific set of text and highlight the text. **Note:** `rc:FindString` doesn't work unless you include `rc:Toolbar=false` in the URL access string.<br><br>**Examples**:<br><br> *Native Mode*: ```https://myrshost/reportserver?/Sales&rc:Toolbar=false&rc:FindString=Mountain-400```<br><br> *SharePoint mode*: ```https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales&rc:Toolbar=false&rc:FindString=Mountain-400```|
+|`StartFind`|`<start page>`|Specify the first section to search. The default value is the first page of the report.<br><br>**Example**:<br><br> *Native Mode*: ```https://server/Reportserver?/SampleReports/Product Catalog&rs:Command=Render&rc:StartFind=1&rc:EndFind=5&rc:FindString=Mountain-400```|
+|`EndFind`|`<end page>`|Set the number of the last page you want to use in the search. The default value is the number of the current page. Use this parameter with the `StartFind` parameter.<br><br>**Example**: See the `StartFind` example.|
+|`FallbackPage`|`<page number>`|Set the number of the page to display if a search or a document map selection fails. The default value is the number of the current page.|
+|`GetImage`|`<icon name>`|Get a particular icon for the HTML Viewer user interface.|
+|`Icon`|`<icon name>`|Get the icon of a particular rendering extension.|
+|`Stylesheet`|`<stylesheet>`|Specify a style sheet you want to apply to the HTML Viewer.|
+|`Device Information Setting`| |Specify a device information setting in the form of `rc:tag=value`, where `tag` is the name of a device information setting specific to the rendering extension. For more information, see the [Format](#format) section.<br><br>You can use the `OutputFormat` device information setting for the IMAGE rendering extension to render the report to a JPEG image by using the following parameters in the URL access string: `...&rs:Format=IMAGE&rc:OutputFormat=JPEG`. For more information on all extension-specific device information settings, see [Device information settings for rendering extensions &#40;Reporting Services&#41;](../reporting-services/device-information-settings-for-rendering-extensions-reporting-services.md).|
+
   
 ##  <a name="bkmk_reportserver"></a> Report server commands (`rs:`)
 

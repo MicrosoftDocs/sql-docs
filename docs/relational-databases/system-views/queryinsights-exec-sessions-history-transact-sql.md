@@ -31,7 +31,7 @@ monikerRange: "=fabric"
 | `session_start_time` | **datetime2** | Time when session was established. It is not nullable. |
 | `session_end_time` | **datetime2** | Time when the session was disconnected. Sessions that have not completed at the time this view is queried are shown with a value of `1900-01-01`.|
 | `program_name` | **varchar(128)** | Name of client program that initiated the session. The value is `NULL` for internal sessions. Is nullable. |
-| `login_name` | **varchar(128)** | SQL Server login name under which the session is currently executing. For the original login name that created the session, see `original_login_name`. Can be a SQL Server authenticated login name or a Windows authenticated domain username. It is not nullable. |
+| `login_name` | **varchar(128)** | Login name under which the session is currently executing. It is not nullable. |
 | `status` | **varchar(30)** | Status of the session. Values:<br />**Running** - Currently running one or more requests<br />**Sleeping** - Currently running no requests<br />**Dormant** - Session reset because of connection pooling and is now in prelogin state.<br />**Preconnect** - Session is in the Resource Governor classifier.<br />Is not nullable. |
 | `context_info` | **varbinary(128)** | `CONTEXT_INFO` value for the session. The context information is set by the user with [SET CONTEXT_INFO](/sql/t-sql/statements/set-context-info-transact-sql?view=azure-sqldw-latest&preserve-view=true). Is nullable. |
 | `total_query_elapsed_time_ms` | **int** | Total time, in milliseconds, for which the session (requests within) was scheduled/executed for execution. It is not nullable. |
@@ -58,7 +58,7 @@ monikerRange: "=fabric"
 | `transaction_isolation_level` | **smallint** | Transaction isolation level of the session.<br />`0` = Unspecified<br />`1` = ReadUncommitted<br />`2` = ReadCommitted<br />`3` = RepeatableRead<br />`4` = Serializable<br />`5` = Snapshot<br />Is not nullable. |
 | `lock_timeout` | **int** | `LOCK_TIMEOUT` setting for the session. The value is in milliseconds. It is not nullable. |
 | `deadlock_priority` | **int** | `DEADLOCK_PRIORITY` setting for the session. It is not nullable. |
-| `original_security_id` | **varbinary(85)** | [!INCLUDE [msCoName](../../includes/msconame-md.md)] Windows security ID that is associated with the `original_login_name`. Not nullable. |
+| `original_security_id` | **varbinary(85)** | [!INCLUDE [msCoName](../../includes/msconame-md.md)] Windows security ID that is associated with the `login_name`. Not nullable. |
 | `database_name` | **varchar(128)** | Name of the current database for each session. |
 
 ## Permissions

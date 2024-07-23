@@ -3,7 +3,7 @@ title: System Requirements, Installation, and Driver Files
 description: This article describes the system requirements for the Microsoft ODBC Driver for SQL Server.
 author: David-Engel
 ms.author: davidengel
-ms.date: 09/21/2023
+ms.date: 07/31/2024
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: conceptual
@@ -20,6 +20,7 @@ Compatibility indicates that a driver was tested for compatibility against exist
 
 |Database version&nbsp;&#8594;<br />&#8595; Driver Version|Azure SQL Database|Azure Synapse Analytics|Azure SQL Managed Instance|SQL Server 2022|SQL Server 2019|SQL Server 2017|SQL Server 2016|SQL Server 2014|SQL Server 2012|SQL Server 2008 R2|SQL Server 2008|SQL Server 2005|
 |-----|---|---|---|---|---|---|---|---|---|---|---|---|
+|18.4 |Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|   |   |   |   |
 |18.3 |Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|   |   |   |   |
 |18.2 |Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|   |   |   |   |
 |18.1 |Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|   |   |   |   |
@@ -54,6 +55,7 @@ The following matrix indicates driver version support for Windows operating syst
 
 |Operating system&nbsp;&#8594;<br />&#8595; Driver version|Windows Server 2022|Windows Server 2019|Windows Server 2016|Windows Server 2012 R2|Windows Server 2012|Windows Server 2008 R2|Windows 11|Windows 10|Windows 8.1|Windows 7|Windows Vista SP2|
 |----|---|---|---|---|---|---|---|---|---|---|---|
+|18.4|Yes|Yes|Yes|   |   |   |Yes|Yes|   |   |   |
 |18.3|Yes|Yes|Yes|Yes|   |   |Yes|Yes|   |   |   |
 |18.2|Yes|Yes|Yes|Yes|   |   |Yes|Yes|   |   |   |
 |18.1|Yes|Yes|Yes|Yes|Yes|   |Yes|Yes|Yes|   |   |

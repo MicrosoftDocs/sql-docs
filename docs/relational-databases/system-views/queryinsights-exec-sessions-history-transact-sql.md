@@ -4,7 +4,7 @@ description: "The queryinsights.exec_sessions_history in Microsoft Fabric provid
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mariyaali
-ms.date: 07/17/2024
+ms.date: 07/23/2024
 ms.service: sql
 ms.topic: "reference"
 f1_keywords:

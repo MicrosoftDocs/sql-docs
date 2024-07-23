@@ -84,13 +84,13 @@ Set the report zoom value as an integer percentage or a string constant. Standar
 For example, in native mode:
   
 ```  
-https://myrshost/reportserver?/Sales&rc:Zoom=Page Width  
+https://myrshost/reportserver?/Sales&rc:Zoom=Page%20Width  
 ```  
   
 For example, in SharePoint mode:
   
 ```  
-https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales&rc:Zoom=Page Width  
+https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales&rc:Zoom=Page%20Width  
 ```  
   
 ### `Section`

@@ -106,6 +106,26 @@ The security policy might be set in Windows, or might be received from the domai
 > [!NOTE]  
 > For SQL Server logins that have CHECK_POLICY enabled, if you run [ALTER LOGIN](../../t-sql/statements/alter-login-transact-sql.md) and do not include OLD_PASSWORD in the command to change the password, then [Enforce Password History](/windows/security/threat-protection/security-policy-settings/enforce-password-history) is ignored. This is a by-design behavior to allow password resets, despite any previously used passwords. Other checks associated with CHECK_POLICY, including length and complexity are checked regardless of whether OLD_PASSWORD is used.
 
+## Checking SQL user password policy information
+
+You can review SQL user password policies and expiration dates in SQL Server using the following query. Although the following query also works in Azure SQL Database, only password complexity is enforced in Azure SQL Database.
+
+```sql
+SELECT name,
+    is_policy_checked,
+    is_expiration_checked,
+    LOGINPROPERTY(name, 'IsMustChange') AS IsMustChange,
+    LOGINPROPERTY(name, 'IsLocked') AS IsLocked,
+    LOGINPROPERTY(name, 'LockoutTime') AS LockoutTime,
+    LOGINPROPERTY(name, 'PasswordLastSetTime') AS PasswordLastSetTime,
+    LOGINPROPERTY(name, 'IsExpired') AS IsExpired,
+    LOGINPROPERTY(name, 'BadPasswordCount') AS BadPasswordCount,
+    LOGINPROPERTY(name, 'BadPasswordTime') AS BadPasswordTime,
+    LOGINPROPERTY(name, 'HistoryLength') AS HistoryLength,
+    modify_date
+FROM sys.sql_logins;
+```
+
 ## Related tasks
 
 [CREATE LOGIN (Transact-SQL)](../../t-sql/statements/create-login-transact-sql.md)

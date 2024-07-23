@@ -346,21 +346,6 @@
         ],
         "relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md": [
           "sql-server-ver16"
-        ],
-        "ssma/access/legal-notice-ssma-for-access.md": [
-          "sql-server-ver16"
-        ],
-        "ssma/db2/legal-notice-db2tosql.md": [
-          "sql-server-ver16"
-        ],
-        "ssma/mysql/legal-notice-mysqltosql.md": [
-          "sql-server-ver16"
-        ],
-        "ssma/sql-server-migration-assistant.md": [
-          "sql-server-ver16"
-        ],
-        "ssma/sybase/legal-notice-ssma-for-sybase.md": [
-          "sql-server-ver16"
         ]
       }
     },

@@ -17,8 +17,6 @@
     href: installing-ssma-components-on-sql-server-db2tosql.md
   - name: Removing SSMA for DB2 components
     href: removing-ssma-for-db2-components-db2tosql.md
-  - name: Legal notice
-    href: legal-notice-db2tosql.md
 - name: Migrating DB2 databases
   items:
   - name: Migrating DB2 databases to SQL Server

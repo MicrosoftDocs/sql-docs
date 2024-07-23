@@ -58,7 +58,7 @@ For the scripts in this article, angle brackets `<` and `>` identify values that
 
    **Set mixed mode authentication**
 
-   For instructions, see [Change server authentication mode](../database-engine/configure-windows/change-server-authentication-mode.md#change-authentication-mode-with-ssms).
+   For instructions, see [Change server authentication mode](../database-engine/configure-windows/change-server-authentication-mode.md#use-ssms).
 
 1. Install [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] on Linux. For instructions, see [Installation guidance for SQL Server on Linux](sql-server-linux-setup.md). Enable `hadr` with **mssql-conf**.
 

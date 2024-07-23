@@ -1,7 +1,6 @@
 ### YamlMime:Landing
-
 title: SQL Server technical documentation
-summary: Technical documentation to help you get started, administer, develop, and work with SQL Server and associated products. 
+summary: Technical documentation to help you get started, administer, develop, and work with SQL Server and associated products.
 metadata:
   title: SQL Server technical documentation
   description: Choose the area of SQL Server you are interested in.
@@ -9,234 +8,228 @@ metadata:
   ms.topic: landing-page
   author: MashaMSFT
   ms.author: mathoma
-  ms.date: 09/05/2023
+  ms.reviewer: randolphwest
+  ms.date: 07/19/2024
   ms.custom: FY22Q2Fresh
-landingContent:
 
+landingContent:
   - title: SQL on Azure
     linkLists:
-    - linkListType: overview
-      links:
-      - text: Azure SQL 
-        url: /azure/azure-sql/azure-sql-iaas-vs-paas-what-is-overview
-      - text: Azure SQL Database
-        url: /azure/azure-sql/database/sql-database-paas-overview
-      - text: Azure SQL Managed Instance
-        url: /azure/azure-sql/managed-instance/sql-managed-instance-paas-overview
-      - text: Connect to Azure SQL 
-        url: /azure/azure-sql/database/develop-overview#client-connections
-      - text: SQL Server on Azure Windows VMs
-        url:  /azure/azure-sql/virtual-machines/windows/sql-server-on-azure-vm-iaas-what-is-overview
-      - text: SQL Server on Azure Linux VMs
-        url: /azure/azure-sql/virtual-machines/linux/sql-server-on-linux-vm-what-is-iaas-overview
-      - text: Azure Synapse Analytics
-        url: /azure/synapse-analytics/overview-what-is
-      - text: Azure Database Migration Service
-        url: /azure/dms/dms-overview
-
+      - linkListType: overview
+        links:
+          - text: Azure SQL
+            url: /azure/azure-sql/azure-sql-iaas-vs-paas-what-is-overview
+          - text: Azure SQL Database
+            url: /azure/azure-sql/database/sql-database-paas-overview
+          - text: Azure SQL Managed Instance
+            url: /azure/azure-sql/managed-instance/sql-managed-instance-paas-overview
+          - text: Connect to Azure SQL
+            url: /azure/azure-sql/database/develop-overview#client-connections
+          - text: SQL Server on Azure Windows VMs
+            url: /azure/azure-sql/virtual-machines/windows/sql-server-on-azure-vm-iaas-what-is-overview
+          - text: SQL Server on Azure Linux VMs
+            url: /azure/azure-sql/virtual-machines/linux/sql-server-on-linux-vm-what-is-iaas-overview
+          - text: Azure Synapse Analytics
+            url: /azure/synapse-analytics/overview-what-is
+          - text: Azure Database Migration Service
+            url: /azure/dms/dms-overview
 
   - title: Migration
     linkLists:
-    - linkListType: overview
-      links:
-      - text: Migration content
-        url:  migrate/index.yml
-      - text: Data migration guide
-        url:  /data-migration/
-      - text: Database compatibility certification
-        url: ../database-engine/install-windows/compatibility-certification.md
-      - text: Data Migration Assistant (DMA)
-        url: ../dma/dma-overview.md
-      - text: SQL Server Migration Assistant (SSMA)
-        url: ../ssma/sql-server-migration-assistant.md
-
+      - linkListType: overview
+        links:
+          - text: Migration content
+            url: migrate/index.yml
+          - text: Data migration guide
+            url: /data-migration/
+          - text: Database compatibility certification
+            url: ../database-engine/install-windows/compatibility-certification.md
+          - text: Data Migration Assistant (DMA)
+            url: ../dma/dma-overview.md
+          - text: SQL Server Migration Assistant (SSMA)
+            url: ../ssma/sql-server-migration-assistant.md
 
   - title: SQL Server
     linkLists:
-    - linkListType: whats-new
-      links:
-      - text: SQL Server 2022
-        url: ./what-s-new-in-sql-server-2022.md
-      - text: SQL Server 2019 
-        url: ./what-s-new-in-sql-server-2019.md
-      - text: Azure Data Studio
-        url: ../azure-data-studio/what-is-azure-data-studio.md
-      - text: SQL Server on Linux
-        url: ../linux/sql-server-linux-overview.md
-      - text: SQL Server enabled by Azure Arc
-        url: azure-arc/overview.md
-    - linkListType: quickstart
-      links:
-      - text: What is SQL Server?
-        url: what-is-sql-server.md
-      - text: Connect to the Database Engine
-        url: connect-to-database-engine.md
-      - text: Connect & query with Azure Data Studio
-        url: ../azure-data-studio/quickstart-sql-server.md
-      - text: Connect & query with SSMS
-        url: ../ssms/quickstarts/ssms-connect-query-sql-server.md
-    - linkListType: download
-      links:
-      - text: SQL Server
-        url: https://www.microsoft.com/sql-server/sql-server-downloads
-      - text: SQL Server Management Studio
-        url: ../ssms/download-sql-server-management-studio-ssms.md
-      - text: Azure Data Studio
-        url: ../azure-data-studio/download-azure-data-studio.md
-    - linkListType: reference
-      links:
-      - text: Transact-SQL (T-SQL)
-        url: ../t-sql/language-reference.md
-      - text: SQL Server 2014 docs
-        url: ./sql-server-2014-release-notes.md
-      - text: Educational SQL resources
-        url: ../sql-server/educational-sql-resources.yml
-      - text: Sample databases
-        url: ../samples/sql-samples-where-are.md
-      - text: Internals & architecture guides
-        url: ../relational-databases/sql-server-guides.md
-      - text: Previous versions 2005-2012
-        url: ./previous-versions-sql-server.md
+      - linkListType: whats-new
+        links:
+          - text: SQL Server 2022
+            url: ./what-s-new-in-sql-server-2022.md
+          - text: SQL Server 2019
+            url: ./what-s-new-in-sql-server-2019.md
+          - text: Azure Data Studio
+            url: ../azure-data-studio/what-is-azure-data-studio.md
+          - text: SQL Server on Linux
+            url: ../linux/sql-server-linux-overview.md
+          - text: SQL Server enabled by Azure Arc
+            url: azure-arc/overview.md
+      - linkListType: quickstart
+        links:
+          - text: What is SQL Server?
+            url: what-is-sql-server.md
+          - text: Connect to the Database Engine
+            url: connect-to-database-engine.md
+          - text: Connect and query with Azure Data Studio
+            url: ../azure-data-studio/quickstart-sql-server.md
+          - text: Connect and query with SSMS
+            url: ../ssms/quickstarts/ssms-connect-query-sql-server.md
+      - linkListType: download
+        links:
+          - text: SQL Server
+            url: https://www.microsoft.com/sql-server/sql-server-downloads
+          - text: SQL Server Management Studio
+            url: ../ssms/download-sql-server-management-studio-ssms.md
+          - text: Azure Data Studio
+            url: /azure-data-studio/download-azure-data-studio
+      - linkListType: reference
+        links:
+          - text: Transact-SQL (T-SQL)
+            url: ../t-sql/language-reference.md
+          - text: Educational SQL resources
+            url: ../sql-server/educational-sql-resources.yml
+          - text: Sample databases
+            url: ../samples/sql-samples-where-are.md
+          - text: Internals and architecture guides
+            url: ../relational-databases/sql-server-guides.md
+          - text: Previous versions 2005-2014
+            url: ./previous-versions-sql-server.md
 
-  - title: Business continuity 
+  - title: Business continuity
     linkLists:
-    - linkListType: overview
-      links:
-      - text: Backup & restore
-        url:  ../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md
-      - text: Always On availability groups
-        url: ../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md
-      - text: Always On failover cluster instance
-        url: failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md
-      - text: Database mirroring 
-        url: ../database-engine/database-mirroring/database-mirroring-sql-server.md
-      - text: Log shipping
-        url: ../database-engine/log-shipping/about-log-shipping-sql-server.md
-      - text: Replication
-        url: ../relational-databases/replication/sql-server-replication.md
+      - linkListType: overview
+        links:
+          - text: Backup and restore
+            url: ../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md
+          - text: Always On availability groups
+            url: ../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md
+          - text: Always On failover cluster instance
+            url: failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md
+          - text: Database mirroring
+            url: ../database-engine/database-mirroring/database-mirroring-sql-server.md
+          - text: Log shipping
+            url: ../database-engine/log-shipping/about-log-shipping-sql-server.md
+          - text: Replication
+            url: ../relational-databases/replication/sql-server-replication.md
 
-
-  - title: Security 
+  - title: Security
     linkLists:
-    - linkListType: overview
-      links:
-      - text: SQL Vulnerability Assessment
-        url: ../relational-databases/security/sql-vulnerability-assessment.md
-      - text: Access management 
-        url: ../relational-databases/security/authentication-access/determining-effective-database-engine-permissions.md
-      - text: Always Encrypted  
-        url: ../relational-databases/security/encryption/always-encrypted-database-engine.md
-      - text: Auditing 
-        url: ../relational-databases/security/auditing/sql-server-audit-database-engine.md
-      - text: Enclaves
-        url: ../relational-databases/security/encryption/always-encrypted-enclaves.md
-      - text: Dynamic data masking
-        url: ../relational-databases/security/dynamic-data-masking.md
-      - text: Transparent Data Encryption (TDE)
-        url: ../relational-databases/security/encryption/transparent-data-encryption.md
-      - text: Row-level security
-        url: ../relational-databases/security/row-level-security.md
+      - linkListType: overview
+        links:
+          - text: SQL Vulnerability Assessment
+            url: ../relational-databases/security/sql-vulnerability-assessment.md
+          - text: Access management
+            url: ../relational-databases/security/authentication-access/determining-effective-database-engine-permissions.md
+          - text: Always Encrypted
+            url: ../relational-databases/security/encryption/always-encrypted-database-engine.md
+          - text: Enclaves
+            url: ../relational-databases/security/encryption/always-encrypted-enclaves.md
+          - text: Auditing
+            url: ../relational-databases/security/auditing/sql-server-audit-database-engine.md
+          - text: Dynamic data masking
+            url: ../relational-databases/security/dynamic-data-masking.md
+          - text: Transparent data encryption (TDE)
+            url: ../relational-databases/security/encryption/transparent-data-encryption.md
+          - text: Row-level security
+            url: ../relational-databases/security/row-level-security.md
 
-  - title: Database Design 
+  - title: Database design
     linkLists:
-    - linkListType: overview
-      links:
-      - text: Collation
-        url: ../relational-databases/collations/collation-and-unicode-support.md
-      - text: Databases 
-        url: ../relational-databases/databases/databases.md
-      - text: Graph
-        url: ../relational-databases/graphs/sql-graph-overview.md
-      - text: Indexes
-        url: ../relational-databases/indexes/indexes.md
-      - text: Views 
-        url: ../relational-databases/views/views.md
-      - text: User-defined functions
-        url: ../relational-databases/user-defined-functions/user-defined-functions.md
-      - text: Tables
-        url: ../relational-databases/tables/tables.md
-      - text: Stored procedures
-        url: ../relational-databases/stored-procedures/stored-procedures-database-engine.md
+      - linkListType: overview
+        links:
+          - text: Collation
+            url: ../relational-databases/collations/collation-and-unicode-support.md
+          - text: Databases
+            url: ../relational-databases/databases/databases.md
+          - text: Graph
+            url: ../relational-databases/graphs/sql-graph-overview.md
+          - text: Indexes
+            url: ../relational-databases/indexes/indexes.md
+          - text: Views
+            url: ../relational-databases/views/views.md
+          - text: User-defined functions
+            url: ../relational-databases/user-defined-functions/user-defined-functions.md
+          - text: Tables
+            url: ../relational-databases/tables/tables.md
+          - text: Stored procedures
+            url: ../relational-databases/stored-procedures/stored-procedures-database-engine.md
 
-
-  - title: Manage & monitor 
+  - title: Manage and monitor
     linkLists:
-    - linkListType: overview
-      links:
-      - text: Transaction log management
-        url: ../relational-databases/logs/the-transaction-log-sql-server.md
-      - text: Maintenance plans
-        url: ../relational-databases/maintenance-plans/maintenance-plans.md
-      - text: SQL Server Agent 
-        url: ../ssms/agent/sql-server-agent.md
-      - text: Track changes 
-        url: ../relational-databases/track-changes/track-data-changes-sql-server.md
-      - text: Data compression
-        url: ../relational-databases/data-compression/data-compression.md
-      - text: Extended events
-        url: ../relational-databases/extended-events/extended-events.md
+      - linkListType: overview
+        links:
+          - text: Transaction log management
+            url: ../relational-databases/logs/the-transaction-log-sql-server.md
+          - text: Maintenance plans
+            url: ../relational-databases/maintenance-plans/maintenance-plans.md
+          - text: SQL Server Agent
+            url: ../ssms/agent/sql-server-agent.md
+          - text: Track changes
+            url: ../relational-databases/track-changes/track-data-changes-sql-server.md
+          - text: Data compression
+            url: ../relational-databases/data-compression/data-compression.md
+          - text: Extended events
+            url: ../relational-databases/extended-events/extended-events.md
 
   - title: Tune
     linkLists:
-    - linkListType: overview
-      links:
-      - text: Performance center
-        url: ../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md
-      - text: Intelligent Query Processing
-        url: ../relational-databases/performance/intelligent-query-processing.md
-      - text: Automatic tuning
-        url: ../relational-databases/automatic-tuning/automatic-tuning.md
-      - text: Database Tuning Advisor 
-        url: ../relational-databases/performance/database-engine-tuning-advisor.md
-      - text: In-memory OLTP
-        url: ../relational-databases/in-memory-oltp/overview-and-usage-scenarios.md
-    - linkListType: concept
-      links:
-      - text: Cardinality estimation
-        url: ../relational-databases/performance/cardinality-estimation-sql-server.md
-      - text: Statistics 
-        url: ../relational-databases/statistics/statistics.md
-      - text: Indexes
-        url: ../relational-databases/indexes/indexes.md
+      - linkListType: overview
+        links:
+          - text: Performance center
+            url: ../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md
+          - text: Intelligent Query Processing
+            url: ../relational-databases/performance/intelligent-query-processing.md
+          - text: Automatic tuning
+            url: ../relational-databases/automatic-tuning/automatic-tuning.md
+          - text: Database Tuning Advisor
+            url: ../relational-databases/performance/database-engine-tuning-advisor.md
+          - text: In-memory OLTP
+            url: ../relational-databases/in-memory-oltp/overview-and-usage-scenarios.md
+      - linkListType: concept
+        links:
+          - text: Cardinality estimation
+            url: ../relational-databases/performance/cardinality-estimation-sql-server.md
+          - text: Statistics
+            url: ../relational-databases/statistics/statistics.md
+          - text: Indexes
+            url: ../relational-databases/indexes/indexes.md
 
   - title: Query data
     linkLists:
-    - linkListType: overview
-      links:
-      - text: Transact-SQL (T-SQL)
-        url: ../t-sql/language-reference.md
-      - text: SQL PowerShell
-        url: ../powershell/sql-server-powershell.md
-      - text: Scripting 
-        url: ../ssms/scripting/database-engine-scripting.md
-      - text: Joins
-        url: ../relational-databases/performance/joins.md
-      - text: Full-text search
-        url: ../relational-databases/search/full-text-search.md
-      - text: Synonyms 
-        url: ../relational-databases/synonyms/synonyms-database-engine.md
+      - linkListType: overview
+        links:
+          - text: Transact-SQL (T-SQL)
+            url: ../t-sql/language-reference.md
+          - text: SQL PowerShell
+            url: /powershell/sql-server/sql-server-powershell
+          - text: Scripting
+            url: ../ssms/scripting/database-engine-scripting.md
+          - text: Joins
+            url: ../relational-databases/performance/joins.md
+          - text: Full-text search
+            url: ../relational-databases/search/full-text-search.md
+          - text: Synonyms
+            url: ../relational-databases/synonyms/synonyms-database-engine.md
 
-
-  - title: Big data & machine learning 
+  - title: Big data and machine learning
     linkLists:
-    - linkListType: overview
-      links:
-      - text: Analytics Platform System 
-        url: https://www.microsoft.com/sql/analytics-platform-system/
-      - text: SQL Server Machine Learning (R & Python)
-        url: ../machine-learning/index.yml
-      - text: Data virtualization with PolyBase
-        url: ../relational-databases/polybase/polybase-guide.md
+      - linkListType: overview
+        links:
+          - text: Analytics Platform System
+            url: https://www.microsoft.com/sql/analytics-platform-system/
+          - text: SQL Server Machine Learning (R & Python)
+            url: ../machine-learning/index.yml
+          - text: Data virtualization with PolyBase
+            url: ../relational-databases/polybase/polybase-guide.md
 
-  - title: Business Intelligence 
+  - title: Business intelligence
     linkLists:
-    - linkListType: overview
-      links:
-      - text: SQL Server Reporting Services (SSRS)
-        url: ../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md
-      - text: SQL Server Analysis Services (SSAS)
-        url: /analysis-services/analysis-services-overview
-      - text: SQL Server Integration Services (SSIS)
-        url: ../integration-services/sql-server-integration-services.md
-      - text: Azure Data Factory
-        url: /azure/data-factory/
+      - linkListType: overview
+        links:
+          - text: SQL Server Reporting Services (SSRS)
+            url: ../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md
+          - text: SQL Server Analysis Services (SSAS)
+            url: /analysis-services/analysis-services-overview
+          - text: SQL Server Integration Services (SSIS)
+            url: ../integration-services/sql-server-integration-services.md
+          - text: Azure Data Factory
+            url: /azure/data-factory/

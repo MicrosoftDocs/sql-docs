@@ -107,13 +107,13 @@ $importRequest = New-AzSqlDatabaseImport -ResourceGroupName "<resourceGroupName>
 Use the [New-AzSqlDatabaseExport](/PowerShell/module/az.sql/new-azsqldatabaseexport) cmdlet to submit an export database request to the Azure SQL Database service. Depending on the size of your database, the export operation might take some time to complete.
 
 ```PowerShell
-$importRequest = New-AzSqlDatabaseExport -ResourceGroupName "<resourceGroupName>" `
+$exportRequest = New-AzSqlDatabaseExport -ResourceGroupName "<resourceGroupName>" `
         -ServerName "<serverName>" -DatabaseName "<databaseName>" `
-        -DatabaseMaxSizeBytes "<databaseSizeInBytes>" -StorageKeyType "StorageAccessKey" `
+        -StorageKeyType "StorageAccessKey" `
         -StorageKey $(Get-AzStorageAccountKey -ResourceGroupName $resourceGroupName `
                         -StorageAccountName "<storageAccountName>").Value[0]
         -StorageUri "https://myStorageAccount.blob.core.windows.net/importsample/sample.bacpac" `
-        -Edition "Standard" -ServiceObjectiveName "P6" ` -UseNetworkIsolation $true `
+        -UseNetworkIsolation $true `
         -StorageAccountResourceIdForPrivateLink "/subscriptions/<subscriptionId>/resourcegroups/<resource_group_name>/providers/Microsoft.Storage/storageAccounts/<storage_account_name>" `
          -SqlServerResourceIdForPrivateLink "/subscriptions/<subscriptionId>/resourceGroups/<resource_group_name>/providers/Microsoft.Sql/servers/<server_name>" `
         -AdministratorLogin "<userID>" `

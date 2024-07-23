@@ -131,6 +131,7 @@ If you need to download the packages for offline installation, all versions are 
 - [SUSE 11 .rpm packages](https://packages.microsoft.com/sles/11/prod/)
 
 ### Ubuntu
+- Ubuntu 24.04 .deb packages: [v18](https://packages.microsoft.com/ubuntu/24.04/prod/pool/main/m/msodbcsql18/)
 - Ubuntu 23.04 .deb packages: [v18](https://packages.microsoft.com/ubuntu/23.04/prod/pool/main/m/msodbcsql18/)
 - Ubuntu 22.04 .deb packages: [v17](https://packages.microsoft.com/ubuntu/22.04/prod/pool/main/m/msodbcsql17/) [v18](https://packages.microsoft.com/ubuntu/22.04/prod/pool/main/m/msodbcsql18/)
 [v18](https://packages.microsoft.com/ubuntu/21.10/prod/pool/main/m/msodbcsql18/)

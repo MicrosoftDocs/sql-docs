@@ -51,7 +51,7 @@ https://[rswebserviceurl]?[pathinfo][&prefix:param=value]...[&prefix:param=value
 
 ## Syntax description
 
-The following section provides a detailed description of some parameters used in the URL access string. For a complete list, see [URL access parameter reference](../reporting-services/url-access-parameter-reference). 
+The following section provides a detailed description of some parameters used in the URL access string. For a complete list, see [URL access parameter reference](../reporting-services/url-access-parameter-reference.md). 
 
 ### *rswebserviceurl*
 

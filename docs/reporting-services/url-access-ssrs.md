@@ -53,11 +53,11 @@ https://[rswebserviceurl]?[pathinfo][&prefix:param=value]...[&prefix:param=value
 
 The following section provides a detailed description of some parameters used in the URL access string. For a complete list, see [URL access parameter reference](../reporting-services/url-access-parameter-reference). 
 
-### `rswebserviceurl`
+### *rswebserviceurl*
 
 The web service URL of the report server. 
 
-- For native mode, it's the web service report server instance web service URL configured in [Reporting Services Configuration Manager]. For more information,  see [Configure report server URLs &#40;Report Server Configuration Manager&#41;](../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md). 
+- For native mode, it's the web service report server instance web service URL configured in Reporting Services Configuration Manager. For more information, see [Configure report server URLs &#40;Report Server Configuration Manager&#41;](../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md). 
 
    For example:
 
@@ -74,10 +74,10 @@ The web service URL of the report server.
    https://myspsite/subsite/_vti_bin/reportserver
    ```
 
-> [!TIP]
-> It's important the URL include the `_vti_bin` proxy syntax to route the request through SharePoint and the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] HTTP proxy. The proxy adds some context to the HTTP request, context that'ss required to ensure proper execution of the report for SharePoint mode report servers.
+   > [!TIP]
+   > It's important the URL include the `_vti_bin` proxy syntax to route the request through SharePoint and the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] HTTP proxy. The proxy adds some context to the HTTP request, context that'ss required to ensure proper execution of the report for SharePoint mode report servers.
 
-### `pathinfo`
+### *pathinfo*
 
 The relative path name of the item in the native mode report server database, or the fully qualified URL of the item in a SharePoint catalog.
 
@@ -93,7 +93,7 @@ For SharePoint integrated mode, it's the fully qualified URL of the item in the 
 https://myspsite/subsite/AdventureWorks2022/Employee_Sales_Summary_2022.rdl
 ```
 
-### `&prefix:param=value`
+### *&prefix:param=value*
 
 In a URL access string, you add parameters and their corresponding values to customize the report rendering or behavior. You construct parameters in name/value pairs by using the syntax `param=value`, separated by an ampersand (`&`).
 

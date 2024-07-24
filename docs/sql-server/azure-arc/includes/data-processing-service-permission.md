@@ -12,7 +12,7 @@ Each virtual or physical server needs to communicate with Azure. Specifically, t
 - URL: `*.<region>.arcdataservices.com`
 - Port: 443
 - Direction: Outbound
-- Authentication provider: Entra ID
+- Authentication provider: Microsoft Entra ID
 
 To get the region segment of a regional endpoint, remove all spaces from the Azure region name. For example, *East US 2* region, the region name is `eastus2`.
 

@@ -54,7 +54,7 @@ For data collection and reporting, some of the services require the Azure Monito
 * Microsoft Defender for Cloud
 * SQL Server best practices assessment 
 
-The Azure Extension for SQL Server lets you discover host or OS level (e.g Windows Server failover cluster) configuration changes for all SQL Server instances on a granular level. For example:
+The Azure Extension for SQL Server lets you discover host or OS level (for example, Windows Server failover cluster) configuration changes for all SQL Server instances on a granular level. For example:
 
 * SQL Server engine instances on a host machine
 * Databases within a SQL Server instance
@@ -64,11 +64,11 @@ Azure Extension for SQL Server lets you centrally manage, secure, and govern the
 
 The following diagram illustrates the architecture of Azure Arc-enabled SQL Server.
 
-:::image type="content" source="media/security-overview/architecture.png" alt-text="Logical diagram of SQL Server enabled by Azure Arc.":::
+:::image type="content" source="media/security-overview/architecture.png" alt-text="Logical diagram of SQL Server enabled by Azure Arc." lightbox="media/security-overview/architecture.png":::
 
 ## Components
 
-An instance of SQL Server enabled by Azure Arc has integrated components and services that run on your server and help connect to Azure. In addition to the [Agent services](/azure/azure-arc/servers/security-overview#agent-services), An instance enabled has the components listed in this section.
+An instance of SQL Server enabled by Azure Arc has integrated components and services that run on your server and help connect to Azure. In addition to the [Agent services](/azure/azure-arc/servers/security-overview#agent-services), an instance enabled has the components listed in this section.
 
 ### Azure Resource Manager
 
@@ -289,7 +289,7 @@ Automatic patching overwrites any preconfigured or policy-based update Microsoft
 
 ### Monitor
 
-You can monitor SQL Server enabled by Azure Arc with a performance dashboard in the Azure portal. Performance metrics are automatically collected from Dynamic Management View (DMV) datasets on eligible instances of SQL Server enabled by Azure Arc and sent to the Azure telemetry pipeline for near real-time processing. Monitoring is automatic, assuming all prerequisites are met. \
+You can monitor SQL Server enabled by Azure Arc with a performance dashboard in the Azure portal. Performance metrics are automatically collected from Dynamic Management View (DMV) datasets on eligible instances of SQL Server enabled by Azure Arc and sent to the Azure telemetry pipeline for near real-time processing. Monitoring is automatic, assuming all prerequisites are met. 
 
 Prerequisites include:
 

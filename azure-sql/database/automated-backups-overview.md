@@ -48,13 +48,9 @@ Azure SQL Database creates:
 
 The exact frequency of transaction log backups is based on the compute size and the amount of database activity. When you restore a database, the service determines which full, differential, and transaction log backups need to be restored.
 
-These automatic backups taken by the Azure service are not available for end customers to download or access directly; they can only be used for restore operations. 
-
 The Hyperscale architecture doesn't require full, differential, or log backups. To learn more, see [Hyperscale backups](hyperscale-automated-backups-overview.md). 
 
-
 ## Backup storage redundancy
-
 
 The storage redundancy mechanism stores multiple copies of your data so that it's protected from planned and unplanned events. These events might include transient hardware failure, network or power outages, or massive natural disasters. 
 
@@ -132,8 +128,6 @@ This table summarizes the capabilities and features of [point-in-time restore (P
 <sup>2</sup> All PITR backups are stored on geo-redundant storage by default, so geo-restore is enabled by default.   
 <sup>3</sup> The workaround is to restore to a new server and use Resource Move to move the server to another subscription, or use a [cross-subscription database copy](database-copy.md#copy-to-a-different-subscription).   
 
-
-
 ## Restore a database from backup
 
 To perform a restore, see [Restore a database from backups](recovery-using-backups.md). You can explore backup configuration and restore operations by using the following examples.
@@ -144,6 +138,14 @@ To perform a restore, see [Restore a database from backups](recovery-using-backu
 | **Change long-term backup retention** | [SQL Database](long-term-backup-retention-configure.md#create-long-term-retention-policies)<br/> [SQL Managed Instance](../managed-instance/long-term-backup-retention-configure.md) | [SQL Database](long-term-backup-retention-configure.md) <br/> [SQL Managed Instance](../managed-instance/long-term-backup-retention-configure.md) | [SQL Database](long-term-backup-retention-configure.md)<br/>[SQL Managed Instance](../managed-instance/long-term-backup-retention-configure.md)  |
 | **Restore a database from a point in time** | [SQL Database](recovery-using-backups.md#point-in-time-restore)<br>[SQL Managed Instance](../managed-instance/point-in-time-restore.md) | [SQL Database](/cli/azure/sql/db#az-sql-db-restore) <br/> [SQL Managed Instance](/cli/azure/sql/midb#az-sql-midb-restore) | [SQL Database](/powershell/module/az.sql/restore-azsqldatabase) <br/> [SQL Managed Instance](/powershell/module/az.sql/restore-azsqlinstancedatabase) |
 | **Restore a deleted database** | [SQL Database](recovery-using-backups.md)<br>[SQL Managed Instance](../managed-instance/point-in-time-restore.md#restore-a-deleted-database) | [SQL Database](long-term-backup-retention-configure.md#restore-from-ltr-backups) <br/> [SQL Managed Instance](../managed-instance/long-term-backup-retention-configure.md#restore-from-ltr-backups) | [SQL Database](/powershell/module/az.sql/get-azsqldeleteddatabasebackup) <br/> [SQL Managed Instance](/powershell/module/az.sql/get-azsqldeletedinstancedatabasebackup)|
+
+## Export a database
+
+Automatic backups taken by the Azure service are not available to download or access directly. They can only be used for restore operations through Azure.
+
+There are alternatives to export an Azure SQL Database. When you need to export a database for archiving or for moving to another platform, you can [export the database schema and data](database-export.md) to a [BACPAC](/sql/relational-databases/data-tier-applications/data-tier-applications#bacpac) file. A BACPAC file is a ZIP file with an extension of BACPAC containing the metadata and data from the database. A BACPAC file can be stored in Azure Blob storage or in local storage in an on-premises location and later imported back into [Azure SQL Database](sql-database-paas-overview.md), [Azure SQL Managed Instance](../managed-instance/sql-managed-instance-paas-overview.md), or a [SQL Server instance](/sql/database-engine/sql-server-database-engine-overview).
+
+You can also [Import or export an Azure SQL Database using private link](database-import-export-private-link.md) or [Import or export an Azure SQL Database without allowing Azure services to access the server](database-import-export-azure-services-off.md).
 
 ## Backup scheduling
 
@@ -167,7 +169,7 @@ Hyperscale databases use a different backup scheduling mechanism. For more infor
 
 Backups that are no longer needed to provide PITR functionality are automatically deleted. Because differential backups and log backups require an earlier full backup to be restorable, all three backup types are purged together in weekly sets.
 
-For all databases, including [TDE-encrypted](../database/transparent-data-encryption-tde-overview.md) databases, all full and differential backups are compressed, to reduce backup storage compression and costs. Average backup compression ratio is 3 to 4 times. However, it can be significantly lower or higher depending on the nature of the data and whether data compression is used in the database.
+For all databases, including [TDE-encrypted](../database/transparent-data-encryption-tde-overview.md) databases, all full and differential backups are compressed, to reduce backup storage compression and costs. Average backup compression ratio is 3 to 4 times. However, it can be lower or higher depending on the nature of the data and whether data compression is used in the database.
 
 > [!IMPORTANT]
 > For TDE-encrypted databases, log backups files are not compressed for performance reasons. Log backups for non-TDE-encrypted databases are compressed.
@@ -210,7 +212,7 @@ You can specify your backup storage redundancy option for STR when you create yo
 
 You can [change the backup retention period](automated-backups-change-settings.md#change-short-term-retention-policy) for each active database in the range of 1 to 35 days, except for Basic databases, which are configurable from 1 to 7 days. As described in [Backup storage consumption](#backup-storage-consumption), backups stored to enable PITR might be older than the retention period. If you need to keep backups for longer than the maximum short-term retention period of 35 days, you can enable [long-term retention](long-term-retention-overview.md).
 
-If you delete a database, the system keeps backups in the same way that it would for an online database with its specific retention period. You can't change the backup retention period for a deleted database.
+If you delete a database, the system keeps backups in the same way for an online database with its specific retention period. You can't change the backup retention period for a deleted database.
 
 > [!IMPORTANT]
 > If you delete a server, all databases on that server are also deleted and can't be recovered. You can't restore a deleted server. But if you've configured long-term retention for a database, LTR backups are not deleted. You can then use those backups to restore databases on a different server in the same subscription, to a point in time when an LTR backup was taken. To learn more, review [Restore long-term backup](long-term-backup-retention-configure.md#view-backups-and-restore-from-a-backup).
@@ -227,7 +229,7 @@ Storage consumption depends on the selected frequency and retention periods of L
 
 When restoring a Hyperscale database from an LTR backup, the read scale property is disabled. To enable, read scale on the restored database, update the database after it has been created. You need to specify the target service level objective when restoring from an LTR backup. 
 
-Long-term retention can be enabled for Hyperscale databases created or migrated from other service tiers. If you attempt to enable LTR for a Hyperscale database where it isn't yet supported, you receive the following error: "An error has occurred while enabling Long-term backup retention for this database. Please reach out to Microsoft support to enable long-term backup retention." In this case, reach out to Microsoft support and please create a support ticket to resolve this.
+Long-term retention can be enabled for Hyperscale databases created or migrated from other service tiers. If you attempt to enable LTR for a Hyperscale database where it isn't yet supported, you receive the following error: "An error has occurred while enabling Long-term backup retention for this database. Please reach out to Microsoft support to enable long-term backup retention." In this case, reach out to Microsoft support and create a support ticket to resolve.
 
 ## Backup storage costs
 
@@ -294,7 +296,8 @@ To understand backup storage costs, go to **Cost Management + Billing** in the A
 1. Add a filter for **Service name**.
 1. In the dropdown list, select **sql database** for a single database or an elastic database pool.
 1. Add another filter for **Meter subcategory**.
-1. To monitor PITR backup costs, in the dropdown list, select **single/elastic pool pitr backup storage** for a single database or an elastic database pool. Meters show up only if backup storage consumption exists.
+1. To monitor PITR backup costs, in the dropdown list, select **single/elastic pool pitr
+1.  backup storage** for a single database or an elastic database pool. Meters show up only if backup storage consumption exists.
    
    To monitor LTR backup costs, in the dropdown list, select **ltr backup storage** for a single database or an elastic database pool. Meters show up only if backup storage consumption exists.
 

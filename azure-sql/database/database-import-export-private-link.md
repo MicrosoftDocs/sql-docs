@@ -69,7 +69,7 @@ Import/Export Private Link can be configured via Azure portal, PowerShell, or us
 
 #### Approve private endpoint connection on Azure Storage
 
-1. Go to the storage account that hosts the blob container where the .bacpac file exists.
+1. Go to the storage account that hosts the blob container where the BACPAC (`.bacpac`) file exists.
 1. Open the **Private endpoint connections** page in the **Security** menu.
 1. Select the private endpoint for the import/export service.
 1. Select **Approve** to approve the connection.
@@ -136,7 +136,7 @@ Currently, the private link for import/export has the following limitations:
 
 - Manual approval of the new private endpoint connection is required to complete the export operation. After starting the export, go to "pending connections" in the Private Link Center and approve the connections, which can take several minutes to appear.
 
-- Import using Private Link does not support specifying a backup storage redundancy while creating a new database and creates with the default geo-redundant backup storage redundancy. As a workaround, first create an empty database with desired backup storage redundancy using Azure portal or PowerShell and then import the .bacpac file into this empty database.
+- Import using Private Link does not support specifying a backup storage redundancy while creating a new database and creates with the default geo-redundant backup storage redundancy. As a workaround, first create an empty database with desired backup storage redundancy using Azure portal or PowerShell and then import the BACPAC file into this empty database.
 
 - Import using REST API with private link can only be completed for an existing database since the API uses database extensions. As a workaround, create an empty database with the desired name, then call the Import REST API with private link.
 

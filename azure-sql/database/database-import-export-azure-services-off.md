@@ -15,7 +15,9 @@ ms.custom:
 # Import or export an Azure SQL Database without allowing Azure services to access the server
 [!INCLUDE [appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
-This article shows you how to import or export an Azure SQL Database when *Allow Azure Services* is set to *OFF* on the server. The workflow uses an Azure virtual machine to run SqlPackage to perform the import or export operation.
+This article shows you how to import or export an Azure SQL Database when **Allow Azure services and resources to access this server** is set to *OFF*. The how-to article uses an Azure virtual machine to run SqlPackage to perform the import or export operation.
+
+The **Allow Azure services and resources to access this server** setting is visible in the Azure portal under the **Security** menu in the resource menu, **Networking**, in the **Exceptions** section. For more information on this setting, see [Azure SQL Database network access controls](network-access-controls-overview.md).
 
 ## Sign in to the Azure portal
 
@@ -25,12 +27,13 @@ Sign in to the [Azure portal](https://portal.azure.com/).
 
 Create an Azure virtual machine by selecting the **Deploy to Azure** button.
 
-This template allows you to deploy a simple Windows virtual machine using a few different options for the Windows version, using the latest patched version. This will deploy an A2 size VM in the resource group location and return the fully qualified domain name of the VM.
+This template allows you to deploy a simple Windows virtual machine using a few different options for the Windows version, using the latest patched version. This deploys an A2 size VM in the resource group location and return the fully qualified domain name of the VM.
 <br><br>
 
-[![Image showing a button labeled "Deploy to Azure".](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/deploytoazure.png)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2Fquickstarts%2Fmicrosoft.compute%2Fvm-simple-windows%2Fazuredeploy.json)
+[![Image showing a button labeled "Deploy to Azure".](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/deploytoazure.svg)](
+https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2Fquickstarts%2Fmicrosoft.compute%2Fvm-simple-windows%2Fazuredeploy.json)
 
-For more information, see [Very simple deployment of a Windows VM](https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/microsoft.compute/vm-simple-windows).
+For more information including an Azure Quickstart Template, see [Deploy a simple Windows VM](https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/microsoft.compute/vm-simple-windows).
 
 ## Connect to the virtual machine
 
@@ -59,15 +62,11 @@ The following steps show you how to connect to your virtual machine using a remo
 
 ## Install SqlPackage
 
-[Download and install the latest version of SqlPackage](/sql/tools/sqlpackage-download).
-
-For additional information, see [SqlPackage](/sql/tools/sqlpackage).
+[Download and install the latest version of SqlPackage](/sql/tools/sqlpackage-download). For more information, see [SqlPackage](/sql/tools/sqlpackage).
 
 ## Create a firewall rule to allow the VM access to the database
 
-Add the virtual machine's public IP address to the server's firewall.
-
-The following steps create a server-level IP firewall rule for your virtual machine's public IP address and enables connectivity from the virtual machine.
+First, add the virtual machine's public IP address to the server's firewall. The following steps create a server-level IP firewall rule for your virtual machine's public IP address, and enable connectivity from the virtual machine.
 
 1. Select **SQL databases** from the left-hand menu and then select your database on the **SQL databases** page. The overview page for your database opens, showing you the fully qualified server name (for example: `sql-svr.database.windows.net`) and provides options for further configuration.
 
@@ -77,7 +76,7 @@ The following steps create a server-level IP firewall rule for your virtual mach
 
 1. Select **Set server firewall** on the toolbar.
 
-1. On the **Networking** page, in the **Public access** tab, in the **Firewall settings** section, select **Add your client IPv4 address**. This will add your virtual machine's public IP address to a new server-level IP firewall rule. A server-level IP firewall rule can open port 1433 for a single IP address or a range of IP addresses.
+1. On the **Networking** page, in the **Public access** tab, in the **Firewall settings** section, select **Add your client IPv4 address**. This adds your virtual machine's public IP address to a new server-level IP firewall rule. A server-level IP firewall rule can open port 1433 for a single IP address or a range of IP addresses.
 
 1. Select **Save**. A server-level IP firewall rule is created for your virtual machine's public IP address opening port 1433 on the server.
 
@@ -120,7 +119,7 @@ SqlPackage /a:Import /sf:testExport.bacpac /tdn:NewDacFX /tsn:apptestserver.data
 
 Export speeds vary due to many factors (for example, data shape) so it's impossible to predict what speed should be expected. SqlPackage can take considerable time, particularly for large databases.
 
-To get the best performance you can try the following strategies:
+For best performance, try the following strategies:
 
 1. Make sure no other workload is running on the database. Create a copy before export might be the best solution to ensure no other workloads are running.
 1. Increase database service level objective (SLO) to better handle the export workload (primarily read I/O). If the database is currently GP_Gen5_4, perhaps a Business Critical tier would help with read workload.
@@ -129,15 +128,15 @@ To get the best performance you can try the following strategies:
 1. VMs should have SSD with adequate size for generating temp artifacts before uploading to blob storage.
 1. VMs should have adequate core and memory configuration for the specific database.
 
-## Store the imported or exported .BACPAC file
+## Store the imported or exported BACPAC file
 
-The .BACPAC file can be stored in [Azure Blobs](/azure/storage/blobs/storage-blobs-overview), or [Azure Files](/azure/storage/files/storage-files-introduction).
+The BACPAC file can be stored in [Azure Blobs](/azure/storage/blobs/storage-blobs-overview), or [Azure Files](/azure/storage/files/storage-files-introduction).
 
 To achieve the best performance, use Azure Files. SqlPackage operates with the filesystem so it can access Azure Files directly.
 
-To reduce cost, use Azure Blobs, which cost less than a premium Azure file share. However, it will require you to copy the [.BACPAC file](/sql/relational-databases/data-tier-applications/data-tier-applications#bacpac) between the blob and the local file system before the import or export operation. As a result the process will take longer.
+To reduce cost, use Azure Blobs, which cost less than a premium Azure file share. However, it requires you to copy the [BACPAC file](/sql/relational-databases/data-tier-applications/data-tier-applications#bacpac) between the blob and the local file system before the import or export operation. As a result, the process takes longer.
 
-To upload or download .BACPAC files, see [Transfer data with AzCopy and Blob storage](/azure/storage/common/storage-use-azcopy-v10#transfer-data), and [Transfer data with AzCopy and file storage](/azure/storage/common/storage-use-azcopy-files).
+To upload or download BACPAC files, see [Transfer data with AzCopy and Blob storage](/azure/storage/common/storage-use-azcopy-v10#transfer-data), and [Transfer data with AzCopy and file storage](/azure/storage/common/storage-use-azcopy-files).
 
 Depending on your environment, you might need to [Configure Azure Storage firewalls and virtual networks](/azure/storage/common/storage-network-security).
 

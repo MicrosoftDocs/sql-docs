@@ -27,7 +27,7 @@ Sign in to the [Azure portal](https://portal.azure.com/).
 
 Create an Azure virtual machine by selecting the **Deploy to Azure** button.
 
-This template allows you to deploy a simple Windows virtual machine using a few different options for the Windows version, using the latest patched version. This deploys an A2 size VM in the resource group location and return the fully qualified domain name of the VM.
+This template allows you to deploy a simple Windows virtual machine using a few different options for the Windows version, using the latest patched version. This deploys an A2 size VM in the resource group location and returns the fully qualified domain name of the VM.
 <br><br>
 
 [![Image showing a button labeled "Deploy to Azure".](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/deploytoazure.svg)](

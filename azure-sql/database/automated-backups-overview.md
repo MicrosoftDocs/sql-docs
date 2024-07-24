@@ -296,8 +296,7 @@ To understand backup storage costs, go to **Cost Management + Billing** in the A
 1. Add a filter for **Service name**.
 1. In the dropdown list, select **sql database** for a single database or an elastic database pool.
 1. Add another filter for **Meter subcategory**.
-1. To monitor PITR backup costs, in the dropdown list, select **single/elastic pool pitr
-1.  backup storage** for a single database or an elastic database pool. Meters show up only if backup storage consumption exists.
+1. To monitor PITR backup costs, in the dropdown list, select **single/elastic pool pitr backup storage** for a single database or an elastic database pool. Meters show up only if backup storage consumption exists.
    
    To monitor LTR backup costs, in the dropdown list, select **ltr backup storage** for a single database or an elastic database pool. Meters show up only if backup storage consumption exists.
 

@@ -3,7 +3,7 @@ title: "URL access"
 description: Learn how URL access of the report server in SQL Server Reporting Services (SSRS) enables you to send commands to a report server through a URL request.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 07/23/2024
+ms.date: 07/24/2024
 ms.service: reporting-services
 ms.subservice: reporting-services
 ms.topic: conceptual
@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "parameters [Reporting Services], URL access"
   - "report servers [Reporting Services], URL access"
   - "hyperlinks [Reporting Services]"
-#customer-intent: 
+#customer-intent: As a SQL Server Reporting Services report server user,  I want to send commands through a URL request so that I can customize reports on a native mode report server or in a SharePoint library.
 ---
 # URL access (SSRS)
 
@@ -31,15 +31,13 @@ Other actions you can perform through URL access include:
 - [Render a report history snapshot by using URL access](../reporting-services/render-a-report-history-snapshot-using-url-access.md).
 - [Search a report by using URL access](../reporting-services/search-a-report-using-url-access.md).
 
-For the complete list of commands and settings available through URL access, see [URL access parameter reference](../reporting-services/url-access-parameter-reference.md).
-
 ## URL access concepts
 
-The report server processes parameters contained in URL requests to the report server. How the report server handles URL requests depends on the parameters, parameter prefixes, and types of items that are included in the URL. Report server URLs adhere to the URL formatting guidelines proposed by the joint World Wide Web Consortium W3C/IETF draft standard. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] URL functionality is compatible with most internet browsers or applications that support standard URL addressing.
+The report server processes parameters contained in URL requests to the report server. How the report server handles URL requests depends on the parameters, parameter prefixes, and types of items included in the URL. Report server URLs adhere to the URL formatting guidelines proposed by the joint World Wide Web Consortium W3C/IETF draft standard. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] URL functionality is compatible with most internet browsers or applications that support standard URL addressing.
 
 ## URL access syntax
 
-URL requests can contain multiple parameters that are listed in any order. You separate the parameters by an ampersand (`&`) and the name/value pairs by an equal sign (`=`). 
+URL requests can contain multiple parameters that are listed in any order. You separate the parameters by using an ampersand (`&`) and the name/value pairs by an equal sign (`=`). 
 
 Understanding the different components of a URL access string is essential for effectively sending commands to an SSRS report server. The URL access string includes: 
 
@@ -51,26 +49,30 @@ Understanding the different components of a URL access string is essential for e
 https://[rswebserviceurl]?[pathinfo][&prefix:param=value]...[&prefix:param=value]
 ```
 
-The following sections provide a more detailed description of each piece within the URL access string.
+## Syntax description
+
+The following section provides a detailed description of some parameters used in the URL access string. For a complete list, see [URL access parameter reference](../reporting-services/url-access-parameter-reference). 
 
 ### `rswebserviceurl`
 
-The web service URL of the report server. For native mode, it's the report server instance web service URL configured in Reporting Services Configuration Manager. For more information,  see [Configure report server URLs &#40;Report Server Configuration Manager&#41;](../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)). 
+The web service URL of the report server. 
 
-For example:
+- For native mode, it's the web service report server instance web service URL configured in [Reporting Services Configuration Manager]. For more information,  see [Configure report server URLs &#40;Report Server Configuration Manager&#41;](../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md). 
 
-```
-https://myrshost/reportserver
-https://machine.adventure-works.com/reportserver_MYNAMEDINSTANCE
-```
+   For example:
 
-For SharePoint integrated mode, it's the URL of the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] proxy at a SharePoint site integrated with [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. 
+   ```
+   https://myrshost/reportserver
+   https://machine.adventure-works.com/reportserver_MYNAMEDINSTANCE
+   ```
 
-For example:
+- For SharePoint integrated mode, it's the URL of the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] proxy at a SharePoint site integrated with [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].
 
-```
-https://myspsite/subsite/_vti_bin/reportserver
-```
+   For example:
+
+   ```
+   https://myspsite/subsite/_vti_bin/reportserver
+   ```
 
 > [!TIP]
 > It's important the URL include the `_vti_bin` proxy syntax to route the request through SharePoint and the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] HTTP proxy. The proxy adds some context to the HTTP request, context that'ss required to ensure proper execution of the report for SharePoint mode report servers.
@@ -98,15 +100,13 @@ In a URL access string, you add parameters and their corresponding values to cus
 Use optional prefixes like `rs:` or `rc:` to target specific processes within the report server. 
 
 > [!Note]
-> If a prefix for a URL access parameter is not included, the parameter is processed by the report server as a report parameter. Report parameters do not use a parameter prefix and are case-sensitive.
+> If a prefix for a URL access parameter isn't included, the parameter is processed by the report server as a report parameter. Report parameters don't use a parameter prefix and are case-sensitive.
 
-The following example shows all parts of the URL as described in this article:
+The following example shows the complete URL as described in this article:
 
 ```
 https://myrshost/reportserver?/AdventureWorks2022/Employee_Sales_Summary_2022&rs:Command=Render&rc:Toolbar=false&ReportMonth=3&ReportYear=2008
 ```
-
-For a complete list of the available URL access parameters, see [URL access parameter reference](../reporting-services/url-access-parameter-reference.md). For examples passing report parameters on the URL, see [Pass a report parameter within a URL](../reporting-services/pass-a-report-parameter-within-a-url.md).
 
 ## Related content
 

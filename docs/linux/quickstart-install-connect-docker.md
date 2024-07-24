@@ -57,6 +57,9 @@ For more information on supported platforms, see [Release notes for [!INCLUDE [s
 
 This image consists of [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] running on Linux based on Ubuntu. It can be used with the Docker Engine 1.8+ on Linux.
 
+> [!NOTE]  
+> In [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] CU 14 and later versions, container images include the [new mssql-tools18](sql-server-linux-setup-tools.md#install-tools-on-linux) package. The previous directory `/opt/mssql-tools/bin` is being phased out. The new directory for Microsoft ODBC 18 tools is `/opt/mssql-tools18/bin`, aligning with the latest tools offering. For more information about changes and security enhancements, see [ODBC Driver 18.0 for SQL Server Released](https://techcommunity.microsoft.com/t5/sql-server-blog/odbc-driver-18-0-for-sql-server-released/ba-p/3169228).
+
 The examples in this article use the `docker` command. However, most of these commands also work with Podman. Podman provides a command-line interface similar to the Docker Engine. You can [find out more about Podman](http://docs.podman.io/en/latest).
 
 > [!IMPORTANT]  

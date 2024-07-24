@@ -5,7 +5,7 @@ description: Learn how Azure SQL Database automatically backs up all databases a
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma, danil, dinethi
-ms.date: 11/27/2023
+ms.date: 07/24/2024
 ms.service: sql-database
 ms.subservice: backup-restore
 ms.topic: conceptual
@@ -72,11 +72,11 @@ You can choose one of the following storage redundancies for backups:
 
 - **Locally redundant storage (LRS)**:  Copies your backups synchronously three times within a single physical location in the primary region. LRS is the least expensive storage option, but we don't recommend it for applications that require resiliency to regional outages or a guarantee of high data durability.
 
-   :::image type="content" source="../database/media/automated-backups-overview/multi-paired-lrs.svg" alt-text="Diagram showing the locally redundant storage (LRS) option.":::
+   :::image type="content" source="media/automated-backups-overview/multi-paired-lrs.svg" alt-text="Diagram showing the locally redundant storage (LRS) option.":::
 
 - **Zone-redundant storage (ZRS)**: Copies your backups synchronously across three Azure availability zones in the primary region. It's currently available in only [certain regions](/azure/storage/common/storage-redundancy#zone-redundant-storage). 
 
-   :::image type="content" source="../database/media/automated-backups-overview/multi-paired-zrs.svg" alt-text="Diagram showing the zone-redundant storage (ZRS) option.":::
+   :::image type="content" source="media/automated-backups-overview/multi-paired-zrs.svg" alt-text="Diagram showing the zone-redundant storage (ZRS) option.":::
 
 - **Geo-redundant storage (GRS)**: Copies your backups synchronously three times within a single physical location in the primary region by using LRS. Then it copies your data asynchronously three times to a single physical location in the [paired](/azure/availability-zones/cross-region-replication-azure#azure-cross-region-replication-pairings-for-all-geographies) secondary region. 
 
@@ -85,7 +85,7 @@ You can choose one of the following storage redundancies for backups:
   - Three synchronous copies in the primary region.
   - Three synchronous copies in the paired region that were copied over from the primary region to the secondary region asynchronously. 
 
-   :::image type="content" source="../database/media/automated-backups-overview/multi-paired-grs.svg" alt-text="Diagram showing the geo-redundant storage (GRS) option.":::
+   :::image type="content" source="media/automated-backups-overview/multi-paired-grs.svg" alt-text="Diagram showing the geo-redundant storage (GRS) option.":::
 
 > [!WARNING]
 > - [Geo-restore](recovery-using-backups.md#geo-restore) is disabled as soon as a database is updated to use locally redundant or zone-redundant storage. 
@@ -179,7 +179,7 @@ Azure SQL Database computes your total used backup storage as a cumulative value
 
 For vCore databases in Azure SQL Database, the storage that each type of backup (full, differential, and log) consumes is reported on the database monitoring pane as a separate metric. The following screenshot shows how to monitor the backup storage consumption for a single database. 
 
-:::image type="content" source="./media/automated-backups-overview/backup-metrics.png" alt-text="Screenshot that shows selections for monitoring database backup consumption in the Azure portal." lightbox="./media/automated-backups-overview/backup-metrics.png":::
+:::image type="content" source="media/automated-backups-overview/backup-metrics.png" alt-text="Screenshot that shows selections for monitoring database backup consumption in the Azure portal." lightbox="media/automated-backups-overview/backup-metrics.png":::
 
 For instructions on how to monitor consumption in Hyperscale, see [Monitor Hyperscale backup consumption](hyperscale-automated-backups-overview.md#monitor-backup-storage-consumption).
 
@@ -298,7 +298,7 @@ To understand backup storage costs, go to **Cost Management + Billing** in the A
 
 The **Storage** and **compute** subcategories might also interest you, but they're not associated with backup storage costs.
 
-:::image type="content" source="./media/automated-backups-overview/check-backup-storage-cost-sql-mi.png" alt-text="Screenshot that shows an analysis of backup storage costs." lightbox="./media/automated-backups-overview/check-backup-storage-cost-sql-mi.png":::
+:::image type="content" source="media/automated-backups-overview/check-backup-storage-cost-sql-mi.png" alt-text="Screenshot that shows an analysis of backup storage costs." lightbox="media/automated-backups-overview/check-backup-storage-cost-sql-mi.png":::
 
 > [!IMPORTANT]
 > Meters are visible only for counters that are currently in use. If a counter is not available, it's likely that the category is not currently being used. For example, storage counters won't be visible for resources that are not consuming storage. If there is no PITR or LTR backup storage consumption, these meters won't be visible.
@@ -332,7 +332,9 @@ Azure Policy is a service that you can use to create, assign, and manage policie
 
 ### Built-in backup storage redundancy policies
 
-To enforce data residency requirements at an organizational level, you can assign policies to a subscription by using the [Azure portal](/azure/governance/policy/assign-policy-portal) or [Azure PowerShell](/azure/governance/policy/assign-policy-powershell). For example, if you assign the following built-in policy, users in the subscription won't be able to create a database with geo-redundant backup storage via the Azure portal or Azure PowerShell: [SQL Database should avoid using GRS backup redundancy](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2Fproviders%2FMicrosoft.Authorization%2FpolicyDefinitions%2Fb219b9cf-f672-4f96-9ab0-f5a3ac5e1c13).
+To enforce data residency requirements at an organizational level, you can assign policies to a subscription by using the [Azure portal](/azure/governance/policy/assign-policy-portal) or [Azure PowerShell](/azure/governance/policy/assign-policy-powershell). 
+
+For example, if you enable the policy "Azure SQL DB should avoid using GRS backup", databases cannot be created with the default storage as globally redundant storage, and users would be prevented from using GRS with the error message "Configuring backup storage account type to 'Standard_RAGRS' failed during Database create or update."
 
 For a full list of built-in policy definitions for SQL Database, review the [policy reference](./policy-reference.md).
 

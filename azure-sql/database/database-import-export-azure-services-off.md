@@ -4,7 +4,7 @@ description: Import or export an Azure SQL Database without allowing Azure servi
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma, hudequei
-ms.date: 01/08/2020
+ms.date: 07/24/2024
 ms.service: sql-database
 ms.subservice: migration
 ms.topic: how-to
@@ -13,7 +13,7 @@ ms.custom:
   - sql-migration-content
 ---
 # Import or export an Azure SQL Database without allowing Azure services to access the server
-[!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
+[!INCLUDE [appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
 This article shows you how to import or export an Azure SQL Database when *Allow Azure Services* is set to *OFF* on the server. The workflow uses an Azure virtual machine to run SqlPackage to perform the import or export operation.
 
@@ -38,26 +38,24 @@ The following steps show you how to connect to your virtual machine using a remo
 
 1. After deployment completes, go to the virtual machine resource.
 
-   :::image type="content" source="./media/database-import-export-azure-services-off/vm.png" alt-text="Screenshot shows a virtual machine Overview page with a Connect button.":::
-
-2. Select **Connect**.
+1. Select **Connect**.
 
    A Remote Desktop Protocol file (.rdp file) form appears with the public IP address and port number for the virtual machine.
 
-   :::image type="content" source="./media/database-import-export-azure-services-off/rdp.png" alt-text="Screenshot of Azure portal, connect to VM, with download RDP highlighted.":::
+   :::image type="content" source="media/database-import-export-azure-services-off/rdp.png" alt-text="Screenshot of Azure portal, connect to VM, with download RDP highlighted.":::
 
-3. Select **Download RDP File**.
+    > [!NOTE]
+    > There are multiple ways to connect to a VM. This tutorial uses Remote Desktop Protocol (RDP) to connect to the VM, but a newer solution to use Azure Bastion is an alternative that would work well, if you have [deployed Bastion in your environment](/azure/bastion/tutorial-create-host-portal). You can also [use SSH to connect to your VM](/azure/virtual-machines/windows/connect-ssh).
 
-   > [!NOTE]
-   > You can also use SSH to connect to your VM.
+1. Select **Download RDP File**.
+1. Close the **Connect to virtual machine** form.
+1. To connect to your VM, open the downloaded RDP file.
+1. When prompted, select **Connect**.
+    - On a Mac, you need an RDP client such as this [Remote Desktop Client](https://apps.apple.com/app/microsoft-remote-desktop-10/id1295203466?mt=12) from the Mac App Store.
 
-4. Close the **Connect to virtual machine** form.
-5. To connect to your VM, open the downloaded RDP file.
-6. When prompted, select **Connect**. On a Mac, you need an RDP client such as this [Remote Desktop Client](https://apps.apple.com/app/microsoft-remote-desktop-10/id1295203466?mt=12) from the Mac App Store.
+1. Enter the username and password you specified when creating the virtual machine, then choose **OK**.
 
-7. Enter the username and password you specified when creating the virtual machine, then choose **OK**.
-
-8. You might receive a certificate warning during the sign-in process. Choose **Yes** or **Continue** to proceed with the connection.
+1. You might receive a certificate warning during the sign-in process. Choose **Yes** or **Continue** to proceed with the connection.
 
 ## Install SqlPackage
 
@@ -71,25 +69,23 @@ Add the virtual machine's public IP address to the server's firewall.
 
 The following steps create a server-level IP firewall rule for your virtual machine's public IP address and enables connectivity from the virtual machine.
 
-1. Select **SQL databases** from the left-hand menu and then select your database on the **SQL databases** page. The overview page for your database opens, showing you the fully qualified server name (such as **servername.database.windows.net**) and provides options for further configuration.
+1. Select **SQL databases** from the left-hand menu and then select your database on the **SQL databases** page. The overview page for your database opens, showing you the fully qualified server name (for example: `sql-svr.database.windows.net`) and provides options for further configuration.
 
-2. Copy this fully qualified server name to use when connecting to your server and its databases.
+   :::image type="content" source="media/database-import-export-azure-services-off/server-name.png" alt-text="Screenshot of the Azure portal, database overview page, with the server name highlighted." lightbox="media/database-import-export-azure-services-off/server-name.png":::
 
-   :::image type="content" source="./media/database-import-export-azure-services-off/server-name.png" alt-text="Screenshot of the Azure portal, database overview page, with the server name highlighted.":::
+1. Copy this fully qualified server name to use when connecting to your server and its databases.
 
-3. Select **Set server firewall** on the toolbar. The **Firewall settings** page for the server opens.
+1. Select **Set server firewall** on the toolbar.
 
-   :::image type="content" source="./media/database-import-export-azure-services-off/server-firewall-rule.png" alt-text="Screenshot of the Azure portal, showing the firewall page, with server-level IP firewall rule highlighted.":::
+1. On the **Networking** page, in the **Public access** tab, in the **Firewall settings** section, select **Add your client IPv4 address**. This will add your virtual machine's public IP address to a new server-level IP firewall rule. A server-level IP firewall rule can open port 1433 for a single IP address or a range of IP addresses.
 
-4. Choose **Add client IP** on the toolbar to add your virtual machine's public IP address to a new server-level IP firewall rule. A server-level IP firewall rule can open port 1433 for a single IP address or a range of IP addresses.
-
-5. Select **Save**. A server-level IP firewall rule is created for your virtual machine's public IP address opening port 1433 on the server.
-
-6. Close the **Firewall settings** page.
+1. Select **Save**. A server-level IP firewall rule is created for your virtual machine's public IP address opening port 1433 on the server.
 
 ## Export a database using SqlPackage
 
 To export an Azure SQL Database using the [SqlPackage](/sql/tools/sqlpackage) command-line utility, see [Export parameters and properties](/sql/tools/sqlpackage#export-parameters-and-properties). The SqlPackage utility ships with the latest versions of [SQL Server Management Studio](/sql/ssms/download-sql-server-management-studio-ssms) and [SQL Server Data Tools](/sql/ssdt/download-sql-server-data-tools-ssdt), or you can download the latest version of [SqlPackage](/sql/tools/sqlpackage-download).
+
+For more information and step to create a BACPAC file, see [Export to a BACPAC file](database-export.md).
 
 We recommend the use of the SqlPackage utility for scale and performance in most production environments. For a SQL Server Customer Advisory Team blog about migrating using BACPAC files, see [Migrating from SQL Server to Azure SQL Database using BACPAC Files](/archive/blogs/sqlcat/migrating-from-sql-server-to-azure-sql-database-using-bacpac-files).
 
@@ -101,7 +97,7 @@ SqlPackage /a:Export /tf:testExport.bacpac /scs:"Data Source=<servername>.databa
 
 ## Import a database using SqlPackage
 
-To import a SQL Server database using the [SqlPackage](/sql/tools/sqlpackage) command-line utility, see [import parameters and properties](/sql/tools/sqlpackage#import-parameters-and-properties). SqlPackage has the latest [SQL Server Management Studio](/sql/ssms/download-sql-server-management-studio-ssms) and [SQL Server Data Tools](/sql/ssdt/download-sql-server-data-tools-ssdt). You can also download the latest version of [SqlPackage](/sql/tools/sqlpackage-download).
+To import a SQL Server database using the [SqlPackage](/sql/tools/sqlpackage) command-line utility, see [import parameters and properties](/sql/tools/sqlpackage#import-parameters-and-properties). SqlPackage has the latest [SQL Server Management Studio](/sql/ssms/download-sql-server-management-studio-ssms) and [SQL Server Data Tools](/sql/ssdt/download-sql-server-data-tools-ssdt). You can also download the latest version of [SqlPackage](/sql/tools/sqlpackage-download). 
 
 For scale and performance, we recommend using SqlPackage in most production environments rather than using the Azure portal. For a SQL Server Customer Advisory Team blog about migrating using `BACPAC` files, see [migrating from SQL Server to Azure SQL Database using BACPAC Files](/archive/blogs/sqlcat/migrating-from-sql-server-to-azure-sql-database-using-bacpac-files).
 
@@ -112,7 +108,7 @@ SqlPackage /a:import /tcs:"Data Source=<serverName>.database.windows.net;Initial
 ```
 
 > [!IMPORTANT]
-> To connect to tAzure SQL Database from behind a corporate firewall, the firewall must have port 1433 open.
+> To connect to Azure SQL Database from behind a corporate firewall, the firewall must have port 1433 open.
 
 This example shows how to import a database using SqlPackage with Active Directory Universal Authentication.
 
@@ -122,16 +118,16 @@ SqlPackage /a:Import /sf:testExport.bacpac /tdn:NewDacFX /tsn:apptestserver.data
 
 ## Performance considerations
 
-Export speeds vary due to many factors (for example, data shape) so it's impossible to predict what speed should be expected. SqlPackage may take considerable time, particularly for large databases.
+Export speeds vary due to many factors (for example, data shape) so it's impossible to predict what speed should be expected. SqlPackage can take considerable time, particularly for large databases.
 
 To get the best performance you can try the following strategies:
 
-1. Make sure no other workload is running on the database. Create a copy before export may be the best solution to ensure no other workloads are running.
-2. Increase database service level objective (SLO) to better handle the export workload (primarily read I/O). If the database is currently GP_Gen5_4, perhaps a Business Critical tier would help with read workload.
-3. Make sure there are clustered indexes particularly for large tables.
-4. Virtual machines (VMs) should be in the same region as the database to help avoid network constraints.
-5. VMs should have SSD with adequate size for generating temp artifacts before uploading to blob storage.
-6. VMs should have adequate core and memory configuration for the specific database.
+1. Make sure no other workload is running on the database. Create a copy before export might be the best solution to ensure no other workloads are running.
+1. Increase database service level objective (SLO) to better handle the export workload (primarily read I/O). If the database is currently GP_Gen5_4, perhaps a Business Critical tier would help with read workload.
+1. Make sure there are clustered indexes particularly for large tables.
+1. Virtual machines (VMs) should be in the same region as the database to help avoid network constraints.
+1. VMs should have SSD with adequate size for generating temp artifacts before uploading to blob storage.
+1. VMs should have adequate core and memory configuration for the specific database.
 
 ## Store the imported or exported .BACPAC file
 
@@ -145,7 +141,7 @@ To upload or download .BACPAC files, see [Transfer data with AzCopy and Blob sto
 
 Depending on your environment, you might need to [Configure Azure Storage firewalls and virtual networks](/azure/storage/common/storage-network-security).
 
-## Next steps
+## Related content
 
 - To learn how to connect to and query an imported SQL Database, see [Quickstart: Azure SQL Database: Use SQL Server Management Studio to connect and query data](connect-query-ssms.md).
 - For a SQL Server Customer Advisory Team blog about migrating using BACPAC files, see [Migrating from SQL Server to Azure SQL Database using BACPAC Files](https://techcommunity.microsoft.com/t5/DataCAT/Migrating-from-SQL-Server-to-Azure-SQL-Database-using-Bacpac/ba-p/305407).

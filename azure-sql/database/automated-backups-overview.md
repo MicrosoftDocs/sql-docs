@@ -48,6 +48,8 @@ Azure SQL Database creates:
 
 The exact frequency of transaction log backups is based on the compute size and the amount of database activity. When you restore a database, the service determines which full, differential, and transaction log backups need to be restored.
 
+These automatic backups taken by the Azure service are not available for end customers to download or access directly; they can only be used for restore operations. 
+
 The Hyperscale architecture doesn't require full, differential, or log backups. To learn more, see [Hyperscale backups](hyperscale-automated-backups-overview.md). 
 
 

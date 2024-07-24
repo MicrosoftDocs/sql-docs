@@ -4,7 +4,7 @@ description: "The queryinsights.exec_sessions_history in Microsoft Fabric provid
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mariyaali
-ms.date: 07/23/2024
+ms.date: 07/24/2024
 ms.service: sql
 ms.topic: "reference"
 f1_keywords:
@@ -73,6 +73,6 @@ You should have access to a [[!INCLUDE [fabric-se](../../includes/fabric-se.md)]
 ## Related content
 
 - [Monitoring connections, sessions, and requests using DMVs in Microsoft Fabric](/fabric/data-warehouse/monitor-using-dmv)
-- [queryinsights.exec_sessions_history (Transact-SQL)](queryinsights-exec-requests-history-transact-sql.md)
+- [queryinsights.exec_requests_history (Transact-SQL)](queryinsights-exec-requests-history-transact-sql.md)
 - [queryinsights.long_running_queries (Transact-SQL)](queryinsights-long-running-queries-transact-sql.md)
 - [queryinsights.frequently_run_queries (Transact-SQL)](queryinsights-frequently-run-queries-transact-sql.md)

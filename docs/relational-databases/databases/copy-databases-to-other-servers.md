@@ -4,7 +4,7 @@ description: Learn how to copy a SQL Server database from one computer to anothe
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: randolphwest
-ms.date: 07/08/2024
+ms.date: 07/19/2024
 ms.service: sql
 ms.subservice: backup-restore
 ms.topic: conceptual
@@ -35,3 +35,8 @@ There are several ways to copy a database:
 
   > [!NOTE]  
   > To set up a mirror database for database mirroring, you must restore the database onto the mirror server by using `RESTORE DATABASE <database_name> WITH NORECOVERY`. For more information, see [Prepare a Mirror Database for Mirroring (SQL Server)](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md).
+
+## Related content
+
+- [Use the Copy Database Wizard](use-the-copy-database-wizard.md)
+- [Restore database](../backup-restore/restore-database-general-page.md)

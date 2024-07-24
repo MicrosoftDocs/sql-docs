@@ -5,7 +5,7 @@ description: Export a database to a BACPAC file using the Azure portal, PowerShe
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma, hudequei
-ms.date: 02/06/2024
+ms.date: 07/24/2024
 ms.service: sql-db-mi
 ms.subservice: data-movement
 ms.topic: how-to
@@ -47,11 +47,11 @@ Exporting a BACPAC of a database from [Azure SQL Managed Instance](../managed-in
 
 1. To export a database using the [Azure portal](https://portal.azure.com), open the page for your database and select **Export** on the toolbar.
 
-   :::image type="content" source="media\database-export\sql-database-export-menu-button.png" alt-text="Screenshot that highlights the Export button." lightbox="media/database-export/sql-database-export-menu-button.png":::
+   :::image type="content" source="media/database-export/sql-database-export-menu-button.png" alt-text="Screenshot that highlights the Export button." lightbox="media/database-export/sql-database-export-menu-button.png":::
 
 1. Specify the BACPAC filename, select an existing Azure storage account and container for the export, and then provide the appropriate credentials for access to the source database. A SQL **Server admin login** is needed here even if you're the Azure admin, as being an Azure admin doesn't equate to having admin permissions in Azure SQL Database or Azure SQL Managed Instance.
 
-   :::image type="content" source="media\database-export\sql-database-export-database.png" alt-text="Screenshot shows the Export Database page with username and password specified.":::
+   :::image type="content" source="media/database-export/sql-database-export-database.png" alt-text="Screenshot shows the Export Database page with username and password specified.":::
 
 1. Select **OK**.
 
@@ -106,8 +106,7 @@ $exportStatus
 
 ## Cancel the export request
 
-Use the [Database Operations - Cancel](/rest/api/sql/database-operations/cancel) API
-or the PowerShell [Stop-AzSqlDatabaseActivity](/powershell/module/az.sql/Stop-AzSqlDatabaseActivity) command to cancel an export request. Here's an example PowerShell command:
+Use the [Database Operations - Cancel](/rest/api/sql/database-operations/cancel) API or the PowerShell [Stop-AzSqlDatabaseActivity](/powershell/module/az.sql/Stop-AzSqlDatabaseActivity) command to cancel an export request. Here's an example PowerShell command:
 
 ```powershell
 Stop-AzSqlDatabaseActivity -ResourceGroupName $ResourceGroupName -ServerName $ServerName -DatabaseName $DatabaseName -OperationId $Operation.OperationId

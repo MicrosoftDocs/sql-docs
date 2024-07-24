@@ -65,25 +65,7 @@ If a proxy server is used, set the `NO_PROXY` environment variable to exclude pr
 
 ### Connect to Azure Arc data processing service
 
-Arc-enabled [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] requires outbound connection to Azure Arc data processing service.
-
-Each virtual or physical server requires connectivity to:
-
-- URL: `*.<region>.arcdataservices.com`
-- Port: 443
-- Direction: Outbound
-
-To get the region segment of a regional endpoint, remove all spaces from the Azure region name. For example, *East US 2* region, the region name is `eastus2`.
-
-For example: `*.<region>.arcdataservices.com` should be `*.eastus2.arcdataservices.com` in the East US 2 region.
-
-For a list of supported regions, review [Supported Azure regions](overview.md#supported-azure-regions).
-
-For a list of all regions, run this command:
-
-```azcli
-az account list-locations -o table
-```
+[!INCLUDE [data-processing-service-permission](includes/data-processing-service-permission.md)]
 
 > [!NOTE]
 > You can't use Azure Private Link connections to the Azure Arc data processing service. See [Unsupported configurations](#unsupported-configurations).

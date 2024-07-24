@@ -10423,8 +10423,10 @@ items:
           href: sql-server/azure-arc/support-for-fci.md  
         - name: Manage Always On availability group
           href: sql-server/azure-arc/manage-availability-group.md
-      - name: Secure
+      - name: Security
         items:
+        - name: Overview
+          href: sql-server/azure-arc/security-overview.md
         - name: Best practices
           href: sql-server/azure-arc/secure-best-practices.md
         - name: Configure least privilege

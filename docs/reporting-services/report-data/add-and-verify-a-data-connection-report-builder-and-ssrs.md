@@ -1,9 +1,9 @@
 ---
 title: Add and verify a data connection in Report Builder
-description: Learn how to use Report Builder to add and verify a data connection to verify that the credentials you specify are sufficient.
+description: Learn how to use Report Builder to add and verify a data connection to make sure that the credentials you specify are sufficient.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 07/22/2024
+ms.date: 07/24/2024
 ms.service: reporting-services
 ms.subservice: report-data
 ms.topic: how-to
@@ -34,11 +34,11 @@ For more information, see [Create data connection strings in Report Builder](dat
     > [!NOTE]  
     > This name is saved in the local report definition. This name isn't the name of the shared data source on the report server.
 
-1. Select **Use a shared connection or report model**. The list of recently used shared data sources and report models appears. To select one from a report server, select **Browse** and browse to the folder on the report server where shared data sources are available.
+1. Select **Use a shared connection or report model**. The list of recently used shared data sources and report models appears. To select one from a report server, choose **Browse** and go to the folder on the report server where shared data sources are available.
 
     :::image type="content" source="../../reporting-services/report-data/media/use-shared-connection-or-report-model.png" alt-text="Screenshot that shows the Data Source Properties dialog box highlighting the Use a shared connection or report model option.":::
 
-1. Select the shared data source and then select **Open**.
+1. Select the shared data source and then choose **Open**.
 
 1. Select **OK**.
 

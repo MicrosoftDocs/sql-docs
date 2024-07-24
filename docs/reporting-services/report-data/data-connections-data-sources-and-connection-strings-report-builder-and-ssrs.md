@@ -3,7 +3,7 @@ title: Create data connection strings in Report Builder
 description: Learn how to create data connection strings and learn important information related to data source credentials.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 07/22/2024
+ms.date: 07/24/2024
 ms.service: reporting-services
 ms.subservice: report-data
 ms.topic: conceptual
@@ -15,7 +15,7 @@ ms.custom: updatefrequency5
 
 [!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
 
-To include data in [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] and [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] paginated reports, you must first create a connection string to your data source. This article explains how to create data connection strings and important information related to data source credentials. A data source includes the data source type, connection information, and the type of credentials to use. For more information, see [Intro to report data in SQL Server Reporting Services (SSRS)](report-data-ssrs.md).
+To include data in [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] and [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] paginated reports, you must first create a connection string to your data source. This article explains how to create data connection strings and provides important information related to data source credentials. A data source includes the data source type, connection information, and the type of credentials needed. For more information, see [Intro to report data in SQL Server Reporting Services (SSRS)](report-data-ssrs.md).
 
 ## <a name="bkmk_DataConnections"></a> Built-in data extensions
 
@@ -48,7 +48,7 @@ Connection strings are the text representation of connection properties for a da
 |SharePoint List|`Data Source=https://MySharePointWeb/MySharePointSite/`|Set data source type to **SharePoint List**.|
 | Power BI Premium dataset (Starting with Reporting Services 2019 and Power BI Report Server January 2020) | `Data Source=powerbi://api.powerbi.com/v1.0/myorg/<workspacename>;  Initial Catalog=<datasetname>` | Set data source type to **Microsoft SQL Server Analysis Services**. |
 
-If you fail to connect to a report server using **localhost**, check that the network protocol for the TCP/IP protocol is enabled. For more information, see [Configure client protocols](../../database-engine/configure-windows/configure-client-protocols.md).
+If you can't connect to a report server using **localhost**, make sure that the network protocol for the TCP/IP protocol is enabled. For more information, see [Configure client protocols](../../database-engine/configure-windows/configure-client-protocols.md).
 
 For more information about the configurations needed to connect to these data source types, see the specific data connection article under [Add data from external data sources (SSRS)](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md) or [Data sources supported by Reporting Services (SSRS)](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).
 

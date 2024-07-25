@@ -177,7 +177,7 @@ The Deployer bootstraps the extension during initial installation and as new SQL
 * Disable
 * Uninstall
 
-The Deployer runs in the context of Azure Connected Machine agent service or the scheduled tasks identity and therefore runs as `Local System`.
+The Deployer runs in the context of Azure Connected Machine agent service and therefore runs as `Local System`.
 
 #### The Extension service
 

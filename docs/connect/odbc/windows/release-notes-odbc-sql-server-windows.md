@@ -4,7 +4,7 @@ description: This release notes article describes the changes in each release of
 author: v-chojas
 ms.author: v-chojas
 ms.reviewer: v-davidengel
-ms.date: 06/13/2024
+ms.date: 07/31/2024
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: conceptual
@@ -12,6 +12,16 @@ ms.topic: conceptual
 # Release Notes for Microsoft ODBC Driver for SQL Server on Windows
 
 This release notes article describes what's new for the Microsoft ODBC driver for SQL Server on Windows.
+
+## 18.4.1
+
+Version number: 18.4.1.1  
+Released: July 31, 2024
+
+| New item | Details |
+| :------- | :------ |
+| Microsoft Entra ID | Renamed all occurrences of "Azure Active Directory" to "Microsoft Entra ID". |
+| Bug fixes. | [Bug fixes](../bug-fixes.md). |
 
 ## 18.3.3
 

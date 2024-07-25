@@ -3,7 +3,7 @@ title: View or change server properties (SQL Server)
 description: Learn how to use SQL Server Management Studio, Transact-SQL, or SQL Server Configuration Manager to view or change the properties of an instance of SQL Server.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 04/03/2023
+ms.date: 07/25/2024
 ms.service: sql
 ms.subservice: configuration
 ms.topic: conceptual
@@ -20,32 +20,32 @@ helpviewer_keywords:
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-This article describes how to view or change the properties of an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)], or SQL Server Configuration Manager.
+This article describes how to view or change the properties of an instance of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] by using [!INCLUDE [ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE [tsql](../../includes/tsql-md.md)], or SQL Server Configuration Manager.
 
 Steps depend on the tool:
 
-- [SQL Server Management Studio](#SSMSProcedure)  
-- [Transact-SQL](#TsqlProcedure)  
-- [SQL Server Configuration Manager](#PowerShellProcedure)
+- [SQL Server Management Studio](#SSMSProcedure)
+- [Transact-SQL](#TsqlProcedure)
+- [SQL Server Configuration Manager](#sql-server-configuration-manager)
 
-## <a id="Restrictions"></a> Limitations and restrictions
+## Limitations
 
-- When using `sp_configure`, you must run either RECONFIGURE or RECONFIGURE WITH OVERRIDE after setting a configuration option. The RECONFIGURE WITH OVERRIDE statement is usually reserved for configuration options that should be used with extreme caution. However, RECONFIGURE WITH OVERRIDE works for all configuration options, and you can use it in place of RECONFIGURE.
+- When using `sp_configure`, you must run either `RECONFIGURE` or `RECONFIGURE WITH OVERRIDE` after setting a configuration option. The `RECONFIGURE WITH OVERRIDE` statement is usually reserved for configuration options that should be used with extreme caution. However, `RECONFIGURE WITH OVERRIDE` works for all configuration options, and you can use it in place of `RECONFIGURE`.
 
   > [!NOTE]  
-  >  RECONFIGURE executes within a transaction. If any of the reconfigure operations fail, none of the reconfigure operations will take effect.
+  > `RECONFIGURE` executes within a transaction. If any of the reconfigure operations fail, none of the reconfigure operations will take effect.
 
-- Some property pages present information obtained via Windows Management Instrumentation (WMI). To display those pages, WMI must be installed on the computer running [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].
+- Some property pages present information obtained via Windows Management Instrumentation (WMI). To display those pages, WMI must be installed on the computer running [!INCLUDE [ssManStudioFull](../../includes/ssmanstudiofull-md.md)].
 
-## <a id="Security"></a> Server-Level roles
+## Server-level roles
 
-For more information, see [Server-Level Roles](../../relational-databases/security/authentication-access/server-level-roles.md).
+For more information, see [Server-level roles](../../relational-databases/security/authentication-access/server-level-roles.md).
 
-Execute permissions on `sp_configure` with no parameters or with only the first parameter are granted to all users by default. To execute `sp_configure` with both parameters to change a configuration option or to run the RECONFIGURE statement, a user must be granted the ALTER SETTINGS server-level permission. The ALTER SETTINGS permission is implicitly held by the **sysadmin** and **serveradmin** fixed server roles.
+Execute permissions on `sp_configure` with no parameters or with only the first parameter are granted to all users by default. To execute `sp_configure` with both parameters to change a configuration option or to run the `RECONFIGURE` statement, a user must be granted the `ALTER SETTINGS` server-level permission. The `ALTER SETTINGS` permission is implicitly held by the **sysadmin** and **serveradmin** fixed server roles.
 
 ## <a id="SSMSProcedure"></a> SQL Server Management Studio
 
-#### View or change server properties
+### View or change server properties
 
 1. In Object Explorer, right-click a server, and then select **Properties**.
 
@@ -55,11 +55,11 @@ Execute permissions on `sp_configure` with no parameters or with only the first 
 
 ### View server properties by using the SERVERPROPERTY built-in function
 
-1. Connect to the [!INCLUDE[ssDE](../../includes/ssde-md.md)].
+1. Connect to the [!INCLUDE [ssDE](../../includes/ssde-md.md)].
 
 1. From the Standard bar, select **New Query**.
 
-1. Copy and paste the following example into the query window and select **Execute**. This example uses the [SERVERPROPERTY](../../t-sql/functions/serverproperty-transact-sql.md) built-in function in a `SELECT` statement to return information about the current server. This scenario is useful when there are multiple instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installed on a Windows-based server, and the client must open another connection to the same instance that is used by the current connection.
+1. Copy and paste the following example into the query window and select **Execute**. This example uses the [SERVERPROPERTY](../../t-sql/functions/serverproperty-transact-sql.md) built-in function in a `SELECT` statement to return information about the current server. This scenario is useful when there are multiple instances of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] installed on a Windows-based server, and the client must open another connection to the same instance that is used by the current connection.
 
    ```sql
    SELECT CONVERT( sysname, SERVERPROPERTY('servername'));
@@ -68,7 +68,7 @@ Execute permissions on `sp_configure` with no parameters or with only the first 
 
 ### View server properties by using the sys.servers catalog view
 
-1. Connect to the [!INCLUDE[ssDE](../../includes/ssde-md.md)].
+1. Connect to the [!INCLUDE [ssDE](../../includes/ssde-md.md)].
 
 1. From the Standard bar, select **New Query**.
 
@@ -84,7 +84,7 @@ Execute permissions on `sp_configure` with no parameters or with only the first 
 
 ### View server properties by using the sys.configurations catalog view
 
-1. Connect to the [!INCLUDE[ssDE](../../includes/ssde-md.md)].
+1. Connect to the [!INCLUDE [ssDE](../../includes/ssde-md.md)].
 
 1. From the Standard bar, select **New Query**.
 
@@ -98,7 +98,7 @@ Execute permissions on `sp_configure` with no parameters or with only the first 
 
 ### Change a server property by using sp_configure
 
-1. Connect to the [!INCLUDE[ssDE](../../includes/ssde-md.md)].
+1. Connect to the [!INCLUDE [ssDE](../../includes/ssde-md.md)].
 
 1. From the Standard bar, select **New Query**.
 
@@ -115,15 +115,15 @@ Execute permissions on `sp_configure` with no parameters or with only the first 
    GO
    ```
 
-   For more information, see [Server Configuration Options (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md).
+   For more information, see [Server Configuration Options (SQL Server)](server-configuration-options-sql-server.md).
 
-## <a id="PowerShellProcedure"></a> SQL Server Configuration Manager
+## SQL Server Configuration Manager
 
 Some server properties can be viewed or changed by using SQL Server Configuration Manager. For example, you can view the version and edition of the instance of SQL Server, or change the location where error log files are stored. These properties can also be viewed by querying the [Server-Related Dynamic Management Views and Functions](../../relational-databases/system-dynamic-management-views/server-related-dynamic-management-views-and-functions-transact-sql.md).
 
 ### View or change server properties
 
-1. On the **Start** menu, point to **All Programs**, point to [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], point to **Configuration Tools**, and then select **SQL Server Configuration Manager**.
+1. On the **Start** menu, point to **All Programs**, point to [!INCLUDE [ssCurrentUI](../../includes/sscurrentui-md.md)], point to **Configuration Tools**, and then select **SQL Server Configuration Manager**.
 
 1. In **SQL Server Configuration Manager**, select **SQL Server Services**.
 
@@ -131,13 +131,14 @@ Some server properties can be viewed or changed by using SQL Server Configuratio
 
 1. In the **SQL Server (\<**_instancename_**>) Properties** dialog box, change the server properties on the **Service** tab or the **Advanced** tab, and then select **OK**.
 
-## <a id="FollowUp"></a> Restart after changes
+## Restart after changes
 
-For some properties, you may need to restart the server before the change can take effect.
+For some properties, you might need to restart the server before the change can take effect.
 
-## Next steps
+## Related content
 
-- [Server Configuration Options (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md)
+- [Server Configuration Options (SQL Server)](server-configuration-options-sql-server.md)
+- [Connect to the Database Engine](../../sql-server/connect-to-database-engine.md)
 - [SET Statements (Transact-SQL)](../../t-sql/statements/set-statements-transact-sql.md)
 - [SERVERPROPERTY (Transact-SQL)](../../t-sql/functions/serverproperty-transact-sql.md)
 - [sp_configure (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)

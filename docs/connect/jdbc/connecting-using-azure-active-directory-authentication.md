@@ -95,7 +95,7 @@ Replace the server/database name with your server/database name in the following
 ds.setServerName("msentra-managed-demo.database.windows.net"); // replace 'msentra-managed-demo' with your server name
 ds.setDatabaseName("demo"); // replace with your database name
 //Optional
-ds.setMSIClientId("94de34e9-8e8c-470a-96df-08110924b814"); // Replace with Client ID of user-assigned managed identity to be used
+ds.setMSIClientId("<managed_identity_client>"); // Replace with Client ID of user-assigned managed identity to be used
 ```
 
 The example to use `ActiveDirectoryMSI` authentication mode:
@@ -115,7 +115,7 @@ public class MsEntraMSI {
         ds.setDatabaseName("demo"); // Replace with your database name
         ds.setAuthentication("ActiveDirectoryMSI");
         // Optional
-        ds.setMSIClientId("94de34e9-8e8c-470a-96df-08110924b814"); // Replace with Client ID of user-assigned managed identity to be used
+        ds.setMSIClientId("<managed_identity_client_guid>"); // Replace with Client ID of user-assigned managed identity to be used
 
         try (Connection connection = ds.getConnection();
                 Statement stmt = connection.createStatement();
@@ -145,7 +145,7 @@ public class MSEntraManagedIdentity {
         ds.setDatabaseName("demo"); // Replace with your database name
         ds.setAuthentication("ActiveDirectoryManagedIdentity"); // ActiveDirectoryManagedIdentity for JDBC driver version v12.2.0+
         // Optional
-        ds.setUser("94de34e9-8e8c-470a-96df-08110924b814"); // Replace with Client ID of User-Assigned Managed Identity to be used
+        ds.setUser("<managed_identity_client>"); // Replace with Client ID of User-Assigned Managed Identity to be used
 
         try (Connection connection = ds.getConnection();
                 Statement stmt = connection.createStatement();
@@ -489,7 +489,7 @@ To build and run the example:
 1. Locate the following lines of code. Replace the value of `principalId` with the Application ID / Client ID of the Microsoft Entra service principal that you want to connect as. Replace the value of `principalSecret` with the secret.
 
     ```java
-    String principalId = "1846943b-ad04-4808-aa13-4702d908b5c1"; // Replace with your Microsoft Entra service principal ID.
+    String principalId = "<service_principal_guid>"; // Replace with your Microsoft Entra service principal ID.
     String principalSecret = "..."; // Replace with your Microsoft Entra principal secret.
     ```
 
@@ -506,7 +506,7 @@ import com.microsoft.sqlserver.jdbc.SQLServerDataSource;
 
 public class MSEntraServicePrincipal {
     public static void main(String[] args) throws Exception{
-        String principalId = "1846943b-ad04-4808-aa13-4702d908b5c1"; // Replace with your Microsoft Entra service principal ID.
+        String principalId = "<service_principal_guid>"; // Replace with your Microsoft Entra service principal ID.
         String principalSecret = "..."; // Replace with your Microsoft Entra principal secret.
 
         SQLServerDataSource ds = new SQLServerDataSource();
@@ -551,7 +551,7 @@ To build and run the example:
 1. Locate the following lines of code. Replace the value of `principalId` with the Application ID / Client ID of the Microsoft Entra service principal that you want to connect as. Replace the value of `clientCertificate` with the location of the service principal certificate.
 
     ```java
-    String principalId = "1846943b-ad04-4808-aa13-4702d908b5c1"; // Replace with your Microsoft Entra service principal ID.
+    String principalId = "<service_principal_guid>"; // Replace with your Microsoft Entra service principal ID.
 
     String clientCertificate = "..."; // Replace with the location for your Microsoft Entra service principal certificate.
     ```
@@ -571,7 +571,7 @@ import com.microsoft.sqlserver.jdbc.SQLServerDataSource;
 
 public class MSEntraServicePrincipalCertificate {
     public static void main(String[] args) throws Exception{
-        String principalId = "1846943b-ad04-4808-aa13-4702d908b5c1"; // Replace with your Microsoft Entra service principal ID.
+        String principalId = "<service_principal_guid>"; // Replace with your Microsoft Entra service principal ID.
         String clientCertificate = "..."; // Replace with the location of your service principal certificate.
 
         SQLServerDataSource ds = new SQLServerDataSource();
@@ -661,7 +661,7 @@ public class MSEntraTokenBased {
         // Retrieve the access token from Microsoft Entra ID.
         String spn = "https://database.windows.net/";
         String stsurl = "https://login.microsoftonline.com/..."; // Replace with your STS URL.
-        String clientId = "1846943b-ad04-4808-aa13-4702d908b5c1"; // Replace with your client ID.
+        String clientId = "<service_principal_guid>"; // Replace with your client ID.
         String clientSecret = "..."; // Replace with your client secret.
 
         String scope = spn +  "/.default";
@@ -733,7 +733,7 @@ public class MSEntraAccessTokenCallback {
             public SqlAuthenticationToken getAccessToken(String spn, String stsurl) {
 
                 String clientSecret = "..."; // Replace with your client secret.
-                String clientId = "1846943b-ad04-4808-aa13-4702d908b5c1"; // Replace with your client ID.
+                String clientId = "<service_principal_guid>"; // Replace with your client ID.
 
                 String scope = spn + "/.default";
                 Set<String> scopes = new HashSet<>();
@@ -802,7 +802,7 @@ public class MSEntraAccessTokenCallbackClass {
         @Override
         public SqlAuthenticationToken getAccessToken(String spn, String stsurl) {
             String clientSecret = "..."; // Replace with your client secret.
-            String clientId = "1846943b-ad04-4808-aa13-4702d908b5c1"; // Replace with your client ID.
+            String clientId = "<service_principal_guid>"; // Replace with your client ID.
             
             String scope = spn + "/.default";
             Set<String> scopes = new HashSet<>();

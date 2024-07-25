@@ -1,7 +1,7 @@
 ---
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 11/29/2023
+ms.date: 07/22/2024
 ms.service: sql
 ms.topic: include
 ms.custom:
@@ -43,13 +43,12 @@ Use the following steps to install the **mssql-tools18** on Red Hat Enterprise L
    sudo yum install -y mssql-tools18 unixODBC-devel
    ```
 
-   > [!NOTE]  
-   > To update to the latest version of **mssql-tools**, run the following commands:
-   >  
-   > ```bash
-   > sudo yum check-update
-   > sudo yum update mssql-tools18
-   > ```
+   To update to the latest version of **mssql-tools**, run the following commands:
+
+   ```bash
+   sudo yum check-update
+   sudo yum update mssql-tools18
+   ```
 
 1. **Optional**: Add `/opt/mssql-tools18/bin/` to your `PATH` environment variable in a bash shell.
 

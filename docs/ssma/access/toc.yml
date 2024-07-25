@@ -12,8 +12,6 @@
       href: installing-sql-server-migration-assistant-for-access-accesstosql.md
     - name: Explore SSMA interface
       href: getting-started-with-sql-server-migration-assistant-for-access-accesstosql.md
-    - name: Legal notice
-      href: legal-notice-ssma-for-access.md
 - name: Migrating Access databases
   items:
     - name: Migrating Access databases to SQL Server

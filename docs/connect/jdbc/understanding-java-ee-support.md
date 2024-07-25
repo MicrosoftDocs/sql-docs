@@ -3,7 +3,7 @@ title: Understanding Java EE support
 description: Learn how the JDBC driver supports Java EE, JBDC API and the packages Java applications must use to take advantage of that functionality.
 author: David-Engel
 ms.author: davidengel
-ms.date: 01/31/2024
+ms.date: 07/31/2024
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: conceptual
@@ -19,6 +19,8 @@ First, make sure that your Java environment (JDK, JRE) includes the javax.sql pa
 ## Driver name
 
 The driver class name is **com.microsoft.sqlserver.jdbc.SQLServerDriver**. 
+
+For JDBC Driver 12.8, the driver is contained in **mssql-jdbc-12.8.0.jre8.jar** or **mssql-jdbc-12.8.0.jre11.jar**.
 
 For JDBC Driver 12.6, the driver is contained in **mssql-jdbc-12.6.0.jre8.jar** or **mssql-jdbc-12.6.0.jre11.jar**.
 

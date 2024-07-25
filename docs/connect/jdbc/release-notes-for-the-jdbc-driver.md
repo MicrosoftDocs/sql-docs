@@ -38,7 +38,7 @@ For the driver in a tar.gz file: [Chinese (Simplified)](https://go.microsoft.com
 :::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft JDBC Driver 12.8.0 for SQL Server (tar.gz)](https://go.microsoft.com/fwlink/?linkid=2259112)**
 
 Release number: 12.8.0  
-Released: January 31, 2024
+Released: July 31, 2024
 
 If you need to download the driver in a language other than the one detected for you, you can use these direct links.  
 For the driver in a zip file: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2259203&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2259203&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2259203&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2259203&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2259203&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2259203&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2259203&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2259203&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2259203&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2259203&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2259203&clcid=0x40a)  

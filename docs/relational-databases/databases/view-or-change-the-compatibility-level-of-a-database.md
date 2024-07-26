@@ -38,8 +38,8 @@ To view or change the compatibility level of a database using [SQL Server Manage
 
 1. Expand **Databases**, and, depending on the database, either select a user database or expand **System Databases** and select a system database.
 
-> [!NOTE]  
-> You can't modify the compatibility level of system databases in Azure SQL Database.
+   > [!NOTE]  
+   > You can't modify the compatibility level of system databases in Azure SQL Database.
 
 1. Right-click the database, and then select **Properties**.
 

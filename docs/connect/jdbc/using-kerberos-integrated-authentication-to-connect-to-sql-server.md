@@ -253,6 +253,18 @@ You may also optionally provide the path to the native GSS library.
 
 For more information on JVM arguments, see the official Java documentation.
 
+## Extended Protection with Kerberos
+
+You can also enable Extended Protection for Kerberos when using the JDBC driver. The one restriction being that, when using Extended Protection, Force Encryption must not be enabled.
+
+For more information on how to enable Extended Protection and, see:
+
+- [Connect to the Database Engine Using Extended Protection](../../database-engine/configure-windows/connect-to-the-database-engine-using-extended-protection.md)
+
+For more information on connecting with encryption, see:
+
+- [Connecting with encryption](connecting-with-ssl-encryption.md)
+
 ## See also
 
 [Connecting to SQL Server with the JDBC driver](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)

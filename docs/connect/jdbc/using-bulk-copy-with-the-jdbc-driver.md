@@ -15,6 +15,9 @@ ms.topic: conceptual
 Microsoft SQL Server includes a popular command-line utility named `bcp` for quickly bulk copying large files into tables or views in SQL Server databases. The `SQLServerBulkCopy` class allows you to write code solutions in Java that provide similar functionality. There are other ways to load data into a SQL Server table (INSERT statements, for example) but `SQLServerBulkCopy` offers a significant performance advantage over them.  
   
 The `SQLServerBulkCopy` class can be used to write data only to SQL Server tables. But the data source isn't limited to SQL Server; any data source can be used, as long as the data can be read with a `ResultSet`, `RowSet`, or `ISQLServerBulkRecord` implementation.  
+
+> [!NOTE]  
+> `ISQLServerBulkData` as a data source when using bulk copy is currently not fully supported, and users may run into errors when using this data source type. It is recommended to use one `ResultSet`, `RowSet`, or `ISQLServerBulkRecord` instead.
   
 Using the `SQLServerBulkCopy` class, you can perform:  
   

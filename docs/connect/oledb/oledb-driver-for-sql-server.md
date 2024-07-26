@@ -18,7 +18,7 @@ helpviewer_keywords:
 ---
 # Microsoft OLE DB Driver for SQL Server
 
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../includes/driver_oledb_download.md)]
 
@@ -29,7 +29,7 @@ The OLE DB Driver for SQL Server is a stand-alone data access application progra
 
  The OLE DB Driver for SQL Server can be used with OLE DB Core Services supplied with Windows DAC, but this use isn't a requirement; the choice to use Core Services or not depends on the requirements of the individual application (for example, if connection pooling is required).
 
- ActiveX Data Object (ADO) applications may use the OLE DB Driver for SQL Server, but it's recommended to use ADO with the **DataTypeCompatibility** connection string keyword (or its corresponding **DataSource** property). OLE DB Driver for SQL Server allows ADO applications to exploit those new features introduced in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] that are available with OLE DB Driver for SQL Server via connection string keywords or OLE DB properties or [!INCLUDE[tsql](../../includes/tsql-md.md)]. For more information about the use of these features with ADO, see [Using ADO with OLE DB Driver for SQL Server](../oledb/applications/using-ado-with-oledb-driver-for-sql-server.md).
+ ActiveX Data Object (ADO) applications can use the OLE DB Driver for SQL Server, but it's recommended to use ADO with the **DataTypeCompatibility** connection string keyword (or its corresponding **DataSource** property). OLE DB Driver for SQL Server allows ADO applications to exploit those new features introduced in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] that are available with OLE DB Driver for SQL Server via connection string keywords or OLE DB properties or [!INCLUDE[tsql](../../includes/tsql-md.md)]. For more information about the use of these features with ADO, see [Using ADO with OLE DB Driver for SQL Server](../oledb/applications/using-ado-with-oledb-driver-for-sql-server.md).
 
  OLE DB Driver for SQL Server was designed to provide a simplified method of gaining native data access to SQL Server using OLE DB. It provides a way to innovate and evolve new data access features without changing the current Windows DAC components, which are now part of the Microsoft Windows platform.
 
@@ -80,7 +80,7 @@ Provides information about using the OLE DB Driver for SQL Server.
 [Finding more OLE DB Driver for SQL Server information](../oledb/finding-more-oledb-driver-for-sql-server-information.md)  
 Provides more resources about OLE DB Driver for SQL Server, including links to external resources and getting further assistance.
 
-## See also
+## Related content
 
-[Updating an application from SQL Server 2005 Native Client](../oledb/applications/updating-an-application-from-sql-server-2005-native-client.md)  
-[OLE DB how-to topics](../oledb/ole-db-how-to/ole-db-how-to-topics.md)
+- [Updating an application from SQL Server 2005 Native Client](../oledb/applications/updating-an-application-from-sql-server-2005-native-client.md)  
+- [OLE DB how-to topics](../oledb/ole-db-how-to/ole-db-how-to-topics.md)

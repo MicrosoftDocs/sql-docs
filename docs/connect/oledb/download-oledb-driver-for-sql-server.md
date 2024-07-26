@@ -10,7 +10,7 @@ ms.topic: conceptual
 ---
 # Download Microsoft OLE DB Driver for SQL Server
 
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw.md)]
 
 The OLE DB Driver for SQL Server is a stand-alone data access application programming interface (API), used for OLE DB. OLE DB Driver for SQL Server is available on Windows and delivers the SQL OLE DB driver in one dynamic-link library (DLL).
 
@@ -58,12 +58,11 @@ For details about this release, see [the release notes](release-notes-for-oledb-
 
 [Previous Microsoft OLE DB Driver for SQL Server Releases](release-notes-for-oledb-driver-for-sql-server.md#previous-releases)
 
-## See also
+## Related content
 
-[Release notes for the Microsoft OLE DB Driver for SQL Server](release-notes-for-oledb-driver-for-sql-server.md)  
-[System requirements for OLE DB Driver for SQL Server](system-requirements-for-oledb-driver-for-sql-server.md)  
-[Support policies for OLE DB Driver for SQL Server](applications\support-policies-for-oledb-driver-for-sql-server.md)  
-[When to use OLE DB Driver for SQL Server](when-to-use-oledb-driver-for-sql-server.md)  
-[Installing OLE DB Driver for SQL Server](applications/installing-oledb-driver-for-sql-server.md)  
-[MSOLEDBSQL major version differences](major-version-differences.md)  
-  
+- [Release notes for the Microsoft OLE DB Driver for SQL Server](release-notes-for-oledb-driver-for-sql-server.md)  
+- [System requirements for OLE DB Driver for SQL Server](system-requirements-for-oledb-driver-for-sql-server.md)  
+- [Support policies for OLE DB Driver for SQL Server](applications\support-policies-for-oledb-driver-for-sql-server.md)  
+- [When to use OLE DB Driver for SQL Server](when-to-use-oledb-driver-for-sql-server.md)  
+- [Installing OLE DB Driver for SQL Server](applications/installing-oledb-driver-for-sql-server.md)  
+- [MSOLEDBSQL major version differences](major-version-differences.md)

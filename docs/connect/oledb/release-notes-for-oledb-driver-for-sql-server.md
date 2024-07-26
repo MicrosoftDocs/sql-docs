@@ -3,14 +3,14 @@ title: Release notes for OLE DB Driver
 description: This release notes article describes the changes in each release of the Microsoft OLE DB Driver for SQL Server.
 author: David-Engel
 ms.author: davidengel
-ms.date: 07/09/2024
+ms.date: 07/26/2024
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: conceptual
 ---
 # Release notes for the Microsoft OLE DB Driver for SQL Server
 
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw.md)]
 
 This page discusses what was added in each version of the Microsoft OLE DB Driver for SQL Server.
 
@@ -529,8 +529,7 @@ For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?link
 | :------------ | :------ |
 | Support for the `MultiSubnetFailover` connection string keyword, and the `SSPROP_INIT_MULTISUBNETFAILOVER` initialization property. | For more information, see:<br/>&bull; &nbsp; [OLE DB Driver for SQL Server Support for High Availability, Disaster Recovery](features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md),<br/>&bull; &nbsp; [Using Connection String Keywords with OLE DB Driver for SQL Server](applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md). |
 
-## See also
+## Related content
 
-[Microsoft OLE DB Driver for SQL Server](oledb-driver-for-sql-server.md)  
-[MSOLEDBSQL major version differences](major-version-differences.md)  
-  
+- [Microsoft OLE DB Driver for SQL Server](oledb-driver-for-sql-server.md)  
+- [MSOLEDBSQL major version differences](major-version-differences.md)

@@ -19,7 +19,7 @@ helpviewer_keywords:
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-This article describes how prevent an instance of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] from starting automatically in [!INCLUDE [ssnoversion](../../includes/ssnoversion-md.md)] by using SQL Server Configuration Manager. [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] is normally configured to start automatically. You can change that by setting the start mode for the instance to manual.
+This article describes how to prevent an instance of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] from starting automatically in [!INCLUDE [ssnoversion](../../includes/ssnoversion-md.md)] by using SQL Server Configuration Manager. [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] is normally configured to start automatically. You can change that by setting the start mode for the instance to manual.
 
 ## <a id="SSMSProcedure"></a> Use SQL Server Configuration Manager
 

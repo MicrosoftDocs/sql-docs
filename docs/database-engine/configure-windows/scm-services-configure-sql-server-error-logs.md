@@ -22,7 +22,7 @@ This article describes how to view or modify the way [!INCLUDE [ssNoVersion](../
 
 1. In the **Configure SQL Server Error Logs** dialog box, choose from the following options.
 
-   1. Log files count
+   - Log files count
 
       **Limit the number of the error log files before they are recycled**
 
@@ -32,7 +32,7 @@ This article describes how to view or modify the way [!INCLUDE [ssNoVersion](../
 
       Specify the maximum number of archived error log files created before they're recycled. The default is 6, not including the current one. This value determines the number of previous backup logs that [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] retains before recycling them.
 
-   1. Log file size
+   - Log file size
 
       **Maximum size for error log file in KB**
 

@@ -10427,8 +10427,6 @@ items:
         items:
         - name: Overview
           href: sql-server/azure-arc/security-overview.md
-        - name: Best practices
-          href: sql-server/azure-arc/secure-best-practices.md
         - name: Configure least privilege
           href: sql-server/azure-arc/configure-least-privilege.md
         - name: Configure advanced data Security

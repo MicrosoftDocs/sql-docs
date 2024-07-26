@@ -84,12 +84,14 @@ The following license types are supported when licensing v-cores:
 | License only | You use a perpetual or Server+CAL license for Standard or Enterprise Edition,  or you use Developer, Evaluation, or Express Edition. Your software usage is reported according to the metering rules. See [Metering software usage](#usage-metering). | `LicenseOnly` |
 
 > [!IMPORTANT]
+> 
+> - The pay-as-you-go subscription requires the hosting machine to be continuously connected to Azure. 
 >
-> - The pay-as-you-go subscription requires the hosting machine to be continuously connected to Azure.
+>   Intermittent connectivity disruptions for up to 30 days are tolerated with built-in resilience. After 30 days without a connection, the pay-as-you-go subscription will expire. Once your subscription expires, you aren't authorized to use the software.
 >
->   Intermittent connectivity disruptions for up to 30 days are tolerated with built-in resilience. After 30 days without a connection, the pay-as-you-go subscription will expire. Please be advised that once your subscription expires, you aren't authorized to use the software.
+> - The pay-as-you-go hourly charges are issued only when SQL Server is running on the machine at any point within a given hour and if the machine is online.   
 >
-> - By selecting License with Software Assurance you attest that you have Enterprise Edition or Standard Edition licenses with active Software Assurance.
+> - By selecting License with Software Assurance, you attest that you have Enterprise Edition or Standard Edition licenses with active Software Assurance or a SQL subscription license.
 
 In addition to billing differences, license type determines what features are available to your SQL Server instance.
 

@@ -26,7 +26,7 @@ helpviewer_keywords:
   - "stored credentials [Reporting Services]"
   - "security [Reporting Services], data sources"
   - "Windows integrated security [Reporting Services]"
-#customer intent: As a SQL server user, I want to set credentials and connections for report data sources so that I can safely use remote data sources.
+#customer intent: As a SQL server user, I want to use a report server to set credentials and connections so that I can safely use remote data sources.
 ---
 # Specify credential and connection information for report data sources
 
@@ -39,7 +39,7 @@ The connection to an external data source is defined when you create the report.
 
 ## When credentials are used in Report Builder
 
- In Report Builder, the report server often use credentials when you connect. The report server also uses credentials for data-related tasks, such as creating an embedded data source, running a dataset query, or previewing a report. Credentials aren't stored in the report. The report server and the local client manage credentials separately. The following list describes the types of credentials that you might need to provide, where the report server stores them, and how the report server uses them:
+In Report Builder, the report server often use credentials when you connect. The report server also uses credentials for data-related tasks, such as creating an embedded data source, running a dataset query, or previewing a report. Credentials aren't stored in the report. The report server and the local client manage credentials separately. The following list describes the types of credentials that you might need to provide, where the report server stores them, and how the report server uses them:
 
 - Report server credentials that you enter in the Reporting Services sign-in dialog box.
 
@@ -136,7 +136,7 @@ To grant this permission:
 
 #### Use impersonation with stored credentials
 
- You can also use credentials to impersonate the identity of another user. For SQL Server databases, the impersonation options sets the [SETUSER](../../t-sql/statements/setuser-transact-sql.md) function.
+ You can also use credentials to impersonate the identity of another user. For SQL Server databases, the use of impersonation options sets the [SETUSER](../../t-sql/statements/setuser-transact-sql.md) function.
 
 > [!IMPORTANT]
 > Do not use impersonation for reports that support subscriptions or that use schedules to generate report history or refresh a report execution snapshot.

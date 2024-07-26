@@ -346,6 +346,16 @@ Follow these steps to implement the validation process.
 
 In the dev/test subscription(s) it's safe to use the matching SQL Server configurations to that in the production, including the use of the production editions. Additional SQL Server licenses aren't required. If you're using pay-as-you-go, additional charges aren't applied.
 
+## Best practices
+
+Implement the following configurations to comply with current best practices to secure instances of SQL Server enabled by Azure Arc:
+
+* Enable [least privilege mode (preview)](configure-least-privilege.md).
+* Run [SQL best practices assessment](assess.md). Review the assessment and apply recommendations.
+* Enable [Microsoft Entra authentication](../../relational-databases/security/authentication-access/azure-ad-authentication-sql-server-overview.md).
+* Enable [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-sql-usage) and resolve the issues pointed out by Defender for SQL.
+* Don't enable SQL authentication. It's disabled by default. Review [SQL Server security best practices](../../relational-databases/security/sql-server-security-best-practices.md).
+
 ## Related content
 
 * [Azure security fundamentals](/azure/security/fundamentals/)

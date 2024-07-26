@@ -59,7 +59,7 @@ sections:
         answer: No. TDE with Azure Key Vault is not supported today SQL Server enabled by Azure Arc. You can manually set up TDE for your own instances.
 
       - question: Is there key vault support?
-        answer: Yes, there is key vault support today for SQL Server enabled by Azure Arc for storing the Entra ID certificate.
+        answer: Yes, there is key vault support today for SQL Server enabled by Azure Arc for storing the Microsoft Entra ID certificate.
 
       - question: Does SQL Server enabled by Azure Arc support Private Link?
         answer: |

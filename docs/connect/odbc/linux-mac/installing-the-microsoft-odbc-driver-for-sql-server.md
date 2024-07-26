@@ -23,7 +23,7 @@ This article provides commands for installing the ODBC driver from the bash shel
 
 ## <a id="18"></a> Microsoft ODBC 18
 
-The following sections explain how to install the Microsoft ODBC driver 18 from the bash shell for different Linux distributions. Supported distributions are Alpine Linux, Debian, Red Hat Enterprise Linux (RHEL), Oracle Linux, SUSE Linux Enterprise Server (SLES), and Ubuntu. Note that you can automatically accept the EULA agreement automatically if the file '/opt/microsoft/msodbcsql18/ACCEPT_EULA' exists in Debian, Ubuntu, Redhat and Oracle Linux systems.
+The following sections explain how to install the Microsoft ODBC driver 18 from the bash shell for different Linux distributions. Supported distributions are Alpine Linux, Debian, Red Hat Enterprise Linux (RHEL), Oracle Linux, SUSE Linux Enterprise Server (SLES), and Ubuntu. Starting with version 18.4, to accept the EULA automatically when installing the non-Alpine Linux (.deb or .rpm) driver or tools, you can create the file '/opt/microsoft/msodbcsql18/ACCEPT_EULA'.
 
 ### [Alpine](#tab/alpine18-install)
 

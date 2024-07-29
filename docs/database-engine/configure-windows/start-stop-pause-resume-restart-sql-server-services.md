@@ -3,7 +3,7 @@ title: Start, stop, pause, resume, and restart SQL Server services
 description: Find out how to start, stop, pause, resume, or restart various SQL Server services. See how to use Transact-SQL, PowerShell, and other tools for these actions.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 07/22/2024
+ms.date: 07/26/2024
 ms.service: sql
 ms.subservice: configuration
 ms.topic: conceptual
@@ -97,8 +97,7 @@ From the **Start** menu, select **All Programs > Microsoft SQL Server > Configur
 
 1. Select **OK** to close the SQL Server Configuration Manager.
 
-> [!NOTE]  
-> To start an instance of the [!INCLUDE [ssDE](../../includes/ssde-md.md)] with startup options, see [SCM Services - Configure server startup options](scm-services-configure-server-startup-options.md).
+To start an instance of the [!INCLUDE [ssDE](../../includes/ssde-md.md)] with startup options, see [SQL Server Configuration Manager: Configure server startup options](scm-services-configure-server-startup-options.md).
 
 > [!IMPORTANT]  
 > Starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], when you set the **Start Mode** for a [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] service to *Automatic* in Configuration Manager, the service will start in *Automatic (Delayed Start)* mode instead, even though the **Start Mode** shows as *Automatic*.
@@ -146,99 +145,98 @@ The [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] services can be s
 
 ### <a id="dbDefault"></a> Start the default instance of the Database Engine
 
-- From a command prompt, enter one of the following commands:
+From a command prompt, enter one of the following commands:
 
-  ```cmd
-  net start "SQL Server (MSSQLSERVER)"
-  ```
+```cmd
+net start "SQL Server (MSSQLSERVER)"
+```
 
-   -or-
+-or-
 
-  ```cmd
-  net start MSSQLSERVER
-  ```
+```cmd
+net start MSSQLSERVER
+```
 
 ### <a id="dbNamed"></a> Start a named instance of the Database Engine
 
-- From a command prompt, enter one of the following commands. Replace *\<instancename>* with the name of the instance you want to manage.
+From a command prompt, enter one of the following commands. Replace *\<instancename>* with the name of the instance you want to manage.
 
-    ```cmd
-    net start "SQL Server (instancename)"
-    ```
+```cmd
+net start "SQL Server (instancename)"
+```
 
-   -or-
+-or-
 
-   ```cmd
-   net start MSSQL$instancename
-   ```
+```cmd
+net start MSSQL$instancename
+```
 
 ### <a id="dbStartup"></a> Start the Database Engine with startup options
 
-- Add startup options to the end of the `net start "SQL Server (MSSQLSERVER)"` statement, separated by a space. When started using `net start`, startup options use a slash (/) instead of a hyphen (-).
+Add startup options to the end of the `net start "SQL Server (MSSQLSERVER)"` statement, separated by a space. When started using `net start`, startup options use a slash (/) instead of a hyphen (-).
 
-  ```cmd
-  net start "SQL Server (MSSQLSERVER)" /f /m
-  ```
+```cmd
+net start "SQL Server (MSSQLSERVER)" /f /m
+```
 
-   -or-
+-or-
 
-  ```cmd
-  net start MSSQLSERVER /f /m
-  ```
+```cmd
+net start MSSQLSERVER /f /m
+```
 
-  > [!NOTE]  
-  > For more information about startup options, see [Database Engine Service startup options](database-engine-service-startup-options.md).
+> [!NOTE]  
+> For more information about startup options, see [Database Engine Service startup options](database-engine-service-startup-options.md).
 
 ### <a id="agDefault"></a> Start the SQL Server Agent on the default instance of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]
 
-- From a command prompt, enter one of the following commands:
+From a command prompt, enter one of the following commands:
 
-   ```cmd
-   net start "SQL Server Agent (MSSQLSERVER)"
-   ```
+```cmd
+net start "SQL Server Agent (MSSQLSERVER)"
+```
 
-   -or-
+-or-
 
-  ```cmd
-  net start SQLSERVERAGENT
-  ```
+```cmd
+net start SQLSERVERAGENT
+```
 
 ### <a id="agNamed"></a> Start the SQL Server Agent on a named instance of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]
 
-- From a command prompt, enter one of the following commands. Replace *instancename* with the name of the instance you want to manage.
+From a command prompt, enter one of the following commands. Replace *instancename* with the name of the instance you want to manage.
 
-  ```cmd
-  net start "SQL Server Agent (instancename)"
-  ```
+```cmd
+net start "SQL Server Agent (instancename)"
+```
 
-   -or-
+-or-
 
-  ```cmd
-  net start SQLAgent$instancename
-  ```
+```cmd
+net start SQLAgent$instancename
+```
 
 For information about how to run SQL Server Agent in verbose mode for troubleshooting, see [sqlagent90 Application](../../tools/sqlagent90-application.md).
 
 ### <a id="Browser"></a> Start the SQL Server Browser
 
-- From a command prompt, enter one of the following commands:
+From a command prompt, enter one of the following commands:
 
-  ```cmd
-  net start "SQL Server Browser"
-  ```
+```cmd
+net start "SQL Server Browser"
+```
 
-   -or-
+-or-
 
-  ```cmd
-  net start SQLBrowser
-  ```
+```cmd
+net start SQLBrowser
+```
 
 ### <a id="pauseStop"></a> Pause or stop services from the command prompt window
 
 To pause or stop services, modify the commands in the following ways.
 
 - To pause a service, replace `net start` with `net pause`.
-
 - To stop a service, replace `net start` with `net stop`.
 
 ## <a id="TsqlProcedure"></a> Transact-SQL
@@ -340,7 +338,7 @@ To determine whether a SQL Server service instance is disabled, follow these ste
 
    1. Review the value in the **Start Mode** column and verify that it's set to **Disabled**.
 
-   1. Change the value to either **Manual** or **Automatic** per your requirements. For more information, see [SCM Services - Configure server startup options](scm-services-configure-server-startup-options.md).
+   1. Change the value to either **Manual** or **Automatic** per your requirements. For more information, see [SQL Server Configuration Manager: Configure server startup options](scm-services-configure-server-startup-options.md).
 
 ## <a id="ServiceController"></a> Use the ServiceController class
 

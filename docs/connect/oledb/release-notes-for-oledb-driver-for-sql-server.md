@@ -10,7 +10,7 @@ ms.topic: conceptual
 ---
 # Release notes for the Microsoft OLE DB Driver for SQL Server
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw.md)]
 
 This page discusses what was added in each version of the Microsoft OLE DB Driver for SQL Server.
 

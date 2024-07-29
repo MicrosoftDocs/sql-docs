@@ -4,7 +4,7 @@ description: Import or export an Azure SQL Database using Private Link without r
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma, hudequei
-ms.date: 12/22/2022
+ms.date: 07/29/2024
 ms.service: sql-database
 ms.subservice: migration
 ms.topic: how-to

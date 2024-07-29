@@ -4705,21 +4705,21 @@ items:
         href: database-engine/configure-windows/start-sql-server-in-single-user-mode.md
       - name: Minimal Configuration
         href: database-engine/configure-windows/start-sql-server-with-minimal-configuration.md
-      - name: SQL Configuration Manager (SCM) Services -
+      - name: SQL Server Configuration Manager services -
         items:
         - name: Connect to another computer
           href: database-engine/configure-windows/scm-services-connect-to-another-computer.md
-        - name: Set an Instance to Start Automatically
+        - name: Set an instance to start automatically
           href: database-engine/configure-windows/scm-services-set-an-instance-to-start-automatically.md
-        - name: Prevent Automatic Startup
+        - name: Prevent automatic startup
           href: database-engine/configure-windows/scm-services-prevent-automatic-startup-of-an-instance.md
-        - name: Change the Service Startup Account
+        - name: Change the service startup account
           href: database-engine/configure-windows/scm-services-change-the-service-startup-account.md
-        - name: Configure Server Startup Options
+        - name: Configure server startup options
           href: database-engine/configure-windows/scm-services-configure-server-startup-options.md
-        - name: Change the Password of the Accounts
+        - name: Change the password of the accounts
           href: database-engine/configure-windows/scm-services-change-the-password-of-the-accounts-used.md
-        - name: Configure SQL Server Error Logs
+        - name: Configure SQL Server error logs
           href: database-engine/configure-windows/scm-services-configure-sql-server-error-logs.md
     - name: Server network configuration
       href: database-engine/configure-windows/server-network-configuration.md

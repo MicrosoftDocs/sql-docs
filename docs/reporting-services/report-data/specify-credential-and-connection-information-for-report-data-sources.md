@@ -28,7 +28,7 @@ helpviewer_keywords:
   - "Windows integrated security [Reporting Services]"
 #customer intent: As a SQL server user, I want to use a report server to set credentials and connections so that I can safely use remote data sources.
 ---
-# Specify credential and connection information for report data sources
+## Specify credential and connection information for report data sources
 
 A report server uses credentials to connect to external data sources that provide content to reports or recipient information to a data-driven subscription. You can specify credentials that use Windows Authentication, database authentication, no authentication, or custom authentication. When the report server sends a connection request over the network, it either impersonates a user account or the unattended execution account. For more information about the security context under which a connection request is made, see [Data source configuration and network connections](#DataSourceConfigurationConnections) in this article.
 
@@ -37,9 +37,9 @@ A report server uses credentials to connect to external data sources that provid
 
 The connection to an external data source is defined when you create the report. It can be managed separately after the report is published. You can specify a static connection string or an expression that allows users to select a data source from a dynamic list. For more information about how to specify a data source type and connection string, see [Create data connection strings - Report Builder & SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).
 
-## When credentials are used in Report Builder
+### How Report Builder uses credentials
 
-In Report Builder, the report server often use credentials when you connect. The report server also uses credentials for data-related tasks, such as creating an embedded data source, running a dataset query, or previewing a report. Credentials aren't stored in the report. The report server and the local client manage credentials separately. The following list describes the types of credentials that you might need to provide, where the report server stores them, and how the report server uses them:
+In Report Builder, the report server often uses credentials when you connect. The report server also uses credentials for data-related tasks, such as creating an embedded data source, running a dataset query, or previewing a report. Credentials aren't stored in the report. The report server and the local client manage credentials separately. The following list describes the types of credentials that you might need to provide, where the report server stores them, and how the report server uses them:
 
 - Report server credentials that you enter in the Reporting Services sign-in dialog box.
 
@@ -57,7 +57,7 @@ In Report Builder, the report server often use credentials when you connect. The
 
 For more information, see [Preview reports in Report Builder](../../reporting-services/report-builder/previewing-reports-in-report-builder.md).
 
-## Use remote data sources
+### Use remote data sources
 
 If the report retrieves data from a remote database server, you must verify:
 
@@ -72,7 +72,7 @@ If the report retrieves data from a remote database server, you must verify:
 
 - Remote connections are enabled. If you're accessing SQL Server relational databases on external computers, you can use SQL Server Configuration Manager tool to verify that remote connections over Transmission Control Protocol (TCP) are enabled.
 
-## Ways to specify credentials for connecting to remote data sources
+### Specify credentials for connecting to remote data sources
 
  The data sources that provide content to reports are often hosted on remote servers. To retrieve data for a report, the report server must connect to the server by using a set of credentials that you provide in advance or that are obtained at run time. When configuring a data source, you can specify credentials in the following ways:
 
@@ -85,6 +85,8 @@ If the report retrieves data from a remote database server, you must verify:
 - Use no credentials.
 
 The network environment determines the kinds of connections you can support. For example, if the Kerberos version 5 protocol is enabled, you might be able to use the delegation and impersonation features available in Windows Authentication to support connections across multiple servers. If your network doesn't support these security features, you need to work around connection constraints. If delegation and impersonation aren't enabled, Windows credentials can be passed across one computer connection before they expire. A user connection from a client computer to a report server computer counts as the first connection. If the user opens a report that retrieves data from a remote server, that sign-in counts as a second connection. That connection fails if you specified the connection to use integrated security when delegation isn't enabled.
+
+### Multiple connections
 
 If multiple connections are required to complete a round trip from the client computer to an external report data source, choose from the following strategies to make the connections succeed.
 
@@ -136,10 +138,10 @@ To grant this permission:
 
 #### Use impersonation with stored credentials
 
- You can also use credentials to impersonate the identity of another user. For SQL Server databases, the use of impersonation options sets the [SETUSER](../../t-sql/statements/setuser-transact-sql.md) function.
+ You can also use credentials to impersonate the identity of another user. For SQL Server databases, the impersonation options use the [SETUSER](../../t-sql/statements/setuser-transact-sql.md) function.
 
 > [!IMPORTANT]
-> Do not use impersonation for reports that support subscriptions or that use schedules to generate report history or refresh a report execution snapshot.
+> Don't use impersonation for reports that support subscriptions or that use schedules to generate report history or refresh a report execution snapshot.
 
 ### No credentials
 
@@ -153,9 +155,10 @@ To grant this permission:
 
 Under these conditions, the report server connects to a remote data source by using the unattended execution account that you must define in advance. Because the report server doesn't connect to a remote server by using its service credentials, you must specify an account that the report server can use to make the connection. For more information about creating this account, see [Configure the unattended execution account (Report Server Configuration Manager)](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).
 
-## User name and password sign-in
+## Other methods
 
- When you select **Use this user name and password**, a user name and password must be supplied to access the data source. For a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database, the credentials might be for a database sign-in. The credentials are passed to the data source for authentication.
+- User name and password sign-in: When you select **Use this user name and password**, a user name and password must be supplied to access the data source. For a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database, the credentials might be for a database sign-in. The credentials are passed to the data source for authentication.
+- Setting credentials programmatically: You can set credentials in your code to control access to reports and to the report server. For more information, see [Data sources and connection methods](../../reporting-services/report-server-web-service/methods/data-sources-and-connection-methods.md).
 
 ## <a name="DataSourceConfigurationConnections"></a> Data source configuration and network connections
 
@@ -167,10 +170,6 @@ Under these conditions, the report server connects to a remote data source by us
 |Windows credentials|Impersonate the specified user.|For [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle, ODBC, and OLE DB: connect by using the impersonated user account.|
 |Database credentials|Impersonate the unattended execution account or the service account.<br /><br /> (Reporting Services removes administrator permissions when sending the connection request by using the service identity).|For [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle, ODBC, and OLE DB:<br /><br /> Append the user name and password on the connection string.<br /><br /> For [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]:<br /><br /> The connection succeeds if you use the TCP/IP protocol, otherwise it fails.<br /><br /> For XML:<br /><br /> Fail the connection on the report server if database credentials are used.|
 |None|Impersonate the unattended execution account.|For [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle, ODBC, and OLE DB:<br /><br /> Use the credentials defined in the connection string. The connection fails on the report server if the unattended execution account is undefined.<br /><br /> For [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]:<br /><br /> Always fail the connection if no credentials are specified, even if the unattended execution account is defined.<br /><br /> For XML:<br /><br /> Connect as Anonymous User if the unattended execution account is defined; otherwise, fail the connection.|
-
-## Setting credentials programmatically
-
- You can set credentials in your code to control access to reports and to the report server. For more information, see [Data sources and connection methods](../../reporting-services/report-server-web-service/methods/data-sources-and-connection-methods.md).
 
 ## Related content
 

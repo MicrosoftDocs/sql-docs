@@ -1,11 +1,10 @@
 ---
 title: Configure automatic updates
 description: This article explains how to configure SQL Server enabled by Azure Arc automatic updates.
-author: twright-msft
-ms.author: twright
+author: AbdullahMSFT
+ms.author: amamun 
 ms.reviewer: mikeray
-ms.date: 09/12/2023
-ms.subservice: 
+ms.date: 07/29/2024
 ms.topic: conceptual 
 ---
 
@@ -21,7 +20,7 @@ Automatic updates:
 - Works at the host operating system level and applies to all installed SQL Server instances
 - Only installs automated updates during this maintenance window 
 
-   For SQL Server, this restriction ensures that system updates and any associated restarts occur at the best possible time for the SQL Server instances and their hosted databases. 
+   For SQL Server, this restriction ensures that system updates and any associated restarts occur at the best possible time for the SQL Server instances and their hosted databases.
 
 - Currently only works on Windows hosts
 
@@ -37,9 +36,7 @@ Automatic updates:
 To configure automatic updates, use:
 
 - Azure portal
-- ARM API
-
-- Azure Policy
+- Programmatically or by policy
 
 The following table describes the options that you may configure for automatic updates. 
 
@@ -69,6 +66,15 @@ When you enable or configure automatic updates, Azure configures the Azure Exten
 > 1. Wait approximately 5 minutes for the saved change to complete.
 > 1. Set the new license type.
 >
+
+## Manage programmatically or by policy
+
+To manage automatic updates programmatically or by policy, review the information in the following resources:
+
+- [Manage updates using Azure REST API](/azure/update-manager/manage-arc-enabled-servers-programmatically?tabs=cli%2Crest#update-deployment)
+- [Trigger an update assessment](/azure/update-manager/manage-arc-enabled-servers-programmatically?tabs=cli%2Crest#update-assessment)
+- [Enable Microsoft updates (to enable SQL updates)](/azure/update-manager/configure-wu-agent#enable-updates-for-other-microsoft-products)
+- [Enable Azure Update Manager via Azure policy](/azure/update-manager/tutorial-assessment-deployment-using-policy)
 
 ## Next steps
 

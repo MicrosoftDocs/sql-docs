@@ -13,7 +13,7 @@ ms.topic: conceptual
 
 This release notes article describes what's new for the Microsoft ODBC driver for SQL Server on Windows.
 
-## 18.4.1
+## 18.4
 
 Version number: 18.4.1.1  
 Released: July 31, 2024

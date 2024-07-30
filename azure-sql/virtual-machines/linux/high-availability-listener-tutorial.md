@@ -292,7 +292,7 @@ This tutorial uses SLES 15 for the following examples:
             params port=59999 \
             op monitor timeout=20s interval=10
      primitive rsc_st_azure stonith:fence_azure_arm \
-            params subscriptionId=61868ab8-16d4-44ec-a9ff-f35d05922847 resourceGroup=amvindomain tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47 login=b6940c8c-e3eb-4561-b45e-a9a51b791728 passwd="******" pcmk_monitor_retries=4 pcmk_action_limit=3 power_timeout=240 pcmk_reboot_timeout=900 pcmk_host_map="sles1:sles1;sles2:sles2;sles3:sles3" \
+            params subscriptionId=<subscription_guid> resourceGroup=amvindomain tenantId=<tenant_guid> login=<login_guid> passwd="******" pcmk_monitor_retries=4 pcmk_action_limit=3 power_timeout=240 pcmk_reboot_timeout=900 pcmk_host_map="sles1:sles1;sles2:sles2;sles3:sles3" \
             op monitor interval=3600 timeout=120
      group admin-ip-group admin-ip azure_load_balancer
      ms ms-ag_cluster ag_cluster \

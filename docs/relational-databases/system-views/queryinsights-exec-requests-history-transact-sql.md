@@ -2,9 +2,9 @@
 title: "queryinsights.exec_requests_history (Transact-SQL)"
 description: "The queryinsights.exec_requests_history in Microsoft Fabric provides information about each complete SQL request."
 author: WilliamDAssafMSFT
-ms.author: wiassaf
+ms.author: mariyaali
 ms.reviewer: mariyaali
-ms.date: 07/17/2024
+ms.date: 07/23/2024
 ms.service: sql
 ms.topic: "reference"
 f1_keywords:
@@ -37,6 +37,7 @@ monikerRange: "=fabric"
 | `batch_id` | **uniqueidentifier** | ID for grouped queries (if applicable). Nullable.|
 | `root_batch_id` | **uniqueidentifier** | ID for the main group of queries (if nested). Nullable.|
 | `query_hash` | **varchar(200)** | Binary hash value calculated on the query and used to identify queries with similar logic. You can use the query hash to correlate between Query Insight views. For more information, see [Query Insights - Aggregation](/fabric/data-warehouse/query-insights#similar-queries).|
+| `label` | **varchar(8000)** | Optional label string associated with some SELECT query statements.|
 
 ## Permissions
 

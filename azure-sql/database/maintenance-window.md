@@ -147,6 +147,7 @@ The following table is for [zone-redundant](high-availability-sla-local-zone-red
 | Central US |  Yes | Yes | Yes |
 | East US 1  |  Yes | Yes | Yes |
 | East US 2  | | | Yes |
+| France Central | | Yes | Yes |
 | Japan East | | | Yes |
 | North Europe |  Yes | Yes | Yes |
 | South Central US  | | | Yes |

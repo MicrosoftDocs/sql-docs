@@ -55,13 +55,12 @@ Use the following steps to install the **mssql-tools18** on Ubuntu.
    sudo apt-get install mssql-tools18 unixodbc-dev
    ```
 
-   > [!NOTE]  
-   > To update to the latest version of **mssql-tools**, run the following commands:
-   >  
-   > ```bash
-   > sudo apt-get update  
-   > sudo apt-get install mssql-tools18
-   > ```
+   To update to the latest version of **mssql-tools**, run the following commands:
+
+   ```bash
+   sudo apt-get update  
+   sudo apt-get install mssql-tools18
+   ```
 
 1. **Optional**: Add `/opt/mssql-tools18/bin/` to your `PATH` environment variable in a bash shell.
 

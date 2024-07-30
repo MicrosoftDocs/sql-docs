@@ -4705,21 +4705,21 @@ items:
         href: database-engine/configure-windows/start-sql-server-in-single-user-mode.md
       - name: Minimal Configuration
         href: database-engine/configure-windows/start-sql-server-with-minimal-configuration.md
-      - name: SQL Configuration Manager (SCM) Services -
+      - name: SQL Server Configuration Manager services -
         items:
         - name: Connect to another computer
           href: database-engine/configure-windows/scm-services-connect-to-another-computer.md
-        - name: Set an Instance to Start Automatically
+        - name: Set an instance to start automatically
           href: database-engine/configure-windows/scm-services-set-an-instance-to-start-automatically.md
-        - name: Prevent Automatic Startup
+        - name: Prevent automatic startup
           href: database-engine/configure-windows/scm-services-prevent-automatic-startup-of-an-instance.md
-        - name: Change the Service Startup Account
+        - name: Change the service startup account
           href: database-engine/configure-windows/scm-services-change-the-service-startup-account.md
-        - name: Configure Server Startup Options
+        - name: Configure server startup options
           href: database-engine/configure-windows/scm-services-configure-server-startup-options.md
-        - name: Change the Password of the Accounts
+        - name: Change the password of the accounts
           href: database-engine/configure-windows/scm-services-change-the-password-of-the-accounts-used.md
-        - name: Configure SQL Server Error Logs
+        - name: Configure SQL Server error logs
           href: database-engine/configure-windows/scm-services-configure-sql-server-error-logs.md
     - name: Server network configuration
       href: database-engine/configure-windows/server-network-configuration.md
@@ -5990,55 +5990,6 @@ items:
         href: relational-databases/import-export/use-a-format-file-to-skip-a-data-field-sql-server.md
       - name: Use a format file to map table columns to data-file fields
         href: relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md
-  - name: Stretch database
-    href: sql-server/stretch-database/stretch-database.md
-    items:
-    - name: Overview
-      items:
-      - name: Limitations & blocking issues
-        href: sql-server/stretch-database/limitations-for-stretch-database.md
-      - name: Get Started
-        items:
-        - name: Identify databases & tables
-          href: ./sql-server/stretch-database/stretch-database.md
-        - name: Run the wizard
-          href: sql-server/stretch-database/get-started-by-running-the-enable-database-for-stretch-wizard.md
-        - name: Configure compatible features
-          href: sql-server/stretch-database/configure-compatible-sql-server-features-with-stretch-database.md
-    - name: How To
-      items:
-      - name: Enable
-        items:
-        - name: Enable a database
-          href: sql-server/stretch-database/enable-stretch-database-for-a-database.md
-        - name: Enable a table
-          href: sql-server/stretch-database/enable-stretch-database-for-a-table.md
-        - name: Select rows to migrate
-          href: sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md
-      - name: Manage
-        items:
-        - name: Monitor migration
-          href: sql-server/stretch-database/monitor-and-troubleshoot-data-migration-stretch-database.md
-        - name: Pause & resume migration
-          href: sql-server/stretch-database/pause-and-resume-data-migration-stretch-database.md
-        - name: Manage & troubleshoot
-          href: sql-server/stretch-database/manage-and-troubleshoot-stretch-database.md
-        - name: Back up
-          href: sql-server/stretch-database/backup-stretch-enabled-databases-stretch-database.md
-        - name: Restore
-          href: sql-server/stretch-database/restore-stretch-enabled-databases-stretch-database.md
-        - name: Disable & bring back data
-          href: sql-server/stretch-database/disable-stretch-database-and-bring-back-remote-data.md
-        - name: Extended events
-          href: sql-server/stretch-database/extended-events-for-stretch-database.md
-    - name: Resources
-      items:
-      - name: Pricing >>
-        href: https://azure.microsoft.com/pricing/details/sql-server-stretch-database/
-      - name: Service updates >>
-        href: https://azure.microsoft.com/updates/?product=sql-server-stretch-database
-      - name: Videos >>
-        href: https://azure.microsoft.com/documentation/videos/index/?services=sql-server-stretch-database
   - name: Database Experimentation Assistant (DEA)
     href: dea/database-experimentation-assistant-overview.md
     items:
@@ -12878,12 +12829,6 @@ items:
         href: relational-databases/system-catalog-views/sys-workload-management-workload-classifier-details-transact-sql.md
       - name: sys.workload-management-workload-classifiers
         href: relational-databases/system-catalog-views/sys-workload-management-workload-classifiers-transact-sql.md
-    - name: Stretch Database
-      items:
-      - name: sys.remote_data_archive_databases
-        href: relational-databases/system-catalog-views/stretch-database-catalog-views-sys-remote-data-archive-databases.md
-      - name: sys.remote_data_archive_tables
-        href: relational-databases/system-catalog-views/stretch-database-catalog-views-sys-remote-data-archive-tables.md
     - name: XML Schemas (XML Type System)
       href: relational-databases/system-catalog-views/xml-schemas-xml-type-system-catalog-views-transact-sql.md
       items:
@@ -13608,13 +13553,6 @@ items:
         href: relational-databases/system-dynamic-management-views/sys-dm-os-windows-info-transact-sql.md
       - name: sys.dm_os_workers
         href: relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md
-    - name: Stretch Database
-      href: relational-databases/system-dynamic-management-views/stretch-database-related-dynamic-management-views-transact-sql.md
-      items:
-      - name: sys.dm_db_rda_migration_status
-        href: relational-databases/system-dynamic-management-views/stretch-database-sys-dm-db-rda-migration-status.md
-      - name: sys.dm_db_rda_schema_update_status
-        href: relational-databases/system-dynamic-management-views/stretch-database-sys-dm-db-rda-schema-update-status.md
     - name: Transactions
       href: relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md
       items:
@@ -15464,27 +15402,6 @@ items:
         href: relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md
       - name: sp_trace_setstatus
         href: relational-databases/system-stored-procedures/sp-trace-setstatus-transact-sql.md
-    - name: Stretch Database Extended
-      href: relational-databases/system-stored-procedures/stretch-database-extended-stored-procedures-transact-sql.md
-      items:
-      - name: sys.sp_rda_deauthorize_db
-        href: relational-databases/system-stored-procedures/sys-sp-rda-deauthorize-db-transact-sql.md
-      - name: sys.sp_rda_get_rpo_duration
-        href: relational-databases/system-stored-procedures/sys-sp-rda-get-rpo-duration-transact-sql.md
-      - name: sys.sp_rda_reauthorize_db
-        href: relational-databases/system-stored-procedures/sys-sp-rda-reauthorize-db-transact-sql.md
-      - name: sys.sp_rda_reconcile_batch
-        href: relational-databases/system-stored-procedures/sys-sp-rda-reconcile-batch-transact-sql.md
-      - name: sys.sp_rda_reconcile_columns
-        href: relational-databases/system-stored-procedures/sys-sp-rda-reconcile-columns-transact-sql.md
-      - name: sys.sp_rda_reconcile_indexes
-        href: relational-databases/system-stored-procedures/sys-sp-rda-reconcile-indexes-transact-sql.md
-      - name: sys.sp_rda_set_query_mode
-        href: relational-databases/system-stored-procedures/sys-sp-rda-set-query-mode-transact-sql.md
-      - name: sys.sp_rda_set_rpo_duration
-        href: relational-databases/system-stored-procedures/sys-sp-rda-set-rpo-duration-transact-sql.md
-      - name: sys.sp_rda_test_connection
-        href: relational-databases/system-stored-procedures/sys-sp-rda-test-connection-transact-sql.md
     - name: Temporal tables
       items:
       - name: sys.sp_cleanup_temporal_history

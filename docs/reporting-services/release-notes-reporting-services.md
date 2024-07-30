@@ -50,6 +50,17 @@ GeneMi, DevOps = 1467988 (MsEng > TechnicalContent) , 2019/03/19
 ::: moniker range="=sql-server-ver16"
 ## SQL Server 2022 Reporting Services
 
+## 16.0.8969.32906, 2024/07/23
+*(Product Version: 16.0.1116.12)*
+
+- Fixed error faced when editing data driven subscriptions
+- Fixed verbose log causing RDL reports to not render
+- Fixed repeated messages in RsPortal log file
+- Fixed error when overwriting RDL reports
+- Fixed error editing monthly schedules
+- Fixed error with "Show Hidden Items" checkbox disappearing
+- Fixed error with font "Lao UI" when exporting to PDF
+
 ## 16.0.8898.18912, 2024/05/20
 *(Product Version: 16.0.1115.96)*
 
@@ -123,6 +134,16 @@ Release Candidate 0 (RC0)
 ::: moniker-end
 
 ## SQL Server 2019 Reporting Services
+
+## 15.0.8969.33375, 2024/07/23
+*(Product Version: 15.0.1103.12 )*
+
+- Fixed error faced when editing data driven subscriptions
+- Fixed verbose log causing RDL reports to not render
+- Fixed repeated messages in RsPortal log file
+- Fixed error when overwriting RDL reports
+- Fixed error editing monthly schedules
+- Fixed error with font "Lao UI" when exporting to PDF
 
 ## 15.0.8863.19101, 2024/04/10
 *(Product Version: 15.0.1102.1167)*

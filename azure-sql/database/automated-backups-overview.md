@@ -5,7 +5,7 @@ description: Learn how Azure SQL Database automatically backs up all databases a
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma, danil, dinethi
-ms.date: 11/27/2023
+ms.date: 07/24/2024
 ms.service: sql-database
 ms.subservice: backup-restore
 ms.topic: conceptual
@@ -50,9 +50,7 @@ The exact frequency of transaction log backups is based on the compute size and 
 
 The Hyperscale architecture doesn't require full, differential, or log backups. To learn more, see [Hyperscale backups](hyperscale-automated-backups-overview.md). 
 
-
 ## Backup storage redundancy
-
 
 The storage redundancy mechanism stores multiple copies of your data so that it's protected from planned and unplanned events. These events might include transient hardware failure, network or power outages, or massive natural disasters. 
 
@@ -72,11 +70,11 @@ You can choose one of the following storage redundancies for backups:
 
 - **Locally redundant storage (LRS)**:  Copies your backups synchronously three times within a single physical location in the primary region. LRS is the least expensive storage option, but we don't recommend it for applications that require resiliency to regional outages or a guarantee of high data durability.
 
-   :::image type="content" source="../database/media/automated-backups-overview/multi-paired-lrs.svg" alt-text="Diagram showing the locally redundant storage (LRS) option.":::
+   :::image type="content" source="media/automated-backups-overview/multi-paired-lrs.svg" alt-text="Diagram showing the locally redundant storage (LRS) option.":::
 
 - **Zone-redundant storage (ZRS)**: Copies your backups synchronously across three Azure availability zones in the primary region. It's currently available in only [certain regions](/azure/storage/common/storage-redundancy#zone-redundant-storage). 
 
-   :::image type="content" source="../database/media/automated-backups-overview/multi-paired-zrs.svg" alt-text="Diagram showing the zone-redundant storage (ZRS) option.":::
+   :::image type="content" source="media/automated-backups-overview/multi-paired-zrs.svg" alt-text="Diagram showing the zone-redundant storage (ZRS) option.":::
 
 - **Geo-redundant storage (GRS)**: Copies your backups synchronously three times within a single physical location in the primary region by using LRS. Then it copies your data asynchronously three times to a single physical location in the [paired](/azure/availability-zones/cross-region-replication-azure#azure-cross-region-replication-pairings-for-all-geographies) secondary region. 
 
@@ -85,7 +83,7 @@ You can choose one of the following storage redundancies for backups:
   - Three synchronous copies in the primary region.
   - Three synchronous copies in the paired region that were copied over from the primary region to the secondary region asynchronously. 
 
-   :::image type="content" source="../database/media/automated-backups-overview/multi-paired-grs.svg" alt-text="Diagram showing the geo-redundant storage (GRS) option.":::
+   :::image type="content" source="media/automated-backups-overview/multi-paired-grs.svg" alt-text="Diagram showing the geo-redundant storage (GRS) option.":::
 
 > [!WARNING]
 > - [Geo-restore](recovery-using-backups.md#geo-restore) is disabled as soon as a database is updated to use locally redundant or zone-redundant storage. 
@@ -130,8 +128,6 @@ This table summarizes the capabilities and features of [point-in-time restore (P
 <sup>2</sup> All PITR backups are stored on geo-redundant storage by default, so geo-restore is enabled by default.   
 <sup>3</sup> The workaround is to restore to a new server and use Resource Move to move the server to another subscription, or use a [cross-subscription database copy](database-copy.md#copy-to-a-different-subscription).   
 
-
-
 ## Restore a database from backup
 
 To perform a restore, see [Restore a database from backups](recovery-using-backups.md). You can explore backup configuration and restore operations by using the following examples.
@@ -142,6 +138,14 @@ To perform a restore, see [Restore a database from backups](recovery-using-backu
 | **Change long-term backup retention** | [SQL Database](long-term-backup-retention-configure.md#create-long-term-retention-policies)<br/> [SQL Managed Instance](../managed-instance/long-term-backup-retention-configure.md) | [SQL Database](long-term-backup-retention-configure.md) <br/> [SQL Managed Instance](../managed-instance/long-term-backup-retention-configure.md) | [SQL Database](long-term-backup-retention-configure.md)<br/>[SQL Managed Instance](../managed-instance/long-term-backup-retention-configure.md)  |
 | **Restore a database from a point in time** | [SQL Database](recovery-using-backups.md#point-in-time-restore)<br>[SQL Managed Instance](../managed-instance/point-in-time-restore.md) | [SQL Database](/cli/azure/sql/db#az-sql-db-restore) <br/> [SQL Managed Instance](/cli/azure/sql/midb#az-sql-midb-restore) | [SQL Database](/powershell/module/az.sql/restore-azsqldatabase) <br/> [SQL Managed Instance](/powershell/module/az.sql/restore-azsqlinstancedatabase) |
 | **Restore a deleted database** | [SQL Database](recovery-using-backups.md)<br>[SQL Managed Instance](../managed-instance/point-in-time-restore.md#restore-a-deleted-database) | [SQL Database](long-term-backup-retention-configure.md#restore-from-ltr-backups) <br/> [SQL Managed Instance](../managed-instance/long-term-backup-retention-configure.md#restore-from-ltr-backups) | [SQL Database](/powershell/module/az.sql/get-azsqldeleteddatabasebackup) <br/> [SQL Managed Instance](/powershell/module/az.sql/get-azsqldeletedinstancedatabasebackup)|
+
+## Export a database
+
+Automatic backups taken by the Azure service are not available to download or access directly. They can only be used for restore operations through Azure.
+
+There are alternatives to export an Azure SQL Database. When you need to export a database for archiving or for moving to another platform, you can [export the database schema and data](database-export.md) to a [BACPAC](/sql/relational-databases/data-tier-applications/data-tier-applications#bacpac) file. A BACPAC file is a ZIP file with an extension of BACPAC containing the metadata and data from the database. A BACPAC file can be stored in Azure Blob storage or in local storage in an on-premises location and later imported back into [Azure SQL Database](sql-database-paas-overview.md), [Azure SQL Managed Instance](../managed-instance/sql-managed-instance-paas-overview.md), or a [SQL Server instance](/sql/database-engine/sql-server-database-engine-overview).
+
+You can also [Import or export an Azure SQL Database using private link](database-import-export-private-link.md) or [Import or export an Azure SQL Database without allowing Azure services to access the server](database-import-export-azure-services-off.md).
 
 ## Backup scheduling
 
@@ -165,7 +169,7 @@ Hyperscale databases use a different backup scheduling mechanism. For more infor
 
 Backups that are no longer needed to provide PITR functionality are automatically deleted. Because differential backups and log backups require an earlier full backup to be restorable, all three backup types are purged together in weekly sets.
 
-For all databases, including [TDE-encrypted](../database/transparent-data-encryption-tde-overview.md) databases, all full and differential backups are compressed, to reduce backup storage compression and costs. Average backup compression ratio is 3 to 4 times. However, it can be significantly lower or higher depending on the nature of the data and whether data compression is used in the database.
+For all databases, including [TDE-encrypted](../database/transparent-data-encryption-tde-overview.md) databases, all full and differential backups are compressed, to reduce backup storage compression and costs. Average backup compression ratio is 3 to 4 times. However, it can be lower or higher depending on the nature of the data and whether data compression is used in the database.
 
 > [!IMPORTANT]
 > For TDE-encrypted databases, log backups files are not compressed for performance reasons. Log backups for non-TDE-encrypted databases are compressed.
@@ -179,7 +183,7 @@ Azure SQL Database computes your total used backup storage as a cumulative value
 
 For vCore databases in Azure SQL Database, the storage that each type of backup (full, differential, and log) consumes is reported on the database monitoring pane as a separate metric. The following screenshot shows how to monitor the backup storage consumption for a single database. 
 
-:::image type="content" source="./media/automated-backups-overview/backup-metrics.png" alt-text="Screenshot that shows selections for monitoring database backup consumption in the Azure portal." lightbox="./media/automated-backups-overview/backup-metrics.png":::
+:::image type="content" source="media/automated-backups-overview/backup-metrics.png" alt-text="Screenshot that shows selections for monitoring database backup consumption in the Azure portal." lightbox="media/automated-backups-overview/backup-metrics.png":::
 
 For instructions on how to monitor consumption in Hyperscale, see [Monitor Hyperscale backup consumption](hyperscale-automated-backups-overview.md#monitor-backup-storage-consumption).
 
@@ -208,7 +212,7 @@ You can specify your backup storage redundancy option for STR when you create yo
 
 You can [change the backup retention period](automated-backups-change-settings.md#change-short-term-retention-policy) for each active database in the range of 1 to 35 days, except for Basic databases, which are configurable from 1 to 7 days. As described in [Backup storage consumption](#backup-storage-consumption), backups stored to enable PITR might be older than the retention period. If you need to keep backups for longer than the maximum short-term retention period of 35 days, you can enable [long-term retention](long-term-retention-overview.md).
 
-If you delete a database, the system keeps backups in the same way that it would for an online database with its specific retention period. You can't change the backup retention period for a deleted database.
+If you delete a database, the system keeps backups in the same way for an online database with its specific retention period. You can't change the backup retention period for a deleted database.
 
 > [!IMPORTANT]
 > If you delete a server, all databases on that server are also deleted and can't be recovered. You can't restore a deleted server. But if you've configured long-term retention for a database, LTR backups are not deleted. You can then use those backups to restore databases on a different server in the same subscription, to a point in time when an LTR backup was taken. To learn more, review [Restore long-term backup](long-term-backup-retention-configure.md#view-backups-and-restore-from-a-backup).
@@ -225,7 +229,7 @@ Storage consumption depends on the selected frequency and retention periods of L
 
 When restoring a Hyperscale database from an LTR backup, the read scale property is disabled. To enable, read scale on the restored database, update the database after it has been created. You need to specify the target service level objective when restoring from an LTR backup. 
 
-Long-term retention can be enabled for Hyperscale databases created or migrated from other service tiers. If you attempt to enable LTR for a Hyperscale database where it isn't yet supported, you receive the following error: "An error has occurred while enabling Long-term backup retention for this database. Please reach out to Microsoft support to enable long-term backup retention." In this case, reach out to Microsoft support and please create a support ticket to resolve this.
+Long-term retention can be enabled for Hyperscale databases created or migrated from other service tiers. If you attempt to enable LTR for a Hyperscale database where it isn't yet supported, you receive the following error: "An error has occurred while enabling Long-term backup retention for this database. Please reach out to Microsoft support to enable long-term backup retention." In this case, reach out to Microsoft support and create a support ticket to resolve.
 
 ## Backup storage costs
 
@@ -298,7 +302,7 @@ To understand backup storage costs, go to **Cost Management + Billing** in the A
 
 The **Storage** and **compute** subcategories might also interest you, but they're not associated with backup storage costs.
 
-:::image type="content" source="./media/automated-backups-overview/check-backup-storage-cost-sql-mi.png" alt-text="Screenshot that shows an analysis of backup storage costs." lightbox="./media/automated-backups-overview/check-backup-storage-cost-sql-mi.png":::
+:::image type="content" source="media/automated-backups-overview/check-backup-storage-cost-sql-mi.png" alt-text="Screenshot that shows an analysis of backup storage costs." lightbox="media/automated-backups-overview/check-backup-storage-cost-sql-mi.png":::
 
 > [!IMPORTANT]
 > Meters are visible only for counters that are currently in use. If a counter is not available, it's likely that the category is not currently being used. For example, storage counters won't be visible for resources that are not consuming storage. If there is no PITR or LTR backup storage consumption, these meters won't be visible.
@@ -332,7 +336,9 @@ Azure Policy is a service that you can use to create, assign, and manage policie
 
 ### Built-in backup storage redundancy policies
 
-To enforce data residency requirements at an organizational level, you can assign policies to a subscription by using the [Azure portal](/azure/governance/policy/assign-policy-portal) or [Azure PowerShell](/azure/governance/policy/assign-policy-powershell). For example, if you assign the following built-in policy, users in the subscription won't be able to create a database with geo-redundant backup storage via the Azure portal or Azure PowerShell: [SQL Database should avoid using GRS backup redundancy](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2Fproviders%2FMicrosoft.Authorization%2FpolicyDefinitions%2Fb219b9cf-f672-4f96-9ab0-f5a3ac5e1c13).
+To enforce data residency requirements at an organizational level, you can assign policies to a subscription by using the [Azure portal](/azure/governance/policy/assign-policy-portal) or [Azure PowerShell](/azure/governance/policy/assign-policy-powershell). 
+
+For example, if you enable the policy "Azure SQL DB should avoid using GRS backup", databases cannot be created with the default storage as globally redundant storage, and users would be prevented from using GRS with the error message "Configuring backup storage account type to 'Standard_RAGRS' failed during Database create or update."
 
 For a full list of built-in policy definitions for SQL Database, review the [policy reference](./policy-reference.md).
 

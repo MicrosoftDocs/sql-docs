@@ -1,17 +1,17 @@
 ---
-title: "ADR Preallocation Factor (server configuration option)"
+title: "Server configuration: ADR Preallocation Factor"
 description: "Explains the SQL Server instance configuration setting for ADR preallocation factor."
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: randolphwest
-ms.date: 05/16/2023
+ms.date: 07/18/2024
 ms.service: sql
 ms.subservice: configuration
 ms.topic: conceptual
 helpviewer_keywords:
   - "ADR Preallocation Factor"
 ---
-# ADR Preallocation Factor (server configuration option)
+# Server configuration: ADR Preallocation Factor
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
@@ -34,7 +34,7 @@ While the background thread takes workload patterns into consideration, this fac
 
 ## Known issue
 
-For [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] CU 12 and previous versions, this value may be set to `0`. We recommend that you reset the value to `4`, which is the designed default, using the example in this article.
+For [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] CU 12 and previous versions, this value might be set to `0`. We recommend that you reset the value to `4`, which is the designed default, using the example in this article.
 
 ::: moniker-end
 
@@ -43,16 +43,16 @@ For [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] CU 12 and previous ver
 The following example sets the preallocation factor to `4`.
 
 ```sql
-sp_configure 'show advanced options', 1;
+EXEC sp_configure 'show advanced options', 1;
 RECONFIGURE;
 GO
-sp_configure 'ADR Preallocation Factor', 4;
+EXEC sp_configure 'ADR Preallocation Factor', 4;
 RECONFIGURE;
 GO
 ```
 
-## See also
+## Related content
 
-- [Server configuration options (SQL Server)](server-configuration-options-sql-server.md)
+- [Server configuration options](server-configuration-options-sql-server.md)
 - [Accelerated database recovery](../../relational-databases/accelerated-database-recovery-concepts.md)
 - [Manage accelerated database recovery](../../relational-databases/accelerated-database-recovery-management.md)

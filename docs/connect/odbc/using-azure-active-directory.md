@@ -3,7 +3,6 @@ title: Using Microsoft Entra ID with the ODBC Driver
 description: The Microsoft ODBC Driver for SQL Server allows ODBC applications to connect to Azure SQL Database or Azure SQL Managed Instance by authenticating with Microsoft Entra ID.
 author: v-chojas
 ms.author: v-chojas
-ms.reviewer: v-chojas
 ms.date: 07/31/2024
 ms.service: sql
 ms.subservice: connectivity
@@ -221,7 +220,7 @@ The following sample connection string is for use with Microsoft Entra interacti
 SQLCHAR connString[] = "Driver={ODBC Driver 18 for SQL Server};Server={server};UID=myuser;Authentication=ActiveDirectoryInteractive;Encrypt=yes;"
 ```
 
-The following sample connection string is for use with Microsoft Entra identity authentication. UID is set to the object/client ID of the user identity when using a user-assigned identity.
+The following sample connection string is for use with Microsoft Entra managed identity authentication. UID is set to the object/client ID of the user identity when using a user-assigned identity.
 
 ```cpp
 // For system-assigned identity,

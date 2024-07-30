@@ -18,7 +18,7 @@ The version of the installed [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversi
 
 - The version is displayed in the readme.txt file of the product distribution.
 
-Also, the JDBC driver name can be returned from the [getDriverName](reference/getdrivername-method-sqlserverdatabasemetadata.md) method call on the SQLServerDatabaseMetaData class. It will return, for example, "Microsoft JDBC Driver 12.8 for SQL Server".
+Also, the JDBC driver name can be returned from the [getDriverName](reference/getdrivername-method-sqlserverdatabasemetadata.md) method call on the SQLServerDatabaseMetaData class. It returns, for example, "Microsoft JDBC Driver 12.8 for SQL Server".
 
 The following lines are example output from calls to the methods of the SQLServerDatabaseMetaData class:
 

@@ -1,8 +1,8 @@
 ---
 title: Release notes for mssql-tools on Linux and macOS
 description: "Learn what's new and changed in released versions of the Microsoft SQL Server Tools."
-author: v-chojas
-ms.author: v-chojas
+author: David-Engel
+ms.author: davidengel
 ms.reviewer: v-chojas
 ms.date: 07/31/2024
 ms.service: sql

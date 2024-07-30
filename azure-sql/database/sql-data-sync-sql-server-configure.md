@@ -5,7 +5,7 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma, hudequei
 ms.date: 07/19/2024
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.subservice: sql-data-sync
 ms.topic: tutorial
 ms.custom:

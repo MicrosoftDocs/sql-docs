@@ -6,7 +6,7 @@ ms.author: alexwolf
 ms.reviewer: mathoma
 ms.custom: passwordless-dotnet
 ms.date: 07/11/2023
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.subservice: security
 ms.topic: quickstart
 monikerRange: "= azuresql || = azuresql-db"

@@ -1,9 +1,9 @@
 ---
 title: Install the Microsoft ODBC driver for SQL Server (Linux)
 description: Learn how to install the Microsoft ODBC Driver for SQL Server on Linux clients to enable database connectivity.
-author: David-Engel
-ms.author: davidengel
-ms.reviewer: randolphwest
+author: v-chojas
+ms.author: v-chojas
+ms.reviewer: v-chojas
 ms.date: 07/31/2024
 ms.service: sql
 ms.subservice: connectivity
@@ -40,20 +40,20 @@ then
 fi
 
 #Download the desired package(s)
-curl -O https://download.microsoft.com/download/3/5/5/355d7943-a338-41a7-858d-53b259ea33f5/msodbcsql18_18.3.3.1-1_$architecture.apk
-curl -O https://download.microsoft.com/download/3/5/5/355d7943-a338-41a7-858d-53b259ea33f5/mssql-tools18_18.3.1.1-1_$architecture.apk
+curl -O https://download.microsoft.com/download/3/5/5/355d7943-a338-41a7-858d-53b259ea33f5/msodbcsql18_18.4.1.1-1_$architecture.apk
+curl -O https://download.microsoft.com/download/3/5/5/355d7943-a338-41a7-858d-53b259ea33f5/mssql-tools18_18.4.1.1-1_$architecture.apk
 
 #(Optional) Verify signature, if 'gpg' is missing install it using 'apk add gnupg':
-curl -O https://download.microsoft.com/download/3/5/5/355d7943-a338-41a7-858d-53b259ea33f5/msodbcsql18_18.3.3.1-1_$architecture.sig
-curl -O https://download.microsoft.com/download/3/5/5/355d7943-a338-41a7-858d-53b259ea33f5/mssql-tools18_18.3.1.1-1_$architecture.sig
+curl -O https://download.microsoft.com/download/3/5/5/355d7943-a338-41a7-858d-53b259ea33f5/msodbcsql18_18.4.1.1-1_$architecture.sig
+curl -O https://download.microsoft.com/download/3/5/5/355d7943-a338-41a7-858d-53b259ea33f5/mssql-tools18_18.4.1.1-1_$architecture.sig
 
 curl https://packages.microsoft.com/keys/microsoft.asc  | gpg --import -
-gpg --verify msodbcsql18_18.3.3.1-1_$architecture.sig msodbcsql18_18.3.3.1-1_$architecture.apk
-gpg --verify mssql-tools18_18.3.1.1-1_$architecture.sig mssql-tools18_18.3.1.1-1_$architecture.apk
+gpg --verify msodbcsql18_18.4.1.1-1_$architecture.sig msodbcsql18_18.3.3.1-1_$architecture.apk
+gpg --verify mssql-tools18_18.4.1.1-1_$architecture.sig mssql-tools18_18.3.1.1-1_$architecture.apk
 
 #Install the package(s)
-sudo apk add --allow-untrusted msodbcsql18_18.3.3.1-1_$architecture.apk
-sudo apk add --allow-untrusted mssql-tools18_18.3.1.1-1_$architecture.apk
+sudo apk add --allow-untrusted msodbcsql18_18.4.1.1-1_$architecture.apk
+sudo apk add --allow-untrusted mssql-tools18_18.4.1.1-1_$architecture.apk
 ```
 
 > [!NOTE]  

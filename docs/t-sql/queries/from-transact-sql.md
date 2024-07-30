@@ -4,7 +4,7 @@ description: FROM clause plus JOIN, APPLY, PIVOT (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: randolphwest
-ms.date: 03/13/2023
+ms.date: 07/30/2024
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -310,7 +310,7 @@ Reduces the number of rows to be moved for the table on the right side of the jo
 
 #### REPLICATE
 
-Causes the values in the joining column from the table on the left side of the join to be replicated to all nodes. The table on the right is joined to the replicated version of those columns.
+Causes the values in the joining column from the table on the right side of the join to be replicated to all nodes. The table on the left is joined to the replicated version of those columns.
 
 #### REDISTRIBUTE
 

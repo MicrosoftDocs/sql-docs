@@ -5,7 +5,7 @@ author: scoriani
 ms.author: scoriani
 ms.reviewer: wiassaf, mathoma
 ms.date: 01/03/2019
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.subservice: scale-out
 ms.topic: how-to
 ms.custom: sqldbrb=1

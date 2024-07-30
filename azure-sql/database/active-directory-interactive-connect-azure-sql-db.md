@@ -5,7 +5,7 @@ author: nofield
 ms.author: nofield
 ms.reviewer: wiassaf, vanto, mathoma
 ms.date: 09/27/2023
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.subservice: security
 ms.topic: conceptual
 ms.custom:

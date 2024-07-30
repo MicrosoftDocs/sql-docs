@@ -4,7 +4,7 @@ description: "jobs.sp_delete_target_group_member removes a member from a target 
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: 10/30/2023
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:

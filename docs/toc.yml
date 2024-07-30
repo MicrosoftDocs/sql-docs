@@ -10366,7 +10366,7 @@ items:
           href: sql-server/azure-arc/move-resources.md
       - name: Business continuity
         items:
-        - name: Automated backups to local storage (preview)
+        - name: Automatic backups (preview)
           href: sql-server/azure-arc/backup-local.md
         - name: Point-in-time restore (preview)
           href: sql-server/azure-arc/point-in-time-restore.md

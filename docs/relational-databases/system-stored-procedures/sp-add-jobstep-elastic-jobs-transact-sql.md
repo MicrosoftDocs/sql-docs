@@ -4,7 +4,7 @@ description: "jobs.sp_add_jobstep adds a step to an existing job in the Azure El
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: 12/04/2023
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.subservice: system-objects
 ms.topic: "reference"
 dev_langs:

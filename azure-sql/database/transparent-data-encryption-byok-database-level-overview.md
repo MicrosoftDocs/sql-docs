@@ -6,7 +6,7 @@ author: strehan1993
 ms.author: strehan
 ms.reviewer: vanto, mathoma
 ms.date: 01/12/2024
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.subservice: security
 ms.topic: conceptual
 monikerRange: "= azuresql || = azuresql-db"

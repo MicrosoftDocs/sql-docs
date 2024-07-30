@@ -61841,16 +61841,6 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "docs/sql-server/stretch-database/stretch-database-databases-and-tables-stretch-database-advisor.md",
-      "redirect_url": "/sql/sql-server/stretch-database/stretch-database",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/sql-server/stretch-database/index.md",
-      "redirect_url": "/sql/sql-server/stretch-database/stretch-database",
-      "redirect_document_id": false
-    },
-    {
       "source_path": "docs/ssdt/index.md",
       "redirect_url": "/sql/ssdt/download-sql-server-data-tools-ssdt",
       "redirect_document_id": false

@@ -108,6 +108,9 @@ You can copy or move a database to another managed instance by using the Azure p
 
 ### [PowerShell](#tab/azure-powershell)
 
+> [!NOTE]  
+> For cross-subscription database copy and move operations use Az.Sql PowerShell module version 5.1 or newer.
+
 Use Azure PowerShell commandlets to start, get, complete, or cancel [database copy](/powershell/module/az.sql/copy-azsqlinstancedatabase) or [database move](/powershell/module/az.sql/move-azsqlinstancedatabase) operation.
 
 Here's an example of how you can copy a database.

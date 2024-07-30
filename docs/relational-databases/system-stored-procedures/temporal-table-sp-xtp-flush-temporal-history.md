@@ -4,7 +4,7 @@ description: "Invokes the data flush task to move all committed rows from in-mem
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 05/24/2023
+ms.date: 07/29/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: conceptual
@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "sp_xtp_flush_temporal_history"
 dev_langs:
   - "TSQL"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 # sp_xtp_flush_temporal_history (Transact-SQL)
 
@@ -55,4 +55,4 @@ Requires **db_owner** permissions.
 
 ## Related content
 
-- [Performance Considerations with Memory-Optimized System-Versioned Temporal Tables](../tables/memory-optimized-system-versioned-temporal-tables-performance.md)
+- [Memory-optimized system-versioned temporal table performance](../tables/memory-optimized-system-versioned-temporal-tables-performance.md)

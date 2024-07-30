@@ -128,7 +128,7 @@ These options correspond to the same six available in the DSN setup UI above.
 
    ![Windows Azure Authentication UI when using Active Directory Interactive authentication.](windows/WindowsAzureAuth.png)
 
-8. Microsoft Entra managed identity authentication uses a system-assigned or user-assigned managed identity for authentication to set up the connection. For a system-assigned identity, the UID isn't required. For a user-assigned identity, the UID is set to the client ID if connecting to an Azure App Service or an Container Instance otherwise it is set to object ID of the user identity.<br>
+8. Microsoft Entra managed identity authentication can use a system-assigned or user-assigned managed identity. For a user-assigned identity, set UID to the identity's client ID for Azure App Service or Azure Container Instance; otherwise, use its object ID. For system-assigned identity, UID isn't required. <br>
 
    For system-assigned identity:
 
@@ -138,7 +138,7 @@ These options correspond to the same six available in the DSN setup UI above.
 
    `server=Server;database=Database;UID=myObjectId;Authentication=ActiveDirectoryMsi;Encrypt=yes;`
 
-9. Microsoft Entra service principal authentication
+10. Microsoft Entra service principal authentication
 
    `server=Server;database=Database;UID=clientId;PWD=clientSecret;Authentication=ActiveDirectoryServicePrincipal;Encrypt=yes;`
 

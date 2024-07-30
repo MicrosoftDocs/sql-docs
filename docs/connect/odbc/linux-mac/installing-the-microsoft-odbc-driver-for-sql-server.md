@@ -48,8 +48,8 @@ curl -O https://download.microsoft.com/download/3/5/5/355d7943-a338-41a7-858d-53
 curl -O https://download.microsoft.com/download/3/5/5/355d7943-a338-41a7-858d-53b259ea33f5/mssql-tools18_18.4.1.1-1_$architecture.sig
 
 curl https://packages.microsoft.com/keys/microsoft.asc  | gpg --import -
-gpg --verify msodbcsql18_18.4.1.1-1_$architecture.sig msodbcsql18_18.3.3.1-1_$architecture.apk
-gpg --verify mssql-tools18_18.4.1.1-1_$architecture.sig mssql-tools18_18.3.1.1-1_$architecture.apk
+gpg --verify msodbcsql18_18.4.1.1-1_$architecture.sig msodbcsql18_18.4.1.1-1_$architecture.apk
+gpg --verify mssql-tools18_18.4.1.1-1_$architecture.sig mssql-tools18_18.4.1.1-1_$architecture.apk
 
 #Install the package(s)
 sudo apk add --allow-untrusted msodbcsql18_18.4.1.1-1_$architecture.apk

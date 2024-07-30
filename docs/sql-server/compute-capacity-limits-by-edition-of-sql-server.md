@@ -3,8 +3,8 @@ title: Compute capacity limits by edition of SQL Server
 description: This article discusses compute capacity limits for SQL Server 2019 and how they differ in physical and virtualized environments with simultaneous multithreading (SMT) processors.
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: randolphwest
-ms.date: 07/09/2024
+ms.reviewer: randolphwest, derekw
+ms.date: 07/30/2024
 ms.service: sql
 ms.subservice: release-landing
 ms.topic: conceptual
@@ -60,57 +60,31 @@ The following definitions apply to the terms used in this article:
 
 - A physical processor can consist of one or more cores. A physical processor is the same as a processor package or a socket.
 
-## <a id="numa-64"></a> Breaking change in SQL Server 2022 Cumulative Update 11
+<a id="numa-64"></a>
 
-[!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] limits the number of logical processors per NUMA node to 64. On servers with more than 64 logical processors per NUMA node, you can use a BIOS / firmware configuration to change the number of NUMA nodes per physical socket presented to the operating system, to limit to a maximum of 64 logical processors.
+<a id="breaking-change-in-sql-server-2022-cumulative-update-11"></a>
 
-You can consider reducing the number of logical cores per NUMA node. For more information, see [Reduce logical core count per NUMA node](#reduce-logical-core-count-per-numa-node).
+<a id="reduce-logical-core-count-per-numa-node"></a>
 
-## Remarks
+## Limit number of logical cores per NUMA node to 64
 
-Systems with more than one physical processor or systems with physical processors that have multiple cores and/or SMT enable the operating system to execute multiple tasks simultaneously. Each thread of execution appears as a logical processor. For example, if your computer has two quad-core processors with SMT enabled and two threads per core, you have 16 logical processors: 2 processors x 4 cores per processor x 2 threads per core. It's worth noting that:
+You can experience issues such as stack dumps on servers with more than 64 logical processors per NUMA node. A BIOS or firmware configuration can reduce the logical core count to a maximum of 64 logical processors per NUMA node, presented to the operating system.
 
-- The compute capacity of a logical processor from a single thread of an SMT core is less than the compute capacity of a logical processor from that same core with SMT disabled.
+> [!CAUTION]  
+> [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] Cumulative Update 11 introduced a breaking change, where the [!INCLUDE [ssde-md](../includes/ssde-md.md)] doesn't start if it detects more than 64 logical cores per NUMA node.
 
-- The compute capacity of the two logical processors in the SMT core is greater than the compute capacity of the same core with SMT disabled.
+You can reduce the logical core count per NUMA node in an [Azure Virtual Machine](#disable-smt-in-an-azure-virtual-machine), by disabling SMT. For [bare-metal](#reduce-logical-core-count-on-bare-metal-instances) [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] instances, you can reduce the logical core count with sub-NUMA clustering (SNC) or Nodes per Socket (NPS) options.
 
-Each edition of [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] has two compute capacity limits:
+<a id="disable-smt-in-a-virtual-machine"></a>
 
-- A maximum number of sockets (or physical processors or processor packages)
+### Disable SMT in an Azure Virtual Machine
 
-- A maximum number of cores as reported by the operating system
-
-These limits apply to a single instance of [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)]. They represent the maximum compute capacity that a single instance uses. They don't constrain the server where the instance might be deployed. In fact, deploying multiple instances of [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] on the same physical server is an efficient way to use the compute capacity of a physical server with more sockets and/or cores than the capacity limits allow.
-
-The following table specifies the compute capacity limits for a single instance of each edition of [!INCLUDE [ssnoversion](../includes/ssnoversion-md.md)]:
-
-| [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] edition | Maximum compute capacity for a single instance ([!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE [ssDE](../includes/ssde-md.md)]) | Maximum compute capacity for a single instance (AS, RS) |
-| --- | --- | --- |
-| Enterprise Edition: Core-based Licensing <sup>1</sup> | Operating system maximum | Operating system maximum |
-| Developer | Operating system maximum | Operating system maximum |
-| Standard | Limited to lesser of 4 sockets or 24 cores | Limited to lesser of 4 sockets or 24 cores |
-| Express | Limited to lesser of 1 socket or 4 cores | Limited to lesser of 1 socket or 4 cores |
-
-<sup>1</sup> Enterprise Edition with Server + Client Access License (CAL) licensing is limited to 20 cores per [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] instance. (This licensing isn't available for new agreements.) There are no limits under the Core-based Server Licensing model.
-
-In a virtualized environment, the compute capacity limit is based on the number of logical processors, not cores. The reason is that the processor architecture isn't visible to the guest applications.
-
-For example, a server that has four sockets populated with quad-core processors and the ability to enable two SMT threads per core contains 32 logical processors with SMT enabled. But it contains only 16 logical processors with SMT disabled. These logical processors can be mapped to virtual machines on the server. The virtual machines' compute load on that logical processor is mapped to a thread of execution on the physical processor in the host server.
-
-You might want to disable SMT when the performance for each virtual processor is important. You can configure SMT by using a BIOS setting for the processor during the BIOS setup, but it's typically a server-scoped operation that affects all workloads running on the server. You might consider separating workloads that run in virtualized environments, from workloads that would benefit from the SMT performance boost in a physical operating system environment.
-
-## Reduce logical core count per NUMA node
-
-You can reduce the logical core count per NUMA node on virtual machines, including Azure VMs, or on bare-metal [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] instances.
-
-### Disable SMT in a virtual machine
-
-[!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] has a supported limit of 64 logical cores per NUMA node. In some cases, the Azure Mv3-series VM might exceed this limit, which prevents [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] from starting, or allowing it to run with degraded performance. To disable SMT, make the following changes using **[wmic](/windows/win32/wmisdk/wmic)** and the **Registry Editor** (`reg.exe`). Be sure to back up your registry before editing it.
+[!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] has a supported limit of 64 logical cores per NUMA node. In some cases, the Azure Mv3-series VM might exceed this limit, which prevents [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] from starting, or allowing it to run with degraded performance. To disable SMT, make the following changes using **PowerShell** and the **Registry Editor** (`reg.exe`). Be sure to back up your registry before editing it.
 
 1. Check the number of logical cores. SMT is enabled if the ratio is 2:1 (the number of logical cores is twice the number of cores).
 
-   ```cmd
-   wmic CPU Get NumberOfCores,NumberOfLogicalProcessors /Format:List
+   ```powershell
+   Get-WmiObject -class win32_processor | Select-Object -Property "NumberOfCores", "NumberOfLogicalProcessors"
    ```
 
 1. Disable SMT with the following two registry changes, then reboot the VM.
@@ -122,8 +96,8 @@ You can reduce the logical core count per NUMA node on virtual machines, includi
 
 1. Check the number of logical cores once again. The number of logical cores should match the number of cores.
 
-   ```cmd
-   wmic CPU Get NumberOfCores,NumberOfLogicalProcessors /Format:List
+   ```powershell
+   Get-WmiObject -class win32_processor | Select-Object -Property "NumberOfCores", "NumberOfLogicalProcessors"
    ```
 
 ### Reduce logical core count on bare-metal instances
@@ -145,6 +119,39 @@ On **AMD CPUs**, you can enable various Nodes per Socket (NPS) options.
 | `NPS1` (default) | This configuration presents one NUMA node per socket. |
 | `NPS2` | This configuration presents two NUMA nodes per socket, similar to SNC. |
 | `NPS4` | This configuration presents four NUMA nodes per socket. |
+
+## Remarks
+
+Systems with more than one physical processor or systems with physical processors that have multiple cores and/or SMT enable the operating system to execute multiple tasks simultaneously. Each thread of execution appears as a logical processor. For example, if your computer has two quad-core processors with SMT enabled and two threads per core, you have 16 logical processors: 2 processors x 4 cores per processor x 2 threads per core. It's worth noting that:
+
+- The compute capacity of a logical processor from a single thread of an SMT core is less than the compute capacity of a logical processor from that same core with SMT disabled.
+
+- The compute capacity of the two logical processors in the SMT core is greater than the compute capacity of the same core with SMT disabled.
+
+Each edition of [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] has two compute capacity limits:
+
+- A maximum number of sockets (or physical processors or processor packages)
+
+- A maximum number of cores as reported by the operating system
+
+These limits apply to a single instance of [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)]. They represent the maximum compute capacity that a single instance uses. They don't constrain the server where the instance might be deployed. In fact, deploying multiple instances of [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] on the same physical server is an efficient way to use the compute capacity of a physical server with more sockets and/or cores than the capacity limits allow.
+
+The following table specifies the compute capacity limits for a single instance of each edition of [!INCLUDE [ssnoversion](../includes/ssnoversion-md.md)]:
+
+| [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] edition | Maximum compute capacity for a single instance ([!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE [ssDE](../includes/ssde-md.md)]) | Maximum compute capacity for a single instance (AS, RS) |
+| --- | --- | --- |
+| Enterprise edition: Core-based licensing <sup>1</sup> | Operating system maximum | Operating system maximum |
+| Developer | Operating system maximum | Operating system maximum |
+| Standard | Limited to lesser of 4 sockets or 24 cores | Limited to lesser of 4 sockets or 24 cores |
+| Express | Limited to lesser of 1 socket or 4 cores | Limited to lesser of 1 socket or 4 cores |
+
+<sup>1</sup> Enterprise edition with Server + Client Access License (CAL) licensing is limited to 20 cores per [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] instance. (This licensing isn't available for new agreements.) There are no limits under the Core-based Server Licensing model.
+
+In a virtualized environment, the compute capacity limit is based on the number of logical processors, not cores. The reason is that the processor architecture isn't visible to the guest applications.
+
+For example, a server that has four sockets populated with quad-core processors and the ability to enable two SMT threads per core contains 32 logical processors with SMT enabled. But it contains only 16 logical processors with SMT disabled. These logical processors can be mapped to virtual machines on the server. The virtual machines' compute load on that logical processor is mapped to a thread of execution on the physical processor in the host server.
+
+You might want to disable SMT when the performance for each virtual processor is important. You can configure SMT by using a BIOS setting for the processor during the BIOS setup, but it's typically a server-scoped operation that affects all workloads running on the server. You might consider separating workloads that run in virtualized environments, from workloads that would benefit from the SMT performance boost in a physical operating system environment.
 
 ## Related content
 

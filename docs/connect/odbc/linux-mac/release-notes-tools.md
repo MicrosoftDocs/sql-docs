@@ -3,8 +3,8 @@ title: Release notes for mssql-tools on Linux and macOS
 description: "Learn what's new and changed in released versions of the Microsoft SQL Server Tools."
 author: David-Engel
 ms.author: davidengel
-ms.reviewer: v-davidengel
-ms.date: 08/11/2023
+ms.reviewer: v-chojas
+ms.date: 07/31/2024
 ms.service: sql
 ms.subservice: connectivity
 ms.custom: linux-related-content
@@ -15,6 +15,13 @@ ms.topic: conceptual
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
 This article lists and describes what's new in the versioned releases of the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQL Server Tools on Linux and macOS.
+
+## 18.4.1.1, July 2024
+
+| New item | Details |
+| :------- | :------ |
+| Sqlcmd AAD rename | Renamed Azure Active Directory to Entra ID. |
+| BCP AAD rename | Renamed Azure Active Directory to Entra ID. |
 
 ## 18.3.1.1, July 2023
 

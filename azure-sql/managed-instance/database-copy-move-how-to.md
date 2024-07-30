@@ -4,8 +4,8 @@ titleSuffix: Azure SQL Managed Instance
 description: Learn how to perform an online move or copy operation of your database across instances for Azure SQL Managed Instance.
 author: sasapopo
 ms.author: sasapopo
-ms.reviewer: mathoma, danil, randolphwest
-ms.date: 11/20/2023
+ms.reviewer: mathoma, danil, randolphwest, wiassaf
+ms.date: 7/30/2024
 ms.service: sql-managed-instance
 ms.subservice: data-movement
 ms.custom: devx-track-azurecli, devx-track-azurepowershell, ignite-2023, build-2024
@@ -108,6 +108,9 @@ You can copy or move a database to another managed instance by using the Azure p
 
 ### [PowerShell](#tab/azure-powershell)
 
+> [!NOTE]  
+> For cross-subscription database copy and move operations, use Az.Sql PowerShell module version 5.1 or newer. In `Copy-AzSqlInstanceDatabase`, the parameter `-TargetSubscriptionId` is optional and is needed only for cross-subscription copy or move operations.
+
 Use Azure PowerShell commandlets to start, get, complete, or cancel [database copy](/powershell/module/az.sql/copy-azsqlinstancedatabase) or [database move](/powershell/module/az.sql/move-azsqlinstancedatabase) operation.
 
 Here's an example of how you can copy a database.
@@ -119,14 +122,17 @@ $rgName = "<source_resource_group_name>"
 $tmiName = "<target_managed_instance_name>"
 $trgName = "<target_resource_group_name>"
 
+## Parameter TargetSubscriptionId is optional and is needed only for cross-subscription copy or move operations.
+$trgSubId = "<target_subscription_id>"
+
 ## Start database copy operation. 
-Copy-AzSqlInstanceDatabase -DatabaseName $dbName -InstanceName $miName -ResourceGroupName $rgName -TargetInstanceName $tmiName -TargetResourceGroupName $trgName
+Copy-AzSqlInstanceDatabase -DatabaseName $dbName -InstanceName $miName -ResourceGroupName $rgName -TargetInstanceName $tmiName -TargetResourceGroupName $trgName -TargetSubscriptionId $trgSubId
 
 ## Verify the operation status is succeeded. 
 Get-AzSqlInstanceDatabaseCopyOperation -DatabaseName $dbName -InstanceName $miName -ResourceGroupName $rgName -TargetInstanceName $tmiName -TargetResourceGroupName $trgName
 
 ## Complete database copy operation. 
-Complete-AzSqlInstanceDatabaseCopy -DatabaseName $dbName -InstanceName $miName -ResourceGroupName $rgName -TargetInstanceName $tmiName -TargetResourceGroupName $trgName
+Complete-AzSqlInstanceDatabaseCopy -DatabaseName $dbName -InstanceName $miName -ResourceGroupName $rgName -TargetInstanceName $tmiName -TargetResourceGroupName $trgName -TargetSubscriptionId $trgSubId
 
 ## Verify the operation status is succeeded. 
 Get-AzSqlInstanceDatabaseCopyOperation -DatabaseName $dbName -InstanceName $miName -ResourceGroupName $rgName -TargetInstanceName $tmiName -TargetResourceGroupName $trgName
@@ -141,14 +147,17 @@ $rgName = "<source_resource_group_name>"
 $tmiName = "<target_managed_instance_name>"
 $trgName = "<target_resource_group_name>"
 
+## Parameter TargetSubscriptionId is optional and is needed only for cross-subscription copy or move operations.
+$trgSubId = "<target_subscription_id>"
+
 ## Start database move operation. 
-Move-AzSqlInstanceDatabase -DatabaseName $dbName -InstanceName $miName -ResourceGroupName $rgName -TargetInstanceName $tmiName -TargetResourceGroupName $trgName
+Move-AzSqlInstanceDatabase -DatabaseName $dbName -InstanceName $miName -ResourceGroupName $rgName -TargetInstanceName $tmiName -TargetResourceGroupName $trgName -TargetSubscriptionId $trgSubId
 
 ## Verify the operation status is succeeded. 
 Get-AzSqlInstanceDatabaseMoveOperation -DatabaseName $dbName -InstanceName $miName -ResourceGroupName $rgName -TargetInstanceName $tmiName -TargetResourceGroupName $trgName
 
 ## Complete database copy operation. 
-Stop-AzSqlInstanceDatabaseMove -DatabaseName $dbName -InstanceName $miName -ResourceGroupName $rgName -TargetInstanceName $tmiName -TargetResourceGroupName $trgName
+Stop-AzSqlInstanceDatabaseMove -DatabaseName $dbName -InstanceName $miName -ResourceGroupName $rgName -TargetInstanceName $tmiName -TargetResourceGroupName $trgName -TargetSubscriptionId $trgSubId
 
 ## Verify the operation status is succeeded. 
 Get-AzSqlInstanceDatabaseMoveOperation -DatabaseName $dbName -InstanceName $miName -ResourceGroupName $rgName -TargetInstanceName $tmiName -TargetResourceGroupName $trgName

@@ -5,7 +5,7 @@ author: dimitri-furman
 ms.author: dfurman
 ms.reviewer: wiassaf, mathoma, moslake, randolphwest
 ms.date: 07/22/2024
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.subservice: service-overview
 ms.topic: conceptual
 ---

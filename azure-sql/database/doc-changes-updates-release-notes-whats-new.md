@@ -6,7 +6,7 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma, randolphwest
 ms.date: 07/02/2024
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.subservice: service-overview
 ms.topic: whats-new
 ms.custom:

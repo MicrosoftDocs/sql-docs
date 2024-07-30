@@ -5,7 +5,7 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: atsingh
 ms.date: 02/23/2024
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.subservice: service-overview
 ms.topic: overview
 ---

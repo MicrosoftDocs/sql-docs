@@ -5,7 +5,7 @@ author: bgavrilMS
 ms.author: bogavril
 ms.reviewer: wiassaf, mathoma
 ms.date: 10/18/2021
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.subservice: scale-out
 ms.topic: how-to
 ms.custom: sqldbrb=1

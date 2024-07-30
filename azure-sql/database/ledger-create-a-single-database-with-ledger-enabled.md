@@ -5,7 +5,7 @@ author: VanMSFT
 ms.author: vanto
 ms.reviewer: wiassaf, mathoma
 ms.date: 04/26/2023
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.subservice: security
 ms.topic: quickstart
 ms.custom:

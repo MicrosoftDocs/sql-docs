@@ -1,7 +1,7 @@
 ---
 title: Release Notes for ODBC Driver for SQL Server on Windows
 description: This release notes article describes the changes in each release of the Microsoft ODBC driver for SQL Server on Windows.
-author: v-chojas
+author: v-maximko
 ms.author: v-chojas
 ms.reviewer: v-chojas
 ms.date: 07/31/2024

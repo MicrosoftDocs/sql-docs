@@ -119,14 +119,17 @@ $rgName = "<source_resource_group_name>"
 $tmiName = "<target_managed_instance_name>"
 $trgName = "<target_resource_group_name>"
 
+## Parameter TargetSubscriptionId is optional and is needed only for cross-subscription copy or move operations.
+$trgSubId = "<target_subscription_id>"
+
 ## Start database copy operation. 
-Copy-AzSqlInstanceDatabase -DatabaseName $dbName -InstanceName $miName -ResourceGroupName $rgName -TargetInstanceName $tmiName -TargetResourceGroupName $trgName
+Copy-AzSqlInstanceDatabase -DatabaseName $dbName -InstanceName $miName -ResourceGroupName $rgName -TargetInstanceName $tmiName -TargetResourceGroupName $trgName -TargetSubscriptionId $trgSubId
 
 ## Verify the operation status is succeeded. 
 Get-AzSqlInstanceDatabaseCopyOperation -DatabaseName $dbName -InstanceName $miName -ResourceGroupName $rgName -TargetInstanceName $tmiName -TargetResourceGroupName $trgName
 
 ## Complete database copy operation. 
-Complete-AzSqlInstanceDatabaseCopy -DatabaseName $dbName -InstanceName $miName -ResourceGroupName $rgName -TargetInstanceName $tmiName -TargetResourceGroupName $trgName
+Complete-AzSqlInstanceDatabaseCopy -DatabaseName $dbName -InstanceName $miName -ResourceGroupName $rgName -TargetInstanceName $tmiName -TargetResourceGroupName $trgName -TargetSubscriptionId $trgSubId
 
 ## Verify the operation status is succeeded. 
 Get-AzSqlInstanceDatabaseCopyOperation -DatabaseName $dbName -InstanceName $miName -ResourceGroupName $rgName -TargetInstanceName $tmiName -TargetResourceGroupName $trgName
@@ -141,14 +144,17 @@ $rgName = "<source_resource_group_name>"
 $tmiName = "<target_managed_instance_name>"
 $trgName = "<target_resource_group_name>"
 
+## Parameter TargetSubscriptionId is optional and is needed only for cross-subscription copy or move operations.
+$trgSubId = "<target_subscription_id>"
+
 ## Start database move operation. 
-Move-AzSqlInstanceDatabase -DatabaseName $dbName -InstanceName $miName -ResourceGroupName $rgName -TargetInstanceName $tmiName -TargetResourceGroupName $trgName
+Move-AzSqlInstanceDatabase -DatabaseName $dbName -InstanceName $miName -ResourceGroupName $rgName -TargetInstanceName $tmiName -TargetResourceGroupName $trgName -TargetSubscriptionId $trgSubId
 
 ## Verify the operation status is succeeded. 
 Get-AzSqlInstanceDatabaseMoveOperation -DatabaseName $dbName -InstanceName $miName -ResourceGroupName $rgName -TargetInstanceName $tmiName -TargetResourceGroupName $trgName
 
 ## Complete database copy operation. 
-Stop-AzSqlInstanceDatabaseMove -DatabaseName $dbName -InstanceName $miName -ResourceGroupName $rgName -TargetInstanceName $tmiName -TargetResourceGroupName $trgName
+Stop-AzSqlInstanceDatabaseMove -DatabaseName $dbName -InstanceName $miName -ResourceGroupName $rgName -TargetInstanceName $tmiName -TargetResourceGroupName $trgName -TargetSubscriptionId $trgSubId
 
 ## Verify the operation status is succeeded. 
 Get-AzSqlInstanceDatabaseMoveOperation -DatabaseName $dbName -InstanceName $miName -ResourceGroupName $rgName -TargetInstanceName $tmiName -TargetResourceGroupName $trgName

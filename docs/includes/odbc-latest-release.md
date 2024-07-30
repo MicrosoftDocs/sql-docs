@@ -1,7 +1,7 @@
 ---
 title: Latest Release of ODBC Driver for SQL Server
 description: Latest Release of ODBC Driver for SQL Server
-author: David-Engel
+author: v-chojas
 ms.author: v-chojas
 ms.reviewer: v-chojas
 ms.date: 07/31/2024

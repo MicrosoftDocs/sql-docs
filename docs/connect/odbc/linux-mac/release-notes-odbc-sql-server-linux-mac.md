@@ -35,7 +35,7 @@ GeneMi.  2019/04/03.
 | :------- | :------ |
 | New distributions supported. | Ubuntu 24.04, Alpine 3.19  |
 | Accept EULA by file presence. | Added the ability to accept the EULA for DEB and RPM packages by the presence of a file. |
-| Microsoft Entra ID | Renamed all occurrences of "Azure Active Directory" to "Microsoft Entra ID". See [New name for Azure Active Directory](https://learn.microsoft.com/en-us/entra/fundamentals/new-name) for more information. |
+| Microsoft Entra ID | Renamed all occurrences of "Azure Active Directory" to "Microsoft Entra ID". See [New name for Azure Active Directory](/entra/fundamentals/new-name) for more information. |
 | Bug fixes. | [Bug fixes](../bug-fixes.md). |
 
 ## 18.3.3, April 2024

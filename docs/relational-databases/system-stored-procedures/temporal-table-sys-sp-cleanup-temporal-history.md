@@ -4,7 +4,7 @@ description: "Removes all rows from temporal history table that match configured
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 05/24/2023
+ms.date: 07/29/2024
 ms.service: sql-database
 ms.topic: conceptual
 dev_langs:
@@ -13,9 +13,9 @@ monikerRange: "= azuresqldb-current"
 ---
 # sys.sp_cleanup_temporal_history (Transact-SQL)
 
-[!INCLUDE [Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
+[!INCLUDE [sqlserver2017-asdb-asdbmi](../../includes/applies-to-version/sqlserver2017-asdb-asdbmi.md)]
 
-Removes all rows from temporal history table that match configured HISTORY_RETENTION PERIOD within a single transaction.
+Removes all rows from temporal history table that match configured `HISTORY_RETENTION_PERIOD` within a single transaction.
 
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
@@ -46,9 +46,9 @@ The output parameter that returns number of deleted rows. If the history table h
 
 This stored procedure can be used only with temporal tables that have finite retention period specified. Use this stored procedure only if you need to immediately clean all aged rows from the history table.
 
-`sp_cleanup_temporal_history` can have a negative impact on the database log and I/O subsystem, as it deletes all eligible rows within the same transaction.
+`sp_cleanup_temporal_history` can have a negative effect on the database log and I/O subsystem, as it deletes all eligible rows within the same transaction.
 
-It is always recommended to rely on an internal background task for cleanup that removes aged rows with the minimal impact on the regular workloads and database in general.
+You should always rely on an internal background task for cleanup that removes aged rows, with the minimal impact on regular workloads and database in general.
 
 ## Permissions
 

@@ -1,10 +1,10 @@
 ---
 title: Release Notes for ODBC Driver for SQL Server on Windows
 description: This release notes article describes the changes in each release of the Microsoft ODBC driver for SQL Server on Windows.
-author: v-chojas
-ms.author: v-chojas
-ms.reviewer: v-davidengel
-ms.date: 06/13/2024
+author: David-Engel
+ms.author: davidengel
+ms.reviewer: v-chojas
+ms.date: 07/31/2024
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: conceptual
@@ -12,6 +12,25 @@ ms.topic: conceptual
 # Release Notes for Microsoft ODBC Driver for SQL Server on Windows
 
 This release notes article describes what's new for the Microsoft ODBC driver for SQL Server on Windows.
+
+## 18.4.1
+
+Version number: 18.4.1.1  
+Released: July 31, 2024
+
+:::image type="icon" source="../../../includes/media/download.svg" border="false"::: [Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2280794)  
+:::image type="icon" source="../../../includes/media/download.svg" border="false"::: [Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2281260)  
+:::image type="icon" source="../../../includes/media/download.svg" border="false"::: [Download ARM64 installer](https://go.microsoft.com/fwlink/?linkid=2281322)
+
+If you need to download the installer in a language other than the one detected for you, you can use these direct links.  
+For the x64 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2280794&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2280794&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2280794&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2280794&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2280794&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2280794&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2280794&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2280794&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2280794&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2280794&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2280794&clcid=0x40a)  
+For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2281260&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2281260&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2281260&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2281260&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2281260&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2281260&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2281260&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2281260&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2281260&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2281260&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2281260&clcid=0x40a)  
+For the ARM64 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2281322&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2281322&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2281322&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2281322&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2281322&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2281322&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2281322&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2281322&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2281322&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2281322&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2281322&clcid=0x40a)  
+
+| New item | Details |
+| :------- | :------ |
+| Microsoft Entra ID | Renamed all occurrences of "Azure Active Directory" to "Microsoft Entra ID". See [New name for Azure Active Directory](https://learn.microsoft.com/en-us/entra/fundamentals/new-name) for more information. |
+| Bug fixes. | [Bug fixes](../bug-fixes.md). |
 
 ## 18.3.3
 

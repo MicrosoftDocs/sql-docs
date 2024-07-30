@@ -1,7 +1,7 @@
 ---
 title: Configure Azure SQL Managed Instance NSG rules to work with Azure Confidential Ledger
 description: "Learn how to configure Azure SQL Managed Instance NSG rules to work with Azure Confidential Ledger." 
-ms.service: sql-managed-instance
+ms.service: azure-sql-managed-instance
 author: Pietervanhove
 ms.author: pivanho
 ms.subservice: security

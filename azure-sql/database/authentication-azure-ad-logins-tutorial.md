@@ -6,7 +6,7 @@ author: nofield
 ms.author: nofield
 ms.reviewer: vanto, mathoma
 ms.date: 06/11/2024
-ms.service: sql-db-mi
+ms.service: azure-sql
 ms.subservice: security
 ms.topic: tutorial
 monikerRange: "=azuresql || =azuresql-db || =azuresql-mi"

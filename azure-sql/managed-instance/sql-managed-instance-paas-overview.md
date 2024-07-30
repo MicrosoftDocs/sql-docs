@@ -5,7 +5,7 @@ author: niko-neugebauer
 ms.author: nneugebauer
 ms.reviewer: mathoma, vanto
 ms.date: 07/30/2023
-ms.service: sql-managed-instance
+ms.service: azure-sql-managed-instance
 ms.subservice: service-overview
 ms.topic: overview
 ms.custom: sqldbrb=1, build-2023, build-2023-dataai, ignite-2023, build-2024

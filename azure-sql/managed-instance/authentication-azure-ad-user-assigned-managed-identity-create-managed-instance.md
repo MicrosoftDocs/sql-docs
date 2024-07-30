@@ -6,7 +6,7 @@ author: nofield
 ms.author: nofield
 ms.reviewer: vanto, mathoma
 ms.date: 10/24/2023
-ms.service: sql-managed-instance
+ms.service: azure-sql-managed-instance
 ms.subservice: security
 ms.topic: how-to
 ---

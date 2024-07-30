@@ -48,7 +48,7 @@ Starting from release 12.8.0, the driver has an added `ServerMessageHandler` all
 
 ### Message feedback
 
-Allows you to receive feedback from long-running queries (i.e. progress messages). E.g. `RAISERROR ('Progress message...', 0, 1) WITH NOWAIT`.
+Allows you to receive feedback from long-running queries (such as progress messages). E.g., `RAISERROR ('Progress message...', 0, 1) WITH NOWAIT`.
 
 ### Universal error logging
 
@@ -76,7 +76,7 @@ Allows you to recognize, and change the severity of, specific error messages:
 
 ## SQLExceptionChaining
 
-Also starting from release 12.8.0, SQLExceptions can be chained together, so the final exception message automatically contains all exceptions that may have otherwise been lost. This feature is enabled by default and does not need to be configured by the user.
+Also with release 12.8.0, SQLExceptions can be chained together, so the final exception message automatically contains all exceptions that may have otherwise been lost. This feature is enabled by default.
 
 ## See also
 

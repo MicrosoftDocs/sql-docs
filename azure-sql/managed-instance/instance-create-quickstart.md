@@ -5,7 +5,7 @@ author: urosran
 ms.author: urandjelovic
 ms.reviewer: mathoma
 ms.date: 02/26/2024
-ms.service: sql-managed-instance
+ms.service: azure-sql-managed-instance
 ms.subservice: deployment-configuration
 ms.topic: quickstart
 ms.custom: mode-ui, devx-track-azurecli

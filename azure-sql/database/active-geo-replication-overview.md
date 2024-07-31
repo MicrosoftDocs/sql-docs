@@ -5,7 +5,7 @@ author: rajeshsetlem
 ms.author: rsetlem
 ms.reviewer: wiassaf, mathoma, arvindsh
 ms.date: 07/26/2023
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.subservice: high-availability
 ms.topic: conceptual
 ms.custom: sqldbrb=1, ignite-2023

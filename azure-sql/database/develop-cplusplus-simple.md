@@ -5,7 +5,7 @@ author: dzsquared
 ms.author: drskwier
 ms.reviewer: wiassaf, mathoma
 ms.date: 12/12/2018
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.subservice: development
 ms.topic: how-to
 ms.custom: linux-related-content

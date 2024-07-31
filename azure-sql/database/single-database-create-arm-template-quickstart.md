@@ -5,7 +5,7 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma
 ms.date: 06/24/2020
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.subservice: deployment-configuration
 ms.topic: quickstart
 ms.custom: subject-armqs sqldbrb=1, mode-arm, devx-track-arm-template

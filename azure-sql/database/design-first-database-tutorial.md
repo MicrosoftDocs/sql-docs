@@ -5,7 +5,7 @@ author: dzsquared
 ms.author: drskwier
 ms.reviewer: wiassaf, mathoma, v-masebo
 ms.date: 01/26/2024
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.subservice: development
 ms.topic: tutorial
 ---

@@ -5,7 +5,7 @@ author: jdubois
 ms.author: judubois
 ms.reviewer: mathoma
 ms.date: 12/07/2023
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.subservice: development
 ms.topic: quickstart
 ms.custom:

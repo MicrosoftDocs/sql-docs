@@ -5,7 +5,7 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: wiassaf, mathoma
 ms.date: 07/28/2022
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.subservice: performance
 ms.topic: sample
 ms.custom:

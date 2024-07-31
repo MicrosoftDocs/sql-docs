@@ -6,7 +6,7 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma, srsaluru, dfurman
 ms.date: 04/29/2024
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.subservice: performance
 ms.topic: how-to
 ms.custom:

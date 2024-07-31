@@ -5,7 +5,7 @@ author: denzilribeiro
 ms.author: denzilr
 ms.reviewer: wiassaf, mathoma
 ms.date: 03/13/2023
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.subservice: performance
 ms.topic: troubleshooting
 ms.custom: sqldbrb=1

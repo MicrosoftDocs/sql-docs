@@ -5,7 +5,7 @@ author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: wiassaf, mathoma
 ms.date: 08/11/2022
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.subservice: migration
 ms.topic: tutorial
 ms.custom:

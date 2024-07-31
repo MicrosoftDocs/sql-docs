@@ -6,7 +6,7 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma
 ms.date: 10/11/2023
-ms.service: sql-db-mi
+ms.service: azure-sql
 ms.subservice: monitoring
 ms.topic: conceptual
 ms.custom: subject-monitoring

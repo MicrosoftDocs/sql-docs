@@ -6,7 +6,7 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: wiassaf, mathoma
 ms.date: 09/08/2023
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.subservice: development
 ms.topic: troubleshooting
 monikerRange: "=azuresql-db"

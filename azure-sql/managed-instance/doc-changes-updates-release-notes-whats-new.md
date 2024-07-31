@@ -119,7 +119,6 @@ Learn about significant changes to the Azure SQL Managed Instance documentation.
 |**Advance notifications GA**| [Advance notifications](advance-notifications.md) for upcoming SQL managed instance [maintenance windows](maintenance-window.md) are now generally available. |
 |**November 2022 feature wave integration** | Changes and capabilities introduced in the November 2022 feature wave are now default for all instances. November 2022 feature selection options are being removed from areas in the Azure portal.| 
 
-
 ### May 2024
 
 | Changes | Details |

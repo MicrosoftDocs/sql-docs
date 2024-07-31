@@ -1,19 +1,19 @@
 ---
 title: TLS 1.3 support
-description: This article discusses TLS 1.3 support with SQL Server 2022.
+description: This article discusses TLS 1.3 support with SQL Server 2022 and Azure SQL Database.
 author: srdan-bozovic-msft
 ms.author: srbozovi
-ms.date: 12/19/2023
+ms.date: 07/31/2024
 ms.service: sql
 ms.subservice: security
 ms.topic: conceptual
-monikerRange: ">=sql-server-ver16 || >=sql-server-linux-ver16"
+monikerRange: ">=sql-server-ver16 || =azuresqldb-current|| >=sql-server-linux-ver16"
 ---
 # TLS 1.3 support
 
-[!INCLUDE [SQL Server 2022](../../../includes/applies-to-version/sqlserver2022.md)]
+[!INCLUDE [SQL Server 2022](../../../includes/applies-to-version/sqlserver2022.md)] [!INCLUDE[Azure SQL Database](../../../includes/applies-to-version/asdb.md)]
 
-Beginning with [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)], [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] supports Transport Layer Security (TLS) 1.3 when TDS 8.0 is used.
+[!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] (Beginning with [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)]), and Azure SQL Database support Transport Layer Security (TLS) 1.3 when TDS 8.0 is used.
 
 > [!IMPORTANT]
 > Even with TLS 1.3 support for TDS connections, TLS 1.2 is still required for starting up [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] satellite services. Don't disable TLS 1.2 on the machine.
@@ -35,6 +35,17 @@ Here's a list of algorithms and ciphers removed in TLS 1.3:
 - EXPORT-strength ciphers
 - DES
 - 3DES
+
+## Driver support
+
+Review the [Driver feature support matrix](/sql/connect/driver-feature-matrix) to determine what drivers currently support TLS 1.3. 
+
+## Operating System support
+
+Currently, the following operating systems support TLS 1.3: 
+
+- [Windows 11](/windows/win32/secauthn/tls-cipher-suites-in-windows-11)
+- [Windows Server 2022](/windows/win32/secauthn/tls-cipher-suites-in-windows-server-2022)
 
 ## Related content
 

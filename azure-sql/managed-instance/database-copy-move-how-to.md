@@ -6,7 +6,7 @@ author: sasapopo
 ms.author: sasapopo
 ms.reviewer: mathoma, danil, randolphwest, wiassaf
 ms.date: 7/30/2024
-ms.service: sql-managed-instance
+ms.service: azure-sql-managed-instance
 ms.subservice: data-movement
 ms.custom: devx-track-azurecli, devx-track-azurepowershell, ignite-2023, build-2024
 ms.topic: how-to

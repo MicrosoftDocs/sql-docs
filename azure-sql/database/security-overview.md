@@ -6,7 +6,7 @@ author: jaszymas
 ms.author: jaszymas
 ms.reviewer: wiassaf, vanto, emlisa, mathoma
 ms.date: 03/28/2023
-ms.service: sql-db-mi
+ms.service: azure-sql
 ms.subservice: security
 ms.topic: conceptual
 ms.custom: sqldbrb=2

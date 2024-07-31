@@ -6,7 +6,7 @@ author: aamalvea
 ms.author: aamalvea
 ms.reviewer: wiassaf, mathoma, urosmil
 ms.date: 06/19/2024
-ms.service: sql-db-mi
+ms.service: azure-sql
 ms.subservice: service-overview
 ms.topic: conceptual
 ms.custom:

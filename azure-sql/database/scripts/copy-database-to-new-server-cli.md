@@ -5,7 +5,7 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma
 ms.date: 01/26/2022
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.subservice: data-movement
 ms.topic: sample
 ms.custom: devx-track-azurecli

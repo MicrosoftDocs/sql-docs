@@ -5,7 +5,7 @@ author: juliakm
 ms.author: jukullam
 ms.reviewer: wiassaf, mathoma
 ms.date: 12/13/2023
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.subservice: connect
 ms.topic: quickstart
 ms.custom: github-actions-azure, mode-other, devx-track-azurecli

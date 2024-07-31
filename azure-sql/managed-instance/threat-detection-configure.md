@@ -6,7 +6,7 @@ author: rmatchoro
 ms.author: ronmat
 ms.reviewer: vanto, mathoma
 ms.date: 12/01/2020
-ms.service: sql-managed-instance
+ms.service: azure-sql-managed-instance
 ms.subservice: security
 ms.topic: how-to
 ms.custom: sqldbrb=1

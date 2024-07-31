@@ -5,7 +5,7 @@ author: rajeshsetlem
 ms.author: rsetlem
 ms.reviewer: wiassaf, mathoma
 ms.date: 06/29/2023
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.subservice: high-availability
 ms.topic: tutorial
 ms.custom: sqldbrb=1, devx-track-azurecli, ignite-2023, devx-track-azurepowershell

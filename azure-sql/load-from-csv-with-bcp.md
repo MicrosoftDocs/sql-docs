@@ -5,7 +5,7 @@ author: dzsquared
 ms.author: drskwier
 ms.reviewer: mathoma
 ms.date: 01/25/2019
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.subservice: data-movement
 ms.topic: how-to
 ms.custom: sqldbrb=1

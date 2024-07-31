@@ -6,7 +6,7 @@ author: danimir
 ms.author: danil
 ms.reviewer: mathoma, randolphwest
 ms.date: 11/14/2023
-ms.service: sql-managed-instance
+ms.service: azure-sql-managed-instance
 ms.subservice: data-movement
 ms.topic: conceptual
 ms.custom: ignite-2023, build-2024

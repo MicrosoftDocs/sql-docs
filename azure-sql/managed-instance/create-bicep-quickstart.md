@@ -5,7 +5,7 @@ author: niko-neugebauer
 ms.author: nneugebauer
 ms.reviewer: mathoma
 ms.date: 05/16/2022
-ms.service: sql-managed-instance
+ms.service: azure-sql-managed-instance
 ms.subservice: deployment-configuration
 ms.topic: quickstart
 ms.custom: subject-armqs, mode-arm, devx-track-bicep

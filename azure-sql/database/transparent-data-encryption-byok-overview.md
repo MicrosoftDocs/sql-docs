@@ -6,7 +6,7 @@ author: GithubMirek
 ms.author: mireks
 ms.reviewer: wiassaf, vanto, mathoma, randolphwest
 ms.date: 05/28/2024
-ms.service: sql-db-mi
+ms.service: azure-sql
 ms.subservice: security
 ms.topic: conceptual
 ms.custom:

@@ -6,7 +6,7 @@ author: madhumitatripathy
 ms.author: matripathy
 ms.reviewer: wiassaf, vanto, mathoma, randolphwest
 ms.date: 05/17/2024
-ms.service: sql-db-mi
+ms.service: azure-sql
 ms.subservice: security
 ms.topic: conceptual
 ms.custom:

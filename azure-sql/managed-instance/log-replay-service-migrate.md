@@ -5,7 +5,7 @@ author: danimir
 ms.author: danil
 ms.reviewer: mathoma
 ms.date: 11/16/2022
-ms.service: sql-managed-instance
+ms.service: azure-sql-managed-instance
 ms.subservice: migration
 ms.topic: how-to
 ms.custom:

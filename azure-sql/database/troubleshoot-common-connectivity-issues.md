@@ -5,7 +5,7 @@ author: suresh-kandoth
 ms.author: sureshka
 ms.reviewer: wiassaf, mathoma, vanto
 ms.date: 07/10/2022
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.subservice: development
 ms.topic: troubleshooting
 ms.custom: sqldbrb=1

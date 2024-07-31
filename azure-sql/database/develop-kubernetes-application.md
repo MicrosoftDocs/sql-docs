@@ -6,7 +6,7 @@ author: BuckWoody
 ms.author: bwoody
 ms.reviewer: wiassaf, damauri, mathoma
 ms.date: 12/22/2023
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.subservice: development
 ms.topic: tutorial
 ms.custom: references-regions, devx-track-azurecli

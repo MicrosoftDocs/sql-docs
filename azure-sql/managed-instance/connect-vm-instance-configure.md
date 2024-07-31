@@ -6,7 +6,7 @@ author: zoran-rilak-msft
 ms.author: zoranrilak
 ms.reviewer: mathoma, srbozovi, bonova
 ms.date: 02/18/2019
-ms.service: sql-managed-instance
+ms.service: azure-sql-managed-instance
 ms.subservice: connect
 ms.topic: quickstart
 ms.custom: mode-other

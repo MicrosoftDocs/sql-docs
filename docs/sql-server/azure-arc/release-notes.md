@@ -32,10 +32,11 @@ Extended Security Updates (ESU) subscription for [!INCLUDE [sssql14-md](../../in
 
 ### Extended Security Updates using unlimited virtualization
 
-Extended Security Updates (ESU) subscription for [!INCLUDE [sssql12-md](../../includes/sssql12-md.md)] and [!INCLUDE [sssql14-md](../../includes/sssql14-md.md)] can be activated using ESU p-core license with unlimited virtualization. For details, see [Manage unlimited virtualization benefit for SQL Server ESU subscription](manage-configuration.md#manage-pcore-esu-license).
+Extended Security Updates (ESU) subscription for [!INCLUDE [sssql11-md](../../includes/sssql11-md.md)] and [!INCLUDE [sssql14-md](../../includes/sssql14-md.md)] can be activated using ESU p-core license with unlimited virtualization. For details, see [Manage unlimited virtualization benefit for SQL Server ESU subscription](manage-configuration.md#manage-pcore-esu-license).
 
 > [!NOTE]
 > Billing for the ESU p-core licenses will be activated in the next monthly release, but the full ESU costs will be reflected using a back-bill meter.
+
 ### Azure extension for SQL Server
 
 `SqlServerExtensionPermissionProvider` task no longer runs hourly. The task is triggered by specific events. For details, review [Roles](permissions-granted-agent-extension.md#roles). 

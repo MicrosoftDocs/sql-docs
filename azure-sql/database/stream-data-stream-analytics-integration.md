@@ -5,7 +5,7 @@ author: ajetasin
 ms.author: ajetasi
 ms.reviewer: wiassaf, mathoma
 ms.date: 11/04/2019
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.subservice: development
 ms.topic: how-to
 ms.custom: sqldbrb=1

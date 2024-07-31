@@ -6,7 +6,7 @@ author: sasapopo
 ms.author: sasapopo
 ms.reviewer: mathoma, randolphwest
 ms.date: 06/10/2024
-ms.service: sql-managed-instance
+ms.service: azure-sql-managed-instance
 ms.subservice: data-movement
 ms.topic: conceptual
 ms.custom: sqldbrb=1

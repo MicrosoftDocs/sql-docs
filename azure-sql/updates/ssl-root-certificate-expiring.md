@@ -5,7 +5,7 @@ author: tameikal-msft
 ms.author: talawren
 ms.reviewer: mathoma, vanto
 ms.date: 10/11/2023
-ms.service: sql-db-mi
+ms.service: azure-sql
 ms.subservice: security
 ms.topic: conceptual
 ---

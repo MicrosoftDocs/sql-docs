@@ -6,7 +6,7 @@ author: sachinpMSFT
 ms.author: sachinp
 ms.reviewer: wiassaf, mathoma, randolphwest
 ms.date: 10/23/2023
-ms.service: sql-db-mi
+ms.service: azure-sql
 ms.subservice: deployment-configuration
 ms.topic: how-to
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"

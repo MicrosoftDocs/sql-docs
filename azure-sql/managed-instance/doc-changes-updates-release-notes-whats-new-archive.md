@@ -6,7 +6,7 @@ author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: wiassaf, randolphwest
 ms.date: 12/19/2023
-ms.service: sql-managed-instance
+ms.service: azure-sql-managed-instance
 ms.subservice: service-overview
 ms.topic: whats-new
 ms.custom: references_regions

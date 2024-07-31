@@ -5,7 +5,7 @@ author: dimitri-furman
 ms.author: dfurman
 ms.reviewer: wiassaf, mathoma
 ms.date: 05/06/2024
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.subservice: monitoring
 ms.topic: conceptual
 ms.custom: build-2024

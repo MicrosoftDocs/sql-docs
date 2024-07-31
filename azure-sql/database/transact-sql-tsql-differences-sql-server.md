@@ -5,7 +5,7 @@ author: croblesm
 ms.author: roblescarlos
 ms.reviewer: wiassaf, mathoma
 ms.date: 06/17/2021
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.subservice: migration
 ms.topic: reference
 ms.custom:

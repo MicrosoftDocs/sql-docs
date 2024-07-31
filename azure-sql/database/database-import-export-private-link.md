@@ -5,7 +5,7 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma, hudequei
 ms.date: 07/29/2024
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.subservice: migration
 ms.topic: how-to
 ms.custom:

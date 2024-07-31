@@ -6,7 +6,7 @@ ms.author: rotabor
 ms.reviewer: mathoma
 ms.custom: passwordless-python
 ms.date: 03/21/2024
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.subservice: security
 ms.topic: quickstart
 monikerRange: "= azuresql || = azuresql-db"

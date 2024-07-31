@@ -6,7 +6,7 @@ author: urosmil
 ms.author: urmilano
 ms.reviewer: mathoma, zoranrilak
 ms.date: 11/14/2023
-ms.service: sql-managed-instance
+ms.service: azure-sql-managed-instance
 ms.subservice: service-overview
 ms.custom: ignite-2023
 ms.topic: conceptual

@@ -5,7 +5,7 @@ author: croblesm
 ms.author: roblescarlos
 ms.reviewer: mathoma
 ms.date: 05/14/2021
-ms.service: sql-managed-instance
+ms.service: azure-sql-managed-instance
 ms.subservice: migration-guide
 ms.topic: how-to
 ms.custom:

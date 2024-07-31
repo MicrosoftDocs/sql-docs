@@ -3,7 +3,7 @@ metadata:
   title: Maintenance window FAQ
   titleSuffix: Azure SQL Managed Instance
   description: FAQ on how the Azure SQL Managed Instance maintenance window can be configured.
-  ms.service: sql-managed-instance
+  ms.service: azure-sql-managed-instance
   ms.subservice: service-overview
   ms.topic: faq
   author: WilliamDAssafMSFT

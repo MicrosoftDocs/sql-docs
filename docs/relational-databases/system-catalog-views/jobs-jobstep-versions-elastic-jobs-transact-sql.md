@@ -4,7 +4,7 @@ description: "The jobs.jobstep_versions system view contains all steps in the cu
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: 11/13/2023
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:

@@ -6,7 +6,7 @@ author: sasapopo
 ms.author: sasapopo
 ms.reviewer: mathoma, danil
 ms.date: 11/16/2022
-ms.service: sql-managed-instance
+ms.service: azure-sql-managed-instance
 ms.subservice: data-movement
 ms.custom: ignite-2023
 ms.topic: how-to

@@ -5,7 +5,7 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: randolphwest
 ms.date: 03/12/2024
-ms.service: synapse-analytics
+ms.service: azure-synapse-analytics
 ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:

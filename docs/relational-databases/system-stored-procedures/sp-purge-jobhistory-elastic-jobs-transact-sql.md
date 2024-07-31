@@ -4,7 +4,7 @@ description: "jobs.sp_purge_jobhistory removes the history records for a job cre
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: 10/30/2023
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.subservice: system-objects
 ms.topic: "reference"
 dev_langs:

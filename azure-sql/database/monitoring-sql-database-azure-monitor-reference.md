@@ -6,7 +6,7 @@ ms.custom: horz-monitor
 ms.topic: reference
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.subservice: monitoring
 ms.reviewer: mathoma
 ---

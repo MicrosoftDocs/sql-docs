@@ -6,7 +6,7 @@ author: rohitnayakmsft
 ms.author: rohitna
 ms.reviewer: wiassaf, mathoma, vanto
 ms.date: 03/04/2024
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.subservice: connect
 ms.topic: how-to
 ms.custom:

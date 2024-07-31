@@ -6,7 +6,7 @@ summary: "Find documentation about Microsoft Entra authentication for SQL Server
 metadata:
   title: Microsoft Entra authentication with SQL documentation
   description: "Find documentation about Microsoft Entra authentication for SQL Server 2022 and Azure SQL"
-  ms.service: sql-database
+  ms.service: azure-sql-database
   ms.subservice: security
   ms.topic: landing-page
   author: VanMSFT

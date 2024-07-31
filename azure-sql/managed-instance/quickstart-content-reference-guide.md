@@ -6,7 +6,7 @@ author: MladjoA
 ms.author: mlandzic
 ms.reviewer: vanto, mathoma
 ms.date: 07/11/2019
-ms.service: sql-managed-instance
+ms.service: azure-sql-managed-instance
 ms.subservice: deployment-configuration
 ms.topic: quickstart
 ms.custom:

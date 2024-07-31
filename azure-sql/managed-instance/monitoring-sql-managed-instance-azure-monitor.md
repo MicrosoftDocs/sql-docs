@@ -7,7 +7,7 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: wiassaf
-ms.service: sql-managed-instance
+ms.service: azure-sql-managed-instance
 ms.subservice: monitoring
 ---
 

@@ -6,7 +6,7 @@ author: NikaKinska
 ms.author: nnikolic
 ms.reviewer: mathoma, wiassaf
 ms.date: 07/29/2022
-ms.service: sql-db-mi
+ms.service: azure-sql
 ms.subservice: performance
 ms.topic: troubleshooting
 monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"

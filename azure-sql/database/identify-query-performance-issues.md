@@ -6,7 +6,7 @@ author: NikaKinska
 ms.author: nnikolic
 ms.reviewer: mathoma, wiassaf
 ms.date: 08/03/2022
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.subservice: performance
 ms.topic: troubleshooting
 ms.custom: azure-sql-split

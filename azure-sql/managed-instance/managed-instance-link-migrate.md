@@ -6,7 +6,7 @@ author: djordje-jeremic
 ms.author: djjeremi
 ms.reviewer: mathoma
 ms.date: 06/15/2024
-ms.service: sql-managed-instance
+ms.service: azure-sql-managed-instance
 ms.subservice: data-movement
 ms.custom: ignite-2023
 ms.topic: how-to

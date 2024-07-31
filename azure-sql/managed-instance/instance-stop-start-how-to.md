@@ -5,7 +5,7 @@ author: urosmil
 ms.author: urmilano
 ms.reviewer: mathoma, randolphwest
 ms.date: 05/21/2024
-ms.service: sql-managed-instance
+ms.service: azure-sql-managed-instance
 ms.subservice: deployment-configuration
 ms.custom: ignite-2023, devx-track-azurecli, devx-track-azurepowershell
 ms.topic: conceptual

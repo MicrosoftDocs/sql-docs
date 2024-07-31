@@ -7,7 +7,7 @@ metadata:
   ms.author: dfurman
   ms.date: 07/12/2024
   ms.reviewer: wiassaf
-  ms.service: sql-db-mi
+  ms.service: azure-sql
   ms.subservice: monitoring
   ms.topic: faq
   ms.custom: subject-monitoring

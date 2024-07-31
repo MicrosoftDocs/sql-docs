@@ -6,7 +6,7 @@ author: dzsquared
 ms.author: drskwier
 ms.reviewer: wiassaf, mathoma
 ms.date: 09/26/2023
-ms.service: sql-db-mi
+ms.service: azure-sql
 ms.subservice: connect
 ms.topic: quickstart
 ms.custom: sqldbrb=2, devx-track-csharp, mode-other, linux-related-content

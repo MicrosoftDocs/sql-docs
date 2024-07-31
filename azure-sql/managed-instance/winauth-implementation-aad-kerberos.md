@@ -6,7 +6,7 @@ author: sravanisaluru
 ms.author: srsaluru
 ms.reviewer: mathoma, bonova, urmilano, wiassaf
 ms.date: 09/27/2023
-ms.service: sql-managed-instance
+ms.service: azure-sql-managed-instance
 ms.subservice: deployment-configuration
 ms.topic: conceptual
 ---

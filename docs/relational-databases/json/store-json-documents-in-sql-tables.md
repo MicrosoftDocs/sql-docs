@@ -109,7 +109,7 @@ create sequence WebSite.LogID as bigint;
 go
 create table WebSite.Logs (
     [_id] bigint default(next value for WebSite.LogID),
-    [log] json,
+    [log] nvarchar(max),
     INDEX cci CLUSTERED COLUMNSTORE
 );
 ```
@@ -127,7 +127,7 @@ The only thing that you have to do convert a classic collection to a memory-opti
 ```sql
 CREATE TABLE WebSite.Logs (
   [_id] bigint IDENTITY PRIMARY KEY NONCLUSTERED,
-  [log] json
+  [log] nvarchar(max)
 ) WITH (MEMORY_OPTIMIZED=ON)
 ```
 
@@ -139,7 +139,7 @@ As with classic tables, you can add indexes on the fields that you are exposing 
 CREATE TABLE WebSite.Logs (
 
   [_id] bigint IDENTITY PRIMARY KEY NONCLUSTERED,
-  [log] json,
+  [log] nvarchar(max),
 
   [severity] AS cast(JSON_VALUE([log], '$.severity') as tinyint) persisted,
   INDEX ix_severity (severity)

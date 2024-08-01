@@ -37,13 +37,13 @@ For detailed information, see [Implement SQL Server Agent Security](../../ssms/a
 
 1. Expand **SQL Server Agent,** and expand **Jobs**. Depending on how you want the job to start, do one of the following:
 
-    - If you are working on a single server, or working on a target server, or running a local server job on a master server, right-click the job you want to start, and then select **Start Job**.
+    - If you're working on a single server, or working on a target server, or running a local server job on a master server, right-click the job you want to start, and then select **Start Job**.
 
     - If you want to start multiple jobs, right-click **Job Activity Monitor**, and then select **View Job Activity**. In the Job Activity Monitor you can select multiple jobs, right-click your selection, and select **Start Jobs**.
 
-    - If you are working on a master server and want all targeted servers to run the job simultaneously, right-click the job you want to start, select **Start Job**, and then select **Start on all targeted servers**.
+    - If you're working on a master server and want all targeted servers to run the job simultaneously, right-click the job you want to start, select **Start Job**, and then select **Start on all targeted servers**.
 
-    - If you are working on a master server and want to specify target servers for the job, right-click the job you want to start, select **Start Job**, and then select **Start on specific target servers**. In the **Post Download Instructions** dialog box, select the **These target servers** check box, and then select each target server on which this job should run.
+    - If you're working on a master server and want to specify target servers for the job, right-click the job you want to start, select **Start Job**, and then select **Start on specific target servers**. In the **Post Download Instructions** dialog box, select the **These target servers** check box, and then select each target server on which this job should run.
 
 ## <a id="TSQL"></a> Use Transact-SQL
 
@@ -66,9 +66,11 @@ For more information, see [sp_start_job (Transact-SQL)](../../relational-databas
 
 ## <a id="SMO"></a> Use programming languages
 
+Call the **Start** method of the **Job** class by using a programming language that you choose, such as Visual Basic, Visual C#, or SQL PowerShell.
+
 ### SQL PowerShell
 
-Here's a PowerShell script that can be used in SQL Server Agent with parameters. This script will demonstrate how to start a SQL Server Agent job using parameters passed into the script.
+Here's a PowerShell script that can be used in SQL Server Agent with parameters. This script demonstrates how to start a SQL Server Agent job using parameters passed into the script.
 
 ```powershell
 # Parameters
@@ -120,14 +122,11 @@ How to use the script in SQL Server Agent.
 - Load SMO: The Add-Type cmdlet is used to load the SQL Server Management Objects (SMO) assembly.
 - Server Object: A new server object is created using the $ServerInstance parameter.
 - Get Job: The script retrieves the specified job using the $JobName parameter.
-- Start Job: If the job is found, it is started using the Start method. The script outputs a success message. If the job is not found, an error message is displayed.
+- Start Job: If the job is found, it's started using the Start method. The script outputs a success message. If the job isn't found, an error message is displayed.
 
-### <a id="SMO"></a> Use SQL Server Management Objects
-
-Call the **Start** method of the **Job** class by using a programming language that you choose, such as Visual Basic, Visual C#, or PowerShell. For more information, see [SQL Server Management Objects (SMO)](../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md).
-
-For more information, see SQL Server Management Objects (SMO).
+For more information, see [SQL Server Management Objects (SMO)](../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md).
 
 ## Related content
 
 - [Create a Job](create-a-job.md)
+- [Install SQL PowerShell](/powershell/sql-server/download-sql-server-ps-module)

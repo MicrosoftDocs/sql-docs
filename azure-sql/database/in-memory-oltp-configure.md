@@ -22,7 +22,7 @@ monikerRange: "=azuresql||=azuresql-db"
 [In-memory OLTP](in-memory-oltp-overview.md) can be used to improve the performance of transaction processing, data ingestion, and transient data scenarios, without increasing the pricing tier.
 
 - [Premium (DTU) and Business Critical (vCore) tier](service-tiers-sql-database-vcore.md) databases support in-memory OLTP tables.
-- Hyperscale supports a subset of in-memory OLTP objects, but does not include memory-optimized tables. For more information, see [Hyperscale limitations](service-tier-hyperscale?view=azuresql#known-limitations).
+- Hyperscale supports a subset of in-memory OLTP objects, but does not include memory-optimized tables. For more information, see [Hyperscale limitations](service-tier-hyperscale.md?view=azuresql&preserve-view=true#known-limitations).
 
 Follow these steps to adopt in-memory OLTP in your existing database.
 

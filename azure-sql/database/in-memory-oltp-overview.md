@@ -53,7 +53,7 @@ By using in-memory OLTP, Quorum Business Solutions was able to double their work
 
 > [!NOTE]  
 > In-memory technologies are available in the Premium (DTU) and Business Critical (vCore) tiers of Azure SQL Database.
-> Hyperscale supports a subset of in-memory OLTP objects, but does not include memory-optimized tables. For more information, see [Hyperscale limitations](service-tier-hyperscale?view=azuresql#known-limitations).
+> Hyperscale supports a subset of in-memory OLTP objects, but does not include memory-optimized tables. For more information, see [Hyperscale limitations](service-tier-hyperscale.md?view=azuresql&preserve-view=true#known-limitations).
 
 This article describes aspects of in-memory OLTP and columnstore indexes that are specific to Azure SQL Database, and also includes samples:
 

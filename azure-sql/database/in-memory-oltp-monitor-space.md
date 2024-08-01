@@ -22,7 +22,7 @@ monikerRange: "=azuresql||=azuresql-db"
 With [in-memory OLTP](in-memory-oltp-overview.md), data in memory-optimized tables and table variables resides in in-memory OLTP storage.
 
 - [Premium (DTU) and Business Critical (vCore) tier](service-tiers-sql-database-vcore.md) databases support in-memory OLTP tables.
-- Hyperscale supports a subset of in-memory OLTP objects, but does not include memory-optimized tables. For more information, see [Hyperscale limitations](service-tier-hyperscale?view=azuresql#known-limitations).
+- Hyperscale supports a subset of in-memory OLTP objects, but does not include memory-optimized tables. For more information, see [Hyperscale limitations](service-tier-hyperscale.md?view=azuresql&preserve-view=true#known-limitations).
 
 ## Determine whether data fits within the in-memory OLTP storage cap
 

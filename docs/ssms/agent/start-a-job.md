@@ -25,18 +25,6 @@ This article describes how to start running a [!INCLUDE [msCoName](../../include
 
 A job is a specified series of actions that [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Agent performs. [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Agent jobs can run on one local server or on multiple remote servers.
 
-- **Before you begin:**
-
-    [Security](#Security)
-
-- **To start a job, using:**
-
-    [SQL Server Management Studio](#SSMS)
-
-    [Transact-SQL](#TSQL)
-
-    [SQL Server Management Objects](#SMO)
-
 ## <a id="BeforeYouBegin"></a> Before You Begin
 
 ### <a id="Security"></a> Security
@@ -76,26 +64,70 @@ For detailed information, see [Implement SQL Server Agent Security](../../ssms/a
 
 For more information, see [sp_start_job (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-start-job-transact-sql.md).
 
-## <a id="SMO"></a> Use SQl PowerShell
+## <a id="SMO"></a> Use programming languages
 
-To start a job, call the Start method of the Job class by using a programming language of your choice, such as Visual Basic, Visual C#, or PowerShell. Here’s an example using PowerShell:
+### SQL PowerShell
+
+Here's a PowerShell script that can be used in SQL Server Agent with parameters. This script will demonstrate how to start a SQL Server Agent job using parameters passed into the script.
 
 ```powershell
+# Parameters
+param(
+    [string]$ServerInstance,
+    [string]$JobName
+)
+
 # Load the SMO assembly
 Add-Type -AssemblyName "Microsoft.SqlServer.SMO"
 
 # Create a server object
-$server = New-Object Microsoft.SqlServer.Management.Smo.Server "MyServerInstance"
+$server = New-Object Microsoft.SqlServer.Management.Smo.Server $ServerInstance
 
 # Get the job you want to start
-$job = $server.JobServer.Jobs["Weekly Sales Data Backup"]
+$job = $server.JobServer.Jobs[$JobName]
 
 # Start the job
-$job.Start()
+if ($job) {
+    $job.Start()
+    Write-Output "The job '$JobName' on server '$ServerInstance' has been started successfully."
+} else {
+    Write-Output "The job '$JobName' was not found on server '$ServerInstance'."
+}
 ```
 
-## <a name="SMO"></a>Using SQL Server Management Objects
+How to use the script in SQL Server Agent.
 
-Call the **Start** method of the **Job** class by using a programming language that you choose, such as Visual Basic, Visual C#, or PowerShell. For more information, see [SQL Server Management Objects (SMO)](../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md).  
+1. Open SQL Server Management Studio (SSMS).
+1. Connect to the appropriate SQL Server instance.
+1. Expand the SQL Server Agent node.
+1. Right-click on Jobs and select New Job.
+1. In the New Job dialog box, enter the job name and other required details.
+1. Go to the Steps page and select New to create a new job step.
+1. In the New Job Step dialog box:
+    1. Set the Type to PowerShell.
+    1. In the Command field, enter the PowerShell script along with the parameters, for example:
+
+        ```powershell
+        .\YourScript.ps1 -ServerInstance "YourServerInstance" -JobName "YourJobName"
+        ```
+
+1. Set any other job properties as required (Schedules, Alerts, Notifications, etc.).
+1. Select OK to save the job.
+
+#### Explanation of the script
+
+- Parameters: The script accepts two parameters, $ServerInstance and $JobName, which are the SQL Server instance and the job name respectively.
+- Load SMO: The Add-Type cmdlet is used to load the SQL Server Management Objects (SMO) assembly.
+- Server Object: A new server object is created using the $ServerInstance parameter.
+- Get Job: The script retrieves the specified job using the $JobName parameter.
+- Start Job: If the job is found, it is started using the Start method. The script outputs a success message. If the job is not found, an error message is displayed.
+
+### <a id="SMO"></a> Use SQL Server Management Objects
+
+Call the **Start** method of the **Job** class by using a programming language that you choose, such as Visual Basic, Visual C#, or PowerShell. For more information, see [SQL Server Management Objects (SMO)](../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md).
 
 For more information, see SQL Server Management Objects (SMO).
+
+## Related content
+
+- [Create a Job](create-a-job.md)

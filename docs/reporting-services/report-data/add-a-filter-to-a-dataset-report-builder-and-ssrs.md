@@ -3,7 +3,7 @@ title: Add a filter to a Report Builder dataset
 description: Learn how to add a filter to a dataset to limit the data in a report after the data is retrieved from an external data source.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 07/24/2024
+ms.date: 08/01/2024
 ms.service: reporting-services
 ms.subservice: report-data
 ms.topic: how-to
@@ -36,13 +36,13 @@ To add a filter, you must specify one or more conditions that are filter equatio
 
     :::image type="content" source="../../reporting-services/report-data/media/add-dataset-filter.png" alt-text="Screenshot of the Dataset Properties dialog box on the Filters tab highlighting the add button.":::
   
-1. In **Expression**, enter or select the expression for the field to filter. To edit the expression, select the expression (**fx**) button.  
+1. In the **Expression** field, enter or select the expression for the field to filter. To edit the expression, select the expression (**fx**) button.  
   
 1. From the dropdown list, select the data type that matches the type of data in the expression you created in the previous step.  
   
-1. In the **Operator** box, select the operator that you want the filter to use to compare the values in the **Expression** box and the **Value** box. The operator you choose determines the number of values that are used from the next step.  
+1. In the **Operator** dropdown list, select the operator that you want the filter to use to compare the values in the **Expression** and **Value** field. The operator you choose determines the number of values that are used from the next step.  
   
-1. In the **Value** box, enter the expression or value against which you want the filter to evaluate the value in **Expression**. To edit the value, select the expression (**fx**) button.
+1. In the **Value** field, enter the expression or value against which you want the filter to evaluate the value in the **Expression** field. To edit the value, select the expression (**fx**) button.
   
      For examples of filter equations, see [Filter equation examples in a paginated report (Report Builder)](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md).  
   
@@ -56,13 +56,13 @@ To add a filter, you must specify one or more conditions that are filter equatio
   
 1. Select **Add**. A new blank filter equation appears.
   
-1. In **Expression**, enter or select the expression for the field to filter. To edit the expression, select the expression (**fx**) button.
+1. In the **Expression** field, enter or select the expression for the field to filter. To edit the expression, select the expression (**fx**) button.
   
-1. From the drop-down box, select the data type that matches the type of data in the expression you created in the previous step.  
+1. From the dropdown list, select the data type that matches the type of data in the expression you created in the previous step.  
   
-1. In the **Operator** box, select the operator that you want the filter to use to compare the values in the **Expression** box and the **Value** box. The operator you choose determines the number of values used in the next step.  
+1. In the **Operator** dropdown list, select the operator that you want the filter to use to compare the values in the **Expression** and **Value** field. The operator you choose determines the number of values used in the next step.  
   
-1. In the **Value** box, type the expression or value against which you want the filter to evaluate the value in **Expression**. To edit the value, select the expression (**fx**) button.
+1. In the **Value** field, type the expression or value against which you want the filter to evaluate the value in the **Expression** field. To edit the value, select the expression (**fx**) button.
   
      For examples of filter equations, see [Filter equation examples in a paginated report (Report Builder)](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md).  
   

@@ -3,7 +3,7 @@ title: Create data connection strings in Report Builder
 description: Learn how to create data connection strings and learn important information related to data source credentials.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 07/24/2024
+ms.date: 08/01/2024
 ms.service: reporting-services
 ms.subservice: report-data
 ms.topic: conceptual
@@ -82,8 +82,8 @@ Data source expressions are processed at run time or when a report is previewed.
 
 ## Related content
 
-- [Intro to Report Data in SQL Server Reporting Services (SSRS)](report-data-ssrs.md)
-- [Create and Modify Shared Data Sources](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)
-- [Create and Modify Embedded Data Sources](../../reporting-services/report-data/create-and-modify-embedded-data-sources.md)
+- [Intro to report data in SQL Server Reporting Services (SSRS)](report-data-ssrs.md)
+- [Create and modify shared data sources](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)
+- [Create and modify embedded data sources](../../reporting-services/report-data/create-and-modify-embedded-data-sources.md)
 
 More questions? Try asking the [Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user).

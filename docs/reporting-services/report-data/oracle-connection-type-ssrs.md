@@ -3,7 +3,7 @@ title: Set up the Oracle connection type with SSRS & Power BI report servers
 description: Learn how to build a data source with the Oracle connection type in your Reporting Services or Power BI report server.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 07/18/2024
+ms.date: 08/01/2024
 ms.service: reporting-services
 ms.subservice: report-data
 ms.topic: install-set-up-deploy
@@ -11,7 +11,7 @@ ms.custom: updatefrequency5
 
 #customer intent: As an Oracle database user, I want to learn how to connect by database to my report server so that I can use that data in my reports.
 ---
-Set up the Oracle connection type with SSRS & Power BI report server
+# Set up the Oracle connection type with SSRS & Power BI report server
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
 
@@ -24,7 +24,7 @@ Use the information in this article to build a data source. For step-by-step ins
 
 ## 64-bit drivers for the report servers
 
-On the Oracle download site, install the [Oracle 64-bit ODAC Oracle Universal Installer (OUI)](https://www.oracle.com/database/technologies/dotnet-odacdev-downloads.html). You only need the following steps for Oracle Data Access Components (ODAC) drivers 12.2 and later. Otherwise, they install by default to a non-machine-wide configuration for a new Oracle home installation. These steps assume you install the ODAC 18.x files to the c:\oracle64 folder.
+On the Oracle download site, install the [Oracle 64-bit ODAC Oracle Universal Installer (OUI)](https://www.oracle.com/database/technologies/dotnet-odacdev-downloads.html). You only need the following steps for Oracle Data Access Components (ODAC) drivers 12.2 and later. Otherwise, they install by default to a non-machine-wide configuration for a new Oracle home installation. These steps assume you install the ODAC 18.x files to the `c:\oracle64` folder.
 
 ### Paginated (RDL) reports use Managed ODP.NET
 
@@ -60,7 +60,7 @@ Power BI Report Server uses Unmanaged ODP.NET for Power BI reports. To register 
 
 ## 32-bit drivers for Microsoft Report Builder
 
-[Microsoft Report Builder](https://www.microsoft.com/download/details.aspx?id=53613) uses Managed ODP.NET for authoring paginated (RDL) reports. You only need the following steps for Oracle ODAC drivers 12.2 and later. Otherwise, they install by default to a non-machine-wide configuration for a new Oracle home installation. These steps assume you installed the ODAC 18.x files to the c:\oracle32 folder where Microsoft Report Builder is installed. To register Managed ODP.NET:
+[Microsoft Report Builder](https://www.microsoft.com/download/details.aspx?id=53613) uses Managed ODP.NET for authoring paginated (RDL) reports. You only need the following steps for Oracle ODAC drivers 12.2 and later. Otherwise, they install by default to a non-machine-wide configuration for a new Oracle home installation. These steps assume you installed the ODAC 18.x files to the `c:\oracle32` folder where Microsoft Report Builder is installed. To register Managed ODP.NET:
 
    1. Install the [Oracle "ODAC with Oracle Developer Tools for Visual Studio - OUI" (32-bit)](https://www.oracle.com/database/technologies/dotnet-odacdev-downloads.html) on the Oracle download site.
 
@@ -81,7 +81,7 @@ Power BI Report Server uses Unmanaged ODP.NET for Power BI reports. To register 
 > [!NOTE]
 > The following instructions apply to Power BI Report Builder version 15.7.01678.0001 and later. For versions before 15.7.01678.0001, follow the **32-bit drivers for Microsoft Report Builder** instructions.
 
-[Power BI Report Builder](https://www.microsoft.com/download/details.aspx?id=105942) uses Managed ODP.NET for authoring paginated (RDL) reports. You only need the following steps for Oracle ODAC drivers 12.2 and later. Otherwise, they install by default to a non-machine-wide configuration for a new Oracle home installation. These steps assume you install the ODAC 18.x files to the c:\oracle64 folder where Power BI Report Builder is installed. To register Managed ODP.NET:
+[Power BI Report Builder](https://www.microsoft.com/download/details.aspx?id=105942) uses Managed ODP.NET for authoring paginated (RDL) reports. You only need the following steps for Oracle ODAC drivers 12.2 and later. Otherwise, they install by default to a non-machine-wide configuration for a new Oracle home installation. These steps assume you install the ODAC 18.x files to the `c:\oracle64` folder where Power BI Report Builder is installed. To register Managed ODP.NET:
 
    1. Install the [Oracle 64-bit ODAC Oracle Universal Installer (OUI)](https://www.oracle.com/database/technologies/dotnet-odacdev-downloads.html) on the Oracle download site.
 
@@ -137,7 +137,7 @@ Power BI Desktop uses Unmanaged ODP.NET for authoring Power BI reports. You only
 
 Contact your database administrator for connection information and for the credentials to connect to the data source. The following connection string example specifies an Oracle database on the server named `Oracle18` by using Unicode. The server name must match the definition in the Tnsnames.ora configuration file as the Oracle server instance name:
   
-   ```  cmd
+   ```  C#
    Data Source="Oracle18"; Unicode="True"  
    ```  
   
@@ -190,7 +190,5 @@ For more information about platform and version support, see [Data sources suppo
 ## Related content
 
 - [Paginated report parameters in Report Builder](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)
-
 - [Filter, group, and sort data in Report Builder paginated reports](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)
-
 - [Expressions in a paginated report (Report Builder)](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)

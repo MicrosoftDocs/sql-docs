@@ -28,7 +28,7 @@ helpviewer_keywords:
   - "Windows integrated security [Reporting Services]"
 #customer intent: As a SQL server user, I want to use a report server to set credentials and connections so that I can safely use remote data sources.
 ---
-## Specify credential and connection information for report data sources
+# Specify credential and connection information for report data sources
 
 A report server uses credentials to connect to external data sources that provide content to reports or recipient information to a data-driven subscription. You can specify credentials that use Windows Authentication, database authentication, no authentication, or custom authentication. When the report server sends a connection request over the network, it either impersonates a user account or the unattended execution account. For more information about the security context under which a connection request is made, see [Data source configuration and network connections](#DataSourceConfigurationConnections) in this article.
 
@@ -37,7 +37,7 @@ A report server uses credentials to connect to external data sources that provid
 
 The connection to an external data source is defined when you create the report. It can be managed separately after the report is published. You can specify a static connection string or an expression that allows users to select a data source from a dynamic list. For more information about how to specify a data source type and connection string, see [Create data connection strings - Report Builder & SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).
 
-### How Report Builder uses credentials
+## How Report Builder uses credentials
 
 In Report Builder, the report server often uses credentials when you connect. The report server also uses credentials for data-related tasks, such as creating an embedded data source, running a dataset query, or previewing a report. Credentials aren't stored in the report. The report server and the local client manage credentials separately. The following list describes the types of credentials that you might need to provide, where the report server stores them, and how the report server uses them:
 
@@ -72,16 +72,13 @@ If the report retrieves data from a remote database server, you must verify:
 
 - Remote connections are enabled. If you're accessing SQL Server relational databases on external computers, you can use SQL Server Configuration Manager tool to verify that remote connections over Transmission Control Protocol (TCP) are enabled.
 
-### Specify credentials for connecting to remote data sources
+## Specify credentials for connecting to remote data sources
 
- The data sources that provide content to reports are often hosted on remote servers. To retrieve data for a report, the report server must connect to the server by using a set of credentials that you provide in advance or that are obtained at run time. When configuring a data source, you can specify credentials in the following ways:
+The data sources that provide content to reports are often hosted on remote servers. To retrieve data for a report, the report server must connect to the server by using a set of credentials that you provide in advance or that are obtained at run time. When configuring a data source, you can specify credentials in the following ways:
 
 - Prompt the user for credentials.
-
 - Store credentials.
-
 - Use Windows integrated security.
-
 - Use no credentials.
 
 The network environment determines the kinds of connections you can support. For example, if the Kerberos version 5 protocol is enabled, you might be able to use the delegation and impersonation features available in Windows Authentication to support connections across multiple servers. If your network doesn't support these security features, you need to work around connection constraints. If delegation and impersonation aren't enabled, Windows credentials can be passed across one computer connection before they expire. A user connection from a client computer to a report server computer counts as the first connection. If the user opens a report that retrieves data from a remote server, that sign-in counts as a second connection. That connection fails if you specified the connection to use integrated security when delegation isn't enabled.
@@ -91,7 +88,6 @@ The network environment determines the kinds of connections you can support. For
 If multiple connections are required to complete a round trip from the client computer to an external report data source, choose from the following strategies to make the connections succeed.
 
 - Enable impersonation and delegation features in your domain so that the report server can delegate credentials to other computers without limit.
-
 - Use stored credentials or prompted credentials to query external data sources for report data. The credentials can be either a Windows domain account or a database sign-in.
 
 ### Prompted credentials
@@ -110,7 +106,7 @@ Stored credentials are recommended as part of a strategy for accessing remote da
 
 The user name and password that you specify can be Windows credentials or a database sign-in. If you specify Windows credentials, the report server passes the credentials to Windows for subsequent authentication. Otherwise, the credentials are passed to the database server for authentication.
 
-#### How to grant "Allow log on locally" permissions to domain user accounts
+### How to grant "Allow log on locally" permissions to domain user accounts
 
 If you use stored credentials to connect to an external data source, the Windows domain user account must have permission to sign on locally. This permission allows the report server to impersonate the user on the report server and send the request to the external data source as that impersonated user.
 
@@ -136,21 +132,17 @@ To grant this permission:
 
    1. If the account is listed, select it and then select **Remove**.
 
-#### Use impersonation with stored credentials
-
- You can also use credentials to impersonate the identity of another user. For SQL Server databases, the impersonation options use the [SETUSER](../../t-sql/statements/setuser-transact-sql.md) function.
+You can also use credentials to impersonate the identity of another user. For SQL Server databases, the impersonation options use the [SETUSER](../../t-sql/statements/setuser-transact-sql.md) function.
 
 > [!IMPORTANT]
 > Don't use impersonation for reports that support subscriptions or that use schedules to generate report history or refresh a report execution snapshot.
 
 ### No credentials
 
- You can configure a data source connection to use no credentials. Microsoft recommends that you always use credentials to access a data sources; avoid the use of no credentials. However, you can choose to run a report with no credentials in the following cases:
+You can configure a data source connection to use no credentials. Microsoft recommends that you always use credentials to access a data sources; avoid the use of no credentials. However, you can choose to run a report with no credentials in the following cases:
 
 - The remote data source doesn't require credentials.
-
 - The credentials are passed in the connection string, which is recommended only for secure connections.
-
 - The report is a subreport that uses the credentials of the parent report.
 
 Under these conditions, the report server connects to a remote data source by using the unattended execution account that you must define in advance. Because the report server doesn't connect to a remote server by using its service credentials, you must specify an account that the report server can use to make the connection. For more information about creating this account, see [Configure the unattended execution account (Report Server Configuration Manager)](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).

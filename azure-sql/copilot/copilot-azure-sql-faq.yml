@@ -60,7 +60,7 @@ sections:
       - question: |
           How much does Copilot cost?
         answer: |
-          Copilot skills in Azure SQL Database is offered at no additional cost during the preview.
+          Copilot skills in Azure SQL Database are offered at no additional cost during the preview.
       - question: |
           What Azure SQL Database offerings are supported in preview?
         answer: |

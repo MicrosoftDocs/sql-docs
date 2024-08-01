@@ -164,7 +164,7 @@ Azure SQL Database can be used to build intelligent applications that include AI
 
 For an end-to-end sample to build a AI-enabled application using sessions abstract as a sample dataset, see:
 
-- [How I built a session recommender in 1 hour using Open AI](https://devblogs.microsoft.com/azure-sql/how-i-built-a-session-recommender-in-1-hour-using-open-ai/).
+- [How I built a session recommender in 1 hour using OpenAI](https://devblogs.microsoft.com/azure-sql/how-i-built-a-session-recommender-in-1-hour-using-open-ai/).
 - [Using Retrieval Augmented Generation to build a conference session assistant](https://github.com/Azure-Samples/azure-sql-db-session-recommender-v2)
 
 ### LangChain integration

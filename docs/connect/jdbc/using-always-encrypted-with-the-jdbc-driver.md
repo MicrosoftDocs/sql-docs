@@ -3,7 +3,7 @@ title: Use Always Encrypted with the JDBC driver
 description: Learn how to use Always Encrypted with the JDBC driver to encrypt sensitive data on the server.
 author: David-Engel
 ms.author: davidengel
-ms.date: 08/08/2022
+ms.date: 07/31/2024
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: conceptual
@@ -23,7 +23,7 @@ Always Encrypted allows clients to encrypt sensitive data and never reveal the d
 - Download and install the Java Cryptography Extension (JCE) Unlimited Strength Jurisdiction Policy Files.  Be sure to read the Readme included in the zip file for installation instructions, and relevant details on possible export or import issues.
   - For mssql-jdbc-X.X.X.jre7.jar or sqljdbc41.jar, the policy files can be downloaded from [Java Cryptography Extension (JCE) Unlimited Strength Jurisdiction Policy Files 7 Download](https://www.oracle.com/technetwork/java/javase/downloads/jce-7-download-432124.html)
   - For mssql-jdbc-X.X.X.jre8.jar or sqljdbc42.jar, the policy files can be downloaded from  [Java Cryptography Extension (JCE) Unlimited Strength Jurisdiction Policy Files 8 Download](https://www.oracle.com/technetwork/java/javase/downloads/jce8-download-2133166.html)
-  - For mssql-jdbc-X.X.X.jre9.jar, no policy file needs to be downloaded. The jurisdiction policy in Java 9 defaults to unlimited strength encryption.
+  - For any JRE version 9 or greater (for example, mssql-jdbc-X.X.X.jre9.jar), no policy file needs to be downloaded. The jurisdiction policy in Java 9, and greater, defaults to unlimited strength encryption.
 
 ## Work with column master key stores
 
@@ -37,15 +37,15 @@ The Microsoft JDBC Driver for SQL Server communicates with a keystore that uses 
 
 ### Use built-in column master key store providers
 
-The Microsoft JDBC Driver for SQL Server comes with the following built-in column master key store providers. Some of these providers are pre-registered with the specific provider names (used to look up the provider) and some require either extra credentials or explicit registration.
+The Microsoft JDBC Driver for SQL Server comes with the following built-in column master key store providers. Some of these providers are preregistered with the specific provider names (used to look up the provider) and some require either extra credentials or explicit registration.
 
-| Class                                                 | Description                                        | Provider (lookup) name  | Is pre-registered? | Platform |
+| Class                                                 | Description                                        | Provider (lookup) name  | Is preregistered? | Platform |
 | :---------------------------------------------------- | :------------------------------------------------- | :---------------------- | :----------------- | :------- |
 | **`SQLServerColumnEncryptionAzureKeyVaultProvider`**    | A provider for a keystore for the Azure Key Vault. | AZURE_KEY_VAULT         | _No_ before JDBC driver version 7.4.1, but _yes_ as of JDBC driver version 7.4.1. | Windows, Linux, macOS |
 | **`SQLServerColumnEncryptionCertificateStoreProvider`** | A provider for the Windows Certificate Store.      | MSSQL_CERTIFICATE_STORE | _Yes_                | Windows |
 | **`SQLServerColumnEncryptionJavaKeyStoreProvider`**     | A provider for the Java keystore.                  | MSSQL_JAVA_KEYSTORE     | _Yes_                | Windows, Linux, macOS |
 
-For the pre-registered keystore providers, you don't need any application code changes to use these providers but note the following items:
+For the preregistered keystore providers, you don't need any application code changes to use these providers but note the following items:
 
 - You must make sure the provider name that's configured in the column master key metadata is correct and the column master key path follows the key path format that is valid for a given provider. It's recommended that you configure the keys with tools such as SQL Server Management Studio, which automatically generates the valid provider names and key paths to issue the `CREATE COLUMN MASTER KEY` (Transact-SQL) statement.
 - Ensure your application can access the key in the keystore. This task might involve granting your application access to the key and/or the keystore. Depending on the keystore, this might involve other keystore-specific configuration steps. For example, to use the `SQLServerColumnEncryptionJavaKeyStoreProvider`, you must provide the location and the password of the keystore in the connection properties.
@@ -179,7 +179,7 @@ The following examples show how the connection properties are used in a connecti
 
 Users are encouraged to use these connection properties to specify the type of authentication used for the Key Stores instead of the `SQLServerColumnEncryptionAzureKeyVaultProvider` API.
 
-Previously added connection properties `keyVaultProviderClientId` and `keyVaultProviderClientKey` are deprecated and replaced by the connection properties described above.
+Previously added connection properties `keyVaultProviderClientId` and `keyVaultProviderClientKey` are deprecated and replaced by the connection properties described previously.
 
 For information on how to configure Managed Identities, see [Configure managed identities for Azure resources on a VM using the Azure portal](/azure/active-directory/managed-identities-azure-resources/qs-configure-portal-windows-vm).
 
@@ -267,7 +267,7 @@ WITH
 );
 ```
 
-For the 'AlwaysEncryptedKey' created above, the column master key definition would be:
+For the 'AlwaysEncryptedKey' created previously, the column master key definition would be:
 
 ```sql
 CREATE COLUMN MASTER KEY [MyCMK]
@@ -363,7 +363,7 @@ Custom master key store providers can be registered with the driver at three dif
 
 Once any key store provider is found at a registration level, the driver will **NOT** fall back to the other registrations to search for a provider. If providers are registered but the proper provider isn't found at a level, an exception is thrown that contains only the registered providers in the registration that was checked.
 
-The built-in column master key store provider that is available for the Windows Certificate Store is pre-registered. The Microsoft Java Keystore provider and Azure Key Vault Keystore provider can be implicitly pre-registered with a connection instance if credentials are provided in advance.
+The built-in column master key store provider that is available for the Windows Certificate Store is preregistered. The Microsoft Java Keystore provider and Azure Key Vault Keystore provider can be implicitly preregistered with a connection instance if credentials are provided in advance.
 
 The three registration levels support different scenarios when querying encrypted data. The appropriate method can be used to ensure that a user of an application can access the plaintext data. Access to the unencrypted data only happens if they can provide the required column master key, by authenticating against the key store containing the column master key.
 
@@ -764,7 +764,7 @@ Because Always Encrypted is a client-side encryption technology, most of the per
 - Added round trips to the database to retrieve metadata for query parameters.
 - Calls to a column master key store to access a column master key.
 
-This section describes the built-in performance optimizations in the Microsoft JDBC Driver for SQL Server and how you can control the impact of the above two factors on performance.
+This section describes the built-in performance optimizations in the Microsoft JDBC Driver for SQL Server and how you can control the impact of the previously mentioned two factors on performance.
 
 ### Controlling round trips to retrieve metadata for query parameters
 

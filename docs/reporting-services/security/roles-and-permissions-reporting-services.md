@@ -25,7 +25,7 @@ Reporting Services provides an authentication subsystem and role-based authoriza
   
 ## Identity and access control for native mode  
 
-Default authentication is based on Windows authentication and integrated security. You can change the authentication settings to allow the report server to respond to different authentication requests. Or, you can replace the default security features with a custom authentication extension that you provide. For more information, see [Grant permissions on a native mode report server](/sql/reporting-services/security/granting-permissions-on-a-native-mode-report-server).
+Default authentication is based on Windows authentication and integrated security. You can change the authentication settings to allow the report server to respond to different authentication requests. Or, you can replace the default security features with a custom authentication extension that you provide. For more information, see [Grant permissions on a native mode report server](granting-permissions-on-a-native-mode-report-server.md).
   
 Authorization is based on roles that you assign to a principal. Each role consists of a set of related tasks, which are in turn composed of related operations. For example, the **Content Manager** role has the **Manage reports** task. This task grants access to the following report server operations: view reports, add reports, update reports, delete reports, schedule reports, and update report properties.
 
@@ -79,7 +79,7 @@ System roles come with the following tasks that you can assign:
 
 ## Identity and access control for SharePoint mode  
 
-In SharePoint integrated mode, authentication and authorization are handled on the SharePoint site, before requests reach the report server. Depending on how you configure authentication, requests from a SharePoint site include a security token or a trusted user name. Permissions that you set for SharePoint users and groups authorize access to report server items that are placed in SharePoint libraries. For more information, see [Grant permissions on report server items on a SharePoint site](/sql/reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site).
+In SharePoint integrated mode, authentication and authorization are handled on the SharePoint site, before requests reach the report server. Depending on how you configure authentication, requests from a SharePoint site include a security token or a trusted user name. Permissions that you set for SharePoint users and groups authorize access to report server items that are placed in SharePoint libraries. For more information, see [Grant permissions on report server items on a SharePoint site](granting-permissions-on-report-server-items-on-a-sharepoint-site.md).
   
 ## Related content
 

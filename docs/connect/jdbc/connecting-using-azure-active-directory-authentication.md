@@ -55,7 +55,8 @@ In addition to the basic driver [System requirements](system-requirements-for-th
 The following table lists required library dependencies for each authentication mode and driver version. Dependencies of dependencies are also required.
 
 > [!NOTE]
-> In cases where the hotfix for a major release has a different dependency version than its major release, the hotfix is also listed
+> In cases where the hotfix for a major release has a different dependency version than its major release, the hotfix is also listed.
+
 
 | Authentication option | Driver versions | Library dependencies |
 |-----------------------|-----------------|----------------------|

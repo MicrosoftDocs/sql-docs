@@ -355,7 +355,7 @@ Pull the [!INCLUDE [sssql19-md](../includes/sssql19-md.md)] Linux container imag
 ::: zone pivot="cs1-bash"
 
 ```bash
-sudo docker pull mcr.microsoft.com/mssql/server:2019-latest
+docker pull mcr.microsoft.com/mssql/server:2019-latest
 ```
 
 ::: zone-end
@@ -391,7 +391,7 @@ To run the Linux container image with Docker, you can use the following command 
 ::: zone pivot="cs1-bash"
 
 ```bash
-sudo docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong@Passw0rd>" \
+docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong@Passw0rd>" \
    -p 1433:1433 --name sql1 --hostname sql1 \
    -d \
    mcr.microsoft.com/mssql/server:2019-latest
@@ -521,7 +521,7 @@ The following table provides a description of the parameters in the previous `do
    ::: zone pivot="cs1-bash"
 
    ```bash
-   sudo docker ps -a
+   docker ps -a
    ```
 
    ::: zone-end
@@ -552,7 +552,7 @@ The following table provides a description of the parameters in the previous `do
 1. If the `STATUS` column shows a status of `Up`, then [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] is running in the container and listening on the port specified in the `PORTS` column. If the `STATUS` column for your [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] container shows `Exited`, see [Troubleshoot SQL Server Docker containers](sql-server-linux-docker-container-troubleshooting.md). The server is ready for connections once the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] error logs display the message: `SQL Server is now ready for client connections. This is an informational message; no user action is required`. You can review the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] error log inside the container using the command:
 
    ```bash
-   sudo docker exec -t sql1 cat /var/opt/mssql/log/errorlog | grep connection
+   docker exec -t sql1 cat /var/opt/mssql/log/errorlog | grep connection
    ```
 
    The `--hostname` parameter, as discussed previously, changes the internal name of the container to a custom value. This value is the name you see returned in the following Transact-SQL query:
@@ -590,7 +590,7 @@ Pull the [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] Linux container imag
 ::: zone pivot="cs1-bash"
 
 ```bash
-sudo docker pull mcr.microsoft.com/mssql/server:2022-latest
+docker pull mcr.microsoft.com/mssql/server:2022-latest
 ```
 
 ::: zone-end
@@ -626,7 +626,7 @@ To run the Linux container image with Docker, you can use the following command 
 ::: zone pivot="cs1-bash"
 
 ```bash
-sudo docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong@Passw0rd>" \
+docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong@Passw0rd>" \
    -p 1433:1433 --name sql1 --hostname sql1 \
    -d \
    mcr.microsoft.com/mssql/server:2022-latest
@@ -687,7 +687,7 @@ The **SA** account is a system administrator on the [!INCLUDE [ssnoversion-md](.
    ::: zone pivot="cs1-bash"
 
    ```bash
-   sudo docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd \
+   docker exec -it sql1 /opt/mssql-tools18/bin/sqlcmd \
    -S localhost -U SA \
     -P "$(read -sp "Enter current SA password: "; echo "${REPLY}")" \
     -Q "ALTER LOGIN SA WITH PASSWORD=\"$(read -sp "Enter new SA password: "; echo "${REPLY}")\""
@@ -698,7 +698,7 @@ The **SA** account is a system administrator on the [!INCLUDE [ssnoversion-md](.
    ::: zone pivot="cs1-powershell"
 
    ```PowerShell
-   docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd `
+   docker exec -it sql1 /opt/mssql-tools18/bin/sqlcmd `
       -S localhost -U SA -P "<YourStrong@Passw0rd>" `
       -Q "ALTER LOGIN SA WITH PASSWORD='<YourNewStrong@Passw0rd>'"
    ```
@@ -708,7 +708,7 @@ The **SA** account is a system administrator on the [!INCLUDE [ssnoversion-md](.
    ::: zone pivot="cs1-cmd"
 
    ```cmd
-   docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd `
+   docker exec -it sql1 /opt/mssql-tools18/bin/sqlcmd `
       -S localhost -U SA -P "<YourStrong@Passw0rd>" `
       -Q "ALTER LOGIN SA WITH PASSWORD='<YourNewStrong@Passw0rd>'"
    ```
@@ -831,7 +831,7 @@ sqlcmd config view --raw
    ::: zone pivot="cs1-bash"
 
    ```bash
-   sudo docker ps -a
+   docker ps -a
    ```
 
    ::: zone-end
@@ -862,7 +862,7 @@ sqlcmd config view --raw
 1. If the `STATUS` column shows a status of `Up`, then [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] is running in the container and listening on the port specified in the `PORTS` column. If the `STATUS` column for your [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] container shows `Exited`, see [Troubleshoot SQL Server Docker containers](sql-server-linux-docker-container-troubleshooting.md). The server is ready for connections once the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] error logs display the message: `SQL Server is now ready for client connections. This is an informational message; no user action is required`. You can review the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] error log inside the container using the command:
 
    ```bash
-   sudo docker exec -t sql1 cat /var/opt/mssql/log/errorlog | grep connection
+   docker exec -t sql1 cat /var/opt/mssql/log/errorlog | grep connection
    ```
 
    The `--hostname` parameter, as discussed previously, changes the internal name of the container to a custom value. This value is the name you see returned in the following Transact-SQL query:
@@ -887,7 +887,7 @@ The following steps use the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-m
    ::: zone pivot="cs1-bash"
 
    ```bash
-   sudo docker exec -it sql1 "bash"
+   docker exec -it sql1 "bash"
    ```
 
    ::: zone-end
@@ -911,7 +911,7 @@ The following steps use the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-m
 1. Once inside the container, connect locally with **sqlcmd**, using its full path.
 
    ```bash
-   sudo /opt/mssql-tools/bin/sqlcmd -S localhost -U <userid> -P "<YourNewStrong@Passw0rd>"
+   /opt/mssql-tools18/bin/sqlcmd -S localhost -U <userid> -P "<YourNewStrong@Passw0rd>"
    ```
 
    > [!NOTE]  
@@ -920,7 +920,7 @@ The following steps use the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-m
    You can omit the password on the command-line to be prompted to enter it. For example:
 
    ```bash
-   sudo /opt/mssql-tools/bin/sqlcmd -S localhost -U <userid>
+   /opt/mssql-tools18/bin/sqlcmd -S localhost -U <userid>
    ```
 
 1. If successful, you should get to a **sqlcmd** command prompt: `1>`.
@@ -1101,8 +1101,8 @@ If you want to remove the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.
 ::: zone pivot="cs1-bash"
 
 ```bash
-sudo docker stop sql1
-sudo docker rm sql1
+docker stop sql1
+docker rm sql1
 ```
 
 ::: zone-end

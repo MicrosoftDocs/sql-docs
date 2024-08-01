@@ -4,7 +4,7 @@ description: Adopt In-memory OLTP to improve transactional performance in an exi
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma
-ms.date: 12/12/2023
+ms.date: 08/01/2024
 ms.service: azure-sql-database
 ms.subservice: performance
 ms.topic: how-to
@@ -19,8 +19,10 @@ monikerRange: "=azuresql||=azuresql-db"
 > * [Azure SQL Database](in-memory-oltp-configure.md?view=azuresql-db&preserve-view=true)
 > * [Azure SQL Managed Instance](../managed-instance/in-memory-oltp-configure.md?view=azuresql-mi&preserve-view=true)
 
+[In-memory OLTP](in-memory-oltp-overview.md) can be used to improve the performance of transaction processing, data ingestion, and transient data scenarios, without increasing the pricing tier.
 
-[In-memory OLTP](in-memory-oltp-overview.md) can be used to improve the performance of transaction processing, data ingestion, and transient data scenarios, in [Premium and Business Critical tier](service-tiers-vcore.md) databases without increasing the pricing tier.
+- [Premium (DTU) and Business Critical (vCore) tier](service-tiers-sql-database-vcore.md) databases support in-memory OLTP tables.
+- Hyperscale supports a subset of in-memory OLTP objects, but does not include memory-optimized tables. For more information, see [Hyperscale limitations](service-tier-hyperscale?view=azuresql#known-limitations).
 
 Follow these steps to adopt in-memory OLTP in your existing database.
 

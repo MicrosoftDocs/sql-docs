@@ -57,7 +57,7 @@ In Report Builder, the report server often uses credentials when you connect. Th
 
 For more information, see [Preview reports in Report Builder](../../reporting-services/report-builder/previewing-reports-in-report-builder.md).
 
-### Use remote data sources
+## Use remote data sources
 
 If the report retrieves data from a remote database server, you must verify:
 

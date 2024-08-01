@@ -24,7 +24,7 @@ The Solution Explorer pane in [!INCLUDE [msCoName](../../includes/msconame-md.md
 
 A solution includes one or more projects, plus files and metadata that help define the solution as a whole. A project is a set of files, plus related metadata such as connection information. Solutions and projects contain items that represent the scripts, queries, connection information and files that you need to create your database solution.
 
-## Benefits of Using Solutions
+## Benefits
 
 Use these containers to:
 
@@ -40,7 +40,7 @@ Use these containers to:
 
 The items contained in projects depend on the project type and whether you are using SQL Server Management Studio.
 
-## Related Tasks
+## Related tasks
 
 Use the following topics to get started with SQL Server Solutions:
 

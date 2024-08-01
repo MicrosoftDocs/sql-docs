@@ -106,9 +106,9 @@ Stored credentials are recommended as part of a strategy for accessing remote da
 
 The user name and password that you specify can be Windows credentials or a database sign-in. If you specify Windows credentials, the report server passes the credentials to Windows for subsequent authentication. Otherwise, the credentials are passed to the database server for authentication.
 
-### How to grant "Allow log on locally" permissions to domain user accounts
+### Grant "Allow log on locally" permissions to domain user accounts
 
-If you use stored credentials to connect to an external data source, the Windows domain user account must have permission to sign on locally. This permission allows the report server to impersonate the user on the report server and send the request to the external data source as that impersonated user.
+If you use stored credentials to connect to an external data source, the Windows domain user account must have permission to sign-in locally. This permission allows the report server to impersonate the user on the report server and send the request to the external data source as that impersonated user.
 
 To grant this permission:
 

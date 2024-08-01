@@ -134,7 +134,7 @@ CREATE\s+TABLE\s+(\w+)
 - CREATE\s+TABLE\s+: Matches the words "CREATE TABLE" followed by one or more whitespace characters.
 - (\w+): Matches one or more word characters (alphanumeric and underscore) and captures them for extraction.
 
-For more examples, visit [Regular Expressions in Visual Studio](https://docs.microsoft.com/visualstudio/ide/using-regular-expressions-in-visual-studio?view=vs-2019)
+For more examples, visit [Regular Expressions in Visual Studio](/visualstudio/ide/using-regular-expressions-in-visual-studio)
 
 ## Related content
 

@@ -11,7 +11,7 @@ metadata:
   ms.custom:
     - build-2024
   ms.topic: faq
-  ms.date: 05/09/2024
+  ms.date: 08/01/2024
   monikerRange: "= azuresql || = azuresql-db"
 title: "Frequently asked questions about Microsoft Copilot skills in Azure SQL Database (preview)"
 summary: |
@@ -34,7 +34,7 @@ sections:
       - question: |
           How do I enable Microsoft Copilot in Azure for my Azure tenant?
         answer: |
-          Review the steps in [Enable Microsoft Copilot in Azure for your Azure tenant](copilot-azure-sql-overview.md#enable-microsoft-copilot-in-your-azure-tenant).
+          Review the steps in [Enable Microsoft Copilot in Azure for your Azure tenant](copilot-azure-sql-overview.md#enable-microsoft-copilot-in-your-azure-tenant). Microsoft Copilot skills in Azure SQL Database are currently in preview for a limited number of early adopters. To sign up for this program, visit [Request Access to Copilot in Azure SQL Database: Preview](https://aka.ms/sqlcopilot-signup).
       - question: |
           Are the results from Copilot reliable?
         answer: |
@@ -54,9 +54,9 @@ sections:
       - question: |
           What should I do if I see unexpected or offensive content?
         answer: |
-          The Azure team built Copilot guided by our AI principles and Responsible AI Standard. We have prioritized mitigating exposing customers to offensive content. However, you might still see unexpected results. We're constantly working to improve our technology in preventing harmful content.
+          The Azure team built Copilot guided by our AI principles and Responsible AI Standard. We have prioritized mitigating exposing customers to offensive content. However, you might still see unexpected results. We're constantly working to improve our technology in preventing harmful content. For more information, see [Responsible AI FAQ for Microsoft Copilot in Azure (preview)](/azure/copilot/responsible-ai-faq).
 
-          If you encounter harmful or inappropriate content in the system, you can provide feedback or report a concern by selecting the downvote button on the response. We're constantly working to improve our technology to proactively address issues in line with our [responsible AI principles](https://www.microsoft.com/ai/our-approach)
+          If you encounter harmful or inappropriate content in the system, you can provide feedback or report a concern by selecting the downvote button on the response. We're constantly working to improve our technology to proactively address issues in line with our [responsible AI principles](https://www.microsoft.com/ai/our-approach).
       - question: |
           How much does Copilot cost?
         answer: |

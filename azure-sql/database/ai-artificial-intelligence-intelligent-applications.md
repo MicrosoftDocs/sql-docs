@@ -4,7 +4,7 @@ description: "Use AI options such as OpenAI and vectors to build intelligent app
 author: damauri
 ms.author: damauri
 ms.reviewer: damauri, josephsack, randolphwest, mathoma
-ms.date: 05/08/2024
+ms.date: 08/01/2024
 ms.service: sql-database
 ms.topic: conceptual
 ms.collection: ce-skilling-ai-copilot
@@ -22,7 +22,6 @@ For samples and examples, please visit the [SQL AI Samples repository](https://a
 Watch this video in the [Azure SQL Database essentials series](/shows/azure-sql-database-essentials/) for a brief overview of building an AI ready application:  
 > [!VIDEO https://learn-video.azurefd.net/vod/player?id=466d4554-4747-45dd-8f21-5ae73b1fa981]
 
-
 ## Overview
 
 Large language models (LLMs) enable developers to create AI-powered applications with a familiar user experience.
@@ -39,7 +38,7 @@ The following links provide sample code of various Azure SQL Database options to
 | **[Intelligent applications](#intelligent-applications)** | Learn how to create an end-to-end solution using a common pattern that can be replicated in any scenario. |
 | **[Copilot skills in Azure SQL Database](#microsoft-copilot-skills-in-azure-sql-database)** | Learn about the set of AI-assisted experiences designed to streamline the design, operation, optimization, and health of Azure SQL Database-driven applications. |
 
-## Key concepts
+## Key concepts for implementing RAG with Azure SQL Database and Azure OpenAI
 
 This section includes key concepts that are critical for implementing RAG with Azure SQL Database and Azure OpenAI.
 
@@ -161,7 +160,7 @@ Implement RAG-patterns with Azure SQL Database and Azure AI Search. You can run 
 
 Azure SQL Database can be used to build intelligent applications that include AI features, such as recommenders, and Retrieval Augmented Generation (RAG) as the following diagram demonstrates: 
 
-:::image type="content" source="media/ai-artificial-intelligence-intelligent-applications/session-recommender-architecture.png" alt-text="Diagram of different AI features to build intelligent applications with Azure SQL Database.":::
+:::image type="content" source="media/ai-artificial-intelligence-intelligent-applications/session-recommender-architecture.png" alt-text="Diagram of different AI features to build intelligent applications with Azure SQL Database." lightbox="media/ai-artificial-intelligence-intelligent-applications/session-recommender-architecture.png":::
 
 For an end-to-end sample to build a AI-enabled application using sessions abstract as a sample dataset, see:
 

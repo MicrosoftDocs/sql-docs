@@ -3,7 +3,7 @@ title: JDBC driver API reference
 description: The technical API reference for the JDBC classes in the JDBC Driver for SQL Server.
 author: David-Engel
 ms.author: davidengel
-ms.date: 01/11/2022
+ms.date: 07/31/2024
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: reference
@@ -47,6 +47,26 @@ Documentation for JDBC driver version 6.0, and some later versions, is also here
 > API details for Always Encrypted, available starting with  Microsoft JDBC Driver 6.0 for SQL Server, are not found in this section. See [Always Encrypted API Reference for the JDBC Driver](../always-encrypted-api-reference-for-the-jdbc-driver.md)
 >
 > API details for Using Table-Valued Parameters, available starting with  Microsoft JDBC Driver 6.0 for SQL Server, are not found in this section. See [Using Table-Valued Parameters](../using-table-valued-parameters.md)
+> 
+> Microsoft JDBC Driver 12.2 and above supports compilation with JDK 8.0 and all Java versions 11.0 and up.
+> 
+> Microsoft JDBC Driver 11.2 supports compilation with JDK 8.0, 11.0, 17.0, and 18.0.
+>
+> Microsoft JDBC Driver 10.2 supports compilation with JDK 8.0, 11.0, and 17.0.
+>
+> Microsoft JDBC Driver 9.4 supports compilation with JDK 8.0, 11.0, and 16.0.
+>
+> Microsoft JDBC Driver 9.2 supports compilation with JDK 8.0, 11.0, and 15.0.
+>
+> Microsoft JDBC Driver 8.4 supports compilation with JDK 8.0, 11.0, and 14.0.
+>
+> Microsoft JDBC Driver 8.2 supports compilation with JDK 8.0, 11.0, and 13.0.
+>
+> Microsoft JDBC Driver 7.4 supports compilation with JDK 8.0, 11.0, and 12.0.
+>
+> Microsoft JDBC Driver 7.2 supports compilation with JDK 8.0, and 11.0.
+>
+> Microsoft JDBC Driver 7.0 supports compilation with JDK 8.0, and 10.0.
 >
 > Microsoft JDBC Driver 6.4 supports compilation with JDK 7.0, 8.0, and 9.0.
 >

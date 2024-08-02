@@ -83,7 +83,7 @@ There are three types of credentials that you can use in a connection to a repor
 > [!NOTE]
 > You can't use a custom authentication extension to connect to a report server database. Custom authentication extensions are used only to authenticate a principal to a report server. They don't affect connections to the report server database or to external data sources that provide content to reports.
 
-::: moniker range=">=sql-server-ver15"
+::: moniker range="<=sql-server-ver15"
 > [!NOTE]
 > When you use Azure SQL Managed Instance to host report server databases, SQL Server authentication is the only supported credential type. In addition, Managed Instance can't host report server instance.
 ::: moniker-end

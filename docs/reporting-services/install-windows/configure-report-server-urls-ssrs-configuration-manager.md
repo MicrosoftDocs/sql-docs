@@ -1,9 +1,9 @@
 ---
 title: "Configure report server URLs (Report Server Configuration Manager)"
-description: Learn how to configure URLs to use them for access to the Report Server web service and the web portal.
+description: Learn about how you can configure URLs by using Reporting Services to access the Report Server web service and web portal.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 08/05/2024
+ms.date: 08/02/2024
 ms.service: reporting-services
 ms.subservice: report-server
 ms.topic: conceptual

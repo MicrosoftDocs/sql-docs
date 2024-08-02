@@ -8,7 +8,7 @@ ms.service: reporting-services
 ms.subservice: report-server
 ms.topic: conceptual
 ms.custom: updatefrequency5
-#customer-intent: As an SQL Server administrator, I want to understand how to configure and manage a SQL Server report server database connection to ensure seamless report server operations.
+#customer-intent: As a SQL Server administrator, I want to understand how to configure and manage a SQL Server report server database connection so that I can ensure seamless report server operations.
 ---
 
 # Configure a report server database connection (Report Server Configuration Manager)
@@ -27,7 +27,7 @@ Configure a report server database connection in the following circumstances:
 
 - **First-time configuration**: When you first use the report server.
 - **Database changes**: When you need a report server to use a different report server database.
-- **Account changes**: When the user account or password that is used for the database connection changes.
+- **Account changes**: When the user account or password that's used for the database connection changes.
    > [!NOTE]
    > Update the connection when the account information is stored in the `RSReportServer.config` file. If you use the service account, which uses Windows integrated security, the password isn't stored. For more information about changing accounts, see [Configure the report server service account (Report Server Configuration Manager)](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md).
 - **Scale-out deployment**: If you configure a scale-out deployment, create multiple connections to a report server database. For more information about how to perform this multi-step operation, see [Configure a Native mode report server scale-out deployment (Report Server Configuration Manager)](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md).
@@ -60,7 +60,7 @@ The credentials you provide must be granted access to the report server database
 
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] stores and encrypts the connection information in the following `RSreportserver.config` settings. Use the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration tool or **rsconfig** utility to create encrypted values for these settings.
 
-Not all of the values are set for every type of connection. If you configure the connection by using the default values for the service accounts to make the connection, \<**LogonUser**>, \<**LogonDomain**>, and \<**LogonCred**> are empty, as follows:
+Not all values are set for every connection type. If you configure the connection by using the default values for the service accounts to make the connection, \<**LogonUser**>, \<**LogonDomain**>, and \<**LogonCred**> are empty, as follows:
 
 ```
 <Dsn></Dsn>
@@ -70,7 +70,7 @@ Not all of the values are set for every type of connection. If you configure the
 <LogonCred></LogonCred>
 ```
 
-If you configure the connection to use a specific Windows account or database sign-in credentials, remember to update the stored values if you then change the account or sign-in credentials.
+If you configure the connection to use a specific Windows account or database sign-in credentials and you then change the account or sign-in credentials, remember to update the stored values.
 
 ## Choose a credential type
 
@@ -78,16 +78,14 @@ There are three types of credentials that you can use in a connection to a repor
 
 - **Windows integrated security with the Report Server service account**: Because the report server is implemented as a single service, only the account under which the service runs requires database access.
 - **Windows user account**: If the report server and the report server database are installed on the same computer, you can use a local account. Otherwise, use a domain account.
-- **SQL Server sign-in credentials**: Use SQL Server sign-in credentials to authenticate and connect to the report server database. This option is useful when the database server is in a different domain or when using workgroup security instead of domain security.
+- **SQL Server sign-in credentials**: Use SQL Server sign-in credentials to authenticate and connect to the report server database. This option is useful when the database server is in a different domain or when you use workgroup security instead of domain security.
 
 > [!NOTE]
 > You can't use a custom authentication extension to connect to a report server database. Custom authentication extensions are used only to authenticate a principal to a report server. They don't affect connections to the report server database or to external data sources that provide content to reports.
 
 ::: moniker range=">=sql-server-ver15"
-
 > [!NOTE]
 > When you use Azure SQL Managed Instance to host report server databases, SQL Server authentication is the only supported credential type. In addition, Managed Instance can't host report server instance.
-
 ::: moniker-end
 
 ### Use Windows integrated security with the Report Server service account
@@ -96,21 +94,21 @@ You can use Windows integrated security to connect through the Report Server ser
 
 The service account is a trusted account that provides a low-maintenance approach to managing a report server database connection. Because the service account uses Windows integrated security to make the connection, the credentials don't have to be stored. However, if you then change the service account password or identity, be sure to use the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration tool to make the change. The tool automatically updates the database permissions to use the revised account information. For more information, see [Configure the report server service account (Report Server Configuration Manager)](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md).
 
-If you configure the database connection to use the service account, the account must have network permissions if the report server database is on a remote computer. Don't use the service account if the report server database is on a different domain, behind a firewall, or if you're using workgroup security instead of domain security. Use a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database user account instead.
+If you configure the database connection to use the service account and the report server database is on a remote computer, the account must have network permissions. Don't use the service account if the report server database is on a different domain, behind a firewall, or if you use workgroup security instead of domain security. Use a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database user account instead.
 
 If you configure the instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] for Windows Authentication, ensure the instance is in the same domain or a trusted domain with the report server computer. You can then configure the connection to use the service account. Alternatively, you can use a domain user account that you manage as a connection property through the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration tool. If the database server is in a different domain, or if you use workgroup security, configure the connection to use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database sign-in credentials. In this case, be sure to encrypt the connection.
 
 ### Use a Windows user account
 
-You can specify a Windows user account for the report server connection to the report server database. If you use a local or domain account, Update the report server database connection every time you change the password or the account. Always use the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration tool to update the connection.
+You can specify a Windows user account for the report server connection to the report server database. If you use a local or domain account, update the report server database connection every time you change the password or the account. Always use the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration tool to update the connection.
 
 ### Use SQL Server sign-in credentials
 
-You can specify one set of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sign-in credentials to connect to the report server database. If you use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] authentication and the report server database is on a remote computer, use IPSec to help secure the transmission of data between the servers. If you use database sign-in credentials, update the report server database connection every time you change the password or the account.
+You can specify one set of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sign-in credentials to connect to the report server database. If you use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] authentication, and the report server database is on a remote computer, use IPSec to help secure the transmission of data between the servers. If you use database sign-in credentials, update the report server database connection every time you change the password or the account.
 
 ## Database permissions
 
-Accounts used to connect to the report server database are granted the following roles.
+Accounts used to connect to the report server database are granted the following roles:
 
 | Database | Role |
 |------|----------|

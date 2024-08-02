@@ -56,6 +56,7 @@ Use the following steps to install the **mssql-tools18** on Red Hat Enterprise L
 
    ```bash
    echo 'export PATH="$PATH:/opt/mssql-tools18/bin"' >> ~/.bash_profile
+   source ~/.bash_profile
    ```
 
    To make **sqlcmd** and **bcp** accessible from the bash shell for interactive/non-login sessions, modify the `PATH` in the `~/.bashrc` file with the following command:

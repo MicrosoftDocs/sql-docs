@@ -30,7 +30,7 @@ To learn more, see an overview of [FCI with SQL Server on Azure VMs](failover-cl
 Before you complete the instructions in this article, you should already have:
 
 - An Azure subscription. Get started with a [free Azure account](https://azure.microsoft.com/free/).
-- [Two or more prepared Azure Windows virtual machines](failover-cluster-instance-prepare-vm.md) in the same availability zone. Since all VMs part of the FCI have be in the same availability zone, the VM availability is only 99.9%.
+- [Two or more prepared Azure Windows virtual machines](failover-cluster-instance-prepare-vm.md) in the same availability zone. Since all VMs part of the FCI have to be in the same availability zone, the VM availability is only 99.9%.
 - An account that has permissions to create objects on both Azure virtual machines and in Active Directory.
 
 [!INCLUDE[tip-for-multi-subnet-ag](../../includes/virtual-machines-fci-multi-subnet.md)]
@@ -41,9 +41,9 @@ Follow the instructions to [Create an Azure Elastic SAN](/azure/storage/elastic-
 
 Your Elastic SAN should be: 
 
-- in the same resource group as your SQL Server on Azure VM. 
-- configured for zone redundancy. 
-- in the same availability zone as the primary SQL Server VM. 
+- In the same resource group as your SQL Server on Azure VM. 
+- Configured for zone redundancy. 
+- In the same availability zone as the primary SQL Server VM. 
 
 ## Connect Elastic SAN volumes to the VMs
 

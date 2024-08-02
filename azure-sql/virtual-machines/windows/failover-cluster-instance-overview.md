@@ -198,7 +198,7 @@ SQL Server FCIs registered with the SQL IaaS Agent extension don't support featu
 
 ### MSDTC
 
-Azure Virtual Machines support Microsoft Distributed Transaction Coordinator (MSDTC) on Windows Server 2019 with storage on Clustered Shared Volumes (CSV) and [Azure Standard Load Balancer](/azure/load-balancer/load-balancer-overview) or on SQL Server VMs that are using Azure shared disks.
+Azure Virtual Machines supports Microsoft Distributed Transaction Coordinator (MSDTC) on Windows Server 2019 with storage on Clustered Shared Volumes (CSV) and [Azure Standard Load Balancer](/azure/load-balancer/load-balancer-overview) or on SQL Server VMs that are using Azure shared disks.
 
 On Azure Virtual Machines, MSDTC isn't supported for Windows Server 2016 or earlier with Clustered Shared Volumes because:
 

@@ -1,9 +1,9 @@
 ---
 title: "Configure report server URLs (Report Server Configuration Manager)"
-description: Learn how to configure URLs to use them for access to the Report Server Web service and the web portal.
+description: Learn how to configure URLs to use them for access to the Report Server web service and the web portal.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 06/19/2024
+ms.date: 08/05/2024
 ms.service: reporting-services
 ms.subservice: report-server
 ms.topic: conceptual
@@ -12,25 +12,30 @@ helpviewer_keywords:
   - "Report Server Windows service, virtual directories"
   - "report servers [Reporting Services], virtual directories"
   - "virtual directories [Reporting Services]"
+#customer intent: As a SQL Server administrator, I want to understand how to configure report server URLs to ensure proper access to the Report Server Web service and the web portal.
 ---
 # Configure report server URLs (Report Server Configuration Manager)
 
-In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], URLs are used to access the Report Server Web service and the [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]. Before you can use either application, you must configure at least one URL each for the Web service and the [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] provides default values for both application URLs that work well in most deployment scenarios, including side-by-side deployments with other Web services and applications.
+[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] uses URLs to access the Report Server web service and the [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]. Before you use either application, configure at least one URL each for the web service and the [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] provides default values for both URLs that work in most deployment scenarios, including side-by-side deployments with other web services and applications.
 
-- If you installed the default configuration, URLs were created automatically using the default values.
+## URL configuration during setup
 
-- If you're using the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration tool to create or modify the URLs, you can accept the default values for a URL or specify custom values. A test link of the URL appears on page when you define the URL so that you can immediately confirm that the settings you specified result in a valid connection. For step-by-step instructions on how to configure and test a URL, see [Configure a URL (Report Server Configuration Manager)](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md).
+When you install SQL Server Reporting Services (SSRS), URLs for accessing the Report Server Web service and the web portal are set up to facilitate initial and ongoing use. This setup can occur in two primary ways:
+
+- **Default configuration**: If you select the default configuration during SSRS installation, the system automatically creates URLs using default values that are suitable for most deployment scenarios. These URLs allow immediate access to the Report Server Web service and the web portal without requiring additional configuration.
+
+- **Custom configuration**: You can use the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration tool to create or modify URLs. The tool allows you to accept the default values for a URL or specify custom values. A test link of the URL appears on page when you define the URL so that you can verify that your settings result in a valid connection. For step-by-step instructions on how to configure and test a URL, see [Configure a URL (Report Server Configuration Manager)](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md).
 
 ## Define a report server URL
 
-The URL precisely identifies the location of an instance of a report server application on your network. When you create a report server URL, you must specify the following parts.
+The URL identifies the location of an instance of a report server instance on your network. When you create a report server URL, specify the following parts.
 
 |Part|Description|
 |----------|-----------------|
-|Host name|A TCP/IP network uses an IP address to uniquely identify a device on the network. There's a physical IP address for each network adapter card installed in a computer. If the IP address resolves to a host header, you can specify the host header. If you're deploying the report server on a corporate network, you can use the network name of the computer.|
+|Host name|A TCP/IP network uses an IP address to uniquely identify a device on the network. There's a physical IP address for each network adapter card installed in a computer. If the IP address resolves to a host header, you can specify the host header. If you deploy the report server on a corporate network, you can use the network name of the computer.|
 |Port|A TCP port is an endpoint on the device. The report server listens for requests on a designated port.|
-|Virtual directory|Multiple Web services or applications often share a port. For this reason, a report server URL always includes a virtual directory that corresponds to the application that gets the request. You must specify unique virtual directory names for each [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] application that listens on the same IP address and port.|
-|SSL settings|URLs in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] can be configured to use an existing TLS/SSL certificate that you previously installed on the computer. For more information, see [Configure TLS connections on a native mode report server](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md).|
+|Virtual directory|Multiple web services or applications often share a port. A report server URL always includes a virtual directory that corresponds to the application that receives the request. Specify unique virtual directory names for each [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] application that listens on the same IP address and port.|
+|SSL settings|URLs in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] can be configured to use an existing TLS/SSL certificate installed on the computer. For more information, see [Configure TLS connections on a native mode report server](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md).|
 
 ## Default URLs
 

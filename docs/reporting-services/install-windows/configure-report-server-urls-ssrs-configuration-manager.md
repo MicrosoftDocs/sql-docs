@@ -18,17 +18,17 @@ helpviewer_keywords:
 
 Learn how [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] uses URLs to access the Report Server web service and the [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]. Before you use either application, configure at least one URL each for the web service and the [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] provides default values for both URLs that work in most deployment scenarios, including side-by-side deployments with other web services and applications.
 
-## URL configuration during setup
+## URL configuration
 
-When you install SQL Server Reporting Services (SSRS), URLs for accessing the Report Server web service and the web portal are set up to facilitate initial and ongoing use. This setup can occur in two primary ways:
+When you install SQL Server Reporting Services (SSRS), URLs for accessing the Report Server web service and the web portal are set up to facilitate initial and ongoing use. This configuration can occur in two primary ways:
 
 - **Default configuration**: If you select the default configuration during SSRS installation, the system automatically creates URLs using default values that are suitable for most deployment scenarios. These URLs allow immediate access to the Report Server web service and the web portal without requiring more configuration.
 
-- **Custom configuration**: You can use the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration tool to create or modify URLs. The tool allows you to accept the default values for a URL or specify custom values. A test link of the URL appears on page when you define the URL so that you can verify that your settings result in a valid connection. For step-by-step instructions on how to configure and test a URL, see [Configure a URL (Report Server Configuration Manager)](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md).
+- **Custom configuration**: You can use the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration tool to create or modify URLs after initial setup. The tool allows you to accept the default values for a URL or specify custom values. A test link of the URL appears on page when you define the URL so that you can verify that your settings result in a valid connection. For step-by-step instructions on how to configure and test a URL, see [Configure a URL (Report Server Configuration Manager)](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md).
 
 ## Define a report server URL
 
-The URL identifies the location of an instance of a report server instance on your network. When you create a report server URL, specify the following parts.
+The URL identifies the location of an instance of a report server instance on your network. The following table shows the parts you specifywWhen you create a report server URL.
 
 |Part|Description|
 |----------|-----------------|
@@ -61,7 +61,7 @@ Permissions on each URL endpoint are granted exclusively to the Report Server se
 
 ## Authenticate client requests sent to a report server URL
 
-By default, the authentication type supported on the URL endpoints is Windows Authentication. This setting is the default security extension. If you're implementing a custom or Forms authentication provider, modify the authentication settings on the report server. Optionally, you can also change the Windows Authentication settings to match the authentication subsystem used in your network. For more information, see [Authentication with the report server](../../reporting-services/security/authentication-with-the-report-server.md).
+By default, Windows Authentication is the authentication type supported on the URL endpoints. This setting is the default security extension. If you implement a custom or Forms authentication provider, modify the authentication settings on the report server. Optionally, you can also change the Windows Authentication settings to match the authentication subsystem used in your network. For more information, see [Authentication with the report server](../../reporting-services/security/authentication-with-the-report-server.md).
 
 ## Related content
 

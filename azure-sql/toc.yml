@@ -1807,14 +1807,16 @@
           items:
           - name: Prepare VM for FCI
             href: virtual-machines/windows/failover-cluster-instance-prepare-vm.md
-          - name: Create FCI
-            items:
+          - name: Create FCI with 
+            items: 
             - name: Azure shared disks
               href: virtual-machines/windows/failover-cluster-instance-azure-shared-disks-manually-configure.md
             - name: Storage Spaces Direct (Win2016+)
               href: virtual-machines/windows/failover-cluster-instance-storage-spaces-direct-manually-configure.md
             - name: Premium file share (Win2012+)
               href: virtual-machines/windows/failover-cluster-instance-premium-file-share-manually-configure.md
+            - name: Azure Elastic SAN
+              href: virtual-machines/windows/failover-cluster-instance-azure-elastic-san-manually-configure.md
           - name: Configure connectivity (Single subnet)
             items:
             - name: Virtual network name (VNN)

@@ -4,7 +4,7 @@ description: Learn how to set database options such as Automatic tuning, encrypt
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 05/21/2023
+ms.date: 07/29/2024
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -27,7 +27,7 @@ helpviewer_keywords:
   - "Query Store options"
 dev_langs:
   - "TSQL"
-monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azure-sqldw-latest || =azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azure-sqldw-latest || =azuresqldb-mi-current || =fabric"
 ---
 # ALTER DATABASE SET options (Transact-SQL)
 
@@ -56,6 +56,9 @@ In the following row, select whichever product name you're interested in. Doing 
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest&preserve-view=true)
+    :::column-end:::
+    :::column:::
+        [Microsoft Fabric](alter-database-transact-sql-set-options.md?view=fabric&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -1746,6 +1749,9 @@ SET QUERY_STORE = ON
     :::column:::
         [Azure Synapse<br />Analytics](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest&preserve-view=true)
     :::column-end:::
+    :::column:::
+        [Microsoft Fabric](alter-database-transact-sql-set-options.md?view=fabric&preserve-view=true)
+    :::column-end:::    
 :::row-end:::
 
 &nbsp;
@@ -2822,6 +2828,9 @@ SET QUERY_STORE = ON
     :::column:::
         [Azure Synapse<br />Analytics](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest&preserve-view=true)
     :::column-end:::
+    :::column:::
+        [Microsoft Fabric](alter-database-transact-sql-set-options.md?view=fabric&preserve-view=true)
+    :::column-end:::    
 :::row-end:::
 
 &nbsp;
@@ -3707,6 +3716,9 @@ SET QUERY_STORE = ON
     :::column:::
         ***\* Azure Synapse<br />Analytics \**** &nbsp;
     :::column-end:::
+    :::column:::
+        [Microsoft Fabric](alter-database-transact-sql-set-options.md?view=fabric&preserve-view=true)
+    :::column-end:::
 :::row-end:::
 
 &nbsp;
@@ -3946,5 +3958,70 @@ SET READ_COMMITTED_SNAPSHOT ON;
 - [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md)
 - [Best practices for Azure Synapse Analytics](/azure/sql-data-warehouse/sql-data-warehouse-best-practices#maintain-statistics)
 - [Designing tables in Azure Synapse Analytics](/azure/sql-data-warehouse/sql-data-warehouse-tables-overview#statistics)
+
+::: moniker-end
+::: moniker range="=fabric"
+
+:::row:::
+    :::column:::
+        [SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-ver15&preserve-view=true)
+    :::column-end:::
+    :::column:::
+        [SQL Database](alter-database-transact-sql-set-options.md?view=azuresqldb-current&preserve-view=true)
+    :::column-end:::
+    :::column:::
+        [SQL Managed Instance](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current&preserve-view=true)
+    :::column-end:::
+    :::column:::
+        [Azure Synapse<br />Analytics](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest&preserve-view=true)
+    :::column-end:::
+    :::column:::
+        ***Microsoft Fabric***
+    :::column-end:::
+:::row-end:::
+
+&nbsp;
+
+## Microsoft Fabric
+
+Use `ALTER DATABASE ... SET` to manage a [!INCLUDE [fabric](../../includes/fabric.md)] [!INCLUDE [fabric-dw](../../includes/fabric-dw.md)].
+
+## Syntax
+
+```syntaxsql
+-- Microsoft Fabric
+ALTER DATABASE CURRENT SET VORDER = OFF;
+```
+
+## Remarks
+
+Currently, [disabling V-Order behavior](/fabric/data-warehouse/disable-v-order) in a warehouse is the only use for `ALTER DATABASE ... SET` in [!INCLUDE [fabric](../../includes/fabric.md)].
+
+## Permissions
+
+The user needs to be a member of the Admin, Member, or Contributor roles in the Fabric workspace.
+
+## Examples
+
+### A. Disable V-Order in the current warehouse
+
+The following T-SQL command disables V-Order in the current warehouse context.
+
+> [!CAUTION]
+> Disabling V-Order can only be done at the warehouse level, and it is irreversible: once disabled, it cannot be enabled again. Users must consider the performance if they choose to [Disable V-Order in Fabric Warehouse](/fabric/data-warehouse/disable-v-order). Read and review [Understand V-Order in Microsoft Fabric Warehouse](/fabric/data-warehouse/manage-v-order).
+
+```sql
+ALTER DATABASE CURRENT SET VORDER = OFF
+```
+
+To check the current status of V-Order on all warehouses, of your workspace, use the following T-SQL code to query [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md?view=fabric&preserve-view=true) in a new query window:
+
+```sql
+SELECT [name], [is_vorder_enabled] FROM sys.databases;
+```
+
+## Related content
+
+- [What is data warehousing in Microsoft Fabric?](/fabric/data-warehouse/data-warehousing)
 
 ::: moniker-end

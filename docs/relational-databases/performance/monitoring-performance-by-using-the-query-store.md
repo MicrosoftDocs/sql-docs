@@ -105,15 +105,17 @@ The Query Store contains three stores:
 
 The number of unique plans that can be stored for a query in the plan store is limited by the **max_plans_per_query** configuration option. To enhance performance, the information is written to the stores asynchronously. To minimize space usage, the runtime execution statistics in the runtime stats store are aggregated over a fixed time window. The information in these stores is visible by querying the Query Store catalog views.
 
-The following query returns information about queries and plans in the Query Store.
+The following query returns information about queries, their plans, compile time and run-time statistics from the Query Store.
 
 ```sql
-SELECT Txt.query_text_id, Txt.query_sql_text, Pl.plan_id, Qry.*
-FROM sys.query_store_plan AS Pl
+SELECT Txt.query_text_id, Txt.query_sql_text, Pln.plan_id, Qry.*, RtSt.*
+FROM sys.query_store_plan AS Pln
 INNER JOIN sys.query_store_query AS Qry
-    ON Pl.query_id = Qry.query_id
+    ON Pln.query_id = Qry.query_id
 INNER JOIN sys.query_store_query_text AS Txt
-    ON Qry.query_text_id = Txt.query_text_id;
+    ON Qry.query_text_id = Txt.query_text_id
+INNER JOIN sys.query_store_runtime_stats RtSt
+ON Pln.plan_id = RtSt.plan_id;
 ```
 
 ## Query Store for secondary replicas

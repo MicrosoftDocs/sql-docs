@@ -22,16 +22,18 @@ This new connector supports databases with 1MB-enabled tables.
 
 Microsoft Connector supports the following Microsoft SQL Server products for Teradata:
 
-- Microsoft SQL Server 2019
 - Microsoft SQL Server 2022
-- SQL Server Integration Services Projects for Visual Studio 2019
+- Microsoft SQL Server 2019
 - SQL Server Integration Services Projects for Visual Studio 2022
 
-Microsoft Connector for Teradata uses ODBC Driver for Teradata, and Teradata Parallel Transporter shipped with Teradata Tools and Utilities (TTU). Supported TTU versions are 16.20 and 17.10.
+Microsoft Connector for Teradata depends on Teradata Tools and Utilities (TTU) 20.00.
+
+> [!NOTE]
+> TTU has discontinued support for 32-bit Teradata Parallel Transporter (TPT). Consequently, Microsoft Connector for Teradata has discontinued support for 32-bit and Visual Studio 2019. The TTU 17.10 based [rev. 284](#rev-284) is the final version with 32-bit and Visual Studio 2019 support. It can be downloaded from the same page as latest version [here](https://www.microsoft.com/download/details.aspx?id=100599).
 
 ## Installation
 
-Install TTU from [Teradata site](https://downloads.teradata.com/download/database/teradata-tools-and-utilities-13-10). Make sure that ODBC Driver for Teradata and Teradata Parallel Transporter features is selected during the installation.
+Install TTU from [Teradata site](https://downloads.teradata.com/download/database/teradata-tools-and-utilities-13-10). Make sure that **ODBC Driver for Teradata** and **Teradata Parallel Transporter** features are selected during the installation.
 
 To install the connector for the Teradata database, download and run the installer from [the latest version of Microsoft connector for Teradata](https://www.microsoft.com/download/details.aspx?id=100599). Then follow the directions in the installation wizard.
 
@@ -82,6 +84,18 @@ To design the SSIS package in SSDT *targeting SQL Server 2017 and below*, you ne
 You can uninstall wizard to remove **Microsoft connector for Teradata**.
 
 ## Release Notes
+
+### Rev. 285
+
+**Improvements**
+
+- Upgrade TTU dependency to version 20.00.
+
+### Rev. 284
+
+**Bug fixes**
+
+- Some announced bug fixes and improvements are missed in rev. 282.
 
 ### Rev. 282
 

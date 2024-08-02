@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "Report Server Windows service, virtual directories"
   - "report servers [Reporting Services], virtual directories"
   - "virtual directories [Reporting Services]"
-#customer intent: As a SQL Server administrator, I want to understand how to configure report server URLs to ensure proper access to the Report Server web service and the web portal.
+#customer intent: As a SQL Server administrator, I want to understand how to configure report server URLs so that I can ensure proper access to the Report Server web service and the web portal.
 ---
 # Configure report server URLs (Report Server Configuration Manager)
 
@@ -20,15 +20,15 @@ Learn how [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] uses URL
 
 ## URL configuration
 
-When you install SQL Server Reporting Services (SSRS), URLs for accessing the Report Server web service and the web portal are set up to facilitate initial and ongoing use. This configuration can occur in two primary ways:
+When you install SQL Server Reporting Services (SSRS), URLs for accessing the Report Server web service and the web portal are set up to facilitate initial and ongoing use. This configuration occurs in two primary ways:
 
-- **Default configuration**: If you select the default configuration during SSRS installation, the system automatically creates URLs using default values that are suitable for most deployment scenarios. These URLs allow immediate access to the Report Server web service and the web portal without requiring more configuration.
+- **Default configuration**: If you select the default configuration during SSRS installation, the system automatically creates URLs by using default values that are suitable for most deployment scenarios. These URLs allow immediate access to the Report Server web service and the web portal without requiring more configuration.
 
 - **Custom configuration**: You can use the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration tool to create or modify URLs after initial setup. The tool allows you to accept the default values for a URL or specify custom values. A test link of the URL appears on page when you define the URL so that you can verify that your settings result in a valid connection. For step-by-step instructions on how to configure and test a URL, see [Configure a URL (Report Server Configuration Manager)](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md).
 
 ## Define a report server URL
 
-The URL identifies the location of an instance of a report server instance on your network. The following table shows the parts you specifywWhen you create a report server URL.
+The URL identifies the location of a report server instance on your network. The following table shows the parts you specify when you create a report server URL.
 
 |Part|Description|
 |----------|-----------------|
@@ -48,7 +48,7 @@ The URL identifies the location of an instance of a report server instance on yo
 
 |Part|Value|Explanation|
 |----------|-----------|-----------------|
-|IP address|All Assigned|The domain name service on your network resolves the host name in the URL to the computer's IP address. As long as the IP address is specified in the URL that you define, a request that is sent to a specific host reaches its intended target.|
+|IP address|All Assigned|The domain name service on your network resolves the host name in the URL to the computer's IP address. A request reaches its intended host as long as you specify the IP address in the URL.|
 |Port|80|Port 80 is the default port for TCP/IP connections. Because the report server listens on port 80, you can omit the port number from the URL. If you specify another port, include it in the URL.|
 |Virtual directory|ReportServer|Both example URLs include the virtual directory name. Unless you customize the URL definition, always specify the application's virtual directory name on the URL.|
 
@@ -61,7 +61,7 @@ Permissions on each URL endpoint are granted exclusively to the Report Server se
 
 ## Authenticate client requests sent to a report server URL
 
-By default, Windows Authentication is the authentication type supported on the URL endpoints. This setting is the default security extension. If you implement a custom or Forms authentication provider, modify the authentication settings on the report server. Optionally, you can also change the Windows Authentication settings to match the authentication subsystem used in your network. For more information, see [Authentication with the report server](../../reporting-services/security/authentication-with-the-report-server.md).
+By default, Windows Authentication is the authentication type supported on the URL endpoints. This setting is the default security extension. If you implement a custom or Forms authentication provider, modify the authentication settings on the report server. You can also change the Windows Authentication settings to match the authentication subsystem used in your network. For more information, see [Authentication in a report server](../../reporting-services/security/authentication-with-the-report-server.md).
 
 ## Related content
 

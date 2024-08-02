@@ -22,7 +22,7 @@ helpviewer_keywords:
 
 When you install SQL Server Reporting Services (SSRS), URLs for accessing the Report Server Web service and the web portal are set up to facilitate initial and ongoing use. This setup can occur in two primary ways:
 
-- **Default configuration**: If you select the default configuration during SSRS installation, the system automatically creates URLs using default values that are suitable for most deployment scenarios. These URLs allow immediate access to the Report Server Web service and the web portal without requiring additional configuration.
+- **Default configuration**: If you select the default configuration during SSRS installation, the system automatically creates URLs using default values that are suitable for most deployment scenarios. These URLs allow immediate access to the Report Server Web service and the web portal without requiring more configuration.
 
 - **Custom configuration**: You can use the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration tool to create or modify URLs. The tool allows you to accept the default values for a URL or specify custom values. A test link of the URL appears on page when you define the URL so that you can verify that your settings result in a valid connection. For step-by-step instructions on how to configure and test a URL, see [Configure a URL (Report Server Configuration Manager)](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md).
 
@@ -33,7 +33,7 @@ The URL identifies the location of an instance of a report server instance on yo
 |Part|Description|
 |----------|-----------------|
 |Host name|A TCP/IP network uses an IP address to uniquely identify a device on the network. There's a physical IP address for each network adapter card installed in a computer. If the IP address resolves to a host header, you can specify the host header. If you deploy the report server on a corporate network, you can use the network name of the computer.|
-|Port|A TCP port is an endpoint on the device. The report server listens for requests on a designated port.|
+|Port|A Transmission Control Protocol (TCP) port is an endpoint on the device. The report server listens for requests on a designated port.|
 |Virtual directory|Multiple web services or applications often share a port. A report server URL always includes a virtual directory that corresponds to the application that receives the request. Specify unique virtual directory names for each [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] application that listens on the same IP address and port.|
 |SSL settings|URLs in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] can be configured to use an existing TLS/SSL certificate installed on the computer. For more information, see [Configure TLS connections on a native mode report server](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md).|
 
@@ -65,12 +65,5 @@ By default, the authentication type supported on the URL endpoints is Windows Au
 
 ## Related content
 
-- [Configure a URL (Report Server Configuration Manager)](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md) This article provides instructions for setting and modifying a URL reservation in the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration tool.
-
-- [About URL reservations and registration (Report Server Configuration Manager)](../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md) URLs are used to access applications and reports. This article explains the application URLs, the default URLs, and how URL reservations and registration work in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].
-
-- [URL reservation syntax (Report Server Configuration Manager)](../../reporting-services/install-windows/url-reservation-syntax-ssrs-configuration-manager.md) The default URL reservations that [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] uses are valid for most scenarios. However, if you want to restrict access or extend the deployment to enable Internet or extranet access, you might have to customize the settings to fit your requirements. This article describes the syntax of a URL reservation and provides recommendations for creating custom reservations for your deployment.
-
-- [URLs in configuration files (Report Server Configuration Manager)](../../reporting-services/install-windows/urls-in-configuration-files-ssrs-configuration-manager.md) The RSReportServer.config file contains multiple entries for URL reservations and the URLs used by the [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] and report server e-mail delivery. This article summarizes the URL configuration settings so that you can understand how they compare.
-
-- [URL reservations for multi-instance report server deployments (Report Server Configuration Manager)](../../reporting-services/install-windows/url-reservations-for-multi-instance-report-server-deployments.md) When you install multiple instances of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] on a single computer, you increase the probability of encountering URL duplication when a URL is registered. To avoid these errors, follow the recommendations in this article for creating instance-specific URL reservations.
+- [URLs in configuration files (Report Server Configuration Manager)](../../reporting-services/install-windows/urls-in-configuration-files-ssrs-configuration-manager.md)
+- [URL reservations for multi-instance report server deployments (Report Server Configuration Manager)](../../reporting-services/install-windows/url-reservations-for-multi-instance-report-server-deployments.md)

@@ -4,13 +4,13 @@ description: "Learn more about the possibilities of Microsoft Copilot in Azure f
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: josephsack
-ms.date: 06/05/2024
+ms.date: 08/01/2024
 ms.service: sql-database
 ms.subservice: ai-copilot
+ms.topic: overview
 ms.collection: ce-skilling-ai-copilot
 ms.custom:
   - build-2024
-ms.topic: overview
 monikerRange: "=azuresql||=azuresql-db"
 ---
 
@@ -79,7 +79,7 @@ You can provide prompts for the **Microsoft Copilot in Azure** around different 
 | Skill Name| Skill Description           | Example prompt         |
 |------------------------------------------|-----------------------------------------------------------------------------|------------------------------------------------------------------------|
 | Active User Connections| Shows active user connections to the database. | `Who are currently actively connected to the database?`|
-| Anti-Pattern Query Analysis| Identifies queries with anti-patterns and their potential impact on performance. | `Show me all the queries in my workload that have anti-patterns in them.` |
+| Antipattern Query Analysis| Identifies queries with anti-patterns and their potential impact on performance. | `Show me all the queries in my workload that have anti-patterns in them.` |
 | Automatic Tuning Analysis| Investigates automatic tuning failures and potential solutions.| `Why is automatic plan correction failing?`   |
 | Basic Database Information | Retrieves basic information about the database.  | `What is the name of the logical server for this database?`|
 | Blocking Session Analysis  | Identifies and analyzes blocking sessions. | `Check top blocking sessions.`|
@@ -93,7 +93,7 @@ You can provide prompts for the **Microsoft Copilot in Azure** around different 
 | Deadlock Analysis   | Investigates deadlocks and suggests solutions. | `Why am I getting deadlock errors? How can I fix it?`  |
 | Dropped Connections Analysis   | Investigates instances of dropped database connections.  | `Show me all the instances where my database had a dropped connection.` |
 | Fragmented Index Analysis  | Identifies fragmented indexes and their impact on performance.| `Help me find fragmented indexes.` |
-| General Anti-Pattern Information    | Provides general information about common SQL anti-patterns.| `What are the most common SQL anti-patterns?` |
+| General Antipattern Information    | Provides general information about common SQL anti-patterns.| `What are the most common SQL antipatterns?` |
 | Get Database Names for Server  | Lists all databases on a specific server.| `List all the databases on this server.`  |
 | High CPU Consuming Query Analysis  | Identifies and analyzes queries with high CPU usage.  | `Why is the CPU usage high on this database?`|
 | High IO troubleshooting  | Checks if the database is experiencing high I/O.  | `Is my database experiencing high I/O?`|
@@ -134,9 +134,9 @@ You can provide prompts for the **Microsoft Copilot in Azure** around different 
 
 For more information on how Microsoft implements responsible AI tools in [Microsoft Copilot in Azure](/azure/copilot/overview), see [Responsible AI FAQ for Microsoft Copilot in Azure (preview)](/azure/copilot/responsible-ai-faq).
 
-## Troubleshooting
+## <a id="troubleshooting"></a> Troubleshoot
 
-In order to answer some questions about your Azure SQL Database, Microsoft Copilot may need to connect to your database in the context of current Azure portal login context and execute queries on dynamic management views and query store system tables.
+In order to answer some questions about your Azure SQL Database, Microsoft Copilot might need to connect to your database in the context of current Azure portal login context and execute queries on dynamic management views and query store system tables.
 
 The following considerations and limitations apply when connecting to Azure SQL Database:
 

@@ -38,9 +38,9 @@ Here's a list of algorithms and ciphers removed in TLS 1.3:
 
 ## Driver support
 
-Review the [Driver feature support matrix](/sql/connect/driver-feature-matrix) to determine what drivers currently support TLS 1.3. 
+Review the [Driver feature support matrix](../../../connect/driver-feature-matrix.md) to determine what drivers currently support TLS 1.3. 
 
-## Operating System support
+## Operating system support
 
 Currently, the following operating systems support TLS 1.3: 
 

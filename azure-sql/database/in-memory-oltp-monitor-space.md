@@ -4,7 +4,7 @@ description: Estimate and monitor XTP in-memory storage usage and capacity in Az
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma
-ms.date: 12/12/2023
+ms.date: 08/01/2024
 ms.service: azure-sql-database
 ms.subservice: performance
 ms.topic: how-to
@@ -12,7 +12,7 @@ ms.custom:
   - sqldbrb=2
 monikerRange: "=azuresql||=azuresql-db"
 ---
-# Monitor in-memory OLTP storage in Azure SQL Database 
+# Monitor in-memory OLTP storage in Azure SQL Database
 [!INCLUDE [appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
 > [!div class="op_single_selector"]
@@ -20,6 +20,9 @@ monikerRange: "=azuresql||=azuresql-db"
 > * [Azure SQL Managed Instance](../managed-instance/in-memory-oltp-monitor-space.md?view=azuresql-mi&preserve-view=true)
 
 With [in-memory OLTP](in-memory-oltp-overview.md), data in memory-optimized tables and table variables resides in in-memory OLTP storage.
+
+- [Premium (DTU) and Business Critical (vCore) tier](service-tiers-sql-database-vcore.md) databases support in-memory OLTP tables.
+- Hyperscale supports a subset of in-memory OLTP objects, but does not include memory-optimized tables. For more information, see [Hyperscale limitations](service-tier-hyperscale.md?view=azuresql&preserve-view=true#known-limitations).
 
 ## Determine whether data fits within the in-memory OLTP storage cap
 

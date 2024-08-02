@@ -1,9 +1,9 @@
 ---
 title: "Configure a report server database connection (Report Server Configuration Manager)"
-description: "Each report server instance requires a connection to the report server database that stores reports, shared data sources, resources, and metadata managed by the server."
+description: "Learn about how each instance requires a connection to the report server database that stores reports, shared data sources, and metadata managed by the server."
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 08/01/2024
+ms.date: 08/02/2024
 ms.service: reporting-services
 ms.subservice: report-server
 ms.topic: conceptual
@@ -17,17 +17,17 @@ ms.custom: updatefrequency5
 
 [!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
 
-In this article, you learn the purpose of the SQL Server report server database connection and essential information about how it works. This information includes how to configure it and what considerations to keep in mind during configuration. 
+In this article, you learn the purpose of the SQL Server report server database connection and essential information about how it works. This information includes how to configure the connection and what considerations to keep in mind during configuration. 
 
-Each report server instance requires a connection to the report server database that stores reports, shared data sources, resources, and metadata managed by the server. You can create the initial connection during a report server installation if you install the default configuration. In most cases, you use the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration tool to configure the connection after Setup is complete. Modify the connection at any time to change the account type or reset credentials. For more information on how to create the database and configure the connection, see [Create a Native mode report server database (Report Server Configuration Manager)](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md).
+Each report server instance requires a connection to the report server database that stores reports, shared data sources, resources, and metadata managed by the server. You can create the initial connection during a report server installation if you install the default configuration. In most cases, you use the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration tool to configure the connection after the setup is complete. Modify the connection at any time to change the account type or reset credentials. For more information on how to create the database and configure the connection, see [Create a Native mode report server database (Report Server Configuration Manager)](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md).
 
 ## When to configure a report server database connection
 
 You must configure a report server database connection in the following circumstances:
 
-- **First-time configuration**: Configure the connection when you first use the report server.
-- **Database changes**: Configure a report server to use a different report server database.
-- **Account changes**: Configure the connection if the user account name or password changes.
+- **First-time configuration**: When you first use the report server.
+- **Database changes**: When you need a report server to use a different report server database.
+- **Account changes**: When the user account or password that is used for the database connection changes.
    > [!NOTE]
    > Update the connection when the account information is stored in the `RSReportServer.config` file. If you use the service account, which uses Windows integrated security, the password isn't stored. For more information about changing accounts, see [Configure the report server service account (Report Server Configuration Manager)](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md).
 - **Scale-out deployment**: If you configure a scale-out deployment, you must create multiple connections to a report server database. For more information about how to perform this multi-step operation, see [Configure a Native mode report server scale-out deployment (Report Server Configuration Manager)](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md).
@@ -43,14 +43,14 @@ The report server database is an internal component, accessed only by the report
 
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] uses **System.Data.SqlClient** to connect to the [!INCLUDE[ssDE](../../includes/ssde-md.md)] that hosts the report server database. If you're using a local instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)], the report server establishes the connection using shared memory. If you use a remote database server for the report server database, you might have to enable remote connections depending on the edition that you use. If you use the Enterprise edition, remote connections are enabled for TCP/IP by default.
 
-You can verify that the instance accepts remote connections by opening SQL Server Configuration Manager and ensuring that the TCP/IP protocol is enabled for each service. Enabling remote connections also activates the necessary client and server protocols. To confirm that these protocols are enabled, open SQL Server Configuration Manager, go to **SQL Server Network Configuration**, and choose **Protocols for MSSQLSERVER**. For more information, see [Enable or disable a server network protocol](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+You can verify that the instance accepts remote connections by opening SQL Server Configuration Manager and ensuring that the TCP/IP protocol is enabled for each service. Enabling remote connections also activates the necessary client and server protocols. To confirm that these protocols are enabled, open SQL Server Configuration Manager, go to **SQL Server Network Configuration** in the left pane, and choose **Protocols for MSSQLSERVER**. For more information, see [Enable or disable a server network protocol](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
 ## Define a report server database connection
 
 To configure the connection, use the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager tool or the **rsconfig** command line utility. A report server requires the following connection information:
 
-- **Name of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] instance**: The name of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] instance hosting the report server database.
-- **Name of the report server database**: When creating a connection for the first time, you can create a new report server database or select an existing database. For more information, see [Create a report server database, Report Server Configuration Manager](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md).
+- **[!INCLUDE[ssDE](../../includes/ssde-md.md)] instance name**: The name of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] instance hosting the report server database.
+- **Report server database name**: When creating a connection for the first time, you can create a new report server database or select an existing database. For more information, see [Create a report server database, Report Server Configuration Manager](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md).
 - **Credential type**: You can use the service accounts, a Windows domain account, or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database sign-in credentials.
 - **User name and password**: Required only if you're using Windows domain account or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sign-in credentials.
 
@@ -60,7 +60,7 @@ The credentials that you provide must be granted access to the report server dat
 
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] stores and encrypts the connection information in the following `RSreportserver.config` settings. Use the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration tool or **rsconfig** utility to create encrypted values for these settings.
 
-Not all of the values are set for every type of connection. If you configure the connection using the default values by using the service accounts to make the connection, \<**LogonUser**>, \<**LogonDomain**>, and \<**LogonCred**> are empty, as follows:
+Not all of the values are set for every type of connection. If you configure the connection by using the default values for the service accounts to make the connection, \<**LogonUser**>, \<**LogonDomain**>, and \<**LogonCred**> are empty, as follows:
 
 ```
 <Dsn></Dsn>

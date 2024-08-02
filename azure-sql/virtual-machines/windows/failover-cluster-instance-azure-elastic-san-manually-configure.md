@@ -1,10 +1,10 @@
 ---
-title: Create an FCI with Azure shared disks
-description: "Use Azure shared disks to create a failover cluster instance (FCI) with SQL Server on Azure Virtual Machines."
+title: Create an FCI with Azure Elastic SAN (Preview)
+description: "Use Azure Elastic SAN to create a failover cluster instance (FCI) with SQL Server on Azure Virtual Machines."
 author: AbdullahMSFT
 ms.author: amamun
 ms.reviewer: mathoma
-ms.date: 06/18/2024
+ms.date: 08/05/2024
 ms.service: virtual-machines-sql
 ms.subservice: hadr
 ms.topic: how-to
@@ -15,64 +15,42 @@ editor: monicar
 tags: azure-service-management
 ---
 
-# Create an FCI with Azure shared disks (SQL Server on Azure VMs)
+# Create an FCI with Azure Elastic SAN (Preview) - SQL Server on Azure VMs
 [!INCLUDE[appliesto-sqlvm](../../includes/appliesto-sqlvm.md)]
 
-This article explains how to create a failover cluster instance (FCI) by using Azure shared disks with SQL Server on Azure Virtual Machines (VMs).
+This article explains how to create a failover cluster instance (FCI) by using an Azure Elastic SAN volume with SQL Server on Azure Virtual Machines (VMs).
 
 To learn more, see an overview of [FCI with SQL Server on Azure VMs](failover-cluster-instance-overview.md) and [cluster best practices](hadr-cluster-best-practices.md).
 
 > [!NOTE]
-> It's now possible to lift and shift your failover cluster instance solution to SQL Server on Azure VMs using Azure Migrate. See [Migrate failover cluster instance](../../migration-guides/virtual-machines/sql-server-failover-cluster-instance-to-sql-on-azure-vm.md) to learn more.
+> Configuring your failover cluster instance with an Azure Elastic SAN is currently in preview for SQL Server on Azure VMs. 
 
 ## Prerequisites
 
 Before you complete the instructions in this article, you should already have:
 
 - An Azure subscription. Get started with a [free Azure account](https://azure.microsoft.com/free/).
-- [Two or more prepared Azure Windows virtual machines](failover-cluster-instance-prepare-vm.md) in an availability set, or availability zones.
+- [Two or more prepared Azure Windows virtual machines](failover-cluster-instance-prepare-vm.md) in the same availability zone. Since all VMs part of the FCI have to be in the same availability zone, the VM availability is only 99.9%.
 - An account that has permissions to create objects on both Azure virtual machines and in Active Directory.
-- The latest version of [Azure PowerShell](/powershell/azure/install-az-ps).
 
 [!INCLUDE[tip-for-multi-subnet-ag](../../includes/virtual-machines-fci-multi-subnet.md)]
 
-## Add Azure shared disk
+## Create Azure Elastic SAN
 
-[Deploy a managed Premium SSD disk with the shared disk feature enabled](/azure/virtual-machines/disks-shared-enable#deploy-a-premium-ssd-as-a-shared-disk). Set `maxShares` to **align with the number of cluster nodes** to make the disk shareable across all FCI nodes.
+Follow the instructions to [Create an Azure Elastic SAN](/azure/storage/elastic-san/elastic-san-create). 
 
-## Attach shared disk to VMs
+Your Elastic SAN should be: 
 
-Once you've deployed a shared disk with maxShares > 1, you can mount the disk to the VMs that will participate as nodes in the cluster.
+- In the same resource group as your SQL Server on Azure VM. 
+- Configured for zone redundancy. 
+- In the same availability zone as the primary SQL Server VM. 
 
-To attach the shared disk to your SQL Server VMs, follow these steps:
+## Connect Elastic SAN volumes to the VMs
 
-1. Select the VM in the Azure portal that you will attach the shared disk to.
-1. Select **Disks** in the **Settings** pane.
-1. Select **Attach existing disks** to attach the shared disk to the VM.
-1. Choose the shared disk from the **Disk name** drop-down.
-1. Select **Save**.
-1. Repeat these steps for every cluster node SQL Server VM.
+Follow the instructions to [Connect Elastic SAN volumes](/azure/storage/elastic-san/elastic-san-connect-windows) to both SQL Server VMs. 
 
-After a few moments, the shared data disk is attached to the VM and appears in the list of Data disks for that VM.
+Use [Disk Management](/windows-server/storage/disk-management/overview-of-disk-management) to format your Elastic SAN volume and bring it online. 
 
-## Initialize shared disk
-
-Once the shared disk is attached on all the VMs, you can initialize the disks of the VMs that will participate as nodes in the cluster. Initialize the disks on **all** of the VMs.
-
-To initialize the disks for your SQL Server VM, follow these steps:
- 
-1. Connect to one of the VMs.
-2. From inside the VM, open the **Start** menu and type **diskmgmt.msc** in the search box to open the **Disk Management** console.
-3. Disk Management recognizes that you have a new, uninitialized disk and the **Initialize Disk** window appears.
-4. Verify the new disk is selected and then select **OK** to initialize it.
-5. The new disk appears as **unallocated**. Right-click anywhere on the disk and select **New simple volume**. The **New Simple Volume Wizard** window opens.
-6. Proceed through the wizard, keeping all of the defaults, and when you're done select **Finish**.
-7. Close **Disk Management**.
-8. A pop-up window appears notifying you that you need to format the new disk before you can use it. Select **Format disk**.
-9. In the **Format new disk** window, check the settings, and then select **Start**.
-10. A warning appears notifying you that formatting the disks erases all of the data. Select **OK**.
-11. When the formatting is complete, select **OK**.
-12. Repeat these steps on each SQL Server VM that will participate in the FCI.
 
 ## Create Windows Failover Cluster
 
@@ -80,7 +58,7 @@ The steps to create your Windows Server Failover Cluster differ between single s
 
 ## Configure quorum
 
-Since the disk witness is the most resilient quorum option, and the FCI solution uses Azure shared disks, it's recommended to configure a disk witness as the quorum solution.
+Since the disk witness is the most resilient quorum option, it's recommended to configure a disk witness as the quorum solution. Cloud witness isn't currently supported with Azure Elastic SAN. 
 
 If you have an even number of votes in the cluster, configure the [quorum solution](hadr-cluster-quorum-configure-how-to.md) that best suits your business needs. For more information, see [Quorum with SQL Server VMs](hadr-windows-server-failover-cluster-overview.md#quorum).
 
@@ -88,51 +66,38 @@ If you have an even number of votes in the cluster, configure the [quorum soluti
 
 Validate the cluster on one of the virtual machines by using the Failover Cluster Manager UI or PowerShell.
 
-To validate the cluster using the UI, follow these steps:
+Before you validate the cluster, take the Elastic SAN volume offline by following these steps: 
 
-1. In **Server Manager**, select **Tools**, and then select **Failover Cluster Manager**.
+1. Under **Server Manager**, select **Tools**, and then select **Failover Cluster Manager**.
+1. Under the cluster, select **Disks** under **Storage**. 
+1. Right-click the Elastic SAN disk, and then select **Take Offline**:
+
+   :::image type="content" source="media/failover-cluster-instance-azure-elastic-san-manually-configure/take-cluster-disk-offline.png" alt-text="Screenshot of Failover Cluster Manager, with the disk selected and take offline highlighted. ":::
+
+1. Select **Yes** on the **Offline Cluster Shared Volume** dialog box to confirm that you're sure, and want to take the disk offline. 
+
+To validate the cluster by using the UI, follow these steps:
+
 1. Right-click the cluster in **Failover Cluster Manager**, select **Validate Cluster** to open the **Validate a Configuration Wizard**.
 1. On the **Validate a Configuration Wizard**, select **Next**.
 1. On the **Select Servers or a Cluster** page, enter the names of both virtual machines.
-1. On the **Testing options** page, select **Run only tests I select**.
-1. Select **Next**.
-1. On the  **Test Selection** page, select all tests *except* **Storage**.
-1. Select **Next**.
+1. On the **Testing options** page, select **Run all tests (recommended)** and then select **Next**.
 1. On the **Confirmation** page, select **Next**.  The **Validate a Configuration** wizard runs the validation tests.
-
 
 To validate the cluster by using PowerShell, run the following script from an administrator PowerShell session on one of the virtual machines:
 
 ```powershell
-Test-Cluster –Node ("<node1>","<node2>") –Include "Inventory", "Network", "System Configuration"
+Test-Cluster –Node ("<node1>","<node2>") –Include "Cluster Configuration", "Inventory", "Network", "Storage", "System Configuration"
 ```
+
+After your cluster has been validated, use the **Disks** page for your cluster in **Failover Cluster Manager** to bring your Elastic SAN volume back online.
 
 ## Test cluster failover
 
 Test the failover of your cluster. In **Failover Cluster Manager**, right-click your cluster, select **More Actions** > **Move Core Cluster Resource** > **Select node**, and then select the other node of the cluster. Move the core cluster resource to every node of the cluster, and then move it back to the primary node. Ensure you can successfully move the cluster to each node before installing SQL Server.
 
-:::image type="content" source="media/failover-cluster-instance-premium-file-share-manually-configure/test-cluster-failover.png" alt-text="Test cluster failover by moving the core resource to the other nodes":::
+:::image type="content" source="media/failover-cluster-instance-premium-file-share-manually-configure/test-cluster-failover.png" alt-text="Screenshot of testing cluster failover by moving the core resource to the other nodes.":::
 
-## Add shared disks to cluster
-
-Use the Failover Cluster Manager to add the attached Azure shared disks to the cluster.
-
-To add disks to your cluster, follow these steps:
-
-1. In the **Server Manager** dashboard, select **Tools**, and then select **Failover Cluster Manager**.
-1. Select the cluster and expand it in the navigation pane.
-1. Select **Storage** and then select **Disks**.
-1. Right-click **Disks** and select **Add Disk**:
-
-    :::image type="content" source="./media/failover-cluster-instance-azure-shared-disk-manually-configure/cluster-add-disk.png" alt-text="Add Disk":::
-
-1. Choose the Azure shared disk in the **Add Disks to a Cluster** window.  Select **OK**.
- 
-    :::image type="content" source="./media/failover-cluster-instance-azure-shared-disk-manually-configure/cluster-select-shared-disk.png" alt-text="Select Disk":::
-
-1. After the shared disk is added to the cluster, you will see it in the Failover Cluster Manager.
-
-    :::image type="content" source="./media/failover-cluster-instance-azure-shared-disk-manually-configure/cluster-shared-disk.png" alt-text="Cluster Disk":::
 
 ## Create SQL Server FCI
 
@@ -146,15 +111,6 @@ To create the first node in the SQL Server FCI, follow these steps:
 
 1. In **Failover Cluster Manager**, make sure that all core cluster resources are on the first virtual machine. If necessary, move the disks to that virtual machine.
 
-1. If the version of the operating system is Windows Server 2019 and the Windows Cluster was created using the default [**Distributed Network Name (DNN)**](https://blogs.windows.com/windows-insider/2018/08/14/announcing-windows-server-2019-insider-preview-build-17733/), then the FCI installation for SQL Server 2017 and below will fail with the error `The given key was not present in the dictionary`.
-
-    During installation, SQL Server setup queries for the existing Virtual Network Name (VNN) and doesn't recognize the Windows Cluster DNN. The issue has been fixed in SQL Server 2019 setup. For SQL Server 2017 and below, follow these steps to avoid the installation error:
-     
-    - In Failover Cluster Manager, connect to the cluster, right-click  **Roles** and select **Create Empty Role**.
-    - Right-click the newly created empty role, select **Add Resource** and select **Client Access Point**.
-    - Enter any name and complete the wizard to create the **Client Access Point**. 
-    - After the SQL Server FCI installation completes, the role containing the temporary **Client Access Point** can be deleted. 
-
 1. Locate the installation media. If the virtual machine uses one of the Azure Marketplace images, the media is located at `C:\SQLServer_<version number>_Full`.
 
 1. Select **Setup**.
@@ -163,18 +119,16 @@ To create the first node in the SQL Server FCI, follow these steps:
 
 1. Select **New SQL Server failover cluster installation**. Follow the instructions in the wizard to install the SQL Server FCI.
 
-1. On the **Cluster Disk Selection** page, select all the shared disks that were attached to the VM.
-
-    :::image type="content" source="./media/failover-cluster-instance-azure-shared-disk-manually-configure/sql-install-cluster-disk-selection.png" alt-text="Screenshot of the Cluster Disk Selection.":::
+1. On the **Cluster Disk Selection** page, select the Azure Elastic SAN volume. 
 
 1. On the **Cluster Network Configuration** page, the IP you provide varies depending on if your SQL Server VMs were deployed to a single subnet, or multiple subnets.
 
    1. For a **single subnet environment**, provide the IP address that you plan to add to the [Azure Load Balancer](failover-cluster-instance-vnn-azure-load-balancer-configure.md)
    1. For a **multi-subnet environment**, provide the secondary IP address in the subnet of the _first_ SQL Server VM that you previously designated as the [IP address of the failover cluster instance network name](failover-cluster-instance-prepare-vm.md#assign-secondary-ip-addresses):
 
-   :::image type="content" source="./media/failover-cluster-instance-azure-shared-disk-manually-configure/sql-install-cluster-network-secondary-ip-vm-1.png" alt-text="Screenshot to provide the secondary IP address in the subnet of the first SQL Server VM.":::
+   :::image type="content" source="./media/failover-cluster-instance-azure-shared-disk-manually-configure/sql-install-cluster-network-secondary-ip-vm-1.png" alt-text="Screenshot that provides the secondary IP address in the subnet of the first SQL Server VM.":::
 
-1. On the **Database Engine Configuration** page, ensure the database directories are on the Azure shared disk(s).
+1. On the **Database Engine Configuration** page, ensure the database directories are on the Azure Elastic SAN volume.
 
 1. After you complete the instructions in the wizard, setup installs the SQL Server FCI on the first node.
 
@@ -190,11 +144,11 @@ To add an additional node to the SQL Server FCI, follow these steps:
 
 1. For a multi-subnet scenario, in **Cluster Network Configuration**, enter the secondary IP address in the subnet of the _second_ SQL Server VM subnet that you previously designated as the [IP address of the failover cluster instance network name](failover-cluster-instance-prepare-vm.md#assign-secondary-ip-addresses)
 
-    :::image type="content" source="./media/failover-cluster-instance-azure-shared-disk-manually-configure/sql-install-cluster-network-secondary-ip-vm-2.png" alt-text="Screenshot to enter the secondary IP address in the subnet of the second SQL Server VM. ":::
+    :::image type="content" source="./media/failover-cluster-instance-azure-shared-disk-manually-configure/sql-install-cluster-network-secondary-ip-vm-2.png" alt-text="Screenshot that enters the secondary IP address in the subnet of the second SQL Server VM.":::
 
     After selecting **Next** in **Cluster Network Configuration**, setup shows a dialog box indicating that SQL Server Setup detected multiple subnets as in the example image.  Select **Yes** to confirm.
 
-    :::image type="content" source="./media/failover-cluster-instance-azure-shared-disk-manually-configure/sql-install-multi-subnet-confirmation.png" alt-text="Screenshot showing multisubnet confirmation. ":::
+    :::image type="content" source="./media/failover-cluster-instance-azure-shared-disk-manually-configure/sql-install-multi-subnet-confirmation.png" alt-text="Screenshot that shows the multi-subnet confirmation. ":::
 
 1. After you complete the instructions in the wizard, setup adds the second SQL Server FCI node.
 

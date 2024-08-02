@@ -39,30 +39,29 @@ The URL identifies the location of an instance of a report server instance on yo
 
 ## Default URLs
 
- When you access a report server or the [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] through its URL, the URL should include the host name and not the IP address. On a TCP/IP network, the IP address resolves to a host name (or the network name of the computer). If you used the default values to configure URLs, you should be able to access the Report Server Web service using URLs that specify the computer name or localhost as the host name:
+ When you access a report server or the [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] through its URL, include the host name instead of the IP address. On a TCP/IP network, the IP address resolves to a host name or the network name of the computer. If you used the default values to configure URLs, you can access the Report Server web service by using URLs that specify the computer name or localhost as the host name:
 
 - `https://<computername>/reportserver`
-
 - `https://localhost/reportserver`
 
- The settings that make these URLs available appear in the following table. This table shows the default values that enable a report server connection through URLs that include a host name:
+ The following table shows the default values that enable a report server connection through URLs that include a host name:
 
 |Part|Value|Explanation|
 |----------|-----------|-----------------|
-|IP address|All Assigned|The domain name service on your network resolves the host name on the URL to the computer's IP address. As long as the IP address is specified in the URL that you define, a request that is sent to a specific host reaches its intended target.|
-|Port|80|Port 80 is the default port for TCP/IP connections on a computer. Because the report server is listening on port 80, you can omit the port number from the URL. If you specify another port, you must specify it in the URL.|
-|Virtual directory|ReportServer|Notice that both of the example URLs include the virtual directory name. Unless you customize the URL definition, you must always specify the application's virtual directory name on the URL.|
+|IP address|All Assigned|The domain name service on your network resolves the host name in the URL to the computer's IP address. As long as the IP address is specified in the URL that you define, a request that is sent to a specific host reaches its intended target.|
+|Port|80|Port 80 is the default port for TCP/IP connections. Because the report server listens on port 80, you can omit the port number from the URL. If you specify another port, include it in the URL.|
+|Virtual directory|ReportServer|Both example URLs include the virtual directory name. Unless you customize the URL definition, always specify the application's virtual directory name on the URL.|
 
 > [!NOTE]
-> An underlying URL reservation enables any valid host name to be used on a URL. The [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration tool creates a URL reservation in HTTP.SYS using syntax that allows variations of the host name to resolve to a particular report server instance. For more information about URL reservations, see [About URL reservations and registration (Report Server Configuration Manager)](../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md).
+> An underlying URL reservation enables any valid host name to be used on a URL. The [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration tool creates a URL reservation in `HTTP.SYS` by using syntax that allows variations of the host name to resolve to a particular report server instance. For more information about URL reservations, see [About URL reservations and registration (Report Server Configuration Manager)](../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md).
 
 ## Server-side permissions on a report server URL
 
-Permissions on each URL endpoint are granted exclusively to the Report Server service account. Only this account has rights to accept requests that are directed to the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] URLs. Discretionary Access Control Lists (DACLs) are created and maintained for the account when you configure the service identity through Setup or the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration tool. If you change the service account, the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration tool updates all URL reservations that you create to pick up the new account information. For more information, see [URL reservation syntax &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/url-reservation-syntax-ssrs-configuration-manager.md).
+Permissions on each URL endpoint are granted exclusively to the Report Server service account. Only this account can accept requests directed to the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] URLs. Discretionary Access Control Lists (DACLs) are created and maintained for the account when you configure the service identity through setup or the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration tool. If you change the service account, the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration tool updates all URL reservations that you create to use the new account information. For more information, see [URL reservation syntax &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/url-reservation-syntax-ssrs-configuration-manager.md).
 
 ## Authenticate client requests sent to a report server URL
 
-By default, the authentication type supported on the URL endpoints is Windows Authentication. This setting is the default security extension. If you're implementing a custom or Forms authentication provider, you must modify the authentication settings on the report server. Optionally, you can also change the Windows Authentication settings to match the authentication subsystem used in your network. For more information, see [Authentication with the report server](../../reporting-services/security/authentication-with-the-report-server.md).
+By default, the authentication type supported on the URL endpoints is Windows Authentication. This setting is the default security extension. If you're implementing a custom or Forms authentication provider, modify the authentication settings on the report server. Optionally, you can also change the Windows Authentication settings to match the authentication subsystem used in your network. For more information, see [Authentication with the report server](../../reporting-services/security/authentication-with-the-report-server.md).
 
 ## Related content
 

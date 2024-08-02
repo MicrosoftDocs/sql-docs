@@ -16,7 +16,7 @@ helpviewer_keywords:
 ---
 # Configure report server URLs (Report Server Configuration Manager)
 
-[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] uses URLs to access the Report Server web service and the [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]. Before you use either application, configure at least one URL each for the web service and the [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] provides default values for both URLs that work in most deployment scenarios, including side-by-side deployments with other web services and applications.
+Learn how [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] uses URLs to access the Report Server web service and the [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]. Before you use either application, configure at least one URL each for the web service and the [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] provides default values for both URLs that work in most deployment scenarios, including side-by-side deployments with other web services and applications.
 
 ## URL configuration during setup
 

@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "Report Server Windows service, virtual directories"
   - "report servers [Reporting Services], virtual directories"
   - "virtual directories [Reporting Services]"
-#customer intent: As a SQL Server administrator, I want to understand how to configure report server URLs to ensure proper access to the Report Server Web service and the web portal.
+#customer intent: As a SQL Server administrator, I want to understand how to configure report server URLs to ensure proper access to the Report Server web service and the web portal.
 ---
 # Configure report server URLs (Report Server Configuration Manager)
 
@@ -20,9 +20,9 @@ Learn how [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] uses URL
 
 ## URL configuration during setup
 
-When you install SQL Server Reporting Services (SSRS), URLs for accessing the Report Server Web service and the web portal are set up to facilitate initial and ongoing use. This setup can occur in two primary ways:
+When you install SQL Server Reporting Services (SSRS), URLs for accessing the Report Server web service and the web portal are set up to facilitate initial and ongoing use. This setup can occur in two primary ways:
 
-- **Default configuration**: If you select the default configuration during SSRS installation, the system automatically creates URLs using default values that are suitable for most deployment scenarios. These URLs allow immediate access to the Report Server Web service and the web portal without requiring more configuration.
+- **Default configuration**: If you select the default configuration during SSRS installation, the system automatically creates URLs using default values that are suitable for most deployment scenarios. These URLs allow immediate access to the Report Server web service and the web portal without requiring more configuration.
 
 - **Custom configuration**: You can use the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration tool to create or modify URLs. The tool allows you to accept the default values for a URL or specify custom values. A test link of the URL appears on page when you define the URL so that you can verify that your settings result in a valid connection. For step-by-step instructions on how to configure and test a URL, see [Configure a URL (Report Server Configuration Manager)](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md).
 

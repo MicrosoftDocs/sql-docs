@@ -98,7 +98,7 @@ Determine your network and storage requirements before deploying your SQL Server
 
 > [!CAUTION]
 > - VM sizing with Elastic SAN must accommodate production (VM to VM) network throughput requirements in addition to storage throughput. When using Elastic SAN, VM sizes that optimize for IO throughput might not be as cost-effective as VM sizes that optimize for network bandwidth. 
-> - Azure Elastic SAN does not currently support Windows Server Failover Clusters so SQL Server failover cluster instances (FCIs) are unsupported. 
+
 
 Consider placing SQL Server workloads on Elastic SAN for better cost efficiency because: 
 

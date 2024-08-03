@@ -46,11 +46,10 @@ Before you can use Report Server email delivery, you must set configuration valu
 1. Start the Report Server Configuration Manager and connect to the report server instance.
 1. Go to **E-mail Settings**. 
 1. In **Sender Address**, enter the email address to use in the **From:** field of a generated email. Specify a user account that has permission to send mail from the SMTP server. The value you enter for the **Sender Address** is saved in the `<From>` field in the `rsreportserver.config` file.
-1. In **SMTP Server**, specify the SMTP server or gateway to use. This value can be:
+1. In **SMTP Server**, specify the SMTP server or gateway to use. The value you type for the **SMTP Server** is saved in the `<SMTPServer>` field in the `rsreportserver.config` file. This value can be:
    - An IP address
    - A NetBIOS name of a computer on your corporate intranet
    - A fully qualified domain name
-      The value you type for the **SMTP Server** is saved in the `<SMTPServer>` field in the `rsreportserver.config` file.
 1. In the **Authentication** list, specify how to authentication to the SMTP server.
    
    |Authentication type|Description|
@@ -120,7 +119,7 @@ The following configuration settings determine the connection between the report
 |`<SMTPServer>`|Specifies the remote SMTP server or forwarder. This value is a required value if you're using a remote SMTP server or forwarder.|
 |`<From>`|Sets the value that appears in the **From:** line of an email message. This value is a required value if you use a remote SMTP server or forwarder.|
 
-The following table shows the other values that are used for remote SMTP service:
+The following table shows the other settings that are used for remote SMTP service:
 
 |Setting|Description|
 |-------|-----------|

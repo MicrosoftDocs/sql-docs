@@ -121,13 +121,13 @@ The following configuration settings determine the connection between the report
 
 The following table shows the other settings that are used for remote SMTP service:
 
+> [!NOTE]
+> You don't need to specify these values unless you want to override the default values.
+
 |Setting|Description|
 |-------|-----------|
 |`<SMTPServerPort>`|Configured for port 25 by default.|
 |`<SMTPAuthenticate>`|Specifies how the report server connects to the remote SMTP server. The default value is **0** (or no authentication). In this case, the connection is made through Anonymous access. Depending on your domain configuration, the report server and the SMTP server might need to be members of the same domain.<br><br>To send email to restricted distribution lists (for example, distribution lists that accept incoming messages only from authenticated accounts), set `<SMTPAuthenticate>` to **1** or **2**. If you set it to **1**, you also need to set `<SendUserName>` and `<SendPassword>`. The best practice is to change this setting through the Report Server Configuration Manager as it encrypts the values for `<SendUserName>` and `<SendPassword>`.|
-
-> [!NOTE]
-> You don't need to specify these values unless you want to override the default values.
 
 ### Configure a remote SMTP service for the report server
 

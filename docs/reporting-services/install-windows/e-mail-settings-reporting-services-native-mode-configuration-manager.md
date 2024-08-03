@@ -50,7 +50,7 @@ Before you can use Report Server email delivery, you must set configuration valu
    - An IP address
    - A NetBIOS name of a computer on your corporate intranet
    - A fully qualified domain name
-   The value you type for the **SMTP Server** is saved in the `<SMTPServer>` field in the `rsreportserver.config` file.
+      The value you type for the **SMTP Server** is saved in the `<SMTPServer>` field in the `rsreportserver.config` file.
 1. In the **Authentication** list, specify how to authentication to the SMTP server.
    
    |Authentication type|Description|

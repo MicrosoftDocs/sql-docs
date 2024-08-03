@@ -52,9 +52,10 @@ Before you can use Report Server email delivery, you must set configuration valu
    - A fully qualified domain name
    The value you type for the **SMTP Server** is saved in the `<SMTPServer>` field in the `rsreportserver.config` file.
 1. In the **Authentication** list, specify how to authentication to the SMTP server.
+   
    |Authentication type|Description|
    |-------------------|-----------|
-   |**No authentication**| Connects anonymously to the mail server. <br><br>This option sets `<SendUsing>` to a value of **2** and `<SMTPAuthenticate>` to a value of **0** in the `rsreportserver.config` file.|
+   |**No authentication**|Connects anonymously to the mail server. <br><br>This option sets `<SendUsing>` to a value of **2** and `<SMTPAuthenticate>` to a value of **0** in the `rsreportserver.config` file.|
    |**Username and password (Basic)**|Allows you to specify a username and password to connect to the mail server. You can also select **Use secure connection** to have this authentication go over an encrypted connection to your mail server. <br><br>This option sets `<SendUsing>` to a value of **2** and `<SMTPAuthenticate>` to a value of **1** in the `rsreportserver.config` file. Selecting **Use secure connection** sets `SMTPUseSSL` to **True**. **Username** is set in `<SendUserName>` as an encrypted value. **Password** is set in `<SendPassword>` as an encrypted value.|
    |**Report server service account (NTLM)**|Uses the service account you specified for the report server. If using the report server service account for authentication, verify that the service account has **Send As** permissions on the SMTP server.<br><br>This option sets `<SendUsing>` to a value of **2** and `<SMTPAuthenticate>` to a value of **2** in the `rsreportserver.config` file.|
 1. Select **Apply**.

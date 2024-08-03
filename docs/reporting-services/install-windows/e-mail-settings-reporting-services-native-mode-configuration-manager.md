@@ -12,62 +12,48 @@ f1_keywords:
   - "SQL13.rsconfigtool.emailsettings.F1"
 helpviewer_keywords:
   - "SQL11.rsconfigtool.emailsettings.F1"
-#customer intent:
+#customer intent: As a SQL Server administrator, I want to configure email settings in SSRS so that I can enable report distribution via email.
 ---
 # Email settings in Reporting Services native mode (Report Server Configuration Manager)
 
-SQL Server Reporting Services includes an email delivery extension so that you can distribute reports through email. Depending on how you define the email subscription, a delivery might consist of a notification, link, attachment, or embedded report. The email delivery extension works with your existing mail server technology. The mail server must be an SMTP server or forwarder. The report server connects to an SMTP server through Collaboration Data Objects (CDO) libraries (cdosys.dll) that are provided by the operating system.
+Learn how SQL Server Reporting Services (SSRS) includes an email delivery extension so that you can distribute reports through email. Depending on the email subscription configuration, a delivery might consist of a notification, link, attachment, or embedded report. The email delivery extension works with your existing mail server technology, which must be an Simple Mail Transfer Protocol (SMTP) server or forwarder. The report server connects to an SMTP server through Collaboration Data Objects (CDO) libraries (`cdosys.dll`) provided by the operating system.
 
-The report server email delivery extension isn't configured by default. You must use the Report Server Configuration Manager to minimally configure the extension. To set advanced properties, you must edit the RSReportServer.config file. If you can't configure the report server to use this extension, you can deliver reports to a shared folder instead. For more information, see File Share Delivery in Reporting Services.
+The report server email delivery extension isn't configured by default. You use the Report Server Configuration Manager to minimally configure the extension. To set advanced properties, edit the `RSReportServer.config` file. If you can't configure the report server to use this extension, you can deliver reports to a shared folder instead. For more information, see [File share delivery in Reporting Services](../../reporting-services/subscriptions/file-share-delivery-in-reporting-services.md).
 
 ## Configuration requirements
 
-- Report server email delivery is implemented on Collaboration Data Objects (CDO) and requires a local or remote Simple Mail Transfer Protocol (SMTP) server or SMTP forwarder. SMTP isn't supported on all Windows operating systems. If you use the Itanium-based edition of Windows Server 2008, SMTP isn't supported. For more information about configuration options provided through CDO, see [Configuration CoClass](/previous-versions/exchange-server/exchange-10/ms526939(v=exchg.10)).
+Report server email delivery is implemented on Collaboration Data Objects (CDO) and requires a local or remote SMTP server or SMTP forwarder. SMTP isn't supported on all Windows operating systems. If you use the Itanium-based edition of Windows Server 2008, SMTP isn't supported. For more information about configuration options provided through CDO, see [Configuration CoClass](/previous-versions/office/developer/exchange-server-2007/aa579722(v=exchg.80)).
 
-The configured authentication account must have permission on the SMTP server to send mail.
-
-- The email delivery extension uses UTF-8 encoding in email attachments. You can't modify the encoding; the HTML rendering extension only supports UTF-8.
+The configured authentication account must have permission on the SMTP server to send mail. The email delivery extension uses UTF-8 encoding in email attachments. You can't modify the encoding and the HTML rendering extension only supports UTF-8.
 
 > [!NOTE]
-> The default email delivery extension doesn't provide support for digitally signing or encrypting outgoing mail messages.
+> The default email delivery extension doesn't support digitally signing or encrypting outgoing mail messages.
 
 ## Set configuration options for email delivery
 
-Before you can use Report Server email delivery, you must set configuration values that provide information about which SMTP server to use.
+Before you can use Report Server email delivery, you must set configuration values that provide information about which SMTP server to use. The following table describes the two ways you can configure a report server for delivery:
 
-To configure a report server for email delivery:
-
-- Use the Report Server Configuration Manager if you're specifying just an SMTP server and a user account that has permission to send email. These settings are the minimum required for configuring the Report Server email delivery extension.
-
-- (Optionally) Use a text editor to specify other settings in the RSreportserver.config file. This file contains all of the configuration settings for Report Server email delivery. Specifying extra settings in these files is required if you're using a local SMTP server or if you're restricting email delivery to specific hosts. For more information about finding and modifying configuration files, see [Modify a Reporting Services configuration file (RSreportserver.config)](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md).
+|Method|Description|
+|------|-----------|
+|Report Server Configuration Manager| Use the Report Server Configuration Manager if you're specifying just an SMTP server and a user account that has permission to send email. These settings are the minimum required for configuring the Report Server email delivery extension.|
+|`RSreportserver.config` file|This file contains all of the configuration settings for report server email delivery. Use a text editor to congifure extra settings if you're using a local SMTP server or if you're restricting email delivery to specific hosts. For more information about finding and modifying configuration files, see [Modify a Reporting Services configuration file (RSreportserver.config)](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md).
 
 > [!NOTE]
-> Report server email settings are based on CDO. If you want more detail about specific settings, you can refer to the CDO production documentation.
+> Report server email settings are based on CDO. For more detail about specific settings, refer to the CDO production documentation.
 
 ## <a name="rsconfigman"></a> Configure report server email by using the Report Server Configuration Manager
 
 1. Start the Report Server Configuration Manager and connect to the report server instance.
-
 1. In **Sender Address**, enter the email address to use in the **From:** field of a generated email.
-
      You must specify a user account that has permission to send mail from the SMTP server. The value you type for the **Sender Address** is saved in the `<From>` field in the rsreportserver.config file.
-
 1. In **SMTP Server**, specify the SMTP server or gateway to use.
-
      This value can be an IP address, a NetBIOS name of a computer on your corporate intranet, or a fully qualified domain name. The value you type for the **SMTP Server** is saved in the `<SMTPServer>` field in the rsreportserver.config file.
-
 1. Use the **Authentication** drop down to specify how to authentication to the SMTP server.
-
      - **No authentication** means you connect anonymously to the mail server that was specified.
-
           Selecting this option sets `<SendUsing>` to a value of **2** and `<SMTPAuthenticate>` to a value of **0** in the rsreportserver.config.
-
      - **Username and password (Basic)** allows you to specify a username and password to connect to the mail server. You can also select **Use secure connection** to have this authentication go over an encrypted connection to your mail server.
-
           Selecting this option sets `<SendUsing>` to a value of **2** and `<SMTPAuthenticate>` to a value of **1** in the rsreportserver.config. Selecting **Use secure connection** sets `SMTPUseSSL` to **True**. **Username** is set in `<SendUserName>` as an encrypted value. **Password** is set in `<SendPassword>` as an encrypted value.
-
      - **Report server service account (NTLM)** uses the service account you specified for the report server. If using the report server service account for authentication, verify that the service account has **Send As** permissions on the SMTP server.
-
           Selecting this option sets `<SendUsing>` to a value of **2** and `<SMTPAuthenticate>` to a value of **2** in the rsreportserver.config.
 
 1. Select **Apply**.

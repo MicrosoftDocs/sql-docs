@@ -25,7 +25,7 @@ helpviewer_keywords:
   - "database mirroring [SQL Server], Transact-SQL"
 dev_langs:
   - "TSQL"
-monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016"
+monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=fabric"
 ---
 # ALTER DATABASE (Transact-SQL)
 
@@ -54,6 +54,9 @@ For more information about the syntax conventions, see [Transact-SQL syntax conv
     :::column-end:::
     :::column:::
         [Analytics Platform<br />System (PDW)](alter-database-transact-sql.md?view=aps-pdw-2016-au7&preserve-view=true)
+    :::column-end:::
+    :::column:::
+        [Microsoft Fabric](alter-database-transact-sql.md?view=fabric&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -288,7 +291,7 @@ GO
 
 :::row:::
     :::column:::
-        [SQL Server](alter-database-transact-sql.md?view=sql-server-ver15&preserve-view=true)
+        [SQL Server](alter-database-transact-sql.md?view=sql-server-ver16&preserve-view=true)
     :::column-end:::
     :::column:::
         **_\* SQL Database \*_** &nbsp;
@@ -302,6 +305,9 @@ GO
     :::column:::
         [Analytics Platform<br />System (PDW)](alter-database-transact-sql.md?view=aps-pdw-2016-au7&preserve-view=true)
     :::column-end:::
+    :::column:::
+        [Microsoft Fabric](alter-database-transact-sql.md?view=fabric&preserve-view=true)
+    :::column-end:::    
 :::row-end:::
 
 &nbsp;
@@ -706,7 +712,7 @@ ALTER DATABASE db1 MODIFY BACKUP_STORAGE_REDUNDANCY = 'ZONE'
 
 :::row:::
     :::column:::
-        [SQL Server](alter-database-transact-sql.md?view=sql-server-ver15&preserve-view=true)
+        [SQL Server](alter-database-transact-sql.md?view=sql-server-ver16&preserve-view=true)
     :::column-end:::
     :::column:::
         [SQL Database](alter-database-transact-sql.md?view=azuresqldb-current&preserve-view=true)
@@ -720,6 +726,9 @@ ALTER DATABASE db1 MODIFY BACKUP_STORAGE_REDUNDANCY = 'ZONE'
     :::column:::
         [Analytics Platform<br />System (PDW)](alter-database-transact-sql.md?view=aps-pdw-2016-au7&preserve-view=true)
     :::column-end:::
+    :::column:::
+        [Microsoft Fabric](alter-database-transact-sql.md?view=fabric&preserve-view=true)
+    :::column-end:::    
 :::row-end:::
 
 
@@ -864,7 +873,7 @@ ALTER DATABASE WideWorldImporters
 
 :::row:::
     :::column:::
-        [SQL Server](alter-database-transact-sql.md?view=sql-server-ver15&preserve-view=true)
+        [SQL Server](alter-database-transact-sql.md?view=sql-server-ver16&preserve-view=true)
     :::column-end:::
     :::column:::
         [SQL Database](alter-database-transact-sql.md?view=azuresqldb-current&preserve-view=true)
@@ -877,6 +886,9 @@ ALTER DATABASE WideWorldImporters
     :::column-end:::
     :::column:::
         [Analytics Platform<br />System (PDW)](alter-database-transact-sql.md?view=aps-pdw-2016-au7&preserve-view=true)
+    :::column-end:::
+    :::column:::
+        [Microsoft Fabric](alter-database-transact-sql.md?view=fabric&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -1049,7 +1061,7 @@ ALTER DATABASE dw1 MODIFY ( MAXSIZE=10240 GB, SERVICE_OBJECTIVE= 'DW1200' );
 
 :::row:::
     :::column:::
-        [SQL Server](alter-database-transact-sql.md?view=sql-server-ver15&preserve-view=true)
+        [SQL Server](alter-database-transact-sql.md?view=sql-server-ver16&preserve-view=true)
     :::column-end:::
     :::column:::
         [SQL Database](alter-database-transact-sql.md?view=azuresqldb-current&preserve-view=true)
@@ -1063,6 +1075,9 @@ ALTER DATABASE dw1 MODIFY ( MAXSIZE=10240 GB, SERVICE_OBJECTIVE= 'DW1200' );
     :::column:::
         **_\* Analytics<br />Platform System (PDW) \*_** &nbsp;
     :::column-end:::
+    :::column:::
+        [Microsoft Fabric](alter-database-transact-sql.md?view=fabric&preserve-view=true)
+    :::column-end:::    
 :::row-end:::
 
 &nbsp;
@@ -1287,5 +1302,52 @@ ALTER DATABASE
 
 - [CREATE DATABASE - Analytics Platform System](../../t-sql/statements/create-database-transact-sql.md?view=aps-pdw-2016-au7&preserve-view=true)
 - [DROP DATABASE](drop-database-transact-sql.md)
+
+::: moniker-end
+::: moniker range="=fabric"
+
+## Overview: Microsoft Fabric
+
+:::row:::
+    :::column:::
+        [SQL Server](alter-database-transact-sql.md?view=sql-server-ver16&preserve-view=true)
+    :::column-end:::
+    :::column:::
+        [SQL Database](alter-database-transact-sql.md?view=azuresqldb-current&preserve-view=true)
+    :::column-end:::
+    :::column:::
+        [SQL Managed Instance](alter-database-transact-sql.md?view=azuresqldb-mi-current&preserve-view=true)
+    :::column-end:::
+    :::column:::
+        [Azure Synapse<br />Analytics](alter-database-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)
+    :::column-end:::
+    :::column:::
+        [Analytics Platform<br />System (PDW)](alter-database-transact-sql.md?view=aps-pdw-2016-au7&preserve-view=true)
+    :::column-end:::
+    :::column:::
+        ***Microsoft Fabric***
+    :::column-end:::
+:::row-end:::
+
+In [!INCLUDE [fabric](../../includes/fabric.md)] [!INCLUDE [fabric-dw](../../includes/fabric-dw.md)], this statement modifies a warehouse.
+
+Because of its length, the `ALTER DATABASE` syntax is separated into the multiple articles.
+
+| Article | Description |
+| --- | --- |
+| ALTER DATABASE | The current article provides the syntax and related information for changing the name and the collation of a database. |
+| [ALTER DATABASE SET options](alter-database-transact-sql-set-options.md) | Provides the syntax and related information for changing the attributes of a database by using the SET options of ALTER DATABASE. |
+
+## Remarks
+
+Currently, [disabling V-Order behavior](/fabric/data-warehouse/disable-v-order) in a warehouse is the only use for `ALTER DATABASE` in [!INCLUDE [fabric](../../includes/fabric.md)]. See [ALTER DATABASE SET options](alter-database-transact-sql-set-options.md).
+
+## View database information
+
+You can use catalog views, system functions, and system stored procedures to return information about databases, files, and filegroups.
+
+## Related content
+
+- [What is data warehousing in Microsoft Fabric?](/fabric/data-warehouse/data-warehousing)
 
 ::: moniker-end

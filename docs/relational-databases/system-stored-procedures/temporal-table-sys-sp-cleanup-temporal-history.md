@@ -5,7 +5,7 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
 ms.date: 07/29/2024
-ms.service: sql-database
+ms.service: sql
 ms.topic: conceptual
 dev_langs:
   - "TSQL"

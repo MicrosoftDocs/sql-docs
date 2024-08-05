@@ -1,5 +1,5 @@
 ---
-title: Use Ruby with Azure SQL Database or SQL Managed Instance
+title: Use Ruby to query a database
 titleSuffix: Azure SQL Database & Azure SQL Managed Instance
 description: This quickstart shows you how to use Ruby to create a program that connects to a database and queries it using Transact-SQL statements.
 author: dzsquared

@@ -1,5 +1,5 @@
 ---
-title: "PowerShell: Configure active geo-replication for Azure SQL Database"
+title: "PowerShell: Configure active geo-replication"
 description: Use an Azure PowerShell example script to set up active geo-replication for Azure SQL Database and fail it over.
 author: AbdullahMSFT
 ms.author: amamun

@@ -4,7 +4,7 @@ description: Learn how to set database options such as Automatic tuning, encrypt
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 07/29/2024
+ms.date: 08/06/2024
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -4018,7 +4018,7 @@ SET
 
 ## Remarks
 
-Currently, [pausing Delta Lake log publishing](/fabric/data-warehouse/query-delta-lake-logs#pausing-delta-lake-log-publishing) and [disabling V-Order behavior](/fabric/data-warehouse/disable-v-order) in a warehouse are the only use for `ALTER DATABASE ... SET` in [!INCLUDE [fabric](../../includes/fabric.md)].
+Currently, [pausing Delta Lake log publishing](/fabric/data-warehouse/query-delta-lake-logs#pausing-delta-lake-log-publishing) and [disabling V-Order behavior](/fabric/data-warehouse/disable-v-order) in a warehouse are the only uses for `ALTER DATABASE ... SET` in [!INCLUDE [fabric](../../includes/fabric.md)].
 
 ## Permissions
 
@@ -4031,7 +4031,7 @@ The user needs to be a member of the Admin, Member, or Contributor roles in the 
 The following T-SQL command pauses Delta Lake Log publishing in the current warehouse context.
 
 ```sql
-ALTER DATABASE CURRENT SET DATA_LAKE_LOG_PUBLISHING = PAUSED
+ALTER DATABASE CURRENT SET DATA_LAKE_LOG_PUBLISHING = PAUSED;
 ```
 
 To check the current status of Delta Lake Log publishing on all warehouses, of your workspace, use the following T-SQL code to query [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md?view=fabric&preserve-view=true) in a new query window:
@@ -4043,5 +4043,7 @@ SELECT [name], [DATA_LAKE_LOG_PUBLISHING_DESC] FROM sys.databases
 ## Related content
 
 - [What is data warehousing in Microsoft Fabric?](/fabric/data-warehouse/data-warehousing)
+- [Query Delta Lake logs in Microsoft Fabric](/fabric/data-warehouse/query-delta-lake-logs)
+- [Understand V-Order for Microsoft Fabric Warehouse](fabric/data-warehouse/v-order)
 
 ::: moniker-end

@@ -325,8 +325,7 @@ More information: [Hardware characteristics of Azure SQL Managed Instance](/azur
 **Category**: Issue
 
 **Description**  
-SQL Server allows a database to log to multiple files. This database has multiple log files, which isn't supported in Azure SQL Managed Instance. **This database can't be migrated as the backup can't be restored on Azure SQL Managed Instance.  
-**
+SQL Server allows a database to log to multiple files. This database has multiple log files, which isn't supported in Azure SQL Managed Instance. **This database can't be migrated as the backup can't be restored on Azure SQL Managed Instance.**
 
 **Recommendation**  
 Azure SQL Managed Instance supports only a single log per database. You need to delete all but one of the log files before migrating this database to Azure:

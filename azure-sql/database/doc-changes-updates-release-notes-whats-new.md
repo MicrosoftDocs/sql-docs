@@ -70,6 +70,8 @@ The following table lists features of Azure SQL Database that have been made gen
 
 | Feature | GA Month | Details |
 | --- | --- | --- |
+| [Maintenance window support for named replicas](https://aka.ms/MWsupportforNR)|August 2024|[Maintenance window](maintenance-window.md) support for named replicas is now generally available.|
+| [Maintenance window](maintenance-window.md) support for Hyperscale | August 2024| [Maintenance window](maintenance-window.md) support for Hyperscale databases is now generally available. |
 | [Database compatibility level 160 is now default](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level?view=azuresqldb-current&preserve-view=true) | June 2024 | Database compatibility level 160 is now the default for new databases created in Azure SQL Database. For more information on this announcement, see [General availability: Database compatibility level 160 in Azure SQL Database](https://techcommunity.microsoft.com/t5/azure-sql-blog/general-availability-database-compatibility-level-160-in-azure/ba-p/4172039). |
 | [Hyperscale named replica zone redundant support](service-tier-hyperscale-replicas.md) | June 2024 | [Zone redundancy support for Hyperscale named replicas](https://aka.ms/ZRSupportForNRPreview) is now generally available. |
 | [License-free standby replica](standby-replica-how-to-configure.md) | May 2024 | Save on licensing costs by configuring your secondary database replica for disaster recovery standby. | 
@@ -84,6 +86,15 @@ The following table lists features of Azure SQL Database that have been made gen
 ## Documentation changes
 
 Learn about significant changes to the Azure SQL Database documentation. For previous years, see the [What's new archive](doc-changes-updates-release-notes-whats-new-archive.md).
+
+
+### August 2024
+
+| Changes | Details |
+| --- | --- |
+| **Maintenance window support for named replicas GA**|[Maintenance window](maintenance-window.md) support for named replicas is now generally available. For more information, read [Maintenance window support for named replicas](https://aka.ms/MWsupportforNR).|
+| **Maintenance window support for Hyperscale GA** | August 2024| [Maintenance window](maintenance-window.md) support for Hyperscale databases is now generally available. |
+
 
 ### July 2024
 

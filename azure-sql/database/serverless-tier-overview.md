@@ -4,7 +4,7 @@ description: This article describes the new serverless compute tier and compares
 author: oslake
 ms.author: moslake
 ms.reviewer: wiassaf, mathoma
-ms.date: 02/12/2024
+ms.date: 08/06/2024
 ms.service: azure-sql-database
 ms.subservice: service-overview
 ms.topic: conceptual
@@ -219,11 +219,11 @@ The latency to auto-resume and auto-pause a serverless database is generally ord
 
 #### Key deletion or revocation
 
-If using [customer managed transparent data encryption](transparent-data-encryption-byok-overview.md) (BYOK) and the serverless database is auto-paused when key deletion or revocation occurs, then the database remains in the auto-paused state. In this case, after the database is next resumed, the database becomes inaccessible within approximately 10 minutes. Once the database becomes inaccessible, the recovery process is the same as for provisioned compute databases. If the serverless database is online when key deletion or revocation occurs, then the database also becomes inaccessible within approximately 10 minutes in the same way as with provisioned compute databases.
+If using [customer managed transparent data encryption](transparent-data-encryption-byok-overview.md) (BYOK) and the serverless database is auto-paused when key deletion or revocation occurs, then the database remains in the auto-paused state.  In this case, after the database is next resumed, the database becomes inaccessible within approximately 10 minutes.  Once the database becomes inaccessible, the recovery process is the same as for provisioned compute databases.  If the serverless database is online when key deletion or revocation occurs, then the database also becomes inaccessible within approximately 10 minutes in the same way as with provisioned compute databases.
 
 #### Key rotation
 
-If using [customer-managed transparent data encryption](transparent-data-encryption-byok-overview.md) (BYOK), and the serverless database is auto-paused, automated key rotation is deferred until the database is auto-resumed.
+If using [customer-managed transparent data encryption](transparent-data-encryption-byok-overview.md) (BYOK), and serverless auto-pausing is enabled, then the database is auto-resumed whenever keys are rotated and subsequently auto-paused when auto-pausing conditions are satisfied.
 
 ## <a id="create-serverless-db"></a> Create a new serverless database
 

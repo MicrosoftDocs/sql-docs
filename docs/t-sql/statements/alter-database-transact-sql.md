@@ -4,7 +4,7 @@ description: ALTER DATABASE (Transact-SQL) syntax for SQL Server, Azure SQL Data
 author: markingmyname
 ms.author: maghan
 ms.reviewer: wiassaf
-ms.date: 08/10/2023
+ms.date: 08/06/2024
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -1340,11 +1340,7 @@ Because of its length, the `ALTER DATABASE` syntax is separated into the multipl
 
 ## Remarks
 
-Currently, [disabling V-Order behavior](/fabric/data-warehouse/disable-v-order) in a warehouse is the only use for `ALTER DATABASE` in [!INCLUDE [fabric](../../includes/fabric.md)]. See [ALTER DATABASE SET options](alter-database-transact-sql-set-options.md).
-
-## View database information
-
-You can use catalog views, system functions, and system stored procedures to return information about databases, files, and filegroups.
+Currently, [pausing Delta Lake log publishing](/fabric/data-warehouse/query-delta-lake-logs#pausing-delta-lake-log-publishing) and [disabling V-Order behavior](/fabric/data-warehouse/disable-v-order) in a warehouse are the only uses for `ALTER DATABASE ... SET` in [!INCLUDE [fabric](../../includes/fabric.md)]. See [ALTER DATABASE SET options](alter-database-transact-sql-set-options.md).
 
 ## Related content
 

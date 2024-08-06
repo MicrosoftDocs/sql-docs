@@ -13,7 +13,7 @@ ms.custom:
 ---
 # Integrate Reporting Services by using the Report Viewer controls - get started
 
-The Report Viewer controls can be used to integrate Reporting Services RDL reports into WebForms and WinForms apps. For detailed information about recent updates, see the [Release notes for Report Viewer controls for WebForms and WinForms of SSRS](./release-notes-ssrs-application-integration.md).
+The Report Viewer controls can be used to integrate Reporting Services report definition language (RDL) reports into WebForms and WinForms apps. For detailed information about recent updates, see the [Release notes for Report Viewer controls for WebForms and WinForms of SSRS](./release-notes-ssrs-application-integration.md).
 
 ## Add the Report Viewer control to a new web project
 
@@ -172,7 +172,7 @@ Make sure to update any assembly references to version *15.0.0.0*, including the
 
 ## How to set 100% height on the Report Viewer control
 
-If setting the height of the viewer control to 100% the parent element is required to have a defined height, or all ancestors are required to have percentage heights.
+When you set the height of the viewer control to 100%, the parent element must have a defined height, or all ancestors must have percentage heights.
 
 ### Set the height of all the ancestors to 100%
 
@@ -250,7 +250,7 @@ The Report Viewer Control is now shipped as a NuGet package and no longer shows 
 
 ## Common issues
 
-The viewer control is designed for modern browsers. The control might not work as expected if the browser renders the page using IE compatibility mode. Intranet sites might require a meta tag to override default browser behavior.
+The viewer control is designed for modern browsers. The control might not work as expected if the browser renders the page by using IE compatibility mode. Intranet sites might require a meta tag to override default browser behavior.
 
 ```html
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />

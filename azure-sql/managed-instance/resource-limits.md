@@ -86,32 +86,6 @@ SQL Managed Instance has two [service tiers](service-tiers-managed-instance-vcor
 > [!Important]
 > The Business Critical service tier provides an additional built-in copy of the SQL Managed Instance (secondary replica) that can be used for read-only workload. If you can separate read-write queries and read-only/analytic/reporting queries, you are getting twice the vCores and memory for the same price. The secondary replica might lag a few seconds behind the primary instance, so it is designed to offload reporting/analytic workloads that don't need exact current state of data. In the following table, **read-only queries** are the queries that are executed on secondary replica.
 
-### Feature comparison
-
-| **Feature** | **General Purpose** | **Next-gen General Purpose** | **Business Critical** |
-| --- | --- | --- |--- |
-| Max database size | Up to currently available instance size (depending on the number of vCores). |Up to currently available instance size (depending on the number of vCores). | Up to currently available instance size (depending on the number of vCores). |
-| Max `tempdb` database size | Limited to 24 GB/vCore (96 - 1,920 GB) and currently available instance storage size.<br />Add more vCores to get more `tempdb` space.<br /> Log file size is limited to 120 GB. | Limited to 24 GB/vCore (96 - 1,920 GB) and currently available instance storage size.<br />Add more vCores to get more `tempdb` space.<br /> Log file size is limited to 120 GB.  | Up to currently available instance storage size. |
-| Max number of `tempdb` files | 128 |128 | 128 |
-| Max number of databases per instance | 100 user databases, unless the instance storage size limit has been reached. | 500 user databases | 100 user databases, unless the instance storage size limit has been reached. |
-| Max number of database files | 280 per instance, unless the instance storage size or [Azure Premium Disk storage allocation space](doc-changes-updates-known-issues.md#exceeding-storage-space-with-small-database-files) limit has been reached. |4,096 files per database | 32,767 files per database, unless the instance storage size limit has been reached. |
-| Max data file size | Maximum size of each data file is 8 TB. Use at least two data files for databases larger than 8 TB. |Up to currently available instance size (depending on the number of vCores).  | Up to currently available instance size (depending on the number of vCores). |
-| Max log file size | Limited to 2 TB and currently available instance storage size. |Limited to 2 TB and currently available instance storage size. | Limited to 2 TB and currently available instance storage size. |
-| Data/Log IOPS (approximate) | 500 - 7500 per file<br />\*[Increase file size to get more IOPS](#file-io-characteristics-in-general-purpose-tier)| Reserved storage * 3 - up to the VM limit. 300 in case of 32 GB, 64 GB, and 96 GB of reserved storage. <br/> VM limit depends on the number of vCores<br /> 6400 IOPS for a VM with 4 vCores - 80 K IOPS for a VM with 128 vCores | 16 K - 320 K (4000 IOPS/vCore)<br />Add more vCores to get better IO performance. |
-| Data throughput (approximate) | 100 - 250 MiB/s per file<br />\*[Increase the file size to get better IO performance](#file-io-characteristics-in-general-purpose-tier) | IOPS / 30 MBps - up to the VM limit. 75 MBps in case of 32 GB, 64 GB, and 96 GB of reserved storage.  |  Not limited. |
-| Log write throughput limit (per instance) | 4.5 MiB/s per vCore<br />Max 120 MiB/s per instance<br />22 - 65 MiB/s per DB (depending on log file size)<br />\*[Increase the file size to get better IO performance](#file-io-characteristics-in-general-purpose-tier) | 4.5 MiB/s per vCore<br />Max 192 MiB/s | 4.5 MiB/s per vCore<br />Max 192 MiB/s |
-| Storage IO latency (approximate) | 5-10 ms | 3-5 ms | 1-2 ms |
-| In-memory OLTP | Not supported |Not supported | Available, [size depends on number of vCore](#in-memory-oltp-available-space) |
-| Max sessions | 30000 |30000  | 30000 |
-| Max concurrent workers | 105 * number of vCores + 800 |105 * number of vCores + 800 | 105 * number of vCores + 800 |
-| [Read-only replicas](../database/read-scale-out.md) | 0 | 0 | 1 (included in price) |
-| Compute isolation | Not supported as General Purpose instances may share physical hardware with other instances|Not supported as Next-gen General Purpose instances may share physical hardware with other instances |**Standard-series (Gen5)**: <br /> Supported for configurations with 64 or more vCores <br /> **Premium-series**: Supported for configurations with 64 or more vCores <br /> **Memory optimized premium-series**: Supported for configurations with 64 or more vCores |
-|Replicas for availability|Stand by nodes for high availability| Stand by nodes for high availability| Four high availability replicas, 1 is also a [read-scale replica](../database/read-scale-out.md) |
-|Read-only replicas with [failover groups](failover-group-sql-mi.md) enabled| One additional read-only replica. Two total readable replicas, which include the primary replica. | One additional read-only replica. Two total readable replicas, which include the primary replica.| Two additional read-only replicas, three total read-only replicas. Four total readable replicas, which include the primary replica. |
-|Pricing/billing| [vCore, reserved storage, and backup storage](https://azure.microsoft.com/pricing/details/sql-database/managed/) is charged. <br/>IOPS are not charged| vCore, reserved storage, backup storage and IOPS (over the free quota) are charged. | [vCore, reserved storage, and backup storage](https://azure.microsoft.com/pricing/details/sql-database/managed/) is charged. <br/>IOPS are not charged. 
-|Discount models| [Reserved instances](../database/reserved-capacity-overview.md)<br/>[Azure Hybrid Benefit](../azure-hybrid-benefit.md) (not available on dev/test subscriptions)<br/>[Enterprise](https://azure.microsoft.com/offers/ms-azr-0148p/) and [pay-as-you-go Dev/Test](https://azure.microsoft.com/offers/ms-azr-0023p/) subscriptions| [Reserved instances](../database/reserved-capacity-overview.md)<br/>[Azure Hybrid Benefit](../azure-hybrid-benefit.md) (not available on dev/test subscriptions)<br/>[Enterprise](https://azure.microsoft.com/offers/ms-azr-0148p/) and [pay-as-you-go Dev/Test](https://azure.microsoft.com/offers/ms-azr-0023p/) subscriptions | [Reserved instances](../database/reserved-capacity-overview.md)<br/>[Azure Hybrid Benefit](../azure-hybrid-benefit.md) (not available on dev/test subscriptions)<br/>[Enterprise](https://azure.microsoft.com/offers/ms-azr-0148p/) and [pay-as-you-go Dev/Test](https://azure.microsoft.com/offers/ms-azr-0023p/) subscriptions|
-
-
 ### Number of vCores
 
 | **Hardware Generation** | **General Purpose** | **Next-gen General Purpose** | **Business Critical** |
@@ -141,7 +115,32 @@ SQL Managed Instance has two [service tiers](service-tiers-managed-instance-vcor
 | Memory optimized premium-series |  - 2 TB for 4 vCores<br />- 8 TB for 8 vCores<br />- 16 TB for other sizes | - 2 TB for 4, 6 vCores<br />- 8 TB for 8, 10, 12 vCores<br />- 16 TB for 16, 20, 24 vCores<br />- 32 TB for 32, 40, 48, 56, 64, 80, 96, 128 vCores | - 1 TB for 4, 6 vCores <br />- 2 TB for 8, 10, 12 vCores <br />- 4 TB for 16, 20 vCores<br />- 5.5 TB for 24 vCores<br />- 5.5 TB or 8 TB (depending on the region) for 32, 40 vCores<sup>2</sup><br />- 12 TB for 48, 56 vCores<br />- 16 TB for 64, 80, 96, 128 vCores |
 
 <sup>1</sup> Only [the major regions](#regional-supports-for-memory-optimized-premium-series-hardware-and-for-premium-series-hardware-with-16-tb-storage) can provide 16 TB of storage for the premium-series hardware for these CPU vCore numbers. Smaller regions limit available storage to 5.5 TB.   
-<sup>2</sup> Only [the major regions](#regional-supports-for-memory-optimized-premium-series-hardware-and-for-premium-series-hardware-with-16-tb-storage) can provide 8 TB of storage for the premium-series memory optimized hardware for these CPU vCore numbers. Smaller regions limit available storage to 5.5 TB.   
+<sup>2</sup> Only [the major regions](#regional-supports-for-memory-optimized-premium-series-hardware-and-for-premium-series-hardware-with-16-tb-storage) can provide 8 TB of storage for the premium-series memory optimized hardware for these CPU vCore numbers. Smaller regions limit available storage to 5.5 TB.
+
+### Feature comparison
+
+| **Feature** | **General Purpose** | **Next-gen General Purpose** | **Business Critical** |
+| --- | --- | --- |--- |
+| Max database size | Up to currently available instance size (depending on the number of vCores). |Up to currently available instance size (depending on the number of vCores). | Up to currently available instance size (depending on the number of vCores). |
+| Max `tempdb` database size | Limited to 24 GB/vCore (96 - 1,920 GB) and currently available instance storage size.<br />Add more vCores to get more `tempdb` space.<br /> Log file size is limited to 120 GB. | Limited to 24 GB/vCore (96 - 1,920 GB) and currently available instance storage size.<br />Add more vCores to get more `tempdb` space.<br /> Log file size is limited to 120 GB.  | Up to currently available instance storage size. |
+| Max number of `tempdb` files | 128 |128 | 128 |
+| Max number of databases per instance | 100 user databases, unless the instance storage size limit has been reached. | 500 user databases | 100 user databases, unless the instance storage size limit has been reached. |
+| Max number of database files | 280 per instance, unless the instance storage size or [Azure Premium Disk storage allocation space](doc-changes-updates-known-issues.md#exceeding-storage-space-with-small-database-files) limit has been reached. |4,096 files per database | 32,767 files per database, unless the instance storage size limit has been reached. |
+| Max data file size | Maximum size of each data file is 8 TB. Use at least two data files for databases larger than 8 TB. |Up to currently available instance size (depending on the number of vCores).  | Up to currently available instance size (depending on the number of vCores). |
+| Max log file size | Limited to 2 TB and currently available instance storage size. |Limited to 2 TB and currently available instance storage size. | Limited to 2 TB and currently available instance storage size. |
+| Data/Log IOPS (approximate) | 500 - 7500 per file<br />\*[Increase file size to get more IOPS](#file-io-characteristics-in-general-purpose-tier)| Reserved storage * 3 - up to the VM limit. 300 in case of 32 GB, 64 GB, and 96 GB of reserved storage. <br/> VM limit depends on the number of vCores<br /> 6400 IOPS for a VM with 4 vCores - 80 K IOPS for a VM with 128 vCores | 16 K - 320 K (4000 IOPS/vCore)<br />Add more vCores to get better IO performance. |
+| Data throughput (approximate) | 100 - 250 MiB/s per file<br />\*[Increase the file size to get better IO performance](#file-io-characteristics-in-general-purpose-tier) | IOPS / 30 MBps - up to the VM limit. 75 MBps in case of 32 GB, 64 GB, and 96 GB of reserved storage.  |  Not limited. |
+| Log write throughput limit (per instance) | 4.5 MiB/s per vCore<br />Max 120 MiB/s per instance<br />22 - 65 MiB/s per DB (depending on log file size)<br />\*[Increase the file size to get better IO performance](#file-io-characteristics-in-general-purpose-tier) | 4.5 MiB/s per vCore<br />Max 192 MiB/s | 4.5 MiB/s per vCore<br />Max 192 MiB/s |
+| Storage IO latency (approximate) | 5-10 ms | 3-5 ms | 1-2 ms |
+| In-memory OLTP | Not supported |Not supported | Available, [size depends on number of vCore](#in-memory-oltp-available-space) |
+| Max sessions | 30000 |30000  | 30000 |
+| Max concurrent workers | 105 * number of vCores + 800 |105 * number of vCores + 800 | 105 * number of vCores + 800 |
+| [Read-only replicas](../database/read-scale-out.md) | 0 | 0 | 1 (included in price) |
+| Compute isolation | Not supported as General Purpose instances may share physical hardware with other instances|Not supported as Next-gen General Purpose instances may share physical hardware with other instances |**Standard-series (Gen5)**: <br /> Supported for configurations with 64 or more vCores <br /> **Premium-series**: Supported for configurations with 64 or more vCores <br /> **Memory optimized premium-series**: Supported for configurations with 64 or more vCores |
+|Replicas for availability|Stand by nodes for high availability| Stand by nodes for high availability| Four high availability replicas, 1 is also a [read-scale replica](../database/read-scale-out.md) |
+|Read-only replicas with [failover groups](failover-group-sql-mi.md) enabled| One additional read-only replica. Two total readable replicas, which include the primary replica. | One additional read-only replica. Two total readable replicas, which include the primary replica.| Two additional read-only replicas, three total read-only replicas. Four total readable replicas, which include the primary replica. |
+|Pricing/billing| [vCore, reserved storage, and backup storage](https://azure.microsoft.com/pricing/details/sql-database/managed/) is charged. <br/>IOPS are not charged| vCore, reserved storage, backup storage and IOPS (over the free quota) are charged. | [vCore, reserved storage, and backup storage](https://azure.microsoft.com/pricing/details/sql-database/managed/) is charged. <br/>IOPS are not charged. 
+|Discount models| [Reserved instances](../database/reserved-capacity-overview.md)<br/>[Azure Hybrid Benefit](../azure-hybrid-benefit.md) (not available on dev/test subscriptions)<br/>[Enterprise](https://azure.microsoft.com/offers/ms-azr-0148p/) and [pay-as-you-go Dev/Test](https://azure.microsoft.com/offers/ms-azr-0023p/) subscriptions| [Reserved instances](../database/reserved-capacity-overview.md)<br/>[Azure Hybrid Benefit](../azure-hybrid-benefit.md) (not available on dev/test subscriptions)<br/>[Enterprise](https://azure.microsoft.com/offers/ms-azr-0148p/) and [pay-as-you-go Dev/Test](https://azure.microsoft.com/offers/ms-azr-0023p/) subscriptions | [Reserved instances](../database/reserved-capacity-overview.md)<br/>[Azure Hybrid Benefit](../azure-hybrid-benefit.md) (not available on dev/test subscriptions)<br/>[Enterprise](https://azure.microsoft.com/offers/ms-azr-0148p/) and [pay-as-you-go Dev/Test](https://azure.microsoft.com/offers/ms-azr-0023p/) subscriptions|
 
 ### Additional considerations: 
 
@@ -165,7 +164,7 @@ For the Next-gen General Purpose and Business Critical service tiers, available 
 The following table lists the max IOPS available to each service tier based on the number of vCores: 
 
 
-| Number of vCores | Max IOPS for Next-gen General Purpose service tier | Max IOPS for Business Critical service tier |
+| Number of vCores | Next-gen General Purpose | Business Critical |
 |--|--|--|
 | 4 | 6,400 | 16,000 |
 | 6 | 9,600 | 24,000 |
@@ -184,7 +183,18 @@ The following table lists the max IOPS available to each service tier based on t
 | 96 | 80,000 | 320,000 |
 | 128 | 80,000 | 320,000 |
 
+### File IO characteristics in General Purpose tier
 
+In the General Purpose service tier, every database file gets dedicated IOPS and throughput that depend on the file size. Larger files get more IOPS and throughput. IO characteristics of database files are shown in the following table:
+
+| **File size** | **>=0 and <=129 GiB** | **>129 and <=513 GiB** | **>513 and <=1025 GiB**  | **>1025 and <=2049 GiB**    | **>2049 and <=4097 GiB** | **>4097 GiB and <=8 TiB** |
+|:--|:--|:--|:--|:--|:--|:--|
+| IOPS per file       | 500   | 2300              | 5000  | 7500              | 7500              | 7500   |
+| Throughput per file | 100 MiB/s | 150 MiB/s | 200 MiB/s | 250 MiB/s| 250 MiB/s | 250 MiB/s |
+
+If you notice high IO latency on some database file or you see that IOPS/throughput is reaching the limit, you might improve performance by [increasing the file size](https://techcommunity.microsoft.com/t5/Azure-SQL-Database/Increase-data-file-size-to-improve-HammerDB-workload-performance/ba-p/823337).
+
+There's also an instance-level limit on the max log write throughput (see the previous table for values, for example 22 MiB/s), so you might not be able to reach the max file throughout on the log file because you're hitting the instance throughput limit.
 
 ### Data and log storage
 
@@ -213,18 +223,6 @@ Storage for database backups is allocated to support the [point-in-time restore 
 - **PITR**: In General Purpose and Business Critical tiers, individual database backups are copied to [read-access geo-redundant (RA-GRS) storage](/azure/storage/common/geo-redundant-design) automatically. The storage size increases dynamically as new backups are created. The storage is used by full, differential, and transaction log backups. The storage consumption depends on the rate of change of the database and the retention period configured for backups. You can configure a separate retention period for each database between 1 to 35 days for SQL Managed Instance. A backup storage amount equal to the configured maximum data size is provided at no extra charge.
 - **LTR**: You also have the option to configure long-term retention of full backups for up to 10 years. If you set up an LTR policy, these backups are stored in RA-GRS storage automatically, but you can control how often the backups are copied. To meet different compliance requirements, you can select different retention periods for weekly, monthly, and/or yearly backups. The configuration you choose determines how much storage is used for LTR backups. For more information, see [Long-term backup retention](../database/long-term-retention-overview.md).
 
-### File IO characteristics in General Purpose tier
-
-In the General Purpose service tier, every database file gets dedicated IOPS and throughput that depend on the file size. Larger files get more IOPS and throughput. IO characteristics of database files are shown in the following table:
-
-| **File size** | **>=0 and <=129 GiB** | **>129 and <=513 GiB** | **>513 and <=1025 GiB**  | **>1025 and <=2049 GiB**    | **>2049 and <=4097 GiB** | **>4097 GiB and <=8 TiB** |
-|:--|:--|:--|:--|:--|:--|:--|
-| IOPS per file       | 500   | 2300              | 5000  | 7500              | 7500              | 7500   |
-| Throughput per file | 100 MiB/s | 150 MiB/s | 200 MiB/s | 250 MiB/s| 250 MiB/s | 250 MiB/s |
-
-If you notice high IO latency on some database file or you see that IOPS/throughput is reaching the limit, you might improve performance by [increasing the file size](https://techcommunity.microsoft.com/t5/Azure-SQL-Database/Increase-data-file-size-to-improve-HammerDB-workload-performance/ba-p/823337).
-
-There's also an instance-level limit on the max log write throughput (see the previous table for values, for example 22 MiB/s), so you might not be able to reach the max file throughout on the log file because you're hitting the instance throughput limit.
 
 ## Supported regions
 

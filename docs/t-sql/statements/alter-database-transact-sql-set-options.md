@@ -4018,7 +4018,7 @@ SET
 
 ## Remarks
 
-Currently, [pausing Delta Lake log publishing](fabric/data-warehouse/query-delta-lake-logs#pausing-delta-lake-log-publishing) and [disabling V-Order behavior](/fabric/data-warehouse/disable-v-order) in a warehouse are the only use for `ALTER DATABASE ... SET` in [!INCLUDE [fabric](../../includes/fabric.md)].
+Currently, [pausing Delta Lake log publishing](/fabric/data-warehouse/query-delta-lake-logs#pausing-delta-lake-log-publishing) and [disabling V-Order behavior](/fabric/data-warehouse/disable-v-order) in a warehouse are the only use for `ALTER DATABASE ... SET` in [!INCLUDE [fabric](../../includes/fabric.md)].
 
 ## Permissions
 

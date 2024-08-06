@@ -543,7 +543,7 @@ az sql midb log-replay start <required parameters> &
 
 [Az.SQL 4.0.0 and later](https://www.powershellgallery.com/packages/Az.Sql/4.0.0) provides a detailed progress report. Review [Managed Database Restore Details - Get](/rest/api/sql/managed-database-restore-details/get) for a sample output.  
 
-To monitor migration progress through PowerShell, use the following command:
+To monitor ongoing migration progress through PowerShell, use the following command:
 
 ```PowerShell
 Get-AzSqlInstanceDatabaseLogReplay -ResourceGroupName "ResourceGroup01" `
@@ -551,11 +551,13 @@ Get-AzSqlInstanceDatabaseLogReplay -ResourceGroupName "ResourceGroup01" `
     -Name "ManagedDatabaseName"
 ```
 
-To monitor migration progress through the Azure CLI, use the following command:
+To monitor ongoing migration progress through the Azure CLI, use the following command:
 
 ```CLI
 az sql midb log-replay show -g mygroup --mi myinstance -n mymanageddb
 ```
+
+To track additional details on a failed request, use the PowerShell command [Get-AzSqlInstanceOperation](/powershell/module/az.sql/get-azsqlinstanceoperation) or use Azure CLI command [az sql mi op show](/cli/azure/sql/mi/op?view=azure-cli-latest#az-sql-mi-op-show).
 
 ## Stop the migration (optional)
 
@@ -599,10 +601,15 @@ az sql midb log-replay complete -g mygroup --mi myinstance -n mymanageddb --last
 
 ## Troubleshoot LRS issues
 
-After you start LRS, use either of the following monitoring cmdlets to see the status of the operation:
+After you start LRS, use either of the following monitoring cmdlets to see the status of the ongoing operation:
 
 * For PowerShell: `get-azsqlinstancedatabaselogreplay`
 * For the Azure CLI: `az_sql_midb_log_replay_show`
+
+To review details about a failed operation:
+
+* For PowerShell: [Get-AzSqlInstanceOperation](/powershell/module/az.sql/get-azsqlinstanceoperation)
+* For Azure CLI: [az sql mi op show](/cli/azure/sql/mi/op?view=azure-cli-latest#az-sql-mi-op-show)
 
 If LRS fails to start after some time and you get an error, check for the most common issues:
 

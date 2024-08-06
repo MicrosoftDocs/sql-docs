@@ -3999,14 +3999,14 @@ SET
 
 <option_spec> ::=
 {
-    <delta_lake_log_publishing>
+    <data_lake_log_publishing>
   | <vorder>
 }
 ;
 
-<delta_lake_log_publishing> ::=
+<data_lake_log_publishing> ::=
 {
-    DELTA_LAKE_LOG_PUBLISHING { PAUSED | AUTO }
+    DATA_LAKE_LOG_PUBLISHING { PAUSED | AUTO }
 }
 
 <vorder> ::=
@@ -4018,7 +4018,7 @@ SET
 
 ## Remarks
 
-Currently,[pausing Delta Lake log publishing](fabric/data-warehouse/query-delta-lake-logs#pausing-delta-lake-log-publishing) and [disabling V-Order behavior](/fabric/data-warehouse/disable-v-order) in a warehouse are the only use for `ALTER DATABASE ... SET` in [!INCLUDE [fabric](../../includes/fabric.md)].
+Currently, [pausing Delta Lake log publishing](fabric/data-warehouse/query-delta-lake-logs#pausing-delta-lake-log-publishing) and [disabling V-Order behavior](/fabric/data-warehouse/disable-v-order) in a warehouse are the only use for `ALTER DATABASE ... SET` in [!INCLUDE [fabric](../../includes/fabric.md)].
 
 ## Permissions
 

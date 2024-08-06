@@ -2332,9 +2332,10 @@ items:
         href: relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-system-dll.md
       - name: CLR Integration Security
         href: relational-databases/clr-integration/security/clr-integration-security.md
-    - name: Managing Integration Assemblies
-      href: relational-databases/clr-integration/assemblies-database-engine.md
+    - name: Managing integration assemblies
       items:
+      - name: Overview
+        href: relational-databases/clr-integration/assemblies-database-engine.md
       - name: Manage
         href: relational-databases/clr-integration/assemblies/managing-clr-integration-assemblies.md
       - name: Alter
@@ -2345,7 +2346,7 @@ items:
         href: relational-databases/clr-integration/assemblies/dropping-an-assembly.md
       - name: Design
         href: relational-databases/clr-integration/assemblies-designing.md
-      - name: Get Information
+      - name: Get information
         href: relational-databases/clr-integration/assemblies-getting-information.md
       - name: Implement
         href: relational-databases/clr-integration/assemblies-implementing.md

@@ -1,9 +1,9 @@
 ---
-title: "Getting Information About Assemblies"
-description: Getting Information About Assemblies
+title: "Get information about assemblies"
+description: Learn how to get information about assemblies using catalog views and functions.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "03/06/2017"
+ms.date: 08/02/2024
 ms.service: sql
 ms.topic: "reference"
 helpviewer_keywords:
@@ -11,43 +11,24 @@ helpviewer_keywords:
   - "status information [SQL Server], assemblies"
   - "metadata [SQL Server], assemblies"
 ---
-# Assemblies - Getting Information
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  The following catalog views and functions can be queried for metadata about assemblies.  
-  
- **To get information about individual assemblies**  
-  
--   [ASSEMBLYPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/assemblyproperty-transact-sql.md)  
-  
- **To get information about all assemblies in the database**  
-  
--   [sys.assemblies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-assemblies-transact-sql.md)  
-  
- **To get information about assembly files, including assembly binaries, source files, and debug files**  
-  
--   [sys.assembly_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-assembly-files-transact-sql.md)  
-  
- **To get information about cross-assembly references**  
-  
--   [sys.assembly_references &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-assembly-references-transact-sql.md)  
-  
- **To get assembly information about user-defined types**  
-  
--   [sys.assembly_types &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-assembly-types-transact-sql.md)  
-  
--   [sys.types &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)  
-  
- **To get assembly information about common language runtime (CLR) stored procedures, triggers, and functions**  
-  
--   [sys.assembly_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-assembly-modules-transact-sql.md)  
-  
- **To get information about non-CLR objects**  
-  
--   [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)  
-  
-## See Also  
- [Assemblies &#40;Database Engine&#41;](../../relational-databases/clr-integration/assemblies-database-engine.md)   
- [Designing Assemblies](../../relational-databases/clr-integration/assemblies-designing.md)   
- [Implementing Assemblies](../../relational-databases/clr-integration/assemblies-implementing.md)  
-  
-  
+# Get information about assemblies
+
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+
+The following catalog views and functions can be queried for metadata about Common language runtime (CLR) assemblies.
+
+| Information | Article |
+| --- | --- |
+| Individual assemblies | [ASSEMBLYPROPERTY](../../t-sql/functions/assemblyproperty-transact-sql.md) |
+| All assemblies in the database | [sys.assemblies](../system-catalog-views/sys-assemblies-transact-sql.md) |
+| Assembly files, including assembly binaries, source files, and debug files | [sys.assembly_files](../system-catalog-views/sys-assembly-files-transact-sql.md) |
+| Cross-assembly references | [sys.assembly_references](../system-catalog-views/sys-assembly-references-transact-sql.md) |
+| User-defined types | [sys.assembly_types](../system-catalog-views/sys-assembly-types-transact-sql.md)<br />[sys.types](../system-catalog-views/sys-types-transact-sql.md) |
+| CLR stored procedures, triggers, and functions | [sys.assembly_modules](../system-catalog-views/sys-assembly-modules-transact-sql.md) |
+| To get information about non-CLR objects | [sys.sql_modules](../system-catalog-views/sys-sql-modules-transact-sql.md) |
+
+## Related content
+
+- [Assemblies (Database Engine)](assemblies-database-engine.md)
+- [Designing assemblies](assemblies-designing.md)
+- [Implementing assemblies](assemblies-implementing.md)

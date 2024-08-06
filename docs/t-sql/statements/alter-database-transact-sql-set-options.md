@@ -3990,12 +3990,35 @@ Use `ALTER DATABASE ... SET` to manage a [!INCLUDE [fabric](../../includes/fabri
 
 ```syntaxsql
 -- Microsoft Fabric
-ALTER DATABASE CURRENT SET VORDER = OFF;
+
+ALTER DATABASE { warehouse_name | CURRENT }
+SET
+{
+    <option_spec> [ ,...n ] 
+}
+
+<option_spec> ::=
+{
+    <delta_lake_log_publishing>
+  | <vorder>
+}
+;
+
+<delta_lake_log_publishing> ::=
+{
+    DELTA_LAKE_LOG_PUBLISHING { PAUSED | AUTO }
+}
+
+<vorder> ::=
+{
+    VORDER = OFF
+}
+
 ```
 
 ## Remarks
 
-Currently, [disabling V-Order behavior](/fabric/data-warehouse/disable-v-order) in a warehouse is the only use for `ALTER DATABASE ... SET` in [!INCLUDE [fabric](../../includes/fabric.md)].
+Currently,[pausing Delta Lake log publishing](fabric/data-warehouse/query-delta-lake-logs#pausing-delta-lake-log-publishing) and [disabling V-Order behavior](/fabric/data-warehouse/disable-v-order) in a warehouse are the only use for `ALTER DATABASE ... SET` in [!INCLUDE [fabric](../../includes/fabric.md)].
 
 ## Permissions
 
@@ -4003,21 +4026,18 @@ The user needs to be a member of the Admin, Member, or Contributor roles in the 
 
 ## Examples
 
-### A. Disable V-Order in the current warehouse
+### A. Pausing the publishing of Delta Lake Logs
 
-The following T-SQL command disables V-Order in the current warehouse context.
-
-> [!CAUTION]
-> Disabling V-Order can only be done at the warehouse level, and it is irreversible: once disabled, it cannot be enabled again. Users must consider the performance if they choose to [Disable V-Order in Fabric Warehouse](/fabric/data-warehouse/disable-v-order). Read and review [Understand V-Order in Microsoft Fabric Warehouse](/fabric/data-warehouse/manage-v-order).
+The following T-SQL command pauses Delta Lake Log publishing in the current warehouse context.
 
 ```sql
-ALTER DATABASE CURRENT SET VORDER = OFF
+ALTER DATABASE CURRENT SET DATA_LAKE_LOG_PUBLISHING = PAUSED
 ```
 
-To check the current status of V-Order on all warehouses, of your workspace, use the following T-SQL code to query [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md?view=fabric&preserve-view=true) in a new query window:
+To check the current status of Delta Lake Log publishing on all warehouses, of your workspace, use the following T-SQL code to query [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md?view=fabric&preserve-view=true) in a new query window:
 
 ```sql
-SELECT [name], [is_vorder_enabled] FROM sys.databases;
+SELECT [name], [DATA_LAKE_LOG_PUBLISHING_DESC] FROM sys.databases
 ```
 
 ## Related content

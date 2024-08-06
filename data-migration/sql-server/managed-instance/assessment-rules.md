@@ -19,7 +19,7 @@ Migration tools validate your source SQL Server instance by running several asse
 
 This article provides a list of the rules used to assess the feasibility of migrating your SQL Server database to Azure SQL Managed Instance.
 
-## Rules Summary
+## Rules summary
 
 | Rule Title | Level | Category | Details |
 | --- | --- | --- | --- |
@@ -110,7 +110,7 @@ You need to convert BULK INSERT statements that use local files or file shares t
 
 More information: [Bulk Insert and OPENROWSET differences in Azure SQL Managed Instance](/azure/azure-sql/managed-instance/transact-sql-tsql-differences-sql-server#bulk-insert--openrowset)
 
-## <a id="ClrStrictSecurity"></a> CLR Security
+## <a id="ClrStrictSecurity"></a> CLR security
 
 **Title: CLR assemblies marked as SAFE or EXTERNAL_ACCESS are considered UNSAFE**  
 **Category**: Warning
@@ -119,9 +119,8 @@ More information: [Bulk Insert and OPENROWSET differences in Azure SQL Managed I
 CLR Strict Security mode is enforced in Azure SQL Managed Instance. This mode is enabled by default and introduces breaking changes for databases containing user-defined CLR assemblies marked either SAFE or EXTERNAL_ACCESS.
 
 **Recommendation**  
-CLR uses Code Access Security (CAS) in the .NET Framework, which is no longer supported as a security boundary. Beginning with SQL Server 2017 (14.x) database engine, an `sp_configure` option called clr strict security is introduced to enhance the security of CLR assemblies. Clr strict security is enabled by default, and treats SAFE and EXTERNAL_ACCESS CLR assemblies as if they were marked UNSAFE. When clr strict security is disabled, a CLR assembly created with PERMISSION_SET = SAFE might be able to access external system resources, call unmanaged code, and acquire sysadmin privileges. After enabling strict security, any assemblies that aren't signed will fail to load. Also, if a database has SAFE or EXTERNAL_ACCESS assemblies, RESTORE or ATTACH DATABASE statements can complete, but the assemblies might fail to load. To load the assemblies, you must either alter or drop and recreate each assembly so that it is signed with a certificate or asymmetric key that has a corresponding login with the UNSAFE ASSEMBLY permission on the server.
 
-More information: [CLR strict security](/sql/database-engine/configure-windows/clr-strict-security)
+[!INCLUDE [code-access-security](../../includes/code-access-security.md)]
 
 ## <a id="ComputeClause"></a> COMPUTE clause
 
@@ -294,7 +293,7 @@ Review affected objects section in Azure Migrate to see all jobs using Merge job
 
 More information: [SQL Server Agent differences in Azure SQL Managed Instance](/azure/azure-sql/managed-instance/transact-sql-tsql-differences-sql-server#sql-server-agent)
 
-## <a id="MIDatabaseSize"></a> MI database size
+## <a id="MIDatabaseSize"></a> SQL Managed Instance database size
 
 **Title: Azure SQL Managed Instance does not support database size greater than 16 TB.**  
 **Category**: Issue
@@ -307,7 +306,7 @@ Evaluate if the data can be archived compressed or sharded into multiple databas
 
 More information: [Hardware characteristics of Azure SQL Managed Instance](/azure/azure-sql/managed-instance/resource-limits#hardware-configuration-characteristics)
 
-## <a id="MIInstanceSize"></a> MI instance size
+## <a id="MIInstanceSize"></a> SQL Managed Instance instance size
 
 **Title: Maximum instance storage size in Azure SQL Managed Instance cannot be greater than 8 TB.**  
 **Category**: Warning
@@ -326,8 +325,7 @@ More information: [Hardware characteristics of Azure SQL Managed Instance](/azur
 **Category**: Issue
 
 **Description**  
-SQL Server allows a database to log to multiple files. This database has multiple log files, which isn't supported in Azure SQL Managed Instance. **This database can't be migrated as the backup can't be restored on Azure SQL Managed Instance.  
-**
+SQL Server allows a database to log to multiple files. This database has multiple log files, which isn't supported in Azure SQL Managed Instance. **This database can't be migrated as the backup can't be restored on Azure SQL Managed Instance.**
 
 **Recommendation**  
 Azure SQL Managed Instance supports only a single log per database. You need to delete all but one of the log files before migrating this database to Azure:
@@ -516,7 +514,7 @@ More information: [Trace flags](/sql/t-sql/database-console-commands/dbcc-traceo
 Azure SQL Managed Instance supports two types of authentication:
 
 - SQL Authentication, which uses a username and password
-- Microsoft Entra authentication, which uses identities managed by Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)) and is supported for managed and integrated domains.
+- Microsoft Entra authentication, which uses identities managed by Microsoft Entra ID and is supported for managed and integrated domains.
 
 Database users mapped with Windows authentication (integrated security) aren't supported in Azure SQL Managed Instance.
 

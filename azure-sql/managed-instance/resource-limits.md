@@ -86,11 +86,41 @@ SQL Managed Instance has two [service tiers](service-tiers-managed-instance-vcor
 > [!Important]
 > The Business Critical service tier provides an additional built-in copy of the SQL Managed Instance (secondary replica) that can be used for read-only workload. If you can separate read-write queries and read-only/analytic/reporting queries, you are getting twice the vCores and memory for the same price. The secondary replica might lag a few seconds behind the primary instance, so it is designed to offload reporting/analytic workloads that don't need exact current state of data. In the following table, **read-only queries** are the queries that are executed on secondary replica.
 
+### Number of vCores
+
+| **Hardware Generation** | **General Purpose** | **Next-gen General Purpose** | **Business Critical** |
+| --- | --- | --- |--- |
+| Standard-series (Gen5) | 2<sup>1</sup>, 4, 8, 16, 24, 32, 40, 64, 80 | 4, 8, 16, 24, 32, 40, 64, 80 | 4, 8, 16, 24, 32, 40, 64, 80 |
+| Premium-series | 2<sup>1</sup>, 4, 8, 16, 24, 32, 40, 64, 80 | 4, 6, 8, 10, 12, 16, 20, 24, 32, 40, 48, 56, 64, 80, 96, 128 | 4, 6, 8, 10, 12, 16, 20, 24, 32, 40, 48, 56, 64, 80, 96, 128 |
+| Memory optimized premium-series |  4, 8, 16, 24, 32, 40, 64, 80 | 4, 6, 8, 10, 12, 16, 20, 24, 32, 40, 48, 56, 64, 80, 96, 128 | 4, 6, 8, 10, 12, 16, 20, 24, 32, 40, 48, 56, 64, 80, 96, 128 |
+
+<sup>1</sup> Deploying a 2-vCore instance is only possible inside an [instance pool](instance-pools-overview.md).
+
+### Max memory
+
+| **Hardware Generation** | **General Purpose** | **Next-gen General Purpose** | **Business Critical** |
+| --- | --- | --- |--- |
+| Standard-series (Gen5) | 20.4 GB - 408 GB <br> 5.1 GB/vCore | 20.4 GB - 408 GB <br> 5.1 GB/vCore | 20.4 GB - 408 GB <br> 5.1 GB/vCore on each replica |
+| Premium-series | 28 GB - 560 GB <br> 7 GB/vCore | 28 GB - 560 GB <br> 7 GB/vCore | 28 GB - 560 GB <br> 7 GB/vCore up to 80 vCores<sup>1</sup> on each replica |
+| Memory optimized premium-series |  54.4 GB - 870.4 GB <br> 13.6 GB/vCore | 54.4 GB - 870.4 GB <br> 13.6 GB/vCore | 54.4 GB - 870.4 GB <br> 13.6 GB/vCore up to 64 vCores<sup>1</sup> on each replica |
+
+<sup>1</sup> The memory-to-vCore ratio is only available up to 80 vCores for premium-series hardware, and 64 vCores for memory optimized premium-series. Maximum memory is capped at 560 GB for premium-series vCores above 80, and 870.4 GB for memory optimized premium-series vCores above 64.
+
+### Max instance storage size (reserved)
+
+| **Hardware Generation** | **General Purpose** | **Next-gen General Purpose** | **Business Critical** |
+| --- | --- | --- |--- |
+| Standard-series (Gen5) | - 2 TB for 4 vCores<br />- 8 TB for 8 vCores<br />- 16 TB for other sizes | - 2 TB for 4 vCores<br />- 8 TB for 8 vCores<br />- 16 TB for other sizes | - 1 TB for 4, 8, 16 vCores<br />- 2 TB for 24 vCores <br />- 4 TB for 32, 40, 64, 80 vCores |
+| Premium-series | - 2 TB for 4 vCores<br />- 8 TB for 8 vCores<br />- 16 TB for other sizes | - 2 TB for 4, 6 vCores<br />- 8 TB for 8, 10, 12 vCores<br />- 16 TB for 16, 20, 24 vCores<br />- 32 TB for 32, 40, 48, 56, 64, 80, 96, 128 vCores | - 1 TB for 4, 6 vCores <br />- 2 TB for 8, 10, 12 vCores <br />- 4 TB for 16, 20 vCores<br />- 5.5 TB for 24, 32, 40, 48, 56 vCores<br />- 5.5 TB or 16 TB (depending on the region) for 64, 80, 96, 128 vCores<sup>1</sup> |
+| Memory optimized premium-series |  - 2 TB for 4 vCores<br />- 8 TB for 8 vCores<br />- 16 TB for other sizes | - 2 TB for 4, 6 vCores<br />- 8 TB for 8, 10, 12 vCores<br />- 16 TB for 16, 20, 24 vCores<br />- 32 TB for 32, 40, 48, 56, 64, 80, 96, 128 vCores | - 1 TB for 4, 6 vCores <br />- 2 TB for 8, 10, 12 vCores <br />- 4 TB for 16, 20 vCores<br />- 5.5 TB for 24 vCores<br />- 5.5 TB or 8 TB (depending on the region) for 32, 40 vCores<sup>2</sup><br />- 12 TB for 48, 56 vCores<br />- 16 TB for 64, 80, 96, 128 vCores |
+
+<sup>1</sup> Only [the major regions](#regional-supports-for-memory-optimized-premium-series-hardware-and-for-premium-series-hardware-with-16-tb-storage) can provide 16 TB of storage for the premium-series hardware for these CPU vCore numbers. Smaller regions limit available storage to 5.5 TB.   
+<sup>2</sup> Only [the major regions](#regional-supports-for-memory-optimized-premium-series-hardware-and-for-premium-series-hardware-with-16-tb-storage) can provide 8 TB of storage for the premium-series memory optimized hardware for these CPU vCore numbers. Smaller regions limit available storage to 5.5 TB.
+
+### Feature comparison
+
 | **Feature** | **General Purpose** | **Next-gen General Purpose** | **Business Critical** |
 | --- | --- | --- |--- |
-| Number of vCores\* | **Standard-series (Gen5)**: 2<sup>1</sup>, 4, 8, 16, 24, 32, 40, 64, 80 <br /> **Premium-series**: 2<sup>1</sup>, 4, 8, 16, 24, 32, 40, 64, 80 <br /> **Memory optimized premium-series**:  4, 8, 16, 24, 32, 40, 64, 80|**Standard-series (Gen5)**: 4, 8, 16, 24, 32, 40, 64, 80 <br /> **Premium-series**: 4, 6, 8, 10, 12, 16, 20, 24, 32, 40, 48, 56, 64, 80, 96<sup>2</sup>, 128<sup>2</sup> <br /> **Memory optimized premium-series**: 4, 6, 8, 10, 12, 16, 20, 24, 32, 40, 48, 56, 64, 80<sup>2</sup>, 96<sup>2</sup>, 128<sup>2</sup>|   **Standard-series (Gen5)**: 4, 8, 16, 24, 32, 40, 64, 80 <br /> **Premium-series**: 4, 6, 8, 10, 12, 16, 20, 24, 32, 40, 48, 56, 64, 80, 96<sup>2</sup>, 128<sup>2</sup> <br /> **Memory optimized premium-series**: 4, 6, 8, 10, 12, 16, 20, 24, 32, 40, 48, 56, 64, 80<sup>2</sup>, 96<sup>2</sup>, 128<sup>2</sup> <br />\*Same number of vCores is dedicated for read-only queries. |
-| Max memory | **Standard-series (Gen5)**: 20.4 GB - 408 GB (5.1 GB/vCore)<br /> **Premium-series**: 28 GB - 560 GB (7 GB/vCore)<br /> **Memory optimized premium-series**: 54.4 GB - 870.4 GB (13.6 GB/vCore) |**Standard-series (Gen5)**: 20.4 GB - 408 GB (5.1 GB/vCore)<br /> **Premium-series**: 28 GB - 560 GB (7 GB/vCore)<br /> **Memory optimized premium-series**: 54.4 GB - 870.4 GB (13.6 GB/vCore)  | **Standard-series (Gen5)**: 20.4 GB - 408 GB (5.1 GB/vCore) on each replica <br /> **Premium-series**: 28 GB - 560 GB (7 GB/vCore up to 80 vCores<sup>2</sup>) on each replica<br /> **Memory optimized premium-series**: 54.4 GB - 870.4 GB (13.6 GB/vCore up to 64 vCores<sup>2</sup>) on each replica |
-| Max instance storage size (reserved) | **Standard-series (Gen5)**: <br /> - 2 TB for 4 vCores<br />- 8 TB for 8 vCores<br />- 16 TB for other sizes <br />**Premium-series**: <br /> - 2 TB for 4 vCores<br />- 8 TB for 8 vCores<br />- 16 TB for other sizes <br />**Memory optimized premium-series**: <br /> - 2 TB for 4 vCores<br />- 8 TB for 8 vCores<br />- 16 TB for other sizes <br /> | **Standard-series (Gen5)**: <br /> - 2 TB for 4 vCores<br />- 8 TB for 8 vCores<br />- 16 TB for other sizes <br />**Premium-series**: <br /> - 2 TB for 4, 6 vCores<br />- 8 TB for 8, 10, 12 vCores<br />- 16 TB for 16, 20, 24 vCores<br />- 32 TB for 32, 40, 48, 56, 64, 80, 96, 128 vCores <br />**Memory optimized premium-series**: <br /> - 2 TB for 4, 6 vCores<br />- 8 TB for 8, 10, 12 vCores<br />- 16 TB for 16, 20, 24 vCores<br />- 32 TB for 32, 40, 48, 56, 64, 80, 96, 128 vCores <br />|  **Standard-series (Gen5)**: <br />- 1 TB for 4, 8, 16 vCores<br />- 2 TB for 24 vCores <br />- 4 TB for 32, 40, 64, 80 vCores <br /> **Premium-series**: <br />- 1 TB for 4, 6 vCores <br />- 2 TB for 8, 10, 12 vCores <br />- 4 TB for 16, 20 vCores<br />- 5.5 TB for 24, 32, 40, 48, 56 vCores<br />- 5.5 TB or 16 TB (depending on the region) for 64, 80, 96, 128 vCores<sup>3</sup><br /> **Memory optimized premium-series**: <br />- 1 TB for 4, 6 vCores <br />- 2 TB for 8, 10, 12 vCores <br />- 4 TB for 16, 20 vCores<br />- 5.5 TB for 24 vCores<br />- 5.5 TB or 8 TB (depending on the region) for 32, 40 vCores<sup>4</sup><br />- 12 TB for 48, 56 vCores<br />- 16 TB for 64, 80, 96, 128 vCores<br /> |
 | Max database size | Up to currently available instance size (depending on the number of vCores). |Up to currently available instance size (depending on the number of vCores). | Up to currently available instance size (depending on the number of vCores). |
 | Max `tempdb` database size | Limited to 24 GB/vCore (96 - 1,920 GB) and currently available instance storage size.<br />Add more vCores to get more `tempdb` space.<br /> Log file size is limited to 120 GB. | Limited to 24 GB/vCore (96 - 1,920 GB) and currently available instance storage size.<br />Add more vCores to get more `tempdb` space.<br /> Log file size is limited to 120 GB.  | Up to currently available instance storage size. |
 | Max number of `tempdb` files | 128 |128 | 128 |
@@ -112,20 +142,13 @@ SQL Managed Instance has two [service tiers](service-tiers-managed-instance-vcor
 |Pricing/billing| [vCore, reserved storage, and backup storage](https://azure.microsoft.com/pricing/details/sql-database/managed/) is charged. <br/>IOPS are not charged| vCore, reserved storage, backup storage and IOPS (over the free quota) are charged. | [vCore, reserved storage, and backup storage](https://azure.microsoft.com/pricing/details/sql-database/managed/) is charged. <br/>IOPS are not charged. 
 |Discount models| [Reserved instances](../database/reserved-capacity-overview.md)<br/>[Azure Hybrid Benefit](../azure-hybrid-benefit.md) (not available on dev/test subscriptions)<br/>[Enterprise](https://azure.microsoft.com/offers/ms-azr-0148p/) and [pay-as-you-go Dev/Test](https://azure.microsoft.com/offers/ms-azr-0023p/) subscriptions| [Reserved instances](../database/reserved-capacity-overview.md)<br/>[Azure Hybrid Benefit](../azure-hybrid-benefit.md) (not available on dev/test subscriptions)<br/>[Enterprise](https://azure.microsoft.com/offers/ms-azr-0148p/) and [pay-as-you-go Dev/Test](https://azure.microsoft.com/offers/ms-azr-0023p/) subscriptions | [Reserved instances](../database/reserved-capacity-overview.md)<br/>[Azure Hybrid Benefit](../azure-hybrid-benefit.md) (not available on dev/test subscriptions)<br/>[Enterprise](https://azure.microsoft.com/offers/ms-azr-0148p/) and [pay-as-you-go Dev/Test](https://azure.microsoft.com/offers/ms-azr-0023p/) subscriptions|
 
-
-<sup>1</sup> Deploying a 2-vCore instance is only possible inside an [instance pool](instance-pools-overview.md).   
-<sup>2</sup> The memory-to-vCore ratio is only available up to 80 vCores for premium-series hardware, and 64 vCores for memory optimized premium-series. Maximum memory is capped at 560 GB for premium-series vCores above 80, and 870.4 GB for memory optimized premium-series vCores above 64.   
-<sup>3</sup> Only [the major regions](#regional-supports-for-memory-optimized-premium-series-hardware-and-for-premium-series-hardware-with-16-tb-storage) can provide 16 TB of storage for the premium-series hardware for these CPU vCore numbers. Smaller regions limit available storage to 5.5 TB.   
-<sup>4</sup> Only [the major regions](#regional-supports-for-memory-optimized-premium-series-hardware-and-for-premium-series-hardware-with-16-tb-storage) can provide 8 TB of storage for the premium-series memory optimized hardware for these CPU vCore numbers. Smaller regions limit available storage to 5.5 TB.   
-
-
-A few additional considerations: 
+### Additional considerations: 
 
 - **Currently available instance storage size** is the difference between reserved instance size and the used storage space.
 - Both data and log file size in the user and system databases are included in the instance storage size that is compared with the max storage size limit. Use the [sys.master_files](/sql/relational-databases/system-catalog-views/sys-master-files-transact-sql) system view to determine the total used space by databases. Error logs aren't persisted and not included in the size. Backups aren't included in storage size.
 - Throughput and IOPS in the General Purpose tier also depends on the [file size](#file-io-characteristics-in-general-purpose-tier), and isn't explicitly limited by the SQL Managed Instance.
-- You can create another readable replica in a different Azure region using [failover groups](failover-group-configure-sql-mi.md)
 - Max instance IOPS depend on the file layout and distribution of workload. As an example, if you create 7 x 1-TB files with max 5 K IOPS each and seven small files (smaller than 128 GB) with 500 IOPS each, you can get 38500 IOPS per instance (7x5000+7x500) if your workload can use all files. Note that some IOPS are also used for autobackups.
+- You can create another readable replica in a different Azure region using [failover groups](failover-group-configure-sql-mi.md)
 - Names of `tempdb`files can't have more than 16 characters.
 
 Find more information about the [resource limits in SQL Managed Instance pools in this article](instance-pools-overview.md#resource-limits).
@@ -141,7 +164,7 @@ For the Next-gen General Purpose and Business Critical service tiers, available 
 The following table lists the max IOPS available to each service tier based on the number of vCores: 
 
 
-| Number of vCores | Max IOPS for Next-gen General Purpose service tier | Max IOPS for Business Critical service tier |
+| Number of vCores | Next-gen General Purpose | Business Critical |
 |--|--|--|
 | 4 | 6,400 | 16,000 |
 | 6 | 9,600 | 24,000 |
@@ -160,7 +183,18 @@ The following table lists the max IOPS available to each service tier based on t
 | 96 | 80,000 | 320,000 |
 | 128 | 80,000 | 320,000 |
 
+### File IO characteristics in General Purpose tier
 
+In the General Purpose service tier, every database file gets dedicated IOPS and throughput that depend on the file size. Larger files get more IOPS and throughput. IO characteristics of database files are shown in the following table:
+
+| **File size** | **>=0 and <=129 GiB** | **>129 and <=513 GiB** | **>513 and <=1025 GiB**  | **>1025 and <=2049 GiB**    | **>2049 and <=4097 GiB** | **>4097 GiB and <=8 TiB** |
+|:--|:--|:--|:--|:--|:--|:--|
+| IOPS per file       | 500   | 2300              | 5000  | 7500              | 7500              | 7500   |
+| Throughput per file | 100 MiB/s | 150 MiB/s | 200 MiB/s | 250 MiB/s| 250 MiB/s | 250 MiB/s |
+
+If you notice high IO latency on some database file or you see that IOPS/throughput is reaching the limit, you might improve performance by [increasing the file size](https://techcommunity.microsoft.com/t5/Azure-SQL-Database/Increase-data-file-size-to-improve-HammerDB-workload-performance/ba-p/823337).
+
+There's also an instance-level limit on the max log write throughput (see the previous table for values, for example 22 MiB/s), so you might not be able to reach the max file throughout on the log file because you're hitting the instance throughput limit.
 
 ### Data and log storage
 
@@ -189,18 +223,6 @@ Storage for database backups is allocated to support the [point-in-time restore 
 - **PITR**: In General Purpose and Business Critical tiers, individual database backups are copied to [read-access geo-redundant (RA-GRS) storage](/azure/storage/common/geo-redundant-design) automatically. The storage size increases dynamically as new backups are created. The storage is used by full, differential, and transaction log backups. The storage consumption depends on the rate of change of the database and the retention period configured for backups. You can configure a separate retention period for each database between 1 to 35 days for SQL Managed Instance. A backup storage amount equal to the configured maximum data size is provided at no extra charge.
 - **LTR**: You also have the option to configure long-term retention of full backups for up to 10 years. If you set up an LTR policy, these backups are stored in RA-GRS storage automatically, but you can control how often the backups are copied. To meet different compliance requirements, you can select different retention periods for weekly, monthly, and/or yearly backups. The configuration you choose determines how much storage is used for LTR backups. For more information, see [Long-term backup retention](../database/long-term-retention-overview.md).
 
-### File IO characteristics in General Purpose tier
-
-In the General Purpose service tier, every database file gets dedicated IOPS and throughput that depend on the file size. Larger files get more IOPS and throughput. IO characteristics of database files are shown in the following table:
-
-| **File size** | **>=0 and <=129 GiB** | **>129 and <=513 GiB** | **>513 and <=1025 GiB**  | **>1025 and <=2049 GiB**    | **>2049 and <=4097 GiB** | **>4097 GiB and <=8 TiB** |
-|:--|:--|:--|:--|:--|:--|:--|
-| IOPS per file       | 500   | 2300              | 5000  | 7500              | 7500              | 7500   |
-| Throughput per file | 100 MiB/s | 150 MiB/s | 200 MiB/s | 250 MiB/s| 250 MiB/s | 250 MiB/s |
-
-If you notice high IO latency on some database file or you see that IOPS/throughput is reaching the limit, you might improve performance by [increasing the file size](https://techcommunity.microsoft.com/t5/Azure-SQL-Database/Increase-data-file-size-to-improve-HammerDB-workload-performance/ba-p/823337).
-
-There's also an instance-level limit on the max log write throughput (see the previous table for values, for example 22 MiB/s), so you might not be able to reach the max file throughout on the log file because you're hitting the instance throughput limit.
 
 ## Supported regions
 

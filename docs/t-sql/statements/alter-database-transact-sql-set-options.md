@@ -4037,13 +4037,13 @@ ALTER DATABASE CURRENT SET DATA_LAKE_LOG_PUBLISHING = PAUSED;
 To check the current status of Delta Lake Log publishing on all warehouses, of your workspace, use the following T-SQL code to query [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md?view=fabric&preserve-view=true) in a new query window:
 
 ```sql
-SELECT [name], [DATA_LAKE_LOG_PUBLISHING_DESC] FROM sys.databases
+SELECT [name], [DATA_LAKE_LOG_PUBLISHING_DESC] FROM sys.databases;
 ```
 
 ## Related content
 
 - [What is data warehousing in Microsoft Fabric?](/fabric/data-warehouse/data-warehousing)
 - [Query Delta Lake logs in Microsoft Fabric](/fabric/data-warehouse/query-delta-lake-logs)
-- [Understand V-Order for Microsoft Fabric Warehouse](fabric/data-warehouse/v-order)
+- [Understand V-Order for Microsoft Fabric Warehouse](/fabric/data-warehouse/v-order)
 
 ::: moniker-end

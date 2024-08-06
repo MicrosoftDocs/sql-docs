@@ -4,7 +4,7 @@ description: This article provides information on monitoring the digest uploads 
 author: VanMSFT
 ms.author: vanto
 ms.date: 11/14/2023
-ms.service: azure-sql-database
+ms.service: sql
 ms.subservice: security
 ms.custom: ignite-2023
 ms.topic: conceptual

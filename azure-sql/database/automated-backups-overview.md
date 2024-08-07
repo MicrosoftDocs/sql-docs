@@ -5,7 +5,7 @@ description: Learn how Azure SQL Database automatically backs up all databases a
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma, danil, dinethi
-ms.date: 07/24/2024
+ms.date: 09/03/2024
 ms.service: azure-sql-database
 ms.subservice: backup-restore
 ms.topic: conceptual
@@ -103,6 +103,18 @@ You can use automatically created backups in the following scenarios:
    > Geo-restore is available only for databases that are configured with geo-redundant backup storage. If you're not currently using geo-replicated backups for a database, you can change this by [configuring backup storage redundancy](automated-backups-change-settings.md#configure-backup-storage-redundancy).
 - [Restore a database from a specific long-term backup](long-term-retention-overview.md) of a single or pooled database, if the database has been configured with an LTR policy. LTR allows you to [restore an older version of the database](long-term-backup-retention-configure.md) by using the Azure portal, the Azure CLI, or Azure PowerShell to satisfy a compliance request or to run an older version of the application. For more information, see [Long-term retention](long-term-retention-overview.md).
 
+## Automatic backups on secondary replicas
+
+Automatic backups are now taken from a secondary replica in the [Business Critical](service-tiers-sql-database-vcore.md#business-critical) service tier. Since data is replicated between SQL Server processes on each node, the backup service takes the backup from the non-readable secondary replicas. This design ensures the primary replica remains dedicated to your main workload, and the readable secondary replica is dedicated to read-only workloads. Automatic backups in the Business Critical service tier are taken from a secondary replica most of the time. If an automatic backup fails on a secondary replica, then the backup service takes the backup from the primary replica. 
+
+Automatic backups on secondary replicas: 
+
+- Are enabled by default. 
+- Are included at no additional cost beyond the price of the service tier.
+- Bring improved performance and predictability to the Business Critical service tier.
+
+> [!NOTE]
+> - Create a Microsoft support ticket to disable the feature for your instance. 
 
 ## <a id="restore-capabilities"></a> Restore capabilities and features
 
@@ -139,6 +151,8 @@ To perform a restore, see [Restore a database from backups](recovery-using-backu
 | **Restore a database from a point in time** | [SQL Database](recovery-using-backups.md#point-in-time-restore)<br>[SQL Managed Instance](../managed-instance/point-in-time-restore.md) | [SQL Database](/cli/azure/sql/db#az-sql-db-restore) <br/> [SQL Managed Instance](/cli/azure/sql/midb#az-sql-midb-restore) | [SQL Database](/powershell/module/az.sql/restore-azsqldatabase) <br/> [SQL Managed Instance](/powershell/module/az.sql/restore-azsqlinstancedatabase) |
 | **Restore a deleted database** | [SQL Database](recovery-using-backups.md)<br>[SQL Managed Instance](../managed-instance/point-in-time-restore.md#restore-a-deleted-database) | [SQL Database](long-term-backup-retention-configure.md#restore-from-ltr-backups) <br/> [SQL Managed Instance](../managed-instance/long-term-backup-retention-configure.md#restore-from-ltr-backups) | [SQL Database](/powershell/module/az.sql/get-azsqldeleteddatabasebackup) <br/> [SQL Managed Instance](/powershell/module/az.sql/get-azsqldeletedinstancedatabasebackup)|
 
+
+
 ## Export a database
 
 Automatic backups taken by the Azure service are not available to download or access directly. They can only be used for restore operations through Azure.
@@ -146,6 +160,7 @@ Automatic backups taken by the Azure service are not available to download or ac
 There are alternatives to export an Azure SQL Database. When you need to export a database for archiving or for moving to another platform, you can [export the database schema and data](database-export.md) to a [BACPAC](/sql/relational-databases/data-tier-applications/data-tier-applications#bacpac) file. A BACPAC file is a ZIP file with an extension of BACPAC containing the metadata and data from the database. A BACPAC file can be stored in Azure Blob storage or in local storage in an on-premises location and later imported back into [Azure SQL Database](sql-database-paas-overview.md), [Azure SQL Managed Instance](../managed-instance/sql-managed-instance-paas-overview.md), or a [SQL Server instance](/sql/database-engine/sql-server-database-engine-overview).
 
 You can also [Import or export an Azure SQL Database using private link](database-import-export-private-link.md) or [Import or export an Azure SQL Database without allowing Azure services to access the server](database-import-export-azure-services-off.md).
+
 
 ## Backup scheduling
 

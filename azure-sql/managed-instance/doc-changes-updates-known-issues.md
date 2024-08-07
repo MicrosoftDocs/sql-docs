@@ -29,7 +29,7 @@ This article lists the currently known issues with [Azure SQL Managed Instance](
 | [The event_file target of the system_health event session is not accessible](#the-event_file-target-of-the-system_health-event-session-is-not-accessible) | Dec 2023 | Has Workaround | |
 | [Procedure sp_send_dbmail might fail when @query parameter is used on Nov22FW enabled managed instances](#procedure-sp_send_dbmail-may-fail-when-query-parameter-is-used-on-nov22fw-enabled-managed-instances) | Dec 2023 | Has Workaround | |
 | [Increased number of system logins used for transactional replication](#increased-number-of-system-logins-used-for-transactional-replication) | Dec 2022 | No resolution | |
-| [msdb table for manual backups doesn't preserve the username](#msdb-table-for-manual-backups-doesnt-preserve-the-username) | Nov 2022 | No resolution | |
+| [msdb table for manual backups doesn't preserve the username](#msdb-table-for-manual-backups-doesnt-preserve-the-username) | Nov 2022 | Resolved | Aug 2023 |
 | [Interim guidance on 2022 time zone updates for Chile](#interim-guidance-on-2022-time-zone-updates-for-chile) | Aug 2022 | Has Workaround | |
 | [Querying external table fails with 'not supported' error message](#querying-external-table-fails-with-not-supported-error-message) | Jan 2022 | Resolved | Sep 2022 |
 | [When using SQL Server authentication, usernames with '@' aren't supported](#when-using-sql-server-authentication-usernames-with--arent-supported) | Oct 2021 | Resolved | Feb 2022 |
@@ -293,10 +293,6 @@ using (var scope = new TransactionScope())
 
 Azure SQL Managed Instance service is creating system login for purposes of transactional replication. This login can be found in SSMS (in **Object explorer**, under **Security**, **Logins**) or in system view `sys.syslogins`. Login name format looks like `'DBxCy\WF-abcde01234QWERT'`, and the login has public server role. Under certain conditions, this login is recreated, and due to a fault in the system previous login isn't deleted. This can lead to increased number of logins. These logins don't represent a security threat. They can be safely ignored. These logins shouldn't be deleted because at least one of them is being used for transactional replication.
 
-### <a id="msdb-table-for-manual-backups-doesnt-preserve-the-username"></a> Table for manual backups in msdb doesn't preserve the username
-
-We recently introduced support for auto backups in `msdb`, but the table doesn't currently contain username information.
-
 <a name='azure-ad-logins-and-users-arent-supported-in-ssdt'></a>
 
 ### Microsoft Entra logins and users aren't supported in SSDT
@@ -334,6 +330,10 @@ The issue will be addressed through scaling operation redesign.
 
 ## Resolved
 
+### <a id="msdb-table-for-manual-backups-doesnt-preserve-the-username"></a> Table for manual backups in msdb doesn't preserve the username
+
+**(Resolved in August 2023)** We recently introduced support for auto backups in `msdb`, but the table doesn't currently contain username information.
+
 ### <a id="querying-external-table-fails-with-not-supported-error-message"></a> Query on external table fails with not supported error message
 
 Querying external table might fail with generic error message "Queries over external tables are not supported with the current service tier or performance level of this database. Consider upgrading the service tier or performance level of the database". The only type of external table supported in Azure SQL Managed Instance are PolyBase external tables (in preview). To allow queries on PolyBase external tables, you need to enable PolyBase on managed instance by running `sp_configure` command.
@@ -358,9 +358,9 @@ Usernames that contain the '@' symbol in the middle (for example, `'abc@xy'`) ar
 
 ### <a id="restoring-manual-backup-without-checksum-might-fail"></a> Restore manual backup without CHECKSUM might fail
 
-In certain circumstances manual backup of databases that was made on a managed instance without CHECKSUM might fail to be restored. In such cases, retry restoring the backup until you're successful.
+**(Resolved in June 2020)** In certain circumstances manual backup of databases that was made on a managed instance without CHECKSUM might fail to be restored. In such cases, retry restoring the backup until you're successful.
 
-**Workaround**: Take manual backups of databases on managed instances with CHECKSUM enabled.
+**Workaround:** Take manual backups of databases on managed instances with CHECKSUM enabled.
 
 ### Agent becomes unresponsive upon modifying, disabling, or enabling existing jobs
 

@@ -363,8 +363,6 @@
         href: /azure/dms/tutorial-sql-server-to-azure-sql?toc=/azure/azure-sql/toc.json
       - name: Set up SQL Data Sync
         href: database/sql-data-sync-sql-server-configure.md
-      - name: Migrate SQLite to serverless
-        href: database/migrate-sqlite-db-to-azure-sql-serverless-offline-tutorial.md
     - name: Scale out
       items:
       - name: Configure Hyperscale named replicas

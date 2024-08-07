@@ -6,7 +6,7 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma, randolphwest
 ms.service: azure-sql-database
-ms.date: 07/31/2024
+ms.date: 08/14/2024
 ms.subservice: service-overview
 ms.topic: whats-new
 ms.custom:
@@ -93,8 +93,7 @@ Learn about significant changes to the Azure SQL Database documentation. For pre
 | Changes | Details |
 | --- | --- |
 | **Maintenance window support for named replicas GA**|[Maintenance window](maintenance-window.md) support for named replicas is now generally available. For more information, read [Maintenance window support for named replicas](https://aka.ms/MWsupportforNR).|
-| **Maintenance window support for Hyperscale GA** | August 2024| [Maintenance window](maintenance-window.md) support for Hyperscale databases is now generally available. |
-
+| **Maintenance window support for Hyperscale GA** | [Maintenance window](maintenance-window.md) support for Hyperscale databases is now generally available. |
 
 ### July 2024
 

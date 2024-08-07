@@ -148,7 +148,7 @@ Confirm that the TDE protector is present in Key Vault:
 
 To identify the expired key in the key vault:
 
-- Use the Azure portal, go to the **Key vault** resource menu > **Objects** > **Keys**, and check the key expiration.
+- Use the Azure portal, go to the **Key vault** service menu > **Objects** > **Keys**, and check the key expiration.
 - Use the PowerShell command, [Get-AzKeyVaultKey](/powershell/module/az.keyvault/get-azkeyvaultkey).
 - Use the Azure CLI command, [az keyvault key show](/cli/azure/keyvault/key#az-keyvault-key-show).
 

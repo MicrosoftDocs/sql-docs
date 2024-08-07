@@ -232,7 +232,7 @@ The Report Viewer Control is now shipped as a NuGet package and no longer shows 
 
     :::image type="content" source="media/reporting-services-remove-old-report-viewer-control-toolbox.png" alt-text="Screenshot of the Visual Studio toolbox, highlighting Delete on the ReportViewer control.":::
 
-1. Right-click in anywhere in the toolbox and then select **Choose Items...**.
+1. Right-click in anywhere in the toolbox and select **Choose Items...**.
 
     :::image type="content" source="media/reporting-services-toolbox-choose-item.png" alt-text="Screenshot of the Visual Studio toolbox, highlighting the Choose Items option.":::
 
@@ -245,7 +245,7 @@ The Report Viewer Control is now shipped as a NuGet package and no longer shows 
     > [!NOTE]
     > The NuGet package will be installed in the solution directory of your project. The path to the dll will be similar to the following: `{Solution Directory}\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.{version}\lib\net40` or `{Solution Directory}\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.{version}\lib\net40`.
 
-1. The new control should display within the toolbox. You can then move it to another tab within the toolbox if you wish.
+1. The new control should display within the toolbox. If you want, you can then move it to another tab within the toolbox.
 
     :::image type="content" source="media/reporting-services-toolbox-report-viewer-control.png" alt-text="Screenshot of the new ReportViewer control in the Visual Studio toolbox.":::
 

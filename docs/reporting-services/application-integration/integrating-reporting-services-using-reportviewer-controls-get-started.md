@@ -6,13 +6,13 @@ ms.author: maggies
 ms.date: 08/07/2024
 ms.service: reporting-services
 ms.subservice: application-integration
-ms.topic: conceptual
+ms.topic: get-started
 ms.custom:
   - intro-get-started
   - updatefrequency5
 #customer intent: As a SQL Server user, I want to learn how the Report Viewer controls can be used so that I can integrate Reporting Services RDL reports into WebForms and WinForms apps.
 ---
-# Integrate Reporting Services by using the Report Viewer controls - get started
+# Get started with Report Viewer controls
 
 The Report Viewer controls can be used to integrate Reporting Services report definition language (RDL) reports into WebForms and WinForms apps. For detailed information about recent updates, see the [Release notes for Report Viewer controls for WebForms and WinForms of SSRS](./release-notes-ssrs-application-integration.md).
 

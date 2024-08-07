@@ -4,7 +4,7 @@ description: Learn how to identify and resolve access issues and common errors w
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: vanto
-ms.date: 03/04/2022
+ms.date: 08/07/2024
 ms.service: sql
 ms.subservice: security
 ms.topic: conceptual
@@ -138,6 +138,33 @@ Confirm that the TDE protector is present in Key Vault:
 1. Identify the key vault, then go to the key vault in the Azure portal.
 1. Ensure that the key identified by the key URI is present.
 
+### Expired key
+
+**Error messages**
+
+*The server `<server_name>` requires the Key Vault Crypto Service Encryption User permission for the RBAC policy or following Azure Key Vault permissions: Get, WrapKey, UnwrapKey. Please grant the missing permissions to the service principal with ID `<akv_key>`. Ensure the key is active, not expired or disabled, set with the key activation date no later than the current date, and that trusted Microsoft services can bypass the firewall if applicable.*
+
+**Detection**
+
+To identify the expired key in the key vault: 
+
+- Use the Azure portal, go to the **Key vault** resource menu > **Objects** > **Keys**, and check the key expiration.
+- Use the PowerShell command, [Get-AzKeyVaultKey](/powershell/module/az.keyvault/get-azkeyvaultkey).
+- Use the Azure CLI command, [az keyvault key show](/cli/azure/keyvault/key#az-keyvault-key-show).
+
+**Mitigation**
+
+- Check the expiration date for the key vault key to confirm that the key is expired. 
+- Extend the key expiration date.
+- Bring the database back online by selecting the **Key revalidation** option with 1 of the following:
+  - **Retry existing key**.
+  - **Select backup key**. 
+
+For more information, see [Inaccessible TDE protector](/azure/azure-sql/database/transparent-data-encryption-byok-overview#inaccessible-tde-protector).
+
+> [!NOTE]
+> Keys should be rotated at a specified number of days prior to expiration to provide sufficient time to react to a failure. For more information, see [Azure Policy built-in definitions for Key Vault](/azure/key-vault/policy-reference).
+
 ### Missing permissions
 
 **Error message**
@@ -260,7 +287,7 @@ Status: Failed
 Description: Access to Azure Key Vault Key has been re-established, operation to make database {database_name} accessible on managed server {server_name} failed 
   
 
-## Next steps
+## Related content
 
 - Learn about [Azure Resource Health](/azure/service-health/resource-health-overview).
 - Set up [Action Groups](/azure/azure-monitor/platform/action-groups) to receive notifications and alerts based on your preferences, e.g. Email/SMS/Push/Voice, Logic App, Webhook, ITSM, or Automation Runbook.

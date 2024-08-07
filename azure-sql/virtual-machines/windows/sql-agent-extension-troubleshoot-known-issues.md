@@ -111,7 +111,7 @@ Consider the following:
 - The SQL VM may be stopped, deallocated, in a failed state, or not found. Validate the underlying virtual machine is running.
 - Your SQL IaaS Agent extension may be in a failed state. [Repair the extension](#repair-extension).
 
-[Unregister your SQL VM from the extension](sql-agent-extension-manually-register-single-vm.md#unregister-from-extension) and then register the SQL VM with the extension again if you did any of the following:
+[Delete the extension from your SQL Server VM](sql-agent-extension-manually-register-single-vm.md#delete-the-extension) and then register the SQL VM with the extension again if you did any of the following:
 
 - Migrated your VM from one subscription to the other.
 - Changed the locale or collation of SQL Server.

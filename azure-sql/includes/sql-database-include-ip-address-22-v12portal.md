@@ -4,7 +4,7 @@ description: Server-level firewall rules
 author: dalechen
 ms.author: ninarn
 ms.date: 07/13/2018
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.topic: include
 ms.custom: develop apps
 keywords:

@@ -6,7 +6,7 @@ author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: wiassaf
 ms.date: 08/06/2024
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.topic: conceptual
 f1_keywords:
   - "DATABASE_SERVICE_OBJECTIVES_TSQL"

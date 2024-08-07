@@ -5,7 +5,7 @@ author: VanMSFT
 ms.author: vanto
 ms.reviewer: mathoma
 ms.date: 11/28/2023
-ms.service: azure-sql-database
+ms.service: sql
 ms.subservice: security
 ms.custom: ignite-2023
 ms.topic: conceptual

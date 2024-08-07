@@ -2,7 +2,7 @@
 author: MashaMSFT
 ms.author: mathoma
 ms.date: 11/25/2018
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.topic: include
 ---
 ## Additional resources

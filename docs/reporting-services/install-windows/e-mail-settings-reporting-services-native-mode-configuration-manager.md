@@ -36,7 +36,7 @@ Before you can use Report Server email delivery, you must set configuration valu
 |Method|Description|
 |------|-----------|
 |Report Server Configuration Manager| Use the Report Server Configuration Manager if you're specifying just an SMTP server and a user account that has permission to send email. These settings are the minimum required for configuring the Report Server email delivery extension.|
-|Optional<br>`rsreportserver.config` file|Use a text editor to configure extra settings if you're using a local SMTP server or you're restricting email delivery to specific hosts. The `rsreportserver.config` file contains all of the configuration settings for report server email delivery.  For more information about finding and modifying configuration files, see [Modify a Reporting Services configuration file (`rsreportserver.config`)](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md).|
+|Optional<br>`rsreportserver.config` file|Use a text editor to configure extra settings if you use a local SMTP server or you're restricting email delivery to specific hosts. The `rsreportserver.config` file contains all of the configuration settings for report server email delivery.  For more information about finding and modifying configuration files, see [Modify a Reporting Services configuration file (`rsreportserver.config`)](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md).|
 
 > [!NOTE]
 > Report server email settings are based on CDO. For more information about specific settings, see the CDO production documentation.
@@ -45,7 +45,7 @@ Before you can use Report Server email delivery, you must set configuration valu
 
 1. Start the Report Server Configuration Manager and connect to the report server instance.
 1. Go to **E-mail Settings**. 
-1. In **Sender Address**, enter the email address to use in the **From:** field of a generated email. Specify a user account that has permission to send email from the SMTP server. The value you enter for the **Sender Address** is saved in the `<From>` field in the `rsreportserver.config` file.
+1. In **Sender Address**, enter the email address to use in the **From:** field of a generated email. Specify a user account that has permission to send emails from the SMTP server. The value you enter for the **Sender Address** is saved in the `<From>` field in the `rsreportserver.config` file.
 1. In **SMTP Server**, specify the SMTP server or gateway to use. The value you enter for the **SMTP Server** is saved in the `<SMTPServer>` field in the `rsreportserver.config` file. This value can be:
    - An IP address
    - A NetBIOS name of a computer on your corporate intranet
@@ -154,7 +154,7 @@ The following configuration settings determine the connection between the report
 - `<SendUsing>` is set to **1**.
 - `<SMTPServerPickupDirectory>` is set to a folder on the local drive.
    > [!NOTE]
-   > Meke sure that you don't set `<SMTPServer>` if you use a local SMTP server.
+   > Make sure that you don't set `<SMTPServer>` if you use a local SMTP server.
 - `<From>` sets the value that appears in the **From:** line of an email message. This value is required.
 
 ### Configure a local SMTP service for the report server

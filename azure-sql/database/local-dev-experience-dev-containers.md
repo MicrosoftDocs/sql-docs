@@ -4,25 +4,26 @@ titleSuffix: Azure SQL Database
 description: Learn about the local development experience for Azure SQL Database with Dev Container templates.
 author: croblesm
 ms.author: roblescarlos
-ms.reviewer: wiassaf
-ms.date: 07/22/2024
+ms.reviewer: wiassaf, randolphwest
+ms.date: 07/31/2024
 ms.service: sql-database
 ms.topic: overview
 ---
 
 # What are the Dev Container templates for Azure SQL Database?
-[!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
+
+[!INCLUDE [appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
 Dev Containers provide a comprehensive solution for enhancing local development for Azure SQL Database. Dev container templates offer developers a seamless and efficient development environment, enabling them to build applications for Azure SQL Database with ease and confidence. Dev containers can be utilized in any development environment whether is local or in the cloud, you can promote consistency across teams and workflows.
 
-:::image type="content" source="media/local-dev-experience-dev-container/azure-sql-db-dev-containers.png" border="false" alt-text="Diagram that shows the Azure SQL Database with dev containers local development experience" lightbox="media/local-dev-experience-dev-container/azure-sql-db-dev-containers.png":::
+:::image type="content" source="media/local-dev-experience-dev-containers/azure-sql-db-dev-containers.png" alt-text="Diagram that shows the Azure SQL Database with dev containers local development experience." lightbox="media/local-dev-experience-dev-containers/azure-sql-db-dev-containers.png":::
 
-The Dev Container templates for Azure SQL Database  simplify the development process by providing preconfigured environments that eliminate the need for manual setup. Developers can start coding immediately with all necessary tools and dependencies in place, using popular programming languages. These templates are compatible with Visual Studio Code and GitHub Codespaces, enabling a seamless transition from local development to cloud environments.
+The Dev Container templates for Azure SQL Database simplify the development process by providing preconfigured environments that eliminate the need for manual setup. Developers can start coding immediately with all necessary tools and dependencies in place, using popular programming languages. These templates are compatible with Visual Studio Code and GitHub Codespaces, enabling a seamless transition from local development to cloud environments.
 
 The local development environment mimics Azure SQL Database, allowing you to manage data and test applications efficiently. Once ready, **GitHub Actions** automate the deployment process, transitioning seamlessly your application to **Azure Static Web Apps** or **Azure Web App Service** and **Azure SQL Database**. This streamlined workflow enhances productivity, reduces setup time, and ensures consistency between local and production environments, helping you deliver high-quality applications faster.
 
-> [!TIP]
-> A GitHub Action and an Azure DevOps Task are available in [devcontainers/ci](https://github.com/devcontainers/ci) for running a repository's dev container in continuous integration (CI) builds. This allows you to reuse the same setup that you are using for local development to also build and test your code in CI.
+> [!TIP]  
+> A GitHub Action and an Azure DevOps Task are available in [devcontainers/ci](https://github.com/devcontainers/ci) for running a repository's dev container in continuous integration (CI) builds. This allows you to reuse the same setup that you use for local development to also build and test your code in CI.
 
 ## How Dev Containers work
 
@@ -60,7 +61,7 @@ Local development with dev containers reduces cloud costs associated with develo
 
 Dev containers support cloud-native development scenarios, aligning with modern application architectures and frameworks. This ensures compatibility with Azure SQL Database and facilitates seamless deployment to Azure environments. By embracing cloud-native trends, we position Azure SQL Database as the platform of choice for modern, cloud-native applications, driving long-term adoption and revenue growth.
 
-To fully appreciate the impact of dev containers on your Azure SQL Database projects, consider the following key features that enhance and simplify the development process:
+To fully appreciate the effect of dev containers on your Azure SQL Database projects, consider the following key features that enhance and simplify the development process:
 
 ### Visual Studio Code extensions
 
@@ -71,12 +72,12 @@ To fully appreciate the impact of dev containers on your Azure SQL Database proj
 - `github.codespaces`: Extension for working with GitHub Codespaces.
 - `ms-azuretools.vscode-docker`: Docker extension for managing containers.
 
-> [!TIP]
-> There will be more extensions available depending on the template you choose.
+> [!TIP]  
+> There are more extensions available, depending on the template you choose.
 
 ### Preconfigured environment
 
-All of the below tools and utilities are pre-loaded in the dev container. You don't need to download or install!
+All of the below tools and utilities are preloaded in the dev container. You don't need to download or install anything else.
 
 - **.NET / .NET Aspire / Node / Python**: The environment includes your preferred programming language/framework preinstalled and configured, ready for development.
 - **Azure CLI**: Tools for managing Azure resources and deployments.
@@ -86,10 +87,10 @@ All of the below tools and utilities are pre-loaded in the dev container. You do
 - **SQLCMD**: A command-line utility you can use to interact with the database, run queries, and more.
 - **SqlPackage**: Command-line utility for deploying database changes, including schema updates and data migrations.
 
-> [!IMPORTANT]
+> [!IMPORTANT]  
 > While the container now uses the `mcr.microsoft.com/azure-sql-edge` image, designed for edge computing scenarios and offering a subset of SQL Server's features along with built-in AI, all database development within this dev container can still be validated for Azure SQL Database using the SQL Database Project. The SQL Database project is preconfigured with the target platform set as Azure SQL Database.
 
-### Visual Studio Code Tasks
+### Visual Studio Code tasks
 
 A set of predefined tasks in Visual Studio Code to simplify common actions:
 
@@ -97,27 +98,25 @@ A set of predefined tasks in Visual Studio Code to simplify common actions:
 - **2. Build SQL Database project**: Builds the SQL Database project using `dotnet build`.
 - **3. Publish SQL Database Project**: Publish the SQL Database project to the database container.
 
-> [!TIP]
-> There will be specific tasks available depending on the template you choose.
+> [!TIP]  
+> There are specific tasks available, depending on the template you choose.
 
 ## Available templates
 
 The Dev Container templates for Azure SQL Database, are available for the following programming languages / frameworks:
 
 | Programming Language / Framework | Description |
-|----------------------------------|-------------|
+| --- | --- |
 | [.NET](https://github.com/microsoft/azuresql-devcontainers/tree/main/src/dotnet) | A development environment for .NET and Azure SQL, enabling streamlined local development and testing. |
 | [.NET Aspire](https://github.com/microsoft/azuresql-devcontainers/tree/main/src/dotnet-aspire) | A development environment for .NET Aspire and Azure SQL, enabling streamlined local development and testing. |
-| [Node.js](https://github.com/microsoft/azuresql-devcontainers/tree/main/src/javascript-node) | A development environment for Node.js (Javascript) and Azure SQL, enabling streamlined local development and testing. |
+| [Node.js](https://github.com/microsoft/azuresql-devcontainers/tree/main/src/javascript-node) | A development environment for Node.js (JavaScript) and Azure SQL, enabling streamlined local development and testing. |
 | [Python](https://github.com/microsoft/azuresql-devcontainers/tree/main/src/python) | A development environment for Python and Azure SQL, enabling streamlined local development and testing. |
 
-> [!TIP]
+> [!TIP]  
 > Each template comes with a pre-configured Azure SQL Database, making it easy to start developing right away!
 
 ## Related content
 
-Learn more about the local development experience for Azure SQL Database:
-
-- [Overview - Local development experience for Azure SQL Database](./local-dev-experience-overview.md)
-- [Quickstart: Set up a development environment with an Azure SQL Database Dev Container template](./local-dev-experience-dev-containers-quickstart.md)
-- [Quickstart: Create a local development environment for Azure SQL Database with the SQL Database Projects Extension](./local-dev-experience-quickstart.md)
+- [What is the local development experience for Azure SQL Database?](local-dev-experience-overview.md)
+- [Quickstart: Set up a development environment with a Dev Container template for Azure SQL Database](local-dev-experience-dev-containers-quickstart.md)
+- [Quickstart: Create a local development environment for Azure SQL Database](local-dev-experience-quickstart.md)

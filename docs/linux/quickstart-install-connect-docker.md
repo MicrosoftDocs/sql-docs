@@ -331,8 +331,6 @@ The following table provides a description of the parameters in the previous `sq
 
 1. As a final step, [change your SA password](#sapassword) in a production environment, because the `MSSQL_SA_PASSWORD` is visible in `ps -eax` output and stored in the environment variable of the same name.
 
----
-
 ::: moniker-end
 
 <!--SQL Server 2019 on Linux-->
@@ -908,6 +906,29 @@ The following steps use the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-m
 
    ::: zone-end
 
+<!--SQL Server 2017 on Linux-->
+::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
+
+1. Once inside the container, connect locally with **sqlcmd**, using its full path.
+
+   ```bash
+   /opt/mssql-tools/bin/sqlcmd -S localhost -U <userid> -P "<YourNewStrong@Passw0rd>"
+   ```
+
+   > [!NOTE]  
+   > Newer versions of **sqlcmd** are secure by default. For more information about connection encryption, see [sqlcmd utility](../tools/sqlcmd/sqlcmd-utility.md) for Windows, and [Connecting with sqlcmd](../connect/odbc/linux-mac/connecting-with-sqlcmd.md) for Linux and macOS. If the connection doesn't succeed, you can add the `-No` option to **sqlcmd** to specify that encryption is optional, not mandatory.
+
+   You can omit the password on the command-line to be prompted to enter it. For example:
+
+   ```bash
+   /opt/mssql-tools/bin/sqlcmd -S localhost -U <userid>
+   ```
+
+::: moniker-end
+
+<!--SQL Server 2019 on Linux-->
+::: moniker range="= sql-server-linux-ver15 || = sql-server-ver15"
+
 1. Once inside the container, connect locally with **sqlcmd**, using its full path.
 
    ```bash
@@ -922,6 +943,28 @@ The following steps use the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-m
    ```bash
    /opt/mssql-tools18/bin/sqlcmd -S localhost -U <userid>
    ```
+
+::: moniker-end
+
+<!--SQL Server 2022 on Linux-->
+::: moniker range="= sql-server-linux-ver16 || = sql-server-ver16"
+
+1. Once inside the container, connect locally with **sqlcmd**, using its full path.
+
+   ```bash
+   /opt/mssql-tools18/bin/sqlcmd -S localhost -U <userid> -P "<YourNewStrong@Passw0rd>"
+   ```
+
+   > [!NOTE]  
+   > Newer versions of **sqlcmd** are secure by default. For more information about connection encryption, see [sqlcmd utility](../tools/sqlcmd/sqlcmd-utility.md) for Windows, and [Connecting with sqlcmd](../connect/odbc/linux-mac/connecting-with-sqlcmd.md) for Linux and macOS. If the connection doesn't succeed, you can add the `-No` option to **sqlcmd** to specify that encryption is optional, not mandatory.
+
+   You can omit the password on the command-line to be prompted to enter it. For example:
+
+   ```bash
+   /opt/mssql-tools18/bin/sqlcmd -S localhost -U <userid>
+   ```
+
+::: moniker-end
 
 1. If successful, you should get to a **sqlcmd** command prompt: `1>`.
 

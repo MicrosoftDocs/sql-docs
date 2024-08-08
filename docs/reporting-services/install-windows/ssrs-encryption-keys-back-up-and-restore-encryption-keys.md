@@ -63,7 +63,7 @@ Backing up the symmetric key is a process that writes the key to a file that you
   
 ### <a name="bkmk_backup_rskeymgmt"></a> Back up encryption keys with the rskeymgmt utility (Native mode)  
   
-1.  Run **rskeymgmt.exe** locally on the computer that hosts the report server. Use the `-e` extract argument to copy the key, provide a file name, and specify a password. The following example illustrates the required arguments:  
+- Run **rskeymgmt.exe** locally on the computer that hosts the report server. Use the `-e` extract argument to copy the key, provide a file name, and specify a password. The following example illustrates the required arguments:  
   
     ```  
     rskeymgmt -e -f d:\rsdbkey.snk -p<password>  
@@ -97,7 +97,7 @@ For more information about creating symmetric keys, see [Initialize a Report Ser
   
 ###  <a name="bkmk_restore_rskeymgmt"></a> Restore encryption keys with the rskeymgmt utility (Native mode)  
   
-1.  Run **rskeymgmt.exe** locally on the computer that hosts the report server. Use the **-a** argument to restore the keys. Provide a fully qualified file name and specify a password. The following example illustrates the arguments you must specify:  
+- Run **rskeymgmt.exe** locally on the computer that hosts the report server. Use the **-a** argument to restore the keys. Provide a fully qualified file name and specify a password. The following example illustrates the arguments you must specify:  
   
     ```  
     rskeymgmt -a -f d:\rsdbkey.snk -p<password>  

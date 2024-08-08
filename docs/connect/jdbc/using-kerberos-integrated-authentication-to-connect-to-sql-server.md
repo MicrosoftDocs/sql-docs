@@ -3,7 +3,7 @@ title: Using Kerberos integrated authentication to connect to SQL Server
 description: Learn how to configure Kerberos integrated authentication to connect to SQL Server on Windows, Linux, and macOS.
 author: David-Engel
 ms.author: davidengel
-ms.date: 11/07/2022
+ms.date: 07/31/2024
 ms.service: sql
 ms.subservice: connectivity
 ms.custom: linux-related-content
@@ -252,6 +252,19 @@ You may also optionally provide the path to the native GSS library.
 ```
 
 For more information on JVM arguments, see the official Java documentation.
+
+## Extended Protection with Kerberos
+
+You can also enable Extended Protection for Kerberos when using the JDBC driver. The one restriction being that for the JDBC driver, when using Extended Protection, Force Encryption must not be enabled.
+
+For more information on how to enable Extended Protection, see:
+
+
+- [Connect to the Database Engine Using Extended Protection](../../database-engine/configure-windows/connect-to-the-database-engine-using-extended-protection.md)
+
+For more information on connecting with encryption, see:
+
+- [Connecting with encryption](connecting-with-ssl-encryption.md)
 
 ## See also
 

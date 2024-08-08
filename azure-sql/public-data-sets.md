@@ -5,7 +5,7 @@ author: VanMSFT
 ms.author: vanto
 ms.reviewer: mathoma
 ms.date: 10/01/2018
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.subservice: development
 ms.topic: reference
 ms.custom: sqldbrb=2

@@ -5,8 +5,8 @@ description: Overview of private endpoint feature.
 author: rohitnayakmsft
 ms.author: rohitna
 ms.reviewer: wiassaf, vanto, mathoma, randolphwest
-ms.date: 05/28/2024
-ms.service: sql-database
+ms.date: 07/03/2024
+ms.service: azure-sql-database
 ms.subservice: security
 ms.topic: overview
 ms.custom:
@@ -193,6 +193,9 @@ After meeting the prerequisite, clients need to explicitly [choose **Redirect** 
 If it isn't feasible to modify the firewall settings to allow outbound access on the 1433-65535 port range, an alternative solution is to change the connection policy to **Proxy**.
 
 Existing private endpoints using **Default** connection policy will be using the Proxy connection policy with port 1433. The reason for doing this is to avoid any disruption to client traffic from reaching SQL Database due to requisite port ranges for redirection not being open.
+
+> [!NOTE]
+> For dedicated SQL pools, the connection policy when using private endpoints is always **Proxy**. Changing the setting will not affect to dedicated SQL pools when using private endpoints.
 
 ## On-premises connectivity over private peering
 

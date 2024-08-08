@@ -401,7 +401,7 @@ sections:
       - question: |
           How do I remove the extension?
         answer: |
-             Remove the extension by [unregistering](sql-agent-extension-manually-register-single-vm.md#unregister-from-extension) the SQL Server VM from the SQL IaaS Agent extension. 
+             Remove the extension by [deleting the extension](sql-agent-extension-manually-register-single-vm.md#delete-the-extension) from the SQL Server VM
       - question: |
           Will registering my VM with the new SQL IaaS Agent extension bring additional costs?
         answer:  No. The SQL IaaS Agent extension just enables additional manageability for SQL Server on Azure VM with no additional charges. 

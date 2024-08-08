@@ -6,7 +6,7 @@ author: AlainDormehlMSFT
 ms.author: aldorme
 ms.reviewer: wiassaf, mathoma
 ms.date: 11/04/2021
-ms.service: sql-db-mi
+ms.service: azure-sql
 ms.subservice: performance
 ms.topic: troubleshooting
 ms.custom: sqldbrb=2

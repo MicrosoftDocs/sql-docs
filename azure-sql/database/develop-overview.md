@@ -6,7 +6,7 @@ author: dzsquared
 ms.author: drskwier
 ms.reviewer: wiassaf, mathoma
 ms.date: 11/14/2019
-ms.service: sql-db-mi
+ms.service: azure-sql
 ms.subservice: development
 ms.topic: conceptual
 ms.custom: sqldbrb=2

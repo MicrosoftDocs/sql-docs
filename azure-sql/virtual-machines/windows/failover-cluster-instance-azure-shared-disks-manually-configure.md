@@ -18,8 +18,6 @@ tags: azure-service-management
 # Create an FCI with Azure shared disks (SQL Server on Azure VMs)
 [!INCLUDE[appliesto-sqlvm](../../includes/appliesto-sqlvm.md)]
 
-[!INCLUDE[tip-for-multi-subnet-ag](../../includes/virtual-machines-ag-listener-multi-subnet.md)]
-
 This article explains how to create a failover cluster instance (FCI) by using Azure shared disks with SQL Server on Azure Virtual Machines (VMs).
 
 To learn more, see an overview of [FCI with SQL Server on Azure VMs](failover-cluster-instance-overview.md) and [cluster best practices](hadr-cluster-best-practices.md).
@@ -32,9 +30,11 @@ To learn more, see an overview of [FCI with SQL Server on Azure VMs](failover-cl
 Before you complete the instructions in this article, you should already have:
 
 - An Azure subscription. Get started with a [free Azure account](https://azure.microsoft.com/free/).
-- [Two or more prepared Windows Azure virtual machines](failover-cluster-instance-prepare-vm.md) in an availability set, or availability zones.
+- [Two or more prepared Azure Windows virtual machines](failover-cluster-instance-prepare-vm.md) in an availability set, or availability zones.
 - An account that has permissions to create objects on both Azure virtual machines and in Active Directory.
 - The latest version of [Azure PowerShell](/powershell/azure/install-az-ps).
+
+[!INCLUDE[tip-for-multi-subnet-ag](../../includes/virtual-machines-fci-multi-subnet.md)]
 
 ## Add Azure shared disk
 
@@ -76,7 +76,7 @@ To initialize the disks for your SQL Server VM, follow these steps:
 
 ## Create Windows Failover Cluster
 
-The steps to create your Windows Server Failover cluster vary depending on if you deployed your SQL Server VMs to a single subnet, or multiple subnets. To create your cluster, follow the steps in the tutorial for either a [multi-subnet scenario](availability-group-manually-configure-tutorial-multi-subnet.md#add-failover-cluster-feature) or a [single subnet scenario](availability-group-manually-configure-tutorial-single-subnet.md#create-the-cluster). Though these tutorials are for creating an availability group, the steps to create the cluster are the same.
+The steps to create your Windows Server Failover Cluster differ between single subnet and multi-subnet environments. To create your cluster, follow the steps in the tutorial for either a [multi-subnet scenario](availability-group-manually-configure-tutorial-multi-subnet.md#add-failover-cluster-feature) or a [single subnet scenario](availability-group-manually-configure-tutorial-single-subnet.md#create-the-cluster). Though these tutorials create an availability group, the steps to create the cluster are the same for a failover cluster instance. 
 
 ## Configure quorum
 
@@ -90,15 +90,16 @@ Validate the cluster on one of the virtual machines by using the Failover Cluste
 
 To validate the cluster using the UI, follow these steps:
 
-1. Under **Server Manager**, select **Tools**, and then select **Failover Cluster Manager**.
-1. Under **Failover Cluster Manager**, select **Action**, and then select **Validate Configuration**.
+1. In **Server Manager**, select **Tools**, and then select **Failover Cluster Manager**.
+1. Right-click the cluster in **Failover Cluster Manager**, select **Validate Cluster** to open the **Validate a Configuration Wizard**.
+1. On the **Validate a Configuration Wizard**, select **Next**.
+1. On the **Select Servers or a Cluster** page, enter the names of both virtual machines.
+1. On the **Testing options** page, select **Run only tests I select**.
 1. Select **Next**.
-1. Under **Select Servers or a Cluster**, enter the names of both virtual machines.
-1. Under **Testing options**, select **Run only tests I select**.
+1. On the  **Test Selection** page, select all tests *except* **Storage**.
 1. Select **Next**.
-1. Under **Test Selection**, select all tests *except* **Storage**.
-1. Select **Next**.
-1. Under **Confirmation**, select **Next**.  The **Validate a Configuration** wizard runs the validation tests.
+1. On the **Confirmation** page, select **Next**.  The **Validate a Configuration** wizard runs the validation tests.
+
 
 To validate the cluster by using PowerShell, run the following script from an administrator PowerShell session on one of the virtual machines:
 
@@ -137,7 +138,11 @@ To add disks to your cluster, follow these steps:
 
 After you've configured the failover cluster and all cluster components, including storage, you can create the SQL Server FCI.
 
-1. Connect to the first virtual machine by using Remote Desktop Protocol (RDP).
+### Create first node in the SQL FCI
+
+To create the first node in the SQL Server FCI, follow these steps:
+
+1. Connect to the first virtual machine by using Remote Desktop Protocol (RDP) or Bastion.
 
 1. In **Failover Cluster Manager**, make sure that all core cluster resources are on the first virtual machine. If necessary, move the disks to that virtual machine.
 
@@ -160,20 +165,24 @@ After you've configured the failover cluster and all cluster components, includi
 
 1. On the **Cluster Disk Selection** page, select all the shared disks that were attached to the VM.
 
-    :::image type="content" source="./media/failover-cluster-instance-azure-shared-disk-manually-configure/sql-install-cluster-disk-selection.png" alt-text="Cluster Disk Selection":::
+    :::image type="content" source="./media/failover-cluster-instance-azure-shared-disk-manually-configure/sql-install-cluster-disk-selection.png" alt-text="Screenshot of the Cluster Disk Selection.":::
 
 1. On the **Cluster Network Configuration** page, the IP you provide varies depending on if your SQL Server VMs were deployed to a single subnet, or multiple subnets.
 
    1. For a **single subnet environment**, provide the IP address that you plan to add to the [Azure Load Balancer](failover-cluster-instance-vnn-azure-load-balancer-configure.md)
    1. For a **multi-subnet environment**, provide the secondary IP address in the subnet of the _first_ SQL Server VM that you previously designated as the [IP address of the failover cluster instance network name](failover-cluster-instance-prepare-vm.md#assign-secondary-ip-addresses):
 
-   :::image type="content" source="./media/failover-cluster-instance-azure-shared-disk-manually-configure/sql-install-cluster-network-secondary-ip-vm-1.png" alt-text="provide the secondary IP address in the subnet of the first SQL Server VM that you previously designated as the IP address of the failover cluster instance network name":::
+   :::image type="content" source="./media/failover-cluster-instance-azure-shared-disk-manually-configure/sql-install-cluster-network-secondary-ip-vm-1.png" alt-text="Screenshot to provide the secondary IP address in the subnet of the first SQL Server VM.":::
 
 1. On the **Database Engine Configuration** page, ensure the database directories are on the Azure shared disk(s).
 
 1. After you complete the instructions in the wizard, setup installs the SQL Server FCI on the first node.
 
-1. After FCI installation succeeds on the first node, connect to the second node by using RDP.
+### Add additional nodes the SQL FCI
+
+To add an additional node to the SQL Server FCI, follow these steps:
+
+1. After FCI installation succeeds on the first node, connect to the second node by using RDP or Bastion.
 
 1. Open the **SQL Server Installation Center**, and then select **Installation**.
 
@@ -181,11 +190,11 @@ After you've configured the failover cluster and all cluster components, includi
 
 1. For a multi-subnet scenario, in **Cluster Network Configuration**, enter the secondary IP address in the subnet of the _second_ SQL Server VM subnet that you previously designated as the [IP address of the failover cluster instance network name](failover-cluster-instance-prepare-vm.md#assign-secondary-ip-addresses)
 
-    :::image type="content" source="./media/failover-cluster-instance-azure-shared-disk-manually-configure/sql-install-cluster-network-secondary-ip-vm-2.png" alt-text="enter the secondary IP address in the subnet of the second SQL Server VM subnet that you previously designated as the IP address of the failover cluster instance network name":::
+    :::image type="content" source="./media/failover-cluster-instance-azure-shared-disk-manually-configure/sql-install-cluster-network-secondary-ip-vm-2.png" alt-text="Screenshot to enter the secondary IP address in the subnet of the second SQL Server VM. ":::
 
     After selecting **Next** in **Cluster Network Configuration**, setup shows a dialog box indicating that SQL Server Setup detected multiple subnets as in the example image.  Select **Yes** to confirm.
 
-    :::image type="content" source="./media/failover-cluster-instance-azure-shared-disk-manually-configure/sql-install-multi-subnet-confirmation.png" alt-text="Multi Subnet Confirmation":::
+    :::image type="content" source="./media/failover-cluster-instance-azure-shared-disk-manually-configure/sql-install-multi-subnet-confirmation.png" alt-text="Screenshot showing multisubnet confirmation. ":::
 
 1. After you complete the instructions in the wizard, setup adds the second SQL Server FCI node.
 
@@ -196,9 +205,9 @@ After you've configured the failover cluster and all cluster components, includi
 
 ## Register with SQL IaaS Agent extension
 
-To manage your SQL Server VM from the portal, register it with the [SQL IaaS Agent extension](sql-agent-extension-manually-register-single-vm.md). Note that only [limited functionality](sql-server-iaas-agent-extension-automate-management.md#feature-benefits) will be available on SQL VMs that have failover clustered instances of SQL Server (FCIs).
+To manage your SQL Server VM from the portal, register it with the [SQL IaaS Agent extension](sql-agent-extension-manually-register-single-vm.md). Note that only [limited functionality](sql-server-iaas-agent-extension-automate-management.md#feature-benefits) will be available to SQL Server VMs that have failover clustered instances of SQL Server (FCIs).
 
-If your SQL Server VM has already been registered with the SQL IaaS Agent extension and you've enabled any features that require the agent, you'll need to [unregister](sql-agent-extension-manually-register-single-vm.md#unregister-from-extension) the SQL Server VM from the extension and register it again after your FCI is installed.
+If your SQL Server VM has already been registered with the SQL IaaS Agent extension and you've enabled any features that require the agent, you'll need to [delete the extension](sql-agent-extension-manually-register-single-vm.md#delete-the-extension) from the SQL Server VM and register it again after your FCI is installed.
 
 Register a SQL Server VM with PowerShell (-LicenseType can be `PAYG` or `AHUB`):
 

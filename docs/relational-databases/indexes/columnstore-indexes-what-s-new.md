@@ -4,7 +4,7 @@ description: "This article explains features by version and the latest new featu
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: wiassaf
-ms.date: 02/01/2024
+ms.date: 07/23/2024
 ms.service: sql
 ms.subservice: table-view-index
 ms.topic: conceptual
@@ -45,6 +45,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |Columnstore index can have a non-persisted computed column||||yes|yes|yes|||
 |Tuple mover background merge support|||||yes|yes|yes|yes|
 |Ordered clustered columnstore indexes||||||yes|yes|yes|
+|Ordered non-clustered columnstore indexes|||||||yes||
 
  <sup>1</sup> For [!INCLUDE [ssSDS](../../includes/sssds-md.md)], columnstore indexes are available in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] DTU Premium tiers, DTU Standard tiers - S3 and above, and all vCore tiers. For [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)] SP1 and later versions, columnstore indexes are available in all editions. For [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)] (before SP1) and earlier versions, columnstore indexes are only available in Enterprise Edition.
 

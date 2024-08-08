@@ -5,7 +5,7 @@ author: sravanisaluru
 ms.author: srsaluru
 ms.reviewer: vanto, randolphwest, mathoma
 ms.date: 12/23/2022
-ms.service: sql-managed-instance
+ms.service: azure-sql-managed-instance
 ms.subservice: security
 ms.topic: how-to
 ms.custom: sqldbrb=1

@@ -11,7 +11,13 @@ ms.topic: troubleshooting-general
 
 [!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
-This article provides two examples that return a list of servers with unhealthy extensions.
+Query Azure Resource Graph to identify the state the Azure extension for SQL Server on your Azure Arc-enabled servers. This article demonstrates queries that identify unhealthy extensions. 
+
+> [!TIP] 
+> If you're not already familiar, learn about Azure Resource Graph:
+> 
+> - [What is Azure Resource Graph](/azure/governance/resource-graph/overview)
+> - [Quickstart: Run Resource Graph query using Azure portal](/azure/governance/resource-graph/first-query-portal)
 
 ## Identify unhealthy extensions
 
@@ -76,3 +82,45 @@ $result | Format-Table -Property ExtensionHealth, LastUpdloadTimestamp, LastUplo
 ```
 
 To identify possible specific problems, review the value in the **Message** column from the results.
+
+## Identify extensions missing updates
+
+Identify extensions that have not updated status recently. This query returns a list of Azure extensions for SQL Server ordered by the number of days since the extension last updated its status. A value of '-1' indicates that the extension has crashed and there is a callstack in the extension status.
+
+```kusto
+// Show the timestamp extracted
+// If an extension has crashed (i.e. no heartbeat), fill timestamp with "1900/01/01, 00:00:00.000"
+//
+resources
+| where type =~ 'microsoft.hybridcompute/machines/extensions'
+| extend extensionStatus = parse_json(properties).instanceView.status.message
+| extend timestampExtracted = extract(@"timestampUTC\s*:\s*(\d{4}/\d{2}/\d{2}, \d{2}:\d{2}:\d{2}\.\d{3})", 1, tostring(extensionStatus))
+| extend timestampNullFilled = iff(isnull(timestampExtracted) or timestampExtracted == "", "1900/01/01, 00:00:00.000", timestampExtracted)
+| extend timestampKustoFormattedString = strcat(replace(",", "", replace("/", "-", replace("/", "-", timestampNullFilled))), "Z")
+| extend agentHeartbeatUtcTimestamp = todatetime(timestampKustoFormattedString)
+| extend agentHeartbeatLagInDays = datetime_diff('day', now(), agentHeartbeatUtcTimestamp)
+| project id, extensionStatus, agentHeartbeatUtcTimestamp, agentHeartbeatLagInDays
+| limit 100
+| order by ['agentHeartbeatLagInDays'] asc
+```
+
+This query returns a count of extensions grouped by the number of days since the extension last updated its status. A value of '-1' indicates that the extension has crashed and there is a callstack in the extension status.
+
+```kusto
+// Aggregate by timestamp
+//
+// -1: Crashed extension with no heartbeat, we got a stacktrace instead
+//  0: Healthy
+// >1: Stale/Offline
+//
+resources
+| where type =~ 'microsoft.hybridcompute/machines/extensions'
+| extend extensionStatus = parse_json(properties).instanceView.status.message
+| extend timestampExtracted = extract(@"timestampUTC\s*:\s*(\d{4}/\d{2}/\d{2}, \d{2}:\d{2}:\d{2}\.\d{3})", 1, tostring(extensionStatus))
+| extend timestampNullFilled = iff(isnull(timestampExtracted) or timestampExtracted == "", "1900/01/01, 00:00:00.000", timestampExtracted)
+| extend timestampKustoFormattedString = strcat(replace(",", "", replace("/", "-", replace("/", "-", timestampNullFilled))), "Z")
+| extend agentHeartbeatUtcTimestamp = todatetime(timestampKustoFormattedString)
+| extend agentHeartbeatLagInDays = iff(agentHeartbeatUtcTimestamp == todatetime("1900/01/01, 00:00:00.000Z"), -1, datetime_diff('day', now(), agentHeartbeatUtcTimestamp))
+| summarize numExtensions = count() by agentHeartbeatLagInDays
+| order by numExtensions desc
+```

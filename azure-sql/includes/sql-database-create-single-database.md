@@ -3,7 +3,7 @@ author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: vanto
 ms.date: 06/07/2022
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.subservice: service-overview
 ms.custom: devx-track-azurecli
 ms.topic: include

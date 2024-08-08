@@ -4,7 +4,7 @@ description: "jobs.sp_add_target_group_member adds a new member to a target grou
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: 10/30/2023
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:

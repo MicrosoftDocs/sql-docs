@@ -6,7 +6,7 @@ author: tameikal-msft
 ms.author: talawren
 ms.reviewer: vanto, nofield, mathoma
 ms.date: 02/21/2024
-ms.service: sql-db-mi
+ms.service: azure-sql
 ms.subservice: security
 ms.topic: conceptual
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"

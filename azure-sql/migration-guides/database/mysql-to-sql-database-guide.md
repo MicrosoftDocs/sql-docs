@@ -5,7 +5,7 @@ author: croblesm
 ms.author: roblescarlos
 ms.reviewer: mathoma
 ms.date: 03/19/2021
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.subservice: migration-guide
 ms.topic: how-to
 ms.custom:

@@ -5,7 +5,7 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma
 ms.date: 03/10/2022
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.subservice: security
 ms.topic: sample
 ms.custom: subject-policy-compliancecontrols

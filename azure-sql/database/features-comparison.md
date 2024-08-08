@@ -6,7 +6,7 @@ author: danimir
 ms.author: danil
 ms.reviewer: wiassaf, bonova, mathoma, danil
 ms.date: 04/30/2024
-ms.service: sql-db-mi
+ms.service: azure-sql
 ms.subservice: service-overview
 ms.custom:
   - build-2024
@@ -96,6 +96,8 @@ The following table lists the major features of SQL Server and provides informat
 | [Operators](/sql/t-sql/language-elements/operators-transact-sql) | Most, see individual operators |Yes, see [T-SQL differences](../managed-instance/transact-sql-tsql-differences-sql-server.md) |
 | [Polybase](/sql/relational-databases/polybase/polybase-guide) | No. You can query data in the files placed on Azure Blob Storage using `OPENROWSET` function or use [an external table that references a serverless SQL pool in Synapse Analytics](https://devblogs.microsoft.com/azure-sql/read-azure-storage-files-using-synapse-sql-external-tables/). | Yes, for Azure Data Lake Storage (ADLS) and Azure Blob Storage as data source. See [Data Virtualization with Azure SQL Managed Instance](../managed-instance/data-virtualization-overview.md) for more details. |
 | [Query Notifications](/sql/relational-databases/native-client/features/working-with-query-notifications) | No | Yes |
+| [Query Store](/sql/relational-databases/performance/monitoring-performance-by-using-the-query-store) | Yes | Yes | 
+| [Query Store for secondary replicas](/sql/relational-databases/performance/query-store-for-secondary-replicas) | No, the Query Store for secondary replicas feature isn't available for Azure SQL Database. Currently, the Query Store on the secondary replica contains information about workloads from the primary replica. | No, the Query Store for secondary replicas feature isn't available for Azure SQL Managed Instance. Currently, the Query Store on the secondary replica contains information about workloads from the primary replica.| 
 | [Machine Learning Services](/sql/advanced-analytics/what-is-sql-server-machine-learning) (_Formerly R Services_)| No | Yes, see [Machine Learning Services in Azure SQL Managed Instance](../managed-instance/machine-learning-services-overview.md) |
 | [Recovery models](/sql/relational-databases/backup-restore/recovery-models-sql-server) | Only Full Recovery that guarantees high availability is supported. Simple and Bulk Logged recovery models aren't available. | Only Full Recovery that guarantees high availability is supported. Simple and Bulk Logged recovery models aren't available. |
 | [Resource governor](/sql/relational-databases/resource-governor/resource-governor) | No | Yes |

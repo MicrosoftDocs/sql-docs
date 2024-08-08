@@ -363,8 +363,6 @@
         href: /azure/dms/tutorial-sql-server-to-azure-sql?toc=/azure/azure-sql/toc.json
       - name: Set up SQL Data Sync
         href: database/sql-data-sync-sql-server-configure.md
-      - name: Migrate SQLite to serverless
-        href: database/migrate-sqlite-db-to-azure-sql-serverless-offline-tutorial.md
     - name: Scale out
       items:
       - name: Configure Hyperscale named replicas
@@ -719,8 +717,8 @@
 
     - name: Monitor & Tune
       items:
-        - name: Monitor
-          href: database/monitoring-sql-database-azure-monitor.md
+        - name: Monitor SQL Database
+          href: database/monitoring-sql-database-azure-monitor.md 
         - name: Identify query performance bottlenecks
           href: database/identify-query-performance-issues.md
         - name: Use DMVs to monitor performance
@@ -1390,8 +1388,6 @@
         href: database/always-encrypted-landing.yml
       - name: Auditing
         href: managed-instance/auditing-configure.md
-      - name: Native Windows principals
-        href: managed-instance/native-windows-principals.md
       - name: Secure public endpoints
         href: managed-instance/public-endpoint-overview.md
       - name: Server trust groups
@@ -1468,8 +1464,8 @@
 
     - name: Monitor & Tune
       items:
-        - name: Monitor
-          href: managed-instance/monitoring-sql-managed-instance-azure-monitor.md
+        - name: Monitor SQL Managed Instance
+          href: managed-instance/monitoring-sql-managed-instance-azure-monitor.md 
         - name: Tune applications and databases for performance
           href: managed-instance/performance-guidance.md
         - name: Identify query performance bottlenecks
@@ -1807,14 +1803,16 @@
           items:
           - name: Prepare VM for FCI
             href: virtual-machines/windows/failover-cluster-instance-prepare-vm.md
-          - name: Create FCI
-            items:
+          - name: Create FCI with 
+            items: 
             - name: Azure shared disks
               href: virtual-machines/windows/failover-cluster-instance-azure-shared-disks-manually-configure.md
             - name: Storage Spaces Direct (Win2016+)
               href: virtual-machines/windows/failover-cluster-instance-storage-spaces-direct-manually-configure.md
             - name: Premium file share (Win2012+)
               href: virtual-machines/windows/failover-cluster-instance-premium-file-share-manually-configure.md
+            - name: Azure Elastic SAN
+              href: virtual-machines/windows/failover-cluster-instance-azure-elastic-san-manually-configure.md
           - name: Configure connectivity (Single subnet)
             items:
             - name: Virtual network name (VNN)

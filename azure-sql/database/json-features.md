@@ -6,7 +6,7 @@ author: uc-msft
 ms.author: umajay
 ms.reviewer: wiassaf, mathoma
 ms.date: 10/18/2021
-ms.service: sql-db-mi
+ms.service: azure-sql
 ms.subservice: development
 ms.topic: how-to
 ms.custom: sqldbrb=2

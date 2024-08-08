@@ -4,12 +4,13 @@ description: This page describes how to manage file space with single and pooled
 author: oslake
 ms.author: moslake
 ms.reviewer: wiassaf, mathoma
-ms.date: 09/08/2023
-ms.service: sql-database
+ms.date: 07/02/2024
+ms.service: azure-sql-database
 ms.subservice: deployment-configuration
 ms.topic: conceptual
-ms.custom: sqldbrb=1
-monikerRange: "= azuresql-db "
+ms.custom:
+  - sqldbrb=1
+monikerRange: "= azuresql-db"
 ---
 # Manage file space for databases in Azure SQL Database
 [!INCLUDE [appliesto-sqldb](../includes/appliesto-sqldb.md)]
@@ -24,14 +25,14 @@ This article describes different types of storage space for databases in Azure S
 
 With Azure SQL Database, there are workload patterns where the allocation of underlying data files for databases can become larger than the number of used data pages. This condition can occur when space used increases and data is later deleted. The reason is because file space allocated is not automatically reclaimed when data is deleted.
 
-Monitoring file space usage and shrinking data files may be necessary in the following scenarios:
+Monitoring file space usage and shrinking data files might be necessary in the following scenarios:
 
 - Allow data growth in an elastic pool when the file space allocated for its databases reaches the pool max size.
 - Allow decreasing the max size of a single database or elastic pool.
 - Allow changing a single database or elastic pool to a different service tier or performance tier with a lower max size.
 
 > [!NOTE]
-> Shrink operations should not be considered a regular maintenance operation. Data and log files that grow due to regular, recurring business operations do not require shrink operations. 
+> Shrink operations should not be considered a regular maintenance operation. Data and log files that grow due to regular, recurring business operations do not require shrink operations.
 
 ### Monitor file space usage
 
@@ -57,7 +58,7 @@ Understanding the following storage space quantities are important for managing 
 
 The following diagram illustrates the relationship between the different types of storage space for a database.
 
-:::image type="content" source="./media/file-space-manage/understand-database-space-quantities.png" alt-text="Diagram that demonstrates the size of difference database space concepts in the database quantity table.":::
+:::image type="content" source="media/file-space-manage/understand-database-space-quantities.png" alt-text="Diagram that demonstrates the size of difference database space concepts in the database quantity table.":::
 
 ### Query a single database for file space information
 
@@ -82,10 +83,10 @@ Understanding the following storage space quantities are important for managing 
 |**Data space used**|The summation of data space used by all databases in the elastic pool.||
 |**Data space allocated**|The summation of data space allocated by all databases in the elastic pool.||
 |**Data space allocated but unused**|The difference between the amount of data space allocated and data space used by all databases in the elastic pool.|This quantity represents the maximum amount of space allocated for the elastic pool that can be reclaimed by shrinking database data files.|
-|**Data max size**|The maximum amount of data space that can be used by the elastic pool for all of its databases.|The space allocated for the elastic pool should not exceed the elastic pool max size.  If this condition occurs, then space allocated that is unused can be reclaimed by shrinking database data files.|
+|**Data max size**|The maximum amount of data space that can be used by the elastic pool for all of its databases.|The space allocated for the elastic pool should not exceed the elastic pool max size. If this condition occurs, then space allocated that is unused can be reclaimed by shrinking database data files.|
 
 > [!NOTE]
-> The error message "The elastic pool has reached its storage limit" indicates that the database objects have been allocated enough space to meet the elastic pool storage limit, but there may be unused space in the data space allocation. Consider increasing the elastic pool's storage limit, or as a short-term solution, freeing up data space using the samples in [Reclaim unused allocated space](#reclaim-unused-allocated-space). You should also be aware of the potential negative performance impact of shrinking database files, see [Index maintenance after shrink](#index-maintenance-after-shrink).
+> The error message "The elastic pool has reached its storage limit" indicates that the database objects have been allocated enough space to meet the elastic pool storage limit, but there might be unused space in the data space allocation. Consider increasing the elastic pool's storage limit, or as a short-term solution, freeing up data space using the samples in [Reclaim unused allocated space](#reclaim-unused-allocated-space). You should also be aware of the potential negative performance impact of shrinking database files, see [Index maintenance after shrink](#index-maintenance-after-shrink).
 
 ## Query an elastic pool for storage space information
 
@@ -93,7 +94,7 @@ The following queries can be used to determine storage space quantities for an e
 
 ### Elastic pool data space used
 
-Modify the following query to return the amount of elastic pool data space used.  Units of the query result are in MB.
+Modify the following query to return the amount of elastic pool data space used. Units of the query result are in MB.
 
 ```sql
 -- Connect to master
@@ -106,7 +107,7 @@ ORDER BY end_time DESC;
 
 ### Elastic pool data space allocated and unused allocated space
 
-Modify the following examples to return a table listing the space allocated and unused allocated space for each database in an elastic pool. The table orders databases from those databases with the greatest amount of unused allocated space to the least amount of unused allocated space.  Units of the query result are in MB.  
+Modify the following examples to return a table listing the space allocated and unused allocated space for each database in an elastic pool. The table orders databases from those databases with the greatest amount of unused allocated space to the least amount of unused allocated space. Units of the query result are in MB.  
 
 The query results for determining the space allocated for each database in the pool can be added together to determine the total space allocated for the elastic pool. The elastic pool space allocated should not exceed the elastic pool max size.  
 
@@ -148,11 +149,11 @@ Write-Output $databaseStorageMetrics | Sort -Property DatabaseDataSpaceAllocated
 
 The following screenshot is an example of the output of the script:
 
-:::image type="content" source="./media/file-space-manage/elastic-pool-allocated-unused.png" alt-text="A screenshot of the output of the related PowerShell cmdlet, showing elastic pool allocated space and unused allocated space.":::
+:::image type="content" source="media/file-space-manage/elastic-pool-allocated-unused.png" alt-text="Screenshot of the output of the related PowerShell cmdlet, showing elastic pool allocated space, and unused allocated space.":::
 
 ### Elastic pool data max size
 
-Modify the following T-SQL query to return the last recorded elastic pool data max size.  Units of the query result are in MB.
+Modify the following T-SQL query to return the last recorded elastic pool data max size. Units of the query result are in MB.
 
 ```sql
 -- Connect to master
@@ -170,7 +171,7 @@ ORDER BY end_time DESC;
 
 ### <a id="shrinking-data-files"></a> Shrink data files
 
-Because of a potential impact to database performance, Azure SQL Database does not automatically shrink data files. However, customers may shrink data files via self-service at a time of their choosing. This should not be a regularly scheduled operation, but rather, a one-time event in response to a major reduction in data file used space consumption.
+Because of a potential impact to database performance, Azure SQL Database does not automatically shrink data files. However, customers might shrink data files via self-service at a time of their choosing. This should not be a regularly scheduled operation, but rather, a one-time event in response to a major reduction in data file used space consumption.
 
 > [!TIP]
 > It is not recommended to shrink data files if regular application workload will cause the files to grow to the same allocated size again.
@@ -181,8 +182,10 @@ In Azure SQL Database, to shrink files you can use either `DBCC SHRINKDATABASE` 
 - `DBCC SHRINKFILE` command supports more advanced scenarios:
     - It can target individual files as needed, rather than shrinking all files in the database.
     - Each `DBCC SHRINKFILE` command can run in parallel with other `DBCC SHRINKFILE` commands to shrink multiple files at the same time and reduce the total time of shrink, at the expense of higher resource usage and a higher chance of blocking user queries, if they are executing during shrink.
+        - Shrinking multiple data files concurrently lets you complete the shrink operation faster. If you use concurrent data file shrink, you might observe transient blocking of one shrink request by another.
     - If the tail of the file does not contain data, it can reduce allocated file size much faster by specifying the `TRUNCATEONLY` argument. This does not require data movement within the file.
 - For more information about these shrink commands, see [DBCC SHRINKDATABASE](/sql/t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql?view=azuresqldb-current&preserve-view=true) and [DBCC SHRINKFILE](/sql/t-sql/database-console-commands/dbcc-shrinkfile-transact-sql?view=azuresqldb-current&preserve-view=true).
+- Database and file shrink operations are supported in preview for Azure SQL Database Hyperscale. For more information, see [Shrink for Azure SQL Database Hyperscale](https://aka.ms/hs-shrink-preview).
 
 The following examples must be executed while connected to the target user database, not the `master` database.
 
@@ -193,7 +196,7 @@ To use `DBCC SHRINKDATABASE` to shrink all data and log files in a given databas
 DBCC SHRINKDATABASE (N'database_name');
 ```
 
-In Azure SQL Database, a database may have one or more data files, created automatically as data grows. To determine file layout of your database, including the used and allocated size of each file, query the `sys.database_files` catalog view using the following sample script:
+In Azure SQL Database, a database might have one or more data files, created automatically as data grows. To determine file layout of your database, including the used and allocated size of each file, query the `sys.database_files` catalog view using the following sample script:
 
 ```sql
 -- Review file properties, including file_id and name values to reference in shrink commands
@@ -220,7 +223,7 @@ Be aware of the potential negative performance impact of shrinking database file
 
 Unlike data files, Azure SQL Database automatically shrinks transaction log file to avoid excessive space usage that can lead to out-of-space errors. It is usually not necessary for customers to shrink the transaction log file.
 
-In Premium and Business Critical service tiers, if the transaction log becomes large, it may significantly contribute to local storage consumption toward the [maximum local storage](resource-limits-logical-server.md#storage-space-governance) limit. If local storage consumption is close to the limit, customers may choose to shrink transaction log using the [DBCC SHRINKFILE](/sql/t-sql/database-console-commands/dbcc-shrinkfile-transact-sql?view=azuresqldb-current&preserve-view=true) command as shown in the following example. This releases local storage as soon as the command completes, without waiting for the periodic automatic shrink operation.
+In Premium and Business Critical service tiers, if the transaction log becomes large, it might significantly contribute to local storage consumption toward the [maximum local storage](resource-limits-logical-server.md#storage-space-governance) limit. If local storage consumption is close to the limit, customers might choose to shrink transaction log using the [DBCC SHRINKFILE](/sql/t-sql/database-console-commands/dbcc-shrinkfile-transact-sql?view=azuresqldb-current&preserve-view=true) command as shown in the following example. This releases local storage as soon as the command completes, without waiting for the periodic automatic shrink operation.
 
 The following example should be executed while connected to the target user database, not the `master` database.
 
@@ -233,9 +236,9 @@ DBCC SHRINKFILE (2, TRUNCATEONLY);
 
 As an alternative to shrinking data files manually, auto-shrink can be enabled for a database. However, auto shrink can be less effective in reclaiming file space than `DBCC SHRINKDATABASE` and `DBCC SHRINKFILE`.  
 
-By default, auto-shrink is disabled, which is recommended for most databases. If it becomes necessary to enable auto-shrink, it is recommended to disable it once space management goals have been achieved, instead of keeping it enabled permanently. For more information, see [Considerations for AUTO_SHRINK](/troubleshoot/sql/admin/considerations-autogrow-autoshrink#considerations-for-auto_shrink).
+By default, auto-shrink is disabled, which is recommended for most databases. If it becomes necessary to enable auto-shrink, it is recommended to disable it once space management goals are achieved, instead of keeping it enabled permanently. For more information, see [Considerations for AUTO_SHRINK](/troubleshoot/sql/admin/considerations-autogrow-autoshrink#considerations-for-auto_shrink).
 
-For example, auto-shrink can be helpful in the specific scenario where an elastic pool contains many databases that experience significant growth and reduction in data file space used, causing the pool to approach its maximum size limit. This is not a common scenario. 
+For example, auto-shrink can be helpful in the specific scenario where an elastic pool contains many databases that experience significant growth and reduction in data file space used, causing the pool to approach its maximum size limit. This is not a common scenario.
 
 To enable auto-shrink, execute the following command while connected to your database (not the `master` database).
 
@@ -248,13 +251,13 @@ For more information about this command, see [DATABASE SET options](/sql/t-sql/s
 
 ### Index maintenance after shrink
 
-After a shrink operation is completed against data files, indexes may become fragmented. This reduces their performance optimization effectiveness for certain workloads, such as queries using large scans. If performance degradation occurs after the shrink operation is complete, consider index maintenance to rebuild indexes. Keep in mind that index rebuilds require free space in the database, and hence may cause the allocated space to increase, counteracting the effect of shrink.
+After a shrink operation is completed against data files, indexes might become fragmented. This reduces their performance optimization effectiveness for certain workloads, such as queries using large scans. If performance degradation occurs after the shrink operation is complete, consider index maintenance to rebuild indexes. Keep in mind that index rebuilds require free space in the database, and hence might cause the allocated space to increase, counteracting the effect of shrink.
 
 For more information about index maintenance, see [Optimize index maintenance to improve query performance and reduce resource consumption](/sql/relational-databases/indexes/reorganize-and-rebuild-indexes?view=azuresqldb-current&preserve-view=true).
 
 ## Shrink large databases
 
-When database allocated space is in hundreds of gigabytes or higher, shrink may require a significant time to complete, often measured in hours, or days for multi-terabyte databases. There are process optimizations and best practices you can use to make this process more efficient and less impactful to application workloads.
+When database allocated space is in hundreds of gigabytes or higher, shrink might require a significant time to complete, often measured in hours, or days for multi-terabyte databases. There are process optimizations and best practices you can use to make this process more efficient and less impactful to application workloads.
 
 ### Capture space usage baseline
 
@@ -308,9 +311,9 @@ ORDER BY page_count DESC;
 If there are indexes with high page count that have page density lower than 60-70%, consider rebuilding or reorganizing these indexes before shrinking data files.
 
 > [!NOTE]
-> For larger databases, the query to determine page density may take a long time (hours) to complete. Additionally, rebuilding or reorganizing large indexes also requires substantial time and resource usage. There is a tradeoff between spending extra time on increasing page density on one hand, and reducing shrink duration and achieving higher space savings on another.
+> For larger databases, the query to determine page density might take a long time (hours) to complete. Additionally, rebuilding or reorganizing large indexes also requires substantial time and resource usage. There is a tradeoff between spending extra time on increasing page density on one hand, and reducing shrink duration and achieving higher space savings on another.
 
-If there are multiple indexes with low page density, you may be able to rebuild them in parallel on multiple database sessions to speed up the process. However, make sure that you are not approaching database resource limits by doing so, and leave sufficient resource headroom for application workloads that may be running. Monitor resource consumption (CPU, Data IO, Log IO) in Azure portal or using the [sys.dm_db_resource_stats](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database?view=azuresqldb-current&preserve-view=true) view, and start additional parallel rebuilds only if resource utilization on each of these dimensions remains substantially lower than 100%. If CPU, Data IO, or Log IO utilization is at 100%, you can scale up the database to have more CPU cores and increase IO throughput. This may enable additional parallel rebuilds to complete the process faster.
+If there are multiple indexes with low page density, you might be able to rebuild them in parallel on multiple database sessions to speed up the process. However, make sure that you are not approaching database resource limits by doing so, and leave sufficient resource headroom for application workloads that might be running. Monitor resource consumption (CPU, Data IO, Log IO) in Azure portal or using the [sys.dm_db_resource_stats](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database?view=azuresqldb-current&preserve-view=true) view, and start additional parallel rebuilds only if resource utilization on each of these dimensions remains substantially lower than 100%. If CPU, Data IO, or Log IO utilization is at 100%, you can scale up the database to have more CPU cores and increase IO throughput. This might enable additional parallel rebuilds to complete the process faster.
 
 <a id="rebuild-indexes"></a> 
 
@@ -345,7 +348,7 @@ If you want to reduce allocated space for the file to the minimum possible, exec
 DBCC SHRINKFILE (4);
 ```
 
-If a workload is running concurrently with shrink, it may start using the storage space freed by shrink before shrink completes and truncates the file. In this case, shrink will not be able to reduce allocated space to the specified target.
+If a workload is running concurrently with shrink, it might start using the storage space freed by shrink before shrink completes and truncates the file. In this case, shrink will not be able to reduce allocated space to the specified target.
 
 You can mitigate this by shrinking each file in smaller steps. This means that in the `DBCC SHRINKFILE` command, you set the target that is slightly smaller than the current allocated space for the file, as seen in the results of [baseline space usage query](#capture-space-usage-baseline). For example, if allocated space for file with file_id 4 is 200,000 MB, and you want to shrink it to 100,000 MB, you can first set the target to 170,000 MB:
 
@@ -377,15 +380,15 @@ WHERE r.command IN ('DbccSpaceReclaim','DbccFilesCompact','DbccLOBCompact','DBCC
 ```
 
 > [!NOTE]
-> Shrink progress may be non-linear, and the value in the `percent_complete` column may remain virtually unchanged for long periods of time, even though shrink is still in progress.
+> Shrink progress can be non-linear, and the value in the `percent_complete` column might remain virtually unchanged for long periods of time, even though shrink is still in progress.
 
-Once shrink has completed for all data files, rerun the [space usage query](#capture-space-usage-baseline) (or check in Azure portal) to determine the resulting reduction in allocated storage size. If there is still a large difference between used space and allocated space, you can [rebuild indexes](#sample-index-rebuild-command) as described earlier. This may temporarily increase allocated space further, however shrinking data files again after rebuilding indexes should result in a deeper reduction in allocated space.
+Once shrink has completed for all data files, rerun the [space usage query](#capture-space-usage-baseline) (or check in Azure portal) to determine the resulting reduction in allocated storage size. If there is still a large difference between used space and allocated space, you can [rebuild indexes](#sample-index-rebuild-command) as described earlier. This can temporarily increase allocated space further, however shrinking data files again after rebuilding indexes should result in a deeper reduction in allocated space.
 
 ## Transient errors during shrink
 
-Occasionally, a shrink command may fail with various errors such as timeouts and deadlocks. In general, these errors are transient, and do not occur again if the same command is repeated. If shrink fails with an error, the progress it has made so far in moving data pages is retained, and the same shrink command can be executed again to continue shrinking the file.
+Occasionally, a shrink command can fail with various errors such as timeouts and deadlocks. In general, these errors are transient, and do not occur again if the same command is repeated. If shrink fails with an error, the progress it has made so far in moving data pages is retained, and the same shrink command can be executed again to continue shrinking the file.
 
-The following sample script shows how you can run shrink in a retry loop to automatically retry up to a configurable number of times when a timeout error or a deadlock error occurs. This retry approach is applicable to many other errors that may occur during shrink.
+The following sample script shows how you can run shrink in a retry loop to automatically retry up to a configurable number of times when a timeout error or a deadlock error occurs. This retry approach is applicable to many other errors that might occur during shrink.
 
 ```sql
 DECLARE @RetryCount int = 3; -- adjust to configure desired number of retries
@@ -424,7 +427,7 @@ END CATCH
 END;
 ```
 
-In addition to timeouts and deadlocks, shrink may encounter errors due to certain known issues.
+In addition to timeouts and deadlocks, shrink can encounter errors due to certain known issues.
 
 The errors returned and mitigation steps are as follows:
 
@@ -432,7 +435,7 @@ The errors returned and mitigation steps are as follows:
 
 This error occurs when there are long running active transactions that have generated row versions in persistent version store (PVS). The pages containing these row versions cannot be moved by shrink, hence it cannot make progress and fails with this error.
  
-To mitigate, you have to wait until these long running transactions have completed. Alternatively, you can identify and terminate these long running transactions, but this can impact your application if it does not handle transaction failures gracefully. One way to find long running transactions is by running the following query in the database where you ran the shrink command:
+To mitigate, you have to wait until these long running transactions have completed. Alternatively, you can identify and terminate these long running transactions, but this can affect your application if it does not handle transaction failures gracefully. One way to find long running transactions is by running the following query in the database where you ran the shrink command:
 
 ```sql
 -- Transactions sorted by duration
@@ -461,7 +464,7 @@ KILL 4242; -- replace 4242 with the session_id value from query results
 ```
 
 > [!CAUTION]
-> Terminating a transaction may negatively impact workloads.
+> Terminating a transaction can negatively impact workloads.
 
 Once long running transactions have been terminated or have completed, an internal background task will clean up no longer needed row versions after some time. You can monitor PVS size to gauge cleanup progress, using the following query. Run the query in the database where you ran the shrink command:
 
@@ -490,7 +493,7 @@ Once PVS size reported in the `persistent_version_store_size_gb` column is subst
 
 - **Error number: 5223**, error message: _%.*ls: Empty page %d:%d could not be deallocated._
 
-This error may occur if there are ongoing index maintenance operations such as `ALTER INDEX`. Retry the shrink command after these operations are complete.
+This error can occur if there are ongoing index maintenance operations such as `ALTER INDEX`. Retry the shrink command after these operations are complete.
 
 If this error persists, the associated index might have to be rebuilt. To find the index to rebuild, execute the following query in the same database where you ran the shrink command:
 
@@ -516,8 +519,7 @@ Rebuild the index identified by the query, and retry the shrink command.
 
 This error means that the data file cannot be shrunk further. You can move on to the next data file.
 
-## Next steps
-
+## Related content
 For information about database max sizes, see:
 
 - [Azure SQL Database vCore-based purchasing model limits for a single database](resource-limits-vcore-single-databases.md)

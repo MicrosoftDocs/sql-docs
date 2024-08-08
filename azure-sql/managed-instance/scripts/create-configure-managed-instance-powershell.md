@@ -6,7 +6,7 @@ author: urosmil
 ms.author: urmilano
 ms.reviewer: mathoma
 ms.date: 02/26/2024
-ms.service: sql-managed-instance
+ms.service: azure-sql-managed-instance
 ms.subservice: deployment-configuration
 ms.topic: sample
 ms.custom: devx-track-azurepowershell

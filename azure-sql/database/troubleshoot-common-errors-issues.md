@@ -6,7 +6,7 @@ author: suresh-kandoth
 ms.author: sureshka
 ms.reviewer: wiassaf, mathoma, vanto
 ms.date: 04/29/2024
-ms.service: sql-db-mi
+ms.service: azure-sql
 ms.subservice: connect
 ms.topic: troubleshooting
 ms.custom:

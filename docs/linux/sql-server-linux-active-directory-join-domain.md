@@ -53,8 +53,8 @@ To ensure proper domain name resolution, it's crucial to update the `/etc/resolv
 
 | Distribution | Reference article |
 | --- | --- |
-| **RHEL 8** | [Manually configuring the /etc/resolv.conf](https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/8/html/configuring_and_managing_networking/manually-configuring-the-etc-resolv-conf-file_configuring-and-managing-networking#manually-configuring-the-etc-resolv-conf-file_configuring-and-managing-networking) |
-| **RHEL 9** | [Manually configuring the /etc/resolv.conf](https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/9/html/configuring_and_managing_networking/manually-configuring-the-etc-resolv-conf-file_configuring-and-managing-networking#manually-configuring-the-etc-resolv-conf-file_configuring-and-managing-networking) |
+| **RHEL 8** | [Manually configuring the /etc/resolv.conf](https://docs.redhat.com/documentation/red_hat_enterprise_linux/8/html/configuring_and_managing_networking/manually-configuring-the-etc-resolv-conf-file_configuring-and-managing-networking#manually-configuring-the-etc-resolv-conf-file_configuring-and-managing-networking) |
+| **RHEL 9** | [Manually configuring the /etc/resolv.conf](https://docs.redhat.com/documentation/red_hat_enterprise_linux/9/html/configuring_and_managing_networking/manually-configuring-the-etc-resolv-conf-file_configuring-and-managing-networking#manually-configuring-the-etc-resolv-conf-file_configuring-and-managing-networking) |
 | **SLES 15** | [NETCONFIG_DNS_STATIC_SEARCHLIST and NETCONFIG_DNS_STATIC_SERVERS settings](https://documentation.suse.com/sles/15-SP4/html/SLES-all/cha-network.html#sec-network-manconf-files-resolv) |
 | **Ubuntu** | [Name Resolution section](https://ubuntu.com/server/docs/configuring-networks) |
 
@@ -263,8 +263,8 @@ For the most current instructions, refer to the official documentation provided 
 
 | Distribution | Reference article |
 | --- | --- |
-| **RHEL 8** | [Discovering and joining an AD Domain using SSSD](https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/8/html-single/integrating_rhel_systems_directly_with_windows_active_directory/index#connecting-rhel-systems-directly-to-ad-using-sssd_integrating-rhel-systems-directly-with-active-directory) |
-| **RHEL 9** | [Discovering and joining an AD Domain using SSSD](https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/9/html-single/integrating_rhel_systems_directly_with_windows_active_directory/index#overview-of-direct-integration-using-sssd_connecting-rhel-systems-directly-to-ad-using-sssd) |
+| **RHEL 8** | [Discovering and joining an AD Domain using SSSD](https://docs.redhat.com/documentation/red_hat_enterprise_linux/8/html-single/integrating_rhel_systems_directly_with_windows_active_directory/index#connecting-rhel-systems-directly-to-ad-using-sssd_integrating-rhel-systems-directly-with-active-directory) |
+| **RHEL 9** | [Discovering and joining an AD Domain using SSSD](https://docs.redhat.com/documentation/red_hat_enterprise_linux/9/html-single/integrating_rhel_systems_directly_with_windows_active_directory/index#overview-of-direct-integration-using-sssd_connecting-rhel-systems-directly-to-ad-using-sssd) |
 | **SLES** | [Join AD using realmd on SUSE Linux Enterprise Server 15](https://www.suse.com/support/kb/doc/?id=000021263) |
 | **Ubuntu** | [How to set up SSSD with Active Directory](https://ubuntu.com/server/docs/how-to-set-up-sssd-with-active-directory) |
 
@@ -337,7 +337,7 @@ Use the following steps to join a [!INCLUDE [ssnoversion-md](../includes/ssnover
 
    [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] uses SSSD and NSS for mapping user accounts and groups to security identifiers (SIDs). SSSD must be configured and running for [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] to create Active Directory logins successfully. **realmd** usually does this automatically as part of joining the domain, but in some cases, you must do this separately.
 
-   For more information, see how to [configure SSSD manually](https://access.redhat.com/articles/3023951), and [configure NSS to work with SSSD](https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/7/html/system-level_authentication_guide/configuring_services#Configuration_Options-NSS_Configuration_Options).
+   For more information, see how to [configure SSSD manually](https://access.redhat.com/articles/3023951), and [configure NSS to work with SSSD](https://docs.redhat.com/documentation/red_hat_enterprise_linux/7/html/system-level_authentication_guide/configuring_services#Configuration_Options-NSS_Configuration_Options).
 
 4. Verify that you can now gather information about a user from the domain, and that you can acquire a Kerberos ticket as that user. The following example uses **id**, [kinit](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html), and [klist](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/klist.html) commands for this.
 
@@ -355,11 +355,11 @@ Use the following steps to join a [!INCLUDE [ssnoversion-md](../includes/ssnover
    Default principal: user@CONTOSO.COM
    ```
 
-   If `id user\@contoso.com` returns, `No such user`, make sure that the SSSD service started successfully by running the command `sudo systemctl status sssd`. If the service is running and you still see the error, try enabling verbose logging for SSSD. For more information, see the Red Hat documentation for [Troubleshooting SSSD](https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/7/html/system-level_authentication_guide/trouble#SSSD-Troubleshooting).
+   If `id user\@contoso.com` returns, `No such user`, make sure that the SSSD service started successfully by running the command `sudo systemctl status sssd`. If the service is running and you still see the error, try enabling verbose logging for SSSD. For more information, see the Red Hat documentation for [Troubleshooting SSSD](https://docs.redhat.com/documentation/red_hat_enterprise_linux/7/html/system-level_authentication_guide/trouble#SSSD-Troubleshooting).
 
    If `kinit user\@CONTOSO.COM` returns, `KDC reply didn't match expectations while getting initial credentials`, make sure you specified the realm in uppercase.
 
-For more information, see the Red Hat documentation for [Discovering and Joining Identity Domains](https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/7/html/windows_integration_guide/realmd-domain).
+For more information, see the Red Hat documentation for [Discovering and Joining Identity Domains](https://docs.redhat.com/documentation/red_hat_enterprise_linux/7/html/windows_integration_guide/realmd-domain).
 
 ### <a id="option2"></a> Option 2: Use third-party OpenLDAP provider utilities
 

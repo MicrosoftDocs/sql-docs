@@ -5,7 +5,7 @@ author: danimir
 ms.author: danil
 ms.reviewer: mathoma
 ms.date: 02/27/2021
-ms.service: sql-managed-instance
+ms.service: azure-sql-managed-instance
 ms.subservice: high-availability
 ms.topic: how-to
 ms.custom:

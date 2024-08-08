@@ -5,7 +5,7 @@ author: croblesm
 ms.author: roblescarlos
 ms.reviewer: mathoma, randolphwest
 ms.date: 01/04/2024
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.subservice: replication
 ms.topic: conceptual
 ms.custom:

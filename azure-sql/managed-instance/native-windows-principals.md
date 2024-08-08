@@ -6,7 +6,7 @@ author: sravanisaluru
 ms.author: srsaluru
 ms.reviewer: mathoma, vanto, wiassaf
 ms.date: 07/03/2024
-ms.service: sql-managed-instance
+ms.service: azure-sql-managed-instance
 ms.subservice: security
 ms.topic: conceptual
 ---
@@ -20,6 +20,9 @@ The **Windows** authentication metadata mode is a new mode that allows users to 
 When your environment is synchronized between Active Directory (AD) and Microsoft Entra ID, Windows user accounts in AD are synchronized to the Microsoft Entra user accounts in Microsoft Entra ID.
 
 The authentication for SQL Managed Instance and SQL Server is based on metadata that are tied to logins. For Windows authentication logins, the metadata is created when the login is created from the `CREATE LOGIN FROM WINDOWS` command. For Microsoft Entra logins, the metadata is created when the login is created from the `CREATE LOGIN FROM EXTERNAL PROVIDER` command. For SQL authentication logins, the metadata is created when the `CREATE LOGIN WITH PASSWORD` command is executed. The authentication process is tightly coupled with the metadata stored in SQL Managed Instance or SQL Server.
+
+> [!NOTE]
+> Using native Windows principals with **Windows** authentication metadata mode in SQL Managed Instance is currently in preview.
 
 ## Authentication metadata modes
 

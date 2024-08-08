@@ -6,7 +6,7 @@ author: cesanu
 ms.author: cesanu
 ms.reviewer: maghan, mathoma
 ms.date: 07/04/2023
-ms.service: sql-db-mi
+ms.service: azure-sql
 ms.subservice: security
 ms.topic: conceptual
 ms.custom: sqldbrb=2

@@ -5,7 +5,7 @@ author: nofield
 ms.author: nofield
 ms.reviewer: wiassaf, vanto, mathoma
 ms.date: 02/16/2024
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.subservice: security
 ms.custom: has-azure-ad-ps-ref, azure-ad-ref-level-one-done
 ms.topic: tutorial

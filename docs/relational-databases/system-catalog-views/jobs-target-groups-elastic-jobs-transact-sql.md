@@ -4,7 +4,7 @@ description: "The jobs.target_groups system view contains target groups in Azure
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: 11/13/2023
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:

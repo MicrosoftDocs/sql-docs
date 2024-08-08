@@ -5,7 +5,7 @@ author: MladjoA
 ms.author: mlandzic
 ms.reviewer: mathoma
 ms.date: 10/18/2021
-ms.service: sql-db-mi
+ms.service: azure-sql
 ms.subservice: performance
 ms.topic: how-to
 ms.custom: sqldbrb=2

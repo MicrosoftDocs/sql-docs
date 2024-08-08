@@ -1,30 +1,32 @@
 ---
-title: "Conversion Functions (Transact-SQL)"
-description: "Conversion Functions (Transact-SQL)"
+title: "Conversion functions (Transact-SQL)"
+description: Conversion functions support data type casting and conversion in the SQL Server Database Engine.
 author: markingmyname
 ms.author: maghan
-ms.date: "07/24/2017"
+ms.reviewer: randolphwest
+ms.date: 07/08/2024
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
 dev_langs:
   - "TSQL"
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current ||=fabric"
+monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric"
 ---
-# Conversion Functions (Transact-SQL)
+# Conversion functions (Transact-SQL)
+
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw.md)]
 
-These functions support data type casting and conversion:
-  
-## In This Section  
-[CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
-[PARSE &#40;Transact-SQL&#41;](../../t-sql/functions/parse-transact-sql.md)  
-[TRY_CAST &#40;Transact-SQL&#41;](../../t-sql/functions/try-cast-transact-sql.md)  
-[TRY_CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/try-convert-transact-sql.md)  
-[TRY_PARSE &#40;Transact-SQL&#41;](../../t-sql/functions/try-parse-transact-sql.md)
-  
-## See also
-[Functions](../../t-sql/functions/functions.md)  
-[Data Types &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)
-  
-  
+The following functions support data type casting and conversion:
+
+## In this section
+
+[CAST and CONVERT](cast-and-convert-transact-sql.md)  
+[PARSE](parse-transact-sql.md)  
+[TRY_CAST](try-cast-transact-sql.md)  
+[TRY_CONVERT](try-convert-transact-sql.md)  
+[TRY_PARSE](try-parse-transact-sql.md)
+
+## Related content
+
+- [Functions](functions.md)
+- [Data types (Transact-SQL)](../data-types/data-types-transact-sql.md)

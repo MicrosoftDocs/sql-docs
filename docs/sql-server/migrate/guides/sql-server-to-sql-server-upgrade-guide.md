@@ -4,7 +4,7 @@ description: Step-by-step guidance for modernizing your data assets
 author: ajithkr-ms
 ms.author: ajithkr
 ms.reviewer: randolphwest
-ms.date: 01/15/2024
+ms.date: 07/25/2024
 ms.service: sql
 ms.subservice: migration-guide
 ms.topic: how-to
@@ -23,93 +23,34 @@ Learn about the supported versions and considerations for [upgrading SQL Server]
 
 To prepare for the migration, download and install the following items:
 
-- [MAP Toolkit](https://go.microsoft.com/fwlink/?LinkID=316883).
 - [Data Migration Assistant](https://www.microsoft.com/download/details.aspx?id=53595) v5.3 or later.
 - [Database Experimentation Assistant](https://www.microsoft.com/download/details.aspx?id=54090).
 
-## Pre-migration
+## Premigration
 
-Confirm source environment is supported  and you've addressed any prerequisites, you're ready to start the Pre-migration stage. The process involves conducting an inventory of the databases that you need to migrate. Next, assess the databases for potential migration issues or blockers, and then resolving any items you might have uncovered. The following two sections cover the pre-migration steps of discover, assess.
+After you confirm the source environment is supported and any prerequisites are addressed, you can start the Premigration stage. The process involves conducting an inventory of the databases that you need to migrate. Next, assess the databases for potential migration issues or blockers, and then resolving any items you might have uncovered. The following two sections cover the premigration steps of discover, assess.
 
 ### Discover
 
-The discover stage identifies existing data sources and details about the features that are being used. It's helpful to get a better understanding of and plan for the migration. This process involves scanning the network to identify all your organization's SQL instances together with the version and features in use.
+The [Azure Migrate: Discovery and assessment tool](/azure/migrate/migrate-services-overview#azure-migrate-discovery-and-assessment-tool) discovers and assesses on-premises VMware VMs, Hyper-V VMs, and physical servers for migration to Azure.
 
-To use the MAP Toolkit to create an inventory scan, complete the following steps.
+You can use this tool for the following steps:
 
-### Discover stage
+- **Azure readiness**: Assesses whether on-premises servers, [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] instances, and web apps are ready for migration to Azure.
+- **Azure sizing**: Estimates the size of Azure VMs/Azure SQL configuration/number of Azure VMware Solution nodes after migration.
+- **Azure cost estimation**: Estimates costs for running on-premises servers in Azure.
+- **Dependency analysis**: Identifies cross-server dependencies and optimization strategies for moving interdependent servers to Azure. Learn more about Discovery and assessment with [dependency analysis](/azure/migrate/concepts-dependency-visualization).
 
-1. Download the [MAP Toolkit](https://go.microsoft.com/fwlink/?LinkID=316883), and then install it.
+The Discovery and assessment tool uses a lightweight [Azure Migrate appliance](/azure/migrate/migrate-appliance) that you deploy on-premises.
 
-1. Run the MAP Toolkit.
-
-   1. Open the MAP Toolkit, and then on the left pane, select **Database**.
-
-      You'll be on the following screen:
-
-      :::image type="content" source="media/sql-server-to-sql-server-upgrade-guide/map-overview.png" alt-text="Screenshot of MAP Overview." lightbox="media/sql-server-to-sql-server-upgrade-guide/map-overview.png":::
-
-   1. Select **Create/Select database**.
-
-      :::image type="content" source="media/sql-server-to-sql-server-upgrade-guide/map-select-db.png" alt-text="Screenshot of MAP Create/Select DB.":::
-
-   1. Ensure that **Create an inventory database** is selected, enter a name for the database, a brief description, and then select **OK**.
-
-      :::image type="content" source="media/sql-server-to-sql-server-upgrade-guide/map-select-db-overview.png" alt-text="Screenshot of MAP Create/Select DB Overview.":::
-
-      The next step is to collect data from the database created.
-
-   1. Select **Collect inventory data**.
-
-      :::image type="content" source="media/sql-server-to-sql-server-upgrade-guide/map-collect-inventory-data.png" alt-text="Screenshot of MAP Collect Inventory Data.":::
-
-   1. In the Inventory and Assessment Wizard, select **SQL Server** and **SQL Server with Database Details**, and then select **Next**.
-
-      :::image type="content" source="media/sql-server-to-sql-server-upgrade-guide/map-inventory-wizard.png" alt-text="Screenshot of MAP Inventory and Assessment Wizard." lightbox="media/sql-server-to-sql-server-upgrade-guide/map-inventory-wizard.png":::
-
-   1. Select the best method option to search the computers on which Microsoft Products are hosted, and then select **Next**.
-
-      :::image type="content" source="media/sql-server-to-sql-server-upgrade-guide/map-discovery-methods.png" alt-text="Screenshot of MAP Inventory and Assessment Wizard Discovery Methods." lightbox="media/sql-server-to-sql-server-upgrade-guide/map-discovery-methods.png":::
-
-   1. Enter credentials or create new credentials for the systems that you want to explore, and then select **Next**.
-
-      :::image type="content" source="media/sql-server-to-sql-server-upgrade-guide/map-discovery-creds.png" alt-text="Screenshot of MAP Inventory and Assessment Wizard Discovery Credentials." lightbox="media/sql-server-to-sql-server-upgrade-guide/map-discovery-creds.png":::
-
-   1. Set the order of the credentials, and then select **Next**.
-
-      :::image type="content" source="media/sql-server-to-sql-server-upgrade-guide/map-discovery-creds-order.png" alt-text="Screenshot of MAP Inventory and Assessment Wizard Discovery Credentials Order." lightbox="media/sql-server-to-sql-server-upgrade-guide/map-discovery-creds-order.png":::
-
-      Now, you need to specify the credentials for each computer that you want to discover. You can use unique credentials for each computer/machine, or you can choose to use the **All Computer Credentials** list.
-
-   1. After setting up the credentials, select **Save**, and then select **Next**.
-
-      :::image type="content" source="media/sql-server-to-sql-server-upgrade-guide/map-discovery-creds-individual.png" alt-text="Screenshot of MAP Inventory and Assessment Wizard Discovery All Computer Credentials." lightbox="media/sql-server-to-sql-server-upgrade-guide/map-discovery-creds-individual.png":::
-
-   1. Verify your selection summary, and then select **Finish**.
-
-      :::image type="content" source="media/sql-server-to-sql-server-upgrade-guide/map-discovery-summary.png" alt-text="Screenshot of MAP Inventory and Assessment Wizard Summary." lightbox="media/sql-server-to-sql-server-upgrade-guide/map-discovery-summary.png":::
-
-   1. Wait for a few minutes (depending on the number of databases) for the Data Collection summary report.
-
-      :::image type="content" source="media/sql-server-to-sql-server-upgrade-guide/map-data-collection-summary.png" alt-text="Screenshot of MAP Inventory and Assessment Wizard Summary Report.":::
-
-   1. Select **Close**.
-
-      The Main window of the tool appears, showing a summary of the Database Discovery completed so far.
-
-   1. Report generation and data collection.
-
-  On the top-right corner of the tool, an **Options** page appears, which you can use to generate report about the SQL Server Assessment and the Database Details.
-
-  :::image type="content" source="media/sql-server-to-sql-server-upgrade-guide/map-excel-report.png" alt-text="Screenshot of MAP Report Generation." lightbox="media/sql-server-to-sql-server-upgrade-guide/map-excel-report.png":::
-
-   1. Select both options (one by one) to generate the report.
-
-      :::image type="content" source="media/sql-server-to-sql-server-upgrade-guide/map-excel-report-done.png" alt-text="Screenshot of MAP Report Generation Status.":::
+- The appliance runs on a VM or physical server. You can install it easily using a downloaded template.
+- The appliance discovers on-premises servers. It also continually sends server metadata and performance data to Azure Migrate.
+- Appliance discovery is agentless. Nothing is installed on discovered servers.
+- After appliance discovery, you can gather discovered servers into groups and run assessments for each group.
 
 ## Assess and convert
 
-After identifying the data sources, the next step is to assess the on-premises [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] instances. Use the Data Migration Assistant (DMA) to assess your source database before upgrading your [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] instance.
+After you identify the data sources, the next step is to assess the on-premises [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] instances. Use the Data Migration Assistant (DMA) to assess your source database before upgrading your [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] instance.
 
 To use DMA to create an assessment, complete the following steps.
 
@@ -127,13 +68,13 @@ To use DMA to create an assessment, complete the following steps.
 
    1. In **Connect to a server**, specify the name of the [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] instance to connect to, specify the Authentication type and Connection properties, and then select **Connect**.
 
-   1. In the **Add Sources** panel, select the database(s) you that want to assess, and then select **Add**.
+   1. In the **Add Sources** panel, select the databases you that want to assess, and then select **Add**.
 
       :::image type="content" source="media/sql-server-to-sql-server-upgrade-guide/dma-add-db.png" alt-text="Screenshot of Add databases." lightbox="media/sql-server-to-sql-server-upgrade-guide/dma-add-db.png":::
 
    1. Select **Start Assessment**.
 
-      Now wait for the assessment results; the duration of the assessment depends on the number of databases added and the schema size of each database. Results will be displayed per database as soon as they're available.
+      Now wait for the assessment results; the duration of the assessment depends on the number of databases added and the schema size of each database. Results are displayed per database as soon as they're available.
 
    1. Select the database that has completed assessment, and then switch between **Compatibility issues** and **Feature recommendations** by using the switcher.
 
@@ -189,7 +130,7 @@ This step is considered optional and not necessary to complete migration. To use
 
    1. Connect to the [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] on which you'll store your report databases.
 
-      You'll see the list of all reports in the server.
+      You see the list of all reports in the server.
 
    1. Select **New Report**.
 
@@ -208,11 +149,11 @@ This step is considered optional and not necessary to complete migration. To use
 
    1. Select the individual slices of the pie chart to view detailed metrics on performance.
 
-      :::image type="content" source="media/sql-server-to-sql-server-upgrade-guide/dea-chart.png" alt-text="Screenshot of Drill down report." lightbox="media/sql-server-to-sql-server-upgrade-guide/dea-chart.png":::
+      :::image type="content" source="media/sql-server-to-sql-server-upgrade-guide/dea-chart.png" alt-text="Screenshot of Drill-down report." lightbox="media/sql-server-to-sql-server-upgrade-guide/dea-chart.png":::
 
-      On the detail page for a performance change category, you'll see a list of queries in that category.
+      On the detail page for a performance change category, you see a list of queries in that category.
 
-      :::image type="content" source="media/sql-server-to-sql-server-upgrade-guide/dea-error-queries.png" alt-text="Screenshot of Drill down report queries." lightbox="media/sql-server-to-sql-server-upgrade-guide/dea-error-queries.png":::
+      :::image type="content" source="media/sql-server-to-sql-server-upgrade-guide/dea-error-queries.png" alt-text="Screenshot of Drill-down report queries." lightbox="media/sql-server-to-sql-server-upgrade-guide/dea-error-queries.png":::
 
    1. Select an individual query to get performance summary statistics, error information, and query plan information.
 
@@ -220,11 +161,11 @@ This step is considered optional and not necessary to complete migration. To use
 
 ### Convert
 
-After assessing the source database instance(s) you're migrating, for heterogenous migrations, you need to convert the schema to work in the target environment. Since upgrading to a newer version of [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] would be considered a homogeneous migration, the Convert step is unnecessary.
+After assessing one or more source database instances you're migrating, for heterogenous migrations, you need to convert the schema to work in the target environment. Since upgrading to a newer version of [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] would be considered a homogeneous migration, the Convert step is unnecessary.
 
 ## Migration overview
 
-After you have the necessary prerequisites in place and have completed the tasks associated with the **Pre-migration** stage, you're ready to complete the schema and data migration. A successful migration and upgrade means you've addressed all the issues discovered from the pre-migration stage.
+After you have the necessary prerequisites in place, and complete the tasks associated with the **Pre-migration** stage, you're ready to complete the schema and data migration. A successful migration and upgrade means you addressed all the issues discovered from the premigration stage.
 
 Review the compatibility issues discovered with DMA tool.
 
@@ -243,7 +184,7 @@ Additional considerations might be needed based on the complexity of your data a
 
 ### Migrate schema and data
 
-After assessing your databases, the next step is to begin the process of migrating the schema and database by using DMA.
+After you assess your databases, the next step is to begin the process of migrating the schema and database by using DMA.
 
 ### Migrate schema and data sync
 
@@ -281,20 +222,20 @@ To use DMA to create a migration project, complete the following steps.
 ### Data sync and cutover
 
 For minimal-downtime migrations, the source you're migrating continues to change after the one-time migration occurs, data and schema might be different from the target.
-During this process, you need to ensure every change in the source are captured and applied to the target in near real time. After you verify changes in source have been applied to the target, cutover from the source to the target environment.
+During this process, you need to ensure every change in the source are captured and applied to the target in near real time. After you verify changes in source are applied to the target, cutover from the source to the target environment.
 
 Support for minimal-downtime migrations isn't yet available for this scenario, so the Data sync and Cutover plans aren't currently applicable.
 
 ## Post migration
 
-After you've successfully completed the **Migration** stage, you need to go through a series of post-migration tasks to ensure that everything is functioning as smoothly and efficiently as possible. The post-migration is crucial for reconciling any data accuracy issues and verifying completeness, and addressing performance issues with the workload.
+After you successfully complete the **Migration** stage, you need to go through a series of post-migration tasks to ensure that everything is functioning as smoothly and efficiently as possible. The post-migration is crucial for reconciling any data accuracy issues and verifying completeness, and addressing performance issues with the workload.
 
 For more information about these issues, specific steps to mitigate them, and after the migration
 see the [Post-migration Validation and Optimization Guide](../../../relational-databases/post-migration-validation-and-optimization-guide.md).
 
 #### Verify applications
 
-After the data is migrated to the target environment, all the applications that formerly consumed the source need to start consuming the target. Accomplishing this will in some cases require changes to the applications. Test against the databases to verify that the applications work as expected after the migration.
+After the data is migrated to the target environment, all the applications that formerly consumed the source need to start consuming the target. Accomplishing this requires changes to the applications in some cases. Test against the databases to verify that the applications work as expected after the migration.
 
 ## Related content
 

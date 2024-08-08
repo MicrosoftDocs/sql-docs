@@ -217,21 +217,22 @@ To assign additional secondary IPs to the VMs, follow these steps:
 
 ## Uninstall SQL Server
 
-As part of the FCI creation process, you'll install SQL Server as a clustered instance to the failover cluster. *If you deployed a virtual machine with an Azure Marketplace image without SQL Server, you can skip this step.* If you deployed an image with SQL Server preinstalled, you'll need to unregister the SQL Server VM from the SQL IaaS Agent extension, and then uninstall SQL Server. 
+As part of the FCI creation process, you'll install SQL Server as a clustered instance to the failover cluster. *If you deployed a virtual machine with an Azure Marketplace image without SQL Server, you can skip this step.* If you deployed an image with SQL Server preinstalled, you'll need to delete the extension from the SQL Server VM, and then uninstall SQL Server. 
 
-### Unregister from the SQL IaaS Agent extension
+### Delete the SQL IaaS Agent extension
 
-SQL Server VM images from Azure Marketplace are automatically registered with the SQL IaaS Agent extension. Before you uninstall the preinstalled SQL Server instance, you must first [unregister each SQL Server VM from the SQL IaaS Agent extension](sql-agent-extension-manually-register-single-vm.md#unregister-from-extension). 
+SQL Server VM images from Azure Marketplace are automatically registered with the [SQL IaaS Agent extension](sql-server-iaas-agent-extension-automate-management.md). Before you uninstall the preinstalled SQL Server instance, you must first [delete the extension](sql-agent-extension-manually-register-single-vm.md#delete-the-extension) from the SQL Server VM. 
 
-To unregister your SQL Server VM with Azure PowerShell:
+To delete the extension from your SQL Server VM with Azure PowerShell, using the following sample code:
 
 ```powershell-interactive
 Remove-AzSqlVM -ResourceGroupName <resource_group_name> -Name <SQL VM resource name>
 ```
 
+
 ### Uninstall SQL Server
 
-After you have unregistered from the extension, you can uninstall SQL Server. Follow these steps on each virtual machine: 
+After you have deleted the extension, you can uninstall SQL Server. Follow these steps on each virtual machine: 
 
 1. Connect to the virtual machine by using RDP or Bastion. When you first connect to a virtual machine by using RDP or Bastion, a prompt asks you if you want to allow the PC to be discoverable on the network. Select **Yes**.
 1. Open **Programs and Features** in the **Control Panel**. 
@@ -266,7 +267,6 @@ You also need to join your virtual machines to the domain. You can do so by usin
 ## Review storage configuration
 
 Virtual machines created from Azure Marketplace come with attached storage. If you plan to configure your FCI storage by using Premium file shares or Azure shared disks, you can remove the attached storage to save on costs because local storage is not used for the failover cluster instance. However, it's possible to use the attached storage for Storage Spaces Direct FCI solutions, so removing them in this case might be unhelpful. Review your FCI storage solution to determine if removing attached storage is optimal for saving costs. 
-
 
 ## Next steps
 

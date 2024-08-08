@@ -16603,6 +16603,8 @@ items:
         items:
         - name: "@@DATEFIRST"
           href: t-sql/functions/datefirst-transact-sql.md
+        - name: CURRENT_DATE
+          href: t-sql/functions/current-date-transact-sql.md
         - name: CURRENT_TIMESTAMP
           href: t-sql/functions/current-timestamp-transact-sql.md
         - name: CURRENT_TIMEZONE

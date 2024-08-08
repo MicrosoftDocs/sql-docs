@@ -148,7 +148,7 @@ Release Candidate 0 (RC0)
 ## 15.0.8863.19101, 2024/04/10
 *(Product Version: 15.0.1102.1167)*
 - Fixed issue where some reports will fail to render after enable the verbose log
-- Fixed an error some users expereienced when editing subscriptions 
+- Fixed an error some users experienced when editing subscriptions 
 - Fixed and issue where some links were missing when exporting to PDF
 - Added support for server property 'RestrictedResourceMimeTypeForUpload'
 

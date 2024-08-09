@@ -32,10 +32,10 @@ While applied to a subnet, a network intent policy will not prevent you from upd
 
 This behavior stops when you remove the last managed instance from the subnet and the network intent policy is detached. It cannot be turned off while managed instances are present in the subnet.
 
-Please note that:
-* **We advise you maintain a separate route table and NSG for each delegated subnet.** Auto-configured rules and routes reference the specific subnet ranges that may exist in another subnet. When you reuse RTs and NSGs across multiple subnets delegated to Azure SQL Managed Instance, auto-configured rules will stack and may interfere with the rules governing unrelated traffic. 
-* **We advise against taking dependency on any of the service-managed rules and routes.** As a rule, always create explicit routes and NSG rules for your particular purposes. Both the mandatory and optional rules are subject to change.
-* Similarly, **we advise against updating the service-managed rules.** Because the network intent policy only checks for *effective* rules and routes, it is possible to extend one of the auto-configured rules, for example to open additional ports for inbound or to extend routing to a broader prefix. However, service-configured rules and routes may change. It is best to create your own routes and security rules to achieve the desired outcome.
+>[!NOTE]
+>- **We advise you maintain a separate route table and NSG for each delegated subnet.** Auto-configured rules and routes reference the specific subnet ranges that may exist in another subnet. When you reuse RTs and NSGs across multiple subnets delegated to Azure SQL Managed Instance, auto-configured rules will stack and may interfere with the rules governing unrelated traffic.
+>- **We advise against taking dependency on any of the service-managed rules and routes.** As a rule, always create explicit routes and NSG rules for your particular purposes. Both the mandatory and optional rules are subject to change.
+>- Similarly, **we advise against updating the service-managed rules.** Because the network intent policy only checks for *effective* rules and routes, it is possible to extend one of the auto-configured rules, for example to open additional ports for inbound or to extend routing to a broader prefix. However, service-configured rules and routes may change. It is best to create your own routes and security rules to achieve the desired outcome.
 
 ### Mandatory security rules and routes
 

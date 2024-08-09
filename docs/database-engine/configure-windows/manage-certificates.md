@@ -57,11 +57,9 @@ You can use certificate management in [!INCLUDE [ssnoversion-md](../../includes/
 
 1. Right-click **Protocols for** *&lt;instance Name&gt;*, and then select **Properties**.
 
-1. Choose the **Certificate** tab, and then select **Import**.
+1. Choose the **Certificate** tab, and then select the certificate from the dropdown list, then select **Apply**. > [!NOTE]  
+> There is no version of SQL that has an Import button or wizard in the instance Properties dialogue.  Please correct the page to reflect a feature that exists.
 
-1. Select **Browse** and then select the certificate file.
-
-1. Select **Next** to validate the certificate. If there are no errors, select **Next** to import the certificate to the local instance.
 ::: moniker-end
 
 ::: moniker range="<= sql-server-2017"
@@ -71,6 +69,8 @@ You can use certificate management in [!INCLUDE [ssnoversion-md](../../includes/
 1. Right-click **Protocols for** *&lt;instance Name&gt;*, and then select **Properties**.
 
 1. Select a certificate from the **Certificate** dropdown list, and then select **Apply**.
+2. > [!NOTE]  
+> There is no version of SQL that has an Import button or wizard in the instance Properties dialogue.  It appears someone else triedf ot make this edit but it hasn't made it to the public page yet.
 
 1. Select **OK**.
 ::: moniker-end
@@ -81,19 +81,8 @@ You can use certificate management in [!INCLUDE [ssnoversion-md](../../includes/
 
 1. Right-click **Protocols for** *&lt;instance Name&gt;*, and then choose **Properties**.
 
-1. Choose the **Certificate** tab, and then select **Import**.
+1. Choose the **Certificate** tab, and then select the certificate from the dropdown list, then select **Apply**.
 
-1. Select the certificate type, and whether to import for the current node only, or for each individual cluster node.
-
-1. If installing for a single node, choose **Browse** and select certificate file. Then skip to step 8.
-
-1. If installing a certificate for each node, select **Next** to list possible owner nodes. Possible owners for the current FCI are preselected.
-
-1. Choose **Next** to select the certificate to be imported.
-
-1. Enter the password when prompted. Look for any warnings or errors after validation.
-
-1. Select **Next** to import the selected certificates.
 
 > [!NOTE]  
 > Complete these steps in the active node of the FCI. User must have administrator permissions on all the cluster nodes.
@@ -104,7 +93,8 @@ You can use certificate management in [!INCLUDE [ssnoversion-md](../../includes/
 
 1. Right-click **Protocols for** *&lt;instance Name&gt;*, and then select **Properties**.
 
-1. Choose the **Certificate** tab, and then select **Import**.
+1. Choose the **Certificate** tab, and then select **Import**. > [!NOTE]  
+> There is no version of SQL that has an Import button or wizard in the instance Properties dialogue.
 
 1. Choose the certificate type and select **Next** to select from the list of known availability groups.
 

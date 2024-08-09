@@ -16,62 +16,28 @@ ms.custom:
 
 This article provides an overview of the service-aided subnet configuration and how to enable it with subnet delegation for Azure SQL Managed Instance.
 
-A service-aided subnet configuration automates network configuration management for subnets that host managed instances, leaving the user fully in control of access to the data (TDS traffic flows) while the managed instance is responsible for ensuring uninterrupted flow of management traffic in order to fulfill service-level agreements.
+Service-aided subnet configuration automates network configuration management for subnets that host managed instances, leaving the user fully in control of access to the data (TDS traffic flows) while the managed instance is responsible for ensuring uninterrupted flow of management traffic.
 
 ## Overview
 
-To improve service security, manageability, and availability, SQL Managed Instance applies a network intent policy to elements of the Azure virtual network infrastructure. The policy configures the subnet, as well as the associated network security group and route table, to ensure meeting minimum requirements for SQL Managed Instance. This platform mechanism transparently communicates networking requirements to users when they attempt a configuration that fails to meet minimal requirements. The policy prevents network misconfiguration, and helps to maintain normal SQL Managed Instance operations and service-level agreements (SLAs). When you delete the last managed instance from a subnet, the network intent policy is also removed from that subnet.
+To improve service security, manageability, and availability, SQL Managed Instance automates the management of certain critical network pathways inside the user's subnet. This is achieved by configuring the subnet, its associated network security group, and route table to contain a set of required entries.
 
-Service-aided subnet configuration builds on top of the virtual network [subnet delegation](/azure/virtual-network/subnet-delegation-overview) feature to provide automatic network configuration management. The service-aided subnet configuration is automatically enabled when you turn on subnet delegation for the `Microsoft.Sql/managedInstances` resource provider.
+The mechanism that accomplishes this is called network intent policy. A network intent policy is automatically applied to the subnet when it is first [delegated](/azure/virtual-network/subnet-delegation-overview) to Azure SQL Managed Instance's resource provider `Microsoft.Sql/managedInstances`. At that point, the automatic configuration takes effect. When you delete the last managed instance from a subnet, the network intent policy is also removed from that subnet.
 
-You can use service endpoints to configure virtual network firewall rules for storage accounts that contain backups and audit logs. However, even with service endpoints enabled, customers are encouraged to use [Azure Private Link](/azure/private-link/private-link-overview) to access their storage accounts as the Private Link provides more isolation than service endpoints.
+## The effect of network intent policy on the delegated subnet
 
-> [!IMPORTANT]
-> - Once subnet delegation is turned on, you can't turn it off until the [virtual cluster](virtual-cluster-architecture.md) is removed from the subnet. For lifetime details of the virtual cluster, see how to [delete a subnet after deleting SQL Managed Instance](virtual-cluster-architecture.md#delete-a-subnet-after-deleting-an-azure-sql-managed-instance).
-> - Due to control plane configuration specifics, service endpoints aren't available in national clouds.
+When applied to a subnet, the network intent policy will extend the route table and network security group associated with the subnet by adding mandatory and optional rules and routes. 
 
-## Enable subnet delegation for new deployments
+While applied to a subnet, a network intent policy will not prevent you from updating most of the subnet's configuration. Whenever you change the subnet's route table or update its network security group rules, the  network intent policy will check whether the effective routes and security rules comply with the requirements for Azure SQL Managed Instance. If they don't, the network intent policy will cause an error and prevent you from updating the configuration.
 
-To deploy a managed instance to an empty subnet, you need to delegate it to the `Microsoft.Sql/managedInstances` resource provider as described in [Manage subnet delegation](/azure/virtual-network/manage-subnet-delegation). _The referenced article uses `Microsoft.DBforPostgreSQL/serversv2` resource provider as an example but you need to use the `Microsoft.Sql/managedInstances` resource provider instead._
+This behavior stops when you remove the last managed instance from the subnet and the network intent policy is detached. It cannot be turned off while managed instances are present in the subnet.
 
-## Enable subnet delegation for existing deployments
+>[!NOTE]
+>- **We advise you maintain a separate route table and NSG for each delegated subnet.** Auto-configured rules and routes reference the specific subnet ranges that may exist in another subnet. When you reuse RTs and NSGs across multiple subnets delegated to Azure SQL Managed Instance, auto-configured rules will stack and may interfere with the rules governing unrelated traffic.
+>- **We advise against taking dependency on any of the service-managed rules and routes.** As a rule, always create explicit routes and NSG rules for your particular purposes. Both the mandatory and optional rules are subject to change.
+>- Similarly, **we advise against updating the service-managed rules.** Because the network intent policy only checks for *effective* rules and routes, it is possible to extend one of the auto-configured rules, for example to open additional ports for inbound or to extend routing to a broader prefix. However, service-configured rules and routes may change. It is best to create your own routes and security rules to achieve the desired outcome.
 
-In order to enable subnet-delegation for your existing managed instance deployment, you need to find out where the virtual network subnet where it's placed. 
-
-To find the subnet, check the value under **Virtual network/subnet** on the **Overview** page of your SQL Managed Instance resource in the [Azure portal](https://portal.azure.com).
-
-Alternatively, you could run the following PowerShell commands to find the virtual network subnet for your instance. Replace the following values in the sample:
-
-- **subscription-id** with your subscription ID
-- **rg-name** with the resource group for your managed instance
-- **mi-name** with the name of your managed instance
-
-```powershell
-Install-Module -Name Az
-
-Import-Module Az.Accounts
-Import-Module Az.Sql
-
-Connect-AzAccount
-
-# Use your subscription ID in place of subscription-id below
-
-Select-AzSubscription -SubscriptionId {subscription-id}
-
-# Replace rg-name with the resource group for your managed instance, and replace mi-name with the name of your managed instance
-
-$mi = Get-AzSqlInstance -ResourceGroupName {rg-name} -Name {mi-name}
-
-$mi.SubnetId
-```
-
-Once you determine the managed instance subnet, you need to delegate it to the `Microsoft.Sql/managedInstances` resource provider as described in [Manage subnet delegation](/azure/virtual-network/manage-subnet-delegation). _While the referenced article uses the `Microsoft.DBforPostgreSQL/serversv2` resource provider as an example, you need to use the `Microsoft.Sql/managedInstances` resource provider instead._
-
-
-> [!IMPORTANT]
-> Enabling service-aided configuration doesn't cause failover or interruption in connectivity for managed instances that are already in the subnet.
-
-## Mandatory security rules and routes
+### Mandatory security rules and routes
 
 To ensure uninterrupted management connectivity for SQL Managed Instance, some security rules and routes are mandatory and can't be removed or modified.
 
@@ -89,10 +55,9 @@ The following table lists the mandatory rules and routes that are enforced and a
 > [!NOTE]
 > Some subnets contain additional mandatory network security rules and routes that aren't listed in either of the above two sections. Such rules are considered obsolete and will be removed from their subnets.
 
+### Optional security rules and routes
 
-## Optional security rules and routes
-
-Some rules and routes are optional and can be safely modified or removed without impairing the internal management connectivity of managed instances. These optional rules are used to preserve outbound connectivity of managed instances that are deployed with the assumption that the full complement of the mandatory rules and routes will still be in place.
+Some rules and routes are optional and can be safely removed without impairing the internal management connectivity of managed instances. These optional rules are used to preserve outbound connectivity of managed instances that are deployed with the assumption that the full complement of the mandatory rules and routes will still be in place.
 
 > [!IMPORTANT]
 > **Optional rules and routes will be deprecated in the future.** We strongly advise you to update your deployment and network configuration procedures such that each deployment of Azure SQL Managed Instance in a new subnet is followed with an explicit removal and/or replacement of the optional rules and routes, such that only the minimal required traffic is allowed to flow.
@@ -106,6 +71,10 @@ The following table lists the optional rules and routes that can be modified or 
 | NSG outbound | Microsoft.Sql-managedInstances_UseOnly_mi-optional-azure-out | Optional security rule to preserve outbound HTTPS connectivity to Azure. |
 | Route | Microsoft.Sql-managedInstances_UseOnly_mi-optional-AzureCloud._\<region\>_ | Optional route to AzureCloud services in the primary region. |
 | Route | Microsoft.Sql-managedInstances_UseOnly_mi-optional-AzureCloud._\<geo-paired\>_ | Optional route to AzureCloud services in the secondary region. |
+
+## Removing the network intent policy
+
+The effect of network intent policy on the subnet stops when there are no more [virtual clusters](virtual-cluster-architecture.md) inside and the delegation is removed. For the details of the lifecycle  of the virtual cluster, see how to [delete a subnet after deleting SQL Managed Instance](virtual-cluster-architecture.md#delete-a-subnet-after-deleting-an-azure-sql-managed-instance).
 
 ## Related content
 

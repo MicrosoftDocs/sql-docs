@@ -4,7 +4,7 @@ description: Learn about the new features for and improvements to SQL Server on 
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest, mathoma
-ms.date: 05/21/2024
+ms.date: 08/05/2024
 ms.service: virtual-machines-sql
 ms.subservice: service-overview
 ms.topic: whats-new
@@ -36,7 +36,8 @@ The following table lists the features of SQL Server on Azure VMs that are curre
 | Feature | Details |
 | --- | --- |
 | [Azure Update Manager](../azure-update-manager-sql-vm.md) | Automatically patch multiple SQL Server VMs at scale with the Azure Update Manager integrated in to the [SQL virtual machines](manage-sql-vm-portal.md) resource in the Azure portal, including Cumulative Updates. |
-| [I/O Analysis](storage-performance-analysis.md) | Use the Azure portal to identify performance issues with your SQL Server workloads that result from exceeding virtual machine and data disk limits. | 
+| [FCI with Azure Elastic SAN](failover-cluster-instance-azure-elastic-san-manually-configure.md) | Deploy your SQL Server failover cluster instance (FCI) by using an Azure Elastic SAN. |
+| [I/O Analysis](storage-performance-analysis.md) | Use the Azure portal to identify performance issues with your SQL Server workloads from exceeding virtual machine and data disk limits. | 
 | [Premium SSD v2 in the Azure portal](storage-configuration-premium-ssd-v2.md) | Deploy your SQL Server on Azure VM with Premium SSD v2 disks in the Azure portal for improved throughput and performance. |  
 
 ## General availability (GA)
@@ -58,11 +59,17 @@ The following table lists features of SQL Server on Azure VMs that have been mad
 
 Learn about significant changes to the SQL Server on Azure VMs documentation. For previous years, see the [What's new archive](doc-changes-updates-release-notes-whats-new-archive.md).
 
-## May 2024
+### August 2024
 
 | Changes | Details |
 | --- | --- |
-| **I/O Analysis preview** | Use the Azure portal to identify I/O performance issues with your SQL Server workloads that result from exceeding virtual machine and data disk limits. This feature is currently in preview. Review [I/O Analysis](storage-performance-analysis.md) to learn more. | 
+| **FCI with Azure Elastic SAN preview**| It's now possible to deploy your SQL Server failover cluster instance (FCI) using Azure Elastic SAN volumes. Review [FCI with Azure Elastic SAN](failover-cluster-instance-azure-elastic-san-manually-configure.md) to learn more. Using this storage solution for your FCI is currently in preview. |
+
+### May 2024
+
+| Changes | Details |
+| --- | --- |
+| **I/O Analysis preview** | Use the Azure portal to identify I/O performance issues with your SQL Server workloads from exceeding virtual machine and data disk limits. This feature is currently in preview. Review [I/O Analysis](storage-performance-analysis.md) to learn more. | 
 
 
 ### April 2024
@@ -80,7 +87,7 @@ Learn about significant changes to the SQL Server on Azure VMs documentation. Fo
 | **Deploy SQL VM with Premium SSD v2 in Azure portal preview** | For improved throughput and performance, provision your SQL Server on Azure VMs with Premium SSD v2 disks by using the Azure portal.  Deploying your SQL Server VMs with Premium SSD v2 in the Azure portal is currently in preview. To learn more, review [Deploy SQL Server on Azure VMs with Premium SSD v2](storage-configuration-premium-ssd-v2.md). | 
 
 
-## February 2024
+### February 2024
 
 | Changes | Details |
 | --- | --- |
@@ -88,18 +95,6 @@ Learn about significant changes to the SQL Server on Azure VMs documentation. Fo
 |**Configure log shipping** | Learn to configure log shipping between two SQL Server on Azure VMs. Review [Configure log shipping](log-shipping-configure.md) to learn more. |
 
 
-## October 2023
-
-| Changes | Details |
-| --- | --- |
-| **Azure Elastic SAN preview** | You can now place your SQL Server workloads on an Azure Elastic SAN for improved performance, throughput, and cost. The Azure Elastic SAN is currently in preview. Review [Azure Elastic SAN](performance-guidelines-best-practices-storage.md#azure-elastic-san) to learn more. |  
-
-## September 2023
-
-| Changes | Details |
-| --- | --- |
-| **SQL VM health notifications** |  The **Overview** page of the [SQL virtual machines](manage-sql-vm-portal.md#overview-page) resource in the Azure portal now displays information about the health of the [SQL IaaS Agent extension](sql-server-iaas-agent-extension-automate-management.md), as well as error conditions when the state is _unhealthy_ or _failed_. Review [Troubleshoot the extension](sql-agent-extension-troubleshoot-known-issues.md) to learn more. | 
-| **Microsoft Entra ID rebrand**|  Azure Active Directory has been rebranded to [Microsoft Entra ID](/entra/fundamentals/new-name). | 
 
 
 ## Archive

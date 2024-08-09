@@ -3,14 +3,14 @@ title: High availability for SQL Server containers
 description: Learn about high availability for SQL Server containers. Also learn about deploying a container with SQL Server on Kubernetes.
 author: rwestMSFT
 ms.author: randolphwest
-ms.reviewer: vanto, randolphwest
-ms.date: 05/26/2022
+ms.reviewer: vanto
+ms.date: 07/15/2024
 ms.service: sql
 ms.subservice: linux
 ms.topic: article
 ms.custom:
   - linux-related-content
-monikerRange: ">=sql-server-2017||>=sql-server-linux-2017"
+monikerRange: ">=sql-server-2017 || >=sql-server-linux-2017"
 ---
 # High availability for SQL Server containers
 
@@ -38,6 +38,6 @@ SQL Server on Linux supports containers on Kubernetes, OpenShift, and D2Hi.
 
 ## Related content
 
-- [Deploy SQL Server in Docker container](sql-server-linux-docker-container-deployment.md)
+- [Deploy and connect to SQL Server Linux containers](sql-server-linux-docker-container-deployment.md)
 - [Quickstart: Deploy a SQL Server container cluster on Azure](quickstart-sql-server-containers-azure.md)
 - [Tutorial: Set up a three node Always On availability group with DH2i DxEnterprise](/azure/azure-sql/virtual-machines/linux/dh2i-high-availability-tutorial)

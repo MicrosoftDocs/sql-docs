@@ -4,7 +4,7 @@ description: Returns a list of attribute names and matching values for SQL Serve
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 04/08/2024
+ms.date: 08/02/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -20,7 +20,7 @@ dev_langs:
 
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
-Returns a list of attribute names and matching values for [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)], the database gateway, or the underlying data source.
+Returns a list of attribute names and matching values for [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)], the database gateway, or the underlying data source. Used in ODBC only.
 
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
@@ -55,9 +55,9 @@ The following table lists the attributes. [!INCLUDE [msCoName](../../includes/ms
 | --- | --- | --- |
 | `1` | `DBMS_NAME` | [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] |
 | `2` | `DBMS_VER` | Microsoft [!INCLUDE [ssnoversion](../../includes/ssnoversion-md.md)] *xxxx* - *x.xx.xxxx*<br /><br />For example, `Microsoft SQL Server 2017 - 14.0.3257.3` |
-| `10` | `OWNER_TERM` | `owner` |
-| `11` | `TABLE_TERM` | `table` |
-| `12` | `MAX_OWNER_NAME_LENGTH` | `128` |
+| `10` | `OWNER_TERM`<br /><br />Specifies the owner name (database principal in [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)]) or schema name. `OWNER_TERM` is used in the ODBC 2.0 API, while `SQL_SCHEMA_TERM` is used in the ODBC 3.0 API. | `owner` |
+| `11` | `TABLE_TERM`<br /><br />Specifies the table object, which can be a table or view in [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)]. | `table` |
+| `12` | `MAX_OWNER_NAME_LENGTH`<br /><br />Specifies the maximum number of characters for the owner or schema name. | `128` |
 | `13` | `TABLE_LENGTH`<br /><br />Specifies the maximum number of characters for a table name. | `128` |
 | `14` | `MAX_QUAL_LENGTH`<br /><br />Specifies the maximum length of the name for a table qualifier (the first part of a three-part table name). | `128` |
 | `15` | `COLUMN_LENGTH`<br /><br />Specifies the maximum number of characters for a column name. | `128` |
@@ -95,3 +95,4 @@ Requires membership in the **public** role.
 
 - [Catalog stored procedures (Transact-SQL)](catalog-stored-procedures-transact-sql.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)
+- [SQLGetInfo Function](../../odbc/reference/syntax/sqlgetinfo-function.md)

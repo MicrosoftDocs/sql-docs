@@ -5,7 +5,7 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma
 ms.date: 01/14/2020
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.subservice: deployment-configuration
 ms.topic: conceptual
 ms.custom: sqldbrb=1

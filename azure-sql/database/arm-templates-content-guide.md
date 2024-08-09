@@ -5,7 +5,7 @@ author: urosmil
 ms.author: urmilano
 ms.reviewer: wiassaf, mathoma
 ms.date: 04/30/2024
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.subservice: deployment-configuration
 ms.topic: conceptual
 ms.custom: overview-samples, azure-sql-split, devx-track-arm-template

@@ -6,7 +6,7 @@ author: Stralle
 ms.author: strrodic
 ms.reviewer: mathoma
 ms.date: 12/28/2023
-ms.service: sql-managed-instance
+ms.service: azure-sql-managed-instance
 ms.subservice: high-availability
 ms.topic: conceptual
 ms.custom: azure-sql-split, ignite-2023

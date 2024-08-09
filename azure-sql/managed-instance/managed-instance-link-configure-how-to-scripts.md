@@ -6,7 +6,7 @@ author: djordje-jeremic
 ms.author: djjeremi
 ms.reviewer: mathoma, danil
 ms.date: 06/21/2024
-ms.service: sql-managed-instance
+ms.service: azure-sql-managed-instance
 ms.subservice: data-movement
 ms.custom: devx-track-azurepowershell, devx-track-azurecli, ignite-2023, build-2024
 ms.topic: how-to
@@ -531,7 +531,7 @@ SELECT @@SERVERNAME AS SQLServerName
 
 Then, use the following script to create the availability group on SQL Server. Replace:
 
-- `<AGName>` with the name of your availability group. A Managed Instance link requires one database per availability group. For multiple databases, you'll need to create multiple availability groups. Consider naming each availability group so that its name reflects the corresponding database - for example, `AG_<db_name>`. 
+- `<AGNameOnSQLServer>` with the name of your availability group on SQL Server. A Managed Instance link requires one database per availability group. For multiple databases, you'll need to create multiple availability groups. Consider naming each availability group so that its name reflects the corresponding database - for example, `AG_<db_name>`. 
 - `<DatabaseName>` with the name of database that you want to replicate.
 - `<SQLServerName>` with the name of your SQL Server instance obtained in the previous step. 
 - `<SQLServerIP>` with the SQL Server IP address. You can use a resolvable SQL Server host machine name as an alternative, but you need to make sure that the name is resolvable from the SQL Managed Instance virtual network.
@@ -540,7 +540,7 @@ Then, use the following script to create the availability group on SQL Server. R
 -- Run on SQL Server
 -- Create the primary availability group on SQL Server
 USE MASTER
-CREATE AVAILABILITY GROUP [<AGName>]
+CREATE AVAILABILITY GROUP [<AGNameOnSQLServer>]
 WITH (CLUSTER_TYPE = NONE) -- <- Delete this line for SQL Server 2016 only. Leave as-is for all higher versions.
     FOR database [<DatabaseName>]  
     REPLICA ON   
@@ -562,7 +562,8 @@ Next, create the distributed availability group on SQL Server. If you plan to cr
 Replace the following values and then run the T-SQL script to create your distributed availability group. 
 
 - `<DAGName>` with the name of your distributed availability group. Since you can configure multiple links for the same database by creating a distributed availability group for each link, consider naming each distributed availability group accordingly - for example, `DAG1_<db_name>`, `DAG2_<db_name>`. 
-- `<AGName>` with the name of the availability group that you created in the previous step. 
+- `<AGNameOnSQLServer>` with the name of the availability group that you created in the previous step.
+- `<AGNameOnSQLMI>` with the name of your availability group on SQL Managed Instance. The name needs to be unique on SQL MI. Consider naming each availability group so that its name reflects the corresponding database - for example, `AG_<db_name>_MI`.
 - `<SQLServerIP>` with the IP address of SQL Server from the previous step. You can use a resolvable SQL Server host machine name as an alternative, but make sure the name is resolvable from the SQL Managed Instance virtual network (which requires configuring custom Azure DNS for the subnet of the managed instance). 
 - `<ManagedInstanceName>` with the short name of your managed instance. 
 - `<ManagedInstanceFQDN>` with the fully qualified domain name of your managed instance.
@@ -576,7 +577,7 @@ USE MASTER
 CREATE AVAILABILITY GROUP [<DAGName>]
 WITH (DISTRIBUTED) 
     AVAILABILITY GROUP ON  
-    N'<AGName>' WITH 
+    N'<AGNameOnSQLServer>' WITH 
     (
       LISTENER_URL = 'TCP://<SQLServerIP>:5022',
       AVAILABILITY_MODE = ASYNCHRONOUS_COMMIT,
@@ -584,7 +585,7 @@ WITH (DISTRIBUTED)
       SEEDING_MODE = AUTOMATIC,
       SESSION_TIMEOUT = 20
     ),
-    N'<ManagedInstanceName>' WITH
+    N'<AGNameOnSQLMI>' WITH
     (
       LISTENER_URL = 'tcp://<ManagedInstanceFQDN>:5022;Server=[<ManagedInstanceName>]',
       AVAILABILITY_MODE = ASYNCHRONOUS_COMMIT,
@@ -612,7 +613,7 @@ SELECT @@SERVERNAME AS SQLServerName
 
 Then, use the following script to create the availability group on SQL Server. Replace:
 
-- `<AGName>` with the name of your availability group. A Managed Instance link requires one database per availability group. For multiple databases, you'll need to create multiple availability groups. Consider naming each availability group so that its name reflects the corresponding database - for example, `AG_<db_name>`. 
+- `<AGNameOnSQLServer>` with the name of your availability group on SQL Server. A Managed Instance link requires one database per availability group. For multiple databases, you'll need to create multiple availability groups. Consider naming each availability group so that its name reflects the corresponding database - for example, `AG_<db_name>`. 
 - `<DatabaseName>` with the name of database that you want to replicate.
 - `<SQLServerName>` with the name of your SQL Server instance obtained in the previous step. 
 - `<SQLServerIP>` with the SQL Server IP address. You can use a resolvable SQL Server host machine name as an alternative, but you need to make sure that the name is resolvable from the SQL Managed Instance virtual network.
@@ -622,7 +623,7 @@ Then, use the following script to create the availability group on SQL Server. R
 -- Run on SQL Server 
 -- Create the availability group on SQL Server 
 
-CREATE AVAILABILITY GROUP [<AGName>] 
+CREATE AVAILABILITY GROUP [<AGNameOnSQLServer>] 
 WITH (CLUSTER_TYPE = NONE) 
 FOR  
 REPLICA ON N'<SQLServerName>' 
@@ -641,7 +642,7 @@ Since SQL Managed Instance is the initial primary, the database will be replicat
 -- Run on SQL Server 
 -- Grant permission to the availability group to create databases 
 
-ALTER AVAILABILITY GROUP [<AGName>] GRANT CREATE ANY DATABASE; 
+ALTER AVAILABILITY GROUP [<AGNameOnSQLServer>] GRANT CREATE ANY DATABASE; 
 ```
 
 Next, create the distributed availability group _on SQL Server_. If you plan to create multiple links, then you need to create a distributed availability group for each link, even if you're establishing multiple links for the same database. 
@@ -649,7 +650,8 @@ Next, create the distributed availability group _on SQL Server_. If you plan to 
 Replace the following values and then run the T-SQL script to create your distributed availability group. 
 
 - `<DAGName>` with the name of your distributed availability group. Since you can configure multiple links for the same database by creating a distributed availability group for each link, consider naming each distributed availability group accordingly - for example, `DAG1_<db_name>`, `DAG2_<db_name>`. 
-- `<AGName>` with the name of the availability group that you created in the previous step. 
+- `<AGNameOnSQLServer>` with the name of the availability group that you created in the previous step.
+- `<AGNameOnSQLMI>` with the name of your availability group on SQL Managed Instance. The name needs to be unique on SQL MI. Consider naming each availability group so that its name reflects the corresponding database - for example, `AG_<db_name>_MI`.
 - `<SQLServerIP>` with the IP address of SQL Server from the previous step. You can use a resolvable SQL Server host machine name as an alternative, but make sure the name is resolvable from the SQL Managed Instance virtual network (which requires configuring custom Azure DNS for the subnet of the managed instance). 
 - `<ManagedInstanceName>` with the short name of your managed instance. 
 - `<ManagedInstanceFQDN>` with the fully qualified domain name of your managed instance.
@@ -664,7 +666,7 @@ USE MASTER
 CREATE AVAILABILITY GROUP [<DAGName>] 
 WITH (DISTRIBUTED)  
     AVAILABILITY GROUP ON   
-    N'<AGName>' WITH  
+    N'<AGNameOnSQLServer>' WITH  
     ( 
       LISTENER_URL = 'TCP://<SQLServerIP>:5022', 
       AVAILABILITY_MODE = ASYNCHRONOUS_COMMIT, 
@@ -672,7 +674,7 @@ WITH (DISTRIBUTED)
       SEEDING_MODE = AUTOMATIC, 
       SESSION_TIMEOUT = 20 
     ), 
-    N'<ManagedInstanceName>' WITH 
+    N'<AGNameOnSQLMI>' WITH 
     ( 
       LISTENER_URL = 'tcp://<ManagedInstanceFQDN>:5022;Server=[<ManagedInstanceName>];Database=[<DatabaseName>]', 
       AVAILABILITY_MODE = ASYNCHRONOUS_COMMIT, 
@@ -708,7 +710,8 @@ If you need to see all links on a managed instance, use the [Get-AzSqlInstanceLi
 
 To simplify the process, sign in to the Azure portal and run the following script from the Azure Cloud Shell. Replace:
 - `<ManagedInstanceName>` with the short name of your managed instance. 
-- `<AGName>` with the name of the availability group created on SQL Server. 
+- `<AGNameOnSQLServer>` with the name of the availability group created on SQL Server.
+- `<AGNameOnSQLMI>` with the name of the availability group created on SQL Managed Instance. 
 - `<DAGName>` with the name of the distributed availability group created on SQL Server. 
 - `<DatabaseName>` with the database replicated in the availability group on SQL Server. 
 - `<SQLServerIP>` with the IP address of your SQL Server. The provided IP address must be accessible by managed instance.
@@ -725,7 +728,10 @@ To simplify the process, sign in to the Azure portal and run the following scrip
 $ManagedInstanceName = "<ManagedInstanceName>"
 
 # Enter the availability group name that was created on SQL Server
-$AGName = "<AGName>"
+$AGNameOnSQLServer = "<AGNameOnSQLServer>"
+
+# Enter the availability group name that was created on SQL Managed Instance
+$AGNameOnSQLMI = "<AGNameOnSQLMI>"
 
 # Enter the distributed availability group name that was created on SQL Server
 $DAGName = "<DAGName>"
@@ -746,7 +752,7 @@ $SourceIP = "TCP://" + $SQLServerIP + ":5022"
 
 # Create link on managed instance. Join distributed availability group on SQL Server.
 New-AzSqlInstanceLink -ResourceGroupName $ResourceGroup -InstanceName $ManagedInstanceName -Name $DAGName |
--PrimaryAvailabilityGroupName $AGName -SecondaryAvailabilityGroupName $ManagedInstanceName |
+-PrimaryAvailabilityGroupName $AGNameOnSQLServer -SecondaryAvailabilityGroupName $AGNameOnSQLMI |
 -TargetDatabase $DatabaseName -SourceEndpoint $SourceIP
 ```
 
@@ -755,7 +761,8 @@ New-AzSqlInstanceLink -ResourceGroupName $ResourceGroup -InstanceName $ManagedIn
 
 To simplify the process, sign in to the Azure portal and run the following script from the Azure Cloud Shell. Replace:
 - `<ManagedInstanceName>` with the short name of your managed instance. 
-- `<AGName>` with the name of the availability group created on SQL Server. 
+- `<AGNameOnSQLServer>` with the name of the availability group created on SQL Server.
+- `<AGNameOnSQLMI>` with the name of the availability group created on SQL Managed Instance.
 - `<DAGName>` with the name of the distributed availability group created on SQL Server. 
 - `<DatabaseName>` with the database replicated in the availability group on SQL Server. 
 - `<SQLServerIP>` with the IP address of your SQL Server. The provided IP address must be accessible by managed instance.
@@ -771,8 +778,11 @@ To simplify the process, sign in to the Azure portal and run the following scrip
 # Enter your managed instance name – for example, "sqlmi1" 
 $ManagedInstanceName = "<ManagedInstanceName>" 
 
-# Enter the availability group name that was created on SQL Server 
-$AGName = "<AGName>" 
+# Enter the availability group name that was created on SQL Server
+$AGNameOnSQLServer = "<AGNameOnSQLServer>"
+
+# Enter the availability group name that was created on SQL Managed Instance
+$AGNameOnSQLMI = "<AGNameOnSQLMI>"
 
 # Enter the distributed availability group name that was created on SQL Server 
 $DAGName = "<DAGName>"  
@@ -814,8 +824,8 @@ $body = "{
         } 
     ], 
     'PartnerEndpoint': '$DestinationIP', 
-    'InstanceAvailabilityGroupName': '$ManagedInstanceName', 
-    'PartnerAvailabilityGroupName': '$AGName', 
+    'InstanceAvailabilityGroupName': '$AGNameOnSQLMI', 
+    'PartnerAvailabilityGroupName': '$AGNameOnSQLServer', 
     'FailoverMode': 'Manual', 
     'SeedingMode': 'Automatic', 
     'InstanceLinkRole': 'Primary' 
@@ -824,7 +834,7 @@ $body = "{
 
  
 # Send link creation request to Azure REST API 
-Invoke-RestMethod -Method POST -Headers $headers -Uri $uri -ContentType 'application/json' -Body $body 
+Invoke-RestMethod -Method PUT -Headers $headers -Uri $uri -ContentType 'application/json' -Body $body 
 ```
 
 ---

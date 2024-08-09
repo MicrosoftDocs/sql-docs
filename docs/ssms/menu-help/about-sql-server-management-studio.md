@@ -1,9 +1,10 @@
 ---
 title: "About SQL Server Management Studio"
 description: "About SQL Server Management Studio"
-author: "markingmyname"
-ms.author: "maghan"
-ms.date: "01/19/2017"
+author: erinstellato-ms
+ms.author: erinstellato
+ms.reviewer: maghan, randolphwest
+ms.date: 07/12/2024
 ms.service: sql
 ms.subservice: ssms
 ms.topic: ui-reference
@@ -14,31 +15,33 @@ helpviewer_keywords:
 ---
 
 # About SQL Server Management Studio
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
-Use this dialog box to view or copy information about your installation of SQL Server Management Studio. Evaluation editions list the number of days remaining until the product expires.  
+Accessed from the Help menu in SQL Server Management Studio (SSMS), you can use this dialog box to view or copy information about your installation.  
   
-## Options
+## Grid Layout
 
 **Component Name**  
-Displays a grid listing the names of the installed components of SQL Server Management Studio and the operating system:  
+Lists the name of the installed components:  
   
-- **Microsoft SQL Server Management Studio**  
+- **SQL Server Management Studio**  
+
+- **SQL Server Management Objects (SMO)**  
   
+- **Microsoft T-SQL Parser**
+
 - **Microsoft Analysis Services Client Tools**  
   
-- **Microsoft Data Access Components (MDAC)**  
+- **Microsoft Data SqlClient (MDS)**  
   
-- **Microsoft MSXML**  
-  
-- **Microsoft Internet Explorer**  
+- **Microsoft SQL Server Data-Tier Application Framework (DacFX)**  
   
 - **Microsoft .NET Framework**  
   
 - **Operating System**  
   
 **Versions**  
-Displays a grid listing the versions of the installed components listed by component name.  
+Lists the version of the installed component.  
   
 **Copy Info**  
-Copy the information in the grid to the clipboard.
+Copies the information in the grid to the clipboard.

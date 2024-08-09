@@ -239,6 +239,9 @@ Collection Frequency: 10 seconds\
 
 ### Wait stats
 
+> [!NOTE]
+> Wait stats cannot be visualized on the performance dashboard at this time. Support for wait stats will be added in a future release.
+
 Description: Includes wait types and wait statistics for the database engine instance.\
 Dataset Name: SqlServerWaitStats\
 Collection Frequency: 10 seconds\

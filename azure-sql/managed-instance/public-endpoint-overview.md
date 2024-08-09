@@ -5,7 +5,7 @@ author: zoran-rilak-msft
 ms.author: zoranrilak
 ms.reviewer: vanto, mathoma
 ms.date: 05/08/2019
-ms.service: sql-managed-instance
+ms.service: azure-sql-managed-instance
 ms.subservice: security
 ms.topic: conceptual
 ms.custom: sqldbrb=1

@@ -181,6 +181,8 @@
   "enable_pull_request_custom_validation": true,
   "redirection_files": [
     ".openpublishing.redirection.azure-sql.json",
-    ".openpublishing.redirection.azure-data-studio.json"
+    ".openpublishing.redirection.azure-data-studio.json",
+    ".openpublishing.redirection.powershell.json",
+    ".openpublishing.redirection.stretch-database.json"
   ]
 }

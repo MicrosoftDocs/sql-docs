@@ -5,7 +5,7 @@ author: NikaKinska
 ms.author: nnikolic
 ms.reviewer: wiassaf, mathoma, randolphwest
 ms.date: 06/03/2024
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.subservice: performance
 ms.topic: how-to
 ms.custom:

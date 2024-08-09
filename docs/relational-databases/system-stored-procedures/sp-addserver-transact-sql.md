@@ -23,7 +23,9 @@ dev_langs:
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-Defines the name of the local instance of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]. When the computer hosting [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] is renamed, use `sp_addserver` to inform the instance of the [!INCLUDE [ssDEnoversion](../../includes/ssdenoversion-md.md)] of the new computer name. This procedure must be executed on all instances of the [!INCLUDE [ssDE](../../includes/ssde-md.md)] hosted on the computer. The instance name of the [!INCLUDE [ssDE](../../includes/ssde-md.md)] can't be changed. To change the instance name of a named instance, install a new instance with the desired name, detach the database files from old instance, attach the databases to the new instance, and drop the old instance. Alternatively, you can create a client alias name on the client computer, redirecting the connection to different server and instance name or **server:port** combination without changing the name of the instance on the server computer.
+Defines the name of the local instance of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]. When the computer hosting [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] is renamed, use `sp_addserver` to inform the instance of the [!INCLUDE [ssDEnoversion](../../includes/ssdenoversion-md.md)] of the new computer name. This procedure must be executed on all instances of the [!INCLUDE [ssDE](../../includes/ssde-md.md)] hosted on the computer.
+
+The instance name of the [!INCLUDE [ssDE](../../includes/ssde-md.md)] can't be changed. To change the instance name of a named instance, install a new instance with the desired name, detach the database files from old instance, attach the databases to the new instance, and drop the old instance. Alternatively, you can create a client alias name on the client computer, redirecting the connection to different server and instance name or `<server>:<port>` combination without changing the name of the instance on the server computer.
 
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
@@ -91,3 +93,4 @@ EXEC sp_addserver 'ACCOUNTS', 'local';
 - [sp_helpserver (Transact-SQL)](sp-helpserver-transact-sql.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)
 - [Security stored procedures (Transact-SQL)](security-stored-procedures-transact-sql.md)
+- [Connect to the Database Engine](../../sql-server/connect-to-database-engine.md)

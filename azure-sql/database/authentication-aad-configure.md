@@ -6,7 +6,7 @@ author: nofield
 ms.author: nofield
 ms.reviewer: wiassaf, vanto, mathoma, maghan
 ms.date: 01/31/2024
-ms.service: sql-db-mi
+ms.service: azure-sql
 ms.subservice: security
 ms.topic: how-to
 ms.custom:

@@ -60,7 +60,7 @@ To assess SQL Server, the SQL Server instance needs to:
 
 ## Permissions
 
-The Azure SQL extension for SQL Server performs the assessment data collection by default under the service account, NT AUTHORITY\SYSTEM. However, you can [configure the agent extension service to run with an account that has the least privileges](configure-least-privilege.md).
+The Azure SQL extension for SQL Server performs the assessment data collection by default under the service account, NT AUTHORITY\SYSTEM. However, you can [configure the agent extension service to run with an account that least privilege](configure-least-privilege.md).
 
 ## View migration assessment results
 

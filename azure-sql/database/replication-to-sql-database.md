@@ -5,7 +5,7 @@ author: ferno-ms
 ms.author: ferno
 ms.reviewer: wiassaf, mathoma
 ms.date: 04/28/2020
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.subservice: replication
 ms.topic: conceptual
 ms.custom: sqldbrb=1

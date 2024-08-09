@@ -117,7 +117,7 @@ This one should return a 200 as there is an unauthenticated route.
 
 ## Probe connectivity to all regions
 
-You can probe connectivity to all regions with the [test-connectivity.ps1](https://github.com/microsoft/sql-server-samples/samples/features/azure-arc/troubleshooting/test-connectivity.ps1) PowerShell script.
+You can probe connectivity to all regions with the [test-connectivity.ps1](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/azure-arc/troubleshooting/test-connectivity.ps1) PowerShell script.
 
 :::code language="powershell" source="~/../sql-server-samples/samples/features/azure-arc/troubleshooting/test-connectivity.ps1":::
 

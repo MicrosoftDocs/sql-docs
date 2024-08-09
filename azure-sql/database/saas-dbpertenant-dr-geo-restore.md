@@ -5,7 +5,7 @@ author: bgavrilMS
 ms.author: bogavril
 ms.reviewer: mathoma, wiassaf
 ms.date: 01/14/2019
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.subservice: scenario
 ms.topic: tutorial
 ms.custom: sqldbrb=1

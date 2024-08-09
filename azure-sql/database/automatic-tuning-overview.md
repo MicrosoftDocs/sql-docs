@@ -6,7 +6,7 @@ author: NikaKinska
 ms.author: nnikolic
 ms.reviewer: wiassaf, mathoma
 ms.date: 6/6/2022
-ms.service: sql-db-mi
+ms.service: azure-sql
 ms.subservice: performance
 ms.topic: conceptual
 ms.custom: sqldbrb=2

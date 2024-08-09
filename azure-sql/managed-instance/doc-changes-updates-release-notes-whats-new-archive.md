@@ -5,8 +5,8 @@ description: Learn about the features and documentation improvements for Azure S
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: wiassaf, randolphwest
-ms.date: 12/19/2023
-ms.service: sql-managed-instance
+ms.date: 07/24/2024
+ms.service: azure-sql-managed-instance
 ms.subservice: service-overview
 ms.topic: whats-new
 ms.custom: references_regions
@@ -28,6 +28,16 @@ Return to [What's new in Azure SQL Managed Instance?](doc-changes-updates-releas
 
 | Changes | Month | Details |
 | --- | --- | --- |
+|**Free Azure SQL Managed Instance preview** |  December | Try Azure SQL Managed Instance for free, for the first 12 months after you create your instance. This free offer provides a General Purpose instance with up to 100 databases, and 720 vCore hours of compute every month. This offer is currently in preview. Review [Free SQL Managed Instance offer](free-offer.md) to learn more. |
+|**Database copy and move GA**| November | Perform an online database copy or move operation across managed instances. This feature is now generally available. Review [Database copy and move](database-copy-move-how-to.md) to get started. |
+|**Distributed Transaction Coordinator (DTC) GA** | November |Use DTC to run distributed transactions in mixed environments such as across managed instances, SQL Servers, other relational database management systems (RDBMSs), custom applications and other transaction participants hosted in any environment that can establish network connectivity to Azure. This feature is now generally available. Review [Distributed Transaction Coordinator (DTC)](distributed-transaction-coordinator-dtc.md) to get started. | 
+|**Ledger GA** | November | Ledger in Azure SQL Managed Instance allows you to cryptographically attest to other parties, such as auditors or other business parties, that your data hasn't been tampered with. This feature is now generally available. Review [Ledger](/sql/relational-databases/security/ledger/ledger-overview) to learn more. | 
+|**Link from SQL MI to SQL Server 2022 preview** | November | Configure a link from Azure SQL Managed Instance to SQL Server 2022. This feature is now in preview. Review [Managed Instance link overview](managed-instance-link-feature-overview.md) to learn more. |
+|**Instance stop and start GA** | November | Stop and start your managed instance to save on licensing and compute costs. This feature is now generally available. Review [instance stop and start](instance-stop-start-how-to.md) to learn more.  |
+|**November 2022 feature wave GA**|  November | November 2022 brought a number of new features for Azure SQL Managed Instance, such as [fast provisioning](management-operations-overview.md#fast-provisioning), and [zone redundancy](high-availability-sla-local-zone-redundancy.md#zone-redundant-availability) as well as enhancements to the [virtual cluster](virtual-cluster-architecture.md) and [network security](connectivity-architecture-overview.md).  All the features and benefits introduced by the November 2022 feature wave are now generally available. Review [November 2022 Feature wave](november-2022-feature-wave-enroll.md) to learn more. | 
+| **SQL Server DR to SQL MI preview** |  November | In the event of a disaster, you can recover your SQL Server 2022 database by failing over to SQL Managed Instance, and then failing back to SQL Server 2022 online by using the Managed Instance link. This feature has moved from a limited public preview that required signing up to an open public preview available to everyone. Review [Online disaster recovery for SQL Server 2022](managed-instance-link-disaster-recovery.md) to learn more. |
+|**Zone-redundancy for Business Critical GA**| November | Deploy your Business Critical SQL Managed Instance to multiple availability zones to improve the availability of your instance in the event of a disaster. This capability is now generally available. Review [Zone-redundancy](../managed-instance/high-availability-sla-local-zone-redundancy.md#zone-redundant-availability) to learn more. |
+|**Zone-redundancy for General Purpose preview**| November | Deploy your General Purpose SQL Managed Instance to multiple availability zones to improve the availability of your instance in the event of a disaster. This capability is now in preview. Review [Zone-redundancy](../managed-instance/high-availability-sla-local-zone-redundancy.md#zone-redundant-availability) to learn more. |
 | **Hybrid failover benefit** | October |  The failover rights benefit has been extended to include a license-free DR replica when you configure your passive DR SQL managed instance with the [link feature](managed-instance-link-feature-overview.md#license-free-passive-dr-replica). Review [License-free replicas](business-continuity-high-availability-disaster-recover-hadr-overview.md#license-free-dr-replicas) to learn more. |
 | **Microsoft Entra ID rebrand**| September | Azure Active Directory has been rebranded to [Microsoft Entra ID](/entra/fundamentals/new-name). | 
 | **Doubled max log rate GA** | August | The [log write throughput limit](resource-limits.md#service-tier-characteristics) per instance has doubled for the Business Critical service tier, up to 192 MiB/s from 96 MiB/s. This is generally available. Review the [tech community blog](https://techcommunity.microsoft.com/t5/azure-sql-blog/your-max-log-rate-on-sql-managed-instance-business-critical-is/ba-p/3899817) to learn more. |

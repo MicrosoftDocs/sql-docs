@@ -1,24 +1,26 @@
 ---
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 09/15/2022
+ms.date: 07/15/2024
 ms.service: sql
 ms.subservice: linux
 ms.topic: include
 ms.custom:
   - linux-related-content
 ---
-1. **On all SQL Server instances, create a Server login for Pacemaker**. The following Transact-SQL creates a login:
+1. **On all SQL Server instances, create a server login for Pacemaker**.
+
+   The following Transact-SQL creates a login:
 
    ```sql
    USE [master]
    GO
    CREATE LOGIN [pacemakerLogin] with PASSWORD= N'ComplexP@$$w0rd!';
-   
+
    ALTER SERVER ROLE [sysadmin] ADD MEMBER [pacemakerLogin];
    ```
 
-   At the time of availability group creation, the pacemaker user will require ALTER, CONTROL and VIEW DEFINITION permissions on the availability group, after it's created but before any nodes are added to it.
+   At the time of availability group creation, the Pacemaker user requires `ALTER`, `CONTROL`, and `VIEW DEFINITION` permissions on the availability group, after it's created but before any nodes are added to it.
 
 1. **On all SQL Server instances, save the credentials for the SQL Server login**.
 

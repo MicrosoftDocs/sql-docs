@@ -5,7 +5,7 @@ author: arvindshmicrosoft
 ms.author: arvindsh
 ms.reviewer: wiassaf, mathoma
 ms.date: 12/27/2023
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.subservice: elastic-pools
 ms.topic: conceptual
 ms.custom:

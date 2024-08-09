@@ -48,7 +48,7 @@ Before proceeding with the configuration (or reconfiguration) of PBIRS to use [!
 You can install and configure **adutil**, and join the domain, following the instructions in [Tutorial: Use adutil to configure Active Directory authentication with SQL Server on Linux](sql-server-linux-ad-auth-adutil-tutorial.md).
 
 > [!NOTE]
-> For information about specific packages on RHEL 8, see [Connecting RHEL systems directly to AD using SSSD](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html-single/integrating_rhel_systems_directly_with_windows_active_directory/index#discovering-and-joining-an-ad-domain-using-sssd_connecting-directly-to-ad).
+> For information about specific packages on RHEL 8, see [Connecting RHEL systems directly to AD using SSSD](https://docs.redhat.com/documentation/red_hat_enterprise_linux/8/html-single/integrating_rhel_systems_directly_with_windows_active_directory/index#discovering-and-joining-an-ad-domain-using-sssd_connecting-directly-to-ad).
 
 ## SQL Server service principal names (SPNs)
 

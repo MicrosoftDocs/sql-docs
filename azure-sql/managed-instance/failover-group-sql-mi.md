@@ -5,7 +5,7 @@ author: Stralle
 ms.author: strrodic
 ms.reviewer: mathoma, randolphwest
 ms.date: 05/31/2024
-ms.service: sql-managed-instance
+ms.service: azure-sql-managed-instance
 ms.subservice: high-availability
 ms.topic: conceptual
 ms.custom:

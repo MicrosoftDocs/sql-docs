@@ -5,7 +5,7 @@ author: alexwolfmsft
 ms.author: alexwolf
 ms.reviewer: mathoma
 ms.date: 02/10/2023
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.subservice: security
 monikerRange: "= azuresql || = azuresql-db"
 ms.topic: how-to

@@ -5,7 +5,7 @@ author: urosran
 ms.author: urandjelovic
 ms.reviewer: mathoma
 ms.date: 02/26/2024
-ms.service: sql-managed-instance
+ms.service: azure-sql-managed-instance
 ms.subservice: deployment-configuration
 ms.topic: quickstart
 ms.custom: mode-ui, devx-track-azurecli
@@ -195,7 +195,7 @@ And finally, create your instance:
 
 ## Review network settings 
 
-Select the **Route table** resource in your resource group to review the default [user-defined route table object and entries to route traffic](connectivity-architecture-overview.md#mandatory-routes-with-service-aided-subnet-configuration) from, and within, the SQL Managed Instance virtual network. To change or add routes, open the **Routes** in the Route table settings. 
+Select the **Route table** resource in your resource group to review the default [user-defined route table object and entries to route traffic](subnet-service-aided-configuration-enable.md#mandatory-security-rules-and-routes) from, and within, the SQL Managed Instance virtual network. To change or add routes, open the **Routes** in the Route table settings.
 
 :::image type="content" source="./media/instance-create-quickstart/azure-sql-managed-instance-route-table-user-defined-route.png" alt-text="Screenshot of the Entry for a SQL Managed Instance subnet to local in the Azure portal. ":::
 

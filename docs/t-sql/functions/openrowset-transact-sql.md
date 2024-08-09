@@ -43,27 +43,24 @@ Many examples in this article only apply to [!INCLUDE [ssnoversion-md](../../inc
 
 ## Syntax
 
+`OPENROWSET` syntax is used to query external data sources:
 ```syntaxsql
 OPENROWSET
-( { 'provider_name'
+(  'provider_name'
     , { 'datasource' ; 'user_id' ; 'password' | 'provider_string' }
-    , {   <table_or_view> | 'query' }
-   | BULK 'data_file' ,
-       { FORMATFILE = 'format_file_path' [ <bulk_options> ]
-       | SINGLE_BLOB | SINGLE_CLOB | SINGLE_NCLOB }
-} )
+    , {  [ catalog. ] [ schema. ] object | 'query' }
+)
+```
 
-<table_or_view> ::= [ catalog. ] [ schema. ] object
+`OPENROWSET(BULK)` syntax is used to read external files:
+```syntaxsql
+OPENROWSET( BULK 'data_file' ,
+            { FORMATFILE = 'format_file_path' [ <bulk_options> ]
+              | SINGLE_BLOB | SINGLE_CLOB | SINGLE_NCLOB }
+)
 
 <bulk_options> ::=
    [ , DATASOURCE = 'data_source_name' ]
-   [ , ERRORFILE = 'file_name' ]
-   [ , ERRORFILE_DATA_SOURCE = 'data_source_name' ]
-   [ , MAXERRORS = maximum_errors ]
-   [ , FIRSTROW = first_row ]
-   [ , LASTROW = last_row ]
-   [ , ROWS_PER_BATCH = rows_per_batch ]
-   [ , ORDER ( { column [ ASC | DESC ] } [ , ...n ] ) [ UNIQUE ] ]
 
    -- bulk_options related to input file format
    [ , CODEPAGE = { 'ACP' | 'OEM' | 'RAW' | 'code_page' } ]
@@ -71,6 +68,16 @@ OPENROWSET
    [ , FIELDQUOTE = 'quote_characters' ]
    [ , FORMATFILE = 'format_file_path' ]
    [ , FORMATFILE_DATA_SOURCE = 'data_source_name' ]
+
+   [ , FIRSTROW = first_row ]
+   [ , LASTROW = last_row ]
+
+   [ , MAXERRORS = maximum_errors ]
+   [ , ERRORFILE = 'file_name' ]
+   [ , ERRORFILE_DATA_SOURCE = 'data_source_name' ]
+
+   [ , ROWS_PER_BATCH = rows_per_batch ]
+   [ , ORDER ( { column [ ASC | DESC ] } [ , ...n ] ) [ UNIQUE ] ]
 ```
 
 [!INCLUDE [sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]

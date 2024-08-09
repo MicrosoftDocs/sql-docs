@@ -6,7 +6,7 @@ author: dimitri-furman
 ms.author: dfurman
 ms.reviewer: wiassaf
 ms.date: 06/19/2024
-ms.service: sql-db-mi
+ms.service: azure-sql
 ms.subservice: monitoring
 ms.topic: how-to
 ms.custom:

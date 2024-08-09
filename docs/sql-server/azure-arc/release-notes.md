@@ -4,7 +4,7 @@ description: Latest release notes for SQL Server enabled by Azure Arc
 author: anosov1960
 ms.author: sashan
 ms.reviewer: mikeray, randolphwest
-ms.date: 06/14/2024
+ms.date: 07/09/2024
 ms.topic: conceptual
 ms.custom: ignite-2023
 ---
@@ -21,6 +21,25 @@ This article lists:
 - Links to additional feature documentation
 
 Extension versions are cumulative. Higher extension versions include all of the updates from previous versions. A release may include internal features. If the version release notes don't describe features, then the updates were internal.
+
+## July  09, 2024
+
+**Extension version**: `1.1.2735.199`
+
+### Extended Security Updates enabled for SQL Server 2014
+
+Extended Security Updates (ESU) subscription for [!INCLUDE [sssql14-md](../../includes/sssql14-md.md)] will automatically start billing when SQL Server 2014 ESU program starts. Requires [!INCLUDE [sssql14-md](../../includes/sssql14-md.md)] be enabled for ESU.
+
+### Extended Security Updates using unlimited virtualization
+
+Extended Security Updates (ESU) subscription for [!INCLUDE [sssql11-md](../../includes/sssql11-md.md)] and [!INCLUDE [sssql14-md](../../includes/sssql14-md.md)] can be activated using ESU p-core license with unlimited virtualization. For details, see [Manage unlimited virtualization benefit for SQL Server ESU subscription](manage-configuration.md#manage-pcore-esu-license).
+
+> [!NOTE]
+> Billing for the ESU p-core licenses will be activated in the next monthly release, but the full ESU costs will be reflected using a back-bill meter.
+
+### Azure extension for SQL Server
+
+`SqlServerExtensionPermissionProvider` task no longer runs hourly. The task is triggered by specific events. For details, review [Roles](permissions-granted-agent-extension.md#roles). 
 
 ## June  14, 2024
 

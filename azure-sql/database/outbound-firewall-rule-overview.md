@@ -6,7 +6,7 @@ author: rohitnayakmsft
 ms.author: rohitna
 ms.reviewer: wiassaf, vanto, mathoma
 ms.date: 05/16/2023
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.subservice: security
 ms.custom: devx-track-azurecli, devx-track-azurepowershell
 ms.topic: conceptual

@@ -3,7 +3,7 @@ metadata:
   title: Maintenance Window FAQ
   titleSuffix: Azure SQL Database 
   description: FAQ on how the Azure SQL Managed Instance maintenance window can be configured.
-  ms.service: sql-database
+  ms.service: azure-sql-database
   ms.subservice: service-overview
   ms.topic: faq
   author: WilliamDAssafMSFT

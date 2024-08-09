@@ -4,8 +4,8 @@ description: Import or export an Azure SQL Database using Private Link without r
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma, hudequei
-ms.date: 12/22/2022
-ms.service: sql-database
+ms.date: 07/29/2024
+ms.service: azure-sql-database
 ms.subservice: migration
 ms.topic: how-to
 ms.custom:
@@ -27,7 +27,7 @@ Running Import or Export requires you to set [Allow Access to Azure Services](ne
 
 The database import/export private link is a service managed private endpoint created by Microsoft and that is exclusively used for all communications by the database import/export process, the Azure SQL database, and related Azure Storage services. A service managed private endpoint is a private IP address within a specific virtual network and subnet. The private endpoint has to be manually approved by user in the Azure portal for both server and storage.
 
-:::image type="content" source="./media/database-import-export-private-link/import-export-private-link.png" alt-text="Diagram of Import Export Private link architecture.":::
+:::image type="content" source="media/database-import-export-private-link/import-export-private-link.png" alt-text="Diagram of Import Export Private link architecture." lightbox="media/database-import-export-private-link/import-export-private-link.png":::
 
 ## Configure Import-Export Private Link using the Azure portal
 
@@ -39,14 +39,14 @@ Import/Export Private Link can be configured via Azure portal, PowerShell, or us
 
 1. Go to the **Overview** page of the Azure SQL logical server into which you would like to import the database. Select **Import database** from toolbar.
 1. In the **Import database** page, select the **Use private link** option checkbox.
-   :::image type="content" source="./media/database-import-export-private-link/import-database-private-link.png" alt-text="Screenshot from the Azure portal that shows how to enable Import Private link." lightbox="media/database-import-export-private-link/import-database-private-link.png":::
+   :::image type="content" source="media/database-import-export-private-link/import-database-private-link.png" alt-text="Screenshot from the Azure portal that shows how to enable Import Private link.":::
 1. Enter the storage account, authentication credentials, database details, and select **OK**.
 
 #### Create Export private link
 
 1. Go to the **Overview** page of the Azure SQL database that you would like to export. Select **Export** from the toolbar.
 1. In the **Export database** page, select the **Use private link** option checkbox.
-   :::image type="content" source="./media/database-import-export-private-link/export-database-private-link.png" alt-text="Screenshot from the Azure portal that shows how to enable Export Private Link." lightbox="media/database-import-export-private-link/export-database-private-link.png":::
+   :::image type="content" source="media/database-import-export-private-link/export-database-private-link.png" alt-text="Screenshot from the Azure portal that shows how to enable Export Private Link.":::
 1. Enter the storage account, authentication credentials, database details, and select **OK**.
 
 ### 2. Approve private endpoints
@@ -65,22 +65,22 @@ Import/Export Private Link can be configured via Azure portal, PowerShell, or us
 1. Select the private endpoint you want to approve.
 1. Select **Approve** to approve the connection.
 
-:::image type="content" source="media/database-import-export-private-link/approve-private-link.png" alt-text="Screenshot from the Azure portal that shows how to approve Azure SQL Database Private Link.":::
+:::image type="content" source="media/database-import-export-private-link/approve-private-link.png" alt-text="Screenshot from the Azure portal that shows how to approve Azure SQL Database Private Link." lightbox="media/database-import-export-private-link/approve-private-link.png":::
 
 #### Approve private endpoint connection on Azure Storage
 
-1. Go to the storage account that hosts the blob container where the .bacpac file exists.
+1. Go to the storage account that hosts the blob container where the BACPAC (`.bacpac`) file exists.
 1. Open the **Private endpoint connections** page in the **Security** menu.
 1. Select the private endpoint for the import/export service.
 1. Select **Approve** to approve the connection.
 
-:::image type="content" source="./media/database-import-export-private-link/approve-private-link-storage.png" alt-text="Screenshot from the Azure portal that shows how to approve Azure Storage Private Link in Azure Storage.":::
+:::image type="content" source="media/database-import-export-private-link/approve-private-link-storage.png" alt-text="Screenshot from the Azure portal that shows how to approve Azure Storage Private Link in Azure Storage." lightbox="media/database-import-export-private-link/approve-private-link-storage.png":::
 
 ### 3. Check import/export status
 
 1. After the private endpoints are approved, both in the Azure SQL server and the Azure Storage account, the database import or export job will be kicked off. Until then, the jobs will be on hold.
 1. You can check the status of database import or export jobs in **Import/Export History** page under **Data Management** section in Azure SQL server page.
-:::image type="content" source="./media/database-import-export-private-link/import-export-status.png" alt-text="Screenshot from the Azure portal that shows how to check Import Export Jobs Status." lightbox="./media/database-import-export-private-link/import-export-status.png":::
+:::image type="content" source="media/database-import-export-private-link/import-export-status.png" alt-text="Screenshot from the Azure portal that shows how to check Import Export Jobs Status." lightbox="media/database-import-export-private-link/import-export-status.png":::
 
 ## Configure import/export private link using PowerShell
 
@@ -107,13 +107,13 @@ $importRequest = New-AzSqlDatabaseImport -ResourceGroupName "<resourceGroupName>
 Use the [New-AzSqlDatabaseExport](/PowerShell/module/az.sql/new-azsqldatabaseexport) cmdlet to submit an export database request to the Azure SQL Database service. Depending on the size of your database, the export operation might take some time to complete.
 
 ```PowerShell
-$importRequest = New-AzSqlDatabaseExport -ResourceGroupName "<resourceGroupName>" `
+$exportRequest = New-AzSqlDatabaseExport -ResourceGroupName "<resourceGroupName>" `
         -ServerName "<serverName>" -DatabaseName "<databaseName>" `
-        -DatabaseMaxSizeBytes "<databaseSizeInBytes>" -StorageKeyType "StorageAccessKey" `
+        -StorageKeyType "StorageAccessKey" `
         -StorageKey $(Get-AzStorageAccountKey -ResourceGroupName $resourceGroupName `
                         -StorageAccountName "<storageAccountName>").Value[0]
         -StorageUri "https://myStorageAccount.blob.core.windows.net/importsample/sample.bacpac" `
-        -Edition "Standard" -ServiceObjectiveName "P6" ` -UseNetworkIsolation $true `
+        -UseNetworkIsolation $true `
         -StorageAccountResourceIdForPrivateLink "/subscriptions/<subscriptionId>/resourcegroups/<resource_group_name>/providers/Microsoft.Storage/storageAccounts/<storage_account_name>" `
          -SqlServerResourceIdForPrivateLink "/subscriptions/<subscriptionId>/resourceGroups/<resource_group_name>/providers/Microsoft.Sql/servers/<server_name>" `
         -AdministratorLogin "<userID>" `
@@ -136,7 +136,7 @@ Currently, the private link for import/export has the following limitations:
 
 - Manual approval of the new private endpoint connection is required to complete the export operation. After starting the export, go to "pending connections" in the Private Link Center and approve the connections, which can take several minutes to appear.
 
-- Import using Private Link does not support specifying a backup storage redundancy while creating a new database and creates with the default geo-redundant backup storage redundancy. As a workaround, first create an empty database with desired backup storage redundancy using Azure portal or PowerShell and then import the .bacpac file into this empty database.
+- Import using Private Link does not support specifying a backup storage redundancy while creating a new database and creates with the default geo-redundant backup storage redundancy. As a workaround, first create an empty database with desired backup storage redundancy using Azure portal or PowerShell and then import the BACPAC file into this empty database.
 
 - Import using REST API with private link can only be completed for an existing database since the API uses database extensions. As a workaround, create an empty database with the desired name, then call the Import REST API with private link.
 

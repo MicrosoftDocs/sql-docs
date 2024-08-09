@@ -4,7 +4,7 @@ description: In this article, you learn how you can manage the automatic connect
 author: anosov1960
 ms.author: sashan
 ms.reviewer: mikeray, randolphwest
-ms.date: 07/28/2023
+ms.date: 08/08/2024
 ms.topic: conceptual
 ---
 
@@ -12,12 +12,12 @@ ms.topic: conceptual
 
 [!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
-[!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] is a cloud-native solution provided by Microsoft to simplify the management, protection, and governance of SQL Server instances running on Azure Arc-enabled servers. This solution streamlines the experience of connecting SQL Server instances to Azure by automatically installing the Azure extension for SQL Server on all Arc-enabled servers that have SQL Server installed. For more information, visit [[!INCLUDE [ssazurearc](../../includes/ssazurearc.md)]](overview.md). All the SQL Server instance resources are automatically created in Azure, providing a centralized management platform for all your SQL Server instances.
-
-> [!IMPORTANT]
-> Microsoft only automatically connects Arc servers with SQL Server installed on them when the Arc server resource is in [one of the regions supported by [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)]](prerequisites.md#supported-regions).
+SQL Server instances are automatically connected to Azure Arc when they are installed on an Azure Arc-enabled Server and the Arc server resource is in a [supported region](prerequisites.md#supported-regions). All the SQL Server instance resources are automatically created in Azure, providing a centralized management platform for all your SQL Server instances. For more information, visit [[!INCLUDE [ssazurearc](../../includes/ssazurearc.md)]](overview.md).
 
 This article details how the streamlined process of connecting SQL Server to Azure works.
+
+> [!NOTE]
+> [!INCLUDE [least-privilege-default](includes/least-privilege-default.md)]
 
 ## Prerequisites
 

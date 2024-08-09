@@ -4,7 +4,7 @@ description: DBCC SHRINKDATABASE shrinks the size of the data and log files in t
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: umajay, KevinConanMSFT, dplessMSFT, randolphwest
-ms.date: 02/01/2024
+ms.date: 07/03/2024
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: "language-reference"
@@ -32,6 +32,9 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 [!INCLUDE [SQL Server SQL Database Azure SQL Managed Instance Azure Synapse Analytics](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 Shrinks the size of the data and log files in the specified database.
+
+> [!NOTE]
+> Shrink operations should not be considered a regular maintenance operation. Data and log files that grow due to regular, recurring business operations do not require shrink operations.
 
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
@@ -150,9 +153,6 @@ The following table describes the columns in the result set.
 
 ## Remarks
 
-> [!NOTE]  
-> In Azure Synapse, running a shrink command is not recommended as this is an I/O intensive operation and can take your dedicated SQL pool (formerly SQL DW) offline. In addition, there will be costing implications to your data warehouse snapshots after running this command.
-
 To shrink all data and log files for a specific database, execute the `DBCC SHRINKDATABASE` command. To shrink one data or log file at a time for a specific database, execute the [DBCC SHRINKFILE](../../t-sql/database-console-commands/dbcc-shrinkfile-transact-sql.md) command.
 
 To view the current amount of free (unallocated) space in the database, run [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md).
@@ -171,11 +171,15 @@ You can't shrink a database while the database is being backed up. Conversely, y
 
 When specified with WAIT_AT_LOW_PRIORITY, the shrink operation's Sch-M lock request will wait with low priority when executing the command for 1 minute. If the operation is blocked for the duration, the specified ABORT_AFTER_WAIT action will be executed.
 
-### Known issues
+In Azure Synapse SQL pools, running a shrink command is not recommended as this is an I/O intensive operation and can take your dedicated SQL pool (formerly SQL DW) offline. In addition, there will be costing implications to your data warehouse snapshots after running this command.
 
-**Applies to:** [!INCLUDE [sql-server](../../includes/ssnoversion-md.md)], [!INCLUDE[ssazure-sqldb](../../includes/ssazure-sqldb.md)], [!INCLUDE[ssazuremi-md](../../includes/ssazuremi-md.md)], [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] dedicated SQL pool
+[Database and file shrink operations](/azure/azure-sql/database/file-space-manage) are currently in preview for Azure SQL Database Hyperscale. For more information on the preview, see [Shrink for Azure SQL Database Hyperscale](https://aka.ms/hs-shrink-preview).
 
-- Currently, LOB columns (varbinary(max), varchar(max), and nvarchar(max)) in compressed columnstore segments are not affected by DBCC SHRINKDATABASE and DBCC SHRINKFILE.
+## Known issues
+
+**Applies to:** [!INCLUDE [sql-server](../../includes/ssnoversion-md.md)], [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)], [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] dedicated SQL pool
+
+- Currently, columns using LOB data types (**varbinary(max)**, **varchar(max)**, and **nvarchar(max)**) in compressed columnstore segments are not affected by `DBCC SHRINKDATABASE` and `DBCC SHRINKFILE`.
 
 ## How DBCC SHRINKDATABASE works
 

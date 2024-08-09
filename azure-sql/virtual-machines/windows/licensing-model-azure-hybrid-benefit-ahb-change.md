@@ -175,7 +175,7 @@ You need to [register your SQL Server VM with the SQL IaaS Agent extension](sql-
 
 Make sure your [subscription is registered with resource provider (RP)](sql-agent-extension-manually-register-single-vm.md#register-subscription-with-rp).
 
-The SQL IaaS Agent extension is required to change the license. Make sure you [remove and reinstall the SQL IaaS Agent extension](sql-agent-extension-manually-register-single-vm.md#unregister-from-extension) if it's in a failed state.
+The SQL IaaS Agent extension is required to change the license. Make sure you [delete and reinstall the SQL IaaS Agent extension](sql-agent-extension-manually-register-single-vm.md#delete-the-extension) if it's in a failed state.
 
 #### How can I deploy a SQL Server BYOL (bring-your-own-license) image?
 

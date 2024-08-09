@@ -6,7 +6,7 @@ author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: mathoma, dfurman, wiassaf
 ms.date: 03/14/2023
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.subservice: performance
 ms.topic: conceptual
 ---

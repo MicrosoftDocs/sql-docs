@@ -5,7 +5,7 @@ author: AbdullahMSFT
 ms.author: amamun
 ms.reviewer: wiassaf, mathoma
 ms.date: 07/28/2020
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.subservice: development
 ms.topic: conceptual
 ms.custom: sqldbrb=1

@@ -6,7 +6,7 @@ author: rajeshsetlem
 ms.author: rsetlem
 ms.reviewer: wiassaf, mathoma, amagarwa, maboja, vanto
 ms.date: 05/14/2019
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.subservice: high-availability
 ms.topic: how-to
 ms.custom:

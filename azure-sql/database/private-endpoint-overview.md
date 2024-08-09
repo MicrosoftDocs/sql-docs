@@ -6,7 +6,7 @@ author: rohitnayakmsft
 ms.author: rohitna
 ms.reviewer: wiassaf, vanto, mathoma, randolphwest
 ms.date: 07/03/2024
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.subservice: security
 ms.topic: overview
 ms.custom:

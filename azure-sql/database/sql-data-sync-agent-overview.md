@@ -5,7 +5,7 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma, hudequei
 ms.date: 12/20/2018
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.subservice: sql-data-sync
 ms.topic: conceptual
 ms.custom: sqldbrb=1

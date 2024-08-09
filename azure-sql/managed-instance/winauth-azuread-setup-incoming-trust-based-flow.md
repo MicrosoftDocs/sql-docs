@@ -6,7 +6,7 @@ author: sravanisaluru
 ms.author: srsaluru
 ms.reviewer: mathoma, bonova, urmilano, wiassaf
 ms.date: 09/27/2023
-ms.service: sql-managed-instance
+ms.service: azure-sql-managed-instance
 ms.subservice: deployment-configuration
 ms.topic: how-to
 ---
@@ -36,7 +36,7 @@ To implement the incoming trust-based authentication flow, first, ensure that th
 | --- | --- |
 | Client must run Windows 10, Windows Server 2012, or a higher version of Windows. | |
 | Clients must be joined to AD. The domain must have a functional level of Windows Server 2012 or higher. | You can determine if the client is joined to AD by running the [dsregcmd command](/azure/active-directory/devices/troubleshoot-device-dsregcmd): `dsregcmd.exe /status` |
-| Azure AD Hybrid Authentication Management Module. | This PowerShell module provides management features for on-premises setup. |
+| [Azure AD Hybrid Authentication Management Module](https://www.powershellgallery.com/packages/AzureADHybridAuthenticationManagement/2.0.55.0). | This PowerShell module provides management features for on-premises setup. |
 | Azure tenant. | |
 | Azure subscription under the same Microsoft Entra tenant you plan to use for authentication. | |
 | [Microsoft Entra Connect](/azure/active-directory/hybrid/whatis-azure-ad-connect) installed. | Hybrid environments where identities exist both in Microsoft Entra ID and AD. |

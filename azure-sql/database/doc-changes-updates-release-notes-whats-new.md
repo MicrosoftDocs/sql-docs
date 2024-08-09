@@ -5,8 +5,8 @@ description: Learn about the new features and documentation improvements for Azu
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma, randolphwest
-ms.date: 07/02/2024
-ms.service: sql-database
+ms.service: azure-sql-database
+ms.date: 07/31/2024
 ms.subservice: service-overview
 ms.topic: whats-new
 ms.custom:
@@ -90,6 +90,7 @@ Learn about significant changes to the Azure SQL Database documentation. For pre
 | Changes | Details |
 | --- | --- |
 | **Hyperscale support for database and file shrink** | Database and file shrink commands are supported in preview for Azure SQL Database Hyperscale. For more information, see [Shrink for Azure SQL Database Hyperscale](https://aka.ms/hs-shrink-preview). |
+| **TLS 1.0 and 1.1 retirement** | Azure has announced that support for older TLS versions (TLS 1.0, and 1.1) ends on October 31, 2024. To learn more about the impact to Azure SQL Database, review [connectivity settings](connectivity-settings.md#upcoming-retirement-changes). | 
 
 ### June 2024
 
@@ -99,6 +100,12 @@ Learn about significant changes to the Azure SQL Database documentation. For pre
 | **Hyperscale named replica zone redundant support** | [Zone redundancy support for Hyperscale named replicas](service-tier-hyperscale-replicas.md) are now generally available. For more information, see [Blog: Zone redundancy for Hyperscale named replicas](https://aka.ms/ZRSupportForNRPreview).|
 | **UNISTR (preview)** | Azure SQL Database now supports the `UNISTR`. This syntax is currently in preview. For more information, see [UNISTR (Transact-SQL)](/sql/t-sql/functions/unistr-transact-sql). |
 | **\|\| and \|\|= string concatenation support** | Azure SQL Database now supports \|\| and \|\|= compound assignment T-SQL syntax. This syntax is currently in preview. For more information, see [&#124;&#124; (String concatenation)](/sql/t-sql/language-elements/string-concatenation-pipes-transact-sql) and [&#124;&#124;= (Compound assignment)](/sql/t-sql/language-elements/compound-assignment-pipes-transact-sql). |
+
+### June 2024
+
+| Changes | Details |
+| --- | --- |
+| **TLS 1.3 support** | Azure SQL Database now supports connections encrypted with TLS 1.3. Review [TLS 1.3](/sql/relational-databases/security/networking/tls-1-3) and [Minimum TLS settings](connectivity-settings.md#minimum-tls-version) to learn more. | 
 
 ### May 2024
 

@@ -6,7 +6,7 @@ author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: mathoma, danil
 ms.date: 01/23/2024
-ms.service: sql-managed-instance
+ms.service: azure-sql-managed-instance
 ms.subservice: deployment-configuration
 ms.topic: conceptual
 ms.custom:

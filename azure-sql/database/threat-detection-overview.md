@@ -6,7 +6,7 @@ author: idokeshet
 ms.author: idokeshet
 ms.reviewer: wiassaf, vanto, mathoma
 ms.date: 06/24/2024
-ms.service: sql-db-mi
+ms.service: azure-sql
 ms.subservice: security
 ms.topic: conceptual
 ms.custom:

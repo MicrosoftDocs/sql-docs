@@ -6,7 +6,7 @@ summary: "Find documentation about Always Encrypted with secure enclaves"
 metadata:
   title: Always Encrypted with secure enclaves documentation
   description: "Find Always Encrypted with secure enclaves documentation for SQL Server and Azure SQL Database"
-  ms.service: sql-database
+  ms.service: azure-sql-database
   ms.subservice: security
   ms.tgt_pltfrm: na
   ms.devlang:

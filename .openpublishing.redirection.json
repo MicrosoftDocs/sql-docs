@@ -59577,8 +59577,28 @@
     },
     {
       "source_path": "docs/ssma/oracle/legal-notice-ssma-for-oracle.md",
-      "redirect_url": "/sql/ssma/sql-server-migration-assistant#legal-notice-ssma",
-      "redirect_document_id": true
+      "redirect_url": "/sql/ssma/sql-server-migration-assistant",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssma/access/legal-notice-ssma-for-access.md",
+      "redirect_url": "/sql/ssma/sql-server-migration-assistant",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssma/db2/legal-notice-db2tosql.md",
+      "redirect_url": "/sql/ssma/sql-server-migration-assistant",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssma/mysql/legal-notice-mysqltosql.md",
+      "redirect_url": "/sql/ssma/sql-server-migration-assistant",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssma/sybase/legal-notice-ssma-for-sybase.md",
+      "redirect_url": "/sql/ssma/sql-server-migration-assistant",
+      "redirect_document_id": false
     },
     {
       "source_path": "docs/ssma/oracle/shortcut-keys-oracle-to-sql.md",
@@ -61813,16 +61833,6 @@
     {
       "source_path": "docs/sql-server/install/index.md",
       "redirect_url": "/sql/sql-server/install/planning-a-sql-server-installation",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/sql-server/stretch-database/stretch-database-databases-and-tables-stretch-database-advisor.md",
-      "redirect_url": "/sql/sql-server/stretch-database/stretch-database",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/sql-server/stretch-database/index.md",
-      "redirect_url": "/sql/sql-server/stretch-database/stretch-database",
       "redirect_document_id": false
     },
     {

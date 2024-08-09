@@ -42,6 +42,16 @@ To do an in-place upgrade of SQL Server, you need the following:
 - SQL Server installation media. Customers who have [Software Assurance](https://www.microsoft.com/licensing/licensing-programs/software-assurance-default) can obtain their installation media from the [Volume Licensing Center](https://www.microsoft.com/Licensing/servicecenter/default.aspx). Customers who don't have Software Assurance can deploy an Azure Marketplace SQL Server VM image with the desired version of SQL Server and then copy the setup media (typically located in `C:\SQLServerFull`) from it to their target SQL Server VM.
 - Version upgrades should follow the [support upgrade paths](/sql/database-engine/install-windows/supported-version-and-edition-upgrades-version-15).
 
+## Delete the extension 
+
+Before you modify the edition of SQL Server, be sure to [delete the SQL IaaS Agent extension](sql-agent-extension-manually-register-single-vm.md#delete-the-extension) from the SQL Server VM. You can do so with the Azure portal, PowerShell or the Azure CLI. 
+
+To delete the extension from your SQL Server VM with Azure PowerShell, use the following sample command:
+
+```powershell-interactive
+Remove-AzSqlVM -ResourceGroupName <resource_group_name> -Name <SQL VM resource name>
+```
+
 ## Upgrade SQL Version
 
 > [!WARNING]  
@@ -87,6 +97,20 @@ You can downgrade the version of SQL Server by following these steps:
 1. Install the latest service packs and cumulative updates.
 1. Import all the necessary server-level objects (that were exported in Step 3).
 1. Re-create all the necessary user databases from scratch (by using created scripts or the files from Step 4).
+
+## Register with the extension
+
+After you've successfully changed the edition of SQL Server, you must register your SQL Server VM with the [SQL IaaS Agent extension](sql-agent-extension-manually-register-single-vm.md#register-with-extension) again to manage it from the Azure portal. 
+
+Register a SQL Server VM with Azure PowerShell:
+
+```powershell-interactive
+# Get the existing Compute VM
+$vm = Get-AzVM -Name <vm_name> -ResourceGroupName <resource_group_name>
+
+New-AzSqlVM -Name $vm.Name -ResourceGroupName $vm.ResourceGroupName -Location $vm.Location `
+-LicenseType <license_type>
+```
 
 ## Verify the version and edition in the portal
 

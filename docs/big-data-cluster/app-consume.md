@@ -5,7 +5,7 @@ description: Consume an application deployed on SQL Server Big Data Clusters usi
 author: HugoMSFT
 ms.author: hudequei
 ms.reviewer: wiassaf
-ms.date: 06/22/2020
+ms.date: 08/06/2024
 ms.service: sql
 ms.subservice: big-data-cluster
 ms.topic: conceptual
@@ -105,7 +105,7 @@ To access the RESTful web service for the app you've deployed you first have to 
  
 > For version information, see [Release history](release-notes-big-data-cluster.md#release-history).
 
-Open the appropriate URL in your browser using the IP address and port you retrieved running the [`describe`](#retrieve-the-endpoint) command above. Sign in with the same credentials you used for `azdata login`.
+Open the appropriate URL in your browser using the IP address and port you retrieved running the [`describe`](#retrieve-the-endpoint) command. Sign in with the same credentials you used for `azdata login`.
 
 Paste the contents of the `swagger.json` into the [Swagger Editor](https://editor.swagger.io) to understand what methods are available:
 
@@ -117,17 +117,11 @@ Notice the `app` is GET method and to get the `token` would use POST method. Sin
     https://10.1.1.3 :30080/api/v1/token
 ```
 
-
-Here is an example of how to do just that in [Postman](https://www.getpostman.com/):
-
-![Postman Token](media/big-data-cluster-consume-apps/postman_token.png)
-
-
 The output of this request will give you a JWT `access_token`, which you'll need to call the URL to run the app.
 
 ## Execute the app using the RESTful web service
 
-There are multiple ways to consume an app on SQL Server Big Data Clusters, you can choose to use [azdata app run command](app-create.md). This section will demonstrate how to use common developer tools such as Postman to execute the app. 
+There are multiple ways to consume an app on SQL Server Big Data Clusters, you can choose to use [azdata app run command](app-create.md).
 
 You can open the URL for the `swagger` that was returned when you ran `azdata app describe --name [appname] --version [version]` in your browser, which should be similar to `https://[IP]:[PORT]/app/[appname]/[version]/swagger.json`. 
 
@@ -137,24 +131,6 @@ You can open the URL for the `swagger` that was returned when you ran `azdata ap
  ```bash
     azdata app describe --name add-app --version v1
 ```
-
-The contents of the `swagger.json` you can paste into [Swagger Editor](https://editor.swagger.io). You'll see that the web service exposes the `run` method, and underneath it went through application proxy, which is a web API that authenticates users and then routes the requests through to the applications. Notice that the Base URL displayed at the top. You can use tool of your choice to call the `run` method (`https://[IP]:30778/api/app/[appname]/[version]/run`), passing in the parameters in the body of your POST request as json. 
-
-
-In this example, we'll use [Postman](https://www.getpostman.com/). Before making the call, you'll need to set the `Authorization` to `Bearer Token` and paste in the token you retrieved earlier. This will set a header on your request. See the screenshot below.
-
-![Postman Run Headers](media/big-data-cluster-consume-apps/postman_run_1.png)
-
-Next, in the requests body, pass in the parameters to the app you're calling and set the `content-type` to `application/json`:
-
-![Postman Run Body](media/big-data-cluster-consume-apps/postman_run_2.png)
-
-When you send the request, you'll get the same output as you did when you ran the app through `azdata app run`:
-
-![Postman Run Result](media/big-data-cluster-consume-apps/postman_result.png)
-
-You've now successfully called the app through the web service. You can follow similar steps to integrate this web service in your application.
-
 
 ## Next steps
 

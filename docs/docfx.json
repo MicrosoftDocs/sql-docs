@@ -214,7 +214,7 @@
       },
       "ms.subservice": {
         "sql-server/azure-arc/**/*.md": "azure-arc-sql-server",
-        "sql-server/azure-arc/**/*.yml": "azure-arc-sql-server"       
+        "sql-server/azure-arc/**/*.yml": "azure-arc-sql-server"
       },
       "ms.custom": {
         "ado/*.md": "UpdateFrequency5",
@@ -360,6 +360,54 @@
           "sql-server-ver16"
         ],
         "ssma/sybase/legal-notice-ssma-for-sybase.md": [
+          "sql-server-ver16"
+        ],
+        "sql-server/stretch-database/**/*.md": [
+          "sql-server-ver16"
+        ],
+        "relational-databases/system-catalog-views/stretch-database-catalog-views-sys-remote-data-archive-databases.md": [
+          "sql-server-ver16"
+        ],
+        "relational-databases/system-catalog-views/stretch-database-catalog-views-sys-remote-data-archive-tables.md": [
+          "sql-server-ver16"
+        ],
+        "relational-databases/system-dynamic-management-views/stretch-database-related-dynamic-management-views-transact-sql.md": [
+          "sql-server-ver16"
+        ],
+        "relational-databases/system-dynamic-management-views/stretch-database-sys-dm-db-rda-migration-status.md": [
+          "sql-server-ver16"
+        ],
+        "relational-databases/system-dynamic-management-views/stretch-database-sys-dm-db-rda-schema-update-status.md": [
+          "sql-server-ver16"
+        ],
+        "relational-databases/system-stored-procedures/stretch-database-extended-stored-procedures-transact-sql.md": [
+          "sql-server-ver16"
+        ],
+        "relational-databases/system-stored-procedures/sys-sp-rda-deauthorize-db-transact-sql.md": [
+          "sql-server-ver16"
+        ],
+        "relational-databases/system-stored-procedures/sys-sp-rda-get-rpo-duration-transact-sql.md": [
+          "sql-server-ver16"
+        ],
+        "relational-databases/system-stored-procedures/sys-sp-rda-reauthorize-db-transact-sql.md": [
+          "sql-server-ver16"
+        ],
+        "relational-databases/system-stored-procedures/sys-sp-rda-reconcile-batch-transact-sql.md": [
+          "sql-server-ver16"
+        ],
+        "relational-databases/system-stored-procedures/sys-sp-rda-reconcile-columns-transact-sql.md": [
+          "sql-server-ver16"
+        ],
+        "relational-databases/system-stored-procedures/sys-sp-rda-reconcile-indexes-transact-sql.md": [
+          "sql-server-ver16"
+        ],
+        "relational-databases/system-stored-procedures/sys-sp-rda-set-query-mode-transact-sql.md": [
+          "sql-server-ver16"
+        ],
+        "relational-databases/system-stored-procedures/sys-sp-rda-set-rpo-duration-transact-sql.md": [
+          "sql-server-ver16"
+        ],
+        "relational-databases/system-stored-procedures/sys-sp-rda-test-connection-transact-sql.md": [
           "sql-server-ver16"
         ]
       }

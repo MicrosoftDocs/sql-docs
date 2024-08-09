@@ -5,7 +5,7 @@ description: "Learn about changes that might break applications, scripts, or fun
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: randolphwest
-ms.date: 07/09/2024
+ms.date: 08/02/2024
 ms.service: sql
 ms.subservice: release-landing
 ms.topic: conceptual
@@ -21,11 +21,9 @@ This article describes breaking changes in the [!INCLUDE [sssql17-md](../include
 
 ## Breaking changes in SQL Server 2017 Database Engine
 
-- CLR uses Code Access Security (CAS) in the .NET Framework, which is no longer supported as a security boundary. Beginning with [!INCLUDE [sssql17-md](../includes/sssql17-md.md)] [!INCLUDE [ssDE](../includes/ssde-md.md)], an `sp_configure` option called `clr strict security` is introduced to enhance the security of CLR assemblies. clr strict security is enabled by default, and treats `SAFE` and `EXTERNAL_ACCESS` CLR assemblies as if they were marked `UNSAFE`. The `clr strict security` option can be disabled for backward compatibility, but this isn't recommended. When `clr strict security` is disabled, a CLR assembly created with `PERMISSION_SET = SAFE` might be able to access external system resources, call unmanaged code, and acquire **sysadmin** privileges. After enabling strict security, any assemblies that aren't signed will fail to load. Also, if a database has `SAFE` or `EXTERNAL_ACCESS` assemblies, `RESTORE` or `ATTACH DATABASE` statements can complete, but the assemblies might fail to load.
+[!INCLUDE [code-access-security](includes/code-access-security.md)]
 
-  To load the assemblies, you must either alter or drop and recreate each assembly so that it's signed with a certificate or asymmetric key that has a corresponding login with the `UNSAFE ASSEMBLY` permission on the server. For more information, see [CLR strict security](configure-windows/clr-strict-security.md).
-
-- The MD2, MD4, MD5, SHA, and SHA1 algorithms are deprecated in [!INCLUDE [sssql15-md](../includes/sssql16-md.md)]. Up to [!INCLUDE [sssql15-md](../includes/sssql16-md.md)], a self-signed certificate is created using SHA1. Starting with [!INCLUDE [ssSQL17](../includes/sssql17-md.md)], a self-signed certificate is created using SHA2_256.
+The MD2, MD4, MD5, SHA, and SHA1 algorithms are deprecated in [!INCLUDE [sssql15-md](../includes/sssql16-md.md)]. Up to [!INCLUDE [sssql15-md](../includes/sssql16-md.md)], a self-signed certificate is created using SHA1. Starting with [!INCLUDE [ssSQL17](../includes/sssql17-md.md)], a self-signed certificate is created using SHA2_256.
 
 ## Previous versions
 

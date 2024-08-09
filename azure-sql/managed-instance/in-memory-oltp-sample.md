@@ -5,7 +5,7 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma, srinia, strrodic 
 ms.date: 12/29/2023
-ms.service: sql-managed-instance
+ms.service: azure-sql-managed-instance
 ms.subservice: performance
 ms.topic: tutorial
 monikerRange: "=azuresql||=azuresql-mi"

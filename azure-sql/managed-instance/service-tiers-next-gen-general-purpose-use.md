@@ -5,7 +5,7 @@ author: urosmil
 ms.author: urmilano
 ms.reviewer: wiassaf, mathoma
 ms.date: 05/27/2024
-ms.service: sql-managed-instance
+ms.service: azure-sql-managed-instance
 ms.subservice: service-overview
 ms.topic: conceptual
 ---

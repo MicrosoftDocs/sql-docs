@@ -5,7 +5,7 @@ author: oslake
 ms.author: moslake
 ms.reviewer: wiassaf, mathoma
 ms.date: 07/02/2024
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.subservice: deployment-configuration
 ms.topic: conceptual
 ms.custom:

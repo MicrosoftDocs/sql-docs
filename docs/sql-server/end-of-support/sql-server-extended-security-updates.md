@@ -3,7 +3,7 @@ title: "What are Extended Security Updates?"
 description: Learn about Extended Security Updates enabled by Azure Arc, for your end-of-support and end-of-life SQL Server products such as SQL Server 2012.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 07/15/2024
+ms.date: 07/31/2024
 ms.service: sql
 ms.subservice: install
 ms.topic: conceptual
@@ -19,6 +19,8 @@ monikerRange: ">=sql-server-2016"
 This article provides information how to receive Extended Security Updates (ESUs) for versions of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] that are out of extended support.
 
 Extended Security Updates (ESUs) are available for [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)] and [!INCLUDE [sssql14-md](../../includes/sssql14-md.md)].
+
+ESUs released for **[!INCLUDE [sssql14-md](../../includes/sssql14-md.md)]** include the most recent cumulative update (CU). If you only applied [general distribution release](/troubleshoot/sql/releases/servicing-models-sql-server#general-distribution-release-gdr) (GDR) updates during the normal support period, we recommend that you install and validate the latest CU at the time you subscribe to receive ESUs, instead of waiting until the first ESU is released. This preemptive validation avoids potential issues when installing the ESU later.
 
 [!INCLUDE [esu-table](includes/esu-table.md)]
 
@@ -44,7 +46,7 @@ The method of receiving Extended Security Updates depends on where your [!INCLUD
 
 ### Azure
 
-On Azure, services have access to ESUs for [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)] and [!INCLUDE [ssSQL14](../../includes/sssql14-md.md)] for up to three years after the end of support, at **no additional charge** above the cost of running the Azure service.
+On Azure, services have access to ESUs for [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)] and [!INCLUDE [ssSQL14](../../includes/sssql14-md.md)] for up to three years after the end of support, at **no additional charge** above the cost of running the Azure service. If you can't connect your [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instance to Azure Arc, you don't qualify for this offer.
 
 To configure Azure services to receive ESUs, review the documentation for the specific service:
 
@@ -74,8 +76,8 @@ The following table shows the differences between the two options:
 
 | Option | How to purchase | Key features |
 | --- | --- | --- |
-| **ESU plan** | Volume licensing center | - Supports SQL Server instances both connected and not connected to Azure Arc<br />- Each year of coverage must be purchased separately, must be paid in full, and is differently priced<br />- Requires registration on Azure portal<br />- Supports manual installation of patches |
-| **ESU subscription** | Microsoft Azure | - The covered SQL Server instances must be connected to Azure Arc<br />- Continuous coverage until canceled<br />- Billed by Azure on an hourly basis<br />- Can be manually canceled at any time<br />- Automatic cancellation when migrated to Azure or upgraded to a supported version<br />- Supports automatic and manual installation of patches |
+| **ESU plan** | Volume licensing center | - Supports [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instances both connected and not connected to Azure Arc<br />- Each year of coverage must be purchased separately, must be paid in full, and is differently priced<br />- Requires registration on Azure portal<br />- Supports manual installation of patches |
+| **ESU subscription** | Microsoft Azure | - The covered [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instances must be connected to Azure Arc<br />- Continuous coverage until canceled<br />- Billed by Azure on an hourly basis<br />- Can be manually canceled at any time<br />- Automatic cancellation when migrated to Azure or upgraded to a supported version<br />- Supports automatic and manual installation of patches |
 
 > [!NOTE]  
 > Connecting or registering instances is free of charge. Both *connected* and *registered* instances don't incur additional charges when downloading ESUs, which are delivered through the Azure portal.
@@ -88,11 +90,11 @@ ESUs don't include technical support for either on-premises or hosted environmen
 
 ## <a id="subscribe-instances-for-esus"></a> Subscribe to Extended Security Updates enabled by Azure Arc
 
-SQL Server enabled by Azure Arc supports a method of receiving ESUs as a subscription billed through Azure. For details, see [SQL Server ESU subscriptions enabled by Azure Arc](../azure-arc/extended-security-updates.md).
+[!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] enabled by Azure Arc supports a method of receiving ESUs as a subscription billed through Azure. For details, see [SQL Server Extended Security Updates enabled by Azure Arc](../azure-arc/extended-security-updates.md).
 
 ## <a id="register-instances-for-esus"></a> Register Extended Security Updates purchased through volume licensing
 
-If you purchased an ESU product through volume licensing (VL) for the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instances that aren't connected to Azure Arc, you must first register these servers on the Azure portal and  link the ESU invoice as proof of purchase.
+If you purchased an ESU product through volume licensing (VL) for the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instances that aren't connected to Azure Arc, you must first register these servers on the Azure portal and link the ESU invoice as proof of purchase.
 
 ## <a id="register-instances-on-azure-portal"></a> Register disconnected SQL Server instances on Azure portal
 
@@ -207,10 +209,10 @@ The CSV file should look like this:
 
 ```csv
 name,version,edition,cores,hostType
-Server1-SQL2012,SQL Server 2012,Enterprise,12,Other Physical Server
-Server2-SQL2012,SQL Server 2012,Enterprise,24,Other Physical Server
-Server3-SQL2012,SQL Server 2012,Enterprise,12,Azure Virtual Machine
-Server4-SQL2012,SQL Server 2012,Standard,8,Azure VMware Solution
+Server1-SQL2014,SQL Server 2014,Enterprise,12,Other Physical Server
+Server2-SQL2014,SQL Server 2014,Enterprise,24,Other Physical Server
+Server3-SQL2014,SQL Server 2014,Enterprise,12,Azure Virtual Machine
+Server4-SQL2014,SQL Server 2014,Standard,8,Azure VMware Solution
 ```
 
 ## Link ESU invoice

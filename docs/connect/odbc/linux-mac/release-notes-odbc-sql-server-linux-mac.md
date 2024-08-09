@@ -3,8 +3,7 @@ title: Release Notes ODBC Driver for SQL Server on Linux and macOS
 description: "Learn what's new and changed in released versions of the Microsoft ODBC Driver for SQL Server."
 author: v-chojas
 ms.author: v-chojas
-ms.reviewer: v-davidengel
-ms.date: 04/09/2024
+ms.date: 07/31/2024
 ms.service: sql
 ms.subservice: connectivity
 ms.custom: linux-related-content
@@ -28,6 +27,15 @@ NOW NEW FILE NAME:    linux-mac/release-notes-odbc-sql-server-linux-mac.md
 Thank you.
 GeneMi.  2019/04/03.
 -->
+
+## 18.4.1, July 2024
+
+| New item | Details |
+| :------- | :------ |
+| New distributions supported. | Ubuntu 24.04, Alpine 3.19  |
+| Accept EULA by file presence. | Added the ability to accept the EULA for DEB and RPM packages by the presence of a file. |
+| Microsoft Entra ID | Renamed all occurrences of "Azure Active Directory" to "Microsoft Entra ID". See [New name for Azure Active Directory](https://learn.microsoft.com/entra/fundamentals/new-name) for more information. |
+| Bug fixes. | [Bug fixes](../bug-fixes.md). |
 
 ## 18.3.3, April 2024
 

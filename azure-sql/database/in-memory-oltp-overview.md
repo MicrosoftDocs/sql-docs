@@ -4,8 +4,8 @@ description: In-memory technologies greatly improve the performance of transacti
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma
-ms.date: 12/13/2023
-ms.service: sql-database
+ms.date: 08/01/2024
+ms.service: azure-sql-database
 ms.subservice: performance
 ms.topic: conceptual
 ms.custom:
@@ -52,7 +52,8 @@ Because of the more efficient query and transaction processing, in-memory techno
 By using in-memory OLTP, Quorum Business Solutions was able to double their workload while improving DTUs by 70%. For more information, see [In-memory OLTP in Azure SQL Database](https://azure.microsoft.com/blog/in-memory-oltp-in-azure-sql-database/).
 
 > [!NOTE]  
-> In-memory technologies are available in the Premium and Business Critical tiers of Azure SQL Database.
+> In-memory technologies are available in the Premium (DTU) and Business Critical (vCore) tiers of Azure SQL Database.
+> Hyperscale supports a subset of in-memory OLTP objects, but does not include memory-optimized tables. For more information, see [Hyperscale limitations](service-tier-hyperscale.md?view=azuresql&preserve-view=true#known-limitations).
 
 This article describes aspects of in-memory OLTP and columnstore indexes that are specific to Azure SQL Database, and also includes samples:
 
@@ -156,7 +157,7 @@ There are two types of columnstore models that you can use to organize your data
 
 ### Data size and storage for columnstore indexes
 
-Columnstore indexes aren't required to fit in memory. Therefore, the only cap on the size of the indexes is the maximum overall database size, which is documented in the [DTU-based purchasing model](service-tiers-dtu.md?view=azuresql-db&preserve-view=true) and [vCore-based purchasing model](service-tiers-vcore.md?view=azuresql-db&preserve-view=true) articles.
+Columnstore indexes aren't required to fit in memory. Therefore, the only cap on the size of the indexes is the maximum overall database size, which is documented in the [DTU-based purchasing model](service-tiers-dtu.md?view=azuresql-db&preserve-view=true) and [vCore-based purchasing model](service-tiers-sql-database-vcore.md?view=azuresql-db&preserve-view=true) articles.
 
 When you use clustered columnstore indexes, columnar compression is used for the base table storage. This compression can significantly reduce the storage footprint of your user data, which means that you can fit more data in the database. And the compression can be further increased with [columnar archival compression](/sql/relational-databases/data-compression/data-compression?view=azuresqldb-current&preserve-view=true#using-columnstore-and-columnstore-archive-compression). The amount of compression that you can achieve depends on the nature of the data, but 10 times the compression is not uncommon.
 

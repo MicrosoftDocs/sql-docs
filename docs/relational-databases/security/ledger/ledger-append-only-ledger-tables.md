@@ -5,7 +5,7 @@ author: VanMSFT
 ms.author: vanto
 ms.reviewer: mathoma
 ms.date: "05/24/2022"
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.subservice: security
 ms.topic: conceptual
 monikerRange: "= azuresqldb-current||>= sql-server-ver16||>= sql-server-linux-ver16||=azuresqldb-mi-current"

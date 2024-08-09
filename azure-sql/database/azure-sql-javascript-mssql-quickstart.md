@@ -6,7 +6,7 @@ ms.author: diberry
 ms.reviewer: mathoma
 ms.custom: passwordless-js
 ms.date: 05/08/2023
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.subservice: security
 ms.topic: quickstart
 monikerRange: "= azuresql || = azuresql-db"

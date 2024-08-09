@@ -6,7 +6,7 @@ author: rajeshsetlem
 ms.author: rsetlem
 ms.reviewer: wiassaf, mathoma, randolphwest
 ms.date: 11/28/2023
-ms.service: sql-db-mi
+ms.service: azure-sql
 ms.subservice: scale-out
 ms.topic: conceptual
 ms.custom:

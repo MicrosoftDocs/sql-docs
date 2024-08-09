@@ -64,7 +64,7 @@ To grant an account the `Perform volume maintenance tasks` permission:
 
 1. In the right pane, double-click **Perform volume maintenance tasks**.
 
-1. Select **Add User or Group** and add the account that runs the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] service.
+1. Select **Add User or Group** and add the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] service account.
 
 1. Select **Apply**, and then close all **Local Security Policy** dialog boxes.
 

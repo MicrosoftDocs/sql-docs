@@ -6,7 +6,7 @@ author: MariDjo
 ms.author: dmarinkovic
 ms.reviewer: mathoma, randolphwest
 ms.date: 05/22/2024
-ms.service: sql-managed-instance
+ms.service: azure-sql-managed-instance
 ms.subservice: deployment-configuration
 ms.topic: how-to
 ms.custom:

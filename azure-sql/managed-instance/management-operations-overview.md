@@ -6,7 +6,7 @@ author: urosmil
 ms.author: urmilano
 ms.reviewer: mathoma
 ms.date: 08/20/2021
-ms.service: sql-managed-instance
+ms.service: azure-sql-managed-instance
 ms.subservice: deployment-configuration
 ms.topic: overview
 ms.custom: ignite-2023

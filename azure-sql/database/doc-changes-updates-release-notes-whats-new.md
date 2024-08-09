@@ -6,7 +6,7 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma, randolphwest
 ms.service: azure-sql-database
-ms.date: 07/31/2024
+ms.date: 08/14/2024
 ms.subservice: service-overview
 ms.topic: whats-new
 ms.custom:
@@ -84,6 +84,12 @@ The following table lists features of Azure SQL Database that have been made gen
 ## Documentation changes
 
 Learn about significant changes to the Azure SQL Database documentation. For previous years, see the [What's new archive](doc-changes-updates-release-notes-whats-new-archive.md).
+
+### August 2024
+
+| Changes | Details |
+| --- | --- |
+| **Local development experience for Azure SQL Database using Dev Container Templates**| We've provided details and quickstarts to get started with the new [local dev experience for Azure SQL Database](local-dev-experience-dev-containers.md). Dev Container Templates replace the previous local emulator experience. To get started, see [Quickstart: Set up a development environment with Dev Container Templates for Azure SQL Database](local-dev-experience-dev-containers-quickstart.md).|
 
 ### July 2024
 

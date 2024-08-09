@@ -38,42 +38,41 @@ The syntax for `PIVOT` is simpler and more readable than the syntax that may oth
 The following syntax summarizes how to use the `PIVOT` operator.  
   
 ```syntaxsql  
-SELECT [<non-pivoted column> AS <column name>,]
+SELECT [<non-pivoted column> [AS <column name>], ]
     ...
-    <first pivoted column> AS <column name>,
-    <second pivoted column> AS <column name>,
+    [<first pivoted column> [AS <column name>],
+    [<second pivoted column> [AS <column name>], ]
     ...
-    <last pivoted column> AS <column name>
+    [<last pivoted column> [AS <column name>] ] ]
 FROM  
     (<SELECT query that produces the data>)   
     AS <alias for the source query>  
 PIVOT  
 (  
     <aggregation function>(<column being aggregated>)  
-FOR   
-<column that contains the values that will become column headers>
+FOR <column that contains the values that will become column headers>
     IN ( [first pivoted column], [second pivoted column],  
     ... [last pivoted column])  
 ) AS <alias for the pivot table>
 <optional ORDER BY clause>;  
-```  
+```
+
 The following syntax summarizes how to use the `UNPIVOT` operator.  
   
 ```syntaxsql  
-SELECT <non-pivoted column> AS <column name>,
+SELECT [<non-pivoted column> [AS <column name>], ]
     ...
-    <output column for names of the pivot columns>,
-    <new output column created for values in result of the source query>
+    [<output column for names of the pivot columns> [AS <column name>], ]
+    [<new output column created for values in result of the source query> [AS <column name>] ]
 FROM  
     (<SELECT query that produces the data>)   
     AS <alias for the source query>  
 UNPIVOT
 (  
     <new output column created for values in result of the source query>
-FOR   
-<output column for names of the pivot columns>
-    IN ( [first pivoted column], [second pivoted column],  
-    ... [last pivoted column])  
+FOR <output column for names of the pivot columns>
+    IN ( <first pivoted column>, <second pivoted column>,  
+    ... <last pivoted column>)  
 )
 <optional ORDER BY clause>;  
 ```  

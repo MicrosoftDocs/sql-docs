@@ -1,10 +1,10 @@
 ---
-title: "Troubleshoot best practices assessment."
+title: "Troubleshoot best practices assessment"
 description: "Describes how to troubleshoot best practices assessment on SQL Server enabled by Azure Arc."
 author: nhebbar2011
 ms.author: nhebbar
-ms.reviewer: mikeray
-ms.date: 06/16/2023
+ms.reviewer: mikeray, randolphwest
+ms.date: 08/07/2024
 ms.topic: troubleshooting
 ---
 
@@ -22,7 +22,7 @@ The extension log file is at:
 
    `C:\ProgramData\GuestConfig\extension_logs\Microsoft.AzureData.WindowsAgent.SqlServer\`
 
-The log file name depends on the version Azure Extension for SQL Server, for the latest version of Azure Extension for SQL Server, the log file is:
+The log file name depends on the version Azure Extension for SQL Server. For the latest version of Azure Extension for SQL Server, the log file is:
 
    `unifiedagent.log`
 
@@ -38,15 +38,15 @@ The Azure monitor agent log is at:
 
 You might encounter the following issues when you enable best practices assessment.
 
-## No Log Analytics workspace is available in the drop-down menu
+## No Log Analytics workspace is available in the dropdown list menu
 
-:::image type="content" source="media/assess/sql-best-practices-assessment-no-workspace.png" alt-text="Screenshot showing the error message when no value is visible in the Log Analytics workspace selector dropdown.":::
+:::image type="content" source="media/assess/sql-best-practices-assessment-no-workspace.png" alt-text="Screenshot showing the error message when no value is visible in the Log Analytics workspace selector dropdown." lightbox="media/assess/sql-best-practices-assessment-no-workspace.png":::
 
 Ensure that the user configuring SQL BPA must have Log Analytics Contributor role on the resource group or subscription of the Log Analytics workspace. The list of prerequisites can be found [here](assess.md#prerequisites).
 
 ## Error notifications requiring users to wait five minutes
 
-:::image type="content" source="media/assess/sql-best-practices-assessment-error-notification.png" alt-text="Screenshot showing the error notifications notifying the users to wait for five minutes.":::
+:::image type="content" source="media/assess/sql-best-practices-assessment-error-notification.png" alt-text="Screenshot showing the error notifications notifying the users to wait for five minutes." lightbox="media/assess/sql-best-practices-assessment-error-notification.png":::
 
 If such a notification appears and you keep the page open, the portal automatically retries the operation after five minutes. If the page is refreshed, the portal advises you to wait for five minutes before retrying the operation. In case the same error persists after a long time, verify the state of the **WindowsAgent.SqlServer** extension and ensure that the extension isn't stuck in an **Updating** state. In case the extension is still stuck, verify the connectivity of the Arc machine.
 
@@ -58,13 +58,13 @@ In case the assessment run fails, select the corresponding row to open a page th
 
 #### Description
 
-**Connection test for SQL Assessment failed** indicates that he assessment failed to connect to the instance of SQL Server. It returns:
+**Connection test for SQL Assessment failed** indicates that the assessment failed to connect to the instance of SQL Server. It returns:
 
    :::image type="content" source="media/assess/sql-best-practices-assessment-connection-failed.png" alt-text="Screenshot showing the error message that SQL Server is offline.":::
 
 #### Resolution
 
-Follow the steps at [Troubleshoot SQL Server connectivity failures](/troubleshoot/sql/database-engine/connect/resolve-connectivity-errors-overview).
+Follow the steps at [Troubleshoot connectivity issues in SQL Server](/troubleshoot/sql/database-engine/connect/resolve-connectivity-errors-overview).
 
 ### Server principal is not able to access model database
 
@@ -93,42 +93,41 @@ If the error states that the upload failed for Azure Monitor Agent (AMA), verify
    1. The `SqlAssessment_CL` table should be present.
 1. Azure Monitor Agent (version >= 1.10.0) should be successfully provisioned.
    1. Navigate to the **Extensions** tab under the Arc resource.
-   2. AMA with required version should be successfully provisioned.
+   1. AMA with required version should be successfully provisioned.
 1. The data collection rule (DCR) and data collection endpoint (DCE) must be in the same location as the Log Analytics workspace.
    1. Navigate to the Overview tab of the resource group to which the Log Analytics workspace belongs.
-   2. Under the list of resources, the **DCR** and the **DCE** can be identified by their prefixes, **sqlbpa-**.
-   3. Verify that the **DCR** and **DCE** are in the same location as the Log Analytics workspace.
+   1. Under the list of resources, the **DCR** and the **DCE** can be identified by their prefixes, **sqlbpa-**.
+   1. Verify that the **DCR** and **DCE** are in the same location as the Log Analytics workspace.
 1. The data collection Rule (DCR) should be configured correctly.
    1. Navigate to The **Resources** tab under the relevant DCR. The Arc machine name should be present on the list.
    1. Navigate to The **Data Sources** tab under the relevant DCR. Select the entry **Custom Text Logs**.
       1. Under the **Data Sources** tab, the table name should be `SqlAssessment_CL`.
-      2. Under the **Data Sources** tab, the configured log collection path should be `C:\Windows\System32\config\systemprofile\AppData\Local\Microsoft SQL Server Extension Agent\Assessment\*.csv`.
-      3. Under the **Destination** tab, the Log Analytics workspace name should be present.
+      1. Under the **Data Sources** tab, the configured log collection path should be `C:\Windows\System32\config\systemprofile\AppData\Local\Microsoft SQL Server Extension Agent\Assessment\*.csv`.
+      1. Under the **Destination** tab, the Log Analytics workspace name should be present.
 
 In case any of the components are missing, do the following:
 
 1. Disable assessment by selecting **Configuration** > **Disable assessment**.
-2. Confirm that you have the required permissions to enable assessment.
-3. Enable assessment by selecting **Enable assessment**.
+1. Confirm that you have the required permissions to enable assessment.
+1. Enable assessment by selecting **Enable assessment**.
 
 ## Assessment deployment failed
 
 1. Navigate to the deployment and troubleshoot the error.
-2. If there are any issues with the deployment of the Azure Monitor Agent, verify that the Arc machine is connected.
-3. The deployment can always be retriggered with the same Log Analytics workspace by clicking on the **Enable assessment** button.
+1. If there are any issues with the deployment of the Azure Monitor Agent, verify that the Arc machine is connected.
+1. The deployment can always be retriggered with the same Log Analytics workspace by selecting the **Enable assessment** button.
 
 ## Change the Log Analytics workspace
 
 To change the Log Analytics workspace that is linked for the best practices assessment, follow the steps below.
 
 1. Disable best practices assessment if it's currently enabled via the Azure portal.
-1. Make a GET call to the API and get the Azure extension for SQL Server settings. For more information, review [How to call Azure REST APIs with Postman](
-/rest/api/azure/#how-to-call-azure-rest-apis-with-postman)
+1. Make a GET call to the API and get the Azure extension for SQL Server settings. For more information, review [How to call Azure REST APIs with curl](/rest/api/azure/#how-to-call-azure-rest-apis-with-curl).
 
    In order to complete this task, you need to obtain the bearer token in order to perform this action against the resource in Azure portal. From Azure portal:
 
    1. Navigate to the corresponding **SQL Server - Azure Arc** resource.
-   1. Select Ctrl+Shift+I together, go to **Network** tab. 
+   1. Select Ctrl+Shift+I together, go to **Network** tab.
    1. Select **Overview** for the **SQL Server - Azure Arc** resource.
    1. In the name column, locate and select the entry for **ArcServer name?api-version**.
    1. On the right window, go to **Request Headers**.
@@ -159,7 +158,7 @@ To change the Log Analytics workspace that is linked for the best practices asse
     }
     ```
 
-1. Update the workspace related settings to null as below.
+1. Update the workspace related settings to null as follows.
 
    ```json
    "AssessmentSettings": {
@@ -180,7 +179,7 @@ To change the Log Analytics workspace that is linked for the best practices asse
    }
    ```
 
-1. Make a `PATCH` call below to the API to update the Azure extension for SQL Server assessment settings.
+1. Make a `PATCH` call to the API, to update the Azure extension for SQL Server assessment settings.
 
    ```rest
    PATCH https://management.azure.com/subscriptions/ <subscription-id>/resourceGroups/<resource-group-name>/providers/Microsoft.HybridCompute/machines/<arc-resource-name>/extensions/WindowsAgent.SqlServer?api-version=2022-08-11-preview
@@ -188,12 +187,12 @@ To change the Log Analytics workspace that is linked for the best practices asse
 
 1. Go to **Best Practices Assessment** on your Arc-enabled SQL Server resource page in the Azure portal and re-enable best practices assessment and select a new log analytics workspace.
 
-For more assistance, create a support ticket with Microsoft and attach the log files. Visit,  [Create an Azure support request](/azure/azure-portal/supportability/how-to-create-azure-support-request)
+For more assistance, create a support ticket with Microsoft and attach the log files. Visit, [Create an Azure support request](/azure/azure-portal/supportability/how-to-create-azure-support-request)
 
-## Next steps
+## Related content
 
-- [Configure SQL best practices assessment](assess.md)
+- [Configure SQL best practices assessment - SQL Server enabled by Azure Arc](assess.md)
 - [View SQL Server databases - Azure Arc](view-databases.md)
-- [Manage SQL Server license and billing options](manage-configuration.md)
-- [[!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] and Databases activity logs](activity-logs.md)
-- [Data collected by Arc enabled SQL Server](data-collection.md)
+- [Configure SQL Server enabled by Azure Arc](manage-configuration.md)
+- [Use activity logs with SQL Server enabled by Azure Arc](activity-logs.md)
+- [Data collection and reporting for SQL Server enabled by Azure Arc](data-collection.md)

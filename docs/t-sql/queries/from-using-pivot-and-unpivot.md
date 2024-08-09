@@ -54,7 +54,7 @@ FOR <column that contains the values that will become column headers>
     IN ( <first pivoted column>, <second pivoted column>,  
     ... <last pivoted column>)
 ) AS <alias for the pivot table>
-<optional ORDER BY clause>;  
+[<optional ORDER BY clause>];
 ```
 
 The following syntax summarizes how to use the `UNPIVOT` operator.  
@@ -74,7 +74,7 @@ FOR <output column for names of the pivot columns>
     IN ( <first pivoted column>, <second pivoted column>,  
     ... <last pivoted column>)  
 )
-<optional ORDER BY clause>;  
+[<optional ORDER BY clause>];  
 ```  
 
 ## Remarks

@@ -1398,7 +1398,7 @@ You can determine the status of this option in the `is_numeric_roundabort_on` co
 
   Double quotation marks can be used to enclose delimited identifiers.
 
-  All strings delimited by double quotation marks are interpreted as object identifiers. Quoted identifiers don't have to follow the [!INCLUDE[tsql](../../includes/tsql-md.md)] rules for identifiers. They can be keywords and can include characters that aren't allowed in [!INCLUDE[tsql](../../includes/tsql-md.md)] identifiers. If a single quotation mark (') is part of the literal string, it can be represented by double quotation marks (").
+  All strings delimited by double quotation marks are interpreted as object identifiers. Quoted identifiers don't have to follow the [!INCLUDE[tsql](../../includes/tsql-md.md)] rules for identifiers. They can be keywords and can include characters that aren't allowed in [!INCLUDE[tsql](../../includes/tsql-md.md)] identifiers. If a double quotation mark (`"`) is part of the identifier, it can be represented by two double quotation marks (`""`).
 
 - OFF
 
@@ -2526,13 +2526,13 @@ You can determine the status for this option in the `is_numeric_roundabort_on` c
 
   Double quotation marks can be used to enclose delimited identifiers.
 
-All strings delimited by double quotation marks are interpreted as object identifiers. Quoted identifiers don't have to follow the [!INCLUDE[tsql](../../includes/tsql-md.md)] rules for identifiers. They can be keywords and can include characters not allowed in [!INCLUDE[tsql](../../includes/tsql-md.md)] identifiers. If a single quotation mark (') is part of the literal string, it can be represented by double quotation marks (").
+  All strings delimited by double quotation marks are interpreted as object identifiers. Quoted identifiers don't have to follow the [!INCLUDE[tsql](../../includes/tsql-md.md)] rules for identifiers. They can be keywords and can include characters that aren't allowed in [!INCLUDE[tsql](../../includes/tsql-md.md)] identifiers. If a double quotation mark (`"`) is part of the identifier, it can be represented by two double quotation marks (`""`).
 
 - OFF
 
   Identifiers can't be in quotation marks and must follow all [!INCLUDE[tsql](../../includes/tsql-md.md)] rules for identifiers. Literals can be delimited by either single or double quotation marks.
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] also allows for identifiers to be delimited by square brackets ([ ]). Bracketed identifiers can always be used, whatever the QUOTED_IDENTIFIER setting is. For more information, see [Database Identifiers](../../relational-databases/databases/database-identifiers.md).
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] also allows for identifiers to be delimited by square brackets (`[` and `]`). Bracketed identifiers can always be used, whatever the QUOTED_IDENTIFIER setting is. For more information, see [Database Identifiers](../../relational-databases/databases/database-identifiers.md).
 
 When a table is created, the QUOTED IDENTIFIER option is always stored as ON in the metadata of the table. The option is stored even if the option is set to OFF when the table is created.
 
@@ -3493,15 +3493,15 @@ You can determine the status of this option in the `is_numeric_roundabort_on` co
 
   Double quotation marks can be used to enclose delimited identifiers.
 
-  All strings delimited by double quotation marks are interpreted as object identifiers. Quoted identifiers don't have to follow the [!INCLUDE[tsql](../../includes/tsql-md.md)] rules for identifiers. They can be keywords and can include characters not allowed in [!INCLUDE[tsql](../../includes/tsql-md.md)] identifiers. If a single quotation mark (') is part of the literal string, it can be represented by double quotation marks (").
+  All strings delimited by double quotation marks are interpreted as object identifiers. Quoted identifiers don't have to follow the [!INCLUDE[tsql](../../includes/tsql-md.md)] rules for identifiers. They can be keywords and can include characters that aren't allowed in [!INCLUDE[tsql](../../includes/tsql-md.md)] identifiers. If a double quotation mark (`"`) is part of the identifier, it can be represented by two double quotation marks (`""`).
 
 - OFF
 
   Identifiers can't be in quotation marks and must follow all [!INCLUDE[tsql](../../includes/tsql-md.md)] rules for identifiers. Literals can be delimited by either single or double quotation marks.
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] also allows for identifiers to be delimited by square brackets ([ ]). Bracketed identifiers can always be used, whatever the QUOTED_IDENTIFIER setting is. For more information, see [Database Identifiers](../../relational-databases/databases/database-identifiers.md).
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] also allows for identifiers to be delimited by square brackets (`[` and `]`). Bracketed identifiers can always be used, whatever the QUOTED_IDENTIFIER setting is. For more information, see [Database Identifiers](../../relational-databases/databases/database-identifiers.md).
 
-  When a table is created, the QUOTED IDENTIFIER option is always stored as ON in the metadata of the table. The option is stored even if the option is set to OFF when the table is created.
+When a table is created, the QUOTED IDENTIFIER option is always stored as ON in the metadata of the table. The option is stored even if the option is set to OFF when the table is created.
 
 Connection-level settings that are set by using the SET statement override the default database setting for QUOTED_IDENTIFIER. ODBC and OLE DB clients issue a connection-level SET statement setting QUOTED_IDENTIFIER to ON, by default. The clients run the statement when you connect to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see [SET QUOTED_IDENTIFIER](../../t-sql/statements/set-quoted-identifier-transact-sql.md).
 

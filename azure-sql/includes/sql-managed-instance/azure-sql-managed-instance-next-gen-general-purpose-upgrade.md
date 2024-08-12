@@ -3,7 +3,7 @@ author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest
 ms.date: 03/23/2024
-ms.service: sql-managed-instance
+ms.service: azure-sql-managed-instance
 ms.topic: include
 ---
 

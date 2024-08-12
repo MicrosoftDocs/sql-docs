@@ -2,7 +2,7 @@
 author: rothja
 ms.author: jroth
 ms.date: 12/10/2018
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.topic: include
 ---
 

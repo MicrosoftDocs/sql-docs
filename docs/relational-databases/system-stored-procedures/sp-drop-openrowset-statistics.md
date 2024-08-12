@@ -5,7 +5,7 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: randolphwest
 ms.date: 11/28/2023
-ms.service: synapse-analytics
+ms.service: azure-synapse-analytics
 ms.topic: "reference"
 f1_keywords:
   - "sp_drop_openrowset_statistics_TSQL"

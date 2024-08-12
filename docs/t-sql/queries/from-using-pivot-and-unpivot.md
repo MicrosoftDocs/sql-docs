@@ -35,7 +35,7 @@ The syntax for `PIVOT` is simpler and more readable than the syntax that may oth
   
 ## Syntax
 
-The following syntax summarizes how to use the `PIVOT` operator.  
+The following syntax summarizes how to use the `PIVOT` and `UNPIVOT` operator.  
   
 ```syntaxsql  
 SELECT [<non-pivoted column> [AS <column name>], ]

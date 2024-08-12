@@ -1,5 +1,5 @@
 ---
-title: Migrate a .NET application to use passwordless connections with Azure SQL Database
+title: Migrate a .NET application to use passwordless connections
 description: Learn how to migrate a .NET application to use passwordless connections with Azure SQL Database.
 author: alexwolfmsft
 ms.author: alexwolf

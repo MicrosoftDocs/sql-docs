@@ -3,7 +3,7 @@ author: alexwolfmsft
 ms.author: alexwolf
 ms.date: 05/11/2023
 ms.topic: include
-ms.service: sql-database
+ms.service: azure-sql-database
 ---
 
 ## Clean up the resources

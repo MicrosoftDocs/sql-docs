@@ -5,7 +5,7 @@ author: damauri
 ms.author: damauri
 ms.reviewer: damauri, josephsack, randolphwest, mathoma
 ms.date: 08/01/2024
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.topic: conceptual
 ms.collection: ce-skilling-ai-copilot
 monikerRange: "=azuresql||=azuresql-db"

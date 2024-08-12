@@ -6,7 +6,7 @@ author: SudhirRaparla
 ms.author: nvraparl
 ms.reviewer: wiassaf, mathoma, danil
 ms.date: 08/21/2023
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.subservice: backup-restore
 ms.topic: how-to
 ms.custom: azure-sql-split

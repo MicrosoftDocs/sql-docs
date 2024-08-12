@@ -6,7 +6,7 @@ summary: "Find documentation about ledger for SQL Server 2022 and Azure SQL"
 metadata:
   title: Ledger documentation
   description: "Find ledger documentation for SQL Server 2022 and Azure SQL"
-  ms.service: azure-sql-database
+  ms.service: sql
   ms.subservice: security
   ms.tgt_pltfrm: na
   ms.topic: landing-page

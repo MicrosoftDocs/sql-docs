@@ -32,6 +32,9 @@ The **bit** data type can be used to store Boolean values. The string values `TR
 
 Converting to bit promotes any nonzero value to `1`.
 
+> [!NOTE]  
+> The bit data type supports the COUNT function. However, other standard aggregate functions like SUM, AVG, MIN, and MAX do not directly support the bit data type.
+
 ## Related content
 
 - [ALTER TABLE (Transact-SQL)](../statements/alter-table-transact-sql.md)

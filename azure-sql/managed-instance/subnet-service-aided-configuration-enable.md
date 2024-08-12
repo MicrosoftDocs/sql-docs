@@ -1,5 +1,5 @@
 ---
-title: Enable service-aided subnet configuration
+title: Service-aided subnet configuration
 description: Learn how you can enable the service-aided subnet configuration for Azure SQL Managed Instance with subnet delegation.
 author: zoran-rilak-msft
 ms.author: zoranrilak
@@ -14,9 +14,7 @@ ms.custom:
 # Enable service-aided subnet configuration for Azure SQL Managed Instance
 [!INCLUDE [appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
 
-This article provides an overview of the service-aided subnet configuration and how to enable it with subnet delegation for Azure SQL Managed Instance.
-
-Service-aided subnet configuration automates network configuration management for subnets that host managed instances, leaving the user fully in control of access to the data (TDS traffic flows) while the managed instance is responsible for ensuring uninterrupted flow of management traffic.
+This article provides an overview of service-aided subnet configuration and how it interacts with the subnets delegated to Azure SQL Managed Instance. Service-aided subnet configuration automates network configuration management for subnets that host managed instances, leaving the user fully in control of access to the data (TDS traffic flows) while the managed instance is responsible for ensuring uninterrupted flow of management traffic.
 
 ## Overview
 

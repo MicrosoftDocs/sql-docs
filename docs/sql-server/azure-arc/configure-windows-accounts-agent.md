@@ -23,6 +23,8 @@ The extension sets permissions when you enable features on the Azure portal. If 
 
 [SQL permissions](#sql-permissions) lists the permissions tied to features that the extension grants when features are enabled.
 
+Note: Make sure that NT Authority/System has full control on the directories and registry keys listed below.
+
 ## Directory permissions
 
 | Directory path | Required permissions | Details | Feature |

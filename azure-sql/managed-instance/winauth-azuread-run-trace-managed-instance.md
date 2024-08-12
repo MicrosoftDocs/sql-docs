@@ -5,7 +5,7 @@ author: sravanisaluru
 ms.author: srsaluru
 ms.reviewer: mathoma, bonova, urmilano, wiassaf
 ms.date: 09/27/2023
-ms.service: sql-managed-instance
+ms.service: azure-sql-managed-instance
 ms.topic: how-to
 ms.custom: template-how-to
 ---

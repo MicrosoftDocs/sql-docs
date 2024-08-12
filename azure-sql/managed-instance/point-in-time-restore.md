@@ -6,7 +6,7 @@ author: Stralle
 ms.author: strrodic
 ms.reviewer: mathoma, nvraparl
 ms.date: 03/25/2023
-ms.service: sql-managed-instance
+ms.service: azure-sql-managed-instance
 ms.subservice: backup-restore
 ms.topic: how-to
 ms.custom: devx-track-azurepowershell, devx-track-azurecli

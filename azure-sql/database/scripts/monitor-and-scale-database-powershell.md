@@ -1,5 +1,5 @@
 ---
-title: Use PowerShell to monitor and scale a single database in Azure SQL Database
+title: Use PowerShell to monitor and scale a single database
 description: Use an Azure PowerShell example script to monitor and scale a single database in Azure SQL Database.
 author: WilliamDAssafMSFT
 ms.author: wiassaf

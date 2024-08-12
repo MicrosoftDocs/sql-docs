@@ -6,7 +6,7 @@ author: Stralle
 ms.author: strrodic
 ms.reviewer: mathoma, wiassaf, danil
 ms.date: 07/12/2023
-ms.service: sql-managed-instance
+ms.service: azure-sql-managed-instance
 ms.subservice: backup-restore
 ms.topic: conceptual
 ms.custom: references_regions, azure-sql-split, build-2024

@@ -6,7 +6,7 @@ author: Stralle
 ms.author: strrodic
 ms.reviewer: wiassaf, mathoma, danil
 ms.date: 12/27/2023
-ms.service: sql-managed-instance
+ms.service: azure-sql-managed-instance
 ms.subservice: backup-restore
 ms.topic: how-to
 ms.custom:

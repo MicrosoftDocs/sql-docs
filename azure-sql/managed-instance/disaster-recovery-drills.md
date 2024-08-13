@@ -16,7 +16,7 @@ ms.topic: conceptual
 > * [Azure SQL Database](../database/disaster-recovery-drills.md?view=azuresql-db&preserve-view=true)
 > * [Azure SQL Managed Instance](disaster-recovery-drills.md?view=azuresql-mi&preserve-view=true)
 
-It is recommended that validation of application readiness for recovery workflow is performed periodically. Verifying the application behavior and implications of data loss and/or the disruption that failover involves is a good engineering practice. It is also a requirement by most industry standards as part of business continuity certification.
+It's recommended to periodically test and validate that applications are ready for a recovery workflow. Verifying the application behavior and implications of data loss and/or the disruption that failover involves is good engineering practice. It is also a requirement by most industry standards as part of business continuity certification.
 
 Performing a disaster recovery drill consists of:
 
@@ -45,7 +45,13 @@ Complete the drill by verifying the application integrity post recovery (includi
 
 ## Failover groups
 
-For an instance protected by using failover groups, the drill exercise involves planned failover to the secondary instance. The planned failover ensures that the primary and the secondary instances in the failover group remain in sync when the roles are switched. Unlike the unplanned failover, this operation does not result in data loss, so the drill can be performed in a production environment.
+For an instance protected by failover groups, the drill exercise involves planned failover to the secondary instance. The planned failover ensures that the primary and the secondary instances in the failover group remain in sync when the roles are switched. Unlike the unplanned failover, this operation does not result in data loss, so the drill can be performed in a production environment.
+
+Configure your failover group with the [failover policy](failover-group-sql-mi.md#failover-policy) that suits your business need, and test failover regardless of how your failover policy is configured. For more information, review [test failover](failover-group-configure-sql-mi.md#test-failover). A customer-managed failover policy is recommended to give you control over the failover process.
+
+
+> [!IMPORTANT]
+> Since [system databases aren't replicated](failover-group-configure-sql-mi.md#enable-scenarios-dependent-on-objects-from-the-system-databases) between instances in a failover group, manually recreate system objects on the secondary instance and then test environments with system object dependencies to ensure they continue functioning properly after a failover. 
 
 ### Outage simulation
 

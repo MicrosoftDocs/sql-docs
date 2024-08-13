@@ -34,7 +34,7 @@ Use this page to specify options related to Azure cloud services. To access this
 | Publish Setting File URL | `https://go.microsoft.com/fwlink/?LinkID=335839` | Specifies the URL from which the `.publishsettings` file can be downloaded. |
 | SQL Database Service Principal Name | `https://database.windows.net/` | The Azure SQL Database SPN to obtain a token when using Azure AD authentication. Also the audience of the JSON Web Token (JWT) for server-side JSON Web Token (JWT) parsing/validation. |
 | Use system default web browser | **True** <br> **False** | When true, SSMS will launch the user's default web browser to perform Azure logins.  When false, SSMS will use an embedded browser.  This option defaults to True with new installs starting with SSMS 19.1 |
-| Use Web Account Manager | **True** <br> **False** | Enable this option if your enterprise uses FIDO keys or other advanced options not supported by a web browser. For example, a company may implement conditional access policy which prevents authentication to Azure using a browser. If you are not certain of the appropriate value for your environment, contact your SQL Database Administrator or your IT team. |
+| Use Web Account Manager | **True**<br />**False** | Enable this option if your enterprise uses FIDO keys or other advanced options not supported by a web browser. For example, a company might implement a conditional access policy, which prevents authentication to Azure using a browser. If you aren't sure of the appropriate value for your environment, contact your SQL Database Administrator or your IT team. |
 
 ## Resource Management
 

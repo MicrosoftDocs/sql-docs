@@ -4,7 +4,7 @@ description: TRUNCATE TABLE (Transact-SQL)
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: randolphwest
-ms.date: 04/05/2024
+ms.date: 08/07/2024
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -22,11 +22,11 @@ helpviewer_keywords:
   - "dropping rows"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=fabric"
 ---
 # TRUNCATE TABLE (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricdw.md)]
 
 Removes all rows from a table or specified partitions of a table, without logging the individual row deletions. `TRUNCATE TABLE` is similar to the `DELETE` statement with no `WHERE` clause; however, `TRUNCATE TABLE` is faster and uses fewer system and transaction log resources.
 
@@ -47,7 +47,7 @@ TRUNCATE TABLE
 <partition_number_expression> TO <partition_number_expression>
 ```
 
-Syntax for Azure Synapse Analytics and Parallel Data Warehouse.
+Syntax for Microsoft Fabric, Azure Synapse Analytics, and Parallel Data Warehouse.
 
 ```syntaxsql
 TRUNCATE TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name }

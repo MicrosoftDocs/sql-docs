@@ -5,13 +5,11 @@ description: Understand how the Azure SQL Managed Instance maintenance window ca
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma, urosmil, scottkim
-ms.date: 03/08/2024
-ms.service: sql-managed-instance
+ms.date: 06/19/2024
+ms.service: azure-sql-managed-instance
 ms.subservice: service-overview
 ms.topic: conceptual
 ms.custom:
-  - references_regions
-  - ignite-2023
   - azure-sql-split
 monikerRange: "=azuresql||=azuresql-mi"
 ---
@@ -45,7 +43,7 @@ The maintenance window is free of charge and can be configured on creation or fo
 
 By default, Azure SQL maintenance policy blocks most impactful updates during the period **8AM to 5PM local time every day** to avoid any disruptions during typical peak business hours. Local time is determined by the location of [Azure region](https://azure.microsoft.com/global-infrastructure/geographies/) that hosts the resource and might observe daylight saving time in accordance with local time zone definition. 
 
-During maintenance, databases remain available, but some updates may require a failover. The system default maintenance window (5pm to 8am) limits most activities to this time, but urgent updates may occur outside of it. To ensure all updates occur only during the maintenance window, select a non-default option.
+During maintenance, databases remain available, but some updates might require a failover. The system default maintenance window (5pm to 8am) limits most activities to this time, but urgent updates might occur outside of it. To ensure all updates occur only during the maintenance window, select a non-default option.
 
 You can adjust the window for maintenance updates to a time suitable to your Azure SQL resources by choosing from two non-default maintenance window slots:
  
@@ -71,7 +69,7 @@ Maintenance notifications can be configured to alert you of upcoming planned mai
 
 ### Supported subscription types
 
-Configuring and using maintenance window is available for the following [offer types](https://azure.microsoft.com/support/legal/offer-details/): Pay-as-you-go, Cloud Solution Provider (CSP), Microsoft Enterprise Agreement, or Microsoft Customer Agreement.  
+Configuring and using maintenance window is available for the following [offer types](https://azure.microsoft.com/support/legal/offer-details/): Pay-as-you-go, Cloud Solution Provider (CSP), Microsoft Enterprise Agreement, or Microsoft Customer Agreement. 
 
 Offers restricted to dev/test usage only are not eligible (like pay-as-you-go Dev/Test or Enterprise Dev/Test as examples).
 
@@ -84,55 +82,7 @@ Choosing a maintenance window other than the default is available on all SLOs **
 
 ### Azure SQL Managed Instance region support for maintenance windows
 
-Choosing a maintenance window for Azure SQL Managed Instance other than the default is currently available in the following regions:
-
-- Australia Central 1
-- Australia Central 2
-- Australia East
-- Australia Southeast
-- Brazil South
-- Brazil Southeast
-- Canada Central
-- Canada East
-- Central India
-- Central US
-- China East 2
-- China North 2
-- East US
-- East US 2
-- East Asia
-- France Central
-- France South
-- Germany West Central
-- Germany North  
-- Japan East
-- Japan West
-- Korea Central
-- Korea South
-- North Central US
-- North Europe
-- Norway East
-- Norway West
-- South Africa North
-- South Africa West
-- South Central US
-- South India
-- Southeast Asia
-- Switzerland North
-- Switzerland West
-- UAE Central
-- UAE North
-- UK South
-- UK West
-- US Gov Arizona
-- US Gov Texas
-- US Gov Virginia
-- West Central US
-- West Europe
-- West India
-- West US
-- West US 2
-- West US 3
+Choosing a maintenance window for Azure SQL Managed Instance other than the default is available in all regions.
 
 ## Gateway maintenance
 
@@ -195,7 +145,7 @@ For the full reference of the sample queries and how to use them across tools li
 ## Related content
 
 - [Configure maintenance window](maintenance-window-configure.md)
-- [Advance notifications for planned maintenance events (Preview)](advance-notifications.md)
+- [Configure advance notifications for planned maintenance events](advance-notifications.md)
 - [Maintenance window FAQ](maintenance-window-faq.yml)
 - [Azure SQL Managed Instance](sql-managed-instance-paas-overview.md)
 - [Plan for Azure maintenance events in Azure SQL Database and Azure SQL Managed Instance](../database/planned-maintenance.md)

@@ -5,17 +5,16 @@ description: This article guides you through creating and utilizing Microsoft En
 author: nofield
 ms.author: nofield
 ms.reviewer: vanto, mathoma
-ms.date: 09/27/2023
-ms.service: sql-db-mi
+ms.date: 06/11/2024
+ms.service: azure-sql
 ms.subservice: security
 ms.topic: tutorial
-monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
+monikerRange: "=azuresql || =azuresql-db || =azuresql-mi"
 ---
 
 # Tutorial: Create and utilize Microsoft Entra server logins
 
-[!INCLUDE[appliesto-sqldb-sqlmi-asa-dedicated-only](../includes/appliesto-sqldb-sqlmi-asa-dedicated-only.md)]
-
+[!INCLUDE [appliesto-sqldb-sqlmi-asa-dedicated-only](../includes/appliesto-sqldb-sqlmi-asa-dedicated-only.md)]
 
 This article guides you through creating and utilizing [logins](authentication-azure-ad-logins.md) backed by Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)) within the virtual `master` database of Azure SQL.
 
@@ -27,14 +26,13 @@ In this tutorial, you learn how to:
 > - Grant server roles to a Microsoft Entra user
 > - Disable a Microsoft Entra login
 
-> [!NOTE]
+> [!NOTE]  
 > Microsoft Entra server principals (logins) are currently in public preview for Azure SQL Database. Azure SQL Managed Instance can already utilize Microsoft Entra logins.
-
 
 ## Prerequisites
 
 - A SQL Database or SQL Managed Instance with a database. See [Quickstart: Create an Azure SQL Database single database](single-database-create-quickstart.md) if you haven't already created an Azure SQL Database, or [Quickstart: Create an Azure SQL Managed Instance](../managed-instance/instance-create-quickstart.md).
-- Microsoft Entra authentication set up for SQL Database or Managed Instance. For more information, see [Configure and manage Microsoft Entra authentication with Azure SQL](authentication-aad-configure.md).
+- Microsoft Entra authentication set up for SQL Database or SQL Managed Instance. For more information, see [Configure and manage Microsoft Entra authentication with Azure SQL](authentication-aad-configure.md).
 - This article instructs you on creating a Microsoft Entra login and user within the virtual `master` database. Only a Microsoft Entra admin can create a user within the virtual `master` database, so we recommend you use the Microsoft Entra admin account when going through this tutorial. A Microsoft Entra principal with the `loginmanager` role can create a login, but not a user within the virtual `master` database.
 
 <a name='create-azure-ad-login'></a>
@@ -43,7 +41,7 @@ In this tutorial, you learn how to:
 
 1. Create an Azure SQL Database login for a Microsoft Entra account. In our example, we'll use `bob@contoso.com` that exists in our Microsoft Entra domain called `contoso`. A login can also be created from a Microsoft Entra group or [service principal (applications)](authentication-aad-service-principal.md). For example, `mygroup` that is a Microsoft Entra group consisting of Microsoft Entra accounts that are a member of that group. For more information, see [CREATE LOGIN (Transact-SQL)](/sql/t-sql/statements/create-login-transact-sql?view=azuresqldb-current&preserve-view=true).
 
-   > [!NOTE]
+   > [!NOTE]  
    > The first Microsoft Entra login must be created by the Microsoft Entra admin. The Microsoft Entra admin can be a Microsoft Entra user or group. A SQL login cannot create Microsoft Entra logins.
 
 1. Using [SQL Server Management Studio (SSMS)](/sql/ssms/download-sql-server-management-studio-ssms), log into your SQL Database with the Microsoft Entra admin account set up for the server.
@@ -58,16 +56,16 @@ In this tutorial, you learn how to:
 1. Check the created login in `sys.server_principals`. Execute the following query:
 
    ```sql
-   SELECT name, type_desc, type, is_disabled 
+   SELECT name, type_desc, type, is_disabled
    FROM sys.server_principals
-   WHERE type_desc like 'external%'  
+   WHERE type_desc like 'external%'
    ```
 
    You would see a similar output to the following:
 
    ```output
-   Name                            type_desc       type   is_disabled 
-   bob@contoso.com                 EXTERNAL_LOGIN  E      0 
+   Name                            type_desc       type   is_disabled
+   bob@contoso.com                 EXTERNAL_LOGIN  E      0
    ```
 
 1. The login `bob@contoso.com` has been created in the virtual `master` database.
@@ -85,14 +83,14 @@ In this tutorial, you learn how to:
    CREATE USER [bob@contoso.com] FROM LOGIN [bob@contoso.com]
    ```
 
-   > [!TIP]
-   > Although it is not required to use Microsoft Entra user aliases (for example, `bob@contoso.com`), it is a recommended best practice to use the same alias for Microsoft Entra users and Microsoft Entra logins. 
+   > [!TIP]  
+   > Although it is not required to use Microsoft Entra user aliases (for example, `bob@contoso.com`), it is a recommended best practice to use the same alias for Microsoft Entra users and Microsoft Entra logins.
 
 1. Check the created user in `sys.database_principals`. Execute the following query:
 
    ```sql
-   SELECT name, type_desc, type 
-   FROM sys.database_principals 
+   SELECT name, type_desc, type
+   FROM sys.database_principals
    WHERE type_desc like 'external%'
    ```
 
@@ -103,10 +101,12 @@ In this tutorial, you learn how to:
    bob@contoso.com                 EXTERNAL_USER   E
    ```
 
-> [!NOTE]
+> [!NOTE]  
 > The existing syntax to create a Microsoft Entra user without a Microsoft Entra login is still supported. Executing the following syntax creates a database contained user inside the specific database you are connected to. Importantly, this user is not associated to any login, even if a login of the same name exists in the virtual `master` database.
 >
 > For example, `CREATE USER [bob@contoso.com] FROM EXTERNAL PROVIDER`.
+>
+> You can create a Microsoft Entra login using a service principal with a nonunique display name. For more information, see [Microsoft Entra logins and users with nonunique display names](authentication-microsoft-entra-create-users-with-nonunique-names.md)
 
 <a name='grant-server-level-roles-to-azure-ad-logins'></a>
 
@@ -114,7 +114,7 @@ In this tutorial, you learn how to:
 
 You can add logins to the [fixed server-level roles](security-server-roles.md#fixed-server-level-roles), such as the **##MS_DefinitionReader##**, **##MS_ServerStateReader##**, or **##MS_ServerStateManager##** role.
 
-> [!NOTE]
+> [!NOTE]  
 > The server-level roles mentioned here are not supported for Microsoft Entra groups.
 
 ```sql
@@ -133,7 +133,7 @@ Permissions aren't effective until the user reconnects. Flush the DBCC cache as 
 
 ```sql
 DBCC FLUSHAUTHCACHE
-DBCC FREESYSTEMCACHE('TokenAndPermUserStore') WITH NO_INFOMSGS 
+DBCC FREESYSTEMCACHE('TokenAndPermUserStore') WITH NO_INFOMSGS
 ```
 
 To check which Microsoft Entra logins are part of server-level roles, run the following query:
@@ -144,7 +144,7 @@ SELECT roles.principal_id AS RolePID,roles.name AS RolePName,
        FROM sys.server_role_members AS server_role_members
        INNER JOIN sys.server_principals AS roles
        ON server_role_members.role_principal_id = roles.principal_id
-       INNER JOIN sys.server_principals AS members 
+       INNER JOIN sys.server_principals AS members
        ON server_role_members.member_principal_id = members.principal_id;
 ```
 
@@ -154,18 +154,18 @@ SELECT roles.principal_id AS RolePID,roles.name AS RolePName,
 
 [Special roles for SQL Database](/sql/relational-databases/security/authentication-access/database-level-roles#special-roles-for--and-azure-synapse) can be assigned to users in the virtual `master` database.
 
-In order to grant one of the special database roles to a user, the user must exist in the virtual `master` database. 
+In order to grant one of the special database roles to a user, the user must exist in the virtual `master` database.
 
 To add a user to a role, you can run the following query:
 
 ```sql
-ALTER ROLE [dbmanager] ADD MEMBER [AzureAD_object] 
+ALTER ROLE [dbmanager] ADD MEMBER [AzureAD_object]
 ```
 
 To remove a user from a role, run the following query:
 
 ```sql
-ALTER ROLE [dbmanager] DROP MEMBER [AzureAD_object] 
+ALTER ROLE [dbmanager] DROP MEMBER [AzureAD_object]
 ```
 
 `AzureAD_object` can be a Microsoft Entra user, group, or service principal in Microsoft Entra ID.
@@ -175,27 +175,27 @@ In our example, we created the user `bob@contoso.com`. Let's give the user the *
 1. Run the following query:
 
    ```sql
-   ALTER ROLE [dbmanager] ADD MEMBER [bob@contoso.com] 
-   ALTER ROLE [loginmanager] ADD MEMBER [bob@contoso.com] 
+   ALTER ROLE [dbmanager] ADD MEMBER [bob@contoso.com]
+   ALTER ROLE [loginmanager] ADD MEMBER [bob@contoso.com]
    ```
 
 1. Check the database role assignment by running the following query:
 
    ```sql
-   SELECT DP1.name AS DatabaseRoleName,    
-     isnull (DP2.name, 'No members') AS DatabaseUserName    
-   FROM sys.database_role_members AS DRM   
-   RIGHT OUTER JOIN sys.database_principals AS DP1   
-     ON DRM.role_principal_id = DP1.principal_id   
-   LEFT OUTER JOIN sys.database_principals AS DP2   
-     ON DRM.member_principal_id = DP2.principal_id   
-   WHERE DP1.type = 'R'and DP2.name like 'bob%' 
+   SELECT DP1.name AS DatabaseRoleName,
+     isnull (DP2.name, 'No members') AS DatabaseUserName
+   FROM sys.database_role_members AS DRM
+   RIGHT OUTER JOIN sys.database_principals AS DP1
+     ON DRM.role_principal_id = DP1.principal_id
+   LEFT OUTER JOIN sys.database_principals AS DP2
+     ON DRM.member_principal_id = DP2.principal_id
+   WHERE DP1.type = 'R'and DP2.name like 'bob%'
    ```
 
    You would see a similar output to the following:
 
    ```output
-   DatabaseRoleName       DatabaseUserName 
+   DatabaseRoleName       DatabaseUserName
    dbmanager              bob@contoso.com
    loginmanager           bob@contoso.com
    ```
@@ -212,22 +212,20 @@ For the `DISABLE` or `ENABLE` changes to take immediate effect, the authenticati
 
 ```sql
 DBCC FLUSHAUTHCACHE
-DBCC FREESYSTEMCACHE('TokenAndPermUserStore') WITH NO_INFOMSGS 
+DBCC FREESYSTEMCACHE('TokenAndPermUserStore') WITH NO_INFOMSGS
 ```
 
 Check that the login has been disabled by executing the following query:
 
 ```sql
-SELECT name, type_desc, type 
-FROM sys.server_principals 
+SELECT name, type_desc, type
+FROM sys.server_principals
 WHERE is_disabled = 1
 ```
 
 A use case for this would be to allow read-only on [geo-replicas](active-geo-replication-overview.md), but deny connection on a primary server.
 
-## See also
-
-For more information and examples, see:
+## Related content
 
 - [Microsoft Entra server principals](authentication-azure-ad-logins.md)
 - [CREATE LOGIN (Transact-SQL)](/sql/t-sql/statements/create-login-transact-sql?view=azuresqldb-current&preserve-view=true)

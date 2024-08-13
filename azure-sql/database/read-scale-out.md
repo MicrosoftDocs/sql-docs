@@ -6,7 +6,7 @@ author: rajeshsetlem
 ms.author: rsetlem
 ms.reviewer: wiassaf, mathoma, randolphwest
 ms.date: 11/28/2023
-ms.service: sql-db-mi
+ms.service: azure-sql
 ms.subservice: scale-out
 ms.topic: conceptual
 ms.custom:
@@ -18,7 +18,7 @@ monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 
 [!INCLUDE[appliesto-sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi.md)]
 
-As part of [High Availability architecture](high-availability-sla.md#locally-redundant-availability), each single database or elastic pool database in the Premium and Business Critical service tier is automatically provisioned with a primary read-write replica and one or more secondary read-only replicas. The secondary replicas are provisioned with the same compute size as the primary replica. The *read scale-out* feature allows you to offload read-only workloads using the compute capacity of one of the read-only replicas, instead of running them on the read-write replica. This way, some read-only workloads can be isolated from the read-write workloads, and don't affect their performance. The feature is intended for the applications that include logically separated read-only workloads, such as analytics. In the Premium and Business Critical service tiers, applications could gain performance benefits using this additional capacity at no extra cost.
+As part of [High Availability architecture](high-availability-sla-local-zone-redundancy.md#locally-redundant-availability), each single database or elastic pool database in the Premium and Business Critical service tier is automatically provisioned with a primary read-write replica and one or more secondary read-only replicas. The secondary replicas are provisioned with the same compute size as the primary replica. The *read scale-out* feature allows you to offload read-only workloads using the compute capacity of one of the read-only replicas, instead of running them on the read-write replica. This way, some read-only workloads can be isolated from the read-write workloads, and don't affect their performance. The feature is intended for the applications that include logically separated read-only workloads, such as analytics. In the Premium and Business Critical service tiers, applications could gain performance benefits using this additional capacity at no extra cost.
 
 The *read scale-out* feature is also available in the Hyperscale service tier when at least one [secondary replica](service-tier-hyperscale-replicas.md) is added. Hyperscale secondary [named replicas](service-tier-hyperscale-replicas.md#named-replica) provide independent scaling, access isolation, workload isolation, support for various read scale-out scenarios, and other benefits. Multiple secondary [HA replicas](service-tier-hyperscale-replicas.md#high-availability-replica) can be used for load-balancing read-only workloads that require more resources than available on one secondary HA replica.
 

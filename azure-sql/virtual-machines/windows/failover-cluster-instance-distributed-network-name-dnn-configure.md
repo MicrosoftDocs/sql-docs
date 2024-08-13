@@ -1,10 +1,10 @@
 ---
 title: Configure DNN for failover cluster instance
 description: Learn how to configure a distributed network name (DNN) to route traffic to your SQL Server on Azure VM failover cluster instance (FCI).
-author: tarynpratt
-ms.author: tarynpratt
+author: AbdullahMSFT
+ms.author: amamun
 ms.reviewer: mathoma
-ms.date: 11/10/2021
+ms.date: 06/18/2024
 ms.service: virtual-machines-sql
 ms.subservice: hadr
 ms.topic: how-to
@@ -13,12 +13,9 @@ tags: azure-resource-manager
 # Configure a DNN for failover cluster instance
 [!INCLUDE[appliesto-sqlvm](../../includes/appliesto-sqlvm.md)]
 
-[!INCLUDE[tip-for-multi-subnet-ag](../../includes/virtual-machines-ag-listener-multi-subnet.md)]
-
 On Azure Virtual Machines, the distributed network name (DNN) routes traffic to the appropriate clustered resource. It provides an easier way to connect to the SQL Server failover cluster instance (FCI) than the virtual network name (VNN), without the need for an Azure Load Balancer. 
 
 This article teaches you to configure a DNN resource to route traffic to your failover cluster instance with SQL Server on Azure VMs for high availability and disaster recovery (HADR). 
-
 
 For an alternative connectivity option, consider a [virtual network name and Azure Load Balancer](failover-cluster-instance-vnn-azure-load-balancer-configure.md) instead. 
 
@@ -28,6 +25,8 @@ The distributed network name (DNN) replaces the virtual network name (VNN) as th
 
 With an FCI deployment, the VNN still exists, but the client connects to the DNN DNS name instead of the VNN name. 
 
+[!INCLUDE[tip-for-multi-subnet-ag](../../includes/virtual-machines-fci-multi-subnet.md)]
+
 ## Prerequisites 
 
 Before you complete the steps in this article, you should already have:
@@ -36,6 +35,9 @@ Before you complete the steps in this article, you should already have:
 - Decided that the distributed network name is the appropriate [connectivity option for your HADR solution](hadr-cluster-best-practices.md#connectivity).
 - Configured your [failover cluster instances](failover-cluster-instance-overview.md). 
 - Installed the latest version of [PowerShell](/powershell/azure/install-az-ps). 
+
+> [!NOTE]
+> If you have multiple AGs or FCIs on the same cluster and you use either a DNN or VNN listener, then each AG or FCI needs its own independent connection point.
 
 ## Create DNN resource 
 
@@ -152,7 +154,7 @@ Test failover of the clustered resource to validate cluster functionality.
 
 To test failover, follow these steps: 
 
-1. Connect to one of the SQL Server cluster nodes by using RDP.
+1. Connect to one of the SQL Server cluster nodes by using RDP or Bastion.
 1. Open **Failover Cluster Manager**. Select **Roles**. Notice which node owns the SQL Server FCI role.
 1. Right-click the SQL Server FCI role. 
 1. Select **Move**, and then select **Best Possible Node**.

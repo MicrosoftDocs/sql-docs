@@ -3,7 +3,7 @@ title: "DECLARE CURSOR (Transact-SQL)"
 description: Defines the attributes of a Transact-SQL server cursor, such as its scrolling behavior and the query used to build the result set on which the cursor operates.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 04/01/2024
+ms.date: 07/02/2024
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -37,7 +37,7 @@ ISO syntax:
 ```syntaxsql
 DECLARE cursor_name [ INSENSITIVE ] [ SCROLL ] CURSOR
     FOR select_statement
-    [ FOR { READ ONLY | UPDATE [ OF column_name [ , ...n ] ] } ]
+    [ FOR { READ_ONLY | UPDATE [ OF column_name [ , ...n ] ] } ]
 [ ; ]
 ```
 
@@ -64,7 +64,7 @@ The name of the [!INCLUDE [tsql](../../includes/tsql-md.md)] server cursor defin
 
 #### INSENSITIVE
 
-Defines a cursor that makes a temporary copy of the data to be used by the cursor. All requests to the cursor are answered from this temporary table in `tempdb`. Therefore, modifications made to base tables aren't reflected in the data returned by fetches made to this cursor, and this cursor doesn't allow modifications. When ISO syntax is used, if `INSENSITIVE` is omitted, committed deletes and updates made to the underlying tables (by any user) are reflected in subsequent fetches.
+Defines a cursor that makes a temporary copy of the data to be used by the cursor. All requests to the cursor are answered from this temporary table in `tempdb`. Therefore, base table modifications aren't reflected in the data returned by fetches made to this cursor, and this cursor doesn't allow modifications. When ISO syntax is used, if `INSENSITIVE` is omitted, committed deletes and updates made to the underlying tables (by any user) are reflected in subsequent fetches.
 
 #### SCROLL
 
@@ -76,7 +76,7 @@ A standard `SELECT` statement that defines the result set of the cursor. The key
 
 [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] implicitly converts the cursor to another type if clauses in *select_statement* conflict with the functionality of the requested cursor type.
 
-#### READ ONLY
+#### READ_ONLY
 
 Prevents updates made through this cursor. The cursor can't be referenced in a `WHERE CURRENT OF` clause in an `UPDATE` or `DELETE` statement. This option overrides the default capability of a cursor to be updated.
 
@@ -90,7 +90,7 @@ The name of the [!INCLUDE [tsql](../../includes/tsql-md.md)] server cursor defin
 
 #### LOCAL
 
-Specifies that the scope of the cursor is local to the batch, stored procedure, or trigger in which the cursor was created. The cursor name is only valid within this scope. The cursor can be referenced by local cursor variables in the batch, stored procedure, or trigger, or a stored procedure `OUTPUT` parameter. An `OUTPUT` parameter is used to pass the local cursor back to the calling batch, stored procedure, or trigger, which can assign the parameter to a cursor variable to reference the cursor after the stored procedure terminates. The cursor is implicitly deallocated when the batch, stored procedure, or trigger terminates, unless the cursor was passed back in an `OUTPUT` parameter. If it's passed back in an `OUTPUT` parameter, the cursor is deallocated when the last variable referencing it is deallocated or goes out of scope.
+Specifies that the scope of the cursor is local to the batch, stored procedure, or trigger in which the cursor was created. The cursor name is only valid within this scope. The cursor can be referenced by local cursor variables in the batch, stored procedure, or trigger, or a stored procedure `OUTPUT` parameter. An `OUTPUT` parameter is used to pass the local cursor back to the calling batch, stored procedure, or trigger, which can assign the parameter to a cursor variable to reference the cursor after the stored procedure terminates. The cursor is implicitly deallocated when the batch, stored procedure, or trigger terminates, unless the cursor was passed back in an `OUTPUT` parameter. If it passes back in an `OUTPUT` parameter, the cursor is deallocated when the last variable referencing it is deallocated or goes out of scope.
 
 #### GLOBAL
 
@@ -130,7 +130,7 @@ Changes to data values (made either by the keyset owner or other processes) are 
 
 #### DYNAMIC
 
-Defines a cursor that reflects all data changes made to the rows in its result set as you scroll around the cursor and fetch a new record, regardless of whether the changes occur from inside the cursor or by other users outside the cursor. Therefore all insert, update, and delete statements made by all users are visible through the cursor. The data values, order, and membership of the rows can change on each fetch. The `ABSOLUTE` fetch option isn't supported with dynamic cursors. Updates made outside the cursor aren't visible until they are committed (unless the cursor transaction isolation level is set to `UNCOMMITTED`).
+Defines a cursor that reflects all data changes made to the rows in its result set as you scroll around the cursor and fetch a new record, regardless of whether the changes occur from inside the cursor or by other users outside the cursor. Therefore all insert, update, and delete statements made by all users are visible through the cursor. The data values, order, and membership of the rows can change on each fetch. The `ABSOLUTE` fetch option isn't supported with dynamic cursors. Updates made outside the cursor aren't visible until they're committed (unless the cursor transaction isolation level is set to `UNCOMMITTED`).
 
 For example, suppose a dynamic cursor fetches two rows, and another application then updates one of those rows and deletes the other. If the dynamic cursor then fetches those rows, it doesn't find the deleted row, but it displays the new values for the updated row.
 
@@ -151,11 +151,17 @@ Specifies that positioned updates or deletes made through the cursor are guarant
 
 #### OPTIMISTIC
 
-Specifies that positioned updates or deletes made through the cursor don't succeed, if the row was updated since it was read into the cursor. [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] doesn't lock rows as they are read into the cursor. It instead uses comparisons of **timestamp** column values, or a checksum value if the table has no **timestamp** column, to determine whether the row was modified after it was read into the cursor. If the row was modified, the attempted positioned update or delete fails. `OPTIMISTIC` can't be specified if `FAST_FORWARD` is also specified.
+Specifies that positioned updates or deletes made through the cursor don't succeed, if the row was updated since it was read into the cursor. [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] doesn't lock rows as they're read into the cursor. It instead uses comparisons of **timestamp** column values, or a checksum value if the table has no **timestamp** column, to determine whether the row was modified after it was read into the cursor.
+
+If the row was modified, the attempted positioned update or delete fails. `OPTIMISTIC` can't be specified if `FAST_FORWARD` is also specified.
+
+If `STATIC` is specified along with the `OPTIMISTIC` cursor argument, the combination of the two are implicitly converted to the equivalent of the combination of using `STATIC` and `READ_ONLY` arguments, or the `STATIC` and `FORWARD_ONLY` arguments.
 
 #### TYPE_WARNING
 
 Specifies that a warning message is sent to the client when the cursor is implicitly converted from the requested type to another.
+
+No warning is sent to the client when the combination of `OPTIMISTIC` and `STATIC` cursor arguments are used, and the cursor is implicitly converted to the equivalent of a `STATIC READ_ONLY` or `STATIC FORWARD_ONLY` cursor. The conversion to `READ_ONLY` turns into a `FAST_FORWARD` and `READ_ONLY` cursor from a clients' perspective.
 
 #### *select_statement*
 
@@ -192,10 +198,10 @@ After a cursor is declared, these system stored procedures can be used to determ
 
 | System stored procedures | Description |
 | --- | --- |
-| [sp_cursor_list (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-cursor-list-transact-sql.md) | Returns a list of cursors currently visible on the connection and their attributes. |
-| [sp_describe_cursor (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-describe-cursor-transact-sql.md) | Describes the attributes of a cursor, such as whether it's a forward-only or scrolling cursor. |
-| [sp_describe_cursor_columns (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-describe-cursor-columns-transact-sql.md) | Describes the attributes of the columns in the cursor result set. |
-| [sp_describe_cursor_tables (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-describe-cursor-tables-transact-sql.md) | Describes the base tables accessed by the cursor. |
+| [sp_cursor_list](../../relational-databases/system-stored-procedures/sp-cursor-list-transact-sql.md) | Returns a list of cursors currently visible on the connection and their attributes. |
+| [sp_describe_cursor](../../relational-databases/system-stored-procedures/sp-describe-cursor-transact-sql.md) | Describes the attributes of a cursor, such as whether it's a forward-only or scrolling cursor. |
+| [sp_describe_cursor_columns](../../relational-databases/system-stored-procedures/sp-describe-cursor-columns-transact-sql.md) | Describes the attributes of the columns in the cursor result set. |
+| [sp_describe_cursor_tables](../../relational-databases/system-stored-procedures/sp-describe-cursor-tables-transact-sql.md) | Describes the base tables accessed by the cursor. |
 
 Variables might be used as part of the *select_statement* that declares a cursor. Cursor variable values don't change after a cursor is declared.
 

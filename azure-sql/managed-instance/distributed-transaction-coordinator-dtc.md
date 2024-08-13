@@ -6,7 +6,7 @@ author: sasapopo
 ms.author: sasapopo
 ms.reviewer: mathoma, danil
 ms.date: 11/16/2022
-ms.service: sql-managed-instance
+ms.service: azure-sql-managed-instance
 ms.subservice: data-movement
 ms.custom: ignite-2023
 ms.topic: how-to
@@ -16,9 +16,6 @@ ms.topic: how-to
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
 
 This article provides an overview of Distributed Transaction Coordinator (DTC) for Azure SQL Managed Instance. You can use DTC to run distributed transactions in mixed environments, including across managed instances, SQL Server instances, other relational database management systems (RDBMSs), custom applications, and other transaction participants that are hosted in any environment that can establish network connectivity to Azure.
-
-> [!NOTE]
-> DTC for Azure SQL Managed Instance is part of the November 2022 feature wave. To learn more about the timeline for the feature wave rollout, see [November 2022 feature wave](https://aka.ms/sqlmi-fwnov2022).
 
 ## Scenarios
 
@@ -38,8 +35,6 @@ To run distributed transactions, complete these tasks:
 ## Requirements
 
 To change DTC settings, you must have write permissions for `Microsoft.Sql/managedInstances/dtc` resource. To view DTC settings, you must have read permissions for `Microsoft.Sql/managedInstances/dtc` resource.
-
----
 
 ## Configure DTC
 

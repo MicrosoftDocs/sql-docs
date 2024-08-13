@@ -5,8 +5,8 @@ description: Describes extended events (XEvents) in Azure SQL Database and Azure
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: wiassaf, mathoma, randolphwest
-ms.date: 01/22/2024
-ms.service: sql-db-mi
+ms.date: 05/15/2024
+ms.service: azure-sql
 ms.subservice: performance
 ms.topic: reference
 ms.custom: sqldbrb=1
@@ -46,9 +46,8 @@ Extended Events can be used to monitor read-only replicas. For more information,
 Adopt the following best practices to use Extended Events in Azure SQL Database and Azure SQL Managed Instance reliably and without affecting database engine health and workload performance.
 
 - If you use the `event_file` target:
-  - Don't set the `EVENT_RETENTION_MODE` option to `NO_EVENT_LOSS`. This might cause connection timeouts and failover delays among other issues, affecting database or managed instance availability.
   - Use a storage account in the same Azure region as the database or managed instance where you create event sessions.
-  - Align the redundancy of the storage account with the redundancy of the database, elastic pool, or managed instance. For [locally redundant](high-availability-sla.md#locally-redundant-availability) resources, use LRS, GRS, or RA-GRS. For [zone-redundant](high-availability-sla.md#zone-redundant-availability) resources, use ZRS, GZRS, or RA-GZRS. See [Azure Storage redundancy](/azure/storage/common/storage-redundancy) for details.
+  - Align the redundancy of the storage account with the redundancy of the database, elastic pool, or managed instance. For [locally redundant](high-availability-sla-local-zone-redundancy.md#locally-redundant-availability) resources, use LRS, GRS, or RA-GRS. For [zone-redundant](high-availability-sla-local-zone-redundancy.md#zone-redundant-availability) resources, use ZRS, GZRS, or RA-GZRS. See [Azure Storage redundancy](/azure/storage/common/storage-redundancy) for details.
   - Don't use any [blob access tier](/azure/storage/blobs/access-tiers-overview) other than `Hot`.
 - If you want to create a continuously running event session that starts automatically after each [!INCLUDE [ssde-md](../../docs/includes/ssde-md.md)] restart (for example, after a failover or a maintenance event), include the event session option of `STARTUP_STATE = ON` in your `CREATE EVENT SESSION`  or `ALTER EVENT SESSION` statements.
 - Conversely, use `STARTUP_STATE = OFF` for short-term event sessions such as those used in ad hoc troubleshooting.

@@ -5,7 +5,7 @@ author: sasapopo
 ms.author: sasapopo
 ms.reviewer: mathoma
 ms.date: 11/16/2022
-ms.service: sql-managed-instance
+ms.service: azure-sql-managed-instance
 ms.subservice: security
 ms.topic: tutorial
 ms.custom: sqldbrb=1, devx-track-azurepowershell

@@ -3,7 +3,7 @@ title: "Components"
 description: Learn about components of the SQL Server Native Client such as sqlncli11.dll, sqlnclir11.rll, sqlncli.h, and sqlncli11.lib.
 author: markingmyname
 ms.author: maghan
-ms.date: "03/14/2017"
+ms.date: "06/14/2024"
 ms.service: sql
 ms.subservice: native-client
 ms.topic: "reference"
@@ -16,7 +16,7 @@ helpviewer_keywords:
 # Components of SQL Server Native Client
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-> [!IMPORTANT] 
+> [!IMPORTANT]
 > [!INCLUDE[snac-removed-oledb-and-odbc](../../../includes/snac-removed-oledb-and-odbc.md)]
 
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client contains the following components:  

@@ -4,7 +4,7 @@ description: "jobs.sp_update_jobstep modifies a job step in an existing job in t
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: 12/04/2023
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.subservice: system-objects
 ms.topic: "reference"
 dev_langs:

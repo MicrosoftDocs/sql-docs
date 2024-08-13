@@ -6,7 +6,7 @@ author: nofield
 ms.author: nofield
 ms.reviewer: wiassaf, vanto, mathoma
 ms.date: 01/18/2024
-ms.service: sql-db-mi
+ms.service: azure-sql
 ms.subservice: security
 ms.custom: devx-track-azurepowershell, devx-track-azurecli
 ms.topic: how-to

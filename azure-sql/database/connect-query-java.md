@@ -5,7 +5,7 @@ author: jdubois
 ms.author: judubois
 ms.reviewer: mathoma
 ms.date: 12/07/2023
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.subservice: development
 ms.topic: quickstart
 ms.custom:
@@ -17,6 +17,7 @@ monikerRange: "= azuresql || = azuresql-db"
 ---
 
 # Use Java and JDBC with Azure SQL Database
+[!INCLUDE [appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
 This topic demonstrates creating a sample application that uses Java and [JDBC](https://en.wikipedia.org/wiki/Java_Database_Connectivity) to store and retrieve information in [Azure SQL Database](/azure/sql-database/).
 
@@ -63,12 +64,9 @@ az group create \
 > [!NOTE]
 > We use the `jq` utility to display JSON data and make it more readable. This utility is installed by default on [Azure Cloud Shell](https://shell.azure.com/). If you don't like that utility, you can safely remove the `| jq` part of all the commands we'll use.
 
-## Create an Azure SQL Database instance
+## Create a database
 
-The first thing we'll create is a managed Azure SQL Database server.
-
-> [!NOTE]
-> You can read more detailed information about creating Azure SQL Database servers in [Quickstart: Create an Azure SQL Database single database](./single-database-create-quickstart.md).
+The first thing we'll create is a managed [logical server](logical-servers.md) for Azure SQL Database.
 
 In [Azure Cloud Shell](https://shell.azure.com/), run the following command:
 
@@ -82,11 +80,11 @@ az sql server create \
     | jq
 ```
 
-This command creates an Azure SQL Database server.
+This command creates the logical server for your database. 
 
-### Configure a firewall rule for your Azure SQL Database server
+### Configure a firewall rule for your server
 
-Azure SQL Database instances are secured by default. They have a firewall that doesn't allow any incoming connection. To be able to use your database, you need to add a firewall rule that will allow the local IP address to access the database server.
+Azure SQL Database is secured by default since it has a firewall that doesn't allow any incoming connection. To be able to use your database, you need to add a firewall rule that will allow the local IP address to access the database server.
 
 Because you configured our local IP address at the beginning of this article, you can open the server's firewall by running the following command:
 
@@ -100,9 +98,9 @@ az sql server firewall-rule create \
     | jq
 ```
 
-### Configure an Azure SQL database
+### Configure a database
 
-The Azure SQL Database server that you created earlier is empty. It doesn't have any database that you can use with the Java application. Create a new database called `demo` by running the following command:
+The server that you created earlier is empty. It doesn't have any database that you can use with the Java application. Create a new database called `demo` by running the following command:
 
 ```azurecli
 az sql db create \
@@ -112,7 +110,7 @@ az sql db create \
     | jq
 ```
 
-### Create a new Java project
+## Create a new Java project
 
 Using your favorite IDE, create a new Java project, and add a `pom.xml` file in its root directory:
 
@@ -314,7 +312,7 @@ public class Todo {
 
 This class is a domain model mapped on the `todo` table that you created when executing the *schema.sql* script.
 
-### Insert data into Azure SQL database
+## Insert data 
 
 In the *src/main/java/DemoApplication.java* file, after the main method, add the following method to insert data into the database:
 
@@ -350,7 +348,7 @@ Executing the main class should now produce the following output:
 [INFO   ] Closing database connection
 ```
 
-### Reading data from Azure SQL database
+## Read data
 
 Let's read the data previously inserted, to validate that our code works correctly.
 
@@ -394,7 +392,7 @@ Executing the main class should now produce the following output:
 [INFO   ] Closing database connection 
 ```
 
-### Updating data in Azure SQL Database
+## Update data
 
 Let's update the data we previously inserted.
 
@@ -438,7 +436,7 @@ Executing the main class should now produce the following output:
 [INFO   ] Closing database connection 
 ```
 
-### Deleting data in Azure SQL database
+## Delete data
 
 Finally, let's delete the data we previously inserted.
 

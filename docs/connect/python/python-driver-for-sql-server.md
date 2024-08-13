@@ -2,7 +2,7 @@
 title: Python driver for SQL Server
 description: Connect to a SQL Database using one of the available Python drivers on your preferred operating system.
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: 08/22/2023
 ms.service: sql
 ms.subservice: connectivity

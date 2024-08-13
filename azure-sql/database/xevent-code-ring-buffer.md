@@ -6,7 +6,7 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: wiassaf, mathoma, randolphwest
 ms.date: 12/26/2023
-ms.service: sql-db-mi
+ms.service: azure-sql
 ms.subservice: performance
 ms.topic: sample
 ms.custom: sqldbrb=1

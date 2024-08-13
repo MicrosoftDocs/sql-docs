@@ -117,8 +117,8 @@ GO
  
 ### D. Query random data with the NEWID() function
 
-The following example queries a random record from the `Production.Product` table using the `NEWID()` function. To query more records radomly, increase the `TOP` value.
-  
+The following example queries a random record from the `Production.Product` table using the `NEWID()` function. To query more records randomly, increase the `TOP` value.
+
 ```sql  
 SELECT TOP 1 ProductID, Name, ProductNumber
 FROM Production.Product

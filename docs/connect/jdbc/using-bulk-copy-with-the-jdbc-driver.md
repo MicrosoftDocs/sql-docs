@@ -2,8 +2,8 @@
 title: "Using bulk copy with the JDBC driver"
 description: "The SQLServerBulkCopy class allows you to write data load solutions in Java that offer significant performance advantages over the standard JDBC APIs."
 author: David-Engel
-ms.author: v-davidengel
-ms.date: "08/24/2020"
+ms.author: davidengel
+ms.date: 07/31/2024
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: conceptual
@@ -15,6 +15,9 @@ ms.topic: conceptual
 Microsoft SQL Server includes a popular command-line utility named `bcp` for quickly bulk copying large files into tables or views in SQL Server databases. The `SQLServerBulkCopy` class allows you to write code solutions in Java that provide similar functionality. There are other ways to load data into a SQL Server table (INSERT statements, for example) but `SQLServerBulkCopy` offers a significant performance advantage over them.  
   
 The `SQLServerBulkCopy` class can be used to write data only to SQL Server tables. But the data source isn't limited to SQL Server; any data source can be used, as long as the data can be read with a `ResultSet`, `RowSet`, or `ISQLServerBulkRecord` implementation.  
+
+> [!NOTE]  
+> `ISQLServerBulkData` as a data source when using bulk copy is currently not fully supported, and users may run into errors when using this data source type. It's recommended to use one `ResultSet`, `RowSet`, or `ISQLServerBulkRecord` instead.
   
 Using the `SQLServerBulkCopy` class, you can perform:  
   
@@ -25,7 +28,7 @@ Using the `SQLServerBulkCopy` class, you can perform:
 - A bulk copy operation with a transaction  
   
 > [!NOTE]  
-> When using the Microsoft JDBC Driver 4.1 for SQL Server or earlier (which does not support the SQLServerBulkCopy class), you can execute the SQL Server Transact-SQL BULK INSERT statement instead.  
+> When using the Microsoft JDBC Driver 4.1 for SQL Server or earlier (which doesn't support the SQLServerBulkCopy class), you can execute the SQL Server Transact-SQL BULK INSERT statement instead.  
   
 ## Bulk copy example setup  
 
@@ -36,7 +39,7 @@ The `BulkCopyDemoMatchingColumns` and `BulkCopyDemoDifferentColumns` tables are 
 A few of the code samples demonstrate how to use one `SQLServerBulkCopy` class to write to multiple tables. For these samples, the `BulkCopyDemoOrderHeader` and `BulkCopyDemoOrderDetail` tables are used as the destination tables. These tables are based on the `Sales.SalesOrderHeader` and `Sales.SalesOrderDetail` tables in AdventureWorks.  
   
 > [!NOTE]  
-> The `SQLServerBulkCopy` code samples are provided to demonstrate the syntax for using `SQLServerBulkCopy` only. If the source and destination tables are located in the same SQL Server instance, it is easier and faster to use a Transact-SQL INSERT ... SELECT statement to copy the data.  
+> The `SQLServerBulkCopy` code samples are provided to demonstrate the syntax for using `SQLServerBulkCopy` only. If the source and destination tables are located in the same SQL Server instance, it's easier and faster to use a Transact-SQL INSERT ... SELECT statement to copy the data.  
 
 ### Table setup  
 
@@ -135,7 +138,7 @@ The simplest approach to performing a SQL Server bulk copy operation is to perfo
 The following application demonstrates how to load data using the `SQLServerBulkCopy` class. In this example, a `ResultSet` is used to copy data from the Production.Product table in the SQL Server AdventureWorks database to a similar table in the same database.  
   
 > [!IMPORTANT]  
-> This sample will not run unless you have created the work tables as described in [Table setup](#table-setup). This code is provided to demonstrate the syntax for using `SQLServerBulkCopy` only. If the source and destination tables are located in the same SQL Server instance, it is easier and faster to use a Transact-SQL INSERT ... SELECT statement to copy the data.  
+> This sample will not run unless you have created the work tables as described in [Table setup](#table-setup). This code is provided to demonstrate the syntax for using `SQLServerBulkCopy` only. If the source and destination tables are located in the same SQL Server instance, it's easier and faster to use a Transact-SQL INSERT ... SELECT statement to copy the data.  
 
 ```java
 import java.sql.Connection;
@@ -229,7 +232,7 @@ You can perform multiple bulk copy operations using a single instance of a `SQLS
 If you perform several bulk copy operations using the same `SQLServerBulkCopy` object, there are no restrictions on whether source or target information is equal or different in each operation. However, you must ensure that column association information is properly set each time you write to the server.  
   
 > [!IMPORTANT]  
-> This sample will not run unless you have created the work tables as described in [Table setup](#table-setup). This code is provided to demonstrate the syntax for using `SQLServerBulkCopy` only. If the source and destination tables are located in the same SQL Server instance, it is easier and faster to use a Transact-SQL INSERT ... SELECT statement to copy the data.  
+> This sample will not run unless you have created the work tables as described in [Table setup](#table-setup). This code is provided to demonstrate the syntax for using `SQLServerBulkCopy` only. If the source and destination tables are located in the same SQL Server instance, it's easier and faster to use a Transact-SQL INSERT ... SELECT statement to copy the data.  
 
 ```java
 import java.sql.Connection;
@@ -345,7 +348,7 @@ public class BulkCopyMultiple {
 
 ## Transaction and bulk copy operations
 
- Bulk copy operations can be performed as isolated operations or as part of a multiple step transaction. This latter option enables you to perform more than one bulk copy operation within the same transaction, as well as perform other database operations (such as inserts, updates, and deletes) while still being able to commit or roll back the entire transaction.  
+ Bulk copy operations can be performed as isolated operations or as part of a multiple step transaction. This latter option enables you to perform more than one bulk copy operation within the same transaction, and perform other database operations (such as inserts, updates, and deletes) while still being able to commit or roll back the entire transaction.  
   
  By default, a bulk copy operation is performed as an isolated operation. The bulk copy operation occurs in a non-transacted way, with no opportunity for rolling it back. If you need to roll back all or part of the bulk copy when an error occurs, you can use a `SQLServerBulkCopy`-managed transaction or perform the bulk copy operation within an existing transaction.  
 
@@ -355,7 +358,7 @@ Driver version v8.4.1 adds a new connection property, `sendTemporalDataTypesAsSt
 
 This connection property, when set to `false`, will send **DATE**, **DATETIME**, **DATIMETIME2**, **DATETIMEOFFSET**, **SMALLDATETIME**, and **TIME** datatypes as their respective types instead of sending them as String.
 
-Sending the temporal datatypes as their respective types allows the user to send data into those columns for Azure Synapse Analytics, which was not possible before due to the driver converting the data into String. Sending String data into temporal columns works for SQL Server because SQL Server would perform implicit conversion for us, but it is not the same with Azure Synapse Analytics.
+Sending the temporal datatypes as their respective types allows the user to send data into those columns for Azure Synapse Analytics, which wasn't possible before due to the driver converting the data into String. Sending String data into temporal columns works for SQL Server because SQL Server would perform implicit conversion for us, but it isn't the same with Azure Synapse Analytics.
 
 Additionally, even without setting this connection string to 'false', from **v8.4.1** and onward, **MONEY** and **SMALLMONEY** datatypes will be sent as **MONEY** / **SMALLMONEY** datatypes instead of **DECIMAL**, which also allows those datatypes to be bulk copied into Azure Synapse Analytics.
 
@@ -388,7 +391,7 @@ In the example, the source table and destination table each include an Identity 
 The bulk copy operation is executed with the `BatchSize` property set to 10. When the operation encounters the invalid row, an exception is thrown. In this first example, the bulk copy operation is non-transacted. All batches copied up to the point of the error are committed; the batch containing the duplicate key is rolled back, and the bulk copy operation is halted before processing any other batches.  
   
 > [!NOTE]  
-> This sample will not run unless you have created the work tables as described in [Table setup](#table-setup). This code is provided to demonstrate the syntax for using `SQLServerBulkCopy` only. If the source and destination tables are located in the same SQL Server instance, it is easier and faster to use a Transact-SQL INSERT ... SELECT statement to copy the data.  
+> This sample will not run unless you have created the work tables as described in [Table setup](#table-setup). This code is provided to demonstrate the syntax for using `SQLServerBulkCopy` only. If the source and destination tables are located in the same SQL Server instance, it's easier and faster to use a Transact-SQL INSERT ... SELECT statement to copy the data.  
 
 ```java
 import java.sql.Connection;
@@ -476,7 +479,7 @@ public class BulkCopyNonTransacted {
 
 ### Performing a dedicated bulk copy operation in a transaction
 
-By default, a bulk copy operation does not create transactions itself. When you want to perform a dedicated bulk copy operation, create a new instance of `SQLServerBulkCopy` with a connection string. In this scenario, each batch of the bulk copy operation is implicitly committed by the database. You can set the `UseInternalTransaction` option to `true` in `SQLServerBulkCopyOptions` to make the bulk copy operation create transactions, performing a commit after each batch of the bulk copy operation.
+By default, a bulk copy operation doesn't create transactions itself. When you want to perform a dedicated bulk copy operation, create a new instance of `SQLServerBulkCopy` with a connection string. In this scenario, each batch of the bulk copy operation is implicitly committed by the database. You can set the `UseInternalTransaction` option to `true` in `SQLServerBulkCopyOptions` to make the bulk copy operation create transactions, performing a commit after each batch of the bulk copy operation.
   
 ```java
 SQLServerBulkCopyOptions copyOptions = new SQLServerBulkCopyOptions();
@@ -492,7 +495,7 @@ You can pass a `Connection` object that has transactions enabled as a parameter 
 The following application is similar to `BulkCopyNonTransacted`, with one exception: in this example, the bulk copy operation is included in a larger, external transaction. When the primary key violation error occurs, the entire transaction is rolled back and no rows are added to the destination table.
 
 > [!NOTE]  
-> This sample will not run unless you have created the work tables as described in [Table setup](#table-setup). This code is provided to demonstrate the syntax for using `SQLServerBulkCopy` only. If the source and destination tables are located in the same SQL Server instance, it is easier and faster to use a Transact-SQL INSERT ... SELECT statement to copy the data.  
+> This sample will not run unless you have created the work tables as described in [Table setup](#table-setup). This code is provided to demonstrate the syntax for using `SQLServerBulkCopy` only. If the source and destination tables are located in the same SQL Server instance, it's easier and faster to use a Transact-SQL INSERT ... SELECT statement to copy the data.  
 
 ```java
 import java.sql.Connection;
@@ -759,7 +762,7 @@ The `SQLServerBulkCopy` class can be used to write data only to SQL Server table
 | `boolean UseInternalTransaction` | When set to `true`, each batch of the bulk-copy operation will occur within a transaction. If `SQLServerBulkCopy` is using an existing connection (as specified by the constructor), a `SQLServerException` will occur.  If `SQLServerBulkCopy` created a dedicated connection, a transaction will be created and committed for each batch. | False - no transaction |
 | `int BatchSize` | Number of rows in each batch. At the end of each batch, the rows in the batch are sent to the server.<br /><br /> A batch is complete when `BatchSize` rows have been processed or there are no more rows to send to the destination data source.  If the `SQLServerBulkCopy` instance has been declared with the `UseInternalTransaction` option set to `false`, rows are sent to the server `BatchSize` rows at a time, but no transaction-related action is taken. If `UseInternalTransaction` is set to `true`, each batch of rows is performed within an explicit transaction. | 0 - indicates that each `writeToServer` operation is a single batch |
 | `int BulkCopyTimeout` | Number of seconds for the operation to complete before it times out. A value of 0 indicates no limit; the bulk copy will wait indefinitely. | 60 seconds. |
-| `boolean allowEncryptedValueModifications` | This option is available with Microsoft JDBC Driver 6.0 (or higher) for SQL Server.<br /><br /> When set to `true`, `allowEncryptedValueModifications` enables bulk copying of encrypted data between tables or databases, without decrypting the data. Typically, an application would select data from encrypted columns from one table without decrypting the data (the app would connect to the database with the column encryption setting keyword set to disabled) and then would use this option to bulk insert the data, which is still encrypted. For more information, see [Using Always Encrypted with the JDBC Driver](using-always-encrypted-with-the-jdbc-driver.md).<br /><br /> Use caution when setting `allowEncryptedValueModifications` to `true` as this may lead to corrupting the database because the driver doesn't check if the data is indeed encrypted, or if it is correctly encrypted using the same encryption type, algorithm and key as the target column. |
+| `boolean allowEncryptedValueModifications` | This option is available with Microsoft JDBC Driver 6.0 (or higher) for SQL Server.<br /><br /> When set to `true`, `allowEncryptedValueModifications` enables bulk copying of encrypted data between tables or databases, without decrypting the data. Typically, an application would select data from encrypted columns from one table without decrypting the data (the app would connect to the database with the column encryption setting keyword set to disabled) and then would use this option to bulk insert the data, which is still encrypted. For more information, see [Using Always Encrypted with the JDBC Driver](using-always-encrypted-with-the-jdbc-driver.md).<br /><br /> Use caution when setting `allowEncryptedValueModifications` to `true` as this may lead to corrupting the database because the driver doesn't check if the data is indeed encrypted, or if it's correctly encrypted using the same encryption type, algorithm and key as the target column. |
   
  Getters and setters:  
   
@@ -809,7 +812,7 @@ Implementation Notes and Limitations:
   
 2. Streaming of large data types such as `varchar(max)`, `varbinary(max)`, `nvarchar(max)`, `sqlxml`, and `ntext` isn't supported.  
   
-3. The delimiter specified for the CSV file shouldn't appear anywhere in the data and should be escaped properly if it is a restricted character in Java regular expressions.  
+3. The delimiter specified for the CSV file shouldn't appear anywhere in the data and should be escaped properly if it's a restricted character in Java regular expressions.  
   
 4. In the CSV file implementation, double quotes are treated as part of the data. For example, the line `hello,"world","hello,world"` would be treated as having four columns with the values `hello`, `"world"`, `"hello` and `world"` if the delimiter is a comma.  
   

@@ -2,7 +2,7 @@
 title: "Updating an Application from SQL Server 2005 Native Client"
 description: Learn about the breaking changes in OLE DB Driver for SQL Server since SQL Server Native Client in SQL Server 2005 (9.x).
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: "06/12/2018"
 ms.service: sql
 ms.subservice: connectivity

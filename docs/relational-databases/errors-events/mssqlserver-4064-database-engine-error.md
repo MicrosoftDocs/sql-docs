@@ -3,7 +3,7 @@ title: "MSSQLSERVER_4064"
 description: "MSSQLSERVER_4064"
 author: MashaMSFT
 ms.author: mathoma
-ms.reviewer: sureshka, randolphwest, v-jayaramanp
+ms.reviewer: sureshka, randolphwest
 ms.date: 01/10/2024
 ms.service: sql
 ms.subservice: supportability

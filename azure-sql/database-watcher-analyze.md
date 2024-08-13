@@ -5,7 +5,7 @@ description: Examples of analytical queries that use database watcher monitoring
 author: dimitri-furman
 ms.author: dfurman
 ms.date: 07/10/2024
-ms.service: sql-db-mi
+ms.service: azure-sql
 ms.subservice: monitoring
 ms.topic: how-to
 ms.custom:

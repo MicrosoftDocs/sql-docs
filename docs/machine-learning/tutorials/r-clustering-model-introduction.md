@@ -5,7 +5,7 @@ description: In this four-part tutorial series, you'll develop a model to perfor
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: garye, jroth
-ms.date: 05/26/2020
+ms.date: 05/29/2024
 ms.service: sql
 ms.subservice: machine-learning
 ms.topic: tutorial
@@ -46,26 +46,26 @@ In [part four](r-clustering-model-deploy.md),  you'll learn how to create a stor
 ## Prerequisites
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
-* [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) with the Python language option - Follow the installation instructions in the [Windows installation guide](../install/sql-machine-learning-services-windows-install.md) or the [Linux installation guide](../../linux/sql-server-linux-setup-machine-learning.md?toc=%252fsql%252fmachine-learning%252ftoc.json&view=sql-server-linux-ver15&preserve-view=true). You can also [enable Machine Learning Services on SQL Server Big Data Clusters](../../big-data-cluster/machine-learning-services.md).
+- [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) with the Python language option - Follow the installation instructions in the [Windows installation guide](../install/sql-machine-learning-services-windows-install.md) or the [Linux installation guide](../../linux/sql-server-linux-setup-machine-learning.md?toc=%252fsql%252fmachine-learning%252ftoc.json&view=sql-server-linux-ver15&preserve-view=true). You can also [enable Machine Learning Services on SQL Server Big Data Clusters](../../big-data-cluster/machine-learning-services.md).
 ::: moniker-end
 ::: moniker range="=sql-server-2017"
-* [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) with the R language option - Follow the installation instructions in the [Windows installation guide](../install/sql-machine-learning-services-windows-install.md).
+- [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) with the R language option - Follow the installation instructions in the [Windows installation guide](../install/sql-machine-learning-services-windows-install.md).
 ::: moniker-end
 ::: moniker range="=azuresqldb-mi-current"
-* Azure SQL Managed Instance Machine Learning Services. For information, see the [Azure SQL Managed Instance Machine Learning Services overview](/azure/azure-sql/managed-instance/machine-learning-services-overview).
+- **Azure SQL Managed Instance Machine Learning Services.** For information, see the [Azure SQL Managed Instance Machine Learning Services overview](/azure/azure-sql/managed-instance/machine-learning-services-overview).
 
-* [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) for restoring the sample database to Azure SQL Managed Instance.
+- **SQL Server Management Studio (SSMS)** - Use SSMS to restore the sample database to Azure SQL Managed Instance. To download, see [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md).
 ::: moniker-end
 
-* [Azure Data Studio](../../azure-data-studio/what-is-azure-data-studio.md). You'll use a notebook in Azure Data Studio for SQL. For more information about notebooks, see [How to use notebooks in Azure Data Studio](../../azure-data-studio/notebooks/notebooks-guidance.md).
+- [Azure Data Studio](../../azure-data-studio/what-is-azure-data-studio.md). You'll use a notebook in Azure Data Studio for SQL. For more information about notebooks, see [How to use notebooks in Azure Data Studio](../../azure-data-studio/notebooks/notebooks-guidance.md).
 
-* R IDE - This tutorial uses [RStudio Desktop](https://www.rstudio.com/products/rstudio/download/).
+- **R IDE** - This tutorial uses [RStudio Desktop](https://posit.co/download/rstudio-desktop).
 
-* RODBC - This driver is used in the R scripts you'll develop in this tutorial. If it's not already installed, install it using the R command `install.packages("RODBC")`. For more information on RODBC, see [CRAN - Package RODBC](https://CRAN.R-project.org/package=RODBC).
+- **RODBC** - This driver is used in the R scripts you'll develop in this tutorial. If it's not already installed, install it using the R command `install.packages("RODBC")`. For more information on RODBC, see [CRAN - Package RODBC](https://cran.r-project.org/web/packages/RODBC/index.html).
 
 ## Restore the sample database
 
-The sample dataset used in this tutorial has been saved to a **.bak** database backup file for you to download and use. This dataset is derived from the [tpcx-bb](http://www.tpc.org/tpcx-bb/default5.asp) dataset provided by the [Transaction Processing Performance Council (TPC)](http://www.tpc.org/).
+The sample dataset used in this tutorial has been saved to a `.bak` database backup file for you to download and use. This dataset is derived from the [tpcx-bb](https://www.tpc.org/tpcx-bb/default5.asp) dataset provided by the [Transaction Processing Performance Council (TPC)](https://www.tpc.org).
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 > [!NOTE]
@@ -73,14 +73,14 @@ The sample dataset used in this tutorial has been saved to a **.bak** database b
 ::: moniker-end
 
 ::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15"
-1. Download the file [tpcxbb_1gb.bak](https://rserverdistribution.blob.core.windows.net/production/sqlmldocument/tpcxbb_1gb.bak).
+1. Download the file [tpcxbb_1gb.bak](https://aka.ms/sqlmldocument/tpcxbb_1gb.bak).
 
 1. Follow the directions in [Restore a database from a backup file](../../azure-data-studio/tutorial-backup-restore-sql-server.md#restore-a-database-from-a-backup-file) in Azure Data Studio, using these details:
 
-   * Import from the **tpcxbb_1gb.bak** file you downloaded
-   * Name the target database "tpcxbb_1gb"
+   * Import from the `tpcxbb_1gb.bak` file you downloaded.
+   * Name the target database `tpcxbb_1gb`.
 
-1. You can verify that the dataset exists after you have restored the database by querying the **dbo.customer** table:
+1. You can verify that the dataset exists after you have restored the database by querying the `dbo.customer` table:
 
     ```sql
     USE tpcxbb_1gb;
@@ -88,14 +88,14 @@ The sample dataset used in this tutorial has been saved to a **.bak** database b
     ```
 ::: moniker-end
 ::: moniker range="=azuresqldb-mi-current"
-1. Download the file [tpcxbb_1gb.bak](https://rserverdistribution.blob.core.windows.net/production/sqlmldocument/tpcxbb_1gb.bak).
+1. Download the file [tpcxbb_1gb.bak](https://aka.ms/sqlmldocument/tpcxbb_1gb.bak).
 
 1. Follow the directions in [Restore a database to a Managed Instance](/azure/sql-database/sql-database-managed-instance-get-started-restore) in SQL Server Management Studio, using these details:
 
-   * Import from the **tpcxbb_1gb.bak** file you downloaded
-   * Name the target database "tpcxbb_1gb"
+   * Import from the `tpcxbb_1gb.bak` file you downloaded.
+   * Name the target database `tpcxbb_1gb`.
 
-1. You can verify that the dataset exists after you have restored the database by querying the **dbo.customer** table:
+1. You can verify that the dataset exists after you have restored the database by querying the `dbo.customer` table:
 
     ```sql
     USE tpcxbb_1gb;
@@ -105,9 +105,9 @@ The sample dataset used in this tutorial has been saved to a **.bak** database b
 
 ## Clean up resources
 
-If you're not going to continue with this tutorial, delete the tpcxbb_1gb database.
+If you're not going to continue with this tutorial, delete the `tpcxbb_1gb` database.
 
-## Next steps
+## Next step
 
 In part one of this tutorial series, you completed these steps:
 

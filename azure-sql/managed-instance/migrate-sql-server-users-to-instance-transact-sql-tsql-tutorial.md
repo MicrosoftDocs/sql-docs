@@ -5,7 +5,7 @@ author: GitHubMirek
 ms.author: mireks
 ms.reviewer: vanto, mathoma
 ms.date: 05/10/2021
-ms.service: sql-managed-instance
+ms.service: azure-sql-managed-instance
 ms.subservice: security
 ms.topic: tutorial
 ms.custom: sqldbrb=1

@@ -2,7 +2,7 @@
 title: Encryption and certificate validation
 description: Learn about encryption and certificate validation for SQL Server connections. The OLE DB Driver for SQL Server supports encryption and certificate validation.
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: 04/20/2023
 ms.service: sql
 ms.subservice: connectivity

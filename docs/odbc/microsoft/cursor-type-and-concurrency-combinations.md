@@ -2,7 +2,7 @@
 title: "Cursor Type and Concurrency Combinations"
 description: "Cursor Type and Concurrency Combinations"
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: "01/19/2017"
 ms.service: sql
 ms.subservice: connectivity

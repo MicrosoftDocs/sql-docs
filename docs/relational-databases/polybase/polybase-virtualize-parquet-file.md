@@ -4,7 +4,7 @@ description: SQL Server can virtualize data from parquet files in S3-compatible 
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: hudequei
-ms.date: 05/10/2022
+ms.date: 06/03/2024
 ms.service: sql
 ms.subservice: polybase
 ms.topic: conceptual
@@ -14,28 +14,28 @@ monikerRange: ">= sql-server-ver16 || >= sql-server-linux-ver16"
 # Virtualize parquet file in a S3-compatible object storage with PolyBase
  [!INCLUDE [SQL Server 2022](../../includes/applies-to-version/sqlserver2022.md)]
 
-[!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] can virtualize data from parquet files. This process allows the data to stay in its original location, but can be queried from a SQL Server instance with T-SQL commands, like any other table. This feature uses PolyBase connectors, and minimizes the need for ETL processes.
+[!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] can virtualize data from parquet files. This process allows the data to stay in its original location, but can be queried from a SQL Server instance with T-SQL commands, like any other table. This feature uses PolyBase connectors, and minimizes the need for extract, transform, and load (ETL) processes.
 
-In the example below, we'll virtualize a parquet file stored on S3-compatible object storage.
+In the following example, we'll virtualize a parquet file stored on S3-compatible object storage.
 
 For more information on data virtualization, see [Introducing data virtualization with PolyBase](polybase-guide.md).
 
 ## Prerequisites
 
-To use the S3-compatible object storage integration features, you will need the following tools and resources:
+To use the S3-compatible object storage integration features, you need the following tools and resources:
 
 * Install the PolyBase feature for SQL Server.
 * Install [SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md) or [Azure Data Studio](../../azure-data-studio/download-azure-data-studio.md).
 * S3-compatible storage.
 * An S3 bucket created. Buckets cannot be created or configured from SQL Server.
-* A user (`Access Key ID`) has been configured and the secret (`Secret Key ID`) and that user is known to you. You will need both to authenticate against the S3 object storage endpoint.
+* A user (`Access Key ID`) and the secret (`Secret Key ID`) and that user is known to you. You will need both to authenticate against the S3 object storage endpoint.
 * *ListBucket* permission on S3 user.
 * *ReadOnly* permission on S3 user.
 * TLS must have been configured. It is assumed that all connections will be securely transmitted over HTTPS not HTTP. The endpoint will be validated by a certificate installed on the SQL Server OS Host.
 
 ### Permission
 
-In order for the proxy user to read the content of an S3 bucket the user will need to be allowed to perform the following actions against the S3 endpoint:
+In order for the proxy user to read the content of an S3 bucket the user needs to be allowed to perform the following actions against the S3 endpoint:
 
 * *ListBucket*;
 * *ReadOnly*;
@@ -93,13 +93,25 @@ Verify the new external data source with [sys.external_data_sources](../system-c
 SELECT * FROM sys.external_data_sources;
 ```
 
+#### Virtual hosted URLs
+
+Some S3-compatible storage systems (such as Amazon Web Services) utilize `virtual_hosted` style URLs to implement folder structure in the S3 bucket. Add the following `CONNECTION_OPTIONS` to allow for creation of external tables pointing to folder locations in the S3 bucket, for example `CONNECTION_OPTIONS = '{"s3":{"url_style":"virtual_hosted"}}'`.
+
+
+Without that `CONNECTION_OPTIONS` setting, when querying external tables pointing to a folder, you might observe the following error:
+
+```output
+Msg 13807, Level 16, State 1, Line 23  
+Content of directory on path '/<folder_name>/' cannot be listed. 
+```
+
 ### SELECT from a parquet file using OPENROWSET
 
 The following example demonstrates using T-SQL to query a parquet file stored in S3-compatible object storage via OPENROWSET query. For more information, see [OPENROWSET (Transact-SQL)](../../t-sql/functions/openrowset-transact-sql.md).
 
 As this is a parquet file, two important things are happening automatically:
 
-1. SQL Server will read the schema from the file itself, so there is no need to define the table, columns, or data types.
+1. SQL Server reads the schema from the file itself, so there is no need to define the table, columns, or data types.
 2. There is no need to declare the type of compression for the file to be read.
 
 ```sql
@@ -137,7 +149,7 @@ For more information, see:
 
 ### Limitations
 
-1. SQL Server queries on an external table backed by S3-compatible storage are limited to 1000 objects per prefix. This is because S3-compatible object listing is limited to 1000 object keys per prefix.
+1. SQL Server queries on an external table backed by S3-compatible storage are limited to 1,000 objects per prefix. This is because S3-compatible object listing is limited to 1,000 object keys per prefix.
 2. For S3-compatible object storage, customers are not allowed to create their access key ID with a `:` character in it.
 3. The total URL length is limited to 259 characters. This means `s3://<hostname>/<objectkey>` shouldn't exceed 259 characters. The `s3://` counts towards this limit, so the path length cannot exceed 259-5 = 254 characters.
 4. The SQL credential name is limited by 128 characters in UTF-16 format.

@@ -5,7 +5,7 @@ author: alexwolfmsft
 ms.author: alexwolf
 ms.reviewer: mathoma, vanto
 ms.date: 05/17/2024
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.subservice: security
 ms.topic: quickstart
 ms.custom:

@@ -4,7 +4,7 @@ description: Learn how to use Data Migration Assistant to identify the right Azu
 author: ajithkr-ms
 ms.author: ajithkr
 ms.reviewer: randolphwest
-ms.date: 09/11/2023
+ms.date: 06/28/2024
 ms.service: sql
 ms.subservice: dma
 ms.topic: conceptual
@@ -16,7 +16,11 @@ helpviewer_keywords:
 
 # Identify the right Azure SQL Database, Azure SQL Managed Instance, or SQL Server on Azure VM SKU for your on-premises database
 
-Migrating databases to the cloud can be complicated. Especially so when trying to select the best Azure SQL Database, SQL Managed Instance, or SQL Server on Azure VM target and SKU for your database. Database Migration Assistant (DMA) helps address these questions and make your database migration experience easier by providing these SKU recommendations in a user-friendly output. Using performance data DMA can now recommend an appropriate target Azure SQL SKU, and an explanation for the recommendation.
+[!INCLUDE [deprecation-notice](includes/deprecation-notice.md)]
+
+Migrating databases to the cloud can be complicated. Especially so when trying to select the best Azure SQL Database, SQL Managed Instance, or SQL Server on Azure VM target and SKU for your database.
+
+Database Migration Assistant (DMA) helps address these questions and make your database migration experience easier by providing these SKU recommendations in a user-friendly output. Using performance data DMA can now recommend an appropriate target Azure SQL SKU, and an explanation for the recommendation.
 
 The SKU recommendations feature allows you to both collect performance data from your source SQL Server instances hosting your databases, and recommends minimum Azure SQL Database, Azure SQL Managed Instance, or SQL Server on Azure VM SKU based on the data collected. The feature provides recommendations related to pricing tier, compute level, and data size. This functionality is currently available only via the Command Line Interface (CLI).
 
@@ -39,7 +43,7 @@ The collected data includes limited information about the hardware configuration
 
 In the DMA installation path, locate the SQLAssessmentConsole folder and the SqlAssessment.exe application.
 
-:::image type="content" source="media/dma-sku-recommend-sql-db/dma-sku-recommend-console-location.png" alt-text="Screenshot of SKUConsoleApplication.exe file shown in DMA installation folder location.":::
+:::image type="content" source="media/dma-sku-recommend-sql-db/dma-sku-recommend-console-location.png" alt-text="Screenshot of SKUConsoleApplication.exe file shown in DMA installation folder location." lightbox="media/dma-sku-recommend-sql-db/dma-sku-recommend-console-location.png":::
 
 In order to start the data collection process, specify the `PerfDataCollection` action in the console application, with the following arguments:
 
@@ -148,7 +152,7 @@ The following ConfigFile is equivalent to the SKU recommendations action describ
 
 In order to get SKU recommendations for a specific Azure SQL platform instead of selecting one automatically, provide a value for the `--targetPlatform` option, as follows:
 
-**Sample 1: Getting SKU recommendations  for Azure SQL Database.**
+**Sample 1: Getting SKU recommendations for Azure SQL Database.**
 
 ```console
 .\SqlAssessment.exe GetSkuRecommendation
@@ -184,15 +188,15 @@ In order to get SKU recommendations for a specific Azure SQL platform instead of
 
 The following screenshot is an example output of an Azure SQL Database recommendation:
 
-:::image type="content" source="media/sku-recommendations-azure-sql-db.png" alt-text="Screenshot of Azure SQL Database SKU tier and sizing recommendations shown in SQLAssessment console.":::
+:::image type="content" source="media/sku-recommendations-azure-sql-db.png" alt-text="Screenshot of Azure SQL Database SKU tier and sizing recommendations shown in SQLAssessment console." lightbox="media/sku-recommendations-azure-sql-db.png":::
 
 The following screenshot is an example output of an Azure SQL Managed Instance recommendation:
 
-:::image type="content" source="media/sku-recommendations-azure-sql-managed-instance.png" alt-text="Screenshot of Azure SQL Managed Instance SKU tier and size recommendations shown in console.":::
+:::image type="content" source="media/sku-recommendations-azure-sql-managed-instance.png" alt-text="Screenshot of Azure SQL Managed Instance SKU tier and size recommendations shown in console." lightbox="media/sku-recommendations-azure-sql-managed-instance.png":::
 
 The following screenshot is an example output of a SQL Server on Azure VM recommendation:
 
-:::image type="content" source="media/sku-recommendations-azure-sql-virtual-machine.png" alt-text="Screenshot of SQL Server on Azure VM SKU tier and size recommendations output shown in console.":::
+:::image type="content" source="media/sku-recommendations-azure-sql-virtual-machine.png" alt-text="Screenshot of SQL Server on Azure VM SKU tier and size recommendations output shown in console." lightbox="media/sku-recommendations-azure-sql-virtual-machine.png":::
 
 The output of the SKU recommendation is saved both as a detailed report in JSON format and a summarized easy to read HTML file. The output covers the following sections:
 
@@ -203,6 +207,6 @@ The output of the SKU recommendation is saved both as a detailed report in JSON 
 
 The final recommended tier and configuration values for that tier reflect the minimum SKU required for your queries to run in Azure with a success rate similar to your on-premises databases.
 
-## Next steps
+## Related content
 
-- [Run Data Migration Assistant from the command line](./dma-commandline.md)
+- [Run Data Migration Assistant from the command line](dma-commandline.md)

@@ -1,18 +1,19 @@
 ---
-title: Advance notifications (Preview) for planned maintenance events
+title: Configure advance notifications for planned maintenance events
 titleSuffix: Azure SQL Managed Instance
-description: Get notification before planned maintenance for Azure SQL Managed Instance.
+description: Learn how to configure advance notifications before planned maintenance windows in Azure SQL Managed Instance.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: scottkim, mathoma, urosmil
-ms.date: 03/20/2024
-ms.service: sql-managed-instance
+ms.date: 06/19/2024
+ms.service: azure-sql-managed-instance
 ms.subservice: service-overview
 ms.topic: how-to
-ms.custom: azure-sql-split
+ms.custom:
+  - azure-sql-split
 monikerRange: "=azuresql||=azuresql-mi"
 ---
-# Advance notifications for planned maintenance events in Azure SQL Managed Instance (Preview)
+# Configure advance notifications for planned maintenance events in Azure SQL Managed Instance
 [!INCLUDE [appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
 
 > [!div class="op_single_selector"]
@@ -23,9 +24,6 @@ Advance notifications enable customers to configure notifications to be sent up 
 
 Notifications can be configured so you can get texts, emails, Azure push notifications, and voicemails when planned maintenance is due to begin in the next 24 hours. Follow-up notifications are sent when maintenance begins and when maintenance ends.
 
-> [!NOTE]
-> [Maintenance windows](maintenance-window.md) are generally available. Advance notifications for maintenance windows are a [preview feature](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) for Azure SQL Managed Instance.
-
 ## Configure an advance notification
 
 Complete the following steps to enable a notification in the Azure portal **Service Health** page.
@@ -33,13 +31,11 @@ Complete the following steps to enable a notification in the Azure portal **Serv
 > [!IMPORTANT]
 > Service health is rolling out new experiences in phases. Some users will see the [updated Azure Service Health portal experience](/azure/service-health/service-health-portal-update), others will still see the classic Service Health portal experience. In case that you still see the classic Service Health portal, for **Region** don't select Global as an option, but rather the specific region or all regions.
 
-1. Go to the [Service Health Planned maintenance](https://portal.azure.com/#blade/Microsoft_Azure_Health/AzureHealthBrowseBlade/plannedMaintenance) page, select **Health alerts**, then **Add service health alert**.
+1. Go to the [Service Health](https://portal.azure.com/#view/Microsoft_Azure_Health/AzureHealthBrowseBlade/~/healthAlerts) page, under **Alerts**, select **Health alerts**. Then select **Create**.
 
-    :::image type="content" source="media/advance-notifications/health-alerts.png" alt-text="Screenshot of the Health alerts page in the Azure portal. Add service health alert button is boxed in red. " lightbox="media/advance-notifications/health-alerts.png":::
+    :::image type="content" source="media/advance-notifications/health-alerts.png" alt-text="Screenshot of the Health alerts page in the Azure portal. Add service health alert button is boxed in red." lightbox="media/advance-notifications/health-alerts.png":::
 
 1. In the **Scope** section, select subscription.
-
-    :::image type="content" source="media/advance-notifications/select-subscription.png" alt-text="Screenshot of the Azure portal page where you select the subscription where you configure the health alert." lightbox="media/advance-notifications/select-subscription.png":::
 
 1. In the **Condition** section, configure service(s) to be alerted for, region(s) and criteria. For more generic alert, select all values. To narrow down, select Azure SQL Managed Instance as a service, region(s) where you have those services deployed, and **Planned maintenance** for the event type.
 
@@ -47,7 +43,7 @@ Complete the following steps to enable a notification in the Azure portal **Serv
 
     :::image type="content" source="media/advance-notifications/define-condition-regions.png" alt-text="Screenshot of the Azure portal page where you define conditions for the health alert and define regions to be notified for." lightbox="media/advance-notifications/define-condition-regions.png":::
 
-    :::image type="content" source="media/advance-notifications/define-condition-event-types.png" alt-text="Screenshot of the Azure portal page where you define conditions for the health alert and define event types to be notified for." lightbox="media/advance-notifications/define-condition-event-types.png":::
+    :::image type="content" source="media/advance-notifications/define-condition-event-types.png" alt-text="Screenshot of the Azure portal page where you define conditions for the health alert and define event types to be notified for.":::
 
 1. In the **Actions** section, select the existing action group or create a new one.
 
@@ -57,11 +53,23 @@ Complete the following steps to enable a notification in the Azure portal **Serv
 
     :::image type="content" source="media/advance-notifications/define-alert-details.png" alt-text="Screenshot of the Azure portal page where you define alert details." lightbox="media/advance-notifications/define-alert-details.png":::
 
-1. Select **Review + create**. Your alert is created.
+1. Select **Tags**. Consider using Azure tags. For example, the "Owner" or "CreatedBy" tag to identify who created the resource, and the "Environment" tag to identify whether this resource is in production, development, etc. For more information, see [Develop your naming and tagging strategy for Azure resources](/azure/cloud-adoption-framework/ready/azure-best-practices/naming-and-tagging).
 
-1. You're all set. Next time there's a planned Azure SQL maintenance event, you'll receive an advance notification.
+1. Select **Review + create**. Your alert is created over the next few minutes.
 
-To learn more about creating health alerts, visit [Azure Service Health](/azure/service-health/service-health-portal-update)
+You're all set. Next time there's a planned Azure SQL maintenance event, you'll receive an advance notification. To learn more about creating health alerts, visit [Azure Service Health](/azure/service-health/service-health-portal-update)
+
+## <a id="tracking-azure-sql-managed-instance-maintenance-events"></a> Track Azure SQL Managed Instance maintenance events
+
+[Azure Service Health](/azure/service-health/service-health-overview) is a combination of three separate smaller services with a purpose of keeping you informed about the health of your cloud resources. This information includes current and upcoming issues such as service affecting events, planned maintenance, and other changes that might affect your availability. Service health (a sub-service) provides a personalized view of the health of the Azure services and regions you're using. This is the best place to look for service affecting planned maintenance activities.
+
+Under the Service Health you can find a **Planned maintenance** page for listing all maintenance activities happening on your subscriptions. You can use built-in filters to narrow the list of events and scope them to tenant, subscription, region, or resource type. 
+
+:::image type="content" source="media/advance-notifications/service-health-planned-maintenance.png" alt-text="Screenshot of the Azure Monitor Service Health page where you can list all maintenance events." lightbox="media/advance-notifications/service-health-planned-maintenance.png":::
+
+From the list of events on the **Service Health | Planned Maintenance** page you can further navigate into each maintenance event and check the details. All maintenance events with the same tracking ID will appear in the **Issue Updates** tab. In the **Impacted Resources**, resources impacted by published maintenance events are listed. 
+
+:::image type="content" source="media/advance-notifications/service-health-planned-maintenance-event.png" alt-text="Screenshot of the Azure Monitor Service Health page with opened single maintenance event containing full event details." lightbox="media/advance-notifications/service-health-planned-maintenance-event.png":::
 
 ## <a id="receiving-notifications"></a> Receive notifications
 
@@ -86,7 +94,7 @@ The following table shows additional notifications that might be sent while main
 
 While Advance Notifications can be sent to any email address, Azure subscription role-based access control (RBAC) policy determines who can access the links in the email. Querying resource graph is covered by [Azure RBAC](/azure/role-based-access-control/overview) access management.  To enable read access, each recipient should have resource group level read access. For more information, see [Steps to assign an Azure role](/azure/role-based-access-control/role-assignments-steps).
 
-## Retrieve the list of impacted resources
+## Programmatically retrieve the list of impacted resources
 
 [Azure Resource Graph](/azure/governance/resource-graph/overview) is an Azure service designed to extend Azure Resource Management. The Azure Resource Graph Explorer provides efficient and performant resource exploration. You can query at scale across a given set of subscriptions, so that you can effectively govern your environment.
 

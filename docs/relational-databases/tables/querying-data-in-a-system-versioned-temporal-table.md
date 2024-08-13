@@ -3,11 +3,11 @@ title: Query data in a system-versioned temporal table
 description: Use FOR SYSTEM_TIME clause to query data in temporal tables.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 03/27/2023
+ms.date: 06/12/2024
 ms.service: sql
 ms.subservice: table-view-index
 ms.topic: conceptual
-monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 # Query data in a system-versioned temporal table
 
@@ -15,7 +15,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 
 When you want to get latest (current) state of data in a temporal table, you can query the same way as you query a non-temporal table. If the `PERIOD` columns aren't hidden, their values appear in a `SELECT *` query. If you specified `PERIOD` columns as `HIDDEN`, their values don't appear in a `SELECT *` query. When the `PERIOD` columns are hidden, you must reference the `PERIOD` columns specifically in the `SELECT` clause to return the values for these columns.
 
-To perform any type of time-based analysis, use the new `FOR SYSTEM_TIME` clause with four temporal-specific subclauses to query data across the current and history tables. For more information on these clauses, see [Temporal Tables](temporal-tables.md) and [FROM (Transact-SQL)](../../t-sql/queries/from-transact-sql.md)
+To perform any type of time-based analysis, use the new `FOR SYSTEM_TIME` clause with four temporal-specific subclauses to query data across the current and history tables. For more information on these clauses, see [Temporal tables](temporal-tables.md) and [FROM clause plus JOIN, APPLY, PIVOT](../../t-sql/queries/from-transact-sql.md)
 
 - `AS OF <date_time>`
 - `FROM <start_date_time> TO <end_date_time>`
@@ -34,7 +34,7 @@ The `AS OF` subclause can be used with constant literals or with variables, so t
 This first example returns the state of the dbo.Department table `AS OF` a specific date in the past.
 
 ```sql
-/*State of entire table AS OF specific date in the past*/
+-- State of entire table AS OF specific date in the past
 SELECT [DeptID],
     [DeptName],
     [ValidFrom],
@@ -47,9 +47,9 @@ This second example compares the values between two points in time for a subset 
 
 ```sql
 DECLARE @ADayAgo DATETIME2;
-SET @ADayAgo = DATEADD(day, -1, sysutcdatetime());
+SET @ADayAgo = DATEADD(DAY, -1, SYSUTCDATETIME());
 
-/*Comparison between two points in time for subset of rows*/
+-- Comparison between two points in time for subset of rows
 SELECT D_1_Ago.[DeptID],
     D.[DeptID],
     D_1_Ago.[DeptName],
@@ -91,22 +91,12 @@ LEFT JOIN [dbo].[Department]
 GO
 ```
 
-You can now query the view using the `AS OF` subclause and a **datetime2** literal:
+You can query the view using the `AS OF` subclause and a **datetime2** literal:
 
 ```sql
 /* Querying view AS OF */
 SELECT * FROM [vw_GetOrgChart]
-FOR SYSTEM_TIME AS OF'2021-09-01 T10:00:00.7230011';
-```
-
-Alternatively, you can query the view using the `AS OF` subclause with a local time zone and `AT TIME ZONE`:
-
-```sql
-/* Querying view AS OF with local time*/
-DECLARE @LocalTime DATETIMEOFFSET = '2021-09-01 10:00:00.7230011 -07:00';
-
-SELECT * FROM [vw_GetOrgChart]
-FOR SYSTEM_TIME AS OF @LocalTime AT TIME ZONE 'UTC';
+FOR SYSTEM_TIME AS OF '2021-09-01 T10:00:00.7230011';
 ```
 
 ## Query for changes to specific rows over time
@@ -151,11 +141,10 @@ ORDER BY [DeptID],
     [ValidFrom] DESC;
 ```
 
-## Next steps
+## Related content
 
-- [Temporal Tables](temporal-tables.md)
-- [FROM (Transact-SQL)](../../t-sql/queries/from-transact-sql.md)
-- [AT TIME ZONE (Transact-SQL)](../../t-sql/queries/at-time-zone-transact-sql.md)
+- [Temporal tables](temporal-tables.md)
+- [FROM clause plus JOIN, APPLY, PIVOT (Transact-SQL)](../../t-sql/queries/from-transact-sql.md)
 - [Create a system-versioned temporal table](creating-a-system-versioned-temporal-table.md)
 - [Modify data in a system-versioned temporal table](modifying-data-in-a-system-versioned-temporal-table.md)
 - [Change the schema of a system-versioned temporal table](changing-the-schema-of-a-system-versioned-temporal-table.md)

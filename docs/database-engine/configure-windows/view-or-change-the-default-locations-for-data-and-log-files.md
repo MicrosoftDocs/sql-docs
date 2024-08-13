@@ -6,6 +6,7 @@ ms.author: randolphwest
 ms.date: 03/22/2024
 ms.service: sql
 ms.subservice: configuration
+ms.custom: linux-related-content
 ms.topic: conceptual
 helpviewer_keywords:
   - "log files [SQL Server], changing default location"

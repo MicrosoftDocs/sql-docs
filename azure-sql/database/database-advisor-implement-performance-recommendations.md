@@ -1,11 +1,11 @@
 ---
-title: Database advisor performance recommendations for Azure SQL Database
+title: Database advisor performance recommendations
 description: Azure SQL Database provides recommendations for databases that can improve query performance in Azure SQL Database.
 author: NikaKinska
 ms.author: nnikolic
 ms.reviewer: wiassaf, mathoma
 ms.date: 06/04/2023
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.subservice: performance
 ms.topic: conceptual
 ms.custom:

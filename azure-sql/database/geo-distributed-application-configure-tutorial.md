@@ -5,7 +5,7 @@ author: rajeshsetlem
 ms.author: rsetlem
 ms.reviewer: wiassaf, mathoma
 ms.date: 03/12/2019
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.subservice: high-availability
 ms.topic: conceptual
 ms.custom:
@@ -368,7 +368,7 @@ Review the [high availability and disaster recovery checklist](high-availability
 Related Azure SQL Database content: 
 
 - [Business continuity with](business-continuity-high-availability-disaster-recover-hadr-overview.md)
-- [High availability](high-availability-sla.md)
+- [High availability](high-availability-sla-local-zone-redundancy.md)
 - [Failover groups](failover-group-sql-db.md)
 - [Active geo-replication](active-geo-replication-overview.md)
 

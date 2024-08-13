@@ -5,7 +5,7 @@ author: urosmil
 ms.author: urmilano
 ms.reviewer: mathoma
 ms.date: 06/22/2020
-ms.service: sql-managed-instance
+ms.service: azure-sql-managed-instance
 ms.subservice: deployment-configuration
 ms.topic: quickstart
 ms.custom: subject-armqs, mode-arm, devx-track-arm-template, ignite-2023

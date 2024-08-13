@@ -2,7 +2,7 @@
 title: "How to: Send Data as a Stream"
 description: "Learn how to use streams to send large objects to the database using the Microsoft SQLSRV and PDO_SQLSRV Drivers for PHP for SQL Server."
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: "02/28/2019"
 ms.service: sql
 ms.subservice: connectivity

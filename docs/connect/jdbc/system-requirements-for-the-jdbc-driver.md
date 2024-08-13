@@ -2,8 +2,9 @@
 title: System requirements
 description: Find the system requirements for the JDBC driver. Including what Java, operation system, and database versions are supported.
 author: David-Engel
-ms.author: v-davidengel
-ms.date: 01/31/2024
+ms.author: davidengel
+ms.reviewer: randolphwest
+ms.date: 07/31/2024
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: conceptual
@@ -12,15 +13,14 @@ ms.topic: conceptual
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-> [!CAUTION]
-> This article references CentOS, a Linux distribution that is nearing End Of Life (EOL) status. Please consider your use and plan accordingly. For more information, see the [CentOS End Of Life guidance](/azure/virtual-machines/workloads/centos/centos-end-of-life).
-
-  To use the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] to access data from a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], you must have the following components installed on your computer:
+To use the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] to access data from a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], you must have the following components installed on your computer:
 
 - [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] ([download](download-microsoft-jdbc-driver-for-sql-server.md))
 - Java Runtime Environment
 
 ## Java Runtime Environment requirements  
+
+ As of Microsoft JDBC Driver 12.8 for SQL Server, Java Development Kit (JDK) 22.0 and Java Runtime Environment (JRE) 22.0 are supported.
 
  As of Microsoft JDBC Driver 12.6 for SQL Server, Java Development Kit (JDK) 21.0 and Java Runtime Environment (JRE) 21.0 are supported.
 
@@ -55,6 +55,29 @@ ms.topic: conceptual
  As of [!INCLUDE[jdbc-40](../../includes/jdbc-40-md.md)], the JDBC driver support for JDBC Spec API has been extended to include the JDBC 4.0 API. The JDBC 4.0 API was introduced as part of the Java Development Kit (JDK) 6.0 and Java Runtime Environment (JRE) 6.0. JDBC 4.0 is a superset of the JDBC 3.0 API.
   
  When you deploy the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] on Windows and UNIX operating systems, you must use the installation packages, *sqljdbc_\<version>_enu.exe*, and *sqljdbc_\<version>_enu.tar.gz*, respectively. For more information about how to deploy the JDBC driver, see [Deploying the JDBC driver](deploying-the-jdbc-driver.md) article. 
+
+**Microsoft JDBC Driver 12.8 for SQL Server:**
+
+The JDBC Driver 12.8 includes two JAR class libraries in each installation package: **mssql-jdbc-12.8.0.jre8.jar** and **mssql-jdbc-12.8.0.jre11.jar**.
+
+The JDBC Driver 12.8 is designed to work with, and supports all major Java virtual machines, but is tested only on OpenJDK 1.8, OpenJDK 11.0, OpenJDK 17.0, OpenJDK 21.0, OpenJDK 22.0, Azul Zulu JRE 1.8, Azul Zulu JRE 11.0, and Azul Zulu JRE 17.0.
+
+The following chart summarizes support provided by the two JAR files included with Microsoft JDBC Drivers 12.8 for SQL Server:
+
+|JAR|JDBC Version Compliance|Recommended Java Version|Description|  
+|---------|-----------------------------|----------------------|-----------------|  
+|mssql-jdbc-12.8.0.jre8.jar|4.2|8|Requires a Java Runtime Environment (JRE) 1.8. Using JRE 1.7 or lower throws an exception. |
+|mssql-jdbc-12.8.0.jre11.jar|4.3|22|Requires a Java Runtime Environment (JRE) 11.0 or higher. Using JRE 10.0 or lower throws an exception. |
+
+The JDBC Driver 12.8 is available on the Maven Central Repository, and can be added to a Maven project with the following code in the POM.XML:
+
+ ```xml
+<dependency>
+    <groupId>com.microsoft.sqlserver</groupId>
+    <artifactId>mssql-jdbc</artifactId>
+    <version>12.8.0.jre11</version>
+</dependency> 
+```
 
 **Microsoft JDBC Driver 12.6 for SQL Server:**
 
@@ -422,14 +445,14 @@ The JDBC Driver 6.4 is available on the Maven Central Repository and can be adde
   
 ## Operating System requirements  
 
- The JDBC driver is designed to work on any operating system that supports the use of a Java Virtual Machine (JVM). However, only Sun Solaris, SUSE Linux, Ubuntu Linux, CentOS Linux, macOS, and Windows operating systems have officially been tested.  
+ The JDBC driver is designed to work on any operating system that supports the use of a Java Virtual Machine (JVM). However, only Sun Solaris, SUSE Linux, Ubuntu Linux, macOS, and Windows operating systems have officially been tested.  
   
 ## Supported languages  
 
  The JDBC driver supports all [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] column collations. For more information about the collations supported by the JDBC driver, see [International features of the JDBC driver](international-features-of-the-jdbc-driver.md).  
   
  For more information about collations, see "Working with Collations" in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  
-  
-## See also  
 
- [Overview of the JDBC driver](overview-of-the-jdbc-driver.md)  
+## Related content
+
+- [Overview of the JDBC driver](overview-of-the-jdbc-driver.md)

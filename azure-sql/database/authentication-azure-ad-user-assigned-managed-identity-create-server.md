@@ -6,7 +6,7 @@ author: nofield
 ms.author: nofield
 ms.reviewer: vanto, mathoma
 ms.date: 10/24/2023
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.subservice: security
 ms.topic: how-to
 ---

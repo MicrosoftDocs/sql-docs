@@ -2,7 +2,7 @@
 title: Caching result set data sample
 description: This JDBC sample application demonstrates how to retrieve a large set of data from a database and control the number of rows cached.
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: 04/20/2021
 ms.service: sql
 ms.subservice: connectivity

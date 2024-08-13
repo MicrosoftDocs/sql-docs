@@ -1,18 +1,19 @@
 ---
-title: Advance notifications for planned maintenance events
+title: Configure advance notifications for planned maintenance events
 titleSuffix: Azure SQL Database
-description: Get notification before planned maintenance for Azure SQL Database.
+description: Learn how to configure advance notifications before planned maintenance windows in Azure SQL Database.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: scottkim, urosmil, mathoma
-ms.date: 01/12/2024
-ms.service: sql-database
+ms.date: 06/19/2024
+ms.service: azure-sql-database
 ms.subservice: service-overview
 ms.topic: how-to
-ms.custom: azure-sql-split
+ms.custom:
+  - azure-sql-split
 monikerRange: "=azuresql||=azuresql-db"
 ---
-# Advance notifications for planned maintenance events in Azure SQL Database
+# Configure advance notifications for planned maintenance events in Azure SQL Database
 [!INCLUDE [appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
 > [!div class="op_single_selector"]
@@ -26,8 +27,7 @@ Notifications can be configured so you can get texts, emails, Azure push notific
 > [!IMPORTANT]
 > For Azure SQL Database, advance notifications cannot be configured for the **System default** maintenance window option. Choose a maintenance window other than the **System default** to configure and enable Advance notifications.
 
-> [!NOTE]
-> [Maintenance windows](maintenance-window.md) are generally available. Advance notifications for maintenance windows are generally available for Azure SQL Database, but are a preview feature for Azure SQL Managed Instance.
+[Maintenance windows](maintenance-window.md) are generally available. Advance notifications for maintenance windows are generally available for Azure SQL Database and Azure SQL Managed Instance.
 
 ## Configure an advance notification
 
@@ -38,7 +38,7 @@ Complete the following steps to enable a notification in the Azure portal **Serv
 
 1. Go to the [Service Health Planned maintenance](https://portal.azure.com/#blade/Microsoft_Azure_Health/AzureHealthBrowseBlade/plannedMaintenance) page, select **Health alerts**, then **Add service health alert**.
 
-    :::image type="content" source="media/advance-notifications/health-alerts.png" alt-text="Screenshot of the Health alerts page in the Azure portal. Add service health alert button is boxed in red. " lightbox="media/advance-notifications/health-alerts.png":::
+    :::image type="content" source="media/advance-notifications/health-alerts.png" alt-text="Screenshot of the Health alerts page in the Azure portal. Add service health alert button is boxed in red." lightbox="media/advance-notifications/health-alerts.png":::
 
 1. In the **Scope** section, select subscription.
 

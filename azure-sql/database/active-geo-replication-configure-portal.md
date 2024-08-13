@@ -5,7 +5,7 @@ author: rajeshsetlem
 ms.author: rsetlem
 ms.reviewer: wiassaf, mathoma
 ms.date: 06/29/2023
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.subservice: high-availability
 ms.topic: tutorial
 ms.custom: sqldbrb=1, devx-track-azurecli, ignite-2023, devx-track-azurepowershell
@@ -20,7 +20,7 @@ For failover groups, see [Failover groups with Azure SQL Database](failover-grou
 
 ## Prerequisites
 
-This tutorial shows you how to configure a database for active geo-replication. To learn how to create a single database with Azure portal, Azure CLI, Azure CLI (sql up), or PowerShell, see [Quickstart: Create a single database - Azure SQL Database](single-database-create-quickstart.md?view=azuresql&preserve-view=true&tabs=azure-powershell).
+To complete this tutorial, you need a single Azure SQL Database.  To learn how to create a single database with Azure portal, Azure CLI, or PowerShell, see [Quickstart: Create a single database - Azure SQL Database](single-database-create-quickstart.md?view=azuresql&preserve-view=true&tabs=azure-powershell).
 
 ## Add a secondary database
 
@@ -288,7 +288,7 @@ Use Transact-SQL (T-SQL) create a geo-secondary in a subscription different from
 10. After the geo-secondary is successfully created, the users, logins, and firewall rules created by this procedure can be removed.
 
 > [!NOTE]
-> Cross-subscription geo-replication operations including setup and geo-failover are only supported using REST API & T-SQL commands.
+> Cross-subscription geo-replication operations including setup and geo-failover are only supported using [Databases Create or Update REST API](/rest/api/sql/databases/create-or-update) & T-SQL commands.
 > 
 > Adding a geo-secondary using T-SQL is not supported when connecting to the primary server over a [private endpoint](private-endpoint-overview.md). If a private endpoint is configured but public network access is allowed, adding a geo-secondary is supported when connected to the primary server from a public IP address. Once a geo-secondary is added, [public network access can be denied](connectivity-settings.md#deny-public-network-access).
 > 

@@ -4,7 +4,7 @@ description: "The sys.sp_change_feed_configure_parameters system stored procedur
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: imotiwala
-ms.date: 03/12/2024
+ms.date: 06/03/2024
 ms.service: fabric
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -45,11 +45,16 @@ sys.sp_change_feed_configure_parameters
 
 #### [ @maxtrans = ] *max_trans*
 
-Data type is **int**. Indicates the maximum number of transactions to process in each scan cycle. Default value if not specified is `10000`. If specified, the value must be a positive integer.
+Data type is **int**. Indicates the maximum number of transactions to process in each scan cycle. 
+- For Azure Synapse Link, the default value if not specified is `10000`. If specified, the value must be a positive integer.
+- For Fabric mirroring, this value is dynamically determined and automatically set.
 
 #### [ @pollinterval = ] *polling_interval*
 
-Data type is **int**. Describes the frequency that the log is scanned for any new changes, in seconds. Default interval if not specified is 5 seconds. The value must be `5` or larger.
+Data type is **int**. Describes the frequency that the log is scanned for any new changes, in seconds. 
+- For Azure Synapse Link, the default interval if not specified is 5 seconds. The value must be `5` or larger. 
+- For Fabric mirroring, this value is dynamically determined and automatically set.
+
 
 ## Returns
 

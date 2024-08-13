@@ -4,7 +4,7 @@ description: "jobs.sp_add_job adds a new job executed by the Azure Elastic Jobs 
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: 10/30/2023
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.subservice: system-objects
 ms.topic: "reference"
 dev_langs:

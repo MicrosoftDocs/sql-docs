@@ -5,7 +5,7 @@ author: sachinpMSFT
 ms.author: sachinp
 ms.reviewer: mathoma
 ms.date: 09/03/2021
-ms.service: sql-db-mi
+ms.service: azure-sql
 ms.subservice: deployment-configuration
 ms.topic: how-to
 ms.custom: references_regions

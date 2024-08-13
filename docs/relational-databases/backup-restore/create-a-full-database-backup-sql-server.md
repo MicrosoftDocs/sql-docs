@@ -231,6 +231,9 @@ If you don't have an Azure Blob Storage container in a storage account, create o
 
 1. When the backup completes successfully, select **OK** to close the SQL Server Management Studio dialog box.
 
+> [!NOTE]
+> Backing up to Azure Blob Storage is not currently supported using managed identities. 
+
 ## <a name="TsqlProcedure"></a> Using Transact-SQL
 
 Create a full database backup by executing the `BACKUP DATABASE` statement to create the full database backup, specifying:

@@ -4,7 +4,7 @@ description: Explains data that Microsoft collects for reporting for SQL Server 
 author: anosov1960
 ms.author: sashan
 ms.reviewer: mikeray, randolphwest
-ms.date: 12/15/2023
+ms.date: 07/17/2024
 ms.topic: conceptual
 ms.custom: references_regions
 ---
@@ -13,7 +13,10 @@ ms.custom: references_regions
 
 [!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
-This article describes the data that [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] transmits to Microsoft. [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] collects usage data as described in this article and at [Monitor Azure Arc-enabled [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)]](sql-monitoring.md).
+This article describes the data that [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] transmits to Microsoft. Specifically:
+
+- [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] collects usage data as described in this article and at [Monitor Azure Arc-enabled [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)]](sql-monitoring.md). 
+- Azure Connected Machine agent transmits this data to `*.<region>.arcdataservices.com` as outlined in [Connected Machine agent network requirements - URLs](/azure/azure-arc/servers/network-requirements#urls).
 
 [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] does not collect any personally identifiable information (PII) or end-user identifiable information or store any customer data.
 

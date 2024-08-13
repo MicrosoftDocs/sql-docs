@@ -33,9 +33,18 @@ By default, every successful backup operation adds an entry in the [!INCLUDE [ss
 
 ## Permissions
 
-The `BACKUP DATABASE` and `BACKUP LOG` permissions needed are granted by default to members of the **sysadmin** fixed server role, and the **db_owner** and **db_backupoperator** fixed database roles. Check for the correct permissions before you begin.
+Check for the correct permissions before you begin, at both the instance level and storage level.
 
-Ownership and permission problems on the backup device's physical file can interfere with a backup operation. [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] must be able to read and write to the device; the account under which the [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] service runs must have write permissions. However, [sp_addumpdevice](../system-stored-procedures/sp-addumpdevice-transact-sql.md), which adds an entry for a backup device in the system tables, doesn't check file access permissions. Permissions problems on the backup device's physical file aren't obvious to you until you attempt to access the [physical resource](backup-devices-sql-server.md) when you try to back up or restore. So again, check permissions before you begin.
+### Database Engine permissions
+
+The `BACKUP DATABASE` and `BACKUP LOG` permissions needed are granted by default to members of the **sysadmin** fixed server role, and the **db_owner** and **db_backupoperator** fixed database roles.
+
+### Backup device permissions
+
+Ownership and permission problems on the backup device's physical file can interfere with a backup operation. The operating system account under which the [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] service runs, must be able to read from and write to the device. Permissions problems on the backup device's physical file aren't obvious to you until you attempt to access the [physical resource](backup-devices-sql-server.md) when you try to back up or restore.
+
+> [!NOTE]  
+> [sp_addumpdevice](../system-stored-procedures/sp-addumpdevice-transact-sql.md), which adds an entry for a backup device in the system tables, doesn't check file access permissions.
 
 ## Use SQL Server Management Studio
 
@@ -135,7 +144,7 @@ Execute the BACKUP LOG statement to back up the transaction log, providing the f
 
 > [!IMPORTANT]  
 > This example uses the [!INCLUDE [ssSampleDBobject](../../includes/sssampledbobject-md.md)] database, which uses the simple recovery model. To permit log backups, before taking a full database backup, the database was set to use the full recovery model.
->  
+>
 > For more information, see [View or change the recovery model of a database (SQL Server)](view-or-change-the-recovery-model-of-a-database-sql-server.md).
 
 This example creates a transaction log backup for the [!INCLUDE [ssSampleDBobject](../../includes/sssampledbobject-md.md)] database to the previously created named backup device, `MyAdvWorks_FullRM_log1`.

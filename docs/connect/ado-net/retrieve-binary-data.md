@@ -2,7 +2,7 @@
 title: "Retrieve binary data"
 description: Describes how to retrieve binary data or large data structures using `CommandBehavior`.`SequentialAccess` to modify the default behavior of a `DataReader`.
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.reviewer: v-chmalh
 ms.date: "12/04/2020"
 ms.service: sql

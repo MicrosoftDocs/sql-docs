@@ -164,7 +164,7 @@ sections:
       - question: |
           What scenarios can utilize the Disaster Recovery (DR) benefit?
         answer: |
-             The [licensing guide](https://aka.ms/sql2019licenseguide) provides scenarios in which the Disaster Recovery Benefit can be utilized. Refer to your Product Terms and talk to your licensing contacts or account manager for more information.
+             The [SQL Server Licensing Guide](https://go.microsoft.com/fwlink/p/?linkid=2215573) provides scenarios in which the Disaster Recovery Benefit can be utilized. Refer to your Product Terms and talk to your licensing contacts or account manager for more information.
           
       - question: |
           Which subscriptions support the Disaster Recovery (DR) benefit?
@@ -274,7 +274,7 @@ sections:
       - question: |
           Are SQL Server failover cluster instances (FCI) supported on Azure VMs?
         answer: |
-             Yes. You can configure a [failover cluster instance](failover-cluster-instance-overview.md) using [Azure shared disks](failover-cluster-instance-azure-shared-disks-manually-configure.md), [premium file shares (PFS)](failover-cluster-instance-premium-file-share-manually-configure.md), or [storage spaces direct (S2D)](failover-cluster-instance-storage-spaces-direct-manually-configure.md) for the storage subsystem. Premium file shares provide IOPS and throughput capacities that meet the needs of many workloads. For IO-intensive workloads, consider using storage spaces direct based on managed premium or ultra-disks. Alternatively, you can use third-party clustering or storage solutions as described in [High availability and disaster recovery for SQL Server on Azure Virtual Machines](business-continuity-high-availability-disaster-recovery-hadr-overview.md#azure-only-high-availability-solutions).
+             Yes. You can configure a [failover cluster instance](failover-cluster-instance-overview.md) using [Azure shared disks](failover-cluster-instance-azure-shared-disks-manually-configure.md), [premium file shares (PFS)](failover-cluster-instance-premium-file-share-manually-configure.md), or [storage spaces direct (S2D)](failover-cluster-instance-storage-spaces-direct-manually-configure.md) for the storage subsystem. Premium file shares provide IOPS and throughput capacities that meet the needs of many workloads. For IO-intensive workloads, consider using storage spaces direct based on managed premium or ultra-disks. Alternatively, you can use third-party clustering or storage solutions as described in [High availability and disaster recovery for SQL Server on Azure Virtual Machines](business-continuity-high-availability-disaster-recovery-hadr-overview.md#failover-cluster-instances-ha).
           
              > [!IMPORTANT]
              > SQL Server FCIs registered with the extension don't support features that require the agent, such as automated backup, patching, and advanced portal management. Review [feature benefits](sql-server-iaas-agent-extension-automate-management.md#feature-benefits) to learn more. 
@@ -401,7 +401,7 @@ sections:
       - question: |
           How do I remove the extension?
         answer: |
-             Remove the extension by [unregistering](sql-agent-extension-manually-register-single-vm.md#unregister-from-extension) the SQL Server VM from the SQL IaaS Agent extension. 
+             Remove the extension by [deleting the extension](sql-agent-extension-manually-register-single-vm.md#delete-the-extension) from the SQL Server VM
       - question: |
           Will registering my VM with the new SQL IaaS Agent extension bring additional costs?
         answer:  No. The SQL IaaS Agent extension just enables additional manageability for SQL Server on Azure VM with no additional charges. 

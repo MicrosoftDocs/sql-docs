@@ -1,11 +1,11 @@
 ---
 title: Scale out a database
 description: How to use the ShardMapManager, elastic database client library
-author: scoriani
-ms.author: scoriani
+author: bgavrilMS
+ms.author: bogavril
 ms.reviewer: wiassaf, mathoma
 ms.date: 01/25/2019
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.subservice: scale-out
 ms.topic: conceptual
 ms.custom: sqldbrb=1

@@ -5,7 +5,7 @@ author: GithubMirek
 ms.author: mireks
 ms.reviewer: vanto, mathoma
 ms.date: 10/10/2023
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.subservice: security
 ms.custom: devx-track-azurecli, has-azure-ad-ps-ref
 ms.topic: how-to

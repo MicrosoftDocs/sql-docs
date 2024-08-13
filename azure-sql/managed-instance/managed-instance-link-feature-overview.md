@@ -6,7 +6,7 @@ author: danimir
 ms.author: danil
 ms.reviewer: mathoma, randolphwest
 ms.date: 11/14/2023
-ms.service: sql-managed-instance
+ms.service: azure-sql-managed-instance
 ms.subservice: data-movement
 ms.topic: conceptual
 ms.custom: ignite-2023, build-2024
@@ -55,7 +55,7 @@ The following table lists the functionality of the link feature and the minimum 
 | SQL Server 2022 (16.x) | Windows Server and Linux |  Generally available |  [Bi-directional](#disaster-recovery): <br /> Offline (Generally available) <br /> Online (preview) |  SQL Server 2022 RTM | 
 | SQL Server 2019 (15.x) | Windows Server only | Generally available | From SQL Server to SQL MI only | [SQL Server 2019 CU20 (KB5024276)](https://support.microsoft.com/topic/kb5024276-cumulative-update-20-for-sql-server-2019-4b282be9-b559-46ac-9b6a-badbd44785d2) |
 | SQL Server 2017 (14.x) | N/A | N/A | N/A| N/A | 
-| SQL Server 2016 (13.x) | Windows Server only | Generally available | From SQL Server to SQL MI only|   [SQL Server 2016 SP3 (KB 5003279)](https://support.microsoft.com/help/5003279) and [SQL Server 2016 Azure Connect pack (KB 5014242)](https://support.microsoft.com/help/5014242) |
+| SQL Server 2016 (13.x) | Windows Server only | Generally available | From SQL Server to SQL MI only| The most recent [SQL Server 2016 SP3](/troubleshoot/sql/releases/sqlserver-2016/build-versions#sql-server-2016-service-pack-3-sp3-cumulative-update-cu-builds) build and the matching [SQL Server 2016 Azure Connect pack](/troubleshoot/sql/releases/sqlserver-2016/build-versions#sql-server-2016-service-pack-3-sp3-azure-connect-pack-builds) build |
 
 <sup>1</sup> While creating a link with SQL Server 2022 as the initial primary is supported starting with the RTM version of SQL Server 2022, creating a link with Azure SQL Managed Instance as the initial primary is supported starting with SQL Server 2022 CU10. If you create the link from a SQL Managed Instance initial primary, downgrading SQL Server below CU10 isn't supported while the link is active as it can cause issues after failing over in either direction.
 

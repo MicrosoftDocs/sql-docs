@@ -2,7 +2,7 @@
 title: "Stored procedure parameter limitations"
 description: "Stored procedure parameter limitations"
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.reviewer: randolphwest
 ms.date: 12/14/2023
 ms.service: sql

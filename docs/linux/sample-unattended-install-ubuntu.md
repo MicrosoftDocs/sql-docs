@@ -4,8 +4,7 @@ titleSuffix: SQL Server
 description: Learn to use a sample bash script to install SQL Server on Ubuntu Server without interactive input.
 author: rwestMSFT
 ms.author: randolphwest
-ms.reviewer: randolphwest
-ms.date: 05/20/2022
+ms.date: 07/15/2024
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
@@ -18,8 +17,8 @@ ms.custom:
 
 This sample bash script installs [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on Ubuntu without interactive input. It provides examples of installing the [!INCLUDE [ssde-md](../includes/ssde-md.md)], the SQL Server command-line tools, SQL Server Agent, and performs post-install steps. You can optionally install full-text search and create an administrative user.
 
-> [!TIP]
-> If you do not need an unattended installation script, the fastest way to install SQL Server is to follow the [quickstart for Ubuntu](quickstart-install-connect-ubuntu.md). For other setup information, see [Installation guidance for SQL Server on Linux](sql-server-linux-setup.md).
+> [!TIP]  
+> If you don't need an unattended installation script, the fastest way to install SQL Server is to follow the [quickstart for Ubuntu](quickstart-install-connect-ubuntu.md). For other setup information, see [Installation guidance for SQL Server on Linux](sql-server-linux-setup.md).
 
 ## Prerequisites
 
@@ -31,9 +30,9 @@ This sample bash script installs [!INCLUDE [ssnoversion-md](../includes/ssnovers
 
 This example installs [!INCLUDE [sssql19-md](../includes/sssql19-md.md)] on Ubuntu Server 20.04. If you want to install a different version of [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] or Ubuntu Server, change the Microsoft repository paths accordingly.
 
-Save the sample script to a file and then to customize it. You'll need to replace the variable values in the script. You can also set any of the scripting variables as environment variables, as long as you remove them from the script file.
+Save the sample script to a file and then to customize it. You must replace the variable values in the script. You can also set any of the scripting variables as environment variables, as long as you remove them from the script file.
 
-The script might fail if SQL Server is slow to start. That's because the script will exit with a non-zero status. Removing the `-e` switch on the first line might resolve this issue.
+The script might fail if SQL Server is slow to start. That's because the script exits with a non-zero status. Removing the `-e` switch on the first line might resolve this issue.
 
 > [!IMPORTANT]  
 > The `SA_PASSWORD` environment variable is deprecated. Use `MSSQL_SA_PASSWORD` instead.
@@ -181,7 +180,7 @@ To run the script:
 
 ## Understand the script
 
-The first thing the bash script does is set a few variables. These variables can be either scripting variables, like the sample, or environment variables. The variable `MSSQL_SA_PASSWORD` is **required** by SQL Server installation, the others are custom variables created for the script. The sample script performs the following steps:
+The first thing the bash script does is set a few variables. These variables can be either scripting variables, like the sample, or environment variables. The variable `MSSQL_SA_PASSWORD` is **required** by SQL Server installation. The others are custom variables created for the script. The sample script performs the following steps:
 
 1. Import the public Microsoft GPG keys.
 
@@ -232,4 +231,4 @@ Then run the bash script as follows:
 
 ## Related content
 
-- [SQL Server on Linux overview](sql-server-linux-overview.md)
+- [What is SQL Server on Linux?](sql-server-linux-overview.md)

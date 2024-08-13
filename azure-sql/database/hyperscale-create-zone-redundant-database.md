@@ -5,7 +5,7 @@ author: dimitri-furman
 ms.author: dfurman
 ms.reviewer: wiassaf, mathoma
 ms.date: 10/12/2023
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.subservice: service-overview
 ms.topic: conceptual
 ---
@@ -102,4 +102,4 @@ Learn more about Hyperscale databases in the following articles:
 - [Hyperscale service tier](service-tier-hyperscale.md)
 - [Azure SQL Database Hyperscale FAQ](service-tier-hyperscale-frequently-asked-questions-faq.yml)
 - [Hyperscale secondary replicas](service-tier-hyperscale-replicas.md)
-- [Azure SQL Database Hyperscale named replicas FAQ](service-tier-hyperscale-named-replicas-faq.yml)
+- [Azure SQL Database Hyperscale named replicas FAQ](service-tier-hyperscale-frequently-asked-questions-faq.yml#read-scale-out-questions)

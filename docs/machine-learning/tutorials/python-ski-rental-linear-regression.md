@@ -1,10 +1,11 @@
 ---
 title: "Python tutorial: Ski rentals"
 titleSuffix: SQL machine learning
-description: In this four-part tutorial series, you'll build a linear regression model in Python to predict ski rentals with SQL machine learning.
+description: In this four-part tutorial series, you build a linear regression model in Python to predict ski rentals with SQL machine learning.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: 06/15/2022
+ms.reviewer: monamaki
+ms.date: 05/31/2024
 ms.service: sql
 ms.subservice: machine-learning
 ms.topic: tutorial
@@ -23,7 +24,7 @@ In this four-part tutorial series, you will use Python and linear regression in 
 In this four-part tutorial series, you will use Python and linear regression in [Azure SQL Managed Instance Machine Learning Services](/azure/azure-sql/managed-instance/machine-learning-services-overview) to predict the number of ski rentals. The tutorial uses a [Python notebook in Azure Data Studio](../../azure-data-studio/notebooks/notebooks-guidance.md).
 ::: moniker-end
 
-Imagine you own a ski rental business and you want to predict the number of rentals that you'll have on a future date. This information will help you get your stock, staff, and facilities ready.
+Imagine that you own a ski rental business and you want to predict the number of rentals that you'll have on a future date. This information helps you get your stock, staff, and facilities ready.
 
 In the first part of this series, you'll get set up with the prerequisites. In parts two and three, you'll develop some Python scripts in a notebook to prepare your data and train a machine learning model. Then, in part three, you'll run those Python scripts inside the database using T-SQL stored procedures.
 
@@ -41,37 +42,37 @@ In [part four](python-ski-rental-linear-regression-deploy-model.md), you'll lear
 ## Prerequisites
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
-* SQL Server Machine Learning Services - To install Machine Learning Services, see the [Windows installation guide](../install/sql-machine-learning-services-windows-install.md) or the [Linux installation guide](../../linux/sql-server-linux-setup-machine-learning.md?toc=%2Fsql%2Fmachine-learning%2Ftoc.json). You can also [enable Machine Learning Services on SQL Server 2019 Big Data Clusters](../../big-data-cluster/machine-learning-services.md).
+- **SQL Server Machine Learning Services** - To install Machine Learning Services, see the [Windows installation guide](../install/sql-machine-learning-services-windows-install.md) or the [Linux installation guide](../../linux/sql-server-linux-setup-machine-learning.md?toc=%2Fsql%2Fmachine-learning%2Ftoc.json). You can also [enable Machine Learning Services on SQL Server 2019 Big Data Clusters](../../big-data-cluster/machine-learning-services.md).
 ::: moniker-end
 ::: moniker range="=sql-server-2017"
-* SQL Server Machine Learning Services - To install Machine Learning Services, see the [Windows installation guide](../install/sql-machine-learning-services-windows-install.md). 
+- **SQL Server Machine Learning Services** - To install Machine Learning Services, see the [Windows installation guide](../install/sql-machine-learning-services-windows-install.md). 
 ::: moniker-end
 ::: moniker range="=azuresqldb-mi-current"
-* Azure SQL Managed Instance Machine Learning Services - For information, see the [Azure SQL Managed Instance Machine Learning Services overview](/azure/azure-sql/managed-instance/machine-learning-services-overview).
+- **Azure SQL Managed Instance Machine Learning Services** - For information, see the [Azure SQL Managed Instance Machine Learning Services overview](/azure/azure-sql/managed-instance/machine-learning-services-overview).
 
-* [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) for restoring the sample database to Azure SQL Managed Instance.
+- **SQL Server Management Studio (SSMS)** - Use SSMS to restore the sample database to Azure SQL Managed Instance. To download, see [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md).
 ::: moniker-end
 
-* Python IDE - This tutorial uses a Python notebook in [Azure Data Studio](../../azure-data-studio/what-is-azure-data-studio.md). For more information, see [How to use notebooks in Azure Data Studio](../../azure-data-studio/notebooks/notebooks-guidance.md).
+- **Python IDE** - This tutorial uses a Python notebook in [Azure Data Studio](../../azure-data-studio/what-is-azure-data-studio.md). For more information, see [How to use notebooks in Azure Data Studio](../../azure-data-studio/notebooks/notebooks-guidance.md).
 
-* SQL query tool - This tutorial assumes you're using [Azure Data Studio](../../azure-data-studio/what-is-azure-data-studio.md).
+- **SQL query tool** - This tutorial assumes you're using [Azure Data Studio](../../azure-data-studio/what-is-azure-data-studio.md).
 
-* Additional Python packages - The examples in this tutorial series use the following Python packages that may not be installed by default:
+- Additional Python packages - The examples in this tutorial series use the following Python packages that might not be installed by default:
 
   * pandas
   * pyodbc
-  * sklearn
+  * scikit-learn
 
   To install these packages:
   1. In your Azure Data Studio notebook, select **Manage Packages**.
-  2. In the **Manage Packages** pane, select the **Add new** tab.
-  3. For each of the following packages, enter the package name, select **Search**, then select **Install**.
+  1. In the **Manage Packages** pane, select the **Add new** tab.
+  1. For each of the following packages, enter the package name, select **Search**, then select **Install**.
 
   As an alternative, you can open a **Command Prompt**, change to the installation path for the version of Python you use in Azure Data Studio (for example, `cd %LocalAppData%\Programs\Python\Python37-32`), then run `pip install` for each package.
 
 ## Restore the sample database
 
-The sample database used in this tutorial has been saved to a **.bak** database backup file for you to download and use.
+The sample database used in this tutorial has been saved to a `.bak` database backup file for you to download and use.
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 > [!NOTE]
@@ -79,7 +80,7 @@ The sample database used in this tutorial has been saved to a **.bak** database 
 ::: moniker-end
 
 ::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15"
-1. Download the file [TutorialDB.bak](https://rserverdistribution.blob.core.windows.net/production/sqlmldocument/TutorialDB.bak).
+1. Download the file [TutorialDB.bak](https://aka.ms/TutorialDB_bak).
 
 1. Follow the directions in [Restore a database from a backup file](../../azure-data-studio/tutorial-backup-restore-sql-server.md#restore-a-database-from-a-backup-file) in Azure Data Studio, using these details:
 
@@ -95,7 +96,7 @@ The sample database used in this tutorial has been saved to a **.bak** database 
 
 ::: moniker-end
 ::: moniker range="=azuresqldb-mi-current"
-1. Download the file [TutorialDB.bak](https://rserverdistribution.blob.core.windows.net/production/sqlmldocument/TutorialDB.bak).
+1. Download the file [TutorialDB.bak](https://aka.ms/TutorialDB_bak).
 
 1. Follow the directions in [Restore a database to Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance-get-started-restore) in SQL Server Management Studio, using these details:
 
@@ -114,7 +115,7 @@ The sample database used in this tutorial has been saved to a **.bak** database 
 
 If you're not going to continue with this tutorial, delete the `TutorialDB` database.
 
-## Next steps
+## Next step
 
 In part one of this tutorial series, you completed these steps:
 

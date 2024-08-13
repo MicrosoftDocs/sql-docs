@@ -2,7 +2,7 @@
 title: Components of OLE DB Driver for SQL Server
 description: Learn about the OLE DB Driver for SQL Server components, including the library that contains the driver functionality, other libraries, and a header file.
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: 03/30/2022
 ms.service: sql
 ms.subservice: connectivity

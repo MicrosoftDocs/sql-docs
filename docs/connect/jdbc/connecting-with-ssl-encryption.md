@@ -2,7 +2,7 @@
 title: Connecting with encryption
 description: Find examples of how to connect using TLS encryption in your Java application by using the JDBC driver for SQL Server.
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.reviewer: vanto
 ms.date: 09/27/2023
 ms.service: sql

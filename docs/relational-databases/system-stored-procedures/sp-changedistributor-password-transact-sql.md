@@ -1,10 +1,10 @@
 ---
 title: "sp_changedistributor_password (Transact-SQL)"
-description: "Changes the password for a Distributor."
+description: sp_changedistributor_password changes the password for a Distributor.
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 06/08/2023
+ms.date: 07/05/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: "reference"
@@ -27,13 +27,13 @@ Changes the password for a Distributor. This stored procedure is executed at the
 ## Syntax
 
 ```syntaxsql
-sp_changedistributor_password [ @password = ] 'password'
+sp_changedistributor_password [ @password = ] N'password'
 [ ; ]
 ```
 
 ## Arguments
 
-#### [ @password = ] '*password*'
+#### [ @password = ] N'*password*'
 
 The new password. *@password* is **sysname**, with no default. If the Distributor is local, the password of the `distributor_admin` system login is changed.
 
@@ -53,7 +53,7 @@ The new password. *@password* is **sysname**, with no default. If the Distributo
 
 Only members of the **sysadmin** fixed server role can execute `sp_changedistributor_password`.
 
-## See also
+## Related content
 
 - [View and modify replication security settings](../replication/security/view-and-modify-replication-security-settings.md)
 - [Secure the Distributor](../replication/security/secure-the-distributor.md)

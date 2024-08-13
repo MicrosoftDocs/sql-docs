@@ -2,7 +2,7 @@
 title: Connecting with bcp
 description: Learn the options and commands available in the bcp utility, available in the mssql-tools package on Linux and macOS.
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: 02/15/2022
 ms.service: sql
 ms.subservice: connectivity
@@ -75,7 +75,6 @@ This switch is used by the client when connecting to Azure SQL Database, Azure S
 
 > [!IMPORTANT]
 > The `-G` option only applies to Azure SQL Database, Azure SQL Managed Instance, and Azure Synapse Analytics.
-
 > Microsoft Entra interactive authentication is not currently supported on Linux or macOS. Microsoft Entra integrated authentication requires [Microsoft ODBC Driver 17 for SQL Server](../download-odbc-driver-for-sql-server.md) version 17.6.1 or higher and a properly [configured Kerberos environment](using-integrated-authentication.md#configure-kerberos).
 
 
@@ -104,7 +103,7 @@ az account get-access-token --resource https://database.windows.net --output tsv
 ```
 
 **-q**  
-Executes the SET QUOTED_IDENTIFIERS ON statement in the connection between the `bcp` utility and an instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].
+Executes the SET QUOTED_IDENTIFIER ON statement in the connection between the `bcp` utility and an instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].
 
 **-r** *row_terminator*  
 Specifies the row terminator.

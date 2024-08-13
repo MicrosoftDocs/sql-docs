@@ -1,11 +1,12 @@
 ---
-title: Certificate rotation for Azure SQL Database & SQL Managed Instance
+title: Certificate rotation
+titleSuffix: Azure SQL Database & Azure SQL Managed Instance
 description: Learn about the upcoming changes of root certificate changes that will affect Azure SQL Database and Azure SQL Managed Instance
 author: tameikal-msft
 ms.author: talawren
 ms.reviewer: mathoma, vanto
 ms.date: 10/11/2023
-ms.service: sql-db-mi
+ms.service: azure-sql
 ms.subservice: security
 ms.topic: conceptual
 ---

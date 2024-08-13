@@ -2,7 +2,7 @@
 title: Idle Connection Resiliency
 description: Learn what idle connection resiliency is and how it behaves within the Microsoft Drivers for PHP for SQL Server.
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: 07/23/2021
 ms.service: sql
 ms.subservice: connectivity

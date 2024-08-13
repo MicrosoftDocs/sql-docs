@@ -2,8 +2,8 @@
 title: Release notes
 description: This article lists the releases of the Microsoft JDBC Driver for SQL Server. For each release version, the changes are named and described.
 author: David-Engel
-ms.author: v-davidengel
-ms.date: 05/23/2024
+ms.author: davidengel
+ms.date: 07/31/2024
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: conceptual
@@ -12,17 +12,98 @@ ms.topic: conceptual
 
 This article lists the releases of the _Microsoft JDBC Driver for SQL Server_. For each release version, the changes are named and described.
 
-## <a id="126"></a> 12.6
+## <a id="128"></a> 12.8
 
-:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft JDBC Driver 12.6.2 for SQL Server (zip)](https://go.microsoft.com/fwlink/?linkid=2272555)**  
-:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft JDBC Driver 12.6.2 for SQL Server (tar.gz)](https://go.microsoft.com/fwlink/?linkid=2272720)**
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft JDBC Driver 12.8.0 for SQL Server (zip)](https://go.microsoft.com/fwlink/?linkid=2281375)**  
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft JDBC Driver 12.8.0 for SQL Server (tar.gz)](https://go.microsoft.com/fwlink/?linkid=2281376)**
 
-Release number: 12.6.2  
-Released: May 23, 2024
+Release number: 12.8.0  
+Released: July 31, 2024
 
 If you need to download the driver in a language other than the one detected for you, you can use these direct links.  
-For the driver in a zip file: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2272555&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2272555&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2272555&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2272555&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2272555&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2272555&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2272555&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2272555&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2272555&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2272555&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2272555&clcid=0x40a)  
-For the driver in a tar.gz file: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2272720&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2272720&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2272720&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2272720&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2272720&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2272720&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2272720&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2272720&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2272720&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2272720&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2272720&clcid=0x40a)
+For the driver in a zip file: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2281375&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2281375&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2281375&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2281375&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2281375&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2281375&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2281375&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2281375&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2281375&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2281375&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2281375&clcid=0x40a)  
+For the driver in a tar.gz file: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2281376&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2281376&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2281376&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2281376&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2281376&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2281376&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2281376&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2281376&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2281376&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2281376&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2281376&clcid=0x40a)
+
+### 12.8 Compliance
+
+| Compliance change | Details |
+| :---------------- | :------ |
+| Download the latest updates for JDBC Driver 12.8. | &bull; &nbsp; [GitHub, 12.8.0](https://github.com/Microsoft/mssql-jdbc/releases/tag/v12.8.0)<br/>&bull; &nbsp; [Maven Central](https://search.maven.org/search?q=g:com.microsoft.sqlserver) |
+| Fully compliant with JDBC API Specification 4.2. | The jars in the 12.8 package are named according to Java version compatibility.<br/><br/>For example, the mssql-jdbc-12.8.0.jre11.jar file from the 12.8 package should be used with Java 11 (or higher). |
+| Compatible with Java Development Kit (JDK) version 22.0, 21.0, 17.0, 11.0, and 1.8. | Microsoft JDBC Driver 12.8 for SQL Server is now compatible with Java Development Kit (JDK) version 22.0 in addition to JDK 21.0, 17.0, 11.0 and 1.8. |
+
+### 12.8 Releases
+
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft JDBC Driver 12.8.0 for SQL Server (zip)](https://go.microsoft.com/fwlink/?linkid=2281375)**  
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft JDBC Driver 12.8.0 for SQL Server (tar.gz)](https://go.microsoft.com/fwlink/?linkid=2281376)**
+
+Release number: 12.8.0  
+Released: July 31, 2024
+
+If you need to download the driver in a language other than the one detected for you, you can use these direct links.  
+For the driver in a zip file: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2281375&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2281375&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2281375&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2281375&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2281375&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2281375&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2281375&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2281375&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2281375&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2281375&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2281375&clcid=0x40a)  
+For the driver in a tar.gz file: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2281376&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2281376&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2281376&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2281376&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2281376&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2281376&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2281376&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2281376&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2281376&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2281376&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2281376&clcid=0x40a)
+
+### New features in 12.8
+
+| Feature | Details |
+| :---------- | :----------- |
+| Java 22 support | The driver is now compatible with Java Development Kit (JDK) version 22.0 in addition to JDK 21.0, 17.0, 11.0 and 1.8. |
+| Added credential caching when using Managed Identity Credential or Default Azure Credential | Allow caching of the mentioned credentials in order to improve performance and driver reliability. |
+| Allow caching of the `SQLServerBulkCopy` object when using bulkcopy for batch insert | Replaces previous behavior, where each call of `executeBatch()` generated a new `SQLServerBulkCopy` object, by caching the object instead. |
+| Added connection level caching for destination column metadate in bulkcopy | Improves performance by adding caching at the connection level for destination column metadata in bulkcopy scenarios. This feature is enabled by setting the newly added connection string property `cacheBulkCopyMetadata` to `true` (default value is `false`). |
+| Added a SQL Server message handler and support for SQLException chaining | Added a SQL Server message handler allowing for several features including additional feedback for long running queries, universal error logging, and automatic downgrade of error-message severity from SQLException to SQLWarning. Additionally, this feature allows for chaining of SQLExceptions together so that all error messages are available to the user. See [Handling Errors](handling-errors.md). |
+| Provided full support for RFC4180 for CSV bulk insert operations | Support for quoted fields containing newlines were missing in order to ensure full support with RFC4180; this has been added. |
+| Allow constructing a `microsoft.sql.DateTimeOffset` instance from a `java.time.OffsetDateTime` value | Conversion between the two data types already existed in the driver using a `Timestamp` intermediary. This addition removes that intermediary, improving performance and reducing the potential for timezone-related errors. |
+
+### Changes in 12.8
+
+| Change | Details |
+| :---------- | :----------- |
+| Enum `SQLServerSortOrder` is now public | Changed visibility of the enum `SQLServerSortOrder` to public which allows users greater flexibility in queries that use this enum. |
+| Remove `synchronized` from Socket overrides | Incorrectly added in prior changes to confirm with code check standards, the select methods changed do not, in fact, need to be synchronized, and have been changed to reflect this. |
+| Revised previous RMERR/RMFAIL changes by making the default `RMFAIL` | Prior changes changed the value of `XAER_RMFAIL` to `XAER_RMERR` for select cases, however these cases quickly became a majority of all cases covered. The solution is to change the default to `RMFAIL` and convert to `RMERR` for inverse of previously stated cases. |
+| Updated dependencies | Updated dependency versions for `azure-identity`, `bouncycastle`, and `msal`. |
+| Revised support for `TDSType.GUID` | Enhances the original addition of support for `TDSType.GUID` by allowing direct passage of the UUID to the `setObject` method. |
+| Added logging to token caching | Added additional logging for token caching scenarios to help in debug scenarios. |
+
+### Fixes in 12.8
+
+| Fix | Details |
+| :---------- | :----------- |
+| Fixed regression with specifying argument names in callable statement syntax | Fixed a regression from 12.6.2 --> 12.6.3 where CallableStatements of a certain format returned incorrect values. [GitHub Issue #2477](https://github.com/microsoft/mssql-jdbc/issues/2477). |
+| Fixed parsing for parantheses in stored procedures and functions | Fixed an issue where calling a function with paranthesis at the end in a callable statement, e.g. function() vs function, resulting in the return value always being 0. This was a regression from 12.6.2 --> 12.6.3. [GitHub Issue #2463](https://github.com/microsoft/mssql-jdbc/issues/2463). |
+| Fixed an error where `CallableStatement` with default arguments weren't being respected by the driver. | Fixed an error that was a regression from 12.5.0 --> 12.6.0, where default arguments in callable statements were being ignored. [GitHub Issue #2446](https://github.com/microsoft/mssql-jdbc/issues/2446). |
+| Fix to remove `TokenCredential` class where it's not required | `TokenCredentialClass` isn't needed in `SQLServerSecurityUtility` and can cause an incorrectly thrown `NoClassDefFoundError`. This removes the import, replacing it with a generic `Object`. [GitHub Issue #2439](https://github.com/microsoft/mssql-jdbc/issues/2439). |
+| Fixed timestamp string conversion error for CallableStatements | Fixed a conversion exception that occured when calling a `DateTime` in/out parameter while setting a `String` value.  [GitHub Issue #2436](https://github.com/microsoft/mssql-jdbc/issues/2436). |
+| Fixed SqlAuthenticationToken constructor to accept correct parameter | The constructor for SQLAuthenticationToken was incorrect, working with an input parameter in seconds, when it should have been milliseconds. [GitHub Issue #2424](https://github.com/microsoft/mssql-jdbc/issues/2424). |
+| Fix to clear prepared statement handle before reconnection | This fixes an issue where the wrong handles were used in a `SQLServerPreparedStatement` after reconnection by properly clearing `SQLServerPreparedStatement.prepStmtHandle` before reconnecting.  [GitHub Issue #2364](https://github.com/microsoft/mssql-jdbc/issues/2364). |
+| Fix to clear prepared statement cache when resetting statement pool connection | This fixes an issue where, with statement pooling enabled, reusing a connection from a ConnectionPool resulted in missing, or incorrectly inserted, entries. [GitHub Issue #2356](https://github.com/microsoft/mssql-jdbc/issues/2356). |
+| Fix to unbind `socketTimeout` from `loginTimeout` | `socketTimeout` should have an upper-bound of `loginTimeout` for connection establishment, but should have no upper-bound after the driver has connected. This fixes that behavior. [GitHub Issue #2354](https://github.com/microsoft/mssql-jdbc/issues/2354). |
+| Fix to properly check if `TDSCommand` counter is null before attempting to increment | Adds a missing `null` check for the `TDSCommand` counter, preventing a `NullPointerException` that could otherwise arise. [GitHub Issue #2353](https://github.com/microsoft/mssql-jdbc/issues/2353). |
+| Fix calling procedures with output parameters by their four-part syntax | Fixes an issue where calling stored procedures with a four-part syntax (i.e. with a linked server) resulted in an error stating the TDS protocol stream isn't valid. [GitHub Issue #2344](https://github.com/microsoft/mssql-jdbc/issues/2344). |
+| Fix to properly escape `schema` parameteres for `getProcedures` and `getProcedureColumns` | The `SQLServerDatabaseMetadata` methods `getProcedures` and `getProcedureColumns` weren't properly escaping certain characters (e.g. `\`) for the `schema` parameter. This fixes that issue. [GitHub Issue #2336](https://github.com/microsoft/mssql-jdbc/issues/2336). |
+| Added token cache map to fix use of unintended auth token for subsequent connections | This fixes an issue where client credentials could be reused as, while the auth token is cached, it's reused with only the client secret changed. [GitHub Issue #2334](https://github.com/microsoft/mssql-jdbc/issues/2334). |
+| Fixed support for `exec` escape syntax in CallableStatements | This fixes an issue where, after removing the wrapped `sp_executesql`/`sp_prepexec` calls in order to execute CallableStatements quickly, `EXEC` calls were no longer working. [GitHub Issue #2325](https://github.com/microsoft/mssql-jdbc/issues/2325). |
+| Fix to ensure `Money` and `SmallMoney` are within the correct ranges for `BulkCopy` | This fixes an issue where, when using `BulkCopy` with `Money` or `SmallMoney` values, conversion to/from the values can cause an `ArithmeticOverflowException`. [GitHub Issue #2309](https://github.com/microsoft/mssql-jdbc/issues/2309). |
+| Fix to ensure `ResultSetMetadata` for  `DataabseMetadata.getColumns()` is correct for all columns | The returned metadata was incorrect for some columns, this fixes that problem. [GitHub Issue #2232](https://github.com/microsoft/mssql-jdbc/issues/2232). |
+| Fix to properly turn off connection retries when `connectRetryCount` is set to `0` | This fixes the behavior where, even with `connectRetryCount` set to 0, the driver attempted to retry until `loginTimeout` was reached. [GitHub Issue #2232](https://github.com/microsoft/mssql-jdbc/issues/2232). [GitHub Issue #2188](https://github.com/microsoft/mssql-jdbc/issues/2188).|
+| Fix to address a `ClassLoader` leak of `ActivityCorrelator` `ThreadLocal` | Fixes an issue where, after previous driver changes to `ActivityId`, `ThreadLocal` in `ActivityCorrelator` is never being removed from the thread. |
+| Fix to execute stored procedures directly for RPC calls | RPC calls were using prior logic by being wrapped in `sp_executesql` calls; this fixes that behavior. |
+
+## Previous releases
+
+## <a id="126"></a> 12.6
+
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft JDBC Driver 12.6.3 for SQL Server (zip)](https://go.microsoft.com/fwlink/?linkid=2276808)**  
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft JDBC Driver 12.6.3 for SQL Server (tar.gz)](https://go.microsoft.com/fwlink/?linkid=2276509)**
+
+Release number: 12.6.3  
+Released: June 20, 2024
+
+If you need to download the driver in a language other than the one detected for you, you can use these direct links.  
+For the driver in a zip file: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2276808&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2276808&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2276808&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2276808&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2276808&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2276808&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2276808&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2276808&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2276808&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2276808&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2276808&clcid=0x40a)  
+For the driver in a tar.gz file: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2276509&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2276509&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2276509&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2276509&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2276509&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2276509&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2276509&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2276509&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2276509&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2276509&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2276509&clcid=0x40a)
 
 ### 12.6 Compliance
 
@@ -33,6 +114,22 @@ For the driver in a tar.gz file: [Chinese (Simplified)](https://go.microsoft.com
 | Compatible with Java Development Kit (JDK) version 21.0, 17.0, 11.0, and 1.8. | Microsoft JDBC Driver 12.6 for SQL Server is now compatible with Java Development Kit (JDK) version 21.0 in addition to JDK 17.0, 11.0 and 1.8. |
 
 ### 12.6 Releases
+
+Release number: 12.6.3  
+Released: June 20, 2024
+
+Fixed issues in 12.6.3:
+
+- Fixed issue where TokenCredential class was required to be imported
+- Fixed timestamp string conversion regression
+- Fixed SQLServerCallableStatement default value regression
+
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft JDBC Driver 12.6.3 for SQL Server (zip)](https://go.microsoft.com/fwlink/?linkid=2276808)**  
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft JDBC Driver 12.6.3 for SQL Server (tar.gz)](https://go.microsoft.com/fwlink/?linkid=2276509)**
+
+If you need to download the driver in a language other than the one detected for you, you can use these direct links.  
+For the driver in a zip file: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2276808&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2276808&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2276808&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2276808&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2276808&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2276808&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2276808&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2276808&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2276808&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2276808&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2276808&clcid=0x40a)  
+For the driver in a tar.gz file: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2276509&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2276509&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2276509&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2276509&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2276509&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2276509&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2276509&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2276509&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2276509&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2276509&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2276509&clcid=0x40a)
 
 Release number: 12.6.2  
 Released: May 23, 2024
@@ -125,8 +222,6 @@ For the driver in a tar.gz file: [Chinese (Simplified)](https://go.microsoft.com
 | Fix to ignore computed columns when using bulkcopy for batch insert | Fixed BulkCopy behavior to ignore computed columns, and allow batch inserts, when previously the insert would fail and return an error citing those computed columns. |
 | Fixed driver behavior concerning signatures when using Java Key Store and Azure Key Vault | Fixed an issue where signature was not properly verfied when using Java Key Store, as well as adding a new API to sign column master key metadata (and return generated signature) for use with Java Key Store and Azure Key Vault  |
 | Fixes getObject()'s erroneous conversion of DateTimeOffset | Fixed an issue when calling ResultSet.getObject() on a DATETIMEOFFSET column, with LocalDate/LocalTime/LocalDateTime as the class argument, the value in the column would be converted to the local time zone. |
-
-## Previous releases
 
 ## <a id="124"></a> 12.4
 

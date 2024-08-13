@@ -2,7 +2,7 @@
 title: "Universal Data Link (UDL) Configuration"
 description: Learn how to use the Connection tab to specify how to connect to your data using the OLE DB Driver for SQL Server.
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.reviewer: v-davidengel
 ms.date: "10/26/2022"
 ms.service: sql

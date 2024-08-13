@@ -2,7 +2,7 @@
 title: "Modify data with stored procedures"
 description: Describes how to use stored procedure input parameters and output parameters to insert a row in a database, returning a new identity value.
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.reviewer: v-chmalh
 ms.date: "12/04/2020"
 ms.service: sql

@@ -3,7 +3,7 @@ title: "CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)"
 description: CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
-ms.date: 01/18/2024
+ms.date: 07/11/2024
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -77,9 +77,9 @@ Specifies the secret required for outgoing authentication. `SECRET` is required 
 
 A database scoped credential is a record that contains the authentication information that is required to connect to a resource outside [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Most credentials include a Windows user and password. 
 
-To protect the sensitive information inside the database scoped credential, a database master key (DMK) is required. The DMK is a symmetric key that encrypts the secret in the database scoped credential. The database must have a master key before any database scoped credentials can be created. A DMK should be encrypted with a strong password. Azure SQL Database will create a database master key with a strong, randomly selected password as part of creating the database scoped credential, or as part of creating a server audit. Users can't create the master key on a logical `master` database. The master key password is unknown to Microsoft and not discoverable after creation. For this reason, creating a database master key before creating a database scoped credential is recommended. For more information, see [CREATE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-master-key-transact-sql.md).
+To protect the sensitive information inside the database scoped credential, a database master key (DMK) is required. The DMK is a symmetric key that encrypts the secret in the database scoped credential. The database must have a DMK before any database scoped credentials can be created. A DMK should be encrypted with a strong password. Azure SQL Database will create a DMK with a strong, randomly selected password as part of creating the database scoped credential, or as part of creating a server audit. Users can't create the DMK on a logical `master` database. The master key password is unknown to Microsoft and not discoverable after creation. For this reason, creating a DMK before creating a database scoped credential is recommended. For more information, see [CREATE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-master-key-transact-sql.md).
 
-When IDENTITY is a Windows user, the secret can be the password. The secret is encrypted using the service master key. If the service master key is regenerated, the secret is re-encrypted using the new service master key.
+When IDENTITY is a Windows user, the secret can be the password. The secret is encrypted using the service master key (SMK). If the SMK is regenerated, the secret is re-encrypted using the new SMK.
 
 When granting permissions for a shared access signatures (SAS) for use with a PolyBase external table, select both **Container** and **Object** as allowed resource types. If not granted, you may receive error 16535 or 16561 when attempting to access the external table.
 
@@ -91,7 +91,7 @@ Here are some applications of database scoped credentials:
 
 - [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] uses a database scoped credential to access non-public Azure Blob Storage with PolyBase. To learn more, see [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md). For more information about Azure Synapse storage authentication, see [Use external tables with Synapse SQL](/azure/synapse-analytics/sql/develop-tables-external-tables).
 
-- [!INCLUDE[ssSDS](../../includes/sssds-md.md)] uses database scoped credentials for its global query feature. This is the ability to query across multiple database shards.
+- [!INCLUDE[ssSDS](../../includes/sssds-md.md)] uses database scoped credentials for its [elastic query](/azure/azure-sql/database/elastic-query-overview) feature. This is the ability to query across multiple database shards.
 
 - [!INCLUDE[ssSDS](../../includes/sssds-md.md)] uses database scoped credentials to write extended event files to Azure Blob Storage.
 
@@ -111,7 +111,7 @@ Requires **CONTROL** permission on the database.
 
 Starting in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] a new type of connector was introduced, using REST-API calls replacing HADOOP.  For Azure Blob Storage and Azure Data Lake Gen 2 the only supported authentication method is `SHARED ACCESS SIGNATURE`.
 
-Please refer to [create external data source](../../t-sql/statements/create-external-data-source-transact-sql.md) for more information.
+For more information, see [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md).
 
 
 ## Examples
@@ -131,7 +131,8 @@ CREATE DATABASE SCOPED CREDENTIAL AppCred WITH IDENTITY = 'Mary5',
 
 ### B. Creating a database scoped credential for a shared access signature
 
-The following example creates a database scoped credential that can be used to create an [external data source](../../t-sql/statements/create-external-data-source-transact-sql.md), which can do bulk operations, such as [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) and [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md). Shared Access Signatures cannot be used with PolyBase in SQL Server, APS or Azure Synapse Analytics.
+The following example creates a database scoped credential that can be used to create an [external data source](../../t-sql/statements/create-external-data-source-transact-sql.md), which can do bulk operations, such as [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) and [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md). 
+
 
 ```sql
 -- Create a db master key if one does not already exist, using your own password.
@@ -149,7 +150,7 @@ The following example creates a database scoped credential that can be used to c
 
 Azure Data Lake Store uses a Microsoft Entra application for service to service authentication.
 
-Please [create a Microsoft Entra application](/azure/data-lake-store/data-lake-store-authenticate-using-active-directory)  and document your client_id, OAuth_2.0_Token_EndPoint, and Key before you try to create a database scoped credential.
+[Create a Microsoft Entra application](/azure/data-lake-store/data-lake-store-authenticate-using-active-directory)  and document your client_id, OAuth_2.0_Token_EndPoint, and Key before you try to create a database scoped credential.
 
 ```sql
 -- Create a db master key if one does not already exist, using your own password.

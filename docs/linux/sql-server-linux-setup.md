@@ -3,7 +3,7 @@ title: Installation guidance for SQL Server on Linux
 description: Install, update, and uninstall SQL Server on Linux. This article covers online, offline, and unattended scenarios.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 01/24/2024
+ms.date: 07/15/2024
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
@@ -20,21 +20,38 @@ This article provides guidance for installing, updating, and uninstalling [!INCL
 For other deployment scenarios, see:
 
 - [Windows](../database-engine/install-windows/install-sql-server.md)
-- [Linux containers](./sql-server-linux-docker-container-deployment.md)
+- [Linux containers](sql-server-linux-docker-container-deployment.md)
 - [Kubernetes - Big Data Clusters](../big-data-cluster/deploy-get-started.md) ([!INCLUDE [sssql19-md](../includes/sssql19-md.md)] only)
 
 This guide covers several deployment scenarios. If you only need step-by-step installation instructions, jump to one of the quickstarts:
 
-> - [Quickstart: Install SQL Server and create a database on Red Hat](quickstart-install-connect-red-hat.md)
-> - [Quickstart: Install SQL Server and create a database on SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
-> - [Quickstart: Install SQL Server and create a database on Ubuntu](quickstart-install-connect-ubuntu.md)
-> - [Quickstart: Run SQL Server Linux container images with Docker](quickstart-install-connect-docker.md)
+- [Quickstart: Install SQL Server and create a database on Red Hat](quickstart-install-connect-red-hat.md)
+- [Quickstart: Install SQL Server and create a database on SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
+- [Quickstart: Install SQL Server and create a database on Ubuntu](quickstart-install-connect-ubuntu.md)
+- [Quickstart: Run SQL Server Linux container images with Docker](quickstart-install-connect-docker.md)
 
 For answers to frequently asked questions, see the [SQL Server on Linux FAQ](sql-server-linux-faq.yml).
 
+## SQL Server support policy
+
+| Term | Definition |
+| --- | --- |
+| **Servicing** | Microsoft releases GDR, hotfixes, and security fixes within lifecycle of product for supported distributions. |
+| **Support** | Microsoft supports users with problems pertaining to supported distributions. |
+
+### Support policy
+
+[!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] is supported on Linux distributions until the earlier of two events: the end of the distribution's support lifecycle, or the end of the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] support lifecycle.
+
+### Servicing policy
+
+During the Mainstream support phase of [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)], we provide Cumulative Updates (CUs) for all Linux distributions that are also within their Mainstream support period. For Linux distributions that move from Mainstream to Extended support and are still recognized as supported platforms, [!INCLUDE [msconame-md](../includes/msconame-md.md)] can release CUs and bug fixes at its discretion.
+
+Once [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] moves beyond Mainstream support and into the Extended support phase, we continue to publish security updates and General Distribution Release (GDR) fixes. However, these updates aren't extended to Linux distributions that conclude their support period.
+
 ## <a id="supportedplatforms"></a> Supported platforms
 
-[!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] is supported on Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES), and Ubuntu. It is also supported as a container image, which can run on Kubernetes, OpenShift, and Docker Engine on Linux.
+[!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] is supported on Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES), and Ubuntu. It's also supported as a container image, which can run on Kubernetes, OpenShift, and Docker Engine on Linux.
 
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
@@ -75,7 +92,7 @@ Microsoft also supports deploying and managing [!INCLUDE [ssnoversion-md](../inc
 | **Processor cores** | 2 cores |
 | **Processor type** | x64-compatible only |
 
-<sup>1</sup> 2 GB is the minimum required memory to start [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on Linux, which accommodates system threads and internal processes. You must take this amount into consideration when setting **[max server memory](../database-engine/configure-windows/server-memory-server-configuration-options.md#max_server_memory)** and **[MemoryLimitMB](sql-server-linux-configure-mssql-conf.md#memorylimit)**.
+<sup>1</sup> 2 GB is the minimum required memory to start [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on Linux, which accommodates system threads and internal processes. You must take this amount into consideration when setting **[max server memory](../database-engine/configure-windows/server-memory-server-configuration-options.md#max-server-memory)** and **[MemoryLimitMB](sql-server-linux-configure-mssql-conf.md#memorylimit)**.
 
 If you use **Network File System (NFS)** remote shares in production, note the following support requirements:
 
@@ -99,7 +116,7 @@ You can install [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on Li
 
 You can also run [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on Linux in an Azure virtual machine. For more information, see [Provision a SQL VM in Azure](/azure/azure-sql/virtual-machines/linux/sql-vm-create-portal-quickstart?toc=/sql/toc/toc.json).
 
-After installing, consider making additional configuration changes for optimal performance. For more information, see [Performance best practices and configuration guidelines for SQL Server on Linux](sql-server-linux-performance-best-practices.md).
+After installing, consider making extra configuration changes for optimal performance. For more information, see [Performance best practices and configuration guidelines for SQL Server on Linux](sql-server-linux-performance-best-practices.md).
 
 ## <a id="upgrade"></a> Update or upgrade SQL Server
 
@@ -113,7 +130,7 @@ To update the `mssql-server` package to the latest release, use one of the follo
 
 These commands download the newest package and replace the binaries located under `/opt/mssql/`. The user generated databases and system databases aren't affected by this operation.
 
-To upgrade [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)], first [change your configured repository](sql-server-linux-change-repo.md) to the desired version of [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)]. Then use the same `update` command to upgrade your version of [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)]. This is only possible if the upgrade path is supported between the two repositories.
+To upgrade [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)], first [change your configured repository](sql-server-linux-change-repo.md) to the desired version of [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)]. Then use the same `update` command to upgrade your version of [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)]. This step is only possible if the upgrade path is supported between the two repositories.
 
 ## <a id="rollback"></a> Roll back SQL Server
 
@@ -173,7 +190,7 @@ For a more detailed sample script, see the following examples:
 If your Linux machine doesn't have access to the online repositories used in the [quick starts](#platforms), you can download the package files directly. These packages are located in the Microsoft repository, at [https://packages.microsoft.com](https://packages.microsoft.com).
 
 > [!TIP]  
-> If you successfully installed with the steps in the quick starts, you do not need to download or manually install the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] package(s). This section is only for the offline scenario.
+> If you successfully installed with the steps in the quick starts, you don't need to download or manually install the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] package(s). This section is only for the offline scenario.
 
 1. **Download the database engine package for your platform**. Find package download links in the package details section of the [Release notes](sql-server-linux-release-notes-2022.md).
 
@@ -208,7 +225,7 @@ If your Linux machine doesn't have access to the online repositories used in the
 
 ## Licensing and pricing
 
-[!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] is licensed the same for Linux and Windows. For more information about [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] licensing and pricing, see [How to license SQL Server](https://www.microsoft.com/sql-server/sql-server-2022-pricing).
+[!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] is licensed the same for Linux and Windows. For more information about [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] licensing and pricing, see [How to license SQL Server](https://www.microsoft.com/sql-server/sql-server-2022-pricing), and [SQL Server Licensing Resources and Documents](https://www.microsoft.com/licensing/docs/view/SQL-Server).
 
 ## Optional SQL Server features
 

@@ -2,7 +2,7 @@
 title: "SQL to C: Day-Time Intervals"
 description: "SQL to C: Day-Time Intervals"
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: "01/19/2019"
 ms.service: sql
 ms.subservice: connectivity

@@ -4,7 +4,7 @@ titleSuffix: SQL Server
 description: Learn how to install the SQL Server command-line tools, Microsoft ODBC drivers, and their dependencies on Linux.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 07/11/2023
+ms.date: 07/22/2024
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
@@ -29,7 +29,7 @@ Install the tools for your platform:
 - [macOS](#macos)
 - [Docker](#docker)
 
-This article describes how to install the command-line tools. If you are looking for examples of how to use **sqlcmd** or **bcp**, see the [Related content](#related-content) at the end of this article.
+This article describes how to install the command-line tools. If you're looking for examples of how to use **sqlcmd** or **bcp**, see the [Related content](#related-content) at the end of this article.
 
 > [!IMPORTANT]  
 > **sqlcmd** and **bcp** are available in **mssql-tools18** for `x64` and `arm64` architectures. For a modern alternative across Linux, macOS, and Windows, see [go-sqlcmd utility](../tools/sqlcmd/go-sqlcmd-utility.md).
@@ -73,7 +73,7 @@ brew install mssql-tools18
 
 If you [run SQL Server in a Docker container](quickstart-install-connect-docker.md), the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] command-line tools are already included in the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] Linux container image. If you attach to a running container with an interactive bash shell, you can run the tools locally.
 
-If you are creating a container with the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] command-line tools, you should add `ACCEPT_EULA=Y` to the installation command to silently accept the EULA, and not interrupt image creation. An example final command as part of installation on an Ubuntu-based image is:
+If you're creating a container with the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] command-line tools, you should add `ACCEPT_EULA=Y` to the installation command to silently accept the EULA, and not interrupt image creation. An example final command as part of installation on an Ubuntu-based image is:
 
 ```bash
 sudo ACCEPT_EULA=Y apt-get install mssql-tools18 unixodbc-dev
@@ -85,9 +85,9 @@ sudo ACCEPT_EULA=Y apt-get install mssql-tools18 unixodbc-dev
 
 ### [Red Hat Enterprise Linux](#tab/redhat-install)
 
-1. First, locate and copy the **mssql-tools18** package for your Linux distribution. For Red Hat 8.0, this is located at [https://packages.microsoft.com/rhel/8/prod](https://packages.microsoft.com/rhel/8/prod).
+1. First, locate and copy the **mssql-tools18** package for your Linux distribution. For Red Hat 8.0, this package is located at <https://packages.microsoft.com/rhel/8/prod>.
 
-1. Also locate and copy the **msodbcsql18** package, which is a dependency. The **msodbcsql18** package also has a dependency on **unixODBC-devel**. For Red Hat, the **msodbcsql18** package is located at [https://packages.microsoft.com/rhel/8/prod](https://packages.microsoft.com/rhel/8/prod).
+1. Also locate and copy the **msodbcsql18** package, which is a dependency. The **msodbcsql18** package also has a dependency on **unixODBC-devel**. For Red Hat, the **msodbcsql18** package is located at <https://packages.microsoft.com/rhel/8/prod>.
 
 1. **Move the downloaded packages to your Linux machine**. If you used a different machine to download the packages, one way to move the packages to your Linux machine is with the **scp** command.
 
@@ -109,9 +109,9 @@ sudo ACCEPT_EULA=Y apt-get install mssql-tools18 unixodbc-dev
 
 ### [SUSE Linux Enterprise Server](#tab/sles-install)
 
-1. First, locate and copy the **mssql-tools18** package for your Linux distribution. For SLES 15, this is located at [https://packages.microsoft.com/sles/15/prod](https://packages.microsoft.com/sles/15/prod).
+1. First, locate and copy the **mssql-tools18** package for your Linux distribution. For SLES 15, this package is located at <https://packages.microsoft.com/sles/15/prod>.
 
-1. Also locate and copy the **msodbcsql18** package, which is a dependency. The **msodbcsql18** package also has a dependency on **unixODBC-devel**. For SLES, the **msodbcsql18** package is located at [https://packages.microsoft.com/sles/15/prod](https://packages.microsoft.com/sles/15/prod).
+1. Also locate and copy the **msodbcsql18** package, which is a dependency. The **msodbcsql18** package also has a dependency on **unixODBC-devel**. For SLES, the **msodbcsql18** package is located at <https://packages.microsoft.com/sles/15/prod>.
 
 1. **Move the downloaded packages to your Linux machine**. If you used a different machine to download the packages, one way to move the packages to your Linux machine is with the **scp** command.
 
@@ -133,7 +133,7 @@ sudo ACCEPT_EULA=Y apt-get install mssql-tools18 unixodbc-dev
 
 ### [Ubuntu](#tab/ubuntu-install)
 
-1. First, locate and copy the **mssql-tools18** package for your Linux distribution. For Ubuntu 20.04, this is located at [https://packages.microsoft.com/ubuntu/20.04/prod/pool/main/m/mssql-tools](https://packages.microsoft.com/ubuntu/20.04/prod/pool/main/m/mssql-tools).
+1. First, locate and copy the **mssql-tools18** package for your Linux distribution. For Ubuntu 20.04, this package is located at <https://packages.microsoft.com/ubuntu/20.04/prod/pool/main/m/mssql-tools>.
 
 1. Also locate and copy the **msodbcsql18** package, which is a dependency. The **msodbcsql18** package also has a dependency on **unixodbc-dev**. For Ubuntu, the **msodbcsql18** packages are located at [**msodbcsql18**](https://packages.microsoft.com/ubuntu/20.04/prod/pool/main/m/msodbcsql17/), and [**unixodbc-dev**](https://packages.microsoft.com/ubuntu/20.04/prod/pool/main/u/unixodbc/).
 
@@ -154,10 +154,9 @@ sudo ACCEPT_EULA=Y apt-get install mssql-tools18 unixodbc-dev
    sudo apt-get -f install
    ```
 
-   > [!NOTE]  
-   > This command completes the installation of the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] packages as well.
+   This command completes the installation of the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] packages as well.
 
-   If this doesn't work for your Debian package, you can inspect the required dependencies with the following commands:
+   If this step doesn't work for your Debian package, you can inspect the required dependencies with the following commands:
 
    ```bash
    dpkg -I msodbcsql18_<version>_amd64.deb | grep "Depends:"
@@ -168,13 +167,10 @@ sudo ACCEPT_EULA=Y apt-get install mssql-tools18 unixodbc-dev
 
 ## Related content
 
-For an example of how to use **sqlcmd** to connect to [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] and create a database, see one of the following quickstarts:
-
-- [Install on Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md)
-- [Install on SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
-- [Install on Ubuntu](quickstart-install-connect-ubuntu.md)
-- [Run on Docker](quickstart-install-connect-docker.md)
-
-For an example of how to use **bcp** to bulk import and export data, see [Bulk copy data to SQL Server on Linux](sql-server-linux-migrate-bcp.md).
+- [Quickstart: Install SQL Server and create a database on Red Hat](quickstart-install-connect-red-hat.md)
+- [Quickstart: Install SQL Server and create a database on SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
+- [Quickstart: Install SQL Server and create a database on Ubuntu](quickstart-install-connect-ubuntu.md)
+- [Quickstart: Run SQL Server Linux container images with Docker](quickstart-install-connect-docker.md)
+- [Bulk copy data with bcp to SQL Server on Linux](sql-server-linux-migrate-bcp.md)
 
 [!INCLUDE [contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]

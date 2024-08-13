@@ -1,11 +1,11 @@
 ---
 title: "SaaS apps: Geo-redundant backups for disaster recovery"
 description: Learn to use Azure SQL Database geo-redundant backups to recover a multitenant SaaS app in the event of an outage
-author: WilliamDAssafMSFT
-ms.author: wiassaf
-ms.reviewer: mathoma
+author: bgavrilMS
+ms.author: bogavril
+ms.reviewer: mathoma, wiassaf
 ms.date: 01/14/2019
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.subservice: scenario
 ms.topic: tutorial
 ms.custom: sqldbrb=1

@@ -1,28 +1,28 @@
 ---
-title: Using Microsoft Entra ID
-description: Learn about the Microsoft Entra authentication methods available in the Microsoft OLE DB Driver for SQL Server that enable connecting to Azure SQL databases.
+title: Use Microsoft Entra ID
+description: Learn about the Microsoft Entra authentication methods available in the Microsoft OLE DB Driver for SQL Server that enable connecting to databases.
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.reviewer: v-davidengel
-ms.date: 02/18/2022
+ms.date: 07/26/2024
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: conceptual
 ---
-# Using Microsoft Entra ID
+# Use Microsoft Entra ID
 
-[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw.md)]
 
-[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
+[!INCLUDE [Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
 ## Purpose
 
-Starting with version [18.2.1](../release-notes-for-oledb-driver-for-sql-server.md#1821), Microsoft OLE DB Driver for SQL Server allows OLE DB applications to connect to Azure SQL Database or Azure SQL Managed Instance using a [federated](/azure/active-directory/hybrid/connect/whatis-fed) identity. The new Microsoft Entra authentication methods include:
+Starting with version [18.2.1](../release-notes-for-oledb-driver-for-sql-server.md#1821), Microsoft OLE DB Driver for SQL Server allows OLE DB applications to connect to Azure SQL Database, Azure SQL Managed Instance, Azure Synapse Analytics, and Microsoft Fabric using a [federated](/azure/active-directory/hybrid/connect/whatis-fed) identity.
+
+Microsoft Entra authentication methods include:
 
 - Username and password
-
 - Access token
-
 - Integrated authentication
 
 Version [18.3.0](../release-notes-for-oledb-driver-for-sql-server.md#1830) adds support for the following Microsoft Entra authentication methods:
@@ -53,8 +53,8 @@ The following connection string keywords have been introduced to support Microso
 
 |Connection string keyword|Connection property|Description|
 |---               |---                |---        |
-|Access Token|SSPROP_AUTH_ACCESS_TOKEN|Specifies an access token to authenticate to Microsoft Entra ID. |
-|Authentication|SSPROP_AUTH_MODE|Specifies authentication method to use.|
+|Access Token|`SSPROP_AUTH_ACCESS_TOKEN`|Specifies an access token to authenticate to Microsoft Entra ID. |
+|Authentication|`SSPROP_AUTH_MODE`|Specifies authentication method to use.|
 
 For more information about the new keywords/properties, see the following pages:
 
@@ -276,7 +276,8 @@ Cleanup:
 }
 ```
 
-## Next steps
+## Related content
+
 - [Authorize access to Microsoft Entra web applications using the OAuth 2.0 code grant flow](/azure/active-directory/azuread-dev/v1-protocols-oauth-code).
 
 - Learn about [Microsoft Entra authentication](/azure/azure-sql/database/authentication-aad-overview) to SQL Server.

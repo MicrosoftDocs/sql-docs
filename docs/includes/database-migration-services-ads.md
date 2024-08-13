@@ -2,7 +2,7 @@
 author: croblesm
 ms.author: roblescarlos
 ms.date: 10/03/2022
-ms.service: dms
+ms.service: azure-database-migration-service
 ms.topic: include
 ---
 

@@ -48,6 +48,9 @@ Before you begin using Azure Key Vault with your SQL Server instance, be sure th
 
 - Familiarize yourself with [Access Azure Key Vault behind a firewall](/azure/key-vault/general/access-behind-firewall) if you plan to use the SQL Server Connector for Azure Key Vault behind a firewall or with a proxy server.
 
+> [!NOTE]  
+> In [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)] CU 14 and later versions, [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] on Linux supports TDE Extensible Key Management with Azure Key Vault. Steps 3 and 4 in this guide aren't required for [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] on Linux.
+
 <a name='step-1-set-up-an-azure-ad-service-principal'></a>
 
 ## Step 1: Set up a Microsoft Entra service principal

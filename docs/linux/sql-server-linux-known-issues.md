@@ -164,25 +164,8 @@ The following limitations apply to [!INCLUDE [ssManStudioFull](../includes/ssman
 
 **Applies to:** [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] only.
 
-For [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] packages for RHEL 9 and Ubuntu 22.04, when you enable the HA/DR stack with Pacemaker, you can experience issues with automatic and manual failover. These issues are currently limited to the Pacemaker HA stack. Other HA stacks, including HPE Serviceguard and DH2i DxEnterprise, don't have these issues.
+When you run [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] on RHEL 9 as a confined application with SELinux enabled, Pacemaker clustering might not work as expected. You must install [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] as an unconfined application with SELinux turned on, to make use of Pacemaker clustering capabilities.
 
-### Availability group continuously switches primary role
-
-When working with availability groups (AGs) in [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] on RHEL 8, Ubuntu 20.04, and later versions, you can encounter a situation where the primary role in the AG switches from one node to another continuously. Currently, you can work around the issue with these steps:
-
-1. Update the `ag_cluster` resource property `failure-timeout` to `0s`:
-
-   ```bash
-   pcs resource update ag_cluster meta failure-timeout=0s
-   ```
-
-   For more information, see [Configure a Pacemaker cluster for SQL Server availability groups](sql-server-linux-availability-group-cluster-pacemaker.md).
-
-1. Reset the fail count on the Pacemaker cluster:
-
-   ```bash
-   crm_failcount -r ag_resource_name -delete
-   ```
 
 ## Machine Learning Services
 
@@ -192,7 +175,7 @@ For [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] packages for RHEL 9 and U
 
 #### [RHEL 9](#tab/rhel9)
 
-1. As a prerequisite, `cgroup-v1` needs to be enabled as per [Using cgroupfs to manually manage cgroups Red Hat Enterprise Linux 9](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/9/html/managing_monitoring_and_updating_the_kernel/assembly_using-cgroupfs-to-manually-manage-cgroups_managing-monitoring-and-updating-the-kernel#proc_mounting-cgroups-v1_assembly_using-cgroupfs-to-manually-manage-cgroups) from Red Hat.
+1. As a prerequisite, `cgroup-v1` needs to be enabled as per [Using cgroupfs to manually manage cgroups Red Hat Enterprise Linux 9](https://docs.redhat.com/documentation/red_hat_enterprise_linux/9/html/managing_monitoring_and_updating_the_kernel/assembly_using-cgroupfs-to-manually-manage-cgroups_managing-monitoring-and-updating-the-kernel#proc_mounting-cgroups-v1_assembly_using-cgroupfs-to-manually-manage-cgroups) from Red Hat.
 
 1. Then follow instructions to [install SQL Machine Learning Services](sql-server-linux-setup-machine-learning-sql-2022.md#install-runtimes-and-packages) as documented.
 

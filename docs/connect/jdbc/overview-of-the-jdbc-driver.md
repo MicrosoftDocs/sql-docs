@@ -2,7 +2,7 @@
 title: Overview
 description: The Microsoft JDBC Driver for SQL Server is a Type 4 Java Database Connectivity (JDBC) 4.2 compliant driver that provides data access to SQL databases.
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: 08/06/2020
 ms.service: sql
 ms.subservice: connectivity

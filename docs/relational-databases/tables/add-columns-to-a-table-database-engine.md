@@ -3,7 +3,7 @@ title: "Add Columns to a Table (Database Engine)"
 description: "Learn how to add columns to an existing table in SQL Server and Azure SQL platforms by using SQL Server Management Studio or Transact-SQL."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: 11/15/2023
+ms.date: 07/05/2024
 ms.service: sql
 ms.subservice: table-view-index
 ms.topic: conceptual
@@ -11,11 +11,11 @@ helpviewer_keywords:
   - "inserting columns"
   - "columns [SQL Server], adding"
   - "adding columns"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=fabric"
 ---
 # Add Columns to a Table (Database Engine)
 
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw-fabricdw.md)]
 
 This article describes how to add new columns to a table in [!INCLUDE [ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE [ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE [tsql](../../includes/tsql-md.md)].
 

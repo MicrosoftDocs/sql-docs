@@ -5,7 +5,7 @@ author: MladjoA
 ms.author: mlandzic
 ms.reviewer: mathoma, jovanpop
 ms.date: 04/06/2023
-ms.service: sql-managed-instance
+ms.service: azure-sql-managed-instance
 ms.subservice: security
 ms.topic: how-to
 ms.custom: sqldbrb=1, devx-track-azurepowershell

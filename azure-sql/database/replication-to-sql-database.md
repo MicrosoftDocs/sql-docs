@@ -1,11 +1,11 @@
 ---
-title: Azure SQL Server replication to Azure SQL Database
-description: You can configure a database in Azure SQL Database as the push subscriber in a one-way transactional or snapshot replication topology.
+title: Replication to Azure SQL Database
+description: You can configure a database in Azure SQL Database as the push subscriber in a one-way transactional or snapshot replication topology from SQL Server or Azure SQL Managed Instance. 
 author: ferno-ms
 ms.author: ferno
 ms.reviewer: wiassaf, mathoma
 ms.date: 04/28/2020
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.subservice: replication
 ms.topic: conceptual
 ms.custom: sqldbrb=1
@@ -13,7 +13,7 @@ ms.custom: sqldbrb=1
 # Replication to Azure SQL Database
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
-You can configure an Azure SQL Database as the push subscriber in a one-way transactional or snapshot replication topology.
+You can configure Azure SQL Database as the push subscriber in a one-way transactional or snapshot replication topology from SQL Server and Azure SQL Managed Instance.
 
 > [!NOTE]
 > This article describes the use of [transactional replication](/sql/relational-databases/replication/transactional/transactional-replication) in Azure SQL Database. It is unrelated to [active geo-replication](./active-geo-replication-overview.md), an Azure SQL Database feature that allows you to create complete readable replicas of individual databases.
@@ -38,7 +38,7 @@ Publishing to any Azure SQL Database from a SQL Server database is supported by 
 > [!NOTE]
 > Attempting to configure replication using an unsupported version can result in error number MSSQL_REPL20084 (The process could not connect to Subscriber.) and MSSQL_REPL40532 (Cannot open server \<name> requested by the login. The login failed.).  
 
-To use all the features of Azure SQL Database, you must be using the latest versions of [SQL Server Management Studio](/sql/ssms/download-sql-server-management-studio-ssms) and [SQL Server Data Tools](/sql/ssdt/download-sql-server-data-tools-ssdt).  
+To use all the features of Azure SQL Database, you must be using the latest versions of [SQL Server Management Studio (SSMS)](/sql/ssms/download-sql-server-management-studio-ssms) and [SQL Server Data Tools](/sql/ssdt/download-sql-server-data-tools-ssdt).  
 
 ### Types of replication
 
@@ -87,7 +87,7 @@ There are different [types of replication](/sql/relational-databases/replication
 
 ## Limitations
 
-The following options are not supported for Azure SQL Database subscriptions:
+Replication with the following options are not supported by Azure SQL Database:
 
 - Copy file groups association  
 - Copy table partitioning schemes  

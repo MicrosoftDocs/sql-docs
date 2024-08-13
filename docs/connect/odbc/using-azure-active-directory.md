@@ -2,8 +2,9 @@
 title: Using Microsoft Entra ID with the ODBC Driver
 description: The Microsoft ODBC Driver for SQL Server allows ODBC applications to connect to Azure SQL Database or Azure SQL Managed Instance by authenticating with Microsoft Entra ID.
 author: David-Engel
-ms.author: v-davidengel
-ms.date: 03/08/2024
+ms.author: davidengel
+ms.reviewer: v-chojas
+ms.date: 07/31/2024
 ms.service: sql
 ms.subservice: connectivity
 ms.custom: linux-related-content
@@ -30,7 +31,7 @@ The `Authentication` keyword can be used when connecting with a DSN or connectio
 
 |Name|Values|Default|Description|
 |-|-|-|-|
-|`Authentication`|(not set), (empty string), `SqlPassword`, `ActiveDirectoryPassword`, `ActiveDirectoryIntegrated`, `ActiveDirectoryInteractive`, `ActiveDirectoryMsi`, `ActiveDirectoryServicePrincipal` |(not set)|Controls the authentication mode.<table><tr><th>Value<th>Description<tr><td>(not set)<td>Authentication mode determined by other keywords (existing legacy connection options.)<tr><td>(empty string)<td>(Connection string only.) Override and unset an `Authentication` value set in the DSN.<tr><td>`SqlPassword`<td>Directly authenticate to SQL using a username and password.<tr><td>`ActiveDirectoryPassword`<td>Authenticate with a Microsoft Entra identity using a username and password.<tr><td>`ActiveDirectoryIntegrated`<td>_Windows, and Linux/Mac 17.6+, driver only_. Authenticate with a Windows credential federated through Microsoft Entra ID with integrated authentication.<tr><td>`ActiveDirectoryInteractive`<td>_Windows driver only_. Authenticate with a Microsoft Entra identity using interactive authentication.<tr><td>`ActiveDirectoryMsi`<td>Authenticate with a Microsoft Entra managed identity. For user-assigned identity, UID is set to the object ID of the user identity. For system-assigned identity, UID isn't required.<tr><td>`ActiveDirectoryServicePrincipal`<td>(17.7+) Authenticate with a Microsoft Entra  service principal. UID is set to the client ID of the service principal. PWD is set to the client secret.</table>|
+|`Authentication`|(not set), (empty string), `SqlPassword`, `ActiveDirectoryPassword`, `ActiveDirectoryIntegrated`, `ActiveDirectoryInteractive`, `ActiveDirectoryMsi`, `ActiveDirectoryServicePrincipal` |(not set)|Controls the authentication mode.<table><tr><th>Value<th>Description<tr><td>(not set)<td>Authentication mode determined by other keywords (existing legacy connection options.)<tr><td>(empty string)<td>(Connection string only.) Override and unset an `Authentication` value set in the DSN.<tr><td>`SqlPassword`<td>Directly authenticate to SQL using a username and password.<tr><td>`ActiveDirectoryPassword`<td>Authenticate with a Microsoft Entra identity using a username and password.<tr><td>`ActiveDirectoryIntegrated`<td>_Windows, and Linux/Mac 17.6+, driver only_. Authenticate with a Windows credential federated through Microsoft Entra ID with integrated authentication.<tr><td>`ActiveDirectoryInteractive`<td>_Windows driver only_. Authenticate with a Microsoft Entra identity using interactive authentication.<tr><td>`ActiveDirectoryMsi`<td>Authenticate with a Microsoft Entra managed identity. For a user-assigned identity, set UID to the identity's client ID for Azure App Service or Azure Container Instance; otherwise, use its object ID. For system-assigned identity, UID isn't required.<tr><td>`ActiveDirectoryServicePrincipal`<td>(17.7+) Authenticate with a Microsoft Entra  service principal. UID is set to the client ID of the service principal. PWD is set to the client secret.</table>|
 |`Encrypt`|(not set), `Yes`/`Mandatory`(18.0+), `No`/`Optional`(18.0+), `Strict`(18.0+)|(see description)|Controls encryption for a connection. If the pre-attribute value of the `Authentication` setting isn't _`none`_ in the DSN or connection string, the default is `Yes`. The default is also `Yes` in versions 18.0.1+. Otherwise, the default is `No`. If the attribute `SQL_COPT_SS_AUTHENTICATION` overrides the pre-attribute value of `Authentication`, explicitly set the value of Encryption in the DSN or connection string or connection attribute. The pre-attribute value of Encryption is `Yes` if the value is set to `Yes` in either the DSN or connection string.|
 
 ## New and/or Modified Connection Attributes
@@ -128,7 +129,7 @@ These options correspond to the same six available in the DSN setup UI above.
 
    ![Windows Azure Authentication UI when using Active Directory Interactive authentication.](windows/WindowsAzureAuth.png)
 
-8. Microsoft Entra managed identity authentication uses a system-assigned or user-assigned managed identity for authentication to set up the connection. For a system-assigned identity, the UID isn't required. For a user-assigned identity, the UID is set to the object ID of the user identity.<br>
+8. Microsoft Entra managed identity authentication can use a system-assigned or user-assigned managed identity. For a user-assigned identity, set UID to the identity's client ID for Azure App Service or Azure Container Instance; otherwise, use its object ID. For system-assigned identity, UID isn't required. <br>
 
    For system-assigned identity:
 
@@ -138,7 +139,7 @@ These options correspond to the same six available in the DSN setup UI above.
 
    `server=Server;database=Database;UID=myObjectId;Authentication=ActiveDirectoryMsi;Encrypt=yes;`
 
-9. Microsoft Entra service principal authentication
+10. Microsoft Entra service principal authentication
 
    `server=Server;database=Database;UID=clientId;PWD=clientSecret;Authentication=ActiveDirectoryServicePrincipal;Encrypt=yes;`
 
@@ -220,7 +221,7 @@ The following sample connection string is for use with Microsoft Entra interacti
 SQLCHAR connString[] = "Driver={ODBC Driver 18 for SQL Server};Server={server};UID=myuser;Authentication=ActiveDirectoryInteractive;Encrypt=yes;"
 ```
 
-The following sample connection string is for use with Microsoft Entra identity authentication. UID is set to the object ID of the user identity when using a user-assigned identity.
+The following sample connection string is for use with Microsoft Entra managed identity authentication. UID is set to the object/client ID of the user identity when using a user-assigned identity.
 
 ```cpp
 // For system-assigned identity,

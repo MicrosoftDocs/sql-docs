@@ -22,24 +22,24 @@ You can use one of the three options to subscribe to ESUs in production environm
 
 - [License by virtual cores](#license-esu-vcores)
 
-   Use Enterprise or Standard ESU subscription for the vCPUs (v-cores) of the virtual machine that runs one or multiple instances of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]. Each virtual machine is billed individually for the v-core allocated to it. The following diagram illustrates this licensing method and shows its cost implications.
+  Use Enterprise or Standard ESU subscription for the vCPUs (v-cores) of the virtual machine that runs one or multiple instances of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]. Each virtual machine is billed individually for the v-core allocated to it. The following diagram illustrates this licensing method and shows its cost implications.
 
-   :::image type="content" source="media/billing/virtual-core-licensing.svg" alt-text="Screenshot illustrating the virtual core licensing option.":::
+  :::image type="content" source="media/billing/virtual-core-licensing.svg" alt-text="Screenshot illustrating the virtual core licensing option.":::
 
 - [License by physical cores without virtual machines option](#license-pcores-without-vms)
 
-   Use Enterprise or Standard Edition license for the physical cores (p-cores) of the host that runs one or multiple instances of SQL installed directly on the host without using VMs. Each instance has access to all p-cores supported by the installed edition up to all p-cores of the host. Regardless of the instance limits though, the host is billed for all the p-cores based on the highest [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] edition installed on it. For details, see [Compute capacity limits by edition of SQL Server](../compute-capacity-limits-by-edition-of-sql-server.md). The following diagram illustrates the cost implications of deploying two standard edition instances on a physical host without using VMs.
+  Use Enterprise or Standard edition license for the physical cores (p-cores) of the host that runs one or multiple instances of SQL installed directly on the host without using VMs. Each instance has access to all p-cores supported by the installed edition up to all p-cores of the host. Regardless of the instance limits though, the host is billed for all the p-cores based on the highest [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] edition installed on it. For details, see [Compute capacity limits by edition of SQL Server](../compute-capacity-limits-by-edition-of-sql-server.md). The following diagram illustrates the cost implications of deploying two standard edition instances on a physical host without using VMs.
 
-   :::image type="content" source="media/billing/physical-core-licensing-without-vms.svg" alt-text="Screenshot illustrating the physical core licensing without using virtual machines.":::
+  :::image type="content" source="media/billing/physical-core-licensing-without-vms.svg" alt-text="Screenshot illustrating the physical core licensing without using virtual machines.":::
 
 - [License by physical cores with unlimited virtualization](#unlimited-virtualization)
 
-   Use Enterprise Edition ESU subscription for the physical cores (p-cores) of the host that runs any number of virtual machines with any number out-of-support [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] instances. A single p-core license is a separate Azure resource representing all p-cores licensed for ESU and is billed independently. The following diagram illustrates the cost implications of licensing a physical host and using unlimited virtualization.
+  Use Enterprise edition ESU subscription for the physical cores (p-cores) of the host that runs any number of virtual machines with any number out-of-support [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] instances. A single p-core license is a separate Azure resource representing all p-cores licensed for ESU and is billed independently. The following diagram illustrates the cost implications of licensing a physical host and using unlimited virtualization.
 
-   :::image type="content" source="media/billing/physical-core-licensing-with-vms.svg" alt-text="Screenshot illustrating the physical core licensing using unlimited virtualization.":::
+  :::image type="content" source="media/billing/physical-core-licensing-with-vms.svg" alt-text="Screenshot illustrating the physical core licensing using unlimited virtualization.":::
 
 > [!NOTE]  
-> *Normalized cores* (NC) are used to illustrate the cost implications of different licensing options. One Standard Edition core license is an equivalent of one NC. One Enterprise Edition core license is an equivalent of four NCs. For more information, see [How licenses apply to Azure resources](/azure/cost-management-billing/scope-level/overview-azure-hybrid-benefit-scope#how-licenses-apply-to-azure-resources).
+> *Normalized cores* (NC) are used to illustrate the cost implications of different licensing options. One Standard edition core license is an equivalent of one NC. One Enterprise edition core license is an equivalent of four NCs. For more information, see [How licenses apply to Azure resources](/azure/cost-management-billing/scope-level/overview-azure-hybrid-benefit-scope#how-licenses-apply-to-azure-resources).
 
 To subscribe to ESUs, you must have active Software Assurance (SA) or enable a pay-as-you-go billing for [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] software. The following table shows ESU availability depending on the license type you use for [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] software.
 
@@ -54,7 +54,7 @@ To subscribe to ESUs, you must have active Software Assurance (SA) or enable a p
 <sup>2</sup> You own a perpetual license or use a Server+CAL license.
 
 > [!NOTE]  
-> Your choice of payment options above might affect your outsourcing options. For more information, please see [Product Terms](https://www.microsoft.com/licensing/terms/productoffering/MicrosoftAzure/eaeas#ServiceSpecificTerms) and [Flexible Virtualization Benefit Licensing Guide](https://wwlpdocumentsearch.blob.core.windows.net/prodv2/Licensing_guide_PLT_Flexible_Virtualization_Benefit_Nov2022.pdf).
+> Your choice of payment option can affect your outsourcing options. For more information, see [Product Terms](https://www.microsoft.com/licensing/terms/productoffering/MicrosoftAzure/eaeas#ServiceSpecificTerms) and [Flexible Virtualization Benefit Licensing Guide](https://wwlpdocumentsearch.blob.core.windows.net/prodv2/Licensing_guide_PLT_Flexible_Virtualization_Benefit_Nov2022.pdf).
 
 For information about licensing your non-production out-of-support [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] instances for ESU through Azure Arc, see [Manage SQL Server ESUs for non-production use](extended-security-updates.md#non-production-esu-licensing).
 
@@ -63,11 +63,11 @@ For information about licensing your non-production out-of-support [!INCLUDE [ss
 Subscribing to ESUs by v-cores allows you to limit the scope of the subscription to a specific virtual machine (VM) and one or more out-of-support [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] instances installed on the operating system environment (OSE) of that machine. It's optimized for the following scenarios:
 
 - Your out-of-service [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] VMs are mixed with the VMs running other software on the same physical servers.
-- You run your out-of-service [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] VMs in a hosted environment or in a third party cloud where you don't control the physical infrastructure.
+- You run your out-of-service [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] VMs in a hosted environment or in a non-Microsoft cloud where you don't control the physical infrastructure.
 
 V-core ESU subscription is managed for each VM using [Configure SQL Server enabled by Azure Arc](manage-configuration.md) panel. For your convenience, **Overview** of each Arc-enabled [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] resource shows the ESU subscription status under **SQL Server Configuration**.
 
-Standard Edition ESU subscription is limited to a maximum of 24 v-cores even if the OSE is configured with more v-cores. Details in [Compute capacity limits by edition of SQL Server](../compute-capacity-limits-by-edition-of-sql-server.md).
+Standard edition ESU subscription is limited to a maximum of 24 v-cores even if the OSE is configured with more v-cores. Details in [Compute capacity limits by edition of SQL Server](../compute-capacity-limits-by-edition-of-sql-server.md).
 
 ## <a id="license-pcores-without-vms"></a> Subscribe to SQL Server ESUs by physical cores without using VMs
 
@@ -79,7 +79,7 @@ This option is optimized for the following scenario:
 
 In this scenario, the ESU subscription requirements are similar to [Subscribing to SQL Server ESUs by virtual cores](#license-esu-vcores), which is managed for each host using [SQL Server configuration](manage-configuration.md) panel. The main difference is that the [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] software usage is reported based on the physical cores available to the OSE of that server. For details, see [Metering software usage](extended-security-updates.md#esu-usage-metering).
 
-Standard Edition ESU subscription is limited to a maximum of 24 p-cores even if the OSE is installed on a larger machine. Details in [Compute capacity limits by edition of SQL Server](../compute-capacity-limits-by-edition-of-sql-server.md).
+Standard edition ESU subscription is limited to a maximum of 24 p-cores even if the OSE is installed on a larger machine. Details in [Compute capacity limits by edition of SQL Server](../compute-capacity-limits-by-edition-of-sql-server.md).
 
 > [!IMPORTANT]  
 > If a physical machine without VMs is connected to Azure Arc in the scope that is covered by a [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] ESU physical core license, the unlimited virtualization benefit won't apply to that machine. It's billed individually based on the physical cores the OSE has access to.
@@ -89,17 +89,19 @@ Standard Edition ESU subscription is limited to a maximum of 24 p-cores even if 
 This licensing option is most effective when:
 
 - You control your physical environment and run the out-of-support [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] instances on different VMs for security isolation and better resource management.
+
 - Your infrastructure and the selected payment method support the unlimited virtualization benefit (UV) for ESU.
+
 - Subscribing to [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] ESUs by v-cores is more expensive than subscribing by the p-cores of the host.
 
 To use the UV benefit, you need to create a *SQLServerEsuLicense* resource covering the specific *SQL Server - Azure Arc* instances that you intend to include. For details of managing *SQLServerEsuLicense* resources, see [Manage unlimited virtualization benefit for SQL Server ESU subscription](manage-configuration.md#manage-pcore-esu-license).
 
 > [!CAUTION]  
-> The UV benefit isn't available to VMs running on any listed providers' infrastructure. They can only be licensed by v-cores. If you create a *SqlServerEsuLicense* resource with the intent of licensing these VMs using UV, you'll be charged for the consumption of v-cores based on the [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] configuration of the host, and any existing p-core licenses will not apply to offset such charge. See [Listed providers](https://aka.ms/listedproviders) for details.
+> The UV benefit isn't available to VMs running on any listed providers' infrastructure. They can only be licensed by v-cores. If you create a *SqlServerEsuLicense* resource with the intent of licensing these VMs using UV, you'll be charged for the consumption of v-cores based on the [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] configuration of the host, and any existing p-core licenses don't apply to offset such charge. See [Listed providers](https://aka.ms/listedproviders) for details.
 
 A single *SqlServerEsuLicense* resource can cover multiple virtual machines connected to Azure Arc. It includes several properties that define how the license is applied and billed.
 
-To qualify, each *Machine - Azure Arc* resource must be configured to use a physical core ESU license. Otherwise, the *Machine - Azure Arc* resource will be billed for ESUs individually. See [Subscribe to SQL Server ESUs by virtual cores](#license-esu-vcores).
+To qualify, each *Machine - Azure Arc* resource must be configured to use a physical core ESU license. Otherwise, the *Machine - Azure Arc* resource is billed for ESUs individually. See [Subscribe to SQL Server ESUs by virtual cores](#license-esu-vcores).
 
 The **License details** tab includes the standard Azure properties and the ESU license-specific settings.
 
@@ -110,33 +112,32 @@ The **Scope** property sets the Azure scope in which all qualified *Machine - Az
 - Resource group (`ResourceGroup`)
 
 > [!NOTE]  
-> The specific scope will be derived from the location of the license resource. E.g., if `Subscription` is selected, the subscription ID hosting the license resource will be used as the scope.
+> The specific scope is derived from the location of the license resource. E.g., if `Subscription` is selected, the subscription ID hosting the license resource is used as the scope.
 
-The **Billing plan** property is set to PAYG automatically as ESU subscription is always billed on an hourly meter.
+The **Billing plan** property is set to pay-as-you-go automatically, as ESU subscription is always billed on an hourly meter.
 
-The **Physical cores** property of the license resource represents the sum of physical cores of the servers in the selected scope to which the license will be applied. The minimum size of the license is 16 p-cores.
+The **Physical cores** property of the license resource represents the sum of physical cores of the servers in the selected scope to which the license is applied. The minimum size of the license is 16 p-cores.
 
-The license resource can be created in a resource group in any of the supported regions. For the list of supported regions, see [Supported Azure regions](overview.md#supported-azure-regions). By default, the location of the resource is set to the location of the selected resource group. But you can change it to a different region. It doesn't impact the scope. It will apply to all *Machine - Azure Arc* resources in the selected license scope regardless of the regions where these resources are on-boarded.
+The license resource can be created in a resource group in any of the supported regions. For the list of supported regions, see [Supported Azure regions](overview.md#supported-azure-regions). By default, the location of the resource is set to the location of the selected resource group, but you can change it to a different region. It doesn't affect the scope. It applies to all *Machine - Azure Arc* resources in the selected license scope regardless of the regions where these resources are on-boarded.
 
 > [!IMPORTANT]  
 > Multiple license resources can be associated with the same scope or overlapping scopes. For example, a new license can be added when additional physical servers are deployed during temporary bursts of activity, or to reflect unexpected growth.
 >
-> All the virtual machines running on these physical servers must be connected to Azure Arc in the scope of the license resource, and have the `UsePhysicalEsuCoreLicense` Host configuration property set to `True`. For more details, see [Use physical core ESU license](manage-configuration.md#use-physical-core-esu-license).
+> All the virtual machines running on these physical servers must be connected to Azure Arc in the scope of the license resource, and have the `UsePhysicalEsuCoreLicense` Host configuration property set to `True`. For more information, see [Use physical core ESU license](manage-configuration.md#use-physical-core-esu-license).
 
-The **License Activation** tab controls when the license takes effect or deactivated. The license can be activated during creation, or created first and then activated at a later time. The delayed activation allows you to coordinate it with other events in the licensing lifecycle, such as the expiration of an existing Enterprise Agreement. The `activatedAt` and `deactivatedAt` timestamp properties show when the license was last activated and deactivated. For more details, see [Change SQL Server license properties](manage-configuration.md#change-license-resource).
+The **License Activation** tab controls when the license takes effect or deactivated. The license can be activated during creation, or created first and then activated at a later time. The delayed activation allows you to coordinate it with other events in the licensing lifecycle, such as the expiration of an existing Enterprise Agreement. The `activatedAt` and `deactivatedAt` timestamp properties show when the license was last activated and deactivated. For more information, see [Change SQL Server license properties](manage-configuration.md#change-license-resource).
 
-> [!IMPORTANT]  
-> After the license is activated:
->
-> - The license version can't be changed.
-> - The core count can be decreased, but not increased. To increase the core count, create another license resource.
->
-> After the license is terminated:
->
-> - The license can't be re-activated. You can delete the resource if not needed.  
-> - The ESU subscriptions for the VMs in scope will remain active and will become billable at the VM level.
->
-> To stop all ESU charges, unsubscribe from ESU on all virtual machines before you terminate the license. For details, review [Manage resources in scope](manage-configuration.md#manage-esu-license-resources).
+After the license is activated:
+
+- The license version can't be changed.
+- The core count can be decreased, but not increased. To increase the core count, create another license resource.
+
+After the license is terminated:
+
+- The license can't be re-activated. You can delete the resource if not needed.  
+- The ESU subscriptions for the VMs in scope remain active and become billable at the VM level.
+
+To stop all ESU charges, unsubscribe from ESU on all virtual machines before you terminate the license. For details, review [Manage resources in scope](manage-configuration.md#manage-esu-license-resources).
 
 The **Tenant ID** property is automatically set when the tenant scope is selected.
 
@@ -146,12 +147,12 @@ For more information about licensing by physical cores with unlimited virtualiza
 
 If you enabled ESU subscription in your production environment managed through Azure Arc, you can enable [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] ESU subscription in the non-production environment for free. There are two ways you can take advantage of this benefit.
 
-### Use SQL Server Developer Edition
+### Use SQL Server Developer edition
 
-[!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Developer Edition itself is free and can be used in any Azure subscription. If you enable the ESU subscription on the VM hosting a Developer Edition, The Azure extension for [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] detects it and reports the usage via a $0 *Dev edition* meter. It doesn't generate the ESU charges. At the same time, it installs the ESUs when released as long as the ESU subscription is active. The Developer Edition has the same feature set as Enterprise Edition.
+[!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Developer edition itself is free and can be used in any Azure subscription. If you enable the ESU subscription on the VM hosting a Developer edition, The Azure extension for [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] detects it and reports the usage via a $0 *Dev edition* meter. It doesn't generate the ESU charges. At the same time, it installs the ESUs when released as long as the ESU subscription is active. The Developer edition has the same feature set as Enterprise edition.
 
 > [!IMPORTANT]  
-> If the Developer Edition is co-located on the same host with a Standard or Enterprise edition instance, the latter will take billing precedence as a production edition and the active ESU subscription with generate the ESU charges according to that edition.
+> If the Developer edition is colocated on the same host with a Standard or Enterprise edition instance, the latter takes billing precedence as a production edition and the active ESU subscription with generate the ESU charges according to that edition.
 
 ### Use Azure dev/test subscription
 
@@ -163,10 +164,9 @@ For more information, see section *Licensing SQL Server for non-production use* 
 
 If your out-of-service [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] instance is a passive replica created as part of your high availability or disaster recovery configuration, you're entitled to the failover benefits that are included if your **License type** is set to `Paid` or `PAYG`. For more information about the failover benefits, see section *Licensing SQL Server for high availability and disaster recovery* in [SQL Server licensing guide](https://download.microsoft.com/download/e/2/9/e29a9331-965d-4faa-bd2e-7c1db7cd8348/SQL_Server_2019_Licensing_guide.pdf).
 
-To help you manage the failover benefits and remain compliant, Azure extension for [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] automatically detects the passive instances and reflects the use of the [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] software by emitting special $0 disaster recovery (DR) meters, as long as you properly configured the **license type** setting. For more details, see [Metering software usage](manage-license-billing.md#usage-metering).
+To help you manage the failover benefits and remain compliant, Azure extension for [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] automatically detects the passive instances and reflects the use of the [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] software by emitting special $0 disaster recovery (DR) meters, as long as you properly configured the **license type** setting. For more information, see [Metering software usage](manage-license-billing.md#usage-metering).
 
-> [!NOTE]  
-> During the failovers, the extension is aware of the transition and automatically switches the ESU billing to the active replica without new bill-back charges.
+During the failovers, the extension is aware of the transition and automatically switches the ESU billing to the active replica without new bill-back charges.
 
 ## <a id="server-cal"></a> Manage SQL Server instances with a Server+CAL license
 
@@ -174,7 +174,7 @@ You can connect any licensed [!INCLUDE [ssNoVersion](../../includes/ssnoversion-
 
 ## <a id="license-transition"></a> Manage transition from p-core ESU license to v-core ESU license
 
-Because the p-core ESU license is billed with an Enterprise edition ESU meter, it's cost-effective when the out-of-support [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] instances are co-located on a set of designated physical hosts. As you upgrade the individual instances or migrate them to Azure, you might lose the cost-effectiveness of the p-core ESU license and using the v-core ESU licensing might become more attractive. You have an option to terminate the p-core ESU license and switch to billing the individual VMs for the ESUs subscriptions. To properly manage this transition, use the following best practices:
+Because the p-core ESU license is billed with an Enterprise edition ESU meter, it's cost-effective when the out-of-support [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] instances are colocated on a set of designated physical hosts. As you upgrade the individual instances or migrate them to Azure, you might lose the cost-effectiveness of the p-core ESU license and using the v-core ESU licensing might become more attractive. You can terminate the p-core ESU license and switch to billing the individual VMs for the ESUs subscriptions. To properly manage this transition, use the following best practices:
 
 1. Ensure that the VMs with the out-of-support [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] instances are connected to Azure Arc and configured to use the p-core ESU license after the p-core ESU license is activated. See [Use physical core ESU license](manage-configuration.md#use-physical-core-esu-license).
 
@@ -182,12 +182,12 @@ Because the p-core ESU license is billed with an Enterprise edition ESU meter, i
 1. Terminate the p-core ESU license if it's no longer financially beneficial but keep the ESU subscription active on the individual VMs.
 
 > [!IMPORTANT]  
-> 1. If the VMs in scope have been configured to use a ESU subscription *while the p-core ESU license was active* (as described in step 1), after the p-core license termination they will automatically switch to billing for ESU based on the installed [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] edition and the v-core count of each VM. There will no additional bill-back charges.
-> 1. If the VM is configured to use the ESU subscription *after the p-core ESU license was terminated*, it will be treated as a new subscription and the appropriate bill-back chargess will apply.
+> If the VMs in scope have been configured to use a ESU subscription *while the p-core ESU license was active* (as described in step 1), after the p-core license termination they automatically switch to billing for ESU based on the installed [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] edition, and the v-core count of each VM. There are no additional bill-back charges.  
+> If the VM is configured to use the ESU subscription *after the p-core ESU license was terminated*, it is treated as a new subscription and the appropriate bill-back charges apply.
 
 ## <a id="vl-sku-transition"></a> Manage transition from ESU license purchased through Volume licensing to ESU subscription
 
-The [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)] ESU subscription requires that you have purchased a Year 1 Volume Licensing ESU offer before you can activate it. I.e. the transition from a Year 1 Volume Licensing ESU offer to ESU subscription is the default pattern and the bill-back charges reflect it. For details of the bill-back charges, see [Billing for SQL Server 2012 ESUs](#2012-esu-billing). If you have purchased a Year 2 Volume Licensing ESU offer and then decided to switch to ESU subscription, you must take additional steps to ensure the bill-back is adjusted accordingly. Before you activate ESU subscription on the machines that are covered by a Year 2 Volume Licensing ESU license, you must open a support ticket using the sub-category "<new subcategory>" before activating the ESU subscription.
+The [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)] ESU subscription requires that you have purchased a Year 1 Volume Licensing ESU offer before you can activate it. That is, the transition from a Year 1 Volume Licensing ESU offer to ESU subscription is the default pattern and the bill-back charges reflect it. For details of the bill-back charges, see [Billing for SQL Server 2012 ESUs](#2012-esu-billing). If you have purchased a Year 2 Volume Licensing ESU offer and then decided to switch to ESU subscription, you must take additional steps to ensure the bill-back is adjusted accordingly. Before you activate ESU subscription on the machines that are covered by a Year 2 Volume Licensing ESU license, you must open a support ticket using the sub-category `\<new subcategory>` before activating the ESU subscription.
 
 ## <a id="esu-usage-metering"></a> ESU usage meters
 
@@ -199,7 +199,7 @@ The usage of the [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] ESU 
 
 - [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] ESU subscription usage is reported per OSE whether one or multiple [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] instances are installed on the same OSE.
 
-- If multiple out-of-support [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] instances of the same version are installed on the same OSE, the highest [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] edition defines the ESU subscription meter that will be sent every hour.
+- If multiple out-of-support [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] instances of the same version are installed on the same OSE, the highest [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] edition defines the ESU subscription meter that is sent every hour.
 
 - If multiple out-of-support instances of both [!INCLUDE [sssql11-md](../../includes/sssql11-md.md)] and [!INCLUDE [sssql14-md](../../includes/sssql14-md.md)] are installed on the same OSE, with the same or different editions, one instance of the same version is billed separately as they have different prices and bill-back periods.
 
@@ -221,8 +221,8 @@ The next table shows the ESU subscription meters that are used for metering and 
 | Standard | 2014 | Yes | Yes or No | None |
 | Evaluation | Any | Yes or No | Yes or No | None |
 | Developer | Any | Yes or No | Yes or No | None |
-| Web | Any | n/a | Yes or No | None |
-| Express | Any | n/a | Yes or No | None |
+| Web | Any | N/A | Yes or No | None |
+| Express | Any | N/A | Yes or No | None |
 
 <sup>1</sup> For edition projection rules, see [Metering software usage](manage-license-billing.md#usage-metering).
 

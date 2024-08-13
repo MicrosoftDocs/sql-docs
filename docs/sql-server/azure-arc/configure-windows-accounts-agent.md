@@ -23,7 +23,7 @@ The extension sets permissions when you enable features on the Azure portal. If 
 
 [SQL permissions](#sql-permissions) lists the permissions tied to features that the extension grants when features are enabled.
 
-Note: Make sure that NT Authority/System has full control on the directories and registry keys listed below.
+Note: NT Authority\System must have access to modify permissions on listed directories and registry keys. This is needed so that NT Authority\System can grant required access to NT Service\SqlServerExtension account for least privileges mode.
 
 ## Directory permissions
 

@@ -4,7 +4,7 @@ description: "Options (Azure Services)"
 author: erinstellato-ms
 ms.author: erinstellato
 ms.reviewer: maghan
-ms.date: 07/23/2024
+ms.date: 08/13/2024
 ms.service: sql
 ms.subservice: ssms
 ms.topic: ui-reference

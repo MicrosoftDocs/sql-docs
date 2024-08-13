@@ -71,7 +71,7 @@ The **database copy** operation is similar to database move. The only important 
 Before you can copy or move a database, you must meet the following requirements:
 
 - You must have *read* permissions for the resource group that contains the source managed instance, and you must have *write* permissions at the database level for both the source and destination instances.
-- If the source and destination instances are in different virtual networks, there must be network connectivity between the virtual networks of the two instances, such as with Azure virtual network peering. Also, you need to allow inbound and outbound traffic on port 5022 and port range 11000-11999 for the TCP protocol. This applies to both subnets that host the source and the destination instance. To learn more, review [how to establish network connectivity between instances in different Azure VNets](failover-group-configure-sql-mi.md#enabling-connectivity-between-the-instances).
+- If the source and destination instances are in different virtual networks, there must be network connectivity between the virtual networks of the two instances, such as with Azure virtual network peering. Also, you need to allow inbound and outbound traffic on port 5022 and port range 11000-11999 for the TCP protocol. This applies to both subnets that host the source and the destination instance. To learn more, review [how to establish network connectivity between instances in different Azure VNets](failover-group-configure-sql-mi.md#establish-connectivity-between-the-instances).
 
 ## Copy or move database
 
@@ -247,7 +247,7 @@ Consider the following limitations of the copy and move feature:
 More documentation related to database copy and move.
 - Azure PowerShell documentation for [database copy](/powershell/module/az.sql/copy-azsqlinstancedatabase) and [database move](/powershell/module/az.sql/move-azsqlinstancedatabase).
 - Azure CLI documentation for [database copy](/cli/azure/sql/midb/copy) and [database move](/cli/azure/sql/midb/move).
-- [Enabling connectivity between SQL Managed Instances](failover-group-configure-sql-mi.md#enabling-connectivity-between-the-instances).
+- [Enabling connectivity between SQL Managed Instances](failover-group-configure-sql-mi.md#establish-connectivity-between-the-instances).
 
 For other data movement options, review:
 - [Managed Instance link](managed-instance-link-feature-overview.md)

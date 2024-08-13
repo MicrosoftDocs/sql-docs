@@ -5,7 +5,7 @@ description: Learn how to fail over a link between SQL Server and Azure SQL Mana
 author: djordje-jeremic
 ms.author: djjeremi
 ms.reviewer: mathoma, danil
-ms.date: 06/21/2024
+ms.date: 08/13/2024
 ms.service: azure-sql-managed-instance
 ms.subservice: data-movement
 ms.custom: ignite-2023
@@ -28,6 +28,7 @@ To fail over your databases to your secondary replica through the link, you need
 - An active Azure subscription. If you don't have one, [create a free account](https://azure.microsoft.com/free/).
 - [Supported version of SQL Server](managed-instance-link-feature-overview.md#prerequisites) with required service update installed.
 - [Link](managed-instance-link-configure-how-to-ssms.md) configured between your primary and secondary replica. 
+- You can fail over the link by using Transact-SQL (currently in preview) starting with [SQL Server 2022 CU13 (KB5036432)](/troubleshoot/sql/releases/sqlserver-2022/cumulativeupdate13).
 
 ## Stop workload
 
@@ -35,7 +36,23 @@ If you're ready to fail over your database to the secondary replica, first stop 
 
 ## Fail over a database
 
-You can fail over a linked database by using the SQL Server Management Studio, or PowerShell. 
+You can fail over a linked database by using Transact-SQL (T-SQL),  SQL Server Management Studio, or PowerShell. 
+
+### [Transact-SQL](#tab/tsql)
+
+You can fail over the link by using Transact-SQL (currently in preview) starting with [SQL Server 2022 CU13 (KB5036432)](/troubleshoot/sql/releases/sqlserver-2022/cumulativeupdate13).
+
+To perform a planned failover for a link, use the following T-SQL command on the primary replica:
+
+```sql
+ALTER AVAILABILITY GROUP [<DAGname>] FAILOVER
+```
+
+To perform a forced failover, use the following T-SQL command on the secondary replica: 
+
+```sql
+ALTER AVAILABILITY GROUP [<DAGname>] FORCE_FAILOVER_ALLOW_DATA_LOSS
+```
 
 ### [SQL Server Management Studio (SSMS)](#tab/ssms)
 

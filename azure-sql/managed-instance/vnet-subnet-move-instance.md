@@ -82,7 +82,7 @@ Open both inbound and outbound ports 5022 and the range 11000~11999 in the Netwo
     - The target subnet can't have an overlapping address range with the subnet that holds the secondary instance replica of the failover group. 
 For example, if MI1 is in subnet S1, the secondary instance in the failover group is MI2 in subnet S2. We want to move MI1 to subnet S3. Subnet S3 can't have an overlapping address range with subnet S2. 
 
-To learn more about configuring the network for failover groups, review [Enable geo-replication between managed instances](failover-group-configure-sql-mi.md#enabling-connectivity-between-the-instances). 
+To learn more about configuring the network for failover groups, review [Enable geo-replication between managed instances](failover-group-configure-sql-mi.md#establish-connectivity-between-the-instances). 
 
 ## Operation steps
 

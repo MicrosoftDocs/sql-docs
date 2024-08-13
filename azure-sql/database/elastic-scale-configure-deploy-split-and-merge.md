@@ -1,10 +1,10 @@
 ---
 title: Deploy a split-merge service
 description: Use the split-merge too to move data between sharded databases.
-author: bgavrilMS
-ms.author: bogavril
+author: bgavrilovicMS
+ms.author: bgavrilovic
 ms.reviewer: wiassaf, mathoma, randolphwest
-ms.date: 06/25/2024
+ms.date: 08/13/2024
 ms.service: azure-sql-database
 ms.subservice: scale-out
 ms.topic: how-to
@@ -13,57 +13,50 @@ ms.custom:
 ---
 # Deploy a split-merge service to move data between sharded databases
 
-[!INCLUDE [appliesto-sqldb](../includes/appliesto-sqldb.md)]
+[!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
 The split-merge tool lets you move data between sharded databases. See [Moving data between scaled-out cloud databases](elastic-scale-overview-split-and-merge.md).
 
-> [!NOTE]  
-> The split-merge tool is intended to work with Cloud Services (Classic) and not App Services.
-
-## Download the Split-Merge packages
-
-1. Download the latest NuGet version from [NuGet](/nuget/install-nuget-client-tools).
-
-1. Open a command prompt and navigate to the directory where you downloaded **nuget.exe**. The download includes PowerShell commands.
-
-1. Download the latest Split-Merge package into the current directory with the following command:
-
-   ```cmd
-   nuget install Microsoft.Azure.SqlDatabase.ElasticScale.Service.SplitMerge
-   ```
-
-The files are placed in a directory named `Microsoft.Azure.SqlDatabase.ElasticScale.Service.SplitMerge.<x.x.xxx.x>` where `<x.x.xxx.x>` reflects the version number. Find the split-merge service files in the `content\splitmerge\service` subdirectory, and the Split-Merge PowerShell scripts (and required client DLLs) in the `content\splitmerge\powershell` subdirectory.
+> [!NOTE]
+> The split-merge tool is intended for Azure Web Apps. The end of life for the Cloud Services (Classic) is August 31, 2024. If you were using the split-merge tool on Cloud Services (Classic), migrate to Azure Web Apps before August 31, 2024.
 
 ## Prerequisites
 
-1. Create an Azure SQL Database database that will be used as the split-merge status database. Go to the [Azure portal](https://portal.azure.com). Create a new **SQL Database**. Give the database a name and create a new administrator and password. Be sure to record the name and password for later use.
+1. Create a SQL database to be used as the split-merge status database. Go to the [Azure portal](https://portal.azure.com). Create a new **SQL database**. Name the database and create a new administrator and password. Be sure to record the name and password for later use.
 
-1. Ensure that your server allows Azure Services to connect to it. In the portal, in the **Firewall Settings**, ensure the **Allow access to Azure Services** setting is set to **On**. Select the **Save** icon.
+1. Ensure that your [logical server in Azure](logical-servers.md) allows Azure Services to connect to it. In the Azure portal, in the **Firewall Settings** for your logical server, ensure the **Allow access to Azure Services** setting is set to **On**. Select the **Save** icon.
 
 1. Create an Azure Storage account for diagnostics output.
 
-1. Create an Azure Cloud Service for your Split-Merge service.
+1. Use the public split-merge docker images, or push split-merge docker images to either Azure Container Service or your docker registry of choice.
 
-## Configure your Split-Merge service
+## Create two Azure Web Apps for your service
 
-### Split-Merge service configuration
+Create two Web Apps - a `worker` and `UI` web app.
 
-1. In the folder into which you downloaded the Split-Merge assemblies, create a copy of the `ServiceConfiguration.Template.cscfg` file that shipped alongside `SplitMergeService.cspkg` and rename it `ServiceConfiguration.cscfg`.
+### Worker web app
 
-1. Open `ServiceConfiguration.cscfg` in a text editor such as Visual Studio that validates inputs such as the format of certificate thumbprints.
+1. Create a [Web App in the Azure portal](https://portal.azure.com/#create/Microsoft.WebSite).
 
-1. Create a new database or choose an existing database to serve as the status database for Split-Merge operations and retrieve the connection string of that database.
+1. In the **Publish** field, select **Container**. 
 
-   > [!IMPORTANT]  
-   > At this time, the status database must use the Latin collation (`SQL_Latin1_General_CP1_CI_AS`). For more information, see [Windows Collation Name](/sql/t-sql/statements/windows-collation-name-transact-sql).
+1. For **Operating System**, select **Windows**. 
 
-   With Azure SQL Database, the connection string typically is of the form:
+1. Proceed to the **Docker** tab. 
 
-   `Server=<serverName>.database.windows.net; Database=<databaseName>;User ID=<userId>; Password=<password>; Encrypt=True; Connection Timeout=30`
+1. Populate the following information:  
+**Image source**: `Docker hub`  
+**Access type**: `Public`  
+**Image and tag**: `mcr.microsoft.com/splitmerge/splitmergeworker:20240812.1`
 
-1. Enter this connection string in the `.cscfg` file in both the **SplitMergeWeb** and **SplitMergeWorker** role sections in the ElasticScaleMetadata setting.
+1. Use **Review + create** to create the web app. 
 
-1. For the **SplitMergeWorker** role, enter a valid connection string to Azure storage for the `WorkerRoleSynchronizationStorageAccountConnectionString` setting.
+### UI Web App
+
+To create the UI web app, follow the same steps you used to create the Worker web app with one difference: 
+- A different docker image in the **Image and tag** field: `mcr.microsoft.com/splitmerge/splitmergeweb:20240812.1`
+
+## Configure your Split-Merge web apps
 
 ### Configure security
 
@@ -71,80 +64,62 @@ For detailed instructions to configure the security of the service, refer to the
 
 For the purposes of a simple test deployment for this tutorial, a minimal set of configuration steps are performed to get the service up and running. These steps enable only the one machine/account executing them to communicate with the service.
 
-### Create a self-signed certificate
+### Create a self-signed certificate and PFX file
 
-Create a new directory and from this directory execute the following command using a [Developer Command Prompt for Visual Studio](/dotnet/framework/tools/developer-command-prompt-for-vs) window:
+Use PowerShell to create a self-signed certificate and PFX file. 
 
-```cmd
-makecert ^
--n "CN=*.cloudapp.net" ^
--r -cy end -sky exchange -eku "1.3.6.1.5.5.7.3.1,1.3.6.1.5.5.7.3.2" ^
--a sha256 -len 2048 ^
--sr currentuser -ss root ^
--sv MyCert.pvk MyCert.cer
+First, create a new directory. Then replace the inline values accordingly and run the following PowerShell commands from the new directory: 
+
+```powershell
+  $certname = "{certificateName}"    ## Replace {certificateName}
+  $cert = New-SelfSignedCertificate -Subject "CN=$certname" -CertStoreLocation "Cert:\CurrentUser\My" -KeyExportPolicy Exportable -KeySpec Signature -KeyLength 2048 -KeyAlgorithm RSA -HashAlgorithm SHA256
+  $mypwd = ConvertTo-SecureString -String "{myPassword}" -Force -AsPlainText  ## Replace {myPassword}
+  Export-PfxCertificate -Cert $cert -FilePath "C:\Users\admin\Desktop\$certname.pfx" -Password $mypwd   ## Specify your preferred location
 ```
 
-At the password prompt to protect the private key, enter a strong password and confirm it. Enter the password again when prompted. Select **Yes** at the end to import it to the Trusted Certification Authorities Root store.
+### Upload the PFX file to the web apps and enable certificate usage
 
-### Create a PFX file
-
-Execute the following command from the same window where makecert was executed; use the same password that you used to create the certificate:
-
-```cmd
-pvk2pfx -pvk MyCert.pvk -spc MyCert.cer -pfx MyCert.pfx -pi <password>
-```
-
-### Import the client certificate into the personal store
-
-1. In Windows Explorer, double-click `MyCert.pfx`.
-1. In the **Certificate Import Wizard**, select **Current User**, then **Next**.
-1. Confirm the file path and select **Next**.
-1. Type the password, leave **Include all extended properties** checked, and select **Next**.
-1. Leave **Automatically select the certificate store[...]** checked, and select **Next**.
-1. Select **Finish** and **OK**.
-
-### Upload the PFX file to the cloud service
+Repeat the following steps for both `worker` and `UI` Web Apps.
 
 1. Go to the [Azure portal](https://portal.azure.com).
-1. Select **Cloud Services**.
-1. Select the cloud service you created previously for the Split-Merge service.
-1. Select **Certificates** on the top menu.
-1. Select **Upload** in the bottom bar.
-1. Select the PFX file and enter the same password as before.
+1. Select **App Services**.
+1. Select the Web App you created above for the split-merge tool.
+1. Select **Certificates** from the menu.
+1. Select **Bring your own certificates (.pfx)**.
+1. Select **Add certificate** from the bar.
+1. Select the PFX file and enter the same password as above.
 1. Once completed, copy the certificate thumbprint from the new entry in the list.
+1. In the Web App menu, open **Settings** / **Configuration**. 
+1. Set **Client certificate mode** to `Require`. 
 
-### Update the service configuration file
+### Web app configuration
 
-Paste the certificate thumbprint copied previously into the thumbprint/value attribute of these settings.
-For the worker role:
+Repeat the following steps for both `worker` and `UI` web apps.
 
-```xml
-<Setting name="DataEncryptionPrimaryCertificateThumbprint" value="" />
-<Certificate name="DataEncryptionPrimary" thumbprint="" thumbprintAlgorithm="sha1" />
-```
+1. Open the deployed Web App and go to **Settings** >  **Environment variables** > **App settings**. Select **Add**. 
 
-For the web role:
+1. Add a variable with the name **ElasticScaleMetadata** and the value with the connection string for the previously deployed status database.
 
-```xml
-<Setting name="AdditionalTrustedRootCertificationAuthorities" value="" />
-<Setting name="AllowedClientCertificateThumbprints" value="" />
-<Setting name="DataEncryptionPrimaryCertificateThumbprint" value="" />
-<Certificate name="SSL" thumbprint="" thumbprintAlgorithm="sha1" />
-<Certificate name="CA" thumbprint="" thumbprintAlgorithm="sha1" />
-<Certificate name="DataEncryptionPrimary" thumbprint="" thumbprintAlgorithm="sha1" />
-```
+   > [!IMPORTANT]  
+   > At this time, the status database must use the Latin collation (`SQL\_Latin1\_General\_CP1\_CI\_AS`). For more information, see [Windows Collation Name](/sql/t-sql/statements/windows-collation-name-transact-sql).
 
-For production deployments separate certificates should be used for the CA, for encryption, the Server certificate and client certificates. For detailed instructions on this, see [Security Configuration](elastic-scale-split-merge-security-configuration.md).
+   With Azure SQL Database, the connection string typically is in the form:
 
-## Deploy your service
+   `Server=<serverName>.database.windows.net; Database=<databaseName>;User ID=<userId>; Password=<password>; Encrypt=True; Connection Timeout=30`
 
-1. Go to the [Azure portal](https://portal.azure.com)
-1. Select the cloud service that you created earlier.
-1. Select **Overview**.
-1. Choose the staging environment, then select **Upload**.
-1. In the dialog box, enter a deployment label. For both `Package` and `Configuration`, select `From Local` and choose the `SplitMergeService.cspkg` file and your cscfg file that you configured earlier.
-1. Ensure that the checkbox labeled **Deploy even if one or more roles contain a single instance** is checked.
-1. Hit the check button in the bottom right to begin the deployment. Expect it to take a few minutes to complete.
+1. Add additional variables:
+
+    | Name | Value |
+    |----------|----------|
+    | WorkerRoleSynchronizationStorageAccountConnectionString    | Valid connection string to the previously created Azure storage.    |
+    | DataEncryptionPrimaryCertificateThumbprint    | Previously generated certificate thumbprint.  |
+    | MetadataExpirationPeriodInMinutes    | 20160  |
+    | MaxRetryCount    | 5  |
+    | WEBSITE_LOAD_CERTIFICATES    | *  |
+
+1. Select **Apply** and restart the application. 
+
+1. Repeat the same steps for both `worker` and `UI` web app.
 
 ## Troubleshoot the deployment
 
@@ -152,20 +127,20 @@ If your web role fails to come online, it's likely a problem with the security c
 
 If your worker role fails to come online, but your web role succeeds, it's most likely a problem connecting to the status database that you created earlier.
 
-- Make sure that the connection string in your cscfg is accurate.
+- Make sure that the connection string is accurate.
 - Check that the server and database exist, and that the user ID and password are correct.
-- For Azure SQL Database, the connection string should be of the form:
+- For Azure SQL Database, the connection string should be in the form:
 
-  `Server=<serverName>.database.windows.net; Database=<databaseName>;User ID=<user>; Password=<password>; Encrypt=True; Connection Timeout=30`
+   `Server=<serverName>.database.windows.net; Database=<databaseName>;User ID=<user>; Password=<password>; Encrypt=True; Connection Timeout=30`
 
 - Ensure that the server name doesn't begin with `https://`.
-- Ensure that your server allows Azure Services to connect to it. To do this, open your database in the portal and ensure that the **Allow access to Azure Services** setting is set to **On****.
+- Ensure that your server allows Azure Services to connect to it. To do this, open your database in the portal and ensure that the **Allow access to Azure Services** setting is set to **On**.
 
 ## Test the service deployment
 
 ### Connect with a web browser
 
-Determine the web endpoint of your Split-Merge service. You can find this in the portal by going to the **Overview** of your cloud service and looking under **Site URL** on the right side. Replace `http://` with `https://`, since the default security settings disable the HTTP endpoint. Load the page for this URL into your browser.
+Go to the **Overview** of your `UI` Web App and select **Browse**. Choose the correct certificate, if prompted.
 
 ### Test with PowerShell scripts
 
@@ -298,7 +273,7 @@ An example of this can be seen in the SetupSampleSplitMergeEnvironment.ps1 scrip
 
 The Split-Merge service doesn't create the target database (or schema for any tables in the database) for you. They must be precreated before sending a request to the service.
 
-## Troubleshooting
+## Known errors
 
 You might see the following message when running the sample PowerShell scripts:
 

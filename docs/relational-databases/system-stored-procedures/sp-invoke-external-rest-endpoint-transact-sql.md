@@ -260,6 +260,7 @@ It's possible to use DATABASE SCOPED CREDENTIALS to securely store authenticatio
 - `HTTPEndpointHeaders`: send specified authentication data using the **Request Headers**
 - `HTTPEndpointQueryString`: send specified authentication data using the **Query String**
 - `Managed Identity`: send the System Assigned **Managed Identity** using the request headers
+- `Shared Access Signatures (SAS)`: provide limited delegated access to resources via a **signed URL**
 
 the created DATABASE SCOPED CREDENTIAL can be used via the *@credential* parameter:
 

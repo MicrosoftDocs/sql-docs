@@ -5,7 +5,7 @@ description: Understand how the Azure SQL Database maintenance window can be con
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: urosmil, scottkim, mathoma
-ms.date: 03/27/2024
+ms.date: 08/06/2024
 ms.service: azure-sql-database
 ms.subservice: service-overview
 ms.topic: conceptual
@@ -81,14 +81,17 @@ Offers restricted to dev/test usage only are not eligible (like pay-as-you-go De
 
 ### Supported service level objectives
 
-Choosing a maintenance window other than the default is available on all SLOs **except for** the following.
+Choosing a maintenance window other than the default is available on all SLOs, **except for** the following.
 
 - SLOs not supported:
     - Azure SQL Database DTU Basic, S0 and S1 tiers
     - DC hardware
     - Fsv2 hardware
 
-Maintenance window for Hyperscale elastic pools is in preview and is available in specific regions and configurations. For more information, see [Blog: Maintenance window support for Azure SQL Database Hyperscale elastic pools](https://aka.ms/hsep-fmw).
+Other scenarios:
+
+- Maintenance window for Hyperscale elastic pools is in preview and is available in specific regions and configurations. For more information, see [Blog: Maintenance window support for Azure SQL Database Hyperscale elastic pools](https://aka.ms/hsep-fmw).
+- Maintenance window is supported for named replicas.
 
 <!-- Check Known limitations in azure-sql/database/service-tier-hyperscale.md as well -->
 

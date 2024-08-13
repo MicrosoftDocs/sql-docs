@@ -1,11 +1,11 @@
 ---
-title: Create a project for a local Azure SQL Database development environment
+title: Create a project for a local development environment
 description: Learn how to create a database project as part of the local development experience for Azure SQL Database.
 author: croblesm
 ms.author: roblescarlos
 ms.reviewer: mathoma
 ms.date: 08/14/2024
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.topic: how-to
 ms.custom: template-how-to, build-2023, build-2023-dataai
 ---

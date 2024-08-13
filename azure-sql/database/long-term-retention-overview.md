@@ -6,7 +6,7 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: dinethi, mathoma, randolphwest
 ms.date: 06/18/2024
-ms.service: sql-db-mi
+ms.service: azure-sql
 ms.subservice: backup-restore
 ms.topic: conceptual
 monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"

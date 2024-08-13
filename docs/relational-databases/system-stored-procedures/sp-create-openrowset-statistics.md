@@ -5,7 +5,7 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: randolphwest
 ms.date: 07/05/2024
-ms.service: synapse-analytics
+ms.service: azure-synapse-analytics
 ms.topic: "reference"
 f1_keywords:
   - "sp_create_openrowset_statistics_TSQL"

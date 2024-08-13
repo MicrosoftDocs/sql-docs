@@ -5,7 +5,7 @@ author: zoran-rilak-msft
 ms.author: zoranrilak
 ms.reviewer: mathoma, srbozovi
 ms.date: 08/02/2023
-ms.service: sql-managed-instance
+ms.service: azure-sql-managed-instance
 ms.subservice: backup-restore
 ms.topic: how-to
 ---

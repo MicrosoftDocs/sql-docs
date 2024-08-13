@@ -83,7 +83,7 @@ The article demonstrates the following steps:
 
 ## Troubleshoot connectivity issues
 
-If your browser fails to connect to SQL when using **Microsoft Entra with MFA**, you may need to visit **Tools** > **Options** > **Azure Cloud** and change the value for either **Use system default web browser** or **Use Web Account Manager**.  For more information, see [Options (Azure Services)](../menu-help/options-azure-services.md).
+If your browser fails to connect to SQL Database when using **Microsoft Entra with MFA**, you can navigate to **Tools** > **Options** > **Azure Cloud**, and change the value for either **Use system default web browser** or **Use Web Account Manager**. For more information, see [Options (Azure Services)](../menu-help/options-azure-services.md).
 
 You can experience connection problems with Azure SQL Database. For more information on troubleshooting connection problems, visit [Troubleshooting connectivity issues](/azure/azure-sql/database/troubleshoot-common-errors-issues).
 

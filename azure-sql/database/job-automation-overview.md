@@ -6,7 +6,7 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: srinia, mathoma
 ms.date: 04/09/2024
-ms.service: sql-db-mi
+ms.service: azure-sql
 ms.topic: conceptual
 ms.custom: sqldbrb=1
 dev_langs:

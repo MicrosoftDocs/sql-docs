@@ -2,7 +2,7 @@
 author: apduvuri
 ms.author: apduvuri
 ms.date: 10/03/2022
-ms.service: dms
+ms.service: azure-database-migration-service
 ms.topic: include
 ---
 

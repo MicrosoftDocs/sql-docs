@@ -1,10 +1,10 @@
 ---
 title: Prepare virtual machines for an FCI
 description: "Prepare your Azure virtual machines to use them with a failover cluster instance (FCI) and SQL Server on Azure Virtual Machines."
-author: tarynpratt
-ms.author: tarynpratt
+author: AbdullahMSFT
+ms.author: amamun
 ms.reviewer: mathoma
-ms.date: 06/18/2024
+ms.date: 07/25/2024
 ms.service: virtual-machines-sql
 ms.subservice: hadr
 ms.topic: how-to
@@ -27,12 +27,11 @@ To learn more, see an overview of [FCI with SQL Server on Azure VMs](failover-cl
 - A Microsoft Azure subscription. Get started with a [free Azure account](https://azure.microsoft.com/free/). 
 - A Windows domain on Azure virtual machines or an on-premises active directory extended to Azure with virtual network pairing.
 - An account that has permissions to create objects on Azure virtual machines and in Active Directory.
-- An Azure virtual network and one or more subnets with enough IP address space for these components:
+- An Azure virtual network and one or more subnets with enough IP address space for the following components:
    - Both virtual machines
    - An IP address for the Windows failover cluster
    - An IP address for each FCI
 - DNS configured on the Azure network, pointing to the domain controllers.
-
 
 
 ## Choose an FCI storage option
@@ -51,9 +50,11 @@ Carefully select the VM availability option that matches your intended cluster c
    - **Premium SSD Locally Redundant Storage (LRS)**: 
    [Availability Set](/azure/virtual-machines/windows/tutorial-availability-sets#create-an-availability-set) in different fault/update domains for [Premium SSD LRS](/azure/virtual-machines/disks-redundancy#locally-redundant-storage-for-managed-disks). You can also choose to place the VMs inside a [proximity placement group](/azure/virtual-machines/windows/proximity-placement-groups-portal) to locate them closer to each other. Combining availability set and proximity placement group provides the lowest latency for shared disks as data is replicated locally within one data center and provides VM availability SLA of 99.95%.
    - **Ultra Disk Locally Redundant Storage (LRS)**: 
-   [Availability zone](/azure/virtual-machines/windows/create-portal-availability-zone#confirm-zone-for-managed-disk-and-ip-address) but the VMs must be placed in the same availability zone. [Ultra disks](/azure/virtual-machines/disks-enable-ultra-ssd) offers lowest disk latency and is best for IO intensive workloads. Since all VMs part of the FCI have be in the same availability zone, the VM availability is only 99.9%. 
-- **Premium file shares**: [Availability set](/azure/virtual-machines/windows/tutorial-availability-sets#create-an-availability-set) or [Availability Zone](/azure/virtual-machines/windows/create-portal-availability-zone#confirm-zone-for-managed-disk-and-ip-address).
+   [Availability zones](/azure/virtual-machines/windows/create-portal-availability-zone#confirm-zone-for-managed-disk-and-ip-address) but the VMs must be placed in the same availability zone. [Ultra disks](/azure/virtual-machines/disks-enable-ultra-ssd) offers lowest disk latency and is best for IO intensive workloads. Since all VMs part of the FCI have to be in the same availability zone, the VM availability is only 99.9%. 
+- **Premium file shares**: [Availability set](/azure/virtual-machines/windows/tutorial-availability-sets#create-an-availability-set) or [availability zones](/azure/virtual-machines/windows/create-portal-availability-zone#confirm-zone-for-managed-disk-and-ip-address).
 - **Storage Spaces Direct**: [Availability Set](/azure/virtual-machines/windows/tutorial-availability-sets#create-an-availability-set).
+- **Azure Elastic SAN** : [Availability zones](/azure/availability-zones/az-overview#availability-zones).  
+
 
 > [!IMPORTANT]
 > You can't set or change the availability set after you've created a virtual machine.
@@ -62,7 +63,7 @@ Carefully select the VM availability option that matches your intended cluster c
 
 For SQL Server on Azure VMs, you have the option to deploy your SQL Server VMs to a single subnet, or to multiple subnets. 
 
-Deploying your VMs to multiple subnets leverages the cluster OR dependency for IP addresses and matches the on-premises experience when connecting to your failover cluster instance. The multi-subnet approach is recommend for SQL Server on Azure VMs for simpler manageability, and faster failover times. 
+Deploying your VMs to multiple subnets leverages the cluster OR dependency for IP addresses and matches the on-premises experience when connecting to your failover cluster instance. The multi-subnet approach is recommended for SQL Server on Azure VMs for simpler manageability, and faster failover times. 
 
 Deploying your VMs to a single subnet requires an additional dependency on an Azure Load Balancer or distributed network name (DNN) to route traffic to your FCI. 
 
@@ -74,11 +75,11 @@ Place both virtual machines in a single subnet that has enough IP addresses for 
 
 If you choose to deploy your SQL Server VMs to a single subnet [review the differences between the Azure Load Balancer and DNN connectivity options](hadr-windows-server-failover-cluster-overview.md#distributed-network-name-dnn) and decide which option works best for you before preparing the rest of your environment for your FCI.
 
-Deploying your SQL Server VMs to a single subnet does not require any additional network configuration. 
+Deploying your SQL Server VMs to a single subnet doesn't require any additional network configuration. 
 
 # [Multi-subnet](#tab/multi-subnet)
 
-If you want to route connections directly to your SQL Server FCI, place both virtual machines in separate subnets within a virtual network. Assign a secondary IP address to the SQL Server VM for the failover cluster instance - and, if you're on Windows Server 2016 and below, assign an additional secondary IP address for the Windows Server Failover Cluster as well. Windows Server 2019 and later uses a distributed network name (DNN) for the cluster name so a secondary IP address for the cluster is not necessary. 
+If you want to route connections directly to your SQL Server FCI, place both virtual machines in separate subnets within a virtual network. Assign a secondary IP address to the SQL Server VM for the failover cluster instance - and, if you're on Windows Server 2016 and below, assign an additional secondary IP address for the Windows Server Failover Cluster as well. Windows Server 2019 and later uses a distributed network name (DNN) for the cluster name so a secondary IP address for the cluster isn't necessary. 
 
 This approach eliminates the need for an Azure Load Balancer or a distributed network name (DNN) when connecting to your SQL Server FCI. 
 
@@ -111,9 +112,9 @@ To create the virtual network in the Azure portal, follow these steps:
 
    :::image type="content" source="./media/availability-group-manually-configure-prerequisites-tutorial-multi-subnet/06-create-vnet-ip-address-add-sql-subnet-2.png" alt-text="Name your second subnet, such as sql-subnet-2, and then iterate the third octet by 2, so that if your DC-subnet IP address is 10.38.0.0/24, your new subnet should be 10.38.2.0/24":::
 
-1. After you've added the second subnet, review your subnet names and ranges (your IP address ranges may differ from the image). If everything looks correct, select **Review + create**, then **Create** to create your new virtual network. 
+1. After you've added the second subnet, review your subnet names and ranges (your IP address ranges might differ from the image). If everything looks correct, select **Review + create**, then **Create** to create your new virtual network. 
 
-   :::image type="content" source="./media/failover-cluster-instance-prepare-vm/07-create-vnet-ip-address.png" alt-text="After you've added the second subnet, review your subnet names and ranges, like the image example (though your IP addresses may be different). If everything looks correct, select Review + create, then Create to create your new virtual network.":::
+   :::image type="content" source="./media/failover-cluster-instance-prepare-vm/07-create-vnet-ip-address.png" alt-text="After you've added the second subnet, review your subnet names and ranges, like the image example (though your IP addresses might be different). If everything looks correct, select Review + create, then Create to create your new virtual network.":::
 
    Azure returns you to the portal dashboard and notifies you when the new network is created.
 
@@ -142,15 +143,18 @@ Configure the virtual network to use this the DNS server IP address.
 To configure your virtual network for DNS, follow these steps: 
 
 1. Go to your resource group in the [Azure portal](https://portal.azure.com), and select your virtual network. 
-1. Select **DNS servers** under the **Settings** pane and then select **Custom**. 
+1. Select **DNS servers** under **Settings** and then select **Custom**. 
 1. Enter the private IP address you identified previously in the **IP Address** field, such as `10.38.0.4`, or provide the internal IP address of your internal DNS server. 
 1. Select **Save**. 
 
-:::image type="content" source="./media/availability-group-manually-configure-prerequisites-tutorial-multi-subnet/12-identify-dns-ip-address.png" alt-text=" Select DNS servers under the Settings pane and then select Custom. Enter the private IP address you identified previously in the IP Address field, such as 10.38.0.4. ":::
+:::image type="content" source="./media/availability-group-manually-configure-prerequisites-tutorial-multi-subnet/12-identify-dns-ip-address.png" alt-text="Screenshot showing DNS servers selected under Settings in the Azure portal.":::
 
 ## Create the virtual machines
 
 After you've configured your VM virtual network and chosen VM availability, you're ready to create your virtual machines. You can choose to use an Azure Marketplace image that does or doesn't have SQL Server already installed on it. However, if you choose an image for SQL Server on Azure VMs, you'll need to uninstall SQL Server from the virtual machine before configuring the failover cluster instance. 
+
+> [!NOTE]
+> Be sure to check the SQL Server version supported for the [FCI storage option](failover-cluster-instance-overview.md#storage) you've chosen before deploying your SQL Server VMs.
 
 ### NIC considerations
 
@@ -166,7 +170,9 @@ You can create an Azure virtual machine by using an image [with](sql-vm-create-p
 
 ### Assign secondary IP addresses
 
-If you deployed your SQL Server VMs to a single subnet, skip this step. If you deployed your SQL Server VMs to multiple subnets for improved connectivity to your FCI, you need to assign the secondary IP addresses to each VM. 
+If you deployed your SQL Server VMs to a single subnet, skip this step. 
+
+If you deployed your SQL Server VMs to multiple subnets for improved connectivity to your FCI, you need to assign the secondary IP addresses to each VM. 
 
 Assign secondary IP addresses to each SQL Server VM to use for the failover cluster instance network name, and for Windows Server 2016 and earlier, assign secondary IP addresses to each SQL Server VM for the cluster network name as well. Doing this negates the need for an Azure Load Balancer, as is the requirement in a single subnet environment.  
 
@@ -200,7 +206,7 @@ To assign additional secondary IPs to the VMs, follow these steps:
 
    :::image type="content" source="./media/failover-cluster-instance-prepare-vm/22-add-fci-ip-address.png" alt-text="Select + Add again to configure an additional IP address for the availability group listener (with a name such as availability-group-listener), again using an unused IP address in SQL-subnet-1 such as 10.31.1.11":::
 
-1. Repeat these steps again for the second SQL Server VM. Assign two unused secondary IP addresses within **SQL-subnet-2**. Use the values from the following table to add the IP configuration (though the IP addresses are just examples, yours may vary): 
+1. Repeat these steps again for the second SQL Server VM. Assign two unused secondary IP addresses within **SQL-subnet-2**. Use the values from the following table to add the IP configuration (though the IP addresses are just examples, yours might vary): 
 
    
     | **Field** | Input | Input | 
@@ -209,28 +215,34 @@ To assign additional secondary IPs to the VMs, follow these steps:
     | **Allocation** | Static | Static |
     | **IP address** | 10.38.2.10 | 10.38.2.11 | 
 
-
-
-
 ## Uninstall SQL Server
 
-As part of the FCI creation process, you'll install SQL Server as a clustered instance to the failover cluster. *If you deployed a virtual machine with an Azure Marketplace image without SQL Server, you can skip this step.* If you deployed an image with SQL Server preinstalled, you'll need to unregister the SQL Server VM from the SQL IaaS Agent extension, and then uninstall SQL Server. 
+As part of the FCI creation process, you'll install SQL Server as a clustered instance to the failover cluster. *If you deployed a virtual machine with an Azure Marketplace image without SQL Server, you can skip this step.* If you deployed an image with SQL Server preinstalled, you'll need to delete the extension from the SQL Server VM, and then uninstall SQL Server. 
 
-### Unregister from the SQL IaaS Agent extension
+### Delete the SQL IaaS Agent extension
 
-SQL Server VM images from Azure Marketplace are automatically registered with the SQL IaaS Agent extension. Before you uninstall the preinstalled SQL Server instance, you must first [unregister each SQL Server VM from the SQL IaaS Agent extension](sql-agent-extension-manually-register-single-vm.md#unregister-from-extension). 
+SQL Server VM images from Azure Marketplace are automatically registered with the [SQL IaaS Agent extension](sql-server-iaas-agent-extension-automate-management.md). Before you uninstall the preinstalled SQL Server instance, you must first [delete the extension](sql-agent-extension-manually-register-single-vm.md#delete-the-extension) from the SQL Server VM. 
+
+To delete the extension from your SQL Server VM with Azure PowerShell, using the following sample code:
+
+```powershell-interactive
+Remove-AzSqlVM -ResourceGroupName <resource_group_name> -Name <SQL VM resource name>
+```
+
 
 ### Uninstall SQL Server
 
-After you've unregistered from the extension, you can uninstall SQL Server. Follow these steps on each virtual machine: 
+After you have deleted the extension, you can uninstall SQL Server. Follow these steps on each virtual machine: 
 
-1. Connect to the virtual machine by using RDP. When you first connect to a virtual machine by using RDP, a prompt asks you if you want to allow the PC to be discoverable on the network. Select **Yes**.
+1. Connect to the virtual machine by using RDP or Bastion. When you first connect to a virtual machine by using RDP or Bastion, a prompt asks you if you want to allow the PC to be discoverable on the network. Select **Yes**.
 1. Open **Programs and Features** in the **Control Panel**. 
 1. In **Programs and Features**, right-click **Microsoft SQL Server 201_ (64-bit)** and select **Uninstall/Change**.
 1. Select **Remove**.
 1. Select the default instance.
-1. Remove all features under **Database Engine Services**, **Analysis Services** and **Reporting Services - Native**. Don't remove anything under **SharedFeatures**. You'll see something like the following screenshot:
-   ![Select features](./media/failover-cluster-instance-prepare-vm/remove-features-updated.png)
+1. Remove all features under **Database Engine Services**, **Analysis Services** and **Reporting Services - Native**. Don't remove anything under **Shared Features**. You'll see something like the following screenshot:
+
+   ![Screenshot showing which features to select to uninstall SQL Server.](./media/failover-cluster-instance-prepare-vm/remove-features-updated.png)
+
 1. Select **Next**, and then select **Remove**.
 1. After the instance is successfully removed, restart the virtual machine. 
 
@@ -256,7 +268,6 @@ You also need to join your virtual machines to the domain. You can do so by usin
 
 Virtual machines created from Azure Marketplace come with attached storage. If you plan to configure your FCI storage by using Premium file shares or Azure shared disks, you can remove the attached storage to save on costs because local storage is not used for the failover cluster instance. However, it's possible to use the attached storage for Storage Spaces Direct FCI solutions, so removing them in this case might be unhelpful. Review your FCI storage solution to determine if removing attached storage is optimal for saving costs. 
 
-
 ## Next steps
 
 Now that you've prepared your virtual machine environment, you're ready to configure your failover cluster instance. 
@@ -265,6 +276,7 @@ Choose one of the following guides to configure the FCI environment that's appro
 - [Configure FCI with Azure shared disks](failover-cluster-instance-azure-shared-disks-manually-configure.md)
 - [Configure FCI with a Premium file share](failover-cluster-instance-premium-file-share-manually-configure.md)
 - [Configure FCI with Storage Spaces Direct](failover-cluster-instance-storage-spaces-direct-manually-configure.md)
+- [Configure FCI with Azure Elastic SAN](failover-cluster-instance-azure-elastic-san-manually-configure.md)
 
 
 To learn more, see:

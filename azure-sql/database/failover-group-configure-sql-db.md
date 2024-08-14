@@ -5,8 +5,8 @@ description: Learn how to configure a failover group for a single or pooled data
 author: rajeshsetlem
 ms.author: rsetlem
 ms.reviewer: wiassaf, mathoma, randolphwest
-ms.date: 05/21/2024
-ms.service: sql-database
+ms.date: 08/10/2024
+ms.service: azure-sql-database
 ms.subservice: high-availability
 ms.topic: how-to
 ms.custom:
@@ -22,7 +22,7 @@ zone_pivot_groups: azure-sql-deployment-option-single-elastic
 > * [Azure SQL Database](failover-group-configure-sql-db.md?view=azuresql-db&preserve-view=true)
 > * [Azure SQL Managed Instance](../managed-instance/failover-group-configure-sql-mi.md?view=azuresql-mi&preserve-view=true)
 
-This article teaches you how to configure a [failover group](failover-group-sql-db.md) for single and pooled databases in Azure SQL Database by using the Azure portal, Azure PowerShell and the Azure CLI.
+This article teaches you how to configure a [failover group](failover-group-sql-db.md) for single and pooled databases in Azure SQL Database by using the Azure portal, Azure PowerShell, and the Azure CLI.
 
 ::: zone pivot="azure-sql-single-db"
 
@@ -271,7 +271,7 @@ Fail your failover group over to the secondary server, and then fail back using 
     1. Select **Failover** from the command bar to fail over your failover group containing your database.
     1. Select **Yes** on the warning that notifies you that TDS sessions will be disconnected.
 
-   :::image type="content" source="media/failover-group-configure-sql-db/failover-sql-db.png" alt-text="Screenshot selecting fail over on the Failover groups page in the Azure portal.":::
+   :::image type="content" source="media/failover-group-configure-sql-db/failover-sql-db.png" alt-text="Screenshot selecting failover on the Failover groups page in the Azure portal.":::
 
 1. Review which server is now primary and which server is secondary. Once failover succeeds, the two servers swap roles, so that the former primary becomes the secondary.
 1. (Optional) Select **Failover** again to fail the servers back to their original roles.
@@ -291,6 +291,12 @@ Use the [Get-AzSqlDatabaseFailoverGroup](/powershell/module/az.sql/get-azsqldata
 Use the [Switch-AzSqlDatabaseFailoverGroup](/powershell/module/az.sql/switch-azsqldatabasefailovergroup) to fail over to the secondary server.
 
 :::code language="powershell" source="~/../azure_powershell_scripts/azure-sql/database/failover-groups/add-elastic-pool-to-failover-group-az-ps.ps1" id="Failover":::
+
+### Verify the roles of each server
+
+Use the [Get-AzSqlDatabaseFailoverGroup](/powershell/module/az.sql/get-azsqldatabasefailovergroup) command to confirm the roles of each server.
+
+:::code language="powershell" source="~/../azure_powershell_scripts/azure-sql/database/failover-groups/add-elastic-pool-to-failover-group-az-ps.ps1" id="CheckRole":::
 
 ### Revert failover group back to the primary server
 
@@ -313,6 +319,12 @@ Use the [az sql failover-group show](/cli/azure/sql/failover-group#az-sql-failov
 Use the [az sql failover-group set-primary](/cli/azure/sql/failover-group#az-sql-failover-group-set-primary) command to fail over to the secondary server. Use the [az sql failover-group show](/cli/azure/sql/failover-group#az-sql-failover-group-show) command to verify a successful failover.
 
 :::code language="azurecli" source="~/../azure_cli_scripts/sql-database/failover-groups/add-elastic-pool-to-failover-group-az-cli.sh" id="FailingOver":::
+
+### Verify the roles of each server
+
+Use the [az sql failover-group show](/cli/azure/sql/failover-group#az-sql-failover-group-show) command to confirm the roles of each server in the failover group.
+
+:::code language="azurecli" source="~/../azure_cli_scripts/sql-database/failover-groups/add-elastic-pool-to-failover-group-az-cli.sh" id="VerifyRoles":::
 
 ### Revert failover group back to the primary server
 
@@ -375,9 +387,13 @@ To use a private link with your failover group, do the following:
 
 ## Locate listener endpoint
 
-Once your failover group is configured, update the connection string for your application to the listener endpoint. This keeps your application connected to the failover group listener, rather than the primary database, or elastic pool. That way, you don't have to manually update the connection string every time your database entity fails over, and traffic is routed to whichever entity is currently primary.
+After your failover group is configured, update the connection string for your application to point to the **Read/write listener endpoint** so that your application continues to connect to whichever database is primary after failover. By using the listener endpoint, you don't have to manually update your connection string every time your failover group fails over since traffic is always routed to the current primary. You can also point read-only workload to the **Read-only** listener endpoint.
 
-The listener endpoint is in the form of `fog-name.database.windows.net`, and is visible in the Azure portal when viewing the failover group:
+To locate the listener endpoint in the Azure portal, go to your logical server in the Azure portal and under **Data management**, select **Failover groups**. Select the failover group you're interested in.
+
+Scroll down to find the listener endpoints:
+- The **Read/write** listener endpoint, in the form of `fog-name.database.windows.net`, routes traffic to the primary database.
+- The **Read-only** listener endpoint, in the form of `fog-name.secondary.database.windows.net`, routes traffic to the secondary database.
 
 :::image type="content" source="media/failover-group-configure-sql-db/find-failover-group-connection-string.png" alt-text="Screenshot showing the failover group connection string on the Failover groups page in the Azure portal." lightbox="media/failover-group-configure-sql-db/find-failover-group-connection-string.png":::
 

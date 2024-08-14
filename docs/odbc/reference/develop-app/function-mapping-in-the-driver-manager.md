@@ -2,7 +2,7 @@
 title: "Function Mapping in the Driver Manager"
 description: "Function Mapping in the Driver Manager"
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: "01/19/2017"
 ms.service: sql
 ms.subservice: connectivity

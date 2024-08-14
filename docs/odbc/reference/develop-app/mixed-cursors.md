@@ -2,7 +2,7 @@
 title: "Mixed Cursors"
 description: "Mixed Cursors"
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: "01/20/2017"
 ms.service: sql
 ms.subservice: connectivity

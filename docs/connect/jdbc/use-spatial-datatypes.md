@@ -2,7 +2,7 @@
 title: Learn how to use spatial data types with the Microsoft JDBC Driver for SQL Server.
 description: Using spatial data types
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: 07/31/2020
 ms.service: sql
 ms.subservice: connectivity

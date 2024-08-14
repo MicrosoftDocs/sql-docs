@@ -2,7 +2,7 @@
 title: "Paging through a query result"
 description: Provides an example of viewing the results of a query as pages of data.
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.reviewer: v-chmalh
 ms.date: "11/30/2020"
 ms.service: sql

@@ -6,7 +6,7 @@ author: zoran-rilak-msft
 ms.author: zoranrilak
 ms.reviewer: mathoma, bonova, vanto, randolphwest
 ms.date: 05/28/2024
-ms.service: sql-managed-instance
+ms.service: azure-sql-managed-instance
 ms.subservice: connect
 ms.topic: conceptual
 ms.custom:

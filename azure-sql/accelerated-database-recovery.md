@@ -6,7 +6,7 @@ author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: nvraparl, wiassaf, derekw
 ms.date: 02/18/2022
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.subservice: backup-restore
 ms.topic: conceptual
 ms.custom: sqldbrb=4

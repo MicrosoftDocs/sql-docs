@@ -6,7 +6,7 @@ author: GithubMirek
 ms.author: mireks
 ms.reviewer: vanto, mathoma
 ms.date: 09/28/2023
-ms.service: sql-db-mi
+ms.service: azure-sql
 ms.subservice: security
 ms.topic: conceptual
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
@@ -15,7 +15,7 @@ monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 # Managed identities for transparent data encryption with customer-managed key
 [!INCLUDE[appliesto-sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi.md)]
 
-Microsoft Entra ID [formerly Azure Active Directory](/entra/fundamentals/new-name) provides an automatically managed identity to authenticate to any Azure service that supports Microsoft Entra authentication, such as [Azure Key Vault](/azure/key-vault/general/overview), without exposing credentials in the code. For more information, see [Managed identity types](/azure/active-directory/managed-identities-azure-resources/overview#managed-identity-types) in Azure.
+Microsoft Entra ID, [formerly Azure Active Directory](/entra/fundamentals/new-name), provides an automatically managed identity to authenticate to any Azure service that supports Microsoft Entra authentication, such as [Azure Key Vault](/azure/key-vault/general/overview), without exposing credentials in the code. For more information, see [Managed identity types](/azure/active-directory/managed-identities-azure-resources/overview#managed-identity-types) in Azure.
 
 Managed Identities can be of two types:
 

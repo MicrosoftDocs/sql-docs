@@ -2,7 +2,7 @@
 title: Using database metadata
 description: Learn how to access and navigate database metadata when using the Microsoft JDBC Driver for SQL Server.
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: 03/26/2021
 ms.service: sql
 ms.subservice: connectivity

@@ -2,7 +2,7 @@
 title: updateAsciiStream method (int, java.io.InputStream)
 description: "updateAsciiStream Method (int, java.io.InputStream)"
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: "01/19/2017"
 ms.service: sql
 ms.subservice: connectivity

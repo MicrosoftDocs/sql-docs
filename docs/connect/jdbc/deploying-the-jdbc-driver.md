@@ -2,8 +2,8 @@
 title: Deploying the JDBC driver
 description: Learn how you can redistribute and deploy the Microsoft JDBC Driver for SQL Server with your application and what files are required.
 author: David-Engel
-ms.author: v-davidengel
-ms.date: 07/31/2020
+ms.author: davidengel
+ms.date: 07/31/2024
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: conceptual
@@ -42,7 +42,7 @@ To unpack the tar file, move it to the directory where you want the driver insta
 
 ## Legalities of driver redistribution
 
-The JDBC Driver versions 6.0, 6.2, 6.4, 7.0, 7.2, 7.4, 8.2, and 8.4 are redistributable. Review the _Distributable Code_ clause in the license agreements.
+All versions of the JDBC Driver versions 6.0 and up are redistributable. Review the _Distributable Code_ clause in the license agreements.
 
 The JDBC Driver versions 4.x are old and obsolete. Support for 4.x expired before 2018.
 

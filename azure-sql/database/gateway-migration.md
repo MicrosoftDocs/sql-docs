@@ -5,7 +5,7 @@ author: rohitnayakmsft
 ms.author: rohitna
 ms.reviewer: wiassaf, vanto, mathoma
 ms.date: 02/14/2024
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.subservice: service-overview
 ms.topic: conceptual
 ms.custom:
@@ -29,8 +29,8 @@ You might be impacted if you:
 
 - Hard coded the IP address for any particular gateway in your on-premises firewall
 - Have any subnets using Microsoft.SQL as a Service Endpoint but can't communicate with the gateway IP addresses
-- Use the [zone redundant configuration for General Purpose tier](high-availability-sla.md#zone-redundant-availability)
-- Use the [zone redundant configuration for Premium & Business Critical tiers](high-availability-sla.md#zone-redundant-availability)
+- Use the [zone redundant configuration for General Purpose tier](high-availability-sla-local-zone-redundancy.md#zone-redundant-availability)
+- Use the [zone redundant configuration for Premium & Business Critical tiers](high-availability-sla-local-zone-redundancy.md#zone-redundant-availability)
 
 You won't be impacted if you have:
 

@@ -2,7 +2,7 @@
 title: "OLE DB Table-Valued Parameter Type Support (Properties)"
 description: Learn about OLE DB properties and property sets that are associated with table-valued parameter rowset objects in OLE DB Driver for SQL Server.
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: "06/14/2018"
 ms.service: sql
 ms.subservice: connectivity

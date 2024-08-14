@@ -2,7 +2,7 @@
 title: "Using Transparent Network IP Resolution"
 description: "Using Transparent Network IP Resolution"
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: "01/02/2020"
 ms.service: sql
 ms.subservice: connectivity

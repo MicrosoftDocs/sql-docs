@@ -2,7 +2,7 @@
 title: "Create SQL Server tables (OLE DB driver)"
 description: "Learn how the ITableDefinition::CreateTable function in the OLE DB Driver for SQL Server allows consumers to create SQL Server tables."
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: "06/14/2018"
 ms.service: sql
 ms.subservice: connectivity

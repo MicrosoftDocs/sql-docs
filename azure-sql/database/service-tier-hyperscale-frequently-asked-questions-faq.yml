@@ -3,7 +3,7 @@ metadata:
   title: Azure SQL Database Hyperscale FAQ
   description: Answers to common questions customers ask about a database in SQL Database in the Hyperscale service tier - commonly called a Hyperscale database.
   services: sql-database
-  ms.service: sql-database
+  ms.service: azure-sql-database
   ms.subservice: service-overview
   ms.custom: sqldbrb=1
   ms.devlang: 
@@ -11,7 +11,7 @@ metadata:
   author: dimitri-furman
   ms.author: dfurman
   ms.reviewer: wiassaf, mathoma
-  ms.date: 05/08/2024
+  ms.date: 07/03/2024
 title: Azure SQL Database Hyperscale FAQ
 summary: |
   [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
@@ -201,7 +201,7 @@ sections:
       - question: |
           Is database shrink supported?
         answer: |
-          Not at this time.
+          Yes, [database and file shrink operations](file-space-manage.md) are currently in preview. For more information on the preview, see [Shrink for Azure SQL Database Hyperscale](https://aka.ms/hs-shrink-preview).
 
       - question: |
           Is data compression supported?
@@ -289,8 +289,7 @@ sections:
       - question: |
           Does Hyperscale support Availability Zones?
         answer: |
-          Yes, Hyperscale supports [zone redundant configuration](high-availability-sla.md#hyperscale-service-tier-zone-redundant-availability). At least one HA secondary replica and the use of zone-redundant or geo-zone-redundant storage is required for enabling the zone redundant configuration for Hyperscale.
-
+          Yes, Hyperscale supports [zone redundant configuration](high-availability-sla-local-zone-redundancy.md#hyperscale-service-tier-zone-redundant-availability). At least one HA secondary replica and the use of zone-redundant or geo-zone-redundant storage is required for enabling the zone redundant configuration for Hyperscale.
       - question: |
           Does Hyperscale support elastic pools?
         answer: |

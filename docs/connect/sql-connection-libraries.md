@@ -2,7 +2,7 @@
 title: Connection libraries for Microsoft SQL Database
 description: Provides download links for modules, which enable connection to Microsoft SQL Server and Azure SQL Database, from various client programming languages.
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: 08/21/2023
 ms.reviewer: vanto
 ms.service: sql

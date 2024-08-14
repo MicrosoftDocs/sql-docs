@@ -1,9 +1,9 @@
 ### YamlMime:FAQ
 metadata:
-  title: Azure SQL Database free offer frequently asked questions (FAQ)
+  title: Free offer frequently asked questions (FAQ)
   description: Frequently asked questions on the Azure SQL Database free offer.
   services: sql-database
-  ms.service: sql-database
+  ms.service: azure-sql-database
   ms.subservice: service-overview
   ms.topic: faq
   author: WilliamDAssafMSFT

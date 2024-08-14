@@ -6,7 +6,7 @@ author: aamalvea
 ms.author: aamalvea
 ms.reviewer: wiassaf, mathoma, urosmil
 ms.date: 06/19/2024
-ms.service: sql-db-mi
+ms.service: azure-sql
 ms.subservice: service-overview
 ms.topic: conceptual
 ms.custom:
@@ -50,7 +50,7 @@ The maintenance window feature allows for the configuration of predictable maint
 
 Ensure that your client application is resilient to maintenance events before deploying to production.
 
-Testing will mitigate the risk of application faults and contributes to application availability for your end users. You can test behavior of your client application during planned maintenance events by [Testing Application Fault Resiliency](./high-availability-sla.md#testing-application-fault-resiliency) via PowerShell, CLI, or REST API.
+Testing will mitigate the risk of application faults and contributes to application availability for your end users. You can test behavior of your client application during planned maintenance events by [Testing Application Fault Resiliency](./high-availability-sla-local-zone-redundancy.md#testing-application-fault-resiliency) via PowerShell, CLI, or REST API.
 
 For Azure SQL Managed Instance, also review [initiating manual failover](https://aka.ms/mifailover-techblog). A manual failover produces identical behavior as maintenance event bringing primary replica offline.
 

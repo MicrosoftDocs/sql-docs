@@ -5,7 +5,7 @@ author: urosran
 ms.author: urandjelovic
 ms.reviewer: mathoma
 ms.date: 02/26/2024
-ms.service: sql-managed-instance
+ms.service: azure-sql-managed-instance
 ms.subservice: deployment-configuration
 ms.topic: quickstart
 ms.custom: mode-ui, devx-track-azurecli
@@ -81,7 +81,7 @@ The following table provides recommendations for the compute and storage for you
 | Setting| Suggested value | Description |
 | ------ | --------------- | ----------- |
 | **Service Tier** | General Purpose | The **General Purpose** tier is suitable for most production workloads, and is the default option. The improved [Next-gen General Purpose](service-tiers-next-gen-general-purpose-use.md) service tier is also a great choice for most workloads. For more information, review [resource limits](resource-limits.md).|
-| **Hardware generation** | Standard-series (Gen5) | Standard-series (gen5) is the default [hardware generation](resource-limits.md#hardware-configuration-characteristics), which defines compute and memory limits. **Standard-series (Gen5)** is the default.|
+| **Hardware generation** | Standard-series (Gen5) | Standard-series (Gen5) is the default [hardware generation](resource-limits.md#hardware-configuration-characteristics), which defines compute and memory limits. **Standard-series (Gen5)** is the default.|
 | **vCores** | Designate a value. | vCores represent the exact amount of compute resources that are always provisioned for your workload. **Eight vCores** is the default.|
 | **Storage in GB** | Designate a value. | Storage size in GB, select based on expected data size. |
 | **SQL Server License** | Select applicable licensing model. | Either pay as you go, use an existing SQL license with the [Azure Hybrid Benefit](../azure-hybrid-benefit.md), or enable the [Hybrid failover rights](managed-instance-link-feature-overview.md#license-free-passive-dr-replica) |
@@ -195,7 +195,7 @@ And finally, create your instance:
 
 ## Review network settings 
 
-Select the **Route table** resource in your resource group to review the default [user-defined route table object and entries to route traffic](connectivity-architecture-overview.md#mandatory-routes-with-service-aided-subnet-configuration) from, and within, the SQL Managed Instance virtual network. To change or add routes, open the **Routes** in the Route table settings. 
+Select the **Route table** resource in your resource group to review the default [user-defined route table object and entries to route traffic](subnet-service-aided-configuration-enable.md#mandatory-security-rules-and-routes) from, and within, the SQL Managed Instance virtual network. To change or add routes, open the **Routes** in the Route table settings.
 
 :::image type="content" source="./media/instance-create-quickstart/azure-sql-managed-instance-route-table-user-defined-route.png" alt-text="Screenshot of the Entry for a SQL Managed Instance subnet to local in the Azure portal. ":::
 

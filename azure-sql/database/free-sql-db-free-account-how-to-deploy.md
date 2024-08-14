@@ -5,7 +5,7 @@ author: rajeshsetlem
 ms.author: rsetlem
 ms.reviewer: wiassaf, randolphwest, mathoma
 ms.date: 09/25/2023
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.subservice: service-overview
 ms.topic: how-to
 ms.custom: template-how-to

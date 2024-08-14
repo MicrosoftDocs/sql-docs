@@ -27,7 +27,7 @@ This article teaches you to register a single SQL Server VM with the SQL IaaS Ag
 
 ## Overview
 
-Registering with the [SQL Server IaaS Agent extension](sql-server-iaas-agent-extension-automate-management.md) creates the [**SQL virtual machine** *resource*](manage-sql-vm-portal.md) within your subscription, which is a *separate* resource from the virtual machine resource. Unregistering your SQL Server VM from the extension removes the **SQL virtual machine** *resource* but won't drop the actual virtual machine.
+Registering with the [SQL Server IaaS Agent extension](sql-server-iaas-agent-extension-automate-management.md) creates the [**SQL virtual machine** *resource*](manage-sql-vm-portal.md) within your subscription, which is a *separate* resource from the virtual machine resource. Deleting the extension from your SQL Server VM removes the **SQL virtual machine** *resource* but doesn't drop the actual virtual machine.
 
 Deploying a SQL Server VM Azure Marketplace image through the Azure portal automatically registers the SQL Server VM with the extension. However, if you choose to self-install SQL Server on an Azure virtual machine, or provision an Azure virtual machine from a custom VHD, then you must register your SQL Server VM with the SQL IaaS Agent extension to unlock full feature benefits and manageability. By default, Azure VMs that have SQL Server 2016 or later installed will be automatically registered with the SQL IaaS Agent extension when detected by the [CEIP service](/sql/sql-server/usage-and-diagnostic-data-configuration-for-sql-server).  See the [SQL Server privacy supplement](/sql/sql-server/sql-server-privacy#non-personal-data) for more information. For information about privacy, see the [SQL IaaS Agent extension privacy statements](sql-server-iaas-agent-extension-automate-management.md#in-region-data-residency).
 
@@ -153,16 +153,16 @@ az sql vm show -n <vm_name> -g <resource_group>
 
 An error indicates that the SQL Server VM hasn't been registered with the extension.
 
-## Unregister from extension
+## Delete the extension
 
-To unregister your SQL Server VM with the SQL IaaS Agent extension, delete the SQL virtual machine *resource* using the Azure portal or Azure CLI. Deleting the SQL virtual machine *resource* doesn't delete the SQL Server VM.
+To unregister your SQL Server VM with the SQL IaaS Agent extension, delete the SQL virtual machine *resource* by using the Azure portal, PowerShell, or the Azure CLI. Deleting the SQL virtual machine *resource* doesn't delete the SQL Server VM.
 
-> [!CAUTION]  
-> **Use extreme caution** when unregistering your SQL Server VM from the extension. Follow the steps carefully because **it is possible to inadvertently delete the virtual machine** when attempting to remove the *resource*.
+> [!WARNING]  
+> **Use extreme caution** when deleting the extension from your SQL Server VM. Follow the steps carefully because **it is possible to inadvertently delete the virtual machine** when attempting to remove the *resource*.
 
 ### [Azure portal](#tab/azure-portal)
 
-Unregister your SQL Server VM from the extension using the Azure portal:
+To delete the extension from your SQL Server VM by using the Azure portal, follow these steps: 
 
 1. Sign into the [Azure portal](https://portal.azure.com).
 1. Navigate to the SQL VM resource.
@@ -178,15 +178,15 @@ Unregister your SQL Server VM from the extension using the Azure portal:
    :::image type="content" source="./media/sql-agent-extension-manually-register-single-vm/confirm-delete-of-resource-uncheck-box.png" alt-text="Screenshot showing how to uncheck the VM to prevent deleting the actual virtual machine, and then select Delete to proceed with deleting the SQL VM resource.":::
 
    > [!WARNING]  
-   > Failure to clear the checkbox next to the virtual machine name will *delete* the virtual machine entirely. Clear the checkbox to unregister the SQL Server VM from the extension but *not delete the actual virtual machine*.
+   > Failure to clear the checkbox next to the virtual machine name will *delete* the virtual machine entirely. Clear the checkbox to delete the extension from the SQL Server VM but *not delete the actual virtual machine*.
 
 1. Select **Delete** to confirm the deletion of the SQL virtual machine *resource*, and not the SQL Server VM.
 
 ### [Azure PowerShell](#tab/azure-powershell)
 
-To unregister your SQL Server VM from the extension with Azure PowerShell, use the [Remove-AzSqlVM](/powershell/module/az.sqlvirtualmachine/remove-azsqlvm) command. This removes the SQL Server VM *resource* but won't delete the virtual machine.
+To delete the extension from your SQL Server VM with Azure PowerShell, use the [Remove-AzSqlVM](/powershell/module/az.sqlvirtualmachine/remove-azsqlvm) command. This removes the SQL Server VM *resource* but doesn't delete the virtual machine.
 
-To unregister your SQL Server VM with Azure PowerShell:
+To delete the extension from your SQL Server VM with Azure PowerShell, use the following sample command:
 
 ```powershell-interactive
 Remove-AzSqlVM -ResourceGroupName <resource_group_name> -Name <SQL VM resource name>
@@ -194,9 +194,9 @@ Remove-AzSqlVM -ResourceGroupName <resource_group_name> -Name <SQL VM resource n
 
 ### [Azure CLI](#tab/azure-cli)
 
-To unregister your SQL Server VM from the extension with the Azure CLI, use the [az sql vm delete](/cli/azure/sql/vm#az-sql-vm-delete) command. This removes the SQL Server VM *resource* but doesn't delete the virtual machine.
+To delete the extension from your SQL Server VM with the Azure CLI, use the [az sql vm delete](/cli/azure/sql/vm#az-sql-vm-delete) command. This removes the SQL Server VM *resource* but doesn't delete the virtual machine.
 
-To unregister your SQL Server VM with the Azure CLI:
+To delete the extension from your SQL Server VM with the Azure CLI, use the following sample command:
 
 ```azurecli-interactive
 az sql vm delete
@@ -207,7 +207,7 @@ az sql vm delete
 
 ---
 
-## Next steps
+## Related content
 
 - Review the benefits provided by the [SQL IaaS Agent extension](sql-server-iaas-agent-extension-automate-management.md).
 - [Automatically register all VMs in a subscription](sql-agent-extension-automatic-registration-all-vms.md).

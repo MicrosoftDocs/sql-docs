@@ -1,11 +1,11 @@
 ---
-title: ActiveDirectoryInteractive connects to SQL
+title: Connect .NET with Microsoft Entra multifactor authentication
 description: "C# Code example, with explanations, for connecting to Azure SQL Database by using SqlAuthenticationMethod.ActiveDirectoryInteractive mode."
 author: nofield
 ms.author: nofield
 ms.reviewer: wiassaf, vanto, mathoma
 ms.date: 09/27/2023
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.subservice: security
 ms.topic: conceptual
 ms.custom:

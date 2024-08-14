@@ -175,7 +175,7 @@ For [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] packages for RHEL 9 and U
 
 #### [RHEL 9](#tab/rhel9)
 
-1. As a prerequisite, `cgroup-v1` needs to be enabled as per [Using cgroupfs to manually manage cgroups Red Hat Enterprise Linux 9](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/9/html/managing_monitoring_and_updating_the_kernel/assembly_using-cgroupfs-to-manually-manage-cgroups_managing-monitoring-and-updating-the-kernel#proc_mounting-cgroups-v1_assembly_using-cgroupfs-to-manually-manage-cgroups) from Red Hat.
+1. As a prerequisite, `cgroup-v1` needs to be enabled as per [Using cgroupfs to manually manage cgroups Red Hat Enterprise Linux 9](https://docs.redhat.com/documentation/red_hat_enterprise_linux/9/html/managing_monitoring_and_updating_the_kernel/assembly_using-cgroupfs-to-manually-manage-cgroups_managing-monitoring-and-updating-the-kernel#proc_mounting-cgroups-v1_assembly_using-cgroupfs-to-manually-manage-cgroups) from Red Hat.
 
 1. Then follow instructions to [install SQL Machine Learning Services](sql-server-linux-setup-machine-learning-sql-2022.md#install-runtimes-and-packages) as documented.
 

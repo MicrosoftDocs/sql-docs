@@ -4,13 +4,13 @@ description: Overview of adutil, a utility for configuring and managing Active D
 author: amitkh-msft
 ms.author: amitkh
 ms.reviewer: vanto, randolphwest
-ms.date: 02/15/2023
+ms.date: 06/24/2024
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
 ms.custom:
   - linux-related-content
-monikerRange: ">=sql-server-linux-2017||>=sql-server-2017||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-linux-2017 || >=sql-server-2017 || =sqlallproducts-allversions"
 ---
 
 # Introduction to adutil - Active Directory utility
@@ -53,6 +53,14 @@ If you don't accept the EULA during the time of install, when you run the **adut
 
 1. Download the Microsoft Red Hat repository configuration file.
 
+   **RHEL 9**
+
+   ```bash
+   sudo curl -o /etc/yum.repos.d/msprod.repo https://packages.microsoft.com/config/rhel/9/prod.repo
+   ```
+
+   **RHEL 8**
+
    ```bash
    sudo curl -o /etc/yum.repos.d/msprod.repo https://packages.microsoft.com/config/rhel/8/prod.repo
    ```
@@ -73,18 +81,25 @@ If you don't accept the EULA during the time of install, when you run the **adut
 
 1. Import the public repository GPG keys and then register the Microsoft Ubuntu repository.
 
-   ### Ubuntu 18.04
+   **Ubuntu 22.04**
 
    ```bash
    curl https://packages.microsoft.com/keys/microsoft.asc | sudo tee /etc/apt/trusted.gpg.d/microsoft.asc
-   curl https://packages.microsoft.com/config/ubuntu/18.04/prod.list | sudo tee /etc/apt/sources.list.d/msprod.list
+   curl https://packages.microsoft.com/config/ubuntu/22.04/prod.list | sudo tee /etc/apt/sources.list.d/msprod.list
    ```
 
-   ### Ubuntu 20.04
+   **Ubuntu 20.04**
 
    ```bash
    curl https://packages.microsoft.com/keys/microsoft.asc | sudo tee /etc/apt/trusted.gpg.d/microsoft.asc
    curl https://packages.microsoft.com/config/ubuntu/20.04/prod.list | sudo tee /etc/apt/sources.list.d/msprod.list
+   ```
+
+   **Ubuntu 18.04**
+
+   ```bash
+   curl https://packages.microsoft.com/keys/microsoft.asc | sudo tee /etc/apt/trusted.gpg.d/microsoft.asc
+   curl https://packages.microsoft.com/config/ubuntu/18.04/prod.list | sudo tee /etc/apt/sources.list.d/msprod.list
    ```
 
 1. If you had a previous preview version of **adutil** installed, remove any older **adutil** packages using the below command.
@@ -104,18 +119,18 @@ If you don't accept the EULA during the time of install, when you run the **adut
 
 1. Add the Microsoft SQL Server repository to Zypper.
 
-   ### SLES 12
-
-   ```bash
-   sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
-   sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/prod.repo
-   ```
-
-   ### SLES 15
+   **SLES 15**
 
    ```bash
    sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
    sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/15/prod.repo
+   ```
+
+   **SLES 12**
+
+   ```bash
+   sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
+   sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/prod.repo
    ```
 
 1. If you had a previous preview version of **adutil** installed, remove any older **adutil** packages using the below command.
@@ -127,6 +142,7 @@ If you don't accept the EULA during the time of install, when you run the **adut
 1. Run the following command to install **adutil**. `ACCEPT_EULA=Y` accepts the EULA for **adutil**. The EULA is placed at the path `/usr/share/adutil/`.
 
    ```bash
+   sudo zypper refresh
    sudo ACCEPT_EULA=Y zypper install -y adutil
    ```
 

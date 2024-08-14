@@ -31,7 +31,7 @@ This sample bash script installs [!INCLUDE [ssnoversion-md](../includes/ssnovers
 
 This example installs [!INCLUDE [sssql19-md](../includes/sssql19-md.md)] on RHEL 8.x. If you want to install a different version of [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] or RHEL, change the Microsoft repository paths accordingly.
 
-Save the sample script to a file. To customize it, you need to replace the variable values in the script. You can also set any of the scripting variables as environment variables, as long as you remove them from the script file.
+Save the sample script to a file. To customize it, You must replace the variable values in the script. You can also set any of the scripting variables as environment variables, as long as you remove them from the script file.
 
 > [!IMPORTANT]  
 > The `SA_PASSWORD` environment variable is deprecated. Use `MSSQL_SA_PASSWORD` instead.
@@ -173,7 +173,7 @@ To run the script:
 
 ## Understand the script
 
-The first thing the bash script does is set a few variables. These variables can be either scripting variables, like the sample, or environment variables. The variable `MSSQL_SA_PASSWORD` is **required** by SQL Server installation, the others are custom variables created for the script. The sample script performs the following steps:
+The first thing the bash script does is set a few variables. These variables can be either scripting variables, like the sample, or environment variables. The variable `MSSQL_SA_PASSWORD` is **required** by SQL Server installation. The others are custom variables created for the script. The sample script performs the following steps:
 
 1. Import the public Microsoft GPG keys.
 

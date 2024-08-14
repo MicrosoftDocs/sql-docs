@@ -2,7 +2,7 @@
 title: "Overview of the Microsoft Drivers for PHP for SQL Server"
 description: "Learn an overview of the Microsoft SQLSRV and PDO_SQSRV Drivers for PHP for SQL Server and how you can use them in a PHP application for database access."
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: "03/27/2018"
 ms.service: sql
 ms.subservice: connectivity

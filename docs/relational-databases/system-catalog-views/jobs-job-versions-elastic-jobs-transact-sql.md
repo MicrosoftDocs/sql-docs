@@ -4,7 +4,7 @@ description: "The jobs.job_versions system view contains job version history in 
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: 11/13/2023
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:

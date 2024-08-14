@@ -6,7 +6,7 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: dinethi, mathoma, danil, randolphwest, 
 ms.date: 10/04/2023
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.subservice: backup-restore
 ms.topic: conceptual
 ms.custom:

@@ -1,17 +1,18 @@
 ---
-title: "Quickstart: Connect to Azure SQL Database with GitHub Actions"
-description: Use Azure SQL from a GitHub Actions workflow
+title: "Quickstart: Connect to database with GitHub Actions"
+description: Use Azure SQL Database from a GitHub Actions workflow
 author: juliakm
 ms.author: jukullam
 ms.reviewer: wiassaf, mathoma
 ms.date: 12/13/2023
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.subservice: connect
 ms.topic: quickstart
 ms.custom: github-actions-azure, mode-other, devx-track-azurecli
 ---
 
 # Use GitHub Actions to connect to Azure SQL Database
+[!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
 Get started with [GitHub Actions](https://docs.github.com/en/actions) by using a workflow to deploy database updates to [Azure SQL Database](../azure-sql-iaas-vs-paas-what-is-overview.md). 
 

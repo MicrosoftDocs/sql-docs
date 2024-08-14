@@ -4,8 +4,8 @@ description: This article describes the Hyperscale service tier in the vCore-bas
 author: dimitri-furman
 ms.author: dfurman
 ms.reviewer: wiassaf, mathoma, oslake, randolphwest
-ms.date: 02/22/2024
-ms.service: sql-database
+ms.date: 07/02/2024
+ms.service: azure-sql-database
 ms.subservice: service-overview
 ms.topic: conceptual
 ms.custom:
@@ -24,10 +24,9 @@ Azure SQL Database is based on SQL Server Database Engine architecture that is a
 
 The Hyperscale service tier is suitable for all workload types. Its cloud-native architecture provides independently scalable compute and storage to support the widest variety of traditional and modern applications. Compute and storage resources in Hyperscale substantially exceed the resources available in the General Purpose and Business Critical tiers.
 
-> [!NOTE]  
->  
-> - For details on the General Purpose and Business Critical service tiers in the vCore-based purchasing model, see [General Purpose](service-tier-general-purpose.md) and [Business Critical](service-tier-business-critical.md) service tiers. For a comparison of the vCore-based purchasing model with the DTU-based purchasing model, see [Compare vCore and DTU-based purchasing models of Azure SQL Database](purchasing-models.md).
-> - The Hyperscale service tier is currently only available for Azure SQL Database, and not for Azure SQL Managed Instance.
+For details on the General Purpose and Business Critical service tiers in the vCore-based purchasing model, see [General Purpose](service-tier-general-purpose.md) and [Business Critical](service-tier-business-critical.md) service tiers. For a comparison of the vCore-based purchasing model with the DTU-based purchasing model, see [Compare vCore and DTU-based purchasing models of Azure SQL Database](purchasing-models.md).
+
+The Hyperscale service tier is currently only available for Azure SQL Database, and not for Azure SQL Managed Instance.
 
 ## What are the Hyperscale capabilities
 
@@ -128,7 +127,7 @@ Hyperscale separates the query processing engine from the components that provid
 
 The following diagram illustrates the functional Hyperscale architecture:
 
-:::image type="content" source="media/service-tier-Hyperscale/Hyperscale-architecture.png" alt-text="Diagram showing Hyperscale architecture." lightbox="media/service-tier-Hyperscale/Hyperscale-architecture.png":::
+:::image type="content" source="media/service-tier-hyperscale/Hyperscale-architecture.png" alt-text="Diagram showing Hyperscale architecture." lightbox="media/service-tier-hyperscale/Hyperscale-architecture.png":::
 
 Learn more about the [Hyperscale distributed functions architecture](hyperscale-architecture.md).
 
@@ -148,7 +147,7 @@ You can create and manage Hyperscale databases using the Azure portal, Transact-
 
 ## Database high availability in Hyperscale
 
-As in all other service tiers, Hyperscale guarantees data durability for committed transactions regardless of compute replica availability. The extent of downtime due to the primary replica becoming unavailable depends on the type of failover (planned vs. unplanned), [whether zone redundancy is configured](high-availability-sla.md#hyperscale-service-tier-zone-redundant-availability), and on the presence of at least one high-availability replica. In a planned failover (such as a maintenance event), the system either creates the new primary replica before initiating a failover, or uses an existing high-availability replica as the failover target. In an unplanned failover (such as a hardware failure on the primary replica), the system uses a high-availability replica as a failover target if one exists, or creates a new primary replica from the pool of available compute capacity. In the latter case, downtime duration is longer due to extra steps required to create the new primary replica.
+As in all other service tiers, Hyperscale guarantees data durability for committed transactions regardless of compute replica availability. The extent of downtime due to the primary replica becoming unavailable depends on the type of failover (planned vs. unplanned), [whether zone redundancy is configured](high-availability-sla-local-zone-redundancy.md#hyperscale-service-tier-zone-redundant-availability), and on the presence of at least one high-availability replica. In a planned failover (such as a maintenance event), the system either creates the new primary replica before initiating a failover, or uses an existing high-availability replica as the failover target. In an unplanned failover (such as a hardware failure on the primary replica), the system uses a high-availability replica as a failover target if one exists, or creates a new primary replica from the pool of available compute capacity. In the latter case, downtime duration is longer due to extra steps required to create the new primary replica.
 
 You can [choose a maintenance window](maintenance-window.md?view=azuresql-db&preserve-view=true) that allows you to make impactful maintenance events predictable and less disruptive for your workload.
 
@@ -164,16 +163,19 @@ If you need to restore a Hyperscale database in Azure SQL Database to a region o
 
 Learn more in [restoring a Hyperscale database to a different region](hyperscale-automated-backups-overview.md#restore-a-hyperscale-database-to-a-different-region).
 
+## Shrink
+
+[Database and file shrink operations](file-space-manage.md) are currently in preview for Azure SQL Database Hyperscale. For more information on the preview, see [Shrink for Azure SQL Database Hyperscale](https://aka.ms/hs-shrink-preview).
+
 ## Known limitations
 
 These are the current limitations of the Hyperscale service tier. We're actively working to remove as many of these limitations as possible.
 
 | Issue | Description |
 | :--- | :--- |
+| Shrink is blocked when TDE is disabled | Currently, database and file shrink operations are not supported when Transparent Data Encryption (TDE) is disabled in Azure SQL Database Hyperscale.|
 | Restore database from other service tiers | A non-Hyperscale database can't be restored as a Hyperscale database, and a Hyperscale database can't be restored as a non-Hyperscale database.<br /><br />For databases migrated to Hyperscale from other Azure SQL Database service tiers, pre-migration backups are kept for the duration of [backup retention](automated-backups-overview.md#backup-retention) period of the source database, including long-term retention policies. Restoring a pre-migration backup within the backup retention period of the database is supported [via the command line](recovery-using-backups.md#point-in-time-restore). You can restore these backups to any non-Hyperscale service tier. |
-| Elastic Pools | [Elastic pools](hyperscale-elastic-pool-overview.md) are now in preview. |
 | Migration of databases with In-Memory OLTP objects | Hyperscale supports a subset of In-Memory OLTP objects, including memory-optimized table types, table variables, and natively compiled modules. However, when any In-Memory OLTP objects are present in the database being migrated, migration from Premium and Business Critical service tiers to Hyperscale isn't supported. To migrate such a database to Hyperscale, all In-Memory OLTP objects and their dependencies must be dropped. After the database is migrated, these objects can be recreated. Durable and non-durable memory-optimized tables aren't currently supported in Hyperscale and must be changed to disk tables. |
-| Shrink Database | DBCC SHRINKDATABASE, DBCC SHRINKFILE, or setting AUTO_SHRINK to ON at the database level, aren't currently supported for Hyperscale databases. |
 | Database integrity check | DBCC CHECKDB isn't currently supported for Hyperscale databases. DBCC CHECKTABLE ('TableName') WITH TABLOCK and DBCC CHECKFILEGROUP WITH TABLOCK might be used as a workaround. See [Data Integrity in Azure SQL Database](https://azure.microsoft.com/blog/data-integrity-in-azure-sql-database/) for details on data integrity management in Azure SQL Database. |
 | Elastic Jobs | Using a Hyperscale database as the Job database isn't supported. However, elastic jobs can target Hyperscale databases in the same way as any other database in Azure SQL Database. |
 | Data Sync | Using a Hyperscale database as a Hub or Sync Metadata database isn't supported. However, a Hyperscale database can be a member database in a Data Sync topology. |

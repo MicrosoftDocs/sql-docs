@@ -5,8 +5,8 @@ description: Learn about the currently known issues with Azure SQL Managed Insta
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest, mathoma
-ms.date: 04/17/2024
-ms.service: sql-managed-instance
+ms.date: 07/02/2024
+ms.service: azure-sql-managed-instance
 ms.subservice: service-overview
 ms.topic: conceptual
 ms.custom:
@@ -29,7 +29,7 @@ This article lists the currently known issues with [Azure SQL Managed Instance](
 | [The event_file target of the system_health event session is not accessible](#the-event_file-target-of-the-system_health-event-session-is-not-accessible) | Dec 2023 | Has Workaround | |
 | [Procedure sp_send_dbmail might fail when @query parameter is used on Nov22FW enabled managed instances](#procedure-sp_send_dbmail-may-fail-when-query-parameter-is-used-on-nov22fw-enabled-managed-instances) | Dec 2023 | Has Workaround | |
 | [Increased number of system logins used for transactional replication](#increased-number-of-system-logins-used-for-transactional-replication) | Dec 2022 | No resolution | |
-| [msdb table for manual backups doesn't preserve the username](#msdb-table-for-manual-backups-doesnt-preserve-the-username) | Nov 2022 | No resolution | |
+| [msdb table for manual backups doesn't preserve the username](#msdb-table-for-manual-backups-doesnt-preserve-the-username) | Nov 2022 | Resolved | Aug 2023 |
 | [Interim guidance on 2022 time zone updates for Chile](#interim-guidance-on-2022-time-zone-updates-for-chile) | Aug 2022 | Has Workaround | |
 | [Querying external table fails with 'not supported' error message](#querying-external-table-fails-with-not-supported-error-message) | Jan 2022 | Resolved | Sep 2022 |
 | [When using SQL Server authentication, usernames with '@' aren't supported](#when-using-sql-server-authentication-usernames-with--arent-supported) | Oct 2021 | Resolved | Feb 2022 |
@@ -70,9 +70,9 @@ This article lists the currently known issues with [Azure SQL Managed Instance](
 
 ### List of long-term backups in Azure portal shows backup files for active and deleted databases with the same name
 
-Long-term backups can be listed and managed on Azure portal page for an Azure SQL Managed Instance on _Backups_ tab. The page lists active or deleted databases, basic information about their long-term backups, and link for managing backups. Clicking on the _Manage_ link opens a new side blade with list of backups. Due to an issue with the filtering logic, the list shows backups for both active database and deleted databases with the same name. This requires a special attention when selecting backups for deletion, to avoid deleting backups for a wrong database.
+Long-term backups can be listed and managed on Azure portal page for an Azure SQL Managed Instance on _Backups_ tab. The page lists active or deleted databases, basic information about their long-term backups, and link for managing backups. When you select the _Manage_ link, a new side pane opens with list of backups. Due to an issue with the filtering logic, the list shows backups for both active database and deleted databases with the same name. This requires a special attention when selecting backups for deletion, to avoid deleting backups for a wrong database.
 
-**Workaround**: Use displayed _Backup time (UTC)_ information in the list to differentiate backups belonging to databases with the same name that existed on the instance at different periods. Alternatively, use PowerShell commands [Get-AzSqlInstanceDatabaseLongTermRetentionBackup](/powershell/module/az.sql/get-azsqlinstancedatabaselongtermretentionbackup) and [Remove-AzSqlInstanceDatabaseLongTermRetentionBackup](/powershell/module/az.sql/remove-azsqlinstancedatabaselongtermretentionbackup), or CLI commands [az sql midb ltr-backup list](/cli/azure/sql/midb/ltr-backup?view=azure-cli-latest#az-sql-midb-ltr-backup-list) and [az sql midb ltr-backup delete](/cli/azure/sql/midb/ltr-backup?view=azure-cli-latest#az-sql-midb-ltr-backup-delete) to manage long-term backups using _DatabaseState_ parameter and _DatabaseDeletionTime_ return value to filter backups for a database.
+**Workaround**: Use displayed _Backup time (UTC)_ information in the list to differentiate backups belonging to databases with the same name that existed on the instance at different periods. Alternatively, use PowerShell commands [Get-AzSqlInstanceDatabaseLongTermRetentionBackup](/powershell/module/az.sql/get-azsqlinstancedatabaselongtermretentionbackup) and [Remove-AzSqlInstanceDatabaseLongTermRetentionBackup](/powershell/module/az.sql/remove-azsqlinstancedatabaselongtermretentionbackup), or CLI commands [az sql midb ltr-backup list](/cli/azure/sql/midb/ltr-backup?view=azure-cli-latest&preserve-view=true#az-sql-midb-ltr-backup-list) and [az sql midb ltr-backup delete](/cli/azure/sql/midb/ltr-backup?view=azure-cli-latest&preserve-view=true#az-sql-midb-ltr-backup-delete) to manage long-term backups using _DatabaseState_ parameter and _DatabaseDeletionTime_ return value to filter backups for a database.
 
 ### The event_file target of the system_health event session is not accessible
 
@@ -80,9 +80,9 @@ When you attempt to read the contents of the `event_file` target of the `system_
 
 This change in behavior is an unintended consequence of a recent required security fix. We are investigating the feasibility of an additional change that would allow customers to continue using the `system_health` session on Azure SQL Managed Instance securely. In the meantime, customers can work around this issue by creating their own equivalent of the `system_health` session with an `event_file` target in Azure blob storage. For more information, including a T-SQL script to create the `system_health` session that can be modified to create your own equivalent of `system_health`, see [Use the system_health session](/sql/relational-databases/extended-events/use-the-system-health-session).
 
-### <a id="procedure-sp_send_dbmail-may-fail-when-query-parameter-is-used-on-nov22fw-enabled-managed-instances"></a> Procedure sp_send_dbmail might fail when @query parameter is used on Nov22FW enabled managed instances
+### <a id="procedure-sp_send_dbmail-may-fail-when-query-parameter-is-used-on-nov22fw-enabled-managed-instances"></a> Procedure sp_send_dbmail might fail when @query parameter
 
-Procedure `sp_send_dbmail` might fail when `@query` parameter is used, and this affects instances that have November 2022 feature wave enabled. Failures happen when the stored procedure is executed under sysadmin account.
+Procedure `sp_send_dbmail` might fail when `@query` parameter is used.. Failures happen when the stored procedure is executed under sysadmin account.
 
 This problem is caused by a known bug related to how `sp_send_dbmail` is using impersonation.
 
@@ -119,7 +119,7 @@ On August 8, 2022, the Chilean government made an official announcement about a 
 
 **Workaround**: If you need to alter affected time zones for your managed instances, be aware of the [limitations](timezones-overview.md#limitations) and follow the guidance from the documentation.
 
-### Changing the connection type doesn't affect connections through the failover group endpoint
+### <a id="changing-the-connection-type-doesnt-affect-connections-through-the-failover-group-endpoint"></a> Change the connection type doesn't affect connections through the failover group endpoint
 
 If an instance participates in a [failover group](failover-group-sql-mi.md), changing the instance's [connection type](connection-types-overview.md) doesn't take effect for the connections established through the failover group listener endpoint.
 
@@ -240,7 +240,7 @@ This example illustrates that under certain circumstances, due to a specific dis
 
 In this example, existing databases continue to work and can grow without any problem as long as new files aren't added. New databases can't be created or restored because there isn't enough space for new disk drives, even if the total size of all databases doesn't reach the instance size limit. The error that's returned in that case isn't clear.
 
-You can [identify the number of remaining files](https://medium.com/azure-sqldb-managed-instance/how-many-files-you-can-create-in-general-purpose-azure-sql-managed-instance-e1c7c32886c1) by using system views. If you reach this limit, try to [empty and delete some of the smaller files by using the DBCC SHRINKFILE statement](/sql/t-sql/database-console-commands/dbcc-shrinkfile-transact-sql#d-emptying-a-file) or switch to the [Business Critical tier, which doesn't have this limit](../managed-instance/resource-limits.md#service-tier-characteristics).
+You can [identify the number of remaining files](https://medium.com/azure-sqldb-managed-instance/how-many-files-you-can-create-in-general-purpose-azure-sql-managed-instance-e1c7c32886c1) by using system views. If you reach this limit, try to [empty and delete some of the smaller files by using the DBCC SHRINKFILE statement](/sql/t-sql/database-console-commands/dbcc-shrinkfile-transact-sql?view=azuresqlmi-current&preserve-view=true#d-emptying-a-file) or switch to the [Business Critical tier, which doesn't have this limit](../managed-instance/resource-limits.md#service-tier-characteristics).
 
 ### GUID values shown instead of database names
 
@@ -293,10 +293,6 @@ using (var scope = new TransactionScope())
 
 Azure SQL Managed Instance service is creating system login for purposes of transactional replication. This login can be found in SSMS (in **Object explorer**, under **Security**, **Logins**) or in system view `sys.syslogins`. Login name format looks like `'DBxCy\WF-abcde01234QWERT'`, and the login has public server role. Under certain conditions, this login is recreated, and due to a fault in the system previous login isn't deleted. This can lead to increased number of logins. These logins don't represent a security threat. They can be safely ignored. These logins shouldn't be deleted because at least one of them is being used for transactional replication.
 
-### <a id="msdb-table-for-manual-backups-doesnt-preserve-the-username"></a> Table for manual backups in msdb doesn't preserve the username
-
-We recently introduced support for auto backups in `msdb`, but the table doesn't currently contain username information.
-
 <a name='azure-ad-logins-and-users-arent-supported-in-ssdt'></a>
 
 ### Microsoft Entra logins and users aren't supported in SSDT
@@ -334,6 +330,10 @@ The issue will be addressed through scaling operation redesign.
 
 ## Resolved
 
+### <a id="msdb-table-for-manual-backups-doesnt-preserve-the-username"></a> Table for manual backups in msdb doesn't preserve the username
+
+**(Resolved in August 2023)** We recently introduced support for auto backups in `msdb`, but the table doesn't currently contain username information.
+
 ### <a id="querying-external-table-fails-with-not-supported-error-message"></a> Query on external table fails with not supported error message
 
 Querying external table might fail with generic error message "Queries over external tables are not supported with the current service tier or performance level of this database. Consider upgrading the service tier or performance level of the database". The only type of external table supported in Azure SQL Managed Instance are PolyBase external tables (in preview). To allow queries on PolyBase external tables, you need to enable PolyBase on managed instance by running `sp_configure` command.
@@ -356,11 +356,11 @@ GO
 
 Usernames that contain the '@' symbol in the middle (for example, `'abc@xy'`) aren't able to sign in using SQL Server authentication.
 
-### Restoring manual backup without CHECKSUM might fail
+### <a id="restoring-manual-backup-without-checksum-might-fail"></a> Restore manual backup without CHECKSUM might fail
 
-In certain circumstances manual backup of databases that was made on a managed instance without CHECKSUM might fail to be restored. In such cases, retry restoring the backup until you're successful.
+**(Resolved in June 2020)** In certain circumstances manual backup of databases that was made on a managed instance without CHECKSUM might fail to be restored. In such cases, retry restoring the backup until you're successful.
 
-**Workaround**: Take manual backups of databases on managed instances with CHECKSUM enabled.
+**Workaround:** Take manual backups of databases on managed instances with CHECKSUM enabled.
 
 ### Agent becomes unresponsive upon modifying, disabling, or enabling existing jobs
 

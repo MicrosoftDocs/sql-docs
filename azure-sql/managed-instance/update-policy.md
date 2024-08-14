@@ -6,7 +6,7 @@ author: MladjoA
 ms.author: mlandzic
 ms.reviewer: mathoma
 ms.date: 05/22/2024
-ms.service: sql-managed-instance
+ms.service: azure-sql-managed-instance
 ms.subservice: deployment-configuration
 ms.topic: how-to
 ms.custom:
@@ -25,7 +25,7 @@ Azure SQL Managed Instance offers the following two update policies:
 - **Always-up-to-date** update policy: The instance has access to all SQL engine features as soon as they're available in Azure. The internal database format is no longer aligned with the latest version of SQL Server, and instead evolves with each newly introduced feature.
 
 > [!IMPORTANT]
-> Regardless of the configured update policy, all instances will continue receiving updates and features that _don't_ require changes to the SQL engine, such as the following features:  [zone redundancy](high-availability-sla.md#zone-redundant-availability), [instance stop and start](instance-stop-start-how-to.md), and [fast provisioning](management-operations-overview.md?#fast-provisioning). 
+> Regardless of the configured update policy, all instances will continue receiving updates and features that _don't_ require changes to the SQL engine, such as the following features:  [zone redundancy](high-availability-sla-local-zone-redundancy.md#zone-redundant-availability), [instance stop and start](instance-stop-start-how-to.md), and [fast provisioning](management-operations-overview.md?#fast-provisioning). 
 
 ## SQL Server 2022 update policy
 
@@ -49,7 +49,6 @@ The **Always-up-to-date** update policy configures your instance to receive all 
 When using the **Always-up-to-date** update policy, consider the following:
 
 - You're able to use all the new features and benefits available to Azure SQL Managed Instance. 
-- The **Always-up-to-date** update policy is only available to instances within subnets that have enabled the [November 2022 feature wave](november-2022-feature-wave-enroll.md). 
 - Once the **Always-up-to-date** policy is enabled, you can't go back to the **SQL Server 2022** update policy.
 - You lose some of the benefits provided by database format alignment with SQL Server 2022, such as the ability to restore your database to SQL Server 2022, and bidirectional failover between your instance and SQL Server 2022 with the [link](managed-instance-link-disaster-recovery.md) feature. 
 

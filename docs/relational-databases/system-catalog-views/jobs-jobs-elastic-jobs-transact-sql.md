@@ -4,7 +4,7 @@ description: "The jobs.jobs system view contains configuration information about
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: 11/13/2023
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:

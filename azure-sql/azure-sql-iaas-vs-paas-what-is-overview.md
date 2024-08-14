@@ -5,7 +5,7 @@ author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: wiassaf, mathoma
 ms.date: 08/21/2023
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.subservice: service-overview
 ms.topic: overview
 ms.custom: 

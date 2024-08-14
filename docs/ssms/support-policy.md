@@ -4,7 +4,7 @@ description: "SQL Server Management Studio (SSMS) support policy"
 author: erinstellato-ms
 ms.author: erinstellato
 ms.reviewer: maghan, randolphwest
-ms.date: 04/22/2024
+ms.date: 07/09/2024
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
@@ -27,7 +27,7 @@ For the best experience, we recommend that you install the most recent version v
 
 Beginning with version 18.0, all security updates, critical updates, hotfixes, and any new features, are released only in the latest point release of a major version. Once a new version of SSMS is released to the public, whether it's a point release within a major version or a major version itself, we recommend that you update to the latest release.
 
-For example, SSMS 19.3 was released in January 2024, and SSMS 20.1 was released in April 2024. If a customer is using SSMS 19.3 and encounters an issue, the customer must upgrade to SSMS 20.1 and determine if the issue still exists. If the issue still exists in SSMS 20.1, it should be [reported to the SSMS team](https://aka.ms/ssms-feedback). A fix may be then provided in a later release of SSMS.
+For example, SSMS 19.3 was released in January 2024, and SSMS 20.2 was released in July 2024. If a customer is using SSMS 19.3 and encounters an issue, the customer must upgrade to SSMS 20.2 and determine if the issue still exists. If the issue still exists in SSMS 20.2, it should be [reported to the SSMS team](https://aka.ms/ssms-feedback). A fix may be then provided in a later release of SSMS.
 
 The SSMS team doesn't actively back-port fixes to an earlier release.
 
@@ -41,7 +41,7 @@ Refer to the following table for SQL Server Management Studio servicing support.
 | 18.12.1 | | Full support | Upgrade | Upgrade | Upgrade |
 | 19.3 | | | Full support | Upgrade | Upgrade |
 | 20.0 | | | | Full support | Upgrade |
-| 20.1 | | | | | Full support |
+| 20.2 | | | | | Full support |
 
 > [!NOTE]  
 > The latest current branch version is always in the **Full support** servicing phase. This support statement means that if you encounter a code defect that warrants a critical update, you must have the latest current branch version installed in order to receive a fix.

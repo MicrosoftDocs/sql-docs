@@ -2,7 +2,7 @@
 title: SQL Server connection pooling
 description: Learn how Microsoft SqlClient Data Provider for SQL Server minimizes the cost of opening connections by using SQL Server connection pooling, which reduces overhead for new connections.
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: 03/07/2023
 ms.service: sql
 ms.subservice: connectivity

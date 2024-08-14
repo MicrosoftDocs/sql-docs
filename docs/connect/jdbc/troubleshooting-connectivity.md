@@ -2,7 +2,7 @@
 title: "Troubleshooting connectivity"
 description: "Learn about JDBC connectivity and how to troubleshoot potential connection issues when using the Microsoft JDBC Driver for SQL Server."
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: "08/12/2019"
 ms.service: sql
 ms.subservice: connectivity

@@ -5,7 +5,7 @@ author: yorek
 ms.author: damauri
 ms.reviewer: mathoma, urmilano
 ms.date: 12/17/2018
-ms.service: sql-db-mi
+ms.service: azure-sql
 ms.subservice: service-overview
 ms.topic: conceptual
 ms.custom: sqldbrb=2

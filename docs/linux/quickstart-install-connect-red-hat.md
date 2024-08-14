@@ -43,7 +43,7 @@ For more information on supported platforms, see [Release notes for [!INCLUDE [s
 
 > [!TIP]  
 > This tutorial requires user input and an internet connection. If you're interested in the [unattended](sql-server-linux-setup.md#unattended) or [offline](sql-server-linux-setup.md#offline) installation procedures, see [Installation guidance for SQL Server on Linux](sql-server-linux-setup.md).
-If you choose to have a pre-installed SQL Server VM on RHEL ready to run your production-based workload, then please follow the [best practices](/azure/azure-sql/virtual-machines/windows/performance-guidelines-best-practices-checklist) for creating the SQL Server VM.
+If you choose to have a pre-installed [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] VM on RHEL ready to run your production-based workload, then please follow the [best practices](/azure/azure-sql/virtual-machines/windows/performance-guidelines-best-practices-checklist) for creating the SQL Server VM.
 
 <!--SQL Server 2019 on Linux-->
 ::: moniker range="= sql-server-linux-ver15 || = sql-server-ver15"
@@ -54,9 +54,9 @@ You can create your VM based on the following Azure Marketplace image:
 
 - [RHEL 8.x](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2019-rhel8)
 
-When you use the above marketplace image, you avoid the installation step, and can directly configure the instance by providing the SKU and the `sa` password needed to get started with SQL Server. SQL Server Azure VMs deployed on RHEL using the above Marketplace images, are fully supported by both Microsoft and Red Hat.
+When you use the above marketplace image, you avoid the installation step, and can directly configure the instance by providing the SKU and the `sa` password needed to get started with [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)]. [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] Azure VMs deployed on RHEL using the above Marketplace images, are fully supported by both Microsoft and Red Hat.
 
-You can configure SQL Server on Linux with **mssql-conf**, using the following command:
+You can configure [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on Linux with **mssql-conf**, using the following command:
 
 ```bash
 sudo /opt/mssql/bin/mssql-conf setup
@@ -239,11 +239,11 @@ At this point, [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] is run
 
 ### [Red Hat 9](#tab/rhel9)
 
-Starting with RHEL 9, you can run [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] as a confined application with SELinux enabled. For more information about confined and unconfined applications with SELinux, see [Getting started with SELinux](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/9/html/using_selinux/getting-started-with-selinux_using-selinux).
+Starting with RHEL 9, you can run [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] as a confined application with SELinux enabled. For more information about confined and unconfined applications with SELinux, see [Getting started with SELinux](https://docs.redhat.com/documentation/red_hat_enterprise_linux/9/html/using_selinux/getting-started-with-selinux_using-selinux).
 
 To run [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] as a confined application, follow these steps:
 
-- Ensure that [SELinux is enabled and in enforcing mode](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/9/html/using_selinux/changing-selinux-states-and-modes_using-selinux).
+- Ensure that [SELinux is enabled and in enforcing mode](https://docs.redhat.com/documentation/red_hat_enterprise_linux/9/html/using_selinux/changing-selinux-states-and-modes_using-selinux).
 
 - Install the `mssql-server` package using the steps mentioned later in this section.
 
@@ -276,7 +276,7 @@ To configure [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on RHEL 
    Optionally, if you want to run [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] as a confined application, install the `mssql-server-selinux` package, which enables custom policies.
 
    ```bash
-   sudo yum install -y mssql-server
+   sudo yum install -y mssql-server-selinux
    ```
 
 1. After the package installation finishes, run `mssql-conf setup` using its full path, and follow the prompts to set the SA password and choose your edition. As a reminder, the following [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] editions are freely licensed: Evaluation, Developer, and Express.

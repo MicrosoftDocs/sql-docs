@@ -5,7 +5,7 @@ author: Madhumitatripathy
 ms.author: matripathy
 ms.reviewer: wiassaf, vanto, mathoma
 ms.date: 04/05/2022
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.subservice: security
 ms.topic: how-to
 ms.custom: sqldbrb=1

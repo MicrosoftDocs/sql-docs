@@ -2,7 +2,7 @@
 title: "How to: specify PHP data types"
 description: "Learn how to specify PHP Data Types when retrieving data using the Microsoft Drivers for PHP for SQL Server"
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: "08/10/2020"
 ms.service: sql
 ms.subservice: connectivity

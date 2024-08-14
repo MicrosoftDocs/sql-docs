@@ -2,7 +2,7 @@
 title: "ODBC API Reference"
 description: "ODBC API Reference"
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.reviewer: randolphwest
 ms.date: 12/15/2023
 ms.service: sql

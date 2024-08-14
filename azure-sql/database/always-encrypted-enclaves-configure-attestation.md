@@ -5,7 +5,7 @@ author: Pietervanhove
 ms.author: pivanho
 ms.reviewer: vanto, mathoma
 ms.date: 11/14/2023
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.subservice: security
 ms.custom: ignite-2023
 ms.topic: how-to

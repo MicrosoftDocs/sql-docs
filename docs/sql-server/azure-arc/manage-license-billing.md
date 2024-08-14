@@ -10,7 +10,7 @@ ms.topic: conceptual
 
 # Manage licensing and billing of SQL Server enabled by Azure Arc
 
-This article explains how to manage licensing and billing of SQL Server enabled by Azure Arc. Only the core-based licensing methods are directly supported by SQL Server enabled by Azure Arc. For information about how you can manage SQL Server instances with a Server+CAL license, see [Managing SQL Server instances with a Server+CAL license](manage-license-billing.md#server-cal).  The full range of the licensing options is described in the [SQL Server Licensing Guide](https://go.microsoft.com/fwlink/p/?linkid=2215573).
+This article explains how to manage licensing and billing of SQL Server enabled by Azure Arc. Only the core-based licensing methods are directly supported by SQL Server enabled by Azure Arc. For information about how you can manage SQL Server instances with a Server+CAL license, see [Manage SQL Server instances with a Server+CAL license](manage-license-billing.md#server-cal).  The full range of the licensing options is described in the [SQL Server Licensing Guide](https://go.microsoft.com/fwlink/p/?linkid=2215573).
 
 ## Licensing and billing in production environment
 
@@ -18,25 +18,27 @@ You can use one of the three licensing options.
 
 - [License by virtual cores](#license-vcores)
 
-   Use Enterprise or Standard license for the vCPUs (v-cores) of the virtual machine that runs one or multiple instances of SQL Server.
+   Use Enterprise or Standard license for the vCPUs (v-cores) of the virtual machine that runs one or multiple instances of SQL Server. Each virtual machine is billed individually for the v-core allocated to it. The following diagram illustrates this licensing method and shows its cost implications.
 
    :::image type="content" source="media/billing/virtual-core-licensing.svg" alt-text="Screenshot illustrating the virtual core licensing option.":::
 
 - [License by physical cores without virtual machines option](#license-pcores-without-vms)
 
-   Use Enterprise or Standard Edition license for the physical cores (p-cores) of the host that runs one or multiple instances of SQL installed directly on the host without using VMs.
+   Use Enterprise or Standard Edition license for the physical cores (p-cores) of the host that runs one or multiple instances of SQL installed directly on the host without using VMs. Each instance has access to all p-cores supported by the installed edition limits up to all p-cores of the host. Regardless of the instance limits though, the host is billed for all the p-cores based on the highest SQL Server edition installed on it. For details, review [Compute capacity limits by edition](../compute-capacity-limits-by-edition-of-sql-server.md).
+
+   The following diagram illustrates the cost implications of deploying two standard edition instances on a physical host without using VMs.
 
    :::image type="content" source="media/billing/physical-core-licensing-without-vms.svg" alt-text="Screenshot illustrating the physical core licensing without using virtual machines.":::
 
 - [License by physical cores with unlimited virtualization](#unlimited-virtualization)
 
-   Use Enterprise Edition license for the physical cores (p-cores) of the host that runs any number of virtual machines with any number of instances of SQL Server.
+   Use Enterprise Edition license for the physical cores (p-cores) of the host that runs any number of virtual machines with any number of instances of SQL Server. A single p-core license is a separate Azure resource representing all licensed p-cores and is billed independently. The following diagram illustrates the cost implications of licensing a physical host and using unlimited virtualization.
 
    :::image type="content" source="media/billing/physical-core-licensing-with-vms.svg" alt-text="Screenshot illustrating the physical core licensing using unlimited virtualization.":::
 
 > [!NOTE]
 >
-> *Normalized cores* (NC) illustrates the cost implications of different licensing options. One Standard Edition core license is an equivalent of one NC. One Enterprise Edition core license is an equivalent of four NCs. For more information, see  [How licenses apply to Azure resources](/azure/cost-management-billing/scope-level/overview-azure-hybrid-benefit-scope#how-licenses-apply-to-azure-resources).
+> *Normalized cores* (NC) are used to illustrate the cost implications of different licensing options. One Standard Edition core license is an equivalent of one NC. One Enterprise Edition core license is an equivalent of four NCs. For more information, see  [How licenses apply to Azure resources](/azure/cost-management-billing/scope-level/overview-azure-hybrid-benefit-scope#how-licenses-apply-to-azure-resources).
 
 For each of these options, you have to decide how you want to pay for the license. The following table shows your payment options.
 
@@ -54,7 +56,7 @@ For each of these options, you have to decide how you want to pay for the licens
 >
 > Your choice of payment options above may impact your outsourcing options. For more information, please see [Product Terms](https://www.microsoft.com/licensing/terms/productoffering/MicrosoftAzure/eaeas#ServiceSpecificTerms) and [Flexible Virtualization Benefit Licensing Guide](https://wwlpdocumentsearch.blob.core.windows.net/prodv2/Licensing_guide_PLT_Flexible_Virtualization_Benefit_Nov2022.pdf).
 
-For information about licensing your non-production or test SQL Server instances through Azure Arc, see [Managing SQL Server licensed for non-production use](manage-license-billing.md#non-production-licensing).
+For information about licensing your non-production or test SQL Server instances through Azure Arc, see [Manage SQL Server licensed for non-production use](manage-license-billing.md#non-production-licensing).
 
 
 
@@ -82,12 +84,14 @@ The following license types are supported when licensing v-cores:
 | License only | You use a perpetual or Server+CAL license for Standard or Enterprise Edition,  or you use Developer, Evaluation, or Express Edition. Your software usage is reported according to the metering rules. See [Metering software usage](#usage-metering). | `LicenseOnly` |
 
 > [!IMPORTANT]
+> 
+> - The pay-as-you-go subscription requires the hosting machine to be continuously connected to Azure. 
 >
-> - The pay-as-you-go subscription requires the hosting machine to be continuously connected to Azure.
+>   Intermittent connectivity disruptions for up to 30 days are tolerated with built-in resilience. After 30 days without a connection, the pay-as-you-go subscription will expire. Once your subscription expires, you aren't authorized to use the software.
 >
->   Intermittent connectivity disruptions for up to 30 days are tolerated with built-in resilience. After 30 days without a connection, the pay-as-you-go subscription will expire. Please be advised that once your subscription expires, you aren't authorized to use the software.
+> - The pay-as-you-go hourly charges are issued only when SQL Server is running on the machine at any point within a given hour and if the machine is online.   
 >
-> - By selecting License with Software Assurance you attest that you have Enterprise Edition or Standard Edition licenses with active Software Assurance.
+> - By selecting License with Software Assurance, you attest that you have Enterprise Edition or Standard Edition licenses with active Software Assurance or a SQL subscription license.
 
 In addition to billing differences, license type determines what features are available to your SQL Server instance.
 
@@ -161,7 +165,7 @@ The **Billing plan** property provides a choice between paying for the license o
 > 1.  has the **Physical core license** property set to True. 
 > 1.  has the **License type** property set to match the selected **Billing plan** of the p-core license. 
 >
-> For more details, see [Apply physical core license](manage-configuration.md#apply-physical-core-license).
+> For more details, see [Apply physical core license](manage-configuration.md#use-physical-core-license).
 
 The **Activation state** property controls when the license takes effect. The license can be activated during creation, or created first and then activated at a later time. The delayed activation allows you to coordinate it with other events in the licensing lifecycle, such as the expiration of an existing Enterprise Agreement. The **Last activated** and **Last deactivated** timestamp properties show when the license was last activated and deactivated. For more details, see [Change SQL Server license properties](manage-configuration.md#change-license-resource).
 
@@ -169,28 +173,28 @@ The **Tenant ID** property is automatically set when the tenant scope is selecte
 
 For more information about licensing by physical cores with unlimited virtualization, see section *Licensing for maximum virtualization* in the [SQL Server Licensing Guide](https://go.microsoft.com/fwlink/p/?linkid=2215573).
 
-## <a id="non-production-licensing"></a> Managing SQL Server licensed for non-production use
+## <a id="non-production-licensing"></a> Manage SQL Server licensed for non-production use
 
 If you have your production environment managed through Azure Arc using one of the supported licensing options, you can use SQL Server for non-production purposes for free. There are two ways you can take advantage of this benefit when using SQL Server enabled by Azure Arc.
 
-### Using SQL Server Developer Edition
+### Use SQL Server Developer Edition
 
 SQL Server Developer Edition is free and can be used in any Azure subscription. The Azure extension for SQL Server will detect it and report the usage via a $0 *Dev edition* meter even if the *License type* of the host is set to `Paid` or `PAYG` . The Developer Edition has the same feature set as Enterprise Edition. For more details, see [Metering software usage](manage-license-billing.md#usage-metering).
 
-### Using Azure dev/test subscription
+### Use Azure dev/test subscription
 
-If you configure your non-production as a mirror of the production environment, and want to use the same Editions as in production, you must onboard the hosting machines and SQL Server instances to an Azure dev/test subscription. The production SQL Server meters are enabled to support the dev/test subscriptions and will be nullified. For information on how to create a dev/test subscription on Azure, see [Create an EA subscription](/azure/cost-management-billing/manage/create-enterprise-subscription#create-an-ea-subscription).
+If you configure the non-production environment as a mirror of the production environment, and want to use the same editions as in production, you must connect the hosting machines and SQL Server instances to an Azure dev/test subscription. The SQL Server meters in a dev/test subscription will be nullified. For information on how to create a dev/test subscription on Azure, see [Creating Enterprise and Organization Azure Dev/Test Subscriptions](/azure/devtest/offer/quickstart-create-enterprise-devtest-subscriptions).
 
 For more information, see section *Licensing SQL Server for non-production use* in the [SQL Server Licensing Guide](https://go.microsoft.com/fwlink/p/?linkid=2215573).
 
-## Managing SQL Server licensed for high availability and disaster recovery
+## Manage SQL Server licensed for high availability and disaster recovery
 
 If your SQL Server instance is a passive replica created as part of your high availability or disaster recovery configuration, you are entitled to the failover benefits that are included if your *license type* is set to `Paid` or `PAYG`. For more information about the failover benefits, see section *Licensing SQL Server for high availability and disaster recovery* in the [SQL Server Licensing Guide](https://go.microsoft.com/fwlink/p/?linkid=2215573).
 
 To help you manage the failover benefits and remain compliant, Azure extension for SQL Server automatically detects the passive instances and reflects the use of the SQL Server software by emitting special $0 disaster recovery (DR) meters, as long as you properly configured the *license type* property. For more details, see [Metering software usage](manage-license-billing.md#usage-metering).
 
 
-## <a id="server-cal"></a> Managing SQL Server instances with a Server+CAL license
+## <a id="server-cal"></a> Manage SQL Server instances with a Server+CAL license
 
 You can connect any licensed SQL Server instance to Azure Arc, including the ones that are licensed with the Server+CAL licensing model. If your instance uses this license you must set the license type to `LicenseOnly` even if you have active Software assurance for it.  
 
@@ -240,7 +244,7 @@ The next table shows the meter SKUs that are used for metering and billing for S
 | Web | Web | Any | n/a | n/a | `Web edition` |
 | Express | Express | Any | n/a | n/a | `Express edition` |
 
-<sup>1</sup> When Enterprise Edition is installed, it indicates that the Server/CAL licensing model is used. See [Managing SQL Server instances with a Server+CAL license](manage-license-billing.md#server-cal) for more information. 
+<sup>1</sup> When Enterprise Edition is installed, it indicates that the Server/CAL licensing model is used. See [Manage SQL Server instances with a Server+CAL license](manage-license-billing.md#server-cal) for more information. 
 
 <sup>2</sup> This meter reflects the software usage covered by the p-core license and the unlimited virtualization benefit. The SQL Server instance must be installed on a virtual machine to be covered.
 

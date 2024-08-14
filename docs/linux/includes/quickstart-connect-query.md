@@ -9,9 +9,9 @@ ms.custom:
 ---
 ## Connect locally
 
-The following steps use **sqlcmd** to locally connect to your new SQL Server instance.
+The following steps use **sqlcmd** to locally connect to your new [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instance.
 
-1. Run **sqlcmd** with parameters for your SQL Server name (`-S`), the user name (`-U`), and the password (`-P`). In this tutorial, you are connecting locally, so the server name is `localhost`. The user name is `sa` and the password is the one you provided for the SA account during setup.
+1. Run **sqlcmd** with parameters for your [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] name (`-S`), the user name (`-U`), and the password (`-P`). In this tutorial, you are connecting locally, so the server name is `localhost`. The user name is `sa` and the password is the one you provided for the SA account during setup.
 
    ```bash
    sqlcmd -S localhost -U sa -P '<YourPassword>'
@@ -117,11 +117,11 @@ QUIT
 
 ## Performance best practices
 
-After installing SQL Server on Linux, review the best practices for configuring Linux and SQL Server to improve performance for production scenarios. For more information, see [Performance best practices and configuration guidelines for SQL Server on Linux](../sql-server-linux-performance-best-practices.md).
+After installing [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] on Linux, review the best practices for configuring Linux and [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] to improve performance for production scenarios. For more information, see [Performance best practices and configuration guidelines for SQL Server on Linux](../sql-server-linux-performance-best-practices.md).
 
 ## Cross-platform data tools
 
-In addition to **sqlcmd**, you can use the following cross-platform tools to manage SQL Server:
+In addition to **sqlcmd**, you can use the following cross-platform tools to manage [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)]:
 
 | Tool | Description |
 | --- | --- |
@@ -132,11 +132,11 @@ In addition to **sqlcmd**, you can use the following cross-platform tools to man
 
 ## Connect from Windows
 
-SQL Server tools on Windows connect to SQL Server instances on Linux in the same way they would connect to any remote SQL Server instance.
+[!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] tools on Windows connect to [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instances on Linux in the same way they would connect to any remote [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instance.
 
-If you have a Windows machine that can connect to your Linux machine, try the same steps in this topic from a Windows command-prompt running **sqlcmd**. You must use the target Linux machine name or IP address rather than `localhost`, and make sure that TCP port 1433 is open on the SQL Server machine. If you have any problems connecting from Windows, see [connection troubleshooting recommendations](../sql-server-linux-troubleshooting-guide.md#connection).
+If you have a Windows machine that can connect to your Linux machine, try the same steps in this topic from a Windows command-prompt running **sqlcmd**. You must use the target Linux machine name or IP address rather than `localhost`, and make sure that TCP port 1433 is open on the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] machine. If you have any problems connecting from Windows, see [connection troubleshooting recommendations](../sql-server-linux-troubleshooting-guide.md#connection).
 
-For other tools that run on Windows but connect to SQL Server on Linux, see:
+For other tools that run on Windows but connect to [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] on Linux, see:
 
 - [SQL Server Management Studio (SSMS)](../sql-server-linux-manage-ssms.md)
 - [Windows PowerShell](../sql-server-linux-manage-powershell.md)
@@ -146,8 +146,8 @@ For other tools that run on Windows but connect to SQL Server on Linux, see:
 
 For other installation scenarios, see the following resources:
 
-- [Upgrade](../sql-server-linux-setup.md#upgrade): Learn how to upgrade an existing installation of SQL Server on Linux
-- [Uninstall](../sql-server-linux-setup.md#uninstall): Uninstall SQL Server on Linux
+- [Upgrade](../sql-server-linux-setup.md#upgrade): Learn how to upgrade an existing installation of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] on Linux
+- [Uninstall](../sql-server-linux-setup.md#uninstall): Uninstall [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] on Linux
 - [Unattended install](../sql-server-linux-setup.md#unattended): Learn how to script the installation without prompts
 - [Offline install](../sql-server-linux-setup.md#offline): Learn how to manually download the packages for offline installation
 

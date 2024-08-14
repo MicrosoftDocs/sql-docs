@@ -6,7 +6,7 @@ author: MariDjo
 ms.author: dmarinkovic
 ms.reviewer: mathoma, randolphwest
 ms.date: 05/22/2024
-ms.service: sql-managed-instance
+ms.service: azure-sql-managed-instance
 ms.subservice: deployment-configuration
 ms.topic: how-to
 ms.custom:
@@ -546,7 +546,7 @@ During public preview, instances in a pool have the following limitations:
 - The following SQL Managed Instance features aren't supported when instances are in a pool:
     - [Failover groups](failover-group-sql-mi.md). [Failover rights](failover-group-standby-replica-how-to-configure.md) aren't available to instances in a pool.
     - [Start/Stop](instance-stop-start-how-to.md).
-    - [Zone Redundancy](high-availability-sla.md#zone-redundant-availability).
+    - [Zone Redundancy](high-availability-sla-local-zone-redundancy.md#zone-redundant-availability). 
     - [Reserved capacity](../database/reserved-capacity-overview.md) instance pricing isn't available.
 
 ## Support requests

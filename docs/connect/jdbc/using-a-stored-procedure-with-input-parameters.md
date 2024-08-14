@@ -2,7 +2,7 @@
 title: "Using a stored procedure with input parameters"
 description: "Learn how to use input parameters with a stored procedure with the JDBC Driver for SQL Server."
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: "08/12/2019"
 ms.service: sql
 ms.subservice: connectivity

@@ -2,13 +2,15 @@
 title: Install the Microsoft ODBC driver for SQL Server (Linux)
 description: Learn how to install the Microsoft ODBC Driver for SQL Server on Linux clients to enable database connectivity.
 author: David-Engel
-ms.author: v-davidengel
-ms.reviewer: randolphwest
-ms.date: 04/09/2024
+ms.author: davidengel
+ms.reviewer: v-chojas
+ms.date: 07/31/2024
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: conceptual
-ms.custom: intro-installation, linux-related-content
+ms.custom:
+  - intro-installation
+  - linux-related-content
 helpviewer_keywords:
   - "driver, installing"
 ---
@@ -21,7 +23,7 @@ This article provides commands for installing the ODBC driver from the bash shel
 
 ## <a id="18"></a> Microsoft ODBC 18
 
-The following sections explain how to install the Microsoft ODBC driver 18 from the bash shell for different Linux distributions. Supported distributions are Alpine Linux, Debian, Red Hat Enterprise Linux (RHEL), Oracle Linux, SUSE Linux Enterprise Server (SLES), and Ubuntu.
+The following sections explain how to install the Microsoft ODBC driver 18 from the bash shell for different Linux distributions. Supported distributions are Alpine Linux, Debian, Red Hat Enterprise Linux (RHEL), Oracle Linux, SUSE Linux Enterprise Server (SLES), and Ubuntu. Starting with version 18.4, to accept the EULA automatically when installing the non-Alpine Linux (.deb or .rpm) driver, you can create the file '/opt/microsoft/msodbcsql18/ACCEPT_EULA'.
 
 ### [Alpine](#tab/alpine18-install)
 
@@ -38,20 +40,20 @@ then
 fi
 
 #Download the desired package(s)
-curl -O https://download.microsoft.com/download/3/5/5/355d7943-a338-41a7-858d-53b259ea33f5/msodbcsql18_18.3.3.1-1_$architecture.apk
-curl -O https://download.microsoft.com/download/3/5/5/355d7943-a338-41a7-858d-53b259ea33f5/mssql-tools18_18.3.1.1-1_$architecture.apk
+curl -O https://download.microsoft.com/download/7/6/d/76de322a-d860-4894-9945-f0cc5d6a45f8/msodbcsql18_18.4.1.1-1_$architecture.apk
+curl -O https://download.microsoft.com/download/7/6/d/76de322a-d860-4894-9945-f0cc5d6a45f8/mssql-tools18_18.4.1.1-1_$architecture.apk
 
 #(Optional) Verify signature, if 'gpg' is missing install it using 'apk add gnupg':
-curl -O https://download.microsoft.com/download/3/5/5/355d7943-a338-41a7-858d-53b259ea33f5/msodbcsql18_18.3.3.1-1_$architecture.sig
-curl -O https://download.microsoft.com/download/3/5/5/355d7943-a338-41a7-858d-53b259ea33f5/mssql-tools18_18.3.1.1-1_$architecture.sig
+curl -O https://download.microsoft.com/download/7/6/d/76de322a-d860-4894-9945-f0cc5d6a45f8/msodbcsql18_18.4.1.1-1_$architecture.sig
+curl -O https://download.microsoft.com/download/7/6/d/76de322a-d860-4894-9945-f0cc5d6a45f8/mssql-tools18_18.4.1.1-1_$architecture.sig
 
 curl https://packages.microsoft.com/keys/microsoft.asc  | gpg --import -
-gpg --verify msodbcsql18_18.3.3.1-1_$architecture.sig msodbcsql18_18.3.3.1-1_$architecture.apk
-gpg --verify mssql-tools18_18.3.1.1-1_$architecture.sig mssql-tools18_18.3.1.1-1_$architecture.apk
+gpg --verify msodbcsql18_18.4.1.1-1_$architecture.sig msodbcsql18_18.4.1.1-1_$architecture.apk
+gpg --verify mssql-tools18_18.4.1.1-1_$architecture.sig mssql-tools18_18.4.1.1-1_$architecture.apk
 
 #Install the package(s)
-sudo apk add --allow-untrusted msodbcsql18_18.3.3.1-1_$architecture.apk
-sudo apk add --allow-untrusted mssql-tools18_18.3.1.1-1_$architecture.apk
+sudo apk add --allow-untrusted msodbcsql18_18.4.1.1-1_$architecture.apk
+sudo apk add --allow-untrusted mssql-tools18_18.4.1.1-1_$architecture.apk
 ```
 
 > [!NOTE]  
@@ -173,7 +175,7 @@ sudo zypper install -y unixODBC-devel
 ### [Ubuntu](#tab/ubuntu18-install)
 
 ```bash
-if ! [[ "18.04 20.04 22.04 23.04" == *"$(lsb_release -rs)"* ]];
+if ! [[ "18.04 20.04 22.04 23.04 24.04" == *"$(lsb_release -rs)"* ]];
 then
     echo "Ubuntu $(lsb_release -rs) is not currently supported.";
     exit;
@@ -460,15 +462,15 @@ sudo ln -sfn /opt/mssql-tools/bin/bcp-13.0.1.0 /usr/bin/bcp
 
 ### Offline installation
 
-If you need the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] ODBC Driver 13 to be installed on a computer with no Internet connection, you must resolve package dependencies manually. The [!INCLUDE[msCoName](../../../includes/msconame-md.md)] ODBC Driver 13 has the following direct dependencies:
+If you need the [!INCLUDE [msCoName](../../../includes/msconame-md.md)] ODBC Driver 13 to be installed on a computer with no Internet connection, you must resolve package dependencies manually. The [!INCLUDE [msCoName](../../../includes/msconame-md.md)] ODBC Driver 13 has the following direct dependencies:
 
 - Ubuntu: libc6 (>= 2.21), libstdc++6 (>= 4.9), libkrb5-3, libcurl3, openssl, debconf (>= 0.5), unixodbc (>= 2.3.1-1)
 - Red Hat: ```glibc, e2fsprogs, krb5-libs, openssl, unixODBC```
 - SUSE: ```glibc, libuuid1, krb5, openssl, unixODBC```
 
-Each of these packages in turn has their own dependencies, which may or may not be present on the system. For a general solution to this issue, refer to your distribution's package manager documentation: [Red Hat](https://wiki.centos.org/HowTos/CreateLocalRepos), [Ubuntu](https://unix.stackexchange.com/questions/87130/how-to-quickly-create-a-local-apt-repository-for-random-packages-using-a-debian), and [SUSE](https://en.opensuse.org/Portal:Zypper)
+Each of these packages in turn has their own dependencies, which might or might not be present on the system. For a general solution to this issue, refer to your distribution's package manager documentation: [Red Hat](https://access.redhat.com/solutions/7019225), [Ubuntu](https://unix.stackexchange.com/questions/87130/how-to-quickly-create-a-local-apt-repository-for-random-packages-using-a-debian), and [SUSE](https://en.opensuse.org/Portal:Zypper)
 
-It's also common to manually download all the dependent packages and place them together on the installation computer, then manually install each package in turn, finishing with the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] ODBC Driver 13 package.
+It's also common to manually download all the dependent packages and place them together on the installation computer, then manually install each package in turn, finishing with the [!INCLUDE [msCoName](../../../includes/msconame-md.md)] ODBC Driver 13 package.
 
 #### [RHEL 7 (ODBC 13 offline)](#tab/rhel7-offline)
 
@@ -490,7 +492,7 @@ sudo zypper install glibc, libuuid1, krb5, openssl, unixODBC unixODBC-devel #ins
 sudo rpm -i  msodbcsql-13.1.X.X-X.x86_64.rpm #install the Driver
 ```
 
-After you've completed the package installation, you can verify that the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] ODBC Driver 13 can find all its dependencies by running ldd and inspecting its output for missing libraries:
+After you complete the package installation, you can verify that the [!INCLUDE [msCoName](../../../includes/msconame-md.md)] ODBC Driver 13 can find all its dependencies by running ldd and inspecting its output for missing libraries:
 
 ```bash
 ldd /opt/microsoft/msodbcsql/lib64/libmsodbcsql-*
@@ -515,7 +517,7 @@ The following sections explain how to install the Microsoft ODBC driver 11 on Li
 ### Installation steps
 
 > [!IMPORTANT]  
-> These instructions refer to `msodbcsql-11.0.2270.0.tar.gz`, which is installation file for Red Hat Linux. If you are installing the Preview for SUSE Linux, the file name is `msodbcsql-11.0.2260.0.tar.gz`.
+> These instructions refer to `msodbcsql-11.0.2270.0.tar.gz`, which is installation file for Red Hat Linux. If you install the Preview for SUSE Linux, the file name is `msodbcsql-11.0.2260.0.tar.gz`.
 
 To install the driver:
 
@@ -569,12 +571,13 @@ The driver needs to load the resource file to function. This file is called `mso
 
 ## Troubleshoot
 
-If a version of the driver has been previously installed and registered with unixODBC, installation may fail with an error like `Installation failed, ODBC Driver $1 for SQL Server detected!`. To resolve the problem, unregister that version of the driver. You can unregister drivers via the `odbcinst` command: `odbcinst -u -d -n "ODBC Driver $1 for SQL Server`. (Replace `$1` with the version of the driver reported in the installation error.) If uninstall via the `odbcinst` command fails, you can manually remove driver sections from the `odbcinst.ini` file. You can find the location of the `odbcinst.ini` file via the command `odbcinst -j`.
+If a version of the driver was previously installed and registered with unixODBC, installation might fail with an error like `Installation failed, ODBC Driver $1 for SQL Server detected!`. To resolve the problem, unregister that version of the driver. You can unregister drivers via the `odbcinst` command: `odbcinst -u -d -n "ODBC Driver $1 for SQL Server`. (Replace `$1` with the version of the driver reported in the installation error.) If uninstall via the `odbcinst` command fails, you can manually remove driver sections from the `odbcinst.ini` file. You can find the location of the `odbcinst.ini` file via the command `odbcinst -j`.
 
 If you're unable to make a connection to SQL Server using the ODBC driver, see the known issues article on [troubleshooting connection problems](known-issues-in-this-version-of-the-driver.md#connectivity).
 
-## Next steps
+## Related content
 
-After installing the driver, you can try the [C++ ODBC example application](../../odbc/cpp-code-example-app-connect-access-sql-db.md). For more information about developing ODBC applications, see [Developing Applications](../../../odbc/reference/develop-app/developing-applications.md).
-
-For more information, see the ODBC driver [release notes](release-notes-odbc-sql-server-linux-mac.md) and [system requirements](system-requirements.md).
+- [C++ ODBC example application](../cpp-code-example-app-connect-access-sql-db.md)
+- [Developing Applications](../../../odbc/reference/develop-app/developing-applications.md)
+- [release notes](release-notes-odbc-sql-server-linux-mac.md)
+- [system requirements](system-requirements.md)

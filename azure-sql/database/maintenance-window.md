@@ -5,8 +5,8 @@ description: Understand how the Azure SQL Database maintenance window can be con
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: urosmil, scottkim, mathoma
-ms.date: 03/27/2024
-ms.service: sql-database
+ms.date: 08/06/2024
+ms.service: azure-sql-database
 ms.subservice: service-overview
 ms.topic: conceptual
 ms.custom:
@@ -81,14 +81,17 @@ Offers restricted to dev/test usage only are not eligible (like pay-as-you-go De
 
 ### Supported service level objectives
 
-Choosing a maintenance window other than the default is available on all SLOs **except for** the following.
+Choosing a maintenance window other than the default is available on all SLOs, **except for** the following.
 
 - SLOs not supported:
     - Azure SQL Database DTU Basic, S0 and S1 tiers
     - DC hardware
     - Fsv2 hardware
 
-Maintenance window for Hyperscale elastic pools is in preview and is available in specific regions and configurations. For more information, see [Blog: Maintenance window support for Azure SQL Database Hyperscale elastic pools](https://aka.ms/hsep-fmw).
+Other scenarios:
+
+- Maintenance window for Hyperscale elastic pools is in preview and is available in specific regions and configurations. For more information, see [Blog: Maintenance window support for Azure SQL Database Hyperscale elastic pools](https://aka.ms/hsep-fmw).
+- Maintenance window is supported for named replicas.
 
 <!-- Check Known limitations in azure-sql/database/service-tier-hyperscale.md as well -->
 
@@ -96,7 +99,7 @@ Maintenance window for Hyperscale elastic pools is in preview and is available i
 
 Choosing a maintenance window for Azure SQL Database other than the default is currently available in the following regions, organized by purchasing model.
 
-The following table is for databases that are not [zone-redundant](high-availability-sla.md#zone-redundant-availability). For databases in an [Azure Availability Zone](high-availability-sla.md#zone-redundant-availability), see [the table for zone-redundant databases.](#ZR-maintenance-window-availability)
+The following table is for databases that are not [zone-redundant](high-availability-sla-local-zone-redundancy.md#zone-redundant-availability). For databases in an [Azure Availability Zone](high-availability-sla-local-zone-redundancy.md#zone-redundant-availability), see [the table for zone-redundant databases.](#ZR-maintenance-window-availability)
 
 | Azure Region | Hyperscale premium-series and premium-series memory optimized | Hyperscale standard-series | All other Azure SQL Database purchasing models and tiers |
 |:---|:---|:---|:---|
@@ -138,15 +141,16 @@ The following table is for databases that are not [zone-redundant](high-availabi
 
 <a id="ZR-maintenance-window-availability"></a>
 
-The following table is for [zone-redundant](high-availability-sla.md#zone-redundant-availability) databases.
+The following table is for [zone-redundant](high-availability-sla-local-zone-redundancy.md#zone-redundant-availability) databases.
 
-| Azure Region  | Hyperscale premium-series and premium-series memory optimized | Hyperscale standard-series | All other Azure SQL Database purchasing models and tiers in an [Azure Availability Zone](high-availability-sla.md#zone-redundant-availability) |
+| Azure Region  | Hyperscale premium-series and premium-series memory optimized | Hyperscale standard-series | All other Azure SQL Database purchasing models and tiers in an [Azure Availability Zone](high-availability-sla-local-zone-redundancy.md#zone-redundant-availability) |
 |:---|:---|:---|:---|
 | Australia East | Yes | Yes | Yes |
 | Canada Central  |  Yes | Yes | Yes |
 | Central US |  Yes | Yes | Yes |
 | East US 1  |  Yes | Yes | Yes |
 | East US 2  | | | Yes |
+| France Central | | Yes | Yes |
 | Japan East | | | Yes |
 | North Europe |  Yes | Yes | Yes |
 | South Central US  | | | Yes |

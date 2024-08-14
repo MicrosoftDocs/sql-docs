@@ -4,7 +4,7 @@ description: Learn to deploy a Linux Pacemaker cluster for a SQL Server Always O
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: vanto
-ms.date: 08/23/2023
+ms.date: 07/15/2024
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
@@ -16,7 +16,7 @@ ms.custom:
 
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
-This tutorial documents the tasks required to deploy a Linux Pacemaker cluster for a [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] Always On availability group (AG) or failover cluster instance (FCI). Unlike the tightly coupled Windows Server / [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] stack, Pacemaker cluster creation as well as availability group (AG) configuration on Linux, can be done before or after installation of [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)]. The integration and configuration of resources for the Pacemaker portion of an AG or FCI deployment is done after the cluster is configured.
+This tutorial documents the tasks required to deploy a Linux Pacemaker cluster for a [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] Always On availability group (AG) or failover cluster instance (FCI). Unlike the tightly coupled Windows Server / [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] stack, Pacemaker cluster creation and availability group (AG) configuration on Linux, can be done before or after installation of [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)]. The integration and configuration of resources for the Pacemaker portion of an AG or FCI deployment is done after the cluster is configured.
 > [!IMPORTANT]  
 > An AG with a cluster type of None does *not* require a Pacemaker cluster, nor can it be managed by Pacemaker.
 
@@ -26,9 +26,9 @@ This tutorial documents the tasks required to deploy a Linux Pacemaker cluster f
 > - Create the Pacemaker cluster.
 > - Install the SQL Server HA and SQL Server Agent packages.
 
-## Prerequisite
+## Prerequisites
 
-[Install SQL Server 2017](sql-server-linux-setup.md).
+[Install SQL Server on Linux](sql-server-linux-setup.md).
 
 ## Install the high availability add-on
 
@@ -154,13 +154,13 @@ The process for creating a Pacemaker cluster is different on SLES than it's on R
    sudo ha-cluster-init
    ```
 
-   You might be prompted that NTP isn't configured and that no watchdog device is found. That is fine for getting things up and running. Watchdog is related to STONITH if you use SLES's built-in fencing that is storage-based. NTP and watchdog can be configured later.
+   You might be prompted that NTP isn't configured and that no watchdog device is found. That is fine for getting things up and running. Watchdog is related to fencing a failed node, if you use SLES's built-in fencing that is storage-based. NTP and watchdog can be configured later.
 
-1. You're prompted to configure Corosync. You're asked for the network address to bind to, as well as the multicast address and port. The network address is the subnet that you're using; for example, 192.191.190.0. You can accept the defaults at every prompt, or change if necessary.
+1. You're prompted to configure Corosync. You're prompted for the network address to bind to, as well as the multicast address and port. The network address is the subnet that you're using; for example, 192.191.190.0. You can accept the defaults at every prompt, or change if necessary.
 
-1. Next, you're asked if you want to configure SBD, which is the disk-based fencing. This configuration can be done later if desired. If SBD isn't configured, unlike on RHEL and Ubuntu, `stonith-enabled` will by default be set to false.
+1. Next, you're prompted to configure SBD, which is the disk-based fencing. This configuration can be done later if desired. If SBD isn't configured, unlike on RHEL and Ubuntu, `stonith-enabled` will by default be set to false.
 
-1. Finally, you're asked if you want to configure an IP address for administration. This IP address is optional, but functions similar to the IP address for a Windows Server failover cluster (WSFC): it creates an IP address in the cluster to be used for connecting to it via HA Web Konsole (HAWK). This configuration, too, is optional.
+1. Finally, you're prompted to configure an IP address for administration. This IP address is optional, but functions similar to the IP address for a Windows Server failover cluster (WSFC): it creates an IP address in the cluster to be used for connecting to it via HA Web Konsole (HAWK). This configuration, too, is optional.
 
 1. Ensure that the cluster is up and running by issuing
 
@@ -175,7 +175,8 @@ The process for creating a Pacemaker cluster is different on SLES than it's on R
    ```
 
 1. If you configured an IP address for administration, you can test it in a browser, which also tests the password change for *hacluster*.
-   :::image type="content" source="./media/sql-server-linux-deploy-pacemaker-cluster/image2.png" alt-text="HacLuster.":::
+
+   :::image type="content" source="media/sql-server-linux-deploy-pacemaker-cluster/image2.png" alt-text="Screenshot of hacluster." lightbox="media/sql-server-linux-deploy-pacemaker-cluster/image2.png":::
 
 1. On another SLES server that will be a node of the cluster, run
 
@@ -221,10 +222,11 @@ Configuring Ubuntu is similar to RHEL. However, there's one major difference: in
 
 ## Install the SQL Server HA and SQL Server Agent packages
 
-Use the following commands to install the SQL Server HA package and [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] Agent, if they aren't installed already. Installing the HA package after installing [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] requires a restart of [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] for it to be used. These instructions assume that the repositories for the Microsoft packages have already been set up, since [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] should be installed at this point.
+Use the following commands to install the SQL Server HA package and [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] Agent, if they aren't installed already. Installing the HA package after installing [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] requires a restart of [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] for it to be used. These instructions assume that the repositories for the Microsoft packages are already set up, since [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] should be installed at this point.
 
-- If you won't use [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] Agent for log shipping or any other use, it doesn't have to be installed, so package *mssql-server-agent* can be skipped.
-- The other optional packages for [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on Linux, [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] Full-Text Search (*mssql-server-fts*) and [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] Integration Services (*mssql-server-is*), aren't required for high availability, either for an FCI or an AG.
+- If you won't use [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] Agent for log shipping or any other use, it doesn't have to be installed, so package **mssql-server-agent** can be skipped.
+
+- The other optional packages for [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on Linux, [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] Full-Text Search (**mssql-server-fts**) and [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] Integration Services (**mssql-server-is**), aren't required for high availability, either for an FCI or an AG.
 
 ### [Red Hat Enterprise Linux (RHEL)](#tab/rhel)
 
@@ -249,7 +251,7 @@ sudo systemctl restart mssql-server
 
 ---
 
-## Next steps
+## Next step
 
 In this tutorial, you learned how to deploy a Pacemaker cluster for SQL Server on Linux. You learned how to:
 > [!div class="checklist"]

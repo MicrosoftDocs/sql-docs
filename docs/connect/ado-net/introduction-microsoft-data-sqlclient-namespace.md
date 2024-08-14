@@ -2,7 +2,7 @@
 title: Introduction to Microsoft.Data.SqlClient namespace
 description: Learn about the Microsoft.Data.SqlClient namespace and how it's the preferred way to connect to SQL for .NET applications.
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: 05/31/2024
 ms.service: sql
 ms.subservice: connectivity

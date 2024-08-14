@@ -2,7 +2,7 @@
 title: Use table-valued parameters (OLE DB driver)
 description: Learn how to creates table-valued parameters in OLE DB Driver for SQL Server in this example that then shows how to work with the parameters.
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: "06/14/2018"
 ms.service: sql
 ms.subservice: connectivity

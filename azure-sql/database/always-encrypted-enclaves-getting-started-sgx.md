@@ -5,7 +5,7 @@ author: Pietervanhove
 ms.author: pivanho
 ms.reviewer: vanto, mathoma
 ms.date: 02/01/2023
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.subservice: security
 ms.custom: devx-track-azurepowershell
 ms.topic: tutorial

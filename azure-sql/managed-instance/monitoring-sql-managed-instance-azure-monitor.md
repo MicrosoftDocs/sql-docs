@@ -7,11 +7,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: wiassaf
-ms.service: sql-managed-instance
+ms.service: azure-sql-managed-instance
 ms.subservice: monitoring
 ---
 
 # Monitor Azure SQL Managed Instance
+[!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
 
 [!INCLUDE [horz-monitor-intro](~/../azure-sql/reusable-content/ce-skilling/azure/includes/azure-monitor/horizontals/horz-monitor-intro.md)]
 

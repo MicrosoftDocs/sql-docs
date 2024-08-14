@@ -5,7 +5,7 @@ author: rajeshsetlem
 ms.author: rsetlem
 ms.reviewer: wiassaf, mathoma, arvindsh
 ms.date: 07/26/2023
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.subservice: high-availability
 ms.topic: conceptual
 ms.custom: sqldbrb=1, ignite-2023
@@ -14,7 +14,7 @@ ms.custom: sqldbrb=1, ignite-2023
 # Active geo-replication
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
-Active geo-replication is a feature that lets you create a continuously synchronized readable secondary database for a primary database. The readable secondary database might be in the same Azure region as the primary, or, more commonly, in a different region. This kind of readable secondary database is also known as a geo-secondary or geo-replica. 
+Active geo-replication is a feature that lets you contiunously replicate data from a primary database to a readable secondary database. The readable secondary database might be in the same Azure region as the primary, or, more commonly, in a different region. This kind of readable secondary database is also known as a geo-secondary or geo-replica. 
 
 Active geo-replication is configured per database, and only supports manual failover. To fail over a group of databases, or if your application requires a stable connection endpoint, consider [Failover groups](failover-group-sql-db.md) instead.
 
@@ -67,7 +67,7 @@ To achieve full business continuity, adding database regional redundancy is only
   An application can access a geo-secondary replica to execute read-only queries using the same or different security principals used for accessing the primary database. For more information, see [Use read-only replicas to offload read-only query workloads](read-scale-out.md).
 
    > [!IMPORTANT]
-   > You can use geo-replication to create secondary replicas in the same region as the primary. You can use these secondaries to satisfy read scale-out scenarios in the same region. However, a secondary replica in the same region does not provide additional resilience to catastrophic failures or large scale outages, and therefore is not a suitable failover target for disaster recovery purposes. It also does not guarantee availability zone isolation. Use Business Critical or Premium service tiers [zone redundant configuration](high-availability-sla.md#zone-redundant-availability) or General Purpose service tier [zone redundant configuration](high-availability-sla.md#zone-redundant-availability) to achieve availability zone isolation.
+   > You can use geo-replication to create secondary replicas in the same region as the primary. You can use these secondaries to satisfy read scale-out scenarios in the same region. However, a secondary replica in the same region does not provide additional resilience to catastrophic failures or large scale outages, and therefore is not a suitable failover target for disaster recovery purposes. It also does not guarantee availability zone isolation. Use Business Critical or Premium service tiers [zone redundant configuration](high-availability-sla-local-zone-redundancy.md#zone-redundant-availability) or General Purpose service tier [zone redundant configuration](high-availability-sla-local-zone-redundancy.md#zone-redundant-availability) to achieve availability zone isolation.
    >
 
 - **Failover (no data loss)**
@@ -115,7 +115,7 @@ To ensure that your application can immediately access the new primary after geo
 
 Both the primary and geo-secondary are required to have the same service tier. It's also strongly recommended that the geo-secondary is configured with the same backup storage redundancy, [compute tier](./service-tiers-sql-database-vcore.md#compute) (provisioned or serverless) and compute size (DTUs or vCores) as the primary. If the primary is experiencing a heavy write workload, a geo-secondary with a lower compute size might not be able to keep up. That causes replication lag on the geo-secondary, and might eventually cause unavailability of the geo-secondary. To mitigate these risks, active geo-replication reduces (throttles) the primary's transaction log rate if necessary to allow its secondaries to catch up.
 
-Another consequence of an imbalanced geo-secondary configuration is that after failover, application performance can suffer due to insufficient compute capacity of the new primary. In that case, it's necessary to scale up the database to have sufficient resources, which might take significant time, and requires a [high availability](high-availability-sla.md) failover at the end of the scale up process, which can interrupt application workloads.
+Another consequence of an imbalanced geo-secondary configuration is that after failover, application performance can suffer due to insufficient compute capacity of the new primary. In that case, it's necessary to scale up the database to have sufficient resources, which might take significant time, and requires a [high availability](high-availability-sla-local-zone-redundancy.md) failover at the end of the scale up process, which can interrupt application workloads.
 
 If you decide to create the geo-secondary with a different configuration, you should monitor log IO rate on the primary over time. This lets you estimate the minimal compute size of the geo-secondary required to sustain the replication load. For example, if your primary database is P6 (1000 DTU) and its log IO is sustained at 50%, the geo-secondary needs to be at least P4 (500 DTU). To retrieve historical log IO data, use the [sys.resource_stats](/sql/relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database) view. To retrieve recent log IO data with higher granularity that better reflects short-term spikes, use the [sys.dm_db_resource_stats](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database) view.
 

@@ -5,7 +5,7 @@ author: MladjoA
 ms.author: mlandzic
 ms.reviewer: mathoma
 ms.date: 07/13/2023
-ms.service: sql-managed-instance
+ms.service: azure-sql-managed-instance
 ms.subservice: service-overview
 ms.topic: reference
 ms.custom: sqldbrb=1

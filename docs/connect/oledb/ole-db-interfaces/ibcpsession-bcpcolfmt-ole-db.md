@@ -2,7 +2,7 @@
 title: "IBCPSession::BCPColFmt (OLE DB driver)"
 description: "Learn how the IBCPSession::BCPColFmt method creates a binding between program variables and SQL Server columns in OLE DB Driver for SQL Server."
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: "05/25/2020"
 ms.service: sql
 ms.subservice: connectivity

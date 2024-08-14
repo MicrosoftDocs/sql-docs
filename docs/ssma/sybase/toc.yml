@@ -20,8 +20,6 @@
     href: user-interface-reference-sybasetosql.md
   - name: Removing SSMA for Sybase components
     href: removing-ssma-for-sybase-components-sybasetosql.md
-  - name: Legal notice
-    href: legal-notice-ssma-for-sybase.md
 - name: Migrate Sybase databases
   items: 
   - name: Working with SSMA projects

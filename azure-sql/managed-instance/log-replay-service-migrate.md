@@ -5,7 +5,7 @@ author: danimir
 ms.author: danil
 ms.reviewer: mathoma
 ms.date: 11/16/2022
-ms.service: sql-managed-instance
+ms.service: azure-sql-managed-instance
 ms.subservice: migration
 ms.topic: how-to
 ms.custom:
@@ -82,7 +82,6 @@ System updates for SQL Managed Instance take precedence over database migrations
 
 To achieve a predictable time for database migrations, consider configuring a [maintenance window](maintenance-window.md) to schedule system updates for a specific day and time, and run and complete migration jobs outside the designated maintenance window timeframe.
 
-
 > [!IMPORTANT]
 > - You can't use databases that are being restored through LRS until the migration process finishes. 
 > - LRS doesn't support read-only access to databases during the migration.
@@ -111,7 +110,6 @@ https://<mystorageaccountname>.blob.core.windows.net/<containername>/<database2>
 https://<mystorageaccountname>.blob.core.windows.net/<containername>/<database3>/<all-database3-backup-files>
 ```
 
-
 ## Create a storage account
 
 You use an Azure Blob Storage account as intermediary storage for backup files between your SQL Server instance and your SQL Managed Instance deployment. To create a new storage account and a blob container inside the storage account:
@@ -123,7 +121,7 @@ You use an Azure Blob Storage account as intermediary storage for backup files b
 
 Using Azure Blob storage that's protected behind a firewall is supported, but requires additional configuration. To enable read / write access to Azure Storage with Azure Firewall turned on, you have to add the subnet of the SQL managed instance to the firewall rules of the vNet for the storage account by using MI subnet delegation and the Storage service endpoint. The storage account and the managed instance must be in the same region, or two paired regions. 
 
-If your Azure storage is behind a firewall, you] may see the following message in the SQL managed instance error log: 
+If your Azure storage is behind a firewall, you may see the following message in the SQL managed instance error log: 
 
 ```
 Audit: Storage access denied user fault. Creating an email notification:
@@ -545,7 +543,7 @@ az sql midb log-replay start <required parameters> &
 
 [Az.SQL 4.0.0 and later](https://www.powershellgallery.com/packages/Az.Sql/4.0.0) provides a detailed progress report. Review [Managed Database Restore Details - Get](/rest/api/sql/managed-database-restore-details/get) for a sample output.  
 
-To monitor migration progress through PowerShell, use the following command:
+To monitor ongoing migration progress through PowerShell, use the following command:
 
 ```PowerShell
 Get-AzSqlInstanceDatabaseLogReplay -ResourceGroupName "ResourceGroup01" `
@@ -553,11 +551,13 @@ Get-AzSqlInstanceDatabaseLogReplay -ResourceGroupName "ResourceGroup01" `
     -Name "ManagedDatabaseName"
 ```
 
-To monitor migration progress through the Azure CLI, use the following command:
+To monitor ongoing migration progress through the Azure CLI, use the following command:
 
 ```CLI
 az sql midb log-replay show -g mygroup --mi myinstance -n mymanageddb
 ```
+
+To track additional details on a failed request, use the PowerShell command [Get-AzSqlInstanceOperation](/powershell/module/az.sql/get-azsqlinstanceoperation) or use Azure CLI command [az sql mi op show](/cli/azure/sql/mi/op?view=azure-cli-latest#az-sql-mi-op-show).
 
 ## Stop the migration (optional)
 
@@ -601,10 +601,15 @@ az sql midb log-replay complete -g mygroup --mi myinstance -n mymanageddb --last
 
 ## Troubleshoot LRS issues
 
-After you start LRS, use either of the following monitoring cmdlets to see the status of the operation:
+After you start LRS, use either of the following monitoring cmdlets to see the status of the ongoing operation:
 
 * For PowerShell: `get-azsqlinstancedatabaselogreplay`
 * For the Azure CLI: `az_sql_midb_log_replay_show`
+
+To review details about a failed operation:
+
+* For PowerShell: [Get-AzSqlInstanceOperation](/powershell/module/az.sql/get-azsqlinstanceoperation)
+* For Azure CLI: [az sql mi op show](/cli/azure/sql/mi/op?view=azure-cli-latest#az-sql-mi-op-show)
 
 If LRS fails to start after some time and you get an error, check for the most common issues:
 

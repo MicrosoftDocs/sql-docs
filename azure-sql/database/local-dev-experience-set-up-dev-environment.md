@@ -5,7 +5,7 @@ author: croblesm
 ms.author: roblescarlos
 ms.reviewer: mathoma
 ms.date: 04/01/2024
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.topic: how-to
 ---
 

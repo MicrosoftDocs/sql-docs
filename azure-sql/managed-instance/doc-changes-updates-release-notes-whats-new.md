@@ -5,8 +5,8 @@ description: Learn about the new features and documentation improvements for Azu
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: wiassaf, mathoma
-ms.date: 06/19/2024
-ms.service: sql-managed-instance
+ms.date: 08/13/2024
+ms.service: azure-sql-managed-instance
 ms.subservice: service-overview
 ms.topic: whats-new
 ms.custom:
@@ -37,16 +37,18 @@ The following table lists the features of Azure SQL Managed Instance that are cu
 | ---| --- |
 |[Database watcher for Azure SQL](../database-watcher-overview.md)|Database watcher is a managed monitoring solution for database services in the Azure SQL family. Database watcher collects in-depth workload monitoring data to give you a detailed view of database performance, configuration, and health. Learn more about [database watcher](https://aka.ms/dbwatcher-preview-announcement).|
 |[Endpoint policies](./service-endpoint-policies-configure.md) | Configure which Azure Storage accounts can be accessed from a SQL Managed Instance subnet. Grants an extra layer of protection against inadvertent or malicious data exfiltration.|
+|[Fail over a link with T-SQL](managed-instance-link-failover-how-to.md?tabs=tsql#fail-over-a-database) | You can now fail over a [managed instance link](managed-instance-link-feature-overview.md) by using Transact-SQL (T-SQL) commands. |
 |[Free SQL Managed Instance](free-offer.md) | Try Azure SQL Managed Instance for free, for the first 12 months after you create your instance. |
 |[Instance pools](instance-pools-overview.md) | Share resources between multiple instances in a pool within a single virtual machine. A convenient and cost-efficient way to migrate smaller SQL Server instances to the cloud, and the only way to deploy a 2-vCore managed instance. |
-|[Link from SQL MI to SQL Server](managed-instance-link-feature-overview.md) | Configure a link from Azure SQL Managed Instance to SQL Server 2022. |
+|[Link from SQL MI to SQL Server](managed-instance-link-feature-overview.md) | Configure a link *from* Azure SQL Managed Instance to SQL Server 2022. |
 |[Microsoft Entra nonunique name support](../database/authentication-microsoft-entra-create-users-with-nonunique-names.md) |  The [CREATE USER](/sql/t-sql/statements/create-user-transact-sql) Transact-SQL (T-SQL) syntax has been extended to include `WITH OBJECT_ID` to support creating Microsoft Entra logins and users in Azure SQL Managed Instance that have nonunique names. |
+|[Native Windows principals](native-windows-principals.md) | Use the new **Windows** authentication metadata mode to allow Windows authentication or Microsoft Entra authentication (using a Windows principal metadata) with Azure SQL Managed Instance. |
 |[Next-gen General Purpose](service-tiers-next-gen-general-purpose-use.md) | An architectural upgrade of the General Purpose service tier that uses managed disks for greater resource flexibility, and improved performance while maintaining the same baseline cost as the General Purpose service tier.  |
 |[SDK-style SQL project](/sql/azure-data-studio/extensions/sql-database-project-extension-sdk-style-projects) | Use [Microsoft.Build.Sql](https://www.nuget.org/packages/Microsoft.Build.Sql) for SDK-style SQL projects in the SQL Database Projects extension in Azure Data Studio or Visual Studio Code. SDK-style SQL projects are especially advantageous for applications shipped through pipelines or built in cross-platform environments.|
 |[Service Broker](/sql/database-engine/configure-windows/sql-server-service-broker) | Support for cross-instance message exchange using Service Broker between instances of Azure SQL Managed Instance, and between SQL Server and Azure SQL Managed Instance. |
 |[Two-way DR with SQL Server 2022](managed-instance-link-disaster-recovery.md) | In the event of a disaster, you can fail your SQL Server 2022 workloads to Azure SQL Managed Instance using the link, and then, once the disaster is mitigated, you can fail back to SQL Server. |
 |[Threat detection](threat-detection-configure.md) | Threat detection notifies you of security threats detected to your database. |
-|[Zone redundancy for General Purpose](high-availability-sla.md#zone-redundant-availability) |  Deploy your General Purpose SQL Managed Instance to multiple availability zones to improve the availability of your instance in the event of a disaster. | 
+|[Zone redundancy for General Purpose](high-availability-sla-local-zone-redundancy.md#zone-redundant-availability) |  Deploy your General Purpose SQL Managed Instance to multiple availability zones to improve the availability of your instance in the event of a disaster. | 
 
 
 ## General availability (GA)
@@ -63,41 +65,68 @@ The following table lists features of Azure SQL Managed Instance that have been 
 |[Distributed Transaction Coordinator (DTC)](distributed-transaction-coordinator-dtc.md) | November 2023 | Use DTC to run distributed transactions in mixed environments such as across managed instances, SQL Servers, other relational database management systems (RDBMSs), custom applications and other transaction participants hosted in any environment that can establish network connectivity to Azure.  | 
 |[Instance stop and start](instance-stop-start-how-to.md) | November 2023 | Stop and start your managed instance to save on licensing and compute costs. | 
 |[Ledger](/sql/relational-databases/security/ledger/ledger-overview) | November 2023 | The ledger feature in Azure SQL Managed Instance allows you to cryptographically attest to other parties, such as auditors or other business parties, that your data hasn't been tampered with. |
-|[November 2022 feature wave](november-2022-feature-wave-enroll.md) | November 2023 | November 2022 brought a number of new features for Azure SQL Managed Instance, such as [fast provisioning](management-operations-overview.md#fast-provisioning), and [zone redundancy](high-availability-sla.md#zone-redundant-availability) as well as enhancements to the [virtual cluster](virtual-cluster-architecture.md) and [network security](connectivity-architecture-overview.md). |  
-|[Zone-redundancy](../managed-instance/high-availability-sla.md#zone-redundant-availability) | November 2023 | Deploy your Business Critical SQL Managed Instance to multiple availability zones to improve the availability of your instance in the event of a disaster. | 
+|[November 2022 feature wave](november-2022-feature-wave-enroll.md) | November 2023 | November 2022 brought a number of new features for Azure SQL Managed Instance, such as [fast provisioning](management-operations-overview.md#fast-provisioning), and [zone redundancy](high-availability-sla-local-zone-redundancy.md#zone-redundant-availability) as well as enhancements to the [virtual cluster](virtual-cluster-architecture.md) and [network security](connectivity-architecture-overview.md). |  
+|[Zone-redundancy](../managed-instance/high-availability-sla-local-zone-redundancy.md#zone-redundant-availability) | November 2023 | Deploy your Business Critical SQL Managed Instance to multiple availability zones to improve the availability of your instance in the event of a disaster. | 
 |[Double log write throughput limit](resource-limits.md#service-tier-characteristics) | August 2023 | The max log write throughput limit has doubled for the Business Critical tier, up to 192 MiB/s. | 
 |[XML compression](https://techcommunity.microsoft.com/t5/azure-sql-blog/general-availability-of-xml-compression-for-azure-sql-database/ba-p/3888861) | August 2023 | XML compression for Azure SQL Managed Instance is now generally available. You can use [ALTER INDEX](/sql/t-sql/statements/alter-index-transact-sql?view=azuresqldb-mi-current&preserve-view=true#xml_compression) to apply XML compression to existing [XML indexes](/sql/relational-databases/xml/xml-indexes-sql-server?view=azuresqldb-mi-current&preserve-view=true). |
 |[TDS 8.0 support](/sql/relational-databases/security/networking/tds-8?view=azuresqldb-mi-current&preserve-view=true) | August 2023 | Azure SQL Managed Instance now supports TDS 8.0 for strict encryption of data in transit. |
 |[Private endpoints](private-endpoint-overview.md) | August 2023 | Establish secure and isolated connectivity between Azure SQL Managed Instance and multiple virtual networks without exposing the entire network infrastructure of your service [by using a private endpoint](https://techcommunity.microsoft.com/t5/azure-sql-blog/private-endpoints-ga-for-azure-sql-managed-instance/ba-p/3895434). Review these blog posts on [Scenarios with private endpoints](https://techcommunity.microsoft.com/t5/azure-sql-blog/scenarios-with-private-endpoints-to-azure-sql-managed-instance/ba-p/3902001) and [Advanced scenarios with private endpoints to Azure SQL Managed Instance](https://techcommunity.microsoft.com/t5/azure-sql-blog/advanced-scenarios-with-private-endpoints-to-azure-sql-managed/ba-p/3902198). |
-|[Azure SQL bindings for Azure Functions](/azure/azure-functions/functions-bindings-azure-sql) | May 2023 | Azure Functions supports input and output bindings for the Azure SQL and SQL Server products. | 
-|[License-free standby replica](failover-group-standby-replica-how-to-configure.md) | May 2023 | Save on licensing costs when you designate your geo-secondary replica as **Standby**. | 
-|[CREATE EXTERNAL TABLE AS SELECT (CETAS)](/sql/t-sql/statements/create-external-table-as-select-transact-sql?view=azuresqldb-mi-current&preserve-view=true) | April 2023 | You can use CETAS to create an external table on top of Parquet or CSV files Azure Blob storage or Azure Data Lake Storage (ADLS) Gen2. CETAS can also export, in parallel, the results of a T-SQL SELECT statement into the created external table. There is potential for data exfiltration risk with these capabilities, so CETAS is disabled by default for Azure SQL Managed Instance. To enable, see [CREATE EXTERNAL TABLE AS SELECT (CETAS)](/sql/t-sql/statements/create-external-table-as-select-transact-sql?view=azuresqldb-mi-current&preserve-view=true#enable-cetas-via-azure-powershell). |
-|[One-way Managed Instance link for SQL Server 2016 & 2019](managed-instance-link-feature-overview.md)| April 2023 | Online replication of SQL Server databases hosted anywhere to Azure SQL Managed Instance. |
-|[SQL Database Projects extension](/azure-data-studio/extensions/sql-database-project-extension) | April 2023 | An extension to develop databases for Azure SQL Database with Azure Data Studio and Visual Studio Code. A SQL project is a local representation of SQL objects that comprise the schema for a single database, such as tables, stored procedures, or functions. |
-|[Shrink Database](/sql/t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql?view=azuresqldb-mi-current&preserve-view=true) and [Shrink File with Low Priority](/sql/t-sql/database-console-commands/dbcc-shrinkfile-transact-sql?view=azuresqldb-mi-current&preserve-view=true) | March 2023 | This feature solves the concurrency issues that can arise from shrink database and shrink file commands, especially during active maintenance or on busy OLTP environments. In WAIT_AT_LOW_PRIORITY mode, necessary tasks to shrink database files can be completed without negatively affecting application query performance. |
-|[Approximate percentile](/sql/t-sql/functions/approx-percentile-cont-transact-sql)| March 2023 | Quickly compute percentiles for a large dataset with acceptable rank-based error bounds to help make rapid decisions by using approximate percentile aggregate functions. | 
+
 
 ## November 2022 feature wave
 
-The features and benefits provided by the November 2022 feature wave are now generally available. All new instances in eligible subnets in both dev/test and production subscriptions are eligible for the feature wave. Existing instances will be enrolled gradually as part of regular updates during configured maintenance windows. To learn more, see [November 2022 feature wave](november-2022-feature-wave-enroll.md).
+Changes and capabilities that were introduced in the November 2022 feature wave have been integrated to the majority of instances and are now available by default. Since taking separate action to enroll an instance is no longer necessary, options that mention the November 2022 feature wave have been removed from the Azure portal for instances that have enrolled in the feature wave. The last remaining instances are currently in the enrollment process. 
+
+All new instances on production subscriptions are enrolled in the feature wave by default if they are created in eligible subnets. The following subnet types are eligible:
+
+- Newly created subnet (default)
+- Existing subnets that are empty
+- Existing subnets that already have the feature wave enabled, and contain only instances **with** the feature wave enabled
+- Existing subnets that don't have the feature wave enabled, and contain only instances **without** the feature wave
+
+The benefits in the feature wave include:
+
+- [**Fast instance provisioning**](management-operations-overview.md#fast-provisioning) -  It takes less time to deploy an instance.
+- [**Improved network security**](connectivity-architecture-overview.md) - Internal service traffic is now isolated and secured by Microsoft. 
+- [**Enhanced virtual cluster**](virtual-cluster-architecture.md) -  The functionality of the underlying virtual cluster is enhanced.
+
+The features available in the wave are:
+
+- [Instance stop/start](instance-stop-start-how-to.md): You can start and stop your instance at your discretion to save on billing costs for vCores and SQL Server licensing.
+- [Zone redundancy for Business Critical tier](..//managed-instance/high-availability-sla.md): You can deploy your Business Critical tier managed instance across multiple availability zones to improve the availability of your service.
+- [Managed DTC](distributed-transaction-coordinator-dtc.md): Run distributed transactions in mixed environments.
+
 
 ## Documentation changes
 
 Learn about significant changes to the Azure SQL Managed Instance documentation. For previous years, see the [What's new archive](doc-changes-updates-release-notes-whats-new-archive.md).
+
+### August 2024
+
+| Changes | Details |
+| --- | --- |
+| **Fail over link with T-SQL preview** | You can now fail over a [managed instance link](managed-instance-link-feature-overview.md) by using Transact-SQL (T-SQL) commands. This capability is currently in preview starting with [SQL Server 2022 CU13 (KB5036432)](/troubleshoot/sql/releases/sqlserver-2022/cumulativeupdate13). To learn more, review [fail over a database](managed-instance-link-failover-how-to.md?tabs=tsql#fail-over-a-database). |
+
+### July 2024
+
+| Changes | Details |
+| --- | --- |
+|**Native Windows principals**| [Native Windows principals](native-windows-principals.md) in SQL Managed Instance is in preview. |
 
 ### June 2024
 
 | Changes | Details |
 | --- | --- |
 |**Advance notifications GA**| [Advance notifications](advance-notifications.md) for upcoming SQL managed instance [maintenance windows](maintenance-window.md) are now generally available. |
+|**November 2022 feature wave integration** | Changes and capabilities introduced in the November 2022 feature wave are now default for all instances. November 2022 feature selection options are being removed from areas in the Azure portal.| 
 
 ### May 2024
 
 | Changes | Details |
 | --- | --- |
-| **Instance pool in the portal** | It's now possible to create a new instance pool, or a new instance inside an existing instance pool, by using the Azure portal. Review [Configure instance pool](instance-pools-configure.md?view=azure-portal&preserve-view=true#create-instance-pool) to learn more. The instance pool feature remains in preview.  |
+|**Instance pool in the portal** | It's now possible to create a new instance pool, or a new instance inside an existing instance pool, by using the Azure portal. Review [Configure instance pool](instance-pools-configure.md?view=azure-portal&preserve-view=true#create-instance-pool) to learn more. The instance pool feature remains in preview.  |
 |**Update policy GA** | Use the update policy to control your internal database format alignment and access to the latest SQL Database Engine features. You can choose to either limit the feature set to features that are available in SQL Server 2022, or ensure your instance takes advantage of all the latest features of Azure SQL Managed Instance. This feature is generally available. Review [Update policy](update-policy.md) to learn more.  | 
-
+| **Zone redundancy guide** | We've published a guide making it easier for you to enable [zone redundancy](instance-zone-redundancy-configure.md) for Azure SQL Managed Instance. | 
 
 ### March 2024
 
@@ -119,26 +148,6 @@ Learn about significant changes to the Azure SQL Managed Instance documentation.
 | --- | --- |
 |**Instance pool preview refresh** | Instance pools have a number of additional capabilities, such as the ability to deploy a 2-vCore instance. The preview of this feature has been refreshed. Review [instance pools](instance-pools-overview.md#whats-new) to learn more. |
 
-
-### December 2023
-
-| Changes | Details |
-| --- | --- |
-|**Free Azure SQL Managed Instance preview** |  Try Azure SQL Managed Instance for free, for the first 12 months after you create your instance. This free offer provides a General Purpose instance with up to 100 databases, and 720 vCore hours of compute every month. This offer is currently in preview. Review [Free SQL Managed Instance offer](free-offer.md) to learn more. |
-
-### November 2023
-
-| Changes | Details |
-| --- | --- |
-|**Database copy and move GA**| Perform an online database copy or move operation across managed instances. This feature is now generally available. Review [Database copy and move](database-copy-move-how-to.md) to get started. |
-|**Distributed Transaction Coordinator (DTC) GA** | Use DTC to run distributed transactions in mixed environments such as across managed instances, SQL Servers, other relational database management systems (RDBMSs), custom applications and other transaction participants hosted in any environment that can establish network connectivity to Azure. This feature is now generally available. Review [Distributed Transaction Coordinator (DTC)](distributed-transaction-coordinator-dtc.md) to get started. | 
-|**Ledger GA** | Ledger in Azure SQL Managed Instance allows you to cryptographically attest to other parties, such as auditors or other business parties, that your data hasn't been tampered with. This feature is now generally available. Review [Ledger](/sql/relational-databases/security/ledger/ledger-overview) to learn more. | 
-|**Link from SQL MI to SQL Server 2022 preview** |  Configure a link from Azure SQL Managed Instance to SQL Server 2022. This feature is now in preview. Review [Managed Instance link overview](managed-instance-link-feature-overview.md) to learn more. |
-|**Instance stop and start GA** | Stop and start your managed instance to save on licensing and compute costs. This feature is now generally available. Review [instance stop and start](instance-stop-start-how-to.md) to learn more.  |
-|**November 2022 feature wave GA**| November 2022 brought a number of new features for Azure SQL Managed Instance, such as [fast provisioning](management-operations-overview.md#fast-provisioning), and [zone redundancy](high-availability-sla.md#zone-redundant-availability) as well as enhancements to the [virtual cluster](virtual-cluster-architecture.md) and [network security](connectivity-architecture-overview.md).  All the features and benefits introduced by the November 2022 feature wave are now generally available. Review [November 2022 Feature wave](november-2022-feature-wave-enroll.md) to learn more. | 
-| **SQL Server DR to SQL MI preview** |  In the event of a disaster, you can recover your SQL Server 2022 database by failing over to SQL Managed Instance, and then failing back to SQL Server 2022 online by using the Managed Instance link. This feature has moved from a limited public preview that required signing up to an open public preview available to everyone. Review [Online disaster recovery for SQL Server 2022](managed-instance-link-disaster-recovery.md) to learn more. |
-|**Zone-redundancy for Business Critical GA**| Deploy your Business Critical SQL Managed Instance to multiple availability zones to improve the availability of your instance in the event of a disaster. This capability is now generally available. Review [Zone-redundancy](../managed-instance/high-availability-sla.md#zone-redundant-availability) to learn more. |
-|**Zone-redundancy for General Purpose preview**| Deploy your General Purpose SQL Managed Instance to multiple availability zones to improve the availability of your instance in the event of a disaster. This capability is now in preview. Review [Zone-redundancy](../managed-instance/high-availability-sla.md#zone-redundant-availability) to learn more. |
 
 ## Archive
 

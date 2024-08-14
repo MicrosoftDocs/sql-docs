@@ -2,7 +2,7 @@
 title: "ODBC Data Sources subkey"
 description: "ODBC Data Sources subkey"
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: "09/23/2019"
 ms.service: sql
 ms.subservice: connectivity

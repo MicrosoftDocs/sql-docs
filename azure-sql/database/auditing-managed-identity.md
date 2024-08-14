@@ -6,7 +6,7 @@ author: sravanisaluru
 ms.author: srsaluru
 ms.reviewer: randolphwest, mathoma
 ms.date: 05/31/2023
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.subservice: security
 ms.topic: conceptual
 ---

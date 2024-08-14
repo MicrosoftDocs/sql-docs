@@ -42,7 +42,7 @@ landingContent:
           - text: Always Encrypted cryptography
             url: /sql/relational-databases/security/encryption/always-encrypted-cryptography
           - text: How queries against encrypted columns work
-            url: /sql/relational-databases/security/encryption/how-queries-against-encrypted-columns-work
+            url: /sql/relational-databases/security/encryption/always-encrypted-how-queries-against-encrypted-columns-work
 
 
   # Card 

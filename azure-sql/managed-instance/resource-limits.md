@@ -36,10 +36,11 @@ Hardware generations have different characteristics, as described in the followi
 | **Number of vCores** <br />vCore=1 LP (hyper-thread) | 2<sup>1</sup>-80 vCores | 2<sup>1</sup>-128 vCores | 4-128 vCores |
 | **Max memory (memory/vCore ratio)**   | 5.1 GB per vCore - 408 GB maximum<br />Add more vCores to get more memory. | 7 GB per vCore up to 80 vCores - 560 GB maximum  | 13.6 GB per vCore up to 64 vCores - 870.4 GB maximum |
 | **Max In-Memory OLTP memory** |  Instance limit: 0.8 - 1.65 GB per vCore | Instance limit: 1.1 - 2.3 GB per vCore | Instance limit: 2.2 - 4.5 GB per vCore |
-| **Max instance reserved storage**<sup>2</sup> | **General Purpose:** up to 16 TB<br /> **Business Critical:** up to 4 TB | **General Purpose:** up to 16 TB<br /> **Business Critical:** up to 5.5 TB | **General Purpose:** up to 16 TB <br /> **Business Critical:** up to 16 TB |
+| **Max instance reserved storage**<sup>2</sup> | **General Purpose:** up to 16 TB<br /> **Business Critical:** up to 4 TB | **General Purpose:** up to 16 TB<br /> **Business Critical:** up to 16 TB<sup>3</sup> | **General Purpose:** up to 16 TB <br /> **Business Critical:** up to 16 TB |
 
 <sup>1</sup> Deploying a 2-vCore instance is only possible inside an [instance pool](instance-pools-overview.md).   
-<sup>2</sup> Dependent on [the number of vCores](#service-tier-characteristics).
+<sup>2</sup> Dependent on [the number of vCores](#service-tier-characteristics).   
+<sup>3</sup> Only [the major regions](#regional-supports-for-memory-optimized-premium-series-hardware-and-for-premium-series-hardware-with-16-tb-storage) can provide 16 TB of storage. Smaller regions limit available storage to 5.5 TB.
 
 > [!NOTE]
 > If your workload requires storage sizes greater than the available resource limits for Azure SQL Managed Instance, consider the Azure SQL Database [Hyperscale service tier](../database/service-tier-hyperscale.md).

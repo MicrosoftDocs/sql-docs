@@ -4,7 +4,7 @@ description: Learn how to create a database project as part of the local develop
 author: croblesm
 ms.author: roblescarlos
 ms.reviewer: mathoma
-ms.date: 04/01/2024
+ms.date: 08/14/2024
 ms.service: azure-sql-database
 ms.topic: how-to
 ms.custom: template-how-to, build-2023, build-2023-dataai
@@ -51,3 +51,4 @@ Learn more about the local development experience for Azure SQL Database:
 - [Quickstart: Create a local development environment for Azure SQL Database](local-dev-experience-quickstart.md)
 - [Publish a database project for Azure SQL Database to the local emulator](local-dev-experience-publish-emulator.md)
 - [Introducing the Azure SQL Database emulator](local-dev-experience-sql-database-emulator.md)
+- [Quickstart: Set up a development environment with Dev Container Templates for Azure SQL Database](local-dev-experience-dev-containers-quickstart.md)

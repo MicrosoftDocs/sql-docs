@@ -41,6 +41,8 @@ landingContent:
             url: /sql/relational-databases/security/encryption/overview-of-key-management-for-always-encrypted
           - text: Always Encrypted cryptography
             url: /sql/relational-databases/security/encryption/always-encrypted-cryptography
+          - text: How queries against encrypted columns work
+            url: /sql/relational-databases/security/encryption/how-queries-against-encrypted-columns-work
 
 
   # Card 

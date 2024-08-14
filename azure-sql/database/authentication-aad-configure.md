@@ -80,7 +80,7 @@ For more information, see:
 
 Each [logical server](logical-servers.md) in Azure (which hosts SQL Database or Azure Synapse) starts with a single server administrator account that is the administrator of the entire server. Create a second administrator account as a Microsoft Entra account. This principal is created as a contained database user in the `master` database of the server. Administrator accounts are members of the **db_owner** role in every user database, and each user database is entered as the **dbo** user. For more information about administrator accounts, see [Managing Databases and Logins](logins-create-manage.md).
 
-It is advised that the ID associated as the Microsoft Entra admin is tied to an Entra Group. This Client ID of the Entra Group will be inserted into the `sys.database_principals` in the master table. 
+You should associate the Microsoft Entra ID admin with a Microsoft Entra Group. This client ID of the Microsoft Entra Group is inserted into the `sys.database_principals` table in the `master` database. 
 
 The Microsoft Entra administrator must be configured for both the primary and the secondary servers when using Microsoft Entra ID with geo-replication. If a server doesn't have a Microsoft Entra administrator, then Microsoft Entra logins and users receive a `Cannot connect` to a server error.
 

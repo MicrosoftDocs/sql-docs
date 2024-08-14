@@ -8008,6 +8008,8 @@ items:
           href: relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md
         - name: Always Encrypted cryptography
           href: relational-databases/security/encryption/always-encrypted-cryptography.md
+        - name: How queries against encrypted columns work
+          href: relational-databases/security/encryption/always-encrypted-how-queries-against-encrypted-columns-work.md
       - name: Always Encrypted with secure enclaves
         items:
         - name: Always Encrypted with secure enclaves documentation

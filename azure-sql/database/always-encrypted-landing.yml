@@ -13,8 +13,8 @@ metadata:
   ms.topic: landing-page
   author: VanMSFT
   ms.author: vanto
-  ms.reviewer: mathoma, mathoma
-  ms.date: 01/15/2021
+  ms.reviewer: mathoma
+  ms.date: 08/14/2024
   monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new

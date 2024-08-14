@@ -87,13 +87,13 @@ The following table lists features of Azure SQL Database that have been made gen
 
 Learn about significant changes to the Azure SQL Database documentation. For previous years, see the [What's new archive](doc-changes-updates-release-notes-whats-new-archive.md).
 
-
 ### August 2024
 
 | Changes | Details |
 | --- | --- |
 | **Maintenance window support for named replicas GA**|[Maintenance window](maintenance-window.md) support for named replicas is now generally available. For more information, read [Maintenance window support for named replicas](https://aka.ms/MWsupportforNR).|
 | **Maintenance window support for Hyperscale GA** | [Maintenance window](maintenance-window.md) support for Hyperscale databases is now generally available. |
+| **Local development experience for Azure SQL Database using Dev Container Templates** | We've provided details and quickstarts to get started with the new [local dev experience for Azure SQL Database](local-dev-experience-dev-containers.md). Dev Container Templates replace the previous local emulator experience. To get started, see [Quickstart: Set up a development environment with Dev Container Templates for Azure SQL Database](local-dev-experience-dev-containers-quickstart.md). |
 
 ### July 2024
 

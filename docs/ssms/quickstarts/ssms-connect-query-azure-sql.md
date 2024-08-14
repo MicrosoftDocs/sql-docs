@@ -4,7 +4,7 @@ description: Connect to and query an Azure SQL Database or Azure SQL Managed Ins
 author: erinstellato-ms
 ms.author: erinstellato
 ms.reviewer: mikeray, randolphwest, maghan
-ms.date: 07/23/2024
+ms.date: 08/14/2024
 ms.service: sql
 ms.subservice: ssms
 ms.topic: quickstart

@@ -52,7 +52,7 @@ If SSIS installed successfully, but the Solution Explorer shows **"incompatible"
 1. Relaunch Visual Studio
 
 If SSIS installation shows Setup Failed with "Unknown error(0x80131500)" or "ISVsix Unknown error". Open %temp%\SsdtisSetup folder, search in Microsoft.DataTools.IntegrationServices_{latestTimestamp}_ISVsix.log:
-- The error is "Pre-check verification failed with warning(s) :  AnotherInstallationRunning.",
+- The error is "Pre-check verification failed with warning(s):  AnotherInstallationRunning.",
   1. Keep waiting and retry. More detail: Windows Installer block your installation. Windows Installer is a subservice of Windows that manages the installation of packages like MSIs,  Windows Update or a 3rd party things, and it can only handle one thing at a time.
 
 - The error is "The file {filefullpath} already exists.":
@@ -70,7 +70,7 @@ If SSIS installation shows Setup Failed with "Unknown error(0x80131500)" or "ISV
 - The error is "Error 0x80091007: Failed to verify hash of payload",
   - delete C:\ProgramData\Package Cache\15160B731819F56D87A626F9A2777550340022D7 and retry.
 
-If you error isn't in the above list, you can zip %temp%\SsdtisSetup and send the logs to ssistoolsfeedbacks@microsoft.com for troubleshooting.
+If your error isn't in the above list, you can zip %temp%\SsdtisSetup and send the logs to ssistoolsfeedbacks@microsoft.com for troubleshooting.
 
 
 ## Offline installation

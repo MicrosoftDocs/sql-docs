@@ -51,15 +51,18 @@ Workaround: Solution Explorer -> right-click project ->properties->debugging->Ru
  
 ## Installation issues
 
-If you install successfully, but the solution shows **"incompatible"**, and "The application isn't installed":
+## Installation issues
+
+If SSIS installed successfully, but the Solution Explorer shows **"incompatible"**, or "The application isn't installed":
 1. Open Visual Studio -> Extension -> Manage Extensions -> Installed
 1. Enable SSIS extension
 1. Relaunch Visual Studio
-   
-If you get an error during installation, and find **"Process returned error: 0x80131500"** in the log. You can open %temp%\SsdtisSetup folder, search in Microsoft.DataTools.IntegrationServices_{timestamp}_ISVsix.log:
-- When the error is "Pre-check verification failed with warning(s) :  AnotherInstallationRunning.",
-  - kill MSIExec.exe in task manager, and retry. 
-- When the error is "The file {filefullpath} already exists.":
+
+If SSIS installation shows Setup Failed with "Unknown error(0x80131500)" or "ISVsix Unknown error". Open %temp%\SsdtisSetup folder, search in Microsoft.DataTools.IntegrationServices_{latestTimestamp}_ISVsix.log:
+- The error is "Pre-check verification failed with warning(s) :  AnotherInstallationRunning.",
+  1. Keep waiting and retry.  More detail: You are blocked by a Windows Installer.  which is a subservice of Windows that manages the installation of packages like MSIs,  Windows Update or a 3rd party things. And it can only handle one thing at a time.  
+
+- The error is "The file {filefullpath} already exists.":
    1. Run the following commands from an elevated command prompt:
       ```console
       cd C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE
@@ -67,13 +70,13 @@ If you get an error during installation, and find **"Process returned error: 0x8
       rm PublicAssemblies\SSIS\* 
       rm "PublicAssemblies\Microsoft BI\Business Intelligence Projects\Integration Services\"* 
       ```
-   1. Repair the VS2019
-   1. Restart and reinstall
-- When the error is "Object reference not set to an instance of an object.":
+   1. Repair the VS2022 via VS installer
+   1. Restart PC and reinstall SSIS
+- The error is "Object reference not set to an instance of an object.",
   - delete the broken instance folder "%ProgramData%\Microsoft\VisualStudio\Packages\_Instances\<InstallationID>"
-- When the error is "Error 0x80091007: Failed to verify hash of payload":
+- The error is "Error 0x80091007: Failed to verify hash of payload",
   - delete C:\ProgramData\Package Cache\15160B731819F56D87A626F9A2777550340022D7 and retry.
-- When it isn't above error in ISVsix.log, you can zip %temp%\SsdtisSetup and send the logs to ssistoolsfeedbacks@microsoft.com for troubleshooting.
+
 
 ## Offline installation
 Follow the below steps to install this product in an offline environment:

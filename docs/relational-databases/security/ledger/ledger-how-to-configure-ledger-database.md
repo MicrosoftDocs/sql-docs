@@ -5,7 +5,7 @@ author: VanMSFT
 ms.author: vanto
 ms.reviewer: mathoma
 ms.date: 11/14/2023
-ms.service: azure-sql-database
+ms.service: sql
 ms.subservice: security
 ms.custom: devx-track-azurecli, ignite-2023
 ms.topic: how-to

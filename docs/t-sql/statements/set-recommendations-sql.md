@@ -5,7 +5,7 @@ author: mariyaali
 ms.author: mariyaali
 ms.reviewer: xiaoyul, wiassaf
 ms.date: 07/16/2023
-ms.service: synapse-analytics
+ms.service: azure-synapse-analytics
 ms.topic: reference
 f1_keywords:
   - "SET RECOMMENDATIONS"

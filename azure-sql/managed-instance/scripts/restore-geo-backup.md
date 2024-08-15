@@ -5,7 +5,7 @@ author: Stralle
 ms.author: strrodic
 ms.reviewer: mathoma, nvraparl
 ms.date: 07/03/2019
-ms.service: sql-managed-instance
+ms.service: azure-sql-managed-instance
 ms.subservice: backup-restore
 ms.topic: sample
 ms.custom: devx-track-azurepowershell

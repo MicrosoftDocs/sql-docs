@@ -5,7 +5,7 @@ author: SudhirRaparla
 ms.author: nvraparl
 ms.reviewer: nvraparl, wiassaf, mathoma
 ms.date: 09/30/2022
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.subservice: backup-restore
 ms.topic: article
 ROBOTS: NOINDEX

@@ -5,7 +5,7 @@ author: croblesm
 ms.author: roblescarlos
 ms.reviewer: mathoma
 ms.date: 04/01/2024
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.topic: how-to
 ---
 
@@ -13,6 +13,9 @@ ms.topic: how-to
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
 This article teaches you to set up the [local development experience for Azure SQL Database](local-dev-experience-overview.md). The local development experience for Azure SQL Database enables developers and database professionals to design, edit, build/validate, publish, and run database schemas for databases in Azure SQL Database using a containerized environment.
+
+> [!IMPORTANT]
+> Set up a development environment with an [Azure SQL Database dev container template](local-dev-experience-dev-containers.md). To get started, [set up an Azure SQL Database local development environment with an dev container template](local-dev-experience-dev-containers-quickstart.md). Dev container templates are a superior alternative and replacement to the Azure SQL Database emulator for local development.
 
 ## Prerequisites
 

@@ -1,5 +1,5 @@
 ---
-title: Use the Spark connector with Microsoft Azure SQL and SQL Server
+title: Use the Spark connector
 titleSuffix: Azure SQL Database & Azure SQL Managed Instance
 description: Learn how to use the Spark Connector with Azure SQL Database, Azure SQL Managed Instance, and SQL Server.
 author: WilliamDAssafMSFT

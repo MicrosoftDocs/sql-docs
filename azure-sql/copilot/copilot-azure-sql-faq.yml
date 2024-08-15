@@ -1,11 +1,11 @@
 ### YamlMime:FAQ
 metadata:
-  title: "Frequently asked questions about Microsoft Copilot skills in Azure SQL Database (preview)"
-  description: "Frequently asked questions about Microsoft Copilot skills in Azure SQL Database."
+  title: "Frequently asked questions about Microsoft Copilot skills (preview)"
+  description: "Frequently asked questions about Microsoft Copilot skills in Azure SQL Database, currently in preview."
   author: WilliamDAssafMSFT
   ms.author: wiassaf
   ms.reviewer: josephsack
-  ms.service: sql-database
+  ms.service: azure-sql-database
   ms.subservice: ai-copilot
   ms.collection: ce-skilling-ai-copilot
   ms.custom:

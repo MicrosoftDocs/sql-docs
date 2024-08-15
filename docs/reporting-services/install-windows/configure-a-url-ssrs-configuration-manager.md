@@ -66,7 +66,7 @@ Before you create or modify a URL, remember the following points:
   
    - **::1** is the loopback address in IPv6 format.
   
-   - Specific IP addresses also appear in this list. IP addresses can be in IPv4 and IPv6 formats. *Nnn.nnn.nnn.nnn* is the 32-bit IPv4 address of a network adapter card on your computer. IPv6 addresses are 128-bit, with eight 4-byte fields separated by colons: `\<prefix>:nnnn:nnnn:nnnn:nnnn:nnnn:nnnn`.
+   - Specific IP addresses also appear in this list. IP addresses can be in IPv4 and IPv6 formats. *Nnn.nnn.nnn.nnn* is the 32-bit IPv4 address of a network adapter card on your computer. IPv6 addresses are 128-bit, with eight 4-byte fields separated by colons: ```\<prefix>:nnnn:nnnn:nnnn:nnnn:nnnn:nnnn```.
 
          If you have multiple cards or if your network supports both IPv4 and IPv6 addresses, you see multiple IP addresses. If you select only one IP address, it limits application access to the IP address and any host name that a domain name server maps to that address. You can't use localhost to access a report server, and you can't use the IP addresses of other network adapter cards that are installed on the report server computer. Typically, if you select this value, it's because you're configuring multiple URL reservations that also specify explicit IP addresses or host names. For example, you might have one for a network adapter card used for intranet connections and a second one used for extranet connections.
 
@@ -74,7 +74,7 @@ Before you create or modify a URL, remember the following points:
 
    - From a command prompt, enter the following command to return a list of TCP ports that are being used:
 
-         `netstat -anp tcp`
+         ```netstat -anp tcp```
 
    - Review the Microsoft Support article, [Information about TCP/IP port assignments](https://www.betaarchive.com/wiki/index.php?title=Microsoft_KB_Archive/174904), to read about TCP port assignments and the differences between Well Known Ports (0 through 1023), Registered Ports (1024 through 49151), and Dynamic or Private Ports (49152 through 65535).
 

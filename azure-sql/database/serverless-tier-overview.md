@@ -4,7 +4,7 @@ description: This article describes the new serverless compute tier and compares
 author: oslake
 ms.author: moslake
 ms.reviewer: wiassaf, mathoma
-ms.date: 08/14/2024
+ms.date: 08/15/2024
 ms.service: azure-sql-database
 ms.subservice: service-overview
 ms.topic: conceptual
@@ -31,7 +31,7 @@ A compute autoscaling range and an auto-pause delay are important parameters for
 ### Performance configuration
 
 - The **minimum vCores** and **maximum vCores** are configurable parameters that define the range of compute capacity available for the database. Memory and IO limits are proportional to the vCore range specified.  
-- The **auto-pause delay** is a configurable parameter that defines the period of time the database must be inactive before it is automatically paused. The database is automatically resumed when the next sign-in or other activity occurs. Alternatively, automatic pausing can be disabled.
+- The **auto-pause delay** is a configurable parameter that defines the period of time the database must be inactive before it is automatically paused. The database is automatically resumed when the next login or other activity occurs. Alternatively, automatic pausing can be disabled.
 
 ### Cost
 
@@ -184,7 +184,7 @@ Auto-resuming is triggered if any of the following conditions are true at any ti
 
 |Feature|Auto-resume trigger|
 |---|---|
-|Authentication and authorization|Sign-in|
+|Authentication and authorization|Login|
 |Threat detection|Enabling/disabling threat detection settings at the database or server level.<br>Modifying threat detection settings at the database or server level.|
 |Data discovery and classification|Adding, modifying, deleting, or viewing sensitivity labels|
 |Auditing|Viewing auditing records.<br>Updating or viewing auditing policy.|
@@ -197,14 +197,14 @@ Auto-resuming is triggered if any of the following conditions are true at any ti
 |Database copying|Create database as copy.<br>Export to a BACPAC file.|
 |SQL data sync|Synchronization between hub and member databases that run on a configurable schedule or are performed manually|
 |Modifying certain database metadata|Adding new database tags.<br>Changing maximum vCores, minimum vCores, or auto-pause delay.|
-|SQL Server Management Studio (SSMS)|When you use SSMS versions earlier than 18.1, and opening a new query window for any database in the server, any auto-paused database in the same server is resumed. This behavior does not occur if using SSMS version 18.1 or later.|
+|SQL Server Management Studio (SSMS)|When using SSMS versions earlier than 18.1 and opening a new query window for any database in the server, any auto-paused database in the same server is resumed. This behavior does not occur if using SSMS version 18.1 or later.|
 
 - Monitoring, management, or other solutions performing any of these operations listed triggers auto-resuming.
 - Auto-resuming is also triggered during the deployment of some service updates that require the database be online.
 
 ### Connectivity
 
-If a serverless database is paused, the first sign-in activity resumes the database and returns an error stating that the database is unavailable with error code 40613. Once the database is resumed, sign-in can be retried to establish connectivity. Database clients with a [recommended connection retry logic](/azure/architecture/patterns/retry) should not need to be modified. For recommended patterns for connection retry logic, review:
+If a serverless database is paused, the first connection attempt resumes the database and returns an error stating that the database is unavailable with error code 40613. Once the database is resumed, the login can be retried to establish connectivity. Database clients with a [recommended connection retry logic](/azure/architecture/patterns/retry) should not need to be modified. For recommended patterns for connection retry logic, review:
 
 - [Retry logic in SqlClient](/sql/connect/ado-net/configurable-retry-logic)
 - [Retry logic in SQL Database using Entity Framework Core](/azure/architecture/best-practices/retry-service-specific#sql-database-using-entity-framework-core)
@@ -476,7 +476,7 @@ In the case of a serverless database with auto-pausing enabled, the status it re
 
 #### Use Azure portal
 
-In the Azure portal, the database status is displayed in the overview page of the database and in the overview page of its server.  Also in the Azure portal, the history of pause and resume events of a serverless database can be viewed in the Activity log.
+In the Azure portal, the database status is displayed in the overview page of the database and in the overview page of its server.  Also in the Azure portal, the history of pause and resume events of a serverless database can be viewed in the [Activity log](/azure/azure-monitor/essentials/activity-log-insights).
 
 #### Use PowerShell
 

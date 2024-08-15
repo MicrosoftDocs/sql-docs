@@ -1,6 +1,6 @@
 ---
 title: "Configure a URL (Report Server Configuration Manager)"
-description: "Configure a URL  (Report Server Configuration Manager)"
+description: Learn how to create and configure a URL and set advanced URL properties to define more URLs for the report server web service.
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 08/14/2024
@@ -10,7 +10,7 @@ ms.topic: how-to
 ms.custom: updatefrequency5
 helpviewer_keywords:
   - "URL access [Reporting Services], syntax"
-#customer intent:
+#customer intent: As an SSRS user, I want to learn to configure a URL by using the Report Server Configuration Manager so that I can create URLs and set advanced URL properties.
 ---
 # Configure a URL (Report Server Configuration Manager)
 
@@ -28,7 +28,7 @@ This article provides instructions for the following tasks:
 
 - Set advanced URL properties to define more URLs.
 
-For more information about how URLs are stored and maintained or about interoperability issues, see [About URL reservations and registration &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md) and [Install Reporting Services and Internet Information Services side-by-side &#40;SSRS Native Mode&#41;](../../reporting-services/install-windows/install-reporting-and-internet-information-services-side-by-side.md). To review examples of URLs often used in a Reporting Services installation, see [Examples of URLs](#URLExamples) in this article.
+For more information about how URLs are stored and maintained or about interoperability issues, see [About URL reservations and registration (Report Server Configuration Manager)](../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md) and [Install Reporting and Internet Information Services side-by-side](../../reporting-services/install-windows/install-reporting-and-internet-information-services-side-by-side.md). To review examples of URLs often used in a Reporting Services installation, see [Examples of URLs](#URLExamples) in this article.
 
 ## Prerequisites
 
@@ -68,7 +68,7 @@ Before you create or modify a URL, remember the following points:
   
    - Specific IP addresses also appear in this list. IP addresses can be in IPv4 and IPv6 formats. *Nnn.nnn.nnn.nnn* is the 32-bit IPv4 address of a network adapter card on your computer. IPv6 addresses are 128-bit, with eight 4-byte fields separated by colons: `\<prefix>:nnnn:nnnn:nnnn:nnnn:nnnn:nnnn`.
 
-     If you have multiple cards or if your network supports both IPv4 and IPv6 addresses, you see multiple IP addresses. If you select only one IP address, it limits application access to the IP address and any host name that a domain name server maps to that address. You can't use localhost to access a report server, and you can't use the IP addresses of other network adapter cards that are installed on the report server computer. Typically, if you select this value, it's because you're configuring multiple URL reservations that also specify explicit IP addresses or host names. For example, you might have one for a network adapter card used for intranet connections and a second one used for extranet connections.
+         If you have multiple cards or if your network supports both IPv4 and IPv6 addresses, you see multiple IP addresses. If you select only one IP address, it limits application access to the IP address and any host name that a domain name server maps to that address. You can't use localhost to access a report server, and you can't use the IP addresses of other network adapter cards that are installed on the report server computer. Typically, if you select this value, it's because you're configuring multiple URL reservations that also specify explicit IP addresses or host names. For example, you might have one for a network adapter card used for intranet connections and a second one used for extranet connections.
 
 1. Specify the port. Port 80 is the default because it can be shared with other applications. If you want to use a custom port number, remember that you have to always specify it in the URL used to access the report server. You can use the following techniques to find an available port:
 
@@ -103,7 +103,7 @@ Before you create or modify a URL, remember the following points:
 >
 > To correct the issue, delete all bindings and then create new bindings with unique settings or configure the Reporting Services URL registrations with wildcards.
 
-### To create a URL reservation for the [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]
+### Create a URL reservation for the [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]
 
 1. Start the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration tool and connect to the report server instance.
 

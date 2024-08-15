@@ -54,7 +54,7 @@ For features supported by the Evaluation and Developer editions, see the SQL Ser
 
 <sup>1</sup> For more information on supported data sources in SQL Server Reporting Services (SSRS), see [Data sources supported by Reporting Services &#40;SSRS&#41;](../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
   
-<sup>2</sup> Requires SQL Server 2016 Reporting Services in SharePoint mode. For more information, see [Install SQL Server Reporting Services in SharePoint mode](../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md). In SQL Server 2017 Reporting Services and following versions, integration with SharePoint is no longer available. Power View support is no longer available after SQL Server 2017.
+<sup>2</sup> Requires SQL Server 2016 Reporting Services in SharePoint mode. For more information, see [Install Reporting Services 2016 in SharePoint mode](../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md). In SQL Server 2017 Reporting Services and following versions, integration with SharePoint is no longer available. Power View support is no longer available after SQL Server 2017.
 
 <sup>3</sup> Only in Power BI Report Server and SQL Server 2017 Reporting Services and later.
 
@@ -96,7 +96,7 @@ The following software client applications are available on the Microsoft Downlo
 
 ## Related content
 
-- [Features supported by the editions of SQL Server](~/sql-server/editions-and-components-of-sql-server-version-15.md)
+- [Editions and supported features of SQL Server 2019](~/sql-server/editions-and-components-of-sql-server-version-15.md)
 - [Release notes for SQL Server Reporting Services (SSRS)](release-notes-reporting-services.md)
 - [What's new in SQL Server Reporting Services (SSRS)](~/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)
 

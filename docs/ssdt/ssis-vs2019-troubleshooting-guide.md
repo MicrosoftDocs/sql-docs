@@ -76,7 +76,7 @@ If SSIS installation shows Setup Failed with "Unknown error(0x80131500)" or "ISV
   - delete the broken instance folder "%ProgramData%\Microsoft\VisualStudio\Packages\_Instances\<InstallationID>"
 - The error is "Error 0x80091007: Failed to verify hash of payload",
   - delete C:\ProgramData\Package Cache\15160B731819F56D87A626F9A2777550340022D7 and retry.
-If you error isn't in the above list, you can zip %temp%\SsdtisSetup and send the logs to ssistoolsfeedbacks@microsoft.com for troubleshooting.
+- If you error isn't in the above list, you can zip %temp%\SsdtisSetup and send the logs to ssistoolsfeedbacks@microsoft.com for troubleshooting.
 
 ## Offline installation
 Follow the below steps to install this product in an offline environment:

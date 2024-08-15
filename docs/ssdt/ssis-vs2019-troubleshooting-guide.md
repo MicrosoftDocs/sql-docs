@@ -70,13 +70,13 @@ If SSIS installation shows Setup Failed with "Unknown error(0x80131500)" or "ISV
       rm PublicAssemblies\SSIS\* 
       rm "PublicAssemblies\Microsoft BI\Business Intelligence Projects\Integration Services\"* 
       ```
-   1. Repair the VS2022 via VS installer
+   1. Repair the VS2019 via VS installer
    1. Restart PC and reinstall SSIS
 - The error is "Object reference not set to an instance of an object.",
   - delete the broken instance folder "%ProgramData%\Microsoft\VisualStudio\Packages\_Instances\<InstallationID>"
 - The error is "Error 0x80091007: Failed to verify hash of payload",
   - delete C:\ProgramData\Package Cache\15160B731819F56D87A626F9A2777550340022D7 and retry.
-
+If you error isn't in the above list, you can zip %temp%\SsdtisSetup and send the logs to ssistoolsfeedbacks@microsoft.com for troubleshooting.![image](https://github.com/user-attachments/assets/ceffc5e9-9763-4942-b7e3-612a63814d7e)
 
 ## Offline installation
 Follow the below steps to install this product in an offline environment:

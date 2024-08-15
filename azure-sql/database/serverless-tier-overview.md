@@ -4,7 +4,7 @@ description: This article describes the new serverless compute tier and compares
 author: oslake
 ms.author: moslake
 ms.reviewer: wiassaf, mathoma
-ms.date: 08/06/2024
+ms.date: 08/14/2024
 ms.service: azure-sql-database
 ms.subservice: service-overview
 ms.topic: conceptual
@@ -455,7 +455,7 @@ The following table includes metrics for monitoring the resource usage of the ap
 |---|---|---|---|
 |App package|app_cpu_percent|Percentage of vCores used by the app relative to maximum vCores allowed for the app. For serverless Hyperscale, this metric is exposed for all primary replicas, named replicas, and geo-replicas. |Percentage|
 |App package|app_cpu_billed|The amount of compute billed for the app during the reporting period. The amount paid during this period is the product of this metric and the vCore unit price. <br><br>Values of this metric are determined by aggregating the maximum of CPU used and memory used each second. If the amount used is less than the minimum amount provisioned as set by the minimum vCores and minimum memory, then the minimum amount provisioned is billed. In order to compare CPU with memory for billing purposes, memory is normalized into units of vCores by rescaling the amount of memory in GB by 3 GB per vCore. For serverless Hyperscale, this metric is exposed for the primary replica and any named replicas. |vCore seconds|
-|App package| app_cpu_billed_HA_replicas| Only applicable to serverless Hyperscale.  Sum of the compute billed across all apps for HA replicas during the reporting period. This sum is scoped either to the HA replicas belonging to the primary replica or the HA replicas belonging to a given named replica. Before you calculate this sum across HA replicas, the amount of compute billed for an individual HA replica is determined in the same way as for the primary replica or a named replica. For serverless Hyperscale, this metric is exposed for all primary replicas, named replicas, and geo-replicas.  The amount paid during the reporting period is the product of this metric and the vCore unit price.  |vCore seconds| 
+|App package| app_cpu_billed_HA_replicas| Only applicable to serverless Hyperscale.  Sum of the compute billed across all apps for HA replicas during the reporting period. This sum is scoped either to the HA replicas belonging to the primary replica or the HA replicas belonging to a given named replica. Before calculating this sum across HA replicas, the amount of compute billed for an individual HA replica is determined in the same way as for the primary replica or a named replica. For serverless Hyperscale, this metric is exposed for all primary replicas, named replicas, and geo-replicas.  The amount paid during the reporting period is the product of this metric and the vCore unit price.  |vCore seconds| 
 |App package|app_memory_percent|Percentage of memory used by the app relative to maximum memory allowed for the app. For serverless Hyperscale, this metric is exposed for all primary replicas, named replicas, and geo-replicas. |Percentage|
 |User resource pool|cpu_percent|Percentage of vCores used by user workload relative to maximum vCores allowed for user workload. |Percentage|
 |User resource pool|data_IO_percent|Percentage of data IOPS used by user workload relative to maximum data IOPS allowed for user workload.|Percentage|
@@ -465,11 +465,22 @@ The following table includes metrics for monitoring the resource usage of the ap
 
 ### Pause and resume status
 
-In the Azure portal, the database status is displayed in the overview pane of the server that lists the databases it contains. The database status is also displayed in the overview pane for the database.
+In the case of a serverless database with auto-pausing enabled, the status it reports includes the following values:
 
-Using the following commands to query the pause and resume status of a database:
+|Status|Description|
+|---|---|
+|Online|The database is online.|
+|Pausing|The database is transitioning from online to paused.|
+|Paused|The database is paused.|
+|Resuming|The database is transitioning from paused to online.|
+
+#### Use Azure portal
+
+In the Azure portal, the database status is displayed in the overview page of the database and in the overview page of its server.  Also in the Azure portal, the history of pause and resume events of a serverless database can be viewed in the Activity log.
 
 #### Use PowerShell
+
+View the current database status using the following PowerShell example:
 
 ```powershell
 Get-AzSqlDatabase -ResourceGroupName $resourcegroupname -ServerName $servername -DatabaseName $databasename `
@@ -477,6 +488,8 @@ Get-AzSqlDatabase -ResourceGroupName $resourcegroupname -ServerName $servername 
 ```
 
 #### Use Azure CLI
+
+View the current database status using the following Azure CLI example:
 
 ```azurecli
 az sql db show --name $databasename --resource-group $resourcegroupname --server $servername --query 'status' -o json

@@ -13,7 +13,10 @@ ms.custom: template-how-to
 # Publish a Database Project for Azure SQL Database to the local emulator 
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
-This article provides steps to build and publish a Database Project to the [Azure SQL Database emulator (preview)](local-dev-experience-sql-database-emulator.md). 
+This article provides steps to build and publish a Database Project to the [Azure SQL Database emulator (preview)](local-dev-experience-sql-database-emulator.md).
+
+> [!IMPORTANT]
+> Set up a development environment with an [Azure SQL Database dev container template](local-dev-experience-dev-containers.md). To get started, [set up an Azure SQL Database local development environment with an dev container template](local-dev-experience-dev-containers-quickstart.md). Dev container templates are a superior alternative and replacement to the Azure SQL Database emulator for local development.
 
 ## Overview
 

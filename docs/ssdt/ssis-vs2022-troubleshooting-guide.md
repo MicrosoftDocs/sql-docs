@@ -51,7 +51,7 @@ If SSIS installed successfully, but the Solution Explorer shows **"incompatible"
 1. Enable SSIS extension
 1. Relaunch Visual Studio
 
-If SSIS installation shows Setup Failed with "Unknown error(0x80131500)" or "ISVsix Unknown error". Open %temp%\SsdtisSetup folder, search in Microsoft.DataTools.IntegrationServices_{latestTimestamp}_ISVsix.log:
+If SSIS installation shows Setup Failed with "Unknown error(0x80131500)" or "ISVsix Unknown error", open %temp%\SsdtisSetup folder, search in Microsoft.DataTools.IntegrationServices_{latestTimestamp}_ISVsix.log:
 - The error is "Pre-check verification failed with warning(s):  AnotherInstallationRunning.",
   1. Keep waiting and retry. More detail: Windows Installer block your installation. Windows Installer is a subservice of Windows that manages the installation of packages like MSIs,  Windows Update or a 3rd party things, and it can only handle one thing at a time.
 

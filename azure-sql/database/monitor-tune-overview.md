@@ -27,7 +27,7 @@ The following table presents a summary of monitoring capabilities in Azure SQL D
 | Monitoring solution | SQL Database | SQL Managed Instance | Estate monitoring | Low latency | Comprehensive data |
 |:--|:--|:--|:--|:--|:--|
 | [Metrics and alerts](monitoring-metrics-alerts.md) | **Yes** | **Yes** | **Yes** | **Yes** | No |
-| [Query Performance Insight](#generate-intelligent-assessments-of-performance-issues) | **Yes** | No | **Yes** | No | No |
+| [Query Performance Insight](#query-performance-insight-in-azure-sql-database) | **Yes** | No | **Yes** | No | No |
 | [Monitor using DMVs](monitoring-with-dmvs.md) | **Yes** | **Yes** | No | **Yes** | **Yes** |
 | [Monitor using query store](/sql/relational-databases/performance/monitoring-performance-by-using-the-query-store)  | **Yes** | **Yes** | No | **Yes** | No |
 | [Database watcher (preview)](../database-watcher-overview.md) | **Yes** | **Yes** | **Yes** | **Yes** | **Yes** |

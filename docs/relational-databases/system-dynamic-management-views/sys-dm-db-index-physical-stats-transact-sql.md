@@ -27,7 +27,7 @@ Returns size and fragmentation information for the data and indexes of the speci
 
 [!INCLUDE [sql-b-tree](../../includes/sql-b-tree.md)]
 
-`sys.dm_db_index_physical_stats` doesn't return information about memory-optimized columnstore indexes. For information about memory-optimized index use, see [sys.dm_db_xtp_index_stats (Transact-SQL)](sys-dm-db-xtp-index-stats-transact-sql.md).
+`sys.dm_db_index_physical_stats` doesn't return information about memory-optimized indexes. For information about memory-optimized index use, see [sys.dm_db_xtp_index_stats (Transact-SQL)](sys-dm-db-xtp-index-stats-transact-sql.md).
 
 If you query `sys.dm_db_index_physical_stats` on a server instance that is hosting an availability group [readable secondary replica](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md), you might encounter a `REDO` blocking issue. This is because this dynamic management view acquires an `IS` lock on the specified user table or view that can block requests by a `REDO` thread for an `X` lock on that user table or view.
 

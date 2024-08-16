@@ -6,7 +6,7 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: hudequei, mathoma
 ms.date: 02/22/2024
-ms.service: sql-db-mi
+ms.service: azure-sql
 ms.subservice: backup-restore
 ms.topic: quickstart
 ms.custom:

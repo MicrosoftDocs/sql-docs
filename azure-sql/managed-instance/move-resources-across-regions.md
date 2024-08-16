@@ -5,7 +5,7 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma
 ms.date: 04/30/2024
-ms.service: sql-managed-instance
+ms.service: azure-sql-managed-instance
 ms.subservice: data-movement
 ms.topic: how-to
 ms.custom: azure-sql-split
@@ -90,4 +90,4 @@ Once the move finishes, remove the resources in the source region to avoid unnec
 ## Related content
 
 - [Performance guidance](performance-guidance.md)
-- [High availability](high-availability-sla.md)
+- [High availability](high-availability-sla-local-zone-redundancy.md)

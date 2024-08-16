@@ -6,7 +6,7 @@ author: dimitri-furman
 ms.author: dfurman
 ms.reviewer: wiassaf
 ms.date: 8/16/2024
-ms.service: sql-db-mi
+ms.service: azure-sql
 ms.subservice: monitoring
 ms.topic: conceptual
 ms.custom:
@@ -35,7 +35,7 @@ To start monitoring your Azure SQL resources, create a **watcher** resource in y
 - For answers to frequently asked questions about database watcher, see [Database watcher FAQ](database-watcher-faq.yml).
 - For a video overview of database watcher, watch a [Data Exposed](/shows/data-exposed/) episode:
 
-  > [!VIDEO https://learn.microsoft.com/shows/data-exposed/database-watcher-your-perfmon-in-the-cloud-data-exposed/player?format=ny]
+  > [!VIDEO https://learn-video.azurefd.net/vod/player?show=data-exposed&ep=database-watcher-your-perfmon-in-the-cloud-data-exposed]
 
 > [!NOTE]
 > Database watcher is currently in preview. Preview features are released with limited capabilities, but are made available on a *preview* basis so customers can get early access and provide feedback. Preview features are subject to separate [supplemental preview terms](https://go.microsoft.com/fwlink/?linkid=2240967), and aren't subject to SLAs. Support is provided as best effort in certain cases. However, Microsoft Support is eager to get your feedback on the preview functionality, and might provide best effort support in certain cases. Preview features might have limited or restricted functionality, and might be available only in selected geographic areas.

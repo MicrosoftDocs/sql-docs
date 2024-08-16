@@ -5,7 +5,7 @@ author: urosmil
 ms.author: urmilano
 ms.reviewer: mathoma
 ms.date: 03/12/2019
-ms.service: sql-managed-instance
+ms.service: azure-sql-managed-instance
 ms.subservice: development
 ms.topic: reference
 ms.custom: devx-track-azurecli

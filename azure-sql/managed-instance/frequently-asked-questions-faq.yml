@@ -4,15 +4,15 @@ metadata:
   titleSuffix: Azure SQL Managed Instance
   description: Azure SQL Managed Instance frequently asked questions (FAQ)
   services: sql-database
-  ms.service: sql-managed-instance
+  ms.service: azure-sql-managed-instance
   ms.subservice: service-overview
-  ms.custom: sqldbrb=1, ignite-2023
+  ms.custom: 
   ms.devlang:
   ms.topic: faq
   author: MashaMSFT
   ms.author: mathoma
   ms.reviewer: urmilano, danil, nnikolic, wiassaf, mathoma
-  ms.date: 03/23/2024
+  ms.date: 05/31/2024
 title: Azure SQL Managed Instance frequently asked questions (FAQ)
 summary: |
   [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
@@ -312,11 +312,13 @@ sections:
     questions:
       - question: What are the current inbound/outbound NSG constraints on the managed instance subnet?
         answer: |
-          The required NSG and UDR rules are documented [here](connectivity-architecture-overview.md#mandatory-security-rules-with-service-aided-subnet-configuration), and automatically set by the service.
-          Keep in mind that these rules are just the ones we need for maintaining the service. To connect to your instance and use different features you need to set additional, feature specific rules, that you need to maintain.
-
-      - question: How can I set inbound NSG rules on management ports?
-        answer: |
+          ### What are the current inbound/outbound NSG constraints on the managed instance subnet?
+          
+          The required NSG and UDR rules are documented in [subnet service-aided configuration](subnet-service-aided-configuration-enable.md#mandatory-security-rules-and-routes), and automatically set by the service.
+          Please keep in mind that these rules are just the ones we need for maintaining the service. To connect to managed instance and use different features you will need to set additional, feature specific rules, that you need to maintain.
+          
+          ### How can I set inbound NSG rules on management ports?
+          
           SQL Managed Instance is responsible for setting rules on management ports. This is achieved through functionality named [service-aided subnet configuration](connectivity-architecture-overview.md#service-aided-subnet-configuration).
           This is to ensure uninterrupted flow of management traffic in order to fulfill an SLA.
 
@@ -593,10 +595,25 @@ sections:
 
   - name: November 2022 feature wave
     questions:
-      - question: What Azure offers and subscription types are enrolled in the November 2022 feature wave?
+      - question: I can no longer see the November 2022 feature wave in the Azure portal. Why?
         answer: |
-          All regions, offers, and subscription types have the [feature wave](november-2022-feature-wave-enroll.md) enabled starting November 2023.
+          Changes and capabilities that were introduced in the November 2022 feature wave have been integrated to majority of instances and are now available by default. Since taking separate action to enroll an instance is no longer necessary, options that mention the November 2022 feature wave have been removed from the Azure portal.
 
-      - question: I have the feature wave enabled in my subscription but my existing instance can't use the new features. Why?
+      - question: My instance isn't able to use features introduced by the November 2022 feature wave. Why?
         answer: |
-          The feature wave is available to instances in eligible subnets. If you don't see new features, it's likely that the subnet where your SQL managed instance is deployed isn't eligible.
+          The feature wave is available to instances in [eligible subnets](doc-changes-updates-release-notes-whats-new.md#november-2022-feature-wave). If you don't see new features, it's likely the subnet that contains your SQL managed instance isn't eligible as it's still in the enrollment process. Instances in subnets not enrolled in the wave continue to see the Feature Wave page in the Azure Portal.
+
+  - name: Next-gen General Purpose service tier upgrade
+    questions:
+
+      - question: My instance is part of a failover group and when I tried to enable the Next-gen General Purpose upgrade for my instance, it failed. Why? 
+        answer: |
+          For instances inside of a failover group, changing the service tier to, or from, the Next-gen General Purpose tier is not supported. You must first delete the failover group before modifying either replica, and then [re-create the failover group](failover-group-configure-sql-mi.md#create-the-failover-group) after the change takes effect. 
+
+      - question: Why can't I enable zone redundancy for my Next-gen General Purpose SQL Managed Instance?
+        answer: |
+          Zone redundancy is not currently supported for the Next-gen General Purpose service tier. 
+
+      - question: Can I enable the Next-gen General Purpose upgrade for my for Instance Pool?
+        answer: |
+          No, the Next-gen General Purpose service tier upgrade is not currently supported for [Instance Pools](instance-pools-overview.md), or instances inside a pool. 

@@ -6,7 +6,7 @@ author: rajeshsetlem
 ms.author: rsetlem
 ms.reviewer: wiassaf, mathoma
 ms.date: 09/12/2023
-ms.service: sql-db-mi
+ms.service: azure-sql
 ms.subservice: service-overview
 ms.topic: conceptual
 ms.custom: sqldbrb=2

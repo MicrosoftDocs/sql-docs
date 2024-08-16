@@ -6,7 +6,7 @@ author: MladjoA
 ms.author: mlandzic
 ms.reviewer: mathoma, wiassaf, nzagorac
 ms.date: 01/17/2024
-ms.service: sql-managed-instance
+ms.service: azure-sql-managed-instance
 ms.subservice: service-overview
 ms.topic: conceptual
 ---

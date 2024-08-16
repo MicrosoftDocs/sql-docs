@@ -2,7 +2,7 @@
 title: "ISSAsynchStatus (OLE DB driver)"
 description: Learn how OLE DB Driver for SQL Server uses the ISSAsynchStatus interface to support SQL Server asynchronous operations.
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: "06/14/2018"
 ms.service: sql
 ms.subservice: connectivity

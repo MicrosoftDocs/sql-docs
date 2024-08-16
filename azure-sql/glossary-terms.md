@@ -6,7 +6,7 @@ author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: wiassaf, mathoma
 ms.date: 04/15/2024
-ms.service: sql-db-mi
+ms.service: azure-sql
 ms.subservice: service-overview
 ms.topic: reference
 ms.custom:
@@ -48,7 +48,7 @@ ms.custom:
 |Context|Term|More information|
 |:---|:---|:---|
 |Azure service|Azure SQL Managed Instance | [Azure SQL Managed Instance](managed-instance/sql-managed-instance-paas-overview.md) is a fully managed platform as a service (PaaS) deployment option of Azure SQL. It gives you an instance of SQL Server, including the SQL Server Agent, but removes much of the overhead of managing a virtual machine. Most of the features available in SQL Server are available in SQL Managed Instance. [Compare the features in Azure SQL Database and Azure SQL Managed Instance](database/features-comparison.md). |
-|Database engine | |The database engine used in Azure SQL Managed Instance has near 100% compatibility with the latest SQL Server (Enterprise Edition) database engine. Some database engine features are exclusive to managed instances or are available in managed instances before they are shipped with SQL Server. Managed instances provide cloud-native capabilities and integrations such as a native [virtual network (VNet)](/azure/virtual-network/virtual-networks-overview) implementation, automatic patching and version updates, [automated backups](database/automated-backups-overview.md), and [high availability](database/high-availability-sla.md). |
+|Database engine | |The database engine used in Azure SQL Managed Instance has near 100% compatibility with the latest SQL Server (Enterprise Edition) database engine. Some database engine features are exclusive to managed instances or are available in managed instances before they are shipped with SQL Server. Managed instances provide cloud-native capabilities and integrations such as a native [virtual network (VNet)](/azure/virtual-network/virtual-networks-overview) implementation, automatic patching and version updates, [automated backups](database/automated-backups-overview.md), and [high availability](database/high-availability-sla-local-zone-redundancy.md). |
 |Server entity|Managed instance | Each managed instance is itself an instance of SQL Server. Databases created on a managed instance are colocated with one another, and you can run cross-database queries. You can connect to the managed instance and use instance-level features such as linked servers and the SQL Server Agent. |
 |Deployment option ||Managed instances can be deployed individually or as part of an instance pools (preview). Managed instances cannot currently be moved into, between, or out of instance pools.|
 ||Single instance| A single [managed instance](managed-instance/sql-managed-instance-paas-overview.md) is deployed to a dedicated set of isolated virtual machines that run inside the customer's virtual network subnet. These machines form a [virtual cluster](managed-instance/connectivity-architecture-overview.md#high-level-connectivity-architecture).  Multiple managed instances can be deployed into a single virtual cluster if desired. |

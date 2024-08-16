@@ -5,7 +5,7 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: atsingh, dinethi, rsetlem
 ms.date: 02/26/2024
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.subservice: scale-out
 ms.custom: devx-track-azurecli, devx-track-azurepowershell
 ms.topic: how-to
@@ -65,7 +65,7 @@ The following example creates a named replica `WideWorldImporters_NamedReplica` 
 New-AzSqlDatabaseSecondary -ResourceGroupName "MyResourceGroup" -ServerName "contosoeast" -DatabaseName "WideWorldImporters" -PartnerResourceGroupName "MyResourceGroup" -PartnerServerName "contosoeast" -PartnerDatabaseName "WideWorldImporters_NamedReplica" -SecondaryType Named -SecondaryServiceObjectiveName HS_Gen5_2
 ```
 
-To configure a [zone redundant Hyperscale named replica (preview)](service-tier-hyperscale-replicas.md#zone-redundancy-for-hyperscale-named-replicas), you must specify both the `–ZoneRedundant` and `-HighAvailabilityReplicaCount` input parameters for `New-AzSqlDatabaseSecondary`.
+To configure a [zone redundant Hyperscale named replica](service-tier-hyperscale-replicas.md#zone-redundancy-for-hyperscale-named-replicas), you must specify both the `–ZoneRedundant` and `-HighAvailabilityReplicaCount` input parameters for `New-AzSqlDatabaseSecondary`.
 
 ```azurepowershell
 New-AzSqlDatabaseSecondary -ResourceGroupName "MyResourceGroup" -ServerName "contosoeast" -DatabaseName "WideWorldImporters" -PartnerResourceGroupName "MyResourceGroup" -PartnerServerName "contosoeast" -PartnerDatabaseName "WideWorldImporters_NamedReplica" -SecondaryType Named -SecondaryServiceObjectiveName HS_Gen5_2 -HighAvailabilityReplicaCount 1 -ZoneRedundant 
@@ -85,7 +85,7 @@ The following example creates a named replica `WideWorldImporters_NamedReplica` 
 az sql db replica create -g MyResourceGroup -n WideWorldImporters -s contosoeast --secondary-type named --partner-database WideWorldImporters_NamedReplica --partner-server contosoeast --service-objective HS_Gen5_2
 ```
 
-To configure a [zone redundant Hyperscale named replica (preview)](service-tier-hyperscale-replicas.md#zone-redundancy-for-hyperscale-named-replicas), you must specify both the `–zone-redundant` and `ha-replicas` input parameters for `az sql db replica create`.
+To configure a [zone redundant Hyperscale named replica](service-tier-hyperscale-replicas.md#zone-redundancy-for-hyperscale-named-replicas), you must specify both the `–zone-redundant` and `ha-replicas` input parameters for `az sql db replica create`.
 
 ```azurecli
 az sql db replica create -g MyResourceGroup -n WideWorldImporters -s contosoeast --secondary-type named --partner-database WideWorldImporters_NamedReplica --partner-server contosoeast --service-objective HS_Gen5_2 --ha-replicas 1 -zone-redundant

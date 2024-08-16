@@ -2,7 +2,7 @@
 title: "Enumerating instances of SQL Server (ADO.NET)"
 description: "Describes how to enumerate active instances of SQL Server."
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.reviewer: v-kaywon
 ms.date: "08/15/2019"
 ms.service: sql

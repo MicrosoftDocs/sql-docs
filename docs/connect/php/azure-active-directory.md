@@ -2,7 +2,7 @@
 title: Microsoft Entra ID
 description: Learn how to use Microsoft Entra authentication with the Microsoft Drivers for PHP for SQL Server.
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: 12/14/2021
 ms.service: sql
 ms.subservice: connectivity

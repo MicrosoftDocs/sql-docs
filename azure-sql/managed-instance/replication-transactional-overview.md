@@ -5,8 +5,8 @@ description: Learn about using SQL Server transactional replication with Azure S
 author: sasapopo
 ms.author: sasapopo
 ms.reviewer: mathoma, randolphwest
-ms.date: 06/09/2023
-ms.service: sql-managed-instance
+ms.date: 06/10/2024
+ms.service: azure-sql-managed-instance
 ms.subservice: data-movement
 ms.topic: conceptual
 ms.custom: sqldbrb=1
@@ -139,6 +139,14 @@ In this configuration, a database in Azure SQL Database or Azure SQL Managed Ins
 > [!NOTE]  
 > You may encounter error 53 when connecting to an Azure Storage File if the outbound network security group (NSG) port 445 is blocked when the distributor is an Azure SQL Managed Instance database and the subscriber is on-premises. [Update the vNet NSG](/azure/storage/files/storage-troubleshoot-windows-file-connection-problems) to resolve this issue.
 
+## Security 
+
+### Login `replAgentUser`
+
+For purposes of transactional replication, a SQL managed instance has a pre-created login(s) with the name `replAgentUser`. This login is a member of the `sysadmin` server role and is used by replication agents that need to connect to a SQL managed instance participating in transactional replication setup.
+
+If transactional replication is not used, the login `replAgentUser` can be disabled. It can be re-enabled later if you decide to start using transactional replication.
+
 ## Limitations
 
 Transactional replication has some limitations that are specific to Azure SQL Managed Instance. Learn more about these limitations in this section.
@@ -236,7 +244,7 @@ For more information about configuring transactional replication, see the follow
 - [Create a publication](/sql/relational-databases/replication/publish/create-a-publication).
 - [Create a push subscription](/sql/relational-databases/replication/create-a-push-subscription) by using the server name as the subscriber (for example `N'azuresqldbdns.database.windows.net`), and the database in Azure SQL Database name as the destination database (for example, `Adventureworks`).
 
-## See also
+## Related content
 
 - [Replication with a SQL Managed Instance and a failover group](transact-sql-tsql-differences-sql-server.md#replication)
 - [Replication to SQL Database](../database/replication-to-sql-database.md)

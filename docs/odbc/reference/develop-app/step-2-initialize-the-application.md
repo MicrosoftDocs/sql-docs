@@ -2,7 +2,7 @@
 title: "Step 2: Initialize the Application"
 description: "Step 2: Initialize the Application"
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: "01/19/2017"
 ms.service: sql
 ms.subservice: connectivity

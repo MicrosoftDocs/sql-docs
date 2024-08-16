@@ -5,7 +5,7 @@ description: Learn how to configure `tempdb` settings for Azure SQL Managed Inst
 author: MashaMSFT
 ms.author: mathoma
 ms.date: 06/25/2023
-ms.service: sql-managed-instance
+ms.service: azure-sql-managed-instance
 ms.subservice: service-overview
 ms.topic: how-to
 ---

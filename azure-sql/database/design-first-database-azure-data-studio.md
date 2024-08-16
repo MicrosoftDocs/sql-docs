@@ -5,7 +5,7 @@ author: tdoshin
 ms.author: timioshin
 ms.reviewer: maghan, drskwier, mathoma
 ms.date: 01/26/2024
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.subservice: development
 ms.topic: tutorial
 ms.custom:

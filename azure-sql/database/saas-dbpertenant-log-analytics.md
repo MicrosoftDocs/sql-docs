@@ -1,11 +1,11 @@
 ---
 title: Azure Monitor logs with a multitenant app
 description: Set up and use Azure Monitor logs with a multitenant Azure SQL Database SaaS app
-author: WilliamDAssafMSFT
-ms.author: wiassaf
-ms.reviewer: mathoma
+author: bgavrilMS
+ms.author: bogavril
+ms.reviewer: mathoma, wiassaf
 ms.date: 01/25/2019
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.subservice: scenario
 ms.topic: tutorial
 ms.custom: sqldbrb=1

@@ -2,7 +2,7 @@
 title: "Always Encrypted with secure enclaves with the PHP Drivers"
 description: "Learn how to use Always Encrypted with secure enclaves with the Microsoft Drivers for PHP for SQL Server."
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: 01/31/2020
 ms.service: sql
 ms.subservice: connectivity

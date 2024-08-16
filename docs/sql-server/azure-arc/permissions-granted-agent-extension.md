@@ -61,7 +61,7 @@ This article lists the server and database roles and mappings that the installat
 
 ## Run with least privilege
 
-To run Azure extension for SQL Server with least privilege, follow the instructions at [Operate SQL Server enabled by Azure Arc with least privilege (preview)](configure-least-privilege.md).
+To run Azure extension for SQL Server with least privilege, follow the instructions at [Operate SQL Server enabled by Azure Arc with least privilege](configure-least-privilege.md).
 
 At this time, the least privilege configuration is not the default.
 

@@ -2,7 +2,7 @@
 title: "IDBProperties (OLE DB driver)"
 description: "Learn about the IDBProperties interface in OLE DB Driver for SQL Server, including the IDBProperties::GetPropertyInfo method."
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: "06/14/2018"
 ms.service: sql
 ms.subservice: connectivity

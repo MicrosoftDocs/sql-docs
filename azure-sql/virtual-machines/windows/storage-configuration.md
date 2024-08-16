@@ -272,6 +272,14 @@ There's no option to remove the unallocated space from a disk that belongs to a 
 
 Review [Troubleshoot a full transaction log](/sql/relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002) if your log becomes full. 
 
+### Unable to configure storage with the SQL virtual machines resource 
+
+The Storage configuration pane for the SQL virtual machines resource in the Azure portal may be unavailable, grayed out, or selecting **Extend disks** does nothing, in the following scenarios: 
+
+- Virtual machines with self-installed SQL Server instances. Currently, only SQL Server VM images from Azure Marketplace are supported.  
+- SQL Server VMs using Premium SSDv2. Currently, only SQL Server VMs with Premium SSD are supported. 
+- When TCP/IP is disabled in SQL Server Configuration Manager. 
+
 ## Related content
 
 - [What is SQL Server on Azure Windows Virtual Machines?](sql-server-on-azure-vm-iaas-what-is-overview.md)

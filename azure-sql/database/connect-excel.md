@@ -6,7 +6,7 @@ author: VanMSFT
 ms.author: vanto
 ms.reviewer: wiassaf, mathoma
 ms.date: 05/29/2020
-ms.service: sql-db-mi
+ms.service: azure-sql
 ms.subservice: connect
 ms.topic: how-to
 ms.custom: sqldbrb=1

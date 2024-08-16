@@ -111,7 +111,7 @@ Consider the following:
 - The SQL VM may be stopped, deallocated, in a failed state, or not found. Validate the underlying virtual machine is running.
 - Your SQL IaaS Agent extension may be in a failed state. [Repair the extension](#repair-extension).
 
-[Unregister your SQL VM from the extension](sql-agent-extension-manually-register-single-vm.md#unregister-from-extension) and then register the SQL VM with the extension again if you did any of the following:
+[Delete the extension from your SQL Server VM](sql-agent-extension-manually-register-single-vm.md#delete-the-extension) and then register the SQL VM with the extension again if you did any of the following:
 
 - Migrated your VM from one subscription to the other.
 - Changed the locale or collation of SQL Server.
@@ -122,9 +122,11 @@ Consider the following:
 
 [Repair the extension](#repair-extension) if the SQL IaaS Agent extension status shows as **Provisioning failed** in the Azure portal.
 
+The SQL IaaS Agent extension can fail to install if TCP/IP is disabled in SQL Server Configuration Manager, or at the virtual  machine level. 
+
 ## SQL VM resource unavailable in portal
 
-If the SQL IaaS Agent extension is installed, and the VM is online, but the SQL VM resource is unavailable in the Azure portal. Verify that your SQL Server and SQL Browser service are started within the VM. If this doesn't resolve the issue, [repair the extension](#repair-extension).
+If the SQL IaaS Agent extension is installed, and the VM is online, but the SQL VM resource is unavailable in the Azure portal, verify that your SQL Server and SQL Browser service are started within the VM. If this doesn't resolve the issue, [repair the extension](#repair-extension).
 
 ## Features are grayed out
 
@@ -154,6 +156,8 @@ Extending your disks from the **Storage Configuration** page of the [SQL VM reso
 - If you uninstall and reinstall the SQL IaaS Agent extension.
 - If you uninstall and reinstall your instance of SQL Server.
 - If you used custom naming conventions for the disk/storage pool name when deploying your SQL Server image from the Azure Marketplace.
+- If you deployed your SQL Server VM with Premium SSDv2.
+- If TCP/IP is disabled in SQL Server Configuration Manager, or at the virtual machine level. 
 
 ## Disk configuration grayed out during deployment
 
@@ -176,7 +180,9 @@ Your SQL IaaS Agent extension may get stuck in a transitioning state in the foll
 
 Registering your SQL Server instance installed to your domain controller with the SQL IaaS Agent extension isn't supported. Registering with the extension creates the user `NT Service\SQLIaaSExtension` and since this user can't be created on the domain controller, registering this VM with the SQL IaaS Agent isn't supported.
 
+## TCP/IP is disabled
 
+The SQL IaaS Agent extension requires TCP/IP to be enabled both in SQL Server Configuration Manager, and at the virtual machine level. Disabling TCP/IP can result in unpredictable behavior, such as failing to install, or some features failing to work as expected. 
 
 ## Next steps
 

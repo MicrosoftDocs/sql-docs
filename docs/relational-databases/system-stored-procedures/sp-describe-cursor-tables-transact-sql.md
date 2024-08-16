@@ -29,7 +29,7 @@ Reports the objects or base tables referenced by a server cursor.
 ```syntaxsql
 sp_describe_cursor_tables
     [ @cursor_return = ] cursor_return OUTPUT
-    , [ @cursor_source = ] { N'local' | N'global' | N'variable' }
+    , [ @cursor_source = ] { N'local' | N'global' | N'*cursor_source*' }
     , [ @cursor_identity = ] N'cursor_identity'
 [ ; ]
 ```
@@ -40,7 +40,7 @@ sp_describe_cursor_tables
 
 The name of a declared cursor variable to receive the cursor output. *@cursor_return* is an OUTPUT **cursor**, with no default, and must not be associated with any cursors at the time `sp_describe_cursor_tables` is called. The cursor returned is a scrollable, dynamic, read-only cursor.
 
-#### [ @cursor_source = ] { N'local' | N'global' | N'variable' }
+#### [ @cursor_source = ] { N'local' | N'global' | N'*cursor_source*' }
 
 Specifies whether the cursor being reported on is specified by using the name of a local cursor, a global cursor, or a cursor variable. *@cursor_source* is **nvarchar(30)**, with no default.
 

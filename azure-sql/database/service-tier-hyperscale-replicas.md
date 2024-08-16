@@ -5,7 +5,7 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: atsingh
 ms.date: 02/23/2024
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.subservice: service-overview
 ms.topic: overview
 ---
@@ -17,7 +17,7 @@ ms.topic: overview
 As described in [Distributed functions architecture](service-tier-hyperscale.md), Azure SQL Database Hyperscale has two different types of compute nodes, also referred to as replicas:
 
 - Primary: serves read and write operations
-- Secondary: provides [read scale-out](read-scale-out.md), [high availability](high-availability-sla.md), and [geo-replication](active-geo-replication-overview.md)
+- Secondary: provides [read scale-out](read-scale-out.md), [high availability](high-availability-sla-local-zone-redundancy.md), and [geo-replication](active-geo-replication-overview.md)
 
 Secondary replicas are always read-only, and can be of three different types:
 
@@ -79,18 +79,15 @@ Aside from the main scenarios listed above, named replicas offer flexibility and
 - Workload-dependent routing: with up to 30 named replicas, it is possible to use named replicas in groups so that an application can be isolated from another. For example, a group of four named replicas could be used to serve requests coming from mobile applications, while another group two named replicas can be used to serve requests coming from a web application. This approach would allow a fine-grained tuning of performance and costs for each group.
 
 > [!NOTE]  
-> For frequently asked questions on Hyperscale named replicas, see [Azure SQL Database Hyperscale named replicas FAQ](service-tier-hyperscale-named-replicas-faq.yml).
+> For frequently asked questions on Hyperscale named replicas, see [Azure SQL Database Hyperscale named replicas FAQ](service-tier-hyperscale-frequently-asked-questions-faq.yml#read-scale-out-questions).
 
 ### Zone redundancy for Hyperscale named replicas
 
-> [!NOTE]
-> Zone redundancy for Azure SQL Database Hyperscale named replicas is currently in preview.
-
-Zone redundancy for Azure SQL Database Hyperscale named replicas uses [Azure Availability Zones](/azure/availability-zones/az-overview#availability-zones) to distribute named replicas compute nodes across different physical locations within an Azure region. By choosing zone redundancy for named replicas, you can enhance the resilience of all layers of your Hyperscale databases to a wider range of failures, including datacenter outages, without any modifications of the application logic. For more information, see [Hyperscale zone redundant availability](high-availability-sla.md#hyperscale-service-tier-zone-redundant-availability).
+Zone redundancy for Azure SQL Database Hyperscale named replicas uses [Azure Availability Zones](/azure/availability-zones/az-overview#availability-zones) to distribute named replicas compute nodes across different physical locations within an Azure region. By choosing zone redundancy for named replicas, you can enhance the resilience of all layers of your Hyperscale databases to a wider range of failures, including datacenter outages, without any modifications of the application logic. For more information, see [Hyperscale zone redundant availability](high-availability-sla-local-zone-redundancy.md#hyperscale-service-tier-zone-redundant-availability).
 
 For a tutorial to create a zone redundant Hyperscale named replica, see [Create a Hyperscale named replica](hyperscale-named-replica-configure.md#create-a-hyperscale-named-replica).
 
-For troubleshooting and testing application fault resiliency, see [Test application fault resiliency](high-availability-sla.md?view=azuresql-db&preserve-view=true#testing-application-fault-resiliency).
+For troubleshooting and testing application fault resiliency, see [Test application fault resiliency](high-availability-sla-local-zone-redundancy.md?view=azuresql-db&preserve-view=true#testing-application-fault-resiliency).
 
 ## Geo-replica
 
@@ -110,7 +107,7 @@ Geo-replication for Hyperscale database has following current limitations:
 
 ### Troubleshoot zone redundant Hyperscale named replicas
 
-- For troubleshooting and testing application fault resiliency, see [Test application fault resiliency](high-availability-sla.md?view=azuresql-db&preserve-view=true#testing-application-fault-resiliency).
+- For troubleshooting and testing application fault resiliency, see [Test application fault resiliency](high-availability-sla-local-zone-redundancy.md?view=azuresql-db&preserve-view=true#testing-application-fault-resiliency).
 
 - Ensure at least one high availability replica is specified when creating a zone redundant named replica, in PowerShell and CLI. For an example, see [Create a Hyperscale named replica](hyperscale-named-replica-configure.md#create-a-hyperscale-named-replica).
     - In Azure CLI, you must specify both the parameters "ha-replicas" and "redundant".

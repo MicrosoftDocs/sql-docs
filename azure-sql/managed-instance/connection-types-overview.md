@@ -6,7 +6,7 @@ author: zoran-rilak-msft
 ms.author: zoranrilak
 ms.reviewer: vanto, mathoma
 ms.date: 12/01/2021
-ms.service: sql-managed-instance
+ms.service: azure-sql-managed-instance
 ms.subservice: connect
 ms.topic: conceptual
 ms.custom: devx-track-azurepowershell
@@ -21,10 +21,10 @@ This article explains how clients connect to Azure SQL Managed Instance dependin
 
 Azure SQL Managed Instance's VNet-local endpoint supports the following two connection types:
 
-- **Redirect (recommended):** Clients establish connections directly to the node hosting the database. To enable connectivity using redirect, you must open firewalls and Network Security Groups (NSG) to allow access on ports 1433, and 11000-11999. Packets go directly to the database, and hence there are latency and throughput performance improvements using redirect over proxy. Impact of planned maintenance events of gateway component is also minimized with redirect connection type compared to proxy since connections, once established, have no dependency on gateway. 
-- **Proxy (default):** In this mode, all connections are using a proxy gateway component. To enable connectivity, only port 1433 for private networks and port 3342 for public connection need to be opened. Choosing this mode can result in higher latency and lower throughput, depending on nature of the workload. Also, planned maintenance events of gateway component break all live connections in proxy mode. We highly recommend the redirect connection policy over the proxy connection policy for the lowest latency, highest throughput, and minimized impact of planned maintenance.
+- **Redirect (recommended):** This is the preferred way for SQL clients to connect to managed instances. With redirect, clients establish connections directly to the node hosting the database. To enable redirect, you need to configure firewalls and Network Security Group (NSG) rules to allow inbound access on ports 1433 and port range 11000-11999. Redirect exhibits superior latency and throughput performance compared to proxy. Redirect also minimizes the impact of planned maintenance events of the gateway component, since redirect connections, once established, have no dependency on the gateway. Redirection capability depends on SQL drivers to understand TDS (Tabular Data Stream) 7.4 or newer. TDS 7.4 was first published with Microsoft SQL Server 2012, so any client newer than that will work.
+- **Proxy (default):** This is the legacy connectivity mechanism meant to support SQL drivers that implement TDS versions older than 7.4. In this mode, all connections are proxied through the internal gateway and only the port 1433 is required to be open. Depending on the nature of the workload, proxy mode can severely degrade the latency and lower the throughput compared to redirect. It is also more susceptible to the loss of live connections due to planned maintenance events of the gateway component. For this reason, we highly recommend you configure all your managed instances to use the redirect connection policy unless your SQL clients do not support TDS redirects.
 
-Both public and private endpoints to Azure SQL Managed Instance always operate in proxy mode regardless of the set connection type.
+Note that redirect option only has effect on the VNet-local endpoint. Public endpoints and private endpoints to Azure SQL Managed Instance always operate in proxy mode.
 
 ## Redirect connection type
 
@@ -33,9 +33,12 @@ In the redirect connection type, after the TCP session is established to the SQL
 ![Diagram shows an on-premises network with redirect-find-db connected to a gateway in an Azure virtual network and a redirect-query connected to a database primary node in the virtual network.](./media/connection-types-overview/redirect.png)
 
 > [!IMPORTANT]
-> The redirect connection type currently works only for the VNet-local endpoint. Regardless of the connection type setting, connections coming through the public or private endpoints are handled using the proxy connection type.
+> The redirect connection type only afects the VNet-local endpoint. Connections coming through public and private endpoints are always handled using the proxy connection type regardless of the connection type setting.
 
 ## Proxy connection type
+
+> [!WARNING]
+> Proxy connection type is only recommended for old clients and applications that do not support Tabular Data Stream (TDS) standard 7.4 newer (available since SQL Server 2012). Managed instances should be configured to use the redirect connection type whenever possible.
 
 In the proxy connection type, the TCP session is established using the gateway and all subsequent packets flow through it. The following diagram illustrates this traffic flow.
 

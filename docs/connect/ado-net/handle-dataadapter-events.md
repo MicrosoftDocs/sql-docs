@@ -2,7 +2,7 @@
 title: "Handle DataAdapter events"
 description: Describes DataAdapter events and how to use them.
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.reviewer: v-chmalh
 ms.date: "11/30/2020"
 ms.service: sql

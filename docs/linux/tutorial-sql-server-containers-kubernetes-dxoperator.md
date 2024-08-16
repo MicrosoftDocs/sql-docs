@@ -89,7 +89,7 @@ To install DxOperator, you must download the DxOperator YAML file using the foll
    kubectl apply –f DxOperator.yaml
    ```
 
-1. After you install the operator you can deploy SQL Server containers, configure the availability group, define replicas, deploy and configure the DxEnterprise cluster. Here is a sample deployment YAML file called `DxEnterpriseSqlAg.yaml`, which you can change to suit your requirements.
+1. After you install the operator you can deploy [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] containers, configure the availability group, define replicas, deploy and configure the DxEnterprise cluster. Here is a sample deployment YAML file called `DxEnterpriseSqlAg.yaml`, which you can change to suit your requirements.
 
    ```yaml
    apiVersion: dh2i.com/v1

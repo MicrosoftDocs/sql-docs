@@ -2,7 +2,7 @@
 title: "Obtaining a single value from a database"
 description: Learn how to return a single value in ADO.NET. This example code returns the identity column value for an inserted record.
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.reviewer: v-chmalh
 ms.date: "11/25/2020"
 ms.service: sql

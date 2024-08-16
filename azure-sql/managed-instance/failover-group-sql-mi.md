@@ -4,8 +4,8 @@ description: Failover groups let you manage geo-replication and coordinated fail
 author: Stralle
 ms.author: strrodic
 ms.reviewer: mathoma, randolphwest
-ms.date: 01/05/2024
-ms.service: sql-managed-instance
+ms.date: 05/31/2024
+ms.service: azure-sql-managed-instance
 ms.subservice: high-availability
 ms.topic: conceptual
 ms.custom:
@@ -28,7 +28,7 @@ To get started using the feature, review [Configure a failover group for Azure S
 
 The failover groups feature allows you to manage the replication and failover of user databases in a managed instance to a managed instance in another Azure region. Failover groups are designed to simplify deployment and management of geo-replicated databases at scale.
 
-For more information, see [High availability for Azure SQL Managed Instance](high-availability-sla.md). For geo-failover RPO and RTO, see [overview of business continuity](business-continuity-high-availability-disaster-recover-hadr-overview.md#rto-and-rpo).
+For more information, see [High availability for Azure SQL Managed Instance](high-availability-sla-local-zone-redundancy.md). For geo-failover RPO and RTO, see [overview of business continuity](business-continuity-high-availability-disaster-recover-hadr-overview.md#rto-and-rpo).
 
 [!INCLUDE [failover-groups-overview](../includes/failover-group-overview.md)]
 
@@ -201,8 +201,10 @@ You can scale up or scale down the primary and secondary instance to a different
 
 The sequence is recommended specifically to avoid the problem where the geo-secondary at a lower SKU gets overloaded and must be reseeded during an upgrade or downgrade process.
 
-> [!NOTE]
-> There's a [known issue](doc-changes-updates-known-issues.md#temporary-instance-inaccessibility-using-the-failover-group-listener-during-scaling-operation) which can impact accessibility of the instance being scaled using the associated failover group listener. 
+> [!IMPORTANT] 
+> - For instances inside of a failover group, changing the service tier to, or from, the Next-gen General Purpose tier is not supported. You must first delete the failover group before modifying either replica, and then re-create the failover group after the change takes effect.
+> - There's a [known issue](doc-changes-updates-known-issues.md#temporary-instance-inaccessibility-using-the-failover-group-listener-during-scaling-operation) which can impact accessibility of the instance being scaled using the associated failover group listener. 
+
 
 ## Prevent loss of critical data
 

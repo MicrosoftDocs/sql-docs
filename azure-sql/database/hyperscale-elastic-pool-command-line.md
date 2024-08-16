@@ -5,7 +5,7 @@ author: arvindshmicrosoft
 ms.author: arvindsh
 ms.reviewer: wiassaf, mathoma
 ms.date: 02/26/2024
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.subservice: elastic-pools
 ms.topic: conceptual
 ms.custom: devx-track-azurecli, devx-track-azurepowershell, ignite-2023
@@ -193,9 +193,9 @@ Set-AzSqlElasticPool -ResourceGroupName "my-example-rg" -ServerName "my-example-
 ---
 
 
-## Migrate an existing General Purpose database to a zone redundant Hyperscale elastic pool
+## Convert an existing General Purpose database to a zone redundant Hyperscale elastic pool
 
-You can use the Azure CLI or Azure PowerShell to migrate an existing General Purpose database to a zone redundant Hyperscale elastic pool.
+You can use the Azure CLI or Azure PowerShell to convert an existing General Purpose database to a zone redundant Hyperscale elastic pool.
 
 ### [Azure CLI](#tab/azure-cli)
 

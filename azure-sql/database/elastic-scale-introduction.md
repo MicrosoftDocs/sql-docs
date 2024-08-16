@@ -1,11 +1,11 @@
 ---
 title: Scaling out
 description: Software as a Service (SaaS) developers can easily create elastic, scalable databases in the cloud using these tools
-author: scoriani
-ms.author: scoriani
+author: bgavrilMS
+ms.author: bogavril
 ms.reviewer: wiassaf, mathoma
 ms.date: 06/05/2023
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.subservice: scale-out
 ms.topic: conceptual
 ms.custom: sqldbrb=1

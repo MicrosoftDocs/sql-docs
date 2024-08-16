@@ -2,7 +2,7 @@
 title: ODBC Data Source Administrator DSN options
 description: This article describes the options available when creating a new DSN connection to SQL Server using the ODBC Data Source Administrator application.
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: "03/29/2024"
 ms.service: sql
 ms.subservice: connectivity
@@ -110,7 +110,7 @@ Specifies the name of the primary file for an attachable database. This database
 
 ### Use ANSI quoted identifiers
 
-Specifies that `QUOTED_IDENTIFIERS` is set to on when the ODBC driver for SQL Server connects. When this check box is selected, SQL Server enforces ANSI rules regarding quote marks. Double quotes can only be used for identifiers, such as column and table names. Character strings must be enclosed in single quotes:
+Specifies that `QUOTED_IDENTIFIER` is set to on when the ODBC driver for SQL Server connects. When this check box is selected, SQL Server enforces ANSI rules regarding quote marks. Double quotes can only be used for identifiers, such as column and table names. Character strings must be enclosed in single quotes:
 
 ```sql
 SELECT "LastName"

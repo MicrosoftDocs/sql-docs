@@ -6,7 +6,7 @@ author: dzsquared
 ms.author: drskwier
 ms.reviewer: wiassaf, mathoma
 ms.date: 11/14/2019
-ms.service: sql-db-mi
+ms.service: azure-sql
 ms.subservice: development
 ms.topic: conceptual
 ms.custom: sqldbrb=2
@@ -21,7 +21,7 @@ This article walks through the basic considerations that a developer should be a
 
 You can use various [programming languages and platforms](connect-query-content-reference-guide.md) to connect and query Azure SQL Database. You can find [sample applications](https://azure.microsoft.com/resources/samples/?service=sql-database&sort=0) that you can use to connect to the database.
 
-You can leverage open-source tools like [cheetah](https://github.com/wunderlist/cheetah), [sql-cli](https://www.npmjs.com/package/sql-cli), [VS Code](https://code.visualstudio.com/). Additionally, Azure SQL Database works with Microsoft tools like [Visual Studio](https://www.visualstudio.com/downloads/) and  [SQL Server Management Studio](/sql/ssms/sql-server-management-studio-ssms). You can also use the Azure portal, PowerShell, and REST APIs help you gain additional productivity.
+You can leverage open-source tools like [cheetah](https://github.com/wunderlist/cheetah), [sql-cli](https://www.npmjs.com/package/sql-cli), [VS Code](https://code.visualstudio.com/). Additionally, Azure SQL Database works with Microsoft tools like [Visual Studio](https://www.visualstudio.com/downloads/) and  [SQL Server Management Studio](/sql/ssms/sql-server-management-studio-ssms). You can also use the Azure portal, PowerShell, and REST APIs to help you gain additional productivity.
 
 ## Authentication
 

@@ -60,7 +60,8 @@ If you get an error during installation, and find **"Process returned error: 0x8
 - When the error is "Pre-check verification failed with warning(s) :  AnotherInstallationRunning.",
   - kill MSIExec.exe in task manager, and retry. 
 - When the error is "The file {filefullpath} already exists.":
-   1. ```
+   1. Run the following commands from an elevated command prompt:
+      ```console
       cd C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE
       rm CommonExtensions\Microsoft\SSIS\* 
       rm PublicAssemblies\SSIS\* 

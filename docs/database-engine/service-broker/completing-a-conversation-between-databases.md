@@ -24,7 +24,7 @@ The steps that you follow in Lesson 2 are the same as those you followed in Less
 
 - Create two databases: **InitiatorDB** and **TargetDB**. You need to create all the initiator service and queue in the **InitiatorDB** and the target service and queue in the **TargetDB**.
 
-- Create two copies of the message types and contacts, one in the **InitiatorDB** and the other in **TargetDB**. Both sides of the conversation must have access to message type and contract definitions that are identical.
+- Create two copies of the message types and contracts, one in the **InitiatorDB** and the other in **TargetDB**. Both sides of the conversation must have access to message type and contract definitions that are identical.
 
 - Set the TRUSTWORTHY database property to ON in the **InitiatorDB**. This is the simplest mechanism for enabling conversations between two databases when they are on the same instance of the Database Engine.
 

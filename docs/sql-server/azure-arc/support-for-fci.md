@@ -1,48 +1,70 @@
 ---
-title: View Always On failover cluster instances (preview)
+title: View Always On failover cluster instances
 description: In this article, you learn how you can view and manage SQL Server instances enabled by Azure Arc that are configured as a failover cluster.
 author: AbdullahMSFT
 ms.author: amamun 
 ms.reviewer: mikeray, randolphwest
-ms.date: 10/06/2023
+ms.date: 05/08/2024
 ms.topic: conceptual
 ---
 
-# View Always On failover cluster instances in Azure Arc (preview)
+# View Always On failover cluster instances in Azure Arc
 
 [!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
-Always On failover clustering is a high availability technology that leverages Windows Server failover clustering to provide local redundancy at an instance level.
+Azure portal provides information about SQL Server failover cluster instances when they are enabled by Azure Arc. The Azure SQL extension agent must be installed on all the nodes of the SQL Server failover cluster instance. The agents project the installation into Azure as a SQL Server enabled by Azure Arc resource.
 
-[!INCLUDE [azure-arc-sql-preview](includes/azure-arc-sql-preview.md)]
+For details about failover cluster instances, review [Always On failover cluster instances (SQL Server)](../failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md).
 
-If the [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] is configured as a failover cluster instance, additional information about the host Windows failover cluster is also shown in the Azure portal. The Azure SQL extension agent on each of the nodes participating in the Windows cluster recognizes the installed SQL binaries as an installation of SQL Server. The agent projects the installation into Azure as a [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] resource. In addition to each of these [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] resources, the clustered resource also gets projected into Azure, also as [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] resource type. This means that a cluster with `n` nodes projects `n+1` [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] resources.
+> [!IMPORTANT]
+> [!INCLUDE [latest-features](includes/latest-features.md)]
 
-## View cluster configuration, SQL Server, and database properties
+You can see all the resources like network name, databases and all the nodes in the corresponding resource group.  
 
-All the information about the SQL Server configuration such as server configuration, database inventory and metadata, backups, cluster configuration, Defender status etc. is available on the clustered resource. The clustered resource can be differentiated from the other resources in the resource group by one of two ways:
+## List failover cluster instances
 
- - The name of the Azure Arc-enabled SQL resource following the pattern `<NetworkName>_<InstanceName>`.
- - The `Always On role` property in the Essentials pane in Azure portal would show `Failover cluster instance`.
+In Azure portal, **Azure Arc | SQL Server instances** lists all instances of SQL Server that are enabled by Azure Arc.
 
-In addition, the database resources are nested under the clustered resource. For example, `<DatabaseName> (<NetworkName>_<InstanceName>/<DatabaseName>)`.
+To list only the failover cluster instances:
 
-### Cluster configuration
+1. Select **Add filter**.
+1. Set **Filter** to *SQL Server instance type* equals **Failover Cluster Instance**.
+1. Select **Apply**.
 
-To view the cluster configuration:
+   :::image type="content" source="media/support-for-fci/filter-portal.png" alt-text="Screenshot of Azure portal for Azure Arc SQL Server add filter control." lightbox="media/support-for-fci/filter-portal-expanded.png":::
 
-1. Browse to the [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] resource named `<NetworkName>_<InstanceName>`
-1. Select **Overview**
-1. Select **Properties**
+The portal returns only the failover cluster instances.
 
-The portal displays the host cluster configuration under `Properties`.
+## View failover cluster instance
 
-### View databases
+To view the properties of a failover cluster instance:
 
-To view the cluster configuration:
+1. Select a **SQL Server - Azure Arc** resource that is a failover cluster instance type.
+1. Select **Overview**.
+1. Review the properties under **Essentials**.
 
-1. Browse to the [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] resource named `<NetworkName>_<InstanceName>`
-1. Select on `Databases` tab
+   :::image type="content" source="media/support-for-fci/essentials.png" alt-text="Screenshot of Azure portal for failover cluster instance enabled by Azure Arc." lightbox="media/support-for-fci/essentials-expanded.png":::
+
+### Inventory upload state
+
+The portal describes the failover cluster instance state. For example:
+
+- Instance name
+  - Default instance `<NetworkName>`
+  - Named instance `<NetworkName>_<InstanceName>`
+- Instance type
+- Network name
+- Active nodes
+- Passive nodes
+
+Information reflects the state at **Inventory upload** time. The view doesn't reflect changes or failovers after that time. The next upload will show the new active node or the updates made. Information upload is scheduled hourly.
+
+## View databases
+
+To view the databases on a failover cluster instance:
+
+1. Browse to the resource - either `<NetworkName>` or `<NetworkName>_<InstanceName>`.
+1. Select **Data management** > **Database**.
 
 The portal displays the databases on the SQL Server instance.
 
@@ -52,8 +74,9 @@ The portal displays the databases on the SQL Server instance.
 - Always On availability groups on a failover cluster instance aren't supported for [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] at this time.
 - Currently, best practices assessment isn't supported with Always On failover cluster instance.
 - Automated backups and point-in-time restore isn't supported for failover cluster instances at this time.
-- SQL failover cluster instances with multiple network names are not supported at this time.
-- For extension versions older than `1.1.2620.127`, SQL failover cluster instances which use a different network name than the one configured during installation are not supported.
+- SQL failover cluster instances with multiple network names aren't supported at this time.
+- In the local Windows Server Failover Cluster (WSFC), the clustered resource group (role) name should not contain a backslash ("\\").
+- For extension versions older than `1.1.2620.127`, SQL failover cluster instances with a different network name than the one configured during installation aren't supported.
 
 ## Related tasks
 

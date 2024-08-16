@@ -2,7 +2,7 @@
 title: "updateBigDecimal Method (java.lang.String, java.math.BigDecimal)"
 description: "updateBigDecimal Method (java.lang.String, java.math.BigDecimal)"
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: "01/19/2017"
 ms.service: sql
 ms.subservice: connectivity

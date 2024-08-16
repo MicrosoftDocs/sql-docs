@@ -5,7 +5,7 @@ author: AbdullahMSFT
 ms.author: amamun
 ms.reviewer: wiassaf, mathoma
 ms.date: 01/25/2019
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.subservice: elastic-pools
 ms.topic: conceptual
 ms.custom: sqldbrb-1
@@ -22,7 +22,7 @@ A modern cloud-based web application provisions one database for each end user. 
 This article discusses DR strategies covering a range of scenarios from cost sensitive startup applications to ones with stringent availability requirements.
 
 > [!NOTE]
-> If you are using Premium or Business Critical databases and elastic pools, you can make them resilient to regional outages by converting them to zone redundant deployment configuration. See [Zone-redundant databases](high-availability-sla.md).
+> If you are using Premium or Business Critical databases and elastic pools, you can make them resilient to regional outages by converting them to zone redundant deployment configuration. See [Zone-redundant databases](high-availability-sla-local-zone-redundancy.md).
 
 ## Scenario 1. Cost sensitive startup
 

@@ -2,7 +2,7 @@
 title: SqlDependency in an ASP.NET application
 description: Demonstrates how to use query notifications via SqlDependency from an ASP.NET application.
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.reviewer: v-kaywon
 ms.date: 04/20/2021
 ms.service: sql

@@ -4,9 +4,10 @@ description: The article explains how to use PolyBase on a SQL Server instance t
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: hudequei
-ms.date: 04/26/2024
+ms.date: 06/03/2024
 ms.service: sql
 ms.subservice: polybase
+ms.custom: linux-related-content
 ms.topic: conceptual
 monikerRange: ">=sql-server-linux-ver16||>=sql-server-ver16"
 ---
@@ -112,6 +113,17 @@ Verify the new external data source with [sys.external_data_sources](../system-c
 SELECT * FROM sys.external_data_sources;
 ```
 
+#### Virtual hosted URLs
+
+Some S3-compatible storage systems (such as Amazon Web Services) utilize `virtual_hosted` style URLs to implement folder structure in the S3 bucket. Add the following `CONNECTION_OPTIONS` to allow for creation of external tables pointing to folder locations in the S3 bucket, for example `CONNECTION_OPTIONS = '{"s3":{"url_style":"virtual_hosted"}}'`.
+
+Without that `CONNECTION_OPTIONS` setting, when querying external tables pointing to a folder, you might observe the following error:
+
+```output
+Msg 13807, Level 16, State 1, Line 23  
+Content of directory on path '/<folder_name>/' cannot be listed. 
+```
+
 #### Limitations of Basic Authentication
 
 - For S3-compatible object storage, customers are not allowed to create their access key ID with a `:` character in it.
@@ -122,7 +134,7 @@ SELECT * FROM sys.external_data_sources;
 
 ### Pass-through (STS) authorization
 
-S3-compatible object storage has the ability of assigning a temporary credential through the use of Secure Token Service (STS). These credentials are short termed and dynamically generated.
+S3-compatible object storage has the ability to assign a temporary credential by using Secure Token Service (STS). These credentials are short termed and dynamically generated.
 
 Pass-through authorization relies on Active Directory Federation Service (ADFS) acting as OpenID Connect (OIDC) identity provider, it is up to the ADFS to communicate with the S3-compatible object storage STS, request the STS and provide it back to SQL Server.
 

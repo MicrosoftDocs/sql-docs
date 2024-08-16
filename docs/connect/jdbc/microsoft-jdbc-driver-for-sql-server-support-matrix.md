@@ -2,8 +2,9 @@
 title: Support matrix
 description: This page contains the support matrix and support life-cycle policy for the Microsoft JDBC Driver for SQL Server.
 author: David-Engel
-ms.author: v-davidengel
-ms.date: 01/31/2024
+ms.author: davidengel
+ms.reviewer: randolphwest
+ms.date: 07/31/2024
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: conceptual
@@ -11,9 +12,6 @@ ms.topic: conceptual
 # Microsoft JDBC Driver for SQL Server support matrix
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
-
-> [!CAUTION]
-> This article references CentOS, a Linux distribution that is nearing End Of Life (EOL) status. Please consider your use and plan accordingly. For more information, see the [CentOS End Of Life guidance](/azure/virtual-machines/workloads/centos/centos-end-of-life).
 
 This page contains the support matrix and support lifecycle policy for the Microsoft JDBC Driver for SQL Server.
 
@@ -25,8 +23,9 @@ Extended and custom support options aren't available for the Microsoft JDBC Driv
 
 The following Microsoft JDBC Drivers are supported, until the indicated End of Support date.
 
-|Driver Name|Driver Package Version|Applicable JAR(s)|End of Mainstream Support|
+|Driver Name|Driver Package Version|Applicable JARs|End of Mainstream Support|
 |-|-|-|-|
+|Microsoft JDBC Driver 12.8 for SQL Server|12.8|mssql-jdbc-12.8.0.jre11.jar<br> mssql-jdbc-12.8.0.jre8.jar|July 31, 2029|
 |Microsoft JDBC Driver 12.6 for SQL Server|12.6|mssql-jdbc-12.6.0.jre11.jar<br> mssql-jdbc-12.6.0.jre8.jar|January 31, 2029|
 |Microsoft JDBC Driver 12.4 for SQL Server|12.4|mssql-jdbc-12.4.0.jre11.jar<br> mssql-jdbc-12.4.0.jre8.jar|July 31, 2028|
 |Microsoft JDBC Driver 12.2 for SQL Server|12.2|mssql-jdbc-12.2.0.jre11.jar<br> mssql-jdbc-12.2.0.jre8.jar|January 31, 2028|
@@ -36,12 +35,12 @@ The following Microsoft JDBC Drivers are supported, until the indicated End of S
 |Microsoft JDBC Driver 9.2 for SQL Server|9.2|mssql-jdbc-9.2.1.jre15.jar<br> mssql-jdbc-9.2.1.jre11.jar<br> mssql-jdbc-9.2.1.jre8.jar|January 29, 2026|
 |Microsoft JDBC Driver 8.4 for SQL Server|8.4|mssql-jdbc-8.4.1.jre14.jar<br> mssql-jdbc-8.4.1.jre11.jar<br> mssql-jdbc-8.4.1.jre8.jar|July 31, 2025|
 |Microsoft JDBC Driver 8.2 for SQL Server|8.2|mssql-jdbc-8.2.2.jre13.jar<br> mssql-jdbc-8.2.2.jre11.jar<br> mssql-jdbc-8.2.2.jre8.jar|January 31, 2025|
-|Microsoft JDBC Driver 7.4 for SQL Server|7.4|mssql-jdbc-7.4.1.jre12.jar<br> mssql-jdbc-7.4.1.jre11.jar<br> mssql-jdbc-7.4.1.jre8.jar|July 31, 2024|
 
  The following Microsoft JDBC Drivers are no longer supported.
 
 |Driver Name|Driver Package Version|End of Mainstream Support|
 |-|-|-|
+|Microsoft JDBC Driver 7.4 for SQL Server|7.4|July 31, 2024|
 |Microsoft JDBC Driver 7.2 for SQL Server|7.2|January 31, 2024|
 |Microsoft JDBC Driver 7.0 for SQL Server|7.0|July 31, 2023|
 |Microsoft JDBC Driver 6.4 for SQL Server|6.4|February 27, 2023|
@@ -61,6 +60,7 @@ The following Microsoft JDBC Drivers are supported, until the indicated End of S
 
 |Database version&nbsp;&#8594;<br />&#8595; Driver Version|Azure SQL Database|Azure Synapse Analytics|Azure SQL Managed Instance|SQL Server 2022|SQL Server 2019|SQL Server 2017|SQL Server 2016|SQL Server 2014|SQL Server 2012|PDW 2008R2 AU3<sup>4</sup>|SQL Server 2008 R2|SQL Server 2008|
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
+|12.8|Yes|Yes|Yes|Yes|Yes|Yes|Yes|   |   |   |   |   |
 |12.6|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|   |   |   |   |
 |12.4|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|   |   |   |   |
 |12.2|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|   |   |   |   |
@@ -98,6 +98,7 @@ The following Microsoft JDBC Drivers are supported, until the indicated End of S
 
 |JDBC Driver Version|JRE Versions|JDBC API Version|
 |-|-|-|
+|[12.8](release-notes-for-the-jdbc-driver.md#128)|1.8, 11, 17, 21, 22|4.2, 4.3 (partially)|
 |[12.6](release-notes-for-the-jdbc-driver.md#126)|1.8, 11, 17, 21|4.2, 4.3 (partially)|
 |[12.4](release-notes-for-the-jdbc-driver.md#124)|1.8, 11, 17, 20|4.2, 4.3 (partially)|
 |[12.2](release-notes-for-the-jdbc-driver.md#122)|1.8, 11, 17, 19|4.2, 4.3 (partially)|
@@ -128,8 +129,8 @@ The following Microsoft JDBC Drivers are supported, until the indicated End of S
 
 The Microsoft JDBC driver is designed to work on any operating system that supports the use of a Java Virtual Machine (JVM). Some commonly used platforms include Windows, Windows Server, Linux, Unix, AIX, macOS, and others.
 
-The JDBC product team tests our driver on Windows, Ubuntu Linux, CentOS Linux, and macOS.
+The JDBC product team tests our driver on Windows, Ubuntu Linux, and macOS.
 
 ## Application server support
 
-The Microsoft JDBC Driver for SQL Server is tested with various application servers.  Consult your application server vendor for more details on which driver version is compatible with their product.
+The Microsoft JDBC Driver for SQL Server is tested with various application servers. Consult your application server vendor for more details on which driver version is compatible with their product.

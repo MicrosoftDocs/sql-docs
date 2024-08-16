@@ -1,11 +1,11 @@
 ---
-title: "PowerShell: Sync between multiple databases in Azure SQL Database"
+title: "PowerShell: Sync between multiple databases"
 description: Use an Azure PowerShell example script to sync between multiple databases in Azure SQL Database.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: wiassaf, mathoma
 ms.date: 03/12/2019
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.subservice: sql-data-sync
 ms.topic: sample
 ms.custom:

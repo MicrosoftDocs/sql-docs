@@ -6,7 +6,7 @@ author: zoran-rilak-msft
 ms.author: zoranrilak
 ms.reviewer: mathoma, bonova
 ms.date: 09/12/2019
-ms.service: sql-managed-instance
+ms.service: azure-sql-managed-instance
 ms.subservice: deployment-configuration
 ms.topic: how-to
 ms.custom: sqldbrb=1

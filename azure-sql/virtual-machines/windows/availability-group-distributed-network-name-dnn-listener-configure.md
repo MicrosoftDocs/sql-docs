@@ -1,10 +1,10 @@
 ---
 title: Configure DNN listener for availability group
 description: Learn how to configure a distributed network name (DNN) listener to replace your virtual network name (VNN) listener and route traffic to your Always On availability group on SQL Server on Azure VM.
-author: tarynpratt
-ms.author: tarynpratt
+author: AbdullahMSFT
+ms.author: amamun
 ms.reviewer: mathoma
-ms.date: 04/18/2023
+ms.date: 06/18/2024
 ms.service: virtual-machines-sql
 ms.subservice: hadr
 ms.topic: how-to
@@ -40,6 +40,8 @@ Before you complete the steps in this article, you should already have:
 - Installed the latest version of [PowerShell](/powershell/azure/install-az-ps).
 - Identified the unique port that you will use for the DNN listener. The port used for a DNN listener must be unique across all replicas of the availability group or failover cluster instance.  No other connection can share the same port.
 
+> [!NOTE]
+> If you have multiple AGs or FCIs on the same cluster and you use either a DNN or VNN listener, then each AG or FCI needs its own independent connection point.
 
 ## Create script
 

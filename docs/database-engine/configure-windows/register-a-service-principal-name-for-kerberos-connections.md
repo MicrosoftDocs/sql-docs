@@ -3,7 +3,7 @@ title: Register a Service Principal Name for Kerberos connections
 description: "Find out how to register a Service Principal Name (SPN) with Active Directory. This registration is required for using Kerberos authentication with SQL Server."
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 08/02/2023
+ms.date: 07/22/2024
 ms.service: sql
 ms.subservice: configuration
 ms.topic: conceptual
@@ -106,18 +106,18 @@ To give permissions to the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion
 
 1. Select the **Security** tab and select **Advanced**.
 
-1. In the list, if [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] startup account isn't listed, select **Add** to add it. Once it is added, perform the following steps:
+1. In the list, if [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] startup account isn't listed, select **Add** to add it. Once it's added, perform the following steps:
 
-    1. Select the account and select **Edit**.
+   1. Select the account and select **Edit**.
 
-    1. Under Permissions select **Validated Write servicePrincipalName**.
+   1. Under Permissions select **Validated Write servicePrincipalName**.
 
-    1. Scroll down and under **Properties** select:
+   1. Scroll down and under **Properties** select:
 
-       - **Read servicePrincipalName**
-       - **Write servicePrincipalName**
+      - **Read servicePrincipalName**
+      - **Write servicePrincipalName**
 
-    1. Select **OK** twice.
+   1. Select **OK** twice.
 
 1. Close **Active Directory Users and Computers**.
 
@@ -131,20 +131,20 @@ For more information on the **setspn** tool, required permissions and examples o
 
 The following example illustrates the syntax used to manually register an SPN for a TCP/IP connection using a domain user account:
 
-```console
+```cmd
 setspn -S MSSQLSvc/myhost.redmond.microsoft.com:1433 redmond\accountname
 ```
 
 > [!NOTE]  
 > If an SPN already exists, it must be deleted before it can be reregistered. You do this by using **setspn** with the `-D` switch. The following examples illustrate how to manually register a new instance-based SPN. For a default instance using a domain user account, use:
 
-```console
+```cmd
 setspn -S MSSQLSvc/myhost.redmond.microsoft.com redmond\accountname
 ```
 
 For a named instance, use:
 
-```console
+```cmd
 setspn -S MSSQLSvc/myhost.redmond.microsoft.com:instancename redmond\accountname
 ```
 
@@ -152,7 +152,7 @@ For more information about Always On availability group configurations, see [Lis
 
 ## <a id="Client"></a> Client connections
 
-User-specified SPNs are supported in client drivers. However, if an SPN isn't provided, it is generated automatically based on the type of a client connection. For a TCP connection, an SPN in the format `MSSQLSvc/FQDN:[<port>]` is used for both the named and default instances.
+User-specified SPNs are supported in client drivers. However, if an SPN isn't provided, it's generated automatically based on the type of a client connection. For a TCP connection, an SPN in the format `MSSQLSvc/FQDN:[<port>]` is used for both the named and default instances.
 
 For named pipes and shared memory connections, an SPN in the format `MSSQLSvc/<FQDN>:<instancename>` is used for a named instance and `MSSQLSvc/<FQDN>` is used for the default instance.
 
@@ -174,7 +174,7 @@ WHERE session_id = @@SPID;
 
 ## <a id="Defaults"></a> Authentication defaults
 
-The following table describes the authentication defaults that are used based on SPN registration scenarios.
+The following table describes the authentication defaults that are used, based on SPN registration scenarios.
 
 | Scenario | Authentication method |
 | --- | --- |
@@ -184,9 +184,9 @@ The following table describes the authentication defaults that are used based on
 | The SPN lookup fails or doesn't map to a correct domain account, virtual account, MSA, or built-in account, or isn't a correct domain account, virtual account, MSA, or built-in account. | Local and remote connections use NTLM. |
 
 > [!NOTE]  
-> 'Correct' means that the account mapped by the registered SPN is the account that the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] service is running under.
+> *Correct* means that the account mapped by the registered SPN is the account that the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] service is running under.
 
-## Comments
+## Remarks
 
 The Dedicated Administrator Connection (DAC) uses an instance name-based SPN. Kerberos authentication can be used with a DAC if that SPN is registered successfully. As an alternative a user can specify the account name as an SPN.
 
@@ -194,9 +194,9 @@ If SPN registration fails during startup, this failure is recorded in the [!INCL
 
 If SPN deregistration fails during shutdown, this failure is recorded in the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] error log, and shutdown continues.
 
-## Next steps
+## Related content
 
-- [Service Principal Name (SPN) Support in Client Connections](../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md)
+- [Service Principal Name (SPN) Support in Client Connections in SQL Server Native Client](../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md)
 - [Service Principal Names (SPNs) in Client Connections (OLE DB)](../../relational-databases/native-client/ole-db/service-principal-names-spns-in-client-connections-ole-db.md)
 - [Service Principal Names (SPNs) in Client Connections (ODBC)](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md)
 - [SQL Server Native Client Features](../../relational-databases/native-client/features/sql-server-native-client-features.md)

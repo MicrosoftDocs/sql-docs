@@ -2,7 +2,7 @@
 title: "ODBC 64-Bit Information"
 description: "ODBC 64-Bit Information"
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: "01/19/2017"
 ms.service: sql
 ms.subservice: connectivity

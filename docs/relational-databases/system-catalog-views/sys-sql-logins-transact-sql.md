@@ -19,7 +19,7 @@ dev_langs:
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.sql_logins (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/appliesto-ss-asdb-xxxx-pdw-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-pdw.md)]
 
   Returns one row for every [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] authentication login.  
   

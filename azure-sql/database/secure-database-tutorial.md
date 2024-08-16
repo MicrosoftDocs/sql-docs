@@ -5,7 +5,7 @@ author: VanMSFT
 ms.author: vanto
 ms.reviewer: wiassaf, mathoma
 ms.date: 01/26/2024
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.subservice: security
 ms.topic: tutorial
 ---

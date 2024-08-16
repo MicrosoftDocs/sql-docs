@@ -6,11 +6,12 @@ ms.custom: horz-monitor
 ms.topic: conceptual
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.subservice: monitoring
 ms.reviewer: mathoma
 ---
 # Monitor Azure SQL Database
+[!INCLUDE [appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
 [!INCLUDE [horz-monitor-intro](~/../azure-sql/reusable-content/ce-skilling/azure/includes/azure-monitor/horizontals/horz-monitor-intro.md)]
 

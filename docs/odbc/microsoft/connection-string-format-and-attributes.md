@@ -2,7 +2,7 @@
 title: "Connection String Format and Attributes"
 description: "Connection String Format and Attributes"
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: "01/19/2017"
 ms.service: sql
 ms.subservice: connectivity

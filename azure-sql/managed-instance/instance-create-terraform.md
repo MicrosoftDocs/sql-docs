@@ -5,7 +5,7 @@ author: urosran
 ms.author: urandjelovic
 ms.reviewer: mathoma
 ms.date: 12/06/2022
-ms.service: sql-managed-instance
+ms.service: azure-sql-managed-instance
 ms.topic: quickstart
 ms.custom: devx-track-terraform
 ---

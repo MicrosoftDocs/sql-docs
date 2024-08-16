@@ -50,8 +50,6 @@
     href: migrating-mysql-data-into-sql-server-azure-sql-db-mysqltosql.md
   - name: Migrating MySQL databases to Azure SQL Database
     href: migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md
-- name: Legal notice
-  href: legal-notice-mysqltosql.md
 - name: SSMA for MySQL console
   items:
   - name: Working with SSMA for MySQL console

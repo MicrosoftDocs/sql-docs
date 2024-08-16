@@ -2,7 +2,7 @@
 title: "Executing a command (OLE DB driver)"
 description: Learn how a consumer in OLE DB Driver for SQL Server executes a command by first creating a session, getting a rowset, and using Execute.
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: "06/14/2018"
 ms.service: sql
 ms.subservice: connectivity

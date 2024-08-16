@@ -2,7 +2,7 @@
 title: Supporting local transactions (OLE DB driver)
 description: Learn how the OLE DB Driver for SQL Server supports local transactions and how to use ITransactionLocal for more precise control over local transaction scope.
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: "06/14/2018"
 ms.service: sql
 ms.subservice: connectivity

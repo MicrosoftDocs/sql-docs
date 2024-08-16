@@ -2,7 +2,7 @@
 title: Calling a stored procedure (OLE DB)
 description: Learn how to call a stored procedure in the OLE DB Driver for SQL Server, including how to pass parameter values.
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: "06/12/2018"
 ms.service: sql
 ms.subservice: connectivity

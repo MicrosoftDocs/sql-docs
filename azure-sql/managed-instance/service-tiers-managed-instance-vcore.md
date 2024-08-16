@@ -4,13 +4,13 @@ description: The vCore purchasing model lets you independently scale compute and
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: sashan, moslake, vladiv, mathoma
-ms.date: 03/24/2024
-ms.service: sql-managed-instance
+ms.date: 08/01/2024
+ms.service: azure-sql-managed-instance
 ms.subservice: performance
 ms.topic: conceptual
 ---
 # vCore purchasing model - Azure SQL Managed Instance
-[!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
+[!INCLUDE [appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
 
 > [!div class="op_single_selector"]
 > * [Azure SQL Database](../database/service-tiers-sql-database-vcore.md?view=azuresql-db&preserve-view=true)
@@ -60,7 +60,7 @@ Storage for database backups is allocated to support the capabilities of SQL Man
 - [Long-term retention (LTR)](../database/long-term-retention-overview.md):  You have the option to configure long-term retention of full backups for up to 10 years. The configuration you choose determines how much storage will be used for LTR backups. 
 
 
-## <a id="compute-tiers"></a>Service tiers
+## <a id="compute-tiers"></a> Service tiers
 
 The service tier generally defines the storage architecture, space and I/O limits, and business continuity options related to availability and disaster recovery.
 
@@ -91,20 +91,20 @@ The architectural model for the General Purpose service tier is based on a separ
 
 The following figure shows four nodes in standard architectural model with the separated compute and storage layers.
 
-![Separation of compute and storage](../database/media/service-tier-general-purpose/general-purpose-service-tier.png)
+:::image type="content" source="../database/media/service-tiers-managed-instance-vcore/general-purpose-service-tier.png" alt-text="Diagram showing the separation of compute and storage.":::
 
 In the architectural model for the General Purpose service tier, there are two layers:
 
 - A stateless compute layer that is running the `sqlservr.exe` process and contains only transient and cached data (for example – plan cache, buffer pool, columnstore pool). This stateless node is operated by Azure Service Fabric that initializes process, controls health of the node, and performs failover to another place if necessary.
 - A stateful data layer with database files (.mdf/.ldf) that are stored in Azure Blob storage. Azure Blob storage guarantees that there will be no data loss of any record that is placed in any database file. Azure Storage has built-in data availability/redundancy that ensures that every record in log file or page in data file will be preserved even if the process crashes.
 
-Whenever the database engine or operating system is upgraded, some part of underlying infrastructure fails, or if some critical issue is detected in the `sqlservr.exe` process, Azure Service Fabric will move the stateless process to another stateless compute node. There is a set of spare nodes that is waiting to run new compute service if a failover of the primary node happens in order to minimize failover time. Data in Azure storage layer is not affected, and data/log files are attached to newly initialized process. This process guarantees 99.99% availability by default. There may be some performance impacts to heavy workloads that are in-flight due to transition time and the fact the new node starts with cold cache.
+Whenever the database engine or operating system is upgraded, some part of underlying infrastructure fails, or if some critical issue is detected in the `sqlservr.exe` process, Azure Service Fabric will move the stateless process to another stateless compute node. There is a set of spare nodes that is waiting to run new compute service if a failover of the primary node happens in order to minimize failover time. Data in Azure storage layer is not affected, and data/log files are attached to newly initialized process. This process guarantees 99.99% availability by default. There can be performance impacts to heavy workloads that are in-flight due to transition time and the fact the new node starts with cold cache.
 
 #### When to choose this service tier
 
 The General Purpose service tier is the default service tier in Azure SQL Managed Instance designed for most of generic workloads. If you need a fully managed database engine with a default SLA and storage latency between 5 and 10 ms, the General Purpose tier is the option for you.
 
-### Next-gen General Purpose 
+### Next-gen General Purpose
 
 > [!NOTE]
 > The Next-gen General Purpose service tier upgrade is currently in preview. To get started, [use the Next-gen General Purpose service tier upgrade](service-tiers-next-gen-general-purpose-use.md) for eligible new and existing instances. 
@@ -112,13 +112,13 @@ The General Purpose service tier is the default service tier in Azure SQL Manage
 [!INCLUDE [azure-sql-managed-instance-compare-service-tiers](../includes/sql-managed-instance/azure-sql-managed-instance-next-gen-general-purpose-upgrade.md)]
 
 
-### Business Critical 
+### Business Critical
 
 The Business Critical service tier model is based on a cluster of database engine processes. This architectural model relies on a quorum of always available database engine nodes to minimize performance impacts to your workload, even during maintenance activities. Azure upgrades and patches the underlying operating system, drivers, and SQL Server database engine transparently, with minimal down-time for end users. 
 
 In the Business Critical model, compute and storage is integrated on each node. Replication of data between database engine processes on each node of a four-node cluster achieves high availability, with each node using locally attached SSD as data storage. 
 
-![Cluster of database engine nodes](../database/media/service-tier-business-critical/business-critical-service-tier.png)
+:::image type="content" source="../database/media/service-tiers-managed-instance-vcore/business-critical-service-tier.png" alt-text="Diagram showing the cluster of database engine nodes.":::
 
 Both the SQL Server database engine process and underlying .mdf/.ldf files are placed on the same node with locally attached SSD storage providing low latency to your workload. High availability is implemented using technology similar to SQL Server [Always On availability groups](/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server). 
 
@@ -158,7 +158,7 @@ For more information on the hardware configuration specifics and limitations, se
 
 In the [sys.dm_user_db_resource_governance](/sql/relational-databases/system-dynamic-management-views/sys-dm-user-db-resource-governor-azure-sql-database) dynamic management view, hardware generation for instances using Intel&reg; SP-8160 (Skylake) processors appears as Gen6, while hardware generation for instances using Intel&reg; 8272CL (Cascade Lake) appears as Gen7. The Intel&reg; 8370C (Ice Lake) CPUs used by premium-series and memory optimized premium-series hardware generations appear as Gen8. Resource limits for all standard-series (Gen5) instances are the same regardless of processor type (Broadwell, Skylake, or Cascade Lake).
 
-### Selecting a hardware configuration
+### <a id="selecting-a-hardware-configuration"></a> Select a hardware configuration
 
 You can select hardware configuration at the time of instance creation, or you can change hardware of an existing instance.
 
@@ -168,14 +168,15 @@ For detailed information, see [Create a SQL Managed Instance](../managed-instanc
 
 On the **Basics** tab, select the **Configure database** link in the **Compute + storage** section, and then select desired hardware:
 
-:::image type="content" source="../database/media/service-tiers-vcore/configure-managed-instance.png" alt-text="configure SQL Managed Instance"  loc-scope="azure-portal":::
+:::image type="content" source="../database/media/service-tiers-managed-instance-vcore/configure-managed-instance.png" alt-text="Screenshot from the Azure portal showing where to configure SQL Managed Instance.":::
+
 **To change hardware of an existing SQL Managed Instance**
 
 #### [The Azure portal](#tab/azure-portal)
 
 From the SQL Managed Instance page, select **Compute + storage** under **Settings**:
 
-:::image type="content" source="../database/media/service-tiers-vcore/change-managed-instance-hardware.png" alt-text="Screenshot shows Compute + storage page for SQL managed instance."  loc-scope="azure-portal":::
+:::image type="content" source="../database/media/service-tiers-managed-instance-vcore/change-managed-instance-hardware.png" alt-text="Screenshot from the Azure portal showing Compute + storage page for SQL managed instance." lightbox="../database/media/service-tiers-managed-instance-vcore/change-managed-instance-hardware.png":::
 
 On the **Compute + Storage** page, you can change your hardware under **Hardware generation** by using the sliders for vCores and Storage. 
 
@@ -232,10 +233,9 @@ Standard-series (Gen5) and premium-series hardware is available in all public re
 Memory optimized premium-series hardware is in preview, and has limited regional availability. For more information, see [Azure SQL Managed Instance resource limits](../managed-instance/resource-limits.md#hardware-configuration-characteristics).
 
 
-## Next steps
+## Related content
 
-- To get started, see [Creating a SQL Managed Instance using the Azure portal](instance-create-quickstart.md)
-- For pricing details, see 
-    - [Azure SQL Managed Instance single instance pricing page](https://azure.microsoft.com/pricing/details/azure-sql-managed-instance/single/)
-    - [Azure SQL Managed Instance pools pricing page](https://azure.microsoft.com/pricing/details/azure-sql-managed-instance/pools/)
-- For details about the specific compute and storage sizes available in the General Purpose and Business Critical service tiers, see [vCore-based resource limits for Azure SQL Managed Instance](resource-limits.md).
+- [Creating a SQL Managed Instance using the Azure portal](instance-create-quickstart.md)
+- [Azure SQL Managed Instance single instance pricing page](https://azure.microsoft.com/pricing/details/azure-sql-managed-instance/single/)
+- [Azure SQL Managed Instance pools pricing page](https://azure.microsoft.com/pricing/details/azure-sql-managed-instance/pools/)
+- [vCore-based resource limits for Azure SQL Managed Instance](resource-limits.md)

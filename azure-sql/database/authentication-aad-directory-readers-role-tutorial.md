@@ -6,7 +6,7 @@ author: nofield
 ms.author: nofield
 ms.reviewer: wiassaf, vanto, mathoma
 ms.date: 09/27/2023
-ms.service: sql-db-mi
+ms.service: azure-sql
 ms.subservice: security
 ms.topic: tutorial
 ms.custom: azure-synapse, has-azure-ad-ps-ref, azure-ad-ref-level-one-done

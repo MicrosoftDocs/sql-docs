@@ -5,7 +5,7 @@ author: zoran-rilak-msft
 ms.author: zoranrilak
 ms.reviewer: vanto, mathoma
 ms.date: 05/08/2019
-ms.service: sql-managed-instance
+ms.service: azure-sql-managed-instance
 ms.subservice: security
 ms.topic: conceptual
 ms.custom: sqldbrb=1
@@ -22,6 +22,8 @@ Azure SQL Managed Instance provides a [VNet-local endpoint](connectivity-archite
 - The managed instance must integrate with multi-tenant-only platform-as-a-service (PaaS) offerings.
 - You need higher throughput of data exchange than is possible when you're using a VPN.
 - Company policies prohibit PaaS inside corporate networks.
+
+Note that the public endpoint always uses the [proxy connection type](connection-types-overview.md#connection-types) regardless of the connection type setting.
 
 ## Deploy a managed instance for public endpoint access
 

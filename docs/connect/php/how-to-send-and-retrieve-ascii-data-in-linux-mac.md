@@ -2,7 +2,7 @@
 title: "How to: Send and Retrieve ASCII Data in Linux and macOS (SQL)"
 description: "This topic describes how to send and retrieve ASCII data in Linux and macOS when using the Microsoft Drivers for PHP for SQL Server"
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: "01/16/2018"
 ms.service: sql
 ms.subservice: connectivity

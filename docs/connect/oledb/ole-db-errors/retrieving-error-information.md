@@ -2,7 +2,7 @@
 title: Retrieving error information (OLE DB driver)
 description: This example obtains information from the various error interfaces exposed by the OLE DB Driver for SQL Server.
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: "06/14/2018"
 ms.service: sql
 ms.subservice: connectivity

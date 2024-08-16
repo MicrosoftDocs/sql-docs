@@ -2,7 +2,7 @@
 title: "NOT NULL in CREATE TABLE Statements"
 description: "NOT NULL in CREATE TABLE Statements"
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: "01/19/2017"
 ms.service: sql
 ms.subservice: connectivity

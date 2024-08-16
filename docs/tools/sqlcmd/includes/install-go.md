@@ -1,10 +1,11 @@
 ---
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 08/15/2023
+ms.date: 06/28/2024
 ms.service: sql
-ms.custom: linux-related-content
 ms.topic: include
+ms.custom:
+  - linux-related-content
 ---
 **sqlcmd** (Go) can be installed cross-platform, on Microsoft Windows, macOS, and Linux.
 
@@ -66,7 +67,7 @@ ms.topic: include
    curl https://packages.microsoft.com/keys/microsoft.asc | sudo tee /etc/apt/trusted.gpg.d/microsoft.asc
    ```
 
-1. Add the Microsoft repository, where the `ubuntu/20.04` segment may be `debian/11`, `ubuntu/20.04`, or `ubuntu/22.04`.
+1. Add the Microsoft repository, where the `ubuntu/20.04` segment might be `debian/11`, `ubuntu/20.04`, or `ubuntu/22.04`.
 
    ```bash
    add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/20.04/prod.list)"
@@ -79,10 +80,7 @@ ms.topic: include
    apt-get install sqlcmd
    ```
 
-#### yum (Fedora/CentOS)
-
-> [!CAUTION]
-> This content references CentOS, a Linux distribution that is nearing End Of Life (EOL) status. Please consider your use and plan accordingly. For more information, see the [CentOS End Of Life guidance](/azure/virtual-machines/workloads/centos/centos-end-of-life).
+#### yum (Fedora)
 
 1. Import the Microsoft repository key.
 
@@ -90,10 +88,10 @@ ms.topic: include
    rpm --import https://packages.microsoft.com/keys/microsoft.asc
    ```
 
-1. Download the repository configuration file, where the `centos/8` segment may be `centos/8`, `fedora/32`, `opensuse/42.3`, `rhel/8`, or `sles/15`. If the version of your OS doesn't directly correspond to one of those options, you can likely successfully use a repository configuration file from a version. For example, `centos/8` can be used in an environment running CentOS 7.
+1. Download the repository configuration file, where the `fedora/32` segment might be `opensuse/42.3`, `rhel/8`, or `sles/15`. If the version of your OS doesn't directly correspond to one of those options, you might be able to use a repository configuration file from a version.
 
    ```bash
-   curl -o /etc/yum.repos.d/packages-microsoft-com-prod.repo https://packages.microsoft.com/config/centos/8/prod.repo
+   curl -o /etc/yum.repos.d/packages-microsoft-com-prod.repo https://packages.microsoft.com/config/fedora/40/prod.repo
    ```
 
 1. Install **sqlcmd** (Go) with **yum**.

@@ -5,7 +5,7 @@ author: dimitri-furman
 ms.author: dfurman
 ms.reviewer: wiassaf, mathoma, jackli
 ms.date: 3/30/2022
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.subservice: elastic-pools
 ms.topic: conceptual
 ms.custom: sqldbrb=1

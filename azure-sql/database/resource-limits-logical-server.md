@@ -4,8 +4,8 @@ description: This article provides an overview of resource management in Azure S
 author: dimitri-furman
 ms.author: dfurman
 ms.reviewer: wiassaf, mathoma, randolphwest
-ms.date: 03/28/2024
-ms.service: sql-database
+ms.date: 07/02/2024
+ms.service: azure-sql-database
 ms.subservice: service-overview
 ms.topic: reference
 ---
@@ -85,9 +85,10 @@ If you observe high storage space utilization, mitigation options include:
 
 - Increase maximum data size of the database or elastic pool, or scale up to a service objective with a higher maximum data size limit. See [Scale single database resources](single-database-scale.md) and [Scale elastic pool resources](elastic-pool-scale.md).
 - If the database is in an elastic pool, then alternatively the database can be moved outside of the pool, so that its storage space isn't shared with other databases.
-- Shrink a database to reclaim unused space. In elastic pools, shrinking a database provides more storage for other databases in the pool. For more information, see [Manage file space in Azure SQL Database](file-space-manage.md).
+- Shrink a database to reclaim unused space. For more information, see [Manage file space in Azure SQL Database](file-space-manage.md).
+    - In elastic pools, shrinking a database provides more storage for other databases in the pool.
 - Check if high space utilization is due to a spike in the size of Persistent Version Store (PVS). PVS is a part of each database, and is used to implement  [Accelerated Database Recovery](../accelerated-database-recovery.md). To determine current PVS size, see [PVS troubleshooting](/sql/relational-databases/accelerated-database-recovery-management#troubleshooting). A common reason for large PVS size is a transaction that is open for a long time (hours), preventing cleanup of row older versions in PVS.
-- For databases and elastic pools in Premium and Business Critical service tiers that consume large amounts of storage, you might receive an out-of-space error even though used space in the database or elastic pool is below its maximum data size limit. This can happen if `tempdb` or transaction log files consume a large amount of storage toward the maximum local storage limit. [Fail over](high-availability-sla.md#testing-application-fault-resiliency) the database or elastic pool to reset `tempdb` to its initial smaller size, or [shrink](file-space-manage.md#shrink-transaction-log-file) transaction log to reduce local storage consumption.
+- For databases and elastic pools in Premium and Business Critical service tiers that consume large amounts of storage, you might receive an out-of-space error even though used space in the database or elastic pool is below its maximum data size limit. This can happen if `tempdb` or transaction log files consume a large amount of storage toward the maximum local storage limit. [Fail over](high-availability-sla-local-zone-redundancy.md#testing-application-fault-resiliency) the database or elastic pool to reset `tempdb` to its initial smaller size, or [shrink](file-space-manage.md#shrink-transaction-log-file) transaction log to reduce local storage consumption.
 
 ### Sessions, workers, and requests
 

@@ -14,10 +14,10 @@ helpviewer_keywords:
   - "STRelate (geometry Data Type)"
 dev_langs:
   - "TSQL"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=fabric"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # STRelate (geometry Data Type)
-[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance FabricSE FabricDW](../../includes/applies-to-version/sql-asdb-asdbmi-fabricse-fabricdw.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Returns 1 if a **geometry** instance is related to another **geometry** instance, where the relationship is defined by a Dimensionally Extended 9 Intersection Model (DE-9IM) pattern matrix value; otherwise, returns 0.  
   

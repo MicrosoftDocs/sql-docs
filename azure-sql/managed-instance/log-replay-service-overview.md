@@ -5,7 +5,7 @@ author: danimir
 ms.author: danil
 ms.reviewer: mathoma
 ms.date: 11/16/2022
-ms.service: sql-managed-instance
+ms.service: azure-sql-managed-instance
 ms.subservice: migration
 ms.topic: conceptual
 ms.custom:
@@ -22,7 +22,7 @@ To get started, review [Migrate databases from SQL Server to Azure SQL Managed I
 
 ## When to use Log Replay Service
 
-[Azure Database Migration Service](/azure/dms/tutorial-sql-server-to-managed-instance), the [Azure SQL migration extension for Azure Data Studio](/azure-data-studio/extensions/azure-sql-migration-extension), and LRS all use the same underlying migration technology and APIs. LRS further enables complex custom migrations and hybrid architectures between on-premises SQL Server instances and SQL Managed Instance deployments.
+[Azure Database Migration Service](/azure/dms/tutorial-sql-server-managed-instance-online), the [Azure SQL migration extension for Azure Data Studio](/azure-data-studio/extensions/azure-sql-migration-extension), and LRS all use the same underlying migration technology and APIs. LRS further enables complex custom migrations and hybrid architectures between on-premises SQL Server instances and SQL Managed Instance deployments.
 
 When you can't use Azure Database Migration Service, or the Azure SQL extension for migration, you can use LRS directly with PowerShell, Azure CLI cmdlets, or APIs to manually build and orchestrate database migrations to SQL Managed Instance. 
 
@@ -50,7 +50,6 @@ The following sources are supported:
 > [!NOTE]
 > - We recommend that you automate the migration of databases from SQL Server to Azure SQL Managed Instance by using the Azure SQL migration extension for Azure Data Studio. Consider using LRS to orchestrate migrations when the Azure SQL migration extension doesn't fully support your scenarios.
 > - LRS is the only method to restore differential backups on managed instances. It isn't possible to manually restore differential backups on managed instances or to manually set the `NORECOVERY` mode by using T-SQL.
-
 
 ## How LRS works
 
@@ -104,9 +103,12 @@ Use continuous mode migration when you don't have the entire backup chain in adv
 | :----------------------------- | :------------------------- |
 | **1. Copy database backups from the SQL Server instance to the Blob Storage account**. | Copy full, differential, and log backups from the SQL Server instance to the Blob Storage container by using [AzCopy](/azure/storage/common/storage-use-azcopy-v10) or [Azure Storage Explorer](https://azure.microsoft.com/features/storage-explorer/). <br /><br />Use any file names. LRS doesn't require a specific file-naming convention.<br /><br />Use a separate folder for each database when you're migrating several databases. |
 | **2. Start LRS in the cloud**. | You can start the service with PowerShell ([start-azsqlinstancedatabaselogreplay](/powershell/module/az.sql/start-azsqlinstancedatabaselogreplay)) or the Azure CLI ([az_sql_midb_log_replay_start cmdlets](/cli/azure/sql/midb/log-replay#az-sql-midb-log-replay-start)). Choose between autocomplete or continuous migration mode. <br /><br /> Start LRS separately for each database that points to a backup folder on the Blob Storage account. <br /><br /> After the service starts, it takes backups from the Blob Storage container and starts restoring them to SQL Managed Instance.<br /><br /> When LRS is started in autocomplete mode, it restores all backups through the specified last backup file. All backup files must be uploaded in advance, and it isn't possible to add any new backup files while the migration is in progress. This mode is recommended for passive workloads for which no data catch-up is required. <br /><br /> When LRS is started in continuous mode, it restores all the backups that were initially uploaded and then watches for any new files that were uploaded to the folder. The service continuously applies logs based on the log sequence number (LSN) chain until it's stopped manually. We recommend this mode for active workloads for which data catch-up is required. |
-| **2.1. Monitor the operation's progress**. | You can monitor the progress of the restore operation with PowerShell ([get-azsqlinstancedatabaselogreplay](/powershell/module/az.sql/get-azsqlinstancedatabaselogreplay)) or the Azure CLI ([az_sql_midb_log_replay_show cmdlets](/cli/azure/sql/midb/log-replay#az-sql-midb-log-replay-show)). |
+| **2.1. Monitor the operation's progress**. | You can monitor the progress of the ongoing restore operation with PowerShell ([get-azsqlinstancedatabaselogreplay](/powershell/module/az.sql/get-azsqlinstancedatabaselogreplay)) or the Azure CLI ([az_sql_midb_log_replay_show cmdlets](/cli/azure/sql/midb/log-replay#az-sql-midb-log-replay-show)). To track additional details on a failed request, use the PowerShell command [Get-AzSqlInstanceOperation](/powershell/module/az.sql/get-azsqlinstanceoperation) or use Azure CLI command [az sql mi op show](/cli/azure/sql/mi/op?view=azure-cli-latest#az-sql-mi-op-show). |
 | **2.2. Stop the operation if required (optional)**. | If you need to stop the migration process, use PowerShell ([stop-azsqlinstancedatabaselogreplay](/powershell/module/az.sql/stop-azsqlinstancedatabaselogreplay)) or the Azure CLI ([az_sql_midb_log_replay_stop](/cli/azure/sql/midb/log-replay#az-sql-midb-log-replay-stop)). <br /><br /> Stopping the operation deletes the database that you're restoring to SQL Managed Instance. After you stop an operation, you can't resume LRS for a database. You need to restart the migration process from the beginning. |
 | **3. Cut over to the cloud when you're ready**. | If LRS was started in autocomplete mode, the migration automatically finishes after the specified last backup file has been restored. <br /><br />  If LRS was started in continuous mode, stop the application and workload. Take the last log-tail backup and upload it to the Azure Blob Storage deployment. Ensure that the last log-tail backup has been restored on the managed instance. Complete the cutover by initiating an LRS `complete` operation with PowerShell ([complete-azsqlinstancedatabaselogreplay](/powershell/module/az.sql/complete-azsqlinstancedatabaselogreplay)) or the Azure CLI [az_sql_midb_log_replay_complete](/cli/azure/sql/midb/log-replay#az-sql-midb-log-replay-complete). This operation stops LRS and brings the database online for read/write workloads on SQL Managed Instance. <br /><br /> Repoint the application connection string from the SQL Server instance to SQL Managed Instance. You need to orchestrate this step yourself, either through a manual connection string change in your application, or automatically (for example, if your application can read the connection string from a property, or a database). |
+
+> [!IMPORTANT]
+> After the cutover, SQL Managed Instance with Business Critical service tier can take significantly longer than General Purpose to be available as three secondary replicas have to be seeded for the availability group. The operation duration depends on the size of data. For more information, see [Management operations duration](/azure/azure-sql/managed-instance/management-operations-overview#duration).
 
 ### Migrating large databases
 
@@ -115,7 +117,6 @@ If you're migrating large databases of several terabytes in size, consider the f
 - For long-running jobs, system updates will interrupt and prolong migration jobs. We highly recommend that you use a [maintenance window]( maintenance-window.md) to schedule planned system updates. Plan your migration around the scheduled maintenance window.
 - Migration jobs that are interrupted by system updates are automatically suspended and resumed for General Purpose managed instances, and they're restarted for Business Critical managed instances. These updates will affect the timeframe of your migration.
 - To increase the upload speed of your SQL Server backup files to the Blob Storage account, if your infrastructure has sufficient network bandwidth, consider using parallelization with multiple threads.
-
 
 ## Start the migration
 

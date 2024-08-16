@@ -5,7 +5,7 @@ author: rajeshsetlem
 ms.author: rsetlem
 ms.reviewer: mathoma, randolphwest
 ms.date: 05/21/2024
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.subservice: high-availability
 ms.topic: how-to
 ms.custom:
@@ -54,7 +54,7 @@ The following table describes the functional capabilities of a standby secondary
 | Back up and restore | The backup and restore behavior in a standby replica and a readable secondary database replica are the same. |
 | Monitoring | All monitoring operations that are supported by a readable secondary replica are supported by the standby replica. |
 
-The standby database replica must _only_ be used for disaster recovery. No production applications can be connected to the replica. The following lists the only activities that are permitted on the standby database:
+The standby database replica must _only_ be used for disaster recovery. The following lists the only activities that are permitted on the standby database:
 
 - Perform maintenance operations, such as checkDB
 - Connect monitoring applications

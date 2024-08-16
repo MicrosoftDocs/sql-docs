@@ -2,7 +2,7 @@
 title: "Result-Generating and Result-Free Statements"
 description: "Result-Generating and Result-Free Statements"
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: "01/19/2017"
 ms.service: sql
 ms.subservice: connectivity

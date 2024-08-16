@@ -5,10 +5,11 @@ description: Learn how to run T-SQL queries all from within the browser via the 
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: ivujic, mathoma
-ms.date: 04/15/2024
-ms.service: sql-database
+ms.date: 08/01/2024
+ms.service: azure-sql-database
 ms.subservice: development
 ms.topic: conceptual
+ms.collection: ce-skilling-ai-copilot
 ms.custom:
   - sqldbrb=1
   - mode-ui

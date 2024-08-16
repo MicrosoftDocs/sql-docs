@@ -2,7 +2,7 @@
 title: Programming guidelines
 description: The programming features of the ODBC Driver for SQL Server on macOS and Linux contain some differences from the Windows versions.
 author: David-Engel
-ms.author: v-davidengel
+ms.author: davidengel
 ms.date: 02/17/2022
 ms.service: sql
 ms.subservice: connectivity

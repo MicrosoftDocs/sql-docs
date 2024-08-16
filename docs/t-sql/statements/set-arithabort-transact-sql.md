@@ -3,7 +3,7 @@ title: "SET ARITHABORT (Transact-SQL)"
 description: SET ARITHABORT (Transact-SQL)
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: "12/04/2017"
+ms.date: 07/03/2024
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -32,60 +32,63 @@ Ends a query when an overflow or divide-by-zero error occurs during query execut
   
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
-## Syntax  
+## Syntax
 
-### Syntax for [!INCLUDE[ssnoversion-md.md](../../includes/ssnoversion-md.md)], [!INCLUDE[sssodfull-md.md](../../includes/sssodfull-md.md)], [!INCLUDE [fabric](../../includes/fabric.md)]
+### Syntax for [!INCLUDE [ssnoversion-md.md](../../includes/ssnoversion-md.md)], [!INCLUDE [sssodfull-md.md](../../includes/sssodfull-md.md)], [!INCLUDE [fabric](../../includes/fabric.md)]
 ```syntaxsql
 SET ARITHABORT { ON | OFF }
 ```
 
-### Syntax for [!INCLUDE[ssazuresynapse-md.md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[sspdw-md.md](../../includes/sspdw-md.md)]
+### Syntax for [!INCLUDE [ssazuresynapse-md.md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE [sspdw-md.md](../../includes/sspdw-md.md)]
 ```syntaxsql
 SET ARITHABORT ON
 ```
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+[!INCLUDE [sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## Remarks
 Always set ARITHABORT to ON in your logon sessions. Setting ARITHABORT to OFF can negatively impact query optimization, leading to performance issues.  
   
 > [!WARNING]  
->  The default ARITHABORT setting for [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] is ON. Client applications setting ARITHABORT to OFF might receive different query plans, making it difficult to troubleshoot poorly performing queries. That is, the same query might execute fast in management studio but slow in the application. When troubleshooting queries with [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], always match the client ARITHABORT setting.  
+> The default ARITHABORT setting for [!INCLUDE [ssManStudioFull](../../includes/ssmanstudiofull-md.md)] is ON. Client applications setting ARITHABORT to OFF might receive different query plans, making it difficult to troubleshoot poorly performing queries. That is, the same query might execute fast in management studio but slow in the application. When troubleshooting queries with [!INCLUDE [ssManStudio](../../includes/ssmanstudio-md.md)], always match the client ARITHABORT setting.  
   
 When SET ARITHABORT and SET ANSI WARNINGS are ON, these error conditions cause the query to end.  
   
-When SET ARITHABORT is ON and SET ANSI WARNINGS is OFF, these error conditions cause the batch to end. If the errors occur in a transaction, the transaction is rolled back. When SET ARITHABORT is OFF and one of these errors occurs, a warning message appears and the result of the arithmetic operation is NULL.  
+When SET ARITHABORT is ON and SET ANSI WARNINGS is OFF, these error conditions cause the batch to end. If the errors occur in a transaction, the transaction is rolled back. When SET ARITHABORT is OFF and one of these errors occurs, a warning message appears and the result of the arithmetic operation is `NULL`.  
   
-If SET ARITHABORT and SET ANSI WARNINGS are OFF and one of these errors occurs, a warning message appears, and the result of the arithmetic operation is NULL.  
+If SET ARITHABORT and SET ANSI WARNINGS are OFF and one of these errors occurs, a warning message appears, and the result of the arithmetic operation is `NULL`.  
   
 > [!NOTE]  
->  If neither SET ARITHABORT nor SET ARITHIGNORE is ON, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] returns NULL and a warning message appears after the query runs.  
-  
+> If neither SET ARITHABORT nor SET ARITHIGNORE is ON, [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] returns `NULL` and a warning message appears after the query runs.
+
 When ANSI_WARNINGS has a value of ON and the database compatibility level is set to 90 or higher then ARITHABORT is implicitly ON regardless of its value setting. If the database compatibility level is set to 80 or earlier, the ARITHABORT option must be explicitly set to ON.  
   
-For expression evaluation, if SET ARITHABORT is OFF and an INSERT, UPDATE, or DELETE statement comes across an arithmetic, overflow, divide-by-zero, or domain error, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inserts or updates a NULL value. If the target column isn't nullable, the insert or update action fails and the user sees an error.  
+For expression evaluation, if SET ARITHABORT is OFF and an INSERT, UPDATE, or DELETE statement comes across an arithmetic, overflow, divide-by-zero, or domain error, [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] inserts or updates a `NULL` value. If the target column isn't nullable, the insert or update action fails and the user sees an error.  
   
-When either SET ARITHABORT or SET ARITHIGNORE is OFF and SET ANSI_WARNINGS is ON, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] still returns an error message when encountering divide-by-zero or overflow errors.  
+When either SET ARITHABORT or SET ARITHIGNORE is OFF and SET ANSI_WARNINGS is ON, [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] still returns an error message when encountering divide-by-zero or overflow errors.  
   
 When SET ARITHABORT is OFF and an abort error occurs during the evaluation of the Boolean condition of an IF statement, the FALSE branch executes.
   
 SET ARITHABORT must be ON when you're creating or changing indexes on computed columns or indexed views. If SET ARITHABORT is OFF, CREATE, UPDATE, INSERT, and DELETE statements on tables with indexes on computed columns or indexed views fail.
   
 The setting of SET ARITHABORT happens at execute or run time and not at parse time.  
-  
+
+SET ARITHABORT OFF is not supported in Azure Synapse Analytics dedicated SQL pools.
+
 To view the current setting for SET ARITHABORT, run the following query:
   
 ```sql  
 DECLARE @ARITHABORT VARCHAR(3) = 'OFF';  
 IF ( (64 & @@OPTIONS) = 64 ) SET @ARITHABORT = 'ON';  
 SELECT @ARITHABORT AS ARITHABORT;  
+```
   
-```  
-  
-## Permissions  
+## Permissions
+
 Requires membership in the **public** role.  
   
-## Examples  
+## Examples
+
 The following example demonstrates the divide-by-zero and overflow errors that have `SET ARITHABORT` settings.  
   
 ```sql  
@@ -181,9 +184,8 @@ DROP TABLE t2;
 GO  
 ```  
   
-## See Also  
- [SET Statements &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
- [SET ARITHIGNORE &#40;Transact-SQL&#41;](../../t-sql/statements/set-arithignore-transact-sql.md)   
- [SESSIONPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/sessionproperty-transact-sql.md)  
-  
-  
+## Related content
+
+- [SET Statements (Transact-SQL)](../../t-sql/statements/set-statements-transact-sql.md)
+- [SET ARITHIGNORE (Transact-SQL)](../../t-sql/statements/set-arithignore-transact-sql.md)
+- [SESSIONPROPERTY (Transact-SQL)](../../t-sql/functions/sessionproperty-transact-sql.md)

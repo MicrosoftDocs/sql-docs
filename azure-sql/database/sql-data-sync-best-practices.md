@@ -5,7 +5,7 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma, hudequei 
 ms.date: 07/10/2023
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.subservice: sql-data-sync
 ms.topic: conceptual
 ms.custom: sqldbrb=1
@@ -17,9 +17,6 @@ ms.custom: sqldbrb=1
 This article describes best practices for Azure SQL Data Sync.
 
 For an overview of SQL Data Sync, see [Sync data across multiple cloud and on-premises databases with Azure SQL Data Sync](sql-data-sync-data-sql-server-sql-database.md).
-
-> [!IMPORTANT]
-> Azure SQL Data Sync does **not** support Azure SQL Managed Instance or Azure Synapse Analytics at this time.
 
 ## <a name="security-and-reliability"></a> Security and reliability
 

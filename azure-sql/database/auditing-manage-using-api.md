@@ -1,12 +1,12 @@
 ---
-title: Manage Azure SQL Database Auditing using APIs
+title: Manage auditing using APIs
 titleSuffix: Azure SQL Database & Azure Synapse Analytics
 description: Use Azure SQL Database auditing to track database events into an audit log.
 author: sravanisaluru
 ms.author: srsaluru
 ms.reviewer: mathoma
 ms.date: 04/26/2023
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.subservice: security
 ms.custom: devx-track-azurepowershell
 ms.topic: conceptual

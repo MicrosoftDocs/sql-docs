@@ -4,7 +4,7 @@ description: sp_help_proxy lists information for one or more proxies.
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 05/14/2024
+ms.date: 07/16/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -39,11 +39,11 @@ sp_help_proxy
 
 #### [ @proxy_id = ] *proxy_id*
 
-The proxy identification number of the proxy to list information for. *@proxy_id* is **int**, with a default of `NULL`. Either the *@proxy_id* or the *@proxy_name* might be specified.
+The proxy identification number of the proxy to list information for. *@proxy_id* is **int**, with a default of `NULL`. Either the *@proxy_id* or the *@proxy_name* can be specified.
 
 #### [ @proxy_name = ] N'*proxy_name*'
 
-The name of the proxy to list information for. *@proxy_name* is **sysname**, with a default of `NULL`. Either the *@proxy_id* or the *@proxy_name* might be specified.
+The name of the proxy to list information for. *@proxy_name* is **sysname**, with a default of `NULL`. Either the *@proxy_id* or the *@proxy_name* can be specified.
 
 #### [ @subsystem_name = ] N'*subsystem_name*'
 
@@ -54,7 +54,7 @@ The following table lists the values for each subsystem.
 | Value | Description |
 | --- | --- |
 | `ActiveScripting` | ActiveX script |
-| `CmdExec` | Operating System (**CmdExec**) |
+| `CmdExec` | Operating System (`CmdExec`) |
 | `Snapshot` | Replication Snapshot Agent |
 | `LogReader` | Replication Log Reader Agent |
 | `Distribution` | Replication Distribution Agent |
@@ -80,11 +80,11 @@ The name of a [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] login t
 | `proxy_id` | **int** | Proxy identification number. |
 | `name` | **sysname** | The name of the proxy. |
 | `credential_identity` | **sysname** | The Microsoft Windows domain name and user name for the credential associated with the proxy. |
-| `enabled` | **tinyint** | Whether this proxy is enabled. `0` = not enabled, `1` = enabled. |
+| `enabled` | **tinyint** | Specifies whether this proxy is enabled. `0` = not enabled, `1` = enabled. |
 | `description` | **nvarchar(1024)** | The description for this proxy. |
-| `user_sid` | **varbinary(85)** | The Windows security id of the Windows user for this proxy. |
+| `user_sid` | **varbinary(85)** | The Windows security ID of the Windows user for this proxy. |
 | `credential_id` | **int** | The identifier for the credential associated with this proxy. |
-| `credential_identity_exists` | **int** | Whether the credential_identity exists. `0` = doesn't exist, `1` = exists. |
+| `credential_identity_exists` | **int** | Specifies whether the `credential_identity` exists. `0` = doesn't exist, `1` = exists. |
 
 ## Remarks
 

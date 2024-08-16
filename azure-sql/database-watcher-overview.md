@@ -5,7 +5,7 @@ description: An overview of database watcher for Azure SQL, a managed monitoring
 author: dimitri-furman
 ms.author: dfurman
 ms.reviewer: wiassaf
-ms.date: 8/13/2024
+ms.date: 8/16/2024
 ms.service: azure-sql
 ms.subservice: monitoring
 ms.topic: conceptual
@@ -225,6 +225,7 @@ During preview, database watcher has the following known issues.
 | Because of a known issue in Azure SQL Database, you cannot create [database copies](./database/database-copy.md#copy-using-transact-sql) and [geo-replicas](./database/active-geo-replication-overview.md#programmatically-managing-active-geo-replication) via T-SQL when a login is added to a [server role](./database/security-server-roles.md). Because database watcher logins must be [added to a set of server roles](#watcher-authorization), creation of database copies and geo-replicas via T-SQL stops working if you enable database watcher. | To create database copies or geo-replicas via T-SQL, remove the database watcher login from the `##MS_ServerPerformanceStateReader##`, `##MS_DefinitionReader##`, and `##MS_DatabaseConnector##` server roles. To restore database watcher functionality once a database copy completes or once a geo-replica is created, add the login to these server roles again to [grant the watcher access](database-watcher-manage.md#grant-access-to-sql-targets) to SQL targets.</br></br>Database copies and geo-replicas created in the Azure portal or programmatically via PowerShell, Azure CLI, and REST API are not affected. |
 | In Azure SQL Managed Instance, data is not collected if the `EXECUTE` permission on the `sys.xp_msver` system stored procedure is revoked or denied to the `public` role. | Grant the `EXECUTE` permission on `sys.xp_msver` to the database watcher login.</br></br>On every SQL managed instance added as a database watcher target, execute `USE master; CREATE USER [database-watcher-login-placeholder] FOR LOGIN [database-watcher-login-placeholder]; GRANT EXECUTE ON sys.xp_msver TO [database-watcher-login-placeholder];`, replacing `database-watcher-login-placeholder` with the name of the watcher login. |
 | If you create a managed private endpoint for a watcher to connect to a SQL managed instance that is stopped, the provisioning state of the private endpoint is reported as **Failed**, and the watcher cannot connect to the instance. | Delete the managed private endpoint with the **Failed** provisioning state and [start](./managed-instance/instance-stop-start-how-to.md) the SQL managed instance. Once the failed private endpoint is deleted and the instance is running, [re-create](database-watcher-manage.md#create-a-managed-private-endpoint) the managed private endpoint. |
+| Database watcher deployments via Bicep or ARM templates aren't idempotent. If a watcher, SQL target, or a managed private endpoint already exists, deployment fails. | Use conditional deployment to skip deploying existing resources. For more information, see [Conditional deployments in Bicep with the if expression](/azure/azure-resource-manager/bicep/conditional-resource-deployment) and [Conditional deployment in ARM templates](/azure/azure-resource-manager/templates/conditional-resource-deployment). |
 
 ## Troubleshoot
 

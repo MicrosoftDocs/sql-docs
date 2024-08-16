@@ -104,7 +104,7 @@ landingContent:
     linkLists:
       - linkListType: overview
         links: 
-          - text: Intelligent Insights using AI
+          - text: Intelligent Insights
             url: intelligent-insights-overview.md
       - linkListType: concept
         links:

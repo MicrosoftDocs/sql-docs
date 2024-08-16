@@ -5,7 +5,7 @@ description: This article compares the database engine features of Azure SQL Dat
 author: danimir
 ms.author: danil
 ms.reviewer: wiassaf, bonova, mathoma, danil
-ms.date: 04/30/2024
+ms.date: 08/16/2024
 ms.service: azure-sql
 ms.subservice: service-overview
 ms.custom:
@@ -155,7 +155,7 @@ The Azure platform provides a number of PaaS capabilities that are added as an a
 | **Resource pools** | Yes, as [Elastic pools](elastic-pool-overview.md?view=azuresql-db&preserve-view=true) | Yes. A single instance of SQL Managed Instance can have multiple databases that share the same pool of resources. In addition, you can deploy [multiple instances of SQL Managed Instance in instance pools](../managed-instance/instance-pools-overview.md?view=azuresql-mi&preserve-view=true) (preview) that can share the resources. |
 | **Scaling up or down (online)**| Yes, you can either change DTU or reserved vCores or max storage with the minimal downtime. | Yes, you can change reserved vCores or max storage with the minimal downtime. |
 | [SQL Alias](/sql/database-engine/configure-windows/create-or-delete-a-server-alias-for-use-by-a-client) | No, use [DNS Alias](dns-alias-overview.md?view=azuresql-db&preserve-view=true) | No, use [Cliconfg](https://techcommunity.microsoft.com/t5/Azure-Database-Support-Blog/Lesson-Learned-33-How-to-make-quot-cliconfg-quot-to-work-with/ba-p/369022) to set up alias on the client machines. |
-| [SQL Analytics](/azure/azure-monitor/insights/azure-sql) | Yes | Yes |
+| [Database watcher](../database-watcher-overview.md) | Yes | Yes |
 | **SQL Data Sync**| Yes, see [SQL Data Sync](sql-data-sync-sql-server-configure.md?view=azuresql-db&preserve-view=true)  | No, use [transactional replication](../managed-instance/replication-transactional-overview.md?view=azuresql-mi&preserve-view=true).  |
 | [SQL Server Analysis Services (SSAS)](/sql/analysis-services/analysis-services) | No, [Azure Analysis Services](https://azure.microsoft.com/services/analysis-services/) is a separate Azure cloud service. | No, [Azure Analysis Services](https://azure.microsoft.com/services/analysis-services/) is a separate Azure cloud service. |
 | [SQL Server Integration Services (SSIS)](/sql/integration-services/sql-server-integration-services) | Yes, with a managed SSIS in Azure Data Factory (ADF) environment, where packages are stored in SSISDB hosted by Azure SQL Database and executed on Azure SSIS Integration Runtime (IR), see [Create Azure-SSIS IR in ADF](/azure/data-factory/create-azure-ssis-integration-runtime). <br/><br/>To compare the SSIS features in SQL Database and SQL Managed Instance, see [Compare SQL Database to SQL Managed Instance](/azure/data-factory/create-azure-ssis-integration-runtime#comparison-of-sql-database-and-sql-managed-instance). | Yes, with a managed SSIS in Azure Data Factory (ADF) environment, where packages are stored in SSISDB hosted by SQL Managed Instance and executed on Azure SSIS Integration Runtime (IR), see [Create Azure-SSIS IR in ADF](/azure/data-factory/create-azure-ssis-integration-runtime). <br/><br/>To compare the SSIS features in SQL Database and SQL Managed Instance, see [Compare SQL Database to SQL Managed Instance](/azure/data-factory/create-azure-ssis-integration-runtime#comparison-of-sql-database-and-sql-managed-instance). |

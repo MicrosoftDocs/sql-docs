@@ -5,7 +5,7 @@ description: An overview of Azure SQL database-specific articles on blocking and
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: wiassaf, mathoma
-ms.date: 02/07/2023
+ms.date: 08/16/2024
 ms.service: azure-sql-database
 ms.subservice: performance
 ms.topic: conceptual
@@ -452,7 +452,6 @@ The Waittype, Open_Tran, and Status columns refer to information returned by [sy
 * [Transaction Locking and Row Versioning Guide](/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide)
 * [SET TRANSACTION ISOLATION LEVEL](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql)
 * [Quickstart: Extended events in SQL Server](/sql/relational-databases/extended-events/quick-start-extended-events-in-sql-server)
-* [Intelligent Insights using AI to monitor and troubleshoot database performance](intelligent-insights-overview.md)
 * [Azure SQL Database: improving performance tuning with automatic tuning](/Shows/Data-Exposed/Azure-SQL-Database-Improving-Performance-Tuning-with-Automatic-Tuning)
 * [Deliver consistent performance with Azure SQL](/training/modules/azure-sql-performance/)
 * [Troubleshooting connectivity issues and other errors with Azure SQL Database and Azure SQL Managed Instance](troubleshoot-common-errors-issues.md)

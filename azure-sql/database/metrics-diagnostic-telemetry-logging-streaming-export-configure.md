@@ -5,7 +5,7 @@ description: Learn how to configure streaming export of metrics and resource log
 author: dimitri-furman
 ms.author: dfurman
 ms.reviewer: wiassaf, mathoma
-ms.date: 05/28/2024
+ms.date: 08/16/2024
 ms.service: azure-sql
 ms.subservice: performance
 ms.topic: how-to
@@ -25,9 +25,7 @@ You will also learn about the destinations to which you can stream this diagnost
 
 ## Diagnostic telemetry for export
 
-Most important among the diagnostic telemetry that you can export is the Intelligent Insights (SQLInsights) log (unrelated to [Azure Monitor SQL Insights (preview)](../../azure-sql/database/monitoring-sql-database-azure-monitor.md)). [Intelligent Insights](intelligent-insights-overview.md) uses built-in intelligence to continuously monitor database usage through artificial intelligence and detect disruptive events that cause poor performance. Once detected, a detailed analysis is performed that generates an Intelligent Insights log with an intelligent assessment of the issue. This assessment consists of a root cause analysis of the database performance issue and, where possible, recommendations for performance improvements. You need to configure the streaming export of this log to view its contents.
-
-In addition to streaming the export of the Intelligent Insights log, you can also export various performance metrics and additional database logs. The following table describes the performance metrics and resources logs that you can configure for streaming export to one of several destinations. This diagnostic telemetry can be configured for single databases, elastic pools and pooled databases, and managed instances and instance databases.
+Yyou can export various performance metrics and additional database logs. The following table describes the performance metrics and resources logs that you can configure for streaming export to one of several destinations. This diagnostic telemetry can be configured for single databases, elastic pools and pooled databases, and managed instances and instance databases.
 
 | Diagnostic telemetry for databases | Azure SQL Database support | Azure SQL Managed Instance support |
 | :--- | --- | --- |
@@ -200,7 +198,7 @@ You can set up an instance database resource to collect the following diagnostic
 
 | Resource | Monitoring telemetry |
 | :--- | --- |
-| **Instance database** | [Query Store Runtime Statistics](#query-store-runtime-statistics) and [Query Store Wait Statistics](#query-store-wait-statistics) contain [Query Store](/sql/relational-databases/performance/monitoring-performance-by-using-the-query-store) data for the database. [SQL Insights](intelligent-insights-use-diagnostics-log.md) contains Intelligent Insights data for the database. [Errors](#errors-dataset) contains the errors data for this database. |
+| **Instance database** | [Query Store Runtime Statistics](#query-store-runtime-statistics) and [Query Store Wait Statistics](#query-store-wait-statistics) contain [Query Store](/sql/relational-databases/performance/monitoring-performance-by-using-the-query-store) data for the database. [SQLInsights](intelligent-insights-use-diagnostics-log.md) contains Intelligent Insights data for the database. [Errors](#errors-dataset) contains the errors data for this database. |
 
 To enable streaming of diagnostic telemetry for an instance database, follow these steps:
 

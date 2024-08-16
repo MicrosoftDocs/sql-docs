@@ -4,7 +4,7 @@ description: This article describes how to troubleshoot Hyperscale performance p
 author: denzilribeiro
 ms.author: denzilr
 ms.reviewer: wiassaf, mathoma
-ms.date: 03/13/2023
+ms.date: 08/16/2024
 ms.service: azure-sql-database
 ms.subservice: performance
 ms.topic: troubleshooting
@@ -104,7 +104,7 @@ Data IO against remote page servers is not reported in resource utilization view
 ## Additional resources
 
 - For vCore resource limits for a Hyperscale single database see [Hyperscale service tier vCore Limits](resource-limits-vcore-single-databases.md#hyperscale---provisioned-compute---gen5)
-- For monitoring Azure SQL Databases, enable [Azure Monitor SQL Insights (preview)](/azure/azure-monitor/insights/sql-insights-overview)
+- For monitoring Azure SQL Databases, enable [database watcher](../database-watcher-overview.md)
 - For Azure SQL Database performance tuning, see [Query performance in Azure SQL Database](performance-guidance.md)
 - For performance tuning using Query Store, see [Performance monitoring using Query store](/sql/relational-databases/performance/monitoring-performance-by-using-the-query-store/)
 - For DMV monitoring scripts, see [Monitoring performance Azure SQL Database using dynamic management views](monitoring-with-dmvs.md)

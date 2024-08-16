@@ -5,7 +5,7 @@ description: Learn how to manage your single and pooled databases after migratio
 author: croblesm
 ms.author: roblescarlos
 ms.reviewer: wiassaf, mathoma
-ms.date: 02/13/2019
+ms.date: 08/16/2024
 ms.service: azure-sql-database
 ms.subservice: migration
 ms.topic: conceptual
@@ -260,7 +260,20 @@ You can also view this analysis under the "Advisor" section:
 
 ### How do I monitor the performance and resource utilization in SQL Database
 
-In SQL Database you can leverage the intelligent insights of the platform to monitor the performance and tune accordingly. You can monitor performance and resource utilization in SQL Database using the following methods:
+You can monitor performance and resource utilization in SQL Database using the following methods:
+
+#### Database watcher
+
+Database watcher collects in-depth workload monitoring data to give you a detailed view of database performance, configuration, and health. Dashboards in the Azure portal provide a single-pane-of-glass view of your Azure SQL estate and a detailed view of each monitored resource. Data is collected into a central data store in your Azure subscription. You can query, analyze, export, visualize collected data and integrate it with downstream systems.
+
+For more information about database watcher, see the following articles:
+
+- [Monitor Azure SQL workloads with database watcher (preview)](../database-watcher-overview.md)
+- [Quickstart: Create a database watcher to monitor Azure SQL (preview)](../database-watcher-quickstart.md)
+- [Create and configure a database watcher (preview)](../database-watcher-manage.md)
+- [Database watcher data collection and datasets (preview)](../database-watcher-data.md)
+- [Analyze database watcher monitoring data (preview)](../database-watcher-analyze.md)
+- [Database watcher FAQ](../database-watcher-faq.yml)
 
 #### Azure portal
 
@@ -276,15 +289,11 @@ From this chart, you can also configure alerts by resource. These alerts allow y
 
 You can query the [sys.dm_db_resource_stats](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database) dynamic management view to return resource consumption statistics history from the last hour and the [sys.resource_stats](/sql/relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database) system catalog view to return history for the last 14 days.
 
-#### Query Performance Insight
+#### Query performance insight
 
-[Query Performance Insight](query-performance-insight-use.md) allows you to see a history of the top resource-consuming queries and long-running queries for a specific database. You can quickly identify TOP queries by resource utilization, duration, and frequency of execution. You can track queries and detect regression. This feature requires [Query Store](/sql/relational-databases/performance/monitoring-performance-by-using-the-query-store) to be enabled and active for the database.
+[Query performance insight](query-performance-insight-use.md) allows you to see a history of the top resource-consuming queries and long-running queries for a specific database. You can quickly identify TOP queries by resource utilization, duration, and frequency of execution. You can track queries and detect regression. This feature requires [Query Store](/sql/relational-databases/performance/monitoring-performance-by-using-the-query-store) to be enabled and active for the database.
 
-![Query Performance Insight](./media/manage-data-after-migrating-to-database/query-performance-insight.png)
-
-#### Azure SQL Analytics (Preview) in Azure Monitor logs
-
-[Azure Monitor logs](/azure/azure-monitor/insights/azure-sql) allows you to collect and visualize key Azure SQL Database performance metrics, supporting up to 150,000 databases and 5,000 SQL Elastic pools per workspace. You can use it to monitor and receive notifications. You can monitor SQL Database and elastic pool metrics across multiple Azure subscriptions and elastic pools and can be used to identify issues at each layer of an application stack.
+![Query performance insight](./media/manage-data-after-migrating-to-database/query-performance-insight.png)
 
 ### I am noticing performance issues: How does my SQL Database troubleshooting methodology differ from SQL Server
 

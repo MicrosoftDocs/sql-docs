@@ -5,7 +5,7 @@ description: Learn how to create instance pools (preview) for Azure SQL Managed 
 author: MariDjo
 ms.author: dmarinkovic
 ms.reviewer: mathoma, randolphwest
-ms.date: 05/22/2024
+ms.date: 08/16/2024
 ms.service: azure-sql-managed-instance
 ms.subservice: deployment-configuration
 ms.topic: how-to
@@ -577,5 +577,5 @@ To create larger SQL Managed Instance deployments (with or without instance pool
 - [SQL Managed Instance virtual network configuration](connectivity-architecture-overview.md)
 - [Create a managed instance quickstart](instance-create-quickstart.md)
 - [SQL Managed Instance migration using Database Migration Service](/azure/dms/tutorial-sql-server-to-managed-instance)
-- [Monitor Azure SQL Managed Instance using Azure SQL Analytics](/azure/azure-monitor/insights/azure-sql)
+- [Monitor Azure SQL Managed Instance using database watcher](../database-watcher-overview.md)
 - [SQL Managed Instance pricing](https://azure.microsoft.com/pricing/details/sql-database/managed/)

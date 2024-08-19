@@ -4,7 +4,7 @@ description: Learn how to monitor SQL Server transaction log size, shrink the lo
 author: "MashaMSFT"
 ms.author: "mathoma"
 ms.reviewer: wiassaf, maghan
-ms.date: 08/19/2024
+ms.date: 08/19/2024 
 ms.service: sql
 ms.subservice: supportability
 ms.topic: conceptual

@@ -234,7 +234,12 @@ sections:
           Is Microsoft Entra Domain Services supported with SQL Server on Azure VMs? 
         answer: |
              No. Using Microsoft Entra Domain Services isn't currently supported with SQL Server on Azure VMs. Use an Active Directory domain account instead. 
-          
+
+      - question: |
+          Are SQL Server on Azure VMs FIPS compliant? 
+        answer: |
+             To be [FIPS compliant](security-considerations-best-practices.md#fips-compliance) with SQL Server on Azure VMs, you should be on Windows Server 2022, which has FIPS enabled by default. Windows Server 2019 can also be FIPS compliant if FIPS is manually enabled using the policy specified in Security Technical Implementation Guide (STIG) finding V-93511. 
+
   - name: Updating and patching
     questions:
       - question: |

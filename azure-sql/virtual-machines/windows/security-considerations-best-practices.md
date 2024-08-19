@@ -197,9 +197,15 @@ Azure Virtual Machine extensions are trusted Microsoft or 3rd party extensions t
     - This agent enables advanced network protection features such as traffic visualization on the network map, network hardening recommendations, and specific network threats.
 - [Evaluate extensions](/azure/virtual-machines/extensions/overview) from Microsoft and 3rd parties to address anti-malware, desired state, threat detection, prevention, and remediation to address threats at the operating system, machine, and network levels.
 
+## FIPS compliance
 
+[FIPS](/azure/compliance/offerings/offering-fips-140-2) is a US government standard that defines minimum security requirements for cryptographic modules in information technology products and systems. SQL Server is capable of being FIPS compliant in [SQL Server 2016 and later](/troubleshoot/sql/database-engine/security/sql-2016-fips-140-2-compliant-mode) or [SQL Server 2014](/troubleshoot/sql/database-engine/security/sql-2014-fips-140-2-compliant-mode) with [Extended Security Updates](/sql/sql-server/end-of-support/sql-server-extended-security-updates). 
 
-## Next steps
+To be FIPS compliant with SQL Server on Azure VMs, you should be on Windows Server 2022, which has FIPS enabled by default. Windows Server 2019 can also be FIPS compliant if FIPS is manually enabled using the policy specified in Security Technical Implementation Guide (STIG) finding V-93511.  
+
+SQL Server is not currently FIPS compliant on Linux Azure VMs. 
+
+## Related content
 
 Review the security best practices for [SQL Server](/sql/relational-databases/security/) and [Azure VMs](/azure/virtual-machines/security-recommendations) and then review this article for the best practices that apply to SQL Server on Azure VMs specifically. 
 

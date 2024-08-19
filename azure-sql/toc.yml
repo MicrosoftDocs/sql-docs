@@ -1822,6 +1822,11 @@
             - name: DNN interoperability
               href: virtual-machines/windows/failover-cluster-instance-dnn-interoperability.md
 
+    - name: Scripts
+      items: 
+      - name: Create SQL Server VM with PowerShell
+        href: virtual-machines/scripts/create-sql-vm-powershell.md
+
     - name: Reference
       items:
       - name: Azure PowerShell

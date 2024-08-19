@@ -207,6 +207,8 @@ destMiName="<target_managed_instance_name>"
 destRgName="<target_resource_group_name>"
 destSubId="<destination_subscription_id>"
 
+az account set --subscription $subId
+
 az sql midb move start --name $dbName --resource-group $rgName --managed-instance $miName --dest-rg $destRgName --dest-mi $destMiName --dest-sub-id $destSubId
 
 az sql midb move list --name $dbName --resource-group $rgName --managed-instance $miName

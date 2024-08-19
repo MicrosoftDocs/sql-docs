@@ -3,7 +3,7 @@ title: SQL Server Data Tools
 description: View resources on database development tasks that you can accomplish with SQL Server Data Tools, such as designing tables and creating feature extensions.
 author: markingmyname
 ms.author: maghan
-ms.date: 09/08/2023
+ms.date: 08/19/2024
 ms.service: sql
 ms.subservice: ssdt
 ms.topic: conceptual
@@ -14,9 +14,9 @@ f1_keywords:
 
 # SQL Server Data Tools
 
-**SQL Server Data Tools (SSDT)** is a set of development tooling for building SQL Server databases, Azure SQL databases, Analysis Services (AS) data models, Integration Services (IS) packages, and Reporting Services (RS) reports. With SSDT, you can design and deploy SQL objects with the same project concept as other application development tools.  The **SQL projects** capability extends to CI/CD pipelines, enabling you to automate the build and deployment of your database projects with the [SqlPackage CLI](../tools/sqlpackage/sqlpackage.md).
+**SQL Server Data Tools (SSDT)** is a set of development tools for building SQL Server databases, Azure SQL databases, Analysis Services (AS) data models, Integration Services (IS) packages, and Reporting Services (RS) reports. SSDT allows you to design and deploy SQL objects with the same project concept as other application development tools. The **SQL projects** capability extends to CI/CD pipelines, enabling you to automate the build and deployment of your database projects with the [SqlPackage CLI](../tools/sqlpackage/sqlpackage.md).
 
-The core of SQL Server Data Tools functionality is available as a workload component with Visual Studio, which enables developing databases.  Additional functionality for developing AS, IS, and RS projects is available as Visual Studio extensions for installation in addition to the SSDT workload. The Visual Studio extensions are available from the Visual Studio Marketplace and more information on installing SSDT can be found in [Download SQL Server Data Tools](download-sql-server-data-tools-ssdt.md).
+The core of SQL Server Data Tools functionality is available as a workload component with Visual Studio, enabling database development. Additional functionality for developing AS, IS, and RS projects is available as Visual Studio extensions for installation in addition to the SSDT workload. The Visual Studio extensions are available from the Visual Studio Marketplace and more information on installing SSDT can be found in [Download SQL Server Data Tools](download-sql-server-data-tools-ssdt.md).
 
 ## Release notes
 
@@ -38,22 +38,22 @@ For information about SQL Server Data Tools with Visual Studio 2017, see [Previo
 
 ## Core SQL Server Data Tools
 
-SQL Server Data Tools (SSDT) transforms database development by introducing a ubiquitous, declarative model (SQL database projects) that spans all the phases of database development inside Visual Studio. You can use SSDT Transact-SQL design capabilities to build, debug, maintain, and refactor databases. You can work with a database project or directly connect to a database instance on or off-premises.
+SQL Server Data Tools (SSDT) transforms database development by introducing a ubiquitous, declarative model (SQL database projects) that spans all the phases of database development inside Visual Studio. SSDT Transact-SQL design capabilities can be used to build, debug, maintain, and refactor databases. You can work with a database project or directly connect to a database instance on or off-premises.
 
-Developers can use familiar Visual Studio tools for database development. Tools such as: code navigation, IntelliSense, language support that parallels what is available for C# and Visual Basic, platform-specific validation, debugging, and declarative editing in the Transact-SQL editor. SSDT also provides a visual Table Designer for creating and editing tables in either database projects or connected database instances. While you are working on your database projects in a team-based environment, you can use version control for all the files. When it's time to publish your project, you can publish to all supported SQL platforms; including SQL Database and SQL Server. SSDT platform validation capability ensures that your scripts work on the target you specify.
+Developers can use familiar Visual Studio tools for database development. Tools such as code navigation, IntelliSense, and language support parallel what is available for C# and Visual Basic, as well as platform-specific validation, debugging, and declarative editing in the Transact-SQL editor. SSDT also provides a visual Table Designer for creating and editing tables in either database projects or connected instances. While working on your database projects in a team-based environment, you can use version control for all the files. When it's time to publish your project, you can publish it on all supported SQL platforms, including SQL Database and SQL Server. SSDT platform validation capability ensures that your scripts work on the target you specify.
 
-The SQL Server Object Explorer in Visual Studio offers a view of your database objects similar to SQL Server Management Studio. SQL Server Object Explorer allows you to do light-duty database administration and design work. You can easily create, edit, rename and delete tables, stored procedures, types, and functions. You can also edit table data, compare schemas, or execute queries by using contextual menus right from the SQL Server Object Explorer.
+The SQL Server Object Explorer in Visual Studio offers a view of your database objects like SQL Server Management Studio. SQL Server Object Explorer lets you do light-duty database administration and design work. You can easily create, edit, rename, and delete tables, stored procedures, types, and functions. You can also edit table data, compare schemas, or execute queries using contextual menus from the SQL Server Object Explorer.
 
-The following topics and sections discuss how SSDT can help you do database development. How To topics are included to help guide you through completing tasks for your database project. These tasks, written like a tutorial and completed in order, use Northwind Traders, a fictitious company that imports and exports specialty foods.
+The following topics and sections discuss how SSDT can help you develop a database. How-to topics are included to help guide you through completing tasks for your database project. These tasks, written like a tutorial and completed in order, use Northwind Traders, a fictitious company that imports and exports specialty foods.
 
 | Topics/Section | Description |
 | --- | --- |
 | [Project-Oriented Offline Database Development](../ssdt/project-oriented-offline-database-development.md) | Topics in this section describe SQL Server Data Tools features for authoring, building, debugging and publishing a database project. |
-| [Project-Oriented Database Development using Command-Line Tools](../ssdt/project-oriented-database-development-using-command-line-tools.md) | Topics in this section describe command-line tools which enable a number of project-oriented database development scenarios. |
-| [Compare and Synchronize Data in One or More Tables with Data in a Reference Database](../ssdt/compare-and-synchronize-data-in-tables-with-data-in-reference-database.md) | Discusses how to compare data in a source database and a target database, specify which values should match, and then either update the target to synchronize the databases or export the update script to the Transact-SQL editor or to a file. |
+| [Project-Oriented Database Development using Command-Line Tools](../ssdt/project-oriented-database-development-using-command-line-tools.md) | Topics in this section describe command-line tools that enable several project-oriented database development scenarios. |
+| [Compare and Synchronize Data in One or More Tables with Data in a Reference Database](../ssdt/compare-and-synchronize-data-in-tables-with-data-in-reference-database.md) | Discusses how to compare data in a source database and a target database, specify which values should match, and then either update the target to synchronize the databases or export the update script to the Transact-SQL editor or a file. |
 | [Use Transact-SQL Editor to Edit and Execute Scripts](../ssdt/use-transact-sql-editor-to-edit-and-execute-scripts.md) | Topics in this section describe how to use the Transact-SQL Editor, which provides a rich editing and debugging experience when working with scripts. |
 | [Manage Tables, Relationships, and Fix Errors](../ssdt/manage-tables-relationships-and-fix-errors.md) | Topics in this section describe how to:<br /><br />- Use the Table Designer to design tables and manage table relationships.<br />- Fix common syntax or semantic errors. |
 | [Verifying Database Code by Using SQL Server Unit Tests](../ssdt/verifying-database-code-by-using-sql-server-unit-tests.md) | Discusses how you can use SQL Server unit tests to establish a baseline state for your database and then to verify any subsequent changes that you make to database objects. |
-| [Extending the Database Features](../ssdt/extending-the-database-features.md) | You can create feature extensions that let you extend features such as unit testing, and database code analysis. |
+| [Extending the Database Features](../ssdt/extending-the-database-features.md) | You can create feature extensions that extend features such as unit testing and database code analysis. |
 | [Required Permissions for SQL Server Data Tools](../ssdt/required-permissions-for-sql-server-data-tools.md) | Discusses required access permission to use SQL Server Data Tools. |
 | [DAC Framework Compatibility](../ssdt/dac-framework-compatibility.md) | Describes compatibility issues with DAC framework. |

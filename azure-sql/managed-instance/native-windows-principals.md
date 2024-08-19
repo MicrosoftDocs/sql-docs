@@ -22,7 +22,7 @@ When your environment is synchronized between Active Directory (AD) and Microsof
 The authentication for SQL Managed Instance and SQL Server is based on metadata that are tied to logins. For Windows authentication logins, the metadata is created when the login is created from the `CREATE LOGIN FROM WINDOWS` command. For Microsoft Entra logins, the metadata is created when the login is created from the `CREATE LOGIN FROM EXTERNAL PROVIDER` command. For SQL authentication logins, the metadata is created when the `CREATE LOGIN WITH PASSWORD` command is executed. The authentication process is tightly coupled with the metadata stored in SQL Managed Instance or SQL Server.
 
 For a video explaining native Windows principals, you can also refer to this Data Exposed episode.
-> [!VIDEO https://learn.microsoft.com/shows/data-exposed/native-windows-principals-for-sql-managed-instance-data-exposed/player]
+> [!VIDEO https://learn.microsoft.com/shows/data-exposed/native-windows-principals-for-sql-managed-instance-data-exposed]
 
 > [!NOTE]
 > Using native Windows principals with **Windows** authentication metadata mode in SQL Managed Instance is currently in preview.

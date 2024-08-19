@@ -1,9 +1,9 @@
 ---
 title: "Configure the Report Server Service Account"
-description: Learn how Reporting Services is implemented as a single service that contains a Report Server Web service, web portal, and a background processing application.
+description: Learn how to implement Reporting Services, a single service that contains a Report Server Web service, web portal, and a background processing application.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 08/16/2024
+ms.date: 08/19/2024
 ms.service: reporting-services
 ms.subservice: report-server
 ms.topic: how-to

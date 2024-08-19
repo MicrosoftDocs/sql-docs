@@ -5,7 +5,7 @@ description: Learn how to perform an online move or copy operation of your datab
 author: sasapopo
 ms.author: sasapopo
 ms.reviewer: mathoma, danil, randolphwest, wiassaf
-ms.date: 7/30/2024
+ms.date: 8/19/2024
 ms.service: azure-sql-managed-instance
 ms.subservice: data-movement
 ms.custom: devx-track-azurecli, devx-track-azurepowershell, ignite-2023, build-2024
@@ -165,22 +165,31 @@ Get-AzSqlInstanceDatabaseMoveOperation -DatabaseName $dbName -InstanceName $miNa
 
 ### [CLI](#tab/azure-cli)
 
+> [!NOTE]  
+> For cross-subscription database copy and move operations, use Azure CLI version 2.63.0 or newer. In `az sql midb copy start`, the parameter `--dest-sub-id` is optional and is needed only for cross-subscription copy or move operations.
+
 Use Azure CLI commandlets to start, get, complete, or cancel [database copy](/cli/azure/sql/midb/copy) or [database move](/cli/azure/sql/midb/move) operation.
 
 Here's an example of how you can copy a database.
 
 ```CLI
 dbName="<database_name>"
+
 miName="<source_managed_instance_name>"
 rgName="<source_resource_group_name>"
-tmiName="<target_managed_instance_name>"
-trgName="<target_resource_group_name>"
+subId="<source_subscription_id>"
 
-az sql midb copy start --name $dbName --resource-group $rgName --managed-instance $miName --dest-rg $trgName --dest-mi $tmiName 
+destMiName="<target_managed_instance_name>"
+destRgName="<target_resource_group_name>"
+destSubId="<destination_subscription_id>"
+
+az account set --subscription $subId
+
+az sql midb copy start --name $dbName --resource-group $rgName --managed-instance $miName --dest-rg $destRgName --dest-mi $destMiName --dest-sub-id $destSubId
 
 az sql midb copy list --name $dbName --resource-group $rgName --managed-instance $miName
 
-az sql midb copy complete --name $dbName --resource-group $rgName --managed-instance $miName --dest-rg $trgName --dest-mi $tmiName 
+az sql midb copy complete --name $dbName --resource-group $rgName --managed-instance $miName --dest-rg $destRgName --dest-mi $destMiName --dest-sub-id $destSubId
 
 az sql midb copy list --name $dbName --resource-group $rgName --managed-instance $miName
 ```
@@ -189,16 +198,22 @@ Here's another example of how you can start database move and cancel it.
 
 ```CLI
 dbName="<database_name>"
+
 miName="<source_managed_instance_name>"
 rgName="<source_resource_group_name>"
-tmiName="<target_managed_instance_name>"
-trgName="<target_resource_group_name>"
+subId="<source_subscription_id>"
 
-az sql midb move start --name $dbName --resource-group $rgName --managed-instance $miName --dest-rg $trgName --dest-mi $tmiName 
+destMiName="<target_managed_instance_name>"
+destRgName="<target_resource_group_name>"
+destSubId="<destination_subscription_id>"
+
+az account set --subscription $subId
+
+az sql midb move start --name $dbName --resource-group $rgName --managed-instance $miName --dest-rg $destRgName --dest-mi $destMiName --dest-sub-id $destSubId
 
 az sql midb move list --name $dbName --resource-group $rgName --managed-instance $miName
 
-az sql midb move cancel --name $dbName --resource-group $rgName --managed-instance $miName --dest-rg $trgName --dest-mi $tmiName 
+az sql midb move cancel --name $dbName --resource-group $rgName --managed-instance $miName --dest-rg $destRgName --dest-mi $destMiName --dest-sub-id $destSubId
 
 az sql midb move list --name $dbName --resource-group $rgName --managed-instance $miName
 ```

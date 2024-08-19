@@ -10250,6 +10250,8 @@ items:
       - name: Availability groups
         href: linux/sql-server-linux-availability-group-overview.md
         items:
+        - name: Configure machine key for contained AG
+          href: linux/sql-server-linux-availability-group-prepare-machine-key.md
         - name: High availability
           items:
           - name: Create for high availability

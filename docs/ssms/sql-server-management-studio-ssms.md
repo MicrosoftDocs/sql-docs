@@ -39,7 +39,7 @@ SQL Server Management Studio (SSMS) is an integrated environment for managing an
 | Use the visual design tools included in SSMS to build queries, tables, and diagram databases. | [Visual Database Tools](../ssms/visual-db-tools/visual-database-tools.md) |
 | Use the SSMS language editors to interactively build and debug queries and scripts. | [Query and Text Editors](./f1-help/database-engine-query-editor-sql-server-management-studio.md) |
 
-## SQL Server Management Studio for Business Intelligence
+## SQL Server Management Studio for business intelligence
 
 Use SSMS to access, configure, manage, and administer Analysis Services, Integration Services, and Reporting Services. Although all three business intelligence technologies rely on SSMS, the administrative tasks associated with each are slightly different.
 
@@ -103,7 +103,7 @@ Starting with SSMS 17.0, the SQL Tools team has adopted the [Microsoft Modern Li
 
 Read the original [Modern Lifecycle Policy announcement](https://support.microsoft.com/help/447912/announcing-microsoft-modern-lifecycle-policy). For more information, see [Modern Policy FAQs](https://support.microsoft.com/help/30882/modern-lifecycle-policy-faq).
 
-For diagnostic data collection and feature usage information, see the [SQL Server privacy supplement](../sql-server/sql-server-privacy.md).
+For diagnostic data collection and feature usage information, see the [SQL Server privacy supplement](../sql-server/sql-server-privacy.md) and [diagnostic data collection](sql-server-management-studio-telemetry-ssms.md).
 
 ## Cross-platform tool
 

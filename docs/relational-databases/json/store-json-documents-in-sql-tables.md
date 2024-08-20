@@ -4,7 +4,7 @@ description: "Learn why and how to store and index JSON documents, and how to op
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: umajay 
-ms.date: 08/01/2024
+ms.date: 08/20/2024
 ms.service: sql
 ms.custom:
   - build-2024
@@ -22,7 +22,7 @@ The first storage design decision is how to store JSON documents in the tables. 
 - **LOB storage** - JSON documents can be stored as-is in columns with the data type **json** or **nvarchar**. This is the best way for quick data load and ingestion because the loading speed matches the loading speed of string columns. This approach might introduce an additional performance penalty on query/analysis time if indexing on JSON values is not performed, because the raw JSON documents must be parsed while the queries are running. 
 - **Relational storage** - JSON documents can be parsed while they are inserted in the table using `OPENJSON`, `JSON_VALUE` or `JSON_QUERY` functions. Fragments from the input JSON documents can be stored in the columns containing JSON sub-elements with data types **json** or **nvarchar**. This approach increases the load time because JSON parsing is done during load; however, queries match the performance of classic queries on the relational data.
 
-- Currently, the [JSON data type](../../t-sql/data-types/json-data-type.md) is available in Azure SQL Database.
+- The [JSON data type](../../t-sql/data-types/json-data-type.md) is currently in preview for Azure SQL Database and Azure SQL Managed Instance (configured with the [**Always-up-to-date** update policy](/azure/azure-sql/managed-instance/update-policy#always-up-to-date-update-policy)). 
 - Currently in SQL Server, JSON is not a built-in data type.
 
 ## Classic tables

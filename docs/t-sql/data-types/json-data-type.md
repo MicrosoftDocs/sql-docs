@@ -4,7 +4,7 @@ description: The native JSON data type provides advantages for storing JSON data
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: randolphwest, jovanpop
-ms.date: 05/21/2024
+ms.date: 08/20/2024
 ms.service: sql
 ms.topic: quickstart
 ms.custom:
@@ -12,11 +12,11 @@ ms.custom:
   - build-2024
 helpviewer_keywords:
   - "JSON data type"
-monikerRange: "=azuresqldb-current"
+monikerRange: "=azuresqldb-current || =azuresqldb-mi-current"
 ---
 # JSON data type (preview)
 
-[!INCLUDE [asdb](../../includes/applies-to-version/asdb.md)]
+[!INCLUDE [asdb](../../includes/applies-to-version/asdb-asdbmi.md)]
 
 The new native **json** data type that stores JSON documents in a native binary format.
 
@@ -60,7 +60,7 @@ JSON support was first introduced in [!INCLUDE [sssql16-md](../../includes/sssql
 **json** is available under all database compatibility levels.
 
 > [!NOTE]  
-> Currently, the **json** type is available in preview on Azure SQL Database.
+> The [JSON data type](../../t-sql/data-types/json-data-type.md) is currently in preview for Azure SQL Database and Azure SQL Managed Instance (configured with the [**Always-up-to-date** update policy](/azure/azure-sql/managed-instance/update-policy#always-up-to-date-update-policy)). 
 
 ## Function support
 

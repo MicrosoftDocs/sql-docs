@@ -3,7 +3,7 @@ title: "ADO.NET connection manager"
 description: An ADO.NET connection manager enables a package to access data sources by using a .NET provider.
 author: chugugrace
 ms.author: chugu
-ms.date: "10/13/2023"
+ms.date: "08/19/2024"
 ms.service: sql
 ms.subservice: integration-services
 ms.topic: conceptual
@@ -28,7 +28,7 @@ The `ConnectionManagerType` property of the connection manager is set to `ADO.NE
 [!INCLUDE [entra-id](../../includes/entra-id.md)]
   
 ## ADO.NET connection manager troubleshooting  
-SQLServer 2016-2022 is not supported for Microsoft SQLClient Data Provider. If you need msi authentication method, please use Oledb Connection Manager instead.
+Microsoft.Data.SqlClient driver is not supported in SQL 2022 and below. If you need msi or Microsoft Entra ID-based authentication method, please use Oledb Connection Manager instead.
 
 You can log the calls that the [!INCLUDE[vstecado](../../includes/vstecado-md.md)] connection manager makes to external data providers. You can then troubleshoot the connections that the [!INCLUDE[vstecado](../../includes/vstecado-md.md)] connection manager makes to external data sources. To log the calls that the [!INCLUDE[vstecado](../../includes/vstecado-md.md)] connection manager makes to external data providers, enable package logging, and select the **Diagnostic** event at the package level. For more information, see [Troubleshooting Tools for Package Execution](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md).  
   

@@ -4,7 +4,7 @@ description: The sp_invoke_external_rest_endpoint stored procedure invokes an HT
 author: jettermctedder
 ms.author: bspendolini
 ms.reviewer: randolphwest
-ms.date: 08/28/2023
+ms.date: 08/19/2024
 ms.service: sql
 ms.topic: "reference"
 f1_keywords:
@@ -255,12 +255,12 @@ See 'https://docs.microsoft.com/azure/azure-sql/database/resource-limits-logical
 
 Some REST endpoints require authentication in order to be properly invoked. Authentication can usually be done by passing some specific key-value pairs in the query string or in the HTTP headers set with the request.
 
-It's possible to use DATABASE SCOPED CREDENTIALS to securely store authentication data (like a Bearer token for example) to be used by `sp_invoke_external_rest_endpoint` to call a protected endpoint. When creating the DATABASE SCOPED CREDENTIAL, use the IDENTITY parameter to specify what authentication data will be passed to the invoked endpoint and how. IDENTITY supports three options:
+It's possible to use DATABASE SCOPED CREDENTIALS to securely store authentication data (like a Bearer token for example) to be used by `sp_invoke_external_rest_endpoint` to call a protected endpoint. When creating the DATABASE SCOPED CREDENTIAL, use the IDENTITY parameter to specify what authentication data will be passed to the invoked endpoint and how. IDENTITY supports four options:
 
 - `HTTPEndpointHeaders`: send specified authentication data using the **Request Headers**
 - `HTTPEndpointQueryString`: send specified authentication data using the **Query String**
 - `Managed Identity`: send the System Assigned **Managed Identity** using the request headers
-- `Shared Access Signatures (SAS)`: provide limited delegated access to resources via a **signed URL**
+- `Shared Access Signature`: provide limited delegated access to resources via a **signed URL** (Also referred to as SAS)
 
 the created DATABASE SCOPED CREDENTIAL can be used via the *@credential* parameter:
 

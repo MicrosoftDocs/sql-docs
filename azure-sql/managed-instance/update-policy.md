@@ -5,7 +5,7 @@ description: Use the update policy setting in Azure SQL Managed Instance to cont
 author: MladjoA
 ms.author: mlandzic
 ms.reviewer: mathoma
-ms.date: 05/22/2024
+ms.date: 08/20/2024
 ms.service: azure-sql-managed-instance
 ms.subservice: deployment-configuration
 ms.topic: how-to
@@ -57,9 +57,9 @@ When using the **Always-up-to-date** update policy, consider the following:
 The following table lists all the features that are only available to instances with the designated update policy:
 
 
-|**SQL Server 2022** update policy  |**Always-up-to-date** update policy  |
+|SQL Server 2022 update policy  |Always-up-to-date update policy  |
 |---------|---------|
-|[Restore database to SQL Server 2022](restore-database-to-sql-server.md)  <br /> [Link with bidirectional failover and disaster recovery](managed-instance-link-disaster-recovery.md)   | While currently, there aren't any features that are only available to instances with the **Always-up-to-date** update policy, check back soon. |
+|- [Restore database to SQL Server 2022](restore-database-to-sql-server.md)  <br /> - [Link with bidirectional failover and disaster recovery](managed-instance-link-disaster-recovery.md)   | [JSON data type](/sql/t-sql/data-types/json-data-type) |
 
 
 The following features are impacted by the configured update policy: 

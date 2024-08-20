@@ -4,7 +4,7 @@ description: Use JSON functions to validate or change JSON text, or to extract s
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: jovanpop, randolphwest
-ms.date: 05/15/2024
+ms.date: 08/20/2024
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference

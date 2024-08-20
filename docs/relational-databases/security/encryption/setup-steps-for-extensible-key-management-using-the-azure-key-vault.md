@@ -4,7 +4,7 @@ description: Install and configure the SQL Server Connector for Azure Key Vault.
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: vanto, randolphwest
-ms.date: 04/30/2024
+ms.date: 08/19/2024
 ms.service: sql
 ms.subservice: security
 ms.topic: conceptual
@@ -370,12 +370,26 @@ Id         : https://DocsSampleEKMKeyVault.vault.azure.net:443/
 
 ---
 
+## Optional - Configure an Azure Key Vault Managed HSM (Hardware Security Module)
+
+[Azure Key Vault Managed HSM (Hardware Security Module)](/azure/key-vault/managed-hsm/overview) is supported for SQL Server and SQL Server on Azure Virtual Machines (VMs) when using the latest version of the [SQL Server Connector](use-sql-server-connector-with-sql-encryption-features.md), as well as Azure SQL. Managed HSM is a fully managed, highly available, single-tenant HSM service. Managed HSM provides a secure foundation for cryptographic operations and key storage. Managed HSM is designed to meet the most stringent security and compliance requirements.
+
+In [step 2](#step-2-create-a-key-vault), we learned how to create a key vault and key in Azure Key Vault. You can optionally use an Azure Key Vault Managed HSM to store or create a key to be used with the SQL Server Connector. Here are the steps:
+
+1. Create an Azure Key Vault Managed HSM. This can be done using the Azure portal by searching for the Azure Key Vault Managed HSM service and creating the new resource, or by using [the Azure CLI](/azure/key-vault/managed-hsm/quick-create-cli), [PowerShell](/azure/key-vault/managed-hsm/quick-create-powershell), or an [ARM template](/azure/key-vault/managed-hsm/quick-create-template).
+
+1. Active the Managed HSM. Only the designated administrators that were assigned during the Managed HSM creation can activate the HSM. This can be done by selecting the Managed HSM resource in the Azure portal by selecting **Download Security Domain** in the **Overview** menu of the resource. Then follow one of the [quickstarts to activate your Managed HSM](/azure/key-vault/managed-hsm/quick-create-cli#activate-your-managed-hsm).
+
+1. Grant permissions for the Microsoft Entra service principal to access the Managed HSM. The **Managed HSM Administrator** role does not give permissions to create a key. Similar to [step 2](#step-2-create-a-key-vault), the EKM application needs the **Managed HSM Crypto User** or **Managed HSM Crypto Service Encryption User** role to perform wrap and unwrap operations. For more information, see [Local RBAC built-in roles for Managed HSM](/azure/key-vault/managed-hsm/built-in-roles).
+
+1. In the Azure Key Vault Managed HSM service menu, under **Setting**, select **Keys** and **Generate/Import/Restore Backup** to create a key or import an existing key.
+
 ## Step 3: Install the SQL Server Connector
 
 Download the SQL Server Connector from the [Microsoft Download Center](https://go.microsoft.com/fwlink/p/?LinkId=521700). The download should be done by the administrator of the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] computer.
 
 > [!NOTE]  
->  
+>
 > - SQL Server Connector versions 1.0.0.440 and older have been replaced and are no longer supported in production environments and using the instructions on the [SQL Server Connector Maintenance & Troubleshooting](sql-server-connector-maintenance-troubleshooting.md) page under [Upgrade of SQL Server Connector](sql-server-connector-maintenance-troubleshooting.md#upgrade-of--connector).
 > - Starting with version 1.0.3.0, the SQL Server Connector reports relevant error messages to the Windows event logs for troubleshooting.
 > - Starting with version 1.0.4.0, there is support for private Azure clouds, including Azure operated by 21Vianet, Azure Germany, and Azure Government.
@@ -416,9 +430,9 @@ To view error code explanations, configuration settings, or maintenance tasks fo
 
    > [!NOTE]  
    > If you use TDE with EKM or Azure Key Vault on a failover cluster instance, you must complete an additional step to add `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SQL Server Cryptographic Provider` to the Cluster Registry Checkpoint routine, so the registry can sync across the nodes. Syncing facilitates database recovery after failover and key rotation.
-   >  
+   >
    > To add the registry key to the Cluster Registry Checkpoint routine, in PowerShell, run the following command:
-   >  
+   >
    > `Add-ClusterCheckpoint -RegistryCheckpoint "SOFTWARE\Microsoft\SQL Server Cryptographic Provider" -Resourcename "SQL Server"`
 
 ## Step 5: Configure SQL Server
@@ -490,6 +504,7 @@ For a note about the minimum permission levels needed for each action in this se
          -- WITH IDENTITY = 'DocsSampleEKMKeyVault.vault.usgovcloudapi.net', -- for Azure Government
          -- WITH IDENTITY = 'DocsSampleEKMKeyVault.vault.azure.cn',          -- for Microsoft Azure operated by 21Vianet
          -- WITH IDENTITY = 'DocsSampleEKMKeyVault.vault.microsoftazure.de', -- for Azure Germany
+         -- WITH IDENTITY = '<name of Managed HSM>.managedhsm.azure.net',    -- for Managed HSM (HSM URI in the Azure portal resource)
                 --<----Application (Client) ID ---><--Microsoft Entra app (Client) ID secret-->
          SECRET = 'd956f6b9xxxxxxxyrA8X~PldtMCvUZPxxxxxxxx'
      FOR CRYPTOGRAPHIC PROVIDER AzureKeyVault_EKM;
@@ -509,7 +524,7 @@ For a note about the minimum permission levels needed for each action in this se
      > Be sure to first complete the Registry prerequisites for this step.
 
    - Replace `EKMSampleASYKey` with the name you'd like the key to have in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].
-   - Replace `ContosoRSAKey0` with the name of your key in your Azure Key Vault. Below is an example of a version-less key.
+   - Replace `ContosoRSAKey0` with the name of your key in your Azure Key Vault or Managed HSM. Below is an example of a version-less key.
 
    ```sql
    CREATE ASYMMETRIC KEY EKMSampleASYKey

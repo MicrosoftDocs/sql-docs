@@ -106,7 +106,7 @@ WHERE database_id < 5;
 |3 |msdb |SIMPLE |
 |4 |tempdb |SIMPLE |
 
-Adding a `PARTITION BY` clause on the `recovery_model_desc` column, will restart the numbering when the `recovery_model_desc` value changes. 
+The `PARTITION BY` clause on the `recovery_model_desc` column, restarts the numbering when the `recovery_model_desc` value changes. 
  
 ```sql
 SELECT 

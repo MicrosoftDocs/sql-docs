@@ -15,18 +15,9 @@ ms.date: 07/26/2024
 
 # Security | SQL Server enabled by Azure Arc
 
-SQL Server enabled by Azure Arc extends Azure management services to SQL Server instances hosted outside of Azure. Use Azure to manage instances:
+This article describes the security architecture of the components of SQL Server enabled by Azure Arc.
 
-* In your data centers
-* At edge site locations like retail stores
-* In any public cloud
-* On any hosting provider
-
-Azure Arc lets you manage all your SQL Server instances from a single point of control: Azure. When you connect instances, Azure gives you a detailed view of your SQL Server instances and databases, whether they're running in Azure data centers or outside.
-
-As you enable SQL Server from these environments, it's important to understand the security design and best practices to make sure data can be secured and governed consistently across all environments.
-
-This guide covers various components of the service, so you can better understand security considerations and secure SQL Server instances enabled by Azure Arc. This guide is intended to help you derive the best value out of Azure management, governance, and security related services.
+For background about SQL Server enabled by Azure Arc, review [Overview | SQL Server enabled by Azure Arc](overview.md).
 
 ## Agent and extension
 
@@ -35,7 +26,7 @@ The most significant software components for SQL Server enabled by Azure Arc are
 * Azure Connected Machine agent
 * Azure Extension for SQL Server
 
-The Azure Connected Machine agent connects servers to Azure. The Azure Extension for SQL Server sends data to Azure about SQL Server and retrieves commands from Azure through an Azure Relay communication channel to take action on a SQL Server instance. Together, the agent and the extention let you manage your instances and databases located anywhere outside of Azure. An instance of SQL Server with the agent and the extension is *enabled by Azure Arc*.
+The Azure Connected Machine agent connects servers to Azure. The Azure Extension for SQL Server sends data to Azure about SQL Server and retrieves commands from Azure through an Azure Relay communication channel to take action on a SQL Server instance. Together, the agent and the extension let you manage your instances and databases located anywhere outside of Azure. An instance of SQL Server with the agent and the extension is *enabled by Azure Arc*.
 
 The agent and the extension securely connect to Azure to establish communication channels with Microsoft-managed Azure services. The agent can communicate through:
 
@@ -52,7 +43,7 @@ For details, review the Connected Machine agent documentation:
 For data collection and reporting, some of the services require the Azure Monitoring Agent (AMA) extension. The extension needs to be connected to an Azure Log Analytics. The two services requiring the AMA are:
 
 * Microsoft Defender for Cloud
-* SQL Server best practices assessment 
+* SQL Server best practices assessment
 
 The Azure Extension for SQL Server lets you discover host or OS level (for example, Windows Server failover cluster) configuration changes for all SQL Server instances on a granular level. For example:
 
@@ -69,22 +60,6 @@ The following diagram illustrates the architecture of Azure Arc-enabled SQL Serv
 ## Components
 
 An instance of SQL Server enabled by Azure Arc has integrated components and services that run on your server and help connect to Azure. In addition to the [Agent services](/azure/azure-arc/servers/security-overview#agent-services), an instance enabled has the components listed in this section.
-
-### Azure Resource Manager
-
-Azure Resource Manager (ARM) is the deployment and management service for Azure. It provides a management layer that enables you to create, update, and delete resources in your Azure account. You can use management features, like access control, locks, and tags, to secure and organize your resources after deployment.
-
-### ARM API
-
-ARM API enables deployment and management of Azure resources via an API.
-
-### Azure command-line interface
-
-Azure command-line interface (Azure CLI) is a cross-platform command-line tool to connect to Azure and execute administrative commands on Azure resources. It allows the execution of commands through a terminal using interactive command-line prompts or a script. It's a set of commands used to create and manage Azure resources. For details, review [Enable Azure VM extension using Azure CLI](/azure/azure-arc/servers/manage-vm-extensions-cli).
-
-### Azure portal
-
-Azure portal is a web-based, unified console that provides an alternative to command-line tools. It can be used to view and manage SQL Server instances and databases in the Azure portal as Azure resources.  
 
 ### Resource providers
 
@@ -137,27 +112,6 @@ An instance of SQL Server enabled by Azure Arc does the following tasks:
 
    Every 12 hours, the Azure Extension for SQL Server service uploads usage related data to the Data Processing Service.
 
-## Installation of Azure extension for SQL Server
-
-The Azure Extension for SQL Server requires the Azure Connected Machine agent and other prerequisites. For complete information, see [Prerequisites](prerequisites.md).
-
-Azure Extension for SQL Server isn't a standalone application. It's downloaded and installed on the server by the Azure Connected Machine agent. The supported methods of installing the Azure Connected Machine agent are documented in [Azure Connected Machine agent deployment options](/azure/azure-arc/servers/deployment-options).
-
-### Automatic extension installation
-
-By default, when the Azure Connected Machine agent is installed on a server that hosts one or more instances of SQL Server, the following things happen automatically:
-
-* The agent installs the Azure Extension for SQL Server.
-* The Azure portal displays the discovered SQL Server instance resources in Azure.
-
-### Opt-out of automatic extension installation
-
-You can control the installation process or opt out of it. For details, see [Manage automatic connection for SQL Server enabled by Azure Arc](manage-autodeploy.md).
-
-### Alternate Methods
-
-Other ways of onboarding provide more granular control and can involve manual intervention and dependency on scripts/Windows Installer packages. For details, review [Alternate deployment options](deployment-options.md). Each method may have slightly different security or permissions requirements, you can review them under [Prerequisites](prerequisites.md).
-
 ## Arc-enabled Server security
 
 For specific information about installing, managing, and configuring Azure Arc-enabled Servers, review [Arc-enabled Servers Security overview](/azure/azure-arc/servers/security-overview).
@@ -186,7 +140,7 @@ The Extension Service  collects inventory and database metadata (Windows Only) a
 
 ### Run with least privilege
 
-You can configure the Extension Service to run with minimal privileges. This option, to apply the principle of least privilege is available for preview on Windows servers. For details on how to configure least privilege mode, review [Enable least privilege (preview)](configure-least-privilege.md).
+You can configure the Extension Service to run with minimal privileges. This option, to apply the principle of least privilege, is available for preview on Windows servers. For details on how to configure least privilege mode, review [Enable least privilege (preview)](configure-least-privilege.md).
 
 When configured for least privilege, the Extension Service runs as the `NT Service\SQLServerExtension` service account.
 
@@ -211,45 +165,22 @@ The different features and services have specific security configuration aspects
 * [Best practices assessment](#best-practices-assessment)
 * [Automatic backups](#automatic-backups)
 * [Microsoft Defender for Cloud](#microsoft-defender-for-cloud)
-* [Automatic patching](#automatic-patching)
+* [Automatic updates](#automatic-updates)
 * [Monitor](#monitor)
 * [Microsoft Entra ID](#microsoft-entra-id)
 * [Microsoft Purview](#microsoft-purview)
 
 ### Audit activity
 
-You can access the activity logs from the service menu for the SQL Server enabled by Azure Arc resource in Azure portal. The activity log captures auditing information and change history for Arc-enabled SQL Server resources in Azure Resource Manager.
+You can access the activity logs from the service menu for the SQL Server enabled by Azure Arc resource in Azure portal. The activity log captures auditing information and change history for Arc-enabled SQL Server resources in Azure Resource Manager. For details, review [Use activity logs with SQL Server enabled by Azure Arc](activity-logs.md).
 
 ### Best practices assessment
 
-You can optimize the configuration of your SQL Server instances for best performance and security by running the best practices assessment (BPA). The assessment report shows you specific ways to improve your configuration to match the best practices established by Microsoft Support through many years of experience learning from real-world usage of SQL Server.
+Best practices assessment has the following requirements:
 
-Each suggestion includes details on how to change the configuration. You can run best practices assessments periodically to analyze each of the SQL Server instances on the host. The results of best practices assessments are uploaded to an Azure Log Analytics workspace and viewed in an Azure Monitor workbook.
+[!INCLUDE [best-practices-prerequisites](includes/best-practices-prerequisites.md)]
 
-The user configuring BPA in the Azure portal must have the following permissions:
-
-* Log Analytics Contributor role on the resource group or subscription of the Log Analytics workspace.
-* Azure Connected Machine Resource Administrator role on the resource group or subscription of the Arc-enabled SQL Server.
-* Monitoring Contributor role on the Resource group or subscription of Log Analytics Workspace & Resource group or subscription of Arc Machine.
-
-Users can also be assigned to higher privilege built-in roles such as Contributor or Owner. These roles have sufficient permission. For more information, review Assign Azure roles using the Azure portal.
-
-The minimum permissions required to access or read the assessment report are:
-
-* Reader role on the resource group or subscription of the Arc-enabled SQL Server resource.
-* Log analytics reader on the resource group or subscription of the Arc-enabled SQL Server resource.
-* Monitoring reader on resource group/subscription of the Log Analytics workspace.
-
-The SQL Server built-in login `NT AUTHORITY\SYSTEM` must be a member of the SQL Server `sysadmin` fixed server role for all the SQL Server instances running on the machine. This step is only required when the extension service isn't running in the least privilege mode.
-
-If your firewall or proxy server restricts outbound connectivity, make sure they allow Azure Arc over TCP port 443 for these URLs:
-
-* `global.handler.control.monitor.azure.com`
-* `*.handler.control.monitor.azure.com`
-* `<log-analytics-workspace-id>.ods.opinsights.azure.com`
-* `*.ingest.monitor.azure.com`
-
-Your SQL Server instance must have the [TCP/IP protocol enabled](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md).
+For more information, review [Configure SQL best practices assessment - SQL Server enabled by Azure Arc](assess.md).
 
 ### Automatic backups
 
@@ -266,27 +197,19 @@ Automated backups are disabled by default. After the automated backups are confi
 
 ### Microsoft Defender for Cloud
 
-Microsoft Defender for Cloud:
-
-* Helps you discover and mitigate potential database vulnerabilities
-* Alerts you to anomalous activities that may be an indication of a threat to your databases
-
-There are two primary services:
-
-* Vulnerability assessment: Scan databases to discover, track, and remediate vulnerabilities
-* Threat protection: Receive detailed security alerts and recommended actions based on SQL Advanced Threat Protection to provide to mitigate threats
-
-User account is assigned one of the [Security Center Roles (RBAC)](/azure/defender-for-cloud/permissions).
-
 Microsoft Defender for Cloud requires **Azure Monitoring Agent** to be configured on the Arc-enabled server.
 
-### Automatic patching
+For details, review [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-sql-usage).
 
-Automatic patching overwrites any preconfigured or policy-based update Microsoft Update settings configured on the Arc-enabled server.
+### Automatic updates
+
+Automatic updates overwrite any pre-configured or policy-based update Microsoft Update settings configured on the Arc-enabled server.
 
 * Only Windows and SQL Server updates marked as Important or Critical are installed. Other SQL Server updates such as service packs, cumulative updates, or other updates that aren't marked as Important or Critical, must be installed manually or other means. For more information about security update rating system, see Security Update Severity Rating System (microsoft.com)
 * Works at the host operating system level and applies to all installed SQL Server instances
 * Currently, only works on Windows hosts. It configures Windows Update/Microsoft Update which is the service that ultimately updates the SQL Server instances.
+
+For details, review [Configure automatic updates for SQL Server instances enabled for Azure Arc](update.md).
 
 ### Monitor
 
@@ -305,46 +228,23 @@ Details about the performance dashboard feature, including how to enable/disable
 
 Microsoft Entra ID is a cloud-based identity and access management service to enable access to external resources. Microsoft Entra authentication provides greatly enhanced security over traditional username and password-based authentication. SQL Server enabled by Azure Arc utilizes Microsoft Entra ID for authentication - introduced in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]. This provides a centralized identity and access management solution to SQL Server.
 
-For details, review [Microsoft Entra authentication for SQL Server](../../relational-databases/security/authentication-access/azure-ad-authentication-sql-server-overview.md).
+SQL Server enabled by Azure Arc stores the certificate for Microsoft Entra ID in Azure Key Vault. For details, review:
+
+* [Rotate certificates](rotate-certificates.md)
+* [Microsoft Entra authentication for SQL Server](../../relational-databases/security/authentication-access/azure-ad-authentication-sql-server-overview.md).
+* [Tutorial: Set up Microsoft Entra authentication for SQL Server](../../relational-databases/security/authentication-access/azure-ad-authentication-sql-server-setup-tutorial.md)
+
+To set up Microsoft Entra ID, follow the instructions at [Tutorial: Set up Microsoft Entra authentication for SQL Server](../../relational-databases/security/authentication-access/azure-ad-authentication-sql-server-setup-tutorial.md).
 
 ### Microsoft Purview
 
-Microsoft Purview provides a unified data governance solution to help manage and govern your on-premises, multicloud, and software as a service (SaaS) data.
-
-When you scan instances of SQL Server enabled by Azure Arc, Microsoft Purview supports extracting the following technical metadata:
-
-* Instances
-* Databases
-* Schemas
-* Tables, including the columns
-* Views, including the columns
-
-Key Requirements for SQL Server enabled by Azure Arc and Purview include:
+Key requirements to use [Purview](/purview/register-scan-azure-arc-enabled-sql-server):
 
 * An Azure account with an active subscription.
 * An active [Microsoft Purview account](/purview/create-microsoft-purview-portal).
 * **Data Source Administrator** and **Data Reader** permissions to register a source and manage it in the Microsoft Purview governance portal. See [Access control in the Microsoft Purview governance portal](/purview/catalog-permissions) for details.
 * The latest [self-hosted integration runtime](https://go.microsoft.com/fwlink/?linkid=2246619). For more information, see [Create and manage a self-hosted integration runtime](/purview/manage-integration-runtimes).
 * For Azure RBAC, you need to have both Microsoft Entra ID and Azure Key Vault enabled.
-
-### Validate and test agent extension download
-
-Before you connect production servers to Azure or update your installed binaries with a new version, you should test the newly installed or updated components. For the most complete test, maintain a staging environment and use it to test. 
-
-Follow these steps to implement the validation process.
-
-1. Configure the production Azure subscription(s):
-   1. Block automatic extension deployment. See [Opt out of automatic connecting](manage-autodeploy.md#opt-out-of-automatic-connecting) for details.
-   1. Disable automatic upgrades of Azure extension for SQL Server. See [Automatic extension upgrade for Azure Arc-enabled servers](/azure/azure-arc/servers/manage-automatic-vm-extension-upgrade).
-1. Create a separate dev/test subscription or subscriptions on Azure. For details, review [Managing SQL Server licensed for nonproduction use](manage-license-billing.md#use-azure-devtest-subscription). Create a staging environment using the same exact configuration of the SQL Server instances as in production:
-   1. Onboard the machines hosting SQL Server to an Azure dev/test subscription.
-   1. Use the matching SQL Server configuration on each connected machine.
-   1. Allow automatic deployment of the extension for the dev/test environment.
-1. Update the extension (or enable [Automatic extension upgrade for Azure Arc-enabled servers](/azure/azure-arc/servers/manage-automatic-vm-extension-upgrade)) to the staging environment first.
-1. Run the validation tools of your choice.
-1. Orchestrate the extension installation using a preferred method of [Managing extensions with Azure Arc-enabled servers](/azure/azure-arc/servers/manage-vm-extensions).
-
-In the dev/test subscription(s) it's safe to use the matching SQL Server configurations to that in the production, including the use of the production editions. Additional SQL Server licenses aren't required. If you're using pay-as-you-go, additional charges aren't applied.
 
 ## Best practices
 

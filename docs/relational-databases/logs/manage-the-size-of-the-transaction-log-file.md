@@ -137,7 +137,7 @@ Following are some general recommendations when you're working with transaction 
     - The time required for the largest index maintenance operations.
     - The time required to execute the largest batch in a database.
 
-- When setting **auto grow** for data and log files using the `FILEGROWTH` option, it might be preferred to set it in *size* instead of *percentage to allow better control of the growth ratio, as a percentage is an ever-growing amount.
+- When setting **auto grow** for data and log files using the `FILEGROWTH` option, it might be preferred to set it in *size* instead of *percentage* to allow better control of the growth ratio, as a percentage is an ever-growing amount.
     - In versions prior to [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], transaction logs can't use [Instant File Initialization](../../relational-databases/databases/database-instant-file-initialization.md), so extended log growth times are especially critical.
     - Starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] (all editions) and in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], instant file initialization can benefit transaction log growth events up to 64 MB. The default autogrowth size increment for new databases is 64 MB. Transaction log file autogrowth events larger than 64 MB can't benefit from instant file initialization.
     - As a best practice, don't set the `FILEGROWTH` option value above 1,024 MB for transaction logs. The default values for the `FILEGROWTH` option are:

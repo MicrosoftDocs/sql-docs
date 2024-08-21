@@ -60,7 +60,7 @@ By using the [run](https://docs.github.com/en/actions/using-workflows/workflow-s
 
 ```yaml
 - name: get sqlpackage version
-  working-directory: C:\Program Files\Microsoft SQL Server\160\DAC\bin\
+  working-directory: 'C:\Program Files\Microsoft SQL Server\160\DAC\bin\'
   run: ./SqlPackage /version
 ```
 

@@ -28,14 +28,14 @@ The virtual environments used for GitHub Actions hosted runners and Azure Pipeli
 
 ### Self-hosted virtual environments
 
-If you're utilizing SqlPackage in a self-hosted virtual environment such as a self-hosted Azure DevOps agent, it's recommended to [update the application](sqlpackage-download.md) regularly to maintain the environment with the latest version.
+In a self-hosted virtual environment such as a self-hosted Azure DevOps agent, [update the application](sqlpackage-download.md) regularly to maintain the environment with the latest version.
 
 ## Tracking deployments
 
-There are a few files related to SqlPackage that can be captured as pipeline artifacts to create pipeline execution reproducibility and improve deployment tracking. The implementation and use cases vary dependent on your specific architecture and automation environment.
+You can capture some files related to SqlPackage to reproduce pipelines and improve deployment tracking. The implementation and use cases depend on your specific architecture and automation environment.
 
 - **Dacpac file**
-- **Diagnostic file output from any action:** Use the `/DiagnosticsFile:` parameter on any SqlPackage action, see [below example](#obtaining-sqlpackage-diagnostics-in-a-pipeline-agent)
+- **Diagnostic file output from any action:** Use the `/DiagnosticsFile:` parameter on any SqlPackage action, see [Get SqlPackage diagnostics in a pipeline agent](#get-sqlpackage-diagnostics-in-a-pipeline-agent)
 - **Output from script action prior to publish action:**  Use the [Script](sqlpackage-script.md) SqlPackage action before invoking a publish action
 
 ## Other SqlPackage examples
@@ -46,28 +46,27 @@ During troubleshooting efforts, it's important to know the SqlPackage version is
 
 #### Azure Pipelines
 
-When the [script](/azure/devops/pipelines/yaml-schema/steps-script) keyword is used in an Azure Pipeline, a step can be added to an Azure Pipeline that outputs the SqlPackage version number.
+In an Azure Pipeline, the [script](/azure/devops/pipelines/yaml-schema/steps-script) keyword returns the SqlPackage version number.
 
 ```yaml
 - script: SqlPackage /version
-  workingDirectory: C:\Program Files\Microsoft SQL Server\160\DAC\bin\
+  workingDirectory: 'C:\Program Files\Microsoft SQL Server\160\DAC\bin\'
   displayName: 'get sqlpackage version'
 ```
 
 #### GitHub Actions
 
-By using the [run](https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions) keyword in a GitHub Action workflow, a step can be added to a GitHub Action that outputs the SqlPackage version number.
+In a GitHub Action workflow, the [run](https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions) keyword returns the SqlPackage version number.
 
 ```yaml
 - name: get sqlpackage version
-  working-directory: C:\Program Files\Microsoft SQL Server\160\DAC\bin\
+  working-directory: 'C:\Program Files\Microsoft SQL Server\160\DAC\bin\'
   run: ./SqlPackage /version
 ```
 
 :::image type="content" source="media/sqlpackage-pipelines-github-action.png" alt-text="GitHub action output displaying build number 15.0.4897.1":::
 
-
-### Obtaining SqlPackage diagnostics in a pipeline agent
+### Get SqlPackage diagnostics in a pipeline agent
 
 Diagnostic information from SqlPackage is available in the command line through the parameter `/DiagnosticsFile`, which can be used in virtual environments such as Azure Pipelines and GitHub Actions.  The diagnostic information is written to a file in the working directory.  The file name is dictated by the `/DiagnosticsFile` parameter.
 
@@ -99,7 +98,8 @@ Adding the `/DiagnosticsFile` parameter to the "Additional SqlPackage Arguments"
 After the pipeline run, the diagnostic file can be downloaded from the run summary page under "Published Artifacts".
 
 #### GitHub Actions
-Adding the `/DiagnosticsFile` parameter to the "arguments" field in the GitHub Action sql-action configuration will cause the SqlPackage diagnostic information to be written to the file specified.  Following the sql-action task, the diagnostic file can be made available outside of the virtual environment by publishing an artifact as seen in the example below.
+
+Adding the `/DiagnosticsFile` parameter to the "arguments" field in the GitHub Action sql-action configuration will cause the SqlPackage diagnostic information to be written to the file specified. Following the sql-action task, the diagnostic file can be made available outside of the virtual environment by publishing an artifact as seen in the example below.
 
 ```yaml
 - name: Azure SQL Deploy

@@ -6,8 +6,8 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: josephsack
 ms.date: 08/01/2024
-ms.service: sql-database
-ms.subservice: ai-copilot
+ms.service: azure-sql-database
+ms.subservice: sql-ai-copilot
 ms.topic: how-to
 ms.collection: ce-skilling-ai-copilot
 ms.custom:

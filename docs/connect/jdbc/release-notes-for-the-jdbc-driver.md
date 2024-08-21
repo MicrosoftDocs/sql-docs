@@ -3,7 +3,7 @@ title: Release notes
 description: This article lists the releases of the Microsoft JDBC Driver for SQL Server. For each release version, the changes are named and described.
 author: David-Engel
 ms.author: davidengel
-ms.date: 08/15/2024
+ms.date: 08/23/2024
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: conceptual
@@ -18,7 +18,7 @@ This article lists the releases of the _Microsoft JDBC Driver for SQL Server_. F
 :::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft JDBC Driver 12.8.1 for SQL Server (tar.gz)](https://go.microsoft.com/fwlink/?linkid=12.8.1_TAR_GZ)**
 
 Release number: 12.8.1  
-Released: August 15, 2024
+Released: August 23, 2024
 
 If you need to download the driver in a language other than the one detected for you, you can use these direct links.  
 For the driver in a zip file: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=12.8.1_ZIP&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=12.8.1_ZIP&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=12.8.1_ZIP&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=12.8.1_ZIP&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=12.8.1_ZIP&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=12.8.1_ZIP&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=12.8.1_ZIP&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=12.8.1_ZIP&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=12.8.1_ZIP&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=12.8.1_ZIP&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=12.8.1_ZIP&clcid=0x40a)  
@@ -35,11 +35,17 @@ For the driver in a tar.gz file: [Chinese (Simplified)](https://go.microsoft.com
 ### 12.8 Releases
 
 Release number: 12.8.1  
-Released: August 15, 2024
+Released: August 23, 2024
+
+Changes in 12.8.1:
+
+- Changed MSAL logging from FINER to FINEST
 
 Fixed issues in 12.8.1:
 
-- 
+- Adjusted DESTINATION_COL_METADATA_LOCK, in SQLServerBulkCopy, so that is properly released in all cases
+- Changed driver behavior to allow prepared statement objects to be reused, preventing a "multiple queries are not allowed" error
+- Reverted "Execute Stored Procedures Directly" feature, as well as subsequent changes related to the feature.
 
 :::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft JDBC Driver 12.8.1 for SQL Server (zip)](https://go.microsoft.com/fwlink/?linkid=12.8.1_ZIP)**  
 :::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft JDBC Driver 12.8.1 for SQL Server (tar.gz)](https://go.microsoft.com/fwlink/?linkid=12.8.1_TAR_GZ)**

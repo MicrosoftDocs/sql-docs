@@ -3,7 +3,7 @@ title: Download
 description: Download the Microsoft JDBC Driver for SQL Server to develop Java applications that connect to SQL Server and Azure SQL Database.
 author: David-Engel
 ms.author: davidengel
-ms.date: 08/15/2024
+ms.date: 08/23/2024
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: conceptual
@@ -22,7 +22,7 @@ Version 12.8 is the latest general availability (GA) version. It supports Java 8
 ### Version information
 
 - Release number: 12.8.1
-- Released: August 15, 2024
+- Released: August 23, 2024
 
 When you download the driver, there are multiple JAR files. The JAR file with `jre8` supports Java 8 and the JAR file with `jre11` supports Java 11 and up.
 

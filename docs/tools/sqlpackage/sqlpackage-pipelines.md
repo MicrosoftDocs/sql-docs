@@ -50,7 +50,7 @@ When the [script](/azure/devops/pipelines/yaml-schema/steps-script) keyword is u
 
 ```yaml
 - script: SqlPackage /version
-  workingDirectory: C:\Program Files\Microsoft SQL Server\160\DAC\bin\
+  workingDirectory: 'C:\Program Files\Microsoft SQL Server\160\DAC\bin\'
   displayName: 'get sqlpackage version'
 ```
 

@@ -18,112 +18,141 @@ helpviewer_keywords:
 
 [!INCLUDE[SSRS applies to](../../includes/ssrs-appliesto.md)] [!INCLUDE[SSRS applies to 2016 and later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[SSRS applies to Power BI Report Server](../../includes/ssrs-appliesto-pbirs.md)]
 
-[!INCLUDE[SSRS no version](../../includes/ssrsnoversion-md.md)] native mode uses the HTTP Transport Layer Security (TLS) service to establish encrypted connections to a report server. TLS was previously known as Secure Sockets Layer (SSL). If you have a certificate (.cer) file installed in a local certificate store on the report server computer, you can bind the certificate to a [!INCLUDE[SSRS no version](../../includes/ssrsnoversion-md.md)] URL reservation to support report server connections through an encrypted channel.
+In SQL Server Reporting Services (SSRS) native mode, you can use the HTTP Transport Layer Security (TLS) service to establish encrypted connections to a report server. TLS was previously known as Secure Sockets Layer (SSL). If you have a certificate (.cer) file installed in a local certificate store on the report server, you can bind the certificate to an SSRS URL reservation to support report server connections through an encrypted channel.
 
-> [!TIP]  
-> For more information about [!INCLUDE[SSRS no version](../../includes/ssrsnoversion-md.md)] SharePoint mode, see [How to enable TLS on a SharePoint 2010 web application](/archive/blogs/sowmyancs/how-to-enable-ssl-on-a-sharepoint-2010-web-application).  
+> [!TIP]
+> For more information about SSRS SharePoint mode, see [Reporting Services Report Server (SharePoint mode)](/sql/reporting-services/report-server-sharepoint/reporting-services-report-server-sharepoint-mode).
   
-Because Internet Information Services (IIS) also uses HTTP TLS, there are significant interoperability issues that you must account for if you run IIS and [!INCLUDE[SSRS no version](../../includes/ssrsnoversion-md.md)] on the same computer. For guidance on how to address these issues, review the [Interoperability issues with IIS](#interoperability-issues-with-iis) section, later in this article.
+Because Internet Information Services (IIS) also uses HTTP TLS, there are significant interoperability issues that you must account for if you run IIS and SSRS on the same computer. For guidance on how to address these issues, review the [Interoperability issues with IIS](#interoperability-issues-with-iis) section, later in this article.
 
 ## Prerequisites
 
 - A configured native mode report server.
-- A server certificate installed on your computer.
   
-## Server certificate requirements
+## Install a server certificate
 
-You must have a server certificate installed on the computer. Client certificates aren't supported. [!INCLUDE[SSRS no version](../../includes/ssrsnoversion-md.md)] doesn't provide functionality for requesting, generating, downloading, or installing a certificate. Windows Server 2012 and later provide a Certificates snap-in that you can use to request a certificate from a trusted certificate authority.  
-  
-For testing purposes, you can take the following steps to generate a certificate locally:
+You must install a server certificate on your report server in the local store. Client certificates aren't supported.
 
-1. On the report server, start PowerShell and select the option to run as an administrator.
+SSRS doesn't provide functionality for requesting, generating, downloading, or installing a certificate. The certificate properties that you specify, the certificate authority that you obtain it from, and the tools and utilities that you use to request and install the certificate are up to you.
 
-1. In the PowerShell window, run the following command to create a self-signed certificate. Replace the \<server-name\> placeholder with the host name of your report server. Replace the \<friendly-name\> with a name that's appropriate for the test certificate:
+A few possibilities exist for obtaining a certificate:
 
-   ```powershell
-   New-SelfSignedCertificate -CertStoreLocation cert:\LocalMachine\my -DnsName \<server-name\> -FriendlyName \<friendly-name\>
-   ```
+- Windows Server 2012 and later provide a Certificates snap-in that you can use to request a certificate from a trusted certificate authority.
 
-   For instance, your command might look similar to the following line:
+- If you want to generate a certificate locally for testing purposes, you can run the following PowerShell script.
 
-   ```powershell
-   New-SelfSignedCertificate -CertStoreLocation cert:\LocalMachine\my -DnsName DatabaseReports -FriendlyName "Test certificate"
-   ```
+  - Run the script as an administrator.
+  - Replace the placeholders with values that are appropriate for your environment.
 
-1. In the PowerShell window, copy the certificate thumbprint.
+  ```powershell
+  # Create a self-signed certificate.
+  $newCertificate = New-SelfSignedCertificate -CertStoreLocation cert:\LocalMachine\My -DnsName <server-name> -FriendlyName "<friendly-name>"
 
-   :::image type="content" source="media/configure-tls-connections-native-mode-report-server/create-local-certificate-output.png" alt-text="Screenshot that shows PowerShell output that includes the thumbprint of a local certificate.":::
+  # Convert the report server password to a secure string.
+  $secureStringPassword = ConvertTo-SecureString "<server-password>" -AsPlainText -force
 
-1. Run the following command to store your report server password in a variable. Replace the \<password\> placeholder with your password.
+  # Set up a temporary folder if one doesn't exist.
+  $folderPath = "C:\Temp"
+  if (-not (Test-Path -Path $folderPath)) {
+      New-Item -Path $folderPath -ItemType Directory
+  }
 
-   ```powershell
-   $password = ConvertTo-SecureString \<password\> -AsPlainText -force
-   ```
+  # Set up a variable for the path of a certificate file.
+  $certificateFilePath = $folderPath, "\certificate-export.pfx" -join ""
 
-1. In File Explorer, go to the C drive of the report server, and then create a folder called *Temp* if one doesn't already exist.
+  # Set up a variable for the path of the certificate's store location.
+  $certificateStoreLocation = "cert:\LocalMachine\My\", $newCertificate.Thumbprint -join ""
 
-If you use the **MakeCert** utility and the sample command as a template, be sure to specify your server name as the host and remove all line breaks before running the command. If you run the command in a DOS window, you might need to increase the buffer size of the window to accommodate the entire command.  
-  
-If you're running IIS and [!INCLUDE[SSRS no version](../../includes/ssrsnoversion-md.md)] together on the same computer, you can use the IIS Manager console application to get the certificate installed on your computer. IIS Manager includes options for creating and packaging a certificate request (.crt) file for subsequent processing by a trusted certificate authority. The certificate authority that you use generates a certificate (.cer) file and send it back to you. You can use IIS Management console to install the certificate file in the local store. For more information, see [Use SSL to Encrypt Confidential Data](/previous-versions/windows/it-pro/windows-server-2003/cc738495(v=ws.10)) on Technet.  
-  
+  # Export the certificate to the file.
+  Export-PFXCertificate -Cert $certificateStoreLocation -File $certificateFilePath -Password $secureStringPassword
+
+  # Import the certificate from the file to the trusted root to avoid errors about the certificate not being trusted. 
+  Import-PfxCertificate -FilePath $certificateFilePath cert:\LocalMachine\Root -Password $secureStringPassword
+  ```
+
+- If you run IIS and SSRS together on the same computer, you can use the IIS Manager console application to request and install a certificate:
+  - In IIS Manager, create and package a certificate request (.crt) file for subsequent processing by a trusted certificate authority. For more information, see [Request a Server Certificate](/previous-versions/windows/it-pro/windows-server-2003/cc757493(v=ws.10)).
+  - After the certificate authority sends you the certificate (.cer) file, use IIS Management to install the certificate file in the local store. For more information, see [Install a Server Certificate](/previous-versions/windows/it-pro/windows-server-2003/cc740068(v=ws.10)).
+
 ## Interoperability issues with IIS  
 
-The presence of IIS on the same computer as [!INCLUDE[SSRS no version](../../includes/ssrsnoversion-md.md)] significantly affects TLS connections to a report server:  
-  
-- If IIS is installed, the World Wide Web (W3SVC) service must always be running. The HTTP SSL service makes a dependency on IIS if it detects that IIS is running. This dependency means that the World Wide Web service (W3SVC) must be running whenever IIS and [!INCLUDE[SSRS no version](../../includes/ssrsnoversion-md.md)] are installed on the same computer and you're configuring report server URLs for TLS connections.  
-  
-- Uninstalling IIS can temporarily disrupt service to a TLS-bound report server URL. For this reason, you should restart the computer after you uninstall IIS.  
-  
-  Restarting the computer is necessary to clear all TLS sessions from cache. Some operating systems cache TLS sessions up to 10 hours, causing an https:// URL to continue to work even after the TLS binding is removed from the URL reservation in HTTP.SYS. Restarting the computer closes any open connections that use the channel.  
-  
+The presence of IIS on the same computer as SSRS significantly affects TLS connections to a report server:
+
+- A dependency is created on IIS when you configure report server URLs for TLS connections. IIS has a dependency on the World Wide Web Publishing Service. As a result, the World Wide Web Publishing Service must be running when you configure report server URLs for TLS connections.
+- Uninstalling IIS can temporarily disrupt service to a TLS-bound report server URL. After you uninstall IIS, you should restart the computer to clear all TLS sessions from the cache. Some operating systems cache TLS sessions up to 10 hours. As a result, a TLS-bound URL can continue to work after the TLS binding is removed from the URL reservation in the HTTP.sys web server. Restarting the computer closes any open connections that use the channel.
+
 ## Bind TLS to a reporting services URL reservation  
 
-The following steps don't include instructions for requesting, generating, downloading, or installing a certificate. You must have a certificate installed and available to use. The certificate properties that you specify, the certificate authority you obtain it from, and the tools and utilities you use to request and install the certificate are up to you.  
+You configure URL reservations for the report server web service and web portal URLs independently.
+
+### Configure web service access through a TLS-encrypted channel
+
+To configure a URL that you can use to access the report server, take the following steps:
+
+1. Open [!INCLUDE[SSRS no version](../../includes/ssrsnoversion-md.md)] Configuration Manager and connect to the report server.  
+
+1. In the **Report Server Status** page, select **Stop**.
+
+   :::image type="content" source="media/configure-tls-connections-native-mode-report-server/stop-report-server.png" alt-text="Screenshot of the Report Server Status page in the configuration tool. The Stop button is highlighted.":::
+
+   A message in the **Results** window indicates that the server is stopped.
+
+1. Select **Start**. A message in the **Results** window indicates that the server is running.
+
+1. In the **Connect** pane, select **Web Service URL**.
+
+   :::image type="content" source="media/configure-tls-connections-native-mode-report-server/select-web-service-url.png" alt-text="Screenshot of the configuration tool. On the left, Web Service URL is highlighted.":::
+
+1. In the **HTTPS Certificate** list, select the certificate that you installed.
+
+   :::image type="content" source="media/configure-tls-connections-native-mode-report-server/select-web-service-url-certificate.png" alt-text="Screenshot of the configuration tool. In the HTTPS Certificate list, a certificate named Test certificate is highlighted.":::
+
+1. Select **Apply**. Messages in the **Results** window indicate the progress.
+
+   :::image type="content" source="media/configure-tls-connections-native-mode-report-server/reserve-web-service-url-results.png" alt-text="Screenshot of the Results window in the configuration tool. Messages indicate a successful certificate binding.":::
+
+1. Under **Report Server Web Service URLs**, select the URL that you just reserved. If prompted, enter credentials for your report server. A browser window opens to provide access to the report server.
+
+   :::image type="content" source="media/configure-tls-connections-native-mode-report-server/access-report-server.png" alt-text="Screenshot of a browser window that shows the main page of the ReportServer folder of the report server.":::
+
+   If you can't use the URL to connect to the report server, check the report server database. For the URL to work, you first need to create and configure the database.  
+
+### Configure web portal access through a TLS-encrypted channel
+
+If you also want to configure access to the web portal through a TLS-encrypted channel, take the following steps:
+
+1. In [!INCLUDE[SSRS no version](../../includes/ssrsnoversion-md.md)] Configuration Manager, in the **Connect** pane, select **Web Portal URL**.
+
+1. Select **Advanced**.  
   
-You can use the [!INCLUDE[SSRS no version](../../includes/ssrsnoversion-md.md)] Configuration tool to bind the certificate. If the certificate is installed correctly in the local computer store, the [!INCLUDE[SSRS no version](../../includes/ssrsnoversion-md.md)] Configuration tool detects it and displays it in the **SSL Certificates** list on the **Web Service URL** and **Web Portal URL** pages.  
-  
-### Configure a report server URL for TLS  
-  
-1. Open Report Server Configuration Manager and connect to the report server.  
-  
-2. Select **Web Service URL**.  
-  
-3. Expand the list of TLS/SSL Certificates. [!INCLUDE[SSRS no version](../../includes/ssrsnoversion-md.md)] detects server authentication certificates in the local store. If you installed a certificate and you don't see it in the list, you might need to restart the service. You can use the **Stop** and **Start** buttons on the **Report Server Status** page in the Reporting Services Configuration tool to restart the service (top page).  
-  
-4. Select the certificate.  
-  
-5. Select **Apply**.  
-  
-6. Select the URL to verify it works.  
-  
-Report server database configuration is a requirement for testing the URL. If you aren't yet creating the report server database, do so before testing the URL.  
-  
-URL reservations for Web Portal URL and the Report Server Web Services URL are configured independently. If you want to also configure the web portal access through a TLS-encrypted channel, continue with the following steps:  
-  
-1. Access the **Web Portal URL**.
-  
-2. Select **Advanced**.  
-  
-3. In **Multiple HTTPS Identities for the currently Reporting Service feature**, select **Add**.  
-  
-4. Choose the certificate, select **OK**, and then select **Apply**.  
-  
-5. Test the URL to verify it works.  
-  
+1. Under **Multiple HTTPS Identities for the currently Reporting Services feature**, select **Add**.
+
+   :::image type="content" source="media/configure-tls-connections-native-mode-report-server/add-https-identities.png" alt-text="Screenshot of the Advanced Multiple Web Site Configuration page, with the Add button highlighted for multiple HTTPS identities.":::
+
+1. In the **Certificate** list, select the certificate you installed, and then select **OK**.
+
+   :::image type="content" source="media/configure-tls-connections-native-mode-report-server/select-web-portal-url-certificate.png" alt-text="Screenshot of the Add a Report Server HTTPS Binding window. The OK button and a certificate in the Certificate list are highlighted.":::
+
+   Messages in the **Results** window indicate the progress.
+
+   :::image type="content" source="media/configure-tls-connections-native-mode-report-server/reserve-web-portal-url-results.png" alt-text="Screenshot of the Results window in the configuration tool. Messages indicate a successful certificate binding for the web portal.":::
+
+1. Under **Web Portal Site Identification**, select the URL that you just reserved. If prompted, enter credentials for your report server. A browser window opens and displays the SQL Server Reporting Services home page.
+
+   :::image type="content" source="media/configure-tls-connections-native-mode-report-server/access-web-portal.png.png" alt-text="Screenshot of a browser window that shows the main folder of SQL Server Reporting Services.":::
+
 ## How certificate bindings are stored  
 
-Certificate bindings are stored in HTTP.SYS. A representation of the bindings you defined are stored in the **URLReservations** section of the RSReportServer.config file. The settings in the configuration file are only a representation of actual values that are specified elsewhere. Don't modify the values in the configuration file directly. The configuration settings will appear in the file only after you use the [!INCLUDE[SSRS no version](../../includes/ssrsnoversion-md.md)] Configuration tool or the Report Server Windows Management Instrumentation (WMI) provider to bind a certificate.  
+Certificate bindings are stored in the HTTP.sys web server. A representation of the bindings that you define are stored in the **URLReservations** section of the *RSReportServer.config* file. The settings in the configuration file are only a representation of actual values that are specified elsewhere. Don't modify the values in the configuration file directly. The configuration settings appear in the file only after you use [!INCLUDE[SSRS no version](../../includes/ssrsnoversion-md.md)] Configuration Manager or the Report Server Windows Management Instrumentation (WMI) provider to bind a certificate.
   
 > [!NOTE]  
-> If you configure a binding with a TLS/SSL certificate in [!INCLUDE[SSRS no version](../../includes/ssrsnoversion-md.md)] and you later want to remove the certificate from the computer, make sure to remove the binding from [!INCLUDE[SSRS no version](../../includes/ssrsnoversion-md.md)] before you remove the certificate from the computer. Otherwise, you will be unable to remove the binding by using the [!INCLUDE[SSRS no version](../../includes/ssrsnoversion-md.md)] Configuration tool or WMI and you will receive an "Invalid parameter" error. If you have already removed the certificate from the computer, you can use the Httpcfg.exe tool to remove the binding from HTTP.SYS. For more information about Httpcfg.exe, see the Windows product documentation.  
+> If you configure a binding with a TLS certificate in SSRS and you later want to remove the certificate from the computer, remove the binding from SSRS before you remove the certificate from the computer. Otherwise, it's not possible to remove the binding by using [!INCLUDE[SSRS no version](../../includes/ssrsnoversion-md.md)] Configuration Manager or WMI, and you receive an "Invalid parameter" error. After you remove the certificate from the computer, you can use the HttpCfg.exe tool to remove the binding from HTTP.sys. For more information, see [HttpCfg.exe](/windows/win32/http/httpcfg-exe).
   
-TLS bindings are a shared resource in Microsoft Windows. Changes made by [!INCLUDE[SSRS no version](../../includes/ssrsnoversion-md.md)] Configuration Manager or other tools like IIS Manager can affect other applications on the same computer. The best practice is to use the same tool to edit bindings that you used to create the bindings. For example if you created TLS bindings by using Configuration Manager, then you should use Configuration Manager to manage the life cycle of the bindings. If you use IIS manager to create bindings, then you should use IIS manager to manage the life cycle of the bindings. If IIS is installed on the computer before [!INCLUDE[SSRS no version](../../includes/ssrsnoversion-md.md)] is installed, it's a good practice to review the TLS configuration in IIS before configuring [!INCLUDE[SSRS no version](../../includes/ssrsnoversion-md.md)].  
-  
-If you remove TLS bindings for [!INCLUDE[SSRS no version](../../includes/ssrsnoversion-md.md)] by using the Report Server Configuration Manager, TLS might no longer work for Web sites on a server that is running Internet Information Services (IIS) or on another HTTP.SYS server. [!INCLUDE[SSRS no version](../../includes/ssrsnoversion-md.md)] Configuration Manager removes the following registry key: **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\HTTP\Parameters\SslBindingInfo\0.0.0.0:443** When this registry key is removed, the TLS binding for IIS is also removed. Without this binding, TLS isn't provided for the HTTPS protocol. To diagnose this issue, use IIS Manager or the HTTPCFG.exe command line utility. To resolve the issue, restore the TLS binding for your web sites by using IIS Manager. To prevent this issue in the future, use IIS Manager to remove the TLS bindings, and then use IIS Manager to restore the binding for the desired Web sites. For more information, see the knowledge base article [SSL no longer works after you remove an SSL binding (https://support.microsoft.com/kb/956209/n)](https://web.archive.org/web/20150215042139/http://support.microsoft.com:80/kb/956209).  
+TLS bindings are a shared resource in Microsoft Windows. Changes made by [!INCLUDE[SSRS no version](../../includes/ssrsnoversion-md.md)] Configuration Manager or other tools like IIS Manager can affect other applications on the same computer. The best practice is to use the same tool to edit bindings that you use to create the bindings. For example, if you create TLS bindings by using Configuration Manager, also use Configuration Manager to manage the lifecycle of the bindings. If you use IIS manager to create bindings, use IIS manager to manage the lifecycle of the bindings. If IIS is installed on the computer before SSRS is installed, it's a good practice to review the TLS configuration in IIS before configuring SSRS.
   
 ## Related content
 
-- [Authentication with the report server](../../reporting-services/security/authentication-with-the-report-server.md)
-- [Configure and administer a report server &#40;SSRS Native Mode&#41;](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)
+- [Authentication in a report server](../../reporting-services/security/authentication-with-the-report-server.md)
+- [Configure and administer a report server (SSRS native mode)](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)
 - [RsReportServer.config configuration file](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)
-- [Configure report server URLs  &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)
+- [Configure report server URLs (Report Server Configuration Manager)](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)

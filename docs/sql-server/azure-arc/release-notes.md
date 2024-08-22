@@ -278,7 +278,7 @@ With SQL Server enabled by Azure Arc, you can run the agent extension service wi
 
    [!INCLUDE [entra-id](../../includes/entra-id.md)]
 
-- Configure automatic updates in Azure portal. Review [Configure in the Azure portal](update.md#configure-in-the-azure-portal).
+- Configure automatic updates in Azure portal. Review [Configure in the Azure portal](update.md#configure-updates-in-the-azure-portal).
 
 ## July 13, 2023
 

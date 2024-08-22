@@ -1,6 +1,6 @@
 ---
 title: View SQL Server databases
-description: View databases in Azure from an instance of SQL Server enabled by Azure Arc. Use to inventory databases, and view properties of databases centrally, as Arc-enabled resources.
+description: Learn how to inventory SQL Server databases, and view properties of databases centrally, as Azure Arc-enabled resources.
 author: ntakru
 ms.author: nikitatakru
 ms.reviewer: mikeray, randolphwest
@@ -9,41 +9,41 @@ ms.topic: conceptual
 ms.custom: ignite-2023
 ---
 
-# View SQL Server databases - Azure Arc
+# View Azure Arc-enabled SQL Server databases
 
 [!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
-You can inventory and view [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] databases in Azure.
+You can inventory and view Azure Arc-enabled [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] databases in Azure.
 
 ## Prerequisites
 
-Before you begin, verify that the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instance that hosts the databases:
+- Verify that the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instance that hosts the databases:
 
-- Is hosted on a physical or virtual machine running Windows operating system.
-- Is [!INCLUDE [sssql14-md](../../includes/sssql14-md.md)] or later.
-- Is connected to Azure Arc. See [Connect your SQL Server to Azure Arc](connect.md).
-- Is connected to the internet directly or through a proxy server.
-- Make sure that database names adhere to naming conventions and don't contain reserve words. For a list of reserved words, see [Resolve errors for reserved resource names](/azure/azure-resource-manager/troubleshooting/error-reserved-resource-name).
-- To view the database size and space available, provide the following permission:
-  - The built-in [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] login **NT AUTHORITY\SYSTEM** must be a member of the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] **sysadmin** server role, for all the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instances running on the machine.
+  - Is hosted on a physical or virtual machine that's running the Windows operating system.
+  - Is [!INCLUDE [sssql14-md](../../includes/sssql14-md.md)] or later.
+  - Is connected to Azure Arc. See [Connect your SQL Server instance to Azure Arc](connect.md).
+  - Is connected to the internet directly or through a proxy server.
+
+- Make sure that database names adhere to naming conventions and don't contain reserved words. For a list of reserved words, see [Resolve errors for reserved resource names](/azure/azure-resource-manager/troubleshooting/error-reserved-resource-name).
+
+- To view the database size and space available, make sure that the built-in [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] login **NT AUTHORITY\SYSTEM** is a member of the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] **sysadmin** server role for all the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instances running on the machine.
 
 ## Inventory databases
 
-1. Locate the [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] instance in the Azure portal.
-1. **Select** the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] resource.
+1. Locate the instance of [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] in the Azure portal.
+1. Select the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] resource.
 1. Under **Data management**, select **Databases**.
-
-The Azure portal shows **SQL Server databases - Azure Arc**. Use this area to view the databases that belong to the instance.
+1. Use the **SQL Server databases - Azure Arc** area to view the databases that belong to the instance.
 
 ## View database properties
 
-To view database properties for a specific database, select the database on the portal.
+To view properties for a specific database, select the database in the portal.
 
-After you create, modify, or delete a database, changes are visible in the Azure portal within an hour.
+After you create, modify, or delete a database, changes appear in the Azure portal within an hour.
 
-:::image type="content" source="media/view-databases/database-properties.png" alt-text="Screenshot of Azure portal, SQL Server database properties." lightbox="media/view-databases/database-properties.png":::
+:::image type="content" source="media/view-databases/database-properties.png" alt-text="Screenshot of SQL Server database properties in the Azure portal." lightbox="media/view-databases/database-properties.png":::
 
-On the Database page, you see the following information:
+The **Databases** pane shows the following information:
 
 - Information about the data collection and upload:
   - Last collected time
@@ -54,17 +54,17 @@ On the Database page, you see the following information:
   - Creation time
   - Earliest restore point
 
-When you select a specific database, you see all the properties for that database, which are also visible in SQL Server Management Studio (SSMS).
+When you select a specific database, all the properties for that database appear. These properties are also visible in SQL Server Management Studio.
 
-:::image type="content" source="media/view-databases/full-property-list.png" alt-text="Screenshot of full database property list." lightbox="media/view-databases/full-property-list.png":::
+:::image type="content" source="media/view-databases/full-property-list.png" alt-text="Screenshot of a full database property list." lightbox="media/view-databases/full-property-list.png":::
 
-## How to use Azure Resource Graph to query data
+## Use Azure Resource Graph to query data
 
-Here are some example scenarios showing how you use [Azure Resource Graph](/azure/governance/resource-graph/overview) to query data that is available when viewing [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] databases.
+Here are some example scenarios that show how you use [Azure Resource Graph](/azure/governance/resource-graph/overview) to query data that's available when you're viewing Azure Arc-enabled SQL Server databases.
 
 ### Scenario 1: Get 10 databases
 
-Get 10 databases and return what properties are available to query:
+Get 10 databases and return properties that are available to query:
 
 ```kusto
 resources
@@ -72,7 +72,7 @@ resources
 | limit 10
 ```
 
-Many of the most interesting properties to query are in the `properties` property. To explore the available properties, run this query and then select **See details** on a row.  This returns the properties in a json viewer on the right side.
+Many of the most interesting properties to query are in the `properties` property. To explore the available properties, run the following query and then select **See details** on a row. This action returns the properties in a JSON viewer on the right side.
 
 ```kusto
 resources
@@ -80,9 +80,9 @@ resources
 | project properties
 ```
 
-You can navigate the hierarchy of the properties json by using a period in between each level of the properties json.
+You can navigate the hierarchy of the properties JSON by using a period between each level of the JSON.
 
-### Scenario 2: Get all the databases that have database option AUTO_CLOSE set to ON
+### Scenario 2: Get all the databases that have the database option AUTO_CLOSE set to ON
 
 ```kusto
 | where (type == 'microsoft.azurearcdata/sqlserverinstances/databases' and properties.databaseOptions.isAutoCloseOn == true)
@@ -90,7 +90,7 @@ You can navigate the hierarchy of the properties json by using a period in betwe
 | project name, isAutoCloseOn
 ```
 
-### Scenario 3: Obtain the count of databases that are encrypted vs not encrypted
+### Scenario 3: Obtain the count of databases that are encrypted vs. not encrypted
 
 ```kusto
 resources
@@ -111,7 +111,7 @@ resources
 
 ### Scenario 5: Get all the databases by region and compatibility level
 
-This example returns all databases in `westus3` location with compatibility level of 160:
+This example returns all databases in the `westus3` location with a compatibility level of 160:
 
 ```kusto
 resources
@@ -146,9 +146,9 @@ You can also [create charts and pin them to dashboards](/azure/governance/resour
 
 ## Known issues
 
-Databases deleted on-premises might not be immediately deleted on Azure. There's no impact on how database CRUD operations happen on-premises.
+Databases deleted on-premises might not be immediately deleted in Azure. There's no impact on how database CRUD (create, read, update, delete) operations happen on-premises.
 
 ## Related content
 
 - [Protect [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] with Microsoft Defender for Cloud](configure-advanced-data-security.md)
-- [Configure best practices assessment on a [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] instance](assess.md)
+- [Configure best practices assessment on an instance of [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)]](assess.md)

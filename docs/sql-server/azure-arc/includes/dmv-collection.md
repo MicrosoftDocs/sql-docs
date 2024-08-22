@@ -7,130 +7,148 @@ ms.topic: include
 
 ### Active sessions
 
-Description: Sessions running a request, is a blocker, or has an open transaction.\
-Dataset Name: SqlServerActiveSessions\
-Collection Frequency: 30 seconds\
-**Collected Fields:**
+**Description:** Sessions that are running a request, have a blocker, or have an open transaction.
 
-* connection_id
-* database_id
-* database_name
-* machine_name
-* sample_time_utc
-* session_id
-* session_status
-* sql_server_instance_name
+**Dataset name:** *SqlServerActiveSessions*
 
-### CPU Utilization
+**Collection frequency:** 30 seconds
 
-Description: CPU utilization over time.\
-Dataset Name: SqlServerCPUUtilization\
-Collection Frequency: 10 seconds\
-**Collected Fields:**
+**Collected fields:**
 
-* avg_cpu_percent
-* idle_cpu_percent
-* machine_name
-* other_process_cpu_percent
-* process_sample_time_utc
-* sample_time_utc
-* sql_process_cpu_percent
-* sql_server_instance_name
+* `connection_id`
+* `database_id`
+* `database_name`
+* `machine_name`
+* `sample_time_utc`
+* `session_id`
+* `session_status`
+* `sql_server_instance_name`
+
+### CPU utilization
+
+**Description:** CPU utilization over time.
+
+**Dataset name:** *SqlServerCPUUtilization*
+
+**Collection frequency:** 10 seconds
+
+**Collected fields:**
+
+* `avg_cpu_percent`
+* `idle_cpu_percent`
+* `machine_name`
+* `other_process_cpu_percent`
+* `process_sample_time_utc`
+* `sample_time_utc`
+* `sql_process_cpu_percent`
+* `sql_server_instance_name`
 
 ### Database properties
 
-Description: Includes database options and other database metadata.\
-Dataset Name: SqlServerDatabaseProperties\
-Collection Frequency: 5 minutes\
-**Collected Fields:**
+**Description:** Includes database options and other database metadata.
 
-* collation_name
-* collection_time_utc
-* compatibility_level
-* containment_desc
-* count_suspect_pages
-* create_date
-* database_id
-* database_name
-* delayed_durability_desc
-* force_last_good_plan_actual_state
-* is_accelerated_database_recovery_on
-* is_auto_create_stats_on
-* is_auto_shrink_on
-* is_auto_update_stats_async_on
-* is_auto_update_stats_on
-* is_broker_enabled
-* is_cdc_enabled
-* is_change_feed_enabled
-* is_distributor
-* is_encrypted
-* is_in_standby
-* is_ledger_on
-* is_merge_published
-* is_parameterization_forced
-* is_primary_replica
-* is_published
-* is_read_committed_snapshot_on
-* is_read_only
-* is_subscribed
-* last_good_checkdb_time
-* log_reuse_wait_desc
-* machine_name
-* notable_db_scoped_configs
-* page_verify_option_desc
-* query_store_actual_state_desc
-* query_store_query_capture_mode_desc
-* recovery_model_desc
-* sample_time_utc
-* snapshot_isolation_state
-* sql_server_instance_name
-* state_desc
-* updateability
-* user_access_desc
+**Dataset name:** *SqlServerDatabaseProperties*
+
+**Collection frequency:** 5 minutes
+
+**Collected fields:**
+
+* `collation_name`
+* `collection_time_utc`
+* `compatibility_level`
+* `containment_desc`
+* `count_suspect_pages`
+* `create_date`
+* `database_id`
+* `database_name`
+* `delayed_durability_desc`
+* `force_last_good_plan_actual_state`
+* `is_accelerated_database_recovery_on`
+* `is_auto_create_stats_on`
+* `is_auto_shrink_on`
+* `is_auto_update_stats_async_on`
+* `is_auto_update_stats_on`
+* `is_broker_enabled`
+* `is_cdc_enabled`
+* `is_change_feed_enabled`
+* `is_distributor`
+* `is_encrypted`
+* `is_in_standby`
+* `is_ledger_on`
+* `is_merge_published`
+* `is_parameterization_forced`
+* `is_primary_replica`
+* `is_published`
+* `is_read_committed_snapshot_on`
+* `is_read_only`
+* `is_subscribed`
+* `last_good_checkdb_time`
+* `log_reuse_wait_desc`
+* `machine_name`
+* `notable_db_scoped_configs`
+* `page_verify_option_desc`
+* `query_store_actual_state_desc`
+* `query_store_query_capture_mode_desc`
+* `recovery_model_desc`
+* `sample_time_utc`
+* `snapshot_isolation_state`
+* `sql_server_instance_name`
+* `state_desc`
+* `updateability`
+* `user_access_desc`
 
 ### Database storage utilization
 
-Description: Includes its storage usage and persistent version store.\
-Dataset Name: SqlServerDatabaseStorageUtilization\
-Collection Frequency: 1 minute\
-**Collected Fields:**
+**Description:** Includes storage usage and the persistent version store.
 
-* collection_time_utc
-* count_data_files
-* count_log_files
-* data_size_allocated_mb
-* data_size_used_mb
-* database_id
-* database_name
-* is_primary_replica
-* log_size_allocated_mb
-* log_size_used_mb
-* machine_name
-* online_index_version_store_size_mb
-* persistent_version_store_size_mb
-* sample_time_utc
-* sql_server_instance_name
+**Dataset name:** *SqlServerDatabaseStorageUtilization*
+
+**Collection frequency:** 1 minute
+
+**Collected fields:**
+
+* `collection_time_utc`
+* `count_data_files`
+* `count_log_files`
+* `data_size_allocated_mb`
+* `data_size_used_mb`
+* `database_id`
+* `database_name`
+* `is_primary_replica`
+* `log_size_allocated_mb`
+* `log_size_used_mb`
+* `machine_name`
+* `online_index_version_store_size_mb`
+* `persistent_version_store_size_mb`
+* `sample_time_utc`
+* `sql_server_instance_name`
 
 ### Memory utilization
 
-Description: Memory clerks and memory consumption by the clerk.\
-Dataset Name: SqlServerMemoryUtilization\
-Collection Frequency: 10 seconds\
-**Collected Fields:**
+**Description:** Memory clerks and memory consumption by clerks.
 
-* machine_name
-* memory_size_mb
-* memory_clerk_name
-* memory_clerk_type
-* sample_time_utc
-* sql_server_instance_name
+**Dataset name:** *SqlServerMemoryUtilization*
+
+**Collection frequency:** 10 seconds
+
+**Collected fields:**
+
+* `machine_name`
+* `memory_size_mb`
+* `memory_clerk_name`
+* `memory_clerk_type`
+* `sample_time_utc`
+* `sql_server_instance_name`
 
 ### Performance counters (common)
 
-Description: Includes common performance counters recorded by SQL Server.\
-Dataset Name: SqlServerPerformanceCountersCommon\
-Collection Frequency: 1 minute\
-**Collected Counters:**
+**Description:** Includes common performance counters that SQL Server records.
+
+**Dataset name:** *SqlServerPerformanceCountersCommon*
+
+**Collection frequency:** 1 minute
+
+**Collected counters:**
 
 * Active Temp Tables
 * Active Transactions
@@ -175,10 +193,13 @@ Collection Frequency: 1 minute\
 
 ### Performance counters (detailed)
 
-Description: Includes detailed performance counters recorded by SQL Server.\
-Dataset Name: SqlServerPerformanceCountersDetailed\
-Collection Frequency: 1 minute\
-**Collected Counters:**
+**Description:** Includes detailed performance counters that SQL Server records.
+
+**Dataset name:** *SqlServerPerformanceCountersDetailed*
+
+**Collection frequency:** 1 minute
+
+**Collected counters:**
 
 * Average Wait Time (ms)
 * Backup/Restore Throughput/sec
@@ -213,47 +234,53 @@ Collection Frequency: 1 minute\
 
 ### Storage I/O
 
-Description: Includes cumulative IOPS, throughput, and latency statistics.\
-Dataset Name: SqlServerStorageIO\
-Collection Frequency: 10 seconds\
-**Collected Fields:**
+**Description:** Includes cumulative input/output per second (IOPS), throughput, and latency statistics.
 
-* database_id
-* database_name
-* file_id
-* file_max_size_mb
-* file_size_mb
-* file_type
-* io_stall_queued_read_ms
-* io_stall_queued_write_ms
-* io_stall_read_ms
-* io_stall_write_ms
-* machine_name
-* num_of_bytes_read
-* num_of_bytes_written
-* num_of_reads
-* num_of_writes
-* sample_time_utc
-* size_on_disk_bytes
-* sql_server_instance_name
+**Dataset name:** *SqlServerStorageIO*
 
-### Wait stats
+**Collection frequency:** 10 seconds
+
+**Collected fields:**
+
+* `database_id`
+* `database_name`
+* `file_id`
+* `file_max_size_mb`
+* `file_size_mb`
+* `file_type`
+* `io_stall_queued_read_ms`
+* `io_stall_queued_write_ms`
+* `io_stall_read_ms`
+* `io_stall_write_ms`
+* `machine_name`
+* `num_of_bytes_read`
+* `num_of_bytes_written`
+* `num_of_reads`
+* `num_of_writes`
+* `sample_time_utc`
+* `size_on_disk_bytes`
+* `sql_server_instance_name`
+
+### Wait statistics
 
 > [!NOTE]
-> Wait stats cannot be visualized on the performance dashboard at this time. Support for wait stats will be added in a future release.
+> Wait statistics can't be visualized on the performance dashboard at this time.
 
-Description: Includes wait types and wait statistics for the database engine instance.\
-Dataset Name: SqlServerWaitStats\
-Collection Frequency: 10 seconds\
-**Collected Fields:**
+**Description:** Includes wait types and wait statistics for the database engine instance.
 
-* machine_name
-* max_wait_time_ms
-* resource_wait_time_ms
-* sample_time_utc
-* signal_wait_time_ms
-* sql_server_instance_name
-* wait_category
-* wait_time_ms
-* wait_type
-* waiting_tasks_count
+**Dataset name:** *SqlServerWaitStats*
+
+**Collection frequency:** 10 seconds
+
+**Collected fields:**
+
+* `machine_name`
+* `max_wait_time_ms`
+* `resource_wait_time_ms`
+* `sample_time_utc`
+* `signal_wait_time_ms`
+* `sql_server_instance_name`
+* `wait_category`
+* `wait_time_ms`
+* `wait_type`
+* `waiting_tasks_count`

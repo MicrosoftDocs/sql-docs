@@ -16,7 +16,12 @@ monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 
 [!INCLUDE[appliesto-sqldb-sqlmi-asa-dedicated-only](../includes/appliesto-sqldb-sqlmi-asa-dedicated-only.md)]
 
-You can now create and utilize server principals from Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)), which are logins in the virtual `master` database of a SQL Database. There are several benefits of using Microsoft Entra server principals for SQL Database:
+You can now create and utilize server principals from Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)), which are logins in the virtual `master` database of Azure SQL Database (Preview) and Azure SQL Managed instance.  
+
+> [!NOTE]
+> Microsoft Entra server principals (logins) are currently in public preview for Azure SQL Database and Azure Synapse Analytics. Microsoft Entra logins are generally available for Azure SQL Managed Instance and SQL Server 2022.
+
+There are several benefits of using Microsoft Entra server principals with your Azure SQL resource:
 
 - Support [Azure SQL Database server roles for permission management](security-server-roles.md).
 - Support multiple Microsoft Entra users with [special roles for SQL Database](/sql/relational-databases/security/authentication-access/database-level-roles#special-roles-for--and-azure-synapse), such as the `loginmanager` and `dbmanager` roles.
@@ -26,9 +31,6 @@ You can now create and utilize server principals from Microsoft Entra ID ([forme
 - Use Microsoft Entra service principal logins with special roles to fully automate user and database creation and maintenance with Microsoft Entra applications.
 
 For more information on Microsoft Entra authentication in Azure SQL, see [Use Microsoft Entra authentication](authentication-aad-overview.md).
-
-> [!NOTE]
-> Microsoft Entra server principals (logins) are currently in public preview for Azure SQL Database and Azure Synapse Analytics. Microsoft Entra logins is generally available for Azure SQL Managed Instance and SQL Server 2022.
 
 ## Permissions
 

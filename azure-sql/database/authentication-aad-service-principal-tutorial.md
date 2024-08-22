@@ -144,7 +144,7 @@ if ($isDirReader -eq $null) {
 > [!NOTE]
 > The output from this script indicates if the identity is assigned to the **Directory Readers** role. You can re-run the script if you are unsure if the permission was granted.
 
-For a similar approach on how to assign the **Directory Readers** role for SQL Managed Instance, see [Provision Microsoft Entra admin (SQL Managed Instance)](authentication-aad-configure.md#powershell).
+For a similar approach on how to assign the **Directory Readers** role for SQL Managed Instance, see [Set Microsoft Entra admin](authentication-aad-configure.md#azure-sql-managed-instance).
 
 In production environments, a common management practice is to assign the **Directory Readers** role to a role-assignable group in Microsoft Entra ID. Then, group owners can add managed identities to the group. This maintains the principle of least privilege, and bypasses the need for a **Global Administrator** or **Privileged Role Administrator** to grant the **Directory Readers** role individually to every SQL instance. For more information on this feature, see [Directory Readers role in Microsoft Entra ID for Azure SQL](authentication-aad-directory-readers-role.md).
 
@@ -202,7 +202,7 @@ Connect to your SQL Database using a Microsoft Entra identity that has permissio
    GO
    ```
 
-    You can set the *DBOwnerApp* as the Microsoft Entra admin. This can be done using the Azure portal, PowerShell, or Azure CLI commands. For more information, see [Provision Microsoft Entra admin (SQL Database)](authentication-aad-configure.md?tabs=azure-powershell#powershell-for-sql-database-and-azure-synapse).
+    You can set the *DBOwnerApp* as the Microsoft Entra admin. This can be done using the Azure portal, PowerShell, or Azure CLI commands. For more information, see [Set Microsoft Entra admin](authentication-aad-configure.md#azure-sql-database-and-azure-synapse-analytics).
 
 <a name='create-an-azure-ad-user-in-sql-database-using-an-azure-ad-service-principal'></a>
 

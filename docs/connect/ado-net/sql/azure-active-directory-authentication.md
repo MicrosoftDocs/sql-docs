@@ -105,8 +105,8 @@ The following example shows how to use `Active Directory Interactive` authentica
 ```cs
 // Use your own server, database, and user ID.
 // User ID is optional.
-string ConnectionString1 = @"Server=demo.database.windows.net; "
-   + "Authentication=Active Directory Interactive; Encrypt=True; " 
+string ConnectionString1 = @"Server=demo.database.windows.net;"
+   + "Authentication=Active Directory Interactive; Encrypt=True;" 
    + "Database=testdb; User Id=user@domain.com";
 
 using (SqlConnection conn = new SqlConnection(ConnectionString1)) {
@@ -114,8 +114,8 @@ using (SqlConnection conn = new SqlConnection(ConnectionString1)) {
 }
 
 // User ID is not provided.
-string ConnectionString2 = @"Server=demo.database.windows.net; "
-   + "Authentication=Active Directory Interactive; Encrypt=True; "
+string ConnectionString2 = @"Server=demo.database.windows.net;"
+   + "Authentication=Active Directory Interactive; Encrypt=True;"
    + "Database=testdb";
 
 using (SqlConnection conn = new SqlConnection(ConnectionString2)) {
@@ -155,8 +155,8 @@ The following code snippet is an example of using `Active Directory Device Code 
 
 ```cs
 // Use your own server and database and increase Connect Timeout as needed for device code flow.
-string ConnectionString = @"Server=demo.database.windows.net; "
-  + "Authentication=Active Directory Device Code Flow; Encrypt=True; "
+string ConnectionString = @"Server=demo.database.windows.net;"
+  + "Authentication=Active Directory Device Code Flow; Encrypt=True;"
   + "Database=testdb; Connect Timeout=180;";
 
 using (SqlConnection conn = new SqlConnection(ConnectionString)) {
@@ -184,15 +184,15 @@ The following example shows how to use `Active Directory Managed Identity` authe
 ```cs
 // For system-assigned managed identity
 // Use your own values for Server and Database.
-string ConnectionString1 = @"Server=demo.database.windows.net; "
-  + "Authentication=Active Directory Managed Identity; Encrypt=True; "
+string ConnectionString1 = @"Server=demo.database.windows.net;"
+  + "Authentication=Active Directory Managed Identity; Encrypt=True;"
   + "Database=testdb";
 
 using (SqlConnection conn = new SqlConnection(ConnectionString1)) {
     conn.Open();
 }
 
-string ConnectionString2 = @"Server=demo.database.windows.net; "
+string ConnectionString2 = @"Server=demo.database.windows.net;"
   + "Authentication=Active Directory MSI; Encrypt=True; Database=testdb";
 
 using (SqlConnection conn = new SqlConnection(ConnectionString2)) {
@@ -207,8 +207,8 @@ The following example demonstrates `Active Directory Managed Identity` authentic
 // Use your own values for Server, Database, and User Id.
 
 // With Microsoft.Data.SqlClient v3.0+
-string ConnectionString1 = @"Server=demo.database.windows.net; "
-  + "Authentication=Active Directory Managed Identity; Encrypt=True; "
+string ConnectionString1 = @"Server=demo.database.windows.net;"
+  + "Authentication=Active Directory Managed Identity; Encrypt=True;"
   + "User Id=ClientIdOfManagedIdentity; Database=testdb";
 
 using (SqlConnection conn = new SqlConnection(ConnectionString1)) {
@@ -216,8 +216,8 @@ using (SqlConnection conn = new SqlConnection(ConnectionString1)) {
 }
 
 // With Microsoft.Data.SqlClient v3.0+
-string ConnectionString2 = @"Server=demo.database.windows.net; "
-  + "Authentication=Active Directory MSI; Encrypt=True; "
+string ConnectionString2 = @"Server=demo.database.windows.net;"
+  + "Authentication=Active Directory MSI; Encrypt=True;"
   + "User Id=ClientIdOfManagedIdentity; Database=testdb";
 
 using (SqlConnection conn = new SqlConnection(ConnectionString2)) {

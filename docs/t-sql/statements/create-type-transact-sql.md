@@ -4,7 +4,7 @@ description: Creates an alias data type or a user-defined type in the current da
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 12/11/2023
+ms.date: 08/22/2024
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference

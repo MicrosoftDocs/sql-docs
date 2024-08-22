@@ -4,7 +4,7 @@ description: Latest release notes for SQL Server enabled by Azure Arc
 author: anosov1960
 ms.author: sashan
 ms.reviewer: mikeray, randolphwest
-ms.date: 07/09/2024
+ms.date: 08/22/2024
 ms.topic: conceptual
 ms.custom: ignite-2023
 ---
@@ -21,6 +21,14 @@ This article lists:
 - Links to additional feature documentation
 
 Extension versions are cumulative. Higher extension versions include all of the updates from previous versions. A release may include internal features. If the version release notes don't describe features, then the updates were internal.
+
+## August 13, 2024
+
+**Extension version**: `1.1.2769.203`
+
+### Security improvements
+
+Various security improvements for SQL Server enabled by Azure Arc.
 
 ## July  09, 2024
 
@@ -278,7 +286,7 @@ With SQL Server enabled by Azure Arc, you can run the agent extension service wi
 
 ### Azure extension for SQL Server
 
-- Proxy bypass is now supported for Arc SQL Server Extension. Starting this release, you can also specify services which should not use the specified proxy server. For examples and technical information, see [Proxy bypass for private endpoints](/azure/azure-arc/servers/manage-agent?tabs=windows#proxy-bypass-for-private-endpoints).
+- Proxy bypass is now supported for Arc SQL Server Extension. Starting this release, you can also specify services which shouldn't use the specified proxy server. For examples and technical information, see [Proxy bypass for private endpoints](/azure/azure-arc/servers/manage-agent?tabs=windows#proxy-bypass-for-private-endpoints).
 
 ## June 13, 2023
 
@@ -305,7 +313,7 @@ With SQL Server enabled by Azure Arc, you can run the agent extension service wi
 
 - Arc virtual machines on-boarded from AWS use AWS resource name rather than host computer name. Fix allows customers to provide a name when onboarding using script.
 - Fixed a bug where the setting to exclude instances in portal throws an incorrect error about excluding SQL instance name separated by space.
-- Fixed a bug where the Purview governance status does not report correctly upon on-demand refresh intermittently.
+- Fixed a bug where the Purview governance status doesn't report correctly upon on-demand refresh intermittently.
 
 ## April 10, 2023
 
@@ -354,7 +362,7 @@ With SQL Server enabled by Azure Arc, you can run the agent extension service wi
   - Provides comprehensive mitigation guidance
   - To experience best practices assessment, upgrade to the latest extension version.
 - Azure Arc-enabled Database resource populates the earliest restore time and last backup time for database resources as a resource
-- Pay-as-you-go (PAYG) licensing option is now extended to SQL Server 2012 and above
+- Pay-as-you-go licensing option is now extended to SQL Server 2012 and above
 - Ability to set the licensing type during onboarding Arc-enabled SQL Server.
 - Ability to skip instances during onboarding to Azure
 

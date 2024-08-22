@@ -322,11 +322,11 @@ To locate the listener endpoint in the Azure portal, go to your SQL managed inst
 
 Scroll down to find the listener endpoints:
 - The **Read/write** listener endpoint, in the form of `fog-name.dns-zone.database.windows.net`, routes traffic to the primary instance.
-- The **Read-only** listener endpoint, in the form of `fog-name.dns-zone.tutorial.database.windows.net`, routes traffic to the secondary instance.
+- The **Read-only** listener endpoint, in the form of `fog-name.secondary.dns-zone.database.windows.net`, routes traffic to the secondary instance.
 
 :::image type="content" source="media/failover-group-configure-sql-mi/find-failover-group-connection-string.png" alt-text="Screenshot where to find the failover group connection string in the Azure portal." lightbox="media/failover-group-configure-sql-mi/find-failover-group-connection-string.png":::
 
-## <a name="creating-a-failover-group-between-managed-instances-in-different-subscriptions"></a> Create group between instances in different subscriptions
+## <a name="creating-a-failover-group-between-managed-instances-in-different-subscriptions"></a> Create failover group between instances in different subscriptions
 
 You can create a failover group between SQL Managed Instances in two different subscriptions, as long as subscriptions are associated to the same [Microsoft Entra tenant](/azure/active-directory/fundamentals/active-directory-whatis#terminology).
 

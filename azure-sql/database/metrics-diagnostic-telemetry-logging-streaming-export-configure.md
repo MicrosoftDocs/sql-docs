@@ -25,7 +25,7 @@ You will also learn about the destinations to which you can stream this diagnost
 
 ## Diagnostic telemetry for export
 
-Yyou can export various performance metrics and additional database logs. The following table describes the performance metrics and resources logs that you can configure for streaming export to one of several destinations. This diagnostic telemetry can be configured for single databases, elastic pools and pooled databases, and managed instances and instance databases.
+You can export various performance metrics and additional database logs. The following table describes the performance metrics and resources logs that you can configure for streaming export to one of several destinations. This diagnostic telemetry can be configured for single databases, elastic pools and pooled databases, and SQL managed instances and their databases.
 
 | Diagnostic telemetry for databases | Azure SQL Database support | Azure SQL Managed Instance support |
 | :--- | --- | --- |

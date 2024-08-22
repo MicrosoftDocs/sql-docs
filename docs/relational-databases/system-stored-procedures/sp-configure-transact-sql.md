@@ -39,7 +39,7 @@ sp_configure
 [ ; ]
 ```
 
-Syntax for Parallel Data Warehouse.
+Syntax for Analytics Platform System (PDW).
 
 ```syntaxsql
 sp_configure

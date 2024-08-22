@@ -5,7 +5,7 @@ description: sys.elastic_pool_resource_stats (Azure SQL Database)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: 08/11/2022
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.topic: "reference"
 f1_keywords:
   - "sys.elastic_pool_resource_stats catalog view"

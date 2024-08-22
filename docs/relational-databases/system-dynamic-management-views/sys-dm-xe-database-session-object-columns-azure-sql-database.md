@@ -5,7 +5,7 @@ description: sys.dm_xe_database_session_object_columns (Azure SQL Database and A
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "4/18/2022"
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.topic: "reference"
 dev_langs:
   - "TSQL"

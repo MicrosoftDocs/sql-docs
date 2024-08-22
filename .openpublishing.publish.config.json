@@ -141,6 +141,12 @@
       "branch_mapping": {}
     },
     {
+      "path_to_root": "azure-compute-docs-pr",
+      "url": "https://github.com/MicrosoftDocs/azure-compute-docs-pr",
+      "branch": "main",
+      "branch_mapping": {}
+    },
+    {
       "path_to_root": "azure-reference-other-repo",
       "url": "https://github.com/MicrosoftDocs/azure-reference-other-pr",
       "branch": "main",

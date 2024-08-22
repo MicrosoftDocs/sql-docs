@@ -6,7 +6,7 @@ author: croblesm
 ms.author: roblescarlos
 ms.reviewer: wiassaf, randolphwest
 ms.date: 08/14/2024
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.topic: overview
 ---
 

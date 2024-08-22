@@ -5,7 +5,7 @@ author: VanMSFT
 ms.author: vanto
 ms.reviewer: randolphwest
 ms.date: 09/09/2022
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.topic: "reference"
 f1_keywords:
   - "sys.database_firewall_rules_TSQL"

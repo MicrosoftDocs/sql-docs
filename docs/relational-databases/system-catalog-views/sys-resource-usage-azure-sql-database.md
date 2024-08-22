@@ -5,7 +5,7 @@ description: sys.resource_usage (Azure SQL Database and Azure SQL Managed Instan
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "04/18/2022"
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.topic: "reference"
 f1_keywords:
   - "sys.resource_usage_TSQL"

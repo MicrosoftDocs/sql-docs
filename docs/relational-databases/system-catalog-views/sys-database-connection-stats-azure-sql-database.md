@@ -5,7 +5,7 @@ description: sys.database_connection_stats (Azure SQL Database)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "04/18/2022"
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.topic: "reference"
 f1_keywords:
   - "sys.database_connection_stats"

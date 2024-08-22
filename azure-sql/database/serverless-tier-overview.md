@@ -4,7 +4,7 @@ description: This article describes the new serverless compute tier and compares
 author: oslake
 ms.author: moslake
 ms.reviewer: wiassaf, mathoma
-ms.date: 08/15/2024
+ms.date: 08/21/2024
 ms.service: azure-sql-database
 ms.subservice: service-overview
 ms.topic: conceptual
@@ -199,17 +199,16 @@ Auto-resuming is triggered if any of the following conditions are true at any ti
 |Modifying certain database metadata|Adding new database tags.<br>Changing maximum vCores, minimum vCores, or auto-pause delay.|
 |SQL Server Management Studio (SSMS)|When using SSMS versions earlier than 18.1 and opening a new query window for any database in the server, any auto-paused database in the same server is resumed. This behavior does not occur if using SSMS version 18.1 or later.|
 
-- Monitoring, management, or other solutions performing any of these operations listed triggers auto-resuming.
-- Auto-resuming is also triggered during the deployment of some service updates that require the database be online.
+Monitoring, management, or other solutions performing any of the operations listed above will trigger auto-resuming.  Auto-resuming is also triggered during the deployment of some service updates that require the database be online.
 
 ### Connectivity
 
-If a serverless database is paused, the first connection attempt resumes the database and returns an error stating that the database is unavailable with error code 40613. Once the database is resumed, the login can be retried to establish connectivity. Database clients with a [recommended connection retry logic](/azure/architecture/patterns/retry) should not need to be modified. For recommended patterns for connection retry logic, review:
+If a serverless database is paused, the first connection attempt resumes the database and returns an error stating that the database is unavailable with error code 40613. Once the database is resumed, the login can be retried to establish connectivity. Database clients following [connection retry logic recommendations](/azure/architecture/patterns/retry) should not need to be modified. For connection retry logic options and recommendations, see:
 
-- [Retry logic in SqlClient](/sql/connect/ado-net/configurable-retry-logic)
-- [Retry logic in SQL Database using Entity Framework Core](/azure/architecture/best-practices/retry-service-specific#sql-database-using-entity-framework-core)
-- [Retry logic in SQL Database using Entity Framework 6](/azure/architecture/best-practices/retry-service-specific#sql-database-using-entity-framework-6)
-- [Retry logic in SQL Database using ADO.NET](/azure/architecture/best-practices/retry-service-specific#sql-database-using-adonet)
+- [Connection retry logic in SqlClient](/sql/connect/ado-net/configurable-retry-logic)
+- [Connection retry logic in SQL Database using Entity Framework Core](/azure/architecture/best-practices/retry-service-specific#sql-database-using-entity-framework-core)
+- [Connection retry logic in SQL Database using Entity Framework 6](/azure/architecture/best-practices/retry-service-specific#sql-database-using-entity-framework-6)
+- [Connection retry logic in SQL Database using ADO.NET](/azure/architecture/best-practices/retry-service-specific#sql-database-using-adonet)
 
 ### Latency
 
@@ -314,7 +313,7 @@ az sql db create -g $resourceGroupName -s $serverName -n $databaseName `
 
 #### Use Transact-SQL (T-SQL)
 
-When you use T-SQL to create a new serverless database, default values are applied for the minimum vCores and auto-pause delay. They can later be changed from the Azure portal or via other management APIs (PowerShell, Azure CLI, REST API).
+When using T-SQL to create a new serverless database, default values are applied for the minimum vCores and auto-pause delay. Their values can subsequently be changed from the Azure portal or via API including PowerShell, Azure CLI, and REST.
 
 For details, see [CREATE DATABASE](/sql/t-sql/statements/create-database-transact-sql?view=azuresqldb-current&preserve-view=true).  
 
@@ -340,16 +339,15 @@ MODIFY ( SERVICE_OBJECTIVE = 'HS_S_Gen5_2') ;
 
 
 
-## Move a database between compute tiers
+## Move a database between compute tiers or service tiers
 
-It's possible to move your database from the provisioned compute tier to the serverless compute tier, and back again. 
+A database can be moved between the provisioned compute tier and serverless compute tier.
 
-> [!NOTE]
-> It's also possible to upgrade your database in the General Purpose tier to the Hyperscale tier. Review [Manage Hyperscale databases](manage-hyperscale-database.md#migrate-an-existing-database-to-hyperscale) to learn more. 
+A serverless database can also be moved from the General Purpose service tier to the Hyperscale service tier.  Review [Manage Hyperscale databases](manage-hyperscale-database.md#migrate-an-existing-database-to-hyperscale) to learn more. 
 
-When moving your database between compute tiers, provide the **Compute model** parameter as either `Serverless` or `Provisioned` when using PowerShell and the Azure CLI, and the compute size for the  **SERVICE_OBJECTIVE** when using T-SQL. Review [resource limits](resource-limits-vcore-single-databases.md) to identify your appropriate compute size. 
+When moving a database between compute tiers, specify the **compute model** parameter as either `Serverless` or `Provisioned` when using PowerShell or Azure CLI, or the **SERVICE_OBJECTIVE** when using T-SQL. Review [resource limits](resource-limits-vcore-single-databases.md) to identify the appropriate service objective. 
 
-The examples in this section show you how to move your provisioned database to serverless. Modify the service objective as needed, as these examples set the maximum vCores to 4. 
+The following examples move an existing database from provisioned compute to serverless.  
 
 #### Use PowerShell
 
@@ -401,7 +399,7 @@ az sql db update -g $resourceGroupName -s $serverName -n $databaseName `
 
 #### Use Transact-SQL (T-SQL)
 
-When you use T-SQL to move a database between compute tiers, default values are applied for the minimum vCores and auto-pause delay. They can later be changed from the Azure portal or via other management APIs (PowerShell, Azure CLI, REST API). For more information, see [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql?view=azuresqldb-current&preserve-view=true).
+When using T-SQL to move a database between compute tiers, default values are applied for the minimum vCores and auto-pause delay. Their values can subsequently be changed from the Azure portal or via API including PowerShell, Azure CLI, and REST. For more information, see [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql?view=azuresqldb-current&preserve-view=true).
 
 # [General Purpose](#tab/general-purpose)
 

@@ -367,19 +367,24 @@ In addition to improving the `Active Directory Interactive` authentication exper
 public class ActiveDirectoryAuthenticationProvider
 {
     // For .NET Framework targeted applications only
-    // Sets a reference to the current System.Windows.Forms.IWin32Window that triggers the browser to be shown. 
+    // Sets a reference to the current System.Windows.Forms.IWin32Window that triggers
+    // the browser to be shown. 
     // Used to center the browser pop-up onto this window.
     public void SetIWin32WindowFunc(Func<IWin32Window> iWin32WindowFunc);
 
     // For .NET Standard targeted applications only
-    // Sets a reference to the ViewController (if using Xamarin.iOS), Activity (if using Xamarin.Android) IWin32Window, or IntPtr (if using .NET Framework). 
+    // Sets a reference to the ViewController (if using Xamarin.iOS), Activity
+    // (if using Xamarin.Android) IWin32Window, or IntPtr (if using .NET Framework). 
     // Used for invoking the browser for Active Directory Interactive authentication.
     public void SetParentActivityOrWindowFunc(Func<object> parentActivityOrWindowFunc);
 
     // For .NET Framework, .NET Core, and .NET Standard targeted applications
-    // Sets a callback method that's invoked with a custom web UI instance that will let the user sign in with Azure AD, present consent if needed, and get back the authorization code. 
+    // Sets a callback method that's invoked with a custom web UI instance that lets
+    // the user sign in with Azure AD, present consent if needed, and get back the
+    // authorization code. 
     // Applicable when working with Active Directory Interactive authentication.
-    public void SetAcquireAuthorizationCodeAsyncCallback(Func<Uri, Uri, CancellationToken, Task<Uri>> acquireAuthorizationCodeAsyncCallback);
+    public void SetAcquireAuthorizationCodeAsyncCallback(Func<Uri, Uri, CancellationToken,
+                                       Task<Uri>> acquireAuthorizationCodeAsyncCallback);
 
     // For .NET Framework, .NET Core, and .NET Standard targeted applications
     // Clears cached user tokens from the token provider.

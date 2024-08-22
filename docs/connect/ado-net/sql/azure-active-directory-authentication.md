@@ -284,7 +284,8 @@ The following example shows how to use **Active Directory Default** authenticati
 
 ```cs
 // Use your own server, database
-string ConnectionString = @"Server=demo.database.windows.net; Authentication=Active Directory Default; Encrypt=True; Database=testdb;";
+string ConnectionString = @"Server=demo.database.windows.net;"
+  + "Authentication=Active Directory Default; Encrypt=True; Database=testdb;";
 
 using (SqlConnection conn = new SqlConnection(ConnectionString)) {
     conn.Open();
@@ -300,7 +301,9 @@ The following example demonstrates `Active Directory Workload Identity` authenti
 ```cs
 // Use your own values for Server, Database, and User Id.
 // With Microsoft.Data.SqlClient v5.2+
-string ConnectionString = @"Server=demo.database.windows.net; Authentication=Active Directory Workload Identity; Encrypt=True; User Id=ClientIdOfManagedIdentity; Database=testdb";
+string ConnectionString = @"Server=demo.database.windows.net;"
+  + "Authentication=Active Directory Workload Identity; Encrypt=True;"
+  + "User Id=ClientIdOfManagedIdentity; Database=testdb";
 
 using (SqlConnection conn = new SqlConnection(ConnectionString)) {
     conn.Open();

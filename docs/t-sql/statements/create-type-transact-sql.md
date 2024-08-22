@@ -4,7 +4,7 @@ description: Creates an alias data type or a user-defined type in the current da
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 12/11/2023
+ms.date: 08/22/2024
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -109,6 +109,7 @@ column_name AS computed_column_expression
 < table_index > ::=
   INDEX index_name
      [ CLUSTERED | NONCLUSTERED ] (column [ ASC | DESC ] [ , ...n ] )
+     [INCLUDE (column, ...n)]
 ```
 
 User-defined memory optimized table types syntax:

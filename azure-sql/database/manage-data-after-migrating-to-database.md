@@ -5,7 +5,7 @@ description: Learn how to manage your single and pooled databases after migratio
 author: croblesm
 ms.author: roblescarlos
 ms.reviewer: wiassaf, mathoma
-ms.date: 08/16/2024
+ms.date: 08/22/2024
 ms.service: azure-sql-database
 ms.subservice: migration
 ms.topic: conceptual
@@ -228,7 +228,7 @@ ExpressRoute also allows you to burst up to 2x the bandwidth limit you purchase 
 
 ### Is SQL Database compliant with any regulatory requirements, and how does that help with my own organization's compliance
 
-SQL Database is compliant with a range of regulatory compliancies. To view the latest set of compliancies that have been met by SQL Database, visit the [Microsoft Trust Center](https://www.microsoft.com/trust-center/product-overview) and drill down on the compliancies that are important to your organization to see if SQL Database is included under the compliant Azure services. it's important to note that although SQL Database may be certified as a compliant service, it aids in the compliance of your organization's service but doesn't automatically guarantee it.
+SQL Database is compliant with a range of regulatory compliancies. To view the latest set of compliancies that have been met by SQL Database, visit the [Microsoft Trust Center](https://www.microsoft.com/trust-center/product-overview) and drill down on the compliancies that are important to your organization to see if SQL Database is included under the compliant Azure services. It's important to note that although SQL Database may be certified as a compliant service, it aids in the compliance of your organization's service but doesn't automatically guarantee it.
 
 ## Intelligent database monitoring and maintenance after migration
 

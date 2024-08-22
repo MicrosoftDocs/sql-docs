@@ -5,7 +5,7 @@ description: Learn how to create instance pools (preview) for Azure SQL Managed 
 author: MariDjo
 ms.author: dmarinkovic
 ms.reviewer: mathoma, randolphwest
-ms.date: 08/16/2024
+ms.date: 08/22/2024
 ms.service: azure-sql-managed-instance
 ms.subservice: deployment-configuration
 ms.topic: how-to
@@ -116,7 +116,7 @@ $instancePool = New-AzSqlInstancePool @parameters
 To create your instance pool, use [az sql instance-pool create](/cli/azure/sql/instance-pool#az-sql-instance-pool-create).
 
 Consider the following:
-- For `--license-type`, use *BasePrice* for the Azure Hybrid Benefit or *LicenseIncluded* if you have don't have a SQL Server license that can be used for the Azure Hybrid Benefit discount.
+- For `--license-type`, use *BasePrice* for the Azure Hybrid Benefit or *LicenseIncluded* if you don't have a SQL Server license that can be used for the Azure Hybrid Benefit discount.
 
 Create a new instance pool with 8 vCores on standard-series (Gen5) hardware by running the following sample script:
 

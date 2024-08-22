@@ -1,7 +1,7 @@
 ---
 title: Monitor Azure SQL Managed Instance
 description: Start here to learn how to monitor Azure SQL Managed Instance.
-ms.date: 08/16/2024
+ms.date: 08/22/2024
 ms.custom: horz-monitor
 ms.topic: conceptual
 author: MashaMSFT
@@ -52,7 +52,7 @@ For a list of available metrics for SQL Managed Instance, see [SQL Managed Insta
 Auditing for Azure SQL Managed Instance tracks database events and writes them to an audit log in your Azure storage account. For more information, see [Get started with SQL Managed Instance auditing](auditing-configure.md).
 For more information on the resource logs and diagnostics available for Azure SQL Managed Instance, see [Configure streaming export of diagnostic telemetry](../database/metrics-diagnostic-telemetry-logging-streaming-export-configure.md).
 
-For the available resource log categories, their associated Log Analytics tables, and the logs schemas for SQL Managed Instance, see [SQL Managed Instance monitoring data reference](monitoring-sql-managed-instance-azure-monitor-reference.md#resource-logs).
+For the available resource log categories, their associated Log Analytics tables, and the log schemas for SQL Managed Instance, see [SQL Managed Instance monitoring data reference](monitoring-sql-managed-instance-azure-monitor-reference.md#resource-logs).
 
 [!INCLUDE [horz-monitor-activity-log](~/../azure-sql/reusable-content/ce-skilling/azure/includes/azure-monitor/horizontals/horz-monitor-activity-log.md)]
 

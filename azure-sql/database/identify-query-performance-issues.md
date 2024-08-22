@@ -5,7 +5,7 @@ description: Learn about types of query performance issues in Azure SQL Database
 author: NikaKinska
 ms.author: nnikolic
 ms.reviewer: mathoma, wiassaf
-ms.date: 08/16/2024
+ms.date: 08/22/2024
 ms.service: azure-sql-database
 ms.subservice: performance
 ms.topic: troubleshooting
@@ -154,7 +154,7 @@ A recompilation (or fresh compilation after cache eviction) can still result in 
 Slow query performance not related to suboptimal query plans and missing indexes are generally related to insufficient or overused resources. If the query plan is optimal, the query (and the database) might be hitting the resource limits for the database or elastic pool. An example might be excess log write throughput for the service level.
 
 - Detecting resource issues using the Azure portal: To see if resource limits are the problem, see [SQL Database resource monitoring](monitor-tune-overview.md#azure-sql-database-and-azure-sql-managed-instance-resource-monitoring). For single databases and elastic pools, see [Database Advisor performance recommendations](database-advisor-implement-performance-recommendations.md) and [Query Performance Insights](query-performance-insight-use.md).
-- Detecting resource limits using [database watcher](../database-watcher-overview.md)
+- Detecting resource limits using [database watcher](../database-watcher-overview.md).
 - Detecting resource issues using [DMVs](monitoring-with-dmvs.md):
 
   - The [sys.dm_db_resource_stats](monitoring-with-dmvs.md#monitor-resource-use) DMV returns CPU, I/O, and memory consumption for the database. One row exists for every 15-second interval, even if there's no activity in the database. Historical data is maintained for one hour.

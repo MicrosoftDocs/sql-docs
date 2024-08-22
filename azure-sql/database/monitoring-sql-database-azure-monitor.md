@@ -1,7 +1,7 @@
 ---
 title: Monitor Azure SQL Database
 description: Start here to learn how to monitor Azure SQL Database.
-ms.date: 08/16/2024
+ms.date: 08/22/2024
 ms.custom: horz-monitor
 ms.topic: conceptual
 author: WilliamDAssafMSFT
@@ -66,7 +66,7 @@ Auditing for Azure SQL Database tracks database events and writes them to an aud
 
 For more information on the resource logs and diagnostics available for Azure SQL Database, see [Configure streaming export of diagnostic telemetry](metrics-diagnostic-telemetry-logging-streaming-export-configure.md).
 
-For the available resource log categories, their associated Log Analytics tables, and the logs schemas for SQL Database, see [SQL Database monitoring data reference](monitoring-sql-database-azure-monitor-reference.md#resource-logs).
+For the available resource log categories, their associated Log Analytics tables, and the log schemas for SQL Database, see [SQL Database monitoring data reference](monitoring-sql-database-azure-monitor-reference.md#resource-logs).
 
 [!INCLUDE [horz-monitor-activity-log](~/../azure-sql/reusable-content/ce-skilling/azure/includes/azure-monitor/horizontals/horz-monitor-activity-log.md)]
 

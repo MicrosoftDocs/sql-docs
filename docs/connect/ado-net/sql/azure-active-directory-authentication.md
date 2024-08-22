@@ -61,7 +61,9 @@ When the application is connecting to Azure SQL data sources by using Microsoft 
 
 ```cs
 // Use your own server, database, user ID, and password.
-string ConnectionString = @"Server=demo.database.windows.net; Authentication=Active Directory Password; Encrypt=True; Database=testdb; User Id=user@domain.com; Password=***";
+string ConnectionString = @"Server=demo.database.windows.net;"
+   + "Authentication=Active Directory Password; Encrypt=True; Database=testdb;"
+   + "User Id=user@domain.com; Password=***";
 
 using (SqlConnection conn = new SqlConnection(ConnectionString)) {
     conn.Open();

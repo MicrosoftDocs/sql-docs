@@ -80,14 +80,17 @@ The following code snippet is an example of when `Active Directory Integrated` a
 
 ```cs
 // Use your own server and database.
-string ConnectionString1 = @"Server=demo.database.windows.net; Authentication=Active Directory Integrated; Encrypt=True; Database=testdb";
+string ConnectionString1 = @"Server=demo.database.windows.net;"
+  + "Authentication=Active Directory Integrated; Encrypt=True; Database=testdb";
 
 using (SqlConnection conn = new SqlConnection(ConnectionString1)) {
     conn.Open();
 }
 
 // User ID is optional for .NET Core and .NET Standard.
-string ConnectionString2 = @"Server=demo.database.windows.net; Authentication=Active Directory Integrated; Encrypt=True; Database=testdb; User Id=user@domain.com";
+string ConnectionString2 = @"Server=demo.database.windows.net;"
+  + "Authentication=Active Directory Integrated; Encrypt=True; Database=testdb;"
+  + "User Id=user@domain.com";
 
 using (SqlConnection conn = new SqlConnection(ConnectionString2)) {
     conn.Open();
@@ -135,7 +138,9 @@ The following example shows how to use `Active Directory Service Principal` auth
 
 ```cs
 // Use your own server, database, app ID, and secret.
-string ConnectionString = @"Server=demo.database.windows.net; Authentication=Active Directory Service Principal; Encrypt=True; Database=testdb; User Id=AppId; Password=secret";
+string ConnectionString = @"Server=demo.database.windows.net;"
+  + "Authentication=Active Directory Service Principal; Encrypt=True;"
+  + "Database=testdb; User Id=AppId; Password=secret";
 
 using (SqlConnection conn = new SqlConnection(ConnectionString)) {
     conn.Open();
@@ -154,7 +159,8 @@ The following code snippet is an example of using `Active Directory Device Code 
 > The timeout for `Active Directory Device Code Flow` defaults to the connection's `Connect Timeout` setting. Make sure to specify a `Connect Timeout` that provides enough time to go through the device code flow authentication process.
 
 ```cs
-// Use your own server and database and increase Connect Timeout as needed for device code flow.
+// Use your own server and database and increase Connect Timeout as needed for
+// device code flow.
 string ConnectionString = @"Server=demo.database.windows.net;"
   + "Authentication=Active Directory Device Code Flow; Encrypt=True;"
   + "Database=testdb; Connect Timeout=180;";

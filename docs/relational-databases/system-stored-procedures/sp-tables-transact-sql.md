@@ -30,7 +30,7 @@ Returns a list of objects that can be queried in the current environment. This m
 
 ## Syntax
 
-Syntax for SQL Server, Azure SQL Database, Azure Synapse Analytics, Parallel Data Warehouse:
+Syntax for SQL Server, Azure SQL Database, Azure Synapse Analytics, Analytics Platform System (PDW):
 
 ```syntaxsql
 sp_tables

@@ -6,7 +6,7 @@ author: VanMSFT
 ms.author: vanto
 ms.reviewer: randolphwest
 ms.date: 05/24/2023
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.topic: "reference"
 helpviewer_keywords:
   - "firewall rules stored procedures"

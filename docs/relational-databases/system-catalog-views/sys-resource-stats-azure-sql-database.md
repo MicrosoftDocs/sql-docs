@@ -5,7 +5,7 @@ author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: wiassaf
 ms.date: "4/18/2022"
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.topic: "reference"
 f1_keywords:
   - "resource_stats"

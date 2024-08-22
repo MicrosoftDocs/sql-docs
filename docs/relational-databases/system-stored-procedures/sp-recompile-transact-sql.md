@@ -44,7 +44,7 @@ The qualified or unqualified name of a stored procedure, trigger, table, view, o
 
 ## Return code values
 
-0 (success) or a nonzero number (failure)
+`0` (success) or a nonzero number (failure).
 
 ## Remarks
 

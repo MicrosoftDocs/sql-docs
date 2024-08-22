@@ -101,7 +101,7 @@ The type of object being renamed. *object_type* is **varchar(13)**, with a defau
 
 ## Return code values
 
-0 (success) or a nonzero number (failure)
+`0` (success) or a nonzero number (failure).
 
 ## Remarks
 

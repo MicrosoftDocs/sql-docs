@@ -30,7 +30,7 @@ Removes a security account from a [!INCLUDE [ssNoVersion](../../includes/ssnover
 
 ## Syntax
 
-Syntax for [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] and [!INCLUDE [ssazurede-md](../../includes/ssazurede-md.md)]:
+Syntax for [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] and [!INCLUDE [ssazurede-md](../../includes/ssazurede-md.md)].
 
 ```syntaxsql
 sp_droprolemember
@@ -39,7 +39,7 @@ sp_droprolemember
 [ ; ]
 ```
 
-Syntax for Azure Synapse Analytics and Parallel Data Warehouse:
+Syntax for Azure Synapse Analytics and Analytics Platform System (PDW).
 
 ```syntaxsql
 sp_droprolemember N'rolename', 'membername'

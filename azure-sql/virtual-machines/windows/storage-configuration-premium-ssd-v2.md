@@ -52,7 +52,7 @@ If you configure your 100-GiB disk to use only 3,000 IOPS, you are limited to 75
 
 The following table provides the scale of IOPS and throughput when using Premium SSD v2, up to the maximum configurable values:
 
-[!INCLUDE [disks-premv2-performance](~/../azure-docs-pr/includes/disks-premv2-performance.md)]
+[!INCLUDE [disks-premv2-performance](~/../azure-compute-docs-pr/includes/disks-premv2-performance.md)]
 
 
 > [!NOTE]
@@ -210,7 +210,7 @@ When deploying SQL Server on Azure VMs in the Azure portal, Premium SSD v2 is on
 
 The following limitations apply to Premium SSD v2: 
  
-[!INCLUDE [disks-prem-v2-limitations](~/../azure-docs-pr/includes/disks-prem-v2-limitations.md)]
+[!INCLUDE [disks-prem-v2-limitations](~/../azure-compute-docs-pr/includes/disks-prem-v2-limitations.md)]
 
 > [!NOTE]
 > Premium SSD v2 is currently available in [specific regions](/azure/virtual-machines/disks-types#regional-availability). 

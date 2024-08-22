@@ -5,7 +5,7 @@ description: sys.dm_db_objects_impacted_on_version_change (Azure SQL Database)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "03/03/2017"
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.topic: "reference"
 f1_keywords:
   - "sys.dm_db_objects_impacted_on_version_change_TSQL"

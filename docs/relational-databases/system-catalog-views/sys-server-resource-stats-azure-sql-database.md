@@ -5,7 +5,7 @@ author: danimir
 ms.author: danil
 ms.reviewer: mathoma, urmilano, wiassaf
 ms.date: "03/09/2022"
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.topic: "reference"
 f1_keywords:
   - "server_resource_stats"

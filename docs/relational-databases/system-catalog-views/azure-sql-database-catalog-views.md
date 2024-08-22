@@ -4,7 +4,7 @@ description: Azure SQL Database Catalog Views
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: 08/09/2022
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.topic: "reference"
 helpviewer_keywords:
   - "Azure SQL Database catalog views"

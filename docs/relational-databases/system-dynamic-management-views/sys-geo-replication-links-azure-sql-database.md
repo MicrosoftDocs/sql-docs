@@ -4,7 +4,7 @@ description: sys.geo_replication_links (Azure SQL Database)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: 06/10/2022
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.topic: conceptual
 f1_keywords:
   - "dm_geo_replication_links_TSQL"

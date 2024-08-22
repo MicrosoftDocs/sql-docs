@@ -2,7 +2,7 @@
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: 10/22/2023
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.topic: include
 ---
 Some Transact-SQL code examples written for SQL Server need small changes to run in Azure. One category of such code examples involves catalog views whose name prefixes differ depending on the database engine type:

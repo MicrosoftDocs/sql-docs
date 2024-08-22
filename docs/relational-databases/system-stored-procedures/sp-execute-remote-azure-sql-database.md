@@ -5,7 +5,7 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
 ms.date: 07/16/2024
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.topic: conceptual
 f1_keywords:
   - "sp_execute_remote"

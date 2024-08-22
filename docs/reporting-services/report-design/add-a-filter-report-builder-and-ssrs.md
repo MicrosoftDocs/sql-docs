@@ -63,7 +63,7 @@ To filter data points in a chart, you can set a filter on a category group or a 
   
 1. In the **Grouping** pane, right-click the group, and then select **Group Properties** to add filter to the group.
 
-  :::image type="content" source="../../reporting-services/report-design/media/group-properties.png" alt-text="Screenshot of the context menu for a Tablix data region group that highlights the Group Properties option.":::
+    :::image type="content" source="../../reporting-services/report-design/media/group-properties.png" alt-text="Screenshot of the context menu for a Tablix data region group that highlights the Group Properties option.":::
 
 1. Select **Filters**. This action displays the current list of filter equations. By default, the list is empty.  
   

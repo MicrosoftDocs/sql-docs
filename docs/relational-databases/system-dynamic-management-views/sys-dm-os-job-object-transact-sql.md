@@ -4,7 +4,7 @@ description: sys.dm_os_job_object (Azure SQL Database)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "06/03/2020"
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.topic: "reference"
 f1_keywords:
   - "sys.dm_os_job_object"

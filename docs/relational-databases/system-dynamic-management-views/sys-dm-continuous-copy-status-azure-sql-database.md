@@ -5,7 +5,7 @@ description: sys.dm_continuous_copy_status (Azure SQL Database and Azure SQL Man
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "4/18/2022"
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.topic: "reference"
 f1_keywords:
   - "sys.dm_continuous_copy_status_TSQL"

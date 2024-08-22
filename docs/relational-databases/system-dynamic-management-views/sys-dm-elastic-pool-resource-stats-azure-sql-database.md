@@ -6,7 +6,7 @@ author: WilliaMDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: dfurman, arvindsh
 ms.date: 08/11/2022
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.topic: "reference"
 f1_keywords:
   - "sys.dm_elastic_pool_resource_stats catalog view"

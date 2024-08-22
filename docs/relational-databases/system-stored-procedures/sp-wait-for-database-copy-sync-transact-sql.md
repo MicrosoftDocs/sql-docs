@@ -6,7 +6,7 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
 ms.date: 04/27/2023
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.topic: "reference"
 f1_keywords:
   - "sp_wait_for_database_copy_sync_TSQL"

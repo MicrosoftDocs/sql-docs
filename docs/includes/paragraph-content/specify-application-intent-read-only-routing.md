@@ -4,7 +4,7 @@ description: include file
 author: rothja
 ms.author: jroth
 ms.date: 04/05/2018
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.topic: include
 ms.custom: include file
 ---

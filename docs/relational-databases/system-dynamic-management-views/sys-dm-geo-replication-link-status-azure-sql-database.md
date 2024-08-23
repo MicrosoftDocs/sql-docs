@@ -5,7 +5,7 @@ description: Contains a row for each replication link between primary and second
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: 06/10/2022
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.topic: conceptual
 f1_keywords:
   - "dm_geo_replication_link_status"

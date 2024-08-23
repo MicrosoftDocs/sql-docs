@@ -4,7 +4,7 @@ description: sys.dm_db_wait_stats (Azure SQL Database)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "02/27/2023"
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.topic: "reference"
 f1_keywords:
   - "dm_db_wait_stats_TSQL"

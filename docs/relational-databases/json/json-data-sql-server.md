@@ -4,7 +4,7 @@ description: Combine NoSQL and relational concepts in the same database with JSO
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: randolphwest, jovanpop
-ms.date: 05/21/2024
+ms.date: 08/20/2024
 ms.service: sql
 ms.topic: quickstart
 ms.custom:
@@ -64,7 +64,7 @@ The new **json** data type that stores JSON documents in a native binary format 
 - No change in compatibility with existing code
 
 > [!NOTE]
-> - Currently, the [JSON data type](../../t-sql/data-types/json-data-type.md) is available in Azure SQL Database.
+> The [JSON data type](../../t-sql/data-types/json-data-type.md) is currently in preview for Azure SQL Database and Azure SQL Managed Instance (configured with the [**Always-up-to-date** update policy](/azure/azure-sql/managed-instance/update-policy#always-up-to-date-update-policy)). 
 
 Using the JSON same functions described in this article remain the most efficient way to query the **json** data type. For more information on the native **json** data type, see [JSON data type](../../t-sql/data-types/json-data-type.md).
 
@@ -256,7 +256,7 @@ JSON aggregate functions enable construction of JSON objects or arrays based on 
 - [JSON_ARRAYAGG](../../t-sql/functions/json-arrayagg-transact-sql.md) constructs a JSON **array** from an aggregation of SQL data or columns.
 
 > [!NOTE]
-> Currently, both **json** aggregate functions `JSON_OBJECTAGG` and `JSON_ARRAYAGG` are available in preview for Azure SQL Database.
+> Both **json** aggregate functions `JSON_OBJECTAGG` and `JSON_ARRAYAGG` are currently in preview for Azure SQL Database and Azure SQL Managed Instance (configured with the [**Always-up-to-date** update policy](/azure/azure-sql/managed-instance/update-policy#always-up-to-date-update-policy)). 
 
 ## Use cases for JSON data in SQL Server
 

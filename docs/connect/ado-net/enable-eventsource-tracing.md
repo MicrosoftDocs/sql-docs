@@ -3,8 +3,8 @@ title: Enable event tracing in SqlClient
 description: Describes how to enable event tracing or logging in SqlClient by implementing an event listener and how to access the event data.
 author: David-Engel
 ms.author: davidengel
-ms.reviewer: v-davidengel
-ms.date: 03/15/2023
+ms.reviewer: davidengel
+ms.date: 08/21/2024
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: conceptual
@@ -103,11 +103,11 @@ class Program
 }
 ```
 
-### Use Xperf to collect trace log
+## Use Xperf to collect traces
 
 1. Start tracing using the following command.
 
-   ```
+   ```powershell
    xperf -start trace -f myTrace.etl -on *Microsoft.Data.SqlClient.EventSource
    ```
 
@@ -115,21 +115,21 @@ class Program
 
 3. Stop tracing using the following command line.
 
-   ```
+   ```powershell
    xperf -stop trace
    ```
 
-4. Use PerfView to open the myTrace.etl file specified in Step 1. The SNI tracing log can be found with `Microsoft.Data.SqlClient.EventSource/SNIScope` and `Microsoft.Data.SqlClient.EventSource/SNITrace` event names.
+4. Use [PerfView](https://github.com/microsoft/perfview) to open the myTrace.etl file specified in Step 1. The SNI tracing log can be found with `Microsoft.Data.SqlClient.EventSource/SNIScope` and `Microsoft.Data.SqlClient.EventSource/SNITrace` event names.
 
    ![Use PerfView to view SNI trace file](media/view-event-trace-native-sni.png)
 
-### Use PerfView to collect trace log
+## Use PerfView to collect traces
 
-1. Start PerfView and run `Collect > Collect` from the menu bar.
+1. Start [PerfView](https://github.com/microsoft/perfview) and run `Collect > Collect` from the menu bar.
 
 2. Configure the trace file name, output path, and provider name.
 
-   ![Configure Prefview before collection](media/collect-event-trace-native-sni.png)
+   ![Configure Perfview before collection](media/collect-event-trace-native-sni.png)
 
 3. Start collection.
 
@@ -138,6 +138,42 @@ class Program
 5. Stop collection from PerfView. It takes a while to generate the PerfViewData.etl file according to the configuration in Step 2.
 
 6. Open the `etl` file in PerfView. The SNI tracing log can be found with `Microsoft.Data.SqlClient.EventSource/SNIScope` and `Microsoft.Data.SqlClient.EventSource/SNITrace` event names.
+
+## Use PerfCollect to collect traces
+
+On Linux, PerfCollect can be used to capture traces. PerfCollect is a bash script that uses .NET tools to collect traces for .NET applications. For more information about PerfCollect, see [Performance Tracing on Linux](https://github.com/dotnet/coreclr/blob/master/Documentation/project-docs/linux-performance-tracing.md) The traces created by PerfCollect can be viewed in [PerfView](https://github.com/microsoft/perfview).
+
+1. If not already installed, install curl (Ubuntu commands are provided):
+
+   ```bash
+   sudo apt-get update
+   sudo apt-get install curl
+   ```
+
+1. Install PerfCollect:
+
+   ```bash
+   sudo curl –OL http://aka.ms/perfcollect
+   sudo chmod +x perfcollect
+   sudo ./perfcollect install
+   ```
+
+1. Define environment variables for PerfCollect:
+
+   ```bash
+   export COMPles_perfMapEnab;ed=1
+   export COMPlus_EnableEventLog=1
+   ```
+
+1. Collect logs:
+
+   ```bash
+   sudo ./perfcollect collect <trace file name>
+   ```
+
+Run the application separately and let it run as long as needed to reproduce the issue. If it's a high CPU issue, 5-10 seconds is usually enough. Press CTRL+C to stop tracing.
+
+Copy the trace file to another system and view it in [PerfView](https://github.com/microsoft/perfview).
 
 ## External resources
 

@@ -5,7 +5,7 @@ description: sys.dm_xe_database_session_targets (Azure SQL Database and Azure SQ
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: 10/27/2023
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.topic: "reference"
 dev_langs:
   - "TSQL"

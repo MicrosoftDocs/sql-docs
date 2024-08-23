@@ -5,7 +5,7 @@ author: SudhirRaparla
 ms.author: nvraparl
 ms.reviewer: randolphwest
 ms.date: 09/28/2023
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.topic: "reference"
 f1_keywords:
   - "dm_database_backups_TSQL"

@@ -54,7 +54,7 @@ Supports for the memory-optimized premium-series hardware and the premium-series
 |:-- |:-- |
 | Europe | France Central, Germany West Central, Italy North, North Europe, Poland Central, Sweden Central, Switzerland North, UK South, West Europe |
 | Middle East, Africa | Qatar Central | 
-| Americas | Brazil South, Canada Central, Canada East, Central US, East US, East US 2, North Central US, South Central US, West US, West Central US, West US 2 |
+| Americas | Brazil South, Canada Central, Canada East, Central US, East US 2, North Central US, South Central US, West US, West Central US, West US 2 |
 | Asia Pacific | Australia East, Australia Southeast, China North 3, India Central, East Asia, Japan East, Southeast Asia |
 
 ### In-memory OLTP available space

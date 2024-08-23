@@ -53,13 +53,13 @@ sections:
   - name: Security
     questions:
       - question: What are the best practices for security?
-        answer: Review and implement [SQL Server enabled by Azure Arc best practices](secure-best-practices.md).
+        answer: Review and implement [SQL Server enabled by Azure Arc best practices](security-overview.md#best-practices).
 
       - question: Is TDE with Azure Key Vault supported?
         answer: No. TDE with Azure Key Vault is not supported today SQL Server enabled by Azure Arc. You can manually set up TDE for your own instances.
 
       - question: Is there key vault support?
-        answer: Yes, there is key vault support today for SQL Server enabled by Azure Arc for storing the Entra ID certificate.
+        answer: Yes, there is key vault support today for SQL Server enabled by Azure Arc for storing the Microsoft Entra ID certificate.
 
       - question: Does SQL Server enabled by Azure Arc support Private Link?
         answer: |

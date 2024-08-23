@@ -4,7 +4,7 @@ description: Set up an availability group in SQL Server on Kubernetes using DH2i
 author: aravindmahadevan-ms
 ms.author: armaha
 ms.reviewer: amitkh, randolphwest
-ms.date: 04/10/2024
+ms.date: 08/20/2024
 ms.service: sql
 ms.subservice: linux
 ms.topic: tutorial
@@ -49,77 +49,77 @@ This tutorial shows an example of an AG with three replicas. You need:
    apiVersion: v1
    kind: Service
    metadata:
-   name: dxemssql-0
+     name: dxemssql-0
    spec:
-   clusterIP: None
-   selector:
+     clusterIP: None
+     selector:
        statefulset.kubernetes.io/pod-name: dxemssql-0
-   ports:
-   - name: dxl
-       protocol: TCP
-       port: 7979
-   - name: dxc-tcp
-       protocol: TCP
-       port: 7980
-   - name: dxc-udp
-       protocol: UDP
-       port: 7981
-   - name: sql
-       protocol: TCP
-       port: 1433
-   - name: listener
-       protocol: TCP
-       port: 14033
+     ports:
+       - name: dxl
+         protocol: TCP
+         port: 7979
+       - name: dxc-tcp
+         protocol: TCP
+         port: 7980
+       - name: dxc-udp
+         protocol: UDP
+         port: 7981
+       - name: sql
+         protocol: TCP
+         port: 1433
+       - name: listener
+         protocol: TCP
+         port: 14033
    ---
    apiVersion: v1
    kind: Service
    metadata:
-   name: dxemssql-1
+     name: dxemssql-1
    spec:
-   clusterIP: None
-   selector:
+     clusterIP: None
+     selector:
        statefulset.kubernetes.io/pod-name: dxemssql-1
-   ports:
-   - name: dxl
-       protocol: TCP
-       port: 7979
-   - name: dxc-tcp
-       protocol: TCP
-       port: 7980
-   - name: dxc-udp
-       protocol: UDP
-       port: 7981
-   - name: sql
-       protocol: TCP
-       port: 1433
-   - name: listener
-       protocol: TCP
-       port: 14033
+     ports:
+       - name: dxl
+         protocol: TCP
+         port: 7979
+       - name: dxc-tcp
+         protocol: TCP
+         port: 7980
+       - name: dxc-udp
+         protocol: UDP
+         port: 7981
+       - name: sql
+         protocol: TCP
+         port: 1433
+       - name: listener
+         protocol: TCP
+         port: 14033
    ---
    apiVersion: v1
    kind: Service
    metadata:
-   name: dxemssql-2
+     name: dxemssql-2
    spec:
-   clusterIP: None
-   selector:
+     clusterIP: None
+     selector:
        statefulset.kubernetes.io/pod-name: dxemssql-2
-   ports:
-   - name: dxl
-       protocol: TCP
-       port: 7979
-   - name: dxc-tcp
-       protocol: TCP
-       port: 7980
-   - name: dxc-udp
-       protocol: UDP
-       port: 7981
-   - name: sql
-       protocol: TCP
-       port: 1433
-   - name: listener
-       protocol: TCP
-       port: 14033
+     ports:
+       - name: dxl
+         protocol: TCP
+         port: 7979
+       - name: dxc-tcp
+         protocol: TCP
+         port: 7980
+       - name: dxc-udp
+         protocol: UDP
+         port: 7981
+       - name: sql
+         protocol: TCP
+         port: 1433
+       - name: listener
+         protocol: TCP
+         port: 14033
    ```
 
 1. Run the following command to apply the configuration.
@@ -139,64 +139,64 @@ This tutorial shows an example of an AG with three replicas. You need:
    apiVersion: apps/v1
    kind: StatefulSet
    metadata:
-   name: dxemssql
+     name: dxemssql
    spec:
-   serviceName: "dxemssql"
-   replicas: 3
-   selector:
+     serviceName: "dxemssql"
+     replicas: 3
+     selector:
        matchLabels:
-       app: dxemssql
-   template:
+         app: dxemssql
+     template:
        metadata:
-       labels:
+         labels:
            app: dxemssql
        spec:
-       securityContext:
+         securityContext:
            fsGroup: 10001
-       containers:
-       - name: sql
-           image: mcr.microsoft.com/mssql/server:2022-latest
-           env:
-           - name: ACCEPT_EULA
-           value: "Y"
-           - name: MSSQL_ENABLE_HADR
-           value: "1"
-           - name: MSSQL_SA_PASSWORD
-           valueFrom:
-               secretKeyRef:
-               name: mssql
-               key: MSSQL_SA_PASSWORD
-           volumeMounts:
-           - name: mssql
-           mountPath: "/var/opt/mssql"
-       - name: dxe
-           image: dh2i/dxe
-           env:
-           - name: MSSQL_SA_PASSWORD
-           valueFrom:
-               secretKeyRef:
-               name: mssql
-               key: MSSQL_SA_PASSWORD
-           volumeMounts:
+         containers:
+           - name: sql
+             image: mcr.microsoft.com/mssql/server:2022-latest
+             env:
+               - name: ACCEPT_EULA
+                 value: "Y"
+               - name: MSSQL_ENABLE_HADR
+                 value: "1"
+               - name: MSSQL_SA_PASSWORD
+                 valueFrom:
+                   secretKeyRef:
+                     name: mssql
+                     key: MSSQL_SA_PASSWORD
+             volumeMounts:
+               - name: mssql
+                 mountPath: "/var/opt/mssql"
            - name: dxe
-           mountPath: "/etc/dh2i"
-   volumeClaimTemplates:
-   - metadata:
-       name: dxe
-       spec:
-       accessModes:
-       - ReadWriteOnce
-       resources:
-           requests:
-           storage: 1Gi
-   - metadata:
-       name: mssql
-       spec:
-       accessModes:
-       - ReadWriteOnce
-       resources:
-           requests:
-           storage: 1Gi
+             image: docker.io/dh2i/dxe
+             env:
+               - name: MSSQL_SA_PASSWORD
+                 valueFrom:
+                   secretKeyRef:
+                     name: mssql
+                     key: MSSQL_SA_PASSWORD
+             volumeMounts:
+               - name: dxe
+                 mountPath: "/etc/dh2i"
+     volumeClaimTemplates:
+       - metadata:
+           name: dxe
+         spec:
+           accessModes:
+             - ReadWriteOnce
+           resources:
+             requests:
+               storage: 1Gi
+       - metadata:
+           name: mssql
+         spec:
+           accessModes:
+             - ReadWriteOnce
+           resources:
+             requests:
+               storage: 1Gi
    ```
 
 1. Create a credential for the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] instance.
@@ -588,7 +588,7 @@ You should now have three [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.
 
 ## Configure the DxEnterprise cluster on the deployed containers
 
-DxEnterprise is high availability clustering software from DH2i that supports AGs, including in containers. A fully featured [developer](https://dh2i.com/dxenterprise-dxodyssey-developer-edition) edition is available for non-production use. To configure the DxEnterprise cluster in containers, follow the steps in this [DH2i guide](https://support.dh2i.com/docs/guides/dxenterprise/azure/ms-k8s-supplemental-guide/#configure-the-primary-and-create-the-availability-group).
+DxEnterprise is high availability clustering software from DH2i that supports AGs, including in containers. A fully featured [developer](https://dh2i.com/trial) edition is available for non-production use. To configure the DxEnterprise cluster in containers, follow the steps in this [DH2i guide](https://support.dh2i.com/docs/guides/dxenterprise/azure/ms-k8s-supplemental-guide/#configure-the-primary-and-create-the-availability-group).
 
 With these steps, you should have an AG created and databases added to the group supporting high availability.
 

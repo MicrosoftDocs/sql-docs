@@ -44286,6 +44286,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "docs/sql-server/azure-arc/secure-best-practices.md",
+      "redirect_url": "/sql/sql-server/azure-arc/security-overview#best-practices",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "docs/sql-server/azure-arc/billing.md",
       "redirect_url": "/sql/sql-server/azure-arc/manage-configuration",
       "redirect_document_id": false

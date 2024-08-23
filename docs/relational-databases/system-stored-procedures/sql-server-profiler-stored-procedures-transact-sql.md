@@ -4,7 +4,7 @@ description: "SQL Server Profiler stored procedures (Transact-SQL)"
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 05/24/2023
+ms.date: 08/22/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -38,7 +38,7 @@ dev_langs:
     :::column-end:::
 :::row-end:::
 
-For an example of using trace stored procedures, see [Create a Trace (Transact-SQL)](../sql-trace/create-a-trace-transact-sql.md).
+For an example of using trace stored procedures, see [Create a Trace](../sql-trace/create-a-trace-transact-sql.md).
 
 ## Related content
 

@@ -4,7 +4,7 @@ description: "Removes permission for a database user or role to use a public or 
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 11/02/2023
+ms.date: 08/22/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -58,7 +58,7 @@ The name of the profile for the association to delete. *@profile_name* is **sysn
 
 To make a public profile into a private profile, provide **'public'** for the principal name or `0` for the principal ID.
 
-Use caution when removing permissions for the default private profile for a user or the default public profile. When no default profile is available, `sp_send_dbmail` requires the name of a profile as an argument. Therefore, removing a default profile causes calls to `sp_send_dbmail` to fail. For more information, see [sp_send_dbmail (Transact-SQL)](sp-send-dbmail-transact-sql.md).
+Use caution when removing permissions for the default private profile for a user or the default public profile. When no default profile is available, `sp_send_dbmail` requires the name of a profile as an argument. Therefore, removing a default profile causes calls to `sp_send_dbmail` to fail. For more information, see [sp_send_dbmail](sp-send-dbmail-transact-sql.md).
 
 The stored procedure `sysmail_delete_principalprofile_sp` is in the `msdb` database and is owned by the **dbo** schema. The procedure must be executed with a three-part name if the current database isn't `msdb`.
 

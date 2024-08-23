@@ -27,7 +27,7 @@ Binds the specified [!INCLUDE [inmemory](../../includes/inmemory-md.md)] databas
 
 This system procedure creates a binding between the Resource Governor pool identified by *@resource_pool_name*, and the database identified by *@database_name*. It isn't required that the database has any memory-optimized objects at the time of binding. In the absence of memory-optimized objects, there's no memory taken from the resource pool. This binding will be used by Resource Governor to manage memory allocated by [!INCLUDE [inmemory](../../includes/inmemory-md.md)] allocators.
 
-If there's already a binding in place for a given database, the procedure returns an error. In no event may a database have more than one active binding.
+If there's already a binding in place for a given database, the procedure returns an error. A database can't have more than one active binding.
 
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
@@ -67,7 +67,7 @@ Database 'Hekaton_DB213' does not exist. Make sure that the name is entered corr
 
 #### Database is a system database
 
-[!INCLUDE [inmemory](../../includes/inmemory-md.md)] tables can't be created in system databases. Thus it is invalid to create a binding of [!INCLUDE [inmemory](../../includes/inmemory-md.md)] memory for such a database. The following error is returned:
+[!INCLUDE [inmemory](../../includes/inmemory-md.md)] tables can't be created in system databases. Thus it's invalid to create a binding of [!INCLUDE [inmemory](../../includes/inmemory-md.md)] memory for such a database. The following error is returned:
 
 > Database_name %s refers to a system database. Resource pools may only be bound to a user database.
 
@@ -100,7 +100,7 @@ Database 'Hekaton_DB' cannot be explicitly bound to the resource pool 'internal'
 
 #### Database is already bound to another resource pool
 
-A database can be bound to only one resource pool at any time. Database bindings to resource pools must be explicitly removed before they can be bound to another pool. See [sys.sp_xtp_unbind_db_resource_pool (Transact-SQL)](sys-sp-xtp-unbind-db-resource-pool-transact-sql.md).
+A database can be bound to only one resource pool at any time. Database bindings to resource pools must be explicitly removed before they can be bound to another pool. See [sys.sp_xtp_unbind_db_resource_pool](sys-sp-xtp-unbind-db-resource-pool-transact-sql.md).
 
 > Database %s is already bound to resource pool %s. You must unbind before you can create a new binding.
 

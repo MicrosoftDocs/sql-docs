@@ -3,7 +3,7 @@ title: "sp_query_store_clear_hints (Transact-SQL)"
 description: "Removes all Query Store hints for a given query."
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 05/29/2023
+ms.date: 08/21/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "language-reference"
@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "sp_query_store_clear_hints"
 dev_langs:
   - "TSQL"
-monikerRange: "=azuresqldb-current||=azuresqldb-mi-current||>=sql-server-ver16||>=sql-server-linux-ver16"
+monikerRange: "=azuresqldb-current || =azuresqldb-mi-current || >=sql-server-ver16 || >=sql-server-linux-ver16"
 ---
 # sp_query_store_clear_hints (Transact-SQL)
 
@@ -41,13 +41,13 @@ sp_query_store_clear_hints
 
 The Query Store `query_id` column from [sys.query_store_query](../system-catalog-views/sys-query-store-query-transact-sql.md). *query_id* is **bigint**.
 
-## Return values
+## Return value
 
 `0` (success) or `1` (failure).
 
 ## Remarks
 
-Query Store hints are created by [sys.sp_query_store_set_hints (Transact-SQL)](sys-sp-query-store-set-hints-transact-sql.md).
+Query Store hints are created by [sys.sp_query_store_set_hints](sys-sp-query-store-set-hints-transact-sql.md).
 
 ## Permissions
 
@@ -85,4 +85,4 @@ WHERE query_id = 39;
 - [sys.sp_query_store_set_hints (Transact-SQL)](sys-sp-query-store-set-hints-transact-sql.md)
 - [sys.query_store_query_hints (Transact-SQL)](../system-catalog-views/sys-query-store-query-hints-transact-sql.md)
 - [Query Store hints](../performance/query-store-hints.md)
-- [Monitoring Performance By Using the Query Store](../performance/monitoring-performance-by-using-the-query-store.md)
+- [Monitor performance by using the Query Store](../performance/monitoring-performance-by-using-the-query-store.md)

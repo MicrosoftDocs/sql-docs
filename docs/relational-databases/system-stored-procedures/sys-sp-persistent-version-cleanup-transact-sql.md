@@ -3,7 +3,7 @@ title: "sys.sp_persistent_version_cleanup (Transact-SQL)"
 description: "Manually starts persistent version store (PVS) cleanup process, a key element of accelerated database recovery (ADR)."
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 07/06/2023
+ms.date: 08/21/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -22,7 +22,7 @@ monikerRange: ">=sql-server-ver15 || >=sql-server-linux-ver15 || =azuresqldb-mi-
 
 Manually starts persistent version store (PVS) cleanup process, a key element of accelerated database recovery (ADR). This cleaner rolls back uncommitted data in the PVS from aborted transactions.
 
-It isn't typically necessary to start the PVS cleanup process manually using `sys.sp_persistent_version_cleanup`. However in some scenarios, in a known period of rest/recovery after busy OLTP activity, you may want to initiate the PVS cleanup process manually.
+It isn't typically necessary to start the PVS cleanup process manually using `sys.sp_persistent_version_cleanup`. However in some scenarios, in a known period of rest/recovery after busy OLTP activity, you might want to initiate the PVS cleanup process manually.
 
 For more information on ADR on Azure SQL, see [Accelerated Database Recovery in Azure SQL](/azure/azure-sql/accelerated-database-recovery).
 
@@ -54,11 +54,11 @@ Optional. Possible options determine whether or not to reclaim off-row PVS page.
 
 | Value | Description |
 | :--- | :--- |
-| 0 | Default, no option specified |
-| 1 | off-row version store without checking individual PVS page contents |
-| 2 | off-row version store with each PVS page visited |
-| 3 | in-row version store only |
-| 4 | internal use only |
+| `0` | Default, no option specified |
+| `1` | off-row version store without checking individual PVS page contents |
+| `2` | off-row version store with each PVS page visited |
+| `3` | in-row version store only |
+| `4` | internal use only |
 
 ## Return code values
 

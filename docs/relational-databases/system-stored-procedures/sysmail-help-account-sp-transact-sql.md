@@ -4,7 +4,7 @@ description: "Lists information (except passwords) about Database Mail accounts.
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 05/30/2023
+ms.date: 08/21/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -60,8 +60,8 @@ Returns a result set containing the columns listed below.
 | `servertype` | **sysname** | The type of e-mail server for the account. |
 | `servername` | **sysname** | The name of the e-mail server for the account. |
 | `port` | **int** | The port number of the e-mail server uses. |
-| `username` | **nvarchar(128)** | The user name to use to sign in to the e-mail server, if the e-mail server uses authentication. When `username` is NULL, Database Mail doesn't use authentication for this account. |
-| `use_default_credentials` | **bit** | Specifies whether to send the mail to the SMTP server using the credentials of the [!INCLUDE [ssDEnoversion](../../includes/ssdenoversion-md.md)]. When this parameter is `1`, Database Mail uses the credentials of the [!INCLUDE [ssDEnoversion](../../includes/ssdenoversion-md.md)] service. When this parameter is `0`, Database Mail uses the *@username* and *@password* for authentication on the SMTP server. If *@username* and *@password* are NULL, then Database Mail uses anonymous authentication. Consult your SMTP administrator before specifying this parameter. |
+| `username` | **nvarchar(128)** | The user name to use to sign in to the e-mail server, if the e-mail server uses authentication. When `username` is `NULL`, Database Mail doesn't use authentication for this account. |
+| `use_default_credentials` | **bit** | Specifies whether to send the mail to the SMTP server using the credentials of the [!INCLUDE [ssDEnoversion](../../includes/ssdenoversion-md.md)]. When this parameter is `1`, Database Mail uses the credentials of the [!INCLUDE [ssDEnoversion](../../includes/ssdenoversion-md.md)] service. When this parameter is `0`, Database Mail uses the *@username* and *@password* for authentication on the SMTP server. If *@username* and *@password* are `NULL`, then Database Mail uses anonymous authentication. Consult your SMTP administrator before specifying this parameter. |
 | `enable_ssl` | **bit** | Specifies whether Database Mail encrypts communication using Transport Layer Security (TLS), previously known as Secure Sockets Layer (SSL). Use this option if TLS is required on your SMTP server. `1` indicates Database Mail encrypts communication using TLS. 0 indicates Database Mail sends the mail without TLS encryption. |
 
 ## Remarks

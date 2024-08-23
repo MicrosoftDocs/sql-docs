@@ -4,7 +4,7 @@ description: "Deletes a Database Mail SMTP account."
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 05/30/2023
+ms.date: 08/22/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -61,7 +61,7 @@ The stored procedure `sysmail_delete_account_sp` is in the `msdb` database and i
 
 ## Examples
 
-The following example shows deleting  the Database Mail account named `AdventureWorks Administrator`.
+The following example shows deleting the Database Mail account named `AdventureWorks Administrator`.
 
 ```sql
 EXEC msdb.dbo.sysmail_delete_account_sp

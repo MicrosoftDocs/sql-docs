@@ -5,7 +5,7 @@ description: Learn how to create instance pools (preview) for Azure SQL Managed 
 author: MariDjo
 ms.author: dmarinkovic
 ms.reviewer: mathoma, randolphwest
-ms.date: 08/22/2024
+ms.date: 08/23/2024
 ms.service: azure-sql-managed-instance
 ms.subservice: deployment-configuration
 ms.topic: how-to
@@ -155,7 +155,7 @@ To create a new instance inside a pool by using the Azure portal, follow these s
     1. Choose _Yes_ to **Belongs to an instance pool?** under **Managed Instance details** to create your new instance inside an instance pool.
     1. Select the pool from the **Instance pool** dropdown list.
 
-   :::image type="content" source="media/instance-pools-overview/create-instance-inside-pool.png" alt-text="Screenshot of the Create Azure SQL Managed Instance page in the Azure portal with belongs to an instance pool selected.":::
+   :::image type="content" source="media/instance-pools-configure/create-instance-inside-pool.png" alt-text="Screenshot of the Create Azure SQL Managed Instance page in the Azure portal with belongs to an instance pool selected.":::
 1. Fill out the remaining details on the **Create Azure SQL Managed Instance** page to create your instance inside the pool. For details, review [Create Azure SQL Managed Instance](instance-create-quickstart.md).
 1. Select **Review + create** to review settings for your new instance and then use **Create** to deploy your instance inside the selected pool.
 
@@ -565,7 +565,7 @@ To create a new support request in the Azure portal, follow these steps:
     1. For **Problem type**, choose `Create, Scale, Stop, Start, or Delete Resources`.
     1. For **Problem Subtype**, choose `Instance Pools`.
 
-   :::image type="content" source="media/instance-pools-overview/support-request.png" alt-text="Screenshot of the Instance pools support request in the Azure portal." lightbox="media/instance-pools-overview/support-request.png":::
+   :::image type="content" source="media/instance-pools-configure/support-request.png" alt-text="Screenshot of the Instance pools support request in the Azure portal." lightbox="media/instance-pools-configure/support-request.png":::
 
 1. Select **Next** on the subsequent pages until you're able to **Create** your support request.
 

@@ -1,14 +1,15 @@
 ---
 title: Monitor Azure SQL Database
 description: Start here to learn how to monitor Azure SQL Database.
-ms.date: 08/22/2024
-ms.custom: horz-monitor
-ms.topic: conceptual
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.reviewer: mathoma, dfurman
+ms.date: 08/23/2024
 ms.service: azure-sql-database
 ms.subservice: monitoring
-ms.reviewer: mathoma
+ms.topic: conceptual
+ms.custom:
+  - horz-monitor
 ---
 # Monitor Azure SQL Database
 [!INCLUDE [appliesto-sqldb](../includes/appliesto-sqldb.md)]
@@ -140,7 +141,8 @@ The following table lists common and recommended alert rules for SQL Database. Y
 
 \* Alerting on deadlocks might be unnecessary and noisy in some applications where deadlocks are expected and properly handled.
 
-For more recommended alert rules and typical alert rule configurations for SQL Database, see [Monitor Azure SQL Database with Azure Monitor metrics and alerts](monitoring-metrics-alerts.md?view=azuresql-db&preserve-view=true#recommended-alert-rules).
+> [!TIP]
+> For recommended alert rules and typical alert rule configurations for SQL Database, see [Monitor Azure SQL Database with Azure Monitor metrics and alerts](monitoring-metrics-alerts.md?view=azuresql-db&preserve-view=true#recommended-alert-rules).
 
 [!INCLUDE [horz-monitor-advisor-recommendations](~/../azure-sql/reusable-content/ce-skilling/azure/includes/azure-monitor/horizontals/horz-monitor-advisor-recommendations.md)]
 

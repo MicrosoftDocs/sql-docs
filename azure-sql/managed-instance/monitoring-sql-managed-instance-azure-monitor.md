@@ -1,18 +1,19 @@
 ---
 title: Monitor Azure SQL Managed Instance
 description: Start here to learn how to monitor Azure SQL Managed Instance.
-ms.date: 08/22/2024
-ms.custom: horz-monitor
-ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: wiassaf
+ms.date: 08/23/2024
 ms.service: azure-sql-managed-instance
 ms.subservice: monitoring
+ms.topic: conceptual
+ms.custom:
+  - horz-monitor
 ---
 
 # Monitor Azure SQL Managed Instance
-[!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
+[!INCLUDE [appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
 
 [!INCLUDE [horz-monitor-intro](~/../azure-sql/reusable-content/ce-skilling/azure/includes/azure-monitor/horizontals/horz-monitor-intro.md)]
 
@@ -92,12 +93,13 @@ AzureDiagnostics
 [!INCLUDE [horz-monitor-insights-alerts](~/../azure-sql/reusable-content/ce-skilling/azure/includes/azure-monitor/horizontals/horz-monitor-insights-alerts.md)]
 
 ### SQL Managed Instance alert rules
-The following table lists common and recommended alert rules for Azure SQL Managed Instance. You may see different options available depending on your purchasing model.
+
+The following table lists common and recommended alert rules for Azure SQL Managed Instance. You might see different options available depending on your purchasing model.
 
 | Signal name | Operator | Aggregation type  | Threshold value | Description |
 |:---|:---|:---|:---|:---|
-| Average CPU percentage | Greater than | Average | 80 | Whenever the average CPU utilization percentage is greater than 80% | 
-| Resource Health | Current Resource Status | NA | Degraded or Unavailable | Detect resources outages, whether they be Azure initiated or user initiated |
+| `Average CPU percentage` | Greater than | Average | 80 | Whenever the average CPU utilization percentage is greater than 80% | 
+| `Resource Health` | Current Resource Status | NA | Degraded or Unavailable | Detect resources outages, whether they be Azure initiated or user initiated |
 
 [!INCLUDE [horz-monitor-advisor-recommendations](~/../azure-sql/reusable-content/ce-skilling/azure/includes/azure-monitor/horizontals/horz-monitor-advisor-recommendations.md)]
 

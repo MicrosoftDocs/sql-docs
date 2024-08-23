@@ -22,7 +22,7 @@ When you call this kind of stored procedure by using the JDBC driver, you must u
 > [!NOTE]  
 > For more information about the SQL escape sequences, see [Using SQL escape sequences](../../connect/jdbc/using-sql-escape-sequences.md).
 
-When you construct the `call` escape sequence, specify the OUT parameters by using the "?" (question mark) character. This character acts as a placeholder for the parameter values that is returned from the stored procedure. To specify a value for an OUT parameter, you must specify the data type of each parameter by using the [registerOutParameter](../../connect/jdbc/reference/registeroutparameter-method-sqlservercallablestatement.md) method of the SQLServerCallableStatement class before you run the stored procedure.
+When you construct the `call` escape sequence, specify the OUT parameters by using the question mark (?) character. This character acts as a placeholder for the parameter values that is returned from the stored procedure. To specify a value for an OUT parameter, you must specify the data type of each parameter by using the [registerOutParameter](../../connect/jdbc/reference/registeroutparameter-method-sqlservercallablestatement.md) method of the SQLServerCallableStatement class before you run the stored procedure.
 
 The value that you specify for the OUT parameter in the registerOutParameter method must be one of the JDBC data types contained in java.sql.Types, which in turn maps to one of the native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data types. For more information about the JDBC and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data types, see [Understanding the JDBC Driver data types](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md).
 
@@ -45,7 +45,7 @@ BEGIN
 END
 ```
 
-This stored procedure returns a single OUT parameter (managerID), which is an integer, based on the specified IN parameter (employeeID), which is also an integer. The value that is returned in the OUT parameter is the ManagerID based on the EmployeeID that is contained in the HumanResources.Employee table.
+This stored procedure returns a single OUT parameter (managerID), which is an integer, based on the specified IN parameter (employeeID), which is also an integer. The value that is returned in the OUT parameter is the ManagerID based on the EmployeeID that is contained in the `HumanResources.Employee` table.
 
 In the following example, an open connection to the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] sample database is passed in to the function, and the [execute](../../connect/jdbc/reference/execute-method-sqlserverstatement.md) method is used to call the GetImmediateManager stored procedure:
 
@@ -76,7 +76,7 @@ public static void executeStoredProcedure(Connection con) throws SQLException {
 > [!NOTE]  
 > These examples use the execute method of the SQLServerCallableStatement class to run the stored procedure. This is used because the stored procedure did not also return a result set. If it did, the [executeQuery](../../connect/jdbc/reference/executequery-method-sqlserverstatement.md) method would be used.
 
-Stored procedures can return update counts and multiple result sets. The [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] follows the JDBC 3.0 specification, which states that multiple result sets and update counts should be retrieved before the OUT parameters are retrieved. That is, the application should retrieve all of the ResultSet objects and update counts before retrieving the OUT parameters by using the CallableStatement.getter methods. Otherwise, the ResultSet objects and update counts that haven't yet been retrieved are lost when the OUT parameters are retrieved. For more information about update counts and multiple result sets, see [Using a stored procedure with an update count](../../connect/jdbc/using-a-stored-procedure-with-an-update-count.md) and [Using Multiple Result Sets](../../connect/jdbc/using-multiple-result-sets.md).
+Stored procedures can return update counts and multiple result sets. The [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] follows the JDBC 3.0 specification, which states that multiple result sets and update counts should be retrieved before the OUT parameters are retrieved. That is, the application should retrieve all of the ResultSet objects and update counts before retrieving the OUT parameters by using the CallableStatement.getter methods. Otherwise, the ResultSet objects and update counts that the driver hasn't yet retrieved are lost when the OUT parameters are retrieved. For more information about update counts and multiple result sets, see [Using a stored procedure with an update count](../../connect/jdbc/using-a-stored-procedure-with-an-update-count.md) and [Using Multiple Result Sets](../../connect/jdbc/using-multiple-result-sets.md).
 
 ## See also
 

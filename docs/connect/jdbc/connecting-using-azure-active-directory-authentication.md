@@ -3,7 +3,7 @@ title: Connect using Microsoft Entra authentication
 description: Learn how to develop Java applications that use the Microsoft Entra authentication feature with the Microsoft JDBC Driver for SQL Server.
 author: David-Engel
 ms.author: davidengel
-ms.date: 07/31/2024
+ms.date: 08/29/2024
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: conceptual
@@ -57,7 +57,6 @@ The following table lists required library dependencies for each authentication 
 > [!NOTE]
 > In cases where the hotfix for a major release has a different dependency version than its major release, the hotfix is also listed.
 
-
 | Authentication option | Driver versions | Library dependencies |
 |-----------------------|-----------------|----------------------|
 | `ActiveDirectoryPassword`<br/>`ActiveDirectoryIntegrated` | 6.0 | `Adal4j` 1.3.0 |
@@ -79,8 +78,11 @@ The following table lists required library dependencies for each authentication 
 | `ActiveDirectoryManagedIdentity`<br/>`ActiveDirectoryMSI`<br/>`ActiveDirectoryDefault` | 12.6 | `azure-identity` 1.11.1 |
 | `ActiveDirectoryPassword`<br/>`ActiveDirectoryIntegrated`<br/>`ActiveDirectoryInteractive`<br/>`ActiveDirectoryServicePrincipal`<br/>`ActiveDirectoryServicePrincipalCertificate` | 12.6.3 | `msal4j` 1.15.1 |
 | `ActiveDirectoryManagedIdentity`<br/>`ActiveDirectoryMSI`<br/>`ActiveDirectoryDefault` | 12.6.3 | `azure-identity` 1.12.2 |
+| `ActiveDirectoryPassword`<br/>`ActiveDirectoryIntegrated`<br/>`ActiveDirectoryInteractive`<br/>`ActiveDirectoryServicePrincipal`<br/>`ActiveDirectoryServicePrincipalCertificate` | 12.6.4 | `msal4j` 1.15.1 |
+| `ActiveDirectoryManagedIdentity`<br/>`ActiveDirectoryMSI`<br/>`ActiveDirectoryDefault` | 12.6.4 | `azure-identity` 1.12.2 |
 | `ActiveDirectoryPassword`<br/>`ActiveDirectoryIntegrated`<br/>`ActiveDirectoryInteractive`<br/>`ActiveDirectoryServicePrincipal`<br/>`ActiveDirectoryServicePrincipalCertificate` | 12.8 | `msal4j` 1.15.1 |
 | `ActiveDirectoryManagedIdentity`<br/>`ActiveDirectoryMSI`<br/>`ActiveDirectoryDefault` | 12.8 | `azure-identity` 1.12.2 |
+
 ## Connect using ActiveDirectoryManagedIdentity authentication mode
 
 This authentication mode is supported starting with version 7.2. To use it, specify `authentication=ActiveDirectoryMSI`. Starting in version 12.2, `authentication=ActiveDirectoryManagedIdentity` can also be specified.

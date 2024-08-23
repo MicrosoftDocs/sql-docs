@@ -22,7 +22,7 @@ Moving from the traditional self-managed, self-controlled environment to a PaaS 
 - Are In the process of migrating their application(s) – On-going migration scenario.
 - Have recently completed the migration to Azure SQL Database – New DBA in the cloud.
 
-This article discusses some of the core characteristics of Azure SQL Database as a platform that you can readily use when working with single databases and pooled databases in elastic pools. they're the following:
+This article discusses some of the core characteristics of Azure SQL Database as a platform that you can readily use when working with single databases and pooled databases in elastic pools. They're the following:
 
 - Monitor databases using the Azure portal
 - Business continuity and disaster recovery (BCDR)

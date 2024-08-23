@@ -896,7 +896,8 @@ Microsoft JDBC Driver 8.2 for SQL Server is now compatible with Java Development
 | Temporal Datatypes change | Details |
 | :---------- | :------ |
 | Microsoft JDBC Driver 8.2 for SQL Server has improved performance when retrieving temporal datatypes from SQL Server. | This change eliminates unnecessary temporal datatype conversions by eliminating the use of java.util.Calendar wherever possible. |
-| This performance improvement affect the following list of temporal data types; in the format "SQL Server datatype" (Java mapping). | date (java.sql.Date), datetime (java.sql.Timestamp), datetime2 (java.sql.Timestamp), smalldatetime (java.sql.Timestamp), and time (java.sql.Time). |
+| This performance improvement affects the following list of temporal data types; in the format "SQL Server datatype" (Java mapping). | date (java.sql.Date), datetime (java.sql.Timestamp), datetime2 (java.sql.Timestamp), smalldatetime (java.sql.Timestamp), and time (java.sql.Time). |
+
 
 <sup>1</sup> Due to the differences in how time zones are handled between java.util.Calendar and java.time.LocalDateTime API, temporal datatypes with a user provided java.util.Calendar object associated with it or microsoft.sql.DateTimeOffset datatypes don't benefit from this improvement.
 

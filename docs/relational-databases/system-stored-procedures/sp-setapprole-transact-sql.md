@@ -4,7 +4,7 @@ description: sp_setapprole activates the permissions associated with an applicat
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: randolphwest
-ms.date: 04/08/2024
+ms.date: 08/22/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -79,7 +79,7 @@ Specifies an output parameter to contain the cookie. *@cookie* is an OUTPUT para
 
 ## Remarks
 
-After an application role is activated by using `sp_setapprole`, the role remains active until the user either disconnects from the server or executes `sp_unsetapprole`. You can't use `sp_setapprole`  within another stored procedure, trigger or within a user-defined transaction. It can only be executed as direct [!INCLUDE [tsql](../../includes/tsql-md.md)] statements.
+After an application role is activated by using `sp_setapprole`, the role remains active until the user either disconnects from the server or executes `sp_unsetapprole`. You can't use `sp_setapprole` within another stored procedure, trigger or within a user-defined transaction. It can only be executed as direct [!INCLUDE [tsql](../../includes/tsql-md.md)] statements.
 
 For an overview of application roles, see [Application Roles](../security/authentication-access/application-roles.md).
 

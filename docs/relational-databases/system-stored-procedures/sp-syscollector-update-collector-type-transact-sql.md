@@ -4,7 +4,7 @@ description: Updates a collector type for a collection item.
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 07/04/2023
+ms.date: 08/21/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -50,7 +50,7 @@ The name of the collector type. *@name* is **sysname**, and must be specified.
 
 #### [ @parameter_schema = ] N'*parameter_schema*'
 
-The XML schema for this collector type. *@parameter_schema* is **xml**, with a default of `NULL`, and may be required by certain collector types. If it isn't required, this argument can be `NULL`.
+The XML schema for this collector type. *@parameter_schema* is **xml**, with a default of `NULL`, and might be required by certain collector types. If it isn't required, this argument can be `NULL`.
 
 #### [ @parameter_formatter = ] N'*parameter_formatter*'
 

@@ -4,7 +4,7 @@ description: "Deletes execution history for policies in Policy-Based Management.
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: randolphwest
-ms.date: 06/26/2023
+ms.date: 08/21/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -37,11 +37,11 @@ sp_syspolicy_delete_policy_execution_history
 
 #### [ @policy_id = ] *policy_id*
 
-The identifier of the policy for which you want to delete the execution history. *@policy_id* is **int**, and is required. Can be NULL.
+The identifier of the policy for which you want to delete the execution history. *@policy_id* is **int**, and is required. Can be `NULL`.
 
 #### [ @oldest_date = ] '*oldest_date*'
 
-The oldest date for which you want to keep policy execution history. Any execution history earlier than this date is deleted. *@oldest_date* is **datetime**, and is required. Can be NULL.
+The oldest date for which you want to keep policy execution history. Any execution history earlier than this date is deleted. *@oldest_date* is **datetime**, and is required. Can be `NULL`.
 
 ## Return code values
 
@@ -63,13 +63,13 @@ INNER JOIN msdb.dbo.syspolicy_policy_execution_history AS b
     ON a.policy_id = b.policy_id;
 ```
 
-The following behavior applies if you specify NULL for one or both values:
+The following behavior applies if you specify `NULL` for one or both values:
 
-- To delete all policy execution history, specify NULL for both *@policy_id* and for *@oldest_date*.
+- To delete all policy execution history, specify `NULL` for both *@policy_id* and for *@oldest_date*.
 
-- To delete all policy execution history for a specific policy, specify a policy identifier for *@policy_id*, and specify NULL as *@oldest_date*.
+- To delete all policy execution history for a specific policy, specify a policy identifier for *@policy_id*, and specify `NULL` as *@oldest_date*.
 
-- To delete policy execution history for all policies before a specific date, specify NULL for *@policy_id*, and specify a date for *@oldest_date*.
+- To delete policy execution history for all policies before a specific date, specify `NULL` for *@policy_id*, and specify a date for *@oldest_date*.
 
 To archive policy execution history, you can open the Policy History log, in Object Explorer, and export the execution history to a file. To access the Policy History log, expand **Management**, right-click **Policy Management**, and then select **View History**.
 

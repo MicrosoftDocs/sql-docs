@@ -4,7 +4,7 @@ description: Modifies the current state of the specified trace.
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 09/07/2023
+ms.date: 08/21/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -40,13 +40,13 @@ sp_trace_setstatus
 
 #### [ @traceid = ] *traceid*
 
-The ID of the trace to be modified. *@traceid* is **int**, with no default. The user employs this *@traceid* value to identify, modify, and control the trace. For information about retrieving the *@traceid*, see [sys.fn_trace_getinfo (Transact-SQL)](../system-functions/sys-fn-trace-getinfo-transact-sql.md).
+The ID of the trace to be modified. *@traceid* is **int**, with no default. The user employs this *@traceid* value to identify, modify, and control the trace. For information about retrieving the *@traceid*, see [sys.fn_trace_getinfo](../system-functions/sys-fn-trace-getinfo-transact-sql.md).
 
 #### [ @status = ] *status*
 
 Specifies the action to implement on the trace. *@status* is **int**, with no default.
 
-The following table lists the status that may be specified.
+The following table lists the status that can be specified.
 
 | Status | Description |
 | --- | --- |
@@ -59,7 +59,7 @@ The following table lists the status that may be specified.
 
 ## Return code values
 
-The following table describes the code values that users may get following completion of the stored procedure.
+The following table describes the code values that you could get, following completion of the stored procedure.
 
 | Return code | Description |
 | --- | --- |
@@ -75,7 +75,7 @@ If the trace is already in the state specified, [!INCLUDE [ssNoVersion](../../in
 
 Parameters of all SQL Trace stored procedures (`sp_trace_*`) are strictly typed. If these parameters aren't called with the correct input parameter data types, as specified in the argument description, the stored procedure returns an error.
 
-For an example of using trace stored procedures, see [Create a Trace (Transact-SQL)](../sql-trace/create-a-trace-transact-sql.md).
+For an example of using trace stored procedures, see [Create a Trace](../sql-trace/create-a-trace-transact-sql.md).
 
 ## Permissions
 

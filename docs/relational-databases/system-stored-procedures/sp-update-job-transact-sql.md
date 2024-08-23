@@ -4,7 +4,7 @@ description: "sp_update_job (Transact-SQL) update the attributes of an existing 
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest, wiassaf
-ms.date: 08/28/2023
+ms.date: 08/21/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "sp_update_job"
 dev_langs:
   - "TSQL"
-monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 # sp_update_job (Transact-SQL)
 
@@ -140,7 +140,7 @@ Specifies when to delete the job. *@delete_level* is **int**, with a default of 
 
 `sp_update_job` changes only those settings for which parameter values are supplied. If a parameter is omitted, the current setting is retained.
 
-This stored procedure shares the name of `sp_update_job` with a similar object for the [Azure Elastic Jobs service for Azure SQL Database](/azure/azure-sql/database/elastic-jobs-overview?view=azuresql-db&preserve-view=true). For information about the elastic jobs version, see [jobs.sp_update_job (Azure Elastic Jobs) (Transact-SQL)](sp-update-job-elastic-jobs-transact-sql.md?view=azuresqldb-current&preserve-view=true).
+This stored procedure shares the name of `sp_update_job` with a similar object for the [Azure Elastic Jobs service for Azure SQL Database](/azure/azure-sql/database/elastic-jobs-overview?view=azuresql-db&preserve-view=true). For information about the elastic jobs version, see [jobs.sp_update_job (Azure Elastic Jobs)](sp-update-job-elastic-jobs-transact-sql.md?view=azuresqldb-current&preserve-view=true).
 
 ## Permissions
 

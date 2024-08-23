@@ -4,7 +4,7 @@ description: sp_set_session_context sets a key-value pair in the session context
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: randolphwest
-ms.date: 04/08/2024
+ms.date: 08/21/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -62,9 +62,9 @@ Any user can set a session context for their session.
 
 Like other stored procedures, only literals and variables (not expressions or function calls) can be passed as parameters.
 
-The total size of the session context is limited to 1 MB. If you set a value that causes this limit to be exceeded, the statement fails. You can monitor overall memory usage in [sys.dm_os_memory_objects (Transact-SQL)](../system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md).
+The total size of the session context is limited to 1 MB. If you set a value that causes this limit to be exceeded, the statement fails. You can monitor overall memory usage in [sys.dm_os_memory_objects](../system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md).
 
-You can monitor overall memory usage by querying [sys.dm_os_memory_cache_counters (Transact-SQL)](../system-dynamic-management-views/sys-dm-os-memory-cache-counters-transact-sql.md) as follows:
+You can monitor overall memory usage by querying [sys.dm_os_memory_cache_counters](../system-dynamic-management-views/sys-dm-os-memory-cache-counters-transact-sql.md) as follows:
 
 ```sql
 SELECT * FROM sys.dm_os_memory_cache_counters WHERE type = 'CACHESTORE_SESSION_CONTEXT';
@@ -97,7 +97,7 @@ The following example shows how to set and retrieve a session context key named 
    EXEC sp_set_session_context 'client_correlation_id', '12323ad';
    ```
 
-2. Retrieve the value.
+1. Retrieve the value.
 
    ```sql
    SELECT SESSION_CONTEXT(N'client_correlation_id');

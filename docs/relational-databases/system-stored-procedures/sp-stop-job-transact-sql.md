@@ -4,7 +4,7 @@ description: sp_stop_job instructs SQL Server Agent to stop the execution of a j
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 04/08/2024
+ms.date: 08/22/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -73,7 +73,7 @@ None.
 
 If a job is currently executing a step of type **CmdExec** or **PowerShell**, the process being run (for example, MyProgram.exe) is forced to end prematurely. Premature ending can result in unpredictable behavior such as files in use by the process being held open. Thus, `sp_stop_job` should be used only in extreme circumstances if the job contains steps of type **CmdExec** or **PowerShell**.
 
-This stored procedure shares the name of `sp_stop_job` with a similar object for the [Azure Elastic Jobs service for Azure SQL Database](/azure/azure-sql/database/elastic-jobs-overview?view=azuresql-db&preserve-view=true). For information about the elastic jobs version, see [jobs.sp_stop_job (Azure Elastic Jobs) (Transact-SQL)](sp-stop-job-elastic-jobs-transact-sql.md?view=azuresql-db&preserve-view=true).
+This stored procedure shares the name of `sp_stop_job` with a similar object for the [Azure Elastic Jobs service for Azure SQL Database](/azure/azure-sql/database/elastic-jobs-overview?view=azuresql-db&preserve-view=true). For information about the elastic jobs version, see [jobs.sp_stop_job (Azure Elastic Jobs)](sp-stop-job-elastic-jobs-transact-sql.md?view=azuresql-db&preserve-view=true).
 
 ## Permissions
 

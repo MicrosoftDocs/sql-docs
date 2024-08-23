@@ -4,7 +4,7 @@ description: Deletes a collection item from a collection set.
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 07/04/2023
+ms.date: 08/21/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -72,5 +72,5 @@ EXEC sp_syscollector_delete_collection_item @name = 'MyCollectionItem1';
 
 - [Data collection](../data-collection/data-collection.md)
 - [sp_syscollector_create_collection_item (Transact-SQL)](sp-syscollector-create-collection-item-transact-sql.md)
-- [Data Collector stored procedures (Transact-SQL)](data-collector-stored-procedures-transact-sql.md)
+- [Data collector stored procedures (Transact-SQL)](data-collector-stored-procedures-transact-sql.md)
 - [syscollector_collection_items (Transact-SQL)](../system-catalog-views/syscollector-collection-items-transact-sql.md)

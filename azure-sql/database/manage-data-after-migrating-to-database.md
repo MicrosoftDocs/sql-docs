@@ -233,7 +233,7 @@ With Microsoft Defender for Cloud, you identify the security recommendations acr
 
 Azure SQL platform analyzes the utilization history across the databases in a server to evaluate and recommend cost-optimization options for you. This analysis usually takes a few weeks of activity to analyze and build up actionable recommendations. 
 
-- You may receive banner notifications in your Azure SQL server of cost recommendations.
+- You might receive banner notifications in your Azure SQL server of cost recommendations.
 - Elastic pools are one such option. For more information, see [Elastic pools help you manage and scale multiple databases in Azure SQL Database](elastic-pool-overview.md).
 - For more information, see [Plan and manage costs for Azure SQL Database](cost-management.md).
 

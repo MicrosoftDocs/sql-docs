@@ -4,7 +4,7 @@ description: Find a reference of content that teaches you to configure and manag
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma
-ms.date: 01/14/2020
+ms.date: 08/16/2024
 ms.service: azure-sql-database
 ms.subservice: deployment-configuration
 ms.topic: conceptual
@@ -46,6 +46,7 @@ In this article you can find a content reference of various guides, scripts, and
 
 ## Monitor and tune your database
 
+- [Database watcher](../database-watcher-overview.md)
 - [Manual tuning](performance-guidance.md)
 - [Use DMVs to monitor performance](monitoring-with-dmvs.md)
 - [Use Query store to monitor performance](/sql/relational-databases/performance/best-practice-with-the-query-store#Insight)
@@ -54,9 +55,7 @@ In this article you can find a content reference of various guides, scripts, and
 - [Apply performance recommendations](database-advisor-find-recommendations-portal.md) and optimize your database.
 - [Create alerts](alerts-create.md) to get notifications from Azure SQL Database.
 - [Troubleshoot connectivity](troubleshoot-common-errors-issues.md) if you notice some connectivity issues between the applications and the database. You can also use [Resource Health for connectivity issues](resource-health-to-troubleshoot-connectivity.md?view=azuresql-db&preserve-view=true).
-- [Troubleshoot performance with Intelligent Insights](intelligent-insights-troubleshoot-performance.md)
 - [Manage file space](file-space-manage.md) to monitor storage usage in your database.
-- [Use Intelligent Insights diagnostics log](intelligent-insights-use-diagnostics-log.md)
 - [Monitor In-memory OLTP space](in-memory-oltp-monitor-space.md)
 
 ### Extended events

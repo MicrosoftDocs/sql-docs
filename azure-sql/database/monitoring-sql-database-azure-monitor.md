@@ -1,14 +1,15 @@
 ---
 title: Monitor Azure SQL Database
 description: Start here to learn how to monitor Azure SQL Database.
-ms.date: 03/01/2024
-ms.custom: horz-monitor
-ms.topic: conceptual
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.reviewer: mathoma, dfurman
+ms.date: 08/23/2024
 ms.service: azure-sql-database
 ms.subservice: monitoring
-ms.reviewer: mathoma
+ms.topic: conceptual
+ms.custom:
+  - horz-monitor
 ---
 # Monitor Azure SQL Database
 [!INCLUDE [appliesto-sqldb](../includes/appliesto-sqldb.md)]
@@ -22,28 +23,22 @@ For a detailed discussion of all monitoring and performance aspects of Azure SQL
 > [!IMPORTANT]
 > For a set of recommended alert rules, see [Monitor Azure SQL Database with Azure Monitor metrics and alerts](monitoring-metrics-alerts.md).
 
-[!INCLUDE [horz-monitor-insights](~/../azure-sql/reusable-content/ce-skilling/azure/includes/azure-monitor/horizontals/horz-monitor-insights.md)]
+## Database watcher (preview)
 
-### Azure Monitor SQL Insights (preview)
+Database watcher collects in-depth workload monitoring data to give you a detailed view of database performance, configuration, and health. Dashboards in the Azure portal provide a single-pane-of-glass view of your Azure SQL estate and a detailed view of each monitored resource. Data is collected into a central data store in your Azure subscription. You can query, analyze, export, visualize collected data and integrate it with downstream systems.
 
-You can configure Azure Monitor SQL Insights for SQL-specific metrics for Azure SQL Database, Azure SQL Managed Instance, and SQL Server on Azure VMs. For more information about Azure Monitor SQL Insights for all products in the [Azure SQL family](index.yml), see [Monitor your SQL deployments with SQL Insights (preview)](/azure/azure-monitor/insights/sql-insights-overview).
+For more information about database watcher, see the following articles:
 
-For more information on how to use SQL Insights, see the following articles:
+- [Monitor Azure SQL workloads with database watcher (preview)](../database-watcher-overview.md)
+- [Quickstart: Create a database watcher to monitor Azure SQL (preview)](../database-watcher-quickstart.md)
+- [Create and configure a database watcher (preview)](../database-watcher-manage.md)
+- [Database watcher data collection and datasets (preview)](../database-watcher-data.md)
+- [Analyze database watcher monitoring data (preview)](../database-watcher-analyze.md)
+- [Database watcher FAQ](../database-watcher-faq.yml)
 
-- [Monitor your SQL deployments with SQL Insights (preview)](sql-insights-overview.md)
-- [How to enable SQL Insights](sql-insights-enable.md)
-- [Create alerts with SQL Insights](sql-insights-alerts.md)
-- [Troubleshoot SQL Insights](sql-insights-troubleshoot.md)
+## Query performance insight
 
-### Intelligent Insights
-
-Intelligent Insights for Azure SQL Database and Azure SQL Managed Instance is different from Azure Monitor SQL Insights. Intelligent Insights uses artificial intelligence to continuously monitor database usage and detect disruptive events that cause poor performance. Intelligent Insights generates a resource log called SQLInsights that provides an intelligent assessment, root cause analysis, and performance improvement recommendations.
-
-For more information, see [Intelligent Insights using AI to monitor and troubleshoot database performance (preview)](intelligent-insights-overview.md) and [Use the Intelligent Insights performance diagnostics log](intelligent-insights-use-diagnostics-log.md).
-
-### Query Performance Insight
-
-Query Performance Insight uses the SQL Server Query Store to provide intelligent query analysis and insight on query plan choice and performance for single and pooled databases. For more information, see [Query Performance Insight for Azure SQL Database](query-performance-insight-use.md).
+Query performance insight uses the SQL Server Query Store to provide intelligent query analysis and insight on query plan choice and performance for single and pooled databases. For more information, see [Query Performance Insight for Azure SQL Database](query-performance-insight-use.md).
 
 [!INCLUDE [horz-monitor-resource-types](~/../azure-sql/reusable-content/ce-skilling/azure/includes/azure-monitor/horizontals/horz-monitor-resource-types.md)]
 For more information about the resource types for SQL Database, see [SQL Database monitoring data reference](monitoring-sql-database-azure-monitor-reference.md).
@@ -51,6 +46,7 @@ For more information about the resource types for SQL Database, see [SQL Databas
 [!INCLUDE [horz-monitor-data-storage](~/../azure-sql/reusable-content/ce-skilling/azure/includes/azure-monitor/horizontals/horz-monitor-data-storage.md)]
 
 [!INCLUDE [horz-monitor-platform-metrics](~/../azure-sql/reusable-content/ce-skilling/azure/includes/azure-monitor/horizontals/horz-monitor-platform-metrics.md)]
+
 ## Azure SQL Database metrics
 
 You can use metrics to monitor database and elastic pool resource consumption and health. For example, you can:
@@ -71,7 +67,7 @@ Auditing for Azure SQL Database tracks database events and writes them to an aud
 
 For more information on the resource logs and diagnostics available for Azure SQL Database, see [Configure streaming export of diagnostic telemetry](metrics-diagnostic-telemetry-logging-streaming-export-configure.md).
 
-For the available resource log categories, their associated Log Analytics tables, and the logs schemas for SQL Database, see [SQL Database monitoring data reference](monitoring-sql-database-azure-monitor-reference.md#resource-logs).
+For the available resource log categories, their associated Log Analytics tables, and the log schemas for SQL Database, see [SQL Database monitoring data reference](monitoring-sql-database-azure-monitor-reference.md#resource-logs).
 
 [!INCLUDE [horz-monitor-activity-log](~/../azure-sql/reusable-content/ce-skilling/azure/includes/azure-monitor/horizontals/horz-monitor-activity-log.md)]
 
@@ -133,6 +129,7 @@ AzureMetrics
 [!INCLUDE [horz-monitor-alerts](~/../azure-sql/reusable-content/ce-skilling/azure/includes/azure-monitor/horizontals/horz-monitor-alerts.md)]
 
 ### SQL Database alert rules
+
 The following table lists common and recommended alert rules for SQL Database. You might see different options available depending on your purchasing model.
 
 | Signal name | Operator | Aggregation type  | Threshold value | Description |
@@ -144,7 +141,8 @@ The following table lists common and recommended alert rules for SQL Database. Y
 
 \* Alerting on deadlocks might be unnecessary and noisy in some applications where deadlocks are expected and properly handled.
 
-For more recommended alert rules and typical alert rule configurations for SQL Database, see [Monitor Azure SQL Database with Azure Monitor metrics and alerts](monitoring-metrics-alerts.md?view=azuresql-db&preserve-view=true#recommended-alert-rules).
+> [!TIP]
+> For recommended alert rules and typical alert rule configurations for SQL Database, see [Monitor Azure SQL Database with Azure Monitor metrics and alerts](monitoring-metrics-alerts.md?view=azuresql-db&preserve-view=true#recommended-alert-rules).
 
 [!INCLUDE [horz-monitor-advisor-recommendations](~/../azure-sql/reusable-content/ce-skilling/azure/includes/azure-monitor/horizontals/horz-monitor-advisor-recommendations.md)]
 

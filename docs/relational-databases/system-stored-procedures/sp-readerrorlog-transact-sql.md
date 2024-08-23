@@ -1,9 +1,10 @@
 ---
 title: sp_readerrorlog (Transact-SQL)
-description: sp_readerrorlog (Transact-SQL)
+description: sp_readerrorlog allows you to read the contents of the SQL Server or SQL Server Agent error log file and filter on keywords.
 author: pijocoder
 ms.author: jopilov
-ms.date: "02/08/2022"
+ms.reviewer: randolphwest
+ms.date: 08/22/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -20,77 +21,78 @@ dev_langs:
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Allows you to read the contents of the SQL Server or SQL Server Agent error log file and filter on keywords.
-  
-:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
-  
-## Syntax  
-  
-```sql
-sp_readerrorlog  
-    @p1        int = 0,
-    @p2        int = NULL,
-    @p3        nvarchar(4000) = NULL,
-    @p4        nvarchar(4000) = NULL
-```  
+
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+
+## Syntax
+
+```syntaxsql
+sp_readerrorlog
+    [ [ @p1 = ] p1 ]
+    [ , [ @p2 = ] p2 ]
+    [ , [ @p3 = ] N'p3' ]
+    [ , [ @p4 = ] N'p4' ]
+[ ; ]
+```
 
 ## Arguments
 
-#### [@p1 = ] 'log_number'
+#### [ @p1 = ] *p1*
 
-Is the integer (int) value of the log you want to view. The current error log has a value of 0, the previous is 1 (Errorlog.1), the one before previous is 2 (Errorlog.2), and so on.
+The integer value of the log you want to view. *@p1* is **int**, with a default of `0`. The current error log has a value of `0`. The previous is `1` (`ERRORLOG.1`), the one before previous is 2 (`ERRORLOG.2`), and so on.
 
-#### [@p2 = ] 'product ID'
+#### [ @p2 = ] *p2*
 
-Is the integer (int) value for the product whose log you want to view. Use 1 for SQL Server or 2 SQL Server Agent. If a value isn't specified, the SQL Server product is used
+The integer value for the product whose log you want to view. *@p2* is **int**, with a default of `NULL`. Use `1` for SQL Server or `2` SQL Server Agent. If a value isn't specified, the SQL Server product is used.
 
-#### [@p3 = ] 'string_to_search'
+#### [ @p3 = ] N'*p3*'
 
-Is the string value for a string you want to filter on when viewing the error log. This value is **nvarchar(4000)** and has a default of NULL.
+The string value for a string you want to filter on when viewing the error log. *@p3* is **nvarchar(4000)**, with a default of `NULL`.
 
-#### [@p4 = ] 'string_to_search'
+#### [ @p4 = ] N'*p4*'
 
-Is the string value for an additional string you want to filter on to further refine the search when viewing the error log. This value is **nvarchar(4000)** and has a default of NULL. This provides an additional filter to the first string search @p3.
+The string value for an additional string you want to filter on to further refine the search when viewing the error log. *@p4* is **nvarchar(4000)**, with a default of `NULL`. This parameter provides an extra filter to the first string search *@p3*.
 
-## Return Code Values
+## Return code values
 
-No return code
-  
-## Result Sets
+None.
 
-Displays the content of the requested error log. If filter strings are used only the lines that match those strings are displayed. 
-  
+## Result set
+
+Displays the content of the requested error log. If filter strings are used, only the lines that match those strings are displayed.
+
 ## Remarks
 
-Every time [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is started, the current error log is renamed to **errorlog.1**; **errorlog.1** becomes **errorlog.2**, **errorlog.2** becomes **errorlog.3**, and so on. **sp_readerrorlog** enables you to read any of these error log files as long as the files exist.  
-  
+Every time [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] is started, the current error log is renamed to `ERRORLOG.1`; `ERRORLOG.1` becomes `ERRORLOG.2`, `ERRORLOG.2` becomes `ERRORLOG.3`, and so on. `sp_readerrorlog` enables you to read any of these error log files as long as the files exist.
+
 ## Permissions
 
-Execute permissions for **sp_readerrorlog** are restricted to members of the **sysadmin** fixed server role.  
-  
+Execute permissions for `sp_readerrorlog` are restricted to members of the **sysadmin** fixed server role.
+
 ## Examples
 
-The following example cycles the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log.  
+The following example cycles the [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] error log.
 
 ### A. Read the current SQL Server error log
 
-```sql  
-EXEC sp_readerrorlog;  
-```  
-  
+```sql
+EXEC sp_readerrorlog;
+```
+
 ### B. Show the previous SQL Server Agent error log
 
 ```sql
-exec sp_readerrorlog 1, 2;
+EXEC sp_readerrorlog 1, 2;
 ```
 
 ### C. Find log messages that indicate a database is starting up
 
 ```sql
-exec sp_readerrorlog 0, 1, 'database', 'start'
+EXEC sp_readerrorlog 0, 1, 'database', 'start';
 ```
 
-## See Also
+## Related content
 
-- [System Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)
-- [sp_cycle_errorlog &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cycle-errorlog-transact-sql.md)
-- [sp_cycle_agent_errorlog &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cycle-agent-errorlog-transact-sql.md)
+- [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)
+- [sp_cycle_errorlog (Transact-SQL)](sp-cycle-errorlog-transact-sql.md)
+- [sp_cycle_agent_errorlog (Transact-SQL)](sp-cycle-agent-errorlog-transact-sql.md)

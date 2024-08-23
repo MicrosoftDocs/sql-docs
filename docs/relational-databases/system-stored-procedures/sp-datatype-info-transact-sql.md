@@ -4,7 +4,7 @@ description: sp_datatype_info returns information about the data types supported
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 07/04/2024
+ms.date: 08/21/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -78,7 +78,7 @@ None.
 
 ## Permissions
 
-Requires membership in the public role.
+Requires membership in the **public** role.
 
 ## Examples
 

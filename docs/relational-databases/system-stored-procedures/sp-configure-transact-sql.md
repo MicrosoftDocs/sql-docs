@@ -4,7 +4,7 @@ description: sp_configure displays or changes global configuration settings for 
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 07/05/2024
+ms.date: 08/22/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -52,7 +52,7 @@ sp_configure
 
 The name of a configuration option. *@configname* is **varchar(35)**, with a default of `NULL`. The [!INCLUDE [ssDEnoversion](../../includes/ssdenoversion-md.md)] recognizes any unique string that is part of the configuration name. If not specified, the complete list of options is returned.
 
-For information about the available configuration options and their settings, see [Server configuration options (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md).
+For information about the available configuration options and their settings, see [Server configuration options](../../database-engine/configure-windows/server-configuration-options-sql-server.md).
 
 #### [ @configvalue = ] *configvalue*
 
@@ -75,7 +75,7 @@ The values for `config_value` and `run_value` aren't automatically equivalent. A
 | `name` | **nvarchar(35)** | Name of the configuration option. |
 | `minimum` | **int** | Minimum value of the configuration option. |
 | `maximum` | **int** | Maximum value of the configuration option. |
-| `config_value` | **int** | Value to which the configuration option was set using `sp_configure` (value in `sys.configurations.value`).<br /><br />For more information about these options, see [Server configuration options (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md) and [sys.configurations](../system-catalog-views/sys-configurations-transact-sql.md). |
+| `config_value` | **int** | Value to which the configuration option was set using `sp_configure` (value in `sys.configurations.value`).<br /><br />For more information about these options, see [Server configuration options](../../database-engine/configure-windows/server-configuration-options-sql-server.md) and [sys.configurations](../system-catalog-views/sys-configurations-transact-sql.md). |
 | `run_value` | **int** | Currently running value of the configuration option (value in `sys.configurations.value_in_use`).<br /><br />For more information, see [sys.configurations](../system-catalog-views/sys-configurations-transact-sql.md). |
 
 ## Remarks
@@ -114,7 +114,7 @@ Some configuration options, such as **affinity mask** and **recovery interval**,
 > [!CAUTION]  
 > When the option **show advanced options** is set to `1`, this setting applies to all users. It's recommended to only use this state temporarily and switch back to `0` when done with the task that required viewing the advanced options.
 
-For more information about the configuration options and their settings, see [Server configuration options (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md).
+For more information about the configuration options and their settings, see [Server configuration options](../../database-engine/configure-windows/server-configuration-options-sql-server.md).
 
 ## Permissions
 
@@ -191,7 +191,7 @@ RECONFIGURE;
 - [ALTER SERVER CONFIGURATION (Transact-SQL)](../../t-sql/statements/alter-server-configuration-transact-sql.md)
 - [RECONFIGURE (Transact-SQL)](../../t-sql/language-elements/reconfigure-transact-sql.md)
 - [SET Statements (Transact-SQL)](../../t-sql/statements/set-statements-transact-sql.md)
-- [Server configuration options (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md)
+- [Server configuration options](../../database-engine/configure-windows/server-configuration-options-sql-server.md)
 - [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)
 - [sys.configurations (Transact-SQL)](../system-catalog-views/sys-configurations-transact-sql.md)

@@ -4,7 +4,7 @@ description: "sp_delete_job (Transact-SQL) deletes an existing job from the SQL 
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 01/23/2024
+ms.date: 08/22/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -89,7 +89,7 @@ The *@delete_unused_schedule* argument provides backward compatibility with prev
 
 This stored procedure can't delete maintenance plans, and can't delete jobs that are part of maintenance plans. Instead, use [!INCLUDE [ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to delete maintenance plans.
 
-This stored procedure shares the name of `sp_delete_job` with a similar object for the [Azure Elastic Jobs service for Azure SQL Database](/azure/azure-sql/database/elastic-jobs-overview?view=azuresql-db&preserve-view=true). For information about the elastic jobs version, see [jobs.sp_delete_job (Azure Elastic Jobs) (Transact-SQL)](sp-delete-job-elastic-jobs-transact-sql.md?view=azuresql-db&preserve-view=true).
+This stored procedure shares the name of `sp_delete_job` with a similar object for the [Azure Elastic Jobs service for Azure SQL Database](/azure/azure-sql/database/elastic-jobs-overview?view=azuresql-db&preserve-view=true). For information about the elastic jobs version, see [jobs.sp_delete_job (Azure Elastic Jobs)](sp-delete-job-elastic-jobs-transact-sql.md?view=azuresql-db&preserve-view=true).
 
 ## Permissions
 

@@ -4,7 +4,7 @@ description: sp_restoremergeidentityrange ensures that automatic identity range 
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 11/23/2023
+ms.date: 08/22/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: "reference"
@@ -51,7 +51,7 @@ The name of the article. *@article* is **sysname**, with a default of `all`. Whe
 
 `sp_restoremergeidentityrange` is used with merge replication.
 
-`sp_restoremergeidentityrange` gets maximum identity range allocation information from the Distributor, and updates values in the `max_used` column of [MSmerge_identity_range_allocations (Transact-SQL)](../system-tables/msmerge-identity-range-allocations-transact-sql.md) for the articles that use automatic identity range management.
+`sp_restoremergeidentityrange` gets maximum identity range allocation information from the Distributor, and updates values in the `max_used` column of [MSmerge_identity_range_allocations](../system-tables/msmerge-identity-range-allocations-transact-sql.md) for the articles that use automatic identity range management.
 
 ## Permissions
 

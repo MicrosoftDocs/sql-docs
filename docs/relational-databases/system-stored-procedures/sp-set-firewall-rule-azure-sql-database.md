@@ -4,7 +4,7 @@ description: "sp_set_firewall_rule creates or updates the server-level firewall 
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: randolphwest
-ms.date: 12/28/2023
+ms.date: 08/22/2024
 ms.service: azure-sql-database
 ms.topic: "reference"
 f1_keywords:
@@ -57,7 +57,7 @@ The names of server-level firewall settings must be unique. If the name of the s
 
 When you add a server-level firewall setting where the beginning and ending IP addresses are equal to `0.0.0.0`, you enable access to your [!INCLUDE [ssSDS](../../includes/sssds-md.md)] server from Azure. Provide a value to the *name* parameter that helps you remember what the server-level firewall setting is for.
 
-In [!INCLUDE [ssSDS](../../includes/sssds-md.md)], login data required to authenticate a connection and server-level firewall rules are temporarily cached in each database. This cache is periodically refreshed. To force a refresh of the authentication cache and make sure that a database has the latest version of the logins table, execute [DBCC FLUSHAUTHCACHE (Transact-SQL)](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md).
+In [!INCLUDE [ssSDS](../../includes/sssds-md.md)], login data required to authenticate a connection and server-level firewall rules are temporarily cached in each database. This cache is periodically refreshed. To force a refresh of the authentication cache and make sure that a database has the latest version of the logins table, execute [DBCC FLUSHAUTHCACHE](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md).
 
 This is an extended stored procedure, so the data type of the value passed in for each parameter must match the parameter definition.
 

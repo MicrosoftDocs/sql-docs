@@ -4,7 +4,7 @@ description: Causes the server instance to parse and load the data from the thes
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 07/07/2023
+ms.date: 08/22/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -39,7 +39,7 @@ sp_fulltext_load_thesaurus_file
 
 #### [ @lcid = ] *lcid*
 
-Integer mapping the locale identifier (LCID) of the language for which you want to load the thesaurus XML definition. *@lcid* is **int**, with no default. To obtain the LCIDs of languages that are available on a server instance, use the [sys.fulltext_languages (Transact-SQL)](../system-catalog-views/sys-fulltext-languages-transact-sql.md) catalog view.
+Integer mapping the locale identifier (LCID) of the language for which you want to load the thesaurus XML definition. *@lcid* is **int**, with no default. To obtain the LCIDs of languages that are available on a server instance, use the [sys.fulltext_languages](../system-catalog-views/sys-fulltext-languages-transact-sql.md) catalog view.
 
 #### [ @loadOnlyIfNotLoaded = ] *loadOnlyIfNotLoaded*
 

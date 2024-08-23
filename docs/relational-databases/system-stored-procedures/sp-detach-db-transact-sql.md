@@ -4,7 +4,7 @@ description: Detaches a database that is currently not in use from a server inst
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 07/04/2024
+ms.date: 08/22/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -155,6 +155,6 @@ EXEC sp_detach_db @dbname = 'AdventureWorks2022',
 ## Related content
 
 - [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)
-- [Database Detach and Attach (SQL Server)](../databases/database-detach-and-attach-sql-server.md)
+- [Database detach and attach (SQL Server)](../databases/database-detach-and-attach-sql-server.md)
 - [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md)
 - [Detach a database](../databases/detach-a-database.md)

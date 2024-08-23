@@ -4,7 +4,7 @@ description: sp_check_subset_filter checks a filter clause against any table to 
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 07/05/2024
+ms.date: 08/22/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: "reference"
@@ -58,7 +58,6 @@ Specifies whether the filter clause is a parameterized row filter. *@has_dynamic
 | `dynamic_filters_function_list` | **nvarchar(500)** | List of the functions in the filter clause that dynamically filter an article, where each function is separated by a semi-colon. |
 | `uses_host_name` | **bit** | If the [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) function is used in the filter clause, where `1` means that this function is present. |
 | `uses_suser_sname` | **bit** | If the [SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md) function is used in the filter clause, where `1` means that this function is present. |
-
 
 #### [ @dynamic_filters_function_list = ] N'*dynamic_filters_function_list*' OUTPUT
 

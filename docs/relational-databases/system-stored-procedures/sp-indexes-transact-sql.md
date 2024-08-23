@@ -4,7 +4,7 @@ description: sp_indexes returns index information for the specified remote table
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 07/16/2024
+ms.date: 08/22/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -81,10 +81,10 @@ The type of index for which to return information. *@is_unique* is **bit**, and 
 | `INDEX_NAME` | **sysname** | Name of the index. |
 | `TYPE` | **smallint** | Type of index:<br /><br />`0` = Statistics for a table<br />`1` = Clustered<br />`2` = Hashed<br />`3` = Other |
 | `ORDINAL_POSITION` | **int** | Ordinal position of the column in the index. The first column in the index is `1`. This column always returns a value. |
-| `COLUMN_NAME` | **sysname**| The corresponding name of the column for each column of the `TABLE_NAME` returned. |
-| `ASC_OR_DESC` | **varchar**| The order used in collation:<br /><br />`A` = Ascending<br />`D` = Descending<br />`NULL` = Not applicable<br /><br />[!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] always returns `A`. |
-| `CARDINALITY` | **int**| The number of rows in the table or unique values in the index. |
-| `PAGES` | **int**| The number of pages to store the index or table. |
+| `COLUMN_NAME` | **sysname** | The corresponding name of the column for each column of the `TABLE_NAME` returned. |
+| `ASC_OR_DESC` | **varchar** | The order used in collation:<br /><br />`A` = Ascending<br />`D` = Descending<br />`NULL` = Not applicable<br /><br />[!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] always returns `A`. |
+| `CARDINALITY` | **int** | The number of rows in the table or unique values in the index. |
+| `PAGES` | **int** | The number of pages to store the index or table. |
 | `FILTER_CONDITION` | **nvarchar(4000)** | [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] doesn't return a value. |
 
 ## Permissions

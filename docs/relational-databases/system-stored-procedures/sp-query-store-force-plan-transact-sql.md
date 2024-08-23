@@ -4,7 +4,7 @@ description: "Enables forcing a particular plan for a particular query in the Qu
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 05/31/2023
+ms.date: 08/21/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -18,7 +18,7 @@ helpviewer_keywords:
   - "sp_query_store_force_plan"
 dev_langs:
   - "TSQL"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 # sp_query_store_force_plan (Transact-SQL)
 
@@ -65,7 +65,7 @@ You can force plans on a secondary replica when [Query Store for secondary repli
 
 ## Remarks
 
-The resulting execution plan forced by this feature is the same or similar to the plan being forced. Because the resulting plan may not be identical to the plan specified by `sys.sp_query_store_force_plan`, the performance of the plans may vary. In rare cases, the performance difference may be significant and negative; in that case, the administrator must remove the forced plan.
+The resulting execution plan forced by this feature is the same or similar to the plan being forced. Because the resulting plan might not be identical to the plan specified by `sys.sp_query_store_force_plan`, the performance of the plans might vary. In rare cases, the performance difference might be significant and negative; in that case, the administrator must remove the forced plan.
 
 Review forced plans on secondary replicas with [sys.query_store_plan_forcing_locations](../system-catalog-views/sys-query-store-plan-forcing-locations-transact-sql.md).
 
@@ -97,7 +97,7 @@ EXEC sp_query_store_force_plan
     @plan_id = 3;
 ```
 
-Use [sys.query_store_plan_forcing_locations](../system-catalog-views/sys-query-store-plan-forcing-locations-transact-sql.md), joined with [sys.query_store_replicas](../system-catalog-views/sys-query-store-replicas.md), to retrieve [Query Store plans forced on all secondary replicas](../performance/query-store-for-secondary-replicas.md).
+Use [sys.query_store_plan_forcing_locations](../system-catalog-views/sys-query-store-plan-forcing-locations-transact-sql.md), joined with [sys.query_store_replicas](../system-catalog-views/sys-query-store-replicas.md), to retrieve [Query Store for secondary replicas](../performance/query-store-for-secondary-replicas.md).
 
 ```sql
 SELECT query_plan
@@ -116,8 +116,8 @@ WHERE qsr.replica_name = 'yourSecondaryReplicaName';
 - [sp_query_store_remove_plan (Transact-SQL)](sp-query-store-remove-plan-transact-sql.md)
 - [sp_query_store_remove_query (Transact-SQL)](sp-query-store-remove-query-transact-sql.md)
 - [sp_query_store_unforce_plan (Transact-SQL)](sp-query-store-unforce-plan-transact-sql.md)
-- [Query Store Catalog Views (Transact-SQL)](../system-catalog-views/query-store-catalog-views-transact-sql.md)
-- [Monitoring Performance by using the Query Store](../performance/monitoring-performance-by-using-the-query-store.md)
+- [Query Store catalog views (Transact-SQL)](../system-catalog-views/query-store-catalog-views-transact-sql.md)
+- [Monitor performance by using the Query Store](../performance/monitoring-performance-by-using-the-query-store.md)
 - [sp_query_store_reset_exec_stats (Transact-SQL)](sp-query-store-reset-exec-stats-transact-sql.md)
 - [sp_query_store_flush_db (Transact-SQL)](sp-query-store-flush-db-transact-sql.md)
 - [Best Practice with the Query Store](../performance/best-practice-with-the-query-store.md#CheckForced)

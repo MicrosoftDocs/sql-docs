@@ -39,9 +39,9 @@ Deletes a target group in the [Azure Elastic Jobs service for Azure SQL Database
 
 The name of the target group to delete. *target_group_name* is nvarchar(128), with no default.
 
-## Return Code Values
+## Return code values
 
-0 (success) or 1 (failure)
+`0` (success) or `1` (failure).
 
 ## Remarks
 
@@ -49,7 +49,7 @@ Use [jobs.sp_delete_target_group_member](sp-delete-target-group-member-elastic-j
 
 ## Permissions
 
-By default, members of the sysadmin fixed server role can execute this stored procedure.
+By default, members of the **sysadmin** fixed server role can execute this stored procedure.
 
 ## Examples
 

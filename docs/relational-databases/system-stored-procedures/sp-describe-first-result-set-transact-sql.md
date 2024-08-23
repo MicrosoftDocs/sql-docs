@@ -4,7 +4,7 @@ description: Returns the metadata for the first possible result set of the Trans
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 07/04/2024
+ms.date: 08/21/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -29,7 +29,7 @@ Returns the metadata for the first possible result set of the [!INCLUDE [tsql](.
 
 ```syntaxsql
 sp_describe_first_result_set [ @tsql = ] N'tsql'
-    [ , [ @params = ] N'params [ , ...n ]' ]
+    [ , [ @params = ] N'@parameter_name data_type [ , ... n ]' ]
     [ , [ @browse_information_mode = ] <tinyint> ]
 [ ; ]
 ```
@@ -40,7 +40,7 @@ sp_describe_first_result_set [ @tsql = ] N'tsql'
 
 One or more [!INCLUDE [tsql](../../includes/tsql-md.md)] statements. *@tsql* might be **nvarchar(*n*)** or **nvarchar(max)**.
 
-#### [ @params = ] N'*params*'
+#### [ @params = ] N'*@parameter_name* *data_type* [ , ... *n* ]'
 
 *@params* provides a declaration string for parameters for the [!INCLUDE [tsql](../../includes/tsql-md.md)] batch, which is similar to `sp_executesql`. Parameters might be **nvarchar(*n*)** or **nvarchar(max)**.
 

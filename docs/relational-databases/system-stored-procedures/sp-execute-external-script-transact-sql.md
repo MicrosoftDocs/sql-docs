@@ -3,7 +3,7 @@ title: "sp_execute_external_script (Transact-SQL)"
 description: Executes a script provided as an input argument to the procedure, and is used with Machine Learning Services and Language Extensions.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 08/30/2023
+ms.date: 08/21/2024
 ms.service: sql
 ms.subservice: machine-learning-services
 ms.topic: "reference"
@@ -51,7 +51,7 @@ The `sp_execute_external_script` stored procedure executes a script provided as 
 
 For Machine Learning Services, [Python](../../machine-learning/concepts/extension-python.md) and [R](../../machine-learning/concepts/extension-r.md) are supported languages.
 
-To execute `sp_execute_external_script`, you must first enable Machine Learning Services. For more information, see the [Machine Learning Services in Azure SQL Managed Instance documentation](/azure/azure-sql/managed-instance/machine-learning-services-overview).
+To execute `sp_execute_external_script`, you must first enable Machine Learning Services. For more information, see [Machine Learning Services in Azure SQL Managed Instance](/azure/azure-sql/managed-instance/machine-learning-services-overview).
 ::: moniker-end
 
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
@@ -89,8 +89,8 @@ EXEC sp_execute_external_script
     [ , [ @input_data_1_name = ] N'input_data_1_name' ]
     [ , [ @output_data_1_name = ] N'output_data_1_name' ]
     [ , [ @parallel = ] { 0 | 1 } ]
-    [ , [ @params = ] N'@parameter_name data_type [ OUT | OUTPUT ] [ ,...n ]' ]
-    [ , [ @parameter1 = ] 'value1' [ OUT | OUTPUT ] [ ,...n ] ]
+    [ , [ @params = ] N'@parameter_name data_type [ OUT | OUTPUT ] [ , ...n ]' ]
+    [ , [ @parameter1 = ] 'value1' [ OUT | OUTPUT ] [ , ...n ] ]
 ```
 
 ::: moniker-end
@@ -114,7 +114,7 @@ Indicates the script language. *language* is **sysname**. In Azure SQL Managed I
 
 #### [ @script = ] N'*script*'
 
-External language  script specified as a literal or variable input. *script* is **nvarchar(max)**.
+External language script specified as a literal or variable input. *script* is **nvarchar(max)**.
 
 #### [ @input_data_1 = ] N'*input_data_1*'
 
@@ -144,15 +144,15 @@ Specifies the name of the variable in the external script that contains the data
 
 Enable parallel execution of R scripts by setting the `@parallel` parameter to `1`. The default for this parameter is `0` (no parallelism). If `@parallel = 1` and the output is being streamed directly to the client machine, then the `WITH RESULT SETS` clause is required and an output schema must be specified.
 
-- For R scripts that don't use RevoScaleR functions, using the  `@parallel` parameter can be beneficial for processing large datasets, assuming the script can be trivially parallelized. For example, when using the R `predict` function with a model to generate new predictions, set `@parallel = 1` as a hint to the query engine. If the query can be parallelized, rows are distributed according to the **MAXDOP** setting.
+- For R scripts that don't use RevoScaleR functions, using the `@parallel` parameter can be beneficial for processing large datasets, assuming the script can be trivially parallelized. For example, when using the R `predict` function with a model to generate new predictions, set `@parallel = 1` as a hint to the query engine. If the query can be parallelized, rows are distributed according to the **MAXDOP** setting.
 
 - For R scripts that use RevoScaleR functions, parallel processing is handled automatically and you shouldn't specify `@parallel = 1` to the `sp_execute_external_script` call.
 
-#### [ @params = ] N'*@parameter_name data_type*' [ OUT | OUTPUT ] [ ,...n ]
+#### [ @params = ] N'*@parameter_name data_type*' [ OUT | OUTPUT ] [ , ...n ]
 
 A list of input parameter declarations that are used in the external script.
 
-#### [ @parameter1 = ] '*value1*' [ OUT | OUTPUT ] [ ,...n ]
+#### [ @parameter1 = ] '*value1*' [ OUT | OUTPUT ] [ , ...n ]
 
 A list of values for the input parameters used by the external script.
 
@@ -174,12 +174,12 @@ Use `sp_execute_external_script` to execute scripts written in a supported langu
 Use `sp_execute_external_script` to execute scripts written in a supported language. Supported languages are **Python** and **R** in Azure SQL Managed Instance Machine Learning Services.
 ::: moniker-end
 
-By default, result sets returned by this stored procedure are output with unnamed columns. Column names used within a script are local to the scripting environment and aren't reflected in the outputted result set. To name result set columns, use the `WITH RESULT SET` clause of [`EXECUTE`](../../t-sql/language-elements/execute-transact-sql.md).
+By default, result sets returned by this stored procedure are output with unnamed columns. Column names used within a script are local to the scripting environment and aren't reflected in the outputted result set. To name result set columns, use the `WITH RESULT SET` clause of [EXECUTE](../../t-sql/language-elements/execute-transact-sql.md).
 
 In addition to returning a result set, you can return scalar values to using OUTPUT parameters.
 
 ::: moniker range=">=sql-server-2016||>=sql-server-linux-ver15"
-You can control the resources used by external scripts by configuring an external resource pool. For more information, see [CREATE EXTERNAL RESOURCE POOL (Transact-SQL)](../../t-sql/statements/create-external-resource-pool-transact-sql.md). Information about the workload can be obtained from the resource governor catalog views, DMV's, and counters. For more information, see [Resource Governor Catalog Views (Transact-SQL)](../system-catalog-views/resource-governor-catalog-views-transact-sql.md), [Resource Governor Related Dynamic Management Views (Transact-SQL)](../system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql.md), and [SQL Server, External Scripts Object](../performance-monitor/sql-server-external-scripts-object.md).  
+You can control the resources used by external scripts by configuring an external resource pool. For more information, see [CREATE EXTERNAL RESOURCE POOL](../../t-sql/statements/create-external-resource-pool-transact-sql.md). Information about the workload can be obtained from the resource governor catalog views, DMVs, and counters. For more information, see [Resource Governor Catalog Views](../system-catalog-views/resource-governor-catalog-views-transact-sql.md), [Resource Governor Related Dynamic Management Views](../system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql.md), and [SQL Server, External Scripts object](../performance-monitor/sql-server-external-scripts-object.md).  
 ::: moniker-end
 
 ### Monitor script execution
@@ -192,7 +192,7 @@ Monitor script execution using [sys.dm_external_script_requests](../system-dynam
 
 You can set two additional parameters that enable modeling on partitioned data, where partitions are based on one or more columns you provide that naturally segment a data set into logical partitions, created and used only during script execution. Columns containing repeating values for age, gender, geographic region, date or time, are a few examples that lend themselves to partitioned data sets.
 
-The two parameters are **input_data_1_partition_by_columns** and **input_data_1_order_by_columns**, where the second parameter is used to order the result set. The parameters are passed as inputs to `sp_execute_external_script` with the external script executing once for every partition. For more information and examples, see [Tutorial: Create partition-based models](../../machine-learning/tutorials/r-tutorial-create-models-per-partition.md).
+The two parameters are **input_data_1_partition_by_columns** and **input_data_1_order_by_columns**, where the second parameter is used to order the result set. The parameters are passed as inputs to `sp_execute_external_script` with the external script executing once for every partition. For more information and examples, see [Tutorial: Create partition-based models in R on SQL Server](../../machine-learning/tutorials/r-tutorial-create-models-per-partition.md).
 
 You can execute script in parallel by specifying `@parallel = 1`. If the input query can be parallelized, you should set `@parallel = 1` as part of your arguments to `sp_execute_external_script`. By default, the query optimizer operates under `@parallel = 1` on tables having more than 256 rows, but if you want to handle this explicitly, this script includes the parameter as a demonstration.
 
@@ -316,7 +316,7 @@ Column headings used in Python code aren't output to SQL Server; therefore, use 
 The following example creates a stored procedure that uses `sp_execute_external_script` to generate an iris model and return the model.
 
 > [!NOTE]  
-> This example requires advance installation of the **e1071** package. For more information, see [Install additional R packages on SQL Server](../../machine-learning/package-management/install-additional-r-packages-on-sql-server.md).
+> This example requires advance installation of the **e1071** package. For more information, see [Install R packages with sqlmlutils](../../machine-learning/package-management/install-additional-r-packages-on-sql-server.md).
 
 ```sql
 DROP PROCEDURE IF EXISTS generate_iris_model;
@@ -347,13 +347,13 @@ For scoring, you can also use the native [PREDICT](../../t-sql/queries/predict-t
 ## Related content
 
 - [SQL machine learning](../../machine-learning/index.yml)
-- [SQL Server Language Extensions](../../language-extensions/language-extensions-overview.md)
+- [What is SQL Server Language Extensions?](../../language-extensions/language-extensions-overview.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)
 - [CREATE EXTERNAL LIBRARY (Transact-SQL)](../../t-sql/statements/create-external-library-transact-sql.md)
 - [sp_prepare (Transact SQL)](sp-prepare-transact-sql.md)
 - [sp_configure (Transact-SQL)](sp-configure-transact-sql.md)
 - [external scripts enabled Server Configuration Option](../../database-engine/configure-windows/external-scripts-enabled-server-configuration-option.md)
 - [SERVERPROPERTY (Transact-SQL)](../../t-sql/functions/serverproperty-transact-sql.md)
-- [SQL Server, External Scripts Object](../performance-monitor/sql-server-external-scripts-object.md)
+- [SQL Server, External Scripts object](../performance-monitor/sql-server-external-scripts-object.md)
 - [sys.dm_external_script_requests](../system-dynamic-management-views/sys-dm-external-script-requests.md)
 - [sys.dm_external_script_execution_stats](../system-dynamic-management-views/sys-dm-external-script-execution-stats.md)

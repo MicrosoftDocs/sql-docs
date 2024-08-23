@@ -4,7 +4,7 @@ description: "sp_refreshview (Transact-SQL)"
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 06/13/2023
+ms.date: 08/21/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "sp_refreshview"
 dev_langs:
   - "TSQL"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 # sp_refreshview (Transact-SQL)
 
@@ -44,7 +44,7 @@ The name of the view. *@viewname* is **nvarchar**, with no default. *@viewname* 
 
 ## Remarks
 
-If a view isn't created with SCHEMABINDING, `sp_refreshview` should be run when changes are made to the objects underlying the view, which affect the definition of the view. Otherwise, the view might produce unexpected results when it is queried.
+If a view isn't created with SCHEMABINDING, `sp_refreshview` should be run when changes are made to the objects underlying the view, which affect the definition of the view. Otherwise, the view might produce unexpected results when it's queried.
 
 ## Permissions
 

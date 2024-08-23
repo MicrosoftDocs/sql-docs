@@ -4,7 +4,7 @@ description: "Clears all queued (non-persisted) Query Store messages pending for
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 05/29/2023
+ms.date: 08/22/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -16,7 +16,7 @@ helpviewer_keywords:
   - "sys.sp_query_store_clear_message_queues"
 dev_langs:
   - "TSQL"
-monikerRange: ">=sql-server-ver16||>=sql-server-linux-ver16"
+monikerRange: ">=sql-server-ver16 || >=sql-server-linux-ver16"
 ---
 # sp_query_store_clear_message_queues (Transact-SQL)
 

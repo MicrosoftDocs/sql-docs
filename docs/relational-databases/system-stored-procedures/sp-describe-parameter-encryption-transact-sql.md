@@ -4,7 +4,7 @@ description: sp_describe_parameter_encryption analyzes the specified Transact-SQ
 author: jaszymas
 ms.author: jaszymas
 ms.reviewer: vanto, randolphwest
-ms.date: 07/04/2024
+ms.date: 08/21/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -30,7 +30,7 @@ Analyzes the specified [!INCLUDE [tsql](../../includes/tsql-md.md)] statement an
 ```syntaxsql
 sp_describe_parameter_encryption
     [ @tsql = ] N'tsql'
-    [ , [ @params = ] N'params [ , ...n ]' ]
+    [ , [ @params = ] N'@parameter_name data_type [ , ... n ]' ]
 [ ; ]
 ```
 
@@ -40,7 +40,7 @@ sp_describe_parameter_encryption
 
 One or more [!INCLUDE [tsql](../../includes/tsql-md.md)] statements. *@tsql* might be **nvarchar(*n*)** or **nvarchar(max)**.
 
-#### [ @params = ] N'*params*'
+#### [ @params = ] N'*@parameter_name* *data_type* [ ,... *n* ]'
 
 *@params* provides a declaration string for parameters for *@tsql*, which is similar to `sp_executesql`. Parameters might be **nvarchar(*n*)** or **nvarchar(max)**.
 
@@ -118,7 +118,7 @@ CREATE TABLE t1 (
         ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256'
         ) NULL,
 );
-    
+
 EXEC sp_describe_parameter_encryption
     N'INSERT INTO t1 VALUES(@c1)',
     N'@c1 INT';

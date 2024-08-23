@@ -4,7 +4,7 @@ description: Lists all rows in the sysdownloadlist system table for the supplied
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 05/14/2024
+ms.date: 08/21/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -108,7 +108,7 @@ The date and time for which all entries made on or after the specified date and 
 | `object_name` | **sysname** | Object affected by the instruction. |
 | `object_id` | **uniqueidentifier** | Identification number of the object affected by the instruction (`job_id` for a job object, or `0x00` for a server object) or a data value specific to the `operation_code`. |
 | `target_server` | **nvarchar(30)** | Target server that this instruction should be downloaded by. |
-| `error_message` | **nvarchar(1024)** | Error message (if any) from the target server if it encountered a problem while processing this instruction.<br /><br />Note: Any error message blocks all further downloads by the target server. |
+| `error_message` | **nvarchar(1024)** | Error message (if any) from the target server if it encountered a problem while processing this instruction.<br /><br />**Note:** Any error message blocks all further downloads by the target server. |
 | `date_posted` | **datetime** | Date the instruction was posted to the table. |
 | `date_downloaded` | **datetime** | Date the target server downloaded the instruction. |
 | `status` | **tinyint** | Status of the job:<br /><br />`0` = Not yet downloaded<br />`1` = Successfully downloaded. |

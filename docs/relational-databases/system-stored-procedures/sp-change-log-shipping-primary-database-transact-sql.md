@@ -4,7 +4,7 @@ description: "Changes the primary database settings."
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest
-ms.date: 06/06/2023
+ms.date: 08/21/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -51,15 +51,15 @@ The name of the database on the primary server. *@primary_database* is **sysname
 
 #### [ @backup_directory = ] N'*backup_directory*'
 
-The path to the backup folder on the primary server. *@backup_directory* is **nvarchar(500)**, with no default, and can't be NULL.
+The path to the backup folder on the primary server. *@backup_directory* is **nvarchar(500)**, with no default, and can't be `NULL`.
 
 #### [ @backup_share = ] N'*backup_share*'
 
-The network path to the backup directory on the primary server. *@backup_share* is **nvarchar(500)**, with no default, and can't be NULL.
+The network path to the backup directory on the primary server. *@backup_share* is **nvarchar(500)**, with no default, and can't be `NULL`.
 
 #### [ @backup_retention_period = ] '*backup_retention_period*'
 
-The length of time, in minutes, to retain the log backup file in the backup directory on the primary server. *@backup_retention_period* is **int**, with no default, and can't be NULL.
+The length of time, in minutes, to retain the log backup file in the backup directory on the primary server. *@backup_retention_period* is **int**, with no default, and can't be `NULL`.
 
 #### [ @monitor_server_security_mode = ] '*monitor_server_security_mode*'
 
@@ -68,7 +68,7 @@ The security mode used to connect to the monitor server.
 - `1` = Windows Authentication
 - `0` = SQL Server Authentication
 
-*@monitor_server_security_mode* is **bit** and defaults to NULL.
+*@monitor_server_security_mode* is **bit** and defaults to `NULL`.
 
 #### [ @monitor_server_login = ] '*monitor_server_login*'
 
@@ -84,7 +84,7 @@ The length of time, in minutes, after the last backup before a *@threshold_alert
 
 #### [ @threshold_alert = ] '*threshold_alert*'
 
-The alert to be raised when the backup threshold is exceeded. *@threshold_alert* is **int** and can't be NULL.
+The alert to be raised when the backup threshold is exceeded. *@threshold_alert* is **int** and can't be `NULL`.
 
 #### [ @threshold_alert_enabled = ] '*threshold_alert_enabled*'
 
@@ -93,7 +93,7 @@ Specifies whether an alert is raised when *@backup_threshold* is exceeded.
 - `1`: enabled
 - `0`: disabled
 
-*threshold_alert_enabled* is **bit** and can't be NULL.
+*threshold_alert_enabled* is **bit** and can't be `NULL`.
 
 #### [ @history_retention_period = ] '*history_retention_period*'
 
@@ -107,7 +107,7 @@ Specifies whether a log shipping configuration uses [backup compression](../back
 
 - `1`: Enabled. Always compress log backups
 
-- `2` (default): Use the setting of the [View or Configure the backup compression default Server Configuration Option](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)
+- `2` (default): Use the setting of the [View or Configure the backup compression default (server configuration option)](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)
 
 ## Return code values
 
@@ -151,6 +151,6 @@ EXEC master.dbo.sp_change_log_shipping_primary_database
 
 ## Related content
 
-- [About Log Shipping (SQL Server)](../../database-engine/log-shipping/about-log-shipping-sql-server.md)
+- [About log shipping (SQL Server)](../../database-engine/log-shipping/about-log-shipping-sql-server.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)
 - [log_shipping_primary_databases (Transact-SQL)](../system-tables/log-shipping-primary-databases-transact-sql.md)

@@ -4,7 +4,7 @@ description: sp_changesubscriber_schedule changes the Distribution Agent or Merg
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 07/05/2024
+ms.date: 08/22/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: "reference"
@@ -80,7 +80,7 @@ The value applied to the frequency set by *@frequency_type*. *@frequency_interva
 | --- | --- |
 | `1` (default) | *@frequency_interval* is unused. |
 | `4` | Every *@frequency_interval* days. |
-| `8` | *@frequency_interval* is one or more of the following (combined with a [&#124; (Bitwise OR) (Transact-SQL)](../../t-sql/language-elements/bitwise-or-transact-sql.md) logical operator):<br /><br />`1` = Sunday<br />`2` = Monday<br />`4` = Tuesday<br />`8` = Wednesday<br />`16` = Thursday<br />`32` = Friday<br />`64` = Saturday |
+| `8` | *@frequency_interval* is one or more of the following (combined with a [&#124; (Bitwise OR)](../../t-sql/language-elements/bitwise-or-transact-sql.md) logical operator):<br /><br />`1` = Sunday<br />`2` = Monday<br />`4` = Tuesday<br />`8` = Wednesday<br />`16` = Thursday<br />`32` = Friday<br />`64` = Saturday |
 | `16` | On the *@frequency_interval* day of the month. |
 | `32` | *@frequency_interval* is one of the following options:<br /><br />`1` = Sunday<br />`2` = Monday<br />`3` = Tuesday<br />`4` = Wednesday<br />`5` = Thursday<br />`6` = Friday<br />`7` = Saturday<br />`8` = Day<br />`9` = Weekday<br />`10` = Weekend day |
 | `64` | *@frequency_interval* is unused. |

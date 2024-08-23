@@ -4,7 +4,7 @@ description: Calls the CREATE STATISTICS Transact-SQL statement to create single
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 07/05/2024
+ms.date: 08/22/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -25,7 +25,7 @@ Calls the [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-
 
 `sp_createstats` is useful for applications such as benchmarking when query execution times are critical and can't wait for the query optimizer to generate single-column statistics. In most cases, it's not necessary to use `sp_createstats`; the query optimizer generates single-column statistics as necessary to improve query plans when the `AUTO_CREATE_STATISTICS` option is on.
 
-For more information about statistics, see [Statistics](../statistics/statistics.md). For more information about generating single-column statistics, see the `AUTO_CREATE_STATISTICS` option in [ALTER DATABASE SET Options](../../t-sql/statements/alter-database-transact-sql-set-options.md).
+For more information about statistics, see [Statistics](../statistics/statistics.md). For more information about generating single-column statistics, see the `AUTO_CREATE_STATISTICS` option in [ALTER DATABASE SET options](../../t-sql/statements/alter-database-transact-sql-set-options.md).
 
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 

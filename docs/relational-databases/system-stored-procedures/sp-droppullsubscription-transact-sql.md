@@ -4,7 +4,7 @@ description: sp_droppullsubscription drops a subscription at the current databas
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 11/28/2023
+ms.date: 08/22/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: "reference"
@@ -66,7 +66,7 @@ The publication name. *@publication* is **sysname**, with no default. If `all`, 
 
 `sp_droppullsubscription` is used in snapshot replication and transactional replication.
 
-`sp_droppullsubscription` deletes the corresponding row in the [MSreplication_subscriptions (Transact-SQL)](../system-tables/msreplication-subscriptions-transact-sql.md) table and the corresponding Distributor Agent at the Subscriber. If no rows are left in [MSreplication_subscriptions (Transact-SQL)](../system-tables/msreplication-subscriptions-transact-sql.md), it drops the table.
+`sp_droppullsubscription` deletes the corresponding row in the [MSreplication_subscriptions](../system-tables/msreplication-subscriptions-transact-sql.md) table and the corresponding Distributor Agent at the Subscriber. If no rows are left in [MSreplication_subscriptions](../system-tables/msreplication-subscriptions-transact-sql.md), it drops the table.
 
 ## Examples
 

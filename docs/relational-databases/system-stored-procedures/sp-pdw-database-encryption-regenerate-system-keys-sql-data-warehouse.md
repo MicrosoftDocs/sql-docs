@@ -4,13 +4,13 @@ description: Use sp_pdw_database_encryption_regenerate_system_keys to rotate the
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: randolphwest
-ms.date: 06/13/2023
+ms.date: 08/22/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
 dev_langs:
   - "TSQL"
-monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest"
+monikerRange: ">=aps-pdw-2016 || =azure-sqldw-latest"
 ---
 # sp_pdw_database_encryption_regenerate_system_keys (Azure Synapse Analytics)
 

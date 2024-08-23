@@ -4,7 +4,7 @@ description: sp_help_fulltext_tables returns a list of tables that are registere
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 12/28/2023
+ms.date: 08/22/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -23,7 +23,7 @@ dev_langs:
 Returns a list of tables that are registered for full-text indexing.
 
 > [!IMPORTANT]  
-> [!INCLUDE [ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use `sys.fulltext_indexes` catalog view instead. For more information, see [sys.fulltext_indexes (Transact-SQL)](../system-catalog-views/sys-fulltext-indexes-transact-sql.md).
+> [!INCLUDE [ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use `sys.fulltext_indexes` catalog view instead. For more information, see [sys.fulltext_indexes](../system-catalog-views/sys-fulltext-indexes-transact-sql.md).
 
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 

@@ -4,7 +4,7 @@ description: Learn how to automate the configuration of SQL Server encryption fo
 author: adbadram
 ms.author: adbadram
 ms.reviewer: mathoma, vanto
-ms.date: 08/20/2024
+ms.date: 08/23/2024
 ms.service: virtual-machines-sql
 ms.subservice: security
 ms.topic: how-to
@@ -16,7 +16,7 @@ tags: azure-service-management
 
 There are multiple SQL Server encryption features, such as [transparent data encryption (TDE)](/sql/relational-databases/security/encryption/transparent-data-encryption), [column level encryption (CLE)](/sql/t-sql/functions/cryptographic-functions-transact-sql), and [backup encryption](/sql/relational-databases/backup-restore/backup-encryption). These forms of encryption require you to manage and store the cryptographic keys you use for encryption. The Azure Key Vault service is designed to improve the security and management of these keys in a secure and highly available location. The [SQL Server Connector](https://www.microsoft.com/download/details.aspx?id=45344) enables SQL Server to use these keys from Azure Key Vault and [Azure Key Vault Managed Hardware Security Module (HSM)](/sql/relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault#optional---configure-an-azure-key-vault-managed-hsm-hardware-security-module).
 
-If you are running SQL Server on-premises, there are steps you can follow to [access Azure Key Vault from your on-premises SQL Server instance](/sql/relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server). But for SQL Server on Azure VMs, you can save time by using the *Azure Key Vault Integration* feature.
+If you are running SQL Server on-premises, there are steps you can follow to [access Azure Key Vault from your on-premises SQL Server instance](/sql/relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server). The same steps apply for SQL Server on Azure VMs, but you can save time by using the *Azure Key Vault Integration* feature.
 
 > [!NOTE]  
 > The Azure Key Vault integration is available only for the Enterprise, Developer, and Evaluation Editions of SQL Server. Starting with SQL Server 2019, Standard edition is also supported.
@@ -39,17 +39,17 @@ You can enable Key Vault integration during provisioning or configure it for exi
 
 If you are provisioning a new SQL virtual machine with Resource Manager, the Azure portal provides a way to enable Azure Key Vault integration.
 
-![SQL Azure Key Vault Integration](./media/azure-key-vault-integration-configure/azure-sql-arm-akv.png)
+:::image type="content" source="media/azure-key-vault-integration-configure/azure-sql-arm-akv.png" alt-text="Screenshot of creating a SQL Server on Azure VM with Azure Key Vault Integration in the Azure portal." lightbox="media/azure-key-vault-integration-configure/azure-sql-arm-akv.png":::
 
 For a detailed walkthrough of provisioning, see [Provision SQL Server on Azure VM (Azure portal)](create-sql-vm-portal.md).
 
 ### Existing VMs
 
-For existing SQL virtual machines, open your [SQL virtual machines resource](manage-sql-vm-portal.md#access-the-resource) and select **Security** under **Settings**. Select **Enable** to enable Azure Key Vault integration.
+For existing SQL virtual machines, open your [SQL virtual machines resource](manage-sql-vm-portal.md#access-the-resource), under **Security**, select **Security Configuration**. Select **Enable** to enable **Azure Key Vault integration**.
 
-The following screenshot shows how to enable Azure Key Vault in the portal for an existing SQL Server VM (this SQL Server instance uses a non-default port 1401):
+The following screenshot shows how to enable Azure Key Vault in the portal for an existing SQL Server on Azure VM:
 
-![SQL Key Vault integration for existing VMs](./media/azure-key-vault-integration-configure/azure-sql-rm-akv-existing-vms.png)
+:::image type="content" source="media/azure-key-vault-integration-configure/azure-sql-rm-akv-existing-vms.png" alt-text="Screenshot of an existing SQL Server on Azure VM Key Vault integration settings in the Azure portal.":::
 
 When you're finished, select the **Apply** button on the bottom of the **Security** page to save your changes.
 

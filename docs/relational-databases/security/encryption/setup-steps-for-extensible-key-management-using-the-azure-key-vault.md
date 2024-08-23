@@ -378,11 +378,14 @@ In [step 2](#step-2-create-a-key-vault), we learned how to create a key vault an
 
 1. Create an Azure Key Vault Managed HSM. This can be done using the Azure portal by searching for the Azure Key Vault Managed HSM service and creating the new resource, or by using [the Azure CLI](/azure/key-vault/managed-hsm/quick-create-cli), [PowerShell](/azure/key-vault/managed-hsm/quick-create-powershell), or an [ARM template](/azure/key-vault/managed-hsm/quick-create-template).
 
-1. Active the Managed HSM. Only the designated administrators that were assigned during the Managed HSM creation can activate the HSM. This can be done by selecting the Managed HSM resource in the Azure portal by selecting **Download Security Domain** in the **Overview** menu of the resource. Then follow one of the [quickstarts to activate your Managed HSM](/azure/key-vault/managed-hsm/quick-create-cli#activate-your-managed-hsm).
+1. Activate the Managed HSM. Only the designated administrators that were assigned during the Managed HSM creation can activate the HSM. This can be done by selecting the Managed HSM resource in the Azure portal by selecting **Download Security Domain** in the **Overview** menu of the resource. Then follow one of the [quickstarts to activate your Managed HSM](/azure/key-vault/managed-hsm/quick-create-cli#activate-your-managed-hsm).
 
 1. Grant permissions for the Microsoft Entra service principal to access the Managed HSM. The **Managed HSM Administrator** role doesn't give permissions to create a key. Similar to [step 2](#step-2-create-a-key-vault), the EKM application needs the **Managed HSM Crypto User** or **Managed HSM Crypto Service Encryption User** role to perform wrap and unwrap operations. For more information, see [Local RBAC built-in roles for Managed HSM](/azure/key-vault/managed-hsm/built-in-roles).
 
-1. In the Azure Key Vault Managed HSM service menu, under **Setting**, select **Keys, and **Generate/Import/Restore Backup** to create a key or import an existing key.
+1. In the Azure Key Vault Managed HSM service menu, under **Setting**, select **Keys**. In the **Keys** window, select **Generate/Import/Restore Backup** to create a key or import an existing key.
+
+   > [!NOTE]
+   > When creating a credential to access the Managed HSM, the identity is `<name of Managed HSM>.managedhsm.azure.net`, which can be found in the Azure Key Vault Managed HSM **Overview** as the **HSM URI** in the Azure portal.
 
 ## Step 3: Install the SQL Server Connector
 

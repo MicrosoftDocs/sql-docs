@@ -6,7 +6,7 @@ ms.author: maggies
 ms.date: 08/05/2024
 ms.service: reporting-services
 ms.subservice: report-data
-ms.topic: install-set-up-deploy
+ms.topic: concept-article
 ms.custom: updatefrequency5
 
 #customer intent: As an Oracle database user, I want to learn how to connect a database to my report server so that I can use that data in my reports.

@@ -4,7 +4,7 @@ description: "Reads the XML text provided as input, parses the text by using the
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 06/26/2023
+ms.date: 08/21/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -31,7 +31,7 @@ For backward compatibility, `sp_xml_preparedocument` collapses the CR (`char(13)
 > [!NOTE]  
 > The XML parser invoked by `sp_xml_preparedocument` can parse internal DTDs and entity declarations. Because maliciously constructed DTDs and entity declarations can be used to perform a denial of service attack, we strongly recommend that users not directly pass XML documents from untrusted sources to `sp_xml_preparedocument`.  
 >  
-> To mitigate recursive entity expansion attacks, `sp_xml_preparedocument` limits to 10,000 the number of entities that can be expanded underneath a single entity at the top level of a document. The limit does not apply to character or numeric entities. This limit allows documents with many entity references to be stored, but prevents any one entity from being recursively expanded in a chain longer than 10,000 expansions.
+> To mitigate recursive entity expansion attacks, `sp_xml_preparedocument` limits to 10,000 the number of entities that can be expanded underneath a single entity at the top level of a document. The limit doesn't apply to character or numeric entities. This limit allows documents with many entity references to be stored, but prevents any one entity from being recursively expanded in a chain longer than 10,000 expansions.
 
 `sp_xml_preparedocument` limits the number of elements that can be open at one time to 256.
 
@@ -54,10 +54,10 @@ The handle to the newly created document. *hdoc* is an integer.
 
 #### [ *xmltext* ]
 
-The original XML document. The MSXML parser parses this XML document. *xmltext* is a text parameter: **char**, **nchar**, **varchar**, **nvarchar**, **text**, **ntext** or **xml**. The default value is NULL, in which case an internal representation of an empty XML document is created.
+The original XML document. The MSXML parser parses this XML document. *xmltext* is a text parameter: **char**, **nchar**, **varchar**, **nvarchar**, **text**, **ntext** or **xml**. The default value is `NULL`, in which case an internal representation of an empty XML document is created.
 
 > [!NOTE]  
-> `sp_xml_preparedocument` can only process text or untyped XML. If an instance value to be used as input is already typed XML, first cast it to a new untyped XML instance or as a string and then pass that value as input. For more information, see [Compare Typed XML to Untyped XML](../xml/compare-typed-xml-to-untyped-xml.md).
+> `sp_xml_preparedocument` can only process text or untyped XML. If an instance value to be used as input is already typed XML, first cast it to a new untyped XML instance or as a string and then pass that value as input. For more information, see [Compare typed XML to untyped XML](../xml/compare-typed-xml-to-untyped-xml.md).
 
 #### [ *xpath_namespaces* ]
 
@@ -154,9 +154,9 @@ EXEC sp_xml_preparedocument @hdoc OUTPUT, @doc, '<ROOT xmlns:xyz="urn:MyNamespac
 
 ## Related content
 
-- [XML Stored Procedures(Transact-SQL)](xml-stored-procedures-transact-sql.md)
-- [System Stored Procedures(Transact-SQL)](system-stored-procedures-transact-sql.md)
-- [OPENXML(Transact-SQL)](../../t-sql/functions/openxml-transact-sql.md)
+- [XML stored procedures (Transact-SQL)](xml-stored-procedures-transact-sql.md)
+- [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)
+- [OPENXML (Transact-SQL)](../../t-sql/functions/openxml-transact-sql.md)
 - [sys.dm_exec_xml_handles (Transact-SQL)](../system-dynamic-management-views/sys-dm-exec-xml-handles-transact-sql.md)
 - [sp_xml_removedocument (Transact-SQL)](sp-xml-removedocument-transact-sql.md)
 - [nodes() Method (xml Data Type)](../../t-sql/xml/nodes-method-xml-data-type.md)

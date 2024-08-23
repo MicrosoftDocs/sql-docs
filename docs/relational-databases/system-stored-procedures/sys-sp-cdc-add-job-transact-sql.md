@@ -4,7 +4,7 @@ description: "Creates a change data capture cleanup or capture job in the curren
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 06/13/2023
+ms.date: 08/21/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -44,7 +44,7 @@ sys.sp_cdc_add_job [ @job_type = ] N'job_type'
 
 #### [ @job_type = ] N'*job_type*'
 
-Type of job to add. *@job_type* is **nvarchar(20)** and can't be NULL. Valid inputs are `capture` and `cleanup`.
+Type of job to add. *@job_type* is **nvarchar(20)** and can't be `NULL`. Valid inputs are `capture` and `cleanup`.
 
 #### [ @start_job = ] *start_job*
 
@@ -66,7 +66,7 @@ Maximum number of scan cycles to execute in order to extract all rows from the l
 
 Indicates whether the capture job is to run continuously (`1`), or run only once (`0`). *@continuous* is **bit** with a default of `1`.
 
-- When *@continuous* is `1`, the [sp_cdc_scan](sys-sp-cdc-scan-transact-sql.md) job scans the log and processes up to (`@maxtrans * @maxscans`) transactions. It then waits the number of seconds specified in *@pollinginterval* before beginning the next log scan.
+- When *@continuous* is `1`, the [sys.sp_cdc_scan](sys-sp-cdc-scan-transact-sql.md) job scans the log and processes up to (`@maxtrans * @maxscans`) transactions. It then waits the number of seconds specified in *@pollinginterval* before beginning the next log scan.
 
 - When *@continuous* is `0`, the `sp_cdc_scan` job executes up to *@maxscans* scans of the log, processing up to *@maxtrans* transaction during each scan, and then exits.
 
@@ -104,7 +104,7 @@ Because the cleanup and capture jobs are created by default, this stored procedu
 
 The name of the job is `cdc.<database_name>_cleanup` or `cdc.<database_name>_capture`, where `<database_name>` is the name of the current database. If a job with the same name already exists, the name is appended with a period (`.`) followed by a unique identifier, for example: `cdc.AdventureWorks_capture.A1ACBDED-13FC-428C-8302-10100EF74F52`.
 
-To view the current configuration of a cleanup or capture job, use [sp_cdc_help_jobs](sys-sp-cdc-help-jobs-transact-sql.md). To change the configuration of a job, use [sp_cdc_change_job](sys-sp-cdc-change-job-transact-sql.md).
+To view the current configuration of a cleanup or capture job, use [sys.sp_cdc_help_jobs](sys-sp-cdc-help-jobs-transact-sql.md). To change the configuration of a job, use [sys.sp_cdc_change_job](sys-sp-cdc-change-job-transact-sql.md).
 
 ## Permissions
 

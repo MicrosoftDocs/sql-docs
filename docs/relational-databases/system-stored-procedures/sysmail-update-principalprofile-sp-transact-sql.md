@@ -4,7 +4,7 @@ description: "Updates the information for an association between a principal and
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: randolphwest
-ms.date: 05/30/2023
+ms.date: 08/21/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -53,7 +53,7 @@ The name of the profile for the association to change. *@profile_name* is **sysn
 
 #### [ @is_default = ] *is_default*
 
-Whether this profile is the default profile for the database user. A database user may only have one default profile. *@is_default* is **bit**, with no default.
+Whether this profile is the default profile for the database user. A database user might only have one default profile. *@is_default* is **bit**, with no default.
 
 ## Return code values
 
@@ -65,7 +65,7 @@ None.
 
 ## Remarks
 
-This stored procedure changes whether the profile specified is the default profile for the database user. A database user may only have one default private profile.
+This stored procedure changes whether the profile specified is the default profile for the database user. A database user might only have one default private profile.
 
 When the principal name for the association is **public** or the principal ID for the association is `0`, this stored procedure changes the public profile. There can only be one default public profile.
 

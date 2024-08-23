@@ -4,7 +4,7 @@ description: Creates a proxy credential for xp_cmdshell.
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 07/06/2023
+ms.date: 08/21/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -38,17 +38,17 @@ sp_xp_cmdshell_proxy_account [ NULL | { 'account_name' , 'password' } ]
 
 ## Arguments
 
-- **NULL**
+#### NULL
 
-  Specifies that the proxy credential should be deleted.
+Specifies that the proxy credential should be deleted.
 
-- **'*account_name*'**
+#### '*account_name*'
 
-  Specifies the Windows account to be the proxy.
+Specifies the Windows account to be the proxy.
 
-- **'*password*'**
+#### '*password*'
 
-  Specifies the password of the Windows account.
+Specifies the password of the Windows account.
 
 ## Return code values
 
@@ -56,13 +56,13 @@ sp_xp_cmdshell_proxy_account [ NULL | { 'account_name' , 'password' } ]
 
 ## Remarks
 
-The proxy credential is called **##xp_cmdshell_proxy_account##**.
+The proxy credential is called `##xp_cmdshell_proxy_account##`.
 
-When it is executed using the NULL option, `sp_xp_cmdshell_proxy_account` deletes the proxy credential.
+When it's executed using the `NULL` option, `sp_xp_cmdshell_proxy_account` deletes the proxy credential.
 
 ## Permissions
 
-Requires CONTROL SERVER permission.
+Requires `CONTROL SERVER` permission.
 
 ## Examples
 

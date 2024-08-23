@@ -4,7 +4,7 @@ description: "Starts Database Mail by starting the Service Broker objects that t
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest
-ms.date: 05/30/2023
+ms.date: 08/21/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -73,6 +73,6 @@ GO
 ## Related content
 
 - [Database Mail](../database-mail/database-mail.md)
-- [Database Mail XPs Server Configuration Option](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md)
+- [Database Mail XPs (server configuration option)](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md)
 - [sysmail_stop_sp (Transact-SQL)](sysmail-stop-sp-transact-sql.md)
 - [Database Mail stored procedures (Transact-SQL)](database-mail-stored-procedures-transact-sql.md)

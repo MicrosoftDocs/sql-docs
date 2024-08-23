@@ -5,7 +5,7 @@ description: "sp_wait_for_database_copy_sync is scoped to an active geo-replicat
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 04/27/2023
+ms.date: 08/21/2024
 ms.service: azure-sql-database
 ms.topic: "reference"
 f1_keywords:
@@ -74,5 +74,5 @@ GO
 ## Related content
 
 - [sys.dm_continuous_copy_status (Azure SQL Database)](../system-dynamic-management-views/sys-dm-continuous-copy-status-azure-sql-database.md)
-- [Geo-Replication Dynamic Management Views (DMVs) and Functions (Azure SQL Database)](../system-dynamic-management-views/geo-replication-dynamic-management-views-and-functions-azure-sql-database.md)
+- [Geo-Replication Dynamic Management Views and Functions (Azure SQL Database)](../system-dynamic-management-views/geo-replication-dynamic-management-views-and-functions-azure-sql-database.md)
 - [sys.dm_geo_replication_link_status](../system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md)

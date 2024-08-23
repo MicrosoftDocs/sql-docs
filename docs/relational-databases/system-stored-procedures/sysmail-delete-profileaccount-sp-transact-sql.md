@@ -4,7 +4,7 @@ description: "sysmail_delete_profileaccount_sp (Transact-SQL)"
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 05/30/2023
+ms.date: 08/21/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -36,19 +36,19 @@ sysmail_delete_profileaccount_sp { [ @profile_id = ] profile_id | [ @profile_nam
 
 #### [ @profile_id = ] *profile_id*
 
-The profile ID of the profile to delete. *@profile_id* is **int**, with a default of `NULL`. Either the *@profile_id* or the *@profile_name* may be specified.
+The profile ID of the profile to delete. *@profile_id* is **int**, with a default of `NULL`. Either the *@profile_id* or the *@profile_name* can be specified.
 
 #### [ @profile_name = ] '*profile_name*'
 
-The profile name of the profile to delete. *@profile_name* is **sysname**, with a default of `NULL`. Either the *@profile_id* or the *@profile_name* may be specified.
+The profile name of the profile to delete. *@profile_name* is **sysname**, with a default of `NULL`. Either the *@profile_id* or the *@profile_name* can be specified.
 
 #### [ @account_id = ] *account_id*
 
-The account ID to delete. *@account_id* is **int**, with a default of `NULL`. Either the *@account_id* or the *@account_name* may be specified.
+The account ID to delete. *@account_id* is **int**, with a default of `NULL`. Either the *@account_id* or the *@account_name* can be specified.
 
 #### [ @account_name = ] '*account_name*'
 
-The name of the account to delete. *@account_name* is **sysname**, with a default of `NULL`. Either the *@account_id* or the *@account_name* may be specified.
+The name of the account to delete. *@account_name* is **sysname**, with a default of `NULL`. Either the *@account_id* or the *@account_name* can be specified.
 
 ## Return code values
 
@@ -64,7 +64,7 @@ Returns an error if the account specified isn't associated with the profile spec
 
 When an account is specified but no profile is specified, this stored procedure removes the specified account from all profiles. For example, if you're preparing to shut down an existing SMTP server, you remove accounts that use that SMTP server from all profiles, rather than removing each account from each profile.
 
-When a profile is specified but no account is specified, this stored procedure removes all accounts from the specified profile. For example, if you're changing the SMTP servers a profile uses, it may be convenient to remove all accounts from the profile and then add new accounts as necessary.
+When a profile is specified but no account is specified, this stored procedure removes all accounts from the specified profile. For example, if you're changing the SMTP servers a profile uses, it might be convenient to remove all accounts from the profile and then add new accounts as necessary.
 
 The stored procedure `sysmail_delete_profileaccount_sp` is in the `msdb` database and is owned by the **dbo** schema. The procedure must be executed with a three-part name if the current database isn't `msdb`.
 
@@ -74,7 +74,7 @@ The stored procedure `sysmail_delete_profileaccount_sp` is in the `msdb` databas
 
 ## Examples
 
-The following example shows removing  the account `Audit Account` from the profile `AdventureWorks Administrator`.
+The following example shows removing the account `Audit Account` from the profile `AdventureWorks Administrator`.
 
 ```sql
 EXEC msdb.dbo.sysmail_delete_profileaccount_sp

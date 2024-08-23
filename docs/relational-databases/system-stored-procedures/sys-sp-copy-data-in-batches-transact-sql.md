@@ -4,7 +4,7 @@ description: "Copies data from the source table to the target table after verify
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: randolphwest
-ms.date: 05/03/2023
+ms.date: 08/21/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -56,4 +56,4 @@ This operation requires **SELECT** on the source table, **INSERT** in the target
 
 - [Ledger considerations and limitations](../security/ledger/ledger-limits.md)
 - [Ledger overview](../security/ledger/ledger-overview.md)
-- [How to convert regular tables into ledger tables](../security/ledger/ledger-how-to-migrate-data-to-ledger-tables.md)
+- [Migrate data from regular tables to ledger tables](../security/ledger/ledger-how-to-migrate-data-to-ledger-tables.md)

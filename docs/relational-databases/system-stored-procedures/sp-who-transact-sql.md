@@ -4,7 +4,7 @@ description: Provides information about current users, sessions, and processes i
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: randolphwest
-ms.date: 07/06/2023
+ms.date: 08/21/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -69,9 +69,9 @@ With parallel processing, subthreads are created for the specific session ID. Th
 
 ## Remarks
 
-A blocking process, which may have an exclusive lock, is one that is holding resources that another process needs.
+A blocking process, which might have an exclusive lock, is one that is holding resources that another process needs.
 
-All orphaned distributed transactions are assigned the session ID value of `-2`. Orphaned distributed transactions are distributed transactions that aren't associated with any session ID. For more information, see [Use Marked Transactions to Recover Related Databases Consistently (Full Recovery Model)](../backup-restore/use-marked-transactions-to-recover-related-databases-consistently.md).
+All orphaned distributed transactions are assigned the session ID value of `-2`. Orphaned distributed transactions are distributed transactions that aren't associated with any session ID. For more information, see [Use Marked Transactions to Recover Related Databases Consistently](../backup-restore/use-marked-transactions-to-recover-related-databases-consistently.md).
 
 Query the `is_user_process` column of `sys.dm_exec_sessions` to separate system processes from user processes.
 

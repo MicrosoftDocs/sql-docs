@@ -4,7 +4,7 @@ description: "Adds a Database Mail account to a Database Mail profile."
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 05/30/2023
+ms.date: 08/21/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -20,7 +20,7 @@ dev_langs:
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-Adds a Database Mail account to a Database Mail profile. Execute `sysmail_add_profileaccount_sp` after a Database Account is created with [sysmail_add_account_sp (Transact-SQL)](sysmail-add-account-sp-transact-sql.md), and a Database Profile is created with [sysmail_add_profile_sp (Transact-SQL)](sysmail-add-profile-sp-transact-sql.md).
+Adds a Database Mail account to a Database Mail profile. Execute `sysmail_add_profileaccount_sp` after a Database Account is created with [sysmail_add_account_sp](sysmail-add-account-sp-transact-sql.md), and a Database Profile is created with [sysmail_add_profile_sp](sysmail-add-profile-sp-transact-sql.md).
 
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
@@ -63,7 +63,7 @@ The sequence number of the account within the profile. *@sequence_number* is **i
 
 Both the profile and the account must already exist. Otherwise, the stored procedure returns an error.
 
-Notice that this stored procedure doesn't change the sequence number of an account already associated with the specified profile. For more information about updating the sequence number of an account, see [sysmail_update_profileaccount_sp (Transact-SQL)](sysmail-update-profileaccount-sp-transact-sql.md).
+This stored procedure doesn't change the sequence number of an account already associated with the specified profile. For more information about updating the sequence number of an account, see [sysmail_update_profileaccount_sp](sysmail-update-profileaccount-sp-transact-sql.md).
 
 The sequence number determines the order in which Database Mail uses accounts in the profile. For a new e-mail message, Database Mail starts with the account that has the lowest sequence number. If that account fails, Database Mail uses the account with the next highest sequence number, and so on, until either Database Mail sends the message successfully, or the account with the highest sequence number fails. If the account with the highest sequence number fails, the Database Mail pauses attempts to send the mail for the amount of time configured in the `AccountRetryDelay` parameter of `sysmail_configure_sp`, then starts the process of attempting to send the mail again, starting with the lowest sequence number. Use the `AccountRetryAttempts` parameter of `sysmail_configure_sp`, to configure the number of times that the external mail process attempts to send the e-mail message using each account in the specified profile.
 

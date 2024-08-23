@@ -4,7 +4,7 @@ description: "Spawns a Windows command shell and passes in a string for executio
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 05/31/2023
+ms.date: 08/22/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -78,7 +78,7 @@ The proxy account credential can be created by executing `sp_xp_cmdshell_proxy_a
 EXEC sp_xp_cmdshell_proxy_account 'SHIPPING\KobeR', 'sdfh%dkc93vcMt0';
 ```
 
-For more information, see [sp_xp_cmdshell_proxy_account (Transact-SQL)](sp-xp-cmdshell-proxy-account-transact-sql.md).
+For more information, see [sp_xp_cmdshell_proxy_account](sp-xp-cmdshell-proxy-account-transact-sql.md).
 
 ## Permissions
 

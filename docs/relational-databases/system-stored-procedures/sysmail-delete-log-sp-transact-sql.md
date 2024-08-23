@@ -4,7 +4,7 @@ description: "Deletes events from the Database Mail log."
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 05/30/2023
+ms.date: 08/21/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -36,7 +36,7 @@ sysmail_delete_log_sp [ [ @logged_before = ] 'logged_before' ]
 
 #### [ @logged_before = ] '*logged_before*'
 
-Deletes entries up to the date and time specified by the *@logged_before* argument. *@logged_before* is **datetime** with NULL as default. NULL indicates all dates.
+Deletes entries up to the date and time specified by the *@logged_before* argument. *@logged_before* is **datetime** with `NULL` as default. `NULL` indicates all dates.
 
 #### [ @event_type = ] '*event_type*'
 

@@ -4,7 +4,7 @@ description: "Verifies the database ledger and the table ledgers."
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: randolphwest
-ms.date: 06/13/2023
+ms.date: 08/21/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -63,6 +63,6 @@ Requires the **VIEW LEDGER CONTENT** permission.
 
 ## Related content
 
-- [Database Verification](../security/ledger/ledger-database-verification.md)
+- [Database verification](../security/ledger/ledger-database-verification.md)
 - [Verify a ledger table to detect tampering](../security/ledger/ledger-verify-database.md)
-- [Ledger Overview](../security/ledger/ledger-overview.md)
+- [Ledger overview](../security/ledger/ledger-overview.md)

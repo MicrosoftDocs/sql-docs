@@ -342,9 +342,11 @@ This switch is used by the client when connecting to Azure SQL Database or Azure
 
   ---
 
+- **Microsoft Entra ID access token**
+
   Users of **bcp** (17.8 and later versions) can also authenticate with a token. The following examples use [PowerShell on Linux](/powershell/scripting/install/installing-powershell-on-linux) to retrieve an access token.
 
-  This example retrieves an access token and places it into a file to export data using a System Assigned Managed Identity.
+  This example retrieves an access token and places it into a file to export data using a system-assigned managed identity.
 
   ```bash
   Connect-AzAccount -Identity

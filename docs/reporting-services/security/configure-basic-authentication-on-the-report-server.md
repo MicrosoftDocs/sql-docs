@@ -36,7 +36,7 @@ Channel encryption, such as Transport Layer Security (TLS), previously known as 
   
 ## Configure a report server to use Basic authentication
   
-1. Open the RSReportServer.config configuration file in a text editor. For information about the location of your configuration file, see [RsReportServer.config configuration file](../report-server/rsreportserver-config-configuration-file.md#file-location).
+1. Open the RSReportServer.config configuration file in a text editor. For information about the location of your configuration file, see [RsReportServer.config configuration file](../report-server/rsreportserver-config-configuration-file.md#bkmk_file_location).
   
 1. In the file, go to the `<Authentication>` line.
 

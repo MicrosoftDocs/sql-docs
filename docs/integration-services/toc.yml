@@ -67,6 +67,10 @@
     href: ../integration-services/lift-shift/ssis-azure-schedule-packages-ssms.md
   - name: Migrate to Azure process and tools 
     href: ../integration-services/lift-shift/ssis-migration-to-Azure.md
+- name: Integrating with Microsoft Fabric
+  items:
+  - name: Tutorial - Integrating SSIS with Fabric Data Warehouse
+    href: ../integration-services/fabric-integration/integrating-fabric-data-warehouse.md
 - name: Install Integration Services
   href: ../integration-services/install-windows/install-integration-services.md
 - name: Installing Integration Services Versions Side by Side

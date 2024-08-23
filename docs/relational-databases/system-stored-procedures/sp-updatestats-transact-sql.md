@@ -4,7 +4,7 @@ description: "Runs UPDATE STATISTICS against all user-defined and internal table
 author: markingmyname
 ms.author: maghan
 ms.reviewer: wiassaf, randolphwest
-ms.date: 04/01/2024
+ms.date: 08/22/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -23,7 +23,7 @@ monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-20
 
 Runs `UPDATE STATISTICS` against all user-defined and internal tables in the current database.
 
-For more information about `UPDATE STATISTICS`, see [UPDATE STATISTICS (Transact-SQL)](../../t-sql/statements/update-statistics-transact-sql.md). For more information about statistics, see [Statistics](../statistics/statistics.md).
+For more information about `UPDATE STATISTICS`, see [UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md). For more information about statistics, see [Statistics](../statistics/statistics.md).
 
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 

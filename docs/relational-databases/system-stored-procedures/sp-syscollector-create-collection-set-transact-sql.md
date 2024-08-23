@@ -4,7 +4,7 @@ description: Creates a new collection set.
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 07/04/2023
+ms.date: 08/21/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -24,7 +24,7 @@ dev_langs:
 Creates a new collection set. You can use this stored procedure to create a custom collection set for data collection.
 
 > [!WARNING]  
-> In cases where the Windows account configured as a proxy is a non-interactive or interactive user that has not yet logged in, the profile directory will not exist, and the creation of the staging directory will fail. Therefore, if you are using a proxy account on a domain controller, you must specify an interactive account that has been used at least once in order to assure that the profile directory has been created.
+> In cases where the Windows account configured as a proxy is a non-interactive or interactive user that hasn't yet logged in, the profile directory will not exist, and the creation of the staging directory will fail. Therefore, if you're using a proxy account on a domain controller, you must specify an interactive account that has been used at least once in order to assure that the profile directory has been created.
 
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
@@ -77,7 +77,7 @@ The number of days that the collected data is saved in the management data wareh
 
 #### [ @proxy_id = ] *proxy_id*
 
-The unique identifier for a [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Agent proxy account. *@proxy_id* is **int**, with a default of `NULL`. If specified, *@proxy_name* must be `NULL`. To obtain *@proxy_id*, query the `sysproxies` system table. The **dc_admin** fixed database role must have permission to access the proxy. For more information, see [Create a SQL Server Agent Proxy](../../ssms/agent/create-a-sql-server-agent-proxy.md).
+The unique identifier for a [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Agent proxy account. *@proxy_id* is **int**, with a default of `NULL`. If specified, *@proxy_name* must be `NULL`. To obtain *@proxy_id*, query the `sysproxies` system table. The **dc_admin** fixed database role must have permission to access the proxy. For more information, see [Create a SQL Server Agent proxy](../../ssms/agent/create-a-sql-server-agent-proxy.md).
 
 #### [ @proxy_name = ] N'*proxy_name*'
 
@@ -183,6 +183,6 @@ GO
 ## Related content
 
 - [Data collection](../data-collection/data-collection.md)
-- [Create a Custom Collection Set That Uses the Generic T-SQL Query Collector Type (Transact-SQL)](../data-collection/create-custom-collection-set-generic-t-sql-query-collector-type.md)
-- [Data Collector stored procedures (Transact-SQL)](data-collector-stored-procedures-transact-sql.md)
+- [Create custom collection set - Generic T-SQL Query collector type](../data-collection/create-custom-collection-set-generic-t-sql-query-collector-type.md)
+- [Data collector stored procedures (Transact-SQL)](data-collector-stored-procedures-transact-sql.md)
 - [syscollector_collection_sets (Transact-SQL)](../system-catalog-views/syscollector-collection-sets-transact-sql.md)

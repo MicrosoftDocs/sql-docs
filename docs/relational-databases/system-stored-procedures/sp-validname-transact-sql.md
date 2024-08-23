@@ -4,7 +4,7 @@ description: Checks for valid SQL Server identifier names.
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: randolphwest
-ms.date: 08/24/2023
+ms.date: 08/21/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -55,7 +55,7 @@ Requires membership in the **public** role.
 ## Related content
 
 - [Database Engine stored procedures (Transact-SQL)](database-engine-stored-procedures-transact-sql.md)
-- [Data Types (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)
+- [Data types (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)
 - [NCHAR (Transact-SQL)](../../t-sql/functions/nchar-transact-sql.md)
 - [nchar and nvarchar (Transact-SQL)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)
 - [ntext, text, and image (Transact-SQL)](../../t-sql/data-types/ntext-text-and-image-transact-sql.md)

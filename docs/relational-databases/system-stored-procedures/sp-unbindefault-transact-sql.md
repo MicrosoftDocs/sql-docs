@@ -4,7 +4,7 @@ description: Unbinds, or removes, a default from a column or from an alias data 
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 08/28/2023
+ms.date: 08/21/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -45,7 +45,7 @@ The name of the table and column or the alias data type from which the default i
 When unbinding a default from an alias data type, any columns of that data type that have the same default are also unbound. Columns of that data type with defaults bound directly to them are unaffected.
 
 > [!NOTE]  
-> *@objname* can contain brackets `[]` as delimited identifier characters. For more information, see [Database Identifiers](../databases/database-identifiers.md).
+> *@objname* can contain brackets `[]` as delimited identifier characters. For more information, see [Database identifiers](../databases/database-identifiers.md).
 
 #### [ @futureonly = ] 'futureonly'
 
@@ -94,7 +94,7 @@ EXEC sp_unbindefault 'ssn', 'futureonly';
 The following example shows using delimited identifiers in *@objname* parameter. Notice the period as part of the table name. In the `sp_unbindefault` portion, the object contains two periods; the first is part of the table name, and the second distinguishes the table name from the column name.
 
 ```sql
--- 
+--
 CREATE TABLE [t.3] (c1 INT);
 
 CREATE DEFAULT default2 AS 0;

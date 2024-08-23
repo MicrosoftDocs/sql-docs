@@ -4,7 +4,7 @@ description: Deactivates an application role and reverts to the previous securit
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 08/28/2023
+ms.date: 08/22/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -35,7 +35,7 @@ sp_unsetapprole [ @cookie = ] cookie
 
 #### [ @cookie = ] *cookie*
 
-Specifies the cookie that was created when the application role was activated. *@cookie* is **varbinary(8000)**, with no default. The cookie is created by [sp_setapprole (Transact-SQL)](sp-setapprole-transact-sql.md).
+Specifies the cookie that was created when the application role was activated. *@cookie* is **varbinary(8000)**, with no default. The cookie is created by [sp_setapprole](sp-setapprole-transact-sql.md).
 
 > [!NOTE]  
 > The cookie `OUTPUT` parameter for `sp_setapprole` is currently documented as **varbinary(8000)** which is the correct maximum length. However the current implementation returns **varbinary(50)**. Applications should continue to reserve **varbinary(8000)** so that the application continues to operate correctly if the cookie return size increases in a future release.

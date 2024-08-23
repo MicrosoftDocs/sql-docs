@@ -4,7 +4,7 @@ description: "Renames an existing condition in Policy-Based Management."
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: randolphwest
-ms.date: 06/26/2023
+ms.date: 08/21/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -37,15 +37,15 @@ sp_syspolicy_rename_condition
 
 #### [ @name = ] N'*name*'
 
-The name of the condition that you want to rename. *@name* is **sysname**, and must be specified if *@condition_id* is NULL.
+The name of the condition that you want to rename. *@name* is **sysname**, and must be specified if *@condition_id* is `NULL`.
 
 #### [ @condition_id = ] *condition_id*
 
-The identifier for the condition that you want to rename. *@condition_id* is **int**, and must be specified if *@name* is NULL.
+The identifier for the condition that you want to rename. *@condition_id* is **int**, and must be specified if *@name* is `NULL`.
 
 #### [ @new_name = ] N'*new_name*'
 
-The new name of the condition. *@new_name* is **sysname**, and is required. Can't be NULL or an empty string.
+The new name of the condition. *@new_name* is **sysname**, and is required. Can't be `NULL` or an empty string.
 
 ## Return code values
 
@@ -55,7 +55,7 @@ The new name of the condition. *@new_name* is **sysname**, and is required. Can'
 
 You must run `sp_syspolicy_rename_condition` in the context of the `msdb` system database.
 
-You must specify a value for either *@name* or *@condition_id*. Both can't be NULL. To obtain these values, query the `msdb.dbo.syspolicy_conditions` system view.
+You must specify a value for either *@name* or *@condition_id*. Both can't be `NULL`. To obtain these values, query the `msdb.dbo.syspolicy_conditions` system view.
 
 ## Permissions
 

@@ -4,7 +4,7 @@ description: "Adds a policy category subscription to the specified database."
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: randolphwest
-ms.date: 06/26/2023
+ms.date: 08/22/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -63,7 +63,7 @@ The identifier for the category subscription. *@policy_category_subscription_id*
 
 You must run `sp_syspolicy_add_policy_category_subscription` in the context of the `msdb` system database.
 
-If you specify a policy category that doesn't exist, a new policy category is created and the subscription is mandated for all databases when you execute the stored procedure. If you then clear the mandated subscription for the new category, the subscription only applies for the database that you specified as the *target_object*. For more information about how to change a mandated subscription setting, see [sp_syspolicy_update_policy_category (Transact-SQL)](sp-syspolicy-update-policy-category-transact-sql.md).
+If you specify a policy category that doesn't exist, a new policy category is created and the subscription is mandated for all databases when you execute the stored procedure. If you then clear the mandated subscription for the new category, the subscription only applies for the database that you specified as the *target_object*. For more information about how to change a mandated subscription setting, see [sp_syspolicy_update_policy_category](sp-syspolicy-update-policy-category-transact-sql.md).
 
 ## Permissions
 

@@ -4,7 +4,7 @@ description: Stops a collection set.
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 07/04/2023
+ms.date: 08/21/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -47,9 +47,9 @@ The name of the collection set. *@name* is **sysname**, with a default of `NULL`
 
 #### [ @stop_collection_job = ] *stop_collection_job*
 
-Specifies that the collection job for the collection set should be stopped if it is running. *@stop_collection_job* is **bit**, with a default `1`.
+Specifies that the collection job for the collection set should be stopped if it's running. *@stop_collection_job* is **bit**, with a default `1`.
 
-*@stop_collection_job* applies only to collection sets with collection mode set to cached. For more information, see [sp_syscollector_create_collection_set (Transact-SQL)](sp-syscollector-create-collection-set-transact-sql.md).
+*@stop_collection_job* applies only to collection sets with collection mode set to cached. For more information, see [sp_syscollector_create_collection_set](sp-syscollector-create-collection-set-transact-sql.md).
 
 ## Return code values
 
@@ -77,4 +77,4 @@ EXEC sp_syscollector_stop_collection_set
 ## Related content
 
 - [Data collection](../data-collection/data-collection.md)
-- [Data Collector stored procedures (Transact-SQL)](data-collector-stored-procedures-transact-sql.md)
+- [Data collector stored procedures (Transact-SQL)](data-collector-stored-procedures-transact-sql.md)

@@ -4,7 +4,7 @@ description: Used to modify the properties of a user-defined collection item or 
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 07/04/2023
+ms.date: 08/21/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -102,7 +102,7 @@ Requires membership in the **dc_admin** or the **dc_operator** (with EXECUTE per
 
 ## Examples
 
-The following examples are based on the collection item created in the example defined in [sp_syscollector_create_collection_item (Transact-SQL)](sp-syscollector-create-collection-item-transact-sql.md).
+The following examples are based on the collection item created in the example defined in [sp_syscollector_create_collection_item](sp-syscollector-create-collection-item-transact-sql.md).
 
 ### A. Change the collection frequency
 
@@ -134,7 +134,7 @@ GO
 
 ### C. Change the parameters of a collection item
 
-The following example changes the parameters associated with the collection item. The statement defined within the `<Value>` attribute is changed and the `UseSystemDatabases` attribute is set to false. To view the current parameters for this item, query the parameters column in the `syscollector_collection_items` system view. You may need to modify the value for *@collection_item_id*.
+The following example changes the parameters associated with the collection item. The statement defined within the `<Value>` attribute is changed and the `UseSystemDatabases` attribute is set to false. To view the current parameters for this item, query the parameters column in the `syscollector_collection_items` system view. You might need to modify the value for *@collection_item_id*.
 
 ```sql
 USE msdb;

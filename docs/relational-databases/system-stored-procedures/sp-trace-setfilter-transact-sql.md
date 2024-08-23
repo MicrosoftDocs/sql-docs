@@ -4,7 +4,7 @@ description: Applies a filter to a trace.
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 09/07/2023
+ms.date: 08/21/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -20,7 +20,7 @@ dev_langs:
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-Applies a filter to a trace. `sp_trace_setfilter` may be executed only on existing traces that are stopped (*@status* is `0`). [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] returns an error if this stored procedure is executed on a trace that doesn't exist or whose *@status* isn't `0`.
+Applies a filter to a trace. `sp_trace_setfilter` can be executed only on existing traces that are stopped (*@status* is `0`). [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] returns an error if this stored procedure is executed on a trace that doesn't exist or whose *@status* isn't `0`.
 
 > [!IMPORTANT]  
 > [!INCLUDE [ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use Extended Events instead.
@@ -82,7 +82,7 @@ For more information about data column data types, see the [SQL Server Event Cla
 
 ## Return code values
 
-The following table describes the code values that users may get following completion of the stored procedure.
+The following table describes the code values that you could get, following completion of the stored procedure.
 
 | Return code | Description |
 | --- | --- |
@@ -99,7 +99,7 @@ The following table describes the code values that users may get following compl
 
 ## Remarks
 
-`sp_trace_setfilter` is a [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] stored procedure that performs many of the actions previously executed by extended stored procedures available in earlier versions of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]. Use `sp_trace_setfilter` instead of the `xp_trace_set*filter` extended stored procedures to create, apply, remove, or manipulate filters on traces. For more information, see [Filter a Trace](../sql-trace/filter-a-trace.md).
+`sp_trace_setfilter` is a [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] stored procedure that performs many of the actions previously executed by extended stored procedures available in earlier versions of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]. Use `sp_trace_setfilter` instead of the `xp_trace_set*filter` extended stored procedures to create, apply, remove, or manipulate filters on traces. For more information, see [Filter a trace](../sql-trace/filter-a-trace.md).
 
 All filters for a particular column must be enabled together in one execution of `sp_trace_setfilter`. For example, if a user intends to apply two filters on the application name column and one filter on the username column, the user must specify the filters on application name in sequence. [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] returns an error if the user attempts to specify a filter on application name in one stored procedure call, followed by a filter on username, then another filter on application name.
 

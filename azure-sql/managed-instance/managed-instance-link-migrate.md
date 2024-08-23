@@ -5,7 +5,7 @@ description: Learn how to use the Managed Instance link to migrate your SQL Serv
 author: djordje-jeremic
 ms.author: djjeremi
 ms.reviewer: mathoma
-ms.date: 06/15/2024
+ms.date: 08/22/2024
 ms.service: azure-sql-managed-instance
 ms.subservice: data-movement
 ms.custom: ignite-2023
@@ -25,14 +25,14 @@ The Managed Instance link enables migration from SQL Server hosted anywhere, to 
 
 Migrating with the link gives you: 
 
-- The ability to test read only workloads on SQL Managed Instance before you finalize the migration to Azure
-- The ability to keep the link and migration running for as long as you need, weeks and even months at a time
-- Near real-time replication of data that provides the fastest available data replication to Azure
-- The most minimum downtime migration compared to all other solutions available today
-- Instantaneous cutover to the target SQL Managed Instance 
-- The ability to migrate anytime you're ready
-- The ability to migrate single or multiple databases from a single or multiple SQL Server instances to the same or multiple SQL managed instances in Azure
-- The only true online migration to the Business Critical service tier
+- The ability to test read only workloads on SQL Managed Instance before you finalize the migration to Azure.
+- The ability to keep the link and migration running for as long as you need, weeks and even months at a time.
+- Near real-time replication of data that provides the fastest available data replication to Azure.
+- The most minimum downtime migration compared to all other solutions available today.
+- Instantaneous cutover to the target SQL Managed Instance.
+- The ability to migrate anytime you're ready.
+- The ability to migrate single or multiple databases from a single or multiple SQL Server instances to the same or multiple SQL managed instances in Azure.
+- The only true online migration to the Business Critical service tier.
 
 
 > [!NOTE]
@@ -50,7 +50,8 @@ To use the link with Azure SQL Managed Instance for migration, you need the foll
 
 After you've verified that your source environment is supported, start with the pre-migration stage. Discover all of the existing data sources, assess migration feasibility, and identify any blocking issues that might prevent your migration. In the Discover phase, scan the network to identify all SQL Server instances and features used by your organization. 
 
-You can use the following tools to discover SQL sources in your environment: 
+You can use the following tools to discover SQL sources in your environment:
+- [SQL Server enabled by Azure Arc](/sql/sql-server/azure-arc/migration-assessment): SQL Server enabled by Azure Arc automatically produces an assessment for migration to Azure, simplifying the discovery process and readiness assessment for migration.
 - [Azure Migrate](/azure/migrate/migrate-services-overview) to assess migration suitability of on-premises servers, perform performance-based sizing, and provide cost estimations for running them in Azure. 
 - [Microsoft Assessment and Planning Toolkit (the "MAP Toolkit")](https://www.microsoft.com/download/details.aspx?id=7826) to assess your current IT infrastructure. The toolkit provides a powerful inventory, assessment, and reporting tool to simplify the migration planning process.
 
@@ -64,7 +65,7 @@ For detailed guidance, review [pre-migration](../migration-guides/managed-instan
 
 ## Create target instance
 
-After you've assessed your existing environment, and determined the appropriate service tier and hardware configuration for your target SQL managed instance, deploy your target instance by using the [Azure portal](instance-create-quickstart.md), [PowerShell](scripts/create-configure-managed-instance-powershell.md) or the [Azure CLI](scripts/create-configure-managed-instance-cli.md)
+After you've assessed your existing environment, and determined the appropriate service tier and hardware configuration for your target SQL managed instance, deploy your target instance by using the [Azure portal](instance-create-quickstart.md), [PowerShell](scripts/create-configure-managed-instance-powershell.md) or the [Azure CLI](scripts/create-configure-managed-instance-cli.md).
 
 ## Configure link
 
@@ -74,16 +75,22 @@ After your target SQL managed instance is created, configure a link between the 
 
 After your link is established, and you're ready to migrate, follow these steps (typically during a maintenance window): 
 
-1. Stop workload on the primary SQL Server database so the secondary database on SQL Managed Instance catches up. 
-1. Validate all data has made it over to the secondary SQL managed instance database. 
+1. Stop the workload on the primary SQL Server database so the secondary database on SQL Managed Instance catches up. 
+1. Validate all data has made it over to the secondary database on SQL Managed Instance. 
 1. [Fail over the link](managed-instance-link-failover-how-to.md) to the secondary SQL managed instance by choosing **Planned failover**. 
-1. Cut over the application to connect to the SQL Managed Instance endpoint. 
+1. Cut over the application to connect to the SQL managed instance endpoint. 
 
 ## Validate migration
 
 After you've cut over to the SQL managed instance target, monitor your application, test performance and remediate any issues. 
 
 For details, review [post-migration](../migration-guides/managed-instance/sql-server-to-managed-instance-guide.md#post-migration). 
+
+## Reverse migrate (SQL Server 2022)
+
+Starting with SQL Server 2022 CU10, you can configure a link with Azure SQL Managed Instance as the initial primary and SQL Server as the secondary. This capability allows you to reverse migrate from Azure SQL Managed Instance to SQL Server 2022.
+
+To reverse a migration, follow the same steps to configure the link, but start the process with the SQL Managed Instance as your migration source, and the SQL Server 2022 instance as the migration target. 
 
 ## Related content
 

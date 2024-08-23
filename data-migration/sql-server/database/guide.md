@@ -16,7 +16,7 @@ ms.custom:
 
 In this guide, you learn [how to migrate](https://azure.microsoft.com/migration/migration-journey) your SQL Server instance to Azure SQL Database.
 
-Review the [Prerequisites](../pre-migration.md#prerequisites), and complete the [Pre-migration](../pre-migration.md) steps, before continuing.
+Complete [pre-migration](../pre-migration.md) steps before continuing.
 
 ## Migrate
 

@@ -28,22 +28,23 @@ Forces immediate download of latest published policies for the whole instance (f
 ## Syntax
 
 ```syntaxsql
-sp_external_policy_refresh  [ @type = ] 'type'
+sp_external_policy_refresh [ @type = ] 'type'
+[ ; ]
 ```
 
 ## Arguments
 
 #### [ @type = ] '*type*'
 
-Type can be: *reload* (complete policy download) or *update* (incremental policy download). Default type is *update*.
+Type can be `reload` (complete policy download) or `update` (incremental policy download). Default type is `update`.
 
 ## Return code values
 
-0 (success) or a nonzero number (failure)
+`0` (success) or a nonzero number (failure).
 
 ## Permissions
 
-Requires ALTER SERVER STATE (covered by CONTROL SERVER) permission.
+Requires `ALTER SERVER STATE` (covered by `CONTROL SERVER`) permission.
 
 ## Examples
 
@@ -60,7 +61,7 @@ EXEC sp_external_policy_refresh @type = 'reload'
 The following example downloads policies incrementally by using the default type 'update'.
 
 ```sql
-EXEC sp_external_policy_refresh
+EXEC sp_external_policy_refresh;
 ```
 
 ## Related content

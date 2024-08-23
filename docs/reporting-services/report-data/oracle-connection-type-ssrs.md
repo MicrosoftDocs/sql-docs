@@ -3,7 +3,7 @@ title: Set up the Oracle connection type with SSRS and a Power BI report server
 description: Learn how to build a data source with the Oracle connection type in your Reporting Services or Power BI report server.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 08/05/2024
+ms.date: 08/22/2024
 ms.service: reporting-services
 ms.subservice: report-data
 ms.topic: concept-article
@@ -36,15 +36,15 @@ Register Managed ODP.NET:
 
 1. Register ODP.NET Managed Client to the Global Assembly Cache (GAC):
 
-   ``` cmd
-   C:\oracle64\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe /action:gac /providerpath:C:\oracle64\product\18.0.0\client_1\odp.net\managed\common\Oracle.ManagedDataAccess.dll
-   ```
+    ``` cmd
+    C:\oracle64\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe /action:gac /providerpath:C:\oracle64\product\18.0.0\client_1\odp.net\managed\common\Oracle.ManagedDataAccess.dll
+    ```
 
 1. Add ODP.NET Managed Client entries to machine.config:
 
-   ``` cmd
-   C:\oracle64\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe /action:config /force /product:odpm /frameworkversion:v4.0.30319 /providerpath:C:\oracle64\product\18.0.0\client_1\odp.net\managed\common\Oracle.ManagedDataAccess.dll
-   ```
+    ``` cmd
+    C:\oracle64\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe /action:config /force /product:odpm /frameworkversion:v4.0.30319 /providerpath:C:\oracle64\product\18.0.0\client_1\odp.net\managed\common\Oracle.ManagedDataAccess.dll
+    ```
 
 ### Power BI reports use Unmanaged ODP.NET
 
@@ -54,15 +54,15 @@ Register Unmanaged ODP.NET:
 
 1. Register ODP.NET Unmanaged Client to GAC:
 
-   ``` cmd
-   C:\oracle64\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe /action:gac /providerpath:C:\oracle64\product\18.0.0\client_1\odp.net\bin\4\Oracle.DataAccess.dll
-   ```
+    ``` cmd
+    C:\oracle64\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe /action:gac /providerpath:C:\oracle64\product\18.0.0\client_1\odp.net\bin\4\Oracle.DataAccess.dll
+    ```
 
 1. Add ODP.NET Unmanaged Client entries to machine.config:
 
-   ``` cmd
-   C:\oracle64\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe /action:config /force /product:odp /frameworkversion:v4.0.30319 /providerpath:C:\oracle64\product\18.0.0\client_1\odp.net\bin\4\Oracle.DataAccess.dll
-   ```
+    ``` cmd
+    C:\oracle64\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe /action:config /force /product:odp /frameworkversion:v4.0.30319 /providerpath:C:\oracle64\product\18.0.0\client_1\odp.net\bin\4\Oracle.DataAccess.dll
+    ```
 
 ## 32-bit drivers for Microsoft Report Builder
 
@@ -72,19 +72,18 @@ Prerequisite: Install the ODAC 18.x files to the c:\oracle32 folder where Micros
 
 Register Managed ODP.NET:
 
-   1. Install the [Oracle "ODAC with Oracle Developer Tools for Visual Studio - OUI" (32-bit)](https://www.oracle.com/database/technologies/dotnet-odacdev-downloads.html) on the Oracle download site.
+1. Install the [Oracle "ODAC with Oracle Developer Tools for Visual Studio - OUI" (32-bit)](https://www.oracle.com/database/technologies/dotnet-odacdev-downloads.html) on the Oracle download site.
 
-   1. Register ODP.NET Managed Client to GAC:
+1. Register ODP.NET Managed Client to GAC:
 
-   ``` cmd
-   C:\oracle32\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe /action:gac /providerpath:C:\oracle32\product\18.0.0\client_1\odp.net\managed\common\Oracle.ManagedDataAccess.dll
-   ```
+    ``` cmd
+    C:\oracle32\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe /action:gac /providerpath:C:\oracle32\product\18.0.0\client_1\odp.net\managed\common\Oracle.ManagedDataAccess.dll
+    ```
+1. Add ODP.NET Managed Client entries to machine.config:
 
-   1. Add ODP.NET Managed Client entries to machine.config:
-
-   ``` cmd
-   C:\oracle32\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe /action:config /force /product:odpm /frameworkversion:v4.0.30319 /providerpath:C:\oracle32\product\18.0.0\client_1\odp.net\managed\common\Oracle.ManagedDataAccess.dll
-   ```
+    ``` cmd
+    C:\oracle32\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe /action:config /force /product:odpm /frameworkversion:v4.0.30319 /providerpath:C:\oracle32\product\18.0.0\client_1\odp.net\managed\common\Oracle.ManagedDataAccess.dll
+    ```
 
 ## 64-bit drivers for Power BI Report Builder
 
@@ -97,19 +96,19 @@ Prerequisite: Install the ODAC 18.x files to the c:\oracle64 folder where Power 
 
 Register Managed ODP.NET:
 
-   1. Install the [Oracle 64-bit ODAC Oracle Universal Installer (OUI)](https://www.oracle.com/database/technologies/dotnet-odacdev-downloads.html) on the Oracle download site.
+1. Install the [Oracle 64-bit ODAC Oracle Universal Installer (OUI)](https://www.oracle.com/database/technologies/dotnet-odacdev-downloads.html) on the Oracle download site.
 
-   1. Register ODP.NET Managed Client to GAC:
+1. Register ODP.NET Managed Client to GAC:
 
-   ``` cmd
-   C:\oracle64\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe /action:gac /providerpath:C:\oracle64\product\18.0.0\client_1\odp.net\managed\common\Oracle.ManagedDataAccess.dll
-   ```
+    ``` cmd
+    C:\oracle64\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe /action:gac /providerpath:C:\oracle64\product\18.0.0\client_1\odp.net\managed\common\Oracle.ManagedDataAccess.dll
+    ```
 
-   1. Add ODP.NET Managed Client entries to machine.config:
+1. Add ODP.NET Managed Client entries to machine.config:
 
-   ``` cmd
-   C:\oracle64\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe /action:config /force /product:odpm /frameworkversion:v4.0.30319 /providerpath:C:\oracle64\product\18.0.0\client_1\odp.net\managed\common\Oracle.ManagedDataAccess.dll
-   ```
+    ``` cmd
+    C:\oracle64\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe /action:config /force /product:odpm /frameworkversion:v4.0.30319 /providerpath:C:\oracle64\product\18.0.0\client_1\odp.net\managed\common\Oracle.ManagedDataAccess.dll
+    ```
 
 ## 64-bit and 32-bit drivers for Power BI Desktop
 
@@ -121,43 +120,43 @@ Register Unmanaged ODP.NET:
 
 ### 64-bit Power BI Desktop
 
-   1. Install the [Oracle 64-bit ODAC Oracle Universal Installer (OUI)](https://www.oracle.com/database/technologies/dotnet-odacdev-downloads.html) on the Oracle download site.
+1. Install the [Oracle 64-bit ODAC Oracle Universal Installer (OUI)](https://www.oracle.com/database/technologies/dotnet-odacdev-downloads.html) on the Oracle download site.
 
-   1. Register ODP.NET Unmanaged Client to GAC:
+1. Register ODP.NET Unmanaged Client to GAC:
 
-   ``` cmd
-   C:\oracle64\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe /action:gac /providerpath:C:\oracle64\product\18.0.0\client_1\odp.net\bin\4\Oracle.DataAccess.dll
-   ```
+    ``` cmd
+    C:\oracle64\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe /action:gac /providerpath:C:\oracle64\product\18.0.0\client_1\odp.net\bin\4\Oracle.DataAccess.dll
+    ```
 
-   1. Add ODP.NET Unmanaged Client entries to machine.config:
+1. Add ODP.NET Unmanaged Client entries to machine.config:
 
-   ``` cmd
-   C:\oracle64\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe /action:config /force /product:odp /frameworkversion:v4.0.30319 /providerpath:C:\oracle64\product\18.0.0\client_1\odp.net\bin\4\Oracle.DataAccess.dll
-   ```
+    ``` cmd
+    C:\oracle64\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe /action:config /force /product:odp /frameworkversion:v4.0.30319 /providerpath:C:\oracle64\product\18.0.0\client_1\odp.net\bin\4\Oracle.DataAccess.dll
+    ```
 
 ### 32-bit Power BI Desktop
 
-   1. Install the [Oracle "ODAC with Oracle Developer Tools for Visual Studio - OUI" (32-bit)](https://www.oracle.com/database/technologies/dotnet-odacdev-downloads.html) on the Oracle download site.
+1. Install the [Oracle "ODAC with Oracle Developer Tools for Visual Studio - OUI" (32-bit)](https://www.oracle.com/database/technologies/dotnet-odacdev-downloads.html) on the Oracle download site.
 
-   1. Register ODP.NET Unmanaged Client to GAC:
+1. Register ODP.NET Unmanaged Client to GAC:
 
-   ``` cmd
-   C:\oracle32\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe /action:gac /providerpath:C:\oracle32\product\18.0.0\client_1\odp.net\bin\4\Oracle.DataAccess.dll
-   ```
+    ``` cmd
+    C:\oracle32\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe /action:gac /providerpath:C:\oracle32\product\18.0.0\client_1\odp.net\bin\4\Oracle.DataAccess.dll
+    ```
 
-   1. Add ODP.NET Unmanaged Client entries to machine.config:
+1. Add ODP.NET Unmanaged Client entries to machine.config:
 
-   ``` cmd
-   C:\oracle32\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe /action:config /force /product:odp /frameworkversion:v4.0.30319 /providerpath:C:\oracle32\product\18.0.0\client_1\odp.net\bin\4\Oracle.DataAccess.dll
-   ```
+    ``` cmd
+    C:\oracle32\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe /action:config /force /product:odp /frameworkversion:v4.0.30319 /providerpath:C:\oracle32\product\18.0.0\client_1\odp.net\bin\4\Oracle.DataAccess.dll
+    ```
 
 ## <a name="Connection"></a> Connection string  
 
 Contact your database administrator for connection information and for the credentials to connect to the data source. The following connection string example specifies an Oracle database on the server named `Oracle18` by using Unicode. The server name must match the definition in the Tnsnames.ora configuration file as the Oracle server instance name:
   
-   ```  C#
-   Data Source="Oracle18"; Unicode="True"  
-   ```  
+``` C#
+Data Source="Oracle18"; Unicode="True"  
+```  
   
 For more connection string examples, see [Create data connection strings in Report Builder](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   

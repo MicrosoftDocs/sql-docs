@@ -5,7 +5,7 @@ description: Learn how to fail over a link between SQL Server and Azure SQL Mana
 author: djordje-jeremic
 ms.author: djjeremi
 ms.reviewer: mathoma, danil
-ms.date: 08/13/2024
+ms.date: 08/22/2024
 ms.service: azure-sql-managed-instance
 ms.subservice: data-movement
 ms.custom: ignite-2023
@@ -15,10 +15,7 @@ ms.topic: how-to
 
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
 
-This article teaches you how to fail over a database [linked](managed-instance-link-configure-how-to-ssms.md) between SQL Server and Azure SQL Managed Instance by using SQL Server Management Studio (SSMS) or PowerShell. 
-
-> [!NOTE]
-> - Configuring Azure SQL Managed Instance as your initial primary is currently in preview and only supported starting with [SQL Server 2022 CU10](/troubleshoot/sql/releases/sqlserver-2022/cumulativeupdate10). 
+This article teaches you how to fail over a database [linked](managed-instance-link-configure-how-to-ssms.md) between SQL Server and Azure SQL Managed Instance by using SQL Server Management Studio (SSMS) or PowerShell for the purpose of disaster recovery or migration. 
 
 
 ## Prerequisites 

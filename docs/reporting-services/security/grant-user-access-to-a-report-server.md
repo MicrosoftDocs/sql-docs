@@ -57,7 +57,7 @@ To delegate the task of assigning roles to other users, create role assignments 
 
    :::image type="content" source="../../reporting-services/security/media/grant-user-access-to-a-report-server/settings-icon-menu.png" alt-text="Screenshot that shows the report server web portal gear icon with its menu open. In its menu, Site settings is highlighted.":::
 
-1. Select **Security**.
+1. Under **Site settings**, select **Security**.
 
 1. Select **Add group or user**.
 
@@ -72,7 +72,7 @@ To delegate the task of assigning roles to other users, create role assignments 
 
 1. Select a system role, and then select **OK**.
 
-   Roles are cumulative, so if you select **System Administrator** and **System User**, the user or group is able to perform the tasks in both roles.
+   Roles are cumulative, so if you select **System Administrator** and **System User**, the user or group can perform the tasks in both roles.
 
 1. Repeat these steps to create assignments for more users or groups.
 

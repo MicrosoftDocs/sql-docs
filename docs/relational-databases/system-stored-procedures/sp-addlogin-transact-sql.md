@@ -4,7 +4,7 @@ description: Creates a new SQL Server login that allows a user to connect to a S
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: randolphwest
-ms.date: 11/02/2023
+ms.date: 08/22/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -62,7 +62,7 @@ The default database of the login (the database to which the login is first conn
 
 #### [ @deflanguage = ] N'*deflanguage*'
 
-The default language of the login. *@deflanguage* is **sysname**, with a default of `NULL`.  If *@deflanguage* isn't specified, the default *@deflanguage* of the new login is set to the current default language of the server.
+The default language of the login. *@deflanguage* is **sysname**, with a default of `NULL`. If *@deflanguage* isn't specified, the default *@deflanguage* of the new login is set to the current default language of the server.
 
 #### [ @sid = ] *sid*
 
@@ -70,7 +70,7 @@ The security identification number (SID). *@sid* is **varbinary(16)**, with a de
 
 #### [ @encryptopt = ] '*encryptopt*'
 
-Specifies whether the password is passed in as clear text or as the hash of the clear text password. No encryption takes place. The word "encrypt" is used in this discussion for the sake of backward compatibility. If a clear text password is passed in, it's hashed. The hash is stored.  *@encryptopt* is **varchar(20)**, and can be one of the following values.
+Specifies whether the password is passed in as clear text or as the hash of the clear text password. No encryption takes place. The word "encrypt" is used in this discussion for the sake of backward compatibility. If a clear text password is passed in, it's hashed. The hash is stored. *@encryptopt* is **varchar(20)**, and can be one of the following values.
 
 | Value | Description |
 | --- | --- |

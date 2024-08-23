@@ -4,7 +4,7 @@ description: This article describes how to troubleshoot Hyperscale performance p
 author: denzilribeiro
 ms.author: denzilr
 ms.reviewer: wiassaf, mathoma
-ms.date: 03/13/2023
+ms.date: 08/16/2024
 ms.service: azure-sql-database
 ms.subservice: performance
 ms.topic: troubleshooting
@@ -14,7 +14,7 @@ ms.custom: sqldbrb=1
 # SQL Hyperscale performance troubleshooting diagnostics
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
-To troubleshoot performance problems in a Hyperscale database, [general performance tuning methodologies](monitor-tune-overview.md) on the Azure SQL Database compute node is the starting point of a performance investigation. However, given the [distributed architecture](service-tier-hyperscale.md#distributed-functions-architecture) of Hyperscale, additional diagnostics have been added to assist. This article describes Hyperscale-specific diagnostic data.
+To troubleshoot performance problems in a Hyperscale database, [general performance tuning methodologies](monitor-tune-overview.md) on the Azure SQL Database compute node is the starting point of a performance investigation. However, given the [distributed architecture](service-tier-hyperscale.md#distributed-functions-architecture) of Hyperscale, additional diagnostic data might need to be considered. This article describes Hyperscale-specific diagnostic data.
 
 ## Log rate throttling waits
 
@@ -26,9 +26,9 @@ The following wait types (in [sys.dm_os_wait_stats](/sql/relational-databases/sy
 
 |Wait Type    |Description                         |
 |-------------          |------------------------------------|
-|RBIO_RG_STORAGE        | Occurs when a Hyperscale database primary compute node log generation rate is being throttled due to delayed log consumption at the page server(s).         |
+|RBIO_RG_STORAGE        | Occurs when a Hyperscale database primary compute node log generation rate is being throttled due to delayed log consumption by one or more page servers.         |
 |RBIO_RG_DESTAGE        | Occurs when a Hyperscale database compute node log generation rate is being throttled due to delayed log consumption by the long-term log storage.         |
-|RBIO_RG_REPLICA        | Occurs when a Hyperscale database compute node log generation rate is being throttled due to delayed log consumption by the readable secondary replica(s).         |
+|RBIO_RG_REPLICA        | Occurs when a Hyperscale database compute node log generation rate is being throttled due to delayed log consumption by one or more readable secondary replicas.         |
 |RBIO_RG_GEOREPLICA    | Occurs when a Hyperscale database compute node log generation rate is being throttled due to delayed log consumption by the Geo-secondary replica.         |
 |RBIO_RG_LOCALDESTAGE   | Occurs when a Hyperscale database compute node log generation rate is being throttled due to delayed log consumption by the log service.         |
 
@@ -79,7 +79,7 @@ A ratio of reads done on RBPEX to aggregated reads done on all other data files 
 
 - When reads are issued by the SQL Server database engine on a compute replica, they may be served either by the local RBPEX cache, or by remote page servers, or by a combination of the two if reading multiple pages.
 - When the compute replica reads some pages from a specific file, for example file_id 1, if this data resides solely on the local RBPEX cache, all IO for this read is accounted against file_id 0 (RBPEX). If some part of that data is in the local RBPEX cache, and some part is on a remote page server, then IO is accounted towards file_id 0 for the part served from RBPEX, and the part served from the remote page server is accounted towards file_id 1.
-- When a compute replica requests a page at a particular [LSN](/sql/relational-databases/sql-server-transaction-log-architecture-and-management-guide/) from a page server, if the page server has not caught up to the LSN requested, the read on the compute replica will wait until the page server catches up before the page is returned to the compute replica. For any read from a page server on the compute replica, you will see the PAGEIOLATCH_* wait type if it is waiting on that IO. In Hyperscale, this wait time includes both the time to catch up the requested page on the page server to the LSN required, and the time needed to transfer the page from the page server to the compute replica.
+- When a compute replica requests a page at a particular [LSN](/sql/relational-databases/sql-server-transaction-log-architecture-and-management-guide/) from a page server, if the page server has not caught up to the LSN requested, the read on the compute replica waits until the page server catches up before the page is returned to the compute replica. For any read from a page server on the compute replica, you see the PAGEIOLATCH_* wait type if it is waiting on that IO. In Hyperscale, this wait time includes both the time to catch up the requested page on the page server to the LSN required, and the time needed to transfer the page from the page server to the compute replica.
 - Large reads such as read-ahead are often done using ["Scatter-Gather" Reads](/sql/relational-databases/reading-pages/). This allows reads of up to 4 MB of pages at a time, considered a single read in the SQL Server database engine. However, when data being read is in RBPEX, these reads are accounted as multiple individual 8-KB reads, since the buffer pool and RBPEX always use 8-KB pages. As the result, the number of read IOs seen against RBPEX may be larger than the actual number of IOs performed by the engine.
 
 ### Data writes
@@ -104,7 +104,7 @@ Data IO against remote page servers is not reported in resource utilization view
 ## Additional resources
 
 - For vCore resource limits for a Hyperscale single database see [Hyperscale service tier vCore Limits](resource-limits-vcore-single-databases.md#hyperscale---provisioned-compute---gen5)
-- For monitoring Azure SQL Databases, enable [Azure Monitor SQL Insights (preview)](/azure/azure-monitor/insights/sql-insights-overview)
+- For monitoring Azure SQL Databases, enable [database watcher](../database-watcher-overview.md)
 - For Azure SQL Database performance tuning, see [Query performance in Azure SQL Database](performance-guidance.md)
 - For performance tuning using Query Store, see [Performance monitoring using Query store](/sql/relational-databases/performance/monitoring-performance-by-using-the-query-store/)
 - For DMV monitoring scripts, see [Monitoring performance Azure SQL Database using dynamic management views](monitoring-with-dmvs.md)

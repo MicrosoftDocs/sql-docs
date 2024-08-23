@@ -4,7 +4,7 @@ description: Configures the SQL Server Managed Backup to Azure basic settings fo
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 05/31/2023
+ms.date: 08/21/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -50,17 +50,17 @@ Enable or disable [!INCLUDE [ss-managed-backup](../../includes/ss-managed-backup
 
 Required parameter when configuring [!INCLUDE [ss-managed-backup](../../includes/ss-managed-backup-md.md)] for the first instance of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]. If you're changing an existing [!INCLUDE [ss-managed-backup](../../includes/ss-managed-backup-md.md)] configuration, this parameter is optional. In that case, any configuration values not specified retain their existing values.
 
-For more information, see [Enable SQL Server Managed Backups to Azure](../backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md).
+For more information, see [Enable SQL Server managed backup to Azure](../backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md).
 
 #### [ @database_name = ] '*database_name*'
 
 The database name for enabling managed backup on a specific database.
 
-If *@database_name* is set to NULL, the settings are at instance level (applies to all new databases created on the instance).
+If *@database_name* is set to `NULL`, the settings are at instance level (applies to all new databases created on the instance).
 
 #### [ @container_url = ] '*Azure_Storage_blob_container*'
 
-A URL that indicates the location of the backup. When *@credential_name* is NULL, this URL is a shared access signature (SAS) URL to a blob container in Azure Storage, and the backups use the new backup to block blob functionality. For more information, please review [Understanding SAS](/azure/storage/common/storage-sas-overview). When *@credential_name* is specified, then this is a storage account URL, and the backups use the deprecated backup to page blob functionality.
+A URL that indicates the location of the backup. When *@credential_name* is `NULL`, this URL is a shared access signature (SAS) URL to a blob container in Azure Storage, and the backups use the new backup to block blob functionality. For more information, review [Grant limited access to Azure Storage resources using shared access signatures (SAS)](/azure/storage/common/storage-sas-overview). When *@credential_name* is specified, then this is a storage account URL, and the backups use the deprecated backup to page blob functionality.
 
 If the SAS URL has the SAS token included, you must separate it from the SAS token at the question mark, and don't include the question mark.
 
@@ -80,10 +80,10 @@ The retention period for the backup files in days. *@retention_days* is **int**.
 
 #### [ @credential_name = ] '*sql_credential_name*'
 
-The name of the SQL credential used to authenticate to the Azure storage account. *@credential_name* is **sysname**. When specified, the backup is stored to a page blob. If this parameter is NULL, the backup is stored as a block blob. Backing up to page blob is deprecated, so it's preferred to use the new block blob backup functionality. When used to change the [!INCLUDE [ss-managed-backup](../../includes/ss-managed-backup-md.md)] configuration, this parameter is optional. If not specified, then the existing configuration values are retained.
+The name of the SQL credential used to authenticate to the Azure storage account. *@credential_name* is **sysname**. When specified, the backup is stored to a page blob. If this parameter is `NULL`, the backup is stored as a block blob. Backing up to page blob is deprecated, so it's preferred to use the new block blob backup functionality. When used to change the [!INCLUDE [ss-managed-backup](../../includes/ss-managed-backup-md.md)] configuration, this parameter is optional. If not specified, then the existing configuration values are retained.
 
 > [!WARNING]  
-> The *@credential_name* parameter isn't supported at this time. Only backup to block blob is supported, which requires this parameter to be NULL.
+> The *@credential_name* parameter isn't supported at this time. Only backup to block blob is supported, which requires this parameter to be `NULL`.
 
 ## Return code values
 

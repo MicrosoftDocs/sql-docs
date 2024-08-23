@@ -4,7 +4,7 @@ description: Creates a collection item in a user-defined collection set.
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 07/04/2023
+ms.date: 08/22/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -58,7 +58,7 @@ The name of the collection item. *@name* is **sysname** and can't be an empty st
 
 Used to specify (in seconds) how frequently this collection item collects data. *@frequency* is **int**, with a default of `5`. The minimum value that can be specified is 5 seconds.
 
-If the collection set is set to non-cached mode, the frequency is ignored, because this mode causes both data collection and upload to occur at the schedule specified for the collection set. To view the collection mode of the collection set, query the [syscollector_collection_sets (Transact-SQL)](../system-catalog-views/syscollector-collection-sets-transact-sql.md) system view.
+If the collection set is set to non-cached mode, the frequency is ignored, because this mode causes both data collection and upload to occur at the schedule specified for the collection set. To view the collection mode of the collection set, query the [syscollector_collection_sets](../system-catalog-views/syscollector-collection-sets-transact-sql.md) system view.
 
 #### [ @parameters = ] N'*parameters*'
 
@@ -84,7 +84,7 @@ Requires membership in the **dc_admin** (with EXECUTE permission) fixed database
 
 ## Examples
 
-The following example creates a collection item based on the collection type `Generic T-SQL Query Collector Type` and adds it to the collection set named `Simple collection set test 2`. To create the specified collection set, run example B in [sp_syscollector_create_collection_set (Transact-SQL)](sp-syscollector-create-collection-set-transact-sql.md).
+The following example creates a collection item based on the collection type `Generic T-SQL Query Collector Type` and adds it to the collection set named `Simple collection set test 2`. To create the specified collection set, run example B in [sp_syscollector_create_collection_set](sp-syscollector-create-collection-set-transact-sql.md).
 
 ```sql
 USE msdb;

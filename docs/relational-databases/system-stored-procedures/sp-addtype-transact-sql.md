@@ -4,7 +4,7 @@ description: sp_addtype creates an alias data type.
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 01/23/2024
+ms.date: 08/21/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -61,7 +61,7 @@ The physical, or [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] supp
 - **sql_variant**
 - **uniqueidentifier**
 
-Quotation marks are required around all parameters that contain embedded blank spaces or punctuation marks. For more information about available data types, see [Data Types (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md).
+Quotation marks are required around all parameters that contain embedded blank spaces or punctuation marks. For more information about available data types, see [Data types](../../t-sql/data-types/data-types-transact-sql.md).
 
 - *n*
 
@@ -69,11 +69,11 @@ Quotation marks are required around all parameters that contain embedded blank s
 
 - *P*
 
-  A non-negative integer that indicates the maximum total number of decimal digits that can be stored, both to the left and to the right of the decimal point. For more information, see [decimal and numeric (Transact-SQL)](../../t-sql/data-types/decimal-and-numeric-transact-sql.md).
+  A non-negative integer that indicates the maximum total number of decimal digits that can be stored, both to the left and to the right of the decimal point. For more information, see [decimal and numeric](../../t-sql/data-types/decimal-and-numeric-transact-sql.md).
 
 - *s*
 
-  A non-negative integer that indicates the maximum number of decimal digits that can be stored to the right of the decimal point, and it must be less than or equal to the precision. For more information, see [decimal and numeric (Transact-SQL)](../../t-sql/data-types/decimal-and-numeric-transact-sql.md).
+  A non-negative integer that indicates the maximum number of decimal digits that can be stored to the right of the decimal point, and it must be less than or equal to the precision. For more information, see [decimal and numeric](../../t-sql/data-types/decimal-and-numeric-transact-sql.md).
 
 #### [ @nulltype = ] '*nulltype*'
 
@@ -82,7 +82,7 @@ Indicates the way the alias data type handles null values. *@nulltype* is **varc
 If *@nulltype* isn't explicitly defined, it's set to the current default nullability. Use the `GETANSINULL` system function to determine the current default nullability. This can be adjusted by using the `SET` statement or `ALTER DATABASE`. Nullability should be explicitly defined. If *@phystype* is **bit**, and *@nulltype* isn't specified, the default is `NOT NULL`.
 
 > [!NOTE]  
-> The *@nulltype* parameter only defines the default nullability for this data type. If nullability is explicitly defined when the alias data type is used during table creation, it takes precedence over the defined nullability. For more information, see [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md) and [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md).
+> The *@nulltype* parameter only defines the default nullability for this data type. If nullability is explicitly defined when the alias data type is used during table creation, it takes precedence over the defined nullability. For more information, see [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) and [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md).
 
 #### [ @owner = ] N'*owner*'
 

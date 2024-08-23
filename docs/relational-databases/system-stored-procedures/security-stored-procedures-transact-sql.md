@@ -4,7 +4,7 @@ description: "Security stored procedures (Transact-SQL)"
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: randolphwest
-ms.date: 05/24/2023
+ms.date: 08/21/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "security [SQL Server], stored procedures"
 dev_langs:
   - "TSQL"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 # Security stored procedures (Transact-SQL)
 
@@ -91,7 +91,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
         [sp_control_dbmasterkey_password](sp-control-dbmasterkey-password-transact-sql.md)  
     :::column-end:::
     :::column:::
-        [sp_copy_data_in_batches](sys-sp-copy-data-in-batches-transact-sql.md)  
+        [sys.sp_copy_data_in_batches](sys-sp-copy-data-in-batches-transact-sql.md)  
     :::column-end:::
 :::row-end:::
 :::row:::
@@ -115,7 +115,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
         [sp_describe_parameter_encryption](sp-describe-parameter-encryption-transact-sql.md)
     :::column-end:::
     :::column:::
-        [sp_dropalias](./system-stored-procedures-transact-sql.md) (Deprecated)  
+        [sp_dropalias](system-stored-procedures-transact-sql.md) (Deprecated)  
     :::column-end:::
 :::row-end:::
 :::row:::
@@ -160,7 +160,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 :::row-end:::
 :::row:::
     :::column:::
-        [sp_generate_database_ledger_digest](sys-sp-generate-database-ledger-digest-transact-sql.md)  
+        [sys.sp_generate_database_ledger_digest](sys-sp-generate-database-ledger-digest-transact-sql.md)  
     :::column-end:::
     :::column:::
         [sp_external_policy_refresh](sp-external-policy-refresh-transact-sql.md)  
@@ -267,12 +267,12 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
         [sp_validatelogins](sp-validatelogins-transact-sql.md)  
     :::column-end:::
     :::column:::
-        [sp_verify_database_ledger](sys-sp-verify-database-ledger-transact-sql.md)  
+        [sys.sp_verify_database_ledger](sys-sp-verify-database-ledger-transact-sql.md)  
     :::column-end:::
 :::row-end:::
 :::row:::
     :::column:::
-        [sp_verify_database_ledger_from_digest_storage](sys-sp-verify-database-ledger-from-digest-storage-transact-sql.md)  
+        [sys.sp_verify_database_ledger_from_digest_storage](sys-sp-verify-database-ledger-from-digest-storage-transact-sql.md)  
     :::column-end:::
     :::column:::
         [sp_xp_cmdshell_proxy_account](sp-xp-cmdshell-proxy-account-transact-sql.md)  

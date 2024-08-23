@@ -4,7 +4,7 @@ description: Removes a job step from a job in the SQL Server Agent service.
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 01/23/2024
+ms.date: 08/22/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -72,7 +72,7 @@ For more information about the steps associated with a particular job, run `sp_h
 
 SQL Server Management Studio provides an easy, graphical way to manage jobs, and is the recommended way to create and manage the job infrastructure.
 
-This stored procedure shares the name of `sp_delete_jobstep` with a similar object for the [Azure Elastic Jobs service for Azure SQL Database](/azure/azure-sql/database/elastic-jobs-overview?view=azuresql-db&preserve-view=true). For information about the elastic jobs version, see [jobs.sp_delete_jobstep (Azure Elastic Jobs) (Transact-SQL)](sp-delete-jobstep-elastic-jobs-transact-sql.md?view=azuresql-db&preserve-view=true).
+This stored procedure shares the name of `sp_delete_jobstep` with a similar object for the [Azure Elastic Jobs service for Azure SQL Database](/azure/azure-sql/database/elastic-jobs-overview?view=azuresql-db&preserve-view=true). For information about the elastic jobs version, see [jobs.sp_delete_jobstep (Azure Elastic Jobs)](sp-delete-jobstep-elastic-jobs-transact-sql.md?view=azuresql-db&preserve-view=true).
 
 ## Permissions
 

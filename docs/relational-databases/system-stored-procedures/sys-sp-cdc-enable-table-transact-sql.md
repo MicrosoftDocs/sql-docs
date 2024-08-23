@@ -4,7 +4,7 @@ description: "Enables change data capture for the specified source table in the 
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 06/30/2023
+ms.date: 08/21/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -50,27 +50,27 @@ sys.sp_cdc_enable_table
 
 #### [ @source_schema = ] '*source_schema*'
 
-The name of the schema in which the source table belongs. *@source_schema* is **sysname**, with no default, and can't be NULL.
+The name of the schema in which the source table belongs. *@source_schema* is **sysname**, with no default, and can't be `NULL`.
 
 #### [ @source_name = ] '*source_name*'
 
-The name of the source table on which to enable change data capture. *@source_name* is **sysname**, with no default, and can't be NULL.
+The name of the source table on which to enable change data capture. *@source_name* is **sysname**, with no default, and can't be `NULL`.
 
 *source_name* must exist in the current database. Tables in the `cdc` schema can't be enabled for change data capture.
 
 #### [ @role_name = ] '*role_name*'
 
-The name of the database role used to gate access to change data. *@role_name* is **sysname** and must be specified. If explicitly set to NULL, no gating role is used to limit access to the change data.
+The name of the database role used to gate access to change data. *@role_name* is **sysname** and must be specified. If explicitly set to `NULL`, no gating role is used to limit access to the change data.
 
 If the role currently exists, it's used. If the role doesn't exist, an attempt is made to create a database role with the specified name. The role name is trimmed of white space at the right of the string before attempting to create the role. If the caller isn't authorized to create a role within the database, the stored procedure operation fails.
 
 #### [ @capture_instance = ] '*capture_instance*'
 
-The name of the capture instance used to name instance-specific change data capture objects. *@capture_instance* is **sysname** and can't be NULL.
+The name of the capture instance used to name instance-specific change data capture objects. *@capture_instance* is **sysname** and can't be `NULL`.
 
 If not specified, the name is derived from the source schema name plus the source table name in the format `<schemaname>_<sourcename>`. *@capture_instance* can't exceed 100 characters and must be unique within the database. Whether specified or derived, *@capture_instance* is trimmed of any white space to the right of the string.
 
-A source table can have a maximum of two capture instances. For more information, see, [sys.sp_cdc_help_change_data_capture (Transact-SQL)](sys-sp-cdc-help-change-data-capture-transact-sql.md).
+A source table can have a maximum of two capture instances. For more information, see, [sys.sp_cdc_help_change_data_capture](sys-sp-cdc-help-change-data-capture-transact-sql.md).
 
 #### [ @supports_net_changes = ] *supports_net_changes*
 
@@ -85,11 +85,11 @@ When *@supports_net_changes* is set to `1`, an additional nonclustered index is 
 
 #### [ @index_name = ] '*index_name*'
 
-The name of a unique index to use to uniquely identify rows in the source table. *@index_name* is **sysname** and can be NULL. If specified, *@index_name* must be a valid unique index on the source table. If *@index_name* is specified, the identified index columns take precedence over any defined primary key columns as the unique row identifier for the table.
+The name of a unique index to use to uniquely identify rows in the source table. *@index_name* is **sysname** and can be `NULL`. If specified, *@index_name* must be a valid unique index on the source table. If *@index_name* is specified, the identified index columns take precedence over any defined primary key columns as the unique row identifier for the table.
 
 #### [ @captured_column_list = ] N'*captured_column_list*'
 
-Identifies the source table columns that are to be included in the change table. *@captured_column_list* is **nvarchar(max)** and can be NULL. If NULL, all columns are included in the change table.
+Identifies the source table columns that are to be included in the change table. *@captured_column_list* is **nvarchar(max)** and can be `NULL`. If `NULL`, all columns are included in the change table.
 
 Column names must be valid columns in the source table. Columns defined in a primary key index, or columns defined in an index referenced by *@index_name* must be included.
 
@@ -99,7 +99,7 @@ Column names must be valid columns in the source table. Columns defined in a pri
 
 #### [ @filegroup_name = ] '*filegroup_name*'
 
-The filegroup to be used for the change table created for the capture instance. *@filegroup_name* is **sysname** and can be NULL. If specified, *@filegroup_name* must be defined for the current database. If NULL, the default filegroup is used.
+The filegroup to be used for the change table created for the capture instance. *@filegroup_name* is **sysname** and can be `NULL`. If specified, *@filegroup_name* must be defined for the current database. If `NULL`, the default filegroup is used.
 
 We recommend creating a separate filegroup for change data capture change tables.
 

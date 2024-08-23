@@ -4,7 +4,7 @@ description: "Removes metadata, such as triggers and entries, in sysmergesubscri
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 11/23/2023
+ms.date: 08/22/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: "reference"
@@ -23,7 +23,7 @@ dev_langs:
 Removes metadata, such as triggers and entries, in `sysmergesubscriptions` and `sysmergearticles` after the specified merge push subscription is removed at the Publisher. This stored procedure is run at the Subscriber on the subscription database.
 
 > [!NOTE]  
-> For a pull subscription, metadata is removed when [sp_dropmergepullsubscription (Transact-SQL)](sp-dropmergepullsubscription-transact-sql.md) is executed.
+> For a pull subscription, metadata is removed when [sp_dropmergepullsubscription](sp-dropmergepullsubscription-transact-sql.md) is executed.
 
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 

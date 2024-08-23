@@ -4,7 +4,7 @@ description: "Permanently deletes e-mail messages from the Database Mail interna
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 05/30/2023
+ms.date: 08/21/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -36,7 +36,7 @@ sysmail_delete_mailitems_sp [ [ @sent_before = ] 'sent_before' ]
 
 #### [ @sent_before = ] '*sent_before*'
 
-Deletes e-mails up to the date and time provided as the *@sent_before* argument. *@sent_before* is **datetime** with NULL as default. NULL indicates all dates.
+Deletes e-mails up to the date and time provided as the *@sent_before* argument. *@sent_before* is **datetime** with `NULL` as default. `NULL` indicates all dates.
 
 #### [ @sent_status = ] '*sent_status*'
 

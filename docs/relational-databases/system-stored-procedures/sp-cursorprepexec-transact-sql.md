@@ -4,7 +4,7 @@ description: Compiles a plan for the submitted cursor statement or batch, then c
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 06/13/2023
+ms.date: 08/21/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -62,7 +62,7 @@ An optional parameter that returns a description of the cursor result set column
 
 | Value | Description |
 | --- | --- |
-| 0x0001 | RETURN_METADATA |
+| `0x0001` | RETURN_METADATA |
 
 #### *scrollopt*
 
@@ -70,20 +70,20 @@ Scroll option. *scrollopt* is an optional parameter that requires one of the fol
 
 | Value | Description |
 | --- | --- |
-| 0x0001 | KEYSET |
-| 0x0002 | DYNAMIC |
-| 0x0004 | FORWARD_ONLY |
-| 0x0008 | STATIC |
-| 0x10 | FAST_FORWARD |
-| 0x1000 | PARAMETERIZED_STMT |
-| 0x2000 | AUTO_FETCH |
-| 0x4000 | AUTO_CLOSE |
-| 0x8000 | CHECK_ACCEPTED_TYPES |
-| 0x10000 | KEYSET_ACCEPTABLE |
-| 0x20000 | DYNAMIC_ACCEPTABLE |
-| 0x40000 | FORWARD_ONLY_ACCEPTABLE |
-| 0x80000 | STATIC_ACCEPTABLE |
-| 0x100000 | FAST_FORWARD_ACCEPTABLE |
+| `0x0001` | KEYSET |
+| `0x0002` | DYNAMIC |
+| `0x0004` | FORWARD_ONLY |
+| `0x0008` | STATIC |
+| `0x10` | FAST_FORWARD |
+| `0x1000` | PARAMETERIZED_STMT |
+| `0x2000` | AUTO_FETCH |
+| `0x4000` | AUTO_CLOSE |
+| `0x8000` | CHECK_ACCEPTED_TYPES |
+| `0x10000` | KEYSET_ACCEPTABLE |
+| `0x20000` | DYNAMIC_ACCEPTABLE |
+| `0x40000` | FORWARD_ONLY_ACCEPTABLE |
+| `0x80000` | STATIC_ACCEPTABLE |
+| `0x100000` | FAST_FORWARD_ACCEPTABLE |
 
 Because of the possibility that the requested option isn't appropriate for the cursor defined by *statement*, this parameter serves as both input and output. In such cases, [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] assigns an appropriate type and modifies this value.
 
@@ -93,17 +93,17 @@ Concurrency control option. *ccopt* is an optional parameter that requires one o
 
 | Value | Description |
 | --- | --- |
-| 0x0001 | READ_ONLY |
-| 0x0002 | SCROLL_LOCKS (previously known as LOCKCC) |
-| 0x0004 | OPTIMISTIC (previously known as OPTCC) |
-| 0x0008 | OPTIMISTIC (previously known as OPTCCVAL) |
-| 0x2000 | ALLOW_DIRECT |
-| 0x4000 | UPDT_IN_PLACE |
-| 0x8000 | CHECK_ACCEPTED_OPTS |
-| 0x10000 | READ_ONLY_ACCEPTABLE |
-| 0x20000 | SCROLL_LOCKS_ACCEPTABLE |
-| 0x40000 | OPTIMISTIC_ACCEPTABLE |
-| 0x80000 | OPTIMISITC_ACCEPTABLE |
+| `0x0001` | READ_ONLY |
+| `0x0002` | SCROLL_LOCKS (previously known as LOCKCC) |
+| `0x0004` | OPTIMISTIC (previously known as OPTCC) |
+| `0x0008` | OPTIMISTIC (previously known as OPTCCVAL) |
+| `0x2000` | ALLOW_DIRECT |
+| `0x4000` | UPDT_IN_PLACE |
+| `0x8000` | CHECK_ACCEPTED_OPTS |
+| `0x10000` | READ_ONLY_ACCEPTABLE |
+| `0x20000` | SCROLL_LOCKS_ACCEPTABLE |
+| `0x40000` | OPTIMISTIC_ACCEPTABLE |
+| `0x80000` | OPTIMISITC_ACCEPTABLE |
 
 As with *scrollopt*, [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] can assign a different value than the one requested.
 
@@ -121,7 +121,7 @@ Designates one or more parameter names as defined in the *params* argument. Ther
 
 ## Return code values
 
-If *params* returns a NULL value, then the statement isn't parameterized.
+If *params* returns a `NULL` value, then the statement isn't parameterized.
 
 ## Examples
 

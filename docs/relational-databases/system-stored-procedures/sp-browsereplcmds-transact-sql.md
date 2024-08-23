@@ -4,7 +4,7 @@ description: Returns a result set in a readable version of the replicated comman
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 03/04/2024
+ms.date: 08/22/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: "reference"
@@ -63,7 +63,7 @@ Specifies if commands with the specified *@article_id* are returned. *@article_i
 
 #### [ @command_id = ] *command_id*
 
-The location of the command in [MSrepl_commands (Transact-SQL)](../system-tables/msrepl-commands-transact-sql.md) to be decoded. *@command_id* is **int**, with a default of `NULL`. If specified, all other parameters must be specified also, and *@xact_seqno_start* must be identical to *@xact_seqno_end*.
+The location of the command in [MSrepl_commands](../system-tables/msrepl-commands-transact-sql.md) to be decoded. *@command_id* is **int**, with a default of `NULL`. If specified, all other parameters must be specified also, and *@xact_seqno_start* must be identical to *@xact_seqno_end*.
 
 #### [ @agent_id = ] *agent_id*
 

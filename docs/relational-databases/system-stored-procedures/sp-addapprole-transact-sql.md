@@ -4,7 +4,7 @@ description: Adds an application role to the current database.
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: randolphwest
-ms.date: 08/22/2023
+ms.date: 08/21/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -42,11 +42,11 @@ sp_addapprole
 
 The name of the new application role. *@rolename* is **sysname**, with no default. *@rolename* must be a valid identifier and can't already exist in the current database.
 
-Application role names can contain from 1 up to 128 characters, including letters, symbols, and numbers. Role names can't contain a backslash (`\`) nor be NULL or an empty string ('').
+Application role names can contain from 1 up to 128 characters, including letters, symbols, and numbers. Role names can't contain a backslash (`\`) nor be `NULL` or an empty string ('').
 
 #### [ @password = ] N'*password*'
 
-The password required to activate the application role. *@password* is **sysname**, with no default. *@password* can't be NULL.
+The password required to activate the application role. *@password* is **sysname**, with no default. *@password* can't be `NULL`.
 
 ## Return code values
 

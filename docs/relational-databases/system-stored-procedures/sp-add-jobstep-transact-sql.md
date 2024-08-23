@@ -4,7 +4,7 @@ description: "sp_add_jobstep adds a step (operation) to a SQL Server Agent job."
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 11/02/2023
+ms.date: 08/21/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "sp_add_jobstep"
 dev_langs:
   - "TSQL"
-monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 # sp_add_jobstep (Transact-SQL)
 
@@ -221,7 +221,7 @@ By default, a job step runs as the service account for [!INCLUDE [ssNoVersion](.
 
 A proxy might be identified by *@proxy_name* or *@proxy_id*.
 
-This stored procedure shares the name of `sp_add_jobstep` with a similar object for the [Azure Elastic Jobs service for Azure SQL Database](/azure/azure-sql/database/elastic-jobs-overview?view=azuresql-db&preserve-view=true). For information about the elastic jobs version, see [jobs.sp_add_jobstep (Azure Elastic Jobs) (Transact-SQL)](sp-add-jobstep-elastic-jobs-transact-sql.md?view=azuresql-db&preserve-view=true).
+This stored procedure shares the name of `sp_add_jobstep` with a similar object for the [Azure Elastic Jobs service for Azure SQL Database](/azure/azure-sql/database/elastic-jobs-overview?view=azuresql-db&preserve-view=true). For information about the elastic jobs version, see [jobs.sp_add_jobstep (Azure Elastic Jobs)](sp-add-jobstep-elastic-jobs-transact-sql.md?view=azuresql-db&preserve-view=true).
 
 ## Permissions
 

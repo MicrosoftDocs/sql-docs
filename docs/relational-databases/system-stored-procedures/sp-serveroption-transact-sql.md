@@ -4,7 +4,7 @@ description: "sp_serveroption (Transact-SQL)"
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 07/11/2023
+ms.date: 08/22/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -68,13 +68,13 @@ The option to set for the specified server. *@optname* is **varchar(35)**, with 
 
 Specifies whether the *@optname* should be enabled (`true` or `on`), or disabled (`false` or `off`). *@optvalue* is **nvarchar(128)**, with no default.
 
-- For the **connect timeout** and **query timeout** options, *@optvalue* may be a non-negative integer.
+- For the **connect timeout** and **query timeout** options, *@optvalue* might be a non-negative integer.
 
-- For the **collation name** option, *@optvalue* may be a collation name or `NULL`.
+- For the **collation name** option, *@optvalue* might be a collation name or `NULL`.
 
-- For the **name** option, *@optvalue* may be a string, which represents the new name of the linked server connection.
+- For the **name** option, *@optvalue* might be a string, which represents the new name of the linked server connection.
 
-- For the **provider string** option, *@optvalue* may be a string or `NULL`, representing the new OLE DB source of the linked server connection.
+- For the **provider string** option, *@optvalue* might be a string or `NULL`, representing the new OLE DB source of the linked server connection.
 
 ## Return code values
 

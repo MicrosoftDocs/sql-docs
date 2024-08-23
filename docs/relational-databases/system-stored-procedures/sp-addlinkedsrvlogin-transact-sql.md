@@ -4,7 +4,7 @@ description: Creates or updates a mapping between a login on the local instance 
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 11/02/2023
+ms.date: 08/22/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -72,7 +72,7 @@ The password associated with *@rmtuser*. *@rmtpassword* is **sysname**, with a d
 When a user logs on to the local server and executes a distributed query that accesses a table on the linked server, the local server must log on to the linked server on behalf of the user to access that table. Use `sp_addlinkedsrvlogin` to specify the credentials that the local server uses to sign into the linked server.
 
 > [!NOTE]  
-> To create the best query plans when you're using a table on a linked server, the query processor must have data distribution statistics from the linked server. Users that have limited permissions on any columns of the table might not have sufficient permissions to obtain all the useful statistics, and might receive a less efficient query plan and experience poor performance. If the linked server is an instance of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)], to obtain all available statistics, the user must own the table or be a member of the **sysadmin** fixed server role, the **db_owner** fixed database role, or the **db_ddladmin** fixed database role on the linked server. [!INCLUDE [sssql11sp1-md](../../includes/sssql11sp1-md.md)] modifies the permission restrictions for obtaining statistics and allows users with SELECT permission to access statistics available through DBCC SHOW_STATISTICS. For more information, see the Permissions section of [DBCC SHOW_STATISTICS (Transact-SQL)](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md).
+> To create the best query plans when you're using a table on a linked server, the query processor must have data distribution statistics from the linked server. Users that have limited permissions on any columns of the table might not have sufficient permissions to obtain all the useful statistics, and might receive a less efficient query plan and experience poor performance. If the linked server is an instance of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)], to obtain all available statistics, the user must own the table or be a member of the **sysadmin** fixed server role, the **db_owner** fixed database role, or the **db_ddladmin** fixed database role on the linked server. [!INCLUDE [sssql11sp1-md](../../includes/sssql11sp1-md.md)] modifies the permission restrictions for obtaining statistics and allows users with SELECT permission to access statistics available through DBCC SHOW_STATISTICS. For more information, see the Permissions section of [DBCC SHOW_STATISTICS](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md).
 
 A default mapping between all logins on the local server and remote logins on the linked server is automatically created by executing `sp_addlinkedserver`. The default mapping states that [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] uses the user credentials of the local login when connecting to the linked server on behalf of the login. This is equivalent to executing `sp_addlinkedsrvlogin` with @useself set to `true` for the linked server, without specifying a local user name. Use `sp_addlinkedsrvlogin` only to change the default mapping or to add new mappings for specific local logins. To delete the default mapping or any other mapping, use `sp_droplinkedsrvlogin`.
 

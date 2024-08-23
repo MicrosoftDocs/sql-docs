@@ -4,7 +4,7 @@ description: "Adds a log file to a database when recovery can't complete on a da
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest
-ms.date: 06/02/2023
+ms.date: 08/21/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -58,13 +58,13 @@ The initial size of the file. *@size* is **nvarchar(20)**, with a default of `NU
 
 The maximum size to which the file can grow. *@maxsize* is **nvarchar(20)**, with a default of `NULL`. Specify a whole number; don't include a decimal. The `MB` and `KB` suffixes can be used to specify megabytes or kilobytes. The default is `MB`.
 
-If *@maxsize* isn't specified, the file grows until the disk is full. The [!INCLUDE [msCoName](../../includes/msconame-md.md)] Windows application log warns an administrator when a disk is about to become full.
+If *@maxsize* isn't specified, the file grows until the disk is full. The Windows application log warns an administrator when a disk is about to become full.
 
 #### [ @filegrowth = ] N'*growth_increment*'
 
 The amount of space added to the file each time new space is required. *@filegrowth* is **nvarchar(20)**, with a default of `NULL`. A value of `0` indicates no growth. Specify a whole number; don't include a decimal. The value can be specified in `MB`, `KB`, or percent (`%`). When `%` is specified, the growth increment is the specified percentage of the size of the file at the time the increment occurs. If a number is specified without an `MB`, `KB`, or `%` suffix, the default is `MB`.
 
-If *@filegrowth* is NULL, the default value is `10%`, and the minimum value is `64 KB`. The size specified is rounded to the nearest 64 KB.
+If *@filegrowth* is `NULL`, the default value is `10%`, and the minimum value is `64 KB`. The size specified is rounded to the nearest 64 KB.
 
 ## Return code values
 

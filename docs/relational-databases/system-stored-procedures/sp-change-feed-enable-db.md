@@ -3,8 +3,8 @@ title: "sys.sp_change_feed_enable_db (Transact-SQL)"
 description: "The sys.sp_change_feed_enable_db system stored procedure enables the current database for Azure Synapse Link or Fabric Mirrored Database publishing."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: imotiwala
-ms.date: 07/08/2024
+ms.reviewer: imotiwala, randolphwest
+ms.date: 08/21/2024
 ms.service: fabric
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -17,16 +17,16 @@ helpviewer_keywords:
   - "sp_change_feed_enable_db"
 dev_langs:
   - "TSQL"
-monikerRange: ">=sql-server-ver16||=azuresqldb-current||=fabric||=azure-sqldw-latest"
+monikerRange: ">=sql-server-ver16 || =azuresqldb-current || =fabric || =azure-sqldw-latest"
 ---
 # sys.sp_change_feed_enable_db (Transact-SQL)
 
 [!INCLUDE [sqlserver2022-asdb-asa-fabric](../../includes/applies-to-version/sqlserver2022-asdb-asa-fabric.md)]
 
-Enables current database for [Azure Synapse Link for SQL](/azure/synapse-analytics/synapse-link/sql-synapse-link-overview) or [Microsoft Fabric mirrored databases (Preview)](/fabric/database/mirrored-database/overview).
+Enables current database for [Azure Synapse Link for SQL](/azure/synapse-analytics/synapse-link/sql-synapse-link-overview) or [What is Mirroring in Fabric?](/fabric/database/mirrored-database/overview).
 
 > [!NOTE]  
-> This system stored procedure is used internally and is not recommended for direct administrative use. Use Synapse Studio or the Fabric portal instead. Using this procedure could introduce inconsistency.
+> This system stored procedure is used internally and isn't recommended for direct administrative use. Use Synapse Studio or the Fabric portal instead. Using this procedure could introduce inconsistency.
 
 ## Syntax
 
@@ -36,24 +36,24 @@ Enables current database for [Azure Synapse Link for SQL](/azure/synapse-analyti
 EXECUTE sys.sp_change_feed_enable_db
     [ [ @maxtrans ] ]
     [ , [ @pollinterval ]  ]
-    [ , [ @destination_type] ]
+    [ , [ @destination_type ] ]
 GO
 ```
 
 ## Arguments
 
-#### @maxtrans 
+#### @maxtrans
 
-Data type is **int**. Indicates the maximum number of transactions to process in each scan cycle. 
+Data type is **int**. Indicates the maximum number of transactions to process in each scan cycle.
 
 - For Azure Synapse Link, the default value if not specified is `10000`. If specified, the value must be a positive integer.
 - For Fabric mirroring, this value is dynamically determined and automatically set.
 
-#### @pollinterval 
+#### @pollinterval
 
 Data type is **int**. Describes the frequency, or polling interval, that the log is scanned for any new changes in seconds.
 
-- For Azure Synapse Link, the default interval if not specified is 5 seconds. The value must be `5` or larger. 
+- For Azure Synapse Link, the default interval if not specified is 5 seconds. The value must be `5` or larger.
 - For Fabric mirroring, this value is dynamically determined and automatically set.
 
 #### @destination_type
@@ -77,9 +77,9 @@ EXECUTE sys.sp_change_feed_enable_db;
 Verify the database is enabled.
 
 ```sql
-SELECT 
+SELECT
     [name]
-  , is_data_lake_replication_enabled 
+  , is_data_lake_replication_enabled
 FROM sys.databases;
 ```
 
@@ -95,8 +95,8 @@ FROM sys.databases;
 
 **For Microsoft Fabric mirrored databases**:
 
-- [Microsoft Fabric mirrored databases (Preview)](/fabric/database/mirrored-database/overview)
-- [Microsoft Fabric mirrored databases monitoring](/fabric/database/mirrored-database/monitor)
+- [What is Mirroring in Fabric?](/fabric/database/mirrored-database/overview)
+- [Monitor Fabric mirrored database replication](/fabric/database/mirrored-database/monitor)
 - [Explore data in your Mirrored database using Microsoft Fabric](/fabric/database/mirrored-database/explore)
 
 **For Azure Synapse Link**:

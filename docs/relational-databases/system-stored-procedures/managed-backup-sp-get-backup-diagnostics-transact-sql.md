@@ -4,7 +4,7 @@ description: "Returns the Extended Events logged by Smart Admin."
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 05/31/2023
+ms.date: 08/21/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -49,11 +49,11 @@ To get a list of event types currently enabled use the `managed_backup.fn_get_cu
 
 #### [ @begin_time = ] '*time1*'
 
-The start of the time period from which the events should be displayed. *@begin_time* is **datetime** with a default value of NULL. If this isn't specified, then the events from the past 30 minutes are displayed.
+The start of the time period from which the events should be displayed. *@begin_time* is **datetime** with a default value of `NULL`. If this isn't specified, then the events from the past 30 minutes are displayed.
 
 #### [ @end_time = ] '*time2*'
 
-The end of the time period up to which the events should be displayed. *@end_time* is **datetime** with a default value of NULL. If this isn't specified, then the events up to the current time is displayed.
+The end of the time period up to which the events should be displayed. *@end_time* is **datetime** with a default value of `NULL`. If this isn't specified, then the events up to the current time is displayed.
 
 ## Table returned
 

@@ -4,7 +4,7 @@ description: "Returns information about an article. This stored procedure is exe
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 11/23/2023
+ms.date: 08/21/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: "reference"
@@ -54,7 +54,7 @@ The name of the article for which to return information. *@article* is **sysname
 | `sync_object_owner` | **sysname** | Name of the owner of the view that defines the published article. |
 | `sync_object` | **sysname** | Name of the custom object used to establish the initial data for the partition. |
 | `description` | **nvarchar(255)** | Description of the article. |
-| `status` | **tinyint** | Status of the article, which can be one of the following values:<br /><br />`1` = inactive<br /><br />`2` = active<br /><br />`5` = data definition language (DDL) operation pending<br /><br />`6` = DDL operation with a newly generated snapshot<br /><br />Note: When an article is reinitialized, values of `5` and `6` are changed to `2`. |
+| `status` | **tinyint** | Status of the article, which can be one of the following values:<br /><br />`1` = inactive<br /><br />`2` = active<br /><br />`5` = data definition language (DDL) operation pending<br /><br />`6` = DDL operation with a newly generated snapshot<br /><br />**Note:** When an article is reinitialized, values of `5` and `6` are changed to `2`. |
 | `creation_script` | **nvarchar(255)** | Path and name of an optional article schema script used to create the article in the subscription database. |
 | `conflict_table` | **nvarchar(270)** | Name of the table storing the insert or update conflicts. |
 | `article_resolver` | **nvarchar(255)** | Custom resolver for the article. |

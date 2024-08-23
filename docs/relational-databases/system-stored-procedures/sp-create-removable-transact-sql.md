@@ -4,7 +4,7 @@ description: sp_create_removable creates a removable media database.
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 07/05/2024
+ms.date: 08/22/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -142,7 +142,7 @@ EXEC sp_create_removable 'inventory',
 
 ## Related content
 
-- [Database Detach and Attach (SQL Server)](../databases/database-detach-and-attach-sql-server.md)
+- [Database detach and attach (SQL Server)](../databases/database-detach-and-attach-sql-server.md)
 - [sp_certify_removable (Transact-SQL)](sp-certify-removable-transact-sql.md)
 - [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)
 - [sp_dbremove (Transact-SQL)](sp-dbremove-transact-sql.md)

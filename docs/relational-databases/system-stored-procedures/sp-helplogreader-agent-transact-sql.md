@@ -4,7 +4,7 @@ description: Returns properties of the Log Reader Agent job for the publication 
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 04/05/2024
+ms.date: 08/21/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: "reference"
@@ -64,6 +64,6 @@ Only members of the **sysadmin** fixed server role at the Publisher or members o
 
 ## Related content
 
-- [View and Modify Replication Security Settings](../replication/security/view-and-modify-replication-security-settings.md)
+- [View and modify replication security settings](../replication/security/view-and-modify-replication-security-settings.md)
 - [sp_addlogreader_agent (Transact-SQL)](sp-addlogreader-agent-transact-sql.md)
 - [sp_changelogreader_agent (Transact-SQL)](sp-changelogreader-agent-transact-sql.md)

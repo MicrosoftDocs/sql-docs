@@ -4,7 +4,7 @@ description: "Returns the change data capture configuration for each table enabl
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 06/13/2023
+ms.date: 08/21/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -69,7 +69,7 @@ If *@source_name* is non-null, *@source_schema* must also be non-null.
 | `object_id` | **int** | ID of the change table associated with the source table. |
 | `source_object_id` | **int** | ID of the source table. |
 | `start_lsn` | **binary(10)** | Log sequence number (LSN) representing the low endpoint for querying the change table.<br /><br />NULL = the low endpoint hasn't been established. |
-| `end_lsn` | **binary(10)** | LSN representing the high endpoint for querying the change table. In [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)], this column is always NULL. |
+| `end_lsn` | **binary(10)** | LSN representing the high endpoint for querying the change table. In [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)], this column is always `NULL`. |
 | `supports_net_changes` | **bit** | Net change support is enabled. |
 | `has_drop_pending` | **bit** | Not used in [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)]. |
 | `role_name` | **sysname** | Name of the database role used to control access to the change data.<br /><br />NULL = a role isn't used. |
@@ -81,11 +81,11 @@ If *@source_name* is non-null, *@source_schema* must also be non-null.
 
 ## Remarks
 
-When both *@source_schema* and *@source_name* default to NULL, or are explicitly set the NULL, this stored procedure returns information for all of the database capture instances that the caller has SELECT access to. When *@source_schema* and *@source_name* are non-null, only information on the specific named enabled table is returned.
+When both *@source_schema* and *@source_name* default to `NULL`, or are explicitly set the `NULL`, this stored procedure returns information for all of the database capture instances that the caller has SELECT access to. When *@source_schema* and *@source_name* are non-null, only information on the specific named enabled table is returned.
 
 ## Permissions
 
-When *@source_schema* and *@source_name* are NULL, the caller's authorization determines which enabled tables are included in the result set. Callers must have SELECT permission on all of the captured columns of the capture instance and also membership in any defined gating roles for the table information to be included.
+When *@source_schema* and *@source_name* are `NULL`, the caller's authorization determines which enabled tables are included in the result set. Callers must have SELECT permission on all of the captured columns of the capture instance and also membership in any defined gating roles for the table information to be included.
 
 Members of the **db_owner** database role can view information about all defined capture instances. When information for a specific enabled table is requested, the same SELECT and membership criteria are applied for the named table.
 

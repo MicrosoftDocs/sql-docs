@@ -4,7 +4,7 @@ description: "Changes the properties of the distribution Publisher."
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 08/24/2023
+ms.date: 08/21/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: "reference"
@@ -63,7 +63,7 @@ This table describes the properties of Publishers and the values for those prope
 | | `0` | Use [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Authentication when connecting to the Publisher. |
 | `working_directory` | | Working directory used to store data and schema files for the publication. |
 | `NULL` (default) | | All available *property* options are printed. |
-| `storage_connection_string` | Access key | The access key for the working directory when the database is Azure SQL Managed Instance.|
+| `storage_connection_string` | Access key | The access key for the working directory when the database is Azure SQL Managed Instance. |
 
 <sup>1</sup> This can't be changed for a non-[!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] publisher.
 

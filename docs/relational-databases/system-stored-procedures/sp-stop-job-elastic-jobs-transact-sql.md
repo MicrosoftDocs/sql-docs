@@ -3,7 +3,7 @@ title: "jobs.sp_stop_job (Azure Elastic Jobs) (Transact-SQL)"
 description: "jobs.sp_stop_job instructs the elastic job agent to stop a job execution in the Azure Elastic Jobs service for Azure SQL Database."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: 10/30/2023
+ms.date: 08/21/2024
 ms.service: azure-sql-database
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -17,7 +17,7 @@ monikerRange: "=azuresqldb-current"
 
 Instructs the elastic job agent to stop a job execution in the [Azure Elastic Jobs service for Azure SQL Database](/azure/azure-sql/database/elastic-jobs-overview?view=azuresql-db&preserve-view=true).
 
-This stored procedure shares the name of `sp_stop_job` with a similar object in [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] for the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] Agent service. For information about the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] Agent version, see [sp_stop_job (Transact-SQL)](sp-stop-job-transact-sql.md).
+This stored procedure shares the name of `sp_stop_job` with a similar object in [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] for the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] Agent service. For information about the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] Agent version, see [sp_stop_job](sp-stop-job-transact-sql.md).
 
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
@@ -33,13 +33,13 @@ This stored procedure shares the name of `sp_stop_job` with a similar object in 
 
 The identification number of the job execution to stop. *job_execution_id* is uniqueidentifier, with default of `NULL`.
 
-## Return Code Values
+## Return code values
 
-0 (success) or 1 (failure)
+`0` (success) or `1` (failure).
 
 ## Permissions
 
-By default, members of the sysadmin fixed server role can execute this stored procedure.  Only members of sysadmin can use this stored procedure to edit the attributes of jobs that are owned by other users.
+By default, members of the **sysadmin** fixed server role can execute this stored procedure. Only members of sysadmin can use this stored procedure to edit the attributes of jobs that are owned by other users.
 
 ## Remarks
 

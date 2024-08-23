@@ -4,7 +4,7 @@ description: "Returns the data definition language (DDL) change history associat
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 06/13/2023
+ms.date: 08/21/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -39,7 +39,7 @@ sys.sp_cdc_get_ddl_history [ @capture_instance = ] 'capture_instance'
 
 #### [ @capture_instance = ] '*capture_instance*'
 
-The name of the capture instance associated with a source table. *@capture_instance* is **sysname** and can't be NULL.
+The name of the capture instance associated with a source table. *@capture_instance* is **sysname** and can't be `NULL`.
 
 ## Return code values
 

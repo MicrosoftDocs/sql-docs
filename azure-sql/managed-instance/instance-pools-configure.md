@@ -5,7 +5,7 @@ description: Learn how to create instance pools (preview) for Azure SQL Managed 
 author: MariDjo
 ms.author: dmarinkovic
 ms.reviewer: mathoma, randolphwest
-ms.date: 05/22/2024
+ms.date: 08/23/2024
 ms.service: azure-sql-managed-instance
 ms.subservice: deployment-configuration
 ms.topic: how-to
@@ -116,7 +116,7 @@ $instancePool = New-AzSqlInstancePool @parameters
 To create your instance pool, use [az sql instance-pool create](/cli/azure/sql/instance-pool#az-sql-instance-pool-create).
 
 Consider the following:
-- For `--license-type`, use *BasePrice* for the Azure Hybrid Benefit or *LicenseIncluded* if you have don't have a SQL Server license that can be used for the Azure Hybrid Benefit discount.
+- For `--license-type`, use *BasePrice* for the Azure Hybrid Benefit or *LicenseIncluded* if you don't have a SQL Server license that can be used for the Azure Hybrid Benefit discount.
 
 Create a new instance pool with 8 vCores on standard-series (Gen5) hardware by running the following sample script:
 
@@ -155,7 +155,7 @@ To create a new instance inside a pool by using the Azure portal, follow these s
     1. Choose _Yes_ to **Belongs to an instance pool?** under **Managed Instance details** to create your new instance inside an instance pool.
     1. Select the pool from the **Instance pool** dropdown list.
 
-   :::image type="content" source="media/instance-pools-overview/create-instance-inside-pool.png" alt-text="Screenshot of the Create Azure SQL Managed Instance page in the Azure portal with belongs to an instance pool selected.":::
+   :::image type="content" source="media/instance-pools-configure/create-instance-inside-pool.png" alt-text="Screenshot of the Create Azure SQL Managed Instance page in the Azure portal with belongs to an instance pool selected.":::
 1. Fill out the remaining details on the **Create Azure SQL Managed Instance** page to create your instance inside the pool. For details, review [Create Azure SQL Managed Instance](instance-create-quickstart.md).
 1. Select **Review + create** to review settings for your new instance and then use **Create** to deploy your instance inside the selected pool.
 
@@ -565,7 +565,7 @@ To create a new support request in the Azure portal, follow these steps:
     1. For **Problem type**, choose `Create, Scale, Stop, Start, or Delete Resources`.
     1. For **Problem Subtype**, choose `Instance Pools`.
 
-   :::image type="content" source="media/instance-pools-overview/support-request.png" alt-text="Screenshot of the Instance pools support request in the Azure portal." lightbox="media/instance-pools-overview/support-request.png":::
+   :::image type="content" source="media/instance-pools-configure/support-request.png" alt-text="Screenshot of the Instance pools support request in the Azure portal." lightbox="media/instance-pools-configure/support-request.png":::
 
 1. Select **Next** on the subsequent pages until you're able to **Create** your support request.
 
@@ -577,5 +577,5 @@ To create larger SQL Managed Instance deployments (with or without instance pool
 - [SQL Managed Instance virtual network configuration](connectivity-architecture-overview.md)
 - [Create a managed instance quickstart](instance-create-quickstart.md)
 - [SQL Managed Instance migration using Database Migration Service](/azure/dms/tutorial-sql-server-to-managed-instance)
-- [Monitor Azure SQL Managed Instance using Azure SQL Analytics](/azure/azure-monitor/insights/azure-sql)
+- [Monitor Azure SQL Managed Instance using database watcher](../database-watcher-overview.md)
 - [SQL Managed Instance pricing](https://azure.microsoft.com/pricing/details/sql-database/managed/)

@@ -4,7 +4,7 @@ description: "Changes the properties of a Merge Agent job that runs at a SQL Ser
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 11/23/2023
+ms.date: 08/21/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: "reference"
@@ -73,7 +73,7 @@ This table describes the properties of the Merge Agent job that can be changed a
 | Property | Value | Description |
 | --- | --- | --- |
 | `description` | | A brief description of the subscription. |
-| `merge_job_login` | | Login for the [!INCLUDE [msCoName](../../includes/msconame-md.md)] Windows account under which the agent runs. |
+| `merge_job_login` | | Login for the Windows account under which the agent runs. |
 | `merge_job_password` | | Password for the Windows account under which the agent job runs. |
 | `publisher_login` | | Login to use when connecting to a Publisher to synchronize the subscription. |
 | `publisher_password` | | Publisher password.<br /><br />[!INCLUDE [ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)] |

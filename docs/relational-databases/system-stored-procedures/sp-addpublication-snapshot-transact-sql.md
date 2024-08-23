@@ -4,7 +4,7 @@ description: sp_addpublication_snapshot creates the Snapshot Agent for the speci
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 01/23/2024
+ms.date: 08/21/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: "reference"
@@ -23,7 +23,7 @@ dev_langs:
 Creates the Snapshot Agent for the specified publication. This stored procedure is executed at the Publisher on the publication database.
 
 > [!IMPORTANT]  
-> When configuring a Publisher with a remote Distributor, the values supplied for all parameters, including *job_login* and *job_password*, are sent to the Distributor as plain text. You should encrypt the connection between the Publisher and its remote Distributor before executing this stored procedure. For more information, see [Configure SQL Server Database Engine for encrypting connections](../../database-engine/configure-windows/configure-sql-server-encryption.md).
+> When configuring a Publisher with a remote Distributor, the values supplied for all parameters, including *@job_login* and *@job_password*, are sent to the Distributor as plain text. You should encrypt the connection between the Publisher and its remote Distributor before executing this stored procedure. For more information, see [Configure SQL Server Database Engine for encrypting connections](../../database-engine/configure-windows/configure-sql-server-encryption.md).
 
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
@@ -159,7 +159,7 @@ The password used when connecting to the Publisher. *@publisher_password* is **s
 
 The login for the account under which the agent runs. On Azure SQL Managed Instance, use a SQL Server account. *@job_login* is **nvarchar(257)**, with a default of `NULL`. This account is always used for agent connections to the Distributor. You must supply this parameter when creating a new Snapshot Agent job.
 
-For non-[!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Publishers, this must be the same login specified in [sp_adddistpublisher (Transact-SQL)](sp-adddistpublisher-transact-sql.md).
+For non-[!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Publishers, this must be the same login specified in [sp_adddistpublisher](sp-adddistpublisher-transact-sql.md).
 
 #### [ @job_password = ] N'*job_password*'
 

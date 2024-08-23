@@ -3,8 +3,8 @@ title: "sp_update_jobstep (Transact-SQL)"
 description: "sp_update_jobstep changes the settings for a step in a job in the SQL Server Agent service."
 author: markingmyname
 ms.author: maghan
-ms.reviewer: randolphwest,wiassaf
-ms.date: 08/28/2023
+ms.reviewer: randolphwest, wiassaf
+ms.date: 08/21/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "sp_update_jobstep"
 dev_langs:
   - "TSQL"
-monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 # sp_update_jobstep (Transact-SQL)
 
@@ -186,7 +186,7 @@ The name of the proxy that the job step runs as. *@proxy_name* is **sysname**, w
 
 Updating a job step increments the job version number.
 
- This stored procedure shares the name of `sp_update_jobstep` with a similar object for the [Azure Elastic Jobs service for Azure SQL Database](/azure/azure-sql/database/elastic-jobs-overview?view=azuresql-db&preserve-view=true). For information about the elastic jobs version, see [jobs.sp_update_jobstep (Azure Elastic Jobs) (Transact-SQL)](sp-update-jobstep-elastic-jobs-transact-sql.md?view=azuresqldb-current&preserve-view=true).
+This stored procedure shares the name of `sp_update_jobstep` with a similar object for the [Azure Elastic Jobs service for Azure SQL Database](/azure/azure-sql/database/elastic-jobs-overview?view=azuresql-db&preserve-view=true). For information about the elastic jobs version, see [jobs.sp_update_jobstep (Azure Elastic Jobs)](sp-update-jobstep-elastic-jobs-transact-sql.md?view=azuresqldb-current&preserve-view=true).
 
 ## Permissions
 

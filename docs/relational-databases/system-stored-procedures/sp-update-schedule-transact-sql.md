@@ -4,7 +4,7 @@ description: Changes the settings for a SQL Server Agent schedule.
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 08/28/2023
+ms.date: 08/21/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -63,7 +63,7 @@ Either *@schedule_id* or *@name* must be specified.
 
 #### [ @new_name = ] N'*new_name*'
 
-The new name for the schedule. *@new_name* is **sysname**, with a default of `NULL`. When *@new_name* is NULL, the name of the schedule is unchanged.
+The new name for the schedule. *@new_name* is **sysname**, with a default of `NULL`. When *@new_name* is `NULL`, the name of the schedule is unchanged.
 
 #### [ @enabled = ] *enabled*
 

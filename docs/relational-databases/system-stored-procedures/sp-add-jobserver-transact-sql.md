@@ -4,7 +4,7 @@ description: "Targets the specified job at the specified server."
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 11/02/2023
+ms.date: 08/22/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "sp_add_jobserver"
 dev_langs:
   - "TSQL"
-monikerRange: ">=sql-server-2016||>=sql-server-linux-2017"
+monikerRange: ">=sql-server-2016 || >=sql-server-linux-2017"
 ---
 # sp_add_jobserver (Transact-SQL)
 

@@ -4,7 +4,7 @@ description: "Deletes a mail profile used by Database Mail."
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 05/30/2023
+ms.date: 08/21/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -53,7 +53,7 @@ None.
 
 Deleting a profile doesn't delete the accounts used by the profile.
 
-This stored procedure deletes the profile regardless of whether users have access to the profile. Use caution when removing the default private profile for a user or the default public profile for the `msdb` database. When no default profile is available, `sp_send_dbmail` requires the name of a profile as an argument. Therefore, removing a default profile may cause calls to `sp_send_dbmail` to fail. For more information, see [sp_send_dbmail (Transact-SQL)](sp-send-dbmail-transact-sql.md).
+This stored procedure deletes the profile regardless of whether users have access to the profile. Use caution when removing the default private profile for a user or the default public profile for the `msdb` database. When no default profile is available, `sp_send_dbmail` requires the name of a profile as an argument. Therefore, removing a default profile might cause calls to `sp_send_dbmail` to fail. For more information, see [sp_send_dbmail](sp-send-dbmail-transact-sql.md).
 
 The stored procedure `sysmail_delete_profile_sp` is in the `msdb` database and is owned by the **dbo** schema. The procedure must be executed with a three-part name if the current database isn't `msdb`.
 

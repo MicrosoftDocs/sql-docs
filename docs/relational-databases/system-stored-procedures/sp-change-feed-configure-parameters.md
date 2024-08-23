@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "sp_change_feed_configure_parameters"
 dev_langs:
   - "TSQL"
-monikerRange: ">=sql-server-ver16||=azuresqldb-current||=fabric||=azure-sqldw-latest"
+monikerRange: ">=sql-server-ver16 || =azuresqldb-current || =fabric || =azure-sqldw-latest"
 ---
 # sys.sp_change_feed_configure_parameters (Transact-SQL)
 
@@ -28,7 +28,7 @@ Used to reduce latency by decreasing change batch size with `@maxtrans`, or to r
 This system stored procedure is used to fine tune the operational performance for:
 
 - The Azure Synapse Link feature for SQL Server instances and Azure SQL Database. For more information, see [Manage Azure Synapse Link for SQL Server and Azure SQL Database](../../sql-server/synapse-link/synapse-link-sql-server-change-feed-manage.md).
-- The Fabric Mirrored Database feature for Azure SQL Database. For more information, see [Microsoft Fabric mirrored databases (Preview)](/fabric/database/mirrored-database/overview).
+- The Fabric Mirrored Database feature for Azure SQL Database. For more information, see [What is Mirroring in Fabric?](/fabric/database/mirrored-database/overview).
 
 ## Syntax
 
@@ -45,16 +45,17 @@ sys.sp_change_feed_configure_parameters
 
 #### [ @maxtrans = ] *max_trans*
 
-Data type is **int**. Indicates the maximum number of transactions to process in each scan cycle. 
+Data type is **int**. Indicates the maximum number of transactions to process in each scan cycle.
+
 - For Azure Synapse Link, the default value if not specified is `10000`. If specified, the value must be a positive integer.
 - For Fabric mirroring, this value is dynamically determined and automatically set.
 
 #### [ @pollinterval = ] *polling_interval*
 
-Data type is **int**. Describes the frequency that the log is scanned for any new changes, in seconds. 
-- For Azure Synapse Link, the default interval if not specified is 5 seconds. The value must be `5` or larger. 
-- For Fabric mirroring, this value is dynamically determined and automatically set.
+Data type is **int**. Describes the frequency that the log is scanned for any new changes, in seconds.
 
+- For Azure Synapse Link, the default interval if not specified is 5 seconds. The value must be `5` or larger.
+- For Fabric mirroring, this value is dynamically determined and automatically set.
 
 ## Returns
 
@@ -75,8 +76,8 @@ A user with [CONTROL database permissions](../security/permissions-database-engi
 
 **For Microsoft Fabric mirrored databases**:
 
-- [Microsoft Fabric mirrored databases (Preview)](/fabric/database/mirrored-database/overview)
-- [Microsoft Fabric mirrored databases monitoring](/fabric/database/mirrored-database/monitor)
+- [What is Mirroring in Fabric?](/fabric/database/mirrored-database/overview)
+- [Monitor Fabric mirrored database replication](/fabric/database/mirrored-database/monitor)
 - [Explore data in your Mirrored database using Microsoft Fabric](/fabric/database/mirrored-database/explore)
 
 **For Azure Synapse Link**:

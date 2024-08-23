@@ -4,7 +4,7 @@ description: "Pauses or resumes the SQL Server Managed Backup to Microsoft Azure
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 05/31/2023
+ms.date: 08/21/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -58,7 +58,7 @@ Requires membership in **db_backupoperator** database role, with ALTER ANY CREDE
 
 ## Examples
 
-The following example can be used to pause [!INCLUDE [ss-managed-backup](../../includes/ss-managed-backup-md.md)] on the instance it is executed on:
+The following example can be used to pause [!INCLUDE [ss-managed-backup](../../includes/ss-managed-backup-md.md)] on the instance it's executed on:
 
 ```sql
 USE msdb;
@@ -78,4 +78,4 @@ Go
 
 ## Related content
 
-- [SQL Server Managed Backup to Microsoft Azure](../backup-restore/sql-server-managed-backup-to-microsoft-azure.md)
+- [SQL Server managed backup to Microsoft Azure](../backup-restore/sql-server-managed-backup-to-microsoft-azure.md)

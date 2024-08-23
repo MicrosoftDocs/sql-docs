@@ -4,7 +4,7 @@ description: "Changes selected properties of a merge push subscription. This sto
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 11/23/2023
+ms.date: 08/21/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: "reference"
@@ -23,7 +23,7 @@ dev_langs:
 Changes selected properties of a merge push subscription. This stored procedure is executed at the Publisher on the publication database.
 
 > [!IMPORTANT]  
-> When configuring a Publisher with a remote Distributor, the values supplied for all parameters, including *job_login* and *job_password*, are sent to the Distributor as plain text. You should encrypt the connection between the Publisher and its remote Distributor before executing this stored procedure. For more information, see [Configure SQL Server Database Engine for encrypting connections](../../database-engine/configure-windows/configure-sql-server-encryption.md).
+> When configuring a Publisher with a remote Distributor, the values supplied for all parameters, including *@job_login* and *@job_password*, are sent to the Distributor as plain text. You should encrypt the connection between the Publisher and its remote Distributor before executing this stored procedure. For more information, see [Configure SQL Server Database Engine for encrypting connections](../../database-engine/configure-windows/configure-sql-server-encryption.md).
 
 ## Syntax
 
@@ -64,7 +64,7 @@ The new value for the specified *@property*. *@value* is **nvarchar(255)**, with
 | --- | --- | --- |
 | `description` | | Description of this merge subscription. |
 | `priority` | | The subscription priority. The priority is used by the default resolver to pick a winner when conflicts are detected. |
-| `merge_job_login` | | Login for the [!INCLUDE [msCoName](../../includes/msconame-md.md)] Windows account under which the agent runs. |
+| `merge_job_login` | | Login for the Windows account under which the agent runs. |
 | `merge_job_password` | | Password for the Windows account under which the agent runs. |
 | `publisher_security_mode` | `1` | Use Windows Authentication when connecting to the Publisher. |
 | | `0` | Use [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Authentication when connecting to the Publisher. |

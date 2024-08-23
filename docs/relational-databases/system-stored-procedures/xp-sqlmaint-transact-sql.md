@@ -4,7 +4,7 @@ description: "Calls the sqlmaint utility with a string that contains sqlmaint op
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest
-ms.date: 05/26/2023
+ms.date: 08/21/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -39,7 +39,7 @@ xp_sqlmaint 'switch_string'
 
 A string containing the **sqlmaint** utility switches. The switches and their values must be separated by a space.
 
-The `-?` switch is not valid for `xp_sqlmaint`.
+The `-?` switch isn't valid for `xp_sqlmaint`.
 
 ## Return code values
 

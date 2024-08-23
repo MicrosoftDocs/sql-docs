@@ -4,7 +4,7 @@ description: sp_attach_single_file_db attaches a database that's only one data f
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 03/04/2024
+ms.date: 08/21/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -91,7 +91,7 @@ N'C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data\Adventure
 
 ## Related content
 
-- [Database Detach and Attach (SQL Server)](../databases/database-detach-and-attach-sql-server.md)
+- [Database detach and attach (SQL Server)](../databases/database-detach-and-attach-sql-server.md)
 - [sp_detach_db (Transact-SQL)](sp-detach-db-transact-sql.md)
 - [sp_helpfile (Transact-SQL)](sp-helpfile-transact-sql.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)

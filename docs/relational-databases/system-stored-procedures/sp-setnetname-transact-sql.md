@@ -4,7 +4,7 @@ description: sp_setnetname sets the network names in sys.servers to their actual
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 04/08/2024
+ms.date: 08/21/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -43,7 +43,7 @@ The name of the remote server as referenced in user-coded remote stored procedur
 
 The network name of the computer to which remote stored procedure calls are made. *@netname* is **sysname**, with no default.
 
-This name must match the [!INCLUDE [msCoName](../../includes/msconame-md.md)] Windows computer name, and the name can include characters that aren't allowed in [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] identifiers.
+This name must match the Windows computer name, and the name can include characters that aren't allowed in [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] identifiers.
 
 ## Return code values
 

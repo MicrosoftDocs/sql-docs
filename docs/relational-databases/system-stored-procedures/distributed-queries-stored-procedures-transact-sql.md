@@ -4,7 +4,7 @@ description: "Distributed Queries stored procedures (Transact-SQL)"
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 05/24/2023
+ms.date: 08/22/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -34,7 +34,7 @@ dev_langs:
 
         [sp_droplinkedsrvlogin](sp-droplinkedsrvlogin-transact-sql.md)
 
-        [sp_dropserver (Transact-SQL)](sp-dropserver-transact-sql.md)
+        [sp_dropserver](sp-dropserver-transact-sql.md)
 
         [sp_foreignkeys](sp-foreignkeys-transact-sql.md)
     :::column-end:::
@@ -51,7 +51,7 @@ dev_langs:
 
         [sp_tables_ex](sp-tables-ex-transact-sql.md)
 
-        [sp_testlinkedserver (Transact-SQL)](sp-testlinkedserver-transact-sql.md)
+        [sp_testlinkedserver](sp-testlinkedserver-transact-sql.md)
     :::column-end:::
 :::row-end:::
 

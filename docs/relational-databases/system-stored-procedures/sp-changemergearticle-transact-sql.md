@@ -4,7 +4,7 @@ description: "Changes the properties of a merge article. This stored procedure i
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 11/23/2023
+ms.date: 08/21/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: "reference"
@@ -85,7 +85,7 @@ This table describes the properties of articles and the values for those propert
 | `partition_options` | `0` | The filtering for the article either is static or doesn't yield a unique subset of data for each partition, that is, an "overlapping" partition. |
 | | `1` | The partitions are overlapping, and DML updates made at the Subscriber can't change the partition to which a row belongs. |
 | | `2` | The filtering for the article yields non-overlapping partitions, but multiple Subscribers can receive the same partition. |
-| | `3` | The filtering for the article yields non-overlapping partitions that are unique for each subscription.<br /><br />Note: If you specify a value of `3` for `partition_options`, there can be only a single subscription for each partition of data in that article. If a second subscription is created, in which the filtering criterion of the new subscription resolves to the same partition as the existing subscription, the existing subscription is dropped. |
+| | `3` | The filtering for the article yields non-overlapping partitions that are unique for each subscription.<br /><br />**Note:** If you specify a value of `3` for `partition_options`, there can be only a single subscription for each partition of data in that article. If a second subscription is created, in which the filtering criterion of the new subscription resolves to the same partition as the existing subscription, the existing subscription is dropped. |
 | `pre_creation_command` | `none` | If the table already exists at the Subscriber, no action is taken. |
 | | `delete` | Issues a delete based on the WHERE clause in the subset filter. |
 | | `drop` | Drops the table before re-creating it. |
@@ -95,7 +95,7 @@ This table describes the properties of articles and the values for those propert
 | `published_in_tran_pub` | `true` | Article is also published in a transactional publication. |
 | | `false` | Article isn't also published in a transactional publication. |
 | `resolver_info` | | Is used to specify additional information required by a custom resolver. Some of the [!INCLUDE [msCoName](../../includes/msconame-md.md)] Resolvers require a column provided as input to the resolver. `resolver_info` is **nvarchar(255)**, with a default of `NULL`. For more information, see [Advanced Merge Replication Conflict - COM-Based Resolvers](../replication/merge/advanced-merge-replication-conflict-com-based-resolvers.md). |
-| `schema_option` (bitmap) | | For more information, see the Remarks section later in this article. |
+| `schema_option` (bitmap) | | For more information, see the [Remarks](#remarks) section. |
 | | `0x00` | Disables scripting by the Snapshot Agent and uses the script provided in `creation_script`. |
 | | `0x01` | Generates the object creation script (CREATE TABLE, CREATE PROCEDURE, and so on). |
 | | `0x10` | Generates a corresponding clustered index. |
@@ -157,7 +157,7 @@ Acknowledges that the action taken by this stored procedure might invalidate an 
 
 - `1` means that changes to the merge article might cause the snapshot to be invalid, and if there are existing subscriptions that would require a new snapshot, gives permission for the existing snapshot to be marked as obsolete and a new snapshot generated.
 
-See the Remarks section for the properties that, when changed, require the generation of a new snapshot.
+See the [Remarks](#remarks) section for the properties that, when changed, require the generation of a new snapshot.
 
 #### [ @force_reinit_subscription = ] *force_reinit_subscription*
 

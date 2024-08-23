@@ -4,7 +4,7 @@ description: Sets the number of times to attempt a data upload if a failure occu
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 07/04/2023
+ms.date: 08/21/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -40,9 +40,9 @@ The number of times a failed data upload to the management data warehouse is ret
 
 | Value | Description |
 | --- | --- |
-| -1 | Cache all the upload data from the previous upload failures. |
-| 0 | Don't cache any data from an upload failure. |
-| *n* | Cache data from n previous upload failures, where *n* >= 1. |
+| `-1` | Cache all the upload data from the previous upload failures. |
+| `0` | Don't cache any data from an upload failure. |
+| *n* | Cache data from *n* previous upload failures, where *n* >= 1. |
 
 ## Return code values
 
@@ -50,7 +50,7 @@ The number of times a failed data upload to the management data warehouse is ret
 
 ## Remarks
 
-You must disable the data collector before changing the cache window configuration. This stored procedure fails if the data collector is enabled. For more information, see [Enable or Disable Data Collection](../data-collection/enable-or-disable-data-collection.md), and [Manage Data Collection](../data-collection/manage-data-collection.md).
+You must disable the data collector before changing the cache window configuration. This stored procedure fails if the data collector is enabled. For more information, see [Enable or disable data collection](../data-collection/enable-or-disable-data-collection.md), and [Manage data collection](../data-collection/manage-data-collection.md).
 
 ## Permissions
 

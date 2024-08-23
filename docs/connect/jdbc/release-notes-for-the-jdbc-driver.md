@@ -327,7 +327,7 @@ For the driver in a tar.gz file: [Chinese (Simplified)](https://go.microsoft.com
 | Allow failover partner to be tried if there's a socket timeout | Allows a reconnection attempt with a supplied failover partner following a socket timeout.  |
 | Improved performance when building parameter type definitions | By precomputing sizes of arrays and string builders used in `buildParamTypeDefinitions`, and by removing unneeded string allocations, improve performance where this method is used. |
 | Changed serverName sent in `LOGIN` packet to include instanceName | `serverName` is now appended to the end of `instanceName` in `LOGIN` packets. |
-| Updated supportTransaction method to reflect whether server supports transactions | Addresses an issue where `connection.rollback` didn't work for Azure Synapse database, as the syntax used in `supportTransaction` wasn't supported by Azure Synapse.|
+| Updated supportTransaction method to reflect whether server supports transactions | Addresses an issue where `connection.rollback` didn't work for Azure Synapse database, as Azure Synapse doesn't support the syntax used in `supportTransaction`.|
 | Update sp_cursor calls so that table names are passed in instead of an empty string | Addresses an issue where inconsistent updates of ResultSet rows were received when updating one-to-many tables. |
 | Updated supportsLikeEscapeClause() to check for Azure Data Warehouse | Addresses an issue where `supportsLikeEscapeClause` was returning true for AzureDW despite it explicitly not being supported. |
 | Upgraded to latest OSGi JDBC specification | Upgrade from `osgi.compendium` 5.0.0 to `osgi.service.jdbc` 1.1.0 to maintain compliance with OSGi JDBC specification 8.1.0. |
@@ -626,8 +626,8 @@ For the driver in a tar.gz file: [Chinese (Simplified)](https://go.microsoft.com
 | :---------- | :----------- |
 | Default encrypt to true | **BREAKING CHANGE** TLS encryption is enabled by default. |
 | Certificate validation when encrypt = false | **BREAKING CHANGE** When encrypt = false but the server requires encryption, the certificate is validated based on the trustServerCertificate connection setting.
-| aadSecurePrincipalId and aadSecurePrincipalSecret deprecated | The aadSecurePrincipalId and aadSecurePrincipalSecret connection properties have been deprecated. Use username and password instead. |
-| getAADSecretPrincipalId API removed | **BREAKING CHANGE** The getAADSecretPrincipalId API has been removed for security reasons. |
+| aadSecurePrincipalId and aadSecurePrincipalSecret deprecated | The aadSecurePrincipalId and aadSecurePrincipalSecret connection properties are deprecated. Use username and password instead. |
+| getAADSecretPrincipalId API removed | **BREAKING CHANGE** The getAADSecretPrincipalId API is removed for security reasons. |
 | SQL_Variant support | Added support for SQL_Variant datatype when retrieving DateTimeOffset. |
 | Nonblocking random in Linux | Updated to use a nonblocking random call when generating a GUID for enclave packages. |
 | CNAME resolution for realm | Added CNAME resolution when realm is specified. |
@@ -686,7 +686,7 @@ For the driver in a tar.gz file: [Chinese (Simplified)](https://go.microsoft.com
 | Java 16 support | The driver is now compatible with Java Development Kit (JDK) version 16.0 in addition to JDK 11.0 and 1.8. |
 | Replication connection support | Replication connections are now supported. See [Setting the connection properties](setting-the-connection-properties.md). |
 | Custom Kerberos authentication realm | The driver now supports specifying a custom authentication realm when using Kerberos authentication. See [Setting the connection properties](setting-the-connection-properties.md). |
-| Open Connection Retry | The `connectRetryCount` and `connectRetryInterval` connection properties have been added to configure automatic retries when opening connections. See [Setting the connection properties](setting-the-connection-properties.md) for details on these new properties. |
+| Open Connection Retry | The `connectRetryCount` and `connectRetryInterval` connection properties are added to configure automatic retries when opening connections. See [Setting the connection properties](setting-the-connection-properties.md) for details on these new properties. |
 
 ### Changes in 9.4
 
@@ -896,7 +896,7 @@ Microsoft JDBC Driver 8.2 for SQL Server is now compatible with Java Development
 | Temporal Datatypes change | Details |
 | :---------- | :------ |
 | Microsoft JDBC Driver 8.2 for SQL Server has improved performance when retrieving temporal datatypes from SQL Server. | This change eliminates unnecessary temporal datatype conversions by eliminating the use of java.util.Calendar wherever possible. |
-| The following list of temporal data types are affected by this performance improvement; in the format "SQL Server datatype" (Java mapping). | date (java.sql.Date), datetime (java.sql.Timestamp), datetime2 (java.sql.Timestamp), smalldatetime (java.sql.Timestamp), and time (java.sql.Time). |
+| This performance improvement affect the following list of temporal data types; in the format "SQL Server datatype" (Java mapping). | date (java.sql.Date), datetime (java.sql.Timestamp), datetime2 (java.sql.Timestamp), smalldatetime (java.sql.Timestamp), and time (java.sql.Time). |
 
 <sup>1</sup> Due to the differences in how time zones are handled between java.util.Calendar and java.time.LocalDateTime API, temporal datatypes with a user provided java.util.Calendar object associated with it or microsoft.sql.DateTimeOffset datatypes don't benefit from this improvement.
 
@@ -905,7 +905,7 @@ Microsoft JDBC Driver 8.2 for SQL Server is now compatible with Java Development
 | sqljdbc_auth.dll change | Details |
 | :------------------- | :------ |
 | Starting with Microsoft JDBC Driver 8.2 for SQL Server, the driver relies on mssql-jdbc_auth-\<version>-\<arch>.dll instead of sqljdbc_auth.dll to use Azure Active Directory Authentication feature. | &nbsp; |
-| The DLL has also been uploaded to Maven repository for easier access. | See [this page](https://search.maven.org/artifact/com.microsoft.sqlserver/mssql-jdbc_auth). |
+| The DLL is uploaded to Maven repository for easier access. | See [this page](https://search.maven.org/artifact/com.microsoft.sqlserver/mssql-jdbc_auth). |
 
 ### 8.2 Known issues
 
@@ -975,7 +975,7 @@ Microsoft JDBC Driver 7.4 for SQL Server is now compatible with Java Development
 | Known issues | Details |
 | :----------- | :------ |
 | When using NTLM Authentication. | Enabling Extended Protection and encrypted connections at the same time is currently not supported. |
-| When using useFmtOnly. | There are some issues with the feature, which are caused by deficiencies in SQL parsing logic. For more information and workaround suggestions, see [Using useFmtOnly](using-usefmtonly.md). |
+| When using useFmtOnly. | Deficiencies in SQL parsing logic can cause some issues with the feature. For more information and workaround suggestions, see [Using useFmtOnly](using-usefmtonly.md). |
 
 ## <a id="72"> 7.2.2
 

@@ -120,6 +120,13 @@ To give permissions to the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion
    1. Select **OK** twice.
 
 1. Close **Active Directory Users and Computers**.
+Note: "Write Public Information" permissions is also required for successful SPN registration.
+For this 
+a. Go to Properties of domain service account in AD
+b. Go to security Tab
+c. Click on SELF and add Permissions for SELF
+    Write public Information
+d. Click Apply and OK.
 
 Manual intervention might be required to register or unregister the SPN if the service account lacks the permissions that are required for these actions.
 

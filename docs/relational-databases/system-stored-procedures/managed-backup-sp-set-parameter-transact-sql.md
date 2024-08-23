@@ -4,7 +4,7 @@ description: "Sets the value of the specified Smart Admin system parameter."
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 05/31/2023
+ms.date: 08/22/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -63,9 +63,9 @@ The value for the parameter you want to set. *@parameter_value* is **nvarchar(12
 | *@parameter_name* | *@parameter_value* |
 | --- | --- |
 | 'SSMBackup2WANotificationEmailIds' | 'email' |
-| 'SSMBackup2WAEnableUserDefinedPolicy' | { 'true' \| 'false' }
-| 'SSMBackup2WADebugXevent' | { 'true' \| 'false' }
-| 'FileRetentionDebugXevent' | { 'true' \| 'false' }
+| 'SSMBackup2WAEnableUserDefinedPolicy' | { 'true' \| 'false' } |
+| 'SSMBackup2WADebugXevent' | { 'true' \| 'false' } |
+| 'FileRetentionDebugXevent' | { 'true' \| 'false' } |
 | 'StorageOperationDebugXevent' = { 'true' \| 'false' } | N/A |
 
 ## Return code values

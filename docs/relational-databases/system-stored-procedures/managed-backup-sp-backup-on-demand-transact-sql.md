@@ -4,7 +4,7 @@ description: "Requests SQL Server Managed Backup to Microsoft Azure to perform a
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 05/31/2023
+ms.date: 08/22/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -50,7 +50,7 @@ The name of the database on which the backup is to be performed. The @database_n
 
 #### [ @type = ] { 'Database' | 'Log' }
 
-The type of backup to be performed:  Database or Log. The @type parameter is **nvarchar(32)**.
+The type of backup to be performed: Database or Log. The @type parameter is **nvarchar(32)**.
 
 ## Return code values
 

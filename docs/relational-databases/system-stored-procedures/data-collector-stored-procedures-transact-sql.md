@@ -4,7 +4,7 @@ description: "Data collector stored procedures (Transact-SQL)"
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 05/24/2023
+ms.date: 08/21/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -22,7 +22,7 @@ dev_langs:
 SQL Server supports the following system stored procedures that are used to work with the data collector and the following components: collection sets, collection items, and collection types.
 
 > [!IMPORTANT]  
-> Unlike regular stored procedures, the parameters for data collector stored procedures are strictly typed and do not support automatic data type conversion. If these parameters are not called with the correct input parameter data types, as specified in the argument description, the stored procedure returns an error.
+> Unlike regular stored procedures, the parameters for data collector stored procedures are strictly typed and don't support automatic data type conversion. If these parameters aren't called with the correct input parameter data types, as specified in the argument description, the stored procedure returns an error.
 
 :::row:::
     :::column:::
@@ -71,16 +71,16 @@ SQL Server supports the following system stored procedures that are used to work
 
 The following stored procedures are for internal use only:
 
-- sp_syscollector_get_warehouse_connection_string
-- sp_syscollector_set_warehouse_connection_password
-- sp_syscollector_set_warehouse_connection_user
-- sp_syscollector_event_oncollectionbegin
-- sp_syscollector_event_oncollectionend
-- sp_syscollector_event_onpackagebegin
-- sp_syscollector_event_onpackageend
-- sp_syscollector_event_onpackageupdate
-- sp_syscollector_event_onerror
-- sp_syscollector_event_onstatsupdate
+- `sp_syscollector_get_warehouse_connection_string`
+- `sp_syscollector_set_warehouse_connection_password`
+- `sp_syscollector_set_warehouse_connection_user`
+- `sp_syscollector_event_oncollectionbegin`
+- `sp_syscollector_event_oncollectionend`
+- `sp_syscollector_event_onpackagebegin`
+- `sp_syscollector_event_onpackageend`
+- `sp_syscollector_event_onpackageupdate`
+- `sp_syscollector_event_onerror`
+- `sp_syscollector_event_onstatsupdate`
 
 ## Related content
 

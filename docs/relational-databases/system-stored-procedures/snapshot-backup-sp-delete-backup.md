@@ -4,7 +4,7 @@ description: "Deletes all snapshots and the backup file that comprise a snapshot
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest
-ms.date: 05/24/2023
+ms.date: 08/21/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -35,7 +35,7 @@ The URL of the backup to be deleted, which deletes all snapshots comprising the 
 
 #### [ @db_name = ] N'*database_name*'
 
-The name of the database containing the snapshot to be deleted. When a database name is provided, the system verifies that the backup URL provided is a backup URL for the specified database and uses [sp_delete_backup_file_snapshot (Transact-SQL)](snapshot-backup-sp-delete-backup-file-snapshot.md) to delete each snapshot. If no database name is provided, this database check is not performed.
+The name of the database containing the snapshot to be deleted. When a database name is provided, the system verifies that the backup URL provided is a backup URL for the specified database and uses [sp_delete_backup_file_snapshot](snapshot-backup-sp-delete-backup-file-snapshot.md) to delete each snapshot. If no database name is provided, this database check isn't performed.
 
 ## Permissions
 

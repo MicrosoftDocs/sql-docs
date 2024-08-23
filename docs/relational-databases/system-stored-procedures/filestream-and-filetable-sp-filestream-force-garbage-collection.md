@@ -4,7 +4,7 @@ description: Forces the FILESTREAM garbage collector to run, deleting any unneed
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 05/24/2023
+ms.date: 08/21/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -61,13 +61,13 @@ Specifies the logical name of the FILESTREAM container to run the GC on. *@filen
 | --- | --- |
 | `file_name` | Indicates the FILESTREAM container name |
 | `num_collected_items` | Indicates the number of FILESTREAM items (files or directories) that have been garbage collected (deleted) in this container. |
-| `num_marked_for_collection_items` | Indicates the number of FILESTREAM items (files or directories) that have been marked for GC in this container. These items haven't been deleted yet, but may be eligible for deletion following the GC phase. |
-| `num_unprocessed_items` | Indicates the number of eligible FILESTREAM items (files or directories) that weren't processed for GC in this FILESTREAM container. Items may be unprocessed for various reasons, including:<br /><br />- Files that need to be pinned down because a log backup or checkpoint hasn't been taken.<br /><br />- Files in the FULL or BULK_LOGGED recovery model.<br /><br />- There's a long-running active transaction.<br /><br />- The replication log reader job hasn't run. See the white paper [FILESTREAM Storage in SQL Server 2008](/previous-versions/sql/sql-server-2008/hh461480(v=msdn.10)) for more information. |
+| `num_marked_for_collection_items` | Indicates the number of FILESTREAM items (files or directories) that have been marked for GC in this container. These items haven't been deleted yet, but might be eligible for deletion following the GC phase. |
+| `num_unprocessed_items` | Indicates the number of eligible FILESTREAM items (files or directories) that weren't processed for GC in this FILESTREAM container. Items might be unprocessed for various reasons, including:<br /><br />- Files that need to be pinned down because a log backup or checkpoint hasn't been taken.<br /><br />- Files in the FULL or BULK_LOGGED recovery model.<br /><br />- There's a long-running active transaction.<br /><br />- The replication log reader job hasn't run. See the white paper [FILESTREAM Storage in SQL Server 2008](/previous-versions/sql/sql-server-2008/hh461480(v=msdn.10)) for more information. |
 | `last_collected_xact_seqno` | Returns the last corresponding log sequence number (LSN) up to which the files have been garbage collected for the specified FILESTREAM container. |
 
 ## Remarks
 
-Explicitly runs the FILESTREAM garbage collection task to completion on the requested database (and FILESTREAM container). The GC process removes files that are no longer needed. The time needed for this operation to complete depends on the size of the FILESTREAM data in that database or container, and the amount of DML activity that recently occurred on the FILESTREAM data. Though this operation can be run with the database online, this may affect the performance of the database during its run due to various I/O activities done by the GC process.
+Explicitly runs the FILESTREAM garbage collection task to completion on the requested database (and FILESTREAM container). The GC process removes files that are no longer needed. The time needed for this operation to complete depends on the size of the FILESTREAM data in that database or container, and the amount of DML activity that recently occurred on the FILESTREAM data. Though this operation can be run with the database online, this might affect the performance of the database during its run due to various I/O activities done by the GC process.
 
 > [!NOTE]  
 > It's recommended that this operation be run only when necessary and outside usual operation hours.
@@ -107,6 +107,6 @@ EXEC sp_filestream_force_garbage_collection @dbname = N'fsdb',
 
 - [FILESTREAM (SQL Server)](../blob/filestream-sql-server.md)
 - [FileTables (SQL Server)](../blob/filetables-sql-server.md)
-- [FILESTREAM and FileTable Dynamic Management Views (Transact-SQL)](../system-dynamic-management-views/filestream-and-filetable-dynamic-management-views-transact-sql.md)
-- [FILESTREAM and FileTable Catalog Views (Transact-SQL)](../system-catalog-views/filestream-and-filetable-catalog-views-transact-sql.md)
+- [FILESTREAM and FileTable dynamic management views (Transact-SQL)](../system-dynamic-management-views/filestream-and-filetable-dynamic-management-views-transact-sql.md)
+- [FILESTREAM and FileTable catalog views (Transact-SQL)](../system-catalog-views/filestream-and-filetable-catalog-views-transact-sql.md)
 - [sp_kill_filestream_non_transacted_handles (Transact-SQL)](filestream-and-filetable-sp-kill-filestream-non-transacted-handles.md)

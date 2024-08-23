@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "sp_change_feed_disable_db"
 dev_langs:
   - "TSQL"
-monikerRange: ">=sql-server-ver16||=azuresqldb-current||=azure-sqldw-latest||=fabric"
+monikerRange: ">=sql-server-ver16 || =azuresqldb-current || =azure-sqldw-latest || =fabric"
 ---
 # sys.sp_change_feed_disable_db (Transact-SQL)
 
@@ -42,7 +42,7 @@ A user with [CONTROL database permissions](../security/permissions-database-engi
 
 When the change feed is disabled with active table groups, all connections and schedulers are stopped immediately/forcefully without waiting for the current operations are completed. No new change feed table groups can be created for the database, and all the existing metadata describing the table groups will be deleted without waiting for the current operations to complete. Re-enabling change feed results in clean initializations of all table groups and reseeding of all the data.
 
-You should only execute this stored procedure when unsupported actions or unexpected errors have occurred, that require the Mirroring feature to be disabled manually, and cannot be removed via the Synapse workspace or Fabric portal.
+You should only execute this stored procedure when unsupported actions or unexpected errors have occurred, that require the Mirroring feature to be disabled manually, and can't be removed via the Synapse workspace or Fabric portal.
 
 ## Related content
 
@@ -54,8 +54,8 @@ You should only execute this stored procedure when unsupported actions or unexpe
 
 **For Microsoft Fabric mirrored databases**:
 
-- [Microsoft Fabric mirrored databases (Preview)](/fabric/database/mirrored-database/overview)
-- [Microsoft Fabric mirrored databases monitoring](/fabric/database/mirrored-database/monitor)
+- [What is Mirroring in Fabric?](/fabric/database/mirrored-database/overview)
+- [Monitor Fabric mirrored database replication](/fabric/database/mirrored-database/monitor)
 - [Explore data in your Mirrored database using Microsoft Fabric](/fabric/database/mirrored-database/explore)
 
 **For Azure Synapse Link**:

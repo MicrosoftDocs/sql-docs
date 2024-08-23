@@ -4,7 +4,7 @@ description: Displays or changes AUTO_UPDATE_STATISTICS for an index, statistics
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 03/04/2024
+ms.date: 08/21/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -23,7 +23,7 @@ monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-20
 
 Displays or changes the automatic statistics update option, `AUTO_UPDATE_STATISTICS`, for an index, a statistics object, a table, or an indexed view.
 
-For more information about the `AUTO_UPDATE_STATISTICS` option, see [ALTER DATABASE SET Options (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md) and [Statistics](../statistics/statistics.md).
+For more information about the `AUTO_UPDATE_STATISTICS` option, see [ALTER DATABASE SET options](../../t-sql/statements/alter-database-transact-sql-set-options.md) and [Statistics](../statistics/statistics.md).
 
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 

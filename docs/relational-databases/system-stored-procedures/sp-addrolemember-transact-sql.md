@@ -4,7 +4,7 @@ description: Adds a database user, database role, Windows login, or Windows grou
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: randolphwest
-ms.date: 01/23/2024
+ms.date: 08/22/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -62,7 +62,7 @@ A role can't include itself as a member. Such *circular* definitions aren't vali
 
 `sp_addrolemember` can't add a fixed database role, fixed server role, or **dbo** to a role.
 
-Only use `sp_addrolemember` to add a member to a database role. To add a member to a server role, use [sp_addsrvrolemember (Transact-SQL)](sp-addsrvrolemember-transact-sql.md).
+Only use `sp_addrolemember` to add a member to a database role. To add a member to a server role, use [sp_addsrvrolemember](sp-addsrvrolemember-transact-sql.md).
 
 ## Permissions
 

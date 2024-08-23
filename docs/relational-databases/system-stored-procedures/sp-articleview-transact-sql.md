@@ -4,7 +4,7 @@ description: Creates the view that defines the published article when a table is
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 03/04/2024
+ms.date: 08/22/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: "reference"
@@ -103,17 +103,17 @@ Specifies whether the stored procedures used to synchronize replication are auto
 
 ## Remarks
 
-`sp_articleview` creates the view that defines the published article and inserts the ID of this view in the `sync_objid` column of the [sysarticles (Transact-SQL)](../system-tables/sysarticles-transact-sql.md) table, and inserts the text of the restriction clause in the `filter_clause` column. If all columns are replicated and there's no `filter_clause`, the `sync_objid` in the [sysarticles (Transact-SQL)](../system-tables/sysarticles-transact-sql.md) table is set to the ID of the base table, and the use of `sp_articleview` isn't required.
+`sp_articleview` creates the view that defines the published article and inserts the ID of this view in the `sync_objid` column of the [sysarticles](../system-tables/sysarticles-transact-sql.md) table, and inserts the text of the restriction clause in the `filter_clause` column. If all columns are replicated and there's no `filter_clause`, the `sync_objid` in the [sysarticles](../system-tables/sysarticles-transact-sql.md) table is set to the ID of the base table, and the use of `sp_articleview` isn't required.
 
-To publish a vertically filtered table (that is, to filter columns) first run `sp_addarticle` with no *@sync_object* parameter, run [sp_articlecolumn (Transact-SQL)](sp-articlecolumn-transact-sql.md) once for each column to be replicated (defining the vertical filter), and then run `sp_articleview` to create the view that defines the published article.
+To publish a vertically filtered table (that is, to filter columns) first run `sp_addarticle` with no *@sync_object* parameter, run [sp_articlecolumn](sp-articlecolumn-transact-sql.md) once for each column to be replicated (defining the vertical filter), and then run `sp_articleview` to create the view that defines the published article.
 
-To publish a horizontally filtered table (that is, to filter rows), run [sp_addarticle (Transact-SQL)](sp-addarticle-transact-sql.md) with no *@filter_name* parameter. Run [sp_articlefilter (Transact-SQL)](sp-articlefilter-transact-sql.md), providing all parameters including *@filter_clause*. Then run `sp_articleview`, providing all parameters including the identical *@filter_clause*.
+To publish a horizontally filtered table (that is, to filter rows), run [sp_addarticle](sp-addarticle-transact-sql.md) with no *@filter_name* parameter. Run [sp_articlefilter](sp-articlefilter-transact-sql.md), providing all parameters including *@filter_clause*. Then run `sp_articleview`, providing all parameters including the identical *@filter_clause*.
 
-To publish a vertically and horizontally filtered table, run [sp_addarticle (Transact-SQL)](sp-addarticle-transact-sql.md) with no *@sync_object* or *@filter_name* parameters. Run [sp_articlecolumn (Transact-SQL)](sp-articlecolumn-transact-sql.md) once for each column to be replicated, and then run [sp_articlefilter (Transact-SQL)](sp-articlefilter-transact-sql.md) and `sp_articleview`.
+To publish a vertically and horizontally filtered table, run [sp_addarticle](sp-addarticle-transact-sql.md) with no *@sync_object* or *@filter_name* parameters. Run [sp_articlecolumn](sp-articlecolumn-transact-sql.md) once for each column to be replicated, and then run [sp_articlefilter](sp-articlefilter-transact-sql.md) and `sp_articleview`.
 
-If the article already has a view that defines the published article, `sp_articleview` drops the existing view and creates a new one automatically. If the view was created manually (`type` in [sysarticles (Transact-SQL)](../system-tables/sysarticles-transact-sql.md) is `5`), the existing view isn't dropped.
+If the article already has a view that defines the published article, `sp_articleview` drops the existing view and creates a new one automatically. If the view was created manually (`type` in [sysarticles](../system-tables/sysarticles-transact-sql.md) is `5`), the existing view isn't dropped.
 
-If you create a custom filter stored procedure and a view that defines the published article manually, don't run `sp_articleview`. Instead, provide these values as the *@filter_name* and *@sync_object* parameters to [sp_addarticle (Transact-SQL)](sp-addarticle-transact-sql.md), along with the appropriate *@type* value.
+If you create a custom filter stored procedure and a view that defines the published article manually, don't run `sp_articleview`. Instead, provide these values as the *@filter_name* and *@sync_object* parameters to [sp_addarticle](sp-addarticle-transact-sql.md), along with the appropriate *@type* value.
 
 ## Examples
 

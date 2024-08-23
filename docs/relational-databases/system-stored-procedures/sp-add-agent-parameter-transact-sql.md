@@ -4,7 +4,7 @@ description: "sp_add_agent_parameter (Transact-SQL)"
 author: mashamsft
 ms.author: mathoma
 ms.reviewer: randolphwest
-ms.date: 12/28/2023
+ms.date: 08/22/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: "reference"
@@ -39,7 +39,7 @@ sp_add_agent_parameter [ @profile_id = ] profile_id
 
 The ID of the profile from the `MSagent_profiles` table in the `msdb` database. *@profile_id* is **int**, with no default.
 
-To find out what agent type this *@profile_id* represents, find the *@profile_id* in the [MSagent_profiles (Transact-SQL)](../system-tables/msagent-profiles-transact-sql.md) table, and note the `agent_type` field value. The values are as follows:
+To find out what agent type this *@profile_id* represents, find the *@profile_id* in the [MSagent_profiles](../system-tables/msagent-profiles-transact-sql.md) table, and note the `agent_type` field value. The values are as follows:
 
 | Value | Description |
 | --- | --- |

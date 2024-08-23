@@ -4,7 +4,7 @@ description: "Removes an entry from the core.supported_collector_types view in t
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 05/31/2023
+ms.date: 08/21/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -73,5 +73,5 @@ EXECUTE @RC = core.sp_remove_collector_type @collector_type_uid;
 ## Related content
 
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)
-- [Data Collector stored procedures (Transact-SQL)](data-collector-stored-procedures-transact-sql.md)
-- [Management Data Warehouse](../data-collection/management-data-warehouse.md)
+- [Data collector stored procedures (Transact-SQL)](data-collector-stored-procedures-transact-sql.md)
+- [Management data warehouse](../data-collection/management-data-warehouse.md)

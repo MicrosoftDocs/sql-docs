@@ -4,7 +4,7 @@ description: "sp_add_job creates a new job to be executed by the SQL Server Agen
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 08/14/2023
+ms.date: 08/21/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "sp_add_job"
 dev_langs:
   - "TSQL"
-monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 # sp_add_job (Transact-SQL)
 
@@ -31,7 +31,7 @@ Creates a new job executed by the [!INCLUDE [ssnoversion-md](../../includes/ssno
 ## Syntax
 
 ```syntaxsql
-sp_add_job 
+sp_add_job
          [ @job_name = ] N'job_name'
      [ , [ @enabled = ] enabled ]
      [ , [ @description = ] N'description' ]
@@ -123,7 +123,7 @@ A value that indicates when to delete the job. *delete_value* is **int**, with a
 > [!NOTE]  
 > When *@delete_level* is `3`, the job is executed only once, regardless of any schedules defined for the job. Furthermore, if a job deletes itself, all history for the job is also deleted.
 
-#### @job_id  OUTPUT
+#### @job_id OUTPUT
 
 The job identification number assigned to the job if created successfully. *@job_id* is an output variable of type **uniqueidentifier**, with a default of `NULL`.
 
@@ -145,7 +145,7 @@ Use `sp_add_jobserver` to set the [!INCLUDE [ssNoVersion](../../includes/ssnover
 
 [!INCLUDE [ssManStudioFull](../../includes/ssmanstudiofull-md.md)] provides an easy, graphical way to manage jobs, and is the recommended way to create and manage the job infrastructure.
 
-This stored procedure shares the name of `sp_add_job` with a similar object for the [Azure Elastic Jobs service for Azure SQL Database](/azure/azure-sql/database/elastic-jobs-overview?view=azuresql-db&preserve-view=true). For information about the elastic jobs version, see [jobs.sp_add_job (Azure Elastic Jobs) (Transact-SQL)](sp-add-job-elastic-jobs-transact-sql.md?view=azuresql-db&preserve-view=true).
+This stored procedure shares the name of `sp_add_job` with a similar object for the [Azure Elastic Jobs service for Azure SQL Database](/azure/azure-sql/database/elastic-jobs-overview?view=azuresql-db&preserve-view=true). For information about the elastic jobs version, see [jobs.sp_add_job (Azure Elastic Jobs)](sp-add-job-elastic-jobs-transact-sql.md?view=azuresql-db&preserve-view=true).
 
 ## Permissions
 

@@ -4,7 +4,7 @@ description: "Change Tracking stored procedures (Transact-SQL)"
 author: JetterMcTedder
 ms.author: bspendolini
 ms.reviewer: randolphwest
-ms.date: 05/24/2023
+ms.date: 08/21/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -18,7 +18,7 @@ dev_langs:
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-Change Tracking is a lightweight solution that provides an efficient data change tracking mechanism for applications, ETL processes, event capture, and auditing. This allows for quick and simple detection of changed data without the need for expensive and complex custom solutions traditionally involving a combination of triggers, timestamp columns, new tables to store tracking information, and cleanup processes.
+Change Tracking is a lightweight solution that provides an efficient data change tracking mechanism for applications, ETL processes, event capture, and auditing. This allows for quick and basic detection of changed data without the need for expensive and complex custom solutions traditionally involving a combination of triggers, timestamp columns, new tables to store tracking information, and cleanup processes.
 
 ## Stored procedures
 
@@ -28,7 +28,7 @@ Change Tracking is a lightweight solution that provides an efficient data change
 
 ## Related content
 
-- [About Change Tracking (Transact-SQL)](../track-changes/about-change-tracking-sql-server.md)
-- [Change Tracking Cleanup and Troubleshooting (Transact-SQL)](../track-changes/cleanup-and-troubleshoot-change-tracking-sql-server.md)
+- [About Change Tracking (SQL Server)](../track-changes/about-change-tracking-sql-server.md)
+- [Troubleshoot change tracking auto cleanup issues](../track-changes/cleanup-and-troubleshoot-change-tracking-sql-server.md)
 - [Change Tracking Functions (Transact-SQL)](../system-functions/change-tracking-functions-transact-sql.md)
-- [Change Tracking System Tables (Transact-SQL)](../system-tables/change-tracking-tables-transact-sql.md)
+- [Change Tracking tables (Transact-SQL)](../system-tables/change-tracking-tables-transact-sql.md)

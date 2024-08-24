@@ -30,7 +30,7 @@ Connection properties to support Microsoft Entra authentication in the Microsoft
     - Since driver version 6.0, `authentication=ActiveDirectoryIntegrated` can be used to connect to Azure SQL/Synapse Analytics via integrated authentication. To use this authentication mode, you must [federate](/azure/active-directory/hybrid/connect/whatis-fed) the on-premises Active Directory Federation Services (ADFS) with Microsoft Entra ID in the cloud. Once it's set up, you can connect by either adding the native library `mssql-jdbc_auth-<version>-<arch>.dll` to the application class path on Windows, or by setting up a Kerberos ticket for cross-platform authentication support. You're able to access Azure SQL/Azure Synapse Analytics without being prompted for credentials when you're logged in to a domain-joined machine. For more information, see [Connect using ActiveDirectoryIntegrated authentication mode](#connect-using-activedirectoryintegrated-authentication-mode).
 
   - **ActiveDirectoryPassword**
-    - Since driver version 6.0, `authentication=ActiveDirectoryPassword` can be used to connect to Azure SQL/Synapse Analytics with Microsoft Entra user name and password. For more information, see [Connect using ActiveDirectoryPassword authentication mode](#connect-using-activedirectorypassword-authentication-mode).
+    - Since driver version 6.0, `authentication=ActiveDirectoryPassword` can be used to connect to Azure SQL/Synapse Analytics with Microsoft Entra username and password. For more information, see [Connect using ActiveDirectoryPassword authentication mode](#connect-using-activedirectorypassword-authentication-mode).
 
   - **ActiveDirectoryInteractive**
     - Since driver version 9.2, `authentication=ActiveDirectoryInteractive` can be used to connect to an Azure SQL/Synapse Analytics via interactive authentication flow (multifactor authentication). For more information, see [Connect using ActiveDirectoryInteractive authentication mode](#connect-using-activedirectoryinteractive-authentication-mode).
@@ -99,7 +99,7 @@ In addition to the library dependency requirements listed in [Client setup requi
 
 The following example shows how to use `authentication=ActiveDirectoryManagedIdentity` mode. Run this example from inside an Azure Resource that is configured for Managed Identity.
 
-Replace the server/database name with your server/database name in the following lines to run the example:
+To run the example, replace the server/database name with your server/database name on the following lines:
 
 ```java
 ds.setServerName("msentra-managed-demo.database.windows.net"); // replace 'msentra-managed-demo' with your server name
@@ -238,7 +238,7 @@ There are two ways to use `ActiveDirectoryIntegrated` authentication in the Micr
 - On Windows, `mssql-jdbc_auth-<version>-<arch>.dll` from the [downloaded package](download-microsoft-jdbc-driver-for-sql-server.md) can be copied to a location in the system path.
 - If you can't use the DLL, starting with version 6.4, you can configure a Kerberos ticket. This method is supported across platforms (Windows, Linux, and macOS). For more information, see [Set Kerberos ticket on Windows, Linux And macOS](#set-kerberos-ticket-on-windows-linux-and-macos).
 
-Ensure you have required dependent libraries from the [Client setup requirements](#client-setup-requirements).
+Ensure you have the required dependent libraries from the [Client setup requirements](#client-setup-requirements).
 
 The following example shows how to use `authentication=ActiveDirectoryIntegrated` mode. This example runs on a domain-joined machine that is federated with Microsoft Entra ID. A database user that represents your Windows user must exist in the database and must have the CONNECT permission.
 
@@ -360,7 +360,7 @@ The following example shows how to use `authentication=ActiveDirectoryPassword` 
 
 To build and run the example:
 
-1. Ensure you have required dependent libraries from the [Client setup requirements](#client-setup-requirements).
+1. Ensure you have the required dependent libraries from the [Client setup requirements](#client-setup-requirements).
 1. Locate the following lines of code and replace the server/database name with your server/database name.
 
     ```java
@@ -371,7 +371,7 @@ To build and run the example:
 1. Locate the following lines of code. Replace user name with the name of the Microsoft Entra user that you want to connect as.
 
     ```java
-    ds.setUser("bob@example.com"); // replace with your user name
+    ds.setUser("bob@example.com"); // replace with your username
     ds.setPassword("password");     // replace with your password
     ```
 
@@ -391,7 +391,7 @@ public class MSEntraUserPassword {
         SQLServerDataSource ds = new SQLServerDataSource();
         ds.setServerName("msentra-managed-demo.database.windows.net"); // Replace with your server name
         ds.setDatabaseName("demo"); // Replace with your database
-        ds.setUser("bob@example.com"); // Replace with your user name
+        ds.setUser("bob@example.com"); // Replace with your username
         ds.setPassword("password"); // Replace with your password
         ds.setAuthentication("ActiveDirectoryPassword");
 
@@ -419,7 +419,7 @@ The following example shows how to use `authentication=ActiveDirectoryInteractiv
 
 To build and run the example:
 
-1. Ensure you have required dependent libraries from the [Client setup requirements](#client-setup-requirements).
+1. Ensure you have the required dependent libraries from the [Client setup requirements](#client-setup-requirements).
 1. Locate the following lines of code and replace the server/database name with your server/database name.
 
     ```java
@@ -427,10 +427,10 @@ To build and run the example:
     ds.setDatabaseName("demo"); // replace with your database name
     ```
 
-1. Locate the following lines of code. Replace user name with the name of the Microsoft Entra user that you want to connect as.
+1. Locate the following lines of code. Replace username with the name of the Microsoft Entra user that you want to connect as.
 
     ```java
-    ds.setUser("bob@example.com"); // replace with your user name
+    ds.setUser("bob@example.com"); // replace with your username
     ```
 
 The example to use `ActiveDirectoryInteractive` authentication mode:
@@ -464,7 +464,7 @@ public class MSEntraInteractive {
 }
 ```
 
-When you run the program, a browser is displayed to authenticate the user. Exactly what you see depends on how your Microsoft Entra ID has been configured. It might or might not include multifactor authentication prompts for username, password, PIN, or second device authentication via a phone. If multiple interactive authentication requests are done in the same program, later requests might not even prompt you if the authentication library can reuse a previously cached authentication token.
+When you run the program, a browser is displayed to authenticate the user. Exactly what you see depends on how you configure your Microsoft Entra ID. It might or might not include multifactor authentication prompts for username, password, PIN, or second device authentication via a phone. If multiple interactive authentication requests are done in the same program, later requests might not even prompt you if the authentication library can reuse a previously cached authentication token.
 
 For information about how to configure Microsoft Entra ID to require multifactor authentication, see [Getting started with Microsoft Entra multifactor authentication in the cloud](/azure/active-directory/authentication/howto-mfa-getstarted).
 
@@ -488,7 +488,7 @@ The following example shows how to use `authentication=ActiveDirectoryServicePri
 
 To build and run the example:
 
-1. Ensure you have required dependent libraries from the [Client setup requirements](#client-setup-requirements).
+1. Ensure you have the required dependent libraries from the [Client setup requirements](#client-setup-requirements).
 
 1. Locate the following lines of code and replace the server/database name with your server/database name.
 
@@ -550,7 +550,7 @@ The following example shows how to use `authentication=ActiveDirectoryServicePri
 
 To build and run the example:
 
-1. Ensure you have required dependent libraries from the [Client setup requirements](#client-setup-requirements).
+1. Ensure you have the required dependent libraries from the [Client setup requirements](#client-setup-requirements).
 
 1. Locate the following lines of code and replace the server/database name with your server/database name.
 
@@ -567,9 +567,9 @@ To build and run the example:
     String clientCertificate = "..."; // Replace with the location for your Microsoft Entra service principal certificate.
     ```
 
-1. If the above certificate needs a password, set the principal Secret using `setPassword` in version 10.2 and up or `setAADSecurePrincipalSecret` in version 9.4 and below.
+1. If the previously mentioned certificate needs a password, set the principal Secret using `setPassword` in version 10.2 and up or `setAADSecurePrincipalSecret` in version 9.4 and below.
 
-1. If the above certificate has an associated private key, set the private key using `setClientKey`. If this key requires a password, set the password for the private key using `setClientKeyPassword`.
+1. If the certificate has an associated private key, set the private key using `setClientKey`. If this key requires a password, set the password for the private key using `setClientKeyPassword`.
 
 The example to use `ActiveDirectoryServicePrincipalCertificate` authentication mode:
 
@@ -628,14 +628,14 @@ To build and run the example:
     3. Select **App registrations**.
     4. Select **New registration**.
     5. Enter `mytokentest` as a friendly name for the application.
-    6. Leave the default selection for supported account types which can use the application.
+    6. Leave the default selection for supported account types, which can use the application.
     7. Select **Register** at the bottom.
-    6. Don't need SIGN-ON URL, provide anything: `https://mytokentest`.
+    6. Don't need SIGN-ON URL. Provide anything: `https://mytokentest`.
     7. Select `Create` at the bottom.
-    8. Upon selecting **Register** the app is immediately created and you are taken to its resource page.
+    8. Upon selecting **Register**, the app is immediately created, and you're taken to its resource page.
     9. In the **Essentials** box, find the **Application (client) ID** and copy it. You need this value later to configure your application.
-    10. Select **Certificates & secrets** from the navigation pane. On the **Client secrets (0)** tab, select **New client secret**. Enter a description for the secret and select an expiration (the default is fine). Select **Add** at the bottom. **Important** before leaving this page, copy the generated **Value** for your client secret- this cannot be viewed after leaving the page. This value is the client secret.
-    11. Return to the [App registrations](https://ms.portal.azure.com/#view/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/~/RegisteredApps) pane for Microsoft Entra ID and find the **Endpoints** tab. Copy the URL under `OAuth 2.0 token endpoint`, this is your STS URL.
+    10. Select **Certificates & secrets** from the navigation pane. On the **Client secrets (0)** tab, select **New client secret**. Enter a description for the secret and select an expiration (the default is fine). Select **Add** at the bottom. **Important** before leaving this page, copy the generated **Value** for your client secret. This value can't be viewed after leaving the page. This value is the client secret.
+    11. Return to the [App registrations](https://ms.portal.azure.com/#view/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/~/RegisteredApps) pane for Microsoft Entra ID and find the **Endpoints** tab. Copy the URL under `OAuth 2.0 token endpoint`. This URL is your STS URL.
 
     ![Azure Portal App Registration End Point - STS URL](media/jdbc_aad_token.png)
 

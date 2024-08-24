@@ -322,7 +322,7 @@ In case if private key file is password protected then password keyword is requi
 
 ### HostnameInCertificate
 
-Specifies the hostname to be expected in the server's certificate when [encryption](../../database-engine/configure-windows/configure-sql-server-encryption.md) is negotiated, if it's different from the default value derived from Addr/Address/Server.
+Specifies the hostname to be expected in the server's certificate when [encryption](../../database-engine/configure-windows/configure-sql-server-encryption.md) is negotiated, if it's different from the default value derived from Addr/Address/Server. The HostnameInCertificate option is ignored when using the ServerCertificate option.
 
 ### IpAddressPreference
 
@@ -330,7 +330,7 @@ Available starting with version 18.1, this option allows the user to specify the
 
 ### ServerCertificate
 
-Available starting with version 18.1, this option can be used with the strict encryption mode. The **ServerCertificate** keyword is used to specify the path to a certificate file to match against the SQL Server TLS/SSL certificate. The accepted certificate formats are PEM, DER, and CER. If specified, the SQL Server certificate is checked by seeing if the **ServerCertificate** provided is an exact match.
+Available starting with version 18.1, this option can be used with the strict encryption mode. The **ServerCertificate** keyword is used to specify the path to a certificate file to match against the SQL Server TLS/SSL certificate. The match is done instead of standard certificate validation (expiry, host name, trust chain, etc.) The accepted certificate formats are PEM, DER, and CER. If specified, the SQL Server certificate is checked by seeing if the **ServerCertificate** provided is an exact match.
 
 ### SQL_COPT_SS_ACCESS_TOKEN
 

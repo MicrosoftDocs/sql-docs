@@ -31,25 +31,40 @@ Before you can Arc-enable an instance of [!INCLUDE [ssnoversion-md](../../includ
 
   For instructions, see [Register resource providers](#register-resource-providers).
 
-### Permissions
+### Installation account permissions
 
-- The user account or service principal requires read permission on the subscription.
-> [!NOTE]
-> Before enabling SQL Servers with Arc, the installation script checks that the region where the Arc-enabled SQL Server is being created is supported. It also verifies that the required resource provider, `Microsoft.AzureArcData`, is registered in the subscription. These check requires the user account or service principal used for Azure authentication to have read permission on the subscription.
+The user or service principal requires:
 
-- User or service principal must have permissions in the Azure resource group to complete the task. Specifically:
+- Read permission on the subscription
+- Local administrator permission on the operating system to install and configure the agent
+  - For Linux, use the root account
+  - For Windows, use an account that is a member of the Local Administrators group
 
-  - [`Azure Connected Machine Onboarding`](/azure/role-based-access-control/built-in-roles#azure-connected-machine-onboarding) role
-  - `Microsoft.AzureArcData/register/action`
-  - `Microsoft.HybridCompute/machines/extensions/read`
-  - `Microsoft.HybridCompute/machines/extensions/write`
-  - `Microsoft.Resources/deployments/validate/action`
+Before enabling SQL Servers with Arc, the installation script checks:
+  
+- The region where the Arc-enabled SQL Server is supported
+- `Microsoft.AzureArcData` resource provider is registered
+  
+These checks require read permission on the subscription for the user.
 
-Users can be assigned to built-in roles that have these permissions, for example [Contributor](/azure/role-based-access-control/built-in-roles#contributor) or [Owner](/azure/role-based-access-control/built-in-roles#owner). For more information, see [Assign Azure roles using the Azure portal](/azure/role-based-access-control/role-assignments-portal).
+The user or service principal requires the following permissions in the Azure resource group to complete the task. Specifically:
 
-- Have local administrator permission on the operating system to install and configure the agent.
-  - For Linux, use the root account.
-  - For Windows, use an account that is a member of the Local Administrators group.
+- [`Azure Connected Machine Onboarding`](/azure/role-based-access-control/built-in-roles#azure-connected-machine-onboarding) role
+- `Microsoft.AzureArcData/register/action`
+- `Microsoft.HybridCompute/machines/extensions/read`
+- `Microsoft.HybridCompute/machines/extensions/write`
+- `Microsoft.Resources/deployments/validate/action`
+
+Users can be assigned to built-in roles that have these permissions, for example:
+
+- [Contributor](/azure/role-based-access-control/built-in-roles#contributor)
+- [Owner](/azure/role-based-access-control/built-in-roles#owner)
+
+For more information, see [Assign Azure roles using the Azure portal](/azure/role-based-access-control/role-assignments-portal).
+
+### Service account permissions
+
+The SQL Server service account must be a member of the sysadmin fixed server role on each SQL Server instance.
 
 ### Set proxy exclusions
 

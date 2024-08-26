@@ -4,7 +4,7 @@ description: How to connect using the ODBC driver. Find keywords for connection 
 author: David-Engel
 ms.author: davidengel
 ms.reviewer: v-chojas
-ms.date: 07/31/2023
+ms.date: 08/23/2024
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: conceptual
@@ -249,29 +249,29 @@ Specifies the use of a replication login on ODBC Driver version 17.8 and newer.
 
 | Keyword Value | Description |
 |-|-|
-|No|(Default) Replication login won't be used. |
-|Yes| Triggers with the `NOT FOR REPLICATION` option won't fire on the connection. |
+|No|(Default) Replication login isn't used. |
+|Yes| Triggers with the `NOT FOR REPLICATION` option don't fire on the connection. |
 
 ### RetryExec
 
 Configurable retry logic is available starting in version 18.1. It automatically re-executes specific ODBC function calls based on configurable conditions. This feature can be enabled through the connection string using the **RetryExec** keyword, along with a list of retry rules. Each retry rule has three colon separated components: an error match, retry policy, and a query match.
 
-The query match determines the retry rule to be used for a given execution, and is matched with the incoming command text (SQLExecDirect) or the prepared command text in the statement object (SQLExecute). If more than one rule matches, the first matching one in the list is used. This allows rules to be listed in order of increasing generality. If no rule matches, then no retry is applied.
+The query match determines the retry rule to be used for a given execution, and is matched with the incoming command text (SQLExecDirect) or the prepared command text in the statement object (SQLExecute). If more than one rule matches, the first matching one in the list is used. This behavior allows rules to be listed in order of increasing generality. If no rule matches, then no retry is applied.
 
-When the execution results in an error, and there is an applicable retry rule, its error match is used to determine if the execution should be retried.
+When the execution results in an error, and there's an applicable retry rule, its error match is used to determine if the execution should be retried.
 
-The value of the RetryExec keyword is a list of semicolon seperated retry rules.  
+The value of the RetryExec keyword is a list of semicolon separated retry rules.  
 `RetryExec={rule1;rule2}`
 
 A retry rule is as follows: `<errormatch>:<retrypolicy>:<querymatch>`
 
-**Error Match:** A comma seperated list of error codes. For example, specifying **1000,2000** would be the error codes you want to retry.
+**Error Match:** A comma separated list of error codes. For example, specifying **1000,2000** would be the error codes you want to retry.
 
-**Retry Policy:** Specifies the delay until the next retry. The first parameter would be the number of retries while the second would be the delay. For example **3,10+7** would be 3 tries starting at 10 and each following retry would increment by 7 seconds. Note that if +7 isn't specified, then each following retry is exponentially doubled.
+**Retry Policy:** Specifies the delay until the next retry. The first parameter would be the number of retries while the second would be the delay. For example, **3,10+7** would be 3 tries starting at 10 and each following retry would increment by 7 seconds. If +7 isn't specified, then each following retry is exponentially doubled.
 
 **Query Match:** Specifies the query you want to match with. If nothing is specified, then it applies to all queries. Specifying **SELECT** would mean for all queries that start with select.
 
-Combining all 3 above components together to use in a connection string would be:
+Combining all three above components together to use in a connection string would be:
 
 `RetryExec={1000,2000:3,10+7:SELECT}`
 
@@ -281,21 +281,21 @@ Which would mean: "For errors 1000 and 2000, on a query that starts with SELECT.
 
 `40501,40540:4,5`
 
-For errors 40501 and 40540, retry up to 4 times, with an initial delay of 5 seconds, and exponential doubling between each retry. This applies to all queries.
+For errors 40501 and 40540, retry up to four times, with an initial delay of 5 seconds, and exponential doubling between each retry. This rule applies to all queries.
 
 `49919:2,10+:CREATE`
 
-For error 49919 on a query that starts with CREATE, retry at most twice, initially after 10s, and then 20s.
+For error 49919 on a query that starts with CREATE, retry at most twice, initially after 10 seconds, and then 20 seconds.
 
 `49918,40501,10928:5,10+5:SELECT c1`
 
-For errors, 49918, 40501, and 10928 on queries starting with SELECT c1, retry up to 5 times, waiting 10 seconds on the first retry and increasing the wait by 5 seconds thereafter.
+For errors, 49918, 40501, and 10928 on queries starting with SELECT c1, retry up to five times, waiting 10 seconds on the first retry and increasing the wait by 5 seconds thereafter.
 
-The above 3 rules can be specified together in the connection string as follows: 
+The above three rules can be specified together in the connection string as follows: 
 
 `RetryExec={49918,40501,10928:5,10+5:SELECT c1;49919:2,10+:CREATE;40501,40540:4,5}`
 
-Note that the most general (match-all) rule has been placed at the end, to allow the two more specific rules before it to match their respective queries.
+The most general (match-all) rule is placed at the end, to allow the two more specific rules before it to match their respective queries.
 
 ## ClientCertificate
 
@@ -311,26 +311,26 @@ In case if certificate is in PFX format and private key inside the PFX certifica
 
 ## ClientKey
 
-Specifies a file location of the private key for `PEM` or `DER` certificates that are specified by the ClientCertificate attribute. Format:
+Specifies a file location of the private key for `PEM` or `DER` certificates specified by the ClientCertificate attribute. Format:
 
 | Option Value | Description |
 |-|-|
 | `file:<file_location>[,password:<password>`] | Specifies location of the private key file. |
 
-In case if private key file is password protected then password keyword is required. If the password contains any "`,`" characters, an extra "`,`" character is added immediately after each one. For example, if the password is "`a,b,c`", the escaped password present in the connection string is "`a,,b,,c`".
+In case if private key file is password protected then password keyword is required. If the password contains any `,` characters, an extra `,` character is added immediately after each one. For example, if the password is `a,b,c`, the escaped password present in the connection string is `a,,b,,c`.
 
 
 ### HostnameInCertificate
 
-Specifies the hostname to be expected in the server's certificate when [encryption](../../database-engine/configure-windows/configure-sql-server-encryption.md) is negotiated, if it's different from the default value derived from Addr/Address/Server.
+Specifies the hostname to be expected in the server's certificate when [encryption](../../database-engine/configure-windows/configure-sql-server-encryption.md) is negotiated, if it's different from the default value derived from Addr/Address/Server. The HostnameInCertificate option is ignored when using the ServerCertificate option.
 
 ### IpAddressPreference
 
-Available starting with version 18.1, this option allows the user to specify the type of IP Address they want to prioritize for connections. The possible options are "IpAddress= [ IPv4First | IPv6First | UsePlatformDefault]." UsePlatformDefault connects to addresses in the order they are provided by the system call to resolve the server name. The default value is IPv4First, which corresponds to the behavior in previous versions.
+Available starting with version 18.1, this option allows the user to specify the type of IP Address they want to prioritize for connections. The possible options are "IpAddress= [ IPv4First | IPv6First | UsePlatformDefault]." UsePlatformDefault connects to addresses in the order they're provided by the system call to resolve the server name. The default value is IPv4First, which corresponds to the behavior in previous versions.
 
 ### ServerCertificate
 
-Available starting with version 18.1, this option can be used with the strict encryption mode. The **ServerCertificate** keyword is used to specify the path to a certificate file to match against the SQL Server TLS/SSL certificate. The accepted certificate formats are PEM, DER, and CER. If specified, the SQL Server certificate is checked by seeing if the **ServerCertificate** provided is an exact match.
+Available starting with version 18.1, this option can be used with the strict encryption mode. The **ServerCertificate** keyword is used to specify the path to a certificate file to match against the SQL Server TLS/SSL certificate. The match is done instead of standard certificate validation (expiry, host name, trust chain, etc.) The accepted certificate formats are PEM, DER, and CER. If specified, the SQL Server certificate is checked by seeing if the **ServerCertificate** provided is an exact match.
 
 ### SQL_COPT_SS_ACCESS_TOKEN
 
@@ -359,7 +359,7 @@ Loads a keystore provider library for Always Encrypted, or retrieves the names o
 
 ### SQL_COPT_SS_ENLIST_IN_XA
 
-To enable XA transactions with an XA-compliant Transaction Processor (TP), the application needs to call **SQLSetConnectAttr** with SQL_COPT_SS_ENLIST_IN_XA and a pointer to an `XACALLPARAM` object. This option is supported on Windows (17.3 and above), Linux, and macOS.
+To enable XA transactions with an XA-compliant Transaction Processor (TP), the application needs to call **SQLSetConnectAttr** with SQL_COPT_SS_ENLIST_IN_XA and a pointer to an `XACALLPARAM` object. This option is supported on Windows (17.3+), Linux, and macOS.
 
 ```cpp
 SQLSetConnectAttr(hdbc, SQL_COPT_SS_ENLIST_IN_XA, param, SQL_IS_POINTER);  // XACALLPARAM *param
@@ -374,7 +374,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_ENLIST_IN_XA, (SQLPOINTER)TRUE, 0);
 |Value|Description|Platforms|
 |-----------|-----------------|-----------------|
 |XACALLPARAM object*|The pointer to `XACALLPARAM` object.|Windows, Linux, and macOS|
-|TRUE|Associates the XA transaction with the ODBC connection. All related database activities will be performed under the protection of the XA transaction.|Windows|
+|TRUE|Associates the XA transaction with the ODBC connection. All related database activities are performed under the protection of the XA transaction.|Windows|
 |FALSE|Disassociates the transaction with the ODBC connection.|Windows|
 
 For more information about XA transactions, see [Using XA Transactions](use-xa-with-dtc.md).

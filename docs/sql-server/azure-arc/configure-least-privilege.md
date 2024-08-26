@@ -46,6 +46,8 @@ The configuration with least privilege requires:
 
 The configuration with least privilege is not currently supported on Linux.
 
+Other requirements, as listed in [Prerequisites - SQL Server enabled by Azure Arc](prerequisites.md) still apply. Including the SQL Server service account must be a member of the sysadmin fixed server role on each SQL Server instance.
+
 ### Tools
 
 To complete the steps in this article, you need the following tools:

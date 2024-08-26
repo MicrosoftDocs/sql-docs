@@ -4,11 +4,12 @@ description: Create database syntax for SQL Server, Azure SQL Database, Azure Sy
 author: markingmyname
 ms.author: maghan
 ms.reviewer: wiassaf
-ms.date: 07/21/2023
+ms.date: 08/26/2024
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
-ms.custom: references_regions
+ms.custom:
+  - references_regions
 f1_keywords:
   - "DATABASE_TSQL"
   - "DATABASE"
@@ -220,9 +221,9 @@ Specifies the level of non-transactional FILESTREAM access to the database.
 
 |Value|Description|
 |-----------|-----------------|
-|OFF|Non-transactional access is disabled.|
-|READONLY|FILESTREAM data in this database can be read by non-transactional processes.|
-|FULL|Full non-transactional access to FILESTREAM FileTables is enabled.|
+| `OFF` |Non-transactional access is disabled.|
+| `READONLY` |FILESTREAM data in this database can be read by non-transactional processes.|
+| `FULL` |Full non-transactional access to FILESTREAM FileTables is enabled.|
 
 DIRECTORY_NAME = <directory_name>
 
@@ -916,7 +917,7 @@ TO FILEGROUP [FS];
 GO
 ```
 
-## Next steps
+## Related content
 
 - [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md)
 - [Database Detach and Attach](../../relational-databases/databases/database-detach-and-attach-sql-server.md)
@@ -975,7 +976,7 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
 
 <with_options> ::=
 {
-  CATALOG_COLLATION = { DATABASE_DEFAULT | SQL_Latin1_General_CP1_CI_AS }
+    CATALOG_COLLATION = { DATABASE_DEFAULT | SQL_Latin1_General_CP1_CI_AS }
   | BACKUP_STORAGE_REDUNDANCY = { 'LOCAL' | 'ZONE' | 'GEO' | 'GEOZONE' }
   | LEDGER = {ON | OFF }
 }
@@ -1021,7 +1022,7 @@ CREATE DATABASE database_name
       | 'HS_MOPRMS_n'
       | { ELASTIC_POOL(name = <elastic_pool_name>) } })
    ]
-   [ WITH BACKUP_STORAGE_REDUNDANCY = { 'LOCAL' | 'ZONE' | 'GEO' } ]
+   [ WITH ( BACKUP_STORAGE_REDUNDANCY = { 'LOCAL' | 'ZONE' | 'GEO' } ) ]
 [;]
 ```
 
@@ -1047,7 +1048,7 @@ By default, the metadata catalog for system object names is collated to *SQL_Lat
 
 *DATABASE_DEFAULT* specifies that the metadata catalog used for system views and system tables be collated to match the collation for the database. If you desire that object identifiers in system metadata follow the same collation as data, you should create the database `WITH CATALOG_COLLATION = DATABASE_DEFAULT`.
 
-- You may desire different collations for data and object identifiers. The following example creates the database with a case-sensitive collation for row data, but will use the default SQL_Latin1_General_CP1_CI_AS case-insensitive collation for object identifiers.
+- You might desire different collations for data and object identifiers. The following example creates the database with a case-sensitive collation for row data, but will use the default SQL_Latin1_General_CP1_CI_AS case-insensitive collation for object identifiers.
 
    ```sql
    CREATE DATABASE [different-collations] COLLATE SQL_Latin1_General_CP1_CS_AS
@@ -1060,11 +1061,13 @@ By default, the metadata catalog for system object names is collated to *SQL_Lat
    WITH CATALOG_COLLATION = DATABASE_DEFAULT
    ```
 
-#### BACKUP_STORAGE_REDUNDANCY = ['LOCAL' | 'ZONE' | 'GEO']
+#### BACKUP_STORAGE_REDUNDANCY = {'LOCAL' | 'ZONE' | 'GEO'}
 
 Specifies how the point-in-time restore and long-term retention backups for a database are replicated. Geo restore or ability to recover from regional outage is only available when database is created with `GEO` backup storage redundancy. Unless explicitly specified, databases created with T-SQL use geo-redundant backup storage.
 
 To enforce data residency when you're creating a database by using T-SQL, use `LOCAL` or `ZONE` as input to the BACKUP_STORAGE_REDUNDANCY parameter.
+
+When creating a database as a copy of another database with `AS COPY OF`, specifying options is supported and should be wrapped in parentheses. For example, `WITH (BACKUP_STORAGE_REDUNDANCY = 'LOCAL');`.
 
 #### LEDGER = {ON | OFF }
 
@@ -1144,7 +1147,10 @@ To create a new database in an elastic database pool, set the SERVICE_OBJECTIVE 
 #### AS COPY OF [source_server_name.]source_database_name
 
 **Applies to:** Single and pooled databases only.
+
 For copying a database to the same or a different [!INCLUDE[ssSDS](../../includes/sssds-md.md)] server.
+
+When creating a database as a copy of another database with `AS COPY OF`, specifying options is supported and should be wrapped in parentheses. For example, `WITH (BACKUP_STORAGE_REDUNDANCY = 'LOCAL');`.
 
 *source_server_name*
 The name of the [!INCLUDE[ssSDS](../../includes/sssds-md.md)] server where the source database is located. This parameter is optional when the source database and the destination database are to be located on the same [!INCLUDE[ssSDS](../../includes/sssds-md.md)] server.
@@ -1249,13 +1255,13 @@ CREATE DATABASE db1 ( SERVICE_OBJECTIVE = ELASTIC_POOL ( name = S3M100 ) ) ;
 
 ### Create a copy of a database on another logical server
 
-The following example creates a copy of the `db_original` database named `db_copy` in the P2 compute size (service objective) for a single database. This is true regardless of whether `db_original` is in an elastic pool or a compute size (service objective) for a single database.
+The following example creates a copy of the `db_original` database named `db_copy` in the General Purpose service objective for a single database. This is true regardless of whether `db_original` is in an elastic pool or a compute size (service objective) for a single database.
 
 **Applies to:** Single and pooled databases only.
 
 ```sql
 CREATE DATABASE db_copy
-  AS COPY OF ozabzw7545.db_original ( SERVICE_OBJECTIVE = 'P2' );
+  AS COPY OF ozabzw7545.db_original ( EDITION = 'GeneralPurpose', SERVICE_OBJECTIVE = 'GP_Gen5_8' );
 ```
 
 The following example creates a copy of the `db_original` database, named `db_copy` in an elastic pool named `ep1`. This is true regardless of whether `db_original` is in an elastic pool or a compute size (service objective) for a single database. If `db_original` is in an elastic pool with a different name, then `db_copy` is still created in `ep1`.
@@ -1274,7 +1280,7 @@ The following example sets the catalog collation to DATABASE_DEFAULT during data
 
 ```sql
 CREATE DATABASE TestDB3 COLLATE Japanese_XJIS_140 (MAXSIZE = 100 MB, EDITION = 'Basic')
-  WITH CATALOG_COLLATION = DATABASE_DEFAULT
+  WITH CATALOG_COLLATION = DATABASE_DEFAULT;
 ```
 
 ### Create database using zone-redundancy for backups
@@ -1292,7 +1298,18 @@ CREATE DATABASE test_zone_redundancy
 CREATE DATABASE MyLedgerDB ( EDITION = 'GeneralPurpose' ) WITH LEDGER = ON;
 ```
 
-## Next steps
+### Create as copy of a database while changing options
+
+The following example sets different options for the new copy of a database, including a different service tier and backup storage redundancy settings. By default, the database copy is created with the same settings as the source database.
+
+```sql
+CREATE DATABASE copy_testdb
+AS COPY OF [test_db]
+  (EDITION = 'GeneralPurpose', SERVICE_OBJECTIVE = 'GP_Gen5_8')
+  WITH (BACKUP_STORAGE_REDUNDANCY = 'LOCAL');
+```
+
+## Related content
 
 - [sys.dm_database_copies - Azure SQL Database](../../relational-databases/system-dynamic-management-views/sys-dm-database-copies-azure-sql-database.md)
 - [ALTER DATABASE (Azure SQL Database)](alter-database-transact-sql.md?view=azuresqldb-current&preserve-view=true)
@@ -1401,9 +1418,9 @@ CREATE DATABASE TestDB1;
 CREATE DATABASE MyLedgerDB WITH LEDGER = ON;
 ```
 
-## Next steps
+## Related content
 
-- See [ALTER DATABASE](alter-database-transact-sql.md?view=azuresqldb-mi-current&preserve-view=true)
+- [ALTER DATABASE](alter-database-transact-sql.md?view=azuresqldb-mi-current&preserve-view=true)
 
 ::: moniker-end
 ::: moniker range="=azure-sqldw-latest"
@@ -1500,7 +1517,7 @@ Specifies the service tier of the database. For [!INCLUDE[ssazuresynapse-md](../
 
 #### SERVICE_OBJECTIVE
 
-Specifies the compute size (service objective). The service levels for Gen2 are measured in compute data warehouse units (cDWU), for example `DW2000c`. Gen1 service levels are measured in DWUs, for example `DW2000`. For more information about service objectives for Azure Synapse, see [Data Warehouse Units (DWUs)](/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu#service-level-objective). Gen1 service objectives (no longer listed) are no longer supported, you may receive an error: `Azure SQL Data Warehouse Gen1 has been deprecated in this region. Please use SQL Analytics in Azure Synapse.`
+Specifies the compute size (service objective). The service levels for Gen2 are measured in compute data warehouse units (cDWU), for example `DW2000c`. Gen1 service levels are measured in DWUs, for example `DW2000`. For more information about service objectives for Azure Synapse, see [Data Warehouse Units (DWUs)](/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu#service-level-objective). Gen1 service objectives (no longer listed) are no longer supported, you can receive an error: `Azure SQL Data Warehouse Gen1 has been deprecated in this region. Please use SQL Analytics in Azure Synapse.`
 
 ## Remarks
 
@@ -1521,7 +1538,7 @@ Required permissions:
 
 If the size of the database reaches MAXSIZE you will receive error code 40544. When this occurs, you cannot insert and update data, or create new objects (such as tables, stored procedures, views, and functions). You can still read and delete data, truncate tables, drop tables and indexes, and rebuild indexes. You can then update MAXSIZE to a value larger than your current database size or delete some data to free storage space. There might be as much as a fifteen-minute delay before you can insert new data.
 
-## Limitations and restrictions
+## Limitations
 
 You must be connected to the `master` database to create a new database.
 
@@ -1557,7 +1574,7 @@ This creates the database in the serverless pool, specifying a collation (Latin1
 CREATE DATABASE TestDW COLLATE Latin1_General_100_CI_AS_KS_WS
 ```
 
-## Next steps
+## Related content
 
 - [ALTER DATABASE (Azure Synapse Analytics)](../../t-sql/statements/alter-database-transact-sql.md?view=aps-pdw-2016-au7&preserve-view=true)
 - [CREATE TABLE (Azure Synapse Analytics)](../../t-sql/statements/create-table-azure-sql-data-warehouse.md)
@@ -1722,7 +1739,7 @@ CREATE DATABASE mytest
     LOG_SIZE = 10 GB);
 ```
 
-## Next steps
+## Related content
 
 - [ALTER DATABASE (Analytics Platform System)](../../t-sql/statements/alter-database-transact-sql.md?view=aps-pdw-2016-au7&preserve-view=true)
 - [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md)

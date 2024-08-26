@@ -61,7 +61,7 @@ To delegate the task of assigning roles to other users, create role assignments 
 
 1. Select **Add group or user**.
 
-   :::image type="content" source="/media/grant-user-access-to-a-report-server/site-add-group-user.png" alt-text="Screenshot that shows the report server web portal Security page. Add group or user is highlighted.":::
+   :::image type="content" source="media/grant-user-access-to-a-report-server/site-add-group-user.png" alt-text="Screenshot that shows the report server web portal Security page. Add group or user is highlighted.":::
 
 1. For **Group or user**, enter a Windows domain user or group account in the following format: \<domain>\\<account\>.
 

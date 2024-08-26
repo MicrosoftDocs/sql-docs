@@ -61,7 +61,9 @@ When the application is connecting to Azure SQL data sources by using Microsoft 
 
 ```cs
 // Use your own server, database, user ID, and password.
-string ConnectionString = @"Server=demo.database.windows.net; Authentication=Active Directory Password; Encrypt=True; Database=testdb; User Id=user@domain.com; Password=***";
+string ConnectionString = @"Server=demo.database.windows.net;"
+   + "Authentication=Active Directory Password; Encrypt=True; Database=testdb;"
+   + "User Id=user@domain.com; Password=***";
 
 using (SqlConnection conn = new SqlConnection(ConnectionString)) {
     conn.Open();
@@ -78,14 +80,17 @@ The following code snippet is an example of when `Active Directory Integrated` a
 
 ```cs
 // Use your own server and database.
-string ConnectionString1 = @"Server=demo.database.windows.net; Authentication=Active Directory Integrated; Encrypt=True; Database=testdb";
+string ConnectionString1 = @"Server=demo.database.windows.net;"
+  + "Authentication=Active Directory Integrated; Encrypt=True; Database=testdb";
 
 using (SqlConnection conn = new SqlConnection(ConnectionString1)) {
     conn.Open();
 }
 
 // User ID is optional for .NET Core and .NET Standard.
-string ConnectionString2 = @"Server=demo.database.windows.net; Authentication=Active Directory Integrated; Encrypt=True; Database=testdb; User Id=user@domain.com";
+string ConnectionString2 = @"Server=demo.database.windows.net;"
+  + "Authentication=Active Directory Integrated; Encrypt=True; Database=testdb;"
+  + "User Id=user@domain.com";
 
 using (SqlConnection conn = new SqlConnection(ConnectionString2)) {
     conn.Open();
@@ -103,14 +108,18 @@ The following example shows how to use `Active Directory Interactive` authentica
 ```cs
 // Use your own server, database, and user ID.
 // User ID is optional.
-string ConnectionString1 = @"Server=demo.database.windows.net; Authentication=Active Directory Interactive; Encrypt=True; Database=testdb; User Id=user@domain.com";
+string ConnectionString1 = @"Server=demo.database.windows.net;"
+   + "Authentication=Active Directory Interactive; Encrypt=True;" 
+   + "Database=testdb; User Id=user@domain.com";
 
 using (SqlConnection conn = new SqlConnection(ConnectionString1)) {
     conn.Open();
 }
 
 // User ID is not provided.
-string ConnectionString2 = @"Server=demo.database.windows.net; Authentication=Active Directory Interactive; Encrypt=True; Database=testdb";
+string ConnectionString2 = @"Server=demo.database.windows.net;"
+   + "Authentication=Active Directory Interactive; Encrypt=True;"
+   + "Database=testdb";
 
 using (SqlConnection conn = new SqlConnection(ConnectionString2)) {
     conn.Open();
@@ -129,7 +138,9 @@ The following example shows how to use `Active Directory Service Principal` auth
 
 ```cs
 // Use your own server, database, app ID, and secret.
-string ConnectionString = @"Server=demo.database.windows.net; Authentication=Active Directory Service Principal; Encrypt=True; Database=testdb; User Id=AppId; Password=secret";
+string ConnectionString = @"Server=demo.database.windows.net;"
+  + "Authentication=Active Directory Service Principal; Encrypt=True;"
+  + "Database=testdb; User Id=AppId; Password=secret";
 
 using (SqlConnection conn = new SqlConnection(ConnectionString)) {
     conn.Open();
@@ -148,8 +159,11 @@ The following code snippet is an example of using `Active Directory Device Code 
 > The timeout for `Active Directory Device Code Flow` defaults to the connection's `Connect Timeout` setting. Make sure to specify a `Connect Timeout` that provides enough time to go through the device code flow authentication process.
 
 ```cs
-// Use your own server and database and increase Connect Timeout as needed for device code flow.
-string ConnectionString = @"Server=demo.database.windows.net; Authentication=Active Directory Device Code Flow; Encrypt=True; Database=testdb; Connect Timeout=180;";
+// Use your own server and database and increase Connect Timeout as needed for
+// device code flow.
+string ConnectionString = @"Server=demo.database.windows.net;"
+  + "Authentication=Active Directory Device Code Flow; Encrypt=True;"
+  + "Database=testdb; Connect Timeout=180;";
 
 using (SqlConnection conn = new SqlConnection(ConnectionString)) {
     conn.Open();
@@ -176,13 +190,16 @@ The following example shows how to use `Active Directory Managed Identity` authe
 ```cs
 // For system-assigned managed identity
 // Use your own values for Server and Database.
-string ConnectionString1 = @"Server=demo.database.windows.net; Authentication=Active Directory Managed Identity; Encrypt=True; Database=testdb";
+string ConnectionString1 = @"Server=demo.database.windows.net;"
+  + "Authentication=Active Directory Managed Identity; Encrypt=True;"
+  + "Database=testdb";
 
 using (SqlConnection conn = new SqlConnection(ConnectionString1)) {
     conn.Open();
 }
 
-string ConnectionString2 = @"Server=demo.database.windows.net; Authentication=Active Directory MSI; Encrypt=True; Database=testdb";
+string ConnectionString2 = @"Server=demo.database.windows.net;"
+  + "Authentication=Active Directory MSI; Encrypt=True; Database=testdb";
 
 using (SqlConnection conn = new SqlConnection(ConnectionString2)) {
     conn.Open();
@@ -196,14 +213,18 @@ The following example demonstrates `Active Directory Managed Identity` authentic
 // Use your own values for Server, Database, and User Id.
 
 // With Microsoft.Data.SqlClient v3.0+
-string ConnectionString1 = @"Server=demo.database.windows.net; Authentication=Active Directory Managed Identity; Encrypt=True; User Id=ClientIdOfManagedIdentity; Database=testdb";
+string ConnectionString1 = @"Server=demo.database.windows.net;"
+  + "Authentication=Active Directory Managed Identity; Encrypt=True;"
+  + "User Id=ClientIdOfManagedIdentity; Database=testdb";
 
 using (SqlConnection conn = new SqlConnection(ConnectionString1)) {
     conn.Open();
 }
 
 // With Microsoft.Data.SqlClient v3.0+
-string ConnectionString2 = @"Server=demo.database.windows.net; Authentication=Active Directory MSI; Encrypt=True; User Id=ClientIdOfManagedIdentity; Database=testdb";
+string ConnectionString2 = @"Server=demo.database.windows.net;"
+  + "Authentication=Active Directory MSI; Encrypt=True;"
+  + "User Id=ClientIdOfManagedIdentity; Database=testdb";
 
 using (SqlConnection conn = new SqlConnection(ConnectionString2)) {
     conn.Open();
@@ -217,14 +238,18 @@ The following example demonstrates `Active Directory Managed Identity` authentic
 // Use your own values for Server, Database, and User Id.
 
 // With Microsoft.Data.SqlClient v2.1
-string ConnectionString1 = @"Server=demo.database.windows.net; Authentication=Active Directory Managed Identity; Encrypt=True; User Id=ObjectIdOfManagedIdentity; Database=testdb";
+string ConnectionString1 = @"Server=demo.database.windows.net;"
+  + "Authentication=Active Directory Managed Identity; Encrypt=True;"
+  + "User Id=ObjectIdOfManagedIdentity; Database=testdb";
 
 using (SqlConnection conn = new SqlConnection(ConnectionString1)) {
     conn.Open();
 }
 
 // With Microsoft.Data.SqlClient v2.1
-string ConnectionString2 = @"Server=demo.database.windows.net; Authentication=Active Directory MSI; Encrypt=True; User Id=ObjectIdOfManagedIdentity; Database=testdb";
+string ConnectionString2 = @"Server=demo.database.windows.net;"
+  + "Authentication=Active Directory MSI; Encrypt=True;"
+  + "User Id=ObjectIdOfManagedIdentity; Database=testdb";
 
 using (SqlConnection conn = new SqlConnection(ConnectionString2)) {
     conn.Open();
@@ -265,7 +290,8 @@ The following example shows how to use **Active Directory Default** authenticati
 
 ```cs
 // Use your own server, database
-string ConnectionString = @"Server=demo.database.windows.net; Authentication=Active Directory Default; Encrypt=True; Database=testdb;";
+string ConnectionString = @"Server=demo.database.windows.net;"
+  + "Authentication=Active Directory Default; Encrypt=True; Database=testdb;";
 
 using (SqlConnection conn = new SqlConnection(ConnectionString)) {
     conn.Open();
@@ -281,7 +307,9 @@ The following example demonstrates `Active Directory Workload Identity` authenti
 ```cs
 // Use your own values for Server, Database, and User Id.
 // With Microsoft.Data.SqlClient v5.2+
-string ConnectionString = @"Server=demo.database.windows.net; Authentication=Active Directory Workload Identity; Encrypt=True; User Id=ClientIdOfManagedIdentity; Database=testdb";
+string ConnectionString = @"Server=demo.database.windows.net;"
+  + "Authentication=Active Directory Workload Identity; Encrypt=True;"
+  + "User Id=ClientIdOfManagedIdentity; Database=testdb";
 
 using (SqlConnection conn = new SqlConnection(ConnectionString)) {
     conn.Open();
@@ -345,19 +373,24 @@ In addition to improving the `Active Directory Interactive` authentication exper
 public class ActiveDirectoryAuthenticationProvider
 {
     // For .NET Framework targeted applications only
-    // Sets a reference to the current System.Windows.Forms.IWin32Window that triggers the browser to be shown. 
+    // Sets a reference to the current System.Windows.Forms.IWin32Window that triggers
+    // the browser to be shown. 
     // Used to center the browser pop-up onto this window.
     public void SetIWin32WindowFunc(Func<IWin32Window> iWin32WindowFunc);
 
     // For .NET Standard targeted applications only
-    // Sets a reference to the ViewController (if using Xamarin.iOS), Activity (if using Xamarin.Android) IWin32Window, or IntPtr (if using .NET Framework). 
+    // Sets a reference to the ViewController (if using Xamarin.iOS), Activity
+    // (if using Xamarin.Android) IWin32Window, or IntPtr (if using .NET Framework). 
     // Used for invoking the browser for Active Directory Interactive authentication.
     public void SetParentActivityOrWindowFunc(Func<object> parentActivityOrWindowFunc);
 
     // For .NET Framework, .NET Core, and .NET Standard targeted applications
-    // Sets a callback method that's invoked with a custom web UI instance that will let the user sign in with Azure AD, present consent if needed, and get back the authorization code. 
+    // Sets a callback method that's invoked with a custom web UI instance that lets
+    // the user sign in with Azure AD, present consent if needed, and get back the
+    // authorization code. 
     // Applicable when working with Active Directory Interactive authentication.
-    public void SetAcquireAuthorizationCodeAsyncCallback(Func<Uri, Uri, CancellationToken, Task<Uri>> acquireAuthorizationCodeAsyncCallback);
+    public void SetAcquireAuthorizationCodeAsyncCallback(Func<Uri, Uri, CancellationToken,
+                                       Task<Uri>> acquireAuthorizationCodeAsyncCallback);
 
     // For .NET Framework, .NET Core, and .NET Standard targeted applications
     // Clears cached user tokens from the token provider.

@@ -69,6 +69,7 @@ The following table lists features of Azure SQL Database that have been made gen
 
 | Feature | GA Month | Details |
 | --- | --- | --- |
+| [CURRENT_DATE Transact-SQL](/sql/t-sql/functions/current-date-transact-sql) | August 2024 |  A Transact-SQL (T-SQL) function that returns the current database system date as a date value, without the database time and time zone offset. |
 | [Maintenance window support for named replicas](https://aka.ms/MWsupportforNR)|August 2024|[Maintenance window](maintenance-window.md) support for named replicas is now generally available.|
 | [Maintenance window](maintenance-window.md) support for Hyperscale | August 2024| [Maintenance window](maintenance-window.md) support for Hyperscale databases is now generally available. |
 | [Database compatibility level 160 is now default](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level?view=azuresqldb-current&preserve-view=true) | June 2024 | Database compatibility level 160 is now the default for new databases created in Azure SQL Database. For more information on this announcement, see [General availability: Database compatibility level 160 in Azure SQL Database](https://techcommunity.microsoft.com/t5/azure-sql-blog/general-availability-database-compatibility-level-160-in-azure/ba-p/4172039). |
@@ -90,6 +91,7 @@ Learn about significant changes to the Azure SQL Database documentation. For pre
 
 | Changes | Details |
 | --- | --- |
+| **CURRENT_DATE Transact-SQL GA** | The `CURRENT_DATE` Transact-SQL (T-SQL) function returns the current database system date as a date value, without the database time and time zone offset. This function is now generally available. For more information, see [CURRENT_DATE (Transact-SQL)](/sql/t-sql/functions/current-date-transact-sql). |
 | **Maintenance window support for named replicas GA**|[Maintenance window](maintenance-window.md) support for named replicas is now generally available. For more information, read [Maintenance window support for named replicas](https://aka.ms/MWsupportforNR).|
 | **Maintenance window support for Hyperscale GA** | [Maintenance window](maintenance-window.md) support for Hyperscale databases is now generally available. |
 | **Local development experience for Azure SQL Database using Dev Container Templates** | We've provided details and quickstarts to get started with the new [local dev experience for Azure SQL Database](local-dev-experience-dev-containers.md). Dev Container Templates replace the previous local emulator experience. To get started, see [Quickstart: Set up a development environment with Dev Container Templates for Azure SQL Database](local-dev-experience-dev-containers-quickstart.md). |

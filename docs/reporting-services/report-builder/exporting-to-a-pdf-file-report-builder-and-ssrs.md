@@ -3,7 +3,7 @@ title: "Export a paginated report to a PDF file (Report Builder)"
 description: In Report Builder, the PDF rendering extension renders paginated reports to files that can be opened in Adobe Acrobat and other PDF viewers.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 06/07/2023
+ms.date: 08/26/2024
 ms.service: reporting-services
 ms.subservice: report-builder
 ms.topic: conceptual
@@ -104,7 +104,8 @@ Image compression is based on the original file type of the image. The PDF rende
 To preserve any compression for images included in the PDF file when possible, JPEG images are stored as JPEG and all other image types are stored as BMP.
 
 > [!NOTE]  
-> PDF files don't support embedding PNG images.
+> - PDF files don't support embedding PNG images.
+> - Reporting Services PDF exports don't support CMYK color format images.
 
 ## <a id="DeviceInfo"></a> Device information settings
 

@@ -70,7 +70,7 @@
 - name: Integrating with Microsoft Fabric
   items:
   - name: Tutorial - Integrating SSIS with Fabric Data Warehouse
-    href: ../integration-services/fabric-integration/integrating-fabric-data-warehouse.md
+    href: ../integration-services/fabric-integration/integrate-fabric-data-warehouse.md
 - name: Install Integration Services
   href: ../integration-services/install-windows/install-integration-services.md
 - name: Installing Integration Services Versions Side by Side

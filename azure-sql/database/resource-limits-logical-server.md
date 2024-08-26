@@ -19,15 +19,39 @@ ms.topic: reference
 > * [Azure SQL Database single database](resource-limits-vcore-single-databases.md?view=azuresql-db&preserve-view=true)
 > * [Azure SQL Managed Instance](../managed-instance/resource-limits.md?view=azuresql-mi&preserve-view=true)
 
-This article provides an overview of resource management in Azure SQL Database. It provides information on what happens when resource limits are reached, and describes  resource governance mechanisms that are used to enforce these limits.
+This article provides an overview of resource management in Azure SQL Database. It provides information on what happens when resource limits are reached, and describes resource governance mechanisms that are used to enforce these limits.
 
-For specific resource limits per pricing tier (also known as service objective) for single databases, refer to either [DTU-based single database resource limits](resource-limits-dtu-single-databases.md) or [vCore-based single database resource limits](resource-limits-vcore-single-databases.md). For elastic pool resource limits, refer to either [DTU-based elastic pool resource limits](resource-limits-dtu-elastic-pools.md) or [vCore-based elastic pool resource limits](resource-limits-vcore-elastic-pools.md). For Azure Synapse Analytics dedicated SQL pool limits, see [capacity limits](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-service-capacity-limits) and [memory and concurrency limits](/azure/synapse-analytics/sql-data-warehouse/memory-concurrency-limits).
+For specific resource limits per pricing tier for single databases, refer to either
+- [DTU-based single database resource limits](resource-limits-dtu-single-databases.md)
+- [vCore-based single database resource limits](resource-limits-vcore-single-databases.md) 
 
-> [!NOTE]
-> The Gen5 hardware in the vCore purchasing model has been renamed to **standard-series (Gen5)**.
+For elastic pool resource limits, refer to either: 
+- [DTU-based elastic pool resource limits](resource-limits-dtu-elastic-pools.md)
+- [vCore-based elastic pool resource limits](resource-limits-vcore-elastic-pools.md)
 
-> [!TIP]  
-> For Azure Synapse Analytics dedicated SQL pool limits, see [capacity limits](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-service-capacity-limits) and [memory and concurrency limits](/azure/synapse-analytics/sql-data-warehouse/memory-concurrency-limits).
+For Azure Synapse Analytics dedicated SQL pool limits, refer to: 
+- [Capacity limits](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-service-capacity-limits)
+- [Memory and concurrency limits](/azure/synapse-analytics/sql-data-warehouse/memory-concurrency-limits).
+
+## Subscription vCore limits per region 
+
+Starting March 2024, subscriptions have the following vCore limits per region per subscription: 
+
+| Subscription type                                     | Default vCore limits |
+|-------------------------------------------------------|----------------------|
+| Enterprise Agreement (EA)                             | 2000                 |
+| Free trials                                           | 10                   |
+| Microsoft for startups                                | 100                  |
+| MSDN / MPN / Imagine / AzurePass / Azure for Students | 40                   |
+| Pay-as-you-go (PAYG)                                  | 150                  |
+
+Consider the following: 
+
+- These limits are applicable to new and existing subscriptions. 
+- Databases and elastic pools provisioned with the [DTU purchasing model](service-tiers-dtu.md) are counted against the vCore quota, and vice-versa. Each vCore consumed is considered equivalent to 100 DTUs consumed for the server-level quota.
+- Default limits includes both the vCores configured for provisioned compute databases / elastic pools, and the **max vCores** configured for [serverless](serverless-tier-overview.md#create-serverless-db) databases. 
+- You can use the [Subscription Usages - Get](/rest/api/sql/subscription-usages/get) REST API call to determine your current vCore usage for your subscription. 
+- To request a higher vCore quota than the default, submit a new support request in the Azure portal. For more information, see [Request quota increases for Azure SQL Database](quota-increase-request.md).
 
 ## Logical server limits
 
@@ -36,8 +60,6 @@ vCore resource limits are listed in the following articles, please be sure to up
 /database/resource-limits-vcore-single-databases.md
 /database/resource-limits-vcore-elastic-pools.md
 /database/resource-limits-logical-server.md
-/database/service-tier-general-purpose.md
-/database/service-tier-business-critical.md
 /database/service-tier-hyperscale.md
 /managed-instance/resource-limits.md
 --->
@@ -45,15 +67,10 @@ vCore resource limits are listed in the following articles, please be sure to up
 | Resource | Limit |
 | :--- | :--- |
 | Databases per [logical server](logical-servers.md) | 5000 |
-| Default number of logical servers per subscription in a region | 20 |
+| Default number of logical servers per subscription in a region | 250 |
 | Max number of logical servers per subscription in a region | 250 |
-| DTU / eDTU quota <sup>1</sup> per logical server | 54,000 |
-| vCore quota <sup>1</sup> per logical server <sup>2</sup> | 540 |
 | Max elastic pools per logical server | Limited by number of DTUs or vCores. For example, if each pool is 1000 DTUs, then a server can support 54 pools.|
 
-<sup>1</sup> Databases and elastic pools provisioned with the [DTU purchase model](service-tiers-dtu.md) are also counted against the vCore quota, and vice-versa. Each vCore consumed is considered equivalent to 100 DTUs consumed for the server-level quota.
-
-<sup>2</sup> This includes both the vCores configured for provisioned compute databases / elastic pools, and the "max vCores" configured for [serverless](serverless-tier-overview.md#create-serverless-db) databases.
 
 > [!IMPORTANT]  
 > As the number of databases approaches the limit per logical server, the following can occur:
@@ -61,8 +78,7 @@ vCore resource limits are listed in the following articles, please be sure to up
 > - Increasing latency in running queries against the `master` database. This includes views of resource utilization statistics such as `sys.resource_stats`.
 > - Increasing latency in management operations and rendering portal viewpoints that involve enumerating databases in the server.
 
-> [!NOTE]  
-> To obtain more DTU/eDTU quota, vCore quota, or more logical servers than the default number, submit a new support request in the Azure portal. For more information, see [Request quota increases for Azure SQL Database](quota-increase-request.md).
+
 
 ## What happens when resource limits are reached
 
@@ -195,7 +211,7 @@ Azure SQL Database resource governance is hierarchical in nature. From top to bo
 
 ### Data I/O governance
 
-Data I/O governance is a process in Azure SQL Database used to limit both read and write physical I/O against data files of a database. IOPS limits are set for each service level to minimize the "noisy neighbor" effect, to provide resource allocation fairness in a multi-tenant service, and to stay within the capabilities of the underlying hardware and storage.
+Data I/O governance is a process in Azure SQL Database used to limit both read and write physical I/O against data files of a database. IOPS limits are set for each service level to minimize the "noisy neighbor" effect, to provide resource allocation fairness in a multitenant service, and to stay within the capabilities of the underlying hardware and storage.
 
 For single databases, workload group limits are applied to all storage I/O against the database. For elastic pools, workload group limits apply to each database in the pool. Additionally, the resource pool limit additionally applies to the cumulative I/O of the elastic pool. In `tempdb`, I/O is subject to workload group limits, except for Basic, Standard, and General Purpose service tier, where higher `tempdb` I/O limits apply. In general, resource pool limits might not be achievable by the workload against a database (either single or pooled), because workload group limits are lower than resource pool limits and limit IOPS/throughput sooner. However, pool limits can be reached by the combined workload against multiple databases in the same pool.
 

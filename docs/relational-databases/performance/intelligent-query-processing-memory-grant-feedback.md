@@ -1,8 +1,8 @@
 ---
 title: Memory grant feedback
 description: Learn about Memory grant feedback, part of the Intelligent Query Processing (IQP) feature set.
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: MikeRayMSFT
+ms.author: mikeray
 ms.reviewer: derekw
 ms.date: 06/11/2024
 ms.service: sql

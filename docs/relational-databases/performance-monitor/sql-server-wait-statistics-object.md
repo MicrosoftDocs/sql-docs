@@ -1,8 +1,8 @@
 ---
 title: "SQL Server, Wait Statistics object"
 description: "Learn about the SQLServer:Wait Statistics performance object, which contains performance counters that report information about wait status."
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: 12/04/2023
 ms.service: sql
 ms.subservice: performance

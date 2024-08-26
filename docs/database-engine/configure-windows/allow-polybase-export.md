@@ -1,9 +1,9 @@
 ---
 title: "Server configuration: allow polybase export"
 description: Set the configuration option to allow PolyBase export in SQL Server settings.
-author: WilliamDAssafMSFT
-ms.author: wiassaf
-ms.reviewer: mikeray, randolphwest
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: hudequei, randolphwest
 ms.date: 07/18/2024
 ms.service: sql
 ms.subservice: polybase

@@ -1,8 +1,8 @@
 ---
 title: What's new in SQL Server Machine Learning Services?
 description: New feature announcements for each release of SQL Server Machine Learning Services and SQL Server 2016 R Services.
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: VanMSFT
+ms.author: vanto
 ms.date: 05/24/2022
 ms.service: sql
 ms.subservice: machine-learning-services

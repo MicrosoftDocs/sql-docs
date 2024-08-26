@@ -1,8 +1,8 @@
 ---
 title: "featurize_image: Machine Learning Image Featurization Transform"
 description: "Featurizes an image using a pre-trained deep neural network model."
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: VanMSFT
+ms.author: vanto
 ms.date: 07/15/2019
 ms.service: sql
 ms.subservice: "machine-learning-services"

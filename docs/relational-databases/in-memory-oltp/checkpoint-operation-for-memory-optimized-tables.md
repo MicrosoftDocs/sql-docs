@@ -1,8 +1,8 @@
 ---
 title: "Checkpoint Operation for Memory-Optimized Tables"
 description: Learn about checkpoints for memory-optimized tables in SQL Server. The memory-optimized table checkpoint operation is distinct from that of disk-based tables.
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "03/01/2017"
 ms.service: sql
 ms.subservice: in-memory-oltp

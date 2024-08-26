@@ -2,8 +2,8 @@
 title: "R tutorial: Explore and visualize data"
 titleSuffix: SQL machine learning
 description: Explore sample data and generate some plots in preparation for using binary classification in R with SQL machine learning.
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: VanMSFT
+ms.author: vanto
 ms.date: 10/15/2020
 ms.service: sql
 ms.subservice: machine-learning

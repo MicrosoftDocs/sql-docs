@@ -1,8 +1,8 @@
 ---
 title: Visualize data using RevoScaleR
 description: "Learn how to use R functions to visualize the distribution of values in the creditLine column by gender."
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: VanMSFT
+ms.author: vanto
 ms.date: 11/27/2018
 ms.service: sql
 ms.subservice: machine-learning-services

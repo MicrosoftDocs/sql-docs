@@ -1,8 +1,8 @@
 ---
 title: Convert Python and SQL data types
 description: Review the implicit and explicit data type conversions between Python and SQL Server in data science and machine learning solutions.
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: VanMSFT
+ms.author: vanto
 ms.date: 10/06/2020
 ms.service: sql
 ms.subservice: machine-learning-services

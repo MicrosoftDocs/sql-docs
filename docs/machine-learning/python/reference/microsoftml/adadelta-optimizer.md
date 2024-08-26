@@ -1,8 +1,8 @@
 ---
 title: "adadelta_optimizer: adadelta_optimizer"
 description: "Adaptive learning rate method."
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: VanMSFT
+ms.author: vanto
 ms.date: 07/15/2019
 ms.service: sql
 ms.subservice: "machine-learning-services"

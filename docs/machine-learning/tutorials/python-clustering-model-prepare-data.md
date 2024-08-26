@@ -2,8 +2,8 @@
 title: "Python tutorial: Prepare cluster data"
 titleSuffix: SQL machine learning
 description: In part two of this four-part tutorial series, you'll prepare SQL data to perform clustering in Python with SQL machine learning.
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: VanMSFT
+ms.author: vanto
 ms.date: 04/17/2023
 ms.service: sql
 ms.subservice: machine-learning

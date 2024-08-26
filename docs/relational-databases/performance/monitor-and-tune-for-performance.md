@@ -1,8 +1,8 @@
 ---
 title: "Monitor and Tune for Performance"
 description: Learn about monitoring databases to assess server performance, using periodic snapshots and gathering data continuously to track performance trends.
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "07/18/2016"
 ms.service: sql
 ms.subservice: performance

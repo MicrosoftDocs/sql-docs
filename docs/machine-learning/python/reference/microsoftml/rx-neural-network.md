@@ -1,8 +1,8 @@
 ---
 title: "rx_neural_network: Neural Net"
 description: "Neural networks for regression modeling and for Binary and multi-class classification."
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: VanMSFT
+ms.author: vanto
 ms.date: 07/15/2019
 ms.service: sql
 ms.subservice: "machine-learning-services"

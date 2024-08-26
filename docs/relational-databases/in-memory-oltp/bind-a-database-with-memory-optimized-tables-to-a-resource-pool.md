@@ -1,8 +1,8 @@
 ---
 title: "Bind database with memory-optimized tables to resource pool"
 description: Learn how to create a separate resource pool to manage memory consumption for a SQL Server database with memory-optimized tables.
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "08/29/2016"
 ms.service: sql
 ms.subservice: in-memory-oltp

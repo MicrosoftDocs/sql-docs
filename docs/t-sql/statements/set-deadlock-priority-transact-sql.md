@@ -1,8 +1,8 @@
 ---
 title: "SET DEADLOCK_PRIORITY (Transact-SQL)"
 description: SET DEADLOCK_PRIORITY (Transact-SQL)
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: 09/15/2022
 ms.service: sql
 ms.subservice: t-sql

@@ -1,8 +1,8 @@
 ---
 title: "Monitor SQL Server Components"
 description: Learn how monitoring lets you identify performance trends. SQL Server provides a service in a dynamic environment, so changes may be necessary over time.
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: MikeRayMSFT
+ms.author: mikeray
 ms.reviewer: randolphwest
 ms.date: 10/22/2023
 ms.service: sql

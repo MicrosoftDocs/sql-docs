@@ -1,9 +1,9 @@
 ---
 title: Degree of parallelism (DOP) feedback
 description: Learn about Degree of parallelism (DOP) feedback, part of the Intelligent Query Processing (IQP) feature set.
-author: WilliamDAssafMSFT
-ms.author: wiassaf
-ms.reviewer: derekw
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: derekw, wiassaf
 ms.date: 01/19/2024
 ms.service: sql
 ms.subservice: configuration

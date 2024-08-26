@@ -1,9 +1,9 @@
 ---
 title: "Transaction locking and row versioning guide"
 description: "Transaction locking and row versioning guide"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
-ms.reviewer: randolphwest
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: randolphwest, wiassaf
 ms.date: 03/06/2024
 ms.service: sql
 ms.subservice: performance

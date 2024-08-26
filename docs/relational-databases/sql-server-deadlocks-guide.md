@@ -1,9 +1,9 @@
 ---
 title: "Deadlocks guide"
 description: "Learn about deadlocks in the SQL Server database engine."
-author: WilliamDAssafMSFT
-ms.author: wiassaf
-ms.reviewer: randolphwest
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: randolphwest, wiassaf
 ms.date: 07/19/2024
 ms.service: sql
 ms.subservice: performance

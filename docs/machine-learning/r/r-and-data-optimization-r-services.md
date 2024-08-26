@@ -1,8 +1,8 @@
 ---
 title: Performance tuning for data
 description: This article discusses performance optimizations for R or Python scripts that run in SQL Server. It also describes methods that you can use to update your R code, both to boost performance and to avoid known issues.
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: VanMSFT
+ms.author: vanto
 ms.date: 10/20/2020
 ms.service: sql
 ms.subservice: machine-learning-services

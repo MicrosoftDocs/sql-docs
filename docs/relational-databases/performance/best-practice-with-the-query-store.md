@@ -1,8 +1,8 @@
 ---
 title: "Best practices for monitoring workloads with Query Store"
 description: Learn best practices for using SQL Server Query Store with your workload, such as using the latest SQL Server Management Studio and Query Performance Insight.
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: 07/19/2024
 ms.service: sql
 ms.subservice: performance

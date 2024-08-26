@@ -1,8 +1,8 @@
 ---
 title: "Performance considerations in PolyBase for SQL Server"
 description: Performance considerations for PolyBase in your SQL Server instance.
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: MikeRayMSFT
+ms.author: mikeray
 ms.reviewer: hudequei
 ms.date: 01/17/2024
 ms.service: sql

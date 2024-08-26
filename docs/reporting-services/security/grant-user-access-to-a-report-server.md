@@ -55,13 +55,13 @@ To delegate the task of assigning roles to other users, create role assignments 
 
 1. In the upper-right corner, select the gear icon, and then select **Site settings**.
 
-   :::image type="content" source="../../reporting-services/security/media/grant-user-access-to-a-report-server/settings-icon-menu.png" alt-text="Screenshot that shows the report server web portal gear icon with its menu open. In its menu, Site settings is highlighted.":::
+   :::image type="content" source="/media/grant-user-access-to-a-report-server/settings-icon-menu.png" alt-text="Screenshot that shows the report server web portal gear icon with its menu open. In its menu, Site settings is highlighted.":::
 
 1. Under **Site settings**, select **Security**.
 
 1. Select **Add group or user**.
 
-   :::image type="content" source="../../reporting-services/security/media/grant-user-access-to-a-report-server/site-add-group-user.png" alt-text="Screenshot that shows the report server web portal Security page. Add group or user is highlighted.":::
+   :::image type="content" source="/media/grant-user-access-to-a-report-server/site-add-group-user.png" alt-text="Screenshot that shows the report server web portal Security page. Add group or user is highlighted.":::
 
 1. For **Group or user**, enter a Windows domain user or group account in the following format: \<domain>\\<account\>.
 

@@ -1,8 +1,8 @@
 ---
 title: "Memory-optimized tables using interpreted T-SQL"
 description: Learn about accessing memory-optimized tables using interpreted Transact-SQL (Transact-SQL batches or stored procedures in SQL Server).
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "05/31/2016"
 ms.service: sql
 ms.subservice: in-memory-oltp

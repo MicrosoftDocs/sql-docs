@@ -1,8 +1,8 @@
 ---
 title: Install on an Azure virtual machine
 description: Run Python and R data science and machine learning solutions with SQL Server Machine Learning Services on a virtual machine in the Azure cloud.
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: VanMSFT
+ms.author: vanto
 ms.date: 01/02/2020
 ms.service: sql
 ms.subservice: machine-learning-services

@@ -2,8 +2,8 @@
 title: Tips for using R packages
 titleSuffix: SQL machine learning
 description: Learn helpful tips on using R packages in SQL Server for those who are new to R or to SQL Server.
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: VanMSFT
+ms.author: vanto
 ms.date: 08/01/2023
 ms.service: sql
 ms.subservice: machine-learning

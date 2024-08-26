@@ -1,8 +1,8 @@
 ---
 title: "SQL Server XTP Cursors object"
 description: Learn about the SQL Server XTP Cursors performance object, which contains counters related to internal In-Memory OLTP engine cursors.
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: 12/04/2023
 ms.service: sql
 ms.subservice: performance

@@ -1,8 +1,8 @@
 ---
 title: "SQL Server, Batch Resp Statistics object"
 description: "Learn about the SQLServer:Batch Resp Statistics performance object, which provides counters to track SQL Server batch response times."
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: 12/04/2023
 ms.service: sql
 ms.subservice: performance

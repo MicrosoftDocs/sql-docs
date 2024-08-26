@@ -1,8 +1,9 @@
 ---
 title: "Access external data: Azure Blob Storage - PolyBase"
 description: The article uses PolyBase on a SQL Server instance with Azure Blob Storage. PolyBase is suited for ad hoc queries of external tables and data import/export.
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: hudequei
 ms.date: 03/09/2023
 ms.service: sql
 ms.subservice: polybase

@@ -1,8 +1,8 @@
 ---
 title: Get started with PolyBase in SQL Server 2022
 description: A tutorial for getting started with PolyBase in SQL Server 2022.
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: MikeRayMSFT
+ms.author: mikeray
 ms.reviewer: hudequei
 ms.date: 01/17/2024
 ms.service: sql

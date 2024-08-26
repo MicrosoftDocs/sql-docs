@@ -1,8 +1,8 @@
 ---
 title: "R tutorial: Develop model in SQL"
 description: Learn how to build end-to-end solution for predictive modeling based on R feature support in either SQL Server 2016 or SQL Server 2017.
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: VanMSFT
+ms.author: vanto
 ms.date: 08/24/2023
 ms.service: sql
 ms.subservice: machine-learning-services

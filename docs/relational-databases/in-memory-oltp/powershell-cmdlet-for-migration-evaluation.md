@@ -1,8 +1,8 @@
 ---
 title: "PowerShell Cmdlet for Migration Evaluation"
 description: Learn about Save-SqlMigrationReport, which evaluates the migration fitness of objects in a SQL Server database for In-Memory OLTP.
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "07/30/2019"
 ms.service: sql
 ms.subservice: in-memory-oltp

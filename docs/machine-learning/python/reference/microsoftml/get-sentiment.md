@@ -1,8 +1,8 @@
 ---
 title: "get_sentiment: Machine Learning Sentiment Analyzer Transform"
 description: "Scores natural language text and assesses the probability the sentiments are positive."
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: VanMSFT
+ms.author: vanto
 ms.date: 07/15/2019
 ms.service: sql
 ms.subservice: "machine-learning-services"

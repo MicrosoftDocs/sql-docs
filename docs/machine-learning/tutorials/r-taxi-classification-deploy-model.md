@@ -2,8 +2,8 @@
 title: "R tutorial: Run predictions in SQL stored procedures"
 titleSuffix: SQL machine learning
 description: In part five of this five-part tutorial series, you'll operationalize embedded R script in SQL stored procedures with T-SQL functions with SQL machine learning.
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: VanMSFT
+ms.author: vanto
 ms.date: 10/15/2020
 ms.service: sql
 ms.subservice: machine-learning

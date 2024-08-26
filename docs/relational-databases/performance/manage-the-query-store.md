@@ -1,8 +1,8 @@
 ---
 title: "Best practices for managing the Query Store"
 description: Learn best practices for managing the SQL Server Query Store, including version specific details, managing custom capture policies, and other performance features.
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: 01/08/2024
 ms.service: sql
 ms.subservice: performance

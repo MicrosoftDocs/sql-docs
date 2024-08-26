@@ -1,8 +1,8 @@
 ---
 title: "SQL Server, Catalog Metadata object"
 description: "Learn about the SQLServer:Catalog Metadata performance object, which provides counters for catalog metadata for SQL Server."
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: 12/04/2023
 ms.service: sql
 ms.subservice: performance

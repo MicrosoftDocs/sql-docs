@@ -1,8 +1,8 @@
 ---
 title: "Implementing UPDATE with FROM or Subqueries"
 description: Learn which syntax elements are supported on the Transact-SQL UPDATE statement in a natively compiled T-SQL module.
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "11/17/2016"
 ms.service: sql
 ms.subservice: in-memory-oltp

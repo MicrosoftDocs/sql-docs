@@ -1,8 +1,8 @@
 ---
 title: "Create a SQL Server database alert"
 description: You can use Windows System Monitor to create a SQL Server database alert that is raised when a threshold value for a System Monitor counter has been reached.
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: 12/04/2023
 ms.service: sql
 ms.subservice: performance

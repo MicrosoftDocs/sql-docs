@@ -1,8 +1,8 @@
 ---
 title: "RealtimeDefinition class"
 description: "The RealtimeDefinition class is for SQL Machine Learning Services and Machine Learning Server for managing web services."
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: VanMSFT
+ms.author: vanto
 ms.date: 07/15/2019
 ms.service: sql
 ms.subservice: "machine-learning-services"

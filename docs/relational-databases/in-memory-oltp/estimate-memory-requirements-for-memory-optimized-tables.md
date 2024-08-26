@@ -1,8 +1,8 @@
 ---
 title: "Memory requirements - memory-optimized tables"
 description: Learn about memory use and management scenarios for memory-optimized tables in SQL Server, which require sufficient memory for all the rows and indexes.
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "12/02/2016"
 ms.service: sql
 ms.subservice: in-memory-oltp

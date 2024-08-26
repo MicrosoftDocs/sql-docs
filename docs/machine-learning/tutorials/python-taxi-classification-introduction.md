@@ -2,8 +2,8 @@
 title: "Python tutorial: Predict NYC taxi fares with binary classification"
 titleSuffix: SQL machine learning
 description: Learn how to embed Python code in SQL Server stored procedures and T-SQL functions with SQL machine learning to predict NYC taxi fares using binary classification.
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: VanMSFT
+ms.author: vanto
 ms.date: 09/17/2021
 ms.service: sql
 ms.subservice: machine-learning

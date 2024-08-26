@@ -1,8 +1,8 @@
 ---
 title: microsoftml Python package
 description: microsoftml is a Python package from Microsoft that provides high-performance machine learning algorithms. It includes functions for training and transformations, scoring, text and image analysis, and feature extraction for deriving values from existing data. The package is included in SQL Server Machine Learning Services.
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: VanMSFT
+ms.author: vanto
 ms.date: 08/03/2021
 ms.service: sql
 ms.subservice: machine-learning-services

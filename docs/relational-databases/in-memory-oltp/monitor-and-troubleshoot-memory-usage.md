@@ -1,8 +1,8 @@
 ---
 title: "Monitor and troubleshoot memory usage with in-memory OLTP"
 description: Learn about monitoring and troubleshooting In-Memory OLTP memory usage, which has different patterns than disk-based tables in SQL Server.
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: 12/14/2023
 ms.service: sql
 ms.subservice: in-memory-oltp

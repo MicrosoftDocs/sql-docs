@@ -2,8 +2,8 @@
 title: "Quickstart: Python functions"
 titleSuffix: SQL machine learning
 description: In this quickstart, you'll learn how to use Python mathematical and utility functions with SQL machine learning.
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: VanMSFT
+ms.author: vanto
 ms.date: 09/28/2020
 ms.service: sql
 ms.subservice: machine-learning

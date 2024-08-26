@@ -1,8 +1,8 @@
 ---
 title: "Performance Statistics Event Class"
 description: "Performance Statistics Event Class"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: supportability

@@ -1,8 +1,8 @@
 ---
 title: Improve performance by using R code profiling function
 description: Collect useful information to improve performance and get faster results on R computations on SQL Server by using R profiling functions.
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: VanMSFT
+ms.author: vanto
 ms.date: 08/24/2023
 ms.service: sql
 ms.subservice: machine-learning-services

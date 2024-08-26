@@ -1,8 +1,8 @@
 ---
 title: "Migrating Computed Columns"
 description: Learn how to simulate computed columns in memory-optimized tables. Evaluate whether computed column functionality is necessary after migration.
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "12/17/2016"
 ms.service: sql
 ms.subservice: in-memory-oltp

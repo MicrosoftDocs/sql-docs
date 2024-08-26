@@ -1,8 +1,8 @@
 ---
 title: "SQL Server, Broker/DBM Transport object"
 description: Learn about Broker / DBM Transport performance object, which contains performance counters for networking information for Service Broker and database mirroring.
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: 12/04/2023
 ms.service: sql
 ms.subservice: performance

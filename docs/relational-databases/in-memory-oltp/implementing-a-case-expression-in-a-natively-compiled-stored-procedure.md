@@ -1,8 +1,8 @@
 ---
 title: "CASE expression in a natively compiled stored procedure"
 description: Natively compiled T-SQL modules support CASE expressions in some versions of SQL Server. This example implements the CASE expression in a query.
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "11/21/2017"
 ms.service: sql
 ms.subservice: in-memory-oltp

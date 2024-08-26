@@ -1,8 +1,8 @@
 ---
 title: Install SQL Server 2022 Machine Learning Services on Windows
 description: Learn how to install SQL Server 2022 Machine Learning Services on Windows to run Python, R, or Java scripts in-database.
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: VanMSFT
+ms.author: vanto
 ms.reviewer: arunguru-msft
 ms.date: 03/08/2024
 ms.service: sql

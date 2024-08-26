@@ -1,9 +1,9 @@
 ---
 title: "PolyBase query scenarios"
 description: See examples of queries using the PolyBase feature of SQL Server, including SELECT, JOIN external with local tables, import/export data, and new catalog views.
-author: WilliamDAssafMSFT
-ms.author: wiassaf
-ms.reviewer: mikeray
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: hudequei
 ms.date: 12/13/2022
 ms.service: sql
 ms.subservice: polybase

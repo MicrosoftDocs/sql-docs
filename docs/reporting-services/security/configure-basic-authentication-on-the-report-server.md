@@ -22,8 +22,8 @@ To configure Basic authentication on the SSRS report server, you edit XML elemen
 
 ## Prerequisites
 
-- A configured native mode report server
-- Write permissions for the RSReportServer.config file
+- A configured native mode report server.
+- Write permissions for the RSReportServer.config file.
 
 ## Security considerations for Basic authentication
 

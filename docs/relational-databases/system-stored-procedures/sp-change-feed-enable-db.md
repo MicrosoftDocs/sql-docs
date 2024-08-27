@@ -23,7 +23,7 @@ monikerRange: ">=sql-server-ver16 || =azuresqldb-current || =fabric || =azure-sq
 
 [!INCLUDE [sqlserver2022-asdb-asa-fabric](../../includes/applies-to-version/sqlserver2022-asdb-asa-fabric.md)]
 
-Enables current database for [Azure Synapse Link for SQL](/azure/synapse-analytics/synapse-link/sql-synapse-link-overview) or [What is Mirroring in Fabric?](/fabric/database/mirrored-database/overview).
+Enables current database for [Azure Synapse Link for SQL](/azure/synapse-analytics/synapse-link/sql-synapse-link-overview) or [Fabric mirrored databases](/fabric/database/mirrored-database/overview).
 
 > [!NOTE]  
 > This system stored procedure is used internally and isn't recommended for direct administrative use. Use Synapse Studio or the Fabric portal instead. Using this procedure could introduce inconsistency.

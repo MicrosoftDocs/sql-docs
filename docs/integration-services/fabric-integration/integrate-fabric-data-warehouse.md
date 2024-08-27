@@ -41,7 +41,7 @@ If you're using SQL Authentication or Windows Authentication, reconfigure it to 
 - Set Authentication to ****ActiveDirectoryServicePrincipal**** or ****ActiveDirectoryPassword****.
 :::image type="content" border="false" source="media/ado-net-connection.png" alt-text="Screenshot of ado connection manager part 1." lightbox="media/ado-net-connection.png":::
  
-### File Ingestion 
+### File ingestion 
 The ****Fabric Data Warehous****e recommends utilizing the native T-SQL command ‘COPY INTO’ for efficient data insertion into the warehouse. So, any DFT operations that currently rely on ****Fast Insert Mode**** or ****BCP IN**** scripts should be replaced with the ****COPY INTO**** statement by utilizing [Execute SQL Task](../control-flow/execute-sql-task.md). 
 
 ### SSIS writing data into Data Warehouse in Fabric
@@ -78,8 +78,9 @@ WITH (
 
 More detail instructions refer to [Ingest data into your Warehouse using the COPY statement](/fabric/data-warehouse/ingest-data-copy).
 
-> [!NOTE]
-> Warehouse supports a subset of T-SQL data types and not all T-SQL all commands are currently supported. Your packages might be failed due to unsupported features. For details, please check [Data types in Warehouse](/fabric/data-warehouse/data-types?branch=main) and [T-SQL surface area](/fabric/data-warehouse/tsql-surface-area).
+### Known limitations
+
+Fabric data Warehouse supports a subset of T-SQL data types and not all T-SQL all commands are currently supported. Your packages might be failed due to unsupported features. For details, please check [Data types in Warehouse](/fabric/data-warehouse/data-types?branch=main) and [T-SQL surface area](/fabric/data-warehouse/tsql-surface-area).
 
 ### References 
 [T-SQL surface area - Microsoft Fabric | Microsoft Learn](/fabric/data-warehouse/tsql-surface-area)

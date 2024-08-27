@@ -798,6 +798,8 @@ items:
   - name: Database mirroring
     href: database-engine/database-mirroring/database-mirroring-sql-server.md
     items:
+    - name: Fabric Database Mirroring
+      href: sql-server/fabric-mirrored-database/fabric-mirrored-databases.md
     - name: Overview
       items:
       - name: Prerequisites, Restrictions, & Recommendations
@@ -15211,26 +15213,46 @@ items:
         href: relational-databases/system-stored-procedures/sp-pdw-remove-network-credentials-sql-data-warehouse.md
       - name: sp_special_columns_100
         href: relational-databases/system-stored-procedures/sp-special-columns-100-sql-data-warehouse.md
-    - name: Azure Synapse Link for SQL
+    - name: Azure Synapse Link for SQL & Fabric Mirroring
       items:
+      - name: sp_change_feed_configure_parameters
+        href: relational-databases/system-stored-procedures/sp-change-feed-configure-parameters.md
+      - name: sp_change_feed_create_table_group
+        href: relational-databases/system-stored-procedures/sp-change-feed-create-table-group.md
       - name: sp_change_feed_disable_db
         href: relational-databases/system-stored-procedures/sp-change-feed-disable-db.md
       - name: sp_change_feed_disable_table
         href: relational-databases/system-stored-procedures/sp-change-feed-disable-table.md        
       - name: sp_change_feed_drop_table_group
         href: relational-databases/system-stored-procedures/sp-change-feed-drop-table-group.md
-      - name: sp_help_change_feed
-        href: relational-databases/system-stored-procedures/sp-help-change-feed.md
-      - name: sp_help_change_feed_table
-        href: relational-databases/system-stored-procedures/sp-help-change-feed-table.md
-      - name: sp_change_feed_configure_parameters
-        href: relational-databases/system-stored-procedures/sp-change-feed-configure-parameters.md
-      - name: sp_change_feed_create_table_group
-        href: relational-databases/system-stored-procedures/sp-change-feed-create-table-group.md
       - name: sp_change_feed_enable_db
         href: relational-databases/system-stored-procedures/sp-change-feed-enable-db.md
       - name: sp_change_feed_enable_table
         href: relational-databases/system-stored-procedures/sp-change-feed-enable-table.md
+      - name: sp_change_feed_enable_tables_after_reseed
+        href: relational-databases/system-stored-procedures/sp-change-feed-enable-tables-after-reseed.md
+      - name: sp_change_feed_is_slo_allowed 
+        href: relational-databases/system-stored-procedures/sp-change-feed-is-slo-allowed.md
+      - name: sp_change_feed_reseed_table
+        href: relational-databases/system-stored-procedures/sp-change-feed-reseed-table.md
+      - name: sp_change_feed_reseed_db_init 
+        href: relational-databases/system-stored-procedures/sp-change-feed-reseed-db-init.md
+      - name: sp_change_feed_reseed_db_start_replication 
+        href: relational-databases/system-stored-procedures/sp-change-feed-reseed-db-start-replication.md
+      - name: sp_change_feed_vupgrade
+        href: relational-databases/system-stored-procedures/sp-change-feed-vupgrade.md
+      - name: sp_has_change_feed_permissions
+        href: relational-databases/system-stored-procedures/sp-has-change-feed-permissions.md
+      - name: sp_help_change_feed
+        href: relational-databases/system-stored-procedures/sp-help-change-feed.md
+      - name: sp_help_change_feed_table
+        href: relational-databases/system-stored-procedures/sp-help-change-feed-table.md
+      - name: sp_help_change_feed_settings
+        href: relational-databases/system-stored-procedures/sp-help-change-feed-settings.md
+      - name: sp_help_change_feed_table_groups
+        href: relational-databases/system-stored-procedures/sp-help-change-feed-table-groups.md
+      - name: sp_MSchange_feed_ddl_event
+        href: relational-databases/system-stored-procedures/sp-mschange-feed-ddl-event.md
     - name: SQL Server Agent
       href: relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md
       items:

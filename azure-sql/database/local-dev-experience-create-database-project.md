@@ -47,8 +47,5 @@ The existing project opens and its contents are visible in the **Database Projec
 Learn more about the local development experience for Azure SQL Database:
 
 - [What is the local development experience for Azure SQL Database?](local-dev-experience-overview.md)
-- [Set up a local development environment for Azure SQL Database](local-dev-experience-set-up-dev-environment.md)
-- [Quickstart: Create a local development environment for Azure SQL Database](local-dev-experience-quickstart.md)
-- [Publish a database project for Azure SQL Database to the local emulator](local-dev-experience-publish-emulator.md)
 - [Azure SQL Database dev container template](local-dev-experience-dev-containers.md)
 - [Quickstart: Set up a development environment with Dev Container Templates for Azure SQL Database](local-dev-experience-dev-containers-quickstart.md)

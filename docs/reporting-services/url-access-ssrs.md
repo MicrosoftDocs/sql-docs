@@ -75,7 +75,7 @@ The web service URL of the report server.
    ```
 
    > [!TIP]
-   > It's important the URL include the `_vti_bin` proxy syntax to route the request through SharePoint and the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] HTTP proxy. The proxy adds some context to the HTTP request, context that'ss required to ensure proper execution of the report for SharePoint mode report servers.
+   > It's important the URL include the `_vti_bin` proxy syntax to route the request through SharePoint and the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] HTTP proxy. The proxy adds some context to the HTTP request, context that's required to ensure proper execution of the report for SharePoint mode report servers.
 
 ### *pathinfo*
 

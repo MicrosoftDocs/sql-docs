@@ -2,8 +2,8 @@
 title: R tutorials
 titleSuffix: SQL machine learning
 description: This article describes R tutorials for SQL machine learning. Learn how to run scripts and build machine learning models.
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: VanMSFT
+ms.author: vanto
 ms.reviewer: garye, jroth
 ms.date: 05/07/2021
 ms.service: sql

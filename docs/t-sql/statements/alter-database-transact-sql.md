@@ -4,11 +4,12 @@ description: ALTER DATABASE (Transact-SQL) syntax for SQL Server, Azure SQL Data
 author: markingmyname
 ms.author: maghan
 ms.reviewer: wiassaf
-ms.date: 08/06/2024
+ms.date: 08/26/2024
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
-ms.custom: references_regions
+ms.custom:
+  - references_regions
 f1_keywords:
   - "ALTER_DATABASE_TSQL"
   - "ALTER DATABASE"
@@ -70,7 +71,7 @@ Because of its length, the `ALTER DATABASE` syntax is separated into the multipl
 
 | Article | Description |
 | --- | --- |
-| ALTER DATABASE | The current article provides the syntax and related information for changing the name and the collation of a database. |
+| `ALTER DATABASE` | The current article provides the syntax and related information for changing the name and the collation of a database. |
 | [ALTER DATABASE File and Filegroup Options](alter-database-transact-sql-file-and-filegroup-options.md) | Provides the syntax and related information for adding and removing files and filegroups from a database, and for changing the attributes of the files and filegroups. |
 | [ALTER DATABASE SET options](alter-database-transact-sql-set-options.md) | Provides the syntax and related information for changing the attributes of a database by using the SET options of ALTER DATABASE. |
 | [ALTER DATABASE Database Mirroring](alter-database-transact-sql-database-mirroring.md) | Provides the syntax and related information for the SET options of ALTER DATABASE that are related to database mirroring. |
@@ -438,7 +439,7 @@ ALTER DATABASE current
 > [!IMPORTANT]
 > EDITION change fails if the MAXSIZE property for the database is set to a value outside the valid range supported by that edition.
 
-#### MODIFY (BACKUP_STORAGE_REDUNDANCY = ['LOCAL' | 'ZONE' | 'GEO'])
+#### MODIFY BACKUP_STORAGE_REDUNDANCY = ['LOCAL' | 'ZONE' | 'GEO']
 
 Changes the storage redundancy of point-in-time restore backups and long-term retention backups (if configured) of the database. The changes are applied to all the future backups taken. Existing backups continue to use the previous setting.
 
@@ -641,7 +642,7 @@ Creates a readable secondary database `db1` on server `secondaryserver` of the `
 ```sql
 ALTER DATABASE db1
 ADD SECONDARY ON SERVER secondaryserver
-WITH ( ALLOW_CONNECTIONS = ALL )
+WITH ( ALLOW_CONNECTIONS = ALL );
 ```
 
 ### D. Remove a Geo-Replication Secondary
@@ -650,7 +651,7 @@ Removes the secondary database `db1` on server `secondaryserver`.
 
 ```sql
 ALTER DATABASE db1
-REMOVE SECONDARY ON SERVER testsecondaryserver
+REMOVE SECONDARY ON SERVER testsecondaryserver;
 ```
 
 ### E. Failover to a Geo-Replication Secondary
@@ -658,7 +659,7 @@ REMOVE SECONDARY ON SERVER testsecondaryserver
 Promotes a secondary database `db1` on server `secondaryserver` to become the new primary database when executed on server `secondaryserver`.
 
 ```sql
-ALTER DATABASE db1 FAILOVER
+ALTER DATABASE db1 FAILOVER;
 ```
 
 > [!NOTE]
@@ -669,7 +670,7 @@ ALTER DATABASE db1 FAILOVER
 Forces a secondary database `db1` on server `secondaryserver` to become the new primary database when executed on server `secondaryserver`, in the event that the primary server becomes unavailable. This option can incur data loss.
 
 ```sql
-ALTER DATABASE db1 FORCE_FAILOVER_ALLOW_DATA_LOSS
+ALTER DATABASE db1 FORCE_FAILOVER_ALLOW_DATA_LOSS;
 ```
 
 ### G. Update a single database to service tier S0 (Standard edition, performance level 0)
@@ -685,7 +686,7 @@ ALTER DATABASE [db1] MODIFY (EDITION = 'Standard', MAXSIZE = 250 GB, SERVICE_OBJ
 Updates the backup storage redundancy of a database to zone-redundant. All future backups of this database use the new setting. This includes point-in-time restore backups and long-term retention backups (if configured).
 
 ```sql
-ALTER DATABASE db1 MODIFY BACKUP_STORAGE_REDUNDANCY = 'ZONE'
+ALTER DATABASE db1 MODIFY BACKUP_STORAGE_REDUNDANCY = 'ZONE';
 ```
 
 ## Related content
@@ -742,7 +743,7 @@ Because of its length, the `ALTER DATABASE` syntax is separated into the multipl
 
 | Article | Description |
 | --- | --- |
-| ALTER DATABASE   |
+| `ALTER DATABASE` |
 The current article provides the syntax and related information for setting file and filegroup options, for setting database options, and for setting the database compatibility level.| 
 | [ALTER DATABASE File and Filegroup Options](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md?&tabs=sqldbmi)   |
 Provides the syntax and related information for adding and removing files and filegroups from a database, and for changing the attributes of the files and filegroups.  |
@@ -1335,7 +1336,7 @@ Because of its length, the `ALTER DATABASE` syntax is separated into the multipl
 
 | Article | Description |
 | --- | --- |
-| ALTER DATABASE | The current article provides the syntax and related information for changing the name and the collation of a database. |
+| `ALTER DATABASE` | The current article provides the syntax and related information for changing the name and the collation of a database. |
 | [ALTER DATABASE SET options](alter-database-transact-sql-set-options.md) | Provides the syntax and related information for changing the attributes of a database by using the SET options of ALTER DATABASE. |
 
 ## Remarks

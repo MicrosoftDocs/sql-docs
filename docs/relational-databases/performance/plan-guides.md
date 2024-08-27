@@ -1,8 +1,8 @@
 ---
 title: "Plan Guides"
 description: Learn about plan guides, which let you optimize the performance of queries without directly changing the text of the query in SQL Server.
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: 08/01/2022
 ms.service: sql
 ms.subservice: performance

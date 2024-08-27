@@ -1,9 +1,8 @@
 ---
 title: "Sample Database for In-Memory OLTP"
 description: Learn about the In-Memory OLTP feature and its performance benefits. This sample shows memory-optimized tables and natively compiled stored procedures.
-author: WilliamDAssafMSFT
-ms.author: wiassaf
-ms.reviewer: wiassaf
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: 03/02/2022
 ms.service: sql
 ms.subservice: in-memory-oltp

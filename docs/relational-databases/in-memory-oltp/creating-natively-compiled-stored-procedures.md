@@ -1,8 +1,8 @@
 ---
 title: "Creating Natively Compiled Stored Procedures"
 description: Learn about Transact-SQL features supported only for natively compiled stored procedures. See how to create natively compiled stored procedures in SQL Server.
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "03/16/2017"
 ms.service: sql
 ms.subservice: in-memory-oltp

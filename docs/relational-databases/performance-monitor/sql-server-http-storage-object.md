@@ -1,8 +1,8 @@
 ---
 title: "SQL Server, HTTP Storage object"
 description: "Learn about the SQLServer:HTTP Storage performance object, which consists of performance counters that monitor an Azure Storage account."
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: 12/04/2023
 ms.service: sql
 ms.subservice: performance

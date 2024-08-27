@@ -1,8 +1,8 @@
 ---
 title: "T-SQL not supported by in-memory OLTP"
 description: Learn which Transact-SQL features are not supported for memory-optimized tables, natively compiled stored procedures, and user-defined functions.
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "11/21/2017"
 ms.service: sql
 ms.subservice: in-memory-oltp

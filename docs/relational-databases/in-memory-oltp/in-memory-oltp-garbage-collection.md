@@ -1,8 +1,8 @@
 ---
 title: "In-Memory OLTP Garbage Collection"
 description: Learn about garbage collection in In-Memory OLTP in SQL Server. If a transaction that is no longer active deletes a row, it is subject to garbage collection.
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "03/17/2017"
 ms.service: sql
 ms.subservice: in-memory-oltp

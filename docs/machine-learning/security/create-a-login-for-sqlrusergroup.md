@@ -1,8 +1,8 @@
 ---
 title: Create a login for SQLRUserGroup
 description: Create a login in SQL Server for SQLRUserGroup, using implied authentication to log in to the server, for identity conversion back to the calling user.
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: VanMSFT
+ms.author: vanto
 ms.date: 01/25/2019
 ms.service: sql
 ms.subservice: machine-learning-services

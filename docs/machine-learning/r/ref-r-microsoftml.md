@@ -1,8 +1,8 @@
 ---
 title: MicrosoftML R package
 description: MicrosoftML is an R package from Microsoft that provides high-performance machine learning algorithms. It includes functions for training and transformations, scoring, text and image analysis, and feature extraction for deriving values from existing data. The package is included in SQL Server Machine Learning Services and SQL Server 2016 R Services and supports high performance on big data, using multicore processing, and fast data streaming. MicrosoftML also includes numerous transformations for text and image processing.
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: VanMSFT
+ms.author: vanto
 ms.date: 09/30/2021
 ms.service: sql
 ms.subservice: machine-learning-services

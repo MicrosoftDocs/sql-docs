@@ -56,6 +56,7 @@ helpviewer_keywords:
 |Time|The time when the activity occurred.|No|  
 |ClientIp|The IP address of the client accessing the report server.|Yes|  
 |UserName|The name of the user who accessed the report server.|No|  
+|ServerIp|The IP address used for the connection.|No|  
 |ServerPort|The port number used for the connection.|No|  
 |Host|The content of the host header.|No|  
 |Method|The action or SOAP method called from the client.|Yes|  

@@ -1,8 +1,8 @@
 ---
 title: "SQL Server XTP Transactions object"
 description: Learn about the SQL Server XTP Transactions performance object, which contains counters related to transactions involving In-Memory OLTP in SQL Server.
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: 12/04/2023
 ms.service: sql
 ms.subservice: performance

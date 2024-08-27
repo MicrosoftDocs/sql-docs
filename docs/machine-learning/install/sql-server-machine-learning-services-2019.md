@@ -1,8 +1,8 @@
 ---
 title: "Isolation changes for Windows"
 description: This article describes the changes to the isolation mechanism in Machine Learning Services in SQL Server 2019 on Windows. These changes affect SQLRUserGroup, firewall rules, file permission, and implied authentication.
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: VanMSFT
+ms.author: vanto
 ms.date: 05/24/2022
 ms.service: sql
 ms.subservice: machine-learning-services

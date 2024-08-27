@@ -1,8 +1,8 @@
 ---
 title: "Joins (SQL Server)"
 description: Learn about the types of join operations that SQL Server employs. SQL Server supports vertical table partitioning, or columnar storage, using join operations.
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: 07/11/2024
 ms.service: sql
 ms.subservice: performance

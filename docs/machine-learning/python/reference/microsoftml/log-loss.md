@@ -1,8 +1,8 @@
 ---
 title: "log_loss: log_loss"
 description: "Log loss."
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: VanMSFT
+ms.author: vanto
 ms.date: 07/15/2019
 ms.service: sql
 ms.subservice: "machine-learning-services"

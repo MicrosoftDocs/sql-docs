@@ -1,8 +1,8 @@
 ---
 title: "Plan adoption of in-memory OLTP "
 description: Learn how the adoption of In-Memory OLTP features in SQL Server affects other aspects of your business system.
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: 12/15/2023
 ms.service: sql
 ms.subservice: in-memory-oltp

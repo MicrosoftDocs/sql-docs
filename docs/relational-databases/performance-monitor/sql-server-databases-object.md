@@ -1,8 +1,8 @@
 ---
 title: "SQL Server, Databases object"
 description: "Learn about the SQLServer:Databases object, which provides counters for bulk copy operations, backup and restore throughput, and transaction log activities."
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: 12/04/2023
 ms.service: sql
 ms.subservice: performance

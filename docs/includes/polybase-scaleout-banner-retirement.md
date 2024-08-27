@@ -1,6 +1,6 @@
 ---
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: 02/22/2022
 ms.service: sql
 ms.subservice: polybase

@@ -1,8 +1,8 @@
 ---
 title: Extensibility architecture
 description: This article describes the architecture of the extensibility framework for running an external Python or R script on SQL Server Machine Learning Services. The script executes in a language runtime environment as an extension to the core database engine.
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: VanMSFT
+ms.author: vanto
 ms.date: 07/14/2020
 ms.service: sql
 ms.subservice: machine-learning-services

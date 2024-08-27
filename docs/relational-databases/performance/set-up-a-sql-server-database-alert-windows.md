@@ -1,8 +1,8 @@
 ---
 title: "Set up a SQL Server database alert (Windows)"
 description: Learn how to create an alert that is raised when a Performance Monitor counter reaches a threshold value. In response, Performance Monitor can launch an application.
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: MikeRayMSFT
+ms.author: mikeray
 ms.reviewer: randolphwest
 ms.date: 06/13/2024
 ms.service: sql

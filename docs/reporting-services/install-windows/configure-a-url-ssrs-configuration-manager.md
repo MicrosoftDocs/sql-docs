@@ -89,13 +89,11 @@ Before you create or modify a URL, remember the following points:
 1. Test the URL by selecting the link in the **URLs** section of page. The report server database must be created and configured before you can test the URL. For instructions, see [Create a Native mode report server database &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md).
 
 > [!NOTE]
-> If you have existing TLS Bindings and URL Reservations and you want to change the TLS Binding, such as a different certificate or hostheader, then you should complete the following steps in order:
+> If you have existing TLS Bindings and URL Reservations and you want to change the TLS Binding, such as a different certificate or hostheader, then you should complete the following steps in order, using [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager:
 >
 > 1. First remove all URL Reservations.
 > 1. Then remove all TLS Bindings.
 > 1. Then recreate the URLs and the TLS bindings.
->
-> The previous steps can be completed using [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager.
 >
 > Microsoft Windows supports one binding for each IP address to Port combination. If you configure a report server to use a specific hostheader value and the certificate on the Port to IP address combination is also issued to a different hostheader value, you will see in your browser, a warning indicating the certificate does not match the URL that is being used.
 >

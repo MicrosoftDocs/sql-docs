@@ -5,7 +5,7 @@ description: An overview of database watcher for Azure SQL, a managed monitoring
 author: dimitri-furman
 ms.author: dfurman
 ms.reviewer: wiassaf
-ms.date: 8/16/2024
+ms.date: 8/27/2024
 ms.service: azure-sql
 ms.subservice: monitoring
 ms.topic: conceptual
@@ -114,7 +114,7 @@ The following table describes the capabilities of database watcher dashboards in
 
 | Capability | Description |
 |:--|:--|
-| **Estate dashboards** | Visualize high-level monitoring data for multiple monitored resources in a common view. Use **heatmaps** to find top resource consuming databases, elastic pools, or SQL managed instances.</br></br>Use the **top queries** view to find top resource consuming queries across your Azure SQL estate, ranking queries by CPU, duration, execution count, etc.</br></br>Use resource name filters to focus on subsets of your Azure SQL estate.</br></br>Drill through to detailed dashboards for specific resources. |
+| **Estate dashboards** | Visualize high-level monitoring data for multiple monitored resources in a common view. Use **heatmaps** to find top resource consuming databases, elastic pools, or SQL managed instances.</br></br>Use the **top queries** view to find top resource consuming queries across your Azure SQL estate, ranking queries by CPU, duration, execution count, etc.</br></br>Use the subscription, resource group, and resource name filters to focus on subsets of your Azure SQL estate.</br></br>Drill through to detailed dashboards for specific resources. |
 | **Resource dashboards** | Visualize detailed monitoring data for a database, an elastic pool, or a SQL managed instance, including:</br></br>- Active sessions<br>- Backup history<br>- Common performance counters<br>- Connectivity probes<br>- Database and instance properties and configuration<br>- Geo-replication<br>- Index metadata, usage statistics, warnings, and suggestions<br>- Resource usage<br>- Session and connection statistics<br>- SQL Agent job state and history<br>- Storage consumption and performance<br>- Table metadata<br>- Top queries<br>- Wait statistics<br></br>Use resource dropdowns to quickly switch from one resource to another. Use the **estate** link to zoom out to an estate dashboard. |
 | **Filter by time range** | On each dashboard, set the time range to focus on the desired time interval. Use standard or custom time ranges. Narrow down the time range to an interval of interest by "brushing", or dragging the mouse cursor over a chart to select a shorter time range. |
 | **Historical data** | Depending on the dataset, dashboards show either a summary for the selected time interval, or the latest sample collected in the time interval.</br></br>Toggle between the latest and a historical view to look at data samples earlier in the selected time range. For example, instead of looking at the currently active sessions, review a previous sample of active sessions collected when a spike in resource usage occurred. |

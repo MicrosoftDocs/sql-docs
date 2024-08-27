@@ -35,7 +35,6 @@ The following table lists the features of SQL Server on Azure VMs that are curre
 
 | Feature | Details |
 | --- | --- |
-| [Azure Update Manager](../azure-update-manager-sql-vm.md) | Automatically patch multiple SQL Server VMs at scale with the Azure Update Manager integrated in to the [SQL virtual machines](manage-sql-vm-portal.md) resource in the Azure portal, including Cumulative Updates. |
 | [FCI with Azure Elastic SAN](failover-cluster-instance-azure-elastic-san-manually-configure.md) | Deploy your SQL Server failover cluster instance (FCI) by using an Azure Elastic SAN. |
 | [I/O Analysis](storage-performance-analysis.md) | Use the Azure portal to identify performance issues with your SQL Server workloads from exceeding virtual machine and data disk limits. | 
 | [Premium SSD v2 in the Azure portal](storage-configuration-premium-ssd-v2.md) | Deploy your SQL Server on Azure VM with Premium SSD v2 disks in the Azure portal for improved throughput and performance. |  

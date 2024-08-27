@@ -17,18 +17,18 @@ helpviewer_keywords:
   - "sp_change_feed_reseed_db_init"
 dev_langs:
   - "TSQL"
-monikerRange: ">=sql-server-ver16 || =azuresqldb-current || =fabric"
+monikerRange: "=azuresqldb-current || =fabric"
 ---
 # sys.sp_change_feed_reseed_db_init (Transact-SQL)
 
-[!INCLUDE [sqlserver2022-asdb-fabric](../../includes/applies-to-version/sqlserver2022-asdb-fabric.md)]
+[!INCLUDE [asdb-fabric](../../includes/applies-to-version/asdb-fabric.md)]
 
 Executes a database reseed.
 
 > [!NOTE]  
 > This system stored procedure is used internally and isn't recommended for direct administrative use. Use the Fabric portal instead. Using this procedure could introduce inconsistency.
 
-This system stored procedure is used for the Fabric Mirrored Database feature for Azure SQL Database. For more information, see [What is Mirroring in Fabric?](/fabric/database/mirrored-database/overview).
+This system stored procedure is used for the Fabric Mirrored Database feature for Azure SQL Database. For more information, see [What is Mirroring in Fabric?](/fabric/database/mirrored-database/overview)
 
 ## Syntax
 

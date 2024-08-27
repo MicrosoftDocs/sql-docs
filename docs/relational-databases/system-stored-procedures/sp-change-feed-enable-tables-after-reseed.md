@@ -17,18 +17,18 @@ helpviewer_keywords:
   - "sp_change_feed_enable_tables_after_reseed"
 dev_langs:
   - "TSQL"
-monikerRange: ">=sql-server-ver16 || =azuresqldb-current || =fabric"
+monikerRange: "=azuresqldb-current || =fabric"
 ---
 # sys.sp_change_feed_enable_tables_after_reseed (Transact-SQL)
 
-[!INCLUDE [sqlserver2022-asdb-fabric](../../includes/applies-to-version/sqlserver2022-asdb-fabric.md)]
+[!INCLUDE [sqlserver2022-asdb-fabric](../../includes/applies-to-version/asdb-fabric.md)]
 
 Internal procedure that enables tables after reseed within the current database context.
 
 > [!NOTE]  
 > This system stored procedure is used internally and isn't recommended for direct administrative use. Use the Fabric portal instead. Using this procedure could introduce inconsistency.
 
-This system stored procedure is used for the Fabric Mirrored Database feature for Azure SQL Database. For more information, see [What is Mirroring in Fabric?](/fabric/database/mirrored-database/overview).
+This system stored procedure is used for the Fabric Mirrored Database feature for Azure SQL Database. For more information, see [What is Mirroring in Fabric?](/fabric/database/mirrored-database/overview)
 
 ## Syntax
 

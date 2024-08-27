@@ -796,10 +796,11 @@ items:
         - name: Logins & Jobs after role switching
           href: sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md
   - name: Database mirroring
-    href: database-engine/database-mirroring/database-mirroring-sql-server.md
     items:
-    - name: Fabric Database Mirroring
+    - name: Fabric mirrored databases
       href: sql-server/fabric-mirrored-database/fabric-mirrored-databases.md
+    - name: Database mirroring
+      href: database-engine/database-mirroring/database-mirroring-sql-server.md
     - name: Overview
       items:
       - name: Prerequisites, Restrictions, & Recommendations

@@ -5,6 +5,7 @@ author: rothja
 ms.author: jroth
 ms.date: 04/30/2018
 ms.service: virtual-machines-sql
+ms.subservice: security
 ms.topic: "include"
 ms.custom: include file
 ms.devlang: na

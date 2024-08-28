@@ -13753,6 +13753,10 @@ items:
         href: relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md
       - name: sys.fn_trace_gettable
         href: relational-databases/system-functions/sys-fn-trace-gettable-transact-sql.md
+    - name: Azure Synapse Link for SQL & Fabric mirrored databases
+      items:
+      - name: sys.fn_has_change_feed_permissions
+        href: relational-databases/system-functions/fn-has-change-feed-permissions.md
   - name: System information schema views
     href: relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md
     items:
@@ -15214,7 +15218,7 @@ items:
         href: relational-databases/system-stored-procedures/sp-pdw-remove-network-credentials-sql-data-warehouse.md
       - name: sp_special_columns_100
         href: relational-databases/system-stored-procedures/sp-special-columns-100-sql-data-warehouse.md
-    - name: Azure Synapse Link for SQL & Fabric Mirroring
+    - name: Azure Synapse Link for SQL & Fabric mirrored databases
       items:
       - name: sp_change_feed_configure_parameters
         href: relational-databases/system-stored-procedures/sp-change-feed-configure-parameters.md

@@ -1,8 +1,9 @@
 ---
 title: "CREATE EXTERNAL DATA SOURCE (Transact-SQL) CONNECTION_OPTIONS argument"
 description: The CREATE EXTERNAL DATA SOURCE CONNECTION_OPTIONS argument can vary depending on the external data provider. This article provides additional detail for connection options depending on the provider.
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: randolphwest, hudequei
 ms.date: 09/14/2022
 ms.service: sql
 ms.subservice: t-sql

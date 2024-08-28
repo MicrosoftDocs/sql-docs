@@ -426,7 +426,7 @@
     href: ../reporting-services/report-server-sharepoint/connect-filter-or-documents-web-part-sharepoint-integrated-mode.md
   - name: Customize the Report Viewer web part
     href: ../reporting-services/report-server-sharepoint/customize-the-report-viewer-web-part.md
-  - name: Report Viewer Web Part programmability in SharePoint integration
+  - name: Report Viewer Web Part programmability
     href: ../reporting-services/report-viewer-web-part-programmability-in-sharepoint-integration.md
   - name: SharePoint site settings for the Report Viewer web part
     href: ../reporting-services/report-server-sharepoint/report-viewer-web-part-sharepoint-site-settings.md
@@ -1048,7 +1048,7 @@
     href: ../reporting-services/report-data/bind-a-report-or-model-to-a-shared-data-source-ssrs.md
   - name: Create and Modify Embedded Data Sources
     href: ../reporting-services/report-data/create-and-modify-embedded-data-sources.md
-  - name: Configure Data Source Properties for a Paginated Report
+  - name: Configure Data Source Properties
     href: ../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md
   - name: Manage Report Data Sources
     href: ../reporting-services/report-data/manage-report-data-sources.md

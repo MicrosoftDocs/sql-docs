@@ -2,16 +2,13 @@
 title: Transact-SQL debugger
 titleSuffix: T-SQL debugger
 description: Learn how to step through code and view the execution state using the Transact-SQL debugger, and how to do various other debugging tasks.
-author: markingmyname
-ms.author: maghan
+author: erinstellato-ms
+ms.author: erinstellato
 ms.reviewer: drskwier
-ms.date: 10/16/2021
+ms.date: 08/28/2024
 ms.service: sql
-ms.subservice: ssms
+ms.subservice: ssdt
 ms.topic: conceptual
-helpviewer_keywords:
-  - "Transact-SQL debugger, introduction"
-monikerRange: ">= sql-server-2016"
 ---
 
 # Transact-SQL debugger
@@ -20,7 +17,7 @@ monikerRange: ">= sql-server-2016"
 
 The [!INCLUDE[tsql](../../includes/tsql-md.md)] debugger helps you find errors in [!INCLUDE[tsql](../../includes/tsql-md.md)] code by investigating the run-time behavior of the code. After you set the [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor window to debug mode, you can pause execution on specific lines of code and inspect information and data that is used by or returned by those [!INCLUDE[tsql](../../includes/tsql-md.md)] statements.
 
-[!INCLUDE[ssms-old-versions](../../includes/ssms-old-versions.md)]  T-SQL debugging is also available in [SQL Server Data Tools](../../ssdt/sql-server-data-tools.md) for Visual Studio.
+T-SQL debugging is available in [SQL Server Data Tools](../../ssdt/sql-server-data-tools.md) for Visual Studio.
 
 ## Stepping through Transact-SQL Code
 
@@ -28,7 +25,7 @@ The [!INCLUDE[tsql](../../includes/tsql-md.md)] debugger provides the following 
 
 - Set breakpoints on individual [!INCLUDE[tsql](../../includes/tsql-md.md)] statements.
 
-    A breakpoint specifies a point at which you want execution to pause so you can examine data. When you start the debugger, it pauses on the first line of code in the Query Editor window. To run to the first breakpoint that you have set, you can use the **Continue** feature. You can also use the **Continue** feature to run to the next breakpoint from any location at which the window is currently paused. You can edit breakpoints to specify actions such as the conditions under which the breakpoint should pause execution, information to print to the **output** window, and change the location of the breakpoint.  
+    A breakpoint specifies a point at which you want execution to pause so you can examine data. When you start the debugger, it pauses on the first line of code in the Query Editor window. To run to the first breakpoint, use **Continue**. You can also use **Continue** to run to the next breakpoint from any location at which the window is currently paused. You can edit breakpoints to specify actions such as the conditions under which the breakpoint should pause execution, information to print to the **Output** window, and change the location of the breakpoint.  
 
 - Step into the next statement.  
 
@@ -38,7 +35,7 @@ The [!INCLUDE[tsql](../../includes/tsql-md.md)] debugger provides the following 
 
     If you're sure there are no errors in a stored procedure, you can step over it. The procedure is executed in full, and the results are returned to the code.  
 
-    If you want to debug a stored procedure or function, you can step into the module. SQL Server Management Studio opens a new [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor window that is populated with the source code for the module, places the window into debug mode, and then pauses execution on the first statement in the module. You can then navigate through the module code, for example, by setting breakpoints or stepping through the code.  
+    If you want to debug a stored procedure or function, you can step into the module. A new [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor window opens that populates with the source code for the module.  The window is in debug mode, and execution pauses on the first statement in the module. You can then navigate through the module code, for example, by setting breakpoints or stepping through the code.  
 
 For more information about how the debugger enables you to navigate code, see [Step Through Transact-SQL Code](./step-through-transact-sql-code.md).  
 
@@ -60,13 +57,10 @@ Each time the debugger pauses execution on a specific [!INCLUDE[tsql](../../incl
 
 ## Transact-SQL debugger tasks  
 
-|Task Description|Topic|  
+|Task Description|Article|  
 |----------------------|-----------|  
-|Describes how to configure the [!INCLUDE[tsql](../../includes/tsql-md.md)] debugger for remote debugging.|[Configure firewall rules before running the Transact-SQL debugger](./configure-firewall-rules-before-running-the-tsql-debugger.md)|  
-|Describes how to start, stop, and control the operation of the debugger.|[Run the Transact-SQL Debugger](./run-the-transact-sql-debugger.md)|  
-|Describes how to use the [!INCLUDE[tsql](../../includes/tsql-md.md)] debugger to step through code.|[Step Through Transact-SQL Code](./step-through-transact-sql-code.md)|  
-|Describes how to use the debugger to view [!INCLUDE[tsql](../../includes/tsql-md.md)] data, such as parameters and variables, and system information.|[Transact-SQL Debugger Information](./transact-sql-debugger-information.md)|  
-
-## See also
-
-[Query and Text Editors &#40;SQL Server Management Studio&#41;](../f1-help/database-engine-query-editor-sql-server-management-studio.md)
+|Describes how to configure the [!INCLUDE[tsql](../../includes/tsql-md.md)] debugger for remote debugging.|[Configure firewall rules before running the Transact-SQL debugger](./configure-firewall-rules-before-running-tsql-debugger.md)|  
+|Describes how to start, stop, and control the operation of the debugger.|[Run the Transact-SQL Debugger](./run-transact-sql-debugger.md)|  
+|Describes how to use the [!INCLUDE[tsql](../../includes/tsql-md.md)] debugger to step through code.|[Step Through Transact-SQL Code](./step-through-transact-sql-code.md)|
+|Describes how to use the [!INCLUDE[tsql](../../includes/tsql-md.md)] debugger to step through stored procedure code.|[Debug Stored Procedures](./debug-stored-procedures.md)|
+|Describes how to use the debugger to view [!INCLUDE[tsql](../../includes/tsql-md.md)] data, such as parameters and variables, and system information.|[Transact-SQL Debugger Information](./transact-sql-debugger-information.md)|

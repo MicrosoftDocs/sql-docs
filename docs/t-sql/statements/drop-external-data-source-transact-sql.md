@@ -1,8 +1,9 @@
 ---
 title: "DROP EXTERNAL DATA SOURCE (Transact-SQL)"
 description: DROP EXTERNAL DATA SOURCE (Transact-SQL)
-author: markingmyname
-ms.author: maghan
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: hudequei
 ms.date: "03/03/2017"
 ms.service: sql
 ms.subservice: t-sql

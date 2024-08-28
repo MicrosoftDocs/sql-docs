@@ -1,8 +1,9 @@
 ---
 title: "ALTER EXTERNAL DATA SOURCE (Transact-SQL)"
 description: ALTER EXTERNAL DATA SOURCE (Transact-SQL)
-author: markingmyname
-ms.author: maghan
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: randolphwest, hudequei
 ms.date: "07/26/2019"
 ms.service: sql
 ms.subservice: t-sql

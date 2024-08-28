@@ -70,8 +70,8 @@ For the driver in a tar.gz file: [Chinese (Simplified)](https://go.microsoft.com
 | :---------- | :----------- |
 | Java 22 support | The driver is now compatible with Java Development Kit (JDK) version 22.0 in addition to JDK 21.0, 17.0, 11.0 and 1.8. |
 | Added credential caching when using Managed Identity Credential or Default Azure Credential | In order to improve performance and driver reliability, the driver now allows caching of the previously mentioned credentials. |
-| Allow caching of the `SQLServerBulkCopy` object when using bulkcopy for batch insert | Replaces previous behavior, where each call of `executeBatch()` generated a new `SQLServerBulkCopy` object, by caching the object instead. |
-| Added connection level caching for destination column metadate in bulkcopy | Improves performance by adding caching at the connection level for destination column metadata in bulkcopy scenarios. This feature is enabled by setting the newly added connection string property `cacheBulkCopyMetadata` to `true` (default value is `false`). |
+| Allow caching of the `SQLServerBulkCopy` object when using bulk copy for batch insert | Replaces previous behavior, where each call of `executeBatch()` generated a new `SQLServerBulkCopy` object, by caching the object instead. |
+| Added connection level caching for destination column metadate in bulk copy | Improves performance by adding caching at the connection level for destination column metadata in bulk copy scenarios. This feature is enabled by setting the newly added connection string property `cacheBulkCopyMetadata` to `true` (default value is `false`). |
 | Added a SQL Server message handler and support for SQLException chaining | Added a SQL Server message handler allowing for several features including extra feedback for long running queries, universal error logging, and automatic downgrade of error-message severity from SQLException to SQLWarning. Additionally, this feature allows for chaining of SQLExceptions together so that all error messages are available to the user. See [Handling Errors](handling-errors.md). |
 | Provided full support for RFC4180 for CSV bulk insert operations | Support for quoted fields containing newlines were missing in order to ensure full support with RFC4180; this support is now added. |
 | Allow constructing a `microsoft.sql.DateTimeOffset` instance from a `java.time.OffsetDateTime` value | Conversion between the two data types already existed in the driver using a `Timestamp` intermediary. This addition removes that intermediary, improving performance and reducing the potential for timezone-related errors. |
@@ -92,7 +92,7 @@ For the driver in a tar.gz file: [Chinese (Simplified)](https://go.microsoft.com
 | Fix | Details |
 | :---------- | :----------- |
 | Fixed regression with specifying argument names in callable statement syntax | Fixed a regression from 12.6.2 --> 12.6.3 where CallableStatements of a certain format returned incorrect values. [GitHub Issue #2477](https://github.com/microsoft/mssql-jdbc/issues/2477). |
-| Fixed parsing for parentheses in stored procedures and functions | Fixed an issue where calling a function with parentheses at the end in a callable statement, for example, function() vs function, resulting in the return value always being 0. This change was a regression from 12.6.2 --> 12.6.3. [GitHub Issue #2463](https://github.com/microsoft/mssql-jdbc/issues/2463). |
+| Fixed parsing for parentheses in stored procedures and functions | Fix for an issue where calling a function with parentheses at the end in a callable statement, for example, function() vs function, resulting in the return value always being 0. This change was a regression from 12.6.2 --> 12.6.3. [GitHub Issue #2463](https://github.com/microsoft/mssql-jdbc/issues/2463). |
 | Fixed an error where the driver wasn't respecting `CallableStatement` with default arguments. | Fixed an error that was a regression from 12.5.0 --> 12.6.0, where default arguments in callable statements were being ignored. [GitHub Issue #2446](https://github.com/microsoft/mssql-jdbc/issues/2446). |
 | Fix to remove `TokenCredential` class where the driver doesn't require it | `TokenCredentialClass` isn't needed in `SQLServerSecurityUtility` and can cause an incorrectly thrown `NoClassDefFoundError`. This fix removes the import, replacing it with a generic `Object`. [GitHub Issue #2439](https://github.com/microsoft/mssql-jdbc/issues/2439). |
 | Fixed timestamp string conversion error for CallableStatements | Fixed a conversion exception that occurred when calling a `DateTime` in/out parameter while setting a `String` value.  [GitHub Issue #2436](https://github.com/microsoft/mssql-jdbc/issues/2436). |
@@ -105,7 +105,7 @@ For the driver in a tar.gz file: [Chinese (Simplified)](https://go.microsoft.com
 | Fix to properly escape `schema` parameters for `getProcedures` and `getProcedureColumns` | The `SQLServerDatabaseMetadata` methods `getProcedures` and `getProcedureColumns` weren't properly escaping certain characters (for example, `\`) for the `schema` parameter. This change fixes that issue. [GitHub Issue #2336](https://github.com/microsoft/mssql-jdbc/issues/2336). |
 | Added token cache map to fix use of unintended auth token for subsequent connections | This fixes an issue where client credentials could be inadvertently reused. While the auth token was correctly cached, the driver was reusing the token with only the client secret changed. [GitHub Issue #2334](https://github.com/microsoft/mssql-jdbc/issues/2334). |
 | Fixed support for `exec` escape syntax in CallableStatements | This fixes an issue where, after removing the wrapped `sp_executesql`/`sp_prepexec` calls in order to execute CallableStatements quickly, `EXEC` calls were no longer working. [GitHub Issue #2325](https://github.com/microsoft/mssql-jdbc/issues/2325). |
-| Fix to ensure `Money` and `SmallMoney` are within the correct ranges for `BulkCopy` | This fixes an issue where, when using `BulkCopy` with `Money` or `SmallMoney` values, conversion to/from the values can cause an `ArithmeticOverflowException`. [GitHub Issue #2309](https://github.com/microsoft/mssql-jdbc/issues/2309). |
+| Fix to ensure `Money` and `SmallMoney` are within the correct ranges for bulk copy | This fixes an issue where, when using bulk copy with `Money` or `SmallMoney` values, conversion to/from the values can cause an `ArithmeticOverflowException`. [GitHub Issue #2309](https://github.com/microsoft/mssql-jdbc/issues/2309). |
 | Fix to ensure `ResultSetMetadata` for  `DataabseMetadata.getColumns()` is correct for all columns | The returned metadata was incorrect for some columns, this change fixes that problem. [GitHub Issue #2232](https://github.com/microsoft/mssql-jdbc/issues/2232). |
 | Fix to properly turn off connection retries when `connectRetryCount` is set to `0` | This fixes the behavior where, even with `connectRetryCount` set to 0, the driver attempted to retry until `loginTimeout` was reached. [GitHub Issue #2232](https://github.com/microsoft/mssql-jdbc/issues/2232). [GitHub Issue #2188](https://github.com/microsoft/mssql-jdbc/issues/2188).|
 | Fix to address a `ClassLoader` leak of `ActivityCorrelator` `ThreadLocal` | Fixes an issue where, after previous driver changes to `ActivityId`, `ThreadLocal` in `ActivityCorrelator` is never being removed from the thread. |
@@ -174,7 +174,7 @@ Added features in 12.6.2:
 
 Fixed issues in 12.6.2:
 
-- Check that money and small money are within correct range for bulkcopy
+- Check that money and small money are within correct range for bulk copy
 - Check if TDSCommand counter is null before incrementing
 - Clear prepared statement cache when resetting statement pool connection
 - Clear prepared statement handle before reconnect
@@ -230,9 +230,9 @@ For the driver in a tar.gz file: [Chinese (Simplified)](https://go.microsoft.com
 | :---------- | :----------- |
 | Changed how IBM JDK is checked for prevent issues with OSGi environments | Changed from only checking vendor name, to checking both vendor and vm name. |
 | Properly synchronized all calls to MSAL | Prevents the driver from making extra calls and proving unnecessary dialogues. |
-| Added more errors that should translate to RMFAIL | Added more cases, "connection reset by peer" and "connection timed out", that should equate to RMFAIL |
-| Changed how Timestamps are used in BulkCopy | Change BulkCopy behavior from serializing and deserializing Timestamp objects, to using the objects directly, leading to a performance improvement when a user is using many Timestamps. |
-| Changed `socketTimeout` to ensure it's properly less than `loginTimeout` | Previously `socketTimeout` acted independently from `loginTimeout` leading to potentially confusing behavior where the driver would take longer to timeout than expected. This issue is fixed so `socketTimeout` always has an upper bound equal to `loginTimeout`. |
+| Added more errors that should translate to RMFAIL | Added more cases, "connection reset by peer" and "connection timed out," that should equate to RMFAIL |
+| Changed how Timestamps are used in bulk copy | Change bulk copy behavior from serializing and deserializing Timestamp objects, to using the objects directly, leading to a performance improvement when a user is using many Timestamps. |
+| Changed `socketTimeout` to ensure it's properly less than `loginTimeout` | Previously `socketTimeout` acted independently from `loginTimeout` leading to potentially confusing behavior where the driver would take longer to time out than expected. This issue is fixed so `socketTimeout` always has an upper bound equal to `loginTimeout`. |
 | Adjusted the PreparedStatement cache so it clears itself before every execute | The PreparedStatement cache wasn't being cleared correctly, which, in addition to its infrequency, could lead to memory issues over time. This change ensures the cache is cleaned before each execute, preventing object build-up. |
 | Upgraded to newer Bouncycastle dependencies | Upgrade from `bcprov-jdk15on` and `bcpkix-jdk15on` to `bcprov-jdk18on` and `bcpkix-jdk18on` as the former is no longer being updated. |
 | Updated dependencies | Updated dependency versions for `azure-identity`, `azure-security-keyvault-keys`, `bouncycastle`, `h2`, and `msal`. |
@@ -241,21 +241,21 @@ For the driver in a tar.gz file: [Chinese (Simplified)](https://go.microsoft.com
 
 | Fix | Details |
 | :---------- | :----------- |
-| Fixed a missing null check for e.getCause() | Fixed an issue where, when an exception has no cause, the exception itself is passed along instead, preventing it from being lost. [GitHub Issue #2299](https://github.com/microsoft/mssql-jdbc/issues/2299).|
+| Fixed a missing null check for e.getCause() | Fix for an issue where, when an exception has no cause, the exception itself is passed along instead, preventing it from being lost. [GitHub Issue #2299](https://github.com/microsoft/mssql-jdbc/issues/2299).|
 | Fixed locks in IOBuffer to prevent deadlock issues that could arise | Fixed implementation of locks in IOBuffer, specifically around disableSSL, to prevent deadlocks that could arise in certain situations. [GitHub Issue #2288](https://github.com/microsoft/mssql-jdbc/issues/2288). [GitHub Issue #2265](https://github.com/microsoft/mssql-jdbc/issues/2265).|
-| Fixed an issue with Timestamps and bulk copy for batch insert | Fixed timezone not being properly applied to Timestamps when inserted using batch insert with bulkcopy. [GitHub Issue #2271](https://github.com/microsoft/mssql-jdbc/issues/2271).|
-| Fixed missing getters and setters for `useBulkCopyForBatchInsert` | Fixed an issue where behavior wasn't the same between `SQLServerConnection` and `SQLServerConnnectionPoolProxy`, when it should be, as `useBulkCopyForBatchInsert` was missing a getter and setter in the latter. [GitHub Issue #2245](https://github.com/microsoft/mssql-jdbc/issues/2245).|
-| Fixed bulkcopy metadata query to make use of cached data, if available | Fixed an issue where, despite the data being cached, calls for column metadata were being called each time. [GitHub Issue #2224](https://github.com/microsoft/mssql-jdbc/issues/2224).|
-| Fixed a missing BigDecimal scale check for TVP values | - Fixed an issue where, when writing TVP row values, input values weren't properly filtered for BigDecimal scale. [GitHub Issue #2222](https://github.com/microsoft/mssql-jdbc/issues/2222).|
-| Fixed schemaPattern in SQLServerDatabaseMetadata to ensure methods that use the parameter properly escape it. | Fixed an issue where schemaPattern was the only pattern not properly being escaped in SQLServerDatabaseMetadata. [GitHub Issue #2186](https://github.com/microsoft/mssql-jdbc/issues/2186).|
-| Fixed an issue where a null SQLState was returned when trying to convert a date to a long | Fixed an issue where, when `xopenStates` is set to true, the driver doesn't return the expected SQL-99 state code in a particular instance. [GitHub Issue #2167](https://github.com/microsoft/mssql-jdbc/issues/2167).|
-| Fixed getMetaData error for queries containing TOP | Fixed an issue where, when using the TOP qualifier in a query, the driver returns an error concerning ParameterMetadata. [GitHub Issue #1776](https://github.com/microsoft/mssql-jdbc/issues/1776).|
-| Fixed a table name parsing issue when using batch inserts | Fixed an issue where insert statements with missing whitespace worked correctly in regular cases, but not when using batch inserts. [GitHub Issue #1534](https://github.com/microsoft/mssql-jdbc/issues/1534).|
-| Fixed an issue with ParameterMetadata and invalid indexes | Fixed an issue with ParameterMetadata not properly checking, and throwing exceptions for, an invalid index 0. [GitHub Issue #1490](https://github.com/microsoft/mssql-jdbc/issues/1490).|
+| Fix for an issue with Timestamps and bulk copy for batch insert | Fixed timezone not being properly applied to Timestamps when inserted using batch insert with bulk copy. [GitHub Issue #2271](https://github.com/microsoft/mssql-jdbc/issues/2271).|
+| Fixed missing getters and setters for `useBulkCopyForBatchInsert` | Fix for an issue where behavior wasn't the same between `SQLServerConnection` and `SQLServerConnnectionPoolProxy`, when it should be, as `useBulkCopyForBatchInsert` was missing a getter and setter in the latter. [GitHub Issue #2245](https://github.com/microsoft/mssql-jdbc/issues/2245).|
+| Fixed bulk copy metadata query to make use of cached data, if available | Fix for an issue where, despite the data being cached, calls for column metadata were being called each time. [GitHub Issue #2224](https://github.com/microsoft/mssql-jdbc/issues/2224).|
+| Fixed a missing BigDecimal scale check for TVP values | Fix for an issue where, when writing TVP row values, input values weren't properly filtered for BigDecimal scale. [GitHub Issue #2222](https://github.com/microsoft/mssql-jdbc/issues/2222).|
+| Fixed schemaPattern in SQLServerDatabaseMetadata to ensure methods that use the parameter properly escape it. | Fix for an issue where schemaPattern was the only pattern not properly being escaped in SQLServerDatabaseMetadata. [GitHub Issue #2186](https://github.com/microsoft/mssql-jdbc/issues/2186).|
+| Fix for an issue where a null SQLState was returned when trying to convert a date to a long | Fix for an issue where, when `xopenStates` is set to true, the driver doesn't return the expected SQL-99 state code in a particular instance. [GitHub Issue #2167](https://github.com/microsoft/mssql-jdbc/issues/2167).|
+| Fixed getMetaData error for queries containing TOP | Fix for an issue where, when using the TOP qualifier in a query, the driver returns an error concerning ParameterMetadata. [GitHub Issue #1776](https://github.com/microsoft/mssql-jdbc/issues/1776).|
+| Fixed a table name parsing issue when using batch inserts | Fix for an issue where insert statements with missing whitespace worked correctly in regular cases, but not when using batch inserts. [GitHub Issue #1534](https://github.com/microsoft/mssql-jdbc/issues/1534).|
+| Fix for an issue with ParameterMetadata and invalid indexes | Fix for an issue with ParameterMetadata not properly checking, and throwing exceptions for, an invalid index 0. [GitHub Issue #1490](https://github.com/microsoft/mssql-jdbc/issues/1490).|
 | Fixed behavior of ActivityID in ActivityCorrelator | Fixed the way ActivityID was defined and used to be more in line with the behavior of other Microsoft drivers. |
-| Fix to ignore computed columns when using bulkcopy for batch insert | Fixed BulkCopy behavior to ignore computed columns, and allow batch inserts, when previously the insert would fail and return an error citing those computed columns. |
-| Fixed driver behavior concerning signatures when using Java Key Store and Azure Key Vault | Fixed an issue where the driver wasn't properly verifying the signature, when using Java Key Store, and adding a new API to sign column master key metadata (and return generated signature) for use with Java Key Store and Azure Key Vault  |
-| Fixes getObject()'s erroneous conversion of DateTimeOffset | Fixed an issue when calling ResultSet.getObject() on a DATETIMEOFFSET column, with LocalDate/LocalTime/LocalDateTime as the class argument, the value in the column would be converted to the local time zone. |
+| Fix to ignore computed columns when using bulk copy for batch insert | Fixed bulk copy behavior to ignore computed columns, and allow batch inserts, when previously the insert would fail and return an error citing those computed columns. |
+| Fixed driver behavior concerning signatures when using Java Key Store and Azure Key Vault | Fix for an issue where the driver wasn't properly verifying the signature, when using Java Key Store, and adding a new API to sign column master key metadata (and return generated signature) for use with Java Key Store and Azure Key Vault  |
+| Fixes getObject()'s erroneous conversion of DateTimeOffset | Fix for an issue when calling ResultSet.getObject() on a DATETIMEOFFSET column, with LocalDate/LocalTime/LocalDateTime as the class argument, the value in the column would be converted to the local time zone. |
 
 ## <a id="124"></a> 12.4
 
@@ -356,9 +356,9 @@ For the driver in a tar.gz file: [Chinese (Simplified)](https://go.microsoft.com
 | Fixed lockTimeout not taking effect when redirect mode is set in Azure DB | Fixed when `lockTimeout` is set, as it should only apply to connections from outside Azure, and not from within Azure, as was previously. [GitHub Issue #2110](https://github.com/microsoft/mssql-jdbc/issues/2110).|
 | Fixed high thread count when using findSocketUsingThreading | Fixes an issue where an uncaught exception led to interruption in sleep calls upstream, causing retries to happen too quickly. [GitHub Issue #2104](https://github.com/microsoft/mssql-jdbc/issues/2104).|
 | Fixed shared timer race condition | Fixed a potential race condition in the `SharedTimer` class. [GitHub Issue #2085](https://github.com/microsoft/mssql-jdbc/issues/2085).|
-| Fixed an error with stored procedures and zero result `metaQuery` return | Fixed an issue where, if `metaQuery` returned no result after execution of a stored procedure, this issue would return a parameter undefined error. [GitHub Issue #2063](https://github.com/microsoft/mssql-jdbc/issues/2063).|
-| Fixed invalid batch inserts when columns provided in insert differs in order from table schema | Fixed an issue where usage of `useBulkCopyForBatchInsert=true` can lead to column mix-up and invalid data. [GitHub Issue #1992](https://github.com/microsoft/mssql-jdbc/issues/1992).|
-| Fixed XA error handling to rethrow XAER_RMFAIL instead of XAER_RMERR | Fixed an issue where, the driver would return XAException with error code XAER_RMERR if there was failover of SQL Server from primary node to standby node while committing an XA Transaction. [GitHub Issue #1432](https://github.com/microsoft/mssql-jdbc/issues/1432).|
+| Fixed an error with stored procedures and zero result `metaQuery` return | Fix for an issue where, if `metaQuery` returned no result after execution of a stored procedure, this issue would return a parameter undefined error. [GitHub Issue #2063](https://github.com/microsoft/mssql-jdbc/issues/2063).|
+| Fixed invalid batch inserts when columns provided in insert differs in order from table schema | Fix for an issue where usage of `useBulkCopyForBatchInsert=true` can lead to column mix-up and invalid data. [GitHub Issue #1992](https://github.com/microsoft/mssql-jdbc/issues/1992).|
+| Fixed XA error handling to rethrow XAER_RMFAIL instead of XAER_RMERR | Fix for an issue where, the driver would return XAException with error code XAER_RMERR if there was failover of SQL Server from primary node to standby node while committing an XA Transaction. [GitHub Issue #1432](https://github.com/microsoft/mssql-jdbc/issues/1432).|
 | Fixes to Activity ID and Client ID behavior to maintain consistency with JDBC specification | Fixed Activity ID behavior to stay the same for the life of the process, always send Activity ID in `PRELOGIN`, and increment sequence for each new connection. Also fixed client ID to persist for the life of the process. |
 
 ## <a id="122"></a> 12.2
@@ -416,7 +416,7 @@ For the driver in a tar.gz file: [Chinese (Simplified)](https://go.microsoft.com
 
 | Fix | Details |
 | :---------- | :----------- |
-| Fixed null SQL state and zero error code when database exception is thrown | Fixed an issue where, after SQL Error, the SQL State and error code showed incorrect information. [GitHub Issue #2015](https://github.com/microsoft/mssql-jdbc/issues/2015). |
+| Fixed null SQL state and zero error code when database exception is thrown | Fix for an issue where, after SQL Error, the SQL State and error code showed incorrect information. [GitHub Issue #2015](https://github.com/microsoft/mssql-jdbc/issues/2015). |
 | Fixed Idle Connection recovery so that `unprocessedResponseCount` isn't over-decremented | `unprocessedResponseCount` needs to only be decremented when `doneToken.isFinal` is true, it was being decremented regardless. [GitHub Issue #1971](https://github.com/microsoft/mssql-jdbc/issues/1971). |
 | Fixed connecting to the wrong SQLServer host | Fixes a concurrency issue where, when a driver is connecting to multiple SQLServer hosts, a connection could be established to the wrong host. [GitHub Issue #1964](https://github.com/microsoft/mssql-jdbc/issues/1964). |
 | Fixed incorrect `updateCount` | The incorrect update count can happen in both true/false cases for `enablePrepareOnFirstPreparedStatementCall` and for both prepexec/prepare. [GitHub Issue #1961](https://github.com/microsoft/mssql-jdbc/issues/1961). |
@@ -538,7 +538,7 @@ For the driver in a tar.gz file: [Chinese (Simplified)](https://go.microsoft.com
 | :---------- | :----------- |
 | Fixed error caused by preparedMethod=prepare | Fixed intermittent null prepared statement handle error caused by sp_prepare when used with batch queries [GitHub Issue #1880](https://github.com/microsoft/mssql-jdbc/issues/1880). |
 | Fixed an error where establishing multiple connections in parallel can throw an IndexOutOfBoundsException | Fixed race condition with addressList, which may result in IndexOutOfBoundsException when establishing multiple connections [GitHub Issue #1852](https://github.com/microsoft/mssql-jdbc/issues/1852). |
-| Fixed assertion fails that happen when canceling "insert into" statement | Fixed an issue where the driver may assert when canceling a statement [GitHub Issue #1849](https://github.com/microsoft/mssql-jdbc/issues/1849). |
+| Fixed assertion fails that happens when canceling "insert into" statement | Fix for an issue where the driver may assert when canceling a statement [GitHub Issue #1849](https://github.com/microsoft/mssql-jdbc/issues/1849). |
 | Fixed an exception not being thrown as expected when the session is killed in SQL database | Added check for DONE_ERROR status token, which may occur from a killed session on the server [GitHub Issue #1846](https://github.com/microsoft/mssql-jdbc/issues/1846). |
 | Managed Identity Retry interval | Fixed Managed Identity retry interval to properly back off exponentially [GitHub Issue #1765](https://github.com/microsoft/mssql-jdbc/issues/1765). |
 | Removed an extra call to executeCommand() within connectionCommand() | Removed an extra call to executeCommand that was causing performance issues for some users [GitHub Issue #1669](https://github.com/microsoft/mssql-jdbc/issues/1669). |
@@ -719,8 +719,8 @@ For the driver in a tar.gz file: [Chinese (Simplified)](https://go.microsoft.com
 | :---------- | :----------- |
 | [GitHub Issue #1499](https://github.com/microsoft/mssql-jdbc/issues/1499) | Fixed: Batch fails when always encrypted is enabled in the connection string and clearParameters is called. |
 | [GitHub Issue #1632](https://github.com/microsoft/mssql-jdbc/issues/1632) | Fixed: Small memory leak on new connection. |
-| [GitHub Issue #1565](https://github.com/microsoft/mssql-jdbc/issues/1565) | Fixed an issue where trustStorePassword is null when using applicationIntent=ReadOnly |
-| [GitHub Issue #1568](https://github.com/microsoft/mssql-jdbc/issues/1568) | Fixed an issue where redirected token contains named instance in servername |
+| [GitHub Issue #1565](https://github.com/microsoft/mssql-jdbc/issues/1565) | Fix for an issue where trustStorePassword is null when using applicationIntent=ReadOnly |
+| [GitHub Issue #1568](https://github.com/microsoft/mssql-jdbc/issues/1568) | Fix for an issue where redirected token contains named instance in servername |
 | [GitHub Issue #1531](https://github.com/microsoft/mssql-jdbc/issues/1531) | Fixed potential integer overflow in TDSWriter.writeString() |
 
 ## <a id="92"></a> 9.2
@@ -750,7 +750,7 @@ Released: March 02, 2021
 
 Fixed issues in 9.2.1:
 
-- Fixed an issue with client secret being empty during ActiveDirectoryServicePrincipal authentication in Azure environment.
+- Fix for an issue with client secret being empty during ActiveDirectoryServicePrincipal authentication in Azure environment.
 
 Version number: 9.2.0  
 Released: January 29, 2021
@@ -816,9 +816,9 @@ Version number: 8.4.1
 Released: August 27, 2020  
 Fixed issues:  
 
-- Fixed an issue with `SQLServerConnectionPoolProxy` not being compatible with `delayLoadingLobs`
+- Fix for an issue with `SQLServerConnectionPoolProxy` not being compatible with `delayLoadingLobs`
 - Fixed a potential `NullPointerException` issue with `delayLoadingLobs`
-- Fixed an issue with decrypting column encryption keys when using the Windows Certificate Store
+- Fix for an issue with decrypting column encryption keys when using the Windows Certificate Store
 
 Version number: 8.4.0  
 Released: July 31, 2020  
@@ -1164,7 +1164,7 @@ The driver supports the Java Database Connectivity API 4.3 specification, in add
 
 ### Added connection property: sslProtocol
 
-A new connection property lets users specify the TLS protocol keyword. Possible values are: "TLS", "TLSv1", "TLSv1.1", and "TLSv1.2". For details, see [SSLProtocol](https://github.com/Microsoft/mssql-jdbc/wiki/SSLProtocol).
+A new connection property lets users specify the TLS protocol keyword. Possible values are: "TLS," "TLSv1," "TLSv1.1," and "TLSv1.2." For details, see [SSLProtocol](https://github.com/Microsoft/mssql-jdbc/wiki/SSLProtocol).
 
 ### Deprecated connection property: fipsProvider
 
@@ -1232,7 +1232,7 @@ Version number: 6.2.1
 Released: July 14, 2017  
 Fixed issues:  
 
-- Fixed an issue when running queries without parameters using `preparedStatement`
+- Fix for an issue when running queries without parameters using `preparedStatement`
 
 Version number: 6.2.0  
 Released: June 30, 2017  
@@ -1264,15 +1264,15 @@ The JDBC Driver now has support for:
 
 The JDBC Driver now supports the following configurable timeouts. You can change them based on your application's needs.
 
-- Query timeout to control the number of seconds to wait before a timeout occurs when you're running a query.
-- Socket timeout to specify the number of milliseconds to wait before a timeout occurs on a socket read or accept.
+- `Query timeout` to control the number of seconds to wait before a timeout occurs when you're running a query.
+- `Socket timeout` to specify the number of milliseconds to wait before a timeout occurs on a socket read or accept.
 
 ## 6.1
 
 Version number: 6.1.0  
 Released: November 17, 2016  
 
-Microsoft JDBC Driver 6.1 for SQL Server is fully compliant with JDBC specifications 4.1 and 4.2. This is the initial open-source release of the JDBC Driver. The source code can be found at the [GitHub v6.1.0 tag](https://github.com/microsoft/mssql-jdbc/releases/tag/v6.1.0). It builds the mssql-jdbc-6.1.0.jre8.jar and mssql-jdbc-6.1.0.jre7.jar files, which correspond to Java version compatibility.
+Microsoft JDBC Driver 6.1 for SQL Server is fully compliant with JDBC specifications 4.1 and 4.2. This release is the initial open-source release of the JDBC Driver. The source code can be found at the [GitHub v6.1.0 tag](https://github.com/microsoft/mssql-jdbc/releases/tag/v6.1.0). It builds the mssql-jdbc-6.1.0.jre8.jar and mssql-jdbc-6.1.0.jre7.jar files, which correspond to Java version compatibility.
 
 ## 6.0
 
@@ -1288,7 +1288,7 @@ For the driver in a tar.gz file: [Chinese (Simplified)](https://go.microsoft.com
 
 Microsoft JDBC Driver 6.0 for SQL Server is fully compliant with JDBC specifications 4.1 and 4.2. The jars in the 6.0 package are named according to their compliance with the JDBC API version. For example, the sqljdbc42.jar file from the 6.0 package is JDBC API 4.2 compliant. Similarly, the sqljdbc41.jar file is compliant with JDBC API 4.1.
 
-To ensure that you have the right sqljdbc42.jar or sqljdbc41.jar file, run the following lines of code. If the output is "Driver version: 6.0.7507.100", you have the JDBC Driver 6.0 package.
+To ensure that you have the right sqljdbc42.jar or sqljdbc41.jar file, run the following lines of code. If the output is "Driver version: 6.0.7507.100," you have the JDBC Driver 6.0 package.
 
 ```java
 Connection conn = DriverManager.getConnection("jdbc:sqlserver://<server>;encrypt=true;user=<user>;password=<password>;");
@@ -1335,7 +1335,7 @@ For the driver in a tar.gz file: [Chinese (Simplified)](https://go.microsoft.com
 
 Microsoft JDBC Driver 4.2 for SQL Server is fully compliant with JDBC specifications 4.1 and 4.2. The jars in the 4.2 package are named according to their compliance with the JDBC API version. For example, the sqljdbc42.jar file from the 4.2 package is JDBC API 4.2 compliant. Similarly, the sqljdbc41.jar file is compliant with JDBC API 4.1.
 
-To ensure you have the right sqljdbc42.jar or sqljdbc41.jar file, run the following lines of code. If the output is "Driver version: 4.2.6420.100", you have the JDBC Driver 4.2 package.
+To ensure you have the right sqljdbc42.jar or sqljdbc41.jar file, run the following lines of code. If the output is "Driver version: 4.2.6420.100," you have the JDBC Driver 4.2 package.
 
 ```java
 Connection conn = DriverManager.getConnection("jdbc:sqlserver://<server>;encrypt=true;user=<user>;password=<password>;");

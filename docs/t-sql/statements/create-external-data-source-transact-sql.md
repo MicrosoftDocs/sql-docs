@@ -1,9 +1,9 @@
 ---
 title: "CREATE EXTERNAL DATA SOURCE (Transact-SQL)"
 description: CREATE EXTERNAL DATA SOURCE creates an external data source used to establish connectivity and data virtualization from SQL Server and Azure SQL platforms.
-author: WilliamDAssafMSFT
-ms.author: wiassaf
-ms.reviewer: randolphwest, hudequei
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: wiassaf, hudequei
 ms.date: 09/13/2023
 ms.service: sql
 ms.subservice: t-sql

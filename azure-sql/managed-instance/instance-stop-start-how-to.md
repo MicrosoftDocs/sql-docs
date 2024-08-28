@@ -15,10 +15,10 @@ ms.topic: conceptual
 
 [!INCLUDE [appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
 
-This article describes how to stop and start an instance to save on billing costs when you're using Azure SQL Managed Instance. You can stop and start your instance by using the Azure portal, Azure PowerShell, Azure CLI, or REST API.
+This article describes how to stop and start an instance to save on billing costs when you're using [Azure SQL Managed Instance](sql-managed-instance-paas-overview.md)  in the General Purpose service tier. You can stop and start your instance by using the Azure portal, Azure PowerShell, Azure CLI, or REST API.
 
 > [!NOTE]  
-> The stop and start feature for managed instances is available only for SQL managed instances in the General Purpose service tier.
+> The stop and start feature controls billing and should not be used to [restart the instance](user-initiated-failover.md) as a troubleshooting step. 
 
 ## Overview
 
@@ -89,6 +89,7 @@ Reservation discounts are offered on a ["use it or lose it"](/azure/cost-managem
 
 Consider the following limitations:
 
+- Stop and start of an instance is currently only possible for instances in the General Purpose service tier.
 - You can't stop instances that:
   - Have an ongoing [management operation](management-operations-overview.md) (such as an ongoing restore, vCore scaling, and so on)
   - Are part of a [failover group](failover-group-sql-mi.md)

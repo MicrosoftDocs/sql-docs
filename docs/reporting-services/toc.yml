@@ -1049,7 +1049,7 @@
   - name: Create and Modify Embedded Data Sources
     href: ../reporting-services/report-data/create-and-modify-embedded-data-sources.md
   - name: Configure Data Source Properties for a Paginated Report
-    href: ../reporting-services/report-data/configure-data-source-properties-for-a-report-report-managers.md
+    href: ../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md
   - name: Manage Report Data Sources
     href: ../reporting-services/report-data/manage-report-data-sources.md
   - name: Use an Office Data Connection (.odc)

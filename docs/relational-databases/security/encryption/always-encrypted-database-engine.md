@@ -25,7 +25,7 @@ monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-20
 
 :::image type="content" source="media/always-encrypted-database-engine/always-encrypted.png" alt-text="Diagram of Always Encrypted.":::
 
-Always Encrypted and [Always Encrypted with secure enclaves](always-encrypted-enclaves.md) are features designed to safeguard sensitive information, including credit card numbers and national or regional identification numbers (such as U.S. social security numbers), in [!INCLUDE [ssazure-sqldb](../../../includes/ssazure-sqldb.md)], Azure SQL Managed Instance, and [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)] databases. It enables clients to encrypt sensitive data within client applications, ensuring that encryption keys are never exposed to the [!INCLUDE [ssDE](../../../includes/ssde-md.md)]. This provides a separation between those who own the data and can view it, and those who manage the data but should have no access : on-premises database administrators, cloud database operators, or other high-privileged unauthorized users. As a result, Always Encrypted allows customers to securely store their sensitive data in the cloud, reducing the risk of data theft by malicious insiders.
+Always Encrypted and [Always Encrypted with secure enclaves](always-encrypted-enclaves.md) are features designed to safeguard sensitive information, including credit card numbers and national or regional identification numbers (such as U.S. social security numbers), in [!INCLUDE [ssazure-sqldb](../../../includes/ssazure-sqldb.md)], Azure SQL Managed Instance, and [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)] databases. It enables clients to encrypt sensitive data within client applications, ensuring that encryption keys are never exposed to the [!INCLUDE [ssDE](../../../includes/ssde-md.md)]. This provides a separation between those who own the data and can view it, and those who manage the data but should have no access: on-premises database administrators, cloud database operators, or other high-privileged unauthorized users. As a result, Always Encrypted allows customers to securely store their sensitive data in the cloud, reducing the risk of data theft by malicious insiders.
 
 Always Encrypted has certain restrictions, such as the inability to perform operations on encrypted data, including sorting, filtering (except for point-lookups using deterministic encryption), etc. This means that some queries and applications might not be compatible with Always Encrypted or might require significant changes to the application logic.
 
@@ -109,7 +109,7 @@ The following limitations apply to queries on encrypted columns:
 
   In [Azure Data Studio](always-encrypted-query-columns-ads.md#parameterization-for-always-encrypted) or [SSMS](always-encrypted-query-columns-ssms.md#param), it's essential to apply parameterization for Always Encrypted variables to execute queries that handle values associated with encrypted columns. This includes scenarios such as inserting data into encrypted columns or applying filters on them (in cases where deterministic encryption is used).
 
-- [Use table-valued parameters](../../tables/use-table-valued-parameters-database-engine.md) targeting encrypted columns aren't supported.
+- [Table-valued parameters](../../tables/use-table-valued-parameters-database-engine.md) targeting encrypted columns aren't supported.
 
 - Queries using the following clauses aren't supported:
 

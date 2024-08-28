@@ -252,7 +252,7 @@ Before deleting the keys, you should back up the Symmetric Encryption key. You c
   
 1. If you installed report server on a new computer and you use Windows Firewall, be sure that the TCP port on which the report server listens is open. By default, this port is 80. For more information, see [Configure a firewall for report server access](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md).  
   
-1. If you want to administer your native mode report server locally, you need to configure the operating system to allow local administration with the web portal. For more information, see [Configure a native mode report server for local administration (SSRS)n](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
+1. If you want to administer your native mode report server locally, you need to configure the operating system to allow local administration with the web portal. For more information, see [Configure a native mode report server for local administration (SSRS)](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
 
 ## <a name="bkmk_copy_custom_config"></a> Copy custom configuration settings to the RSReportServer.config file
 

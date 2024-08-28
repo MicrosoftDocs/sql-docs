@@ -10823,6 +10823,24 @@ items:
   items:
   - name: Azure Data CLI azcli
     items:
+    - name: Install
+      items:
+      - name: Overview
+        href: azdata/install/deploy-install-azdata.md
+      - name: On Windows
+        href: azdata/install/deploy-install-azdata-installer.md
+      - name: On macOS
+        href: azdata/install/deploy-install-azdata-macos.md
+      - name: On Linux
+        items:
+        - name: Debian or Ubuntu
+          href: azdata/install/deploy-install-azdata-linux-package.md
+        - name: Red Hat Enterprise Linux
+          href: azdata/install/deploy-install-azdata-yum.md
+        - name: SUSE Linux Enterprise Server
+          href: azdata/install/deploy-install-azdata-zypper.md
+        - name: From script
+          href: azdata/install/deploy-install-azdata-pip.md
     - name: azdata
       href: azdata/reference/reference-azdata.md
     - name: context
@@ -10895,6 +10913,8 @@ items:
         href: azdata/reference/reference-azdata-bdc-sql.md
       - name: bdc sql settings
         href: azdata/reference/reference-azdata-bdc-sql-settings.md
+      - name: bdc sql status
+        href: azdata/reference/reference-azdata-bdc-sql-status.md
       - name: bdc status
         href: azdata/reference/reference-azdata-bdc-status.md
   - name: Database samples

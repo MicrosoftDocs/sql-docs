@@ -117,6 +117,8 @@
     href: ../reporting-services/choosing-microsoft-business-intelligence-bi-tools-for-analysis-and-reporting.md
   - name: Browser support for Reporting Services
     href: ../reporting-services/browser-support-for-reporting-services-and-power-view.md
+  - name: Plan for Reporting Services
+    href: ../reporting-services/planning-for-reporting-services.md
   - name: Plan for report design and report deployment
     href: ../reporting-services/plan-for-report-design-and-report-deployment-reporting-services.md
   - name: Planning a Report
@@ -199,6 +201,8 @@
       href: ../reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode.md
     - name: Install or Uninstall the Reporting Services Add-in for SharePoint
       href: ../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md
+    - name: Update Credentials in Report Data Sources from a SharePoint site
+      href: ../reporting-services/report-data/update-credentials-in-report-data-sources-from-a-sharepoint-site.md
     - name: Add an Additional Report Server to a Farm (SSRS Scale-out)
       href: ../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md
     - name: Add an Additional Reporting Services Web Front-end to a Farm
@@ -249,6 +253,8 @@
     href: ../reporting-services/working-with-subscriptions-web-portal.md
   - name: Working with KPIs
     href: ../reporting-services/working-with-kpis-in-reporting-services.md
+  - name: Add Report Viewer web part to web pages
+    href: ../reporting-services/report-server-sharepoint/add-the-report-viewer-web-part-to-a-web-page.md
   - name: My Settings for Power BI Integration
     href: ../reporting-services/my-settings-for-power-bi-integration-web-portal.md
 - name: Report Server Native Mode
@@ -422,6 +428,8 @@
     href: ../reporting-services/report-server-sharepoint/connect-filter-or-documents-web-part-sharepoint-integrated-mode.md
   - name: Customize the Report Viewer web part
     href: ../reporting-services/report-server-sharepoint/customize-the-report-viewer-web-part.md
+  - name: Report Viewer Web Part programmability
+    href: ../reporting-services/report-viewer-web-part-programmability-in-sharepoint-integration.md
   - name: SharePoint site settings for the Report Viewer web part
     href: ../reporting-services/report-server-sharepoint/report-viewer-web-part-sharepoint-site-settings.md
 - name: Pin to Power BI
@@ -462,12 +470,14 @@
     href: ../reporting-services/report-builder/finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md
   - name: Finding and Viewing Reports with a Browser
     href: ../reporting-services/report-builder/finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs.md
+  - name: Find and retire unused reports
+    href: ../reporting-services/report-server/retire-unused-reports-ssrs.md
   - name: Convert CRI Dialog Box
     href: ../reporting-services/report-builder/convert-cri-dialog-box-report-builder.md
 - name: Report design
   items:
-  - name: Hide an Item (Report Builder and SSRS)
-    href: ../reporting-services/report-builder/hide-an-item-report-builder-and-ssrs.md
+  - name: Report Data pane (Report Builder and SSRS)
+    href: ../reporting-services/report-data/report-data-pane.md
   - name: Reports, Report Parts, and Report Definitions
     href: ../reporting-services/report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md
   - name: Data Regions and Maps
@@ -526,6 +536,8 @@
       href: ../reporting-services/report-design/create-a-stepped-report-report-builder-and-ssrs.md
     - name: Add, Move, or Delete a Table, Matrix, or List
       href: ../reporting-services/report-design/add-move-or-delete-a-table-matrix-or-list-report-builder-and-ssrs.md
+    - name: Hide an Item (Report Builder and SSRS)
+      href: ../reporting-services/report-builder/hide-an-item-report-builder-and-ssrs.md
   - name: Report Parts
     items:
     - name: Report Parts Introduction
@@ -1028,12 +1040,22 @@
     href: ../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md
   - name: Specify Credential and Connection Information
     href: ../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md
+  - name: Store Credentials in a Data Source
+    href: ../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md
   - name: Compare Shared and Embedded Data Sources
     href: ../reporting-services/report-data/compare-shared-embedded-data-sources-report-builder-ssrs.md
   - name: Create and Modify Shared Data Sources
     href: ../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md
+  - name: Bind a Report to a Shared Data Source
+    href: ../reporting-services/report-data/bind-a-report-or-model-to-a-shared-data-source-ssrs.md
   - name: Create and Modify Embedded Data Sources
     href: ../reporting-services/report-data/create-and-modify-embedded-data-sources.md
+  - name: Configure Data Source Properties
+    href: ../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md
+  - name: Manage Report Data Sources
+    href: ../reporting-services/report-data/manage-report-data-sources.md
+  - name: Use an Office Data Connection (.odc)
+    href: ../reporting-services/report-data/use-an-office-data-connection-odc-with-reports.md
   - name: Convert Data Sources
     href: ../reporting-services/report-data/convert-data-sources-report-builder-and-ssrs.md
   - name: Data from external sources
@@ -1084,6 +1106,8 @@
       items:
       - name: Register a Standard .NET Framework Data Provider
         href: ../reporting-services/report-data/register-a-standard-net-framework-data-provider-ssrs.md
+      - name: Specify Connections for Custom Data Processing Extensions
+        href: ../reporting-services/report-data/specify-connections-for-custom-data-processing-extensions.md
   - name: Report datasets
     items:
     - name: Report Dataset overview
@@ -1408,6 +1432,8 @@
       href: ../reporting-services/tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md
     - name: Access the Reporting Services WMI Provider
       href: ../reporting-services/tools/access-the-reporting-services-wmi-provider.md
+    - name: Access the WMI Provider programmatically
+      href: ../reporting-services/accessing-the-wmi-provider-programmatically.md
   - name: Report Server Command Prompt Utilities
     href: ../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md
     items:
@@ -1682,6 +1708,8 @@
     href: ../reporting-services/troubleshooting/troubleshoot-server-and-database-connection-problems-with-reporting-services.md
 - name: Developer
   items:
+  - name: Reporting Services developer documentation
+    href: ../reporting-services/reporting-services-developer-documentation.md
   - name: REST API
     href: ../reporting-services/developer/rest-api.md
   - name: REST API samples >>

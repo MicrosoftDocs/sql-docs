@@ -22,6 +22,9 @@ Use the **Maintenance Cleanup Task** to remove old files related to maintenance 
 > [!NOTE]  
 > The Maintenance Cleanup task does not automatically delete files in the subfolders of the specified directory. This feature reduces the possibility of a malicious attack that uses the Maintenance Cleanup task to delete files. If you want to delete files in first-level subfolders, you must select **Include first-level subfolders**.
 
+> [!NOTE]  
+> The Maintenance Cleanup task removes files locally stored on the server.
+
 ## Options
 
 - **Connection**

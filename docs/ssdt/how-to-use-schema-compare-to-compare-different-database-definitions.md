@@ -4,7 +4,7 @@ description: Learn how to compare database definitions with Schema Compare. See 
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 06/19/2023
+ms.date: 08/28/2024
 ms.service: sql
 ms.subservice: ssdt
 ms.topic: conceptual
@@ -117,5 +117,5 @@ To update the schema of the target, you have two options. You can update the tar
 ## See also
 
 - [SqlPackage Drift Report](../tools/sqlpackage/sqlpackage-deploy-drift-report.md)
-- [Azure Data Studio Schema Compare extension](../azure-data-studio/extensions/schema-compare-extension.md)
+- [Azure Data Studio Schema Compare extension](/azure-data-studio/extensions/schema-compare-extension)
 - [SqlSchemaCompareTask Class](/dotnet/api/microsoft.data.tools.schema.tasks.sql.sqlschemacomparetask)

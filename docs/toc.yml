@@ -8607,6 +8607,34 @@ items:
         href: ssdt/dac-framework-compatibility.md
     - name: Alter DacFx Used by SSDT
       href: ssdt/alter-dacfx-used-by-ssdt.md
+    - name: T-SQL Debugger
+      href: ssdt/debugger/transact-sql-debugger.md
+      items:
+        - name: Configure firewall rules before running the T-SQL Debugger
+          href: ssdt/debugger/configure-firewall-rules-before-running-tsql-debugger.md
+        - name: Run the T-SQL Debugger
+          href: ssdt/debugger/run-transact-sql-debugger.md
+        - name: Step Through T-SQL Code
+          href: ssdt/debugger/step-through-transact-sql-code.md
+        - name: Debug Stored Procedures
+          href: ssdt/debugger/debug-stored-procedures.md
+        - name: T-SQL Debugger Information
+          href: ssms/scripting/transact-sql-debugger-information.md
+        - name: T-SQL Breakpoints
+          href: ssdt/debugger/transact-sql-breakpoints.md
+          items:
+          - name: Toggle a Breakpoint
+            href: ssdt/debugger/toggle-breakpoint.md
+          - name: Enable, Disable, & Delete Breakpoints
+            href: ssdt/debugger/enable-disable-delete-breakpoints.md
+          - name: Specify a Breakpoint Condition
+            href: ssdt/debugger/specify-breakpoint-condition.md
+          - name: Specify a Hit Count
+            href: ssdt/debugger/specify-hit-count.md
+          - name: Specify a Breakpoint Filter
+            href: ssdt/debugger/specify-breakpoint-filter.md
+          - name: Specify a Breakpoint Action
+            href: ssdt/debugger/specify-breakpoint-action.md
     - name: VS2019 SSIS troubleshooting guide
       href: ssdt/ssis-vs2019-troubleshooting-guide.md
     - name: VS2022 SSIS troubleshooting guide
@@ -8864,51 +8892,6 @@ items:
             href: ssms/scripting/complete-transact-sql-snippets.md
           - name: Add T-SQL Snippets
             href: ssms/scripting/add-transact-sql-snippets.md
-        - name: T-SQL Debugger
-          href: ssms/scripting/transact-sql-debugger.md
-          items:
-          - name: Configure firewall rules before running the T-SQL Debugger
-            href: ssms/scripting/configure-firewall-rules-before-running-the-tsql-debugger.md
-          - name: Run the T-SQL Debugger
-            href: ssms/scripting/run-the-transact-sql-debugger.md
-          - name: Step Through T-SQL Code
-            href: ssms/scripting/step-through-transact-sql-code.md
-          - name: T-SQL Breakpoints
-            href: ssms/scripting/transact-sql-breakpoints.md
-            items:
-            - name: Toggle a Breakpoint
-              href: ssms/scripting/toggle-a-breakpoint.md
-            - name: Enable, Disable, & Delete Breakpoints
-              href: ssms/scripting/enable-disable-and-delete-breakpoints.md
-            - name: Specify a Breakpoint Condition
-              href: ssms/scripting/specify-a-breakpoint-condition.md
-            - name: Specify a Hit Count
-              href: ssms/scripting/specify-a-hit-count.md
-            - name: Specify a Breakpoint Filter
-              href: ssms/scripting/specify-a-breakpoint-filter.md
-            - name: Specify a Breakpoint Action
-              href: ssms/scripting/specify-a-breakpoint-action.md
-            - name: Edit a Breakpoint Location
-              href: ssms/scripting/edit-a-breakpoint-location.md
-          - name: T-SQL Debugger - Information
-            href: ssms/scripting/transact-sql-debugger-information.md
-            items:
-            - name: T-SQL Debugger - Error List Window
-              href: ssms/scripting/transact-sql-debugger-error-list-window.md
-            - name: T-SQL Debugger - Breakpoints Window
-              href: ssms/scripting/transact-sql-debugger-breakpoints-window.md
-            - name: T-SQL Debugger - Call Stack Window
-              href: ssms/scripting/transact-sql-debugger-call-stack-window.md
-            - name: T-SQL Debugger - Locals Window
-              href: ssms/scripting/transact-sql-debugger-locals-window.md
-            - name: T-SQL Debugger - Threads Window
-              href: ssms/scripting/transact-sql-debugger-threads-window.md
-            - name: T-SQL Debugger - Command Window
-              href: ssms/scripting/transact-sql-debugger-command-window.md
-            - name: T-SQL Debugger - Output Window
-              href: ssms/scripting/transact-sql-debugger-output-window.md
-            - name: T-SQL Debugger - Watch Window
-              href: ssms/scripting/transact-sql-debugger-watch-window.md
           - name: Status Bar (Database Engine Query Editor)
             href: ssms/scripting/status-bar-database-engine-query-editor.md
           - name: View Spatial Data in Object Explorer

@@ -24,7 +24,9 @@ sp_helpextendedproc 'xp_hello'
  If **sp_helpextendedproc** is executed without specifying an extended stored procedure, all the extended stored procedures and their DLLs are displayed.  
   
 > [!IMPORTANT]  
->  Information will be returned for only those extended stored procedures that the logged in user owns or has permissions to. Only members of the **sysadmin** fixed server role and the **db_owner**, **db_securityadmin**, and the **db_ddladmin** fixed database roles can view information for all extended stored procedures.  
+>  Any authenticated account in SQL Server database engine can view information for all extended stored procedures when executing the procedure without passing any parameters in it:
+> sp_helpextendedproc
+> GO  
   
 ## See Also  
  [sp_helpextendedproc &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpextendedproc-transact-sql.md)   

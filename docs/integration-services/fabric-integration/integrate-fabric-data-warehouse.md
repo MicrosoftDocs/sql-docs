@@ -34,12 +34,12 @@ If you're using SQL Authentication or Windows Authentication, reconfigure it to 
 - Set Authentication to ****ActiveDirectoryServicePrincipal****  or ****ActiveDirectoryPassword****.
 - OLEDB only works for [Execute SQL Task](../control-flow/execute-sql-task.md), doesn't work for [OLE DB Destination](../data-flow/ole-db-destination.md).
 :::image type="content" border="false" source="media/ole-db-connection-1.png" alt-text="Screenshot of oledb connection manager part 1." lightbox="media/ole-db-connection-1.png":::
-:::image type="content" border="false" source="media/ole-db-connection-2.png" alt-text="Screenshot of oledb connection manager part 2." lightbox="media/ole-db-connection-2.png":::
+:::image type="content"  source="media/ole-db-connection-2.png" alt-text="Screenshot of oledb connection manager part 2." lightbox="media/ole-db-connection-2.png":::
     
 ****To use ADO.NET connection manager****:
 - Use Microsoft OLE DB provider for SQL Server for [.NET Framework Data Provider for OLE DB](/dotnet/framework/data/adonet/data-providers). 
 - Set Authentication to ****ActiveDirectoryServicePrincipal**** or ****ActiveDirectoryPassword****.
-:::image type="content" border="false" source="media/ado-net-connection.png" alt-text="Screenshot of ado connection manager part 1." lightbox="media/ado-net-connection.png":::
+:::image type="content" source="media/ado-net-connection.png" alt-text="Screenshot of ado connection manager part 1." lightbox="media/ado-net-connection.png":::
  
 ### File ingestion 
 The ****Fabric Data Warehous****e recommends utilizing the native T-SQL command ‘COPY INTO’ for efficient data insertion into the warehouse. So, any DFT operations that currently rely on ****Fast Insert Mode**** or ****BCP IN**** scripts should be replaced with the ****COPY INTO**** statement by utilizing [Execute SQL Task](../control-flow/execute-sql-task.md). 
@@ -55,9 +55,9 @@ In order to make same SSIS package to write to Fabric Data Warehouse, First, upd
 
 [Flexible File Destination](../data-flow/flexible-file-destination.md) component enables an SSIS package to write data to [Azure Data Lake Storage Gen2 (ADLS Gen2)](/azure/storage/blobs/data-lake-storage-introduction). Inside Data Flow task, after loading and transformation, add a [Flexible File Destination](../data-flow/flexible-file-destination.md), in which you can define destination file name and location in ADLS Gen2. 
 
-:::image type="content" border="false" source="media/flexible-file-1.png" alt-text="Screenshot of Flexible file destination part 1." lightbox="media/flexible-file-1.png":::
-:::image type="content" border="false" source="media/flexible-file-2.png" alt-text="Screenshot of Flexible file destination part 2." lightbox="media/flexible-file-2.png":::
-:::image type="content" border="false" source="media/flexible-file-3.png" alt-text="Screenshot of Flexible file destination part 3." lightbox="media/flexible-file-3.png":::
+:::image type="content" source="media/flexible-file-1.png" alt-text="Screenshot of Flexible file destination part 1." lightbox="media/flexible-file-1.png":::
+:::image type="content" source="media/flexible-file-2.png" alt-text="Screenshot of Flexible file destination part 2." lightbox="media/flexible-file-2.png":::
+:::image type="content" source="media/flexible-file-3.png" alt-text="Screenshot of Flexible file destination part 3." lightbox="media/flexible-file-3.png":::
 
 Data landed in Azure Data Lake Storage (ADLS) Gen2 can be ingested into Warehouse using COPY statement directly via [Execute SQL Task](../control-flow/execute-sql-task.md).
 
@@ -74,7 +74,7 @@ WITH (
     ENCODING = 'UTF8'
 )
 ```
-:::image type="content" border="false" source="media/execute-sql-task.png" alt-text="Screenshot of Execute sql task." lightbox="media/execute-sql-task.png" :::
+:::image type="content" source="media/execute-sql-task.png" alt-text="Screenshot of Execute sql task." lightbox="media/execute-sql-task.png" :::
 
 More detail instructions refer to [Ingest data into your Warehouse using the COPY statement](/fabric/data-warehouse/ingest-data-copy).
 

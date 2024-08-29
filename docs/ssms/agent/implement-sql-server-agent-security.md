@@ -60,7 +60,7 @@ Follow these guidelines to improve the security of your [!INCLUDE[ssNoVersion](.
   
 -   ACE is an extension and can't invoke itself. Chainer ScenarioEngine.exe (also known as Microsoft.SqlServer.Chainer.Setup.exe) can invoke ACE. Other host processes can also invoke ACE. 
   
--   ACE depends on the following configuration DLL's owned by SSDP, because those API's of DLL's are called by ACE:  
+-   ACE depends on the following configuration DLLs owned by SSDP, because those APIs of DLLs are called by ACE:  
   
     -   **SCO** - Microsoft.SqlServer.Configuration.Sco.dll, including new SCO validations for virtual accounts  
   

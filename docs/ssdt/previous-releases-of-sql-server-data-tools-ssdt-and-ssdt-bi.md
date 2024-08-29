@@ -4,7 +4,7 @@ description: "See how to install 2017 and prior versions of SSDT and SSDT-BI. Vi
 author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan
-ms.date: 08/07/2023
+ms.date: 08/28/2024
 ms.service: sql
 ms.subservice: ssdt
 ms.topic: conceptual
@@ -1331,5 +1331,5 @@ For SQL Server 2012 or 2014, you can use either **SSDT-BI for Visual Studio 2012
 
 - [Download SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)
 - [Download SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)
-- [Download Azure Data Studio](../azure-data-studio/download-azure-data-studio.md)
+- [Download Azure Data Studio](/azure-data-studio/download-azure-data-studio)
 - [SQL Tools and Utilities](../tools/overview-sql-tools.md)

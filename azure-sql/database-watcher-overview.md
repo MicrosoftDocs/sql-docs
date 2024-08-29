@@ -5,7 +5,7 @@ description: An overview of database watcher for Azure SQL, a managed monitoring
 author: dimitri-furman
 ms.author: dfurman
 ms.reviewer: wiassaf
-ms.date: 8/27/2024
+ms.date: 8/29/2024
 ms.service: azure-sql
 ms.subservice: monitoring
 ms.topic: conceptual
@@ -74,9 +74,13 @@ At this time, you can create database watchers in the following Azure regions:
 | Asia Pacific | Australia East |
 | Asia Pacific | Southeast Asia |
 | Canada | Canada Central |
+| Europe | North Europe |
 | Europe | UK South |
+| Europe | Sweden Central |
 | Europe | West Europe |
 | United States | East US |
+| United States | East US 2 |
+| United States | Central US |
 | United States | West US |
 
 > [!TIP]
@@ -195,6 +199,7 @@ This section describes recent database watcher fixes, changes, and improvements.
 
 | Time period | Changes |
 |:--|:--|
+| August 2024 | - Enable database watcher in the **Central US**, **East US 2**, **North Europe**, and **Sweden Central** Azure regions.</br> - Add subscription and resource group filters in estate [dashboards](#dashboards). |
 | July 2024 | - Fix a bug where the **Performance counters** datasets were not collected from databases with a case-sensitive catalog collation, or managed instances with a case-sensitive database collation.</br> - Fix a bug where data was not collected if the database name in the SQL metadata had a different case than the database name in the Azure Resource Manager (ARM) metadata.</br> - Fix a bug where the **Query runtime statistics** and **Query wait statistics** datasets were not collected in databases with a large volume of new queries and query plans inserted into Query Store tables.</br> - Resolve an issue where the **Geo-replicas** and **Replicas** datasets were not collected from Hyperscale databases.</br> - Add the `subscription_id` and `resource_group_name` [common columns](database-watcher-data.md#common-columns) to all datasets. Requires a one-time [restart](database-watcher-manage.md#start-and-stop-a-watcher) of a watcher.</br> - Add the `resource_id` [common column](database-watcher-data.md#common-columns) to all datasets. The data appears for SQL targets added in July 2024 or later. To make data appear for an existing SQL target, [remove](database-watcher-manage.md#remove-sql-targets-from-a-watcher) and [re-add](database-watcher-manage.md#add-sql-targets-to-a-watcher) the target, and [restart](database-watcher-manage.md#start-and-stop-a-watcher) the watcher. |
 | June 2024 | - Fix a bug where data was not collected from some SQL targets added via Bicep or an ARM template.</br> - Fix a bug where the **Backup history** dataset was not collected for some Azure SQL databases.</br> - Fix a bug where the replica type of a managed instance was incorrectly determined as *Geo-replication forwarder* if the instance had a database using [Managed Instance link](./managed-instance/managed-instance-link-feature-overview.md). The same bug caused the **Query runtime statistics** and **Query wait statistics** datasets to not be collected in this case.</br> - Fix a bug that caused a *Failed to load targets* error on the **SQL targets** blade in the Azure portal if the user did not have access to the subscription of the SQL target, or if the subscription has been deleted.</br> - Fix a bug where the retention and cache period for an Azure Data Explorer database created by default while creating a watcher in the Azure portal was set to *unlimited* instead of 365 and 31 days respectively.</br> - Fix a bug where certain management operations such as creating or deleting a managed private endpoint were reported as successful in the Azure portal even though they have failed.</br> - Fix a bug where for the **SQL database** targets, the list of databases in the dropdown was incomplete if the SQL logical server contained more than 1,000 databases.</br> - Fix a bug where selecting an Azure Data Explorer database as the data store would remove the access that a different watcher in the same resource group had on this database.</br> - Enable watcher ARM template export in the Azure portal.</br> - Add a warning during watcher creation if the **Microsoft.Network** resource provider isn't registered in the subscription selected for the watcher.</br> - Add a detailed error if deleting a watcher or a managed private endpoint fails because there is a delete [lock](/azure/azure-resource-manager/management/lock-resources) on the resource scope. |
 | April 2024 | - Enable database watcher in the **Australia East** and **UK South** Azure regions.</br> - Fix a failure adding a managed private endpoint when multiple private endpoints are added quickly for the same watcher.</br> - Fix the **Backup history** dataset for SQL databases to include full backups.</br> - Improve collection query performance to avoid timeouts for the **Index metadata**, **Query runtime statistics**, **Query wait statistics**, and **Table metadata** datasets.</br> - Fix a bug where for certain datasets data wasn't collected after a database was restored from a backup.</br> - Fix a bug where the **Index metadata** dataset wasn't collected when indexes have many key or included columns or when the names of these columns are long.</br> - Add the **SOS schedulers** dataset.</br> - Add a button to download the selected query plan from the **Top queries** dashboards.</br> - Add a quickstart [sample](/samples/azure/azure-quickstart-templates/create-watcher/) to create and configure a watcher using Bicep or an ARM template. |
@@ -216,7 +221,7 @@ During preview, database watcher has the following known issues.
 | Issue | Mitigation or workaround |
 |:--|:--|
 | If data collection cannot start or continue because of an error (for example, insufficient access to a SQL target or to the data store), the error is not exposed in the Activity log. | To troubleshoot, see [Data is not collected](#data-is-not-collected). |
-| Disabling the system-assigned managed identity of a watcher is not supported. | To delete the system-assigned identity of a watcher from the directory, delete the watcher. |
+| Disabling the system-assigned managed identity of a watcher is not supported. | To delete the system-assigned identity of a watcher from the directory, delete the watcher.</br></br>If the system-assigned identity of a watcher has been disabled, the watcher is no longer functional. Delete and recreate the watcher. |
 | If a [serverless](./database/serverless-tier-overview.md) database has auto-pause enabled, and is added as a database watcher target, it might not auto-pause as expected. For a [free offer](./database/free-offer.md) database, this might exhaust the free monthly credit sooner than expected. | If retaining the auto-pause functionality is required, do not use database watcher to monitor serverless databases at this time. |
 | For Azure SQL Managed Instance, data is not collected from the readable high availability replica or from a geo-replica if you are using SQL authentication. | There are two workarounds: </br>1. Use the Microsoft Entra ID authentication (preferred). </br>2. Disable the password policy check. Execute `ALTER LOGIN [database-watcher-login-placeholder] WITH CHECK_POLICY = OFF;`, replacing `database-watcher-login-placeholder` with the name of the SQL authentication login of the watcher. Execute this command on the primary replica, and on the geo-replica, if any. |
 | If the watcher name is not unique within the Microsoft Entra ID tenant, granting access to targets using Microsoft Entra authentication fails. | Recreate the watcher with a name that is unique within your tenant. |

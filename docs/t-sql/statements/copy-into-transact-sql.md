@@ -658,11 +658,11 @@ Multiple file locations can only be specified from the same storage account and 
 
 **External locations behind firewall**
 
-To access files on either an Azure Data Lake Storage (ADLS) Gen2 and Azure Blob Storage that is behind a firewall, the following prerequisites are required:
+To access files on Azure Data Lake Storage (ADLS) Gen2 and Azure Blob Storage locations that are behind a firewall, the following prerequisites are apply:
 
 - A **workspace identity** for the workspace hosting your warehouse must be provisioned. For more information on how to set up a workspace identity, see [Workspace identity](/fabric/security/workspace-identity).
 - Your Entra ID account must be able to use the workspace identity.
-- Your Entra ID account must have access to the underlying files through [Azure role-based access control (RBAC)](/azure/storage/blobs/assign-azure-role-data-access?tabs=portal)) or [data lake ACLs](/azure/storage/blobs/data-lake-storage-access-control)).
+- Your Entra ID account must have access to the underlying files through [Azure role-based access control (RBAC)](/azure/storage/blobs/assign-azure-role-data-access?tabs=portal) or [data lake ACLs](/azure/storage/blobs/data-lake-storage-access-control).
 - Your Fabric workspace hosting the warehouse must be added as a **resource instance rule**. For more information on how to add your Fabric workspace with a resource instance rule, see [Resource instance rule](/fabric/security/security-trusted-workspace-access).
 
 #### *FILE_TYPE = { 'CSV' | 'PARQUET' }*

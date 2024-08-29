@@ -61046,6 +61046,46 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "docs/relational-databases/extended-stored-procedures-programming/adding-an-extended-stored-procedure-to-sql-server.md",
+      "redirect_url": "/sql/relational-databases/extended-stored-procedures-programming/database-engine-extended-stored-procedures-programming",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/relational-databases/extended-stored-procedures-programming/creating-extended-stored-procedures.md",
+      "redirect_url": "/sql/relational-databases/extended-stored-procedures-programming/database-engine-extended-stored-procedures-programming",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/relational-databases/extended-stored-procedures-programming/execution-characteristics-of-extended-stored-procedures.md",
+      "redirect_url": "/sql/relational-databases/extended-stored-procedures-programming/database-engine-extended-stored-procedures-programming",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/relational-databases/extended-stored-procedures-programming/how-extended-stored-procedures-work.md",
+      "redirect_url": "/sql/relational-databases/extended-stored-procedures-programming/database-engine-extended-stored-procedures-programming",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/relational-databases/extended-stored-procedures-programming/querying-extended-stored-procedures-installed-in-sql-server.md",
+      "redirect_url": "/sql/relational-databases/extended-stored-procedures-programming/database-engine-extended-stored-procedures-programming",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/relational-databases/extended-stored-procedures-programming/removing-an-extended-stored-procedure-from-sql-server.md",
+      "redirect_url": "/sql/relational-databases/extended-stored-procedures-programming/database-engine-extended-stored-procedures-programming",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/relational-databases/extended-stored-procedures-programming/sending-result-sets-to-the-server-extended-stored-procedure-api.md",
+      "redirect_url": "/sql/relational-databases/extended-stored-procedures-programming/database-engine-extended-stored-procedures-programming",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/relational-databases/extended-stored-procedures-programming/unloading-an-extended-stored-procedure-dll.md",
+      "redirect_url": "/sql/relational-databases/extended-stored-procedures-programming/database-engine-extended-stored-procedures-programming",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "docs/relational-databases/graphs/index.md",
       "redirect_url": "/sql/relational-databases/graphs/sql-graph-overview",
       "redirect_document_id": false

@@ -2392,26 +2392,11 @@ items:
   - name: Extended stored procedures
     items:
     - name: Programming
-      href: relational-databases/extended-stored-procedures-programming/database-engine-extended-stored-procedures-programming.md
       items:
-      - name: How it Works
-        href: relational-databases/extended-stored-procedures-programming/how-extended-stored-procedures-work.md
-      - name: Add
-        href: relational-databases/extended-stored-procedures-programming/adding-an-extended-stored-procedure-to-sql-server.md
-      - name: Create
-        href: relational-databases/extended-stored-procedures-programming/creating-extended-stored-procedures.md
-      - name: Execution Characteristics
-        href: relational-databases/extended-stored-procedures-programming/execution-characteristics-of-extended-stored-procedures.md
-      - name: Query
-        href: relational-databases/extended-stored-procedures-programming/querying-extended-stored-procedures-installed-in-sql-server.md
-      - name: Remove
-        href: relational-databases/extended-stored-procedures-programming/removing-an-extended-stored-procedure-from-sql-server.md
-      - name: Send result sets
-        href: relational-databases/extended-stored-procedures-programming/sending-result-sets-to-the-server-extended-stored-procedure-api.md
-      - name: Unicode Data & Server Code Pages
+      - name: Overview
+        href: relational-databases/extended-stored-procedures-programming/database-engine-extended-stored-procedures-programming.md
+      - name: Unicode data & server code pages
         href: relational-databases/extended-stored-procedures-programming/unicode-data-and-server-code-pages.md
-      - name: Unloading a DLL
-        href: relational-databases/extended-stored-procedures-programming/unloading-an-extended-stored-procedure-dll.md
     - name: Reference
       href: relational-databases/extended-stored-procedures-reference/database-engine-extended-stored-procedures-reference.md
       items:

@@ -201,6 +201,8 @@
       href: ../reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode.md
     - name: Install or Uninstall the Reporting Services Add-in for SharePoint
       href: ../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md
+    - name: Update Credentials in Report Data Sources from a SharePoint site
+      href: ../reporting-services/report-data/update-credentials-in-report-data-sources-from-a-sharepoint-site.md
     - name: Add an Additional Report Server to a Farm (SSRS Scale-out)
       href: ../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md
     - name: Add an Additional Reporting Services Web Front-end to a Farm
@@ -1060,8 +1062,6 @@
     items:
     - name: Add Data from External Data Sources
       href: ../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md
-    - name: Bind a Report to a Shared Data Source
-      href: ../reporting-services/report-data/bind-a-report-or-model-to-a-shared-data-source-ssrs.md
     - name: SQL Server Connection Type
       href: ../reporting-services/report-data/sql-server-connection-type-ssrs.md
     - name: Analysis Services Connection Type for MDX

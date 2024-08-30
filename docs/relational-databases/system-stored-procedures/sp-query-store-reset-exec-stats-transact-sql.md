@@ -4,7 +4,7 @@ description: "Clears the runtime stats for a specific query plan from the Query 
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 05/31/2023
+ms.date: 08/21/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -18,7 +18,7 @@ helpviewer_keywords:
   - "sys.sp_query_store_reset_exec_stats"
 dev_langs:
   - "TSQL"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 # sp_query_store_reset_exec_stats (Transact-SQL)
 
@@ -78,5 +78,5 @@ EXEC sp_query_store_reset_exec_stats 3;
 - [sp_query_store_unforce_plan (Transact-SQL)](sp-query-store-unforce-plan-transact-sql.md)
 - [sp_query_store_remove_plan (Transact-SQL)](sp-query-store-remove-plan-transact-sql.md)
 - [sp_query_store_flush_db (Transact-SQL)](sp-query-store-flush-db-transact-sql.md)
-- [Query Store Catalog Views (Transact-SQL)](../system-catalog-views/query-store-catalog-views-transact-sql.md)
-- [Monitoring Performance By Using the Query Store](../performance/monitoring-performance-by-using-the-query-store.md)
+- [Query Store catalog views (Transact-SQL)](../system-catalog-views/query-store-catalog-views-transact-sql.md)
+- [Monitor performance by using the Query Store](../performance/monitoring-performance-by-using-the-query-store.md)

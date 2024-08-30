@@ -4,7 +4,7 @@ description: Drops an assembly from the list of trusted assemblies on the server
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: randolphwest
-ms.date: 07/06/2023
+ms.date: 08/21/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -39,7 +39,7 @@ sp_drop_trusted_assembly
 
 #### [ @hash = ] '*value*'
 
-The SHA2_512 hash value of the assembly to drop from the list of trusted assemblies for the server. Trusted assemblies may load when CLR strict security is enabled, even if the assembly is unsigned or the database isn't marked as trustworthy.
+The SHA2_512 hash value of the assembly to drop from the list of trusted assemblies for the server. Trusted assemblies might load when CLR strict security is enabled, even if the assembly is unsigned or the database isn't marked as trustworthy.
 
 ## Remarks
 
@@ -60,8 +60,8 @@ EXEC sp_drop_trusted_assembly
 
 ## Related content
 
-- [sys.sp_add_trusted_assembly](sys-sp-add-trusted-assembly-transact-sql.md)
-- [sys.trusted_assemblies](../system-catalog-views/sys-trusted-assemblies-transact-sql.md)
+- [sys.sp_add_trusted_assembly (Transact-SQL)](sys-sp-add-trusted-assembly-transact-sql.md)
+- [sys.trusted_assemblies (Transact-SQL)](../system-catalog-views/sys-trusted-assemblies-transact-sql.md)
 - [DROP ASSEMBLY (Transact-SQL)](../../t-sql/statements/drop-assembly-transact-sql.md)
-- [sys.assemblies](../system-catalog-views/sys-assemblies-transact-sql.md)
-- [sys.dm_clr_loaded_assemblies](../system-dynamic-management-views/sys-dm-clr-loaded-assemblies-transact-sql.md)
+- [sys.assemblies (Transact-SQL)](../system-catalog-views/sys-assemblies-transact-sql.md)
+- [sys.dm_clr_loaded_assemblies (Transact-SQL)](../system-dynamic-management-views/sys-dm-clr-loaded-assemblies-transact-sql.md)

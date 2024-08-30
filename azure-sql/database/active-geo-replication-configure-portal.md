@@ -292,7 +292,7 @@ Use Transact-SQL (T-SQL) create a geo-secondary in a subscription different from
 > 
 > Adding a geo-secondary using T-SQL is not supported when connecting to the primary server over a [private endpoint](private-endpoint-overview.md). If a private endpoint is configured but public network access is allowed, adding a geo-secondary is supported when connected to the primary server from a public IP address. Once a geo-secondary is added, [public network access can be denied](connectivity-settings.md#deny-public-network-access).
 > 
-> Creating a geo-secondary on a logical server in a different Microsoft Entra tenant is not supported when [Microsoft Entra-only authentication](authentication-azure-ad-only-authentication.md) is enabled on either primary or secondary logical server.
+> Creating a cross-subscription geo-secondary on a logical server in the same or different Microsoft Entra tenant is not supported when [Microsoft Entra-only authentication](authentication-azure-ad-only-authentication.md) is enabled on either primary or secondary logical server and the creation is attempted using an Entra ID user.
 
 
 

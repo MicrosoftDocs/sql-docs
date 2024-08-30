@@ -1,8 +1,8 @@
 ---
 title: "Transactions with Memory-Optimized Tables"
 description: Learn about transactions for memory-optimized tables and natively compiled stored procedures and how they differ from transactions for disk-based tables.
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "01/16/2018"
 ms.service: sql
 ms.subservice: in-memory-oltp

@@ -4,7 +4,7 @@ description: "Returns change data capture metadata information for the captured 
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 06/13/2023
+ms.date: 08/21/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -40,7 +40,7 @@ sys.sp_cdc_get_captured_columns
 
 #### [ @capture_instance = ] '*capture_instance*'
 
-The name of the capture instance associated with a source table. *@capture_instance* is **sysname** and can't be NULL.
+The name of the capture instance associated with a source table. *@capture_instance* is **sysname** and can't be `NULL`.
 
 To report on the capture instances for the table, run the [sys.sp_cdc_help_change_data_capture](sys-sp-cdc-help-change-data-capture-transact-sql.md) stored procedure.
 
@@ -59,11 +59,11 @@ To report on the capture instances for the table, run the [sys.sp_cdc_help_chang
 | `column_id` | **int** | ID of the column in the source table. |
 | `column_ordinal` | **int** | Position of the column within the source table. |
 | `data_type` | **sysname** | Column data type. |
-| `character_maximum_length` | **int** | Maximum character length of the character-based column; otherwise, NULL. |
-| `numeric_precision` | **tinyint** | Precision of the column if numeric-based; otherwise, NULL. |
-| `numeric_precision_radix` | **smallint** | Precision radix of the column if numeric-based; otherwise, NULL. |
-| `numeric_scale` | **int** | Scale of the column if numeric-based; otherwise, NULL. |
-| `datetime_precision` | **smallint** | Precision of the column if datetime-based; otherwise, NULL. |
+| `character_maximum_length` | **int** | Maximum character length of the character-based column; otherwise, `NULL`. |
+| `numeric_precision` | **tinyint** | Precision of the column if numeric-based; otherwise, `NULL`. |
+| `numeric_precision_radix` | **smallint** | Precision radix of the column if numeric-based; otherwise, `NULL`. |
+| `numeric_scale` | **int** | Scale of the column if numeric-based; otherwise, `NULL`. |
+| `datetime_precision` | **smallint** | Precision of the column if datetime-based; otherwise, `NULL`. |
 
 ## Remarks
 

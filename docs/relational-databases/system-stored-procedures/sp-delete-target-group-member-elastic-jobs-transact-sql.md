@@ -31,7 +31,7 @@ Removes a database or group of databases from a target group in the [Azure Elast
 
 ```syntaxsql
 [jobs].sp_delete_target_group_member [ @target_group_name = ] 'target_group_name'
-   [ , [ @target_id = ] 'target_id']
+   [ , [ @target_id = ] 'target_id' ]
 ```
 
 ## Arguments
@@ -44,13 +44,13 @@ The name of the target group from which to remove the target group member. *targ
 
 The target identification number assigned to the target group member to be removed. *target_id* is a uniqueidentifier, with a default of `NULL`.
 
-## Return Code Values
+## Return code values
 
-0 (success) or 1 (failure)
+`0` (success) or `1` (failure).
 
 ## Permissions
 
-By default, members of the sysadmin fixed server role can execute this stored procedure.  Only members of sysadmin can use this stored procedure to edit the attributes of jobs that are owned by other users.
+By default, members of the **sysadmin** fixed server role can execute this stored procedure. Only members of sysadmin can use this stored procedure to edit the attributes of jobs that are owned by other users.
 
 ## Examples
 
@@ -65,9 +65,9 @@ GO
 
 -- Retrieve the target_id for a target_group_members
 DECLARE @tid uniqueidentifier
-SELECT @tid = target_id 
-FROM [jobs].target_group_members 
-WHERE target_group_name = 'Servers Maintaining Customer Information' 
+SELECT @tid = target_id
+FROM [jobs].target_group_members
+WHERE target_group_name = 'Servers Maintaining Customer Information'
 AND server_name = 'London.database.windows.net';
 
 -- Remove a target group member of type server

@@ -4,7 +4,7 @@ description: "Database Maintenance Plan stored procedures (Transact-SQL)"
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest
-ms.date: 05/24/2023
+ms.date: 08/21/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -19,7 +19,7 @@ dev_langs:
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-[!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] supports the following system stored procedures that are used to set up maintenance tasks. These stored procedures are used with database maintenance plans. This feature has been replaced with maintenance plans which do not use these stored procedures. Use these procedures to maintain database maintenance plans on installations that were upgraded from a previous version of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)].
+[!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] supports the following system stored procedures that are used to set up maintenance tasks. These stored procedures are used with database maintenance plans. This feature has been replaced with maintenance plans which don't use these stored procedures. Use these procedures to maintain database maintenance plans on installations that were upgraded from a previous version of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)].
 
 [!INCLUDE [ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]
 
@@ -35,4 +35,4 @@ dev_langs:
 ## Related content
 
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)
-- [Maintenance Plans](../maintenance-plans/maintenance-plans.md)
+- [Maintenance plans](../maintenance-plans/maintenance-plans.md)

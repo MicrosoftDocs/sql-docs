@@ -4,7 +4,7 @@ description: "Deletes history related to a publication status request, which inc
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 01/23/2024
+ms.date: 08/22/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: "reference"
@@ -20,7 +20,7 @@ dev_langs:
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-Deletes history related to a publication status request, which includes the request history ([MSpeer_request (Transact-SQL)](../system-tables/mspeer-request-transact-sql.md)) as well as the response history ([MSpeer_response (Transact-SQL)](../system-tables/mspeer-response-transact-sql.md)). This stored procedure is executed on the publication database at a Publisher participating in a Peer-to-Peer replication topology. For more information, see [Peer-to-Peer - Transactional Replication](../replication/transactional/peer-to-peer-transactional-replication.md).
+Deletes history related to a publication status request, which includes the request history ([MSpeer_request](../system-tables/mspeer-request-transact-sql.md)) as well as the response history ([MSpeer_response](../system-tables/mspeer-response-transact-sql.md)). This stored procedure is executed on the publication database at a Publisher participating in a Peer-to-Peer replication topology. For more information, see [Peer-to-Peer - Transactional Replication](../replication/transactional/peer-to-peer-transactional-replication.md).
 
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 

@@ -4,7 +4,7 @@ description: Adds a pull subscription to a snapshot or transactional publication
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 11/02/2023
+ms.date: 08/21/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: "reference"
@@ -89,7 +89,7 @@ The type of update. *@update_mode* is **nvarchar(30)**, and can be one of the fo
 
 #### [ @immediate_sync = ] *immediate_sync*
 
-Specifies whether the synchronization files are created or re-created each time the Snapshot Agent runs. *@immediate_sync* is **bit**, with a default of `1`, and must be set to the same value as *@immediate_sync* in [sp_addpublication (Transact-SQL)](sp-addpublication-transact-sql.md). *@immediate_sync* is a property of the publication and must have the same value as the Publisher.
+Specifies whether the synchronization files are created or re-created each time the Snapshot Agent runs. *@immediate_sync* is **bit**, with a default of `1`, and must be set to the same value as *@immediate_sync* in [sp_addpublication](sp-addpublication-transact-sql.md). *@immediate_sync* is a property of the publication and must have the same value as the Publisher.
 
 ## Return code values
 
@@ -102,7 +102,7 @@ Specifies whether the synchronization files are created or re-created each time 
 > [!IMPORTANT]  
 > For queued updating subscriptions, use [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Authentication for connections to Subscribers, and specify a different account for the connection to each Subscriber. When creating a pull subscription that supports queued updating, replication always sets the connection to use Windows Authentication (for pull subscriptions, replication can't access metadata at the Subscriber required to use [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Authentication). In this case, you should execute [sp_changesubscription](sp-changesubscription-transact-sql.md) to change the connection to use [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Authentication after the subscription is configured.
 
-If the [MSreplication_subscriptions (Transact-SQL)](../../relational-databases/system-tables/msreplication-subscriptions-transact-sql.md) table doesn't exist at the Subscriber, `sp_addpullsubscription` creates it. It also adds a row to the [MSreplication_subscriptions (Transact-SQL)](../../relational-databases/system-tables/msreplication-subscriptions-transact-sql.md) table. For pull subscriptions, [sp_addsubscription (Transact-SQL)](sp-addsubscription-transact-sql.md) should be called at the Publisher first.
+If the [MSreplication_subscriptions](../system-tables/msreplication-subscriptions-transact-sql.md) table doesn't exist at the Subscriber, `sp_addpullsubscription` creates it. It also adds a row to the [MSreplication_subscriptions](../system-tables/msreplication-subscriptions-transact-sql.md) table. For pull subscriptions, [sp_addsubscription](sp-addsubscription-transact-sql.md) should be called at the Publisher first.
 
 ## Examples
 

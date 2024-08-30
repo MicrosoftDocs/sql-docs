@@ -4,7 +4,7 @@ description: sp_addserver defines the name of the local instance of SQL Server.
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 01/23/2024
+ms.date: 08/21/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -43,7 +43,7 @@ sp_addserver
 
 #### [ @server = ] N'*server*'
 
-The name of the server. Server names must be unique and follow the rules for [!INCLUDE [msCoName](../../includes/msconame-md.md)] Windows computer names, although spaces aren't allowed. *@server* is **sysname**, with no default.
+The name of the server. Server names must be unique and follow the rules for Windows computer names, although spaces aren't allowed. *@server* is **sysname**, with no default.
 
 When multiple instances of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] are installed on a computer, an instance operates as if it's on a separate server. Specify a named instance by referring to *@server* as `<servername>\<instancename>`.
 

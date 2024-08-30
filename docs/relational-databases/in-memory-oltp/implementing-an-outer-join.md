@@ -1,8 +1,8 @@
 ---
 title: "In-Memory OUTER JOIN"
 description: Learn about LEFT and RIGHT OUTER JOIN. Natively compiled T-SQL modules support LEFT and RIGHT OUTER JOIN in SQL Server.
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "06/01/2019"
 ms.service: sql
 ms.subservice: in-memory-oltp

@@ -4,7 +4,7 @@ description: sp_delete_database_firewall_rule removes database-level firewall se
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: randolphwest
-ms.date: 01/23/2024
+ms.date: 08/21/2024
 ms.service: azure-sql-database
 ms.topic: "reference"
 f1_keywords:
@@ -53,8 +53,7 @@ EXECUTE sp_delete_database_firewall_rule N'Example DB Setting 1';
 
 ## Related content
 
-- [Azure SQL Database Firewall](/azure/azure-sql/database/firewall-configure)
-- [How to: Configure Firewall Settings (Azure SQL Database)](/azure/azure-sql/database/firewall-configure)
+- [Azure SQL Database and Azure Synapse IP firewall rules](/azure/azure-sql/database/firewall-configure)
 - [sp_set_firewall_rule (Azure SQL Database)](sp-set-firewall-rule-azure-sql-database.md)
 - [sp_set_database_firewall_rule (Azure SQL Database)](sp-set-database-firewall-rule-azure-sql-database.md)
 - [sys.database_firewall_rules (Azure SQL Database)](../system-catalog-views/sys-database-firewall-rules-azure-sql-database.md)

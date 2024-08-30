@@ -1,8 +1,8 @@
 ---
 title: Database for RevoScaleR tutorials
 description: "Create a SQL Server database and set the permissions necessary for completing the other R tutorials."
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: VanMSFT
+ms.author: vanto
 ms.date: 11/27/2018
 ms.service: sql
 ms.subservice: machine-learning-services

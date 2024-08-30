@@ -4,7 +4,7 @@ titleSuffix: Azure SQL Managed Instance
 description: Learn about tuning database applications and databases for performance in Azure SQL Managed Instance.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: wiassaf, mathoma
+ms.reviewer: mathoma
 ms.date: 01/12/2024
 ms.service: azure-sql-managed-instance
 ms.subservice: performance

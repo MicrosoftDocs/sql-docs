@@ -4,7 +4,7 @@ description: Adds an article to an existing merge publication.
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 11/23/2023
+ms.date: 08/22/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: "reference"
@@ -130,7 +130,7 @@ The path and name of an optional article schema script used to create the articl
 
 #### [ @schema_option = ] *schema_option*
 
-A bitmap of the schema generation option for the given article. *@schema_option* is **varbinary(8)**, and can be the [| (Bitwise OR)](../../t-sql/language-elements/bitwise-or-transact-sql.md) product of one or more of these values.
+A bitmap of the schema generation option for the given article. *@schema_option* is **varbinary(8)**, and can be the [&#124; (Bitwise OR)](../../t-sql/language-elements/bitwise-or-transact-sql.md) product of one or more of these values.
 
 | Value | Description |
 | --- | --- |
@@ -257,7 +257,7 @@ Enables or disables the use of the Interactive Resolver on an article. *@allow_i
 
 #### [ @check_permissions = ] *check_permissions*
 
-A bitmap of the table-level permissions that are verified when the Merge Agent applies changes to the Publisher. If the Publisher login/user account used by the merge process doesn't have the correct table permissions, the invalid changes are logged as conflicts. *@check_permissions* is **int**, and can be the [| (Bitwise OR)](../../t-sql/language-elements/bitwise-or-transact-sql.md) product of one or more of the following values.
+A bitmap of the table-level permissions that are verified when the Merge Agent applies changes to the Publisher. If the Publisher login/user account used by the merge process doesn't have the correct table permissions, the invalid changes are logged as conflicts. *@check_permissions* is **int**, and can be the [&#124; (Bitwise OR)](../../t-sql/language-elements/bitwise-or-transact-sql.md) product of one or more of the following values.
 
 | Value | Description |
 | --- | --- |
@@ -338,7 +338,7 @@ Defines restrictions on updates made at a Subscriber with a client subscription.
 | `1` | Changes are allowed at the Subscriber, but they aren't uploaded to the Publisher. |
 | `2` | Changes aren't allowed at the Subscriber. |
 
-Changing *@subscriber_upload_options* requires the subscription to be reinitialized by calling [sp_reinitmergepullsubscription (Transact-SQL)](sp-reinitmergepullsubscription-transact-sql.md).
+Changing *@subscriber_upload_options* requires the subscription to be reinitialized by calling [sp_reinitmergepullsubscription](sp-reinitmergepullsubscription-transact-sql.md).
 
 > [!NOTE]  
 > If the source table for an article is already published in another publication, the value of *@subscriber_upload_options* must be the same for both articles.

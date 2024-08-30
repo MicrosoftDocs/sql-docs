@@ -92,4 +92,4 @@ EXEC xp_logininfo 'BUILTIN\Administrators';
 - [sp_grantlogin (Transact-SQL)](sp-grantlogin-transact-sql.md)
 - [sp_revokelogin (Transact-SQL)](sp-revokelogin-transact-sql.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)
-- [General Extended stored procedures (Transact-SQL)](general-extended-stored-procedures-transact-sql.md)
+- [General extended stored procedures (Transact-SQL)](general-extended-stored-procedures-transact-sql.md)

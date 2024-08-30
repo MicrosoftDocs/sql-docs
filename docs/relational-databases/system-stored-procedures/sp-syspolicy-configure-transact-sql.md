@@ -4,7 +4,7 @@ description: "Configures settings for Policy-Based Management, such as whether P
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: randolphwest
-ms.date: 06/26/2023
+ms.date: 08/21/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -37,7 +37,7 @@ sp_syspolicy_configure
 
 #### [ @name = ] N'*name*'
 
-The name of the setting that you want to configure. *@name* is **sysname**, is required, and can't be NULL or an empty string.
+The name of the setting that you want to configure. *@name* is **sysname**, is required, and can't be `NULL` or an empty string.
 
 *@name* can be any of the following values:
 

@@ -4,7 +4,7 @@ description: The sp_estimate_data_compression_savings system stored procedure re
 author: markingmyname
 ms.author: maghan
 ms.reviewer: dimitri-furman, wiassaf, randolphwest
-ms.date: 06/10/2024
+ms.date: 08/22/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -32,7 +32,7 @@ Starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], you can com
 
 To estimate the size of the object if it were to use the requested compression setting, this stored procedure samples the source object and loads this data into an equivalent table and index created in `tempdb`. The table or index created in `tempdb` is then compressed to the requested setting and the estimated compression savings is computed.
 
-To change the compression state of a table, index, or partition, use the [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) or [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) statements. For general information about compression, see [Data Compression](../data-compression/data-compression.md).
+To change the compression state of a table, index, or partition, use the [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) or [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) statements. For general information about compression, see [Data compression](../data-compression/data-compression.md).
 
 > [!NOTE]  
 > If the existing data is fragmented, you might be able to reduce its size without using compression by rebuilding the index. For indexes, the fill factor will be applied during an index rebuild. This could increase the size of the index.
@@ -206,4 +206,4 @@ GO
 - [CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md)
 - [sys.partitions (Transact-SQL)](../system-catalog-views/sys-partitions-transact-sql.md)
 - [Database Engine stored procedures (Transact-SQL)](database-engine-stored-procedures-transact-sql.md)
-- [Unicode Compression Implementation](../data-compression/unicode-compression-implementation.md)
+- [Unicode compression implementation](../data-compression/unicode-compression-implementation.md)

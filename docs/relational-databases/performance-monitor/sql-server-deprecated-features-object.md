@@ -1,8 +1,8 @@
 ---
 title: "SQL Server, Deprecated Features object"
 description: "Learn about the SQLServer:Deprecated Features object, which provides a counter to monitor the features designated as deprecated."
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: 12/04/2023
 ms.service: sql
 ms.subservice: performance

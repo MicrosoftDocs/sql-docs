@@ -1,8 +1,8 @@
 ---
 title: Score data using RevoScaleR
 description: "Use the logistic regression model that you created in the previous tutorial to score another data set that uses the same independent variables as inputs."
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: VanMSFT
+ms.author: vanto
 ms.date: 11/27/2018
 ms.service: sql
 ms.subservice: machine-learning-services

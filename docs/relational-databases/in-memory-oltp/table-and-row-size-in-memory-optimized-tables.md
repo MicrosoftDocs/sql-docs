@@ -1,8 +1,8 @@
 ---
 title: Table and row size in memory-optimized tables
 description: Learn about table and row size for memory-optimized tables. You can create a table with multiple large and LOB columns.
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: MikeRayMSFT
+ms.author: mikeray
 ms.reviewer: randolphwest
 ms.date: 04/30/2024
 ms.service: sql

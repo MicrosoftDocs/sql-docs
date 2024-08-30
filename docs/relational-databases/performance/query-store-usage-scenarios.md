@@ -1,8 +1,8 @@
 ---
 title: "Query Store Usage Scenarios"
 description: Learn how Query Store can be used to track and ensure predictable workload performance. Consider several examples in SQL Server.
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: 03/07/2022
 ms.service: sql
 ms.subservice: performance

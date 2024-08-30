@@ -4,7 +4,7 @@ description: Returns mappings between document identifiers (DocIds) and full-tex
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 07/07/2023
+ms.date: 08/21/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -38,7 +38,7 @@ sp_fulltext_keymappings { table_id | table_id , docId | table_id , NULL , key }
 
 #### *table_id*
 
-The object ID of the full-text indexed table. If you specify an invalid *table_id*, an error is returned. For information about obtaining the object ID of a table, see [OBJECT_ID (Transact-SQL)](../../t-sql/functions/object-id-transact-sql.md).
+The object ID of the full-text indexed table. If you specify an invalid *table_id*, an error is returned. For information about obtaining the object ID of a table, see [OBJECT_ID](../../t-sql/functions/object-id-transact-sql.md).
 
 #### *docId*
 
@@ -46,7 +46,7 @@ An internal document identifier (DocId) that corresponds to the key value. An in
 
 #### *key*
 
-The full-text key value from the specified table. An invalid *key* value returns no results. For information about full-text key values, see [Manage Full-Text Indexes](../search/create-and-manage-full-text-indexes.md).
+The full-text key value from the specified table. An invalid *key* value returns no results. For information about full-text key values, see [Create and manage full-text indexes](../search/create-and-manage-full-text-indexes.md).
 
 ## Return code values
 
@@ -71,24 +71,24 @@ The following table describes the effect of using one, two, or three parameters.
 
 | This parameter list... | Has this result... |
 | --- | --- |
-| *table_id* | When invoked with only the *table_id* parameter, `sp_fulltext_keymappings` returns all full-text key (Key) values from the specified base table, along with the DocId that corresponds to each key. This includes keys that are pending delete.<br /><br />This function is useful for troubleshooting various issues. It's useful for seeing the full-text index content when the selected full-text key isn't of an integer data type. This involves joining the results of `sp_fulltext_keymappings` with the results of `sys.dm_fts_index_keywords_by_document`. For more information, see [sys.dm_fts_index_keywords_by_document (Transact-SQL)](../system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md).<br /><br />In general, however, we recommend that, if possible, you execute `sp_fulltext_keymappings` with parameters that specify a specific full-text key or DocId. This is much more efficient than returning an entire key map, especially for a large table for which the performance cost of returning the entire key map might be substantial. |
+| *table_id* | When invoked with only the *table_id* parameter, `sp_fulltext_keymappings` returns all full-text key (Key) values from the specified base table, along with the DocId that corresponds to each key. This includes keys that are pending delete.<br /><br />This function is useful for troubleshooting various issues. It's useful for seeing the full-text index content when the selected full-text key isn't of an integer data type. This involves joining the results of `sp_fulltext_keymappings` with the results of `sys.dm_fts_index_keywords_by_document`. For more information, see [sys.dm_fts_index_keywords_by_document](../system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md).<br /><br />In general, however, we recommend that, if possible, you execute `sp_fulltext_keymappings` with parameters that specify a specific full-text key or DocId. This is much more efficient than returning an entire key map, especially for a large table for which the performance cost of returning the entire key map might be substantial. |
 | *table_id*, *docId* | If only the *table_id* and *docId* are specified, *docId* must be non-NULL and specify a valid DocId in the specified table. This function is useful to isolate the custom full-text key from the base table that corresponds to the DocId of a particular full-text index. |
-| *table_id*, NULL, *key* | If three parameters are present, the second parameter must be NULL, and *key* must be non-NULL and specify a valid full-text key value from the specified table. This function is useful in isolating the DocId that corresponds to a particular full-text key from the base table. |
+| *table_id*, `NULL`, *key* | If three parameters are present, the second parameter must be `NULL`, and *key* must be non-NULL and specify a valid full-text key value from the specified table. This function is useful in isolating the DocId that corresponds to a particular full-text key from the base table. |
 
 An error is returned under any of the following conditions:
 
 - You specify an invalid *table_id*
 - The table isn't full-text indexed
-- `NULL` is encountered for a parameter that may be non-null.
+- `NULL` is encountered for a parameter that might be non-null.
 
 ## Examples
 
 > [!NOTE]  
-> The examples in this section use the `Production.ProductReview` table of the [!INCLUDE [ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] sample database. You can create this index by executing the example provided for the `ProductReview` table in [CREATE FULLTEXT INDEX (Transact-SQL)](../../t-sql/statements/create-fulltext-index-transact-sql.md).
+> The examples in this section use the `Production.ProductReview` table of the [!INCLUDE [ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] sample database. You can create this index by executing the example provided for the `ProductReview` table in [CREATE FULLTEXT INDEX](../../t-sql/statements/create-fulltext-index-transact-sql.md).
 
 ### A. Obtain all the Key and DocId values
 
-The following example uses a [DECLARE](../../t-sql/language-elements/declare-local-variable-transact-sql.md) statement to create a local variable, `@table_id` and to assign the ID of the `ProductReview` table as its value. The example executes `sp_fulltext_keymappings` specifying `@table_id` for the *table_id* parameter.
+The following example uses a [DECLARE @local_variable](../../t-sql/language-elements/declare-local-variable-transact-sql.md) statement to create a local variable, `@table_id` and to assign the ID of the `ProductReview` table as its value. The example executes `sp_fulltext_keymappings` specifying `@table_id` for the *table_id* parameter.
 
 > [!NOTE]  
 > Using `sp_fulltext_keymappings` with only the *table_id* parameter is suitable for small tables.
@@ -112,7 +112,7 @@ This example returns all the DocIds and full-text keys from the table, as follow
 
 ### B. Obtain the DocId value for a specific Key value
 
-The following example uses a DECLARE statement to create a local variable, `@table_id`, and to assign the ID of the `ProductReview` table as its value. The example executes `sp_fulltext_keymappings` specifying `@table_id` for the *table_id* parameter, NULL for the *docId* parameter, and 4 for the *key* parameter.
+The following example uses a DECLARE statement to create a local variable, `@table_id`, and to assign the ID of the `ProductReview` table as its value. The example executes `sp_fulltext_keymappings` specifying `@table_id` for the *table_id* parameter, `NULL` for the *docId* parameter, and 4 for the *key* parameter.
 
 > [!NOTE]  
 > Using `sp_fulltext_keymappings` with only the *table_id* parameteris suitable for small tables.

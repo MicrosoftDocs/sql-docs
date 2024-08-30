@@ -17,18 +17,18 @@ helpviewer_keywords:
   - "sp_help_change_feed_table"
 dev_langs:
   - "TSQL"
-monikerRange: ">=sql-server-ver16||=azuresqldb-current||=fabric||=azure-sqldw-latest"
+monikerRange: ">=sql-server-ver16 || =azuresqldb-current || =fabric || =azure-sqldw-latest"
 ---
 # sys.sp_help_change_feed_table (Transact-SQL)
 
 [!INCLUDE [sqlserver2022-asdb-asa-fabric](../../includes/applies-to-version/sqlserver2022-asdb-asa-fabric.md)]
 
-Provides the provision or deprovision status and information of table group and table metadata. 
+Provides the provision or deprovision status and information of table group and table metadata.
 
 This system stored procedure is used for:
 
 - The Azure Synapse Link feature for SQL Server instances and Azure SQL Database. For more information, see [Manage Azure Synapse Link for SQL Server and Azure SQL Database](../../sql-server/synapse-link/synapse-link-sql-server-change-feed-manage.md).
-- The Fabric Mirrored Database feature for Azure SQL Database. For more information, see [Microsoft Fabric mirrored databases (Preview)](/fabric/database/mirrored-database/overview).
+- The Fabric Mirrored Database feature for Azure SQL Database. For more information, see [What is Mirroring in Fabric?](/fabric/database/mirrored-database/overview)
 
 ## Syntax
 
@@ -85,8 +85,8 @@ A user with [CONTROL database permissions](../security/permissions-database-engi
 
 **For Microsoft Fabric mirrored databases**:
 
-- [Microsoft Fabric mirrored databases (Preview)](/fabric/database/mirrored-database/overview)
-- [Microsoft Fabric mirrored databases monitoring](/fabric/database/mirrored-database/monitor)
+- [What is Mirroring in Fabric?](/fabric/database/mirrored-database/overview)
+- [Monitor Fabric mirrored database replication](/fabric/database/mirrored-database/monitor)
 - [Explore data in your Mirrored database using Microsoft Fabric](/fabric/database/mirrored-database/explore)
 
 **For Azure Synapse Link**:

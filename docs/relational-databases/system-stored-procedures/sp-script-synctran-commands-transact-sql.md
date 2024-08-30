@@ -4,7 +4,7 @@ description: Generates a script that contains the sp_addsynctrigger calls to be 
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 04/08/2024
+ms.date: 08/21/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: "reference"
@@ -57,7 +57,7 @@ The name of the article to be scripted. *@article* is **sysname**, with a defaul
 
 `0` (success) or `1` (failure).
 
-## Result sets
+## Result set
 
 `sp_script_synctran_commands` returns a result set that consists of a single **nvarchar(4000)** column. The result set forms the complete scripts necessary to create both the `sp_addsynctrigger` and `sp_addqueued_artinfo` calls to be applied at Subscribers.
 

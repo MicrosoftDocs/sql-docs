@@ -1,8 +1,8 @@
 ---
 title: Enable or disable remote R package management
 description: Enable remote R package management on SQL Server 2016 R Services or SQL Server Machine Learning Services (In-Database)
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: VanMSFT
+ms.author: vanto
 ms.date: 06/13/2019
 ms.service: sql
 ms.subservice: machine-learning-services

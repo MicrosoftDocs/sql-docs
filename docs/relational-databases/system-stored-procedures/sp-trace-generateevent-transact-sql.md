@@ -4,7 +4,7 @@ description: Fires a user-defined event to a trace or an event session.
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 09/07/2023
+ms.date: 08/21/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -22,7 +22,7 @@ dev_langs:
 
 Creates a user-defined event. The event can be collected using [SQL Trace](../sql-trace/sql-trace.md) or [Extended Events](../extended-events/extended-events.md).
 
-> [!NOTE]
+> [!NOTE]  
 > This stored procedure is **not** deprecated. All other SQL Trace related stored procedures are deprecated.
 
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
@@ -53,22 +53,22 @@ The optional user-defined data for the event. *@userdata* is **varbinary(8000)**
 
 ## Return code values
 
-The following table describes the return code values that users may get, following the completion of the stored procedure.
+The following table describes the return code values that you could get, following the completion of the stored procedure.
 
 | Return code | Description |
 | --- | --- |
 | `0` | No error. |
 | `1` | Unknown error. |
-| `3` | The specified event isn't valid. The event may not exist or it isn't an appropriate one for the stored procedure. |
+| `3` | The specified event isn't valid. The event might not exist or it isn't an appropriate one for the stored procedure. |
 | `13` | Out of memory. Returned when there isn't enough memory to perform the specified action. |
 
 ## Remarks
 
 To capture the events fired by this stored procedure using [Extended Events](../extended-events/extended-events.md), add the `user_info` event to an event session. For more information, see [CREATE EVENT SESSION](../../t-sql/statements/create-event-session-transact-sql.md). The `user_info` event is fired for any user-defined event ID value passed to the `@eventid` parameter.
 
-Only ID numbers of user-defined events may be used with `sp_trace_generateevent`. An error is raised if any other event ID number is used.
+Only ID numbers of user-defined events can be used with `sp_trace_generateevent`. An error is raised if any other event ID number is used.
 
-The parameters of this stored procedure are strictly typed. If the data type of the value passed to a parameter does not match the parameter data type specified in its description, the stored procedure returns an error.
+The parameters of this stored procedure are strictly typed. If the data type of the value passed to a parameter doesn't match the parameter data type specified in its description, the stored procedure returns an error.
 
 `sp_trace_generateevent` performs many of the actions previously executed by the `xp_trace_*` extended stored procedures. Use `sp_trace_generateevent` instead of `xp_trace_generate_event`.
 
@@ -126,8 +126,8 @@ SELECT CAST(0x5B007B0022004900640022003A0031002C002200440061007400610022003A0022
 
 ## Related content
 
-- [CREATE EVENT SESSION](../../t-sql/statements/create-event-session-transact-sql.md)
-- [Extended Events](../extended-events/extended-events.md)
+- [CREATE EVENT SESSION (Transact-SQL)](../../t-sql/statements/create-event-session-transact-sql.md)
+- [Extended Events overview](../extended-events/extended-events.md)
 - [sys.fn_trace_geteventinfo (Transact-SQL)](../system-functions/sys-fn-trace-geteventinfo-transact-sql.md)
 - [sp_trace_setevent (Transact-SQL)](sp-trace-setevent-transact-sql.md)
 - [SQL Trace](../sql-trace/sql-trace.md)

@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "sp_help_change_feed_settings"
 dev_langs:
   - "TSQL"
-monikerRange: ">=sql-server-ver16||=azuresqldb-current||=fabric||=azure-sqldw-latest"
+monikerRange: ">=sql-server-ver16 || =azuresqldb-current || =fabric || =azure-sqldw-latest"
 ---
 # sys.sp_help_change_feed_settings (Transact-SQL)
 
@@ -28,7 +28,7 @@ Provides the provision or deprovision status and information of the [Fabric Mirr
 This system stored procedure is used for:
 
 - The Azure Synapse Link feature for SQL Server instances and Azure SQL Database. For more information, see [Manage Azure Synapse Link for SQL Server and Azure SQL Database](../../sql-server/synapse-link/synapse-link-sql-server-change-feed-manage.md).
-- The Fabric Mirrored Database feature for Azure SQL Database. For more information, see [Microsoft Fabric mirrored databases (Preview)](/fabric/database/mirrored-database/overview).
+- The Fabric Mirrored Database feature for Azure SQL Database. For more information, see [What is Mirroring in Fabric?](/fabric/database/mirrored-database/overview)
 
 ## Syntax
 
@@ -46,11 +46,11 @@ None
 
 | Column name | Data type | Description |
 | --- | --- | --- |
-| `maxtrans` |**int**| Maximum transactions to process in each cycle. The default is 10000. |
-| `seqno` |**binary(10)**|Log Sequence Number (LSN) marker to track the last published LSN (log record).|
-| `schema_version` |**int**| Tracks current schema version of database. Determines whether a schema needs to be updated or not on startup. |
-| `pollinterval` |**int**| The frequency that the log is scanned for any new changes in seconds.|
-| `reseed_state` | **tinyint** | **Applies to:** Fabric Mirrored Database only.<br /><br />`0` = Normal.<br />`1` = The database has started the process of reinitializing to Fabric. Transitionary state.<br />`2` = The database is being reinitialized to Fabric and remains in this state until complete.|  
+| `maxtrans` | **int** | Maximum transactions to process in each cycle. The default is 10000. |
+| `seqno` | **binary(10)** | Log Sequence Number (LSN) marker to track the last published LSN (log record). |
+| `schema_version` | **int** | Tracks current schema version of database. Determines whether a schema needs to be updated or not on startup. |
+| `pollinterval` | **int** | The frequency that the log is scanned for any new changes in seconds. |
+| `reseed_state` | **tinyint** | **Applies to:** Fabric Mirrored Database only.<br /><br />`0` = Normal.<br />`1` = The database has started the process of reinitializing to Fabric. Transitionary state.<br />`2` = The database is being reinitialized to Fabric and remains in this state until complete. |
 
 ## Permissions
 
@@ -71,8 +71,8 @@ If Fabric Mirroring, the source SQL database transaction log is monitored. If th
 
 **For Microsoft Fabric mirrored databases**:
 
-- [Microsoft Fabric mirrored databases (Preview)](/fabric/database/mirrored-database/overview)
-- [Microsoft Fabric mirrored databases monitoring](/fabric/database/mirrored-database/monitor)
+- [What is Mirroring in Fabric?](/fabric/database/mirrored-database/overview)
+- [Monitor Fabric mirrored database replication](/fabric/database/mirrored-database/monitor)
 - [Explore data in your Mirrored database using Microsoft Fabric](/fabric/database/mirrored-database/explore)
 
 **For Azure Synapse Link**:

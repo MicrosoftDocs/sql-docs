@@ -4,7 +4,7 @@ description: "Get an introduction to SQL Database: technical details and capabil
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma
-ms.date: 02/12/2024
+ms.date: 08/22/2024
 ms.service: azure-sql-database
 ms.subservice: service-overview
 ms.topic: overview
@@ -114,6 +114,7 @@ You can blend single databases with elastic pools, and change the service tiers 
 Azure SQL Database provides advanced monitoring and troubleshooting features that help you get deeper insights into workload characteristics. These features and tools include:
  - The built-in monitoring capabilities provided by the latest version of the SQL Server database engine. They enable you to find real-time performance insights. 
  - PaaS monitoring capabilities provided by Azure that enable you to monitor and troubleshoot a large number of database instances.
+ - [Database watcher (preview)](../database-watcher-overview.md) enables in-depth, low-latency current and historical monitoring and provides a single-pane-of-glass view of your Azure SQL estate.
 
 [Query Store](/sql/relational-databases/performance/best-practice-with-the-query-store), a built-in SQL Server monitoring feature, records the performance of your queries in real time, and enables you to identify the potential performance issues and the top resource consumers. [Automatic tuning and recommendations](automatic-tuning-overview.md) provide advice regarding the queries with the regressed performance and missing or duplicated indexes. Automatic tuning in SQL Database enables you to either manually apply the scripts that can fix the issues, or let SQL Database apply the fix. SQL Database can also test and verify that the fix provides some benefit, and retain or revert the change depending on the outcome. In addition to Query Store and automatic tuning capabilities, you can use standard [DMVs and XEvents](monitoring-with-dmvs.md) to monitor the workload performance.
 
@@ -164,8 +165,6 @@ With SQL Database, you get built-in intelligence that helps you dramatically red
 ### Automatic performance monitoring and tuning
 
 SQL Database provides detailed insight into the queries that you need to monitor. SQL Database learns about your database patterns, and enables you to adapt your database schema to your workload. SQL Database provides [performance tuning recommendations](database-advisor-implement-performance-recommendations.md), where you can review tuning actions and apply them.
-
-However, constantly monitoring a database is a hard and tedious task, especially when you're dealing with many databases. [Intelligent Insights](intelligent-insights-overview.md) does this job for you by automatically monitoring SQL Database performance at scale. It informs you of performance degradation issues, it identifies the root cause of each issue, and it provides performance improvement recommendations when possible.
 
 Managing a huge number of databases might be impossible to do efficiently even with all available tools and reports that SQL Database and Azure provide. Instead of monitoring and tuning your database manually, you might consider delegating some of the monitoring and tuning actions to SQL Database by using [automatic tuning](automatic-tuning-overview.md). SQL Database automatically applies recommendations, tests, and verifies each of its tuning actions to ensure the performance keeps improving. This way, SQL Database automatically adapts to your workload in a controlled and safe way. Automatic tuning means that the performance of your database is carefully monitored and compared before and after every tuning action. If the performance doesn't improve, the tuning action is reverted.
 

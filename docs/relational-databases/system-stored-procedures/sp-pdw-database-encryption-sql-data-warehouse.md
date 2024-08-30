@@ -4,7 +4,7 @@ description: sp_pdw_database_encryption enables transparent data encryption for 
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: randolphwest
-ms.date: 08/21/2024
+ms.date: 08/22/2024
 ms.service: sql
 ms.topic: "reference"
 dev_langs:
@@ -38,7 +38,7 @@ Determines whether transparent data encryption is enabled. *enabled* is **int**,
 - `0` = Disabled
 - `1` = Enabled
 
-If you execute `sp_pdw_database_encryption` without parameters,  it returns the current state of TDE on the appliance as a scalar result set: `0` for disabled, or `1` for enabled.
+If you execute `sp_pdw_database_encryption` without parameters, it returns the current state of TDE on the appliance as a scalar result set: `0` for disabled, or `1` for enabled.
 
 ## Return code values
 

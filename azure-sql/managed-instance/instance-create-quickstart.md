@@ -4,7 +4,7 @@ description: Create Azure SQL Managed Instance by using the Azure portal, PowerS
 author: urosran
 ms.author: urandjelovic
 ms.reviewer: mathoma
-ms.date: 02/26/2024
+ms.date: 08/16/2024
 ms.service: azure-sql-managed-instance
 ms.subservice: deployment-configuration
 ms.topic: quickstart
@@ -259,7 +259,7 @@ Review the following related content:
 - [Configure an Azure virtual machine connection](connect-vm-instance-configure.md)
 - [Migration overview: SQL Server to SQL Managed Instance](../migration-guides/managed-instance/sql-server-to-managed-instance-overview.md)
 - [Configure a point-to-site connection](point-to-site-p2s-configure.md)
-- [Monitor Azure SQL Managed Instance by using Azure SQL Analytics](/azure/azure-monitor/insights/azure-sql)
+- [Monitor Azure SQL Managed Instance using database watcher](../database-watcher-overview.md)
 
 To restore an existing SQL Server database from on-premises to SQL Managed Instance: 
 - Use the [Azure Database Migration Service](/azure/dms/tutorial-sql-server-managed-instance-online-ads) to restore from a database backup file.

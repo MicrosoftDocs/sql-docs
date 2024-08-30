@@ -1,8 +1,8 @@
 ---
 title: "Performance monitoring and tuning tools"
 description: Learn about SQL Server monitoring and tuning tools and how to choose the right one depending on the type of monitoring and the events to monitor.
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: 07/19/2024
 ms.service: sql
 ms.subservice: performance

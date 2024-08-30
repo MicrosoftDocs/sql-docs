@@ -4,7 +4,7 @@ description: Creates an article and adds it to a publication. This stored proced
 author: mashamsft
 ms.author: mathoma
 ms.reviewer: randolphwest
-ms.date: 11/02/2023
+ms.date: 08/21/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: "reference"
@@ -185,7 +185,7 @@ A restriction (WHERE) clause that defines a horizontal filter. When entering the
 
 #### [ @schema_option = ] *schema_option*
 
-A bitmask of the schema generation option for the given article. *@schema_option* is **varbinary(8)**, with a default of `NULL`, and can be the [| (Bitwise OR)](../../t-sql/language-elements/bitwise-or-transact-sql.md) product of one or more of these values:
+A bitmask of the schema generation option for the given article. *@schema_option* is **varbinary(8)**, with a default of `NULL`, and can be the [&#124; (Bitwise OR)](../../t-sql/language-elements/bitwise-or-transact-sql.md) product of one or more of these values:
 
 > [!NOTE]  
 > If this value is `NULL`, the system auto-generates a valid schema option for the article depending on other article properties. The [Default schema options](#default-schema-options) shows the value that will be chosen based upon the combination of the article type and the replication type.
@@ -215,9 +215,9 @@ A bitmask of the schema generation option for the given article. *@schema_option
 | `0x80000` | Replicates the partition scheme for a partitioned table. |
 | `0x100000` | Replicates the partition scheme for a partitioned index. |
 | `0x200000` | Replicates table statistics. |
-| `0x400000` | Default Bindings |
-| `0x800000` | Rule Bindings |
-| `0x1000000` | Full-text index |
+| `0x400000` | Default bindings. |
+| `0x800000` | Rule bindings. |
+| `0x1000000` | Full-text index. |
 | `0x2000000` | XML schema collections bound to **xml** columns aren't replicated. |
 | `0x4000000` | Replicates indexes on **xml** columns. |
 | `0x8000000` | Create any schemas not already present on the subscriber. |
@@ -230,7 +230,7 @@ A bitmask of the schema generation option for the given article. *@schema_option
 | `0x400000000` | Replicates the compression option for data and indexes. For more information, see [Data compression](../data-compression/data-compression.md). |
 | `0x800000000` | Set this option to store FILESTREAM data on its own filegroup at the Subscriber. If this option isn't set, FILESTREAM data is stored on the default filegroup. Replication doesn't create filegroups; therefore, if you set this option, you must create the filegroup before you apply the snapshot at the Subscriber. For more information about how to create objects before you apply the snapshot, see [Execute Scripts Before and After the Snapshot Is Applied](../replication/snapshot-options.md#execute-scripts-before-and-after-snapshot-is-applied).<br /><br />See related option **0x100000000**. |
 | `0x1000000000` | Converts common language runtime (CLR) user-defined types (UDTs) that are larger than 8000 bytes to **varbinary(max)** so that columns of type UDT can be replicated to Subscribers that are running [!INCLUDE [ssVersion2005](../../includes/ssversion2005-md.md)]. |
-| `0x2000000000` | Converts the **hierarchyid** data type to **varbinary(max)** so that columns of type **hierarchyid** can be replicated to Subscribers that are running [!INCLUDE [ssVersion2005](../../includes/ssversion2005-md.md)]. For more information about how to use **hierarchyid** columns in replicated tables, see [hierarchyid (Transact-SQL)](../../t-sql/data-types/hierarchyid-data-type-method-reference.md). |
+| `0x2000000000` | Converts the **hierarchyid** data type to **varbinary(max)** so that columns of type **hierarchyid** can be replicated to Subscribers that are running [!INCLUDE [ssVersion2005](../../includes/ssversion2005-md.md)]. For more information about how to use **hierarchyid** columns in replicated tables, see [hierarchyid](../../t-sql/data-types/hierarchyid-data-type-method-reference.md). |
 | `0x4000000000` | Replicates any filtered indexes on the table. For more information about filtered indexes, see [Create filtered indexes](../indexes/create-filtered-indexes.md). |
 | `0x8000000000` | Converts the **geography** and **geometry** data types to **varbinary(max)** so that columns of these types can be replicated to Subscribers that are running [!INCLUDE [ssVersion2005](../../includes/ssversion2005-md.md)]. |
 | `0x10000000000` | Replicates indexes on columns of type **geography** and **geometry**. |
@@ -259,7 +259,7 @@ To support non-[!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Subscr
 
 #### [ @status = ] *status*
 
-Specifies if the article is active and additional options for how changes are propagated. *@status* is **tinyint**, and can be the [| (Bitwise OR)](../../t-sql/language-elements/bitwise-or-transact-sql.md) product of one or more of these values.
+Specifies if the article is active and additional options for how changes are propagated. *@status* is **tinyint**, and can be the [&#124; (Bitwise OR)](../../t-sql/language-elements/bitwise-or-transact-sql.md) product of one or more of these values.
 
 | Value | Description |
 | --- | --- |

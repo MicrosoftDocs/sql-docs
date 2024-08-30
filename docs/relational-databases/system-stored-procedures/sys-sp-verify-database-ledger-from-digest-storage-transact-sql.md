@@ -4,7 +4,7 @@ description: "Verifies the database ledger and the table ledgers using digests a
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: randolphwest
-ms.date: 06/13/2023
+ms.date: 08/21/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -18,7 +18,7 @@ monikerRange: "=azuresqldb-current"
 
 Verifies the database ledger and the table ledgers using digests at the specified external digest storage locations.
 
-This stored procedure implements the same ledger verification algorithm as [sp_verify_database_ledger](sys-sp-verify-database-ledger-transact-sql.md). A caller is expected to provide a JSON document that contains the paths pointing to digest storage locations, such as [Azure Blob storage](/azure/storage/blobs/storage-blobs-introduction) containers.
+This stored procedure implements the same ledger verification algorithm as [sys.sp_verify_database_ledger](sys-sp-verify-database-ledger-transact-sql.md). A caller is expected to provide a JSON document that contains the paths pointing to digest storage locations, such as [Azure Blob storage](/azure/storage/blobs/storage-blobs-introduction) containers.
 
 For more information on database ledger, see [Ledger](/azure/azure-sql/database/ledger-overview).
 
@@ -40,9 +40,9 @@ A JSON document containing a list of ledger digests locations:
 
 | Column name | JSON data type | Description |
 | --- | --- | --- |
-| **path** | **string** | The location of storage digests. For example, a path for a container in Azure Blob Storage. |
-| **last_digest_block_id** | **int** | The block ID for the last digest uploaded. |
-| **is_current** | **boolean** | Indicates whether this is the current path or a path used in the past. |
+| `path` | **string** | The location of storage digests. For example, a path for a container in Azure Blob Storage. |
+| `last_digest_block_id` | **int** | The block ID for the last digest uploaded. |
+| `is_current` | **boolean** | Indicates whether this is the current path or a path used in the past. |
 
 #### [ @table_name = ] '*table_name*'
 
@@ -75,6 +75,6 @@ Requires the **VIEW LEDGER CONTENT** permission.
 
 ## Related content
 
-- [Database Verification](../security/ledger/ledger-database-verification.md)
+- [Database verification](../security/ledger/ledger-database-verification.md)
 - [Verify a ledger table to detect tampering](../security/ledger/ledger-verify-database.md)
-- [Ledger Overview](../security/ledger/ledger-overview.md)
+- [Ledger overview](../security/ledger/ledger-overview.md)

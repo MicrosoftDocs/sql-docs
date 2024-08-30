@@ -4,7 +4,7 @@ description: "Performs a manual cleanup of metadata in the MSmerge_* system tabl
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 11/23/2023
+ms.date: 08/22/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: "reference"
@@ -59,7 +59,7 @@ Returns the number of rows cleaned-up from the [MSmerge_tombstone](../system-tab
 
 ## Remarks
 
-If there are multiple publications on a database, and any one of those publications uses an infinite publication retention period, running `sp_mergemetadataretentioncleanup` doesn't clean up the merge replication change tracking metadata for the database. For this reason, use infinite publication retention with caution. To determine if a publication has an infinite retention period, execute [sp_helpmergepublication (Transact-SQL)](sp-helpmergepublication-transact-sql.md) at the Publisher and note any publications in the result set with a value of `0` for `retention`.
+If there are multiple publications on a database, and any one of those publications uses an infinite publication retention period, running `sp_mergemetadataretentioncleanup` doesn't clean up the merge replication change tracking metadata for the database. For this reason, use infinite publication retention with caution. To determine if a publication has an infinite retention period, execute [sp_helpmergepublication](sp-helpmergepublication-transact-sql.md) at the Publisher and note any publications in the result set with a value of `0` for `retention`.
 
 ## Permissions
 

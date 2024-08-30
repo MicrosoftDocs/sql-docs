@@ -1,8 +1,8 @@
 ---
 title: Airline flight demo data for tutorials
 description: "Airline flight arrival demo data for SQL Server Python and R tutorials"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: VanMSFT
+ms.author: vanto
 ms.date: 10/22/2018
 ms.service: sql
 ms.subservice: machine-learning-services

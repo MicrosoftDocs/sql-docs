@@ -4,7 +4,7 @@ description: "Creates a schedule that can be used by any number of jobs."
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 08/28/2023
+ms.date: 08/21/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -118,7 +118,7 @@ The number of weeks or months between the scheduled execution of a job. *@freq_r
 
 #### [ @active_start_date = ] *active_start_date*
 
-The date on which execution of a job can begin. *@active_start_date* is **int**, with a default of `NULL`, which indicates today's date. The date is formatted as `yyyyMMdd`. If *@active_start_date* isn't NULL, the date must be greater than or equal to 19900101.
+The date on which execution of a job can begin. *@active_start_date* is **int**, with a default of `NULL`, which indicates today's date. The date is formatted as `yyyyMMdd`. If *@active_start_date* isn't `NULL`, the date must be greater than or equal to 19900101.
 
 After the schedule is created, review the start date and confirm that it's the correct date. For more information, see the section "Scheduling Start Date" in [Create and Attach Schedules to Jobs](../../ssms/agent/create-and-attach-schedules-to-jobs.md).
 

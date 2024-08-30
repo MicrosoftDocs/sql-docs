@@ -1,6 +1,6 @@
 ---
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: VanMSFT
+ms.author: vanto
 ms.date: 02/08/2021
 ms.service: sql
 ms.subservice: machine-learning-services

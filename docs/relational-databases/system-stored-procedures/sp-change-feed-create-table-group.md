@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "sp_change_feed_create_table_group"
 dev_langs:
   - "TSQL"
-monikerRange: ">=sql-server-ver16||=azuresqldb-current||=fabric||=azure-sqldw-latest"
+monikerRange: ">=sql-server-ver16 || =azuresqldb-current || =fabric || =azure-sqldw-latest"
 ---
 # sys.sp_change_feed_create_table_group (Transact-SQL)
 
@@ -26,12 +26,12 @@ monikerRange: ">=sql-server-ver16||=azuresqldb-current||=fabric||=azure-sqldw-la
 Creates a source to maintain metadata specific to each table group. A table group represents the container for all the individual tables that will be replicated.
 
 > [!NOTE]  
-> This system stored procedure is used internally and is not recommended for direct administrative use. Use Synapse Studio or the Fabric portal instead. Using this procedure could introduce inconsistency.
+> This system stored procedure is used internally and isn't recommended for direct administrative use. Use Synapse Studio or the Fabric portal instead. Using this procedure could introduce inconsistency.
 
 This system stored procedure is used for:
 
 - The Azure Synapse Link feature for SQL Server instances and Azure SQL Database. For more information, see [Manage Azure Synapse Link for SQL Server and Azure SQL Database](../../sql-server/synapse-link/synapse-link-sql-server-change-feed-manage.md).
-- The Fabric Mirrored Database feature for Azure SQL Database. For more information, see [Microsoft Fabric mirrored databases (Preview)](/fabric/database/mirrored-database/overview).
+- The Fabric Mirrored Database feature for Azure SQL Database. For more information, see [What is Mirroring in Fabric?](/fabric/database/mirrored-database/overview)
 
 ## Syntax
 
@@ -83,8 +83,8 @@ A user with [CONTROL database permissions](../security/permissions-database-engi
 
 **For Microsoft Fabric mirrored databases**:
 
-- [Microsoft Fabric mirrored databases (Preview)](/fabric/database/mirrored-database/overview)
-- [Microsoft Fabric mirrored databases monitoring](/fabric/database/mirrored-database/monitor)
+- [What is Mirroring in Fabric?](/fabric/database/mirrored-database/overview)
+- [Monitor Fabric mirrored database replication](/fabric/database/mirrored-database/monitor)
 - [Explore data in your Mirrored database using Microsoft Fabric](/fabric/database/mirrored-database/explore)
 
 **For Azure Synapse Link**:

@@ -4,7 +4,7 @@ description: sp_dropextendedproperty drops an existing extended property.
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 12/27/2023
+ms.date: 08/21/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -144,4 +144,4 @@ GO
 - [sys.fn_listextendedproperty (Transact-SQL)](../system-functions/sys-fn-listextendedproperty-transact-sql.md)
 - [sp_addextendedproperty (Transact-SQL)](sp-addextendedproperty-transact-sql.md)
 - [sp_updateextendedproperty (Transact-SQL)](sp-updateextendedproperty-transact-sql.md)
-- [Extended Properties Catalog Views - sys.extended_properties](../system-catalog-views/extended-properties-catalog-views-sys-extended-properties.md)
+- [Extended properties catalog views - sys.extended_properties](../system-catalog-views/extended-properties-catalog-views-sys-extended-properties.md)

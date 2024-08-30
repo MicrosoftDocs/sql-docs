@@ -4,7 +4,7 @@ titleSuffix: SQL Server
 description: Enable pushdown computation to improve performance of queries on your Hadoop cluster. You can select a subset of rows/columns in an external table for pushdown.
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: wiassaf, nathansc 
+ms.reviewer: nathansc, hudequei
 ms.date: 5/13/2024
 ms.service: sql
 ms.subservice: polybase

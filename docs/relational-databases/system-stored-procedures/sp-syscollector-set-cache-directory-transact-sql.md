@@ -4,7 +4,7 @@ description: Specifies the directory where collected data is stored before it is
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 07/04/2023
+ms.date: 08/21/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -21,7 +21,7 @@ dev_langs:
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-Specifies the directory where collected data is stored before it is uploaded to the management data warehouse.
+Specifies the directory where collected data is stored before it's uploaded to the management data warehouse.
 
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
@@ -40,7 +40,7 @@ The directory in the file system where collected data is stored temporarily. *@c
 
 ## Remarks
 
-You must disable the data collector before changing the cache directory configuration. This stored procedure fails if the data collector is enabled. For more information, see [Enable or Disable Data Collection](../data-collection/enable-or-disable-data-collection.md), and [Manage Data Collection](../data-collection/manage-data-collection.md).
+You must disable the data collector before changing the cache directory configuration. This stored procedure fails if the data collector is enabled. For more information, see [Enable or disable data collection](../data-collection/enable-or-disable-data-collection.md), and [Manage data collection](../data-collection/manage-data-collection.md).
 
 The specified directory doesn't need to exist at the time the `sp_syscollector_set_cache_directory` is executed; however, data can't be successfully cached and uploaded until the directory is created. We recommend creating the directory before executing this stored procedure.
 
@@ -66,5 +66,5 @@ GO
 
 ## Related content
 
-- [Data Collector stored procedures (Transact-SQL)](data-collector-stored-procedures-transact-sql.md)
+- [Data collector stored procedures (Transact-SQL)](data-collector-stored-procedures-transact-sql.md)
 - [sp_syscollector_set_cache_window (Transact-SQL)](sp-syscollector-set-cache-window-transact-sql.md)

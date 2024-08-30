@@ -1,8 +1,8 @@
 ---
 title: "Attach Query Hints to a Plan Guide"
 description: Any combination of valid query hints can be used in a plan guide. Learn about attaching hints to a plan guide in SQL Server.
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: performance

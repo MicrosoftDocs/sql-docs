@@ -1,8 +1,8 @@
 ---
 title: "SQL_VARIANT in a memory-optimized table"
 description: Use this example to learn how to implement SQL_VARIANT in a memory-optimized table in SQL Server and Azure SQL Database.
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "03/01/2017"
 ms.service: sql
 ms.subservice: in-memory-oltp

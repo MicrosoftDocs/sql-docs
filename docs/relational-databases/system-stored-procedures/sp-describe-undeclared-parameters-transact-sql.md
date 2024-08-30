@@ -4,7 +4,7 @@ description: Returns a result set that contains metadata about undeclared parame
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 07/04/2024
+ms.date: 08/21/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -29,7 +29,7 @@ Returns a result set that contains metadata about undeclared parameters in a [!I
 ```syntaxsql
 sp_describe_undeclared_parameters
     [ @tsql = ] 'Transact-SQL_batch'
-    [ , [ @params = ] N'params [ , ...n ]' ]
+    [ , [ @params = ] N'@parameter_name data_type [ , ... n ]' ]
 ```
 
 > [!NOTE]  
@@ -41,7 +41,7 @@ sp_describe_undeclared_parameters
 
 One or more [!INCLUDE [tsql](../../includes/tsql-md.md)] statements. *@tsql* might be **nvarchar(*n*)** or **nvarchar(max)**.
 
-#### [ @params = ] N'*params*'
+#### [ @params = ] N'*@parameter_name* *data_type* [ ,... *n* ]'
 
 *@params* provides a declaration string for parameters for the [!INCLUDE [tsql](../../includes/tsql-md.md)] batch, similarly to the way `sp_executesql` works. *@params* might be **nvarchar(*n*)** or **nvarchar(max)**.
 

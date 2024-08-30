@@ -1,8 +1,8 @@
 ---
 title: R language extension
 description: Learn about the R extension for running external R scripts with SQL Server Machine Learning Services and SQL Server R Services.
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: VanMSFT
+ms.author: vanto
 ms.date: 05/24/2022
 ms.service: sql
 ms.subservice: machine-learning-services

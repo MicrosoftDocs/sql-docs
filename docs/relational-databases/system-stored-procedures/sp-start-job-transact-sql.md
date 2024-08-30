@@ -4,7 +4,7 @@ description: sp_start_job instructs the SQL Server Agent to execute a job immedi
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 04/08/2024
+ms.date: 08/22/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -80,7 +80,7 @@ None.
 
 This stored procedure is in the `msdb` database.
 
-This stored procedure shares the name of `sp_start_job` with a similar object for the [Azure Elastic Jobs service for Azure SQL Database](/azure/azure-sql/database/elastic-jobs-overview?view=azuresql-db&preserve-view=true). For information about the elastic jobs version, see [jobs.sp_start_job (Azure Elastic Jobs) (Transact-SQL)](sp-start-job-elastic-jobs-transact-sql.md?view=azuresql-db&preserve-view=true).
+This stored procedure shares the name of `sp_start_job` with a similar object for the [Azure Elastic Jobs service for Azure SQL Database](/azure/azure-sql/database/elastic-jobs-overview?view=azuresql-db&preserve-view=true). For information about the elastic jobs version, see [jobs.sp_start_job (Azure Elastic Jobs)](sp-start-job-elastic-jobs-transact-sql.md?view=azuresql-db&preserve-view=true).
 
 [!INCLUDE [msdb-execute-permissions](../../includes/msdb-execute-permissions.md)]
 

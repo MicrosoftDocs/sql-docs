@@ -4,7 +4,7 @@ description: "OLE Automation stored procedures (Transact-SQL)"
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 05/24/2023
+ms.date: 08/21/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -18,7 +18,7 @@ dev_langs:
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-[!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] supports the following system stored procedures that allow OLE Automation objects to be used within a [!INCLUDE [tsql](../../includes/tsql-md.md)] batch. By default, [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] blocks access to OLE Automation stored procedures because this component is turned off as part of the security configuration for this server. A system administrator can enable access to OLE Automation procedures by using `sp_configure`. For more information, see [Surface Area Configuration](../security/surface-area-configuration.md).
+[!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] supports the following system stored procedures that allow OLE Automation objects to be used within a [!INCLUDE [tsql](../../includes/tsql-md.md)] batch. By default, [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] blocks access to OLE Automation stored procedures because this component is turned off as part of the security configuration for this server. A system administrator can enable access to OLE Automation procedures by using `sp_configure`. For more information, see [Surface area configuration](../security/surface-area-configuration.md).
 
 - [sp_OACreate](sp-oacreate-transact-sql.md)
 - [sp_OADestroy](sp-oadestroy-transact-sql.md)
@@ -27,7 +27,7 @@ dev_langs:
 - [sp_OAMethod](sp-oamethod-transact-sql.md)
 - [sp_OASetProperty](sp-oasetproperty-transact-sql.md)
 - [sp_OAStop](sp-oastop-transact-sql.md)
-- [Object Hierarchy Syntax (Transact-SQL)](object-hierarchy-syntax-transact-sql.md)
+- [Object hierarchy syntax (Transact-SQL)](object-hierarchy-syntax-transact-sql.md)
 
 > [!NOTE]  
 > Don't directly or indirectly call Automation procedures from any SQL Server common language runtime (CLR) objects. Doing so can cause SQL Server to crash unexpectedly. Additionally, an error message that resembles the following is logged in the application event log:
@@ -53,4 +53,4 @@ P10:
 ## Related content
 
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)
-- [Ole Automation Procedures Server Configuration Option](../../database-engine/configure-windows/ole-automation-procedures-server-configuration-option.md)
+- [Ole Automation Procedures (server configuration option)](../../database-engine/configure-windows/ole-automation-procedures-server-configuration-option.md)

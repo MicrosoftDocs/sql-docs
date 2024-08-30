@@ -1,8 +1,8 @@
 ---
 title: "R tutorial: Feature engineering"
 description: Tutorial showing how to create data features using SQL Server functions for in-database analytics.
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: VanMSFT
+ms.author: vanto
 ms.date: 11/26/2018
 ms.service: sql
 ms.subservice: machine-learning-services

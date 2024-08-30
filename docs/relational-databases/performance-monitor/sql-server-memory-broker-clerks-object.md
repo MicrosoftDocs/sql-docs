@@ -1,8 +1,8 @@
 ---
 title: "SQL Server, Memory Broker Clerks object"
 description: "Learn about the SQLServer:Memory Broker Clerks performance object, which provides counters for statistics related to memory broker clerks."
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: 12/04/2023
 ms.service: sql
 ms.subservice: performance

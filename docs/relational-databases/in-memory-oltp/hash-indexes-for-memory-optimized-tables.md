@@ -1,8 +1,8 @@
 ---
 title: "Troubleshooting hash indexes - memory-optimized tables"
 description: Use this information to troubleshoot hash indexes for memory-optimized tables in SQL Server and Azure SQL Database.
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "12/01/2017"
 ms.service: sql
 ms.subservice: in-memory-oltp

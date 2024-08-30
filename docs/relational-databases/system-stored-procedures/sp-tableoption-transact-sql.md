@@ -4,7 +4,7 @@ description: sp_tableoption sets option values for user-defined tables.
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 12/28/2023
+ms.date: 08/21/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -95,7 +95,7 @@ A table variable, including a function that returns a table variable, automatica
 
 The text in row option supports the TEXTPTR, WRITETEXT, UPDATETEXT, and READTEXT functions. Users can read parts of a BLOB with the SUBSTRING() function, but must remember that in-row text pointers have different duration and number limits from other text pointers.
 
-To change a table from **vardecimal** storage format back to the normal decimal storage format, the database must be in the SIMPLE recovery model. Changing the recovery mode will break the log chain for backup purposes, therefore you should create a full database backup after removing the **vardecimal** storage format from a table.
+To change a table from **vardecimal** storage format back to the normal decimal storage format, the database must be in the SIMPLE recovery model. Changing the recovery model will break the log chain for backup purposes, therefore you should create a full database backup after removing the **vardecimal** storage format from a table.
 
 If you're converting an existing LOB data type column (text, ntext, or image) to small-to-medium large value types (**varchar(max)**, **nvarchar(max)**, or **varbinary(max)**), and most statements don't reference the large value type columns in your environment, consider changing **large_value_types_out_of_row** to `1` to gain optimal performance. When the **large_value_types_out_of_row** option value is changed, existing **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, and **xml** values aren't immediately converted. The storage of the strings is changed as they are updated later. Any new values inserted into a table are stored according to the table option in effect. For immediate results, either make a copy of the data and then repopulate the table after changing the **large_value_types_out_of_row** setting or update each small-to-medium large value types column to itself so that the storage of the strings is changed with the table option in effect. Consider rebuilding the indexes on the table after the update or repopulation to condense the table.
 

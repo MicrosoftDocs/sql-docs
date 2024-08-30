@@ -1,9 +1,9 @@
 ---
 title: "Intelligent query processing details"
 description: "Intelligent query processing features described in detail."
-author: WilliamDAssafMSFT
-ms.author: wiassaf
-ms.reviewer: derekw, mikeray
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: derekw, wiassaf
 ms.date: 01/08/2024
 ms.service: sql
 ms.subservice: performance

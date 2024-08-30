@@ -1,8 +1,8 @@
 ---
 title: "clr_math: clr_math"
 description: "Default .NET math."
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: VanMSFT
+ms.author: vanto
 ms.date: 07/15/2019
 ms.service: sql
 ms.subservice: "machine-learning-services"

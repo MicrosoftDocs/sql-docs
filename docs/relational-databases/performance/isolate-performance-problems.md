@@ -1,8 +1,8 @@
 ---
 title: "Isolate Performance Problems"
 description: Use SQL Server Profiler and System Monitor to monitor and troubleshoot Transact-SQL, application-related problems, hardware, and system-related problems.
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: performance

@@ -4,7 +4,7 @@ description: "Lists information about associations between Database Mail profile
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 05/30/2023
+ms.date: 08/21/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -44,11 +44,11 @@ The name of the database user or role in the `msdb` database for the association
 
 #### [ @profile_id = ] *profile_id*
 
-The ID of the profile for the association to list. *@profile_id* is **int**, with a default of `NULL`. Either *@profile_id* or *@profile_name* may be specified.
+The ID of the profile for the association to list. *@profile_id* is **int**, with a default of `NULL`. Either *@profile_id* or *@profile_name* can be specified.
 
 #### [ @profile_name = ] '*profile_name*'
 
-The name of the profile for the association to list. *@profile_name* is **sysname**, with a default of `NULL`. Either *@profile_id* or *@profile_name* may be specified.
+The name of the profile for the association to list. *@profile_name* is **sysname**, with a default of `NULL`. Either *@profile_id* or *@profile_name* can be specified.
 
 ## Return code values
 

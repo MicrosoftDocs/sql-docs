@@ -3,7 +3,7 @@ title: "jobs.sp_add_jobstep (Azure Elastic Jobs) (Transact-SQL)"
 description: "jobs.sp_add_jobstep adds a step to an existing job in the Azure Elastic Jobs service for Azure SQL Database."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: 12/04/2023
+ms.date: 08/21/2024
 ms.service: azure-sql-database
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -17,7 +17,7 @@ monikerRange: "=azuresqldb-current"
 
 Adds a step to an existing job in the [Azure Elastic Jobs service for Azure SQL Database](/azure/azure-sql/database/elastic-jobs-overview?view=azuresql-db&preserve-view=true). Use [jobs.sp_update_jobstep](sp-update-jobstep-elastic-jobs-transact-sql.md) to modify existing elastic job steps.
 
-This stored procedure shares the name of `sp_add_jobstep` with a similar object in [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] for the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] Agent service. For information about the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] Agent version, see [sp_add_jobstep (Transact-SQL)](sp-add-jobstep-transact-sql.md).
+This stored procedure shares the name of `sp_add_jobstep` with a similar object in [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] for the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] Agent service. For information about the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] Agent version, see [sp_add_jobstep](sp-add-jobstep-transact-sql.md).
 
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
@@ -28,9 +28,9 @@ This stored procedure shares the name of `sp_add_jobstep` with a similar object 
      [ , [ @step_id = ] step_id ]
      [ , [ @step_name = ] step_name ]
      [ , [ @command_type = ] 'command_type' ]
-     [ , [ @command_source = ] 'command_source' ]  
+     [ , [ @command_source = ] 'command_source' ]
      , [ @command = ] 'command'
-     [, [ @credential_name = ] 'credential_name' ]
+     [ , [ @credential_name = ] 'credential_name' ]
      , [ @target_group_name = ] 'target_group_name'
      [ , [ @initial_retry_interval_seconds = ] initial_retry_interval_seconds ]
      [ , [ @maximum_retry_interval_seconds = ] maximum_retry_interval_seconds ]
@@ -95,7 +95,7 @@ The delay before the first retry attempt, if the job step fails on the initial e
 
 #### @maximum_retry_interval_seconds
 
-The maximum delay between retry attempts. If the delay between retries would grow larger than this value, it is capped to this value instead. *maximum_retry_interval_seconds* is int, with default value of 120.
+The maximum delay between retry attempts. If the delay between retries would grow larger than this value, it's capped to this value instead. *maximum_retry_interval_seconds* is int, with default value of 120.
 
 #### @retry_interval_backoff_multiplier
 
@@ -147,19 +147,19 @@ If not `NULL`, the name of the table that the *command*'s first result set will 
 
 If specifying an *output_table_name*, the Job Agent UMI or database-scoped credential should be granted needed permissions to CREATE TABLE and INSERT data into the table.
 
-#### @job_version OUTPUT  
+#### @job_version OUTPUT
 
 Output parameter that will be assigned the new job version number. *job_version* is int.
 
-#### @max_parallelism  OUTPUT  
+#### @max_parallelism OUTPUT
 
 The maximum level of parallelism per elastic pool.
 
 If set, then the job step will be restricted to only run on a maximum of that many databases per elastic pool. This applies to each elastic pool that is either directly included in the target group or to elastic pools inside a server that is included in the target group. *max_parallelism* is int.
 
-## Return Code Values
+## Return code values
 
-0 (success) or 1 (failure)
+`0` (success) or `1` (failure).
 
 ## Remarks
 
@@ -170,7 +170,7 @@ When `sp_add_jobstep` succeeds, the job's current version number is incremented.
 
 ## Permissions
 
-By default, members of the sysadmin fixed server role can execute this stored procedure.  Only members of sysadmin can use this stored procedure to edit the attributes of jobs that are owned by other users.
+By default, members of the **sysadmin** fixed server role can execute this stored procedure. Only members of sysadmin can use this stored procedure to edit the attributes of jobs that are owned by other users.
 
 ## Examples
 

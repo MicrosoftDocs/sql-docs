@@ -4,7 +4,7 @@ description: "Lists the accounts associated with one or more Database Mail profi
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 05/30/2023
+ms.date: 08/21/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -47,11 +47,11 @@ The profile name of the profile to list. *@profile_name* is **sysname**, with a 
 
 #### [ @account_id = ] *account_id*
 
-The account ID to list. *@account_id* is **int**, with a default of `NULL`. When *@account_id* and *@account_name* are both NULL, lists all the accounts in the profile.
+The account ID to list. *@account_id* is **int**, with a default of `NULL`. When *@account_id* and *@account_name* are both `NULL`, lists all the accounts in the profile.
 
 #### [ @account_name = ] '*account_name*'
 
-The name of the account to list. *@account_name* is **sysname**, with a default of `NULL`. When *@account_id* and *@account_name* are both NULL, lists all the accounts in the profile.
+The name of the account to list. *@account_name* is **sysname**, with a default of `NULL`. When *@account_id* and *@account_name* are both `NULL`, lists all the accounts in the profile.
 
 ## Return code values
 

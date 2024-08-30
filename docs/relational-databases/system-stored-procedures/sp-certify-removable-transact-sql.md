@@ -4,7 +4,7 @@ description: Verifies that a database is correctly configured for distribution o
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 08/30/2023
+ms.date: 08/21/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -72,7 +72,7 @@ You can correct those conditions in the following ways:
 - Use [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] tools and procedures, and then run `sp_certify_removable` again.
 - Run `sp_certify_removable` with the `AUTO` value.
 
-This stored procedure only checks for users and user permissions. You can  add groups to the database and to grant permissions to those groups. For more information, see [GRANT (Transact-SQL)](../../t-sql/statements/grant-transact-sql.md).
+This stored procedure only checks for users and user permissions. You can add groups to the database and to grant permissions to those groups. For more information, see [GRANT](../../t-sql/statements/grant-transact-sql.md).
 
 ## Permissions
 
@@ -88,7 +88,7 @@ EXEC sp_certify_removable inventory, AUTO;
 
 ## Related content
 
-- [Database Detach and Attach (SQL Server)](../databases/database-detach-and-attach-sql-server.md)
+- [Database detach and attach (SQL Server)](../databases/database-detach-and-attach-sql-server.md)
 - [sp_create_removable (Transact-SQL)](sp-create-removable-transact-sql.md)
 - [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)
 - [sp_dbremove (Transact-SQL)](sp-dbremove-transact-sql.md)

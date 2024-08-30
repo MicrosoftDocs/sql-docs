@@ -1,8 +1,8 @@
 ---
 title: Convert R and SQL data types
 description: Review the implicit and explicit data type conversions between R and SQL Server in data science and machine learning solutions.
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: VanMSFT
+ms.author: vanto
 ms.date: 09/16/2021
 ms.service: sql
 ms.subservice: machine-learning-services

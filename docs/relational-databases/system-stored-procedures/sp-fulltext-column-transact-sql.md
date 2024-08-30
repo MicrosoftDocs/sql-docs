@@ -4,7 +4,7 @@ description: Specifies whether or not a particular column of a table participate
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 07/07/2023
+ms.date: 08/22/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -63,7 +63,7 @@ The action to be performed. *@action* is **varchar(20)**, with no default, and c
 
 #### [ @language = ] *language*
 
-The language of the data stored in the column. *@language* is **int**, with a default of `NULL`. For a list of languages included in [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)], see [sys.fulltext_languages (Transact-SQL)](../system-catalog-views/sys-fulltext-languages-transact-sql.md).
+The language of the data stored in the column. *@language* is **int**, with a default of `NULL`. For a list of languages included in [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)], see [sys.fulltext_languages](../system-catalog-views/sys-fulltext-languages-transact-sql.md).
 
 > [!NOTE]  
 > Use `Neutral` when a column contains data in multiple languages or in an unsupported language. The default is specified by the server configuration option [default full-text language](../../database-engine/configure-windows/configure-the-default-full-text-language-server-configuration-option.md).

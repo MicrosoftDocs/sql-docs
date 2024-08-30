@@ -4,7 +4,7 @@ description: "Adds a SQL Server instance as a compute node to a PolyBase group f
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 05/24/2023
+ms.date: 08/21/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: conceptual
@@ -21,7 +21,7 @@ dev_langs:
 
 Adds a SQL Server instance as a compute node to a PolyBase group for scale-out computation.
 
-The SQL Server instance must have the [PolyBase](../polybase/polybase-guide.md) feature installed. PolyBase enables the integration of non-SQL Server data sources, such as Hadoop and Azure Blob Storage. See also [sp_polybase_leave_group (Transact-SQL)](polybase-stored-procedures-sp-polybase-leave-group.md).
+The SQL Server instance must have the [PolyBase](../polybase/polybase-guide.md) feature installed. PolyBase enables the integration of non-SQL Server data sources, such as Hadoop and Azure Blob Storage. See also [sp_polybase_leave_group](polybase-stored-procedures-sp-polybase-leave-group.md).
 
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
@@ -76,5 +76,5 @@ EXEC sp_polybase_join_group N'HST01', 16450, N'MSSQLSERVER';
 
 ## Related content
 
-- [Get started with PolyBase](../polybase/polybase-guide.md)
+- [Data virtualization with PolyBase in SQL Server](../polybase/polybase-guide.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)

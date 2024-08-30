@@ -4,7 +4,7 @@ description: Discards the execution plan created by the `sp_prepare` stored proc
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 08/28/2023
+ms.date: 08/21/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -21,7 +21,7 @@ monikerRange: ">=aps-pdw-2016 || =azure-sqldw-latest || >=sql-server-2016 || >=s
 
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
 
-Discards the execution plan created by the `sp_prepare` stored procedure. `sp_unprepare` is invoked by specifying ID = 15 in a tabular data stream (TDS) packet.
+Discards the execution plan created by the `sp_prepare` stored procedure. `sp_unprepare` is invoked by specifying `ID = 15` in a tabular data stream (TDS) packet.
 
 ## Syntax
 
@@ -38,7 +38,7 @@ The *handle* value returned by `sp_prepare`. *handle* is **int**.
 
 ## Examples
 
-The following example prepares, executes, and unprepares a simple statement.
+The following example prepares, executes, and unprepares a basic statement.
 
 ```SQL
 DECLARE @P1 INT;

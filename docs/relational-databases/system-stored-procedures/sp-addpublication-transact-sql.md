@@ -4,7 +4,7 @@ description: sp_addpublication creates a snapshot or transactional publication.
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 01/23/2024
+ms.date: 08/21/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: "reference"
@@ -88,7 +88,7 @@ The name of the publication to create. *@publication* is **sysname**, with no de
 
 #### [ @taskid = ] *taskid*
 
-Supported for backward compatibility only; use [sp_addpublication_snapshot (Transact-SQL)](sp-addpublication-snapshot-transact-sql.md).
+Supported for backward compatibility only; use [sp_addpublication_snapshot](sp-addpublication-snapshot-transact-sql.md).
 
 #### [ @restricted = ] N'*restricted*'
 
@@ -198,7 +198,7 @@ Specifies if snapshot files are stored in the default folder. *@snapshot_in_defa
 - If `true`, snapshot files can be found in the default folder.
 - If `false`, snapshot files have been stored in the alternate location specified by *@alt_snapshot_folder*.
 
-Alternate locations can be on another server, on a network drive, or on removable media (such as CD-ROM or removable disks). You can also save the snapshot files to an FTP site, for retrieval by the Subscriber at a later time. This parameter can be true and still have a location in the *@alt_snapshot_folder* parameter. This combination specifies that the snapshot files will be stored in both the default and alternate locations.
+Alternate locations can be on another server, on a network drive, or on removable media (such as removable disks). You can also save the snapshot files to an FTP site, for retrieval by the Subscriber at a later time. This parameter can be true and still have a location in the *@alt_snapshot_folder* parameter. This combination specifies that the snapshot files will be stored in both the default and alternate locations.
 
 #### [ @alt_snapshot_folder = ] N'*alt_snapshot_folder*'
 
@@ -425,7 +425,7 @@ Specifies whether `ALTER TABLE...SWITCH` statements that are executed against th
 
 | Value | Description |
 | --- | --- |
-| `originatorid` (Default) | Distribution agent detects the conflict and decides the winner based on the originator ID, if `p2p_continue_onconflict = N'true'`. Otherwise, it raises an error. |
+| `originatorid` (default) | Distribution agent detects the conflict and decides the winner based on the originator ID, if `p2p_continue_onconflict = N'true'`. Otherwise, it raises an error. |
 | `lastwriter` | Distribution agent detects the conflict and decides the winner based on the datetime of the last writer if `p2p_continue_onconflict = N'true'`. Otherwise, it raises an error. |
 
 > [!NOTE]  

@@ -4,7 +4,7 @@ description: Deletes rows from syscommittab in batches.
 author: JetterMcTedder
 ms.author: bspendolini
 ms.reviewer: randolphwest
-ms.date: 07/06/2023
+ms.date: 08/21/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -42,7 +42,7 @@ sp_flush_commit_table_on_demand
 
 #### [ @numrows = ] *numrows*
 
-Specifies the number of rows you want to delete from syscommittab. *@numrows* is **bigint**, and can't be NULL.
+Specifies the number of rows you want to delete from syscommittab. *@numrows* is **bigint**, and can't be `NULL`.
 
 #### [ @deleted_rows = ] *deleted_rows* OUTPUT
 

@@ -3,7 +3,7 @@ title: "jobs.sp_update_job (Azure Elastic Jobs) (Transact-SQL)"
 description: "jobs.sp_update_job updates a job created for the Azure Elastic Jobs service for Azure SQL Database."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: 04/03/2024
+ms.date: 08/21/2024
 ms.service: azure-sql-database
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -17,18 +17,18 @@ monikerRange: "=azuresqldb-current"
 
 Updates a job created in the [Azure Elastic Jobs service for Azure SQL Database](/azure/azure-sql/database/elastic-jobs-overview?view=azuresql-db&preserve-view=true).
 
-This stored procedure shares the name of `sp_update_job` with a similar object in [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] for the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] Agent service. For information about the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] Agent version, see [sp_update_job (Transact-SQL)](sp-update-job-transact-sql.md).
+This stored procedure shares the name of `sp_update_job` with a similar object in [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] for the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] Agent service. For information about the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] Agent version, see [sp_update_job](sp-update-job-transact-sql.md).
 
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## Syntax
 
 ```syntaxsql
-[jobs].sp_update_job [ @job_name = ] 'job_name'  
+[jobs].sp_update_job [ @job_name = ] 'job_name'
   [ , [ @new_name = ] 'new_name' ]
   [ , [ @description = ] 'description' ]
   [ , [ @enabled = ] enabled ]
-  [ , [ @schedule_interval_type = ] schedule_interval_type ]  
+  [ , [ @schedule_interval_type = ] schedule_interval_type ]
   [ , [ @schedule_interval_count = ] schedule_interval_count ]
   [ , [ @schedule_start_time = ] schedule_start_time ]
   [ , [ @schedule_end_time = ] schedule_end_time ]
@@ -44,11 +44,11 @@ The name of the job to be updated. *job_name* is nvarchar(128).
 
 The new name of the job. *new_name* is nvarchar(128).
 
-#### @description  
+#### @description
 
 The description of the job. The *description* argument is nvarchar(512).
 
-#### @enabled  
+#### @enabled
 
 Specifies whether the job's schedule is enabled (1) or not enabled (0). *@enabled* is bit.
 
@@ -79,9 +79,9 @@ Date on which job execution can stop. *schedule_end_time* is DATETIME2, with the
 
 All times in elastic jobs are in the UTC time zone.
 
-## Return Code Values
+## Return code values
 
-0 (success) or 1 (failure)
+`0` (success) or `1` (failure).
 
 ## Remarks
 
@@ -89,7 +89,7 @@ After `jobs.sp_add_job` is executed to add a job, use [jobs.sp_add_jobstep](sp-a
 
 ## Permissions
 
-By default, members of the sysadmin fixed server role can execute this stored procedure. Only members of sysadmin can use this stored procedure to edit the attributes of jobs that are owned by other users.
+By default, members of the **sysadmin** fixed server role can execute this stored procedure. Only members of sysadmin can use this stored procedure to edit the attributes of jobs that are owned by other users.
 
 ## Related content
 

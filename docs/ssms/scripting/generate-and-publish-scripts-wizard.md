@@ -106,7 +106,7 @@ Use this page to specify if you want the wizard to save scripts to the location 
 
   :::image type="content" source="media/generate-and-publish-scripts-wizard/save.png" alt-text="Screenshot of Save as notebook." lightbox="media/generate-and-publish-scripts-wizard/save.png":::
 
-- **[Save as notebook](../../azure-data-studio/notebooks/notebooks-guidance.md)** - Save the script to one or more .sql files. Select the browse button (**...**) to specify a name and location for the file.
+- **[Save as notebook](/azure-data-studio/notebooks/notebooks-guidance)** - Save the script to one or more .sql files. Select the browse button (**...**) to specify a name and location for the file.
 
 - **Save as script file** Save the script to one or more .sql files. Select the browse button **(...)** to specify a name and location for the file. Select the **Overwrite existing file** check box to replace the file if one already exists with the same name. Select **Single script file** or **One script file per object** to specify how the scripts should be generated. Select **Unicode text** or **ANSI text** to specify the kind of text that should be used in the script.
 

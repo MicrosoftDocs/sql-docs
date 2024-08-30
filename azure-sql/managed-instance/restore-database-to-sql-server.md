@@ -5,7 +5,7 @@ description: Learn how to restore a database to SQL Server 2022 from Azure SQL M
 author: mladjoa
 ms.author: mlandzic
 ms.reviewer: mathoma, danil
-ms.date: 06/02/2022
+ms.date: 08/16/2024
 ms.service: azure-sql-managed-instance
 ms.subservice: data-movement
 ms.custom: ignite-2023, build-2024
@@ -117,5 +117,5 @@ When you're restoring a database to SQL Server, consider the following:
 - For more information about virtual network configuration, see [SQL Managed Instance virtual network configuration](connectivity-architecture-overview.md).
 - For a quickstart that creates a managed instance and restores a database from a backup file, see [Create a managed instance](instance-create-quickstart.md).
 - For a tutorial about using Azure Database Migration Service for migration, see [SQL Managed Instance migration using Database Migration Service](/azure/dms/tutorial-sql-server-to-managed-instance).
-- For advanced monitoring of SQL Managed Instance database performance with built-in troubleshooting intelligence, see [Monitor Azure SQL Managed Instance by using Azure SQL Analytics](/azure/azure-monitor/insights/azure-sql).
+- For advanced monitoring of SQL Managed Instance, see [database watcher](../database-watcher-overview.md).
 - For pricing information, see [SQL Database pricing](https://azure.microsoft.com/pricing/details/sql-database/managed/).

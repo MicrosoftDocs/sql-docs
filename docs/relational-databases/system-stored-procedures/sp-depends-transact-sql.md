@@ -4,7 +4,7 @@ description: sp_depends displays information about database object dependencies.
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 07/04/2024
+ms.date: 08/22/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -35,7 +35,7 @@ sp_depends [ @objname = ] N'objname'
 <objname> ::=
 {
     [ database_name. [ schema_name ] . | schema_name. ]
-    object_name 
+    object_name
 }
 
 [ ; ]

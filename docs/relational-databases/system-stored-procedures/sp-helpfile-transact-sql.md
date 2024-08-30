@@ -4,7 +4,7 @@ description: sp_helpfile returns the physical names and attributes of files asso
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 05/15/2024
+ms.date: 08/22/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -77,4 +77,4 @@ GO
 - [sys.master_files (Transact-SQL)](../system-catalog-views/sys-master-files-transact-sql.md)
 - [sys.filegroups (Transact-SQL)](../system-catalog-views/sys-filegroups-transact-sql.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)
-- [Database Files and Filegroups](../databases/database-files-and-filegroups.md)
+- [Database files and filegroups](../databases/database-files-and-filegroups.md)

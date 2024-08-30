@@ -4,7 +4,7 @@ description: sp_droprolemember removes a security account from a SQL Server role
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: randolphwest
-ms.date: 11/28/2023
+ms.date: 08/21/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -42,7 +42,7 @@ sp_droprolemember
 Syntax for Azure Synapse Analytics and Analytics Platform System (PDW).
 
 ```syntaxsql
-sp_droprolemember N'rolename', 'membername'
+sp_droprolemember N'rolename' , 'membername'
 [ ; ]
 ```
 
@@ -67,9 +67,9 @@ The name of the security account being removed from the role. *@membername* is *
 
 `sp_droprolemember` removes a member from a database role by deleting a row from the `sysmembers` table. When a member is removed from a role, the member loses any permissions it has by membership in that role.
 
-To remove a user from a fixed server role, use `sp_dropsrvrolemember`. Users can't be removed from the public role, and dbo can't be removed from any role.
+To remove a user from a fixed server role, use `sp_dropsrvrolemember`. Users can't be removed from the **public** role, and `dbo` can't be removed from any role.
 
-Use `sp_helpuser` to see the members of a [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] role, and use ALTER ROLE to add a member to a role.
+Use `sp_helpuser` to see the members of a [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] role, and use `ALTER ROLE` to add a member to a role.
 
 ## Permissions
 

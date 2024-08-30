@@ -4,7 +4,7 @@ description: Learn about how Azure SQL Managed Instance provides near 100% compa
 author: niko-neugebauer
 ms.author: nneugebauer
 ms.reviewer: mathoma, vanto
-ms.date: 07/30/2023
+ms.date: 08/16/2024
 ms.service: azure-sql-managed-instance
 ms.subservice: service-overview
 ms.topic: overview
@@ -311,5 +311,5 @@ The following table shows several properties, accessible through Transact-SQL, t
 - For more information about VNet configuration, see [SQL Managed Instance VNet configuration](connectivity-architecture-overview.md).
 - For a quickstart that creates a managed instance and restores a database from a backup file, see [Create a managed instance](instance-create-quickstart.md).
 - For a tutorial about using Azure Database Migration Service for migration, see [SQL Managed Instance migration using Database Migration Service](/azure/dms/tutorial-sql-server-to-managed-instance).
-- For advanced monitoring of SQL Managed Instance database performance with built-in troubleshooting intelligence, see [Monitor Azure SQL Managed Instance using Azure SQL Analytics](/azure/azure-monitor/insights/azure-sql).
+- For advanced monitoring of SQL Managed Instance, see [database watcher](../database-watcher-overview.md).
 - For pricing information, see [SQL Database pricing](https://azure.microsoft.com/pricing/details/sql-database/managed/).

@@ -8442,8 +8442,6 @@ items:
         href: ssdt/transact-sql-editor-options.md
       - name: "How to: Create a New Database Project"
         href: ssdt/how-to-create-a-new-database-project.md
-      - name: "How to: Use Schema Compare to Compare Different Database Definitions"
-        href: ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md
       - name: "How to: Build & Deploy to a Local Database"
         href: ssdt/how-to-build-and-deploy-to-a-local-database.md
       - name: "How to: Use Microsoft SQL Server 2012 Objects in Your Project"
@@ -8452,17 +8450,8 @@ items:
         href: ssdt/how-to-work-with-clr-database-objects.md
       - name: "How to: Create a Snapshot of a Project"
         href: ssdt/how-to-create-a-snapshot-of-a-project.md
-      - name: "How to: Change Target Platform & Publish a Database Project"
-        href: ssdt/how-to-change-target-platform-and-publish-a-database-project.md
       - name: "How to: Convert a Visual Studio 2010 Database Projects to SQL Server Database Projects & Retarget to a Different Platform"
         href: ssdt/how-to-convert-visual-studio-2010-database-projects-to-ssql-server-projects.md
-      - name: "How to: Specify Predeployment or Postdeployment Scripts"
-        href: ssdt/how-to-specify-predeployment-or-postdeployment-scripts.md
-      - name: Project-Oriented Database Development using Command-Line Tools
-        href: ssdt/project-oriented-database-development-using-command-line-tools.md
-        items:
-        - name: Using MSDeploy with dbSqlPackage Provider
-          href: ssdt/using-msdeploy-with-dbsqlpackage-provider.md
       - name: Connected Database Development
         items:
         - name: "How to: Connect to a Database & Browse Existing Objects"
@@ -8588,8 +8577,6 @@ items:
           href: ssdt/how-to-install-and-manage-feature-extensions.md
       - name: Required Permissions for SQL Server Data Tools
         href: ssdt/required-permissions-for-sql-server-data-tools.md
-      - name: DAC Framework Compatibility
-        href: ssdt/dac-framework-compatibility.md
     - name: Alter DacFx Used by SSDT
       href: ssdt/alter-dacfx-used-by-ssdt.md
     - name: T-SQL Debugger
@@ -9723,6 +9710,58 @@ items:
         href: ssms/sql-server-management-studio-telemetry-ssms.md
       - name: Feedback >> 
         href: https://aka.ms/sqlfeedback
+  - name: SQL projects
+    items:
+    - name: SQL projects overview
+      href: tools/sql-database-projects/sql-database-projects.md
+    - name: Getting started with SQL projects
+      href: tools/sql-database-projects/getting-started.md
+    # - name: SQL DevOps
+    #   href: tools/sql-database-projects/sql-devops.md
+    - name: Tutorials
+      items:
+      - name: Creating and deploying a SQL project
+        href: tools/sql-database-projects/tutorials/creating-and-deploying-a-sql-project.md
+      - name: Start from an existing database
+        href: tools/sql-database-projects/tutorials/start-from-an-existing-database.md
+    - name: How-to guides
+      items:
+      - name: Analyze project code
+        href: tools/sql-database-projects/howto/analyze-t-sql-code-to-find-defects.md
+      - name: Compase a database and a project
+        href: tools/sql-database-projects/howto/compare-a-database-and-a-project.md
+      - name: Convert an original SQL project
+        href: tools/sql-database-projects/howto/convert-an-original-sql-project.md
+      - name: Author custom code analysis rules
+        href: tools/sql-database-projects/howto/author-custom-code-analysis-rules.md
+    - name: Concepts
+      items:
+      - name: Target platform
+        href: tools/sql-database-projects/concepts/target-platform.md
+      - name: SQLCMD variables
+        href: tools/sql-database-projects/concepts/sqlcmd-variables.md
+      - name: Pre/post deployment scripts
+        href: tools/sql-database-projects/concepts/pre-post-deployment-scripts.md
+      - name: Schema comparison
+        href: tools/sql-database-projects/concepts/schema-comparison.md
+      - name: Database references
+        href: tools/sql-database-projects/concepts/database-references.md
+      - name: Package references
+        href: tools/sql-database-projects/concepts/package-references.md
+      - name: SQL code analysis
+        items:
+        - name: Overview
+          href: tools/sql-database-projects/concepts/sql-code-analysis/sql-code-analysis.md
+        - name: Design issues
+          href: tools/sql-database-projects/concepts/sql-code-analysis/t-sql-design-issues.md
+        - name: Naming issues
+          href: tools/sql-database-projects/concepts/sql-code-analysis/t-sql-naming-issues.md
+        - name: Performance issues
+          href: tools/sql-database-projects/concepts/sql-code-analysis/t-sql-performance-issues.md
+      - name: Code analysis extensibility
+        href: tools/sql-database-projects/concepts/code-analysis-extensibility.md
+      - name: SQL projects extensibility
+        href: tools/sql-database-projects/concepts/sql-projects-extensibility.md
   - name: SqlPackage
     href: tools/sqlpackage/sqlpackage.md
     items:

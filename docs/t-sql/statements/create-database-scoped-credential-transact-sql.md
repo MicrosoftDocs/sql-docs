@@ -3,7 +3,8 @@ title: "CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)"
 description: CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
-ms.date: 07/11/2024
+ms.reviewer: randolphwest
+ms.date: 08/30/2024
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -36,7 +37,7 @@ Creates a database credential. A database credential is not mapped to a server l
 CREATE DATABASE SCOPED CREDENTIAL credential_name
 WITH IDENTITY = 'identity_name'
     [ , SECRET = 'secret' ]
-
+[ ; ]
 ```
 
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
@@ -45,9 +46,9 @@ WITH IDENTITY = 'identity_name'
 
 #### *credential_name*
 
-Specifies the name of the database scoped credential being created. *credential_name* cannot start with the number (#) sign. System credentials start with ##.
+Specifies the name of the database scoped credential being created. *credential_name* can't start with the number (`#`) sign. System credentials start with `##`. The maximum length of *credential_name* is 128 characters.
 
-#### IDENTITY **='**_identity\_name_**'**
+#### IDENTITY = '*identity_name*'
 
 Specifies the name of the account to be used when connecting outside the server. 
 
@@ -66,7 +67,7 @@ Specifies the name of the account to be used when connecting outside the server.
 
 
 
-#### SECRET **='**_secret_**'**
+#### SECRET = '*secret*'
 
 Specifies the secret required for outgoing authentication. `SECRET` is required to import a file from Azure Blob storage. To load from Azure Blob storage into Azure Synapse Analytics or Parallel Data Warehouse, the Secret must be the Azure Storage Key.
 
@@ -166,9 +167,9 @@ WITH
 
 ## Related content
 
-- [Credentials &#40;Database Engine&#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md)
-- [ALTER DATABASE SCOPED CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-credential-transact-sql.md)
-- [DROP DATABASE SCOPED CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-scoped-credential-transact-sql.md)
+- [Credentials (Database Engine)](../../relational-databases/security/authentication-access/credentials-database-engine.md)
+- [ALTER DATABASE SCOPED CREDENTIAL (Transact-SQL)](alter-database-scoped-credential-transact-sql.md)
+- [DROP DATABASE SCOPED CREDENTIAL (Transact-SQL)](drop-database-scoped-credential-transact-sql.md)
 - [sys.database_scoped_credentials](../../relational-databases/system-catalog-views/sys-database-scoped-credentials-transact-sql.md)
-- [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md)
-- [sys.credentials &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-credentials-transact-sql.md)
+- [CREATE CREDENTIAL (Transact-SQL)](create-credential-transact-sql.md)
+- [sys.credentials (Transact-SQL)](../../relational-databases/system-catalog-views/sys-credentials-transact-sql.md)

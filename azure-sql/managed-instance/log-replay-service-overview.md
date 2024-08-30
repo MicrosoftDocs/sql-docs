@@ -51,7 +51,7 @@ Since LRS works by restoring standard SQL Server backup files, it should support
 - Cloud SQL for SQL Server - GCP (Google Cloud Platform)
 - Alibaba Cloud RDS for SQL Server
 
-Migrations from these cloud providers have been tested, but since LRS works by restoring standard SQL Server backup files, it should support migrations from any source. If you encounter unexpected issues migrating from an unlisted source, open a support ticket for assistance.
+If you encounter unexpected issues migrating from an unlisted source, open a support ticket for assistance.
 
 > [!NOTE]
 > - We recommend that you automate the migration of databases from SQL Server to Azure SQL Managed Instance by using the Azure SQL migration extension for Azure Data Studio. Consider using LRS to orchestrate migrations when the Azure SQL migration extension doesn't fully support your scenarios.

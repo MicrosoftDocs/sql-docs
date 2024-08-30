@@ -14,6 +14,7 @@ helpviewer_keywords:
 ---
 # in-doubt xact resolution (server configuration option)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+ [!INCLUDE [Azure SQL Managed Instance]
 
   Use the **in-doubt xact resolution** option to control the default outcome of transactions that the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator (MS DTC) is unable to resolve. Inability to resolve transactions may be related to the MS DTC down time or an unknown transaction outcome at the time of recovery.  
   

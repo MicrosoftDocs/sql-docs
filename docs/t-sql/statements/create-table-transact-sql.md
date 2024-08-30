@@ -199,6 +199,7 @@ column_set_name XML COLUMN_SET FOR ALL_SPARSE_COLUMNS
         [ ON UPDATE { NO ACTION | CASCADE | SET NULL | SET DEFAULT } ]
         [ NOT FOR REPLICATION ]
     | CHECK [ NOT FOR REPLICATION ] ( logical_expression )
+}
 
 <table_index> ::=
 {
@@ -257,7 +258,7 @@ column_set_name XML COLUMN_SET FOR ALL_SPARSE_COLUMNS
 
 <ledger_option>::=
 {
-    [ LEDGER_VIEW = schema_name.ledger_view_name  [ ( <ledger_view_option> [ ,... n ] ) ]
+    [ LEDGER_VIEW = schema_name.ledger_view_name [ ( <ledger_view_option> [ ,... n ] ) ] ]
     [ APPEND_ONLY = ON | OFF ]
 }
 
@@ -291,7 +292,7 @@ column_set_name XML COLUMN_SET FOR ALL_SPARSE_COLUMNS
        [ ,... n ] ) ]
   | XML_COMPRESSION = { ON | OFF }
       [ ON PARTITIONS ( { <partition_number_expression> | <range> }
-      [ ,... n ] ) ] ]
+      [ ,... n ] ) ]
 }
 
 <range> ::=
@@ -1555,7 +1556,7 @@ CREATE TABLE dbo.PurchaseOrderDetail
                PRIMARY KEY CLUSTERED (PurchaseOrderID, LineNumber)
                WITH (IGNORE_DUP_KEY = OFF)
 )
-ON PRIMARY;
+ON [PRIMARY];
 ```
 
 ### G. Create a table with an xml column typed to an XML schema collection

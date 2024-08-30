@@ -47,6 +47,9 @@ WITH IDENTITY = 'identity_name'
 
 Specifies the name of the database scoped credential being created. *credential_name* cannot start with the number (#) sign. System credentials start with ##.
 
+> [!NOTE]
+> The maximum length of the *credential_name* can be 128.
+
 #### IDENTITY **='**_identity\_name_**'**
 
 Specifies the name of the account to be used when connecting outside the server. 

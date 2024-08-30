@@ -75,7 +75,7 @@ WITH (DROP_EXISTING = ON);
 
 Temporal tables are represented in the Object Explorer with the specific icon for easier identification, while its history table is displayed as a child node.
 
-![AlterTable](./media/temporal-tables/azure-tempora-4.png)
+![AlterTable](./media/temporal-tables/azure-temporal-4.png)
 
 ### Alter existing table to temporal
 

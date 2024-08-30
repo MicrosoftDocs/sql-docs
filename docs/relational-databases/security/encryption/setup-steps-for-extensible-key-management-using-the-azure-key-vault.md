@@ -89,7 +89,7 @@ To grant your SQL Server instance access permissions to your Azure key vault, yo
 
    1. On the **Certificates & secrets** pane, under **Value**, select the **Copy** button next to the value of the client secret to be used to create an asymmetric key in SQL Server.
 
-      :::image type="content" source="media/ekm/ekm-part1-azure-active-directory-new-secret.png" alt-text="Screenshot of the secret value in the Azure portal.":::
+      :::image type="content" source="media/ekm/ekm-part-1-azure-active-directory-new-secret.png" alt-text="Screenshot of the secret value in the Azure portal.":::
 
    1. In the left pane, select **Overview** and then, in the **Application (client) ID** box, copy the value to be used to create an asymmetric key in SQL Server.
 
@@ -117,7 +117,7 @@ You can use the Azure portal to create the key vault and then add a Microsoft En
 
     On the **Create a key vault** pane, select the **Basics** tab, enter the appropriate values for the tab. We also recommend enabling purge protection.
 
-    :::image type="content" source="media/ekm/ekm-part2-create-key-vault.png" alt-text="Screenshot of the Create key vault pane in the Azure portal.":::
+    :::image type="content" source="media/ekm/ekm-part-2-create-key-vault.png" alt-text="Screenshot of the Create key vault pane in the Azure portal.":::
 
 1. On the **Access configuration** tab, you have the option of selecting **Azure role-based access control** or **Vault access policy**. We go over both options, but the **Azure role-based access control** option is recommended. For more information, see [Access model overview](/azure/key-vault/general/security-features#access-model-overview).
 
@@ -162,7 +162,7 @@ The recommended method is to use [Azure role-based access control (RBAC)](/azure
 
 1. On the **Principal** tab, select the application that was created in Step 1.
 
-   :::image type="content" source="media/ekm/ekm-part2-select-principal.png" alt-text="Screenshot of application search box on the Principal pane.":::
+   :::image type="content" source="media/ekm/ekm-part-2-select-principal.png" alt-text="Screenshot of application search box on the Principal pane.":::
 
 1. Select **Next** and then **Create**.
 

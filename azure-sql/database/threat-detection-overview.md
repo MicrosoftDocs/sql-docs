@@ -37,7 +37,7 @@ Advanced Threat Protection detects anomalous activities indicating unusual and p
 
 You receive an email notification upon detection of anomalous database activities. The email provides information on the suspicious security event including the nature of the anomalous activities, database name, server name, application name, and the event time. In addition, the email provides information on possible causes and recommended actions to investigate and mitigate the potential threat to the database.
 
-![Anomalous activity report](./media/threat-detection-overview/anomalous_activity_report.png)
+![Anomalous activity report](./media/threat-detection-overview/anomalous-activity-report.png)
 
 1. Select the **View recent SQL alerts** link in the email to launch the Azure portal and show the Microsoft Defender for Cloud alerts page, which provides an overview of active threats detected on the database.
 
@@ -47,7 +47,7 @@ You receive an email notification upon detection of anomalous database activitie
 
    For example, SQL injection is one of the most common Web application security issues on the Internet that is used to attack data-driven applications. Attackers take advantage of application vulnerabilities to inject malicious SQL statements into application entry fields, breaching or modifying data in the database. For SQL Injection alerts, the alert's details include the vulnerable SQL statement that was exploited.
 
-   ![Specific alert](./media/threat-detection-overview/specific_alert.png)
+   ![Specific alert](./media/threat-detection-overview/specific-alert.png)
 
 ## Explore alerts in the Azure portal
 

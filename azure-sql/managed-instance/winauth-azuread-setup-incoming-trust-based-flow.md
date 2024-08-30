@@ -240,7 +240,7 @@ Set-AzureAdKerberosServer -Domain $domain `
 You can remove the added Trusted Domain Object using the following command:
 
 ```powershell
-Remove-AzureADKerberosTrustedDomainObject -Domain $domain `
+Remove-AzureADKerberosServerTrustedDomainObject -Domain $domain `
    -DomainCredential $domainCred `
    -UserPrincipalName $cloudUserName
 ```

@@ -37,7 +37,7 @@ Depending on whether you are starting new development or upgrading existing appl
 
 Use context menu item "New System-Versioned Table" in SSMS Object Explorer to open the query editor with a temporal table template script and then use "Specify Values for Template Parameters" (Ctrl+Shift+M) to populate the template:
 
-![SSMSNewTable](./media/temporal-tables/AzureTemporal2.png)
+![SSMSNewTable](./media/temporal-tables/azure-temporal-2.png)
 
 In SSDT, choose "Temporal Table (System-Versioned)" template when adding new items to the database project. That will open table designer and enable you to easily specify the table layout:
 
@@ -75,7 +75,7 @@ WITH (DROP_EXISTING = ON);
 
 Temporal tables are represented in the Object Explorer with the specific icon for easier identification, while its history table is displayed as a child node.
 
-![AlterTable](./media/temporal-tables/AzureTemporal4.png)
+![AlterTable](./media/temporal-tables/azure-tempora-4.png)
 
 ### Alter existing table to temporal
 

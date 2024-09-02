@@ -7300,7 +7300,7 @@ items:
       - name: Master Data Services Features and Tasks
         href: master-data-services/master-data-services-features-and-tasks.md
     - name: Backward compatibility
-      href: master-data-services/master-data-services/backward-compatibility-master-data-services.md
+      href: master-data-services/backward-compatibility-master-data-services.md
     - name: Deprecated features
       href: master-data-services/deprecated-master-data-services-features.md
     - name: Discontinued features

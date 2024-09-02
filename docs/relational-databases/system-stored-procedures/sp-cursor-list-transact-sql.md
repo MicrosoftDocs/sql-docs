@@ -37,7 +37,7 @@ sp_cursor_list
 
 #### [ @cursor_return = ] *cursor_return* OUTPUT
 
-The name of a declared cursor variable. *@cursor_return* is an OUTPUT parameter of type **int**. The cursor is a scrollable, dynamic, read-only cursor.
+The name of a declared cursor variable. *@cursor_return* is an OUTPUT parameter of type **CURSOR**. The cursor is a scrollable, dynamic, read-only cursor.
 
 #### [ @cursor_scope = ] *cursor_scope*
 

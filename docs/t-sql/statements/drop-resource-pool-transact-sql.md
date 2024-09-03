@@ -29,8 +29,6 @@ DROP RESOURCE POOL pool_name
 [ ; ]  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
  *pool_name*  
  Is the name of an existing user-defined resource pool.  

@@ -87,8 +87,6 @@ CREATE TABLE
 ```  
   
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 This document lists only arguments pertaining to SQL graph. For a full list and description of supported arguments, see [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)
 

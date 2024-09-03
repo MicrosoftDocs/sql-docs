@@ -32,8 +32,6 @@ dev_langs:
 DROP ENDPOINT endPointName  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
  *endPointName*  
  Is the name of the endpoint to be removed.  

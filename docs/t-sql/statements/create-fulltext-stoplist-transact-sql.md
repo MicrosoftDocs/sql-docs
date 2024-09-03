@@ -45,8 +45,6 @@ CREATE FULLTEXT STOPLIST stoplist_name
 ;  
 ```  
 
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
  *stoplist_name*  
  Is the name of the stoplist. *stoplist_name* can be a maximum of 128 characters. *stoplist_name* must be unique among all stoplists in the current database, and conform to the rules for identifiers.  

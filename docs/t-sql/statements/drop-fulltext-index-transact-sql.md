@@ -32,8 +32,6 @@ dev_langs:
 DROP FULLTEXT INDEX ON table_name  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
  *table_name*  
  Is the name of the table or indexed view containing the full-text index to be removed.  

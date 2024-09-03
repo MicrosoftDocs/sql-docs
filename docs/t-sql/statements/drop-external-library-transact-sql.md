@@ -60,8 +60,6 @@ To delete a library requires the privilege ALTER ANY EXTERNAL LIBRARY. By defaul
 
 An informational message is returned if the statement was successful.
 
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Remarks
 
 Unlike other `DROP` statements in SQL Server, this statement supports specifying an optional authorization clause. This allows **dbo** or users in the **db_owner** role to drop a package library uploaded by a regular user in the database.

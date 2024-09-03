@@ -38,8 +38,6 @@ DROP RULE [ IF EXISTS ] { [ schema_name . ] rule_name } [ , ...n ]
 [ ; ]
 ```
 
-[!INCLUDE [sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 
 #### *IF EXISTS*

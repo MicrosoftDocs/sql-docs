@@ -38,8 +38,6 @@ monikerRange: "=azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>
 DROP ASYMMETRIC KEY key_name [ REMOVE PROVIDER KEY ]  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
  *key_name*  
  Is the name of the asymmetric key to be dropped from the database.  

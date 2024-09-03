@@ -54,8 +54,6 @@ DECLARE cursor_name CURSOR [ LOCAL | GLOBAL ]
 [ ; ]
 ```
 
-[!INCLUDE [sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 
 #### *cursor_name*

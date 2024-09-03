@@ -45,8 +45,6 @@ Where *n* is the number of bits that are used to store the mantissa of the **flo
 
 The [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] **float**[**(n)**] data type complies with the ISO standard for all values of *n* from **1** through **53**. The synonym for **double precision** is **float(53)**.
 
-[!INCLUDE [sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Remarks
 
 | Data type | Range | Storage |

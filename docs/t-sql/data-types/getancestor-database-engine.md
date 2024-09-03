@@ -32,8 +32,6 @@ child.GetAncestor ( n )
 SqlHierarchyId GetAncestor ( int n )  
 ```
 
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 *n*  
 An **int**, representing the number of levels to go up in the hierarchy.

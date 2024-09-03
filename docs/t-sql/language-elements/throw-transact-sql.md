@@ -33,8 +33,6 @@ THROW [ { error_number | @local_variable }
 [ ; ]
 ```
 
-[!INCLUDE [sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 
 #### *error_number*

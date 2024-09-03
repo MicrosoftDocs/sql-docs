@@ -33,8 +33,6 @@ An operator in a string expression that concatenates two or more character or bi
 expression + expression
 ```
 
-[!INCLUDE [sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 
 #### *expression*

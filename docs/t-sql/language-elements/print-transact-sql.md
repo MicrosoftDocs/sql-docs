@@ -36,8 +36,6 @@ Returns a user-defined message to the client. For example, in [!INCLUDE [ssmanst
 PRINT msg_str | @local_variable | string_expr
 ```
 
-[!INCLUDE [sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 
 #### *msg_str*

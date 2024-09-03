@@ -30,8 +30,6 @@ Concatenates two strings and sets the string to the result of the operation. For
 expression += expression  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
  *expression*  
  Is any valid [expression](../../t-sql/language-elements/expressions-transact-sql.md) of any of the character data types.  

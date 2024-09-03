@@ -34,8 +34,6 @@ The `||` pipes operator in a string expression concatenates two or more characte
 expression || expression
 ```
 
-[!INCLUDE [sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 
 #### *expression*

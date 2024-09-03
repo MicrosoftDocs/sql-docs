@@ -36,8 +36,6 @@ Alter the execution:
 GOTO label   
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
  *label*  
  Is the point after which processing starts if a GOTO is targeted to that label. Labels must follow the rules for [identifiers](../../relational-databases/databases/database-identifiers.md). A label can be used as a commenting method whether GOTO is used.  

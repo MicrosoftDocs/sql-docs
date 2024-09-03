@@ -32,8 +32,6 @@ node. GetReparentedValue ( oldRoot, newRoot )
 SqlHierarchyId GetReparentedValue ( SqlHierarchyId oldRoot , SqlHierarchyId newRoot )  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 _oldRoot_  
 A **hierarchyid** that is the node that represents the level of the hierarchy that is to be modified.

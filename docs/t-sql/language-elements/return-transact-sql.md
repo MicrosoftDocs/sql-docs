@@ -39,8 +39,6 @@ RETURN [ integer_expression ]
  *integer_expression*  
  Is the integer value that is returned. Stored procedures can return an integer value to a calling procedure or an application.  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Return Types
  Optionally returns **int**.  
   

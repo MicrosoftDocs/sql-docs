@@ -34,8 +34,6 @@ Multiplies two numbers and sets a value to the result of the operation. For exam
 expression *= expression  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 _expression_  
 Is any valid data type [expression](../../t-sql/language-elements/expressions-transact-sql.md), except the **bit** type, in the numeric category.  

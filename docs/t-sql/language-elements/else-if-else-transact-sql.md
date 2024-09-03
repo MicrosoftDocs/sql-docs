@@ -35,8 +35,6 @@ IF boolean_expression
     { sql_statement | statement_block } ]
 ```
 
-[!INCLUDE [sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 
 #### *boolean_expression*

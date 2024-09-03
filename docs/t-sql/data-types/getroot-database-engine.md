@@ -34,8 +34,6 @@ hierarchyid::GetRoot ( )
 static SqlHierarchyId GetRoot ( )   
 ```  
 
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Return Types  
 **SQL Server return type:hierarchyid**
   

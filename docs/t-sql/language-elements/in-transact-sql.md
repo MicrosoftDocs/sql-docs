@@ -36,8 +36,6 @@ test_expression [ NOT ] IN
     )   
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
  *test_expression*  
  Is any valid [expression](../../t-sql/language-elements/expressions-transact-sql.md).  

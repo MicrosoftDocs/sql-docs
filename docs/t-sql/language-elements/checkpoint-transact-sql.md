@@ -41,8 +41,6 @@ dev_langs:
 CHECKPOINT [ checkpoint_duration ]  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
  *checkpoint_duration*  
  Specifies the requested amount of time, in seconds, for the manual checkpoint to complete. When *checkpoint_duration* is specified, the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] attempts to perform the checkpoint within the requested duration. The *checkpoint_duration* must be an expression of type **int** and must be greater than zero. When this parameter is omitted, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] adjusts the checkpoint duration to minimize the performance impact on database applications. *checkpoint_duration* is an advanced option.  

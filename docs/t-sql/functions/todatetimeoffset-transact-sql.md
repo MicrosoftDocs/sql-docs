@@ -35,8 +35,6 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
 TODATETIMEOFFSET ( datetime_expression , timezoneoffset_expression )  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
  *datetime_expression*  
  Is an [expression](../../t-sql/language-elements/expressions-transact-sql.md) that resolves to a [datetime2](../../t-sql/data-types/datetime2-transact-sql.md) value.  

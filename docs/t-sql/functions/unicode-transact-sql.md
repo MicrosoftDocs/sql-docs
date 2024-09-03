@@ -31,8 +31,6 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
 UNICODE ( 'ncharacter_expression' )  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 **'** *ncharacter_expression* **'**  
 Is an **nchar** or **nvarchar** expression.  

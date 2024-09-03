@@ -29,8 +29,6 @@ Returns the partition number into which a set of partitioning column values woul
 [ database_name. ] $PARTITION.partition_function_name(expression)  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 
 *database_name*  

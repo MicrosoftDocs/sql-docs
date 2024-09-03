@@ -37,8 +37,6 @@ Returns the login identification name of the user.
 SUSER_NAME ( [ server_user_id ] )
 ```
 
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 
 #### *server_user_id*

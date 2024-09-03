@@ -35,8 +35,6 @@ Returns a database user name from a specified identification number, or the curr
 USER_NAME ( [ ID ] )
 ```  
 
-[!INCLUDE [sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 
 #### *ID*

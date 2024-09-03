@@ -35,8 +35,6 @@ VARP ( [ ALL | DISTINCT ] expression )
 VARP ([ ALL ] expression) OVER ( [ partition_by_clause ] order_by_clause)  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
  **ALL**  
  Applies the function to all values. ALL is the default.  

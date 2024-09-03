@@ -29,8 +29,6 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
 SMALLDATETIMEFROMPARTS ( year, month, day, hour, minute )  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
  *year*  
  Integer expression specifying a year.  

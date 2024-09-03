@@ -51,8 +51,6 @@ Syntax for [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later, [!IN
 RTRIM ( character_expression , [ characters ] )
 ```
 
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 
 #### *character_expression*

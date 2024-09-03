@@ -34,8 +34,6 @@ Returns the number of rows affected by the last statement. If the number of rows
 @@ROWCOUNT
 ```
 
-[!INCLUDE [sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Return types
 
 **int**

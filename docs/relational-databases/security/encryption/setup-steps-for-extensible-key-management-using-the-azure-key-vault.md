@@ -89,11 +89,7 @@ To grant your SQL Server instance access permissions to your Azure key vault, yo
 
    1. On the **Certificates & secrets** pane, under **Value**, select the **Copy** button next to the value of the client secret to be used to create an asymmetric key in SQL Server.
 
-<<<<<<< HEAD
-      :::image type="content" source="media/setup-steps-for-extensible-key-management-using-the-azure-key-vault/ekm-part1-azure-active-directory-new-secret.png" alt-text="Screenshot of the secret value in the Azure portal.":::
-=======
-      :::image type="content" source="media/ekm/ekm-part-1-azure-active-directory-new-secret.png" alt-text="Screenshot of the secret value in the Azure portal.":::
->>>>>>> 12f23bbe256c280d441f72dfec92ba688e9adc28
+      :::image type="content" source="media/setup-steps-for-extensible-key-management-using-the-azure-key-vault/ekm-part-1-azure-active-directory-new-secret.png" alt-text="Screenshot of the secret value in the Azure portal.":::
 
    1. In the left pane, select **Overview** and then, in the **Application (client) ID** box, copy the value to be used to create an asymmetric key in SQL Server.
 
@@ -121,11 +117,7 @@ You can use the Azure portal to create the key vault and then add a Microsoft En
 
     On the **Create a key vault** pane, select the **Basics** tab. Enter the appropriate values for the tab. We also recommend enabling purge protection.
 
-<<<<<<< HEAD
-    :::image type="content" source="media/setup-steps-for-extensible-key-management-using-the-azure-key-vault/ekm-part2-create-key-vault.png" alt-text="Screenshot of the Create key vault pane in the Azure portal.":::
-=======
-    :::image type="content" source="media/ekm/ekm-part-2-create-key-vault.png" alt-text="Screenshot of the Create key vault pane in the Azure portal.":::
->>>>>>> 12f23bbe256c280d441f72dfec92ba688e9adc28
+    :::image type="content" source="media/setup-steps-for-extensible-key-management-using-the-azure-key-vault/ekm-part-2-create-key-vault.png" alt-text="Screenshot of the Create key vault pane in the Azure portal.":::
 
 1. On the **Access configuration** tab, you have the option of selecting **Azure role-based access control** or **Vault access policy**. We go over both options, but the **Azure role-based access control** option is recommended. For more information, see [Access model overview](/azure/key-vault/general/security-features#access-model-overview).
 
@@ -380,7 +372,7 @@ Id         : https://DocsSampleEKMKeyVault.vault.azure.net:443/
 
 ## Optional - Configure an Azure Key Vault Managed HSM (Hardware Security Module)
 
-[Azure Key Vault Managed HSM (Hardware Security Module)](/azure/key-vault/managed-hsm/overview) is supported for SQL Server and SQL Server on Azure Virtual Machines (VMs) when using the latest version of the [Use SQL Server Connector with SQL Encryption Features](use-sql-server-connector-with-sql-encryption-features.md), as well as Azure SQL. Managed HSM is a fully managed, highly available, single-tenant HSM service. Managed HSM provides a secure foundation for cryptographic operations and key storage. Managed HSM is designed to meet the most stringent security and compliance requirements.
+[Azure Key Vault Managed HSM (Hardware Security Module)](/azure/key-vault/managed-hsm/overview) is supported for SQL Server and SQL Server on Azure Virtual Machines (VMs) when using the latest version of the [SQL Server Connector](use-sql-server-connector-with-sql-encryption-features.md), as well as Azure SQL. Managed HSM is a fully managed, highly available, single-tenant HSM service. Managed HSM provides a secure foundation for cryptographic operations and key storage. Managed HSM is designed to meet the most stringent security and compliance requirements.
 
 In [step 2](#step-2-create-a-key-vault), we learned how to create a key vault and key in Azure Key Vault. You can optionally use an Azure Key Vault Managed HSM to store or create a key to be used with the SQL Server Connector. Here are the steps:
 

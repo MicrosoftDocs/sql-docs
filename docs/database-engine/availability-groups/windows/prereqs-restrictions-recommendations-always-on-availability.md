@@ -57,7 +57,7 @@ To support the [!INCLUDE [ssHADR](../../../includes/sshadr-md.md)] feature, ensu
 
 - **Sufficient disk space:** Every computer on which a server instance hosts an availability replica must possess sufficient disk space for all the databases in the availability group. Keep in mind that as primary databases grow, their corresponding secondary databases grow the same amount.
 
-- **Identical disk layout:** Every computer on which a server instance hosts an availability replica should have an identical disk layout (with exact disk drive letters and sizes) to ensure file paths for database files (mdf,ldf) are mirrored, preventing complications during seeding and synchronization.  Review [Restrictions (availability databases)](#RestrictionsDb) for disk layouts that differ. 
+- **Identical disk layout:** Every computer on which a server instance hosts an availability replica should have an identical disk layout (with exact disk drive letters and sizes) to ensure file paths for database files (mdf, ldf) are mirrored, preventing complications during seeding and synchronization.  Review [Restrictions (availability databases)](#RestrictionsDb) for disk layouts that differ. 
 
 ### <a id="PermissionsWindows"></a> Permissions (Windows system)
 

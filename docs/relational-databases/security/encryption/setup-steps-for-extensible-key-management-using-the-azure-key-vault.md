@@ -4,7 +4,7 @@ description: Install and configure the SQL Server Connector for Azure Key Vault.
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: randolphwest
-ms.date: 08/20/2024
+ms.date: 09/03/2024
 ms.service: sql
 ms.subservice: security
 ms.topic: conceptual
@@ -93,7 +93,7 @@ To grant your SQL Server instance access permissions to your Azure key vault, yo
 
    1. In the left pane, select **Overview** and then, in the **Application (client) ID** box, copy the value to be used to create an asymmetric key in SQL Server.
 
-      :::image type="content" source="media/setup-steps-for-extensible-key-management-using-the-azure-key-vault/ekm-part1-azure-active-directory-application-id.png" alt-text="Screenshot of the Application (client) ID value on the Overview pane.":::
+      :::image type="content" source="media/setup-steps-for-extensible-key-management-using-the-azure-key-vault/ekm-part-1-azure-active-directory-application-id.png" alt-text="Screenshot of the Application (client) ID value on the Overview pane.":::
 
 ## Step 2: Create a key vault
 
@@ -111,7 +111,7 @@ You can use the Azure portal to create the key vault and then add a Microsoft En
 
    On the **Create a resource group** pane, under **Project details**, enter the values, and then select **Review + create**.
 
-   :::image type="content" source="media/setup-steps-for-extensible-key-management-using-the-azure-key-vault/ekm-part2-create-resource-group.png" alt-text="Screenshot of the Create a resource group pane in the Azure portal.":::
+   :::image type="content" source="media/setup-steps-for-extensible-key-management-using-the-azure-key-vault/ekm-part-2-create-resource-group.png" alt-text="Screenshot of the Create a resource group pane in the Azure portal.":::
 
 1. In the Azure portal, search or select the **Key vaults** services to create a key vault. Select **Create**.
 
@@ -133,15 +133,15 @@ The recommended method is to use [Azure role-based access control (RBAC)](/azure
 
 1. Select **Add** > **Add role assignment**.
 
-   :::image type="content" source="media/setup-steps-for-extensible-key-management-using-the-azure-key-vault/ekm-part2-add-role-assignment.png" alt-text="Screenshot of the Add role assignment button on the Access control (IAM) pane in the Azure portal." lightbox="media/setup-steps-for-extensible-key-management-using-the-azure-key-vault/ekm-part2-add-role-assignment.png":::
+   :::image type="content" source="media/setup-steps-for-extensible-key-management-using-the-azure-key-vault/ekm-part-2-add-role-assignment.png" alt-text="Screenshot of the Add role assignment button on the Access control (IAM) pane in the Azure portal." lightbox="media/setup-steps-for-extensible-key-management-using-the-azure-key-vault/ekm-part-2-add-role-assignment.png":::
 
 1. The EKM application needs the **Key Vault Crypto Service Encryption User** role to perform wrap and unwrap operations. Search for **Key Vault Crypto Service Encryption User** and select the role. Select **Next**.
 
-   :::image type="content" source="media/setup-steps-for-extensible-key-management-using-the-azure-key-vault/ekm-part2-select-role-assignment.png" alt-text="Screenshot of selecting a role assignment in the Azure portal." lightbox="media/setup-steps-for-extensible-key-management-using-the-azure-key-vault/ekm-part2-select-role-assignment.png":::
+   :::image type="content" source="media/setup-steps-for-extensible-key-management-using-the-azure-key-vault/ekm-part-2-select-role-assignment.png" alt-text="Screenshot of selecting a role assignment in the Azure portal." lightbox="media/setup-steps-for-extensible-key-management-using-the-azure-key-vault/ekm-part-2-select-role-assignment.png":::
 
 1. In the **Members** tab, select the **Select members** option, and then search for the Microsoft Entra application that you created in Step 1. Select the application and then the **Select** button.
 
-   :::image type="content" source="media/setup-steps-for-extensible-key-management-using-the-azure-key-vault/ekm-part2-add-app-to-role.png" alt-text="Screenshot of the Select members pane for adding a role assignment in the Azure portal." lightbox="media/setup-steps-for-extensible-key-management-using-the-azure-key-vault/ekm-part2-add-app-to-role.png":::
+   :::image type="content" source="media/setup-steps-for-extensible-key-management-using-the-azure-key-vault/ekm-part-2-add-app-to-role.png" alt-text="Screenshot of the Select members pane for adding a role assignment in the Azure portal." lightbox="media/setup-steps-for-extensible-key-management-using-the-azure-key-vault/ekm-part-2-add-app-to-role.png":::
 
 1. Select **Review + assign** twice to complete the role assignment.
 
@@ -158,11 +158,11 @@ The recommended method is to use [Azure role-based access control (RBAC)](/azure
 
 1. On the **Create an access policy** pane, select *Get* and *List* permissions from the **Key Management Operations** options. Select *Unwrap Key* and *Wrap Key* permissions from the **Cryptographic Operations** options. Select **Next**
 
-    :::image type="content" source="media/setup-steps-for-extensible-key-management-using-the-azure-key-vault/ekm-part2-add-access-policy.png" alt-text="Screenshot of the Add Access Policy link on the Access policies pane.":::
+    :::image type="content" source="media/setup-steps-for-extensible-key-management-using-the-azure-key-vault/ekm-part-2-add-access-policy.png" alt-text="Screenshot of the Add Access Policy link on the Access policies pane.":::
 
 1. On the **Principal** tab, select the application that was created in Step 1.
 
-   :::image type="content" source="media/setup-steps-for-extensible-key-management-using-the-azure-key-vault/ekm-part2-select-principal.png" alt-text="Screenshot of application search box on the Principal pane.":::
+   :::image type="content" source="media/setup-steps-for-extensible-key-management-using-the-azure-key-vault/ekm-part-2-select-principal.png" alt-text="Screenshot of application search box on the Principal pane.":::
 
 1. Select **Next** and then **Create**.
 
@@ -388,6 +388,8 @@ In [step 2](#step-2-create-a-key-vault), we learned how to create a key vault an
    > When creating a credential to access the Managed HSM, the identity is `<name of Managed HSM>.managedhsm.azure.net`, which can be found in the Azure Key Vault Managed HSM **Overview** as the **HSM URI** in the Azure portal.
    >
    > Automatic key rotation is supported in Azure Key Vault Managed HSM. For more information, see [Configure key auto-rotation in Azure Managed HSM](/azure/key-vault/managed-hsm/key-rotation).
+   >
+   > [SQL Server Connector version 15.0.2000.440](https://www.microsoft.com/en-us/download/details.aspx?id=45344) or later is required to support Azure Key Vault Managed HSM.
 
 ## Step 3: Install the SQL Server Connector
 

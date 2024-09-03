@@ -339,7 +339,7 @@ You can use the same command to fail over to the forwarder, as well as fail back
 
 #### [SQL Server 2022 and later](#tab/sql22)
 
-On [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)] and later you can configure the `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` setting for a distributed availability group, which is designed to guarantee no data loss when a distributed availability group fails over. If this setting is configured, follow the steps in this section to fail over your distributed availability group. If you don't want to use the `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` setting, then follow the instructions to failover a distributed availability group in SQL Server 2019 and earlier. 
+On [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)] and later you can configure the `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` setting for a distributed availability group, which is designed to guarantee no data loss when a distributed availability group fails over. If this setting is configured, follow the steps in this section to fail over your distributed availability group. If you don't want to use the `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` setting, then follow the instructions to fail over a distributed availability group in SQL Server 2019 and earlier. 
 
 To ensure there's no data loss, make sure to:
 
@@ -383,7 +383,7 @@ The following Transact-SQL examples demonstrate detailed steps to fail over the 
    ```
 
    > [!NOTE]
-   > In a distributed availability group, the synchronization status between the two availability groups depends on the availability mode of both replicas. For synchronous commit mode, both the current primary availability group, and the current secondary availability group must have `SYNCHRONOUS_COMMIT` availability mode. For this reason, you must run the previous script on both the global primary replica, and the forwarder.
+   > In a distributed availability group, the synchronization status between the two availability groups depends on the availability mode of both replicas. For synchronous commit mode, both the current primary availability group and the current secondary availability group must have `SYNCHRONOUS_COMMIT` availability mode. For this reason, you must run the previous script on both the global primary replica and the forwarder.
 
 1. Wait until the status of the distributed availability group has changed to `SYNCHRONIZED` and all replicas have the same last_hardened_lsn (per database). Run the following query on both the global primary, which is the primary replica of the primary availability group, and the forwarder to check the synchronization_state_desc and last_hardened_lsn: 
 

@@ -32,9 +32,7 @@ Creates a unique value of type **uniqueidentifier**.
 NEWID ( )  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
-> [!Note]
+> [!NOTE]
 > Not supported in Azure Synapse serverless pools.
 
 ## Return Types

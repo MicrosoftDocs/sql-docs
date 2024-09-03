@@ -603,7 +603,7 @@ The following table covers these SLOs: `HS_Gen5_4`, `HS_Gen5_6`, `HS_Gen5_8`, `H
 | Max concurrent sessions | 30,000 | 30,000 | 30,000 | 30,000 | 30,000 | 30,000 |
 | Min/max elastic pool vCore choices per database | 0, 0.25, 0.5, 1, 2, 4 | 0, 0.25, 0.5, 1, 2, 4, 6 | 0, 0.25, 0.5, 1, 2, 4, 6, 8 | 0, 0.25, 0.5, 1, 2, 4, 6, 8, 10 | 0, 0.25, 0.5, 1, 2, 4, 6, 8, 10, 12 | 0, 0.25, 0.5, 1, 2, 4, 6, 8, 10, 12, 14 |
 | Secondary pool replicas | 0-4 | 0-4 | 0-4 | 0-4 | 0-4 | 0-4 |
-| Multi-AZ | Not supported | Not supported | Not supported | Not supported | Not supported | Not supported |
+| Multi-AZ | [Yes](high-availability-sla-local-zone-redundancy.md#hyperscale-service-tier-zone-redundant-availability) | [Yes](high-availability-sla-local-zone-redundancy.md#hyperscale-service-tier-zone-redundant-availability) | [Yes](high-availability-sla-local-zone-redundancy.md#hyperscale-service-tier-zone-redundant-availability) | [Yes](high-availability-sla-local-zone-redundancy.md#hyperscale-service-tier-zone-redundant-availability) | [Yes](high-availability-sla-local-zone-redundancy.md#hyperscale-service-tier-zone-redundant-availability) | [Yes](high-availability-sla-local-zone-redundancy.md#hyperscale-service-tier-zone-redundant-availability) |
 | Read Scale-out | Yes | Yes | Yes | Yes | Yes | Yes |
 
 <sup>1</sup> See [Resource management in dense elastic pools](elastic-pool-resource-management.md) for additional considerations.
@@ -644,7 +644,7 @@ The following table covers these SLOs: `HS_Gen5_16`, `HS_Gen5_18`, `HS_Gen5_20`,
 | Max concurrent sessions | 30,000 | 30,000 | 30,000 | 30,000 | 30,000 | 30,000 | 30,000 |
 | Min/max elastic pool vCore choices per database | 0, 0.25, 0.5, 1, 2, 4, 6, 8, 10, 12, 14, 16 | 0, 0.25, 0.5, 1, 2, 4, 6, 8, 10, 12, 14, 16, 18 | 0, 0.25, 0.5, 1, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20 | 0, 0.25, 0.5, 1, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 24 | 0, 0.25, 0.5, 1, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 24, 32 | 0, 0.25, 0.5, 1, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 24, 32, 40 | 0, 0.25, 0.5, 1, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 24, 32, 40, 80 |
 | Secondary replicas | 0-4 | 0-4 | 0-4 | 0-4 | 0-4 | 0-4 | 0-4 |
-| Multi-AZ | Not supported | Not supported | Not supported | Not supported | Not supported | Not supported | Not supported |
+| Multi-AZ | [Yes](high-availability-sla-local-zone-redundancy.md#hyperscale-service-tier-zone-redundant-availability) | [Yes](high-availability-sla-local-zone-redundancy.md#hyperscale-service-tier-zone-redundant-availability) | [Yes](high-availability-sla-local-zone-redundancy.md#hyperscale-service-tier-zone-redundant-availability) | [Yes](high-availability-sla-local-zone-redundancy.md#hyperscale-service-tier-zone-redundant-availability) | [Yes](high-availability-sla-local-zone-redundancy.md#hyperscale-service-tier-zone-redundant-availability) | [Yes](high-availability-sla-local-zone-redundancy.md#hyperscale-service-tier-zone-redundant-availability) | [Yes](high-availability-sla-local-zone-redundancy.md#hyperscale-service-tier-zone-redundant-availability) |
 | Read Scale-out | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
 
 <sup>1</sup> See [Resource management in dense elastic pools](elastic-pool-resource-management.md) for additional considerations.
@@ -687,7 +687,7 @@ The following table covers these SLOs: `HS_PRMS_4`, `HS_PRMS_6`, `HS_PRMS_8`, `H
 | Max concurrent sessions | 30,000 | 30,000 | 30,000 | 30,000 | 30,000 | 30,000 |
 | Min/max elastic pool vCore choices per database | 0, 0.25, 0.5, 1, 2, 4 | 0, 0.25, 0.5, 1, 2, 4, 6 | 0, 0.25, 0.5, 1, 2, 4, 6, 8 | 0, 0.25, 0.5, 1, 2, 4, 6, 8, 10 | 0, 0.25, 0.5, 1, 2, 4, 6, 8, 10, 12 | 0, 0.25, 0.5, 1, 2, 4, 6, 8, 10, 12, 14 |
 | Secondary pool replicas | 0-4 | 0-4 | 0-4 | 0-4 | 0-4 | 0-4 |
-| Multi-AZ | Not supported | Not supported | Not supported | Not supported | Not supported | Not supported |
+| Multi-AZ | [Yes](high-availability-sla-local-zone-redundancy.md#hyperscale-service-tier-zone-redundant-availability) | [Yes](high-availability-sla-local-zone-redundancy.md#hyperscale-service-tier-zone-redundant-availability) | [Yes](high-availability-sla-local-zone-redundancy.md#hyperscale-service-tier-zone-redundant-availability) | [Yes](high-availability-sla-local-zone-redundancy.md#hyperscale-service-tier-zone-redundant-availability) | [Yes](high-availability-sla-local-zone-redundancy.md#hyperscale-service-tier-zone-redundant-availability) | [Yes](high-availability-sla-local-zone-redundancy.md#hyperscale-service-tier-zone-redundant-availability) |
 | Read Scale-out | Yes | Yes | Yes | Yes | Yes | Yes |
 
 <sup>1</sup> See [Resource management in dense elastic pools](elastic-pool-resource-management.md) for additional considerations.
@@ -728,7 +728,7 @@ The following table covers these SLOs: `HS_PRMS_16`, `HS_PRMS_18`, `HS_PRMS_20`,
 | Max concurrent sessions | 30,000 | 30,000 | 30,000 | 30,000 | 30,000 | 30,000 | 
 | Min/max elastic pool vCore choices per database | 0, 0.25, 0.5, 1, 2, 4, 6, 8, 10, 12, 14, 16 | 0, 0.25, 0.5, 1, 2, 4, 6, 8, 10, 12, 14, 16, 18 | 0, 0.25, 0.5, 1, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20 | 0, 0.25, 0.5, 1, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 24 | 0, 0.25, 0.5, 1, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 24, 32 | 0, 0.25, 0.5, 1, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 24, 32, 40 |
 | Secondary replicas | 0-4 | 0-4 | 0-4 | 0-4 | 0-4 | 0-4 | 
-| Multi-AZ | Not supported | Not supported | Not supported | Not supported | Not supported | Not supported | 
+| Multi-AZ | [Yes](high-availability-sla-local-zone-redundancy.md#hyperscale-service-tier-zone-redundant-availability) | [Yes](high-availability-sla-local-zone-redundancy.md#hyperscale-service-tier-zone-redundant-availability) | [Yes](high-availability-sla-local-zone-redundancy.md#hyperscale-service-tier-zone-redundant-availability) | [Yes](high-availability-sla-local-zone-redundancy.md#hyperscale-service-tier-zone-redundant-availability) | [Yes](high-availability-sla-local-zone-redundancy.md#hyperscale-service-tier-zone-redundant-availability) | [Yes](high-availability-sla-local-zone-redundancy.md#hyperscale-service-tier-zone-redundant-availability) | 
 | Read Scale-out | Yes | Yes | Yes | Yes | Yes | Yes | 
 
 <sup>1</sup> See [Resource management in dense elastic pools](elastic-pool-resource-management.md) for additional considerations.
@@ -769,7 +769,7 @@ The following table covers these SLOs: `HS_PRMS_64`, `HS_PRMS_80`, `HS_PRMS_128`
 | Max concurrent sessions | 30,000 | 30,000 | 30,000 | 
 | Min/max elastic pool vCore choices per database | 0, 0.25, 0.5, 1, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 24, 32, 40, 64 | 0, 0.25, 0.5, 1, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 24, 32, 40, 80 | 0, 0.25, 0.5, 1, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 24, 32, 40, 64, 80, 128 |
 | Secondary replicas | 0-4 | 0-4 | 0-4 | 
-| Multi-AZ | Not supported | Not supported | Not supported |  
+| Multi-AZ | [Yes](high-availability-sla-local-zone-redundancy.md#hyperscale-service-tier-zone-redundant-availability) | [Yes](high-availability-sla-local-zone-redundancy.md#hyperscale-service-tier-zone-redundant-availability) | [Yes](high-availability-sla-local-zone-redundancy.md#hyperscale-service-tier-zone-redundant-availability) |  
 | Read Scale-out | Yes | Yes | Yes |  
 
 <sup>1</sup> See [Resource management in dense elastic pools](elastic-pool-resource-management.md) for additional considerations.
@@ -812,7 +812,7 @@ The following table covers these SLOs: `HS_MOPRMS_4`, `HS_MOPRMS_6`, `HS_MOPRMS_
 | Max concurrent sessions | 30,000 | 30,000 | 30,000 | 30,000 | 30,000 | 30,000 |
 | Min/max elastic pool vCore choices per database | 0, 0.25, 0.5, 1, 2, 4 | 0, 0.25, 0.5, 1, 2, 4, 6 | 0, 0.25, 0.5, 1, 2, 4, 6, 8 | 0, 0.25, 0.5, 1, 2, 4, 6, 8, 10 | 0, 0.25, 0.5, 1, 2, 4, 6, 8, 10, 12 | 0, 0.25, 0.5, 1, 2, 4, 6, 8, 10, 12, 14 |
 | Secondary pool replicas | 0-4 | 0-4 | 0-4 | 0-4 | 0-4 | 0-4 |
-| Multi-AZ | Not supported | Not supported | Not supported | Not supported | Not supported | Not supported |
+| Multi-AZ | [Yes](high-availability-sla-local-zone-redundancy.md#hyperscale-service-tier-zone-redundant-availability) | [Yes](high-availability-sla-local-zone-redundancy.md#hyperscale-service-tier-zone-redundant-availability) | [Yes](high-availability-sla-local-zone-redundancy.md#hyperscale-service-tier-zone-redundant-availability) | [Yes](high-availability-sla-local-zone-redundancy.md#hyperscale-service-tier-zone-redundant-availability) | [Yes](high-availability-sla-local-zone-redundancy.md#hyperscale-service-tier-zone-redundant-availability) | [Yes](high-availability-sla-local-zone-redundancy.md#hyperscale-service-tier-zone-redundant-availability) |
 | Read Scale-out | Yes | Yes | Yes | Yes | Yes | Yes |
 
 <sup>1</sup> See [Resource management in dense elastic pools](elastic-pool-resource-management.md) for additional considerations.
@@ -853,7 +853,7 @@ The following table covers these SLOs: `HS_MOPRMS_16`, `HS_MOPRMS_18`, `HS_MOPRM
 | Max concurrent sessions | 30,000 | 30,000 | 30,000 | 30,000 | 30,000 | 30,000 | 
 | Min/max elastic pool vCore choices per database | 0, 0.25, 0.5, 1, 2, 4, 6, 8, 10, 12, 14, 16 | 0, 0.25, 0.5, 1, 2, 4, 6, 8, 10, 12, 14, 16, 18 | 0, 0.25, 0.5, 1, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20 | 0, 0.25, 0.5, 1, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 24 | 0, 0.25, 0.5, 1, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 24, 32 | 0, 0.25, 0.5, 1, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 24, 32, 40 |
 | Secondary replicas | 0-4 | 0-4 | 0-4 | 0-4 | 0-4 | 0-4 |
-| Multi-AZ | Not supported | Not supported | Not supported | Not supported | Not supported | Not supported |
+| Multi-AZ | [Yes](high-availability-sla-local-zone-redundancy.md#hyperscale-service-tier-zone-redundant-availability) | [Yes](high-availability-sla-local-zone-redundancy.md#hyperscale-service-tier-zone-redundant-availability) | [Yes](high-availability-sla-local-zone-redundancy.md#hyperscale-service-tier-zone-redundant-availability) | [Yes](high-availability-sla-local-zone-redundancy.md#hyperscale-service-tier-zone-redundant-availability) | [Yes](high-availability-sla-local-zone-redundancy.md#hyperscale-service-tier-zone-redundant-availability) | [Yes](high-availability-sla-local-zone-redundancy.md#hyperscale-service-tier-zone-redundant-availability) |
 | Read Scale-out | Yes | Yes | Yes | Yes | Yes | Yes |
 
 <sup>1</sup> See [Resource management in dense elastic pools](elastic-pool-resource-management.md) for additional considerations.
@@ -894,7 +894,7 @@ The following table covers these SLOs: `HS_MOPRMS_64` and `HS_MOPRMS_80`:
 | Max concurrent sessions | 30,000 | 30,000 | 
 | Min/max elastic pool vCore choices per database | 0, 0.25, 0.5, 1, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 24, 32, 40, 64 | 0, 0.25, 0.5, 1, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 24, 32, 40, 80 | 
 | Secondary replicas | 0-4 | 0-4 | 
-| Multi-AZ | Not supported | Not supported | 
+| Multi-AZ | [Yes](high-availability-sla-local-zone-redundancy.md#hyperscale-service-tier-zone-redundant-availability) | [Yes](high-availability-sla-local-zone-redundancy.md#hyperscale-service-tier-zone-redundant-availability) | 
 | Read Scale-out | Yes | Yes | 
 
 <sup>1</sup> See [Resource management in dense elastic pools](elastic-pool-resource-management.md) for additional considerations.

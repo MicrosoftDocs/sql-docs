@@ -395,7 +395,7 @@ The July 2011 release of SSMA for MySQL contains the following changes:
 
 The April 2011 release of SSMA for MySQL contains the following changes:
 
-- Single installable of SSMA for MySQL, which supports [!INCLUDE [ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE [ssSQL10](../../includes/sssql10-md.md)], [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)] and Azure SQL.
+- Single installable of SSMA for MySQL, which supports [!INCLUDE [ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE [sql2008-md](../../includes/sql2008-md.md)], [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)] and Azure SQL.
 - The ability to connect [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)].
 - Enhanced client-side data migration engine, supporting parallel migration of data.
 - Improved data migration performance with Simple and Bulk logged recovery models.

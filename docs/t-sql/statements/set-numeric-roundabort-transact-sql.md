@@ -36,8 +36,6 @@ Specifies the level of error reporting generated when rounding in an expression 
 SET NUMERIC_ROUNDABORT { ON | OFF }
 ```
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Remarks
 When SET NUMERIC_ROUNDABORT is ON, an error is generated after a loss of precision occurs in an expression. If set to OFF, losses of precision don't generate error messages. The result is rounded to the precision of the column or variable storing the result.  
   

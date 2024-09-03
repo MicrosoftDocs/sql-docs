@@ -35,8 +35,6 @@ dev_langs:
 SET CURSOR_CLOSE_ON_COMMIT { ON | OFF }  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Remarks
  When SET CURSOR_CLOSE_ON_COMMIT is ON, this setting closes any open cursors on commit or rollback in compliance with ISO. When SET CURSOR_CLOSE_ON_COMMIT is OFF, the cursor is not closed when a transaction is committed.  
   

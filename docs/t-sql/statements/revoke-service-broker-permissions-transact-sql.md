@@ -43,8 +43,6 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
     [ AS revoking_principal ]  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
  GRANT OPTION FOR  
  Indicates that the right to grant the specified right to other principals will be revoked. The permission itself will not be revokes.  

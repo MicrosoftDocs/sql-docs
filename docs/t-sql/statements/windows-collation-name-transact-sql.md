@@ -38,8 +38,6 @@ Specifies the Windows collation name in the `COLLATE` clause in [!INCLUDE [ssNoV
 | { _BIN | _BIN2 }
 ```
 
-[!INCLUDE [sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 
 #### *CollationDesignator*

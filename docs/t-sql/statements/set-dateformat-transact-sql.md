@@ -40,8 +40,6 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 SET DATEFORMAT { format | @format_var }   
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
  *format* | **@**_format_var_  
  Is the order of the date parts. Valid parameters are **mdy**, **dmy**, **ymd**, **ydm**, **myd**, and **dym**. Can be either Unicode or double-byte character sets (DBCS) converted to Unicode. The U.S. English default is **mdy**. For the default DATEFORMAT of all support languages, see [sp_helplanguage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helplanguage-transact-sql.md).  

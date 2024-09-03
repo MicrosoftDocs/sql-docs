@@ -36,8 +36,6 @@ Replaces `NULL` with the specified replacement value.
 ISNULL ( check_expression , replacement_value )
 ```
 
-[!INCLUDE [sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 
 #### *check_expression*

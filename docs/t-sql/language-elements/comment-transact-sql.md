@@ -35,8 +35,6 @@ Indicates user-provided text. Comments can be inserted on a separate line, neste
 -- text_of_comment  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
  *text_of_comment*  
  Is the character string that contains the text of the comment.  

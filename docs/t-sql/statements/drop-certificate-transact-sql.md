@@ -38,8 +38,6 @@ monikerRange: "=azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>
 DROP CERTIFICATE certificate_name  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
  *certificate_name*  
  Is the unique name by which the certificate is known in the database.  

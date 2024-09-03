@@ -1,8 +1,8 @@
 ---
 title: "Best practices - natively compiled stored procedures"
 description: Learn about best practices for natively compiled stored procedures that are typically used in performance-critical parts of an application.
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "03/24/2017"
 ms.service: sql
 ms.subservice: in-memory-oltp

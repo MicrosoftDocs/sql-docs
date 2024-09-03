@@ -37,8 +37,6 @@ DBCC TRACESTATUS ( [ [ trace# [ , ...n ] ] [ , ] [ -1 ] ] )
 [ WITH NO_INFOMSGS ]
 ```
 
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 
 #### *trace#*

@@ -28,8 +28,6 @@ dev_langs:
 IIF( boolean_expression, true_value, false_value )
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 
 #### *boolean_expression*  

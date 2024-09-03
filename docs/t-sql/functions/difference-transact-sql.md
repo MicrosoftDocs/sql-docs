@@ -31,8 +31,6 @@ This function returns an integer value measuring the difference between the [SOU
 DIFFERENCE ( character_expression , character_expression )  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 *character_expression*  
 An alphanumeric [expression](../../t-sql/language-elements/expressions-transact-sql.md) of character data. *character_expression* can be a constant, variable, or column.  

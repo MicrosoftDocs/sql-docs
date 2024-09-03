@@ -2,8 +2,8 @@
 title: "Python tutorial: Ski rentals"
 titleSuffix: SQL machine learning
 description: In this four-part tutorial series, you build a linear regression model in Python to predict ski rentals with SQL machine learning.
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: VanMSFT
+ms.author: vanto
 ms.reviewer: monamaki
 ms.date: 05/31/2024
 ms.service: sql

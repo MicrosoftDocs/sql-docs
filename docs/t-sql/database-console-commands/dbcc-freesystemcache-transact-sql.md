@@ -40,8 +40,6 @@ DBCC FREESYSTEMCACHE
     ]
 ```
 
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 
 #### ( 'ALL' [ , *pool_name* ] )

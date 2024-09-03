@@ -97,8 +97,6 @@ SELECT <select_criteria>
     [ OPTION ( <query_option> [ ,...n ] ) ]  
 ```  
 
-[!INCLUDE [sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Remarks
  Because of the complexity of the SELECT statement, detailed syntax elements and arguments are shown by clause:  
 

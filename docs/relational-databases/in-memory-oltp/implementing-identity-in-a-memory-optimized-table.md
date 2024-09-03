@@ -1,8 +1,8 @@
 ---
 title: "Implementing IDENTITY in a Memory-Optimized Table"
 description: Learn about IDENTITY in memory-optimized tables in SQL Server. Memory-optimized tables support IDENTITY for a seed and increment value of one.
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "03/01/2017"
 ms.service: sql
 ms.subservice: in-memory-oltp

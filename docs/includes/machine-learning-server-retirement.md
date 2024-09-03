@@ -1,6 +1,6 @@
 ---
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: VanMSFT
+ms.author: vanto
 ms.reviewer: randolphwest
 ms.date: 10/06/2022
 ms.service: sql

@@ -34,8 +34,6 @@ dev_langs:
 SET NOEXEC { ON | OFF }  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Remarks  
  When SET NOEXEC is ON, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] parses and compiles each batch of [!INCLUDE[tsql](../../includes/tsql-md.md)] statements but does not execute them. When SET NOEXEC is OFF, all batches are executed after compilation.  NOEXEC supports deferred name resolution; if one or more referenced objects in the batch don't exist, no error will be thrown.
   

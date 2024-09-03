@@ -99,8 +99,6 @@ GROUP BY {
 
 ```  
     
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
  
 ### *column-expression*  

@@ -28,8 +28,6 @@ You typically use this method to extract a value from an XML instance stored in 
 value ( XQuery , SQLType )
 ```
 
-[!INCLUDE [sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 
 #### *XQuery*

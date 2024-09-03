@@ -34,8 +34,6 @@ Performs a bitwise logical AND operation between two integer values, and sets a 
 expression &= expression
 ```
 
-[!INCLUDE [sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 
 #### *expression*

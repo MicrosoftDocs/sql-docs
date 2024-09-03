@@ -1,8 +1,8 @@
 ---
 title: "drop_columns: Drops columns from the dataset"
 description: "Specified columns to drop from the dataset."
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: VanMSFT
+ms.author: vanto
 ms.date: 07/15/2019
 ms.service: sql
 ms.subservice: "machine-learning-services"

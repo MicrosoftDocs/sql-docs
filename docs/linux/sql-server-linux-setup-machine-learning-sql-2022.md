@@ -2,8 +2,8 @@
 title: Install on SQL Server 2022 for Linux
 titleSuffix: SQL Server Machine Learning Services
 description: "Learn how to install SQL Server 2022 Machine Learning Services on Linux: Red Hat, Ubuntu, and SUSE."
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: VanMSFT
+ms.author: vanto
 ms.reviewer: arunguru-msft
 ms.date: 01/03/2024
 ms.service: sql

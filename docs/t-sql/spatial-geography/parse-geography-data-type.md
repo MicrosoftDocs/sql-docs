@@ -28,8 +28,6 @@ This **geography** data type method supports `FullGlobe` instances or spatial in
 Parse ( 'geography_tagged_text' )
 ```
 
-[!INCLUDE [sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 
 #### *geography_tagged_text*

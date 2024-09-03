@@ -32,8 +32,6 @@ child. IsDescendantOf ( parent )
 SqlHierarchyId IsDescendantOf (SqlHierarchyId parent )  
 ```  
 
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 *parent*  
 The **hierarchyid** node for which the IsDescendantOf test should be performed.

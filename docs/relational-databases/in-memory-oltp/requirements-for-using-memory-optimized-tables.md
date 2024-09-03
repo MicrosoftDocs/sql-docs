@@ -1,8 +1,8 @@
 ---
 title: Requirements for using memory-optimized tables
 description: Learn about the requirements for using In-Memory OLTP, including SQL Database version, memory & storage considerations, and installation.
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: MikeRayMSFT
+ms.author: mikeray
 ms.reviewer: randolphwest
 ms.date: 10/05/2023
 ms.service: sql

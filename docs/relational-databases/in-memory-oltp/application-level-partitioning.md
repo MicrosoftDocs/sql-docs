@@ -1,8 +1,8 @@
 ---
 title: "Application-Level Partitioning"
 description: Review this example that processes orders. This application stores recent orders in a memory-optimized table and older ones in a disk-based table.
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "03/01/2017"
 ms.service: sql
 ms.subservice: in-memory-oltp

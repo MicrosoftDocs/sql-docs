@@ -27,8 +27,6 @@ Returns a **LineString geography** instance from an Open Geospatial Consortium (
 STLineFromWKB ( 'WKB_linestring' , SRID )  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
  *WKB_linestring*  
  Is the WKB representation of the **LineString geography** instance you wish to return. *WKB_linestring* is a **varbinary(max)** expression.  

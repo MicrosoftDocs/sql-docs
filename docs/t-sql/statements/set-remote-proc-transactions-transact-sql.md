@@ -38,8 +38,6 @@ dev_langs:
 SET REMOTE_PROC_TRANSACTIONS { ON | OFF }   
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
  ON | OFF  
  When ON, a [!INCLUDE[tsql](../../includes/tsql-md.md)] distributed transaction is started when a remote stored procedure is executed from a local transaction. When OFF, calling remote stored procedures from a local transaction does not start a [!INCLUDE[tsql](../../includes/tsql-md.md)] distributed transaction.  

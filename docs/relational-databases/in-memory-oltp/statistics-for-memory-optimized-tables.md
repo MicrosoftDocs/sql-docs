@@ -1,8 +1,8 @@
 ---
 title: "Statistics for Memory-Optimized Tables"
 description: Learn how the query optimizer uses statistics about columns in memory-optimized tables to create query plans that improve query performance for In-Memory OLTP.
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "10/23/2016"
 ms.service: sql
 ms.subservice: in-memory-oltp

@@ -35,8 +35,6 @@ The `||=` operator supports the same behavior as the [+= operator](string-concat
 variable ||= expression
 ```
 
-[!INCLUDE [sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 
 #### *variable*

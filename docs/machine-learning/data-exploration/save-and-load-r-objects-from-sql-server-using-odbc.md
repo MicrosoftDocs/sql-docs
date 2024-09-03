@@ -1,8 +1,8 @@
 ---
 title: Save and load R objects using ODBC
 description: The RevoScaleR package includes serialization and deserialization functions that greatly improve performance, and store the object more compactly.
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: VanMSFT
+ms.author: vanto
 ms.date: 04/27/2021
 ms.service: sql
 ms.subservice: machine-learning-services

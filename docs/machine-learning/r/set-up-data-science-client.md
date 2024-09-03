@@ -1,8 +1,8 @@
 ---
 title: Set up an R data science client
 description: Install local R libraries and tools on a development workstation for remote connections to SQL Server.
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: VanMSFT
+ms.author: vanto
 ms.reviewer: monamaki
 ms.date: 05/29/2024
 ms.service: sql

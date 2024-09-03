@@ -1,8 +1,8 @@
 ---
 title: RevoScaleR deep-dive tutorial
 description: In this tutorial series, learn how to call RevoScaleR functions using SQL Server Machine Learning R integration.
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: VanMSFT
+ms.author: vanto
 ms.date: 11/27/2018
 ms.service: sql
 ms.subservice: machine-learning-services

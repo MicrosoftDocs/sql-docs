@@ -1,8 +1,8 @@
 ---
 title: Collect data for troubleshooting Python and R
 description: Learn how to collect the data you need when attempting to resolve problems in SQL Server Machine Learning Services on your own or with the help of Microsoft customer support.
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: VanMSFT
+ms.author: vanto
 ms.date: 03/31/2021
 ms.service: sql
 ms.subservice: machine-learning-services

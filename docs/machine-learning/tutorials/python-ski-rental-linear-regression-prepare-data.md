@@ -2,8 +2,8 @@
 title: "Python tutorial: Prepare data"
 titleSuffix: SQL machine learning
 description: In part two of this four-part tutorial series, you'll use Python to prepare data to predict ski rentals with SQL machine learning.
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: VanMSFT
+ms.author: vanto
 ms.date: 06/02/2024
 ms.service: sql
 ms.subservice: machine-learning

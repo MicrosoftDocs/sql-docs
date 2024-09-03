@@ -33,7 +33,6 @@ Associates up to 128 bytes of binary information with the current session or con
 SET CONTEXT_INFO { binary_str | @binary_var }  
 ```  
   
-[!INCLUDE [sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## Arguments
 

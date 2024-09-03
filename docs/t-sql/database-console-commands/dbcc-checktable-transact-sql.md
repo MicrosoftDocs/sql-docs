@@ -54,8 +54,6 @@ DBCC CHECKTABLE
     ]
 ```
 
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 
 #### *table_name* | *view_name*

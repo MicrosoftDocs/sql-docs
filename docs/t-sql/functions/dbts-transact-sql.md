@@ -31,8 +31,6 @@ This function returns the value of the current **timestamp** data type for the c
 @@DBTS  
 ```  
 
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Return types
 **varbinary**
   

@@ -1,8 +1,8 @@
 ---
 title: "select_columns: Selects a set of columns and drops all others"
 description: "Selects a set of columns to retrain, dropping all others."
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: VanMSFT
+ms.author: vanto
 ms.date: 07/15/2019
 ms.service: sql
 ms.subservice: "machine-learning-services"

@@ -35,8 +35,6 @@ dev_langs:
 SUSER_SID ( [ 'login' ] [ , Param2 ] )   
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
  **'** *login* **'**  
 **Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later

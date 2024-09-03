@@ -4,7 +4,7 @@ description: "SERVERPROPERTY returns property information about the server insta
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: randolphwest, amitkh-msft
-ms.date: 05/21/2024
+ms.date: 08/26/2024
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -43,8 +43,6 @@ SERVERPROPERTY ( 'propertyname' )
 
 > [!IMPORTANT]
 > The [!INCLUDE [ssDE-md](../../includes/ssde-md.md)] version numbers for [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] aren't comparable with each other, and represent internal build numbers for these separate products. The [!INCLUDE [ssDE-md](../../includes/ssde-md.md)] for [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] is based on the same code base as the [!INCLUDE [ssDEnoversion](../../includes/ssdenoversion-md.md)]. Most importantly, the [!INCLUDE [ssDE-md](../../includes/ssde-md.md)] in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] always has the newest SQL [!INCLUDE [ssDE-md](../../includes/ssde-md.md)] bits. For example, version 12 of [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] is newer than version 16 of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)].
-
-[!INCLUDE [sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## Arguments
 
@@ -95,7 +93,7 @@ An expression that contains the property information to be returned for the serv
 | `ProductLevel` | Level of the version of the instance of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br />Returns one of the following values:<br /><br />'RTM' = Original release version<br /><br />'SP*n*' = Service pack version<br /><br />'CTP*n*', = Community Technology Preview version<br /><br />Base data type: **nvarchar(128)** |
 | `ProductMajorVersion` | **Applies to**: [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)] through current version in updates beginning in late 2015.<br /><br />The major version.<br /><br />Base data type: **nvarchar(128)** |
 | `ProductMinorVersion` | **Applies to**: [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)] through current version in updates beginning in late 2015.<br /><br />The minor version.<br /><br />Base data type: **nvarchar(128)** |
-| `ProductUpdateLevel` | **Applies to**: [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)] through current version in updates beginning in late 2015.<br /><br />Update level of the current build. CU indicates a cumulative update.<br /><br />Returns one of the following values:<br /><br />CU*n* = Cumulative Update<br /><br />NULL = Not applicable.<br /><br />Base data type: **nvarchar(128)** |
+| `ProductUpdateLevel` | **Applies to**: [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)] through current version in updates beginning in late 2015 and Azure SQL Managed Instance.<br /><br />Update level of the current build. CU indicates a cumulative update.<br /><br />Returns one of the following values:<br /><br />CU*n* = Cumulative Update<br /><br />NULL = Not applicable.<br /><br />Base data type: **nvarchar(128)** |
 | `ProductUpdateReference` | **Applies to**: [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)] through current version in updates beginning in late 2015.<br /><br />KB article for that release.<br /><br />Base data type: **nvarchar(128)** |
 | `ProductUpdateType` | **Applies to**: Azure SQL Managed Instance<br /><br /> Update cadence the instance follows. Corresponds to the Azure SQL Managed Instance [update policy](/azure/azure-sql/managed-instance/update-policy). <br /><br />Returns one of the following values:<br /><br />CU = Updates are deployed via cumulative updates (CUs) for the corresponding major SQL Server release (**SQL Server 2022** update policy).<br /><br />Continuous = New features are brought to Azure SQL Managed Instance as soon as they are available, independent of the SQL Server release cadence (**Always-up-to-date** update policy).<br /><br />Base data type: **nvarchar(128)** |
 | `ProductVersion` | Version of the instance of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)], in the form of *major.minor.build.revision*.<br /><br />Base data type: **nvarchar(128)** |

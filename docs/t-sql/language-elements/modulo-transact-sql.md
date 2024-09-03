@@ -37,8 +37,6 @@ Returns the remainder of one number divided by another.
 dividend % divisor
 ```
 
-[!INCLUDE [sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 
 #### *dividend*

@@ -1,8 +1,8 @@
 ---
 title: "SSMS support for in-memory OLTP"
 description: Use SQL Server Management Studio to manage memory-optimized tables, indexes on tables, natively compiled stored procedures, and user-defined table types.
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: in-memory-oltp

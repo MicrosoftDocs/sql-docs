@@ -34,8 +34,6 @@ dev_langs:
 SET QUERY_GOVERNOR_COST_LIMIT value  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 
 #### value

@@ -34,8 +34,6 @@ This **geography** data type method supports **FullGlobe** instances or spatial 
 GeomFromGml ( GML_input, SRID )  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
  *GML_input*  
  Is an XML input from which the GML will return a value.  

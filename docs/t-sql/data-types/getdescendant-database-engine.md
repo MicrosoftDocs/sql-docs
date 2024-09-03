@@ -32,8 +32,6 @@ parent.GetDescendant ( child1 , child2 )
 SqlHierarchyId GetDescendant ( SqlHierarchyId child1 , SqlHierarchyId child2 )   
 ```  
 
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 *child1*  
 NULL or the **hierarchyid** of a child of the current node.

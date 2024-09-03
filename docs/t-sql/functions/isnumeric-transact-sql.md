@@ -36,8 +36,6 @@ Determines whether an expression is a valid numeric type.
 ISNUMERIC ( expression )
 ```
 
-[!INCLUDE [sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 
 #### *expression*

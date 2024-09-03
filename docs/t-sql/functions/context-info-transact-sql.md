@@ -33,8 +33,6 @@ This function returns the **context_info** value either set for the current sess
 CONTEXT_INFO()  
 ```  
 
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Return value
 The **context_info** value.
   

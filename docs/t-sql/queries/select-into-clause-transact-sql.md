@@ -41,8 +41,6 @@ SELECT...INTO creates a new table in the default filegroup and inserts the resul
 [ ON filegroup ]
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
  *new_table*   
  Specifies the name of a new table to be created, based on the columns in the select list and the rows chosen from the data source.  

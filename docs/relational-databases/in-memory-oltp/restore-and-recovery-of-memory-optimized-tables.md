@@ -1,8 +1,8 @@
 ---
 title: "Restore and recovery of memory-optimized tables"
 description: Learn how restoring a database that uses memory-optimized tables in SQL Server differs from restoring a database that uses only disk-based tables.
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "12/31/2017"
 ms.service: sql
 ms.subservice: in-memory-oltp

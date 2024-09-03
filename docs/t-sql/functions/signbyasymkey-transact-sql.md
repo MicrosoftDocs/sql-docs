@@ -34,8 +34,6 @@ dev_langs:
 SignByAsymKey( Asym_Key_ID , @plaintext [ , 'password' ] )  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
  *Asym_Key_ID*  
  Is the ID of an asymmetric key in the current database. *Asym_Key_ID* is**int**.  

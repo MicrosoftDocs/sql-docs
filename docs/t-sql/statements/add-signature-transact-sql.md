@@ -42,8 +42,6 @@ ADD [ COUNTER ] SIGNATURE TO module_class::module_name
     | ASYMMETRIC KEY Asym_Key_Name WITH SIGNATURE = signed_blob
 ```
 
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 
 *module_class*  

@@ -27,8 +27,6 @@ Returns a **geographyMultiPoint** instance from an Open Geospatial Consortium (O
 STMPointFromWKB ( 'WKB_multipoint' , SRID )  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
  *WKB_multipoint*  
  Is the WKB representation of the **geographyMultiPoint** instance you wish to return. *WKB_multipoint* is a **varbinary(max)** expression.  

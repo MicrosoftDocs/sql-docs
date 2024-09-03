@@ -32,8 +32,6 @@ Returns a **bit** that represents one of the following conditions:
 exist (XQuery)   
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
  XQuery  
  Is an XQuery expression, a string literal.  

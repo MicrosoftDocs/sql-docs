@@ -69,8 +69,6 @@ DBCC SHRINKFILE
     ABORT_AFTER_WAIT = { SELF | BLOCKERS }
 ```
 
-[!INCLUDE [sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 
 #### *file_name*

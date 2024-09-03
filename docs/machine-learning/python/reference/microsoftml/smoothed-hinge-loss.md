@@ -1,8 +1,8 @@
 ---
 title: "smoothed_hinge_loss: smoothed_hinge_loss"
 description: "Smoothed Hinge loss."
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: VanMSFT
+ms.author: vanto
 ms.date: 07/15/2019
 ms.service: sql
 ms.subservice: "machine-learning-services"

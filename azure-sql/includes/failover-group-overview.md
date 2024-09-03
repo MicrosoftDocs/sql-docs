@@ -49,6 +49,10 @@ With a Microsoft managed failover policy, disaster recovery responsibility is de
   
 When these conditions are met, the Azure SQL service initiates forced failovers for all failover groups in the region that have the failover policy set to Microsoft managed. 
 
+> [!IMPORTANT]
+> Use customer managed failover policy to test and implement your disaster recovery plan. **Do not** rely on Microsoft managed failover, which might only be executed by Microsoft in extreme circumstances.
+> A Microsoft managed failover would be initiated for all failover groups in the region that have  failover policy set to Microsoft managed. It can't be initiated for individual failover group. If you need the ability to selectively failover your failover group, use customer managed failover policy. 
+
 Set the failover policy to Microsoft managed only when:
 
 - You want to delegate disaster recovery responsibility to the Azure SQL service. 

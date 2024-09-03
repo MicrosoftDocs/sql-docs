@@ -36,8 +36,6 @@ COALESCE ( expression [ ,...n ] )
 _expression_  
 Is an [expression](../../t-sql/language-elements/expressions-transact-sql.md) of any type.  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Return Types
 Returns the data type of _expression_ with the highest data type precedence. If all expressions are nonnullable, the result is typed as nonnullable.  
   

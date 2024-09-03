@@ -26,8 +26,6 @@ dev_langs:
 delete Expression  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
  *Expression*  
  Is an XQuery expression identifying the nodes to be deleted. All the nodes selected by the expression, and also all the nodes or values that are contained within the selected nodes, are deleted. As described in [insert (XML DML)](../../t-sql/xml/insert-xml-dml.md), this must be a reference to an existing node in the document. It cannot be a constructed node. The expression cannot be the root (/) node. If the expression returns an empty sequence, no deletion occurs and no errors are returned.  

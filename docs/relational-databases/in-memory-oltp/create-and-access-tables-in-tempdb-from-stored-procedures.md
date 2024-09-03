@@ -1,8 +1,8 @@
 ---
 title: "Create & access tempdb tables from stored procedures"
 description: TempDB doesn't support creating and accessing tables from natively compiled stored procedures. Use memory-optimized tables, or table types and table variables.
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "03/07/2017"
 ms.service: sql
 ms.subservice: in-memory-oltp

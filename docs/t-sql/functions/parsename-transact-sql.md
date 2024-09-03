@@ -37,8 +37,6 @@ Returns the specified part of an object name. The parts of an object that can be
 PARSENAME ('object_name' , object_piece )
 ```
 
-[!INCLUDE [sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 
 #### '*object_name*'

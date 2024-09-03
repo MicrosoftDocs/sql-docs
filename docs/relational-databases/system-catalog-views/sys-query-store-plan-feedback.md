@@ -1,8 +1,8 @@
 ---
 title: "sys.query_store_plan_feedback (Transact-SQL)"
 description: "The sys.query_store_plan_feedback system view contains information about Query Store tuning via memory grant, CE, and DOP feedback."
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: MikeRayMSFT
+ms.author: mikeray
 ms.reviewer: derekw
 ms.date: 01/08/2024
 ms.service: sql

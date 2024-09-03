@@ -40,8 +40,6 @@ ALTER APPLICATION ROLE application_role_name
     | DEFAULT_SCHEMA = schema_name  
 ```  
 
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 
  *application_role_name*  

@@ -70,7 +70,7 @@ To identify the **Server admin** account, open the Azure portal, and navigate to
 
 :::image type="content" source="./media/logins-create-manage/sql-admins.png" alt-text="Screenshot shows the SQL Server Properties page where you can obtain the Server admin login and Microsoft Entra admin values.":::
 
-:::image type="content" source="./media/logins-create-manage/sql-admins2.png" alt-text="Screenshot shows the SQL managed instance Properties page where you can obtain the login and Microsoft Entra admin values.":::
+:::image type="content" source="./media/logins-create-manage/sql-admins-2.png" alt-text="Screenshot shows the SQL managed instance Properties page where you can obtain the login and Microsoft Entra admin values.":::
 
 > [!IMPORTANT]  
 > The name of the **Server admin** account can't be changed after it has been created. To reset the password for the server admin, go to the [Azure portal](https://portal.azure.com), select **SQL Servers**, select the server from the list, and then select **Reset Password**. To reset the password for the SQL Managed Instance, go to the Azure portal, select the instance, and select **Reset password**. You can also use PowerShell or the Azure CLI.

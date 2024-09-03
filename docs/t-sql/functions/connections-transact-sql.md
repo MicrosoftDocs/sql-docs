@@ -32,8 +32,6 @@ This function returns the number of attempted connections - both successful and 
 @@CONNECTIONS  
 ```  
 
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Return types
 **integer**
   

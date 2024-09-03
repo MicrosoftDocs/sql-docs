@@ -27,8 +27,6 @@ Constructs a **geometry** instance representing a **Point** instance from its X 
 Point ( X, Y, SRID )  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
  *X*  
  Is a **float** expression representing the X-coordinate of the **Point** being generated.  

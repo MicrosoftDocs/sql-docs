@@ -33,8 +33,6 @@ Unlike the = (equality) comparison operator, the result of the >= comparison of 
 expression <= expression  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 
 *expression*  

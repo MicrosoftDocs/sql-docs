@@ -36,8 +36,6 @@ NULLIF ( expression , expression )
  *expression*  
  Is any valid scalar [expression](../../t-sql/language-elements/expressions-transact-sql.md).  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Return Types
  Returns the same type as the first *expression*.  
   

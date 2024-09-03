@@ -32,8 +32,6 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
 [ NOT ] boolean_expression  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
  *boolean_expression*  
  Is any valid Boolean [expression](../../t-sql/language-elements/expressions-transact-sql.md).  

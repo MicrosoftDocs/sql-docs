@@ -10,7 +10,7 @@ ms.subservice: tools-other
 ms.topic: conceptual
 ---
 
-# Troubleshooting issues and performance with SqlPackage
+# Troubleshoot issues and performance with SqlPackage
 
 In some scenarios, SqlPackage operations take longer than expected or fail to complete. This article describes some frequently suggested tactics to troubleshoot or improve performance of these operations. While reading the specific documentation page for each action to understand the available parameters and properties is recommended, this article serves as a starting point in investigating SqlPackage operations.
 
@@ -27,6 +27,7 @@ If you're unable to install the SqlPackage [dotnet tool](sqlpackage-download.md#
 It's important to use the latest available version of SqlPackage as performance improvements and bug fixes are released regularly.
 
 ### Substitute SqlPackage for the Import/Export Service
+
 If you attempted to use the Import/Export Service to import or export your database, you can use SqlPackage to perform the same operation with more control on optional parameters and properties.
 
 For Import, an example command is:
@@ -59,7 +60,6 @@ For the export and extract commands, table data is passed to a temporary directo
 
 The schema model is compiled in memory, so for large database schemas the memory requirement on the client machine running SqlPackage can be significant.
 
-
 ### Low server resource consumption
 
 By default, SqlPackage sets the maximum server parallelism to 8. If you note low server resource consumption, increasing the value of the `MaxParallelism` parameter can improve performance.
@@ -75,15 +75,15 @@ $AccessToken = $AccessToken_Object.Token
 
 SqlPackage /at:$AccessToken
 # OR
-SqlPackage /at:$($AccessToken_Object.Token) 
+SqlPackage /at:$($AccessToken_Object.Token)
 ```
 
 ### Connection
 
 If SqlPackage is failing to connect, the server might not have encryption enabled or the configured certificate might not be issued from a trusted certificate authority (such as a self-signed certificate). You can change the SqlPackage command to either connect without encryption or to trust the server certificate. The [best practice](../../relational-databases/security/securing-sql-server.md) is to ensure that a trusted encrypted connection to the server can be established.
 
-- Connect without encryption: /SourceEncryptConnection=False or /TargetEncryptConnection=False
-- Trust server certificate: /SourceTrustServerCertificate=True or /TargetTrustServerCertificate=True
+- Connect without encryption: `/SourceEncryptConnection:False` or `/TargetEncryptConnection:False`
+- Trust server certificate: `/SourceTrustServerCertificate:True` or `/TargetTrustServerCertificate:True`
 
 You could see any of the following warning messages when connecting to a SQL instance, indicating that command line parameters could require changes to connect to the server:
 
@@ -94,10 +94,9 @@ The connection string provided contains encryption settings which may lead to co
 
 More information about the connection security changes in SqlPackage is available in [Connection Security Improvements in SqlPackage 161](https://aka.ms/dacfx-connection).
 
-
 ### Import action error 2714 for constraint
 
-When performing an import action, you may receive error 2714 if an object already exists:
+When performing an import action, you might receive error 2714 if an object already exists:
 
 ```output
 *** Error importing database:Could not import package.
@@ -111,7 +110,7 @@ Here are the causes and solutions to work around this error:
 
 1. Verify that the destination you're importing into is an empty database.
 1. If your database has constraints that are using the DEFAULT attribute (where SQL Server assigns a random name to the constraint) and an explicitly named constraint, a constraint with the same name might be created twice. You should use all explicitly named constraints (not using DEFAULT), or all system-defined names (using DEFAULT).
-1. Manually edit the model.xml and rename the constraint with the name experiencing the error to a unique name. This option should be undertaken only if directed by Microsoft support and poses a risk of .bacpac corruption.
+1. Manually edit the model.xml and rename the constraint with the name experiencing the error to a unique name. This option should be undertaken only if directed by Microsoft support and poses a risk of `.bacpac` corruption.
 
 ### Stack overflow exception
 
@@ -126,11 +125,12 @@ Microsoft.SqlServer.TransactSql.ScriptDom.BinaryQueryExpression.Accept(Microsoft
 Microsoft.SqlServer.TransactSql.ScriptDom.BinaryQueryExpression.AcceptChildren(Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragmentVisitor)
 ```
 
-A parameter for SqlPackage is available on all commands, `/ThreadMaxStackSize:`, which specifies the maximum stack size for the thread running the SqlPackage process. The default value is determined by the .NET version running SqlPackage. Setting a large value can impact overall performance of SqlPackage, however increasing this value may resolve the stack overflow exception caused by nested statements. Refactoring the T-SQL code is recommended to avoid stack overflow exceptions whenever possible, but the `/ThreadMaxStackSize:` parameter can be used as a workaround.
+A parameter for SqlPackage is available on all commands, `/ThreadMaxStackSize:`, which specifies the maximum stack size for the thread running the SqlPackage process. The default value is determined by the .NET version running SqlPackage. Setting a large value can impact overall performance of SqlPackage, however increasing this value might resolve the stack overflow exception caused by nested statements. Refactoring the T-SQL code is recommended to avoid stack overflow exceptions whenever possible, but the `/ThreadMaxStackSize:` parameter can be used as a workaround.
 
 When using the `/ThreadMaxStackSize:` parameter, it's recommended to tune repeated operations to the lowest value that resolves the stack overflow exception if performance impact is noted. The value of the parameter is in megabytes (MB), example values for testing as a workaround include 10 and 100.
 
 ## Diagnostics
+
 Logs are essential to troubleshooting. Capture the diagnostic logs to a file with the `/DiagnosticsFile:<filename>` parameter.
 
 More performance-related trace data can be logged by setting the environment variable `DACFX_PERF_TRACE=true` before running SqlPackage. To set this environment variable in PowerShell, use the following command:
@@ -140,16 +140,18 @@ Set-Item -Path Env:DACFX_PERF_TRACE -Value true
 ```
 
 ## Import action tips
+
 For imports that contain large tables or tables with many indexes, the use of `/p:RebuildIndexesOfflineForDataPhase=True` or `/p:DisableIndexesForDataPhase=False` can improve performance. These properties modify the index rebuild operation to occur offline or not occur, respectively. Those and other properties are available to tune the [SqlPackage Import](sqlpackage-import.md) operation.
 
 ## Export action tips
+
 A common cause of performance degradation during export is unresolved object references, which causes SqlPackage to attempt to resolve the object multiple times. For example, a view is defined that references a table and the table no longer exists in the database. If unresolved references appear in the export log, consider correcting the schema of the database to improve the export performance.
 
-In scenarios where the OS disk space is limited and runs out during the export, the use of `/p:TempDirectoryForTableData` allows the data for export to be buffered on an alternative disk. The space required for this action may be large and is relative to the full size of the database. That and other properties are available to tune the [SqlPackage Export](sqlpackage-export.md) operation.
+In scenarios where the OS disk space is limited and runs out during the export, the use of `/p:TempDirectoryForTableData` allows the data for export to be buffered on an alternative disk. The space required for this action might be large and is relative to the full size of the database. That and other properties are available to tune the [SqlPackage Export](sqlpackage-export.md) operation.
 
-During an export process, the table data is compressed in the bacpac file. The use of `/p:CompressionOption` set to `Fast`, `SuperFast`, or `NotCompressed` may improve the export process speed while compressing the output bacpac file less.
+During an export process, the table data is compressed in the bacpac file. The use of `/p:CompressionOption` set to `Fast`, `SuperFast`, or `NotCompressed` might improve the export process speed while compressing the output bacpac file less.
 
-To obtain the database schema and data while skipping the schema validation, perform an [Export](sqlpackage-export.md) with the property `/p:VerifyExtraction=False`. An invalid export may be produced that can't be imported.
+To obtain the database schema and data while skipping the schema validation, perform an [Export](sqlpackage-export.md) with the property `/p:VerifyExtraction=False`. An invalid export might be produced that can't be imported.
 
 ## Azure SQL Database
 
@@ -185,6 +187,6 @@ Some of the most relevant articles include:
 
 ## Related content
 
-- [SqlPackage overview](sqlpackage.md)
-- Learn more about [SqlPackage Import](sqlpackage-import.md)
-- Learn more about [SqlPackage Export](sqlpackage-export.md)
+- [SqlPackage](sqlpackage.md)
+- [SqlPackage Import parameters and properties](sqlpackage-import.md)
+- [SqlPackage Export parameters and properties](sqlpackage-export.md)

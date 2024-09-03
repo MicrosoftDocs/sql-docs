@@ -1,8 +1,9 @@
 ---
 title: "SET TRANSACTION ISOLATION LEVEL (Transact-SQL)"
 description: SET TRANSACTION ISOLATION LEVEL (Transact-SQL)
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: wiassaf
 ms.date: "10/22/2018"
 ms.service: sql
 ms.subservice: t-sql
@@ -55,8 +56,6 @@ SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
 
 >[!NOTE]
 > [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] implements ACID transactions. The isolation level of the transactional support is default to READ UNCOMMITTED.  You can change it to READ COMMITTED SNAPSHOT ISOLATION by turning ON the READ_COMMITTED_SNAPSHOT database option for a user database when connected to the master database.  Once enabled, all transactions in this database are executed under READ COMMITTED SNAPSHOT ISOLATION and the setting READ UNCOMMITTED on session level will not be honored. Check [ALTER DATABASE SET options (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md) for details.  
-
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## Arguments
  READ UNCOMMITTED  

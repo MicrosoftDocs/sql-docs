@@ -30,8 +30,6 @@ replace value of Expression1
 with Expression2
 ```
 
-[!INCLUDE [sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 
 #### *Expression1*

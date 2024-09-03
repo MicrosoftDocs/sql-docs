@@ -1,8 +1,8 @@
 ---
 title: "Simulating IF-WHILE EXISTS - natively compiled module"
 description: Learn how to simulate the EXISTS clause in conditional statements, which is not supported by natively compiled stored procedures in SQL Server.
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: MikeRayMSFT
+ms.author: mikeray
 ms.reviewer: randolphwest
 ms.date: 01/12/2024
 ms.service: sql

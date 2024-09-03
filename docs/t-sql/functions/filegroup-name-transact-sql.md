@@ -35,8 +35,6 @@ This function returns the filegroup name for the specified filegroup identificat
 FILEGROUP_NAME ( filegroup_id )   
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
  *filegroup_id*  
 

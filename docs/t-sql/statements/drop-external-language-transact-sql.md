@@ -41,8 +41,6 @@ To delete a language requires the privilege ALTER ANY EXTERNAL LANGUAGE. By defa
 
 An informational message is returned if the statement was successful.
 
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Remarks
 
 Before an external language can be deleted, all external libraries for the specified language need to be deleted.

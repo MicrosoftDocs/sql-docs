@@ -32,8 +32,6 @@ Returns information about the current SET options.
 @@OPTIONS
 ```
 
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Return type
 
 **integer**

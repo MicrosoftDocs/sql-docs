@@ -45,8 +45,6 @@ Join hints specify that the query optimizer enforce a join strategy between two 
      { LOOP | HASH | MERGE | REMOTE }
 ```
 
-[!INCLUDE [sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 
 #### { LOOP | HASH | MERGE }

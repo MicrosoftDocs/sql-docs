@@ -33,8 +33,6 @@ DROP REMOTE SERVICE BINDING binding_name
 [ ; ]  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
  *binding_name*  
  Is the name of the remote service binding to drop. Server, database, and schema names cannot be specified.  

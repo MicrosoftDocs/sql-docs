@@ -55292,17 +55292,17 @@
     },
     {
       "source_path": "docs/relational-databases/scripting/specify-a-breakpoint-action.md",
-      "redirect_url": "/sql/ssms/scripting/specify-a-breakpoint-action",
+      "redirect_url": "/sql/ssdt/debugger/specify-breakpoint-action",
       "redirect_document_id": true
     },
     {
       "source_path": "docs/relational-databases/scripting/specify-a-breakpoint-condition.md",
-      "redirect_url": "/sql/ssms/scripting/specify-a-breakpoint-condition",
+      "redirect_url": "/sql/ssdt/debugger/specify-breakpoint-condition",
       "redirect_document_id": true
     },
     {
       "source_path": "docs/relational-databases/scripting/specify-a-breakpoint-filter.md",
-      "redirect_url": "/sql/ssms/scripting/specify-a-breakpoint-filter",
+      "redirect_url": "/sql/ssdt/debugger/specify-breakpoint-filter",
       "redirect_document_id": true
     },
     {
@@ -61046,6 +61046,46 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "docs/relational-databases/extended-stored-procedures-programming/adding-an-extended-stored-procedure-to-sql-server.md",
+      "redirect_url": "/sql/relational-databases/extended-stored-procedures-programming/database-engine-extended-stored-procedures-programming",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/relational-databases/extended-stored-procedures-programming/creating-extended-stored-procedures.md",
+      "redirect_url": "/sql/relational-databases/extended-stored-procedures-programming/database-engine-extended-stored-procedures-programming",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/relational-databases/extended-stored-procedures-programming/execution-characteristics-of-extended-stored-procedures.md",
+      "redirect_url": "/sql/relational-databases/extended-stored-procedures-programming/database-engine-extended-stored-procedures-programming",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/relational-databases/extended-stored-procedures-programming/how-extended-stored-procedures-work.md",
+      "redirect_url": "/sql/relational-databases/extended-stored-procedures-programming/database-engine-extended-stored-procedures-programming",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/relational-databases/extended-stored-procedures-programming/querying-extended-stored-procedures-installed-in-sql-server.md",
+      "redirect_url": "/sql/relational-databases/extended-stored-procedures-programming/database-engine-extended-stored-procedures-programming",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/relational-databases/extended-stored-procedures-programming/removing-an-extended-stored-procedure-from-sql-server.md",
+      "redirect_url": "/sql/relational-databases/extended-stored-procedures-programming/database-engine-extended-stored-procedures-programming",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/relational-databases/extended-stored-procedures-programming/sending-result-sets-to-the-server-extended-stored-procedure-api.md",
+      "redirect_url": "/sql/relational-databases/extended-stored-procedures-programming/database-engine-extended-stored-procedures-programming",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/relational-databases/extended-stored-procedures-programming/unloading-an-extended-stored-procedure-dll.md",
+      "redirect_url": "/sql/relational-databases/extended-stored-procedures-programming/database-engine-extended-stored-procedures-programming",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "docs/relational-databases/graphs/index.md",
       "redirect_url": "/sql/relational-databases/graphs/sql-graph-overview",
       "redirect_document_id": false
@@ -62788,6 +62828,156 @@
     {
       "source_path": "docs/ssdt/how-to-clone-an-existing-database.md",
       "redirect_url": "/sql/t-sql/statements/create-table-as-clone-of-transact-sql",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssdt/how-to-debug-stored-procedures.md",
+      "redirect_url": "/sql/ssdt/debugger/debug-stored-procedures",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/scripting/transact-sql-debugger.md",
+      "redirect_url": "/sql/ssdt/debugger/transact-sql-debugger",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/scripting/configure-firewall-rules-before-running-the-tsql-debugger.md",
+      "redirect_url": "/sql/ssdt/debugger/configure-firewall-rules-before-running-tsql-debugger",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/scripting/run-the-transact-sql-debugger.md",
+      "redirect_url": "/sql/ssdt/debugger/run-transact-sql-debugger",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/scripting/step-through-transact-sql-code.md",
+      "redirect_url": "/sql/ssdt/debugger/step-through-transact-sql-code",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/scripting/transact-sql-breakpoints.md",
+      "redirect_url": "/sql/ssdt/debugger/transact-sql-breakpoints",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/scripting/toggle-a-breakpoint.md",
+      "redirect_url": "/sql/ssdt/debugger/toggle-breakpoint",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/scripting/enable-disable-and-delete-breakpoints.md",
+      "redirect_url": "/sql/ssdt/debugger/enable-disable-delete-breakpoints",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/scripting/specify-a-breakpoint-condition.md",
+      "redirect_url": "/sql/ssdt/debugger/specify-breakpoint-condition",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/scripting/specify-a-hit-count.md",
+      "redirect_url": "/sql/ssdt/debugger/specify-hit-count",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/scripting/specify-a-breakpoint-filter.md",
+      "redirect_url": "/sql/ssdt/debugger/specify-breakpoint-filter",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/scripting/specify-a-breakpoint-action.md",
+      "redirect_url": "/sql/ssdt/debugger/specify-breakpoint-action",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/scripting/transact-sql-debugger-information.md",
+      "redirect_url": "/sql/ssdt/debugger/transact-sql-debugger-information",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/scripting/transact-sql-debugger-error-list-window.md",
+      "redirect_url": "/sql/ssdt/debugger/transact-sql-debugger",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/scripting/transact-sql-debugger-breakpoints-window.md",
+      "redirect_url": "/sql/ssdt/debugger/transact-sql-debugger",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/scripting/transact-sql-debugger-call-stack-window.md",
+      "redirect_url": "/sql/ssdt/debugger/transact-sql-debugger",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/scripting/transact-sql-debugger-locals-window.md",
+      "redirect_url": "/sql/ssdt/debugger/transact-sql-debugger",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/scripting/transact-sql-debugger-threads-window.md",
+      "redirect_url": "/sql/ssdt/debugger/transact-sql-debugger",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/scripting/transact-sql-debugger-command-window.md",
+      "redirect_url": "/sql/ssdt/debugger/transact-sql-debugger",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/scripting/transact-sql-debugger-output-window.md",
+      "redirect_url": "/sql/ssdt/debugger/transact-sql-debugger",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/scripting/transact-sql-debugger-watch-window.md",
+      "redirect_url": "/sql/ssdt/debugger/transact-sql-debugger",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md",
+      "redirect_url": "/sql/tools/sql-database-projects/concepts/schema-comparison",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssdt/how-to-change-target-platform-and-publish-a-database-project.md",
+      "redirect_url": "/sql/tools/sql-database-projects/concepts/target-platform",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssdt/how-to-specify-predeployment-or-postdeployment-scripts.md",
+      "redirect_url": "/sql/tools/sql-database-projects/concepts/pre-post-deployment-scripts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssdt/dac-framework-compatibility.md",
+      "redirect_url": "/sql/ssdt/alter-dacfx-used-by-ssdt",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssdt/using-msdeploy-with-dbsqlpackage-provider.md",
+      "redirect_url": "/sql/tools/sqlpackage/sqlpackage-publish",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssdt/project-oriented-database-development-using-command-line-tools.md",
+      "redirect_url": "/sql/tools/sql-database-projects/sql-database-projects",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssdt/walkthrough-author-custom-static-code-analysis-rule-assembly.md",
+      "redirect_url": "/sql/tools/sql-database-projects/howto/author-custom-code-analysis-rules",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssdt/overview-of-extensibility-for-database-code-analysis-rules.md",
+      "redirect_url": "/sql/tools/sql-database-projects/concepts/code-analysis-extensibility",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssdt/how-to-convert-visual-studio-2010-database-projects-to-ssql-server-projects.md",
+      "redirect_url": "/sql/tools/sql-database-projects/howto/convert-an-original-sql-project",
       "redirect_document_id": false
     }
   ]

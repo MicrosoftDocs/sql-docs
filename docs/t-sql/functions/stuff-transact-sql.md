@@ -37,8 +37,6 @@ The STUFF function inserts a string into another string. It deletes a specified 
 STUFF ( character_expression , start , length , replace_with_expression )
 ```
 
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 
 #### *character_expression*

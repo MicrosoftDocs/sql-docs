@@ -167,8 +167,6 @@ FROM { <table_source> [ , ...n ] }
     | REDISTRIBUTE
 ```
 
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 
 #### \<table_source>

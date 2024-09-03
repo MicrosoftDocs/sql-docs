@@ -30,8 +30,6 @@ Returns a numeric value, rounded to the specified length or precision.
 ROUND ( numeric_expression , length [ ,function ] )  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
  *numeric_expression*  
  Is an [expression](../../t-sql/language-elements/expressions-transact-sql.md) of the exact numeric or approximate numeric data type category.

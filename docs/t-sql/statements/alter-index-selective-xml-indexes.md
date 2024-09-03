@@ -128,8 +128,6 @@ identifier
  [WITH **(** \<index_options> **)**]  
  You can only specify \<index_options> when you use ALTER INDEX without the FOR clause. When you use ALTER INDEX to add or remove paths in the index, the index options are not valid arguments. For information about the index options, see [CREATE XML INDEX &#40;Selective XML Indexes&#41;](../../t-sql/statements/create-xml-index-selective-xml-indexes.md).  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Remarks
   
 > [!IMPORTANT]  

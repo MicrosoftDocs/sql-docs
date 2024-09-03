@@ -1,8 +1,8 @@
 ---
 title: "Configuring Storage - NVDIMM-N write-back cache"
 description: Learn how to set up a mirrored storage space with a mirrored NVDIMM-N write-back cache as a virtual drive to store the SQL Server transaction log.
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "10/22/2021"
 ms.service: sql
 ms.subservice: performance

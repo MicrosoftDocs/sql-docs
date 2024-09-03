@@ -1,8 +1,8 @@
 ---
 title: "rx_oneclass_svm: OneClass SVM"
 description: "Machine Learning One Class Support Vector Machines"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: VanMSFT
+ms.author: vanto
 ms.date: 07/15/2019
 ms.service: sql
 ms.subservice: "machine-learning-services"

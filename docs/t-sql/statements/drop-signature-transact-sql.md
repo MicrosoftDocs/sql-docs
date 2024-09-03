@@ -38,8 +38,6 @@ DROP [ COUNTER ] SIGNATURE FROM module_name
     | ASYMMETRIC KEY Asym_key_name  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
  *module_name*  
  Is the name of a stored procedure, function, assembly, or trigger.  

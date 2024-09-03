@@ -68,8 +68,6 @@ CREATE SERVER AUDIT audit_name
     event_field_name { = | < > | != | > | >= | < | <= | LIKE } { number | ' string ' }
 ```
 
-[!INCLUDE [sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 
 #### TO { FILE | APPLICATION_LOG | SECURITY_LOG | URL | EXTERNAL_MONITOR }

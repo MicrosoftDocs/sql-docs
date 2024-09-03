@@ -34,8 +34,6 @@ HAS_PERMS_BY_NAME ( securable , securable_class , permission
     [ , sub-securable ] [ , sub-securable_class ] )  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
  *securable*  
  Is the name of the securable. If the securable is the server itself, this value should be set to NULL. *securable* is a scalar expression of type **sysname**. There is no default.  

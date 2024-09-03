@@ -1,8 +1,8 @@
 ---
 title: "Transact-SQL Support for In-Memory OLTP"
 description: Learn about Transact-SQL statements that include syntax options to support In-Memory OLTP. Use links to additional references about supported features.
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "03/16/2017"
 ms.service: sql
 ms.subservice: in-memory-oltp

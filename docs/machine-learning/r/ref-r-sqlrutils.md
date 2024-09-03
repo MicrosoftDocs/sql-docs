@@ -1,8 +1,8 @@
 ---
 title: sqlrutils helper functions
 description: sqlrutils is an R package from Microsoft that provides a mechanism for R users to put their R scripts into a T-SQL stored procedure, register that stored procedure with a database, and run the stored procedure from an R development environment. The package is included in SQL Server Machine Learning Services and SQL Server 2016 R Services.
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: VanMSFT
+ms.author: vanto
 ms.date: 09/30/2021
 ms.service: sql
 ms.subservice: machine-learning-services

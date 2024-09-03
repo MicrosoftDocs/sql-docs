@@ -9715,23 +9715,23 @@ items:
     - name: SQL projects overview
       href: tools/sql-database-projects/sql-database-projects.md
     - name: Getting started with SQL projects
-      href: tools/sql-database-projects/getting-started.md
+      href: tools/sql-database-projects/get-started.md
     # - name: SQL DevOps
     #   href: tools/sql-database-projects/sql-devops.md
     - name: Tutorials
       items:
       - name: Creating and deploying a SQL project
-        href: tools/sql-database-projects/tutorials/creating-and-deploying-a-sql-project.md
+        href: tools/sql-database-projects/tutorials/create-deploy-sql-project.md
       - name: Start from an existing database
-        href: tools/sql-database-projects/tutorials/start-from-an-existing-database.md
+        href: tools/sql-database-projects/tutorials/start-from-existing-database.md
     - name: How-to guides
       items:
       - name: Analyze project code
         href: tools/sql-database-projects/howto/analyze-t-sql-code-to-find-defects.md
       - name: Compase a database and a project
-        href: tools/sql-database-projects/howto/compare-a-database-and-a-project.md
+        href: tools/sql-database-projects/howto/compare-database-project.md
       - name: Convert an original SQL project
-        href: tools/sql-database-projects/howto/convert-an-original-sql-project.md
+        href: tools/sql-database-projects/howto/convert-original-sql-project.md
       - name: Author custom code analysis rules
         href: tools/sql-database-projects/howto/author-custom-code-analysis-rules.md
     - name: Concepts

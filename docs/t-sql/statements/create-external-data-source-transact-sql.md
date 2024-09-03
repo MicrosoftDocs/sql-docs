@@ -1529,7 +1529,7 @@ WITH (
 
 **Applies to:** [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] and later
 
-To create an external data source that references a readable secondary replica of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], use `CONNECTION_OPTIONS` to specify the `ApplicationIntent=ReadOnly`.
+To create an external data source that references a readable secondary replica of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], use `CONNECTION_OPTIONS` to specify the `ApplicationIntent=ReadOnly`. In addition, you will need to either set the availability database as `Database={dbname}` in `CONNECTION_OPTIONS`, or set the availability database as the default database of the login used for the database scoped credential. You will need to do this on all availability replicas of the availability group.
 
 First, create the database scoped credential, storing credentials for a SQL authenticated login. The SQL ODBC Connector for PolyBase only supports basic authentication. Before you create a database scoped credential, the database must have a master key to protect the credential. For more information, see [CREATE MASTER KEY](create-master-key-transact-sql.md). The following sample creates a database scoped credential, provide your own login and password.
 
@@ -1541,7 +1541,7 @@ CREATE DATABASE SCOPED CREDENTIAL SQLServerCredentials
 
 Next, create the new external data source.
 
-The ODBC `Database` parameter is not needed, provide the database name instead via a three-part name in the CREATE EXTERNAL TABLE statement, within the LOCATION parameter. For an example, see [CREATE EXTERNAL TABLE](create-external-table-transact-sql.md?view=sql-server-ver15&preserve-view=true#g-create-an-external-table-for-sql-server).
+Whether you included `Database=dbname` in the `CONNECTION_OPTIONS` or set the availability database as the default database for the login in the database scoped credential, you must still provide the database name via a three-part name in the CREATE EXTERNAL TABLE statement, within the LOCATION parameter. For an example, see [CREATE EXTERNAL TABLE](create-external-table-transact-sql.md?view=sql-server-ver15&preserve-view=true#g-create-an-external-table-for-sql-server).
 
 In the following example, `WINSQL2019AGL` is the availability group listener name and `dbname` is the name of the database to be the target of the CREATE EXTERNAL TABLE statement.
 
@@ -1549,7 +1549,7 @@ In the following example, `WINSQL2019AGL` is the availability group listener nam
 CREATE EXTERNAL DATA SOURCE SQLServerInstance2
 WITH (
     LOCATION = 'sqlserver://WINSQL2019AGL',
-    CONNECTION_OPTIONS = 'ApplicationIntent=ReadOnly',
+    CONNECTION_OPTIONS = 'ApplicationIntent=ReadOnly; Database=dbname',
     CREDENTIAL = SQLServerCredentials
 );
 ```
@@ -1560,7 +1560,7 @@ You can demonstrate the redirection behavior of the availability group by specif
 CREATE EXTERNAL DATA SOURCE [DataSource_SQLInstanceListener_ReadOnlyIntent]
 WITH (
     LOCATION = 'sqlserver://WINSQL2019AGL',
-    CONNECTION_OPTIONS = 'ApplicationIntent=ReadOnly',
+    CONNECTION_OPTIONS = 'ApplicationIntent=ReadOnly; Database=dbname',
     CREDENTIAL = [SQLServerCredentials]
 );
 GO
@@ -1577,8 +1577,10 @@ GO
 Inside the database in the availability group, create a view to return `sys.servers` and the name of the local instance, which helps you identify which replica is responding to the query. For more information, see [sys.servers](../../relational-databases/system-catalog-views/sys-servers-transact-sql.md).
 
 ```sql
-CREATE VIEW vw_sys_servers AS
-SELECT [name] FROM sys.servers
+CREATE VIEW vw_sys_servers
+AS
+SELECT [name]
+FROM sys.servers
 WHERE server_id = 0;
 GO
 ```

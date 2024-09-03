@@ -88,8 +88,6 @@ ALTER MASTER KEY <alter_option>
     DROP ENCRYPTION BY SERVICE MASTER KEY
 ```
 
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 
 PASSWORD ='*password*'

@@ -65,8 +65,6 @@ For a complete description of index options, see [CREATE INDEX](create-index-tra
 }
 ```
 
-[!INCLUDE [sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 
 #### PAD_INDEX = { ON | OFF }

@@ -45,8 +45,6 @@ ALTER SERVICE MASTER KEY
 ```  
   
 
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
  FORCE  
  Indicates that the service master key should be regenerated, even at the risk of data loss. For more information, see [Changing the SQL Server Service Account](#_changing) later in this topic.  

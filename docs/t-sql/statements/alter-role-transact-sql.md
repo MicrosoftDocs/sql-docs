@@ -53,8 +53,6 @@ ALTER ROLE role_name
 [;]  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
  *role_name*  
  **Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with 2008), Azure SQL Database, Azure SQL Managed Instance  

@@ -156,8 +156,6 @@ Query hints specify that the indicated hints are used in the scope of a query. T
 }
 ```
 
-[!INCLUDE [sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 
 #### { HASH | ORDER } GROUP

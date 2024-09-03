@@ -33,8 +33,6 @@ ALTER CRYPTOGRAPHIC PROVIDER provider_name
 ```  
   
 
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
  *provider_name*  
  Name of the Extensible Key Management provider.  

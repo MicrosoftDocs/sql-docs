@@ -45,8 +45,6 @@ Specifies a temporary named result set, known as a common table expression (CTE)
     ( CTE_query_definition )
 ```
 
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 
 #### *expression_name*

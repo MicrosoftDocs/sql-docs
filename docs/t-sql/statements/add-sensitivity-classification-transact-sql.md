@@ -55,8 +55,6 @@ Classifying sensitive data in your database environment helps achieve extended v
 }
 ```
 
-[!INCLUDE [sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 
 #### *object_name* [ schema_name. ] table_name.column_name

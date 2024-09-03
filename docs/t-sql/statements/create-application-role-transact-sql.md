@@ -36,8 +36,6 @@ CREATE APPLICATION ROLE application_role_name
     WITH PASSWORD = 'password' [ , DEFAULT_SCHEMA = schema_name ]  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
  *application_role_name*  
  Specifies the name of the application role. This name must not already be used to refer to any principal in the database.  

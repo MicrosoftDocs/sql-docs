@@ -30,8 +30,6 @@ dev_langs:
 TRIGGER_NESTLEVEL ( [ object_id ] , [ 'trigger_type' ] , [ 'trigger_event_category' ] )  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
  *object_id*  
  Is the object ID of a trigger. If *object_id* is specified, the number of times the specified trigger has been executed for the statement is returned. If *object_id* is not specified, the number of times all triggers have been executed for the statement is returned.  

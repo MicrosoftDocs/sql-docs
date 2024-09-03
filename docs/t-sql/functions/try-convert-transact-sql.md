@@ -31,8 +31,6 @@ Returns a value cast to the specified data type if the cast succeeds; otherwise,
 TRY_CONVERT ( data_type [ ( length ) ] , expression [ , style ] )
 ```
 
-[!INCLUDE [sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 
 #### *data_type*

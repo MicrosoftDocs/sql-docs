@@ -39,8 +39,6 @@ Returns the login name associated with a security identification number (SID).
 SUSER_SNAME ( [ server_user_sid ] )
 ```
 
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 
 #### *server_user_sid*

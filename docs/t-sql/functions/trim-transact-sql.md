@@ -52,8 +52,6 @@ Syntax for [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later versi
 TRIM ( [ LEADING | TRAILING | BOTH ] [characters FROM ] string )
 ```
 
-[!INCLUDE [sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 
 ::: moniker range=">=sql-server-2017 || >=sql-server-linux-2017 || = azuresqldb-mi-current || =fabric"

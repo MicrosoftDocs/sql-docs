@@ -44,8 +44,6 @@ SERVERPROPERTY ( 'propertyname' )
 > [!IMPORTANT]
 > The [!INCLUDE [ssDE-md](../../includes/ssde-md.md)] version numbers for [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] aren't comparable with each other, and represent internal build numbers for these separate products. The [!INCLUDE [ssDE-md](../../includes/ssde-md.md)] for [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] is based on the same code base as the [!INCLUDE [ssDEnoversion](../../includes/ssdenoversion-md.md)]. Most importantly, the [!INCLUDE [ssDE-md](../../includes/ssde-md.md)] in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] always has the newest SQL [!INCLUDE [ssDE-md](../../includes/ssde-md.md)] bits. For example, version 12 of [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] is newer than version 16 of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)].
 
-[!INCLUDE [sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 
 #### *propertyname*

@@ -37,8 +37,6 @@ ROW_NUMBER and RANK are similar. ROW_NUMBER numbers all rows sequentially (for e
 RANK ( ) OVER ( [ partition_by_clause ] order_by_clause )  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
  OVER **(** [ _partition\_by\_clause_ ] _order\_by\_clause_**)**  
  *partition_by_clause* divides the result set produced by the FROM clause into partitions to which the function is applied. If not specified, the function treats all rows of the query result set as a single group. _order\_by\_clause_ determines the order of the data before the function is applied. The *order_by_clause* is required. The \<rows or range clause/> of the OVER clause cannot be specified for the RANK function. For more information, see [OVER Clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  

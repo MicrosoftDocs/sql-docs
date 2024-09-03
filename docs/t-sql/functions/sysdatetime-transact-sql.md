@@ -47,8 +47,6 @@ Azure SQL Database (with the exception of Azure SQL Managed Instance) and Azure 
 SYSDATETIME ( )  
 ```
 
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Return Type  
  **datetime2(7)**  
   

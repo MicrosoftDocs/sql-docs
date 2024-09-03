@@ -80,8 +80,6 @@ OPENROWSET( BULK 'data_file' ,
    [ , ORDER ( { column [ ASC | DESC ] } [ , ...n ] ) [ UNIQUE ] ]
 ```
 
-[!INCLUDE [sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 
 ### Common arguments

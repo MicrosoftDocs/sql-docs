@@ -33,8 +33,6 @@ This function returns the severity value of the error where an error occurs, if 
 ERROR_SEVERITY ( )  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Return Types
  **int**  
   

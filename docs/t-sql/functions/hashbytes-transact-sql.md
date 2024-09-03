@@ -33,8 +33,6 @@ HASHBYTES ( '<algorithm>', { @input | 'input' } )
 <algorithm>::= MD2 | MD4 | MD5 | SHA | SHA1 | SHA2_256 | SHA2_512   
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 
 `<algorithm>`  

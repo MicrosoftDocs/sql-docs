@@ -30,8 +30,6 @@ dev_langs:
 @@NESTLEVEL  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Return Types
  **int**  
   

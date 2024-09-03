@@ -34,8 +34,6 @@ monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-li
 OPENDATASOURCE ( 'provider_name', 'init_string' )  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 
 #### '*provider_name*'  

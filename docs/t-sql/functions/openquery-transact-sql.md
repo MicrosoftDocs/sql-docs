@@ -33,8 +33,6 @@ dev_langs:
 OPENQUERY ( linked_server ,'query' )  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
  *linked_server*  
  Is an identifier representing the name of the linked server.  

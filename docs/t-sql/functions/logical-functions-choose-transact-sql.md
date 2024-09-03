@@ -28,8 +28,6 @@ dev_langs:
 CHOOSE ( index, val_1, val_2 [, val_n ] )  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 
 #### *index*  

@@ -53,8 +53,6 @@ match_expression [ NOT ] LIKE pattern
 
 `ESCAPE` and `STRING_ESCAPE` are not supported in [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
 
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 
 #### *match_expression*

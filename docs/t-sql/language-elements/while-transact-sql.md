@@ -48,8 +48,6 @@ WHILE boolean_expression
     { sql_statement | statement_block | BREAK }
 ```
 
-[!INCLUDE [sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 
 #### *boolean_expression*

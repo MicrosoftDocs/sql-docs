@@ -46,8 +46,6 @@ To combine the result sets of two queries that use EXCEPT or INTERSECT, the basi
 { <query_specification> | ( <query_expression> ) }  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 \<_query\_specification_> | ( \<_query\_expression_> )  
 Is a query specification or query expression that returns data to be compared with the data from another query specification or query expression. The definitions of the columns that are part of an EXCEPT or INTERSECT operation don't have to be the same. But, they must be comparable through implicit conversion. When data types differ, the rules for [data type precedence](../../t-sql/data-types/data-type-precedence-transact-sql.md) determine the data type that is run for comparison.  

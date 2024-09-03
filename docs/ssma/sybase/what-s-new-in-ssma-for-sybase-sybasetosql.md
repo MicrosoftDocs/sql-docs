@@ -383,7 +383,7 @@ The July 2011 release of SSMA for Sybase provides improved error reporting durin
 
 The April 2011 release of SSMA for Sybase contains the following changes:
 
-* Consolidated "SSMA for Sybase" product, which supports [!INCLUDE [ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE [ssSQL10](../../includes/sssql10-md.md)], [!INCLUDE [ssSQL11](../../includes/ssSQL11-md.md)] and Azure SQL.
+* Consolidated "SSMA for Sybase" product, which supports [!INCLUDE [ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE [sql2008-md](../../includes/sql2008-md.md)], [!INCLUDE [ssSQL11](../../includes/ssSQL11-md.md)] and Azure SQL.
 * Added support for connecting and migrating to [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)].
 * Added a new feature to convert and migrate Sybase databases to Azure SQL.
 * Enhanced client-side data migration engine, supporting parallel migration of data.
@@ -419,7 +419,7 @@ The June 2008 release of SSMA for Sybase contains the following changes:
   * Clustered constraints and indexes on data-only-locked.
   * Temporary tables created by `SELECT INTO`.
   * Constraints / Indexes for temporary tables.
-  * New [!INCLUDE [ssSQL10](../../includes/sssql10-md.md)] datetime types are supported.
+  * New [!INCLUDE [sql2008-md](../../includes/sql2008-md.md)] datetime types are supported.
   * Sybase 15.0 connectivity and data types support.
 
 ## May 2007

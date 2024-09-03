@@ -23,7 +23,8 @@ helpviewer_keywords:
   Linked servers enable the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] and [!INCLUDE[ssazuremi](../../includes/ssazuremi-md.md)] to read data from the remote data sources and execute commands against the remote database servers (for example, OLE DB data sources) outside of the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Typically linked servers are configured to enable the [!INCLUDE[ssDE](../../includes/ssde-md.md)] to execute a [!INCLUDE[tsql](../../includes/tsql-md.md)] statement that includes tables in another instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], or another database product such as Oracle. Many types OLE DB data sources can be configured as linked servers, including third-party database providers and Azure Cosmos DB.
 
 > [!NOTE]
-> Linked servers are available in [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] and [!INCLUDE[ssazuremi](../../includes/ssazuremi-md.md)]. They are not enabled in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] singleton and elastic pools. There are some [constraints in SQL Managed Instance that can be found here](/azure/sql-database/sql-database-managed-instance-transact-sql-information#linked-servers). 
+> Linked servers are available in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssazuremi](../../includes/ssazuremi-md.md)] (with some [constraints](/azure/azure-sql/managed-instance/transact-sql-tsql-differences-sql-server#linked-servers)). Linked servers are not available in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]. 
+
 
 ## When to use linked servers?
 
@@ -94,16 +95,26 @@ You can also define linked servers by using [!INCLUDE[ssManStudioFull](../../inc
 > [!NOTE]  
 > Linked servers can be defined to point back (loop back) to the server on which they are defined. Loopback servers are most useful when testing an application that uses distributed queries on a single server network. Loopback linked servers are intended for testing and are not supported for many operations, such as distributed transactions.  
   
-## Azure SQL Managed Instance linked server authentication
+## Linked servers with Azure SQL Managed Instance
 
-Azure SQL Managed Instance linked servers support both SQL authentication and authentication with Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)). Two supported Microsoft Entra authentication modes are: managed identity and pass-through. Managed identity authentication can be used to allow local logins to query remote linked servers. Pass-through authentication allows a principal that can authenticate with a local instance to access a remote instance via linked server. Prerequisites for pass-through authentication are that the same principal is added as a login on the remote server and that both instances are members of the [SQL trust group](/azure/azure-sql/managed-instance/server-trust-group-overview).
+[Azure SQL Managed Instance](/azure/azure-sql/managed-instance/sql-managed-instance-paas-overview) linked servers support both SQL authentication and authentication with Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)). 
 
-> [!NOTE]  
-> Existing definitions of linked servers that were configured for pass-through mode will support Microsoft Entra authentication. The only requirement for this would be to add SQL Managed Instance to the [Server Trust Group](/azure/azure-sql/managed-instance/server-trust-group-overview).
+To use SQL Agent jobs on Azure SQL Managed Instance to query a remote server through a linked server, use [sp_addlinkedsrvlogin](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md) to create a mapping from a login on the local server to a login on the remote server. When the SQL Agent job connects to the remote server through the linked server, it executes the T-SQL query in the context of the remote login. For more information, see [SQL Agent jobs with Azure SQL Managed Instance](../../ssms/agent/implement-sql-server-agent-security.md#linked-servers).
 
 <a name='limitations-of-azure-ad-authentication'></a>
 
-### Limitations of Microsoft Entra authentication
+### Microsoft Entra authentication
+
+Two supported Microsoft Entra authentication modes are: managed identity and pass-through. Managed identity authentication can be used to allow local logins to query remote linked servers. Pass-through authentication allows a principal that can authenticate with a local instance to access a remote instance via a linked server. 
+
+To use Microsoft Entra pass-through authentication for a linked server in Azure SQL Managed Instance, you need the following prerequisites: 
+- The same principal is added as a login on the remote server. 
+- Both instances are members of the [SQL trust group](/azure/azure-sql/managed-instance/server-trust-group-overview).
+
+> [!NOTE]  
+> Existing definitions of linked servers that were configured for pass-through mode support Microsoft Entra authentication. The only requirement for this would be to add SQL Managed Instance to the [Server Trust Group](/azure/azure-sql/managed-instance/server-trust-group-overview).
+
+The following limitations apply to Microsoft Entra authentication for linked servers in Azure SQL Managed Instance:
 
 - Microsoft Entra authentication is not supported for SQL managed instances in different Microsoft Entra tenants.
 - Microsoft Entra authentication for linked servers is supported only with OLE DB driver version 18.2.1 and higher.
@@ -113,14 +124,11 @@ Azure SQL Managed Instance linked servers support both SQL authentication and au
 
 Currently, MSOLEDBSQL19 prevents the creation of linked servers without encryption and a trusted certificate (a self-signed certificate is insufficient). If linked servers are required, use the existing supported version of MSOLEDBSQL.
 
-## See also
+## Related content
 
+ - [Create Linked Servers &#40;SQL Server Database Engine&#41;](../../relational-databases/linked-servers/create-linked-servers-sql-server-database-engine.md)   
  - [sys.servers &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-servers-transact-sql.md)    
  - [sp_linkedservers &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-linkedservers-transact-sql.md)
-
-## Next steps
-
- - [Create Linked Servers &#40;SQL Server Database Engine&#41;](../../relational-databases/linked-servers/create-linked-servers-sql-server-database-engine.md)    
  - [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)    
  - [sp_addlinkedsrvlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)    
  - [sp_dropserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropserver-transact-sql.md)    

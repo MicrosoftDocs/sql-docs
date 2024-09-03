@@ -13,8 +13,8 @@ metadata:
   ms.topic: landing-page
   author: VanMSFT
   ms.author: vanto
-  ms.reviewer: mathoma, mathoma
-  ms.date: 01/15/2021
+  ms.reviewer: mathoma
+  ms.date: 08/14/2024
   monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
@@ -41,6 +41,8 @@ landingContent:
             url: /sql/relational-databases/security/encryption/overview-of-key-management-for-always-encrypted
           - text: Always Encrypted cryptography
             url: /sql/relational-databases/security/encryption/always-encrypted-cryptography
+          - text: How queries against encrypted columns work
+            url: /sql/relational-databases/security/encryption/always-encrypted-how-queries-against-encrypted-columns-work
 
 
   # Card 

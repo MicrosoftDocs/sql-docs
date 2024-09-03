@@ -34,7 +34,7 @@ This new version of Apache Spark brings performance benefits over big data proce
 Spark 3 is a major release and __contains breaking changes__. Following the same established best practice in the SQL Server universe, it's recommended:
 
 1. Review this article entirely.
-1. Review the official [Apache Spark 3 Migration Guide](https://spark.apache.org/docs/3.1.2/core-migration-guide.html).
+1. Review the official [Apache Spark 3 Migration Guide](https://archive.apache.org/dist/spark/docs/3.1.2/migration-guide.html).
 1. Perform a side-by-side deployment of a new big data cluster version CU13 with your current environment.
 1. (Optional) Leverage the new [azdata HDFS distributed copy](distributed-data-copy-hdfs.md) capability to have a subset of your data needed for validation.
 1. Validate your current workload with Spark 3 before upgrading.
@@ -112,7 +112,7 @@ Here is a sample pom.xml as below:
 
 ## Spark 3 API changes and deprecations
 
-Review the official [Apache Spark 3 Migration Guide](https://spark.apache.org/docs/3.1.2/core-migration-guide.html), which covers all API changes in detail.
+Review the official [Apache Spark 3 Migration Guide](https://archive.apache.org/dist/spark/docs/3.1.2/migration-guide.html), which covers all API changes in detail.
 
 Some captured highlights are:
 

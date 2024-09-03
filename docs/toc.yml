@@ -2392,26 +2392,11 @@ items:
   - name: Extended stored procedures
     items:
     - name: Programming
-      href: relational-databases/extended-stored-procedures-programming/database-engine-extended-stored-procedures-programming.md
       items:
-      - name: How it Works
-        href: relational-databases/extended-stored-procedures-programming/how-extended-stored-procedures-work.md
-      - name: Add
-        href: relational-databases/extended-stored-procedures-programming/adding-an-extended-stored-procedure-to-sql-server.md
-      - name: Create
-        href: relational-databases/extended-stored-procedures-programming/creating-extended-stored-procedures.md
-      - name: Execution Characteristics
-        href: relational-databases/extended-stored-procedures-programming/execution-characteristics-of-extended-stored-procedures.md
-      - name: Query
-        href: relational-databases/extended-stored-procedures-programming/querying-extended-stored-procedures-installed-in-sql-server.md
-      - name: Remove
-        href: relational-databases/extended-stored-procedures-programming/removing-an-extended-stored-procedure-from-sql-server.md
-      - name: Send result sets
-        href: relational-databases/extended-stored-procedures-programming/sending-result-sets-to-the-server-extended-stored-procedure-api.md
-      - name: Unicode Data & Server Code Pages
+      - name: Overview
+        href: relational-databases/extended-stored-procedures-programming/database-engine-extended-stored-procedures-programming.md
+      - name: Unicode data & server code pages
         href: relational-databases/extended-stored-procedures-programming/unicode-data-and-server-code-pages.md
-      - name: Unloading a DLL
-        href: relational-databases/extended-stored-procedures-programming/unloading-an-extended-stored-procedure-dll.md
     - name: Reference
       href: relational-databases/extended-stored-procedures-reference/database-engine-extended-stored-procedures-reference.md
       items:
@@ -7306,6 +7291,42 @@ items:
         href: master-data-services/develop/master-data-services-developer-documentation.md
       - name: Host database on a managed instance
         href: ./master-data-services/master-data-services-host-database-on-managed-instance.md
+      - name: Server Configuration MDS Configuration Manager
+        href: master-data-services/server-configuration-mds-configuration-manager.md
+      - name: Learn Sql Server Master Data Services
+        href: master-data-services/learn-sql-server-master-data-services.md
+      - name: What's New in Master Data Services
+        href: master-data-services/what-s-new-in-master-data-services-mds.md
+      - name: Master Data Services Features and Tasks
+        href: master-data-services/master-data-services-features-and-tasks.md
+    - name: Backward compatibility
+      href: master-data-services/backward-compatibility-master-data-services.md
+    - name: Deprecated features
+      href: master-data-services/deprecated-master-data-services-features.md
+    - name: Discontinued features
+      href: master-data-services/discontinued-master-data-services-features.md
+    - name: Installation
+      items:
+      - name: Installing MDS in An Always-On Group Environment
+        href: master-data-services/installing-mds-in-an-alwayson-group-environment/installing-mds-in-an-alwayson-group-environment.md
+      - name: Associate A Master Data Services Database and Web Application
+        href: master-data-services/install-windows/associate-a-master-data-services-database-and-web-application.md
+      - name: Create A Master Data Manager Web Application Master Data Services
+        href: master-data-services/install-windows/create-a-master-data-manager-web-application-master-data-services.md
+      - name: Create A Master Data Services Database
+        href: master-data-services/install-windows/create-a-master-data-services-database.md
+      - name: Database Requirements Master Data Services
+        href: master-data-services/install-windows/database-requirements-master-data-services.md
+      - name: Enable Data Quality Services Integration With Master Data Services
+        href: master-data-services/install-windows/enable-data-quality-services-integration-with-master-data-services.md
+      - name: Install Master Data Services
+        href: master-data-services/install-windows/install-master-data-services.md
+      - name: Multi Lingual and Global Deployments Master Data Services
+        href: master-data-services/install-windows/multi-lingual-and-global-deployments-master-data-services.md
+      - name: Secure A Master Data Manager Web Application
+        href: master-data-services/install-windows/secure-a-master-data-manager-web-application.md
+      - name: Web Application Requirements Master Data Services
+        href: master-data-services/install-windows/web-application-requirements-master-data-services.md
     - name: Excel add-in
       items:
       - name: Excel Add-in Overview
@@ -7381,6 +7402,8 @@ items:
         href: master-data-services/edit-model-master-data-services.md
       - name: Delete
         href: master-data-services/delete-a-model-master-data-services.md
+      - name: Sql Server Samples Model Deployment Packages MDS
+        href: master-data-services/sql-server-samples-model-deployment-packages-mds.md
     - name: Entities
       href: master-data-services/entities-master-data-services.md
       items:
@@ -7726,6 +7749,18 @@ items:
       - name: Master Data Services Database
         href: master-data-services/master-data-services-database.md
         items:
+        - name: Create Database Wizard Master Data Services Configuration Manager
+          href: master-data-services/create-database-wizard-master-data-services-configuration-manager.md
+        - name: Database Configuration Page Master Data Services Configuration Manager
+          href: master-data-services/database-configuration-page-master-data-services-configuration-manager.md
+        - name: Upgrade Database Wizard Master Data Services Configuration Manager
+          href: master-data-services/upgrade-database-wizard-master-data-services-configuration-manager.md
+        - name: Web Configuration Page Master Data Services Configuration Manager
+          href: master-data-services/web-configuration-page-master-data-services-configuration-manager.md
+        - name: Web Configuration Reference Master Data Services
+          href: master-data-services/web-configuration-reference-master-data-services.md
+        - name: Master Data Services and Data Quality Services Features Support
+          href: master-data-services/master-data-services-and-data-quality-services-features-support.md
         - name: System Settings
           href: master-data-services/system-settings-master-data-services.md
         - name: Database Object Security
@@ -8011,6 +8046,8 @@ items:
           href: relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md
         - name: Always Encrypted cryptography
           href: relational-databases/security/encryption/always-encrypted-cryptography.md
+        - name: How queries against encrypted columns work
+          href: relational-databases/security/encryption/always-encrypted-how-queries-against-encrypted-columns-work.md
       - name: Always Encrypted with secure enclaves
         items:
         - name: Always Encrypted with secure enclaves documentation
@@ -8605,6 +8642,34 @@ items:
         href: ssdt/dac-framework-compatibility.md
     - name: Alter DacFx Used by SSDT
       href: ssdt/alter-dacfx-used-by-ssdt.md
+    - name: T-SQL Debugger
+      href: ssdt/debugger/transact-sql-debugger.md
+      items:
+        - name: Configure firewall rules before running the T-SQL Debugger
+          href: ssdt/debugger/configure-firewall-rules-before-running-tsql-debugger.md
+        - name: Run the T-SQL Debugger
+          href: ssdt/debugger/run-transact-sql-debugger.md
+        - name: Step Through T-SQL Code
+          href: ssdt/debugger/step-through-transact-sql-code.md
+        - name: Debug Stored Procedures
+          href: ssdt/debugger/debug-stored-procedures.md
+        - name: T-SQL Debugger Information
+          href: ssms/scripting/transact-sql-debugger-information.md
+        - name: T-SQL Breakpoints
+          href: ssdt/debugger/transact-sql-breakpoints.md
+          items:
+          - name: Toggle a Breakpoint
+            href: ssdt/debugger/toggle-breakpoint.md
+          - name: Enable, Disable, & Delete Breakpoints
+            href: ssdt/debugger/enable-disable-delete-breakpoints.md
+          - name: Specify a Breakpoint Condition
+            href: ssdt/debugger/specify-breakpoint-condition.md
+          - name: Specify a Hit Count
+            href: ssdt/debugger/specify-hit-count.md
+          - name: Specify a Breakpoint Filter
+            href: ssdt/debugger/specify-breakpoint-filter.md
+          - name: Specify a Breakpoint Action
+            href: ssdt/debugger/specify-breakpoint-action.md
     - name: VS2019 SSIS troubleshooting guide
       href: ssdt/ssis-vs2019-troubleshooting-guide.md
     - name: VS2022 SSIS troubleshooting guide
@@ -8862,51 +8927,6 @@ items:
             href: ssms/scripting/complete-transact-sql-snippets.md
           - name: Add T-SQL Snippets
             href: ssms/scripting/add-transact-sql-snippets.md
-        - name: T-SQL Debugger
-          href: ssms/scripting/transact-sql-debugger.md
-          items:
-          - name: Configure firewall rules before running the T-SQL Debugger
-            href: ssms/scripting/configure-firewall-rules-before-running-the-tsql-debugger.md
-          - name: Run the T-SQL Debugger
-            href: ssms/scripting/run-the-transact-sql-debugger.md
-          - name: Step Through T-SQL Code
-            href: ssms/scripting/step-through-transact-sql-code.md
-          - name: T-SQL Breakpoints
-            href: ssms/scripting/transact-sql-breakpoints.md
-            items:
-            - name: Toggle a Breakpoint
-              href: ssms/scripting/toggle-a-breakpoint.md
-            - name: Enable, Disable, & Delete Breakpoints
-              href: ssms/scripting/enable-disable-and-delete-breakpoints.md
-            - name: Specify a Breakpoint Condition
-              href: ssms/scripting/specify-a-breakpoint-condition.md
-            - name: Specify a Hit Count
-              href: ssms/scripting/specify-a-hit-count.md
-            - name: Specify a Breakpoint Filter
-              href: ssms/scripting/specify-a-breakpoint-filter.md
-            - name: Specify a Breakpoint Action
-              href: ssms/scripting/specify-a-breakpoint-action.md
-            - name: Edit a Breakpoint Location
-              href: ssms/scripting/edit-a-breakpoint-location.md
-          - name: T-SQL Debugger - Information
-            href: ssms/scripting/transact-sql-debugger-information.md
-            items:
-            - name: T-SQL Debugger - Error List Window
-              href: ssms/scripting/transact-sql-debugger-error-list-window.md
-            - name: T-SQL Debugger - Breakpoints Window
-              href: ssms/scripting/transact-sql-debugger-breakpoints-window.md
-            - name: T-SQL Debugger - Call Stack Window
-              href: ssms/scripting/transact-sql-debugger-call-stack-window.md
-            - name: T-SQL Debugger - Locals Window
-              href: ssms/scripting/transact-sql-debugger-locals-window.md
-            - name: T-SQL Debugger - Threads Window
-              href: ssms/scripting/transact-sql-debugger-threads-window.md
-            - name: T-SQL Debugger - Command Window
-              href: ssms/scripting/transact-sql-debugger-command-window.md
-            - name: T-SQL Debugger - Output Window
-              href: ssms/scripting/transact-sql-debugger-output-window.md
-            - name: T-SQL Debugger - Watch Window
-              href: ssms/scripting/transact-sql-debugger-watch-window.md
           - name: Status Bar (Database Engine Query Editor)
             href: ssms/scripting/status-bar-database-engine-query-editor.md
           - name: View Spatial Data in Object Explorer
@@ -10823,6 +10843,24 @@ items:
   items:
   - name: Azure Data CLI azcli
     items:
+    - name: Install
+      items:
+      - name: Overview
+        href: azdata/install/deploy-install-azdata.md
+      - name: On Windows
+        href: azdata/install/deploy-install-azdata-installer.md
+      - name: On macOS
+        href: azdata/install/deploy-install-azdata-macos.md
+      - name: On Linux
+        items:
+        - name: Debian or Ubuntu
+          href: azdata/install/deploy-install-azdata-linux-package.md
+        - name: Red Hat Enterprise Linux
+          href: azdata/install/deploy-install-azdata-yum.md
+        - name: SUSE Linux Enterprise Server
+          href: azdata/install/deploy-install-azdata-zypper.md
+        - name: From script
+          href: azdata/install/deploy-install-azdata-pip.md
     - name: azdata
       href: azdata/reference/reference-azdata.md
     - name: context
@@ -10895,6 +10933,8 @@ items:
         href: azdata/reference/reference-azdata-bdc-sql.md
       - name: bdc sql settings
         href: azdata/reference/reference-azdata-bdc-sql-settings.md
+      - name: bdc sql status
+        href: azdata/reference/reference-azdata-bdc-sql-status.md
       - name: bdc status
         href: azdata/reference/reference-azdata-bdc-status.md
   - name: Database samples
@@ -13753,6 +13793,10 @@ items:
         href: relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md
       - name: sys.fn_trace_gettable
         href: relational-databases/system-functions/sys-fn-trace-gettable-transact-sql.md
+    - name: Azure Synapse Link for SQL & Fabric mirrored databases
+      items:
+      - name: sys.fn_has_change_feed_permissions
+        href: relational-databases/system-functions/fn-has-change-feed-permissions.md
   - name: System information schema views
     href: relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md
     items:
@@ -15214,7 +15258,7 @@ items:
         href: relational-databases/system-stored-procedures/sp-pdw-remove-network-credentials-sql-data-warehouse.md
       - name: sp_special_columns_100
         href: relational-databases/system-stored-procedures/sp-special-columns-100-sql-data-warehouse.md
-    - name: Azure Synapse Link for SQL & Fabric Mirroring
+    - name: Azure Synapse Link for SQL & Fabric mirrored databases
       items:
       - name: sp_change_feed_configure_parameters
         href: relational-databases/system-stored-procedures/sp-change-feed-configure-parameters.md

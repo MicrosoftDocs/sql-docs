@@ -159,8 +159,6 @@ For more resources including reference architectures for SQL Server Big Data Clu
 
 * [Case Study: SQL Workloads running on Apache Spark in MS SQL Server 2019 Big Data Cluster](https://aka.ms/sql-bdc-spark-perf/)
 
-* [Dell EMC PowerStore: Microsoft SQL Server 2019 Big Data Clusters](https://www.dellemc.com/resources/en-us/asset/white-papers/products/storage/h18231-dell-emc-powerstore-sql-server-big-data-clusters.pdf)
-
 * [Microsoft SQL Server 2019 Big Data Clusters: A Big Data Solution Using Dell EMC Infrastructure](https://infohub.delltechnologies.com/t/microsoft-sql-server-2019-big-data-clusters-a-big-data-solution-using-dell-emc-infrastructure/)
 
 * [Microsoft SQL Server 2019 Big Data Clusters on Cisco UCS Reference Architecture](https://www.cisco.com/c/en/us/solutions/collateral/data-center-virtualization/unified-computing/sql-server-on-big-data-cluster-on-ucs.html)

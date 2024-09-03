@@ -30,8 +30,7 @@ The `CHECKSUM` function returns the checksum value computed over a table row, or
 ```syntaxsql
 CHECKSUM ( * | expression [ ,...n ] )  
 ```  
-  
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 > [!NOTE]
 > [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
 

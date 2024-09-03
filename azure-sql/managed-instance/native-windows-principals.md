@@ -5,7 +5,7 @@ description: Learn about the new authentication metadata modes that allow you to
 author: sravanisaluru
 ms.author: srsaluru
 ms.reviewer: mathoma, vanto, wiassaf
-ms.date: 08/19/2024
+ms.date: 09/03/2024
 ms.service: azure-sql-managed-instance
 ms.subservice: security
 ms.topic: conceptual

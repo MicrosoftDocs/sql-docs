@@ -1523,7 +1523,7 @@
         href: managed-instance/managed-instance-link-failover-how-to.md
       - name: Migrate with the link
         href: managed-instance/managed-instance-link-migrate.md
-      - name: Disaster recovery
+      - name: Disaster recovery with the link
         href: managed-instance/managed-instance-link-disaster-recovery.md
       - name: Best practices
         href: managed-instance/managed-instance-link-best-practices.md

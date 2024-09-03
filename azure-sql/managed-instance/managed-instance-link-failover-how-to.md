@@ -5,7 +5,7 @@ description: Learn how to fail over a link between SQL Server and Azure SQL Mana
 author: djordje-jeremic
 ms.author: djjeremi
 ms.reviewer: mathoma, danil
-ms.date: 08/22/2024
+ms.date: 09/10/2024
 ms.service: azure-sql-managed-instance
 ms.subservice: data-movement
 ms.custom: ignite-2023
@@ -272,11 +272,11 @@ For SQL Server 2022, if you chose to maintain the link, you can check that the d
 
 If you dropped the link during failover, you can use **Object Explorer** to confirm the distributed availability group no longer exists. If you chose to keep the availability group, the database will still be **Synchronized**. 
 
-## Clean up availability groups
+## Clean up after failover
 
-Since failing over with SQL Server 2022 doesn't break the link, you can maintain the link after failover, which leaves the availability group, and distributed availability group active. No further action is needed. 
+Unless **Remove link after successful failover** is selected, failing over with SQL Server 2022 doesn't break the link. You can maintain the link after failover, which leaves the availability group, and distributed availability group active. No further action is needed. 
 
-However, dropping the link only drops the distributed availability group, and leaves the availability group active. You can decide to keep the availability group, or drop it. 
+Dropping the link only drops the distributed availability group, and leaves the availability group active. You can decide to keep the availability group, or drop it. 
 
 If you decide to drop your availability group, replace the following value and then run the sample T-SQL code: 
 
@@ -289,6 +289,62 @@ GO
 DROP AVAILABILITY GROUP <AGName> 
 GO
 ```
+
+
+## Inconsistent state after forced failover
+
+Following a forced failover, you might encounter a split-brain scenario where both replicas are in the primary role, leaving the link in an inconsistent state. This can happen if you fail over to the secondary replica during a disaster, and then the primary replica comes back online.
+
+First, confirm you're in a split-brain scenario. You can do so by using SQL Server Management Studio (SSMS) or Transact-SQL (T-SQL).
+
+Connect to both SQL Server and SQL managed instance in SSMS, and then in **Object Explorer**, expand **Availability replicas** under the **Availability group** node in **Always On High Availability**.  If two different replicas are listed as **(Primary)**, you're in a split-brain scenario. 
+
+Alternatively, you can run the following T-SQL script on *both* SQL Server and SQL Managed Instance to check the role of the replicas:
+
+```sql
+-- Execute on SQL Server and SQL Managed Instance 
+
+declare @link_name varchar(max) = '<DAGName>' 
+USE MASTER 
+GO
+
+SELECT
+   ag.name [Link name], 
+   rs.role_desc [Link role] 
+FROM
+   sys.availability_groups ag 
+   join sys.dm_hadr_availability_replica_states rs 
+   on ag.group_id = rs.group_id 
+WHERE 
+   rs.is_local = 1 and ag.name = @link_name 
+GO
+```
+
+If both instances list a different **Primary** in the **Link role** column, you're in a split-brain scenario.
+
+To resolve the split brain state, first take a backup on whichever replica was the original primary. If the original primary was SQL Server, then take a [tail log backup](/sql/relational-databases/backup-restore/tail-log-backups-sql-server). If the original primary was SQL Managed Instance, than take a [copy-only full backup](/sql/relational-databases/backup-restore/copy-only-backups-sql-server). After the backup completes, set the distributed availability group to the secondary role for the replica that used to be the original primary but will now be the new secondary.
+ 
+For example, in the event of a true disaster, assuming you've forced a failover of your SQL Server workload to Azure SQL Managed Instance, and you intend to continue running your workload on SQL Managed Instance, take a tail log backup on SQL Server, and then set the distributed availability group to the secondary role on SQL Server such as the following example:
+
+```sql
+--Execute on SQL Server 
+USE MASTER
+
+ALTER availability group [<DAGName>] 
+SET (role = secondary) 
+GO 
+```
+
+Next, execute a planned manual failover from SQL Managed Instance to SQL Server by using the link, such as the following example: 
+
+```sql
+--Execute on SQL Managed Instance 
+USE MASTER
+
+ALTER availability group [<DAGName>] FAILOVER 
+GO 
+```
+
 
 ## Related content
 

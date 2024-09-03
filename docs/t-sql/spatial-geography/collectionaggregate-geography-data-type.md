@@ -24,8 +24,6 @@ Creates a **GeometryCollection** instance from a set of **geography** objects.
 CollectionAggregate ( geography_operand )  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
  *geography_operand*  
  Is a **geography** type table column that represents a set of **geography** objects to be listed in the **GeometryCollection** instance.  

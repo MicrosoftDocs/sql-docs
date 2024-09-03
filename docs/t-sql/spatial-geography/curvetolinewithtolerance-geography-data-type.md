@@ -27,8 +27,6 @@ Returns a polygonal approximation of a **geography** instance that contains circ
 .CurveToLineWithTolerance( tolerance, relative )  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 _tolerance_  
 Is a **double** expression that defines the maximum error between the original circular arc segment and its linear approximation.  

@@ -29,8 +29,6 @@ dev_langs:
 .STBuffer ( distance )  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
  *distance*  
  Is a value of type **float** (**double** in the .NET Framework) specifying the distance from the **geography** instance around which to calculate the buffer.  

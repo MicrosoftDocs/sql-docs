@@ -28,8 +28,6 @@ This **geography** data type method supports **FullGlobe** instances or spatial 
 .ReorientObject (geography)  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 _geography_  
 Is another **geography** instance on which `ReorientObject()` is invoked.  

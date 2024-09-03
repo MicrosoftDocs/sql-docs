@@ -31,8 +31,6 @@ DecryptByAsymKey (Asym_Key_ID , { 'ciphertext' | @ciphertext }
     [ , 'Asym_Key_Password' ] )  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
  *Asym_Key_ID*  
 The ID of an asymmetric key in the database. *Asym_Key_ID* has an **int** data type.  

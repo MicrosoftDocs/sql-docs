@@ -33,8 +33,6 @@ This function returns the name of a specified database.
 DB_NAME ( [ database_id ] )  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 *database_id*  
 

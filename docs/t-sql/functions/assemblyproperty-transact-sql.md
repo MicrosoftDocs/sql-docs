@@ -29,8 +29,6 @@ This function returns information about a property of an assembly.
 ASSEMBLYPROPERTY('assembly_name', 'property_name')  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 *assembly_name*  
 The name of the assembly.

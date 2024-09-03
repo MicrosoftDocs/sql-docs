@@ -31,8 +31,6 @@ For a specified database in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md
 DATABASEPROPERTYEX ( database , property )  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 *database*  
 An expression specifying the name of the database for which `DATABASEPROPERTYEX` will return the named property information. *database* has an **nvarchar(128)** data type.  

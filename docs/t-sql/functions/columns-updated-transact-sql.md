@@ -33,8 +33,6 @@ This function returns a **varbinary** bit pattern indicating the inserted or upd
 COLUMNS_UPDATED ( )   
 ```  
 
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Return types
 **varbinary**
   

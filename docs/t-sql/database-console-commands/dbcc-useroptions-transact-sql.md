@@ -34,8 +34,6 @@ DBCC USEROPTIONS
 [ WITH NO_INFOMSGS ]
 ```
 
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 
 #### NO_INFOMSGS

@@ -30,8 +30,6 @@ A mathematical function that returns the trigonometric cotangent of the specifie
 COT ( float_expression )  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 *float_expression*  
 An [expression](../../t-sql/language-elements/expressions-transact-sql.md) of type **float**, or of a type that can implicitly convert to **float**.

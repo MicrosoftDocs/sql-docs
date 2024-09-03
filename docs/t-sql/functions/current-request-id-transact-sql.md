@@ -28,8 +28,6 @@ This function returns the ID of the current request within the current session.
 CURRENT_REQUEST_ID()  
 ```  
 
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Return types
 **smallint**
   

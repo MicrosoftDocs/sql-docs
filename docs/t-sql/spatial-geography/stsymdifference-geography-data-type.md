@@ -27,8 +27,6 @@ dev_langs:
 .STSymDifference ( other_geography )  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
  *other_geography*  
  Is another **geography** instance in addition to the instance on which STSymDistance() is being invoked.  

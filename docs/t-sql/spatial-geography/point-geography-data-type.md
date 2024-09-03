@@ -28,8 +28,6 @@ Constructs a **geography** instance representing a **Point** instance from its l
 Point ( Lat, Long, SRID )  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
  *Lat*  
  Is a **float** expression representing the y-coordinate of the **Point** being generated.  

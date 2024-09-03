@@ -27,8 +27,6 @@ dev_langs:
 .ShortestLineTo ( geography_other )  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
  *geography_other*  
  Specifies the second **geography** instance that the calling **geography** instance is trying to determine the shortest distance to.  

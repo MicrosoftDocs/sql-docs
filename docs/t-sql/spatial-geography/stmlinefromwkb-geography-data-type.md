@@ -27,8 +27,6 @@ Returns a **geographyMultiLineString** instance from an Open Geospatial Consorti
 STMLineFromWKB ( 'WKB_multilinestring' , SRID )  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
  *WKB_multilinestring*  
  Is the WKB representation of the **geographyMultiLineString** instance to return. *WKB_multilinestring* is a **varbinary(max)** expression.  

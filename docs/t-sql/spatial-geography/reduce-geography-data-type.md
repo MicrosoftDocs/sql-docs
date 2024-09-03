@@ -29,8 +29,6 @@ dev_langs:
 .Reduce ( tolerance )  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 
 |Term|Definition|

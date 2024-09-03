@@ -31,8 +31,6 @@ LAG (scalar_expression [ , offset ] [ , default ] ) [ IGNORE NULLS | RESPECT NUL
     OVER ( [ partition_by_clause ] order_by_clause )  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 
 #### *scalar_expression*  

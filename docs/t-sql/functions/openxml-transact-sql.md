@@ -35,8 +35,6 @@ OPENXML ( idoc int [ in ]
 [ WITH ( SchemaDeclaration | TableName ) ]
 ```
 
-[!INCLUDE [sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 
 #### *idoc*

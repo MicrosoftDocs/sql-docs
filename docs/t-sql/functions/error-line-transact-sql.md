@@ -35,8 +35,6 @@ This function returns the line number of occurrence of an error that caused the 
 ERROR_LINE ( )
 ```
 
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Return Type
 **int**
 

@@ -31,8 +31,6 @@ Returns a value formatted with the specified format and optional culture. Use th
 FORMAT( value , format [ , culture ] )
 ```
 
-[!INCLUDE [sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 
 #### *value*

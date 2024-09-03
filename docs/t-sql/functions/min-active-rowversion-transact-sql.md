@@ -31,8 +31,6 @@ dev_langs:
 MIN_ACTIVE_ROWVERSION ( ) 
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Return Types
  Returns a **binary(8)** value.  
   

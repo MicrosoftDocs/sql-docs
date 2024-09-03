@@ -29,8 +29,6 @@ dev_langs:
 GET_FILESTREAM_TRANSACTION_CONTEXT ()  
 ```
 
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Return Type  
  **varbinary(max)**  
   

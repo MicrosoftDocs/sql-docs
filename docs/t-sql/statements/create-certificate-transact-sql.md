@@ -110,8 +110,6 @@ CREATE CERTIFICATE certificate_name
     START_DATE ='datetime' | EXPIRY_DATE ='datetime'  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
  *certificate_name*  
  Is the name for the certificate in the database.  

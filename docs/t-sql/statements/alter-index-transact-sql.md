@@ -169,8 +169,6 @@ ALTER INDEX { index_name | ALL }
 }
 ```
 
-[!INCLUDE [sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 
 #### *index_name*

@@ -40,8 +40,6 @@ NEXT USED [ filegroup_name ] [ ; ]
 ```  
   
 
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 
 *partition_scheme_name*  

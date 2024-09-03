@@ -47,8 +47,6 @@ ALTER RESOURCE GOVERNOR
 ```  
   
 
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
  DISABLE  
  Disables Resource Governor. Disabling Resource Governor has the following results:  

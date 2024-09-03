@@ -43,8 +43,6 @@ column_name AS computed_column_expression
 ]  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 
 #### *column_name*  

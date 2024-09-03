@@ -69,8 +69,6 @@ WITH
 ```  
   
 
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
  *database_name* (object)  
  Is the name of the database that contains the queue to be changed. When no *database_name* is provided, this defaults to the current database.  

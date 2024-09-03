@@ -98,8 +98,6 @@ ORDER BY order_by_expression
 OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 
 Window functions might have the following arguments in their `OVER` clause:

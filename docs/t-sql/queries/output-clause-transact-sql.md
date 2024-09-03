@@ -64,8 +64,6 @@ Returns information from, or expressions based on, each row affected by an INSER
     | $action
 ```
 
-[!INCLUDE [sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 
 #### *@table_variable*

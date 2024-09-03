@@ -126,8 +126,6 @@ AS { sql_statement
     [ <EXECUTE AS Clause> ]  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
  *schema_name*  
  Is the name of the schema to which a DML trigger belongs. DML triggers are scoped to the schema of the table or view on which they are created. *schema**_name* is optional only if the DML trigger and its corresponding table or view belong to the default schema. *schema_name* cannot be specified for DDL or logon triggers.  

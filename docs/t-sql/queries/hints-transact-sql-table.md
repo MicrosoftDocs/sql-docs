@@ -107,8 +107,6 @@ WITH  ( <table_hint> [ [ , ] ...n ] )
 }
 ```
 
-[!INCLUDE [sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 
 #### WITH ( *<table_hint>* ) [ [ , ] ...*n* ]

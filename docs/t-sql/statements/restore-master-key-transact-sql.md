@@ -47,8 +47,6 @@ RESTORE MASTER KEY FROM
     [ FORCE ]  
 ```
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 
  FILE ='*path_to_file*'  

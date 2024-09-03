@@ -35,8 +35,6 @@ Specifies the language environment for the session. The session language determi
 SET LANGUAGE { [ N ] 'language' | @language_var }
 ```
 
-[!INCLUDE [sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 
 #### [N]'*language*' | @*language_var*

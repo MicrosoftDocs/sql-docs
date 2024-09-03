@@ -36,8 +36,6 @@ dev_langs:
 GET_TRANSMISSION_STATUS ( conversation_handle )  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
  *conversation_id*  
  Is the conversation handle for the conversation. This parameter is of type **uniqueidentifier**.  

@@ -44,8 +44,6 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 | CALLER  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
  LOGIN  
  **Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later.  

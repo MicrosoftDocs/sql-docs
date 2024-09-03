@@ -36,8 +36,6 @@ GRANT permission  [ ,...n ]
     [ AS granting_principal ]   
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 
 #### *permission*  

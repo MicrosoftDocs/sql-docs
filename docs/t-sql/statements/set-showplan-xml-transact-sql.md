@@ -36,8 +36,6 @@ Causes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] not to execute 
 SET SHOWPLAN_XML { ON | OFF }
 ```
 
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Remarks
 
 The setting of SET SHOWPLAN_XML is set at execute or run time and not at parse time.

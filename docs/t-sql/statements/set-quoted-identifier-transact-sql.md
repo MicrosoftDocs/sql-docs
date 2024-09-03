@@ -46,8 +46,6 @@ Syntax for Azure Synapse Analytics and Parallel Data Warehouse.
 SET QUOTED_IDENTIFIER ON
 ```
 
-[!INCLUDE [sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Remarks
 
 When `SET QUOTED_IDENTIFIER` is `ON` (default), identifiers can be delimited by double quotation marks (`""`), and literals must be delimited by single quotation marks (`''`). All strings delimited by double quotation marks are interpreted as object identifiers. Quoted identifiers don't have to follow the [!INCLUDE [tsql](../../includes/tsql-md.md)] rules for identifiers. They can be keywords and can include characters that aren't allowed in [!INCLUDE [tsql](../../includes/tsql-md.md)] identifiers. If a double quotation mark (`"`) is part of the identifier, it can be represented by two double quotation marks (`""`). `SET QUOTED_IDENTIFIER` must be `ON` when reserved keywords are used for object names in the database.

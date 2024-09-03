@@ -35,8 +35,6 @@ REVERT
     [ WITH COOKIE = @varbinary_variable ]  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
  WITH COOKIE = @*varbinary_variable*  
  Specifies the cookie that was created in a corresponding [EXECUTE AS](../../t-sql/statements/execute-as-transact-sql.md) stand-alone statement. *\@varbinary_variable* is **varbinary(100)**.  

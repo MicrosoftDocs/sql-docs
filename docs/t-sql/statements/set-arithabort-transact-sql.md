@@ -44,7 +44,6 @@ SET ARITHABORT { ON | OFF }
 SET ARITHABORT ON
 ```
   
-[!INCLUDE [sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## Remarks
 Always set ARITHABORT to ON in your logon sessions. Setting ARITHABORT to OFF can negatively impact query optimization, leading to performance issues.  

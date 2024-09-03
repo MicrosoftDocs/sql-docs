@@ -38,8 +38,6 @@ SET ANSI_DEFAULTS { ON | OFF }
 SET ANSI_DEFAULTS ON
 ```
 
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Remarks
 ANSI_DEFAULTS is a server-side setting which can enable the behavior for all client connections. The client typically requests the setting on connection or session initialization. Users should not modify the server setting.   
 To change client the behavior, users should use the client specific methods like `SQL_COPT_SS_PRESERVE_CURSORS`. For more information, see  [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md).

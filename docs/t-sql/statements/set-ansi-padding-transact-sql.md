@@ -48,8 +48,6 @@ Syntax for [!INCLUDE [ssazuresynapse-md.md](../../includes/ssazuresynapse-md.md)
 SET ANSI_PADDING ON
 ```
 
-[!INCLUDE [sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Remarks
 
 Columns defined with **char**, **varchar**, **binary**, and **varbinary** data types have a defined size.

@@ -64,7 +64,6 @@ Queues:
 { EXEC | EXECUTE } AS { SELF | OWNER | 'user_name' }
 ```
 
-[!INCLUDE [sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## [Azure SQL Database](#tab/sqldb)
 

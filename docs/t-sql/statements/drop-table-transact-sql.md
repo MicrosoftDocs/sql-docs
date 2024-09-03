@@ -58,8 +58,6 @@ DROP TABLE { database_name.schema_name.table_name | schema_name.table_name | tab
 [;]  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
  *database_name*  
  Is the name of the database in which the table was created.  

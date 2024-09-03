@@ -42,8 +42,6 @@ SET ANSI_WARNINGS { ON | OFF }
 SET ANSI_WARNINGS ON
 ```
 
-[!INCLUDE [sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Remarks
 
  SET ANSI_WARNINGS affects the following conditions:  

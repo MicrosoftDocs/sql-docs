@@ -47,8 +47,6 @@ SET ANSI_NULLS { ON | OFF }
 SET ANSI_NULLS ON
 ```
 
-[!INCLUDE [sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Remarks
 
 When ANSI_NULLS is ON, a SELECT statement that uses `WHERE column_name = NULL` returns zero rows even if there are NULL values in *column_name*. A SELECT statement that uses `WHERE column_name <> NULL` returns zero rows even if there are non-NULL values in *column_name*.  

@@ -37,8 +37,6 @@ Controls whether a message that shows the number of rows affected by a [!INCLUDE
 SET NOCOUNT { ON | OFF }
 ```
 
-[!INCLUDE [sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Remarks
 
 When `SET NOCOUNT` is `ON`, the count isn't returned. When `SET NOCOUNT` is `OFF`, the count is returned.

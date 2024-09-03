@@ -39,8 +39,6 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
     | SQL_Server_login_from_AsymKey  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
  *permission*  
  Specifies a permission that can be revoked on an availability group. For a list of the permissions, see the Remarks section later in this topic.  

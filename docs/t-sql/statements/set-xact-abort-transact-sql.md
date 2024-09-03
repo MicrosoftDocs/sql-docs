@@ -41,8 +41,6 @@ Specifies whether [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auto
 SET XACT_ABORT { ON | OFF }
 ```
 
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Remarks
 
 When SET XACT_ABORT is ON, if a [!INCLUDE[tsql](../../includes/tsql-md.md)] statement raises a run-time error, the entire transaction is terminated and rolled back.

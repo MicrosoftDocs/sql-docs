@@ -75,8 +75,6 @@ REVOKE
 }  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
  GRANT OPTION FOR  
  Indicates that the ability to grant the specified permission will be revoked. This is required when you are using the CASCADE argument.  

@@ -28,8 +28,6 @@ Returns 1 if a **geometry** instance represents the same point set as another **
 .STEquals ( other_geometry )  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
  *other_geometry*  
  Is another **geometry** instance to compare against the instance on which `STEquals()` is invoked.  

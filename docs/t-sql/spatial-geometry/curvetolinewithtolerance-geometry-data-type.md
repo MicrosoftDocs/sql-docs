@@ -24,8 +24,6 @@ Returns a polygonal approximation of a **geometry** instance that contains circu
 .CurveToLineWithTolerance ( tolerance, relative )  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
  *tolerance*  
  Is a **double** expression that defines the maximum error between the original circular arc segment and its linear approximation.  

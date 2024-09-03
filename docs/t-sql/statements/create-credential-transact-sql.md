@@ -48,8 +48,6 @@ WITH IDENTITY = 'identity_name'
         [ FOR CRYPTOGRAPHIC PROVIDER cryptographic_provider_name ]
 ```
 
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 
 #### *credential_name*

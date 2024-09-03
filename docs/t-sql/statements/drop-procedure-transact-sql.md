@@ -46,8 +46,6 @@ Syntax for Azure Synapse Analytics, Analytics Platform System (PDW), and Microso
 DROP { PROC | PROCEDURE } { [ schema_name. ] procedure_name }
 ```
 
-[!INCLUDE [sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 
 #### IF EXISTS

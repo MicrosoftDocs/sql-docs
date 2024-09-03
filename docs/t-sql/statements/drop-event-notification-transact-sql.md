@@ -35,8 +35,6 @@ ON { SERVER | DATABASE | QUEUE queue_name }
 [ ; ]  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
  *notification_name*  
  Is the name of the event notification to remove. Multiple event notifications can be specified. To see a list of currently created event notifications, use [sys.event_notifications &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-event-notifications-transact-sql.md).  

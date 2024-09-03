@@ -58,8 +58,6 @@ CREATE SYNONYM [ schema_name_1. ] synonym_name FOR <object>
 }
 ```
 
-[!INCLUDE [sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 
 #### *schema_name_1*

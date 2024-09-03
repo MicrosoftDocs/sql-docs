@@ -38,8 +38,6 @@ External resource pools are created by using [CREATE EXTERNAL RESOURCE POOL &#40
 DROP EXTERNAL RESOURCE POOL pool_name  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 
 *pool_name*  

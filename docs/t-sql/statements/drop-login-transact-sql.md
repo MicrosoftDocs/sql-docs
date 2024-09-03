@@ -33,8 +33,6 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 DROP LOGIN login_name  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
  *login_name*  
  Specifies the name of the login to be dropped.  

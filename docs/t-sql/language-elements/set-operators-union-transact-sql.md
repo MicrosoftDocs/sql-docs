@@ -49,8 +49,6 @@ The following are basic rules for combining the result sets of two queries by us
   [ ...n ] }
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 \<query_specification> | ( \<query_expression> )
 Is a query specification or query expression that returns data to be combined with the data from another query specification or query expression. The definitions of the columns that are part of a UNION operation don't have to be the same, but they must be compatible through implicit conversion. When data types differ, the resulting data type is determined based on the rules for [data type precedence](../../t-sql/data-types/data-type-precedence-transact-sql.md). When the types are the same but differ in precision, scale, or length, the result is based on the same rules for combining expressions. For more information, see [Precision, Scale, and Length (Transact-SQL)](../../t-sql/data-types/precision-scale-and-length-transact-sql.md).  

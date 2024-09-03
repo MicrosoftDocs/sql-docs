@@ -30,8 +30,6 @@ This function encrypts data with an asymmetric key.
 EncryptByAsymKey ( Asym_Key_ID , { 'plaintext' | @plaintext } )  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 *asym_key_ID*  
 The ID of an asymmetric key in the database. *asym_key_ID* has an **int** data type.  

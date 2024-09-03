@@ -69,8 +69,6 @@ ALTER EXTERNAL RESOURCE POOL { pool_name | "default" }
 ```  
 ::: moniker-end 
 
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 
 { *pool_name* | "default" }  

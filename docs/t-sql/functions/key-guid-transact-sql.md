@@ -30,8 +30,6 @@ dev_langs:
 Key_GUID( 'Key_Name' )  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
  **'** *Key_Name* **'**  
  The name of a symmetric key in the database.  

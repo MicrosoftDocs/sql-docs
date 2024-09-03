@@ -48,8 +48,6 @@ permission | ALL [ PRIVILEGES ]
   | Database_user_with_no_login
 ```
 
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 
 *permission*

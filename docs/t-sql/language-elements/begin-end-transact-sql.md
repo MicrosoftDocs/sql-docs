@@ -38,8 +38,6 @@ BEGIN
 END
 ```
 
-[!INCLUDE [sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 
 #### { *sql_statement* | *statement_block* }

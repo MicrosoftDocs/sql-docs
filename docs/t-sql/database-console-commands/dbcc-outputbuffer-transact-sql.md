@@ -34,8 +34,6 @@ DBCC OUTPUTBUFFER ( session_id [ , request_id ] )
 [ WITH NO_INFOMSGS ]
 ```
 
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 
 #### *session_id*

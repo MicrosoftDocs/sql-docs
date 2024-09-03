@@ -30,8 +30,6 @@ A mathematical function that returns the trigonometric cosine of the specified a
 COS ( float_expression )  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 *float_expression*  
 An [expression](../../t-sql/language-elements/expressions-transact-sql.md) of type **float**.

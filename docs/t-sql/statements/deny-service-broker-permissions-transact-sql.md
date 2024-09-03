@@ -44,8 +44,6 @@ DENY permission  [ ,...n ] ON
         [ AS denying_principal ]  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
  *permission*  
  Specifies a permission that can be denied on a [!INCLUDE[ssSB](../../includes/sssb-md.md)] securable. For a list of the permissions, see the Remarks section later in this topic.  

@@ -33,8 +33,6 @@ Combines two conditions. When more than one logical operator is used in a statem
 boolean_expression OR boolean_expression  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
  *boolean_expression*  
  Is any valid [expression](../../t-sql/language-elements/expressions-transact-sql.md) that returns TRUE, FALSE, or UNKNOWN.  

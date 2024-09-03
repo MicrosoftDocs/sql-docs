@@ -38,8 +38,6 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 SET ROWCOUNT { number | @number_var }   
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
  *number* | @*number_var*  
  Is the number, an integer, of rows to be processed before stopping the specific query.  

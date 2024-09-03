@@ -59,8 +59,6 @@ RAISERROR ( { msg_str | @local_variable }
     [ WITH option [ , ...n ] ]
 ```
 
-[!INCLUDE [sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 
 #### *msg_id*

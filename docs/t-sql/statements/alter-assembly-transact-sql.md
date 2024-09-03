@@ -56,8 +56,6 @@ ALTER ASSEMBLY assembly_name
   | UNCHECKED DATA
 ```
 
-[!INCLUDE [sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 
 #### *assembly_name*

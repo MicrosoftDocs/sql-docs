@@ -34,8 +34,6 @@ monikerRange: "= azuresqldb-current || = azuresqldb-mi-current || >= sql-server-
 GROUPING ( <column_expression> )  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
  \<column_expression>  
  Is a column or an expression that contains a column in a [GROUP BY](../../t-sql/queries/select-group-by-transact-sql.md) clause.  

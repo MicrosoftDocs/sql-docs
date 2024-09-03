@@ -39,8 +39,6 @@ Each schema has an owner. The owner is a security [principal](../../relational-d
 SCHEMA_ID ( [ schema_name ] )
 ```
 
-[!INCLUDE [sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 
 #### *schema_name*

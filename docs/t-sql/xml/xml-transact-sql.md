@@ -30,8 +30,6 @@ It's the data type that stores XML data. You can store **xml** instances in a co
 xml [ ( [ CONTENT | DOCUMENT ] xml_schema_collection ) ]
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 
 CONTENT  

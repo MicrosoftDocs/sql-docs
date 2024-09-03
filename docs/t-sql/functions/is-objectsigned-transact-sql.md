@@ -30,8 +30,6 @@ IS_OBJECTSIGNED (
   )   
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
  **'OBJECT'**  
  The type of securable class.  

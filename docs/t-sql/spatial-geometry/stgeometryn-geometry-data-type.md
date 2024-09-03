@@ -28,8 +28,6 @@ Returns a specified geometry in a **geometry collection**.
 .STGeometryN ( expression )  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
  *expression*  
  Is an **int** expression between 1 and the number of **geometry** instances in the **geometrycollection**.  

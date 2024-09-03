@@ -33,8 +33,6 @@ This function returns the error number of the error that caused the CATCH block 
 ERROR_NUMBER ( )  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Return Types
  **int**  
   

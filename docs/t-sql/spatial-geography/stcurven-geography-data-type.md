@@ -27,8 +27,6 @@ dev_langs:
 .STCurveN( n )  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
  *n*  
  Is an **int** expression between 1 and the number of curves in the **geography** instance.  

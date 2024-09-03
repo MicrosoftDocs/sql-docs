@@ -37,8 +37,6 @@ CAST(node AS nvarchar(4000))
 string ToString  ( )
 ```
 
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Return types
 
 **SQL Server return type:nvarchar(4000)**

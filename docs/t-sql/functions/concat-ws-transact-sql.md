@@ -29,8 +29,6 @@ This function returns a string resulting from the concatenation, or joining, of 
 CONCAT_WS ( separator , argument1 , argument2 [ , argumentN ] ... )
 ```
 
-[!INCLUDE [sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 
 #### *separator*

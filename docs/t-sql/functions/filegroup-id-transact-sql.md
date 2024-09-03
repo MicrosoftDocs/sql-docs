@@ -32,8 +32,6 @@ This function returns the filegroup identification (ID) number for a specified f
 FILEGROUP_ID ( 'filegroup_name' )   
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 *filegroup_name*
 An expression of type **sysname**, representing the filegroup name whose filegroup ID `FILEGROUP_ID` will return.  

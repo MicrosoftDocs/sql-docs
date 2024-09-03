@@ -70,8 +70,6 @@ AS { [ BEGIN ] sql_statement [ ; ] [ ,...n ] [ END ] }
 ```  
   
 
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
  *schema_name*  
  The name of the schema to which the procedure belongs.  

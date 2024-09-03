@@ -29,8 +29,6 @@ Returns the string provided as a first argument, after some characters specified
 TRANSLATE ( inputString, characters, translations )
 ```
 
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 
 #### *inputString*

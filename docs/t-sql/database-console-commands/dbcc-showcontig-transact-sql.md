@@ -55,8 +55,6 @@ DBCC SHOWCONTIG
     ]
 ```
 
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 
 #### *table_name* | *table_id* | *view_name* | *view_id*

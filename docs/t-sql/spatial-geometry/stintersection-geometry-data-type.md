@@ -28,8 +28,6 @@ Returns an object that represents the points where a **geometry** instance inter
 .STIntersection ( other_geometry )  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
  *other_geometry*  
  Is another **geometry** instance to compare with the instance on which `STIntersection()` is being invoked, to determine where they intersect.  

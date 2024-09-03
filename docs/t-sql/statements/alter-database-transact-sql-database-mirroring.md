@@ -54,8 +54,6 @@ SET { <partner_option> | <witness_option> }
   
 ```
 
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 
 > [!IMPORTANT]

@@ -32,8 +32,6 @@ Closes an open cursor by releasing the current result set and freeing any cursor
 CLOSE { { [ GLOBAL ] cursor_name } | cursor_variable_name }  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 
 GLOBAL  

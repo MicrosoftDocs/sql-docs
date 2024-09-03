@@ -35,8 +35,6 @@ The escape sequence for a Unicode character can be specified in the form of `\xx
 UNISTR ( 'character_expression' [ , 'unicode_escape_character' ] )
 ```
 
-[!INCLUDE [sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 
 #### '*character_expression*'

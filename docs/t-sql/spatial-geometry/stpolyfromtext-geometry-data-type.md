@@ -27,8 +27,6 @@ Returns a **geometry** instance from an Open Geospatial Consortium (OGC) Well-Kn
 STPolyFromText ( 'polygon_tagged_text' , SRID )  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
  *polygon_tagged_text*  
  Is the WKT representation of the **geometryPolygon** instance you wish to return. *polygon_tagged_text* is an **nvarchar(max)** expression.  

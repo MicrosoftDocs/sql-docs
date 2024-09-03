@@ -30,8 +30,6 @@ Returns information about full-text catalog properties in [!INCLUDE[ssnoversion]
 FULLTEXTCATALOGPROPERTY ('catalog_name' ,'property')  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
   
 > [!NOTE]  

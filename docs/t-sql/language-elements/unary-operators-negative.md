@@ -39,8 +39,6 @@ The `+` (positive) and `-` (negative) operators can be used on any expression of
 - numeric_expression
 ```
 
-[!INCLUDE [sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 
 #### *numeric_expression*

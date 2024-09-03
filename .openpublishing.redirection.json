@@ -62934,6 +62934,51 @@
       "source_path": "docs/ssms/scripting/transact-sql-debugger-watch-window.md",
       "redirect_url": "/sql/ssdt/debugger/transact-sql-debugger",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md",
+      "redirect_url": "/sql/tools/sql-database-projects/concepts/schema-comparison",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssdt/how-to-change-target-platform-and-publish-a-database-project.md",
+      "redirect_url": "/sql/tools/sql-database-projects/concepts/target-platform",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssdt/how-to-specify-predeployment-or-postdeployment-scripts.md",
+      "redirect_url": "/sql/tools/sql-database-projects/concepts/pre-post-deployment-scripts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssdt/dac-framework-compatibility.md",
+      "redirect_url": "/sql/ssdt/alter-dacfx-used-by-ssdt",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssdt/using-msdeploy-with-dbsqlpackage-provider.md",
+      "redirect_url": "/sql/tools/sqlpackage/sqlpackage-publish",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssdt/project-oriented-database-development-using-command-line-tools.md",
+      "redirect_url": "/sql/tools/sql-database-projects/sql-database-projects",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssdt/walkthrough-author-custom-static-code-analysis-rule-assembly.md",
+      "redirect_url": "/sql/tools/sql-database-projects/howto/author-custom-code-analysis-rules",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssdt/overview-of-extensibility-for-database-code-analysis-rules.md",
+      "redirect_url": "/sql/tools/sql-database-projects/concepts/code-analysis-extensibility",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssdt/how-to-convert-visual-studio-2010-database-projects-to-ssql-server-projects.md",
+      "redirect_url": "/sql/tools/sql-database-projects/howto/convert-an-original-sql-project",
+      "redirect_document_id": false
     }
   ]
 }

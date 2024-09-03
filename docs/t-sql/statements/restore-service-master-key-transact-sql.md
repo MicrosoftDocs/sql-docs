@@ -35,8 +35,6 @@ RESTORE SERVICE MASTER KEY FROM FILE = 'path_to_file'
     DECRYPTION BY PASSWORD = 'password' [FORCE]  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
  FILE **='**_path\_to\_file_**'**  
  Specifies the complete path, including file name, to the stored service master key. *path_to_file* can be a local path or a UNC path to a network location.  

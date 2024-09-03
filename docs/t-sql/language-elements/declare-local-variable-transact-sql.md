@@ -125,8 +125,6 @@ DECLARE
 { { @local_variable [AS] data_type } [ = value [ COLLATE <collation_name> ] ] } [ ,...n ]
 ```
 
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 
 #### @*local_variable*

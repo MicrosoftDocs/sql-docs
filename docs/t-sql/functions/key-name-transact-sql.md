@@ -28,8 +28,6 @@ dev_langs:
 KEY_NAME ( ciphertext | key_guid )   
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
  *ciphertext*  
  Is the text encrypted by the symmetric key. *cyphertext* is type **varbinary(8000)**.  

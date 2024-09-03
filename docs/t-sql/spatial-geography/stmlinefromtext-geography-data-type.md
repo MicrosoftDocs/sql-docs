@@ -27,8 +27,6 @@ Returns a **geography** instance from an Open Geospatial Consortium (OGC) Well-K
 STMLineFromText ( 'multilinestring_tagged_text' , SRID )  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
  *multilinestring_tagged_text*  
  Is the WKT representation of the **geographyMultiLineString** instance you wish to return. *multilinestring_tagged_text* is an **nvarchar(max)** expression.  

@@ -32,8 +32,6 @@ dev_langs:
 GO [count]  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
  *count*  
  Is a positive integer. The batch preceding GO will execute the specified number of times.  

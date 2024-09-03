@@ -29,8 +29,6 @@ This geography data type method supports **FullGlobe** instances or spatial inst
 .BufferWithTolerance ( distance, tolerance, relative )  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 _distance_  
 Is a **float** expression specifying the distance from the **geography** instance around which to calculate the buffer.  

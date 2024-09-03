@@ -24,8 +24,6 @@ dev_langs:
 modify (XML_DML)  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
  XML_DML  
  Is a string in XML Data Manipulation Language (DML). The XML document is updated according to this expression.  

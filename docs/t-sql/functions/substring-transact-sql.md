@@ -35,8 +35,6 @@ Returns part of a character, binary, text, or image expression in [!INCLUDE[ssNo
 SUBSTRING ( expression, start, length )  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
  *expression*  
  Is a **character**, **binary**, **text**, **ntext**, or **image** [expression](../../t-sql/language-elements/expressions-transact-sql.md).  

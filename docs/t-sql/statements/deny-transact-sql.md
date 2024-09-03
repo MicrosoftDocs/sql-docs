@@ -79,8 +79,6 @@ DENY
 }  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
  ALL  
  This option does not deny all possible permissions. Denying ALL is equivalent to denying the following permissions.  

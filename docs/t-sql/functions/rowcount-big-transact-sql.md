@@ -32,8 +32,6 @@ dev_langs:
 ROWCOUNT_BIG ( )  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Return Types
  **bigint**  
   

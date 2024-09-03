@@ -284,8 +284,6 @@ Execute a character string
 }   
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
  @*return_status*  
  Is an optional integer variable that stores the return status of a module. This variable must be declared in the batch, stored procedure, or function before it is used in an EXECUTE statement.  

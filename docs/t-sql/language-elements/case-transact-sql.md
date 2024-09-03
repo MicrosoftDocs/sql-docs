@@ -64,8 +64,6 @@ CASE
 END
 ```
 
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 
 #### *input_expression*
@@ -87,8 +85,6 @@ The expression returned if no comparison operation evaluates to TRUE. If this ar
 #### WHEN *Boolean_expression*
 
 The Boolean expression evaluated when using the searched `CASE` format. *Boolean_expression* is any valid Boolean expression.
-
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## Return types
 

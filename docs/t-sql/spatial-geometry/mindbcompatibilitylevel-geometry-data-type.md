@@ -24,8 +24,6 @@ Returns the minimum database compatibility level that recognizes the **geometry*
 .MinDbCompatibilityLevel ( )  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Return Types
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] return type: **int**  
   

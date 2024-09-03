@@ -47,8 +47,6 @@ SELECT * FROM master.sysdiag.diagnostics_name ;
 DROP DIAGNOSTICS SESSION diagnostics_name ;  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
  *diagnostics_name*  
  The name of the diagnostics session. Diagnostics session names can include characters a-z, A-Z, and 0-9 only. Also, diagnostics session names must start with a character. *diagnostics_name* is limited to 127 characters.  

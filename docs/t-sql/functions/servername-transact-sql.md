@@ -31,8 +31,6 @@ Returns the name of the local server that is running [!INCLUDE [ssNoVersion](../
 @@SERVERNAME
 ```
 
-[!INCLUDE [sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Return types
 
 **nvarchar**

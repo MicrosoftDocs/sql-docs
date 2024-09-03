@@ -33,8 +33,6 @@ For more information on the Geography Markup Language, see the following Open Ge
 GeomFromGml ( GML_input, SRID )  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
  *GML_input*  
  Is an XML input from which the GML will return a value.  

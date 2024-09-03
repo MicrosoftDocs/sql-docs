@@ -31,8 +31,6 @@ DecryptByKeyAutoCert ( cert_ID , cert_password
   [ , { authenticator | @authenticator } ] ] )  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
  *cert_ID*  
 The ID of the certificate used to protect the symmetric key. *cert_ID* has an **int** data type.  

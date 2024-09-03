@@ -233,15 +233,29 @@ Failover group reports its status describing the current state of the data repli
 
 When failover groups are configured with a Microsoft-managed failover policy, then forced failover to the geo-secondary server is initiated during a disaster scenario as per the defined grace period. Failback to the old primary must be initiated manually.
 
-## Failover groups with transactional replication
+## Feature interoperability 
+
+### Backups 
+
+A full backup is taken in the following scenarios: 
+- Before initial seeding starts when you create a failover group. 
+- After a failover. 
+
+A full backup is a size of data operation that can't be skipped or deferred, and can take some time complete. The time it takes to complete depends on the size of data, the number of databases, and the workload intensity on the primary databases. A full backup can noticeably delay initial seeding, and can either delay or prevent a failover operation on a new instance shortly after a failover. 
+
+### Log Replay Service 
+
+Databases migrated to Azure SQL Managed Instance by using the [Log Replay Service (LRS)](log-replay-service-overview.md) can't be added to a failover group until the cutover step is executed. A database migrated with LRS is in a restoring state until cutover, and databases in a restoring state can't be added to a failover group. Attempting to create a failover group with a database in a restoring state delays creating the failover group until the database restore completes. 
+
+### Transactional replication
 
 Using transactional replication with instances that are in a failover group is supported. However, if you configure replication before adding your SQL managed instance into a failover group, replication pauses when you start to create your failover group, and replication monitor shows a status of `Replicated transactions are waiting for the next log backup or for mirroring partner to catch up`. Replication resumes once the failover group is created successfully.
 
 If a **publisher** or **distributor** SQL managed instance is in a failover group, the SQL managed instance administrator must clean up all publications on the old primary and reconfigure them on the new primary after a failover occurs. Review the [transactional replication guide](replication-transactional-overview.md#with-failover-groups) for the step of activities that are needed in this scenario.
 
-## Permissions, limitations and prerequisites
+## Permissions and limitations 
 
-Review the configure failover group guide for a list of [permissions](failover-group-configure-sql-mi.md#permissions), [limitations](failover-group-configure-sql-mi.md#limitations) and [prerequisites](failover-group-configure-sql-mi.md#prerequisites) before proceeding to configure the failover group.
+Review a list of [permissions](failover-group-configure-sql-mi.md#permissions), and [limitations](failover-group-configure-sql-mi.md#limitations) before configuring a failover group.
 
 ## Programmatically manage failover groups
 

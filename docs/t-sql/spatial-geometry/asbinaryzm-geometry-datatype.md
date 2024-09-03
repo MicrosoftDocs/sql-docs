@@ -24,8 +24,6 @@ Returns the Open Geospatial Consortium (OGC) Well-Known Binary (WKB) representat
 .AsBinaryZM()  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Return Types
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] return type: **varbinary(max)**  
   

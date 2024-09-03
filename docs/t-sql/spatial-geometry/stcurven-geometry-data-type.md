@@ -25,8 +25,6 @@ Returns the curve specified from a **geometry** instance that is a **LineString*
 .STCurveN ( curve_index )  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
  *curve_index*  
  Is an **int** expression between 1 and the number of curves in the **geometry** instance.  

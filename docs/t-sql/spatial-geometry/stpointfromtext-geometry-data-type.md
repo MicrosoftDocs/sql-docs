@@ -27,8 +27,6 @@ Returns a **geometry** instance from an Open Geospatial Consortium (OGC) Well-Kn
 STPointFromText ( 'point_tagged_text' , SRID )  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
  *point_tagged_text*  
  Is the WKT representation of the **geometryPoint** instance you wish to return. *point_tagged_text* is an **nvarchar(max)** expression.  

@@ -32,8 +32,6 @@ dev_langs:
 xml_schema_namespace( Relational_schema , XML_schema_collection_name , [ Namespace ] )  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
  *Relational_schema*  
  Is the relational schema name. *Relational_schema* is **sysname**.  

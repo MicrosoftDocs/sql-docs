@@ -28,8 +28,6 @@ Returns 1 if a **geometry** instance is empty. Returns 0 if a **geometry** insta
 .STIsEmpty ( )  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Return Types
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] return type: **bit**  
   

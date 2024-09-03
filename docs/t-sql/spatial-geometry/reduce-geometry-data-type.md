@@ -27,8 +27,6 @@ Returns an approximation of the given **geometry** instance. The approximation i
 .Reduce ( tolerance )  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
  *tolerance*  
  Is a value of type **float**. *tolerance* is the tolerance to input for the approximation algorithm.  

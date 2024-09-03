@@ -28,8 +28,6 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 .STRelate ( other_geometry, intersection_pattern_matrix )  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
  *other_geometry*  
  Is another **geometry** instance to compare against the instance on which `STRelate()` is invoked.  

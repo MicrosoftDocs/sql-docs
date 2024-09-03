@@ -7402,7 +7402,7 @@ items:
         href: master-data-services/edit-model-master-data-services.md
       - name: Delete
         href: master-data-services/delete-a-model-master-data-services.md
-      - name: Sql Server Samplesn Model Deployment Packages MDS
+      - name: Sql Server Samples Model Deployment Packages MDS
         href: master-data-services/sql-server-samples-model-deployment-packages-mds.md
     - name: Entities
       href: master-data-services/entities-master-data-services.md
@@ -7751,7 +7751,7 @@ items:
         items:
         - name: Create Database Wizard Master Data Services Configuration Manager
           href: master-data-services/create-database-wizard-master-data-services-configuration-manager.md
-        - name: Database Configuration Page Master Data  Services Configuration Manager
+        - name: Database Configuration Page Master Data Services Configuration Manager
           href: master-data-services/database-configuration-page-master-data-services-configuration-manager.md
         - name: Upgrade Database Wizard Master Data Services Configuration Manager
           href: master-data-services/upgrade-database-wizard-master-data-services-configuration-manager.md

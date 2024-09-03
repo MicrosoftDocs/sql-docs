@@ -38,8 +38,6 @@ DecryptByKey ( { 'ciphertext' | @ciphertext }
     [ , add_authenticator, { authenticator | @authenticator } ] )  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 *ciphertext*  
 A variable of type **varbinary** containing data encrypted with the key.  

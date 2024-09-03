@@ -34,8 +34,6 @@ CertProperty ( Cert_ID , '<PropertyName>' )
    | Cert_Serial_Number | Subject | SID | String_SID   
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 *Cert_ID*  
 The certificate ID value, of data type int.

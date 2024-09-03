@@ -38,8 +38,6 @@ See [Date and Time Data Types and Functions &#40;Transact-SQL&#41;](../../t-sql/
 DATENAME ( datepart , date )  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 *datepart*  
 The specific part of the *date* argument that `DATENAME` will return. This table lists all valid *datepart* arguments.

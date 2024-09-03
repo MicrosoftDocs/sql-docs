@@ -31,8 +31,6 @@ This function returns the checksum of the values in a group. `CHECKSUM_AGG` igno
 CHECKSUM_AGG ( [ ALL | DISTINCT ] expression )  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 **ALL**  
 Applies the aggregate function to all values. ALL is the default argument.

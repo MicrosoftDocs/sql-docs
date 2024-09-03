@@ -31,8 +31,6 @@ This function returns a **datetime** value for the specified date and time argum
 DATETIMEFROMPARTS ( year , month , day , hour , minute , seconds , milliseconds )
 ```
 
-[!INCLUDE [sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 
 #### *year*

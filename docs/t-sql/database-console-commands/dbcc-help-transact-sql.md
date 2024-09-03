@@ -31,8 +31,6 @@ DBCC HELP ( 'dbcc_statement' | @dbcc_statement_var | '?' )
 [ WITH NO_INFOMSGS ]
 ```
 
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 
 #### *dbcc_statement* | *@dbcc_statement_var*

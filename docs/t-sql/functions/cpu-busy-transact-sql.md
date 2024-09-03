@@ -39,9 +39,6 @@ This function returns the amount of time that [!INCLUDE[ssNoVersion](../../inclu
 @@CPU_BUSY  
 ```  
 
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
-
 ## Return types
 **integer**
   

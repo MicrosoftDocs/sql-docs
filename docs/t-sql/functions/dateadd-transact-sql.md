@@ -41,8 +41,6 @@ See [Date and time data types and functions](date-and-time-data-types-and-functi
 DATEADD (datepart , number , date )
 ```
 
-[!INCLUDE [sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 
 #### *datepart*

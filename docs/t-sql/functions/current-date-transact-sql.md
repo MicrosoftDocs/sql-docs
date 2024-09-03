@@ -53,8 +53,6 @@ See [Date and time data types and functions](date-and-time-data-types-and-functi
 CURRENT_DATE
 ```
 
-[!INCLUDE [sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 
 This function takes no arguments.

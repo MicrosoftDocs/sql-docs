@@ -34,8 +34,6 @@ This function returns the database identification (ID) number of a specified dat
 DB_ID ( [ 'database_name' ] )   
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 '*database_name*'  
 The name of the database whose database ID number `DB_ID` will return. If the call to `DB_ID` omits *database_name*, `DB_ID` returns the ID of the current database.

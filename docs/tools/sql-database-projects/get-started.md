@@ -65,7 +65,7 @@ dotnet new install Microsoft.Build.Sql.Templates
 
 ## Create a new project
 
-We start our project by creating a new SQL database project before manually adding objects to it. There are other ways to create a project that enable immediately populating the project with objects from an existing database, such as using the [schema comparison tools](howto/compare-a-database-and-a-project.md).
+We start our project by creating a new SQL database project before manually adding objects to it. There are other ways to create a project that enable immediately populating the project with objects from an existing database, such as using the [schema comparison tools](howto/compare-database-project.md).
 
 ::: zone pivot="sq1-visual-studio"
 
@@ -247,6 +247,6 @@ sqlpackage /Action:Publish /SourceFile:bin/Debug/projectname.dacpac /TargetConne
 
 ## Related content
 
-- [Compare a database and a project](howto/compare-a-database-and-a-project.md)
-- [Convert an original SQL project to an SDK-style project](howto/convert-an-original-sql-project.md)
+- [Compare a database and a project](howto/compare-database-project.md)
+- [Convert an original SQL project to an SDK-style project](howto/convert-original-sql-project.md)
 - [Analyze T-SQL code to find defects](howto/analyze-t-sql-code-to-find-defects.md)

@@ -41,7 +41,7 @@ The following example includes a package reference to the `Contoso.AdventureWork
 
 ### System databases
 
-The SQL system databases (`master`, `msdb`) are been published on NuGet.org as database reference packages. These packages contain the schema for the system databases and can be used as package references in SQL projects. The system database packages are versioned to align with the version of SQL Server they're associated with. For example, the `master` system database package for SQL Server 2022 is `Microsoft.SqlServer.Dacpacs.Master` version `160.2.1` and can be added to a SQL project as a package reference:
+The SQL system databases (`master`, `msdb`) are published on NuGet.org as database reference packages. These packages contain the schema for the system databases and can be used as package references in SQL projects. The system database packages are versioned to align with the version of SQL Server they're associated with. For example, the `master` system database package for SQL Server 2022 is `Microsoft.SqlServer.Dacpacs.Master` version `160.2.1` and can be added to a SQL project as a package reference:
 
 ```xml
 ...

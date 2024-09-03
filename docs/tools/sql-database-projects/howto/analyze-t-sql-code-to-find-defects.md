@@ -20,7 +20,7 @@ For this initial assessment, you want to find all the potential problems in the 
 
 ## Prerequisites
 
-Before you can analyze the code in a database project, you must already have a SQL project. For more information on using an existing database to create a project, see [Tutorial: start from an existing database](../tutorials/start-from-an-existing-database.md).
+Before you can analyze the code in a database project, you must already have a SQL project. For more information on using an existing database to create a project, see [Tutorial: start from an existing database](../tutorials/start-from-existing-database.md).
 
 ## Enable SQL code analysis on project build
 

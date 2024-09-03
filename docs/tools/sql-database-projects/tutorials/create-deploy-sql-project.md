@@ -16,18 +16,18 @@ zone_pivot_groups: sq1-sql-projects-tools
 
 The development cycle of a SQL database project enables database development to be integrated into a continuous integration and continuous deployment (CI/CD) workflows familiar as a development best practice. While deployment of a SQL database project can be done manually, it's recommended to use a deployment pipeline to automate the deployment process such that ongoing deployments are run based on your continued local development without additional effort.
 
-This article steps through creating a new SQL project, adding objects to the project, and setting up a continuous deployment pipeline for building and deploying the project with GitHub actions. The tutorial is a superset of the contents of the [SQL projects getting started](../getting-started.md) article. While the tutorial implements the deployment pipeline in GitHub actions, the same concepts apply to Azure DevOps, GitLab, and other automation environments.
+This article steps through creating a new SQL project, adding objects to the project, and setting up a continuous deployment pipeline for building and deploying the project with GitHub actions. The tutorial is a superset of the contents of the [SQL projects getting started](../get-started.md) article. While the tutorial implements the deployment pipeline in GitHub actions, the same concepts apply to Azure DevOps, GitLab, and other automation environments.
 
 In this tutorial, you:
 
-1. create a new SQL project
-2. add objects to the project
-3. build the project locally
-4. check the project into source control
-5. add a project build step to a continuous deployment pipeline
-6. add a `.dacpac` deployment step to a continuous deployment pipeline
+1. Create a new SQL project
+2. Add objects to the project
+3. Build the project locally
+4. Check the project into source control
+5. Add a project build step to a continuous deployment pipeline
+6. Add a `.dacpac` deployment step to a continuous deployment pipeline
 
-If you've already completed the steps in the [SQL projects getting started](../getting-started.md) article, you can skip to [step 4](#step-4-check-the-project-into-source-control). At this end of this tutorial, your SQL project will be automatically building and deploying changes to a target database.
+If you've already completed the steps in the [SQL projects getting started](../get-started.md) article, you can skip to [step 4](#step-4-check-the-project-into-source-control). At this end of this tutorial, your SQL project will be automatically building and deploying changes to a target database.
 
 ## Prerequisites
 
@@ -81,7 +81,7 @@ Make sure you have the following items to complete the pipeline setup in GitHub:
 
 ## Step 1: Create a new project
 
-We start our project by creating a new SQL database project before manually adding objects to it. There are other ways to create a project that enable immediately populating the project with objects from an existing database, such as using the [schema comparison tools](../howto/compare-a-database-and-a-project.md).
+We start our project by creating a new SQL database project before manually adding objects to it. There are other ways to create a project that enable immediately populating the project with objects from an existing database, such as using the [schema comparison tools](../howto/compare-database-project.md).
 
 ::: zone pivot="sq1-visual-studio"
 
@@ -89,7 +89,7 @@ Select **File**, **New**, then **Project**.
 
 In the **New Project** dialog box, use the term **SQL Server** in the search box. The top result should be **SQL Server Database Project**.
 
-:::image type="content" source="media/creating-and-deploying-a-sql-project/new-project-dialog.png" alt-text="Screenshot of New project dialog." lightbox="media/creating-and-deploying-a-sql-project/new-project-dialog.png":::
+:::image type="content" source="media/create-deploy-sql-project/new-project-dialog.png" alt-text="Screenshot of New project dialog." lightbox="media/create-deploy-sql-project/new-project-dialog.png":::
 
 Select **Next** to proceed to the next step. Provide a project name, which doesn't need to match a database name. Verify and modify the project location as needed.
 
@@ -105,7 +105,7 @@ Select **Create** to create the project. The empty project is opened and visible
 
 In the **Database Projects** view of VS Code or Azure Data Studio, select the **New Project** button.
 
-:::image type="content" source="media/creating-and-deploying-a-sql-project/projects-viewlet.png" alt-text="Screenshot of New viewlet.":::
+:::image type="content" source="media/create-deploy-sql-project/projects-viewlet.png" alt-text="Screenshot of New viewlet.":::
 
 The first prompt determines which project template to use, primarily based on whether the target platform is SQL Server or Azure SQL. If prompted to select a specific version of SQL, choose the version that matches the target database but if the target database version is unknown, choose the latest version as the value can be modified later.
 
@@ -220,13 +220,13 @@ We will initialize our project as a Git repository and commit the project files 
 
 1. From the **Git** menu in Visual Studio, select **Create Git Repository**.
 
-    :::image type="content" source="media/creating-and-deploying-a-sql-project/vs-git-menu-create-git-repository.png" alt-text="Screenshot of the Create Git Repository option from the Git menu in Visual Studio.":::
+    :::image type="content" source="media/create-deploy-sql-project/vs-git-menu-create-git-repository.png" alt-text="Screenshot of the Create Git Repository option from the Git menu in Visual Studio.":::
 
 2. In the **Create a Git repository** dialog, under the **Push to a new remote** section, choose **GitHub**.
 
 3. In the **Create a new GitHub repository** section of the **Create a Git repository** dialog, enter the name of the repo you want to create. (If you haven't yet signed in to your GitHub account, you can do so from this screen, too.)
 
-    :::image type="content" source="media/creating-and-deploying-a-sql-project/vs-git-create-repo-dialog.png" alt-text="Screenshot of the Create Git Repository dialog in Visual Studio with the GitHub selection highlighted." lightbox="media/creating-and-deploying-a-sql-project/vs-git-create-repo-dialog.png":::
+    :::image type="content" source="media/create-deploy-sql-project/vs-git-create-repo-dialog.png" alt-text="Screenshot of the Create Git Repository dialog in Visual Studio with the GitHub selection highlighted." lightbox="media/create-deploy-sql-project/vs-git-create-repo-dialog.png":::
 
     Under **Initialize a local Git Repository**, you should use the **.gitignore template** option to specify any intentionally untracked files that you want Git to ignore. To learn more about .gitignore, see [Ignoring files](https://docs.github.com/get-started/getting-started-with-git/ignoring-files). And to learn more about licensing, see [Licensing a repository](https://docs.github.com/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository).
 
@@ -244,7 +244,7 @@ You can initialize and local repository and publish it directly to GitHub from V
 
 Use the **Publish to GitHub** button in the Source Control view in VS Code or Azure Data Studio. You're then prompted to specify a name and description for the repository, and as well as whether to make it public or private.
 
-:::image type="content" source="media/creating-and-deploying-a-sql-project/vsc-publish-to-github.png" alt-text="Screenshot of the Create Git Repository dialog in Visual Studio with the GitHub selection highlighted." lightbox="media/creating-and-deploying-a-sql-project/vsc-publish-to-github.png":::
+:::image type="content" source="media/create-deploy-sql-project/vsc-publish-to-github.png" alt-text="Screenshot of the Create Git Repository dialog in Visual Studio with the GitHub selection highlighted." lightbox="media/create-deploy-sql-project/vsc-publish-to-github.png":::
 
 Alternatively, you can initialize a local repository and push it to GitHub following the steps provided when you create an empty [repository on GitHub](https://docs.github.com/repositories/creating-and-managing-repositories/creating-a-new-repository).
 
@@ -313,7 +313,7 @@ The compiled model of a database schema in a `.dacpac` file can be deployed to a
 sqlpackage /Action:Publish /SourceFile:bin/Debug/MyDatabaseProject.dacpac /TargetConnectionString:{yourconnectionstring}
 ```
 
-:::image type="content" source="media/creating-and-deploying-a-sql-project/dacfx-deployment-process.png" alt-text="Screenshot of DacFx source and target comparison process before deployment." lightbox="media/creating-and-deploying-a-sql-project/dacfx-deployment-process.png":::
+:::image type="content" source="media/create-deploy-sql-project/dacfx-deployment-process.png" alt-text="Screenshot of DacFx source and target comparison process before deployment." lightbox="media/create-deploy-sql-project/dacfx-deployment-process.png":::
 
 The deployment process is idempotent, meaning it can be run multiple times without causing issues. The pipeline we're creating will build and deploy our SQL project every time a change is checked into the `main` branch of our repository. Instead of executing the `SqlPackage` command directly in our deployment pipeline, we can use a deployment task that abstracts the command and provides additional features such as logging, error handling, and task configuration. The deployment task [GitHub sql-action](https://github.com/azure/sql-action) can be added to a continuous deployment pipeline in GitHub actions.
 
@@ -334,7 +334,7 @@ The deployment process is idempotent, meaning it can be run multiple times witho
 
 3. Before committing the changes, add a secret to the repository that contains the connection string to the target database. In the repository on GitHub.com, navigate to **Settings**, then **Secrets**. Select **New repository secret** and add a secret named `SQL_CONNECTION_STRING` with the value of the connection string to the target database.
 
-    :::image type="content" source="media/creating-and-deploying-a-sql-project/github-repository-secret.png" alt-text="Screenshot of the GitHub repository settings with the New repository secret button highlighted." lightbox="media/creating-and-deploying-a-sql-project/github-repository-secret.png":::
+    :::image type="content" source="media/create-deploy-sql-project/github-repository-secret.png" alt-text="Screenshot of the GitHub repository settings with the New repository secret button highlighted." lightbox="media/create-deploy-sql-project/github-repository-secret.png":::
 
 4. Commit the changes from `sqlproj-sample.yml` to the repository and push the changes to the remote repository.
 5. Navigate back to the workflow history on GitHub.com and select the most recent run of the workflow. The deployment step should be visible in the list of steps for the workflow run and the workflow returns a success code.
@@ -349,6 +349,6 @@ GitHub deployments can be further secured by establishing an environment relatio
 
 ## Related content
 
-- [Compare a database and a project](../howto/compare-a-database-and-a-project.md)
-- [Convert an original SQL project to an SDK-style project](../howto/convert-an-original-sql-project.md)
+- [Compare a database and a project](../howto/compare-database-project.md)
+- [Convert an original SQL project to an SDK-style project](../howto/convert-original-sql-project.md)
 - [SqlPackage Publish parameters, properties, and SQLCMD variables](../../sqlpackage/sqlpackage-publish.md)

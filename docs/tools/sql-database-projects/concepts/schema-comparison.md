@@ -41,7 +41,7 @@ The differences between source and target appear in a grid for easy review. Comp
 - SQL database project
 - `.dacpac` file
 
-In schema compare you can drill into and review each difference in the results grid or in script form where line by line details of the changes are available. You can also selectively exclude specific differences before updating the target. The schema compare tooling is available in Visual Studio, Azure Data Studio, and the command line.
+In schema compare you can drill into and review each difference in the results grid or in script form where details of the changes are available at a per-line level. You can also selectively exclude specific differences before updating the target. The schema compare tooling is available in Visual Studio, Azure Data Studio, and the command line.
 
 ### Schema comparison options
 
@@ -57,7 +57,7 @@ The object types that are included in the comparison can also be configured. The
 
 ### Schema compare files
 
-The comparison definition for schema compare can be saved as an `.scmp` file. This file stores information about the schema comparison in XML and includes:
+The comparison definition for schema compare can be saved as an `.scmp` file, known as a *schema compare file*. This file stores information about the schema comparison in XML and includes:
 
 - source and target connection information
 - comparison options
@@ -99,7 +99,7 @@ An `.scmp` file can be opened in Visual Studio or Azure Data Studio to easily ru
 
    To change the grouping preference, select the **Group Results** dropdown list in the toolbar. Select **Type** to group the results by object type (for example, by tables, views, or stored procedures).
 
-7. By default all differences are included in the scope of the Update Target action. You can exclude differences that you don't want to synchronize. To do so, uncheck the **Action** column in the center of each row. Alternatively, right-click a row in the Schema pane, and select **Exclude**. The row is immediately grayed out. When it's time to update the target database, this row isn't considered for any pending changes.
+7. By default all differences are included in the scope of the Update Target action. You can exclude differences that you don't want to synchronize. To do so, uncheck the **Action** column in the center of each row. Alternatively, right-click a row in the Schema pane, and select **Exclude**. The row is immediately grayed out. When schema compare is used to update the target database, this row isn't considered for any pending changes.
 
    You can also right-click on a group row and select **Exclude All** or **Include All**, which is equivalent to unchecking or checking all differences in that group. When you group results by schema this is a useful way to include or exclude all changes to a specific schema.
 
@@ -144,7 +144,7 @@ To update the schema of the target, you have two options. You can update the tar
 
     :::image type="content" source="media/schema-comparison/ads-schema-compare.png" alt-text="Screenshot of Schema comparison interface in Azure Data Studio comparing a database against a project." lightbox="media/schema-comparison/ads-schema-compare.png":::
 
-5. By default all differences are included in the scope of the Update Target action. You can exclude differences that you don't want to synchronize. To do so, uncheck the **Action** column in the center of each row. Alternatively, right-click a row in the Schema pane, and select **Exclude**. The row is immediately grayed out. When it's time to update the target database, this row isn't considered for any pending changes.
+5. By default all differences are included in the scope of the Update Target action. You can exclude differences that you don't want to synchronize. To do so, uncheck the **Action** column in the center of each row. Alternatively, right-click a row in the Schema pane, and select **Exclude**. The row is immediately grayed out. When schema compare is used to update the target database, this row isn't considered for any pending changes.
 
    You can also right-click on a group row and select **Exclude All** or **Include All**, which is equivalent to unchecking or checking all differences in that group. When you group results by schema this is a useful way to include or exclude all changes to a specific schema.
 
@@ -164,6 +164,6 @@ To update the schema of the target, you have two options. You can update the tar
 
 ## Related content
 
-- [Compare a database and a project](../howto/compare-a-database-and-a-project.md)
-- [Tutorial: start from an existing database](../tutorials/start-from-an-existing-database.md)
+- [Compare a database and a project](../howto/compare-database-project.md)
+- [Tutorial: start from an existing database](../tutorials/start-from-existing-database.md)
 - [SqlServer.Dac.Compare namespace](/dotnet/api/microsoft.sqlserver.dac.compare)

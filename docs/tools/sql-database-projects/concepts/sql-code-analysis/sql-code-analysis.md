@@ -14,7 +14,7 @@ zone_pivot_groups: sq1-sql-projects-tools
 
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
-You can eliminate potential design and naming problems and avoid performance pitfalls by analyzing your database code. The concepts are very similar to performing static analysis to detect and correct defects in managed code. You configure which analysis rules you want to apply to your database code, analyze the code, and then correct or ignore the issues that you identify. Before you can analyze your database code, you must first import your database schema into a database project. For more information, see [Start from an existing database](../../tutorials/start-from-an-existing-database.md).
+You can eliminate potential design and naming problems and avoid performance pitfalls by analyzing your database code. The concepts are very similar to performing static analysis to detect and correct defects in managed code. You configure which analysis rules you want to apply to your database code, analyze the code, and then correct or ignore the issues that you identify. Before you can analyze your database code, you must first import your database schema into a database project. For more information, see [Start from an existing database](../../tutorials/start-from-existing-database.md).
 
 By performing static analysis with the [provided rules](#provided-rules), you can identify problems that fall into the following categories:
 
@@ -48,7 +48,7 @@ A SQL project file can contain two properties, `RunSqlCodeAnalysis` and `SqlCode
 ...
 ```
 
-The `SqlCodeAnalysisRules` element specifies the rules and their error/warning behavior. In the following example the rules Microsoft.Rules.Data.SR0006 and Microsoft.Rules.Data.SR0007 are disabled and the a detection for the rule Microsoft.Rules.Data.SR0008 will result in a build error.
+The `SqlCodeAnalysisRules` element specifies the rules and their error/warning behavior. In the following example the rules Microsoft.Rules.Data.SR0006 and Microsoft.Rules.Data.SR0007 are disabled and a detection for the rule Microsoft.Rules.Data.SR0008 will result in a build error.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>

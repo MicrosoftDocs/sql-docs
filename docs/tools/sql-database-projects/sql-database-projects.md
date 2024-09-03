@@ -52,9 +52,9 @@ For example, `sqlpackage /Action:Publish /SourceFile:yourfile.dacpac /TargetConn
 
 #### New databases
 
-When publishing a dacpac to a new database, SqlPackage navigates the object relationships to create each object in the right order. For example, SqlPackage creates Table_A before Table_B when Table_B has a foreign key to Table_A.
+SqlPackage navigates the object relationships to create each object in the right order when publishing a dacpac to a new database. For example, SqlPackage creates Table_A before Table_B when Table_B has a foreign key to Table_A.
 
-You don't want to be executing a whole folder of SQL scripts when you could be using SQL projects to manage executing each T-SQL section in the right order.
+You don't want to be executing a whole folder of SQL scripts, especially when you could be using SQL projects which automatically executes each T-SQL section in the right order based on object relationships.
 
 #### Existing databases
 
@@ -92,7 +92,7 @@ New development work should consider using the SDK-style project format, as it's
 - NuGet [package references](concepts/package-references.md) for database references
 - Default globbing pattern for .sql files in the project
 
-SDK-style projects have a superset of functionality from original SQL projects and existing SQL projects can be converted to SDK-style projects through [modification of the project file](howto/convert-an-original-sql-project.md). The exception to the functionality coverage is support for SQLCLR objects, which require .NET Framework and aren't supported in SDK-style projects.
+SDK-style projects have a superset of functionality from original SQL projects and existing SQL projects can be converted to SDK-style projects through [modification of the project file](howto/convert-original-sql-project.md). The exception to the functionality coverage is support for SQLCLR objects, which require .NET Framework and aren't supported in SDK-style projects.
 
 ## Related content
 
@@ -103,5 +103,5 @@ SDK-style projects have a superset of functionality from original SQL projects a
 - [Azure DevOps SQL deployments](/azure/devops/pipelines/targets/azure-sqldb)
 - [Data-tier applications (DAC)](../../relational-databases/data-tier-applications/data-tier-applications.md)
 - [DacFx feedback repository](https://github.com/microsoft/dacfx)
-- [Get started with SQL database projects](getting-started.md)
-- [Tutorial: Create and deploy a SQL project](tutorials/creating-and-deploying-a-sql-project.md)
+- [Get started with SQL database projects](get-started.md)
+- [Tutorial: Create and deploy a SQL project](tutorials/create-deploy-sql-project.md)

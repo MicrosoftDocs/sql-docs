@@ -14,7 +14,7 @@ zone_pivot_groups: sq1-sql-projects-tools
 
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
-SQL projects contain declarative (CREATE statement) files for all the objects in a database, such as tables, views, and stored procedures. These files can be used to create new databases, update an existing databases, or even just to track the database in source control. Often we are starting with a SQL project when we have an existing database and want to create objects in the SQL project that match the database with minimal effort.
+SQL projects contain declarative (CREATE statement) files for all the objects in a database, such as tables, views, and stored procedures. These files can be used to create new databases, update existing databases, or even just to track the database in source control. Often we are starting with a SQL project when we have an existing database and want to create objects in the SQL project that match the database with minimal effort.
 
 Some SQL projects tools include a single step for creating a new SQL project from an existing database. Other tools require a few steps to create a new SQL project and then import objects from an existing database. Except for the Visual Studio (SQL Server Data Tools) instructions, the guide focuses on SDK-style SQL projects.
 
@@ -82,7 +82,7 @@ dotnet new install Microsoft.Build.Sql.Templates
 
 From the **SQL Server object explorer** in Visual Studio, right-click the database you want to create a project from and select **Create New Project...**.
 
-:::image type="content" source="media/start-from-an-existing-database/ssdt-import-database.png" alt-text="Screenshot of Import Database dialog in Visual Studio.":::
+:::image type="content" source="media/start-from-existing-database/ssdt-import-database.png" alt-text="Screenshot of Import Database dialog in Visual Studio.":::
 
 In the **Create New Project** dialog, provide a project name, which doesn't need to match a database name. Verify and modify the project location as needed. The default import settings import the objects into folders by schema, then object type. You can modify the import settings to change the folder structure or to include permissions in the objects being imported. **Start** the import.
 
@@ -98,7 +98,7 @@ While the import proceeds, progress is displayed as messages in the **Import Dat
 
 In the database object explorer view in VS Code or Azure Data Studio, select a database you want to create a project from. Right-click the database and select **Create Project from Database**.
 
-:::image type="content" source="media/start-from-an-existing-database/ads-new-project-from-database.png" alt-text="Screenshot of Create project from database dialog in Azure Data Studio.":::
+:::image type="content" source="media/start-from-existing-database/ads-new-project-from-database.png" alt-text="Screenshot of Create project from database dialog in Azure Data Studio.":::
 
 In Azure Data Studio, the **Create project from database** dialog requires the project name and location to be selected. The default import settings import the objects into folders by schema, then object type. You can select a different folder structure or to include permissions in the objects being imported before selecting **Create**.
 
@@ -158,7 +158,7 @@ Select **File**, **New**, then **Project**.
 
 In the **New Project** dialog box, use the term **SQL Server** in the search box. The top result should be **SQL Server Database Project**.
 
-:::image type="content" source="media/start-from-an-existing-database/new-project-dialog.png" alt-text="Screenshot of New project dialog." lightbox="media/start-from-an-existing-database/new-project-dialog.png":::
+:::image type="content" source="media/start-from-existing-database/new-project-dialog.png" alt-text="Screenshot of New project dialog." lightbox="media/start-from-existing-database/new-project-dialog.png":::
 
 Select **Next** to proceed to the next step. Provide a project name, which doesn't need to match a database name. Verify and modify the project location as needed.
 
@@ -174,7 +174,7 @@ Select **Create** to create the project. The empty project is opened and visible
 
 In the **Database Projects** view of VS Code or Azure Data Studio, select the **New Project** button.
 
-:::image type="content" source="media/start-from-an-existing-database/projects-viewlet.png" alt-text="Screenshot of New viewlet.":::
+:::image type="content" source="media/start-from-existing-database/projects-viewlet.png" alt-text="Screenshot of New viewlet.":::
 
 The first prompt determines which project template to use, primarily based on whether the target platform is SQL Server or Azure SQL. If prompted to select a specific version of SQL, choose the version that matches the target database but if the target database version is unknown, choose the latest version as the value can be modified later.
 
@@ -209,7 +209,7 @@ In **Solution Explorer**, right-click the project node and select **Import -> Da
 
 In the **Import Database** dialog, select the connection to the database you want to import objects from. If you've connected to the database in SQL Server object explorer, it's present in the **history** list.
 
-:::image type="content" source="media/start-from-an-existing-database/ssdt-import-database.png" alt-text="Screenshot of Import Database dialog in Visual Studio.":::
+:::image type="content" source="media/start-from-existing-database/ssdt-import-database.png" alt-text="Screenshot of Import Database dialog in Visual Studio.":::
 
 The default import settings import the objects into folders by schema, then object type. You can modify the import settings to change the folder structure or to include permissions in the objects being imported. **Start** the import.
 
@@ -228,7 +228,7 @@ While the import proceeds, progress is displayed as messages in the **Import Dat
 
 In the SQL Database Projects extension in Azure Data Studio, open the **Database Projects** view. Right-click the project node and select **Update project from database**.
 
-:::image type="content" source="media/start-from-an-existing-database/ads-update-project.png" alt-text="Screenshot of Update Database dialog in Azure Data Studio.":::
+:::image type="content" source="media/start-from-existing-database/ads-update-project.png" alt-text="Screenshot of Update Database dialog in Azure Data Studio.":::
 
 In the **Update Database** dialog, select the connection to the database you want to import objects from. If you've connected to the database in the **Connections** view, it's present in the **history** list.
 
@@ -289,6 +289,6 @@ The build output includes any errors or warnings and the specific files and line
 
 ## Related content
 
-- [Get started with SQL database projects](../getting-started.md)
-- [Tutorial: Create and deploy a SQL project](creating-and-deploying-a-sql-project.md)
-- [Compare a database and a project](../howto/compare-a-database-and-a-project.md)
+- [Get started with SQL database projects](../get-started.md)
+- [Tutorial: Create and deploy a SQL project](create-deploy-sql-project.md)
+- [Compare a database and a project](../howto/compare-database-project.md)

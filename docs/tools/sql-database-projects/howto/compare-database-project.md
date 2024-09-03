@@ -14,7 +14,7 @@ zone_pivot_groups: sq1-sql-projects-tools
 
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
-Understanding the object definition differences between a database and a SQL project can provide valuable insights into the state of your database and project, including during ongoing development or regression troubleshooting. SQL projects includes tooling for visualizing differences, analyzing changes required to update a database, importing changes from a database into a SQL project file set, and reviewing T-SQL scripts that would be executed to update a database to match the project.
+Understanding the object definition differences between a database and a SQL project can provide valuable insights into the state of your database and project, including during ongoing development or regression troubleshooting. SQL projects include tooling for visualizing differences, analyzing changes required for updating a database, importing changes from a database into a SQL project file set, and reviewing T-SQL scripts that would be executed to update a database to match the project.
 
 This article reviews methods for comparing a database and a SQL project using different approaches:
 
@@ -57,7 +57,7 @@ This article reviews methods for comparing a database and a SQL project using di
 
 ### Summary
 
-Schema compare provides the visually richest interface to understanding the differences between a database and a project. A key capability with schema compare is the directionality of the comparison is reversible. As a result, you can use schema comparison to understand changes from a project to be deployed to a database or changes from a database to add to a project. You can use schema compare to identify differences in object definitions, such as tables, views, stored procedures, and functions.
+Schema compare provides the visually richest interface to understanding the differences between a database and a project. A key capability with schema compare is that the directionality of the comparison is reversible. As a result, you can use schema comparison to understand changes from a project to be deployed to a database or changes from a database to add to a project. You can use schema compare to identify differences in object definitions, such as tables, views, stored procedures, and functions.
 
 The complete set of differences or a selected subset can be used to apply the changes to the database or project. Schema compare can also generate a deployment script that, when run, effectively applies the changes to a database.
 
@@ -85,16 +85,16 @@ sqlpackage /Action:deployreport /SourceFile:bin/Debug/MyProject.dacpac /TargetCo
 
 The produced XML is a simplified form of the deployment plan, summarizing the operations that would be performed if a database deployment is run. The following list of operations is non-exhaustive:
 
-- Create
-- Alter
-- Drop
-- Refresh
-- UnbindSchemaBinding
-- UnbindFulltextIndex
-- TableDataMotion
-- SPRename
-- EnableChangeTrackingDatabase
-- DisableChangeTrackingDatabase
+- `Create`
+- `Alter`
+- `Drop`
+- `Refresh`
+- `UnbindSchemaBinding`
+- `UnbindFulltextIndex`
+- `TableDataMotion`
+- `SPRename`
+- `EnableChangeTrackingDatabase`
+- `DisableChangeTrackingDatabase`
 
 A deploy report can be reviewed in a text editor or in Visual Studio and would look similar to the following:
 

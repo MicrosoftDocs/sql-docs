@@ -57,7 +57,11 @@ This walkthrough is intended for users who are already familiar with the SQL Dat
 
 ::: zone pivot="sq1-command-line"
 
-[!INCLUDE [non-command-line](../includes/non-command-line.md)]
+- A text editor, such as the file editor in Visual Studio Code.
+- A SQL database project that contains SQL objects.
+- [.NET 8 SDK](https://dotnet.microsoft.com/download/dotnet/8.0)
+
+This walkthrough is intended for users who are already familiar with SQL projects. You should be familiar with development concepts, such as how to create a class library, add packages, and how to use the code editor to edit code.
 
 ::: zone-end
 
@@ -115,11 +119,30 @@ Next, add supporting classes that will be used by the rule.
 
 ::: zone pivot="sq1-command-line"
 
-[!INCLUDE [non-command-line](../includes/non-command-line.md)]
+1. Open a command prompt or terminal window and navigate to the folder where you want to create the project.
+2. In the **Terminal**, enter the following commands to create a new solution and project:
+
+    ```bash
+    dotnet new sln
+    dotnet new classlib -n SampleRules -o SampleRules
+    dotnet sln add SampleRules/SampleRules.csproj
+    ```
+
+3. Change to the `SampleRules` directory:
+
+    ```bash
+    cd SampleRules
+    ```
+
+4. Add the required NuGet package:
+
+    ```bash
+    dotnet add package Microsoft.SqlServer.DacFx
+    ```
 
 ::: zone-end
 
-## Step 2. Create a custom rule helper classes
+## Step 2. Create custom rule helper classes
 
 Before you create the class for the rule itself, add a visitor class and an attribute class to the project. These classes might be useful for creating more custom rules.
 
@@ -148,8 +171,6 @@ The first class that you must define is the `WaitForDelayVisitor` class, derived
 ::: zone-end
 
 ::: zone pivot="sq1-command-line"
-
-[!INCLUDE [non-command-line](../includes/non-command-line.md)]
 
 1. Navigate to the `SampleRules` directory.
 2. Create a new file named `WaitForDelayVisitor.cs`.
@@ -338,17 +359,13 @@ Next, add a resource file that defines the rule name, rule description, and the 
 
 ::: zone pivot="sq1-visual-studio"
 
-12. In **Solution Explorer**, select the `SampleRules` project.
+12. In **Solution Explorer**, select the `SampleRules` project. On the **Project** menu, select **Add** then **New Item**. The **Add New Item** dialog box appears.
 
-13. On the **Project** menu, select **Add** then **New Item**. The **Add New Item** dialog box appears.
+13. In the list of **Installed Templates**, select **General**. In the details pane, select **Resources File**.
 
-14. In the list of **Installed Templates**, select **General**.
+14. In **Name**, type `RuleResources.resx`. The resource editor appears, with no resources defined.
 
-15. In the details pane, select **Resources File**.
-
-16. In **Name**, type `RuleResources.resx`. The resource editor appears, with no resources defined.
-
-17. Define four resource strings as follows:
+15. Define four resource strings as follows:
 
     | Name | Value |
     | --- | --- |
@@ -357,7 +374,7 @@ Next, add a resource file that defines the rule name, rule description, and the 
     | `CategorySamples` | `SamplesCategory` |
     | `CannotCreateResourceManager` | `Can't create ResourceManager for {0} from {1}.` |
 
-18. On the **File** menu, select **Save RuleResources.resx**.
+16. On the **File** menu, select **Save RuleResources.resx**.
 
 ::: zone-end
 
@@ -367,8 +384,8 @@ Next, add a resource file that defines the rule name, rule description, and the 
 
 ::: zone pivot="sq1-visual-studio-code"
 
-1. In the `SampleRules` directory, create a new file named `RuleResources.resx`.
-2. Open the `RuleResources.resx` file and add the following code:
+12. In the `SampleRules` directory, create a new file named `RuleResources.resx`.
+13. Open the `RuleResources.resx` file and add the following code:
 
     ```xml
     <?xml version="1.0" encoding="utf-8"?>
@@ -446,9 +463,9 @@ Next, add a resource file that defines the rule name, rule description, and the 
     </root>
     ```
 
-3. Save the `RuleResources.resx` file.
+14. Save the `RuleResources.resx` file.
 
-4. Open the `SampleRules.csproj` file and add the following code to update and include the resource contents in the project:
+15. Open the `SampleRules.csproj` file and add the following code to update and include the resource contents in the project:
 
     ```xml
     <ItemGroup>
@@ -466,14 +483,14 @@ Next, add a resource file that defines the rule name, rule description, and the 
     </ItemGroup>
     ```
 
-5. Save the `SampleRules.csproj` file.
+16. Save the `SampleRules.csproj` file.
 
 ::: zone-end
 
 ::: zone pivot="sq1-command-line"
 
-1. In the `SampleRules` directory, create a new file named `RuleResources.resx`.
-2. Open the `RuleResources.resx` file and add the following code:
+12. In the `SampleRules` directory, create a new file named `RuleResources.resx`.
+13. Open the `RuleResources.resx` file and add the following code:
 
     ```xml
     <?xml version="1.0" encoding="utf-8"?>
@@ -551,9 +568,9 @@ Next, add a resource file that defines the rule name, rule description, and the 
     </root>
     ```
 
-3. Save the `RuleResources.resx` file.
+14. Save the `RuleResources.resx` file.
 
-4. Open the `SampleRules.csproj` file and add the following code to update and include the resource contents in the project:
+15. Open the `SampleRules.csproj` file and add the following code to update and include the resource contents in the project:
 
     ```xml
     <ItemGroup>
@@ -571,7 +588,7 @@ Next, add a resource file that defines the rule name, rule description, and the 
     </ItemGroup>
     ```
 
-5. Save the `SampleRules.csproj` file.
+16. Save the `SampleRules.csproj` file.
 
 ::: zone-end
 
@@ -581,9 +598,9 @@ Next, define a class that references the resources in the resource file that are
 
 ::: zone pivot="sq1-visual-studio"
 
-19. In **Solution Explorer**, select the `SampleRules` project.
+17. In **Solution Explorer**, select the `SampleRules` project.
 
-20. On the **Project** menu, select **Add** then **Class**. The **Add New Item** dialog box appears. In the **Name** text box, type `SampleRuleConstants.cs` and select the **Add** button. The `SampleRuleConstants.cs` file is added to the project in **Solution Explorer**.
+18. On the **Project** menu, select **Add** then **Class**. The **Add New Item** dialog box appears. In the **Name** text box, type `SampleRuleConstants.cs` and select the **Add** button. The `SampleRuleConstants.cs` file is added to the project in **Solution Explorer**.
 
 ::: zone-end
 
@@ -593,19 +610,19 @@ Next, define a class that references the resources in the resource file that are
 
 ::: zone pivot="sq1-visual-studio-code"
 
-19. Navigate to the `SampleRules` directory in the **Explorer** view in Visual Studio Code.
-20. Create a new file named `SampleRuleConstants.cs`.
+17. Navigate to the `SampleRules` directory in the **Explorer** view in Visual Studio Code.
+18. Create a new file named `SampleRuleConstants.cs`.
 
 ::: zone-end
 
 ::: zone pivot="sq1-command-line"
 
-19. Navigate to the `SampleRules` directory.
-20. Create a new file named `SampleRuleConstants.cs`.
+17. Navigate to the `SampleRules` directory.
+18. Create a new file named `SampleRuleConstants.cs`.
 
 ::: zone-end
 
-21. Open the `SampleRuleConstants.cs` file and add the following using statements to the file:
+19. Open the `SampleRuleConstants.cs` file and add the following using statements to the file:
 
     ```csharp
     namespace SampleRules
@@ -639,7 +656,7 @@ Next, define a class that references the resources in the resource file that are
     }
     ```
 
-22. On the **File** menu, select **Save**.
+20. On the **File** menu, select **Save**.
 
 ## Step 3: Create a custom rule class
 
@@ -867,7 +884,7 @@ After you add the helper classes that the custom code analysis rule will use, cr
 ::: zone pivot="sq1-visual-studio-code"
 
 1. Open the **Terminal** window in Visual Studio Code by selecting the **View** menu, then **Terminal**.
-1. In the **Terminal**, enter the following command to build the project:
+2. In the **Terminal**, enter the following command to build the project:
 
     ```bash
     dotnet build /p:Configuration=Release
@@ -878,7 +895,7 @@ After you add the helper classes that the custom code analysis rule will use, cr
 ::: zone pivot="sq1-command-line"
 
 1. Navigate to the `SampleRules` directory.
-1. Run the following command to build the project:
+2. Run the following command to build the project:
 
     ```bash
     dotnet build /p:Configuration=Release

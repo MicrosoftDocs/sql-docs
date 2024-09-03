@@ -91,4 +91,4 @@ This script `scripts\before-script.sql` is executed before the deployment plan i
 
 - [SqlPackage Publish parameters, properties, and SQLCMD variables](../../sqlpackage/sqlpackage-publish.md)
 - [SQLCMD variables overview](sqlcmd-variables.md)
-- [Tutorial: Create and deploy a SQL project](../tutorials/creating-and-deploying-a-sql-project.md)
+- [Tutorial: Create and deploy a SQL project](../tutorials/create-deploy-sql-project.md)

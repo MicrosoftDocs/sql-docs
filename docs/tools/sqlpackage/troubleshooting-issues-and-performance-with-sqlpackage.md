@@ -110,7 +110,7 @@ Here are the causes and solutions to work around this error:
 
 1. Verify that the destination you're importing into is an empty database.
 1. If your database has constraints that are using the DEFAULT attribute (where SQL Server assigns a random name to the constraint) and an explicitly named constraint, a constraint with the same name might be created twice. You should use all explicitly named constraints (not using DEFAULT), or all system-defined names (using DEFAULT).
-1. Manually edit the model.xml and rename the constraint with the name experiencing the error to a unique name. This option should be undertaken only if directed by Microsoft support and poses a risk of .bacpac corruption.
+1. Manually edit the model.xml and rename the constraint with the name experiencing the error to a unique name. This option should be undertaken only if directed by Microsoft support and poses a risk of `.bacpac` corruption.
 
 ### Stack overflow exception
 

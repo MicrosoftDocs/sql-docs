@@ -39,6 +39,6 @@ Deployment contributors are reusable through parameterization and can be used in
 ## Related content
 
 - [Extending the Database Features](../../../ssdt/extending-the-database-features.md)
-- [Tutorial: Create and deploy a SQL project](../tutorials/creating-and-deploying-a-sql-project.md)
+- [Tutorial: Create and deploy a SQL project](../tutorials/create-deploy-sql-project.md)
 - [SqlPackage Publish parameters, properties, and SQLCMD variables](../../sqlpackage/sqlpackage-publish.md)
 - [Code analysis rules extensibility overview](code-analysis-extensibility.md)

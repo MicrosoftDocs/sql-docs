@@ -14,7 +14,7 @@ zone_pivot_groups: sq1-sql-projects-tools
 
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
-Creating a new SDK-style SQL project is a [quick task](../getting-started.md#create-a-new-project). However, if you have existing SQL projects you can convert them to SDK-style SQL projects in place to take advantage of the new features.
+Creating a new SDK-style SQL project is a [quick task](../get-started.md#create-a-new-project). However, if you have existing SQL projects you can convert them to SDK-style SQL projects in place to take advantage of the new features.
 
 Once you convert the project, you can use the new features of the SDK-style project, such as:
 
@@ -270,5 +270,5 @@ When schema comparison is run, no results should be displayed. The lack of diffe
 ## Related content
 
 - [What are SQL database projects?](../sql-database-projects.md)
-- [Get started with SQL database projects](../getting-started.md)
+- [Get started with SQL database projects](../get-started.md)
 - [SQL projects package references overview](../concepts/package-references.md)

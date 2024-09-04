@@ -9554,8 +9554,6 @@ items:
           href: ssms/visual-db-tools/exclude-duplicate-rows-visual-database-tools.md
         - name: Remove Columns from Query Results
           href: ssms/visual-db-tools/remove-columns-from-query-results-visual-database-tools.md
-        - name: Discard Changes Made to Diagrams
-          href: ssms/visual-db-tools/discard-changes-made-to-diagrams-visual-database-tools.md
         - name: Rename Queries
           href: ssms/visual-db-tools/rename-queries-visual-database-tools.md
         - name: Delete Rows in the Results Pane
@@ -9688,8 +9686,6 @@ items:
           href: ssms/visual-db-tools/map-many-to-many-relationships-visual-database-tools.md
         - name: Create Relationships Between Tables on a Diagram
           href: ssms/visual-db-tools/create-relationships-between-tables-on-a-diagram-visual-database-tools.md
-        - name: Rename a Database Diagram
-          href: ssms/visual-db-tools/rename-a-database-diagram-visual-database-tools.md
         - name: Specify Conditions for Groups
           href: ssms/visual-db-tools/specify-conditions-for-groups-visual-database-tools.md
         - name: Specify Search Criteria

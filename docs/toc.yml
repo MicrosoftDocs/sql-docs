@@ -5306,8 +5306,10 @@ items:
           href: relational-databases/replication/publish/automatically-generate-join-filters-between-merge-articles.md
         - name: Define a logical record relationship
           href: relational-databases/replication/publish/define-a-logical-record-relationship-between-merge-table-articles.md
-        - name: Configure IIS 7 for Web Synchronization
+        - name: Configure IIS 7 for web synchronization
           href: relational-databases/replication/configure-iis-7-for-web-synchronization.md
+        - name: Configure web synchronization
+          href: relational-databases/replication/configure-web-synchronization.md
         - name: Resolve data conflicts
           href: relational-databases/replication/view-and-resolve-data-conflicts-for-merge-publications.md
         - name: Implement a business logic handler
@@ -12912,6 +12914,8 @@ items:
         href: relational-databases/system-catalog-views/sys-workload-management-workload-classifier-details-transact-sql.md
       - name: sys.workload-management-workload-classifiers
         href: relational-databases/system-catalog-views/sys-workload-management-workload-classifiers-transact-sql.md
+      - name: sys.workload-management-workload-groups
+        href: relational-databases/system-catalog-views/sys-workload-management-workload-groups-transact-sql.md
     - name: XML Schemas (XML Type System)
       href: relational-databases/system-catalog-views/xml-schemas-xml-type-system-catalog-views-transact-sql.md
       items:
@@ -13015,8 +13019,9 @@ items:
     - name: sys.sysusers
       href: relational-databases/system-compatibility-views/sys-sysusers-transact-sql.md
   - name: System dynamic management views
-    href: relational-databases/system-dynamic-management-views/system-dynamic-management-views.md
     items:
+    - name: Overview
+      href: relational-databases/system-dynamic-management-views/system-dynamic-management-views.md
     - name: Always On Availability Groups
       href: relational-databases/system-dynamic-management-views/always-on-availability-groups-dynamic-management-views-functions.md
       items:
@@ -13555,6 +13560,8 @@ items:
         href: relational-databases/system-dynamic-management-views/sys-dm-pdw-wait-stats-transact-sql.md
       - name: sys.dm_pdw_waits
         href: relational-databases/system-dynamic-management-views/sys-dm-pdw-waits-transact-sql.md
+      - name: sys.dm_workload_management_workload_groups_stats
+        href: relational-databases/system-dynamic-management-views/sys-dm-workload-management-workload-group-stats-transact-sql.md
     - name: SQL Server Operating System
       href: relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md
       items:
@@ -13833,8 +13840,9 @@ items:
       - name: sys.fn_has_change_feed_permissions
         href: relational-databases/system-functions/fn-has-change-feed-permissions.md
   - name: System information schema views
-    href: relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md
     items:
+    - name: Overview
+      href: relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md
     - name: CHECK_CONSTRAINTS
       href: relational-databases/system-information-schema-views/check-constraints-transact-sql.md
     - name: COLUMN_DOMAIN_USAGE
@@ -13863,6 +13871,8 @@ items:
       href: relational-databases/system-information-schema-views/routines-transact-sql.md
     - name: SCHEMATA
       href: relational-databases/system-information-schema-views/schemata-transact-sql.md
+    - name: SEQUENCES
+      href: relational-databases/system-information-schema-views/sequences-transact-sql.md
     - name: TABLE_CONSTRAINTS
       href: relational-databases/system-information-schema-views/table-constraints-transact-sql.md
     - name: TABLE_PRIVILEGES
@@ -15823,6 +15833,8 @@ items:
         href: relational-databases/system-tables/msqreader-agents-transact-sql.md
       - name: MSqreader_history
         href: relational-databases/system-tables/msqreader-history-transact-sql.md
+      - name: MSRedirected_publishers
+        href: relational-databases/system-tables/msredirected-publishers.md
       - name: MSrepl_agent_jobs
         href: relational-databases/system-tables/msrepl-agent-jobs-transact-sql.md
       - name: MSrepl_backup_lsns

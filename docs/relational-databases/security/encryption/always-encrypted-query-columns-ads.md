@@ -13,7 +13,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 # Query columns using Always Encrypted with Azure Data Studio
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
-This article describes how to query columns, encrypted with [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) using [Azure Data Studio](../../../azure-data-studio/what-is-azure-data-studio.md). With Azure Data Studio, you can:
+This article describes how to query columns, encrypted with [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) using [Azure Data Studio](/azure-data-studio/what-is-azure-data-studio). With Azure Data Studio, you can:
 - Retrieve ciphertext values stored in encrypted columns. 
 - Retrieve plaintext values stored in encrypted columns.  
 - Send plaintext values targeting encrypted columns (for example, in `INSERT` or `UPDATE` statements and as a lookup parameter of the `WHERE` clauses in `SELECT` statements). 
@@ -83,8 +83,8 @@ Enabling Always Encrypted for a database connection instructs the [Microsoft .NE
 If you don't enable Always Encrypted for a connection, the Microsoft .NET Data Provider for SQL Server won't try to encrypt query parameters or decrypt results.
 
 You can enable or disable Always Encrypted when you connect to a database. For general information on how to connect to a database see:
-- [Quickstart: Connect and query SQL Server using Azure Data Studio](../../../azure-data-studio/quickstart-sql-server.md)
-- [Quickstart: Use Azure Data Studio to connect and query Azure SQL database](../../../azure-data-studio/quickstart-sql-database.md)
+- [Quickstart: Connect and query SQL Server using Azure Data Studio](/azure-data-studio/quickstart-sql-server)
+- [Quickstart: Use Azure Data Studio to connect and query Azure SQL database](/azure-data-studio/quickstart-sql-database)
 
 To enable (disable) Always Encrypted:
 1. In the **Connection** dialog, click **Advanced...**.

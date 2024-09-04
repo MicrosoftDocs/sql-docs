@@ -25,7 +25,7 @@ The alternative is to use the **PATH** option to maintain control over the outpu
 
 A query that uses the **FOR JSON AUTO** option must have a **FROM** clause.  
   
-Here are some examples of the **FOR JSON** clause with the **AUTO** option. [Azure Data Studio](../../azure-data-studio/download-azure-data-studio.md) is the recommended query editor for JSON queries because it auto-formats the JSON results (as seen in this article) instead of displaying a flat string.
+Here are some examples of the **FOR JSON** clause with the **AUTO** option. [Azure Data Studio](/azure-data-studio/download-azure-data-studio) is the recommended query editor for JSON queries because it auto-formats the JSON results (as seen in this article) instead of displaying a flat string.
   
 ## Examples
 

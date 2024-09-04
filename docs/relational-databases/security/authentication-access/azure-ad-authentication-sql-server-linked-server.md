@@ -25,7 +25,7 @@ This article assumes there are two SQL Server instances (`S1` and `S2`). Both ha
 ## Prerequisites
 
 - Fully operational Microsoft Entra authentication for SQL Server. For more information, see [Microsoft Entra authentication for SQL Server](azure-ad-authentication-sql-server-overview.md) and [Tutorial: Set up Microsoft Entra authentication for SQL Server](azure-ad-authentication-sql-server-setup-tutorial.md).
-- [SQL Server Management Studio (SSMS)](../../../ssms/download-sql-server-management-studio-ssms.md) version 18.0 or higher. Or download the latest [Azure Data Studio](../../../azure-data-studio/download-azure-data-studio.md).
+- [SQL Server Management Studio (SSMS)](../../../ssms/download-sql-server-management-studio-ssms.md) version 18.0 or higher. Or download the latest [Azure Data Studio](/azure-data-studio/download-azure-data-studio).
 
 > [!NOTE]
 > The subject name of the SSL/TLS certificate used by `S2` must match the server name provided in the [`provstr`](../../system-stored-procedures/sp-addlinkedserver-transact-sql.md) attribute. This should either be the Fully Qualified Domain Name (**FQDN**) or **hostname** of `S2`.

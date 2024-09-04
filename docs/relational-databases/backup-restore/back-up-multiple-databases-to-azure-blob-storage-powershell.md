@@ -34,7 +34,7 @@ The following are considerations for the sample scripts:
   
 - SQL Server PowerShell implements cmdlets to navigate the path structure that represents the hierarchy of objects supported by a PowerShell provider. When you have navigated to a node in the path, you can use other cmdlets to perform basic operations on the current object.
 
-  For more information, see [Navigate SQL Server PowerShell Paths](../../powershell/navigate-sql-server-powershell-paths.md).
+  For more information, see [Navigate SQL Server PowerShell Paths](/powershell/sql-server/navigate-sql-server-powershell-paths).
 
 - **Get-ChildItem** cmdlet: The information returned by the **Get-ChildItem** depends on the location in a SQL Server PowerShell path. For example, if the location is at the computer level, this cmdlet returns all the SQL Server database engine instances installed on the computer. Or, if the location is at the object level such as databases, then it returns a list of database objects. By default the **Get-ChildItem** cmdlet does not return system objects. Use the `–Force` parameter to see the system objects.
 

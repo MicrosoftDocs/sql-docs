@@ -28,7 +28,7 @@ This article shows you how can convert a regular table into a ledger table.
 
 ## Prerequisites
 
-- [SQL Server Management Studio](../../../ssms/download-sql-server-management-studio-ssms.md) or [Azure Data Studio](../../../azure-data-studio/download-azure-data-studio.md).
+- [SQL Server Management Studio](../../../ssms/download-sql-server-management-studio-ssms.md) or [Azure Data Studio](/azure-data-studio/download-azure-data-studio).
 
 ## Create an append-only or updatable ledger table
 

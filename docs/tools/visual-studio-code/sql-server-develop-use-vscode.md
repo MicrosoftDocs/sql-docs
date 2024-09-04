@@ -211,6 +211,6 @@ If you need to save and run SQL scripts later, for administration or a larger de
 ## Next steps
 
 - If you're new to T-SQL, see [Tutorial: Write Transact-SQL statements](../../t-sql/tutorial-writing-transact-sql-statements.md) and the [Transact-SQL Reference (Database Engine)](../../t-sql/language-reference.md).
-- Develop for SQL databases in Visual Studio Code with the [SQL Database Projects extension](../../azure-data-studio/extensions/sql-database-project-extension.md)
+- Develop for SQL databases in Visual Studio Code with the [SQL Database Projects extension](/azure-data-studio/extensions/sql-database-project-extension)
 - For more information on using or contributing to the mssql extension, see the [mssql extension project wiki](https://github.com/Microsoft/vscode-mssql/wiki).
 - For more information on using Visual Studio Code, see the [Visual Studio Code documentation](https://code.visualstudio.com/docs).

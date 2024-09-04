@@ -21,7 +21,7 @@ For more information about samples, see the [Samples GitHub repository](https://
 ## Prerequisites
 
 - [SQL Server](https://www.microsoft.com/evalcenter/evaluate-sql-server-2022) or [Azure SQL Database](https://azure.microsoft.com/services/sql-database/)
-- [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md) (SSMS) or [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md)
+- [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md) (SSMS) or [Azure Data Studio](/azure-data-studio/download-azure-data-studio)
 
 ## Download backup files
 
@@ -52,7 +52,7 @@ Additional files can be found directly on GitHub:
 
 ## Restore to SQL Server
 
-You can use the `.bak` file to restore your sample database to your [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] instance. You can do so using the [RESTORE Statements](../t-sql/statements/restore-statements-transact-sql.md) command, or using the graphical interface (GUI) in [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md) (SSMS) or [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md).
+You can use the `.bak` file to restore your sample database to your [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] instance. You can do so using the [RESTORE Statements](../t-sql/statements/restore-statements-transact-sql.md) command, or using the graphical interface (GUI) in [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md) (SSMS) or [Azure Data Studio](/azure-data-studio/download-azure-data-studio).
 
 # [SQL Server Management Studio (SSMS)](#tab/ssms)
 
@@ -118,7 +118,7 @@ GO
 
 # [Azure Data Studio](#tab/data-studio)
 
-If you're not familiar using [Azure Data Studio Studio](../azure-data-studio/download-azure-data-studio.md), see [connect & query](../azure-data-studio/quickstart-sql-server.md) to get started.
+If you're not familiar using [Azure Data Studio Studio](/azure-data-studio/download-azure-data-studio), see [connect & query](/azure-data-studio/quickstart-sql-server) to get started.
 
 To restore your database in Azure Data Studio, follow these steps:
 

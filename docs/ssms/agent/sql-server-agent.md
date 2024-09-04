@@ -183,4 +183,4 @@ Use the following tasks to get started with SQL Server Agent:
 ## See Also
 
 - [Surface Area Configuration](../../relational-databases/security/surface-area-configuration.md)
-- [SQL Server Agent with PowerShell](../../powershell/sql-server-powershell.md#sql-server-agent)
+- [SQL Server Agent with PowerShell](/powershell/sql-server/sql-server-powershell#sql-server-agent)

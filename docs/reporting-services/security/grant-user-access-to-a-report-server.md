@@ -31,7 +31,7 @@ If your report server is configured for SharePoint integrated mode, you configur
 
 - A configured native mode report server. For more information, see [Configure a native mode report server for local administration](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).
 - Membership in the local Administrators group on the report server.
-- Optionally, roles that are customized or defined for tasks. For example, if you want to use custom security settings for individual items, you can create a new role definition that grants view-access to folders. For more information, see [Predefined roles in Reporting Services](/sql/reporting-services/security/role-definitions-predefined-roles) and [Create, delete, or modify a role (Management Studio)](/sql/reporting-services/security/role-definitions-create-delete-or-modify).
+- Optionally, roles that are customized or defined for tasks. For example, if you want to use custom security settings for individual items, you can create a new role definition that grants view-access to folders. For more information, see [Predefined roles in Reporting Services](role-definitions-predefined-roles.md) and [Create, delete, or modify a role (Management Studio)](role-definitions-create-delete-or-modify.md).
 
 ## Role types
 
@@ -47,7 +47,7 @@ When you assign a user to a role, you must select a role that's already defined.
 
 ## Delegate the assignment task
 
-To delegate the task of assigning roles to other users, create role assignments that map user accounts to Content Manager and System Administrator roles. Users who have Content Manager and System Administrator permissions can add users to a report server. For more information, see [Predefined roles in Reporting Services](/sql/reporting-services/security/role-definitions-predefined-roles).
+To delegate the task of assigning roles to other users, create role assignments that map user accounts to Content Manager and System Administrator roles. Users who have Content Manager and System Administrator permissions can add users to a report server. For more information, see [Predefined roles in Reporting Services](role-definitions-predefined-roles.md).
 
 ## Add a user or group to a system role
 

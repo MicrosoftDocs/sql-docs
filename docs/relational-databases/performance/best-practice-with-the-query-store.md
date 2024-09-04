@@ -31,7 +31,7 @@ For a quick description on how to use Query Store in troubleshooting scenarios, 
 
 ## <a id="Insight"></a> Use Query Performance Insight in Azure SQL Database
 
-If you run Query Store in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], you can use [Query Performance Insight](/azure/sql-database/sql-database-query-performance) to analyze resource consumption over time. While you can use [!INCLUDE [ssManStudio](../../includes/ssmanstudio-md.md)] and [Azure Data Studio](../../azure-data-studio/what-is-azure-data-studio.md) to get detailed resource consumption for all your queries, such as CPU, memory, and I/O, Query Performance Insight gives you a quick and efficient way to determine their effect on overall DTU consumption for your database. For more information, see [Azure SQL Database Query Performance Insight](/azure/azure-sql/database/query-performance-insight-use).
+If you run Query Store in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], you can use [Query Performance Insight](/azure/sql-database/sql-database-query-performance) to analyze resource consumption over time. While you can use [!INCLUDE [ssManStudio](../../includes/ssmanstudio-md.md)] and [Azure Data Studio](/azure-data-studio/what-is-azure-data-studio) to get detailed resource consumption for all your queries, such as CPU, memory, and I/O, Query Performance Insight gives you a quick and efficient way to determine their effect on overall DTU consumption for your database. For more information, see [Azure SQL Database Query Performance Insight](/azure/azure-sql/database/query-performance-insight-use).
 
 ## Use Query Store with Elastic Pool databases
 

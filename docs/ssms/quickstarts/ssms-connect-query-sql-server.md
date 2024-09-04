@@ -32,7 +32,7 @@ The article demonstrates how to follow the below steps:
 
 This article covers connecting and querying an instance of SQL Server. For Azure SQL, see [Connect and query Azure SQL Database & SQL Managed Instance](/azure/azure-sql/database/connect-query-ssms).
 
-To use [Azure Data Studio](../../azure-data-studio/download-azure-data-studio.md), see connect and query [SQL Server](../../azure-data-studio/quickstart-sql-server.md), [Azure SQL Database](../../azure-data-studio/quickstart-sql-database.md), and [Azure Synapse Analytics](../../azure-data-studio/quickstart-sql-dw.md).
+To use [Azure Data Studio](/azure-data-studio/download-azure-data-studio), see connect and query [SQL Server](/azure-data-studio/quickstart-sql-server), [Azure SQL Database](/azure-data-studio/quickstart-sql-database), and [Azure Synapse Analytics](/azure-data-studio/quickstart-sql-dw).
 
 To learn more about SQL Server Management Studio, see [Tips and tricks for using SQL Server Management Studio (SSMS)](../tutorials/ssms-tricks.md).
 

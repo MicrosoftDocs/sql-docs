@@ -63,7 +63,7 @@ In [part four](r-predictive-model-deploy.md), you'll learn how to store the mode
 
 - **RODBC** - This driver is used in the R scripts you develop in this tutorial. If it's not already installed, install it using the R command `install.packages("RODBC")`. For more information on RODBC, see [CRAN - Package RODBC](https://cran.r-project.org/web/packages/RODBC/index.html).
 
-- SQL query tool - This tutorial assumes you're using [Azure Data Studio](../../azure-data-studio/what-is-azure-data-studio.md). For more information, see [How to use notebooks in Azure Data Studio](../../azure-data-studio/notebooks/notebooks-guidance.md).
+- SQL query tool - This tutorial assumes you're using [Azure Data Studio](/azure-data-studio/what-is-azure-data-studio). For more information, see [How to use notebooks in Azure Data Studio](/azure-data-studio/notebooks/notebooks-guidance).
 
 ## Restore the sample database
 
@@ -77,7 +77,7 @@ The sample database used in this tutorial has been saved to a `.bak` database ba
 ::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15"
 1. Download the file [TutorialDB.bak](https://aka.ms/TutorialDB_bak).
 
-1. Follow the directions in [Restore a database from a backup file](../../azure-data-studio/tutorial-backup-restore-sql-server.md#restore-a-database-from-a-backup-file) in Azure Data Studio, using these details:
+1. Follow the directions in [Restore a database from a backup file](/azure-data-studio/tutorial-backup-restore-sql-server#restore-a-database-from-a-backup-file) in Azure Data Studio, using these details:
 
    * Import from the `TutorialDB.bak` file you downloaded.
    * Name the target database `TutorialDB`.

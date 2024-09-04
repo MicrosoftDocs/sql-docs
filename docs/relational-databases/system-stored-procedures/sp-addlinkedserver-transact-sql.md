@@ -132,7 +132,7 @@ The following table shows the ways that a linked server can be set up for data s
 | ODBC data source | [!INCLUDE [msCoName](../../includes/msconame-md.md)] OLE DB Provider for ODBC | Any | `MSDASQL` | | | ODBC connection string | |
 | File system | [!INCLUDE [msCoName](../../includes/msconame-md.md)] OLE DB Provider for Indexing Service | Any | `MSIDXS` | Indexing Service catalog name | | | |
 | [!INCLUDE [msCoName](../../includes/msconame-md.md)] Excel Spreadsheet | [!INCLUDE [msCoName](../../includes/msconame-md.md)] OLE DB Provider for Jet | Any | `Microsoft.Jet.OLEDB.4.0` | Full path of Excel file | | Excel 5.0 | |
-| IBM DB2 Database | [!INCLUDE [msCoName](../../includes/msconame-md.md)] OLE DB Provider for DB2 | Any | `DB2OLEDB` | | | See [!INCLUDE [msCoName](../../includes/msconame-md.md)] OLE DB Provider for DB2 documentation. | Catalog name of DB2 database |
+| IBM Db2 Database | [!INCLUDE [msCoName](../../includes/msconame-md.md)] OLE DB Provider for DB2 | Any | `DB2OLEDB` | | | See [!INCLUDE [msCoName](../../includes/msconame-md.md)] OLE DB Provider for DB2 documentation. | Catalog name of DB2 database |
 
 <sup>1</sup> This way of setting up a linked server forces the name of the linked server to be the same as the network name of the remote instance of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]. Use *@datasrc* to specify the server.
 

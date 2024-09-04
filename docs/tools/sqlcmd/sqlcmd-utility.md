@@ -136,7 +136,7 @@ You can try the **sqlcmd** utility from Azure Cloud Shell, as it's preinstalled 
 
 ### Azure Data Studio
 
-To run SQLCMD statements in [Azure Data Studio](../../azure-data-studio/download-azure-data-studio.md), select **Enable SQLCMD** from the editor toolbar.
+To run SQLCMD statements in [Azure Data Studio](/azure-data-studio/download-azure-data-studio), select **Enable SQLCMD** from the editor toolbar.
 
 ### SQL Server Management Studio (SSMS)
 

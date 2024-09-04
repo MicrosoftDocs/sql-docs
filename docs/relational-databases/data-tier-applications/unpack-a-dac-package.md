@@ -59,7 +59,7 @@ Deploying the .dacpac to a test instance results in the contents of the .dacpac 
 
 ### Deploy the .dacpac using Azure Data Studio
 
-1. Install the **SQL Server dacpac extension** in [Azure Data Studio](../../azure-data-studio/extensions/sql-server-dacpac-extension.md).
+1. Install the **SQL Server dacpac extension** in [Azure Data Studio](/azure-data-studio/extensions/sql-server-dacpac-extension).
 
 2. Connect to the desired instance. Right-click on the server node and select **Data-tier application wizard** from the menu.
 
@@ -116,5 +116,5 @@ namespace DacUnpack
 
 - [Data-tier Applications](../../relational-databases/data-tier-applications/data-tier-applications.md)
 - [SqlPackage Publish](../../tools/sqlpackage/sqlpackage-publish.md)
-- [SQL Server dacpac extension in Azure Data Studio](../../azure-data-studio/extensions/sql-server-dacpac-extension.md)
+- [SQL Server dacpac extension in Azure Data Studio](/azure-data-studio/extensions/sql-server-dacpac-extension)
 - [SQL Server Data Tools](../../ssdt/download-sql-server-data-tools-ssdt.md)

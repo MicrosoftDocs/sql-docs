@@ -157,7 +157,7 @@ GO
 
 ## <a id="PowerShellProcedure"></a> Use PowerShell
 
-Set up and use the [SQL Server PowerShell Provider](../../powershell/sql-server-powershell-provider.md). Use the **Backup-SqlDatabase** cmdlet and specify **Log** for the value of the **-BackupAction** parameter.
+Set up and use the [SQL Server PowerShell Provider](/powershell/sql-server/sql-server-powershell-provider). Use the **Backup-SqlDatabase** cmdlet and specify **Log** for the value of the **-BackupAction** parameter.
 
 The following example creates a log backup of the `<myDatabase>` database to the default backup location of the server instance `Computer\Instance`.
 

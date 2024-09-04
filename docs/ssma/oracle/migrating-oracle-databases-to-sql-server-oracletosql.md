@@ -18,7 +18,7 @@ ms.custom:
 
 ## Database Migration Assessment for Oracle extension
 
-Try the [Database Migration Assessment for Oracle extension in Azure Data Studio](../../azure-data-studio/extensions/database-migration-assessment-for-oracle-extension.md) for Oracle to SQL pre-assessment and workload categorization. This extension is useful if you are:
+Try the [Database Migration Assessment for Oracle extension in Azure Data Studio](/azure-data-studio/extensions/database-migration-assessment-for-oracle-extension) for Oracle to SQL pre-assessment and workload categorization. This extension is useful if you are:
 
 - in the early phase of Oracle to SQL migration and need to do a high level workload assessment
 - interested in sizing an Azure SQL target for your Oracle workload

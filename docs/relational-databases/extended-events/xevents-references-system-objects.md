@@ -54,7 +54,7 @@ This list is not meant to be complete.
 
 - [Configure Extended Events for Always On availability groups](../../database-engine/availability-groups/windows/always-on-extended-events.md)
 
-- [Extended Events for Stretch Database](../../sql-server/stretch-database/extended-events-for-stretch-database.md)
+- [Extended Events for Stretch Database](/previous-versions/sql/sql-server/stretch-database/extended-events-for-stretch-database)
 
 ## Azure SQL Database and extended events
 

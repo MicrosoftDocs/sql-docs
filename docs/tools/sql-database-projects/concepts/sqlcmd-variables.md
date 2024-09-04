@@ -39,7 +39,7 @@ SQLCMD variables can be used in SQL objects and scripts by wrapping the variable
 
 ```sql
 IF '$(EnvironmentName)' = 'testing'
-BEING
+BEGIN
     -- do something
 END
 ```

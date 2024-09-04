@@ -34,7 +34,7 @@ The external Java language is defined with [CREATE EXTERNAL LANGUAGE](../t-sql/s
 
    - Use the IDE you prefer for developing Java code.
    - Install the [Microsoft Extensibility SDK for Java for SQL Server](how-to/extensibility-sdk-java-sql-server.md) to execute Java code on SQL Server.
-   - Use [Azure Data Studio](../azure-data-studio/what-is-azure-data-studio.md) for executing external code on SQL Server.
+   - Use [Azure Data Studio](/azure-data-studio/what-is-azure-data-studio) for executing external code on SQL Server.
    - Use the system stored procedure [sp_execute_external_script](../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) to execute your Java code on SQL Server.
 
 1. Write your first Java code. Use the following tutorial as a starting point. [Tutorial: Search for a string using regular expressions (regex) in Java](tutorials/search-for-string-using-regular-expressions-in-java.md)

@@ -23,7 +23,7 @@ helpviewer_keywords:
 In SQL Server Reporting Services (SSRS) native mode, you can use the Transport Layer Security (TLS) protocol to establish encrypted connections to a report server. TLS was previously known as Secure Sockets Layer (SSL). If you have a certificate (.cer) file installed in a local certificate store on the report server, you can bind the certificate to an SSRS URL reservation to support report server connections through an encrypted channel.
 
 > [!TIP]
-> For more information about SSRS SharePoint mode, see [Reporting Services Report Server (SharePoint mode)](/sql/reporting-services/report-server-sharepoint/reporting-services-report-server-sharepoint-mode).
+> For more information about SSRS SharePoint mode, see [Reporting Services Report Server (SharePoint mode)](../report-server-sharepoint/reporting-services-report-server-sharepoint-mode.md).
   
 Because Internet Information Services (IIS) also uses TLS, there are significant interoperability issues that you must account for if you run IIS and SSRS on the same computer. For guidance on how to address these issues, review the [Interoperability issues with IIS](#interoperability-issues-with-iis) section, later in this article.
 

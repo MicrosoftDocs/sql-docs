@@ -87,7 +87,7 @@ A planned manual failover is supported only when the primary replica and the tar
 2. Use the **Switch-SqlAvailabilityGroup** cmdlet. 
   
     > [!NOTE] 
-    >  To view the syntax of a cmdlet, use the **Get-Help** cmdlet in the [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] PowerShell environment. For more information, see [Get help for SQL Server PowerShell](../../../powershell/sql-server-powershell.md). 
+    >  To view the syntax of a cmdlet, use the **Get-Help** cmdlet in the [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] PowerShell environment. For more information, see [Get help for SQL Server PowerShell](/powershell/sql-server/sql-server-powershell). 
   
      The following example manually fails over the *MyAg* availability group to the secondary replica with the specified path: 
   
@@ -97,8 +97,8 @@ A planned manual failover is supported only when the primary replica and the tar
   
     To set up and use the SQL Server PowerShell provider: 
   
-    -   [SQL Server PowerShell provider](../../../powershell/sql-server-powershell-provider.md) 
-    -   [Get help for SQL Server PowerShell](../../../powershell/sql-server-powershell.md) 
+    -   [SQL Server PowerShell provider](/powershell/sql-server/sql-server-powershell-provider) 
+    -   [Get help for SQL Server PowerShell](/powershell/sql-server/sql-server-powershell) 
 
 ##  <a name="FollowUp"></a> Follow up: After you manually fail over an availability group 
  If you failed over outside the [!INCLUDE[ssFosAuto](../../../includes/ssfosauto-md.md)] of the availability group, adjust the quorum votes of the Windows Server failover clustering nodes to reflect your new availability group configuration. For more information, see [Windows Server failover clustering &#40;WSFC&#41; with SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md). 

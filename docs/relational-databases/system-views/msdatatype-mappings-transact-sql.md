@@ -22,7 +22,7 @@ dev_langs:
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
-|**dbms_name**|**nvarchar(128)**|Is the name of the DBMS. Below are the possible values and their descriptions.<br /><br /> **MSSQLSERVER**: The destination is a SQL Server database.<br />**ORACLE**: The destination is an Oracle database.<br />**DB2**: The destination is an IBM DB2 database.<br />**SYBASE**: The destination is a Sybase database.|  
+|**dbms_name**|**nvarchar(128)**|Is the name of the DBMS. Below are the possible values and their descriptions.<br /><br /> **MSSQLSERVER**: The destination is a SQL Server database.<br />**ORACLE**: The destination is an Oracle database.<br />**DB2**: The destination is an IBM Db2 database.<br />**SYBASE**: The destination is a Sybase database.|  
 |**sql_type**|**nvarchar(128)**|Is the SQL Server data type.|  
 |**dest_type**|**nvarchar(128)**|Is the name of the non-SQL Server data type.|  
 |**dest_prec**|**bigint**|Is the precision of the non-SQL Server data type.|  

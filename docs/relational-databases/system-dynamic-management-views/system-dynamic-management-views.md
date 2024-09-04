@@ -112,7 +112,7 @@ Dynamic management views and functions have been organized into the following ca
 
         [SQL Server Operating System Related Dynamic Management Views (Transact-SQL)](sql-server-operating-system-related-dynamic-management-views-transact-sql.md)
 
-        [Stretch Database related dynamic management views (Transact-SQL)](stretch-database-related-dynamic-management-views-transact-sql.md)
+        [Stretch Database related dynamic management views (Transact-SQL)](/previous-versions/sql/relational-databases/system-dynamic-management-views/stretch-database-related-dynamic-management-views-transact-sql)
 
         [Transaction Related Dynamic Management Views and Functions (Transact-SQL)](transaction-related-dynamic-management-views-and-functions-transact-sql.md)
     :::column-end:::

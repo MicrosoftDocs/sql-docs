@@ -32,7 +32,7 @@ The following non- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 
 |Database|Operating System|Provider|  
 |--------------|----------------------|--------------|  
 |Oracle|All platforms that Oracle supports|Oracle OLE DB provider (supplied by Oracle)|  
-|IBM DB2|MVS, AS400, Unix, Linux, Windows excluding 9.x|Microsoft Host Integration Server (HIS) OLE DB provider|  
+|IBM Db2|MVS, AS400, Unix, Linux, Windows excluding 9.x|Microsoft Host Integration Server (HIS) OLE DB provider|  
 
 Oracle version information:  
 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supports the following heterogeneous scenarios for transactional and snapshot replication:  
@@ -49,7 +49,7 @@ Oracle version information:
 
  Heterogeneous replication to non-SQL Server subscribers is deprecated. Oracle Publishing is deprecated. To move data, create solutions using change data capture and [!INCLUDE[ssIS](../../../includes/ssis-md.md)].  
 
-For information about creating subscriptions to Oracle and IBM DB2, see [Oracle Subscribers](../../../relational-databases/replication/non-sql/oracle-subscribers.md) and [IBM DB2 Subscribers](../../../relational-databases/replication/non-sql/ibm-db2-subscribers.md).  
+For information about creating subscriptions to Oracle and IBM Db2, see [Oracle Subscribers](../../../relational-databases/replication/non-sql/oracle-subscribers.md) and [IBM Db2 Subscribers](../../../relational-databases/replication/non-sql/ibm-db2-subscribers.md).  
   
 ## Considerations for Non-SQL Server Subscribers  
  Keep the following considerations in mind when replicating to non- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Subscribers:  
@@ -70,7 +70,7 @@ For information about creating subscriptions to Oracle and IBM DB2, see [Oracle 
   
     -   For Oracle, a server has at most one database, so it is not necessary to specify the database.  
   
-    -   For IBM DB2, the database is specified in the DB2 connection string. For more information, see [Create a Subscription for a Non-SQL Server Subscriber](../../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md).  
+    -   For IBM Db2, the database is specified in the DB2 connection string. For more information, see [Create a Subscription for a Non-SQL Server Subscriber](../../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md).  
   
 -   If the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributor is running on a 64-bit platform, you must use the 64-bit version of the appropriate OLE DB provider.  
   

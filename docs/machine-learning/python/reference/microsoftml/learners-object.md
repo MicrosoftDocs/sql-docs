@@ -78,6 +78,8 @@ Get model summary.
 
 ## Specific Learners
 
+### FastTree binary or regression model
+
 ```
 microsoftml.FastTrees(method: ['binary', 'regression'] = 'binary',
     num_trees: int = 100, num_leaves: int = 20,
@@ -91,13 +93,13 @@ microsoftml.FastTrees(method: ['binary', 'regression'] = 'binary',
     **kargs)
 ```
 
-FastTree binary or regression model
+Get train node
 
 ```
 get_train_node(**all_args)
 ```
 
-get train node
+### One-class svm
 
 ```
 microsoftml.OneClassSvm(cache_size: float = 100,
@@ -112,13 +114,10 @@ microsoftml.OneClassSvm(cache_size: float = 100,
     **kargs)
 ```
 
-one-class svm
-
 ```
 get_train_node(**all_args)
 ```
-
-get train node
+### FastForest binary or regression model
 
 ```
 microsoftml.FastForest(method: ['binary', 'regression'] = 'binary',
@@ -132,13 +131,11 @@ microsoftml.FastForest(method: ['binary', 'regression'] = 'binary',
     **kargs)
 ```
 
-FastForest binary or regression model
-
 ```
 get_train_node(**all_args)
 ```
 
-get train node
+### SDCA binary or regression model
 
 ```
 microsoftml.FastLinear(method: ['binary', 'regression'] = 'binary',
@@ -155,13 +152,11 @@ microsoftml.FastLinear(method: ['binary', 'regression'] = 'binary',
     **kargs)
 ```
 
-SDCA binary or regression model
-
 ```
 get_train_node(**all_args)
 ```
 
-get train node
+### Logistic regression
 
 ```
 microsoftml.LogisticRegression(method: ['binary',
@@ -176,37 +171,7 @@ microsoftml.LogisticRegression(method: ['binary',
     **kargs)
 ```
 
-logistic regression
-
-```
-aic(k=2)
-```
-
-get model aic
-
-```
-coef_
-```
-
-get model coefficients
-
-```
-deviance_
-```
-
-get residual deviance
-
-```
-get_algo_args()
-```
-
-get algorithm arguments
-
-```
-get_train_node(**all_args)
-```
-
-get train node
+### Neural network
 
 ```
 microsoftml.NeuralNetwork(method: ['binary', 'multiClass',
@@ -222,34 +187,39 @@ microsoftml.NeuralNetwork(method: ['binary', 'multiClass',
     **kargs)
 ```
 
-neural network
-
 ```
 get_train_node(**all_args)
 ```
 
-get train node
+### Get model aic
 
 ```
-microsoftml.OneClassSvm(cache_size: float = 100,
-    kernel: [<function linear_kernel at 0x0000007156EAC8C8>,
-    <function polynomial_kernel at 0x0000007156EAC950>,
-    <function rbf_kernel at 0x0000007156EAC7B8>,
-    <function sigmoid_kernel at 0x0000007156EACA60>] = {'Name': 'RbfKernel',
-    'Settings': {}}, epsilon: float = 0.001, nu: float = 0.1,
-    shrink: bool = True, normalize: ['No', 'Warn', 'Auto',
-    'Yes'] = 'Auto',
-    ensemble: microsoftml.modules.ensemble.EnsembleControl = None,
-    **kargs)
+aic(k=2)
 ```
 
-one-class svm
+### Get model coefficients
+
+```
+coef_
+```
+
+### Get residual deviance
+
+```
+deviance_
+```
+
+### Get algorithm arguments
+
+```
+get_algo_args()
+```
+
+### Get train node
 
 ```
 get_train_node(**all_args)
 ```
-
-get train node
 
 ### Related content
 

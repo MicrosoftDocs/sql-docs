@@ -29,7 +29,7 @@ You can start the wizard:
 - From [Visual Studio with SQL Server Data Tools (SSDT)](#visual-studio).
 
 > [!TIP]
-> Another way to import data is in [Azure Data Studio](../../azure-data-studio/what-is-azure-data-studio.md) with [SQL Server Import extension](../../azure-data-studio/extensions/sql-server-import-extension.md).
+> Another way to import data is in [Azure Data Studio](/azure-data-studio/what-is-azure-data-studio) with [SQL Server Import extension](/azure-data-studio/extensions/sql-server-import-extension).
 
 ## Prerequisite - Is the wizard installed on your computer?
 

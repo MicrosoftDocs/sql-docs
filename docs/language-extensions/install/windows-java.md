@@ -179,7 +179,7 @@ For local installations, you must run Setup as an administrator. If you install 
 
    1. Download the `java-lang-extension-windows-release.zip` file from [the Java language extension for SQL Server GitHub repo](https://github.com/microsoft/sql-server-language-extensions/releases). Download the latest Windows `java-lang-extension-windows.zip` file. If you haven't installed the default Java from SQL Server Setup, ensure that the JRE version matches the one that is downloaded from GitHub. If you prefer to use your own installed JRE version, you might need to compile `java-lang-extension` from GitHub source code.
 
-   1. Use [Azure Data Studio](../../azure-data-studio/what-is-azure-data-studio.md) to connect to your SQL Server instance and run the following T-SQL command to register the Java language extension with [CREATE EXTERNAL LANGUAGE](../../t-sql/statements/create-external-language-transact-sql.md).
+   1. Use [Azure Data Studio](/azure-data-studio/what-is-azure-data-studio) to connect to your SQL Server instance and run the following T-SQL command to register the Java language extension with [CREATE EXTERNAL LANGUAGE](../../t-sql/statements/create-external-language-transact-sql.md).
 
    1. Modify the path in this statement to reflect the location of the downloaded language extension zip file (java-lang-extension-windows-release.zip) and the location your custom Java installation (`%ProgramFiles%\Python`).
 

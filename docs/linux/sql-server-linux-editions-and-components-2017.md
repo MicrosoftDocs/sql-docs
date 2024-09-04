@@ -210,7 +210,7 @@ The following features and services aren't available for [!INCLUDE [sssql17](../
 | Area | Unsupported feature or service | Comments |
 | --- | --- | --- |
 | **Database engine** | Merge replication | |
-| | Stretch DB | This feature is [deprecated](../sql-server/stretch-database/stretch-database.md) in [!INCLUDE [sssql22](../includes/sssql22-md.md)], and isn't supported. |
+| | Stretch DB | This feature is [deprecated](/previous-versions/sql/sql-server/stretch-database/stretch-database) in [!INCLUDE [sssql22](../includes/sssql22-md.md)], and isn't supported. |
 | | PolyBase | Supported on [!INCLUDE [sssql19-md](../includes/sssql19-md.md)] and later versions. |
 | | Distributed query with third-party connections | |
 | | Linked servers to data sources other than [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] | [Install PolyBase on Linux](../relational-databases/polybase/polybase-linux-setup.md) to query other data sources from [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)], using Transact-SQL syntax. For scenarios where PolyBase isn't helpful, submit feedback to the [Microsoft Azure forum](https://feedback.azure.com/d365community/forum/04fe6ee0-3b25-ec11-b6e6-000d3a4f0da0). |

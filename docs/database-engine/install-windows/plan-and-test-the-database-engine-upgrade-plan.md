@@ -37,7 +37,7 @@ Before upgrading the [!INCLUDE [ssDE](../../includes/ssde-md.md)], review the fo
 
   - [Always Encrypted (Database Engine)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 
-  - [Stretch Database](../../sql-server/stretch-database/stretch-database.md)
+  - [Stretch Database](/previous-versions/sql/sql-server/stretch-database/stretch-database)
 
     > [!IMPORTANT]  
     > [!INCLUDE [stretch-database-deprecation](../../includes/stretch-database-deprecation.md)]

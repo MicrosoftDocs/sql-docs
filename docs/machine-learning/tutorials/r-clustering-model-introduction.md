@@ -57,7 +57,7 @@ In [part four](r-clustering-model-deploy.md),  you'll learn how to create a stor
 - **SQL Server Management Studio (SSMS)** - Use SSMS to restore the sample database to Azure SQL Managed Instance. To download, see [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md).
 ::: moniker-end
 
-- [Azure Data Studio](../../azure-data-studio/what-is-azure-data-studio.md). You'll use a notebook in Azure Data Studio for SQL. For more information about notebooks, see [How to use notebooks in Azure Data Studio](../../azure-data-studio/notebooks/notebooks-guidance.md).
+- [Azure Data Studio](/azure-data-studio/what-is-azure-data-studio). You'll use a notebook in Azure Data Studio for SQL. For more information about notebooks, see [How to use notebooks in Azure Data Studio](/azure-data-studio/notebooks/notebooks-guidance).
 
 - **R IDE** - This tutorial uses [RStudio Desktop](https://posit.co/download/rstudio-desktop).
 
@@ -75,7 +75,7 @@ The sample dataset used in this tutorial has been saved to a `.bak` database bac
 ::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15"
 1. Download the file [tpcxbb_1gb.bak](https://aka.ms/sqlmldocument/tpcxbb_1gb.bak).
 
-1. Follow the directions in [Restore a database from a backup file](../../azure-data-studio/tutorial-backup-restore-sql-server.md#restore-a-database-from-a-backup-file) in Azure Data Studio, using these details:
+1. Follow the directions in [Restore a database from a backup file](/azure-data-studio/tutorial-backup-restore-sql-server#restore-a-database-from-a-backup-file) in Azure Data Studio, using these details:
 
    * Import from the `tpcxbb_1gb.bak` file you downloaded.
    * Name the target database `tpcxbb_1gb`.

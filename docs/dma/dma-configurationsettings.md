@@ -92,7 +92,7 @@ During assessment, Data Migration Assistant extracts data-tier application (dacp
 > [!IMPORTANT]  
 > [!INCLUDE [stretch-database-deprecation](../includes/stretch-database-deprecation.md)]
 
-With [SQL Server Stretch Database](../sql-server/stretch-database/stretch-database.md), you can dynamically stretch warm and cold transactional data from Microsoft SQL Server 2016 to Azure. The Stretch Database recommendation is no longer available as an advisor option.
+With [SQL Server Stretch Database](/previous-versions/sql/sql-server/stretch-database/stretch-database), you can dynamically stretch warm and cold transactional data from Microsoft SQL Server 2016 to Azure. The Stretch Database recommendation is no longer available as an advisor option.
 
 ## SQL connection timeout
 

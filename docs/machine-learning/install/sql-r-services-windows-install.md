@@ -103,7 +103,7 @@ This step requires a server restart. You can hold off on the restart until all o
 
 ##  Enable script execution
 
-1. Open [SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md) or [Azure Data Studio](../../azure-data-studio/what-is-azure-data-studio.md).
+1. Open [SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md) or [Azure Data Studio](/azure-data-studio/what-is-azure-data-studio).
 
 1. Connect to the instance where you installed R Services, click **New Query** to open a query window, and run the following command:
 

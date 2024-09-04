@@ -3,7 +3,7 @@ title: "rsAccessDenied - Reporting Services error"
 description: Learn how to diagnose and fix the rsAccessDenied error when the permissions granted to user 'mydomain\\myAccount' are insufficient for performing this operation.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 08/23/2024
+ms.date: 09/04/2024
 ms.service: reporting-services
 ms.subservice: troubleshooting
 ms.topic: troubleshooting-problem-resolution
@@ -24,7 +24,7 @@ The error can appear in a few ways:
 
 - If the error occurs while accessing the report server directly through a URL, the exception is mapped to an HTTP 401 error.
 
-- If the error occurs when you use the web portal, the exception is typically mapped to an HTTP 401 error, or other defined HTML error page.
+- If the error occurs when you use the web portal, the exception is typically mapped to an HTTP 401 error or other defined HTML error page.
 
 - If the error occurs during a scheduled operation, subscription, or delivery, the error appears in the report server log file only.
 

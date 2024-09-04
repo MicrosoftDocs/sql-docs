@@ -3,7 +3,7 @@ title: Troubleshoot Reporting Services subscriptions and delivery
 description: Learn how to diagnose and fix problems found when you work with report subscriptions, schedules, and delivery in SQL Server Reporting Services.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 08/23/2024
+ms.date: 09/04/2024
 ms.service: reporting-services
 ms.subservice: troubleshooting
 ms.topic: troubleshooting-general
@@ -17,7 +17,7 @@ Use this article to troubleshoot problems that you encounter when working with [
 
 ## Log information
 
-The Subscription page in [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] includes a status of a subscription but if there's a problem with the subscription, the detailed information is in the [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] logs.
+The Subscription page in [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] includes a status of a subscription, but if there's a problem with the subscription, the detailed information is in the [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] logs.
 
 :::image type="content" source="../../reporting-services/media/ssrs-tutorial-datadriven-subscription-status-reportmanager.png" alt-text="Screenshot that shows the status of a subscription.":::
 
@@ -31,7 +31,7 @@ The following example is a sample log entry:
 subscription WindowsService_10   4c7c    05/24/2016-01:05:06  e ERROR     Failure writing file \\ServerName\SalesReports\so71949.xls : Microsoft.ReportingServices.FileShareDeliveryProvider.FileShareProvider+NetworkErrorException: An impersonation error occurred using the security context of the current user. ---> System.ArgumentException: Value does not fall within the expected range.  05/24/2016
 ```
 
-For more information on [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] trace logs, see [Report server trace log](../../reporting-services/report-server/report-server-service-trace-log.md) and [Reporting Services log files and sources](../../reporting-services/report-server/reporting-services-log-files-and-sources.md).
+For more information on [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] trace logs, see [Report server service trace log](../../reporting-services/report-server/report-server-service-trace-log.md) and [Reporting Services log files and sources](../../reporting-services/report-server/reporting-services-log-files-and-sources.md).
 
 ### Execution log views
 

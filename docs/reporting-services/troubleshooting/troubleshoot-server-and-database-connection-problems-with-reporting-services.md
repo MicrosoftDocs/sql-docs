@@ -3,7 +3,7 @@ title: Troubleshoot server and database connection problems
 description: Learn how to diagnose and fix problems you experience when you're connecting to a report server and about 'Unexpected error' messages.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 08/23/2024
+ms.date: 09/04/2024
 ms.service: reporting-services
 ms.subservice: troubleshooting
 ms.topic: troubleshooting-general
@@ -34,12 +34,12 @@ When you're connecting to SQL Server, you might see this failure because the def
 - Verify that the SQL Server (**MSSQLSERVER**) service is started.
 
     1. On the computer that hosts the instance of the Database Engine, select **Start** > **Administrative Tools** > **Services**, and scroll to SQL Server (**MSSQLSERVER**).
-    1. If it isn't started, right-click the service and select **Properties**.
+    1. If it's not started, right-click the service and select **Properties**.
     1. In **Startup Type** choose **Automatic**
     1. Select **Apply** and then choose **Start**.
     1. elect **OK**.
 
-- Verify that the report server URL and report server database connection string is correct. If Reporting Services or the Database Engine was installed as a named instance, the default connection string that is created during Setup includes the instance name. For example, if you installed a default instance of SQL Server Express with Advanced Services on a server named DEVSRV01, the web portal URL is DEVSRV01\Reports$SQLEXPRESS. Furthermore, the database server name in the connection string resembles DEVSRV01\SQLEXPRESS. For more information about URLs and data source connection strings for SQL Server Express, see [Reporting Services in SQL Server Express with Advanced Services](/previous-versions/sql/sql-server-2008-r2/ms365166(v=sql.105)). To verify the connection string for the report server database, start the Reporting Services Configuration tool and view the Database Setup page.
+- Verify that the report server URL and report server database connection string is correct. If Reporting Services or the Database Engine was installed as a named instance, the default connection string that's created during Setup includes the instance name. For example, if you installed a default instance of SQL Server Express with Advanced Services on a server named DEVSRV01, the web portal URL is DEVSRV01\Reports$SQLEXPRESS. Furthermore, the database server name in the connection string resembles DEVSRV01\SQLEXPRESS. For more information about URLs and data source connection strings for SQL Server Express, see [Reporting Services in SQL Server Express with Advanced Services](/previous-versions/sql/sql-server-2008-r2/ms365166(v=sql.105)). To verify the connection string for the report server database, start the Reporting Services Configuration tool and view the Database Setup page.
 
 ### A connection can't be made. Ensure that the server is running
 
@@ -88,7 +88,7 @@ If you reset the password, you must update the connection. For more information,
 
 The full error text is: `The report server can't open a connection to the report server database. A connection to the database is required for all requests and processing. (rsReportServerDatabaseUnavailable)`
 
-This error occurs when the report server can't connect to the SQL Server relational database that provides internal storage to the server. The connection to the report server database is managed through the Reporting Services Configuration tool. You can run the tool, go to the Database Setup page and correct the connection information. Use the tool to update connection information. The tool ensures that dependent settings are updated and that services are restarted. For more information, see [Configure a report server database connection (Report Server Configuration Manager)](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md) and [Configure the report server service account (Report Server Configuration Manager)](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md).
+This error occurs when the report server can't connect to the SQL Server relational database that provides internal storage to the server. The connection to the report server database is managed through the Reporting Services Configuration tool. You can run the tool, go to the Database Setup page, and correct the connection information. Use the tool to update connection information. The tool ensures that dependent settings are updated and that services are restarted. For more information, see [Configure a report server database connection (Report Server Configuration Manager)](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md) and [Configure the report server service account (Report Server Configuration Manager)](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md).
 
 This error can also occur if the Database Engine instance that hosts the report server database isn't configured for remote connections. Remote connection is enabled by default in some editions of SQL Server. To verify whether the remote connection is enabled on the SQL Server Database Engine instance you use, run the SQL Server Configuration Manager tool. You must enable both TCP/IP and named pipes. A report server uses both protocols. For instructions on how to enable remote connections, see [Configure remote connections to the report server database](/sql/reporting-services/report-server/configure-a-report-server-for-remote-administration#configure-remote-connections-to-the-report-server-database).
 

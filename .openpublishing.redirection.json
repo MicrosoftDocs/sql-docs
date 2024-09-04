@@ -23571,6 +23571,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "docs/relational-databases/in-memory-oltp/implementing-an-outer-join.md",
+      "redirect_url": "/sql/relational-databases/performance/joins",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "docs/2014/relational-databases/in-memory-oltp/implementing-identity-in-a-memory-optimized-table.md",
       "redirect_url": "/previous-versions/sql/2014/relational-databases/in-memory-oltp/implementing-identity-in-a-memory-optimized-table",
       "redirect_document_id": false
@@ -61458,6 +61463,11 @@
     {
       "source_path": "docs/relational-databases/service-broker/index.md",
       "redirect_url": "/sql/relational-databases/service-broker/event-notifications",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/database-engine/service-broker/overview.md",
+      "redirect_url": "/sql/database-engine/configure-windows/sql-server-service-broker",
       "redirect_document_id": false
     },
     {

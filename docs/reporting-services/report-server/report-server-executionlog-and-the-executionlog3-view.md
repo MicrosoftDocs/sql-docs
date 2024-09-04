@@ -1,9 +1,9 @@
 ---
 title: Use ExecutionLog and the ExecutionLog3 view in Reporting Services
-description: Learn about the report server execution log that's in Reporting Services, which contains information about reports on servers in native mode or a SharePoint farm.
+description: See the report server execution log that's in Reporting Services, which contains information about reports on servers in native mode or a SharePoint farm.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 08/23/2024
+ms.date: 09/04/2024
 ms.service: reporting-services
 ms.subservice: report-server
 ms.topic: how-to
@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "logs [Reporting Services], execution"
   - "execution logs [Reporting Services]"
 
-#customer intent: As a Reporting Services user, I want to learn how to use ExecutionLog and the ExecutionLog3 view so that I can access information about my report server.
+#customer intent: As a Reporting Services user, I want to see how to use ExecutionLog and the ExecutionLog3 view so that I can access information about my report server.
 ---
 # Use ExecutionLog and the ExecutionLog3 view in Reporting Services
 
@@ -30,7 +30,7 @@ Report servers configured for SharePoint mode can also utilize the SharePoint Un
 
 The report server logs data about report execution into an internal database table. The information from the table is available from SQL Server views.  
   
-The report execution log is stored in the report server database that by default is named ReportServer. The SQL views provide the execution log information. The "2" and "3" views were added in more recent releases and contain new fields or they contain fields with friendlier names than the previous releases. The older views remain in the product so custom applications that depend on them aren't impacted. If you don't have a dependence on an older view, for example ExecutionLog, you should use the most recent view, **ExecutionLog3**.
+The report execution log is stored in the report server database that by default is named ReportServer. The SQL views provide the execution log information. The "2" and "3" views were added in more recent releases and contain new fields, or they contain fields with friendlier names than the previous releases. The older views remain in the product so custom applications that depend on them aren't impacted. If you don't have a dependence on an older view, for example ExecutionLog, you should use the most recent view, **ExecutionLog3**.
   
 ## <a name="bkmk_sharepoint"></a> Configuration settings for a SharePoint mode report server  
 
@@ -99,7 +99,7 @@ Use ReportServer
 select * from ExecutionLog3 order by TimeStart DESC  
 ```  
   
-The following table describes the data that is captured in the report execution log.  
+The following table describes the data that's captured in the report execution log.  
   
 |Column|Description|  
 |------------|-----------------|  
@@ -116,7 +116,7 @@ The following table describes the data that is captured in the report execution 
 |TimeDataRetrieval|Number of milliseconds spent retrieving the data.|  
 |TimeProcessing|Number of milliseconds spent processing the report.|  
 |TimeRendering|Number of milliseconds spent rendering the report.|  
-|Source|Source of the report execution. Possible values:<br /><br /> Live<br /><br /> Cache: indicates a cached execution, for example, dataset queries aren't executed live.<br /><br /> Snapshot<br /><br /> History<br /><br /> AdHoc: Indicates either a dynamically generated report model based drill through report. It can also refer to a Report Builder report that is previewed on a client utilizing the report server for processing and rendering.<br /><br /> Session: Indicates a follow-up request within an already established session. For example, the initial request is to view page 1, and the follow-up request is to export to Excel with the current session state.<br /><br /> Report Definition Customization Extension (RDCE):  Indicates a Report Definition Customization Extension. An RDCE custom extension can dynamically customize a report definition before the definition is passed to the processing engine upon report execution.|  
+|Source|Source of the report execution. Possible values:<br /><br /> Live<br /><br /> Cache: indicates a cached execution, for example, dataset queries aren't executed live.<br /><br /> Snapshot<br /><br /> History<br /><br /> AdHoc: Indicates either a dynamically generated report model based drill through report. It can also refer to a Report Builder report that's previewed on a client utilizing the report server for processing and rendering.<br /><br /> Session: Indicates a follow-up request within an already established session. For example, the initial request is to view page 1, and the follow-up request is to export to Excel with the current session state.<br /><br /> Report Definition Customization Extension (RDCE):  Indicates a Report Definition Customization Extension. An RDCE custom extension can dynamically customize a report definition before the definition is passed to the processing engine upon report execution.|  
 |Status|Status (either rsSuccess or an error code; if multiple errors occur, only the first error is recorded).|  
 |ByteCount|Size of rendered reports in bytes.|  
 |RowCount|Number of rows returned from queries.|  
@@ -316,12 +316,12 @@ Use ReportServer
 select * from ExecutionLog2 order by TimeStart DESC  
 ```  
   
-The following table describes the data that is captured in the report execution log.  
+The following table describes the data that's captured in the report execution log.  
   
 |Column|Description|  
 |------------|------------------------------------------------------------|  
 |InstanceName|Name of the report server instance that handled the request.|  
-|ReportPath|The path structure to the report. A report saved in the root folder as **test**, has a ReportPath of `/test`.<br /><br /> A report named **test** that is saved in the folder **Samples**, would have a ReportPath of `/Samples/test/`.|  
+|ReportPath|The path structure to the report. A report saved in the root folder as **test**, has a ReportPath of `/test`.<br /><br /> A report named **test** that's saved in the folder **Samples**, would have a ReportPath of `/Samples/test/`.|  
 |UserName|User identifier.|  
 |ExecutionID||  
 |RequestType|Request type is either `user` or `system`.|  
@@ -348,7 +348,7 @@ Use ReportServer
 select * from ExecutionLog order by TimeStart DESC
 ```  
   
- The following table describes the data that is captured in the report execution log.  
+ The following table describes the data that's captured in the report execution log.  
   
 |Column|Description|  
 |------------|-----------------|  
@@ -370,7 +370,6 @@ select * from ExecutionLog order by TimeStart DESC
   
 ## Related content
 
-- [Turn on Reporting Services events for the SharePoint trace log &#40;ULS&#41;](../../reporting-services/report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)
 - [Reporting Services log files and sources](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)
 - [Errors and events reference &#40;Reporting Services&#41;](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
   

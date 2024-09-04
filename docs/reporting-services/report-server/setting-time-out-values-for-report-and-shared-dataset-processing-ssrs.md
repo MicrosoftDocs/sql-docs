@@ -1,9 +1,9 @@
 ---
 title: Set time-out values for report and shared dataset processing in Reporting Services
-description: Learn how you can specify time-out values to set limits on how system resources are used in your report server.
+description: See how you can specify time-out values to set limits on how system resources are used in your report server.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 08/05/2024
+ms.date: 09/04/2024
 ms.service: reporting-services
 ms.subservice: report-server
 ms.topic: how-to
@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "report processing [Reporting Services], time-outs"
   - "report execution time-outs [Reporting Services]"
 
-#customer intent: As a Reporting Services user, I want to learn how to time-out values on my report server so that I can set limits on how much system resources are used.
+#customer intent: As a Reporting Services user, I want to see how to time-out values on my report server so that I can set limits on how much system resources are used.
 ---
 # Set time-out values for report and shared dataset processing in Reporting Services
 
@@ -56,7 +56,7 @@ To set the query time-out value in the web portal:
 1. On the **Browse** page, select **More Info** > **Manage**.
 1. On the **Properties Page**, set the value in the **Query time-out in seconds** field.
 
-:::image type="content" source="media/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs/shared-dataset-timeout.png" alt-text="Screenshot of the dataset Properties page highlighting the Query time out in seconds field.":::
+:::image type="content" source="media/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs/shared-dataset-timeout.png" alt-text="Screenshot of the dataset Properties page highlighting the Query time-out in seconds field.":::
   
 ## Set a report execution time-out  
 

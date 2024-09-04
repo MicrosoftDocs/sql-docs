@@ -3,7 +3,8 @@ title: Work with Database Diagrams
 description: "Work with Database Diagrams (Visual Database Tools)"
 author: markingmyname
 ms.author: maghan
-ms.date: 07/09/2017
+ms.reviewer: randolphwest
+ms.date: 09/04/2024
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
@@ -16,31 +17,22 @@ helpviewer_keywords:
   - "diagrams [SQL Server]"
 ---
 
-# Work with Database Diagrams (Visual Database Tools)
+# Work with database diagrams (Visual Database Tools)
 
-[!INCLUDE[SQL Server Azure SQL Database PDW](../../includes/applies-to-version/sql-asdb-asdbmi-pdw.md)]
+[!INCLUDE [SQL Server Azure SQL Database PDW](../../includes/applies-to-version/sql-asdb-asdbmi-pdw.md)]
 
-You can create a visual diagram of your database using the Database Designer. The following topics cover the basics of using the designer to work with database diagrams.  
-  
-## In This Section  
-[Create a New Database Diagram &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-a-new-database-diagram-visual-database-tools.md)  
-  
-[Save Database Diagrams &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/save-database-diagrams-visual-database-tools.md)  
-  
-[Open Database Diagrams &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/open-database-diagrams-visual-database-tools.md)  
-  
-[Delete a Database Diagram &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/delete-a-database-diagram-visual-database-tools.md)  
-  
-[Rename a Database Diagram &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/rename-a-database-diagram-visual-database-tools.md)  
-  
-[Discard Changes Made to Diagrams &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/discard-changes-made-to-diagrams-visual-database-tools.md)  
-  
-[Reconcile a Database Diagram with a Modified Database &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/reconcile-a-database-diagram-with-a-modified-database-visual-database-tools.md)  
-  
-[Show Diagram Properties &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/show-diagram-properties-visual-database-tools.md)  
-  
-## Related Sections
+You can create a visual diagram of your database using the Database Designer. The following articles cover the basics of using the designer to work with database diagrams.
 
-[Work with Tables in Database Diagram &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-tables-in-database-diagram-visual-database-tools.md)  
-  
-[Work with Diagram Layout &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-diagram-layout-visual-database-tools.md)
+## In this section
+
+- [Create a New Database Diagram (Visual Database Tools)](create-a-new-database-diagram-visual-database-tools.md)
+- [Save Database Diagrams (Visual Database Tools)](save-database-diagrams-visual-database-tools.md)
+- [Open Database Diagrams (Visual Database Tools)](open-database-diagrams-visual-database-tools.md)
+- [Delete a Database Diagram (Visual Database Tools)](delete-a-database-diagram-visual-database-tools.md)
+- [Reconcile a Database Diagram with a Modified Database (Visual Database Tools)](reconcile-a-database-diagram-with-a-modified-database-visual-database-tools.md)
+- [Show Diagram Properties (Visual Database Tools)](show-diagram-properties-visual-database-tools.md)
+
+## Related content
+
+- [Work with Tables in Database Diagram (Visual Database Tools)](work-with-tables-in-database-diagram-visual-database-tools.md)
+- [Work with Diagram Layout (Visual Database Tools)](work-with-diagram-layout-visual-database-tools.md)

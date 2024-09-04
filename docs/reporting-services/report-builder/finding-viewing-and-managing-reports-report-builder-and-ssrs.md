@@ -38,7 +38,7 @@ After you find and open the report in Report Builder, you can preview it and mak
 
 Report Builder can help you with the following tasks:
 
-- **Find reports**: When you browse for a report, you can use the familiar Microsoft Office-style **Open File** dialog that's customized for Report Builder. You can browse the folders on a report server or on a file system, including My Reports, Sites and Servers, Desktop, My Documents**, and My Computer. Sites and Servers provide a recently used server list.
+- **Find reports**: When you browse for a report, you can use the familiar Microsoft Office-style **Open File** dialog that's customized for Report Builder. You can browse the folders on a report server or on a file system, including My Reports, Sites and Servers, Desktop, My Documents, and My Computer. Sites and Servers provide a recently used server list.
 
 - **Find shared data sources**: When you browse for a shared data source, you can pick from a recently used list, or browse to another folder on the same report server as the report.
 
@@ -132,7 +132,9 @@ You can bypass browser viewing entirely and use a desktop application, such as [
 
 If you refresh a report within the same session by using the browser's **Refresh** button, the original session version of the report is displayed. If you refresh an on-demand report by using the **Refresh** button on the report toolbar, the report is rerun and new data, if any, is displayed.
 
-Session information is stored in the report server temporary database. The report server doesn't use [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] session management. If you restart the server or perform a database recovery operation, session state isn't restored. For more information about session management, see [Identify the execution state](../../reporting-services/report-server-web-service-net-framework-soap-headers/identifying-execution-state.md).
+Session information is stored in the report server temporary database. The report server doesn't use [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] session management. If you restart the server or perform a database recovery operation, session state isn't restored. 
+
+For more information about session management, see [Identify the execution state](../../reporting-services/report-server-web-service-net-framework-soap-headers/identifying-execution-state.md).
 
 ## Related content
 

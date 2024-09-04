@@ -44,7 +44,7 @@ As a result of services within BDC running as non-root users, credentials used f
 
 ## Use the latest Azure Data Studio
 
-Azure Data Studio handles the credentials change transparently for the connection made through gateway to enable HDFS browsing experience in the Object Explorer or submitting Spark jobs through notebooks. Install the [latest Azure Data Studio insiders build](../azure-data-studio/download-azure-data-studio.md#download-the-insiders-build-of-azure-data-studio). This build includes the necessary changes for this use case.
+Azure Data Studio handles the credentials change transparently for the connection made through gateway to enable HDFS browsing experience in the Object Explorer or submitting Spark jobs through notebooks. Install the [latest Azure Data Studio insiders build](/azure-data-studio/download-azure-data-studio#download-the-insiders-build-of-azure-data-studio). This build includes the necessary changes for this use case.
 
 For other scenarios where you must provide credentials for accessing the service through the gateway (e.g. logging in with [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)], accessing web dashboards for Spark), ensure the correct credentials are used. If you are targeting an existing cluster deployed before CU5 you will continue using `root` username to connect to gateway, even after upgrading the cluster to CU5. If you deploy a new cluster using CU5 build, you will login by providing the username corresponding to `AZDATA_USERNAME` environment variable.
 

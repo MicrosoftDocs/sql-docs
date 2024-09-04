@@ -1122,7 +1122,7 @@ Other common tools to connect to [!INCLUDE [ssnoversion-md](../includes/ssnovers
 
 - [SQL Server extension for Visual Studio Code](../tools/visual-studio-code/sql-server-develop-use-vscode.md)
 - [Use SQL Server Management Studio on Windows to manage SQL Server on Linux](sql-server-linux-manage-ssms.md)
-- [What is Azure Data Studio?](../azure-data-studio/what-is-azure-data-studio.md)
+- [What is Azure Data Studio?](/azure-data-studio/what-is-azure-data-studio)
 - [mssql-cli (Preview)](https://github.com/dbcli/mssql-cli/blob/master/doc/usage_guide.md)
 - [Manage SQL Server on Linux with PowerShell Core](sql-server-linux-manage-powershell-core.md)
 

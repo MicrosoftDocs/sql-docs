@@ -20,7 +20,7 @@ SQL Server Big Data Clusters can virtualize data from CSV files in HDFS. This pr
 ## Prerequisites
 
 - [A deployed big data cluster](deployment-guidance.md)
-- [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md)
+- [Azure Data Studio](/azure-data-studio/download-azure-data-studio)
 
 ## Select or upload a CSV file for data virtualization
 

@@ -55,7 +55,7 @@ You can connect and query SQL Server in a container from either outside the cont
 You can connect to the SQL Server instance on your container host from any external Linux, Windows, or macOS tool that supports SQL connections. Some common tools include:
 
 - [sqlcmd](sql-server-linux-setup-tools.md)
-- [Azure Data Studio](../azure-data-studio/quickstart-sql-server.md)
+- [Azure Data Studio](/azure-data-studio/quickstart-sql-server)
 - [Visual Studio Code](../tools/visual-studio-code/sql-server-develop-use-vscode.md)
 - [SQL Server Management Studio (SSMS) on Windows](sql-server-linux-manage-ssms.md)
 

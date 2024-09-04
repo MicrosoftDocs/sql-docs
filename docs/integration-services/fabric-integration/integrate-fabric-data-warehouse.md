@@ -30,7 +30,7 @@ Two key modifications are required in SSIS package to work seamlessly with Fabri
 If you're using SQL Authentication or Windows Authentication, reconfigure it to utilize Microsoft Entra ID User or Service Principal Name (SPN). Keep in mind that if you’re using a User account, multifactor authentication (MFA) must be disabled, as SSIS doesn't support pop-up prompts.  It also needs respective drivers as mentioned below:
 
 ****To use [OLEDB connection manager](../connection-manager/ole-db-connection-manager.md)****:
-- Install [OLE DB Driver for SQL Server](/sql/connect/oledb/features/using-azure-active-directory) version that supports Microsoft Entra ID
+- Install [OLE DB Driver for SQL Server](../../connect/oledb/features/using-azure-active-directory.md) version that supports Microsoft Entra ID
 - Set Authentication to ****ActiveDirectoryServicePrincipal****  or ****ActiveDirectoryPassword****.
 - OLEDB only works for [Execute SQL Task](../control-flow/execute-sql-task.md), doesn't work for [OLE DB Destination](../data-flow/ole-db-destination.md).
 :::image type="content" border="false" source="media/ole-db-connection-1.png" alt-text="Screenshot of oledb connection manager part 1." lightbox="media/ole-db-connection-1.png":::

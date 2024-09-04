@@ -33,7 +33,7 @@ This article describes how to plot data using the Python package [pandas'.hist()
 - [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) for restoring the sample database to Azure SQL Managed Instance.
 ::: moniker-end
 
-- Azure Data Studio. To install, see [Azure Data Studio](../../azure-data-studio/what-is-azure-data-studio.md).
+- Azure Data Studio. To install, see [Azure Data Studio](/azure-data-studio/what-is-azure-data-studio).
 
 - [Restore sample DW database](../../samples/adventureworks-install-configure.md) to get sample data used in this article.
 
@@ -48,7 +48,7 @@ SELECT * FROM Person.CountryRegion;
 
 ## Install Python packages
 
-[Download and Install Azure Data Studio](../../azure-data-studio/download-azure-data-studio.md).
+[Download and Install Azure Data Studio](/azure-data-studio/download-azure-data-studio).
 
 Install the following Python packages:
 - `pyodbc`

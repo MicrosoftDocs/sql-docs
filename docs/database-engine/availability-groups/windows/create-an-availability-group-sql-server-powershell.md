@@ -45,10 +45,10 @@ The following table lists the basic tasks involved in configuring an availabilit
 
 ## Using PowerShell
 
-Set up and use the [SQL Server PowerShell Provider](../../../powershell/sql-server-powershell-provider.md). 
+Set up and use the [SQL Server PowerShell Provider](/powershell/sql-server/sql-server-powershell-provider). 
 
 > [!NOTE]  
-> To view the syntax and an example of a given cmdlet, use the **Get-Help** cmdlet in the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell environment. For more information, see [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
+> To view the syntax and an example of a given cmdlet, use the **Get-Help** cmdlet in the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell environment. For more information, see [Get Help SQL Server PowerShell](/powershell/sql-server/sql-server-powershell).  
 
 1. Change directory (**cd**) to the server instance that is to host the primary replica.  
   

@@ -34,11 +34,11 @@ The following table describes some of the more common client tools.
 | Client tool | Type | Operating system |
 | --- | --- | --- |
 | **[SQL Server Management Studio (SSMS)](../ssms/sql-server-management-studio-ssms.md)** | GUI | Windows |
-| **[Azure Data Studio](../azure-data-studio/what-is-azure-data-studio.md)** | GUI | Windows, macOS, Linux |
+| **[Azure Data Studio](/azure-data-studio/what-is-azure-data-studio)** | GUI | Windows, macOS, Linux |
 | **[bcp](../tools/bcp-utility.md)** | CLI | Windows, macOS, Linux |
 | **[sqlcmd](../tools/sqlcmd/sqlcmd-utility.md)** | CLI | Windows, macOS, Linux |
 
-For this article, we are going to focus on connecting via SSMS. If you are interested in connecting via Azure Data Studio, see [Quickstart: Use Azure Data Studio to connect and query SQL Server](../azure-data-studio/quickstart-sql-server.md).
+For this article, we are going to focus on connecting via SSMS. If you are interested in connecting via Azure Data Studio, see [Quickstart: Use Azure Data Studio to connect and query SQL Server](/azure-data-studio/quickstart-sql-server).
 
 ### Sample database
 
@@ -128,7 +128,7 @@ Use Windows Authentication whenever possible.
 - [Connect to SQL Server](../sql-server/connect-to-database-engine.md)
 - [Troubleshoot Connecting to the SQL Server Database Engine](/troubleshoot/sql/connect/network-related-or-instance-specific-error-occurred-while-establishing-connection)
 - [Quickstart: Use SSMS to connect and query Azure SQL database](../ssms/quickstarts/ssms-connect-query-azure-sql.md)
-- [Quickstart: Use Azure Data Studio to connect and query Azure SQL database](../azure-data-studio/quickstart-sql-server.md)
+- [Quickstart: Use Azure Data Studio to connect and query Azure SQL database](/azure-data-studio/quickstart-sql-server)
 
 ## Next step
 

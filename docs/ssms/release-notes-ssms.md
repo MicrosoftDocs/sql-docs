@@ -465,5 +465,5 @@ For the latest release of SQL Server Management Studio, see [Download SQL Server
 ## Related content
 
 - [Download SQL Server Management Studio (SSMS)](download-sql-server-management-studio-ssms.md)
-- [Download Azure Data Studio](../azure-data-studio/download-azure-data-studio.md)
-- [Azure Data Studio release notes](../azure-data-studio/release-notes-azure-data-studio.md)
+- [Download Azure Data Studio](/azure-data-studio/download-azure-data-studio)
+- [Azure Data Studio release notes](/azure-data-studio/release-notes-azure-data-studio)

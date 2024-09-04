@@ -183,7 +183,7 @@ This step requires a server restart. If you're about to enable script execution,
 
 ## Enable script execution
 
-1. Use [SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md) or [Azure Data Studio](../../azure-data-studio/what-is-azure-data-studio.md) to connect to the instance where you installed SQL Server Machine Learning Services.
+1. Use [SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md) or [Azure Data Studio](/azure-data-studio/what-is-azure-data-studio) to connect to the instance where you installed SQL Server Machine Learning Services.
   
 1. Select **New Query** to open a query window, and then run the following command:
 

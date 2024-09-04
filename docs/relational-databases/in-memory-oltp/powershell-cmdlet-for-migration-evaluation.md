@@ -69,7 +69,7 @@ Before you can run this cmdlet, you must first install the module named **SqlSer
 > [!NOTE]
 > The old `SQLPS` module is no longer being maintained. Use the newer `SqlServer` module.
 
-For more information, see [Install SQL Server PowerShell module](../../powershell/download-sql-server-ps-module.md).
+For more information, see [Install SQL Server PowerShell module](/powershell/sql-server/download-sql-server-ps-module).
 
 ## Example cmdlet line
 

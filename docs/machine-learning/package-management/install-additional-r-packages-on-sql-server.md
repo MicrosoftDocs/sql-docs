@@ -44,7 +44,7 @@ This article describes how to use functions in the [**sqlmlutils**](https://gith
    , @script = N'print(R.version)'
   ```
 
-- Install [Azure Data Studio](../../azure-data-studio/what-is-azure-data-studio.md) on the client computer you use to connect to SQL Server. You can use other database management or query tools, but this article assumes Azure Data Studio.
+- Install [Azure Data Studio](/azure-data-studio/what-is-azure-data-studio) on the client computer you use to connect to SQL Server. You can use other database management or query tools, but this article assumes Azure Data Studio.
 
 ### Other considerations
 

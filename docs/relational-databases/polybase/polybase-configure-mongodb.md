@@ -67,13 +67,13 @@ The following Transact-SQL commands are used in this section:
 
 1. Query the external schema in MongoDB.
 
-    You can use the [Data Virtualization extension for Azure Data Studio](../../azure-data-studio/extensions/data-virtualization-extension.md) to connect to and generate a CREATE EXTERNAL TABLE statement based on the schema detected by the PolyBase ODBC Driver for MongoDB driver. You can also manually customize a script based on the output of the system stored procedure [sp_data_source_objects (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-data-source-objects.md). The Data Virtualization extension for Azure Data Studio and `sp_data_source_table_columns` use the same internal stored procedures to query the external schema schema.
+    You can use the [Data Virtualization extension for Azure Data Studio](/azure-data-studio/extensions/data-virtualization-extension) to connect to and generate a CREATE EXTERNAL TABLE statement based on the schema detected by the PolyBase ODBC Driver for MongoDB driver. You can also manually customize a script based on the output of the system stored procedure [sp_data_source_objects (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-data-source-objects.md). The Data Virtualization extension for Azure Data Studio and `sp_data_source_table_columns` use the same internal stored procedures to query the external schema schema.
 
-    To create external tables to MongoDB collections that contain arrays, the recommendation is to use [Data Virtualization extension for Azure Data Studio](../../azure-data-studio/extensions/data-virtualization-extension.md). The flattening actions are performed automatically by the driver. The `sp_data_source_table_columns` stored procedure also automatically performs the flattening via the PolyBase ODBC Driver for MongoDB driver.
+    To create external tables to MongoDB collections that contain arrays, the recommendation is to use [Data Virtualization extension for Azure Data Studio](/azure-data-studio/extensions/data-virtualization-extension). The flattening actions are performed automatically by the driver. The `sp_data_source_table_columns` stored procedure also automatically performs the flattening via the PolyBase ODBC Driver for MongoDB driver.
 
 1. Create an external table.
 
-    If you use the [Data Virtualization extension for Azure Data Studio](../../azure-data-studio/extensions/data-virtualization-extension.md), you can skip this step, as the CREATE EXTERNAL TABLE statement is generated for you. To provide the schema manually, consider the following sample script to create an external table. For reference, see [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md). 
+    If you use the [Data Virtualization extension for Azure Data Studio](/azure-data-studio/extensions/data-virtualization-extension), you can skip this step, as the CREATE EXTERNAL TABLE statement is generated for you. To provide the schema manually, consider the following sample script to create an external table. For reference, see [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md). 
 
     Before you run the script, update it for your environment:
 

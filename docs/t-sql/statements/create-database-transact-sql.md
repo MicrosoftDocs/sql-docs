@@ -1452,7 +1452,7 @@ CREATE DATABASE MyLedgerDB WITH LEDGER = ON;
 In Azure Synapse, this statement can be used with an Azure SQL Database server to create a dedicated SQL pool. With this statement, you specify the database name, collation, maximum size, edition, and service objective.
 
  - CREATE DATABASE is supported for standalone dedicated SQL pools (formerly SQL DW) using Gen2 service levels.
- - CREATE DATABASE is not supported for dedicated SQL pools in an Azure Synapse Analytics workspace. Instead, [use the Azure portal](../../azure-data-studio/quickstart-sql-dw.md). 
+ - CREATE DATABASE is not supported for dedicated SQL pools in an Azure Synapse Analytics workspace. Instead, [use the Azure portal](/azure-data-studio/quickstart-sql-dw). 
  - CREATE DATABASE is supported for serverless SQL pools in Azure Synapse Analytics.
 
 ## Syntax

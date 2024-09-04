@@ -53,7 +53,7 @@ When Object Explorer is connected to a server, you can open a new Code Editor wi
   
 ### Start PowerShell
 
-You can start a PowerShell session by right-clicking most folders and objects in the Object Explorer tree and selecting **Start PowerShell**. This starts a PowerShell session that has the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell support enabled, and the path set to the object you right-clicked in Object Explorer. You can then enter PowerShell commands in an interactive PowerShell environment. For more information, see [SQL Server PowerShell](../../powershell/sql-server-powershell.md).  
+You can start a PowerShell session by right-clicking most folders and objects in the Object Explorer tree and selecting **Start PowerShell**. This starts a PowerShell session that has the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell support enabled, and the path set to the object you right-clicked in Object Explorer. You can then enter PowerShell commands in an interactive PowerShell environment. For more information, see [SQL Server PowerShell](/powershell/sql-server/sql-server-powershell).  
   
 ## See also
 

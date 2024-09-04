@@ -49,7 +49,7 @@ helpviewer_keywords:
   
 -   Oracle for all platforms that Oracle supports.  
   
--   IBM DB2 for AS400, MVS, Unix, Linux, and Windows.  
+-   IBM Db2 for AS400, MVS, Unix, Linux, and Windows.  
   
  For more information, see [Non-SQL Server Subscribers](../../../relational-databases/replication/non-sql/non-sql-server-subscribers.md).  
   

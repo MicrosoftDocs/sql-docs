@@ -15,11 +15,11 @@ ms.custom:
 
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
-This article introduces [SQL Server PowerShell](../powershell/sql-server-powershell.md) and walks you through a couple of examples on how to use it with PowerShell Core (PS Core) on macOS & Linux. PowerShell Core is now an Open Source project on [GitHub](https://github.com/powershell/powershell).
+This article introduces [SQL Server PowerShell](/powershell/sql-server/sql-server-powershell) and walks you through a couple of examples on how to use it with PowerShell Core (PS Core) on macOS & Linux. PowerShell Core is now an Open Source project on [GitHub](https://github.com/powershell/powershell).
 
 ## Cross-platform editor options
 
-All of the following steps for PowerShell Core work in a regular terminal, or you can run them from a terminal within Visual Studio Code or Azure Data Studio. Both VS Code and Azure Data Studio are available on macOS and Linux. For more information on Azure Data Studio, see [Quickstart: Use Azure Data Studio to connect and query SQL Server](../azure-data-studio/quickstart-sql-server.md). You may also want to consider using the [PowerShell Editor Support for Azure Data Studio](../azure-data-studio/extensions/powershell-extension.md).
+All of the following steps for PowerShell Core work in a regular terminal, or you can run them from a terminal within Visual Studio Code or Azure Data Studio. Both VS Code and Azure Data Studio are available on macOS and Linux. For more information on Azure Data Studio, see [Quickstart: Use Azure Data Studio to connect and query SQL Server](/azure-data-studio/quickstart-sql-server). You may also want to consider using the [PowerShell Editor Support for Azure Data Studio](/azure-data-studio/extensions/powershell-extension).
 
 ## Install PowerShell Core
 
@@ -40,7 +40,7 @@ To install the SqlServer module, open a PowerShell Core session and run the foll
 Install-Module -Name SqlServer
 ```
 
-For more information on how to install the SqlServer module from the PowerShell Gallery, see [Install the SQL Server PowerShell module](../powershell/download-sql-server-ps-module.md).
+For more information on how to install the SqlServer module from the PowerShell Gallery, see [Install the SQL Server PowerShell module](/powershell/sql-server/download-sql-server-ps-module).
 
 ## Use the SqlServer module
 
@@ -106,7 +106,7 @@ your_server_instance            14.0.3048  RTM          CU13         Linux      
 
 ## Use the SQL Server PowerShell Provider
 
-Another option for connecting to your SQL Server instance is to use the [SQL Server PowerShell Provider](../powershell/sql-server-powershell-provider.md). Using the provider allows you to navigate SQL Server instance similar to as if you were navigating the tree structure in Object Explorer, but at the cmdline. By default this provider is presented as a PSDrive named `SQLSERVER:\`, which you can use to connect & navigate SQL Server instances that your domain account has access to. See [Configuration steps](./sql-server-linux-active-directory-auth-overview.md#configuration-steps) for information on how to set up Active Directory authentication for SQL Server on Linux.
+Another option for connecting to your SQL Server instance is to use the [SQL Server PowerShell Provider](/powershell/sql-server/sql-server-powershell-provider). Using the provider allows you to navigate SQL Server instance similar to as if you were navigating the tree structure in Object Explorer, but at the cmdline. By default this provider is presented as a PSDrive named `SQLSERVER:\`, which you can use to connect & navigate SQL Server instances that your domain account has access to. See [Configuration steps](./sql-server-linux-active-directory-auth-overview.md#configuration-steps) for information on how to set up Active Directory authentication for SQL Server on Linux.
 
 You can also use SQL authentication with the SQL Server PowerShell Provider. To do this, use the `New-PSDrive` cmdlet to create a new PSDrive and supply the proper credentials to connect.
 
@@ -271,4 +271,4 @@ SELECT Name
 
 ## Related content
 
-- [SQL Server PowerShell](../powershell/sql-server-powershell.md)
+- [SQL Server PowerShell](/powershell/sql-server/sql-server-powershell)

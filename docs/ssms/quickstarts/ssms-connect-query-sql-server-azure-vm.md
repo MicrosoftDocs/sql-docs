@@ -226,7 +226,7 @@ You can find information about the connection properties under the results of yo
 
 ## Additional tools
 
-You can also use [Azure Data Studio](../../azure-data-studio/download-azure-data-studio.md) to connect and query [SQL Server](../../azure-data-studio/quickstart-sql-server.md), an [Azure SQL Database](../../azure-data-studio/quickstart-sql-database.md), and [Azure Synapse Analytics](../../azure-data-studio/quickstart-sql-dw.md).
+You can also use [Azure Data Studio](/azure-data-studio/download-azure-data-studio) to connect and query [SQL Server](/azure-data-studio/quickstart-sql-server), an [Azure SQL Database](/azure-data-studio/quickstart-sql-database), and [Azure Synapse Analytics](/azure-data-studio/quickstart-sql-dw).
 
 ## Related content
 

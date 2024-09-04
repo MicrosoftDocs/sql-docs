@@ -41,7 +41,7 @@ You can install Machine Learning Services on Red Hat Enterprise Linux (RHEL), SU
 
 * You should have a tool for running T-SQL commands. 
 
-  * You can use [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md), a free database tool that runs on Linux, Windows, and macOS.
+  * You can use [Azure Data Studio](/azure-data-studio/download-azure-data-studio), a free database tool that runs on Linux, Windows, and macOS.
 
 ## Package list
 

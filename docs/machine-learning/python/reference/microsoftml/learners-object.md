@@ -1,6 +1,6 @@
 ---
 title: "Microsoftml Learners Objects"
-description: "Learn about the mcirosoftml learners Python objects."
+description: "Learn about the Microsoftml learners Python objects."
 author: VanMSFT
 ms.author: vanto
 ms.date: 09/04/2024

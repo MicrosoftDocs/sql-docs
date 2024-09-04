@@ -39,7 +39,7 @@ The following sections describe how to show or hide a report item in a rendered 
 
         > [!NOTE]  
         > When you specify an expression for visibility, you set the Hidden property of the report item, as shown in the following image. The evaluated expression shows the report item when the value is **False** and hides the report item when the value is **True**.  
-        > :::image type="content" source="media/hide-an-item-report-builder-and-ssrs/hiddenproperty-propertiesvisibility.png" alt-text="Screenshot of the Text Box Properties dialog and Expression dialog.":::
+        > :::image type="content" source="media/hide-an-item-report-builder-and-ssrs/hiddenproperty-propertiesvisibility.png" alt-text="Screenshot of the Text Box Properties dialog and Expression dialog." lightbox="media/hide-an-item-report-builder-and-ssrs/hiddenproperty-propertiesvisibility.png":::
 
 1. Select **OK** on the **Expression** dialog, and then select **OK** on the **Text Box Properties** dialog.
 

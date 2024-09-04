@@ -47,7 +47,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016"
   
 -   The Publisher of the selected publication is [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] or later.  
   
- Clicking **Add Subscriber** shows a menu with two choices: **Add SQL Server Subscriber** and **Add Non-SQL Server Subscriber**. Click **Add Non-SQL Server Subscriber** to add an Oracle or IBM DB2 Subscriber.  
+ Clicking **Add Subscriber** shows a menu with two choices: **Add SQL Server Subscriber** and **Add Non-SQL Server Subscriber**. Click **Add Non-SQL Server Subscriber** to add an Oracle or IBM Db2 Subscriber.  
   
  **Add SQL Server Subscriber**  
  Add a server to the list of servers that can be enabled as Subscribers. This button is displayed when one or more of the following conditions is true:  

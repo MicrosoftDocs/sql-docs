@@ -73,7 +73,7 @@ This article provides a brief explanation of the various downloads and stand-alo
 | Feature | Description |
 |----|-----|
 | [ODBC Drivers for Microsoft SQL Server](../connect/odbc/download-odbc-driver-for-sql-server.md) | The Microsoft ODBC Drivers for SQL Server provide native connectivity from Windows and Unix to Microsoft SQL Server and Microsoft Azure SQL Database. |
-| [OLEDB Provider for DB2 for Microsoft SQL Server](/host-integration-server/db2oledbv/installing-data-provider-version-6-0) | The Microsoft OLE DB Provider for DB2 v5.0 offers a set of technologies and tools for integrating vital data stored in IBM DB2 databases with new solutions. SQL Server developers and administrators can use the data provider with integration Services, Analysis Services, Replication, Reporting Services, and Distributed Query Processor. Read the Installing Data Provider section of the product documentation, which is available on-line or as a download. |
+| [OLEDB Provider for DB2 for Microsoft SQL Server](/host-integration-server/db2oledbv/installing-data-provider-version-6-0) | The Microsoft OLE DB Provider for DB2 v5.0 offers a set of technologies and tools for integrating vital data stored in IBM Db2 databases with new solutions. SQL Server developers and administrators can use the data provider with integration Services, Analysis Services, Replication, Reporting Services, and Distributed Query Processor. Read the Installing Data Provider section of the product documentation, which is available on-line or as a download. |
 
 ## Reporting Services
 

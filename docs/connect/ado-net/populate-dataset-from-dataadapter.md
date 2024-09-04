@@ -46,7 +46,7 @@ If the `DataAdapter` encounters multiple result sets, it creates multiple tables
   
 ## Populate a DataSet from multiple DataAdapters  
 
-Any number of `DataAdapter` objects can be used with a `DataSet`. Each `DataAdapter` can be used to fill one or more `DataTable` objects and resolve updates back to the relevant data source. `DataRelation` and `Constraint` objects can be added to the `DataSet` locally, which enables you to relate data from dissimilar data sources. For example, a `DataSet` can contain data from a Microsoft SQL Server database, an IBM DB2 database exposed through OLE DB, and a data source that streams XML. One or more `DataAdapter` objects can handle communication to each data source.  
+Any number of `DataAdapter` objects can be used with a `DataSet`. Each `DataAdapter` can be used to fill one or more `DataTable` objects and resolve updates back to the relevant data source. `DataRelation` and `Constraint` objects can be added to the `DataSet` locally, which enables you to relate data from dissimilar data sources. For example, a `DataSet` can contain data from a Microsoft SQL Server database, an IBM Db2 database exposed through OLE DB, and a data source that streams XML. One or more `DataAdapter` objects can handle communication to each data source.  
   
 ### Example  
 

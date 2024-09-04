@@ -1,6 +1,6 @@
 ---
-title: "IBM DB2 Subscribers"
-description: "IBM DB2 Subscribers"
+title: "IBM Db2 Subscribers"
+description: "IBM Db2 Subscribers"
 author: "MashaMSFT"
 ms.author: "mathoma"
 ms.date: "03/02/2017"
@@ -15,13 +15,13 @@ helpviewer_keywords:
   - "mapping data types [SQL Server replication]"
   - "heterogeneous Subscribers, IBM DB2"
 ---
-# IBM DB2 Subscribers
+# IBM Db2 Subscribers
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supports push subscriptions to IBM DB2/AS 400, DB2/MVS, and DB2/Universal Database through the OLE DB providers that are included with [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Host Integration Server.  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supports push subscriptions to IBM Db2/AS 400, DB2/MVS, and DB2/Universal Database through the OLE DB providers that are included with [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Host Integration Server.  
   
-## Configuring an IBM DB2 Subscriber  
- To configure an IBM DB2 Subscriber, follow these steps:  
+## Configuring an IBM Db2 Subscriber  
+ To configure an IBM Db2 Subscriber, follow these steps:  
   
 1.  Install the latest version of the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] OLE DB Provider for DB2 on the Distributor:  
   
@@ -74,7 +74,7 @@ helpviewer_keywords:
   
     2.  Execute sp_changearticle, specifying the file path and name for the *creation_script* property.  
   
-## Considerations for IBM DB2 Subscribers  
+## Considerations for IBM Db2 Subscribers  
  In addition to the considerations covered in the topic [Non-SQL Server Subscribers](../../../relational-databases/replication/non-sql/non-sql-server-subscribers.md), consider the following issues when replicating to DB2 Subscribers:  
   
 -   The data and indexes for each replicated table are assigned to a DB2 tablespace. The page size of a DB2 tablespace controls the maximum number of columns and the maximum row size of the tables belonging to the tablespace. Ensure that the tablespace associated with replicated tables is appropriate based on the number of replicated columns and the maximum row size of the tables.  
@@ -89,10 +89,10 @@ helpviewer_keywords:
   
     -   It is not possible to specify alternative column names. You must ensure that published tables do not include column names longer than those supported on the DB2 version at the Subscriber.  
   
-## Mapping Data Types from SQL Server to IBM DB2  
- The following table shows the data type mappings that are used when data is replicated to a Subscriber running IBM DB2.  
+## Mapping Data Types from SQL Server to IBM Db2  
+ The following table shows the data type mappings that are used when data is replicated to a Subscriber running IBM Db2.  
   
-|SQL Server data type|IBM DB2 data type|  
+|SQL Server data type|IBM Db2 data type|  
 |--------------------------|-----------------------|  
 |**bigint**|DECIMAL(19,0)|  
 |**binary(1-254)**|CHAR(1-254) FOR BIT DATA|  
@@ -148,7 +148,7 @@ helpviewer_keywords:
   
 -   DB2 can support VARCHAR columns as large as 32 kilobytes (KB); therefore it is possible that some [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] large object columns can be appropriately mapped to DB2 VARCHAR columns. However, the OLE DB provider that replication uses for DB2 does not support mapping [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] large objects to DB2 large objects. For this reason, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **text**, **varchar(max)**, **ntext**, and **nvarchar(max)** columns are mapped to VARCHAR(0) in the generated create scripts. The length value of 0 must be changed to an appropriate value prior to applying the script to the Subscriber. If the data type length is not changed, DB2 will raise error 604 when the table create is attempted at the DB2 Subscriber (error 604 indicates that the precision or length attribute of a data type is not valid).  
   
-     Based upon your knowledge of the source table that you are replicating, determine whether it is appropriate to map a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] large object to a variable length DB2 item, and specify an appropriate maximum length in a custom creation script. For information about specifying a custom creation script, see step 5 in the section "Configuring an IBM DB2 Subscriber" in this topic.  
+     Based upon your knowledge of the source table that you are replicating, determine whether it is appropriate to map a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] large object to a variable length DB2 item, and specify an appropriate maximum length in a custom creation script. For information about specifying a custom creation script, see step 5 in the section "Configuring an IBM Db2 Subscriber" in this topic.  
   
     > [!NOTE]  
     >  The specified length for the DB2 type, when combined with other column lengths, cannot exceed the maximum row size based upon the DB2 table space that the table data is assigned to.  
@@ -157,7 +157,7 @@ helpviewer_keywords:
   
 -   When replicating [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **nchar** and **nvarchar** to DB2 CHAR and VARCHAR, replication uses the same length-specifier for the DB2 type as for the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] type. However, the data type length might too small for the generated DB2 table.  
   
-     In some DB2 environments, a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **char** data item is not restricted to single-byte characters; the length of a CHAR or VARCHAR item must take this into account. You must also take into account *shift in* and *shift out* characters if they are needed. If you are replicating tables with **nchar** and **nvarchar** columns, you might need to specify a larger maximum length for the data type in a custom creation script. For information about specifying a custom creation script, see step 5 in the section "Configuring an IBM DB2 Subscriber" in this topic.  
+     In some DB2 environments, a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **char** data item is not restricted to single-byte characters; the length of a CHAR or VARCHAR item must take this into account. You must also take into account *shift in* and *shift out* characters if they are needed. If you are replicating tables with **nchar** and **nvarchar** columns, you might need to specify a larger maximum length for the data type in a custom creation script. For information about specifying a custom creation script, see step 5 in the section "Configuring an IBM Db2 Subscriber" in this topic.  
   
 ## See Also  
  [Non-SQL Server Subscribers](../../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)   

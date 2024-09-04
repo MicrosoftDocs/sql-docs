@@ -1,9 +1,9 @@
 ---
 title: "Configure a firewall for report server access"
-description: "Learn how to manually configure Windows Firewall to allow access to Report Server applications and published reports by opening necessary ports."
+description: "See how to manually configure Windows Firewall to allow access to Report Server applications and published reports by opening necessary ports."
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 08/29/2024
+ms.date: 09/04/2024
 ms.service: reporting-services
 ms.subservice: report-server
 ms.topic: how-to
@@ -19,12 +19,12 @@ In this article, you learn how to manually open necessary ports in Windows Firew
 
 ## Prerequisites
 
-- [Configure the service account](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)
-- [Create the report server database](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)
-- [Configure URLs for the Report Server web service and the web portal](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md).
+- [Configure the Report Server service account (Report Server Configuration Manager)](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)
+- [Create a report server database, Report Server Configuration Manager](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)
+- [Manage a Reporting Services native mode report server](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md).
 - Access to the report server over a local web browser connection
 - Verify that the installation is configured correctly
-- [Add the report server to Trusted Sites if you're on Windows Server](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).
+- [Configure a native mode report server for local administration (SSRS)](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).
 
 ## Open ports in Windows Firewall
 
@@ -47,14 +47,14 @@ To open port 80, complete the following steps:
 1. Select **Specific Local Ports**, enter a value of **80**, and select **Next**.
 1. On the **Action** page, select **Allow the connection** and select **Next**.
 1. On the **Profile** page, select the appropriate options for your environment and select **Next**.
-1. On the **Name** page, enter the name **ReportServer (TCP on port 80)** and select **Finish**. 
+1. On the **Name** page, enter the name **ReportServer (TCP on port 80)** and select **Finish**.
 1. Restart the computer.
 
 ## Validate port configuration
 
-After you open the port, grant user access to the report server through role assignments on at the Home and Site levels. This action is done before confirming whether remote users can access the report server on the opened port. Even if the port is opened correctly, Report Server connections might still fail if users lack sufficient permissions. For more information, see [Grant user access to a report server](../../reporting-services/security/grant-user-access-to-a-report-server.md).
+After you open the port, grant user access to the report server through role assignments at the Home and Site levels. This action is done before confirming whether remote users can access the report server on the opened port. Even if the port is opened correctly, Report Server connections might still fail if users lack sufficient permissions. For more information, see [Grant user access to a report server](../../reporting-services/security/grant-user-access-to-a-report-server.md).
 
-You can also verify that the port is opened correctly by starting the web portal on a different computer. For more information, see [What is the report server web portal (Native mode)?](../../reporting-services/web-portal-ssrs-native-mode.md).
+You can also verify that the port is opened correctly by starting the web portal on a different computer. For more information, see [What is the report server web portal (Native mode)?](../../reporting-services/web-portal-ssrs-native-mode.md)
 
 ## Related content
 

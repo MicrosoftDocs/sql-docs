@@ -1,5 +1,5 @@
 ---
-title: "microsoftml Learners Objects"
+title: "Microsoftml Learners Objects"
 description: "Learn about the mcirosoftml learners Python objects."
 author: VanMSFT
 ms.author: vanto
@@ -13,7 +13,7 @@ keywords:
 ms.devlang: python
 monikerRange: ">=sql-server-2017 || >=sql-server-linux-ver15"
 ---
-# microsoftml Learners Objects
+# Microsoftml Learners Objects
 
 ## Description
 

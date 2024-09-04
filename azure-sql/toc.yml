@@ -311,8 +311,6 @@
       items:
       - name: Server-level IP firewall rules
         href: database/firewall-create-server-level-portal-quickstart.md
-      - name: Database project in a local dev environment
-        href: database/local-dev-experience-quickstart.md
     - name: Connect and query
       items:
       - name: .NET with SqlClient
@@ -651,13 +649,8 @@
           href: /azure/developer/java/spring-framework/configure-spring-data-r2dbc-with-azure-sql-server?toc=/azure/azure-sql/toc.json&bc=/azure/bread/toc.json
     - name: Develop locally
       items:
-      - name: Set up local dev environment
-        href: database/local-dev-experience-set-up-dev-environment.md
       - name: Create a database project
         href: database/local-dev-experience-create-database-project.md
-      - name: Publish a database project to the local emulator
-        href: database/local-dev-experience-publish-emulator.md
-
     - name: Manage
       items:
       - name: Management API reference

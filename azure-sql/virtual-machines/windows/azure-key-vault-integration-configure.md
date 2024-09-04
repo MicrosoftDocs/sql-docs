@@ -4,7 +4,7 @@ description: Learn how to automate the configuration of SQL Server encryption fo
 author: adbadram
 ms.author: adbadram
 ms.reviewer: mathoma, vanto
-ms.date: 09/03/2024
+ms.date: 09/04/2024
 ms.service: virtual-machines-sql
 ms.subservice: security
 ms.topic: how-to
@@ -53,7 +53,7 @@ When you're finished, select the **Apply** button on the bottom of the **Securit
 > [!NOTE]  
 > The credential name we created here will be mapped to a SQL login later. This allows the SQL login to access the key vault.
 
-Continue with step 5.5 from [Set up SQL Server TDE Extensible Key Management by using Azure Key Vault](/sql/relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault?view=sql-server-ver16&branch=pr-en-us-31589&tabs=portal#step-5-configure-sql-server) to complete the EKM setup.
+Continue with step 5.5 from [Set up SQL Server TDE Extensible Key Management by using Azure Key Vault](/sql/relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault#step-5-configure-sql-server) to complete the EKM setup.
 
 ## Related content
 

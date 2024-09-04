@@ -4,7 +4,7 @@ description: Install and configure the SQL Server Connector for Azure Key Vault.
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: randolphwest
-ms.date: 09/03/2024
+ms.date: 09/04/2024
 ms.service: sql
 ms.subservice: security
 ms.topic: conceptual

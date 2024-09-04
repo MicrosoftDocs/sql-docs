@@ -33,7 +33,7 @@ ms.topic: conceptual
 
 ## Where is the Profiler?
 
-You can start the Profiler within [SQL Server Management Studio](start-sql-server-profiler.md) or with the [Azure Data Studio using the SQL Server Profiler extension](../../azure-data-studio/extensions/sql-server-profiler-extension.md).
+You can start the Profiler within [SQL Server Management Studio](start-sql-server-profiler.md) or with the [Azure Data Studio using the SQL Server Profiler extension](/azure-data-studio/extensions/sql-server-profiler-extension).
 
 ## Capture and replay trace data
 

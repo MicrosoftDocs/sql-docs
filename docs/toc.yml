@@ -4375,7 +4375,7 @@ items:
     - name: SQL Server Replication
       href: database-engine/install-windows/install-sql-server-replication.md
     - name: SQL Server PowerShell
-      href: database-engine/install-windows/install-sql-server-powershell.md
+      href: /powershell/sql-server/download-sql-server-ps-module
     - name: SQL Server with SMB Fileshare as a Storage Option
       href: database-engine/install-windows/install-sql-server-with-smb-fileshare-as-a-storage-option.md
     - name: Considerations for Installing SQL Server Using SysPrep
@@ -9984,7 +9984,7 @@ items:
     - name: Query History
       href: tools/visual-studio-code/mssql-query-history.md
     - name: SQL Database Projects
-      href: azure-data-studio/extensions/sql-database-project-extension.md
+      href: /azure-data-studio/extensions/sql-database-project-extension
     - name: SQL Bindings for Azure Functions
       items: 
       - name: Overview
@@ -10197,7 +10197,7 @@ items:
       - name: Use SSMS to manage
         href: linux/sql-server-linux-manage-ssms.md
       - name: Use Azure Data Studio to manage
-        href: azure-data-studio/quickstart-sql-server.md
+        href: /azure-data-studio/quickstart-sql-server
       - name: Use Windows PowerShell
         href: linux/sql-server-linux-manage-powershell.md
       - name: Use PowerShell Core

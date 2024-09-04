@@ -74,7 +74,7 @@ SQL Server Management Studio 20.2:
 If you access this page from a non-English language version and want to see the most up-to-date content, select **Read in English** at the top of this page. To download different languages, select [available languages](#available-languages).
 
 > [!NOTE]  
-> The SQL Server PowerShell module is a separate install through the PowerShell Gallery. For more information, see [Install the SQL Server PowerShell module](../powershell/download-sql-server-ps-module.md).
+> The SQL Server PowerShell module is a separate install through the PowerShell Gallery. For more information, see [Install the SQL Server PowerShell module](/powershell/sql-server/download-sql-server-ps-module).
 
 ## What's new
 

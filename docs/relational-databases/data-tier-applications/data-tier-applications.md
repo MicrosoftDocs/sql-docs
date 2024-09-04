@@ -75,7 +75,7 @@ The following tools support the DAC package and BAC package format:
 
 - [SqlPackage CLI](../../tools/sqlpackage/sqlpackage.md)
 - [SQL Server Management Studio](../../ssms/sql-server-management-studio-ssms.md)
-- [Azure Data Studio](../../azure-data-studio/what-is-azure-data-studio.md)
+- [Azure Data Studio](/azure-data-studio/what-is-azure-data-studio)
 
 In these tools, a database can be extracted to a *.dacpac* or exported to a *.bacpac*. Conversely, a *.bacpac* can be imported into a new database or a *.dacpac* can be published to a new or existing database.
 
@@ -84,8 +84,8 @@ In these tools, a database can be extracted to a *.dacpac* or exported to a *.ba
 The following tools support the DAC package format in addition to providing editing of SQL database projects:
 
 - [SQL Server Data Tools in Visual Studio](../../ssdt/sql-server-data-tools.md)
-- [Azure Data Studio](../../azure-data-studio/extensions/sql-database-project-extension.md)
-- [Visual Studio Code (VS Code)](../../azure-data-studio/extensions/sql-database-project-extension.md)
+- [Azure Data Studio](/azure-data-studio/extensions/sql-database-project-extension)
+- [Visual Studio Code (VS Code)](/azure-data-studio/extensions/sql-database-project-extension)
 
 In these tools, developers can design a database in an unconnected, client-side development environment. The tools can be used to create a DAC package, deploy a DAC package to a database, and import a database package into a SQL project.
 

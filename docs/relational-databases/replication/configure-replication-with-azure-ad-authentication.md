@@ -32,7 +32,7 @@ To configure replication with Microsoft Entra authentication, you must meet the 
 
 - Have SQL Server 2022 [enabled by Azure-Arc](../../sql-server/azure-arc/connect.md) starting with [Cumulative Update 6](/troubleshoot/sql/releases/sqlserver-2022/cumulativeupdate6). 
 - Configured Microsoft Entra authentication for every server in the replication topology. Review [Tutorial: Set up Microsoft Entra authentication for SQL Server](../../relational-databases/security/authentication-access/azure-ad-authentication-sql-server-setup-tutorial.md) to learn more. 
-- [SQL Server Management Studio (SSMS) v19.1 or higher](../../ssms/download-sql-server-management-studio-ssms.md) or [Azure Data Studio](../../azure-data-studio/download-azure-data-studio.md). 
+- [SQL Server Management Studio (SSMS) v19.1 or higher](../../ssms/download-sql-server-management-studio-ssms.md) or [Azure Data Studio](/azure-data-studio/download-azure-data-studio). 
 - The user connecting to the publisher and subscriber is a member of the **sysadmin** fixed server role.
 - The connection must be encrypted using a certificate from a trusted Certificate Authority (CA) or a self-signed certificate.
    - If a self-signed certificate is used, it must be imported to the client machine and installed into the Trusted Certificates list for the client to trust the SQL Server. This requirement cannot be bypassed by selecting the **Trust server certificate** option in SQL Server Management Studio (SSMS) as it doesn't work with replication.

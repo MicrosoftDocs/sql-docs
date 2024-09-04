@@ -19,7 +19,7 @@ This article shows you how to create an [updatable ledger table](ledger-updatabl
 
 ## Prerequisites
 
-- [SQL Server Management Studio](../../../ssms/download-sql-server-management-studio-ssms.md) or [Azure Data Studio](../../../azure-data-studio/download-azure-data-studio.md).
+- [SQL Server Management Studio](../../../ssms/download-sql-server-management-studio-ssms.md) or [Azure Data Studio](/azure-data-studio/download-azure-data-studio).
 
 ## Create an updatable ledger table
 
@@ -32,7 +32,7 @@ We'll create an account balance table with the following schema.
 | FirstName   | varchar (50)   | Customer first name                 |
 | Balance     | decimal (10,2) | Account balance                     |
 
-1. Use [SQL Server Management Studio](../../../ssms/download-sql-server-management-studio-ssms.md) or [Azure Data Studio](../../../azure-data-studio/download-azure-data-studio.md) to create a new schema and table called `[Account].[Balance]`.
+1. Use [SQL Server Management Studio](../../../ssms/download-sql-server-management-studio-ssms.md) or [Azure Data Studio](/azure-data-studio/download-azure-data-studio) to create a new schema and table called `[Account].[Balance]`.
 
    ```sql
    CREATE SCHEMA [Account];

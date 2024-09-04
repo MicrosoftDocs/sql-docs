@@ -68,7 +68,7 @@ However, if the SQL Server Browser service isn't running, the following connecti
 - Connecting to a named instance without providing the port number or pipe.
 - [DAC](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md) to a named instance or the default instance if not using TCP/IP port 1433.
 - The OLAP redirector service.
-- Enumerating servers in [SQL Server Management Studio](../../ssms/menu-help/about-sql-server-management-studio.md) or [Azure Data Studio](../../azure-data-studio/download-azure-data-studio.md).
+- Enumerating servers in [SQL Server Management Studio](../../ssms/menu-help/about-sql-server-management-studio.md) or [Azure Data Studio](/azure-data-studio/download-azure-data-studio).
 
 Suppose you're using SQL Server in a client-server scenario (for example, when your application is accessing SQL Server across a network). If you stop or disable the SQL Server Browser service, you must assign a specific port number to each instance and write your client application code to use that port number. This approach has the following problems:
 

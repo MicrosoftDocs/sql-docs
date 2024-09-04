@@ -3,7 +3,7 @@ title: "Hide an item (Report Builder)"
 description: Learn how to hide or show a report item in Report Builder, specifically by using report parameters and expressions.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 08/09/2024
+ms.date: 09/04/2024
 ms.service: reporting-services
 ms.subservice: report-builder
 ms.topic: how-to
@@ -15,7 +15,7 @@ f1_keywords:
 ---
 # Hide an item (Report Builder)
 
-In this article, learn how to set the visibility of a report item based on a report parameter or another expression in Report Builder. You can conditionally hide an item to improve the user experience. You can also design a report to allow the user to toggle report item visibility by selecting text boxes in the report. For more information, see [Add an expand or collapse action to an item (Report Builder)](../../reporting-services/report-design/add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs.md).
+In this article, learn how to set the visibility of a report item based on a report parameter or another expression in Report Builder. You can conditionally hide an item to improve the user experience. You can also design a report to allow the user to toggle report item visibility by selecting text boxes in the report. For more information, see [Add an expand or collapse action to a Report Builder paginated report](../../reporting-services/report-design/add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs.md).
 
 The following sections describe how to show or hide a report item in a rendered report based on a constant or an expression.
 
@@ -61,6 +61,5 @@ The following sections describe how to show or hide a report item in a rendered 
 
 ## Related content
 
-- [Drilldown action in a paginated report](../../reporting-services/report-design/drilldown-action-report-builder-and-ssrs.md)
-- [Add an expand or collapse action to a paginated report](../../reporting-services/report-design/add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs.md)
+- [Drilldown action in a paginated report (Report Builder)](../../reporting-services/report-design/drilldown-action-report-builder-and-ssrs.md)
 - [Expression examples in Report Builder paginated reports](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)

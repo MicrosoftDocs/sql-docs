@@ -1,9 +1,9 @@
 ---
 title: Credentials and connections for report data sources
-description: Learn how report servers use credentials to connect to external data sources that provide content to reports or recipient information to a data-driven subscription.
+description: See how report servers use credentials to connect to external data sources that provide content to reports or recipient information to a data-driven subscription.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 08/29/2024
+ms.date: 09/04/2024
 ms.service: reporting-services
 ms.subservice: report-data
 ms.topic: concept-article
@@ -27,7 +27,7 @@ helpviewer_keywords:
   - "security [Reporting Services], data sources"
   - "Windows integrated security [Reporting Services]"
 
-#customer intent: As a Reporting Services user, I want to learn how a report server handles credentials so that I can securely manage my data.
+#customer intent: As a Reporting Services user, I want to see how a report server handles credentials so that I can securely manage my data.
 ---
 # Credentials and connections for report data sources
 
@@ -36,7 +36,7 @@ A report server uses credentials to connect to external data sources that provid
 > [!NOTE]
 > Credentials are also used to authenticate users who access a report server. For more information about authenticating users to a report server, see [Authentication in a report server](/sql/reporting-services/security/authentication-with-the-report-server).
 
-The connection to an external data source is defined when you create the report. It can be managed separately after the report is published. You can specify a static connection string or an expression that allows users to select a data source from a dynamic list. For more information about how to specify a data source type and connection string, see [Create data connection strings - Report Builder & SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).
+The connection to an external data source is defined when you create the report. You can manage it separately after the report is published. You can specify a static connection string or an expression that allows users to select a data source from a dynamic list. For more information about how to specify a data source type and connection string, see [Create data connection strings in Report Builder](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).
 
 ## Credentials used in Report Builder
 
@@ -62,7 +62,7 @@ For more information, see [Preview reports in Report Builder](../../reporting-se
 
 If the report retrieves data from a remote database server, you must verify:
 
-- The credentials provided to the database server are valid. If you're using Windows user credentials, make sure that the user has permission to the server and database.
+- The credentials provided to the database server are valid. If you use Windows user credentials, make sure that the user has permission to the server and database.
 
 - Ports used by the database server are open. If you're accessing [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] relational databases on external computers, you must open port 1433 and 1434 on the external computer. You must also open these ports if the report server database is on an external [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance. Be sure to restart the server after you open ports. For more information, see [Configure a Windows Firewall for Database Engine access](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md).
 
@@ -148,5 +148,5 @@ You can set credentials in your code to control access to reports and to the rep
 ## Related content
 
 - [Data sources supported by Reporting Services (SSRS)](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)
-- [Create data connection strings - Report Builder & SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)
+- [Create data connection strings in Report Builder](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)
 - [Manage report data sources](../../reporting-services/report-data/manage-report-data-sources.md)

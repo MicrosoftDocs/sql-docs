@@ -1,9 +1,9 @@
 ---
-title: "BaseLearner,coef_,fit,get_algo_args,predict,summary_,FastTrees,get_train_node,OneClassSvm,get_train_node,FastForest,get_train_node,FastLinear,get_train_node,LogisticRegression,aic,coef_,deviance_,get_algo_args,get_train_node,NeuralNetwork,get_train_node,OneClassSvm,get_train_node: Learners Python Objects"
-description: "An instance of the following objects is returned by every training function. They all inherit from the class BaseLearner and implement common methods.get_algo_args returns the training parameters,  coef_ retrieves the coefficients,  summary_ returns training information.The content changes based on the trained learner."
+title: "Microsoftml Learners Objects"
+description: "Learn about the Microsoftml learners Python objects."
 author: VanMSFT
 ms.author: vanto
-ms.date: 07/15/2019
+ms.date: 09/04/2024
 ms.service: sql
 ms.subservice: "machine-learning-services"
 ms.topic: "reference"
@@ -11,53 +11,36 @@ keywords:
   - models
   - learners
 ms.devlang: python
-monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15"
+monikerRange: ">=sql-server-2017 || >=sql-server-linux-ver15"
 ---
-# MicrosoftML Learners Objects
-
-
-
-
+# Microsoftml Learners Objects
 
 ## Description
 
 An instance of the following objects is returned by every
 training function. They all inherit from the class *BaseLearner* and implement common methods.
 
-* `get_algo_args` returns the training parameters, 
+- `get_algo_args` returns the training parameters,
 
-* `coef_`retrieves the coefficients, 
+- `coef_`retrieves the coefficients,
 
-* `summary_` returns training information. 
+- `summary_` returns training information.
 
 The content changes based on the trained learner.
 
-
 ## Class BaseLearner
-
-
 
 ```
 microsoftml.modules.base_learner.BaseLearner(**kwargs)
 ```
 
-
-
-
 Base class for all the learners.
-
-
 
 ```
 coef_
 ```
 
-
-
-
 Get model coefficients.
-
-
 
 ```
 fit(formula: str, data: [revoscalepy.datasource.RxDataSource.RxDataSource,
@@ -73,48 +56,29 @@ fit(formula: str, data: [revoscalepy.datasource.RxDataSource.RxDataSource,
     **kargs)
 ```
 
-
-
-
 Fit the model.
-
-
 
 ```
 get_algo_args()
 ```
 
-
-
-
 Get algorithm arguments.
-
-
 
 ```
 predict(*args, **kwargs)
 ```
 
-
-
-
 Calls [`microsoftml.rx_predict()`](rx-predict.md).
-
-
 
 ```
 summary_
 ```
 
-
-
-
 Get model summary.
-
 
 ## Specific Learners
 
-
+### FastTree binary or regression model
 
 ```
 microsoftml.FastTrees(method: ['binary', 'regression'] = 'binary',
@@ -129,23 +93,13 @@ microsoftml.FastTrees(method: ['binary', 'regression'] = 'binary',
     **kargs)
 ```
 
-
-
-
-FastTree binary or regression model
-
-
+Get train node
 
 ```
 get_train_node(**all_args)
 ```
 
-
-
-
-get train node
-
-
+### One-class svm
 
 ```
 microsoftml.OneClassSvm(cache_size: float = 100,
@@ -160,23 +114,10 @@ microsoftml.OneClassSvm(cache_size: float = 100,
     **kargs)
 ```
 
-
-
-
-one-class svm
-
-
-
 ```
 get_train_node(**all_args)
 ```
-
-
-
-
-get train node
-
-
+### FastForest binary or regression model
 
 ```
 microsoftml.FastForest(method: ['binary', 'regression'] = 'binary',
@@ -190,23 +131,11 @@ microsoftml.FastForest(method: ['binary', 'regression'] = 'binary',
     **kargs)
 ```
 
-
-
-
-FastForest binary or regression model
-
-
-
 ```
 get_train_node(**all_args)
 ```
 
-
-
-
-get train node
-
-
+### SDCA binary or regression model
 
 ```
 microsoftml.FastLinear(method: ['binary', 'regression'] = 'binary',
@@ -223,23 +152,11 @@ microsoftml.FastLinear(method: ['binary', 'regression'] = 'binary',
     **kargs)
 ```
 
-
-
-
-SDCA binary or regression model
-
-
-
 ```
 get_train_node(**all_args)
 ```
 
-
-
-
-get train node
-
-
+### Logistic regression
 
 ```
 microsoftml.LogisticRegression(method: ['binary',
@@ -254,67 +171,7 @@ microsoftml.LogisticRegression(method: ['binary',
     **kargs)
 ```
 
-
-
-
-logistic regression
-
-
-
-```
-aic(k=2)
-```
-
-
-
-
-get model aic
-
-
-
-```
-coef_
-```
-
-
-
-
-get model coefficients
-
-
-
-```
-deviance_
-```
-
-
-
-
-get residual deviance
-
-
-
-```
-get_algo_args()
-```
-
-
-
-
-get algorithm arguments
-
-
-
-```
-get_train_node(**all_args)
-```
-
-
-
-
-get train node
-
-
+### Neural network
 
 ```
 microsoftml.NeuralNetwork(method: ['binary', 'multiClass',
@@ -330,55 +187,41 @@ microsoftml.NeuralNetwork(method: ['binary', 'multiClass',
     **kargs)
 ```
 
+```
+get_train_node(**all_args)
+```
 
+### Get model aic
 
+```
+aic(k=2)
+```
 
-neural network
+### Get model coefficients
 
+```
+coef_
+```
 
+### Get residual deviance
+
+```
+deviance_
+```
+
+### Get algorithm arguments
+
+```
+get_algo_args()
+```
+
+### Get train node
 
 ```
 get_train_node(**all_args)
 ```
 
-
-
-
-get train node
-
-
-
-```
-microsoftml.OneClassSvm(cache_size: float = 100,
-    kernel: [<function linear_kernel at 0x0000007156EAC8C8>,
-    <function polynomial_kernel at 0x0000007156EAC950>,
-    <function rbf_kernel at 0x0000007156EAC7B8>,
-    <function sigmoid_kernel at 0x0000007156EACA60>] = {'Name': 'RbfKernel',
-    'Settings': {}}, epsilon: float = 0.001, nu: float = 0.1,
-    shrink: bool = True, normalize: ['No', 'Warn', 'Auto',
-    'Yes'] = 'Auto',
-    ensemble: microsoftml.modules.ensemble.EnsembleControl = None,
-    **kargs)
-```
-
-
-
-
-one-class svm
-
-
-
-```
-get_train_node(**all_args)
-```
-
-
-
-
-get train node
-
-
-### See also
+### Related content
 
 [`rx_fast_forest`](rx-fast-forest.md),
 [`rx_fast_trees`](rx-fast-trees.md),

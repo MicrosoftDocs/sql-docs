@@ -1,0 +1,119 @@
+{
+  "redirections": [
+    {
+      "source_path": "docs/ssms/scripting/transact-sql-debugger.md",
+      "redirect_url": "/sql/ssdt/debugger/transact-sql-debugger",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/scripting/configure-firewall-rules-before-running-the-tsql-debugger.md",
+      "redirect_url": "/sql/ssdt/debugger/configure-firewall-rules-before-running-tsql-debugger",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/scripting/run-the-transact-sql-debugger.md",
+      "redirect_url": "/sql/ssdt/debugger/run-transact-sql-debugger",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/scripting/step-through-transact-sql-code.md",
+      "redirect_url": "/sql/ssdt/debugger/step-through-transact-sql-code",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/scripting/transact-sql-breakpoints.md",
+      "redirect_url": "/sql/ssdt/debugger/transact-sql-breakpoints",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/scripting/toggle-a-breakpoint.md",
+      "redirect_url": "/sql/ssdt/debugger/toggle-breakpoint",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/scripting/enable-disable-and-delete-breakpoints.md",
+      "redirect_url": "/sql/ssdt/debugger/enable-disable-delete-breakpoints",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/scripting/specify-a-breakpoint-condition.md",
+      "redirect_url": "/sql/ssdt/debugger/specify-breakpoint-condition",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/scripting/specify-a-hit-count.md",
+      "redirect_url": "/sql/ssdt/debugger/specify-hit-count",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/scripting/specify-a-breakpoint-filter.md",
+      "redirect_url": "/sql/ssdt/debugger/specify-breakpoint-filter",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/scripting/specify-a-breakpoint-action.md",
+      "redirect_url": "/sql/ssdt/debugger/specify-breakpoint-action",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/scripting/transact-sql-debugger-information.md",
+      "redirect_url": "/sql/ssdt/debugger/transact-sql-debugger-information",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/scripting/transact-sql-debugger-error-list-window.md",
+      "redirect_url": "/sql/ssdt/debugger/transact-sql-debugger",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/scripting/transact-sql-debugger-breakpoints-window.md",
+      "redirect_url": "/sql/ssdt/debugger/transact-sql-debugger",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/scripting/transact-sql-debugger-call-stack-window.md",
+      "redirect_url": "/sql/ssdt/debugger/transact-sql-debugger",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/scripting/transact-sql-debugger-locals-window.md",
+      "redirect_url": "/sql/ssdt/debugger/transact-sql-debugger",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/scripting/transact-sql-debugger-threads-window.md",
+      "redirect_url": "/sql/ssdt/debugger/transact-sql-debugger",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/scripting/transact-sql-debugger-command-window.md",
+      "redirect_url": "/sql/ssdt/debugger/transact-sql-debugger",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/scripting/transact-sql-debugger-output-window.md",
+      "redirect_url": "/sql/ssdt/debugger/transact-sql-debugger",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/scripting/transact-sql-debugger-watch-window.md",
+      "redirect_url": "/sql/ssdt/debugger/transact-sql-debugger",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/visual-db-tools/discard-changes-made-to-diagrams-visual-database-tools.md",
+      "redirect_url": "/sql/docs/ssms/visual-db-tools/visual-database-tools",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/visual-db-tools/issues-of-database-evolution-visual-database-tools.md",
+      "redirect_url": "/sql/docs/ssms/visual-db-tools/visual-database-tools",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/visual-db-tools/rename-a-database-diagram-visual-database-tools.md",
+      "redirect_url": "/sql/docs/ssms/visual-db-tools/visual-database-tools",
+      "redirect_document_id": false
+    }
+  ]
+}

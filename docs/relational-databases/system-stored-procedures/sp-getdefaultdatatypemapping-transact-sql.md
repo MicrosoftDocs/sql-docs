@@ -90,7 +90,7 @@ The name of the destination DBMS. *@destination_dbms* is **sysname**, and can be
 | --- | --- |
 | `MSSQLSERVER` | The destination is a [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] database. |
 | `ORACLE` | The destination is an Oracle database. |
-| `DB2` | The destination is an IBM DB2 database. |
+| `DB2` | The destination is an IBM Db2 database. |
 | `SYBASE` | The destination is a Sybase database. |
 
 You must specify this parameter.
@@ -142,5 +142,5 @@ Only members of the **sysadmin** fixed server role can execute `sp_getdefaultdat
 - [sp_helpdatatypemap (Transact-SQL)](sp-helpdatatypemap-transact-sql.md)
 - [sp_setdefaultdatatypemapping (Transact-SQL)](sp-setdefaultdatatypemapping-transact-sql.md)
 - [Data Type Mapping for Oracle Publishers](../replication/non-sql/data-type-mapping-for-oracle-publishers.md)
-- [IBM DB2 Subscribers](../replication/non-sql/ibm-db2-subscribers.md)
+- [IBM Db2 Subscribers](../replication/non-sql/ibm-db2-subscribers.md)
 - [Oracle Subscribers](../replication/non-sql/oracle-subscribers.md)

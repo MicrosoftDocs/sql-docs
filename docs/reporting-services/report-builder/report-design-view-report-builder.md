@@ -3,7 +3,7 @@ title: "Report design view in Report Builder"
 description: Learn about the interface in the Report Builder window that you use to add, select, organize report resources, and change report item properties.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 08/22/2024
+ms.date: 09/04/2024
 ms.service: reporting-services
 ms.subservice: report-builder
 ms.topic: conceptual
@@ -66,7 +66,7 @@ For information about how to use the keyboard to modify items on the design surf
 
 ### Design surface size and print area
 
-The design surface size might be different from the page size print area that you specify to print the report. Changing the size of the design surface doesn't change the print area of your report. No matter what size you set for the print area of your report, the full design area size doesn't change. For more information, see [Rendering behaviors in a paginated report](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md).
+The design surface size might be different from the page size print area that you specify to print the report. Changing the size of the design surface doesn't change the print area of your report. No matter what size you set for the print area of your report, the full design area size doesn't change. For more information, see [Rendering behaviors in a paginated report (Report Builder)](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md).
 
 > [!TIP]  
 > To display the ruler, on the **View** tab, select the **Ruler** box.
@@ -89,11 +89,11 @@ Some items are automatically added to the **Report Data** pane when you add them
 
 For more about items in the **Report Data** pane, see the following articles:
 
-- [Built-in globals and users references (Report Builder)](../../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md)
-- [Images in paginated reports](../../reporting-services/report-design/images-report-builder-and-ssrs.md)
-- [Create data connection strings - Report Builder & SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)
-- [Report embedded datasets and shared datasets (Report Builder)](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)
-- [Dataset fields collection (Report Builder)](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)
+- [Built-in Globals and User references in a paginated report (Report Builder)](../../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md)
+- [Images in paginated reports (Report Builder)](../../reporting-services/report-design/images-report-builder-and-ssrs.md)
+- [Create data connection strings in Report Builder](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)
+- [Report Embedded Datasets and Shared Datasets (Report Builder and SSRS)](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)
+- [Dataset Fields Collection (Report Builder and SSRS)](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)
 
 ## <a id="ReptPartGallery"></a> Report Part Gallery
 
@@ -106,7 +106,7 @@ Select **Report Parts** on the **Insert** tab to open the **Report Part Gallery*
 >
 > Report parts are deprecated for all releases of SQL Server Reporting Services after SQL Server Reporting Services 2019, and discontinued starting in SQL Server Reporting Services 2022 and Power BI Report Server.
 
-You can view the search results either as thumbnails or as a list, and sort the search results by name, created and modified dates, and creator. For more information, see [Report parts (Report Builder)](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).
+You can view the search results either as thumbnails or as a list, and sort the search results by name, created and modified dates, and creator. For more information, see [Report Parts (Report Builder and SSRS)](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).
 
 ## <a id="PropertiesPane"></a> Properties
 
@@ -150,7 +150,7 @@ You can create groups by dragging fields from the **Report Data** pane and dropp
 
 The **Grouping** pane is displayed by default, but you can close it by clearing the **Grouping** pane on the **View** tab. The **Grouping** pane isn't available for the **Chart** or **Gauge** data regions.
 
-For more information, see [Grouping pane in a paginated report](../../reporting-services/report-design/grouping-pane-report-builder.md) and [Groups in a Report Builder paginated report](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md).
+For more information, see [Grouping pane in a paginated report (Report Builder)](../../reporting-services/report-design/grouping-pane-report-builder.md) and [Groups in a Report Builder paginated report](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md).
 
 ## <a id="RunMode"></a> Run
 

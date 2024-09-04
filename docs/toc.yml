@@ -5358,28 +5358,29 @@ items:
           href: relational-databases/replication/non-sql/manage-oracle-tablespaces.md
     - name: Concepts
       items:
-      - name: Publishing Objects
+      - name: Publishing objects
         href: relational-databases/replication/publish/replication-publishing-model-overview.md
-      - name: Types of Replication
-        href: relational-databases/replication/types-of-replication.md
+      - name: Types of replication
         items:
-        - name: Memory-Optimized Table Subscribers
+        - name: Overview
+          href: relational-databases/replication/types-of-replication.md
+        - name: Memory-optimized table subscribers
           href: relational-databases/replication/replication-to-memory-optimized-table-subscribers.md
         - name: Replication to SQL Database >
           href: /azure/sql-database/replication-to-sql-database
-        - name: Republish Data
+        - name: Republish data
           href: relational-databases/replication/republish-data.md
         - name: Replication over the Internet
           href: relational-databases/replication/replication-over-the-internet.md
-        - name: Publish Data over the Internet Using VPN
+        - name: Publish data over the Internet using VPN
           href: relational-databases/replication/publish-data-over-the-internet-using-vpn.md
-        - name: Web Synchronization for Merge Replication
+        - name: Web synchronization for merge replication
           href: relational-databases/replication/web-synchronization-for-merge-replication.md
         - name: Topologies for web synchronization
           href: relational-databases/replication/topologies-for-web-synchronization.md
-        - name: Snapshot Replication
+        - name: Snapshot replication
           href: relational-databases/replication/snapshot-replication.md
-        - name: Merge Replication
+        - name: Merge replication
           href: relational-databases/replication/merge/merge-replication.md
           items:
           - name: Article options
@@ -5431,11 +5432,11 @@ items:
         items:
         - name: Agent executables
           href: relational-databases/replication/concepts/replication-agent-executables-concepts.md
-        - name: Management Objects
+        - name: Management objects
           href: relational-databases/replication/concepts/replication-management-objects-concepts.md
         - name: Programming concepts
           href: relational-databases/replication/concepts/replication-programming-concepts.md
-        - name: System Stored Procedures
+        - name: System stored procedures
           href: relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md
       - name: Security
         items:
@@ -5449,10 +5450,10 @@ items:
           href: relational-databases/replication/security/security-role-requirements-for-replication.md
         - name: Best practices
           href: relational-databases/replication/security/replication-security-best-practices.md
-      - name: Non-SQL Replication
+      - name: Non-SQL replication
         href: relational-databases/replication/non-sql/heterogeneous-database-replication.md
         items:
-        - name: Non-SQL Publishers
+        - name: Non-SQL publishers
           href: relational-databases/replication/non-sql/non-sql-server-publishers.md
           items:
           - name: Oracle
@@ -5462,19 +5463,19 @@ items:
               href: relational-databases/replication/non-sql/design-considerations-and-limitations-for-oracle-publishers.md
             - name: Glossary of terms
               href: relational-databases/replication/non-sql/glossary-of-terms-for-oracle-publishing.md
-            - name: Administrative Considerations
+            - name: Administrative considerations
               href: relational-databases/replication/non-sql/administrative-considerations-for-oracle-publishers.md
-            - name: Performance Tuning
+            - name: Performance tuning
               href: relational-databases/replication/non-sql/performance-tuning-for-oracle-publishers.md
             - name: Data type mapping
               href: relational-databases/replication/non-sql/data-type-mapping-for-oracle-publishers.md
-            - name: Backup & restore
+            - name: Backup and restore
               href: relational-databases/replication/non-sql/backup-and-restore-for-oracle-publishers.md
             - name: Objects created
               href: relational-databases/replication/non-sql/objects-created-on-the-oracle-publisher.md
             - name: Troubleshooting
               href: relational-databases/replication/non-sql/troubleshooting-oracle-publishers.md
-        - name: Non-SQL Subscribers
+        - name: Non-SQL subscribers
           href: relational-databases/replication/non-sql/non-sql-server-subscribers.md
           items:
           - name: Oracle
@@ -5486,11 +5487,11 @@ items:
     - name: Tutorials
       href: relational-databases/replication/replication-tutorials.md
       items:
-      - name: Prepare Server for Replication
+      - name: Prepare server for replication
         href: relational-databases/replication/tutorial-preparing-the-server-for-replication.md
-      - name: Configure Transactional Replication
+      - name: Configure transactional replication
         href: relational-databases/replication/tutorial-replicating-data-between-continuously-connected-servers.md
-      - name: Configure Merge Replication
+      - name: Configure merge replication
         href: relational-databases/replication/tutorial-replicating-data-with-mobile-clients.md
     - name: Reference
       items:
@@ -5559,23 +5560,23 @@ items:
         items:
         - name: Main page
           href: relational-databases/replication/replication-monitor-main-page.md
-        - name: Add Publisher
+        - name: Add publisher
           href: relational-databases/replication/add-publisher.md
-        - name: Distributor Settings
+        - name: Distributor settings
           href: relational-databases/replication/distributor-settings.md
-        - name: Distributor Information
+        - name: Distributor information
           href: relational-databases/replication/distributor-information-publications.md
-        - name: Publisher Settings
+        - name: Publisher settings
           href: relational-databases/replication/publisher-settings.md
-        - name: Publisher Information
+        - name: Publisher information
           href: relational-databases/replication/publisher-information-publications.md
-        - name: Publisher Agents
+        - name: Publisher agents
           href: relational-databases/replication/publisher-information-agents.md
         - name: Sort columns
           href: relational-databases/replication/sort-columns.md
       - name: Publication information
         items:
-        - name: Transactional Replication
+        - name: Transactional replication
           items:
           - name: Subscription watch list
             href: relational-databases/replication/publisher-information-subscription-watch-list-transactional.md
@@ -5607,7 +5608,7 @@ items:
             href: relational-databases/replication/subscription-synchronization-history.md
         - name: Snapshot replication
           items:
-          - name: Subscription Watch list
+          - name: Subscription watch list
             href: relational-databases/replication/publisher-information-subscription-watch-list-snapshot.md
           - name: Subscriptions
             href: relational-databases/replication/publication-information-all-subscriptions-snapshot-publication.md
@@ -5622,65 +5623,65 @@ items:
         items:
         - name: Distributor
           href: relational-databases/replication/distributor.md
-        - name: Snapshot Folder
+        - name: Snapshot folder
           href: relational-databases/replication/snapshot-folder.md
-        - name: Distribution Database
+        - name: Distribution database
           href: relational-databases/replication/distribution-database.md
         - name: Publishers
           href: relational-databases/replication/publishers.md
-        - name: Distributor Password
+        - name: Distributor password
           href: relational-databases/replication/distributor-password.md
       - name: New Publication Wizard
         href: relational-databases/replication/new-publication-wizard.md
         items:
-        - name: Oracle Publisher
+        - name: Oracle publisher
           href: relational-databases/replication/oracle-publisher.md
-        - name: Administrative Password
+        - name: Administrative password
           href: relational-databases/replication/administrative-password.md
-        - name: Publication Database
+        - name: Publication database
           href: relational-databases/replication/publication-database.md
-        - name: Publication Type
+        - name: Publication type
           href: relational-databases/replication/publication-type.md
-        - name: Subscriber Types
+        - name: Subscriber types
           href: relational-databases/replication/subscriber-types.md
-        - name: Agent Security (New Publication Wizard)
+        - name: Agent security (New Publication Wizard)
           href: relational-databases/replication/agent-security-new-publication-wizard.md
         - name: Articles
           href: relational-databases/replication/articles.md
-        - name: Article Issues
+        - name: Article issues
           href: relational-databases/replication/article-issues.md
-        - name: Filter Table Rows
+        - name: Filter table rows
           href: relational-databases/replication/filter-table-rows.md
-        - name: Add or Edit Filter
+        - name: Add or edit filter
           href: relational-databases/replication/add-or-edit-filter.md
-        - name: Add or Edit Join
+        - name: Add or edit join
           href: relational-databases/replication/add-or-edit-join.md
-        - name: Generate Filters
+        - name: Generate filters
           href: relational-databases/replication/generate-filters.md
-        - name: Snapshot Agent
+        - name: Snapshot agent
           href: relational-databases/replication/snapshot-agent-new-publication-wizard.md
       - name: New Subscription Wizard
         href: relational-databases/replication/new-subscription-wizard-ui-reference.md
         items:
-        - name: Agent Location
+        - name: Agent location
           href: relational-databases/replication/agentname-agent-location.md
         - name: Subscribers
           href: relational-databases/replication/subscribers.md
-        - name: Add Non-SQL Server Subscriber
+        - name: Add non-SQL Server subscriber
           href: relational-databases/replication/add-non-sql-server-subscriber.md
-        - name: Agent Security
+        - name: Agent security
           href: relational-databases/replication/agentname-agent-security.md
-        - name: Updatable Subscriptions
+        - name: Updatable subscriptions
           href: relational-databases/replication/updatable-subscriptions.md
-        - name: Login for Updatable Subscriptions
+        - name: Login for updatable subscriptions
           href: relational-databases/replication/login-for-updatable-subscriptions.md
-        - name: Initialize Subscriptions
+        - name: Initialize subscriptions
           href: relational-databases/replication/initialize-subscriptions.md
-        - name: Web Server Information
+        - name: Web server information
           href: relational-databases/replication/web-server-information.md
-        - name: Subscription Type
+        - name: Subscription type
           href: relational-databases/replication/subscription-type.md
-        - name: HOST_NAME Values
+        - name: HOST_NAME values
           href: relational-databases/replication/host-name-values.md
       - name: Configure Peer-to-Peer Topology Wizard
         href: relational-databases/replication/configure-peer-to-peer-topology-wizard.md

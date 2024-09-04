@@ -83,14 +83,14 @@ Report data frequently changes, and you might want to refresh the report to view
 | Option | Result |
 | --- | --- |
 | **Refresh** button on the browser window | Displays the report stored in the session cache. A session cache is created when a user opens a report. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] uses browser sessions to maintain a consistent viewing experience while a report is open. |
-| :::image type="content" source="../../reporting-services/report-builder/media/finding-viewing-and-managing-reports-report-builder-and-ssrs/browser-refresh-button-on-report-toolbar.png" alt-text="Screenshot of the browser Refresh button on report toolbar."::: | When you select the **Refresh** button on the report toolbar, the report server reruns the query, and updates report data if the report runs on demand. If the report is cached or is a snapshot, The refresh action displays the report that's stored in the report server database. |
+| :::image type="content" source="../../reporting-services/report-builder/media/finding-viewing-and-managing-reports-report-builder-and-ssrs/browser-refresh-button-on-report-toolbar.png" alt-text="Screenshot of the browser Refresh button on report toolbar."::: | When you select the **Refresh** button on the report toolbar, the report server reruns the query, and updates report data if the report runs on demand. If the report is cached or is a snapshot, the refresh action displays the report that's stored in the report server database. |
 | CTRL+F5 keyboard combination | Produces the same result as selecting the **Refresh** button on the report toolbar. |
 
 ## <a id="ViewingAndManagingSharePointSite"></a> View and manage report server items from a SharePoint site
 
 When the system administrator configures a report server to run in SharePoint integrated mode, you can view and manage reports and other report server items from a SharePoint site.
 
-The SharePoint site includes pages to configure schedules, subscriptions, report parameters, data source properties, and report processing options, to view report history, and to create shared schedules. You can manage report server items on a SharePoint site the same way you create and manage them from other tools in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+The SharePoint site includes pages to configure schedules, subscriptions, report parameters, data source properties, and report processing options; to view report history; and to create shared schedules. You can manage report server items on a SharePoint site the same way you create and manage them from other tools in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
 To access the application pages, select item-specific actions from a list menu on a report or other report server item that you previously added to a SharePoint library. Depending on the item and your permissions, you might also be able to create reports in Report Builder, generate models, and set model item security.
 

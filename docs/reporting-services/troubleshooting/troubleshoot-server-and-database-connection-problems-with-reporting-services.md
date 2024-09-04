@@ -128,7 +128,9 @@ There are two workarounds for this issue.
     -db_owner role in the Windows SharePoint Services (WSS) Content database
     -WSS_Content_Application_Pools role in the SharePoint_Config database
 
-## Unable to connect to the /reports and /reportserver directories. This issue occurs when the report server databases are created on a virtual SQL Server that runs in a Microsoft Cluster Services (MSCS) cluster
+## Unable to connect to the /reports and /reportserver directories. 
+
+This issue occurs when the report server databases are created on a virtual SQL Server that runs in a Microsoft Cluster Services (MSCS) cluster.
 
 When you create the report server databases, **ReportServer** and **ReportServerTempDB**, on a virtual SQL Server that runs in an MSCS cluster, the remote name in the format `<domain>\<computer_name>$` might not be registered to SQL Server as a sign-in. If you configure the report server service account as an account that requires this remote name for connections, users can't connect to the `/reports` and `/reportserver` directories in Reporting Services. For example, the built-in Windows account NetworkService requires this remote name. To avoid this issue, use an explicit domain account or a SQL Server sign-in to connect to the report server databases.
 

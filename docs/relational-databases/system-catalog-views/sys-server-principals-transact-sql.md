@@ -32,8 +32,8 @@ Contains a row for every server-level principal.
 |**name**|**sysname**|Name of the principal. Is unique within a server.|  
 |**principal_id**|**int**|ID number of the Principal. Is unique within a server.|  
 |**sid**|**varbinary(85)**| Security Identifier (SID) of the principal.<br />A Windows principal's SID matches their Windows SID.<br />A Microsoft Entra user's SID is the binary representation of its Microsoft Entra object ID, plus 'AADE' appended.<br />A Microsoft Entra group's SID is the binary representation of its Microsoft Entra object ID, plus 'AADE' appended.<br />A Microsoft Entra application's SID is the binary representation of its Microsoft Entra client ID, plus 'AADE' appended. |
-|**type**|**char(1)**|Principal type:<br /><br /> S = SQL login<br /> R = Server role<br /><br />Available in SQL Server, Azure SQL Managed Instance, and PDW (In Public Preview in Azure SQL Database):<br />E = External login or application from Microsoft Entra ID<br />X = External group from Microsoft Entra ID<br /><br />Available in SQL Server, Azure SQL Managed Instance, and PDW (not Azure SQL Database):<br />U = Windows login<br />G = Windows group<br /> C = Login mapped to a certificate<br />K = Login mapped to an asymmetric key|
-|**type_desc**|**nvarchar(60)**|Description of the principal type:<br /><br /> SQL_LOGIN<br />SERVER_ROLE<br /><br />Available in SQL Server, Azure SQL Managed Instance, and PDW (In Public Preview in Azure SQL Database):<br />EXTERNAL_LOGIN<br />EXTERNAL_GROUP<br /><br /> Available in SQL Server, Azure SQL Managed Instance, and PDW (not Azure SQL Database):<br />WINDOWS_LOGIN<br /> WINDOWS_GROUP<br /> CERTIFICATE_MAPPED_LOGIN<br />ASYMMETRIC_KEY_MAPPED_LOGIN|  
+|**type**|**char(1)**|Principal type:<br /><br /> S = SQL login<br /> R = Server role<br /><br />Available in SQL Server, Azure SQL Managed Instance, and PDW (In preview in Azure SQL Database):<br />E = External login or application from Microsoft Entra ID<br />X = External group from Microsoft Entra ID<br /><br />Available in SQL Server, Azure SQL Managed Instance, and PDW (not Azure SQL Database):<br />U = Windows login<br />G = Windows group<br /> C = Login mapped to a certificate<br />K = Login mapped to an asymmetric key|
+|**type_desc**|**nvarchar(60)**|Description of the principal type:<br /><br /> SQL_LOGIN<br />SERVER_ROLE<br /><br />Available in SQL Server, Azure SQL Managed Instance, and PDW (In preview in Azure SQL Database):<br />EXTERNAL_LOGIN<br />EXTERNAL_GROUP<br /><br /> Available in SQL Server, Azure SQL Managed Instance, and PDW (not Azure SQL Database):<br />WINDOWS_LOGIN<br /> WINDOWS_GROUP<br /> CERTIFICATE_MAPPED_LOGIN<br />ASYMMETRIC_KEY_MAPPED_LOGIN|  
 |**is_disabled**|**int**|1 = Login is disabled.<br />0 = Login is enabled.|
 |**create_date**|**datetime**|Time at which the principal was created.|
 |**modify_date**|**datetime**|Time at which the principal definition was last modified.|
@@ -69,7 +69,7 @@ JOIN sys.server_permissions AS pe
 > [!IMPORTANT]
 > The permissions of fixed server roles (other than public) do not appear in sys.server_permissions. Therefore, server principals may have additional permissions not listed here.
 
-## See also
+## Related content
  [Security Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Principals &#40;Database Engine&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   

@@ -106,12 +106,12 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "docs/ssms/visual-db-tools/docs/ssms/visual-db-tools/discard-changes-made-to-diagrams-visual-database-tools.md",
+      "source_path": "/docs/ssms/visual-db-tools/discard-changes-made-to-diagrams-visual-database-tools.md",
       "redirect_url": "/sql/docs/ssms/visual-db-tools/visual-database-tools",
       "redirect_document_id": false
     },
     {
-      "source_path": "docs/ssms/visual-db-tools/docs/ssms/visual-db-tools/rename-a-database-diagram-visual-database-tools.md",
+      "source_path": "docs/ssms/visual-db-tools/rename-a-database-diagram-visual-database-tools.md",
       "redirect_url": "/sql/docs/ssms/visual-db-tools/visual-database-tools",
       "redirect_document_id": false
     }

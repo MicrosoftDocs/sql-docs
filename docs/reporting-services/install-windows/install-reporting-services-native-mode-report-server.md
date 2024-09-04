@@ -38,15 +38,15 @@ If you want to use features like [!INCLUDE[Power BI](../../includes/sspowerbi-md
 
 ## Prerequisites
 
-- The hardware and software that are required for SQL Server 2016. For more information, see [SQL Server 2016 and 2017: Hardware and software requirements](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server).
+- The hardware and software that are required for SQL Server 2016. For more information, see [SQL Server 2016 and 2017: Hardware and software requirements](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).
 
-- The ability to install SSRS and the [!INCLUDE[SQL Server no version](../../includes/ssnoversion-md.md)] database engine together in the same instance. The database engine instance hosts the report server database that the installation process creates and configures.
+- The ability to install SSRS and the [!INCLUDE[SQL Server no version](../../includes/ssnoversion-md.md)] database engine together in the same instance. The database engine instance hosts the report server databases that the installation process creates and configures.
 
 - A user account that meets the following requirements:
   - Is a member of the local administrator group
   - Has permission to access and create databases on the database engine instance that hosts the report server databases
 
-- The default values that are needed to reserve the report server and [!INCLUDE[SSRS web portal](../../includes/ssrswebportal.md)] URLs. These values are port 80, a strong wildcard, and the virtual directory names in the format *ReportServer_\<instance-name\>* and *Reports_\<instance-name\>*.
+- The default values that are needed to reserve the report server and [!INCLUDE[SSRS web portal](../../includes/ssrswebportal.md)] URLs. These values are port 80, a strong wildcard, and virtual directory names in the format *ReportServer_\<instance-name\>* and *Reports_\<instance-name\>*.
 
 - The default values that are needed to create the report server databases **ReportServer** and **ReportServerTempDB**. Any databases with these names from previous instances block the installation procedure. To unblock it, you must rename, move, or delete the databases.
 
@@ -151,7 +151,7 @@ Take the steps in the following sections to install SSRS in native mode and conf
    :::image type="content" source="media/install-reporting-services-native-mode-report-server/instance-configuration-page.png" alt-text="Screenshot of the Instance Configuration page in the installation wizard. The Named instance option and the field next to it are highlighted.":::
 
 1. If you want to use the SSRS subscription feature, take the following steps:
-   1. On the Server Configuration page, find the row for SQL Server Agent.
+   1. On the Server Configuration page, find the row for **SQL Server Agent**.
    1. Under **Startup Type**, select **Automatic**.
 
    :::image type="content" source="media/install-reporting-services-native-mode-report-server/sql-server-agent-startup-type.png" alt-text="Screenshot of the Server Configuration page. In a table, the SQL Server Agent service and a startup type of Automatic are highlighted.":::

@@ -37,8 +37,6 @@ For more information on [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion
 
 The execution logs are views in the ReportServer SQL database. For more information on [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)], see [Report server ExecutionLog and the ExecutionLog3 view](../../reporting-services/report-server/report-server-executionlog-and-the-executionlog3-view.md).
 
-----------
-
 ## Unable to send reports by using e-mail with Windows Server 2003 and POP3
 
 If you run an e-mail application with Post Office Protocol version 3 (POP3) on Microsoft Windows Server 2003, you might not be able to send reports by using the local POP3 server. If you configure the report server to create a subscription that sends a report and send e-mail with the local POP3 Server, you might receive the following error message: `Failure sending mail: <error message>`, where \<error message> is replaced with other error message information returned from Collaboration Data Objects (CDO).

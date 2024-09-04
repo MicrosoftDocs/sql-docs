@@ -12323,7 +12323,7 @@ items:
       items:
       - name: Database Mirroring Witness - sys.database_mirroring_witnesses
         href: relational-databases/system-catalog-views/database-mirroring-witness-catalog-views-sys-database-mirroring-witnesses.md
-    - name: Databases & Files
+    - name: Databases & files
       href: relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md
       items:
       - name: sys.backup_devices
@@ -12338,6 +12338,8 @@ items:
         href: relational-databases/system-catalog-views/sys-database-recovery-status-transact-sql.md
       - name: sys.database_scoped_configurations
         href: relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md
+      - name: sys.database_automatic_tuning_configuration
+        href: relational-databases/system-catalog-views/sys-database-automatic-tuning-configuration-transact-sql.md
       - name: sys.database_automatic_tuning_options
         href: relational-databases/system-catalog-views/sys-database-automatic-tuning-options-transact-sql.md
       - name: sys.database_automatic_tuning_mode
@@ -14096,6 +14098,8 @@ items:
         href: relational-databases/system-stored-procedures/sp-clean-db-file-free-space-transact-sql.md
       - name: sp_configure
         href: relational-databases/system-stored-procedures/sp-configure-transact-sql.md
+      - name: sp_configure_automatic_tuning
+        href: relational-databases/system-stored-procedures/sp-configure-automatic-tuning-transact-sql.md
       - name: sp_control_plan_guide
         href: relational-databases/system-stored-procedures/sp-control-plan-guide-transact-sql.md
       - name: sp_create_plan_guide

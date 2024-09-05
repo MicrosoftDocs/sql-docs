@@ -87,4 +87,3 @@ For more information about a specific template, see [GitHub - azuresql-devcontai
 
 - [What is the local development experience for Azure SQL Database?](local-dev-experience-overview.md)
 - [What are the Dev Container Templates for Azure SQL Database?](local-dev-experience-dev-containers.md)
-- [Quickstart: Create a local development environment for Azure SQL Database](local-dev-experience-quickstart.md)

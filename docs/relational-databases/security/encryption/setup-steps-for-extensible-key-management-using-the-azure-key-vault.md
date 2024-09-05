@@ -61,7 +61,7 @@ To grant your SQL Server instance access permissions to your Azure key vault, yo
 
     - Select the **Microsoft Entra ID** button.
 
-      :::image type="content" source="media/setup-steps-for-extensible-key-management-using-the-azure-key-vault/ekm-part1-login-portal.png" alt-text="Screenshot of the Azure services pane.":::
+      :::image type="content" source="media/setup-steps-for-extensible-key-management-using-the-azure-key-vault/ekm-part-1-login-portal.png" alt-text="Screenshot of the Azure services pane.":::
 
     - Select **More services** and then, in the **All services** pane, type **Microsoft Entra ID**.
 
@@ -69,23 +69,23 @@ To grant your SQL Server instance access permissions to your Azure key vault, yo
 
    1. On the **Manage** section of your **Microsoft Entra ID** resource, select **App registrations**.
 
-      :::image type="content" source="media/setup-steps-for-extensible-key-management-using-the-azure-key-vault/ekm-part1-azure-active-directory-app-register.png" alt-text="Screenshot of the Microsoft Entra ID Overview page in the Azure portal.":::
+      :::image type="content" source="media/setup-steps-for-extensible-key-management-using-the-azure-key-vault/ekm-part-1-azure-active-directory-app-register.png" alt-text="Screenshot of the Microsoft Entra ID Overview page in the Azure portal.":::
 
    1. On the **App registrations** page, select **New registration**.
 
-      :::image type="content" source="media/setup-steps-for-extensible-key-management-using-the-azure-key-vault/ekm-part1-azure-active-directory-new-registration.png" alt-text="Screenshot of the App registrations pane in the Azure portal.":::
+      :::image type="content" source="media/setup-steps-for-extensible-key-management-using-the-azure-key-vault/ekm-part-1-azure-active-directory-new-registration.png" alt-text="Screenshot of the App registrations pane in the Azure portal.":::
 
    1. On the **Register an application** pane, enter the user-facing name for the app, and then select **Register**.
 
-      :::image type="content" source="media/setup-steps-for-extensible-key-management-using-the-azure-key-vault/ekm-part1-azure-active-directory-register.png" alt-text="Screenshot of the Register an application pane." lightbox="media/setup-steps-for-extensible-key-management-using-the-azure-key-vault/ekm-part1-azure-active-directory-register.png":::
+      :::image type="content" source="media/setup-steps-for-extensible-key-management-using-the-azure-key-vault/ekm-part-1-azure-active-directory-register.png" alt-text="Screenshot of the Register an application pane." lightbox="media/setup-steps-for-extensible-key-management-using-the-azure-key-vault/ekm-part-1-azure-active-directory-register.png":::
 
    1. In the left pane, select **Certificates & secrets > Client secrets > New client secret**.
 
-      :::image type="content" source="media/setup-steps-for-extensible-key-management-using-the-azure-key-vault/ekm-part1-azure-active-directory-certificates-secrets.png" alt-text="Screenshot of the Certificates & secrets pane for the App in the Azure portal." lightbox="media/setup-steps-for-extensible-key-management-using-the-azure-key-vault/ekm-part1-azure-active-directory-certificates-secrets.png":::
+      :::image type="content" source="media/setup-steps-for-extensible-key-management-using-the-azure-key-vault/ekm-part-1-azure-active-directory-certificates-secrets.png" alt-text="Screenshot of the Certificates & secrets pane for the App in the Azure portal." lightbox="media/setup-steps-for-extensible-key-management-using-the-azure-key-vault/ekm-part-1-azure-active-directory-certificates-secrets.png":::
 
    1. Under **Add a client secret**, enter a description and an appropriate expiration, and then select **Add**. You can't choose an expiration period greater than 24 months. For more information, see [Add a client secret](/azure/active-directory/develop/quickstart-register-app#add-a-client-secret).
 
-      :::image type="content" source="media/setup-steps-for-extensible-key-management-using-the-azure-key-vault/ekm-part1-azure-active-directory-add-secret.png" alt-text="Screenshot of the Add a client secret section for the App in the Azure portal.":::
+      :::image type="content" source="media/setup-steps-for-extensible-key-management-using-the-azure-key-vault/ekm-part-1-azure-active-directory-add-secret.png" alt-text="Screenshot of the Add a client secret section for the App in the Azure portal.":::
 
    1. On the **Certificates & secrets** pane, under **Value**, select the **Copy** button next to the value of the client secret to be used to create an asymmetric key in SQL Server.
 
@@ -121,7 +121,7 @@ You can use the Azure portal to create the key vault and then add a Microsoft En
 
 1. On the **Access configuration** tab, you have the option of selecting **Azure role-based access control** or **Vault access policy**. We go over both options, but the **Azure role-based access control** option is recommended. For more information, see [Access model overview](/azure/key-vault/general/security-features#access-model-overview).
 
-    :::image type="content" source="media/setup-steps-for-extensible-key-management-using-the-azure-key-vault/ekm-part2-access-configuration.png" alt-text="Screenshot of the Create key vault pane and Access configuration tab in the Azure portal." lightbox="media/setup-steps-for-extensible-key-management-using-the-azure-key-vault/ekm-part2-access-configuration.png":::
+    :::image type="content" source="media/setup-steps-for-extensible-key-management-using-the-azure-key-vault/ekm-part-2-access-configuration.png" alt-text="Screenshot of the Create key vault pane and Access configuration tab in the Azure portal." lightbox="media/setup-steps-for-extensible-key-management-using-the-azure-key-vault/ekm-part-2-access-configuration.png":::
 
 1. Select **Review + create** and create the key vault.
 
@@ -172,7 +172,7 @@ The recommended method is to use [Azure role-based access control (RBAC)](/azure
 
 1. Use key type **RSA** and **RSA key size** as **2048**. EKM currently only supports an RSA key. Set activation and expiration dates as appropriate and set **Enabled** as **Yes**.
 
-   :::image type="content" source="media/setup-steps-for-extensible-key-management-using-the-azure-key-vault/ekm-part2-add-key-vault-key.png" alt-text="Screenshot of the Create Key pane.":::
+   :::image type="content" source="media/setup-steps-for-extensible-key-management-using-the-azure-key-vault/ekm-part-2-add-key-vault-key.png" alt-text="Screenshot of the Create Key pane.":::
 
 ### Best practices
 
@@ -311,7 +311,7 @@ To ensure quick key recovery and be able to access your data outside of Azure, w
 
 ### Types of keys
 
-You can generate four types of keys in an Azure Key Vault that will work with SQL Server. Asymmetric 2048-bit & 3072-bit RSA keys and 2048-bit & 3072-bit RSA-HSM keys.
+You can generate four types of keys in an Azure Key Vault that will work with SQL Server: Asymmetric 2048-bit & 3072-bit RSA keys and 2048-bit & 3072-bit RSA-HSM keys.
 
 - **Software-protected**: Processed in software and encrypted at rest. Operations on software-protected keys occur on Azure virtual machines. We recommend this type for keys that aren't used in a production deployment.
 
@@ -430,7 +430,7 @@ To view error code explanations, configuration settings, or maintenance tasks fo
 
 1. Give **Full Control** permissions on the `SQL Server Cryptographic Provider` registry key to the user account running the SQL Server service.
 
-   :::image type="content" source="media/setup-steps-for-extensible-key-management-using-the-azure-key-vault/ekm-part4-registry-permissions.png" alt-text="Screenshot of the EKM registry key in Registry Editor.":::
+   :::image type="content" source="media/setup-steps-for-extensible-key-management-using-the-azure-key-vault/ekm-part-4-registry-permissions.png" alt-text="Screenshot of the EKM registry key in Registry Editor.":::
 
 1. Select **Apply** and then **OK**.
 1. Close Registry Editor and restart the SQL Server service.

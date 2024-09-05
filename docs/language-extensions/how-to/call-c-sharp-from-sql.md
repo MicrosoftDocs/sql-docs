@@ -14,7 +14,7 @@ monikerRange: ">=sql-server-ver15 || >=sql-server-linux-ver15"
 
 [!INCLUDE [sqlserver2019-and-later](../../includes/applies-to-version/sqlserver2019-and-later.md)]
 
-The [SQL Server Language Extensions](../language-extensions-overview.md) feature uses the [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) system stored procedure as the interface to call the Java runtime.
+The [SQL Server Language Extensions](../language-extensions-overview.md) feature uses the [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) system stored procedure as the interface to call the .NET runtime.
 
 This how-to article explains implementation details for C# code that executes on SQL Server.
 
@@ -42,15 +42,16 @@ The following are some basic principles when executing C# on SQL Server.
 The [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) system stored procedure is the interface used to call the .NET runtime. The following example shows an `sp_execute_external_script` using the .NET extension, and parameters for specifying path, script, and your custom code.
 
 > [!NOTE]  
-> You don't need to define which method to call. By default, a method called `execute` is called. This means that you need to follow the [Microsoft Extensibility SDK for C# for SQL Server](extensibility-sdk-c-sharp-sql-server.md) and implement an execute method in your C# class.
+> You don't need to define which method to call. By default, a method called `Execute` is called. This means that you need to follow the [Microsoft Extensibility SDK for C# for SQL Server](extensibility-sdk-c-sharp-sql-server.md) and implement an `Execute` method in your C# class.
 
 ```sql
 DECLARE @param1 INT;
 
 SET @param1 = 3;
 
-EXEC sp_execute_external_script @language = N'dotnet',
-    @script = N'<packageName>.<ClassName>',
+EXEC sp_execute_external_script
+    @language = N'dotnet',
+    @script = N'<PackageName>.<ClassName>',
     @input_data_1 = N'<Input Query>',
     @param1 = @param1;
 ```
@@ -70,12 +71,12 @@ GO
 
 When it creates an external library, SQL Server automatically has access to the C# classes, and you don't need to set any special permissions to the path.
 
-The following code is an example of calling a method in a class from a package, uploaded as an external library:
+The following code is an example of calling the `Execute` method in class `MyClass` from a package `MyPackage`, uploaded as an external library:
 
 ```sql
 EXEC sp_execute_external_script
     @language = N'dotnet',
-    @script = N'MyPackage.MyCLass',
+    @script = N'MyPackage.MyClass',
     @input_data_1 = N'SELECT * FROM MYTABLE'
 WITH RESULT SETS((column1 INT));
 ```

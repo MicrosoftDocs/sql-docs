@@ -4,7 +4,7 @@ description: Learn how to configure a failover group for Azure SQL Managed Insta
 author: Stralle
 ms.author: strrodic
 ms.reviewer: mathoma, randolphwest
-ms.date: 08/13/2024
+ms.date: 09/08/2024
 ms.service: azure-sql-managed-instance
 ms.subservice: high-availability
 ms.topic: how-to
@@ -27,7 +27,9 @@ For an end-to-end PowerShell script to create both instances within a failover g
 
 ## Prerequisites
 
-To configure a failover group, you should already have a SQL managed instance you intend to use as the primary. Review [Create instance](instance-create-quickstart.md) to get started.
+To configure a failover group, you should already have proper [permissions](#permissions) and a SQL managed instance you intend to use as the primary. Review [Create instance](instance-create-quickstart.md) to get started.
+
+Be sure to review the [limitations](#limitations) before creating your secondary instance and failover group. 
 
 ## Configuration requirements
 
@@ -188,11 +190,11 @@ You can configure your port communication and NSG rules by using the Azure porta
 To open Network Security Group (NSG) ports in the Azure portal, follow these steps:
 
 1. Go to the Network security group resource for the primary instance.
-1. Under **Settings**, select **Inbound security rules**. Check to see if you already have rules that allow traffic for port 5022, and the range 11000-11999. If you do, and the source meets your business needs, skip this step. If the rules don't exist, or if you want to use a different source (such as the more secure IP address) delete the existing rule, and then select **+ Add** from the command bar to open the **Add inbound security rule** page:
+1. Under **Settings**, select **Inbound security rules**. Check to see if you already have rules that allow traffic for port 5022, and the range 11000-11999. If you do, and the source meets your business needs, skip this step. If the rules don't exist, or if you want to use a different source (such as the more secure IP address) delete the existing rule, and then select **+ Add** from the command bar to open the **Add inbound security rule** pane:
 
    :::image type="content" source="media/failover-group-configure-sql-mi/add-inbound-rules.png" alt-text="Screenshot of adding inbound security rules for the NSG in the Azure portal. ":::
 
-1. On the **Add inbound security rule** page, enter, or select values for the following settings:
+1. On the **Add inbound security rule** pane, enter, or select values for the following settings:
 
    | Settings | Recommended value | Description |
    | --- | --- | --- |
@@ -211,8 +213,8 @@ To open Network Security Group (NSG) ports in the Azure portal, follow these ste
    Select **Add** to save your settings and add your new rule.
 
 1. Repeat these steps to add another inbound security rule for the port range `11000-11999` with a name such as **allow_redirect_inbound** and a priority slightly higher than the 5022 rule, such as `1100`.
-1. Under **Settings**, select **Outbound security rules**. Check to see if you already have rules that allow traffic for port 5022, and the range 11000-11999. If you do, and the source meets your business needs, skip this step. If the rules don't exist, or if you want to use a different source (such as the more secure IP address) delete the existing rule, and then select **+ Add** from the command bar to open the **Add outbound security rule** page.
-1. On the **Add outbound security rule** page, use the same configuration for port 5022, and the range `11000-11999` as you did for the inbound ports.
+1. Under **Settings**, select **Outbound security rules**. Check to see if you already have rules that allow traffic for port 5022, and the range 11000-11999. If you do, and the source meets your business needs, skip this step. If the rules don't exist, or if you want to use a different source (such as the more secure IP address) delete the existing rule, and then select **+ Add** from the command bar to open the **Add outbound security rule** pane.
+1. On the **Add outbound security rule** pane, use the same configuration for port 5022, and the range `11000-11999` as you did for the inbound ports.
 1. Go to the Network security group for the secondary instance, and repeat these steps so that _both network security groups_ have the following rules:
     - Allow inbound traffic on port 5022
     - Allow inbound traffic on port range `11000-11999`
@@ -239,7 +241,7 @@ Create the failover group for your SQL Managed Instances by using the Azure port
 
    :::image type="content" source="media/failover-group-configure-sql-mi/add-failover-group.png" alt-text="Screenshot of adding a failover group page in Azure portal.":::
 
-1. On the **Instance Failover Group page**:
+1. On the **Instance Failover Group** page:
     1. The **Primary managed instance** is preselected.
     1. Under **Failover group name** enter a name for the failover group.
     1. Under **Secondary managed instance**, select the managed instance you want to use as the secondary in the failover group.
@@ -272,17 +274,17 @@ Test failover of your failover group using the Azure portal.
 
 1. Go to either the primary or secondary managed instance within the [Azure portal](https://portal.azure.com).
 1. Under **Data management**, select **Failover groups**.
-1. On the **Failover groups** page, note which instance is the primary instance, and which instance is the secondary instance.
-1. On the **Failover groups** page, select **Failover** from the command bar. Select **Yes** on the warning about TDS sessions being disconnected, and note the licensing implication.
+1. On the **Failover groups** pane, note which instance is the primary instance, and which instance is the secondary instance.
+1. On the **Failover groups** pane, select **Failover** from the command bar. Select **Yes** on the warning about TDS sessions being disconnected, and note the licensing implication.
 
    :::image type="content" source="media/failover-group-configure-sql-mi/failover-mi-failover-group.png" alt-text="Screenshot to fail over the failover group in Azure portal." lightbox="media/failover-group-configure-sql-mi/failover-mi-failover-group.png":::
 
-1. On the **Failover groups** page, after failover succeeds, the instances switch roles so the previous secondary becomes the new primary and the previous primary becomes the new secondary.
+1. On the **Failover groups** pane, after failover succeeds, the instances switch roles so the previous secondary becomes the new primary and the previous primary becomes the new secondary.
 
    > [!IMPORTANT]  
    > If roles didn't switch, check connectivity between the instances and related NSG and firewall rules. Proceed with the next step only after roles switch.
 
-1. (Optional) On the **Failover groups** page, use **Failover** to switch the roles back so the original primary becomes primary again.
+1. (Optional) On the **Failover groups** pane, use **Failover** to switch the roles back so the original primary becomes primary again.
 
 ### [PowerShell](#tab/azure-powershell)
 
@@ -314,9 +316,44 @@ Optionally, use the [Switch-AzSqlDatabaseFailoverGroup](/powershell/module/az.sq
 
 ---
 
+## Modify existing failover group 
+
+You can modify an existing failover group, such as to change the [failover policy](failover-group-sql-mi.md#failover-policy), by using the Azure portal, PowerShell, Azure CLI and the REST APIs. 
+
+
+### [Azure portal](#tab/azure-portal-modify)
+
+To modify an existing failover group by using the Azure portal, follow these steps: 
+
+1. Go to your [SQL managed instance](https://portal.azure.com/#browse/Microsoft.Sql%2FmanagedInstances) in the Azure portal. 
+1. Under **Data management**, select **Failover groups** to open the **Failover groups** pane.
+1. On the **Failover groups** pane, select **Edit configurations** from the command bar to open the **Edit failover group** pane: 
+
+   :::image type="content" source="media/failover-group-configure-sql-mi/failover-mi-failover-group-edit.png" alt-text="Screenshot of the failover group pane in the Azure portal with Edit Configurations highlighted.":::
+
+### [PowerShell](#tab/azure-powershell-modify)
+
+To modify an existing failover group use the [Set-AzSqlDatabaseInstanceFailoverGroup](/powershell/module/az.sql/set-azsqldatabaseinstancefailovergroup) PowerShell command to modify failover group configuration settings.
+
+
+### [Azure CLI](#tab/azure-cli-modify)
+
+To modify an existing failover group, use the [az sql instance-failover-group update](/cli/azure/sql/instance-failover-group#az-sql-instance-failover-group-update) Azure CLI command to modify failover group configuration settings.
+
+
+### [REST API](#tab/rest-api-modify)
+
+To modify an existing failover group, use the [Create or Update Failover Group](/rest/api/sql/instance-failover-groups/create-or-update) REST API call to modify failover group configuration settings.
+
+---
+
+
 ## Locate listener endpoint
 
 After your failover group is configured, update the connection string for your application to point to the **Read/write listener endpoint** so that your application continues to connect to whichever instance is primary after failover. By using the listener endpoint, you don't have to manually update your connection string every time your failover group fails over since traffic is always routed to the current primary. You can also point read-only workload to the **Read-only** listener endpoint.
+
+> [!IMPORTANT]
+> While connecting to an instance in a failover group using the instance-specific connection string is supported, it's strongly discouraged. Use the listener endpoints instead.
 
 To locate the listener endpoint in the Azure portal, go to your SQL managed instance and under **Data management**, select **Failover groups**.
 
@@ -441,20 +478,29 @@ The following table provides granular view of **minimal required permissions** a
 
 ## Limitations
 
-Be aware of the following limitations:
+When creating a new failover group, consider the following limitations: 
 
-- Failover groups can't be created between two instances in the same Azure region.
+- Failover groups can't be created between two instances in the *same* Azure region.
+- An instance can participate only in one failover group at any moment.
+- A failover group can't be created between two instances that belong to different Azure tenants.
+- Creating a failover group between two instances in different resource groups or subscriptions is only supported with Azure PowerShell, or the REST API, and not the Azure portal or the Azure CLI. Once the failover group is created, it's visible in the Azure portal, and all operations are supported in the Azure portal or with the Azure CLI. Failover must be initiated from the secondary instance.
+- If initial seeding of all databases doesn't complete within 7 days, creating the failover group fails and all successfully replicated databases are deleted from the secondary instance. 
+- Creating a failover group with an instance configured with a [managed instance link](managed-instance-link-feature-overview.md) is currently unsupported. 
+- Failover groups can't be created between instances if any of them are in an instance pool.
+- Databases migrated to Azure SQL Managed Instance by using the [Log Replay Service (LRS)](log-replay-service-overview.md) can't be added to a failover group until the cutover step is executed.
+
+When using failover groups, consider the following limitations: 
+
 - Failover groups can't be renamed. You'll need to delete the group and re-create it with a different name.
 - A failover group contains exactly two managed instances. Adding additional instances to the failover group is unsupported.
-- An instance can participate only in one failover group at any moment.
-- A failover group can't be created between two instances belonging to different Azure tenants.
-- Creating a failover group between two instances in different resource groups or subscriptions is only supported with Azure PowerShell, or the REST API, and not the Azure portal or the Azure CLI. Once the failover group is created, it's visible in the Azure portal, and all operations are supported in the Azure portal or with the Azure CLI. Failover must be initiated from the secondary instance.
-- Creating a failover group with an instance configured with a [managed instance link](managed-instance-link-feature-overview.md) is currently unsupported. 
+- Full backups are automatically taken: 
+    - before initial seeding and can noticeably delay the start of the initial seeding process. 
+    - after failover, and can delay or prevent a subsequent failover.
 - Database rename isn't supported for databases in failover group. You'll need to temporarily delete the failover group to be able to rename a database.
 - System databases aren't replicated to the secondary instance in a failover group. Therefore, scenarios that depend on objects from the system databases such as Server Logins and Agent jobs, require objects to be manually created on the secondary instances and also manually kept in sync after any changes made on primary instance. The only exception is Service master Key (SMK) for SQL Managed Instance that is replicated automatically to secondary instance during creation of failover group. Any subsequent changes of SMK on the primary instance however won't be replicated to secondary instance. To learn more, see how to [Enable scenarios dependent on objects from the system databases](#enable-scenarios-dependent-on-objects-from-the-system-databases).
-- Failover groups can't be created between instances if any of them are in an instance pool.
 - For instances inside of a failover group, changing the service tier to, or from, the Next-gen General Purpose tier isn't supported. You must first delete the failover group before modifying either replica, and then re-create the failover group after the change takes effect.
 - SQL managed instances in a failover group must have the same [update policy](update-policy.md), though it's possible to [change the update policy](#change-update-policy) for instances within a failover group.
+
 
 ## <a id="programmatically-managing-failover-groups"></a> Programmatically manage failover groups
 

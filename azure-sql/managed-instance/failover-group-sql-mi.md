@@ -58,7 +58,7 @@ There's some overlap of content in the following articles, be sure to make chang
   The managed instance that hosts the secondary databases in the failover group. The secondary can't be in the same Azure region as the primary.
 
   > [!IMPORTANT]  
-  > - If a database contains in-memory OLTP objects, the primary and secondary geo-replica instance must have matching service tiers, as in-memory OLTP objects reside in memory. A lower service tier on the geo-replica instance can result in out-of-memory issues. If this occurs, the secondary replica might fail to recover the database, causing unavailability of the secondary database along with in-memory OLTP objects on the geo-secondary. This, in turn, could cause failover to be unsuccessful as well. To avoid this, ensure the service tier of the geo-secondary instance matches that of the primary database. Service tier upgrades can be size-of-data operations and can take a while to finish.
+  > If a database contains in-memory OLTP objects, the primary and secondary geo-replica instance must have matching service tiers, as in-memory OLTP objects reside in memory. A lower service tier on the geo-replica instance can result in out-of-memory issues. If this occurs, the secondary replica might fail to recover the database, causing unavailability of the secondary database along with in-memory OLTP objects on the geo-secondary. This, in turn, could cause failover to be unsuccessful as well. To avoid this, ensure the service tier of the geo-secondary instance matches that of the primary database. Service tier upgrades can be size-of-data operations and can take a while to finish.
 
 [!INCLUDE [failover-group-terminology](../includes/failover-group-terminology.md)]
 
@@ -255,7 +255,7 @@ If a **publisher** or **distributor** SQL managed instance is in a failover grou
 
 ## Permissions and limitations 
 
-Review a list of [permissions](failover-group-configure-sql-mi.md#permissions), and [limitations](failover-group-configure-sql-mi.md#limitations) before configuring a failover group.
+Review a list of [permissions](failover-group-configure-sql-mi.md#permissions) and [limitations](failover-group-configure-sql-mi.md#limitations) before configuring a failover group.
 
 ## Programmatically manage failover groups
 

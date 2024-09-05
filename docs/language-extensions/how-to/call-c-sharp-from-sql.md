@@ -14,7 +14,7 @@ monikerRange: ">=sql-server-ver15 || >=sql-server-linux-ver15"
 
 [!INCLUDE [sqlserver2019-and-later](../../includes/applies-to-version/sqlserver2019-and-later.md)]
 
-The [SQL Server Language Extensions](../language-extensions-overview.md) feature uses the [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) system stored procedure as the interface to call the Java runtime.
+The [SQL Server Language Extensions](../language-extensions-overview.md) feature uses the [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) system stored procedure as the interface to call the .NET runtime.
 
 This how-to article explains implementation details for C# code that executes on SQL Server.
 

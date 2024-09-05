@@ -65,7 +65,7 @@ You can set the report execution time-out value to limit the amount of time that
 To set the report time-out value in the web portal for a specific report:
 
 1. On the **Browse** page, select **More Info** > **Manage**.
-1. On the Properties Page,** select the default, custom, or indefinite timeout option in **Advanced** > **Report timeSout**.
+1. On the **Properties Page**, select the default, custom, or indefinite timeout option in **Advanced** > **Report timeSout**.
 
 :::image type="content" source="media/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs/report-timeout.png" alt-text="Screenshot of the report Properties page highlighting the Report time out options.":::
   

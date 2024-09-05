@@ -37,7 +37,7 @@ When you edit a breakpoint location, the breakpoint moves to the new location, c
   
 ## See Also
 
-- [Specify a Hit Count](./specify-a-hit-count.md)
-- [Specify a Breakpoint Action](./specify-a-breakpoint-action.md)
-- [Specify a Breakpoint Condition](./specify-a-breakpoint-condition.md)
-- [Specify a Breakpoint Filter](./specify-a-breakpoint-filter.md)
+- [Specify a Hit Count](../../ssdt/debugger/specify-hit-count.md)
+- [Specify a Breakpoint Action](../../ssdt/debugger/specify-breakpoint-action.md)
+- [Specify a Breakpoint Condition](../../ssdt/debugger/specify-breakpoint-condition.md)
+- [Specify a Breakpoint Filter](../../ssdt/debugger/specify-breakpoint-filter.md)

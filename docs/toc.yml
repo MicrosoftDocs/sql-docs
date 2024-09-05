@@ -8644,7 +8644,7 @@ items:
         - name: Debug Stored Procedures
           href: ssdt/debugger/debug-stored-procedures.md
         - name: T-SQL Debugger Information
-          href: ssms/scripting/transact-sql-debugger-information.md
+          href: ssdt/debugger/transact-sql-debugger-information.md
         - name: T-SQL Breakpoints
           href: ssdt/debugger/transact-sql-breakpoints.md
           items:
@@ -9703,8 +9703,6 @@ items:
           href: ssms/visual-db-tools/how-the-query-and-view-designer-represents-joins-visual-database-tools.md
         - name: Design Queries & Views How-to Topics
           href: ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md
-        - name: Issues of Database Evolution
-          href: ssms/visual-db-tools/issues-of-database-evolution-visual-database-tools.md
         - name: Use HAVING & WHERE Clauses in the Same Query
           href: ssms/visual-db-tools/use-having-and-where-clauses-in-the-same-query-visual-database-tools.md
         - name: Navigate in the Query & View Designer

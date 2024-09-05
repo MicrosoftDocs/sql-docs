@@ -325,17 +325,9 @@ During Microsoft Entra authentication, the client application can define its own
 - Using a customized callback method.
 - Passing an application client ID to the MSAL library via SqlClient driver for fetching access tokens.
 
-The following example displays how to use a custom callback when `Active Directory Device Code Flow` authentication is in use.
-
-[!code-csharp [AADAuthenticationCustomDeviceFlowCallback#1](~/../sqlclient/doc/samples/AADAuthenticationCustomDeviceFlowCallback.cs#1)]
-
 With a customized `ActiveDirectoryAuthenticationProvider` class, a user-defined application client ID can be passed to SqlClient when a supported Microsoft Entra authentication mode is in use. Supported Microsoft Entra authentication modes include `Active Directory Password`, `Active Directory Integrated`, `Active Directory Interactive`, `Active Directory Service Principal`, and `Active Directory Device Code Flow`.
 
 The application client ID is also configurable via `SqlAuthenticationProviderConfigurationSection` or `SqlClientAuthenticationProviderConfigurationSection`. The configuration property `applicationClientId` applies to .NET Framework 4.6+ and .NET Core 2.1+.
-
-The following code snippet is an example of using a customized `ActiveDirectoryAuthenticationProvider` class with a user-defined application client ID when `Active Directory Interactive` authentication is in use.
-
-[!code-csharp [ApplicationClientIdAzureAuthenticationProvider#1](~/../sqlclient/doc/samples/ApplicationClientIdAzureAuthenticationProvider.cs#1)]
 
 The following example shows how to set an application client ID through a configuration section.
 
@@ -362,10 +354,6 @@ The following example shows how to set an application client ID through a config
 ## Support for a custom SQL authentication provider
 
 Given more flexibility, the client application can also use its own provider for Microsoft Entra authentication instead of using the `ActiveDirectoryAuthenticationProvider` class. The custom authentication provider needs to be a subclass of `SqlAuthenticationProvider` with overridden methods. It then must register the custom provider, overriding one or more of the existing `Active Directory*` authentication methods.
-
-The following example shows how to use a new authentication provider for `Active Directory Device Code Flow` authentication.
-
-[!code-csharp [CustomDeviceCodeFlowAzureAuthenticationProvider#1](~/../sqlclient/doc/samples/CustomDeviceCodeFlowAzureAuthenticationProvider.cs#1)]
 
 In addition to improving the `Active Directory Interactive` authentication experience, **Microsoft.Data.SqlClient** 2.1.0 and later provide the following APIs for client applications to customize interactive authentication and device code flow authentication.
 

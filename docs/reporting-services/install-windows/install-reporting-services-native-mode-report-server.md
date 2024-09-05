@@ -1,9 +1,9 @@
 ---
 title: Install a Reporting Services 2016 native mode report server
-description: See how to install Reporting Services in native mode. View steps for using the SQL Server installation wizard to install and configure the report server.
+description: See how to install Reporting Services in native mode. View steps for how to use the SQL Server installation wizard to install and configure the report server.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 09/04/2024
+ms.date: 09/05/2024
 ms.service: reporting-services
 ms.subservice: report-server
 ms.topic: how-to
@@ -77,7 +77,7 @@ The installation wizard configures the following components during a native mode
 - Service account access to the report server databases
 - Connection information, also known as the data source name (DSN), for the report server databases
 
-The installation doesn't configure the unattended execution account, report server email, or a scale-out deployment. It also doesn't back up the encryption keys. You can use Report Server Configuration Manager to configure these properties. For more information, see [Report Server Configuration Manager (native mode)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).
+The installation doesn't configure the unattended execution account, report server email, or a scale-out deployment. It also doesn't back up the encryption keys. You can use Report Server Configuration Manager to configure these properties. For more information, see [What is Report Server Configuration Manager (native mode)?](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).
 
 ## When to install the default configuration for native mode
 
@@ -106,7 +106,7 @@ If you configure a named instance during the installation process, you need to u
 - `https://<server-name>/ReportServer_THESQLINSTANCE`
 - `https://<server-name>/Reports_THESQLINSTANCE`
 
-For more information, see [Configure report server URLs](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md).
+For more information, see [Configure report server URLs (Report Server Configuration Manager)](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md).
 
 ## Install native mode by using the SQL Server installation wizard
 
@@ -194,14 +194,14 @@ For more information, see the following articles:
 
 ## Other configurations
 
-- To configure [!INCLUDE[Power BI](../../includes/sspowerbi-md.md)] integration so that you can pin report items to a [!INCLUDE[Power BI](../../includes/sspowerbi-md.md)] dashboard, see [Power BI report server integration](../../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md).
+- To configure [!INCLUDE[Power BI](../../includes/sspowerbi-md.md)] integration so that you can pin report items to a [!INCLUDE[Power BI](../../includes/sspowerbi-md.md)] dashboard, see [Power BI report server integration (Configuration Manager)](../../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md).
 
-- To configure email for subscriptions processing, see [Email settings - Reporting Services native mode](../../reporting-services/install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md) and [Email delivery in Reporting Services](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md).
+- To configure email for subscriptions processing, see [Email settings in Reporting Services native mode (Report Server Configuration Manager)](../../reporting-services/install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md) and [Email delivery in Reporting Services](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md).
 
 - To configure the web portal so that you can access it on a report computer to view and manage reports, see [Configure a firewall for report server access](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md) and [Configure a report server for remote administration](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md).
 
 ## Related content
 
-- [Configure the report server service account](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)
-- [Configure a report server database connection](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)
+- [Configure the report server service account (Report Server Configuration Manager)](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)
+- [Configure a report server database connection (Report Server Configuration Manager)](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)
 - [Configure Windows service accounts and permissions](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)

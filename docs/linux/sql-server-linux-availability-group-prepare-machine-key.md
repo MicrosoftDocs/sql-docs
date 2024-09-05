@@ -19,9 +19,9 @@ This article provides an example of how to prepare a machine key for [!INCLUDE [
 
 A [contained AG](../database-engine/availability-groups/windows/contained-availability-groups-overview.md) is an availability group that supports:
 
-- managing metadata objects (users, logins, permissions, [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] Agent jobs, and so on) at the AG level in addition to the instance level.
+- Managing metadata objects (users, logins, permissions, [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] Agent jobs, and so on) at the AG level in addition to the instance level.
 
-- specialized contained system databases within the AG.
+- Specialized contained system databases within the AG.
 
 The examples in this article target [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] in Linux containers, but you can use the same steps for [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on Linux, running on physical machines, virtual machines, and in a Kubernetes-based deployment.
 
@@ -55,9 +55,9 @@ The following instructions show an example of generating a new machine key in `b
 
    The previous script performs these steps:
 
-   - Create a 44-byte binary file called `machine-key.bin`, containing random data.
-   - Overwrite the first 12 bytes with a fixed header. This might change in the future.
-   - Encode `machine-key.bin` in `base64` format and print it to the console.
+   1. Create a 44-byte binary file called `machine-key.bin`, containing random data.
+   1. Overwrite the first 12 bytes with a fixed header. This might change in the future.
+   1. Encode `machine-key.bin` in `base64` format and print it to the console.
 
 1. Run the container by mounting the file to the machine key of the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] container.
 

@@ -7,7 +7,7 @@ ms.topic: include
 ms.custom:
   - linux-related-content
 ---
-**sqlcmd** (Go) can be installed cross-platform, on Microsoft Windows, macOS, and Linux. Versions newer than 1.6 may not be available in all package managers. There's no estimated date yet for their availability.
+**sqlcmd** (Go) can be installed cross-platform, on Microsoft Windows, macOS, and Linux. Versions newer than 1.6 might not be available in all package managers. There's no estimated date yet for their availability.
 
 ### [Windows](#tab/windows)
 

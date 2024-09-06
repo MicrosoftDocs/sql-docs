@@ -141,6 +141,9 @@ After provisioning a Microsoft Entra admin for your SQL Managed Instance, you ca
 > [!TIP]  
 > To remove an Admin later, at the top of the Microsoft Entra admin page, select **Remove admin**, then select **Save**.
 
+> [!NOTE]
+> Enabling or disabling the 'Microsoft Entra Admin' on Azure SQL or Azure SQL Managed Instance is non-disruptive to service availability and does not affect the availability of your SQL Instance.
+
 ### PowerShell
 
 To use PowerShell to grant your SQL Managed Instance read permissions to Microsoft Entra ID, run this script:

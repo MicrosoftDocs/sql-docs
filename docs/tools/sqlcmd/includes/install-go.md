@@ -7,7 +7,7 @@ ms.topic: include
 ms.custom:
   - linux-related-content
 ---
-**sqlcmd** (Go) can be installed cross-platform, on Microsoft Windows, macOS, and Linux.
+**sqlcmd** (Go) can be installed cross-platform, on Microsoft Windows, macOS, and Linux. Versions newer than 1.6 may not be available in all package managers. There's no estimated date yet for their availability.
 
 ### [Windows](#tab/windows)
 
@@ -31,7 +31,7 @@ ms.custom:
 
 #### Direct download
 
-1. Download the corresponding `-windows-x64.zip` or `-windows-arm.zip` asset from the [latest](https://github.com/microsoft/go-sqlcmd/releases/latest) release of **sqlcmd** (Go) from the GitHub code repository.
+1. Download the corresponding `-windows-amd64.zip` or `-windows-arm.zip` asset from the [latest](https://github.com/microsoft/go-sqlcmd/releases/latest) release of **sqlcmd** (Go) from the GitHub code repository.
 
 1. Extract the `sqlcmd.exe` file from the downloaded zip folder.
 
@@ -53,7 +53,7 @@ ms.custom:
 
 #### Direct download
 
-1. Download the `-darwin-x64.zip` asset from the [latest](https://github.com/microsoft/go-sqlcmd/releases/latest) release of **sqlcmd** (Go) from the GitHub code repository.
+1. Download the `-darwin-amd64.zip` asset from the [latest](https://github.com/microsoft/go-sqlcmd/releases/latest) release of **sqlcmd** (Go) from the GitHub code repository.
 
 1. Extract the `sqlcmd` file from the downloaded zip folder.
 

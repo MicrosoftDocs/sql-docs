@@ -18,15 +18,15 @@ monikerRange: ">= sql-server-2016"
 [!INCLUDE [SQL Server 2016](../includes/applies-to-version/sqlserver2016.md)]  
   This article describes limitations and issues with [!INCLUDE[sssql16-md](../includes/sssql16-md.md)] releases, including service packs. For information on what's new, see [What's New in SQL Server 2016](./what-s-new-in-sql-server-2016.md).
 
-- :::image type="icon" source="../includes/media/download.svg"::: Download [!INCLUDE[sssql16-md](../includes/sssql16-md.md)]  from the **[Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)**
-- :::image type="icon" source="../includes/media/azure-vm.svg"::: Have an Azure account?  Then **[spin up a Virtual Machine](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2017-ws2019?tab=Overview)**  with [!INCLUDE[sssql16-md](../includes/sssql16-md.md)] SP1 already installed.
-- :::image type="icon" source="../includes/media/download.svg"::: To get the latest version of SQL Server Management Studio, see **[Download SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)**.
+- :::image type="icon" source="../includes/media/download.svg"::: **[Download SQL Server from the Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)**
+- :::image type="icon" source="../includes/media/azure-vm.svg"::: **[Spin up a Virtual Machine with SQL Server already installed](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2022-ws2022?tab=Overview)**
+- :::image type="icon" source="../includes/media/download.svg"::: **[Download SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)**
 
 ## <a name="bkmk_2016sp3"></a>SQL Server 2016 Service Pack 3 (SP3)
 
 [!INCLUDE[sssql16-md](../includes/sssql16-md.md)] SP3 includes all cumulative updates released after [!INCLUDE[sssql16-md](../includes/sssql16-md.md)] SP2, up to and including CU17.
 
-- :::image type="icon" source="../includes/media/download.svg"::: [Download SQL Server 2016 Service Pack 3 (SP3)](https://www.microsoft.com/download/details.aspx?id=103440)
+- :::image type="icon" source="../includes/media/download.svg"::: **[Download SQL Server 2016 Service Pack 3 (SP3)](https://www.microsoft.com/download/details.aspx?id=103440)**
 - For a complete list of updates, see [SQL Server 2016 Service Pack 3 release information](https://support.microsoft.com/help/5003279/sql-server-2016-service-pack-3-release-information)
 
 The [!INCLUDE[sssql16-md](../includes/sssql16-md.md)] SP3 installation may require restart after installation. As a best practice, we recommend to plan and perform a restart following the installation of [!INCLUDE[sssql16-md](../includes/sssql16-md.md)] SP3.
@@ -126,7 +126,7 @@ For more information, refer to [KB5007039](https://support.microsoft.com/topic/k
 
 [!INCLUDE[sssql16-md](../includes/sssql16-md.md)] SP2 includes all cumulative updates released after [!INCLUDE[sssql16-md](../includes/sssql16-md.md)] SP1, up to and including CU8.
 
-- :::image type="icon" source="../includes/media/download.svg"::: [Download SQL Server 2016 Service Pack 2 (SP2)](https://www.microsoft.com/download/details.aspx?id=56836)
+- :::image type="icon" source="../includes/media/download.svg"::: **[Download SQL Server 2016 Service Pack 2 (SP2)](https://www.microsoft.com/download/details.aspx?id=56836)**
 - For a complete list of updates, see [SQL Server 2016 Service Pack 2 release information](https://support.microsoft.com/help/4052908/sql-server-2016-service-pack-2-release-information)
 
 The [!INCLUDE[sssql16-md](../includes/sssql16-md.md)] SP2 installation may require restart after installation. As a best practice, we recommend to plan and perform a restart following the installation of [!INCLUDE[sssql16-md](../includes/sssql16-md.md)] SP2.

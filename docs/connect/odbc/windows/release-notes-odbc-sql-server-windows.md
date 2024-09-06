@@ -18,9 +18,9 @@ This release notes article describes what's new for the Microsoft ODBC driver fo
 Version number: 18.4.1.1  
 Released: July 31, 2024
 
-:::image type="icon" source="../../../includes/media/download.svg" border="false"::: [Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2280794)  
-:::image type="icon" source="../../../includes/media/download.svg" border="false"::: [Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2281260)  
-:::image type="icon" source="../../../includes/media/download.svg" border="false"::: [Download ARM64 installer](https://go.microsoft.com/fwlink/?linkid=2281322)
+:::image type="icon" source="../../../includes/media/download.svg" border="false"::: **[Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2280794)**  
+:::image type="icon" source="../../../includes/media/download.svg" border="false"::: **[Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2281260)**  
+:::image type="icon" source="../../../includes/media/download.svg" border="false"::: **[Download ARM64 installer](https://go.microsoft.com/fwlink/?linkid=2281322)**
 
 If you need to download the installer in a language other than the one detected for you, you can use these direct links.  
 For the x64 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2280794&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2280794&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2280794&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2280794&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2280794&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2280794&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2280794&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2280794&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2280794&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2280794&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2280794&clcid=0x40a)  
@@ -37,9 +37,9 @@ For the ARM64 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?li
 Version number: 18.3.3.1  
 Released: April 9, 2024  
 
-:::image type="icon" source="../../../includes/media/download.svg" border="false"::: [Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2266640)  
-:::image type="icon" source="../../../includes/media/download.svg" border="false"::: [Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2266742)  
-:::image type="icon" source="../../../includes/media/download.svg" border="false"::: [Download ARM64 installer](https://go.microsoft.com/fwlink/?linkid=2266837)
+:::image type="icon" source="../../../includes/media/download.svg" border="false"::: **[Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2266640)**  
+:::image type="icon" source="../../../includes/media/download.svg" border="false"::: **[Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2266742)**  
+:::image type="icon" source="../../../includes/media/download.svg" border="false"::: **[Download ARM64 installer](https://go.microsoft.com/fwlink/?linkid=2266837)**
 
 If you need to download the installer in a language other than the one detected for you, you can use these direct links.  
 For the x64 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2266640&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2266640&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2266640&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2266640&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2266640&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2266640&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2266640&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2266640&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2266640&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2266640&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2266640&clcid=0x40a)  
@@ -53,8 +53,8 @@ For the ARM64 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?li
 
 ## 17.10.6
 
-:::image type="icon" source="../../../includes/media/download.svg" border="false"::: [Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2266337)  
-:::image type="icon" source="../../../includes/media/download.svg" border="false"::: [Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2266446)  
+:::image type="icon" source="../../../includes/media/download.svg" border="false"::: **[Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2266337)**  
+:::image type="icon" source="../../../includes/media/download.svg" border="false"::: **[Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2266446)**  
 
 Version number: 17.10.6.1  
 Released: April 9, 2024  
@@ -75,9 +75,9 @@ For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?link
 Version number: 18.3.2.1  
 Released: October 10, 2023  
 
-:::image type="icon" source="../../../includes/media/download.svg" border="false"::: [Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2249006)  
-:::image type="icon" source="../../../includes/media/download.svg" border="false"::: [Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2249005)  
-:::image type="icon" source="../../../includes/media/download.svg" border="false"::: [Download ARM64 installer](https://go.microsoft.com/fwlink/?linkid=2248720)
+:::image type="icon" source="../../../includes/media/download.svg" border="false"::: **[Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2249006)**  
+:::image type="icon" source="../../../includes/media/download.svg" border="false"::: **[Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2249005)**  
+:::image type="icon" source="../../../includes/media/download.svg" border="false"::: **[Download ARM64 installer](https://go.microsoft.com/fwlink/?linkid=2248720)**
 
 If you need to download the installer in a language other than the one detected for you, you can use these direct links.  
 For the x64 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2249006&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2249006&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2249006&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2249006&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2249006&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2249006&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2249006&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2249006&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2249006&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2249006&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2249006&clcid=0x40a)  
@@ -90,8 +90,8 @@ For the ARM64 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?li
 
 ## 17.10.5
 
-:::image type="icon" source="../../../includes/media/download.svg" border="false"::: [Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2249004)  
-:::image type="icon" source="../../../includes/media/download.svg" border="false"::: [Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2248909)  
+:::image type="icon" source="../../../includes/media/download.svg" border="false"::: **[Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2249004)**  
+:::image type="icon" source="../../../includes/media/download.svg" border="false"::: **[Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2248909)**  
 
 Version number: 17.10.5.1  
 Released: October 10, 2023  
@@ -111,9 +111,9 @@ For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?link
 Version number: 18.3.1.1  
 Released: July 31, 2023  
 
-:::image type="icon" source="../../../includes/media/download.svg" border="false"::: [Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2242886)  
-:::image type="icon" source="../../../includes/media/download.svg" border="false"::: [Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2242980)  
-:::image type="icon" source="../../../includes/media/download.svg" border="false"::: [Download ARM64 installer](https://go.microsoft.com/fwlink/?linkid=2243268)
+:::image type="icon" source="../../../includes/media/download.svg" border="false"::: **[Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2242886)**  
+:::image type="icon" source="../../../includes/media/download.svg" border="false"::: **[Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2242980)**  
+:::image type="icon" source="../../../includes/media/download.svg" border="false"::: **[Download ARM64 installer](https://go.microsoft.com/fwlink/?linkid=2243268)**
 
 If you need to download the installer in a language other than the one detected for you, you can use these direct links.  
 For the x64 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2242886&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2242886&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2242886&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2242886&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2242886&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2242886&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2242886&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2242886&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2242886&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2242886&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2242886&clcid=0x40a)  
@@ -131,9 +131,9 @@ For the ARM64 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?li
 Version number: 18.2.2.1  
 Released: June 15, 2023  
 
-:::image type="icon" source="../../../includes/media/download.svg" border="false"::: [Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2239549)  
-:::image type="icon" source="../../../includes/media/download.svg" border="false"::: [Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2239080)  
-:::image type="icon" source="../../../includes/media/download.svg" border="false"::: [Download ARM64(Preview) installer](https://go.microsoft.com/fwlink/?linkid=2239372)  
+:::image type="icon" source="../../../includes/media/download.svg" border="false"::: **[Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2239549)**  
+:::image type="icon" source="../../../includes/media/download.svg" border="false"::: **[Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2239080)**  
+:::image type="icon" source="../../../includes/media/download.svg" border="false"::: **[Download ARM64(Preview) installer](https://go.microsoft.com/fwlink/?linkid=2239372)**  
 
 If you need to download the installer in a language other than the one detected for you, you can use these direct links.  
 For the x64 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2239549&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2239549&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2239549&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2239549&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2239549&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2239549&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2239549&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2239549&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2239549&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2239549&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2239549&clcid=0x40a)  
@@ -146,8 +146,8 @@ For the ARM64(Preview) driver: [Chinese (Simplified)](https://go.microsoft.com/f
 
 ## 17.10.4.1
 
-:::image type="icon" source="../../../includes/media/download.svg" border="false"::: [Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2239168)  
-:::image type="icon" source="../../../includes/media/download.svg" border="false"::: [Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2238791)  
+:::image type="icon" source="../../../includes/media/download.svg" border="false"::: **[Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2239168)**  
+:::image type="icon" source="../../../includes/media/download.svg" border="false"::: **[Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2238791)**  
 
 Version number: 17.10.4.1  
 Released: June 15, 2023  
@@ -162,9 +162,9 @@ For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?link
 
 ## 18.2
 
-:::image type="icon" source="../../../includes/media/download.svg" border="false"::: [Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2223270)  
-:::image type="icon" source="../../../includes/media/download.svg" border="false"::: [Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2223360)  
-:::image type="icon" source="../../../includes/media/download.svg" border="false"::: [Download ARM64(Preview) installer](https://go.microsoft.com/fwlink/?linkid=2223361)  
+:::image type="icon" source="../../../includes/media/download.svg" border="false"::: **[Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2223270)**  
+:::image type="icon" source="../../../includes/media/download.svg" border="false"::: **[Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2223360)**  
+:::image type="icon" source="../../../includes/media/download.svg" border="false"::: **[Download ARM64(Preview) installer](https://go.microsoft.com/fwlink/?linkid=2223361)**  
 
 Version number: 18.2.1.1  
 Released: January 31, 2023  
@@ -181,8 +181,8 @@ For the ARM64(Preview) driver: [Chinese (Simplified)](https://go.microsoft.com/f
 
 ## 17.10.3
 
-:::image type="icon" source="../../../includes/media/download.svg" border="false"::: [Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2223304)  
-:::image type="icon" source="../../../includes/media/download.svg" border="false"::: [Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2223303)  
+:::image type="icon" source="../../../includes/media/download.svg" border="false"::: **[Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2223304)**  
+:::image type="icon" source="../../../includes/media/download.svg" border="false"::: **[Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2223303)**  
 
 Version number: 17.10.3.1  
 Released: January 26, 2023  
@@ -197,8 +197,8 @@ For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?link
 
 ## 18.1.2
 
-:::image type="icon" source="../../../includes/media/download.svg" border="false"::: [Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2214634)  
-:::image type="icon" source="../../../includes/media/download.svg" border="false"::: [Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2214633)  
+:::image type="icon" source="../../../includes/media/download.svg" border="false"::: **[Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2214634)**  
+:::image type="icon" source="../../../includes/media/download.svg" border="false"::: **[Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2214633)**  
 
 Version number: 18.1.2.1  
 Released: November 3, 2022  
@@ -213,8 +213,8 @@ For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?link
 
 ## 17.10.2
 
-:::image type="icon" source="../../../includes/media/download.svg" border="false"::: [Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2217421)  
-:::image type="icon" source="../../../includes/media/download.svg" border="false"::: [Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2216865)  
+:::image type="icon" source="../../../includes/media/download.svg" border="false"::: **[Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2217421)**  
+:::image type="icon" source="../../../includes/media/download.svg" border="false"::: **[Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2216865)**  
 
 Version number: 17.10.2.1  
 Released: November 28, 2022  
@@ -230,8 +230,8 @@ For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?link
 
 ## 18.1
 
-:::image type="icon" source="../../../includes/media/download.svg" border="false"::: [Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2202930)  
-:::image type="icon" source="../../../includes/media/download.svg" border="false"::: [Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2203124)  
+:::image type="icon" source="../../../includes/media/download.svg" border="false"::: **[Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2202930)**  
+:::image type="icon" source="../../../includes/media/download.svg" border="false"::: **[Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2203124)**  
 
 Version number: 18.1.1.1  
 Released: August 8, 2022  
@@ -252,8 +252,8 @@ For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?link
 
 ## 17.10
 
-:::image type="icon" source="../../../includes/media/download.svg" border="false"::: [Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2200731)  
-:::image type="icon" source="../../../includes/media/download.svg" border="false"::: [Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2200732)  
+:::image type="icon" source="../../../includes/media/download.svg" border="false"::: **[Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2200731)**  
+:::image type="icon" source="../../../includes/media/download.svg" border="false"::: **[Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2200732)**  
 
 Version number: 17.10.1.1  
 Released: June 30, 2022  
@@ -269,8 +269,8 @@ For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?link
 
 ## 18.0
 
-:::image type="icon" source="../../../includes/media/download.svg" border="false"::: [Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2186919)  
-:::image type="icon" source="../../../includes/media/download.svg" border="false"::: [Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2187028)  
+:::image type="icon" source="../../../includes/media/download.svg" border="false"::: **[Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2186919)**  
+:::image type="icon" source="../../../includes/media/download.svg" border="false"::: **[Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2187028)**  
 
 Version number: 18.0.1.1  
 Released: February 15, 2022  
@@ -290,8 +290,8 @@ For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?link
 
 ## 17.9
 
-:::image type="icon" source="../../../includes/media/download.svg" border="false"::: [Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2187214)  
-:::image type="icon" source="../../../includes/media/download.svg" border="false"::: [Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2187215)  
+:::image type="icon" source="../../../includes/media/download.svg" border="false"::: **[Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2187214)**  
+:::image type="icon" source="../../../includes/media/download.svg" border="false"::: **[Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2187215)**  
 
 Version number: 17.9.1.1  
 Released: February 17, 2022  
@@ -307,8 +307,8 @@ For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?link
 
 ## 17.8
 
-:::image type="icon" source="../../../includes/media/download.svg" border="false"::: [Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2168524)  
-:::image type="icon" source="../../../includes/media/download.svg" border="false"::: [Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2168713)  
+:::image type="icon" source="../../../includes/media/download.svg" border="false"::: **[Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2168524)**  
+:::image type="icon" source="../../../includes/media/download.svg" border="false"::: **[Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2168713)**  
 
 Version number: 17.8.1.1  
 Released: July 30, 2021  
@@ -326,8 +326,8 @@ For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?link
 
 ## 17.7.2
 
-:::image type="icon" source="../../../includes/media/download.svg" border="false"::: [Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2156851)  
-:::image type="icon" source="../../../includes/media/download.svg" border="false"::: [Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2156749)  
+:::image type="icon" source="../../../includes/media/download.svg" border="false"::: **[Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2156851)**  
+:::image type="icon" source="../../../includes/media/download.svg" border="false"::: **[Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2156749)**  
 
 Version number: 17.7.2.1  
 Released: March 10, 2021  
@@ -342,8 +342,8 @@ For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?link
 
 ## 17.7
 
-:::image type="icon" source="../../../includes/media/download.svg" border="false"::: [Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2153471)  
-:::image type="icon" source="../../../includes/media/download.svg" border="false"::: [Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2153469)  
+:::image type="icon" source="../../../includes/media/download.svg" border="false"::: **[Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2153471)**  
+:::image type="icon" source="../../../includes/media/download.svg" border="false"::: **[Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2153469)**  
 
 Version number: 17.7.1.1  
 Released: January 29, 2021
@@ -361,8 +361,8 @@ For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?link
 
 ## 17.6
 
-:::image type="icon" source="../../../includes/media/download.svg" border="false"::: [Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2137027)  
-:::image type="icon" source="../../../includes/media/download.svg" border="false"::: [Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2137028)  
+:::image type="icon" source="../../../includes/media/download.svg" border="false"::: **[Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2137027)**  
+:::image type="icon" source="../../../includes/media/download.svg" border="false"::: **[Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2137028)**  
 
 Version number: 17.6.1.1  
 Released: July 31, 2020
@@ -379,8 +379,8 @@ For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?link
 
 ## 17.5.2
 
-:::image type="icon" source="../../../includes/media/download.svg" border="false"::: [Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2120137)  
-:::image type="icon" source="../../../includes/media/download.svg" border="false"::: [Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2120140)  
+:::image type="icon" source="../../../includes/media/download.svg" border="false"::: **[Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2120137)**  
+:::image type="icon" source="../../../includes/media/download.svg" border="false"::: **[Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2120140)**  
 
 Version number: 17.5.2.1  
 Released: March 6, 2020
@@ -401,8 +401,8 @@ Download previous ODBC Driver versions by clicking the download links in the fol
 
 ## 17.5
 
-:::image type="icon" source="../../../includes/media/download.svg" border="false"::: [Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2120248)  
-:::image type="icon" source="../../../includes/media/download.svg" border="false"::: [Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2120353)  
+:::image type="icon" source="../../../includes/media/download.svg" border="false"::: **[Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2120248)**  
+:::image type="icon" source="../../../includes/media/download.svg" border="false"::: **[Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2120353)**  
 
 Version number: 17.5.1.1  
 Released: January 31, 2020
@@ -420,8 +420,8 @@ For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?link
 
 ## 17.4.2
 
-:::image type="icon" source="../../../includes/media/download.svg" border="false"::: [Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2120354)  
-:::image type="icon" source="../../../includes/media/download.svg" border="false"::: [Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2120249)  
+:::image type="icon" source="../../../includes/media/download.svg" border="false"::: **[Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2120354)**  
+:::image type="icon" source="../../../includes/media/download.svg" border="false"::: **[Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2120249)**  
 
 Version number: 17.4.2.1  
 Released: October 2019
@@ -441,8 +441,8 @@ For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?link
 
 ## 17.4
 
-:::image type="icon" source="../../../includes/media/download.svg" border="false"::: [Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2120149)  
-:::image type="icon" source="../../../includes/media/download.svg" border="false"::: [Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2120150)  
+:::image type="icon" source="../../../includes/media/download.svg" border="false"::: **[Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2120149)**  
+:::image type="icon" source="../../../includes/media/download.svg" border="false"::: **[Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2120150)**  
 
 Version number: 17.4.1.1  
 Released: July 2019
@@ -461,8 +461,8 @@ For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?link
 
 ## 17.3
 
-:::image type="icon" source="../../../includes/media/download.svg" border="false"::: [Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2120355)  
-:::image type="icon" source="../../../includes/media/download.svg" border="false"::: [Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2120356)  
+:::image type="icon" source="../../../includes/media/download.svg" border="false"::: **[Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2120355)**  
+:::image type="icon" source="../../../includes/media/download.svg" border="false"::: **[Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2120356)**  
 
 Version number: 17.3.1.1  
 Released: February 2019
@@ -483,8 +483,8 @@ For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?link
 
 ## 17.2
 
-:::image type="icon" source="../../../includes/media/download.svg" border="false"::: [Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2120250)  
-:::image type="icon" source="../../../includes/media/download.svg" border="false"::: [Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2120357)  
+:::image type="icon" source="../../../includes/media/download.svg" border="false"::: **[Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2120250)**  
+:::image type="icon" source="../../../includes/media/download.svg" border="false"::: **[Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2120357)**  
 
 Version number: 17.2.0.1  
 Released: July 2018
@@ -503,8 +503,8 @@ For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?link
 
 ## 17.1
 
-:::image type="icon" source="../../../includes/media/download.svg" border="false"::: [Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2120151)  
-:::image type="icon" source="../../../includes/media/download.svg" border="false"::: [Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2120443)  
+:::image type="icon" source="../../../includes/media/download.svg" border="false"::: **[Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2120151)**  
+:::image type="icon" source="../../../includes/media/download.svg" border="false"::: **[Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2120443)**  
 
 Version number: 17.1.0.1  
 Released: March 2018
@@ -523,8 +523,8 @@ For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?link
 
 ## 17.0
 
-:::image type="icon" source="../../../includes/media/download.svg" border="false"::: [Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2120444)  
-:::image type="icon" source="../../../includes/media/download.svg" border="false"::: [Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2120152)  
+:::image type="icon" source="../../../includes/media/download.svg" border="false"::: **[Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2120444)**  
+:::image type="icon" source="../../../includes/media/download.svg" border="false"::: **[Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2120152)**  
 
 Version number: 17.0.1.1  
 Released: February 2018
@@ -565,8 +565,8 @@ This version of ODBC contains support for Azure SQL Managed Instance. See the fo
 
 ## 13.1
 
-:::image type="icon" source="../../../includes/media/download.svg" border="false"::: [Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2121020)  
-:::image type="icon" source="../../../includes/media/download.svg" border="false"::: [Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2120923)  
+:::image type="icon" source="../../../includes/media/download.svg" border="false"::: **[Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2121020)**  
+:::image type="icon" source="../../../includes/media/download.svg" border="false"::: **[Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2120923)**  
 
 Version number: 13.1  
 
@@ -585,8 +585,8 @@ For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?link
 
 ## 13
 
-:::image type="icon" source="../../../includes/media/download.svg" border="false"::: [Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2121118)  
-:::image type="icon" source="../../../includes/media/download.svg" border="false"::: [Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2120924)  
+:::image type="icon" source="../../../includes/media/download.svg" border="false"::: **[Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2121118)**  
+:::image type="icon" source="../../../includes/media/download.svg" border="false"::: **[Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2120924)**  
 
 Version number: 13  
 
@@ -604,8 +604,8 @@ For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?link
 
 ## 11
 
-:::image type="icon" source="../../../includes/media/download.svg" border="false"::: [Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2121206)  
-:::image type="icon" source="../../../includes/media/download.svg" border="false"::: [Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2121021)  
+:::image type="icon" source="../../../includes/media/download.svg" border="false"::: **[Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2121206)**  
+:::image type="icon" source="../../../includes/media/download.svg" border="false"::: **[Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2121021)**  
 
 Version number: 11  
 

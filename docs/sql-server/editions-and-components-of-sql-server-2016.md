@@ -61,7 +61,7 @@ For the latest release notes and what's new information, see the following:
 
 ### Try SQL Server
 
-:::image type="icon" source="../includes/media/download.svg" border="false"::: **[Download SQL Server 2016  from the Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)**
+:::image type="icon" source="../includes/media/download.svg" border="false"::: **[Download SQL Server 2016 from the Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)**
 
 :::image type="icon" source="../includes/media/azure-vm.svg" border="false"::: **[Spin up a Virtual Machine with SQL Server 2016 already installed](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2017-ws2019?tab=Overview)**
 

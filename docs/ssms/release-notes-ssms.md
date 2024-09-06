@@ -26,7 +26,7 @@ SSMS 20.2 is the latest general availability (GA) release of SSMS. If you need a
 
 ### 20.2
 
-:::image type="icon" source="../includes/media/download.svg" border="false"::: [Download SSMS 20.2](https://go.microsoft.com/fwlink/?linkid=2278035&clcid=0x409)
+:::image type="icon" source="../includes/media/download.svg" border="false"::: **[Download SSMS 20.2](https://go.microsoft.com/fwlink/?linkid=2278035&clcid=0x409)**
 
 - Release number: 20.2
 - Build number: 20.2.30.0
@@ -76,9 +76,9 @@ Available languages:
 | Object Explorer | Updated the script generated for external file formats to include the FIRST ROW property. |
 | Object Explorer | Added Table-Valued Functions node within the Programmability > Functions node for Synapse. |
 | Query Editor | Updated lock icons in the query editor toolbar to be color-aware. |
-| Query Editor | Addressed error “Unable to query transaction count. The SQL text editor window will close without committing any open transactions" when closing an unsaved editor with either SHOWPLAN_ALL or SHOWPLAN_XML enabled, and the option **Check for open transactions before closing T-SQL query windows** enabled. |
+| Query Editor | Addressed error "Unable to query transaction count. The SQL text editor window will close without committing any open transactions" when closing an unsaved editor with either SHOWPLAN_ALL or SHOWPLAN_XML enabled, and the option **Check for open transactions before closing T-SQL query windows** enabled. |
 | Query Plans | Reduced the number of characters in the Description of an execution plan to 1000. The full query is available using the ellipses. |
-| Query Store | Addressed an issue where the **Queries With Forced Plans** report generated the error "Couldn’t connect to database", see [Query Store report 'Queries with Forced Plans' fails trying to sort by last execution time](https://feedback.azure.com/d365community/idea/6e0360ee-f5f7-ee11-a73c-6045bd77de95). |
+| Query Store | Addressed an issue where the **Queries With Forced Plans** report generated the error "Couldn't connect to database", see [Query Store report 'Queries with Forced Plans' fails trying to sort by last execution time](https://feedback.azure.com/d365community/idea/6e0360ee-f5f7-ee11-a73c-6045bd77de95). |
 | Query Store | Fixed Tracked Queries report to correctly display the metric selected in the Configure dialog. |
 | Query Store | Removed unnecessary border around options within the Configure dialog. |
 | Query Store | Fixed an issue where no metric was selected in the Configure dialog for the Tracked Queries report. |
@@ -120,7 +120,7 @@ Download previous SSMS versions by selecting the download link in the related se
 
 ### 20.1
 
-:::image type="icon" source="../includes/media/download.svg" border="false"::: [Download SSMS 20.1](https://go.microsoft.com/fwlink/?linkid=2267019&clcid=0x409)
+:::image type="icon" source="../includes/media/download.svg" border="false"::: **[Download SSMS 20.1](https://go.microsoft.com/fwlink/?linkid=2267019&clcid=0x409)**
 
 - Release number: 20.1
 - Build number: 20.1.10.0
@@ -178,7 +178,7 @@ Available languages:
 
 ### 20.0
 
-:::image type="icon" source="../includes/media/download.svg" border="false"::: [Download SSMS 20.0](https://go.microsoft.com/fwlink/?linkid=2264204&clcid=0x409)
+:::image type="icon" source="../includes/media/download.svg" border="false"::: **[Download SSMS 20.0](https://go.microsoft.com/fwlink/?linkid=2264204&clcid=0x409)**
 
 - Release number: 20.0
 - Build number: 20.0.70.0
@@ -256,7 +256,7 @@ Available languages:
 
 ### 19.3
 
-:::image type="icon" source="../includes/media/download.svg" border="false"::: [Download SSMS 19.3](https://go.microsoft.com/fwlink/?linkid=2257624&clcid=0x409)
+:::image type="icon" source="../includes/media/download.svg" border="false"::: **[Download SSMS 19.3](https://go.microsoft.com/fwlink/?linkid=2257624&clcid=0x409)**
 
 - Release number: 19.3
 - Build number: 19.3.4.0
@@ -313,7 +313,7 @@ Available languages:
 
 ### 18.12.1
 
-:::image type="icon" source="../includes/media/download.svg" border="false"::: [Download SSMS 18.12.1](https://go.microsoft.com/fwlink/?linkid=2199013&clcid=0x409)
+:::image type="icon" source="../includes/media/download.svg" border="false"::: **[Download SSMS 18.12.1](https://go.microsoft.com/fwlink/?linkid=2199013&clcid=0x409)**
 
 - Release number: 18.12.1
 - Build number: 15.0.18424.0
@@ -349,7 +349,7 @@ Available languages:
 
 ### 17.9.1
 
-:::image type="icon" source="../includes/media/download.svg" border="false"::: [Download SSMS 17.9.1](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x409)
+:::image type="icon" source="../includes/media/download.svg" border="false"::: **[Download SSMS 17.9.1](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x409)**
 
 - Release number: 17.9.1
 - Build number: 14.0.17289.0
@@ -410,7 +410,7 @@ If your SSMS installation is having problems, and a standard uninstall and reins
 
 ### 16.5.3
 
-:::image type="icon" source="../includes/media/download.svg" border="false"::: [Download SSMS 16.5.3](https://go.microsoft.com/fwlink/?LinkID=840946)
+:::image type="icon" source="../includes/media/download.svg" border="false"::: **[Download SSMS 16.5.3](https://go.microsoft.com/fwlink/?LinkID=840946)**
 
 - Release number: 16.5.3
 - Build number: 13.0.16106.4

@@ -56,7 +56,8 @@ To assess SQL Server, the SQL Server instance needs to:
 
 - The server has connectivity to telemetry.{region}.arcdataservices.com (for more information, see [Network Requirements ](/azure/azure-arc/servers/network-requirements?tabs=azure-cloud))
 
-- To view the assessment reports in Azure portal, you must have Contributor access or higher to the SQL Server - Azure Arc resource.
+- To view the assessment reports in Azure portal, you must be assigned an Azure role with the action `Microsoft.AzureArcData/sqlServerInstances/getTelemetry/` assigned. For convenience, you can use the built-in role "Azure Hybrid Database Administrator - Read Only Service Role", which includes this action. (For more information, see [Learn more about Azure built-in roles](/azure/role-based-access-control/built-in-roles))
+
 
 ## Permissions
 

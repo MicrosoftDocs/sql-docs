@@ -20,7 +20,7 @@ To use the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], you must h
   
 |Topic|Description|  
 |---------|---------------|  
-| :::image type="icon" source="../../includes/media/download.svg" border="false"::: [Download drivers for PHP for SQL Server](download-drivers-php-sql-server.md) | Links to download Microsoft Drivers for PHP for SQL Server. |
+| :::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download drivers for PHP for SQL Server](download-drivers-php-sql-server.md)** | Links to download Microsoft Drivers for PHP for SQL Server. |
 |[Release Notes for the Microsoft Drivers for PHP for SQL Server](../../connect/php/release-notes-php-sql-driver.md)|Lists the features that were added for versions 4.0, 3.2, 3.1, 3.0, and 2.0.|  
 |[Support Resources for the Microsoft Drivers for PHP for SQL Server](../../connect/php/support-resources-for-the-php-sql-driver.md)|Provides links to resources that can be helpful when you are developing applications that use the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].|  
 |[About Code Examples in the Documentation](../../connect/php/about-code-examples-in-the-documentation.md)|Provides information that might be helpful when you run the code examples in this documentation.|  

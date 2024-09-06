@@ -16,12 +16,14 @@ This article describes limitations and issues with SQL Server 2017. For related 
 - [SQL Server on Linux release notes](../linux/sql-server-linux-release-notes-2017.md)
 - [SQL Server 2017 Cumulative updates](https://aka.ms/sql2017cu) for information about the latest cumulative update (CU) release
 
-**Try SQL Server!**
-- :::image type="icon" source="../includes/media/download.svg"::: [Download SQL Server 2017](https://go.microsoft.com/fwlink/?LinkID=829477)
-- :::image type="icon" source="../includes/media/azure-vm.svg"::: [Spin up a Virtual Machine with SQL Server 2017](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)
+## Try SQL Server
+
+:::image type="icon" source="../includes/media/download.svg"::: **[Download SQL Server 2017](https://go.microsoft.com/fwlink/?LinkID=829477)**
+
+:::image type="icon" source="../includes/media/azure-vm.svg"::: **[Spin up a Virtual Machine with SQL Server 2017](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)**
 
 > [!NOTE]
-> SQL Server 2019 preview is now available. For more information, see [What's New in SQL Server 2019](./what-s-new-in-sql-server-2019.md?preserve-view=true&view=sql-server-ver15).
+> [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] is available. For more information, see [What's new in SQL Server 2022](what-s-new-in-sql-server-2022.md).
 
 ## SQL Server 2017 - general availability release (October 2017)
 ### Database Engine

@@ -41,7 +41,7 @@ There are several scenarios when you could use elastic job automation:
   - Update reference data (information common across all databases).
   - Load data from Azure Blob storage.
 - **Configure jobs to execute across a collection of databases on a recurring basis, such as during off-peak hours.**
-  - Collect query results from a set of databases into a central table on an on-going basis.
+  - Collect query results from a set of databases into a central table on an ongoing basis.
   - Queries can be continually executed and configured to trigger additional tasks to be executed.
 - **Collect data for reporting**
   - Aggregate data from a collection of databases into a single destination table.

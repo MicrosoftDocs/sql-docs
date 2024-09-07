@@ -4,7 +4,7 @@ description: Learn about the new features for and improvements to SQL Server on 
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest, mathoma
-ms.date: 08/05/2024
+ms.date: 09/05/2024
 ms.service: virtual-machines-sql
 ms.subservice: service-overview
 ms.topic: whats-new
@@ -57,6 +57,12 @@ The following table lists features of SQL Server on Azure VMs that have been mad
 ## Documentation changes 
 
 Learn about significant changes to the SQL Server on Azure VMs documentation. For previous years, see the [What's new archive](doc-changes-updates-release-notes-whats-new-archive.md).
+
+### September 2024
+
+| Changes | Details |
+| --- | --- |
+| **Azure Key Vault Managed Hardware Security Module (HSM) support with Extensible Key Management**| Azure Key Vault Managed HSM is supported for SQL Server and SQL Server on Azure VMs when using the latest version of the SQL Server Connector, as well as Azure SQL. For more information, see [Set up SQL Server TDE Extensible Key Management by using Azure Key Vault](/sql/relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault). |
 
 ### August 2024
 

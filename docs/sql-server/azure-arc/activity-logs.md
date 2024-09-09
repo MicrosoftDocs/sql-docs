@@ -1,10 +1,10 @@
 ---
 title: Use activity logs
-description: View or download and databases activity log
+description: Learn how to view or download activity logs for Azure Arc-enabled SQL Server instances or databases.
 author: guptasnigdha12
 ms.author: guptasnigdha
-ms.reviewer: mikeray, rajpo
-ms.date: 05/26/2023
+ms.reviewer: mikeray, rajpo, randolphwest
+ms.date: 09/09/2024
 ms.topic: conceptual
 ---
 
@@ -12,29 +12,30 @@ ms.topic: conceptual
 
 [!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
-The activity logs for [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] provide an insight into [SQL Server - Azure Arc](overview.md) and [SQL Server databases - Azure Arc](view-databases.md) related events. The activity logs contain events corresponding to the creation and modification of resources.
-To access activity logs in Azure portal, go to the **SQL Server - Azure Arc resource > Activity Log**. The activity logs help to identify events like SQL Server instance updates, `SqlServerInstance_Update`, SQL Server Databases updates, `SqlServerDatabases_Update`, writing of tags to resources, and so on.
+Activity logs for [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] provide insight into events related to [SQL Server enabled by Azure Arc](overview.md) and [View Azure Arc-enabled SQL Server databases](view-databases.md) resources. Activity logs contain events that correspond to the creation and modification of resources. These events include SQL Server instance updates (`SqlServerInstance_Update`), SQL Server database updates (`SqlServerDatabases_Update`), and writing of tags to resources.
 
-This feature helps in auditing different operations performed on the resource, along with other crucial information such as the time at which the operation was initiated, its status, and the party responsible for event creation.
+This feature helps in auditing operations performed on a resource. The logs provide crucial information such as the time when an operation started, the operation's status, and the party responsible for event creation.
 
-## View the activity log
+## View an activity log
 
-You can access the activity log from most menus in the Azure portal. The initial filter depends on the page from where the activity logs are accessed. You can change the filter to view all other entries. Select **Add Filter** to add more properties to the filter.
+You can access an activity log from most menus in the Azure portal. Go to the Azure Arc-enabled SQL Server resource, and then select **Activity log**.
 
-:::image type="content" source="media/monitoring/activity-logs-filter.png" alt-text="Screenshot of the Arc-enabled SQL Server Activity Logs with Add Filter.":::
+The initial filter depends on the page where you access the activity log. You can change the filter to view all other entries. To add more properties to the filter, select **Add Filter**.
 
-## Download the activity log
+:::image type="content" source="media/monitoring/activity-logs-filter.png" alt-text="Screenshot of an Azure Arc-enabled SQL Server activity log and the button for adding a filter." lightbox="media/monitoring/activity-logs-filter.png":::
 
-Select **Download as CSV** to download the events in the current view.
+## Download an activity log
 
-:::image type="content" source="media/monitoring/download-as-csv.png" alt-text="Screenshot of the Arc-enabled SQL Server Activity Logs Download as CSV feature.":::
+To download the events in the current view, select **Download as CSV**.
+
+:::image type="content" source="media/monitoring/download-as-csv.png" alt-text="Screenshot of the button for downloading events as a CSV file." lightbox="media/monitoring/download-as-csv.png":::
 
 ## View change history
 
-For some events, you can view the change history, which shows what changes happened during that event time. Select an event from the activity log to gather more information. Select the **Change history** tab to view any associated changes with that event.
+For some events, you can view the history of changes that happened during the event time. Select an event from the activity log to gather more information. Then select **Change history** to view any changes associated with that event.
 
-:::image type="content" source="media/monitoring/view-change-history.png" alt-text="Screenshot of the Change history list and tab for an event.":::
+:::image type="content" source="media/monitoring/view-change-history.png" alt-text="Screenshot of the change history for an event." lightbox="media/monitoring/view-change-history.png":::
 
-## Next steps
+## Related content
 
-- For more information on the Retention Policy and Export of logs, visit [Azure Monitor activity log](/azure/azure-monitor/essentials/activity-log).
+- [Send Azure Monitor activity log data](/azure/azure-monitor/essentials/activity-log)

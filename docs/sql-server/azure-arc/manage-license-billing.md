@@ -1,10 +1,10 @@
 ---
 title: Manage licensing and billing
-description: This article explains how to manage SQL Server licensing options. It also demonstrates how SQL Server enabled by Azure Arc can be billed from Microsoft Azure. 
+description: This article explains how to manage SQL Server licensing options. It also demonstrates how SQL Server enabled by Azure Arc can be billed from Microsoft Azure.
 author: anosov1960
 ms.author: sashan
 ms.reviewer: mikeray, randolphwest
-ms.date: 03/31/2024
+ms.date: 09/09/2024
 ms.topic: conceptual
 ---
 
@@ -45,10 +45,10 @@ The diagrams in the list use normalized cores (NCs) to illustrate the cost impli
 For each of these options, you have to decide how you want to pay for the license. The following table shows your payment options:
 
 | Payment option | V-core licensing | P-core licensing without VMs | P-core licensing with unlimited virtualization |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | Subscribe to the service through Microsoft Azure by using a pay-as-you-go method | Yes | Yes | Yes |
-| Bring your own license with Software Assurance or a SQL Server subscription<sup>1</sup> | Yes | Yes | Yes |
-| Bring your own license without Software Assurance<sup>2</sup> | Yes | Yes | No |
+| Bring your own license with Software Assurance or a SQL Server subscription <sup>1</sup> | Yes | Yes | Yes |
+| Bring your own license without Software Assurance <sup>2</sup> | Yes | Yes | No |
 
 <sup>1</sup> You already have a license with active Software Assurance or an active SQL Server subscription.
 
@@ -76,9 +76,9 @@ For more information about licensing SQL Server by virtual cores, see the sectio
 The following license types are supported when you're licensing v-cores:
 
 | License type | Description | Value |
-|---|---|---|
+| --- | --- | --- |
 | Pay-as-you-go | Subscribe to the Standard or Enterprise edition of the service and be billed on an hourly meter. See [SQL Server pricing and licensing](https://www.microsoft.com/sql-server/sql-server-2022-pricing). | `PAYG` |
-| License with Software Assurance | Bring your own Standard or Enterprise license with Software Assurance or a SQL Server subscription. Your software usage is reported through a free hourly meter according to the metering rules. See [Metering software usage](#usage-metering) later in this article. | `Paid`|
+| License with Software Assurance | Bring your own Standard or Enterprise license with Software Assurance or a SQL Server subscription. Your software usage is reported through a free hourly meter according to the metering rules. See [Metering software usage](#usage-metering) later in this article. | `Paid` |
 | License only | You use a perpetual or Server+CAL license for the Standard or Enterprise edition, or you use the Developer, Evaluation, or Express edition. Your software usage is reported according to the metering rules. See [Metering software usage](#usage-metering) later in this article. | `LicenseOnly` |
 
 #### Important considerations
@@ -113,7 +113,7 @@ In this option, the licensing requirements are identical to [licensing SQL Serve
 
 The Standard edition is limited to a maximum of 24 p-cores, even if the OSE is installed on a larger machine. For more information about limits, see [Compute capacity limits by edition of SQL Server](../compute-capacity-limits-by-edition-of-sql-server.md).
 
-> [!IMPORTANT]
+> [!IMPORTANT]  
 > If a physical machine without VMs is connected to Azure Arc in the scope that a SQL Server physical core license covers, the unlimited virtualization benefit doesn't apply to that machine. It's licensed and billed separately.
 
 For more information about licensing SQL Server on a physical OSE, see the section "Core-based licensing" in the [SQL Server licensing guide (download link)](https://go.microsoft.com/fwlink/p/?linkid=2215573).
@@ -128,7 +128,7 @@ The option of licensing SQL Server by physical cores with unlimited virtualizati
 
 To use the unlimited virtualization benefit, you need to create a *SQLServerLicense* resource that covers the specific *SQL Server - Azure Arc* instances that you intend to include. For details about creating *SQLServerLicense* resources, see [Create a SQL Server license](manage-configuration.md#create-license-resource).
 
-> [!CAUTION]
+> [!CAUTION]  
 > The unlimited virtualization benefit isn't available to VMs running on infrastructure from any of the [listed providers](https://aka.ms/listedproviders). These VMs can be licensed only by v-cores. If you create a *SQLServerLicense* resource with the intent of licensing these VMs by using unlimited virtualization, you'll be charged for the consumption of v-cores based on the SQL Server configuration of the host. Any existing p-core licenses don't apply to offset such charges.
 
 For more information about licensing by physical cores with unlimited virtualization, see the section "Licensing for maximum virtualization" in the [SQL Server licensing guide (download link)](https://go.microsoft.com/fwlink/p/?linkid=2215573).
@@ -161,15 +161,15 @@ You can create the license resource in a resource group in any of the [supported
 
 The location of the license resource doesn't affect the scope. It applies to all *Machine - Azure Arc* resources in the scope of the license, regardless of the regions where these resources are onboarded.
 
-> [!IMPORTANT]
+> [!IMPORTANT]  
 > You can associate multiple license resources with the same scope or overlapping scopes. For example, you can add a new license when you deploy additional physical servers during temporary bursts of activity, or to reflect unexpected growth. All the virtual machines running on these physical servers must be connected to Azure Arc in the scope of the license resource.
 
 ### Billing plan
 
 The `billingPlan` property provides a choice between paying for the license on an hourly meter or by bringing your own license.
 
-| Billing&nbsp;plan&nbsp;&nbsp;| Description | Value |
-|---|---|---|
+| Billing&nbsp;plan&nbsp;&nbsp; | Description | Value |
+| --- | --- | --- |
 | Pay-as-you-go | By selecting this option, you subscribe to unlimited virtualization service that's billed on an hourly meter for the Enterprise edition. See [SQL Server prices and licensing](https://www.microsoft.com/sql-server/sql-server-2022-pricing). | `PAYG` |
 | Bring your own license | By selecting this option, you attest that you have an active Enterprise license with Software Assurance or a SQL Server subscription for the same or a greater number of cores. You also attest that you want to use that license to cover the usage of the SQL Server software on each VM in its scope by using the unlimited virtualization benefit. | `Paid` |
 
@@ -236,24 +236,24 @@ For more information, see [SQL Server Licensing Resources and Documents](https:/
 The following table shows the meter product tiers (also called *SKUs*) that are used for metering and billing for SQL Server software installed on a single OSE:
 
 | Installed edition | Projected edition | License type | Failover replica | Use p-core license | Meter SKU |
-|--|--|--|--|--|--|
+| --- | --- | --- | --- | --- | --- |
 | Enterprise Core | Enterprise | `PAYG` | No | No | `Ent edition - PAYG` |
-| Enterprise Core | Enterprise | `PAYG` | No | Yes | `Ent edition - Virtual license`<sup>2</sup> |
-| Enterprise Core | Enterprise | `Paid` | No | No |`Ent edition - AHB` |
-| Enterprise Core | Enterprise | `Paid` | No | Yes |`Ent edition - Virtual license`<sup>2</sup> |
-| Enterprise Core | Enterprise | `LicenseOnly` | Yes or no | Not applicable |`Ent edition - License only` |
+| Enterprise Core | Enterprise | `PAYG` | No | Yes | `Ent edition - Virtual license` <sup>2</sup> |
+| Enterprise Core | Enterprise | `Paid` | No | No | `Ent edition - AHB` |
+| Enterprise Core | Enterprise | `Paid` | No | Yes | `Ent edition - Virtual license` <sup>2</sup> |
+| Enterprise Core | Enterprise | `LicenseOnly` | Yes or no | Not applicable | `Ent edition - License only` |
 | Enterprise Core | Enterprise | `PAYG` or `Paid` | Yes | Yes or no | `Ent edition - DR replica` |
 | Enterprise <sup>1</sup> | Enterprise | `PAYG` | No | No | `Ent edition - PAYG` |
-| Enterprise <sup>1</sup> | Enterprise | `PAYG` | No | Yes | `Ent edition - Virtual license`<sup>2</sup> |
-| Enterprise <sup>1</sup>| Enterprise | `Paid` | No | No | `Ent edition - AHB` |
-| Enterprise <sup>1</sup>| Enterprise | `Paid` | No | Yes | `Ent edition - Virtual license`<sup>2</sup> |
-| Enterprise <sup>1</sup>| Enterprise | `LicenseOnly` | Yes or no | Not applicable | `Ent edition - License only` |
-| Enterprise <sup>1</sup>| Enterprise | `PAYG` or `Paid` | Yes | Yes or no | `Ent edition - DR replica` |
+| Enterprise <sup>1</sup> | Enterprise | `PAYG` | No | Yes | `Ent edition - Virtual license` <sup>2</sup> |
+| Enterprise <sup>1</sup> | Enterprise | `Paid` | No | No | `Ent edition - AHB` |
+| Enterprise <sup>1</sup> | Enterprise | `Paid` | No | Yes | `Ent edition - Virtual license` <sup>2</sup> |
+| Enterprise <sup>1</sup> | Enterprise | `LicenseOnly` | Yes or no | Not applicable | `Ent edition - License only` |
+| Enterprise <sup>1</sup> | Enterprise | `PAYG` or `Paid` | Yes | Yes or no | `Ent edition - DR replica` |
 | Standard | Standard | `PAYG` | No | No | `Std edition - PAYG` |
-| Standard | Standard | `PAYG` | No | Yes | `Std edition - Virtual license`<sup>2</sup> |
+| Standard | Standard | `PAYG` | No | Yes | `Std edition - Virtual license` <sup>2</sup> |
 | Standard | Standard | `Paid` | No | No | `Std edition - AHB` |
-| Standard | Standard | `Paid` | No | Yes | `Std edition - Virtual license`<sup>2</sup> |
-| Standard | Standard | `LicenseOnly` | No | Not applicable | `Std edition - Virtual license`<sup>2</sup> |
+| Standard | Standard | `Paid` | No | Yes | `Std edition - Virtual license` <sup>2</sup> |
+| Standard | Standard | `LicenseOnly` | No | Not applicable | `Std edition - Virtual license` <sup>2</sup> |
 | Standard | Standard | `PAYG` or `Paid` | Yes | Yes or no | `Std edition - DR replica` |
 | Evaluation | Evaluation | Any | Yes or no | Not applicable | `Eval edition` |
 | Developer | Developer | Any | Yes or no | Not applicable | `Dev edition` |
@@ -267,7 +267,7 @@ The following table shows the meter product tiers (also called *SKUs*) that are 
 The following table shows the meter SKUs that are used for metering and billing for SQL Server software covered by a physical core license with unlimited virtualization:
 
 | License category | Projected edition | Billing plan | Meter SKU |
-|--|--|--|--|
+| --- | --- | --- | --- |
 | P-core license | Enterprise | `PAYG` | `Ent edition - Host - PAYG` |
 | P-core license | Enterprise | `Paid` | `Ent edition - AHB` |
 

@@ -2,10 +2,10 @@
 title: Configure automatic updates
 description: This article explains how to configure automatic updates for SQL Server enabled by Azure Arc.
 author: AbdullahMSFT
-ms.author: amamun 
-ms.reviewer: mikeray
-ms.date: 07/29/2024
-ms.topic: conceptual 
+ms.author: amamun
+ms.reviewer: mikeray, randolphwest
+ms.date: 09/09/2024
+ms.topic: conceptual
 ---
 
 # Configure automatic updates for SQL Server enabled by Azure Arc
@@ -28,7 +28,7 @@ You can configure automatic updates for [!INCLUDE [ssazurearc](../../includes/ss
 
 - Apply Windows and SQL Server updates marked as **Important** or **Critical**.
 
-  You must manually install other SQL Server updates, such as service packs and cumulative updates that are not marked as **Important** or **Critical**.
+  You must manually install other SQL Server updates, such as service packs and cumulative updates that aren't marked as **Important** or **Critical**.
 
 ## Settings
 
@@ -41,9 +41,9 @@ The following table describes the options that you can configure for automatic u
 
 | Setting | Possible values | Description |
 | --- | --- | --- |
-| **Automatic updates** |**Enable** \| **Disable** | Enables or disables automatic updates. |
-| **Maintenance schedule** | **Daily** \| **Sunday** \| **Monday** \| **Tuesday** \| **Wednesday** \| **Thursday** \| **Friday** \| **Saturday** |The weekly schedule for downloading and installing Windows, SQL Server, and Microsoft updates. |
-| **Maintenance start hour** |**0:00**-**23:00** |The local start time to apply updates. |
+| **Automatic updates** | **Enable** \| **Disable** | Enables or disables automatic updates. |
+| **Maintenance schedule** | **Daily** \| **Sunday** \| **Monday** \| **Tuesday** \| **Wednesday** \| **Thursday** \| **Friday** \| **Saturday** | The weekly schedule for downloading and installing Windows, SQL Server, and Microsoft updates. |
+| **Maintenance start hour** | **0:00**-**23:00** | The local start time to apply updates. |
 
 ## Configure updates in the Azure portal
 
@@ -75,4 +75,4 @@ To manage automatic updates programmatically or by policy, review the informatio
 
 ## Related content
 
-[Manage SQL Server license and billing options](manage-configuration.md)
+- [Configure SQL Server enabled by Azure Arc](manage-configuration.md)

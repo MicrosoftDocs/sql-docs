@@ -4,9 +4,10 @@ description: Learn how to inventory SQL Server databases, and view properties of
 author: ntakru
 ms.author: nikitatakru
 ms.reviewer: mikeray, randolphwest
-ms.date: 12/12/2023
+ms.date: 09/09/2024
 ms.topic: conceptual
-ms.custom: ignite-2023
+ms.custom:
+  - ignite-2023
 ---
 
 # View Azure Arc-enabled SQL Server databases
@@ -21,7 +22,7 @@ You can inventory and view Azure Arc-enabled [!INCLUDE [ssnoversion-md](../../in
 
   - Is hosted on a physical or virtual machine that's running the Windows operating system.
   - Is [!INCLUDE [sssql14-md](../../includes/sssql14-md.md)] or later.
-  - Is connected to Azure Arc. See [Connect your SQL Server instance to Azure Arc](connect.md).
+  - Is connected to Azure Arc. See [Connect your SQL Server to Azure Arc](connect.md).
   - Is connected to the internet directly or through a proxy server.
 
 - Make sure that database names adhere to naming conventions and don't contain reserved words. For a list of reserved words, see [Resolve errors for reserved resource names](/azure/azure-resource-manager/troubleshooting/error-reserved-resource-name).
@@ -150,5 +151,5 @@ Databases deleted on-premises might not be immediately deleted in Azure. There's
 
 ## Related content
 
-- [Protect [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] with Microsoft Defender for Cloud](configure-advanced-data-security.md)
-- [Configure best practices assessment on an instance of [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)]](assess.md)
+- [Protect SQL Server with Microsoft Defender for Cloud](configure-advanced-data-security.md)
+- [Configure best practices assessment for SQL Server enabled by Azure Arc](assess.md)

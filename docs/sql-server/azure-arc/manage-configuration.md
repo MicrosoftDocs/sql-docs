@@ -4,7 +4,7 @@ description: Learn how to manage configuration options for SQL Server enabled by
 author: anosov1960
 ms.author: sashan
 ms.reviewer: mikeray, randolphwest
-ms.date: 04/26/2024
+ms.date: 09/09/2024
 ms.topic: conceptual
 ---
 
@@ -88,7 +88,7 @@ Choose one of the license types. For descriptions, see [License types](manage-li
 
 Select the **Use physical core license** checkbox if you're configuring a virtual machine (VM) and you're using the unlimited virtualization benefit for licensing the SQL Server software or for your SQL subscription. It sets the host configuration property `UsePhysicalCoreLicense` to `True`. If this checkbox is selected, the physical core (p-core) license takes precedence, and the SQL Server software costs are nullified.
 
-> [!IMPORTANT]
+> [!IMPORTANT]  
 > If the p-core license is configured with a pay-as-you-go billing plan, the selected **License type** value should be **Pay-as-you-go**. This selection doesn't trigger additional charges at the VM level, but it does ensure uninterrupted licensing and billing if the p-core license is deactivated or deleted.
 
 #### <a id="subscribe-esu"></a> Subscribe to Extended Security Updates
@@ -99,7 +99,7 @@ Select **Subscribe to Extended Security Updates**. It sets the host configuratio
 
 For more information about ESU licensing options, see [Subscribe to Extended Security Updates in a production environment](extended-security-updates.md#subscribe-to-extended-security-updates-in-a-production-environment).
 
-> [!NOTE]
+> [!NOTE]  
 > Unlike the p-core ESU license, when you're subscribing to ESUs for a host, you don't need to define the number of billable cores for each machine. Azure Extension for SQL Server detects the size of the host, the type of the host (virtual or physical), and the SQL Server edition. The extension bills according to these parameters.
 >
 > After you enable ESUs, you can't change the **License Type** value of the host to **License only** until the ESU subscription is canceled.
@@ -353,7 +353,7 @@ resources
 | extend GoogleVM = toboolean(iff((properties.detectedProperties.manufacturer =~ "Google") and (properties.detectedProperties.model =~ "Google Compute Engine"), 1, 0))
 | extend NutanixVM = toboolean(iff((properties.detectedProperties.manufacturer =~ "Nutanix") and (properties.detectedProperties.model =~ "AHV"), 1, 0))
 | extend MicrosoftVM = toboolean(iff((properties.detectedProperties.manufacturer =~ "Microsoft Corporation") and (properties.detectedProperties.model =~ "Virtual Machine"), 1, 0))
-| extend billableCores = iff(VMbyManufacturer or VMbyModel or GoogleVM or NutanixVM or MicrosoftVM, properties.detectedProperties.logicalCoreCount, properties.detectedProperties.coreCount)        
+| extend billableCores = iff(VMbyManufacturer or VMbyModel or GoogleVM or NutanixVM or MicrosoftVM, properties.detectedProperties.logicalCoreCount, properties.detectedProperties.coreCount)
 | join kind = leftouter // Join the extension
         (
         resources
@@ -368,11 +368,11 @@ resources
             resources
             | where type =~ 'microsoft.azurearcdata/sqlserverinstances'
             | extend sqlVersion = tostring(properties.version)
-            | extend sqlEdition = tostring(properties.edition) 
+            | extend sqlEdition = tostring(properties.edition)
             | extend is_Enterprise = toint(iff(sqlEdition == "Enterprise", 1, 0))
             | extend sqlStatus = tostring(properties.status)
             | extend licenseType = tostring(properties.licenseType)
-            | where sqlEdition in ('Enterprise', 'Standard') 
+            | where sqlEdition in ('Enterprise', 'Standard')
             | where licenseType !~ 'HADR'
             | where sqlStatus =~ "Connected"
             | extend ArcServer = tolower(tostring(properties.containerResourceId))
@@ -706,7 +706,7 @@ resources
 
 - [Manage licensing and billing of SQL Server enabled by Azure Arc](manage-license-billing.md)
 - [SQL Server 2022 pricing](https://www.microsoft.com/sql-server/sql-server-2022-pricing)
-- [Install SQL Server 2022 by using the pay-as-you-go activation option](../../database-engine/install-windows/install-sql-server.md)
+- [SQL Server installation guide](../../database-engine/install-windows/install-sql-server.md)
 - [What are Extended Security Updates for SQL Server?](../end-of-support/sql-server-extended-security-updates.md)
 - [Frequently asked questions](faq.yml#billing)
-- [Configure automatic updates for SQL Server instances enabled for Azure Arc](update.md)
+- [Configure automatic updates for SQL Server enabled by Azure Arc](update.md)

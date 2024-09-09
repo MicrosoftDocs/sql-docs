@@ -4,7 +4,7 @@ description: Learn how to manage licensing and billing of Extended Security Upda
 author: MikeRayMSFT
 ms.author: sashan
 ms.reviewer: randolphwest
-ms.date: 08/13/2024
+ms.date: 09/09/2024
 ms.topic: conceptual
 ms.custom:
   - references_regions
@@ -53,8 +53,8 @@ To subscribe to ESUs, you must have active Software Assurance or enable a pay-as
 | SQL Server license type | ESU v-core subscription | ESU p-core subscription without VMs | ESU p-core subscription with unlimited virtualization |
 | --- | --- | --- | --- |
 | Subscribe to the service through Microsoft Azure by using a pay-as-you-go method | Yes | Yes | Yes |
-| Bring your own license with Software Assurance or a SQL Server subscription<sup>1</sup> | Yes | Yes | Yes |
-| Bring your own license without Software Assurance<sup>2</sup> | No | No | No |
+| Bring your own license with Software Assurance or a SQL Server subscription <sup>1</sup> | Yes | Yes | Yes |
+| Bring your own license without Software Assurance <sup>2</sup> | No | No | No |
 
 <sup>1</sup> You already have a license with active Software Assurance or an active SQL Server subscription.
 
@@ -88,7 +88,7 @@ In this option, the ESU subscription requirements are similar to [subscribing to
 The ESU subscription for the Standard edition is limited to a maximum of 24 p-cores, even if the OSE is installed on a larger machine. For more information about limits, see [Compute capacity limits by edition of SQL Server](../compute-capacity-limits-by-edition-of-sql-server.md).
 
 > [!IMPORTANT]  
-> If a physical machine without VMs is connected to Azure Arc in the scope that a [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] ESU p-core license covers, the unlimited virtualization benefit doesn't apply to that machine. It's billed individually, based on the physical cores  that the OSE can access.
+> If a physical machine without VMs is connected to Azure Arc in the scope that a [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] ESU p-core license covers, the unlimited virtualization benefit doesn't apply to that machine. It's billed individually, based on the physical cores that the OSE can access.
 
 ## <a id="unlimited-virtualization"></a> Subscribe to SQL Server ESUs by physical cores with unlimited virtualization
 
@@ -98,7 +98,7 @@ The option of subscribing to SQL Server ESUs by physical cores with unlimited vi
 - Your infrastructure and the selected payment method support the unlimited virtualization benefit for ESU.
 - Subscribing to [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] ESUs by v-cores is more expensive than subscribing by the p-cores of the host.
 
-To use the unlimited virtualization benefit, you need to create a *SQLServerEsuLicense* resource that covers the specific *SQL Server - Azure Arc* instances that you intend to include. For details about  managing *SQLServerEsuLicense* resources, see [Manage the unlimited virtualization benefit for a SQL Server ESU subscription](manage-configuration.md#manage-pcore-esu-license).
+To use the unlimited virtualization benefit, you need to create a *SQLServerEsuLicense* resource that covers the specific *SQL Server - Azure Arc* instances that you intend to include. For details about managing *SQLServerEsuLicense* resources, see [Manage the unlimited virtualization benefit for a SQL Server ESU subscription](manage-configuration.md#manage-pcore-esu-license).
 
 > [!CAUTION]  
 > The unlimited virtualization benefit isn't available to VMs running on infrastructure from any of the [listed providers](https://aka.ms/listedproviders). These VMs can be licensed only by v-cores. If you create a *SqlServerEsuLicense* resource with the intent of licensing these VMs by using unlimited virtualization, you'll be charged for the consumption of v-cores based on the [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] configuration of the host. Any existing p-core licenses don't apply to offset such charges.
@@ -147,7 +147,7 @@ After the license is activated:
 
 After the license is terminated:
 
-- You can't reactivate the license. You can delete the resource if you don't need it.  
+- You can't reactivate the license. You can delete the resource if you don't need it.
 - The ESU subscriptions for the VMs in scope remain active and become billable at the VM level.
 
 To stop all ESU charges, unsubscribe from ESUs on all virtual machines before you terminate the license. For details, review [Manage resources in the scope of an ESU p-core license](manage-configuration.md#manage-esu-license-resources).
@@ -225,7 +225,7 @@ The usage of the [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] ESU 
 
 The following table shows the ESU subscription meters (also called *SKUs*) that are used for metering and billing for a [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] ESU subscription on a single OSE:
 
-| Projected edition<sup>1</sup> | SQL Server version | Failover replica | Use p-core license | Meter SKU |
+| Projected edition <sup>1</sup> | SQL Server version | Failover replica | Use p-core license | Meter SKU |
 | --- | --- | --- | --- | --- |
 | Enterprise | 2012 | No | No | `Ent edition - ESU`<br />`Ent edition - ESU back billing` |
 | Enterprise | 2012 | No | Yes | None |
@@ -312,7 +312,7 @@ If you manually terminate the ESU subscription and then reactivate it within 30 
 - [SQL Server 2022 pricing and licensing](https://www.microsoft.com/sql-server/sql-server-2022-pricing)
 - [Configure SQL Server enabled by Azure Arc](manage-configuration.md)
 - [Frequently asked questions about billing](faq.yml#billing)
-- [Frequently asked questions about Extended Security Updates](../end-of-support/extended-security-updates-frequently-asked-questions.md)
-- [Prerequisites for SQL Server enabled by Azure Arc](prerequisites.md)
-- [Automatically connect your SQL Server instance to Azure Arc](automatically-connect.md)
+- [Extended Security Updates: Frequently asked questions](../end-of-support/extended-security-updates-frequently-asked-questions.md)
+- [Prerequisites - SQL Server enabled by Azure Arc](prerequisites.md)
+- [Automatically connect your SQL Server to Azure Arc](automatically-connect.md)
 - [Manage the unlimited virtualization benefit for a SQL Server ESU subscription](manage-configuration.md#manage-pcore-esu-license)

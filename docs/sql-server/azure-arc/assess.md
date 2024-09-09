@@ -4,7 +4,7 @@ description: Learn how to configure best practices assessment on an instance of 
 author: pochiraju
 ms.author: rajpo
 ms.reviewer: mikeray, randolphwest
-ms.date: 06/14/2023
+ms.date: 09/09/2024
 ms.topic: conceptual
 ---
 
@@ -26,7 +26,7 @@ An assessment runs against your instance and all databases on that instance. In 
 
 This article provides instructions for using best practices assessment on an instance of [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)].
 
-> [!IMPORTANT]
+> [!IMPORTANT]  
 > Best practices assessment is available only for SQL Server instances purchased through either [Software Assurance](https://www.microsoft.com/licensing/licensing-programs/software-assurance-default) or [pay-as-you-go](https://www.microsoft.com/sql-server/sql-server-2022-pricing) licensing options.
 >
 > For instructions to configure the appropriate license type, review [Configure SQL Server enabled by Azure Arc](manage-configuration.md).
@@ -41,31 +41,31 @@ This article provides instructions for using best practices assessment on an ins
 
 1. On the left pane, select **Best practices assessment**.
 
-   :::image type="content" source="media/assess/sql-best-practices-assessment-launch.png" alt-text=" Screenshot that shows how to open settings for best practices assessment for an Azure Arc-enabled SQL Server resource.":::
+   :::image type="content" source="media/assess/sql-best-practices-assessment-launch.png" alt-text="Screenshot that shows how to open settings for best practices assessment for an Azure Arc-enabled SQL Server resource.":::
 
    An alternative is to select **Overview** on the left pane, select the **Capabilities** tab, and then select **Best practices assessment**.
 
 1. In the **Log Analytics Workspace** dropdown list, select your workspace.
 
-   :::image type="content" source="media/assess/enable-log-analytics-workspace.png" alt-text=" Screenshot that shows the box for specifying a Log Analytics workspace for SQL Server best practices assessment.":::
+   :::image type="content" source="media/assess/enable-log-analytics-workspace.png" alt-text="Screenshot that shows the box for specifying a Log Analytics workspace for SQL Server best practices assessment." lightbox="media/assess/enable-log-analytics-workspace.png":::
 
    If you didn't create a Log Analytics workspace or you don't have the Log Analytics Contributor role assigned for the resource group or subscription, you can't initiate the on-demand SQL Server assessment. Review the [prerequisites](#prerequisites).
 
 1. Select **Enable assessment**.
 
-   :::image type="content" source="media/assess/click-on-enable.png" alt-text=" Screenshot that shows the button for enabling best practices assessment for an Azure Arc-enabled SQL Server resource.":::
+   :::image type="content" source="media/assess/click-on-enable.png" alt-text="Screenshot that shows the button for enabling best practices assessment for an Azure Arc-enabled SQL Server resource.":::
 
    Setup and configuration can take a few minutes. After the process finishes, best practices assessment is enabled for all SQL Server instances running on the machine and can assess the SQL Server host comprehensively.
 
 1. Confirm that you successfully enabled the feature. By default, the assessment is scheduled to run every Sunday at 12:00 AM local time.
 
-   :::image type="content" source="media/assess/sql-best-practices-assessment-enabled.png" alt-text=" Screenshot that shows the successful enablement of best practices assessment for an Azure Arc-enabled SQL Server resource.":::
+   :::image type="content" source="media/assess/sql-best-practices-assessment-enabled.png" alt-text="Screenshot that shows the successful enablement of best practices assessment for an Azure Arc-enabled SQL Server resource." lightbox="media/assess/sql-best-practices-assessment-enabled.png":::
 
 ## Enable best practices assessment at scale by using Azure Policy
 
 You can automatically enable best practices assessment on multiple Azure Arc-enabled SQL Server instances at scale by using an Azure Policy definition called **Configure Arc-enabled Servers with SQL Server extension installed to enable or disable SQL best practices assessment**.
 
-This policy definition is not assigned to a scope by default. If you assign this policy definition to a scope of your choice, it enables the best practices assessment on all SQL Server instances enabled for Azure Arc within the defined scope. By default, the assessment is scheduled to run every Sunday at 12:00 AM local time.
+This policy definition isn't assigned to a scope by default. If you assign this policy definition to a scope of your choice, it enables the best practices assessment on all SQL Server instances enabled for Azure Arc within the defined scope. By default, the assessment is scheduled to run every Sunday at 12:00 AM local time.
 
 # [Portal](#tab/portal)
 
@@ -82,7 +82,7 @@ This policy definition is not assigned to a scope by default. If you assign this
 1. On the **Parameters** tab:
 
    1. Select **Only show parameters that need input for review**, if the checkbox isn't already selected.
-   1. Select **Log Analytics workspace** and **Log Analytics workspace location** from the respective dropdown menus.
+   1. Select **Log Analytics workspace** and **Log Analytics workspace location** from the respective dropdown list menus.
    1. Set the **Enablement** value to **true** to enable the best practices assessment. (Setting this value to **false** disables the assessment.)
    1. Select **Next**.
 
@@ -98,7 +98,7 @@ This policy definition is not assigned to a scope by default. If you assign this
 # [PowerShell](#tab/powershell)
 
 ```powershell
-# Define the resource group and policy 
+# Define the resource group and policy
 $rg = Get-AzResourceGroup -Name "<Resource Group Name>"
 $policyAssignmentName = "SQLBestPracticesAssessmentAssignment"
 $policyDefinitionName = "Configure Arc-enabled Servers with SQL Server extension installed to enable or disable SQL best practices assessment."
@@ -110,7 +110,7 @@ $policyParameterObj = @{
     "effect" = "DeployIfNotExists"
     "laWorkspaceId" = "<Log Analytics Workspace ID>"
     "laWorkspaceLocation" = "<Log Analytics Workspace Location>"
-    "isEnabled" = $true 
+    "isEnabled" = $true
 }
 
 # Assign the policy
@@ -130,25 +130,25 @@ Get-AzPolicyAssignment -Name $policyAssignmentName -Scope $rg.ResourceId
 
 For general instructions about how to assign an Azure policy by using the Azure portal or an API of your choice, see the [Azure Policy documentation](/azure/governance/policy).
 
-> [!NOTE]
+> [!NOTE]  
 > If you select the Log Analytics workspace from a different resource group than the SQL Server resource, the scope of the Azure policy must be the whole subscription.
 
 ### Modify the license type
 
 If an instance of SQL Server is configured with a **License only** type of license, you need to change the license type to configure best practices assessment. On the **Best practices assessment** pane of the portal, select **Change license type**. For more information, see [Configure SQL Server enabled by Azure Arc](manage-configuration.md).
 
-:::image type="content" source="media/assess/change-license-type.png" alt-text="Screenshot of the button for changing the license type in the Azure portal.":::
+:::image type="content" source="media/assess/change-license-type.png" alt-text="Screenshot of the button for changing the license type in the Azure portal." lightbox="media/assess/change-license-type.png":::
 
 ## Manage best practices assessment
 
 After you enable best practices assessment, you can run or configure the assessment as required on the **Best practices assessment** pane.
 
-> [!NOTE]
+> [!NOTE]  
 > When you perform any of the following tasks on a specific SQL Server instance, the task is applied to all SQL Server instances running on the machine.
 
 - To run the assessment on demand from the portal, select **Run assessment**.
 
-   :::image type="content" source="media/assess/run-assessment.png" alt-text=" Screenshot that shows the button for running an assessment.":::
+   :::image type="content" source="media/assess/run-assessment.png" alt-text="Screenshot that shows the button for running an assessment.":::
 
 - To view assessment results, select the **View assessment results** button.
 
@@ -156,11 +156,11 @@ After you enable best practices assessment, you can run or configure the assessm
 
 - To schedule an assessment, select **Configuration**, change the information as needed, and then select **Schedule assessment**.
 
-   :::image type="content" source="media/assess/configure-schedule.png" alt-text=" Screenshot that shows the pane for configuring an assessment schedule. ":::
+   :::image type="content" source="media/assess/configure-schedule.png" alt-text="Screenshot that shows the pane for configuring an assessment schedule." lightbox="media/assess/configure-schedule.png":::
 
 - To disable an assessment, select **Configuration** > **Disable assessment**.
 
-   :::image type="content" source="media/assess/configure-disable.png" alt-text=" Screenshot that shows the button for disabling an assessment. ":::
+   :::image type="content" source="media/assess/configure-disable.png" alt-text="Screenshot that shows the button for disabling an assessment." lightbox="media/assess/configure-disable.png":::
 
 ## View results of best practices assessment
 
@@ -183,7 +183,7 @@ The first grid shows each recommendation and the affected instances in the envir
 
 You can perform any of these actions:
 
-- If the assessment reports a large number of recommendations, you can filter the results. To filter results, use the dropdown menu above the grid to select **Name**, **Severity**, or **Check Id**.
+- If the assessment reports a large number of recommendations, you can filter the results. To filter results, use the dropdown list menu above the grid to select **Name**, **Severity**, or **Check Id**.
 
 - To download results, use **Export to Excel**.
 
@@ -217,6 +217,6 @@ See the [troubleshooting guide](troubleshoot-assessment.md).
 
 ## Related content
 
-- Review the [set of nearly 500 rules](https://github.com/microsoft/sql-server-samples/blob/master/samples/manage/sql-assessment-api/DefaultRuleset.csv) that best practices assessment applies.
-- Learn about [Microsoft Unified](https://www.microsoft.com/en-us/microsoft-unified), which can provide comprehensive support of the best practices assessment feature.
-- Learn how to [inventory and view SQL Server databases as Azure Arc-enabled resources](view-databases.md).
+- [Assessment API: 500 rules](https://github.com/microsoft/sql-server-samples/blob/master/samples/manage/sql-assessment-api/DefaultRuleset.csv)
+- [Microsoft Unified](https://www.microsoft.com/en-us/microsoft-unified)
+- [View SQL Server databases](view-databases.md)

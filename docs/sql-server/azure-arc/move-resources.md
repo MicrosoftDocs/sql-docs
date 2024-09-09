@@ -1,13 +1,12 @@
 ---
 title: Move resources to a new resource group or subscription
 description: This article explains how to move resources to a new resource group or subscription for SQL Server enabled by Azure Arc.
-author: ntakru 
+author: ntakru
 ms.author: nikitatakru
-ms.reviewer: mikeray
-ms.date: 04/04/2024
+ms.reviewer: mikeray, randolphwest
+ms.date: 09/09/2024
 ms.topic: conceptual
 ---
-
 
 # Move SQL Server enabled by Azure Arc resources to a new resource group or subscription (preview)
 
@@ -56,20 +55,20 @@ Enable any features that you disabled before the move.
 
 The following table identifies features that remain enabled after the resource move, along with features that you need to reenable.
 
-|Feature |Before move |After move |
-|:----|:----|:----|
-|Patching  |Enabled |Enabled |
-|Extended Security Updates |Enabled |Enabled |
-|License type |Enabled |Enabled |
-|Viewing databases  |Enabled |Enabled |
-|Viewing availability groups |Enabled |Enabled |
-|Viewing failover cluster instances  |Enabled |Enabled |
-|Automated backups |Enabled |Enabled |
-|Monitoring dashboards |Enabled |Enabled |
-|Microsoft Entra ID |Enabled |Enabled |
-|Microsoft Purview |Enabled |Disabled. To enable, review [Connect to and manage Azure Arc-enabled SQL Server in Microsoft Purview](/purview/register-scan-azure-arc-enabled-sql-server).|
-|Best practices assessment |Enabled |Disabled. Review the following section about enabling best practices assessment.|
-|Microsoft Defender |Enabled |Disabled. To enable, review [Protect SQL Server with Microsoft Defender for Cloud](configure-advanced-data-security.md).|
+| Feature | Before move | After move |
+| :--- | :--- | :--- |
+| Patching | Enabled | Enabled |
+| Extended Security Updates | Enabled | Enabled |
+| License type | Enabled | Enabled |
+| Viewing databases | Enabled | Enabled |
+| Viewing availability groups | Enabled | Enabled |
+| Viewing failover cluster instances | Enabled | Enabled |
+| Automated backups | Enabled | Enabled |
+| Monitoring dashboards | Enabled | Enabled |
+| Microsoft Entra ID | Enabled | Enabled |
+| Microsoft Purview | Enabled | Disabled. To enable, review [Connect to and manage Azure Arc-enabled SQL Server in Microsoft Purview](/purview/register-scan-azure-arc-enabled-sql-server). |
+| Best practices assessment | Enabled | Disabled. Review the following section about enabling best practices assessment. |
+| Microsoft Defender | Enabled | Disabled. To enable, review [Protect SQL Server with Microsoft Defender for Cloud](configure-advanced-data-security.md). |
 
 ## Enable best practices assessment
 
@@ -78,8 +77,8 @@ The way to enable best practices assessment depends on whether the resource move
 ### Resources moved within the same subscription
 
 1. Before the move, disable best practices assessment.
-2. Move the resource.
-3. [Enable best practices assessment](assess.md#enable-best-practices-assessment).
+1. Move the resource.
+1. [Enable best practices assessment](assess.md#enable-best-practices-assessment).
 
 Alternatively, use an Azure policy to [enable best practices assessment at scale](assess.md#enable-best-practices-assessment-at-scale-by-using-azure-policy).
 
@@ -88,7 +87,7 @@ Alternatively, use an Azure policy to [enable best practices assessment at scale
 The following steps explain how to reconfigure best practices assessment after a move to a different subscription, to a different resource group, or within the same Log Analytics workspace.
 
 1. Before the move, disable best practices assessment.
-2. Move the resource.
-3. Update the Log Analytics workspace with one from the new subscription and then enable best practices assessment.
+1. Move the resource.
+1. Update the Log Analytics workspace with one from the new subscription and then enable best practices assessment.
 
 Moving to a different subscription requires manual reconfiguration with the preceding steps for all SQL Server instances affected for best practices assessment.

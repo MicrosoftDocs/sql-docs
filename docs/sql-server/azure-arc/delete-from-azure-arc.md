@@ -3,9 +3,11 @@ title: Disconnect SQL Server instances from Azure Arc
 description: Get steps to disconnect and unregister your SQL Server instances from Azure Arc.
 author: MikeRayMSFT
 ms.author: mikeray
-ms.date: 04/09/2023
+ms.reviewer: randolphwest
+ms.date: 09/09/2024
 ms.topic: how-to
-ms.custom: template-how-to-pattern
+ms.custom:
+  - template-how-to-pattern
 ---
 
 # Disconnect SQL Server instances from Azure Arc
@@ -18,7 +20,7 @@ This article describes how you can disconnect SQL Server instances from Azure Ar
 
 Your Azure account must have a [Contributor role](/azure/role-based-access-control/built-in-roles#contributor) for the instance subscription and resource group.
 
-> [!NOTE]
+> [!NOTE]  
 > You don't need access to the hosting machine to disconnect from Azure Arc.
 
 ## Opt out of automatic installation
@@ -26,7 +28,7 @@ Your Azure account must have a [Contributor role](/azure/role-based-access-contr
 Before you uninstall Azure Extension for SQL Server, opt out of automatic installation of the extension by adding the following tag and value to the Azure Arc-enabled SQL Server resource:
 
 | Tag | Value |
-| --- | ----- |
+| --- | --- |
 | `ArcSQLServerExtensionDeployment` | `Disabled` |
 
 Alternatively, you can limit which extensions can be installed on your server. You can configure lists of the extensions that you want to allow and block on the server. To learn more, see [Allowlists and blocklists](/azure/azure-arc/servers/security-extensions#allowlists-and-blocklists).
@@ -55,7 +57,7 @@ To remove the *SQL Server - Azure Arc* resource:
 To uninstall Azure Extension for SQL Server, run:
 
 ```powershell
-Remove-AzConnectedMachineExtension -MachineName "{your machine name}" -ResourceGroup "{your resource group name}" -Name "{extension name}" -NoWait 
+Remove-AzConnectedMachineExtension -MachineName "{your machine name}" -ResourceGroup "{your resource group name}" -Name "{extension name}" -NoWait
 ```
 
 For Windows machines, the extension name is `WindowsAgent.SqlServer`. For Linux machines, the extension name is `LinuxAgent.SqlServer`.
@@ -63,7 +65,7 @@ For Windows machines, the extension name is `WindowsAgent.SqlServer`. For Linux 
 To remove the *SQL Server - Azure Arc* resource, run:
 
 ```powershell
-remove-azresource -ResourceGroup "{your resource group name}" -ResourceType Microsoft.AzureArcData/SqlServerInstances -Name "{full SQL instance name}" -Force 
+remove-azresource -ResourceGroup "{your resource group name}" -ResourceType Microsoft.AzureArcData/SqlServerInstances -Name "{full SQL instance name}" -Force
 ```
 
 If your instance (*SQL Server - Azure Arc* resource) has dependent Azure resources such as databases (*SQL Server database - Azure Arc* resource), this command might take a long time to finish. You can add an `-AsJob` parameter to return immediately and run the command as a background job.
@@ -76,7 +78,7 @@ If your instance (*SQL Server - Azure Arc* resource) has dependent Azure resourc
 To uninstall Azure Extension for SQL Server, run:
 
 ```azurecli
-az connectedmachine extension delete --machine-name "{your machine name}" --resource-group "{your resource group name}" --name "{OS}Agent.SqlServer" --publisher "Microsoft.AzureData" 
+az connectedmachine extension delete --machine-name "{your machine name}" --resource-group "{your resource group name}" --name "{OS}Agent.SqlServer" --publisher "Microsoft.AzureData"
 ```
 
 To remove the *SQL Server - Azure Arc* resource, run:

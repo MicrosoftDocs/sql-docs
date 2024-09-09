@@ -3,10 +3,11 @@ title: Monitor SQL Server
 description: Learn about the monitoring capabilities of SQL Server enabled by Azure Arc.
 author: lcwright
 ms.author: lancewright
-ms.reviewer: mikeray
-ms.date: 11/26/2023
+ms.reviewer: mikeray, randolphwest
+ms.date: 09/09/2024
 ms.topic: conceptual
-ms.custom: ignite-2023
+ms.custom:
+  - ignite-2023
 ---
 
 # Monitor SQL Server enabled by Azure Arc (preview)
@@ -32,15 +33,16 @@ Monitoring is automatic, assuming that you meet all prerequisites.
 
 To collect monitoring data for [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] and view the performance metrics in Azure, you must meet the following conditions:
 
-* The version of Azure Extension for SQL Server (`WindowsAgent.SqlServer`) is v1.1.2504.99 or later.
-* [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] is running on the Windows operating system.
+- The version of Azure Extension for SQL Server (`WindowsAgent.SqlServer`) is v1.1.2504.99 or later.
+- [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] is running on the Windows operating system.
 
-  [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] running on [!INCLUDE [winserver2012-md](../../includes/winserver2012-md.md)] R2 and older versions aren't supported.
-* [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] is a Standard or Enterprise edition.
-* The SQL Server version is 2016 or later.
-* The server has connectivity to `*.<region>.arcdataservices.com`. For more information, see the [network requirements](/azure/azure-arc/servers/network-requirements?tabs=azure-cloud).
-* The license type on [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] is Software Assurance or pay-as-you-go.
-* You have an Azure role with the action `Microsoft.AzureArcData/sqlServerInstances/getTelemetry/`. You can use the following built-in role, which includes this action: *Azure Hybrid Database Administrator - Read Only Service Role*. For more information, see [Azure built-in roles](/azure/role-based-access-control/built-in-roles).
+[!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] running on [!INCLUDE [winserver2012-md](../../includes/winserver2012-md.md)] R2 and older versions aren't supported.
+
+- [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] is a Standard or Enterprise edition.
+- The SQL Server version is 2016 or later.
+- The server has connectivity to `*.<region>.arcdataservices.com`. For more information, see the [network requirements](/azure/azure-arc/servers/network-requirements?tabs=azure-cloud).
+- The license type on [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] is Software Assurance or pay-as-you-go.
+- You have an Azure role with the action `Microsoft.AzureArcData/sqlServerInstances/getTelemetry/`. You can use the following built-in role, which includes this action: *Azure Hybrid Database Administrator - Read Only Service Role*. For more information, see [Azure built-in roles](/azure/role-based-access-control/built-in-roles).
 
 ### Current limitations
 
@@ -50,10 +52,10 @@ Failover cluster instances aren't supported at this time.
 
 ### Azure portal
 
-* On the resource page for [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)], select **Performance Dashboard (preview)**.
-* At the top of the **Performance Dashboard** pane, select **Configure**.
-* On the **Configure monitoring settings** pane, use the toggle to turn off or turn on the collection of monitoring data.
-* Select **Apply settings**.
+- On the resource page for [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)], select **Performance Dashboard (preview)**.
+- At the top of the **Performance Dashboard** pane, select **Configure**.
+- On the **Configure monitoring settings** pane, use the toggle to turn off or turn on the collection of monitoring data.
+- Select **Apply settings**.
 
 ### Azure CLI
 
@@ -78,7 +80,7 @@ The following lists reflect the monitoring data that the Azure portal collects f
 [!INCLUDE [azure-arc-data-regions](includes/dmv-collection.md)]
 
 ## Related content
-  
-* [Use activity logs with [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)]](activity-logs.md)
-* [Data collection and reporting for [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)]](data-collection.md)
-* [System dynamic management views](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)
+
+- [Use activity logs with SQL Server enabled by Azure Arc](activity-logs.md)
+- [Data collection and reporting for SQL Server enabled by Azure Arc](data-collection.md)
+- [System dynamic management views](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)

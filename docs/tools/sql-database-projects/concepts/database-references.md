@@ -8,6 +8,10 @@ ms.date: 08/30/2024
 ms.service: sql
 ms.topic: concept-article
 zone_pivot_groups: sq1-sql-projects-tools
+f1_keywords:
+  - "sql.data.tools.adddatabasereference.dialog"
+  - "sql.data.tools.newdatabase.dialog"
+  - "sql.data.tools.criticalerror.dialog"
 ---
 
 # Database references overview

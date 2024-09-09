@@ -8,6 +8,9 @@ ms.date: 08/30/2024
 ms.service: sql
 ms.topic: tutorial
 zone_pivot_groups: sq1-sql-projects-tools
+f1_keywords:
+  - "sql.data.tools.dbprojectwizard.importschema"
+  - "sql.data.tools.SqlProjectImportDatabaseDialog.dialog"
 ---
 
 # Tutorial: start from an existing database

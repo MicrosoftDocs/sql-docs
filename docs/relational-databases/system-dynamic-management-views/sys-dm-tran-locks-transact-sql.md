@@ -32,7 +32,7 @@ The columns in the result set are divided into two main groups: resource and req
 
 | Column name | Data type | Description |
 | --- | --- | --- |
-| `resource_type` | **nvarchar(60)** | Represents the resource type. The value can be: <br/><br/>DATABASE<br/><br/>FILE<br/><br/>OBJECT<br/><br/>PAGE<br/><br/>KEY<br/><br/>EXTENT<br/><br/>RID (Row ID)<br/><br/>APPLICATION<br/><br/>METADATA<br/><br/>HOBT (Heap or B-tree)<br/><br/>ALLOCATION UNIT<br/><br/>XACT (Transaction)<br/><br/>OIB (Online index build)<br/><br/>ROW GROUP<br/><br> BMOR (Batch mode over rowstore)|
+| `resource_type` | **nvarchar(60)** | Represents the resource type. The value can be: <br/><br/>DATABASE<br/><br/>FILE<br/><br/>OBJECT<br/><br/>PAGE<br/><br/>KEY<br/><br/>EXTENT<br/><br/>RID (Row ID)<br/><br/>APPLICATION<br/><br/>METADATA<br/><br/>HOBT (Heap or B-tree)<br/><br/>ALLOCATION_UNIT<br/><br/>XACT (Transaction)<br/><br/>OIB (Online index build)<br/><br/>ROW_GROUP|
 | `resource_subtype` | **nvarchar(60)** | Represents a subtype of `resource_type`. Acquiring a subtype lock without holding a non-subtyped lock of the parent type is technically valid. Different subtypes do not conflict with each other or with the non-subtyped parent type. Not all resource types have subtypes. |
 | `resource_database_id` | **int** | ID of the database under which this resource is scoped. All resources handled by the lock manager are scoped by the database ID. |
 | `resource_description` | **nvarchar(256)** | Description of the resource that contains only information that is not available from other resource columns. |
@@ -111,8 +111,7 @@ The following table lists the resources that are represented in the `resource_as
 | HOBT | Represents a heap or a B-tree. These are the basic access path structures. | HoBt ID. This value corresponds to `sys.partitions.hobt_id`. |
 | OIB | Represents Online index rebuild. | HoBt ID. This value corresponds to `sys.partitions.hobt_id`. |
 | ALLOCATION_UNIT | Represents a set of related pages, such as an index partition. Each allocation unit covers a single Index Allocation Map (IAM) chain. | Allocation Unit ID. This value corresponds to `sys.allocation_units.allocation_unit_id`. |
-| ROW GROUP | Associated with columnstore. | |
-| BMOR | Batch mode over rowstore. | |
+| ROW_GROUP | Associated with columnstore. | |
 | XACT | The XACT resource. Related to [Optimized locking](../performance/optimized-locking.md). | There are two scenarios:<br /><br />***Scenario 1* (Owner)**<br />- **Resource type**: `XACT`.<br />- **Resource description**: When a TID lock is held, the `resource_description` is the `XACT` resource.<br />- **Resource associated entity ID**: `resource_associated_entity_id` is 0.<br /><br />***Scenario 2* (Waiter)**<br />- **Resource type**: `XACT`.<br />- **Resource description**: When we wait for a TID lock, the `resource_description` is the `XACT` resource followed by the underlying `KEY` or `RID` resource.<br />- **Resource associated entity ID**: `resource_associated_entity_id` is the underlying HoBt ID. |
 
 [!INCLUDE [sql-b-tree](../../includes/sql-b-tree.md)]

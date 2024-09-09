@@ -162,7 +162,7 @@ For more information, see [Deployment and version support in SQL Server Data Too
 
 When you work on reports or other project items in Report Designer, the files are saved to your local computer or a share on another computer that you have access to.
 
-If you use source control software, the act of saving a report might check it into the source control server. For more information, see [Source control](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md#bkmk_SourceControl).
+If you use source control software, the act of saving a report might check it into the source control server. For more information, see [Source control](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md#source-control).
 
 ### Deploy or publish paginated reports
 

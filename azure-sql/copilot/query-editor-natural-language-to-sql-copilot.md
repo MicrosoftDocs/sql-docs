@@ -5,7 +5,7 @@ description: Learn how to write natural language prompts to generate T-SQL queri
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: josephsack
-ms.date: 08/01/2024
+ms.date: 09/06/2024
 ms.service: azure-sql-database
 ms.subservice: sql-ai-copilot
 ms.topic: how-to
@@ -53,9 +53,6 @@ You can find Copilot integrated with the Azure SQL Database query editor.
 1. Type your question in the input box. When ready, select the **Generate Query** button. This will generate the suggested T-SQL code statement.
 1. Select **Accept** or **Decline** for the generated T-SQL query.
 1. Execute the generated T-SQL query by selecting **Run**, or you can edit the prompt and regenerate new code. This regeneration will append, and not replace, any existing code in your query editor window.
-
-> [!NOTE]
-> Currently, natural language to SQL query only supports the generation of `SELECT` statements.
 
 ## Give feedback
 

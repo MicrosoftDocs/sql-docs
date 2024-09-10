@@ -64,9 +64,15 @@ When publishing the project from Visual Studio, SQLCMD variables are set in the 
 
 ::: zone-end
 
-<!-- ::: zone pivot="sq1-visual-studio-sdk"
+::: zone pivot="sq1-visual-studio-sdk"
 
-::: zone-end -->
+To add a SQLCMD variable to a SQL project in Visual Studio, right-click the project in **Solution Explorer** and select **Properties**. In the **SQLCMD Variables** section of the properties window, specify the variable name and optionally a default value.
+
+Once the variable is defined, it can be used in SQL scripts by wrapping the variable name in `$(variableName)` syntax.
+
+When publishing the project from Visual Studio, SQLCMD variables are set in the publish dialog. Use the **Load Values** button to load the default values from the SQL project into the dialog.
+
+::: zone-end
 
 ::: zone pivot="sq1-visual-studio-code"
 
@@ -100,6 +106,7 @@ For example:
 ```bash
 SqlPackage /Action:Publish /SourceFile:AdventureWorks.dacpac /TargetConnectionString:{connection_string_here} /v:EnvironmentName=production
 ```
+
 ::: zone-end
 
 ## Related content

@@ -54,11 +54,11 @@ To change the target platform of a SQL project in Visual Studio, right-click the
 
 ::: zone-end
 
-<!-- ::: zone pivot="sq1-visual-studio-sdk"
+::: zone pivot="sq1-visual-studio-sdk"
 
 To change the target platform of a SQL project in Visual Studio, right-click the project in **Solution Explorer** and select **Properties**. In the **Project Settings** tab of the properties window, select the desired target platform from the **Target platform** dropdown list.
 
-::: zone-end -->
+::: zone-end
 
 ::: zone pivot="sq1-visual-studio-code"
 

@@ -139,9 +139,13 @@ To disable or enable a specific rule, select the rule from the table. To change 
 
 ::: zone-end
 
-<!-- ::: zone pivot="sq1-visual-studio-sdk"
+::: zone pivot="sq1-visual-studio-sdk"
 
-::: zone-end -->
+To enable or disable SQL code analysis in the SDK-style SQL projects (preview), edit the `.sqlproj` file directly. Open the `.sqlproj` file from the **Solution Explorer** view by double-clicking on the project.
+
+From the text editor, add an element `<RunSqlCodeAnalysis>True</RunSqlCodeAnalysis>` to the first `<PropertyGroup>` block to enable code analysis. To disable code analysis change the value of the `RunSqlCodeAnalysis` element to `True` or `False` or remove the element entirely.
+
+::: zone-end
 
 ::: zone pivot="sq1-visual-studio-code"
 

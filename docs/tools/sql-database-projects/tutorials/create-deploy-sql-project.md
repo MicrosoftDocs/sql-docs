@@ -39,13 +39,13 @@ If you've already completed the steps in the [SQL projects getting started](../g
 
 ::: zone-end
 
-<!-- ::: zone pivot="sq1-visual-studio-sdk"
+::: zone pivot="sq1-visual-studio-sdk"
 
 - [.NET 8 SDK](https://dotnet.microsoft.com/download/dotnet/8.0)
 - [Visual Studio 2022 Community, Professional, or Enterprise](https://visualstudio.microsoft.com/downloads/)
 - [SQL Server Data Tools, SDK-style (preview) installed in Visual Studio 2022](../../ssdt/download-sql-server-data-tools-ssdt-sdk.md)
 
-::: zone-end -->
+::: zone-end
 
 ::: zone pivot="sq1-visual-studio-code"
 
@@ -97,9 +97,19 @@ Select **Create** to create the project. The empty project is opened and visible
 
 ::: zone-end
 
-<!-- ::: zone pivot="sq1-visual-studio-sdk"
+::: zone pivot="sq1-visual-studio-sdk"
 
-::: zone-end -->
+Select **File**, **New**, then **Project**.
+
+In the **New Project** dialog box, use the term **SQL Server** in the search box. The top result should be **SQL Server Database Project, SDK-style (preview)**.
+
+:::image type="content" source="media/create-deploy-sql-project/vs-sdk-new-project-dialog.png" alt-text="Screenshot of New project dialog." lightbox="media/create-deploy-sql-project/vs-sdk-new-project-dialog.png":::
+
+Select **Next** to proceed to the next step. Provide a project name, which doesn't need to match a database name. Verify and modify the project location as needed.
+
+Select **Create** to create the project. The empty project is opened and visible in the **Solution Explorer** for editing.
+
+::: zone-end
 
 ::: zone pivot="sq1-visual-studio-code"
 
@@ -144,9 +154,15 @@ More database objects can be added through the **Add New Item** dialog, such as 
 
 ::: zone-end
 
-<!-- ::: zone pivot="sq1-visual-studio-sdk"
+::: zone pivot="sq1-visual-studio-sdk"
 
-::: zone-end -->
+In **Solution Explorer**, right-click the project node and select **Add**, then **New Item**. The **Add New Item** dialog appears, select **Show All Templates** and then **Table**. Specify the table name as the file name and select **Add** to create the table in the SQL project.
+
+The table is opened in the Visual Studio query editor with the template table definition, where you can add columns, indexes, and other table properties. Save the file when you're done making the initial edits.
+
+More database objects can be added through the **Add New Item** dialog, such as views, stored procedures, and functions. Access the dialog by right-clicking the project node in **Solution Explorer** and selecting **Add**, then the desired object type after **Show All Templates**. Files in the project can be organized into folders through the **New Folder** option under **Add**.
+
+::: zone-end
 
 ::: zone pivot="sq1-visual-studio-code"
 
@@ -185,9 +201,13 @@ The output window automatically opens to display the build process. If there are
 
 ::: zone-end
 
-<!-- ::: zone pivot="sq1-visual-studio-sdk"
+::: zone pivot="sq1-visual-studio-sdk"
 
-::: zone-end -->
+In **Solution Explorer**, right-click the project node and select **Build**.
+
+The output window automatically opens to display the build process. If there are errors or warnings, they're displayed in the output window. On a successful build, the build artifact (`.dacpac` file) is created its location is included in the build output (default is `bin\Debug\projectname.dacpac`).
+
+::: zone-end
 
 ::: zone pivot="sq1-visual-studio-code"
 
@@ -234,9 +254,15 @@ We will initialize our project as a Git repository and commit the project files 
 
 ::: zone-end
 
-<!-- ::: zone pivot="sq1-visual-studio-sdk"
+::: zone pivot="sq1-visual-studio-sdk"
 
-::: zone-end -->
+In **Solution Explorer**, right-click the project node and select **Publish...**.
+
+The publish dialog opens, where you establish the **target database connection**. If you don't have an existing SQL instance for deployment, LocalDB (`(localdb)\MSSQLLocalDB`) is installed with Visual Studio and can be used for testing and development.
+
+Specify a database name and select **Publish** to deploy the project to the target database or **Generate Script** to generate a script to review before executing.
+
+::: zone-end
 
 ::: zone pivot="sq1-visual-studio-code"
 

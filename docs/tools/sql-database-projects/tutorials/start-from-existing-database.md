@@ -42,13 +42,19 @@ With [option 2](#option-2-create-a-new-empty-sql-project-and-import-objects-from
 
 ::: zone-end
 
-<!-- ::: zone pivot="sq1-visual-studio-sdk"
+::: zone pivot="sq1-visual-studio-sdk"
 
 - [.NET 8 SDK](https://dotnet.microsoft.com/download/dotnet/8.0)
 - [Visual Studio 2022 Community, Professional, or Enterprise](https://visualstudio.microsoft.com/downloads/)
 - [SQL Server Data Tools, SDK-style (preview) installed in Visual Studio 2022](../../sql/ssdt/download-sql-server-data-tools-ssdt-sdk.md)
+- [SqlPackage CLI](../../sqlpackage/sqlpackage-download.md)
 
-::: zone-end -->
+```bash
+# install SqlPackage CLI
+dotnet tool install -g Microsoft.SqlPackage
+```
+
+::: zone-end
 
 ::: zone pivot="sq1-visual-studio-code"
 
@@ -93,9 +99,11 @@ While the import proceeds, progress is displayed as messages in the **Import Dat
 
 ::: zone-end
 
-<!-- ::: zone pivot="sq1-visual-studio-sdk"
+::: zone pivot="sq1-visual-studio-sdk"
 
-::: zone-end -->
+Option 1 isn't available for the command line. Use [option 2](#option-2-create-a-new-empty-sql-project-and-import-objects-from-an-existing-database) instead.
+
+::: zone-end
 
 ::: zone pivot="sq1-visual-studio-code"
 
@@ -129,9 +137,11 @@ The output window automatically opens to display the build process. If there are
 
 ::: zone-end
 
-<!-- ::: zone pivot="sq1-visual-studio-sdk"
+::: zone pivot="sq1-visual-studio-sdk"
 
-::: zone-end -->
+Option 1 isn't available for the command line. Use [option 2](#option-2-create-a-new-empty-sql-project-and-import-objects-from-an-existing-database) instead.
+
+::: zone-end
 
 ::: zone pivot="sq1-visual-studio-code"
 
@@ -169,9 +179,19 @@ Select **Create** to create the project. The empty project is opened and visible
 
 ::: zone-end
 
-<!-- ::: zone pivot="sq1-visual-studio-sdk"
+::: zone pivot="sq1-visual-studio-sdk"
 
-::: zone-end -->
+Select **File**, **New**, then **Project**.
+
+In the **New Project** dialog box, use the term **SQL Server** in the search box. The top result should be **SQL Server Database Project, SDK-style (preview)**.
+
+:::image type="content" source="media/start-from-existing-database/vs-sdk-new-project-dialog.png" alt-text="Screenshot of New project dialog." lightbox="media/start-from-existing-database/vs-sdk-new-project-dialog.png":::
+
+Select **Next** to proceed to the next step. Provide a project name, which doesn't need to match a database name. Verify and modify the project location as needed.
+
+Select **Create** to create the project. The empty project is opened and visible in the **Solution Explorer** for editing.
+
+::: zone-end
 
 ::: zone pivot="sq1-visual-studio-code"
 
@@ -220,9 +240,17 @@ While the import proceeds, progress is displayed as messages in the **Import Dat
 
 ::: zone-end
 
-<!-- ::: zone pivot="sq1-visual-studio-sdk"
+::: zone pivot="sq1-visual-studio-sdk"
 
-::: zone-end -->
+We will use the SqlPackage CLI to import objects from an existing database to the new SQL database project we created in Visual Studio in step 1. The following SqlPackage command imports the schema of a database to a folder `MyDatabaseProject` organized by nested schema and object type folders.
+
+```bash
+sqlpackage /a:Extract /ssn:localhost /sdn:MyDatabase /tf:MyDatabaseProject /p:ExtractTarget=SchemaObjectType
+```
+
+When these folders are placed in an SDK-style SQL database project folder, they're automatically included in the project without the need to import them or modify the SQL project file.
+
+::: zone-end
 
 ::: zone pivot="sq1-visual-studio-code"
 
@@ -263,9 +291,13 @@ The output window automatically opens to display the build process. If there are
 
 ::: zone-end
 
-<!-- ::: zone pivot="sq1-visual-studio-sdk"
+::: zone pivot="sq1-visual-studio-sdk"
 
-::: zone-end -->
+In **Solution Explorer**, right-click the project node and select **Build**.
+
+The output window automatically opens to display the build process. If there are errors or warnings, they're displayed in the output window. On a successful build, the build artifact (`.dacpac` file) is created its location is included in the build output (default is `bin\Debug\projectname.dacpac`).
+
+::: zone-end
 
 ::: zone pivot="sq1-visual-studio-code"
 

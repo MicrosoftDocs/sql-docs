@@ -1,9 +1,9 @@
 ---
-title: "Tutorial: How to locate and start Reporting Services tools"
+title: Reporting Services tools
 description: Learn tools used to configure a report server, manage report server content & operations, and create and publish paginated & mobile Reporting Services reports.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 12/09/2019
+ms.date: 09/10/2024
 ms.service: reporting-services
 ms.subservice: tools
 ms.topic: conceptual
@@ -18,117 +18,82 @@ helpviewer_keywords:
   - "tools [Reporting Services]"
   - "tutorials [Reporting Services]"
   - "Report Builder"
+
+#customer intent: As a SQL server user, I want to find out about various report server tools so that I can use them to create and manage reports.
 ---
 
-# Tutorial: How to locate and start Reporting Services tools (SSRS)
+# Reporting Services tools (SSRS)
 
-This tutorial introduces the tools used to configure a report server, manage report server content and operations, and create and publish paginated and mobile [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] reports. If you're already familiar with the tools, you can move on to other tutorials to learn how to use [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. For other tutorials, see [Reporting Services Tutorials &#40;SSRS&#41;](../../reporting-services/reporting-services-tutorials-ssrs.md).
+This article discusses various tools that are available in SQL Server Reporting Services (SSRS). You can use these tools to configure a report server, manage report server content and operations, and create and publish paginated and mobile SSRS reports.
 
-## <a name="bkmk_configuration_manager"></a> Report Server Configuration Manager (native mode)
-Use the Native mode configuration manager to complete the following tasks:
+Something about brief overview of each tool and also information about how to start using it.
+
+## Report Server Configuration Manager (native mode)
+
+You can use Report Server Configuration Manager to complete the following tasks on a native mode report server:
 
 - Specify the service account.
 - Create or upgrade the report server database.
-- Modify the connection properties.
+- Modify connection properties.
 - Specify URLs.
 - Manage encryption keys.
-- Configure unattended report processing and e-mail report delivery.
+- Configure unattended report processing and email report delivery.
 
-**Installation:** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager is installed when you install [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Native mode. For more information, see [Install Reporting Services native mode report server](../../reporting-services/install-windows/install-reporting-services-native-mode-report-server.md).
+Report Server Configuration Manager is installed when you install an SSRS native mode report server. For more information, see the following resources:
 
-### Start the Report Server Configuration Manager
+- For SQL Server Reporting Services (2017 and later): [Install and configure SQL Server Reporting Services](../install-windows/install-reporting-services.md)
+- For SQL Server Reporting Services (2016): [Install a Reporting Services 2016 native mode report server](../install-windows/install-reporting-services-native-mode-report-server.md)
 
-1. In the Windows start menu, enter **reporting** and in the **Apps** search results, select **Report Server Configuration Manager**.
+For steps you can take to start Report Server Configuration Manager, see the [Get started](../install-windows/reporting-services-configuration-manager-native-mode.md#get-started) section of [What is Report Server Configuration Manager (native mode)?](../install-windows/reporting-services-configuration-manager-native-mode.md).
 
-    :::image type="content" source="../../reporting-services/tools/media/bi-ssrs-configmanager-win8-startscreen.gif" alt-text="Screenshot that shows the Report Server Configuration Manager button in the Start menu.":::
+For information about configuring SSRS, see [Configure and administer a report server (SSRS native mode)](../report-server/configure-and-administer-a-report-server-ssrs-native-mode.md).
 
-    **Or**
-
-    Select **Start**, then choose **Programs**, then [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], then choose **Configuration Tools**, and then select **Report Server Configuration Manager**.
-
-    The **Report Server Installation Instance Selection** dialog box appears so that you can select the report server instance you want to configure.
-
-2. In **Server Name**, specify the name of the computer on which the report server instance is installed. The name of the local computer is specified by default, but you can also enter the name of a remote [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance.
-
-    If you specify a remote computer, select **Find** to establish a connection. The report server must be configured for remote administration in advance. For more information, see [Configure a report server for remote administration](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md).
-
-3. In **Instance Name**, choose the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] instance that you want to configure. Only SQL Server 2008 and later report server instances appear in the list. You can't configure earlier versions of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].
-
-4. Select **Connect**.
-
-5. To verify that you launched the tool, compare your results to the following image:
-
-    :::image type="content" source="../../reporting-services/tools/media/rs-ui-reportserverconfigkatmai.png" alt-text="Screenshot that shows the Report Services Subscription Settings tool.":::
-
-
- **Next Steps:** [Configure and administer a report server &#40;SSRS Native Mode&#41;](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md) and [Report Server Configuration Manager &#40;native mode&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).
+For general information about Report Server Configuration Manager capabilities, see [What is Report Server Configuration Manager (native mode)?](../install-windows/reporting-services-configuration-manager-native-mode.md).
 
 ## Web portal (native mode)
 
-Use [Web portal (SSRS native mode)](../../reporting-services/web-portal-ssrs-native-mode.md) to set permissions, manage subscriptions and schedules, and work with reports. You can also use the Web Portal to view reports.
+You can use the web portal of a native mode configuration of SSRS to set permissions, manage subscriptions and schedules, and work with reports. You can also use the web portal to view reports. For more information, see [Web portal (SSRS native mode)](../../reporting-services/web-portal-ssrs-native-mode.md).
 
-**Installation:** The Web Portal is installed when you install [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Native mode: [Install Reporting Services native mode report server](../../reporting-services/install-windows/install-reporting-services-native-mode-report-server.md)
+The web portal is installed when you install an SSRS native mode report server. For more information, see the following resources:
 
-Before you can open the Web Portal, you must have sufficient permissions (initially, only members of the local Administrators group have permissions that provide access to the Web Portal features). The Web Portal provides different pages and options depending on the role assignments of the current user. Users who have no permissions get an empty page. Users with permissions to view reports get links that they can select to open the reports. To learn more about permissions, see [Roles and permissions &#40;Reporting Services&#41;](../../reporting-services/security/roles-and-permissions-reporting-services.md).
+- For SQL Server Reporting Services (2017 and later): [Install and configure SQL Server Reporting Services](../install-windows/install-reporting-services.md)
+- For SQL Server Reporting Services (2016): [Install a Reporting Services 2016 native mode report server](../install-windows/install-reporting-services-native-mode-report-server.md)
+
+Before you can open the web portal, you must have sufficient permissions. Initially, only members of the local administrators group have permissions that provide access to web portal features.
+
+The pages and options that are available in web portal depend on the role assignments of the current user. Users who have no permissions get an empty page. Users with permissions to view reports get links that they can select to open the reports. To learn more about permissions, see [Roles and permissions (Reporting Services)](../../reporting-services/security/roles-and-permissions-reporting-services.md).
 
 ### Start the web portal
 
-1. Open your browser. For information on supported browsers and browser versions, see [Browser support for Reporting Services](../../reporting-services/browser-support-for-reporting-services-and-power-view.md).
+For steps you can take to start the web portal, see the [Get started](../web-portal-ssrs-native-mode.md#get-started) section of [What is the report server web portal (native mode)?](../web-portal-ssrs-native-mode.md).
 
-2. In the address bar of the Web browser, enter the Web Portal URL. By default, the URL is `https://<serverName>/reports`. You can use the Reporting Services Configuration tool to confirm the server name and URL. For more information about URLs used in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], see [Configure report server URLs &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md).
+If you run the web portal on a local report server, see [Configure a native mode report server for local administration (SSRS)](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).
 
-3. The Web Portal opens in the browser window. The startup page is the Home folder. Depending on permissions, you might see other folders, hyperlinks to reports, and resource files within the startup page. You might also see other buttons and commands on the toolbar.
+## SQL Server Management Studio
 
-4. If you run the Web Portal on the local report server, see [Configure a native mode report server for local administration &#40;SSRS&#41;](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).
+Report server administrators can use SQL Server Management Studio (SSMS) to manage a report server alongside other [!INCLUDE[SQL Server](../../includes/ssnoversion-md.md)] component servers. For more information about using SSMS to connect to a SQL Server instance and run some Transact-SQL (T-SQL) commands, see [Quickstart: Connect and query a SQL Server instance using SQL Server Management Studio (SSMS)](../../ssms/quickstarts/ssms-connect-query-sql-server.md).
 
-## <a name="bkmk_managements_studio"></a> Management Studio
+For steps you can take to start using SSMS to manage a report server, see [Connect to a native mode report server](connect-to-a-report-server-in-management-studio.md#connect-to-a-native-mode-report-server).
 
-Report server administrators can use [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] to manage a report server alongside other [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] component servers. For more information, see the [SQL Server Management Studio](../../ssms/quickstarts/ssms-connect-query-sql-server.md) tutorial.
+## Report Designer in SQL Server Data Tools
 
-### Start SQL Server Management Studio
+You have a choice of two different tools for creating SSRS paginated reports: Report Designer and Report Builder. For information about Report Builder, see [Report Builder](#report-builder), later in this article.
 
-1. From the Windows start menu, enter **sql server** and in the **Apps** search results, select **SQL Server Management Studio**.
-
-    :::image type="content" source="../../reporting-services/tools/media/bi-ssms-win8-startscreen.gif" alt-text="Screenshot that shows the SQL Server Management Studio from the Windows button in the Start menu.":::
-
-
-    **Or**
-
-    Select **Start**, then choose **All Programs**, then [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], and then select **SQL Server Management Studio**. The **Connect to Server** dialog box appears.
-
-2. If the **Connect to Server** dialog box doesn't appear, in **Object Explorer**, select **Connect** and then choose **Reporting Services**.
-
-3. In the **Server type** list, select **Reporting Services**. If [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] isn't on the list, it isn't installed.
-
-4. In the **Server name** list, select a report server instance. Local instances appear in the list. You can also enter the name of a remote [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance.
-
-5. Select **Connect**. You can expand the root node to set server properties, modify role definitions, or turn off report server features.
-
-## <a name="bkmk_ssdt"></a> SQL Server Data Tools with Report Designer and Report Wizard
-
-You have a choice of two different tools for creating [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] paginated reports: Report Designer and [Report Builder](#bkmk_report_builder).
-
-Report Designer is available in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] - Visual Studio. The Report Designer design surface includes tabbed windows, wizards, and menus used to access report authoring features. The report designer tool becomes available when you choose a Report Server Project or a Report Server Wizard template in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. To learn more, see [Reporting Services in SQL Server Data Tools &#40;SSDT&#41;](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md).
+Report Designer is available in [!INCLUDE[SQL Server Data Tools (SSDT)](../../includes/ssbidevstudiofull-md.md)] - Visual Studio. The Report Designer design surface includes tabbed windows, wizards, and menus that you use to access report authoring features. The report designer tool becomes available when you choose a Report Server Project template or a Report Server Project Wizard template in SSDT.
 
 Download [SQL Server Data Tools](../../ssdt/download-sql-server-data-tools-ssdt.md).
 
-### Start Report Designer
+For information about installing SSDT, see [Install SSDT with Visual Studio](../../ssdt/download-sql-server-data-tools-ssdt.md#install-ssdt-with-visual-studio).
 
-1. Open **SQL Server Data Tools**.
+To use the Report Designer templates, you also need to install an SSRS extension for Visual Studio. For instructions, see [Install extensions for Analysis Services, Integration Services, and Reporting Services](../../ssdt/download-sql-server-data-tools-ssdt.md#install-extensions-for-analysis-services-integration-services-and-reporting-services).
 
-2. On the **File** menu, point to **New**, and then select **Project**.
+For steps you can take to start Report Designer, see the [Create a report server project](../tutorial-step-01-create-report-server-project-reporting-services.md#create-a-report-server-project) section of [Tutorial: Create a report server project](../tutorial-step-01-create-report-server-project-reporting-services.md).
 
-3. In the **Project Types** list, select **Business Intelligence Projects**.
-
-4. In the **Templates** list, select **Report Server Project**. The following diagram shows how the project templates appear in the dialog box:
-
-    :::image type="content" source="../../reporting-services/tools/media/rs-ui-newrsproject.gif" alt-text="Screenshot that shows the New Project template dialog box.":::
-
-5. Enter a name and location for the project, or select **Browse** and choose a location.
-
-6. Select **OK**. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] opens with the [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] start page. Solution Explorer provides categories for creating reports and data sources. You can use these categories to create new reports and data sources. Tabbed windows appear when you create a report definition. The tabbed windows are Data, Layout, and Preview.
+Solution Explorer provides categories for creating reports and data sources. You can use these categories to create new reports and data sources. Tabbed windows appear when you create a report definition. The tabbed windows are Data, Layout, and Preview.
 
 To get started on your first report, see [Create a basic table report &#40;SSRS tutorial&#41;](../../reporting-services/create-a-basic-table-report-ssrs-tutorial.md). To learn more about query designers you can use within Report Designer, see [Query Design Tools &#40;SSRS&#41;](../../reporting-services/report-data/query-design-tools-ssrs.md).
+
+For more information about using the Report Designer UI, see [Reporting Services in SQL Server Data Tools (SSDT)](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md).
 
 ## <a name="bkmk_report_builder"></a> [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]
 

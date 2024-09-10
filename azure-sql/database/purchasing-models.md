@@ -5,7 +5,7 @@ description: "Learn about the purchasing models that are available for Azure SQL
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma
-ms.date: 09/05/2024
+ms.date: 09/12/2024
 ms.service: azure-sql-database
 ms.subservice: service-overview
 ms.topic: conceptual
@@ -76,9 +76,6 @@ In the vCore-based purchasing model, choose between the provisioned compute tier
 
 For single databases, compute resources, I/O, and data and log storage are charged per database. For elastic pools, these resources are charged per pool. However, backup storage is always charged per database.
 
-   > [!NOTE]
-   > [Elastic pools for Hyperscale](./hyperscale-elastic-pool-overview.md) are currently in preview.
-
 Since three additional replicas are automatically allocated in the Business Critical service tier, the price is approximately 2.7 times higher than it is in the General Purpose service tier. Likewise, the higher storage price per GB in the Business Critical service tier reflects the higher IO limits and lower latency of the local SSD storage.
 
 ## Storage costs
@@ -87,7 +84,7 @@ Storage costs are calculated differently based on each purchasing model.
 
 ### DTU storage costs
 
-Storage is included in the price of the DTU. It's possible to add extra storage in the Standard and Premium tiers. See the [Azure SQL Database pricing options](https://azure.microsoft.com/pricing/details/sql-database/single/) for details on provisioning extra storage. 
+Storage is included in the price of the DTU. It's possible to add extra storage in the Standard and Premium tiers. See the [Azure SQL Database pricing options](https://azure.microsoft.com/pricing/details/sql-database/single/) for details on provisioning extra storage.
 
 [Long-term backup retention](long-term-retention-overview.md) is not included, and is billed separately.
 
@@ -96,7 +93,7 @@ Storage is included in the price of the DTU. It's possible to add extra storage 
 Different types of storage are billed differently. 
 
 - For data storage, you're charged for the provisioned storage based upon the maximum database or pool size you select. The cost doesn't change unless you reduce or increase that maximum. 
-- Backup storage is associated with automated backups of your databases and is allocated dynamically. Increasing your backup retention period might increase the backup storage required by your databases.
+- Backup storage is associated with automated backups of your databases and is allocated dynamically. Increasing your backup retention period will increase the backup storage required by your databases.
 - The cost of backup storage is the same for the Business Critical service tier and the General Purpose service tier because both tiers use standard storage for backups.
 
 By default, seven days of automated backups of your databases are copied to a storage account. This storage is used by full backups, differential backups, and transaction log backups. The size of differential and transaction log backups depends on the rate of change of the database. A minimum storage amount equal to 100 percent of the maximum data size for the database is provided at no extra charge. Additional consumption of backup storage is charged in GB per month.
@@ -112,6 +109,7 @@ No. You don't need to take the application offline. The new service tiers offer 
 ### Can I convert a database from a service tier in the vCore-based purchasing model to a service tier in the DTU-based purchasing model?
 
 Yes, you can easily convert your database to any supported performance objective by using the Azure portal, PowerShell, the Azure CLI, T-SQL, or the REST API. See [Manage single databases](single-database-scale.md) and [Manage elastic pools](elastic-pool-overview.md).
+
 ## Related content
 
 - [vCore-based purchasing model](service-tiers-vcore.md)

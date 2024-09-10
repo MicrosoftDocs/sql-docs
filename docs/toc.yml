@@ -8468,6 +8468,8 @@ items:
     items:
     - name: SQL Server Data Tools Overview
       href: ssdt/sql-server-data-tools.md
+    - name: SQL Server Data Tools, SDK-style
+      href: ssdt/sql-server-data-tools-sdk-style.md
     - name: Install SSDT
       href: ssdt/download-sql-server-data-tools-ssdt.md
     - name: Previous releases of SSDT & SSDT-BI
@@ -8479,32 +8481,19 @@ items:
     - name: Microsoft Entra ID support
       href: ssdt/azure-active-directory.md
     - name: Project-Oriented Offline Database Development
-      href: ssdt/project-oriented-offline-database-development.md
       items:
-      - name: Import into a Database Project
-        href: ssdt/import-into-a-database-project.md
       - name: Add Database Reference Dialog Box
         href: ssdt/add-database-reference-dialog-box.md
       - name: Database Project Settings
         href: ssdt/database-project-settings.md
       - name: "How to: Browse Objects in a SQL Server Database Project"
         href: ssdt/how-to-browse-objects-in-a-sql-server-database-project.md
-      - name: Data Tools Operations Window
-        href: ssdt/data-tools-operations-window.md
       - name: T-SQL Editor Options
         href: ssdt/transact-sql-editor-options.md
-      - name: "How to: Create a New Database Project"
-        href: ssdt/how-to-create-a-new-database-project.md
-      - name: "How to: Build & Deploy to a Local Database"
-        href: ssdt/how-to-build-and-deploy-to-a-local-database.md
-      - name: "How to: Use Microsoft SQL Server 2012 Objects in Your Project"
-        href: ssdt/how-to-use-microsoft-sql-server-2012-objects-in-your-project.md
       - name: "How to: Work with CLR Database Objects"
         href: ssdt/how-to-work-with-clr-database-objects.md
       - name: "How to: Create a Snapshot of a Project"
         href: ssdt/how-to-create-a-snapshot-of-a-project.md
-      - name: "How to: Convert a Visual Studio 2010 Database Projects to SQL Server Database Projects & Retarget to a Different Platform"
-        href: ssdt/how-to-convert-visual-studio-2010-database-projects-to-ssql-server-projects.md
       - name: Connected Database Development
         items:
         - name: "How to: Connect to a Database & Browse Existing Objects"
@@ -9763,6 +9752,8 @@ items:
       href: tools/sql-database-projects/sql-database-projects.md
     - name: Getting started with SQL projects
       href: tools/sql-database-projects/get-started.md
+    - name: SQL projects tools
+      href: tools/sql-database-projects/sql-projects-tools.md
     # - name: SQL DevOps
     #   href: tools/sql-database-projects/sql-devops.md
     - name: Tutorials

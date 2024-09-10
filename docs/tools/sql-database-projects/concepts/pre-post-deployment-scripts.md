@@ -20,6 +20,15 @@ Pre- and post-deployment scripts are SQL scripts that are included in the projec
 
 A SQL project file can have a single pre-deployment script and a single post-deployment script specified.
 
+The following example from a SQL project file adds the file `prep-db.sql` as a pre-deployment script.
+
+```xml
+...
+  <ItemGroup>
+    <PreDeploy Include="prep-db.sql" />
+  </ItemGroup>
+```
+
 The following example from a SQL project file adds the file `populate-app-settings.sql` as post-deployment script.
 
 ```xml

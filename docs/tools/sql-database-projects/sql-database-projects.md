@@ -28,7 +28,7 @@ The SQL database projects framework around your database code that adds two foun
 
 :::image type="content" source="media/sql-database-projects/sqlproj-summary.png" alt-text="Screenshot of Summary of SQL Database Projects containing pre-deployment and post-deployment scripts as well as database objects." lightbox="media/sql-database-projects/sqlproj-summary.png":::
 
-The functionality for SQL database projects is provided by the [Microsoft.SqlServer.DacFx](https://www.nuget.org/packages/Microsoft.SqlServer.DacFx/) .NET library and is surfaced in several [tools for SQL development](#sql-projects-tools). DacFx has multiple extensibility points, such as modification of deployment steps and the ability to create custom rules for code analysis. The project SDK for SQL projects is [Microsoft.Build.Sql](https://www.nuget.org/packages/Microsoft.Build.Sql/), currently available in preview and [advised for new development](#original-projects-vs-sdk-style-projects-preview).
+The functionality for SQL database projects is provided by the [Microsoft.SqlServer.DacFx](https://www.nuget.org/packages/Microsoft.SqlServer.DacFx/) .NET library and is surfaced in several [tools for SQL development](sql-projects-tools.md). DacFx has multiple extensibility points, such as modification of deployment steps and the ability to create custom rules for code analysis. The project SDK for SQL projects is [Microsoft.Build.Sql](https://www.nuget.org/packages/Microsoft.Build.Sql/), currently available in preview and [advised for new development](#original-projects-vs-sdk-style-projects-preview).
 
 ### Validation
 
@@ -44,7 +44,7 @@ The artifact output of the build process is a `.dacpac` file, which can be found
 
 ### Deployment
 
-The output file, the `.dacpac`, is powerful, reusable, and declarative artifact. With this file, we can use SqlPackage or other [tools](#sql-projects-tools) to apply our database code to a database. The SqlPackage command to deploy a `.dacpac` is the **[publish](../sqlpackage/sqlpackage-publish.md)** command.
+The output file, the `.dacpac`, is powerful, reusable, and declarative artifact. With this file, we can use SqlPackage or other [tools](sql-projects-tools.md) to apply our database code to a database. The SqlPackage command to deploy a `.dacpac` is the **[publish](../sqlpackage/sqlpackage-publish.md)** command.
 
 :::image type="content" source="media/sql-database-projects/build-deploy.png" alt-text="Screenshot of Overview of process from SQL project build to dacpac and deploy to database." lightbox="media/sql-database-projects/build-deploy.png":::
 
@@ -72,15 +72,7 @@ SQL database projects are used to track the source of truth for database state, 
 
 :::image type="content" source="media/sql-database-projects/project-files.png" alt-text="Screenshot of VS Code with AdventureWorks SQL project open, displaying a table in the editor." lightbox="media/sql-database-projects/project-files.png":::
 
-SQL database projects support the SQL Server and Azure SQL family of databases, including Azure SQL Database and Azure Synapse Analytics. Whether you're developing an application or a data warehouse, SQL database projects can be used to manage the schema of your database.
-
-## SQL projects tools
-
-[SqlPackage](../sqlpackage/sqlpackage.md) is the primary command line utility for the DacFx library, enabling automation of the database development tasks such as deploying a .dacpac to a database or extracting the objects of a database to a SQL project or .dacpac.
-
-[SQL Server Data Tools](../../ssdt/sql-server-data-tools.md) (SSDT) is a **Visual Studio** component that provides a graphical interface for SQL projects. SSDT provides a visual designer for tables, a T-SQL editor, and a build and publish process.
-
-[SQL Database Projects extension](https://aka.ms/azuredatastudio-sqlprojects) is an extension for **Azure Data Studio** and **VS Code**. This extension provides a graphical interface for SQL projects, a T-SQL editor, and a build and publish process.
+SQL database projects support the SQL Server and Azure SQL family of databases, including Azure SQL Database and Azure Synapse Analytics. Whether you're developing an application or a data warehouse, SQL database projects can be used to manage the schema of your database. SQL projects can be developed from [tools](sql-projects-tools.md) in Visual Studio, VS Code, and Azure Data Studio.
 
 ## Original projects vs SDK-style projects (preview)
 

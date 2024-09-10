@@ -14,7 +14,7 @@ zone_pivot_groups: sq1-sql-projects-tools
 
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
-Creating a new SDK-style SQL project is a [quick task](../get-started.md#create-a-new-project). However, if you have existing SQL projects you can convert them to SDK-style SQL projects in place to take advantage of the new features.
+Creating a new SDK-style SQL project is a [quick task](../get-started.md#step-1-create-a-new-project). However, if you have existing SQL projects you can convert them to SDK-style SQL projects in place to take advantage of the new features.
 
 Once you convert the project, you can use the new features of the SDK-style project, such as:
 

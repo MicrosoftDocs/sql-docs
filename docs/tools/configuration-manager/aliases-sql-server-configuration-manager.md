@@ -3,7 +3,7 @@ title: "Aliases (SQL Server Configuration Manager)"
 description: Learn how to create an alias in SQL Server Configuration Manager so that you can use an alternate name when connecting to an instance of SQL Server.
 author: markingmyname
 ms.author: maghan
-ms.date: "09/09/2024"
+ms.date: "09/10/2024"
 ms.service: sql
 ms.subservice: tools-other
 ms.topic: conceptual
@@ -18,7 +18,7 @@ An alias is an alternate name that can be used to make a connection. The alias e
 > [!NOTE]
 > Aliases for SQL Server are a client side configuration. Each client computer that uses the alias must have an identical alias configuration, and SQL Server Configuration Manager is not the only tool that can be used to create or manage aliases.
 >
-> SQL Server 2022 and later versions do not support creating aliases using SQL Server Configuration Manager. To create an alias for SQL Server 2022 and later versions, use the SQL Server Client Network Utility tool.
+> SQL Server 2022 and later versions do not support creating aliases using SQL Server Configuration Manager. To create an alias for SQL Server 2022 and later versions, use the [SQL Server Client Network Utility tool](/previous-versions/windows/desktop/odbc/dn170508(v=vs.85)).
 
 ## When to Use an Alias
 
@@ -126,7 +126,7 @@ At the time of connection, the [!INCLUDE [ssNoVersion](../../includes/ssnoversio
 > [!NOTE]  
 > For information on specifying the network protocol as a **sqlcmd** parameter, see [sqlcmd - Connect to the database engine](../sqlcmd/sqlcmd-connect-database-engine.md).
 
-## Named pipes connections
+## Named Pipes connections
 
 Unless changed by the user, when the default instance of Microsoft SQL Server listens on the named pipes protocol, it uses `\\.\pipe\sql\query` as the pipe name. The period indicates that the computer is the local computer. The `pipe` indicates that the connection is a named pipe, and `sql\query` is the name of the pipe. To connect to the default pipe, the alias must have `\\<computer_name>\pipe\sql\query` as the pipe name. If SQL Server has been configured to listen on a different pipe, the pipe name must use that pipe. For instance, if SQL Server is using `\\.\pipe\unit\app` as the pipe, the alias must use `\\<computer_name>\pipe\unit\app` as the pipe name.
 

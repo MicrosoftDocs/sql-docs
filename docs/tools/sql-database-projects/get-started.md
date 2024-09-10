@@ -18,6 +18,11 @@ A SQL database project is a local representation of SQL objects that comprise th
 
 This article steps through creating a new SQL project, adding objects to the project, and building and deploying the project. Except for the Visual Studio (SQL Server Data Tools) instructions, the guide focuses on SDK-style SQL projects.
 
+1. [Create a new project](#step-1-create-a-new-project)
+1. [Add objects to the project](#step-2-add-objects-to-the-project)
+1. [Build the project](#step-3-build-the-project)
+1. [Deploy the project](#step-4-deploy-the-project)
+
 ## Prerequisites
 
 ::: zone pivot="sq1-visual-studio"
@@ -63,7 +68,7 @@ dotnet new install Microsoft.Build.Sql.Templates
 > [!NOTE]  
 > To complete the deployment of a SQL database project, you need access to an Azure SQL or SQL Server instance. You can develop locally for free with [SQL Server developer edition](https://www.microsoft.com/sql-server/sql-server-downloads) on Windows or in [containers](../../linux/quickstart-install-connect-docker.md).
 
-## Create a new project
+## Step 1: Create a new project
 
 We start our project by creating a new SQL database project before manually adding objects to it. There are other ways to create a project that enable immediately populating the project with objects from an existing database, such as using the [schema comparison tools](howto/compare-database-project.md).
 
@@ -126,7 +131,7 @@ dotnet new sqlproject -n MyDatabaseProject
 
 ::: zone-end
 
-## Add objects to the project
+## Step 2: Add objects to the project
 
 ::: zone pivot="sq1-visual-studio"
 
@@ -173,7 +178,7 @@ CREATE TABLE [dbo].[Table1]
 
 ::: zone-end
 
-## Build the project
+## Step 3: Build the project
 
 The build process validates the relationships between objects and the syntax against the target platform specified in the project file. The artifact output from the build process is a `.dacpac` file, which can be used to deploy the project to a target database and contains the compiled model of the database schema.
 
@@ -216,7 +221,7 @@ The build output includes any errors or warnings and the specific files and line
 
 ::: zone-end
 
-## Deploy the project
+## Step 4: Deploy the project
 
 The compiled model of a database schema in a `.dacpac` file can be deployed to a target database using the `SqlPackage` command-line tool or other deployment tools. The deployment process determines the necessary steps to update the target database to match the schema defined in the `.dacpac`, creating or altering objects as needed based on the objects already existing in the database. As a result, the deployment process is idempotent, meaning it can be run multiple times without causing issues and you can deploy the same `.dacpac` to multiple databases without needing to predetermine their status.
 

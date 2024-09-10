@@ -199,7 +199,7 @@ For database references to objects in the same database, the objects from the re
 sqlpackage /Action:Publish /SourceFile:AdventureWorks.dacpac /TargetConnectionString:{connection_string_here} /p:IncludeCompositeObjects=true
 ```
 
-Deploying a `.dacpac` file with database references to different database (on same or different server), the SQLCMD variables specified in the project file must be set to the correct values for the target environment. Setting the SQLCMD variable values during deployment is done with the `/v` option in the [SqlPackage](../../sqlpackage/sqlpackage-publish.md#sqlcmd-variables) command line tool. For example, the following command sets the `WorldWideImporters` variable to `WorldWideImporters` and the `WWIServer` variable to `localhost`:
+When you deploy a `.dacpac` file with database references to different database (on same or different server), the SQLCMD variables specified in the project file must be set to the correct values for the target environment. Setting the SQLCMD variable values during deployment is done with the `/v` option in the [SqlPackage](../../sqlpackage/sqlpackage-publish.md#sqlcmd-variables) command line tool. For example, the following command sets the `WorldWideImporters` variable to `WorldWideImporters` and the `WWIServer` variable to `localhost`:
 
 ```bash
 sqlpackage /Action:Publish /SourceFile:AdventureWorks.dacpac /TargetConnectionString:{connection_string_here} /v:WorldWideImporters=WorldWideImporters /v:WWIServer=localhost

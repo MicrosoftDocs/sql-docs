@@ -31,7 +31,7 @@ SQLCMD variables are defined in the `.sqlproj` file under an `<ItemGroup>` item.
 </Project>
 ```
 
-The `DefaultValue` element is optional. When a default value is provided, it's only used to load in the publish dialog of graphical tools for SQL projects. The default value isn't compiled into the `.dacpac` file and a command line deployment without the values specified by a publish profile or the `/v` option to specify values will use empty values for the SQLCMD variables.
+The `DefaultValue` element is optional. When a default value is provided, it's only used to load in the publish dialog of graphical tools for SQL projects. The default value isn't compiled into the `.dacpac` file and a command line deployment without the values specified by a publish profile or the `/v` option to specify values results in empty values for the SQLCMD variables.
 
 ### Use SQLCMD variables in SQL objects
 
@@ -60,7 +60,7 @@ To add a SQLCMD variable to a SQL project in Visual Studio, right-click the proj
 
 Once the variable is defined, it can be used in SQL scripts by wrapping the variable name in `$(variableName)` syntax.
 
-When publishing the project from Visual Studio, SQLCMD variables are set in the publish dialog. Use the **Load Values** button to load the default values from the SQL project into the dialog.
+When you publish the project from Visual Studio, SQLCMD variables are set in the publish dialog. Use the **Load Values** button to load the default values from the SQL project into the dialog.
 
 ::: zone-end
 
@@ -70,7 +70,7 @@ To add a SQLCMD variable to a SQL project in Visual Studio, right-click the proj
 
 Once the variable is defined, it can be used in SQL scripts by wrapping the variable name in `$(variableName)` syntax.
 
-When publishing the project from Visual Studio, SQLCMD variables are set in the publish dialog. Use the **Load Values** button to load the default values from the SQL project into the dialog.
+When you publish the project from Visual Studio, SQLCMD variables are set in the publish dialog. Use the **Load Values** button to load the default values from the SQL project into the dialog.
 
 ::: zone-end
 
@@ -80,7 +80,7 @@ To add a SQLCMD variable to a SQL project in the SQL Database Projects extension
 
 Once the variable is defined, it can be used in SQL scripts by wrapping the variable name in `$(variableName)` syntax.
 
-When publishing the project from the SQL Database Projects extension, SQLCMD variables values are automatically loaded from the default values. You're able to provide alternative values when prompted to modify the values during the publish process.
+When you publish the project from the SQL Database Projects extension, SQLCMD variables values are automatically loaded from the default values. You're able to provide alternative values when prompted to modify the values during the publish process.
 
 ::: zone-end
 
@@ -99,7 +99,7 @@ To add a SQLCMD variable to a SQL project, add an `<ItemGroup>` item to the `.sq
 
 Once the variable is defined, it can be used in SQL scripts by wrapping the variable name in `$(variableName)` syntax.
 
-When deploying the project from the command line, SQLCMD variables can be set using the `/v` option in the [SqlPackage](../../sqlpackage/sqlpackage-publish.md#sqlcmd-variables) command line tool.
+When you deploy the project from the command line, SQLCMD variables can be set using the `/v` option in the [SqlPackage](../../sqlpackage/sqlpackage-publish.md#sqlcmd-variables) command line tool.
 
 For example:
 

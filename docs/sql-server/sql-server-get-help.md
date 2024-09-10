@@ -61,7 +61,7 @@ There are a few communities that can help you with your SQL Server issues.
 - [Stack Overflow](https://stackoverflow.com/questions/tagged/sql-server)
 - [DBA Stack Exchange](https://dba.stackexchange.com/questions/tagged/sql-server)
 - [Reddit](https://www.reddit.com/r/SQLServer/)
-- [Get help from the community with the #sqlhelp hash tag on Twitter](https://twitter.com/hashtag/sqlhelp?src=hash)
+- [Get help from the community with the #sqlhelp hash tag on X](https://x.com/hashtag/sqlhelp?src=hash)
 
 ## Feedback suggestions
 
@@ -84,14 +84,14 @@ If you have something else to share - an idea, a suggestion, feedback, anything!
 
 There are a few social media outlets to get information about the latest SQL Server updates.
 
-### Updates via Twitter
+### Updates via X
 
-The following Twitter accounts provide updates about SQL Server:
+The following X accounts provide updates about SQL Server:
 
-- [Microsoft SQL Server - @sqlserver](https://twitter.com/sqlserver)
-- [Azure SQL - @AzureSQL](https://twitter.com/azuresql)
-- [Azure Data SQL Team - @mssqltiger](https://twitter.com/mssqltiger)
-- [SQL Docs Team - @sqldocs](https://twitter.com/sqldocs)
+- [Microsoft SQL Server - @sqlserver](https://x.com/sqlserver)
+- [Azure SQL - @AzureSQL](https://x.com/azuresql)
+- [Azure Data SQL Team - @mssqltiger](https://x.com/mssqltiger)
+- [SQL Docs Team - @sqldocs](https://x.com/sqldocs)
 
 ### Blogs
 

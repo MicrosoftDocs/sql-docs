@@ -80,19 +80,6 @@ If you have something else to share - an idea, a suggestion, feedback, anything!
 
 :::image type="content" source="media/sql-server-get-help/new-git-issue.png" alt-text="Screenshot of New Git Issue in SQL Documentation.":::
 
-## Social media updates
-
-There are a few social media outlets to get information about the latest SQL Server updates.
-
-### Updates via X
-
-The following X accounts provide updates about SQL Server:
-
-- [Microsoft SQL Server - @sqlserver](https://x.com/sqlserver)
-- [Azure SQL - @AzureSQL](https://x.com/azuresql)
-- [Azure Data SQL Team - @mssqltiger](https://x.com/mssqltiger)
-- [SQL Docs Team - @sqldocs](https://x.com/sqldocs)
-
 ### Blogs
 
 The following SQL Server blogs provide the latest information about SQL Server:

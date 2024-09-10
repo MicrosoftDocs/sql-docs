@@ -366,7 +366,7 @@ The deployment process is idempotent, meaning it can be run multiple times witho
 5. Navigate back to the workflow history on GitHub.com and select the most recent run of the workflow. The deployment step should be visible in the list of steps for the workflow run and the workflow returns a success code.
 6. Verify the deployment by connecting to the target database and checking that the objects in the project are present in the database.
 
-GitHub deployments can be further secured by establishing an environment relationship in a workflow and requiring approval before a deployment is run. More information on environment protection and protecting secrets is available in the [Github Actions documentation](https://docs.github.com/actions/security-for-github-actions/security-guides/using-secrets-in-github-actions).
+GitHub deployments can be further secured by establishing an environment relationship in a workflow and requiring approval before a deployment is run. More information on environment protection and protecting secrets is available in the [GitHub Actions documentation](https://docs.github.com/actions/security-for-github-actions/security-guides/using-secrets-in-github-actions).
 
 ## Get help
 

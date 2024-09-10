@@ -3,7 +3,7 @@ title: Design Reporting Services paginated reports with Report Designer (SSRS)
 description: See how to use Report Designer in SQL Server Reporting Services to create full-featured paginated reports and reporting solutions.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 09/06/2024
+ms.date: 09/10/2024
 ms.service: reporting-services
 ms.subservice: tools
 ms.topic: conceptual
@@ -18,7 +18,11 @@ helpviewer_keywords:
 
 [!INCLUDE[SSRS applies to](../../includes/ssrs-appliesto.md)] [!INCLUDE[SSRS applies to 2016 and later](../../includes/ssrs-appliesto-2016-and-later.md)]
 
-You can use Report Designer to create full-featured SQL Server Reporting Services (SSRS) paginated reports and reporting solutions. Report Designer provides a way for you to define data sources. It also provides datasets and queries, report layout positions for data regions and fields, and interactive features such as parameters and sets of reports that work together.  
+You can use Report Designer to create full-featured SQL Server Reporting Services (SSRS) paginated reports and reporting solutions. Report Designer provides:
+
+- A way for you to define data sources, datasets, and queries.
+- Capabilities for designing and customizing the layout of data regions and fields.
+- Interactive features such as parameters and sets of reports that work together.
 
 Report Designer is a feature of [!INCLUDE[SQL Server Data Tools (SSDT)](../../includes/ssbidevstudiofull-md.md)], a Microsoft Visual Studio environment for creating business intelligence solutions.
 
@@ -35,7 +39,7 @@ In Report Designer, you can use projects to organize reports. Report projects ac
 - Organize reports and related items in one container.  
 - Test report solutions that include reports and related items locally.  
 - Deploy related items together. You can use project properties and configuration management to deploy items to multiple environments.
-- Preserve a set of primary copies for reports and related items. After deployment, published reports can be accidentally modified.  
+- Preserve a set of primary copies for reports and related items, because after deployment, published reports can be accidentally modified.  
   
 You can use the information in this article to design paginated reports and related items for a single reporting project in an SSDT solution. For more information about solutions and multiple projects in SSDT, see [Reporting Services in SQL Server Data Tools (SSDT)](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md).
 
@@ -114,7 +118,7 @@ To create the report layout, you drag report items and data regions from the Rep
 
 ## Preview a paginated report
 
-You can use the **Preview** view to verify the report data and layout design. When you preview a report, the report processor validates the report definition schema and expression syntax. It also lists issues in the [Output](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md#output-window) window.
+You can use the Preview view to verify the report data and layout design. When you preview a report, the report processor validates the report definition schema and expression syntax. It also lists issues in the [Output](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md#output-window) window.
 
 > [!NOTE]
 > When you preview a report, the data for the report is cached to a file on the local computer. When you preview the same report again by using the same query, parameters, and credentials, Report Designer retrieves the cached copy rather than rerunning the query. The data file is saved as `<report-name>.rdl.data` in the same directory as the report definition file. The file isn't deleted when you close Report Designer.
@@ -131,13 +135,13 @@ You can preview a report in the following ways:
   If you use a project configuration that builds the report but doesn't deploy it, the report that's specified in the `StartItem` property of the current configuration opens in a separate preview window.
 
   > [!NOTE]
-  > To use debug mode, you must set a start item. In Solution Explorer, you right-click the report project and select **Properties**. Then in **StartItem**, you select the name of the report to display.
+  > You must set a start item to use debug mode. To set a start item, you go to Solution Explorer, right-click the report project, and select **Properties**. Then in **StartItem**, you select the name of the report to display.
 
   If you want to preview a particular report that isn't the start item for the project, you can select a configuration that builds the report but doesn't deploy it. For example, you can use the DebugLocal configuration. Then you right-click the report and select **Run**. You must select a configuration that doesn't deploy the report. Otherwise, the report is published to the report server instead of being displayed locally in a preview window.
 
 - **Print preview.** When you first view a report in preview mode or in the preview window, the view of the report resembles a report that an HTML rendering extension produces. The preview isn't HTML, but the layout and pagination of the report is similar to HTML output.
   
-  You can change the view to represent a printed report by switching to print preview mode. When you select **Print Preview** on the preview toolbar, the report is displayed as though it were on a physical page. This view resembles the output that the image and PDF rendering extensions produce. The print preview isn't an image or PDF file, but the layout and pagination of the report is similar to output in those formats. You can choose the size of the report image, for example, and set the width of the page.
+  You can change the view to represent a printed report by switching to print preview mode. When you select **Print Preview** on the Preview toolbar, the report is displayed as though it were on a physical page. This view resembles the output that the image and PDF rendering extensions produce. The print preview isn't an image or PDF file, but the layout and pagination of the report is similar to output in those formats. You can choose the size of the report image, for example, and set the width of the page.
 
   The print preview helps you identify rendering problems you might encounter when you print the report. Common rendering problems include:
   

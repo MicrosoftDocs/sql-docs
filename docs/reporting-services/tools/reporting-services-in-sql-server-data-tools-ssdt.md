@@ -3,7 +3,7 @@ title: Reporting Services in SQL Server Data Tools (SSDT)
 description: See how to use the SQL Server Data Tools Report Designer authoring environment in Microsoft Visual Studio to create solutions for Reporting Services.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 09/06/2024
+ms.date: 09/10/2024
 ms.service: reporting-services
 ms.subservice: tools
 ms.topic: conceptual
@@ -15,6 +15,8 @@ helpviewer_keywords:
 ---
 
 # Reporting Services in SQL Server Data Tools (SSDT)
+
+[!INCLUDE[SSRS applies to](../../includes/ssrs-appliesto.md)] [!INCLUDE[SSRS applies to 2016 and later](../../includes/ssrs-appliesto-2016-and-later.md)]
 
 [!INCLUDE[SQL Server Data Tools (SSDT)](../../includes/ssbidevstudiofull-md.md)] is a [!INCLUDE[Microsoft](../../includes/msconame-md.md)] [!INCLUDE[Visual Studio](../../includes/vsprvs-md.md)] environment for creating business intelligence solutions. SSDT features the Report Designer authoring environment. You can use Report Designer to open, modify, preview, save, and deploy SQL Server Reporting Services (SSRS) paginated report definitions, shared data sources, shared datasets, and report parts.
 
@@ -89,7 +91,7 @@ You use the Grouping pane to define groups for a tablix data region. You can def
 
 The Grouping pane has two modes:
 
-- **Default**. You use default mode to display all row and column groups in a hierarchical format that shows the relationship of parent groups, child groups, adjacent groups, and detail groups. A child group appears under and at the next indent level compared to its parent group. An adjacent group appears at the same indent level as its peer or sibling groups.
+- **Default**. You use default mode to display all row and column groups in a hierarchical format that shows the relationships between parent groups, child groups, adjacent groups, and detail groups. A child group appears under and at the next indent level compared to its parent group. An adjacent group appears at the same indent level as its peer or sibling groups.
 
   You also use default mode to add, edit, or delete groups. For groups based a single dataset field, you drag the field to the Row Groups or Column Groups pane. You can insert the group next to an existing group. To add an adjacent group, you use the shortcut menu of the sibling group. To display which tablix cells belong to a group, you select the group in the Grouping pane.
 
@@ -120,7 +122,7 @@ You can use the Properties pane for the following tasks:
 
 - Set properties for the currently selected item on the design surface. Some properties provide a dropdown list of values. You can also enter the value directly in the cell. Some properties contain a collection of values, indicated by the value **(Collection)**. Most properties can accept an expression. Complex expressions are indicated by the value **\<expression>**. To open the **Expression** dialog, you select the **Expression (fx)** button. For more information, see [Expression dialog box](/previous-versions/sql/2014/reporting-services/expression-dialog-box).
 - Use the Properties pane toolbar buttons to change the grid from a category view to an alphabetical view. In the category view, you might need to expand a category to see all the properties under it. To open an item's Properties dialog, you can select the **Property Pages** button on the toolbar. Or you can right-click the item and select **Properties**.
-- Set properties for the currently selected group member in the Grouping pane. Group member properties help control how static group header and footer rows repeat for each group instance. For more information, see [Display headers and footers with a group in a paginated report (Report Builder)](../../reporting-services/report-design/display-headers-and-footers-with-a-group-report-builder-and-ssrs.md).
+- Set properties for the currently selected group member in the Grouping pane. Group member properties help control how static group header and footer rows are repeated for each group instance. For more information, see [Display headers and footers with a group in a paginated report (Report Builder)](../../reporting-services/report-design/display-headers-and-footers-with-a-group-report-builder-and-ssrs.md).
 
 ### Solution Explorer
 
@@ -138,7 +140,7 @@ The Document Outline pane displays a hierarchical list of all report items in th
 
 The Document Outline pane is useful for identifying text boxes and other report items by name. When you select an item in the Document Outline pane, the item is also selected on the design surface.
 
-You can also use the Document Outline window to help debug errors in expressions.
+You can also use the Document Outline pane to help debug errors in expressions.
 
 ### Task List window
 
@@ -163,7 +165,7 @@ To design a report, you drag report items from the Toolbox pane to the design su
 
 ### Preview view
 
-In the Preview view, you run the report and view the rendered report in the report viewer. The preview caches report data locally. You can also set configuration properties to run the report in debug mode by using a browser.
+In the Preview view, you run the report and view the rendered report in the report viewer. You can also set configuration properties to run the report in debug mode by using a browser.
 
 When you preview a report, Report Designer:
 
@@ -173,12 +175,12 @@ When you preview a report, Report Designer:
 - Processes the report to combine data and layout.
 - Renders the report.
 
-You can view the report on the Preview tab, or you can set up project properties to view the report in debug mode and view it directly in a browser.
+There are a few points to keep in mind when you use the Preview view:
 
-- **Previewing parameterized reports**. When you preview a report, the report is processed automatically if all report parameters have valid default values. If one or more report parameters don't have a valid default value, you must choose a value for each unassigned parameter. On the report toolbar, you then have to select **View Report**.
-- **Understanding the local data cache**. When you preview a report, the report processor runs all the queries for datasets in the report by using the current parameter defaults. It saves the results as a local data cache (.rdl.data) file. You can continue to design your report without incurring the overhead of retrieving this data again if you make no changes to either the report dataset queries or the report parameters.
-- **Previewing the report by using Configuration Manager and debug.** In SSDT, project properties define how you want to deploy and debug your reports. These properties apply to all reports and shared data sources in the project. To set the project properties, you go to the **Project** menu and select **Properties**. In the Property Pages dialog, you then select **Configuration Manager**. You can use these settings to test your reports and publish them to the report server.
-- **Monitoring the Output pane for error messages.** When you preview a report and the report processor detects a problem, it writes error messages to the Output pane.
+- **Parameterized reports**. When you preview a report, the report is processed automatically if all report parameters have valid default values. If one or more report parameters don't have a valid default value, you must choose a value for each unassigned parameter. On the report toolbar, you then have to select **View Report**.
+- **The local data cache**. When you preview a report, the report processor runs all the queries for datasets in the report by using the current parameter defaults. It saves the results as a local data cache (.rdl.data) file. You can continue to design your report without incurring the overhead of retrieving this data again if you make no changes to either the report dataset queries or the report parameters.
+- **Configuration Manager and debug**. In SSDT, project properties define how you want to deploy and debug your reports. These properties apply to all reports and shared data sources in the project. To set the project properties, you go to the **Project** menu and select **Properties**. In the Property Pages dialog, you then select **Configuration Manager**. You can use these settings to test your reports and publish them to the report server.
+- **The Output pane**. When you preview a report and the report processor detects a problem, it writes error messages to the Output pane.
 
 ## Report Designer menus
 
@@ -260,7 +262,7 @@ You can use the **View** menu to show or hide these toolbars. Other [!INCLUDE[Vi
 
 ## Source control
 
-SSDT can integrate with source plug-ins. You can use the Source Controls pages in the **Options** dialog to specify a plug-in and configure properties.
+SSDT can integrate with source plug-ins. You can use the Source Controls pages in the Options dialog to specify a plug-in and configure properties.
 
 ## Custom report templates
 
@@ -278,9 +280,9 @@ When you add a new item to the report project, your custom report appears in the
 
 ## Command-line support for SSDT
 
-SSDT is based on [!INCLUDE[Visual Studio](../../includes/vsprvs-md.md)] and the underlying devenv.exe application. This application offers several command-line options that are useful for building reports.
+SSDT is based on [!INCLUDE[Visual Studio](../../includes/vsprvs-md.md)] and the underlying devenv.exe application. This application offers several command-line options that are useful for working with reports.
 
-Before you can use the command-line options that this section describes, you must set valid values for following two items:
+Before you can use the command-line options that this section describes, you must set valid values for the following two items:
 
 - Project properties for `OverwriteDataSources`, `TargetDataSourceFolder`, `TargetReportFolder`, and `TargetServerURL`.
 - At least one set of configuration properties, for example, Debug or Release.

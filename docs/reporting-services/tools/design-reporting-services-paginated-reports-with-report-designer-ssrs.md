@@ -54,7 +54,7 @@ For more information, see [Set deployment properties (Reporting Services)](../..
   
 In Report Designer, you work in both the Report Data pane and in Solution Explorer to define the data sources and shared datasets that you use in a report. For more information, see [Report Data pane](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md#report-data-pane).
 
-If a data source is published to a report server or SharePoint site but not included in the SSDT solution, you can't use SSDT to open that data source. Similarly, you can't use SSDT to open published datasets directly from a report server or SharePoint site. To open a data source or dataset in these scenarios, use the [Report Builder authoring environment (SSRS)](../../reporting-services/tools/report-builder-authoring-environment-ssrs.md). For datasets, use that environment in shared-dataset mode.
+If a data source is published to a report server or SharePoint site but not included in the SSDT solution, you can't use SSDT to open that data source. Similarly, you can't use SSDT to open published datasets directly from a report server or SharePoint site. To open a data source or dataset in these scenarios, you can use Report Builder. For more information, see [Report Builder authoring environment (SSRS)](../../reporting-services/tools/report-builder-authoring-environment-ssrs.md). For datasets, use that environment in shared-dataset mode.
 
 SSDT is a client tool. You can use it to:
 

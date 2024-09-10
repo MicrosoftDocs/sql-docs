@@ -30,7 +30,7 @@ SSDT isn't included with SQL Server. You need to install SSDT separately. For in
 
 To use Report Designer templates, you also need to install an SSRS extension for [!INCLUDE[Visual Studio](../../includes/vsprvs-md.md)]. For instructions, see [Install extensions for Analysis Services, Integration Services, and Reporting Services](../../ssdt/download-sql-server-data-tools-ssdt.md#install-extensions-for-analysis-services-integration-services-and-reporting-services).
 
-To get started designing reports, see [Design reports with Report Designer (SSRS)](../../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md).
+To get started designing reports, see [Design Reporting Services paginated reports with Report Designer (SSRS)](../../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md).
 
 ## Solutions and projects
 
@@ -74,7 +74,7 @@ The following types of objects are available on the Report Data pane:
 
 - **Built-in fields**. These fields contain predefined report information such as a report name or the time a report was processed.
 - **Data sources**. A data source represents the name and connection information for a source of data.
-- **Datasets**. Each dataset includes a query that specifies which data to retrieve from the data source. You can expand the dataset to view the collection of fields that the dataset query specifies. In some query designers for multidimensional datasets, you can specify filters in the Filters pane and indicate whether to create report parameters. If you specify the report parameter option, a special dataset is automatically created to populate the parameter's valid values list. By default, the dataset doesn't appear in the Report Data pane. For more information, see [Show hidden datasets for parameter values for multidimensional data (Report Builder and SSRS)](../../reporting-services/report-data/show-hidden-datasets-for-parameter-values-multidimensional-data.md).
+- **Datasets**. Each dataset includes a query that specifies which data to retrieve from the data source. You can expand the dataset to view the collection of fields that the dataset query specifies. In some query designers for multidimensional datasets, you can specify filters in the Filters pane and indicate whether to create report parameters. If you specify the report parameter option, a special dataset is automatically created to populate the parameter's valid values list. By default, the dataset doesn't appear in the Report Data pane. For more information, see [Show hidden datasets for parameter values - multidimensional data](../../reporting-services/report-data/show-hidden-datasets-for-parameter-values-multidimensional-data.md).
 - **Report parameters**. You can create report parameters manually or automatically when a dataset query includes query parameters.
 - **Images**. The images in this list are available to include as image report items in a report.
 
@@ -341,6 +341,6 @@ You can use keyboard shortcuts to:
 
 ## Related content
 
-- [Solution explorer](../../ssms/solution/solution-explorer.md)
+- [Solution Explorer](../../ssms/solution/solution-explorer.md)
 - [Reporting Services reports (SSRS)](../../reporting-services/reports/reporting-services-reports-ssrs.md)
 - [Report Definition Language (SSRS)](../../reporting-services/reports/report-definition-language-ssrs.md)

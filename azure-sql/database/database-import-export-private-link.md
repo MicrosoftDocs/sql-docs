@@ -27,7 +27,7 @@ Running Import or Export requires you to set [Allow Access to Azure Services](ne
 
 The database import/export private link is a service managed private endpoint created by Microsoft and that is exclusively used for all communications by the database import/export process, the Azure SQL database, and related Azure Storage services. A service managed private endpoint is a private IP address within a specific virtual network and subnet.
 
-The private endpoint must be manually approved for both logical server and the storage, with details included in this article's tutorial.
+The private endpoint must be manually approved for both Azure SQL logical server and the Azure Blob storage, in separate steps, with details included in this tutorial.
 
 :::image type="content" source="media/database-import-export-private-link/import-export-private-link.png" alt-text="Diagram of Import Export Private link architecture." lightbox="media/database-import-export-private-link/import-export-private-link.png":::
 
@@ -53,15 +53,15 @@ Import/Export Private Link can be configured via Azure portal, PowerShell, or us
 
 ### 2. Approve private link for Azure SQL logical server
 
-The new private endpoint must be approved by the user in the Private Link Center or in the Azure SQL Database, and also in Azure Storage.
+The new private endpoint must be approved by the user in the Private Link Center or in the Azure SQL Database.
 
-#### Option 1: Approve private endpoints in Private Link Center
+#### Option 1: Approve private endpoints in Private Link Center in Azure portal
 
 1. Go to Private Link Center in the Azure portal. In the Azure search box, search for "Private Link".
 1. Navigate to the **Private endpoints** page of the Private Link Center.
 1. Approve the private endpoints you created using the Import/Export service.
 
-#### Option 1: Approve private endpoint connection on Azure SQL Database
+#### Option 2: Approve private endpoint connection on Azure SQL Database in Azure portal
 
 1. Go to the Azure SQL logical server that hosts the database.
 1. Navigate to the **Networking** page under **Security**
@@ -72,6 +72,8 @@ The new private endpoint must be approved by the user in the Private Link Center
    :::image type="content" source="media/database-import-export-private-link/approve-private-link.png" alt-text="Screenshot from the Azure portal that shows how to approve Azure SQL Database Private Link." lightbox="media/database-import-export-private-link/approve-private-link.png":::
 
 ### 3. Approve private endpoint connection on Azure Storage
+
+Approve the new private endpoint connection for the database import BACPAC file in Azure Storage.
 
 1. Go to the storage account that hosts the blob container where the BACPAC (`.bacpac`) file exists.
 1. Open the **Private endpoint connections** page in the **Security** menu.

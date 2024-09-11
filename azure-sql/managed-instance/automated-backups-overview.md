@@ -31,7 +31,9 @@ To change backup settings, see [Change settings](automated-backups-change-settin
 
 ## What are automated database backups?
 
-Database backups are an essential part of any business continuity and disaster recovery strategy because they help protect your data from corruption or deletion. Azure SQL Managed Instance provides completely managed and automated SQL Server database engine backups. These backups enable database restore to a specific point in time within the configured retention period, up to 35 days. However, if your data protection rules require that your backups be available for an extended time (up to 10 years), you can configure [long-term retention (LTR)](../database/long-term-retention-overview.md) policies per database.
+Database backups are an essential part of any business continuity and disaster recovery strategy because they help protect your data from corruption or deletion. With Azure SQL Managed Instance, SQL Server database engine backups are automatically managed by Microsoft, and stored on Microsoft-managed Azure storage accounts.
+
+Use these backups to restore your database to a specific point in time within the configured retention period, up to 35 days. However, if your data protection rules require that your backups are available for an extended time (up to 10 years), you can configure [long-term retention (LTR)](../database/long-term-retention-overview.md) policies per each database. 
 
 ### Backup frequency
 
@@ -42,6 +44,9 @@ Azure SQL Managed Instance creates:
 - [Transaction log backups](/sql/relational-databases/backup-restore/transaction-log-backups-sql-server) every ~10 minutes.
 
 The frequency of transaction log backups depends on the compute size and the amount of database activity. Transaction logs are taken approximately every 10 minutes, but can vary. When you restore a database, the service determines which full, differential, and transaction log backups need to be restored, in their respective order.
+
+> [!CAUTION]
+> Automatic full backups are initiated once a week based on a schedule determined by Microsoft. [User-initiated backups](/sql/relational-databases/backup-restore/copy-only-backups-sql-server) have priority over automatic full backups, so a long-running copy-only backup can affect the timing of the next automatic full backup.
 
 ### Backup storage redundancy
 
@@ -54,7 +59,7 @@ To ensure that your backups stay within the same region where your database is d
 You can configure backup storage redundancy when you create your instance, and you can update it at a later time at the instance level. The changes that you make to an existing instance apply to future backups only. After you update the backup storage redundancy of an existing instance, it might take up to 24 hours for the changes to be applied. Changes made to backup storage redundancy apply to short-term backups only. Long-term retention policies inherit the redundancy option of short-term backups when the policy is created. The redundancy option persists for long-term backups even if the redundancy option for short-term backups subsequently changes.
 
 > [!NOTE]
-> Please note that the Backup redundancy change causes an upgrade step which initiates a failover.
+> Changing backup redundancy is an [update management operation](management-operations-overview.md#management-operations-long-running-segments) that initiates a failover.
 
 You can choose one of the following storage redundancies for backups:
 
@@ -145,6 +150,9 @@ Azure SQL Managed Instance automatically manages backups by creating full, diffe
 
 - **Restored databases**: The duration of the initial backup for restored databases varies and depends on the database size. Restored databases or database copies, which are often larger, may require more time for the initial backup.
 
+> [!IMPORTANT]
+> The first full backup for a *new* database takes priority over other database backups, so it's the first backup taken during the first full backup window. If the full backup window is already active and other databases are being backed up, the first full backup for the new database is taken immediately after the full back up of another database completes.
+
 ### Scheduled full backups
 - **Weekly Schedule**: The system sets a weekly full backup window for the entire instance.
 - **Full Backup Window**: This is a designated period when full backups are performed. While the system aims to complete full backups within this window, if necessary, the backup may continue beyond the scheduled time until it completes.
@@ -152,7 +160,7 @@ Azure SQL Managed Instance automatically manages backups by creating full, diffe
 - **User Configuration**: It's crucial to note that users **cannot** modify or disable the backup schedule.
 
 > [!IMPORTANT]
-> For a new, restored, or copied database, the point-in-time restore (PITR) capability becomes available when the initial transaction log backup that follows the initial full backup is created.
+> For a new, restored, or copied database, the point-in-time restore (PITR) capability becomes available after the initial transaction log backup completes following the initial full backup.
 
 ## Backup storage consumption
 
@@ -273,6 +281,10 @@ The **Storage** and **compute** subcategories might also interest you, but they'
 ## Encrypted backups
 
 If your database is encrypted with TDE, backups are automatically encrypted at rest, including LTR backups. All new databases in Azure SQL are configured with TDE enabled by default. For more information on TDE, see [Transparent data encryption with SQL Managed Instance](/sql/relational-databases/security/encryption/transparent-data-encryption-azure-sql).
+
+Microsoft is fully responsible for keeping and rotating keys for databases with service-managed keys (SMK). Backups, either PITR or LTR, taken from instances that have TDE with SMK enabled can be restored by Microsoft.
+
+Automatic backups stored in Azure-managed storage accounts are automatically encrypted by Azure storage. Learn more about [Azure Storage encryption for data at rest](/azure/storage/common/storage-service-encryption).
 
 ## Backup integrity
 

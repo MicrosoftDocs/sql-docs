@@ -19,7 +19,7 @@ To manage your [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] service
 
 | Partner | Description | Links |
 | :---: | --- | --- |
-| :::image type="icon" source="media/partner-hadr-sql-server/idera-logo.png" border="false":::<br />**IDERA** | SQL Compliance Manager is a comprehensive auditing solution that displays who did what, when and how on [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)], to help ensure compliance with regulatory and data security requirements.<br /><br />- [System requirements](https://wiki.idera.com/display/SQLCM/Software+requirements) | -&nbsp;[Website](https://www.idera.com/products/sql-compliance-manager/)<br />- [Twitter](https://twitter.com/Idera_Software)<br />- [Video](https://www.idera.com/products/sql-compliance-manager/) |
+| :::image type="icon" source="media/partner-hadr-sql-server/idera-logo.png" border="false":::<br />**IDERA** | SQL Compliance Manager is a comprehensive auditing solution that displays who did what, when and how on [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)], to help ensure compliance with regulatory and data security requirements.<br /><br />- [System requirements](https://wiki.idera.com/display/SQLCM/Software+requirements) | -&nbsp;[Website](https://www.idera.com/products/sql-compliance-manager/)<br />- [X](https://x.com/Idera_Software)<br />- [Video](https://www.idera.com/products/sql-compliance-manager/) |
 
 ## Next steps
 

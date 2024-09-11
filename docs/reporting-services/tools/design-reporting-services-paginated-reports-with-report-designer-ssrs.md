@@ -36,10 +36,10 @@ To use Report Designer templates, you also need to install an SSRS extension for
 
 In Report Designer, you can use projects to organize reports. Report projects act as containers for report definitions and resources. You can use projects for the following tasks:
 
-- Organize reports and related items in one container.  
-- Test report solutions that include reports and related items locally.  
-- Deploy related items together. You can use project properties and configuration management to deploy items to multiple environments.
-- Preserve a set of primary copies for reports and related items, because after deployment, published reports can be accidentally modified.  
+- Organizing reports and related items in one container.  
+- Testing report solutions that include reports and related items locally.  
+- Deploying related items together. You can use project properties and configuration management to deploy items to multiple environments.
+- Preserving a set of primary copies for reports and related items, because after deployment, published reports can be accidentally modified.  
   
 You can use the information in this article to design paginated reports and related items for a single reporting project in an SSDT solution. For more information about solutions and multiple projects in SSDT, see [Reporting Services in SQL Server Data Tools (SSDT)](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md).
 
@@ -164,7 +164,7 @@ For more information, see [Deployment and version support in SQL Server Data Too
 
 ### Save a report locally
 
-When you work on reports or other project items in Report Designer, the files are saved to your local computer or a share on another computer that you have access to.
+When you work on reports or other project items in Report Designer, the files are saved to your local computer or to a file share on another computer that you have access to.
 
 If you use source control software, the act of saving a report might check it into the source control server. For more information, see [Source control](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md#source-control).
 

@@ -67,9 +67,13 @@ The script file is added to the project and opened in the query editor, where yo
 
 ::: zone-end
 
-<!-- ::: zone pivot="sq1-visual-studio-sdk"
+::: zone pivot="sq1-visual-studio-sdk"
 
-::: zone-end -->
+In **Solution Explorer**, right-click the project node and select **Add**, then **New Item**. The **Add New Item** dialog appears, select **Show All Templates**. and then **Table**. Select **Pre-Deployment Script** or **Post-Deployment Script**.
+
+The script file is added to the project and opened in the query editor, where you can complete the script. This script will be executed before or after the deployment plan is executed every time the project is deployed.
+
+::: zone-end
 
 ::: zone pivot="sq1-visual-studio-code"
 

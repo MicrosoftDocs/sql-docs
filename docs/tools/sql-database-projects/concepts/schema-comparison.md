@@ -111,9 +111,11 @@ To update the schema of the target, you have two options. You can update the tar
 
 ::: zone-end
 
-<!-- ::: zone pivot="sq1-visual-studio-sdk"
+::: zone pivot="sq1-visual-studio-sdk"
 
-::: zone-end -->
+Graphical schema comparison isn't yet available in the SDK-style SQL projects preview in Visual Studio.  Use Azure Data Studio to compare schemas.
+
+::: zone-end
 
 ::: zone pivot="sq1-visual-studio-code"
 

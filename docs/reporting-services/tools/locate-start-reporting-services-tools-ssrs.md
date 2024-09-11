@@ -56,7 +56,7 @@ Report Server Configuration Manager is installed when you install an SSRS native
 
 ## Web portal (native mode)
 
-You can use the web portal of a native mode configuration of SSRS to set permissions, manage subscriptions and schedules, and work with reports. You can also use the web portal to view reports. For more information, see [Web portal (SSRS native mode)](../../reporting-services/web-portal-ssrs-native-mode.md).
+You can use the web portal of a native mode configuration of SSRS to set permissions, manage subscriptions and schedules, and work with reports. You can also use the web portal to view reports. For more information, see [What is the report server web portal (native mode)?](../../reporting-services/web-portal-ssrs-native-mode.md).
 
 ### Install the web portal
 
@@ -69,7 +69,7 @@ The web portal is installed when you install an SSRS native mode report server. 
 
 Before you can open the web portal, you must have sufficient permissions. Initially, only members of the local administrator group have permissions that provide access to web portal features.
 
-The pages and options that are available in the web portal depend on the role assignments of the current user. Users who have no permissions get an empty page. Users with permissions to view reports get links that they can select to open the reports. To learn more about permissions, see [Roles and permissions (Reporting Services)](../../reporting-services/security/roles-and-permissions-reporting-services.md).
+The pages and options that are available in the web portal depend on the role assignments of the current user. Users who have no permissions see an empty page. Users with permissions to view reports get links to those reports. To learn more about permissions, see [Roles and permissions in Reporting Services](../../reporting-services/security/roles-and-permissions-reporting-services.md).
 
 For instructions for starting the web portal, see the [Get started](../web-portal-ssrs-native-mode.md#get-started) section of [What is the report server web portal (native mode)?](../web-portal-ssrs-native-mode.md).
 
@@ -112,15 +112,16 @@ When you create a new report, tabbed windows appear for Design and Preview views
 For more information about Report Designer, see the following resources:
 
 - To get started on your first report, see [Create a basic table report (SSRS tutorial)](../../reporting-services/create-a-basic-table-report-ssrs-tutorial.md).
-- To find out more about query designers that you can use within Report Designer, see [Query design tools (SSRS)](../../reporting-services/report-data/query-design-tools-ssrs.md).
+- To find out more about query designers that you can use in Report Designer, see [Query design tools (SSRS)](../../reporting-services/report-data/query-design-tools-ssrs.md).
 - To see how to use Report Designer views, menus, toolbars, and shortcuts, see [Reporting Services in SQL Server Data Tools (SSDT)](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md).
 
 ## Report Builder
 
-[!INCLUDE[Report Builder](../../includes/ssrbnoversion.md)] is a stand-alone application that you can use to create paginated reports outside [!INCLUDE[SQL Server](../../includes/ssnoversion-md.md)]. Besides creating reports, you can also use Report Builder to customize and update existing reports that were created in Report Designer or in previous versions of [!INCLUDE[Report Builder](../../includes/ssrbnoversion.md)]. When a paginated report is ready, you can publish it to a report server or to the Power BI service.
+[!INCLUDE[Report Builder](../../includes/ssrbnoversion.md)] is a stand-alone application that you can use to create paginated reports outside [!INCLUDE[SQL Server](../../includes/ssnoversion-md.md)]. You can also use [!INCLUDE[Report Builder](../../includes/ssrbnoversion.md)] to customize and update existing reports, besides creating reports. The existing reports can be ones that were created in your version of [!INCLUDE[Report Builder](../../includes/ssrbnoversion.md)], in earlier versions, or in Report Designer.
 
-- For more information about saving a report to the Power BI service, see [Publish a paginated report to the Power BI service](/power-bi/paginated-reports/paginated-reports-save-to-power-bi-service).
-- For more general information about [!INCLUDE[Report Builder](../../includes/ssrbnoversion.md)], see [Microsoft Report Builder in SQL Server](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md).
+When a paginated report is ready, you can publish it to a report server or to the Power BI service. For more information about saving a report to the Power BI service, see [Publish a paginated report to the Power BI service](/power-bi/paginated-reports/paginated-reports-save-to-power-bi-service).
+
+For more general information about [!INCLUDE[Report Builder](../../includes/ssrbnoversion.md)], see [Microsoft Report Builder in SQL Server](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md).
 
 ### Install [!INCLUDE[Report Builder](../../includes/ssrbnoversion.md)]
 
@@ -128,13 +129,13 @@ For instructions for installing [!INCLUDE[Report Builder](../../includes/ssrbnov
 
 ### Start [!INCLUDE[Report Builder](../../includes/ssrbnoversion.md)]
 
-For instructions for starting [!INCLUDE[Report Builder](../../includes/ssrbnoversion.md)], see [Start Microsoft Report Builder](../report-builder/start-report-builder.md)
+For instructions for starting [!INCLUDE[Report Builder](../../includes/ssrbnoversion.md)], see [Start Microsoft Report Builder](../report-builder/start-report-builder.md).
 
 ## [!INCLUDE[SQL Server Mobile Report Publisher](../../includes/ss-mobilereptpub-long.md)]
 
 [!INCLUDE [SQL Server Mobile Report Publisher deprecated](../../includes/ssrs-mobile-report-deprecated.md)]
 
-You can use [!INCLUDE[SQL Server Mobile Report Publisher](../../includes/ss-mobilereptpub-long.md)] to create mobile reports that you can view in the [!INCLUDE[SQL Server](../../includes/ssnoversion-md.md)] web portal and in mobile devices such as iPads and iPhones. For more information, see [SQL Server Mobile Report Publisher](../mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md).
+You can use [!INCLUDE[SQL Server Mobile Report Publisher](../../includes/ss-mobilereptpub-long.md)] to create mobile reports that you can view in the [!INCLUDE[SQL Server](../../includes/ssnoversion-md.md)] web portal and in mobile devices. For more information, see [Create mobile reports with SQL Server Mobile Report Publisher](../mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md).
 
 ### Install [!INCLUDE[SQL Server Mobile Report Publisher](../../includes/ss-mobilereptpub-long.md)]
 

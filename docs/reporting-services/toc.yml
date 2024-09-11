@@ -1444,7 +1444,7 @@
     - name: RS.exe Utility (SSRS)
       href: ../reporting-services/tools/rs-exe-utility-ssrs.md
   - name: Locate and start Reporting Services tools
-    href: ../reporting-services/tools/tutorial-how-to-locate-and-start-reporting-services-tools-ssrs.md
+    href: ../reporting-services/tools/locate-start-reporting-services-tools-ssrs.md
 - name: Data Alerts (SharePoint)
   href: ../reporting-services/reporting-services-data-alerts.md
   items:

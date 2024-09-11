@@ -17,7 +17,7 @@ helpviewer_keywords:
 # Feature reference (Reporting Services)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] includes several tools and applications that you can use to create, manage, and view reports. This section provides specific topics describing the dialog boxes, Web pages, and wizards of these tools and applications.  
   
- To access a user interface topic while the tool or application is running, press F1 or select **Help** while the dialog box, Web page, or wizard is open. For more information about starting the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] tools, see [Tutorial: How to locate and start Reporting Services tools &#40;SSRS&#41;](../reporting-services/tools/tutorial-how-to-locate-and-start-reporting-services-tools-ssrs.md).  
+ To access a user interface topic while the tool or application is running, press F1 or select **Help** while the dialog box, Web page, or wizard is open. For more information about starting the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] tools, see [Locate and start Reporting Services tools &#40;SSRS&#41;](../reporting-services/tools/locate-start-reporting-services-tools-ssrs.md).  
   
 ## In this section  
  [Report Designer F1 Help](../reporting-services/tools/report-designer-f1-help.md)  

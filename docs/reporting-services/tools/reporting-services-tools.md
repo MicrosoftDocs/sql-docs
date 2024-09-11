@@ -26,7 +26,7 @@ helpviewer_keywords:
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] contains a set of graphical and scripting tools that support the development and use of rich reports in a managed environment. The tool set includes development tools, configuration and administration tools, and report viewing tools. This article gives a brief overview of each tool in [!INCLUDE[ssRSnoversion](../../includes/ssrs.md)] and how you can access it.  
   
- To learn how to use a tool right away, see [Tutorial: How to locate and start Reporting Services tools &#40;SSRS&#41;](../../reporting-services/tools/tutorial-how-to-locate-and-start-reporting-services-tools-ssrs.md).  
+ To learn how to use a tool right away, see [Locate and start Reporting Services tools &#40;SSRS&#41;](../../reporting-services/tools/locate-start-reporting-services-tools-ssrs.md).  
   
 ## Tools for report authoring  
 

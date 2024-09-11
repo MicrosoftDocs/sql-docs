@@ -32,9 +32,11 @@ Save the project properties window and return to solution explorer.
 
 ::: zone-end
 
-<!-- ::: zone pivot="sq1-visual-studio-sdk"
+::: zone pivot="sq1-visual-studio-sdk"
 
-::: zone-end -->
+To enable SQL code analysis in a SQL project, edit the `.sqlproj` file directly. Open the `.sqlproj` file and add an element `<RunSqlCodeAnalysis>True</RunSqlCodeAnalysis>` to the first `<PropertyGroup>` block to enable code analysis.
+
+::: zone-end
 
 ::: zone pivot="sq1-visual-studio-code"
 
@@ -62,9 +64,15 @@ The T-SQL code in your database project is analyzed during build. Errors and war
 
 ::: zone-end
 
-<!-- ::: zone pivot="sq1-visual-studio-sdk"
+::: zone pivot="sq1-visual-studio-sdk"
 
-::: zone-end -->
+To analyze the code in a database project with code analysis enabled on build, right-click the project in **Solution Explorer** and select **Build**.
+
+The **output** window displays the results of the overall build process.
+
+The T-SQL code in your database project is analyzed during build. Errors and warnings from code analysis appear in the **Error List**. If the **Error List** doesn't appear, open the View menu, and select **Error List**. You can double-click a warning to navigate to the line of code that caused the warning.
+
+::: zone-end
 
 ::: zone pivot="sq1-visual-studio-code"
 
@@ -96,9 +104,25 @@ Save the project properties window and return to solution explorer.
 
 ::: zone-end
 
-<!-- ::: zone pivot="sq1-visual-studio-sdk"
+::: zone pivot="sq1-visual-studio-sdk"
 
-::: zone-end -->
+To disable or enable a specific rule in a SQL project, edit the `.sqlproj` file directly. Open the `.sqlproj` file and add or modify the element for `SqlCodeAnalysisRules` in the first `<PropertyGroup>` block to specify the rules to enable or disable. The following sample configuration disables two rules (SR0007 and SR0006) and switches SR0008 to result in a build error. The rest of the rules are enabled by default.
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build">
+  <Sdk Name="Microsoft.Build.Sql" Version="0.2.0-preview" />
+  <PropertyGroup>
+    <Name>AdventureWorks</Name>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql160DatabaseSchemaProvider</DSP>
+    <ModelCollation>1033, CI</ModelCollation>
+    <RunSqlCodeAnalysis>True</RunSqlCodeAnalysis>
+    <SqlCodeAnalysisRules>-Microsoft.Rules.Data.SR0006;-Microsoft.Rules.Data.SR0007;+!Microsoft.Rules.Data.SR0008</SqlCodeAnalysisRules>
+  </PropertyGroup>
+...
+```
+
+::: zone-end
 
 ::: zone pivot="sq1-visual-studio-code"
 
@@ -153,9 +177,24 @@ To suppress a code analysis error or warning for a specific `.sql` file in Visua
 
 ::: zone-end
 
-<!-- ::: zone pivot="sq1-visual-studio-sdk"
+::: zone pivot="sq1-visual-studio-sdk"
 
-::: zone-end -->
+To suppress a code analysis error or warning for a specific `.sql` file in a SQL project, add a `StaticCodeAnalysis.SuppressMessages.xml` file to the project. In the file, specify the rule ID and the file to suppress the warning for.
+
+```xml
+<?xml version="1.0" encoding="utf-8" ?>
+<StaticCodeAnalysis version="2" xmlns="urn:Microsoft.Data.Tools.Schema.StaticCodeAnalysis">
+  <SuppressedFile FilePath="Views/SelectStarView.sql">
+    <SuppressedRule Category="Microsoft.Rules.Data" RuleId="SR0001" />
+  </SuppressedFile>
+</StaticCodeAnalysis>
+```
+
+If the file doesn't exist, create it in the root of the project. If the file already exists, suppress an additional warning to the existing `StaticCodeAnalysis.SuppressMessages.xml` file by creating a new `<SuppressedFile><SuppressedRule /></SuppressedFile>` element.
+
+The code analysis result for that rule and `.sql` file is suppressed and no longer appears in the build output.
+
+::: zone-end
 
 ::: zone pivot="sq1-visual-studio-code"
 

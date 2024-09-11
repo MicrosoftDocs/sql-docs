@@ -54,11 +54,11 @@ To change the target platform of a SQL project in Visual Studio, right-click the
 
 ::: zone-end
 
-<!-- ::: zone pivot="sq1-visual-studio-sdk"
+::: zone pivot="sq1-visual-studio-sdk"
 
 To change the target platform of a SQL project in Visual Studio, right-click the project in **Solution Explorer** and select **Properties**. In the **Project Settings** tab of the properties window, select the desired target platform from the **Target platform** dropdown list.
 
-::: zone-end -->
+::: zone-end
 
 ::: zone pivot="sq1-visual-studio-code"
 
@@ -80,7 +80,7 @@ dotnet build /p:DSP=Microsoft.Data.Tools.Schema.Sql.Sql150DatabaseSchemaProvider
 
 ## Publish to a different target platform
 
-When publishing a SQL project, the target platform of the project must match the target platform of the database. If the target platforms don't match, the deployment will exit before applying any changes with an error. To publish a project to a database with a different target platform, use the `/p:AllowIncompatiblePlatform=true` [publish property](../../sqlpackage/sqlpackage-publish.md#properties-specific-to-the-publish-action).
+When you publish a SQL project, the target platform of the project must match the target platform of the database. If the target platforms don't match, the deployment exits before applying any changes with an error. To publish a project to a database with a different target platform, use the `/p:AllowIncompatiblePlatform=true` [publish property](../../sqlpackage/sqlpackage-publish.md#properties-specific-to-the-publish-action).
 
 ## Related content
 

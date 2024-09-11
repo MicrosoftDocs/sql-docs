@@ -105,9 +105,32 @@ The dialog also provides a dropdown list to select from the following reference 
 
 ::: zone-end
 
-<!-- ::: zone pivot="sq1-visual-studio-sdk"
+::: zone pivot="sq1-visual-studio-sdk"
 
-::: zone-end -->
+To add a project reference to a SQL project, add an `<ItemGroup>` item to the `.sqlproj` file with an appropriate reference item for each database reference. For example, the following project reference is added to a SQL project to reference the `WorldWideImporters` project in a different database on a different server:
+
+```xml
+  <ItemGroup>
+    <ProjectReference Include="..\Contoso\WorldWideImporters.sqlproj">
+      <Name>WorldWideImporters</Name>
+      <Project>{d703fc7a-bc47-4aef-9dc5-cf01094ddb37}</Project>
+      <SuppressMissingDependenciesErrors>False</SuppressMissingDependenciesErrors>
+      <ServerSqlCmdVariable>WWIServer</ServerSqlCmdVariable>
+      <DatabaseSqlCmdVariable>WorldWideImporters</DatabaseSqlCmdVariable>
+    </ProjectReference>
+  </ItemGroup>
+```
+
+The project reference is used in a sample view definition in the SQL project:
+
+```sql
+CREATE VIEW dbo.WorldWide_Products
+AS
+SELECT ProductID, ProductName, SupplierID
+FROM [$(WWIServer)].[$(WorldWideImporters)].[Purchasing].[Suppliers]
+```
+
+::: zone-end
 
 ::: zone pivot="sq1-visual-studio-code"
 
@@ -176,7 +199,7 @@ For database references to objects in the same database, the objects from the re
 sqlpackage /Action:Publish /SourceFile:AdventureWorks.dacpac /TargetConnectionString:{connection_string_here} /p:IncludeCompositeObjects=true
 ```
 
-Deploying a `.dacpac` file with database references to different database (on same or different server), the SQLCMD variables specified in the project file must be set to the correct values for the target environment. Setting the SQLCMD variable values during deployment is done with the `/v` option in the [SqlPackage](../../sqlpackage/sqlpackage-publish.md#sqlcmd-variables) command line tool. For example, the following command sets the `WorldWideImporters` variable to `WorldWideImporters` and the `WWIServer` variable to `localhost`:
+When you deploy a `.dacpac` file with database references to different database (on same or different server), the SQLCMD variables specified in the project file must be set to the correct values for the target environment. Setting the SQLCMD variable values during deployment is done with the `/v` option in the [SqlPackage](../../sqlpackage/sqlpackage-publish.md#sqlcmd-variables) command line tool. For example, the following command sets the `WorldWideImporters` variable to `WorldWideImporters` and the `WWIServer` variable to `localhost`:
 
 ```bash
 sqlpackage /Action:Publish /SourceFile:AdventureWorks.dacpac /TargetConnectionString:{connection_string_here} /v:WorldWideImporters=WorldWideImporters /v:WWIServer=localhost

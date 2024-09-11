@@ -9766,7 +9766,7 @@ items:
       items:
       - name: Analyze project code
         href: tools/sql-database-projects/howto/analyze-t-sql-code-to-find-defects.md
-      - name: Compase a database and a project
+      - name: Compare a database and a project
         href: tools/sql-database-projects/howto/compare-database-project.md
       - name: Convert an original SQL project
         href: tools/sql-database-projects/howto/convert-original-sql-project.md

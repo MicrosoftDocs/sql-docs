@@ -4,12 +4,11 @@ description: This article provides an overview of resource management in Azure S
 author: dimitri-furman
 ms.author: dfurman
 ms.reviewer: wiassaf, mathoma, randolphwest
-ms.date: 07/02/2024
+ms.date: 09/12/2024
 ms.service: azure-sql-database
 ms.subservice: service-overview
 ms.topic: reference
 ---
-
 # Resource management in Azure SQL Database
 
 [!INCLUDE [appliesto-sqldb](../includes/appliesto-sqldb.md)]
@@ -179,7 +178,7 @@ Total CPU and memory consumption by user workloads and internal processes is rep
 > [!NOTE]
 > The `sql_instance_cpu_percent` and `sql_instance_memory_percent` Azure Monitor metrics are available since July 2023. They are fully equivalent to the previously available `sqlserver_process_core_percent` and `sqlserver_process_memory_percent` metrics, respectively. The latter two metrics remain available, but will be removed in the future. To avoid an interruption in database monitoring, do not use the older metrics.
 > 
-> These metrics are not available for databases using Basic, S1, and S2 service objectives. The same data is available in the dynamic management views referenced below.
+> These metrics are not available for databases using Basic, S1, and S2 service objectives. The same data is available in the following dynamic management views.
 
 CPU and memory consumption by user workloads in each database is reported in the [sys.dm_db_resource_stats](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database) and [sys.resource_stats](/sql/relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database) views, in `avg_cpu_percent` and `avg_memory_usage_percent` columns. For elastic pools, pool-level resource consumption is reported in the [sys.elastic_pool_resource_stats](/sql/relational-databases/system-catalog-views/sys-elastic-pool-resource-stats-azure-sql-database) view (for historical reporting scenarios) and in [sys.dm_elastic_pool_resource_stats](/sql/relational-databases/system-dynamic-management-views/sys-dm-elastic-pool-resource-stats-azure-sql-database) for real-time monitoring. User workload CPU consumption is also reported via the `cpu_percent` Azure Monitor metric, for [single databases](/azure/azure-monitor/essentials/metrics-supported#microsoftsqlserversdatabases) and [elastic pools](/azure/azure-monitor/essentials/metrics-supported#microsoftsqlserverselasticpools) at the pool level.
 
@@ -233,7 +232,7 @@ Log rates are set such that they can be achieved and sustained in various scenar
 
 The actual physical IOs to transaction log files aren't governed or limited. As log records are generated, each operation is evaluated and assessed for whether it should be delayed in order to maintain a maximum desired log rate (MB/s per second). The delays aren't added when the log records are flushed to storage, rather log rate governance is applied during log rate generation itself.
 
-The actual log generation rates imposed at run time is also influenced by feedback mechanisms, temporarily reducing the allowable log rates so the system can stabilize. Log file space management, avoiding running into out of log space conditions and data replication mechanisms can temporarily decrease the overall system limits.
+The actual log generation rates imposed at run time are also influenced by feedback mechanisms, temporarily reducing the allowable log rates so the system can stabilize. Log file space management, avoiding running into out of log space conditions and data replication mechanisms can temporarily decrease the overall system limits.
 
 Log rate governor traffic shaping is surfaced via the following wait types (exposed in the [sys.dm_exec_requests](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql) and [sys.dm_os_wait_stats](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql) views):
 
@@ -249,10 +248,6 @@ Log rate governor traffic shaping is surfaced via the following wait types (expo
 When encountering a log rate limit that is hampering desired scalability, consider the following options:
 
 - Scale up to a higher service level in order to get the maximum log rate of a service tier, or switch to a different service tier. The [Hyperscale](service-tier-hyperscale.md) service tier provides 100 MB/s log rate per database and 125 MB/s per elastic pool, regardless of chosen service level.
-
-    > [!NOTE]
-    > [Elastic pools for Hyperscale](./hyperscale-elastic-pool-overview.md) are currently in preview.
-
 - If data being loaded is transient, such as staging data in an ETL process, it can be loaded into `tempdb` (which is minimally logged).
 - For analytic scenarios, load into a clustered [columnstore](/sql/relational-databases/indexes/columnstore-indexes-overview) table, or a table with indexes that use [data compression](/sql/relational-databases/data-compression/data-compression). This reduces the required log rate. This technique does increase CPU utilization and is only applicable to data sets that benefit from clustered columnstore indexes or data compression.
 

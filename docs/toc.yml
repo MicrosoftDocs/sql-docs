@@ -8417,15 +8417,6 @@ items:
           href: tools/configuration-manager/client-protocols-named-pipes-properties-protocol-tab.md
       - name: Aliases
         href: tools/configuration-manager/aliases-sql-server-configuration-manager.md
-        items:
-        - name: New Alias
-          href: tools/configuration-manager/new-alias-alias-tab.md
-        - name: Properties
-          href: tools/configuration-manager/alias-properties-alias-tab.md
-        - name: Create a valid connection string using shared memory
-          href: tools/configuration-manager/creating-a-valid-connection-string-using-shared-memory-protocol.md
-        - name: "Create a valid connection string using TCP/IP"
-          href: tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip.md
     - name: Error logs
       href: tools/configuration-manager/monitoring-the-error-logs.md
       items:

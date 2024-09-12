@@ -18,7 +18,7 @@ This section provides quickstart instructions to make a simple connection to a [
 
 The Microsoft JDBC Driver provides different Jars to be used in correspondence with your preferred Java Runtime Environment (JRE) settings, as under:
 
-The Microsoft JDBC Driver 12.6 for SQL Server provides **mssql-jdbc-12.8.0.jre8.jar** and **mssql-jdbc-12.8.0.jre11.jar** class library files.
+The Microsoft JDBC Driver 12.8 for SQL Server provides **mssql-jdbc-12.8.0.jre8.jar** and **mssql-jdbc-12.8.0.jre11.jar** class library files.
 
 The Microsoft JDBC Driver 12.6 for SQL Server provides **mssql-jdbc-12.6.0.jre8.jar** and **mssql-jdbc-12.6.0.jre11.jar** class library files.
 

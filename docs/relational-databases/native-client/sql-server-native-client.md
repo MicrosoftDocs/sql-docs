@@ -3,8 +3,8 @@ title: "About"
 description: Learn about the features of SQL Server Native Client (SNAC). SQL Server Native Client refers to ODBC and OLE DB drivers for SQL Server.
 author: markingmyname
 ms.author: maghan
-ms.reviewer: randolphwest
-ms.date: 08/02/2023
+ms.reviewer: randolphwest, vanto
+ms.date: 09/11/2024
 ms.service: sql
 ms.subservice: native-client
 ms.topic: conceptual
@@ -41,13 +41,13 @@ ODBC in [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Native Client
 
 The following articles describe [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Native Client behavior changes in [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)].
 
-- When calling `ICommandWithParameters::SetParameterInfo`, the value passed to the `pwszName` parameter must be a valid identifier. For more information, see [ICommandWithParameters](../native-client-ole-db-interfaces/icommandwithparameters.md).
+- The value passed to the `pwszName` parameter must be a valid identifier when calling `ICommandWithParameters::SetParameterInfo`. For more information, see [ICommandWithParameters](../native-client-ole-db-interfaces/icommandwithparameters.md).
 
 - `SQLDescribeParam` consistently returns an ODBC specification conforming value. For more information, see [SQLDescribeParam](../native-client-odbc-api/sqldescribeparam.md).
 
 - [ODBC Driver Behavior Change When Handling Character Conversions](features/odbc-driver-behavior-change-when-handling-character-conversions.md)
 
-## Next steps
+## Related content
 
-- [Install SQL Server Native Client](applications/installing-sql-server-native-client.md)
+- [Installing SQL Server Native Client](applications/installing-sql-server-native-client.md)
 - [SQL Server Native Client Features](features/sql-server-native-client-features.md)

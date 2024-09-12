@@ -1,7 +1,7 @@
 ---
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 01/11/2024
+ms.date: 09/12/2024
 ms.topic: include
 ---
 | Error | Severity | Event logged | Description |
@@ -262,6 +262,7 @@ ms.topic: include
 | 19528 | 16 | No | Failed to create a full backup on secondary replica for database "%.\*ls.". The checkpoint could not be run on the primary replica. Check the health of the database in the SQL Server error log on the current primary replica. If the database is healthy, try the operation again. |
 | 19529 | 16 | No | Failed to create a database backup on secondary replica for database "%ls". The checkpoint LSN from primary replica could not be redone. Check the health of the database in the SQL Server error log on both primary and secondary replica. If the database is healthy, try the operation again. |
 | 19530 | 16 | No | The %ls operation is not allowed by the current availability group configuration. The required_synchronized_secondaries_to_commit needs to be 0 when changing availability mode to ASYNCHRONOUS_COMMIT. Change required_synchronized_secondaries_to_commit to 0 and retry the operation. |
+| 19533 | 16 | No | Cannot create distributed availability group '%.\*ls' as it requires two Availaiblity Group Replicas, however %d were specified. |
 | 19601 | 16 | No | System error. |
 | 19602 | 16 | No | System error. |
 | 19603 | 16 | No | System error. |

@@ -20,7 +20,7 @@ An alias is an alternate name that can be used to make a connection. The alias e
 >
 > SQL Server 2022 and later versions do not support creating aliases using SQL Server Configuration Manager. To create an alias for SQL Server 2022 and later versions, use the [SQL Server Client Network Utility tool](/previous-versions/windows/desktop/odbc/dn170508(v=vs.85)).
 
-## When to Use an Alias
+## When to use an alias
 
 By default, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connects to a local instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] using the **Shared Memory** protocol, and to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on another computer using either **TCP/IP** or **Named Pipes**. Create an alias when you're using TCP/IP or named pipes, and you want to provide a customized connection string, or when you want to use a name other than the server name for the connection.  
   

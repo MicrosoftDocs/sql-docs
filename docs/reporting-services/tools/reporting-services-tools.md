@@ -149,7 +149,7 @@ Report Server Configuration Manager is a tool for configuring an SSRS installati
 
 Report Server Configuration Manager doesn't help you manage report server content, turn on other features, or grant access to the report server.
 
-For more information, see [Report Server Configuration Manager (native mode)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).
+For more information, see [What is Report Server Configuration Manager (native mode)?](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).
 
 ##### Report Server Configuration Manager installation
 
@@ -208,7 +208,7 @@ The rskeymgmt utility is installed when you install SSRS. You run this utility f
 
 These classes can help you automate configuration tasks in Report Server Configuration Manager. They provide a way for applications to access and manipulate SSRS management information. When you use these classes, you no longer need to use the graphical user interface to perform the tasks manually.
 
-For more information, see [Access the WMI Provider programmatically](../../reporting-services/accessing-the-wmi-provider-programmatically.md).
+For more information, see [Access the WMI provider programmatically](../../reporting-services/accessing-the-wmi-provider-programmatically.md).
 
 ##### WMI access
 
@@ -258,9 +258,9 @@ You use a browser to access the web service URL.
 
 ### Web portal
 
-The web portal is only available for native mode report servers.
+You can use the web portal to administer a single report server instance from a remote location over an HTTP connection. The web portal is only available for native mode report servers.
 
-You can use the web portal to administer a single report server instance from a remote location over an HTTP connection. Specifically, you can use this tool for the following tasks:
+You can use this tool for the following tasks:
 
 - Viewing, searching, printing, and subscribing to reports
 - Organizing, creating, securing, and maintaining the folder hierarchy

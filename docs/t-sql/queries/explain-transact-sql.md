@@ -4,17 +4,17 @@ description: "EXPLAIN returns the query plan for a Microsoft Azure Synapse Analy
 author: mstehrani
 ms.author: emtehran
 ms.reviewer: wiassaf
-ms.date: 03/01/2023
+ms.date: 09/12/2024
 ms.service: sql
 ms.subservice: data-warehouse
-ms.topic: conceptual
+ms.topic: reference
 monikerRange: "= azure-sqldw-latest"
 ---
 # EXPLAIN (Transact-SQL)
 
 [!INCLUDE [asa dedicated sql pool only](../../includes/applies-to-version/asa-dedicated-sqlpool-only.md)]
 
-  Returns the query plan for an [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] [!INCLUDE[DWsql](../../includes/dwsql-md.md)] statement without running the statement. Use EXPLAIN to preview which operations require data movement and to view the estimated costs of the query operations. `WITH RECOMMENDATIONS` applies to [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)].
+  Returns the query plan for an [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] [!INCLUDE [DWsql](../../includes/dwsql-md.md)] statement without running the statement. Use EXPLAIN to preview which operations require data movement and to view the estimated costs of the query operations. `WITH RECOMMENDATIONS` applies to [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)].
 
 ## Syntax
 
@@ -24,13 +24,13 @@ EXPLAIN [WITH_RECOMMENDATIONS] SQL_statement
 ```  
 
 > [!NOTE]
-> [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
+> [!INCLUDE [synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
 
 ## Arguments
 
 #### *SQL_statement*
 
- The [!INCLUDE[DWsql](../../includes/dwsql-md.md)] statement on which EXPLAIN will run. *SQL_statement* can be any of these commands: `SELECT`, `INSERT`, `UPDATE`, `DELETE`, `CREATE TABLE AS SELECT`, `CREATE REMOTE TABLE`.
+ The [!INCLUDE [DWsql](../../includes/dwsql-md.md)] statement on which EXPLAIN will run. *SQL_statement* can be any of these commands: `SELECT`, `INSERT`, `UPDATE`, `DELETE`, `CREATE TABLE AS SELECT`, `CREATE REMOTE TABLE`.
 
 #### *WITH_RECOMMENDATIONS*
 
@@ -40,11 +40,11 @@ Return the query plan with recommendations to optimize the SQL statement perform
 
  Requires the **SHOWPLAN** permission, and permission to execute *SQL_statement*. See [Permissions: GRANT, DENY, REVOKE (Azure Synapse Analytics, Parallel Data Warehouse)](../../t-sql/statements/permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse.md).  
 
-## Return Value
+## Return value
 
  The return value from the **EXPLAIN** command is an XML document. This XML document lists all operations in the query plan for the given query, each enclosed by the `<dsql_operation>` tag. The return value is of type **nvarchar(max)**.  
 
- The returned query plan depicts sequential SQL statements; when the query runs it may involve parallelized operations, so some of the sequential statements shown may run at the same time. 
+ The returned query plan depicts sequential SQL statements; when the query runs it can involve parallelized operations, so some of the sequential statements shown might run at the same time. 
 
  The structure of the return value XML looks like this:
 
@@ -78,11 +78,11 @@ Return the query plan with recommendations to optimize the SQL statement perform
 |BROADCAST_MOVE, DISTRIBUTE_REPLICATED_TABLE_MOVE, MASTER_TABLE_MOVE, PARTITION_MOVE, SHUFFLE_MOVE, and TRIM_MOVE|`<operation_cost>` element, with these attributes. Values reflect only the local operation:<br /><br />-   *cost* is the local operator cost and shows the estimated time for the operation to run, in ms.<br />-   *accumulative_cost* is the sum of all seen operations in the plan including summed values for parallel operations, in ms.<br />-   *average_rowsize* is the estimated average row size (in bytes) of rows retrieved and passed during the operation.<br />-   *output_rows* is the output (node) cardinality and shows the number of output rows.<br /><br />`<location>`: The nodes or distributions where the operation will occur. Options are: "Control", "ComputeNode", "AllComputeNodes", "AllDistributions", "SubsetDistributions", "Distribution", and "SubsetNodes".<br /><br />`<source_statement>`: The source data for the shuffle move.<br /><br />`<destination_table>`: The internal temporary table the data will be moved into.<br /><br />`<shuffle_columns>`: (Applicable only to SHUFFLE_MOVE operations). One or more columns that will be used as the distribution columns for the temporary table.|`<operation_cost cost="40" accumulative_cost="40" average_rowsize = "50" output_rows="100"/>`<br /><br />`<location distribution="AllDistributions" />`<br /><br />`<source_statement type="statement">SELECT [TableAlias_3b77ee1d8ccf4a94ba644118b355db9d].[dist_date] FROM [qatest].[dbo].[flyers] [TableAlias_3b77ee1d8ccf4a94ba644118b355db9d]       </source_statement>`<br /><br />`<destination_table>Q_[TEMP_ID_259]_[PARTITION_ID]</destination_table>`<br /><br />`<shuffle_columns>dist_date;</shuffle_columns>`<br /><br />`<shuffle_columns>Email;Date;</shuffle_columns>`|   
 |MetaDataCreate_Operation|`<source_table>`: The source table for the operation.<br /><br />`<destination_table>`: The destination table for the operation.|`<source_table>databases</source_table>`<br /><br />`<destination_table>MetaDataCreateLandingTempTable</destination_table>`|  
 |ON|`<location>`: See `<location>`.<br /><br />`<sql_operation>`: Identifies the SQL command that will be performed on a node.|`<location permanent="false" distribution="AllDistributions">Compute</location>`<br /><br />`<sql_operation type="statement">CREATE TABLE [`tempdb`].[dbo]. [Q_[TEMP_ID_259]]_ [PARTITION_ID]]]([dist_date] DATE) WITH (DISTRIBUTION = HASH([dist_date]),) </sql_operation>`|  
-|RemoteOnOperation|`<DestinationCatalog>`: The destination catalog.<br /><br />`<DestinationSchema>`: The destination schema in DestinationCatalog.<br /><br />`<DestinationTableName>`: Name of the destination table or "TableName".<br /><br />`<DestinationDatasource>`: Name of the destination datasource.<br /><br />`<Username>` and `<Password>`: These fields indicate that a username and password for the destination may be required.<br /><br />`<CreateStatement>`: The table creation statement for the destination database.|`<DestinationCatalog>master</DestinationCatalog>`<br /><br />`<DestinationSchema>dbo</DestinationSchema>`<br /><br />`<DestinationTableName>TableName</DestinationTableName>`<br /><br />`<DestinationDatasource>DestDataSource</DestinationDatasource>`<br /><br />`<Username>...</Username>`<br /><br />`<Password>...</Password>`<br /><br />`<CreateStatement>CREATE TABLE [master].[dbo].[TableName] ([col1] BIGINT) ON [PRIMARY] WITH(DATA_COMPRESSION=PAGE);</CreateStatement>`|  
+|RemoteOnOperation|`<DestinationCatalog>`: The destination catalog.<br /><br />`<DestinationSchema>`: The destination schema in DestinationCatalog.<br /><br />`<DestinationTableName>`: Name of the destination table or "TableName".<br /><br />`<DestinationDatasource>`: Name of the destination datasource.<br /><br />`<Username>` and `<Password>`: These fields indicate that a username and password for the destination might be required.<br /><br />`<CreateStatement>`: The table creation statement for the destination database.|`<DestinationCatalog>master</DestinationCatalog>`<br /><br />`<DestinationSchema>dbo</DestinationSchema>`<br /><br />`<DestinationTableName>TableName</DestinationTableName>`<br /><br />`<DestinationDatasource>DestDataSource</DestinationDatasource>`<br /><br />`<Username>...</Username>`<br /><br />`<Password>...</Password>`<br /><br />`<CreateStatement>CREATE TABLE [master].[dbo].[TableName] ([col1] BIGINT) ON [PRIMARY] WITH(DATA_COMPRESSION=PAGE);</CreateStatement>`|  
 |RETURN|`<resultset>`: The identifier for the result set.|`<resultset>RS_19</resultset>`|  
 |RND_ID|`<identifier>`: The identifier for the object created.|`<identifier>TEMP_ID_260</identifier>`|  
 
-## Limitations and Restrictions
+## Limitations
 
  **EXPLAIN** can be applied to *optimizable* queries only, which are queries that can be improved or modified based on the results of an **EXPLAIN** command. The supported **EXPLAIN** commands are provided in the previous section. Attempting to use **EXPLAIN** with an unsupported query type will either return an error or echo the query.  
 
@@ -282,7 +282,7 @@ GO
 
  **Meaning of the EXPLAIN output**
 
- The output in the previous code block contains 144 numbered lines. Your output from this query may differ slightly. The following list describes significant sections.  
+ The output in the previous code block contains 144 numbered lines. Your output from this query might differ slightly. The following list describes significant sections.  
 
 -   Lines 3 through 16 provide a description of the query that is being analyzed.  
 
@@ -612,19 +612,16 @@ FROM   (SELECT CONVERT (INT, [T2_1].[col], 0) AS [col]
 </dsql_query>
 ```
 
-## See also
+## Related content
 
 - [sys.pdw_materialized_view_column_distribution_properties (Transact-SQL)](../../relational-databases/system-catalog-views/sys-pdw-materialized-view-column-distribution-properties-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)
 - [sys.pdw_materialized_view_distribution_properties (Transact-SQL)](../../relational-databases/system-catalog-views/sys-pdw-materialized-view-distribution-properties-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)
 - [sys.pdw_materialized_view_mappings (Transact-SQL)](../../relational-databases/system-catalog-views/sys-pdw-materialized-view-mappings-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)
-- [Azure Synapse Analytics and Parallel Data Warehouse Catalog Views](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)
+- [Azure Synapse Analytics and Analytics Platform System (PDW) catalog views](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)
 - [System views supported in Azure Synapse Analytics](/azure/sql-data-warehouse/sql-data-warehouse-reference-tsql-system-views)
 - [T-SQL statements supported in Azure Synapse Analytics](/azure/sql-data-warehouse/sql-data-warehouse-reference-tsql-statements)
-
-## Next steps
-
 - [CREATE MATERIALIZED VIEW AS SELECT (Transact-SQL)](../statements/create-materialized-view-as-select-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)
 - [ALTER MATERIALIZED VIEW (Transact-SQL)](../statements/alter-materialized-view-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)
 - [DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD (Transact-SQL)](../database-console-commands/dbcc-pdw-showmaterializedviewoverhead-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)
-- [Monitor your Azure Synapse Analytics dedicated SQL pool workload using DMVs](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-manage-monitor#monitor-query-execution).
+- [Monitor your Azure Synapse Analytics dedicated SQL pool workload using DMVs](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-manage-monitor#monitor-query-execution)
 - [Display the Estimated Execution Plan](../../relational-databases/performance/display-the-estimated-execution-plan.md)

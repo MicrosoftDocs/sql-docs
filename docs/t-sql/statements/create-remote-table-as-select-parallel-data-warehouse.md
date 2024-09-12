@@ -15,7 +15,7 @@ monikerRange: ">=aps-pdw-2016"
 # CREATE REMOTE TABLE AS SELECT (Parallel Data Warehouse)
 [!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
 
-  Selects data from a [!INCLUDE [ssPDW](../../includes/sspdw-md.md)] database and copies that data to a new table in a SMP [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] database on a remote server. [!INCLUDE [ssPDW](../../includes/sspdw-md.md)] uses the appliance, with all the benefits of MPP query processing, to select the data for the remote copy. Use this for scenarios that require [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] functionality.  
+  Selects data from a [!INCLUDE [ssPDW](../../includes/sspdw-md.md)] database and copies that data to a new table in an SMP [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] database on a remote server. [!INCLUDE [ssPDW](../../includes/sspdw-md.md)] uses the appliance, with all the benefits of MPP query processing, to select the data for the remote copy. Use `CREATE REMOTE TABLE AS SELECT` for scenarios that require [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] functionality.  
   
  To configure the remote server, see [Remote Table Copy](../../analytics-platform-system/remote-table-copy.md).  
   
@@ -92,7 +92,7 @@ CREATE REMOTE TABLE { database_name.schema_name.table_name | schema_name.table_n
 -   Requires ALTER, INSERT, and SELECT permissions on the destination SMP schema.  
   
 ## Error Handling
- If copying data to the remote database fails, [!INCLUDE [ssPDW](../../includes/sspdw-md.md)] will abort the operation, log an error, and attempt to delete the remote table. [!INCLUDE [ssPDW](../../includes/sspdw-md.md)] does not guarantee a successful cleanup of the new table.  
+ If copying data to the remote database fails, [!INCLUDE [ssPDW](../../includes/sspdw-md.md)] aborts the operation, log an error, and attempt to delete the remote table. [!INCLUDE [ssPDW](../../includes/sspdw-md.md)] does not guarantee a successful cleanup of the new table.  
   
 ## Limitations
 
@@ -100,7 +100,7 @@ CREATE REMOTE TABLE { database_name.schema_name.table_name | schema_name.table_n
   
 -   TCP is the default and only supported protocol for connecting to a remote server.  
   
--   The destination server must be a non-appliance server. CREATE REMOTE TABLE cannot be used to copy data from one appliance to another.  
+-   The destination server must be a nonappliance server. CREATE REMOTE TABLE cannot be used to copy data from one appliance to another.  
   
 -   The CREATE REMOTE TABLE statement only creates new tables. Therefore, the new table cannot already exist. The remote database and schema must already exist.  
   
@@ -115,7 +115,7 @@ CREATE REMOTE TABLE { database_name.schema_name.table_name | schema_name.table_n
  [SET ROWCOUNT (Transact-SQL)](set-rowcount-transact-sql.md) has no effect on this statement. To achieve a similar behavior, use [TOP (Transact-SQL)](../queries/top-transact-sql.md).  
   
 ## Locking behavior
- After creating the remote table, the destination table is not locked until the copy starts. Therefore, it is possible for another process to delete the remote table after it is created and before the copy starts. When this occurs, [!INCLUDE [ssPDW](../../includes/sspdw-md.md)] will generate an error and the copy will fail.  
+ After creating the remote table, the destination table is not locked until the copy starts. Therefore, it is possible for another process to delete the remote table after it is created and before the copy starts. When this occurs, [!INCLUDE [ssPDW](../../includes/sspdw-md.md)] generates an error and the copy fails.  
   
 ## Metadata
  Use [sys.dm_pdw_dms_workers (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-dms-workers-transact-sql.md) to view the progress of copying the selected data to the remote SMP server. Rows with type PARALLEL_COPY_READER contain this information.  
@@ -127,7 +127,7 @@ CREATE REMOTE TABLE { database_name.schema_name.table_name | schema_name.table_n
   
  To help prevent accidental data loss or corruption, the user account that is used to copy from the appliance to the destination database should have only the minimum required permissions on the destination database.  
   
- Connection settings allow you to connect to the SMP [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] instance with SSL protecting user name and password data, but with actual data being sent unencrypted in clear text. When this occurs, a malicious user could intercept the CREATE REMOTE TABLE statement text, which contains the [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] user name and password to log onto the SMP [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] instance. To avoid this risk, use data encryption on the connection to the SMP [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] instance.  
+ Connection settings allow you to connect to the SMP [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] instance with SSL protecting user name and password data, but with actual data being sent unencrypted in clear text. When this occurs, a malicious user could intercept the CREATE REMOTE TABLE statement text, which contains the [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] user name and password to sign in to the SMP [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] instance. To avoid this risk, use data encryption on the connection to the SMP [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] instance.  
   
 ## <a id="Examples"></a> Examples
   

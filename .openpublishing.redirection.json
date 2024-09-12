@@ -46437,8 +46437,8 @@
     },
     {
       "source_path": "docs/reporting-services/tools/tutorial-how-to-locate-and-start-reporting-services-tools-ssrs.md",
-      "redirect_url": "/sql/reporting-services/tools/locate-start-reporting-services-tools-ssrs",
-      "redirect_document_id": true
+      "redirect_url": "/sql/reporting-services/tools/reporting-services-tools",
+      "redirect_document_id": false
     },
     {
       "source_path": "docs/release-notes/microsoft-sql-server.md",

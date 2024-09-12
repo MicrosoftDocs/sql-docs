@@ -13,6 +13,9 @@ ms.custom: kr2b-contr-experiment
 
 # Run Database Experimentation Assistant at a command prompt
 
+> [!NOTE]  
+> This tool will be retired on **December 15, 2024**. We will stop supporting this tool for any issues that arise, and will not issue any bug fixes or further updates.
+
 This article describes how to capture a trace in Database Experimentation Assistant (DEA) and then analyze the results, all from a command prompt.
 
 > [!NOTE]

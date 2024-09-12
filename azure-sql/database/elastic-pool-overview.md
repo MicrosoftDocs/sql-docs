@@ -4,7 +4,7 @@ description: Manage and scale multiple databases in Azure SQL Database, as many 
 author: arvindshmicrosoft
 ms.author: arvindsh
 ms.reviewer: wiassaf, mathoma, maghan
-ms.date: 04/04/2024
+ms.date: 09/12/2024
 ms.service: azure-sql-database
 ms.subservice: elastic-pools
 ms.topic: conceptual
@@ -94,9 +94,6 @@ The best size for a pool depends on the aggregate resources needed for all datab
 
 For service tiers and resource limits in each purchasing model, see the [DTU-based purchasing model](service-tiers-dtu.md) or the [vCore-based purchasing model](service-tiers-vcore.md).
 
-> [!NOTE]  
-> [Elastic pools for Hyperscale](./hyperscale-elastic-pool-overview.md) are currently in preview.
-
 The following steps can help you estimate whether a pool is more cost-effective than single databases:
 
 1. Estimate the eDTUs or vCores needed for the pool:
@@ -131,6 +128,10 @@ You can use other SQL Database features with elastic pools.
 With a pool, management tasks are simplified by running scripts in [elastic jobs](elastic-jobs-overview.md). An elastic job eliminates most of the tedium associated with large numbers of databases.
 
 For more information about other database tools for working with multiple databases, see [Scaling out with SQL Database](elastic-scale-introduction.md).
+
+### Hyperscale elastic pools
+
+[Azure SQL Database Hyperscale elastic pools](hyperscale-elastic-pool-overview.md) are generally available. 
 
 ### Business continuity options for databases in an elastic pool
 

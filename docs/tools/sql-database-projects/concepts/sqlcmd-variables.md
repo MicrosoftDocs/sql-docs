@@ -16,6 +16,8 @@ zone_pivot_groups: sq1-sql-projects-tools
 
 SQLCMD variables are used in SQL projects to create dynamically replaceable tokens in SQL objects and scripts. The values of these variables are set at deployment time and can be used to dynamically set values in a SQL project. Values for SQLCMD variables can be set in the publish action or through a publish profile.
 
+:::image type="content" source="media/sqlcmd-variables/sqlcmd-variables.png" alt-text="Screenshot of SQLCMD variable EnvironmentName not set until deployment.":::
+
 ## SQL project file sample and syntax
 
 SQLCMD variables are defined in the `.sqlproj` file under an `<ItemGroup>` item. In this example, the variable `EnvironmentName` is defined with a default value of `testing`:

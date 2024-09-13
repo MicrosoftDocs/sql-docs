@@ -3,7 +3,7 @@ title: SQL Server Reporting Services tools
 description: Find out about the tools for development, configuration, administration, and report viewing that are available in SQL Server Reporting Services.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 09/12/2024
+ms.date: 09/13/2024
 ms.service: reporting-services
 ms.subservice: tools
 ms.topic: conceptual
@@ -181,17 +181,17 @@ For more information about using SSMS to connect to a SQL Server instance and ru
 
 For instructions on starting SSMS to manage a report server, see [Connect to a native mode report server](connect-to-a-report-server-in-management-studio.md#connect-to-a-native-mode-report-server).
 
-#### Rsconfig utility
+#### Rsconfig.exe utility
 
 You can use this tool to configure and manage a report server connection to a report server database. You can also use it to specify a user account to use for unattended report processing.
 
 For more information, see [Report server common prompt utilities (SSRS)](../../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md).
 
-##### Rsconfig access
+##### Rsconfig.exe access
 
-The rsconfig utility is installed when you install SSRS. You run this utility from the command line.
+The rsconfig.exe utility is installed when you install SSRS. You run this utility from the command line.
 
-#### Rskeymgmt utility
+#### Rskeymgmt.exe utility
 
 You can use this tool to:
 
@@ -200,9 +200,9 @@ You can use this tool to:
 
 For more information, see [Report server command prompt utilities (SSRS)](../../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md).
 
-##### Rskeymgmt access
+##### Rskeymgmt.exe access
 
-The rskeymgmt utility is installed when you install SSRS. You run this utility from the command line.
+The rskeymgmt.exe utility is installed when you install SSRS. You run this utility from the command line.
 
 #### Windows Management Instrumentation (WMI) classes
 
@@ -293,15 +293,15 @@ For instructions on starting the web portal, see the [Get started](../web-portal
 
 If you run the web portal on a local report server, see [Configure a native mode report server for local administration (SSRS)](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).
 
-### Rs utility
+### Rs.exe utility
 
 This tool is a script host that you use to perform scripted operations. You can use this tool to run [!INCLUDE[Visual Basic](../../includes/visual-basic-md.md)] scripts that copy data between report server databases, publish reports, and create items in a report server database.
 
 For more information, see [Report server command prompt utilities (SSRS)](../../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md).
 
-#### Rs access
+#### Rs.exe access
 
-The rs utility is installed when you install SSRS. You run this utility from the command line.
+The rs.exe utility is installed when you install SSRS. You run this utility from the command line.
 
 ## Related content
 

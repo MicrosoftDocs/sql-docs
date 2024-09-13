@@ -35,16 +35,16 @@ The target platform project property is contained in the `DSP` tag in the `.sqlp
 
 Valid values for the target platform in the `DSP` tag include:
 
-- Microsoft.Data.Tools.Schema.Sql.Sql120DatabaseSchemaProvider
-- Microsoft.Data.Tools.Schema.Sql.Sql130DatabaseSchemaProvider
-- Microsoft.Data.Tools.Schema.Sql.Sql140DatabaseSchemaProvider
-- Microsoft.Data.Tools.Schema.Sql.Sql150DatabaseSchemaProvider
-- Microsoft.Data.Tools.Schema.Sql.Sql160DatabaseSchemaProvider
-- Microsoft.Data.Tools.Schema.Sql.SqlAzureV12DatabaseSchemaProvider
-- Microsoft.Data.Tools.Schema.Sql.SqlDbFabricDatabaseSchemaProvider
-- Microsoft.Data.Tools.Schema.Sql.SqlDwDatabaseSchemaProvider
-- Microsoft.Data.Tools.Schema.Sql.SqlServerlessDatabaseSchemaProvider
-- Microsoft.Data.Tools.Schema.Sql.SqlDwUnifiedDatabaseSchemaProvider
+- `Microsoft.Data.Tools.Schema.Sql.Sql120DatabaseSchemaProvider` (SQL Server 2014)
+- `Microsoft.Data.Tools.Schema.Sql.Sql130DatabaseSchemaProvider` (SQL Server 2016)
+- `Microsoft.Data.Tools.Schema.Sql.Sql140DatabaseSchemaProvider` (SQL Server 2017)
+- `Microsoft.Data.Tools.Schema.Sql.Sql150DatabaseSchemaProvider` (SQL Server 2019)
+- `Microsoft.Data.Tools.Schema.Sql.Sql160DatabaseSchemaProvider` (SQL Server 2022)
+- `Microsoft.Data.Tools.Schema.Sql.SqlAzureV12DatabaseSchemaProvider` (Azure SQL Database)
+- `Microsoft.Data.Tools.Schema.Sql.SqlDbFabricDatabaseSchemaProvider` (Fabric Mirrored SQL Database, preview)
+- `Microsoft.Data.Tools.Schema.Sql.SqlDwDatabaseSchemaProvider` (Azure Synapse SQL Pool)
+- `Microsoft.Data.Tools.Schema.Sql.SqlServerlessDatabaseSchemaProvider` (Azure Synapse Serverless SQL Pool)
+- `Microsoft.Data.Tools.Schema.Sql.SqlDwUnifiedDatabaseSchemaProvider` (Synapse Data Warehouse in Microsoft Fabric)
 
 ## Alter the target platform
 

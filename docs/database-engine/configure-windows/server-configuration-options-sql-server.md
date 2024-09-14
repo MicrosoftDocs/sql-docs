@@ -4,8 +4,8 @@ titleSuffix: SQL Server, Azure SQL Managed Instance
 description: Find out how to manage and optimize SQL Server and Azure SQL Managed Instance resources. View available configuration options, possible settings, default values, and restart requirements.
 author: rwestMSFT
 ms.author: randolphwest
-ms.reviewer: mikeray, randolphwest
-ms.date: 05/10/2024
+ms.reviewer: mikeray
+ms.date: 09/12/2024
 ms.service: sql
 ms.subservice: configuration
 ms.topic: conceptual
@@ -114,7 +114,7 @@ The following table lists all available configuration options, the range of poss
 | [blocked process threshold (s)](blocked-process-threshold-server-configuration-option.md) (A) | **Minimum**: `5`<br />**Maximum**: `86400`<br />**Default**: `0` | Yes | Yes |
 | [c2 audit mode](c2-audit-mode-server-configuration-option.md) (A, RR) | **Minimum**: `0`<br />**Maximum**: `1`<br />**Default**: `0` | Yes | No |
 | [clr enabled](clr-enabled-server-configuration-option.md) | **Minimum**: `0`<br />**Maximum**: `1`<br />**Default**: `0` | Yes | Yes |
-| [clr strict security](clr-strict-security.md) (A) | **Minimum**: `0`<br />**Maximum**: `1`<br />**Default**: `0` | [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] and later versions | Yes |
+| [clr strict security](clr-strict-security.md) (A) | **Minimum**: `0`<br />**Maximum**: `1`<br />**Default**: `1` | [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] and later versions | Yes |
 | [column encryption enclave type](configure-column-encryption-enclave-type.md) (RR) | **Minimum**: `0`<br />**Maximum**: `2`<br />**Default**: `0` | Yes | No |
 | [common criteria compliance enabled](common-criteria-compliance-enabled-server-configuration-option.md) (A, RR) | **Minimum**: `0`<br />**Maximum**: `1`<br />**Default**: `0` | Yes | No |
 | [contained database authentication](contained-database-authentication-server-configuration-option.md) | **Minimum**: `0`<br />**Maximum**: `1`<br />**Default**: `0` | Yes | Yes |

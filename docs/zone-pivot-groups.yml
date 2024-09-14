@@ -37,8 +37,8 @@ groups:
   pivots:
   - id: sq1-visual-studio
     title: Visual Studio
-  # - id: sq1-visual-studio-sdk
-  #   title: Visual Studio, SDK-style (preview)
+  - id: sq1-visual-studio-sdk
+    title: Visual Studio, SDK-style (preview)
   - id: sq1-visual-studio-code
     title: Visual Studio Code/Azure Data Studio
   - id: sq1-command-line

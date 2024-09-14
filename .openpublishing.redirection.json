@@ -40281,6 +40281,26 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "docs/tools/configuration-manager/new-alias-alias-tab.md",
+      "redirect_url": "/sql/tools/configuration-manager/aliases-sql-server-configuration-manager",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/tools/configuration-manager/alias-properties-alias-tab.md",
+      "redirect_url": "/sql/tools/configuration-manager/aliases-sql-server-configuration-manager",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/tools/configuration-manager/creating-a-valid-connection-string-using-shared-memory-protocol.md",
+      "redirect_url": "/sql/tools/configuration-manager/aliases-sql-server-configuration-manager",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip.md",
+      "redirect_url": "/sql/tools/configuration-manager/aliases-sql-server-configuration-manager",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "docs/2014/tools/dta/lesson-1-1-launching-database-engine-tuning-advisor.md",
       "redirect_url": "/previous-versions/sql/2014/tools/dta/lesson-1-1-launching-database-engine-tuning-advisor",
       "redirect_document_id": false
@@ -59292,7 +59312,42 @@
     },
     {
       "source_path": "docs/ssdt/how-to-convert-visual-studio-2010-database-projects-to-ssql-server-projects.md",
-      "redirect_url": "/sql/tools/sql-database-projects/howto/convert-an-original-sql-project",
+      "redirect_url": "/sql/tools/sql-database-projects/howto/convert-original-sql-project",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssdt/project-oriented-offline-database-development.md",
+      "redirect_url": "/sql/tools/sql-database-projects/sql-database-projects",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssdt/import-into-a-database-project.md",
+      "redirect_url": "/sql/tools/sql-database-projects/howto/add-existing-files-to-sql-project",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssdt/add-database-reference-dialog-box.md",
+      "redirect_url": "/sql/tools/sql-database-projects/concepts/database-references",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssdt/how-to-build-and-deploy-to-a-local-database.md",
+      "redirect_url": "/sql/tools/sql-database-projects/get-started",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssdt/data-tools-operations-window.md",
+      "redirect_url": "/sql/ssdt/sql-server-data-tools",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssdt/how-to-use-microsoft-sql-server-2012-objects-in-your-project.md",
+      "redirect_url": "/sql/tools/sql-database-projects/concepts/target-platform",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssdt/how-to-create-a-new-database-project.md",
+      "redirect_url": "/sql/tools/sql-database-projects/get-started",
       "redirect_document_id": false
     }
   ]

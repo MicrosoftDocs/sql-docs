@@ -100,7 +100,7 @@ GO
 SELECT *   
 FROM dbo.Tool;  
 GO  
--- Drop products table.  
+-- Drop tool table.  
 DROP TABLE dbo.Tool;  
 GO  
 ```  

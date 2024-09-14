@@ -14,7 +14,7 @@ monikerRange: ">= sql-server-2016"
 [!INCLUDE[SQL Server 2017](../includes/applies-to-version/sqlserver2017.md)]
 SQL Server 2017 represents a major step towards making SQL Server a platform that gives you choices of development languages, data types, on-premises or cloud, and operating systems by bringing the power of SQL Server to Linux, Linux-based containers, and Windows. This topic summarizes what is new for specific feature areas and includes links to additional details. For more information related to SQL Server on Linux, see [SQL Server on Linux](../linux/sql-server-linux-overview.md).
 
-:::image type="icon" source="../includes/media/download.svg"::: **Try it out:** [Download SQL Server 2017 Release - October 2017](https://go.microsoft.com/fwlink/?LinkID=829477).
+:::image type="icon" source="../includes/media/download.svg"::: **[Download SQL Server 2017 Release - October 2017](https://go.microsoft.com/fwlink/?LinkID=829477)**
 
 > [!NOTE]
 > In addition to the changes below, cumulative updates are released at regular intervals after the GA release. These cumulative updates provide many improvements and fixes. For information about the latest CU release, see [SQL Server 2017 Cumulative updates](https://aka.ms/sql2017cu).

@@ -1,9 +1,9 @@
 ---
-title: "Create a Login"
-description: Learn how to create a login in SQL Server or Azure SQL Database by using SQL Server Management Studio or Transact-SQL.
+title: "Create a login"
+description: Learn how to create a login in SQL Server or Azure SQL by using SQL Server Management Studio or Transact-SQL.
 author: VanMSFT
 ms.author: vanto
-ms.date: 07/18/2024
+ms.date: 09/11/2024
 ms.service: sql
 ms.subservice: security
 ms.topic: conceptual
@@ -21,7 +21,7 @@ helpviewer_keywords:
   - "SQL Server logins"
 monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
-# Create a Login
+# Create a login
 
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
@@ -35,9 +35,9 @@ A login is a security principal, or an entity that can be authenticated by a sec
 
 > [!NOTE]  
 > To use [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)] Authentication, the [!INCLUDE [ssDE](../../../includes/ssde-md.md)] must use mixed mode authentication. For more information, see [Choose an Authentication Mode](../../../relational-databases/security/choose-an-authentication-mode.md).
->
+>  
 > Azure SQL has introduced [Microsoft Entra server principals (logins)](/azure/azure-sql/database/authentication-azure-ad-logins) to be used to authenticate to Azure SQL Database, Azure SQL Managed Instance, and Azure Synapse Analytics (dedicated SQL pools only).
->
+>  
 > SQL Server 2022 also introduces [Microsoft Entra authentication for SQL Server](azure-ad-authentication-sql-server-overview.md).
 
 As a security principal, permissions can be granted to logins. The scope of a login is the whole [!INCLUDE [ssDE](../../../includes/ssde-md.md)]. To connect to a specific database on the instance of [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)], a login must be mapped to a database user. Permissions inside the database are granted and denied to the database user, not the login. Permissions that have the scope of the whole instance of [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)] (for example, the **CREATE ENDPOINT** permission) can be granted to a login.
@@ -155,7 +155,7 @@ Lists the databases available on the server.
 Specify a database user to map to the login. By default, the database user has the same name as the login.
 
 **Default Schema**  
-Specifies the default schema of the user. When a user is first created, its default schema is **dbo**. It's possible to specify a default schema that does not yet exist. You can't specify a default schema for a user that is mapped to a Windows group, a certificate, or an asymmetric key.
+Specifies the default schema of the user. When a user is first created, its default schema is **dbo**. It's possible to specify a default schema that doesn't yet exist. You can't specify a default schema for a user that is mapped to a Windows group, a certificate, or an asymmetric key.
 
 **Guest account enabled for:** _database_name_  
 Read-only attribute indicating whether the Guest account is enabled on the selected database. Use the **Status** page of the **Login Properties** dialog box of the Guest account to enable or disable the Guest account.
@@ -233,10 +233,10 @@ When you work with this setting, you should think of the selected login as a rec
 
 A login that has been disabled continues to exist as a record. But if it tries to connect to [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)], the login won't be authenticated.
 
-Select this option to enable or disable this login. This option uses the ALTER LOGIN statement with either the ENABLE or DISABLE option.
+Select this option to enable or disable this login. This option uses the `ALTER LOGIN` statement with either the ENABLE or DISABLE option.
 
 **SQL Server authentication**  
-The check box **Login is locked out** is only available if the selected login connects using [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)] authentication and the login has been locked out. This setting is read-only. To unlock a login that is locked out, execute ALTER LOGIN with the UNLOCK option.
+The check box **Login is locked out** is only available if the selected login connects using [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)] authentication and the login has been locked out. This setting is read-only. To unlock a login that is locked out, execute `ALTER LOGIN` with the UNLOCK option.
 
 ## <a name="TsqlProcedure"></a> Create a login using Windows authentication with T-SQL
 
@@ -275,7 +275,7 @@ For more information, see [CREATE LOGIN (Transact-SQL)](../../../t-sql/statement
 
 ## <a name="FollowUp"></a> Follow up: Steps to take after you create a login
 
-After creating a login, the login can connect to [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)], but doesn't necessarily have sufficient permission to perform any useful work. The following list provides links to common login actions.
+The login can connect to [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)] after creating a login, but doesn't necessarily have sufficient permission to perform any useful work. The following list provides links to common login actions.
 
 - To have the login join a role, see [Join a Role](../../../relational-databases/security/authentication-access/join-a-role.md).
 
@@ -285,6 +285,6 @@ After creating a login, the login can connect to [!INCLUDE [ssNoVersion](../../.
 
 ## Related content
 
-- [Security Center for SQL Server Database Engine and Azure SQL Database](../../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)
+- [Security for SQL Server Database Engine and Azure SQL Database](../security-center-for-sql-server-database-engine-and-azure-sql-database.md)
 - [Microsoft Entra server principals (logins)](/azure/azure-sql/database/authentication-azure-ad-logins)
 - [Tutorial: Create and utilize Microsoft Entra server logins](/azure/azure-sql/database/authentication-azure-ad-logins-tutorial)

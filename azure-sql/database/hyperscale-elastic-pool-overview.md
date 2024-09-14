@@ -4,10 +4,9 @@ description: Manage and scale multiple Hyperscale databases in Azure SQL Databas
 author: arvindshmicrosoft
 ms.author: arvindsh
 ms.reviewer: wiassaf, mathoma, randolphwest
-ms.date: 03/27/2024
+ms.date: 09/12/2024
 ms.service: azure-sql-database
 ms.subservice: elastic-pools
-ms.custom: ignite-2023
 ms.topic: conceptual
 ---
 # Hyperscale elastic pools overview in Azure SQL Database
@@ -20,8 +19,7 @@ An Azure SQL Database [elastic pool](elastic-pool-overview.md) enables software-
 
 For examples to create, scale, or move databases into a Hyperscale elastic pool by using the Azure CLI or PowerShell, review [Working with Hyperscale elastic pools using command-line tools](hyperscale-elastic-pool-command-line.md)
 
-> [!NOTE]
-> [Elastic pools for Hyperscale](hyperscale-elastic-pool-overview.md) are currently in preview.
+For more information on the general availability of elastic pools for Hyperscale, see [Blog: Hyperscale Elastic Pools generally available](https://aka.ms/hsep-ga).
 
 ## Overview
 
@@ -51,7 +49,7 @@ The following describes the architecture of an elastic pool for Hyperscale datab
 
 The following diagram shows the architecture of an elastic pool for Hyperscale databases:
 
-:::image type="content" source="media/hyperscale-elastic-pool-overview/elastic-pool-hyperscale-architecture.png" alt-text="Diagram showing the Hyperscale elastic pool architecture.":::
+:::image type="content" source="media/hyperscale-elastic-pool-overview/elastic-pool-hyperscale-architecture.png" alt-text="Diagram showing the Hyperscale elastic pool architecture." lightbox="media/hyperscale-elastic-pool-overview/elastic-pool-hyperscale-architecture.png":::
 
 ## Manage Hyperscale elastic pool databases
 
@@ -119,9 +117,6 @@ The following lists the supported limits for working with Hyperscale databases w
 
 For greater detail, see the resource limits of Hyperscale elastic pools for [standard-series](resource-limits-vcore-elastic-pools.md#hyperscale---provisioned-compute---standard-series-gen5),  [premium-series](resource-limits-vcore-elastic-pools.md#hyperscale---premium-series), and [premium-series memory optimized](resource-limits-vcore-elastic-pools.md#hyperscale---premium-series-memory-optimized).
 
-> [!NOTE]  
-> Performance profiles, supported capabilities, and published limits are subject to change while the feature is in preview. As such, it's best to validate your use case with regular functional, performance, and scale testing of workloads.
-
 ## Limitations
 
 Consider the following limitations:
@@ -136,9 +131,6 @@ Consider the following limitations:
 
 Here are some considerations for zone redundant Hyperscale elastic pools:
 
-> [!NOTE]
-> Hyperscale elastic pools with zone redundancy are available, currently in preview. For more information, see [Blog post: Hyperscale elastic pools with zone redundancy](https://aka.ms/hsep-zr).
-
 - Only databases with zone-redundant storage redundancy (ZRS or GZRS) can be added to Hyperscale elastic pools with zone redundancy.
 - A standalone Hyperscale database must be created with zone redundancy and zone-redundant backup storage (ZRS or GZRS) in order to add it to a zone-redundant Hyperscale elastic pool.  For Hyperscale databases without zone redundancy, perform a data transfer to a new Hyperscale database with the zone redundancy option enabled. A clone must be created using database copy, point-in-time restore, or geo-replica. For more information, see [Redeployment (Hyperscale)](/azure/reliability/migrate-sql-database#redeployment-hyperscale).
 - To move a Hyperscale database from one elastic pool to another, the zone redundancy and zone-redundant backup storage settings must match.
@@ -150,13 +142,10 @@ Here are some considerations for zone redundant Hyperscale elastic pools:
 
 | Issue | Recommendation |
 | *-- | *-- |
-| When viewing the Configure section for an existing Hyperscale elastic pool in the Azure portal, estimated prices may not be displayed in certain cases. This issue is due to a code defect. This issue is not observed for non-Hyperscale elastic pools. | Refreshing the browser or switching to the Overview section and then back to the Configure section, may resolve the issue. |
 | When adding a non-Hyperscale database to a Hyperscale elastic pool, you may receive an error `{"code":"ElasticPoolDatabaseCountOverLimit","message":"The elastic pool 'MyHyperscaleElasticPool' has reached its database count limit. The database count for the elastic pool cannot exceed (25) for service tier 'Hyperscale'."}` even though there are less than 25 DBs in the Hyperscale elastic pool. This issue is due to a code defect. | To work around the issue, you can convert the non-Hyperscale database to a *standalone* Hyperscale database first before adding it to the Hyperscale elastic pool. |
-| When adding many non-Hyperscale databases to a Hyperscale elastic pool, you may receive an error `Could not perform the operation because server would exceed the allowed Database Throughput Unit quota of 54000. (Code: ServerDtuQuotaExceeded)`. Though the message refers to Database Throughput Units (DTU), it's related to the shared DTU / vCore quota enforced at each logical server. This issue is due to a defect where the vCores are incorrectly being calculated at an individual database level. | Here are some options to work around the issue:</br>&bull; &nbsp;Add databases one at a time to the Hyperscale elastic pool.</br>&bull; &nbsp;Convert the database to a standalone Hyperscale database first before adding it to the Hyperscale elastic pool.</br>&bull; &nbsp;Request an increase in the server-level quota as described [here](./quota-increase-request.md). |
 | Setting up [geo-replication](./active-geo-replication-overview.md#configuring-secondary-database) for a database from a zone redundant Hyperscale elastic pool, to a non-zone redundant Hyperscale elastic pool in another region, fails with the error `Provisioning of zone redundant Hyperscale database with local backup redundancy is not supported. Zone redundant Hyperscale databases must use either zone or geo zone backup redundancy`. This error doesn't occur if the second Hyperscale elastic pool is either zone redundant, or is in the same region. | To work around this issue, you can use Azure PowerShell and explicitly specify non-zone redundant in the command line `New-AzSqlDatabaseSecondary -ResourceGroupName "primary-rg" -ServerName "primary-server" -DatabaseName "hsdb1" -PartnerResourceGroupName "secondary-rg" -PartnerServerName "secondary-server" -AllowConnections "All" -SecondaryElasticPoolName "secondary-nonzr-pool" -BackupStorageRedundancy Local -ZoneRedundant:$false` |
 | Adding a database from a zone redundant Hyperscale elastic pool, to a [failover group](./failover-group-sql-db.md) with a non-zone redundant Hyperscale elastic pool in another region, will fail internally, but the operation may appear to be running without any progress. You may see the geo-secondary database when using tools like SSMS, but you cannot connect to and use the geo-secondary database. The failover group may show a status of "Seeding 0%" for the geo-secondary database. This issue doesn't occur if the second Hyperscale elastic pool is zone redundant. | To work around this issue, setup geo-replication outside of the failover group using Azure PowerShell, explicitly specifying non-zone redundant in the command line `New-AzSqlDatabaseSecondary -ResourceGroupName "primary-rg" -ServerName "primary-server" -DatabaseName "hsdb1" -PartnerResourceGroupName "secondary-rg" -PartnerServerName "secondary-server" -AllowConnections "All" -SecondaryElasticPoolName "secondary-nonzr-pool" -BackupStorageRedundancy Local -ZoneRedundant:$false`. Then, you can add the database into the failover group. |
 | In rare cases, you might get the error `45122 - This Hyperscale database cannot be added into an elastic pool at this time. In case of any questions, please contact Microsoft support`, when trying to move / restore / copy a Hyperscale database into an elastic pool. | This limitation is due to implementation-specific details. If this error is blocking you, raise a support incident and request help. |
-
 
 ## Related content
 

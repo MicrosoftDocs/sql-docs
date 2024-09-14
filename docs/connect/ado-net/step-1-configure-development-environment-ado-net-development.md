@@ -21,7 +21,7 @@ Our current code example uses ADO.NET of the .NET Framework, for Windows. The .N
 
 ### ADO.NET, for Windows
 
-- :::image type="icon" source="../../includes/media/download.svg" border="false"::: [To download and install .NET Framework, including ADO.NET](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+- :::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download and install .NET Framework, including ADO.NET](../sql-connection-libraries.md#anchor-20-drivers-relational-access)**
 
 - Install Visual Studio Community, or a similar integrated development environment (IDE) for writing and compiling C# source code. Microsoft now provides Visual Studio Community for *free*.  
     - [Download Visual Studio Community](https://www.visualstudio.com/products/visual-studio-community-vs)  
@@ -32,4 +32,4 @@ Our current code example uses ADO.NET of the .NET Framework, for Windows. The .N
 
 Links to download .NET Core, for a variety of operating systems, are available at:
 
-- :::image type="icon" source="../../includes/media/download.svg" border="false"::: [To download and install .NET Core](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+- :::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download and install .NET Core](../sql-connection-libraries.md#anchor-20-drivers-relational-access)**

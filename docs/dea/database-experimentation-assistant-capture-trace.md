@@ -12,6 +12,9 @@ ms.topic: conceptual
 
 # Capture a trace in Database Experimentation Assistant
 
+> [!NOTE]  
+> This tool will be retired on **December 15, 2024**. We will stop supporting this tool for any issues that arise, and will not issue any bug fixes or further updates.
+
 You can use Database Experimentation Assistant (DEA) to create a trace file with a log of captured server events. A captured server event is an event that occurs on a specific server during a specific time period. A trace capture must be run one time per server.
 
 Before you start a trace capture, make sure that you back up all target databases.

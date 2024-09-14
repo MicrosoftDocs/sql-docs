@@ -1,7 +1,7 @@
 ---
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 01/11/2024
+ms.date: 09/12/2024
 ms.topic: include
 ---
 | Error | Severity | Event logged | Description |
@@ -56,6 +56,7 @@ ms.topic: include
 | 9049 | 10 | No | An exception occurred during flush initialization, the default clflush is selected For pmem flush operation. |
 | 9050 | 16 | No | Fixed VLF transition was rejected. |
 | 9051 | 10 | No | The LSN %S_LSN passed to log dumper in database '%.\*ls' is not valid. |
+| 9055 | 16 | No | Start of the log needed to be backed up on Managed Instance link database '%.\*ls' can not be found. |
 | 9100 | 21 | Yes | Possible index corruption detected. Run DBCC CHECKDB. |
 | 9101 | 16 | No | auto statistics internal |
 | 9104 | 16 | No | auto statistics internal |

@@ -831,6 +831,26 @@
       "redirect_document_id": false
     },
     {
+      "source_path_from_root": "/azure-sql/database/local-dev-experience-quickstart.md",
+      "redirect_url": "/previous-versions/sql/azure-sql/database/local-dev-experience-quickstart",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/azure-sql/database/local-dev-experience-publish-emulator.md",
+      "redirect_url": "/previous-versions/sql/azure-sql/database/local-dev-experience-publish-emulator",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/azure-sql/database/local-dev-experience-set-up-dev-environment.md",
+      "redirect_url": "/previous-versions/sql/azure-sql/database/local-dev-experience-set-up-dev-environment",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/azure-sql/database/local-dev-experience-sql-database-emulator.md",
+      "redirect_url": "/previous-versions/sql/azure-sql/database/local-dev-experience-sql-database-emulator",
+      "redirect_document_id": false
+    },
+    {
       "source_path_from_root": "/azure-sql/database/migrate-sqlite-db-to-azure-sql-serverless-offline-tutorial.md",
       "redirect_url": "/azure/data-factory/introduction",
       "redirect_document_id": false

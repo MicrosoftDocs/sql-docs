@@ -19,10 +19,10 @@ When an update concludes with errors, how you resolve the errors depends on the 
  The code to alert the user to the update conflict looks like this:  
   
 ```  
-objRs.Filter = adFilterConflictingRecords  
+objRs.Filter = adFilterConflictingRecords  
 objRs.MoveFirst  
-Do While Not objRst.EOF  
-   Debug.Print "Conflict: Name =  "; objRs!au_fname; " "; objRs!au_lname  
+Do While Not objRst.EOF  
+   Debug.Print "Conflict: Name =  "; objRs!au_fname; " "; objRs!au_lname  
    objRs.MoveNext  
 Loop  
 ```  

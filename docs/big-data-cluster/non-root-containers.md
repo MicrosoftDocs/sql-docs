@@ -30,7 +30,7 @@ Please review [this technical whitepaper](https://aka.ms/sql-bdc-openshift-secur
 > We recommend that the cluster runs with the default non-root setting. In case you want to revert back to pre-CU5 behavior, and have containers within BDC run as `root` user, you can use the new feature switch `allowRunAsRoot` and turn off the default behavior. You can only set this at deployment time. To set this, specify the setting under the `security` section in the `control.json` deployment configuration file:
 
 ```json
- "security": {
+ "security": {
   …
     "allowRunAsRoot": true,
   …

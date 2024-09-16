@@ -190,7 +190,7 @@ using (TransactionScope s = new TransactionScope())
         Helper.ExecuteNonQueryOnOpenConnection(conn, "BEGIN DISTRIBUTED TRAN");
         // ...
     }
- 
+ 
     using (SqlConnection conn2 = new SqlConnection(DB1_ConnectionString)
     {
         conn2.Open();

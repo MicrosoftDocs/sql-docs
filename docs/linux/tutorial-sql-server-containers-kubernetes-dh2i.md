@@ -584,7 +584,7 @@ This process deploys [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] 
       statefulset.apps/mssql-sec   2/2     33h
       ```
 
-You should now have three [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] instances, each with its own storage and services, exposing ports 1433 ([!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)]) and 7979 (DxEnterprise Cluster). You can connect to each [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] instance using the External-IP address. The `SA` password is the same password you provided when creating the `mssql` secret in the preceding steps.
+You should now have three [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] instances, each with its own storage and services, exposing ports 1433 ([!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)]) and 7979 (DxEnterprise Cluster). You can connect to each [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] instance using the External-IP address. The `SA` password is the same password you provided when creating the `mssql` secret in the preceding steps.
 
 ## Configure the DxEnterprise cluster on the deployed containers
 

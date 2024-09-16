@@ -109,13 +109,13 @@ For details, review:
 
 **Extension version**: `1.1.2656.138`
 
- This version is no longer available.
+ This version is no longer available.
 
 ## April 9, 2024
 
 **Extension version**: `1.1.2647.136`
 
- This version is no longer available. The features in this version are updated and released in [May 15, 2024](#may-15-2024).
+ This version is no longer available. The features in this version are updated and released in [May 15, 2024](#may-15-2024).
 
 ## March 12, 2024
 

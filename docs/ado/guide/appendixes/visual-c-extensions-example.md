@@ -21,7 +21,7 @@ This program shows how values are retrieved from fields and converted to C/C++ v
  Without smart pointers, you would code:  
   
 ```cpp
-IADORecordBinding   *picRs = NULL;  
+IADORecordBinding   *picRs = NULL;  
 ...  
 TESTHR(pRs->QueryInterface(  
           __uuidof(IADORecordBinding), (LPVOID*)&picRs));  

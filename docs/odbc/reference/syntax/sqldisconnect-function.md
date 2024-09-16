@@ -27,7 +27,7 @@ apitype: "dllExport"
 ```cpp  
   
 SQLRETURN SQLDisconnect(  
-     SQLHDBC     ConnectionHandle);  
+     SQLHDBC     ConnectionHandle);  
 ```  
   
 ## Arguments  

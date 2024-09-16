@@ -26,7 +26,7 @@ Use the following instructions to manually deploy the solution package that adds
 
 > [!IMPORTANT]
 > Starting with version "15.X.X.X" you can install the ```ReportViewerWebPart``` side by side with your existing Reporting Services SharePoint integrated mode shared service applications.
-> With this update of the .wsp solution we introduced new files and the previous solution must be retracted and the new .wsp redeployed by using the ```Uninstall-SPSolution``` and ```Install-SPSolution``` cmdlets, respectively.
+> With this update of the .wsp solution we introduced new files and the previous solution must be retracted and the new .wsp redeployed by using the ```Uninstall-SPSolution``` and ```Install-SPSolution``` cmdlets, respectively.
 >
 
 **Support SharePoint Server versions:**

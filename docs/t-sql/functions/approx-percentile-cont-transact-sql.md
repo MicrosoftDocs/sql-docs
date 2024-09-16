@@ -30,8 +30,8 @@ This function returns an approximate interpolated value from the set of values i
 ## Syntax
 
 ```syntaxsql
-APPROX_PERCENTILE_CONT (numeric_literal)
-WITHIN GROUP (ORDER BY order_by_expression [ASC|DESC]) 
+APPROX_PERCENTILE_CONT (numeric_literal)
+WITHIN GROUP (ORDER BY order_by_expression [ASC|DESC]) 
 ```
 
 ## Argument
@@ -44,7 +44,7 @@ The percentile to compute. The value must range between 0.0 and 1.0.
 
 Specifies a list of numeric values to sort and compute the percentile
 over. Only one *order_by_expression* is allowed. The default sort order
-is ascending (ASC).  The expression must evaluate to an exact or
+is ascending (ASC).  The expression must evaluate to an exact or
 approximate numeric type, with no other data types allowed. Exact
 numeric types are int, bigint, smallint, tinyint, numeric, bit, decimal,
 smallmoney, and money. Approximate numeric types are float and real.

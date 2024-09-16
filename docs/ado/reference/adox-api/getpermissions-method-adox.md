@@ -23,7 +23,7 @@ Returns the permissions for a [group](./group-object-adox.md) or [user](./user-o
   
 ```  
   
-ReturnValue=GroupOrUser.GetPermissions(Name, ObjectType    [,ObjectTypeId])  
+ReturnValue=GroupOrUser.GetPermissions(Name, ObjectType    [,ObjectTypeId])  
 ```  
   
 ## Return Value  

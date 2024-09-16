@@ -71,7 +71,7 @@ This message occurs when attempting to join secondary databases to an Always On 
 
 #### 2. Check if you can connect to the endpoint
 
-- Use **[telnet](/windows-server/administration/windows-commands/telnet)** or **[Test-NetConnection](/powershell/module/nettcpip/test-netconnection)** to validate connectivity. If the Endpoint is listening and connection is successful, then **telnet** will show you a blank screen with a blinking cursor. If not, you will receive a connection error from **telnet**. To exit a successful **telnet** connection, press CTRL+]. If you use **Test-NetConnection** look for the `TcpTestSucceeded        : True` or `TcpTestSucceeded        : False`. 
+- Use **[telnet](/windows-server/administration/windows-commands/telnet)** or **[Test-NetConnection](/powershell/module/nettcpip/test-netconnection)** to validate connectivity. If the Endpoint is listening and connection is successful, then **telnet** will show you a blank screen with a blinking cursor. If not, you will receive a connection error from **telnet**. To exit a successful **telnet** connection, press CTRL+]. If you use **Test-NetConnection** look for the `TcpTestSucceeded        : True` or `TcpTestSucceeded        : False`. 
 
   ```DOS
   telnet ServerName <port_number>

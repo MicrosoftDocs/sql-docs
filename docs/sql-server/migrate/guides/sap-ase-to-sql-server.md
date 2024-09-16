@@ -34,7 +34,7 @@ After you meet the prerequisites, you're ready to discover the topology of your 
 
 ### Assess
 
-By using SSMA for SAP ASE, you can review database objects and data, assess databases for migration, migrate Sybase database objects to [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)], and then migrate data to [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)]. To learn more, see [SQL Server Migration Assistant for Sybase (SybaseToSQL)](../../../ssma/sybase/sql-server-migration-assistant-for-sybase-sybasetosql.md).
+By using SSMA for SAP ASE, you can review database objects and data, assess databases for migration, migrate Sybase database objects to [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)], and then migrate data to [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)]. To learn more, see [SQL Server Migration Assistant for Sybase (SybaseToSQL)](../../../ssma/sybase/sql-server-migration-assistant-for-sybase-sybasetosql.md).
 
 To create an assessment:
 
@@ -66,7 +66,7 @@ To learn more, see [Converting SAP ASE database objects (SybaseToSQL)](../../../
 
 ## Migrate
 
-After you have the necessary prerequisites in place and have completed the tasks associated with the *pre-migration* stage, you're ready to perform the schema and data migration.
+After you have the necessary prerequisites in place and have completed the tasks associated with the *pre-migration* stage, you're ready to perform the schema and data migration.
 
 To publish your schema and migrate the data:
 
@@ -77,7 +77,7 @@ To publish your schema and migrate the data:
 
 ## Post-migration
 
-After you've successfully completed the *migration* stage, you need to complete a series of post-migration tasks to ensure that everything is functioning as smoothly and efficiently as possible.
+After you've successfully completed the *migration* stage, you need to complete a series of post-migration tasks to ensure that everything is functioning as smoothly and efficiently as possible.
 
 ### Remediate applications
 
@@ -97,7 +97,7 @@ The test approach for database migration consists of the following activities:
 The post-migration phase is crucial for reconciling any data accuracy issues, verifying completeness, and addressing performance issues with the workload.
 
 > [!NOTE]  
-> For more information about these issues and the steps to mitigate them, see the [Post-migration Validation and Optimization Guide](../../../relational-databases/post-migration-validation-and-optimization-guide.md).
+> For more information about these issues and the steps to mitigate them, see the [Post-migration Validation and Optimization Guide](../../../relational-databases/post-migration-validation-and-optimization-guide.md).
 
 ## Migration assets
 

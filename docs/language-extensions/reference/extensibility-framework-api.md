@@ -309,7 +309,7 @@ Supported values:
 ### Syntax
 
 ```cpp
-SQLUSMALLINT GetInterfaceVersion();
+SQLUSMALLINT GetInterfaceVersion();
 ```
 
 ## CleanupSession

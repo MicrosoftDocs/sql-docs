@@ -69,7 +69,7 @@ Get 10 databases and return properties that are available to query:
 
 ```kusto
 resources
-| where type == 'microsoft.azurearcdata/sqlserverinstances/databases'
+| where type == 'microsoft.azurearcdata/sqlserverinstances/databases'
 | limit 10
 ```
 
@@ -77,7 +77,7 @@ Many of the most interesting properties to query are in the `properties` propert
 
 ```kusto
 resources
-| where type == 'microsoft.azurearcdata/sqlserverinstances/databases'
+| where type == 'microsoft.azurearcdata/sqlserverinstances/databases'
 | project properties
 ```
 
@@ -86,7 +86,7 @@ You can navigate the hierarchy of the properties JSON by using a period between 
 ### Scenario 2: Get all the databases that have the database option AUTO_CLOSE set to ON
 
 ```kusto
-| where (type == 'microsoft.azurearcdata/sqlserverinstances/databases' and properties.databaseOptions.isAutoCloseOn == true)
+| where (type == 'microsoft.azurearcdata/sqlserverinstances/databases' and properties.databaseOptions.isAutoCloseOn == true)
 | extend isAutoCloseOn = properties.databaseOptions.isAutoCloseOn
 | project name, isAutoCloseOn
 ```
@@ -95,7 +95,7 @@ You can navigate the hierarchy of the properties JSON by using a period between 
 
 ```kusto
 resources
-| where type == 'microsoft.azurearcdata/sqlserverinstances/databases'
+| where type == 'microsoft.azurearcdata/sqlserverinstances/databases'
 | extend isEncrypted = properties.databaseOptions.isEncrypted
 | summarize count() by tostring(isEncrypted)
 | order by ['isEncrypted'] asc
@@ -105,7 +105,7 @@ resources
 
 ```kusto
 resources
-| where (type == 'microsoft.azurearcdata/sqlserverinstances/databases' and properties.databaseOptions.isEncrypted == false)
+| where (type == 'microsoft.azurearcdata/sqlserverinstances/databases' and properties.databaseOptions.isEncrypted == false)
 | extend isEncrypted = properties.databaseOptions.isEncrypted
 | project name, isEncrypted
 ```
@@ -116,16 +116,16 @@ This example returns all databases in the `westus3` location with a compatibilit
 
 ```kusto
 resources
-| where type == 'microsoft.azurearcdata/sqlserverinstances/databases'
-| where location == "westus3"
-| where properties.compatibilityLevel == "160"
+| where type == 'microsoft.azurearcdata/sqlserverinstances/databases'
+| where location == "westus3"
+| where properties.compatibilityLevel == "160"
 ```
 
 ### Scenario 6: Show the SQL Server version distribution
 
 ```kusto
 resources
-| where type == 'microsoft.azurearcdata/sqlserverinstances'
+| where type == 'microsoft.azurearcdata/sqlserverinstances'
 | extend SQLversion = properties.version
 | summarize count() by tostring(SQLversion)
 ```
@@ -136,7 +136,7 @@ This example returns the number of databases, ordered by the compatibility level
 
 ```kusto
 resources
-| where type == 'microsoft.azurearcdata/sqlserverinstances/databases'
+| where type == 'microsoft.azurearcdata/sqlserverinstances/databases'
 | summarize count() by tostring(properties.compatibilityLevel)
 | order by properties_compatibilityLevel asc
 ```

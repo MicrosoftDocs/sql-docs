@@ -321,8 +321,8 @@ GO
 
 --run in both the master database and in your dedicated SQL pool database
 CREATE USER Manager FOR LOGIN Manager;
-CREATE USER Sales1  FOR LOGIN Sales1;
-CREATE USER Sales2  FOR LOGIN Sales2 ;
+CREATE USER Sales1  FOR LOGIN Sales1;
+CREATE USER Sales2  FOR LOGIN Sales2 ;
 ```
 
 Create a table to hold data.

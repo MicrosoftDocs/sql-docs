@@ -54,5 +54,5 @@ Describes enhancing application performance by reducing the number of round trip
 
 - [Connecting to a data source](connecting-to-data-source.md)
 - [Commands and parameters](commands-parameters.md)
-- [Transactions and concurrency](transactions-and-concurrency.md)
+- [Transactions and concurrency](transactions-and-concurrency.md)
 - [Microsoft ADO.NET for SQL Server](microsoft-ado-net-sql-server.md)

@@ -614,8 +614,8 @@ To review details about a failed operation:
 If LRS fails to start after some time and you get an error, check for the most common issues:
 
 - Does an existing database on your managed instance have the same name as the one you're trying to migrate from your SQL Server instance? Resolve this conflict by renaming one of the databases.
-- Are the permissions granted for the SAS token Read and List _only_?
-- Did you copy the SAS token for LRS after the question mark (`?`), with content that looks like `sv=2020-02-10...`? 
+- Are the permissions granted for the SAS token Read and List _only_?
+- Did you copy the SAS token for LRS after the question mark (`?`), with content that looks like `sv=2020-02-10...`? 
 - Is the SAS token validity time appropriate for the time window of starting and completing the migration? There might be mismatches because of the different time zones used for your SQL Managed Instance deployment and the SAS token. Try regenerating the SAS token and extending the token validity of the time window before and after the current date.
 - When starting multiple Log Replay restores in parallel targeting the same storage container, ensure that the same valid SAS token is provided for every restore operation. 
 - Are the database name, resource group name, and managed instance name spelled correctly?

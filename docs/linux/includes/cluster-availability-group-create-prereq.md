@@ -52,8 +52,8 @@ On Linux, you must create an availability group before you add it as a cluster r
    The following example shows `/etc/hosts` on `node1` with additions for `node1`, `node2`, and `node3`. In this sample, `node1` refers to the server that hosts the primary replica, and `node2` and `node3` refer to servers that host the secondary replicas.
 
    ```output
-   127.0.0.1    localhost localhost4 localhost4.localdomain4
-   ::1          localhost localhost6 localhost6.localdomain6
+   127.0.0.1    localhost localhost4 localhost4.localdomain4
+   ::1          localhost localhost6 localhost6.localdomain6
    10.128.18.12 node1
    10.128.16.77 node2
    10.128.15.33 node3

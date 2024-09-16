@@ -137,7 +137,7 @@ GO
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
 
 ```output
-FirstName      LastName            City
+FirstName      LastName            City
 ----------     -------------------- ---------------
 Angela         Barbariol            Snohomish
 David          Barber               Snohomish
@@ -247,7 +247,7 @@ GO
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
 
 ```output
-FirstName             LastName             Phone
+FirstName             LastName             Phone
 -----------------     -------------------  ------------
 Ruben                 Alonso               415-555-124
 Shelby                Cook                 415-555-0121
@@ -285,7 +285,7 @@ GO
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
 
 ```output
-FirstName              LastName            Phone
+FirstName              LastName            Phone
 ---------------------- -------------------- -------------------
 Gail                  Alexander            1 (11) 500 555-0120
 Gail                  Butler               1 (11) 500 555-0191

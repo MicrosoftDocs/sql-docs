@@ -27,7 +27,7 @@ apitype: "dllExport"
 ```cpp  
   
 SQLRETURN SQLMoreResults(  
-     SQLHSTMT     StatementHandle);  
+     SQLHSTMT     StatementHandle);  
 ```  
   
 ## Arguments  

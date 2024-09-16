@@ -23,7 +23,7 @@ Rs.Open "SHAPE {select stor_id, stor_name, state from stores} APPEND ({select st
  The following is the XML format of the persisted Recordset:  
   
 ```  
-<xml xmlns:s="uuid:BDC6E3F0-6DA3-11d1-A2A3-00AA00C14882"     xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"     xmlns:rs="urn:schemas-microsoft-com:rowset"   
+<xml xmlns:s="uuid:BDC6E3F0-6DA3-11d1-A2A3-00AA00C14882"     xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"     xmlns:rs="urn:schemas-microsoft-com:rowset"   
     xmlns:z="#RowsetSchema">   
   <s:Schema id="RowsetSchema">   
     <s:ElementType name="row" content="eltOnly" rs:updatable="true">   

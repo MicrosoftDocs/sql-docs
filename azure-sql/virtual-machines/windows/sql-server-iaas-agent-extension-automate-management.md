@@ -22,10 +22,10 @@ The SQL Server IaaS Agent extension (SqlIaasExtension) runs on SQL Server on Azu
 
 This article provides an overview of the extension. To install the SQL Server IaaS Agent extension to SQL Server on Azure VMs, see the articles for [Automatic registration](sql-agent-extension-automatic-registration-all-vms.md), [Register single VMs](sql-agent-extension-manually-register-single-vm.md),  or [Register VMs in bulk](sql-agent-extension-manually-register-vms-bulk.md). 
 
-To learn more about the Azure VM deployment and management experience, including recent improvements, see:
+To learn more about the SQL Server on Azure VM deployment and management experience, watch the following Data Exposed videos:
 
-- [Azure SQL VM: Automate Management with the SQL Server IaaS Agent extension (Ep. 2)](/shows/data-exposed/azure-sql-vm-automate-management-with-the-sql-server-iaas-agent-extension-ep-2?WT.mc_id=dataexposed-c9-niner-mighub)
-- [Azure SQL VM: New and Improved SQL on Azure VM deployment and management experience (Ep.8) | Data Exposed](/shows/data-exposed/new-and-improved-sql-on-azure-vm-deployment-and-management-experience?WT.mc_id=dataexposed-c9-niner-mighub).
+- [Automate Management with the SQL Server IaaS Agent extension ](/shows/data-exposed/azure-sql-vm-automate-management-with-the-sql-server-iaas-agent-extension-ep-2?WT.mc_id=dataexposed-c9-niner-mighub)
+- [New and Improved SQL on Azure VM deployment and management experience](/shows/data-exposed/new-and-improved-sql-on-azure-vm-deployment-and-management-experience?WT.mc_id=dataexposed-c9-niner-mighub).
 
 
 ## Overview
@@ -100,7 +100,7 @@ When you register your SQL Server VM with the SQL IaaS Agent extension, binaries
 
 Deploying a SQL Server VM Azure Marketplace image through the Azure portal automatically registers the SQL Server VM with the extension. However, if you choose to self-install SQL Server on an Azure virtual machine, or provision an Azure virtual machine from a custom VHD, then you must register your SQL Server VM with the SQL IaaS Agent extension to unlock feature benefits. By default, self-installed Azure VMs with SQL Server 2016 or later are automatically registered with the SQL IaaS Agent extension when detected by the [CEIP service](/sql/sql-server/usage-and-diagnostic-data-configuration-for-sql-server). SQL Server VMs not detected by the CEIP should be manually registered. 
 
-When you register with the SQL IaaS Agent extension, binaries are copied to the virtual machine, but the agent is not installed by default. The agent will only be installed when you enable one of the [SQL IaaS Agent extension features](#feature-benefits) that require it, and the following two services will then run on the virtual machine: 
+When you register with the SQL IaaS Agent extension, binaries are copied to the virtual machine, but the agent isn't installed by default. The agent will only be installed when you enable one of the [SQL IaaS Agent extension features](#feature-benefits) that require it, and the following two services will then run on the virtual machine: 
 
 - **Microsoft SQL Server IaaS agent** is the main service for the SQL IaaS Agent extension and should run under the **Local System** account. 
 - **Microsoft SQL Server IaaS Query Service** is a helper service that helps the extension run queries within SQL Server and should run under the **NT Service** account `NT Service\SqlIaaSExtensionQuery`. 
@@ -115,30 +115,31 @@ Registering your SQL Server VM with the SQL Server IaaS Agent extension creates 
 
 ### Multiple instance support
 
-The SQL IaaS Agent extension only works on virtual machines with multiple instances if there is a default instance. When you register your virtual machine with the SQL IaaS Agent extension, it registers the default instance, and that's the instance you'll be able to manage from the Azure portal. 
+The SQL IaaS Agent extension supports the following environments:
 
-The SQL IaaS Agent extension does not support virtual machines with multiple named instances if there is no default instance. 
-
+- One default instance.
+- If there are multiple instances, only the default instance is supported and managed by the extension in the Azure portal. Environments with multiple named instances without a default instance aren't supported.
+- One named instance, if it's the only installed instance.
 
 ### Named instance support
 
-The SQL IaaS Agent extension works with a named instance of SQL Server if it's the only SQL Server instance available on the virtual machine. The SQL IaaS Agent extension does not support VMs with multiple named instances. 
+If you want to manage a single named instance in the Azure portal, install SQL Server with a nondefault name to an Azure virtual machine and then [register it with the SQL IaaS Agent extension](sql-agent-extension-manually-register-single-vm.md).
 
-To use a named instance of SQL Server, deploy an Azure virtual machine, install a single named SQL Server instance to it, and then register it with the [SQL IaaS Agent extension](sql-agent-extension-manually-register-single-vm.md).
+If you want to manage a single named instance in a SQL Server image from Azure Marketplace, you must first uninstall the existing SQL Server instance, install SQL Server with a named instance, and then register it with the SQL IaaS Agent extension. 
 
-Alternatively, to use a named instance with an Azure Marketplace SQL Server image, follow these steps: 
+To use a single named instance with SQL Server on Azure VMs, follow these steps: 
 
    1. Deploy a SQL Server VM from Azure Marketplace. 
    1. [Delete the SQL IaaS Agent extension from the SQL Server VM](sql-agent-extension-manually-register-single-vm.md#delete-the-extension). 
-   1. Uninstall SQL Server completely within the SQL Server VM.
+   1. Connect to the virtual machine and uninstall SQL Server completely. 
    1. Restart the virtual machine. 
-   1. Install SQL Server with a named instance within the SQL Server VM. 
+   1. Connect to the virtual machine and then use the setup media (typically located in `C:\SQLServerFull`) to install a [named SQL Server instance](/sql/sql-server/install/instance-configuration#options). 
    1. Restart the virtual machine. 
    1. [Register the VM with the SQL IaaS Agent Extension](sql-agent-extension-manually-register-single-vm.md#register-with-extension). 
 
 ### Failover Clustered Instance support
 
-Registering your SQL Server Failover Clustered Instance (FCI) is supported with limited functionality. Due to the limited functionality, SQL Server FCIs registered with the extension do not support features that require the agent, such as automated backup, patching, Microsoft Entra authentication and advanced portal management. 
+Registering your SQL Server Failover Clustered Instance (FCI) is supported with limited functionality. Due to the limited functionality, SQL Server FCIs registered with the extension don't support features that require the agent, such as automated backup, patching, Microsoft Entra authentication and advanced portal management. 
 
 If your SQL Server VM has already been registered with the SQL IaaS Agent extension and you've enabled any features that require the agent, you'll need to [delete the extension from the SQL Server VM](sql-agent-extension-manually-register-single-vm.md#delete-the-extension) and register it again after your FCI is installed.
 
@@ -190,10 +191,10 @@ The SQL IaaS Agent extension only supports:
 - SQL Server VMs deployed through the Azure Resource Manager. SQL Server VMs deployed through the classic model aren't supported. 
 - SQL Server VMs deployed to the public or Azure Government cloud. Deployments to other private or government clouds aren't supported. 
 - TCP/IP must be enabled in SQL Server Configuration Manager and for the VM for the extension to work with your SQL Server on Azure VMs. 
-- SQL Server FCIs with limited functionality. SQL Server FCIs registered with the extension do not support features that require the agent, such as automated backup, patching, and advanced portal management. 
-- VMs with a default instance, or a single named instance. 
+- SQL Server FCIs with limited functionality. SQL Server FCIs registered with the extension don't support features that require the agent, such as automated backup, patching, and advanced portal management. 
+- VMs with a default instance, or a single named instance when no default instance is present.
 - If the VM has multiple named instances, then one of the instances must be the default instance to work with the SQL IaaS Agent extension. 
-- SQL Server instance images only. The SQL IaaS Agent extension does not support Reporting Services or Analysis services, such as the following images: SQL Server Reporting Services, Power BI Report Server, SQL Server Analysis Services. 
+- SQL Server instance images only. The SQL IaaS Agent extension doesn't support Reporting Services or Analysis services, such as the following images: SQL Server Reporting Services, Power BI Report Server, SQL Server Analysis Services. 
 
 ## <a id="in-region-data-residency"></a> Privacy statements
 

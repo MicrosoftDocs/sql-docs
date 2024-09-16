@@ -67,21 +67,21 @@ If you want to provide the connection information with a DSN (data source name),
 1. Search for the **ODBC Data Sources (64-bit)** application in the Start Menu. If you only have a 32-bit driver, or have to use a 32-bit driver, search for the **ODBC Data Sources (32-bit)** application instead.
 1. Launch the application. The **ODBC Data Source Administrator** window opens. The following is what the application looks like.
 
- :::image type="content" source="media/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard/odbc-administrator-control-panel-applet.png" alt-text="Screenshot of the ODBC Data Source Administrator User DSN window.":::
+   :::image type="content" source="media/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard/odbc-administrator-control-panel-applet.png" alt-text="Screenshot of the ODBC Data Source Administrator User DSN window.":::
 
 1. If you want to **use an existing DSN** for your data source, you can use any DSN that you see on the **User DSN**, **System DSN**, or **File DSN** tab. Check the name, then go back to the wizard and enter it in the **Dsn** field on the **Choose a Data Source** or **Choose a Destination** page. Skip the rest of this page and continue to the next step of the wizard.
 1. If you want to **create a new DSN**, decide whether you want it to be visible only to you (User DSN), visible to all users of the computer including Windows services (System DSN), or saved in a file (File DSN). This example creates a new System DSN.
 1. On the **System DSN** tab, select **Add**.
 
- :::image type="content" source="media/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard/add-a-new-odbc-system-dsn.png" alt-text="Screenshot of the ODBC Data Source Administrator System DSN window.":::
+   :::image type="content" source="media/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard/add-a-new-odbc-system-dsn.png" alt-text="Screenshot of the ODBC Data Source Administrator System DSN window.":::
 
 1. In the **Create a New Data Source** dialog box, select the driver for your data source, then select **Finish**.
 
- :::image type="content" source="media/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard/pick-driver-for-new-system-dsn.png" alt-text="Screenshot of creating a new data source using the ODBC Data Source Administrator.":::
+   :::image type="content" source="media/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard/pick-driver-for-new-system-dsn.png" alt-text="Screenshot of creating a new data source using the ODBC Data Source Administrator.":::
 
 1. The driver now displays one or more driver-specific screens where you enter the info needed to connect to your data source. (For the SQL Server driver, for example, there are four pages of custom settings.) After you finish, the new system DSN appears in the list.
 
- :::image type="content" source="media/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard/new-system-dsn-in-list.png" alt-text="Screenshot of the newly created System DSN created in the ODBC Data Source Administrator.":::
+   :::image type="content" source="media/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard/new-system-dsn-in-list.png" alt-text="Screenshot of the newly created System DSN created in the ODBC Data Source Administrator.":::
 
 1. Go back to the wizard and enter the DSN name in the **Dsn** field on the **Choose a Data Source** or **Choose a Destination** page. Continue to the next step of the wizard.
 

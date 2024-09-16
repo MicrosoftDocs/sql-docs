@@ -18,9 +18,9 @@ ms.custom:
 
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
-This article shows you how to configure [active geo-replication for Azure SQL Database](active-geo-replication-overview.md#active-geo-replication-terminology-and-capabilities) using the [Azure portal](https://portal.azure.com) or Azure CLI and to initiate failover.
+This article shows you how to configure [active geo-replication](active-geo-replication-overview.md) and initiate a failover for Azure SQL Database by using the [Azure portal](https://portal.azure.com), PowerShell, or the Azure CLI.
 
-For failover groups, see [Failover groups with Azure SQL Database](failover-group-sql-db.md) and [Failover groups with Azure SQL Managed Instance](../managed-instance/failover-group-sql-mi.md).
+Active geo-replication is configured per database. To fail over a group of databases, or if your application requires a stable connection endpoint, consider [Failover groups](failover-group-sql-db.md) instead.
 
 ## Prerequisites
 
@@ -300,7 +300,12 @@ Remove-AzSqlDatabaseSecondary @parameters
 
 ## Related content
 
-- [Active geo-replication](active-geo-replication-overview.md)
-- [Failover groups overview & best practices (Azure SQL Database)](failover-group-sql-db.md)
-- [Overview of business continuity with Azure SQL Database](business-continuity-high-availability-disaster-recover-hadr-overview.md)
-- [Configure a license-free standby replica for Azure SQL Database](standby-replica-how-to-configure.md)
+
+
+## Next steps
+
+* [Active geo-replication](active-geo-replication-overview.md).
+* [Failover groups](failover-group-sql-db.md)
+* [Business continuity overview](business-continuity-high-availability-disaster-recover-hadr-overview.md).
+* Save on licensing costs by designating your secondary DR replica for [standby](standby-replica-how-to-configure.md).
+

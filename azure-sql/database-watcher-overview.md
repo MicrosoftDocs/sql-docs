@@ -5,7 +5,7 @@ description: An overview of database watcher for Azure SQL, a managed monitoring
 author: dimitri-furman
 ms.author: dfurman
 ms.reviewer: wiassaf
-ms.date: 09/24/2024
+ms.date: 09/27/2024
 ms.service: azure-sql
 ms.subservice: monitoring
 ms.topic: conceptual

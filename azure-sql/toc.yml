@@ -163,6 +163,8 @@
       items:
       - name: Connect and query
         href: database/connect-query-content-reference-guide.md
+      - name: SSMS
+        href: database/connect-query-ssms.md
       - name: .NET with Visual Studio
         href: database/connect-query-dotnet-visual-studio.md
       - name: .NET with Windows, Linux, and macOS
@@ -632,8 +634,6 @@
         items:
         - name: Azure Data Studio
           href: /azure-data-studio/quickstart-sql-database
-        - name: SSMS
-          href: database/connect-query-ssms.md
         - name: Azure portal query editor
           href: database/query-editor.md
         - name: VS Code

@@ -33,11 +33,11 @@ This article describes limitations and issues with SQL Server 2017. For related 
 - **Workaround:** First, restart the computer and check if the FILESTREAM network share is available. If the share is still not available, complete the following steps:
 
     1. In SQL Server Configuration Manager, right-click the SQL Server instance, and click **Properties**. 
-    2. In the **FILESTREAM** tab clear **Enable FILESTREAM for file I/O streaming access**, then click **Apply**.
+    2. In the **FILESTREAM** tab clear **Enable FILESTREAM for file I/O streaming access**, then click **Apply**.
     3. Check **Enable FILESTREAM for file I/O streaming access** again with the original share name and click **Apply**.
 
 ### Master Data Services (MDS)
-- **Issue and customer impact:** 
+- **Issue and customer impact:** 
 On the user permissions page, when granting permission to the root level in the entity tree view, you see the following error:
 `"The model permission cannot be saved. The object guid is not valid"`
 

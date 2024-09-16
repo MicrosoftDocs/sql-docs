@@ -37,7 +37,7 @@ HKEY_CURRENT_USER
                          Driver : REG_SZ : C:\WINDOWS\SYSTEM\Sqlsrvr.dll  
                          Description : REG_SZ : Payroll database  
                          Server : REG_SZ : PYRLL1  
-                         FastConnectOption : REG_SZ : No                          UseProcForPrepare : REG_SZ : Yes  
+                         FastConnectOption : REG_SZ : No                          UseProcForPrepare : REG_SZ : Yes  
                          OEMTOANSI : REG_SZ : No  
                          LastUser : REG_SZ : smithjo  
                          Database : REG_SZ : Payroll  

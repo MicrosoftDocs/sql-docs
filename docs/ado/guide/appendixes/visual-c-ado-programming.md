@@ -35,24 +35,24 @@ The ADO API Reference describes the functionality of the ADO application program
  You can get or set a property with calls of these forms:  
   
 ```cpp
-variable = objectPtr->GetProperty(); // get property value   
-objectPtr->PutProperty(value);       // set property value  
-objectPtr->PutRefProperty(&value);   // set property with object pointer  
+variable = objectPtr->GetProperty(); // get property value   
+objectPtr->PutProperty(value);       // set property value  
+objectPtr->PutRefProperty(&value);   // set property with object pointer  
 ```
   
 ## Using Property Directives  
  The **__declspec(property...)** compiler directive is a Microsoft-specific C language extension that declares a function used as a property to have an alternative syntax. As a result, you can set or get values of a property in a way similar to Visual Basic. For example, you can set and get a property this way:  
   
 ```cpp
-objectPtr->property = value;        // set property value  
-variable = objectPtr->property;     // get property value  
+objectPtr->property = value;        // set property value  
+variable = objectPtr->property;     // get property value  
 ```
   
  Notice you do not have to code:  
   
 ```cpp
-objectPtr->PutProperty(value);      // set property value  
-variable = objectPtr->GetProperty;  // get property value  
+objectPtr->PutProperty(value);      // set property value  
+variable = objectPtr->GetProperty;  // get property value  
 ```
   
  The compiler will generate the appropriate **Get**_-_, **Put**-, or **PutRef**_Property_ call based on what alternative syntax is declared and whether the property is being read or written.  
@@ -169,11 +169,11 @@ rs->Fields->Item["au_fname"]->Value = "value";
  Three methods are exceptions to the typical use of **vtMissing**. These are the **Execute** methods of the **Connection** and **Command** objects, and the **NextRecordset** method of the **Recordset** object. The following are their signatures:  
   
 ```cpp
-_RecordsetPtr <A HREF="mdmthcnnexecute.htm">Execute</A>( _bstr_t CommandText, VARIANT * RecordsAffected,   
-        long Options );  // Connection  
-_RecordsetPtr <A HREF="mdmthcmdexecute.htm">Execute</A>( VARIANT * RecordsAffected, VARIANT * Parameters,   
-        long Options );  // Command  
-_RecordsetPtr <A HREF="mdmthnextrec.htm">NextRecordset</A>( VARIANT * RecordsAffected );  // Recordset  
+_RecordsetPtr <A HREF="mdmthcnnexecute.htm">Execute</A>( _bstr_t CommandText, VARIANT * RecordsAffected,   
+        long Options );  // Connection  
+_RecordsetPtr <A HREF="mdmthcmdexecute.htm">Execute</A>( VARIANT * RecordsAffected, VARIANT * Parameters,   
+        long Options );  // Command  
+_RecordsetPtr <A HREF="mdmthnextrec.htm">NextRecordset</A>( VARIANT * RecordsAffected );  // Recordset  
 ```
   
  The parameters, *RecordsAffected* and *Parameters*, are pointers to a **Variant**. *Parameters* is an input parameter which specifies the address of a **Variant** containing a single parameter, or array of parameters, that will modify the command being executed. *RecordsAffected* is an output parameter that specifies the address of a **Variant**, where the number of rows affected by the method is returned.  
@@ -185,8 +185,8 @@ _RecordsetPtr <A HREF="mdmthnextrec.htm">NextRecordset</A>( VARIANT * Record
  Thus, for these three methods, it is valid to code something such as:  
   
 ```cpp
-pConnection->Execute("commandText", NULL, adCmdText);   
-pCommand->Execute(NULL, NULL, adCmdText);  
+pConnection->Execute("commandText", NULL, adCmdText);   
+pCommand->Execute(NULL, NULL, adCmdText);  
 pRecordset->NextRecordset(NULL);  
 ```
   
@@ -260,14 +260,14 @@ rs->Open(...);
  When you need to code a missing **String** operand in Visual Basic, you merely omit the operand. You must specify the operand in Visual C++. Code a **_bstr_t** that has an empty string as a value.  
   
 ```cpp
-_bstr_t strMissing(L"");  
+_bstr_t strMissing(L"");  
 ```
   
 ### Coding a Missing Parameter - Variant  
  When you need to code a missing **Variant** operand in Visual Basic, you merely omit the operand. You must specify all operands in Visual C++. Code a missing **Variant** parameter with a **_variant_t** set to the special value, DISP_E_PARAMNOTFOUND, and type, VT_ERROR. Alternatively, specify **vtMissing**, which is an equivalent predefined constant supplied by the **#import** directive.  
   
 ```cpp
-_variant_t  vtMissingYours(DISP_E_PARAMNOTFOUND, VT_ERROR);   
+_variant_t  vtMissingYours(DISP_E_PARAMNOTFOUND, VT_ERROR);   
 ```
   
  -or use -  
@@ -280,7 +280,7 @@ _variant_t  vtMissingYours(DISP_E_PARAMNOTFOUND, VT_ERROR); 
  In Visual Basic, a **Variant** is declared with the **Dim** statement as follows:  
   
 ```vb
-Dim VariableName As Variant  
+Dim VariableName As Variant  
 ```
   
  In Visual C++, declare a variable as type **_variant_t**. A few schematic **_variant_t** declarations are shown below.  
@@ -289,30 +289,30 @@ Dim VariableName As Variant
 >  These declarations merely give a rough idea of what you would code in your own program. For more information, see the examples below, and the Visual C++documentation.  
   
 ```cpp
-_variant_t  VariableName(value);  
-_variant_t  VariableName((data type cast) value);  
-_variant_t  VariableName(value, VT_DATATYPE);  
-_variant_t  VariableName(interface * value, bool fAddRef = true);  
+_variant_t  VariableName(value);  
+_variant_t  VariableName((data type cast) value);  
+_variant_t  VariableName(value, VT_DATATYPE);  
+_variant_t  VariableName(interface * value, bool fAddRef = true);  
 ```
   
 ### Using Arrays of Variants  
  In Visual Basic, arrays of **Variants** can be coded with the **Dim** statement, or you may use the **Array** function, as demonstrated in the following example code:  
   
 ```vb
-Public Sub ArrayOfVariants  
-Dim cn As ADODB.Connection  
-Dim rs As ADODB.Recordset  
+Public Sub ArrayOfVariants  
+Dim cn As ADODB.Connection  
+Dim rs As ADODB.Recordset  
 Dim fld As ADODB.Field  
   
-    cn.Open "DSN=pubs"  
-    rs = cn.OpenSchema(adSchemaColumns, _  
-        Array(Empty, Empty, "authors", Empty))  
+    cn.Open "DSN=pubs"  
+    rs = cn.OpenSchema(adSchemaColumns, _  
+        Array(Empty, Empty, "authors", Empty))  
     For Each fld in rs.Fields  
         Debug.Print "Name = "; fld.Name  
     Next fld  
     rs.Close  
     cn.Close  
-End Sub  
+End Sub  
 ```
   
  The following Visual C++ example demonstrates using a **SafeArray** used with a **_variant_t**.  
@@ -325,7 +325,7 @@ End Sub
 2.  You only need a one-dimensional array, so you can use **SafeArrayCreateVector**, instead of the general purpose **SAFEARRAYBOUND** declaration and **SafeArrayCreate** function. The following is what that code would look like using **SafeArrayCreate**:  
   
     ```cpp
-       SAFEARRAYBOUND   sabound[1];  
+       SAFEARRAYBOUND   sabound[1];  
        sabound[0].lLbound = 0;  
        sabound[0].cElements = 4;  
        pSa = SafeArrayCreate(VT_VARIANT, 1, sabound);  
@@ -408,20 +408,20 @@ int main() {
  In Visual Basic, the name of a property is not qualified by whether it is retrieved, assigned, or assigned a reference.  
   
 ```vb
-Public Sub GetPutPutRef  
-Dim rs As New ADODB.Recordset  
-Dim cn As New ADODB.Connection  
-Dim sz as Integer  
-cn.Open "Provider=sqloledb;Data Source=yourserver;" & _  
+Public Sub GetPutPutRef  
+Dim rs As New ADODB.Recordset  
+Dim cn As New ADODB.Connection  
+Dim sz as Integer  
+cn.Open "Provider=sqloledb;Data Source=yourserver;" & _  
          "Initial Catalog=pubs;Integrated Security=SSPI;"  
-rs.PageSize = 10  
-sz = rs.PageSize  
-rs.ActiveConnection = cn  
-rs.Open "authors",,adOpenStatic  
+rs.PageSize = 10  
+sz = rs.PageSize  
+rs.ActiveConnection = cn  
+rs.Open "authors",,adOpenStatic  
 ' ...  
 rs.Close  
 cn.Close  
-End Sub  
+End Sub  
 ```
   
  This Visual C++ example demonstrates the **Get**/**Put**/**PutRef**_Property_.  
@@ -477,21 +477,21 @@ int main() {
  This Visual Basic example demonstrates the standard and alternative syntax for **Item**().  
   
 ```vb
-Public Sub GetItemItem  
-Dim rs As New ADODB.Recordset  
-Dim name as String  
-rs = rs.Open "authors", "DSN=pubs;", adOpenDynamic, _  
-         adLockBatchOptimistic, adTable  
-name = rs(0)  
-' -or-  
-name = rs.Fields.Item(0)  
-rs(0) = "Test"  
+Public Sub GetItemItem  
+Dim rs As New ADODB.Recordset  
+Dim name as String  
+rs = rs.Open "authors", "DSN=pubs;", adOpenDynamic, _  
+         adLockBatchOptimistic, adTable  
+name = rs(0)  
+' -or-  
+name = rs.Fields.Item(0)  
+rs(0) = "Test"  
 rs.UpdateBatch  
-' Restore name  
-rs(0) = name  
+' Restore name  
+rs(0) = name  
 rs.UpdateBatch  
 rs.Close  
-End Sub  
+End Sub  
 ```
   
  This Visual C++ example demonstrates **Item**.  

@@ -27,7 +27,7 @@ apitype: "dllExport"
 ```cpp  
   
 BOOL SQLValidDSN(  
-     LPCSTR    lpszDSN);  
+     LPCSTR    lpszDSN);  
 ```  
   
 ## Arguments  

@@ -120,15 +120,15 @@ Automatic backups on secondary replicas:
 
 This table summarizes the capabilities and features of [point-in-time restore (PITR)](recovery-using-backups.md#point-in-time-restore), [geo-restore](recovery-using-backups.md#geo-restore), and [long-term retention](long-term-retention-overview.md).
 
-| Backup property | PITR | Geo-restore | LTR |
+| Backup property | PITR | Geo-restore | LTR |
 |---|---|---|---|
 | **Types of SQL backup** | Full, differential, log. | Most recent geo-replicated copies of PITR backups. | Only the full backups. |
-| **Recovery point objective (RPO)** | 10 minutes, based on compute size and amount of database activity. | Up to 1 hour, based on geo-replication. <sup>1</sup> | One week (or user's policy).|
-| **Recovery time objective (RTO)** | Restore usually takes less than 12 hours but could take longer, depending on size and activity. See [Recovery](recovery-using-backups.md#recovery-time). | Restore usually takes less than 12 hours but could take longer, depending on size and activity. See [Recovery](recovery-using-backups.md#recovery-time). | Restore usually takes less than 12 hours but could take longer, depending on size and activity. See [Recovery](recovery-using-backups.md#recovery-time). |
-| **Retention** | 7 days by default, configurable between 1 and 35 days (except Basic databases, which are configurable between 1 and 7 days). | Enabled by default, same as source.<sup>2</sup>| Not enabled by default. Retention is up to 10 years. |
-| **Azure Storage**  | Geo-redundant by default. You can optionally configure zone-redundant or locally redundant storage. | Available when PITR backup storage redundancy is set to geo-redundant. Not available when PITR backup storage is zone-redundant or locally redundant. | Geo-redundant by default. You can configure zone-redundant or locally redundant storage. |
+| **Recovery point objective (RPO)** | 10 minutes, based on compute size and amount of database activity. | Up to 1 hour, based on geo-replication. <sup>1</sup> | One week (or user's policy).|
+| **Recovery time objective (RTO)** | Restore usually takes less than 12 hours but could take longer, depending on size and activity. See [Recovery](recovery-using-backups.md#recovery-time). | Restore usually takes less than 12 hours but could take longer, depending on size and activity. See [Recovery](recovery-using-backups.md#recovery-time). | Restore usually takes less than 12 hours but could take longer, depending on size and activity. See [Recovery](recovery-using-backups.md#recovery-time). |
+| **Retention** | 7 days by default, configurable between 1 and 35 days (except Basic databases, which are configurable between 1 and 7 days). | Enabled by default, same as source.<sup>2</sup>| Not enabled by default. Retention is up to 10 years. |
+| **Azure Storage**  | Geo-redundant by default. You can optionally configure zone-redundant or locally redundant storage. | Available when PITR backup storage redundancy is set to geo-redundant. Not available when PITR backup storage is zone-redundant or locally redundant. | Geo-redundant by default. You can configure zone-redundant or locally redundant storage. |
 | **Configure backups as [immutable](/azure/storage/blobs/immutable-storage-overview)** | Not supported | Not supported | Not supported | 
-| **Restoring a new database in the same region** | Supported | Supported | Supported |
+| **Restoring a new database in the same region** | Supported | Supported | Supported |
 | **Restoring a new database in another region** | Not supported | Supported in any Azure region | Supported in any Azure region |
 | **Restoring a new database in another subscription** |  Not supported  |  Not supported<sup>3</sup> | Not supported<sup>3</sup> |
 | **Restoring via Azure portal**|Yes|Yes|Yes|
@@ -136,7 +136,7 @@ This table summarizes the capabilities and features of [point-in-time restore (P
 | **Restoring via Azure CLI** |Yes|Yes|Yes|
 
 
-<sup>1</sup> For business-critical applications that require large databases and must ensure business continuity, use [failover groups](failover-group-sql-db.md).   
+<sup>1</sup> For business-critical applications that require large databases and must ensure business continuity, use [failover groups](failover-group-sql-db.md).   
 <sup>2</sup> All PITR backups are stored on geo-redundant storage by default, so geo-restore is enabled by default.   
 <sup>3</sup> The workaround is to restore to a new server and use Resource Move to move the server to another subscription, or use a [cross-subscription database copy](database-copy.md#copy-to-a-different-subscription).   
 

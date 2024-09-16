@@ -87,7 +87,7 @@ The following license types are supported when you're licensing v-cores:
 
   Intermittent connectivity disruptions for up to 30 days are tolerated with built-in resilience. After 30 days without a connection, the pay-as-you-go subscription expires. After your subscription expires, you aren't authorized to use the software.
 
-- The pay-as-you-go hourly charges are issued only when SQL Server is running on the machine at any point within a particular hour, and if the machine is online.
+- The pay-as-you-go hourly charges are issued only when SQL Server is running on the machine at any point within a particular hour, and if the machine is online.
 
 - By selecting a license with Software Assurance, you attest that you have Enterprise or Standard licenses with active Software Assurance or an active SQL Server subscription license.
 

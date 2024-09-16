@@ -70,9 +70,9 @@ In addition, `CAP_AUDIT_WRITE` capability is an optional capability necessary to
 ```yaml
 ...
 allowedCapabilities:
-- SETUID
-- SETGID
-- CHOWN
+- SETUID
+- SETGID
+- CHOWN
 - SYS_PTRACE
 - AUDIT_WRITE
 ...

@@ -69,11 +69,11 @@ Before you start using the SQL Assessment API itself, make sure to install eithe
 
 The SMO Framework is supplemented by the SQL Assessment API extension that provides the following methods:
 
-- `GetAssessmentItems`: Returns available checks for a particular SQL object (`IEnumerable<...>`)
+- `GetAssessmentItems`: Returns available checks for a particular SQL object (`IEnumerable<...>`)
 
-- `GetAssessmentResults`: Synchronously evaluates assessment and returns results and errors if any (`IEnumerable<...>`)
+- `GetAssessmentResults`: Synchronously evaluates assessment and returns results and errors if any (`IEnumerable<...>`)
 
-- `GetAssessmentResultsList`: Asynchronously evaluates assessment and returns results and errors if any (`Task<...>`)
+- `GetAssessmentResultsList`: Asynchronously evaluates assessment and returns results and errors if any (`Task<...>`)
 
 ### Use the API via PowerShell
 

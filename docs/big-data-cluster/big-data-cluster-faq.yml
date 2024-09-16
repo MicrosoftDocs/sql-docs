@@ -116,7 +116,7 @@ sections:
           ROUND_ROBIN and REPLICATED. ROUND_ROBIN is the default. HASH is not available. 
       - question: Does Big Data Cluster have the Spark Thrift Server included? If so, is ODBC endpoint exposed to connect to Hive Metastore tables?
         answer: |
-          We currently expose the Hive Metastore (HMS) via the Thrift protocol. We document the protocol but haven't opened up an ODBC endpoint at this time.  You can access it via the Hive Metastore HTTP protocol, for more information see [Hive Metastore HTTP Protocol](/openspecs/sql_server_protocols/ms-hmshttp/1f53d4a7-19be-41dc-aecc-f762096f2e92). 
+          We currently expose the Hive Metastore (HMS) via the Thrift protocol. We document the protocol but haven't opened up an ODBC endpoint at this time.  You can access it via the Hive Metastore HTTP protocol, for more information see [Hive Metastore HTTP Protocol](/openspecs/sql_server_protocols/ms-hmshttp/1f53d4a7-19be-41dc-aecc-f762096f2e92). 
   - name: Data loading
     questions: 
       - question: Is it possible to ingest data from SnowFlake into a Big Data Cluster?

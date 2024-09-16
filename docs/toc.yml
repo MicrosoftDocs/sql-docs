@@ -1406,7 +1406,7 @@ items:
       items:
       - name: Troubleshooting Activation Stored Procedures
         href: database-engine/service-broker/troubleshooting-activation-stored-procedures.md
-      - name: Troubleshooting Routing and Message Delivery
+      - name: Troubleshooting Routing and Message Delivery
         href: database-engine/service-broker/troubleshooting-routing-and-message-delivery.md
       - name: Troubleshooting Conversation Priorities
         href: database-engine/service-broker/troubleshooting-conversation-priorities.md

@@ -1,5 +1,5 @@
 ---
-title: "Online restore: read-only file (full recovery model)"
+title: "Online restore: read-only file (full recovery model)"
 description: This example shows an online restore in SQL Server of a read-only file for a database using the full recovery model with multiple filegroups.
 author: MashaMSFT
 ms.author: mathoma

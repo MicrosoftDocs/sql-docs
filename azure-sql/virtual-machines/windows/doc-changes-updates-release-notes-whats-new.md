@@ -4,7 +4,7 @@ description: Learn about the new features for and improvements to SQL Server on 
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest, mathoma
-ms.date: 09/05/2024
+ms.date: 09/17/2024
 ms.service: virtual-machines-sql
 ms.subservice: service-overview
 ms.topic: whats-new
@@ -63,6 +63,7 @@ Learn about significant changes to the SQL Server on Azure VMs documentation. Fo
 | Changes | Details |
 | --- | --- |
 | **Azure Key Vault Managed Hardware Security Module (HSM) support with Extensible Key Management**| Azure Key Vault Managed HSM is supported for SQL Server and SQL Server on Azure VMs when using the latest version of the SQL Server Connector, as well as Azure SQL. For more information, see [Set up SQL Server TDE Extensible Key Management by using Azure Key Vault](/sql/relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault). |
+|**Automated patching retirement** | The [automated patching](automated-patching.md) feature has been retired and will be removed on September 17th, 2027. Migrate to [Azure Update Manager](../azure-update-manager-sql-vm.md) as soon as possible to continue receiving new updates to the patching feature for your SQL Server on Azure VM and avoid future service disruptions. |
 
 ### August 2024
 
@@ -98,7 +99,6 @@ Learn about significant changes to the SQL Server on Azure VMs documentation. Fo
 | --- | --- |
 |**Azure Elastic SAN GA** | You can now place your SQL Server workloads on an Azure Elastic SAN for improved performance, throughput, and cost. The Azure Elastic SAN is now generally available (GA).  Review [Azure Elastic SAN](performance-guidelines-best-practices-storage.md#azure-elastic-san) to learn more.| 
 |**Configure log shipping** | Learn to configure log shipping between two SQL Server on Azure VMs. Review [Configure log shipping](log-shipping-configure.md) to learn more. |
-
 
 
 

@@ -4,7 +4,7 @@ description: In-memory technologies greatly improve the performance of transacti
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma
-ms.date: 08/01/2024
+ms.date: 09/17/2024
 ms.service: azure-sql-database
 ms.subservice: performance
 ms.topic: conceptual
@@ -167,9 +167,9 @@ When you use nonclustered columnstore indexes, the base table is still stored in
 
 ### <a id="changing-service-tiers-of-databases-containing-columnstore-indexes"></a> Change service tiers of databases containing columnstore indexes
 
-*Downgrading single database to Basic or Standard* might not be possible if your target tier is below S3. Columnstore indexes are supported only on the Business Critical/Premium pricing tier and on the Standard tier, S3 and above, and not on the Basic tier. When you downgrade your database to an unsupported tier or level, your columnstore index becomes unavailable. The system maintains your columnstore index, but it never uses the index. If you later upgrade back to a supported tier or level, your columnstore index is immediately ready to be used again.
+If you use the DTU purchasing model and your database contains columnstore indexes, your application might stop working if you scale your database below the S3 service objective. Columnstore indexes are supported only in the Hyperscale, Business Critical, and Premium service tiers, as well as in the Standard service tier if using S3 and above. Columnstore indexes are not supported in the Basic service tier. When you scale your database to an unsupported service tier or service objective, your columnstore index becomes unavailable. The system maintains the index when you execute DML statements, but it never uses the index. If you later scale back to a supported service tier or service objective, your columnstore index is immediately ready to be used again.
 
-If you have a **clustered** columnstore index, the whole table becomes unavailable after the downgrade. Drop all *clustered* columnstore indexes (and replace with rowstore clustered indexes) before you downgrade your database to an unsupported tier or level.
+If you have a **clustered** columnstore index, the entire table becomes unavailable if the database is scaled to an unsupported service tier or service objective. Drop all **clustered** columnstore indexes, replacing them with rowstore clustered indexes or heaps, before the scaling operation.
 
 ## Related content
 

@@ -4,7 +4,7 @@ description: Learn about the DTU-based purchasing model for Azure SQL Database a
 author: dimitri-furman
 ms.author: dfurman
 ms.reviewer: wiassaf, mathoma
-ms.date: 09/05/2024
+ms.date: 09/17/2024
 ms.service: azure-sql-database
 ms.subservice: service-overview
 ms.topic: conceptual
@@ -95,10 +95,11 @@ Choosing a service tier depends primarily on business continuity, storage, and p
 |**CPU**|Low|Low, Medium, High|Medium, High|
 |**IOPS (approximate)**\* |1-4 IOPS per DTU| 1-4 IOPS per DTU | >25 IOPS per DTU|
 |**IO latency (approximate)**|5 ms (read), 10 ms (write)|5 ms (read), 10 ms (write)|2 ms (read/write)|
-|**Columnstore indexing** |N/A|Standard S3 and higher|Supported|
+|**Columnstore indexing**\*\* |N/A|Standard S3 and higher|Supported|
 |**In-memory OLTP**|N/A|N/A|Supported|
 
 \* All read and write IOPS against data files, including background IO (checkpoint and lazy writer).
+\*\* For more information, see [Change service tiers of databases containing columnstore indexes](in-memory-oltp-overview.md#change-service-tiers-of-databases-containing-columnstore-indexes).
 
 > [!IMPORTANT]
 > The Basic, S0, S1 and S2 service objectives provide less than one vCore (CPU). For CPU-intensive workloads, a service objective of S3 or greater is recommended.

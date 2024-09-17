@@ -18,11 +18,8 @@ tags: azure-resource-manager
 Automated Patching establishes a maintenance window for an Azure virtual machine running SQL Server. Automated Updates can only be installed during this maintenance window. For SQL Server, this restriction ensures that system updates and any associated restarts occur at the best possible time for the database.
 
 > [!IMPORTANT]  
-> - The automated patching feature has been retired and will be removed on September 17th, 2027. To avoid service disruptions, you must migrate to [Azure Update Manager](../azure-update-manager-sql-vm.md) before this date. We recommend avoiding the use of automated patching in new environments. For existing environments, migrate to [Azure Update Manager](../azure-update-manager-sql-vm.md) as soon as possible to continue receiving future enhancements for the patching feature on your SQL Server on Azure VM.
+> - The [automated patching](automated-patching.md) feature will retire. Currently scheduled for September 17, 2027. To avoid service disruptions, migrate to [Azure Update Manager](../azure-update-manager-sql-vm.md) before this date. Avoid automated patching in new environments. For existing environments, migrate to [Azure Update Manager](../azure-update-manager-sql-vm.md) as soon as possible to continue receiving future enhancements for the patching feature on your SQL Server on Azure VM.
 > - With automated patching, only Windows and SQL Server updates marked as **Important** or **Critical** are installed. Other SQL Server updates, such as service packs and cumulative updates that are not marked as **Important** or **Critical**, must be installed manually. To automatically install Cumulative Updates, use the integrated [Azure Update Manager](../azure-update-manager-sql-vm.md) experience instead. 
-
-
-
 
 ## Prerequisites
 

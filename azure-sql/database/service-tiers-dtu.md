@@ -99,7 +99,8 @@ Choosing a service tier depends primarily on business continuity, storage, and p
 |**In-memory OLTP**|N/A|N/A|Supported|
 
 \* All read and write IOPS against data files, including background IO (checkpoint and lazy writer).
-\*\* For more information, see [Change service tiers of databases containing columnstore indexes](in-memory-oltp-overview.md#change-service-tiers-of-databases-containing-columnstore-indexes).
+
+\*\* For more information, see [Change service tiers of databases containing columnstore indexes](in-memory-oltp-overview.md#changing-service-tiers-of-databases-containing-columnstore-indexes).
 
 > [!IMPORTANT]
 > The Basic, S0, S1 and S2 service objectives provide less than one vCore (CPU). For CPU-intensive workloads, a service objective of S3 or greater is recommended.

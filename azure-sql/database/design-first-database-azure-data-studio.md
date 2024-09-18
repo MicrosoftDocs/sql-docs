@@ -9,7 +9,6 @@ ms.service: azure-sql-database
 ms.subservice: development
 ms.topic: tutorial
 ms.custom:
-  - sqldbrb=1
 ---
 
 # Tutorial: Design a relational database in Azure SQL Database using Azure Data Studio (ADS)
@@ -52,13 +51,13 @@ Azure SQL Database creates an IP firewall at the server-level. This firewall pre
 
 1. Select *yourDatabase* on the **SQL databases** page. The overview page for your database opens, showing you the fully qualified **Server name** (such as `contosodatabaseserver01.database.windows.net`) and provides options for further configuration.
 
-   :::image type="content" source="media\design-first-database-azure-data-studio\server-name.png" alt-text="Screenshot of the Azure portal, database overview page with the server name highlighted." lightbox="media\design-first-database-azure-data-studio\server-name.png":::
+   :::image type="content" source="media\design-first-database-tutorial\server-name.png" alt-text="Screenshot of the Azure portal, database overview page with the server name highlighted." lightbox="media\design-first-database-tutorial\server-name.png":::
 
 1. Copy this fully qualified server name for use to connect to your server and databases from SQL Server Management Studio.
 
 1. Select **Networking** under **Settings**. Choose the **Public Access** tab, and then select **Selected networks** under **Public network access** to display the **Firewall rules** section. 
 
-   :::image type="content" source="media\design-first-database-azure-data-studio\server-firewall-rule.png" alt-text="Screenshot of the Azure portal, networking page, showing where to set the server-level IP firewall rule." lightbox="media\design-first-database-azure-data-studio\server-firewall-rule.png":::
+   :::image type="content" source="media\design-first-database-tutorial\server-firewall-rule.png" alt-text="Screenshot of the Azure portal, networking page, showing where to set the server-level IP firewall rule." lightbox="media\design-first-database-tutorial\server-firewall-rule.png":::
 
 1. Select **Add your client IPv4** on the toolbar to add your current IP address to a new IP firewall rule. An IP firewall rule can open port 1433 for a single IP address or a range of IP addresses.
 

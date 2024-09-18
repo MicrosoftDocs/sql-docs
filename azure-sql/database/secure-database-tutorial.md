@@ -69,14 +69,14 @@ To set up a server-level firewall rule:
 
 1. In the Azure portal, select **SQL databases** from the left-hand menu, and select your database on the **SQL databases** page.
 
-    :::image type="content" source="media\secure-database-tutorial\server-name.png" alt-text="Screenshot of the Azure portal page for a logical SQL database, highlighting the server name." lightbox="media\secure-database-tutorial\server-name.png":::
+    :::image type="content" source="media\design-first-database-tutorial\server-name.png" alt-text="Screenshot of the Azure portal page for a logical SQL database, highlighting the server name." lightbox="media\design-first-database-tutorial\server-name.png":::
 
     > [!NOTE]
     > Be sure to copy your fully qualified server name (such as *yourserver.database.windows.net*) for use later in the tutorial.
 
 1. Select **Networking** under **Settings**. Choose the **Public Access** tab, and then select **Selected networks** under **Public network access** to display the **Firewall rules** section. 
 
-   :::image type="content" source="media\secure-database-tutorial\server-firewall-rule.png" alt-text="Screenshot of the Azure portal Networking page for a logical SQL Server, showing the server-level IP firewall rule." lightbox="media\secure-database-tutorial\server-firewall-rule.png":::
+   :::image type="content" source="media\design-first-database-tutorial\server-firewall-rule.png" alt-text="Screenshot of the Azure portal Networking page for a logical SQL Server, showing the server-level IP firewall rule." lightbox="media\design-first-database-tutorial\server-firewall-rule.png":::
 
 1. Select **Add client IP** on the toolbar to add your current IP address to a new IP firewall rule. An IP firewall rule can open port 1433 for a single IP address or a range of IP addresses.
 1. Select **OK** to save your firewall settings. 

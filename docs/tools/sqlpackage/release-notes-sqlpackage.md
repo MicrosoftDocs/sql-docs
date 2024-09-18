@@ -34,8 +34,7 @@ dotnet tool install -g microsoft.sqlpackage --version 162.4.92
 
 |Feature|Details|
 |:---|:---|
-| Deployment | The default compatibility level for new databases in Azure SQL Database is now set to 160. |
-| Encyrption | Adds an environment variable for `AlwaysEncryptedDisableFallBackToClientSide` to disable the fallback to client-side encryption when server-side encryption is not supported. |
+| Deployment | The default compatibility level for new databases in Azure SQL Database is now set to 160. [Blog post](https://techcommunity.microsoft.com/t5/azure-sql-blog/general-availability-database-compatibility-level-160-in-azure/ba-p/4172039) |
 | JSON | JSON data type is now supported in the target platform `Azure SQL Database` for import, export, extract, deployment, and SQL project build. |
 
 ### Fixes

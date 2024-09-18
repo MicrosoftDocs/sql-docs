@@ -19,7 +19,22 @@ helpviewer_keywords:
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+
+## Pattern Options  
+
+Built-in pattern matching provides a versatile tool for string comparisons. The pattern-matching features allow you to match each character in `string` against a specific character, a wildcard character, a character list, or a character range. The following table shows the characters allowed in `pattern` and what they match.  
   
+|Characters in `pattern`|Matches in `string`|  
+|-----------------------------|-------------------------|  
+|`?`|Any single character|  
+|`*`|Zero or more characters|  
+|`#`|Any single digit (0–9)|  
+|`[charlist]`|Any single character in `charlist`|  
+|`[!charlist]`|Any single character not in `charlist`|  
+
+> [!NOTE]  
+>  To search for the above reserved characters use the `*[ ]*` escape pattern. For example, to search for # use `*[#]*`
+
 ## Filter Examples  
  The following table shows examples of filter equations that use different data types and different operators. The scope for the comparison is determined by report item for which a filter is defined. For example, for a filter defined on a dataset, **TOP % 10** is the top 10 percent of values in the dataset; for a filter defined on a group, **TOP % 10** is the top 10 percent of values in the group.  
   

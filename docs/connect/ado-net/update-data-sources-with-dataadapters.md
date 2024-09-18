@@ -67,7 +67,7 @@ The following examples demonstrate how to perform updates to modified rows by ex
 
 ## AutoIncrement columns
 
-If the tables from your data source have auto-incrementing columns, you can fill the columns in your `DataSet` either by returning the auto-increment value as an output parameter of a stored procedure and mapping that to a column in a table, by returning the auto-increment value in the first row of a result set returned by a stored procedure or SQL statement, or by using the `RowUpdated` event of the `DataAdapter` to execute an additional SELECT statement. For more information and an example, see [Retrieve identity or autonumber values](retrieve-identity-or-autonumber-values.md).
+If the tables from your data source have auto-incrementing columns, you can fill the columns in your `DataSet` either by returning the auto-increment value as an output parameter of a stored procedure and mapping that to a column in a table, by returning the auto-increment value in the first row of a result set returned by a stored procedure or SQL statement, or by using the `RowUpdated` event of the `DataAdapter` to execute an additional SELECT statement. For more information and an example, see [Retrieve identity or autonumber values](retrieve-identity-or-autonumber-values.md).
 
 ## Ordering of inserts, updates, and deletes
 
@@ -164,5 +164,5 @@ GO
 ## See also
 
 - [DataAdapters and DataReaders](dataadapters-datareaders.md)
-- [Retrieve identity or autonumber values](retrieve-identity-or-autonumber-values.md)
+- [Retrieve identity or autonumber values](retrieve-identity-or-autonumber-values.md)
 - [Microsoft ADO.NET for SQL Server](microsoft-ado-net-sql-server.md)

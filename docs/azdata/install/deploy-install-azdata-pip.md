@@ -66,9 +66,9 @@ On Linux, you must install Python 3.6 and then upgrade pip. The following exampl
    sudo apt-get update && \
    sudo apt-get install -y python3 && \
    sudo apt-get install -y python3-pip && \
-   sudo apt-get install -y libkrb5-dev && \
-   sudo apt-get install -y libsqlite3-dev && \
-   sudo apt-get install -y unixodbc-dev
+   sudo apt-get install -y libkrb5-dev && \
+   sudo apt-get install -y libsqlite3-dev && \
+   sudo apt-get install -y unixodbc-dev
    ```
 
 1. Upgrade pip3.

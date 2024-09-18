@@ -3,12 +3,13 @@ title: "Lesson 1: Connecting to the Database Engine"
 description: "Lesson 1: Connecting to the Database Engine"
 author: MashaMSFT
 ms.author: mathoma
-ms.reviewer: maghan
-ms.date: 09/26/2023
+ms.reviewer: maghan, vanto
+ms.date: 09/12/2024
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: quickstart
-ms.custom: intro-quickstart
+ms.custom:
+  - intro-quickstart
 ---
 
 # Lesson 1: Connecting to the Database Engine
@@ -25,7 +26,7 @@ This lesson contains the following tasks:
 
 ## <a id="tools"></a> Tools for getting started
 
-- The [!INCLUDE [ssDEnoversion](../includes/ssdenoversion-md.md)] ships with various tools. This article describes the first tools you need and helps you select the right tool for the job. All tools can be accessed from the **Start** menu. Some tools, such as [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md), aren't installed by default. Select the tools you want as part of the client components during setup. For a complete description of the tools below, search for them in SQL Server Books Online. [!INCLUDE [ssExpress](../includes/ssexpress-md.md)] contains only a subset of the tools.
+- The [!INCLUDE [ssDEnoversion](../includes/ssdenoversion-md.md)] ships with various tools. This article describes the first tools you need and helps you select the right tool for the job. All tools can be accessed from the **Start** menu. Some tools, such as [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md), aren't installed by default. Select the tools you want as part of the client components during setup. [!INCLUDE [ssExpress](../includes/ssexpress-md.md)] contains only a subset of the tools.
 
 ### Common tools
 
@@ -38,7 +39,7 @@ The following table describes some of the more common client tools.
 | **[bcp](../tools/bcp-utility.md)** | CLI | Windows, macOS, Linux |
 | **[sqlcmd](../tools/sqlcmd/sqlcmd-utility.md)** | CLI | Windows, macOS, Linux |
 
-For this article, we are going to focus on connecting via SSMS. If you are interested in connecting via Azure Data Studio, see [Quickstart: Use Azure Data Studio to connect and query SQL Server](/azure-data-studio/quickstart-sql-server).
+For this article, we're going to focus on connecting via SSMS. If you're interested in connecting via Azure Data Studio, see [Quickstart: Use Azure Data Studio to connect and query SQL Server](/azure-data-studio/quickstart-sql-server).
 
 ### Sample database
 
@@ -47,7 +48,7 @@ For this article, we are going to focus on connecting via SSMS. If you are inter
 #### SQL Server Management Studio (Windows only)
 
 - On current versions of Windows, on the **Start** page, type SSMS, and then select **Microsoft SQL Server Management Studio**.
-- When using older versions of Windows, on the **Start** menu, point to **All Programs**, point to [!INCLUDE [ssCurrentUI](../includes/sscurrentui-md.md)], and then select **SQL Server Management Studio**.
+- On the **Start** menu of older versions of Windows, point to **All Programs**, point to [!INCLUDE [ssCurrentUI](../includes/sscurrentui-md.md)], and then select **SQL Server Management Studio**.
 
 ## <a id="connect"></a> Connect with SSMS
 
@@ -82,7 +83,7 @@ At least one administrator account was selected when [!INCLUDE [ssNoVersion_md](
 
 1. Select **Database Engine**.
 
-   :::image type="content" source="media/lesson-1-connecting-to-the-database-engine/object-explorer.png" alt-text="Screenshot of the Object Explorer showing the Connect dropdown list and the Database Engine option called out." lightbox="media/lesson-1-connecting-to-the-database-engine/object-explorer.png":::
+   :::image type="content" source="media/lesson-1-connecting-to-the-database-engine/object-explorer.png" alt-text="Screenshot of the Object Explorer showing the connect dropdown list and the Database Engine option called out." lightbox="media/lesson-1-connecting-to-the-database-engine/object-explorer.png":::
 
 1. In the **Server name** box, type the name of the instance of the Database Engine. For the default instance of SQL Server, the server name is the computer name. The server name for a named instance of SQL Server is the *\<computer_name\>***\\***\<instance_name\>*, such as **ACCTG_SRVR\SQLEXPRESS**. The following screenshot shows connecting to the default (unnamed) instance of [!INCLUDE [ssNoVersion_md](../includes/ssnoversion-md.md)] on a computer named `PracticeComputer`. The user logged into Windows is Mary from the Contoso domain. When using Windows Authentication, you can't change the user name.
 
@@ -91,7 +92,7 @@ At least one administrator account was selected when [!INCLUDE [ssNoVersion_md](
 1. Select **Connect**.
 
 > [!NOTE]  
-> This tutorial assumes you are new to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and have no special problems connecting. For detailed troubleshooting steps, see [Troubleshooting Connecting to the SQL Server Database Engine](/troubleshoot/sql/connect/network-related-or-instance-specific-error-occurred-while-establishing-connection).
+> This tutorial assumes you are new to [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] and have no special problems connecting. For detailed troubleshooting steps, see [Troubleshooting Connecting to the SQL Server Database Engine](/troubleshoot/sql/connect/network-related-or-instance-specific-error-occurred-while-establishing-connection).
 
 ## <a id="additional"></a> Authorize extra connections
 
@@ -125,9 +126,9 @@ Use Windows Authentication whenever possible.
 
 ## Related content
 
-- [Connect to SQL Server](../sql-server/connect-to-database-engine.md)
+- [Connect to the Database Engine](../sql-server/connect-to-database-engine.md)
 - [Troubleshoot Connecting to the SQL Server Database Engine](/troubleshoot/sql/connect/network-related-or-instance-specific-error-occurred-while-establishing-connection)
-- [Quickstart: Use SSMS to connect and query Azure SQL database](../ssms/quickstarts/ssms-connect-query-azure-sql.md)
+- [Quickstart: Connect and query an Azure SQL Database or an Azure SQL Managed Instance using SQL Server Management Studio (SSMS)](../ssms/quickstarts/ssms-connect-query-azure-sql.md)
 - [Quickstart: Use Azure Data Studio to connect and query Azure SQL database](/azure-data-studio/quickstart-sql-server)
 
 ## Next step

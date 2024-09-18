@@ -108,13 +108,13 @@ A central **Events Hub** page provides a list of links to the tenants in your de
 
     ![Events Hub](./media/saas-dbpertenant-get-started-deploy/events-hub.png)
 
-2. Select **Fabrikam Jazz Club** in the Events Hub.
+2. Select **Fabrikam Jazz Club** in the Events Hub.
 
     ![Events](./media/saas-dbpertenant-get-started-deploy/fabrikam.png)
 
 ### Azure Traffic Manager
 
-The Wingtip application uses [*Azure Traffic Manager*](/azure/traffic-manager/traffic-manager-overview) to control the distribution of incoming requests. The URL to access the events page for a specific tenant uses the following format:
+The Wingtip application uses [*Azure Traffic Manager*](/azure/traffic-manager/traffic-manager-overview) to control the distribution of incoming requests. The URL to access the events page for a specific tenant uses the following format:
 
 - http://events.wingtip-dpt.&lt;user&gt;.trafficmanager.net/fabrikamjazzclub
 
@@ -134,7 +134,7 @@ The Wingtip application uses [*Azure Traffic Manager*](/azure/traffic-manager/t
   - The catalog is implemented by using *shard map management*.
 - The Events Hub uses extended metadata in the catalog to construct the list-of-events page URLs for each tenant.
 
-In a production environment, typically you create a CNAME DNS record to [*point a company internet domain*](/azure/traffic-manager/traffic-manager-point-internet-domain) to the Traffic Manager DNS name.
+In a production environment, typically you create a CNAME DNS record to [*point a company internet domain*](/azure/traffic-manager/traffic-manager-point-internet-domain) to the Traffic Manager DNS name.
 
 > [!NOTE]
 > It may not be immediately obvious what the use of the traffic manager is in this tutorial. The goal of this series of tutorials is to showcase patterns that can handle the scale of a complex production environment. In such a case, for example, you would have multiple web apps distributed across the globe, co-located with databases and you would need traffic manager to route between these instances.
@@ -147,7 +147,7 @@ Now that the app is deployed, let's put it to work.
 The *Demo-LoadGenerator* PowerShell script starts a workload that runs against all tenant databases. The real-world load on many SaaS apps is sporadic and unpredictable. To simulate this type of load, the generator produces a load with randomized spikes or bursts of activity on each tenant. The bursts occur at randomized intervals. It takes several minutes for the load pattern to emerge. Let the generator run for at least three or four minutes before you monitor the load.
 
 1. In the PowerShell ISE, open the ...\\Learning Modules\\Utilities\\*Demo-LoadGenerator.ps1* script.
-2. Press F5 to run the script and start the load generator. Leave the default parameter values for now.
+2. Press F5 to run the script and start the load generator. Leave the default parameter values for now.
 3. Sign in to your Azure account, and select the subscription you want to use, if necessary.
 
 The load generator script starts a background job for each database in the catalog and then stops. If you rerun the load generator script, it stops any background jobs that are running before it starts new ones.
@@ -193,10 +193,10 @@ The initial deployment creates three sample tenants. Now you create another tena
 
 1. Open a new PowerShell ISE.
 2. Open ...\\Learning Modules\Provision and Catalog\\*Demo-ProvisionAndCatalog.ps1*.
-3. To run the script, press F5. Leave the default values for now.
+3. To run the script, press F5. Leave the default values for now.
 
    > [!NOTE]
-   > Many Wingtip SaaS scripts use *$PSScriptRoot* to browse folders to call functions in other scripts. This variable is evaluated only when the full script is executed by pressing F5. Highlighting and running a selection with F8 can result in errors. To run the scripts, press F5.
+   > Many Wingtip SaaS scripts use *$PSScriptRoot* to browse folders to call functions in other scripts. This variable is evaluated only when the full script is executed by pressing F5. Highlighting and running a selection with F8 can result in errors. To run the scripts, press F5.
 
 The new tenant database is:
 
@@ -214,7 +214,7 @@ Refresh the Events Hub to make the new tenant appear in the list.
 
 Now that you've started running a load against the collection of tenants, let's look at some of the resources that were deployed.
 
-1. In the [Azure portal](https://portal.azure.com), browse to your list of SQL servers. Then open the **catalog-dpt-&lt;USER&gt;** server.
+1. In the [Azure portal](https://portal.azure.com), browse to your list of SQL servers. Then open the **catalog-dpt-&lt;USER&gt;** server.
     - The catalog server contains two databases, **tenantcatalog** and **basetenantdb** (a template database that's copied to create new tenants).
 
     :::image type="content" source="./media/saas-dbpertenant-get-started-deploy/databases.png" alt-text="Screenshot that shows a catalog server Overview page with the two databases." lightbox="./media/saas-dbpertenant-get-started-deploy/databases.png":::
@@ -246,9 +246,9 @@ The two charts illustrate that elastic pools and SQL Database are well suited to
 ## Additional resources
 
 - For more information, see additional [tutorials that build on the Wingtip Tickets SaaS database-per-tenant application](saas-dbpertenant-wingtip-app-overview.md#sql-database-wingtip-saas-tutorials).
-- To learn about elastic pools, see [What is an Azure SQL elastic pool?](elastic-pool-overview.md).
-- To learn about elastic jobs, see [Manage scaled-out cloud databases](./elastic-jobs-overview.md).
-- To learn about multitenant SaaS applications, see [Design patterns for multitenant SaaS applications](saas-tenancy-app-design-patterns.md).
+- To learn about elastic pools, see [What is an Azure SQL elastic pool?](elastic-pool-overview.md)
+- To learn about elastic jobs, see [Manage scaled-out cloud databases](./elastic-jobs-overview.md).
+- To learn about multitenant SaaS applications, see [Design patterns for multitenant SaaS applications](saas-tenancy-app-design-patterns.md).
 
 ## Next steps
 

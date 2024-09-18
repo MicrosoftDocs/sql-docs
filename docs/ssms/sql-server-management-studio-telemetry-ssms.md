@@ -1,9 +1,10 @@
 ---
 title: Usage and Diagnostic Data
 description: "Local audit for SSMS usage and diagnostic data collection"
-author: "markingmyname"
-ms.author: "maghan"
-ms.date: 08/19/2024
+author: markingmyname
+ms.author: maghan
+ms.reviewer: randolphwest
+ms.date: 09/12/2024
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
@@ -19,7 +20,7 @@ SSMS might collect standard computer usage and performance information, which co
 
 However, SSMS doesn't collect your name, address, or other data that could identify you as an individual.
 
-For more information, see the [Microsoft Privacy Statement](https://privacy.microsoft.com/privacystatement) and the [SQL Server Privacy Supplement](../sql-server/sql-server-privacy.md).
+For more information, see the [Microsoft Privacy Statement](https://privacy.microsoft.com/privacystatement) and the [SQL Server privacy supplement](../sql-server/sql-server-privacy.md).
 
 ## Audit feature usage and diagnostic data
 
@@ -35,24 +36,16 @@ As you interact with SSMS, the **Output** window displays the collected data.
 
 To opt in or out of SSMS usage data collection, use the following methods:
 
-- **Registry Subkey:** `HKEY_CURRENT_USER\Software\Microsoft\SQL Server Management Studio\14.0`
+- **Registry Subkey:** `HKEY_CURRENT_USER\Software\Microsoft\SQL Server Management Studio\20.0_IsoShell`
 - **Registry Entry Name:** `UserFeedbackOptIn`
 - **Entry Type:** `DWORD`
 - **Values:** `0` to opt out, `1` to opt in
 
-Additionally, SSMS is based on the Visual Studio shell, which enables customer feedback by default.
+Additionally, SSMS is based on the Visual Studio shell, which enables customer feedback by default. For more information and opt-out options, see [Visual Studio Customer Experience Improvement Program](/visualstudio/ide/visual-studio-experience-improvement-program).
 
-To disable customer feedback for Visual Studio on individual computers, set the following registry subkey to `0`:
-
-- `HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\VisualStudio\SQM OptIn`
-
-Example:
-
-- `HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\VisualStudio\SQM OptIn = 0`
-
-  Registry-based Group Policy on these registry subkeys is honored by SQL Server 2017 usage and diagnostic data collection.
+Registry-based Group Policy on these registry subkeys is honored by [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] usage and diagnostic data collection.
 
 ## Related content
 
-- [Configure usage and diagnostic data collection for SQL Server](../sql-server/usage-and-diagnostic-data-configuration-for-sql-server.md)
-- [Local audit for SQL Server usage and diagnostic data collection](../sql-server/usage-and-diagnostic-data-in-local-audit.md)
+- [Configure usage and diagnostic data collection for SQL Server (CEIP)](../sql-server/usage-and-diagnostic-data-configuration-for-sql-server.md)
+- [Local audit for SQL Server usage and diagnostic data collection (CEIP)](../sql-server/usage-and-diagnostic-data-in-local-audit.md)

@@ -82,17 +82,17 @@ The following T-SQL keywords are used by SSMA for SAP ASE during conversion to S
 :::row:::
     :::column:::
         CHECKPOINT  
-        CREATE/ALTER/DROP DEFAULT  
-        CREATE/DROP RULE  
-        DBCC TRACEOFF  
-        DBCC TRACEON  
+        CREATE/ALTER/DROP DEFAULT  
+        CREATE/DROP RULE  
+        DBCC TRACEOFF  
+        DBCC TRACEON  
     :::column-end:::
     :::column:::
-        GRANT/REVOKE/DENY ALL  
+        GRANT/REVOKE/DENY ALL  
         KILL  
         READTEXT  
-        SELECT INTO  
-        SET OFFSETS  
+        SELECT INTO  
+        SET OFFSETS  
     :::column-end:::
     :::column:::
         SETUSER  

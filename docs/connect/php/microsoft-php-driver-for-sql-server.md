@@ -34,7 +34,7 @@ The Microsoft Drivers for PHP for SQL Server enable integration with SQL Server 
   
 ## Download
 
-- :::image type="icon" source="../../includes/media/download.svg" border="false"::: [Download drivers for PHP for SQL](download-drivers-php-sql-server.md)
+- :::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download drivers for PHP for SQL](download-drivers-php-sql-server.md)**
   
 ## See also
 

@@ -222,7 +222,7 @@ If `IDBSchemaRowset` is supported, `TABLES`, `COLUMNS`, `INDEXES`, and `TABLES_I
 
 - Restrictions on `TABLE_NAME` and `COLUMN_NAME` columns are always required.
 
-- If the provider supports a restriction on `TABLE_CATALOG` (or `TABLE_SCHEMA`), SQL Server uses that restriction on `TABLE_CATALOG` (or `TABLE_SCHEMA`). If catalog (or schema) name is not specified in the remote table name, a `NULL` value is used as the corresponding restriction value. If a catalog (or schema) name is specified, the provider must support the corresponding restriction on `TABLE_CATALOG` (or `TABLE_SCHEMA`).
+- If the provider supports a restriction on `TABLE_CATALOG` (or `TABLE_SCHEMA`), SQL Server uses that restriction on `TABLE_CATALOG` (or `TABLE_SCHEMA`). If catalog (or schema) name is not specified in the remote table name, a `NULL` value is used as the corresponding restriction value. If a catalog (or schema) name is specified, the provider must support the corresponding restriction on `TABLE_CATALOG` (or `TABLE_SCHEMA`).
 
 - The provider must either support restriction on the `TABLE_SCHEMA` column in both `TABLES` and `COLUMNS` or support them on neither. The provider must either support catalog name restriction on both `TABLES` and `COLUMNS` rowsets or support them on neither.
 

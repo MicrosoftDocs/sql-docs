@@ -18,7 +18,7 @@ summary: |
 
   This article provides answers to frequently asked questions about database watcher for Azure SQL. It is intended for readers who have a general understanding of Azure SQL, and are looking for answers to specific, commonly asked questions about database watcher.
 
-  For an overview of database watcher, see [Monitor Azure SQL workloads with database watcher](database-watcher-overview.md).
+  For an overview of database watcher, see [Monitor Azure SQL workloads with database watcher (preview)](database-watcher-overview.md).
 
 sections:
   - name: General
@@ -101,7 +101,7 @@ sections:
     questions:
       - question: |
           Which data services are supported as the data store for the SQL monitoring data?
-        answer: You can use a database on an [Azure Data Explorer cluster](/azure/data-explorer/data-explorer-overview), on a [free Azure Data Explorer cluster](/azure/data-explorer/start-for-free), or in [Real-Time Analytics](/fabric/real-time-analytics/overview) in Microsoft Fabric. To compare between these options, see [What is the difference between Real-Time Analytics and Azure Data Explorer?](/fabric/real-time-analytics/realtime-analytics-compare).
+        answer: You can use a database on an [Azure Data Explorer cluster](/azure/data-explorer/data-explorer-overview), on a [free Azure Data Explorer cluster](/azure/data-explorer/start-for-free), or in [Real-Time Analytics](/fabric/real-time-analytics/overview) in Microsoft Fabric. To compare between these options, see [What is the difference between Real-Time Analytics and Azure Data Explorer?](/fabric/real-time-analytics/realtime-analytics-compare)
 
       - question: |
           I already have an Azure Data Explorer cluster. Can I use it for my database watcher data store?

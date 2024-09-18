@@ -17,7 +17,7 @@ monikerRange: ">=sql-server-linux-2017 || >=sql-server-2017 || =sqlallproducts-a
 
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
-This tutorial explains how to configure [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on Linux containers to support Active Directory authentication, also known as integrated authentication. For an overview, see [Active Directory authentication for SQL Server on Linux](sql-server-linux-active-directory-auth-overview.md).
+This tutorial explains how to configure [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on Linux containers to support Active Directory authentication, also known as integrated authentication. For an overview, see [Active Directory authentication for SQL Server on Linux](sql-server-linux-active-directory-auth-overview.md).
 
 > [!NOTE]  
 > For current guidance about network configuration, refer to the documentation for your operating system (OS).
@@ -163,7 +163,7 @@ At this point, you can copy `mssql.keytab` from the current Linux host to the Li
 
 ## <a id="create-the-config-files-to-be-used-by-the-sql-server-container"></a> Create config files to be used by the SQL Server container
 
-1. Create an `mssql.conf` file with the settings for Active Directory. This file can be created anywhere on the host and needs to be mounted correctly during the docker run command. In this example, we placed this file `mssql.conf` under `/container/sql1`, which is our container directory. The content of the `mssql.conf` is shown as follows:
+1. Create an `mssql.conf` file with the settings for Active Directory. This file can be created anywhere on the host and needs to be mounted correctly during the docker run command. In this example, we placed this file `mssql.conf` under `/container/sql1`, which is our container directory. The content of the `mssql.conf` is shown as follows:
 
    ```ini
    [network]
@@ -174,7 +174,7 @@ At this point, you can copy `mssql.keytab` from the current Linux host to the Li
    - `privilegedadaccount`: Privileged Active Directory user to use for Active Directory authentication.
    - `kerberoskeytabfile`: The path in the container where the `mssql.keytab` file will be located.
 
-1. Create a `krb5.conf` file, like the following sample. The casing matters in these files.
+1. Create a `krb5.conf` file, like the following sample. The casing matters in these files.
 
    ```ini
    [libdefaults]
@@ -234,7 +234,7 @@ sudo docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=P@ssw0rd" -p 5433:1433 
 
 - The files `mssql.conf` and `krb5.conf` are located at the host file path `/container/sql1`.
 - The `mssql.keytab` that was created is located on the host file path `/container/sql1/secrets`.
-- Because our host machine is on Azure, the Active Directory details need to be appended to the `docker run` command in the same order. In our example, the domain controller `adVM` is in the domain `contoso.com`, with an IP address of `10.0.0.4`. The domain controller runs DNS and KDC.
+- Because our host machine is on Azure, the Active Directory details need to be appended to the `docker run` command in the same order. In our example, the domain controller `adVM` is in the domain `contoso.com`, with an IP address of `10.0.0.4`. The domain controller runs DNS and KDC.
 
 ## Create Active Directory-based SQL Server logins using Transact-SQL
 

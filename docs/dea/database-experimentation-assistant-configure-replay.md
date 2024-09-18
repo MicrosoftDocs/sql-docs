@@ -12,6 +12,9 @@ ms.topic: conceptual
 
 # Configure Distributed Replay for Database Experimentation Assistant
 
+> [!NOTE]  
+> This tool will be retired on **December 15, 2024**. We will stop supporting this tool for any issues that arise, and will not issue any bug fixes or further updates.
+
 Database Experimentation Assistant (DEA) uses the Distributed Replay tools from the SQL Server installation to replay a captured trace against an upgraded test environment. We recommend doing a test run by using a small trace file before doing a full replay to ensure proper replay of queries.
 
 ## Distributed Replay requirements

@@ -125,7 +125,7 @@ To create the availability group, follow these steps:
 
 ### Enable availability groups and restart mssql-server
 
-Enable availability groups on all the nodes that host a SQL Server instance. Then restart mssql-server. Run the following script on all three nodes:
+Enable availability groups on all the nodes that host a SQL Server instance. Then restart mssql-server. Run the following script on all three nodes:
 
 ```bash
 sudo /opt/mssql/bin/mssql-conf
@@ -156,9 +156,9 @@ WITH PRIVATE KEY
       ENCRYPTION BY PASSWORD = '<Private_Key_Password>' );
 ```
 
-At this point, the primary SQL Server replica has a certificate at `/var/opt/mssql/data/dbm_certificate.cer` and a private key at `var/opt/mssql/data/dbm_certificate.pvk`. Copy these two files to the same location on all servers that will host availability replicas. Use the `mssql` user, or give permission to the `mssql` user to access these files.
+At this point, the primary SQL Server replica has a certificate at `/var/opt/mssql/data/dbm_certificate.cer` and a private key at `var/opt/mssql/data/dbm_certificate.pvk`. Copy these two files to the same location on all servers that will host availability replicas. Use the `mssql` user, or give permission to the `mssql` user to access these files.
 
-For example, on the source server, the following command copies the files to the target machine. Replace the `node2` values with the name of the host running the secondary SQL Server instance. Copy the certificate on the configuration only replica as well and run the below commands on that node as well.
+For example, on the source server, the following command copies the files to the target machine. Replace the `node2` values with the name of the host running the secondary SQL Server instance. Copy the certificate on the configuration only replica as well and run the below commands on that node as well.
 
 ```bash
 cd /var/opt/mssql/data

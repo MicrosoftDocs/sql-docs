@@ -122,7 +122,7 @@ As with Kerberos authentication on Windows, the first two steps to obtain a tick
 
 ## Configure Kerberos for SQL Server containers
 
-Active Directory authentication for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in containers is essentially the same as [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Linux. The only difference is the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] host SPN. In the previous scenario, the SPN was `MSSQLSvc/<host>:<port>` because we were connecting via the name of the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] host. Now however, we need to connect to the container.
+Active Directory authentication for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in containers is essentially the same as [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Linux. The only difference is the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] host SPN. In the previous scenario, the SPN was `MSSQLSvc/<host>:<port>` because we were connecting via the name of the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] host. Now however, we need to connect to the container.
 
 For [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] containers, you can create the `krb5.conf` file inside the container. The host node running the container doesn't need to be part of the domain, but should be able to reach to the domain controller to which the container will try to connect.
 

@@ -38,7 +38,7 @@ In this example, the `CompanyName` field is updated with the value of the `@Comp
 The `Add` method of the `Parameters` collection takes the name of the parameter, the data type, the size (if applicable to the type), and the name of the <xref:System.Data.Common.DbParameter.SourceColumn%2A> from the `DataTable`. Notice that the <xref:System.Data.Common.DbParameter.SourceVersion%2A> of the `@CustomerID` parameter is set to `Original`. This guarantees that the existing row in the data source is updated if the value of the identifying column or columns has been changed in the modified <xref:System.Data.DataRow>. In that case, the `Original` row value would match the current value at the data source, and the `Current` row value would contain the updated value. The `SourceVersion` for the `@CompanyName` parameter is not set and uses the default, `Current` row value.
 
 > [!NOTE]
-> For both the `Fill` operations of the `DataAdapter` and the `Get` methods of the `DataReader`, the .NET type is inferred from the type returned from the Microsoft SqlClient Data Provider for SQL Server. The inferred .NET types and accessor methods for Microsoft SQL Server data types are described in [Data Type Mappings in ADO.NET](data-type-mappings-ado-net.md).
+> For both the `Fill` operations of the `DataAdapter` and the `Get` methods of the `DataReader`, the .NET type is inferred from the type returned from the Microsoft SqlClient Data Provider for SQL Server. The inferred .NET types and accessor methods for Microsoft SQL Server data types are described in [Data Type Mappings in ADO.NET](data-type-mappings-ado-net.md).
 
 ## Parameter.SourceColumn, Parameter.SourceVersion
 

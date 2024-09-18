@@ -1,7 +1,7 @@
 ---
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 07/11/2024
+ms.date: 09/12/2024
 ms.topic: include
 ---
 > [!NOTE]
@@ -1250,6 +1250,8 @@ ms.topic: include
 | 37555 | 16 | No | Invalid algorithm id: %d. Provider error code: %d. (%.\*ls). For more information, see https://aka.ms/sql-ekm-connector-troubleshooting |
 | 37556 | 16 | No | Key validation failed since an attempt to get algorithm info for that key failed. Provider error code: %d. (%.\*ls). For more information, see https://aka.ms/sql-ekm-connector-troubleshooting |
 | 37559 | 16 | No | Object_id is not a valid option |
+| 37563 | 16 | Yes | The primary managed identity is not selected for this server. Enable the primary managed identity for Microsoft Entra authentication for this server. For more information see (https://aka.ms/sql-server-managed-identity-doc). |
+| 37564 | 10 | Yes | The managed identity with Client_ID/Application_ID '%ls', is the primary identity assigned for this server. |
 | 38001 | 16 | No | Cannot find the file id %d in the database '%s'. |
 | 38002 | 16 | No | Only users having %s permission can execute this stored procedure. |
 | 39001 | 16 | No | Only SELECT statement is supported for input data query to 'sp_execute_external_script' stored procedure. |

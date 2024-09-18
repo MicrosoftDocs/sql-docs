@@ -49,7 +49,7 @@ Setting these values here simply keeps you from having to update these deploymen
 
 ### Execute the scripts by pressing F5
 
-Several scripts use *$PSScriptRoot* to navigate folders, and *$PSScriptRoot* is only evaluated when scripts are executed by pressing **F5**.  Highlighting and running a selection (**F8**) can result in errors, so press **F5** when running scripts.
+Several scripts use *$PSScriptRoot* to navigate folders, and *$PSScriptRoot* is only evaluated when scripts are executed by pressing **F5**.  Highlighting and running a selection (**F8**) can result in errors, so press **F5** when running scripts.
 
 ### Step through the scripts to examine the implementation
 

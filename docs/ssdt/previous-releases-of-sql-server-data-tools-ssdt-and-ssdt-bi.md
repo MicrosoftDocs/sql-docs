@@ -1016,16 +1016,16 @@ _Supports up to SQL Server 2017._
     - Add columns by example in PowerQuery
     - Data access options in 1400 models (model-level properties used by M engine)
         - Enable fast combine (default is false - when set to true, the mashup engine ignores data source privacy levels when combining data)
-        - Enable Legacy Redirects (default is false - when set to true, the mashup engine follows HTTP redirects that are potentially insecure.  For example, a redirect from an HTTPS to an HTTP URI)  
-        - Return Error Values as Null (default is false - when set to true, cell level errors are returned as null. When false, an exception is raised when a cell contains an error)  
+        - Enable Legacy Redirects (default is false - when set to true, the mashup engine follows HTTP redirects that are potentially insecure.  For example, a redirect from an HTTPS to an HTTP URI)  
+        - Return Error Values as Null (default is false - when set to true, cell level errors are returned as null. When false, an exception is raised when a cell contains an error)  
     - Additional data sources (file data sources) using PowerQuery
-        - Excel 
-        - Text/CSV 
-        - Xml 
-        - Json 
-        - Folder 
-        - Access Database 
-        - Azure Blob Storage 
+        - Excel 
+        - Text/CSV 
+        - Xml 
+        - Json 
+        - Folder 
+        - Access Database 
+        - Azure Blob Storage 
     - Localized PowerQuery user interface
 - DAX Editor Tool Window
     - Improved DAX editing experience for measures, calculated columns, and detail-rows expressions, available via the View, Other Windows menu in SSDT
@@ -1134,24 +1134,24 @@ Sample usage:
 In DacFx, two new APIs have been added: DacServices.Publish() and DacServices.Script(). These also support performing publish + script + report actions in a single operation. Sample usage:
 
 ```
-DacServices service = new DacServices(connectionString);
-using(DacPackage package = DacPackage.Load(@"C:\My\db.dacpac")) {
-var options = new PublishOptions() {
-    GenerateDeploymentScript = true, // Should a deployment script be created?
-    GenerateDeploymentReport = true, // Should an xml deploy report be created?
-    DatabaseScriptPath = @"C:\My\OutputScript.sql", // optional path to save script to
-    MasterDbScriptPath = @"C:\My\OutputScript_Master.sql", // optional path to save master script to
-    DeployOptions = new DacDeployOptions()
+DacServices service = new DacServices(connectionString);
+using(DacPackage package = DacPackage.Load(@"C:\My\db.dacpac")) {
+var options = new PublishOptions() {
+    GenerateDeploymentScript = true, // Should a deployment script be created?
+    GenerateDeploymentReport = true, // Should an xml deploy report be created?
+    DatabaseScriptPath = @"C:\My\OutputScript.sql", // optional path to save script to
+    MasterDbScriptPath = @"C:\My\OutputScript_Master.sql", // optional path to save master script to
+    DeployOptions = new DacDeployOptions()
 };
 
-// Call publish and receive deployment script & report in the results
-PublishResult result = service.Publish(package, "TargetDb", options);
+// Call publish and receive deployment script & report in the results
+PublishResult result = service.Publish(package, "TargetDb", options);
 Console.WriteLine(result.DatabaseScript);
 Console.WriteLine(result.MasterDbScript);
 Console.WriteLine(result.DeploymentReport);
 
-// Call script and receive deployment script & report in results
-result = service.Script(package, "TargetDb", options);
+// Call script and receive deployment script & report in results
+result = service.Script(package, "TargetDb", options);
 Console.WriteLine(result.DatabaseScript);
 Console.WriteLine(result.MasterDbScript);
 Console.WriteLine(result.DeploymentReport);
@@ -1186,7 +1186,7 @@ For more information, please read the [Analysis Services blog post](/archive/blo
 
 **Integration Service**
 
-* Fixed Connect bug [1608896](https://connect.microsoft.com/SQLServer/feedback/details/1608896/move-multiple-integration-service-package-tasks): Move Multiple Integration Service Package Tasks
+* Fixed Connect bug [1608896](https://connect.microsoft.com/SQLServer/feedback/details/1608896/move-multiple-integration-service-package-tasks): Move Multiple Integration Service Package Tasks
 
 #### 16.4, SSDT for VS 2015
 
@@ -1196,7 +1196,7 @@ _For SQL Server 2016._
 
 **What's new?**
 
-Schema Compare is now supported in SqlPackage.exe and the Data-Tier Application Framework (DacFx) API. For details, see [Schema Compare in SqlPackage and the Data-Tier Application Framework](/archive/blogs/ssdt/schema-compare-in-sqlpackage-and-the-data-tier-application-framework-dacfx).
+Schema Compare is now supported in SqlPackage.exe and the Data-Tier Application Framework (DacFx) API. For details, see [Schema Compare in SqlPackage and the Data-Tier Application Framework](/archive/blogs/ssdt/schema-compare-in-sqlpackage-and-the-data-tier-application-framework-dacfx).
 
 **Analysis Services - Integrated Workspace Mode for SSDT Tabular (SSAS)**
 

@@ -12,6 +12,9 @@ ms.topic: conceptual
 
 # Create analysis reports in Database Experimentation Assistant (SQL Server)
 
+> [!NOTE]  
+> This tool will be retired on **December 15, 2024**. We will stop supporting this tool for any issues that arise, and will not issue any bug fixes or further updates.
+
 After you replay the source trace on both of your target servers, you can generate an analysis report in Database Experimentation Assistant (DEA). Analysis reports help you gain insights about the performance implications of proposed changes.
 
 ## Create an analysis report

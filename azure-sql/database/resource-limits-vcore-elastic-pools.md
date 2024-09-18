@@ -4,14 +4,12 @@ description: This page describes some common vCore resource limits for elastic p
 author: dimitri-furman
 ms.author: dfurman
 ms.reviewer: wiassaf, mathoma
-ms.date: 07/03/2024
+ms.date: 09/12/2024
 ms.service: azure-sql-database
 ms.subservice: elastic-pools
 ms.topic: reference
 ms.custom:
-  - sqldbrb=1
   - references_regions
-  - ignite-2023
 ---
 # Resource limits for elastic pools using the vCore purchasing model
 [!INCLUDE [appliesto-sqldb](../includes/appliesto-sqldb.md)]
@@ -574,9 +572,6 @@ The following table covers these SLOs: `BC_DC_14`, `BC_DC_16`, `BC_DC_18`, `BC_D
 
 Although the published Hyperscale resource limits for standard-series and premium-series are the same, premium-series offers faster CPU performance compared to standard-series, and scales up to 128 vCores, compared to 80 vCores for standard-series. Resources using premium-series are guaranteed to run on hardware with newer CPUs. Standard-series does not provide this guarantee and, depending on availability, resources might be placed on older hardware. There is no price difference between the two, but premium-series might not be available in all regions.
 
-> [!NOTE]
-> Elastic pools for Hyperscale databases are currently in preview.
-
 ### Hyperscale - standard-series (Gen5) (part 1 of 2)
 
 Compute sizes (service level objectives, or SLOs) in the Hyperscale standard-series elastic pools follow the naming convention `HS_Gen5_` followed by the number of vCores. 
@@ -919,8 +914,8 @@ The following table describes per database properties for pooled databases.
 
 | Property | Description |
 |:--- |:--- |
-| Max vCores per database |The maximum number of vCores that any database in the pool might use, if available based on utilization by other databases in the pool. Max vCores per database isn't a resource guarantee for a database. If the workload in each database doesn't need all available pool resources to perform adequately, consider setting max vCores per database to prevent a single database from monopolizing pool resources. Some degree of over-committing is expected since the pool generally assumes hot and cold usage patterns for databases, where all databases aren't simultaneously peaking. |
-| Min vCores per database |The minimum number of vCores reserved for any database in the pool. Consider setting a min vCores per database when you want to guarantee resource availability for each database regardless of resource consumption by other databases in the pool. The min vCores per database might be set to 0, and is also the default value. This property is set to anywhere between 0 and the average vCores utilization per database.|
+| Max vCores per database |The maximum number of vCores that any database in the pool can use, if available based on utilization by other databases in the pool. Max vCores per database isn't a resource guarantee for a database. If the workload in each database doesn't need all available pool resources to perform adequately, consider setting max vCores per database to prevent a single database from monopolizing pool resources. Some degree of over-committing is expected since the pool generally assumes hot and cold usage patterns for databases, where all databases aren't simultaneously peaking. |
+| Min vCores per database |The minimum number of vCores reserved for any database in the pool. Consider setting a min vCores per database when you want to guarantee resource availability for each database regardless of resource consumption by other databases in the pool. The min vCores per database can be set to `0`, and is also the default value. This property is set to anywhere between `0` and the average vCores utilization per database.|
 | Max storage per database |The maximum database size set by the user for a database in a pool. Pooled databases share allocated pool storage, so the size a database can reach is limited to the smaller of remaining pool storage and maximum database size. Maximum database size refers to the maximum size of the data files and doesn't include the space used by the log file. |
 
 > [!IMPORTANT]

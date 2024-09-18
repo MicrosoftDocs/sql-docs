@@ -4,7 +4,7 @@ description: Learn how row-level security uses group membership or execution con
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: wiassaf
-ms.date: 10/02/2023
+ms.date: 09/16/2024
 ms.service: sql
 ms.subservice: "security"
 ms.topic: conceptual
@@ -14,13 +14,13 @@ helpviewer_keywords:
   - "security [SQL Server], predicate based access control"
   - "row level security described"
   - "predicate based security"
-monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=fabric"
+monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric"
 ---
 # Row-level security
 
 [!INCLUDE [sql-asdb-asdbmi-asa-fabricse-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricse-fabricdw.md)]
 
-  :::image type="content" source="media/row-level-security/row-level-security-graphic.png" alt-text="Decorative graphic of row level security.":::
+:::image type="content" source="media/row-level-security/row-level-security-graphic.png" alt-text="Decorative graphic of row level security.":::
 
 Row-level security (RLS) enables you to use group membership or execution context to control access to rows in a database table.
 
@@ -28,12 +28,12 @@ Row-level security simplifies the design and coding of security in your applicat
 
 The access restriction logic is located in the database tier rather than away from the data in another application tier. The database system applies the access restrictions every time that data access is attempted from any tier. This makes your security system more reliable and robust by reducing the surface area of your security system.
 
-Implement RLS by using the [CREATE SECURITY POLICY](../../t-sql/statements/create-security-policy-transact-sql.md) [!INCLUDE [tsql](../../includes/tsql-md.md)] statement, and predicates created as [inline table-valued functions](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md).
+Implement RLS by using the [CREATE SECURITY POLICY](../../t-sql/statements/create-security-policy-transact-sql.md) [!INCLUDE [tsql](../../includes/tsql-md.md)] statement, and predicates created as [inline table-valued functions](../user-defined-functions/create-user-defined-functions-database-engine.md).
 
 Row-level security was first introduced to [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)].
 
-> [!NOTE]
-> This article is focused on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and Azure SQL platforms. For [!INCLUDE [fabric](../../includes/fabric.md)], see [Row-level security in Microsoft Fabric](/fabric/data-warehouse/row-level-security).
+> [!NOTE]  
+> This article is focused on [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] and Azure SQL platforms. For [!INCLUDE [fabric](../../includes/fabric.md)], see [Row-level security in Microsoft Fabric](/fabric/data-warehouse/row-level-security).
 
 ## <a id="Description"></a> Description
 
@@ -43,9 +43,9 @@ Row-level security (RLS) supports two types of security predicates:
 
 - Block predicates explicitly block write operations (`AFTER INSERT`, `AFTER UPDATE`, `BEFORE UPDATE`, `BEFORE DELETE`) that violate the predicate.
 
- Access to row-level data in a table is restricted by a security predicate defined as an inline table-valued function. The function is then invoked and enforced by a security policy. For filter predicates, the application is unaware of rows that are filtered from the result set. If all rows are filtered, then a null set is returned. For block predicates, any operations that violate the predicate will fail with an error.
+Access to row-level data in a table is restricted by a security predicate defined as an inline table-valued function. The function is then invoked and enforced by a security policy. For filter predicates, the application is unaware of rows that are filtered from the result set. If all rows are filtered, then a null set is returned. For block predicates, any operations that violate the predicate will fail with an error.
 
- Filter predicates are applied while reading data from the base table. They affect all get operations: `SELECT`, `DELETE`, and `UPDATE`. The users can't select or delete rows that are filtered. The user can't update rows that are filtered. But, it's possible to update rows in such a way that they'll be filtered afterward. Block predicates affect all write operations.
+Filter predicates are applied while reading data from the base table. They affect all get operations: `SELECT`, `DELETE`, and `UPDATE`. The users can't select or delete rows that are filtered. The user can't update rows that are filtered. But, it's possible to update rows in such a way that they'll be filtered afterward. Block predicates affect all write operations.
 
 - `AFTER INSERT` and `AFTER UPDATE` predicates can prevent users from updating rows to values that violate the predicate.
 
@@ -53,37 +53,37 @@ Row-level security (RLS) supports two types of security predicates:
 
 - `BEFORE DELETE` predicates can block delete operations.
 
- Both filter and block predicates and security policies have the following behavior:
+Both filter and block predicates and security policies have the following behavior:
 
-- You may define a predicate function that joins with another table and/or invokes a function. If the security policy is created with `SCHEMABINDING = ON` (the default), then the join or function is accessible from the query and works as expected without any additional permission checks. If the security policy is created with `SCHEMABINDING = OFF`, then users will need `SELECT` permissions on these additional tables and functions to query the target table. If the predicate function invokes a CLR scalar-valued function, the `EXECUTE` permission is needed in addition.
+- You might define a predicate function that joins with another table and/or invokes a function. If the security policy is created with `SCHEMABINDING = ON` (the default), then the join or function is accessible from the query and works as expected without any extra permission checks. If the security policy is created with `SCHEMABINDING = OFF`, then users will need `SELECT` permissions on these additional tables and functions to query the target table. If the predicate function invokes a CLR scalar-valued function, the `EXECUTE` permission is needed in addition.
 
-- You may issue a query against a table that has a security predicate defined but disabled. Any rows that are filtered or blocked aren't affected.
+- You might issue a query against a table that has a security predicate defined but disabled. Any rows that are filtered or blocked aren't affected.
 
-- If a dbo user, a member of the `db_owner` role, or the table owner queries a table that has a security policy defined and enabled, the rows are filtered or blocked as defined by the security policy.
+- If a `dbo` user, a member of the `db_owner` role, or the table owner queries a table that has a security policy defined and enabled, the rows are filtered or blocked as defined by the security policy.
 
-- Attempts to alter the schema of a table bound by a schema bound security policy will result in an error. However, columns not referenced by the predicate can be altered.
+- Attempts to alter the schema of a table bound by a schema bound security policy results in an error. However, columns not referenced by the predicate can be altered.
 
-- Attempts to add a predicate on a table that already has one defined for the specified operation results in an error. This will happen whether the predicate is enabled or not.
+- Attempts to add a predicate on a table that already has one defined for the specified operation results in an error. This happens whether the predicate is enabled or not.
 
-- Attempts to modify a function that is used as a predicate on a table within a schema bound security policy will result in an error.
+- Attempts to modify a function that is used as a predicate on a table within a schema bound security policy results in an error.
 
-- Defining multiple active security policies that contain non-overlapping predicates, succeeds.
+- Defining multiple active security policies that contain nonoverlapping predicates, succeeds.
 
- Filter predicates have the following behavior:
+Filter predicates have the following behavior:
 
-- Define a security policy that filters the rows of a table. The application is unaware of any rows that are filtered for `SELECT`, `UPDATE`, and `DELETE` operations. Including situations where all the rows are filtered out. The application can `INSERT` rows, even if they will be filtered during any other operation.
+- Define a security policy that filters the rows of a table. The application is unaware of any rows that are filtered for `SELECT`, `UPDATE`, and `DELETE` operations. Including situations where all the rows are filtered out. The application can `INSERT` rows, even if they'll be filtered during any other operation.
 
- Block predicates have the following behavior:
+Block predicates have the following behavior:
 
 - Block predicates for `UPDATE` are split into separate operations for `BEFORE` and `AFTER`. You can't, for example, block users from updating a row to have a value higher than the current one. If this kind of logic is required, you must use triggers with the [DELETED and INSERTED](../triggers/use-the-inserted-and-deleted-tables.md) intermediate tables to reference the old and new values together.
 
-- The optimizer will not check an `AFTER UPDATE` block predicate if the columns used by the predicate function weren't changed. For example: Alice shouldn't be able to change a salary to be greater than 100,000. Alice can change the address of an employee whose salary is already greater than 100,000 as long as the columns referenced in the predicate weren't changed.
+- The optimizer won't check an `AFTER UPDATE` block predicate if the columns used by the predicate function weren't changed. For example: Alice shouldn't be able to change a salary to be greater than 100,000. Alice can change the address of an employee whose salary is already greater than 100,000 as long as the columns referenced in the predicate weren't changed.
 
 - No changes have been made to the bulk APIs, including `BULK INSERT`. This means that block predicates `AFTER INSERT` applies to bulk insert operations just as they would regular insert operations.
 
 ## <a id="UseCases"></a> Use cases
 
- Here are design examples of how row-level security (RLS) can be used:
+Here are design examples of how row-level security (RLS) can be used:
 
 - A hospital can create a security policy that allows nurses to view data rows for their patients only.
 
@@ -91,15 +91,15 @@ Row-level security (RLS) supports two types of security predicates:
 
 - A multitenant application can create a policy to enforce a logical separation of each tenant's data rows from every other tenant's rows. Efficiencies are achieved by the storage of data for many tenants in a single table. Each tenant can see only its data rows.
 
- RLS filter predicates are functionally equivalent to appending a `WHERE` clause. The predicate can be as sophisticated as business practices dictate, or the clause can be as simple as `WHERE TenantId = 42`.
+RLS filter predicates are functionally equivalent to appending a `WHERE` clause. The predicate can be as sophisticated as business practices dictate, or the clause can be as simple as `WHERE TenantId = 42`.
 
- In more formal terms, RLS introduces predicate based access control. It features a flexible, centralized, predicate-based evaluation. The predicate can be based on metadata or any other criteria the administrator determines as appropriate. The predicate is used as a criterion to determine if the user has the appropriate access to the data based on user attributes. Label-based access control can be implemented by using predicate-based access control.
+In more formal terms, RLS introduces predicate based access control. It features a flexible, centralized, predicate-based evaluation. The predicate can be based on metadata or any other criteria the administrator determines as appropriate. The predicate is used as a criterion to determine if the user has the appropriate access to the data based on user attributes. Label-based access control can be implemented by using predicate-based access control.
 
 ## <a id="Permissions"></a> Permissions
 
- Creating, altering, or dropping security policies requires the `ALTER ANY SECURITY POLICY` permission. Creating or dropping a security policy requires `ALTER` permission on the schema.
+Creating, altering, or dropping security policies requires the `ALTER ANY SECURITY POLICY` permission. Creating or dropping a security policy requires `ALTER` permission on the schema.
 
- Additionally the following permissions are required for each predicate that is added:
+Additionally the following permissions are required for each predicate that is added:
 
 - `SELECT` and `REFERENCES` permissions on the function being used as a predicate.
 
@@ -107,13 +107,13 @@ Row-level security (RLS) supports two types of security predicates:
 
 - `REFERENCES` permission on every column from the target table used as arguments.
 
- Security policies apply to all users, including dbo users in the database. Dbo users can alter or drop security policies however their changes to security policies can be audited. If high privileged users, such as sysadmin or db_owner, need to see all rows to troubleshoot or validate data, the security policy must be written to allow that.
+Security policies apply to all users, including dbo users in the database. Dbo users can alter or drop security policies however their changes to security policies can be audited. If high privileged users, such as sysadmin or db_owner, need to see all rows to troubleshoot or validate data, the security policy must be written to allow that.
 
- If a security policy is created with `SCHEMABINDING = OFF`, then to query the target table, users must have the `SELECT` or `EXECUTE` permission on the predicate function and any additional tables, views, or functions used within the predicate function. If a security policy is created with `SCHEMABINDING = ON` (the default), then these permission checks are bypassed when users query the target table.
+If a security policy is created with `SCHEMABINDING = OFF`, then to query the target table, users must have the `SELECT` or `EXECUTE` permission on the predicate function and any additional tables, views, or functions used within the predicate function. If a security policy is created with `SCHEMABINDING = ON` (the default), then these permission checks are bypassed when users query the target table.
 
 ## <a id="Best"></a> Best practices
 
-- It's highly recommended to create a separate schema for the RLS objects: predicate functions, and security policies. This helps to separate the permissions that are required on these special objects from the target tables. Additional separation for different policies and predicate functions may be needed in multi-tenant-databases, but not as a standard for every case.
+- It's highly recommended to create a separate schema for the RLS objects: predicate functions, and security policies. This helps to separate the permissions that are required on these special objects from the target tables. Additional separation for different policies and predicate functions might be needed in multitenant databases, but not as a standard for every case.
 
 - The `ALTER ANY SECURITY POLICY` permission is intended for highly privileged users (such as a security policy manager). The security policy manager doesn't require `SELECT` permission on the tables they protect.
 
@@ -123,29 +123,29 @@ Row-level security (RLS) supports two types of security predicates:
 
 - Avoid using excessive table joins in predicate functions to maximize performance.
 
- Avoid predicate logic that depends on session-specific [SET options](../../t-sql/statements/set-statements-transact-sql.md): While unlikely to be used in practical applications, predicate functions whose logic depends on certain session-specific `SET` options can leak information if users are able to execute arbitrary queries. For example, a predicate function that implicitly converts a string to **datetime** could filter different rows based on the `SET DATEFORMAT` option for the current session. In general, predicate functions should abide by the following rules:
+Avoid predicate logic that depends on session-specific [SET options](../../t-sql/statements/set-statements-transact-sql.md): While unlikely to be used in practical applications, predicate functions whose logic depends on certain session-specific `SET` options can leak information if users are able to execute arbitrary queries. For example, a predicate function that implicitly converts a string to **datetime** could filter different rows based on the `SET DATEFORMAT` option for the current session. In general, predicate functions should abide by the following rules:
 
-- Predicate functions should not implicitly convert character strings to **date**, **smalldatetime**, **datetime**, **datetime2**, or **datetimeoffset**, or vice versa, because these conversions are affected by the [SET DATEFORMAT (Transact-SQL)](../../t-sql/statements/set-dateformat-transact-sql.md) and [SET LANGUAGE (Transact-SQL)](../../t-sql/statements/set-language-transact-sql.md) options. Instead, use the `CONVERT` function and explicitly specify the style parameter.
+- Predicate functions shouldn't implicitly convert character strings to **date**, **smalldatetime**, **datetime**, **datetime2**, or **datetimeoffset**, or vice versa, because these conversions are affected by the [SET DATEFORMAT (Transact-SQL)](../../t-sql/statements/set-dateformat-transact-sql.md) and [SET LANGUAGE (Transact-SQL)](../../t-sql/statements/set-language-transact-sql.md) options. Instead, use the `CONVERT` function and explicitly specify the style parameter.
 
-- Predicate functions should not rely on the value of the first day of the week, because this value is affected by the [SET DATEFIRST (Transact-SQL)](../../t-sql/statements/set-datefirst-transact-sql.md) option.
+- Predicate functions shouldn't rely on the value of the first day of the week, because this value is affected by the [SET DATEFIRST (Transact-SQL)](../../t-sql/statements/set-datefirst-transact-sql.md) option.
 
-- Predicate functions should not rely on arithmetic or aggregation expressions returning `NULL` if they error (such as overflow or divide-by-zero), because this behavior is affected by the [SET ANSI_WARNINGS (Transact-SQL)](../../t-sql/statements/set-ansi-warnings-transact-sql.md), [SET NUMERIC_ROUNDABORT (Transact-SQL)](../../t-sql/statements/set-numeric-roundabort-transact-sql.md), and [SET ARITHABORT (Transact-SQL)](../../t-sql/statements/set-arithabort-transact-sql.md) options.
+- Predicate functions shouldn't rely on arithmetic or aggregation expressions returning `NULL` if they error (such as overflow or divide-by-zero), because this behavior is affected by the [SET ANSI_WARNINGS (Transact-SQL)](../../t-sql/statements/set-ansi-warnings-transact-sql.md), [SET NUMERIC_ROUNDABORT (Transact-SQL)](../../t-sql/statements/set-numeric-roundabort-transact-sql.md), and [SET ARITHABORT (Transact-SQL)](../../t-sql/statements/set-arithabort-transact-sql.md) options.
 
-- Predicate functions should not compare concatenated strings with `NULL`, because this behavior is affected by the [SET CONCAT_NULL_YIELDS_NULL (Transact-SQL)](../../t-sql/statements/set-concat-null-yields-null-transact-sql.md) option.
+- Predicate functions shouldn't compare concatenated strings with `NULL`, because this behavior is affected by the [SET CONCAT_NULL_YIELDS_NULL (Transact-SQL)](../../t-sql/statements/set-concat-null-yields-null-transact-sql.md) option.
 
 ## <a id="SecNote"></a> Security note: side-channel attacks
 
 ### Malicious security policy manager
 
-It is important to observe that a malicious security policy manager, with sufficient permissions to create a security policy on top of a sensitive column and having permission to create or alter inline table-valued functions, can collude with another user who has select permissions on a table to perform data exfiltration by maliciously creating inline table-valued functions designed to use side channel attacks to infer data. Such attacks would require collusion (or excessive permissions granted to a malicious user) and would likely require several iterations of modifying the policy (requiring permission to remove the predicate in order to break the schema binding), modifying the inline table-valued functions, and repeatedly running select statements on the target table. We recommend you limit permissions as necessary and monitor for any suspicious activity. Activity such as constantly changing policies and inline table-valued functions related to row-level security should be monitored.
+It's important to observe that a malicious security policy manager, with sufficient permissions to create a security policy on top of a sensitive column and having permission to create or alter inline table-valued functions, can collude with another user who has select permissions on a table to perform data exfiltration by maliciously creating inline table-valued functions designed to use side channel attacks to infer data. Such attacks would require collusion (or excessive permissions granted to a malicious user) and would likely require several iterations of modifying the policy (requiring permission to remove the predicate in order to break the schema binding), modifying the inline table-valued functions, and repeatedly running select statements on the target table. We recommend you limit permissions as necessary and monitor for any suspicious activity. Activity such as constantly changing policies and inline table-valued functions related to row-level security should be monitored.
 
 ### Carefully crafted queries
 
-It is possible to cause information leakage by using carefully crafted queries that use errors to exfiltrate data. For example, `SELECT 1/(SALARY-100000) FROM PAYROLL WHERE NAME='John Doe';` would let a malicious user know that John Doe's salary is exactly $100,000. Even though there is a security predicate in place to prevent a malicious user from directly querying other people's salary, the user can determine when the query returns a divide-by-zero exception.
+It's possible to cause information leakage by using carefully crafted queries that use errors to exfiltrate data. For example, `SELECT 1/(SALARY-100000) FROM PAYROLL WHERE NAME='John Doe';` would let a malicious user know that John Doe's salary is exactly $100,000. Even though there's a security predicate in place to prevent a malicious user from directly querying other people's salary, the user can determine when the query returns a divide-by-zero exception.
 
 ## <a id="Limitations"></a> Cross-feature compatibility
 
- In general, row-level security will work as expected across features. However, there are a few exceptions. This section documents several notes and caveats for using row-level security with certain other features of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)].
+In general, row-level security will work as expected across features. However, there are a few exceptions. This section documents several notes and caveats for using row-level security with certain other features of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)].
 
 - `DBCC SHOW_STATISTICS` reports statistics on unfiltered data, and can leak information otherwise protected by a security policy. For this reason, access to view a statistics object for a table with a row-level security policy is restricted. The user must own the table or the user must be a member of the `sysadmin` fixed server role, the `db_owner` fixed database role, or the `db_ddladmin` fixed database role.
 
@@ -155,19 +155,19 @@ It is possible to cause information leakage by using carefully crafted queries t
 
 - **Memory-Optimized Tables:** The inline table-valued function used as a security predicate on a memory-optimized table must be defined using the `WITH NATIVE_COMPILATION` option. With this option, language features not supported by memory-optimized tables will be banned and the appropriate error will be issued at creation time. For more information, see [Row-level security in Memory-Optimized Tables](../../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md#rls).
 
-- **Indexed views:** In general, security policies can be created on top of views, and views can be created on top of tables that are bound by security policies. However, indexed views cannot be created on top of tables that have a security policy, because row lookups via the index would bypass the policy.
+- **Indexed views:** In general, security policies can be created on top of views, and views can be created on top of tables that are bound by security policies. However, indexed views can't be created on top of tables that have a security policy, because row lookups via the index would bypass the policy.
 
-- **Change Data Capture:** Change Data Capture (CDC) can leak entire rows that should be filtered to members of `db_owner` or users who are members of the "gating" role specified when CDC is enabled for a table. You can explicitly set this function to `NULL` to enable all users to access the change data. In effect, `db_owner` and members of this gating role can see all data changes on a table, even if there is a security policy on the table.
+- **Change Data Capture:** Change Data Capture (CDC) can leak entire rows that should be filtered to members of `db_owner` or users who are members of the "gating" role specified when CDC is enabled for a table. You can explicitly set this function to `NULL` to enable all users to access the change data. In effect, `db_owner` and members of this gating role can see all data changes on a table, even if there's a security policy on the table.
 
-- **Change Tracking:** Change Tracking can leak the primary key of rows that should be filtered to users with both `SELECT` and `VIEW CHANGE TRACKING` permissions. Actual data values are not leaked; only the fact that column A was updated/inserted/deleted for the row with a certain primary key. This is problematic if the primary key contains a confidential element, such as a Social Security Number. However, in practice, this `CHANGETABLE` is almost always joined with the original table in order to get the latest data.
+- **Change Tracking:** Change Tracking can leak the primary key of rows that should be filtered to users with both `SELECT` and `VIEW CHANGE TRACKING` permissions. Actual data values aren't leaked; only the fact that column A was updated/inserted/deleted for the row with a certain primary key. This is problematic if the primary key contains a confidential element, such as a Social Security Number. However, in practice, this `CHANGETABLE` is almost always joined with the original table in order to get the latest data.
 
 - **Full-Text Search:** A performance hit is expected for queries using the following Full-Text Search and Semantic Search functions, because of an extra join introduced to apply row-level security and avoid leaking the primary keys of rows that should be filtered: `CONTAINSTABLE`, `FREETEXTTABLE`, `semantickeyphrasetable`, `semanticsimilaritydetailstable`, `semanticsimilaritytable`.
 
-- **Columnstore Indexes:** RLS is compatible with both clustered and nonclustered columnstore indexes. However, because row-level security applies a function, it is possible that the optimizer may modify the query plan so that it doesn't use batch mode.
+- **Columnstore Indexes:** RLS is compatible with both clustered and nonclustered columnstore indexes. However, because row-level security applies a function, it's possible that the optimizer might modify the query plan so that it doesn't use batch mode.
 
-- **Partitioned Views:** Block predicates cannot be defined on partitioned views, and partitioned views cannot be created on top of tables that use block predicates. Filter predicates are compatible with partitioned views.
+- **Partitioned Views:** Block predicates can't be defined on partitioned views, and partitioned views can't be created on top of tables that use block predicates. Filter predicates are compatible with partitioned views.
 
-- **Temporal tables:** Temporal tables are compatible with RLS. However, security predicates on the current table are not automatically replicated to the history table. To apply a security policy to both the current and the history tables, you must individually add a security predicate on each table.
+- **Temporal tables:** Temporal tables are compatible with RLS. However, security predicates on the current table aren't automatically replicated to the history table. To apply a security policy to both the current and the history tables, you must individually add a security predicate on each table.
 
 Other limitations:
 
@@ -177,9 +177,9 @@ Other limitations:
 
 ### <a id="Typical"></a> A. Scenario for users who authenticate to the database
 
- This example creates three users and creates and populates a table with six rows. It then creates an inline table-valued function and a security policy for the table. The example then shows how select statements are filtered for the various users.
+This example creates three users and creates and populates a table with six rows. It then creates an inline table-valued function and a security policy for the table. The example then shows how select statements are filtered for the various users.
 
- Create three user accounts that demonstrate different access capabilities.
+Create three user accounts that demonstrate different access capabilities.
 
 ```sql
 CREATE USER Manager WITHOUT LOGIN;
@@ -202,7 +202,7 @@ CREATE TABLE Sales.Orders
     );
 ```
 
- Populate the table with six rows of data, showing three orders for each sales representative.
+Populate the table with six rows of data, showing three orders for each sales representative.
 
 ```sql
 INSERT INTO Sales.Orders  VALUES (1, 'SalesRep1', 'Valve', 5);
@@ -229,7 +229,7 @@ Create a new schema, and an inline table-valued function. The function returns `
 ```sql
 CREATE SCHEMA Security;
 GO
-  
+
 CREATE FUNCTION Security.tvf_securitypredicate(@SalesRep AS nvarchar(50))
     RETURNS TABLE
 WITH SCHEMABINDING
@@ -263,11 +263,11 @@ Now test the filtering predicate, by selected from the `Sales.Orders` table as e
 EXECUTE AS USER = 'SalesRep1';
 SELECT * FROM Sales.Orders;
 REVERT;
-  
+
 EXECUTE AS USER = 'SalesRep2';
 SELECT * FROM Sales.Orders;
 REVERT;
-  
+
 EXECUTE AS USER = 'Manager';
 SELECT * FROM Sales.Orders;
 REVERT;
@@ -321,8 +321,8 @@ GO
 
 --run in both the master database and in your dedicated SQL pool database
 CREATE USER Manager FOR LOGIN Manager;
-CREATE USER Sales1  FOR LOGIN Sales1;
-CREATE USER Sales2  FOR LOGIN Sales2 ;
+CREATE USER Sales1  FOR LOGIN Sales1;
+CREATE USER Sales2  FOR LOGIN Sales2 ;
 ```
 
 Create a table to hold data.
@@ -350,7 +350,7 @@ INSERT INTO Sales VALUES (6, 'Sales2', 'Seat', 5);
 SELECT * FROM Sales;
 ```
 
-Create an Azure Synapse external table from the `Sales` table you just created.
+Create an Azure Synapse external table from the `Sales` table you created.
 
 ```sql
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<user_password>';
@@ -360,7 +360,7 @@ CREATE DATABASE SCOPED CREDENTIAL msi_cred WITH IDENTITY = 'Managed Service Iden
 CREATE EXTERNAL DATA SOURCE ext_datasource_with_abfss WITH (TYPE = hadoop, LOCATION = 'abfss://<file_system_name@storage_account>.dfs.core.windows.net', CREDENTIAL = msi_cred);
 
 CREATE EXTERNAL FILE FORMAT MSIFormat  WITH (FORMAT_TYPE=DELIMITEDTEXT);
-  
+
 CREATE EXTERNAL TABLE Sales_ext WITH (LOCATION='<your_table_name>', DATA_SOURCE=ext_datasource_with_abfss, FILE_FORMAT=MSIFormat, REJECT_TYPE=Percentage, REJECT_SAMPLE_VALUE=100, REJECT_VALUE=100)
 AS SELECT * FROM sales;
 ```
@@ -373,12 +373,12 @@ GRANT SELECT ON Sales_ext TO Sales2;
 GRANT SELECT ON Sales_ext TO Manager;
 ```
 
-Create a new schema, and an inline table-valued function, you may have completed this in example A. The function returns `1` when a row in the `SalesRep` column is the same as the user executing the query (`@SalesRep = USER_NAME()`) or if the user executing the query is the `Manager` user (`USER_NAME() = 'Manager'`).
+Create a new schema, and an inline table-valued function, you might have completed this in example A. The function returns `1` when a row in the `SalesRep` column is the same as the user executing the query (`@SalesRep = USER_NAME()`) or if the user executing the query is the `Manager` user (`USER_NAME() = 'Manager'`).
 
 ```sql
 CREATE SCHEMA Security;
 GO
-  
+
 CREATE FUNCTION Security.fn_securitypredicate(@SalesRep AS sysname)
     RETURNS TABLE
 WITH SCHEMABINDING
@@ -444,7 +444,7 @@ DROP LOGIN Manager;
 
 This example shows how a middle-tier application can implement connection filtering, where application users (or tenants) share the same [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] user (the application). The application sets the current application user ID in [SESSION_CONTEXT](../../t-sql/functions/session-context-transact-sql.md) after connecting to the database, and then security policies transparently filter rows that shouldn't be visible to this ID, and also block the user from inserting rows for the wrong user ID. No other app changes are necessary.
 
- Create a table to hold data.
+Create a table to hold data.
 
 ```sql
 CREATE TABLE Sales (
@@ -473,7 +473,7 @@ Create a low-privileged user that the application will use to connect.
 -- Without login only for demo
 CREATE USER AppUser WITHOUT LOGIN;
 GRANT SELECT, INSERT, UPDATE, DELETE ON Sales TO AppUser;
-  
+
 -- Never allow updates on this column
 DENY UPDATE ON Sales(AppUserId) TO AppUser;
 ```
@@ -483,7 +483,7 @@ Create a new schema and predicate function, which will use the application user 
 ```sql
 CREATE SCHEMA Security;
 GO
-  
+
 CREATE FUNCTION Security.fn_securitypredicate(@AppUserId int)
     RETURNS TABLE
     WITH SCHEMABINDING
@@ -495,7 +495,7 @@ AS
 GO
 ```
 
-Create a security policy that adds this function as a filter predicate and a block predicate on `Sales`. The block predicate only needs `AFTER INSERT`, because `BEFORE UPDATE` and `BEFORE DELETE` are already filtered, and `AFTER UPDATE` is unnecessary because the `AppUserId` column cannot be updated to other values, due to the column permission set earlier.
+Create a security policy that adds this function as a filter predicate and a block predicate on `Sales`. The block predicate only needs `AFTER INSERT`, because `BEFORE UPDATE` and `BEFORE DELETE` are already filtered, and `AFTER UPDATE` is unnecessary because the `AppUserId` column can't be updated to other values, due to the column permission set earlier.
 
 ```sql
 CREATE SECURITY POLICY Security.SalesFilter
@@ -513,16 +513,16 @@ EXECUTE AS USER = 'AppUser';
 EXEC sp_set_session_context @key=N'UserId', @value=1;
 SELECT * FROM Sales;
 GO
-  
+
 /* Note: @read_only prevents the value from changing again until the connection is closed (returned to the connection pool)*/
 EXEC sp_set_session_context @key=N'UserId', @value=2, @read_only=1;
-  
+
 SELECT * FROM Sales;
 GO
-  
+
 INSERT INTO Sales VALUES (7, 1, 'Seat', 12); -- error: blocked from inserting row for the wrong user ID
 GO
-  
+
 REVERT;
 GO
 ```
@@ -563,7 +563,7 @@ CREATE TABLE Sample.Sales
     );
 ```
 
- Populate `Sample.Sales` with six rows of data.
+Populate `Sample.Sales` with six rows of data.
 
 ```sql
 INSERT INTO Sample.Sales VALUES (1, 'Valve', 5);
@@ -585,7 +585,7 @@ CREATE TABLE Sample.Lk_Salesman_Product
   ) ;
 ```
 
- Populate the lookup table with sample data, linking one `Product` to each sales representative.
+Populate the lookup table with sample data, linking one `Product` to each sales representative.
 
 ```sql
 INSERT INTO Sample.Lk_Salesman_Product VALUES ('Sales1', 'Valve');
@@ -688,9 +688,9 @@ DROP SCHEMA Sample;
 
 We can demonstrate row-level security [!INCLUDE [fabricdw](../../includes/fabric-dw.md)] and [!INCLUDE [fabricse](../../includes/fabric-se.md)] in [!INCLUDE [fabric](../../includes/fabric.md)].
 
-The following example creates sample tables that will work with [!INCLUDE [fabricdw](../../includes/fabric-dw.md)] in [!INCLUDE [fabric](../../includes/fabric.md)], but in [!INCLUDE [fabricse](../../includes/fabric-se.md)] use existing tables. In the [!INCLUDE [fabricse](../../includes/fabric-se.md)], you cannot use `CREATE TABLE`, but you can use `CREATE SCHEMA`, `CREATE FUNCTION`, and `CREATE SECURITY POLICY`.
+The following example creates sample tables that will work with [!INCLUDE [fabricdw](../../includes/fabric-dw.md)] in [!INCLUDE [fabric](../../includes/fabric.md)], but in [!INCLUDE [fabricse](../../includes/fabric-se.md)] use existing tables. In the [!INCLUDE [fabricse](../../includes/fabric-se.md)], you can't use `CREATE TABLE`, but you can use `CREATE SCHEMA`, `CREATE FUNCTION`, and `CREATE SECURITY POLICY`.
 
-In this example, first create a schema `sales`, a table `sales.Orders`. 
+In this example, first create a schema `sales`, a table `sales.Orders`.
 
 ```sql
 CREATE SCHEMA sales;
@@ -735,7 +735,7 @@ AS
     RETURN SELECT 1 AS tvf_securitypredicate_result
 WHERE @SalesRep = USER_NAME() OR USER_NAME() = 'manager@contoso.com';
 GO
- 
+
 -- Using the function to create a Security Policy
 CREATE SECURITY POLICY SalesFilter
 ADD FILTER PREDICATE Security.tvf_securitypredicate(SalesRep)
@@ -744,7 +744,7 @@ WITH (STATE = ON);
 GO
 ```
 
-After applying the security policy and creating the function, the users `Sales1@contoso.com` and `Sales2@contoso.com` will only be able to see their own data in the `sales.Orders` table, where the column `SalesRep` equals their own user name returned by the built-in function [USER_NAME()](../../t-sql/functions/user-name-transact-sql.md). The Fabric user `manager@contoso.com` is able to see all data in the `sales.Orders` table.
+After applying the security policy and creating the function, the users `Sales1@contoso.com` and `Sales2@contoso.com` will only be able to see their own data in the `sales.Orders` table, where the column `SalesRep` equals their own user name returned by the built-in function [USER_NAME](../../t-sql/functions/user-name-transact-sql.md). The Fabric user `manager@contoso.com` is able to see all data in the `sales.Orders` table.
 
 ## Related content
 
@@ -753,8 +753,8 @@ After applying the security policy and creating the function, the users `Sales1@
 - [DROP SECURITY POLICY (Transact-SQL)](../../t-sql/statements/drop-security-policy-transact-sql.md)
 - [CREATE FUNCTION (Transact-SQL)](../../t-sql/statements/create-function-transact-sql.md)
 - [SESSION_CONTEXT (Transact-SQL)](../../t-sql/functions/session-context-transact-sql.md)
-- [sp_set_session_context (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-set-session-context-transact-sql.md)
-- [sys.security_policies (Transact-SQL)](../../relational-databases/system-catalog-views/sys-security-policies-transact-sql.md)
-- [sys.security_predicates (Transact-SQL)](../../relational-databases/system-catalog-views/sys-security-predicates-transact-sql.md)
-- [Create User-defined Functions (Database Engine)](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)
-- [GRANT Object Permissions (Transact-SQL)](../../t-sql/statements/grant-object-permissions-transact-sql.md)
+- [sp_set_session_context (Transact-SQL)](../system-stored-procedures/sp-set-session-context-transact-sql.md)
+- [sys.security_policies (Transact-SQL)](../system-catalog-views/sys-security-policies-transact-sql.md)
+- [sys.security_predicates (Transact-SQL)](../system-catalog-views/sys-security-predicates-transact-sql.md)
+- [Create user-defined functions (Database Engine)](../user-defined-functions/create-user-defined-functions-database-engine.md)
+- [GRANT object permissions (Transact-SQL)](../../t-sql/statements/grant-object-permissions-transact-sql.md)

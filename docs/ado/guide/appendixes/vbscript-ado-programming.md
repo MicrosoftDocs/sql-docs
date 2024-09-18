@@ -41,8 +41,8 @@ Set Rs1 = Server.CreateObject( "ADODB.Recordset" )
  The following code is a generic example of VBScript server-side programming in an Active Server Page (ASP) file:  
   
 ```vb
-<%  @LANGUAGE="VBSCRIPT" %>  
-<%  Option Explicit %>  
+<%  @LANGUAGE="VBSCRIPT" %>  
+<%  Option Explicit %>  
 <!--#include File="adovbs.inc"-->  
 <HTML>  
     <BODY BGCOLOR="White" topmargin="10" leftmargin="10">  

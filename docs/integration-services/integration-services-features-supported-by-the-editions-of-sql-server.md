@@ -26,7 +26,7 @@ For the latest release notes and what's new information, see the following artic
 
 The SQL Server Evaluation edition is available for a 180-day trial period.  
     
-:::image type="icon" source="../includes/media/download.svg" border="false"::: **[Download SQL Server 2016  from the Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)**    
+:::image type="icon" source="../includes/media/download.svg" border="false"::: **[Download SQL Server 2016 from the Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)**    
     
 ## <a name="ISNew"></a> New Integration Services features in SQL Server 2017
   

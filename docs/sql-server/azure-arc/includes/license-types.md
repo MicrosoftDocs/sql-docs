@@ -2,17 +2,17 @@
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: randolphwest
-ms.date: 07/17/2024
+ms.date: 09/09/2024
 ms.topic: include
 ms.custom:
   - ignite-2023
 ---
 
-The following table identifies features enabled depending on license type:
+The following table identifies the features that are enabled for each license type:
 
-| Feature | License only <sup>1</sup> | License with Software Assurance<br />or SQL subscription | Pay-as-you-go |
+| Feature | License only <sup>1</sup> | License with Software Assurance<br />or SQL Server subscription | Pay-as-you-go |
 | --- | --- | --- | --- |
-| [Connect to Azure Arc](../connect.md) | Yes | Yes | Yes |
+| [Connect your SQL Server to Azure Arc](../connect.md) | Yes | Yes | Yes |
 | [SQL Server inventory](../overview.md#manage-your-sql-server-instances-at-scale-from-a-single-point-of-control) | Yes | Yes | Yes |
 | [Best practices assessment](../assess.md) | No | Yes | Yes |
 | [Migration readiness (preview)](../migration-assessment.md) | Yes | Yes | Yes |
@@ -28,4 +28,4 @@ The following table identifies features enabled depending on license type:
 | [Monitoring (preview)](../sql-monitoring.md) | No | Yes | Yes |
 | [Operate with least privilege](../configure-least-privilege.md) | Yes | Yes | Yes |
 
-<sup>1</sup> License only includes SQL Server instances that are Developer, Express, Web, or Evaluation Edition and instances using a Server/CAL license.
+<sup>1</sup> The license-only option includes SQL Server instances that are Developer, Express, Web, or Evaluation edition and instances that use a Server+CAL license.

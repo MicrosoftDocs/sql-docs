@@ -81,7 +81,7 @@ Filter Criterion: <SELECT NAME="cboCriterion">
               <br>  
 Filter Value: <INPUT NAME="txtFilterValue">  
 <HR WIDTH="25%">  
-<INPUT TYPE=BUTTON NAME=Clear VALUE="CLEAR ALL">    
+<INPUT TYPE=BUTTON NAME=Clear VALUE="CLEAR ALL">    
 <INPUT TYPE=BUTTON NAME=SortFilter VALUE="APPLY">  
   
 <HR>  

@@ -39,7 +39,7 @@ Before you install the SSMA for MySQL server components on [!INCLUDE [ssNoVersio
 
 ### Install the extension pack
 
-:::image type="icon" source="../../includes/media/download.svg" border="false"::: [Download Microsoft SQL Server Migration Assistant Extension Pack for MySQL](https://www.microsoft.com/download/details.aspx?id=54257)
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft SQL Server Migration Assistant Extension Pack for MySQL](https://www.microsoft.com/download/details.aspx?id=54257)**
 
 You can install the extension pack any time before you migrate data to [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)].
 

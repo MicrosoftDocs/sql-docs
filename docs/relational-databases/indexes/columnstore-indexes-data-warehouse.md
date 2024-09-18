@@ -3,7 +3,7 @@ title: "Columnstore indexes - Data Warehouse"
 description: Columnstore indexes - Data Warehouse
 author: MikeRayMSFT
 ms.author: mikeray
-ms.date: 06/28/2022
+ms.date: 09/18/2024
 ms.service: sql
 ms.subservice: table-view-index
 ms.topic: conceptual
@@ -28,7 +28,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||>=sql-ser
 -   Aggregate Pushdown for efficient processing of aggregates. This is supported on all database compatibility levels.  
 -   String predicate pushdown for efficient processing of string predicates. This is supported on all database compatibility levels.  
 -   Snapshot isolation for database compatibility level 130 and higher.  
--   Ordered cluster columnstore indexes are available in [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)]. For more information, see [CREATE COLUMNSTORE INDEX](../../t-sql/statements/create-columnstore-index-transact-sql.md#order) and [Performance tuning with ordered clustered columnstore index](/azure/synapse-analytics/sql-data-warehouse/performance-tuning-ordered-cci). 
+-   Ordered cluster columnstore indexes are available in [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)]. For more information, see [CREATE COLUMNSTORE INDEX](../../t-sql/statements/create-columnstore-index-transact-sql.md#order-for-clustered-columnstore) and [Performance tuning with ordered clustered columnstore index](/azure/synapse-analytics/sql-data-warehouse/performance-tuning-ordered-cci). 
 
 For more information about new features in versions and platforms of SQL Server and Azure SQL, see [What's new in columnstore indexes](columnstore-indexes-what-s-new.md).
   

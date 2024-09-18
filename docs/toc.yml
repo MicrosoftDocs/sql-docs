@@ -4764,8 +4764,6 @@ items:
         href: database-engine/configure-windows/logging-in-to-sql-server.md
       - name: Open the ODBC Data Source Administrator
         href: database-engine/configure-windows/open-the-odbc-data-source-administrator.md
-      - name: Check the ODBC SQL Server Driver Version (Windows)
-        href: database-engine/configure-windows/check-the-odbc-sql-server-driver-version-windows.md
   - name: Uninstall SQL Server
     items:
     - name: Overview

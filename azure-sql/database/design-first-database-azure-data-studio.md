@@ -81,7 +81,7 @@ Use [Azure Data Studio](/azure-data-studio/what-is-azure-data-studio) to establi
    | --------------|-----------------|------------ |
    | **Connection type** | Microsoft SQL Server | This value is required. |
    | **Server name** | The fully qualified Azure SQL Database logical server name | For example, `your_logical_azure_sql_server.database.windows.net`. |
-   | **Authentication typoe** | SQL Server Authentication | Use SQL Server Authentication to enter a user name and password. |
+   | **Authentication type** | SQL Server Authentication | Use SQL Server Authentication to enter a user name and password. |
    | | Microsoft Entra authentication | To connect using Microsoft Entra ID, if you're the Microsoft Entra server admin, choose **Microsoft Entra ID - Universal with MFA support**. For more information, see [Configure and manage Microsoft Entra authentication with Azure SQL](authentication-aad-configure.md).|
    | **Login** | The server admin account | The account that you specified when you created the server. |
    | **Password** | The password for your server admin account | The password that you specified when you created the server. |
@@ -146,7 +146,7 @@ The following diagram shows how these tables are related to each other. Some of 
        Be sure to configure the Check Constraint settings for the **Credit** Table as shown below:
         :::image type="content" source="media\design-first-database-azure-data-studio\credit-table-check-constraint-azure-data-studio.png" alt-text="Screenshot of Credit Table in Table Designer showing Check Constraint settings." lightbox="media\design-first-database-azure-data-studio\credit-table-check-constraint-azure-data-studio.png":::
 
-    If you're prefer to use T-SQL to create the four new tables, here's the T-SQL to execute in a new query window.
+    If you prefer to use T-SQL to create the four new tables, here's the T-SQL to execute in a new query window.
 
     ```sql
     -- Create Person table

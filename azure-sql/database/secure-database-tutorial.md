@@ -114,7 +114,7 @@ Make sure you're using the appropriate Microsoft Entra ID ([formerly Azure Activ
 
 To set the Microsoft Entra administrator:
 
-1. In the Azure portal, on the **SQL server** page, select **Microsoft Entra ID** from the resource menu, then select **Set admin** to open the **Microsoft Entra ID** pane..
+1. In the Azure portal, on the **SQL server** page, select **Microsoft Entra ID** from the resource menu, then select **Set admin** to open the **Microsoft Entra ID** pane.
 
     :::image type="content" source="media\secure-database-tutorial\admin-settings.png" alt-text="Screenshot of the Azure portal Microsoft Entra ID page for a logical server." lightbox="media\secure-database-tutorial\admin-settings.png":::
 

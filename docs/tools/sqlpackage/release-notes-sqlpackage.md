@@ -4,7 +4,7 @@ description: Release notes for Microsoft SqlPackage.
 author: dzsquared
 ms.author: drskwier
 ms.reviewer: "llali"
-ms.date: 06/24/2024
+ms.date: 09/18/2024
 ms.service: sql
 ms.topic: conceptual
 ms.custom: tools|sos
@@ -15,6 +15,44 @@ ms.custom: tools|sos
 
 This article lists the features and fixes delivered by the released versions of SqlPackage.
 
+## 162.4.92 SqlPackage
+
+**Release date:** September 18, 2024
+
+```bash
+dotnet tool install -g microsoft.sqlpackage --version 162.4.92
+```
+
+|Platform|Download|
+|:---|:---|
+|Windows .NET 8 |[.zip file](https://go.microsoft.com/fwlink/?linkid=2286801)|
+|Windows|[.msi file](https://go.microsoft.com/fwlink/?linkid=2286487)|
+|macOS .NET 8 |[.zip file](https://go.microsoft.com/fwlink/?linkid=2286382)|
+|Linux .NET 8 |[.zip file](https://go.microsoft.com/fwlink/?linkid=2286802)|
+
+### Features
+
+|Feature|Details|
+|:---|:---|
+| Deployment | The default compatibility level for new databases in Azure SQL Database is now set to 160. |
+| Encyrption | Adds an environment variable for `AlwaysEncryptedDisableFallBackToClientSide` to disable the fallback to client-side encryption when server-side encryption is not supported. |
+| JSON | JSON data type is now supported in the target platform `Azure SQL Database` for import, export, extract, deployment, and SQL project build. |
+
+### Fixes
+
+|Feature|Details|
+|:---|:---|
+| Deployment | Fixes an issue where a partition function with a bit conversion function would result in table rebuilds during deployment. [GitHub issue](https://github.com/microsoft/DacFx/issues/458) |
+| Deployment | Fixes an issue where deploying a change to an external table would cause all external tables to be dropped and recreated. [GitHub issue](https://github.com/microsoft/DacFx/issues/452) |
+| Deployment | Fixes an issue where temporal tables with spaces in the column names for system_time columns would produce invalid deployment scripts. [Developer Community](https://developercommunity.visualstudio.com/t/SSDT-schema-compare-not-working-for-temp/10400594) |
+| Deployment | Fixes an issue where changing the column type between types that are compatible for [type cast](../../t-sql/functions/cast-and-convert-transact-sql.md) on a table resulted in an unnecessary table rebuild during deployment. [GitHub issue](https://github.com/microsoft/DacFx/issues/361) |
+| Deployment | Fixes an issue where the deployment script generated for Azure SQL Database would include an ignored statement to turn off query store regardless of SQL project settings. |
+| Export | Fixes an issue where a bacpac export would fail during serialization but the trace log would not contain the failure message. [GitHub issue](https://github.com/microsoft/DacFx/issues/310) |
+| Extract | Fixes an issue where the extract operation would reorder the indexes on a table when writing the table definition out to `.sql` files. |
+| JSON | Fixes an issue where the [isjson](../../t-sql/functions/isjson-transact-sql.md) function's `json_type_constraint` parameter was not recognized as a second parameter. [GitHub issue](https://github.com/microsoft/DacFx/issues/375) |
+| Platform | References [Microsoft.Data.SqlClient](https://www.nuget.org/packages/Microsoft.Data.SqlClient/5.1.6) v5.1.6. |
+| Schema compare | Fixes an issue where schema compare expects all statements to be in the same batch, resulting in duplicate statements. [GitHub issue](https://github.com/microsoft/DacFx/issues/474) |
+| ScriptDOM | References [ScriptDOM 16.1.9142](https://github.com/microsoft/SqlScriptDOM/blob/main/release-notes/161.91/161.9142.1.md) |
 
 ## 162.3.566 SqlPackage
 

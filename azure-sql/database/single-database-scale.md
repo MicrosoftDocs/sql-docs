@@ -4,11 +4,13 @@ description: This article describes how to scale the compute and storage resourc
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: wiassaf, mathoma
-ms.date: 01/18/2024
+ms.date: 09/17/2024
 ms.service: azure-sql-database
 ms.subservice: performance
 ms.topic: conceptual
-ms.custom: sqldbrb=1, references_regions
+ms.custom:
+  - sqldbrb=1
+  - references_regions
 ---
 # Scale single database resources in Azure SQL Database
 [!INCLUDE [appliesto-sqldb](../includes/appliesto-sqldb.md)]
@@ -17,14 +19,14 @@ This article describes how to scale the compute and storage resources available 
 
 After initially picking the number of vCores or DTUs, you can scale a single database up or down dynamically based on actual experience using:
 
-* [Transact-SQL](/sql/t-sql/statements/alter-database-transact-sql#overview-sql-database)
-* [Azure portal](single-database-manage.md#the-azure-portal)
-* [PowerShell](/powershell/module/az.sql/set-azsqldatabase)
-* [Azure CLI](/cli/azure/sql/db#az-sql-db-update)
-* [REST API](/rest/api/sql/databases/update)
+- [Transact-SQL](/sql/t-sql/statements/alter-database-transact-sql#overview-sql-database)
+- [Azure portal](single-database-manage.md#the-azure-portal)
+- [PowerShell](/powershell/module/az.sql/set-azsqldatabase)
+- [Azure CLI](/cli/azure/sql/db#az-sql-db-update)
+- [REST API](/rest/api/sql/databases/update)
 
 > [!IMPORTANT]
-> Under some circumstances, you may need to shrink a database to reclaim unused space. For more information, see [Manage file space in Azure SQL Database](file-space-manage.md).
+> Under some circumstances, you might need to shrink a database to reclaim unused space. For more information, see [Manage file space for databases in Azure SQL Database](file-space-manage.md).
 
 [!INCLUDE [entra-id](../includes/entra-id.md)]
 
@@ -37,9 +39,9 @@ Changing the service tier or compute size of mainly involves the service perform
 
     A new compute instance is created with the requested service tier and compute size. For some combinations of service tier and compute size changes, a replica of the database must be created in the new compute instance, which involves copying data and can strongly influence the overall latency. Regardless, the database remains online during this step, and connections continue to be directed to the database in the original compute instance.
 
-2. Switch routing of connections to a new compute instance.
+1. Switch routing of connections to a new compute instance.
 
-    Existing connections to the database in the original compute instance are dropped. Any new connections are established to the database in the new compute instance. For some combinations of service tier and compute size changes, database files are detached and reattached during the switch.  Regardless, the switch can result in a brief service interruption when the database is unavailable generally for less than 30 seconds and often for only a few seconds. If there are long-running transactions running when connections are dropped, the duration of this step may take longer in order to recover aborted transactions. [Accelerated Database Recovery](../accelerated-database-recovery.md) can reduce the impact from aborting long running transactions.
+    Existing connections to the database in the original compute instance are dropped. Any new connections are established to the database in the new compute instance. For some combinations of service tier and compute size changes, database files are detached and reattached during the switch.  Regardless, the switch can result in a brief service interruption when the database is unavailable generally for less than 30 seconds and often for only a few seconds. If there are long-running transactions running when connections are dropped, the duration of this step can take longer in order to recover aborted transactions. [Accelerated Database Recovery in Azure SQL](../accelerated-database-recovery.md) can reduce the impact from aborting long running transactions.
 
 > [!IMPORTANT]
 > No data is lost during any step in the workflow. Make sure that you have implemented some [retry logic](troubleshoot-common-connectivity-issues.md) in the applications and components that are using Azure SQL Database while the service tier is changed.
@@ -84,15 +86,15 @@ A service tier change or compute rescaling operation can be monitored and cancel
 
 In the SQL database **Overview** page, look for the banner indicating a scaling operation is ongoing, and select the **See more** link for the deployment in progress.
 
-:::image type="content" source="media/single-database-scale/scaling-operation-in-progress-see-more.png" alt-text="Screenshot from the Azure portal showing a scaling operation in progress.":::
+:::image type="content" source="media/single-database-scale/scaling-operation-in-progress-see-more.png" alt-text="Screenshot from the Azure portal showing a scaling operation in progress." lightbox="media/single-database-scale/scaling-operation-in-progress-see-more.png":::
 
 On the resulting **Ongoing operations** page, select **Cancel this operation**.
 
-:::image type="content" source="media/single-database-scale/ongoing-operations-cancel-this-operation.png" alt-text="Screenshot from the Azure portal showing the Ongoing operations page and the cancel this operation button.":::
+:::image type="content" source="media/single-database-scale/ongoing-operations-cancel-this-operation.png" alt-text="Screenshot from the Azure portal showing the Ongoing operations page and the cancel this operation button." lightbox="media/single-database-scale/ongoing-operations-cancel-this-operation.png":::
 
 ### [PowerShell](#tab/azure-powershell)
 
-In order to invoke the PowerShell commands on a computer, [Az package version 9.7.0](https://www.powershellgallery.com/packages/Az/9.7.0) or a newer version must be installed locally. Or, consider using the [Azure Cloud Shell](/azure/cloud-shell/overview) to run Azure PowerShell at [shell.azure.com](https://shell.azure.com/).
+In order to invoke the PowerShell commands on a computer, [Az package version 9.7.0](https://www.powershellgallery.com/packages/Az/9.7.0) or a newer version must be installed locally. Or, consider using the [Azure Cloud Shell](/azure/cloud-shell/overview) to run Azure PowerShell at [shell.azure.com](https://portal.azure.com/#cloudshell).
 
 First, log in to Azure and set the proper context for your subscription:
 
@@ -145,10 +147,9 @@ else {
 
 ## Permissions
 
-To scale databases via Transact-SQL, `ALTER DATABASE` is used. To scale a database a login must be either the server admin login (created when the Azure SQL Database logical server was provisioned), the Microsoft Entra admin of the server, a member of the dbmanager database role in `master`, a member of the db_owner database role in the current database, or `dbo` of the database. For more information, see [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql?view=azuresqldb-current&preserve-view=true#permissions-1).
+**To scale databases via Transact-SQL**: `ALTER DATABASE` is used. To scale a database a login must be either the server admin login (created when the Azure SQL Database logical server was provisioned), the Microsoft Entra admin of the server, a member of the dbmanager database role in `master`, a member of the db_owner database role in the current database, or `dbo` of the database. For more information, see [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql?view=azuresqldb-current&preserve-view=true#permissions-1).
 
-To scale databases via the Azure portal, PowerShell, Azure CLI, or REST API, Azure RBAC permissions are needed, specifically the Contributor, SQL DB Contributor role, or SQL Server Contributor Azure RBAC roles. For more information, visit [Azure RBAC built-in roles](/azure/role-based-access-control/built-in-roles).
-
+**To scale databases via the Azure portal, PowerShell, Azure CLI, or REST API**: Azure RBAC permissions are needed, specifically the Contributor, SQL DB Contributor role, or SQL Server Contributor Azure RBAC roles. For more information, see [Azure RBAC built-in roles](/azure/role-based-access-control/built-in-roles).
 
 ## Additional considerations
 
@@ -157,9 +158,9 @@ To scale databases via the Azure portal, PowerShell, Azure CLI, or REST API, Azu
 - When downgrading from **Premium** to the **Standard** tier, an extra storage cost applies if both (1) the max size of the database is supported in the target compute size, and (2) the max size exceeds the included storage amount of the target compute size. For example, if a P1 database with a max size of 500 GB is downsized to S3, then an extra storage cost applies since S3 supports a max size of 1 TB and its included storage amount is only 250 GB. So, the extra storage amount is 500 GB – 250 GB = 250 GB. For pricing of extra storage, see [Azure SQL Database pricing](https://azure.microsoft.com/pricing/details/sql-database/). If the actual amount of space used is less than the included storage amount, then this extra cost can be avoided by reducing the database max size to the included amount.
 - When upgrading a database with [geo-replication](active-geo-replication-configure-portal.md) enabled, upgrade its secondary databases to the desired service tier and compute size before upgrading the primary database (general guidance for best performance). When upgrading to a different edition, it's a requirement that the secondary database is upgraded first.
 - When downgrading a database with [geo-replication](active-geo-replication-configure-portal.md) enabled, downgrade its primary databases to the desired service tier and compute size before downgrading the secondary database (general guidance for best performance). When downgrading to a different edition, it's a requirement that the primary database is downgraded first.
-- The restore service offerings are different for the various service tiers. If you're downgrading to the **Basic** tier, there's a lower backup retention period. See [Azure SQL Database Backups](automated-backups-overview.md).
+- The restore service offerings are different for the various service tiers. If you're downgrading to the **Basic** tier, there's a lower backup retention period. See [Automated backups in Azure SQL Database](automated-backups-overview.md).
 - The new properties for the database aren't applied until the changes are complete.
-- When data copying is required to scale a database (see [Latency](#latency)) when changing the service tier, high resource utilization concurrent to the scaling operation may cause longer scaling times. With [Accelerated Database Recovery (ADR)](/sql/relational-databases/accelerated-database-recovery-concepts), rollback of long running transactions is not a significant source of delay, but high concurrent resource usage may leave less compute, storage, and network bandwidth resources for scaling, particularly for smaller compute sizes.
+- When data copying is required to scale a database (see [Latency](#latency)) when changing the service tier, high resource utilization concurrent to the scaling operation can cause longer scaling times. With [Accelerated Database Recovery (ADR)](/sql/relational-databases/accelerated-database-recovery-concepts), rollback of long running transactions is not a significant source of delay, but high concurrent resource usage might leave less compute, storage, and network bandwidth resources for scaling, particularly for smaller compute sizes.
 
 ## Billing
 
@@ -180,7 +181,7 @@ You're billed for each hour a database exists using the highest service tier + c
 - For details on storage price, see [Azure SQL Database pricing](https://azure.microsoft.com/pricing/details/sql-database/).
 
 > [!IMPORTANT]
-> Under some circumstances, you may need to shrink a database to reclaim unused space. For more information, see [Manage file space in Azure SQL Database](file-space-manage.md).
+> Under some circumstances, you might need to shrink a database to reclaim unused space. For more information, see [Manage file space for databases in Azure SQL Database](file-space-manage.md).
 
 ### DTU-based purchasing model
 
@@ -189,7 +190,7 @@ You're billed for each hour a database exists using the highest service tier + c
 - The price of extra storage for a single database is the extra storage amount multiplied by the extra storage unit price of the service tier. For details on the price of extra storage, see [Azure SQL Database pricing](https://azure.microsoft.com/pricing/details/sql-database/).
 
 > [!IMPORTANT]
-> Under some circumstances, you may need to shrink a database to reclaim unused space. For more information, see [Manage file space in Azure SQL Database](file-space-manage.md).
+> Under some circumstances, you might need to shrink a database to reclaim unused space. For more information, see [Manage file space for databases in Azure SQL Database](file-space-manage.md).
 
 ### Geo-replicated database
 
@@ -207,4 +208,5 @@ More than 1 TB of storage in the Premium tier is currently available in all regi
 
 ## Related content
 
-For overall resource limits, see [Azure SQL Database vCore-based resource limits - single databases](resource-limits-vcore-single-databases.md) and [Azure SQL Database DTU-based resource limits - single databases](resource-limits-dtu-single-databases.md).
+- [Resource limits for single databases using the vCore purchasing model](resource-limits-vcore-single-databases.md)
+- [Resource limits for single databases using the DTU purchasing model](resource-limits-dtu-single-databases.md)

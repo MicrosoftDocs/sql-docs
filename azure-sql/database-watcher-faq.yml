@@ -5,7 +5,7 @@ metadata:
   description: Frequently asked questions about database watcher for Azure SQL
   author: dimitri-furman
   ms.author: dfurman
-  ms.date: 07/12/2024
+  ms.date: 09/18/2024
   ms.reviewer: wiassaf
   ms.service: azure-sql
   ms.subservice: monitoring
@@ -110,6 +110,10 @@ sections:
       - question: |
           How can I query and analyze SQL monitoring data?
         answer: You can use Kusto Query Language (KQL) to query this data. See [Use KQL to analyze monitoring data](database-watcher-analyze.md#use-kql-to-analyze-monitoring-data). KQL [provides](/azure/data-explorer/kusto/query/) many advantages for analyzing telemetry data. However, you do not need to learn KQL to use database watcher. You can connect to the data store using SQL Server Management Studio, Azure Data Studio, or any other SQL client tool, and [use T-SQL](database-watcher-analyze.md#use-t-sql-to-analyze-monitoring-data) to query your SQL monitoring data.
+
+      - question: |
+          Can I query SQL monitoring data in Azure Data Explorer from a Log Analytics workspace?
+        answer: Yes. You can execute a KQL query in a Log Analytics workspace that references tables in Azure Data Explorer. For more information, see [Correlate data in Azure Data Explorer with data in a Log Analytics workspace](/azure/azure-monitor/logs/azure-monitor-data-explorer-proxy).
 
       - question: |
           Can I export SQL monitoring data from Azure Data Explorer?

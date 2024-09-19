@@ -8,9 +8,10 @@ ms.date: 07/10/2023
 ms.service: sql
 ms.subservice: ssma
 ms.topic: conceptual
+ms.collection:
+  - sql-migration-content
 ms.custom:
   - intro-installation
-  - sql-migration-content
 helpviewer_keywords:
   - "Installing SSMA 2008, Upgrading"
 ---

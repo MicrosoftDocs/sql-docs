@@ -7,7 +7,7 @@ ms.reviewer: dmarinkovic
 ms.date: 10/14/2023
 ms.service: azure-sql-database
 ms.topic: faq
-ms.custom:
+ms.collection:
   - sql-migration-content
 ---
 # Migrate SQL Server workloads (FAQ)

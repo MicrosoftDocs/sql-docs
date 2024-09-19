@@ -315,6 +315,7 @@ Hyperscale service tier premium-series and premium-series memory optimized hardw
 - Japan West
 - Southeast Asia
 - Switzerland North
+- Sweden Central \*\*,\*
 - UK South \*\*
 - UK West \*
 - US Central \*\*

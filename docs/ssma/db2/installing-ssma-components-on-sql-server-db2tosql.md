@@ -7,9 +7,10 @@ ms.date: "01/19/2017"
 ms.service: sql
 ms.subservice: ssma
 ms.topic: conceptual
+ms.collection:
+  - sql-migration-content
 ms.custom:
   - intro-installation
-  - sql-migration-content
 ---
 # Installing SSMA Components on SQL Server (DB2ToSQL)
 In this version of SSMA there is no need for a separate install on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] of the SSMA extension pack, which supports data migration, and DB2 providers to enable server-to-server connectivity.  

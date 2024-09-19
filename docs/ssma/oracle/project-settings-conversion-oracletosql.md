@@ -7,7 +7,7 @@ ms.date: "12/17/2020"
 ms.service: sql
 ms.subservice: ssma
 ms.topic: conceptual
-ms.custom:
+ms.collection:
   - sql-migration-content
 f1_keywords:
   - "ssma.oracle.projectsettingconversion.f1"

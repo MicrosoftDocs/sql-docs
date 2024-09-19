@@ -8,9 +8,10 @@ ms.date: 07/10/2023
 ms.service: sql
 ms.subservice: ssma
 ms.topic: conceptual
+ms.collection:
+  - sql-migration-content
 ms.custom:
   - intro-migration
-  - sql-migration-content
 ---
 # Migrate Oracle Databases to SQL Server (OracleToSQL)
 

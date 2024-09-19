@@ -8,9 +8,10 @@ ms.date: 06/28/2024
 ms.service: sql
 ms.subservice: dma
 ms.topic: conceptual
+ms.collection:
+  - sql-migration-content
 ms.custom:
   - intro-migration
-  - sql-migration-content
 helpviewer_keywords:
   - "Data Migration Assistant, login migration"
 ---

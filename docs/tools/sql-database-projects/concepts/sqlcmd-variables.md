@@ -16,6 +16,8 @@ zone_pivot_groups: sq1-sql-projects-tools
 
 SQLCMD variables are used in SQL projects to create dynamically replaceable tokens in SQL objects and scripts. The values of these variables are set at deployment time and can be used to dynamically set values in a SQL project. Values for SQLCMD variables can be set in the publish action or through a publish profile.
 
+:::image type="content" source="media/sqlcmd-variables/sqlcmd-variables.png" alt-text="Screenshot of SQLCMD variable EnvironmentName not set until deployment.":::
+
 ## SQL project file sample and syntax
 
 SQLCMD variables are defined in the `.sqlproj` file under an `<ItemGroup>` item. In this example, the variable `EnvironmentName` is defined with a default value of `testing`:
@@ -31,7 +33,7 @@ SQLCMD variables are defined in the `.sqlproj` file under an `<ItemGroup>` item.
 </Project>
 ```
 
-The `DefaultValue` element is optional. When a default value is provided, it's only used to load in the publish dialog of graphical tools for SQL projects. The default value isn't compiled into the `.dacpac` file and a command line deployment without the values specified by a publish profile or the `/v` option to specify values will use empty values for the SQLCMD variables.
+The `DefaultValue` element is optional. When a default value is provided, it's only used to load in the publish dialog of graphical tools for SQL projects. The default value isn't compiled into the `.dacpac` file and a command line deployment without the values specified by a publish profile or the `/v` option to specify values results in empty values for the SQLCMD variables.
 
 ### Use SQLCMD variables in SQL objects
 
@@ -39,7 +41,7 @@ SQLCMD variables can be used in SQL objects and scripts by wrapping the variable
 
 ```sql
 IF '$(EnvironmentName)' = 'testing'
-BEING
+BEGIN
     -- do something
 END
 ```
@@ -60,13 +62,19 @@ To add a SQLCMD variable to a SQL project in Visual Studio, right-click the proj
 
 Once the variable is defined, it can be used in SQL scripts by wrapping the variable name in `$(variableName)` syntax.
 
-When publishing the project from Visual Studio, SQLCMD variables are set in the publish dialog. Use the **Load Values** button to load the default values from the SQL project into the dialog.
+When you publish the project from Visual Studio, SQLCMD variables are set in the publish dialog. Use the **Load Values** button to load the default values from the SQL project into the dialog.
 
 ::: zone-end
 
-<!-- ::: zone pivot="sq1-visual-studio-sdk"
+::: zone pivot="sq1-visual-studio-sdk"
 
-::: zone-end -->
+To add a SQLCMD variable to a SQL project in Visual Studio, right-click the project in **Solution Explorer** and select **Properties**. In the **SQLCMD Variables** section of the properties window, specify the variable name and optionally a default value.
+
+Once the variable is defined, it can be used in SQL scripts by wrapping the variable name in `$(variableName)` syntax.
+
+When you publish the project from Visual Studio, SQLCMD variables are set in the publish dialog. Use the **Load Values** button to load the default values from the SQL project into the dialog.
+
+::: zone-end
 
 ::: zone pivot="sq1-visual-studio-code"
 
@@ -74,7 +82,7 @@ To add a SQLCMD variable to a SQL project in the SQL Database Projects extension
 
 Once the variable is defined, it can be used in SQL scripts by wrapping the variable name in `$(variableName)` syntax.
 
-When publishing the project from the SQL Database Projects extension, SQLCMD variables values are automatically loaded from the default values. You're able to provide alternative values when prompted to modify the values during the publish process.
+When you publish the project from the SQL Database Projects extension, SQLCMD variables values are automatically loaded from the default values. You're able to provide alternative values when prompted to modify the values during the publish process.
 
 ::: zone-end
 
@@ -93,13 +101,14 @@ To add a SQLCMD variable to a SQL project, add an `<ItemGroup>` item to the `.sq
 
 Once the variable is defined, it can be used in SQL scripts by wrapping the variable name in `$(variableName)` syntax.
 
-When deploying the project from the command line, SQLCMD variables can be set using the `/v` option in the [SqlPackage](../../sqlpackage/sqlpackage-publish.md#sqlcmd-variables) command line tool.
+When you deploy the project from the command line, SQLCMD variables can be set using the `/v` option in the [SqlPackage](../../sqlpackage/sqlpackage-publish.md#sqlcmd-variables) command line tool.
 
 For example:
 
 ```bash
 SqlPackage /Action:Publish /SourceFile:AdventureWorks.dacpac /TargetConnectionString:{connection_string_here} /v:EnvironmentName=production
 ```
+
 ::: zone-end
 
 ## Related content

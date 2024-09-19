@@ -153,7 +153,7 @@ In this article, we'll describe how you can configure automatic generation and s
 ## Prerequisites
 
 - [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)]
-- [SQL Server Management Studio (SSMS)](../../../ssms/download-sql-server-management-studio-ssms.md) or [Azure Data Studio](../../../azure-data-studio/download-azure-data-studio.md)
+- [SQL Server Management Studio (SSMS)](../../../ssms/download-sql-server-management-studio-ssms.md) or [Azure Data Studio](/azure-data-studio/download-azure-data-studio)
 - An Azure Blob Storage
 - An Azure Storage container
 - A [SQL Server credential](../authentication-access/credentials-database-engine.md). For more information, see [Digest Management](ledger-digest-management.md).  

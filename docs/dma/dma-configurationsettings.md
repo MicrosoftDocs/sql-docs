@@ -34,9 +34,9 @@ Be sure to save a copy of the original config file before making any modificatio
 
 ## Number of databases to assess in parallel
 
-Data Migration Assistant assesses multiple databases in parallel. During assessment Data Migration Assistant extracts data-tier application (dacpac) to understand the database schema. This operation can time out if several databases on the same server are assessed in parallel.
+Data Migration Assistant assesses multiple databases in parallel. During assessment Data Migration Assistant extracts data-tier application (dacpac) to understand the database schema. This operation can time out if several databases on the same server are assessed in parallel.
 
-Starting with Data Migration Assistant v2.0, you can control this by setting the parallelDatabases configuration value. Default value is 8.
+Starting with Data Migration Assistant v2.0, you can control this by setting the parallelDatabases configuration value. Default value is 8.
 
 ```xml
 <advisorGroup>
@@ -55,7 +55,7 @@ Starting with Data Migration Assistant v2.0, if you experience this problem you 
 ```xml
 <advisorGroup>
 <workflowSettings>
-<migration parallelDatabases="8″ />
+<migration parallelDatabases="8″ />
 </workflowSettings>
 </advisorGroup>
 ```
@@ -69,15 +69,15 @@ During assessment, Data Migration Assistant extracts data-tier application (dacp
 
 - commandTimeout
 
-  This parameter sets the IDbCommand.CommandTimeout property in *seconds*. (Default=60)
+  This parameter sets the IDbCommand.CommandTimeout property in *seconds*. (Default=60)
 
 - databaseLockTimeout
 
-  This parameter is equivalent to [SET LOCK_TIMEOUT](../t-sql/statements/set-lock-timeout-transact-sql.md) in *milliseconds*. (Default=5000)
+  This parameter is equivalent to [SET LOCK_TIMEOUT](../t-sql/statements/set-lock-timeout-transact-sql.md) in *milliseconds*. (Default=5000)
 
 - maxDataReaderDegreeOfParallelism
 
-  This parameter sets the number of SQL connection pool connections to use. (Default=8)
+  This parameter sets the number of SQL connection pool connections to use. (Default=8)
 
 ```xml
 <advisorGroup>
@@ -92,7 +92,7 @@ During assessment, Data Migration Assistant extracts data-tier application (dacp
 > [!IMPORTANT]  
 > [!INCLUDE [stretch-database-deprecation](../includes/stretch-database-deprecation.md)]
 
-With [SQL Server Stretch Database](../sql-server/stretch-database/stretch-database.md), you can dynamically stretch warm and cold transactional data from Microsoft SQL Server 2016 to Azure. The Stretch Database recommendation is no longer available as an advisor option.
+With [SQL Server Stretch Database](/previous-versions/sql/sql-server/stretch-database/stretch-database), you can dynamically stretch warm and cold transactional data from Microsoft SQL Server 2016 to Azure. The Stretch Database recommendation is no longer available as an advisor option.
 
 ## SQL connection timeout
 
@@ -101,7 +101,7 @@ for source and target instances while running an assessment or migration, by set
 
 ```xml
 <appSettings>
-<add key="ConnectionTimeout" value="15" />
+<add key="ConnectionTimeout" value="15" />
 </appSettings>
 ```
 

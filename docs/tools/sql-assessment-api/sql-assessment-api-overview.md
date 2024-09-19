@@ -45,7 +45,7 @@ The Microsoft's shipped ruleset is available on GitHub. You can view the [entire
 
 The SQL Assessment API is available and can be used through managed code as part of any of these components:
 
-- [Azure Data Studio (ADS)](../../azure-data-studio/what-is-azure-data-studio.md)
+- [Azure Data Studio (ADS)](/azure-data-studio/what-is-azure-data-studio)
 
   Release version as of June 2020 and higher.
 
@@ -53,7 +53,7 @@ The SQL Assessment API is available and can be used through managed code as part
 
   Release version as of July 2019 and higher.
 
-- [SQL Server PowerShell module](../../powershell/download-sql-server-ps-module.md)
+- [SQL Server PowerShell module](/powershell/sql-server/download-sql-server-ps-module)
 
   Release version as of July 2019 and higher.
 
@@ -63,21 +63,21 @@ Before you start using the SQL Assessment API itself, make sure to install eithe
 
 - [Install SMO](../../relational-databases/server-management-objects-smo/installing-smo.md)
 
-- [Install SQL Server PowerShell module](../../powershell/download-sql-server-ps-module.md)
+- [Install SQL Server PowerShell module](/powershell/sql-server/download-sql-server-ps-module)
 
 - [Install via NuGet](https://www.nuget.org/packages/Microsoft.SqlServer.Assessment/)
 
 The SMO Framework is supplemented by the SQL Assessment API extension that provides the following methods:
 
-- `GetAssessmentItems`: Returns available checks for a particular SQL object (`IEnumerable<...>`)
+- `GetAssessmentItems`: Returns available checks for a particular SQL object (`IEnumerable<...>`)
 
-- `GetAssessmentResults`: Synchronously evaluates assessment and returns results and errors if any (`IEnumerable<...>`)
+- `GetAssessmentResults`: Synchronously evaluates assessment and returns results and errors if any (`IEnumerable<...>`)
 
-- `GetAssessmentResultsList`: Asynchronously evaluates assessment and returns results and errors if any (`Task<...>`)
+- `GetAssessmentResultsList`: Asynchronously evaluates assessment and returns results and errors if any (`Task<...>`)
 
 ### Use the API via PowerShell
 
-If you would like to invoke the SQL Assessment API via PowerShell, you must [install SQL Server PowerShell module](../../powershell/download-sql-server-ps-module.md). The `SqlServer` module provides two cmdlets that work with the SQL Assessment API:
+If you would like to invoke the SQL Assessment API via PowerShell, you must [install SQL Server PowerShell module](/powershell/sql-server/download-sql-server-ps-module). The `SqlServer` module provides two cmdlets that work with the SQL Assessment API:
 
 - `Get-SqlAssessmentItem`: Provides a list of available assessment checks for a SQL Server object
 
@@ -155,6 +155,6 @@ You can combine rulesets by adding one or more JSON files as parameters to your 
 ## Next steps
 
 - [SQL Server Management Objects (SMO)](../../relational-databases/server-management-objects-smo/overview-smo.md)
-- [PowerShell](../../powershell/download-sql-server-ps-module.md)
+- [PowerShell](/powershell/sql-server/download-sql-server-ps-module)
 - [SQL Vulnerability Assessment](../../relational-databases/security/sql-vulnerability-assessment.md)
 - [Use SQL Assessment API for SQL Server on Linux](../../linux/sql-server-linux-sql-assessment-api.md)

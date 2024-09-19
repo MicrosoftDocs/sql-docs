@@ -76,19 +76,19 @@ You can use one of the resolutions below depending on the scenario you are in.
 
 ## More information
 
-Another situation where log on triggers fail is when using the `EVENTDATA` function. This function returns XML, and its case sensitive.  So, you create the following logon trigger, intending to block access based on IP address, you can  ran into the issue:
+Another situation where log on triggers fail is when using the `EVENTDATA` function. This function returns XML, and its case sensitive.  So, you create the following logon trigger, intending to block access based on IP address, you can  ran into the issue:
 
 ``` sql
- CREATE TRIGGER tr_logon_CheckIP  
+ CREATE TRIGGER tr_logon_CheckIP  
  ON ALL SERVER  
  FOR LOGON  
  AS
  BEGIN
-  IF IS_SRVROLEMEMBER ( 'sysadmin' ) = 1  
+  IF IS_SRVROLEMEMBER ( 'sysadmin' ) = 1  
      BEGIN
-         DECLARE @IP NVARCHAR ( 15 );  
+         DECLARE @IP NVARCHAR ( 15 );  
          SET @IP = ( SELECT EVENTDATA ().value ( '(/EVENT_INSTANCE/ClientHost)[1]' , 'NVARCHAR(15)' ));  
-         IF NOT EXISTS( SELECT IP FROM DBAWork.dbo.ValidIP WHERE IP = @IP )  
+         IF NOT EXISTS( SELECT IP FROM DBAWork.dbo.ValidIP WHERE IP = @IP )  
          ROLLBACK ;  
      END ;  
  END ;  
@@ -101,4 +101,4 @@ User didn't maintain case when copying this script from the internet on this par
  SELECT EVENTDATA().value ( '(/event_instance/clienthost)[1]' , 'NVARCHAR(15)');
 ```
 
-As a consequence, `EVENTDATA` always returned **NULL**, and all his SA equivalent logins were denied access. In this case, the DAC connection was not enabled, so we had no choice but to restart the server with the startup parameters listed above to drop the trigger.
+As a consequence, `EVENTDATA` always returned **NULL**, and all his SA equivalent logins were denied access. In this case, the DAC connection was not enabled, so we had no choice but to restart the server with the startup parameters listed above to drop the trigger.

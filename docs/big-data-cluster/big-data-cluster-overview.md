@@ -97,7 +97,7 @@ A SQL Server big data cluster includes a scalable HDFS *storage pool*. This can 
 
 Management and monitoring are provided through a combination of command-line tools, APIs, portals, and dynamic management views.
 
-You can use [Azure Data Studio](../azure-data-studio/what-is-azure-data-studio.md) to perform a variety of tasks on the big data cluster:
+You can use [Azure Data Studio](/azure-data-studio/what-is-azure-data-studio) to perform a variety of tasks on the big data cluster:
 
 - Built-in snippets for common management tasks.
 - Ability to browse HDFS, upload files, preview files, and create directories.

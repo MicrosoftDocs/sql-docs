@@ -145,13 +145,13 @@ helpviewer_keywords:
     ```  
   
 > [!NOTE]  
->  To view the syntax of a cmdlet, use the **Get-Help** cmdlet in the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell environment. For more information, see [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
+>  To view the syntax of a cmdlet, use the **Get-Help** cmdlet in the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell environment. For more information, see [Get Help SQL Server PowerShell](/powershell/sql-server/sql-server-powershell).  
   
  **To set up and use the SQL Server PowerShell provider**  
   
--   [SQL Server PowerShell Provider](../../../powershell/sql-server-powershell-provider.md)  
+-   [SQL Server PowerShell Provider](/powershell/sql-server/sql-server-powershell-provider)  
   
--   [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)  
+-   [Get Help SQL Server PowerShell](/powershell/sql-server/sql-server-powershell)  
   
 ##  <a name="FollowUp"></a> Follow Up: After Configuring Backup on Secondary Replicas  
  To take the automated backup preference into account for a given availability group, on each server instance that hosts an availability replica whose backup priority is greater than zero (>0), you need to script backup jobs for the databases in the availability group. To determine whether the current replica is the preferred backup replica, use the [sys.fn_hadr_backup_is_preferred_replica](../../../relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql.md) function in your backup script. If the availability replica that is hosted by the current server instance is the preferred replica for backups, this function returns 1. If not, the function returns 0. By running a simple script on each availability replica that queries this function, you can determine which replica should run a given backup job. For example, a typical snippet of a backup-job script would look like:  

@@ -34,13 +34,11 @@ This article reviews methods for comparing a database and a SQL project using di
 
 ::: zone-end
 
-<!-- ::: zone pivot="sq1-visual-studio-sdk"
+::: zone pivot="sq1-visual-studio-sdk"
 
-- [.NET 8 SDK](https://dotnet.microsoft.com/download/dotnet/8.0)
-- [Visual Studio 2022 Community, Professional, or Enterprise](https://visualstudio.microsoft.com/downloads/)
-- [SQL Server Data Tools, SDK-style (preview) installed in Visual Studio 2022](../../sql/ssdt/download-sql-server-data-tools-ssdt-sdk.md)
+Graphical schema comparison isn't yet available in the SDK-style SQL projects preview in Visual Studio.  Use Azure Data Studio or Visual Studio to compare schemas.
 
-::: zone-end -->
+::: zone-end
 
 ::: zone pivot="sq1-visual-studio-code"
 

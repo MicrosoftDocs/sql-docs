@@ -53,7 +53,7 @@ To view or change the compatibility level of a database using [SQL Server Manage
 
 ## <a id="TsqlProcedure"></a> Use Transact-SQL
 
-You can use Transact-SQL to view or change the compatibility level of a database using SSMS or [Azure Data Studio](../../azure-data-studio/what-is-azure-data-studio.md).
+You can use Transact-SQL to view or change the compatibility level of a database using SSMS or [Azure Data Studio](/azure-data-studio/what-is-azure-data-studio).
 
 ### View the compatibility level of a database
 

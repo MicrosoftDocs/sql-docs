@@ -35,7 +35,7 @@ For more information on cluster configuration, resource agents options, and mana
 
 ## <a id="failManual"></a> Fail over cluster manually
 
-The `resource move` command creates a constraint forcing the resource to start on the target node.  After executing the `move` command, executing resource `clear` will remove the constraint so it's possible to move the resource again, or have the resource automatically fail over.
+The `resource move` command creates a constraint forcing the resource to start on the target node.  After executing the `move` command, executing resource `clear` will remove the constraint so it's possible to move the resource again, or have the resource automatically fail over.
 
 ```bash
 sudo pcs resource move <sqlResourceName> <targetNodeName>
@@ -220,7 +220,7 @@ An example of a healthy pacemaker quorum output would be:
 
 ```output
 Cluster name: MyAppSQL
-Last updated: Wed Oct 31 12:00:00 2016  Last change: Wed Oct 31 11:00:00 2016 by root via crm_resource on sqlvmnode1
+Last updated: Wed Oct 31 12:00:00 2016  Last change: Wed Oct 31 11:00:00 2016 by root via crm_resource on sqlvmnode1
 Stack: corosync
 Current DC: sqlvmnode1  (version 1.1.13-10.el7_2.4-44eb2dd) - partition with quorum
 3 nodes and 1 resource configured

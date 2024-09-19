@@ -12,6 +12,9 @@ ms.topic: conceptual
 
 # View analysis reports in Database Experimentation Assistant
 
+> [!NOTE]  
+> This tool will be retired on **December 15, 2024**. We will stop supporting this tool for any issues that arise, and will not issue any bug fixes or further updates.
+
 After you use Database Experimentation Assistant (DEA) to [create an analysis report](database-experimentation-assistant-create-report.md), you can review the report for performance insights based on the A/B test you performed.
 
 ## Open an existing analysis report

@@ -59,7 +59,7 @@ Beginning with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], runtimes f
 
 You can execute a Python external scripts with the stored procedure [sp_execute_external script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
 
-To enable external scripts, use [Azure Data Studio](../../azure-data-studio/what-is-azure-data-studio.md) to execute the statement below.
+To enable external scripts, use [Azure Data Studio](/azure-data-studio/what-is-azure-data-studio) to execute the statement below.
 
 ```sql
 sp_configure 'external scripts enabled', 1;

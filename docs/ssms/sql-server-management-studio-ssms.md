@@ -93,7 +93,7 @@ SSMS provides an integrated environment for managing any SQL infrastructure, inc
 
 ## Non-English language versions
 
-The block on mixed languages setup has been lifted. You can install SSMS in German on a French Windows machine. If the operating system language doesn't match the SSMS language, the user needs to change the language under Tools > Options > International Settings. Otherwise, SSMS shows the English UI.
+The block on mixed languages setup has been lifted. You can install SSMS in German on a French Windows machine. If the operating system language doesn't match the SSMS language, the user needs to change the language under Tools > Options > International Settings. Otherwise, SSMS shows the English UI.
 
 For more information about different locales with previous versions, see [Install non-English language versions of SSMS](install-other-languages.md).
 
@@ -116,4 +116,4 @@ For diagnostic data collection and feature usage information, see the [SQL Serve
 - [Install non-English language versions of SSMS](install-other-languages.md)
 - [Connect to and query a SQL Server instance](./quickstarts/ssms-connect-query-sql-server.md)
 - [Writing Transact-SQL Statements](../t-sql/tutorial-writing-transact-sql-statements.md)
-- [Azure Data Studio](../azure-data-studio/what-is-azure-data-studio.md)
+- [Azure Data Studio](/azure-data-studio/what-is-azure-data-studio)

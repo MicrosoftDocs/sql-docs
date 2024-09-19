@@ -283,7 +283,7 @@ For h=0 to intDC0
                   Marker = Marker + 1  
                Else  
                   If aryRows(Marker) = aryRows(Marker - intDC1) then  
-                     Response.Write "<TD> </TD>"  
+                     Response.Write "<TD> </TD>"  
                      Marker = Marker + 1  
                   Else  
                      Response.Write "<TD><B>"  

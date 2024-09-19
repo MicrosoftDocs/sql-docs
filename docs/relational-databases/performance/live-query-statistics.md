@@ -28,7 +28,7 @@ helpviewer_keywords:
   
 > [!WARNING]  
 > This feature is primarily intended for troubleshooting purposes. Using this feature can moderately slow the overall query performance, especially in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]. For more information, see [Query Profiling Infrastructure](../../relational-databases/performance/query-profiling-infrastructure.md).  
-> This feature can be used with the [Transact-SQL Debugger](../../ssms/scripting/configure-firewall-rules-before-running-the-tsql-debugger.md).  
+> This feature can be used with the [Transact-SQL Debugger](../../ssdt/debugger/configure-firewall-rules-before-running-tsql-debugger.md).  
   
 ## To view live query statistics for one query 
   

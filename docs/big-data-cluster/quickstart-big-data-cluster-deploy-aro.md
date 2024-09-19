@@ -35,7 +35,7 @@ The default big data cluster deployment used here consists of a SQL Master insta
 - [Python minimum version 3.0](https://www.python.org/downloads)
 - [`az` CLI](/cli/azure/install-azure-cli/)
 - [[!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]](../azdata/install/deploy-install-azdata.md)
-- [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md)
+- [Azure Data Studio](/azure-data-studio/download-azure-data-studio)
 
 ## Log in to your Azure account
 

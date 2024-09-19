@@ -69,7 +69,7 @@ In addition to the previous steps, you might need to do the following if you upg
 
 - Users that were created and configured in [!INCLUDE [ssExpress](../../includes/ssexpress-md.md)] remain configured after the upgrade. Specifically, the `BUILTIN\Users` group remains configured. Disable, remove, or reconfigure these accounts as needed. For more information, see [Configure Windows service accounts and permissions](../configure-windows/configure-windows-service-accounts-and-permissions.md).
 
-- Sizes and recovery model for the `tempdb` and `model` system databases remain unchanged after the upgrade. Reconfigure these settings as needed. For more information, see [Back up and restore: System databases (SQL Server)](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md).
+- Sizes and recovery model for the `tempdb` and `model` system databases remain unchanged after the upgrade. Reconfigure these settings as needed. For more information, see [Back up and restore: System databases (SQL Server)](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md).
 
 - Template databases remain on the computer after the upgrade.
 

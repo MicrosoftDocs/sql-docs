@@ -6,11 +6,10 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma, randolphwest
 ms.service: azure-sql-database
-ms.date: 08/26/2024
+ms.date: 09/18/2024
 ms.subservice: service-overview
 ms.topic: whats-new
 ms.custom:
-  - ignite-2023
   - build-2024
 monikerRange: "=azuresql||=azuresql-db"
 ---
@@ -23,7 +22,7 @@ monikerRange: "=azuresql||=azuresql-db"
 > * [Azure SQL Managed Instance](../managed-instance/doc-changes-updates-release-notes-whats-new.md?view=azuresql&preserve-view=true)
 > * [SQL Server on Azure VMs](../virtual-machines/windows/doc-changes-updates-release-notes-whats-new.md?view=azuresql&preserve-view=true)
 
-This article summarizes the documentation changes associated with new features and improvements in the recent releases of [Azure SQL Database](https://azure.microsoft.com/products/azure-sql/database/). For more information about Azure SQL Database, see [What is Azure SQL Database?](sql-database-paas-overview.md).
+This article summarizes the documentation changes associated with new features and improvements in the recent releases of [Azure SQL Database](https://azure.microsoft.com/products/azure-sql/database/). For more information about Azure SQL Database, see [What is Azure SQL Database?](sql-database-paas-overview.md)
 
 > [!TIP]
 > For more announcements, discussion, and community content, see the [Azure SQL Database blog](https://techcommunity.microsoft.com/t5/azure-sql-blog/bg-p/AzureSQLBlog).
@@ -48,10 +47,6 @@ The following table lists the features of Azure SQL Database that are currently 
 | [Fabric mirrored databases](/fabric/database/mirrored-database/overview) | With Fabric Mirroring, you can [mirror databases in Azure SQL Database to Microsoft Fabric](/fabric/database/mirrored-database/overview). You can continuously replicate your existing data estate directly into Fabric's OneLake, including data from Azure SQL Database.|
 | [Free Azure SQL Database](free-offer.md) | Try Azure SQL Database for free, for the life of your subscription. This free offer provides a General Purpose database with 100,000 vCore seconds of compute every month. |
 | [Fixed server roles](security-server-roles.md) |  To simplify permission management, Azure SQL Database provides a set of fixed server-level roles to help you manage the permissions on a logical server. | 
-| [Hyperscale elastic pools](hyperscale-elastic-pool-overview.md) | Manage and scale multiple Hyperscale databases in Azure SQL Database by using Hyperscale elastic pools. |
-| [Hyperscale elastic pool maintenance window support](maintenance-window.md) | You can now configure a non-default [maintenance window](maintenance-window.md) for a [Hyperscale elastic pool](hyperscale-elastic-pool-overview.md). For more information, read [Blog: Maintenance window support for Azure SQL Database Hyperscale elastic pools](https://aka.ms/hsep-fmw). |
-| [Hyperscale elastic pools Premium-series hardware](hyperscale-elastic-pool-overview.md) | Premium-series and premium-series memory optimized hardware is in preview for Hyperscale elastic pools. |
-| [Hyperscale elastic pools with zone redundancy](hyperscale-elastic-pool-overview.md) | You can now create zone redundant elastic pools in the Hyperscale service tier. You can migrate existing zone-redundant Hyperscale databases into elastic pools. For more information, read [Blog post: Zone redundant Hyperscale elastic pools](https://aka.ms/hsep-zr). |
 | [Hyperscale support for database and file shrink](file-space-manage.md)  | Database and file shrink commands are supported in preview for Azure SQL Database Hyperscale. For more information, see [Shrink for Azure SQL Database Hyperscale](https://aka.ms/hs-shrink-preview). |
 | [Import and export using Private Link](database-import-export-private-link.md) | Leave *Allow Access to Azure Services* off when you import or export a database using a service-managed endpoint. |
 | [JSON native data type](/sql/t-sql/data-types/json-data-type?view=azuresqldb-current&preserve-view=true) | The new native **json** data type and new JSON aggregate functions are currently in preview. For more information, see [JSON Type and aggregates preview](https://aka.ms/json-type-aggregates-public-preview). |
@@ -69,6 +64,8 @@ The following table lists features of Azure SQL Database that have been made gen
 
 | Feature | GA Month | Details |
 | --- | --- | --- |
+| [Hyperscale elastic pools](hyperscale-elastic-pool-overview.md) | September 2024 | Manage and scale multiple Hyperscale databases in Azure SQL Database by using Hyperscale elastic pools. Hyperscale elastic pools also support Premium-series hardware and zone redundancy. For more information, see [Hyperscale Elastic Pools are now generally available](https://aka.ms/hsep-ga). |
+| [Hyperscale elastic pool maintenance window support](maintenance-window.md) | September 2024 |You can configure a non-default [maintenance window](maintenance-window.md) for a [Hyperscale elastic pool](hyperscale-elastic-pool-overview.md). For more information, read [Blog: Maintenance window support for Azure SQL Database Hyperscale elastic pools](https://aka.ms/hsep-fmw). |
 | [CURRENT_DATE Transact-SQL](/sql/t-sql/functions/current-date-transact-sql) | August 2024 |  A Transact-SQL (T-SQL) function that returns the current database system date as a date value, without the database time and time zone offset. |
 | [Maintenance window support for named replicas](https://aka.ms/MWsupportforNR)|August 2024|[Maintenance window](maintenance-window.md) support for named replicas is now generally available.|
 | [Maintenance window](maintenance-window.md) support for Hyperscale | August 2024| [Maintenance window](maintenance-window.md) support for Hyperscale databases is now generally available. |
@@ -87,6 +84,14 @@ The following table lists features of Azure SQL Database that have been made gen
 ## Documentation changes
 
 Learn about significant changes to the Azure SQL Database documentation. For previous years, see the [What's new archive](doc-changes-updates-release-notes-whats-new-archive.md).
+
+### September 2024
+
+| Changes | Details |
+| --- | --- |
+| **SQL Insights (preview) retirement**| [SQL Insights (preview) will be retired on 31 December 2024](https://azure.microsoft.com/updates/v2/sql-insights-retirement). We recommend that you transition to [database watcher for Azure SQL (preview)](../database-watcher-overview.md) or another database monitoring solution by that date. |
+| **Hyperscale elastic pools GA** | Manage and scale multiple Hyperscale databases in Azure SQL Database by using [Hyperscale elastic pools](hyperscale-elastic-pool-overview.md). Hyperscale elastic pools also support Premium-series hardware and zone redundancy. For more information, see [Hyperscale Elastic Pools are now generally available](https://aka.ms/hsep-ga). |
+| **Hyperscale elastic pool maintenance window support** |You can configure a non-default [maintenance window](maintenance-window.md) for a [Hyperscale elastic pool](hyperscale-elastic-pool-overview.md). For more information, read [Blog: Maintenance window support for Azure SQL Database Hyperscale elastic pools](https://aka.ms/hsep-fmw). |
 
 ### August 2024
 

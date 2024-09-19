@@ -39,7 +39,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016"
  All replication types allow push and pull subscriptions. Merge replication uses two additional terms to distinguish subscriptions: client subscriptions and server subscriptions. Both client and server subscription types can be used with push and pull subscriptions. Client subscriptions are appropriate for most Subscribers, whereas server subscriptions are typically used for Subscribers that republish data to other Subscribers. Subscription choice also affects conflict resolution.  
   
 ## Non-SQL Server Subscribers  
- Oracle and IBM DB2 can subscribe to snapshot and transactional publications using push subscriptions. For more information, see [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md).  
+ Oracle and IBM Db2 can subscribe to snapshot and transactional publications using push subscriptions. For more information, see [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md).  
   
 ## Creating Subscriptions  
  To create a subscription, you supply the following information:  

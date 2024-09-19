@@ -3,7 +3,7 @@ title: Database Engine events and errors
 description: Consult this MSSQL error code list to find explanations for error messages for SQL Server database engine events.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 01/11/2024
+ms.date: 09/12/2024
 ms.service: sql
 ms.subservice: supportability
 ms.topic: reference
@@ -37,7 +37,7 @@ This article shows events and errors for [!INCLUDE [sssql16-md](../../includes/s
 - [SQL Server 2017](?view=sql-server-2017&preserve-view=true)
 :::moniker-end
 
-::: moniker range="=sql-server-2017||=sql-server-linux-2017"
+::: moniker range="=sql-server-2017 || =sql-server-linux-2017"
 This article shows events and errors for [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)]. If you want to view events and errors for other versions of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)], see:
 
 - [SQL Server 2022](?view=sql-server-ver16&preserve-view=true)
@@ -45,7 +45,7 @@ This article shows events and errors for [!INCLUDE [sssql17-md](../../includes/s
 - [SQL Server 2016](?view=sql-server-2016&preserve-view=true)
 :::moniker-end
 
-::: moniker range="=sql-server-ver15||=sql-server-linux-ver15"
+::: moniker range="=sql-server-ver15 || =sql-server-linux-ver15"
 This article shows events and errors for [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)]. If you want to view events and errors for other versions of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)], see:
 
 - [SQL Server 2022](?view=sql-server-ver16&preserve-view=true)
@@ -93,5 +93,5 @@ Visit the following sections for more detail about error and event codes:
 
 ## Related content
 
-- [Understanding Database Engine Errors](../../relational-databases/errors-events/understanding-database-engine-errors.md)
-- [Cause and Resolution of Database Engine Errors](/previous-versions/sql/sql-server-2016/ms365262(v=sql.130))
+- [Understanding Database Engine errors](../../relational-databases/errors-events/understanding-database-engine-errors.md)
+- [Cause and resolution of Database Engine errors](/previous-versions/sql/sql-server-2016/ms365262(v=sql.130))

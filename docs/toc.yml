@@ -1406,7 +1406,7 @@ items:
       items:
       - name: Troubleshooting Activation Stored Procedures
         href: database-engine/service-broker/troubleshooting-activation-stored-procedures.md
-      - name: Troubleshooting Routing and Message Delivery
+      - name: Troubleshooting Routing and Message Delivery
         href: database-engine/service-broker/troubleshooting-routing-and-message-delivery.md
       - name: Troubleshooting Conversation Priorities
         href: database-engine/service-broker/troubleshooting-conversation-priorities.md
@@ -4375,7 +4375,7 @@ items:
     - name: SQL Server Replication
       href: database-engine/install-windows/install-sql-server-replication.md
     - name: SQL Server PowerShell
-      href: database-engine/install-windows/install-sql-server-powershell.md
+      href: /powershell/sql-server/download-sql-server-ps-module
     - name: SQL Server with SMB Fileshare as a Storage Option
       href: database-engine/install-windows/install-sql-server-with-smb-fileshare-as-a-storage-option.md
     - name: Considerations for Installing SQL Server Using SysPrep
@@ -4764,8 +4764,6 @@ items:
         href: database-engine/configure-windows/logging-in-to-sql-server.md
       - name: Open the ODBC Data Source Administrator
         href: database-engine/configure-windows/open-the-odbc-data-source-administrator.md
-      - name: Check the ODBC SQL Server Driver Version (Windows)
-        href: database-engine/configure-windows/check-the-odbc-sql-server-driver-version-windows.md
   - name: Uninstall SQL Server
     items:
     - name: Overview
@@ -5306,8 +5304,10 @@ items:
           href: relational-databases/replication/publish/automatically-generate-join-filters-between-merge-articles.md
         - name: Define a logical record relationship
           href: relational-databases/replication/publish/define-a-logical-record-relationship-between-merge-table-articles.md
-        - name: Configure IIS 7 for Web Synchronization
+        - name: Configure IIS 7 for web synchronization
           href: relational-databases/replication/configure-iis-7-for-web-synchronization.md
+        - name: Configure web synchronization
+          href: relational-databases/replication/configure-web-synchronization.md
         - name: Resolve data conflicts
           href: relational-databases/replication/view-and-resolve-data-conflicts-for-merge-publications.md
         - name: Implement a business logic handler
@@ -5356,28 +5356,29 @@ items:
           href: relational-databases/replication/non-sql/manage-oracle-tablespaces.md
     - name: Concepts
       items:
-      - name: Publishing Objects
+      - name: Publishing objects
         href: relational-databases/replication/publish/replication-publishing-model-overview.md
-      - name: Types of Replication
-        href: relational-databases/replication/types-of-replication.md
+      - name: Types of replication
         items:
-        - name: Memory-Optimized Table Subscribers
+        - name: Overview
+          href: relational-databases/replication/types-of-replication.md
+        - name: Memory-optimized table subscribers
           href: relational-databases/replication/replication-to-memory-optimized-table-subscribers.md
         - name: Replication to SQL Database >
           href: /azure/sql-database/replication-to-sql-database
-        - name: Republish Data
+        - name: Republish data
           href: relational-databases/replication/republish-data.md
         - name: Replication over the Internet
           href: relational-databases/replication/replication-over-the-internet.md
-        - name: Publish Data over the Internet Using VPN
+        - name: Publish data over the Internet using VPN
           href: relational-databases/replication/publish-data-over-the-internet-using-vpn.md
-        - name: Web Synchronization for Merge Replication
+        - name: Web synchronization for merge replication
           href: relational-databases/replication/web-synchronization-for-merge-replication.md
         - name: Topologies for web synchronization
           href: relational-databases/replication/topologies-for-web-synchronization.md
-        - name: Snapshot Replication
+        - name: Snapshot replication
           href: relational-databases/replication/snapshot-replication.md
-        - name: Merge Replication
+        - name: Merge replication
           href: relational-databases/replication/merge/merge-replication.md
           items:
           - name: Article options
@@ -5429,11 +5430,11 @@ items:
         items:
         - name: Agent executables
           href: relational-databases/replication/concepts/replication-agent-executables-concepts.md
-        - name: Management Objects
+        - name: Management objects
           href: relational-databases/replication/concepts/replication-management-objects-concepts.md
         - name: Programming concepts
           href: relational-databases/replication/concepts/replication-programming-concepts.md
-        - name: System Stored Procedures
+        - name: System stored procedures
           href: relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md
       - name: Security
         items:
@@ -5447,10 +5448,10 @@ items:
           href: relational-databases/replication/security/security-role-requirements-for-replication.md
         - name: Best practices
           href: relational-databases/replication/security/replication-security-best-practices.md
-      - name: Non-SQL Replication
+      - name: Non-SQL replication
         href: relational-databases/replication/non-sql/heterogeneous-database-replication.md
         items:
-        - name: Non-SQL Publishers
+        - name: Non-SQL publishers
           href: relational-databases/replication/non-sql/non-sql-server-publishers.md
           items:
           - name: Oracle
@@ -5460,19 +5461,19 @@ items:
               href: relational-databases/replication/non-sql/design-considerations-and-limitations-for-oracle-publishers.md
             - name: Glossary of terms
               href: relational-databases/replication/non-sql/glossary-of-terms-for-oracle-publishing.md
-            - name: Administrative Considerations
+            - name: Administrative considerations
               href: relational-databases/replication/non-sql/administrative-considerations-for-oracle-publishers.md
-            - name: Performance Tuning
+            - name: Performance tuning
               href: relational-databases/replication/non-sql/performance-tuning-for-oracle-publishers.md
             - name: Data type mapping
               href: relational-databases/replication/non-sql/data-type-mapping-for-oracle-publishers.md
-            - name: Backup & restore
+            - name: Backup and restore
               href: relational-databases/replication/non-sql/backup-and-restore-for-oracle-publishers.md
             - name: Objects created
               href: relational-databases/replication/non-sql/objects-created-on-the-oracle-publisher.md
             - name: Troubleshooting
               href: relational-databases/replication/non-sql/troubleshooting-oracle-publishers.md
-        - name: Non-SQL Subscribers
+        - name: Non-SQL subscribers
           href: relational-databases/replication/non-sql/non-sql-server-subscribers.md
           items:
           - name: Oracle
@@ -5484,11 +5485,11 @@ items:
     - name: Tutorials
       href: relational-databases/replication/replication-tutorials.md
       items:
-      - name: Prepare Server for Replication
+      - name: Prepare server for replication
         href: relational-databases/replication/tutorial-preparing-the-server-for-replication.md
-      - name: Configure Transactional Replication
+      - name: Configure transactional replication
         href: relational-databases/replication/tutorial-replicating-data-between-continuously-connected-servers.md
-      - name: Configure Merge Replication
+      - name: Configure merge replication
         href: relational-databases/replication/tutorial-replicating-data-with-mobile-clients.md
     - name: Reference
       items:
@@ -5557,23 +5558,23 @@ items:
         items:
         - name: Main page
           href: relational-databases/replication/replication-monitor-main-page.md
-        - name: Add Publisher
+        - name: Add publisher
           href: relational-databases/replication/add-publisher.md
-        - name: Distributor Settings
+        - name: Distributor settings
           href: relational-databases/replication/distributor-settings.md
-        - name: Distributor Information
+        - name: Distributor information
           href: relational-databases/replication/distributor-information-publications.md
-        - name: Publisher Settings
+        - name: Publisher settings
           href: relational-databases/replication/publisher-settings.md
-        - name: Publisher Information
+        - name: Publisher information
           href: relational-databases/replication/publisher-information-publications.md
-        - name: Publisher Agents
+        - name: Publisher agents
           href: relational-databases/replication/publisher-information-agents.md
         - name: Sort columns
           href: relational-databases/replication/sort-columns.md
       - name: Publication information
         items:
-        - name: Transactional Replication
+        - name: Transactional replication
           items:
           - name: Subscription watch list
             href: relational-databases/replication/publisher-information-subscription-watch-list-transactional.md
@@ -5605,7 +5606,7 @@ items:
             href: relational-databases/replication/subscription-synchronization-history.md
         - name: Snapshot replication
           items:
-          - name: Subscription Watch list
+          - name: Subscription watch list
             href: relational-databases/replication/publisher-information-subscription-watch-list-snapshot.md
           - name: Subscriptions
             href: relational-databases/replication/publication-information-all-subscriptions-snapshot-publication.md
@@ -5620,65 +5621,65 @@ items:
         items:
         - name: Distributor
           href: relational-databases/replication/distributor.md
-        - name: Snapshot Folder
+        - name: Snapshot folder
           href: relational-databases/replication/snapshot-folder.md
-        - name: Distribution Database
+        - name: Distribution database
           href: relational-databases/replication/distribution-database.md
         - name: Publishers
           href: relational-databases/replication/publishers.md
-        - name: Distributor Password
+        - name: Distributor password
           href: relational-databases/replication/distributor-password.md
       - name: New Publication Wizard
         href: relational-databases/replication/new-publication-wizard.md
         items:
-        - name: Oracle Publisher
+        - name: Oracle publisher
           href: relational-databases/replication/oracle-publisher.md
-        - name: Administrative Password
+        - name: Administrative password
           href: relational-databases/replication/administrative-password.md
-        - name: Publication Database
+        - name: Publication database
           href: relational-databases/replication/publication-database.md
-        - name: Publication Type
+        - name: Publication type
           href: relational-databases/replication/publication-type.md
-        - name: Subscriber Types
+        - name: Subscriber types
           href: relational-databases/replication/subscriber-types.md
-        - name: Agent Security (New Publication Wizard)
+        - name: Agent security (New Publication Wizard)
           href: relational-databases/replication/agent-security-new-publication-wizard.md
         - name: Articles
           href: relational-databases/replication/articles.md
-        - name: Article Issues
+        - name: Article issues
           href: relational-databases/replication/article-issues.md
-        - name: Filter Table Rows
+        - name: Filter table rows
           href: relational-databases/replication/filter-table-rows.md
-        - name: Add or Edit Filter
+        - name: Add or edit filter
           href: relational-databases/replication/add-or-edit-filter.md
-        - name: Add or Edit Join
+        - name: Add or edit join
           href: relational-databases/replication/add-or-edit-join.md
-        - name: Generate Filters
+        - name: Generate filters
           href: relational-databases/replication/generate-filters.md
-        - name: Snapshot Agent
+        - name: Snapshot agent
           href: relational-databases/replication/snapshot-agent-new-publication-wizard.md
       - name: New Subscription Wizard
         href: relational-databases/replication/new-subscription-wizard-ui-reference.md
         items:
-        - name: Agent Location
+        - name: Agent location
           href: relational-databases/replication/agentname-agent-location.md
         - name: Subscribers
           href: relational-databases/replication/subscribers.md
-        - name: Add Non-SQL Server Subscriber
+        - name: Add non-SQL Server subscriber
           href: relational-databases/replication/add-non-sql-server-subscriber.md
-        - name: Agent Security
+        - name: Agent security
           href: relational-databases/replication/agentname-agent-security.md
-        - name: Updatable Subscriptions
+        - name: Updatable subscriptions
           href: relational-databases/replication/updatable-subscriptions.md
-        - name: Login for Updatable Subscriptions
+        - name: Login for updatable subscriptions
           href: relational-databases/replication/login-for-updatable-subscriptions.md
-        - name: Initialize Subscriptions
+        - name: Initialize subscriptions
           href: relational-databases/replication/initialize-subscriptions.md
-        - name: Web Server Information
+        - name: Web server information
           href: relational-databases/replication/web-server-information.md
-        - name: Subscription Type
+        - name: Subscription type
           href: relational-databases/replication/subscription-type.md
-        - name: HOST_NAME Values
+        - name: HOST_NAME values
           href: relational-databases/replication/host-name-values.md
       - name: Configure Peer-to-Peer Topology Wizard
         href: relational-databases/replication/configure-peer-to-peer-topology-wizard.md
@@ -8414,15 +8415,6 @@ items:
           href: tools/configuration-manager/client-protocols-named-pipes-properties-protocol-tab.md
       - name: Aliases
         href: tools/configuration-manager/aliases-sql-server-configuration-manager.md
-        items:
-        - name: New Alias
-          href: tools/configuration-manager/new-alias-alias-tab.md
-        - name: Properties
-          href: tools/configuration-manager/alias-properties-alias-tab.md
-        - name: Create a valid connection string using shared memory
-          href: tools/configuration-manager/creating-a-valid-connection-string-using-shared-memory-protocol.md
-        - name: "Create a valid connection string using TCP/IP"
-          href: tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip.md
     - name: Error logs
       href: tools/configuration-manager/monitoring-the-error-logs.md
       items:
@@ -8465,6 +8457,8 @@ items:
     items:
     - name: SQL Server Data Tools Overview
       href: ssdt/sql-server-data-tools.md
+    - name: SQL Server Data Tools, SDK-style
+      href: ssdt/sql-server-data-tools-sdk-style.md
     - name: Install SSDT
       href: ssdt/download-sql-server-data-tools-ssdt.md
     - name: Previous releases of SSDT & SSDT-BI
@@ -8476,32 +8470,19 @@ items:
     - name: Microsoft Entra ID support
       href: ssdt/azure-active-directory.md
     - name: Project-Oriented Offline Database Development
-      href: ssdt/project-oriented-offline-database-development.md
       items:
-      - name: Import into a Database Project
-        href: ssdt/import-into-a-database-project.md
       - name: Add Database Reference Dialog Box
         href: ssdt/add-database-reference-dialog-box.md
       - name: Database Project Settings
         href: ssdt/database-project-settings.md
       - name: "How to: Browse Objects in a SQL Server Database Project"
         href: ssdt/how-to-browse-objects-in-a-sql-server-database-project.md
-      - name: Data Tools Operations Window
-        href: ssdt/data-tools-operations-window.md
       - name: T-SQL Editor Options
         href: ssdt/transact-sql-editor-options.md
-      - name: "How to: Create a New Database Project"
-        href: ssdt/how-to-create-a-new-database-project.md
-      - name: "How to: Build & Deploy to a Local Database"
-        href: ssdt/how-to-build-and-deploy-to-a-local-database.md
-      - name: "How to: Use Microsoft SQL Server 2012 Objects in Your Project"
-        href: ssdt/how-to-use-microsoft-sql-server-2012-objects-in-your-project.md
       - name: "How to: Work with CLR Database Objects"
         href: ssdt/how-to-work-with-clr-database-objects.md
       - name: "How to: Create a Snapshot of a Project"
         href: ssdt/how-to-create-a-snapshot-of-a-project.md
-      - name: "How to: Convert a Visual Studio 2010 Database Projects to SQL Server Database Projects & Retarget to a Different Platform"
-        href: ssdt/how-to-convert-visual-studio-2010-database-projects-to-ssql-server-projects.md
       - name: Connected Database Development
         items:
         - name: "How to: Connect to a Database & Browse Existing Objects"
@@ -8641,7 +8622,7 @@ items:
         - name: Debug Stored Procedures
           href: ssdt/debugger/debug-stored-procedures.md
         - name: T-SQL Debugger Information
-          href: ssms/scripting/transact-sql-debugger-information.md
+          href: ssdt/debugger/transact-sql-debugger-information.md
         - name: T-SQL Breakpoints
           href: ssdt/debugger/transact-sql-breakpoints.md
           items:
@@ -9554,8 +9535,6 @@ items:
           href: ssms/visual-db-tools/exclude-duplicate-rows-visual-database-tools.md
         - name: Remove Columns from Query Results
           href: ssms/visual-db-tools/remove-columns-from-query-results-visual-database-tools.md
-        - name: Discard Changes Made to Diagrams
-          href: ssms/visual-db-tools/discard-changes-made-to-diagrams-visual-database-tools.md
         - name: Rename Queries
           href: ssms/visual-db-tools/rename-queries-visual-database-tools.md
         - name: Delete Rows in the Results Pane
@@ -9688,8 +9667,6 @@ items:
           href: ssms/visual-db-tools/map-many-to-many-relationships-visual-database-tools.md
         - name: Create Relationships Between Tables on a Diagram
           href: ssms/visual-db-tools/create-relationships-between-tables-on-a-diagram-visual-database-tools.md
-        - name: Rename a Database Diagram
-          href: ssms/visual-db-tools/rename-a-database-diagram-visual-database-tools.md
         - name: Specify Conditions for Groups
           href: ssms/visual-db-tools/specify-conditions-for-groups-visual-database-tools.md
         - name: Specify Search Criteria
@@ -9704,8 +9681,6 @@ items:
           href: ssms/visual-db-tools/how-the-query-and-view-designer-represents-joins-visual-database-tools.md
         - name: Design Queries & Views How-to Topics
           href: ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md
-        - name: Issues of Database Evolution
-          href: ssms/visual-db-tools/issues-of-database-evolution-visual-database-tools.md
         - name: Use HAVING & WHERE Clauses in the Same Query
           href: ssms/visual-db-tools/use-having-and-where-clauses-in-the-same-query-visual-database-tools.md
         - name: Navigate in the Query & View Designer
@@ -9766,6 +9741,8 @@ items:
       href: tools/sql-database-projects/sql-database-projects.md
     - name: Getting started with SQL projects
       href: tools/sql-database-projects/get-started.md
+    - name: SQL projects tools
+      href: tools/sql-database-projects/sql-projects-tools.md
     # - name: SQL DevOps
     #   href: tools/sql-database-projects/sql-devops.md
     - name: Tutorials
@@ -9778,7 +9755,7 @@ items:
       items:
       - name: Analyze project code
         href: tools/sql-database-projects/howto/analyze-t-sql-code-to-find-defects.md
-      - name: Compase a database and a project
+      - name: Compare a database and a project
         href: tools/sql-database-projects/howto/compare-database-project.md
       - name: Convert an original SQL project
         href: tools/sql-database-projects/howto/convert-original-sql-project.md
@@ -9984,7 +9961,7 @@ items:
     - name: Query History
       href: tools/visual-studio-code/mssql-query-history.md
     - name: SQL Database Projects
-      href: azure-data-studio/extensions/sql-database-project-extension.md
+      href: /azure-data-studio/extensions/sql-database-project-extension
     - name: SQL Bindings for Azure Functions
       items: 
       - name: Overview
@@ -10197,7 +10174,7 @@ items:
       - name: Use SSMS to manage
         href: linux/sql-server-linux-manage-ssms.md
       - name: Use Azure Data Studio to manage
-        href: azure-data-studio/quickstart-sql-server.md
+        href: /azure-data-studio/quickstart-sql-server
       - name: Use Windows PowerShell
         href: linux/sql-server-linux-manage-powershell.md
       - name: Use PowerShell Core
@@ -10253,6 +10230,8 @@ items:
       - name: Availability groups
         href: linux/sql-server-linux-availability-group-overview.md
         items:
+        - name: Configure machine key for contained AG
+          href: linux/sql-server-linux-availability-group-prepare-machine-key.md
         - name: High availability
           items:
           - name: Create for high availability
@@ -12344,7 +12323,7 @@ items:
       items:
       - name: Database Mirroring Witness - sys.database_mirroring_witnesses
         href: relational-databases/system-catalog-views/database-mirroring-witness-catalog-views-sys-database-mirroring-witnesses.md
-    - name: Databases & Files
+    - name: Databases & files
       href: relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md
       items:
       - name: sys.backup_devices
@@ -12359,6 +12338,8 @@ items:
         href: relational-databases/system-catalog-views/sys-database-recovery-status-transact-sql.md
       - name: sys.database_scoped_configurations
         href: relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md
+      - name: sys.database_automatic_tuning_configuration
+        href: relational-databases/system-catalog-views/sys-database-automatic-tuning-configuration-transact-sql.md
       - name: sys.database_automatic_tuning_options
         href: relational-databases/system-catalog-views/sys-database-automatic-tuning-options-transact-sql.md
       - name: sys.database_automatic_tuning_mode
@@ -12916,6 +12897,8 @@ items:
         href: relational-databases/system-catalog-views/sys-workload-management-workload-classifier-details-transact-sql.md
       - name: sys.workload-management-workload-classifiers
         href: relational-databases/system-catalog-views/sys-workload-management-workload-classifiers-transact-sql.md
+      - name: sys.workload-management-workload-groups
+        href: relational-databases/system-catalog-views/sys-workload-management-workload-groups-transact-sql.md
     - name: XML Schemas (XML Type System)
       href: relational-databases/system-catalog-views/xml-schemas-xml-type-system-catalog-views-transact-sql.md
       items:
@@ -13019,8 +13002,9 @@ items:
     - name: sys.sysusers
       href: relational-databases/system-compatibility-views/sys-sysusers-transact-sql.md
   - name: System dynamic management views
-    href: relational-databases/system-dynamic-management-views/system-dynamic-management-views.md
     items:
+    - name: Overview
+      href: relational-databases/system-dynamic-management-views/system-dynamic-management-views.md
     - name: Always On Availability Groups
       href: relational-databases/system-dynamic-management-views/always-on-availability-groups-dynamic-management-views-functions.md
       items:
@@ -13559,6 +13543,8 @@ items:
         href: relational-databases/system-dynamic-management-views/sys-dm-pdw-wait-stats-transact-sql.md
       - name: sys.dm_pdw_waits
         href: relational-databases/system-dynamic-management-views/sys-dm-pdw-waits-transact-sql.md
+      - name: sys.dm_workload_management_workload_groups_stats
+        href: relational-databases/system-dynamic-management-views/sys-dm-workload-management-workload-group-stats-transact-sql.md
     - name: SQL Server Operating System
       href: relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md
       items:
@@ -13837,8 +13823,9 @@ items:
       - name: sys.fn_has_change_feed_permissions
         href: relational-databases/system-functions/fn-has-change-feed-permissions.md
   - name: System information schema views
-    href: relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md
     items:
+    - name: Overview
+      href: relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md
     - name: CHECK_CONSTRAINTS
       href: relational-databases/system-information-schema-views/check-constraints-transact-sql.md
     - name: COLUMN_DOMAIN_USAGE
@@ -13867,6 +13854,8 @@ items:
       href: relational-databases/system-information-schema-views/routines-transact-sql.md
     - name: SCHEMATA
       href: relational-databases/system-information-schema-views/schemata-transact-sql.md
+    - name: SEQUENCES
+      href: relational-databases/system-information-schema-views/sequences-transact-sql.md
     - name: TABLE_CONSTRAINTS
       href: relational-databases/system-information-schema-views/table-constraints-transact-sql.md
     - name: TABLE_PRIVILEGES
@@ -14109,6 +14098,8 @@ items:
         href: relational-databases/system-stored-procedures/sp-clean-db-file-free-space-transact-sql.md
       - name: sp_configure
         href: relational-databases/system-stored-procedures/sp-configure-transact-sql.md
+      - name: sp_configure_automatic_tuning
+        href: relational-databases/system-stored-procedures/sp-configure-automatic-tuning-transact-sql.md
       - name: sp_control_plan_guide
         href: relational-databases/system-stored-procedures/sp-control-plan-guide-transact-sql.md
       - name: sp_create_plan_guide
@@ -15827,6 +15818,8 @@ items:
         href: relational-databases/system-tables/msqreader-agents-transact-sql.md
       - name: MSqreader_history
         href: relational-databases/system-tables/msqreader-history-transact-sql.md
+      - name: MSRedirected_publishers
+        href: relational-databases/system-tables/msredirected-publishers.md
       - name: MSrepl_agent_jobs
         href: relational-databases/system-tables/msrepl-agent-jobs-transact-sql.md
       - name: MSrepl_backup_lsns

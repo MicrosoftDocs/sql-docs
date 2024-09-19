@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "database backups [SQL Server], system databases"
   - "servers [SQL Server], backup"
 ---
-# Back up and restore: System databases (SQL Server)
+# Back up and restore: System databases (SQL Server)
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 

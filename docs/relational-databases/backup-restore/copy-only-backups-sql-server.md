@@ -120,7 +120,7 @@ Backup-SqlDatabase -ServerInstance 'SalesServer' -Database 'Sales' -BackupFile '
 
 ### Set up and use the SQL Server PowerShell provider
 
-- [SQL Server PowerShell Provider](../../powershell/sql-server-powershell-provider.md)
+- [SQL Server PowerShell Provider](/powershell/sql-server/sql-server-powershell-provider)
 
 ## Related content
 

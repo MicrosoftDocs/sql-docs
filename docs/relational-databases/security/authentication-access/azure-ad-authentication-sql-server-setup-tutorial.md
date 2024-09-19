@@ -37,7 +37,7 @@ In this tutorial, you learn how to:
 
 - The server and instance enabled by Azure Arc. For more information, see [Connect your SQL Server to Azure Arc](../../../sql-server/azure-arc/connect.md).
 - Access to Microsoft Entra ID is available for authentication purpose. For more information, see [Microsoft Entra authentication for SQL Server](azure-ad-authentication-sql-server-overview.md).
-- [SQL Server Management Studio (SSMS)](../../../ssms/download-sql-server-management-studio-ssms.md) version 18.0 or higher is installed on the client machine. Or download the latest [Azure Data Studio](../../../azure-data-studio/download-azure-data-studio.md).
+- [SQL Server Management Studio (SSMS)](../../../ssms/download-sql-server-management-studio-ssms.md) version 18.0 or higher is installed on the client machine. Or download the latest [Azure Data Studio](/azure-data-studio/download-azure-data-studio).
 
 ### Authentication prerequisites
 
@@ -183,7 +183,7 @@ Select the newly created application, and on the left side menu, select **API Pe
 
 ## Create logins and users
 
-After the Azure Arc agent on the SQL Server host has completed its operation, the admin account selected in the **Microsoft Entra ID** menu in the portal will be a `sysadmin` on the SQL Server instance. Sign into SQL Server with the Microsoft Entra admin account that has `sysadmin` permissions on the server using a client like [SSMS](../../../ssms/download-sql-server-management-studio-ssms.md) or [Azure Data Studio](../../../azure-data-studio/download-azure-data-studio.md).
+After the Azure Arc agent on the SQL Server host has completed its operation, the admin account selected in the **Microsoft Entra ID** menu in the portal will be a `sysadmin` on the SQL Server instance. Sign into SQL Server with the Microsoft Entra admin account that has `sysadmin` permissions on the server using a client like [SSMS](../../../ssms/download-sql-server-management-studio-ssms.md) or [Azure Data Studio](/azure-data-studio/download-azure-data-studio).
 
 > [!NOTE]  
 > All connections to SQL Server that are done with Microsoft Entra authentication require an encrypted connection. If the Database Administrator (DBA) has not set up a trusted SSL/TLS certificate for the server, logins will likely fail with the message **The certificate chain was issued by an authority that is not trusted.** To fix this, either configure the SQL Server instance to use an SSL/TLS certificate which is trusted by the client or select **trust server certificate** in the advanced connection properties. For more information, see [Enable encrypted connections to the Database Engine](../../../database-engine/configure-windows/configure-sql-server-encryption.md).

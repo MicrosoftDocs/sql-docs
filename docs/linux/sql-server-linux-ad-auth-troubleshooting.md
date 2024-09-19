@@ -289,7 +289,7 @@ The NetBIOS name (`CONTOSO`) is required in the command, but in the backend when
 
 The error message "Could not look up short domain name due to error" suggests that `nslookup` for `contoso` doesn't resolve to IP address of the domain controller. You should review [DNS and reverse DNS lookups](#dns-and-reverse-dns-lookups) to confirm that `nslookup` for both the NetBIOS and domain name should match.
 
-### <a id="error-rdns-lookup"></a> Error messages: "Could not perform rDNS lookup for host \<hostname\> due to error" or <a id="error-fqdn-not-returned"></a> "FQDN not returned by rDNS lookup"
+### <a id="error-rdns-lookup"></a> Error messages: "Could not perform rDNS lookup for host \<hostname\> due to error" or <a id="error-fqdn-not-returned"></a> "FQDN not returned by rDNS lookup"
 
 #### Possible cause
 
@@ -393,7 +393,7 @@ This error means that the encryption type requested by the client wasn't present
 
 To validate, follow the [Check keytab file and permissions](#check-keytab-file-and-permissions) section of this document to list all entries in the keytab. If you can't find an error message that matches the principal, KVNO, and encryption type, add this entry by updating the keytab file using the steps mentioned in that section.
 
-### <a id="error-request-ticket-server-not-found-decrypt"></a> Error message: "Request ticket server \<principal\> kvno \<KVNO\> enctype \<encryption type\> found in keytab but can't decrypt ticket"
+### <a id="error-request-ticket-server-not-found-decrypt"></a> Error message: "Request ticket server \<principal\> kvno \<KVNO\> enctype \<encryption type\> found in keytab but can't decrypt ticket"
 
 #### Possible cause
 

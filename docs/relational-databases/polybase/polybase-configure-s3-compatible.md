@@ -30,7 +30,7 @@ This article includes instructions for both Basic Authentication and pass-throug
 To use the S3-compatible object storage integration features, you need the following tools and resources:
 
 - [Install the PolyBase feature for SQL Server](polybase-installation.md).
-- Install [SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md) or [Azure Data Studio](../../azure-data-studio/download-azure-data-studio.md).
+- Install [SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md) or [Azure Data Studio](/azure-data-studio/download-azure-data-studio).
 - S3-compatible storage.
 - An S3 bucket created. Buckets cannot be created or configured from SQL Server.
 - A user (`Access Key ID`) and the secret (`Secret Key ID`) known to you. You need both to authenticate against the S3 object storage endpoint.

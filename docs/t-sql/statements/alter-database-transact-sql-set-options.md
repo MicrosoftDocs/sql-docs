@@ -1115,7 +1115,7 @@ The current setting of this option can be determined by examining the `page_veri
 
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)])
 
-Enables or disables Stretch Database for the database. For more info, see [Stretch Database](../../sql-server/stretch-database/stretch-database.md).
+Enables or disables Stretch Database for the database. For more info, see [Stretch Database](/previous-versions/sql/sql-server/stretch-database/stretch-database).
 
 > [!IMPORTANT]  
 > [!INCLUDE [stretch-database-deprecation](../../includes/stretch-database-deprecation.md)]
@@ -1124,7 +1124,7 @@ Enables or disables Stretch Database for the database. For more info, see [Stret
 
 - ON
 
-  Enables Stretch Database for the database. For more info, including additional prerequisites, see [Enable Stretch Database for a database](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md).
+  Enables Stretch Database for the database. For more info, including additional prerequisites, see [Enable Stretch Database for a database](/previous-versions/sql/sql-server/stretch-database/enable-stretch-database-for-a-database).
 
   Requires `db_owner` permission to enable Stretch Database for a table. Requires `db_owner` and `CONTROL DATABASE` permissions to enable Stretch Database for a database.
 
@@ -1149,7 +1149,7 @@ Enables or disables Stretch Database for the database. For more info, see [Stret
 
 - OFF
 
-  Disables Stretch Database for the database. For more info, see [Disable Stretch Database and bring back remote data](../../sql-server/stretch-database/disable-stretch-database-and-bring-back-remote-data.md).
+  Disables Stretch Database for the database. For more info, see [Disable Stretch Database and bring back remote data](/previous-versions/sql/sql-server/stretch-database/disable-stretch-database-and-bring-back-remote-data).
 
   You can only disable Stretch Database for a database after the database no longer contains any tables that are enabled for Stretch Database. After you disable Stretch Database, data migration stops. Also, query results no longer include results from remote tables.
 

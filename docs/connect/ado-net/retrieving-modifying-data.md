@@ -28,11 +28,11 @@ Contains topics describing various aspects of using connection strings, includin
 [Connection pooling](connection-pooling.md)  
 Describes connection pooling for the Microsoft SqlClient Data Provider for SQL Server.
 
-[Commands and Parameters](commands-parameters.md)  
-Contains topics describing how to create commands and command builders, configure parameters, and how to execute commands to retrieve and modify data.
+[Commands and Parameters](commands-parameters.md)  
+Contains topics describing how to create commands and command builders, configure parameters, and how to execute commands to retrieve and modify data.
 
-[DataAdapters and DataReaders](dataadapters-datareaders.md)  
-Contains topics describing DataReaders, DataAdapters, parameters, handling DataAdapter events and performing batch operations.
+[DataAdapters and DataReaders](dataadapters-datareaders.md)  
+Contains topics describing DataReaders, DataAdapters, parameters, handling DataAdapter events and performing batch operations.
 
 [Transactions and concurrency](transactions-and-concurrency.md)  
 Contains topics describing how to perform local transactions, distributed transactions, and work with optimistic concurrency.

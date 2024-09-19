@@ -4,13 +4,13 @@ description: Indexes
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: randolphwest
-ms.date: 04/04/2023
+ms.date: 09/17/2024
 ms.service: sql
 ms.subservice: table-view-index
 ms.topic: conceptual
 helpviewer_keywords:
   - "index types [SQL Server]"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 # Indexes
 
@@ -18,7 +18,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 
 ## Available index types
 
-The following table lists the types of indexes available in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and provides links to additional information.
+The following table lists the types of indexes available in [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] and provides links to additional information.
 
 | Index type | Description | Additional information |
 | --- | --- | --- |
@@ -33,20 +33,20 @@ The following table lists the types of indexes available in [!INCLUDE[ssNoVersio
 | Filtered | An optimized nonclustered index, especially suited to cover queries that select from a well-defined subset of data. It uses a filter predicate to index a portion of rows in the table. A well-designed filtered index can improve query performance, reduce index maintenance costs, and reduce index storage costs compared with full-table indexes. | [Create Filtered Indexes](../indexes/create-filtered-indexes.md)<br /><br />[Filtered Index Design Guidelines](../sql-server-index-design-guide.md#Filtered) |
 | Spatial | A spatial index provides the ability to perform certain operations more efficiently on spatial objects (*spatial data*) in a column of the **geometry** data type. The spatial index reduces the number of objects on which relatively costly spatial operations need to be applied. | [Spatial Indexes Overview](../spatial/spatial-indexes-overview.md) |
 | XML | A shredded, and persisted, representation of the XML binary large objects (BLOBs) in the **xml** data type column. | [XML Indexes (SQL Server)](../xml/xml-indexes-sql-server.md) |
-| Full-text | A special type of token-based functional index that is built and maintained by the Microsoft Full-Text Engine for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. It provides efficient support for sophisticated word searches in character string data. | [Populate Full-Text Indexes](../search/populate-full-text-indexes.md) |
+| Full-text | A special type of token-based functional index that is built and maintained by the Microsoft Full-Text Engine for [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]. It provides efficient support for sophisticated word searches in character string data. | [Populate Full-Text Indexes](../search/populate-full-text-indexes.md) |
 
 [!INCLUDE [sql-b-tree](../../includes/sql-b-tree.md)]
 
-## Next steps
+## Related content
 
-- [SQL Server Index Design Guide](../sql-server-index-design-guide.md)
-- [SORT_IN_TEMPDB Option For Indexes](../indexes/sort-in-tempdb-option-for-indexes.md)
-- [Disable Indexes and Constraints](../indexes/disable-indexes-and-constraints.md)
-- [Enable Indexes and Constraints](../indexes/enable-indexes-and-constraints.md)
-- [Rename Indexes](../indexes/rename-indexes.md)
-- [Set Index Options](../indexes/set-index-options.md)
-- [Disk Space Requirements for Index DDL Operations](../indexes/disk-space-requirements-for-index-ddl-operations.md)
-- [Reorganize and Rebuild Indexes](../indexes/reorganize-and-rebuild-indexes.md)
-- [Specify Fill Factor for an Index](../indexes/specify-fill-factor-for-an-index.md)
-- [Pages and Extents Architecture Guide](../pages-and-extents-architecture-guide.md)
-- [Clustered and Nonclustered Indexes Described](../indexes/clustered-and-nonclustered-indexes-described.md)
+- [SQL Server and Azure SQL index architecture and design guide](../sql-server-index-design-guide.md)
+- [SORT_IN_TEMPDB Option For Indexes](sort-in-tempdb-option-for-indexes.md)
+- [Disable indexes and constraints](disable-indexes-and-constraints.md)
+- [Enable Indexes and Constraints](enable-indexes-and-constraints.md)
+- [Rename Indexes](rename-indexes.md)
+- [Set Index Options](set-index-options.md)
+- [Disk Space Requirements for Index DDL Operations](disk-space-requirements-for-index-ddl-operations.md)
+- [Optimize index maintenance to improve query performance and reduce resource consumption](reorganize-and-rebuild-indexes.md)
+- [Specify Fill Factor for an Index](specify-fill-factor-for-an-index.md)
+- [Pages and extents architecture guide](../pages-and-extents-architecture-guide.md)
+- [Clustered and nonclustered indexes](clustered-and-nonclustered-indexes-described.md)

@@ -25,14 +25,14 @@ This query returns instances of SQL Server on servers with extensions installed,
 
 ```kusto
 resources
-| where type == "microsoft.hybridcompute/machines/extensions"
-| where properties.type in ("WindowsAgent.SqlServer","LinuxAgent.SqlServer")
-| where properties.instanceView.status.message !contains "SQL Server Extension Agent: Healthy" or (properties.instanceView.status.message !contains "timestampUTC : 2024/05" and properties.instanceView.status.message !contains "timestampUTC : 2024/06") or properties.instanceView.status.message !contains "uploadStatus : OK"
-| project id, resourceGroup, subscriptionId, 
-    ExtensionHealth = iif(properties.instanceView.status.message !contains "SQL Server Extension Agent: Healthy", "Unhealthy", "Healthy"),
-    LastUpdloadTimestamp = iif(indexof(properties.instanceView.status.message,"timestampUTC : ") > 0, iif(properties.instanceView.status.message !contains "timestampUTC : 2024/06", substring(properties.instanceView.status.message,indexof(properties.instanceView.status.message,"timestampUTC : ") + 15, 10),"Recent"),"no timestamp"),
-    LastUploadStatus = iif(indexof(properties.instanceView.status.message,"uploadStatus : OK") > 0, "OK", "Unhealthy"),
-    Message = properties.instanceView.status.message
+| where type == "microsoft.hybridcompute/machines/extensions"
+| where properties.type in ("WindowsAgent.SqlServer","LinuxAgent.SqlServer")
+| where properties.instanceView.status.message !contains "SQL Server Extension Agent: Healthy" or (properties.instanceView.status.message !contains "timestampUTC : 2024/05" and properties.instanceView.status.message !contains "timestampUTC : 2024/06") or properties.instanceView.status.message !contains "uploadStatus : OK"
+| project id, resourceGroup, subscriptionId, 
+    ExtensionHealth = iif(properties.instanceView.status.message !contains "SQL Server Extension Agent: Healthy", "Unhealthy", "Healthy"),
+    LastUpdloadTimestamp = iif(indexof(properties.instanceView.status.message,"timestampUTC : ") > 0, iif(properties.instanceView.status.message !contains "timestampUTC : 2024/06", substring(properties.instanceView.status.message,indexof(properties.instanceView.status.message,"timestampUTC : ") + 15, 10),"Recent"),"no timestamp"),
+    LastUploadStatus = iif(indexof(properties.instanceView.status.message,"uploadStatus : OK") > 0, "OK", "Unhealthy"),
+    Message = properties.instanceView.status.message
 ```
 
 To identify possible specific problems, review the value in the **Message** property from the query results.

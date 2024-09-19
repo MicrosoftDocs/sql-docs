@@ -380,6 +380,8 @@ items:
       items:
       - name: Package overview
         href: ../machine-learning/python/ref-py-microsoftml.md
+      - name: Learners Objects
+        href: ../machine-learning/python/reference/microsoftml/learners-object.md
       - name: adadelta_optimizer
         href: ../machine-learning/python/reference/microsoftml/adadelta-optimizer.md
       - name: avx_math

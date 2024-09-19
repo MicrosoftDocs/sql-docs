@@ -52,7 +52,7 @@ You need the following prerequisites to run this quickstart.
 - Azure SQL Managed Instance Machine Learning Services. For information, see the [Azure SQL Managed Instance Machine Learning Services overview](/azure/azure-sql/managed-instance/machine-learning-services-overview).
 ::: moniker-end
 
-- A tool for running SQL queries that contain R scripts. This quickstart uses [Azure Data Studio](../../azure-data-studio/what-is-azure-data-studio.md).
+- A tool for running SQL queries that contain R scripts. This quickstart uses [Azure Data Studio](/azure-data-studio/what-is-azure-data-studio).
 
 ## Always return a data frame
 

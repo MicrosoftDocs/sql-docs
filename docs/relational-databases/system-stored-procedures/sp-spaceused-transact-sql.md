@@ -63,7 +63,7 @@ Indicates `DBCC UPDATEUSAGE` should be run to update space usage information. *@
 
 #### [ @mode = ] '*mode*'
 
-Indicates the scope of the results. For a stretched table or database, the *@mode* parameter lets you include or exclude the remote portion of the object. For more info, see [Stretch Database](../../sql-server/stretch-database/stretch-database.md).
+Indicates the scope of the results. For a stretched table or database, the *@mode* parameter lets you include or exclude the remote portion of the object. For more info, see [Stretch Database](/previous-versions/sql/sql-server/stretch-database/stretch-database).
 
 > [!IMPORTANT]  
 > [!INCLUDE [stretch-database-deprecation](../../includes/stretch-database-deprecation.md)]
@@ -220,7 +220,7 @@ GO
 
 ### C. Display space usage information about the remote table associated with a Stretch-enabled table
 
-The following example summarizes the space used by the remote table associated with a Stretch-enabled table by using the *@mode* argument to specify the remote target. For more information, see [Stretch Database](../../sql-server/stretch-database/stretch-database.md).
+The following example summarizes the space used by the remote table associated with a Stretch-enabled table by using the *@mode* argument to specify the remote target. For more information, see [Stretch Database](/previous-versions/sql/sql-server/stretch-database/stretch-database).
 
 ```sql
 USE StretchedAdventureWorks2022;

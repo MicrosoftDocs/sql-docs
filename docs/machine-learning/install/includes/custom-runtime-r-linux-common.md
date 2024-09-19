@@ -98,7 +98,7 @@ Follow these steps to download and register the R language extension, which is u
 
     Alternatively, you can use the debug version (**R-lang-extension-linux-debug.zip**) in a development or test environment. The debug version provides verbose logging information to investigate any errors, and is not recommended for production environments.
 
-1. Use [Azure Data Studio](../../../azure-data-studio/what-is-azure-data-studio.md) to connect to your SQL Server instance and run the following T-SQL command to register the R language extension with [CREATE EXTERNAL LANGUAGE](../../../t-sql/statements/create-external-language-transact-sql.md). 
+1. Use [Azure Data Studio](/azure-data-studio/what-is-azure-data-studio) to connect to your SQL Server instance and run the following T-SQL command to register the R language extension with [CREATE EXTERNAL LANGUAGE](../../../t-sql/statements/create-external-language-transact-sql.md). 
 
     Modify the path in this statement to reflect the location of the downloaded language extension zip file (**R-lang-extension-linux-release.zip**).
 

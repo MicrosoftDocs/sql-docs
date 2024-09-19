@@ -4,15 +4,14 @@ description: The native JSON data type provides advantages for storing JSON data
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: randolphwest, jovanpop
-ms.date: 08/20/2024
+ms.date: 09/12/2024
 ms.service: sql
-ms.topic: quickstart
+ms.topic: reference
 ms.custom:
-  - intro-quickstart
   - build-2024
 helpviewer_keywords:
   - "JSON data type"
-monikerRange: "=azuresqldb-current || =azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||=azuresqldb-mi-current"
 ---
 # JSON data type (preview)
 
@@ -29,7 +28,7 @@ The **json** type provides a high-fidelity storage of JSON documents optimized f
 
 The **json** type internally stores data using UTF-8 encoding, `Latin1_General_100_BIN2_UTF8`. This behavior matches the JSON specification.
 
-For more information on querying JSON data, see [Work with JSON data in SQL Server](../../relational-databases/json/json-data-sql-server.md).
+For more information on querying JSON data, see [JSON data in SQL Server](../../relational-databases/json/json-data-sql-server.md).
 
 ## Sample syntax
 
@@ -102,5 +101,5 @@ Using `SELECT ... INTO` with the JSON type will create a table with the JSON typ
 
 ## Related content
 
-- [Store JSON documents in SQL Server or SQL Database](../../relational-databases/json/store-json-documents-in-sql-tables.md)
+- [Store JSON documents](../../relational-databases/json/store-json-documents-in-sql-tables.md)
 - [JSON data in SQL Server](../../relational-databases/json/json-data-sql-server.md)

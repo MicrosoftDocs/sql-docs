@@ -1,16 +1,16 @@
 ---
-title: "include file"
-description: "include file"
+title: "Include file"
+description: "Include file"
 author: rothja
 ms.author: jroth
 ms.date: 04/30/2018
 ms.service: virtual-machines-sql
-ms.topic: "include"
+ms.subservice: security
 ms.custom: include file
 ms.devlang: na
 tags: azure-service-management
 ---
-## Prepare for AKV Integration
+## Prepare for Azure Key Vault (AKV) Integration
 To use Azure Key Vault Integration to configure your SQL Server VM, there are several prerequisites: 
 
 1. [Install Azure PowerShell](#install)

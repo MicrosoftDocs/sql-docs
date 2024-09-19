@@ -323,7 +323,7 @@ You should usually enable synchronous commit only when the two nodes are in the 
 
    ![Configure data synchronization](media/Fig19_AvailabilityGroupDataSync.png)
 
-   Figure 19 
+   Figure 19 
 
 10. On the **Validation** page, make sure all validations pass successfully, and correct any errors. Click **Next** to continue.
 
@@ -339,7 +339,7 @@ You should usually enable synchronous commit only when the two nodes are in the 
 
    ![View the dashboard](media/Fig20_ShowDashboard.png)
 
-   Figure 20 
+   Figure 20 
 
 3. Click **Failover** to do a failover to a synchronous replica and an asynchronous replica. This is to verify that failover happens correctly without issues.
 

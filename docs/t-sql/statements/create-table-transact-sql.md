@@ -1025,16 +1025,16 @@ Use this argument with the `PERIOD FOR SYSTEM_TIME` and `GENERATED ALWAYS AS ROW
 
 **Applies to**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later.
 
-Creates the new table with Stretch Database enabled or disabled. For more info, see [Stretch Database](../../sql-server/stretch-database/stretch-database.md).
+Creates the new table with Stretch Database enabled or disabled. For more info, see [Stretch Database](/previous-versions/sql/sql-server/stretch-database/stretch-database).
 
 > [!IMPORTANT]  
 > [!INCLUDE [stretch-database-deprecation](../../includes/stretch-database-deprecation.md)]
 
 **Enabling Stretch Database for a table**
 
-When you enable Stretch for a table by specifying `ON`, you can optionally specify `MIGRATION_STATE = OUTBOUND` to begin migrating data immediately, or `MIGRATION_STATE = PAUSED` to postpone data migration. The default value is `MIGRATION_STATE = OUTBOUND`. For more info about enabling Stretch for a table, see [Enable Stretch Database for a table](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md).
+When you enable Stretch for a table by specifying `ON`, you can optionally specify `MIGRATION_STATE = OUTBOUND` to begin migrating data immediately, or `MIGRATION_STATE = PAUSED` to postpone data migration. The default value is `MIGRATION_STATE = OUTBOUND`. For more info about enabling Stretch for a table, see [Enable Stretch Database for a table](/previous-versions/sql/sql-server/stretch-database/enable-stretch-database-for-a-table).
 
-**Prerequisites**. Before you enable Stretch for a table, you have to enable Stretch on the server and on the database. For more info, see [Enable Stretch Database for a database](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md).
+**Prerequisites**. Before you enable Stretch for a table, you have to enable Stretch on the server and on the database. For more info, see [Enable Stretch Database for a database](/previous-versions/sql/sql-server/stretch-database/enable-stretch-database-for-a-database).
 
 **Permissions**. Enabling Stretch for a database or a table requires db_owner permissions. Enabling Stretch for a table also requires ALTER permissions on the table.
 
@@ -1042,7 +1042,7 @@ When you enable Stretch for a table by specifying `ON`, you can optionally speci
 
 **Applies to**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later.
 
-Optionally specifies a filter predicate to select rows to migrate from a table that contains both historical and current data. The predicate must call a deterministic inline table-valued function. For more info, see [Enable Stretch Database for a table](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md) and [Select rows to migrate by using a filter function](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md).
+Optionally specifies a filter predicate to select rows to migrate from a table that contains both historical and current data. The predicate must call a deterministic inline table-valued function. For more info, see [Enable Stretch Database for a table](/previous-versions/sql/sql-server/stretch-database/enable-stretch-database-for-a-table) and [Select rows to migrate by using a filter function](/previous-versions/sql/sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database).
 
 > [!IMPORTANT]  
 > If you provide a filter predicate that performs poorly, data migration also performs poorly. Stretch Database applies the filter predicate to the table by using the CROSS APPLY operator.
@@ -1056,11 +1056,11 @@ When you specify a filter predicate, you also have to specify *MIGRATION_STATE*.
 **Applies to**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later, [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], and [!INCLUDE[ssazuremi](../../includes/ssazuremi-md.md)].
 
 - Specify `OUTBOUND` to migrate data from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].
-- Specify `INBOUND` to copy the remote data for the table from [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] back to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and to disable Stretch for the table. For more info, see [Disable Stretch Database and bring back remote data](../../sql-server/stretch-database/disable-stretch-database-and-bring-back-remote-data.md).
+- Specify `INBOUND` to copy the remote data for the table from [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] back to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and to disable Stretch for the table. For more info, see [Disable Stretch Database and bring back remote data](/previous-versions/sql/sql-server/stretch-database/disable-stretch-database-and-bring-back-remote-data).
 
   This operation incurs data transfer costs, and it can't be canceled.
 
-- Specify `PAUSED` to pause or postpone data migration. For more info, see [Pause and resume data migration -Stretch Database](../../sql-server/stretch-database/pause-and-resume-data-migration-stretch-database.md).
+- Specify `PAUSED` to pause or postpone data migration. For more info, see [Pause and resume data migration -Stretch Database](/previous-versions/sql/sql-server/stretch-database/pause-and-resume-data-migration-stretch-database).
 
 #### [ DATA_DELETION = ON { ( FILTER_COLUMN = column_name, RETENTION_PERIOD = { INFINITE | number { DAY | DAYS | WEEK | WEEKS | MONTH | MONTHS | YEAR | YEARS } ) } ]
 

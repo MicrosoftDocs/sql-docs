@@ -63,7 +63,7 @@ To change the **EnableIntegrated Security** property of [!INCLUDE[ssRS](../../in
 
 ## Command-prompt options
 
-Use the **Invoke-PolicyEvaluation** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell cmdlet to invoke Surface Area Configuration Policies. For more information, see [Use the Database Engine cmdlets](../../powershell/sql-server-powershell.md).
+Use the **Invoke-PolicyEvaluation** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell cmdlet to invoke Surface Area Configuration Policies. For more information, see [Use the Database Engine cmdlets](/powershell/sql-server/sql-server-powershell).
 
 ## SOAP and Service Broker endpoints
 

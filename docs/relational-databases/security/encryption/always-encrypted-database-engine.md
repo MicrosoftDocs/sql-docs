@@ -138,7 +138,7 @@ The following limitations apply to queries on encrypted columns:
   - Columns captured/tracked using [change data capture](../../track-changes/about-change-data-capture-sql-server.md).
   - Primary key columns on tables that have [change tracking](../../track-changes/about-change-tracking-sql-server.md).
   - Columns that are masked (using [Dynamic data masking](../dynamic-data-masking.md)).
-  - Columns in [stretch database tables](../../../sql-server/stretch-database/stretch-database.md). (Tables with columns encrypted with Always Encrypted can be enabled for Stretch.)
+  - Columns in [stretch database tables](/previous-versions/sql/sql-server/stretch-database/stretch-database). (Tables with columns encrypted with Always Encrypted can be enabled for Stretch.)
 
   > [!IMPORTANT]  
   > [!INCLUDE [stretch-database-deprecation](../../../includes/stretch-database-deprecation.md)]

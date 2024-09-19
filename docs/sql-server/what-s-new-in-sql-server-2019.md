@@ -4,11 +4,12 @@ description: Learn about new features for SQL Server 2019 (15.x), which gives yo
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: randolphwest
-ms.date: 09/27/2023
+ms.date: 09/17/2024
 ms.service: sql
 ms.subservice: release-landing
 ms.topic: whats-new
-ms.custom: intro-whats-new
+ms.custom:
+  - intro-whats-new
 monikerRange: ">= sql-server-2016"
 ---
 # What's new in [!INCLUDE [sql-server-2019](../includes/sssql19-md.md)]
@@ -21,7 +22,7 @@ This article summarizes the new features and enhancements for [!INCLUDE [sql-ser
 
 For more information and known issues, see [[!INCLUDE [sql-server-2019](../includes/sssql19-md.md)] release notes](sql-server-version-15-release-notes.md).
 
-For the best experience with [!INCLUDE [sql-server-2019](../includes/sssql19-md.md)], use the [latest tools](../azure-data-studio/download-azure-data-studio.md).
+For the best experience with [!INCLUDE [sql-server-2019](../includes/sssql19-md.md)], use the [latest tools](/azure-data-studio/download-azure-data-studio).
 
 [!INCLUDE [sql-server-2019](../includes/sssql19-md.md)] introduces [!INCLUDE [big-data-clusters](../includes/ssbigdataclusters-nover.md)] for [!INCLUDE [sql-server](../includes/ssnoversion-md.md)]. It also provides additional capability and improvements for the SQL Server database engine, SQL Server Analysis Services, SQL Server Machine Learning Services, SQL Server on Linux, and SQL Server Master Data Services.
 
@@ -37,7 +38,7 @@ Businesses today often preside over vast data estates consisting of a wide array
 
 | New feature or update | Details |
 | :--- | :--- |
-| Scalable big data solution | [Deploy scalable clusters](../big-data-cluster/deploy-get-started.md) of SQL Server, Spark, and HDFS containers running on Kubernetes.<br /><br />Read, write, and process big data from Transact-SQL or Spark.<br /><br />Easily combine and analyze high-value relational data with high-volume big data.<br /><br />Query external data sources.<br /><br />Store big data in HDFS managed by SQL Server.<br /><br />Query data from multiple external data sources through the cluster.<br /><br />Use the data for AI, machine learning, and other analysis tasks.<br /><br />[Deploy and run applications](../big-data-cluster/concept-application-deployment.md) in [!INCLUDE [big-data-clusters](../includes/ssbigdataclusters-nover.md)].<br /><br />The SQL Server master instance provides high availability and disaster recovery for all databases by using Always On availability group technology.<br />|
+| Scalable big data solution | [Deploy scalable clusters](../big-data-cluster/deploy-get-started.md) of SQL Server, Spark, and HDFS containers running on Kubernetes.<br /><br />Read, write, and process big data from Transact-SQL or Spark.<br />Easily combine and analyze high-value relational data with high-volume big data.<br />Query external data sources.<br />Store big data in HDFS managed by SQL Server.<br />Query data from multiple external data sources through the cluster.<br />Use the data for AI, machine learning, and other analysis tasks.<br />[Deploy and run applications](../big-data-cluster/concept-application-deployment.md) in [!INCLUDE [big-data-clusters](../includes/ssbigdataclusters-nover.md)].<br />The SQL Server master instance provides high availability and disaster recovery for all databases by using Always On availability group technology.<br />|
 | Data virtualization with PolyBase | Query data from external SQL Server, Oracle, Teradata, MongoDB, and ODBC data sources with external tables, now with [UTF-8 encoding support](../relational-databases/collations/collation-and-unicode-support.md). For more information, see [What is PolyBase?](../relational-databases/polybase/polybase-guide.md).<br /><br />[!INCLUDE [sssql19](../includes/sssql19-md.md)] Cumulative update 19 now introduces support for Oracle TNS files. Please refer to [CREATE EXTERNAL DATA SOURCE](../t-sql/statements/create-external-data-source-connection-options.md) for more information and samples. |
 
 For more information, see [What are SQL Server [!INCLUDE [big-data-clusters](../includes/ssbigdataclusters-nover.md)]?](../big-data-cluster/big-data-cluster-overview.md).
@@ -126,7 +127,7 @@ Support businesses across different countries and regions, where the requirement
 | Java language SDK is open source | The [Microsoft Extensibility SDK for Java for Microsoft SQL Server](../language-extensions/how-to/extensibility-sdk-java-sql-server.md) is now open source and [available on GitHub](https://github.com/microsoft/sql-server-language-extensions). |
 | Support for Java data types | See [Java data types](../language-extensions/how-to/java-to-sql-data-types.md). |
 | New default Java Runtime | SQL Server now includes Azul Systems Zulu Embedded for Java support throughout the product. See [Free supported Java in SQL Server 2019 is now available](https://cloudblogs.microsoft.com/sqlserver/2019/07/24/free-supported-java-in-sql-server-2019-is-now-available/). |
-|SQL Server Language Extensions| Execute external code with the extensibility framework. See [SQL Server Language Extensions](../language-extensions/language-extensions-overview.md).
+| SQL Server Language Extensions | Execute external code with the extensibility framework. See [SQL Server Language Extensions](../language-extensions/language-extensions-overview.md). |
 | Register external languages | A new Data Definition Language (DDL), `CREATE EXTERNAL LANGUAGE`, registers external languages, such as Java, in SQL Server. See [CREATE EXTERNAL LANGUAGE](../t-sql/statements/create-external-language-transact-sql.md). |
 
 ### Spatial
@@ -164,7 +165,7 @@ One common task that everyone who deploys [!INCLUDE [ssNoVersion](../includes/ss
 | :--- | :--- |
 | Up to five synchronous replicas | [!INCLUDE [sql-server-2019](../includes/sssql19-md.md)] increases the maximum number of synchronous replicas to 5, up from 3 in [!INCLUDE [ssSQL17](../includes/sssql17-md.md)]. You can configure this group of five replicas to have automatic failover within the group. There's one primary replica, plus four synchronous secondary replicas. |
 | Secondary-to-primary replica connection redirection | Allows client application connections to be directed to the primary replica regardless of the target server specified in the connection string. For details, see [Secondary to primary replica read/write connection redirection (Always On Availability Groups)](../database-engine/availability-groups/windows/secondary-replica-connection-redirection-always-on-availability-groups.md). |
-|HADR Benefits| Every Software Assurance customer of SQL Server will be able to use three enhanced benefits for any SQL Server release that is still supported by Microsoft. For details, see [our announcement here.](https://cloudblogs.microsoft.com/sqlserver/2019/10/30/new-high-availability-and-disaster-recovery-benefits-for-sql-server/)
+| HADR Benefits | Every Software Assurance customer of SQL Server will be able to use three enhanced benefits for any SQL Server release that is still supported by Microsoft. For details, see [our announcement here.](https://cloudblogs.microsoft.com/sqlserver/2019/10/30/new-high-availability-and-disaster-recovery-benefits-for-sql-server/) |
 
 ### Recovery
 
@@ -258,10 +259,10 @@ This release of SQL Server Reporting Services features support for Azure SQL Man
 ## Related content
 
 - [`SqlServer` PowerShell module](https://www.powershellgallery.com/packages/Sqlserver)
-- [SQL Server PowerShell documentation](../powershell/sql-server-powershell.md)
+- [SQL Server PowerShell documentation](/powershell/sql-server/sql-server-powershell)
 - [SQL Server Workshops](https://aka.ms/sqlworkshops)
-- [SQL Server 2019 Release Notes](sql-server-2019-release-notes.md)
+- [SQL Server 2019 release notes](sql-server-2019-release-notes.md)
 - [Microsoft SQL Server 2019: Technical white paper](https://aka.ms/sql2019whitepaper)
-- [What's new in [!INCLUDE[sql-server-2022](../includes/sssql22-md.md)]](what-s-new-in-sql-server-2022.md)
+- [What's new in SQL Server 2022](what-s-new-in-sql-server-2022.md)
 
 [!INCLUDE [get-help-options](../includes/paragraph-content/get-help-options.md)]

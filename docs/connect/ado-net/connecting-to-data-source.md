@@ -32,5 +32,5 @@ Describes how to use an **InfoMessage** event to retrieve informational messages
 - [Connection pooling](connection-pooling.md)
 - [Commands and parameters](commands-parameters.md)
 - [DataAdapters and DataReaders](dataadapters-datareaders.md)
-- [Transactions and concurrency](transactions-and-concurrency.md)
+- [Transactions and concurrency](transactions-and-concurrency.md)
 - [Microsoft ADO.NET for SQL Server](microsoft-ado-net-sql-server.md)

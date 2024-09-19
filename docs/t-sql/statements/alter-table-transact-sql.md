@@ -1043,22 +1043,22 @@ Specifies the Windows-compatible FileTable directory name. This name should be u
 
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] and later).
 
-Enables or disables Stretch Database for a table. For more information, see [Stretch Database](../../sql-server/stretch-database/stretch-database.md).
+Enables or disables Stretch Database for a table. For more information, see [Stretch Database](/previous-versions/sql/sql-server/stretch-database/stretch-database).
 
 > [!IMPORTANT]  
 > [!INCLUDE [stretch-database-deprecation](../../includes/stretch-database-deprecation.md)]
 
 **Enabling Stretch Database for a table**
 
-When you enable Stretch for a table by specifying `ON`, you also have to specify `MIGRATION_STATE = OUTBOUND` to begin migrating data immediately, or `MIGRATION_STATE = PAUSED` to postpone data migration. The default value is `MIGRATION_STATE = OUTBOUND`. For more information about enabling Stretch for a table, see [Enable Stretch Database for a table](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md).
+When you enable Stretch for a table by specifying `ON`, you also have to specify `MIGRATION_STATE = OUTBOUND` to begin migrating data immediately, or `MIGRATION_STATE = PAUSED` to postpone data migration. The default value is `MIGRATION_STATE = OUTBOUND`. For more information about enabling Stretch for a table, see [Enable Stretch Database for a table](/previous-versions/sql/sql-server/stretch-database/enable-stretch-database-for-a-table).
 
-**Prerequisites**. Before you enable Stretch for a table, you have to enable Stretch on the server and on the database. For more information, see [Enable Stretch Database for a database](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md).
+**Prerequisites**. Before you enable Stretch for a table, you have to enable Stretch on the server and on the database. For more information, see [Enable Stretch Database for a database](/previous-versions/sql/sql-server/stretch-database/enable-stretch-database-for-a-database).
 
 **Permissions**. Enabling Stretch for a database or a table requires **db_owner** permissions. Enabling Stretch for a table also requires ALTER permissions on the table.
 
 **Disabling Stretch Database for a table**
 
-When you disable Stretch for a table, you have two options for the remote data that's already been migrated to Azure. For more information, see [Disable Stretch Database and bring back remote data](../../sql-server/stretch-database/disable-stretch-database-and-bring-back-remote-data.md).
+When you disable Stretch for a table, you have two options for the remote data that's already been migrated to Azure. For more information, see [Disable Stretch Database and bring back remote data](/previous-versions/sql/sql-server/stretch-database/disable-stretch-database-and-bring-back-remote-data).
 
 - To disable Stretch for a table and copy the remote data for the table from Azure back to SQL Server, run the following command. This command can't be canceled.
 
@@ -1086,7 +1086,7 @@ Disabling Stretch doesn't remove the remote table. If you want to delete the rem
 
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] and later).
 
-Optionally specifies a filter predicate to select rows to migrate from a table that contains both historical and current data. The predicate must call a deterministic inline table-valued function. For more information, see [Enable Stretch Database for a table](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md) and [Select rows to migrate by using a filter function - Stretch Database](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md).
+Optionally specifies a filter predicate to select rows to migrate from a table that contains both historical and current data. The predicate must call a deterministic inline table-valued function. For more information, see [Enable Stretch Database for a table](/previous-versions/sql/sql-server/stretch-database/enable-stretch-database-for-a-table) and [Select rows to migrate by using a filter function - Stretch Database](/previous-versions/sql/sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database).
 
 > [!IMPORTANT]  
 > If you provide a filter predicate that performs poorly, data migration also performs poorly. Stretch Database applies the filter predicate to the table by using the CROSS APPLY operator.
@@ -1100,11 +1100,11 @@ When you specify a filter predicate, you also have to specify *MIGRATION_STATE*.
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] and later).
 
 - Specify `OUTBOUND` to migrate data from SQL Server to Azure.
-- Specify `INBOUND` to copy the remote data for the table from Azure back to SQL Server and to disable Stretch for the table. For more information, see [Disable Stretch Database and bring back remote data](../../sql-server/stretch-database/disable-stretch-database-and-bring-back-remote-data.md).
+- Specify `INBOUND` to copy the remote data for the table from Azure back to SQL Server and to disable Stretch for the table. For more information, see [Disable Stretch Database and bring back remote data](/previous-versions/sql/sql-server/stretch-database/disable-stretch-database-and-bring-back-remote-data).
 
     This operation incurs data transfer costs, and it can't be canceled.
 
-- Specify `PAUSED` to pause or postpone data migration. For more information, see [Pause and resume data migration - Stretch Database](../../sql-server/stretch-database/pause-and-resume-data-migration-stretch-database.md).
+- Specify `PAUSED` to pause or postpone data migration. For more information, see [Pause and resume data migration - Stretch Database](/previous-versions/sql/sql-server/stretch-database/pause-and-resume-data-migration-stretch-database).
 
 #### WAIT_AT_LOW_PRIORITY
 

@@ -574,7 +574,7 @@ You can use the following applications to connect to the SQL Server instance.
 
 - [SQL Server Managed Studio (SSMS)](./sql-server-linux-manage-ssms.md)
 - [SQL Server Data Tools (SSDT)](./sql-server-linux-develop-use-ssdt.md)
-- [Azure Data Studio](../azure-data-studio/quickstart-sql-server.md)
+- [Azure Data Studio](/azure-data-studio/quickstart-sql-server)
 
 ### Connect with sqlcmd
 

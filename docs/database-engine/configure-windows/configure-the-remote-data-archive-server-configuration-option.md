@@ -12,7 +12,7 @@ ms.topic: conceptual
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-Use the **remote data archive** option to specify whether databases and tables on the server can be enabled for Stretch. For more info, see [Enable Stretch Database for a database](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md).
+Use the **remote data archive** option to specify whether databases and tables on the server can be enabled for Stretch. For more info, see [Enable Stretch Database for a database](/previous-versions/sql/sql-server/stretch-database/enable-stretch-database-for-a-database).
 
 > [!IMPORTANT]  
 > [!INCLUDE [stretch-database-deprecation](../../includes/stretch-database-deprecation.md)]
@@ -43,6 +43,6 @@ To disable the option, set the value to 0.
 
 ## See also
 
-- [Enable Stretch Database for a database](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md)
-- [Stretch Database](../../sql-server/stretch-database/stretch-database.md)
+- [Enable Stretch Database for a database](/previous-versions/sql/sql-server/stretch-database/enable-stretch-database-for-a-database)
+- [Stretch Database](/previous-versions/sql/sql-server/stretch-database/stretch-database)
 - [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)

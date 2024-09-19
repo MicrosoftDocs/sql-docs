@@ -229,7 +229,7 @@ The following example demonstrates creating a new table as a copy of another tab
  **Applies to:** [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP2 and later.
 
 ```sql
-ALTER DATABASE [AdventureWorksDW2022] ADD FILEGROUP FG2;
+ALTER DATABASE [AdventureWorksDW2022] ADD FILEGROUP FG2;
 ALTER DATABASE [AdventureWorksDW2022]
 ADD FILE
 (
@@ -238,7 +238,7 @@ FILENAME = '/var/opt/mssql/data/AdventureWorksDW2022_Data1.mdf'
 )
 TO FILEGROUP FG2;
 GO
-SELECT * INTO [dbo].[FactResellerSalesXL] ON FG2 FROM [dbo].[FactResellerSales];
+SELECT * INTO [dbo].[FactResellerSalesXL] ON FG2 FROM [dbo].[FactResellerSales];
 ```
   
 ## See Also  

@@ -26,18 +26,18 @@ The following example shows the deployment results in a bash shell.
 ```
 The privacy statement can be viewed at:
 https://go.microsoft.com/fwlink/?LinkId=853010
- 
+ 
 The license terms for SQL Server Big Data Cluster can be viewed at:
 Enterprise: https://go.microsoft.com/fwlink/?linkid=2104292
 Standard: https://go.microsoft.com/fwlink/?linkid=2104294
 Developer: https://go.microsoft.com/fwlink/?linkid=2104079
- 
+ 
 Cluster deployment documentation can be viewed at:
 https://aka.ms/bdc-deploy
- 
+ 
 NOTE: Cluster creation can take a significant amount of time depending on
 configuration, network speed, and the number of nodes in the cluster.
- 
+ 
 Starting cluster deployment.
 Cluster controller endpoint is available at bdc-control.contoso.com:30080, 193.168.5.14:30080.
 Waiting for control plane to be ready after 5 minutes.
@@ -116,25 +116,25 @@ The reverse lookup zone entry for the domain controller in the domain controller
 Run the following PowerShell script to confirm if you have reverse DNS entry (PTR record) configured.
 
 ```powershell
-#Domain Controller FQDN 'DCserver01.contoso.local'
-$Domain_controller_FQDN = 'DCserver01.contoso.local'
+#Domain Controller FQDN 'DCserver01.contoso.local'
+$Domain_controller_FQDN = 'DCserver01.contoso.local'
 
-#Performing Domain Controller DNS record, reverse PTR Checks...
-$DcControllerDnsPtr_Result = New-Object System.Collections.ArrayList
-try {
-    $Domain_controller_DNS_Record = Resolve-DnsName $Domain_controller_FQDN -Type A -Server $Domain_DNS_IP_address -ErrorAction Stop
-    foreach ($ip in $Domain_controller_DNS_Record.IPAddress) {
-        #resolving hostname by IP address to make sure we have reverse PTR record 
-        if ((Resolve-DnsName $ip).NameHost -eq $Domain_controller_FQDN) {
-            [void]$DcControllerDnsPtr_Result.add("OK - $Domain_controller_FQDN has an A record with an IP $ip, Reverse PTR record is in place") 
-        }
-        else {
-            [void]$DcControllerDnsPtr_Result.add("Missing - $Domain_controller_FQDN has an A record with an IP $ip, But no reverse PTR record was found for the host")
-        }
-    }
+#Performing Domain Controller DNS record, reverse PTR Checks...
+$DcControllerDnsPtr_Result = New-Object System.Collections.ArrayList
+try {
+    $Domain_controller_DNS_Record = Resolve-DnsName $Domain_controller_FQDN -Type A -Server $Domain_DNS_IP_address -ErrorAction Stop
+    foreach ($ip in $Domain_controller_DNS_Record.IPAddress) {
+        #resolving hostname by IP address to make sure we have reverse PTR record 
+        if ((Resolve-DnsName $ip).NameHost -eq $Domain_controller_FQDN) {
+            [void]$DcControllerDnsPtr_Result.add("OK - $Domain_controller_FQDN has an A record with an IP $ip, Reverse PTR record is in place") 
+        }
+        else {
+            [void]$DcControllerDnsPtr_Result.add("Missing - $Domain_controller_FQDN has an A record with an IP $ip, But no reverse PTR record was found for the host")
+        }
+    }
 }
-catch {
-    [void]$DcControllerDnsPtr_Result.add("Error - " + $_.exception.message)
+catch {
+    [void]$DcControllerDnsPtr_Result.add("Error - " + $_.exception.message)
 }
 
 #show the results 

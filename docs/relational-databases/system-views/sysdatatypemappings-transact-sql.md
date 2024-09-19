@@ -34,7 +34,7 @@ dev_langs:
 |**source_scale_max**|**int**|The maximum scale of the data type at the source DBMS, where a value of NULL indicates that scale is not used.|  
 |**source_nullable**|**bit**|Indicated if the destination data type supports null values.|  
 |**source_createparams**|**int**|Internal use only.|  
-|**destination_dbms**|**sysname**|Indicates the name of the destination DBMS, and can be one of the following values:<br /><br /> **MSSQLSERVER** = The destination is a SQL Server database.<br /><br /> **ORACLE** = The destination is an Oracle database.<br /><br /> **DB2** = The destination is an IBM DB2 database.<br /><br /> **SYBASE** = The destination is a Sybase database.|  
+|**destination_dbms**|**sysname**|Indicates the name of the destination DBMS, and can be one of the following values:<br /><br /> **MSSQLSERVER** = The destination is a SQL Server database.<br /><br /> **ORACLE** = The destination is an Oracle database.<br /><br /> **DB2** = The destination is an IBM Db2 database.<br /><br /> **SYBASE** = The destination is a Sybase database.|  
 |**destination_version**|**sysname**|The product version of the destination DBMS.|  
 |**destination_type**|**sysname**|The data type in the destination DBMS.|  
 |**destination_length**|**bigint**|The length of the data type in the destination DBMS.|  

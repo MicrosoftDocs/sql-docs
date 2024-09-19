@@ -126,7 +126,7 @@ To publish your schema and migrate the data by using SSMA for Access:
 
 ## Post-migration
 
-After you've successfully completed the *migration* stage, you need to complete a series of post-migration tasks to ensure that everything is functioning as smoothly and efficiently as possible.
+After you've successfully completed the *migration* stage, you need to complete a series of post-migration tasks to ensure that everything is functioning as smoothly and efficiently as possible.
 
 ### Remediate applications
 
@@ -146,7 +146,7 @@ The test approach for database migration consists of the following activities:
 The post-migration phase is crucial for reconciling any data accuracy issues, verifying completeness, and addressing performance issues with the workload.
 
 > [!NOTE]  
-> For more information about these issues and the steps to mitigate them, see the [Post-migration Validation and Optimization Guide](../../../relational-databases/post-migration-validation-and-optimization-guide.md).
+> For more information about these issues and the steps to mitigate them, see the [Post-migration Validation and Optimization Guide](../../../relational-databases/post-migration-validation-and-optimization-guide.md).
 
 ## Migration assets
 

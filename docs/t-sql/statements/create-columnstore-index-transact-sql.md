@@ -4,7 +4,7 @@ description: CREATE COLUMNSTORE INDEX converts a rowstore table to a clustered c
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 07/23/2024
+ms.date: 09/18/2024
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -36,7 +36,7 @@ Convert a rowstore table to a clustered columnstore index, or create a noncluste
 
 Follow [What's new in columnstore indexes](../../relational-databases/indexes/columnstore-indexes-what-s-new.md) for the latest improvements to this feature.
 
-- Ordered clustered columnstore indexes were introduced in [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)]. For more information, see [CREATE COLUMNSTORE INDEX](../../t-sql/statements/create-columnstore-index-transact-sql.md#order).
+- Ordered clustered columnstore indexes were introduced in [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)]. For more information, see [CREATE COLUMNSTORE INDEX](../../t-sql/statements/create-columnstore-index-transact-sql.md#order-for-clustered-columnstore).
 
 - Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], you can create the table as a clustered columnstore index. It's no longer necessary to first create a rowstore table and then convert it to a clustered columnstore index.
 
@@ -61,6 +61,7 @@ CREATE CLUSTERED COLUMNSTORE INDEX index_name
 CREATE [ NONCLUSTERED ]  COLUMNSTORE INDEX index_name
     ON { database_name.schema_name.table_name | schema_name.table_name | table_name }
         ( column  [ , ...n ] )
+    [ ORDER (column [ , ...n ] ) ]
     [ WHERE <filter_expression> [ AND <filter_expression> ] ]
     [ WITH ( <with_option> [ , ...n ] ) ]
     [ ON <on_option> ]
@@ -121,19 +122,17 @@ If the table already has a clustered columnstore index, you can specify the same
 
 Specifies the one-, two-, or three-part name of the table to be stored as a clustered columnstore index. If the table is a heap or has a clustered index, then the table is converted from a rowstore to a columnstore. If the table is already a columnstore, this statement rebuilds the clustered columnstore index.
 
-#### ORDER
+#### ORDER for clustered columnstore
 
 *Applies to [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], [!INCLUDE [ssazuremi](../../includes/ssazuremi-md.md)] with the always-up-to-date update policy, and [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later*
 
-Use the `column_store_order_ordinal` column in [sys.index_columns](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md) to determine the order of the columns for a clustered columnstore index. This aids with [segment elimination](../../relational-databases/indexes/columnstore-indexes-query-performance.md#segment-elimination), especially with string data. For more information, see [Performance tuning with ordered clustered columnstore index](/azure/synapse-analytics/sql-data-warehouse/performance-tuning-ordered-cci) and [Columnstore indexes - Design guidance](../../relational-databases/indexes/columnstore-indexes-design-guidance.md).
+Use the `column_store_order_ordinal` column in [sys.index_columns](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md) to determine the order of the columns for a clustered columnstore index. Columnstore ordering aids with [segment elimination](../../relational-databases/indexes/columnstore-indexes-query-performance.md#segment-elimination), especially with string data. For more information, see [Performance tuning with ordered clustered columnstore index](/azure/synapse-analytics/sql-data-warehouse/performance-tuning-ordered-cci) and [Columnstore indexes - Design guidance](../../relational-databases/indexes/columnstore-indexes-design-guidance.md).
 
 To convert to an ordered clustered columnstore index, the existing index must be a clustered columnstore index. Use the `DROP_EXISTING` option.
 
 LOB data types (the (max) length data types) can't be the key of an ordered clustered columnstore index.
 
-When creating an ordered clustered columnstore index, use `OPTION(MAXDOP = 1)` for the highest quality sorting with the `CREATE INDEX` statement, in exchange for a significantly longer duration of the `CREATE INDEX` statement. To create the index as fast as possible, don't limit MAXDOP, and use all the parallel threading the server can provide. The highest quality of compression and sorting could aid queries on the columnstore index.
-
-When an ordered clustered columnstore index is created, the key columns are indicated by the `column_store_order_ordinal` column in `sys.index_columns`.
+When creating an ordered clustered columnstore index, use `OPTION(MAXDOP = 1)` for the highest quality sorting, in exchange for a significantly longer duration of the `CREATE INDEX` statement. To create the index as fast as possible, don't limit MAXDOP. The highest quality of compression and sorting could aid queries on the columnstore index.
 
 ### WITH options
 
@@ -230,6 +229,18 @@ Each column must be of a supported data type for columnstore indexes. See [Limit
 #### ON [ *database_name*. [ *schema_name* ] . | *schema_name* . ] *table_name*
 
 Specifies the one-, two-, or three-part name of the table that contains the index.
+
+#### ORDER for nonclustered columnstore
+
+*Applies to [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [ssazuremi](../../includes/ssazuremi-md.md)] with the always-up-to-date update policy*
+
+The columns specified in the `ORDER` clause for a nonclustered columnstore index must be a subset of the key columns for the index.
+
+Use the `column_store_order_ordinal` column in [sys.index_columns](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md) to determine the order of the columns for a nonclustered columnstore index. Columnstore ordering aids with [segment elimination](../../relational-databases/indexes/columnstore-indexes-query-performance.md#segment-elimination), especially with string data. For more information, see [Performance tuning with ordered clustered columnstore index](/azure/synapse-analytics/sql-data-warehouse/performance-tuning-ordered-cci) and [Columnstore indexes - Design guidance](../../relational-databases/indexes/columnstore-indexes-design-guidance.md). Design and performance considerations in these articles generally apply to both clustered and nonclustered columnstore indexes.
+
+LOB data types (the (max) length data types) can't be the key of an ordered nonclustered columnstore index.
+
+When creating an ordered nonclustered columnstore index, use `OPTION(MAXDOP = 1)` for the highest quality sorting, in exchange for a significantly longer duration of the `CREATE INDEX` statement. To create the index as fast as possible, don't limit MAXDOP. The highest quality of compression and sorting could aid queries on the columnstore index.
 
 #### WITH options
 

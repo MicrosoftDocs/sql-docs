@@ -1,7 +1,7 @@
 ---
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 05/16/2024
+ms.date: 09/12/2024
 ms.topic: include
 ---
 | Error | Severity | Event logged | Description |
@@ -277,6 +277,9 @@ ms.topic: include
 | 41977 | 16 | No | Connection with availability group '%.\*ls' on the server with endpoint '%.\*ls' is established, but there is no response from the target database. Possible causes could be errors with creating a database on the partner server, incorrectly specified names or configuration parameters. Please check the log file on the partner server for the exact error cause. |
 | 41978 | 16 | No | The parameters (%ls) are not supported for this stored procedure in SQL Database Managed Instance. Review the documentation for supported parameters. |
 | 41986 | 16 | No | Azure SQL Managed Instance link creation failed because either connection to SQL Server failed, or the server did not respond after a prolonged period of time. Verify the network connectivity and firewall rules between SQL Server and Managed Instance are properly configured and retry again. |
+| 41988 | 16 | No | The link supporting bi-directional failover requires matching database formats on source and target server. |
+| 41989 | 16 | No | The parameters (%ls) can only be set/updated on SQL Database Managed Instance. Review the documentation for supported parameters. |
+| 41990 | 16 | No | %s cannot be null or empty when %s is set to 0 (SQL Server Authentication). |
 | 42001 | 16 | No | Failed to parse XML configuration. The operating system returned error %ls. |
 | 42002 | 16 | No | Failed to parse XML configuration. The parser returned error %.\*ls |
 | 42003 | 16 | No | Failed to parse XML configuration. A required attribute '%ls' is missing. |

@@ -18,7 +18,7 @@ Use Microsoft's SQL data platform to create data-centric solutions across mobile
 * [LocalDB](../database-engine/configure-windows/sql-server-express-localdb.md): Use LocalDB during development to write and test Transact-SQL code without having to manage a full server instance of SQL Server.
 
 ## SQL Data tools
-* [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md): Use Azure Data Studio on Windows, macOS, and Linux to run SQL Server, Azure SQL Database, PostgreSQL, Jupyter Notebooks and more.
+* [Azure Data Studio](/azure-data-studio/download-azure-data-studio): Use Azure Data Studio on Windows, macOS, and Linux to run SQL Server, Azure SQL Database, PostgreSQL, Jupyter Notebooks and more.
 * [SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md): Use SSDT inside Visual Studio to build relational databases, Azure SQL databases, Integration Services packages, Analysis Services data models, and Reporting Services reports.
 * [SQL Server Management Tools](../ssms/download-sql-server-management-studio-ssms.md):  Use SSMS on Windows to configure, monitor, and administer instances of SQL Server.
 

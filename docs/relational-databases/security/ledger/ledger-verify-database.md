@@ -21,14 +21,14 @@ In this article, you'll verify the integrity of the data in your ledger tables. 
 
 - Have an active Azure subscription if you're using Azure SQL Database or Azure SQL Managed Instance. If you don't have one, [create a free account](https://azure.microsoft.com/free/).
 - [Create and use updatable ledger tables](ledger-how-to-updatable-ledger-tables.md) or [create and use append-only ledger tables](ledger-how-to-append-only-ledger-tables.md).
-- [SQL Server Management Studio](../../../ssms/download-sql-server-management-studio-ssms.md) or [Azure Data Studio](../../../azure-data-studio/download-azure-data-studio.md).
+- [SQL Server Management Studio](../../../ssms/download-sql-server-management-studio-ssms.md) or [Azure Data Studio](/azure-data-studio/download-azure-data-studio).
 - The database option [ALLOW_SNAPSHOT_ISOLATION](../../../t-sql/statements/alter-database-transact-sql-set-options.md) has to be enabled on the database before you can run the verification stored procedures.
 
 ## Run ledger verification for the database
 
 # [T-SQL using automatic digest storage](#tab/t-sql-automatic)
 
-1. Connect to your database by using [SQL Server Management Studio](../../../ssms/download-sql-server-management-studio-ssms.md) or [Azure Data Studio](../../../azure-data-studio/download-azure-data-studio.md).
+1. Connect to your database by using [SQL Server Management Studio](../../../ssms/download-sql-server-management-studio-ssms.md) or [Azure Data Studio](/azure-data-studio/download-azure-data-studio).
 
 1. Create a new query with the following T-SQL statement:
 
@@ -90,7 +90,7 @@ In this article, you'll verify the integrity of the data in your ledger tables. 
 
 # [T-SQL using a manual generated digest](#tab/t-sql-manual)
 
-1. Connect to your database by using [SQL Server Management Studio](../../../ssms/download-sql-server-management-studio-ssms.md) or [Azure Data Studio](../../../azure-data-studio/download-azure-data-studio.md).
+1. Connect to your database by using [SQL Server Management Studio](../../../ssms/download-sql-server-management-studio-ssms.md) or [Azure Data Studio](/azure-data-studio/download-azure-data-studio).
 1. Create a new query with the following T-SQL statement:
 
    ```sql

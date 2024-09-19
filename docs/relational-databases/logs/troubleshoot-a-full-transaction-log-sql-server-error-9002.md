@@ -30,7 +30,7 @@ This article applies to SQL Server instances.
 ### Option 1: Run the steps directly in an executable notebook via Azure Data Studio
 
 > [!NOTE]  
-> Before attempting to open this notebook, check that Azure Data Studio is installed on your local machine. To install, go to [Learn how to install Azure Data Studio](../../azure-data-studio/download-azure-data-studio.md).
+> Before attempting to open this notebook, check that Azure Data Studio is installed on your local machine. To install, go to [Learn how to install Azure Data Studio](/azure-data-studio/download-azure-data-studio).
 
 > [!div class="nextstepaction"]
 > [Open Notebook in Azure Data Studio](azuredatastudio://microsoft.notebook/open?url=https://raw.githubusercontent.com/microsoft/mssql-support/master/sample-scripts/DOCs-to-Notebooks/T-Shooting_LogFull_9002.ipynb)

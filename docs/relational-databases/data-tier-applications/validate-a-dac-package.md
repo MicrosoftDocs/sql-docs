@@ -49,9 +49,9 @@ There are two mechanisms for viewing the contents of a data-tier application (DA
 7.  Use the **Schema View** to review all of the objects in the schema, particularly reviewing the code in objects such as functions or stored procedures.  
   
 ### Publish the DAC package to a test instance
-Multiple tools are available to publish a DAC package to a test instance. The [SQL Server Dacpac extension](../../azure-data-studio/extensions/sql-server-dacpac-extension.md) for Azure Data Studio contains the **Data-tier Application Wizard**. We will walk through publishing a DAC package to a test instance.
+Multiple tools are available to publish a DAC package to a test instance. The [SQL Server Dacpac extension](/azure-data-studio/extensions/sql-server-dacpac-extension) for Azure Data Studio contains the **Data-tier Application Wizard**. We will walk through publishing a DAC package to a test instance.
 
-1. If needed, deploy a test instance using the [deployment wizard](../../azure-data-studio/deploy-sql-container.md).
+1. If needed, deploy a test instance using the [deployment wizard](/azure-data-studio/deploy-sql-container).
 
 2. Connect to your test instance in Azure Data Studio and right-click on the server node.  Select **Data-tier application wizard** from the context menu.
 
@@ -71,7 +71,7 @@ Under several scenarios you may want to view the difference between a database a
 
 ### All databases
 **View database changes by using schema compare**
-- Using the [Schema Compare extension in Azure Data Studio](../../azure-data-studio/extensions/schema-compare-extension.md#compare-schemas), the schema differences between an existing *.dacpac* and a database or two of the same can be viewed on Windows, macOS, and Linux.
+- Using the [Schema Compare extension in Azure Data Studio](/azure-data-studio/extensions/schema-compare-extension#compare-schemas), the schema differences between an existing *.dacpac* and a database or two of the same can be viewed on Windows, macOS, and Linux.
 
 - Using [SQL Server Data Tools in Visual Studio](../../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md), the schema differences between an existing *.dacpac* and a database or two of the same can be viewed on Windows.
 
@@ -128,7 +128,7 @@ The SqlPackage CLI can be used with the [DriftReport action](../../tools/sqlpack
 ### All databases
 
 **View database changes by using SQL project publish**
-- Using the [SQL Database Projects extension in Azure Data Studio](../../azure-data-studio/extensions/sql-database-project-extension-build.md), the actions to be taken when a SQL project will be published to a database can be viewed on Windows, macOS, and Linux by selecting "Generate Script" during the publish process.
+- Using the [SQL Database Projects extension in Azure Data Studio](/azure-data-studio/extensions/sql-database-project-extension-build), the actions to be taken when a SQL project will be published to a database can be viewed on Windows, macOS, and Linux by selecting "Generate Script" during the publish process.
 
 - Using [SQL Server Data Tools in Visual Studio](../../ssdt/how-to-change-target-platform-and-publish-a-database-project.md#to-publish-a-database-project), the actions to be taken when a SQL project will be published to a database can be viewed on Windows as a deployment script.
 

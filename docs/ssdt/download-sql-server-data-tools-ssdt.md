@@ -23,8 +23,12 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 The release notes for SSDT and its components are available for [Visual Studio 2017, 2019, and 2022](sql-server-data-tools.md#release-notes). An overview of the core SSDT functionality is provided in the [SSDT Overview](sql-server-data-tools.md#core-sql-server-data-tools).
 
-> [!NOTE]  
-> There's no SSDT standalone installer for Visual Studio. SSDT is installed as a Visual Studio component, both for [online installation](#install-ssdt-with-visual-studio) and [offline installation](#offline-installation). Analysis Services, Integration Services, and Reporting Services projects are available as separate extensions for each version.
+:::image type="content" source="media/download-sql-server-data-tools-ssdt/install-layout.png" alt-text="Screenshot of graphic with SQL Server Data Tools component and three extensions.":::
+
+SSDT is installed as a Visual Studio component, both for [online installation](#install-ssdt-with-visual-studio) and [offline installation](#offline-installation). Analysis Services, Integration Services, and Reporting Services projects are available as separate extensions for each version.
+
+> [!NOTE]
+> SDK-style SQL projects in Visual Studio are available as part of the **SQL Server Data Tools, SDK-style (preview)** feature for Visual Studio 2022, separate from the original SSDT. The SDK-style project format is based on the new SDK-style projects introduced in .NET Core and is the format used by the SQL Database Projects extension for Azure Data Studio and VS Code. For more information, see [SQL Server Data Tools, SDK-style (preview)](sql-server-data-tools-sdk-style.md).
 
 ## Install SSDT with Visual Studio
 

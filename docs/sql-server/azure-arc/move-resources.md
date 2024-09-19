@@ -8,8 +8,6 @@ ms.date: 09/09/2024
 ms.topic: conceptual
 ---
 
-# Move SQL Server enabled by Azure Arc resources to a new resource group or subscription (preview)
-
 # Move SQL Server enabled by Azure Arc resources to a new resource group or subscription
 
 This article describes how you can move resources to a new resource group or subscription with SQL Server enabled by Azure Arc. The capability applies to both:

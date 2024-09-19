@@ -4,7 +4,7 @@ description: "This article explains features by version and the latest new featu
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: wiassaf
-ms.date: 07/23/2024
+ms.date: 09/18/2024
 ms.service: sql
 ms.subservice: table-view-index
 ms.topic: conceptual
@@ -59,7 +59,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 [!INCLUDE [sql-server-2022](../../includes/sssql22-md.md)] adds these new features. For more information, see [What's new in [!INCLUDE [sql-server-2022](../../includes/sssql22-md.md)]](../../sql-server/what-s-new-in-sql-server-2022.md).
 
-- Ordered clustered columnstore indexes improve performance for queries based on ordered column predicates. Ordered columnstore indexes can improve performance by skipping segments of data altogether. This can drastically reduce IO needed to complete queries on columnstore data. For more information, see [segment elimination](columnstore-indexes-query-performance.md#segment-elimination). Ordered cluster columnstore indexes are available in [!INCLUDE [sql-server-2022](../../includes/sssql22-md.md)]. For more information, see [CREATE COLUMNSTORE INDEX](../../t-sql/statements/create-columnstore-index-transact-sql.md#order) and [Performance tuning with ordered clustered columnstore index](/azure/synapse-analytics/sql-data-warehouse/performance-tuning-ordered-cci).
+- Ordered clustered columnstore indexes improve performance for queries based on ordered column predicates. Ordered columnstore indexes can improve performance by skipping segments of data altogether. This can drastically reduce IO needed to complete queries on columnstore data. For more information, see [segment elimination](columnstore-indexes-query-performance.md#segment-elimination). Ordered cluster columnstore indexes are available in [!INCLUDE [sql-server-2022](../../includes/sssql22-md.md)]. For more information, see [CREATE COLUMNSTORE INDEX](../../t-sql/statements/create-columnstore-index-transact-sql.md#order-for-clustered-columnstore) and [Performance tuning with ordered clustered columnstore index](/azure/synapse-analytics/sql-data-warehouse/performance-tuning-ordered-cci).
 
 - Predicate pushdown with clustered columnstore rowgroup elimination of strings uses boundary values to optimize string searches. All columnstore indexes benefit from enhanced segment elimination by data type. Starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], these segment elimination capabilities extend to string, binary, and guid data types, and the datetimeoffset data type for scale greater than two. Previously, columnstore segment elimination applied only to numeric, date, and time data types, and the datetimeoffset data type with scale less than or equal to two. After upgrading to a version of SQL Server that supports string min/max segment elimination ([!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later versions), the columnstore index will not benefit this feature until it is rebuilt using a REBUILD or DROP/CREATE.
 

@@ -1,10 +1,10 @@
 ---
-title: "Move System Databases"
+title: Move system databases
 description: Learn how to move system databases in SQL Server.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: randolphwest
-ms.date: 08/30/2024
+ms.date: 09/19/2024
 ms.service: sql
 ms.topic: conceptual
 helpviewer_keywords:
@@ -44,7 +44,9 @@ The procedures in this article require the logical name of the database files. T
 > [!IMPORTANT]  
 > If you move a system database and later rebuild the `master` database, you must move the system database again because the rebuild operation installs all system databases to their default location.
 
-## <a id="Planned"></a> Move the system databases
+<a id="Planned"></a>
+
+## Move the system databases
 
 To move a system database data or log file as part of a planned relocation or scheduled maintenance operation, follow these steps. This includes the `model`, `msdb`, and `tempdb` system databases.
 
@@ -58,7 +60,8 @@ To move a system database data or log file as part of a planned relocation or sc
 1. For each database file to be moved, run the following statement.
 
    ```sql
-   ALTER DATABASE database_name MODIFY FILE ( NAME = logical_name , FILENAME = 'new_path\os_file_name' );
+   ALTER DATABASE database_name
+       MODIFY FILE (NAME = logical_name, FILENAME = 'new_path\os_file_name');
    ```
 
    Until the service is restarted, the database continues to use the data and log files in the existing location.
@@ -72,7 +75,9 @@ To move a system database data or log file as part of a planned relocation or sc
 1. Verify the file change by running the following query. The system databases should report the new physical file locations.
 
    ```sql
-   SELECT name, physical_name AS CurrentLocation, state_desc
+   SELECT name,
+          physical_name AS CurrentLocation,
+          state_desc
    FROM sys.master_files
    WHERE database_id = DB_ID(N'<database_name>');
    ```
@@ -95,14 +100,17 @@ If the `msdb` database is moved and [Database Mail](../database-mail/database-ma
 
    ```sql
    ALTER DATABASE msdb
-   SET ENABLE_BROKER WITH ROLLBACK IMMEDIATE;
+       SET ENABLE_BROKER
+       WITH ROLLBACK IMMEDIATE;
    ```
 
    Confirm that the value of `is_broker_enabled` is now 1.
 
 1. Verify that Database Mail is working by sending a test mail.
 
-## <a id="Failure"></a> Failure recovery procedure
+<a id="Failure"></a>
+
+## Failure recovery procedure
 
 If a file must be moved because of a hardware failure, follow these steps to relocate the file to a new location. This procedure applies to all system databases except the `master` and `Resource` databases. The following examples use the Windows command-line prompt and [sqlcmd Utility](../../tools/sqlcmd/sqlcmd-use-utility.md).
 
@@ -148,7 +156,8 @@ If a file must be moved because of a hardware failure, follow these steps to rel
    For each file to be moved, use **sqlcmd** commands or [!INCLUDE [ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to run the following statement. For more information about using the **sqlcmd** utility, see [sqlcmd - use the utility](../../tools/sqlcmd/sqlcmd-use-utility.md). Once the **sqlcmd** session is open, run the following statement once for each file to be moved:
 
    ```sql
-   ALTER DATABASE database_name MODIFY FILE( NAME = logical_name , FILENAME = 'new_path\os_file_name' )
+   ALTER DATABASE database_name
+       MODIFY FILE (NAME = logical_name, FILENAME = 'new_path\os_file_name');
    GO
    ```
 
@@ -163,14 +172,18 @@ If a file must be moved because of a hardware failure, follow these steps to rel
 1. Verify the file change by running the following query.
 
    ```sql
-   SELECT name, physical_name AS CurrentLocation, state_desc
+   SELECT name,
+          physical_name AS CurrentLocation,
+          state_desc
    FROM sys.master_files
    WHERE database_id = DB_ID(N'<database_name>');
    ```
 
 1. Since in Step 7 you copied the database files instead of moving them, now you can safely delete the unused database files from their previous location.
 
-## <a id="master"></a> Move the `master` database
+<a id="master"></a>
+
+## Move the `master` database
 
 To move the `master` database, follow these steps.
 
@@ -211,7 +224,9 @@ To move the `master` database, follow these steps.
 1. Verify the file change for the `master` database by running the following query.
 
     ```sql
-    SELECT name, physical_name AS CurrentLocation, state_desc
+    SELECT name,
+           physical_name AS CurrentLocation,
+           state_desc
     FROM sys.master_files
     WHERE database_id = DB_ID('master');
     ```
@@ -220,11 +235,15 @@ To move the `master` database, follow these steps.
 
 1. Since in Step 9 you copied the database files instead of moving them, now you can safely delete the unused database files from their previous location.
 
-## <a id="Resource"></a> Move the resource database
+<a id="Resource"></a>
 
-The location of the `Resource` database is `\<*drive*>:\Program Files\Microsoft SQL Server\MSSQL\<version>.\<*instance_name*>\MSSQL\Binn\\`. The database can't be moved.
+## Move the resource database
 
-## <a id="Follow"></a> Follow-up: After moving all system databases
+The location of the `Resource` database is `\<drive>:\Program Files\Microsoft SQL Server\MSSQL\<version>.<instance_name>\MSSQL\Binn\`. The database can't be moved.
+
+<a id="Follow"></a>
+
+## Follow-up: After moving all system databases
 
 If you moved all of the system databases to a new drive or volume, or to another server with a different drive letter, make the following updates.
 
@@ -240,7 +259,7 @@ If you have moved all of the system databases to a new volume or have migrated t
 
 1. Right-click **Error Logs** and select **Configure**.
 
-1. In the **Configure SQL Server Agent Error Logs** dialog box, specify the new location of the SQLAGENT.OUT file. The default location is `C:\Program Files\Microsoft SQL Server\MSSQL\<version>.<instance_name>\MSSQL\Log\\`.
+1. In the **Configure SQL Server Agent Error Logs** dialog box, specify the new location of the SQLAGENT.OUT file. The default location is `C:\Program Files\Microsoft SQL Server\MSSQL\<version>.<instance_name>\MSSQL\Log\`.
 
 #### Change the database default location
 
@@ -252,7 +271,9 @@ If you have moved all of the system databases to a new volume or have migrated t
 
 1. Stop and start the [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] service to complete the change.
 
-## <a id="Examples"></a> Examples
+<a id="Examples"></a>
+
+## Examples
 
 ### A. Move the `tempdb` database
 
@@ -261,12 +282,13 @@ The following example moves the `tempdb` data and log files to a new location as
 > [!TIP]  
 > Take this opportunity to review your `tempdb` files for optimal size and placement. For more information, see [Optimizing tempdb performance in SQL Server](tempdb-database.md#optimizing-tempdb-performance-in-sql-server).
 
-Because `tempdb` is re-created each time the instance of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] is started, you don't have to physically move the data and log files. The files are created in the new location when the service is restarted in step 4. Until the service is restarted, `tempdb` continues to use the data and log files in the existing location.
+Because `tempdb` is recreated each time the instance of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] is started, you don't have to physically move the data and log files. The files are created in the new location when the service is restarted in step 4. Until the service is restarted, `tempdb` continues to use the data and log files in the existing location.
 
 1. Determine the logical file names of the `tempdb` database and their current location on the disk.
 
    ```sql
-   SELECT name, physical_name AS CurrentLocation
+   SELECT name,
+          physical_name AS CurrentLocation
    FROM sys.master_files
    WHERE database_id = DB_ID(N'tempdb');
    GO
@@ -279,11 +301,13 @@ Because `tempdb` is re-created each time the instance of [!INCLUDE [ssNoVersion]
    ```sql
    USE master;
    GO
+
    ALTER DATABASE tempdb
-   MODIFY FILE (NAME = tempdev, FILENAME = 'E:\SQLData\tempdb.mdf');
+       MODIFY FILE (NAME = tempdev, FILENAME = 'E:\SQLData\tempdb.mdf');
    GO
+
    ALTER DATABASE tempdb
-   MODIFY FILE (NAME = templog, FILENAME = 'F:\SQLLog\templog.ldf');
+       MODIFY FILE (NAME = templog, FILENAME = 'F:\SQLLog\templog.ldf');
    GO
    ```
 
@@ -294,7 +318,9 @@ Because `tempdb` is re-created each time the instance of [!INCLUDE [ssNoVersion]
 1. Verify the file change.
 
    ```sql
-   SELECT name, physical_name AS CurrentLocation, state_desc
+   SELECT name,
+          physical_name AS CurrentLocation,
+          state_desc
    FROM sys.master_files
    WHERE database_id = DB_ID(N'tempdb');
    ```
@@ -303,13 +329,13 @@ Because `tempdb` is re-created each time the instance of [!INCLUDE [ssNoVersion]
 
 ## Related content
 
-- [Resource Database](resource-database.md)
-- [tempdb Database](tempdb-database.md)
-- [master Database](master-database.md)
-- [msdb Database](msdb-database.md)
-- [model Database](model-database.md)
-- [Move User Databases](move-user-databases.md)
-- [Move Database Files](move-database-files.md)
+- [Resource database](resource-database.md)
+- [tempdb database](tempdb-database.md)
+- [master database](master-database.md)
+- [msdb database](msdb-database.md)
+- [model database](model-database.md)
+- [Move user databases](move-user-databases.md)
+- [Move database files](move-database-files.md)
 - [Start, stop, pause, resume, and restart SQL Server services](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)
 - [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)
 - [Rebuild system databases](rebuild-system-databases.md)

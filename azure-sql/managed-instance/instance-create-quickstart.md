@@ -197,8 +197,6 @@ And finally, create your instance:
 
 Select the **Route table** resource in your resource group to review the default [user-defined route table object and entries to route traffic](subnet-service-aided-configuration-enable.md#mandatory-security-rules-and-routes) from, and within, the SQL Managed Instance virtual network. To change or add routes, open the **Routes** in the Route table settings.
 
-:::image type="content" source="./media/instance-create-quickstart/azure-sql-managed-instance-route-table-user-defined-route.png" alt-text="Screenshot of the Entry for a SQL Managed Instance subnet to local in the Azure portal. ":::
-
 Select the **Network security group** object to review the inbound and outbound security rules. To change or add rules, open the **Inbound Security Rules** and **Outbound security rules** in the Network security group settings.
 
 :::image type="content" source="./media/instance-create-quickstart/azure-sql-managed-instance-security-rules.png" alt-text="Screenshot of the Security rules for your instance in the Azure portal.":::

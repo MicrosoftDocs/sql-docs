@@ -1,6 +1,6 @@
 ---
 title: "Reporting Services log files and sources"
-description: See the logs that report servers and report server environments use in Reporting Services to record execution and trace information.
+description: Learn how the logs that report servers and report server environments use in Reporting Services to record execution and trace information.
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 09/19/2024

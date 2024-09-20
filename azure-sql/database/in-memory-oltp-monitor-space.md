@@ -83,8 +83,8 @@ To resolve these error, either:
         ```
 
     - Memory allocated to the In-Memory OLTP engine and the memory-optimized objects is managed the same way as other memory consumers within a database. The memory clerks of type `MEMORYCLERK_XTP` account for all the memory allocated to the In-Memory OLTP engine. Use the following query to find all the memory used by the In-Memory OLTP engine, including memory dedicated to specific databases.
-  
-        ```sql  
+
+        ```sql 
         -- This DMV accounts for all memory used by the In-Memory OLTP engine
         SELECT [type], [name]
              , memory_node_id  
@@ -99,7 +99,7 @@ To resolve these error, either:
         MEMORYCLERK_XTP      Default    0              18  
         MEMORYCLERK_XTP      DB_ID_5    0              1358  
         MEMORYCLERK_XTP      Default    64             0  
-    ```
+        ```
 
 - You can also get more information about out of memory errors in Azure SQL Database with the dynamic management view [sys.dm_os_out_of_memory_events](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-out-of-memory-events?view=azuresqldb-current&preserve-view=true). For example:
 

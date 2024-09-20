@@ -91,8 +91,6 @@ For more details, see:
 - [sp_attach_schedule (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)
 - [sp_add_jobserver (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql.md)
 
-[test](../../relational-databases/system-stored-procedures/sp-add-job-transact-sql.md)
-
 ## Use SQL Server Management Objects
 
 To create a SQL Server Agent job using SQL Server Management Objects (SMO):

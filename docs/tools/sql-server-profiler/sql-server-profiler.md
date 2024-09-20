@@ -173,7 +173,7 @@ If a filter isn't set, the trace output returns all events of the selected event
 
 ## Extended Events vs. SQL Server Profiler
 
-[Extended Events](../../relational-databases/extended-events/extended-events.md) and SQL Server Profiler are tools for monitoring and troubleshooting SQL Server performance. SQL Server Profiler is deprecated and should only be used with Analysis Services. Extended Events is the replacement for SQL Server Profiler and provides advanced troubleshooting capabilities not available elsewhere. The key differences are noted here to help with the migration from SQL Server Profiler to Extended Events.
+[Extended Events](../../relational-databases/extended-events/extended-events.md) and SQL Server Profiler are tools for monitoring and troubleshooting SQL Server performance. **SQL Server Profiler is deprecated and should only be used with Analysis Services.** Extended Events is the replacement for SQL Server Profiler and provides advanced troubleshooting capabilities not available elsewhere. The key differences are noted here to help with the migration from SQL Server Profiler to Extended Events.
 
 ## Extended Events tool
 

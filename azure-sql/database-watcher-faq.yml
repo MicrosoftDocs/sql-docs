@@ -5,7 +5,7 @@ metadata:
   description: Frequently asked questions about database watcher for Azure SQL
   author: dimitri-furman
   ms.author: dfurman
-  ms.date: 09/18/2024
+  ms.date: 09/19/2024
   ms.reviewer: wiassaf
   ms.service: azure-sql
   ms.subservice: monitoring
@@ -37,11 +37,6 @@ sections:
           Does database watcher support other SQL offerings in Azure or on-premises, or other database services?
         answer: |
           Not at this time. For planned improvements to database watcher, see the roadmap section in the database watcher [preview announcement](https://aka.ms/dbwatcher-preview-announcement). For more information about performance monitoring for Arc-enabled SQL Server, see [Monitor SQL Server enabled by Azure Arc (preview)](/sql/sql-server/azure-arc/sql-monitoring).
-
-      - question: |
-          Microsoft provides two other monitoring solutions for Azure SQL: Azure SQL Analytics (preview) and SQL Insights (preview). Which solution should I use?
-        answer: |
-          We recommend using database watcher as a managed monitoring solution that provides low data ingestion latency, estate-level monitoring, comprehensive monitoring data including query-level details, and support for advanced analytics on collected monitoring data. For more information about the older monitoring solutions, see the [preview announcement](https://aka.ms/dbwatcher-preview-announcement).
 
       - question: |
           What kind of data visualization solutions can I use with database watcher?

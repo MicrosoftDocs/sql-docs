@@ -50,7 +50,7 @@ You can create the `AdventureWorksLT` sample database with a few steps in the [A
 
 1. Copy the [In-Memory OLTP Transact-SQL script](https://raw.githubusercontent.com/microsoft/sql-server-samples/master/samples/features/in-memory-database/in-memory-oltp/t-sql-scripts/sql_in-memory_oltp_sample.sql) to your clipboard. The T-SQL script creates the necessary in-memory objects in the `AdventureWorksLT` sample database that you created in step 1.
 
-1. Paste the T-SQL script into SSMS, and then execute the script. The `MEMORY_OPTIMIZED = ON` clause in the `CREATE TABLE` statements are crucial. For example:
+1. Paste the T-SQL script into SSMS, and then execute the script. The `MEMORY_OPTIMIZED = ON` clause in the `CREATE TABLE` statements is crucial. For example:
 
     ```sql
     CREATE TABLE [SalesLT].[SalesOrderHeader_inmem](

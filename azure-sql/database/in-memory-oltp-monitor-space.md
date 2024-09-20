@@ -63,7 +63,7 @@ Reaching the In-Memory OLTP storage cap in your database or elastic pool might r
 
 Errors 41823 and 41840 indicate that the size of memory-optimized tables and table variables in the database or elastic pool reached the maximum In-Memory OLTP storage size.
 
-To resolve these error, either:
+To resolve these errors, either:
 
 - Delete data from the memory-optimized tables, potentially offloading the data to traditional, disk-based tables; or,
 - Upgrade the service objective to one with enough In-Memory OLTP storage for the data you need to keep in memory-optimized tables and table variables.

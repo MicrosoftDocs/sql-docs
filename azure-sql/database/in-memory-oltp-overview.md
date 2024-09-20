@@ -55,7 +55,7 @@ By using In-Memory OLTP, Quorum Business Solutions was able to double their work
 > [!NOTE]
 > In-Memory OLTP is available in the Premium (DTU) and Business Critical (vCore) service tiers of Azure SQL Database. The Hyperscale service tier supports a subset of in-memory OLTP objects. For more information, see [Hyperscale limitations](service-tier-hyperscale.md?view=azuresql&preserve-view=true#known-limitations).
 >
-> Columnstore indexes are available in all service tiers except for the Basic tier, and the Standard tier when the service objective is below S3. For more information, see [Change service tiers of databases containing columnstore indexes](changing-service-tiers-of-databases-containing-columnstore-indexes).
+> Columnstore indexes are available in all service tiers except for the Basic tier, and the Standard tier when the service objective is below S3. For more information, see [Change service tiers of databases containing columnstore indexes](#change-service-tiers-of-databases-containing-columnstore-indexes).
 
 This article describes aspects of in-memory OLTP and columnstore indexes that are specific to Azure SQL Database, and also includes samples that let you see:
 

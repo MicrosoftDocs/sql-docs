@@ -30,7 +30,7 @@ New stable (GA) releases are published every six months on a regular cadence beg
 | 5.2 | February 28, 2024 | 5.2.2 | August 27, 2024 | Current | - |
 | 5.1 | January 19, 2023 | 5.1.6 | August 27, 2024 | LTS | January 20, 2026 |
 | 4.0 | November 18, 2021 | 4.0.6 | August 21, 2024 | LTS | November 19, 2024 |
-| 3.1 | March 30, 2022 | 3.1.5 | January 9, 2024 | LTS | March 30, 2025 |
+| 3.1 | March 30, 2022 | 3.1.7 | August 20, 2024 | LTS | March 30, 2025 |
 
 ### Out of support releases
 

@@ -379,15 +379,15 @@
       href: database/serverless-tier-overview.md
     - name: T-SQL differences from SQL Server
       href: database/transact-sql-tsql-differences-sql-server.md
-    - name: In-memory OLTP in Azure SQL Database
+    - name: In-memory technologies in Azure SQL Database
       items:
-      - name: In-memory OLTP overview
+      - name: In-memory technology overview
         href: database/in-memory-oltp-overview.md
-      - name: Configure In-memory OLTP
+      - name: Configure In-Memory OLTP
         href: database/in-memory-oltp-configure.md
       - name: Try in-memory features
         href: database/in-memory-oltp-sample.md
-      - name: Monitor In-memory OLTP space
+      - name: Monitor In-Memory OLTP space
         href: database/in-memory-oltp-monitor-space.md
     - name: Hyperscale
       items:

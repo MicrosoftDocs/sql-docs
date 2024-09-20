@@ -98,6 +98,9 @@ When you execute a distributed query against a linked server, include a fully qu
 > [!NOTE]  
 > Linked servers can be defined to point back (loop back) to the server on which they are defined. Loopback servers are most useful when testing an application that uses distributed queries on a single server network. Loopback linked servers are intended for testing and are not supported for many operations, such as distributed transactions.
 
+> [!NOTE]  
+> References to temporary objects will always resolve to the local instance tempdb where applicable, even when prefixing with the linked server name.
+
 ## Linked servers with Azure SQL Managed Instance
 
 [Azure SQL Managed Instance](/azure/azure-sql/managed-instance/sql-managed-instance-paas-overview) linked servers support both SQL authentication and authentication with Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)).

@@ -4,16 +4,17 @@ titleSuffix: Azure SQL Database & SQL Managed Instance
 description: Learn how to connect to Azure SQL Database or Azure SQL Managed Instance by using Visual Studio Code. Then, run Transact-SQL (T-SQL) statements to query and edit data.
 author: dzsquared
 ms.author: drskwier
-ms.reviewer: wiassaf, mathoma, randolphwest
-ms.date: 09/27/2023
+ms.reviewer: wiassaf, mathoma, randolphwest, maghan
+ms.date: 09/19/2024
 ms.service: azure-sql
 ms.subservice: connect
 ms.topic: quickstart
 ms.custom:
   - mode-ui
 keywords: connect to sql database
-monikerRange: "=azuresql || =azuresql-db || =azuresql-mi"
+monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
 ---
+
 # Quickstart: Use Visual Studio Code to connect and query Azure SQL Database or Azure SQL Managed Instance
 
 [!INCLUDE [appliesto-sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi.md)]
@@ -30,7 +31,7 @@ monikerRange: "=azuresql || =azuresql-db || =azuresql-mi"
   | | [CLI](scripts/create-and-configure-database-cli.md) | [CLI](https://medium.com/azure-sqldb-managed-instance/working-with-sql-managed-instance-using-azure-cli-611795fe0b44) |
   | | [PowerShell](scripts/create-and-configure-database-powershell.md) | [PowerShell](../managed-instance/scripts/create-configure-managed-instance-powershell.md) |
   | Configure | [Server-level IP firewall rule](firewall-create-server-level-portal-quickstart.md)) | [Connectivity from a virtual machine (VM)](../managed-instance/connect-vm-instance-configure.md) |
-  |||[Connectivity from on-premises](../managed-instance/point-to-site-p2s-configure.md)
+  | | | [Connectivity from on-premises](../managed-instance/point-to-site-p2s-configure.md) |
   |Load data|Wide World Importers loaded per quickstart|[Restore Wide World Importers](../managed-instance/restore-sample-database-quickstart.md)
   | | | Restore or import Adventure Works from a [BACPAC](database-import.md) file from [GitHub](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) |
 
@@ -42,6 +43,8 @@ monikerRange: "=azuresql || =azuresql-db || =azuresql-mi"
 Make sure you have installed the latest [Visual Studio Code](https://code.visualstudio.com/Download). For installation guidance, see [Install Visual Studio Code](/sql/linux/sql-server-linux-develop-use-vscode#install-and-start-visual-studio-code).
 
 ## Configure Visual Studio Code
+
+To configure Visual Studio Code for connecting to Azure SQL Database or Azure SQL Managed Instance, you need to install the necessary extensions and dependencies based on your operating system. Follow the steps below for your specific OS to get started.
 
 ### Windows
 
@@ -57,7 +60,7 @@ For additional installation guidance, see [mssql for Visual Studio Code](https:/
 
 For macOS, you need to install OpenSSL, which is a prerequisite for .NET Core that mssql extension uses. Open your terminal and enter the following commands to install **brew** and **OpenSSL**.
 
-```bash
+```sql
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew update
 brew install openssl
@@ -82,13 +85,13 @@ Get the connection information you need to connect to Azure SQL Database. You ne
 
 1. Sign in to the [Azure portal](https://portal.azure.com/).
 
-1. Navigate to the **SQL databases**  or **SQL Managed Instances** page.
+1. Navigate to the **SQL databases** or **SQL Managed Instances** page.
 
 1. On the **Overview** page, review the fully qualified server name next to **Server name** for SQL Database or the fully qualified server name next to **Host** for a SQL Managed Instance. To copy the server name or host name, hover over it and select the **Copy** icon.
 
 ## Set language mode to SQL
 
-In Visual Studio Code, set the language mode to **SQL**  to enable mssql commands and T-SQL IntelliSense.
+In Visual Studio Code, set the language mode to **SQL** to enable mssql commands and T-SQL IntelliSense.
 
 1. Open a new Visual Studio Code window.
 
@@ -141,7 +144,7 @@ Run the following [SELECT](/sql/t-sql/queries/select-transact-sql) Transact-SQL 
 
 1. Press **Ctrl + Shift + E** to run the query and display results from the `Product` and `ProductCategory` tables.
 
-    :::image type="content" source="./media/connect-query-vscode/query.png" alt-text="Screenshot of query to retrieve data from 2 tables." lightbox="./media/connect-query-vscode/query.png":::
+    :::image type="content" source="media/connect-query-vscode/query.png" alt-text="Screenshot of query to retrieve data from 2 tables." lightbox="media/connect-query-vscode/query.png":::
 
 ## Insert data
 
@@ -199,7 +202,7 @@ Run the following [DELETE](/sql/t-sql/statements/delete-transact-sql) Transact-S
 
 1. Press **Ctrl + Shift + E** to delete the specified row in the `Product` table.
 
-## Next steps
+## Related content
 
 - [Quickstart: Use SQL Server Management Studio to connect to a database in Azure SQL Database and query data](connect-query-ssms.md)
 - [Use the SQL Query editor in the Azure portal to connect and query data](query-editor.md)

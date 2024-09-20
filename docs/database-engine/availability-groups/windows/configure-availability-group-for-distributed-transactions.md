@@ -151,7 +151,7 @@ The new [!INCLUDE [SQLServer](../../../includes/ssnoversion-md.md)] error log ha
 Microsoft Distributed Transaction Coordinator (MSDTC)
 failed to reenlist citing that the database RMID does
 not match the RMID [xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx]
-associated with the transaction.  Please manually resolve
+associated with the transaction.  Please manually resolve
 the transaction.
 
 SQL Server detected a DTC/KTM in-doubt transaction with UOW

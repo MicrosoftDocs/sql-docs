@@ -4,7 +4,7 @@ description: Learn about the DTU-based purchasing model for Azure SQL Database a
 author: dimitri-furman
 ms.author: dfurman
 ms.reviewer: wiassaf, mathoma
-ms.date: 07/13/2023
+ms.date: 09/17/2024
 ms.service: azure-sql-database
 ms.subservice: service-overview
 ms.topic: conceptual
@@ -13,11 +13,11 @@ ms.custom:
   - azure-sql-split
 ---
 # DTU-based purchasing model overview
-[!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
+[!INCLUDE [appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
 In this article, learn about the DTU-based purchasing model for Azure SQL Database.
 
-To learn more, review [vCore-based purchasing model](service-tiers-vcore.md) and [compare purchasing models](purchasing-models.md). 
+To learn more, review [vCore-based purchasing model](service-tiers-vcore.md) and [compare purchasing models](purchasing-models.md).
 
 ## Database transaction units (DTUs)
 
@@ -29,7 +29,7 @@ The ratio among these resources is originally determined by an [online transacti
 
 For single databases, the resources used by your workload don't impact the resources available to other databases in the Azure cloud. Likewise, the resources used by other workloads don't impact the resources available to your database.
 
-:::image type="content" source="./media/purchasing-models/bounding-box.png" alt-text="A descriptive infographic about the DTU purchasing model. The four sides of the box are Writes, CPU, Reads, and Memory, describing how DTU workloads are a blend of CPU, memory, and read-write rates.":::
+:::image type="content" source="media/service-tiers-dtu/bounding-box.png" alt-text="A descriptive infographic about the DTU purchasing model. The four sides of the box are Writes, CPU, Reads, and Memory, describing how DTU workloads are a blend of CPU, memory, and read-write rates." lightbox="media/service-tiers-dtu/bounding-box.png":::
 
 DTUs are most useful for understanding the relative resources that are allocated for databases at different compute sizes and service tiers. For example:
 
@@ -40,7 +40,7 @@ To gain deeper insight into the resource (DTU) consumption of your workload, use
 
 - Identify the top queries by CPU/duration/execution count that can potentially be tuned for improved performance. For example, an I/O-intensive query might benefit from [in-memory optimization techniques](in-memory-oltp-overview.md) to make better use of the available memory at a certain service tier and compute size.
 - Drill down into the details of a query to view its text and its history of resource usage.
-- View performance-tuning recommendations that show actions taken by [SQL Database Advisor](database-advisor-implement-performance-recommendations.md).
+- View performance-tuning recommendations that show actions taken by the [Database Advisor performance recommendations for Azure SQL Database](database-advisor-implement-performance-recommendations.md).
 
 ### Elastic database transaction units (eDTUs)
 
@@ -54,7 +54,7 @@ You can add more eDTUs to an existing pool with minimal database downtime. Simil
 
 #### Workloads that benefit from an elastic pool of resources
 
-Pools are well suited for databases with a low resource-utilization average and relatively infrequent utilization spikes. For more information, see [When should you consider a SQL Database elastic pool?](elastic-pool-overview.md).
+Pools are well suited for databases with a low resource-utilization average and relatively infrequent utilization spikes. For more information, see [Elastic pools in Azure SQL Database](elastic-pool-overview.md)
 
 ## Determine the number of DTUs needed by a workload
 
@@ -79,7 +79,7 @@ For example, a database can be moved to different hardware if it's scaled up or 
 
 If a database is moved to different hardware, workload performance can change. The DTU model guarantees that the throughput and response time of the [DTU benchmark](dtu-benchmark.md) workload will remain substantially identical as the database moves to a different hardware type, as long as its service objective (the number of DTUs) stays the same.
 
-However, across the wide spectrum of customer workloads running in Azure SQL Database, the impact of using different hardware for the same service objective can be more pronounced. Different workloads may benefit from different hardware configurations and features. Therefore, for workloads other than the [DTU benchmark](dtu-benchmark.md), it's possible to see performance differences if the database moves from one type of hardware to another.
+However, across the wide spectrum of customer workloads running in Azure SQL Database, the impact of using different hardware for the same service objective can be more pronounced. Different workloads might benefit from different hardware configurations and features. Therefore, for workloads other than the [DTU benchmark](dtu-benchmark.md), it's possible to see performance differences if the database moves from one type of hardware to another.
 
 Customers can use the [vCore](service-tiers-vcore.md) model to choose their preferred hardware configuration during database creation and scaling. In the vCore model, detailed resource limits of each service objective in each hardware configuration are documented for [single databases](resource-limits-vcore-single-databases.md) and [elastic pools](resource-limits-vcore-elastic-pools.md). For more information about hardware in the vCore model, see [Hardware configuration for SQL Database](./service-tiers-sql-database-vcore.md#hardware-configuration) or [Hardware configuration for SQL Managed Instance](../managed-instance/service-tiers-managed-instance-vcore.md#hardware-configurations).
 
@@ -95,10 +95,12 @@ Choosing a service tier depends primarily on business continuity, storage, and p
 |**CPU**|Low|Low, Medium, High|Medium, High|
 |**IOPS (approximate)**\* |1-4 IOPS per DTU| 1-4 IOPS per DTU | >25 IOPS per DTU|
 |**IO latency (approximate)**|5 ms (read), 10 ms (write)|5 ms (read), 10 ms (write)|2 ms (read/write)|
-|**Columnstore indexing** |N/A|Standard S3 and higher|Supported|
+|**Columnstore indexing**\*\* |N/A|Standard S3 and higher|Supported|
 |**In-memory OLTP**|N/A|N/A|Supported|
 
 \* All read and write IOPS against data files, including background IO (checkpoint and lazy writer).
+
+\*\* For more information, see [Change service tiers of databases containing columnstore indexes](in-memory-oltp-overview.md#changing-service-tiers-of-databases-containing-columnstore-indexes).
 
 > [!IMPORTANT]
 > The Basic, S0, S1 and S2 service objectives provide less than one vCore (CPU). For CPU-intensive workloads, a service objective of S3 or greater is recommended.
@@ -117,7 +119,7 @@ Resource limits differ for single and pooled databases.
 
 ### Single database storage limits
 
-In Azure SQL Database, compute sizes are expressed in terms of Database Transaction Units (DTUs) for single databases and elastic Database Transaction Units (eDTUs) for elastic pools. To learn more, review [Resource limits for single databases](resource-limits-dtu-single-databases.md). 
+In Azure SQL Database, compute sizes are expressed in terms of Database Transaction Units (DTUs) for single databases and elastic Database Transaction Units (eDTUs) for elastic pools. To learn more, review [Resource limits for single databases](resource-limits-dtu-single-databases.md).
 
 ||Basic|Standard|Premium|
 | :-- | --: | --: | --: |
@@ -125,11 +127,11 @@ In Azure SQL Database, compute sizes are expressed in terms of Database Transact
 | **Maximum DTUs** | 5 | 3000 | 4000 |
 
 > [!IMPORTANT]
-> Under some circumstances, you may need to shrink a database to reclaim unused space. For more information, see [Manage file space in Azure SQL Database](file-space-manage.md).
+> Under some circumstances, you might need to shrink a database to reclaim unused space. For more information, see [Manage file space for databases in Azure SQL Database](file-space-manage.md).
 
 ### Elastic pool limits
 
-To learn more, review [Resource limits for pooled databases](resource-limits-dtu-elastic-pools.md). 
+To learn more, review [Resource limits for elastic pools using the DTU purchasing model](resource-limits-dtu-elastic-pools.md). 
 
 || **Basic** | **Standard** | **Premium** |
 | :-- | --: | --: | --: |
@@ -143,7 +145,7 @@ To learn more, review [Resource limits for pooled databases](resource-limits-dtu
 > More than 1 TB of storage in the Premium tier is currently available in all regions except: China East, China North, Germany Central, and Germany Northeast. In these regions, the storage max in the Premium tier is limited to 1 TB.  For more information, see [P11-P15 current limitations](single-database-scale.md#p11-and-p15-constraints-when-max-size-greater-than-1-tb).  
 
 > [!IMPORTANT]
-> Under some circumstances, you may need to shrink a database to reclaim unused space. For more information, see [manage file space in Azure SQL Database](file-space-manage.md).
+> Under some circumstances, you might need to shrink a database to reclaim unused space. For more information, see [manage file space in Azure SQL Database](file-space-manage.md).
 
 ## DTU benchmark
 
@@ -159,7 +161,7 @@ The vCore-based purchasing model also allows you to use [Azure Hybrid Benefit](h
 
 Learn more in [Compare vCore and DTU-based purchasing models of Azure SQL Database](purchasing-models.md).
 
-## Next steps
+## Related content
 
 Learn more about purchasing models and related concepts in the following articles:
 

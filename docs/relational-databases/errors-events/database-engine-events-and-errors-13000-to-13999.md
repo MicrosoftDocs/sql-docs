@@ -3,7 +3,7 @@ title: "Database Engine events and errors (13000 to 13999)"
 description: "Consult this SQL Server error code list (between 13000 and 13999) to find explanations for error messages for SQL Server database engine events."
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 01/11/2024
+ms.date: 09/12/2024
 ms.service: sql
 ms.subservice: supportability
 ms.topic: reference
@@ -39,7 +39,7 @@ This article shows events and errors (between the range 13000 and 13999) for [!I
 - [SQL Server 2017](?view=sql-server-2017&preserve-view=true)
 :::moniker-end
 
-::: moniker range="=sql-server-2017||=sql-server-linux-2017"
+::: moniker range="=sql-server-2017 || =sql-server-linux-2017"
 This article shows events and errors (between the range 13000 and 13999) for [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)]. If you want to view events and errors for other versions of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)], see:
 
 - [SQL Server 2022](?view=sql-server-ver16&preserve-view=true)
@@ -47,7 +47,7 @@ This article shows events and errors (between the range 13000 and 13999) for [!I
 - [SQL Server 2016](?view=sql-server-2016&preserve-view=true)
 :::moniker-end
 
-::: moniker range="=sql-server-ver15||=sql-server-linux-ver15"
+::: moniker range="=sql-server-ver15 || =sql-server-linux-ver15"
 This article shows events and errors (between the range 13000 and 13999) for [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)]. If you want to view events and errors for other versions of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)], see:
 
 - [SQL Server 2022](?view=sql-server-ver16&preserve-view=true)
@@ -69,11 +69,11 @@ This article shows events and errors (between the range 13000 and 13999) for [!I
 [!INCLUDE [sql-server-2016-database-engine-events-and-errors-13000-13999](includes/sql-server-2016-database-engine-events-and-errors-13000-13999.md)]
 :::moniker-end
 
-::: moniker range="=sql-server-2017||=sql-server-linux-2017"
+::: moniker range="=sql-server-2017 || =sql-server-linux-2017"
 [!INCLUDE [sql-server-2017-database-engine-events-and-errors-13000-13999](includes/sql-server-2017-database-engine-events-and-errors-13000-13999.md)]
 :::moniker-end
 
-::: moniker range="=sql-server-ver15||=sql-server-linux-ver15"
+::: moniker range="=sql-server-ver15 || =sql-server-linux-ver15"
 [!INCLUDE [sql-server-2019-database-engine-events-and-errors-13000-13999](includes/sql-server-2019-database-engine-events-and-errors-13000-13999.md)]
 :::moniker-end
 
@@ -84,5 +84,5 @@ This article shows events and errors (between the range 13000 and 13999) for [!I
 ## Related content
 
 - [Database Engine events and errors](database-engine-events-and-errors.md)
-- [Understanding Database Engine Errors](../../relational-databases/errors-events/understanding-database-engine-errors.md)
-- [Cause and Resolution of Database Engine Errors](/previous-versions/sql/sql-server-2016/ms365262(v=sql.130))
+- [Understanding Database Engine errors](../../relational-databases/errors-events/understanding-database-engine-errors.md)
+- [Cause and resolution of Database Engine errors](/previous-versions/sql/sql-server-2016/ms365262(v=sql.130))

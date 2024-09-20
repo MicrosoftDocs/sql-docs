@@ -29,7 +29,7 @@ This article explains how to use **azdata** to perform high performant distribut
 
 Hadoop HDFS DistCP is a command-line tool used to perform distributed parallel copies of files and folders from one HDFS cluster to another. Distributed parallel copying enables fast transfer of Data Lake scale files and folders between two different clusters, enabling migrations, the creation of segmented environments, high-availability, and disaster recovery scenarios.
 
-Hadoop HDFS DistCP uses an internal MapReduce job to expand a list of files and directories into input to multiple map tasks, each of which will copy a partition of the files specified in the source list to the destination. This allows multiple data nodes in the source cluster to send data directly to multiple data nodes in the destination clusters, creating a truly distributed parallel copy scenario.
+Hadoop HDFS DistCP uses an internal MapReduce job to expand a list of files and directories into input to multiple map tasks, each of which will copy a partition of the files specified in the source list to the destination. This allows multiple data nodes in the source cluster to send data directly to multiple data nodes in the destination clusters, creating a truly distributed parallel copy scenario.
 
 On [!INCLUDE[big-data-clusters-nover](../includes/ssbigdataclusters-ss-nover.md)] CU13 and above, the distributed copy functionality is integrated into the product and is exposed through the [azdata bdc hdfs distcp](../azdata/reference/reference-azdata-bdc-hdfs.md) command. The command is an asynchronous operation, it returns immediately while the copy job executes in the background. Monitor the copy job using either `azdata` or the provided monitoring user interfaces.
 
@@ -191,7 +191,7 @@ The ``azdata bdc hdfs distcp submit`` command is an asynchronous operation, it r
 ### List all distributed copy jobs
 
 ```bash
-azdata bdc hdfs distcp list
+azdata bdc hdfs distcp list
 ```
 
 Take note of the `job-id` of job you and to track. All other commands depend on it.
@@ -199,19 +199,19 @@ Take note of the `job-id` of job you and to track. All other commands depend on 
 ### Get the state of a distributed copy job
 
 ```bash
-azdata bdc hdfs distcp state [--job-id | -i] <JOB_ID>
+azdata bdc hdfs distcp state [--job-id | -i] <JOB_ID>
 ```
 
 ### Get the complete status of a distributed copy job
 
 ```bash
-azdata bdc hdfs distcp status [--job-id | -i] <JOB_ID>
+azdata bdc hdfs distcp status [--job-id | -i] <JOB_ID>
 ```
 
 ### Get the logs of a distributed copy job
 
 ```bash
-azdata bdc hdfs distcp log [--job-id | -i] <JOB_ID>
+azdata bdc hdfs distcp log [--job-id | -i] <JOB_ID>
 ```
 
 ## Distributed copy hints

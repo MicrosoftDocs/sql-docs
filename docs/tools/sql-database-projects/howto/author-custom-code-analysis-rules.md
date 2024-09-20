@@ -40,9 +40,20 @@ This walkthrough is intended for users who are already familiar with the SQL Ser
 
 ::: zone-end
 
-<!-- ::: zone pivot="sq1-visual-studio-sdk"
+::: zone pivot="sq1-visual-studio-sdk"
 
-::: zone-end -->
+>[!NOTE]
+> Due to the preview limitations of SDK-style SQL Server Data Tools, multiple Visual Studio installations are required to complete this walkthrough. The first installation is required to create the class library project, the second installation is required to create the SDK-style SQL database project.
+
+- [.NET 8 SDK](https://dotnet.microsoft.com/download/dotnet/8.0)
+- [Visual Studio 2022 Community, Professional, or Enterprise](https://visualstudio.microsoft.com/downloads/)
+- [SQL Server Data Tools, SDK-style (preview) installed in Visual Studio 2022](../../../ssdt/sql-server-data-tools-sdk-style.md)
+- A version of Visual Studio installed, which supports [!INCLUDE [c-sharp-md](../../../includes/c-sharp-md.md)] .NET development.
+- A SQL Server project that contains SQL Server objects.
+
+This walkthrough is intended for users who are already familiar with the SQL Server features of SQL Server Data Tools. You should be familiar with Visual Studio concepts, such as how to create a class library, add NuGet packages, and how to use the code editor to add code to a class.
+
+::: zone-end
 
 ::: zone pivot="sq1-visual-studio-code"
 
@@ -85,9 +96,23 @@ Next, add supporting classes that will be used by the rule.
 
 ::: zone-end
 
-<!-- ::: zone pivot="sq1-visual-studio-sdk"
+::: zone pivot="sq1-visual-studio-sdk"
 
-::: zone-end -->
+First create a class library. To create a class library project:
+
+1. Create a [!INCLUDE [c-sharp-md](../../../includes/c-sharp-md.md)] (.NET Framework) class library project named `SampleRules`.
+
+2. Rename the file `Class1.cs` to `AvoidWaitForDelayRule.cs`.
+
+3. In Solution Explorer, right-click the project node and then select **Add** then **Reference**.
+
+4. Select `System.ComponentModel.Composition` on the **Assemblies\Frameworks** tab.
+
+5. In Solution Explorer, right-click the project node and then select **Manage NuGet Packages**. Locate and install the `Microsoft.SqlServer.DacFx` NuGet package. The selected version must be `162.x.x` (for example `162.2.111`) with Visual Studio 2022.
+
+Next, add supporting classes that will be used by the rule.
+
+::: zone-end
 
 ::: zone pivot="sq1-visual-studio-code"
 
@@ -142,11 +167,11 @@ Next, add supporting classes that will be used by the rule.
 
 ::: zone-end
 
-## Step 2. Create custom rule helper classes
+## Step 2: Create custom rule helper classes
 
 Before you create the class for the rule itself, add a visitor class and an attribute class to the project. These classes might be useful for creating more custom rules.
 
-### Define the WaitForDelayVisitor class
+### Step 2.1: Define the WaitForDelayVisitor class
 
 The first class that you must define is the `WaitForDelayVisitor` class, derived from [TSqlConcreteFragmentVisitor](/dotnet/api/microsoft.sqlserver.transactsql.scriptdom.tsqlconcretefragmentvisitor). This class provides access to the `WAITFOR DELAY` statements in the model. Visitor classes make use of the [ScriptDom](/dotnet/api/microsoft.sqlserver.transactsql.scriptdom) APIs provided by SQL Server. In this API, Transact-SQL code is represented as an abstract syntax tree (AST) and visitor classes can be useful when you wish to find specific syntax objects such as `WAITFOR DELAY` statements. These statements might be difficult to find using the object model since they're not associated to a specific object property or relationship, but you can find them using the visitor pattern and the [ScriptDom](/dotnet/api/microsoft.sqlserver.transactsql.scriptdom) API.
 
@@ -158,9 +183,13 @@ The first class that you must define is the `WaitForDelayVisitor` class, derived
 
 ::: zone-end
 
-<!-- ::: zone pivot="sq1-visual-studio-sdk"
+::: zone pivot="sq1-visual-studio-sdk"
 
-::: zone-end -->
+1. In **Solution Explorer**, select the `SampleRules` project.
+
+2. On the **Project** menu, select **Add Class**. The **Add New Item** dialog box appears. In the **Name** text box, type `WaitForDelayVisitor.cs` and then select the **Add** button. The `WaitForDelayVisitor.cs` file is added to the project in **Solution Explorer**.
+
+::: zone-end
 
 ::: zone pivot="sq1-visual-studio-code"
 
@@ -221,37 +250,41 @@ The first class that you must define is the `WaitForDelayVisitor` class, derived
 
 8. On the **File** menu, select **Save**.
 
-### Define the LocalizedExportCodeAnalysisRuleAttribute class
+### Step 2.2: Define the LocalizedExportCodeAnalysisRuleAttribute class
 
 The second class is `LocalizedExportCodeAnalysisRuleAttribute.cs`. This is an extension of the built-in `Microsoft.SqlServer.Dac.CodeAnalysis.ExportCodeAnalysisRuleAttribute` provided by the framework, and supports reading the `DisplayName` and `Description` used by your rule from a resources file. This is a useful class if you ever intend to have your rules used in multiple languages.
 
 ::: zone pivot="sq1-visual-studio"
 
-9. In **Solution Explorer**, select the `SampleRules` project.
+1. In **Solution Explorer**, select the `SampleRules` project.
 
-10. On the **Project** menu, select **Add Class**. The **Add New Item** dialog box appears. In the **Name** text box, type `LocalizedExportCodeAnalysisRuleAttribute.cs` and then select the **Add** button. The file is added to the project in **Solution Explorer**.
+2. On the **Project** menu, select **Add Class**. The **Add New Item** dialog box appears. In the **Name** text box, type `LocalizedExportCodeAnalysisRuleAttribute.cs` and then select the **Add** button. The file is added to the project in **Solution Explorer**.
 
 ::: zone-end
 
-<!-- ::: zone pivot="sq1-visual-studio-sdk"
+::: zone pivot="sq1-visual-studio-sdk"
 
-::: zone-end -->
+1. In **Solution Explorer**, select the `SampleRules` project.
+
+2. On the **Project** menu, select **Add Class**. The **Add New Item** dialog box appears. In the **Name** text box, type `LocalizedExportCodeAnalysisRuleAttribute.cs` and then select the **Add** button. The file is added to the project in **Solution Explorer**.
+
+::: zone-end
 
 ::: zone pivot="sq1-visual-studio-code"
 
-9. Navigate to the `SampleRules` directory in the **Explorer** view in Visual Studio Code.
-10. Create a new file named `LocalizedExportCodeAnalysisRuleAttribute.cs`.
+1. Navigate to the `SampleRules` directory in the **Explorer** view in Visual Studio Code.
+2. Create a new file named `LocalizedExportCodeAnalysisRuleAttribute.cs`.
 
 ::: zone-end
 
 ::: zone pivot="sq1-command-line"
 
-9. Navigate to the `SampleRules` directory.
-10. Create a new file named `LocalizedExportCodeAnalysisRuleAttribute.cs`.
+1. Navigate to the `SampleRules` directory.
+2. Create a new file named `LocalizedExportCodeAnalysisRuleAttribute.cs`.
 
 ::: zone-end
 
-11. Open the file and update the contents to match the following code:
+3. Open the file and update the contents to match the following code:
 
     ```csharp
     using Microsoft.SqlServer.Dac.CodeAnalysis;
@@ -353,19 +386,19 @@ The second class is `LocalizedExportCodeAnalysisRuleAttribute.cs`. This is an ex
     }
     ```
 
-### Add a resource file and three resource strings
+### Step 2.3: Add a resource file and three resource strings
 
 Next, add a resource file that defines the rule name, rule description, and the category in which the rule will appear in the rule configuration interface.
 
 ::: zone pivot="sq1-visual-studio"
 
-12. In **Solution Explorer**, select the `SampleRules` project. On the **Project** menu, select **Add** then **New Item**. The **Add New Item** dialog box appears.
+1. In **Solution Explorer**, select the `SampleRules` project. On the **Project** menu, select **Add** then **New Item**. The **Add New Item** dialog box appears.
 
-13. In the list of **Installed Templates**, select **General**. In the details pane, select **Resources File**.
+2. In the list of **Installed Templates**, select **General**. In the details pane, select **Resources File**.
 
-14. In **Name**, type `RuleResources.resx`. The resource editor appears, with no resources defined.
+3. In **Name**, type `RuleResources.resx`. The resource editor appears, with no resources defined.
 
-15. Define four resource strings as follows:
+4. Define four resource strings as follows:
 
     | Name | Value |
     | --- | --- |
@@ -374,18 +407,35 @@ Next, add a resource file that defines the rule name, rule description, and the 
     | `CategorySamples` | `SamplesCategory` |
     | `CannotCreateResourceManager` | `Can't create ResourceManager for {0} from {1}.` |
 
-16. On the **File** menu, select **Save RuleResources.resx**.
+5. On the **File** menu, select **Save RuleResources.resx**.
 
 ::: zone-end
 
-<!-- ::: zone pivot="sq1-visual-studio-sdk"
+::: zone pivot="sq1-visual-studio-sdk"
 
-::: zone-end -->
+1. In **Solution Explorer**, select the `SampleRules` project. On the **Project** menu, select **Add** then **New Item**. The **Add New Item** dialog box appears.
+
+2. In the list of **Installed Templates**, select **General**. In the details pane, select **Resources File**.
+
+3. In **Name**, type `RuleResources.resx`. The resource editor appears, with no resources defined.
+
+4. Define four resource strings as follows:
+
+    | Name | Value |
+    | --- | --- |
+    | `AvoidWaitForDelay_ProblemDescription` | `WAITFOR DELAY statement was found in {0}.` |
+    | `AvoidWaitForDelay_RuleName` | `Avoid using WaitFor Delay statements in stored procedures, functions and triggers.` |
+    | `CategorySamples` | `SamplesCategory` |
+    | `CannotCreateResourceManager` | `Can't create ResourceManager for {0} from {1}.` |
+
+5. On the **File** menu, select **Save RuleResources.resx**.
+
+::: zone-end
 
 ::: zone pivot="sq1-visual-studio-code"
 
-12. In the `SampleRules` directory, create a new file named `RuleResources.resx`.
-13. Open the `RuleResources.resx` file and add the following code:
+1. In the `SampleRules` directory, create a new file named `RuleResources.resx`.
+2. Open the `RuleResources.resx` file and add the following code:
 
     ```xml
     <?xml version="1.0" encoding="utf-8"?>
@@ -463,9 +513,9 @@ Next, add a resource file that defines the rule name, rule description, and the 
     </root>
     ```
 
-14. Save the `RuleResources.resx` file.
+3. Save the `RuleResources.resx` file.
 
-15. Open the `SampleRules.csproj` file and add the following code to update and include the resource contents in the project:
+4. Open the `SampleRules.csproj` file and add the following code to update and include the resource contents in the project:
 
     ```xml
     <ItemGroup>
@@ -483,14 +533,14 @@ Next, add a resource file that defines the rule name, rule description, and the 
     </ItemGroup>
     ```
 
-16. Save the `SampleRules.csproj` file.
+5. Save the `SampleRules.csproj` file.
 
 ::: zone-end
 
 ::: zone pivot="sq1-command-line"
 
-12. In the `SampleRules` directory, create a new file named `RuleResources.resx`.
-13. Open the `RuleResources.resx` file and add the following code:
+1. In the `SampleRules` directory, create a new file named `RuleResources.resx`.
+2. Open the `RuleResources.resx` file and add the following code:
 
     ```xml
     <?xml version="1.0" encoding="utf-8"?>
@@ -568,9 +618,9 @@ Next, add a resource file that defines the rule name, rule description, and the 
     </root>
     ```
 
-14. Save the `RuleResources.resx` file.
+3. Save the `RuleResources.resx` file.
 
-15. Open the `SampleRules.csproj` file and add the following code to update and include the resource contents in the project:
+4. Open the `SampleRules.csproj` file and add the following code to update and include the resource contents in the project:
 
     ```xml
     <ItemGroup>
@@ -588,41 +638,45 @@ Next, add a resource file that defines the rule name, rule description, and the 
     </ItemGroup>
     ```
 
-16. Save the `SampleRules.csproj` file.
+5. Save the `SampleRules.csproj` file.
 
 ::: zone-end
 
-### Define the SampleConstants class
+### Step 2.4: Define the SampleConstants class
 
 Next, define a class that references the resources in the resource file that are used by Visual Studio to display information about your rule in the user interface.
 
 ::: zone pivot="sq1-visual-studio"
 
-17. In **Solution Explorer**, select the `SampleRules` project.
+1. In **Solution Explorer**, select the `SampleRules` project.
 
-18. On the **Project** menu, select **Add** then **Class**. The **Add New Item** dialog box appears. In the **Name** text box, type `SampleRuleConstants.cs` and select the **Add** button. The `SampleRuleConstants.cs` file is added to the project in **Solution Explorer**.
+2. On the **Project** menu, select **Add** then **Class**. The **Add New Item** dialog box appears. In the **Name** text box, type `SampleRuleConstants.cs` and select the **Add** button. The `SampleRuleConstants.cs` file is added to the project in **Solution Explorer**.
 
 ::: zone-end
 
-<!-- ::: zone pivot="sq1-visual-studio-sdk"
+::: zone pivot="sq1-visual-studio-sdk"
 
-::: zone-end -->
+1. In **Solution Explorer**, select the `SampleRules` project.
+
+2. On the **Project** menu, select **Add** then **Class**. The **Add New Item** dialog box appears. In the **Name** text box, type `SampleRuleConstants.cs` and select the **Add** button. The `SampleRuleConstants.cs` file is added to the project in **Solution Explorer**.
+
+::: zone-end
 
 ::: zone pivot="sq1-visual-studio-code"
 
-17. Navigate to the `SampleRules` directory in the **Explorer** view in Visual Studio Code.
-18. Create a new file named `SampleRuleConstants.cs`.
+1. Navigate to the `SampleRules` directory in the **Explorer** view in Visual Studio Code.
+2. Create a new file named `SampleRuleConstants.cs`.
 
 ::: zone-end
 
 ::: zone pivot="sq1-command-line"
 
-17. Navigate to the `SampleRules` directory.
-18. Create a new file named `SampleRuleConstants.cs`.
+1. Navigate to the `SampleRules` directory.
+2. Create a new file named `SampleRuleConstants.cs`.
 
 ::: zone-end
 
-19. Open the `SampleRuleConstants.cs` file and add the following using statements to the file:
+3. Open the `SampleRuleConstants.cs` file and add the following using statements to the file:
 
     ```csharp
     namespace SampleRules
@@ -656,13 +710,13 @@ Next, define a class that references the resources in the resource file that are
     }
     ```
 
-20. On the **File** menu, select **Save**.
+4. On the **File** menu, select **Save**.
 
 ## Step 3: Create a custom rule class
 
 After you add the helper classes that the custom code analysis rule will use, create a custom rule class and name it `AvoidWaitForDelayRule`. The `AvoidWaitForDelayRule` custom rule will be used to help database developers avoid `WAITFOR DELAY` statements in stored procedures, triggers, and functions.
 
-### Create the AvoidWaitForDelayRule class
+### Step 3.1: Create the AvoidWaitForDelayRule class
 
 ::: zone pivot="sq1-visual-studio"
 
@@ -672,9 +726,13 @@ After you add the helper classes that the custom code analysis rule will use, cr
 
 ::: zone-end
 
-<!-- ::: zone pivot="sq1-visual-studio-sdk"
+::: zone pivot="sq1-visual-studio-sdk"
 
-::: zone-end -->
+1. In **Solution Explorer**, select the `SampleRules` project.
+
+2. On the **Project** menu, select **Add** then **Class**. The **Add New Item** dialog box appears. In the **Name** text box, type `AvoidWaitForDelayRule.cs` and then select **Add**. The `AvoidWaitForDelayRule.cs` file is added to the project in **Solution Explorer**.
+
+::: zone-end
 
 ::: zone pivot="sq1-visual-studio-code"
 
@@ -877,9 +935,19 @@ After you add the helper classes that the custom code analysis rule will use, cr
 
 ::: zone-end
 
-<!-- ::: zone pivot="sq1-visual-studio-sdk"
+::: zone pivot="sq1-visual-studio-sdk"
 
-::: zone-end -->
+1. On the **Project** menu, select **SampleRules Properties**.
+2. Select the **Signing** tab.
+3. Select **Sign the assembly**.
+4. In **Choose a strong name key file**, select **\<New\>**.
+5. In the **Create Strong Name Key** dialog box, in **Key file name**, type `MyRefKey`.
+6. (optional) You can specify a password for your strong name key file.
+7. Select **OK**.
+8. On the **File** menu, select **Save All**.
+9. On the **Build** menu, select **Build Solution**.
+
+::: zone-end
 
 ::: zone pivot="sq1-visual-studio-code"
 
@@ -911,7 +979,7 @@ Next, you must install the assembly so that it loads when you build a SQL databa
 
 To install a rule that will run when you build an original SQL project with Visual Studio, you must copy the assembly and associated `.pdb` file to the Extensions folder.
 
-### Install the SampleRules assembly
+### Step 5.1: Install the SampleRules assembly
 
 Next, copy the assembly information to the Extensions directory. When Visual Studio starts, it identifies any extensions in `<Visual Studio Install Dir>\Common7\IDE\Extensions\Microsoft\SQLDB\DAC\Extensions` directory and subdirectories, and makes them available for use.
 
@@ -924,27 +992,56 @@ Copy the SampleRules.dll assembly file from the output directory to the `<Visual
 
 Your rule should now be installed and appears once you restart Visual Studio. Next, start a new session of Visual Studio and create a database project.
 
-### Start a new Visual Studio session and create a database project
+### Step 5.2: Start a new Visual Studio session and create a database project
 
 1. Start a second session of Visual Studio.
 2. Select **File** > **New** > **Project**.
 3. In the **New Project** dialog box, locate and the select **SQL Server Database Project**.
 4. In the **Name** text box, type `SampleRulesDB` and select **OK**.
 
-Finally, you can see the new rule in the SQL database project interface in Visual Studio. To view the new `AvoidWaitForRule` Code Analysis rule:
+### Step 5.3: Enable the AvoidWaitForRule Code Analysis rule
 
-5. In **Solution Explorer**, select the `SampleRulesDB` project.
-6. On the **Project** menu, select **Properties**. The `SampleRulesDB` properties page is displayed.
-7. Select **Code Analysis**. You should see a new category named `RuleSamples.CategorySamples`.
-8. Expand `RuleSamples.CategorySamples`. You should see `SR1004: Avoid WAITFOR DELAY statement in stored procedures, triggers, and functions`.
-9. Enable this rule by selecting the checkbox next to the rule name and the checkbox for **Enable code analysis on build**. For more information on enabling code analysis, check the [Code analysis overview](../concepts/sql-code-analysis/sql-code-analysis.md).
-10. When the project **build** action is used, the rule will be executed and any `WAITFOR DELAY` statements found will be reported as warnings.
+1. In **Solution Explorer**, select the `SampleRulesDB` project.
+2. On the **Project** menu, select **Properties**. The `SampleRulesDB` properties page is displayed.
+3. Select **Code Analysis**. You should see a new category named `RuleSamples.CategorySamples`.
+4. Expand `RuleSamples.CategorySamples`. You should see `SR1004: Avoid WAITFOR DELAY statement in stored procedures, triggers, and functions`.
+5. Enable this rule by selecting the checkbox next to the rule name and the checkbox for **Enable code analysis on build**. For more information on enabling code analysis, check the [Code analysis overview](../concepts/sql-code-analysis/sql-code-analysis.md).
+6. When the project **build** action is used, the rule will be executed and any `WAITFOR DELAY` statements found will be reported as warnings.
 
 ::: zone-end
 
-<!-- ::: zone pivot="sq1-visual-studio-sdk"
+::: zone pivot="sq1-visual-studio-sdk"
 
-::: zone-end -->
+To install a rule that will run when you build an original SQL project with Visual Studio, you must copy the assembly and associated `.pdb` file to the Extensions folder.
+
+### Step 5.1: Install the SampleRules assembly
+
+Next, copy the assembly information to the Extensions directory. When Visual Studio starts, it identifies any extensions in `<Visual Studio Install Dir>\Common7\IDE\Extensions\Microsoft\SQLDB\DAC\Extensions` directory and subdirectories, and makes them available for use.
+
+For Visual Studio 2022, the `<Visual Studio Install Dir>` is usually `C:\Program Files\Microsoft Visual Studio\2022\Enterprise`. Replace `Enterprise` with `Professional` or `Community` depending in your installed Visual Studio edition.
+
+Copy the SampleRules.dll assembly file from the output directory to the `<Visual Studio Install Dir>\Common7\IDE\Extensions\Microsoft\SQLDB\DAC\Extensions` directory. By default, the path of your compiled `.dll` file is `YourSolutionPath\YourProjectPath\bin\Debug` or `YourSolutionPath\YourProjectPath\bin\Release`.
+
+> [!NOTE]  
+> You might have to create the `Extensions` directory.
+
+Your rule should now be installed and appears once you restart Visual Studio. Next, start a new session of Visual Studio and create a database project.
+
+### Step 5.2: Start a new Visual Studio session and create a database project
+
+1. Start a second session of Visual Studio.
+2. Select **File** > **New** > **Project**.
+3. In the **New Project** dialog box, locate and the select **SQL Server Database Project, SDK-style (preview)**.
+4. In the **Name** text box, type `SampleRulesDB` and select **OK**.
+
+### Step 5.3: Enable the AvoidWaitForRule Code Analysis rule
+
+1. In **Solution Explorer**, select the `SampleRulesDB` project.
+2. Double-click the project node to open the project file. The `SampleRulesDB` project file is displayed in a text editor.
+3. Enable [code analysis on build](../concepts/sql-code-analysis/sql-code-analysis.md) in the SQL project file by setting the `RunSqlCodeAnalysis` property to `true`.
+4. When the project **build** action is used, the rule will be executed and any `WAITFOR DELAY` statements found will be reported as warnings.
+
+::: zone-end
 
 ::: zone pivot="sq1-visual-studio-code"
 

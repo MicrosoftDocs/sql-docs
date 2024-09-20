@@ -4,7 +4,7 @@ description: How to manage a Hyperscale database, including migrating to Hypersc
 author: dimitri-furman
 ms.author: dfurman
 ms.reviewer: wiassaf, mathoma
-ms.date: 02/22/2024
+ms.date: 09/12/2024
 ms.service: azure-sql-database
 ms.subservice: service-overview
 ms.topic: conceptual
@@ -127,9 +127,9 @@ Reverse migration is available under the following conditions:
 - Reverse migration is only available within 45 days of the original migration to Hyperscale.
 - Databases originally created in the Hyperscale service tier aren't eligible for reverse migration.
 - You might reverse migrate to the [General Purpose](service-tier-general-purpose.md) service tier only. Your migration from Hyperscale to General Purpose can target either the serverless or provisioned compute tiers. If you wish to migrate the database to another service tier, such as [Business Critical](service-tier-business-critical.md) or a [DTU based service tier](service-tiers-dtu.md), first reverse migrate to the General Purpose service tier, then change the service tier.
-- Reverse migration to databases with less than 2 vcores is not supported. You can scale the database down to fewer than 2 vcores once the migration is complete.
+- Reverse migration to databases with less than 2 vCores is not supported. You can scale the database down to fewer than 2 vCores once the migration is complete.
 - Direct reverse migration from, or to, an elastic pool isn't supported. You can reverse migrate only a Hyperscale single database to a General Purpose single database.
-    - If the Hyperscale database is part of a [Hyperscale elastic pool (preview)](./hyperscale-elastic-pool-overview.md), you have to first remove it from the Hyperscale elastic pool prior to reverse migration.
+    - If the Hyperscale database is part of a [Hyperscale elastic pool](./hyperscale-elastic-pool-overview.md), you have to first remove it from the Hyperscale elastic pool prior to reverse migration.
     - After reverse migration is complete, you can then optionally add the General Purpose single database to a General Purpose elastic pool if needed.
 - For databases that don't qualify for reverse migration, the only way to migrate from Hyperscale to a non-Hyperscale service tier is to export/import using a bacpac file or other data movement technologies (Bulk Copy, Azure Data Factory, Azure Databricks, SSIS, etc.) Bacpac export/import from Azure portal, from PowerShell using New-AzSqlDatabaseExport or New-AzSqlDatabaseImport, from Azure CLI using az sql db export and az sql db import, and from REST API isn't supported. Bacpac import/export for smaller Hyperscale databases (up to 150 GB) is supported using SSMS and SqlPackage version 18.4 and later. For larger databases, bacpac export/import might take a long time, and can fail for various reasons.
 

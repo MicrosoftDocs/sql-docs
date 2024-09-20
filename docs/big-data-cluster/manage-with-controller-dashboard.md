@@ -19,7 +19,6 @@ ms.topic: conceptual
 
 In addition to **azdata** and the cluster status notebook, there is another way to view the status of a SQL Server Big Data Cluster. You can now add the SQL Server Big Data Cluster controller through the **Connections** viewlet. This enables you to have a dashboard to view the cluster health.
 
-![dashboard](media/manage-with-controller-dashboard/controller-dashboard.png)
 ## Prerequisites
 
 The following prerequisites are required to launch the notebook:

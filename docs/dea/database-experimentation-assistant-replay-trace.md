@@ -12,6 +12,9 @@ ms.topic: conceptual
 
 # Replay a trace in Database Experimentation Assistant
 
+> [!NOTE]  
+> This tool will be retired on **December 15, 2024**. We will stop supporting this tool for any issues that arise, and will not issue any bug fixes or further updates.
+
 In Database Experimentation Assistant (DEA), you can replay a captured trace file against an upgraded test environment. For example, consider a production workload that runs on SQL Server 2008 R2. The trace file for the workload must be replayed twice: one time on an environment with the same version of SQL Server that runs in production and a second time on an environment that has the upgrade target SQL Server version, such as SQL Server 2016.
 
 > [!NOTE]

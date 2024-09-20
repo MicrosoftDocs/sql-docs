@@ -27,7 +27,7 @@ apitype: "dllExport"
 ```cpp  
   
 BOOL SQLRemoveDriverManager(  
-     LPDWORD     pdwUsageCount);  
+     LPDWORD     pdwUsageCount);  
 ```  
   
 ## Arguments  

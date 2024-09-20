@@ -27,8 +27,8 @@ apitype: "dllExport"
 ```cpp  
   
 RETCODE SQLPostInstallerError(  
-     DWORD    fErrorCode,  
-     LPSTR    szErrorMsg);  
+     DWORD    fErrorCode,  
+     LPSTR    szErrorMsg);  
 ```  
   
 ## Arguments  

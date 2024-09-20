@@ -4,7 +4,7 @@ description: The sp_invoke_external_rest_endpoint stored procedure invokes an HT
 author: jettermctedder
 ms.author: bspendolini
 ms.reviewer: randolphwest
-ms.date: 08/22/2024
+ms.date: 09/10/2024
 ms.service: sql
 ms.topic: "reference"
 f1_keywords:
@@ -204,6 +204,8 @@ Only calls to endpoints in the following services are allowed:
 | Bing Search | api.bing.microsoft.com |
 | Azure Key Vault | *.vault.azure.net |
 | Azure AI Search | *.search.windows.net |
+| Azure Maps | *.atlas.microsoft.com |
+| Azure AI Translator | api.cognitive.microsofttranslator.com |
 
 [Outbound firewall rules for Azure SQL Database and Azure Synapse Analytics](/azure/azure-sql/database/outbound-firewall-rule-overview) control mechanism can be used to further restrict outbound access to external endpoints.
 

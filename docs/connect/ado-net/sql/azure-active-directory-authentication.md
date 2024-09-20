@@ -3,8 +3,8 @@ title: Connect to Azure SQL with Microsoft Entra authentication and SqlClient
 description: Describes how to use supported Microsoft Entra authentication modes to connect to Azure SQL data sources with SqlClient
 author: David-Engel
 ms.author: davidengel
-ms.reviewer: v-davidengel
-ms.date: 02/28/2024
+ms.reviewer: davidengel
+ms.date: 09/13/2024
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: conceptual
@@ -51,7 +51,7 @@ When the application is connecting to Azure SQL data sources by using Microsoft 
 | Active Directory Device Code Flow | Authenticate with a Microsoft Entra identity by using Device Code Flow mode | 2.1.0+ |
 | Active Directory Managed Identity, <br>Active Directory MSI | Authenticate using a Microsoft Entra system-assigned or user-assigned managed identity | 2.1.0+ |
 | Active Directory Default | Authenticate with a Microsoft Entra identity by using password-less and non-interactive mechanisms including managed identities, Visual Studio Code, Visual Studio, Azure CLI, etc. | 3.0.0+ |
-| Active Directory Workload Identity| Authenticate with a Microsoft Entra identity by using a federated User Assigned Managed Identity to connect to SQL Database from Azure client environments that have enabled support for Workload Identity. | 5.2.0+ |
+| Active Directory Workload Identity | Authenticate with a Microsoft Entra identity by using a federated User Assigned Managed Identity to connect to SQL Database from Azure client environments that are enabled for Workload Identity. | 5.2.0+ |
 
 <sup>1</sup> Before **Microsoft.Data.SqlClient** 2.0.0, `Active Directory Integrated`, and `Active Directory Interactive` authentication modes are supported only on .NET Framework.
 
@@ -300,7 +300,7 @@ using (SqlConnection conn = new SqlConnection(ConnectionString)) {
 
 ## Using workload identity authentication
 
-Available starting in version 5.2, like with managed identities, [workload identity](/azure/aks/workload-identity-overview) authentication mode uses the value of the User Id parameter in the connection string for its Client Id if specified. But unlike managed identity, WorkloadIdentityCredentialOptions defaults its value from environment variables: AZURE_TENANT_ID, AZURE_CLIENT_ID, and AZURE_FEDERATED_TOKEN_FILE. However, only the Client Id may be overridden by the connection string.
+Available starting in version 5.2, like with managed identities, [workload identity](/azure/aks/workload-identity-overview) authentication mode uses the value of the `User ID` parameter in the connection string for its Client ID if specified. But unlike managed identity, WorkloadIdentityCredentialOptions defaults its value from environment variables: AZURE_TENANT_ID, AZURE_CLIENT_ID, and AZURE_FEDERATED_TOKEN_FILE. However, only the Client ID can be overridden by the connection string.
 
 The following example demonstrates `Active Directory Workload Identity` authentication with a user-assigned managed identity with **Microsoft.Data.SqlClient v5.2 onwards**.
 
@@ -318,7 +318,7 @@ using (SqlConnection conn = new SqlConnection(ConnectionString)) {
 
 ## Customizing Microsoft Entra authentication
 
-Besides using the Microsoft Entra authentication built into the driver, **Microsoft.Data.SqlClient** 2.1.0 and later provide applications the option to customize Microsoft Entra authentication. The customization is based on the `ActiveDirectoryAuthenticationProvider` class, which is derived from the [`SqlAuthenticationProvider`](/dotnet/api/system.data.sqlclient.sqlauthenticationprovider) abstract class.
+Besides using the Microsoft Entra authentication built into the driver, **Microsoft.Data.SqlClient** 2.1.0 and later provide applications the option to customize Microsoft Entra authentication. The customization is based on the `ActiveDirectoryAuthenticationProvider` class, which is derived from the [`SqlAuthenticationProvider`](/dotnet/api/microsoft.data.sqlclient.sqlauthenticationprovider) abstract class.
 
 During Microsoft Entra authentication, the client application can define its own `ActiveDirectoryAuthenticationProvider` class by either:
 
@@ -358,6 +358,14 @@ The following example shows how to set an application client ID through a config
   <SqlAuthenticationProviders applicationClientId ="<GUID>" />
 </configuration>
 ```
+
+## Using AccessTokenCallback
+
+Available in version 5.2 onwards, there's a new [AccessTokenCallback](/dotnet/api/microsoft.data.sqlclient.sqlconnection.accesstokencallback) property on [SqlConnection](/dotnet/api/microsoft.data.sqlclient.sqlconnection). Use the `AccessTokenCallback` property to define a custom function that returns an access token given the incoming parameters. Using the callback is better than using the [AccessToken](/dotnet/api/microsoft.data.sqlclient.sqlconnection.accesstoken) property because it allows the access token to be refreshed within a connection pool. When using the `AccessToken` property, the token can't be updated after opening the connection. There's also no associated expiration date provided through the property. Once the token expires, new connection requests fail with a server authentication error and pools using it must be manually cleared.
+
+The following code snippet is an example of using the `AccessTokenCallback` property in **Microsoft.Data.SqlClient v5.2 onwards**.
+
+[!code-csharp [AADAuthenticationAccessTokenCallback#1](~/../sqlclient/doc/samples/SqlConnection_AccessTokenCallback.cs#1)]
 
 ## Support for a custom SQL authentication provider
 

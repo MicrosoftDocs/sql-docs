@@ -24,7 +24,7 @@ This article describes how to add new Active Directory groups with *bdcUser* rol
 
 Active Directory groups can be provided in the security section of the deployment profile as part of two overarching roles for authorization within the big data cluster:
 
-* `clusterAdmins`: This parameter takes one Active Directory group. Members of this group have the *bdcAdmin* role, meaning they get administrator permissions for the entire cluster. They have *sysadmin* permissions in SQL Server, *superuser* permissions in Hadoop Distributed File System (HDFS) and Spark, and *administrator* rights in the controller.
+* `clusterAdmins`: This parameter takes one Active Directory group. Members of this group have the *bdcAdmin* role, meaning they get administrator permissions for the entire cluster. They have *sysadmin* permissions in SQL Server, *superuser* permissions in Hadoop Distributed File System (HDFS) and Spark, and *administrator* rights in the controller.
 
 * `clusterUsers`: These Active Directory groups are mapped to *bdcUsers* role in BDC. They are regular users, without administrator permissions in the cluster. They have permissions to log in to the SQL Server master instance but, by default, they have no permissions to objects or data. They are regular users for HDFS and Spark, without *superuser* permissions. When connecting to the controller endpoint, these users can only query the endpoints (using *azdata bdc endpoints list*).
 

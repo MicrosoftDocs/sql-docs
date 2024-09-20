@@ -11,7 +11,7 @@ ms.topic: conceptual
 ---
 # Golang driver for SQL Server
 
-:::image type="icon" source="../../includes/media/download.svg"::: [Download the Go driver for SQL](../sql-connection-libraries.md#anchor-20-drivers-relational-access).
+:::image type="icon" source="../../includes/media/download.svg"::: **[Download the Go driver for SQL](../sql-connection-libraries.md#anchor-20-drivers-relational-access)**
 
 You can connect to a database on SQL Server and Azure SQL using Go on Windows, Linux, or macOS.
 

@@ -29,7 +29,7 @@ For a database that uses the full recovery model, we recommend that you take fre
 
 ## For more information
 
-[Back up and restore: System databases (SQL Server)](../backup-restore/back-up-and-restore-of-system-databases-sql-server.md)
+[Back up and restore: System databases (SQL Server)](../backup-restore/back-up-and-restore-of-system-databases-sql-server.md)
 
 [Recovery Models (SQL Server)](../backup-restore/recovery-models-sql-server.md)
 

@@ -68,4 +68,3 @@ To learn more about the Azure SQL Database Dev Container Templates, see [What ar
 ## Related content
 
 - [Quickstart: Set up a development environment with Dev Container Templates for Azure SQL Database](local-dev-experience-dev-containers-quickstart.md)
-- [Quickstart: Create a local development environment for Azure SQL Database](local-dev-experience-quickstart.md)

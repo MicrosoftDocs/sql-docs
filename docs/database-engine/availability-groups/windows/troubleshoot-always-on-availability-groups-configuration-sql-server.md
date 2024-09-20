@@ -276,7 +276,7 @@ For **detailed** step-by-step instructions, refer to Engine error [MSSQLSERVER_3
 
 ## <a name="ROR"></a> Read-Only Routing is Not Working Correctly  
 
-1. Ensure that you have set up read-only routing by following [Configure read-only routing](../../availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md) document.
+1. Ensure that you have set up read-only routing by following [Configure read-only routing](../../availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md) document.
 
 2. Ensure Client Driver Support
 
@@ -371,7 +371,7 @@ For **detailed** step-by-step instructions, refer to Engine error [MSSQLSERVER_3
     > [!NOTE]
     > You can quickly verify all of these are properly configured if you can connect from a remote machine to a target secondary replica's [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance name using `TCP:SQL_Instance` syntax.
 
-  See: [Configure a Server to Listen on a Specific TCP Port (SQL Server Configuration Manager)](../../configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md) and [View or Change Server Properties (SQL Server)](../../configure-windows/view-or-change-server-properties-sql-server.md)
+  See: [Configure a Server to Listen on a Specific TCP Port (SQL Server Configuration Manager)](../../configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md) and [View or Change Server Properties (SQL Server)](../../configure-windows/view-or-change-server-properties-sql-server.md)
 
 
   

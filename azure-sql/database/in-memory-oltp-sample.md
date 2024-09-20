@@ -52,12 +52,12 @@ You can create the `AdventureWorksLT` sample database with a few steps in the [A
 
 1. Paste the T-SQL script into SSMS, and then execute the script. The `MEMORY_OPTIMIZED = ON` clause in the `CREATE TABLE` statements are crucial. For example:
 
-```sql
-CREATE TABLE [SalesLT].[SalesOrderHeader_inmem](
-    [SalesOrderID] int IDENTITY NOT NULL PRIMARY KEY NONCLUSTERED ...,
-    ...
-) WITH (MEMORY_OPTIMIZED = ON);
-```
+    ```sql
+    CREATE TABLE [SalesLT].[SalesOrderHeader_inmem](
+        [SalesOrderID] int IDENTITY NOT NULL PRIMARY KEY NONCLUSTERED ...,
+        ...
+    ) WITH (MEMORY_OPTIMIZED = ON);
+    ```
 
 ### Error 40536
 

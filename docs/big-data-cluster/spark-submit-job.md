@@ -48,9 +48,7 @@ There are several ways to open the Spark job submission dialog. The ways include
 - Use **Submit Spark Job** from the command palette by typing **Ctrl+Shift+P** (in Windows) and **Cmd+Shift+P** (in Mac).
 
     ![Submit menu command palette in Windows](./media/submit-spark-job/submit-spark-job-3.png)
-
-    ![Submit menu command palette in mac](./media/submit-spark-job/submit-spark-job-4.png)
-  
+ 
  
 ## Submit Spark job 
 

@@ -46,31 +46,42 @@ The examples in this section use the TPC-H benchmark database. For more informat
 Consider the following query.
 
 ```sql
-SELECT L_SHIPDATE, O_SHIPPRIORITY, SUM (L_EXTENDEDPRICE *(1 - L_DISCOUNT))
+SELECT L_SHIPDATE,
+       O_SHIPPRIORITY,
+       SUM(L_EXTENDEDPRICE * (1 - L_DISCOUNT))
 FROM LINEITEM
-INNER JOIN ORDERS
-  ON O_ORDERKEY = L_ORDERKEY
-GROUP BY L_SHIPDATE, O_SHIPPRIORITY ORDER BY L_SHIPDATE;
+     INNER JOIN ORDERS
+         ON O_ORDERKEY = L_ORDERKEY
+GROUP BY L_SHIPDATE, O_SHIPPRIORITY
+ORDER BY L_SHIPDATE;
 ```
 
 This query computes the sum of discounted prices for line items and presents the results grouped by the shipping date and shipping priority. The expression `L_EXTENDEDPRICE *(1 - L_DISCOUNT)` is the formula for the discounted price for a given line item. Such formulas can be extracted into functions for the benefit of modularity and reuse.
 
 ```sql
-CREATE FUNCTION dbo.discount_price(@price DECIMAL(12,2), @discount DECIMAL(12,2))
-RETURNS DECIMAL (12,2) AS
+CREATE FUNCTION dbo.discount_price
+(
+    @price DECIMAL (12, 2),
+    @discount DECIMAL (12, 2)
+)
+RETURNS DECIMAL (12, 2)
+AS
 BEGIN
-  RETURN @price * (1 - @discount);
+    RETURN @price * (1 - @discount);
 END
 ```
 
 Now the query can be modified to invoke this UDF.
 
 ```sql
-SELECT L_SHIPDATE, O_SHIPPRIORITY, SUM (dbo.discount_price(L_EXTENDEDPRICE, L_DISCOUNT))
+SELECT L_SHIPDATE,
+       O_SHIPPRIORITY,
+       SUM(dbo.discount_price(L_EXTENDEDPRICE, L_DISCOUNT))
 FROM LINEITEM
-INNER JOIN ORDERS
-  ON O_ORDERKEY = L_ORDERKEY
-GROUP BY L_SHIPDATE, O_SHIPPRIORITY ORDER BY L_SHIPDATE
+     INNER JOIN ORDERS
+         ON O_ORDERKEY = L_ORDERKEY
+GROUP BY L_SHIPDATE, O_SHIPPRIORITY
+ORDER BY L_SHIPDATE;
 ```
 
 The query with the UDF performs poorly, due to the reasons outlined previously. With scalar UDF inlining, the scalar expression in the body of the UDF is substituted directly in the query. The results of running this query are shown in the following table:

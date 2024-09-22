@@ -149,11 +149,11 @@ Zone redundancy for SQL Managed Instance is supported in the following regions:
 | Brazil South | France Central | Israel Central | Australia East |
 | Canada Central | Germany West Central | Qatar Central | Central India |
 | Central US <sup>1</sup> | Italy North | South Africa North | East Asia |
-| East US | North Europe | UAE North | Japan West |
-| East US 2 | Norway East | | Korea Central |
-| Mexico Central | Poland Central | | New Zealand North |
-| West Central US | Spain Central | | Southeast Asia |
-| West US 2 | Sweden Central | | |
+| East US | North Europe | UAE North | Japan East |
+| East US 2 | Norway East | | Japan West |
+| Mexico Central | Poland Central | | Korea Central |
+| West Central US | Spain Central | | New Zealand North |
+| West US 2 | Sweden Central | | Southeast Asia |
 | West US 3 | Switzerland North | | |
 | | UK South | | |
 | | West Europe | | |

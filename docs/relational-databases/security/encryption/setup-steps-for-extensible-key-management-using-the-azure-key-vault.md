@@ -393,7 +393,7 @@ In [step 2](#step-2-create-a-key-vault), we learned how to create a key vault an
    >
    > [SQL Server Connector version 15.0.2000.440](https://www.microsoft.com/en-us/download/details.aspx?id=45344) or later is required to support Azure Key Vault Managed HSM.
    >
-   > Managed HSM supports private endpoint connections. For more information, see [Integrate Managed HSM with Azure Private Link](/azure/key-vault/managed-hsm/private-link).
+   > Managed HSM supports private endpoint connections. For more information, see [Integrate Managed HSM with Azure Private Link](/azure/key-vault/managed-hsm/private-link). In this configuration, the **Microsoft trusted service bypass** option must be enabled for the Azure Key Vault Managed HSM **Networking** setting.
 
 ## Step 3: Install the SQL Server Connector
 

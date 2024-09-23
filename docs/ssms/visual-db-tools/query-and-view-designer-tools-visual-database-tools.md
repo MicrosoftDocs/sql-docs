@@ -38,7 +38,7 @@ When you design a query, view, in-line function, or single-statement stored proc
 
 You can create a query or view by working in any of the panes: you can specify a column to display by choosing it in the Diagram pane, entering it into the Criteria pane, or making it part of the SQL statement in the SQL pane.
 
-## Displaying and Hiding Panes
+## Displaying and hiding panes
 
 To hide a pane or display a pane that isn't visible, right-click the design surface, point to **Pane**, and then select the name of the pane. If the Query and View Designer is opened in Query Designer mode, the **Results** pane isn't available.
 

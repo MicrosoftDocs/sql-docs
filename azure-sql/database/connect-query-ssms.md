@@ -2,10 +2,10 @@
 title: "SSMS: Connect and query data"
 titleSuffix: Azure SQL Database & Azure SQL Managed Instance
 description: Learn how to connect to Azure SQL Database or SQL Managed Instance using SQL Server Management Studio (SSMS). Then run Transact-SQL (T-SQL) statements to query and edit data.
-author: dzsquared
-ms.author: drskwier
+author: erinstellato-ms
+ms.author: erinstellato
 ms.reviewer: wiassaf, mathoma
-ms.date: 09/28/2020
+ms.date: 09/24/2024
 ms.service: azure-sql
 ms.subservice: connect
 ms.topic: quickstart
@@ -17,10 +17,12 @@ keywords:
   - "sql server management studio"
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
+
 # Quickstart: Use SSMS to connect to and query Azure SQL Database or Azure SQL Managed Instance
+
 [!INCLUDE[appliesto-sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi.md)]
 
-In this quickstart, you'll learn how to use SQL Server Management Studio (SSMS) to connect to Azure SQL Database or Azure SQL Managed Instance and run some queries.
+In this quickstart, you'll learn how to use SQL Server Management Studio (SSMS) to connect to Azure SQL Database or Azure SQL Managed Instance and run queries.
 
 ## Prerequisites
 
@@ -32,19 +34,18 @@ Completing this quickstart requires the following items:
 
   | Action | SQL Database | SQL Managed Instance | SQL Server on Azure VM |
   |:--- |:--- |:---|:---|
-  | Create| [Portal](single-database-create-quickstart.md) | [Portal](../managed-instance/instance-create-quickstart.md) | [Portal](../virtual-machines/windows/sql-vm-create-portal-quickstart.md)
+  | Create| [Portal](single-database-create-quickstart.md) | [Portal](../managed-instance/instance-create-quickstart.md) | [Portal](../virtual-machines/windows/sql-vm-create-portal-quickstart.md) |
   || [CLI](scripts/create-and-configure-database-cli.md) | [CLI](https://medium.com/azure-sqldb-managed-instance/working-with-sql-managed-instance-using-azure-cli-611795fe0b44) |
-  || [PowerShell](scripts/create-and-configure-database-powershell.md) | [PowerShell](../managed-instance/scripts/create-configure-managed-instance-powershell.md) | [PowerShell](../virtual-machines/windows/sql-vm-create-powershell-quickstart.md)
-  | Configure | [Server-level IP firewall rule](firewall-create-server-level-portal-quickstart.md)| [Connectivity from a VM](../managed-instance/connect-vm-instance-configure.md)|
-  |||[Connectivity from on-site](../managed-instance/point-to-site-p2s-configure.md) | [Connect to SQL Server](../virtual-machines/windows/sql-vm-create-portal-quickstart.md)
-  |Load data|Wide World Importers loaded per quickstart|[Restore Wide World Importers](../managed-instance/restore-sample-database-quickstart.md) | [Restore Wide World Importers](../managed-instance/restore-sample-database-quickstart.md) |
-  |||Restore or import Adventure Works from [BACPAC](database-import.md) file from [GitHub](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)| Restore or import Adventure Works from [BACPAC](database-import.md) file from [GitHub](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)|
-
+  || [PowerShell](scripts/create-and-configure-database-powershell.md) | [PowerShell](../managed-instance/scripts/create-configure-managed-instance-powershell.md) | [PowerShell](../virtual-machines/windows/sql-vm-create-powershell-quickstart.md) |
+  | Configure | [Server-level IP firewall rule](firewall-create-server-level-portal-quickstart.md)| [Connectivity from a VM](../managed-instance/connect-vm-instance-configure.md)| [Connect to SQL Server](../virtual-machines/windows/sql-vm-create-portal-quickstart.md)|
+  |||[Connectivity from on-site](../managed-instance/point-to-site-p2s-configure.md) | 
+  |Sample database|[AdventureWorksLT sample](single-database-create-quickstart.md?view=azuresql-db&preserve-view=true&tabs=azure-portal)|Restore or import Adventure Works from [BACPAC](database-import.md) file from [GitHub](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)| Restore or import Adventure Works from [BACPAC](database-import.md) file from [GitHub](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)|
+  |||or [Restore Wide World Importers](../managed-instance/restore-sample-database-quickstart.md) | or [Restore Wide World Importers](../managed-instance/restore-sample-database-quickstart.md) |
 
   > [!IMPORTANT]
   > The scripts in this article are written to use the Adventure Works database. With a managed instance, you must either import the Adventure Works database into an instance database or modify the scripts in this article to use the Wide World Importers database.
 
-If you simply want to run some ad hoc queries without installing SSMS, use [the Azure portal's query editor to query a database in Azure SQL Database](query-editor.md).
+If you simply want to run ad hoc queries without installing SSMS, use [the Azure portal's query editor to query a database in Azure SQL Database](query-editor.md).
 
 ## Get server connection information
 
@@ -70,28 +71,38 @@ In SSMS, connect to your server.
 
 1. Open SSMS.
 
-2. The **Connect to Server** dialog box appears. Enter the following information:
+1. The **Connect to Server** dialog box appears. Enter the following information:
 
-   | Setting      | Suggested value    | Description |
-   | ------------ | ------------------ | ----------- |
-   | **Server type** | Database engine | Required value. |
-   | **Server name** | The fully qualified server name | Something like: **servername.database.windows.net**. |
-   | **Authentication** | SQL Server Authentication | This tutorial uses SQL Authentication. |
-   | **Login** | Server admin account user ID | The user ID from the server admin account used to create the server. |
-   | **Password** | Server admin account password | The password from the server admin account used to create the server. |
+   | Setting | Suggested value | Details |
+   | --- | --- | --- |
+   | **Server type** | Database Engine | Select **Database Engine** (usually the default option). |
+   | **Server name** | The fully qualified server name | Enter the name of your *Azure SQL Database* or *Azure SQL Managed Instance* name. |
+   | **Authentication** | | |
+   | | Microsoft Entra ID <sup>1</sup> | |
+   | | - Universal with MFA | See [Using Microsoft Entra multifactor authentication](/azure/azure-sql/database/authentication-mfa-ssms-overview). |
+   | | - Password<br />- Integrated<br />- Service Principal | See [Microsoft Entra service principal with Azure SQL](/azure/azure-sql/database/authentication-aad-service-principal). |
+   | | - Managed Identity | See [Managed identities in Microsoft Entra for Azure SQL](/azure/azure-sql/database/authentication-azure-ad-user-assigned-managed-identity).<br /><br />Connecting to a SQL instance with SSMS using a managed identity requires an Azure VM. See [Use a Windows VM system-assigned managed identity to access Azure SQL](/azure/active-directory/managed-identities-azure-resources/tutorial-windows-vm-access-sql).  |
+   | | - Default | The default option can be used when connecting using any Microsoft Entra authentication mode that's passwordless and noninteractive. |
+   | | SQL Server Authentication | Use **SQL Server Authentication** for Azure SQL to connect. |
+   | **Login** | Server account user ID | The user ID from the server account used to create the server. |
+   | **Password** | Server account password | The password from the server account used to create the server. |
+   | **Encryption** <sup>2</sup> | Encryption method | Select the encryption level for the connection. The default value is *Mandatory*. |
+   | **Trust server certificate** | Trust Server Certificate | Check this option to bypass server certificate validation. The default value is *False* (unchecked), which promotes better security using trusted certificates. |
+   | **Host Name in Certificate** | Host name of the server | The value provided in this option is used to specify a different, but expected, CN or SAN in the server certificate. |
 
-   ![connect to server](./media/connect-query-ssms/connect.png)  
+:::image type="content" source="media/connect-query-ssms/connect-to-azure-sql-object-explorer-ssms20.png" alt-text="Screenshot of connection dialog for Azure SQL.":::
 
 > [!NOTE]
-> This tutorial utilizes SQL Server Authentication.
+> This tutorial utilizes Microsoft Entra MFA.
 
-3. Select **Options** in the **Connect to Server** dialog box. In the **Connect to database** drop-down menu, select **mySampleDatabase**. Completing the quickstart in the [Prerequisites section](#prerequisites) creates an AdventureWorksLT database named mySampleDatabase. If your working copy of the AdventureWorks database has a different name than mySampleDatabase, then select it instead.
+1. Select **Options** in the **Connect to Server** dialog box.
+1. In the **Connect to database** drop-down menu, select `mySampleDatabase`. Completing the quickstart in the [Prerequisites section](#prerequisites) creates an `AdventureWorksLT` database named `mySampleDatabase`. If your working copy of the AdventureWorks sample database has a different name than `mySampleDatabase`, then select it instead.
 
-   ![connect to db on server](./media/connect-query-ssms/options-connect-to-db.png)  
+   :::image type="content" source="media/connect-query-ssms/connect-to-azure-sql-options-db-ssms20.png" alt-text="Screenshot of the Connect to Server dialog in SSMS. Enter the desired database to connect to.":::
 
-4. Select **Connect**. The Object Explorer window opens.
+1. Select **Connect**. The Object Explorer window opens.
 
-5. To view the database's objects, expand **Databases** and then expand your database node.
+1. To view the database's objects, expand **Databases** and then expand your database node.
 
    ![mySampleDatabase objects](./media/connect-query-ssms/connected.png)  
 
@@ -101,7 +112,7 @@ Run this [SELECT](/sql/t-sql/queries/select-transact-sql/) Transact-SQL code to 
 
 1. In Object Explorer, right-click **mySampleDatabase** and select **New Query**. A new query window connected to your database opens.
 
-2. In the query window, paste the following SQL query:
+1. In the query window, paste the following SQL query:
 
    ```sql
    SELECT pc.Name as CategoryName, p.name as ProductName
@@ -110,7 +121,7 @@ Run this [SELECT](/sql/t-sql/queries/select-transact-sql/) Transact-SQL code to 
    ON pc.productcategoryid = p.productcategoryid;
    ```
 
-3. On the toolbar, select **Execute** to run the query and retrieve data from the `Product` and `ProductCategory` tables.
+1. On the toolbar, select **Execute** to run the query and retrieve data from the `Product` and `ProductCategory` tables.
 
     ![query to retrieve data from table Product and ProductCategory](./media/connect-query-ssms/query2.png)
 
@@ -139,7 +150,7 @@ Run this [INSERT](/sql/t-sql/statements/insert-transact-sql/) Transact-SQL code 
            ,GETDATE() );
    ```
 
-2. Select **Execute**  to insert a new row in the `Product` table. The **Messages** pane displays **(1 row affected)**.
+1. Select **Execute**  to insert a new row in the `Product` table. The **Messages** pane displays **(1 row affected)**.
 
 #### View the result
 
@@ -150,7 +161,7 @@ Run this [INSERT](/sql/t-sql/statements/insert-transact-sql/) Transact-SQL code 
    WHERE Name='myNewProduct'
    ```
 
-2. Select **Execute**. The following result appears.
+1. Select **Execute**. The following result appears.
 
    ![result of Product table query](./media/connect-query-ssms/result.png)
 
@@ -166,7 +177,7 @@ Run this [UPDATE](/sql/t-sql/queries/update-transact-sql) Transact-SQL code to m
    WHERE Name = 'myNewProduct';
    ```
 
-2. Select **Execute** to update the specified row in the `Product` table. The **Messages** pane displays **(1 row affected)**.
+1. Select **Execute** to update the specified row in the `Product` table. The **Messages** pane displays **(1 row affected)**.
 
 ### Delete data
 
@@ -179,9 +190,9 @@ Run this [DELETE](/sql/t-sql/statements/delete-transact-sql/) Transact-SQL code 
    WHERE Name = 'myNewProduct';
    ```
 
-2. Select **Execute** to delete the specified row in the `Product` table. The **Messages** pane displays **(1 row affected)**.
+1. Select **Execute** to delete the specified row in the `Product` table. The **Messages** pane displays **(1 row affected)**.
 
-## Next steps
+## Related content
 
 - For information about SSMS, see [SQL Server Management Studio](/sql/ssms/sql-server-management-studio-ssms/).
 - To connect and query using the Azure portal, see [Connect and query with the Azure portal SQL Query editor](query-editor.md).

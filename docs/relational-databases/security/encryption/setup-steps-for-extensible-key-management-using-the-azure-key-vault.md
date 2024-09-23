@@ -4,7 +4,7 @@ description: Install and configure the SQL Server Connector for Azure Key Vault.
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: randolphwest
-ms.date: 09/04/2024
+ms.date: 09/23/2024
 ms.service: sql
 ms.subservice: security
 ms.topic: conceptual
@@ -122,6 +122,8 @@ You can use the Azure portal to create the key vault and then add a Microsoft En
 1. On the **Access configuration** tab, you have the option of selecting **Azure role-based access control** or **Vault access policy**. We go over both options, but the **Azure role-based access control** option is recommended. For more information, see [Access model overview](/azure/key-vault/general/security-features#access-model-overview).
 
     :::image type="content" source="media/setup-steps-for-extensible-key-management-using-the-azure-key-vault/ekm-part-2-access-configuration.png" alt-text="Screenshot of the Create key vault pane and Access configuration tab in the Azure portal." lightbox="media/setup-steps-for-extensible-key-management-using-the-azure-key-vault/ekm-part-2-access-configuration.png":::
+
+1. You can leave the **Networking** tab as the default, or you can configure the network settings for the key vault. If you're using a firewall with the key vault, the option **Allow trusted Microsoft services to bypass the firewall** must be enabled, unless you're using [private endpoint connections](/azure/key-vault/general/private-link-service). For more information, see [Configure Azure Key Vault firewalls and virtual networks](/azure/key-vault/general/network-security).
 
 1. Select **Review + create** and create the key vault.
 
@@ -380,7 +382,7 @@ In [step 2](#step-2-create-a-key-vault), we learned how to create a key vault an
 
 1. Activate the Managed HSM. Only the designated administrators that were assigned during the Managed HSM creation can activate the HSM. This can be done by selecting the Managed HSM resource in the Azure portal by selecting **Download Security Domain** in the **Overview** menu of the resource. Then follow one of the [quickstarts to activate your Managed HSM](/azure/key-vault/managed-hsm/quick-create-cli#activate-your-managed-hsm).
 
-1. Grant permissions for the Microsoft Entra service principal to access the Managed HSM. The **Managed HSM Administrator** role doesn't give permissions to create a key. Similar to [step 2](#step-2-create-a-key-vault), the EKM application needs the **Managed HSM Crypto User** or **Managed HSM Crypto Service Encryption User** role to perform wrap and unwrap operations. For more information, see [Local RBAC built-in roles for Managed HSM](/azure/key-vault/managed-hsm/built-in-roles).
+1. Grant permissions for the Microsoft Entra service principal to access the Managed HSM. The **Managed HSM Administrator** role doesn't give permissions to create a key. Similar to [step 2](#step-2-create-a-key-vault), the EKM application needs the **Managed HSM Crypto User** or **Managed HSM Crypto Service Encryption User** role to perform wrap and unwrap operations. Choose the **Enterprise application** type when adding the principal for the role assignment. For more information, see [Local RBAC built-in roles for Managed HSM](/azure/key-vault/managed-hsm/built-in-roles).
 
 1. In the Azure Key Vault Managed HSM service menu, under **Setting**, select **Keys**. In the **Keys** window, select **Generate/Import/Restore Backup** to create a key or import an existing key.
 
@@ -390,6 +392,8 @@ In [step 2](#step-2-create-a-key-vault), we learned how to create a key vault an
    > Automatic key rotation is supported in Azure Key Vault Managed HSM. For more information, see [Configure key auto-rotation in Azure Managed HSM](/azure/key-vault/managed-hsm/key-rotation).
    >
    > [SQL Server Connector version 15.0.2000.440](https://www.microsoft.com/en-us/download/details.aspx?id=45344) or later is required to support Azure Key Vault Managed HSM.
+   >
+   > Managed HSM supports private endpoint connections. For more information, see [Integrate Managed HSM with Azure Private Link](/azure/key-vault/managed-hsm/private-link).
 
 ## Step 3: Install the SQL Server Connector
 

@@ -4,7 +4,7 @@ description: "Linked Servers (Database Engine)"
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: vanto
-ms.date: 09/16/2024
+ms.date: 09/23/2024
 ms.service: sql
 ms.topic: conceptual
 helpviewer_keywords:
@@ -95,11 +95,9 @@ You can also define linked servers by using [!INCLUDE [ssManStudioFull](../../in
 
 When you execute a distributed query against a linked server, include a fully qualified, four-part table name for each data source to query. This four-part name should be in the form _linked\_server\_name.catalog_**.**_schema_**.**_object\_name_.
 
-> [!NOTE]  
-> Linked servers can be defined to point back (loop back) to the server on which they are defined. Loopback servers are most useful when testing an application that uses distributed queries on a single server network. Loopback linked servers are intended for testing and are not supported for many operations, such as distributed transactions.
+References to temporary objects will always resolve to the local instance tempdb where applicable, even when prefixing with the linked server name.
 
-> [!NOTE]  
-> References to temporary objects will always resolve to the local instance tempdb where applicable, even when prefixing with the linked server name.
+Linked servers can be defined to point back (loop back) to the server on which they are defined. Loopback servers are most useful when testing an application that uses distributed queries on a single server network. Loopback linked servers are intended for testing and are not supported for many operations, such as distributed transactions.
 
 ## Linked servers with Azure SQL Managed Instance
 

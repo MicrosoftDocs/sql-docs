@@ -8,9 +8,10 @@ ms.date: 07/10/2023
 ms.service: sql
 ms.subservice: ssma
 ms.topic: conceptual
+ms.collection:
+  - sql-migration-content
 ms.custom:
   - intro-whats-new
-  - sql-migration-content
 ---
 # What's New in SSMA for DB2 (DB2ToSQL)
 

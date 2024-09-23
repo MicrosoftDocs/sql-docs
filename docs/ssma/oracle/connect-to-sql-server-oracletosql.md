@@ -8,7 +8,7 @@ ms.date: 07/22/2024
 ms.service: sql
 ms.subservice: ssma
 ms.topic: conceptual
-ms.custom:
+ms.collection:
   - sql-migration-content
 f1_keywords:
   - "ssma.oracle.connectmssqlform.f1"

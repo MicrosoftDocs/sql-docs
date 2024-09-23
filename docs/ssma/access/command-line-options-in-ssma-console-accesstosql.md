@@ -7,7 +7,7 @@ ms.date: "08/19/2017"
 ms.service: sql
 ms.subservice: ssma
 ms.topic: conceptual
-ms.custom:
+ms.collection:
   - sql-migration-content
 ---
 # Command-line options in the SSMA Console (AccessToSQL)

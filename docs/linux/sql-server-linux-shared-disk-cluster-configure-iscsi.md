@@ -4,7 +4,7 @@ description: Learn to configure a failover cluster instance (FCI) using iSCSI fo
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: vanto
-ms.date: 07/16/2024
+ms.date: 09/23/2024
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
@@ -37,9 +37,9 @@ This section covers how to configure an iSCSI initiator on the servers that serv
 
 For more information on iSCSI initiator for the supported distributions, see the following links:
 
-- [Red Hat](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/storage_administration_guide/osm-create-iscsi-initiator)
-- [SUSE](https://www.suse.com/documentation/sles11/stor_admin/data/sec_inst_system_iscsi_initiator.html)
-- [Ubuntu](https://help.ubuntu.com/lts/serverguide/iscsi-initiator.html)
+- [Red Hat](https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/8/html/managing_storage_devices/configuring-an-iscsi-initiator_managing-storage-devices)
+- [SUSE](https://documentation.suse.com/sles/15-SP2/html/SLES-all/cha-iscsi.html)
+- [Ubuntu](https://ubuntu.com/server/docs/iscsi-initiator-or-client)
 
 1. Choose one of the servers that will participate in the FCI configuration. It doesn't matter which one. iSCSI should be on a dedicated network, so configure iSCSI to recognize and use that network. Run `sudo iscsiadm -m iface -I <iSCSIIfaceName> -o new` where `<iSCSIIfaceName>` is the unique or friendly name for the network. The following example uses `iSCSINIC`:
 
@@ -47,7 +47,11 @@ For more information on iSCSI initiator for the supported distributions, see the
    sudo iscsiadm -m iface -I iSCSINIC -o new
    ```
 
-   :::image type="content" source="media/sql-server-linux-shared-disk-cluster-configure-iscsi/7-setiscsinetwork.png" alt-text="Screenshot of the iface command and the response to the command.":::
+   Here's the expected output.
+
+   ```output
+   New interface iSCSINIC added
+   ```
 
 1. Edit `/var/lib/iscsi/ifaces/iSCSIIfaceName`. Make sure it has the following values completely filled out:
 
@@ -68,7 +72,14 @@ For more information on iSCSI initiator for the supported distributions, see the
 
    `<iSCSINetName>` is the unique/friendly name for the network, `<TargetIPAddress>` is the IP address of the iSCSI target, and `<TargetPort>` is the port of the iSCSI target.
 
-   :::image type="content" source="media/sql-server-linux-shared-disk-cluster-configure-iscsi/15-iscsitargetresults.png" alt-text="Screenshot of the discovery command and the response to the command.":::
+   Here's the expected output.
+
+   ```output
+   10.181.182.1:3260,1 iqn.1991-05.com.contoso:dcl-linuxnodes1-target
+   10.201.202.1:3260,1 iqn.1991-05.com.contoso:dc1-linuxnodes1-target
+   [2002:b4b5:b601::b4b5:b601]:3260,1 iqn.1991-05.com.contoso:dcl-linuxnodes1-target
+   [2002:8c9:ca01::c8c9:ca01]:3260,1 iqn.1991-05.com.contoso:dcl-linuxnodes1-target
+   ```
 
 1. Sign in to the target.
 
@@ -78,7 +89,12 @@ For more information on iSCSI initiator for the supported distributions, see the
 
    `<iSCSIIfaceName>` is the unique/friendly name for the network and `<TargetIPAddress>` is the IP address of the iSCSI target.
 
-   :::image type="content" source="media/sql-server-linux-shared-disk-cluster-configure-iscsi/20-iscsitargetlogin.png" alt-text="Screenshot of iSCSITargetLogin.":::
+   Here's the expected output.
+
+   ```output
+   Logging in to [iface: iSCSINIC, target: ian.1991-05.com.contoso:dcl-linuxnodesl-tar get, portal: 10.181.182.1,3260] (multiple)
+   Login to [iface: iSCSINIC, target: ian.1991-05.com.contoso:dcl-linuxnodesl-tar get, portal: 10.181.182.1,3260] successful.
+   ```
 
 1. Check to see that there's a connection to the iSCSI target.
 
@@ -86,7 +102,11 @@ For more information on iSCSI initiator for the supported distributions, see the
    sudo iscsiadm -m session
    ```
 
-   :::image type="content" source="media/sql-server-linux-shared-disk-cluster-configure-iscsi/25-iscsiverify.png" alt-text="Screenshot of iSCSIVerify.":::
+   The output looks similar to the following example:
+
+   ```output
+   tcp: [1] 10.105.16.7:3260,1 iqn.1991-05.com.contoso:dcl-linuxnodes1-target (non-flash)
+   ```
 
 1. Check iSCSI attached disks.
 
@@ -120,9 +140,13 @@ For more information on iSCSI initiator for the supported distributions, see the
 
    `<size>` is the size of the volume to create, and can be specified with G (gigabytes), T (terabytes), etc., `<LogicalVolumeName>` is the name of the logical volume, and `<VolumeGroupName>` is the name of the volume group from the previous step.
 
-   The following example creates a 25-GB volume.
+   Here's the expected output.
 
-   :::image type="content" source="media/sql-server-linux-shared-disk-cluster-configure-iscsi/40-create25gbvol.png" alt-text="Screenshot of 25-GB created volume.":::
+   ```output
+   Logical volume "FCIDataLV1" created.
+   ```
+
+   The following example creates a 25-GB volume.
 
 1. Execute `sudo lvs` to see the LVM that was created.
 
@@ -317,9 +341,50 @@ For more information on iSCSI initiator for the supported distributions, see the
 
    1. Type `exit` to no longer be the superuser.
 
-   1. To test, create a database in that folder. The following example uses sqlcmd to create a database, switch context to it, verify the files exist at the OS level, and then deletes the temporary location. You can use SSMS.
+   1. To test, create a database in that folder. The following script creates a database, switches context to it, verifies the files exist at the OS level, and then deletes the temporary location. You can use SSMS or **sqlcmd** to run this script.
 
-      :::image type="content" source="media/sql-server-linux-shared-disk-cluster-configure-iscsi/50-examplecreatessms.png" alt-text="Screenshot of the sqlcmd command and the response to the command.":::
+      ```sql
+      DROP DATABASE TestDB;
+      GO
+
+      CREATE DATABASE TestDB
+          ON (NAME = TestDB_Data, FILENAME = '/var/opt/mssql/userdata/TestDB_Data.mdf')
+          LOG ON (NAME = TestDB_Log, FILENAME = '/var/opt/mssql/userdata/TestDB_Log.ldf');
+      GO
+
+      USE TestDB;
+      GO
+      ```
+
+      Run the following command in the shell to see the new database files.
+
+      ```bash
+      sudo ls /var/opt/mssal/userdata
+      ```
+
+      Here's the expected output.
+
+      ```output
+      lost+found TestDB_Data.mdf
+      TestDB_Log.ldf
+      ```
+
+      Delete the database to clean up.
+
+      ```sql
+      DROP DATABASE TestDB;
+      GO
+      ```
+
+      ```bash
+      sudo ls /var/opt/mssal/userdata
+      ```
+
+      Here's the expected output.
+
+      ```output
+      lost+found
+      ```
 
    1. Unmount the share
 

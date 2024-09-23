@@ -62,6 +62,33 @@ Users can be assigned to built-in roles that have these permissions, for example
 
 For more information, see [Assign Azure roles using the Azure portal](/azure/role-based-access-control/role-assignments-portal).
 
+### Verify state of user databases
+
+When A SQL Server or instance is enabled by Azure Arc, the connection sets some database permissions so that you can manage databases from Azure. For details about the permissions set at a database level, review [SQL permissions](configure-windows-accounts-agent.md#sql-permissions).
+
+Only databases that are online and updateable are included. 
+
+Verify the state of any databases you plan to manage from Azure.
+
+This query lists all databases, and identifies their status and if they are updateable:
+
+```sql
+SELECT 
+    name AS DatabaseName,
+    CASE 
+        WHEN state_desc = 'ONLINE' THEN 'Online'
+        WHEN state_desc = 'OFFLINE' THEN 'Offline'
+        ELSE 'Unknown'
+    END AS Status,
+    CASE 
+        WHEN is_read_only = 0 THEN 'READ_WRITE'
+        ELSE 'READ_ONLY'
+    END AS UpdateableStatus
+FROM sys.databases;
+```
+
+Run that query on any instance that you enable.
+
 ### Service account permissions
 
 The SQL Server service account must be a member of the sysadmin fixed server role on each SQL Server instance.

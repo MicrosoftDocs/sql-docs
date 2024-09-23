@@ -4,7 +4,7 @@ description: Describes prerequisites required for SQL Server enabled by Azure Ar
 author: anosov1960
 ms.author: sashan
 ms.reviewer: mikeray, randolphwest
-ms.date: 01/24/2024
+ms.date: 09/23/2024
 ms.topic: conceptual
 ms.custom: references_regions
 ---

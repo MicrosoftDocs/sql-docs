@@ -37,7 +37,7 @@ Elastic pools enable you to purchase resources for a pool shared by multiple dat
 The amount of resources available to the pool is controlled by your budget. All you have to do is:
 
 - Add databases to the pool.
-- Optionally set the minimum and maximum resources for the databases. These resources are either minimum and maximum DTUs or minimum or maximum vCores, depending on your choice of resourcing model.
+- Optionally set the minimum and maximum resources for the databases, in either DTU or vCore purchasing model.
 - Set the resources of the pool based on your budget.
 
 You can use pools to seamlessly grow your service from a lean startup to a mature business at an ever-increasing scale.

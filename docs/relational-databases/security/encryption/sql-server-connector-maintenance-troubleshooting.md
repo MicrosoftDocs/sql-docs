@@ -4,7 +4,7 @@ description: Learn about maintenance instructions and common troubleshooting ste
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: vanto, maghan
-ms.date: 04/30/2024
+ms.date: 09/24/2024
 ms.service: sql
 ms.subservice: security
 ms.topic: conceptual
@@ -170,6 +170,7 @@ To learn more about Microsoft Entra ID, read [How Azure subscriptions are relate
 2051 | scp_err_OutOfMemory | SQL engine has run out of memory and failed to allocate memory for EKM provider.
 2052 | scp_err_ConvertKeyNameToThumbprint | Failed to convert key name to thumbprint.
 2053 | scp_err_ConvertThumbprintToKeyName|  Failed to convert thumbprint to key name.
+2057 | scp_err_ThumbprintExistedInRegistry | The key thumbprint already exists in Windows registry mapped to a different key URI.
 2058 | scp_err_FailureInRegistry|  Failed to perform the operation in registry. SQL Server service account does not have permission to create the registry key.
 3000 | ErrorSuccess | The AKV operation has succeeded.
 3001 | ErrorUnknown | The AKV operation has failed with an unspecified error.

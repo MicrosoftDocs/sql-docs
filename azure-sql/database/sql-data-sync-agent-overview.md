@@ -4,7 +4,7 @@ description: Learn how to install and run the Data Sync Agent for SQL Data Sync 
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma, hudequei
-ms.date: 12/20/2018
+ms.date: 09/23/2024
 ms.service: azure-sql-database
 ms.subservice: sql-data-sync
 ms.topic: conceptual
@@ -64,11 +64,11 @@ To immediately invalidate or retire an agent, regenerate its key in the portal b
 
 ### How do I move a client agent to another computer
 
-If you want to run the local agent from a different computer than it is currently on, do the following things:
+If you want to run the local agent from a different computer than it is currently on, and reuse the same agent, do the following steps:
 
 1. Install the agent on desired computer.
-2. Sign in to the SQL Data Sync portal and regenerate an agent key for the new agent.
-3. Use the new agent's UI to submit the new agent key.
+2. Sign in to the SQL Data Sync portal and regenerate an agent key for the existing agent.
+3. Use the new agent's UI to submit the agent key.
 4. Wait while the client agent downloads the list of on-premises databases that were registered earlier.
 5. Provide database credentials for all databases that display as unreachable. These databases must be reachable from the new computer on which the agent is installed.
 

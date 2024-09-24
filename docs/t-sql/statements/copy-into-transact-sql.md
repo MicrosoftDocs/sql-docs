@@ -264,6 +264,8 @@ The COPY command autodetects the compression type based on the file extension wh
 - .snappy – **Snappy**
 - .deflate - **DefaultCodec**  (Parquet and ORC only)
 
+The COPY command requires that gzip files do not contain any trailing garbage to operate normally. The gzip format strictly requires that files be composed of valid members without any additional information before, between, or after them. Any deviation from this format, such as the presence of trailing non-gzip data, will result in the failure of the COPY command. Make sure to verify there's no trailing garbage at the end of gzip files to ensure COPY can successfully process these files.
+
 #### *FIELDQUOTE = 'field_quote'*
 
 *FIELDQUOTE* applies to CSV and specifies a single character that is used as the quote character (string delimiter) in the CSV file. If not specified, the quote character (") is used as the quote character as defined in the RFC 4180 standard. Hexadecimal notation is also supported for FIELDQUOTE. Extended ASCII and multi-byte characters aren't supported with UTF-8 for FIELDQUOTE.
@@ -730,6 +732,8 @@ The COPY command autodetects the compression type based on the file extension wh
 - .gz  - **GZIP**
 
 Loading compressed files is currently only supported with *PARSER_VERSION* 1.0. 
+
+The COPY command requires that gzip files do not contain any trailing garbage to operate normally. The gzip format strictly requires that files be composed of valid members without any additional information before, between, or after them. Any deviation from this format, such as the presence of trailing non-gzip data, will result in the failure of the COPY command. Make sure to verify there's no trailing garbage at the end of gzip files to ensure COPY can successfully process these files.
 
 #### *FIELDQUOTE = 'field_quote'*
 

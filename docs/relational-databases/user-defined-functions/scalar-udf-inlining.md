@@ -149,7 +149,9 @@ Depending upon the complexity of the logic in the UDF, the resulting query plan 
 
 ## Inlineable scalar UDF requirements
 
-A scalar T-SQL UDF can be inlined if all of the following conditions are true:
+A scalar T-SQL UDF can be inlined if the function definition uses allowed constructs AND the function is used in a context that enables inlining:
+
+Requirements of the UDF definition of the UDF, all must be true
 
 - The UDF is written using the following constructs:
   - `DECLARE`, `SET`: Variable declaration and assignments.
@@ -161,13 +163,9 @@ A scalar T-SQL UDF can be inlined if all of the following conditions are true:
 - The UDF doesn't invoke any intrinsic function that is either time-dependent (such as `GETDATE()`) or has side effects <sup>3</sup> (such as `NEWSEQUENTIALID()`).
 - The UDF uses the `EXECUTE AS CALLER` clause (default behavior if the `EXECUTE AS` clause isn't specified).
 - The UDF doesn't reference table variables or table-valued parameters.
-- The query invoking a scalar UDF doesn't reference a scalar UDF call in its `GROUP BY` clause.
-- The query invoking a scalar UDF in its select list with `DISTINCT` clause doesn't have an `ORDER BY` clause.
-- The UDF isn't used in `ORDER BY` clause.
 - The UDF isn't natively compiled (interop is supported).
-- The UDF isn't used in a computed column or a check constraint definition.
 - The UDF doesn't reference user-defined types.
-- There are no signatures added to the UDF.
+- There are no signatures added to the UDF  <sup>9</sup>.
 - The UDF isn't a partition function.
 - The UDF doesn't contain references to Common Table Expressions (CTEs).
 - The UDF doesn't contain references to intrinsic functions that might alter the results when inlined (such as `@@ROWCOUNT`) <sup>4</sup>.
@@ -177,14 +175,21 @@ A scalar T-SQL UDF can be inlined if all of the following conditions are true:
 - The UDF doesn't contain a SELECT with `ORDER BY` without a `TOP 1` clause <sup>5</sup>.
 - The UDF doesn't contain a SELECT query that performs an assignment with the `ORDER BY` clause (such as `SELECT @x = @x + 1 FROM table1 ORDER BY col1`) <sup>5</sup>.
 - The UDF doesn't contain multiple RETURN statements <sup>6</sup>.
-- The UDF isn't called from a RETURN statement <sup>6</sup>.
 - The UDF doesn't reference the `STRING_AGG` function <sup>6</sup>.
 - The UDF doesn't reference remote tables <sup>7</sup>.
-- The UDF-calling query doesn't use `GROUPING SETS`, `CUBE`, or `ROLLUP` <sup>7</sup>.
-- The UDF-calling query doesn't contain a variable that is used as a UDF parameter for assignment (for example, `SELECT @y = 2`, `@x = UDF(@y)`) <sup>7</sup>.
 - The UDF doesn't reference encrypted columns <sup>8</sup>.
 - The UDF doesn't contain references to `WITH XMLNAMESPACES` <sup>8</sup>.
+- If the UDF definition runs into thousands of lines of code, [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] might choose not to inline it.
+
+Requirement of the execution context all must be true
+- The UDF isn't used in `ORDER BY` clause.
+- The query invoking a scalar UDF doesn't reference a scalar UDF call in its `GROUP BY` clause.
+- The query invoking a scalar UDF in its select list with `DISTINCT` clause doesn't have an `ORDER BY` clause.
+- The UDF isn't called from a RETURN statement <sup>6</sup>.
 - The query invoking the UDF doesn't have Common Table Expressions (CTEs) <sup>8</sup>.
+- The UDF-calling query doesn't use `GROUPING SETS`, `CUBE`, or `ROLLUP` <sup>7</sup>.
+- The UDF-calling query doesn't contain a variable that is used as a UDF parameter for assignment (for example, `SELECT @y = 2`, `@x = UDF(@y)`) <sup>7</sup>.
+- The UDF isn't used in a computed column or a check constraint definition.
 
 <sup>1</sup> `SELECT` with variable accumulation/aggregation isn't supported for inlining (such as `SELECT @val += col1 FROM table1`).
 
@@ -202,6 +207,8 @@ A scalar T-SQL UDF can be inlined if all of the following conditions are true:
 
 <sup>8</sup> Restriction added in [!INCLUDE [sql-server-2019](../../includes/sssql19-md.md)] CU 11
 
+<sup>9</sup> Because signatures could be added and dropped after a UDF is created, the decision whether to inline or not is done when the query referencing a scalar UDF is compiled. For example, system functions are typically signed with a certificate. You can use [sys.crypt_properties](../system-catalog-views/sys-crypt-properties-transact-sql.md) to find which objects are signed.
+
 For information on the latest T-SQL scalar UDF inlining fixes and changes to inlining eligibility scenarios, see the Knowledge Base article: [FIX: scalar UDF inlining issues in SQL Server 2019](https://support.microsoft.com/help/4538581).
 
 ### Check whether or not a UDF can be inlined
@@ -212,11 +219,7 @@ The `is_inlineable` property is derived from the constructs found inside the UDF
 
 A value of `1` indicates that it's inlineable, and `0` indicates otherwise. This property has a value of `1` for all inline TVFs as well. For all other modules, the value is `0`.
 
-If a scalar UDF is inlineable, it doesn't imply that it's always inlined. [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] decides (on a per-query, per-UDF basis) whether to inline a UDF or not. A few examples of when a UDF might not be inlined include:
-
-- If the UDF definition runs into thousands of lines of code, [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] might choose not to inline it.
-- A UDF invocation in a `GROUP BY` clause isn't inlined. This decision is made when the query referencing a scalar UDF is compiled.
-- If the UDF is signed with a certificate. Because signatures could be added and dropped after a UDF is created, the decision whether to inline or not is done when the query referencing a scalar UDF is compiled. For example, system functions are typically signed with a certificate. You can use [sys.crypt_properties](../system-catalog-views/sys-crypt-properties-transact-sql.md) to find which objects are signed.
+If a scalar UDF is inlineable, it doesn't imply that it's always inlined. [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] decides (on a per-query, per-UDF basis) whether to inline a UDF or not. Check the lists of requirements above.
 
   ```sql
   SELECT *

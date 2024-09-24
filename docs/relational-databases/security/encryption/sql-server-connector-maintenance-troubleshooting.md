@@ -4,7 +4,7 @@ description: Learn about maintenance instructions and common troubleshooting ste
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: vanto, maghan
-ms.date: 04/30/2024
+ms.date: 09/24/2024
 ms.service: sql
 ms.subservice: security
 ms.topic: conceptual

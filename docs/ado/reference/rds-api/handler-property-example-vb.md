@@ -21,11 +21,11 @@ dev_langs:
  Assume that the following sections in the parameter file, Msdfmap.ini, are located on the server:  
   
 ```  
-[connect AuthorDataBase]  
+[connect AuthorDataBase]  
 Access=ReadWrite  
 Connect="DSN=Pubs"  
-[sql AuthorById]  
-SQL="SELECT * FROM Authors WHERE au_id = ?"  
+[sql AuthorById]  
+SQL="SELECT * FROM Authors WHERE au_id = ?"  
 ```  
   
  Your code looks like the following. The command assigned to the [SQL](./sql-property.md) property will match the ***AuthorById*** identifier and will retrieve a row for author Michael O'Leary. The **DataControl** object **Recordset** property is assigned to a disconnected [Recordset](../ado-api/recordset-object-ado.md) object purely as a coding convenience.  

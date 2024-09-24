@@ -40281,6 +40281,31 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "docs/tools/configuration-manager/new-alias-alias-tab.md",
+      "redirect_url": "/sql/tools/configuration-manager/aliases-sql-server-configuration-manager",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/tools/configuration-manager/alias-properties-alias-tab.md",
+      "redirect_url": "/sql/tools/configuration-manager/aliases-sql-server-configuration-manager",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/tools/configuration-manager/creating-a-valid-connection-string-using-shared-memory-protocol.md",
+      "redirect_url": "/sql/tools/configuration-manager/aliases-sql-server-configuration-manager",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip.md",
+      "redirect_url": "/sql/tools/configuration-manager/aliases-sql-server-configuration-manager",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/database-engine/configure-windows/check-the-odbc-sql-server-driver-version-windows.md",
+      "redirect_url": "/sql/database-engine/configure-windows/open-the-odbc-data-source-administrator",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "docs/2014/tools/dta/lesson-1-1-launching-database-engine-tuning-advisor.md",
       "redirect_url": "/previous-versions/sql/2014/tools/dta/lesson-1-1-launching-database-engine-tuning-advisor",
       "redirect_document_id": false

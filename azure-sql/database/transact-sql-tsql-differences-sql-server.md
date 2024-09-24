@@ -8,9 +8,10 @@ ms.date: 06/17/2021
 ms.service: azure-sql-database
 ms.subservice: migration
 ms.topic: reference
+ms.collection:
+  - sql-migration-content
 ms.custom:
   - sqldbrb=1
-  - sql-migration-content
 ---
 # T-SQL differences between SQL Server and Azure SQL Database
 
@@ -26,7 +27,7 @@ In addition, there are some features and syntax that isn't supported at all beca
 
 For example, high availability is built into Azure SQL Database. T-SQL statements related to availability groups are not supported by SQL Database, and the dynamic management views related to Always On Availability Groups are also not supported.
 
-For a list of the features that are supported and unsupported by SQL Database, see [Azure SQL Database feature comparison](features-comparison.md). This page supplements that article, and focuses on T-SQL statements.
+For a list of the features that are supported and unsupported by SQL Database, see [Azure SQL Database feature comparison](features-comparison.md). This page supplements that article, and focuses on T-SQL statements.
 
 ## T-SQL syntax statements with partial differences
 
@@ -38,7 +39,7 @@ The core DDL statements are available, but DDL statement extensions related to u
 
 ## T-SQL syntax not supported in Azure SQL Database
 
-In addition to T-SQL statements related to the unsupported features described in [Azure SQL Database feature comparison](features-comparison.md), the following statements and groups of statements aren't supported. As such, if your database to be migrated is using any of the following features, re-engineer your application to eliminate these T-SQL features and statements.
+In addition to T-SQL statements related to the unsupported features described in [Azure SQL Database feature comparison](features-comparison.md), the following statements and groups of statements aren't supported. As such, if your database to be migrated is using any of the following features, re-engineer your application to eliminate these T-SQL features and statements.
 
 - Collation of system objects.
 - Connection related: Endpoint statements. SQL Database doesn't support Windows authentication, but does support Microsoft Entra authentication. This includes authentication of Active Directory principals federated with Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)). For more information, see [Connecting to SQL Database or Azure Azure Synapse Analytics By Using Microsoft Entra authentication](authentication-aad-overview.md).
@@ -74,16 +75,16 @@ In addition to T-SQL statements related to the unsupported features described in
 
 ## Full T-SQL reference
 
-For more information about T-SQL grammar, usage, and examples, see [T-SQL Reference (Database Engine)](/sql/t-sql/language-reference).
+For more information about T-SQL grammar, usage, and examples, see [T-SQL Reference (Database Engine)](/sql/t-sql/language-reference).
 
 ### About the "Applies to" tags
 
-The T-SQL reference includes articles related to all recent SQL Server versions. Below the article title there's an icon bar, listing MSSQL platforms, and indicating applicability. For example, availability groups were introduced in SQL Server 2012. The [CREATE AVAILABILITY GROUP](/sql/t-sql/statements/create-availability-group-transact-sql) article indicates that the statement applies to **SQL Server (starting with 2012)**. The statement doesn't apply to SQL Server 2008, SQL Server 2008 R2, Azure SQL Database, Azure Azure Synapse Analytics, or Parallel Data Warehouse.
+The T-SQL reference includes articles related to all recent SQL Server versions. Below the article title there's an icon bar, listing MSSQL platforms, and indicating applicability. For example, availability groups were introduced in SQL Server 2012. The [CREATE AVAILABILITY GROUP](/sql/t-sql/statements/create-availability-group-transact-sql) article indicates that the statement applies to **SQL Server (starting with 2012)**. The statement doesn't apply to SQL Server 2008, SQL Server 2008 R2, Azure SQL Database, Azure Azure Synapse Analytics, or Parallel Data Warehouse.
 
 In some cases, the general subject of an article can be used in a product, but there are minor differences between products. The differences are indicated at midpoints in the article as appropriate. For example, the `CREATE TRIGGER` article is available in SQL Database. But the `ALL SERVER` option for server-level triggers, indicates that server-level triggers can't be used in SQL Database. Use database-level triggers instead.
 
 ## Next steps
 
-For a list of the features that are supported and unsupported by SQL Database, see [Azure SQL Database feature comparison](features-comparison.md).
+For a list of the features that are supported and unsupported by SQL Database, see [Azure SQL Database feature comparison](features-comparison.md).
 
 To detect compatibility issues in your SQL Server databases before migrating to Azure SQL Database, and to migrate your databases, use [Data Migration Assistant (DMA)](/sql/dma/dma-overview).

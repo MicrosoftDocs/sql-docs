@@ -6,7 +6,7 @@ author: rohitnayakmsft
 ms.author: rohitna
 ms.reviewer: wiassaf, mathoma, vanto
 ms.service: azure-sql-database
-ms.date: 07/31/2024
+ms.date: 09/13/2024
 ms.subservice: connect
 ms.topic: how-to
 ms.custom:
@@ -25,20 +25,27 @@ This article introduces settings that control connectivity to the server for Azu
 
 ## Networking and connectivity
 
-These settings apply to all SQL Database and dedicated SQL pool (formerly SQL DW) databases associated with the server. You can change these settings from the networking tab of your [logical server](logical-servers.md):
+You can change these settings in your [logical server](logical-servers.md). A logical SQL server can host both Azure SQL databases and standalone dedicated SQL pools not in an Azure Synapse Analytics workspace.
+
+> [!NOTE]
+> These settings apply to Azure SQL databases and dedicated SQL pools (formerly SQL DW) associated with the logical server. These instructions do not apply to dedicated SQL pools in an Azure Synapse analytics workspace. 
 
 :::image type="content" source="media/connectivity-settings/manage-connectivity-settings.png" alt-text="Screenshot of the Firewalls and virtual networks settings in Azure portal for SQL server.":::
 
 ## Change public network access
 
-It's possible to change the public network access via the Azure portal, Azure PowerShell, and the Azure CLI.
+It's possible to change the public network access for your Azure SQL Database or standalone dedicated SQL pool via the Azure portal, Azure PowerShell, and the Azure CLI.
 
 > [!NOTE]
 > These settings take effect immediately after they're applied. Your customers might experience connection loss if they don't meet the requirements for each setting.
 
 ### [Portal](#tab/azure-portal)
 
-To enable public network access for the logical server hosting your databases, go to the **Networking** page in the [Azure portal](https://portal.azure.com) for your [logical server in Azure](logical-servers.md), choose the **Public access** tab, and then set the **Public network access** to **Select networks**.
+To enable public network access for the logical server hosting your databases:
+
+1. Go to the Azure portal, and go to the [logical server in Azure](logical-servers.md).
+1. Under **Security**, select the **Networking** page.
+1. Choose the **Public access** tab, and then set the **Public network access** to **Select networks**.
 
 From this page, you can add a virtual network rule, as well as configure firewall rules for your public endpoint.
 
@@ -118,7 +125,7 @@ Starting November 2024, you will no longer be able to set the minimal TLS versio
 
 ### Configure minimum TLS version 
 
-You can configure the minimum TLS version that your Azure SQL Database accepts for client connections by using the Azure portal, Azure PowerShell, or the Azure CLI.
+You can configure the minimum TLS version for client connections by using the Azure portal, Azure PowerShell, or the Azure CLI.
 
 > [!CAUTION]
 > - The default for the minimal TLS version is to allow all versions. After you enforce a version of TLS, it's not possible to revert to the default.
@@ -140,7 +147,9 @@ Login failed with invalid TLS version
 
 ### [Portal](#tab/azure-portal)
 
-In the [Azure portal](https://portal.azure.com), go to your **SQL server** resource. Under the **Security** settings, select **Networking** and then choose the **Connectivity** tab. Select the **Minimum TLS Version** desired for all databases associated with the server, and select **Save**.
+1. Go to the Azure portal, and go to the [logical server in Azure](logical-servers.md).
+1. Under **Security**, select the **Networking** page.
+1. Choose the **Connectivity** tab. Select the **Minimum TLS Version** desired for all databases associated with the server, and select **Save**.
 
 :::image type="content" source="media/connectivity-settings/minimal-tls-version.png" alt-text="Screenshot of the Connectivity tab of the Networking settings for your logical server, minimal TLS version drop-down selected." lightbox="media/connectivity-settings/minimal-tls-version.png":::
 
@@ -209,9 +218,7 @@ You can also query [sys.fn_get_audit_file](/sql/relational-databases/system-func
 
 ## Change the connection policy
 
-[Connection policy](connectivity-architecture.md#connection-policy) determines how customers connect to Azure SQL Database.
-
-We highly recommend the `Redirect` connection policy over the `Proxy` connection policy for the lowest latency and highest throughput.
+[Connection policy](connectivity-architecture.md#connection-policy) determines how customers connect. We highly recommend the `Redirect` connection policy over the `Proxy` connection policy for the lowest latency and highest throughput.
 
 It's possible to change the connection policy by using the Azure portal, Azure PowerShell, and the Azure CLI.
 
@@ -219,7 +226,9 @@ It's possible to change the connection policy by using the Azure portal, Azure P
 
 It's possible to change your connection policy for your logical server by using the Azure portal.
 
-In the [Azure portal](https://portal.azure.com), go to your **SQL server** resource. Under the **Security** settings, select **Networking** and then choose the **Connectivity** tab. Choose the desired connection policy, and select **Save**.
+1. Go to the Azure portal. Go to the [logical server in Azure](logical-servers.md).
+1. Under **Security**, select the **Networking** page.
+1. Choose the **Connectivity** tab. Choose the desired connection policy, and select **Save**.
 
 :::image type="content" source="media/connectivity-settings/change-connection-policy.png" alt-text="Screenshot of the Connectivity tab of the Networking page, Connection policy selected." lightbox="media/connectivity-settings/change-connection-policy.png":::
 

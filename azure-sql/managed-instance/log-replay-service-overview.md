@@ -8,7 +8,7 @@ ms.date: 11/16/2022
 ms.service: azure-sql-managed-instance
 ms.subservice: migration
 ms.topic: conceptual
-ms.custom:
+ms.collection:
   - sql-migration-content
 ---
 
@@ -79,7 +79,7 @@ Although having `CHECKSUM` enabled for backups isn't required, we highly recomme
 For more information, see [Migrate databases from SQL Server to SQL Managed Instance by using Log Replay Service](log-replay-service-migrate.md). 
 
 > [!CAUTION]
-> Taking backups on SQL Server with `CHECKSUM` enabled is highly recommended as there is a risk to restoring a corrupt database to Azure without it. 
+> Taking backups on SQL Server with `CHECKSUM` enabled is highly recommended as there is a risk to restoring a corrupt database to Azure without it. 
 
 
 ### Autocomplete vs. continuous mode migration

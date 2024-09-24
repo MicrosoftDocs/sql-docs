@@ -9,7 +9,7 @@ ms.date: 06/28/2024
 ms.service: sql
 ms.subservice: dma
 ms.topic: conceptual
-ms.custom:
+ms.collection:
   - sql-migration-content
 helpviewer_keywords:
   - "Data Migration Assistant, Assess"
@@ -115,7 +115,7 @@ Data Migration Assistant v5.0 introduces support for analyzing database connecti
 
 ## View results
 
-The duration of the assessment depends on the number of databases added and the schema size of each database. Results are displayed for each database as soon as they're available.
+The duration of the assessment depends on the number of databases added and the schema size of each database. Results are displayed for each database as soon as they're available.
 
 1. Select the database that has completed the assessment, and then switch between **Compatibility issues** and **Feature recommendations** by using the switcher.
 
@@ -131,13 +131,13 @@ Feature recommendations cover different kinds of features such as In-Memory OLTP
 
 :::image type="content" source="media/dma-assesssqlonprem/feature-recommendations.png" alt-text="Screenshot of View feature recommendations." lightbox="media/dma-assesssqlonprem/feature-recommendations.png":::
 
-For Azure SQL Database, the assessments provide migration blocking issues and feature parity issues. Review the results for both categories by selecting the specific options.
+For Azure SQL Database, the assessments provide migration blocking issues and feature parity issues. Review the results for both categories by selecting the specific options.
 
 - The **SQL Server feature parity** category provides a comprehensive set of recommendations, alternative approaches available in Azure, and mitigating steps. It helps you plan this effort in your migration projects.
 
   :::image type="content" source="media/dma-assesssqlonprem/sql-feature-parity.png" alt-text="Screenshot of View information for SQL Server feature parity." lightbox="media/dma-assesssqlonprem/sql-feature-parity.png":::
 
-- The **Compatibility issues** category provides partially supported or unsupported features that block migrating on-premises SQL Server databases to Azure SQL databases. It then provides recommendations to help you address those issues.
+- The **Compatibility issues** category provides partially supported or unsupported features that block migrating on-premises SQL Server databases to Azure SQL databases. It then provides recommendations to help you address those issues.
 
   :::image type="content" source="media/dma-assesssqlonprem/compatibility-issues.png" alt-text="Screenshot of View compatibility issues." lightbox="media/dma-assesssqlonprem/compatibility-issues.png":::
 
@@ -153,7 +153,7 @@ Detailed, step-by-step guidance for target readiness assessments is available [h
 
 ## Export results
 
-After all databases finish the assessment, select **Export report** to export the results to either a JSON file or a CSV file. You can then analyze the data at your own convenience.
+After all databases finish the assessment, select **Export report** to export the results to either a JSON file or a CSV file. You can then analyze the data at your own convenience.
 
 ## Save and load assessments
 

@@ -8,7 +8,7 @@ ms.date: 07/10/2023
 ms.service: sql
 ms.subservice: ssma
 ms.topic: conceptual
-ms.custom:
+ms.collection:
   - sql-migration-content
 f1_keywords:
   - "ssma.access.general.f1"

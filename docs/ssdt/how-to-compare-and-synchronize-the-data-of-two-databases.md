@@ -3,7 +3,8 @@ title: Compare and Synchronize the Data of Two Databases
 description: Find out how to compare and synchronize the data from two databases. See how to set up the comparison, view the differences, and update the target.
 author: markingmyname
 ms.author: maghan
-ms.date: 12/23/2022
+ms.reviewer: vanto
+ms.date: 09/17/2024
 ms.service: sql
 ms.subservice: ssdt
 ms.topic: conceptual
@@ -28,7 +29,7 @@ After the comparison finishes, you can take other steps:
 
 - You can update all or part of the target to match the source. For more information, see [Synchronizing Database Data](#Synchronize).
 
-For more information, see [Compare and Synchronize Data in One or More Tables with Data in a Reference Database](../ssdt/compare-and-synchronize-data-in-tables-with-data-in-reference-database.md).
+For more information, see [Compare and Synchronize Data in One or More Tables with Data in a Reference Database](compare-and-synchronize-data-in-tables-with-data-in-reference-database.md).
 
 > [!NOTE]  
 > You can also compare the *schema* of two databases or of two versions of the same database. For more information, see [How to: Use Schema Compare to Compare Different Database Definitions](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md).
@@ -81,7 +82,7 @@ For more information, see [Compare and Synchronize Data in One or More Tables wi
 
 ## <a id="ViewDifferences"></a> View Data Differences
 
-After you compare the data in two databases, Data Compare lists each *database object* that you compared and its status. You can also view results for the records within each object, grouped by status. For more information about the status designations, see [Compare and Synchronize Data in One or More Tables with Data in a Reference Database](../ssdt/compare-and-synchronize-data-in-tables-with-data-in-reference-database.md).
+After you compare the data in two databases, Data Compare lists each *database object* that you compared and its status. You can also view results for the records within each object, grouped by status. For more information about the status designations, see [Compare and Synchronize Data in One or More Tables with Data in a Reference Database](compare-and-synchronize-data-in-tables-with-data-in-reference-database.md).
 
 After you view the differences, you can update the target to match the source for some or all of the objects or records that are different, missing, or new. For more information, see [Synchronizing Database Data](#Synchronize).
 
@@ -105,7 +106,7 @@ After you compare the data in two databases, you can synchronize them by updatin
 
     After the comparison finishes, the Data Compare window lists results for the objects that were compared. Four columns (named Different Records, Only in Source, at Target, and Identical Records) display information about objects that weren't identical. For each such object, these columns display how many records were found to be different, and how many records an update operation would change. Those two numbers match at first, but in step 4 you can change which objects to update.
 
-    For more information, see [Compare and Synchronize Data in One or More Tables with Data in a Reference Database](../ssdt/compare-and-synchronize-data-in-tables-with-data-in-reference-database.md).
+    For more information, see [Compare and Synchronize Data in One or More Tables with Data in a Reference Database](compare-and-synchronize-data-in-tables-with-data-in-reference-database.md).
 
 1. In the table of the Data Compare window, select a row.
 
@@ -137,7 +138,7 @@ After you compare the data in two databases, you can synchronize them by updatin
 
 1. Compare the data in a source and a target database. For more information, see [Compare Database Data](#CompareDatabaseData).
 
-    After the comparison finishes, the Data Compare window lists the objects that were compared. For more information, see [Compare and Synchronize Data in One or More Tables with Data in a Reference Database](../ssdt/compare-and-synchronize-data-in-tables-with-data-in-reference-database.md).
+    After the comparison finishes, the Data Compare window lists the objects that were compared. For more information, see [Compare and Synchronize Data in One or More Tables with Data in a Reference Database](compare-and-synchronize-data-in-tables-with-data-in-reference-database.md).
 
 1. (Optional) In the details pane, clear the check boxes for records in the target that you don't want to update, as described in the previous procedure.
 
@@ -160,6 +161,6 @@ After you compare the data in two databases, you can synchronize them by updatin
 
     The data of the selected records in the target is updated with the data from the corresponding records in the source.
 
-## Next steps
+## Related content
 
-- [Compare and Synchronize Data in One or More Tables with Data in a Reference Database](../ssdt/compare-and-synchronize-data-in-tables-with-data-in-reference-database.md)
+- [Compare and Synchronize Data in One or More Tables with Data in a Reference Database](compare-and-synchronize-data-in-tables-with-data-in-reference-database.md)

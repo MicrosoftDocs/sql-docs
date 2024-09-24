@@ -29,18 +29,18 @@ The following example shows the deployment results in a bash shell.
 ```output
 The privacy statement can be viewed at:
 https://go.microsoft.com/fwlink/?LinkId=853010
- 
+ 
 The license terms for SQL Server Big Data Cluster can be viewed at:
 Enterprise: https://go.microsoft.com/fwlink/?linkid=2104292
 Standard: https://go.microsoft.com/fwlink/?linkid=2104294
 Developer: https://go.microsoft.com/fwlink/?linkid=2104079
- 
+ 
 Cluster deployment documentation can be viewed at:
 https://aka.ms/bdc-deploy
- 
+ 
 NOTE: Cluster creation can take a significant amount of time depending on
 configuration, network speed, and the number of nodes in the cluster.
- 
+ 
 Starting cluster deployment.
 Cluster controller endpoint is available at bdc-control.contoso.com:30080, 193.168.5.14:30080.
 Waiting for control plane to be ready after 5 minutes.

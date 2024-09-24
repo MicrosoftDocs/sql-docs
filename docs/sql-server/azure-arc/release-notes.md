@@ -23,6 +23,18 @@ This article lists:
 
 Extension versions are cumulative. Higher extension versions include all of the updates from previous versions. A release might include internal features. If the version release notes don't describe features, then the updates were internal.
 
+## September 9, 2024
+
+**Extension version**: `1.1.2803.208`
+
+### Availability group inventory
+
+Availability group (AG) inventory feature for all license types is now released for general availability. For complete description of feature, see [Manage Always On availability groups](manage-availability-group.md).
+
+### Apply physical core license to physical machines
+
+Apply physical core license types to physical core machines - general availability.
+
 ## August 13, 2024
 
 **Extension version**: `1.1.2769.203`
@@ -97,13 +109,13 @@ For details, review:
 
 **Extension version**: `1.1.2656.138`
 
- This version is no longer available.
+ This version is no longer available.
 
 ## April 9, 2024
 
 **Extension version**: `1.1.2647.136`
 
- This version is no longer available. The features in this version are updated and released in [May 15, 2024](#may-15-2024).
+ This version is no longer available. The features in this version are updated and released in [May 15, 2024](#may-15-2024).
 
 ## March 12, 2024
 

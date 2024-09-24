@@ -34,7 +34,7 @@ helpviewer_keywords:
 A report server uses credentials to connect to external data sources that provide content to reports or recipient information to a data-driven subscription. You can specify credentials that use Windows Authentication, database authentication, no authentication, or custom authentication. When the report server sends a connection request over the network, it either impersonates a user account or the unattended execution account. For more information about the security context under which a connection request is made, see [Data source configuration and network connections](#DataSourceConfigurationConnections) in this article.
 
 > [!NOTE]
-> Credentials are also used to authenticate users who access a report server. For more information about authenticating users to a report server, see [Authentication in a report server](/sql/reporting-services/security/authentication-with-the-report-server).
+> Credentials are also used to authenticate users who access a report server. For more information about authenticating users to a report server, see [Authentication in a report server](../security/authentication-with-the-report-server.md).
 
 The connection to an external data source is defined when you create the report. You can manage it separately after the report is published. You can specify a static connection string or an expression that allows users to select a data source from a dynamic list. For more information about how to specify a data source type and connection string, see [Create data connection strings in Report Builder](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).
 

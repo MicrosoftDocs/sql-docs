@@ -1,5 +1,5 @@
 ---
-title: "SQL Server 2019 Release Notes"
+title: "SQL Server 2019 release notes"
 description: Find information about SQL Server 2019 (15.x) limitations, known issues, help resources, and other release notes.
 author: MikeRayMSFT
 ms.author: mikeray
@@ -9,7 +9,9 @@ ms.subservice: release-landing
 ms.topic: "article"
 monikerRange: ">= sql-server-2016"
 ---
-# [!INCLUDE[SQL Server 2019](../includes/sssql19-md.md)] release notes
+
+# SQL Server 2019 release notes
+
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 This article describes limitations and known issues for the [!INCLUDE[SQL Server 2019](../includes/sssql19-md.md)]. For related information, see:

@@ -5,7 +5,7 @@ description: Setup and configuration details for database watcher
 author: dimitri-furman
 ms.author: dfurman
 ms.reviewer: wiassaf
-ms.date: 08/21/2024
+ms.date: 09/17/2024
 ms.service: azure-sql
 ms.subservice: monitoring
 ms.topic: how-to
@@ -253,7 +253,7 @@ There are different scripts for Microsoft Entra authentication and SQL authentic
 > [!IMPORTANT]
 > Always use provided scripts to grant access to database watcher. Granting access in a different way can block data collection. For more information, see [Watcher authorization](database-watcher-overview.md#watcher-authorization).
 
-Before executing a script, replace all instances of placeholders that might be present in the script, such as `login-name-placeholder`, `user-name-placeholder`, and `password-placeholder` with the actual values.
+Before executing a script, replace all instances of placeholders that might be present in the script, such as `login-name-placeholder` and `password-placeholder` with the actual values.
 
 #### Grant access to Microsoft Entra authenticated watchers
 

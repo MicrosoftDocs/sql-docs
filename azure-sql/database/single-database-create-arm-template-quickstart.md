@@ -4,16 +4,19 @@ description: Create a single database in Azure SQL Database using an Azure Resou
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma
-ms.date: 06/24/2020
+ms.date: 09/17/2024
 ms.service: azure-sql-database
 ms.subservice: deployment-configuration
 ms.topic: quickstart
-ms.custom: subject-armqs sqldbrb=1, mode-arm, devx-track-arm-template
+ms.custom:
+  - subject-armqs sqldbrb=1
+  - mode-arm
+  - devx-track-arm-template
 ---
 
 # Quickstart: Create a single database in Azure SQL Database using an ARM template
 
-[!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
+[!INCLUDE [appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
 Creating a [single database](single-database-overview.md) is the quickest and simplest option for creating a database in Azure SQL Database. This quickstart shows you how to create a single database using an Azure Resource Manager template (ARM template).
 
@@ -26,6 +29,12 @@ If your environment meets the prerequisites and you're familiar with using ARM t
 ## Prerequisites
 
 If you don't have an Azure subscription, [create a free account](https://azure.microsoft.com/free/).
+
+### Permissions
+
+**To create databases via Transact-SQL**: `CREATE DATABASE` permissions are necessary. To create a database a login must be either the server admin login (created when the Azure SQL Database logical server was provisioned), the Microsoft Entra admin of the server, a member of the dbmanager database role in `master`. For more information, see [CREATE DATABASE](/sql/t-sql/statements/create-database-transact-sql?view=azuresqldb-current&preserve-view=true).
+
+**To create databases via the Azure portal, PowerShell, Azure CLI, or REST API**: Azure RBAC permissions are needed, specifically the Contributor, SQL DB Contributor, or SQL Server Contributor Azure RBAC role. For more information, see [Azure RBAC built-in roles](/azure/role-based-access-control/built-in-roles).
 
 ## Review the template
 
@@ -66,21 +75,22 @@ To query the database, see [Query the database](single-database-create-quickstar
 
 ## Clean up resources
 
-Keep this resource group, server, and single database if you want to go to the [Next steps](#next-steps). The next steps show you how to connect and query your database using different methods.
+Keep this resource group, server, and single database if you want. You can now connect and query your database using different methods.
 
-To delete the resource group:
+1. Create a server-level firewall rule to connect to the single database from on-premises or remote tools. For more information, see [Create a server-level firewall rule](firewall-create-server-level-portal-quickstart.md).
+1. After you create a server-level firewall rule, [connect and query](connect-query-content-reference-guide.md) your database using several different tools and languages:
+   - [Connect and query using SQL Server Management Studio](connect-query-ssms.md)
+   - [Connect and query using Azure Data Studio](/azure-data-studio/quickstart-sql-database?toc=%2fazure%2fsql-database%2ftoc.json)
+
+If you want to delete the resource group:
 
 ```azurepowershell-interactive
 $resourceGroupName = Read-Host -Prompt "Enter the Resource Group name"
 Remove-AzResourceGroup -Name $resourceGroupName
 ```
 
-## Next steps
+## Related content
 
-- Create a server-level firewall rule to connect to the single database from on-premises or remote tools. For more information, see [Create a server-level firewall rule](firewall-create-server-level-portal-quickstart.md).
-- After you create a server-level firewall rule, [connect and query](connect-query-content-reference-guide.md) your database using several different tools and languages.
-  - [Connect and query using SQL Server Management Studio](connect-query-ssms.md)
-  - [Connect and query using Azure Data Studio](/azure-data-studio/quickstart-sql-database?toc=%2fazure%2fsql-database%2ftoc.json)
 - To create a single database using the Azure CLI, see [Azure CLI samples](az-cli-script-samples-content-guide.md).
 - To create a single database using Azure PowerShell, see [Azure PowerShell samples](powershell-script-content-guide.md).
 - To learn how to create ARM templates, see [Create your first template](/azure/azure-resource-manager/templates/template-tutorial-create-first-template).

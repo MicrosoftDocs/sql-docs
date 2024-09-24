@@ -4,19 +4,18 @@ description: Working with Hyperscale elastic pools using command-line tools such
 author: arvindshmicrosoft
 ms.author: arvindsh
 ms.reviewer: wiassaf, mathoma
-ms.date: 02/26/2024
+ms.date: 09/12/2024
 ms.service: azure-sql-database
 ms.subservice: elastic-pools
 ms.topic: conceptual
-ms.custom: devx-track-azurecli, devx-track-azurepowershell, ignite-2023
+ms.custom:
+  - devx-track-azurecli
+  - devx-track-azurepowershell
 ---
-# Working with Hyperscale elastic pools using command-line tools
-[!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
+# Work with Hyperscale elastic pools using command-line tools
+[!INCLUDE [appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
 In this article, learn to create, scale, and move databases into a [Hyperscale elastic pool](hyperscale-elastic-pool-overview.md) using command line tools such as the Azure CLI and PowerShell. In addition to these methods, you can always use the Azure portal for most operations.
-
-> [!NOTE]
-> [Elastic pools for Hyperscale](./hyperscale-elastic-pool-overview.md) are currently in preview.
 
 ## Prerequisites
 
@@ -25,7 +24,6 @@ To work with your Hyperscale elastic pool, you should have:
 - An Azure subscription. If you don't have an Azure subscription, [create a free account](https://azure.microsoft.com/free/).
 - A [logical server in Azure](logical-servers.md) deployed to a [resource group](/azure/azure-resource-manager/management/manage-resource-groups-portal). The examples in this article use the name `my-example-rg` for the resource group, and `my-example-sql-svr` for the logical server. 
 - The latest version of Azure PowerShell [Az.Sql.3.11.0 or higher](https://www.powershellgallery.com/packages/Az.Sql/3.11.0) or the Azure CLI [Az version 2.40.0 or higher](/cli/azure/install-azure-cli)
-
 
 ## Create a new Hyperscale elastic pool
 
@@ -170,7 +168,7 @@ You can use the Azure CLI or Azure PowerShell to upgrade an existing elastic poo
 <!--
 Use the [az sql elastic-pool update](/cli/azure/sql/elastic-pool#az-sql-elastic-pool-update) command to upgrade an existing Hyperscale elastic pool.
 
-The following example upgrade an existing Hyperscale elastic pool `my_hs_pool` to premium-series hardware:
+The following example upgrades an existing Hyperscale elastic pool `my_hs_pool` to premium-series hardware:
 
 ```azurecli
 az sql elastic-pool update --resource-group "my-example-rg" --server "my-example-sql-svr" --name "my_hs_pool" --family "premium-series"
@@ -183,7 +181,7 @@ Currently unavailable via Azure CLI. Use Azure PowerShell or the Azure portal in
 
 Use the [Set-AzSqlElasticPool](/powershell/module/az.sql/set-azsqlelasticpool) cmdlet to scale up an existing Hyperscale elastic pool. 
 
-The following example upgrade an existing Hyperscale elastic pool `my_hs_pool` to premium-series hardware:
+The following example upgrades an existing Hyperscale elastic pool `my_hs_pool` to premium-series hardware:
 
 
 ```powershell
@@ -230,7 +228,7 @@ PATCH https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups
 
 ## Related content
 
-- [Azure SQL Database CLI commands](/cli/azure/sql).
-- [Azure SQL Database PowerShell cmdlets](/powershell/module/az.sql/).
-- [Azure SQL Database elastic pools REST API](/rest/api/sql/elastic-pools/).
-- [Hyperscale elastic pools overview](./hyperscale-elastic-pool-overview.md).
+- [Azure SQL Database CLI commands](/cli/azure/sql)
+- [Azure SQL Database PowerShell cmdlets](/powershell/module/az.sql/)
+- [Azure SQL Database elastic pools REST API](/rest/api/sql/elastic-pools/)
+- [Hyperscale elastic pools overview](hyperscale-elastic-pool-overview.md)

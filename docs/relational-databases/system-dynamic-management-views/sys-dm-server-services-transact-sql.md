@@ -1,9 +1,9 @@
 ---
 title: "sys.dm_server_services (Transact-SQL)"
-description: sys.dm_server_services returns information about the services in the current SQL Server instance. 
+description: sys.dm_server_services returns information about the services in the current SQL Server instance.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 02/09/2024
+ms.date: 09/12/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -30,7 +30,7 @@ Returns information about the [!INCLUDE [ssnoversion-md](../../includes/ssnovers
 | `startup_type_desc` | **nvarchar(256)** | Describes the start mode of the service. The following are the possible values and their corresponding descriptions.<br /><br />Other: Other (boot start)<br />Other: Other (system start)<br />Automatic: Auto start<br />Manual: Demand start<br />Disabled: Disabled<br /><br />Not nullable. |
 | `status` | **int** | Indicates the current status of the service. The following are the possible values and their corresponding descriptions.<br /><br />1: Stopped<br />2: Other (start pending)<br />3: Other (stop pending)<br />4: Running<br />5: Other (continue pending)<br />6: Other (pause pending)<br />7: Paused<br /><br />Nullable. |
 | `status_desc` | **nvarchar(256)** | Describes the current status of the service. The following are the possible values and their corresponding descriptions.<br /><br />Stopped: The service is stopped.<br />Other (start operation pending): The service is in the process of starting.<br />Other (stop operation pending): The service is in the process of stopping.<br />Running: The service is running.<br />Other (continue operations pending): The service is in a pending state.<br />Other (pause pending): The service is in the process of pausing.<br />Paused: The service is paused.<br /><br />Not nullable. |
-| `process_id` | **int** | The process ID of the service.<br /><br />Not nullable. |
+| `process_id` | **int** | The process ID of the service.<br /><br />Nullable. |
 | `last_startup_time` | **datetimeoffset(7)** | The date and time the service was last started. Nullable. |
 | `service_account` | **nvarchar(256)** | The account authorized to control the service. This account can start or stop the service, or modify service properties.<br /><br />Not nullable. |
 | `filename` | **nvarchar(256)** | The path and filename of the service executable.<br /><br />Not nullable. |

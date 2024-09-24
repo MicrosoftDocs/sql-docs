@@ -7,7 +7,7 @@ ms.date: "08/15/2017"
 ms.service: sql
 ms.subservice: ssma
 ms.topic: conceptual
-ms.custom:
+ms.collection:
   - sql-migration-content
 ---
 # Working with SSMA for MySQL Console (MySQLToSQL)

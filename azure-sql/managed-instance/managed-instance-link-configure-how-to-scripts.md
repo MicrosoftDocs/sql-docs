@@ -5,7 +5,7 @@ description: Learn how to configure a link between SQL Server and Azure SQL Mana
 author: djordje-jeremic
 ms.author: djjeremi
 ms.reviewer: mathoma, danil
-ms.date: 06/21/2024
+ms.date: 09/10/2024
 ms.service: azure-sql-managed-instance
 ms.subservice: data-movement
 ms.custom: devx-track-azurepowershell, devx-track-azurecli, ignite-2023, build-2024
@@ -505,10 +505,14 @@ You've successfully modified your database mirroring endpoint for a SQL Managed 
 
 ## Create an availability group on SQL Server
 
-If you don't have an existing availability group, the next step is to create one on SQL Server, regardless of which will be the initial primary. Commands to create the availability group are different if your SQL Managed Instance is the initial primary, which is only supported starting with [SQL Server 2022 CU10](/troubleshoot/sql/releases/sqlserver-2022/cumulativeupdate10).
+If you don't have an existing availability group, the next step is to create one on SQL Server, regardless of which will be the initial primary. 
+
+> [!NOTE]
+> Skip this section if you already have an existing availability group. 
+
+Commands to create the availability group are different if your SQL Managed Instance is the initial primary, which is only supported starting with [SQL Server 2022 CU10](/troubleshoot/sql/releases/sqlserver-2022/cumulativeupdate10).
 
 While it's possible to establish multiple links for the same database, the link only supports replication of one database per link. If you want to create multiple links for the same database, use the same availability group for all the links, but then create a new distributed availability group for each database link between SQL Server and SQL Managed Instance. 
-
 
 
 ### [SQL Server initial primary](#tab/sql-server)
@@ -716,6 +720,9 @@ To simplify the process, sign in to the Azure portal and run the following scrip
 - `<DatabaseName>` with the database replicated in the availability group on SQL Server. 
 - `<SQLServerIP>` with the IP address of your SQL Server. The provided IP address must be accessible by managed instance.
  
+> [!NOTE]
+> If you want establish a link to an availability group that already exists, then provide the IP address of the listener when supplying the `<SQLServerIP>` parameter.
+
 
 ```powershell-interactive
 #  Run in Azure Cloud Shell (select PowerShell console)
@@ -867,20 +874,37 @@ After the connection is established, **Object Explorer** in SSMS might initially
 > - Take regular backups of the log file on SQL Server. If the used log space reaches 100 percent, replication to SQL Managed Instance stops until space use is reduced. We highly recommend that you automate log backups by setting up a daily job. For details, see [Back up log files on SQL Server](managed-instance-link-best-practices.md#take-log-backups-regularly).
 
 
+## Drop a link 
+
+If you want to drop the link, either because it's no longer needed, or because it's in an irreparable state and needs to be recreated, you can do so with PowerShell and T-SQL. 
+
+First, use the [Remove-AzSqlInstanceLink](/powershell/module/az.sql/remove-azsqlinstancelink) PowerShell command to drop the link, such as the following example: 
+
+```powershell
+Remove-AzSqlInstanceLink -ResourceGroupName $ResourceGroup -InstanceName $managedInstanceName -Name $DAGName -Force 
+```
+
+Then, run the following T-SQL script on SQL Server to drop the distributed availability group. Replace `<DAGName>` with the name of the distributed availability group used to create the link: 
+
+```sql
+USE MASTER 
+GO 
+
+DROP AVAILABILITY GROUP <DAGName>  
+GO 
+```
+
+Finally, optionally, you can remove the availability group if you no longer have a use for it. To do so, replace the `<AGName>` with the name of the availability group and then run it on the respective instance: 
+
+```sql
+DROP AVAILABILITY GROUP <AGName>  
+GO 
+```
+
+
 ## Troubleshoot 
 
-The section provides guidance to address issues with configuring and using the link. 
-
-### Errors 
-
-If you encounter an error message when you create the link or fail over a database, review the error message in the query output window for more information.
-
-If you encounter an error when working with the link, the query stops executing at the failed step. After the error condition is resolved, rerun the command again to proceed with your action.
-
-### Inconsistent state after forced failover 
-
-Using forced failover can result in an inconsistent state between the primary and secondary replicas, causing a split brain scenario from both replicas being in the same role. Data replication fails in this state until the user resolves the situation by manually designating one replica as primary and the other replica as secondary.
-
+If you encounter an error message when you create the link, review the error message in the query output window for more information.
 
 ## Related content
 

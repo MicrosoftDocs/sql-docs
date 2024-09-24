@@ -4,7 +4,7 @@ description: A package is a container for Extended Events objects. This article 
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: randolphwest
-ms.date: 10/22/2023
+ms.date: 09/12/2024
 ms.service: sql
 ms.subservice: xevents
 ms.topic: conceptual
@@ -17,11 +17,13 @@ monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-20
 
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
-A package is a container for Extended Events objects in the [!INCLUDE [ssdenoversion-md](../../includes/ssdenoversion-md.md)]. For example, the following there packages exist in any [!INCLUDE [ssde-md](../../includes/ssde-md.md)] that supports Extended Events:
+A package is a container for Extended Events objects in the [!INCLUDE [ssdenoversion-md](../../includes/ssdenoversion-md.md)]. For example, the following packages exist in any [!INCLUDE [ssde-md](../../includes/ssde-md.md)] that supports Extended Events:
 
-- `package0` - Extended Events system objects. This is the default package.
-- `sqlserver` - Objects related to the [!INCLUDE [ssde-md](../../includes/ssde-md.md)]
-- `sqlos` - SQL Operating System (SQLOS) related objects.
+| Package | Description |
+| --- | --- |
+| `package0` (default) | Extended Events system objects. |
+| `sqlserver` | Objects related to the [!INCLUDE [ssde-md](../../includes/ssde-md.md)]. |
+| `sqlos` | SQL Operating System (SQLOS) related objects. |
 
 > [!NOTE]  
 > The `SecAudit` package is used internally by the Audit feature. None of the objects in this package are available through the Extended Events data definition language (DDL).
@@ -43,7 +45,7 @@ Objects from different packages can be mixed in an event session. For more infor
 
 The following illustration shows the objects that can exist in a package.
 
-:::image type="content" source="media/xepackagesobjects.gif" alt-text="Diagram that shows the relationship of a module, packages, and objects.":::
+:::image type="content" source="media/sql-server-extended-events-packages/extended-events-packages-objects.png" alt-text="Diagram that shows the relationship of a module, packages, and objects.":::
 
 ### Events
 
@@ -62,7 +64,7 @@ All events have a versioned schema that defines their contents. This schema is c
 
 Extended Events uses an event categorization model similar to Event Tracing for Windows (ETW). Two event properties are used for categorization, channel and keyword. Using these properties supports the integration of Extended Events with ETW and its tools.
 
-A **channel** identifies the audience for an event. Channels are described in the following table.
+A *channel* identifies the audience for an event. Channels are described in the following table.
 
 | Term | Definition |
 | --- | --- |
@@ -71,7 +73,7 @@ A **channel** identifies the audience for an event. Channels are described in th
 | **Analytic** | Analytic events are published in high volume. They describe program operation and are typically used in performance investigations. |
 | **Debug** | Debug events are used primarily by developers to diagnose a problem for debugging.<br /><br />Events in the Debug channel return internal implementation-specific state data. The schemas and data that the events return can change, become invalid, or be removed in future versions of the [!INCLUDE [ssde-md](../../includes/ssde-md.md)] without notice. |
 
-A **keyword** is application-specific and enables a finer-grained grouping of related events, which makes it easier for you to specify and retrieve an event that you want to use in a session. You can use the following query to obtain keyword information.
+A *keyword* is application-specific and enables a finer-grained grouping of related events, which makes it easier for you to specify and retrieve an event that you want to use in a session. You can use the following query to obtain keyword information.
 
 ```sql
 SELECT map_value AS Keyword
@@ -111,11 +113,11 @@ You use the `ACTION` clause to add actions to an event session.
 
 ### Predicates
 
-Predicates are a set of logical rules that are used to evaluate events when they are processed. This enables the Extended Events user to selectively capture event data based on specific criteria.
+Predicates are a set of logical rules that are used to evaluate events when they're processed. Predicates enable the Extended Events user to selectively capture event data based on specific criteria.
 
-Predicates can store data in a local context, which can be used to create predicates that return true once every *n* minutes or every *n* times that an event fires. This local context storage can also be used to dynamically update the predicate, thereby suppressing future event firing if the events contain similar data.
+Predicates can store data in a local context, which can be used to create predicates that return true once every *n* minutes or every *n* times that an event fires. You can also use this local context storage to dynamically update the predicate, which suppresses future event firing if the events contain similar data.
 
-Predicates have the ability to retrieve context information, such as the thread ID, as well as event specific data. Predicates are evaluated as full Boolean expressions, and support short circuiting at the first point where the entire expression is found to be false.
+Predicates have the ability to retrieve context information, such as the thread ID, and event specific data. Predicates are evaluated as full Boolean expressions, and support short circuiting at the first point where the entire expression is found to be false.
 
 > [!NOTE]  
 > Predicates with side effects might not be evaluated if an earlier predicate check fails.
@@ -141,7 +143,8 @@ For more information, see [sys.dm_xe_objects](../system-dynamic-management-views
 A map table maps an internal value to a string, which enables a user to know what the value represents. Instead of only being able to obtain a numeric value, a user can get a meaningful description of the internal value. The following query shows how to obtain map values.
 
 ```sql
-SELECT map_key, map_value
+SELECT map_key,
+       map_value
 FROM sys.dm_xe_map_values
 WHERE name = 'lock_mode';
 ```

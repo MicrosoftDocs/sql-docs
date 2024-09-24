@@ -41,7 +41,7 @@ Rs1 = Server.CreateObject("ADODB.Recordset");
  The following code is a generic example of JScript server-side programming in an Active Server Page (ASP) file that opens a **Recordset** object:  
   
 ```javascript
-<%  @LANGUAGE="JScript" %>  
+<%  @LANGUAGE="JScript" %>  
 <!--#include File="adojavas.inc"-->  
 <HTML>  
 <BODY BGCOLOR="White" topmargin="10" leftmargin="10">  

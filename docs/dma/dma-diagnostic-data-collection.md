@@ -8,7 +8,7 @@ ms.date: 06/28/2024
 ms.service: sql
 ms.subservice: dma
 ms.topic: how-to
-ms.custom:
+ms.collection:
   - sql-migration-content
 ---
 

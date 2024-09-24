@@ -100,7 +100,7 @@ BODY {
                     if (iRecord == 1)  
                         strMessage += "<td>Page " + i + " of " + rsEmployee.PageCount + "</td>"  
                     else  
-                        strMessage += "<td> </td>";  
+                        strMessage += "<td> </td>";  
   
                     // First and last name are in first column.  
                     strMessage += "<TD>" + rsEmployee.Fields("FirstName") + " ";  

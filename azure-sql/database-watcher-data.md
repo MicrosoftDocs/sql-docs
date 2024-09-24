@@ -4,7 +4,7 @@ titleSuffix: Azure SQL Database & SQL Managed Instance
 description: A detailed description of SQL monitoring data collected by database watcher
 author: dimitri-furman
 ms.author: dfurman
-ms.date: 07/18/2024
+ms.date: 09/24/2024
 ms.service: azure-sql
 ms.subservice: monitoring
 ms.topic: conceptual
@@ -29,9 +29,17 @@ Database watcher takes advantage of [streaming ingestion](/azure/data-explorer/i
 
 Enabling database watcher is not likely to have an observable impact on the application workloads. More frequent monitoring queries typically execute in the sub-second range, whereas queries that might require more time, for example to return large datasets, run at infrequent intervals.
 
-To further reduce the risk of impact to application workloads, all database watcher queries in Azure SQL Database are resource-governed as an [internal workload](./database/resource-limits-logical-server.md#resource-consumption-by-user-workloads-and-internal-processes). When resource contention is present, resource consumption by monitoring queries is limited to a small fraction of total resources available to a database or an elastic pool. This prioritizes application workloads over monitoring queries.
+# [SQL database](#tab/sqldb)
 
-In Azure SQL Managed Instance, you can enable [Resource Governor](/sql/relational-databases/resource-governor/resource-governor) to manage resource consumption by the monitoring queries in a similar fashion, if necessary.
+To further reduce the risk of impact to application workloads, all database watcher queries in Azure SQL Database are resource-governed as an [internal workload](./database/resource-limits-logical-server.md#resource-consumption-by-user-workloads-and-internal-processes). When resource contention is present, resource consumption by the monitoring queries is limited to a small fraction of total resources available to the database. This prioritizes application workloads over monitoring queries.
+
+# [SQL elastic pool](#tab/sqlep)
+
+To further reduce the risk of impact to application workloads, all database watcher queries in Azure SQL Database are resource-governed as an [internal workload](./database/resource-limits-logical-server.md#resource-consumption-by-user-workloads-and-internal-processes). When resource contention is present, resource consumption by the monitoring queries is limited to a small fraction of total resources available to the elastic pool. This prioritizes application workloads over monitoring queries.
+
+# [SQL managed instance](#tab/sqlmi)
+
+If there is resource contention between your application workloads and database watcher monitoring queries in Azure SQL Managed Instance, you can enable [Resource Governor](/sql/relational-databases/resource-governor/resource-governor) to limit resource consumption by the monitoring queries.
 
 The following example configures Resource Governor on a SQL managed instance. It limits CPU consumption by database watcher queries to 30% when there is no CPU contention. When there is CPU contention, this configuration reserves 5% of CPU for the monitoring queries and limits their CPU usage to 10%. It also limits the memory grant size for each monitoring query to 10% of the available memory.
 
@@ -81,10 +89,12 @@ BEGIN CATCH
 END CATCH;
 ```
 
-> [!NOTE]
-> To make Resource Governor configuration immediately effective on a high availability secondary replica of a SQL managed instance, connect to the replica and execute `ALTER RESOURCE GOVERNOR RECONFIGURE;`.
+> [!TIP]
+> To make a new Resource Governor configuration effective on a high availability secondary replica of a SQL managed instance immediately, [connect](./database/read-scale-out.md#connect-to-a-read-only-replica) to the replica and execute `ALTER RESOURCE GOVERNOR RECONFIGURE;`.
 
-To avoid concurrency conflicts such as blocking and deadlocks between data collection and database workloads running on your Azure SQL resources, monitoring queries use short [lock timeouts](/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide#customizing-the-lock-time-out) and low [deadlock priority](/sql/t-sql/statements/set-deadlock-priority-transact-sql). If there is a concurrency conflict, priority is given to the application workload queries. Depending on the application workload patterns, this might cause occasional gaps in collected data for some datasets.
+---
+
+To avoid concurrency conflicts such as blocking and deadlocks between data collection and database workloads running on your Azure SQL resources, the monitoring queries use short [lock timeouts](/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide#customizing-the-lock-time-out) and low [deadlock priority](/sql/t-sql/statements/set-deadlock-priority-transact-sql). If there is a concurrency conflict, priority is given to the application workload queries. Depending on the application workload patterns, this might cause occasional gaps in the collected data for some datasets.
 
 ### Data collection in elastic pools
 
@@ -95,7 +105,7 @@ To monitor an elastic pool, you must designate one database in the pool as the *
 
 Data collected from the anchor database contains pool-level metrics, and certain database-level performance metrics for every database in the pool. For example, this includes resource utilization and request rate metrics for each database. For some scenarios, monitoring an elastic pool as a whole makes it unnecessary to monitor each individual database in the pool.
 
-Certain monitoring data such as pool-level CPU, memory, and storage utilization, and wait statistics is only collected at the elastic pool level because it cannot be attributed to an individual database in a pool. Conversely, certain other data such as query runtime statistics, database properties, table and index metadata is available only at the database level.
+Certain monitoring data such as pool-level CPU, memory, storage utilization, and wait statistics is only collected at the elastic pool level because it cannot be attributed to an individual database in a pool. Conversely, certain other data such as query runtime statistics, database properties, table and index metadata is available only at the database level.
 
 If you add individual databases from an elastic pool as database watcher targets, you should add the elastic pool as a target as well. This way, you get a more complete view of the database and pool performance.
 
@@ -215,7 +225,7 @@ For each target type, datasets have common columns, as described in the followin
 | `logical_server_name` | The name of the [logical server](./database/logical-servers.md) in Azure SQL Database containing the monitored database or elastic pool. |
 | `database_name` | The name of the monitored database. |
 | `database_id` | Database ID of the monitored database, unique within the logical server. |
-| `logical_database_id` | A unique database identifier that remains unchanged over the lifetime of the user database. Renaming the database or changing its service objective do not change this value. |
+| `logical_database_id` | A unique database identifier that remains unchanged over the lifetime of the user database. Renaming the database or changing its service objective does not change this value. |
 | `physical_database_id` | A unique database identifier for the current physical database corresponding to the user database. Changing database service objective causes this value to change. |
 | `replica_id` | A unique identifier for a Hyperscale [compute replica](./database/hyperscale-architecture.md). |
 

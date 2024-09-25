@@ -3,7 +3,7 @@ title: "Memory Management Architecture Guide"
 description: Learn about memory management architecture in SQL Server, including changes to memory management in previous versions.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 06/12/2024
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: supportability
 ms.topic: conceptual
@@ -91,6 +91,8 @@ The following table indicates whether a specific type of memory allocation is co
 | Thread stacks memory | No | No |
 | Direct allocations from Windows | No | No |
 
+### SQL Server may commit memory over the max server memory setting
+
 Starting with [!INCLUDE [ssSQL11](../includes/sssql11-md.md)], [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] might allocate more memory than the value specified in the **max server memory (MB)** setting. This behavior can occur when the **Total Server Memory (KB)** value has already reached the **Target Server Memory (KB)** setting, as specified by **max server memory (MB)**. If there's insufficient contiguous free memory to meet the demand of multi-page memory requests (more than 8 KB) because of memory fragmentation, [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] can perform over-commitment instead of rejecting the memory request.
 
 As soon as this allocation is performed, the Resource Monitor background task starts to signal all memory consumers to release the allocated memory, and tries to bring the **Total Server Memory (KB)** value below the **Target Server Memory (KB)** specification. Therefore, [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] memory usage could briefly exceed the **max server memory (MB)** setting. In this situation, the **Total Server Memory (KB)** performance counter reading will exceed the **max server memory (MB)** and **Target Server Memory (KB)** settings.
@@ -102,6 +104,9 @@ This behavior is typically observed during the following operations:
 - Columnstore index (re)builds, which use large volumes of memory to perform Hash and Sort operations
 - Backup operations that require large memory buffers
 - Tracing operations that have to store large input parameters
+- Large memory grant requests
+
+If you observe this behavior frequently, consider using [Trace flag 8121](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md#tf8121) to allow the Resource Monitor to clean up more quickly.
 
 ## <a id="changes-to-memory-management-starting-with-"></a> Changes to memory_to_reserve starting with [!INCLUDE [ssSQL11](../includes/sssql11-md.md)]
 

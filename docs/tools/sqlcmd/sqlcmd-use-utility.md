@@ -1,10 +1,10 @@
 ---
-title: sqlcmd - Use the sqlcmd utility
-description: Learn how to use the sqlcmd utility for ad hoc interactive execution of Transact-SQL statements and scripts, and  automate Transact-SQL scripting tasks.
+title: Use sqlcmd
+description: Learn how to use the sqlcmd for ad hoc interactive execution of Transact-SQL statements and scripts, and automate Transact-SQL scripting tasks.
 author: dlevy-msft
 ms.author: dlevy
-ms.reviewer: maghan, randolphwest
-ms.date: 08/15/2023
+ms.reviewer: maghan, randolphwest, mikeray
+ms.date: 09/19/2024
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
@@ -17,21 +17,21 @@ dev_langs:
   - "TSQL"
 monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
-# sqlcmd - use the utility
+# Use sqlcmd
 
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-The **sqlcmd** utility is a command-line utility for ad hoc, interactive execution of Transact-SQL (T-SQL) statements and scripts and for automating T-SQL scripting tasks. To use **sqlcmd** interactively, or to build script files to be run using **sqlcmd**, users must understand T-SQL. The **sqlcmd** utility is typically used in the following ways:
+**sqlcmd** is a command-line utility for ad hoc, interactive execution of Transact-SQL (T-SQL) statements and scripts and for automating T-SQL scripting tasks. To use **sqlcmd** interactively, or to build script files for **sqlcmd**, you should understand T-SQL. You can use **sqlcmd** in various ways. For example:
 
-- Users enter T-SQL statements in a manner similar to working at the command prompt. The results are displayed at the command prompt. To open a Command Prompt window, enter `cmd` in the Windows search box and select **Command Prompt** to open. At the command prompt, type `sqlcmd` followed by a list of options that you want. For a complete list of the options that are supported by **sqlcmd**, see [sqlcmd utility](sqlcmd-utility.md).
+- Enter T-SQL statements from the command prompt. The console returns the results. To open a Command Prompt window, enter `cmd` in the Windows search box and select **Command Prompt** to open. At the command prompt, type `sqlcmd` followed by a list of options that you want. For a complete list of the options that are supported by **sqlcmd**, see [sqlcmd utility](sqlcmd-utility.md).
 
-- Users submit a **sqlcmd** job either by specifying a single T-SQL statement to execute, or by pointing the utility to a text file that contains T-SQL statements to execute. The output is directed to a text file, but can also be displayed at the command prompt.
+- Submit a **sqlcmd** job either by specifying a single T-SQL statement to execute, or by pointing the utility to a text file that contains T-SQL statements to execute. The output is directed to a text file, but can also be displayed at the command prompt.
 
 - [SQLCMD mode](edit-sqlcmd-scripts-query-editor.md) in SQL Server Management Studio (SSMS) Query Editor.
 - SQL Server Management Objects (SMO).
 - SQL Server Agent CmdExec jobs.
 
-## Typically used sqlcmd options
+## Common sqlcmd options
 
 - Server option (`-S`) identifies the instance of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] to which **sqlcmd** connects.
 
@@ -552,10 +552,10 @@ sqlcmd -E -N -C
 
 If the provider specifies `ForceProtocolEncryption = True`, then encryption is enabled even if `Encrypt=No` in the connection string.
 
-## Next steps
+## Related content
 
 - [sqlcmd utility](sqlcmd-utility.md)
-- [Use sqlcmd with Scripting Variables](sqlcmd-use-scripting-variables.md)
+- [sqlcmd - Use with scripting variables](sqlcmd-use-scripting-variables.md)
 - [Edit SQLCMD Scripts with Query Editor](edit-sqlcmd-scripts-query-editor.md)
 - [Manage Job Steps](../../ssms/agent/manage-job-steps.md)
 - [Create a CmdExec Job Step](../../ssms/agent/create-a-cmdexec-job-step.md)

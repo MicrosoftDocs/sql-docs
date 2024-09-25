@@ -1,5 +1,5 @@
 ---
-title: "Memory Management Architecture Guide"
+title: Memory management architecture guide
 description: Learn about memory management architecture in SQL Server, including changes to memory management in previous versions.
 author: rwestMSFT
 ms.author: randolphwest
@@ -47,11 +47,11 @@ One of the primary design goals of all database software is to minimize disk I/O
 
 In a heavily loaded system, some large queries that require a large amount of memory to run can't get the minimum amount of requested memory, and receive a time-out error while waiting for memory resources. To resolve this, increase the [query wait Option](../database-engine/configure-windows/configure-the-query-wait-server-configuration-option.md). For a parallel query, consider reducing the [max degree of parallelism Option](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).
 
-In a heavily loaded system under memory pressure, queries with merge join, sort and bitmap in the query plan can drop the bitmap when the queries don't get the minimum required memory for the bitmap. This can affect the query performance and if the sorting process can't fit in memory, it can increase the usage of worktables in `tempdb` database, causing `tempdb` to grow. To resolve this problem, add physical memory, or tune the queries to use a different and faster query plan.
+In a heavily loaded system under memory pressure, queries with merge join, sort, and bitmap in the query plan can drop the bitmap when the queries don't get the minimum required memory for the bitmap. This can affect the query performance and if the sorting process can't fit in memory, it can increase the usage of worktables in `tempdb` database, causing `tempdb` to grow. To resolve this problem, add physical memory, or tune the queries to use a different and faster query plan.
 
 ### Conventional (virtual) memory
 
-All SQL Server editions support conventional memory on 64-bit platform. The SQL Server process can access virtual address space up to Operating System maximum on x64 architecture (SQL Server Standard Edition supports up to 128 GB). With IA64 architecture, the limit was 7 TB (IA64 not supported in SQL Server 2012 (11.x) and above). See [Memory Limits for Windows](/windows/win32/memory/memory-limits-for-windows-releases) for more information.
+All SQL Server editions support conventional memory on 64-bit platform. The SQL Server process can access virtual address space up to Operating System maximum on x64 architecture (SQL Server Standard Edition supports up to 128 GB). With IA64 architecture, the limit was 7 TB (IA64 not supported in [!INCLUDE [sssql11-md](../includes/sssql11-md.md)] and later versions). See [Memory Limits for Windows](/windows/win32/memory/memory-limits-for-windows-releases) for more information.
 
 ### Address Windows Extensions (AWE) memory
 
@@ -59,13 +59,15 @@ By using [Address Windowing Extensions](/windows/win32/memory/address-windowing-
 
 If LPIM is granted, we strongly recommend that you set **max server memory (MB)** to a specific value, rather than leaving the default of 2,147,483,647 megabytes (MB). For more information, see [Server Memory Server Configuration: Set options manually](../database-engine/configure-windows/server-memory-server-configuration-options.md#manually) and [Lock pages in memory (LPIM)](../database-engine/configure-windows/server-memory-server-configuration-options.md#lock-pages-in-memory-lpim).
 
-If LPIM isn't enabled, SQL Server will switch to using conventional memory and in cases of OS memory exhaustion, and the [MSSQLSERVER_17890] error(errors-events/mssqlserver-17890-database-engine-error.md) might be reported in the error log. The error resembles the following example:
+If LPIM isn't enabled, SQL Server switches to using conventional memory and in cases of OS memory exhaustion, and the [MSSQLSERVER_17890] error(errors-events/mssqlserver-17890-database-engine-error.md) might be reported in the error log. The error resembles the following example:
 
 ```output
 A significant part of SQL Server process memory has been paged out. This may result in a performance degradation. Duration: #### seconds. Working set (KB): ####, committed (KB): ####, memory utilization: ##%.
 ```
 
-## <a id="changes-to-memory-management-starting-2012-11x-gm"></a> Changes to memory management starting with [!INCLUDE [ssSQL11](../includes/sssql11-md.md)]
+<a id="changes-to-memory-management-starting-2012-11x-gm"></a>
+
+## Changes to memory management starting with SQL Server 2012
 
 In older versions of [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)], memory allocation was done using five different mechanisms:
 
@@ -91,11 +93,11 @@ The following table indicates whether a specific type of memory allocation is co
 | Thread stacks memory | No | No |
 | Direct allocations from Windows | No | No |
 
-### SQL Server may commit memory over the max server memory setting
+### SQL Server might commit memory over the max server memory setting
 
 Starting with [!INCLUDE [ssSQL11](../includes/sssql11-md.md)], [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] might allocate more memory than the value specified in the **max server memory (MB)** setting. This behavior can occur when the **Total Server Memory (KB)** value has already reached the **Target Server Memory (KB)** setting, as specified by **max server memory (MB)**. If there's insufficient contiguous free memory to meet the demand of multi-page memory requests (more than 8 KB) because of memory fragmentation, [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] can perform over-commitment instead of rejecting the memory request.
 
-As soon as this allocation is performed, the Resource Monitor background task starts to signal all memory consumers to release the allocated memory, and tries to bring the **Total Server Memory (KB)** value below the **Target Server Memory (KB)** specification. Therefore, [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] memory usage could briefly exceed the **max server memory (MB)** setting. In this situation, the **Total Server Memory (KB)** performance counter reading will exceed the **max server memory (MB)** and **Target Server Memory (KB)** settings.
+As soon as this allocation is performed, the Resource Monitor background task starts to signal all memory consumers to release the allocated memory, and tries to bring the **Total Server Memory (KB)** value below the **Target Server Memory (KB)** specification. Therefore, [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] memory usage could briefly exceed the **max server memory (MB)** setting. In this situation, the **Total Server Memory (KB)** performance counter reading exceeds the **max server memory (MB)** and **Target Server Memory (KB)** settings.
 
 This behavior is typically observed during the following operations:
 
@@ -106,9 +108,11 @@ This behavior is typically observed during the following operations:
 - Tracing operations that have to store large input parameters
 - Large memory grant requests
 
-If you observe this behavior frequently, consider using [Trace flag 8121](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md#tf8121) to allow the Resource Monitor to clean up more quickly.
+If you observe this behavior frequently, consider using [Trace Flag 8121](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md#tf8121) in s[!INCLUDE [sssql19-md](../includes/sssql19-md.md)] to allow the Resource Monitor to clean up more quickly. Starting with [!INCLUDE [sssql22-md](../includes/sssql22-md.md)], this functionality is enabled by default, and the trace flag has no effect.
 
-## <a id="changes-to-memory-management-starting-with-"></a> Changes to memory_to_reserve starting with [!INCLUDE [ssSQL11](../includes/sssql11-md.md)]
+<a id="changes-to-memory-management-starting-with-"></a>
+
+## Changes to memory_to_reserve starting with SQL Server 2012
 
 In older versions of [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)], the [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] memory manager set aside a part of the process virtual address space (VAS) for use by the **Multi-Page Allocator (MPA)**, **CLR Allocator**, memory allocations for **thread stacks** in the SQL Server process, and **Direct Windows allocations (DWA)**. This part of the virtual address space is also known as "Mem-To-Leave" or "non-Buffer Pool" region.
 
@@ -139,21 +143,22 @@ When [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] is using memory dyn
 The following query returns information about currently allocated memory:
 
 ```sql
-SELECT
-  physical_memory_in_use_kb/1024 AS sql_physical_memory_in_use_MB,
-    large_page_allocations_kb/1024 AS sql_large_page_allocations_MB,
-    locked_page_allocations_kb/1024 AS sql_locked_page_allocations_MB,
-    virtual_address_space_reserved_kb/1024 AS sql_VAS_reserved_MB,
-    virtual_address_space_committed_kb/1024 AS sql_VAS_committed_MB,
-    virtual_address_space_available_kb/1024 AS sql_VAS_available_MB,
-    page_fault_count AS sql_page_fault_count,
-    memory_utilization_percentage AS sql_memory_utilization_percentage,
-    process_physical_memory_low AS sql_process_physical_memory_low,
-    process_virtual_memory_low AS sql_process_virtual_memory_low
+SELECT physical_memory_in_use_kb / 1024 AS sql_physical_memory_in_use_MB,
+       large_page_allocations_kb / 1024 AS sql_large_page_allocations_MB,
+       locked_page_allocations_kb / 1024 AS sql_locked_page_allocations_MB,
+       virtual_address_space_reserved_kb / 1024 AS sql_VAS_reserved_MB,
+       virtual_address_space_committed_kb / 1024 AS sql_VAS_committed_MB,
+       virtual_address_space_available_kb / 1024 AS sql_VAS_available_MB,
+       page_fault_count AS sql_page_fault_count,
+       memory_utilization_percentage AS sql_memory_utilization_percentage,
+       process_physical_memory_low AS sql_process_physical_memory_low,
+       process_virtual_memory_low AS sql_process_virtual_memory_low
 FROM sys.dm_os_process_memory;
 ```
 
-### <a id="stacksizes"></a> Stack sizes
+<a id="stacksizes"></a>
+
+### Stack sizes
 
 Memory for thread stacks <sup>1</sup>, CLR <sup>2</sup>, extended procedure .dll files, the OLE DB providers referenced by distributed queries, automation objects referenced in [!INCLUDE [tsql](../includes/tsql-md.md)] statements, and any memory allocated by a non [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] DLL, are *not* controlled by **max server memory (MB)**.
 
@@ -163,8 +168,8 @@ Memory for thread stacks <sup>1</sup>, CLR <sup>2</sup>, extended procedure .dll
 | --- | --- | --- |
 | x86 (32-bit) | x86 (32-bit) | 512 KB |
 | x86 (32-bit) | x64 (64-bit) | 768 KB |
-| x64 (64-bit) | x64 (64-bit) | 2048 KB |
-| IA64 (Itanium) | IA64 (Itanium) | 4096 KB |
+| x64 (64-bit) | x64 (64-bit) | 2,048 KB |
+| IA64 (Itanium) | IA64 (Itanium) | 4,096 KB |
 
 <sup>2</sup> CLR memory is managed under max_server_memory allocations starting with [!INCLUDE [ssSQL11](../includes/sssql11-md.md)].
 
@@ -214,7 +219,7 @@ The **min memory per query** configuration option establishes the minimum amount
 
 ### Memory grant considerations
 
-For *row mode execution*, the initial memory grant can't be exceeded under any condition. If more memory than the initial grant is needed to execute *hash* or *sort* operations, then these spill to disk. A hash operation that spills is supported by a Workfile in `tempdb`, while a sort operation that spills is supported by a [Worktable](../relational-databases/query-processing-architecture-guide.md#worktables).
+For *row mode execution*, the initial memory grant can't be exceeded under any condition. If more memory than the initial grant is needed to execute *hash* or *sort* operations, then the operations spill to disk. A hash operation that spills is supported by a Workfile in `tempdb`, while a sort operation that spills is supported by a [Worktable](../relational-databases/query-processing-architecture-guide.md#worktables).
 
 A spill that occurs during a Sort operation is known as a [Sort Warnings Event Class](event-classes/sort-warnings-event-class.md). Sort warnings indicate that sort operations don't fit into memory. This doesn't include sort operations involving the creation of indexes, only sort operations within a query (such as an `ORDER BY` clause used in a `SELECT` statement).
 
@@ -223,7 +228,7 @@ A spill that occurs during a hash operation is known as a [Hash Warning Event Cl
 - Hash recursion occurs when the build input doesn't fit into available memory, resulting in the split of input into multiple partitions that are processed separately. If any of these partitions still don't fit into available memory, it's split into subpartitions, which are also processed separately. This splitting process continues until each partition fits into available memory or until the maximum recursion level is reached.
 - Hash bailout occurs when a hashing operation reaches its maximum recursion level and shifts to an alternate plan to process the remaining partitioned data. These events can cause reduced performance in your server.
 
-For *batch mode execution*, the initial memory grant can dynamically increase up to a certain internal threshold by default. This dynamic memory grant mechanism is designed to allow memory-resident execution of *hash* or *sort* operations running in batch mode. If these operations still don't fit into memory, then these spill to disk.
+For *batch mode execution*, the initial memory grant can dynamically increase up to a certain internal threshold by default. This dynamic memory grant mechanism is designed to allow memory-resident execution of *hash* or *sort* operations running in batch mode. If these operations still don't fit into memory, then the operations spill to disk.
 
 For more information on execution modes, see the [Query Processing Architecture Guide](../relational-databases/query-processing-architecture-guide.md#execution-modes).
 
@@ -319,7 +324,7 @@ When checksum is enabled, errors caused by power failures and flawed hardware or
 
 ## Understand non-uniform memory access
 
-[!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] is non-uniform memory access (NUMA) aware, and performs well on NUMA hardware without special configuration. As clock speed and the number of processors increase, it becomes increasingly difficult to reduce the memory latency required to use this additional processing power. To circumvent this, hardware vendors provide large L3 caches, but this is only a limited solution. NUMA architecture provides a scalable solution to this problem.
+[!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] is non-uniform memory access (NUMA) aware, and performs well on NUMA hardware without special configuration. As clock speed and the number of processors increase, it becomes increasingly difficult to reduce the memory latency required to use this extra processing power. To circumvent this, hardware vendors provide large L3 caches, but this is only a limited solution. NUMA architecture provides a scalable solution to this problem.
 
 [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] is designed to take advantage of NUMA-based computers without requiring any application changes. For more information, see [Soft-NUMA (SQL Server)](../database-engine/configure-windows/soft-numa-sql-server.md).
 
@@ -334,7 +339,7 @@ Heap allocators, known as *memory objects* in [!INCLUDE [ssNoVersion](../include
 
 However, the use of mutexes can lead to contention if many threads are allocating from the same memory object in a highly concurrent fashion. Therefore, [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] has the concept of partitioned memory objects (PMO) and each partition is represented by a single `CMemThread` object. The partitioning of a memory object is statically defined and can't be changed after creation. As memory allocation patterns vary widely based on aspects like hardware and memory usage, it's impossible to come up with the perfect partitioning pattern upfront.
 
-In most cases, using a single partition will suffice, but in some scenarios this can lead to contention, which can be prevented only with a highly partitioned memory object. It isn't desirable to partition each memory object as more partitions can result in other inefficiencies and increase memory fragmentation.
+In most cases, using a single partition suffices, but in some scenarios this can lead to contention, which can be prevented only with a highly partitioned memory object. It isn't desirable to partition each memory object as more partitions can result in other inefficiencies and increase memory fragmentation.
 
 > [!NOTE]  
 > Before [!INCLUDE [sssql16-md](../includes/sssql16-md.md)], trace flag 8048 could be used to force a node-based PMO to become a CPU-based PMO. Starting with [!INCLUDE [ssSQL14](../includes/sssql14-md.md)] SP2 and [!INCLUDE [sssql16-md](../includes/sssql16-md.md)], this behavior is dynamic and controlled by the engine.

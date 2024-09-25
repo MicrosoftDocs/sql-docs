@@ -63,7 +63,7 @@ Learn about significant changes to the SQL Server on Azure VMs documentation. Fo
 | Changes | Details |
 | --- | --- |
 | **Azure Key Vault Managed Hardware Security Module (HSM) support with Extensible Key Management**| Azure Key Vault Managed HSM is supported for SQL Server and SQL Server on Azure VMs when using the latest version of the SQL Server Connector, as well as Azure SQL. For more information, see [Set up SQL Server TDE Extensible Key Management by using Azure Key Vault](/sql/relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault). |
-|**Automated patching retirement** | The [automated patching](automated-patching.md) feature has been retired and will be removed on September 17th, 2027. Migrate to [Azure Update Manager](../azure-update-manager-sql-vm.md) as soon as possible to continue receiving new updates to the patching feature for your SQL Server on Azure VM and avoid future service disruptions. |
+|**Automated patching retirement** | The [automated patching](automated-patching.md) feature will retire. Currently scheduled for September 17, 2027. Migrate to [Azure Update Manager](../azure-update-manager-sql-vm.md) as soon as possible to continue receiving new updates to the patching feature for your SQL Server on Azure VM and avoid future service disruptions. |
 
 ### August 2024
 

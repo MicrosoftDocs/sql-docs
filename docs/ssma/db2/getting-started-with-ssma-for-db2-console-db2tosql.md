@@ -7,9 +7,10 @@ ms.date: "01/19/2017"
 ms.service: sql
 ms.subservice: ssma
 ms.topic: conceptual
+ms.collection:
+  - sql-migration-content
 ms.custom:
   - intro-get-started
-  - sql-migration-content
 ---
 # Getting Started with SSMA  for DB2 Console (DB2ToSQL)
 This section describes the procedure to launch and get started with the DB2 console application. Also listed, herein, are the conventions used in a typical SSMA Console output window.  

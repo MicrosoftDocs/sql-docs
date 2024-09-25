@@ -78,6 +78,7 @@ After your link is established, and you're ready to migrate, follow these steps 
 1. Stop the workload on the primary SQL Server database so the secondary database on SQL Managed Instance catches up. 
 1. Validate all data has made it over to the secondary database on SQL Managed Instance. 
 1. [Fail over the link](managed-instance-link-failover-how-to.md) to the secondary SQL managed instance by choosing **Planned failover**. 
+1. (For SQL Server 2022 migrations) Check the box to **Remove link after successful failover** to ensure that failover is one way, and the link is removed. 
 1. Cut over the application to connect to the SQL managed instance endpoint. 
 
 ## Validate migration

@@ -4,7 +4,7 @@ description: "Describes how to troubleshoot connectivity to the data processing 
 author: twright-msft
 ms.author: twright
 ms.reviewer: mikeray
-ms.date: 11/21/2023
+ms.date: 09/23/2024
 ms.topic: troubleshooting
 ---
 
@@ -83,9 +83,9 @@ Check for log entries that indicate a problem connecting to the DPS or telemetry
 
 ## Probe web server endpoints
 
-You can use various tools (`Invoke-WebRequest` or `curl`) to probe teh web server endpoints for DPS and telemetry.
+You can use various tools to probe the web server endpoints for DPS and telemetry. For example, `Invoke-WebRequest` or `curl`.
 
-For example:
+The following example uses `Invoke-Webrequest`:
 
 ```PowerShell
 Invoke-WebRequest telemetry.<region>.arcdataservices.com
@@ -159,6 +159,12 @@ resources
     | where uploadStatus !in ('OK') //comment this out to see all upload stats
     | order by uploadStatus desc
 ```
+
+## Find SQL extensions that have not connected to DPS in a long time
+
+Query [Azure Resource Graph](/azure/governance/resource-graph/overview) to find extensions that have not connected to DPS recently.
+
+:::code language="powershell" source="~/../sql-server-samples/samples/features/azure-arc/troubleshooting/hybrid-compute-extension-last-connect.kql":::
 
 ## Error codes
 

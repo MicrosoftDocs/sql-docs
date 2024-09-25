@@ -8,9 +8,10 @@ ms.date: 07/22/2024
 ms.service: sql
 ms.subservice: ssma
 ms.topic: conceptual
+ms.collection:
+  - sql-migration-content
 ms.custom:
   - intro-installation
-  - sql-migration-content
 ---
 
 # Install SSMA for DB2 client (DB2ToSQL)

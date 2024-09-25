@@ -359,8 +359,6 @@
       items:
       - name: Migrate using DMS
         href: /azure/dms/tutorial-sql-server-to-azure-sql?toc=/azure/azure-sql/toc.json
-      - name: Set up SQL Data Sync
-        href: database/sql-data-sync-sql-server-configure.md
     - name: Scale out
       items:
       - name: Configure Hyperscale named replicas
@@ -537,14 +535,19 @@
     - name: SQL Data Sync
       items:
       - name: Overview
+        displayName: SQL Data Sync Overview
         href: database/sql-data-sync-data-sql-server-sql-database.md
+      - name: SQL Data Sync retirement
+        displayName: SQL Data Sync Retirement and migration guidance
+        href: database/sql-data-sync-retirement-migration.md
       - name: Data Sync Agent
         href: database/sql-data-sync-agent-overview.md
       - name: Best practices for Data Sync
         href: database/sql-data-sync-best-practices.md
       - name: Troubleshoot Data Sync
         href: database/sql-data-sync-troubleshoot.md
-
+      - name: Set up SQL Data Sync
+        href: database/sql-data-sync-sql-server-configure.md
     - name: Database sharding
       items:
       - name: Database sharding

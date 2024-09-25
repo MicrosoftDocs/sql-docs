@@ -5,7 +5,7 @@ description: Learn how to connect to Azure SQL Database or SQL Managed Instance 
 author: erinstellato-ms
 ms.author: erinstellato
 ms.reviewer: wiassaf, mathoma
-ms.date: 09/24/2024
+ms.date: 09/25/2024
 ms.service: azure-sql
 ms.subservice: connect
 ms.topic: quickstart
@@ -90,7 +90,7 @@ In SSMS, connect to your server.
    | **Trust server certificate** | Trust Server Certificate | Check this option to bypass server certificate validation. The default value is *False* (unchecked), which promotes better security using trusted certificates. |
    | **Host Name in Certificate** | Host name of the server | The value provided in this option is used to specify a different, but expected, CN or SAN in the server certificate. |
 
-:::image type="content" source="media/connect-query-ssms/connect-to-azure-sql-object-explorer-ssms20.png" alt-text="Screenshot of connection dialog for Azure SQL.":::
+      :::image type="content" source="media/connect-query-ssms/connect-to-azure-sql-object-explorer-ssms20.png" alt-text="Screenshot of connection dialog for Azure SQL.":::
 
 > [!NOTE]
 > This tutorial utilizes Microsoft Entra MFA.

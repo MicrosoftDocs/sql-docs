@@ -64,7 +64,7 @@ For more information, see [Assign Azure roles using the Azure portal](/azure/rol
 
 ### Verify state of user databases
 
-When a SQL Server or instance is enabled by Azure Arc, the connection sets some database permissions so that you can manage databases from Azure. For details about the permissions set at a database level, review [SQL permissions](configure-windows-accounts-agent.md#sql-permissions).
+When a SQL Server instance is enabled by Azure Arc, the connection sets some database permissions so that you can manage databases from Azure. For details about the permissions set at a database level, review [SQL permissions](configure-windows-accounts-agent.md#sql-permissions).
 
 Only databases that are online and updateable are included.
 

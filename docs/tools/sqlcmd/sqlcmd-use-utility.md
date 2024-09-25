@@ -73,13 +73,13 @@ monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >
   sqlcmd -S <ComputerName>\<InstanceName> -i <MyScript.sql> -o <MyOutput.rpt>
   ```
 
-- Connect to the default instance on the local computer by using Windows Authentication, executing a query, and having **sqlcmd** remain running after the query has finished running:
+- Connect to the default instance on the local computer with Windows Authentication, execute a query, and keep **sqlcmd** running after the query finishes:
 
   ```cmd
   sqlcmd -q "SELECT * FROM AdventureWorks2022.Person.Person"
   ```
 
-- Connect to the default instance on the local computer by using Windows Authentication, executing a query, directing the output to a file, and having **sqlcmd** exit after the query has finished running:
+- Connect to the default instance on the local computer with Windows Authentication, execute a query, direct the output to a file, and exit **sqlcmd** after the query finishes:
 
   ```cmd
   sqlcmd -Q "SELECT * FROM AdventureWorks2022.Person.Person" -o MyOutput.txt
@@ -130,7 +130,7 @@ Length: 5" 7'
 
 ## Strings that span multiple lines
 
-**sqlcmd** supports scripts that have strings that span multiple lines. For example, the following `SELECT` statement spans multiple lines but is a single string executed when you press the **Enter** key after typing `GO`.
+**sqlcmd** supports strings that span multiple lines. For example, the following `SELECT` statement spans multiple lines but executes as a single string after you type `GO` and then press **Enter**.
 
 ```sql
 SELECT <First line>

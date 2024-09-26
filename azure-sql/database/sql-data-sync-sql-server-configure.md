@@ -4,7 +4,7 @@ description: This tutorial shows you how to set up SQL Data Sync for Azure
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma, hudequei
-ms.date: 07/19/2024
+ms.date: 09/23/2024
 ms.service: azure-sql-database
 ms.subservice: sql-data-sync
 ms.topic: tutorial
@@ -15,20 +15,20 @@ ms.custom:
 
 [!INCLUDE [appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
+[!INCLUDE [sql-data-sync-retirement](../includes/sql-data-sync-retirement.md)]
+
 In this tutorial, you learn how to set up SQL Data Sync by creating a sync group that contains both Azure SQL Database and SQL Server instances. The sync group is custom configured and synchronizes on the schedule you set.
 
 The tutorial assumes you have at least some prior experience with SQL Database and SQL Server.
 
-For an overview of SQL Data Sync, see [Sync data across cloud and on-premises databases with SQL Data Sync](sql-data-sync-data-sql-server-sql-database.md).
+For an overview of SQL Data Sync, see [What is SQL Data Sync for Azure?](sql-data-sync-data-sql-server-sql-database.md)
 
-For PowerShell examples on how to configure SQL Data Sync, see [How to sync between databases in SQL Database](scripts/sql-data-sync-sync-data-between-sql-databases.md) or [between databases in Azure SQL Database and SQL Server](scripts/sql-data-sync-sync-data-between-azure-onprem.md)
+For PowerShell examples on how to configure SQL Data Sync, see [Use PowerShell to sync data between multiple databases in Azure SQL Database](scripts/sql-data-sync-sync-data-between-sql-databases.md) or [between databases in Azure SQL Database and SQL Server](scripts/sql-data-sync-sync-data-between-azure-onprem.md).
 
-> [!IMPORTANT]
-> The **hub** database is a sync topology's central endpoint, in which a sync group has multiple database endpoints. All other member databases with endpoints in the sync group, sync with the **hub** database.
->
-> Currently, SQL Data Sync is only supported on Azure SQL Database. The **hub** database must be an Azure SQL Database.
->
-> Azure SQL Database Hyperscale is only supported as a member database, not as a **hub** database.
+The **hub** database is a sync topology's central endpoint, in which a sync group has multiple database endpoints. All other member databases with endpoints in the sync group, sync with the **hub** database.
+SQL Data Sync is only supported on Azure SQL Database. The **hub** database must be an Azure SQL Database.
+
+Azure SQL Database Hyperscale is only supported as a member database, not as a **hub** database.
 
 ## Create sync group
 
@@ -42,7 +42,7 @@ For PowerShell examples on how to configure SQL Data Sync, see [How to sync betw
 
 1. On the **Create Data Sync Group** page, configure the following settings:
 
-   :::image type="content" source="media/sql-data-sync-sql-server-configure/create-sync-group.png" alt-text="Screenshot from the Create Data Sync page of the Azure portal, creating a new Sync Metadata Database to use with Automatic Sync.":::
+   :::image type="content" source="media/sql-data-sync-sql-server-configure/create-sync-group.png" alt-text="Screenshot from the Create Data Sync page of the Azure portal, creating a new Sync Metadata Database to use with Automatic Sync." lightbox="media/sql-data-sync-sql-server-configure/create-sync-group.png":::
 
       | Setting                        | Description |
    | ------------------------------ | ------------------------------------------------- |
@@ -50,14 +50,14 @@ For PowerShell examples on how to configure SQL Data Sync, see [How to sync betw
    | **Sync Metadata Database** | Choose to create a database (recommended) or to use an existing database to serve as the **Sync Metadata Database**.<br /><br />Microsoft recommends creating a new, empty database for use as the **Sync Metadata Database**. Data Sync creates tables in this database and runs a frequent workload. This database is shared as the **Sync Metadata Database** for all sync groups in a selected region and subscription. You can't change the database or its name without removing all sync groups and sync agents in the region.<br /><br/> If you choose to create a new database, select **New database**. Select **Configure database settings**. On the **SQL Database** page, name and configure a new Azure SQL Database and select **OK**.<br /><br />If you choose **Use existing database**, select the database from the **Sync Metadata Database** dropdown list. |
    | **Automatic Sync** | Select **On** or **Off**.<br /><br />If you choose **On**, enter a number and select **Seconds**, **Minutes**, **Hours**, or **Days** in the **Sync Frequency** section.<br />The first sync begins after the selected interval period elapses from the time the configuration is saved.|
    | **Conflict Resolution** | Select **Hub win** or **Member win**.<br /><br />**Hub win** means when conflicts occur, data in the hub database overwrites conflicting data in the member database.<br /><br />**Member win** means when conflicts occur, data in the member database overwrites conflicting data in the hub database. |
-   | **Hub Database Username** and **Hub Database Password** | Provide the username and password to the **server admin** SQL authenticated login for the **Hub** database. This is the server admin username and password for the same Azure SQL logical server that you started on. Microsoft Entra (formerly Azure Active Directory) authentication is not currently supported. |
+   | **Hub Database Username** and **Hub Database Password** | Provide the username and password to the **server admin** SQL authenticated login for the **Hub** database. This is the server admin username and password for the same Azure SQL logical server that you started on. Microsoft Entra (formerly Azure Active Directory) authentication is not supported. |
    | **Use private link** | Choose a service managed private endpoint to establish a secure connection between the sync service and the hub database. |
 
 1. Select **OK** and wait for the sync group to be created and deployed.
 
 1. On the **New Sync Group** page, if you selected **Use private link**, you will need to approve the private endpoint connection. The link in the info message will take you to the private endpoint connections experience where you can approve the connection.
 
-   :::image type="content" source="media/sql-data-sync-sql-server-configure/approve-private-link-update.png" alt-text="Screenshot from the Azure portal Private Endpoint connections page, showing where to approve a private link.":::
+   :::image type="content" source="media/sql-data-sync-sql-server-configure/approve-private-link-update.png" alt-text="Screenshot from the Azure portal Private Endpoint connections page, showing where to approve a private link." lightbox="media/sql-data-sync-sql-server-configure/approve-private-link-update.png":::
 
    > [!NOTE]
    > The private links for the sync group and the sync members need to be created, approved, and disabled separately.
@@ -73,7 +73,7 @@ After the new sync group is created and deployed, open the sync group and access
 
 1. In the **Select sync members** section, optionally add a database in Azure SQL Database to the sync group by selecting **Add an Azure Database**. The **Configure Azure Database** page opens.
 
-   :::image type="content" source="media/sql-data-sync-sql-server-configure/step-two-configure.png" alt-text="Screenshot from the Azure portal of the Configure Azure Database page, where you can add a database to the sync group.":::
+   :::image type="content" source="media/sql-data-sync-sql-server-configure/step-two-configure.png" alt-text="Screenshot from the Azure portal of the Configure Azure Database page, where you can add a database to the sync group." lightbox="media/sql-data-sync-sql-server-configure/step-two-configure.png":::
 
 1. On the **Configure Azure SQL Database** page, change the following settings:
 
@@ -235,16 +235,12 @@ This can happen because Azure resources are not allowed to access your server. T
 
 ## Related content
 
-Congratulations! You've created a sync group that includes both an Azure SQL database and a SQL Server database.
-
-For more info about SQL Data Sync, see:
-
 - [What is SQL Data Sync for Azure?](sql-data-sync-data-sql-server-sql-database.md)
-- [Data Sync Agent for Azure SQL Data Sync](sql-data-sync-agent-overview.md)
-- [Best practices](sql-data-sync-best-practices.md)
-- [How to troubleshoot issues with Azure SQL Data Sync](sql-data-sync-troubleshoot.md)
-- [Monitor SQL Data Sync with Azure Monitor logs](./monitor-tune-overview.md)
-- [Update the sync schema with Transact-SQL](sql-data-sync-update-sync-schema.md)
-- [PowerShell](scripts/update-sync-schema-in-sync-group.md)
-- [SQL Database Overview](sql-database-paas-overview.md)
+- [Data Sync Agent for SQL Data Sync](sql-data-sync-agent-overview.md)
+- [Best practices for Azure SQL Data Sync](sql-data-sync-best-practices.md)
+- [Troubleshoot issues with SQL Data Sync](sql-data-sync-troubleshoot.md)
+- [Monitor and performance tuning in Azure SQL Database and Azure SQL Managed Instance](monitor-tune-overview.md)
+- [Automate the replication of schema changes in Azure SQL Data Sync](sql-data-sync-update-sync-schema.md)
+- [Use PowerShell to update the sync schema in an existing sync group](scripts/update-sync-schema-in-sync-group.md)
+- [What is Azure SQL Database?](sql-database-paas-overview.md)
 - [Database Lifecycle Management](/previous-versions/sql/sql-server-guides/jj907294(v=sql.110))

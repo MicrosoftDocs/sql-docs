@@ -20,7 +20,7 @@ You can move the report server databases that you use in an installation of [!IN
 
 [!INCLUDE[SQL Server](../../includes/ssnoversion-md.md)] provides several approaches for moving databases:
 
-- Detach and attach. This approach offers the easiest way to move the report server databases. But you need to take the report server offline while the databases are detached.
+- Detach and attach. This approach offers the easiest way to move the report server databases, but you need to take the report server offline while the databases are detached.
 - Backup and restore. This approach minimizes service disruptions, but you must run Transact-SQL (T-SQL) commands to perform the operations.
 - Copy. Copying the database isn't recommended if you use the Copy Database Wizard. It doesn't preserve permission settings in the database.
 
@@ -41,7 +41,7 @@ Keep the following points in mind when you move report server databases:
   - Schedules are re-created the first time that you restart the report server service.
   - [!INCLUDE[SQL Server](../../includes/ssnoversion-md.md)] agent jobs that are used to trigger a schedule are re-created on the new database instance. You don't have to move the jobs to the new computer, but you might want to delete jobs that are no longer used on the current computer.
   - Subscriptions, cached reports, and snapshots are preserved in the moved database. If a snapshot doesn't pick up refreshed data after you move the database, clear the snapshot options. Then select **Apply** to save your changes, re-create the schedule, and select **Apply** again to save your changes.
-  - Temporary report and user session data that's stored in the temporary database is persisted when you move that database.
+  - Temporary report and user session data that's stored in the temporary database persists when you move that database.
 
 > [!IMPORTANT]
 > The steps in this article are recommended when relocation of the report server database is the only change that you make to the existing installation. When you migrate an entire SSRS installation, you need to reconfigure the connection and reset encryption keys. For example, these steps are required when you move the database and change the identity of the report server Windows service that uses the database.

@@ -69,136 +69,97 @@ The following limitation applies to rectangles: Rectangles in report footers are
 The following limitations apply to report headers and footers:
 
 - Excel headers and footers support a maximum of 256 characters including markup. The rendering extension truncates the string at 256 characters.
-- [!INCLUDE[Reporting Services](../../includes/ssrsnoversion-md.md)] doesn't support margins on report headers and footers. When these margin values are exported to Excel, they're set to zero, and any header or footer that contains multiple rows of data might not print multiple rows, depending on the printer settings.
-- Text boxes in a header or footer maintain their formatting but not their alignment when exported to Excel. This result occurs because leading and trailing spaces are trimmed when the report is rendered to Excel.
+- [!INCLUDE[Reporting Services](../../includes/ssrsnoversion-md.md)] doesn't support margins on report headers and footers. In Excel, these margin values are set to zero.
+- When you print a report that's exported to Excel and a header or footer in the report contains multiple rows of data, you might not see multiple rows in the printout. The rendering depends on your printer settings.
+- Text boxes in a header or footer maintain their formatting but not their alignment when they're exported to Excel. Leading and trailing spaces are trimmed when the report is rendered to Excel, which changes the alignment.
 
-### Merge cells
+### Merged cells
 
-The following limitation applies to merging cells:
+The following limitations apply to merging cells: If cells are merged, text isn't wrapped correctly.
 
-- If cells are merged, word-wrap doesn't work correctly. If any merged cells exist on a row where a text box is rendered with the Auto-Size property, autosize doesn't work.
+The Excel renderer is primarily a layout renderer. Its goal is to replicate the layout of the rendered report as closely as possibly in an Excel worksheet. As a result, cells might be merged in the worksheet to preserve the report layout. Merged cells can cause problems because the sort functionality in Excel requires cells to be merged in a specific way for sorting to work properly. For example, if you want to sort a range of cells, Excel requires each merged cell in the range to have the same size as the other merged cells in the range.
 
-The Excel renderer is primarily a layout renderer. Its goal is to replicate the layout of the rendered report as closely as possibly in an Excel worksheet and so cells might be merged in the worksheet to preserve the report layout. Merged cells can cause problems because the sort functionality in Excel requires cells to be merged in a specific way for sort to work properly. For example, Excel requires that the ranges of merged cells have the same size in order to be sorted.
+Reducing the number of merged cells in your Excel worksheets makes it easier to sort those worksheets. The following points can help you minimize the number of cells that get merged during the export process.
 
-If it's important that reports exported to Excel worksheets can be sorted, then the following information can help you reduce the number of merged cells in your Excel worksheets. This reason is the common cause for difficulties with Excel sort functionality.
-
-- Not aligning items left and right is the most common cause of merged cells. Make sure the left and right edges of all report items line up with one another. Making items align and the same width solves the problem in most cases.
-
-- Although you align all items precisely, you might find in some rare cases that some columns continue to be merged. Internal unit conversion and rounding when the Excel worksheet is rendered causes this outcome. In the report definition language (RDL), you can specify position and size in different measurement units such as inches, pixels, centimeters, and points. Internally the Excel uses points. To minimize conversion and the potential inaccuracy of rounding when converting inches and centimeters to points, consider specifying all measurements in whole points for the most direct results. An inch is 72 points.
+- The most common reason that cells get merged is that items aren't aligned to the left or right. You can usually solve the problem by lining up the left and right edges of all report items and by giving the items the same width.
+- Even when you align all items, some columns still get merged in rare cases. Internal unit conversion and rounding during the rendering process can cause the cells to merge. In the report definition language (RDL), you can specify positions and sizes in various units such as inches, pixels, centimeters, and points. Internally, Excel uses points. As a result, inches and centimeters are converted to points during rendering. To minimize conversion operations during rendering, and the potential inaccuracy of rounding, consider specifying all measurements in whole points. An inch is 72 points.
 
 ### Report row groups and column groups
 
-Reports that include row groups or column groups contain empty cells when exported to Excel. Imagine a report that groups rows on commute distance. Each commute distance can contain more than one customer. The following picture shows the report.
+Reports that include row groups or column groups contain empty cells when you export them to Excel. The following image shows a report that groups rows on commute distance. Each commute distance can contain more than one customer.
 
 :::image type="content" source="media/exporting-to-microsoft-excel-report-builder-and-ssrs/ssrb-excelexportssrs.png" alt-text="Report in the Reporting Services web portal.":::
 
-When the report is exported to Excel, the commute distance appears only in one cell of the Commute Distance column. Depending on the alignment of the text in the report (top, middle, or bottom) the value is in the first, middle, or last cell. The other cells are empty. The Name column that contains customer names has no empty cells. The following picture shows the report after your export to Excel. The red cell borders were added for emphasis. The gray boxes are the empty cells. The red lines and the gray boxes aren't part of the exported report.
+When you export the report to Excel, the commute distance appears only in one cell of the **Commute Distance** column. When you design the report, you can align the text to the top, middle, or bottom of the row group. That alignment determines whether the value is in the first, middle, or last cell in the exported report. The other cells in that column in the group are empty. The **Name** column, which contains customer names, has no empty cells.
+
+The following image shows the report after your export it to Excel. The empty cells are shaded gray in the image, but that shading isn't part of the exported report.
 
 :::image type="content" source="media/exporting-to-microsoft-excel-report-builder-and-ssrs/ssrb-exportedexcellines.png" alt-text="Screenshot of the report exported to Excel, with lines.":::
 
-Reports with row groups or column groups require modification after exporting to Excel and before you can display the exported data in a PivotTable. You must add the group value to cells in which they're missing. Thus, the worksheet becomes a flat table with values in all cells. The following picture shows the updated worksheet.
+After you export a report that contains row groups or column groups to Excel, you need to modify the report before you can display the exported data in a PivotTable. You must add the group value to cells that it's missing from. The worksheet then becomes a flat table with values in all cells. The following image shows the updated worksheet.
 
 :::image type="content" source="media/exporting-to-microsoft-excel-report-builder-and-ssrs/ssrb-excelexportnomatrix.png" alt-text="Screenshot of the report exported to Excel, flattened.":::
 
-So if you create a report for the specific purpose of exporting it to Excel for further analysis of the report data, consider not grouping on rows or columns in your report.
+If you create a report for the specific purpose of exporting it to Excel for further analysis of the report data, consider not grouping on rows or columns in your report.
 
 ## Excel renderer
 
-### Current (.xlsx) Excel file renderer
-
-In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], the default Excel renderer is the version compatible with current (.xlsx) [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] files. This option is the **Excel** option on the **Exporting** menus in the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] web portal and SharePoint list.
-
-When you use the default Excel renderer, instead of the earlier Excel 2003 (.xls) renderer, you can install the Microsoft Office Compatibility Pack for Word, Excel, and PowerPoint. This renderer allows earlier versions of Excel to open the files that are exported.
-
-### Excel 2003 (.xls) renderer
-
-> [!IMPORTANT]  
-> The [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 2003 rendering extension is deprecated. For more information, see [Deprecated features in SQL Server Reporting Services in SQL Server 2016](../../reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs.md).
-
-The earlier version of the Excel renderer, compatible with Excel 2003, is now named Excel 2003 and is listed on menus using that name. The content type of files generated by this renderer is `application/vnd.ms-excel` and the file name extension of files is .xls.
-
-By default, the **Excel 2003** menu option isn't visible. An administrator can make it visible under certain circumstances by updating the `RSReportServer` configuration file. To export reports from [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] using the Excel 2003 renderer, you update the `RSReportDesigner` configuration file.
-
-The **Excel 2003** menu option extension is never visible in the following scenarios:
-
-- Report Builder in disconnected mode and you preview a report in Report Builder. Because the `RSReportServer` configuration file resides on the report server, the tools or products from where you export reports must be connected to a report server to read the configuration file.
-
-- Report Viewer Web Part in local mode and the SharePoint farm isn't integrated with a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report server. For more information, see [Local mode vs. connected mode reports in the Report Viewer (Reporting Services in SharePoint mode)](../../reporting-services/report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md)
-
-If the **Excel 2003** menu option renderer is configured to be visible, both the Excel and Excel 2003 options are available in the following scenarios:
-
-- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] web portal native mode.
-
-- SharePoint site when Reporting Services is installed in SharePoint integrated mode.
-
-- [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] and you preview reports.
-
-- Report Builder connected to a report server.
-
-- The Report Viewer Web Part in remote mode.
-
-The following XML shows the elements for the two Excel rendering extensions in the RSReportServer and RSReportDesigner configuration files:
+The following XML code shows the element for the Excel rendering extension in the RSReportServer and RSReportDesigner configuration files:
 
 `<Extension Name="EXCELOPENXML" Type="Microsoft.ReportingServices.Rendering.ExcelOpenXmlRenderer.ExcelOpenXmlRenderer,Microsoft.ReportingServices.ExcelRendering"/>`
 
-`<Extension Name="EXCEL" Type="Microsoft.ReportingServices.Rendering.ExcelRenderer.ExcelRenderer,Microsoft.ReportingServices.ExcelRendering" Visible="false"/>`
+The Excel renderer has the following properties and values.
 
-The EXCELOPENXML extension defines the Excel renderer for current (.xlsx) Excel files. The EXCEL extension defines the Excel 2003 version. `Visible = "false"` indicates the Excel 2003 renderer is hidden. For more information, see [RsReportServer.config configuration file](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) and [RSReportDesigner configuration file](../../reporting-services/report-server/rsreportdesigner-configuration-file.md).
-
-### Differences between the current (.xlsx) Excel and Excel 2003 renderers
-
-Reports, rendered by using the current (.xlsx) Excel or the Excel 2003 renderers are typically identical and only under rare circumstances do you notice differences between the two formats. The following table compares the Excel and the Excel 2003 renderers.
-
-| Property | Excel 2003 | Current Excel |
-| --- | --- | --- |
-| Maximum columns per worksheet | 256 | 16,384 |
-| Maximum rows per worksheet | 65,536 | 1,048,576 |
-| Number of colors allowed in a worksheet | 56 (palette)<br /><br />If more than 56 colors are used in the report, the rendering extension matches the required color to one of the 56 colors already available in the custom palette. | Approximately 16 million (24-bit color) |
-| ZIP compressed files | None | ZIP compression |
-| Default font family | Arial | Calibri |
-| Default font size | 10 pt | 11 pt |
-| Default row height | 12.75 pt | 15 pt |
+| Property | Value |
+| --- | --- |
+| Maximum columns per worksheet | 16,384 |
+| Maximum rows per worksheet | 1,048,576 |
+| Number of colors allowed in a worksheet | Approximately 16 million (24-bit color) |
+| ZIP compressed files | ZIP compression |
+| Default font family | Calibri |
+| Default font size | 11 pt |
+| Default row height | 15 pt |
 
 Because the report explicitly sets the row height, the default row height affects only rows that are sized automatically upon export to Excel.
 
-## <a id="ReportItemsExcel"></a> Report items in Excel
+## Report items in Excel
 
-Subreports, rectangles, the report body, and data regions are rendered as a range of Excel cells. Text boxes, images, and charts, data bars, sparklines, maps, gauges, and indicators must be rendered within one Excel cell, which might be merged depending on the layout of the rest of the report.
+When you export a report to Excel, the following components are rendered as a range of Excel cells: subreports, rectangles, the report body, and data regions. Text boxes, images, and charts, data bars, sparklines, maps, gauges, and indicators are rendered within one Excel cell. But that cell might get merged with other cells. The layout of the rest of the report determines whether merging occurs.
 
-Images, charts, sparklines, data bars, maps, gauges, indicators, and lines are positioned within one Excel cell but they sit on top of the cell grid. Lines are rendered as cell borders.
+Images, charts, sparklines, data bars, maps, gauges, indicators, and lines are positioned within one Excel cell, but they sit on top of the cell grid. Lines are rendered as cell borders.
 
-Charts, sparklines, data bars, maps, gauges, and indicators are exported as pictures. The data they depict isn't exported with them. The data isn't available in the Excel workbook unless you include it in a column or row in a data region within a report.
+Charts, sparklines, data bars, maps, gauges, and indicators are exported as images. The data they depict isn't exported with them. The data isn't available in the Excel workbook unless you include it in a column or row in a data region within a report.
 
-If you want to work with chart, sparkline, data bar, maps, gauge, and indicator data, export the report to a .csv file or generate Atom-compliant data feeds from the report. For more information, see [Export to a CSV file (Report Builder and SSRS)](../../reporting-services/report-builder/exporting-to-a-csv-file-report-builder-and-ssrs.md) and [Generate data feeds from reports (Report Builder and SSRS)](../../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md).
+If you want to work with data for charts, sparklines, data bars, maps, gauges, and indicators, export the report to a CSV file or generate Atom-compliant data feeds from the report. For more information, see [Export to a CSV file (Report Builder and SSRS)](../../reporting-services/report-builder/exporting-to-a-csv-file-report-builder-and-ssrs.md) and [Generate data feeds from reports (Report Builder and SSRS)](../../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md).
 
 ## Page size
 
-The Excel rendering extension uses the page height and width settings to determine what paper setting to define in the Excel worksheet. Excel tries to match the `PageHeight` and `PageWidth` property settings to one of the most common paper sizes.
+The Excel rendering extension uses the page height and width settings to determine the paper settings of the Excel worksheet. Excel tries to match the `PageHeight` and `PageWidth` property settings to one of the most common paper sizes.
 
-If no matches are found, Excel uses the default page size for the printer. Orientation is set to **Portrait** if the page width is less than the page height; otherwise, orientation is set to **Landscape**.
+If no matches are found, Excel uses the default page size for the printer. The orientation is set to `Portrait` if the page width is less than the page height. Otherwise, the orientation is set to `Landscape`.
 
-## <a id="WorksheetTabNames"></a> Worksheet tab names
+## Worksheet tab names
 
-When you export a report to Excel, page breaks create the report pages and those pages are exported to different worksheets. If you provided an initial page name for the report, each worksheet of the Excel workbook has this name by default. The name appears on the worksheet tab. However, since each worksheet in a workbook must have a unique name, an integer starting at 1 and incremented by 1 is appended to the initial page name for each worksheet. For example, if the initial page name is **Sales Report by Fiscal Year**, the second worksheet would be named **Sales Report by Fiscal Year1**, the third one **Sales Report by Fiscal Year2**, and so forth.
+When you export a report to Excel, page breaks create the report pages, and each page is exported to a different worksheet. If you provide an initial page name for the report, the first worksheet of the Excel workbook has this name. Because each worksheet in a workbook must have a unique name, an integer starting at 2 and incremented by 1 is appended to the page name for each worksheet. For example, if the initial page name is **Sales Report by Fiscal Year**, the second worksheet is named **Sales Report by Fiscal Year (2)**. The third one is named **Sales Report by Fiscal Year (3)**, and so on.
 
-If all report pages created by page breaks provide new page names, each worksheet has the associated page name. However, these page names might not be unique. If page names aren't unique, the worksheets are named the same way as initial page names. For example, if the page name of two groups is **Sales for NW**, one worksheet tab has the name **Sales for NW**, and the other **Sales for NW1**.
+If all report pages that are created by page breaks provide new page names, each worksheet has the associated page name. But if these page names aren't unique, the worksheets are named the same way as the initial page names. For example, if the page name of two groups is **Sales for NW**, one worksheet tab has the name **Sales for NW**, and the other **Sales for NW (2)**.
 
-If the report doesn't provide an initial page name, or page names related to page breaks, the worksheet tabs have the default names **Sheet1**, **Sheet2**, and so forth.
+If the report doesn't provide an initial page name or page names for page breaks, the worksheet tabs have the default names **Sheet1**, **Sheet2**, and so on.
 
-Reporting Services provides properties to set on reports, data regions, groups, and rectangles. These properties help you create reports that can be exported to Excel in a way that you want. For more information, see [Pagination in Reporting Services (Report Builder and SSRS)](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md).
+Reporting Services provides properties that you can set for reports, data regions, groups, and rectangles. These properties help you create reports that you can export to Excel in a way that you want. For more information, see [Pagination in Reporting Services (Report Builder and SSRS)](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md).
 
-## <a id="DocumentProperties"></a> Document properties
+## Document properties
 
 The Excel renderer writes the following metadata to the Excel file.
 
-| Report Element properties | Description |
+| Report element properties | Description |
 | --- | --- |
 | Created | Date and time of report execution as an ISO date/time value. |
 | Author | Report.Author |
 | Description | Report.Description |
 | LastSaved | Date and time of report execution as an ISO date/time value. |
 
-## <a id="PageHeadersFooters"></a> Page headers and footers
+## Page headers and footers
 
 Depending on the Device Information `SimplePageHeaders` setting, the page header can be rendered in two ways: the page header can be rendered at the top of each worksheet cell grid, or in the actual Excel worksheet header section. By default, the header is rendered to the cell grid on the Excel worksheet.
 

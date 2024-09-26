@@ -221,7 +221,7 @@ The Developer edition continues to support only 1 client for [[!INCLUDE [ssNoVer
 | Dynamic data masking | Yes | Yes | Yes | Yes | Yes |
 | Server audit | Yes | Yes | Yes | Yes | Yes |
 | Database audit | Yes | Yes | Yes | Yes | Yes |
-| Transparent data encryption (TDE) | Yes | Yes | Yes | No | No |
+| Transparent data encryption (TDE) | Yes | Yes | No | No | No |
 | Extensible key management (EKM) | Yes | Yes | No | No | No |
 | User-defined roles | Yes | Yes | Yes | Yes | Yes |
 | Contained databases | Yes | Yes | Yes | Yes | Yes |

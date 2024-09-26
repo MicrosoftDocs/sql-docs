@@ -7,14 +7,16 @@ ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-server
 ms.topic: how-to
-ms.custom:
-  - updatefrequency5
+ms.custom: updatefrequency5
 helpviewer_keywords:
   - "backing up encryption keys [Reporting Services]"
   - "restoring encryption keys [Reporting Services]"
   - "encryption keys [Reporting Services]"
   - "symmetric keys [Reporting Services]"
-  - "backing up encryption keys [Reporting Services]", "restoring encryption keys [Reporting Services]", "encryption keys [Reporting Services]", "symmetric keys [Reporting Services]"
+  - "backing up encryption keys [Reporting Services]"
+  - "restoring encryption keys [Reporting Services]"
+  - "encryption keys [Reporting Services]"
+  - "symmetric keys [Reporting Services]"
 # customer intent: As a SQL Server system administrator, I want to ensure the security and recoverability of my SSRS encryption keys so that I can maintain the integrity and availability of encrypted data within my report server environment.
 ---
 # Back up and restore SQL Server Reporting Services (SSRS) encryption keys

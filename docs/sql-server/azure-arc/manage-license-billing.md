@@ -3,8 +3,8 @@ title: Manage licensing and billing
 description: This article explains how to manage SQL Server licensing options. It also demonstrates how SQL Server enabled by Azure Arc can be billed from Microsoft Azure.
 author: anosov1960
 ms.author: sashan
-ms.reviewer: mikeray, randolphwest
-ms.date: 09/09/2024
+ms.reviewer: mikeray, randolphwest, maghan
+ms.date: 09/25/2024
 ms.topic: conceptual
 ---
 
@@ -24,7 +24,7 @@ The diagrams in the list use normalized cores (NCs) to illustrate the cost impli
 
   The following diagram illustrates this licensing method and the cost implications.
 
-  :::image type="content" source="media/billing/virtual-core-licensing.svg" alt-text="Diagram that illustrates the virtual core licensing option.":::
+  :::image type="content" source="media/manage-license-billing/virtual-core-licensing.svg" alt-text="Diagram that illustrates the virtual core licensing option.":::
 
 - [License by physical cores (p-cores) without virtual machines](#license-pcores-without-vms)
 
@@ -32,7 +32,7 @@ The diagrams in the list use normalized cores (NCs) to illustrate the cost impli
 
   The following diagram illustrates the cost implications of deploying two Standard instances on a physical host without using VMs.
 
-  :::image type="content" source="media/billing/physical-core-licensing-without-vms.svg" alt-text="Diagram that illustrates physical core licensing without using virtual machines.":::
+  :::image type="content" source="media/manage-license-billing/physical-core-licensing-without-vms.svg" alt-text="Diagram that illustrates physical core licensing without using virtual machines.":::
 
 - [License by physical cores with unlimited virtualization](#unlimited-virtualization)
 
@@ -40,7 +40,7 @@ The diagrams in the list use normalized cores (NCs) to illustrate the cost impli
 
   The following diagram illustrates the cost implications of licensing a physical host and using unlimited virtualization.
 
-  :::image type="content" source="media/billing/physical-core-licensing-with-vms.svg" alt-text="Diagram that illustrates physical core licensing with unlimited virtualization.":::
+  :::image type="content" source="media/manage-license-billing/physical-core-licensing-with-vms.svg" alt-text="Diagram that illustrates physical core licensing with unlimited virtualization.":::
 
 For each of these options, you have to decide how you want to pay for the license. The following table shows your payment options:
 
@@ -54,7 +54,7 @@ For each of these options, you have to decide how you want to pay for the licens
 
 <sup>2</sup> You own a perpetual license or use a Server+CAL license.
 
-Your choice of payment option might affect your outsourcing options. For more information, see the [service-specific terms](https://www.microsoft.com/licensing/terms/productoffering/MicrosoftAzure/eaeas#ServiceSpecificTerms) and the [Flexible Virtualization Benefit licensing guide (download link)](https://wwlpdocumentsearch.blob.core.windows.net/prodv2/Licensing_guide_PLT_Flexible_Virtualization_Benefit_Nov2022.pdf).
+Your choice of payment option might affect your outsourcing options. For more information, see the [service-specific terms](https://www.microsoft.com/licensing/terms/productoffering/MicrosoftAzure/eaeas#ServiceSpecificTerms) and the [Flexible Virtualization Benefit licensing guide](https://www.microsoft.com/licensing/docs/view/Virtualization).
 
 For information about licensing your non-production or test SQL Server instances through Azure Arc, see the [Manage SQL Server licensed for non-production use](manage-license-billing.md#non-production-licensing) section later in this article.
 
@@ -97,8 +97,8 @@ In addition to billing differences, the license type determines what features ar
 
 [!INCLUDE [license-types](includes/license-types.md)]
 
-> [!NOTE]
->
+> [!NOTE]  
+>  
 > - The license type is a required parameter when you install Azure Extension for SQL Server. Each supported onboarding method includes the license type options.
 > - [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] allows you to select the license type during setup. See [Install SQL Server from the Installation Wizard](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md#azure-extension-for-sql-server-2022).
 

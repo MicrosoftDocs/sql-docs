@@ -21,8 +21,7 @@ This tutorial explains how to configure SQL Server availability groups with HPE 
 
 Refer to [HPE Serviceguard Clusters](https://h20195.www2.hpe.com/v2/GetPDF.aspx/c04154488.pdf) for an overview of the HPE Serviceguard clusters.
 
-> [!NOTE]  
->  
+> [!NOTE]
 > Microsoft supports data movement, the availability group, and the SQL Server components. Contact HPE for support related to the documentation of HPE Serviceguard cluster and quorum management.
 
 This tutorial consists of the following tasks:
@@ -159,14 +158,14 @@ At this point, the primary SQL Server replica has a certificate at `/var/opt/mss
 
 For example, on the source server, the following command copies the files to the target machine. Replace the `node2` values with the name of the host running the secondary SQL Server instance. Copy the certificate on the configuration only replica as well and run the below commands on that node as well.
 
-```cpp
+```bash
 cd /var/opt/mssql/data
 scp dbm_certificate.* root@<node2>:/var/opt/mssql/data/
 ```
 
 Now on the secondary VMs running the secondary instance and the configuration only replica of SQL Server, run the below commands so that the `mssql` user can own the copied certificate:
 
-```cpp
+```bash
 cd /var/opt/mssql/data
 chown mssql:mssql dbm_certificate.*
 ```

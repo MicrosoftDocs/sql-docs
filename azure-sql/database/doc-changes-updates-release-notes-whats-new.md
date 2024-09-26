@@ -6,7 +6,7 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma, randolphwest
 ms.service: azure-sql-database
-ms.date: 09/18/2024
+ms.date: 09/26/2024
 ms.subservice: service-overview
 ms.topic: whats-new
 ms.custom:
@@ -89,6 +89,7 @@ Learn about significant changes to the Azure SQL Database documentation. For pre
 
 | Changes | Details |
 | --- | --- |
+| **Cross-subscription geo-replica support in the Azure portal** | You can now use Azure portal to setup active geo-replication across subscriptions, as long as both the subscriptions are in the same Microsoft Entra ID tenant. For more information, see [Tutorial: Configure active geo-replication and failover (Azure SQL Database)](active-geo-replication-configure-portal.md).|
 | **SQL Insights (preview) retirement**| [SQL Insights (preview) will be retired on 31 December 2024](https://azure.microsoft.com/updates/v2/sql-insights-retirement). We recommend that you transition to [database watcher for Azure SQL (preview)](../database-watcher-overview.md) or another database monitoring solution by that date. |
 | **Hyperscale elastic pools GA** | Manage and scale multiple Hyperscale databases in Azure SQL Database by using [Hyperscale elastic pools](hyperscale-elastic-pool-overview.md). Hyperscale elastic pools also support Premium-series hardware and zone redundancy. For more information, see [Hyperscale Elastic Pools are now generally available](https://aka.ms/hsep-ga). |
 | **Hyperscale elastic pool maintenance window support** |You can configure a non-default [maintenance window](maintenance-window.md) for a [Hyperscale elastic pool](hyperscale-elastic-pool-overview.md). For more information, read [Blog: Maintenance window support for Azure SQL Database Hyperscale elastic pools](https://aka.ms/hsep-fmw). |

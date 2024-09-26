@@ -3,11 +3,12 @@ title: "Refresh Data in Replication Monitor"
 description: "Refresh Data in Replication Monitor"
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/04/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: how-to
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "refreshing data"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
@@ -38,7 +39,6 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
   
 2.  In the **Subscription \<SubscriptionName>** detail window, click **Action**, and then click **Auto Refresh**. The refresh rate is determined by the **Refresh rate** setting in the **Publisher Settings** dialog box.  
   
-## See Also  
- [Monitoring Replication](../../../relational-databases/replication/monitor/monitoring-replication.md)  
-  
-  
+## Related content
+
+- [Monitoring Replication](../../../relational-databases/replication/monitor/monitoring-replication.md)

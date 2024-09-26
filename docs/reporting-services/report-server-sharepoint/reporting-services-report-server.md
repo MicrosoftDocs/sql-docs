@@ -3,11 +3,12 @@ title: "Comparing native and SharePoint Reporting Services report servers"
 description: Learn about the central piece of a SQL Server Reporting Services installation, which consists of a processing engine and extensions to add functionality.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 06/10/2019
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-server-sharepoint
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 
 # Comparing native and SharePoint Reporting Services report servers
@@ -141,12 +142,11 @@ A Reporting Services report server runs in one of two deployment modes; Native m
 
 ## Related content
 
-[Reporting Services extensions](../../reporting-services/extensions/reporting-services-extensions.md)   
-[Reporting Services tools](../../reporting-services/tools/reporting-services-tools.md)   
-[Subscriptions and delivery &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
-[Report server database &#40;SSRS Native Mode&#41;](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)   
-[Implementing a security extension](../../reporting-services/extensions/security-extension/implementing-a-security-extension.md)   
-[Implementing a data processing extension](../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)   
-[Data sources supported by Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)   
-
-More questions? [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)
+- [Reporting Services extensions](../../reporting-services/extensions/reporting-services-extensions.md)
+- [Reporting Services tools](../../reporting-services/tools/reporting-services-tools.md)
+- [Subscriptions and delivery &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)
+- [Report server database &#40;SSRS Native Mode&#41;](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)
+- [Implementing a security extension](../../reporting-services/extensions/security-extension/implementing-a-security-extension.md)
+- [Implementing a data processing extension](../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)
+- [Data sources supported by Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)
+- [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)

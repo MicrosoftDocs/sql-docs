@@ -3,11 +3,12 @@ title: "Enable a report server for Power BI Mobile access"
 description: Learn how to connect the Power BI Mobile app to Reporting Services to consume Mobile Reports. Mobile Reports are a feature of Native Mode.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 12/17/2015
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-server
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 # Enable a report server for Power BI Mobile access
 You can use the Power BI Mobile app to consume Mobile Reports. There are a few things that you need to configure to allow the Power BI Mobile app to connect to Reporting Services.  
@@ -39,15 +40,6 @@ For more information on how to configure the Windows Firewall, see [Configure a 
 
 ## Related content
 
-[Configure basic authentication on the report server](../../reporting-services/security/configure-windows-authentication-on-the-report-server.md)  
-[Configure TLS connections on a native mode report server](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)  
-[Configure a firewall for report server access](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)  
-
-
-  
-  
-  
-  
-  
-  
-
+- [Configure basic authentication on the report server](../../reporting-services/security/configure-windows-authentication-on-the-report-server.md)
+- [Configure TLS connections on a native mode report server](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)
+- [Configure a firewall for report server access](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)

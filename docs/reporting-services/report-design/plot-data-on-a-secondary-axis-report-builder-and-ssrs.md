@@ -3,11 +3,12 @@ title: "Plot data on a secondary axis in a paginated report"
 description: Find out about the uses for the secondary axis type in a paginated report for comparing two distinct data ranges in Report Builder.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 05/30/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 
 # Plot data on a secondary axis in a paginated report (Report Builder)
@@ -31,9 +32,8 @@ The paginated report chart has two axis types: primary and secondary. The second
   
 2.  Click **Axes and Chart Area**, and select which of the secondary axes you want to enable, the value axis or the category axis.  
 
-## Next steps
+## Related content
 
-[Formatting Axis Labels on a Chart](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
-[Specify an Axis Interval](../../reporting-services/report-design/specify-an-axis-interval-report-builder-and-ssrs.md)  
-
-More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)
+- [Formatting Axis Labels on a Chart](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)
+- [Specify an Axis Interval](../../reporting-services/report-design/specify-an-axis-interval-report-builder-and-ssrs.md)
+- [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

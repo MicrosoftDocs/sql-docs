@@ -3,11 +3,12 @@ title: "Run replication maintenance jobs (SSMS)"
 description: Learn how to start and stop replication maintenance jobs in SQL Server management Studio (SSMS).
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/14/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: how-to
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "jobs [SQL Server replication]"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
@@ -66,9 +67,8 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
   
 4.  In the **Job Properties - \<Job>** dialog box, modify any properties if necessary, and then click **OK**.  
   
-## See Also  
- [Start and Stop a Replication Agent &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md)   
- [View Information and Perform Tasks for a Publisher &#40;Replication Monitor&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)   
- [Replication Agent Administration](../../../relational-databases/replication/agents/replication-agent-administration.md)  
-  
-  
+## Related content
+
+- [Start and Stop a Replication Agent &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md)
+- [View Information and Perform Tasks for a Publisher &#40;Replication Monitor&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)
+- [Replication Agent Administration](../../../relational-databases/replication/agents/replication-agent-administration.md)

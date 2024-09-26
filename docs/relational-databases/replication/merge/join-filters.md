@@ -3,11 +3,12 @@ title: "Join Filters"
 description: "Join Filters"
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/07/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "filters [SQL Server replication], join"
   - "publications [SQL Server replication], join filters"
@@ -79,8 +80,7 @@ SalesOrderHeader.SalesOrderID = SalesOrderDetail.SalesOrderID
   
      It is strongly recommended that all such logic be expressed in a join filter rather than a subquery. If your application requires a row filter to use a subsquery, ensure that the subquery only references lookup data that does not change.  
   
-## See Also  
- [Filter Published Data for Merge Replication](../../../relational-databases/replication/merge/filter-published-data-for-merge-replication.md)   
- [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)  
-  
-  
+## Related content
+
+- [Filter Published Data for Merge Replication](../../../relational-databases/replication/merge/filter-published-data-for-merge-replication.md)
+- [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)

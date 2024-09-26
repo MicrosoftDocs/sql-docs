@@ -4,7 +4,7 @@ description: "An introduction to the concepts that are central for configuring a
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest, vanto
-ms.date: 09/23/2024
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: availability-groups
 ms.topic: conceptual

@@ -3,11 +3,12 @@ title: "Grouping pane"
 description: Learn about the Grouping pane on the Report menu in Reporting Services that displays the row groups and column groups for the currently selected Tablix data region.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/07/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: tools
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 f1_keywords:
   - "sql13.rtp.rptdesigner.group.f1"
 helpviewer_keywords:
@@ -71,8 +72,8 @@ To edit the default values, you must select the group member in the Row or Colum
   
 -   **(Static)** Indicates a static member with no header cell, known as a hidden static.  
   
-## Related content  
- [Tables, matrices, and lists &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [Expressions &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
- [Filter, group, and sort data &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
-  
+## Related content
+
+- [Tables, matrices, and lists &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)
+- [Expressions &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)
+- [Filter, group, and sort data &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)

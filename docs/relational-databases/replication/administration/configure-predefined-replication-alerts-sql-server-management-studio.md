@@ -3,11 +3,12 @@ title: "Configure predefined Replication alerts (SSMS)"
 description: Learn how to configure predefined replication alerts using SQL Server Management Studio (SSMS).
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/14/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: how-to
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "alerts [SQL Server replication]"
   - "predefined replication alerts [SQL Server replication]"
@@ -77,6 +78,6 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
   
 5.  Click **Close**.  
   
-## See Also  
- [Use Alerts for Replication Agent Events](../../../relational-databases/replication/agents/use-alerts-for-replication-agent-events.md)  
-  
+## Related content
+
+- [Use Alerts for Replication Agent Events](../../../relational-databases/replication/agents/use-alerts-for-replication-agent-events.md)

@@ -3,11 +3,12 @@ title: "Document Outline window"
 description: Learn about the Document Outline window where you view the hierarchy of report items in a report.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 05/31/2016
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: tools
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 f1_keywords:
   - "sql13.rtp.rptdesigner.documentoutline.f1"
 ---

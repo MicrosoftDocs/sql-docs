@@ -3,11 +3,12 @@ title: "Work with Replication Agent Profiles"
 description: "Work with Replication Agent Profiles"
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/14/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: how-to
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "replication [SQL Server], agents and profiles"
   - "replication agent profiles [SQL Server]"
@@ -281,12 +282,11 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ##  <a name="FollowUp"></a> Follow Up: After Changing Agent Parameters  
 Agent parameter changes take effect the next time the agent is started. If the agent runs continuously, you must stop and restart the agent. Starting with SQL Server 2017 CU3, some agent parameter changes take effect without having to restart the Agents. 
   
-## See Also  
- [Replication Agent Profiles](../../../relational-databases/replication/agents/replication-agent-profiles.md)   
- [Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md)   
- [Replication Log Reader Agent](../../../relational-databases/replication/agents/replication-log-reader-agent.md)   
- [Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md)   
- [Replication Merge Agent](../../../relational-databases/replication/agents/replication-merge-agent.md)   
- [Replication Queue Reader Agent](../../../relational-databases/replication/agents/replication-queue-reader-agent.md)  
-  
-  
+## Related content
+
+- [Replication Agent Profiles](../../../relational-databases/replication/agents/replication-agent-profiles.md)
+- [Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md)
+- [Replication Log Reader Agent](../../../relational-databases/replication/agents/replication-log-reader-agent.md)
+- [Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md)
+- [Replication Merge Agent](../../../relational-databases/replication/agents/replication-merge-agent.md)
+- [Replication Queue Reader Agent](../../../relational-databases/replication/agents/replication-queue-reader-agent.md)

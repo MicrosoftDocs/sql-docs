@@ -3,11 +3,12 @@ title: "Drillthrough, drilldown, subreports, and nested data regions in a pagina
 description: Organize data in a paginated report to show the relationship of the general to the detailed and then display the data in a subreport or a separate drillthrough report.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/07/2023
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 # Drillthrough, drilldown, subreports, and nested data regions in a paginated report (Report Builder)
 
@@ -92,7 +93,6 @@ ms.custom: updatefrequency5
  [Specifying Paths to External Items &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/specifying-paths-to-external-items-report-builder-and-ssrs.md)  
  Explains how to refer to items that are external to the report definition file.  
   
-## See Also  
- [Report Parameters &#40;Report Builder and Report Designer&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)  
-  
-  
+## Related content
+
+- [Report Parameters &#40;Report Builder and Report Designer&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)

@@ -3,11 +3,12 @@ title: "MSSQL_ENG014144"
 description: "MSSQL_ENG014144"
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/14/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "MSSQL_ENG014144 error"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
@@ -36,8 +37,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
   
 2.  Execute [sp_dropsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md) in the publication database to drop subscriptions.  
 
-## See Also  
- [Errors and Events Reference &#40;Replication&#41;](../../relational-databases/replication/errors-and-events-reference-replication.md)   
- [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)  
-  
-  
+## Related content
+
+- [Errors and Events Reference &#40;Replication&#41;](../../relational-databases/replication/errors-and-events-reference-replication.md)
+- [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)

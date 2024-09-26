@@ -3,11 +3,12 @@ title: "Synchronize subscription (Windows Synchronization Manager)"
 description: Learn how to synchronize subscriptions using the Windows Synchronization Manager.
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/14/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: how-to
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "synchronization [SQL Server replication], Windows Synchronization Manager"
   - "Windows Synchronization Manager"
@@ -110,7 +111,6 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 > [!NOTE]  
 >  Edits are only applied if they are part of the row that is chosen for resolution. For example, if you make edits under **Publisher**, and then click **Accept Subscriber**, the edits are discarded.  
   
-## See Also  
- [Interactive Conflict Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-interactive-resolution.md)  
-  
-  
+## Related content
+
+- [Interactive Conflict Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-interactive-resolution.md)

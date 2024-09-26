@@ -3,11 +3,12 @@ title: "Tutorial: Map report (Report Builder)"
 description: Learn about map features you can use to display data on a geographic background in a Reporting Services paginated report.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 08/31/2016
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: reporting-services
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 # Tutorial: Map report (Report Builder)
 In this [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] tutorial, you learn about map features you can use to display data on a geographic background in an [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] paginated report. 
@@ -530,14 +531,14 @@ If you save it to a report server, you can view it there.
 
 :::image type="content" source="../reporting-services/media/report-builder-map-in-portal.png" alt-text="Screenshot that shows the completed Report Builder map displayed in the portal.":::
   
-## Next step
-You successfully completed the tutorial for how to add a map to your report.  
-  
-For more information, see [Maps in a paginated report (Report Builder)](../reporting-services/report-design/maps-report-builder-and-ssrs.md).  
-  
 ## Related content
 
-- [Report Builder tutorials](../reporting-services/report-builder-tutorials.md)  
-- [Report Builder in SQL Server](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
-- [Map Wizard and Map Layer Wizard &#40;Report Builder and SSRS&#41;](../reporting-services/report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)  
-- [Vary polygon, line, and point display in a paginated report by rules and analytical data (Report Builder)](../reporting-services/report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md)  
+- [Report Builder tutorials](../reporting-services/report-builder-tutorials.md)
+- [Report Builder in SQL Server](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)
+- [Map Wizard and Map Layer Wizard &#40;Report Builder and SSRS&#41;](../reporting-services/report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)
+- [Vary polygon, line, and point display in a paginated report by rules and analytical data (Report Builder)](../reporting-services/report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md)
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Maps in a paginated report (Report Builder)](../reporting-services/report-design/maps-report-builder-and-ssrs.md)

@@ -3,11 +3,12 @@ title: "Enable and disable My Reports"
 description: Learn how to enable and disable the My Reports feature in Reporting Services. My Reports provides storage in the report server database for users.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/01/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-server
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "deactivated My Reports folder"
   - "folders [Reporting Services], My Reports"
@@ -42,8 +43,7 @@ helpviewer_keywords:
   
  If you do activate My Reports, the report server creates a **My Reports** folder for every user with a domain account who selects the **My Reports** link, even if the user doesn't want or need a **My Reports** folder. There's no systematic way to determine which folders are being used. You must review the folders manually to see whether they contain anything.  
   
-## Related content  
- [Secure My Reports](../../reporting-services/security/secure-my-reports.md)   
- [Report server content management &#40;SSRS native mode&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)  
-  
-  
+## Related content
+
+- [Secure My Reports](../../reporting-services/security/secure-my-reports.md)
+- [Report server content management &#40;SSRS native mode&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)

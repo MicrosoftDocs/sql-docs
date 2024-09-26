@@ -3,11 +3,12 @@ title: "Windows application log"
 description: Learn how to view event messages in the application log. The report server applications that run on the local system generate the messages.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/01/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-server
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "Windows application logs [Reporting Services]"
   - "logs [Reporting Services], Windows application logs"
@@ -40,7 +41,6 @@ helpviewer_keywords:
 |Failure Audit|An event that is logged when a sign in attempt fails.|  
   
 ## Related content
- [Reporting Services log files and sources](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)   
- [Errors and events reference &#40;Reporting Services&#41;](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
-  
-  
+
+- [Reporting Services log files and sources](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)
+- [Errors and events reference &#40;Reporting Services&#41;](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)

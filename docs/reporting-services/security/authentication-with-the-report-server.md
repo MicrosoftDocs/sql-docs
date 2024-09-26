@@ -3,19 +3,19 @@ title: "Authentication in a report server"
 description: Learn how you can authenticate users and client applications against your report server by using configurable options.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 06/19/2024
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: security
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "connections [Reporting Services], configuring"
   - "connections [Reporting Services], accounts"
   - "Windows authentication [Reporting Services]"
   - "authentication [Reporting Services]"
   - "Forms authentication"
-
-#customer intent: As a Reporting Services administrator, I want to learn how to authenticate users and client applications against my report server so that I can secure my data and limit access to entities I trust.
+# customer intent: As a Reporting Services administrator, I want to learn how to authenticate users and client applications against my report server so that I can secure my data and limit access to entities I trust.
 ---
 
 # Authentication in a report server
@@ -57,9 +57,8 @@ The Report Server web service and the [!INCLUDE[ssRSWebPortal](../../includes/ss
 Background processing doesn't accept requests from end-users, but it does authenticate all requests for unattended execution purposes. It always uses Windows authentication and it authenticates requests using the Report Server service or the unattended execution account if authentication is configured.
 
 ## Related content
-  
+
 - [Configure Windows authentication on the report server](../../reporting-services/security/configure-windows-authentication-on-the-report-server.md)
 - [Configure Basic authentication on the report server](../../reporting-services/security/configure-basic-authentication-on-the-report-server.md)
-- [Configure custom or forms authentication on the report server](../../reporting-services/security/configure-custom-or-forms-authentication-on-the-report-server.md)  
-
-More questions? [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user).
+- [Configure custom or forms authentication on the report server](../../reporting-services/security/configure-custom-or-forms-authentication-on-the-report-server.md)
+- [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)

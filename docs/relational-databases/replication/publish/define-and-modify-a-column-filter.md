@@ -3,11 +3,12 @@ title: "Define and Modify a Column Filter"
 description: "Define and Modify a Column Filter"
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/14/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: how-to
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "filters [SQL Server replication], column"
   - "modifying filters, column"
@@ -129,9 +130,8 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
   
  :::code language="sql" source="../codesnippet/tsql/define-and-modify-a-colu_2.sql":::
   
-## See Also  
- [Change Publication and Article Properties](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
- [Filter Published Data](../../../relational-databases/replication/publish/filter-published-data.md)   
- [Filter Published Data for Merge Replication](../../../relational-databases/replication/merge/filter-published-data-for-merge-replication.md)  
-  
-  
+## Related content
+
+- [Change Publication and Article Properties](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)
+- [Filter Published Data](../../../relational-databases/replication/publish/filter-published-data.md)
+- [Filter Published Data for Merge Replication](../../../relational-databases/replication/merge/filter-published-data-for-merge-replication.md)

@@ -3,11 +3,12 @@ title: "Add or remove margins from a paginated report chart"
 description: Add or remove margins from a column or scatter chart in Report Builder. Improve readability or appearance of paginated reports.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/03/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 # Add or remove margins from a paginated report chart (Report Builder)
 
@@ -33,9 +34,9 @@ For Column and Scatter chart types in paginated reports, the chart automatically
 1.  Select **OK**.
   
 ## Related content
- [Format axis labels on a chart &#40;Report Builder&#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
- [Axis Properties dialog, axis options &#40;Report Builder&#41;](/previous-versions/sql/)   
- [Specify an axis interval &#40;Report Builder&#41;](../../reporting-services/report-design/specify-an-axis-interval-report-builder-and-ssrs.md)   
- [Format axis labels as dates or currencies &#40;Report Builder&#41;](../../reporting-services/report-design/format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
- [Charts &#40;Report Builder&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
-  
+
+- [Format axis labels on a chart &#40;Report Builder&#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)
+- [Axis Properties dialog, axis options &#40;Report Builder&#41;](/previous-versions/sql/)
+- [Specify an axis interval &#40;Report Builder&#41;](../../reporting-services/report-design/specify-an-axis-interval-report-builder-and-ssrs.md)
+- [Format axis labels as dates or currencies &#40;Report Builder&#41;](../../reporting-services/report-design/format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)
+- [Charts &#40;Report Builder&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)

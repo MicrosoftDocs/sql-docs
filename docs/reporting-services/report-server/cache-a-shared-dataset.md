@@ -3,11 +3,12 @@ title: "Cache a shared dataset"
 description: Learn how to schedule the expiration of a cached shared dataset in Report Manager. Caching shared datasets improves performance.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/01/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-server
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 # Cache a shared dataset
   One way to improve performance is to configure caching properties for a shared dataset. When a shared dataset is cached, a copy of the query results is saved for a specified period of time. The first user who requests a report that uses the shared dataset must wait for the query results and all processing to complete before viewing the report. Subsequent users who request the report within the caching period experiences improved performance because the query and processing already occurred. You can also specify a cache refresh plan to run the query and cache the results until the specified cache expiration.  
@@ -35,6 +36,6 @@ ms.custom: updatefrequency5
   
 1.  Select **Apply**.  
   
-## Related content  
- [Manage shared datasets](../../reporting-services/report-data/manage-shared-datasets.md)  
-  
+## Related content
+
+- [Manage shared datasets](../../reporting-services/report-data/manage-shared-datasets.md)

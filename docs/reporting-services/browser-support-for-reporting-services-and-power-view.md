@@ -3,11 +3,12 @@ title: "Browser support for Reporting Services and Power View"
 description: Learn about what browser versions are supported for managing and viewing SQL Server Reporting Services, the ReportViewer Controls and Power View.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 05/01/2023
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: reporting-services
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "displaying reports"
   - "scripts [Reporting Services], requirements"
@@ -149,10 +150,9 @@ The following is the current list of browsers supported for the web portal.
 
 ## Related content
 
-- [Find and view reports in the web portal](report-builder/finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)  
-- [Reporting Services tools](../reporting-services/tools/reporting-services-tools.md)  
-- [Web portal (SSRS Native Mode)](./web-portal-ssrs-native-mode.md)  
-- [HTML Viewer and the report toolbar](../reporting-services/html-viewer-and-the-report-toolbar.md)  
-- [URL Access parameter reference](../reporting-services/url-access-parameter-reference.md)  
-
-More questions? [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)
+- [Find and view reports in the web portal](report-builder/finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)
+- [Reporting Services tools](../reporting-services/tools/reporting-services-tools.md)
+- [Web portal (SSRS Native Mode)](./web-portal-ssrs-native-mode.md)
+- [HTML Viewer and the report toolbar](../reporting-services/html-viewer-and-the-report-toolbar.md)
+- [URL Access parameter reference](../reporting-services/url-access-parameter-reference.md)
+- [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)

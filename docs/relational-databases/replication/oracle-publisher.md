@@ -3,11 +3,12 @@ title: "Oracle Publisher"
 description: "Oracle Publisher"
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/14/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 f1_keywords:
   - "sql13.rep.newpubwizard.selectoraclepublisher.f1"
 ---
@@ -30,8 +31,6 @@ f1_keywords:
 > [!NOTE]  
 >  If the server against which the wizard is running has not yet been configured as a Distributor, you are prompted to configure it now.  
   
-## See Also  
- [Create a Publication from an Oracle Database](../../relational-databases/replication/publish/create-a-publication-from-an-oracle-database.md)   
+## Related content
 
-  
-  
+- [Create a Publication from an Oracle Database](../../relational-databases/replication/publish/create-a-publication-from-an-oracle-database.md)

@@ -3,11 +3,12 @@ title: "Configure the web portal to pass custom authentication cookies"
 description: "Configure the web portal to pass custom authentication cookies"
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 04/18/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: security
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "authentication [Reporting Services]"
   - "extensions [Reporting Services], custom security"
@@ -37,8 +38,8 @@ To enable other cookies to be transmitted through HTTP requests by using the web
   
 ## Related content
 
-[Authentication with the report server](../../reporting-services/security/authentication-with-the-report-server.md)   
-[RsReportServer.config configuration file](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
-[Security extensions overview](../../reporting-services/extensions/security-extension/security-extensions-overview.md)   
-[Configure and administer a report server &#40;SSRS Native Mode&#41;](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)  
-More questions? [Try the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)
+- [Authentication with the report server](../../reporting-services/security/authentication-with-the-report-server.md)
+- [RsReportServer.config configuration file](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)
+- [Security extensions overview](../../reporting-services/extensions/security-extension/security-extensions-overview.md)
+- [Configure and administer a report server &#40;SSRS Native Mode&#41;](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)
+- [Try the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)

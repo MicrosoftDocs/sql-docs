@@ -3,11 +3,12 @@ title: "Reporting Services roles-tasks vs. SharePoint groups-permissions"
 description: "Reporting Services roles-tasks vs. SharePoint groups-permissions"
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/07/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: security
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "permissions [Reporting Services], SharePoint integrated mode"
   - "security [Reporting Services], tasks"
@@ -106,9 +107,9 @@ helpviewer_keywords:
 |View shared schedules|System|Open Items.|  
   
 ## Related content
- [Set permissions for report server items on a SharePoint site &#40;Reporting Services in SharePoint integrated mode&#41;](../../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)   
- [Set permissions for report server operations in a SharePoint web application](../../reporting-services/security/set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md)   
- [Grant permissions on report server items on a SharePoint site](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
- [Role definitions](../../reporting-services/security/role-definitions.md)   
- [Predefined roles](../../reporting-services/security/role-definitions-predefined-roles.md)  
-  
+
+- [Set permissions for report server items on a SharePoint site &#40;Reporting Services in SharePoint integrated mode&#41;](../../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)
+- [Set permissions for report server operations in a SharePoint web application](../../reporting-services/security/set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md)
+- [Grant permissions on report server items on a SharePoint site](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)
+- [Role definitions](../../reporting-services/security/role-definitions.md)
+- [Predefined roles](../../reporting-services/security/role-definitions-predefined-roles.md)

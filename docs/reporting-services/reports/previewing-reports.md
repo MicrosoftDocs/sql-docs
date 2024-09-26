@@ -3,11 +3,12 @@ title: Preview Reports
 description: Learn how to preview reports in SQL Server Reporting Services before publishing to a production environment.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 12/14/2018
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: reports
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 # Preview Reports in SQL Server Reporting Services (SSRS)
 
@@ -41,9 +42,9 @@ ms.custom: updatefrequency5
 
  You can also test reports by publishing them to a test server, browse to the report  and preview. Publishing a report to a test server is the same as publishing to a production server. For information about publishing a report, see [Publishing Reports to a Report Server](../../reporting-services/reports/publishing-reports-to-a-report-server.md).  
   
-## Next steps
+## Related content
 
- - [Print Reports &#40;Report Builder and SSRS&#41;](../../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md)
- - [Print a Report &#40;Report Builder and SSRS&#41;](../../reporting-services/report-builder/print-a-report-report-builder-and-ssrs.md)
- - [Publish Reports](/previous-versions/sql/sql-server-2016/ms159615(v=sql.130))
- - [Using Custom Assemblies with Reports](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)
+- [Print Reports &#40;Report Builder and SSRS&#41;](../../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md)
+- [Print a Report &#40;Report Builder and SSRS&#41;](../../reporting-services/report-builder/print-a-report-report-builder-and-ssrs.md)
+- [Publish Reports](/previous-versions/sql/sql-server-2016/ms159615(v=sql.130))
+- [Using Custom Assemblies with Reports](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)

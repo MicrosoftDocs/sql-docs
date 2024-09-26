@@ -3,11 +3,12 @@ title: "Host a report server database in a SQL Server failover cluster"
 description: "Host a report server database in a SQL Server failover cluster"
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/30/2016
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-server
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 # Host a report server database in a SQL Server failover cluster
 
@@ -20,5 +21,4 @@ ms.custom: updatefrequency5
 ## Related content
 
 - [Report server database &#40;SSRS native mode&#41;](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)
-- [Create a report server database &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)  
-  
+- [Create a report server database &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)

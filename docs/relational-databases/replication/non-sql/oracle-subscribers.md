@@ -3,11 +3,12 @@ title: "Oracle Subscribers"
 description: "Oracle Subscribers"
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/14/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: how-to
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "data types [SQL Server replication], non-SQL Server Subscribers"
   - "Oracle Subscribers [SQL Server replication]"
@@ -135,8 +136,7 @@ helpviewer_keywords:
 |**varchar(max)**|CLOB|  
 |**xml**|NCLOB|  
   
-## See Also  
- [Non-SQL Server Subscribers](../../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)   
- [Subscribe to Publications](../../../relational-databases/replication/subscribe-to-publications.md)  
-  
-  
+## Related content
+
+- [Non-SQL Server Subscribers](../../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)
+- [Subscribe to Publications](../../../relational-databases/replication/subscribe-to-publications.md)

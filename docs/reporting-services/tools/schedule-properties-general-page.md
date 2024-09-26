@@ -3,11 +3,12 @@ title: "Schedule properties (General page)"
 description: Learn about the options for viewing or modifying a shared schedule on the Reporting Services page in SQL Server Management Studio.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 06/11/2016
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: tools
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 f1_keywords:
   - "sql13.swb.reportserver.scheduleproperties.general.f1"
 ---
@@ -55,11 +56,9 @@ f1_keywords:
  **Once**  
  Specifies a schedule that runs only once, on a specific date and time.  
   
-## Related content  
- [Report Server in Management Studio F1 Help](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
- [Connect to a report server in Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
- [Create, modify, and delete schedules](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md)   
- [Schedules](../../reporting-services/subscriptions/schedules.md)  
-  
-  
+## Related content
 
+- [Report Server in Management Studio F1 Help](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)
+- [Connect to a report server in Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)
+- [Create, modify, and delete schedules](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md)
+- [Schedules](../../reporting-services/subscriptions/schedules.md)

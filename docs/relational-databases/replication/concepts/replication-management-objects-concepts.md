@@ -3,11 +3,12 @@ title: "Replication Management Objects Concepts"
 description: "Replication Management Objects Concepts"
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "11/08/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: "reference"
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "replication [SQL Server], RMO"
   - "programming interfaces [SQL Server replication]"
@@ -183,8 +184,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
   
  [!code-cs[HowTo#rmo_ChangeTranPub_cached](../../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_changetranpub_cached)]  
   
-## See Also  
- [Replication System Stored Procedures Concepts](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
- [Replication Programming Concepts](../../../relational-databases/replication/concepts/replication-programming-concepts.md)  
-  
-  
+## Related content
+
+- [Replication System Stored Procedures Concepts](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)
+- [Replication Programming Concepts](../../../relational-databases/replication/concepts/replication-programming-concepts.md)

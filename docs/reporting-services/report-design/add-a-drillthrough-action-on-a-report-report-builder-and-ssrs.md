@@ -3,11 +3,12 @@ title: "Add a drillthrough action on a paginated report"
 description: Improve query performance with the addition of a drillthrough action link in a text box, an image, or data points on a chart.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 08/30/2022
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 # Add a drillthrough action on a paginated report (Report Builder)
 
@@ -54,8 +55,8 @@ ms.custom: updatefrequency5
   
 1.  To test the link, run the report and select the report item that you set this link on.  
   
-## Related content  
- [Action Properties dialog&#40;Report Builder&#41;](./add-a-hyperlink-to-a-url-report-builder-and-ssrs.md)   
- [Format data points on a chart &#40;Report Builder&#41;](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
- [Show ToolTips on a series &#40;Report Builder&#41;](../../reporting-services/report-design/show-tooltips-on-a-series-report-builder-and-ssrs.md)  
-  
+## Related content
+
+- [Action Properties dialog&#40;Report Builder&#41;](./add-a-hyperlink-to-a-url-report-builder-and-ssrs.md)
+- [Format data points on a chart &#40;Report Builder&#41;](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)
+- [Show ToolTips on a series &#40;Report Builder&#41;](../../reporting-services/report-design/show-tooltips-on-a-series-report-builder-and-ssrs.md)

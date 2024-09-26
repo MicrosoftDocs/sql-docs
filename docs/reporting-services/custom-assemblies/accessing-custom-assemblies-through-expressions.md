@@ -3,11 +3,12 @@ title: "Accessing custom assemblies through expressions"
 description: After you create a custom assembly, learn how to access classes in your custom assembly by using report expressions.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/04/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: custom-assemblies
 ms.topic: reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "expressions [Reporting Services], custom assemblies"
   - "static member calls"
@@ -45,7 +46,6 @@ helpviewer_keywords:
     =Code.m_myDollarCoversion.ToEUR(Fields!StandardCost.Value)  
     ```  
   
-## Related content  
- [Using Custom Assemblies with Reports](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)  
-  
-  
+## Related content
+
+- [Using Custom Assemblies with Reports](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)

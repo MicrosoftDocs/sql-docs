@@ -3,11 +3,12 @@ title: "Customize the Parameters pane in a paginated report"
 description: Learn how to customize the Parameters pane when creating paginated reports with parameters in Report Builder.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 06/15/2020
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 # Customize the parameters pane in a paginated report (Report Builder)
 
@@ -86,7 +87,6 @@ Then the first column is not rendered during runtime because the entire column i
 For reports that were authored before SQL Server Reporting Services 2016, a default parameter layout grid of 2 columns and N rows will be used during runtime. To change the default layout, open the report in Microsoft Report Builder and save the report. After saving the report, the customized parameter layout information will be saved to the .rdl file.
 
 
-## See also
- [Report Parameters &#40;Report Builder and Report Designer&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)
+## Related content
 
-
+- [Report Parameters &#40;Report Builder and Report Designer&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)

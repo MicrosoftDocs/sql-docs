@@ -3,11 +3,12 @@ title: "Specify how changes are propagated (Transactional)"
 description: Learn how to specify how change are propagated for a Transactional Publication in SQL Server.
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/14/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "transactional replication, propagation methods"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
@@ -207,7 +208,6 @@ end
 go  
 ```  
   
-## See Also  
- [Article Options for Transactional Replication](../../../relational-databases/replication/transactional/article-options-for-transactional-replication.md)  
-  
-  
+## Related content
+
+- [Article Options for Transactional Replication](../../../relational-databases/replication/transactional/article-options-for-transactional-replication.md)

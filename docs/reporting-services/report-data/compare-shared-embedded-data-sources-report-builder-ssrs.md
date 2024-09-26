@@ -3,11 +3,12 @@ title: "Compare shared and embedded  data sources - Report Builder & Reporting S
 description: "Compare shared and embedded data sources - Report Builder & Reporting Services (SSRS)"
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 11/18/2019
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-data
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 # Compare shared and embedded data sources - Report Builder & Reporting Services (SSRS)
 
@@ -41,11 +42,10 @@ You can connect to data with either a shared or an embedded data source. A *shar
 |Required for shared datasets||![Available](../../reporting-services/report-data/media/greencheck.gif "Available")|  
 |Required for components||![Available](../../reporting-services/report-data/media/greencheck.gif "Available")|  
 
-## Next steps
+## Related content
 
-[Create and Manage Shared Data Sources](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)   
-[Create and Modify Embedded Data Sources](../../reporting-services/report-data/create-and-modify-embedded-data-sources.md)   
-[Set Deployment Properties](../../reporting-services/tools/set-deployment-properties-reporting-services.md)   
-[Specify Credential and Connection Information for Report Data Sources](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
-
-More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)
+- [Create and Manage Shared Data Sources](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)
+- [Create and Modify Embedded Data Sources](../../reporting-services/report-data/create-and-modify-embedded-data-sources.md)
+- [Set Deployment Properties](../../reporting-services/tools/set-deployment-properties-reporting-services.md)
+- [Specify Credential and Connection Information for Report Data Sources](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)
+- [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

@@ -3,11 +3,12 @@ title: "GenerateDatabaseRightsScript method (WMI MSReportServer_ConfigurationSet
 description: "GenerateDatabaseRightsScript method (WMI MSReportServer_ConfigurationSetting)"
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/14/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: wmi-provider-library-reference
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "GenerateDatabaseRightsScript method"
 apilocation: "reportingservices.mof"
@@ -106,6 +107,5 @@ When *IsWindowsUser* is **true**, the WMI provider determines whether the report
  **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## Related content
- [MSReportServer_ConfigurationSetting members](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
-  
-  
+
+- [MSReportServer_ConfigurationSetting members](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)

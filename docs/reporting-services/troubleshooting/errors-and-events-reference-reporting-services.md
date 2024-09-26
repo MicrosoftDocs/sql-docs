@@ -3,11 +3,12 @@ title: "Errors and events reference (Reporting Services)"
 description: View the ID, type, category, source, and description for different report server events. These events include error, warning, and information types.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 06/12/2019
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: troubleshooting
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 
 # Errors and events reference (Reporting Services)
@@ -56,5 +57,5 @@ The following report server events are recorded in the [!INCLUDE[msCoName](../..
   
 ## Related content
 
- [Monitor Reporting Services subscriptions](../../reporting-services/subscriptions/monitor-reporting-services-subscriptions.md)  
- [Reporting Services log files and sources](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)
+- [Monitor Reporting Services subscriptions](../../reporting-services/subscriptions/monitor-reporting-services-subscriptions.md)
+- [Reporting Services log files and sources](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)

@@ -3,11 +3,12 @@ title: "Process large reports"
 description: Find out how to run large reports properly in Report Server by following configuration, rendering, deployment, and distribution recommendations.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 06/10/2019
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-server
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "report processing [Reporting Services], large reports"
   - "page breaks [Reporting Services]"
@@ -60,9 +61,10 @@ helpviewer_keywords:
   
  If you want to use e-mail report delivery, configure the subscription to include a link. Avoid sending the report as an attachment.  
   
-## Related content  
- [Subscriptions and delivery &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
- [Set report processing properties](../../reporting-services/report-server/set-report-processing-properties.md)   
- [Specify credential and connection information for report data sources](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
- [Report server content management &#40;SSRS native mode&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
- [Preload the cache (SSRS)](../../reporting-services/report-server/preload-the-cache-report-manager.md)
+## Related content
+
+- [Subscriptions and delivery &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)
+- [Set report processing properties](../../reporting-services/report-server/set-report-processing-properties.md)
+- [Specify credential and connection information for report data sources](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)
+- [Report server content management &#40;SSRS native mode&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)
+- [Preload the cache (SSRS)](../../reporting-services/report-server/preload-the-cache-report-manager.md)

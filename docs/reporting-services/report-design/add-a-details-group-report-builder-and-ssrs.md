@@ -3,11 +3,12 @@ title: "Add a details group to a paginated report"
 description: Find out about adding a details group to an existing tablix data region. Also how to display the detail data for a matrix in Report Builder.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/01/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 # Add a details group to a paginated report (Report Builder)
 
@@ -32,13 +33,12 @@ In a paginated report, the detail data from a report dataset is specified as a g
   
      A new details group is added as a child group in the Grouping pane, and the row handle for the group you selected in step 1 displays the details group icon. For more information about handles, see [Tablix data region cells, rows, and columns &#40;Report Builder&#41;](../../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md).  
   
-## Related content 
- [Add or delete a group in a data region &#40;Report Builder&#41;](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)   
- [Understand groups &#40;Report Builder&#41;](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md)   
- [Tablix data region &#40;Report Builder&#41;](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)   
- [Tables &#40;Report Builder&#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md) 
- [Matrices &#40;Report Builder&#41;](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)   
- [Lists &#40;Report Builder&#41;](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)      
- [Tables, matrices, and lists &#40;Report Builder&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
-  
-  
+## Related content
+
+- [Add or delete a group in a data region &#40;Report Builder&#41;](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)
+- [Understand groups &#40;Report Builder&#41;](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md)
+- [Tablix data region &#40;Report Builder&#41;](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)
+- [Tables &#40;Report Builder&#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)
+- [Matrices &#40;Report Builder&#41;](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)
+- [Lists &#40;Report Builder&#41;](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)
+- [Tables, matrices, and lists &#40;Report Builder&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)

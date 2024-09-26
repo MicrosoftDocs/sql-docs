@@ -3,11 +3,12 @@ title: "Browse for report parts and set a default folder (Report Builder)"
 description: Learn how to add existing report parts, such as tables and charts, to your report from the Report Part Gallery in Report Builder.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/01/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 # Browse for report parts and set a default folder (Report Builder)
 
@@ -57,7 +58,8 @@ The easiest way to create a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversio
   
  You don't need to restart Report Builder for this setting to take effect.  
   
-## Related content  
- [Report parts &#40;Report Builder&#41;](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)   
- [Report parts and datasets in Report Builder](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)   
- [Publish and republish report parts &#40;Report Builder&#41;](../../reporting-services/report-design/publish-and-republish-report-parts-report-builder-and-ssrs.md)
+## Related content
+
+- [Report parts &#40;Report Builder&#41;](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)
+- [Report parts and datasets in Report Builder](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)
+- [Publish and republish report parts &#40;Report Builder&#41;](../../reporting-services/report-design/publish-and-republish-report-parts-report-builder-and-ssrs.md)

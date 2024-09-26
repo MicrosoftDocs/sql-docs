@@ -3,11 +3,12 @@ title: "Edit a data alert in Alert Designer"
 description: Learn how to edit a data alert. You can edit data alerts by accessing them from the Data Alert Manager.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 07/02/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: reporting-services
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "editing, data alerts"
   - "updating, data alerts"
@@ -50,7 +51,6 @@ You open the data alert definition that you want to edit from Data Alert Manager
 
 ## Related content
 
-- [Data Alert Manager for alerting administrators](../reporting-services/data-alert-manager-for-alerting-administrators.md)   
-- [Reporting Services data alerts](../reporting-services/reporting-services-data-alerts.md)  
-
-More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)
+- [Data Alert Manager for alerting administrators](../reporting-services/data-alert-manager-for-alerting-administrators.md)
+- [Reporting Services data alerts](../reporting-services/reporting-services-data-alerts.md)
+- [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

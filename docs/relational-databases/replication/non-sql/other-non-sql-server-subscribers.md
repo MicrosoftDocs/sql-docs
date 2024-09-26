@@ -3,11 +3,12 @@ title: "Other Non-SQL Server Subscribers"
 description: "Other Non-SQL Server Subscribers"
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/08/2016"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "non-SQL Server Subscribers, other types"
 ---
@@ -106,7 +107,6 @@ helpviewer_keywords:
   
  For more information about the OLE DB provider, see the documentation supplied with your OLE DB provider.  
   
-## See Also  
- [Non-SQL Server Subscribers](../../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)  
-  
-  
+## Related content
+
+- [Non-SQL Server Subscribers](../../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)

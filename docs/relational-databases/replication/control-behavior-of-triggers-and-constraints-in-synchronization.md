@@ -3,11 +3,12 @@ title: "Control behavior of triggers & constraints in synchronization"
 description: Learn how to prevent triggers from executing or constraints from being enforced during the synchronization of a SQL Server Replication Publication.
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/16/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: how-to
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "identities [SQL Server replication]"
   - "constraints [SQL Server], replication"
@@ -34,7 +35,6 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
   
 1.  When creating a new CHECK or FOREIGN KEY constraint, specify CHECK NOT FOR REPLICATION option in the constraint definition of [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md).  
   
-## See Also  
- [Create Tables &#40;Database Engine&#41;](../../relational-databases/tables/create-tables-database-engine.md)  
-  
-  
+## Related content
+
+- [Create Tables &#40;Database Engine&#41;](../../relational-databases/tables/create-tables-database-engine.md)

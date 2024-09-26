@@ -3,11 +3,12 @@ title: "Treemap and sunburst charts in a paginated report in SQL Server Reportin
 description: Discover how to visually represent hierarchical data in a paginated report using a treemap or sunburst chart in Report Builder.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 04/26/2019
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 
 # Treemap and sunburst charts in a paginated report in SQL Server Reporting Services (Report Builder)
@@ -168,12 +169,9 @@ The query returns AdventureWorks sales order detail data with sales territory, p
   
      For more information about creating a dataset, see [Create a shared dataset or embedded dataset &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md).  
   
-## See also
+## Related content
 
-* [Shared dataset design view &#40;Report Builder&#41;](../../reporting-services/report-builder/shared-dataset-design-view-report-builder.md)
-
-* [Show ToolTips on a series &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/show-tooltips-on-a-series-report-builder-and-ssrs.md)
-
-* [Tutorial: Treemaps in Power BI](https://support.powerbi.com/knowledgebase/articles/556200-tutorial-treemaps-in-power-bi)
-
-* [Treemap: Microsoft Research Data Visualization Apps for Office](https://research.microsoft.com/projects/msrdatavis/treemap.aspx)
+- [Shared dataset design view &#40;Report Builder&#41;](../../reporting-services/report-builder/shared-dataset-design-view-report-builder.md)
+- [Show ToolTips on a series &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/show-tooltips-on-a-series-report-builder-and-ssrs.md)
+- [Tutorial: Treemaps in Power BI](https://support.powerbi.com/knowledgebase/articles/556200-tutorial-treemaps-in-power-bi)
+- [Treemap: Microsoft Research Data Visualization Apps for Office](https://research.microsoft.com/projects/msrdatavis/treemap.aspx)

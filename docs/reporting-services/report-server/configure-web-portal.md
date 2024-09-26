@@ -3,11 +3,12 @@ title: "Configure the web portal"
 description: Learn how to configure the web portal application and used to view reports. Also, learn how to manage report server content and grant user access to a native mode report server.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 05/10/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-server
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "the web portal [Reporting Services], configuring"
 ---
@@ -84,13 +85,12 @@ You can create a custom brand package to alter the colors used for the web porta
 
 ## Related content
 
-[Web portal](../../reporting-services/web-portal-ssrs-native-mode.md)  
-[Browser Support for Reporting Services](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)
-[Configure a URL](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
-[Verify a Reporting Services installation](../../reporting-services/install-windows/verify-a-reporting-services-installation.md)   
-[Turn Reporting Services features on or off](../../reporting-services/report-server/turn-reporting-services-features-on-or-off.md)   
-[Manage a Reporting Services native mode report server](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)   
-[RsReportServer.config configuration file](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
-[Configure a native mode report server for local administration](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)
-
- More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)
+- [Web portal](../../reporting-services/web-portal-ssrs-native-mode.md)
+- [Browser Support for Reporting Services](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)
+- [Configure a URL](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)
+- [Verify a Reporting Services installation](../../reporting-services/install-windows/verify-a-reporting-services-installation.md)
+- [Turn Reporting Services features on or off](../../reporting-services/report-server/turn-reporting-services-features-on-or-off.md)
+- [Manage a Reporting Services native mode report server](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)
+- [RsReportServer.config configuration file](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)
+- [Configure a native mode report server for local administration](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)
+- [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

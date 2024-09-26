@@ -3,11 +3,12 @@ title: "Add a gauge to a paginated report"
 description: Learn how to summarize data in a paginated report in a visual format. Summarize the data in Report Builder by creating a gauge data region.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/01/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 # Add a gauge to a paginated report (Report Builder)
 
@@ -37,7 +38,6 @@ ms.custom: updatefrequency5
      Right-click the gauge scale, and select **Scale Properties**. Enter a value for the **Minimum** and **Maximum** of the scale. For more information, see [Set a minimum or maximum on a gauge &#40;Report Builder&#41;](../../reporting-services/report-design/set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs.md).  
   
 ## Related content
- [Nested data regions &#40;Report Builder&#41;](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md)   
- [Gauges &#40;Report Builder&#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)  
-  
-  
+
+- [Nested data regions &#40;Report Builder&#41;](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md)
+- [Gauges &#40;Report Builder&#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)

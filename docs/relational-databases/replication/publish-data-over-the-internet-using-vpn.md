@@ -3,11 +3,12 @@ title: "Publish Data over the Internet Using VPN"
 description: "Publish Data over the Internet Using VPN"
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/14/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: how-to
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "VPNs [SQL Server replication]"
   - "Web publishing [SQL Server replication], VPNs"
@@ -27,7 +28,6 @@ helpviewer_keywords:
   
  For more information about setting up a VPN, see the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows documentation.  
   
-## See Also  
- [Replication over the Internet](../../relational-databases/replication/replication-over-the-internet.md)  
-  
-  
+## Related content
+
+- [Replication over the Internet](../../relational-databases/replication/replication-over-the-internet.md)

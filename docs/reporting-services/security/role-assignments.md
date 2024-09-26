@@ -3,11 +3,12 @@ title: "Role assignments"
 description: "Role assignments"
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 05/07/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: security
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "users [Reporting Services]"
   - "roles [Reporting Services]"
@@ -79,7 +80,7 @@ When you add a user to a group that already has a role assignment, you must rese
 
 ## Related content
 
- [Create, delete, or modify a role &#40;Management Studio&#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)    
- [Modify or delete a role assignment &#40; SSRS web portal &#41;](../../reporting-services/security/role-assignments-modify-or-delete.md)    
- [Set permissions for report server items on a SharePoint site &#40;Reporting Services in SharePoint integrated mode&#41;](../../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)    
- [Grant permissions on a native mode report server](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)    
+- [Create, delete, or modify a role &#40;Management Studio&#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)
+- [Modify or delete a role assignment &#40; SSRS web portal &#41;](../../reporting-services/security/role-assignments-modify-or-delete.md)
+- [Set permissions for report server items on a SharePoint site &#40;Reporting Services in SharePoint integrated mode&#41;](../../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)
+- [Grant permissions on a native mode report server](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)

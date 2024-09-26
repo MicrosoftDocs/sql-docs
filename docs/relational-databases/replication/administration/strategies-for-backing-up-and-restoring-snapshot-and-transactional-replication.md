@@ -3,11 +3,12 @@ title: "Strategies for Backing Up and Restoring Snapshot and Transactional Repli
 description: Learn about considerations for designing a backup and restore strategy for snapshot and transactional replication in SQL Server.
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/14/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: how-to
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "backups [SQL Server replication], snapshot replication"
   - "restoring [SQL Server replication], transactional replication"
@@ -348,13 +349,12 @@ Transactional replication includes using the **sync with backup** option, which 
   
 2.  Make sure that the database is consistent with the publication database with regard to replication configuration and settings.  
   
-## See Also  
- [Back Up and Restore of SQL Server Databases](../../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
- [Back Up and Restore Replicated Databases](../../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)   
- [Configure Distribution](../../../relational-databases/replication/configure-distribution.md)   
- [Publish Data and Database Objects](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
- [Subscribe to Publications](../../../relational-databases/replication/subscribe-to-publications.md)   
- [Initialize a Subscription](../../../relational-databases/replication/initialize-a-subscription.md)   
- [Synchronize Data](../../../relational-databases/replication/synchronize-data.md)  
-  
-  
+## Related content
+
+- [Back Up and Restore of SQL Server Databases](../../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)
+- [Back Up and Restore Replicated Databases](../../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)
+- [Configure Distribution](../../../relational-databases/replication/configure-distribution.md)
+- [Publish Data and Database Objects](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)
+- [Subscribe to Publications](../../../relational-databases/replication/subscribe-to-publications.md)
+- [Initialize a Subscription](../../../relational-databases/replication/initialize-a-subscription.md)
+- [Synchronize Data](../../../relational-databases/replication/synchronize-data.md)

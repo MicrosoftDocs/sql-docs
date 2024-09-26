@@ -3,11 +3,12 @@ title: "Cause and resolution of Reporting Services errors"
 description: View the list of error message articles related to Reporting Services. Each article explains the error message, possible causes, and how to correct the problem.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/01/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: troubleshooting
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "messages [Reporting Services]"
   - "errors [Reporting Services]"
@@ -28,8 +29,7 @@ helpviewer_keywords:
 |[rrRenderingError - Reporting Services error](../../reporting-services/troubleshooting/rrrenderingerror-reporting-services-error.md)|An error occurred during rendering of the report. (rrRenderingError) %1.|  
 |[Report server Windows Service &#40;MSSQLServer&#41; 107](../../reporting-services/troubleshooting/report-server-windows-service-mssqlserver-107.md)|Report Server Windows service (MSSQLSERVER) can't connect to the report server database.|  
   
-## Related content  
- [Reporting Services log files and sources](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)   
- [Errors and events reference &#40;Reporting Services&#41;](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
-  
-  
+## Related content
+
+- [Reporting Services log files and sources](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)
+- [Errors and events reference &#40;Reporting Services&#41;](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)

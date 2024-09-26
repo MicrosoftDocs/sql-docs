@@ -3,11 +3,12 @@ title: "Store Encrypted Report Server Data (Configuration Manager)"
 description: "Store Encrypted Report Server Data (Configuration Manager)"
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 10/24/2019
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-server
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "report servers [Reporting Services], encryption"
   - "credentials [Reporting Services]"
@@ -58,7 +59,6 @@ helpviewer_keywords:
 > [!NOTE]  
 >  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] does not support caching or report history for reports that use parameters based on the security identify of the user.  
   
-## See Also  
- [Configure and Manage Encryption Keys &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
-  
-  
+## Related content
+
+- [Configure and Manage Encryption Keys &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)

@@ -3,17 +3,18 @@ title: "Start Microsoft Report Builder"
 description: Learn how to start Microsoft Report Builder from the SQL Server Reporting Services (SSRS) web portal and create paginated reports.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 07/10/2024
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-builder
 ms.topic: how-to
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "Report Builder, launching"
   - "launching Report Builder"
   - "SharePoint integration [Reporting Services], starting Report Builder"
   - "starting Report Builder"
-#customer intent: As a SQL Server report author, I want to start Microsoft Report Builder from the Reporting Services web portal so that I can create and manage reports.
+# customer intent: As a SQL Server report author, I want to start Microsoft Report Builder from the Reporting Services web portal so that I can create and manage reports.
 ---
 # Start Microsoft Report Builder
 
@@ -77,5 +78,4 @@ When you start [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] from t
 
 - [Report Builder in SQL Server](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)
 - [Set default options for Report Builder](../../reporting-services/report-builder/set-default-options-for-report-builder.md)
-
-More questions? [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user).
+- [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)

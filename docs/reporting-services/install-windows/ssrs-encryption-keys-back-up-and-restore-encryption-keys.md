@@ -3,18 +3,19 @@ title: "Back up and restore SQL Server Reporting Services (SSRS) encryption keys
 description: "Learn how to back up and restore SSRS encryption keys by using Report Server Configuration Manager."
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 07/10/2024
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-server
 ms.topic: how-to
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "backing up encryption keys [Reporting Services]"
   - "restoring encryption keys [Reporting Services]"
   - "encryption keys [Reporting Services]"
   - "symmetric keys [Reporting Services]"
-#customer intent: As a SQL Server system administrator, I want to ensure the security and recoverability of my SSRS encryption keys so that I can maintain the integrity and availability of encrypted data within my report server environment.
-
+  - "backing up encryption keys [Reporting Services]", "restoring encryption keys [Reporting Services]", "encryption keys [Reporting Services]", "symmetric keys [Reporting Services]"
+# customer intent: As a SQL Server system administrator, I want to ensure the security and recoverability of my SSRS encryption keys so that I can maintain the integrity and availability of encrypted data within my report server environment.
 ---
 # Back up and restore SQL Server Reporting Services (SSRS) encryption keys
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)] :::image type="icon" source="../../includes/media/yes-icon.svg" border="false"::: [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Native Mode :::image type="icon" source="../../includes/media/yes-icon.svg" border="false"::: [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode 
@@ -104,7 +105,5 @@ For more information about creating symmetric keys, see [Initialize a Report Ser
     ```  
   
 ## Related content
- 
-- [Configure and manage encryption keys &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
-  
-  
+
+- [Configure and manage encryption keys &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)

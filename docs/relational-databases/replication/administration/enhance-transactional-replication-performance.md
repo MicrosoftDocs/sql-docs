@@ -3,11 +3,12 @@ title: "Enhance Transactional Replication Performance"
 description: In addition to general performance tips to enhance replication performance in SQL Server, learn about additional techniques for transactional replication.
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/07/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: how-to
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "publications [SQL Server replication], design and performance"
   - "performance [SQL Server replication], transactional replication"

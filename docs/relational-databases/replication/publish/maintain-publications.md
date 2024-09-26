@@ -3,11 +3,12 @@ title: "Maintain Publications"
 description: "Maintain Publications"
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/01/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: how-to
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "maintaining publications [SQL Server replication]"
   - "publications [SQL Server replication], maintaining"

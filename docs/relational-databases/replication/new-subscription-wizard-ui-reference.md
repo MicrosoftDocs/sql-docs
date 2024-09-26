@@ -3,11 +3,12 @@ title: "New Subscription Wizard (UI Reference)"
 description: "New Subscription Wizard (UI Reference)"
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/01/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "New Subscription Wizard"
 monikerRange: "=azuresqldb-current||>=sql-server-2016"
@@ -36,10 +37,8 @@ This section provides information on the following pages of the New Subscription
   
 -   [HOST_NAME Values](../../relational-databases/replication/host-name-values.md)  
   
-## See Also  
- [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
- [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)   
- [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)   
+## Related content
 
-  
-  
+- [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)
+- [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)
+- [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)

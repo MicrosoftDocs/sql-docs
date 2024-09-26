@@ -3,16 +3,17 @@ title: "Create a basic table report (SSRS tutorial)"
 description: Use the Report Designer tool in Visual Studio / SQL Server Data Tools (SSDT) and then create a SQL Server Reporting Services (SSRS) paginated report.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 05/21/2024
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: reporting-services
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "walkthroughs [Reporting Services]"
   - "tutorials [Reporting Services]"
   - "reports [Reporting Services], creating"
-#customer intent: As a SQL server user, I want to use SQL Server Data Tools (SSDT) to create a data connection so that I can create and publish a basic report.
+# customer intent: As a SQL server user, I want to use SQL Server Data Tools (SSDT) to create a data connection so that I can create and publish a basic report.
 ---
 # Create a basic table report (SSRS tutorial)
 
@@ -49,6 +50,5 @@ Install or configure the following components and permissions:
 - [Step 4: Add a table to the report &#40;Reporting Services&#41;](tutorial-step-04-add-table-report-reporting-services.md)
 - [Step 5: Format a report &#40;Reporting Services&#41;](tutorial-step-05-format-report-reporting-services.md)
 - [Step 6: Add grouping and totals &#40;Reporting Services&#41;](tutorial-step-06-add-grouping-totals-reporting-services.md)
-[Reporting Services tutorials](reporting-services-tutorials-ssrs.md)
-
-More questions? [Try asking the Reporting Services forum.](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&so.rt=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)
+- [Reporting Services tutorials](reporting-services-tutorials-ssrs.md)
+- [Try asking the Reporting Services forum.](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&so.rt=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)

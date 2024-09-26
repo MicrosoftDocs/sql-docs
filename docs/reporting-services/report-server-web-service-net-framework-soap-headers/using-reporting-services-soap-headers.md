@@ -3,11 +3,12 @@ title: "Use Reporting Services SOAP headers"
 description: Use Reporting Services SOAP headers to batch operations into a single transaction, manage session state, and retrieve properties based on the path or ID of an item.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/06/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-server-web-service
 ms.topic: reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "Web service [Reporting Services], SOAP"
   - "Report Server Web service, SOAP"
@@ -30,8 +31,7 @@ helpviewer_keywords:
 |[Identify the execution state](../../reporting-services/report-server-web-service-net-framework-soap-headers/identifying-execution-state.md)|Describes how to manage session state in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] using **SessionHeader**.|  
 |[Set the item namespace for the GetProperties method](../../reporting-services/report-server-web-service-net-framework-soap-headers/setting-the-item-namespace-for-the-getproperties-method.md)|Describes how to retrieve properties based on either the path or the ID of an item by using the <xref:ReportService2010.ReportingService2010.GetProperties%2A> method and the <xref:ReportService2010.ItemNamespaceHeader> SOAP header.|  
   
-## Related content 
- [Build applications by using the Web service and the .NET framework](../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
- [Technical reference &#40;SSRS&#41;](../../reporting-services/technical-reference-ssrs.md)  
-  
-  
+## Related content
+
+- [Build applications by using the Web service and the .NET framework](../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)
+- [Technical reference &#40;SSRS&#41;](../../reporting-services/technical-reference-ssrs.md)

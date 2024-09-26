@@ -3,11 +3,12 @@ title: "New User Role page (Management Studio)"
 description: Learn how to create an item-level role definition that enumerates the tasks a user can perform in the New User Role page in SQL Server Management Studio.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/01/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: tools
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 f1_keywords:
   - "sql13.swb.reportserver.newrole.f1"
 ---
@@ -34,8 +35,7 @@ f1_keywords:
  **Task Description**  
  Shows a description of the task that enumerates the operations or permissions that the task supports.  
   
-## Related content  
- [Report server in Management Studio F1 help](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
- [Role definitions](../../reporting-services/security/role-definitions.md)  
-  
-  
+## Related content
+
+- [Report server in Management Studio F1 help](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)
+- [Role definitions](../../reporting-services/security/role-definitions.md)

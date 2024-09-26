@@ -3,11 +3,12 @@ title: "Importing HTML into a paginated report"
 description: Learn about using a text box to insert HTML-formatted text that you have retrieved from a field in your dataset into a paginated report.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 12/06/2018
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 # Importing HTML into a paginated report (Report Builder)
 
@@ -72,7 +73,6 @@ ms.custom: updatefrequency5
   
 -   For attributes and CSS styles, if a property is specified more than once, only the last instance of the property is applied. For example, if your text is **\<p align="left" align="right">**, the text will be right-aligned.  
   
-## See Also  
- [Rendering to HTML &#40;Report Builder and SSRS&#41;](../../reporting-services/report-builder/rendering-to-html-report-builder-and-ssrs.md)  
-  
-  
+## Related content
+
+- [Rendering to HTML &#40;Report Builder and SSRS&#41;](../../reporting-services/report-builder/rendering-to-html-report-builder-and-ssrs.md)

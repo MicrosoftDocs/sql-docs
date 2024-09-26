@@ -3,11 +3,12 @@ title: "Common Actions Requiring an Updated Backup"
 description: "Common Actions Requiring an Updated Backup"
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/04/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "recovery [SQL Server replication], actions requiring a backup"
   - "restoring [SQL Server replication], actions requiring a backup"
@@ -99,8 +100,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
   
 -   Enabling or disabling a Publisher at a Distribution Publisher (at the Publisher and Distributor).  
   
-## See Also  
- [Back Up and Restore of SQL Server Databases](../../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
- [Back Up and Restore Replicated Databases](../../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)  
-  
-  
+## Related content
+
+- [Back Up and Restore of SQL Server Databases](../../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)
+- [Back Up and Restore Replicated Databases](../../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)

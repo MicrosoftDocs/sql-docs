@@ -3,11 +3,12 @@ title: "Troubleshoot report design issues with Reporting Services"
 description: In this article, diagnose and fix report design issues, which might occur when you create the report layout in Design view in a report authoring application.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 02/27/2016
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: troubleshooting
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 # Troubleshoot report design issues with Reporting Services
 Report design issues might occur when you're creating the report layout in Design view in a report authoring application. Use this article to help troubleshoot these issues.   
@@ -46,12 +47,9 @@ In general, a report grows to accommodate its data and pushes other report items
   
 To group multiple data regions or report items together, place them in the same parent container. For example, place a chart and table in a rectangle container and align their top edges to display them side by side. For more information, see [Rendering behaviors in Report Builder](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md).  
   
-## Related content 
-[Troubleshoot data retrieval issues with Reporting Services reports](../../reporting-services/troubleshooting/troubleshoot-data-retrieval-issues-with-reporting-services-reports.md)  
-[Troubleshoot Reporting Services subscriptions and delivery](../../reporting-services/troubleshooting/troubleshoot-reporting-services-subscriptions-and-delivery.md)  
-  
-  
-  
+## Related content
 
-[!INCLUDE[feedback-qa-stackoverflow-md](../../includes/feedback-qa-stackoverflow-md.md)]
+- [Troubleshoot data retrieval issues with Reporting Services reports](../../reporting-services/troubleshooting/troubleshoot-data-retrieval-issues-with-reporting-services-reports.md)
+- [Troubleshoot Reporting Services subscriptions and delivery](../../reporting-services/troubleshooting/troubleshoot-reporting-services-subscriptions-and-delivery.md)
 
+[!INCLUDE [feedback-qa-stackoverflow-md](../../includes/feedback-qa-stackoverflow-md.md)]

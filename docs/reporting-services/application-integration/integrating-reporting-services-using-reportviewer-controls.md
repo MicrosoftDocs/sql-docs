@@ -3,11 +3,12 @@ title: "Integrate using Report Viewer controls"
 description: Visual Studio provides two Report Viewer controls for integrating report viewing functionality into your applications.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 09/18/2018
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: application-integration
 ms.topic: reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "Report Viewer controls"
   - "integrating reports [Reporting Services]"
@@ -32,10 +33,8 @@ helpviewer_keywords:
 ## Local processing mode  
  Local processing mode provides an alternative method for viewing and rendering reports when [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] isn't installed. Unlike remote processing, only a subset of the functionality provided by the report server is available in the control. In local processing mode, data processing isn't handled by the control but rather implemented by the hosting application. However report processing is handled by the control itself. In local processing mode, only the PDF, Excel, Word, and Image rendering extensions are available.  
   
-## Related content  
- [Integrating Reporting Services into Applications](../../reporting-services/application-integration/integrating-reporting-services-into-applications.md)   
- [Using the WebForms Report Viewer Control](../../reporting-services/application-integration/using-the-webforms-reportviewer-control.md)   
- [Using the WinForms Report Viewer Control](../../reporting-services/application-integration/using-the-winforms-reportviewer-control.md)  
+## Related content
 
-  
-  
+- [Integrating Reporting Services into Applications](../../reporting-services/application-integration/integrating-reporting-services-into-applications.md)
+- [Using the WebForms Report Viewer Control](../../reporting-services/application-integration/using-the-webforms-reportviewer-control.md)
+- [Using the WinForms Report Viewer Control](../../reporting-services/application-integration/using-the-winforms-reportviewer-control.md)

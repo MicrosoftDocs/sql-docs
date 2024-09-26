@@ -25,7 +25,7 @@ Microsoft Entra-only authentication is a feature within [Azure SQL](../azure-sql
 
 Microsoft Entra-only authentication is also available for dedicated SQL pools (formerly SQL DW) in standalone servers. Microsoft Entra-only authentication can be enabled for the Azure Synapse workspace. For more information, see [Microsoft Entra-only authentication with Azure Synapse workspaces](/azure/synapse-analytics/sql/active-directory-authentication).
 
-SQL authentication is disabled when enabling Microsoft Entra-only authentication in the Azure SQL environment, including connections from SQL server administrators, logins, and users. Only users using [Use Microsoft Entra authentication](authentication-aad-overview.md) are authorized to connect to the server or database.
+SQL authentication is disabled when enabling Microsoft Entra-only authentication in the Azure SQL environment, including connections from SQL server administrators, logins, and users. Only users using [Microsoft Entra authentication](authentication-aad-overview.md) are authorized to connect to the server or database.
 
 Microsoft Entra-only authentication can be enabled or disabled using the Azure portal, Azure CLI, PowerShell, or REST API. Microsoft Entra-only authentication can also be configured during server creation with an Azure Resource Manager (ARM) template.
 
@@ -428,7 +428,7 @@ When Microsoft Entra-only authentication is enabled for SQL Database, the follow
 When Microsoft Entra-only authentication is enabled for SQL Managed Instance, the following features aren't supported:
 
 - [Transactional replication with Azure SQL Managed Instance](../managed-instance/replication-transactional-overview.md) 
-- [Automate management tasks using SQL Agent jobs in Azure SQL Managed Instance](../managed-instance/job-automation-managed-instance.md) supports Microsoft Entra-only authentication. However, the Microsoft Entra user who is a member of a Microsoft Entra group that has access to the managed instance cannot own SQL Agent Jobs
+- [Automate management tasks using SQL Agent jobs in Azure SQL Managed Instance](../managed-instance/job-automation-managed-instance.md) supports Microsoft Entra-only authentication. However, the Microsoft Entra user who is a member of a Microsoft Entra group that has access to the managed instance cannot own SQL Agent Jobs.
 - [SQL Insights (preview)](/azure/azure-monitor/insights/sql-insights-overview)
 - `EXEC AS` statement for Microsoft Entra group member accounts
 

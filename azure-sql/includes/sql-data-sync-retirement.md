@@ -8,4 +8,4 @@ ms.topic: include
 ---
 
 > [!IMPORTANT]  
-> SQL Data Sync will be retired on 30 September 2027. Consider migrating to [alternatives data replication/synchronization solutions](../database/sql-data-sync-retirement-migration.md).
+> SQL Data Sync will be retired on 30 September 2027. Consider migrating to [alternative data replication/synchronization solutions](../database/sql-data-sync-retirement-migration.md).

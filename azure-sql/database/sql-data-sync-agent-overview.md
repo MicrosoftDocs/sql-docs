@@ -23,7 +23,7 @@ SQL Data Sync does **not** support Azure SQL Managed Instance or Azure Synapse A
 ## Download and install
 
 > [!CAUTION]
-> Consider migrating to [alternatives data replication/synchronization solutions](sql-data-sync-retirement-migration.md).
+> Consider migrating to [alternative data replication/synchronization solutions](sql-data-sync-retirement-migration.md).
 
 To download the Data Sync Agent, go to [SQL Data Sync Agent](https://www.microsoft.com/download/details.aspx?id=27693). To upgrade the Data Sync Agent, install the Agent in the same location as the old Agent and it will override the original one.
 

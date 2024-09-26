@@ -4,7 +4,7 @@ description: Download the latest version of SQL Server Management Studio (SSMS) 
 author: erinstellato-ms
 ms.author: erinstellato
 ms.reviewer: maghan, randolphwest
-ms.date: 09/25/2024
+ms.date: 09/26/2024
 ms.service: sql
 ms.subservice: ssms
 ms.topic: overview
@@ -171,7 +171,7 @@ Additional requirements:
 - Administrator rights are required to install or update SSMS.
 - Running in a virtual machine environment requires a full Windows operating system.
 - Windows containers are not supported.
-- SSMS is not supported in application virtualization solutions such as such as Microsoft App-V or MSIX for Windows, or third-party app virtualization technologies.
+- SSMS is not supported in application virtualization solutions such as Microsoft App-V or MSIX for Windows, or third-party app virtualization technologies.
 
 > [!NOTE]  
 > To install SSMS on Windows Server Core, you must install the [Server Core App Compatibility Feature on Demand](/windows-server/get-started/server-core-app-compatibility-feature-on-demand).

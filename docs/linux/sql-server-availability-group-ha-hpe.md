@@ -102,7 +102,7 @@ Follow these instructions to configure and create the HPE Serviceguard cluster. 
 
 In this step, create an availability group with two (or more) synchronous replicas and a configuration only replica, which provides data protection and might also provide high availability. The following diagram represents this architecture:
 
-:::image type="content" source="media/sql-server-availability-group-ha-hpe/2-configuration-only.png" alt-text="Screenshot showing how the primary replica synchronizes user data and configuration data with the secondary replica. The primary replica only synchronizes configuration data with the configuration only replica. The configuration only replica doesn't have user data replicas.":::
+:::image type="content" source="media/sql-server-availability-group-ha-hpe/2-configuration-only.png" alt-text="Diagram showing primary replica synchronizing user data and configuration data with secondary replica. Configuration only replica synchronizes only configuration data.":::
 
 1. Synchronous replication of user data to the secondary replica. It also includes availability group configuration metadata.
 

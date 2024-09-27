@@ -33,7 +33,7 @@ Optimized locking is composed of two primary components: **transaction ID (TID) 
 For example:
 
 - Without optimized locking, updating one thousand rows in a table might require one thousand exclusive (`X`) row locks held until the end of the transaction.
-- With optimized locking, updating one thousand rows in a table might require one thousand `X` row locks but each lock is released as soon as each row is updated, and only one TID lock is held until the end of the transaction. Because locks are released quickly, lock memory usage is reduced and [lock escalation](/sql/database-engine/performance/resolve-blocking-problems-caused-lock-escalation.md) does not occur, improving workload concurrency.
+- With optimized locking, updating one thousand rows in a table might require one thousand `X` row locks but each lock is released as soon as each row is updated, and only one TID lock is held until the end of the transaction. Because locks are released quickly, lock memory usage is reduced and [lock escalation](/troubleshoot/sql/database-engine/performance/resolve-blocking-problems-caused-lock-escalation) does not occur, improving workload concurrency.
 
 > [!NOTE]
 > Optimized locking reduces or eliminates row and page locks acquired by the Data Modification Language (DML) statements such as `INSERT`, `UPDATE`, `DELETE`, `MERGE`. It has no effect on other kinds of database and object locks, such as schema locks.

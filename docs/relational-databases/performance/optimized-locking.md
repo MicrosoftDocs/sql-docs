@@ -33,7 +33,7 @@ Optimized locking is composed of two primary components: **transaction ID (TID) 
 For example:
 
 - Without optimized locking, updating one thousand rows in a table might require one thousand exclusive (`X`) row locks held until the end of the transaction.
-- With optimized locking, updating one thousand rows in a table might require one thousand `X` row locks but each lock is released as soon as each row is updated, and only one TID lock is held until the end of the transaction. Because locks are released quickly, lock memory usage is reduced and [lock escalation](resolve-blocking-problems-caused-lock-escalation.md) does not occur, improving workload concurrency.
+- With optimized locking, updating one thousand rows in a table might require one thousand `X` row locks but each lock is released as soon as each row is updated, and only one TID lock is held until the end of the transaction. Because locks are released quickly, lock memory usage is reduced and [lock escalation](/sql/database-engine/performance/resolve-blocking-problems-caused-lock-escalation) does not occur, improving workload concurrency.
 
 > [!NOTE]
 > Optimized locking reduces or eliminates row and page locks acquired by the Data Modification Language (DML) statements such as `INSERT`, `UPDATE`, `DELETE`, `MERGE`. It has no effect on other kinds of database and object locks, such as schema locks.
@@ -75,15 +75,15 @@ WHERE name = DB_NAME();
 
 This is a short summary of the behavior when optimized locking is not enabled. For more information, review the [Transaction locking and row versioning guide](../sql-server-transaction-locking-and-row-versioning-guide.md).
 
-In the Database Engine, locking is a mechanism that prevents multiple transactions from updating the same data simultaneously in order to guarantee the [ACID](sql-server-transaction-locking-and-row-versioning-guide.md#basics) properties of transactions.
+In the Database Engine, locking is a mechanism that prevents multiple transactions from updating the same data simultaneously in order to guarantee the [ACID](../sql-server-transaction-locking-and-row-versioning-guide.md#basics) properties of transactions.
 
 When a transaction needs to modify data, it requests a lock on the data. The lock is granted if no other conflicting locks are held on the data, and the transaction can proceed with the modification. If another conflicting lock is held on the data, the transaction must wait for the lock to be released before it can proceed.
 
-When multiple transactions attempt to access the same data concurrently, the Database Engine must resolve potentially complex conflicts with concurrent reads and writes. Locking is one of the mechanisms by which the engine can provide the semantics for the ANSI SQL transaction [isolation levels](sql-server-transaction-locking-and-row-versioning-guide.md#isolation-levels-in-the-). Although locking in databases is essential, reduced concurrency, deadlocks, complexity, and lock overhead can impact performance and scalability.
+When multiple transactions attempt to access the same data concurrently, the Database Engine must resolve potentially complex conflicts with concurrent reads and writes. Locking is one of the mechanisms by which the engine can provide the semantics for the ANSI SQL transaction [isolation levels](../sql-server-transaction-locking-and-row-versioning-guide.md#isolation-levels-in-the-). Although locking in databases is essential, reduced concurrency, deadlocks, complexity, and lock overhead can impact performance and scalability.
 
 ### Optimized locking and transaction ID (TID) locking
 
-When [row versioning](sql-server-transaction-locking-and-row-versioning-guide#row_versioning) is in use or when ADR is enabled, every row in the database internally contains a transaction ID (TID). This TID is persisted on disk. Every transaction modifying a row stamps that row with its TID.
+When [row versioning](../sql-server-transaction-locking-and-row-versioning-guide.md#row_versioning) is in use or when ADR is enabled, every row in the database internally contains a transaction ID (TID). This TID is persisted on disk. Every transaction modifying a row stamps that row with its TID.
 
 With TID locking, instead of taking the lock on the key of the row, a lock is taken on the TID of the row. The modifying transaction holds an `X` lock on its TID. Other transactions acquire an `S` lock on the TID to wait until the first transaction completes. With TID locking, page and row locks continue to be taken for modifications, but each page and row lock is released as soon as each row is modified. The only lock held until the end of transaction is the single `X` lock on the TID resource, replacing multiple page and row (key) locks.
 

@@ -701,6 +701,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path_from_root": "/azure-sql/database/authentication-mfa-ssms-overview.md",
+      "redirect_url": "/azure/azure-sql/database/authentication-aad-overview#multifactor-authentication-mfa",
+      "redirect_document_id": false
+    },
+    {
       "source_path_from_root": "/azure-sql/database/elastic-jobs-migrate.md",
       "redirect_url": "/azure/azure-sql/database/job-automation-overview",
       "redirect_document_id": false

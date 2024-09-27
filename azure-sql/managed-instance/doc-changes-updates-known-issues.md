@@ -127,7 +127,7 @@ If an instance participates in a [failover group](failover-group-sql-mi.md), cha
 
 ### <a id="procedure-sp_send_dbmail-may-transiently-fail-when-query-parameter-is-used"></a> Procedure sp_send_dbmail might transiently fail when @query parameter is used
 
-Procedure `sp_send_dbmail` might transiently fail when `@query` parameter is used. When this issue occurs, every second execution of procedure `sp_send_dbmail` fails with error `Msg 22050, Level 16, State 1` and message `Failed to initialize sqlcmd library with error number -2147467259`. To be able to see this error properly, the procedure should be called with default value 0 for the parameter `@exclude_query_output`, otherwise the error isn't be propagated.
+Procedure `sp_send_dbmail` might transiently fail when `@query` parameter is used. When this issue occurs, every second execution of procedure `sp_send_dbmail` fails with error `Msg 22050, Level 16, State 1` and message `Failed to initialize sqlcmd library with error number -2147467259`. To be able to see this error properly, the procedure should be called with default value 0 for the parameter `@exclude_query_output`, otherwise the error isn't propagated.
 
 This problem is caused by a known bug related to how `sp_send_dbmail` is using impersonation and connection pooling.
 
@@ -169,7 +169,7 @@ A DNS record of `<name>.database.windows.com` is created when you create a [logi
 
 In some circumstances, there might exist an issue with Service Principal used to access Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)) and Azure Key Vault (AKV) services. As a result, this issue impacts usage of Microsoft Entra authentication and transparent data encryption (TDE) with SQL Managed Instance. This might be experienced as an intermittent connectivity issue, or not being able to run statements such are `CREATE LOGIN/USER FROM EXTERNAL PROVIDER` or `EXECUTE AS LOGIN/USER`. Setting up TDE with customer-managed key on a new Azure SQL Managed Instance might also not work in some circumstances.
 
-**Workaround**: To prevent this issue from occurring on your SQL Managed Instance before executing any update commands, or in case you have already experienced this issue after update commands, go to Azure portal, access SQL Managed Instance [Active Directory admin page](../database/authentication-aad-configure.md?tabs=azure-powershell#azure-portal). Verify if you can see the error message "Managed Instance needs a Service Principal to access Microsoft Entra ID. Click here to create a Service Principal". In case you've encountered this error message, select it, and follow the step-by-step instructions provided until this error have been resolved.
+**Workaround**: To prevent this issue from occurring on your SQL Managed Instance, before executing any update commands, or in case you have already experienced this issue after update commands, go to the **Overview page** of your SQL managed instance in the Azure portal. Under **Settings**, select **Microsoft Entra ID** to access the SQL Managed Instance [Microsoft Entra ID admin page](../database/authentication-aad-configure.md#azure-sql-managed-instance). Verify if you can see the error message "Managed Instance needs a Service Principal to access Microsoft Entra ID. Click here to create a Service Principal". In case you've encountered this error message, select it, and follow the step-by-step instructions provided until this error has been resolved.
 
 ### Limitation of manual failover via portal for failover groups
 
@@ -314,7 +314,7 @@ If transactional replication is enabled on a database in a failover group, the S
 
 ### `tempdb` structure and content is re-created
 
-The `tempdb` database is always split into 12 data files, and the file structure can't be changed. The maximum size per file can't be changed, and new files can't be added to `tempdb`. The `tempdb` database is always re-created as an empty database when the instance starts or fails over, and any changes made in `tempdb` aren't be preserved.
+The `tempdb` database is always split into 12 data files, and the file structure can't be changed. The maximum size per file can't be changed, and new files can't be added to `tempdb`. The `tempdb` database is always re-created as an empty database when the instance starts or fails over, and any changes made in `tempdb` aren't preserved.
 
 ### Error logs aren't persisted
 
@@ -390,7 +390,7 @@ You can neglect this error message if Service Principal for the managed instance
 
 To check whether Service Principal exists, navigate to the **Enterprise applications** page on the Azure portal, choose **Managed Identities** from the **Application type** dropdown list, select **Apply**, and type the name of the managed instance in the search box. If the instance name shows up in the result list, Service Principal already exists and no further actions are needed.
 
-If you already followed the instructions from the error message and selected the link from the error message, Service Principal of the managed instance has been recreated. In that case, assign Microsoft Entra ID read permissions to the newly created Service Principal in order for Microsoft Entra authentication to work properly. This can be done via Azure PowerShell by following [instructions](../database/authentication-aad-configure.md?tabs=azure-powershell#powershell).
+If you already followed the instructions from the error message and selected the link from the error message, Service Principal of the managed instance has been recreated. In that case, assign Microsoft Entra ID read permissions to the newly created Service Principal in order for Microsoft Entra authentication to work properly. This can be done via Azure PowerShell by following [instructions](../database/authentication-aad-configure.md?tabs=azure-powershell#assign-microsoft-graph-permissions).
 
 ## Contribute to content
 

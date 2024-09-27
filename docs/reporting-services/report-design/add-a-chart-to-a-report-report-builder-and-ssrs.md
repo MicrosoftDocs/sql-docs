@@ -3,11 +3,12 @@ title: "Add a chart to a paginated report"
 description: Learn how to add a chart to a paginated report when you want to summarize data in a visual format in Report Builder.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/03/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 # Add a chart to a paginated report (Report Builder)
 
@@ -62,11 +63,11 @@ When you want to summarize data in a visual format in a paginated report, use a 
  On charts with axes, such as bar and column charts, the category axis might not display all the category labels. For more information about how to change the axis labels, see [Specify an axis interval &#40;Report Builder&#41;](specify-an-axis-interval-report-builder-and-ssrs.md).  
   
 ## Related content
- [Charts &#40;Report Builder&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [Chart types &#40;Report Builder&#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)   
- [Empty and null data points in charts &#40;Report Builder&#41;](../../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
- [Tutorial: Add a bar chart to your report (Report Builder)](../tutorial-add-a-bar-chart-to-your-report-report-builder.md)   
- [Tutorial: Add a bar chart to a report (Report Designer)](/previous-versions/sql/sql-server-2008-r2/cc281302(v=sql.105))   
- [Tutorial: Add a pie chart to your report (Report Builder)](../tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
- [Tutorial: Add a pie chart to a report (Report Designer)](/previous-versions/sql/sql-server-2008-r2/cc281304(v=sql.105))  
-  
+
+- [Charts &#40;Report Builder&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)
+- [Chart types &#40;Report Builder&#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)
+- [Empty and null data points in charts &#40;Report Builder&#41;](../../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)
+- [Tutorial: Add a bar chart to your report (Report Builder)](../tutorial-add-a-bar-chart-to-your-report-report-builder.md)
+- [Tutorial: Add a bar chart to a report (Report Designer)](/previous-versions/sql/sql-server-2008-r2/cc281302(v=sql.105))
+- [Tutorial: Add a pie chart to your report (Report Builder)](../tutorial-add-a-pie-chart-to-your-report-report-builder.md)
+- [Tutorial: Add a pie chart to a report (Report Designer)](/previous-versions/sql/sql-server-2008-r2/cc281304(v=sql.105))

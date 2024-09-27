@@ -3,11 +3,12 @@ title: "Create mobile reports with SQL Server Mobile Report Publisher"
 description: "Learn about Reporting Services mobile reports for mobile devices, connected to on-premises data, with an assortment of data visualizations."
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 10/14/2022
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: mobile-reports
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 # Create mobile reports with SQL Server Mobile Report Publisher
 
@@ -42,12 +43,8 @@ These articles are to help you get started.
 -  View [Reporting Services  mobile reports and KPIs](https://powerbi.microsoft.com/documentation/powerbi-mobile-win10-kpis-mobile-reports/) in the Power BI app for Windows devices.  
 
 ## Related content
-  
--   [Create, modify, and delete shared data sources (SSRS)](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)  
--   [Manage shared datasets](../../reporting-services/report-data/manage-shared-datasets.md)  
--  [Work with KPIs in Reporting Services](../../reporting-services/working-with-kpis-in-reporting-services.md)  
-- [Enable a report server for Power BI mobile access](../../reporting-services/report-server/enable-a-report-server-for-power-bi-mobile-access.md)  
 
-  
-  
-
+- [Create, modify, and delete shared data sources (SSRS)](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)
+- [Manage shared datasets](../../reporting-services/report-data/manage-shared-datasets.md)
+- [Work with KPIs in Reporting Services](../../reporting-services/working-with-kpis-in-reporting-services.md)
+- [Enable a report server for Power BI mobile access](../../reporting-services/report-server/enable-a-report-server-for-power-bi-mobile-access.md)

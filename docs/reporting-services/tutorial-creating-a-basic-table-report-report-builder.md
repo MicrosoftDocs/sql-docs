@@ -3,13 +3,13 @@ title: "Tutorial: Create a basic table report (Report Builder)"
 description: Create a basic table report from sample sales data by using the SSRS Report Builder, and organize, format, save, and export your report.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 06/26/2024
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: reporting-services
 ms.topic: tutorial
-ms.custom: updatefrequency5
-
-#customer intent: As a developer, I want to create a table report with Report Builder in SSRS, so I can organize, format, save, and export my SQL Server data.
+ms.custom:
+  - updatefrequency5
+# customer intent: As a developer, I want to create a table report with Report Builder in SSRS, so I can organize, format, save, and export my SQL Server data.
 ---
 
 # Tutorial: Create a basic table report (Report Builder)
@@ -466,5 +466,5 @@ Now you can view your table report in Excel:
 ## Related content
 
 - [Tables, matrices, and lists in paginated reports (Report Builder)](../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)
-- [Report Builder tutorials](../reporting-services/report-builder-tutorials.md)  
+- [Report Builder tutorials](../reporting-services/report-builder-tutorials.md)
 - [Report Builder in SQL Server](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)

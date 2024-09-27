@@ -3,11 +3,12 @@ title: "rskeymgmt utility"
 description: Learn about the reskeymgmt utility that manages the symmetric key that protects sensitive report server data against unauthorized access.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/20/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: tools
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "report servers [Reporting Services], encryption"
   - "joining report server instances [SQL Server]"
@@ -166,9 +167,9 @@ rskeymgmt -r <installationID>
   
  For more information about the encryption keys, see [Configure and manage encryption keys &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md) and [Initialize a report server &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md).  
   
-## Related content  
- [Scale-out deployment  - Reporting Services native mode &#40;Configuration Manager&#41;](/previous-versions/sql/sql-server-2016/ms181357(v=sql.130))   
- [Reporting Services report server &#40;native mode&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
- [Report server command prompt utilities &#40;SSRS&#41;](../../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md)   
- [Configure and manage encryption keys &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
-  
+## Related content
+
+- [Scale-out deployment  - Reporting Services native mode &#40;Configuration Manager&#41;](/previous-versions/sql/sql-server-2016/ms181357(v=sql.130))
+- [Reporting Services report server &#40;native mode&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)
+- [Report server command prompt utilities &#40;SSRS&#41;](../../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md)
+- [Configure and manage encryption keys &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)

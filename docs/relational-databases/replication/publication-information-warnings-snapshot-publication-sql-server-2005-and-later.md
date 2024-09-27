@@ -3,11 +3,12 @@ title: "Warnings (Snapshot - Replication Monitor)"
 description: "Publication Information, Warnings (Snapshot Publication, SQL Server 2005 and Later)"
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/04/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: ui-reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 f1_keywords:
   - "sql13.rep.monitor.publicationinfo.warningsandagents.snapshot.f1"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
@@ -49,9 +50,8 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
  **Save Changes**  
  Click to save any changes to warnings and thresholds.  
   
-## See Also  
- [Start the Replication Monitor](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
- [View Information and Perform Tasks using Replication Monitor](../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)   
- [Monitoring Replication](../../relational-databases/replication/monitor/monitoring-replication.md)  
-  
-  
+## Related content
+
+- [Start the Replication Monitor](../../relational-databases/replication/monitor/start-the-replication-monitor.md)
+- [View Information and Perform Tasks using Replication Monitor](../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)
+- [Monitoring Replication](../../relational-databases/replication/monitor/monitoring-replication.md)

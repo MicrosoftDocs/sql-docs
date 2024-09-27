@@ -3,11 +3,12 @@ title: "Display headers and footers with a group in a paginated report"
 description: Find out how to set properties to render headers and footers with dynamic rows that are associated with a group in a tablix data region in a paginated report.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/01/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 # Display headers and footers with a group in a paginated report (Report Builder)
 
@@ -63,8 +64,6 @@ ms.custom: updatefrequency5
   
 5.  (Optional) Preview the report. Where possible, the report renderer keeps this member with the specified column group members.  
   
-## See Also  
- [Tablix Data Region Cells, Rows, and Columns (Report Builder) and SSRS](tablix-data-region-report-builder-and-ssrs.md)   
- 
-  
-  
+## Related content
+
+- [Tablix Data Region Cells, Rows, and Columns (Report Builder) and SSRS](tablix-data-region-report-builder-and-ssrs.md)

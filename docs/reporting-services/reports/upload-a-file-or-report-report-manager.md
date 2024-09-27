@@ -3,11 +3,12 @@ title: "Upload a File or Report in the Report Server"
 description: Learn how to add reports and other files to a report server without having to publish those items from a client application.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 05/24/2018
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: reports
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "publishing reports [Reporting Services], uploading files"
   - "reports [Reporting Services], publishing"
@@ -34,8 +35,7 @@ The web portal of the report server provides an upload feature so that you can a
   
 7.  Select **OK**.
   
-## See Also   
-[Create, Modify, and Delete Shared Data Sources](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)
-[Upload Files to a Folder](../../reporting-services/report-server/upload-files-to-a-folder.md)  
-  
-  
+## Related content
+
+- [Create, Modify, and Delete Shared Data Sources](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)
+- [Upload Files to a Folder](../../reporting-services/report-server/upload-files-to-a-folder.md)

@@ -3,11 +3,12 @@ title: "Performance counters - ReportServer service, performance objects"
 description: "Learn about performance counters for the ReportServer:Service and ReportServerSharePoint:Service performance objects, part of a SQL Server 2012 deployment."
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 06/26/2019
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-server
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "Report Server service, performance counters"
 monikerRange: ">=sql-server-2016 <=sql-server-2016"
@@ -91,8 +92,8 @@ monikerRange: ">=sql-server-2016 <=sql-server-2016"
 (get-counter -listset "ReportServerSharePoint:Service").paths  
 ```  
   
-## Related content 
- [Monitor report server performance](../../reporting-services/report-server/monitoring-report-server-performance.md)   
- [Performance counters for the MSRS 2011 Web Service and MSRS 2011 Windows Service performance objects &#40;native mode&#41;](../../reporting-services/report-server/performance-counters-msrs-2011-web-service-performance-objects.md)   
- [Performance counters for the MSRS 2011 Web Service SharePoint Mode and MSRS 2011 Windows Service SharePoint ode performance objects &#40;SharePoint mode&#41;](../../reporting-services/report-server/performance-counters-msrs-2011-sharepoint-mode-performance-objects.md)  
-  
+## Related content
+
+- [Monitor report server performance](../../reporting-services/report-server/monitoring-report-server-performance.md)
+- [Performance counters for the MSRS 2011 Web Service and MSRS 2011 Windows Service performance objects &#40;native mode&#41;](../../reporting-services/report-server/performance-counters-msrs-2011-web-service-performance-objects.md)
+- [Performance counters for the MSRS 2011 Web Service SharePoint Mode and MSRS 2011 Windows Service SharePoint ode performance objects &#40;SharePoint mode&#41;](../../reporting-services/report-server/performance-counters-msrs-2011-sharepoint-mode-performance-objects.md)

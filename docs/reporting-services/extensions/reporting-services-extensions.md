@@ -3,11 +3,12 @@ title: "Reporting Services extensions"
 description: Find out how to extend data processing capabilities in Reporting Services by customizing report data, notification mechanisms, and security systems.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/14/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: extensions
 ms.topic: reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "SQL Server Reporting Services, extending"
   - "extensions [Reporting Services], about extensions"

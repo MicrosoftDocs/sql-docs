@@ -3,11 +3,12 @@ title: "Turn Reporting Services features on or off"
 description: Learn how to turn off individual features in native mode Reporting Services. There are different ways to configure features.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 06/10/2019
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-server
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "Reporting Services, configuration"
   - "security [Reporting Services], strategies"
@@ -108,8 +109,7 @@ As of SQL Server 2016 Reporting Services Cumulative Update 2, the web portal is 
   
 4.  Select **OK**.  
   
-## Related content  
-[Report Server Configuration Manager (native mode)](../install-windows/reporting-services-configuration-manager-native-mode.md)
+## Related content
 
- More questions? [Try the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)
-  
+- [Report Server Configuration Manager (native mode)](../install-windows/reporting-services-configuration-manager-native-mode.md)
+- [Try the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

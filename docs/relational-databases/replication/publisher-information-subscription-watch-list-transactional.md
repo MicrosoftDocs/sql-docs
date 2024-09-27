@@ -3,11 +3,12 @@ title: "Publisher Information, Subscription Watch List (Transactional)"
 description: "Publisher Information, Subscription Watch List (Transactional)"
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/07/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: ui-reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 f1_keywords:
   - "sql13.rep.monitor.publisherinfo.subscriptionssummary.tran.f1"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
@@ -87,9 +88,8 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
  **Last Synchronization**  
  The time when the Distribution Agent last ran. If synchronization is in progress, **In progress** is displayed.  
   
-## See Also  
- [Start the Replication Monitor](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
- [View Information and Perform Tasks for a Publisher &#40;Replication Monitor&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)   
- [Monitoring Replication](../../relational-databases/replication/monitor/monitoring-replication.md)  
-  
-  
+## Related content
+
+- [Start the Replication Monitor](../../relational-databases/replication/monitor/start-the-replication-monitor.md)
+- [View Information and Perform Tasks for a Publisher &#40;Replication Monitor&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)
+- [Monitoring Replication](../../relational-databases/replication/monitor/monitoring-replication.md)

@@ -3,13 +3,13 @@ title: Add an expand or collapse action to a Report Builder paginated report
 description: Learn how to expand or collapse items, rows, and columns associated with a group for a table or matrix in a paginated report in Report Builder.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 07/19/2024
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: how-to
-ms.custom: updatefrequency5
-
-#customer intent: As a Report Builder user, I want to learn how to create expandable and collapsible elements in my reports so that I can give users the option to control the presentation of my report.
+ms.custom:
+  - updatefrequency5
+# customer intent: As a Report Builder user, I want to learn how to create expandable and collapsible elements in my reports so that I can give users the option to control the presentation of my report.
 ---
 # Add an expand or collapse action to a Report Builder paginated report
 
@@ -92,7 +92,7 @@ Typically, the expand and collapse action is used to initially display only summ
   
      :::image type="content" source="../../reporting-services/report-design/media/expand-collapse-run-report-report-table.png" alt-text="Screenshot of a running the report with an expanding table.":::  
   
-## Related content  
+## Related content
 
 - [Drilldown action in a paginated report (Report Builder)](../../reporting-services/report-design/drilldown-action-report-builder-and-ssrs.md)
-- [Hide an item &#40;Report Builder&#41;](../../reporting-services/report-builder/hide-an-item-report-builder-and-ssrs.md)  
+- [Hide an item &#40;Report Builder&#41;](../../reporting-services/report-builder/hide-an-item-report-builder-and-ssrs.md)

@@ -3,11 +3,12 @@ title: "Upgrade replication scripts (Replication SP)"
 description: Learn how to use Replication Stored Procedures to upgrade the scripts used to programmatically configure a replication topology.
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/14/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: how-to
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "scripts [SQL Server replication], upgrading"
   - "upgrading SQL Server, replicated databases"
@@ -184,14 +185,13 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
   
  :::code language="sql" source="../codesnippet/tsql/upgrade-replication-scri_11.sql":::
   
-## See Also  
- [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)   
- [Create a Push Subscription](../../../relational-databases/replication/create-a-push-subscription.md)   
- [Create a Pull Subscription](../../../relational-databases/replication/create-a-pull-subscription.md)   
- [View and Modify Replication Security Settings](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   
- [MSSQL_ENG021797](../../../relational-databases/replication/mssql-eng021797.md)   
- [MSSQL_ENG021798](../../../relational-databases/replication/mssql-eng021798.md)   
- [Replication System Stored Procedures Concepts](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
- [Upgrade Replicated Databases](../../../database-engine/install-windows/upgrade-replicated-databases.md)  
-  
-  
+## Related content
+
+- [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)
+- [Create a Push Subscription](../../../relational-databases/replication/create-a-push-subscription.md)
+- [Create a Pull Subscription](../../../relational-databases/replication/create-a-pull-subscription.md)
+- [View and Modify Replication Security Settings](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)
+- [MSSQL_ENG021797](../../../relational-databases/replication/mssql-eng021797.md)
+- [MSSQL_ENG021798](../../../relational-databases/replication/mssql-eng021798.md)
+- [Replication System Stored Procedures Concepts](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)
+- [Upgrade Replicated Databases](../../../database-engine/install-windows/upgrade-replicated-databases.md)

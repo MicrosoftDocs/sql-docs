@@ -3,11 +3,12 @@ title: "Validate partition information (Merge)"
 description: Describes how to validate partition information for a Merge Subscriber in SQL Server.
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/04/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: how-to
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "merge replication data validation [SQL Server replication], partitions"
   - "parameterized filters [SQL Server replication], validating partition information"
@@ -26,10 +27,9 @@ helpviewer_keywords:
   
  When the Merge Agent validates a partition, in addition to validating the partition against the values returned by any functions used in filtering expressions, the agent also checks whether the snapshot was generated prior to changes that invalidate it, such as metadata cleanup operations or schema changes. If a partitioned snapshot is too old, the Merge Agent will return an error and you must regenerate a partitioned snapshot for that Subscriber based on a current regular snapshot.  
   
-## See Also  
- [Replication Administration FAQ](../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.yml)   
- [Best Practices for Replication Administration](../../relational-databases/replication/administration/best-practices-for-replication-administration.md)   
- [Reinitialize Subscriptions](../../relational-databases/replication/reinitialize-subscriptions.md)   
- [Validate Replicated Data](../../relational-databases/replication/validate-data-at-the-subscriber.md)  
-  
-  
+## Related content
+
+- [Replication Administration FAQ](../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.yml)
+- [Best Practices for Replication Administration](../../relational-databases/replication/administration/best-practices-for-replication-administration.md)
+- [Reinitialize Subscriptions](../../relational-databases/replication/reinitialize-subscriptions.md)
+- [Validate Replicated Data](../../relational-databases/replication/validate-data-at-the-subscriber.md)

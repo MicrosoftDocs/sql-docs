@@ -3,11 +3,12 @@ title: "Replication Queue Reader Agent"
 description: "Replication Queue Reader Agent"
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "10/29/2016"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "agents [SQL Server replication], Queue Reader Agent"
   - "command prompt [SQL Server replication]"
@@ -121,7 +122,6 @@ qrdrsvc [-?]
 ## Remarks  
  To start the Queue Reader Agent, execute **qrdrsvc.exe** from the command prompt. For information, see [Replication Agent Executables](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md).  
   
-## See Also  
- [Replication Agent Administration](../../../relational-databases/replication/agents/replication-agent-administration.md)  
-  
-  
+## Related content
+
+- [Replication Agent Administration](../../../relational-databases/replication/agents/replication-agent-administration.md)

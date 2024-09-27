@@ -3,11 +3,12 @@ title: "Set text box orientation in a paginated report"
 description: Find out how to rotate a text box in different directions in your paginated reports in Report Builder.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/01/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 # Set text box orientation in a paginated report (Report Builder)
 
@@ -38,8 +39,7 @@ Because you rotate the text box not the text, the rotation applies to all the te
   
 5.  In the list box, select **Horizontal**, **Vertical**, or **Rotate270**.  
   
-## See Also  
- [Text Boxes &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md)   
- [Tutorial: Format Text &#40;Report Builder&#41;](../../reporting-services/tutorial-format-text-report-builder.md)  
-  
-  
+## Related content
+
+- [Text Boxes &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md)
+- [Tutorial: Format Text &#40;Report Builder&#41;](../../reporting-services/tutorial-format-text-report-builder.md)

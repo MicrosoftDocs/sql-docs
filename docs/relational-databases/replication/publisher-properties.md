@@ -3,11 +3,12 @@ title: "Publisher Properties dialog box (SSMS)"
 description: Describes the 'Publisher Properties' dialog box for a specific publication within SQL Server Management Studio (SSMS).
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "11/20/2018"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: ui-reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 f1_keywords:
   - "sql13.rep.configdistwizard.distpubproperties.f1"
   - "sql13.rep.configdistwizard.pubproperties.general.f1"
@@ -67,9 +68,7 @@ The **Publisher Properties** dialog box allows you to view and modify properties
  **Add**  
  Click **Add** to add a Subscriber, and then click **Add SQL Server Subscriber** or **Add Non-SQL Server Subscriber**.  
   
-## See Also  
- [View and Modify Distributor and Publisher Properties](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
- [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
+## Related content
 
-
-  
+- [View and Modify Distributor and Publisher Properties](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)
+- [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)

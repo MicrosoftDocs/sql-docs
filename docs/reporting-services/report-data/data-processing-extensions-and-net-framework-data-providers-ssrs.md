@@ -3,11 +3,12 @@ title: "Data Processing Extensions and .NET Framework Data Providers"
 description: Learn about data processing extensions, a component installed with Reporting Services, and .NET Framework data providers.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/14/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-data
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "reports [Reporting Services], data"
   - "data processing extensions [Reporting Services]"
@@ -38,8 +39,7 @@ helpviewer_keywords:
 > [!NOTE]  
 >  A [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] data provider or custom data processing extension must be installed and registered before it can be used to access data from a data source. The data processing extension must be installed and registered both on the reporting client to author the report and on the report server to view the published report. Not all data providers are designed to work in a server environment. For more information, see [Register a Standard .NET Framework Data Provider &#40;SSRS&#41;](../../reporting-services/report-data/register-a-standard-net-framework-data-provider-ssrs.md).and [Deploying a Data Processing Extension](../../reporting-services/extensions/data-processing/deploying-a-data-processing-extension.md).  
   
-## See Also  
- [Data Processing Extensions Overview](../../reporting-services/extensions/data-processing/data-processing-extensions-overview.md)   
- [Report Embedded Datasets and Shared Datasets &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
-  
-  
+## Related content
+
+- [Data Processing Extensions Overview](../../reporting-services/extensions/data-processing/data-processing-extensions-overview.md)
+- [Report Embedded Datasets and Shared Datasets &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)

@@ -3,11 +3,12 @@ title: "Synchronize Data"
 description: Synchronizing data in replication refers to data and schema changes propagating between the Publisher and Subscribers in SQL Server.
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/07/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: how-to
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "synchronization [SQL Server replication], about synchronization"
   - "merge replication synchronization [SQL Server replication]"
@@ -62,7 +63,6 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
   
 -   Business logic handlers are supported for merge replication. Using the business logic handler framework you can write a managed code assembly that is called during the merge synchronization process. The assembly includes business logic that can respond to a number of conditions during synchronization: data changes, conflicts, and errors. For more information, see [Execute Business Logic During Merge Synchronization](../../relational-databases/replication/merge/execute-business-logic-during-merge-synchronization.md).  
   
-## See Also  
- [Detect and Resolve Merge Replication Conflicts](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)  
-  
-  
+## Related content
+
+- [Detect and Resolve Merge Replication Conflicts](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)

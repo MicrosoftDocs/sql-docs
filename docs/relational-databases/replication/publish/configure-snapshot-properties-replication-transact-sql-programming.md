@@ -3,11 +3,12 @@ title: "Configure snapshot properties (Replication SP)"
 description: Use replication stored procedures to configure snapshot properties for Snapshot or Transactional publications.
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/17/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: how-to
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "snapshots [SQL Server replication], properties"
 dev_langs:
@@ -76,11 +77,10 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
   
  :::code language="sql" source="../codesnippet/tsql/configure-snapshot-prope_1.sql":::
   
-## See Also  
- [Modify snapshot options](../../../relational-databases/replication/snapshot-options.md)   
- [Execute Scripts Before and After the Snapshot Is Applied](../../../relational-databases/replication/snapshot-options.md#execute-scripts-before-and-after-snapshot-is-applied)   
- [Replication System Stored Procedures Concepts](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
- [Transfer Snapshots Through FTP](../../../relational-databases/replication//publish/deliver-a-snapshot-through-ftp.md)   
- [Change Publication and Article Properties](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)  
-  
-  
+## Related content
+
+- [Modify snapshot options](../../../relational-databases/replication/snapshot-options.md)
+- [Execute Scripts Before and After the Snapshot Is Applied](../../../relational-databases/replication/snapshot-options.md#execute-scripts-before-and-after-snapshot-is-applied)
+- [Replication System Stored Procedures Concepts](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)
+- [Transfer Snapshots Through FTP](../../../relational-databases/replication//publish/deliver-a-snapshot-through-ftp.md)
+- [Change Publication and Article Properties](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)

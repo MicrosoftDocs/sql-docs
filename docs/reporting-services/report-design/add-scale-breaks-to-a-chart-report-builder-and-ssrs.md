@@ -3,11 +3,12 @@ title: "Add scale breaks to a paginated report chart"
 description: Find out about using a scale break to display two distinct ranges in the same paginated report chart area in Report Builder.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 05/30/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 
 # Add scale breaks to a paginated report chart (Report Builder)
@@ -45,8 +46,7 @@ ms.custom: updatefrequency5
 
 ## Related content
 
-[Charts](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
-[Formatting a chart](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
-[Axis Properties dialog, axis options](/previous-versions/sql/)  
-
-More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231).
+- [Charts](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)
+- [Formatting a chart](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)
+- [Axis Properties dialog, axis options](/previous-versions/sql/)
+- [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

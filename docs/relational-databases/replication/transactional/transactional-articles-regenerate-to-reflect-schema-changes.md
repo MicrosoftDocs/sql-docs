@@ -3,11 +3,12 @@ title: "Regenerate custom procedures for schema changes (Transactional)"
 description: Regenerate custom transactional stored procedures to reflect schema changes for Transactional Replication.
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/14/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "custom procedures [SQL Server replication]"
   - "transactional replication, replicating schema changes"
@@ -36,8 +37,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
   
      The next time a relevant schema change is made, this script executes on each Subscriber within the same transaction as the DDL command. After the schema change is made, the script is unregistered. You must re-register the script to have it executed after a subsequent schema change.  
   
-## See Also  
- [Specify How Changes Are Propagated for Transactional Articles](../../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md)   
- [Make Schema Changes on Publication Databases](../../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)  
-  
-  
+## Related content
+
+- [Specify How Changes Are Propagated for Transactional Articles](../../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md)
+- [Make Schema Changes on Publication Databases](../../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)

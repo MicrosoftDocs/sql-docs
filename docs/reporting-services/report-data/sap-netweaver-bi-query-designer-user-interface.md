@@ -3,11 +3,12 @@ title: "SAP NetWeaver BI Query Designer User Interface"
 description: Learn about the graphical query designer for building Multidimensional Expression (MDX) queries for a SAP NetWeaver Business Intelligence data source.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/01/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-data
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 f1_keywords:
   - "sql13.rtp.rptdesigner.dataview.sapbwquerydesigner.f1"
   - "10014"
@@ -95,8 +96,7 @@ helpviewer_keywords:
   
 -   **Delete** (![Delete](../../reporting-services/report-data/media/rsqdicon-delete.gif "Delete"))  
   
-## See Also  
- [Create a Shared Dataset or Embedded Dataset &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
- [RSReportDesigner Configuration File](../../reporting-services/report-server/rsreportdesigner-configuration-file.md)  
-  
-  
+## Related content
+
+- [Create a Shared Dataset or Embedded Dataset &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)
+- [RSReportDesigner Configuration File](../../reporting-services/report-server/rsreportdesigner-configuration-file.md)

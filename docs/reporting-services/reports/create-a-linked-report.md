@@ -3,11 +3,12 @@ title: "Create a Linked Report"
 description: Learn how to create a linked report so that you can create additional versions of an existing report.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 05/30/2019
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: reports
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "linked reports [Reporting Services], creating"
 ---
@@ -38,8 +39,7 @@ helpviewer_keywords:
   
      ![Linked report icon](../../reporting-services/report-server/media/hlp-16linked.gif "Linked report icon")  
   
-## See also  
+## Related content
 
- [Reporting Services Concepts &#40;SSRS&#41;](../../reporting-services/reporting-services-concepts-ssrs.md)  
- [The web portal of a report server (SSRS Native Mode)](../../reporting-services/web-portal-ssrs-native-mode.md)
-  
+- [Reporting Services Concepts &#40;SSRS&#41;](../../reporting-services/reporting-services-concepts-ssrs.md)
+- [The web portal of a report server (SSRS Native Mode)](../../reporting-services/web-portal-ssrs-native-mode.md)

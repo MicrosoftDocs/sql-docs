@@ -3,13 +3,13 @@ title: "Tutorial: Add parameters to your report (Report Builder)"
 description: Learn how to add parameters to a Reporting Services paginated report to support multiple-value parameters, report data filters, and data visibility.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 06/26/2024
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: reporting-services
 ms.topic: tutorial
-ms.custom: updatefrequency5
-
-#customer intent: As a developer, I want to add parameters to paginated reports with Report Builder in SSRS, so I can support multiple-value parameters, report data filters, and data visibility.
+ms.custom:
+  - updatefrequency5
+# customer intent: As a developer, I want to add parameters to paginated reports with Report Builder in SSRS, so I can support multiple-value parameters, report data filters, and data visibility.
 ---
 
 # Tutorial: Add parameters to your report (Report Builder)
@@ -621,5 +621,5 @@ The report is saved to the report server. The status bar at the bottom of the wi
 ## Related content
 
 - [Paginated report parameters (Report Builder)](../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)
-- [Report Builder tutorials](../reporting-services/report-builder-tutorials.md)  
+- [Report Builder tutorials](../reporting-services/report-builder-tutorials.md)
 - [Report Builder in SQL Server](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)

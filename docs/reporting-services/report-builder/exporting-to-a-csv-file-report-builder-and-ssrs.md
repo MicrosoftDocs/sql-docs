@@ -3,11 +3,12 @@ title: "Export a paginated report to a CSV file"
 description: In Report Builder, the CSV rendering extension renders paginated reports to a plain text format that is readable and compatible with many applications.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 06/07/2023
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-builder
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 # Export a paginated report to a CSV file (Report Builder)
 
@@ -145,7 +146,7 @@ This renderer doesn't support interactivity in the generated CSV formats. The fo
 
 You can change some default settings for this renderer. These settings include which mode to render in, which characters to use as delimiters, and which characters to use as the text qualifier default string. You can change these settings by modifying the device information settings. For more information, see [CSV device information settings](../../reporting-services/csv-device-information-settings.md).
 
-## See also
+## Related content
 
 - [Pagination in Reporting Services (Report Builder  and SSRS)](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)
 - [Renderer behaviors (Report Builder  and SSRS)](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)

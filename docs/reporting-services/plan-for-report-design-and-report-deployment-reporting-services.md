@@ -3,11 +3,12 @@ title: "Plan for report design and report deployment"
 description: Learn how to plan a report authoring and report server environment that work together using Reporting Services.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 09/12/2016
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: reporting-services
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 # Plan for report design and report deployment
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] provides several approaches for authoring and deploying paginated reports. Learn how to plan a report authoring and report server environment that work together.
@@ -119,7 +120,6 @@ In a SharePoint mode deployment, browse to the document library, select the repo
   
 ## Related content
 
-- [Reports, report parts, and report definitions &#40;Report Builder and SSRS&#41;](../reporting-services/report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   
-- [Reporting Services tools](../reporting-services/tools/reporting-services-tools.md)   
-- [Report definition language &#40;SSRS&#41;](../reporting-services/reports/report-definition-language-ssrs.md)  
-  
+- [Reports, report parts, and report definitions &#40;Report Builder and SSRS&#41;](../reporting-services/report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)
+- [Reporting Services tools](../reporting-services/tools/reporting-services-tools.md)
+- [Report definition language &#40;SSRS&#41;](../reporting-services/reports/report-definition-language-ssrs.md)

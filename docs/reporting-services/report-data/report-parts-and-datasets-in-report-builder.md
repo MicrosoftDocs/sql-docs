@@ -3,11 +3,12 @@ title: "Report Parts and Datasets in Report Builder"
 description: Learn about report parts you can add in the Report Builder Report Part Gallery. Also learn about the datasets that the reports depend on.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 09/16/2016
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-data
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 # Report Parts and Datasets in Report Builder
 
@@ -48,10 +49,9 @@ In Report Builder, the easiest way to include data in a report is to add report 
 > [!IMPORTANT]  
 >  To ensure that you and others can continue to successfully use data from a shared dataset, you must understand the principles behind securing report items. For more information, see [Secure Shared Dataset Items](../../reporting-services/security/secure-shared-dataset-items.md).  
   
-## See Also  
- [Report Design View &#40;Report Builder&#41;](../../reporting-services/report-builder/report-design-view-report-builder.md)   
- [Security &#40;Report Builder&#41;](../../reporting-services/report-builder/security-report-builder.md)   
- [Report Parts &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)   
- [Report Embedded Datasets and Shared Datasets &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
-  
-  
+## Related content
+
+- [Report Design View &#40;Report Builder&#41;](../../reporting-services/report-builder/report-design-view-report-builder.md)
+- [Security &#40;Report Builder&#41;](../../reporting-services/report-builder/security-report-builder.md)
+- [Report Parts &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)
+- [Report Embedded Datasets and Shared Datasets &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)

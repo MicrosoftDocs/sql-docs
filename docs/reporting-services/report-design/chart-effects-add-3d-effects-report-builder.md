@@ -3,11 +3,12 @@ title: "Add 3D effects to a paginated report chart"
 description: Provide depth and add visual impact to charts in your paginated report with three-dimensional effects in Report Builder.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/03/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 # Add 3D effects to a paginated report chart (Report Builder)
 
@@ -78,9 +79,8 @@ ms.custom: updatefrequency5
   
     1.  For the **DrawingStyle** property, specify the **Cylinder** value.  
   
-## Related content  
- [3D, bevel, and other effects in a chart &#40;Report Builder&#41;](../../reporting-services/report-design/chart-effects-3d-bevel-and-other-report-builder.md)   
- [Format a chart &#40;Report Builder&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
- [Charts &#40;Report Builder&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
-  
-  
+## Related content
+
+- [3D, bevel, and other effects in a chart &#40;Report Builder&#41;](../../reporting-services/report-design/chart-effects-3d-bevel-and-other-report-builder.md)
+- [Format a chart &#40;Report Builder&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)
+- [Charts &#40;Report Builder&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)

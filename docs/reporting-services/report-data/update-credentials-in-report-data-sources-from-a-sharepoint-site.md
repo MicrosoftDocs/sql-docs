@@ -3,11 +3,12 @@ title: "Update Credentials in Report Data Sources from a SharePoint Site"
 description: Learn how to update data sources embedded in reports and shared data sources that are saved in a SharePoint document library.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/01/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-data
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 # Update Credentials in Report Data Sources from a SharePoint Site
   This topic describes how to update data sources embedded in reports and shared data sources that are saved in a SharePoint document library.  
@@ -76,7 +77,6 @@ ms.custom: updatefrequency5
   
 8.  Select **OK**.
   
-## See Also  
- [Upload Documents to a SharePoint Library &#40;Reporting Services in SharePoint Mode&#41;](../../reporting-services/report-server-sharepoint/upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md)  
-  
-  
+## Related content
+
+- [Upload Documents to a SharePoint Library &#40;Reporting Services in SharePoint Mode&#41;](../../reporting-services/report-server-sharepoint/upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md)

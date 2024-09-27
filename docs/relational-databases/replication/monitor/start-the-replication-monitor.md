@@ -3,11 +3,12 @@ title: "Start the Replication Monitor"
 description: "Start the Replication Monitor"
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/14/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: how-to
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "Replication Monitor, starting"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
@@ -28,7 +29,6 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
   
 2.  Run sqlmonitor.exe.  
   
-## See Also  
- [Monitoring Replication](../../../relational-databases/replication/monitor/monitoring-replication.md)  
-  
-  
+## Related content
+
+- [Monitoring Replication](../../../relational-databases/replication/monitor/monitoring-replication.md)

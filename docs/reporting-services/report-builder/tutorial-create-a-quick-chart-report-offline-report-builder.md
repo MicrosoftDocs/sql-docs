@@ -3,11 +3,12 @@ title: "Tutorial: Create a quick chart report offline (Report Builder)"
 description: In this tutorial, you create a pie chart in a Reporting Services paginated report in Report Builder. Then you add percentages and modify the pie chart.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 05/30/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-builder
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "reports, creating"
   - "tutorials, getting started"
@@ -233,5 +234,4 @@ It might help to read about some of the concepts and terms before you get starte
 
 - [Report Builder tutorials](../../reporting-services/report-builder-tutorials.md)
 - [Report Builder in SQL Server](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)
-
-More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231).
+- [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

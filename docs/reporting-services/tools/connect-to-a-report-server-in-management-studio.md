@@ -3,11 +3,12 @@ title: "Connect to a report server in Management Studio"
 description: Learn how to connect to any server in the SQL Server family and graphically browse its contents by using the Object Explorer in SQL Server Management Studio.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 06/12/2024
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: tools
 ms.topic: how-to
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 f1_keywords:
   - "sql13.swb.connecttors.connectionproperties.f1"
   - "sql13.swb.connecttors.login.f1"
@@ -18,8 +19,7 @@ helpviewer_keywords:
   - "registering report servers"
   - "report servers [Reporting Services], registering"
   - "Connect to Server dialog box, Reporting Services"
-
-#customer intent: As a SQL server user, I want to learn how to connect and graphically browse my SQL databases so that I can access and use my data.
+# customer intent: As a SQL server user, I want to learn how to connect and graphically browse my SQL databases so that I can access and use my data.
 ---
 
 # Connect to a report server in Management Studio
@@ -107,5 +107,5 @@ When you specify [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] a
 
 ## Related content
 
-- [Configure a report server database connection &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)  
+- [Configure a report server database connection &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)
 - [Reporting Services in SQL Server Management Studio &#40;SSRS&#41;](../../reporting-services/tools/reporting-services-in-sql-server-management-studio-ssrs.md)

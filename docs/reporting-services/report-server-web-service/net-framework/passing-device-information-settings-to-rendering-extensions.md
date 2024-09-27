@@ -3,11 +3,12 @@ title: "Passing Device Information Settings to Rendering Extensions"
 description: Rendering parameters are passed a rendering extension. Specify device information settings by the Render method, as URL parameter, or in configuration files.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/16/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-server-web-service
 ms.topic: reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "device information settings [Reporting Services]"
   - "Render method"
@@ -45,9 +46,8 @@ https://<Server Name>/reportserver?/SampleReports/Sales Order Detail&rs:Command=
   
  For more information, see [Specify Device Information Settings in a URL](../../../reporting-services/specify-device-information-settings-in-a-url.md).  
   
-## See Also  
- [Device Information Settings for Rendering Extensions &#40;Reporting Services&#41;](../../../reporting-services/device-information-settings-for-rendering-extensions-reporting-services.md)   
- [Customize Rendering Extension Parameters in RSReportServer.Config](../../../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)   
- [Building Applications Using the Web Service and the .NET Framework](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)  
-  
-  
+## Related content
+
+- [Device Information Settings for Rendering Extensions &#40;Reporting Services&#41;](../../../reporting-services/device-information-settings-for-rendering-extensions-reporting-services.md)
+- [Customize Rendering Extension Parameters in RSReportServer.Config](../../../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)
+- [Building Applications Using the Web Service and the .NET Framework](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)

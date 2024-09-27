@@ -3,11 +3,12 @@ title: "Replication Merge Agent"
 description: The Replication Merge Agent applies the initial snapshot held in database tables to the Subscribers, merges incremental data changes, and reconciles conflicts.
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "10/29/2018"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "Merge Agent, executables"
   - "Merge Agent, parameter reference"
@@ -405,7 +406,6 @@ This parameter is on the list for possible deprecation soon. We recommend settin
 
 In addition, if you have to write statistics to the \<Distribution server\>..msmerge_history table, use trace flag -T 102.
   
-## See Also  
- [Replication Agent Administration](../../../relational-databases/replication/agents/replication-agent-administration.md)  
-  
-  
+## Related content
+
+- [Replication Agent Administration](../../../relational-databases/replication/agents/replication-agent-administration.md)

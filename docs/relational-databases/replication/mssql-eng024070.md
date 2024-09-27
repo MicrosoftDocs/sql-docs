@@ -3,11 +3,12 @@ title: "MSSQL_ENG024070"
 description: "MSSQL_ENG024070"
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/14/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "MSSQL_ENG024070 error"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
@@ -42,9 +43,8 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
   
  Being a member of this security group grants to the new account the required permissions to run the replication agent job.  
   
-## See Also  
- [Errors and Events Reference &#40;Replication&#41;](../../relational-databases/replication/errors-and-events-reference-replication.md)   
- [Manage Logins and Passwords in Replication](../../relational-databases/replication/security/identity-and-access-control-replication.md)   
- [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md)  
-  
-  
+## Related content
+
+- [Errors and Events Reference &#40;Replication&#41;](../../relational-databases/replication/errors-and-events-reference-replication.md)
+- [Manage Logins and Passwords in Replication](../../relational-databases/replication/security/identity-and-access-control-replication.md)
+- [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md)

@@ -3,11 +3,12 @@ title: "Replication Agent Administration"
 description: Learn about managing replication agents, which perform tasks for replication, like creating copies of schema and data and propagating changes between servers.
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "08/24/2016"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "Snapshot Agent, administering"
   - "Log Reader Agent, administering"
@@ -88,7 +89,6 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 |Replication Agents Checkup|Detects replication agents that are not actively logging history. It writes to the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows event log if a job step fails.|Runs every ten minutes.|  
 |Replication monitoring refresher for distribution|Refreshes cached queries used by Replication Monitor..|Runs continuously.|  
   
-## See Also  
- [Monitoring Replication](../../../relational-databases/replication/monitor/monitoring-replication.md)  
-  
-  
+## Related content
+
+- [Monitoring Replication](../../../relational-databases/replication/monitor/monitoring-replication.md)

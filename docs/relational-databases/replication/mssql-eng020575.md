@@ -3,11 +3,12 @@ title: "MSSQL_ENG020575"
 description: "MSSQL_ENG020575"
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/01/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "MSSQL_ENG020575 error"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
@@ -29,7 +30,6 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ## Explanation  
  The data at the Subscriber was validated against the data at the Publisher, and the data matched; therefore validation passed. For more information about validation, see [Validate Replicated Data](../../relational-databases/replication/validate-data-at-the-subscriber.md).  
   
-## See Also  
- [Errors and Events Reference &#40;Replication&#41;](../../relational-databases/replication/errors-and-events-reference-replication.md)  
-  
-  
+## Related content
+
+- [Errors and Events Reference &#40;Replication&#41;](../../relational-databases/replication/errors-and-events-reference-replication.md)

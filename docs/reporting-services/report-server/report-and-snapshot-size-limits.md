@@ -3,11 +3,12 @@ title: "Report and snapshot size limits"
 description: Learn about report size limits when a report is published in Report Server, rendered at run time, and saved to the file system.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/14/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-server
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "large reports"
   - "maximum report size"
@@ -71,8 +72,8 @@ EXEC sp_spaceused
   
  The quantity of snapshots that are stored in a report server database is, by itself, not a performance factor. You can store a large number of snapshots without affecting server performance. You can keep snapshots indefinitely. However, the  report history is configurable. If a report server administrator lowers the report history limit, you might lose historical reports that you intended to keep. If you delete the report, all report history is deleted with it.  
   
-## Related content  
- [Set report processing properties](../../reporting-services/report-server/set-report-processing-properties.md)   
- [Report server database &#40;SSRS native mode&#41;](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)   
- [Process large reports](../../reporting-services/report-server/process-large-reports.md)  
-  
+## Related content
+
+- [Set report processing properties](../../reporting-services/report-server/set-report-processing-properties.md)
+- [Report server database &#40;SSRS native mode&#41;](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)
+- [Process large reports](../../reporting-services/report-server/process-large-reports.md)

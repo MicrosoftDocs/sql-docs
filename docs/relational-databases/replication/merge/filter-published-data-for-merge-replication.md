@@ -3,11 +3,12 @@ title: "Filter Published Data for Merge Replication"
 description: "Filter Published Data for Merge Replication"
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/01/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "merge replication [SQL Server replication], filtering published data"
   - "replication [SQL Server], filtering published data"
@@ -24,7 +25,6 @@ helpviewer_keywords:
   
  A filter must not include the **rowguidcol** used by replication to identify rows. By default this is the column added at the time you set up merge replication and is named **rowguid**.  
   
-## See Also  
- [Publish Data and Database Objects](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)  
-  
-  
+## Related content
+
+- [Publish Data and Database Objects](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)

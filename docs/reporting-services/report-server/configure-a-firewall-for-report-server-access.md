@@ -3,15 +3,16 @@ title: "Configure a firewall for report server access"
 description: "See how to manually configure Windows Firewall to allow access to Report Server applications and published reports by opening necessary ports."
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 09/04/2024
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-server
 ms.topic: how-to
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "firewall systems [Reporting Services]"
   - "configuring servers [Reporting Services]"
-#customer intent: As an IT administrator, I want to configure Windows Firewall to allow access to Report Server applications and published reports by opening the necessary ports.
+# customer intent: As an IT administrator, I want to configure Windows Firewall to allow access to Report Server applications and published reports by opening the necessary ports.
 ---
 # Configure a firewall for report server access
 
@@ -58,5 +59,5 @@ You can also verify that the port is opened correctly by starting the web portal
 
 ## Related content
 
-- [Configure Windows Firewall for database engine access](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md) 
+- [Configure Windows Firewall for database engine access](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)
 - [Configure the Windows Firewall to allow SQL Server access](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)

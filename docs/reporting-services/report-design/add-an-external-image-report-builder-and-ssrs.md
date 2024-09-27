@@ -3,11 +3,12 @@ title: "Add an external image to a paginated report"
 description: Learn how to add an image to your paginated report from an external source with appropriate verification and permissions in Report Builder.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/01/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 # Add an external image to a paginated report (Report Builder)
 
@@ -37,8 +38,8 @@ External images can be on a report server in native mode or any other web site, 
   
 1.  Select **OK**.
   
-## Related content 
- [Embed an image in a report &#40;Report Builder&#41;](../../reporting-services/report-design/embed-an-image-in-a-report-report-builder-and-ssrs.md)   
- [Add a background image &#40;Report Builder&#41;](../../reporting-services/report-design/add-a-background-image-report-builder-and-ssrs.md)   
- [Image properties dialog, general &#40;Report Builder&#41;](./images-report-builder-and-ssrs.md)  
-  
+## Related content
+
+- [Embed an image in a report &#40;Report Builder&#41;](../../reporting-services/report-design/embed-an-image-in-a-report-report-builder-and-ssrs.md)
+- [Add a background image &#40;Report Builder&#41;](../../reporting-services/report-design/add-a-background-image-report-builder-and-ssrs.md)
+- [Image properties dialog, general &#40;Report Builder&#41;](./images-report-builder-and-ssrs.md)

@@ -3,11 +3,12 @@ title: "Text-based Query Designer User Interface (Report Builder)"
 description: Use the text-based query designer to specify a query using the query language supported by the data source, run the query, and view the results at design time.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/14/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-data
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 f1_keywords:
   - "10010"
 helpviewer_keywords:
@@ -96,8 +97,7 @@ uspGetWhereUsedProductID
   
  When you enter the table name Person.ContactType, it is the equivalent of creating the [!INCLUDE[tsql](../../includes/tsql-md.md)] statement `SELECT * FROM Person.ContactType`.  
   
-## See Also  
- [Relational Query Designer User Interface &#40;Report Builder&#41;](../../reporting-services/report-data/relational-query-designer-user-interface-report-builder.md)   
- [Query Design Tools &#40;SSRS&#41;](query-design-tools-ssrs.md)  
-  
-  
+## Related content
+
+- [Relational Query Designer User Interface &#40;Report Builder&#41;](../../reporting-services/report-data/relational-query-designer-user-interface-report-builder.md)
+- [Query Design Tools &#40;SSRS&#41;](query-design-tools-ssrs.md)

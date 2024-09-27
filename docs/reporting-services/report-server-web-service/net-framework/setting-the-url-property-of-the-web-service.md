@@ -3,11 +3,12 @@ title: "Setting the Url Property of the Web Service"
 description: In your Microsoft .NET Framework applications, you can modify the base URL of the Report Server Web service to which your application is directed.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/14/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-server-web-service
 ms.topic: reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "Url property"
   - "Report Server Web service, proxies"
@@ -98,10 +99,7 @@ class Sample
   
  For more information about creating the initial Web service proxy, see [Creating the Web Service Proxy](../../../reporting-services/report-server-web-service/net-framework/creating-the-web-service-proxy.md).  
   
-## See Also  
- <xref:ReportService2010.ReportingService2010.CreateCatalogItem%2A>   
- <xref:ReportService2010.ReportingService2010.GetItemDefinition%2A>   
- [Building Applications Using the Web Service and the .NET Framework](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
- [Report Server Web Service](../../../reporting-services/report-server-web-service/report-server-web-service.md)  
-  
-  
+## Related content
+
+- [Building Applications Using the Web Service and the .NET Framework](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)
+- [Report Server Web Service](../../../reporting-services/report-server-web-service/report-server-web-service.md)

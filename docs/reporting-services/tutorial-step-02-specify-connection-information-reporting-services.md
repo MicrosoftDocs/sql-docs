@@ -3,13 +3,13 @@ title: "Tutorial: Specify connection information (Reporting Services)"
 description: "In this lesson, you define a data source: connection information the report uses to access data from a relational database or other sources."
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 06/19/2024
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: reporting-services
 ms.topic: tutorial
-ms.custom: updatefrequency5
-#customer intent: As a SQL server user, I want to use SQL Server Data Tools (SSDT) to specify connection information so that I can access data in a relational database or from other sources.
-
+ms.custom:
+  - updatefrequency5
+# customer intent: As a SQL server user, I want to use SQL Server Data Tools (SSDT) to specify connection information so that I can access data in a relational database or from other sources.
 ---
 # Tutorial: Specify connection information (Reporting Services)
   
@@ -65,7 +65,7 @@ When you create reports in SQL Server Reporting Services (SSRS), establishing a 
 
    :::image type="content" source="media/lesson-2-specifying-connection-information-reporting-services/ssrs-adventureworks-data-source-2022.png.png" alt-text="Screenshot of the Report Data pane that highlights the AdventureWorks2022 data source.":::
 
-## Next step 
+## Next step
 
 > [!div class="nextstepaction"]
 > [Step 3: Define a dataset for the table report &#40;Reporting Services&#41;](tutorial-step-03-define-dataset-table-report-reporting-services.md)

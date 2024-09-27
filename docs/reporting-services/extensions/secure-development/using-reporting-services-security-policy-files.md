@@ -3,11 +3,12 @@ title: "Use Reporting Services security policy files"
 description: Learn about the configuration files that Reporting Services uses to store security policy information for code assemblies. Find out how to modify them.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/06/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: extensions
 ms.topic: reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "code groups [Reporting Services]"
   - "CodeGroup elements"
@@ -75,6 +76,4 @@ helpviewer_keywords:
   
 ## Related content
 
-- [Understand security policies](../../../reporting-services/extensions/secure-development/understanding-security-policies.md)  
-  
-  
+- [Understand security policies](../../../reporting-services/extensions/secure-development/understanding-security-policies.md)

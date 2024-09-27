@@ -3,11 +3,12 @@ title: "Uninstall Report Builder"
 description: "Uninstall Report Builder"
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 05/30/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-server
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 
 # Uninstall Report Builder
@@ -48,8 +49,7 @@ If folders used by Report Builder include custom files, the folders and the file
   
 5.  Press **Enter**.  
 
-## Next steps
+## Related content
 
-[Install Report Builder](../../reporting-services/install-windows/install-report-builder.md)  
-
-More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)
+- [Install Report Builder](../../reporting-services/install-windows/install-report-builder.md)
+- [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

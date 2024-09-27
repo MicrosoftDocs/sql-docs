@@ -3,7 +3,7 @@ title: "Install Reporting and Internet Information Services side-by-side"
 description: "Install Reporting and Internet Information Services Side-by-Side"
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 07/02/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-server
 ms.topic: conceptual
@@ -80,6 +80,5 @@ You can install and run SQL Server Reporting Services (SSRS) and Internet Inform
 
 - [Configure report server URLs](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)
 - [Configure a URL](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)
-- [Install Reporting Services native mode report server](../../reporting-services/install-windows/install-reporting-services-native-mode-report-server.md)  
-
-More questions? [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user).
+- [Install Reporting Services native mode report server](../../reporting-services/install-windows/install-reporting-services-native-mode-report-server.md)
+- [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)

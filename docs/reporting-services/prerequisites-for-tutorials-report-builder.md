@@ -3,11 +3,12 @@ title: "Prerequisites for tutorials (Report Builder)"
 description: Learn about the prerequisites that you must have in place to complete the Report Builder tutorials.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 05/30/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: reporting-services
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 
 # Prerequisites for tutorials (Report Builder)
@@ -36,8 +37,7 @@ You must have the following prerequisites to complete Report Builder tutorials:
   
 The report server administrator must grant you the necessary permissions on the report server, configure [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] folder locations, and configure Report Builder default options. For more information, see [Install Report Builder](install-windows/install-report-builder.md).  
 
-## Next step
+## Related content
 
-- [Report Builder tutorials](../reporting-services/report-builder-tutorials.md)  
-
-More questions? [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user).
+- [Report Builder tutorials](../reporting-services/report-builder-tutorials.md)
+- [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)

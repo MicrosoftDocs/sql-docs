@@ -3,11 +3,12 @@ title: "Delete Catalog Items (Management Studio)"
 description: Learn about the options on the Delete Catalog Items page of Management Studio that allow you to delete shared schedules and role definitions.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/01/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: tools
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 f1_keywords:
   - "sql13.swb.reportserver.deleteitems.f1"
 ---
@@ -36,9 +37,8 @@ f1_keywords:
  **Error**  
  Displays an error code if an error occurs while deleting an item.  
   
-## Related content 
- [Delete an item &#40;Management Studio&#41;](../../reporting-services/tools/delete-an-item-management-studio.md)   
- [Report server in Management Studio F1 Help](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
- [Create, modify, and delete schedules](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md)  
-  
-  
+## Related content
+
+- [Delete an item &#40;Management Studio&#41;](../../reporting-services/tools/delete-an-item-management-studio.md)
+- [Report server in Management Studio F1 Help](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)
+- [Create, modify, and delete schedules](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md)

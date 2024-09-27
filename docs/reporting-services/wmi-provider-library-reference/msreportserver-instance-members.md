@@ -3,11 +3,12 @@ title: "MSReportServer_Instance members"
 description: "MSReportServer_Instance members"
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/01/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: wmi-provider-library-reference
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "MSReportServer_Instance class"
 apilocation: "reportingservices.mof"

@@ -3,11 +3,12 @@ title: Work with KPIs in Reporting Services
 description: Learn how you can easily measure status and performance by using KPIs in SQL Server Reporting Services.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 01/06/2022
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: reporting-services
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 
 # Work with KPIs in Reporting Services
@@ -120,8 +121,7 @@ To remove a KPI, you can do the following steps.
   
  
 ## Related content
-  
-- [The web portal of a report server (SSRS Native Mode)](../reporting-services/web-portal-ssrs-native-mode.md)  
-- [Work with shared datasets - web portal](../reporting-services/work-with-shared-datasets-web-portal.md)
 
-More questions? [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user).
+- [The web portal of a report server (SSRS Native Mode)](../reporting-services/web-portal-ssrs-native-mode.md)
+- [Work with shared datasets - web portal](../reporting-services/work-with-shared-datasets-web-portal.md)
+- [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)

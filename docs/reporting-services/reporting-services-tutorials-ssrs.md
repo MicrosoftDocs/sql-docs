@@ -3,15 +3,15 @@ title: "Reporting Services tutorials"
 description: Use these tutorials to learn about the capabilities of SQL Server 2022 Reporting Services (SSRS) or later, SQL Server Data Tools (SSDT), and Report Builder with sample data.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 07/08/2024
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: reporting-services
 ms.topic: tutorial
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "tutorials [Reporting Services]"
-#customer intent: As a SQL Server Reporting Services (SSRS) user, I want to explore the capabilities of SSRS through step-by-step tutorials so that I can create, customize, and distribute a variety of professional reports efficiently.
-
+# customer intent: As a SQL Server Reporting Services (SSRS) user, I want to explore the capabilities of SSRS through step-by-step tutorials so that I can create, customize, and distribute a variety of professional reports efficiently.
 ---
 
 # Reporting Services tutorials (SSRS)
@@ -29,6 +29,6 @@ The Reporting Services tutorials allow you to explore the capabilities of [!INCL
 
 ## Related content
 
-* [AdventureWorks sample databases](https://github.com/Microsoft/sql-server-samples/releases)
-* [Reporting Services samples on the TechNet wiki](/power-bi/create-reports/power-bi-create-mobile-optimized-report-about)
-* [TechNet Wiki: SQL Server 2012 samples](https://go.microsoft.com/fwlink/?linkID=220734)
+- [AdventureWorks sample databases](https://github.com/Microsoft/sql-server-samples/releases)
+- [Reporting Services samples on the TechNet wiki](/power-bi/create-reports/power-bi-create-mobile-optimized-report-about)
+- [TechNet Wiki: SQL Server 2012 samples](https://go.microsoft.com/fwlink/?linkID=220734)

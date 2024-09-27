@@ -3,11 +3,12 @@ title: "Identify the execution state"
 description: Learn to use Reporting Services to identify the execution state so that you can interact with the report in several ways.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/03/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-server-web-service
 ms.topic: reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "session states [Reporting Services]"
   - "lifetimes [Reporting Services]"
@@ -49,9 +50,7 @@ helpviewer_keywords:
   
  You can also manage a report session using URL access commands.  
   
-## Related content  
- <xref:ReportExecution2005.ReportExecutionService.Render%2A>   
- [Technical reference &#40;SSRS&#41;](../../reporting-services/technical-reference-ssrs.md)   
- [Use Reporting Services SOAP headers](../../reporting-services/report-server-web-service-net-framework-soap-headers/using-reporting-services-soap-headers.md)  
-  
-  
+## Related content
+
+- [Technical reference &#40;SSRS&#41;](../../reporting-services/technical-reference-ssrs.md)
+- [Use Reporting Services SOAP headers](../../reporting-services/report-server-web-service-net-framework-soap-headers/using-reporting-services-soap-headers.md)

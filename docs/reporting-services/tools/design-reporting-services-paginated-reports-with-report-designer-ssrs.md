@@ -3,15 +3,15 @@ title: Design Reporting Services paginated reports with Report Designer (SSRS)
 description: See how to use Report Designer in SQL Server Reporting Services to create full-featured paginated reports and reporting solutions.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 09/10/2024
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: tools
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "Report Designer [Reporting Services], report creation"
-
-#customer intent: As a SQL Server user, I want to see how to use Report Designer so that I can create useful reports with my data.
+# customer intent: As a SQL Server user, I want to see how to use Report Designer so that I can create useful reports with my data.
 ---
 
 # Design Reporting Services paginated reports with Report Designer (SSRS)

@@ -108,7 +108,7 @@ The following XML code shows the element for the Excel rendering extension in th
 
 `<Extension Name="EXCELOPENXML" Type="Microsoft.ReportingServices.Rendering.ExcelOpenXmlRenderer.ExcelOpenXmlRenderer,Microsoft.ReportingServices.ExcelRendering"/>`
 
-The Excel renderer has the following properties and values.
+The Excel renderer has the following default values and limits:
 
 | Property | Value |
 | --- | --- |
@@ -117,10 +117,10 @@ The Excel renderer has the following properties and values.
 | Number of colors allowed in a worksheet | Approximately 16 million (24-bit color) |
 | ZIP compressed files | ZIP compression |
 | Default font family | Calibri |
-| Default font size | 11 pt |
-| Default row height | 15 pt |
+| Default font size | 11 points |
+| Default row height | 15 points |
 
-Because the report explicitly sets the row height, the default row height affects only rows that are sized automatically upon export to Excel.
+Because the report explicitly sets the row height, the default row height affects only rows that are sized automatically during export to Excel.
 
 ## Report items in Excel
 

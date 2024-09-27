@@ -171,9 +171,10 @@ To add an additional node to the SQL Server FCI, follow these steps:
 
 ## Register with SQL IaaS Agent extension
 
-To manage your SQL Server VM from the portal, register it with the [SQL IaaS Agent extension](sql-agent-extension-manually-register-single-vm.md). Only [limited functionality](sql-server-iaas-agent-extension-automate-management.md#feature-benefits) is available to SQL Server VMs that have failover clustered instances of SQL Server (FCIs).
+To manage your SQL Server VM from the portal, register it with the [SQL IaaS Agent extension](sql-agent-extension-manually-register-single-vm.md). 
 
-If your SQL Server VM has already been registered with the SQL IaaS Agent extension and you've enabled any features that require the agent, you'll need to [delete the extension](sql-agent-extension-manually-register-single-vm.md#delete-the-extension) from the SQL Server VM and register it again after your FCI is installed.
+> [!NOTE]
+> At this time, SQL Server failover cluster instances on Azure virtual machines registered with the SQL IaaS Agent extension only support a [limited](failover-cluster-instance-overview.md#limited-extension-support) number of features available through basic registration, and not those that require the agent, such as automated backup, patching, Microsoft Entra authentication and advanced portal management. See the [table of benefits](sql-server-iaas-agent-extension-automate-management.md#feature-benefits) to learn more. 
 
 Register a SQL Server VM with PowerShell (-LicenseType can be `PAYG` or `AHUB`):
 
@@ -192,19 +193,16 @@ If you deployed your SQL Server VMs in multiple subnets, skip this step. If you 
 
 ## Limitations
 
-- Microsoft Distributed Transaction Coordinator (MSDTC) isn't supported on Windows Server 2016 and earlier.
 - FILESTREAM isn't supported for a failover cluster with a premium file share. To use filestream, deploy your cluster by using [Storage Spaces Direct](failover-cluster-instance-storage-spaces-direct-manually-configure.md) or [Azure shared disks](failover-cluster-instance-azure-shared-disks-manually-configure.md) instead.
-- SQL Server FCIs registered with the SQL IaaS Agent extension don't support features that require the agent, such as automated backup, patching, Microsoft Entra authentication and advanced portal management. See the [table of benefits](sql-server-iaas-agent-extension-automate-management.md#feature-benefits) for more information.
 - Database Snapshots aren't currently supported with [Azure Files due to sparse files limitations](/rest/api/storageservices/features-not-supported-by-the-azure-file-service).
 - Since database snapshots aren't supported, CHECKDB for user databases falls back to CHECKDB WITH TABLOCK. TABLOCK limits the checks that are performed - DBCC CHECKCATALOG isn't run on the database, and Service Broker data isn't validated.
 - DBCC CHECKDB on `master` and `msdb` database isn't supported.
 - Databases that use the in-memory OLTP feature aren't supported on a failover cluster instance deployed with a premium file share. If your business requires in-memory OLTP, consider deploying your FCI with [Azure shared disks](failover-cluster-instance-azure-shared-disks-manually-configure.md) or [Storage Spaces Direct](failover-cluster-instance-storage-spaces-direct-manually-configure.md) instead.
+- Microsoft Distributed Transaction Coordinator (MSDTC) is not supported by SQL Server on Azure VM failover cluster instances deployed to premium file shares. Review [FCI limitations](failover-cluster-instance-overview.md#limitations) for more information.
+- Microsoft Distributed Transaction Coordinator (MSDTC) is supported on Azure virtual machines starting with Windows Server 2019 and later when deployed to dedicated Clustered Shared Volumes (CSVs) and using a [standard load balancer](/azure/load-balancer/load-balancer-overview). MSDTC is not supported on Windows Server 2016 and earlier.
 
-### Limited extension support
+[!INCLUDE [virtual-machines-fci-limitations](../../includes/virtual-machines-fci-limitations.md)]
 
-At this time, SQL Server failover cluster instances on Azure virtual machines, registered with the SQL IaaS Agent extension, only support a limited number of features. See the [table of benefits](sql-server-iaas-agent-extension-automate-management.md#feature-benefits).
-
-If your SQL Server VM has already been registered with the SQL IaaS Agent extension and you've enabled any features that require the agent, you need to [delete the extension](sql-agent-extension-manually-register-single-vm.md#delete-the-extension) from the SQL Server VM by deleting the **SQL virtual machine** resource for the corresponding VMs and then register it with the SQL IaaS Agent extension again. When you're deleting the **SQL virtual machine** resource by using the Azure portal, clear the check box next to the correct virtual machine to avoid deleting the virtual machine.
 
 ## Related content
 

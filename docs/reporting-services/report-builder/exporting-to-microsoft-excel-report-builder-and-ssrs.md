@@ -38,7 +38,7 @@ For information about how to export a report in Excel format, see [Export report
 - Because the maximum row height is 409 points, if the defined height of a cell in the report is greater than 409 points, Excel splits the cell contents into multiple rows.
 - The maximum number of worksheets isn't defined in Excel. But external factors, such as memory and disk space, might cause limitations to be applied.
 - In outlines, Excel permits up to seven nested levels only.
-- An outline is disabled when the report item that controls whether another item can be expanded or collapsed:
+- An outline is unavailable when the report item that controls another item's visibility:
   - Isn't in the previous or next row relative to the item being expanded or collapsed.
   - Isn't in the column of the item being expanded or collapsed.
 
@@ -49,7 +49,7 @@ For more information about Excel limitations, see [Excel specifications and limi
 The following limitations apply to text boxes and text:
 
 - Text box values that are expressions aren't converted to Excel formulas. The value of each text box is evaluated during report processing. The evaluated expression is exported as the contents of each Excel cell.
-- Text boxes are rendered within one Excel cell. Font size, font face, decoration, and font style are the only formatting that's supported on individual text within an Excel cell.
+- Each text box is rendered within one Excel cell. Formatting for font size, font face, decoration, and font style is supported on cell text.
 - Excel doesn't support overline text formatting.
 - Excel adds a default padding of approximately 3.75 points to the left and right sides of cells. If the padding of a text box is less than 3.75 points and the box isn't wide enough to accommodate the text, the text might wrap to a new line in Excel. To work around this issue, increase the width of the text box in the report.
 
@@ -161,78 +161,92 @@ The Excel renderer writes the following metadata to the Excel file.
 
 ## Page headers and footers
 
-Depending on the Device Information `SimplePageHeaders` setting, the page header can be rendered in two ways: the page header can be rendered at the top of each worksheet cell grid, or in the actual Excel worksheet header section. By default, the header is rendered to the cell grid on the Excel worksheet.
+The way the page header is rendered depends on the device information `SimplePageHeaders` setting:
 
-The page footer is always rendered to the actual Excel worksheet footer section, regardless of the value of the `SimplePageHeaders` setting.
+- By default, `SimplePageHeaders` is set to **False**. In this case, the header is rendered to the cell grid on the Excel worksheet, at the top of that grid.
+- If `SimplePageHeaders` is set to **True**, the header is rendered to the Excel worksheet header section.
 
-Excel header and footer sections support a maximum of 256 characters, including markup. If this limit is exceeded, the Excel renderer removes markup characters starting at the end of the header and/or footer string to reduce the number of total characters. If all markup characters are removed and the length still exceeds the maximum, the string is truncated starting from the right.
+The page footer is always rendered to the Excel worksheet footer section, regardless of the value of the `SimplePageHeaders` setting.
+
+Because of Excel limitations, text boxes are the only type of report item that can be rendered in the Excel header and footer sections.
+
+Excel header and footer sections support a maximum of 256 characters, including markup. If this limit is exceeded, the Excel renderer removes markup characters starting at the end of the header or footer string to reduce the number of total characters. If all markup characters are removed and the length still exceeds the maximum, the string is truncated starting from the right.
 
 ### SimplePageHeader settings
 
-By default, the Device Information `SimplePageHeaders` setting is set to **False**; therefore, the page headers are rendered as rows in the report on the Excel worksheet surface. The worksheet rows that contain the headers become locked rows. You can freeze or unfreeze the pane in Excel. If the **Print Titles** option is selected, these headers are automatically set to print on every worksheet page.
+- When the device information `SimplePageHeaders` setting is set to **False**, the worksheet rows that contain the headers become locked rows. You can freeze or unfreeze the pane in Excel.
 
-The page header repeats at the top of every worksheet in the workbook except the document map cover sheet if the **Print Titles** option is selected on the Page Layout tab in Excel. If the **Print on first page** or the **Print on last page** option isn't selected in the Report Header Properties or Report Footer Properties dialog boxes, the header isn't added to the first or last page respectively.
+- If the Excel settings for printing titles are configured to print these header rows, these headers get printed on every worksheet page except the document map cover sheet.
 
-Page footers are rendered in the Excel footer section.
+- In the Report Builder Page Header Properties window:
+  - If **Print on first page** isn't selected, the header isn't added to the first report page.
+  - If **Print on last page** isn't selected, the header isn't added to the last report page.
 
-Because of Excel limitations, text boxes are the only type of report item that can be rendered in the Excel header/footer section.
+## Interactivity
 
-## <a id="Interactivity"></a> Interactivity
+Some interactive elements are supported in Excel. The following sections discuss interactivity.
 
-Some interactive elements are supported in Excel. The following section is a description of specific behaviors.
+### Show and hide
 
-### Show and Hide
+There are limitations in the way Excel manages hidden and displayed report items when they're exported. Groups, rows, and columns that contain report items that can expand and collapse are rendered as Excel outlines. But Excel outlines expand and collapse rows and columns across the entire row or column. As a result, report items can be collapsed that aren't intended to be collapsed. Also, Excel's outlining symbols can become cluttered with overlapping outlines.
 
-[!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] has limitations with how it manages hidden and displayed report items when they're exported. Groups, rows, and columns that contain report items that can be toggled are rendered as Excel outlines. Excel creates outlines that expand and collapse rows and columns across the entire row or column. This result can cause the collapse of report items that aren't intended to be collapsed. In addition, Excel's outlining symbols can become cluttered with overlapping outlines. To address these issues, the following outlining rules are applied when using the Excel rendering extension:
+To address these issues, the Excel rendering extension uses the following outlining rules:
 
-- The report item in the top-left corner that can be toggled can continue to be toggled in Excel. Report items that can be toggled and share vertical or horizontal space with the report item that can be toggled in the top-left corner can't be toggled in Excel.
+- The report item that can expand and collapse that's closest to the top-left corner can also expand and collapse in Excel. Other report items that share vertical or horizontal space with that top-left item can't expand or collapse in Excel.
 
-- To determine whether a data region is collapsible by rows or columns, the position of the report item that controls the toggling is considered. Additionally, the position of the report item that is toggled is taken into account. If the item controlling the toggling appears before the item to be toggled, the item is collapsible by rows. Otherwise, the item is collapsible by columns. If the item controlling the toggling appears beside and above the area to be toggled equally, the item is rendered with row collapsible by rows.
+- To determine whether a data region is collapsible by rows or columns, the position of two items is taken into account:
+  - The report item that controls the visibility
+  - The data region that can expand and collapse
 
-- To determine where the subtotals are placed in the rendered report, the rendering extension examines the first instance of a dynamic member. If a peer static member appears immediately above it, the dynamic member is assumed to be the subtotals. Outlines are set to indicate that this data is summary data. If there are no static siblings of a dynamic member, the first instance of the instance is the subtotal.
+  The rules that are used depend on the relative position of these two items:
+  - If the item that controls the visibility appears before or after the item that expands and collapses, the item is collapsible by rows.
+  - If the item that controls the visibility appears beside the item that expands and collapses, the item is collapsible by columns.
+  - If the item that controls the visibility appears the same distance before and beside the item that expands and collapses, the item is collapsible by rows.
 
-- Due to an Excel limitation, outlines can be nested up to seven levels only.
+- To determine where subtotals are placed in the rendered report, the rendering extension examines the first instance of a dynamic member. If a peer static member appears immediately above it, the dynamic member is assumed to be the subtotals. Outlines are set to indicate that this data is summary data. If there are no static siblings of a dynamic member, the first instance of the instance is the subtotal.
+
+- Due to an Excel limitation, outlines can be nested only up to seven levels.
 
 ### Document map
 
-If any document map labels exist in the report, a document map is rendered. The document map is rendered as an Excel cover worksheet inserted at the first tab position in the workbook. The worksheet is named **Document map**.
+If any document map labels exist in the report, a document map is rendered as an Excel cover worksheet. The worksheet is named **Document map**, and it's inserted at the first tab position in the workbook.
 
-The report item's or group's `DocumentMapLabel` property determine the text displayed in the document map. Document map labels are listed in the order that they appear in the report, starting at the first row, in the first column. Each document map label cell is indented the number of levels deep it appears in the report. Each level of indentation is represented by placing the label in a subsequent column. Excel supports up to 256 levels of outline nesting.
+The `DocumentMapLabel` property of a report item or group determines its label in the document map. Labels are listed in the order that they appear in the report, starting at the first row, in the first column. Each document map label cell is indented the number of levels deep it appears in the report. Each level of indentation is represented by placing the label in a subsequent column. Excel supports up to 256 levels of outline nesting.
 
 The document map outline is rendered as a collapsible Excel outline. The outline structure matches the nested structure of the document map. The expand and collapse state of the outline starts at the second level.
 
-The root node of the map is the report name, the `<reportname>.rdl`, and it isn't interactive. The document map links font is Arial, 10 pt.
+The root node of the map is the report name, or its file name without the .rdl extension. That name isn't interactive.
+
+The font that the rendered uses for the document map links is 10-point Arial.
 
 ### Drillthrough links
 
-Drillthrough links that appear in text boxes are rendered as Excel hyperlinks in the cell in which the text is rendered. Drillthrough links for images and charts are rendered as Excel hyperlinks on the image when rendered. When selected, the drillthrough link opens the client's default browser and navigates to the HTML view of the target.
+Drillthrough links that appear in text boxes are rendered as Excel hyperlinks in the cell in which the text is rendered. Drillthrough links for images and charts are rendered as Excel hyperlinks on the image when it's rendered. When you select a drillthrough link, it opens the client's default browser and goes to the HTML view of the target.
 
 ### Hyperlinks
 
-Hyperlinks that appear in text boxes are rendered as Excel hyperlinks in the cell in which the text is rendered. Hyperlinks for images and charts are rendered as Excel hyperlinks on the image when rendered. When selected, the hyperlink opens the client's default browser and navigates to the target URL.
+Hyperlinks that appear in text boxes are rendered as Excel hyperlinks in the cell in which the text is rendered. Hyperlinks for images and charts are rendered as Excel hyperlinks on the image when it's rendered. When you select a hyperlink, it opens the client's default browser and goes to the target URL.
 
 ### Interactive sort
 
-Excel doesn't support interactive sort.
+In Report Builder, you can select buttons in a report to change the order that tables and matrices display rows and columns in. Excel doesn't support this type of interactive sort.
 
 ### Bookmarks
 
-Bookmark links in text boxes are rendered as Excel hyperlinks in the cell in which the text is rendered. Bookmark links for images and charts are rendered as Excel hyperlinks on the image when rendered. When selected, the bookmark goes to the Excel cell in which the bookmarked report item is rendered.
+Bookmark links in text boxes are rendered as Excel hyperlinks in the cell in which the text is rendered. Bookmark links for images and charts are rendered as Excel hyperlinks on the image when they're rendered. When you select a bookmark, it goes to the Excel cell in which the bookmarked report item is rendered.
 
 ## <a id="ConditionalFormat"></a> Change reports at run-time
 
-If a report must render to multiple formats and it isn't possible to create a report layout that renders the way you want in all required formats, then you might consider using the value in the `RenderFormat` built-in global. This value allows you to conditionally change the report appearance at runtime. This way you can hide or show report items depending on the renderer used to get the best results in each format. For more information, see [Built-in globals and users references (Report Builder and SSRS)](../../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md).
+In some scenarios, you need a report to render to multiple formats. If it isn't possible to create a report layout that renders the way you want in all required formats, you can use the `RenderFormat` built-in global value. When you use this value, you can conditionally change the report appearance at runtime. This way, you can hide or show report items, depending on the renderer that you use, to get the best results in each format. For more information, see [Built-in Globals and User references in a paginated report (Report Builder)](../../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md).
 
 ## Troubleshoot export to Excel
 
-### Export to Excel or Word fails when you use the Virtual Service account and Execution account
+When you use the virtual service account and execution account, the export to Excel can fail. Specifically, registry key access can be denied.
 
-The workaround for this issue is to give Read permission to the Execution account for the described registry entry under the Virtual User Account branch, and restart the computer. For example, one possible registry entry is `HKEY_USERS\S-1-5-80-4050220999-2730734961-1537482082-519850261-379003301\Software\Microsoft\Avalon.Graphics`.
+The workaround for this issue is to give read permission to the execution account for the affected registry entry under the virtual user account branch, and then to restart the computer. For example, one possible registry entry is `HKEY_USERS\S-1-5-80-4050220999-2730734961-1537482082-519850261-379003301\Software\Microsoft\Avalon.Graphics`.
 
 ## Related content
 
-- [Pagination in Reporting Services (Report Builder  and SSRS)](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)
-- [Renderer behaviors (Report Builder  and SSRS)](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)
-- [Interactive functionality for different report rendering extensions (Report Builder and SSRS)](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)
-- [Render report items (Report Builder and SSRS)](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)
-- [Tables, matrices, and lists (Report Builder and SSRS)](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)
+- [Rendering behaviors in a paginated report (Report Builder)](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md) 1
+- [Interactive functionality - different report rendering extensions](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md) 1
+- [Rendering report items in paginated reports (Report Builder)](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md) 1

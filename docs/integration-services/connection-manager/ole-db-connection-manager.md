@@ -83,8 +83,6 @@ When running SSIS packages on [Azure-SSIS integration runtime (IR) in Azure Data
 
 > [!NOTE]
 > - When you authenticate with a user-assigned managed identity, the SSIS integration runtime needs to be enabled with the same identity. For more information, see [Enable Microsoft Entra authentication for Azure-SSIS integration runtime](/azure/data-factory/enable-aad-authentication-azure-ssis-ir).
->  
-> - When you use Microsoft Entra authentication to access Azure SQL Database or Azure SQL Managed Instance, you might encounter a problem related to package execution failure or unexpected behavior change. For more information, see [Microsoft Entra features and limitations](/azure/sql-database/sql-database-aad-authentication#azure-ad-features-and-limitations).
 
 To use Microsoft Entra authentication with the managed identity for your ADF to access Azure SQL Database server, follow these steps:
 

@@ -4,7 +4,7 @@ description: This article describes how you can configure storage for both new a
 author: bluefooted
 ms.author: pamela
 ms.reviewer: mathoma
-ms.date: 03/01/2024
+ms.date: 09/27/2024
 ms.service: virtual-machines-sql
 ms.subservice: management
 ms.topic: how-to
@@ -157,6 +157,9 @@ Azure uses the following settings to create the storage pool on SQL Server VMs.
 
 <sup>1</sup> After the storage pool is created, you can't alter the number of columns in the storage pool.
 
+> [!NOTE]
+> Use [Optimize-StoragePoo](/powershell/module/storage/optimize-storagepool) and [Optimize-Volume](/powershell/module/storage/optimize-volume) to rebalance space allocation in a pool and optimize performance for workload types that have random deeply queued I/O patterns. 
+
 ## Enable caching
 
 For Premium SSD, you can change the caching policy at the disk level. You can do so using the Azure portal, [PowerShell](/powershell/module/az.compute/set-azvmdatadisk), or the [Azure CLI](/cli/azure/vm/disk).
@@ -260,9 +263,24 @@ In Windows Server 2008 to 2012 R2, the default value for `-StorageSubsystemFrien
 
 ### Configure Disk option or Storage Configuration pane on SQL virtual machine resource is grayed out
 
-The **Storage Configuration** pane can be grayed out in the Azure portal if your SQL IaaS Agent extension is in a failed state. [Repair the SQL IaaS Agent extension](sql-agent-extension-troubleshoot-known-issues.md#repair-extension). 
+The **Storage** page can be grayed out in the SQL virtual machines resource pane in the Azure portal for the following reasons: 
 
-**Configure** on the Storage Configuration pane can be grayed out if you've customized your storage pool, or if you're using a non-Marketplace image. 
+- Your SQL IaaS Agent extension is in a failed state. [Delete](sql-agent-extension-manually-register-single-vm.md#delete-the-extension) and then [register your SQL Server VM](sql-agent-extension-manually-register-single-vm.md#register-with-extension) with the extension once more. 
+- You've customized your storage pool.
+- You're using a non-Marketplace image. 
+- You've created your virtual machine with unmanaged disks. Only managed disks are supported. 
+
+
+### Extend Disk option is grayed out
+
+The **Extend Disk** option can be grayed out for the following reasons: 
+
+- You've customized your Storage Pool. If you need to extend your disk, add disks to the storage pool to enlarge the virtual disk.   
+- You changed the virtual disk or volume names from their default values: 
+   - **Storage pool naming:** SQLVMStoragePool1, SQLVMStoragePool2, SQLVMStoragePool3 
+   - **Virtual disk:** SQLVMVirtualDisk1, SQLVMVirtualDisk2, SQLVMVirtualDisk3 
+   - **Volumes:** SQLVMDATA1, SQLVMLOG and SQLVMTEMPDB
+- You've installed a Windows Cluster to your SQL Server VM, so extending disks is not supported. 
 
 ### I have a disk with 1 TB of unallocated space that I can't remove from storage pool
 

@@ -298,10 +298,6 @@ Remove-AzSqlDatabaseSecondary @parameters
 
 1. After the geo-secondary is successfully created, the users, logins, and firewall rules created by this procedure can be removed.
 
-## Related content
-
-
-
 ## Next steps
 
 * [Active geo-replication](active-geo-replication-overview.md).

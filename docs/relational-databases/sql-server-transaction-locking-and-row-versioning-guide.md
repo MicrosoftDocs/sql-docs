@@ -4,7 +4,7 @@ description: "Transaction locking and row versioning guide"
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: randolphwest, wiassaf
-ms.date: 03/06/2024
+ms.date: 09/27/2024
 ms.service: sql
 ms.subservice: performance
 ms.topic: conceptual
@@ -372,7 +372,7 @@ When a transaction modifies a piece of data, it holds certain locks protecting t
 
 - When optimized locking isn't enabled, row and page locks necessary for writes are held until the end of the transaction.
 
-- When optimized locking is enabled, only a Transaction ID (TID) lock is held for the duration of the transaction. Under the default isolation level, transactions will not hold row and page locks necessary for writes until the end of the transaction. This reduces lock memory required and reduces the need for lock escalation. Further, when optimized locking is enabled, the lock after qualification (LAQ) optimization evaluates predicates of a query on the latest committed version of the row without acquiring a lock, improving concurrency.
+- When optimized locking is enabled, only a Transaction ID (TID) lock is held for the duration of the transaction. Under the default `READ COMMITTED` isolation level, transactions will not hold row locks necessary for writes until the end of the transaction. This reduces lock memory required and reduces the need for lock escalation. Further, when optimized locking is enabled, the [lock after qualification (LAQ)](./performance/optimized-locking.md#optimized-locking-and-lock-after-qualification-laq) optimization evaluates predicates of a query on the latest committed version of the row without acquiring a lock, improving concurrency.
 
 All locks held by a transaction are released when the transaction completes (either commits or rolls back).
 
@@ -610,51 +610,51 @@ WHERE name = 'Bill';
 
 A key-range lock is placed on the index entry corresponding to the name range from `Ben` to `Bing` because the name `Bill` would be inserted between these two adjacent index entries. The RangeS-S mode key-range lock is placed on the index entry `Bing`. This prevents any other transaction from inserting values, such as `Bill`, between the index entries `Ben` and `Bing`.
 
-#### <a id="delete-operation"></a> Delete operation, without optimized locking
+#### <a id="delete-operation"></a> Delete operation without optimized locking
 
-When deleting a value within a transaction, the range the value falls into doesn't have to be locked for the duration of the transaction performing the delete operation. Locking the deleted key value until the end of the transaction is sufficient to maintain serializability. For example, given this DELETE statement:
+When deleting a row within a transaction, the range the row falls into doesn't have to be locked for the duration of the transaction performing the delete operation. Locking the deleted key value until the end of the transaction is sufficient to maintain serializability. For example, given this DELETE statement:
 
 ```sql
 DELETE mytable
 WHERE name = 'Bob';
 ```
 
-An exclusive (X) lock is placed on the index entry corresponding to the name `Bob`. Other transactions can insert or delete values before or after the deleted value `Bob`. However, any transaction that attempts to read, insert, or delete the value `Bob` will be blocked until the deleting transaction either commits or rolls back. (The READ_COMMITTED_SNAPSHOT database option and the SNAPSHOT isolation level also allow reads from a row-version of the previously committed state.)
+An exclusive (X) lock is placed on the index entry corresponding to the name `Bob`. Other transactions can insert or delete values before or after the row with the value `Bob` that is being deleted. However, any transaction that attempts to read, insert, or delete rows matching the value `Bob` will be blocked until the deleting transaction either commits or rolls back. (The READ_COMMITTED_SNAPSHOT database option and the SNAPSHOT isolation level also allow reads from a row-version of the previously committed state.)
 
 Range delete can be executed using three basic lock modes: row, page, or table lock. The row, page, or table locking strategy is decided by Query Optimizer or can be specified by the user through Query Optimizer hints such as ROWLOCK, PAGLOCK, or TABLOCK. When PAGLOCK or TABLOCK is used, the [!INCLUDE [ssDEnoversion](../includes/ssdenoversion-md.md)] immediately deallocates an index page if all rows are deleted from this page. In contrast, when ROWLOCK is used, all deleted rows are marked only as deleted; they are removed from the index page later using a background task.
 
-#### Delete operation, with optimized locking
+#### Delete operation with optimized locking
 
-When deleting a value within a transaction, the row and page locks are acquired and released incrementally, and not held for the duration of the transaction. For example, given this DELETE statement:
+When deleting a row within a transaction, the row and page locks are acquired and released incrementally, and not held for the duration of the transaction. For example, given this DELETE statement:
 
 ```sql
 DELETE mytable
 WHERE name = 'Bob';
 ```
 
-A TID lock is placed on all the modified rows for the duration of the transaction. A lock is acquired on the TID of the index entries corresponding to the name `Bob`. With optimized locking, page and row locks continue to be acquired for updates, but each page and row lock is released as soon as each row is updated. The TID lock protects the rows from being updated until the transaction is complete. Any transaction that attempts to read, insert, or delete the value `Bob` will be blocked until the deleting transaction either commits or rolls back. (The READ_COMMITTED_SNAPSHOT database option and the SNAPSHOT isolation level also allow reads from a row-version of the previously committed state.)
+A TID lock is placed on all the modified rows for the duration of the transaction. A lock is acquired on the TID of the index rows corresponding to the value `Bob`. With optimized locking, page and row locks continue to be acquired for updates, but each page and row lock is released as soon as each row is updated. The TID lock protects the rows from being updated until the transaction is complete. Any transaction that attempts to read, insert, or delete rows with the value `Bob` will be blocked until the deleting transaction either commits or rolls back. (The READ_COMMITTED_SNAPSHOT database option and the SNAPSHOT isolation level also allow reads from a row-version of the previously committed state.)
 
 Otherwise, the locking mechanics of a delete operation are the same as without optimized locking.
 
 #### <a id="insert-operation"></a> Insert operation without optimized locking
 
-When inserting a value within a transaction, the range the value falls into doesn't have to be locked for the duration of the transaction performing the insert operation. Locking the inserted key value until the end of the transaction is sufficient to maintain serializability. For example, given this INSERT statement:
+When inserting a row within a transaction, the range the row falls into doesn't have to be locked for the duration of the transaction performing the insert operation. Locking the inserted key value until the end of the transaction is sufficient to maintain serializability. For example, given this INSERT statement:
 
 ```sql
 INSERT mytable VALUES ('Dan');
 ```
 
-The RangeI-N mode key-range lock is placed on the index entry corresponding to the name `David` to test the range. If the lock is granted, `Dan` is inserted and an exclusive (X) lock is placed on the value `Dan`. The RangeI-N mode key-range lock is necessary only to test the range and isn't held for the duration of the transaction performing the insert operation. Other transactions can insert or delete values before or after the inserted value `Dan`. However, any transaction attempting to read, insert, or delete the value `Dan` will be locked until the inserting transaction either commits or rolls back.
+The RangeI-N mode key-range lock is placed on the index row corresponding to the name `Dan` to test the range. If the lock is granted, a row with the value `Dan` is inserted and an exclusive (X) lock is placed on the inserted row. The RangeI-N mode key-range lock is necessary only to test the range and isn't held for the duration of the transaction performing the insert operation. Other transactions can insert or delete values before or after the inserted row with the value `Dan`. However, any transaction attempting to read, insert, or delete the row with the value `Dan` will be blocked until the inserting transaction either commits or rolls back.
 
 #### Insert operation with optimized locking
 
-When inserting a value within a transaction, the range the value falls into doesn't have to be locked for the duration of the transaction performing the insert operation. Row and page locks are rarely acquired, only when there is an online index rebuild in progress, or when there are serializable transactions in the instance. If row and page locks are acquired, they are released quickly and not held for the duration of the transaction. Placing an exclusive TID lock on the inserted key value until the end of the transaction is sufficient to maintain serializability. For example, given this INSERT statement:
+When inserting a row within a transaction, the range the row falls into doesn't have to be locked for the duration of the transaction performing the insert operation. Row and page locks are rarely acquired, only when there is an online index rebuild in progress, or when there are concurrent serializable transactions. If row and page locks are acquired, they are released quickly and not held for the duration of the transaction. Placing an exclusive TID lock on the inserted key value until the end of the transaction is sufficient to maintain serializability. For example, given this INSERT statement:
 
 ```sql
 INSERT mytable VALUES ('Dan');
 ```
 
-With optimized locking, a RangeI-N lock is only acquired if there at least one transaction that is using the SERIALIZABLE isolation level in the instance. The RangeI-N mode key-range lock is placed on the index entry corresponding to the name `David` to test the range. If the lock is granted, `Dan` is inserted and an exclusive (X) lock is placed on the value `Dan`. The RangeI-N mode key-range lock is necessary only to test the range and isn't held for the duration of the transaction performing the insert operation. Other transactions can insert or delete values before or after the inserted value `Dan`. However, any transaction attempting to read, insert, or delete the value `Dan` will be locked until the inserting transaction either commits or rolls back.
+With optimized locking, a RangeI-N lock is only acquired if there at least one transaction that is using the SERIALIZABLE isolation level in the instance. The RangeI-N mode key-range lock is placed on the index row corresponding to the name `Dan` to test the range. If the lock is granted, a row with the value `Dan` is inserted and an exclusive (X) lock is placed on the inserted row. The RangeI-N mode key-range lock is necessary only to test the range and isn't held for the duration of the transaction performing the insert operation. Other transactions can insert or delete values before or after the inserted row with the value `Dan`. However, any transaction attempting to read, insert, or delete the row with the value `Dan` will be blocked until the inserting transaction either commits or rolls back.
 
 ## Lock escalation
 
@@ -761,7 +761,7 @@ In most cases, the [!INCLUDE [ssDE-md](../includes/ssde-md.md)] delivers the bes
 
   - [Optimized locking](performance/optimized-locking.md) offers an improved transaction locking mechanism that reduces lock memory consumption and blocking for concurrent transactions. **Lock escalation is far less likely to ever occur when optimized locking is enabled.**
   - Avoid using [table hints with optimized locking](performance/optimized-locking.md#avoid-locking-hints). Table hints may reduce the effectiveness of optimized locking.
-  - Enable [READ_COMMITTED_SNAPSHOT](../t-sql/statements/alter-database-transact-sql-set-options.md#read_committed_snapshot--on--off-) in the database for the most benefit from optimized locking. This is the default isolation level in [!INCLUDE [Azure SQL Database](../includes/ssazure-sqldb.md)].
+  - Enable the [READ_COMMITTED_SNAPSHOT](../t-sql/statements/alter-database-transact-sql-set-options.md#read_committed_snapshot--on--off-) option for the database for the most benefit from optimized locking. This is the default in [!INCLUDE [Azure SQL Database](../includes/ssazure-sqldb.md)].
   - Optimized locking requires [accelerated database recovery (ADR)](/azure/azure-sql/accelerated-database-recovery) to be enabled on the database.
 
 If an instance of the [!INCLUDE [ssDE-md](../includes/ssde-md.md)] generates a lot of locks and is seeing frequent lock escalations, consider reducing the amount of locking with the following strategies:
@@ -777,31 +777,36 @@ If an instance of the [!INCLUDE [ssDE-md](../includes/ssde-md.md)] generates a l
 
 - Use the PAGLOCK or TABLOCK table hints to have the Database Engine use page, heap, or index locks instead of low-level locks. Using this option, however, increases the problems of users blocking other users attempting to access the same data and should not be used in systems with more than a few concurrent users.
 
-- When optimized locking isn't enabled, for partitioned tables, use the LOCK_ESCALATION option of [ALTER TABLE](../t-sql/statements/alter-table-transact-sql.md) to escalate locks to the HoBT level instead of the table or to disable lock escalation.
+- If optimized locking isn't available, for partitioned tables, use the LOCK_ESCALATION option of [ALTER TABLE](../t-sql/statements/alter-table-transact-sql.md) to escalate locks to the HoBT level instead of the table or to disable lock escalation.
 
-- Break up large batch operations into several smaller operations. For example, suppose you ran the following query to remove several hundred thousand old records from an audit table, and then you found that it caused a lock escalation that blocked other users:
-
-    ```sql
-    DELETE FROM LogMessages WHERE LogDate < '2/1/2002'
-    ```
-
-    By removing these records a few hundred at a time, you can dramatically reduce the number of locks that accumulate per transaction and prevent lock escalation. For example:
+- Break up large batch operations into several smaller operations. For example, suppose you ran the following query to remove several hundred thousand old rows from an audit table, and then you found that it caused a lock escalation that blocked other users:
 
     ```sql
-    SET ROWCOUNT 500
-    delete_more:
-      DELETE FROM LogMessages WHERE LogDate < '2/1/2002'
-    IF @@ROWCOUNT > 0 GOTO delete_more
-    SET ROWCOUNT 0
+    DELETE FROM LogMessages WHERE LogDate < '2024-09-26'
     ```
 
-- Reduce a query's lock footprint by making the query as efficient as possible. Large scans or large numbers of Bookmark Lookups may increase the chance of lock escalation; additionally, it increases the chance of deadlocks, and generally adversely affects concurrency and performance. After you find the query that causes lock escalation, look for opportunities to create new indexes or to add columns to an existing index to remove index or table scans and to maximize the efficiency of index seeks. Consider using the [Database Engine Tuning Advisor](performance/start-and-use-the-database-engine-tuning-advisor.md) to perform an automatic index analysis on the query. For more information, see [Tutorial: Database Engine Tuning Advisor](../tools/dta/tutorial-database-engine-tuning-advisor.md).
-    One goal of this optimization is to make index seeks return as few rows as possible to minimize the cost of Bookmark Lookups (maximize the selectivity of the index for the particular query). If the [!INCLUDE [ssDE-md](../includes/ssde-md.md)] estimates that a Bookmark Lookup logical operator may return many rows, it may use a PREFETCH to perform the bookmark lookup. If the [!INCLUDE [ssDE-md](../includes/ssde-md.md)] does use PREFETCH for a bookmark lookup, it must increase the transaction isolation level of a portion of the query to repeatable read for a portion of the query. This means that what may look similar to a SELECT statement at a read-committed isolation level may acquire many thousands of key locks (on both the clustered index and one nonclustered index), which can cause such a query to exceed the lock escalation thresholds. This is especially important if you find that the escalated lock is a shared table lock, which, however, isn't commonly seen at the default read-committed isolation level.
+    By removing these rows a few hundred at a time, you can dramatically reduce the number of locks that accumulate per transaction and prevent lock escalation. For example:
 
-    If a Bookmark Lookup WITH PREFETCH clause is causing the escalation, consider adding additional columns to the nonclustered index that appears in the Index Seek or the Index Scan logical operator below the Bookmark Lookup logical operator in the query plan. It may be possible to create a covering index (an index that includes all columns in a table that were used in the query), or at least an index that covers the columns that were used for join criteria or in the WHERE clause if including everything in the select column list is impractical.
+    ```sql
+    DECLARE @DeletedRows int;
+
+    WHILE @DeletedRows IS NULL OR @DeletedRows > 0
+    BEGIN
+        DELETE TOP (500)
+        FROM LogMessages
+        WHERE LogDate < '2024-09-26'
+
+        SELECT @DeletedRows = @@ROWCOUNT;
+    END;
+    ```
+
+- Reduce a query lock footprint by making the query as efficient as possible. Large scans or large numbers of key lookups may increase the chance of lock escalation; additionally, that increases the chance of deadlocks, and generally adversely affects concurrency and performance. After you find the query that causes lock escalation, look for opportunities to create new indexes or to add columns to an existing index to remove full index or table scans and to maximize the efficiency of index seeks. Consider using the [Database Engine Tuning Advisor](performance/start-and-use-the-database-engine-tuning-advisor.md) to perform an automatic index analysis on the query. For more information, see [Tutorial: Database Engine Tuning Advisor](../tools/dta/tutorial-database-engine-tuning-advisor.md).
+    One goal of this optimization is to make index seeks return as few rows as possible to minimize the cost of key lookups (maximize the selectivity of the index for the particular query). If the [!INCLUDE [ssDE-md](../includes/ssde-md.md)] estimates that a key lookup logical operator may return many rows, it may use a PREFETCH to perform the lookup. If the [!INCLUDE [ssDE-md](../includes/ssde-md.md)] does use PREFETCH for a lookup, it must increase the transaction isolation level of a portion of the query to REPEATABLE READ. This means that what may look similar to a SELECT statement at a read-committed isolation level may acquire many thousands of key locks (on both the clustered index and one nonclustered index), which can cause such a query to exceed the lock escalation thresholds. This is especially important if you find that the escalated lock is a shared table lock, which, however, isn't commonly seen at the default read-committed isolation level.
+
+    If a key lookup WITH PREFETCH clause is causing lock escalation, consider adding additional columns to the nonclustered index that appears in the Index Seek or the Index Scan logical operator below the key lookup logical operator in the query plan. It may be possible to create a covering index (an index that includes all columns in a table that were used in the query), or at least an index that covers the columns that were used for join criteria or in the WHERE clause if including everything in the select column list is impractical.
     A Nested Loop join may also use PREFETCH, and this causes the same locking behavior.
 
-- Lock escalation cannot occur if a different SPID is currently holding an incompatible table lock. Lock escalation always escalates to a table lock, and never to page locks. Additionally, if a lock escalation attempt fails because another SPID holds an incompatible TAB lock, the query that attempted escalation doesn't block while waiting for a TAB lock. Instead, it continues to acquire locks at its original, more granular level (row, key, or page), periodically making additional escalation attempts. Therefore, one method to prevent lock escalation on a particular table is to acquire and to hold a lock on a different connection that isn't compatible with the escalated lock type. An IX (intent exclusive) lock at the table level doesn't lock any rows or pages, but it is still not compatible with an escalated S (shared) or X (exclusive) TAB lock. For example, assume that you must run a batch job that modifies a large number of rows in the mytable table and that has caused blocking that occurs because of lock escalation. If this job always completes in less than an hour, you might create a [!INCLUDE [tsql](../includes/tsql-md.md)] job that contains the following code, and schedule the new job to start several minutes before the batch job's start time:
+- Lock escalation cannot occur if a different SPID is currently holding an incompatible table lock. Lock escalation always escalates to a table lock, and never to page locks. Additionally, if a lock escalation attempt fails because another SPID holds an incompatible TAB lock, the query that attempted escalation doesn't block while waiting for a TAB lock. Instead, it continues to acquire locks at its original, more granular level (row, key, or page), periodically making additional escalation attempts. Therefore, one method to prevent lock escalation on a particular table is to acquire and to hold a lock on a different connection that isn't compatible with the escalated lock type. An IX (intent exclusive) lock at the table level doesn't lock any rows or pages, but it is still not compatible with an escalated S (shared) or X (exclusive) TAB lock. For example, assume that you must run a batch job that modifies a large number of rows in the `mytable` table and that has caused blocking that occurs because of lock escalation. If this job always completes in less than an hour, you might create a [!INCLUDE [tsql](../includes/tsql-md.md)] job that contains the following code, and schedule the new job to start several minutes before the batch job's start time:
 
     ```sql
     BEGIN TRAN
@@ -810,7 +815,7 @@ If an instance of the [!INCLUDE [ssDE-md](../includes/ssde-md.md)] generates a l
     COMMIT TRAN
     ```
 
-    This query acquires and holds an IX lock on mytable for one hour, which prevents lock escalation on the table during that time. This batch doesn't modify any data or block other queries (unless the other query forces a table lock with the TABLOCK hint or if an administrator has disabled page or row locks by using an `sp_indexoption` stored procedure).
+    This query acquires and holds an IX lock on `mytable` for one hour, which prevents lock escalation on the table during that time. This batch doesn't modify any data or block other queries (unless the other query forces a table lock with the TABLOCK hint or if an administrator has disabled page or row locks on an index on `mytable`).
 
 - You can also use trace flags 1211 and 1224 to disable all or some lock escalations. However, these [trace flags](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) disable all lock escalation globally for the entire [!INCLUDE [ssDE-md](../includes/ssde-md.md)]. Lock escalation serves a very useful purpose in the [!INCLUDE [ssDE-md](../includes/ssde-md.md)] by maximizing the efficiency of queries that are otherwise slowed down by the overhead of acquiring and releasing several thousands of locks. Lock escalation also helps to minimize the required memory to keep track of locks. The memory that the [!INCLUDE [ssDE-md](../includes/ssde-md.md)] can dynamically allocate for lock structures is finite, so if you disable lock escalation and the lock memory grows large enough, attempts to allocate additional locks for any query may fail and the following error occurs: `Error: 1204, Severity: 19, State: 1 The SQL Server cannot obtain a LOCK resource at this time. Rerun your statement when there are fewer active users or ask the system administrator to check the SQL Server lock and memory configuration.`
 
@@ -820,6 +825,8 @@ If an instance of the [!INCLUDE [ssDE-md](../includes/ssde-md.md)] generates a l
     > [!NOTE]  
     > Using a lock hint such as ROWLOCK only alters the initial lock plan. Lock hints do not prevent lock escalation.
 
+Starting with [!INCLUDE [sql2008-md](../includes/sql2008-md.md)], the behavior of lock escalation has changed with the introduction of the `LOCK_ESCALATION` table option. For more information, see the `LOCK_ESCALATION` option of [ALTER TABLE](../t-sql/statements/alter-table-transact-sql.md).
+
 ### Monitor for lock escalation
 
 Monitor lock escalation by using the `lock_escalation` Extended Event (xEvent), such as in the following example:
@@ -828,13 +835,10 @@ Monitor lock escalation by using the `lock_escalation` Extended Event (xEvent), 
    -- Session creates a histogram of the number of lock escalations per database
    CREATE EVENT SESSION [Track_lock_escalation] ON SERVER
    ADD EVENT sqlserver.lock_escalation(SET collect_database_name=(1),collect_statement=(1)
-       ACTION(sqlserver.database_id,sqlserver.database_name,sqlserver.query_hash_signed,sqlserver.query_plan_hash_signed,sqlserver.sql_text,sqlserver.    username))
+       ACTION(sqlserver.database_id,sqlserver.database_name,sqlserver.query_hash_signed,sqlserver.query_plan_hash_signed,sqlserver.sql_text,sqlserver.username))
    ADD TARGET package0.histogram(SET source=N'sqlserver.database_id')
    GO
    ```
-
-   > [!IMPORTANT]  
-   > The `lock_escalation` Extended Event (xEvent) should be used instead of the Lock:Escalation event class in SQL Trace or SQL Profiler.
 
 ## <a id="dynamic_locks"></a> Dynamic locking
 
@@ -844,17 +848,11 @@ Using low-level locks, such as row locks, increases concurrency by decreasing th
 
 The [!INCLUDE [ssDEnoversion](../includes/ssdenoversion-md.md)] uses a dynamic locking strategy to determine the most cost-effective locks. The [!INCLUDE [ssDEnoversion](../includes/ssdenoversion-md.md)] automatically determines what locks are most appropriate when the query is executed, based on the characteristics of the schema and query. For example, to reduce the overhead of locking, the optimizer may choose page-level locks in an index when performing an index scan.
 
-Dynamic locking has the following advantages:
-
-- Simplified database administration. Database administrators do not have to adjust lock escalation thresholds.
-- Increased performance. The [!INCLUDE [ssDEnoversion](../includes/ssdenoversion-md.md)] minimizes system overhead by using locks appropriate to the task.
-- Application developers can concentrate on development. The [!INCLUDE [ssDEnoversion](../includes/ssdenoversion-md.md)] adjusts locking automatically.
-
 Starting with [!INCLUDE [sql2008-md](../includes/sql2008-md.md)], the behavior of lock escalation has changed with the introduction of the `LOCK_ESCALATION` option. For more information, see the `LOCK_ESCALATION` option of [ALTER TABLE](../t-sql/statements/alter-table-transact-sql.md).
 
 ## <a id="lock_partitioning"></a> Lock partitioning
 
-For large computer systems, locks on frequently referenced objects can become a performance bottleneck as acquiring and releasing locks place contention on internal locking resources. Lock partitioning enhances locking performance by splitting a single lock resource into multiple lock resources. This feature is only available for systems with 16 or more CPUs, and is automatically enabled and cannot be disabled. Only object locks can be partitioned. Object locks that have a subtype are not partitioned. For more information, see [sys.dm_tran_locks (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).
+For large computer systems, locks on frequently referenced objects can become a performance bottleneck as acquiring and releasing locks place contention on internal locking resources. Lock partitioning enhances locking performance by splitting a single lock resource into multiple lock resources. This feature is only available for systems with 16 or more logical CPUs, and is automatically enabled and cannot be disabled. Only object locks can be partitioned. Object locks that have a subtype are not partitioned. For more information, see [sys.dm_tran_locks (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).
 
 ### <a id="understanding-lock-partitioning"></a> Understand lock partitioning
 
@@ -982,7 +980,11 @@ Row versioning is a general framework in [!INCLUDE [ssNoVersion](../includes/ssn
   - A new implementation of READ COMMITTED isolation level that uses row versioning to provide statement-level read consistency.
   - A new isolation level, snapshot, to provide transaction-level read consistency.
 
-The `tempdb` database must have enough space for the version store. When `tempdb` is full, update operations will stop generating versions and continue to succeed, but read operations might fail because a particular row version that is needed no longer exists. This affects operations like triggers, MARS, and online indexing.
+Row versions are stored in a version store. If [Accelerated Database Recovery](accelerated-database-recovery-concepts.md) is enabled on a database, the version store is created in that database. Otherwise, the version store is created in the `tempdb` database.
+
+The database must have enough space for the version store. When the version store is in `tempdb`, and the `tempdb` database is full, update operations will stop generating versions but will continue to succeed, but read operations might fail because a particular row version that is needed does not exists. This affects operations like triggers, MARS, and online indexing.
+
+When Accelerated Database Recovery is used and the version store is full, read operations continue to succeed but write operations that generate versions, such as `UPDATE` and `DELETE` fail. `INSERT` operations continue to succeed if the database has sufficient space.
 
 Using row versioning for read-committed and snapshot transactions is a two-step process:
 
@@ -994,17 +996,17 @@ Using row versioning for read-committed and snapshot transactions is a two-step 
 
 When either `READ_COMMITTED_SNAPSHOT` or `ALLOW_SNAPSHOT_ISOLATION` database option is set ON, the [!INCLUDE [ssDEnoversion](../includes/ssdenoversion-md.md)] assigns a transaction sequence number (XSN) to each transaction that manipulates data using row versioning. Transactions start at the time a `BEGIN TRANSACTION` statement is executed. However, the transaction sequence number starts with the first read or write operation after the BEGIN TRANSACTION statement. The transaction sequence number is incremented by one each time it is assigned.
 
-When either the `READ_COMMITTED_SNAPSHOT` or `ALLOW_SNAPSHOT_ISOLATION` database options are ON, logical copies (versions) are maintained for all data modifications performed in the database. Every time a row is modified by a specific transaction, the instance of the [!INCLUDE [ssDEnoversion](../includes/ssdenoversion-md.md)] stores a version of the previously committed image of the row in `tempdb`. Each version is marked with the transaction sequence number of the transaction that made the change. The versions of modified rows are chained using a link list. The newest row value is always stored in the current database and chained to the versioned rows stored in `tempdb`.
+When either the `READ_COMMITTED_SNAPSHOT` or `ALLOW_SNAPSHOT_ISOLATION` database options are ON, logical copies (versions) are maintained for all data modifications performed in the database. Every time a row is modified by a specific transaction, the instance of the [!INCLUDE [ssDEnoversion](../includes/ssdenoversion-md.md)] stores a version of the previously committed image of the row in the version store. Each version is marked with the transaction sequence number of the transaction that made the change. The versions of modified rows are chained using a link list. The newest row value is always stored in the current database and chained to the versioned rows in the version store.
 
 > [!NOTE]  
-> For modification of large objects (LOBs), only the changed fragment is copied to the version store in `tempdb`.
+> For modification of large objects (LOBs), only the changed fragment is copied to the version store.
 
 Row versions are held long enough to satisfy the requirements of transactions running under row versioning-based isolation levels. The [!INCLUDE [ssDEnoversion](../includes/ssdenoversion-md.md)] tracks the earliest useful transaction sequence number and periodically deletes all row versions stamped with transaction sequence numbers that are lower than the earliest useful sequence number.
 
-When both database options are set to OFF, only rows modified by triggers or MARS sessions, or read by ONLINE index operations, are versioned. Those row versions are released when no longer needed. A background thread periodically executes to remove stale row versions.
+When both database options are set to OFF, only rows modified by triggers or MARS sessions, or read by ONLINE index operations, are versioned. Those row versions are released when no longer needed. A background process removes stale row versions.
 
 > [!NOTE]  
-> For short-running transactions, a version of a modified row may get cached in the buffer pool without getting written into the disk files of the `tempdb` database. If the need for the versioned row is short-lived, it will simply get dropped from the buffer pool and may not necessarily incur I/O overhead.
+> For short-running transactions, a version of a modified row may get cached in the buffer pool without getting written to the version store. If the need for the versioned row is short-lived, it will simply get dropped from the buffer pool and may not necessarily incur I/O overhead.
 
 ### Behavior when reading data
 
@@ -1044,19 +1046,19 @@ Transactions running under snapshot isolation take an optimistic approach to dat
 >  
 > An indexed view referencing more than one table.
 >  
-> However, even under these conditions the update operation will continue to verify that the data has not been modified by another transaction. If data has been modified by another transaction, the snapshot transaction encounters an update conflict and is terminated. Update conflicts must be handled and retried manually by the application.
+> However, even under these conditions the update operation will continue to verify that the data has not been modified by another transaction. If data has been modified by another transaction, the snapshot transaction encounters an update conflict and is terminated. Update conflicts must be handled and retried by the application.
 
 #### Modify data with optimized locking
 
 With optimized locking enabled and with the READ_COMMITTED_SNAPSHOT (RCSI) database option enabled, and using the default READ COMMITTED isolation level, readers don't acquire any locks, and writers acquire short duration low-level locks, instead of locks that expire at the end of the transaction.
 
-Enabling RCSI is recommended for most efficiency with optimized locking. When using stricter isolation levels like repeatable read or serializable, the Database Engine is forced to hold row and page locks until the end of the transaction, for both readers and writers, resulting in increased blocking and lock memory.
+Enabling RCSI is recommended for most efficiency with optimized locking. When using stricter isolation levels such as REPEATABLE READ or SERIALIZABLE, the Database Engine is forced to hold row and page locks until the end of the transaction, for both readers and writers, resulting in increased blocking and lock memory.
 
-With RCSI enabled, and when using the default READ COMMITTED isolation level, writers qualify rows per the predicate based on the latest committed version of the row, without acquiring U locks. A query will wait only if the row qualifies and there is an active write transaction on that row or page. Qualifying based on the latest committed version and locking only the qualified rows reduces blocking and increases concurrency.
+With RCSI enabled, and when using the default READ COMMITTED isolation level, writers qualify rows per the predicate based on the latest committed version of the row, without acquiring U locks. A query will wait only if the row qualifies and there is another active write transaction on that row or page. Qualifying based on the latest committed version and locking only the qualified rows reduces blocking and increases concurrency.
 
 If update conflicts are detected with RCSI and in the default READ COMMITTED isolation level, they are handled and retried automatically without any impact to customer workloads.
 
-With optimized locking enabled, using the SNAPSHOT isolation level, the behavior of update conflicts is the same. Update conflicts must be handled and retried manually by the application.
+With optimized locking enabled and when using the SNAPSHOT isolation level, the behavior of update conflicts is the same as without optimized locking. Update conflicts must be handled and retried by the application.
 
 > [!NOTE]  
 > For more information on behavior changes with the lock after qualifiation (LAQ) feature of optimized locking, see [Query behavior changes with optimized locking and RCSI](performance/optimized-locking.md#behavior).
@@ -1088,16 +1090,16 @@ The row versioning framework also supports the following row versioning-based tr
 
 Row versioning-based isolation levels reduce the number of locks acquired by transaction by eliminating the use of shared locks on read operations. This increases system performance by reducing the resources used to manage locks. Performance is also increased by reducing the number of times a transaction is blocked by locks acquired by other transactions.
 
-Row versioning-based isolation levels increase the resources needed by data modifications. Enabling these options causes all data modifications for the database to be versioned. A copy of the data before modification is stored in `tempdb` even when there are no active transactions using row versioning-based isolation. The data after modification includes a pointer to the versioned data stored in `tempdb`. For large objects, only part of the object that changed is copied to `tempdb`.
+Row versioning-based isolation levels increase the resources needed by data modifications. Enabling these options causes all data modifications for the database to be versioned. A copy of the data before modification is stored in the version store even when there are no active transactions using row versioning-based isolation. The data after modification includes a pointer to the versioned data in the version store. For large objects, only part of the object that changed is stored in the version store.
 
 #### Space used in tempdb
 
-For each instance of the [!INCLUDE [ssDEnoversion](../includes/ssdenoversion-md.md)], `tempdb` must have enough space to hold the row versions generated for every database in the instance. The database administrator must ensure that `tempdb` has ample space to support the version store. There are two version stores in `tempdb`:
+For each instance of the [!INCLUDE [ssDEnoversion](../includes/ssdenoversion-md.md)], the version store must have enough space to hold the row versions. The database administrator must ensure that `tempdb` and other databases (if Accelerated Database Recovery is enabled) have ample space to support the version store. There are two types of version store:
 
-- The online index build version store is used for online index builds in all databases.
-- The common version store is used for all other data modification operations in all databases.
+- The online index build version store is used for online index builds.
+- The common version store is used for all other data modification operations.
 
-Row versions must be stored for as long as an active transaction needs to access it. Once every minute, a background thread removes row versions that are no longer needed and frees up the version space in `tempdb`. A long-running transaction prevents space in the version store from being released if it meets any of the following conditions:
+Row versions must be stored for as long as an active transaction needs to access them. Periodically, a background thread removes row versions that are no longer needed and frees up the version space in the version store. A long-running transaction prevents space in the version store from being released if it meets any of the following conditions:
 
 - It uses row versioning-based isolation.
 - It uses triggers, MARS, or online index build operations.
@@ -1106,11 +1108,11 @@ Row versions must be stored for as long as an active transaction needs to access
 > [!NOTE]  
 > When a trigger is invoked inside a transaction, the row versions created by the trigger are maintained until the end of the transaction, even though the row versions are no longer needed after the trigger completes. This also applies to read-committed transactions that use row versioning. With this type of transaction, a transactionally consistent view of the database is needed only for each statement in the transaction. This means that the row versions created for a statement in the transaction are no longer needed after the statement completes. However, row versions created by each statement in the transaction are maintained until the transaction completes.
 
-When `tempdb` runs out of space, the [!INCLUDE [ssDEnoversion](../includes/ssdenoversion-md.md)] forces the version stores to shrink. During the shrink process, the longest running transactions that have not yet generated row versions are marked as victims. A message 3967 is generated in the error log for each victim transaction. If a transaction is marked as a victim, it can no longer read the row versions in the version store. When it attempts to read row versions, message 3966 is generated and the transaction is rolled back. If the shrinking process succeeds, space becomes available in `tempdb`. Otherwise, `tempdb` runs out of space and the following occurs:
+If the version store is in `tempdb`, and `tempdb` runs out of space, the [!INCLUDE [ssDEnoversion](../includes/ssdenoversion-md.md)] forces the version stores to shrink. During the shrink process, the longest running transactions that have not yet generated row versions are marked as victims. A message 3967 is generated in the error log for each victim transaction. If a transaction is marked as a victim, it can no longer read the row versions in the version store. When it attempts to read row versions, message 3966 is generated and the transaction is rolled back. If the shrinking process succeeds, space becomes available in `tempdb`. Otherwise, `tempdb` runs out of space and the following occurs:
 
 - Write operations continue to execute but do not generate versions. An information message (3959) appears in the error log, but the transaction that writes data isn't affected.
 
-- Transactions that attempt to access row versions that were not generated because of a `tempdb` full rollback terminate with an error 3958.
+- Transactions that attempt to access row versions that were not generated because of a `tempdb` full roll back and terminate with an error 3958.
 
 #### Space used in data rows
 
@@ -1121,12 +1123,14 @@ Each database row may use up to 14 bytes at the end of the row for row versionin
 - Multiple Active Results Sets (MARS) is being used.
 - Online index build operations are currently running on the table.
 
-These 14 bytes are removed from the database row the first time the row is modified under all of these conditions:
+If the version store is in `tempdb`, these 14 bytes are removed from the database row the first time the row is modified under all of these conditions:
 
 - `READ_COMMITTED_SNAPSHOT` and `ALLOW_SNAPSHOT_ISOLATION` options are OFF.
 - The trigger no longer exists on the table.
 - MARS isn't being used.
 - Online index build operations are not currently running.
+
+The 14 bytes are also removed when a row is modified if accelerated database recovery is no longer enabled and the above conditions are satisfied.
 
 If you use any of the row versioning features, you might need to allocate additional disk space for the database to accommodate the 14 bytes per database row. Adding the row versioning information can cause index page splits or the allocation of a new data page if there isn't enough space available on the current page. For example, if the average row length is 100 bytes, the additional 14 bytes cause an existing table to grow up to 14 percent.
 
@@ -1134,7 +1138,7 @@ Decreasing the [fill factor](indexes/specify-fill-factor-for-an-index.md) might 
 
 #### Space used in large objects
 
-The [!INCLUDE [ssDEnoversion](../includes/ssdenoversion-md.md)] supports six data types that can hold large strings up to 2 gigabytes (GB) in length: `nvarchar(max)`, `varchar(max)`, `varbinary(max)`, `ntext`, `text`, and `image`. Large strings stored using these data types are stored in a series of data fragments that are linked to the data row. Row versioning information is stored in each fragment used to store these large strings. Data fragments are a collection of pages dedicated to large objects in a table.
+The [!INCLUDE [ssDEnoversion](../includes/ssdenoversion-md.md)] supports several data types that can hold large strings up to 2 gigabytes (GB) in length, such as: `nvarchar(max)`, `varchar(max)`, `varbinary(max)`, `ntext`, `text`, and `image`. Large strings stored using these data types are stored in a series of data fragments that are linked to the data row. Row versioning information is stored in each fragment used to store these large strings. Data fragments are stored in a set of pages dedicated to large objects in a table.
 
 As new large values are added to a database, they are allocated using a maximum of 8040 bytes of data per fragment. Earlier versions of the [!INCLUDE [ssDEnoversion](../includes/ssdenoversion-md.md)] stored up to 8080 bytes of `ntext`, `text`, or `image` data per fragment.
 
@@ -1146,7 +1150,7 @@ Enough disk space should be allocated to accommodate this requirement.
 
 #### <a id="monitoring-row-versioning-and-the-version-store"></a> Monitor row versioning and the version store
 
-For monitoring row versioning, version store, and snapshot isolation processes for performance and problems, [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] provides tools in the form of Dynamic Management Views (DMVs) and performance counters in Windows System Monitor.
+For monitoring row versioning, version store, and snapshot isolation processes for performance and problems, [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] provides tools in the form of Dynamic Management Views (DMVs) and performance counters.
 
 ##### DMVs
 
@@ -1158,11 +1162,11 @@ The following DMVs provide information about the current system state of `tempdb
 
 - `sys.dm_db_task_space_usage`. Returns page allocation and deallocation activity by task for the database. For more information, see [sys.dm_db_task_space_usage (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-db-task-space-usage-transact-sql.md).
 
-- `sys.dm_tran_top_version_generators`. Returns a virtual table for the objects producing the most versions in the version store. It groups the top 256 aggregated record lengths by database_id and rowset_id. Use this function to find the largest consumers of the version store. For more information, see [sys.dm_tran_top_version_generators (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-tran-top-version-generators-transact-sql.md).
+- `sys.dm_tran_top_version_generators`. Returns a virtual table for the objects producing the most versions in the version store. It groups the top 256 aggregated record lengths by database_id and rowset_id. Use this function to find the largest consumers of the version store. Applies to the version store in `tempdb` only. For more information, see [sys.dm_tran_top_version_generators (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-tran-top-version-generators-transact-sql.md).
 
-- `sys.dm_tran_version_store`. Returns a virtual table that displays all version records in the common version store. For more information, see [sys.dm_tran_version_store (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-tran-version-store-transact-sql.md).
+- `sys.dm_tran_version_store`. Returns a virtual table that displays all version records in the common version store. Applies to the version store in `tempdb` only. For more information, see [sys.dm_tran_version_store (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-tran-version-store-transact-sql.md).
 
-- `sys.dm_tran_version_store_space_usage`. Returns a virtual table that displays the total space in `tempdb` used by version store records for each database. For more information, see [sys.dm_tran_version_store_space_usage (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-tran-version-store-space-usage.md).
+- `sys.dm_tran_version_store_space_usage`. Returns a virtual table that displays the total space in `tempdb` used by version store records for each database. Applies to the version store in `tempdb` only. For more information, see [sys.dm_tran_version_store_space_usage (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-tran-version-store-space-usage.md).
 
     > [!NOTE]  
     > The system objects `sys.dm_tran_top_version_generators` and `sys.dm_tran_version_store` are potentially very expensive functions to run, since both query the entire version store, which could be very large.
@@ -1176,9 +1180,11 @@ The following DMVs provide information about the current system state of `tempdb
 
 - `sys.dm_tran_current_snapshot`. Returns a virtual table that displays all active transactions at the time the current snapshot isolation transaction starts. If the current transaction is using snapshot isolation, this function returns no rows. The DMV `sys.dm_tran_current_snapshot` is similar to `sys.dm_tran_transactions_snapshot`, except that it returns only the active transactions for the current snapshot. For more information, see [sys.dm_tran_current_snapshot (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-tran-current-snapshot-transact-sql.md).
 
+- `sys.dm_tran_persistent_version_store_stats`. Returns statistics for the persistent version store in each database used when Accelerated Database Recovery is enabled. For more information, see [sys.dm_tran_persistent_version_store_stats (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-tran-persistent-version-store-stats.md).
+
 ##### Performance counters
 
-[!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] performance counters provide information about the system performance affected by [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] processes. The following performance counters monitor `tempdb` and the version store, as well as transactions using row versioning. The performance counters are contained in the **SQLServer:Transactions** performance object.
+The following performance counters monitor the version store in `tempdb`, as well as transactions using row versioning. The performance counters are contained in the **SQLServer:Transactions** performance object.
 
 - **Free Space in tempdb (KB)**. Monitors the amount, in kilobytes (KB), of free space in the `tempdb` database. There must be enough free space in `tempdb` to handle the version store that supports snapshot isolation.
 
@@ -1188,11 +1194,11 @@ The following DMVs provide information about the current system state of `tempdb
 
     The longest running time of transactions should not include online index builds. Because these operations may take a long time on very large tables, online index builds use a separate version store. The approximate size of the online index build version store equals the amount of data modified in the table, including all indexes, while the online index build is active.
 
-- **Version Store Size (KB)**. Monitors the size in KB of all version stores. This information helps determine the amount of space needed in the `tempdb` database for the version store. Monitoring this counter over a period of time provides a useful estimate of additional space needed for `tempdb`.
+- **Version Store Size (KB)**. Monitors the size in KB of all version stores in `tempdb`. This information helps determine the amount of space needed in the `tempdb` database for the version store. Monitoring this counter over a period of time provides a useful estimate of additional space needed for `tempdb`.
 
-- **Version Generation rate (KB/s)**. Monitors the version generation rate in KB per second in all version stores.
+- **Version Generation rate (KB/s)**. Monitors the version generation rate in KB per second in all version stores in `tempdb`.
 
-- **Version Cleanup rate (KB/s)**. Monitors the version cleanup rate in KB per second in all version stores.
+- **Version Cleanup rate (KB/s)**. Monitors the version cleanup rate in KB per second in all version stores in `tempdb`.
 
     > [!NOTE]  
     > Information from Version Generation rate (KB/s) and Version Cleanup rate (KB/s) can be used to predict `tempdb` space requirements.
@@ -1205,7 +1211,7 @@ The following DMVs provide information about the current system state of `tempdb
 
 - **Update conflict ratio**. Monitors the ratio of update snapshot transactions that have update conflicts to the total number of update snapshot transactions.
 
-- **Longest Transaction Running Time**. Monitors the longest running time in seconds of any transaction using row versioning. This can be used to determine if any transaction is running for an unreasonable amount of time.
+- **Longest Transaction Running Time**. Monitors the longest running time in seconds of any transaction using row versioning. This can be used to determine if any transaction is running for an unexpected amount of time.
 
 - **Transactions**. Monitors the total number of active transactions. This doesn't include system transactions.
 

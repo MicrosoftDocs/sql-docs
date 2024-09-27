@@ -4,8 +4,8 @@ titleSuffix: Azure SQL Database & SQL Managed Instance
 description: How to use PHP to create a program that connects to a database in Azure SQL Database or Azure SQL Managed Instance, and query it using T-SQL statements.
 author: dzsquared
 ms.author: drskwier
-ms.reviewer: wiassaf, mathoma, v-masebo, randolphwest
-ms.date: 09/15/2023
+ms.reviewer: wiassaf, mathoma, v-masebo, randolphwest, maghan
+ms.date: 09/27/2024
 ms.service: azure-sql
 ms.subservice: connect
 ms.topic: quickstart
@@ -13,13 +13,14 @@ ms.custom:
   - sqldbrb=2
   - mode-other
 ms.devlang: php
-monikerRange: "=azuresql || =azuresql-db || =azuresql-mi"
+monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
 ---
+
 # Quickstart: Use PHP to query a database in Azure SQL Database or Azure SQL Managed Instance
 
 [!INCLUDE [appliesto-sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi.md)]
 
-This article demonstrates how to use [PHP](https://php.net/manual/en/intro-whatis.php) to connect to a database in Azure SQL Database or Azure SQL Managed Instance. You can then use T-SQL statements to query data.
+This article demonstrates how to use [PHP](https://www.php.net/manual/en/introduction.php) to connect to a database in Azure SQL Database or Azure SQL Managed Instance. You can then use T-SQL statements to query data.
 
 ## Prerequisites
 
@@ -30,11 +31,11 @@ To complete this quickstart, you need:
 
   | Action | SQL Database | SQL Managed Instance | SQL Server on Azure VM |
   | :--- | :--- | :--- | :--- |
-  | Create| [Portal](single-database-create-quickstart.md) | [Portal](../managed-instance/instance-create-quickstart.md) | [Portal](../virtual-machines/windows/sql-vm-create-portal-quickstart.md)
+  | Create | [Portal](single-database-create-quickstart.md) | [Portal](../managed-instance/instance-create-quickstart.md) | [Portal](../virtual-machines/windows/sql-vm-create-portal-quickstart.md) |
   | | [CLI](scripts/create-and-configure-database-cli.md) | [CLI](https://medium.com/azure-sqldb-managed-instance/working-with-sql-managed-instance-using-azure-cli-611795fe0b44) |
-  || [PowerShell](scripts/create-and-configure-database-powershell.md) | [PowerShell](../managed-instance/scripts/create-configure-managed-instance-powershell.md) | [PowerShell](../virtual-machines/windows/sql-vm-create-powershell-quickstart.md)
+  | | [PowerShell](scripts/create-and-configure-database-powershell.md) | [PowerShell](../managed-instance/scripts/create-configure-managed-instance-powershell.md) | [PowerShell](../virtual-machines/windows/sql-vm-create-powershell-quickstart.md) |
   | Configure | [Server-level IP firewall rule](firewall-create-server-level-portal-quickstart.md) | [Connectivity from a VM](../managed-instance/connect-vm-instance-configure.md) |
-  |||[Connectivity from on-premises](../managed-instance/point-to-site-p2s-configure.md) | [Connect to a SQL Server instance](../virtual-machines/windows/sql-vm-create-portal-quickstart.md)
+  | | | [Connectivity from on-premises](../managed-instance/point-to-site-p2s-configure.md) | [Connect to a SQL Server instance](../virtual-machines/windows/sql-vm-create-portal-quickstart.md) |
   | Load data | Wide World Importers loaded per quickstart | [Restore Wide World Importers](../managed-instance/restore-sample-database-quickstart.md) | [Restore Wide World Importers](../managed-instance/restore-sample-database-quickstart.md) |
   | | | Restore or import Adventure Works from a [BACPAC](database-import.md) file from [GitHub](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) | Restore or import Adventure Works from a [BACPAC](database-import.md) file from [GitHub](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) |
 
@@ -43,9 +44,9 @@ To complete this quickstart, you need:
 
 - PHP-related software installed for your operating system:
 
-  - **macOS**, install PHP, the ODBC driver, then install the PHP Driver for SQL Server. See [Step 1, 2, and 3](/sql/connect/php/installation-tutorial-linux-mac).
+  - **macOS**, install PHP, the ODBC driver, then install the PHP Driver for SQL Server. See the related content section for more details.
 
-  - **Linux**, install PHP, the ODBC driver, then install the PHP Driver for SQL Server. See [Step 1, 2, and 3](/sql/connect/php/installation-tutorial-linux-mac).
+  - **Linux**, install PHP, the ODBC driver, then install the PHP Driver for SQL Server. Follow the steps to install PHP, the ODBC driver, and the PHP Driver for SQL Server.
 
 ## Get server connection information
 
@@ -53,7 +54,7 @@ Get the connection information you need to connect to the database in Azure SQL 
 
 1. Sign in to the [Azure portal](https://portal.azure.com/).
 
-1. Navigate to the **SQL Databases**  or **SQL Managed Instances** page.
+1. Navigate to the **SQL Databases** or **SQL Managed Instances** page.
 
 1. On the **Overview** page, review the fully qualified server name next to **Server name** for a database in Azure SQL Database or the fully qualified server name (or IP address) next to **Host** for an Azure SQL Managed Instance or SQL Server in an Azure VM. To copy the server name or host name, hover over it and select the **Copy** icon.
 
@@ -66,7 +67,7 @@ Get the connection information you need to connect to the database in Azure SQL 
 
 1. Replace its contents with the following code. Then add the appropriate values for your server, database, user, and password.
 
-   ```PHP
+   ```php
    <?php
        $serverName = "your_server.database.windows.net"; // update me
        $connectionOptions = array(
@@ -101,9 +102,10 @@ Get the connection information you need to connect to the database in Azure SQL 
 
 1. Verify the top 20 rows are returned and close the app window.
 
-## Next steps
+## Related content
 
 - [Design your first database in Azure SQL Database](design-first-database-tutorial.md)
 - [Microsoft PHP Drivers for SQL Server](https://github.com/Microsoft/msphpsql/)
 - [Report issues or ask questions](https://github.com/Microsoft/msphpsql/issues)
 - [Retry logic example: Connect resiliently to Azure SQL with PHP](/sql/connect/php/step-4-connect-resiliently-to-sql-with-php)
+- [Install PHP, the ODBC driver, and the PHP Driver for SQL Server on macOS](/sql/connect/php/installation-tutorial-linux-mac)

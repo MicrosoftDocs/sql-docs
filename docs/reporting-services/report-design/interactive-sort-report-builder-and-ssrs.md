@@ -3,11 +3,12 @@ title: "Interactive sort in a paginated report"
 description: Add interactive sort buttons to enable a user to toggle between ascending and descending order for rows in a table in a paginated report.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/01/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 # Interactive sort in a paginated report (Report Builder)
 
@@ -51,9 +52,8 @@ ms.custom: updatefrequency5
   
  To do this, you must redesign the table to group on an expression that combines multiple fields. For example, for a dataset with inventory counts, if the original table grouped by size and then by color, you can specify a single group with a group expression that is a combination of size and color. For more information, see [Add Interactive Sort to a Table or Matrix &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md).  
   
-## See Also  
- [Sort Data in a Data Region &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md)   
- [Filter, Group, and Sort Data &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [Add Interactive Sort to a Table or Matrix &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md)  
-  
-  
+## Related content
+
+- [Sort Data in a Data Region &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md)
+- [Filter, Group, and Sort Data &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)
+- [Add Interactive Sort to a Table or Matrix &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md)

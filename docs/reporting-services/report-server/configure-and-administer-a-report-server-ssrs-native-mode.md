@@ -3,11 +3,12 @@ title: "Configure and administer a report server (native mode)"
 description: Learn about approaches that you can use to configure Reporting Services and find articles about how to configure components, features, or server capabilities.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 05/15/2019
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-server
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "Reporting Services, components"
   - "deploying [Reporting Services], component options"
@@ -48,9 +49,8 @@ helpviewer_keywords:
  Describes how to configure a user account to process reports in unattended mode.  
   
 ## Related content
- [Reporting Services configuration files](../../reporting-services/report-server/reporting-services-configuration-files.md)   
- [Report Server Configuration Manager &#40;native mode&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
- [Reporting Services security and protection](../../reporting-services/security/reporting-services-security-and-protection.md)   
- [Reporting Services report server &#40;native mode&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)  
-  
-  
+
+- [Reporting Services configuration files](../../reporting-services/report-server/reporting-services-configuration-files.md)
+- [Report Server Configuration Manager &#40;native mode&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)
+- [Reporting Services security and protection](../../reporting-services/security/reporting-services-security-and-protection.md)
+- [Reporting Services report server &#40;native mode&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)

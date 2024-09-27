@@ -3,11 +3,12 @@ title: "Replication Language Reference"
 description: "Replication Language Reference"
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/14/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: "language-reference"
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Replication Language Reference

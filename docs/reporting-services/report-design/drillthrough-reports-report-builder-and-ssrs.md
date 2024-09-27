@@ -3,11 +3,12 @@ title: "Drillthrough reports in a paginated report"
 description: Discover drillthrough reports, which open when you select a link in a paginated report to get details about an item in an original summary report in Report Builder.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/07/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 # Drillthrough reports in a paginated report (Report Builder)
 
@@ -42,7 +43,6 @@ ms.custom: updatefrequency5
 ## Viewing a Drillthrough Report  
  To view a summary report with drillthrough links after it is published, you must ensure that the drillthrough reports reside on the same report server as the summary report. In all cases, the user must have permissions on the drillthrough report to view it.  
   
-## See Also  
- [Drillthrough, Drilldown, Subreports, and Nested Data Regions &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md)  
-  
-  
+## Related content
+
+- [Drillthrough, Drilldown, Subreports, and Nested Data Regions &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md)

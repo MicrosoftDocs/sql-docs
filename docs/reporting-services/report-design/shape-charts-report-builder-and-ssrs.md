@@ -3,11 +3,12 @@ title: "Shape charts in a paginated report"
 description: See how shape charts in a paginated report display value data as percentages of their whole in Report Builder. Shape charts are often used to show proportional comparisons between values in a set.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/03/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 # Shape charts in a paginated report (Report Builder)
 
@@ -48,10 +49,9 @@ ms.custom: updatefrequency5
   
 -   You can apply additional drawing styles to pie and doughnut charts for increased visual impact. See [Formatting Series Colors on a Chart &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md) for more information.  
   
-## See Also  
- [Charts &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [Formatting a Chart &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
- [Empty and Null Data Points in Charts &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
- [Pie Charts &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/pie-charts-report-builder-and-ssrs.md)  
-  
-  
+## Related content
+
+- [Charts &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)
+- [Formatting a Chart &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)
+- [Empty and Null Data Points in Charts &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)
+- [Pie Charts &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/pie-charts-report-builder-and-ssrs.md)

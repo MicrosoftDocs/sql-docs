@@ -3,11 +3,12 @@ title: "MSReportServer_ConfigurationSetting members"
 description: "MSReportServer_ConfigurationSetting members"
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/20/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: wmi-provider-library-reference
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "WMI provider [Reporting Services], MSReportServer_ConfigurationSetting class"
   - "MSReportServer_ConfigurationSetting class"
@@ -84,7 +85,6 @@ apitype: MOFDef
 |[SetVirtualDirectory Method &#40;WMI MSReportServer_ConfigurationSetting&#41;](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-setvirtualdirectory.md)|Sets the virtual directory for an application.|  
 |[SetWindowsServiceIdentity](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-setwindowsserviceidentity.md)|Makes the Report Server Windows service run as the specified Windows user, and grants this account sufficient permission to allow the report server to operate.|  
   
-## Related content  
- [MSReportServer_ConfigurationSetting class](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-class.md)  
-  
-  
+## Related content
+
+- [MSReportServer_ConfigurationSetting class](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-class.md)

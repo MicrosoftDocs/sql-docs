@@ -3,11 +3,12 @@ title: "Subscription Type"
 description: "Subscription Type"
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/14/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: ui-reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 f1_keywords:
   - "sql13.rep.newsubwizard.subscriptiontype.f1"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
@@ -31,9 +32,8 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
  **Subscription properties**  
  For each Subscriber, select **Client** or **Server** from the drop-down list box in the **Subscription Type** column. For Subscribers with server subscriptions, enter a number between 0 and 99.99 in the **Priority for Conflict Resolution** column (the higher the number, the higher the priority for the Subscriber).  
   
-## See Also  
- [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
- [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)   
- [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)  
-  
-  
+## Related content
+
+- [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)
+- [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)
+- [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)

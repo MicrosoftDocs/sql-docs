@@ -3,11 +3,12 @@ title: "Report server database (native mode)"
 description: Learn how a native mode Reporting Services installation separates persistent data storage and temporary data storage into two databases.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 06/06/2019
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-server
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "databases [Reporting Services]"
   - "report servers [Reporting Services], databases"
@@ -57,10 +58,10 @@ helpviewer_keywords:
  If you back up the temporary database and then restore it, you should delete the contents. Generally, it's safe to delete the contents of the temporary database at any time. However, you must restart the Report Server Windows service after you delete the contents.  
   
 ## Related content
- [Host a report server database in a SQL Server failover cluster](../../reporting-services/install-windows/host-a-report-server-database-in-a-sql-server-failover-cluster.md)   
- [Store encrypted report server data &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
- [Reporting Services report server](../../reporting-services/report-server-sharepoint/reporting-services-report-server.md)   
- [Administer a report server database &#40;SSRS native mode&#41;](../../reporting-services/report-server/administer-a-report-server-database-ssrs-native-mode.md)   
- [Create a Report Server Database  &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)   
- [Backup and restore operations for Reporting Services](../../reporting-services/install-windows/backup-and-restore-operations-for-reporting-services.md)  
-  
+
+- [Host a report server database in a SQL Server failover cluster](../../reporting-services/install-windows/host-a-report-server-database-in-a-sql-server-failover-cluster.md)
+- [Store encrypted report server data &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)
+- [Reporting Services report server](../../reporting-services/report-server-sharepoint/reporting-services-report-server.md)
+- [Administer a report server database &#40;SSRS native mode&#41;](../../reporting-services/report-server/administer-a-report-server-database-ssrs-native-mode.md)
+- [Create a Report Server Database  &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)
+- [Backup and restore operations for Reporting Services](../../reporting-services/install-windows/backup-and-restore-operations-for-reporting-services.md)

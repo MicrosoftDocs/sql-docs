@@ -4,7 +4,7 @@ description: This article describes the new serverless compute tier and compares
 author: oslake
 ms.author: moslake
 ms.reviewer: wiassaf, mathoma
-ms.date: 08/21/2024
+ms.date: 09/24/2024
 ms.service: azure-sql-database
 ms.subservice: service-overview
 ms.topic: conceptual
@@ -505,7 +505,7 @@ The amount of compute billed for a serverless database is the maximum of CPU use
 - **Amount billed**: vCore unit price * maximum (minimum vCores, vCores used, minimum memory GB * 1/3, memory GB used * 1/3) 
 - **Billing frequency**: Per second
 
-The vCore unit price is the cost per vCore per second. For Hyperscale, the vCore unit price for an HA replica or named replica is lower than for the primary replica. 
+The vCore unit price is the cost per vCore per second. 
 
 Refer to the [Azure SQL Database pricing page](https://azure.microsoft.com/pricing/details/sql-database/single/) for specific unit prices in a given region.
 

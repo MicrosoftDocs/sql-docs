@@ -3,11 +3,12 @@ title: "Reinitialize Subscription(s) - All Subscriptions"
 description: "Reinitialize Subscription(s) - All Subscriptions"
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/01/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: ui-reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 f1_keywords:
   - "sql13.rep.reinit.all.f1"
 helpviewer_keywords:
@@ -35,7 +36,6 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
  **Mark for Reinitialization**  
  Click to mark each subscription for reinitialization. After a valid snapshot is available, the next time the Distribution Agent or Merge Agent runs for the subscription, the snapshot is applied at the Subscriber.  
   
-## See Also  
- [Reinitialize Subscriptions](../../relational-databases/replication/reinitialize-subscriptions.md)  
-  
-  
+## Related content
+
+- [Reinitialize Subscriptions](../../relational-databases/replication/reinitialize-subscriptions.md)

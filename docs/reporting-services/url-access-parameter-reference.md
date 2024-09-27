@@ -3,11 +3,12 @@ title: "URL access parameter reference"
 description: Learn how you can use parameters as part of a URL to configure the look and feel of your SQL Server Reporting Services (SSRS) reports.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 07/24/2024
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: reporting-services
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "reports [Reporting Services], display options"
   - "URL access [Reporting Services], report display parameters"
@@ -118,5 +119,3 @@ Target the Report Viewer web part that integrates with SharePoint by using the p
 
 - [URL access &#40;SSRS&#41;](../reporting-services/url-access-ssrs.md)
 - [Export a report using URL access](../reporting-services/export-a-report-using-url-access.md)
-  
-  

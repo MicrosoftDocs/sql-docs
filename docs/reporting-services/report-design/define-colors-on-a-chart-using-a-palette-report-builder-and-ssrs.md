@@ -3,11 +3,12 @@ title: "Define colors on a paginated report chart using a palette"
 description: Change the color palette for a paginated report chart by selecting a pre-defined palette or by defining a custom palette.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/03/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 # Define colors on a paginated report chart using a palette (Report Builder)
 
@@ -51,9 +52,8 @@ ms.custom: updatefrequency5
   
  If you are using a custom palette, you can change the order of the colors to change the color of different series in the chart.  
   
-## See Also  
- [Formatting Series Colors on a Chart &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
- [Charts &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [Specify Consistent Colors across Multiple Shape Charts &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/specify-consistent-colors-across-multiple-shape-charts-report-builder-and-ssrs.md)  
-  
-  
+## Related content
+
+- [Formatting Series Colors on a Chart &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)
+- [Charts &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)
+- [Specify Consistent Colors across Multiple Shape Charts &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/specify-consistent-colors-across-multiple-shape-charts-report-builder-and-ssrs.md)

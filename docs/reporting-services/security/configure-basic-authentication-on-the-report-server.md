@@ -3,16 +3,16 @@ title: Configure Basic authentication on the report server
 description: See how to configure the report server to support Basic authentication. View configuration file entries to use to configure Basic authentication options.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 08/23/2024
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: security
 ms.topic: how-to
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "Reporting Services, configuration"
   - "Basic authentication"
-
-#customer intent: As a SQL Server administrator, I want to configure Basic authentication on my report server so that I can accept requests that specify Basic authentication.
+# customer intent: As a SQL Server administrator, I want to configure Basic authentication on my report server so that I can accept requests that specify Basic authentication.
 ---
 # Configure Basic authentication on the report server
 
@@ -106,4 +106,3 @@ You can specify the following elements when you use a `RSWindowsBasic` section t
 
 - [Application domains for report server applications](../../reporting-services/report-server/application-domains-for-report-server-applications.md)
 - [Reporting Services security and protection](../../reporting-services/security/reporting-services-security-and-protection.md)
-  

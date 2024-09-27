@@ -3,11 +3,12 @@ title: Reporting Services backward compatibility
 description: Learn about changes in behavior of SQL Server Reporting Services, including features that are no longer available or scheduled to be removed in a future release.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 10/13/2022
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: reporting-services
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "Reporting Services, backward compatibility"
   - "SSRS, backward compatibility"
@@ -31,5 +32,4 @@ It also describes fundamental changes to the product that are known to break a c
   
 ## Related content
 
-- [Backward compatibility | Analysis Services](/analysis-services/analysis-services-backward-compatibility?viewFallbackFrom=sql-server-ver15)  
-  
+- [Backward compatibility | Analysis Services](/analysis-services/analysis-services-backward-compatibility?viewFallbackFrom=sql-server-ver15)

@@ -3,11 +3,12 @@ title: "Reinitialize Subscriptions"
 description: "Reinitialize Subscriptions"
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/01/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: how-to
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "initializing subscriptions [SQL Server replication], reinitializing"
   - "subscriptions [SQL Server replication], reinitializing"
@@ -35,8 +36,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
   
  To reinitialize all articles in a subscription, use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], stored procedures or Replication Management Objects (RMO). To reinitialize individual articles in snapshot and transactional publications, you must use stored procedures. For more information, see [Reinitialize a Subscription](../../relational-databases/replication/reinitialize-a-subscription.md).  
   
-## See Also  
- [Initialize a Subscription](../../relational-databases/replication/initialize-a-subscription.md)   
- [Subscription Expiration and Deactivation](../../relational-databases/replication/subscription-expiration-and-deactivation.md)  
-  
-  
+## Related content
+
+- [Initialize a Subscription](../../relational-databases/replication/initialize-a-subscription.md)
+- [Subscription Expiration and Deactivation](../../relational-databases/replication/subscription-expiration-and-deactivation.md)

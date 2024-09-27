@@ -3,16 +3,17 @@ title: "Configure report server URLs (Report Server Configuration Manager)"
 description: Learn about how you can configure URLs by using Reporting Services to access the Report Server web service and web portal.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 08/02/2024
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-server
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "Report Server Windows service, virtual directories"
   - "report servers [Reporting Services], virtual directories"
   - "virtual directories [Reporting Services]"
-#customer intent: As a SQL Server administrator, I want to understand how to configure report server URLs so that I can ensure proper access to the Report Server web service and the web portal.
+# customer intent: As a SQL Server administrator, I want to understand how to configure report server URLs so that I can ensure proper access to the Report Server web service and the web portal.
 ---
 # Configure report server URLs (Report Server Configuration Manager)
 

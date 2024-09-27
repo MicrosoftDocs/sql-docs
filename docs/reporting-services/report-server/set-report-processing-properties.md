@@ -3,11 +3,12 @@ title: "Set report processing properties"
 description: Learn about report execution properties in Report Server that control how reports are processed and how to set them for each report by using the web portal.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 06/10/2019
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-server
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "on-demand reports"
   - "report processing [Reporting Services], execution properties"
@@ -47,9 +48,9 @@ helpviewer_keywords:
   
  When this condition exists, the report server will disable the subscription the next time the subscription is scheduled to run. To reactivate the subscription, open and then save the subscription. When you open the subscription, the report server updates the subscription parameter values to those values specified for the snapshot. For more information about subscriptions, see [Subscriptions and delivery &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md).  
   
-## Related content  
- [Set processing options &#40;Reporting Services in SharePoint integrated mode&#41;](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
- [Reporting Services concepts &#40;SSRS&#41;](../../reporting-services/reporting-services-concepts-ssrs.md)   
- [Create, modify, and delete snapshots in report history](create-modify-and-delete-snapshots-in-report-history.md)   
- [Specify credential and connection information for report data sources](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
-  
+## Related content
+
+- [Set processing options &#40;Reporting Services in SharePoint integrated mode&#41;](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)
+- [Reporting Services concepts &#40;SSRS&#41;](../../reporting-services/reporting-services-concepts-ssrs.md)
+- [Create, modify, and delete snapshots in report history](create-modify-and-delete-snapshots-in-report-history.md)
+- [Specify credential and connection information for report data sources](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)

@@ -3,11 +3,12 @@ title: "Preload the cache (SSRS)"
 description: Learn how to preload the cache for a shared dataset by creating a cache refresh plan for the shared dataset in a Reporting Services report server.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 05/14/2019
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-server
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "cache [Reporting Services]"
   - "preloading cache"
@@ -149,12 +150,11 @@ helpviewer_keywords:
   
 1. Select **Apply**.
   
-## Related content  
+## Related content
 
- [Data-driven subscriptions](../../reporting-services/subscriptions/data-driven-subscriptions.md)  
- [Create a data-driven subscription &#40;SSRS tutorial&#41;](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)  
- [Performance, snapshots, caching &#40;Reporting Services&#41;](../../reporting-services/report-server/performance-snapshots-caching-reporting-services.md)  
- [Set report processing properties](../../reporting-services/report-server/set-report-processing-properties.md)  
- [Cache reports &#40;SSRS&#41;](../../reporting-services/report-server/caching-reports-ssrs.md)  
- [Work with shared datasets](../../reporting-services/work-with-shared-datasets-web-portal.md)  
-  
+- [Data-driven subscriptions](../../reporting-services/subscriptions/data-driven-subscriptions.md)
+- [Create a data-driven subscription &#40;SSRS tutorial&#41;](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)
+- [Performance, snapshots, caching &#40;Reporting Services&#41;](../../reporting-services/report-server/performance-snapshots-caching-reporting-services.md)
+- [Set report processing properties](../../reporting-services/report-server/set-report-processing-properties.md)
+- [Cache reports &#40;SSRS&#41;](../../reporting-services/report-server/caching-reports-ssrs.md)
+- [Work with shared datasets](../../reporting-services/work-with-shared-datasets-web-portal.md)

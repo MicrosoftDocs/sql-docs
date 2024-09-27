@@ -3,13 +3,13 @@ title: Add a filter to a Report Builder dataset
 description: Learn how to add a filter to a dataset to limit the data in a report after the data is retrieved from an external data source.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 08/01/2024
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-data
 ms.topic: how-to
-ms.custom: updatefrequency5
-
-#customer intent: As a Report Builder user, I want to learn how to add filters to my datasets so that I can limit the data in a report that's retrieved from a shared data source.
+ms.custom:
+  - updatefrequency5
+# customer intent: As a Report Builder user, I want to learn how to add filters to my datasets so that I can limit the data in a report that's retrieved from a shared data source.
 ---
 # Add a filter to a Report Builder dataset
 
@@ -72,5 +72,4 @@ To add a filter, you must specify one or more conditions that are filter equatio
 
 - [Add dataset filters, data region filters, and group filters to a paginated report (Report Builder)](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)
 - [Expression examples in paginated reports (Report Builder)](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)
-- [Add a filter to a paginated report (Report Builder)](../../reporting-services/report-design/add-a-filter-report-builder-and-ssrs.md)  
-  
+- [Add a filter to a paginated report (Report Builder)](../../reporting-services/report-design/add-a-filter-report-builder-and-ssrs.md)

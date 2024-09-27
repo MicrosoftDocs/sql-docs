@@ -3,11 +3,12 @@ title: "Reporting Services Report Server (SharePoint Mode)"
 description: A Reporting Services report server with SharePoint Mode can run in SharePoint to use collaboration and management features for Reporting Services content types.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 08/21/2023
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-server-sharepoint
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 monikerRange: ">=sql-server-2016 <=sql-server-2016"
 ---
 
@@ -131,8 +132,6 @@ monikerRange: ">=sql-server-2016 <=sql-server-2016"
 
 ## Related content
 
-[Install or uninstall the Reporting Services add-in for SharePoint](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)
-[Report Viewer web part on a SharePoint site](./report-viewer-web-part-sharepoint-site.md)
-
-More questions? [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)
-
+- [Install or uninstall the Reporting Services add-in for SharePoint](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)
+- [Report Viewer web part on a SharePoint site](./report-viewer-web-part-sharepoint-site.md)
+- [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)

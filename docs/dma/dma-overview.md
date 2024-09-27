@@ -4,12 +4,11 @@ description: Learn how to use Data Migration Assistant to migrate SQL Server dat
 author: ajithkr-ms
 ms.author: ajithkr
 ms.reviewer: randolphwest
-ms.date: 06/28/2024
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: dma
 ms.topic: overview
-ms.collection:
-  - sql-migration-content
+ms.collection: sql-migration-content
 ms.custom:
   - UpdateFrequency5
 helpviewer_keywords:

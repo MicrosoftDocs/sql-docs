@@ -3,7 +3,7 @@ title: "Install Reporting Services 2016 in SharePoint mode"
 description: "Install Reporting Services 2016 in SharePoint mode"
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 12/20/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-server-sharepoint
 ms.topic: conceptual
@@ -54,9 +54,8 @@ There are two core [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]
   
  [Claims to Windows Token Service &#40;c2WTS&#41; and Reporting Services](../../reporting-services/install-windows/claims-to-windows-token-service-c2wts-and-reporting-services.md)  
 
-## Next steps
+## Related content
 
- [Data Alerts Architecture and Workflow](../../reporting-services/reporting-services-data-alerts.md#AlertingWF)   
- [Data Alert Manager for Alerting Administrators](../../reporting-services/data-alert-manager-for-alerting-administrators.md)  
-
-More questions? [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)
+- [Data Alerts Architecture and Workflow](../../reporting-services/reporting-services-data-alerts.md#AlertingWF)
+- [Data Alert Manager for Alerting Administrators](../../reporting-services/data-alert-manager-for-alerting-administrators.md)
+- [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)

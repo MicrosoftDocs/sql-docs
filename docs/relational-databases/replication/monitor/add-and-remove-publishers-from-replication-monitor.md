@@ -3,11 +3,12 @@ title: "Add & remove Publishers from Replication Monitor (SSMS)"
 description: Learn to add and remove Publishers from Replication Monitor in SQL Server Management Studio (SSMS).
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/14/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: how-to
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "Replication Monitor, adding and removing Publishers"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
@@ -112,8 +113,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
   
 2.  Right-click the Publisher group, and then click **Remove**.  
   
-## See Also  
- [Configure Distribution](../../../relational-databases/replication/configure-distribution.md)   
- [Monitoring Replication](../../../relational-databases/replication/monitor/monitoring-replication.md)  
-  
-  
+## Related content
+
+- [Configure Distribution](../../../relational-databases/replication/configure-distribution.md)
+- [Monitoring Replication](../../../relational-databases/replication/monitor/monitoring-replication.md)

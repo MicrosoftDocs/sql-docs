@@ -3,11 +3,12 @@ title: "Data type mappings for an Oracle Publisher"
 description: Describes how to specify data type mappings for an Oracle Publisher in SQL Server using SQL Server Management Studio (SSMS).
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/14/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: how-to
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "Oracle publishing [SQL Server replication], data type mapping"
   - "data types [SQL Server replication], Oracle publishing"
@@ -86,10 +87,9 @@ helpviewer_keywords:
   
  :::code language="sql" source="../codesnippet/tsql/specify-data-type-mappin_3.sql":::
   
-## See Also  
- [Data Type Mapping for Oracle Publishers](../../../relational-databases/replication/non-sql/data-type-mapping-for-oracle-publishers.md)   
- [Heterogeneous Database Replication](../../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
- [Replication System Stored Procedures Concepts](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
- [Configure an Oracle Publisher](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)  
-  
-  
+## Related content
+
+- [Data Type Mapping for Oracle Publishers](../../../relational-databases/replication/non-sql/data-type-mapping-for-oracle-publishers.md)
+- [Heterogeneous Database Replication](../../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)
+- [Replication System Stored Procedures Concepts](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)
+- [Configure an Oracle Publisher](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)

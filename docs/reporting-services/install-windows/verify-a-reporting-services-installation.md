@@ -3,11 +3,12 @@ title: "Verify a Reporting Services Installation"
 description: "Verify a Reporting Services Installation"
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 06/03/2016
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-server
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "checking report server installations"
   - "verifying report server installations"
@@ -103,8 +104,7 @@ helpviewer_keywords:
   
 2.  If you installed report samples, open the sample report project files and publish the reports to a report server.  
   
-## See Also  
- [Troubleshoot a Reporting Services Installation](../../reporting-services/install-windows/troubleshoot-a-reporting-services-installation.md)   
- [Cause and Resolution of Reporting Services Errors](../../reporting-services/troubleshooting/cause-and-resolution-of-reporting-services-errors.md)  
-  
-  
+## Related content
+
+- [Troubleshoot a Reporting Services Installation](../../reporting-services/install-windows/troubleshoot-a-reporting-services-installation.md)
+- [Cause and Resolution of Reporting Services Errors](../../reporting-services/troubleshooting/cause-and-resolution-of-reporting-services-errors.md)

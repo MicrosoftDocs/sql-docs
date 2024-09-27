@@ -1,10 +1,10 @@
 ---
-title: Automated Backup for SQL Server 2016 + Azure VMs
-description: This article explains the Automated Backup feature for SQL Server 2016 and later VMs running on Azure. This article is specific to VMs using the Resource Manager.
+title: Automated Backup for SQL Server 2016 and later
+description: This article explains the Automated Backup feature for SQL Server 2016 and later installed to SQL Server on Azure VMs. This article is specific to VMs using the Resource Manager.
 author: AbdullahMSFT
 ms.author: amamun
 ms.reviewer: mathoma
-ms.date: 06/18/2024
+ms.date: 09/27/2024
 ms.service: virtual-machines-sql
 ms.subservice: backup
 ms.topic: how-to
@@ -12,34 +12,27 @@ ms.custom: devx-track-azurepowershell
 tags: azure-resource-manager
 ---
 
-# Automated Backup for Azure virtual machines (Resource Manager)
+# Automated Backup for SQL Server on Azure VMs
 [!INCLUDE[appliesto-sqlvm](../../includes/appliesto-sqlvm.md)]
 
 > [!div class="op_single_selector"]
 > * [SQL Server 2014](automated-backup-sql-2014.md)
 > * [SQL Server 2016 and later](automated-backup.md)
 
-Automated Backup automatically configures [Managed Backup to Microsoft Azure](/sql/relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure) for all existing and new databases on an Azure VM running SQL Server 2016 or later Standard, Enterprise, or Developer editions. This enables you to configure regular database backups that utilize durable Azure Blob Storage. Automated Backup depends on the [SQL Server infrastructure as a service (IaaS) Agent Extension](sql-server-iaas-agent-extension-automate-management.md).
+Automated Backup automatically configures [Managed Backup to Microsoft Azure](/sql/relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure) for all existing and new databases on SQL Server on Azure VMs starting with SQL Server 2016 or later Standard, Enterprise, or Developer editions. This enables you to configure regular database backups that utilize durable Azure Blob Storage. 
+
 
 ## Prerequisites
-To use Automated Backup, review the following prerequisites:
 
-**Operating system**:
+To use Automated Backups for your SQL Server on Azure VM, you need: 
 
-- Windows Server 2012 R2 or later
-
-**SQL Server version/edition**:
-
-- SQL Server 2016 or later: Developer, Standard, or Enterprise
-
-> [!NOTE]
-> For SQL Server 2014, see [Automated Backup for SQL Server 2014](automated-backup-sql-2014.md).
-
-**Database configuration**:
-
-- Target _user_ databases must use the full recovery model. System databases don't have to use the full recovery model. However, if you require log backups to be taken for `model` or `msdb`, you must use the full recovery model. For more information about the impact of the full recovery model on backups, see [Backup under the full recovery model](/previous-versions/sql/sql-server-2008-r2/ms190217(v=sql.105)). 
-- The SQL Server VM has been registered with the [SQL IaaS Agent extension](sql-server-iaas-agent-extension-automate-management.md) and the **Automated Backup** feature is enabled. Since Automated Backup relies on the extension, Automated Backup is only supported on target databases from the default instance, or a single named instance. If there's no default instance, and multiple named instances, the SQL IaaS Agent extension fails and Automated Backup won't work. 
-- If you're running automated backups on a secondary Always On availability group replica, the replica must be **Readable** for the backups to succeed. 
+ - A SQL Server on Azure VMs registered with the [SQL IaaS Agent extension](sql-server-iaas-agent-extension-automate-management.md).
+ - Windows Server 2012 R2 or later.
+ - SQL Server 2016 and later. For SQL Server 2014, see [Automated Backup for SQL Server 2014](automated-backup-sql-2014.md).
+- **Database configuration**:
+   - Target _user_ databases must use the full recovery model. System databases don't have to use the full recovery model. However, if you require log backups to be taken for `model` or `msdb`, you must use the full recovery model. For more information about the impact of the full recovery model on backups, see [Backup under the full recovery model](/previous-versions/sql/sql-server-2008-r2/ms190217(v=sql.105)). 
+   - The SQL Server VM has been registered with the [SQL IaaS Agent extension](sql-server-iaas-agent-extension-automate-management.md) and the **Automated Backup** feature is enabled. Since Automated Backup relies on the extension, Automated Backup is only supported on target databases from the default instance, or a single named instance. If there's no default instance, and multiple named instances, the SQL IaaS Agent extension fails and Automated Backup won't work. 
+   - If you're running automated backups on a secondary Always On availability group replica, the replica must be **Readable** for the backups to succeed. 
 
 ## Settings
 
@@ -109,7 +102,7 @@ Then, on Tuesday at 10 for 6 hours, full backups of all databases start again.
 
 
 > [!IMPORTANT]
-> Backups happen sequentially during each interval. For instances with a large number of databases, schedule your backup interval with enough time to accommodate all backups. If backups cannot complete within the given interval, some backups may be skipped, and your time between backups for a single database may be higher than the configured backup interval time, which could negatively impact your restore point objective (RPO). 
+> Backups happen sequentially during each interval. For instances with a large number of databases, schedule your backup interval with enough time to accommodate all backups. If backups cannot complete within the given interval, some backups might be skipped, and your time between backups for a single database might be higher than the configured backup interval time, which could negatively impact your restore point objective (RPO). 
 
 ## Configure new VMs
 
@@ -429,7 +422,8 @@ The following table lists the possible solutions if you're having issues enablin
 
 
 
-### Common errors with Automated or Managed Backup
+
+### Common issues with Automated or Managed Backup
 
 The following table lists possible errors and solutions when working with Automated Backups: 
 
@@ -439,13 +433,13 @@ The following table lists possible errors and solutions when working with Automa
 | **Automated/Managed Backup fails due to Memory/IO Pressure** | See if you can increase the Max Server memory and/or resize the disk/VM if you're running out of [IO/VM limits](https://devblogs.microsoft.com/premier-developer/azure-vm-and-disk-throttling/). If you're using  an availability group, consider offloading your backups to the secondary replica. | 
 | **Automated Backup fails after Server Rename** | If you've renamed your machine hostname, you need to also [rename the hostname inside SQL Server](/sql/database-engine/install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server#rename-a-computer-that-hosts-a-stand-alone-instance-of-).  |
 | **Error: The operation failed because of an internal error. The argument must not be empty string.\\r\\nParameter name: sas Token Please retry later** | This is likely caused by the SQL Server Agent service not having correct impersonation permissions. Change the SQL Server Agent service to use a different account to fix this issue. | 
-| **Error: SQL Server Managed Backup to Microsoft Azure cannot configure the default backup settings for the SQLServer instance because the container URL was invalid. It is also possible that your SAS credential is invalid** | You may see this error if you have a large number of databases. Use [Managed backup](/sql/relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure) instead of Automated Backup. | 
+| **Error: SQL Server Managed Backup to Microsoft Azure cannot configure the default backup settings for the SQLServer instance because the container URL was invalid. It is also possible that your SAS credential is invalid** | You might see this error if you have a large number of databases. Use [Managed backup](/sql/relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure) instead of Automated Backup. | 
 | **Automated Backup job failed after VM Restart**| Check that the SQL Agent service is up and running. | 
 | **Managed backup fails intermittently/Error:Execution timeout Expired** | This is a known issue fixed in [CU18](https://support.microsoft.com/topic/kb5017593-cumulative-update-18-for-sql-server-2019-5fa00c36-edeb-446c-94e3-c4882b7526bc#bkmk_14913295) for SQL Server 2019 and [KB4040376] for SQL Server 2014-2017.|
 | **Error: The remote server returned an error: (403) Forbidden**  | Repair the [SQL IaaS Agent extension](sql-agent-extension-troubleshoot-known-issues.md#repair-extension). | 
 | **Error 3202: Write on Storage account failed 13 (The data is invalid)** | Remove the immutable blob policy on the storage container and make sure the storage account is using, at minimum, TLS 1.0.  | 
 | **Error 3063: Write to backup block blob device. Device has reached its limit of allowed blocks.** | This can happen if you're running automated backups from a secondary Always On availability group replica that has the `Readable` configuration set to `NO`. For automated backups to work on a secondary replica, the replica must be readable. | 
-
+| **Unable to schedule a backup for a particular day** | If you're using [Automated backups for SQL Server 2014](automated-backup-sql-2014.md), this is expected. You can configure a backup schedule starting with SQL Server 2016. |
 
 
 ### Disabling Automated Backup or Managed Backup fails
@@ -463,7 +457,7 @@ The following table lists the possible solutions if you're having issues disabli
 ### I want to find out what service/application is taking SQL Server backups
 
 - In SQL Server Management Studio (SSMS) **Object Explorer**, right-click the database > Select **Reports** > **Standard Reports** > **Backup and Restore Events**. In the report, you can expand the **Successful Backup Operations** section to see the backup history.
-- If you see multiple backups on Azure or to a virtual device, check if you're using [Azure Backup](/azure/backup/backup-azure-sql-database) to back up individual SQL databases or taking a virtual machine snapshot to a virtual device, which uses the `NT Authority/SYSTEM` account. If you're not, check the Windows **Services** console (services.msc) to identify any third-party applications which may be taking backups. 
+- If you see multiple backups on Azure or to a virtual device, check if you're using [Azure Backup](/azure/backup/backup-azure-sql-database) to back up individual SQL databases or taking a virtual machine snapshot to a virtual device, which uses the `NT Authority/SYSTEM` account. If you're not, check the Windows **Services** console (services.msc) to identify any third-party applications which might be taking backups. 
 
 
 ## Next steps

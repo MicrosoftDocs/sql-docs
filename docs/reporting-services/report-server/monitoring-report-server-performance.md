@@ -3,11 +3,12 @@ title: "Monitor report server performance"
 description: Learn how to monitor report server performance to evaluate server activity, watch trends, diagnose bottlenecks, and gather data about system configuration.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 02/12/2021
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-server
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "performance counters [Reporting Services]"
   - "report servers [Reporting Services], performance"
@@ -88,6 +89,7 @@ SQL Server 2016 Reporting Services includes the following performance objects:
  Describes the HTTP-related and memory-related performance counters in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
 ## Related content
- [Configure available memory for report server applications](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)   
- [Reporting Services report server &#40;native mode&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
- [Reporting Services tools](../../reporting-services/tools/reporting-services-tools.md)  
+
+- [Configure available memory for report server applications](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)
+- [Reporting Services report server &#40;native mode&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)
+- [Reporting Services tools](../../reporting-services/tools/reporting-services-tools.md)

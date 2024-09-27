@@ -3,11 +3,12 @@ title: "Lesson 2: Define a data connection and data table for the parent report"
 description: "Learn how to create a data connection and a data table for the parent report after you create a new website project using the ASP.NET website template for Visual C#."
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 05/18/2016
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: reporting-services
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 # Lesson 2: Define a data connection and data table for the parent report
 After you create a new website project using the ASP.NET website template for Visual C#, your next step is to create a data connection and a data table for the parent report.
@@ -66,6 +67,6 @@ After you create a new website project using the ASP.NET website template for Vi
 13. To preview the data, select **Preview Data** on the **Data** menu, and then choose **Preview**.  
   
 ## Next step
-You successfully created a data connection and a data table for the parent report. Next, you design the parent report using the Report Wizard. See [Lesson 3: Design the parent report using the Report Wizard](../reporting-services/lesson-3-design-the-parent-report-using-the-report-wizard.md).  
-  
 
+> [!div class="nextstepaction"]
+> [Lesson 3: Design the parent report using the Report Wizard](../reporting-services/lesson-3-design-the-parent-report-using-the-report-wizard.md)

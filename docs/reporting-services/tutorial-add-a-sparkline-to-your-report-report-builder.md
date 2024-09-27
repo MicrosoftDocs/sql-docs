@@ -3,11 +3,12 @@ title: "Tutorial: Add a sparkline to your report (Report Builder)"
 description: Learn how to use the Report Builder to create a basic table with a sparkline chart in a Reporting Services paginated report.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 05/30/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: reporting-services
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 
 # Tutorial: Add a sparkline to your report (Report Builder)
@@ -309,13 +310,13 @@ The report is saved to the report server. The name of report server that you're 
   
 4.  Select **Save**.  
   
+## Related content
+
+- [Report Builder Tutorials](../reporting-services/report-builder-tutorials.md)
+- [Report Builder in SQL Server](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)
+- [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)
+
 ## Next step
 
-You successfully completed the tutorial for creating a table report with sparkline charts. For more information about sparklines, see [Sparklines and Data Bars](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).
-
-## Related content
-  
-- [Report Builder Tutorials](../reporting-services/report-builder-tutorials.md) 
-- [Report Builder in SQL Server](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
-
-More questions? [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user).
+> [!div class="nextstepaction"]
+> [Sparklines and Data Bars](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)

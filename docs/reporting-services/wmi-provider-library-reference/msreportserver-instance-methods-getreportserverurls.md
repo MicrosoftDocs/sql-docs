@@ -3,11 +3,12 @@ title: "GetReportServerUrls method (WMI MSReportServer_Instance)"
 description: "GetReportServerUrls method (WMI MSReportServer_Instance)"
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 06/09/2016
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: wmi-provider-library-reference
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "GetReportServerUrls method"
 ---
@@ -47,7 +48,6 @@ public void GetReportServerUrls(out string[] applicationName,
 ## Requirements  
  **Namespace:** [!INCLUDE[ssRSWMInmspc](../../includes/ssrswminmspc-md.md)]  
   
-## Related content  
- [MSReportServer_ConfigurationSetting members](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
-  
-  
+## Related content
+
+- [MSReportServer_ConfigurationSetting members](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)

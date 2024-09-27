@@ -3,11 +3,12 @@ title: "Sort data in a data region in a paginated report"
 description: Learn how to change the sort order of data in a data region in a paginated report when a report first runs in Report Builder.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 08/17/2018
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 # Sort data in a data region in a paginated report (Report Builder)
 
@@ -120,9 +121,8 @@ ms.custom: updatefrequency5
   
  For more information about how data is grouped in a gauge, see [Gauges &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md).  
   
-## See Also  
- [Charts &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [Formatting Axis Labels on a Chart &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
- [Specify Consistent Colors across Multiple Shape Charts &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/specify-consistent-colors-across-multiple-shape-charts-report-builder-and-ssrs.md)  
-  
-  
+## Related content
+
+- [Charts &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)
+- [Formatting Axis Labels on a Chart &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)
+- [Specify Consistent Colors across Multiple Shape Charts &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/specify-consistent-colors-across-multiple-shape-charts-report-builder-and-ssrs.md)

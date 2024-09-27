@@ -3,11 +3,12 @@ title: "Bind a Report to a Shared Data Source"
 description: Learn how to bind a report to a shared data source on a report server that is running in native mode or SharePoint integrated mode.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 05/24/2018
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-data
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "shared data sources [Reporting Services]"
   - "data sources [Reporting Services], shared"
@@ -54,9 +55,9 @@ helpviewer_keywords:
   
 10. Click **Close**.  
   
-## See Also  
- [Upload Documents to a SharePoint Library &#40;Reporting Services in SharePoint Mode&#41;](../../reporting-services/report-server-sharepoint/upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md)   
- [Create and Manage Shared Data Sources &#40;Reporting Services in SharePoint Integrated Mode&#41;](/previous-versions/sql/)   
- [Create data connection strings - Report Builder & SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
- [Data Sources Supported by Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)  
-  
+## Related content
+
+- [Upload Documents to a SharePoint Library &#40;Reporting Services in SharePoint Mode&#41;](../../reporting-services/report-server-sharepoint/upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md)
+- [Create and Manage Shared Data Sources &#40;Reporting Services in SharePoint Integrated Mode&#41;](/previous-versions/sql/)
+- [Create data connection strings - Report Builder & SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)
+- [Data Sources Supported by Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)

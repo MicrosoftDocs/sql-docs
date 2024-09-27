@@ -4,11 +4,12 @@ description: Learn about the new web portal that Reporting Services 2016 introdu
 author: maggiesMSFT
 ms.author: maggies
 ms.reviewer: randolphwest
-ms.date: 12/29/2022
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: extensions
 ms.topic: reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 # How to install custom security extensions
 
@@ -104,5 +105,4 @@ The new portal and the reportserver communicate using internal soap APIs for som
 
 - [Configure Custom or Forms authentication on the Report Server](../../../reporting-services/security/configure-custom-or-forms-authentication-on-the-report-server.md)
 - [Configure the web portal to pass custom authentication cookies](../../security/configure-the-web-portal-to-pass-custom-authentication-cookies.md)
-
-More questions? [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)
+- [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)

@@ -3,13 +3,13 @@ title: Keep headers visible when scrolling through a paginated report in Report 
 description: Learn how to freeze the row or column headings in Report Builder to prevent row and column labels from scrolling out of view after rendering a paginated report.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 06/27/2024
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: how-to
-ms.custom: updatefrequency5
-
-#customer intent: As a Report Builder user, I want to learn how to freeze row or column headings so that I can keep useful day visible on my rendered reports.
+ms.custom:
+  - updatefrequency5
+# customer intent: As a Report Builder user, I want to learn how to freeze row or column headings so that I can keep useful day visible on my rendered reports.
 ---
 # Keep headers visible when scrolling through a paginated report in Report Builder
 

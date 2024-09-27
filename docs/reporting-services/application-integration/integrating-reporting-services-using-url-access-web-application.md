@@ -3,11 +3,12 @@ title: "Use URL access in Web applications"
 description: URL access in Reporting Services enables access to reports over a network, which allows integrating report viewing and navigation into a custom Web application.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/16/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: application-integration
 ms.topic: reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "links [Reporting Services], URL access"
   - "URL access [Reporting Services], Web applications"
@@ -70,10 +71,9 @@ https://server/reportserver?/SampleReports/Territory Sales
 Drilldown&rs:Command=Render&rc:LinkTarget=main&rs:Format=HTML4.0  
 ```  
   
-## Related content  
- [Integrating Reporting Services into Applications](../../reporting-services/application-integration/integrating-reporting-services-into-applications.md)   
- [Integrating Reporting Services by using URL access](../../reporting-services/application-integration/integrating-reporting-services-using-url-access.md)   
- [Use URL Access in a Windows Application](../../reporting-services/application-integration/integrating-reporting-services-using-url-access-windows-application.md)   
- [URL Access &#40;SSRS&#41;](../../reporting-services/url-access-ssrs.md)  
-  
-  
+## Related content
+
+- [Integrating Reporting Services into Applications](../../reporting-services/application-integration/integrating-reporting-services-into-applications.md)
+- [Integrating Reporting Services by using URL access](../../reporting-services/application-integration/integrating-reporting-services-using-url-access.md)
+- [Use URL Access in a Windows Application](../../reporting-services/application-integration/integrating-reporting-services-using-url-access-windows-application.md)
+- [URL Access &#40;SSRS&#41;](../../reporting-services/url-access-ssrs.md)

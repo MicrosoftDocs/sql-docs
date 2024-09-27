@@ -3,11 +3,12 @@ title: "Data types in expressions in a paginated report"
 description: Explore how data types represent different kinds of data in a paginated report so that the data can be stored and processed in Report Builder.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 08/17/2018
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 # Data types in expressions in a paginated report (Report Builder)
 
@@ -137,5 +138,6 @@ ms.custom: updatefrequency5
   
  For more information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] data types, see [Data Types in Analysis Services](/analysis-services/multidimensional-models/olap-physical/data-types-in-analysis-services).  
   
-## See Also  
- [Formatting Report Items &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)  
+## Related content
+
+- [Formatting Report Items &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)

@@ -3,11 +3,12 @@ title: "Report Server Web Service"
 description: Reporting Services provides functionality of the report server with Report Server Web service, a SOAP service endpoint for report execution and management.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/14/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-server-web-service
 ms.topic: reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "SSIS, Web service"
   - "Web service [Reporting Services]"
@@ -64,7 +65,6 @@ Reporting Services available Web service development options
   
 -   Development experience in a [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]-compatible language such as [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[c-sharp](../../includes/c-sharp-md.md)] or [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[visual-basic](../../includes/visual-basic-md.md)], if you plan to use the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] as your development platform.  
   
-## Related content  
- [Report Server Web Service](../../reporting-services/report-server-web-service/report-server-web-service.md)  
-  
-  
+## Related content
+
+- [Report Server Web Service](../../reporting-services/report-server-web-service/report-server-web-service.md)

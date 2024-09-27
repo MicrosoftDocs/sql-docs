@@ -3,11 +3,12 @@ title: "Export a paginated report to Microsoft Word (Report Builder)"
 description: The Microsoft Word rendering extension renders paginated reports to the Microsoft Word format (.docx). The format is Office Open XML.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 09/20/2023
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-builder
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 
 # Export a paginated report to Microsoft Word (Report Builder)
@@ -223,6 +224,4 @@ You can change some default settings for this renderer, by changing the device i
 - [Interactive functionality for different report rendering extensions](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)
 - [Render report items](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)
 - [Tables, matrices, and lists](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)
-
-More questions? [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)
-
+- [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)

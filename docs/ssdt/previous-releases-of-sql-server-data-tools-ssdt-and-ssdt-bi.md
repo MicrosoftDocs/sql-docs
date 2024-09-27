@@ -4,13 +4,13 @@ description: "See how to install 2017 and prior versions of SSDT and SSDT-BI. Vi
 author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan, mikeray
-ms.date: 09/18/2024
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: ssdt
 ms.topic: conceptual
 ms.custom:
   - UpdateFrequency5
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2016 || =azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=azuresqldb-mi-current"
 ---
 
 # Previous releases of SQL Server Data Tools (SSDT and SSDT-BI)

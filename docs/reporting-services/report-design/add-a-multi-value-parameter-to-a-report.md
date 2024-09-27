@@ -3,11 +3,12 @@ title: "Add a multi-value parameter to a paginated report"
 description: Learn how to add a parameter to a paginated report that allows the user to select more than one value for the parameter in Report Builder.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/07/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 # Add a multi-value parameter to a paginated report
 
@@ -50,7 +51,6 @@ ms.custom: updatefrequency5
      For more information, see [Add, change, or delete available values for a report parameter &#40;Report Builder&#41;](../../reporting-services/report-design/add-change-or-delete-available-values-for-a-report-parameter.md).  
 
 ## Related content
- [Add cascading parameters to a report &#40;Report Builder&#41;](../../reporting-services/report-design/add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)   
- [Add, change, or delete a report parameter &#40;Report Builder&#41;](../../reporting-services/report-design/add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)  
-  
-  
+
+- [Add cascading parameters to a report &#40;Report Builder&#41;](../../reporting-services/report-design/add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)
+- [Add, change, or delete a report parameter &#40;Report Builder&#41;](../../reporting-services/report-design/add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)

@@ -3,11 +3,12 @@ title: "Where to find the SSRS add-in for SharePoint"
 description: "The SQL Server Reporting Services add-in for SharePoint Products and Technologies (rssharepoint.msi) is a Web download that provides features to integrate a report server with a deployment of SharePoint."
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 08/24/2022
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-server-sharepoint
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "rsSharePoint"
 monikerRange: ">=sql-server-2016 <=sql-server-2016"
@@ -49,9 +50,8 @@ The [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](.
  
   -   [Microsoft SQL Server 2012 Reporting Services Add-in for Microsoft SharePoint](https://www.microsoft.com/download/details.aspx?id=56052)  
 
-## Next steps
+## Related content
 
-[Install or Uninstall the Reporting Services Add-in for SharePoint](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)   
-[You aren't able to browse SharePoint pages in non-default zone after uninstalling Reporting Services add-in](https://web.archive.org/web/20131006010947/http://support.microsoft.com:80/kb/2009212)  
-
-More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)
+- [Install or Uninstall the Reporting Services Add-in for SharePoint](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)
+- [You aren't able to browse SharePoint pages in non-default zone after uninstalling Reporting Services add-in](https://web.archive.org/web/20131006010947/http://support.microsoft.com:80/kb/2009212)
+- [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

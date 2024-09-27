@@ -3,11 +3,12 @@ title: "Configure Distribution Wizard"
 description: "Configure Distribution Wizard"
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/01/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "Configure Distribution Wizard"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
@@ -26,9 +27,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
   
 -   [Distributor Password](../../relational-databases/replication/distributor-password.md)  
   
-## See Also  
- [Configure Distribution](../../relational-databases/replication/configure-distribution.md)   
- [Configure Publishing and Distribution](../../relational-databases/replication/configure-publishing-and-distribution.md)   
+## Related content
 
-  
-  
+- [Configure Distribution](../../relational-databases/replication/configure-distribution.md)
+- [Configure Publishing and Distribution](../../relational-databases/replication/configure-publishing-and-distribution.md)

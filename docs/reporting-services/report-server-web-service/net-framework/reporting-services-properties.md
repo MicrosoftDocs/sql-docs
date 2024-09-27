@@ -3,11 +3,12 @@ title: "Reporting Services Properties"
 description: A report server defines global system properties and individual item properties. Applications can add user-defined properties to system and item properties.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/14/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-server-web-service
 ms.topic: reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "report servers [Reporting Services], properties"
   - "properties [Reporting Services], about properties"
@@ -37,9 +38,8 @@ helpviewer_keywords:
 |[Report Server Item Properties](../../../reporting-services/report-server-web-service/net-framework/reporting-services-properties-report-server-item-properties.md)|Describes the item-specific properties in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].|  
 |[Report Server System Properties](../../../reporting-services/report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md)|Describes the system-specific properties in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].|  
   
-## See Also  
- [Building Applications Using the Web Service and the .NET Framework](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
- [Report Server Web Service](../../../reporting-services/report-server-web-service/report-server-web-service.md)   
- [Technical Reference &#40;SSRS&#41;](../../../reporting-services/technical-reference-ssrs.md)  
-  
-  
+## Related content
+
+- [Building Applications Using the Web Service and the .NET Framework](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)
+- [Report Server Web Service](../../../reporting-services/report-server-web-service/report-server-web-service.md)
+- [Technical Reference &#40;SSRS&#41;](../../../reporting-services/technical-reference-ssrs.md)

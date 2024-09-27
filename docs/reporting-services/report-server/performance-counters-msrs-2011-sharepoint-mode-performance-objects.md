@@ -3,11 +3,12 @@ title: "Performance counters MSRS 2016 SharePoint Mode, performance objects"
 description: Learn about performance counters for the MSRS 2016 Web Service SharePoint Mode and MSRS 2016 Windows Service SharePoint Mode performance objects.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 02/17/2021
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-server
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "performance counters [Reporting Services]"
   - "counters [Reporting Services]"
@@ -128,8 +129,8 @@ CounterSetName     : MSRS 2016 Web Service SharePoint Mode
 (get-counter -listset "MSRS 2016 Windows Service SharePoint Mode").paths  
 ```  
   
-## Related content  
- [Monitor report server performance](../../reporting-services/report-server/monitoring-report-server-performance.md)   
- [Performance counters for the MSRS 2016 Web Service and MSRS 2016 Windows Service performance objects &#40;native mode&#41;](../../reporting-services/report-server/performance-counters-msrs-2011-web-service-performance-objects.md)   
- [Performance counters for the ReportServer:Service  and ReportServerSharePoint:Service performance objects](../../reporting-services/report-server/performance-counters-reportserver-service-performance-objects.md)  
-  
+## Related content
+
+- [Monitor report server performance](../../reporting-services/report-server/monitoring-report-server-performance.md)
+- [Performance counters for the MSRS 2016 Web Service and MSRS 2016 Windows Service performance objects &#40;native mode&#41;](../../reporting-services/report-server/performance-counters-msrs-2011-web-service-performance-objects.md)
+- [Performance counters for the ReportServer:Service  and ReportServerSharePoint:Service performance objects](../../reporting-services/report-server/performance-counters-reportserver-service-performance-objects.md)

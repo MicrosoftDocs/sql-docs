@@ -3,11 +3,12 @@ title: "Work with subscriptions (web portal)"
 description: Learn how to use the Subscriptions page to list all of the subscriptions for the current report in Reporting Services.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 01/24/2022
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: reporting-services
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 
 # Work with subscriptions (web portal)
@@ -87,8 +88,7 @@ After you create the query, you can then assign values to the required fields. Y
 ## Related content
 
 - [Create and manage subscriptions for Native Mode report servers](subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)
-- [The web portal of a report server (SSRS Native Mode)](../reporting-services/web-portal-ssrs-native-mode.md)  
-- [Work with paginated reports (web portal)](working-with-paginated-reports-web-portal.md)  
+- [The web portal of a report server (SSRS Native Mode)](../reporting-services/web-portal-ssrs-native-mode.md)
+- [Work with paginated reports (web portal)](working-with-paginated-reports-web-portal.md)
 - [Work with shared datasets - web portal](../reporting-services/work-with-shared-datasets-web-portal.md)
-
-More questions? [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user).
+- [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)

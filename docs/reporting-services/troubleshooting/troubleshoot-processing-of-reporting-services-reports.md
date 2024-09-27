@@ -3,11 +3,12 @@ title: "Troubleshoot processing of Reporting Services reports"
 description: In this article, troubleshoot issues occurring when the report processor combines data and layout information and evaluates report item property expressions.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 08/26/2016
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: troubleshooting
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 # Troubleshoot processing of Reporting Services reports
 After the report data is retrieved, the report processor combines the data and layout information. Each report item property that has an expression is evaluated in the context of the combined data and layout. Use this article to help troubleshoot these issues.   
@@ -41,7 +42,8 @@ To eliminate the #Error message, you must rewrite the expression that causes it.
 In preview, in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], view the Output window. On the report server, view the call stack. 
   
   
-## Related content  
-[Errors and events (Reporting Services)](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
-[!INCLUDE[feedback-qa-stackoverflow-md](../../includes/feedback-qa-stackoverflow-md.md)]
+## Related content
 
+- [Errors and events (Reporting Services)](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)
+
+[!INCLUDE [feedback-qa-stackoverflow-md](../../includes/feedback-qa-stackoverflow-md.md)]

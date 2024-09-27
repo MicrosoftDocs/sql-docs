@@ -3,11 +3,12 @@ title: "Use an Office Data Connection (.odc) with Reports"
 description: Learn how to use an existing Office Data Connection (.odc) file to provide connection information to a Reporting Services report.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/14/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-data
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "Office Data Connection (.odc) files"
   - "SharePoint integration [Reporting Services], shared data sources"
@@ -92,6 +93,6 @@ helpviewer_keywords:
   
      If you are trying these steps with the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] sample database and sample reports, be aware that only the Company Sales report will work out-of-the-box with an .odc file. The other sample reports contain query parameters and features that do not work with the OLE DB provider. However, you can make the reports work with the OLE DB provider if you modify them first in Report Designer.  
   
-## See Also  
- [Create, Modify, and Delete Shared Data Sources &#40;SSRS&#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)  
-  
+## Related content
+
+- [Create, Modify, and Delete Shared Data Sources &#40;SSRS&#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)

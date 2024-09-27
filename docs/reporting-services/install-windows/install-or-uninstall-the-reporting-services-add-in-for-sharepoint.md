@@ -3,7 +3,7 @@ title: "Install or uninstall the Reporting Services add-in for SharePoint (SSRS)
 description: "Learn how to run the installation package Microsoft SQL Server Reporting Services Add-in for SharePoint products (rsSharePoint.msi) on SharePoint servers, to enable Reporting Services features within a SharePoint deployment."
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 12/04/2019
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-server
 ms.topic: conceptual
@@ -285,6 +285,5 @@ Rssharepoint.msi /?
 ## Related content
 
 - [Install the first report server in SharePoint mode](install-the-first-report-server-in-sharepoint-mode.md)
-- [Reporting Services report server &#40;SharePoint mode&#41;](../../reporting-services/report-server-sharepoint/reporting-services-report-server-sharepoint-mode.md)  
-
-More questions? [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user).
+- [Reporting Services report server &#40;SharePoint mode&#41;](../../reporting-services/report-server-sharepoint/reporting-services-report-server-sharepoint-mode.md)
+- [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)

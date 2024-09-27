@@ -3,11 +3,12 @@ title: "Backup and Restore for Oracle Publishers"
 description: "Backup and Restore for Oracle Publishers"
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/14/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: how-to
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "recovery [SQL Server replication], Oracle publishing"
   - "backups [SQL Server replication], Oracle publishing"
@@ -39,9 +40,8 @@ helpviewer_keywords:
   
      If the Publisher must be dropped and reconfigured, drop the **MSSQLSERVERDISTRIBUTOR** public synonym and the configured Oracle replication user with the **CASCADE** option to remove all replication objects from the Oracle Publisher.  
   
-## See Also  
- [Back Up and Restore Replicated Databases](../../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)   
- [Configure an Oracle Publisher](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)   
- [Oracle Publishing Overview](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)  
-  
-  
+## Related content
+
+- [Back Up and Restore Replicated Databases](../../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)
+- [Configure an Oracle Publisher](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)
+- [Oracle Publishing Overview](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)

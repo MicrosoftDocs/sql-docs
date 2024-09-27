@@ -3,11 +3,12 @@ title: "Lesson 1: Create a sample subscriber database"
 description: Learn how to create a small subscriber database to store subscription data for your data-driven subscription.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 05/30/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: reporting-services
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 
 # Lesson 1: Create a sample subscriber database
@@ -55,15 +56,14 @@ This lesson assumes you're using [!INCLUDE[ssManStudioFull_md](../includes/ssman
   
 8.  Use a SELECT statement to verify that you have three rows of data. For example: `select * from OrderInfo`  
   
-## Next step  
-+ You successfully created the subscription data that drives report distribution and vary the report output for each subscriber. 
-+ Next, you modify the data source properties of the report to use stored credentials. 
-+ You also modify the report design to include a parameter that the subscription uses with the subscriber data. [Lesson 2: Modify the report data source properties](../reporting-services/lesson-2-modifying-the-report-data-source-properties.md).  
-
 ## Related content
 
-- [Create a data-driven subscription](../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)  
-- [Create a database](../relational-databases/databases/create-a-database.md)  
-- [Create a basic table report](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)  
+- [Create a data-driven subscription](../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)
+- [Create a database](../relational-databases/databases/create-a-database.md)
+- [Create a basic table report](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)
+- [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)
 
-More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231).
+## Next step
+
+> [!div class="nextstepaction"]
+> [Lesson 2: Modify the report data source properties](../reporting-services/lesson-2-modifying-the-report-data-source-properties.md)

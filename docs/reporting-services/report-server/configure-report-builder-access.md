@@ -3,11 +3,12 @@ title: "Configure Report Builder access"
 description: Configure Report Builder, a report design tool to use with a SQL Server Reporting Services report server. It uses either native or SharePoint integration mode.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/07/2021
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-server
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 
 # Configure Report Builder access
@@ -133,7 +134,7 @@ If you use custom permission levels, you must include Add Items and Edit Items i
 
 Report Builder opens its own connection to a report server. If you're not using Windows integrated security with single sign-on, users must reenter their credentials for the Report Builder connection to the report server.  
 
-## Related content  
+## Related content
 
 - [Authentication with the report server](../../reporting-services/security/authentication-with-the-report-server.md)
 - [Browser support for Reporting Services](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)

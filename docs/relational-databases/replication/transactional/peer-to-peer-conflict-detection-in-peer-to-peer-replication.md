@@ -3,11 +3,12 @@ title: "Conflict Detection in Peer-to-Peer Replication"
 description: "Peer-to-Peer - Conflict Detection in Peer-to-Peer Replication"
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: 10/05/2021
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "transactional replication, peer-to-peer replication"
   - "peer-to-peer transactional replication, conflict detection"
@@ -115,7 +116,6 @@ Use stored procedures to configure last write wins. See [Configure last writer c
 > [!Note]
 > Peer-to-Peer replication with Last Writer Wins depends on having the clocks of participating nodes in sync for reliable outcomes. If the clocks of participating servers become too far out of sync, the outcome of a conflict resolution may be unexpected and/or undesired. For example, if server A has an accurate clock, but server B is a week behind, then server A will be chosen to win every conflict, even if objectively it was not last to update the row.  If it is not possible to keep the clocks within the tolerance you require for outcome resolution, you may wish to choose a different conflict resolution strategy.
 
-## See Also  
- [Peer-to-Peer Transactional Replication](../../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)  
-  
-  
+## Related content
+
+- [Peer-to-Peer Transactional Replication](../../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)

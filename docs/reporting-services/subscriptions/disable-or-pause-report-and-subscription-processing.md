@@ -3,11 +3,12 @@ title: "Disable or pause report and process subscriptions"
 description: Manage subscriptions, pause shared schedules, disable shared data sources, block report access, manage subscription permissions, & remove delivery extensions.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 06/19/2019
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: subscriptions
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "pausing schedules"
   - "subscriptions [Reporting Services], pausing"
@@ -170,9 +171,10 @@ One way to make a report unavailable is to temporarily remove the role assignmen
  After you remove a delivery extension, it's no longer available in the web portal or a SharePoint site. Removing a delivery extension can result in inactive subscriptions. Be sure to delete the subscriptions or configure them to use a different delivery extension before removing an extension.  
   
 ## Related content
- [Subscriptions and delivery &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
- [Reporting Services configuration files](../../reporting-services/report-server/reporting-services-configuration-files.md)   
- [Configure the web portal](../../reporting-services/report-server/configure-web-portal.md)   
- [Reporting Services report server &#40;native mode&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
- [The web portal of a report server (SSRS native mode)](../../reporting-services/web-portal-ssrs-native-mode.md)   
- [Securable items](../../reporting-services/security/securable-items.md) 
+
+- [Subscriptions and delivery &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)
+- [Reporting Services configuration files](../../reporting-services/report-server/reporting-services-configuration-files.md)
+- [Configure the web portal](../../reporting-services/report-server/configure-web-portal.md)
+- [Reporting Services report server &#40;native mode&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)
+- [The web portal of a report server (SSRS native mode)](../../reporting-services/web-portal-ssrs-native-mode.md)
+- [Securable items](../../reporting-services/security/securable-items.md)

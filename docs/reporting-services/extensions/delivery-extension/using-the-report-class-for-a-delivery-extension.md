@@ -3,11 +3,12 @@ title: "Use the Report class for a delivery extension"
 description: Find out how delivery extensions can use the Report class, which stores the report URL on the report server, the report name, and other properties.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/06/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: extensions
 ms.topic: reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "delivery extensions [Reporting Services], report information"
   - "Report class"
@@ -23,8 +24,6 @@ helpviewer_keywords:
   
 ## Related content
 
-- [Implement a delivery extension](../../../reporting-services/extensions/delivery-extension/implementing-a-delivery-extension.md)   
-- [Reporting Services extension library](../../../reporting-services/extensions/reporting-services-extension-library.md)   
-- [Use the RenderedOutputFile class for a delivery extension](../../../reporting-services/extensions/delivery-extension/using-the-renderedoutputfile-class-for-a-delivery-extension.md)  
-  
-  
+- [Implement a delivery extension](../../../reporting-services/extensions/delivery-extension/implementing-a-delivery-extension.md)
+- [Reporting Services extension library](../../../reporting-services/extensions/reporting-services-extension-library.md)
+- [Use the RenderedOutputFile class for a delivery extension](../../../reporting-services/extensions/delivery-extension/using-the-renderedoutputfile-class-for-a-delivery-extension.md)

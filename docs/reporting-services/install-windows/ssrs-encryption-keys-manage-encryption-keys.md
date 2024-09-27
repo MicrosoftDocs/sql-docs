@@ -3,11 +3,12 @@ title: "Configure and Manage Encryption Keys (Configuration Manager)"
 description: "Reporting Services uses encryption keys to secure credentials and connection information that is stored in a report server database."
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 12/04/2019
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-server
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "encryption keys [Reporting Services]"
   - "private keys [Reporting Services]"
@@ -52,5 +53,6 @@ helpviewer_keywords:
  [Add and Remove Encryption Keys for Scale-Out Deployment &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md)  
  Explains how to add and remove encryption keys to control which report servers are part of a scale-out deployment.  
   
-## See Also  
-[Report Server Configuration Manager (Native Mode)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)
+## Related content
+
+- [Report Server Configuration Manager (Native Mode)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)

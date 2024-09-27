@@ -3,11 +3,12 @@ title: "Validate Subscriptions"
 description: "Validate Subscriptions"
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/01/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: ui-reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 f1_keywords:
   - "sql13.rep.validate.subscriptions.f1"
 helpviewer_keywords:
@@ -30,7 +31,6 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016"
  **Validation Options**  
  Click to access the **Subscription Validation Options** dialog box, which allows you to specify whether to use row count validation or binary checksum validation.  
   
-## See Also  
- [Validate Replicated Data](../../relational-databases/replication/validate-data-at-the-subscriber.md)  
-  
-  
+## Related content
+
+- [Validate Replicated Data](../../relational-databases/replication/validate-data-at-the-subscriber.md)

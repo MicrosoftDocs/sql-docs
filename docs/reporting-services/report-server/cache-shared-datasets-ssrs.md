@@ -3,11 +3,12 @@ title: "Cache shared datasets"
 description: Learn about caching shared datasets in SQL Server Report Manager, which improves response time and provides consistent data for reports that use the dataset.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 05/14/2019
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-server
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 # Cache shared datasets (SSRS)
   Query results for a shared dataset can be copied to a cache to provide consistent data for multiple reports and to improve response time for the dataset query. Like reports, you can configure a shared dataset to be cached on first use or by specifying a schedule.  
@@ -88,6 +89,5 @@ If a user chooses report parameter values that differ from the default values sp
  Updates to cache refresh plans for shared datasets don't affect reports that are already being processed. Updating a cache refresh plan affects only future launches of reports that reference the shared dataset.  
   
 ## Related content
-  
- [Manage shared datasets](../../reporting-services/report-data/manage-shared-datasets.md)  
-  
+
+- [Manage shared datasets](../../reporting-services/report-data/manage-shared-datasets.md)

@@ -3,11 +3,12 @@ title: "Add interactive sort to a table or matrix in paginated reports"
 description: Enable users to change the sort order of rows and columns in tables and matrices in paginated reports using interactive sort buttons in Report Builder.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/01/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 f1_keywords:
   - "10121"
   - "sql13.rtp.rptdesigner.textboxproperties.intrctvsort.f1"
@@ -213,9 +214,9 @@ f1_keywords:
   
  :::image type="icon" source="/analysis-services/analysis-services/instances/media/uparrow16x16.gif"::: [Back to Top](#BackToTop)  
   
-## Related content 
- [Filter, group, and sort data &#40;Report Builder&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [Interactive sort &#40;Report Builder&#41;](../../reporting-services/report-design/interactive-sort-report-builder-and-ssrs.md)   
- [Sort data in a data region &#40;Report Builder&#41;](../../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md)   
- [Explore the flexibility of a Tablix data region &#40;Report Builder&#41;](../../reporting-services/report-design/exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md)  
-  
+## Related content
+
+- [Filter, group, and sort data &#40;Report Builder&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)
+- [Interactive sort &#40;Report Builder&#41;](../../reporting-services/report-design/interactive-sort-report-builder-and-ssrs.md)
+- [Sort data in a data region &#40;Report Builder&#41;](../../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md)
+- [Explore the flexibility of a Tablix data region &#40;Report Builder&#41;](../../reporting-services/report-design/exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md)

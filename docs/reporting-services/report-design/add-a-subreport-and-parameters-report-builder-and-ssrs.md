@@ -1,18 +1,18 @@
 ---
-title: Add a subreport and parameters to a Report Builder paginated report 
+title: Add a subreport and parameters to a Report Builder paginated report
 description: Learn how to add a subreport to a paginated report when you want to create a main report as a container for multiple related reports in Report Builder.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 07/16/2024
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: how-to
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 f1_keywords:
   - "10093"
   - "sql13.rtp.rptdesigner.subreportproperties.general.f1"
-
-#customer intent: As a Report Builder user, I want to learn how to create subreports so that I can create multiple related reports inside of a single paginated report. 
+# customer intent: As a Report Builder user, I want to learn how to create subreports so that I can create multiple related reports inside of a single paginated report.
 ---
 # Add a subreport and parameters to a Report Builder paginated report 
 
@@ -77,5 +77,4 @@ You can also add subreports to dynamic rows or columns in a table or matrix. Whe
 ## Related content
 
 - [Subreports in paginated reports (Report Builder)](../../reporting-services/report-design/subreports-report-builder-and-ssrs.md)
-- [Rendering behaviors in a paginated report (Report Builder)](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)  
-  
+- [Rendering behaviors in a paginated report (Report Builder)](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)

@@ -3,11 +3,12 @@ title: "Access the Reporting Services WMI provider"
 description: Learn how to access the Reporting Services WMI provider. The WMI provider exposes two WMI classes for administration of Native mode report server instances through scripting.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 11/02/2016
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: tools
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "WMI provider [Reporting Services]"
   - "programming [Reporting Services]"
@@ -73,7 +74,7 @@ PS C:\windows\system32> $rsconfig.GetAdminSiteUrl()
   
 ```  
   
-## Related content  
- [Reporting Services WMI provider library reference &#40;SSRS&#41;](../../reporting-services/wmi-provider-library-reference/reporting-services-wmi-provider-library-reference-ssrs.md)   
- [RsReportServer.config configuration file](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)  
-  
+## Related content
+
+- [Reporting Services WMI provider library reference &#40;SSRS&#41;](../../reporting-services/wmi-provider-library-reference/reporting-services-wmi-provider-library-reference-ssrs.md)
+- [RsReportServer.config configuration file](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)

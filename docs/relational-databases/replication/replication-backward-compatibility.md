@@ -4,11 +4,12 @@ description: Review these resources for backward compatibility in replication be
 author: "MashaMSFT"
 ms.author: "mathoma"
 ms.reviewer: randolphwest
-ms.date: 12/23/2022
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "transactional replication, backward compatibility"
   - "backward compatibility [SQL Server replication]"
@@ -37,16 +38,8 @@ The general rules are:
 
 [!INCLUDE[repl matrix](../../includes/replication-compat-matrix.md)]
 
-## Next steps
+## Related content
 
 - [Deprecated Features in SQL Server Replication](../../relational-databases/replication/deprecated-features-in-sql-server-replication.md)
-
-  Replication features that have been retained in newer versions of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] for backward compatibility, but, which will be removed in a future version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
-
 - [Breaking Changes in SQL Server Replication](../../relational-databases/replication/breaking-changes-in-sql-server-replication.md)
-
-  Replication feature changes that might require changes to applications.
-
 - [Upgrade Replicated Databases](../../database-engine/install-windows/upgrade-replicated-databases.md)
-
-  Steps and considerations when upgrading SQL Servers participating in a replication topology.

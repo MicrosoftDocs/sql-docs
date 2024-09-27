@@ -3,11 +3,12 @@ title: "Reporting Services Reports"
 description: Learn details about Reporting Services reports, including the benefits of the reports, how to create paginated reports, and how to view reports.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 06/19/2019
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: reports
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "Reporting Services, report creation"
 ---
@@ -173,8 +174,8 @@ You can create data alerts for published reports on a SharePoint site. Data aler
   
 - **Determine where you can find more information.** For example, for report design that includes expressions, the Report Designer tool provides more information about expression evaluation issues than the Report Builder tool. For report processing errors, the log files contain detailed information.  
   
-## See also  
- [Reporting Services Tools](../../reporting-services/tools/reporting-services-tools.md)   
- [Extensions &#40;SSRS&#41;](../../reporting-services/extensions-ssrs.md)   
- [Comparing native and SharePoint Reporting Services report servers](../../reporting-services/report-server-sharepoint/reporting-services-report-server.md)  
-  
+## Related content
+
+- [Reporting Services Tools](../../reporting-services/tools/reporting-services-tools.md)
+- [Extensions &#40;SSRS&#41;](../../reporting-services/extensions-ssrs.md)
+- [Comparing native and SharePoint Reporting Services report servers](../../reporting-services/report-server-sharepoint/reporting-services-report-server.md)

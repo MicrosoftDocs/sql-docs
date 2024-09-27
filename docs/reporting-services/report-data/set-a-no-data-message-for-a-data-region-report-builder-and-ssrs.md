@@ -3,11 +3,12 @@ title: "Set a No Data Message for a Data Region (Report Builder)"
 description: Learn how to set a no data message to show in a rendered report in place of a data region that has no data.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/03/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-data
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 # Set a No Data Message for a Data Region (Report Builder and SSRS)
   When you want to specify text to show in the rendered report in place of a data region that has no data, set the NoRowsMessage property for a table, matrix, or list data region, the NoDataMessage for a chart data region, and the NoDataText for the color scale for a map. At run time, the report processor runs the query for each dataset in a report and the dataset query may produce no result set. For a data region bound to an empty dataset, you can specify text to display instead of displaying an empty data region. You can also set the NoRowsMessage property for a subreport when no datasets in the subreport have data at run time.  
@@ -49,11 +50,9 @@ ms.custom: updatefrequency5
   
      Alternatively, from the drop-down list, click **Expression** to open the **Expression** dialog box and create an expression.  
   
-## See Also  
- [Subreports &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/subreports-report-builder-and-ssrs.md)   
- [Tables, Matrices, and Lists &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [Charts &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [Maps &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
- [Subreports &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/subreports-report-builder-and-ssrs.md)  
-  
-  
+## Related content
+
+- [Subreports &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/subreports-report-builder-and-ssrs.md)
+- [Tables, Matrices, and Lists &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)
+- [Charts &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)
+- [Maps &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)

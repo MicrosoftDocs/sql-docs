@@ -3,11 +3,12 @@ title: "Configure a native mode report server for local administration"
 description: Learn how to configure the report server for local administration, if you install a Reporting Services report server in certain environments.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 05/28/2019
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-server
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "UAC"
   - "installing Reporting Services"
@@ -170,6 +171,5 @@ Follow the steps in the [Web portal folder settings](#bkmk_configure_folder_sett
  Another and common configuration step related to [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] administration is to open port 80 in Windows Firewall to allow access to the report server computer. For instructions, see [Configure a firewall for report server access](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md).  
   
 ## Related content
- [Manage a Reporting Services native mode report server](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)  
-  
-  
+
+- [Manage a Reporting Services native mode report server](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)

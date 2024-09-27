@@ -3,11 +3,12 @@ title: "XML Connection Type"
 description: Learn about the XML connection type to connect to and retrieve data from XML documents, Web services, or XML that is embedded in the query.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/17/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-data
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 # XML Connection Type (SSRS)
   To include data from an XML data source in your report, you must have a dataset that is based on a report data source of type XML. This built-in data source type is based on the XML data extension. Use this data source type to connect to and retrieve data from XML documents, Web services, or XML that is embedded in the query.  
@@ -162,8 +163,8 @@ ms.custom: updatefrequency5
  [Data Sources Supported by Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
  Provides in-depth information about platform and version support for each data extension.  
   
-## See Also  
- [Report Parameters &#40;Report Builder and Report Designer&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
- [Filter, Group, and Sort Data &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [Expressions &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
-  
+## Related content
+
+- [Report Parameters &#40;Report Builder and Report Designer&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)
+- [Filter, Group, and Sort Data &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)
+- [Expressions &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)

@@ -3,11 +3,12 @@ title: "Rendering data in a paginated report"
 description: Find out how to use data renderers in a paginated report to import data into a database or Excel, to XSLT transformations, or data exchange/EDI in Report Builder.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/07/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 # Rendering data in a paginated report (Report Builder)
 
@@ -40,11 +41,11 @@ ms.custom: updatefrequency5
   
  The XML file with report data export option saves a report as an XML file. The XML schema for the report is specific to the report. The report layout information is not saved by the XML export option. The XML generated using this option can be imported into a database, used as an XML data message, or sent to a custom application. For more information about rendering your report in the XML file type, see [Exporting to XML &#40;Report Builder and SSRS&#41;](../../reporting-services/report-builder/exporting-to-xml-report-builder-and-ssrs.md).  
   
-## See Also  
- [Pagination in Reporting Services &#40;Report Builder  and SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [Rendering Behaviors &#40;Report Builder  and SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [Interactive Functionality for Different Report Rendering Extensions &#40;Report Builder and SSRS&#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
- [Rendering Report Items &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
- [Tables, Matrices, and Lists &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [Reporting Services Device Information Settings](/previous-versions/sql/sql-server-2008/ms155397(v=sql.100))  
-  
+## Related content
+
+- [Pagination in Reporting Services &#40;Report Builder  and SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)
+- [Rendering Behaviors &#40;Report Builder  and SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)
+- [Interactive Functionality for Different Report Rendering Extensions &#40;Report Builder and SSRS&#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)
+- [Rendering Report Items &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)
+- [Tables, Matrices, and Lists &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)
+- [Reporting Services Device Information Settings](/previous-versions/sql/sql-server-2008/ms155397(v=sql.100))

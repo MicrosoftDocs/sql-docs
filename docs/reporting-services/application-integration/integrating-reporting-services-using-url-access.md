@@ -3,11 +3,12 @@ title: "Integrate using URL Access"
 description: A URL request enables you to access a specific report server and the reports, resources, and other items in the report server database.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/14/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: application-integration
 ms.topic: reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "URL access [Reporting Services], about URL access"
   - "integrating reports [Reporting Services]"
@@ -27,8 +28,7 @@ helpviewer_keywords:
  [Using URL Access in a Windows Application](../../reporting-services/application-integration/integrating-reporting-services-using-url-access-windows-application.md)  
  Describes how to use URL access to integrate [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] into a [!INCLUDE[msCoName](../../includes/msconame-md.md)] Win32 environment.  
   
-## Related content  
- [Integrating Reporting Services into Applications](../../reporting-services/application-integration/integrating-reporting-services-into-applications.md)   
- [URL Access &#40;SSRS&#41;](../../reporting-services/url-access-ssrs.md)  
-  
-  
+## Related content
+
+- [Integrating Reporting Services into Applications](../../reporting-services/application-integration/integrating-reporting-services-into-applications.md)
+- [URL Access &#40;SSRS&#41;](../../reporting-services/url-access-ssrs.md)

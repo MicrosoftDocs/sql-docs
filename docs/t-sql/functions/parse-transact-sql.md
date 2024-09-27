@@ -145,7 +145,7 @@ Result
 ### B. PARSE with currency symbol  
   
 ```sql  
-SELECT PARSE('&euro;345,98' AS money USING 'de-DE') AS Result;  
+SELECT PARSE('€345,98' AS money USING 'de-DE') AS Result;  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  

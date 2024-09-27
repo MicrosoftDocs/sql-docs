@@ -3,11 +3,12 @@ title: "Configure Data Source Properties for a Paginated Report - SSRS"
 description: Learn to configure data source properties in Reporting Services for a paginated report. Also set the properties to vary the data source connection information.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 05/24/2018
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-data
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "data sources [Reporting Services], embedded"
 ---
@@ -48,7 +49,7 @@ helpviewer_keywords:
   
  For more information about configuring credentials, see [Specify Credential and Connection Information for Report Data Sources](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md). For more information about the unattended execution account, see [Configure the Unattended Execution Account &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
   
-## See Also  
-[Create, Modify, and Delete Shared Data Sources &#40;SSRS&#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)   
-[Manage Report Data Sources](../../reporting-services/report-data/manage-report-data-sources.md)
-  
+## Related content
+
+- [Create, Modify, and Delete Shared Data Sources &#40;SSRS&#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)
+- [Manage Report Data Sources](../../reporting-services/report-data/manage-report-data-sources.md)

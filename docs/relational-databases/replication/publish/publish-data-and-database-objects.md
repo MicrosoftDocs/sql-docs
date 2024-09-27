@@ -3,11 +3,12 @@ title: "Publish Data and Database Objects"
 description: This article summarizes the tables and other database objects you can publish for replication in SQL Server.
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/14/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: how-to
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "user-defined types [SQL Server replication]"
   - "articles [SQL Server replication], dropping"
@@ -226,12 +227,11 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
   
 -   Transactional replication and unfiltered merge replication support publishing a table in multiple publications and then subscribing within a single table in the subscription database (commonly referred to as a roll up scenario). Roll up is often used for aggregating subsets of data from multiple locations in one table at a central Subscriber. Filtered merge publications do not support the central Subscriber scenario. For merge replication, roll up is typically implemented through a single publication with parameterized row filters. For more information, see [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
-## See Also  
- [Add Articles to and Drop Articles from Existing Publications](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)   
- [Configure Distribution](../../../relational-databases/replication/configure-distribution.md)   
- [Initialize a Subscription](../../../relational-databases/replication/initialize-a-subscription.md)   
- [Scripting Replication](../../../relational-databases/replication/scripting-replication.md)   
- [Secure the Publisher](../../../relational-databases/replication/security/secure-the-publisher.md)   
- [Subscribe to Publications](../../../relational-databases/replication/subscribe-to-publications.md)  
-  
-  
+## Related content
+
+- [Add Articles to and Drop Articles from Existing Publications](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)
+- [Configure Distribution](../../../relational-databases/replication/configure-distribution.md)
+- [Initialize a Subscription](../../../relational-databases/replication/initialize-a-subscription.md)
+- [Scripting Replication](../../../relational-databases/replication/scripting-replication.md)
+- [Secure the Publisher](../../../relational-databases/replication/security/secure-the-publisher.md)
+- [Subscribe to Publications](../../../relational-databases/replication/subscribe-to-publications.md)

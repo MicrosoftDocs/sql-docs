@@ -3,11 +3,12 @@ title: "Subscriber Types"
 description: "Subscriber Types"
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/01/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: ui-reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 f1_keywords:
   - "sql13.rep.newpubwizard.subscribertypes.f1"
 monikerRange: "=azuresqldb-current||>=sql-server-2016"
@@ -31,9 +32,8 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016"
   
  If this option is selected, the Web synchronization option is enabled for the publication. For more information about Web synchronization, see [Web Synchronization for Merge Replication](../../relational-databases/replication/web-synchronization-for-merge-replication.md).  
   
-## See Also  
- [Publish Data and Database Objects](../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
- [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
- [View and Modify Distributor and Publisher Properties](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
-  
-  
+## Related content
+
+- [Publish Data and Database Objects](../../relational-databases/replication/publish/publish-data-and-database-objects.md)
+- [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)
+- [View and Modify Distributor and Publisher Properties](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)

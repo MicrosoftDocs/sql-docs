@@ -3,11 +3,12 @@ title: "New Publication Wizard"
 description: "New Publication Wizard"
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/01/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 f1_keywords:
   - "sql13.swb.dbpublishin"
   - "sql13.swb.dbpublishingwizard.choosetables.f1"
@@ -69,9 +70,7 @@ helpviewer_keywords:
   
 -   [Snapshot Agent &#40;New Publication Wizard&#41;](../../relational-databases/replication/snapshot-agent-new-publication-wizard.md)  
   
-## See Also  
- [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
- [Publish Data and Database Objects](../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
+## Related content
 
-  
-  
+- [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)
+- [Publish Data and Database Objects](../../relational-databases/replication/publish/publish-data-and-database-objects.md)

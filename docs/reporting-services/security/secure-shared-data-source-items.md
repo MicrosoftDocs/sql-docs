@@ -3,11 +3,12 @@ title: "Secure shared data source items"
 description: "Secure shared data source items"
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/01/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: security
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "shared data sources [Reporting Services]"
   - "data sources [Reporting Services], shared"
@@ -31,11 +32,10 @@ helpviewer_keywords:
 |Manage data sources|View properties that specify the name, description, and connection information. This task is also used to display a shared data source item in the folder hierarchy. If you choose this task, you can omit the "View data sources" task.|  
 |Set security on items|Create and modify role assignments that control access to the shared data source. This task must be used with either "View data source" or "Manage data sources" tasks. If it isn't, it has no effect because the user can't select the item.|  
   
-## Related content  
- [Manage report data sources](../../reporting-services/report-data/manage-report-data-sources.md)   
- [Secure folders](../../reporting-services/security/secure-folders.md)   
- [Secure reports and resources](../../reporting-services/security/secure-reports-and-resources.md)   
- [Grant permissions on a native mode report server](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
- [Store credentials in a Reporting Services data source](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md)  
-  
-  
+## Related content
+
+- [Manage report data sources](../../reporting-services/report-data/manage-report-data-sources.md)
+- [Secure folders](../../reporting-services/security/secure-folders.md)
+- [Secure reports and resources](../../reporting-services/security/secure-reports-and-resources.md)
+- [Grant permissions on a native mode report server](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)
+- [Store credentials in a Reporting Services data source](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md)

@@ -3,11 +3,12 @@ title: "SharePoint site and list permission reference for report server items"
 description: "SharePoint site and list permission reference for report server items"
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/07/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: security
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "permissions [Reporting Services], SharePoint integrated mode"
   - "SharePoint integration [Reporting Services], permissions"
@@ -71,8 +72,7 @@ helpviewer_keywords:
 |Use Remote Interfaces|Use SOAP, Web DAV, or SharePoint Designer interfaces to access the Web site.|X|X|X|Used to call the URL proxy endpoint to the report server.|  
 |Open|Open a Web site, list, or folder to access items inside that container.|X|X|X|Read schedules and item properties.|  
   
-## Related content 
- [Compare roles and tasks in Reporting Services to SharePoint groups and permissions](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)   
- [Grant permissions on report server items on a SharePoint site](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)  
-  
-  
+## Related content
+
+- [Compare roles and tasks in Reporting Services to SharePoint groups and permissions](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)
+- [Grant permissions on report server items on a SharePoint site](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)

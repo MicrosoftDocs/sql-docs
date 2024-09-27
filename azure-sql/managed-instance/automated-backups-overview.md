@@ -50,7 +50,7 @@ The frequency of transaction log backups depends on the compute size and the amo
 
 ### Backup storage redundancy
 
-By default, Azure SQL Managed Instance stores data in geo-redundant [storage blobs](/azure/storage/common/storage-redundancy) that are replicated to a [paired region](/azure/availability-zones/cross-region-replication-azure). Geo-redundancy helps protect against outages that affect backup storage in the primary region. It also allows you to restore your instance to a different region in the event of a disaster.
+By default, Azure SQL Managed Instance stores backups in geo-redundant [storage blobs](/azure/storage/common/storage-redundancy) that are replicated to a [paired region](/azure/availability-zones/cross-region-replication-azure). Geo-redundancy helps protect against outages that affect backup storage in the primary region. It also allows you to restore your instance to a different region in the event of a disaster.
 
 The storage redundancy mechanism stores multiple copies of your data so that it's protected from planned and unplanned events. Those events might include transient hardware failures, network or power outages, or massive natural disasters.
 

@@ -3,11 +3,12 @@ title: "Publish execution of stored procedure (Transactional)"
 description: Learn how to publish the execution of stored procedures using SQL Server Management Studio.
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/07/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: how-to
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "publishing [SQL Server replication], stored procedure execution"
   - "stored procedures [SQL Server replication], publishing"
@@ -37,7 +38,6 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
   
 5.  If you are in the **Publication Properties - \<Publication>** dialog box, click **OK** to save and close the dialog box.  
   
-## See Also  
- [Publishing Stored Procedure Execution in Transactional Replication](../../../relational-databases/replication/transactional/publishing-stored-procedure-execution-in-transactional-replication.md)  
-  
-  
+## Related content
+
+- [Publishing Stored Procedure Execution in Transactional Replication](../../../relational-databases/replication/transactional/publishing-stored-procedure-execution-in-transactional-replication.md)

@@ -3,11 +3,12 @@ title: "Initialize subscription from backup (Transactional)"
 description: Learn how to use replication stored procedures to initialize a Transactional publication from a backup in SQL Server.
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/17/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: how-to
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "manual subscription initialization [SQL Server replication]"
   - "subscriptions [SQL Server replication], initializing"
@@ -62,8 +63,7 @@ dev_langs:
   
 7.  (Optional) Start the Distribution Agent. For more information, see [Synchronize a Pull Subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md) or [Synchronize a Push Subscription](../../relational-databases/replication/synchronize-a-push-subscription.md).  
   
-## See Also  
- [Copy Databases with Backup and Restore](../../relational-databases/databases/copy-databases-with-backup-and-restore.md)   
- [Back Up and Restore of SQL Server Databases](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)  
-  
-  
+## Related content
+
+- [Copy Databases with Backup and Restore](../../relational-databases/databases/copy-databases-with-backup-and-restore.md)
+- [Back Up and Restore of SQL Server Databases](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)

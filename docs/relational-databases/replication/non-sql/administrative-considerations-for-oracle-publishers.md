@@ -3,11 +3,12 @@ title: "Administrative considerations for Oracle Publishers"
 description: Considerations for the administration of Oracle Publishers publishing changes to SQL Server subscribers.
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/01/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "Oracle publishing [SQL Server replication], administrative considerations"
   - "administering replication, Oracle publishing"
@@ -55,9 +56,8 @@ helpviewer_keywords:
   
  For information about dropping and reconfiguring the Publisher, see the section "Changes are made that require reconfiguration of the Publisher" in the topic [Troubleshooting Oracle Publishers](../../../relational-databases/replication/non-sql/troubleshooting-oracle-publishers.md).  
   
-## See Also  
- [Configure an Oracle Publisher](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)   
- [Design Considerations and Limitations for Oracle Publishers](../../../relational-databases/replication/non-sql/design-considerations-and-limitations-for-oracle-publishers.md)   
- [Oracle Publishing Overview](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)  
-  
-  
+## Related content
+
+- [Configure an Oracle Publisher](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)
+- [Design Considerations and Limitations for Oracle Publishers](../../../relational-databases/replication/non-sql/design-considerations-and-limitations-for-oracle-publishers.md)
+- [Oracle Publishing Overview](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)

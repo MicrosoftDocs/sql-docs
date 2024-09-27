@@ -3,11 +3,12 @@ title: "All Subscriptions (Transactional - SSMS)"
 description: Describes the 'All Subscriptions' tab for the selected Transactional Publication in SQL Server Management Studio.
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/14/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: ui-reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 f1_keywords:
   - "sql13.rep.monitor.publicationinfo.allsubscriptions.tran.f1"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
@@ -78,9 +79,8 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
  **Latency**  
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] and later versions only. The average amount of time that elapses between a transaction being committed at the Publisher and the corresponding transaction being committed at the Subscriber. The latency displayed is based on the most recent measurements taken by Replication Monitor. For more information about measuring latency, see [Measure Latency and Validate Connections for Transactional Replication](../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md).  
   
-## See Also  
- [Start the Replication Monitor](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
- [View Information and Perform Tasks using Replication Monitor](../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)   
- [Monitoring Replication](../../relational-databases/replication/monitor/monitoring-replication.md)  
-  
-  
+## Related content
+
+- [Start the Replication Monitor](../../relational-databases/replication/monitor/start-the-replication-monitor.md)
+- [View Information and Perform Tasks using Replication Monitor](../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)
+- [Monitoring Replication](../../relational-databases/replication/monitor/monitoring-replication.md)

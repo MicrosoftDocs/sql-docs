@@ -44,9 +44,9 @@ To complete this quickstart, you need:
 
 - PHP-related software installed for your operating system:
 
-  - **macOS**, install PHP, the ODBC driver, then install the PHP Driver for SQL Server. See the related content section for more details.
+  - **macOS**, install PHP, the ODBC driver, then install the PHP Driver for SQL Server. See [Step 1, 2, and 3](/sql/connect/php/installation-tutorial-linux-mac).
 
-  - **Linux**, install PHP, the ODBC driver, then install the PHP Driver for SQL Server. Follow the steps to install PHP, the ODBC driver, and the PHP Driver for SQL Server.
+  - **Linux**, install PHP, the ODBC driver, then install the PHP Driver for SQL Server. See [Step 1, 2, and 3](/sql/connect/php/installation-tutorial-linux-mac).
 
 ## Get server connection information
 

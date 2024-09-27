@@ -3,16 +3,15 @@ title: "Install and configure SQL Server Reporting Services"
 description: "Install and configure SQL Server Reporting Services (SSRS) components for storing report items, rendering reports, and processing other report services."
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 07/08/2024
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-server
 ms.topic: install-set-up-deploy
 ms.custom:
   - intro-installation
   - updatefrequency5
+# customer intent: As a SQL Server user, I want to install and configure SQL Server Reporting Services so that I can better leverage data and generate robust reports.
 monikerRange: ">= sql-server-2016"
-#customer intent: As a SQL Server user, I want to install and configure SQL Server Reporting Services so that I can better leverage data and generate robust reports.
-
 ---
 # Install and configure SQL Server Reporting Services
 

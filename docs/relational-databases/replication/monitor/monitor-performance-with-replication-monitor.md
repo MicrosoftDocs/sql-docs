@@ -3,11 +3,12 @@ title: "Monitor Performance with Replication Monitor"
 description: "Monitor Performance with Replication Monitor"
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/14/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: how-to
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "monitoring performance [SQL Server replication], Replication Monitor"
   - "Log Reader Agent, monitoring"
@@ -90,8 +91,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ## View Transactions and Delivery Time for Transactional Replication  
  For transactional replication, Replication Monitor displays information about the number of transactions in the distribution database that have not yet been distributed to a Subscriber and the estimated time for distributing these transactions. For more information, see [View Information and Perform Tasks using Replication Monitor](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
-## See Also  
- [Monitoring Replication](../../../relational-databases/replication/monitor/monitoring-replication.md)   
- [Set Thresholds and Warnings in Replication Monitor](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)  
-  
-  
+## Related content
+
+- [Monitoring Replication](../../../relational-databases/replication/monitor/monitoring-replication.md)
+- [Set Thresholds and Warnings in Replication Monitor](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)

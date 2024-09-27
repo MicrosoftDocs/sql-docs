@@ -3,11 +3,12 @@ title: "Monitoring Replication with Performance Monitor"
 description: "Monitoring Replication with Performance Monitor"
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/14/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "monitoring performance [SQL Server replication], Performance Monitor"
   - "Performance Monitor [SQL Server], replication"
@@ -39,7 +40,6 @@ For more information, see [Monitor Resource Usage &#40;Performance Monitor&#41;]
 |Merge Agent|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: Replication Merge|Downloaded Changes/sec|The number of rows per second replicated from the Publisher to the Subscriber.|  
 |Merge Agent|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: Replication Merge|Uploaded Changes/sec|The number of rows per second replicated from the Subscriber to the Publisher.|  
   
-## See Also  
- [Monitoring &#40;Replication&#41;](../../../relational-databases/replication/monitor/monitoring-replication.md)  
-  
-  
+## Related content
+
+- [Monitoring &#40;Replication&#41;](../../../relational-databases/replication/monitor/monitoring-replication.md)

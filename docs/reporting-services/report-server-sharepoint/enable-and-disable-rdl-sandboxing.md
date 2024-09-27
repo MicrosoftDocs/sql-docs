@@ -3,11 +3,12 @@ title: "Enable and disable RDL sandboxing for Reporting Services in SharePoint i
 description: With RDL sandboxing, you can detect and restrict the usage of types of resources by tenants where multiple tenants use a single web farm of report servers.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 09/25/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-server-sharepoint
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 # Enable and disable RDL sandboxing for Reporting Services in SharePoint integrated mode
 
@@ -171,7 +172,6 @@ You can modify the RDL Sandboxing feature to help manage the resources that are 
   
 ## Related content
 
- [RsReportServer.config configuration file](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
- [Report server service trace log](../../reporting-services/report-server/report-server-service-trace-log.md)  
-
-More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)
+- [RsReportServer.config configuration file](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)
+- [Report server service trace log](../../reporting-services/report-server/report-server-service-trace-log.md)
+- [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

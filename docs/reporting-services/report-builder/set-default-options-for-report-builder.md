@@ -3,11 +3,12 @@ title: "Set default options for Report Builder"
 description: This article describes useful defaults that you can set in Report Builder. These defaults make authoring a report easier and faster.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/01/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-builder
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 f1_keywords:
   - "10427"
 ---
@@ -45,4 +46,4 @@ Clear the current lists of recent sites and servers, shared datasets, shared dat
 
 ## Related content
 
-[Start Report Builder](../../reporting-services/report-builder/start-report-builder.md)
+- [Start Report Builder](../../reporting-services/report-builder/start-report-builder.md)

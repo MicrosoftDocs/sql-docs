@@ -3,11 +3,12 @@ title: "Find the product key for SQL Server Reporting Services"
 description: "Learn how to find the  product key for SQL Server Reporting Services (SSRS) 2017 and 2019 so you can install your server in a production environment."
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 02/07/2024
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-server
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 monikerRange: "=sql-server-2017||=sql-server-ver15"
 ---
 # Find the product key for SQL Server Reporting Services
@@ -39,4 +40,4 @@ If your volume licensing has moved to the Microsoft 365 Admin Center, you can fi
 ## Related content
 
 - [Install SQL Server Reporting Services](install-reporting-services.md)
-- More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231).
+- [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

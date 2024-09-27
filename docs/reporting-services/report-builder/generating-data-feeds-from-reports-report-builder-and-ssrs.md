@@ -3,11 +3,12 @@ title: "Generate data feeds from reports (Report Builder)"
 description: The Reporting Services Atom rendering extension generates a service document of the data feeds in a paginated report and feeds from the data regions in it.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 11/21/2022
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-builder
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 # Generate data feeds from reports (Report Builder)
 
@@ -186,5 +187,4 @@ You can change some default settings for this renderer, including the encoding s
 
 - [Export to a CSV file](../../reporting-services/report-builder/exporting-to-a-csv-file-report-builder-and-ssrs.md)
 - [Export reports](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)
-
-More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231).
+- [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

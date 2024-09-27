@@ -3,11 +3,12 @@ title: "Accessing the WMI Provider programmatically"
 description: Learn what a WMI provider is, how to find a report server instance, and how to access the WMI Provider programmatically.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 11/02/2016
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: reporting-services
 ms.topic: reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 # Access the WMI Provider programmatically
 
@@ -119,7 +120,5 @@ class Class1
   
 ## Related content
 
-- [Access the Reporting Services WMI provider](../reporting-services/tools/access-the-reporting-services-wmi-provider.md)   
-- [RsReportServer.config configuration file](../reporting-services/report-server/rsreportserver-config-configuration-file.md)  
-  
-  
+- [Access the Reporting Services WMI provider](../reporting-services/tools/access-the-reporting-services-wmi-provider.md)
+- [RsReportServer.config configuration file](../reporting-services/report-server/rsreportserver-config-configuration-file.md)

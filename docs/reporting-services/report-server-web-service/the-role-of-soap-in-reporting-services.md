@@ -3,11 +3,12 @@ title: "The Role of SOAP in Reporting Services"
 description: The Report Server Web service uses SOAP over HTTP. Report Manager provides an interface to the report server database, which stores reports and related content.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/14/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-server-web-service
 ms.topic: reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "Web service [Reporting Services], SOAP"
   - "SOAP [Reporting Services], role in Reporting Services"
@@ -51,9 +52,9 @@ public void DeleteItem(string item);
   
  The <xref:ReportService2010.ReportingService2010.DeleteItem%2A> method has no return value, so an empty response is returned.  
   
-## Related content  
- [Accessing the SOAP API](../../reporting-services/report-server-web-service/accessing-the-soap-api.md)   
- [Report Manager  &#40;SSRS Native Mode&#41;](../web-portal-ssrs-native-mode.md)   
- [Reporting Services Report Server](../../reporting-services/report-server-sharepoint/reporting-services-report-server.md)   
- [Report Server Web Service](../../reporting-services/report-server-web-service/report-server-web-service.md)  
-  
+## Related content
+
+- [Accessing the SOAP API](../../reporting-services/report-server-web-service/accessing-the-soap-api.md)
+- [Report Manager  &#40;SSRS Native Mode&#41;](../web-portal-ssrs-native-mode.md)
+- [Reporting Services Report Server](../../reporting-services/report-server-sharepoint/reporting-services-report-server.md)
+- [Report Server Web Service](../../reporting-services/report-server-web-service/report-server-web-service.md)

@@ -3,11 +3,12 @@ title: "Troubleshoot Reporting Services report rendering issues"
 description: In this article, diagnose and fix display problems when the compiled report and layout data is sent to a report renderer in SQL Server Reporting Services.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 02/27/2016
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: troubleshooting
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 # Troubleshoot Reporting Services report rendering issues
 After the report data and layout information are combined, the compiled report is sent to a report renderer. For example, when you preview a report locally, you use the HTML renderer to view the compiled report. Use this article to help troubleshoot issues specific to report rendering.   
@@ -56,13 +57,10 @@ When the data source is configured for a Microsoft SharePoint List connection ty
   
 **This issue applies to:** Browsers configured to prompt for credentials.  
   
-## Related content 
-[Errors and events (Reporting Services)](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
-[Troubleshoot data retrieval issues with Reporting Services reports](../../reporting-services/troubleshooting/troubleshoot-data-retrieval-issues-with-reporting-services-reports.md)  
-[Troubleshoot Reporting Services subscriptions and delivery](../../reporting-services/troubleshooting/troubleshoot-reporting-services-subscriptions-and-delivery.md)  
-  
-  
-  
-  
+## Related content
 
-[!INCLUDE[feedback-qa-stackoverflow-md](../../includes/feedback-qa-stackoverflow-md.md)]
+- [Errors and events (Reporting Services)](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)
+- [Troubleshoot data retrieval issues with Reporting Services reports](../../reporting-services/troubleshooting/troubleshoot-data-retrieval-issues-with-reporting-services-reports.md)
+- [Troubleshoot Reporting Services subscriptions and delivery](../../reporting-services/troubleshooting/troubleshoot-reporting-services-subscriptions-and-delivery.md)
+
+[!INCLUDE [feedback-qa-stackoverflow-md](../../includes/feedback-qa-stackoverflow-md.md)]

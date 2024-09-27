@@ -3,11 +3,12 @@ title: "MSReportServer_Instance class"
 description: "MSReportServer_Instance class"
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/01/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: wmi-provider-library-reference
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "WMI provider [Reporting Services], MSReportServer_Instance class"
   - "MSReportServer_Instance class"
@@ -39,6 +40,5 @@ public class MSReportServer_Instance
  **Platform:** [!INCLUDE[ssRSWMIPlatform](../../includes/ssrswmiplatform-md.md)]  
   
 ## Related content
- [MSReportServer_Instance members](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-members.md)  
-  
-  
+
+- [MSReportServer_Instance members](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-members.md)

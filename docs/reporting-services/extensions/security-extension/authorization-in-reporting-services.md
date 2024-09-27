@@ -3,11 +3,12 @@ title: "Authorization in Reporting Services"
 description: Find out about the authorization process in Reporting Services. Learn about developing security extensions by using the IAuthorizationExtension2 interface.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/06/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: extensions
 ms.topic: reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "authorization [Reporting Services]"
 ---

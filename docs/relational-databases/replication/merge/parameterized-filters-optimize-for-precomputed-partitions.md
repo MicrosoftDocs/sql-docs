@@ -3,11 +3,12 @@ title: "Optimize parameterized filters with precomputed partitions (Merge)"
 description: Learn how to use precomputed partitions to optimize the performance of parameterized filters for Merge Publications.
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/14/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: how-to
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "precomputed partitions [SQL Server replication]"
   - "merge replication precomputed partitions [SQL Server replication]"
@@ -59,7 +60,6 @@ helpviewer_keywords:
 ## Performance of Precomputed Partitions  
  There is a small performance cost with precomputed partitions when changes are uploaded from the Subscriber to the Publisher, but the bulk of merge processing time is spent evaluating partitions and downloading changes from the Publisher to the Subscriber, so the net gain can still be significant. The performance benefit will vary, depending on the number of Subscribers synchronizing concurrently and the number of updates per synchronization that move rows from one partition to another.  
   
-## See Also  
- [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)  
-  
-  
+## Related content
+
+- [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)

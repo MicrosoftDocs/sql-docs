@@ -3,11 +3,12 @@ title: "Modify snapshot initialization options"
 description: Modify various Replication snapshot initialization options such as the snapshot format, and the snapshot folder location in SQL Server Management Studio.
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "11/20/2018"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: ui-reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "snapshot replication [SQL Server], options"
   - "snapshots [SQL Server replication], options"
@@ -130,9 +131,8 @@ You can specify scripts to execute at the Subscriber before or after the snapsho
   
 
 
-## See Also  
- [Initialize a Subscription with a Snapshot](../../relational-databases/replication/initialize-a-subscription-with-a-snapshot.md)   
- [Transfer snapshot through FTP](../../relational-databases/replication/publish/deliver-a-snapshot-through-ftp.md)   
- [Configure Snapshot Properties &#40;Replication Transact-SQL Programming&#41;](../../relational-databases/replication/publish/configure-snapshot-properties-replication-transact-sql-programming.md)     
-  
-  
+## Related content
+
+- [Initialize a Subscription with a Snapshot](../../relational-databases/replication/initialize-a-subscription-with-a-snapshot.md)
+- [Transfer snapshot through FTP](../../relational-databases/replication/publish/deliver-a-snapshot-through-ftp.md)
+- [Configure Snapshot Properties &#40;Replication Transact-SQL Programming&#41;](../../relational-databases/replication/publish/configure-snapshot-properties-replication-transact-sql-programming.md)

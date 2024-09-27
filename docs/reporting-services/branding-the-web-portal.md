@@ -3,12 +3,13 @@ title: "Brand the web portal"
 description: Learn how to brand your SQL Server Reporting Services (SSRS) or Power BI Report Server web portal's appearance to your business by using a brand package.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 07/11/2024
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: reporting-services
 ms.topic: how-to
-ms.custom: updatefrequency5
-#customer intent: As a SQL Server system administrator, I want to customize the appearance of my SQL Server Reporting Services or Power BI Report Server web portal to align with my organization's branding. 
+ms.custom:
+  - updatefrequency5
+# customer intent: As a SQL Server system administrator, I want to customize the appearance of my SQL Server Reporting Services or Power BI Report Server web portal to align with my organization's branding.
 ---
 
 # Brand the web portal

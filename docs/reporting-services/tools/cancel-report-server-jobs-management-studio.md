@@ -3,11 +3,12 @@ title: "Cancel report server jobs (Management Studio)"
 description: Learn how to use the options in the Cancel Report Server Jobs dialog box to view or cancel in-progress reports.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/01/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: tools
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 f1_keywords:
   - "sql13.swb.reportserver.cancelreportserverjobs.f1"
 ---
@@ -46,9 +47,8 @@ f1_keywords:
  **OK**  
  Cancel a single job or multiple jobs. The jobs are canceled immediately and can't be resumed. If you mistakenly cancel a job, you must request the report or subscription again to start a new job.  
   
-## Related content 
- [Report server in Management Studio F1 hHelp](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
- [Connect to a report server in Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
- [Manage a running process](../../reporting-services/subscriptions/manage-a-running-process.md)  
-  
-  
+## Related content
+
+- [Report server in Management Studio F1 hHelp](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)
+- [Connect to a report server in Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)
+- [Manage a running process](../../reporting-services/subscriptions/manage-a-running-process.md)

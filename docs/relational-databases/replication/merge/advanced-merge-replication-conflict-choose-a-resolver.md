@@ -3,11 +3,12 @@ title: "Choose a Resolver"
 description: "Advanced Merge Replication Conflict - Choose a Resolver"
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/01/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: how-to
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "default conflict resolver"
   - "articles [SQL Server replication], conflict resolution"
@@ -34,9 +35,8 @@ helpviewer_keywords:
 |Flag multiple changes to any value in a logical record as a conflict.|Use the default resolver with logical record-level tracking (the logical records feature does not support custom resolvers or business logic handlers).|  
 |Conflict outcome data needs to be different from original conflict data.|Use an article resolver that calculates new values.|  
   
-## See Also  
- [Detecting and Resolving Conflicts in Logical Records](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-resolving-in-logical-record.md)   
- [Advanced Merge Replication Conflict Detection and Resolution](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
- [Republish Data](../../../relational-databases/replication/republish-data.md)  
-  
-  
+## Related content
+
+- [Detecting and Resolving Conflicts in Logical Records](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-resolving-in-logical-record.md)
+- [Advanced Merge Replication Conflict Detection and Resolution](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)
+- [Republish Data](../../../relational-databases/replication/republish-data.md)

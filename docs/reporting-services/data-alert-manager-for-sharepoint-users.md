@@ -3,11 +3,12 @@ title: "Data Alert Manager for SharePoint users"
 description: Learn how Reporting Services provides Data Alert Manager for SharePoint information workers to manage the data alerts.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 07/02/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: reporting-services
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "managing, alerts"
   - "managing, data alerts"
@@ -79,8 +80,7 @@ When a SharePoint site is enabled for data alerts, two SharePoint pages, MyDataA
 
 ## Related content
 
-- [Data Alert Designer](../reporting-services/data-alert-designer.md)   
-- [Create a data alert in Data Alert Designer](../reporting-services/create-a-data-alert-in-data-alert-designer.md)   
-- [Reporting Services data alerts](../reporting-services/reporting-services-data-alerts.md)  
-
-More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)
+- [Data Alert Designer](../reporting-services/data-alert-designer.md)
+- [Create a data alert in Data Alert Designer](../reporting-services/create-a-data-alert-in-data-alert-designer.md)
+- [Reporting Services data alerts](../reporting-services/reporting-services-data-alerts.md)
+- [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

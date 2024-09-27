@@ -3,11 +3,12 @@ title: "URL Reservation Syntax  (Configuration Manager)"
 description: "URL Reservation Syntax  (Report Server Configuration Manager)"
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 10/05/2022
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-server
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "URL reservations"
 ---
@@ -40,8 +41,7 @@ helpviewer_keywords:
 | |*Reports*[_InstanceName]* | This value is required. It identifies the application.|
 | |\<custom>|Specify only one virtual directory for each application instance. To create multiple URLs for the same application in the same instance, create multiple versions of the **UrlString**. To create unique virtual directory names for multiple application instances, consider including the instance name in the virtual directory name, using the underscore character (_) to append the instance name. *InstanceName* is optional, but recommended if you have multiple instances on the same computer. For more information about how to set URL reservations for named instances, see [URL Reservations for Multi-Instance Report Server Deployments  &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/url-reservations-for-multi-instance-report-server-deployments.md).<br /><br /> The value for virtual directory is not case-sensitive. You can use any string as long as it does not include URL separator characters or URL encoding.|  
   
-## See Also  
- [Configure Report Server URLs  &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
- [Configure a URL  &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)  
-  
-  
+## Related content
+
+- [Configure Report Server URLs  &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)
+- [Configure a URL  &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)

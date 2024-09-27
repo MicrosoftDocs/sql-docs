@@ -3,11 +3,12 @@ title: "Format paginated report items"
 description: Discover how formatting enhances readability and makes your paginated reports more attractive in Report Builder.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/01/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 f1_keywords:
   - "10444"
 ---
@@ -48,7 +49,6 @@ f1_keywords:
  [Set the Locale for a Report or Text Box &#40;Reporting Services&#41;](../../reporting-services/report-design/set-the-locale-for-a-report-or-text-box-reporting-services.md)  
  Describes how to change the setting for data display formats that differ by language and region, such as date, currency, and number values.  
   
-## See Also  
- [Formatting a Chart &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)  
-  
-  
+## Related content
+
+- [Formatting a Chart &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)

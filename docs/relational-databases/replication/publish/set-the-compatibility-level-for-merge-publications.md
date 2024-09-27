@@ -3,11 +3,12 @@ title: "Set compatibility level for Merge Publications"
 description: Learn how to set the compatibility level for Merge Publications using SQL Server Management Studio (SSMS) or Transact-SQL (T-SQL).
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/14/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: how-to
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "compatibility [SQL Server], replication"
   - "backward compatibility [SQL Server], replication"
@@ -120,7 +121,6 @@ EXEC sp_helpmergepublication
 GO
 ```  
   
-## See Also  
- [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)  
-  
-  
+## Related content
+
+- [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)

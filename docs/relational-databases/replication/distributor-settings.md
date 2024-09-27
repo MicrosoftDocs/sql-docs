@@ -3,11 +3,12 @@ title: "Distributor Settings"
 description: "Distributor Settings"
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/04/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: ui-reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 f1_keywords:
   - "sql13.rep.monitor.DistributorSettings.f1"
 helpviewer_keywords:
@@ -37,8 +38,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
  **New Group**  
  Click to create a new Publisher group. A Publisher group provides a way for you to conveniently organize Publishers within Replication Monitor. Groups do not affect the replication of data or the relationship among servers in a replication topology.  
   
-## See Also  
- [Start the Replication Monitor](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
- [Monitoring Replication](../../relational-databases/replication/monitor/monitoring-replication.md)  
-  
-  
+## Related content
+
+- [Start the Replication Monitor](../../relational-databases/replication/monitor/start-the-replication-monitor.md)
+- [Monitoring Replication](../../relational-databases/replication/monitor/monitoring-replication.md)

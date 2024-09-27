@@ -3,11 +3,12 @@ title: "Programmatically Monitor Replication"
 description: Replication Monitor is a graphical tool. Use Replication Monitor to monitor a replication topology in SQL Server.
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/14/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: how-to
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "sp_replmonitorhelppublisher"
   - "sp_replmonitorhelpmergesessiondetail"

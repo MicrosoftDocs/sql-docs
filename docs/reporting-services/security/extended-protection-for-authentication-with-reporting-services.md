@@ -3,11 +3,12 @@ title: "Extended protection for authentication with Reporting Services"
 description: "Extended protection for authentication with Reporting Services"
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 06/22/2020
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: security
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 
 # Extended protection for authentication with Reporting Services
@@ -156,12 +157,11 @@ For more information, see [Register a service principal name &#40;SPN&#41; for a
   
 ## Related content
 
-[Connect to the database engine by using extended protection](../../database-engine/configure-windows/connect-to-the-database-engine-using-extended-protection.md)   
-[Extended protection for authentication overview](/previous-versions/dotnet/netframework-3.5/dd767318(v=vs.90))   
-[Integrated Windows authentication with extended protection](/previous-versions/visualstudio/visual-studio-2008/dd639324(v=vs.90))   
-[Microsoft Security Advisory: Extended protection for authentication](https://go.microsoft.com/fwlink/?LinkId=179923)   
-[Report server service trace log](../../reporting-services/report-server/report-server-service-trace-log.md)   
-[RsReportServer.config configuration file](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
-[SetExtendedProtectionSettings method &#40;WMI MSReportServer_ConfigurationSetting&#41;](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-setextendedprotectionsettings.md)  
-
-More questions? [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)
+- [Connect to the database engine by using extended protection](../../database-engine/configure-windows/connect-to-the-database-engine-using-extended-protection.md)
+- [Extended protection for authentication overview](/previous-versions/dotnet/netframework-3.5/dd767318(v=vs.90))
+- [Integrated Windows authentication with extended protection](/previous-versions/visualstudio/visual-studio-2008/dd639324(v=vs.90))
+- [Microsoft Security Advisory: Extended protection for authentication](https://go.microsoft.com/fwlink/?LinkId=179923)
+- [Report server service trace log](../../reporting-services/report-server/report-server-service-trace-log.md)
+- [RsReportServer.config configuration file](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)
+- [SetExtendedProtectionSettings method &#40;WMI MSReportServer_ConfigurationSetting&#41;](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-setextendedprotectionsettings.md)
+- [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)

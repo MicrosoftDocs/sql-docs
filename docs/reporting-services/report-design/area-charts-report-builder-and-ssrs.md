@@ -3,11 +3,12 @@ title: "Area charts in a paginated report"
 description: Learn how to use area charts in a paginated report. Area charts display a series as a set of points connected by a line, with all the area filled in below the line in Report Builder.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/03/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 # Area charts in a paginated report (Report Builder)
 
@@ -44,11 +45,10 @@ ms.custom: updatefrequency5
   
 -   Area chart types are similar to column and line charts in behavior. If you're making a comparison between multiple series, consider using a column chart instead. If you're analyzing trends over a period of time, consider using a line chart.  
   
-## Related content 
- [Charts &#40;Report Builder&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [Chart types &#40;Report Builder&#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)   
- [Line charts &#40;Report Builder&#41;](../../reporting-services/report-design/line-charts-report-builder-and-ssrs.md)   
- [Change a chart type &#40;Report Builder&#41;](../../reporting-services/report-design/change-a-chart-type-report-builder-and-ssrs.md)   
- [Empty and null data points in charts &#40;Report Builder&#41;](../../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)  
-  
-  
+## Related content
+
+- [Charts &#40;Report Builder&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)
+- [Chart types &#40;Report Builder&#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)
+- [Line charts &#40;Report Builder&#41;](../../reporting-services/report-design/line-charts-report-builder-and-ssrs.md)
+- [Change a chart type &#40;Report Builder&#41;](../../reporting-services/report-design/change-a-chart-type-report-builder-and-ssrs.md)
+- [Empty and null data points in charts &#40;Report Builder&#41;](../../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)

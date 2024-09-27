@@ -3,11 +3,12 @@ title: "Reporting Services WMI provider library reference"
 description: "Reporting Services WMI provider library reference (SSRS)"
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/14/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: wmi-provider-library-reference
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "WMI provider [Reporting Services], library"
 apilocation: "reportingservices.mof"
@@ -28,7 +29,6 @@ apiname: "Reporting Services WMI Provider Library"
  For more information about WMI operations, see the WMI SDK documentation included with the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SDK.  
   
 ## Related content
- [Access the Reporting Services WMI provider](../../reporting-services/tools/access-the-reporting-services-wmi-provider.md)   
- [Technical reference &#40;SSRS&#41;](../../reporting-services/technical-reference-ssrs.md)  
-  
-  
+
+- [Access the Reporting Services WMI provider](../../reporting-services/tools/access-the-reporting-services-wmi-provider.md)
+- [Technical reference &#40;SSRS&#41;](../../reporting-services/technical-reference-ssrs.md)

@@ -3,11 +3,12 @@ title: "Images, text boxes, rectangles, and lines in a paginated report"
 description: Add visual interest, highlight key information, or provide related information in Report Builder. Add images, text boxes, rectangles, and lines in a paginated report.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/01/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 # Images, text boxes, rectangles, and lines in a paginated report (Report Builder)
 
@@ -32,7 +33,6 @@ ms.custom: updatefrequency5
  [Images &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/images-report-builder-and-ssrs.md)  
  Images display binary image data in a report. You provide the source for the image. The source can be a URL reference to an image stored on a Web server, a reference to embedded image data, or a reference to binary image data in a database. Report Builder and Report Designer support .bmp, .jpeg, .gif, and .png files.  
   
-## See Also  
- [Formatting Report Items &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)  
-  
-  
+## Related content
+
+- [Formatting Report Items &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)

@@ -3,11 +3,12 @@ title: "Report Parts in Report Designer"
 description: Publish paginated report items separately to a report server or SharePoint site so that you and others can reuse them in other reports in Report Builder.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 05/30/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 f1_keywords:
   - "sql13.rtp.rptdesigner.components.f1"
 ---
@@ -85,8 +86,7 @@ In Report Designer, after you create tables, charts, and other paginated report 
   
  You can also choose to publish as new a report that you have already published. In the Publish Report Parts dialog box, click the Publish as a new report part. This new report part has a new unique ID and no relationship to the old report part.  
 
-## Next steps
+## Related content
 
-[Managing Report Parts](../../reporting-services/report-design/managing-report-parts.md)  
-
-More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)
+- [Managing Report Parts](../../reporting-services/report-design/managing-report-parts.md)
+- [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

@@ -3,11 +3,12 @@ title: "Create, modify, and delete schedules"
 description: Create, modify & delete Reporting Services shared schedules. For native mode, use the web portal or Management Studio. For SharePoint mode, use the service app.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 06/11/2019
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: subscriptions
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "report-specific schedules [Reporting Services]"
   - "shared schedules [Reporting Services]"
@@ -137,8 +138,8 @@ Select **Cancel**.
 
 
 ## Related content
- [Schedules](../../reporting-services/subscriptions/schedules.md)  
- [Pause and resume shared schedules](../../reporting-services/subscriptions/pause-and-resume-shared-schedules.md)  
- [Caching reports (SSRS)](../../reporting-services/report-server/caching-reports-ssrs.md)  
- [Create, modify, and delete snapshots in report history](../report-server/create-modify-and-delete-snapshots-in-report-history.md)
 
+- [Schedules](../../reporting-services/subscriptions/schedules.md)
+- [Pause and resume shared schedules](../../reporting-services/subscriptions/pause-and-resume-shared-schedules.md)
+- [Caching reports (SSRS)](../../reporting-services/report-server/caching-reports-ssrs.md)
+- [Create, modify, and delete snapshots in report history](../report-server/create-modify-and-delete-snapshots-in-report-history.md)

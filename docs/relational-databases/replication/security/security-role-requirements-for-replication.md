@@ -3,11 +3,12 @@ title: "Security Role Requirements for Replication"
 description: Learn about the authentication level necessary for common replication setup tasks and for common replication maintenance tasks in SQL Server.
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/14/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: how-to
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "security [SQL Server replication], roles"
   - "roles [SQL Server], replication"
@@ -43,8 +44,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 |Maintain replication agents.|**db_owner** database role in the appropriate database or **sysadmin** server role on the appropriate server.<br /><br /> If the agent was created by a user in the **sysadmin** role, and a proxy account was not specified for the agent, the agent runs under the context of the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent account. In this case, a user in the **db_owner** role cannot modify the job associated with the agent.|  
 |Start or stop a replication agent.|Owner of the agent job or **sysadmin** server role on the appropriate server.|  
   
-## See Also  
- [Replication Security Best Practices](../../../relational-databases/replication/security/replication-security-best-practices.md)   
- [View and modify replication security settings](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)  
-  
-  
+## Related content
+
+- [Replication Security Best Practices](../../../relational-databases/replication/security/replication-security-best-practices.md)
+- [View and modify replication security settings](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)

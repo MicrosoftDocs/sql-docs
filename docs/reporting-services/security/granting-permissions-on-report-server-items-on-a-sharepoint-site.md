@@ -3,11 +3,12 @@ title: "Grant permissions on report server items on a SharePoint site"
 description: "Grant permissions on report server items on a SharePoint site"
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/14/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: security
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "permissions [Reporting Services], SharePoint integrated mode"
   - "SharePoint integration [Reporting Services], permissions"
@@ -82,7 +83,6 @@ helpviewer_keywords:
  [Set permissions for report server items on a SharePoint site &#40;Reporting Services in SharePoint integrated mode&#41;](../../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)  
  Provides instructions for creating new SharePoint groups that have permission to start Report Builder and set model item security. This article also contains general guidelines about setting custom permissions for any report server item or operation.  
   
-## Related content 
- [Reporting Services security and protection](../../reporting-services/security/reporting-services-security-and-protection.md)  
-  
-  
+## Related content
+
+- [Reporting Services security and protection](../../reporting-services/security/reporting-services-security-and-protection.md)

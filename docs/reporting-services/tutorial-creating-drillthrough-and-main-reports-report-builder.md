@@ -3,11 +3,12 @@ title: "Tutorial: Create drillthrough and main reports (Report Builder)"
 description: "Learn how to create two kinds of Reporting Services paginated reports: a drillthrough report and a main report."
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/14/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: reporting-services
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 # Tutorial: Create drillthrough and main reports (Report Builder)
 This tutorial teaches you how to create two kinds of [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] paginated reports: a drillthrough report and a main report. The sample sales data used in these reports is retrieved from an Analysis Services cube. 
@@ -676,5 +677,4 @@ Run the main report, and then select values in the product category column to ru
   
 ## Related content
 
-- [Report Builder tutorials](../reporting-services/report-builder-tutorials.md)  
-  
+- [Report Builder tutorials](../reporting-services/report-builder-tutorials.md)

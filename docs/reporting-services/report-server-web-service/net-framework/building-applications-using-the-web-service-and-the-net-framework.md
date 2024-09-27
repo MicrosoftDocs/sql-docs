@@ -3,11 +3,12 @@ title: "Building Applications Using the Web Service and the .NET Framework"
 description: A Report Server Web service client communicates with a report server by SOAP. Use the .NET Framework to create Web service clients to work with any Web service.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/16/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-server-web-service
 ms.topic: reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "Report Server Web service, application building"
   - ".NET Framework [Reporting Services]"
@@ -54,8 +55,7 @@ helpviewer_keywords:
 |[Using Reporting Services SOAP Headers](../../../reporting-services/report-server-web-service-net-framework-soap-headers/using-reporting-services-soap-headers.md)|Explains the use of SOAP headers in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].|  
 |[Introducing Exception Handling in Reporting Services](../../../reporting-services/report-server-web-service-net-framework-exception-handling/introducing-exception-handling-in-reporting-services.md)|Provides information about the way in which [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] handles errors.|  
   
-## See Also  
- [Report Server Web Service](../../../reporting-services/report-server-web-service/report-server-web-service.md)   
- [Technical Reference &#40;SSRS&#41;](../../../reporting-services/technical-reference-ssrs.md)  
-  
-  
+## Related content
+
+- [Report Server Web Service](../../../reporting-services/report-server-web-service/report-server-web-service.md)
+- [Technical Reference &#40;SSRS&#41;](../../../reporting-services/technical-reference-ssrs.md)

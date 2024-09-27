@@ -3,11 +3,12 @@ title: "Group changes to related rows with logical records"
 description: Learn how to make changes to related rows as a unit with Merge Replication in SQL Server.
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/07/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "merge replication logical records [SQL Server replication]"
   - "articles [SQL Server replication], logical records"
@@ -133,6 +134,6 @@ helpviewer_keywords:
   
  If logical records are used, the Merge Agent must process the changes for each entire logical record together. This has an effect on the amount of time it takes the Merge Agent to replicate the rows. Additionally, because the agent opens a separate transaction for each logical record, locking requirements can increase.  
   
-## See Also  
- [Article Options for Merge Replication](../../../relational-databases/replication/merge/article-options-for-merge-replication.md)  
-  
+## Related content
+
+- [Article Options for Merge Replication](../../../relational-databases/replication/merge/article-options-for-merge-replication.md)

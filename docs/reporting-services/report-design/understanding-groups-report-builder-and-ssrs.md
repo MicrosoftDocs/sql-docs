@@ -3,16 +3,16 @@ title: Groups in a Report Builder paginated report
 description: Learn how you can create and use groups to organize the view of a report dataset in a paginated report in Report Builder.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 07/09/2024
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 f1_keywords:
   - "10056"
   - "10424"
-
-#customer intent: As a SQL Server user, I want to learn how to use groups in Report Builder so that I can organize my data when I design reports.
+# customer intent: As a SQL Server user, I want to learn how to use groups in Report Builder so that I can organize my data when I design reports.
 ---
 # Groups in a Report Builder paginated report
 
@@ -104,5 +104,4 @@ Cells in a row or column of a tablix data region can belong to multiple row and 
 
 - [Add or delete a group in a data region in a paginated report (Report Builder)](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)
 - [Add a total to a group or tablix in a paginated report (Report Builder)](../../reporting-services/report-design/add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md)
-- [Sort data in a data region in a paginated report (Report Builder)](../../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md) 
-  
+- [Sort data in a data region in a paginated report (Report Builder)](../../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md)

@@ -3,11 +3,12 @@ title: Pin Reporting Services paginated report items to dashboards in Power BI
 description: You can pin on-premises Reporting Services paginated report items to a dashboard in the Power BI service, as a new tile.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 10/14/2022
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: reporting-services
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "pbi"
   - "dashboard"
@@ -132,9 +133,8 @@ From the [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] dashboard the pinned
 
 ## Related content
 
-- [Power BI report server integration &#40;Configuration Manager&#41;](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md)   
-- [My Settings for Power BI Integration &#40;web portal&#41;](my-settings-for-power-bi-integration-web-portal.md)  
-- [Introduction to dashboards for Power BI designers](https://powerbi.microsoft.com/documentation/powerbi-service-dashboards/)  
-  
-  
-[!INCLUDE[feedback-qa-stackoverflow-md](../includes/feedback-qa-stackoverflow-md.md)]
+- [Power BI report server integration &#40;Configuration Manager&#41;](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md)
+- [My Settings for Power BI Integration &#40;web portal&#41;](my-settings-for-power-bi-integration-web-portal.md)
+- [Introduction to dashboards for Power BI designers](https://powerbi.microsoft.com/documentation/powerbi-service-dashboards/)
+
+[!INCLUDE [feedback-qa-stackoverflow-md](../includes/feedback-qa-stackoverflow-md.md)]

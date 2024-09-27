@@ -3,11 +3,12 @@ title: "Report and group variables collections references in a paginated report"
 description: Create a variable with a unique name when you have a complex calculation that you use in a paginated report more than once.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/01/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 f1_keywords:
   - "10404"
   - "10083"
@@ -65,8 +66,7 @@ f1_keywords:
  To refer to the variable in an expression, use the global collection syntax, for example, `=Variables!GroupDescription.Value`. On the design surface, the value appears in a text box as `<<Expr>>`.  
   
 ## Related content
- [Filter, group, and sort data &#40;Report Builder&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [Built-in collections in expressions &#40;Report Builder&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)   
- [Expression examples &#40;Report Builder&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
-  
-  
+
+- [Filter, group, and sort data &#40;Report Builder&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)
+- [Built-in collections in expressions &#40;Report Builder&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)
+- [Expression examples &#40;Report Builder&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)

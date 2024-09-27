@@ -3,11 +3,12 @@ title: "Specify Merge Replication properties| Microsoft Docs"
 description: "Specify Merge Replication properties"
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "11/20/2018"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: how-to
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "merge replication [SQL Server replication], download-only articles"
   - "articles [SQL Server replication], download-only"
@@ -199,9 +200,8 @@ At the Publisher on the publication database, execute [sp_addmergearticle &#40;T
 2.  At the Publisher on the publication database, execute [sp_changemergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). Specify a value of **processing_order** for `@property` and an integer value that represents the processing order for `@value`.  
 
 
-## See Also  
- [Optimize Merge Replication Performance with Download-Only Articles](../../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md)   
- [Define an Article](../../../relational-databases/replication/publish/define-an-article.md)   
- [View and Modify Article Properties](../../../relational-databases/replication/publish/view-and-modify-article-properties.md)  
-  
-  
+## Related content
+
+- [Optimize Merge Replication Performance with Download-Only Articles](../../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md)
+- [Define an Article](../../../relational-databases/replication/publish/define-an-article.md)
+- [View and Modify Article Properties](../../../relational-databases/replication/publish/view-and-modify-article-properties.md)

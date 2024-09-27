@@ -3,11 +3,12 @@ title: "Files-only installation (Reporting Services)"
 description: "Files-Only Installation (Reporting Services)"
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 05/24/2018
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-server
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "files-only installation [Reporting Services]"
   - "installation options [Reporting Services]"

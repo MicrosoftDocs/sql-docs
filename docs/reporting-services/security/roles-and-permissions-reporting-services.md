@@ -3,11 +3,12 @@ title: Roles and permissions in Reporting Services
 description: Learn how you can use the roles and permissions tools in Reporting Services to manage your report servers.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 07/08/2024
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: security
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "access controls [Reporting Services]"
   - "permissions [Reporting Services], about permissions"
@@ -16,8 +17,7 @@ helpviewer_keywords:
   - "permissions [Reporting Services]"
   - "security [Reporting Services], role-based"
   - "identity [Reporting Services]"
-
-#customer intent: As a Reporting Services administrator, I want to learn how roles and permissions work in Reporting Services so that I can better secure the data in my report servers.
+# customer intent: As a Reporting Services administrator, I want to learn how roles and permissions work in Reporting Services so that I can better secure the data in my report servers.
 ---
 # Roles and permissions in Reporting Services
 
@@ -84,5 +84,4 @@ In SharePoint integrated mode, authentication and authorization are handled on t
 ## Related content
 
 - [Authentication with the report server](../../reporting-services/security/authentication-with-the-report-server.md)
-- [Grant permissions on a native mode report server](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
-  
+- [Grant permissions on a native mode report server](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)

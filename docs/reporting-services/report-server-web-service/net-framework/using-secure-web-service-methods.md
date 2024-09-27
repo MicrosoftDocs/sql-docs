@@ -3,11 +3,12 @@ title: "Using Secure Web Service Methods"
 description: Require a secure connection for Report Server Web service methods with the SecureConnectionLevel setting in the RSReportServer configuration file.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/06/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-server-web-service
 ms.topic: reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "SOAP [Reporting Services], secure connections"
   - "Web service [Reporting Services], SOAP"
@@ -24,8 +25,7 @@ helpviewer_keywords:
   
  You can use the <xref:ReportExecution2005.ReportExecutionService.ListSecureMethods%2A> method of the Web service to return a list of Web service methods that require a secure connection according to the current configuration of the report server. In a TLS scenario, you should evaluate the list of methods that are returned by <xref:ReportExecution2005.ReportExecutionService.ListSecureMethods%2A> and change the scheme name of the Web service URI to "https" or "http" depending on the method being called.  
   
-## See Also  
- [Building Applications Using the Web Service and the .NET Framework](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
- [Report Server Web Service](../../../reporting-services/report-server-web-service/report-server-web-service.md)  
-  
-  
+## Related content
+
+- [Building Applications Using the Web Service and the .NET Framework](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)
+- [Report Server Web Service](../../../reporting-services/report-server-web-service/report-server-web-service.md)

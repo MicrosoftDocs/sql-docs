@@ -3,11 +3,12 @@ title: "Start and stop the Report Server service"
 description: Learn how to start and stop the Windows service that contains the Report Server Web service, the web portal, and a background processing application.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/22/2021
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-server
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "stopping Report Server service"
   - "Report Server Windows service, starting"
@@ -48,7 +49,7 @@ helpviewer_keywords:
 For Reporting Services 2016 and earlier versions, you must verify that the instance name in parentheses corresponds to the report server instance you want to stop or restart. Specifically, you must follow these steps if you're running multiple instances or if the report server is running as a named instance.
 
   
-## Related content  
- [Report Server Configuration Manager &#40;native mode&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
- [Start, stop, or pause the SQL Server agent service](../../ssms/agent/start-stop-or-pause-the-sql-server-agent-service.md)  
-  
+## Related content
+
+- [Report Server Configuration Manager &#40;native mode&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)
+- [Start, stop, or pause the SQL Server agent service](../../ssms/agent/start-stop-or-pause-the-sql-server-agent-service.md)

@@ -3,11 +3,12 @@ title: "Add, move, or delete a text box in a paginated report"
 description: Add a text box to the paginated report body to display information such as titles, parameter choices, built-in fields, and dates in Report Builder.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/01/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 # Add, move, or delete a text box in a paginated report (Report Builder)
 
@@ -65,9 +66,8 @@ ms.custom: updatefrequency5
     > [!NOTE]  
     >  If you select the text box and are in edit mode, select Esc to choose the text box.  
   
-## Related content  
- [Text boxes &#40;Report Builder&#41;](../../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md)   
- [Expressions &#40;Report Builder&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
- [Keyboard shortcuts &#40;Report Builder&#41;](../../reporting-services/report-builder/keyboard-shortcuts-report-builder.md)  
-  
-  
+## Related content
+
+- [Text boxes &#40;Report Builder&#41;](../../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md)
+- [Expressions &#40;Report Builder&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)
+- [Keyboard shortcuts &#40;Report Builder&#41;](../../reporting-services/report-builder/keyboard-shortcuts-report-builder.md)

@@ -3,11 +3,12 @@ title: "Back Up and Restore Replicated Databases"
 description: Review overview information and links to additional information about backup and restore strategies for each type of replication in SQL Server.
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/14/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: how-to
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "backups [SQL Server replication]"
   - "administering replication, restoring"
@@ -56,8 +57,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
   
  As part of any recovery strategy, always keep a current script of your replication settings in a safe location. In the event of server failure or the need to set up a test environment, you can modify the script by changing server name references, and it can be used to help recreate your replication settings. In addition to scripting your current replication settings, you should script the enabling and disabling of replication. For information about scripting replication objects, see [Scripting Replication](../../../relational-databases/replication/scripting-replication.md).  
   
-## See Also  
- [Back Up and Restore of SQL Server Databases](../../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
- [Best Practices for Replication Administration](../../../relational-databases/replication/administration/best-practices-for-replication-administration.md)  
-  
-  
+## Related content
+
+- [Back Up and Restore of SQL Server Databases](../../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)
+- [Best Practices for Replication Administration](../../../relational-databases/replication/administration/best-practices-for-replication-administration.md)

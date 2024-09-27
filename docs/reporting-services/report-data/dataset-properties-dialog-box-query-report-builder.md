@@ -3,11 +3,12 @@ title: "Dataset Properties Dialog Box, Query (Report Builder)"
 description: Learn how to use Query on the Dataset Properties dialog box in the Report Builder to choose a shared dataset from a report server or to create an embedded dataset.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 08/17/2018
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-data
 ms.topic: reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 f1_keywords:
   - "10024"
   - "sql13.rtp.rptdesigner.datasetproperties.query.f1"
@@ -56,9 +57,8 @@ This option appears when you choose the Stored Procedure command type option. Ty
  **Refresh Fields**  
  Run the query command to update the list of fields in the **Dataset Properties Dialog Box, Fields**page.  
   
-## See Also  
-[Report Embedded Datasets and Shared Datasets &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).  
-[Report Datasets &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
-[Query Design Tools &#40;SSRS&#41;](query-design-tools-ssrs.md)  
-  
-  
+## Related content
+
+- [Report Embedded Datasets and Shared Datasets &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)
+- [Report Datasets &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)
+- [Query Design Tools &#40;SSRS&#41;](query-design-tools-ssrs.md)

@@ -3,11 +3,12 @@ title: "Limit Report History - Reporting Services"
 description: Learn how to configure the report history for a report server. Also learn how to configure report history for a specific report.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 06/26/2019
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: reports
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "viewing report history"
   - "report history [Reporting Services], viewing history"
@@ -41,8 +42,8 @@ helpviewer_keywords:
 4.  Select the options for your report and click **Apply**. For details about each option, see [Snapshot Options Properties Page &#40;Report Manager&#41;](/previous-versions/sql/sql-server-2016/ms189952(v=sql.130)).  
   
 ## See Also  
- [Add a Snapshot to Report History &#40;Report Manager&#41;](../../reporting-services/report-server/add-a-snapshot-to-report-history-report-manager.md)   
- [Report Manager  &#40;SSRS Native Mode&#41;](../web-portal-ssrs-native-mode.md)  
+-  [Add a Snapshot to Report History &#40;Report Manager&#41;](../../reporting-services/report-server/add-a-snapshot-to-report-history-report-manager.md)   
+-  [Report Manager  &#40;SSRS Native Mode&#41;](../web-portal-ssrs-native-mode.md)  
 
 ::: moniker-end
 
@@ -67,6 +68,6 @@ helpviewer_keywords:
 4.  Select the options for your report and click **Apply**. For details about each option, see [Snapshot Options Properties Page](/previous-versions/sql/sql-server-2016/ms189952(v=sql.130)).  
   
 ## See Also  
- [Add a Snapshot to Report History](../../reporting-services/report-server/add-a-snapshot-to-report-history-report-manager.md)   
+-  [Add a Snapshot to Report History](../../reporting-services/report-server/add-a-snapshot-to-report-history-report-manager.md)   
 
 ::: moniker-end

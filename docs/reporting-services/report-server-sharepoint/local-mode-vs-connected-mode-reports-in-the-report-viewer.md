@@ -3,11 +3,12 @@ title: "Local mode vs. connected mode reports in the Report Viewer"
 description: SQL Server Reporting Services reports can be configured to run in either local mode or connected mode. Learn about the different modes.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 09/25/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-server-sharepoint
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 monikerRange: ">=sql-server-2016 <=sql-server-2016"
 ---
 # Local mode vs. connected mode reports in the Report Viewer
@@ -78,6 +79,5 @@ monikerRange: ">=sql-server-2016 <=sql-server-2016"
   
 ## Related content
 
- [Data sources supported by Reporting Services](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)  
-
-More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)
+- [Data sources supported by Reporting Services](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)
+- [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

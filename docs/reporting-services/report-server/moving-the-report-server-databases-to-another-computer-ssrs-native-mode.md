@@ -3,11 +3,12 @@ title: "Move report server databases to another computer (native mode)"
 description: "Learn how to move the report server databases that are used in an installation of SQL Server Database Engine. Specifically, learn how to move them to an instance that is on a different computer."
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 12/16/2019
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-server
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 
 # Moving report server databases to another computer (SSRS native mode)
@@ -212,13 +213,12 @@ GO
 
 ## Related content
 
-[Create the RSExecRole](../../reporting-services/security/create-the-rsexecrole.md)   
-[Start and stop the report server service](../../reporting-services/report-server/start-and-stop-the-report-server-service.md)   
-[Configure a report server database connection](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
-[Configure the unattended execution account](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)   
-[Report Server Configuration Manager](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
-[rsconfig utility](../../reporting-services/tools/rsconfig-utility-ssrs.md)   
-[Configure and manage encryption keys](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   
-[Report server database](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)  
-
-More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)
+- [Create the RSExecRole](../../reporting-services/security/create-the-rsexecrole.md)
+- [Start and stop the report server service](../../reporting-services/report-server/start-and-stop-the-report-server-service.md)
+- [Configure a report server database connection](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)
+- [Configure the unattended execution account](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)
+- [Report Server Configuration Manager](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)
+- [rsconfig utility](../../reporting-services/tools/rsconfig-utility-ssrs.md)
+- [Configure and manage encryption keys](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)
+- [Report server database](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)
+- [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

@@ -3,11 +3,12 @@ title: "Custom report item class libraries"
 description: Learn about the custom report item class libraries and use code samples to understand how to use these classes.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/03/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: custom-report-items
 ms.topic: reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "custom report items, RDL"
   - "RDL [Reporting Services], custom report items"
@@ -122,9 +123,8 @@ helpviewer_keywords:
 |**DataSetName**|The name of the dataset containing the fields to be dropped.|  
 |**Fields**|The collection of fields (**Microsoft.ReportDesigner.Field**) to be dropped.|  
   
-## Related content  
- [Report Definition Language &#40;SSRS&#41;](../../reporting-services/reports/report-definition-language-ssrs.md)   
- [Creating a custom report Item run-time component](../../reporting-services/custom-report-items/creating-a-custom-report-item-run-time-component.md)   
- [Creating a custom report Item design-time component](../../reporting-services/custom-report-items/creating-a-custom-report-item-design-time-component.md)  
-  
-  
+## Related content
+
+- [Report Definition Language &#40;SSRS&#41;](../../reporting-services/reports/report-definition-language-ssrs.md)
+- [Creating a custom report Item run-time component](../../reporting-services/custom-report-items/creating-a-custom-report-item-run-time-component.md)
+- [Creating a custom report Item design-time component](../../reporting-services/custom-report-items/creating-a-custom-report-item-design-time-component.md)

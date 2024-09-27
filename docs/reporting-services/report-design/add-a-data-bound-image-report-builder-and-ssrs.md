@@ -3,11 +3,12 @@ title: "Add a data-bound image to a paginated report"
 description: Learn how to reference an image that is stored in a database to display the image in your paginated reports in Report Builder.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/01/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 # Add a data-bound image to a paginated report (Report Builder)
 
@@ -39,9 +40,9 @@ Adding a data-bound image to a page header or page footer requires additional st
   
      An image placeholder appears on the report design surface.  
   
-## Related content  
- [Images &#40;Report Builder&#41;](../../reporting-services/report-design/images-report-builder-and-ssrs.md)   
- [Embed an image in a report &#40;Report Builder&#41;](../../reporting-services/report-design/embed-an-image-in-a-report-report-builder-and-ssrs.md)   
- [Add an external image &#40;Report Builder&#41;](../../reporting-services/report-design/add-an-external-image-report-builder-and-ssrs.md)   
- [Image Properties dialog, general &#40;Report Builder&#41;](./images-report-builder-and-ssrs.md)  
-  
+## Related content
+
+- [Images &#40;Report Builder&#41;](../../reporting-services/report-design/images-report-builder-and-ssrs.md)
+- [Embed an image in a report &#40;Report Builder&#41;](../../reporting-services/report-design/embed-an-image-in-a-report-report-builder-and-ssrs.md)
+- [Add an external image &#40;Report Builder&#41;](../../reporting-services/report-design/add-an-external-image-report-builder-and-ssrs.md)
+- [Image Properties dialog, general &#40;Report Builder&#41;](./images-report-builder-and-ssrs.md)

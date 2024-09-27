@@ -3,11 +3,12 @@ title: "Implement a delivery extension"
 description: Read an overview of how you can extend the functionality of delivery in Reporting Services by implementing a custom delivery extension.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/16/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: extensions
 ms.topic: reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "delivery [Reporting Services]"
   - "custom delivery extensions [Reporting Services]"
@@ -55,7 +56,5 @@ helpviewer_keywords:
   
 ## Related content
 
-- [Reporting Services extensions](../../../reporting-services/extensions/reporting-services-extensions.md)   
-- [Reporting Services extension library](../../../reporting-services/extensions/reporting-services-extension-library.md)  
-  
-  
+- [Reporting Services extensions](../../../reporting-services/extensions/reporting-services-extensions.md)
+- [Reporting Services extension library](../../../reporting-services/extensions/reporting-services-extension-library.md)

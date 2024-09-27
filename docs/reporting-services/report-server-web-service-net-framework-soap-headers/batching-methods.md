@@ -3,11 +3,12 @@ title: "Batch methods"
 description: Learn how to use SOAP headers in Reporting Services to include multiple Web service methods in a single operation.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/04/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-server-web-service
 ms.topic: reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "methods [Reporting Services], batches"
   - "BatchHeader SOAP header"
@@ -92,9 +93,6 @@ class Sample
 ```  
   
 ## Related content
- <xref:ReportService2005.ReportingService2005.CancelBatch%2A>   
- <xref:ReportService2005.ReportingService2005.CreateBatch%2A>   
- [Technical reference &#40;SSRS&#41;](../../reporting-services/technical-reference-ssrs.md)   
- [Use Reporting Services SOAP headers](../../reporting-services/report-server-web-service-net-framework-soap-headers/using-reporting-services-soap-headers.md)  
-  
-  
+
+- [Technical reference &#40;SSRS&#41;](../../reporting-services/technical-reference-ssrs.md)
+- [Use Reporting Services SOAP headers](../../reporting-services/report-server-web-service-net-framework-soap-headers/using-reporting-services-soap-headers.md)

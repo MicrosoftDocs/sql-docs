@@ -3,11 +3,12 @@ title: "Snapshot Folder"
 description: "Snapshot Folder"
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/14/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: ui-reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 f1_keywords:
   - "sql13.rep.replicationutilities.specifysnapshotfolder.f1"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
@@ -28,11 +29,10 @@ For Azure SQL Managed Instance, the snapshot folder must be an Azure file share.
 > [!NOTE]  
 > [!INCLUDE[msCoName](../../includes/msconame-md.md)] recommends that you use a network share as a snapshot folder location. Local paths (those starting with a drive letter, such as C:\\) are not accessible to agents on other computers.  
   
-## See Also  
- [Modify snapshot options](../../relational-databases/replication/snapshot-options.md)   
- [Configure Distribution](../../relational-databases/replication/configure-distribution.md)   
- [Configure Publishing and Distribution](../../relational-databases/replication/configure-publishing-and-distribution.md)   
- [View and Modify Distributor and Publisher Properties](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
- [Initialize a Subscription with a Snapshot](../../relational-databases/replication/initialize-a-subscription-with-a-snapshot.md)  
-  
-  
+## Related content
+
+- [Modify snapshot options](../../relational-databases/replication/snapshot-options.md)
+- [Configure Distribution](../../relational-databases/replication/configure-distribution.md)
+- [Configure Publishing and Distribution](../../relational-databases/replication/configure-publishing-and-distribution.md)
+- [View and Modify Distributor and Publisher Properties](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)
+- [Initialize a Subscription with a Snapshot](../../relational-databases/replication/initialize-a-subscription-with-a-snapshot.md)

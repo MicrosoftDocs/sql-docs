@@ -3,11 +3,12 @@ title: "Data regions and maps in a paginated report"
 description: Explore the types and characteristics of data regions and maps to design the display from your paginated report datasets in Report Builder.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/14/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "data regions"
 ---
@@ -60,11 +61,10 @@ helpviewer_keywords:
   
  For more information, see [Expressions &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md).  
   
-## See Also  
- [Reporting Services Concepts (SSRS)](../reporting-services-concepts-ssrs.md)
- [Reports, Report Parts, and Report Definitions &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   
- [Page Layout and Rendering &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/page-layout-and-rendering-report-builder-and-ssrs.md)   
- [Report Builder Tutorials](../../reporting-services/report-builder-tutorials.md)   
- [Reporting Services Tutorials &#40;SSRS&#41;](../../reporting-services/reporting-services-tutorials-ssrs.md)  
-  
-  
+## Related content
+
+- [Reporting Services Concepts (SSRS)](../reporting-services-concepts-ssrs.md)
+- [Reports, Report Parts, and Report Definitions &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)
+- [Page Layout and Rendering &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/page-layout-and-rendering-report-builder-and-ssrs.md)
+- [Report Builder Tutorials](../../reporting-services/report-builder-tutorials.md)
+- [Reporting Services Tutorials &#40;SSRS&#41;](../../reporting-services/reporting-services-tutorials-ssrs.md)

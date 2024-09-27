@@ -3,11 +3,12 @@ title: "Report server content management (native mode)"
 description: Learn about the web portal and the new web portal experience for Reporting Services content management. Manage items through properties and security settings.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 06/14/2019
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-server
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "administering Reporting Services"
   - "published reports [Reporting Services], managing"
@@ -169,8 +170,8 @@ Tools for managing report server content include [!INCLUDE[ssManStudio](../../in
  [Update a resource (web portal)](../../reporting-services/report-server/update-a-resource-report-manager.md)  
  [Upload files to a folder](../../reporting-services/report-server/upload-files-to-a-folder.md)  
   
-## Related content  
- [Reporting Services tools](../../reporting-services/tools/reporting-services-tools.md)   
- [Roles and permissions &#40;Reporting Services&#41;](../../reporting-services/security/roles-and-permissions-reporting-services.md)   
- [Reporting Services reports &#40;SSRS&#41;](../../reporting-services/reports/reporting-services-reports-ssrs.md)  
-  
+## Related content
+
+- [Reporting Services tools](../../reporting-services/tools/reporting-services-tools.md)
+- [Roles and permissions &#40;Reporting Services&#41;](../../reporting-services/security/roles-and-permissions-reporting-services.md)
+- [Reporting Services reports &#40;SSRS&#41;](../../reporting-services/reports/reporting-services-reports-ssrs.md)

@@ -3,11 +3,12 @@ title: "Subscription Watch List (Merge - SSMS)"
 description: Describes the 'Subscription Watch List' tab within Replication Monitor in SQL Server Management Studio (SSMS).
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/07/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: ui-reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 f1_keywords:
   - "sql13.rep.monitor.publisherinfo.subscriptionssummary.merge.f1"
 ---
@@ -100,10 +101,9 @@ f1_keywords:
  **Connection**  
  The type of connection between the Subscriber and the Publisher. The possible values are **LAN**, **Dialup**, and **Internet**. The **Internet** value is displayed if the subscription uses Web synchronization.  
   
-## See Also  
- [Start the Replication Monitor](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
- [View Information and Perform Tasks for a Publisher &#40;Replication Monitor&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)   
- [Monitoring Replication](../../relational-databases/replication/monitor/monitoring-replication.md)   
- [Web Synchronization for Merge Replication](../../relational-databases/replication/web-synchronization-for-merge-replication.md)  
-  
-  
+## Related content
+
+- [Start the Replication Monitor](../../relational-databases/replication/monitor/start-the-replication-monitor.md)
+- [View Information and Perform Tasks for a Publisher &#40;Replication Monitor&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)
+- [Monitoring Replication](../../relational-databases/replication/monitor/monitoring-replication.md)
+- [Web Synchronization for Merge Replication](../../relational-databases/replication/web-synchronization-for-merge-replication.md)

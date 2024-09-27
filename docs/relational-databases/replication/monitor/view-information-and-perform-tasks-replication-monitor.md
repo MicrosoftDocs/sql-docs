@@ -3,11 +3,12 @@ title: "View information & perform tasks (Replication Monitor)"
 description: Learn how to view information and perform various tasks using Replication Monitor in SQL Server Management Studio (SSMS).
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "11/20/2018"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: how-to
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "viewing publication information"
   - "publications [SQL Server replication], viewing information"
@@ -149,11 +150,10 @@ Replication Monitor provides the **Agents** tab, which includes information abou
     
 
 
-## See Also  
- [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
- [View and Modify Push Subscription Properties](../../../relational-databases/replication/view-and-modify-push-subscription-properties.md)   
- [View and Modify Pull Subscription Properties](../../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)  
- [Set Thresholds and Warnings in Replication Monitor](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)   
- [Replication Agent Administration](../../../relational-databases/replication/agents/replication-agent-administration.md)    
-  
-  
+## Related content
+
+- [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)
+- [View and Modify Push Subscription Properties](../../../relational-databases/replication/view-and-modify-push-subscription-properties.md)
+- [View and Modify Pull Subscription Properties](../../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)
+- [Set Thresholds and Warnings in Replication Monitor](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)
+- [Replication Agent Administration](../../../relational-databases/replication/agents/replication-agent-administration.md)

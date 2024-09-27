@@ -3,11 +3,12 @@ title: "Specify type & conflict resolution priority (Merge)"
 description: Learn how to specify the type and conflict resolution policy used by a Merge Subscription for SQL Server.
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/07/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: ui-reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "merge replication conflict resolution [SQL Server replication], merge subscription resolvers"
   - "conflict resolution [SQL Server replication], merge replication"
@@ -30,8 +31,7 @@ helpviewer_keywords:
   
 2.  Select **OK**.
   
-## See Also  
- [Advanced Merge Replication Conflict Detection and Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
- [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)  
-  
-  
+## Related content
+
+- [Advanced Merge Replication Conflict Detection and Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)
+- [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)

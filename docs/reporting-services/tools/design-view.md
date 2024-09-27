@@ -3,11 +3,12 @@ title: "Design view"
 description: Learn how to use the Design view in the Reporting Services Report Designer to arrange report items in a report.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 05/31/2016
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: tools
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 f1_keywords:
   - "sql13.rtp.rptdesigner.layoutview.f1"
 helpviewer_keywords:
@@ -48,8 +49,7 @@ Use the Toolbox to select items to place in any of these three sections. Use the
 ## Properties pane  
  Use the Properties pane to view properties for the currently selected report item on the design surface or the currently selected group in the Grouping pane. Alternatively, you can right-click on a selected report item or group and then select **Properties** to open the corresponding **Properties** dialog box for the report item or group.  
   
-## Related content  
- [Page headers and footers &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
- [Report design tips &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/report-design-tips-report-builder-and-ssrs.md)  
-  
-  
+## Related content
+
+- [Page headers and footers &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)
+- [Report design tips &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/report-design-tips-report-builder-and-ssrs.md)

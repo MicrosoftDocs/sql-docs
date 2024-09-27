@@ -3,11 +3,12 @@ title: "Add dataset filters, data region filters, and group filters to a paginat
 description: Find out how filters can help you control which data is displayed and processed in your paginated reports in Report Builder.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/14/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 # Add dataset filters, data region filters, and group filters to a paginated report (Report Builder)
 
@@ -94,8 +95,7 @@ ms.custom: updatefrequency5
   
  Back to Top  
   
-## Related content  
- [Expression uses in reports &#40;Report Builder&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
- [Report parameters &#40;Report Builder and Report Designer&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)  
-  
-  
+## Related content
+
+- [Expression uses in reports &#40;Report Builder&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)
+- [Report parameters &#40;Report Builder and Report Designer&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)

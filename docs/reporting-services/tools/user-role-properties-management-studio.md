@@ -3,11 +3,12 @@ title: "User Role Properties page (Management Studio)"
 description: Learn about the User Role Properties page in SQL Server Management Studio where you view item-level role definition tasks, change the task list, or modify a role description.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/01/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: tools
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 f1_keywords:
   - "sql13.swb.reportserver.userroleproperties.f1"
 ---
@@ -34,11 +35,10 @@ f1_keywords:
  **Task Description**  
  Provides information about each task. You can't modify task descriptions.  
   
-## Related content  
- [Item-level tasks](../../reporting-services/security/tasks-and-permissions-item-level-tasks.md)   
- [Role definitions](../../reporting-services/security/role-definitions.md)   
- [Report server in Management Studio F1 Help](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
- [Tasks and permissions](../../reporting-services/security/tasks-and-permissions.md)   
- [Predefined roles](../../reporting-services/security/role-definitions-predefined-roles.md)  
-  
-  
+## Related content
+
+- [Item-level tasks](../../reporting-services/security/tasks-and-permissions-item-level-tasks.md)
+- [Role definitions](../../reporting-services/security/role-definitions.md)
+- [Report server in Management Studio F1 Help](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)
+- [Tasks and permissions](../../reporting-services/security/tasks-and-permissions.md)
+- [Predefined roles](../../reporting-services/security/role-definitions-predefined-roles.md)

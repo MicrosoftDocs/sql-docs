@@ -3,11 +3,12 @@ title: "View and Modify Replication Security Settings"
 description: Learn how to view and modify replication security settings in SQL Server by using SQL Server Management Studio, Transact-SQL, or Replication Management Objects.
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/16/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: how-to
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "modifying replication security settings"
   - "replication [SQL Server], security"
@@ -563,11 +564,12 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ##  <a name="FollowUp"></a> Follow Up: After you modify replication security settings  
  After changing an agent login or password, you must stop and restart the agent before the change takes effect.  
   
-## See Also  
- [Replication Management Objects Concepts](../../../relational-databases/replication/concepts/replication-management-objects-concepts.md)   
- [Upgrade Replication Scripts &#40;Replication Transact-SQL Programming&#41;](../../../relational-databases/replication/administration/upgrade-replication-scripts-replication-transact-sql-programming.md)   
- [Identity and access control for replication](../../../relational-databases/replication/security/identity-and-access-control-replication.md)   
- [Replication Agent Security Model](../../../relational-databases/replication/security/replication-agent-security-model.md)   
- [Replication Security Best Practices](../../../relational-databases/replication/security/replication-security-best-practices.md)   
- [View and modify replication security settings](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   
- [Replication System Stored Procedures Concepts](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)
+## Related content
+
+- [Replication Management Objects Concepts](../../../relational-databases/replication/concepts/replication-management-objects-concepts.md)
+- [Upgrade Replication Scripts &#40;Replication Transact-SQL Programming&#41;](../../../relational-databases/replication/administration/upgrade-replication-scripts-replication-transact-sql-programming.md)
+- [Identity and access control for replication](../../../relational-databases/replication/security/identity-and-access-control-replication.md)
+- [Replication Agent Security Model](../../../relational-databases/replication/security/replication-agent-security-model.md)
+- [Replication Security Best Practices](../../../relational-databases/replication/security/replication-security-best-practices.md)
+- [View and modify replication security settings](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)
+- [Replication System Stored Procedures Concepts](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)

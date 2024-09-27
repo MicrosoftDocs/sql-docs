@@ -3,11 +3,12 @@ title: Format numbers and dates in Report Builder paginated reports
 description: Learn how to format numbers and dates in Report Builder data regions in a paginated report by selecting a format from the Properties dialog box.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 07/05/2024
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 f1_keywords:
   - "sql13.rtp.rptdesigner.placeholderproperties.number.f1"
   - "10127"
@@ -17,8 +18,7 @@ f1_keywords:
   - "sql13.rtp.rptdesigner.serieslabelproperties.number.f1"
   - "10285"
   - "sql13.rtp.rptdesigner.axisproperties.number.f1"
-
-#customer intent: As a Report Builder user, I want to learn how to format numbers and dates in my reports so that I can improve their presentation.
+# customer intent: As a Report Builder user, I want to learn how to format numbers and dates in my reports so that I can improve their presentation.
 ---
 # Format numbers and dates in Report Builder paginated reports
 
@@ -54,9 +54,8 @@ Before you format numbers and dates in your report, consider the following detai
   
 - If you select **Currency** under **Category**, and you check **Show values in**, you can select **Thousands**, **Millions**, or **Billions** to display numbers that use financial formats. For example, if the field value is 1,789,905,394 and you select **Billions** and specify 2 decimal places, the value displayed in the report is 1.78.  
   
-## Related content  
+## Related content
 
 - [Format text and placeholders in paginated reports (Report Builder)](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)
 - [Format lines, colors, and images in a paginated report (Report Builder)](../../reporting-services/report-design/formatting-lines-colors-and-images-report-builder-and-ssrs.md)
 - [Format a chart in a paginated report (Report Builder)](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)
-  

@@ -3,11 +3,12 @@ title: "Update a resource (web portal)"
 description: Update a resource by using Reporting Services web portal. Replace an existing resource by importing new or different file content into the existing resource.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 06/14/2019
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-server
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "updating resources"
   - "resources [Reporting Services], updating"
@@ -34,6 +35,6 @@ helpviewer_keywords:
  If the resource you're updating contains an image that is used in a report, you need to refresh the report to see the updated image.  
   
 ## Related content
- [Report Server content management (SSRS native mode)](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
- [Upload files to a folder](../../reporting-services/report-server/upload-files-to-a-folder.md)   
-  
+
+- [Report Server content management (SSRS native mode)](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)
+- [Upload files to a folder](../../reporting-services/report-server/upload-files-to-a-folder.md)

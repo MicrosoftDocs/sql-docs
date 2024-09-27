@@ -3,11 +3,12 @@ title: "MSSQL_ENG020596"
 description: "MSSQL_ENG020596"
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/04/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "MSSQL_ENG020596 error"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
@@ -32,7 +33,6 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ## User Action  
  Login with the appropriate credentials, and execute **sp_dropanonymousagent**.  
   
-## See Also  
- [Errors and Events Reference &#40;Replication&#41;](../../relational-databases/replication/errors-and-events-reference-replication.md)  
-  
-  
+## Related content
+
+- [Errors and Events Reference &#40;Replication&#41;](../../relational-databases/replication/errors-and-events-reference-replication.md)

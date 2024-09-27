@@ -3,11 +3,12 @@ title: "Administrative Password"
 description: "Administrative Password"
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/01/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: ui-reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 f1_keywords:
   - "sql13.rep.replicationutilities.administrativepassword.f1"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
@@ -23,11 +24,9 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
  **Confirm Password**  
  Re-enter the password to confirm it was entered correctly.  
   
-## See Also  
- [Publish Data and Database Objects](../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
- [Configure Publishing and Distribution](../../relational-databases/replication/configure-publishing-and-distribution.md)   
- [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
- [View and Modify Distributor and Publisher Properties](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
- [View and Modify Distributor and Publisher Properties](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)  
-  
-  
+## Related content
+
+- [Publish Data and Database Objects](../../relational-databases/replication/publish/publish-data-and-database-objects.md)
+- [Configure Publishing and Distribution](../../relational-databases/replication/configure-publishing-and-distribution.md)
+- [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)
+- [View and Modify Distributor and Publisher Properties](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)

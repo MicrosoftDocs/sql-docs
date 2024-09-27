@@ -3,11 +3,12 @@ title: "Authentication in Reporting Services"
 description: Find out how to extend authentication schemes in Reporting Services by using either Forms Authentication or the IAuthenticationExtension2 interface.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/14/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: extensions
 ms.topic: reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "security [Reporting Services], authentication"
   - "forms-based authentication [Reporting Services]"
@@ -140,6 +141,4 @@ internal static bool VerifyPassword(string suppliedUserName,
   
 ## Related content
 
-- [Implement a security extension](../../../reporting-services/extensions/security-extension/implementing-a-security-extension.md)  
-  
-  
+- [Implement a security extension](../../../reporting-services/extensions/security-extension/implementing-a-security-extension.md)

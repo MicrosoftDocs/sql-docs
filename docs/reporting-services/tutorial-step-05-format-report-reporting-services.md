@@ -3,13 +3,13 @@ title: "Tutorial: Format a report (Reporting Services)"
 description: Learn how to format a report in SQL Server Data Tools. You can format text styles, date fields, currency fields, and the column widths after you add a data region.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 06/19/2024
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: reporting-services
 ms.topic: tutorial
-ms.custom: updatefrequency5
-#customer intent: As a SQL Server user, I want to format fields, adjust text styles, and modify column widths in SQL Server Data Tools (SSDT) so that my report is easily readable.
-
+ms.custom:
+  - updatefrequency5
+# customer intent: As a SQL Server user, I want to format fields, adjust text styles, and modify column widths in SQL Server Data Tools (SSDT) so that my report is easily readable.
 ---
 # Tutorial: Format a report (Reporting Services)
 

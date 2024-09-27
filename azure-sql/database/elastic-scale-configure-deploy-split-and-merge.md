@@ -71,8 +71,7 @@ Use PowerShell to create a self-signed certificate and PFX file.
 First, create a new directory. Then replace the inline values accordingly and run the following PowerShell commands from the new directory: 
 
 ```powershell
-  $certname = "{certificateName}"    ## Replace {certificateName}
-  $cert = New-SelfSignedCertificate -Subject "CN=$certname" -CertStoreLocation "Cert:\CurrentUser\My" -KeyExportPolicy Exportable -KeySpec Signature -KeyLength 2048 -KeyAlgorithm RSA -HashAlgorithm SHA256
+  $cert = New-SelfSignedCertificate -Subject "CN=*.cloudapp.net" -CertStoreLocation "Cert:\CurrentUser\My" -KeyExportPolicy Exportable -KeySpec Signature -KeyLength 2048 -KeyAlgorithm RSA -HashAlgorithm SHA256
   $mypwd = ConvertTo-SecureString -String "{myPassword}" -Force -AsPlainText  ## Replace {myPassword}
   Export-PfxCertificate -Cert $cert -FilePath "C:\Users\admin\Desktop\$certname.pfx" -Password $mypwd   ## Specify your preferred location
 ```

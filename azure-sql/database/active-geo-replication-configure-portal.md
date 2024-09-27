@@ -26,7 +26,7 @@ For failover groups, see [Failover groups with Azure SQL Database](failover-grou
 
 - To complete this tutorial, you need a single Azure SQL Database.  To learn how to create a single database with Azure portal, Azure CLI, or PowerShell, see [Quickstart: Create a single database - Azure SQL Database](single-database-create-quickstart.md?view=azuresql&preserve-view=true&tabs=azure-powershell).
 
-- You can use the Azure portal to setup Active geo replication across subscriptions as long as both the subscriptions are in the same Microsoft Entra ID tenant.
+- You can use the Azure portal to set up Active geo replication across subscriptions as long as both the subscriptions are in the same Microsoft Entra ID tenant.
     - To create a geo-secondary replica in a subscription *different* from the subscription of the primary in a different Microsoft Entra ID tenant, use [the geo-secondary across subscriptions and Microsoft Entra ID tenant T-SQL tutorial](#cross-subscription-geo-replication).
     - Cross-subscription geo-replication operations including setup and geo-failover are also supported using [Databases Create or Update REST API](/rest/api/sql/databases/create-or-update).
 

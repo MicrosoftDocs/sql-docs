@@ -314,7 +314,7 @@ If transactional replication is enabled on a database in a failover group, the S
 
 ### `tempdb` structure and content is re-created
 
-The `tempdb` database is always split into 12 data files, and the file structure can't be changed. The maximum size per file can't be changed, and new files can't be added to `tempdb`. The `tempdb` database is always re-created as an empty database when the instance starts or fails over, and any changes made in `tempdb` aren't be preserved.
+The `tempdb` database is always split into 12 data files, and the file structure can't be changed. The maximum size per file can't be changed, and new files can't be added to `tempdb`. The `tempdb` database is always re-created as an empty database when the instance starts or fails over, and any changes made in `tempdb` aren't preserved.
 
 ### Error logs aren't persisted
 

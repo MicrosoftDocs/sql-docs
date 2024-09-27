@@ -372,7 +372,7 @@ When a transaction modifies a piece of data, it holds certain locks protecting t
 
 - When optimized locking isn't enabled, row and page locks necessary for writes are held until the end of the transaction.
 
-- When optimized locking is enabled, only a Transaction ID (TID) lock is held for the duration of the transaction. Under the default `READ COMMITTED` isolation level, transactions will not hold row locks necessary for writes until the end of the transaction. This reduces lock memory required and reduces the need for lock escalation. Further, when optimized locking is enabled, the [lock after qualification (LAQ)](./performance/optimized-locking.md#optimized-locking-and-lock-after-qualification-laq) optimization evaluates predicates of a query on the latest committed version of the row without acquiring a lock, improving concurrency.
+- When optimized locking is enabled, only a Transaction ID (TID) lock is held for the duration of the transaction. Under the default `READ COMMITTED` isolation level, transactions will not hold row and page locks necessary for writes until the end of the transaction. This reduces lock memory required and reduces the need for lock escalation. Further, when optimized locking is enabled, the [lock after qualification (LAQ)](./performance/optimized-locking.md#optimized-locking-and-lock-after-qualification-laq) optimization evaluates predicates of a query on the latest committed version of the row without acquiring a lock, improving concurrency.
 
 All locks held by a transaction are released when the transaction completes (either commits or rolls back).
 

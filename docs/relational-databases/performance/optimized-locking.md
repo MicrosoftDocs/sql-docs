@@ -36,7 +36,7 @@ For example:
 - With optimized locking, updating one thousand rows in a table might require one thousand `X` row locks but each lock is released as soon as each row is updated, and only one TID lock is held until the end of the transaction. Because locks are released quickly, lock memory usage is reduced and [lock escalation](resolve-blocking-problems-caused-lock-escalation.md) does not occur, improving workload concurrency.
 
 > [!NOTE]
-> Optimized locking reduces or eliminates row and page locks acquired by DML statements such as `INSERT`, `UPDATE`, `DELETE`, `MERGE`. It has no effect on other kinds of database and object locks, e.g. schema locks.
+> Optimized locking reduces or eliminates row and page locks acquired by the Data Modification Language (DML) statements such as `INSERT`, `UPDATE`, `DELETE`, `MERGE`. It has no effect on other kinds of database and object locks, such as schema locks.
 
 ### Availability
 
@@ -333,6 +333,14 @@ If ADR is disabled, optimized locking is automatically disabled as well.
 ### What if I want to force queries to block despite optimized locking?
 
 For customers using RCSI, to force blocking between two queries when optimized locking is enabled, use the `READCOMMITTEDLOCK` query hint.
+
+### Is optimized locking used on readable secondary replicas?
+
+No, because DML statements do not run on readable secondaries, and corresponding row and page locks are not taken.
+
+### Is optimized locking used when modifying data in tempdb, including in temporary tables?
+
+No.
 
 ## Related content
 

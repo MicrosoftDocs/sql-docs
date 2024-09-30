@@ -118,7 +118,7 @@ In the Hyperscale service tier for both serverless and provisioned compute tiers
 
 Currently, serverless auto-pausing and auto-resuming are only supported in the General Purpose tier.
 
-### <a id="auto-pausing"></a> Auto-pause
+### <a id="auto-pausing"></a> ~~Auto-pause~~
 
 Auto-pausing is triggered if all of the following conditions are true during the auto-pause delay:
 

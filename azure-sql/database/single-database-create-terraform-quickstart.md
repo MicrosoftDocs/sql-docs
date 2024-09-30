@@ -1,21 +1,22 @@
 ---
-title: 'Quickstart: Create an Azure SQL Database server and database using Terraform'
+title: "Quickstart: Create an Azure SQL Database server and database using Terraform"
 description: In this article, you create an Azure SQL Database server and database using Terraform.
-ms.topic: quickstart
-ms.service: azure-sql-database
-ms.subservice: deployment-configuration
-ms.custom: devx-track-terraform
 author: TomArcherMsft
 ms.author: tarcher
 ms.reviewer: mathoma
-ms.date: 5/03/2023
+ms.date: 09/17/2024
+ms.service: azure-sql-database
+ms.subservice: deployment-configuration
+ms.topic: quickstart
+ms.custom:
+  - devx-track-terraform
 content_well_notification: 
   - AI-contribution
 ai-usage: ai-assisted
 ---
 
 # Quickstart: Create an Azure SQL Database server and database using Terraform
-[!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
+[!INCLUDE [appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
 Creating a [single database](single-database-overview.md) is the quickest and simplest option to create a database in Azure SQL Database. This quickstart shows you how to create a single database using Terraform.
 
@@ -34,6 +35,12 @@ In this article, you learn how to:
 ## Prerequisites
 
 - [Install and configure Terraform](/azure/developer/terraform/quickstart-configure)
+
+### Permissions
+
+**To create databases via Transact-SQL**: `CREATE DATABASE` permissions are necessary. To create a database a login must be either the server admin login (created when the Azure SQL Database logical server was provisioned), the Microsoft Entra admin of the server, a member of the dbmanager database role in `master`. For more information, see [CREATE DATABASE](/sql/t-sql/statements/create-database-transact-sql?view=azuresqldb-current&preserve-view=true).
+
+**To create databases via the Azure portal, PowerShell, Azure CLI, or REST API**: Azure RBAC permissions are needed, specifically the Contributor, SQL DB Contributor, or SQL Server Contributor Azure RBAC role. For more information, see [Azure RBAC built-in roles](/azure/role-based-access-control/built-in-roles).
 
 ## Implement the Terraform code
 
@@ -129,7 +136,7 @@ In this article, you learn how to:
 
 [Troubleshoot common problems when using Terraform on Azure](/azure/developer/terraform/troubleshoot)
 
-## Next steps
+## Next step
 
 > [!div class="nextstepaction"]
 > [Create a server-level firewall rule](firewall-create-server-level-portal-quickstart.md)

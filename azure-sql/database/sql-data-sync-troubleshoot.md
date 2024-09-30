@@ -3,8 +3,8 @@ title: Troubleshoot SQL Data Sync
 description: Learn how to identify, troubleshoot, and resolve common issues with SQL Data Sync in Azure.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: mathoma, hudequei 
-ms.date: 07/15/2022
+ms.reviewer: mathoma, hudequei
+ms.date: 09/23/2024
 ms.service: azure-sql-database
 ms.subservice: sql-data-sync
 ms.topic: troubleshooting
@@ -13,14 +13,15 @@ ms.custom:
   - sqldbrb=1
 ---
 # Troubleshoot issues with SQL Data Sync
-[!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
+[!INCLUDE [appliesto-sqldb](../includes/appliesto-sqldb.md)]
+
+[!INCLUDE [sql-data-sync-retirement](../includes/sql-data-sync-retirement.md)]
 
 This article describes how to troubleshoot known issues with SQL Data Sync in Azure. If there is a resolution for an issue, it's provided here.
 
-For an overview of SQL Data Sync, see [Sync data across multiple cloud and on-premises databases with SQL Data Sync in Azure](sql-data-sync-data-sql-server-sql-database.md).
+For an overview of SQL Data Sync, see [What is SQL Data Sync for Azure?](sql-data-sync-data-sql-server-sql-database.md)
 
-> [!IMPORTANT]
-> SQL Data Sync does **not** support Azure SQL Managed Instance or Azure Synapse Analytics at this time.
+SQL Data Sync does **not** support Azure SQL Managed Instance or Azure Synapse Analytics.
 
 ## Sync issues
 
@@ -40,7 +41,9 @@ For an overview of SQL Data Sync, see [Sync data across multiple cloud and on-pr
  
 - [Error message "Sync0022 Customer does not have authorization to perform action 'syncGroupOperationResults/read'"](#syncGroupOperationResults)
 
-### <a name="sync-fails"></a> Sync fails in the portal UI for on-premises databases that are associated with the client agent
+<a id="sync-fails"></a>
+
+### Sync fails in the portal UI for on-premises databases that are associated with the client agent
 
 Sync fails in the SQL Data Sync portal UI for on-premises databases that are associated with the client agent. On the local computer that's running the agent, you see `System.IO.IOException` errors in the Event Log. The errors say that the disk has insufficient space.
 
@@ -48,7 +51,9 @@ Sync fails in the SQL Data Sync portal UI for on-premises databases that are ass
 
 - **Resolution**. Create more space on the drive on which the %TEMP% directory is located.
 
-### <a name="sync-stuck"></a> My sync group is stuck in the processing state
+<a id="sync-stuck"></a>
+
+### My sync group is stuck in the processing state
 
 A sync group in SQL Data Sync has been in the processing state for a long time. It doesn't respond to the **stop** command, and the logs show no new entries.
 
@@ -77,7 +82,9 @@ Any of the following conditions might result in a sync group being stuck in the 
 > [!NOTE]
 > If the preceding information doesn't move your sync group out of the processing state, Microsoft Support can reset the status of your sync group. To have your sync group status reset, in the [Microsoft Q&A question page for Azure SQL Database](/answers/topics/azure-sql-database.html), create a post. In the post, include your subscription ID and the sync group ID for the group that needs to be reset. A Microsoft Support engineer will respond to your post, and will let you know when the status has been reset.
 
-### <a name="sync-baddata"></a> I see erroneous data in my tables
+<a id="sync-baddata"></a>
+
+### I see erroneous data in my tables
 
 If tables that have the same name but are from different database schemas are included in a sync, you see erroneous data in the tables after the sync.
 
@@ -85,7 +92,9 @@ If tables that have the same name but are from different database schemas are in
 
 - **Resolution**. Ensure that the names of tables that are involved in a sync are different, even if the tables belong to different schemas in a database.
 
-### <a name="sync-pkdata"></a> I see inconsistent primary key data after a successful sync
+<a id="sync-pkdata"></a>
+
+### I see inconsistent primary key data after a successful sync
 
 A sync is reported as successful, and the log shows no failed or skipped rows, but you observe that primary key data is inconsistent among the databases in the sync group.
 
@@ -93,7 +102,9 @@ A sync is reported as successful, and the log shows no failed or skipped rows, b
 
 - **Resolution**. To prevent this issue, ensure that no data in a primary key column is changed. To fix this issue after it has occurred, delete the row that has inconsistent data from all endpoints in the sync group. Then, reinsert the row.
 
-### <a name="sync-perf"></a> I see a significant degradation in performance
+<a id="sync-perf"></a>
+
+### I see a significant degradation in performance
 
 Your performance degrades significantly, possibly to the point where you can't even open the Data Sync UI.
 
@@ -101,13 +112,17 @@ Your performance degrades significantly, possibly to the point where you can't e
 
 - **Resolution**. The best fix is prevention. Ensure that you don't have circular references in your sync groups. Any row that is synced by one sync group can't be synced by another sync group.
 
-### <a name="sync-nulls"></a> I see this message: "Cannot insert the value NULL into the column \<column>. Column does not allow nulls." What does this mean, and how can I fix it? 
+<a id="sync-nulls"></a>
+
+### I see this message: "Cannot insert the value NULL into the column \<column>. Column does not allow nulls." What does this mean, and how can I fix it?
 
 This error message indicates that one of the two following issues has occurred:
 -  A table doesn't have a primary key. To fix this issue, add a primary key to all the tables that you're syncing.
 -  There's a WHERE clause in your CREATE INDEX statement. Data Sync doesn't handle this condition. To fix this issue, remove the WHERE clause or manually make the changes to all databases. 
  
-### <a name="sync-circ"></a> How does Data Sync handle circular references? That is, when the same data is synced in multiple sync groups, and keeps changing as a result?
+<a id="sync-circ"></a>
+
+### How does Data Sync handle circular references? That is, when the same data is synced in multiple sync groups, and keeps changing as a result?
 
 Data Sync doesn't handle circular references. Be sure to avoid them. 
 
@@ -133,7 +148,9 @@ To troubleshoot issues with the client agent, see [Troubleshoot Data Sync Agent 
 
 - [What happens when I restore a lost or corrupted database?](#setup-restore)
 
-### <a name="setup-space"></a> I get a "disk out of space" message
+<a id="setup-space"></a>
+
+### I get a "disk out of space" message
 
 - **Cause**. The "disk out of space" message might appear if leftover files need to be deleted. This might be caused by antivirus software, or files are open when delete operations are attempted.
 
@@ -142,7 +159,9 @@ To troubleshoot issues with the client agent, see [Troubleshoot Data Sync Agent 
 > [!IMPORTANT]
 > Don't delete any files while sync is in progress.
 
-### <a name="setup-delete"></a> I can't delete my sync group
+<a id="setup-delete"></a>
+
+### I can't delete my sync group
 
 Your attempt to delete a sync group fails. Any of the following scenarios might result in failure to delete a sync group:
 
@@ -164,7 +183,9 @@ Your attempt to delete a sync group fails. Any of the following scenarios might 
 
 - **Resolution**. Wait until the provisioning or sync process finishes and then retry deleting the sync group.
 
-### <a name="setup-unreg"></a> I can't unregister a SQL Server database
+<a id="setup-unreg"></a>
+
+### I can't unregister a SQL Server database
 
 - **Cause**. Most likely, you are trying to unregister a database that has already been deleted.
 
@@ -184,7 +205,9 @@ Your attempt to delete a sync group fails. Any of the following scenarios might 
   1. Select **Edit Credentials**, and then enter the credentials for the database.
   1. Proceed with unregistration.
 
-### <a name="setup-perms"></a> I don't have sufficient privileges to start system services
+<a id="setup-perms"></a>
+
+### I don't have sufficient privileges to start system services
 
 - **Cause**. This error occurs in two situations:
   -   The user name and/or the password are incorrect.
@@ -198,7 +221,9 @@ Your attempt to delete a sync group fails. Any of the following scenarios might 
   1. Select **Apply**, and then select **OK**.
   1. Close all windows.
 
-### <a name="setup-date"></a> A database has an "Out-of-Date" status
+<a id="setup-date"></a>
+
+### A database has an "Out-of-Date" status
 
 - **Cause**. SQL Data Sync removes databases that have been offline from the service for 45 days or more (as counted from the time the database went offline). If a database is offline for 45 days or more and then comes back online, its status is **Out-of-Date**.
 
@@ -212,7 +237,9 @@ Your attempt to delete a sync group fails. Any of the following scenarios might 
   > [!WARNING]
   > You lose all changes made to this database while it was offline.
 
-### <a name="setup-date2"></a> A sync group has an "Out-of-Date" status
+<a id="setup-date2"></a>
+
+### A sync group has an "Out-of-Date" status
 
 - **Cause**. If one or more changes fail to apply for the whole retention period of 45 days, a sync group can become outdated.
 
@@ -220,7 +247,9 @@ Your attempt to delete a sync group fails. Any of the following scenarios might 
 
   If a sync group's status is **Out-of-Date**, delete the sync group, and then re-create it.
 
-### <a name="setup-delete2"></a> A sync group can't be deleted within three minutes of uninstalling or stopping the agent
+<a id="setup-delete2"></a>
+
+### A sync group can't be deleted within three minutes of uninstalling or stopping the agent
 
 You can't delete a sync group within three minutes of uninstalling or stopping the associated SQL Data Sync client agent.
 
@@ -233,11 +262,15 @@ You can't delete a sync group within three minutes of uninstalling or stopping t
     b.  Install the agent on an on-premises computer (it can be the same or a different computer). Then, submit the agent key that's generated in the portal for the agent that's showing as offline.  
     c. Try to delete the sync group.
 
-### <a name="setup-restore"></a> What happens when I restore a lost or corrupted database?
+<a id="setup-restore"></a>
+
+### What happens when I restore a lost or corrupted database?
 
 If you restore a lost or corrupted database from a backup, there might be a non-convergence of data in the sync groups to which the database belongs.
 
-### <a name="syncGroupOperationResults"></a> Error message "Sync0022 Customer does not have authorization to perform action 'syncGroupOperationResults/read'"
+<a id="syncGroupOperationResults"></a>
+
+### Error message "Sync0022 Customer does not have authorization to perform action 'syncGroupOperationResults/read'"
 
 If you receive the error message `Sync0022 Customer does not have authorization to perform action 'syncGroupOperationResults/read'`, the account attempting the operation does not have sufficient subscription-level permissions. Add:
  - "Microsoft.Sql/locations/syncMemberOperationResults/read"
@@ -246,23 +279,16 @@ If you receive the error message `Sync0022 Customer does not have authorization 
 
 For more information, see [Resource provider operations RBAC](/azure/role-based-access-control/resource-provider-operations) and [SQL Data Sync Database accounts with least required privileges](sql-data-sync-best-practices.md#database-accounts-with-least-required-privileges).
 
-## Next steps
-For more information about SQL Data Sync, see:
+## Related content
 
--   Overview - [Sync data across multiple cloud and on-premises databases with SQL Data Sync in Azure](sql-data-sync-data-sql-server-sql-database.md)
--   Set up Data Sync
-    - In the portal - [Tutorial: Set up SQL Data Sync to sync data between Azure SQL Database and SQL Server](sql-data-sync-sql-server-configure.md)
-    - With PowerShell
-        -  [Use PowerShell to sync between multiple databases in Azure SQL Database](scripts/sql-data-sync-sync-data-between-sql-databases.md)
-        -  [Use PowerShell to sync between a database in Azure SQL Database and a database in a SQL Server instance](scripts/sql-data-sync-sync-data-between-azure-onprem.md)
--   Data Sync Agent - [Data Sync Agent for SQL Data Sync in Azure](sql-data-sync-agent-overview.md)
--   Best practices - [Best practices for SQL Data Sync in Azure](sql-data-sync-best-practices.md)
--   Monitor - [Monitor SQL Data Sync with Azure Monitor logs](./monitor-tune-overview.md)
--   Update the sync schema
-    -   With Transact-SQL - [Automate the replication of schema changes in SQL Data Sync in Azure](sql-data-sync-update-sync-schema.md)
-    -   With PowerShell - [Use PowerShell to update the sync schema in an existing sync group](scripts/update-sync-schema-in-sync-group.md)
-
-For more information about SQL Database, see:
-
--   [SQL Database Overview](sql-database-paas-overview.md)
--   [Database Lifecycle Management](/previous-versions/sql/sql-server-guides/jj907294(v=sql.110))
+- [What is SQL Data Sync for Azure?](sql-data-sync-data-sql-server-sql-database.md)
+- [Tutorial: Set up SQL Data Sync between databases in Azure SQL Database and SQL Server](sql-data-sync-sql-server-configure.md)
+- [Use PowerShell to sync data between multiple databases in Azure SQL Database](scripts/sql-data-sync-sync-data-between-sql-databases.md)
+- [Use PowerShell to sync data between SQL Database and SQL Server](scripts/sql-data-sync-sync-data-between-azure-onprem.md)
+- [Data Sync Agent for SQL Data Sync](sql-data-sync-agent-overview.md)
+- [Best practices for Azure SQL Data Sync](sql-data-sync-best-practices.md)
+- [Monitor and performance tuning in Azure SQL Database and Azure SQL Managed Instance](monitor-tune-overview.md)
+- [Automate the replication of schema changes in Azure SQL Data Sync](sql-data-sync-update-sync-schema.md)
+- [Use PowerShell to update the sync schema in an existing sync group](scripts/update-sync-schema-in-sync-group.md)
+- [What is Azure SQL Database?](sql-database-paas-overview.md)
+- [Database Lifecycle Management](/previous-versions/sql/sql-server-guides/jj907294(v=sql.110))

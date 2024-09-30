@@ -8,7 +8,7 @@ ms.date: 03/19/2021
 ms.service: azure-sql-database
 ms.subservice: migration-guide
 ms.topic: how-to
-ms.custom:
+ms.collection:
   - sql-migration-content
 ---
 
@@ -34,7 +34,7 @@ After you've met the prerequisites, you're ready to discover the topology of you
 
 ### Assess
 
-By using [SQL Server Migration Assistant (SSMA) for SAP Adaptive Server Enterprise (formally SAP Sybase ASE)](https://www.microsoft.com/download/details.aspx?id=54256), you can review database objects and data, assess databases for migration, migrate Sybase database objects to your SQL database, and then migrate data to the SQL database. To learn more, see [SQL Server Migration Assistant for Sybase (SybaseToSQL)](/sql/ssma/sybase/sql-server-migration-assistant-for-sybase-sybasetosql).
+By using [SQL Server Migration Assistant (SSMA) for SAP Adaptive Server Enterprise (formally SAP Sybase ASE)](https://www.microsoft.com/download/details.aspx?id=54256), you can review database objects and data, assess databases for migration, migrate Sybase database objects to your SQL database, and then migrate data to the SQL database. To learn more, see [SQL Server Migration Assistant for Sybase (SybaseToSQL)](/sql/ssma/sybase/sql-server-migration-assistant-for-sybase-sybasetosql).
 
 To create an assessment, do the following: 
 
@@ -68,7 +68,7 @@ To convert the schema, do the following:
 
 ## Migrate the databases 
 
-After you have the necessary prerequisites in place and have completed the tasks associated with the *pre-migration* stage, you're ready to run the schema and data migration.
+After you have the necessary prerequisites in place and have completed the tasks associated with the *pre-migration* stage, you're ready to run the schema and data migration.
 
 To publish the schema and migrate the data, do the following: 
 

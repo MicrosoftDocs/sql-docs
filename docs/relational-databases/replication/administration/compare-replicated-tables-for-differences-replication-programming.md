@@ -3,11 +3,12 @@ title: "Compare differences between replicated tables (Replication SP)"
 description: Use replication stored procedures to compare the differences between replicated tables on the Publisher and the Subscriber.
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/14/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: how-to
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "tablediff utility"
   - "comparing replicated tables"
@@ -66,7 +67,6 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
   
     -   (Optional) Use **-strict** to enforce strict schema comparison between source and destination tables.  
   
-## See Also  
- [Validate Data at the Subscriber](../../../relational-databases/replication/validate-data-at-the-subscriber.md)  
-  
-  
+## Related content
+
+- [Validate Data at the Subscriber](../../../relational-databases/replication/validate-data-at-the-subscriber.md)

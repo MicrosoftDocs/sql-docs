@@ -3,11 +3,12 @@ title: "Reporting Services site settings and site features (SharePoint mode)"
 description: There are site level custom features and site features you can manage in the SharePoint Site Settings page in Reporting Services SharePoint mode.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 09/25/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-server-sharepoint
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 monikerRange: ">=sql-server-2016 <=sql-server-2016"
 ---
 # Reporting Services site settings and site features (SharePoint mode)
@@ -44,6 +45,4 @@ Reporting Services SharePoint mode has several site level custom features and si
   
 ## Related content
 
- [Manage a Reporting Services SharePoint service application](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md)  
-  
-  
+- [Manage a Reporting Services SharePoint service application](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md)

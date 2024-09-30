@@ -39,7 +39,7 @@ The following section describes how to set up Azure Data Lake Storage Gen2 for t
 
 In order to use OAuth credentials to mount, you need to follow these steps:
 
-1. Go to the [Azure portal](https://portal.azure.com)
+1. Go to the [Azure portal](https://portal.azure.com)
 1. Navigate to **Microsoft Entra ID**. You should see this service on the left navigation bar.
 1. Select **App registrations** from the resource menu and create a new registration.
 1. Create a **Web Application** and follow the wizard. _Remember the name of the app you create in this step_. You will need to add this name to your ADLS account as an authorized user. Also note the Application client ID in the overview when you select the App.
@@ -53,7 +53,7 @@ In order to use OAuth credentials to mount, you need to follow these steps:
 
 ### Adding the service principal to your ADLS Account
 
-1. Go to the portal again, and navigate to your ADLS storage account file system and select Access control (IAM) in the left menu.
+1. Go to the portal again, and navigate to your ADLS storage account file system and select Access control (IAM) in the left menu.
 1. Select "Add a role assignment" 
 1. Select role "Storage Blob Data Contributor "
 1. Search for the name you created above (note that it does not show up in the list, but will be found if you search for the full name).

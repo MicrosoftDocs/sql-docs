@@ -3,13 +3,13 @@ title: "Report Builder tutorials"
 description: Use these tutorials to learn how to create basic SQL Server Reporting Services (SSRS) paginated reports, including ways to connect to data sources.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 07/08/2024
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: reporting-services
 ms.topic: tutorial
-ms.custom: updatefrequency5
-#customer intent: As a user of SQL Server Reporting Services (SSRS), I want to learn how to create, customize, and enhance paginated reports by using Report Builder tutorials so that I can effectively present and analyze my data.
-
+ms.custom:
+  - updatefrequency5
+# customer intent: As a user of SQL Server Reporting Services (SSRS), I want to learn how to create, customize, and enhance paginated reports by using Report Builder tutorials so that I can effectively present and analyze my data.
 ---
 # Report Builder tutorials
 
@@ -37,7 +37,6 @@ The [Report Builder](../reporting-services/report-builder/report-builder-in-sql-
 
 ## Related content
 
-- [Report design view](../reporting-services/report-builder/report-design-view-report-builder.md)   
+- [Report design view](../reporting-services/report-builder/report-design-view-report-builder.md)
 - [Alternative ways to get a data connection &#40;Report Builder&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md)
-
-More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231).
+- [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

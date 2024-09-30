@@ -3,11 +3,12 @@ title: "Configure Execution Properties for a Report - Reporting Services"
 description: Learn how to set report processing options to specify when to retrieve report data to avoid the overhead of retrieving the same data each time a report is requested.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 06/26/2019
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: reports
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "report execution properties [Reporting Services]"
   - "reports [Reporting Services], properties"
@@ -41,10 +42,10 @@ helpviewer_keywords:
 3.  Click **Apply**.  
   
 ## See Also  
- [Set Report Processing Properties](../../reporting-services/report-server/set-report-processing-properties.md)   
- [Contents Page &#40;Report Manager&#41;](/previous-versions/sql/sql-server-2016/ms186470(v=sql.130))   
- [Report Server Content Management &#40;SSRS Native Mode&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
- [Processing Options Properties Page &#40;Report Manager&#41;](/previous-versions/sql/sql-server-2016/ms178821(v=sql.130))  
+-  [Set Report Processing Properties](../../reporting-services/report-server/set-report-processing-properties.md)   
+-  [Contents Page &#40;Report Manager&#41;](/previous-versions/sql/sql-server-2016/ms186470(v=sql.130))   
+-  [Report Server Content Management &#40;SSRS Native Mode&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
+-  [Processing Options Properties Page &#40;Report Manager&#41;](/previous-versions/sql/sql-server-2016/ms178821(v=sql.130))  
   
 ::: moniker-end
 
@@ -72,8 +73,8 @@ From [the web portal of a report server (SSRS Native Mode)](../../reporting-serv
    >If you want to create a snapshot immediately, select the **New history snapshot** button instead of the **Schedules and settings** button, and a report snapshot will be created immediately.  
   
 ## See also  
- [Set Report Processing Properties](../../reporting-services/report-server/set-report-processing-properties.md)   
- [Report Server Content Management (SSRS Native Mode)](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
- [Set Report Processing Properties](../../reporting-services/report-server/set-report-processing-properties.md)   
+-  [Set Report Processing Properties](../../reporting-services/report-server/set-report-processing-properties.md)   
+-  [Report Server Content Management (SSRS Native Mode)](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
+-  [Set Report Processing Properties](../../reporting-services/report-server/set-report-processing-properties.md)   
 
 ::: moniker-end

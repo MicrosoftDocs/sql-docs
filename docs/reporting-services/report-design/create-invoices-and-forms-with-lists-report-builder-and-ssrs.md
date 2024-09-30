@@ -3,11 +3,12 @@ title: "Create invoices and forms with lists in a paginated report"
 description: Find out how to define and use lists to create free-form reports or forms and how to use lists in conjunction with other data regions in paginated reports in Report Builder.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/07/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 # Create invoices and forms with lists in a paginated report (Report Builder)
 
@@ -59,8 +60,7 @@ ms.custom: updatefrequency5
  ![Preview, 2 tables, one with nested chart](../../reporting-services/report-design/media/rs-basiclistgrouppreview.gif "Preview, 2 tables, one with nested chart")  
   
   
-## See Also  
- [Aggregate Functions Reference &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)   
- [Expression Examples &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
-  
-  
+## Related content
+
+- [Aggregate Functions Reference &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)
+- [Expression Examples &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)

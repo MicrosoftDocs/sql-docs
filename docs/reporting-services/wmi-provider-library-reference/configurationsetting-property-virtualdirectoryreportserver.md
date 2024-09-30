@@ -3,11 +3,12 @@ title: "ConfigurationSetting property - VirtualDirectoryReportServer"
 description: "ConfigurationSetting property - VirtualDirectoryReportServer"
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/01/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: wmi-provider-library-reference
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "VirtualDirectoryReportServer property"
 ---
@@ -33,7 +34,6 @@ public string VirtualDirectoryReportServer;
 ## Requirements  
  **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## Related content 
- [MSReportServer_ConfigurationSetting members](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
-  
-  
+## Related content
+
+- [MSReportServer_ConfigurationSetting members](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)

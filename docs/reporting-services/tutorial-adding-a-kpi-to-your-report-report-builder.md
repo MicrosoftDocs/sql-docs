@@ -3,11 +3,12 @@ title: "Tutorial: Add a KPI to your report (Report Builder)"
 description: Learn how to add a key performance indicator (KPI) to a Reporting Services paginated report in Report Builder.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 06/15/2016
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: reporting-services
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 # Tutorial: Add a KPI to your report (Report Builder)
 In this [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] tutorial, you add a key performance indicator (KPI) to a [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] paginated report.  
@@ -329,14 +330,9 @@ The report is saved to the report server. The name of report server that you're 
   
 2.  Select **Save**.  
   
-## Next steps  
-You successfully completed the Adding a KPI to Your Report tutorial. For more information, see:
-* [Gauges in a paginated report (Report Builder)](../reporting-services/report-design/gauges-report-builder-and-ssrs.md)
-* [Indicators in a paginated report (Report Builder)](../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  
-  
 ## Related content
 
-* [Report Builder tutorials](../reporting-services/report-builder-tutorials.md)
-* [Report Builder in SQL Server](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
-  
-
+- [Report Builder tutorials](../reporting-services/report-builder-tutorials.md)
+- [Report Builder in SQL Server](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)
+- [Gauges in a paginated report (Report Builder)](../reporting-services/report-design/gauges-report-builder-and-ssrs.md)
+- [Indicators in a paginated report (Report Builder)](../reporting-services/report-design/indicators-report-builder-and-ssrs.md)

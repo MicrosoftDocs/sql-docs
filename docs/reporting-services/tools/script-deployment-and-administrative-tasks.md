@@ -3,11 +3,12 @@ title: "Script deployment and administrative tasks"
 description: Learn about the tools, technologies and strategies for automating routine installation, deployment, and administrative tasks for a report server.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 05/30/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: tools
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "scripts [Reporting Services]"
   - "moving reports"
@@ -116,14 +117,13 @@ End Sub
 
 ## Related content
 
-[GenerateDatabaseCreationScript method &#40;WMI MSReportServer_ConfigurationSetting&#41;](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-generatedatabasecreationscript.md)   
-[GenerateDatabaseRightsScript method &#40;WMI MSReportServer_ConfigurationSetting&#41;](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-generatedatabaserightsscript.md)   
-[GenerateDatabaseUpgradeScript method &#40;WMI MSReportServer_ConfigurationSetting&#41;](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-generatedatabaseupgradescript.md)   
-[Install SQL Server from the command prompt](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)   
-[Install Reporting Services native mode report server](~/reporting-services/install-windows/install-reporting-services-native-mode-report-server.md)   
-[Reporting Services report server &#40;native mode&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
-[Report server command prompt utilities &#40;SSRS&#41;](../../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md)   
-[Browser support for Reporting Services](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)   
-[Reporting Services tools](../../reporting-services/tools/reporting-services-tools.md)  
-
-More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)
+- [GenerateDatabaseCreationScript method &#40;WMI MSReportServer_ConfigurationSetting&#41;](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-generatedatabasecreationscript.md)
+- [GenerateDatabaseRightsScript method &#40;WMI MSReportServer_ConfigurationSetting&#41;](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-generatedatabaserightsscript.md)
+- [GenerateDatabaseUpgradeScript method &#40;WMI MSReportServer_ConfigurationSetting&#41;](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-generatedatabaseupgradescript.md)
+- [Install SQL Server from the command prompt](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)
+- [Install Reporting Services native mode report server](~/reporting-services/install-windows/install-reporting-services-native-mode-report-server.md)
+- [Reporting Services report server &#40;native mode&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)
+- [Report server command prompt utilities &#40;SSRS&#41;](../../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md)
+- [Browser support for Reporting Services](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)
+- [Reporting Services tools](../../reporting-services/tools/reporting-services-tools.md)
+- [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

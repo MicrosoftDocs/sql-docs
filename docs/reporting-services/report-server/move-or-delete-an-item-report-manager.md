@@ -3,11 +3,12 @@ title: "Move or delete an item (Report Manager)"
 description: A Report Manager report server stores reports and related items in folders. You can move or delete items. Report server maintains references to items you move.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/01/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-server
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "moving items"
   - "items [Reporting Services], moving"
@@ -64,7 +65,7 @@ helpviewer_keywords:
   
 1.  Select **OK**.
   
-## Related content 
- [Contents page &#40;Report Manager&#41;](/previous-versions/sql/sql-server-2016/ms186470(v=sql.130))   
- [Find, view, and manage reports &#40;Report Builder and SSRS &#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
-  
+## Related content
+
+- [Contents page &#40;Report Manager&#41;](/previous-versions/sql/sql-server-2016/ms186470(v=sql.130))
+- [Find, view, and manage reports &#40;Report Builder and SSRS &#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)

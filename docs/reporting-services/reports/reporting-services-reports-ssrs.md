@@ -3,11 +3,12 @@ title: "Reporting Services Reports"
 description: Learn details about Reporting Services reports, including the benefits of the reports, how to create paginated reports, and how to view reports.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 06/19/2019
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: reports
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "Reporting Services, report creation"
 ---
@@ -110,10 +111,10 @@ helpviewer_keywords:
 -   **Consider which components can be re-used.**  Determine if any of the data sources or dataset queries can be shared for re-use. If so, on the report server or SharePoint site, create shared data sources and shared datasets. Determine if the data regions are suitable for re-use as report parts. For more information, see [Report Parts in Report Designer &#40;SSRS&#41;](../../reporting-services/report-design/report-parts-in-report-designer-ssrs.md).  
   
 ## Preview reports  
- Each report authoring tool supports previewing a report. For more information, see the [Preview](../../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md#bkmk_Preview) section of [Design Reports with Report Designer &#40;SSRS&#41;](../../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md), and [Previewing Reports in Report Builder](../../reporting-services/report-builder/previewing-reports-in-report-builder.md).  
+ Each report authoring tool supports previewing a report. For more information, see the [Preview a paginated report](../../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md#preview-a-paginated-report) section of [Design Reports with Report Designer &#40;SSRS&#41;](../../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md), and [Previewing Reports in Report Builder](../../reporting-services/report-builder/previewing-reports-in-report-builder.md).  
   
 ## Save or publish reports  
- Each authoring tool supports saving a report locally or publishing the report to a report server or SharePoint site. For more information, see the [Save and Deploy](../../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md#bkmk_SaveandDeploy) section of [Design Reports with Report Designer &#40;SSRS&#41;](../../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md), and [Saving Reports &#40;Report Builder&#41;](../../reporting-services/report-builder/saving-reports-report-builder.md).  
+ Each authoring tool supports saving a report locally or publishing the report to a report server or SharePoint site. For more information, see the [Save and deploy paginated reports](../../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md#save-and-deploy-paginated-reports) section of [Design Reports with Report Designer &#40;SSRS&#41;](../../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md), and [Saving Reports &#40;Report Builder&#41;](../../reporting-services/report-builder/saving-reports-report-builder.md).  
   
 ## View reports  
  In addition to previewing a report saved locally or published to a report server, you can provide a variety of viewing experiences for your report readers. To view a report:  
@@ -173,8 +174,8 @@ You can create data alerts for published reports on a SharePoint site. Data aler
   
 - **Determine where you can find more information.** For example, for report design that includes expressions, the Report Designer tool provides more information about expression evaluation issues than the Report Builder tool. For report processing errors, the log files contain detailed information.  
   
-## See also  
- [Reporting Services Tools](../../reporting-services/tools/reporting-services-tools.md)   
- [Extensions &#40;SSRS&#41;](../../reporting-services/extensions-ssrs.md)   
- [Comparing native and SharePoint Reporting Services report servers](../../reporting-services/report-server-sharepoint/reporting-services-report-server.md)  
-  
+## Related content
+
+- [Reporting Services Tools](../../reporting-services/tools/reporting-services-tools.md)
+- [Extensions &#40;SSRS&#41;](../../reporting-services/extensions-ssrs.md)
+- [Comparing native and SharePoint Reporting Services report servers](../../reporting-services/report-server-sharepoint/reporting-services-report-server.md)

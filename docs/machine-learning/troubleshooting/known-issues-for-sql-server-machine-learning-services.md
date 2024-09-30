@@ -538,26 +538,26 @@ For example, running this external script against the `master` database:
 
 ```sql
 USE MASTER
-DECLARE @language nvarchar(1) = N'R'
-DECLARE @script nvarchar(max) = N'Sys.sleep(100)'
-DECLARE @input_data_1 nvarchar(max) = N'select 1'
-EXEC sp_execute_external_script @language = @language, @script = @script, @input_data_1 = @input_data_1 with result sets none
+DECLARE @language nvarchar(1) = N'R'
+DECLARE @script nvarchar(max) = N'Sys.sleep(100)'
+DECLARE @input_data_1 nvarchar(max) = N'select 1'
+EXEC sp_execute_external_script @language = @language, @script = @script, @input_data_1 = @input_data_1 with result sets none
 go
 ```
 
 While the dbo in parallel installs a library in LibraryManagementFunctional:
 
 ```sql
-USE [LibraryManagementFunctional]
+USE [LibraryManagementFunctional]
 go
 
-CREATE EXTERNAL LIBRARY [RODBC] FROM (CONTENT = N'/home/ani/var/opt/mssql/data/RODBC_1.3-16.tar.gz') WITH (LANGUAGE = 'R')
+CREATE EXTERNAL LIBRARY [RODBC] FROM (CONTENT = N'/home/ani/var/opt/mssql/data/RODBC_1.3-16.tar.gz') WITH (LANGUAGE = 'R')
 go
 
-DECLARE @language nvarchar(1) = N'R'
-DECLARE @script nvarchar(14) = N'library(RODBC)'
-DECLARE @input_data_1 nvarchar(8) = N'select 1'
-EXEC sp_execute_external_script @language = @language, @script = @script, @input_data_1 = @input_data_1
+DECLARE @language nvarchar(1) = N'R'
+DECLARE @script nvarchar(14) = N'library(RODBC)'
+DECLARE @input_data_1 nvarchar(8) = N'select 1'
+EXEC sp_execute_external_script @language = @language, @script = @script, @input_data_1 = @input_data_1
 go
 ```
 
@@ -732,13 +732,13 @@ For example:
 
 ```sql
 EXEC sp_execute_external_script
-    @language = N'Python'
-    , @script = N'
+    @language = N'Python'
+    , @script = N'
 OutputDataSet = InputDataSet'
-    , @input_data_1 = N'select 1'
-    , @input_data_1_name = N'InputDataSet'
-    , @output_data_1_name = N'OutputDataSet'
-    WITH RESULT SETS (([output] int not null));
+    , @input_data_1 = N'select 1'
+    , @input_data_1_name = N'InputDataSet'
+    , @output_data_1_name = N'OutputDataSet'
+    WITH RESULT SETS (([output] int not null));
 ```
 
 ```output
@@ -752,10 +752,10 @@ SqlSatelliteCall error: Failed to load library /opt/mssql-extensibility/lib/sqls
 STDOUT message(s) from external script:
 SqlSatelliteCall function failed. Please see the console output for more information.
 Traceback (most recent call last):
-  File "/opt/mssql/mlservices/libraries/PythonServer/revoscalepy/computecontext/RxInSqlServer.py", line 605, in rx_sql_satellite_call
-    rx_native_call("SqlSatelliteCall", params)
-  File "/opt/mssql/mlservices/libraries/PythonServer/revoscalepy/RxSerializable.py", line 375, in rx_native_call
-    ret = px_call(functionname, params)
+  File "/opt/mssql/mlservices/libraries/PythonServer/revoscalepy/computecontext/RxInSqlServer.py", line 605, in rx_sql_satellite_call
+    rx_native_call("SqlSatelliteCall", params)
+  File "/opt/mssql/mlservices/libraries/PythonServer/revoscalepy/RxSerializable.py", line 375, in rx_native_call
+    ret = px_call(functionname, params)
 RuntimeError: revoscalepy function failed.
 Total execution time: 00:01:00.387
 ```

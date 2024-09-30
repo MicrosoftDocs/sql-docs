@@ -3,11 +3,12 @@ title: "Add a background image to a paginated report"
 description: Discover how to embed an image in the paginated report definition to add the image to various report items including text boxes, lists, and page header.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/01/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 # Add a background image to a paginated report (Report Builder)
 
@@ -59,7 +60,7 @@ You can add a background image to a paginated report item such as a rectangle, t
   
          For background images in a chart, **BackgroundRepeat** can be set to **Default**, **Repeat**, **Fit**, and **Clip**, but not **RepeatX** or **RepeatY**.  
   
-## Related content  
- [Images &#40;Report Builder&#41;](../../reporting-services/report-design/images-report-builder-and-ssrs.md)   
- [Image Properties dialog, General &#40;Report Builder&#41;](./images-report-builder-and-ssrs.md)  
-  
+## Related content
+
+- [Images &#40;Report Builder&#41;](../../reporting-services/report-design/images-report-builder-and-ssrs.md)
+- [Image Properties dialog, General &#40;Report Builder&#41;](./images-report-builder-and-ssrs.md)

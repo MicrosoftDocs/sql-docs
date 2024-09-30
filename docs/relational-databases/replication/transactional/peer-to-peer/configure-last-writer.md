@@ -3,7 +3,7 @@ title: Configure last writer conflict detection & resolution
 description: Describes how to configure last writer conflict detection and resolution for peer-to-peer replication.
 author: MikeRayMSFT
 ms.author: mikeray
-ms.date: 11/1/2021
+ms.date: 09/25/2024
 ms.service: sql
 ms.topic: how-to
 ms.custom:
@@ -268,7 +268,7 @@ EXEC sp_addpushsubscription_agent @publication = N'PublMW'
 GO
 ```
 
-## See also
+## Related content
 
 - [Peer-to-Peer - Conflict Detection in Peer-to-Peer Replication](../peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)
 - [Transactional Articles - Specify How Changes Are Propagated](../transactional-articles-specify-how-changes-are-propagated.md)

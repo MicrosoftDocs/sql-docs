@@ -151,7 +151,7 @@ You might need to restore your Hyperscale database to a region that's different 
 >  
 > If the target is in the paired region, data transfer will be within a region. That transfer will be significantly faster than a cross-region data transfer. But it will still be a size-of-data operation.
 
-If you prefer, you can copy the database to a different region. Use this method if geo-restore isn't available because it's not supported with the selected storage redundancy type. For details, see [Database copy for Hyperscale](database-copy.md#database-copy-for-azure-sql-hyperscale).
+If you prefer, you can copy the database to a different region. Use this method if geo-restore isn't available because it's not supported with the selected storage redundancy type. For details, see [Database copy for Hyperscale](database-copy.md#database-copy-for-hyperscale-databases).
 
 ## Related content
 

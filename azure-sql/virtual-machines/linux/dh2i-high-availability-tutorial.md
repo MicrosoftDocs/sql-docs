@@ -51,7 +51,7 @@ In this tutorial, you create a three node Linux-based cluster running the availa
 For this tutorial, don't install SQL Server on the Windows VM, because this node isn't going to be part of the cluster, and is used only to manage the cluster using DxAdmin.
 
 After you complete this step, you should have SQL Server and [SQL Server tools](/sql/linux/sql-server-linux-setup-tools) (optionally) installed on all three Linux-based VMs that participate in the availability group.
- 
+ 
 ## Install DxEnterprise on VMs and Configure the cluster
 
 In this step, install DH2i DxEnterprise for Linux on the three Linux VMs. The following table describes the role each server plays in the cluster:

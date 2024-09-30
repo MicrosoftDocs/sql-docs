@@ -3,11 +3,12 @@ title: "Linking multiple data regions to the same dataset in a paginated report"
 description: Find out how to add multiple data regions to a paginated report to provide different views of data from the same report dataset in Report Builder.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 05/30/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 
 # Linking multiple data regions to the same dataset in a paginated report (Report Builder)
@@ -25,10 +26,9 @@ You can add multiple data regions to a paginated report to provide different vie
   
  A matrix with multiple row and column groups can best be displayed by using an area, bar, or column chart with both category and series groups. Use the same group expressions for column groups on the matrix and category groups on the chart, and the same group expressions for row groups on the matrix and series groups on the chart. You must keep in mind that the number of group instances affects the readability of the chart. You can define groups based on range values to reduce the number of group instances in a report. For more information, see [Group Expression Examples](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md).  
   
-## Next steps
+## Related content
 
-[Charts](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
-[Tables, Matrices, and Lists](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
-[Nested Data Regions](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md)  
-
-More questions? [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)
+- [Charts](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)
+- [Tables, Matrices, and Lists](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)
+- [Nested Data Regions](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md)
+- [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)

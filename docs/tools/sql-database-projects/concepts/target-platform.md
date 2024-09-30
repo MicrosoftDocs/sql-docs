@@ -35,16 +35,16 @@ The target platform project property is contained in the `DSP` tag in the `.sqlp
 
 Valid values for the target platform in the `DSP` tag include:
 
-- Microsoft.Data.Tools.Schema.Sql.Sql120DatabaseSchemaProvider
-- Microsoft.Data.Tools.Schema.Sql.Sql130DatabaseSchemaProvider
-- Microsoft.Data.Tools.Schema.Sql.Sql140DatabaseSchemaProvider
-- Microsoft.Data.Tools.Schema.Sql.Sql150DatabaseSchemaProvider
-- Microsoft.Data.Tools.Schema.Sql.Sql160DatabaseSchemaProvider
-- Microsoft.Data.Tools.Schema.Sql.SqlAzureV12DatabaseSchemaProvider
-- Microsoft.Data.Tools.Schema.Sql.SqlDbFabricDatabaseSchemaProvider
-- Microsoft.Data.Tools.Schema.Sql.SqlDwDatabaseSchemaProvider
-- Microsoft.Data.Tools.Schema.Sql.SqlServerlessDatabaseSchemaProvider
-- Microsoft.Data.Tools.Schema.Sql.SqlDwUnifiedDatabaseSchemaProvider
+- `Microsoft.Data.Tools.Schema.Sql.Sql120DatabaseSchemaProvider` (SQL Server 2014)
+- `Microsoft.Data.Tools.Schema.Sql.Sql130DatabaseSchemaProvider` (SQL Server 2016)
+- `Microsoft.Data.Tools.Schema.Sql.Sql140DatabaseSchemaProvider` (SQL Server 2017)
+- `Microsoft.Data.Tools.Schema.Sql.Sql150DatabaseSchemaProvider` (SQL Server 2019)
+- `Microsoft.Data.Tools.Schema.Sql.Sql160DatabaseSchemaProvider` (SQL Server 2022)
+- `Microsoft.Data.Tools.Schema.Sql.SqlAzureV12DatabaseSchemaProvider` (Azure SQL Database)
+- `Microsoft.Data.Tools.Schema.Sql.SqlDbFabricDatabaseSchemaProvider` (Fabric Mirrored SQL Database, preview)
+- `Microsoft.Data.Tools.Schema.Sql.SqlDwDatabaseSchemaProvider` (Azure Synapse SQL Pool)
+- `Microsoft.Data.Tools.Schema.Sql.SqlServerlessDatabaseSchemaProvider` (Azure Synapse Serverless SQL Pool)
+- `Microsoft.Data.Tools.Schema.Sql.SqlDwUnifiedDatabaseSchemaProvider` (Synapse Data Warehouse in Microsoft Fabric)
 
 ## Alter the target platform
 
@@ -54,11 +54,11 @@ To change the target platform of a SQL project in Visual Studio, right-click the
 
 ::: zone-end
 
-<!-- ::: zone pivot="sq1-visual-studio-sdk"
+::: zone pivot="sq1-visual-studio-sdk"
 
 To change the target platform of a SQL project in Visual Studio, right-click the project in **Solution Explorer** and select **Properties**. In the **Project Settings** tab of the properties window, select the desired target platform from the **Target platform** dropdown list.
 
-::: zone-end -->
+::: zone-end
 
 ::: zone pivot="sq1-visual-studio-code"
 
@@ -80,7 +80,7 @@ dotnet build /p:DSP=Microsoft.Data.Tools.Schema.Sql.Sql150DatabaseSchemaProvider
 
 ## Publish to a different target platform
 
-When publishing a SQL project, the target platform of the project must match the target platform of the database. If the target platforms don't match, the deployment will exit before applying any changes with an error. To publish a project to a database with a different target platform, use the `/p:AllowIncompatiblePlatform=true` [publish property](../../sqlpackage/sqlpackage-publish.md#properties-specific-to-the-publish-action).
+When you publish a SQL project, the target platform of the project must match the target platform of the database. If the target platforms don't match, the deployment exits before applying any changes with an error. To publish a project to a database with a different target platform, use the `/p:AllowIncompatiblePlatform=true` [publish property](../../sqlpackage/sqlpackage-publish.md#properties-specific-to-the-publish-action).
 
 ## Related content
 

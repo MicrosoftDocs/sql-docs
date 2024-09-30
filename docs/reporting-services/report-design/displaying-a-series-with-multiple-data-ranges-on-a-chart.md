@@ -3,11 +3,12 @@ title: "Displaying a series with multiple data ranges on a paginated report char
 description: Discover ways to improve readability of your paginated report charts using scale breaks, filters, and by separating the data ranges in Report Builder.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/07/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 
 # Displaying a series with multiple data ranges on a paginated report chart (Report Builder)
@@ -56,13 +57,12 @@ ms.custom: updatefrequency5
   
  An example of chart with scale breaks is available as a sample report. For more information about downloading this sample report and others, see [Report Builder and Report Designer sample reports](../../reporting-services/tools/reporting-services-tools.md).
 
-## Next steps
+## Related content
 
-[Multiple Series on a Chart](../../reporting-services/report-design/multiple-series-on-a-chart-report-builder-and-ssrs.md)   
-[Formatting a Chart](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
-[3D, Bevel, and Other Effects in a Chart](../../reporting-services/report-design/chart-effects-3d-bevel-and-other-report-builder.md)   
-[Charts](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
-[Axis Properties Dialog Box, Axis Options](/previous-versions/sql/)   
-[Collect Small Slices on a Pie Chart](../../reporting-services/report-design/collect-small-slices-on-a-pie-chart-report-builder-and-ssrs.md)  
-
-More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)
+- [Multiple Series on a Chart](../../reporting-services/report-design/multiple-series-on-a-chart-report-builder-and-ssrs.md)
+- [Formatting a Chart](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)
+- [3D, Bevel, and Other Effects in a Chart](../../reporting-services/report-design/chart-effects-3d-bevel-and-other-report-builder.md)
+- [Charts](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)
+- [Axis Properties Dialog Box, Axis Options](/previous-versions/sql/)
+- [Collect Small Slices on a Pie Chart](../../reporting-services/report-design/collect-small-slices-on-a-pie-chart-report-builder-and-ssrs.md)
+- [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

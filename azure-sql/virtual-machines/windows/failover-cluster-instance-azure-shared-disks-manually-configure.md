@@ -205,9 +205,11 @@ To add an additional node to the SQL Server FCI, follow these steps:
 
 ## Register with SQL IaaS Agent extension
 
-To manage your SQL Server VM from the portal, register it with the [SQL IaaS Agent extension](sql-agent-extension-manually-register-single-vm.md). Note that only [limited functionality](sql-server-iaas-agent-extension-automate-management.md#feature-benefits) will be available to SQL Server VMs that have failover clustered instances of SQL Server (FCIs).
+To manage your SQL Server VM from the portal, register it with the [SQL IaaS Agent extension](sql-agent-extension-manually-register-single-vm.md). 
 
-If your SQL Server VM has already been registered with the SQL IaaS Agent extension and you've enabled any features that require the agent, you'll need to [delete the extension](sql-agent-extension-manually-register-single-vm.md#delete-the-extension) from the SQL Server VM and register it again after your FCI is installed.
+> [!NOTE]
+> At this time, SQL Server failover cluster instances on Azure virtual machines registered with the SQL IaaS Agent extension only support a [limited](failover-cluster-instance-overview.md#limited-extension-support) number of features available through basic registration, and not those that require the agent, such as automated backup, patching, Microsoft Entra authentication and advanced portal management. See the [table of benefits](sql-server-iaas-agent-extension-automate-management.md#feature-benefits) to learn more. 
+
 
 Register a SQL Server VM with PowerShell (-LicenseType can be `PAYG` or `AHUB`):
 
@@ -226,8 +228,9 @@ If you deployed your SQL Server VMs in multiple subnets, skip this step. If you 
 
 ## Limitations
 
-- Azure virtual machines support Microsoft Distributed Transaction Coordinator (MSDTC) on Windows Server 2019 with storage on CSVs and a [standard load balancer](/azure/load-balancer/load-balancer-overview). MSDTC is not supported on Windows Server 2016 and earlier.
-- SQL Server FCIs registered with the SQL IaaS Agent extension don't support features that require the agent, such as automated backup, patching, Microsoft Entra authentication and advanced portal management. See the [table of benefits](sql-server-iaas-agent-extension-automate-management.md#feature-benefits) for more information.
+- MSDTC is not supported on Windows Server 2016 and earlier.
+
+[!INCLUDE [virtual-machines-fci-limitations](../../includes/virtual-machines-fci-limitations.md)]
 
 ## Next steps
 

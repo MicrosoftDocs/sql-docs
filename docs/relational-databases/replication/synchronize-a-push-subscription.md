@@ -3,11 +3,12 @@ title: "Synchronize a Push Subscription"
 description: Learn how to synchronize a push subscription in SQL Server by using SQL Server Management Studio, replication agents, or Replication Management Objects.
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/14/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: how-to
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "synchronization [SQL Server replication], push subscriptions"
   - "subscriptions [SQL Server replication], push"
@@ -267,9 +268,8 @@ REM -- The following command must be supplied without line breaks.
   
  [!code-vb[HowTo#rmo_vb_SyncMergePushSub](../../relational-databases/replication/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_syncmergepushsub)]  
   
-## See Also  
- [Replication Management Objects Concepts](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)   
- [Synchronize Data](../../relational-databases/replication/synchronize-data.md)   
- [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md)  
-  
-  
+## Related content
+
+- [Replication Management Objects Concepts](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)
+- [Synchronize Data](../../relational-databases/replication/synchronize-data.md)
+- [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md)

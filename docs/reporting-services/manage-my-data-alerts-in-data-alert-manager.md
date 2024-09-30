@@ -3,11 +3,12 @@ title: "Manage My Data Alerts in Data Alert Manager"
 description: Learn how to view a list of the data alerts that they created and information about the alerts in Data Alert Manager.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 08/17/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: reporting-services
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "managing, alerts"
   - "managing, data alerts"
@@ -67,7 +68,6 @@ SharePoint users can view a list of the data alerts that they created and inform
 
 ## Related content
 
-- [Data Alert Manager for alerting administrators](../reporting-services/data-alert-manager-for-alerting-administrators.md)   
-- [Reporting Services data alerts](../reporting-services/reporting-services-data-alerts.md)  
-
-More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)
+- [Data Alert Manager for alerting administrators](../reporting-services/data-alert-manager-for-alerting-administrators.md)
+- [Reporting Services data alerts](../reporting-services/reporting-services-data-alerts.md)
+- [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

@@ -1,7 +1,7 @@
 ---
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 01/11/2024
+ms.date: 09/12/2024
 ms.topic: include
 ---
 | Error | Severity | Event logged | Description |
@@ -58,6 +58,19 @@ ms.topic: include
 | 23579 | 16 | No | This procedure is reserved and cannot be called. |
 | 23587 | 16 | No | File stream cannot be null. |
 | 23588 | 16 | No | Container ids must be the same. |
+| 23622 | 16 | No | Change Streams requires Change feed to be enabled. |
+| 23623 | 16 | No | The feature switch enabling support for using Event Hub with change streams is disabled. // ErrorCause: Change Streams has not enabled support for Event Hub. |
+| 23624 | 16 | No | The caller does not have permission to use '%s'. |
+| 23625 | 16 | No | The argument '%s' failed validation. |
+| 23626 | 16 | No | An error occured. The error/state returned was %d/%d: '%s'. |
+| 23627 | 16 | No | An error occured when configuring change feed. |
+| 23628 | 16 | No | The argument '%s' failed validation. Expects: 'schemaName.objectName' |
+| 23629 | 16 | No | The configuration already exists in '%s'. |
+| 23630 | 16 | No | Change Streams could not create the object configuration. |
+| 23631 | 16 | No | The configuration does not exists in '%s'. |
+| 23632 | 16 | No | Change Streams could not remove the object configuration. |
+| 23633 | 16 | No | Change Streams could not drop the object configuration from the group. |
+| 23701 | 16 | No | Database '%ls' went to suspect state. Backup cannot be performed on a database that is in suspect state. |
 | 23996 | 16 | No | The request could not be performed because of an device I/O error. |
 | 23997 | 16 | No | System error occurred {ErrorCode: %d}. |
 | 23998 | 16 | No | Not enough memory available in the system to process the request. |

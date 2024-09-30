@@ -21,32 +21,20 @@ tags: azure-resource-manager
 
 Automated Backup automatically configures [Managed Backup to Microsoft Azure](/sql/relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure) for all existing and new databases on an Azure VM running SQL Server 2014 Standard or Enterprise. This enables you to configure regular database backups that utilize durable Azure Blob storage. Automated Backup depends on the [SQL Server infrastructure as a service (IaaS) Agent Extension](sql-server-iaas-agent-extension-automate-management.md).
 
-[!INCLUDE [learn-about-deployment-models](../../includes/learn-about-deployment-models-rm-include.md)]
-
 ## Prerequisites
-To use Automated Backup, consider the following prerequisites:
 
+To use Automated Backups for your SQL Server on Azure VM, you need: 
 
-**Operating system**:
-
-- Windows Server 2012 and greater 
-
-**SQL Server version/edition**:
-
-- SQL Server 2014 Standard
-- SQL Server 2014 Enterprise
-
-> [!NOTE]
-> For SQL 2016 and greater, see [Automated Backup for SQL Server 2016](automated-backup.md).
-
-**Database configuration**:
-
-- Target _user_ databases must use the full recovery model. System databases do not have to use the full recovery model. However, if you require log backups to be taken for `model` or `msdb`, you must use the full recovery model. For more information about the impact of the full recovery model on backups, see [Backup under the full recovery model](/previous-versions/sql/sql-server-2008-r2/ms190217(v=sql.105)). 
-- The SQL Server VM has been registered with the [SQL IaaS Agent extension](sql-server-iaas-agent-extension-automate-management.md) and the **automated backup** feature is enabled. Since automated backup relies on the extension, automated backup is only supported on target databases from the default instance, or a single named instance. If there is no default instance, and multiple named instances, the SQL IaaS Agent extension fails and automated backup won't work. 
+- A SQL Server on Azure VMs registered with the [SQL IaaS Agent extension](sql-server-iaas-agent-extension-automate-management.md).
+- Windows Server 2012 or later.
+- SQL Server 2014, Standard, or Enterprise.  For later SQL Server versions, see [Automated Backup for SQL Server 2016 and later](automated-backup.md).
+- **Database configuration**:
+   - Target _user_ databases must use the full recovery model. System databases don't have to use the full recovery model. However, if you require log backups to be taken for `model` or `msdb`, you must use the full recovery model. For more information about the impact of the full recovery model on backups, see [Backup under the full recovery model](/previous-versions/sql/sql-server-2008-r2/ms190217(v=sql.105)). 
+   - The SQL Server VM has been registered with the [SQL IaaS Agent extension](sql-server-iaas-agent-extension-automate-management.md) and the **automated backup** feature is enabled. Since automated backup relies on the extension, automated backup is only supported on target databases from the default instance, or a single named instance. If there's no default instance, and multiple named instances, the SQL IaaS Agent extension fails, and automated backup won't work. 
 
 ## Settings
 
-The following table describes the options that can be configured for Automated Backup. The actual configuration steps vary depending on whether you use the Azure portal or Azure Windows PowerShell commands. Note that Automated backup uses [backup compression](/sql/database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option) by default and you cannot disable it.
+The following table describes the options that can be configured for Automated Backup. The actual configuration steps vary depending on whether you use the Azure portal or Azure Windows PowerShell commands. Note that Automated backup uses [backup compression](/sql/database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option) by default and you can't disable it.
 
 | Setting | Range (Default) | Description |
 | --- | --- | --- |
@@ -76,7 +64,7 @@ Navigate to the [SQL virtual machines resource](manage-sql-vm-portal.md#access-t
 
 When finished, select the **Apply** button on the bottom of the **Backups** page to save your changes.
 
-If you are enabling Automated Backup for the first time, Azure configures the SQL Server IaaS Agent in the background. During this time, the Azure portal might not show that Automated Backup is configured. Wait several minutes for the agent to be installed and configured. After that, the Azure portal will reflect the new settings.
+If you're enabling Automated Backup for the first time, Azure configures the SQL Server IaaS Agent in the background. During this time, the Azure portal might not show that Automated Backup is configured. Wait several minutes for the agent to be installed and configured. After that, the Azure portal will reflect the new settings.
 
 > [!NOTE]
 > You can also configure Automated Backup using a template. For more information, see [Azure quickstart template for Automated Backup](https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/microsoft.compute/vm-sql-existing-autobackup-update).
@@ -127,7 +115,7 @@ If your output shows that **Enable** is set to **False**, then you have to enabl
 ### Configure Automated Backup
 You can use PowerShell to enable Automated Backup as well as to modify its configuration and behavior at any time.
 
-First, select or create a storage account for the backup files. The following script selects a storage account or creates it if it does not exist.
+First, select or create a storage account for the backup files. The following script selects a storage account or creates it if it doesn't exist.
 
 ```powershell
 $vmname = "yourvmname"
@@ -259,21 +247,21 @@ Update-AzSqlVM -ResourceGroupName $resourcegroupname -Name $vmname -AutoBackupSe
 
 ## Backup with encryption certificates
 
-If you decide to encrypt your backups, an encryption certificate will be generated and saved in the same storage account as the backups. In this scenario, you will also need to enter a password which will be used to protect the encryption certificates used for encrypting and decrypting your backups. This allows you to not worry about your backups beyond the configuration of this feature, and also ensures you can trust that your backups are secure.
+If you decide to encrypt your backups, an encryption certificate will be generated and saved in the same storage account as the backups. In this scenario, you'll also need to enter a password which will be used to protect the encryption certificates used for encrypting and decrypting your backups. This allows you to not worry about your backups beyond the configuration of this feature, and also ensures you can trust that your backups are secure.
 
-When backup encryption is enabled, we strongly recommend that you ascertain whether the encryption certificate has been successfully created and uploaded to ensure restorability of your databases. You can do so by creating a database right away and checking the encryption certificates and data were backed up to the newly created container properly. This will show that everything was configured correctly and no anomalies took place.
+When backup encryption is enabled, we strongly recommend that you ascertain whether the encryption certificate has been successfully created and uploaded to ensure restorability of your databases. You can do so by creating a database right away and checking the encryption certificates and data were backed up to the newly created container properly. This shows that everything is configured correctly and no anomalies took place.
 
-If the certificate failed to upload for some reason, you can use the certificate manager to export the certificate and save it. You do not want to save it on the same VM, however, as this does not ensure you have access to the certificate when the VM is down. To know if the certificate was backed up properly after changing or creating the Automated Backup configuration, you can check the event logs in the VM,  and if it failed you will see this error message:
+If the certificate failed to upload for some reason, you can use the certificate manager to export the certificate and save it. You don't want to save it on the same VM, however, as this doesn't ensure you have access to the certificate when the VM is down. To know if the certificate was backed up properly after changing or creating the Automated Backup configuration, you can check the event logs in the VM,  and if it failed you'll see this error message:
 
-:::image type="content" source="./media/automated-backup-sql-2014/automated-backup-event-log.png" alt-text="Screenshot of the error message shown in the Event Log in VM.":::
+:::image type="content" source="./media/automated-backup-sql-2014/automated-backup-event-log.png" alt-text="Screenshot of the error message shown in the Event Log on VM.":::
 
-If the certificates were backed up correctly, you will see this message in the Event Logs:
+If the certificates were backed up correctly, you'll see this message in the Event Logs:
 
 :::image type="content" source="./media/automated-backup-sql-2014/automated-backup-success.png" alt-text="Screenshot of the successful backup of encryption certificate in event logs.":::
 
-As a general practice, it is recommended to check on the health of your backups from time to time. In order to be able to restore your backups, you should do the following:
+As a general practice, it's recommended to check on the health of your backups from time to time. In order to be able to restore your backups, you should do the following:
 
-1. Confirm that your encryption certificates have been backed up and you remember your password. If you do not do this, you will not be able to decrypt and restore your backups. If for some reason your certificates were not properly backed up, you can accomplish this manually by executing the following T-SQL query:
+1. Confirm that your encryption certificates have been backed up and you remember your password. If you don't do this, you won't be able to decrypt and restore your backups. If for some reason your certificates weren't properly backed up, you can accomplish this manually by executing the following T-SQL query:
 
    ```sql
    BACKUP MASTER KEY TO FILE = <file_path> ENCRYPTION BY PASSWORD = <password>
@@ -302,7 +290,7 @@ Another option is to take advantage of the built-in Database Mail feature for no
 
 ## Next steps
 
-Automated Backup configures Managed Backup on Azure VMs. So it is important to [review the documentation for Managed Backup on SQL Server 2014](/sql/relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure).
+Automated Backup configures Managed Backup on Azure VMs. So it's important to [review the documentation for Managed Backup on SQL Server 2014](/sql/relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure).
 
 You can find additional backup and restore guidance for SQL Server on Azure VMs in the following article: [Backup and restore for SQL Server on Azure virtual machines](backup-restore.md).
 

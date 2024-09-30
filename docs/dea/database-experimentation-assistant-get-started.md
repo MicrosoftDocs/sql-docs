@@ -12,6 +12,9 @@ ms.topic: conceptual
 
 # Overview of the workload comparison process
 
+> [!NOTE]  
+> This tool will be retired on **December 15, 2024**. We will stop supporting this tool for any issues that arise, and will not issue any bug fixes or further updates.
+
 Database Experimentation Assistant (DEA) helps you evaluate how the workload on your source server (in your current environment) will perform in your new environment. DEA guides you through running an A/B test by completing three stages:
 
 - Capturing a workload trace on the source server.

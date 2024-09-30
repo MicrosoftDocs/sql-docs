@@ -3,11 +3,12 @@ title: "Built-in collections in expressions in a paginated report"
 description: Discover built-in collections in expressions to reference collections in a paginated report such as parameters, fields, datasets in your reports in Report Builder.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 3/14/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 # Built-in collections in expressions in a paginated report (Report Builder)
 
@@ -46,7 +47,6 @@ ms.custom: updatefrequency5
 |*Collection.Member*|`=User.Language`|  
   
 ## Related content
- [Add an expression &#40;Report Builder&#41;](../../reporting-services/report-design/add-an-expression-report-builder-and-ssrs.md)   
- [Expression examples &#40;Report Builder&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
-  
-  
+
+- [Add an expression &#40;Report Builder&#41;](../../reporting-services/report-design/add-an-expression-report-builder-and-ssrs.md)
+- [Expression examples &#40;Report Builder&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)

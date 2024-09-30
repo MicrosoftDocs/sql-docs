@@ -3,11 +3,12 @@ title: "Report server in Management Studio F1 Help"
 description: View information about the features for managing report servers in SQL Server Management Studio.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/20/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: tools
 ms.topic: reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "Object Explorer, help"
 ---
@@ -49,7 +50,6 @@ helpviewer_keywords:
 -   [User role properties](../../reporting-services/tools/user-role-properties-management-studio.md)  
   
 ## Related content
- [Feature reference (Reporting Services)](../../reporting-services/feature-reference-reporting-services.md)  
- [Use SQL Server Management Studio](~/ssms/use-sql-server-management-studio.md) 
 
-  
+- [Feature reference (Reporting Services)](../../reporting-services/feature-reference-reporting-services.md)
+- [Use SQL Server Management Studio](~/ssms/use-sql-server-management-studio.md)

@@ -3,7 +3,7 @@ title: "Deploy the SQL Server Reporting Services Report Viewer web part on a Sha
 description: For SQL Server Reporting Services, you can manually add the Report Viewer custom web part to a SharePoint product.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 11/15/2018
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-server-sharepoint
 ms.topic: conceptual
@@ -26,7 +26,7 @@ Use the following instructions to manually deploy the solution package that adds
 
 > [!IMPORTANT]
 > Starting with version "15.X.X.X" you can install the ```ReportViewerWebPart``` side by side with your existing Reporting Services SharePoint integrated mode shared service applications.
-> With this update of the .wsp solution we introduced new files and the previous solution must be retracted and the new .wsp redeployed by using the ```Uninstall-SPSolution``` and ```Install-SPSolution``` cmdlets, respectively.
+> With this update of the .wsp solution we introduced new files and the previous solution must be retracted and the new .wsp redeployed by using the ```Uninstall-SPSolution``` and ```Install-SPSolution``` cmdlets, respectively.
 >
 
 **Support SharePoint Server versions:**
@@ -167,6 +167,5 @@ The following languages are supported with the web part:
 
 ## Related content
 
-After the Report Viewer web part is deployed and activated, you can add the web part to a SharePoint page. For more information, see [Add Report Viewer web part to a SharePoint page](add-report-viewer-web-part-to-page.md).
-
-More questions? [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)
+- [Add Report Viewer web part to a SharePoint page](add-report-viewer-web-part-to-page.md)
+- [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)

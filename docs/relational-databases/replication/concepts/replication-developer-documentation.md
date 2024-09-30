@@ -3,11 +3,12 @@ title: "Replication Developer Documentation"
 description: "Replication Developer Documentation"
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/14/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: "reference"
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "developer's guide [SQL Server replication]"
   - "programming [SQL Server replication]"

@@ -3,14 +3,14 @@ title: "Migrate a Reporting Services Installation (Native Mode)"
 description: Learn how to migrate a supported version of Reporting Services Installation native mode deployment to a new SQL Server Reporting Services instance.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 08/20/2024
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-server
 ms.topic: conceptual
 ms.custom:
   - intro-migration
   - updatefrequency5
-#customer intent: As an SSRS user, I want to migrate Reporting Services Installation (native mode) to a new SSRS instance so that I can increase the scale and productivity of my work.
+# customer intent: As an SSRS user, I want to migrate Reporting Services Installation (native mode) to a new SSRS instance so that I can increase the scale and productivity of my work.
 ---
 
 # Migrate a Reporting Services Installation (Native Mode)
@@ -293,12 +293,11 @@ After you successfully migrate your report server to a new instance, you should 
   
 1. Remove IIS if you no longer need it on this computer.
 
-## Next steps
+## Related content
 
-- [Migrate a Reporting Services Installation (SharePoint Mode)](../../reporting-services/install-windows/migrate-a-reporting-services-installation-sharepoint-mode.md)  
+- [Migrate a Reporting Services Installation (SharePoint Mode)](../../reporting-services/install-windows/migrate-a-reporting-services-installation-sharepoint-mode.md)
 - [Report server database (SSRS native mode)](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)
 - [Upgrade and migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)
 - [Reporting Services backward compatibility](../../reporting-services/reporting-services-backward-compatibility.md)
-- [What is Report Server Configuration Manager (Native mode)?](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
-
-More questions? [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)
+- [What is Report Server Configuration Manager (Native mode)?](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)
+- [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)

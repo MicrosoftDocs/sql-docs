@@ -3,13 +3,13 @@ title: Add and verify a data connection in Report Builder
 description: Learn how to use Report Builder to add and verify a data connection to make sure that the credentials you specify are sufficient.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 08/01/2024
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-data
 ms.topic: how-to
-ms.custom: updatefrequency5
-
-#customer intent: As a Report Builder user, I want to learn how to add and verify data sources so that I can use the shared data sources from my report servers.
+ms.custom:
+  - updatefrequency5
+# customer intent: As a Report Builder user, I want to learn how to add and verify data sources so that I can use the shared data sources from my report servers.
 ---
 
 # Add and verify a data connection in Report Builder

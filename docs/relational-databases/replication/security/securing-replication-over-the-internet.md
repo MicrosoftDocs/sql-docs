@@ -3,11 +3,12 @@ title: "Securing Replication Over the Internet"
 description: "Securing Replication Over the Internet"
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/14/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: how-to
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "security [SQL Server replication], Internet"
   - "Internet [SQL Server replication], security"
@@ -31,8 +32,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ## Web Synchronization Through IIS  
  The web synchronization option for merge replication provides the ability to replicate data using the HTTPS protocol, which can be a convenient approach to replicating data through a firewall. For more information, see [Configure Web Synchronization](../../../relational-databases/replication/configure-web-synchronization.md) and [Security Architecture for Web Synchronization](../../../relational-databases/replication/security/security-architecture-for-web-synchronization.md).  
   
-## See Also  
- [Replication Security Best Practices](../../../relational-databases/replication/security/replication-security-best-practices.md)   
- [View and modify replication security settings](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)  
-  
-  
+## Related content
+
+- [Replication Security Best Practices](../../../relational-databases/replication/security/replication-security-best-practices.md)
+- [View and modify replication security settings](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)

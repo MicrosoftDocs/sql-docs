@@ -3,11 +3,12 @@ title: "Custom report items"
 description: Learn about custom report items and how they consist of a run-time component and a design-time component.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/03/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: custom-report-items
 ms.topic: reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "extending Reporting Services"
   - "Reporting Services, extending"
@@ -42,7 +43,6 @@ helpviewer_keywords:
  [Custom report item class libraries](../../reporting-services/custom-report-items/custom-report-item-class-libraries.md)  
  Describes the custom report item infrastructure classes and managed wrapper classes in the **Microsoft.ReportDesigner** namespace.  
   
-## Related content  
- [Technical reference &#40;SSRS&#41;](../../reporting-services/technical-reference-ssrs.md)  
-  
-  
+## Related content
+
+- [Technical reference &#40;SSRS&#41;](../../reporting-services/technical-reference-ssrs.md)

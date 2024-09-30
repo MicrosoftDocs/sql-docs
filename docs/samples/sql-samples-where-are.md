@@ -4,14 +4,14 @@ description: View information about the WideWorldImporters and AdventureWorks sa
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest
-ms.date: 10/20/2022
+ms.date: 09/27/2024
 ms.service: sql
 ms.subservice: samples
 ms.topic: conceptual
 ---
 # SQL samples
 
-[!INCLUDE[sql-asdb-asa-pdw](../includes/applies-to-version/sql-asdb-asa-pdw.md)]
+[!INCLUDE [sql-asdb-asa-pdw](../includes/applies-to-version/sql-asdb-asa-pdw.md)]
 
 Locations of sample databases and code samples for Microsoft SQL products.
 
@@ -20,9 +20,6 @@ Locations of sample databases and code samples for Microsoft SQL products.
 Code samples for SQL products are in the [Microsoft SQL Server samples](https://github.com/microsoft/sql-server-samples) GitHub repository. Each sample includes a README file that explains how to run and use the sample. The main README for the samples repository explains how to contribute.
 
 The samples and templates are all licensed under the MIT license. See the license.txt file in the root.
-
-Email questions to: sqlserversamples@microsoft.com.
-
 ## WideWorldImporters sample database
 
 WideWorldImporters (WWI) is a sample database that showcases database design using current features, tools and design techniques. WideWorldImporters downloads include an OLTP and an OLAP database, which are built to run on SQL Server 2016 and later.

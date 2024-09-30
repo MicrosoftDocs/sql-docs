@@ -3,14 +3,15 @@ title: "Configure a URL (Report Server Configuration Manager)"
 description: Learn how to create and configure a URL and set advanced URL properties to define more URLs for the report server web service.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 08/14/2024
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-server
 ms.topic: how-to
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "URL access [Reporting Services], syntax"
-#customer intent: As an SSRS user, I want to learn to configure a URL by using the Report Server Configuration Manager so that I can create URLs and set advanced URL properties.
+# customer intent: As an SSRS user, I want to learn to configure a URL by using the Report Server Configuration Manager so that I can create URLs and set advanced URL properties.
 ---
 # Configure a URL (Report Server Configuration Manager)
 

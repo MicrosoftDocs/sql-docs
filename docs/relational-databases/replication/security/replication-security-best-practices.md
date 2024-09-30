@@ -3,11 +3,12 @@ title: "Replication Security Best Practices"
 description: Learn about the best approach for securing replication connections in SQL Server in a variety of different circumstances.
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/14/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: how-to
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "security [SQL Server replication], best practices"
   - "security [SQL Server replication], between domains"
@@ -60,10 +61,11 @@ helpviewer_keywords:
   
     -   In situations that require [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Authentication, access to UNC snapshot shares is often not available (for example access might be blocked by a firewall). In this case, you can transfer the snapshot to Subscribers through file transfer protocol (FTP). For more information, see [Transfer Snapshots Through FTP](../../../relational-databases/replication//publish/deliver-a-snapshot-through-ftp.md).  
   
-## See Also  
- [Enable Encrypted Connections to the Database Engine &#40;SQL Server Configuration Manager&#41;](../../../database-engine/configure-windows/configure-sql-server-encryption.md)   
- [Replication over the Internet](../../../relational-databases/replication/replication-over-the-internet.md)   
- [Secure the Subscriber](../../../relational-databases/replication/security/secure-the-subscriber.md)   
- [Secure the Distributor](../../../relational-databases/replication/security/secure-the-distributor.md)   
- [Secure the Publisher](../../../relational-databases/replication/security/secure-the-publisher.md)   
- [View and modify replication security settings](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)  
+## Related content
+
+- [Enable Encrypted Connections to the Database Engine &#40;SQL Server Configuration Manager&#41;](../../../database-engine/configure-windows/configure-sql-server-encryption.md)
+- [Replication over the Internet](../../../relational-databases/replication/replication-over-the-internet.md)
+- [Secure the Subscriber](../../../relational-databases/replication/security/secure-the-subscriber.md)
+- [Secure the Distributor](../../../relational-databases/replication/security/secure-the-distributor.md)
+- [Secure the Publisher](../../../relational-databases/replication/security/secure-the-publisher.md)
+- [View and modify replication security settings](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)

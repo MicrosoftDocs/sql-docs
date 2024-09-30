@@ -3,11 +3,12 @@ title: "Detect & resolve conflicts in logical records (Merge)"
 description: Learn about the various combinations of conflict detection and conflict resolution approaches possible when using logical records with Merge replication.
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/14/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: how-to
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "logical records [SQL Server replication]"
   - "conflict resolution [SQL Server replication], merge replication"
@@ -97,7 +98,6 @@ helpviewer_keywords:
   
  ![Third series of tables showing changes to related rows.](../../../relational-databases/replication/merge/media/logical-records-08.gif "Series of tables showing changes to related rows")  
   
-## See Also  
- [Group Changes to Related Rows with Logical Records](../../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md)  
-  
-  
+## Related content
+
+- [Group Changes to Related Rows with Logical Records](../../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md)

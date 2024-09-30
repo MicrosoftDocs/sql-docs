@@ -3,11 +3,12 @@ title: "Managing Report Parts"
 description: Organize report parts for multiple users and reports, with choices of flexible options for publishing, permissions, and security.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/14/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 # Managing Report Parts
 
@@ -83,9 +84,8 @@ Report parts can be reused in paginated reports, by multiple users and in multip
   
 -   Report parts use the same permission policies as the existing "Resource" item type. Within a folder, there is no differentiation between traditional resource items and report parts from a security inheritance perspective. The report part will inherit the same permission policy as the images in the same folder. When this distinction is needed, item level security can be configured for the desired report parts. Or, you can put report parts should be in separate folders that have the correct permissions configured.  
   
-## See Also  
- [Report Parts and Datasets in Report Builder](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)   
- [Report Server Content Management &#40;SSRS Native Mode&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
- [Report Parts in Report Designer &#40;SSRS&#41;](../../reporting-services/report-design/report-parts-in-report-designer-ssrs.md)  
-  
-  
+## Related content
+
+- [Report Parts and Datasets in Report Builder](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)
+- [Report Server Content Management &#40;SSRS Native Mode&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)
+- [Report Parts in Report Designer &#40;SSRS&#41;](../../reporting-services/report-design/report-parts-in-report-designer-ssrs.md)

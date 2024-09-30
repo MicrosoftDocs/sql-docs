@@ -3,11 +3,12 @@ title: "Generate SQL Script (Replication Objects)"
 description: "Generate SQL Script (Replication Objects)"
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/14/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: how-to
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 f1_keywords:
   - "sql13.rep.generatesqlscript.f1"
 helpviewer_keywords:
@@ -49,7 +50,6 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
  **Replication jobs**  
  This option is available only from the **Generate SQL Script** dialog box.  
   
-## See Also  
- [Scripting Replication](../../relational-databases/replication/scripting-replication.md)  
-  
-  
+## Related content
+
+- [Scripting Replication](../../relational-databases/replication/scripting-replication.md)

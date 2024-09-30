@@ -3,16 +3,16 @@ title: Use ExecutionLog and the ExecutionLog3 view in Reporting Services
 description: See the report server execution log that's in Reporting Services, which contains information about reports on servers in native mode or a SharePoint farm.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 09/04/2024
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-server
 ms.topic: how-to
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "logs [Reporting Services], execution"
   - "execution logs [Reporting Services]"
-
-#customer intent: As a Reporting Services user, I want to see how to use ExecutionLog and the ExecutionLog3 view so that I can access information about my report server.
+# customer intent: As a Reporting Services user, I want to see how to use ExecutionLog and the ExecutionLog3 view so that I can access information about my report server.
 ---
 # Use ExecutionLog and the ExecutionLog3 view in Reporting Services
 
@@ -371,5 +371,4 @@ select * from ExecutionLog order by TimeStart DESC
 ## Related content
 
 - [Reporting Services log files and sources](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)
-- [Errors and events reference &#40;Reporting Services&#41;](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
-  
+- [Errors and events reference &#40;Reporting Services&#41;](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)

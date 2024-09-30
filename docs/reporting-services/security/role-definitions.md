@@ -3,11 +3,12 @@ title: "Role definitions"
 description: "Role definitions"
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/14/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: security
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "roles [Reporting Services], creating"
   - "roles [Reporting Services], security"
@@ -46,11 +47,11 @@ helpviewer_keywords:
   
  You can delete a role definition if you're no longer using it. You can't delete the role definition that is selected for the My Reports feature as long as that feature is enabled. Before you can delete the role definition used for My Reports, you must first disable the feature or select a different role definition to use with it.  
   
-## Related content 
- [Tasks and permissions](../../reporting-services/security/tasks-and-permissions.md)   
- [Grant permissions on a native mode report server](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
- [Create, delete, or modify a role &#40;Management Studio&#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)   
- [Grant user access to a report server &#40;Report Manager&#41;](./grant-user-access-to-a-report-server.md)   
- [Modify or delete a role assignment &#40;Report Manager&#41;](../../reporting-services/security/role-assignments-modify-or-delete.md)   
- [Set permissions for report server items on a SharePoint site &#40;Reporting Services in SharePoint integrated mode&#41;](../../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)  
-  
+## Related content
+
+- [Tasks and permissions](../../reporting-services/security/tasks-and-permissions.md)
+- [Grant permissions on a native mode report server](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)
+- [Create, delete, or modify a role &#40;Management Studio&#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)
+- [Grant user access to a report server &#40;Report Manager&#41;](./grant-user-access-to-a-report-server.md)
+- [Modify or delete a role assignment &#40;Report Manager&#41;](../../reporting-services/security/role-assignments-modify-or-delete.md)
+- [Set permissions for report server items on a SharePoint site &#40;Reporting Services in SharePoint integrated mode&#41;](../../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)

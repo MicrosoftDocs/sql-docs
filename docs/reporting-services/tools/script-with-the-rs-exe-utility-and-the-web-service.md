@@ -3,11 +3,12 @@ title: "Script with the rs.exe utility and the web service"
 description: Learn about the RS.exe utility that can be used to programmatically administer a report server by using scripts written with Microsoft Visual Basic.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/14/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: tools
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "Web service [Reporting Services], scripts"
   - "rs utility"
@@ -27,9 +28,8 @@ helpviewer_keywords:
  [SQL Server Reporting Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=177889).  
   
 ## Related content
- [Script deployment and administrative tasks](../../reporting-services/tools/script-deployment-and-administrative-tasks.md)   
- [Report server web service](../../reporting-services/report-server-web-service/report-server-web-service.md)   
- [Technical reference &#40;SSRS&#41;](../../reporting-services/technical-reference-ssrs.md)   
- [RS.exe utility &#40;SSRS&#41;](../../reporting-services/tools/rs-exe-utility-ssrs.md)  
-  
-  
+
+- [Script deployment and administrative tasks](../../reporting-services/tools/script-deployment-and-administrative-tasks.md)
+- [Report server web service](../../reporting-services/report-server-web-service/report-server-web-service.md)
+- [Technical reference &#40;SSRS&#41;](../../reporting-services/technical-reference-ssrs.md)
+- [RS.exe utility &#40;SSRS&#41;](../../reporting-services/tools/rs-exe-utility-ssrs.md)

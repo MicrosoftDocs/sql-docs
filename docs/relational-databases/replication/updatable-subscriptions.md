@@ -3,11 +3,12 @@ title: "Updatable Subscriptions"
 description: "Updatable Subscriptions"
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/14/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: ui-reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 f1_keywords:
   - "sql13.rep.newsubwizard.updatablesubscriptions.f1"
 ---
@@ -28,10 +29,9 @@ f1_keywords:
   
 -   Select **Queue changes and commit when possible** for a queued updating subscription.  
   
-## See Also  
- [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
- [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)   
- [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)   
- [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)  
-  
-  
+## Related content
+
+- [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)
+- [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)
+- [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)
+- [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)

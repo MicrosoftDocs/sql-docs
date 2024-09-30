@@ -3,12 +3,13 @@ title: SQL Server Reporting Services features supported by editions
 description: Learn about SQL Server Reporting Services (SSRS) features supported by the different editions of SQL Server.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 08/14/2024
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: reporting-services
 ms.topic: conceptual
-ms.custom: updatefrequency5
-#customer intent: As an SSRS user, I want to understand the features supported by different editions of SQL Server so that I can use all of those available to me.
+ms.custom:
+  - updatefrequency5
+# customer intent: As an SSRS user, I want to understand the features supported by different editions of SQL Server so that I can use all of those available to me.
 ---
 # SQL Server Reporting Services features supported by editions
 
@@ -99,5 +100,4 @@ The following software client applications are available on the Microsoft Downlo
 - [Editions and supported features of SQL Server 2019](~/sql-server/editions-and-components-of-sql-server-version-15.md)
 - [Release notes for SQL Server Reporting Services (SSRS)](release-notes-reporting-services.md)
 - [What's new in SQL Server Reporting Services (SSRS)](~/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)
-
-More questions? Ask the [SQL Server Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user).
+- [SQL Server Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)

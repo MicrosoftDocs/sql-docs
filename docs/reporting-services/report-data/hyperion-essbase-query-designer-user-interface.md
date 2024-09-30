@@ -3,11 +3,12 @@ title: "Hyperion Essbase Query Designer User Interface"
 description: Learn how to use the Hyperion Essbase query designer user interface to retrieve data when a report is processed.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/01/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-data
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 f1_keywords:
   - "10013"
   - "sql13.rtp.rptdesigner.dataview.hyperionessbasequerydesigner.f1"
@@ -92,8 +93,7 @@ helpviewer_keywords:
   
 -   **AutoExecute** (![AutoExecute the query](../../reporting-services/report-data/media/rsqdicon-autoexecute.gif "AutoExecute the query"))  
   
-## See Also  
- [Create a Shared Dataset or Embedded Dataset &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
- [RSReportDesigner Configuration File](../../reporting-services/report-server/rsreportdesigner-configuration-file.md)  
-  
-  
+## Related content
+
+- [Create a Shared Dataset or Embedded Dataset &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)
+- [RSReportDesigner Configuration File](../../reporting-services/report-server/rsreportdesigner-configuration-file.md)

@@ -3,11 +3,12 @@ title: "Reporting Services concepts"
 description: Learn about SQL Server Reporting Services (SSRS) concepts, including scheduling reports, roles and permissions, and report subscriptions and delivery.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 10/25/2016
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: reporting-services
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 # Reporting Services concepts (SSRS)
   This article provides a brief summary of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] concepts.  
@@ -170,10 +171,10 @@ You create Reporting Services mobile reports (.rsmobile files) in SQL Server Mob
  A report snapshot is a report that contains layout information and query results that were retrieved at a specific point in time. Unlike on-demand reports, which get up-to-date query results when you view the report, the report server retrieves the compiled report and report data that were current for the report at the time the snapshot was created. Report snapshots aren't saved in a particular rendering format. Instead, report snapshots are rendered in a final viewing format (such as HTML) only when a user or an application requests it. For more information, see [Performance, snapshots, caching &#40;Reporting Services&#41;](../reporting-services/report-server/performance-snapshots-caching-reporting-services.md).  
    
 ### Saved reports  
- A saved paginated report is a report definition (.rdl) file. A report definition can be saved locally or uploaded to a report server. If you upload a report definition instead of publishing it, no version validation or expression validation occurs. You don't see errors until the report runs. For more information, see [Save and deploy Reporting Services reports](../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md#bkmk_SaveandDeploy).  
+ A saved paginated report is a report definition (.rdl) file. A report definition can be saved locally or uploaded to a report server. If you upload a report definition instead of publishing it, no version validation or expression validation occurs. You don't see errors until the report runs. For more information, see [Save and deploy paginated reports](../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md#save-and-deploy-paginated-reports).  
   
 ### Published reports
- A published report is a report server item that you publish to a report server from a [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] tool. On a native report server, you publish the report to a folder that you have permissions to. On a SharePoint report server, you can publish the report to a document library that is enabled with report content type. To share the report that uses others, they must have permission to view the report. For more information, see [Save and deploy Reporting Services reports](../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md#bkmk_SaveandDeploy).  
+ A published report is a report server item that you publish to a report server from a [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] tool. On a native report server, you publish the report to a folder that you have permissions to. On a SharePoint report server, you can publish the report to a document library that is enabled with report content type. To share the report that uses others, they must have permission to view the report. For more information, see [Save and deploy paginated reports](../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md#save-and-deploy-paginated-reports).  
   
 ### Upgraded reports
  An upgraded report is a published report definition that is converted to a newer schema when a report server is upgraded from one version of [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] to a later version. The original report definition is preserved. The report is upgraded in memory, compiled, and the compiled version is saved internally. For more information, see [Upgrade Reporting Services reports](../reporting-services/install-windows/upgrade-reports.md).  
@@ -205,7 +206,6 @@ You create Reporting Services mobile reports (.rsmobile files) in SQL Server Mob
   
 ## Related content
 
-- [Reporting Services features and tasks &#40;SSRS&#41;](../reporting-services/reporting-services-features-and-tasks-ssrs.md)   
-- [Technical reference &#40;SSRS&#41;](../reporting-services/technical-reference-ssrs.md)   
-- [Reporting Services &#40;SSRS&#41;](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)  
-  
+- [Reporting Services features and tasks &#40;SSRS&#41;](../reporting-services/reporting-services-features-and-tasks-ssrs.md)
+- [Technical reference &#40;SSRS&#41;](../reporting-services/technical-reference-ssrs.md)
+- [Reporting Services &#40;SSRS&#41;](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)

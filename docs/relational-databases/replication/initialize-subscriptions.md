@@ -3,11 +3,12 @@ title: "Initialize Subscriptions"
 description: "Initialize Subscriptions"
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/14/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: ui-reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 f1_keywords:
   - "sql13.rep.newsubwizard.initializesubscriptions.f1"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
@@ -25,10 +26,9 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 > [!NOTE]  
 >  The wizard might prompt for a connection to the Distributor in order to start the appropriate job for the Distribution Agent or Merge Agent.  
   
-## See Also  
- [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
- [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)   
- [Initialize a Subscription](../../relational-databases/replication/initialize-a-subscription.md)   
- [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)  
-  
-  
+## Related content
+
+- [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)
+- [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)
+- [Initialize a Subscription](../../relational-databases/replication/initialize-a-subscription.md)
+- [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)

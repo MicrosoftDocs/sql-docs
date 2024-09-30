@@ -6,7 +6,7 @@ summary: "Find documentation about the Azure SQL family of SQL Server database e
 metadata:
   title: Azure SQL documentation
   description:  "Azure SQL is a family of SQL Server database engine products in the cloud, from a fully managed database in Azure SQL Database, a fully managed instance in Azure SQL Managed Instance, or SQL Server installed to virtual machine in Azure."
-  services: sql-database
+  services: azure-sql
   ms.service: azure-sql
   ms.subservice: service-overview
   ms.tgt_pltfrm: na
@@ -15,7 +15,7 @@ metadata:
   author: MashaMSFT
   ms.author: mathoma
   ms.reviewer: wiassaf, mathoma
-  ms.date: 07/30/2023
+  ms.date: 09/27/2024
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
@@ -34,6 +34,8 @@ landingContent:
         links:
           - text: What's new? 
             url: database/doc-changes-updates-release-notes-whats-new.md
+          - text: Try for free
+            url: database/free-offer.md
       - linkListType: quickstart
         links:
           - text: Create SQL Database
@@ -48,12 +50,14 @@ landingContent:
             url: /shows/azure-sql-database-essentials/
       - linkListType: concept
         links:
+          - text: Copilot in Azure SQL Database 
+            url: copilot/copilot-azure-sql-overview.md
           - text: Advanced security
             url: database/security-overview.md
           - text: Business continuity
             url: database/business-continuity-high-availability-disaster-recover-hadr-overview.md
-          - text: Monitoring and tuning
-            url: database/monitor-tune-overview.md
+          - text: Database watcher (Preview)
+            url: database-watcher-overview.md
           - text: T-SQL differences with SQL Server
             url: database/transact-sql-tsql-differences-sql-server.md
 
@@ -69,6 +73,8 @@ landingContent:
         links:
           - text: What's new? 
             url: managed-instance/doc-changes-updates-release-notes-whats-new.md
+          - text: Try for free
+            url: managed-instance/free-offer.md
       - linkListType: quickstart
         links:
           - text: Create SQL Managed Instance 
@@ -87,8 +93,8 @@ landingContent:
             url: database/security-overview.md
           - text: Business continuity
             url: database/business-continuity-high-availability-disaster-recover-hadr-overview.md
-          - text: Monitoring and tuning
-            url: database/monitor-tune-overview.md
+          - text: Database watcher (Preview)
+            url: database-watcher-overview.md
           - text: T-SQL differences with SQL Server
             url: managed-instance/transact-sql-tsql-differences-sql-server.md
 
@@ -102,6 +108,8 @@ landingContent:
             url: virtual-machines/windows/sql-server-on-azure-vm-iaas-what-is-overview.md
           - text: What is SQL Server on Linux VM? 
             url: virtual-machines/linux/sql-server-on-linux-vm-what-is-iaas-overview.md
+          - text: SQL IaaS Agent extension
+            url: virtual-machines/windows/sql-server-iaas-agent-extension-automate-management.md
       - linkListType: whats-new
         links:
           - text: What's new? 
@@ -140,21 +148,29 @@ landingContent:
         - text: Educational SQL resources
           url: /sql/sql-server/educational-sql-resources
 
-   # Card
-  - title: Migrate from SQL Server
+  # Card
+  - title: Connect and query 
     linkLists:
-      - linkListType: overview
+      - linkListType: quickstart
         links:
-          - text: Migrating SQL Server Workloads FAQ
-            url: migration-guides/modernization.md
-      - linkListType: deploy
-        links:
-          - text: Azure SQL Database
-            url: migration-guides/database/sql-server-to-sql-database-overview.md 
-          - text: Azure SQL Managed Instance 
-            url: migration-guides/managed-instance/sql-server-to-managed-instance-overview.md
-          - text: SQL Server on Azure VMs
-            url: migration-guides/virtual-machines/sql-server-to-sql-on-azure-vm-migration-overview.md          
+          - text: Overview
+            url: database/connect-query-content-reference-guide.md 
+          - text: SQL Server Management Studio (SSMS)
+            url: database/connect-query-ssms.md
+          - text: Azure Data Studio
+            url: /azure-data-studio/quickstart-sql-database?toc=/azure/azure-sql/toc.json
+          - text: Azure portal
+            url: database/connect-query-portal.md 
+          - text: Visual Studio (.NET)
+            url: database/connect-query-dotnet-visual-studio.md
+          - text: Visual Studio Code
+            url: database/connect-query-vscode.md 
+          - text: .NET Core
+            url: database/connect-query-dotnet-core.md
+          - text: Python
+            url: database/connect-query-python.md
+          - text: With Microsoft Entra ID (formerly Azure Active Directory) and SqlClient
+            url: /sql/connect/ado-net/sql/azure-active-directory-authentication
 
 
   # Card 
@@ -192,31 +208,6 @@ landingContent:
             url: /rest/api/sql/
 
   # Card
-  - title: Connect and query 
-    linkLists:
-      - linkListType: quickstart
-        links:
-          - text: Overview
-            url: database/connect-query-content-reference-guide.md 
-          - text: SQL Server Management Studio (SSMS)
-            url: database/connect-query-ssms.md
-          - text: Azure Data Studio
-            url: /azure-data-studio/quickstart-sql-database?toc=/azure/azure-sql/toc.json
-          - text: Azure portal
-            url: database/connect-query-portal.md 
-          - text: Visual Studio (.NET)
-            url: database/connect-query-dotnet-visual-studio.md
-          - text: Visual Studio Code
-            url: database/connect-query-vscode.md 
-          - text: .NET Core
-            url: database/connect-query-dotnet-core.md
-          - text: Python
-            url: database/connect-query-python.md
-          - text: With Microsoft Entra ID (formerly Azure Active Directory) and SqlClient
-            url: /sql/connect/ado-net/sql/azure-active-directory-authentication
-
-
-  # Card
   - title: Development
     linkLists:
       - linkListType: overview
@@ -239,3 +230,22 @@ landingContent:
             url: database/design-first-database-tutorial.md
           - text: Design first database (C#)
             url: database/design-first-database-csharp-tutorial.md
+
+   # Card
+  - title: Migrate from SQL Server
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: Migrating SQL Server Workloads FAQ
+            url: migration-guides/modernization.md
+      - linkListType: deploy
+        links:
+          - text: Azure SQL Database
+            url: migration-guides/database/sql-server-to-sql-database-overview.md 
+          - text: Azure SQL Managed Instance 
+            url: migration-guides/managed-instance/sql-server-to-managed-instance-overview.md
+          - text: SQL Server on Azure VMs
+            url: migration-guides/virtual-machines/sql-server-to-sql-on-azure-vm-migration-overview.md    
+
+
+

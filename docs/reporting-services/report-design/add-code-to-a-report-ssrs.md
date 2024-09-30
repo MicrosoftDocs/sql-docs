@@ -3,11 +3,12 @@ title: "Add code to a paginated report"
 description: Find out how to call your own custom code for any expression you have in your paginated report in Report Builder.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/14/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "code [Reporting Services]"
   - "custom code [Reporting Services]"
@@ -52,8 +53,8 @@ helpviewer_keywords:
   
      If you add this expression to a table cell that displays category values, whenever the word `Bike` is in the dataset field for that row, the table cell value displays the word `Bicycle` instead.  
   
-## Related content 
- [Report properties dialog, code](./expressions-report-builder-and-ssrs.md)   
- [Expression examples &#40;Report Builder&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
- [Parameters collection references &#40;Report Builder&#41;](../../reporting-services/report-design/built-in-collections-parameters-collection-references-report-builder.md)  
-  
+## Related content
+
+- [Report properties dialog, code](./expressions-report-builder-and-ssrs.md)
+- [Expression examples &#40;Report Builder&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)
+- [Parameters collection references &#40;Report Builder&#41;](../../reporting-services/report-design/built-in-collections-parameters-collection-references-report-builder.md)

@@ -3,11 +3,12 @@ title: "Add or delete an indicator in a paginated report"
 description: Learn how to add or delete an indicator in your paginated reports to convey the state of a single data value in Report Builder.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/01/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 # Add or delete an indicator in a paginated report (Report Builder)
 
@@ -66,7 +67,6 @@ ms.custom: updatefrequency5
   
 1.  Select **Delete**.  
   
-## Related content  
- [Indicators &#40;Report Builder&#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  
-  
-  
+## Related content
+
+- [Indicators &#40;Report Builder&#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)

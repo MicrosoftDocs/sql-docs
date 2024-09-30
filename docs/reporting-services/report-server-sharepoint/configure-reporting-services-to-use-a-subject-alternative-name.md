@@ -3,11 +3,12 @@ title: "Configure Reporting Services to use a Subject Alternative Name (SAN)"
 description: Learn how to configure SQL Server Reporting Services and Power BI Report Server to use a SAN by modifying the rsreportserver.config file and using the Netsh.exe tool.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 06/30/2021
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: security
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 # Configure Reporting Services to use a Subject Alternative Name (SAN)
 
@@ -140,9 +141,8 @@ For more information about TLS settings for Reporting Services, see [Configure T
   
 ## Related content
 
- [RsReportServer.config configuration file](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
- [Report Server Configuration Manager](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
- [Modify a Reporting Services configuration file](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
- [Configure report server URLs](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)
-
-More questions? [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)
+- [RsReportServer.config configuration file](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)
+- [Report Server Configuration Manager](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)
+- [Modify a Reporting Services configuration file](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)
+- [Configure report server URLs](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)
+- [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)

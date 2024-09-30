@@ -3,11 +3,12 @@ title: "Accessing the SOAP API"
 description: The Report Server Web service uses SOAP over HTTP and acts as a communications interface between clients and the report server. Use WSDL to call the service.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/14/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-server-web-service
 ms.topic: reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "XML Web service [Reporting Services], WSDL"
   - "Web service [Reporting Services], SOAP"
@@ -51,8 +52,7 @@ https://server/reportserver/ReportService2010.asmx?wsdl
   
  For more information about the WSDL format, see the World Wide Web Consortium (W3C) WSDL specification at http://www.w3.org/TR/wsdl.  
   
-## Related content  
- [Building Applications Using the Web Service and the .NET Framework](../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
- [Report Server Web Service](../../reporting-services/report-server-web-service/report-server-web-service.md)  
-  
-  
+## Related content
+
+- [Building Applications Using the Web Service and the .NET Framework](../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)
+- [Report Server Web Service](../../reporting-services/report-server-web-service/report-server-web-service.md)

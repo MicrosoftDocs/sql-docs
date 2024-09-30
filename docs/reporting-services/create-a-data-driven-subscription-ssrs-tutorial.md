@@ -3,16 +3,17 @@ title: "Create a data-driven subscription (SSRS Tutorial)"
 description: Learn about data-driven subscriptions through an example that creates a data-driven subscription used to generate and save filtered report output to a file share.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 06/21/2024
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: reporting-services
 ms.topic: concept-article
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "subscriptions [Reporting Services], tutorials"
   - "walkthroughs [Reporting Services]"
   - "data-driven subscriptions"
-#customer intent: As a SQL Server user, I want to create data-driven subscriptions using SQL Server Reporting Services (SSRS) to automate and customize report distribution based on dynamic subscriber data.
+# customer intent: As a SQL Server user, I want to create data-driven subscriptions using SQL Server Reporting Services (SSRS) to automate and customize report distribution based on dynamic subscriber data.
 ---
 # Create a data-driven subscription (SSRS Tutorial)
 

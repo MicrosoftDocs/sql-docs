@@ -3,11 +3,12 @@ title: "Add, change, or delete a map or map layer in a paginated report"
 description: Learn how to add, remove, or change map options manually or by using the map layer wizard in a paginated report in Report Builder.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 05/24/2018
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 f1_keywords:
   - "sql13.rtp.rptdesigner.maplayerproperties.general.f1"
   - "10526"
@@ -245,7 +246,7 @@ f1_keywords:
   
      You can also conditionally hide the layer. For more information, see [Hide an item &#40;Report Builder&#41;](../../reporting-services/report-builder/hide-an-item-report-builder-and-ssrs.md).  
   
-## Related content  
- [Maps &#40;Report Builder&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
- [Troubleshoot reports: Map reports &#40;Report Builder&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
-  
+## Related content
+
+- [Maps &#40;Report Builder&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)
+- [Troubleshoot reports: Map reports &#40;Report Builder&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)

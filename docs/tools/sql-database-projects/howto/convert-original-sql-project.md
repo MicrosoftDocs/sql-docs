@@ -14,7 +14,7 @@ zone_pivot_groups: sq1-sql-projects-tools
 
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
-Creating a new SDK-style SQL project is a [quick task](../get-started.md#create-a-new-project). However, if you have existing SQL projects you can convert them to SDK-style SQL projects in place to take advantage of the new features.
+Creating a new SDK-style SQL project is a [quick task](../get-started.md#step-1-create-a-new-project). However, if you have existing SQL projects you can convert them to SDK-style SQL projects in place to take advantage of the new features.
 
 Once you convert the project, you can use the new features of the SDK-style project, such as:
 
@@ -46,13 +46,13 @@ SDK-style projects aren't supported by SQL Server Data Tools (SSDT) in Visual St
 
 ::: zone-end
 
-<!-- ::: zone pivot="sq1-visual-studio-sdk"
+::: zone pivot="sq1-visual-studio-sdk"
 
 - [.NET 8 SDK](https://dotnet.microsoft.com/download/dotnet/8.0)
 - [Visual Studio 2022 Community, Professional, or Enterprise](https://visualstudio.microsoft.com/downloads/)
-- [SQL Server Data Tools, SDK-style (preview) installed in Visual Studio 2022](../../sql/ssdt/download-sql-server-data-tools-ssdt-sdk.md)
+- [SQL Server Data Tools, SDK-style (preview) installed in Visual Studio 2022](../../../ssdt/sql-server-data-tools-sdk-style.md)
 
-::: zone-end -->
+::: zone-end
 
 ::: zone pivot="sq1-visual-studio-code"
 
@@ -84,9 +84,13 @@ Build the project in Visual Studio by right-clicking on the database node in **S
 
 ::: zone-end
 
-<!-- ::: zone pivot="sq1-visual-studio-sdk"
+::: zone pivot="sq1-visual-studio-sdk"
 
-::: zone-end -->
+To build a `.dacpac` file from the original project, you must use the original SQL Server Data Tools (SSDT) in Visual Studio. Open the project file in Visual Studio 2022 with the original SQL Server Data Tools installed.
+
+Build the project in Visual Studio by right-clicking on the database node in **Solution Explorer** and selecting **Build**.
+
+::: zone-end
 
 ::: zone pivot="sq1-visual-studio-code"
 
@@ -205,9 +209,11 @@ The SQL project is no longer compatible with Visual Studio 2022. To build or edi
 
 ::: zone-end
 
-<!-- ::: zone pivot="sq1-visual-studio-sdk"
+::: zone pivot="sq1-visual-studio-sdk"
 
-::: zone-end -->
+The project file is now in the SDK-style format, but to open it in Visual Studio 2022, you must have the SQL Server Data Tools, SDK-style (preview) installed and the project must have the file extension `.sqlprojx`. Open the project in Visual Studio 2022 with [SQL Server Data Tools, SDK-style (preview)](../../../ssdt/sql-server-data-tools-sdk-style.md) installed.
+
+::: zone-end
 
 ::: zone pivot="sq1-visual-studio-code"
 
@@ -242,9 +248,11 @@ Launch Visual Studio without a project loaded. Go to **Tools** > **SQL Server** 
 
 ::: zone-end
 
-<!-- ::: zone pivot="sq1-visual-studio-sdk"
+::: zone pivot="sq1-visual-studio-sdk"
 
-::: zone-end -->
+Graphical schema comparison isn't yet available in the SDK-style SQL projects preview in Visual Studio.  Use Azure Data Studio to compare schemas.
+
+::: zone-end
 
 ::: zone pivot="sq1-visual-studio-code"
 

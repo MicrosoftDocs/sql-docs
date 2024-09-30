@@ -3,11 +3,12 @@ title: "Peer-to-Peer Transactional Replication"
 description: In SQL Server, peer-to-peer replication provides a scale-out and high-availability solution by maintaining copies of data across multiple server instances.
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: 01/05/2023
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "bidirectional replication"
   - "transactional replication, bidirectional replication"
@@ -181,9 +182,8 @@ The following properties have special considerations:
   
 - You can't reinitialize subscriptions in a peer-to-peer topology. If you have to ensure that a node has a new copy of the data, restore a backup at the node.  
   
-## See Also  
- [Administer a Peer-to-Peer Topology &#40;Replication Transact-SQL Programming&#41;](../../../relational-databases/replication/administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   
- [Strategies for Backing Up and Restoring Snapshot and Transactional Replication](../../../relational-databases/replication/administration/strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication.md)   
- [Transactional replication](../../../relational-databases/replication/transactional/transactional-replication.md)  
-  
-  
+## Related content
+
+- [Administer a Peer-to-Peer Topology &#40;Replication Transact-SQL Programming&#41;](../../../relational-databases/replication/administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)
+- [Strategies for Backing Up and Restoring Snapshot and Transactional Replication](../../../relational-databases/replication/administration/strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication.md)
+- [Transactional replication](../../../relational-databases/replication/transactional/transactional-replication.md)

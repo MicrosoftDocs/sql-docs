@@ -3,11 +3,12 @@ title: "Tasks and permissions"
 description: "Tasks and permissions"
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/01/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: security
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "permissions [Reporting Services], tasks"
   - "role-based security [Reporting Services], permissions"
@@ -34,9 +35,8 @@ helpviewer_keywords:
 |[Item-level tasks](../../reporting-services/security/tasks-and-permissions-item-level-tasks.md)|Actions that are performed on items managed by a report server, such as folders, reports, report models, and resources.<br /><br /> Item-level tasks are scoped to the report server folder namespace. Role assignments that include item-level tasks secure all items accessed through the folders on a report server or through URL access.|  
 |[System-level tasks](../../reporting-services/security/tasks-and-permissions-system-level-tasks.md)|Actions that are performed at the system level, such as managing jobs or shared schedules that can be used with many items. System-level tasks are scoped outside of the report server folder namespace.|  
   
-## Related content  
- [Role definitions](../../reporting-services/security/role-definitions.md)   
- [Predefined roles](../../reporting-services/security/role-definitions-predefined-roles.md)   
- [Grant permissions on a native mode report server](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
-  
-  
+## Related content
+
+- [Role definitions](../../reporting-services/security/role-definitions.md)
+- [Predefined roles](../../reporting-services/security/role-definitions-predefined-roles.md)
+- [Grant permissions on a native mode report server](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)

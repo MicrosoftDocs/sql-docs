@@ -4,7 +4,7 @@ description: This article describes the new serverless compute tier and compares
 author: oslake
 ms.author: moslake
 ms.reviewer: wiassaf, mathoma
-ms.date: 08/21/2024
+ms.date: 09/30/2024
 ms.service: azure-sql-database
 ms.subservice: service-overview
 ms.topic: conceptual
@@ -505,7 +505,7 @@ The amount of compute billed for a serverless database is the maximum of CPU use
 - **Amount billed**: vCore unit price * maximum (minimum vCores, vCores used, minimum memory GB * 1/3, memory GB used * 1/3) 
 - **Billing frequency**: Per second
 
-The vCore unit price is the cost per vCore per second. For Hyperscale, the vCore unit price for an HA replica or named replica is lower than for the primary replica. 
+The vCore unit price is the cost per vCore per second. 
 
 Refer to the [Azure SQL Database pricing page](https://azure.microsoft.com/pricing/details/sql-database/single/) for specific unit prices in a given region.
 
@@ -612,8 +612,71 @@ Serverless for General Purpose and Hyperscale tiers with support up to 40 maximu
 
 Currently, 80 maximum vCores in serverless for General Purpose and Hyperscale tiers is currently supported in the following regions:
 
+ - Australia Central 1
+ - Australia Central 2
  - Australia East
  - Australia Southeast
+ - Brazil South
+ - Brazil Southeast
+ - Canada Central
+ - Canada East
+ - Central US
+ - China East 2
+ - China East 3
+ - China North 2
+ - China North 3
+ - East Asia
+ - East US
+ - East US 2
+ - France Central
+ - France South
+ - Germany North
+ - Germany West Central
+ - India Central
+ - India South
+ - Israel Central
+ - Italy North
+ - Japan East
+ - Japan West
+ - Korea Central
+ - Korea South
+ - Maylaysia South
+ - Mexico Central
+ - North Central US
+ - North Europe
+ - Norway East
+ - Norway West
+ - Poland Central
+ - Qatar Central
+ - South Africa North
+ - South Africa West
+ - South Central US
+ - Southeast Asia
+ - Spain Central
+ - Sweden Central
+ - Sweden South
+ - Switzerland North
+ - Switzerland West
+ - Taiwan North
+ - Taiwan Northwest
+ - UAE Central
+ - UAE North
+ - UK South
+ - UK West
+ - US Gov East
+ - US Gov Southcentral
+ - US Gov Southwest
+ - West Europe
+ - West Central US
+ - West US
+ - West US 2
+ - West US 3
+
+### Regions supporting 80 maximum vCores with availability zones for General Purpose and Hyperscale
+
+Currently, 80 maximum vCores with availability zone support in serverless for the General Purpose and Hyperscale tiers is provided in the following regions with more regions planned:
+
+ - Australia East
  - Brazil South
  - Canada Central
  - Central US
@@ -621,43 +684,18 @@ Currently, 80 maximum vCores in serverless for General Purpose and Hyperscale ti
  - East US
  - East US 2
  - France Central
- - France South
  - Germany West Central
  - India Central
- - India South
  - Japan East
- - Japan West
- - North Central US
+ - Korea Central
  - North Europe
- - Norway East
- - Qatar Central
  - South Africa North
  - South Central US
- - Switzerland North
+ - Southeast Asia
+ - Sweden Central
+ - UAE North
  - UK South
- - UK West
- - West Europe
- - West Central US
- - West US
- - West US 2
- - West US 3
-
-### Regions supporting 80 maximum vCores with availability zones for General Purpose
-
-Currently, 80 maximum vCores with availability zone support in serverless for the General Purpose tier is provided in the following regions with more regions planned:
-
- - East US
- - North Europe
- - West Europe
- - West US 2
-
-### Regions supporting 80 maximum vCores with availability zones for Hyperscale
-
-Currently, 80 maximum vCores with availability zone support in serverless for the Hyperscale tier is provided in the following regions with more regions planned:
-
- - Central US
- - East US
- - North Europe
+ - US Gov East
  - West Europe
  - West US 2
  - West US 3

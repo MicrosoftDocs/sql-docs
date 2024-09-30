@@ -3,13 +3,13 @@ title: Troubleshoot server and database connection problems
 description: Learn how to diagnose and fix problems you experience when you're connecting to a report server and about 'Unexpected error' messages.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 09/04/2024
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: troubleshooting
 ms.topic: troubleshooting-general
-ms.custom: updatefrequency5
-
-#customer intent: As a Reporting Services user, I want to learn about different connection problems that I might experience so that I can diagnose and fix them.
+ms.custom:
+  - updatefrequency5
+# customer intent: As a Reporting Services user, I want to learn about different connection problems that I might experience so that I can diagnose and fix them.
 ---
 # Troubleshoot server and database connection problems with Reporting Services
 
@@ -90,7 +90,7 @@ The full error text is: `The report server can't open a connection to the report
 
 This error occurs when the report server can't connect to the SQL Server relational database that provides internal storage to the server. The connection to the report server database is managed through the Reporting Services Configuration tool. You can run the tool, go to the Database Setup page, and correct the connection information. Use the tool to update connection information. The tool ensures that dependent settings are updated and that services are restarted. For more information, see [Configure a report server database connection (Report Server Configuration Manager)](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md) and [Configure the report server service account (Report Server Configuration Manager)](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md).
 
-This error can also occur if the Database Engine instance that hosts the report server database isn't configured for remote connections. Remote connection is enabled by default in some editions of SQL Server. To verify whether the remote connection is enabled on the SQL Server Database Engine instance you use, run the SQL Server Configuration Manager tool. You must enable both TCP/IP and named pipes. A report server uses both protocols. For instructions on how to enable remote connections, see [Configure remote connections to the report server database](/sql/reporting-services/report-server/configure-a-report-server-for-remote-administration#configure-remote-connections-to-the-report-server-database).
+This error can also occur if the Database Engine instance that hosts the report server database isn't configured for remote connections. Remote connection is enabled by default in some editions of SQL Server. To verify whether the remote connection is enabled on the SQL Server Database Engine instance you use, run the SQL Server Configuration Manager tool. You must enable both TCP/IP and named pipes. A report server uses both protocols. For instructions on how to enable remote connections, see [Configure remote connections to the report server database](../report-server/configure-a-report-server-for-remote-administration.md#configure-remote-connections-to-the-report-server-database).
 
 If the error includes the following text, the password expired on the account used to run the Database Engine instance: "An error occurred while establishing a connection to the server. When you're connecting to SQL Server, this failure might occur because under the default settings, SQL Server doesn't permit remote connections: `provider: SQL Server Network Interfaces, error: 26 - Error Locating Server/Instance Specified.` To resolve this error, reset the password.
 
@@ -140,4 +140,4 @@ When you create the report server databases, **ReportServer** and **ReportServer
 - [Troubleshoot data retrieval issues with Reporting Services reports](../../reporting-services/troubleshooting/troubleshoot-data-retrieval-issues-with-reporting-services-reports.md)
 - [Troubleshoot Reporting Services subscriptions and delivery](../../reporting-services/troubleshooting/troubleshoot-reporting-services-subscriptions-and-delivery.md)
 
-[!INCLUDE[feedback-qa-stackoverflow-md](../../includes/feedback-qa-stackoverflow-md.md)]
+[!INCLUDE [feedback-qa-stackoverflow-md](../../includes/feedback-qa-stackoverflow-md.md)]

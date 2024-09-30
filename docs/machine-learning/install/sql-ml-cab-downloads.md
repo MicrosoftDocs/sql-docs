@@ -50,7 +50,7 @@ Start with a baseline installation. On SQL Server 2016 R Services, you can start
 
 CAB files are listed in reverse chronological order. When you download the CAB files and transfer them to the target computer, place them in a convenient folder such as **Downloads** or the setup user's `%temp%` folder.
 
-|Release | Component | Download link | Issues addressed |
+|Release | Component | Download link | Issues addressed |
 |------- | --------- | ------------- | ---------------- |
 |**[SQL Server 2019 CU16](https://support.microsoft.com/help/5011644) and later versions** |  |  |  |
 | | Microsoft R Open      | [SRO_3.5.2.777_1033.cab](https://go.microsoft.com/fwlink/?linkid=2134897)  |  |

@@ -3,11 +3,12 @@ title: "Distributor Properties dialog box"
 description: Describe the different pages within the 'Distributor Properties' dialog box in SQL Server Management Studio (SSMS).
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "11/20/2018"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: ui-reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 f1_keywords:
   - "sql13.rep.configdistwizard.distdbproperties.f1"
   - "sql13.rep.configdistwizard.distproperties.general.f1"
@@ -78,8 +79,7 @@ The **Publishers** page of the **Distributor Properties** dialog box allows you 
 -   The agent connects to the Publisher using the credentials specified in the **Publisher Properties** dialog box, which is available from the **Publishers** page of the **Distributor Properties** dialog box.    
 -   The agent connects to the Subscriber using the credentials specified for the Distribution Agent in the New Subscription Wizard.  For more information, see  [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md). 
   
-## See Also  
- [Configure Distribution](../../relational-databases/replication/configure-distribution.md)   
- [View and Modify Distributor and Publisher Properties](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
-  
-  
+## Related content
+
+- [Configure Distribution](../../relational-databases/replication/configure-distribution.md)
+- [View and Modify Distributor and Publisher Properties](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)

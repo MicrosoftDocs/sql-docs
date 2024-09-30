@@ -3,11 +3,12 @@ title: "Configure Web Synchronization"
 description: "Configure Web Synchronization"
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "01/10/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: how-to
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 f1_keywords:
   - "SQL10.REP.CONFIGWEBSYNCWIZARD.SNAPSHARE.F1"
   - "SQL13.REP.CONFIGWEBSYNCWIZARD.SNAPSHARE.F1"
@@ -166,6 +167,6 @@ helpviewer_keywords:
 > [!IMPORTANT]  
 >  Opening ports in your firewall can leave your server exposed to malicious attacks. Make sure that you understand firewall systems before you open ports. For more information, see [Security Considerations for a SQL Server Installation](../../sql-server/install/security-considerations-for-a-sql-server-installation.md).  
   
-## See Also  
- [Web Synchronization for Merge Replication](../../relational-databases/replication/web-synchronization-for-merge-replication.md)  
-  
+## Related content
+
+- [Web Synchronization for Merge Replication](../../relational-databases/replication/web-synchronization-for-merge-replication.md)

@@ -3,11 +3,12 @@ title: "Find and view reports in the web portal (Report Builder)"
 description: Report Manager is a web-based tool that includes features for viewing and managing reports. It's part of a report server installation.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/01/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-builder
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 # Find and view reports in the web portal (Report Builder and SSRS)
 
@@ -52,4 +53,4 @@ You can also browse to and open a report from the report server directly from Re
 
 ## Related content
 
-[Find, view, and manage reports (Report Builder and SSRS )](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)
+- [Find, view, and manage reports (Report Builder and SSRS )](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)

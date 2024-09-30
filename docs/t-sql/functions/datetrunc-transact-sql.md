@@ -80,7 +80,7 @@ The returned data type for `DATETRUNC` is dynamic. `DATETRUNC` returns a truncat
 
 ## Fractional time scale precision
 
-Milliseconds have a fractional time scale of 3 (`.123`), microseconds have a fractional time scale of 6 (`.123456`), and nanoseconds have a fractional time scale of 9 (`.123456789`). The **time**, **datetime2**, and **datetimeoffset** data types allow a maximum fractional time scale of 7 (`.1234567`). Therefore, to truncate to the `millisecond` *datepart*, the fractional time scale must be at least 3. Similarly, to truncate to the `microsecond` *datepart*, the fractional time scale must be at least 6. `DATETRUNC` doesn't support the `nanosecond` *datepart* since no T-SQL date type supports a fractional time scale of 9.
+Milliseconds have a fractional time scale of 3 (`.123`), microseconds have a fractional time scale of 6 (`.123456`), and nanoseconds have a fractional time scale of 9 (`.123456789`). The **time**, **datetime2**, and **datetimeoffset** data types allow a maximum fractional time scale of 7 (`.1234567`). Therefore, to truncate to the `millisecond` *datepart*, the fractional time scale must be at least 3. Similarly, to truncate to the `microsecond` *datepart*, the fractional time scale must be at least 6. `DATETRUNC` doesn't support the `nanosecond` *datepart* since no T-SQL date type supports a fractional time scale of 9.
 
 ## Examples
 

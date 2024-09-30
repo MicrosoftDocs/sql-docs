@@ -3,11 +3,12 @@ title: "Lesson 8: Create a data filter"
 description: Learn to create a data filter for the data table that you defined for the child report. Create a table-based filter or a query filter for the drillthrough report.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 05/18/2016
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: reporting-services
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 # Lesson 8: Create a data filter
 After you add a drillthrough action on the parent report, your next step is to create a data filter for the data table that you defined for the child report.  
@@ -282,8 +283,5 @@ You need to complete the following tasks to implement a query filter.
   
 ## Next step
 
-You successfully created a data filter for the data table that you defined for the child report. Next, you build and run the website application. See [Lesson 9: Build and run the application](../reporting-services/lesson-9-build-and-run-the-application.md).  
-  
-  
-  
-
+> [!div class="nextstepaction"]
+> [Lesson 9: Build and run the application](../reporting-services/lesson-9-build-and-run-the-application.md)

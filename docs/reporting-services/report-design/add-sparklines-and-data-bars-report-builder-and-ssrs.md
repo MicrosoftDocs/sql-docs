@@ -3,11 +3,12 @@ title: "Add sparklines and data bars in a paginated report"
 description: "Learn how to add sparklines and data bars in a paginated report."
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/03/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 # Add sparklines and data bars in a paginated report (Report Builder)
 
@@ -40,8 +41,7 @@ ms.custom: updatefrequency5
   
      Typically for sparklines and data bars, you don't add a field to the **Series Group** area because you only want one series for each row.  
   
-## Related content  
- [Charts &#40;Report Builder&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [Align the data in a chart in a table or matrix &#40;Report Builder&#41;](../../reporting-services/report-design/align-the-data-in-a-chart-in-a-table-or-matrix-report-builder-and-ssrs.md)  
-  
-  
+## Related content
+
+- [Charts &#40;Report Builder&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)
+- [Align the data in a chart in a table or matrix &#40;Report Builder&#41;](../../reporting-services/report-design/align-the-data-in-a-chart-in-a-table-or-matrix-report-builder-and-ssrs.md)

@@ -5,7 +5,7 @@ description: Learn about best practices when using the link feature for Azure SQ
 author: danimir
 ms.author: danil
 ms.reviewer: mathoma, danil
-ms.date: 08/30/2023
+ms.date: 09/10/2024
 ms.service: azure-sql-managed-instance
 ms.subservice: data-movement
 ms.custom: ignite-2023
@@ -50,6 +50,24 @@ The query output looks like the following example for sample database `tpcc`:
 :::image type="content" source="./media/managed-instance-link-best-practices/database-log-file-size.png" alt-text="Screenshot with results of the command showing log file size and space used":::
 
 In this example, the database has used 76% of the available log, with an absolute log file size of approximately 27 GB (27,971 MB). The thresholds for action varies based on your workload. In the previous example, the transaction log size and the percentage of use of the log is typically an indication that you should take a transaction log backup to truncate the log file and free up some space, or, you should take more frequent log backups. It could also be an indication that the transaction log truncation is being blocked by open transactions. For more on troubleshooting a transaction log in SQL Server, see [Troubleshoot a Full Transaction Log (SQL Server Error 9002)](/sql/relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002). For more on troubleshooting a transaction log in Azure SQL Managed Instance, see [Troubleshoot transaction log errors with Azure SQL Managed Instance](../managed-instance/troubleshoot-transaction-log-errors-issues.md?view=azuresql-mi&preserve-view=true).
+
+## Rotate certificate 
+
+It's possible for the certificate that you use to secure the database mirroring endpoint to expire, which can lead to the degradation of the link. To prevent this issue, *rotate the certificate* before it expires.
+
+Use the following Transact-SQL (T-SQL) command to check the expiration date of the current certificate: 
+
+```sql
+-- Run on SQL Server
+USE MASTER
+GO
+SELECT * FROM sys.certificates WHERE pvt_key_encryption_type = 'MK' 
+```
+
+If your certificate is about to expire, or has already expired, you can [create a new certificate](managed-instance-link-configure-how-to-scripts.md#create-a-certificate-on-sql-server-and-import-its-public-key-to-sql-managed-instance), and then alter the existing endpoint to [replace the current certificate](managed-instance-link-configure-how-to-scripts.md#alter-an-existing-endpoint). 
+
+Once the endpoint is configured to use the new certificate, you can [drop](/sql/t-sql/statements/drop-certificate-transact-sql) the expired certificate. 
+
 
 ## Add startup trace flags
 

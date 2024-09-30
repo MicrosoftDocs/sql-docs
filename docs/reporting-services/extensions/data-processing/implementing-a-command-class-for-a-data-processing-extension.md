@@ -3,11 +3,12 @@ title: "Implement a Command class for a data processing extension"
 description: Learn how to implement a Command class for a data processing extension so that the extension can formulate requests and pass them on to the data source.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/06/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: extensions
 ms.topic: reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "data processing extensions [Reporting Services], commands"
   - "Command class"
@@ -27,8 +28,6 @@ helpviewer_keywords:
   
 ## Related content
 
-- [Reporting Services extensions](../../../reporting-services/extensions/reporting-services-extensions.md)   
-- [Implement a data processing extension](../../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)   
-- [Reporting Services extension library](../../../reporting-services/extensions/reporting-services-extension-library.md)  
-  
-  
+- [Reporting Services extensions](../../../reporting-services/extensions/reporting-services-extensions.md)
+- [Implement a data processing extension](../../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)
+- [Reporting Services extension library](../../../reporting-services/extensions/reporting-services-extension-library.md)

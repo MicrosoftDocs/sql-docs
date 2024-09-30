@@ -3,11 +3,12 @@ title: "Reporting Services features and tasks"
 description: Learn how to access Reporting Services foundational content organized by reports and report features, report server features, and Reporting Services product features.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 12/18/2015
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: reporting-services
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "Reporting Services, programming"
   - "development [Reporting Services]"
@@ -47,7 +48,5 @@ helpviewer_keywords:
   
 ## Related content
 
-- [Reporting Services &#40;SSRS&#41;](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)   
+- [Reporting Services &#40;SSRS&#41;](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)
 - [What's new in Reporting Services &#40;SSRS&#41;](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)
-  
-  

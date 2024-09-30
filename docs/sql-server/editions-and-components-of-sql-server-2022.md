@@ -241,7 +241,7 @@ SQL Server 2022 includes features for connecting to [Azure Synapse Analytics](/a
 | Microsoft Entra authentication <sup>1</sup> | Yes | Yes | Yes | Yes | Yes |
 | Row-level security | Yes | Yes | Yes | Yes | Yes |
 | Server audit | Yes | Yes | Yes | Yes | Yes |
-| Transparent data encryption (TDE) | Yes | Yes | Yes | No | No |
+| Transparent data encryption (TDE) | Yes | Yes | No | No | No |
 | User-defined roles | Yes | Yes | Yes | Yes | Yes |
 
 <sup>1</sup> Requires [SQL Server enabled by Azure Arc](azure-arc/overview.md).

@@ -3,11 +3,12 @@ title: "Add Data from External Data Sources"
 description: Learn about adding data to reports from external data sources and how reports work with data access technologies.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/17/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-data
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 
 # Add Data from External Data Sources (SSRS)
@@ -100,8 +101,7 @@ ms.custom: updatefrequency5
 |[Data Processing Extensions Overview](../../reporting-services/extensions/data-processing/data-processing-extensions-overview.md)|Provides in-depth information for advanced users about data extensions.|  
   
   
-## See Also  
- [Report Datasets &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
- [Query Design Tools &#40;SSRS&#41;](query-design-tools-ssrs.md)  
-  
-  
+## Related content
+
+- [Report Datasets &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)
+- [Query Design Tools &#40;SSRS&#41;](query-design-tools-ssrs.md)

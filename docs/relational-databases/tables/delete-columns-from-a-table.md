@@ -4,7 +4,7 @@ description: Learn how to delete table columns in the SQL Server Database Engine
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: randolphwest
-ms.date: 07/29/2024
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: table-view-index
 ms.topic: how-to
@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "removing columns"
   - "deleting columns"
   - "dropping columns"
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Delete columns from a table
 

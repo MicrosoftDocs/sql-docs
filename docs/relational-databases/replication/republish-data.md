@@ -3,11 +3,12 @@ title: "Republish Data"
 description: "Republish Data"
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/01/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: how-to
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "republishing data"
   - "publishing [SQL Server replication], Subscribers"
@@ -60,11 +61,10 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
   
  \*You should set the `@published_in_tran_pub` property on the merge publication. By default, transactional replication expects tables at the Subscriber to be treated as read-only. If merge replication makes data changes to a table in a transactional subscription, non-convergence of data can occur. To avoid this risk, we recommend that any such table be specified as download-only in the merge publication. This prevents a merge Subscriber from uploading data changes to the table. For more information, see [Optimize Merge Replication Performance with Download-Only Articles](../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md).  
   
-## See Also  
- [Configure Distribution](../../relational-databases/replication/configure-distribution.md)   
- [Publish Data and Database Objects](../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
- [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)   
- [Initialize a Subscription](../../relational-databases/replication/initialize-a-subscription.md)   
- [Synchronize Data](../../relational-databases/replication/synchronize-data.md)  
-  
-  
+## Related content
+
+- [Configure Distribution](../../relational-databases/replication/configure-distribution.md)
+- [Publish Data and Database Objects](../../relational-databases/replication/publish/publish-data-and-database-objects.md)
+- [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)
+- [Initialize a Subscription](../../relational-databases/replication/initialize-a-subscription.md)
+- [Synchronize Data](../../relational-databases/replication/synchronize-data.md)

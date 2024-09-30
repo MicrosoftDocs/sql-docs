@@ -3,11 +3,12 @@ title: "Secure shared dataset items"
 description: "Secure shared dataset items"
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/01/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: security
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 # Secure shared dataset items
   On a report server, you can use shared dataset items on multiple reports. You can secure shared datasets to control the degree of access that users have. By default, only users who are members of the **Administrators** built-in group can view shared datasets, modify properties, enable caching, create cache refresh plans, and delete the items. All other users must have role assignments created for them that allow access to a shared dataset.  
@@ -40,9 +41,9 @@ ms.custom: updatefrequency5
   
  For more information, see [Item-level tasks](../../reporting-services/security/tasks-and-permissions-item-level-tasks.md) and [Predefined roles](../../reporting-services/security/role-definitions-predefined-roles.md).  
   
-## Related content  
- [Manage shared datasets](../../reporting-services/report-data/manage-shared-datasets.md)   
- [Secure folders](../../reporting-services/security/secure-folders.md)   
- [Secure reports and resources](../../reporting-services/security/secure-reports-and-resources.md)   
- [Grant permissions on a native mode report server](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)     
-  
+## Related content
+
+- [Manage shared datasets](../../reporting-services/report-data/manage-shared-datasets.md)
+- [Secure folders](../../reporting-services/security/secure-folders.md)
+- [Secure reports and resources](../../reporting-services/security/secure-reports-and-resources.md)
+- [Grant permissions on a native mode report server](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)

@@ -260,9 +260,9 @@ This query identifies Azure Arc-enabled servers with SQL Server instances discov
 
 ```kusto
 resources
-| where type == "microsoft.hybridcompute/machines"
-| where properties.detectedProperties.mssqldiscovered == "true"
-//| summarize count()
+| where type == "microsoft.hybridcompute/machines"
+| where properties.detectedProperties.mssqldiscovered == "true"
+//| summarize count()
 ```
 
 This query returns Azure Arc-enabled servers that have SQL Server instances, but the Azure Arc SQL Server extension isn't installed. This query applies only to Windows servers.

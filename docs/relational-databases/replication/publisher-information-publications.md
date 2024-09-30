@@ -3,11 +3,12 @@ title: "Publisher Information, Publications"
 description: "Publisher Information, Publications"
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/14/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: ui-reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 f1_keywords:
   - "sql13.rep.monitor.publisherinfo.publications.f1"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
@@ -76,9 +77,8 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
   
  For more information about how performance ratings are defined and how performance thresholds are set, see [Monitor Performance with Replication Monitor](../../relational-databases/replication/monitor/monitor-performance-with-replication-monitor.md).  
   
-## See Also  
- [Start the Replication Monitor](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
- [View Information and Perform Tasks for a Publisher &#40;Replication Monitor&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)   
- [Monitoring Replication](../../relational-databases/replication/monitor/monitoring-replication.md)  
-  
-  
+## Related content
+
+- [Start the Replication Monitor](../../relational-databases/replication/monitor/start-the-replication-monitor.md)
+- [View Information and Perform Tasks for a Publisher &#40;Replication Monitor&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)
+- [Monitoring Replication](../../relational-databases/replication/monitor/monitoring-replication.md)

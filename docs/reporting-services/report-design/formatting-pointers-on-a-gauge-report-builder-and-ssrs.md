@@ -3,11 +3,12 @@ title: "Formatting pointers on a gauge in a paginated report"
 description: Find out how to indicate the current value of a gauge in a paginated report in Report Builder by formatting points on the gauge.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/01/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 # Formatting pointers on a gauge in a paginated report (Report Builder)
 
@@ -47,8 +48,8 @@ ms.custom: updatefrequency5
   
  If the pointer image is an irregular shape, you should define the color as transparent to hide the areas of your image that should not appear on the gauge. When you define a transparent color, the gauge transposes the image on top of your existing pointer and trims the image so that only the shape of the pointer appears. The gauge rescales the image to fit the size of your pointer. When you specify an image for a pointer, any subsequent pointer that is added on top of the gauge will be drawn underneath the image. For this reason, it is better not to specify an image for the pointer if there are multiple pointers on the gauge. 
   
-## See Also  
- [Formatting Scales on a Gauge &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)   
- [Formatting Ranges on a Gauge &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/formatting-ranges-on-a-gauge-report-builder-and-ssrs.md)   
- [Gauges &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)  
-  
+## Related content
+
+- [Formatting Scales on a Gauge &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)
+- [Formatting Ranges on a Gauge &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/formatting-ranges-on-a-gauge-report-builder-and-ssrs.md)
+- [Gauges &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)

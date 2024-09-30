@@ -3,11 +3,12 @@ title: "Publishing stored procedure execution (Transactional)"
 description: Learn how to include stored procedures that execute at the Publisher and affect published tables in your Transactional publication as stored procedure execution articles.
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/07/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "publishing [SQL Server replication], stored procedure execution"
   - "articles [SQL Server replication], stored procedures and"
@@ -87,7 +88,6 @@ COMMIT TRANSACTION T2
   
  If you require a setting of XACT_ABORT OFF, specify the **-SkipErrors** parameter for the Distribution Agent. This allows the agent to continue applying changes at the Subscriber even if an error is encountered.  
   
-## See Also  
- [Article Options for Transactional Replication](../../../relational-databases/replication/transactional/article-options-for-transactional-replication.md)  
-  
-  
+## Related content
+
+- [Article Options for Transactional Replication](../../../relational-databases/replication/transactional/article-options-for-transactional-replication.md)

@@ -3,11 +3,12 @@ title: "Analysis Services Connection Type for DMX"
 description: Learn about the Analysis Services connection type for DMX and learn to use the DMX Query Designer to build a DMX query using graphical elements.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/14/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-data
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "parameters [Reporting Services], DMX"
   - "Data Mining Prediction [Reporting Services]"
@@ -38,8 +39,8 @@ helpviewer_keywords:
   
  For more information about how to manage the relationship between report parameters and query parameters, see [Associate a Query Parameter with a Report Parameter &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/associate-a-query-parameter-with-a-report-parameter-report-builder-and-ssrs.md). For more information about parameters, see [Report Parameters &#40;Report Builder and Report Designer&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
   
-## See Also  
- [Data Mining Solutions](/analysis-services/data-mining/data-mining-solutions)   
- [Query Design Tools &#40;SSRS&#41;](../../reporting-services/report-data/query-design-tools-ssrs.md)   
- [Create data connection strings - Report Builder & SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
-  
+## Related content
+
+- [Data Mining Solutions](/analysis-services/data-mining/data-mining-solutions)
+- [Query Design Tools &#40;SSRS&#41;](../../reporting-services/report-data/query-design-tools-ssrs.md)
+- [Create data connection strings - Report Builder & SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)

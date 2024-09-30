@@ -3,11 +3,12 @@ title: "Creating a custom report item design-time component"
 description: Learn how to create a custom report item design-time component. This component provides an activated design surface that can accept drag-and-drop operations.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/14/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: custom-report-items
 ms.topic: reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "custom report items, creating"
 ---
@@ -186,8 +187,9 @@ private void OnProportionalScaling(object sender, EventArgs e)
   
 -   Walkthrough: Creating a Windows Forms Control that Takes Advantage of Visual Studio Design-Time Features  
   
-## Related content  
- [Custom report item architecture](../../reporting-services/custom-report-items/custom-report-item-architecture.md)   
- [Creating a custom report item run-time component](../../reporting-services/custom-report-items/creating-a-custom-report-item-run-time-component.md)   
- [Custom report item class libraries](../../reporting-services/custom-report-items/custom-report-item-class-libraries.md)   
- [How to: Deploy a custom report item](../../reporting-services/custom-report-items/how-to-deploy-a-custom-report-item.md)  
+## Related content
+
+- [Custom report item architecture](../../reporting-services/custom-report-items/custom-report-item-architecture.md)
+- [Creating a custom report item run-time component](../../reporting-services/custom-report-items/creating-a-custom-report-item-run-time-component.md)
+- [Custom report item class libraries](../../reporting-services/custom-report-items/custom-report-item-class-libraries.md)
+- [How to: Deploy a custom report item](../../reporting-services/custom-report-items/how-to-deploy-a-custom-report-item.md)

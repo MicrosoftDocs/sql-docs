@@ -124,5 +124,5 @@ We recommend that you take advantage of security mechanisms that you can use ins
 
 - [Connection pooling](connection-pooling.md)
 - [SQL Server and ADO.NET](./sql/index.md)
-- [Diagnostic counters in SqlClient](diagnostic-counters.md)
+- [Diagnostic counters in SqlClient](diagnostic-counters.md)
 - [Microsoft ADO.NET for SQL Server](microsoft-ado-net-sql-server.md)

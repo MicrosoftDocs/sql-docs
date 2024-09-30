@@ -3,11 +3,12 @@ title: "Alternative ways to get a data connection (Report Builder)"
 description: Learn details about alternative ways to connect to an external data source, such as a SQL Server database.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 06/15/2016
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: reporting-services
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 # Alternative ways to get a data connection (Report Builder)
 A data connection contains the information to connect to an external data source such as a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database. Usually, you get the connection information and the type of credentials to use from the data source owner.  
@@ -65,7 +66,5 @@ To use a shared data source, you browse to a report server and select one. Usual
   
 ## Related content
 
-- [Report datasets &#40;SSRS&#41;](../reporting-services/report-data/report-datasets-ssrs.md)  
-- [Report Builder tutorials](../reporting-services/report-builder-tutorials.md) 
-  
-
+- [Report datasets &#40;SSRS&#41;](../reporting-services/report-data/report-datasets-ssrs.md)
+- [Report Builder tutorials](../reporting-services/report-builder-tutorials.md)

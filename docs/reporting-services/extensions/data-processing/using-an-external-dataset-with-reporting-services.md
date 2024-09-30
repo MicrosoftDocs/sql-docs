@@ -3,11 +3,12 @@ title: "Use an external dataset with Reporting Services"
 description: Create custom data processing extensions in Reporting Services so that you can integrate custom DataSet objects that external applications create.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/06/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: extensions
 ms.topic: reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "DataSet objects [Reporting Services]"
   - "data processing extensions [Reporting Services], custom DataSet objects"
@@ -156,8 +157,6 @@ public int GetOrdinal(string name)
   
 ## Related content
 
-- [Reporting Services extensions](../../../reporting-services/extensions/reporting-services-extensions.md)   
-- [Implement a data processing extension](../../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)   
-- [Reporting Services extension library](../../../reporting-services/extensions/reporting-services-extension-library.md)  
-  
-  
+- [Reporting Services extensions](../../../reporting-services/extensions/reporting-services-extensions.md)
+- [Implement a data processing extension](../../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)
+- [Reporting Services extension library](../../../reporting-services/extensions/reporting-services-extension-library.md)

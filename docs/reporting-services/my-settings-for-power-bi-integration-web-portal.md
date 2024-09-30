@@ -3,11 +3,12 @@ title: "My Settings for Power BI integration (web portal)"
 description: Learn about the My Settings page in the Reporting Services web portal and how individual users can manage their sign-in with Power BI.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 08/17/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: reporting-services
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 f1_keywords:
   - "pbi"
   - "power bi"
@@ -39,6 +40,5 @@ Once you sign in, you receive a new security token. Your dashboard tiles begin u
 - [Power BI report server integration (Configuration Manager)](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md)
 - [Pin Reporting Services paginated report items to dashboards in Power BI](../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md)
 - [Introduction to dashboards for Power BI designers](https://powerbi.microsoft.com/documentation/powerbi-service-dashboards/)
-- [The web portal of a report server (SSRS Native Mode)](../reporting-services/web-portal-ssrs-native-mode.md)  
-
-More questions? [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)
+- [The web portal of a report server (SSRS Native Mode)](../reporting-services/web-portal-ssrs-native-mode.md)
+- [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)

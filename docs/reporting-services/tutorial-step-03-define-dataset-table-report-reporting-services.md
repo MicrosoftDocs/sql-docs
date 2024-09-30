@@ -3,13 +3,13 @@ title: "Tutorial: Define a dataset for the table report"
 description: In this lesson, learn how to define a dataset for the Table Report (Reporting Services).
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 06/19/2024
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: reporting-services
 ms.topic: tutorial
-ms.custom: updatefrequency5
-#customer intent: As a SQL server user, I want to use SQL Server Data Tools (SSDT) to define a dataset so that I can generate a table report.
-
+ms.custom:
+  - updatefrequency5
+# customer intent: As a SQL server user, I want to use SQL Server Data Tools (SSDT) to define a dataset so that I can generate a table report.
 ---
 # Tutorial: Define a dataset for the table report (Reporting Services)
 

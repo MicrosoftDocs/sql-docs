@@ -3,11 +3,12 @@ title: "Oracle Publishing Overview"
 description: "Oracle Publishing Overview"
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "08/29/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "publishing [SQL Server replication], Oracle publishing"
   - "snapshot replication [SQL Server], Oracle publishing"
@@ -43,9 +44,8 @@ Beginning with [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[
   
  When an Oracle publication is created, triggers and tracking tables are created for each published table within the Oracle database. When data changes are made to the published tables, the database triggers on the tables fire and insert information into the replication tracking tables for each modified row. The Log Reader Agent on the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributor then moves the data change information from the tracking tables to the distribution database on the Distributor. Finally, as in standard transactional replication, the Distribution Agent moves changes from the Distributor to the Subscribers.  
   
-## See Also  
- [Configure an Oracle Publisher](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)   
- [Glossary of Terms for Oracle Publishing](../../../relational-databases/replication/non-sql/glossary-of-terms-for-oracle-publishing.md)   
- [Heterogeneous Database Replication](../../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)  
-  
-  
+## Related content
+
+- [Configure an Oracle Publisher](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)
+- [Glossary of Terms for Oracle Publishing](../../../relational-databases/replication/non-sql/glossary-of-terms-for-oracle-publishing.md)
+- [Heterogeneous Database Replication](../../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)

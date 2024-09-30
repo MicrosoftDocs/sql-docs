@@ -3,11 +3,12 @@ title: "Undistributed Commands (Replication Monitor)"
 description: Describes the 'Undistributed Commands' tab of the Replication Monitor in SQL Server Management Studio (SSMS).
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/07/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: ui-reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 f1_keywords:
   - "sql13.rep.monitor.subscription.performance.f1"
 monikerRange: "=azuresqldb-current||>=sql-server-2016"
@@ -25,9 +26,8 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016"
  **Estimated time to apply these commands, based on past performance**  
  The estimated amount of time to deliver commands to the Subscriber. If this value is greater than the amount of time required to generate and apply a snapshot to the Subscriber, consider reinitializing the Subscriber. For more information, see [Reinitialize Subscriptions](../../relational-databases/replication/reinitialize-subscriptions.md).  
   
-## See Also  
- [Start the Replication Monitor](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
- [Monitor Performance with Replication Monitor](../../relational-databases/replication/monitor/monitor-performance-with-replication-monitor.md)   
- [Monitoring Replication](../../relational-databases/replication/monitor/monitoring-replication.md)  
-  
-  
+## Related content
+
+- [Start the Replication Monitor](../../relational-databases/replication/monitor/start-the-replication-monitor.md)
+- [Monitor Performance with Replication Monitor](../../relational-databases/replication/monitor/monitor-performance-with-replication-monitor.md)
+- [Monitoring Replication](../../relational-databases/replication/monitor/monitoring-replication.md)

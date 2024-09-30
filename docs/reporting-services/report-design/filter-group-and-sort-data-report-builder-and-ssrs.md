@@ -3,11 +3,12 @@ title: Filter, group, and sort data in Report Builder paginated reports
 description: Learn how to control, organize, and sort paginated report data with expressions based on dataset fields and parameters in the Report Data pane of Report Builder.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 07/10/2024
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 f1_keywords:
   - "sql13.rtp.rptdesigner.categorygroupproperties.general.f1"
   - "10403"
@@ -17,8 +18,7 @@ f1_keywords:
   - "10410"
   - "sql13.rtp.rptdesigner.seriesgroupproperties.sorting.f1"
   - "10412"
-
-#customer intent: As a Report Builder user, I want to learn how to use expressions so that I can control, organize, and sort the data in my reports.
+# customer intent: As a Report Builder user, I want to learn how to use expressions so that I can control, organize, and sort the data in my reports.
 ---
 # Filter, group, and sort data in Report Builder paginated reports
 
@@ -217,14 +217,10 @@ You add interactive sort buttons to a text box in a tablix data region cell. By 
 
 - [Display a Series with Multiple Data Ranges on a Chart (Report Builder and SSRS)](../../reporting-services/report-design/displaying-a-series-with-multiple-data-ranges-on-a-chart.md)  
 
-## <a name="Related"></a> Related content
+## Related content
 
-- [Group Expression Examples (Report Builder and SSRS)](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md)  
-
-- [Filter Equation Examples (Report Builder and SSRS)](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md)  
-
-- [Understand groups in a paginated report (Report Builder)](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md)  
-  
+- [Group Expression Examples (Report Builder and SSRS)](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md)
+- [Filter Equation Examples (Report Builder and SSRS)](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md)
+- [Understand groups in a paginated report (Report Builder)](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md)
 - [Expression scope for totals, aggregates, and built-in collections in a paginated report (Report Builder)](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)
-
-- [Report and Group Variables Collections References (Report Builder and SSRS)](../../reporting-services/report-design/built-in-collections-report-and-group-variables-references-report-builder.md)  
+- [Report and Group Variables Collections References (Report Builder and SSRS)](../../reporting-services/report-design/built-in-collections-report-and-group-variables-references-report-builder.md)

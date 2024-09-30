@@ -3,15 +3,16 @@ title: "Export a report by using the rs:Format URL parameter"
 description: "Learn how to export a report from SQL Server Reporting Services (SSRS) in different file formats by using the rs:Format URL parameter."
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 07/17/2024
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: reporting-services
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "formats [Reporting Services], URL rendering"
   - "URL access [Reporting Services], rendering formats"
-#customer intent: As a SQL Server report user or administrator, I want to learn about the rs:Format parameter so I can export reports in different file formats. 
+# customer intent: As a SQL Server report user or administrator, I want to learn about the rs:Format parameter so I can export reports in different file formats.
 ---
 # Export a report by using URL access
 
@@ -74,7 +75,5 @@ If you don't include the `rs:Format` parameter as part of the URL, the report se
   
 ## Related content
 
-- [URL access &#40;SSRS&#41;](../reporting-services/url-access-ssrs.md)   
-- [URL access parameter reference](../reporting-services/url-access-parameter-reference.md)  
-  
-  
+- [URL access &#40;SSRS&#41;](../reporting-services/url-access-ssrs.md)
+- [URL access parameter reference](../reporting-services/url-access-parameter-reference.md)

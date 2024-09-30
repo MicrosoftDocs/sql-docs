@@ -3,11 +3,12 @@ title: "MSSQL_ENG020572"
 description: "MSSQL_ENG020572"
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/01/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "MSSQL_ENG020572 error"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
@@ -32,7 +33,6 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ## User Action  
  Data at the Publisher and Subscriber will match after the new snapshot is applied at the Subscriber.  
   
-## See Also  
- [Errors and Events Reference &#40;Replication&#41;](../../relational-databases/replication/errors-and-events-reference-replication.md)  
-  
-  
+## Related content
+
+- [Errors and Events Reference &#40;Replication&#41;](../../relational-databases/replication/errors-and-events-reference-replication.md)

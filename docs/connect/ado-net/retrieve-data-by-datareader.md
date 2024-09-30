@@ -63,5 +63,5 @@ While a **DataReader** is open, you can retrieve schema information about the cu
 
 - [DataAdapters and DataReaders](dataadapters-datareaders.md)
 - [Commands and parameters](commands-parameters.md)
-- [Retrieving database schema information](retrieving-database-schema-information.md)
+- [Retrieving database schema information](retrieving-database-schema-information.md)
 - [Microsoft ADO.NET for SQL Server](microsoft-ado-net-sql-server.md)

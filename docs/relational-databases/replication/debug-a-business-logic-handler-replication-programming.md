@@ -3,11 +3,12 @@ title: "Debug business logic handler (Replication Programming)"
 description: Learn how to use a business logic handler to invoke custom business logic when a Merge Subscription is synchronized.
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/14/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: how-to
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "merge replication business logic handlers [SQL Server replication]"
   - "business logic handlers [SQL Server replication]"
@@ -74,7 +75,6 @@ dev_langs:
   
 11. Assuming that no other breakpoints are set and the proper commands are replicated, the execution stops when it reaches the breakpoint in the business logic handler.  
   
-## See Also  
- [Implement a Business Logic Handler for a Merge Article](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)  
-  
-  
+## Related content
+
+- [Implement a Business Logic Handler for a Merge Article](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)

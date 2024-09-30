@@ -3,12 +3,13 @@ title: "Configure the Report Server Service Account"
 description: Learn how to implement Reporting Services, a single service that contains a Report Server Web service, web portal, and a background processing application.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 08/19/2024
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-server
 ms.topic: how-to
-ms.custom: updatefrequency5
-#customer intent: As a SSRS user, I want to learn how to configure the Report Server Service Account so that I can update and troubleshoot my accounts information.
+ms.custom:
+  - updatefrequency5
+# customer intent: As a SSRS user, I want to learn how to configure the Report Server Service Account so that I can update and troubleshoot my accounts information.
 ---
 
 # Configure the Report Server Service Account (Report Server Configuration Manager)

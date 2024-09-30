@@ -3,11 +3,12 @@ title: "Find errors with transactional replication"
 description: Describes how to locate and identify errors with Transactional Replication, as well as the troubleshooting methodology for addressing issues with replication.
 author: MashaMSFT
 ms.author: mathoma
-ms.date: 07/01/2020
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: how-to
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "replication [SQL Server], tutorials"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
@@ -274,4 +275,4 @@ You can use verbose logging to see more detailed information about errors occurr
 - [Transactional replication overview](../../relational-databases/replication/transactional/transactional-replication.md)
 - [Replication tutorials](../../relational-databases/replication/replication-tutorials.md)
 
-[!INCLUDE[get-help-options](../../includes/paragraph-content/get-help-options.md)]
+[!INCLUDE [get-help-options](../../includes/paragraph-content/get-help-options.md)]

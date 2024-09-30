@@ -78,7 +78,7 @@ For a detailed comparison between service tiers, review [resource limits](resour
 |**Max databases per instance**| 100 | 500 | 100 | 
 |**Read-only replicas**| 0 |0 |  1 | 
 |**Replicas for availability**|Standby nodes for high availability| Standby nodes for high availability| Three high availability replicas, 1 is also a [read-scale replica](../database/read-scale-out.md) |
-|**Pricing/billing**| [vCore, reserved storage, and backup storage](https://azure.microsoft.com/pricing/details/sql-database/managed/) is charged. <br/>IOPS is not charged| vCore, reserved storage, backup storage and IOPS (over the free quota) is charged. | [vCore, reserved storage, and backup storage](https://azure.microsoft.com/pricing/details/sql-database/managed/) is charged. <br/>IOPS is not charged. | 
+|**Pricing/billing**| [vCore, reserved storage, and backup storage](https://azure.microsoft.com/pricing/details/sql-database/managed/) is charged. <br/>IOPS is not charged| vCore, reserved storage, backup storage and IOPS (over the free quota) is charged. | [vCore, reserved storage, and backup storage](https://azure.microsoft.com/pricing/details/sql-database/managed/) is charged. <br/>IOPS is not charged. | 
 
 
 > [!NOTE]

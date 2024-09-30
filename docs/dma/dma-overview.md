@@ -4,13 +4,13 @@ description: Learn how to use Data Migration Assistant to migrate SQL Server dat
 author: ajithkr-ms
 ms.author: ajithkr
 ms.reviewer: randolphwest
-ms.date: 06/28/2024
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: dma
 ms.topic: overview
+ms.collection: sql-migration-content
 ms.custom:
   - UpdateFrequency5
-  - sql-migration-content
 helpviewer_keywords:
   - "Data Migration Assistant, overview"
 ---
@@ -41,15 +41,15 @@ DMA brings you the following capabilities:
 
 #### Assess on-premises SQL Server Instances migrating to Azure
 
-Assess on-premises SQL Server instances migrating to Azure SQL Database or Azure SQL Managed Instance. The assessment workflow helps you to detect the following issues, which might affect your Azure SQL migration and provides detailed guidance on how to resolve them.
+Assess on-premises SQL Server instances migrating to Azure SQL Database or Azure SQL Managed Instance. The assessment workflow helps you to detect the following issues, which might affect your Azure SQL migration and provides detailed guidance on how to resolve them.
 
-- Migration blocking issues: Discovers the compatibility issues that block migrating on-premises SQL Server database to Azure SQL Database or Azure SQL Managed Instance. DMA provides recommendations to help you address those issues.
+- Migration blocking issues: Discovers the compatibility issues that block migrating on-premises SQL Server database to Azure SQL Database or Azure SQL Managed Instance. DMA provides recommendations to help you address those issues.
 
-- Partially supported or unsupported features: Detects partially supported or unsupported features that are currently in use by the source SQL Server instance. DMA provides a comprehensive set of recommendations, alternative approaches available in Azure, and mitigating steps so that you can incorporate them into your migration projects.
+- Partially supported or unsupported features: Detects partially supported or unsupported features that are currently in use by the source SQL Server instance. DMA provides a comprehensive set of recommendations, alternative approaches available in Azure, and mitigating steps so that you can incorporate them into your migration projects.
 
 #### Discover issues that affect an upgrade
 
-Discover issues that can affect an upgrade to an on-premises SQL Server. These are described as compatibility issues and are organized in the following categories:
+Discover issues that can affect an upgrade to an on-premises SQL Server. These are described as compatibility issues and are organized in the following categories:
 
 - Breaking changes
 - Behavior changes
@@ -65,7 +65,7 @@ Discover new features in the target SQL Server platform that the database can be
 
 #### Migrate on-premises instances to SQL Server on Azure VMs
 
-Migrate an on-premises SQL Server instance to a modern SQL Server instance hosted on-premises or on an Azure virtual machine (VM) that is accessible from your on-premises network. The Azure VM can be accessed using VPN or other technologies. The migration workflow helps you to migrate the following components:
+Migrate an on-premises SQL Server instance to a modern SQL Server instance hosted on-premises or on an Azure virtual machine (VM) that is accessible from your on-premises network. The Azure VM can be accessed using VPN or other technologies. The migration workflow helps you to migrate the following components:
 
 - Schema of databases
 - Data and users

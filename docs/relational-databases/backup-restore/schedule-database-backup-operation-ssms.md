@@ -3,8 +3,8 @@ title: Schedule a database backup operation using SSMS
 description: This article describes how to schedule a database backup operation by using SQL Server Management Studio.
 author: sevend2
 ms.author: v-sidong
-ms.reviewer: sureshka
-ms.date: "02/23/2023"
+ms.reviewer: sureshka, mathoma
+ms.date: 09/27/2024
 ms.service: sql
 ms.subservice: backup-restore
 ms.topic: how-to
@@ -37,21 +37,21 @@ To schedule a database backup using the **Script Action to Job** option in SSMS,
 
 1. In the **Script** list, select **Script Action to Job**.
 
-    > [!NOTE]
-    > If you don't see the **Script Action to Job** option, you may be running an express edition of SQL Server. You can check your edition by running the query `select@@version`. For more information, see [Determine which version and edition of SQL Server Database Engine is running](/troubleshoot/sql/releases/find-my-sql-version).
+    > [!NOTE]  
+    > If you don't see the **Script Action to Job** option, you might be running an express edition of SQL Server. You can check your edition by running the query `select @@version`. For more information, see [Determine which version and edition of SQL Server Database Engine is running](/troubleshoot/sql/releases/find-my-sql-version).
 
 1. In the **New Job** dialog box, select **Steps** under **Select a page**, and then select **Edit** if you want to change the job parameters.
 
-    > [!NOTE]
+    > [!NOTE]  
     > - In the **Job Step Properties - 1** dialog box, you can see the backup command.
-    >
+    >  
     > - Microsoft is currently investigating an error message that can occur in SSMS at this step. If you get an exception at this step, repeat the procedure without this step and make any changes by editing the corresponding job under the **Jobs** menu under **SQL Server Agent** in **Object Explorer**.
 
 1. Under **Select a page**, select **Schedules**, and then select **New**.
 
 1. In the **New Job Schedule** dialog box, enter the job name in the **Name** box, specify the job schedule, and then select **OK**.
 
-    > [!NOTE]
+    > [!NOTE]  
     > If you want to configure alerts or notifications, you can select **Alerts** or **Notifications** under **Select a page**.
 
 1. Select **OK** two times.
@@ -60,16 +60,16 @@ To schedule a database backup using the **Script Action to Job** option in SSMS,
 
    > The backup of database '\<DatabaseName>' completed successfully.
 
-> [!NOTE]
+> [!NOTE]  
 > - To verify the backup job, expand **SQL Server Agent**, and then expand **Jobs**. When you do this step, the SQL Server Agent service must be running.
->
+>  
 > - You can use a similar procedure to schedule transaction log and differential backups if you make the appropriate selection in Step 6 for **Backup type**. If you don't see the **Transaction Log** option in **Backup type**, check the recovery model of the database. You can't take transaction log backups if you are using the [Simple Recovery model](recovery-models-sql-server.md) for your database.
 
 ## Manually create SQL Server Agent jobs
 
 Alternatively, you can create and schedule your own backup jobs using SQL Server Agent. For more information, see [Create Jobs](../../ssms/agent/create-jobs.md) and [Schedule a Job](../../ssms/agent/schedule-a-job.md).
 
-## See also
+## Related content
 
 - [Script queries from the GUI](../../ssms/tutorials/scripting-ssms.md#script-queries-from-the-gui)
 - [Troubleshoot SQL Server backup and restore operations](/troubleshoot/sql/database-engine/backup-restore/backup-restore-operations)

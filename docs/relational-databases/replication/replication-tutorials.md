@@ -3,11 +3,12 @@ title: "Replication tutorials"
 description: Use these tutorials to help prepare your server for replication in SQL Server, and then learn to configure both transactional and merge replication.
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "04/09/2018"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: how-to
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "tutorials [SQL Server replication]"
   - "walkthroughs [SQL Server replication]"
@@ -39,10 +40,8 @@ Learn how to configure transactional replication to replicate data between fully
 
 Learn how to configure merge replication to exchange data between a server and one or more clients that are only occasionally connected.  
   
-## See also  
-[View and modify replication security settings](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md) 
+## Related content
 
-[Transactional replication overview](./transactional/transactional-replication.md) 
-
-[Merge replication overview](./merge/merge-replication.md)
-
+- [View and modify replication security settings](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)
+- [Transactional replication overview](./transactional/transactional-replication.md)
+- [Merge replication overview](./merge/merge-replication.md)

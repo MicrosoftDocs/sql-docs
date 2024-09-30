@@ -3,11 +3,12 @@ title: "Query Design Tools"
 description: Learn about query design tools and also learn the type of data source each query design tool supports.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/20/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-data
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "graphical query designer [Reporting Services]"
   - "MDX query designer [Reporting Services]"
@@ -103,11 +104,11 @@ helpviewer_keywords:
   
  For more information, see [Hyperion Essbase Query Designer User Interface](../../reporting-services/report-data/hyperion-essbase-query-designer-user-interface.md).  
   
-## See Also  
- [Reporting Services Tools](../../reporting-services/tools/reporting-services-tools.md)   
- [Report Datasets &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
- [Create data connection strings - Report Builder & SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
- [Reporting Services Tutorials &#40;SSRS&#41;](../../reporting-services/reporting-services-tutorials-ssrs.md)   
- [Data Sources Supported by Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)   
- [Create an Embedded or Shared Data Source &#40;SSRS&#41;](/previous-versions/sql/)  
-  
+## Related content
+
+- [Reporting Services Tools](../../reporting-services/tools/reporting-services-tools.md)
+- [Report Datasets &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)
+- [Create data connection strings - Report Builder & SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)
+- [Reporting Services Tutorials &#40;SSRS&#41;](../../reporting-services/reporting-services-tutorials-ssrs.md)
+- [Data Sources Supported by Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)
+- [Create an Embedded or Shared Data Source &#40;SSRS&#41;](/previous-versions/sql/)

@@ -6,11 +6,10 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma, randolphwest
 ms.service: azure-sql-database
-ms.date: 08/26/2024
+ms.date: 09/26/2024
 ms.subservice: service-overview
 ms.topic: whats-new
 ms.custom:
-  - ignite-2023
   - build-2024
 monikerRange: "=azuresql||=azuresql-db"
 ---
@@ -48,16 +47,13 @@ The following table lists the features of Azure SQL Database that are currently 
 | [Fabric mirrored databases](/fabric/database/mirrored-database/overview) | With Fabric Mirroring, you can [mirror databases in Azure SQL Database to Microsoft Fabric](/fabric/database/mirrored-database/overview). You can continuously replicate your existing data estate directly into Fabric's OneLake, including data from Azure SQL Database.|
 | [Free Azure SQL Database](free-offer.md) | Try Azure SQL Database for free, for the life of your subscription. This free offer provides a General Purpose database with 100,000 vCore seconds of compute every month. |
 | [Fixed server roles](security-server-roles.md) |  To simplify permission management, Azure SQL Database provides a set of fixed server-level roles to help you manage the permissions on a logical server. | 
-| [Hyperscale elastic pools](hyperscale-elastic-pool-overview.md) | Manage and scale multiple Hyperscale databases in Azure SQL Database by using Hyperscale elastic pools. |
-| [Hyperscale elastic pool maintenance window support](maintenance-window.md) | You can now configure a non-default [maintenance window](maintenance-window.md) for a [Hyperscale elastic pool](hyperscale-elastic-pool-overview.md). For more information, read [Blog: Maintenance window support for Azure SQL Database Hyperscale elastic pools](https://aka.ms/hsep-fmw). |
-| [Hyperscale elastic pools Premium-series hardware](hyperscale-elastic-pool-overview.md) | Premium-series and premium-series memory optimized hardware is in preview for Hyperscale elastic pools. |
-| [Hyperscale elastic pools with zone redundancy](hyperscale-elastic-pool-overview.md) | You can now create zone redundant elastic pools in the Hyperscale service tier. You can migrate existing zone-redundant Hyperscale databases into elastic pools. For more information, read [Blog post: Zone redundant Hyperscale elastic pools](https://aka.ms/hsep-zr). |
 | [Hyperscale support for database and file shrink](file-space-manage.md)  | Database and file shrink commands are supported in preview for Azure SQL Database Hyperscale. For more information, see [Shrink for Azure SQL Database Hyperscale](https://aka.ms/hs-shrink-preview). |
 | [Import and export using Private Link](database-import-export-private-link.md) | Leave *Allow Access to Azure Services* off when you import or export a database using a service-managed endpoint. |
 | [JSON native data type](/sql/t-sql/data-types/json-data-type?view=azuresqldb-current&preserve-view=true) | The new native **json** data type and new JSON aggregate functions are currently in preview. For more information, see [JSON Type and aggregates preview](https://aka.ms/json-type-aggregates-public-preview). |
 | [JSON aggregate functions](/sql/relational-databases/json/json-data-sql-server?view=azuresqldb-current&preserve-view=true#json-data-from-aggregates) | Two new **json** aggregate functions `JSON_OBJECTAGG` and `JSON_ARRAYAGG` enable construction of JSON objects or arrays based on an aggregate from SQL data. For more information, see [JSON Type and aggregates preview](https://aka.ms/json-type-aggregates-public-preview). |
 | [License-free standby replica](standby-replica-how-to-configure.md) | Save on licensing costs by configuring your secondary database replica for disaster recovery standby. |
 | [Microsoft Entra nonunique name support](authentication-microsoft-entra-create-users-with-nonunique-names.md) | The [CREATE USER](/sql/t-sql/statements/create-user-transact-sql) Transact-SQL (T-SQL) syntax has been extended to include `WITH OBJECT_ID` to support creating Microsoft Entra logins and users in Azure SQL Database that have nonunique names. |
+| [Microsoft Entra server principals](authentication-azure-ad-logins.md) | Create server principals (logins) for Microsoft Entra identities to use for authentication with Azure SQL Database. |
 | [Query editor in the Azure portal](query-editor.md) | The query editor in the portal allows you to run queries against your Azure SQL Database directly from the [Azure portal](https://portal.azure.com). |
 | [SQL Analytics](/azure/azure-monitor/insights/azure-sql) | Azure SQL Analytics is an advanced cloud monitoring solution for monitoring performance of all of your Azure SQL databases at scale and across multiple subscriptions in a single view. Azure SQL Analytics collects and visualizes key performance metrics with built-in intelligence for performance troubleshooting. |
 | [UNISTR (Transact-SQL)](/sql/t-sql/functions/unistr-transact-sql) | Azure SQL Database now supports the `UNISTR` T-SQL syntax for Unicode string literals. For more information, see [UNISTR (Transact-SQL)](/sql/t-sql/functions/unistr-transact-sql).|
@@ -69,6 +65,8 @@ The following table lists features of Azure SQL Database that have been made gen
 
 | Feature | GA Month | Details |
 | --- | --- | --- |
+| [Hyperscale elastic pools](hyperscale-elastic-pool-overview.md) | September 2024 | Manage and scale multiple Hyperscale databases in Azure SQL Database by using Hyperscale elastic pools. Hyperscale elastic pools also support Premium-series hardware and zone redundancy. For more information, see [Hyperscale Elastic Pools are now generally available](https://aka.ms/hsep-ga). |
+| [Hyperscale elastic pool maintenance window support](maintenance-window.md) | September 2024 |You can configure a non-default [maintenance window](maintenance-window.md) for a [Hyperscale elastic pool](hyperscale-elastic-pool-overview.md). For more information, read [Blog: Maintenance window support for Azure SQL Database Hyperscale elastic pools](https://aka.ms/hsep-fmw). |
 | [CURRENT_DATE Transact-SQL](/sql/t-sql/functions/current-date-transact-sql) | August 2024 |  A Transact-SQL (T-SQL) function that returns the current database system date as a date value, without the database time and time zone offset. |
 | [Maintenance window support for named replicas](https://aka.ms/MWsupportforNR)|August 2024|[Maintenance window](maintenance-window.md) support for named replicas is now generally available.|
 | [Maintenance window](maintenance-window.md) support for Hyperscale | August 2024| [Maintenance window](maintenance-window.md) support for Hyperscale databases is now generally available. |
@@ -87,6 +85,15 @@ The following table lists features of Azure SQL Database that have been made gen
 ## Documentation changes
 
 Learn about significant changes to the Azure SQL Database documentation. For previous years, see the [What's new archive](doc-changes-updates-release-notes-whats-new-archive.md).
+
+### September 2024
+
+| Changes | Details |
+| --- | --- |
+| **Cross-subscription geo-replica support in the Azure portal** | You can now use Azure portal to set up active geo-replication across subscriptions, as long as both the subscriptions are in the same Microsoft Entra ID tenant. For more information, see [Tutorial: Configure active geo-replication and failover (Azure SQL Database)](active-geo-replication-configure-portal.md).|
+| **SQL Insights (preview) retirement**| [SQL Insights (preview) will be retired on 31 December 2024](https://azure.microsoft.com/updates/v2/sql-insights-retirement). We recommend that you transition to [database watcher for Azure SQL (preview)](../database-watcher-overview.md) or another database monitoring solution by that date. |
+| **Hyperscale elastic pools GA** | Manage and scale multiple Hyperscale databases in Azure SQL Database by using [Hyperscale elastic pools](hyperscale-elastic-pool-overview.md). Hyperscale elastic pools also support Premium-series hardware and zone redundancy. For more information, see [Hyperscale Elastic Pools are now generally available](https://aka.ms/hsep-ga). |
+| **Hyperscale elastic pool maintenance window support** |You can configure a non-default [maintenance window](maintenance-window.md) for a [Hyperscale elastic pool](hyperscale-elastic-pool-overview.md). For more information, read [Blog: Maintenance window support for Azure SQL Database Hyperscale elastic pools](https://aka.ms/hsep-fmw). |
 
 ### August 2024
 

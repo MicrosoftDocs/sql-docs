@@ -3,11 +3,12 @@ title: "Embed an image in a paginated report"
 description: Make an image readily available to a paginated report. Use an image that's embedded in the report and listed in the Report Data pane of Report Builder.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/01/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 f1_keywords:
   - "sql13.rtp.rptdesigner.embeddedimages.f1"
 ---
@@ -53,7 +54,7 @@ You might want to embed an image in the report definition before adding the imag
   
 3. Click in the text box next to the **MIMEType** property and select a new MIME type from the drop-down list.  
   
-## See Also
+## Related content
 
 - [Images &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/images-report-builder-and-ssrs.md)
 - [Add a Data-Bound Image &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/add-a-data-bound-image-report-builder-and-ssrs.md)

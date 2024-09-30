@@ -5,7 +5,7 @@ description: Learn how to prepare your environment to create a link between SQL 
 author: sasapopo
 ms.author: sasapopo
 ms.reviewer: mathoma, danil, randolphwest
-ms.date: 08/13/2024
+ms.date: 09/10/2024
 ms.service: azure-sql-managed-instance
 ms.subservice: data-movement
 ms.custom: ignite-2023
@@ -279,6 +279,12 @@ Follow the steps in the [Configure SSMS for government clouds](#configure-ssms-f
 
 Bidirectional network connectivity between SQL Server and SQL Managed Instance is necessary for the link to work. After you open ports on the SQL Server side and configure an NSG rule on the SQL Managed Instance side, test connectivity by using either SQL Server Management Studio (SSMS) or Transact-SQL. 
 
+Test the network by creating a temporary SQL Agent job on both SQL Server and SQL Managed Instance to check the connection between the two instances. When you use **Network Checker** in SSMS, the job is automatically created for you, and deleted after the test completes. You need to manually delete the SQL Agent job if you test your network by using T-SQL. 
+
+To use the SQL Agent to test network connectivity, you need the following requirements: 
+- The user doing the test must have [permissions to create a job](/sql/ssms/agent/configure-a-user-to-create-and-manage-sql-server-agent-jobs) (either as a **sysadmin** or belongs to the SQLAgentOperator role for `msdb`) for both SQL Server and SQL Managed Instance. 
+- The SQL Server Agent service must be [running](/sql/ssms/agent/start-stop-or-pause-the-sql-server-agent-service) on SQL Server. Since the Agent is on by default on SQL Managed Instance, no additional action is necessary.
+
 
 ### [SSMS](#tab/ssms)
 
@@ -302,7 +308,6 @@ To test network connectivity between SQL Server and SQL Managed Instance in SSMS
 To use T-SQL to test connectivity, you have to check the connection in both directions. First, test the connection from SQL Server to SQL Managed Instance, and then test the connection from SQL Managed Instance to SQL Server.
 
 ### Test connection from SQL Server to SQL Managed Instance
-
 
 Use SQL Server Agent on SQL Server to run connectivity tests from SQL Server to SQL Managed Instance.
 

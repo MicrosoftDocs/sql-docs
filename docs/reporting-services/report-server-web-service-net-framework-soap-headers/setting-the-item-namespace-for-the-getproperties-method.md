@@ -3,11 +3,12 @@ title: "Set the item namespace for the GetProperties method"
 description: "Setting the Item Namespace for the GetProperties Method"
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/06/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-server-web-service
 ms.topic: reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "item properties [Reporting Services]"
   - "ItemNamespaceHeader SOAP header"
@@ -111,8 +112,7 @@ class Sample
 }  
 ```  
   
-## Related content 
- [Technical reference &#40;SSRS&#41;](../../reporting-services/technical-reference-ssrs.md)   
- [Use Reporting Services SOAP headers](../../reporting-services/report-server-web-service-net-framework-soap-headers/using-reporting-services-soap-headers.md)  
-  
-  
+## Related content
+
+- [Technical reference &#40;SSRS&#41;](../../reporting-services/technical-reference-ssrs.md)
+- [Use Reporting Services SOAP headers](../../reporting-services/report-server-web-service-net-framework-soap-headers/using-reporting-services-soap-headers.md)

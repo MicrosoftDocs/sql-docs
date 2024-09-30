@@ -3,11 +3,12 @@ title: "Troubleshooting Oracle Publishers"
 description: "Troubleshooting Oracle Publishers"
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/14/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: how-to
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "Oracle publishing [SQL Server replication], troubleshooting"
   - "troubleshooting [SQL Server replication], Oracle publishing"
@@ -238,8 +239,7 @@ helpviewer_keywords:
   
 -   Execute **sp_dropdistpublisher**. For more information, see [sp_dropdistpublisher &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md).  
   
-## See Also  
- [Configure an Oracle Publisher](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)   
- [Oracle Publishing Overview](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)  
-  
-  
+## Related content
+
+- [Configure an Oracle Publisher](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)
+- [Oracle Publishing Overview](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)

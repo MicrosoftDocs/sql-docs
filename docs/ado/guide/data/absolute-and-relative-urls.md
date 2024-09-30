@@ -58,7 +58,7 @@ A URL specifies the location of a target stored on a local or networked computer
  For example, the following code sample shows how to open a **Recordset** on the Readme25.txt file of the Winnt/system32 directory:  
   
 ```  
-recordset.Open "system32/Readme25.txt", "URL=https://YourServer/Winnt/",,,adCmdTableDirect  
+recordset.Open "system32/Readme25.txt", "URL=https://YourServer/Winnt/",,,adCmdTableDirect  
 ```  
   
  The absolute URL in the connection string specifies the server (`YourServer`) and the path (`Winnt`). This URL also defines the context.  

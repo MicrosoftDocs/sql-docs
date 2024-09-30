@@ -3,11 +3,12 @@ title: "Operators in expressions in a paginated report"
 description: Choose from categories of operators in a paginated report that are supported in an expression to represents actions applied to terms in an expression in Report Builder.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/01/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 # Operators in expressions in a paginated report (Report Builder)
 
@@ -73,10 +74,10 @@ ms.custom: updatefrequency5
 |<\<|Performs an arithmetic left-shift on a bit pattern.|  
 |>>|Performs an arithmetic right-shift on a bit pattern.|  
   
-## See Also  
- [Expression Dialog Box](/previous-versions/sql/)   
- [Expressions &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
- [Expression Examples &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
- [Data Types in Expressions &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)   
- [Expression Dialog Box &#40;Report Builder&#41;](./expressions-report-builder-and-ssrs.md)  
-  
+## Related content
+
+- [Expression Dialog Box](/previous-versions/sql/)
+- [Expressions &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)
+- [Expression Examples &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)
+- [Data Types in Expressions &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)
+- [Expression Dialog Box &#40;Report Builder&#41;](./expressions-report-builder-and-ssrs.md)

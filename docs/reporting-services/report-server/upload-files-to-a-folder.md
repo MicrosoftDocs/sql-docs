@@ -3,11 +3,12 @@ title: "Upload files to a folder"
 description: Learn what happens when you upload different file types from the file system and store them as managed items in a report server database in Reporting Services.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 06/17/2019
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-server
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "publishing reports [Reporting Services], uploading files"
   - "reports [Reporting Services], publishing"
@@ -43,9 +44,9 @@ helpviewer_keywords:
 |Upload any file as a binary object|Manage resources|  
 |View the contents of a folder|View resources, View reports|  
   
-## Related content 
- [The web portal of a report server (SSRS native mode)](../../reporting-services/web-portal-ssrs-native-mode.md)  
- [Grant permissions on a native mode report server](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
- [Tasks and permissions](../../reporting-services/security/tasks-and-permissions.md)   
- [Upload a file or report in the report server](../../reporting-services/reports/upload-a-file-or-report-report-manager.md)   
-  
+## Related content
+
+- [The web portal of a report server (SSRS native mode)](../../reporting-services/web-portal-ssrs-native-mode.md)
+- [Grant permissions on a native mode report server](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)
+- [Tasks and permissions](../../reporting-services/security/tasks-and-permissions.md)
+- [Upload a file or report in the report server](../../reporting-services/reports/upload-a-file-or-report-report-manager.md)

@@ -4,7 +4,7 @@ description: Learn how to switch a SQL Server database from one recovery model t
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest
-ms.date: 08/01/2023
+ms.date: 09/27/2024
 ms.service: sql
 ms.subservice: backup-restore
 ms.topic: conceptual
@@ -21,11 +21,11 @@ helpviewer_keywords:
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-This article describes how to view or change the database by using [!INCLUDE [ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE [tsql](../../includes/tsql-md.md)].
+This article describes how to view or change the database recovery model by using [!INCLUDE [ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE [tsql](../../includes/tsql-md.md)].
 
 A *recovery model* is a database property that controls how transactions are logged, whether the transaction log requires (and allows) backing up, and what kinds of restore operations are available. Three recovery models exist: simple, full, and bulk-logged. Typically, a database uses the full recovery model or simple recovery model. A database can be switched to another recovery model at any time. The `model` database sets the default recovery model of new databases.
 
-For a more in depth explanation, see [recovery models](recovery-models-sql-server.md).
+For an in-depth explanation, see [recovery models](recovery-models-sql-server.md).
 
 ## <a id="BeforeYouBegin"></a> Before you begin
 
@@ -127,18 +127,14 @@ Your backup strategy remains the same: continue performing periodic database, lo
 
 - Ensure periodic database backups are scheduled. Backing up your database is essential both to protect your data and to truncate the inactive portion of the transaction log.
 
-## See also
+## Related content
 
-- [Recovery Models (SQL Server)](recovery-models-sql-server.md)
-- [The Transaction Log (SQL Server)](../logs/the-transaction-log-sql-server.md)
+- [Recovery models (SQL Server)](recovery-models-sql-server.md)
+- [The transaction log](../logs/the-transaction-log-sql-server.md)
 - [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)
 - [sys.databases (Transact-SQL)](../system-catalog-views/sys-databases-transact-sql.md)
-- [Recovery Models (SQL Server)](recovery-models-sql-server.md)
-
-## Next steps
-
-- [Database Maintenance Plans](../maintenance-plans/maintenance-plans.md)
-- [Create a Full Database Backup (SQL Server)](create-a-full-database-backup-sql-server.md)
-- [Back Up a Transaction Log (SQL Server)](back-up-a-transaction-log-sql-server.md)
+- [Maintenance plans](../maintenance-plans/maintenance-plans.md)
+- [Create a Full Database Backup](create-a-full-database-backup-sql-server.md)
+- [Back up a transaction log](back-up-a-transaction-log-sql-server.md)
 - [Create a Job](../../ssms/agent/create-a-job.md)
 - [Disable or Enable a Job](../../ssms/agent/disable-or-enable-a-job.md)

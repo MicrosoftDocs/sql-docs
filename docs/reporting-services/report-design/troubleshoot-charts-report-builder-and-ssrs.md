@@ -3,11 +3,12 @@ title: "Troubleshoot charts in a paginated report"
 description: Use fields with numeric data types along the value axis, rather than formatted numbers, to display a numeric value in a paginated report.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 01/17/2018
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 # Troubleshoot charts in a paginated report (Report Builder)
 
@@ -28,7 +29,6 @@ ms.custom: updatefrequency5
  * [SQL Server Reporting Services](https://stackoverflow.com/questions/tagged/reporting-services) on Stack Overflow  
  * Share [ideas for SQL](https://feedback.azure.com/forums/908035-sql-server).  
   
-## See Also  
- [Charts &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
-  
-  
+## Related content
+
+- [Charts &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)

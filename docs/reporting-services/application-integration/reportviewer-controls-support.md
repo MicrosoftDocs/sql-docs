@@ -4,11 +4,12 @@ description: The Microsoft Report Viewer control is compatible with SQL Server R
 author: maggiesMSFT
 ms.author: maggies
 ms.reviewer: jonhp
-ms.date: 12/01/2020
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: application-integration
 ms.topic: reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 # Support for Report Viewer current branch versions
 
@@ -33,6 +34,7 @@ Some features of the Report Viewer control rely on the operating system's defaul
 | Windows Server 2012 R2 | Windows Server 2012 |
 | Windows Server 2016 and later | Windows Server 2016 and later |
 
-## Next steps
+## Next step
 
-For more information, see [Get started integrating Reporting Services using the ReportViewer controls](integrating-reporting-services-using-reportviewer-controls-get-started.md).
+> [!div class="nextstepaction"]
+> [Get started integrating Reporting Services using the ReportViewer controls](integrating-reporting-services-using-reportviewer-controls-get-started.md)

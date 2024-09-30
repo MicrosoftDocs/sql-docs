@@ -1,16 +1,16 @@
 ---
 title: "Install Microsoft Report Builder"
-description: Install Microsoft Report Builder by using various methods including Microsoft Endpoint Configuration Manager, the web portal, and the command line. 
+description: Install Microsoft Report Builder by using various methods including Microsoft Endpoint Configuration Manager, the web portal, and the command line.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 07/08/2024
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-server
 ms.topic: install-set-up-deploy
 ms.custom:
   - intro-installation
   - updatefrequency5
-#customer intent: As a SQL Server user, I want to install Microsoft Report Builder so that I have the necessary tools for report authoring.
+# customer intent: As a SQL Server user, I want to install Microsoft Report Builder so that I have the necessary tools for report authoring.
 ---
 # Install Microsoft Report Builder
 

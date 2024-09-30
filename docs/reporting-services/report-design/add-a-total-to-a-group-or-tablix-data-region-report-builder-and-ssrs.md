@@ -3,11 +3,12 @@ title: "Add a total to a group or tablix in a paginated report"
 description: Add totals in a tablix data region of a paginated report in Report Builder for a group or for the entire data region.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 12/16/2019
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 # Add a total to a group or tablix in a paginated report (Report Builder)
 
@@ -38,8 +39,7 @@ ms.custom: updatefrequency5
      A new column outside the current group is added to the data region, and then a default total is added for each numeric field in the column.  
   
 ## Related content
- [Expression scope for totals, aggregates, and built-in collections &#40;Report Builder&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)   
- [Tablix data region &#40;Report Builder&#41;](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)   
- [Tables, matrices, and lists &#40;Report Builder&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
-  
-  
+
+- [Expression scope for totals, aggregates, and built-in collections &#40;Report Builder&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)
+- [Tablix data region &#40;Report Builder&#41;](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)
+- [Tables, matrices, and lists &#40;Report Builder&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)

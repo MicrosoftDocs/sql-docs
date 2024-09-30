@@ -3,11 +3,12 @@ title: "Optimize download-only article performance (Merge)"
 description: Describes how to optimize the performance of download-only articles used by Merge Replication.
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/01/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: how-to
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "merge replication [SQL Server replication], download-only articles"
   - "articles [SQL Server replication], download-only"
@@ -39,8 +40,7 @@ helpviewer_keywords:
 ## Using Different Article Types in Your Applications  
  By understanding the requirements of your application, you can make tradeoffs between maximum flexibility and optimal performance. For example, applications with numerous conflicts and changes at both the Publisher and Subscribers will use a publication made up of standard articles. Some applications, such as a sales force automation application, might have articles with a potential for conflicts, and other articles that function as lookup tables, which can be specified as download-only. Data entry applications, such as point of sales systems and field force automation applications, often strictly partition data in a way that conflicts are eliminated, and data from one Subscriber never goes to another. In these situations, a combination of nonoverlapping partitions, download-only articles and precomputed partitions provides maximum performance and scalability. For more information about nonoverlapping partitions and precomputed partitions, see [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
-## See Also  
- [Article Options for Merge Replication](../../../relational-databases/replication/merge/article-options-for-merge-replication.md)   
- [Optimize Merge Replication Performance with Conditional Delete Tracking](../../../relational-databases/replication/merge/optimize-merge-replication-performance-with-conditional-delete-tracking.md)  
-  
-  
+## Related content
+
+- [Article Options for Merge Replication](../../../relational-databases/replication/merge/article-options-for-merge-replication.md)
+- [Optimize Merge Replication Performance with Conditional Delete Tracking](../../../relational-databases/replication/merge/optimize-merge-replication-performance-with-conditional-delete-tracking.md)

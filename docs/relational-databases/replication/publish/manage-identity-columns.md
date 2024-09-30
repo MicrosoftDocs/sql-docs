@@ -3,11 +3,12 @@ title: "Manage Identity Columns"
 description: "Manage Identity Columns"
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/14/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: how-to
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "identity values [SQL Server replication]"
   - "merge replication [SQL Server replication], identity range management"
@@ -141,9 +142,8 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
   
     -   To disable automatic identity range management, execute [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) at the Publisher on the publication database. Specify a value of **identityrangemanagementoption** for **\@property** and either **manual** or **none** for **\@value**.  
   
-## See Also  
- [Peer-to-Peer Transactional Replication](../../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)   
- [Replication System Stored Procedures Concepts](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
- [Replicate Identity Columns](../../../relational-databases/replication/publish/replicate-identity-columns.md)  
-  
-  
+## Related content
+
+- [Peer-to-Peer Transactional Replication](../../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)
+- [Replication System Stored Procedures Concepts](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)
+- [Replicate Identity Columns](../../../relational-databases/replication/publish/replicate-identity-columns.md)

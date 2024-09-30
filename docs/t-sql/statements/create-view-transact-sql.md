@@ -82,11 +82,16 @@ AS <select_statement>
 ```  
 
 ```syntaxsql
--- Syntax for [!INCLUDE [fabric](../../includes/fabric.md)]
+-- Syntax for Microsoft Fabric Data warehouse and SQL analytics endpoint
   
 CREATE [ OR ALTER ] VIEW [ schema_name . ] view_name [  ( column_name [ ,...n ] ) ]   
-AS <select_statement>   
-[;]  
+[ WITH <view_attribute> [ ,...n ] ] AS <select_statement>   
+[;]
+
+<view_attribute> ::=
+{  
+    [ SCHEMABINDING ]  
+}
   
 <select_statement> ::=  
     [ WITH <common_table_expression> [ ,...n ] ]  

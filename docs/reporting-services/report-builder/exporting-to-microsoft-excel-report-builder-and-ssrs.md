@@ -25,7 +25,7 @@ The Excel rendering extension exports reports into the Office Open XML format. T
 
 You can change some default settings for this renderer by changing the device information settings. For more information, see [Excel device information settings](../../reporting-services/excel-device-information-settings.md).
 
-For information about how to export a report in Excel format, see [Export reports (Report Builder and SSRS)](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md).
+For information about how to export a report in Excel format, see [Export paginated reports (Report Builder)](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md).
 
 > [!IMPORTANT]  
 > When you define a report parameter of type `String`, the user is presented with a text box that can take any value. If the report parameter isn't tied to a query parameter and the parameter values are included in the report, there's a security risk. Specifically, the report user can enter expression syntax, script code, or a URL as the parameter value. As a result, the user can enter a malicious script or a malicious link. If the report is exported to Excel, other users can view it. If they select the rendered parameter contents, they risk inadvertently running a malicious script or going to a malicious site.
@@ -83,7 +83,7 @@ The following limitation applies to merging cells: If cells are merged, text isn
 
 The Excel renderer is primarily a layout renderer. Its goal is to replicate the layout of the rendered report as closely as possibly in an Excel worksheet. As a result, cells might be merged in the worksheet to preserve the report layout. Merged cells can cause problems because the sort functionality in Excel requires cells to be merged in a specific way for sorting to work properly. For example, if you want to sort a range of cells, Excel requires each merged cell in the range to have the same size as the other merged cells in the range.
 
-Reducing the number of merged cells in your Excel worksheets makes it easier to sort those worksheets. The following points can help you minimize the number of cells that get merged during the export process.
+Reducing the number of merged cells in your Excel worksheets makes it easier to sort worksheets. The following points can help you minimize the number of cells that get merged during the export process.
 
 - The most common reason that cells get merged is that items aren't aligned to the left or right. You can usually solve the problem by lining up the left and right edges of all report items and by giving the items the same width.
 - Even when you align all items, some columns still get merged in rare cases. Internal unit conversion and rounding during the rendering process can cause the cells to merge. In the report definition language (RDL), you can specify positions and sizes in various units such as inches, pixels, centimeters, and points. Internally, Excel uses points. As a result, inches and centimeters are converted to points during rendering. To minimize conversion operations during rendering, and the potential inaccuracy of rounding, consider specifying all measurements in whole points. An inch is 72 points.
@@ -134,7 +134,7 @@ Images, charts, sparklines, data bars, maps, gauges, indicators, and lines are p
 
 Charts, sparklines, data bars, maps, gauges, and indicators are exported as images. The data they depict isn't exported with them. The data isn't available in the Excel workbook unless you include it in a column or row in a data region within a report.
 
-If you want to work with data for charts, sparklines, data bars, maps, gauges, and indicators, you can export the report to a CSV file or generate Atom-compliant data feeds from the report. For more information, see [Export to a CSV file (Report Builder and SSRS)](../../reporting-services/report-builder/exporting-to-a-csv-file-report-builder-and-ssrs.md) and [Generate data feeds from reports (Report Builder and SSRS)](../../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md).
+If you want to work with data for charts, sparklines, data bars, maps, gauges, and indicators, you can export the report to a CSV file or generate Atom-compliant data feeds from the report. For more information, see [Export a paginated report to a CSV file (Report Builder)](../../reporting-services/report-builder/exporting-to-a-csv-file-report-builder-and-ssrs.md) and [Generate data feeds from reports (Report Builder)](../../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md).
 
 ## Page size
 
@@ -144,13 +144,13 @@ If no matches are found, Excel uses the default page size for the printer. The o
 
 ## Worksheet tab names
 
-When you export a report to Excel, page breaks create the report pages, and each page is exported to a different worksheet. If you provide an initial page name for the report, the first worksheet of the Excel workbook has this name. Because each worksheet in a workbook must have a unique name, an integer starting at 2 and incremented by 1 is appended to the page name for each worksheet. For example, if the initial page name is **Sales Report by Fiscal Year**, the second worksheet is named **Sales Report by Fiscal Year (2)**. The third one is named **Sales Report by Fiscal Year (3)**, and so on.
+When you export a report to Excel, page breaks create the report pages, and each page is exported to a different worksheet. If you provide an initial page name for the report, the first worksheet of the Excel workbook has this name. Because each worksheet in a workbook must have a unique name, an integer starting at two and incremented by one is appended to the page name for each worksheet. For example, if the initial page name is **Sales Report by Fiscal Year**, the second worksheet is named **Sales Report by Fiscal Year (2)**. The third one is named **Sales Report by Fiscal Year (3)**, and so on.
 
 If all report pages that are created by page breaks provide new page names, each worksheet has the associated page name. But if these page names aren't unique, the worksheets are named the same way as the initial page names. For example, if the page name of two groups is **Sales for NW**, one worksheet tab has the name **Sales for NW**, and the other **Sales for NW (2)**.
 
 If the report doesn't provide an initial page name or page names for page breaks, the worksheet tabs have the default names **Sheet1**, **Sheet2**, and so on.
 
-SSRS provides properties that you can set for reports, data regions, groups, and rectangles. These properties help you create reports that you can export to Excel in a way that you want. For more information, see [Pagination in Reporting Services (Report Builder and SSRS)](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md).
+SSRS provides properties that you can set for reports, data regions, groups, and rectangles. These properties help you create reports that you can export to Excel in a way that you want. For more information, see [Pagination in paginated reports (Microsoft Report Builder)](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md).
 
 ## Document properties
 
@@ -174,7 +174,7 @@ The page footer is always rendered to the Excel worksheet footer section, regard
 
 Because of Excel limitations, text boxes are the only type of report item that can be rendered in the Excel header and footer sections.
 
-Excel header and footer sections support a maximum of 256 characters, including markup. If this limit is exceeded, the Excel renderer removes markup characters starting at the end of the header or footer string to reduce the number of total characters. If all markup characters are removed and the length still exceeds the maximum, the string is truncated starting from the right.
+Excel header and footer sections support a maximum of 256 characters, including markup. If this limit is exceeded, the Excel renderer removes markup characters starting at the end of the header or footer string to reduce the number of total characters. If all markup characters are removed and the length still exceeds the maximum, the string is truncated starting from the end.
 
 ### SimplePageHeader settings
 

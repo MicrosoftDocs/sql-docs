@@ -3,11 +3,12 @@ title: "Job properties (Management Studio)"
 description: Learn about the Job Properties page in SQL Server Management Studio where you view information about jobs on the report server.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/01/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: tools
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 f1_keywords:
   - "sql13.swb.reportserver.jobproperties.f1"
 ---
@@ -59,9 +60,8 @@ f1_keywords:
  **User Name**  
  For processes initiated by a user, this column shows the name of the user. For system jobs, the user name is the name of the report server.  
   
-## Related content  
- [Report server in Management Studio F1 Help](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
- [Connect to a report server in Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
- [Manage a running process](../../reporting-services/subscriptions/manage-a-running-process.md)  
-  
-  
+## Related content
+
+- [Report server in Management Studio F1 Help](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)
+- [Connect to a report server in Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)
+- [Manage a running process](../../reporting-services/subscriptions/manage-a-running-process.md)

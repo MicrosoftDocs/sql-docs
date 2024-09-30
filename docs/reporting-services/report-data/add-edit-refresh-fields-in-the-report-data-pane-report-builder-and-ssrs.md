@@ -3,11 +3,12 @@ title: "Add, Edit, Refresh Fields in the Report Data Pane (Report Builder)"
 description: Learn details about datasets as well as how to add, edit, and refresh fields in the report data pane in Report Builder.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/01/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-data
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 # Add, Edit, Refresh Fields in the Report Data Pane (Report Builder and SSRS)
   Dataset fields are the built-in collection of field names that represent the data that is returned when a dataset query runs on an external data source.  
@@ -81,10 +82,10 @@ ms.custom: updatefrequency5
   
      On the report server, the shared dataset query runs and returns the current field collection.  
   
-## See Also  
- [Dataset Fields Collection &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
- [Report Datasets &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
- [Report Embedded Datasets and Shared Datasets &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
- [Reporting Services Query Designers](/previous-versions/sql/)   
- [Query Design Tools &#40;SSRS&#41;](query-design-tools-ssrs.md)  
-  
+## Related content
+
+- [Dataset Fields Collection &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)
+- [Report Datasets &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)
+- [Report Embedded Datasets and Shared Datasets &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)
+- [Reporting Services Query Designers](/previous-versions/sql/)
+- [Query Design Tools &#40;SSRS&#41;](query-design-tools-ssrs.md)

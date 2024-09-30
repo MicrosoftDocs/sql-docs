@@ -3,11 +3,12 @@ title: "Replication Monitor, Main Page"
 description: "Replication Monitor, Main Page"
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/07/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: ui-reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 f1_keywords:
   - "sql13.rep.monitor.main.f1"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
@@ -32,8 +33,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
   
     -   [Allow Non-Administrators to Use Replication Monitor](../../relational-databases/replication/monitor/allow-non-administrators-to-use-replication-monitor.md)  
   
-## See Also  
- [Start the Replication Monitor](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
- [Monitoring Replication](../../relational-databases/replication/monitor/monitoring-replication.md)  
-  
-  
+## Related content
+
+- [Start the Replication Monitor](../../relational-databases/replication/monitor/start-the-replication-monitor.md)
+- [Monitoring Replication](../../relational-databases/replication/monitor/monitoring-replication.md)

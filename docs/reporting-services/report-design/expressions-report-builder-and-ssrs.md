@@ -3,11 +3,12 @@ title: "Expressions in a paginated report"
 description: Control the content, design, and interactivity of your paginated report with expressions that enable you to retrieve, display, filter, and format data in Report Builder.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 09/06/2016
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 # Expressions in a paginated report (Report Builder)
 
@@ -100,13 +101,11 @@ Simple expressions use symbols to indicate whether the reference is to a field, 
   
  [Expression Reference &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/expression-reference-report-builder-and-ssrs.md)  
 
-## See Also
- For more information and examples, see the following topics:  
-  
--   [Expression Uses in Reports &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)  
--   [Expression Examples &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
--   [Filter Equation Examples &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md)  
--   [Group Expression Examples &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md)  
--   [Tutorial: Introducing Expressions](../tutorial-introducing-expressions.md)
--   [Report Samples (Report Builder and SSRS)](../../reporting-services/tools/reporting-services-tools.md)
-  
+## Related content
+
+- [Expression Uses in Reports &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)
+- [Expression Examples &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)
+- [Filter Equation Examples &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md)
+- [Group Expression Examples &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md)
+- [Tutorial: Introducing Expressions](../tutorial-introducing-expressions.md)
+- [Report Samples (Report Builder and SSRS)](../../reporting-services/tools/reporting-services-tools.md)

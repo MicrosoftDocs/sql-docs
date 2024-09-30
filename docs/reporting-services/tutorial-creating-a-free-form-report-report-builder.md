@@ -3,11 +3,12 @@ title: "Tutorial: Create a free form report (Report Builder)"
 description: Learn how to create a paginated report that acts as a newsletter and where each page displays static text, summary visuals, and detailed sample sales data.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 09/02/2016
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: reporting-services
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 # Tutorial: Create a free form report (Report Builder)
 In this tutorial, you create a paginated report that acts as a newsletter. Each page displays static text, summary visuals, and detailed sample sales data.
@@ -491,18 +492,11 @@ The report now displays summary sales data in pie and column charts.
   
 
   
-## Next steps  
-You successfully completed the tutorial for how to create a free form report.  
-  
-For more information about lists, see: 
-* [Tables, matrices, and lists in paginated reports (Report Builder)](../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md) 
-* [Create invoices and forms with lists in a paginated report (Report Builder)](../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)
-* [Cells, rows, & columns in a tablix in a paginated report (Report Builder)](../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md).  
-  
-For more information about query designers, see [Query design tools (SSRS)](report-data/query-design-tools-ssrs.md) and [Text-based query designer user interface &#40;Report Builder&#41;](../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md).  
-  
 ## Related content
 
-- [Report Builder tutorials](../reporting-services/report-builder-tutorials.md) 
-  
-
+- [Report Builder tutorials](../reporting-services/report-builder-tutorials.md)
+- [Tables, matrices, and lists in paginated reports (Report Builder)](../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)
+- [Create invoices and forms with lists in a paginated report (Report Builder)](../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)
+- [Cells, rows, & columns in a tablix in a paginated report (Report Builder)](../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)
+- [Query design tools (SSRS)](report-data/query-design-tools-ssrs.md)
+- [Text-based query designer user interface &#40;Report Builder&#41;](../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md)

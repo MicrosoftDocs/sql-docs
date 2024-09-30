@@ -34,9 +34,9 @@ By default, Azure SQL Managed Instance achieves *availability* through local red
 - Customer initiated [management operations](management-operations-overview.md) that result in a brief downtime
 - Service maintenance operations
 - Issues and datacenter outages with the:
-    - rack where the machines that power your service are running
-    - physical machine that hosts the VM that runs the SQL database engine
-    - virtual machine that runs the SQL database engine
+    - Rack where the machines that power your service are running.
+    - Physical machine that hosts the VM that runs the SQL database engine.
+    - Virtual machine that runs the SQL database engine
 - Other problems with the SQL database engine
 - Other potential unplanned local outages
 
@@ -124,13 +124,13 @@ The following diagram demonstrates the zone redundancy architecture for the Busi
 
 ## <a id="testing-application-fault-resiliency"></a> Test application fault resiliency
 
-Availability is a fundamental part of the SQL Managed Instance platform that works transparently for your database application. However, we recognize that you might want to test how the automatic failover operations initiated during planned or unplanned events would impact an application before you deploy it to production. You can manually trigger a failover by calling a special API to restart a managed instance. Because the restart operation is intrusive and a large number of them could stress the platform, only one failover call is allowed every 15 minutes for each managed instance.
+Availability is a fundamental part of the SQL Managed Instance platform that works transparently for your database application. However, we recognize that you might want to test how the automatic failover operations initiated during planned or unplanned events would impact an application before you deploy it to production. You can manually trigger a failover by calling a special API to [restart a managed instance](user-initiated-failover.md). Because the restart operation is intrusive and a large number of them could stress the platform, only one failover call is allowed every 15 minutes for each managed instance.
 
 During a true failover, connections to the instance fail while the SQL service becomes primary on a different node. To simulate a failover, invoke the command that restarts the SQL process to simulate starting the service as if there was a failover. However, connections may fail for a longer period during a true failover compared to a simulated failover, since during a true failover, the SQL process becomes the primary on another virtual machine within the cluster (either locally, or in another zone if zone-redundancy is enabled) and during a simulated failover, the SQL process is restarted on the existing virtual machine.  
 
-The manual failover command in this section behaves the same way in both locally redundant, and zone-redundant configurations - it only restarts the SQL process locally, and does not initiate a failover to another node. This local failover is different to a failover that occurs for a failover group. 
+The manual failover command in this section typically behaves the same way in both locally redundant, and zone-redundant configurations - it only restarts the SQL process locally, and does not initiate a failover to another node, though [a few exceptions apply](user-initiated-failover.md#when-to-use-manual-failover). This local failover is different to a failover that occurs for a failover group. 
 
-A local failover can be initiated using PowerShell, REST API, or Azure CLI:
+A local failover can be initiated by using PowerShell, REST API, or Azure CLI:
 
 | PowerShell | REST API | Azure CLI |
 | :--- | :--- | :--- |

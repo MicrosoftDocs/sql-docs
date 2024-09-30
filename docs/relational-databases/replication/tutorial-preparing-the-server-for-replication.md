@@ -3,7 +3,7 @@ title: "Tutorial: Prepare for replication"
 description: In this tutorial, learn how to prepare your publisher, distributor, and subscriber for replication by creating Windows accounts, preparing the snapshot folder, and configuring distribution.
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "04/02/2018"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: tutorial
@@ -234,10 +234,7 @@ For more information, see:
 - [Configure distribution](../../relational-databases/replication/configure-distribution.md) 
 - [Replication agent security model](../../relational-databases/replication/security/replication-agent-security-model.md)  
 
-## Next steps
-You have now successfully prepared your server for replication. The next article teaches you how to configure transactional replication: 
+## Next step
 
 > [!div class="nextstepaction"]
 > [Tutorial: Configure replication between two fully connected servers (transactional)](tutorial-replicating-data-between-continuously-connected-servers.md)
-
-  

@@ -3,12 +3,13 @@ title: "Find, view, & manage reports (Report Builder & SSRS)"
 description: See how you can browse to find paginated reports, shared data sources, models, and other related report items in Report Builder and Report Designer.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 09/04/2024
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-builder
 ms.topic: conceptual
-ms.custom: updatefrequency5
-#customer-intent: As a Report Builder and SSRS user, I want to see how to find, view, and manage reports so that I can deploy them effectively.
+ms.custom:
+  - updatefrequency5
+# customer-intent: As a Report Builder and SSRS user, I want to see how to find, view, and manage reports so that I can deploy them effectively.
 ---
 # Find, view, and manage reports (Report Builder and SSRS)
 
@@ -140,4 +141,4 @@ For more information about session management, see [Identify the execution state
 
 - [Save reports (Report Builder)](../../reporting-services/report-builder/saving-reports-report-builder.md)
 - [Report builder in SQL Server](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)
-- [Preview reports in Report Builder](../../reporting-services/report-builder/previewing-reports-in-report-builder.md)  
+- [Preview reports in Report Builder](../../reporting-services/report-builder/previewing-reports-in-report-builder.md)

@@ -3,11 +3,12 @@ title: "Create a report server database, Configuration Manager"
 description: "SQL Server Reporting Services native mode uses two SQL Server relational databases to store report server metadata and objects. One database is used for primary storage, and the second one stores temporary data."
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 02/13/2023
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-server
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 
 # Create a report server database, Report Server Configuration Manager  
@@ -96,8 +97,7 @@ If you create the report server database on a remote computer, configure the con
 
  When you create a report server database, not all editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can be used to host the database. For more information, see [Edition requirements for the report server database](../reporting-services-features-supported-by-the-editions-of-sql-server-2016.md#edition-requirements-for-the-report-server-database) in [SQL Server Reporting Services features supported by its editions](../reporting-services-features-supported-by-the-editions-of-sql-server-2016.md).  
 
-## Next steps
+## Related content
 
-Read about [Report Server Configuration Manager](reporting-services-configuration-manager-native-mode.md).  
-
-More questions? Ask the [Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user).
+- [Report Server Configuration Manager](reporting-services-configuration-manager-native-mode.md)
+- [Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)

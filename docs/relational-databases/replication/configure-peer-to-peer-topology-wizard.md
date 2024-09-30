@@ -3,11 +3,12 @@ title: "Configure Peer-to-Peer Topology Wizard"
 description: "Configure Peer-to-Peer Topology Wizard"
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/01/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "Configure Peer-to-Peer Topology Wizard"
 ---
@@ -25,8 +26,7 @@ helpviewer_keywords:
   
 -   [New Peer Initialization &#40;Peer-to-Peer Replication&#41;](../../relational-databases/replication/new-peer-initialization-peer-to-peer-replication.md)  
   
-## See Also  
- [Administer a Peer-to-Peer Topology &#40;Replication Transact-SQL Programming&#41;](../../relational-databases/replication/administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   
- [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)  
-  
-  
+## Related content
+
+- [Administer a Peer-to-Peer Topology &#40;Replication Transact-SQL Programming&#41;](../../relational-databases/replication/administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)
+- [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)

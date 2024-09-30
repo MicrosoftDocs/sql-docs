@@ -3,12 +3,13 @@ title: "Tutorial: Add a table to the report"
 description: Learn how to create a report layout in SQL Server Data Tools (SSDT) by dragging and dropping report objects from the tool pane to the design surface.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 06/19/2024
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: reporting-services
 ms.topic: tutorial
-ms.custom: updatefrequency5
-#customer intent: As a SQL Server user, I want to use the drag-and-drop feature in SQL Server Data Tools (SSDT) to quickly create a report layout.
+ms.custom:
+  - updatefrequency5
+# customer intent: As a SQL Server user, I want to use the drag-and-drop feature in SQL Server Data Tools (SSDT) to quickly create a report layout.
 ---
 # Tutorial: Add a table to the report (Reporting Services)
 
@@ -81,4 +82,4 @@ While designing, preview your report frequently. By doing so, you validate the d
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Step 5: Format a report &#40;Reporting Services&#41;](tutorial-step-05-format-report-reporting-services.md) 
+> [Step 5: Format a report &#40;Reporting Services&#41;](tutorial-step-05-format-report-reporting-services.md)

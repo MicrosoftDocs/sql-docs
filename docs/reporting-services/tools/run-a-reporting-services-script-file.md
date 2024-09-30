@@ -3,11 +3,12 @@ title: "Run a Reporting Services script file"
 description: View examples of how to run a Reporting Services script file from the command prompt by using the Reporting Services script environment (RS.exe).
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/01/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: tools
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "scripts [Reporting Services], running"
 ---
@@ -46,7 +47,6 @@ helpviewer_keywords:
     rs -i Script.rss -s https://servername/reportserver -b  
     ```  
   
-## Related content 
- [Technical reference &#40;SSRS&#41;](../../reporting-services/technical-reference-ssrs.md)  
-  
-  
+## Related content
+
+- [Technical reference &#40;SSRS&#41;](../../reporting-services/technical-reference-ssrs.md)

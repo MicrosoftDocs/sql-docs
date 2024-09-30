@@ -3,11 +3,12 @@ title: "Microsoft COM-Based Resolvers"
 description: "Advanced Merge Replication Conflict - COM-Based Resolvers"
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/14/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "COM-based resolvers [SQL Server replication]"
   - "custom resolvers [SQL Server replication]"
@@ -37,8 +38,7 @@ helpviewer_keywords:
 |[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Download Only Conflict Resolver|No inputs.|Changes uploaded to the Publisher are rejected; changes are downloaded to the Subscriber.|Supports all conflict types.|  
 |[!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLServer Stored Procedure Resolver|Name of the stored procedure the resolver should call to handle the conflict.|Conflict resolution depends on the logic in the stored procedure you specify.|Supports update conflicts. For more information, see [Implement a Custom Conflict Resolver for a Merge Article](../../../relational-databases/replication/implement-a-custom-conflict-resolver-for-a-merge-article.md)|  
   
-## See Also  
- [Advanced Merge Replication Conflict Detection and Resolution](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
- [sp_enumcustomresolvers &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql.md)  
-  
-  
+## Related content
+
+- [Advanced Merge Replication Conflict Detection and Resolution](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)
+- [sp_enumcustomresolvers &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql.md)

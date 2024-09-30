@@ -3,15 +3,16 @@ title: Initialize subscription with snapshot
 description: "Initialize a Subscription with a Snapshot for a New Publication"
 author: MashaMSFT
 ms.author: mathoma
-ms.date: 03/23/2020
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: how-to
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "snapshots [SQL Server replication], initializing subscriptions"
   - "initializing subscriptions [SQL Server replication], snapshots"
-monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Initialize a Subscription with a Snapshot for a New Publication
 
@@ -93,8 +94,7 @@ There are several options available when initializing a subscription with a snap
 
 - Transfer snapshot files using File Transfer Protocol (FTP). For more information, see [Transfer Snapshots Through FTP](../../relational-databases/replication/publish/deliver-a-snapshot-through-ftp.md).
 
-## See Also
+## Related content
 
-[Initialize a Subscription](../../relational-databases/replication/initialize-a-subscription.md)
-
-[Secure the Snapshot Folder](../../relational-databases/replication/security/secure-the-snapshot-folder.md)
+- [Initialize a Subscription](../../relational-databases/replication/initialize-a-subscription.md)
+- [Secure the Snapshot Folder](../../relational-databases/replication/security/secure-the-snapshot-folder.md)

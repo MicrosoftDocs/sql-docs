@@ -3,11 +3,12 @@ title: "Updatable Subscriptions (Transactional)"
 description: Describes the Updatable Subscriptions feature available for Transactional Replication in SQL Server.
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "07/21/2016"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "transactional replication, updatable subscriptions"
   - "updatable subscriptions, about updatable subscriptions"
@@ -116,10 +117,9 @@ helpviewer_keywords:
   
     -   If conflicts are expected: you should not use foreign key constraints at the Publisher or Subscriber if you use "Subscriber wins" conflict resolution; you should not use foreign key constraints at the Subscriber if you use "Publisher wins" conflict resolution.  
   
-## See Also  
- [Peer-to-Peer Transactional Replication](../../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)   
- [Transactional Replication](../../../relational-databases/replication/transactional/transactional-replication.md)   
- [Publish Data and Database Objects](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
- [Subscribe to Publications](../../../relational-databases/replication/subscribe-to-publications.md)  
-  
-  
+## Related content
+
+- [Peer-to-Peer Transactional Replication](../../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)
+- [Transactional Replication](../../../relational-databases/replication/transactional/transactional-replication.md)
+- [Publish Data and Database Objects](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)
+- [Subscribe to Publications](../../../relational-databases/replication/subscribe-to-publications.md)

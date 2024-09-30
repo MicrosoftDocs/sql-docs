@@ -3,11 +3,12 @@ title: "Replication Conflict Viewer (Peer-to-Peer)"
 description: Learn about the Replication Conflict Viewer and how to use it to view conflicts for Peer-to-Peer Transactional Replication and Transactional Replication with queued updating subscriptions.
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/01/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: ui-reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 f1_keywords:
   - "sql13.rep.replconflictviewer.cvqueued.f1"
 monikerRange: "=azuresqldb-current||>=sql-server-2016"
@@ -60,8 +61,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016"
  **Log the details of the conflict**  
  Check this box to log the details of the conflict to a file. To specify a location for the file, point to the **View** menu and click **Options**. Enter a value, or click the browse (**...**) and navigate to the appropriate file. Click **OK** to exit the **Options** dialog box.  
   
-## See Also  
- [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)   
- [View Data Conflicts for Transactional Publications &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/view-data-conflicts-for-transactional-publications-sql-server-management-studio.md)  
-  
-  
+## Related content
+
+- [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)
+- [View Data Conflicts for Transactional Publications &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/view-data-conflicts-for-transactional-publications-sql-server-management-studio.md)

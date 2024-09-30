@@ -3,11 +3,12 @@ title: "Interactive sort, document maps, and links in a paginated report"
 description: Enable your users to change the sort order of values in a paginated report, show or hide items, or select links to other reports or Web pages in Report Builder.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/14/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 # Interactive sort, document maps, and links in a paginated report (Report Builder)
 
@@ -44,7 +45,6 @@ ms.custom: updatefrequency5
  [Add a Hyperlink to a URL &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/add-a-hyperlink-to-a-url-report-builder-and-ssrs.md)  
  Explains how to add a link from your report to a URL  
   
-## See Also  
- [Drillthrough, Drilldown, Subreports, and Nested Data Regions &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md)  
-  
-  
+## Related content
+
+- [Drillthrough, Drilldown, Subreports, and Nested Data Regions &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md)

@@ -3,7 +3,7 @@ title: "What is SQL Server Reporting Services?"
 description: "Learn how to create, deploy, and manage reports by using SQL Server Reporting Services (SSRS) to deliver data insights through paginated reports to web portals."
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 07/03/2024
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: reporting-services
 ms.topic: overview
@@ -16,7 +16,7 @@ helpviewer_keywords:
   - "reports [Reporting Services], about reports"
   - "Reporting Services"
   - "SQL Server Reporting Services"
-#customer intent: As a SQL Server user, I want to learn how I can manage reports by using SQL Server Reporting Services (SSRS) paginated reports so that I can deliver paginated reports.
+# customer intent: As a SQL Server user, I want to learn how I can manage reports by using SQL Server Reporting Services (SSRS) paginated reports so that I can deliver paginated reports.
 ---
 
 # What is SQL Server Reporting Services (SSRS)?
@@ -108,6 +108,5 @@ To learn more, see [Reporting Services developer documentation](../reporting-ser
 
 ## Related content
 
-- Keep up with new SSRS features: [What's new in Reporting Services](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)?
-
-More questions? [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user).
+- [What's new in Reporting Services](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)
+- [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)

@@ -3,11 +3,12 @@ title: "Show Hidden Datasets for Parameter Values - Multidimensional Data"
 description: Learn how to show hidden datasets for parameter values so you can display all datasets in a report.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/07/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-data
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 # Show Hidden Datasets for Parameter Values - Multidimensional Data
   Your report might include automatically-generated datasets (also known as hidden datasets) that do not appear by default in the Report Data pane. These datasets are created in the following ways:  
@@ -27,9 +28,9 @@ ms.custom: updatefrequency5
   
 -   In the Report Data pane, right-click the Datasets folder, and then click **Show Hidden Datasets**.  
   
-## See Also  
- [Query Design Tools &#40;SSRS&#41;](query-design-tools-ssrs.md)   
- [Reporting Services Query Designers](/previous-versions/sql/)   
- [Report Embedded Datasets and Shared Datasets &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
- [Report Datasets &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
-  
+## Related content
+
+- [Query Design Tools &#40;SSRS&#41;](query-design-tools-ssrs.md)
+- [Reporting Services Query Designers](/previous-versions/sql/)
+- [Report Embedded Datasets and Shared Datasets &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)
+- [Report Datasets &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)

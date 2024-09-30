@@ -3,11 +3,12 @@ title: "Initialize a Subscription Manually"
 description: "Initialize a Subscription Manually"
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "08/25/2016"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: how-to
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "manual subscription initialization [SQL Server replication]"
   - "subscriptions [SQL Server replication], initializing"
@@ -83,8 +84,8 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
   
 4.  Start the Merge Agent to transfer replication objects and download the latest changes from the Publisher. For more information, see [Synchronize a Push Subscription](../../relational-databases/replication/synchronize-a-push-subscription.md).  
   
-## See Also  
- [Initialize a Transactional Subscription Without a Snapshot](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)   
- [Back Up and Restore Replicated Databases](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)   
- [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md)  
-  
+## Related content
+
+- [Initialize a Transactional Subscription Without a Snapshot](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)
+- [Back Up and Restore Replicated Databases](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)
+- [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md)

@@ -3,11 +3,12 @@ title: "Add data grids to mobile reports"
 description: You can present data in a grid in SQL Server Mobile Report Publisher. Choose a simple data grid, an indicator data grid, or a chart data grid.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 07/21/2022
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: mobile-reports
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 # Add data grids to mobile reports
 
@@ -75,10 +76,9 @@ When you add a chart column to a data grid, you need to add a separate data tabl
    * **Destination lookup** is the field in the data table in **Reference data for chart visualizations**. The data for the chart in each row is joined on those two fields.   
    * **Chart data field** determines which metric in the **Reference data for chart visualizations** data table to use as the y-axis value or series in the chart in each row.  
 
-## Related content 
-* [Maps in Reporting Services mobile reports](../../reporting-services/mobile-reports/maps-in-reporting-services-mobile-reports.md)
-* [Navigators in Reporting Services mobile reports](../../reporting-services/mobile-reports/add-navigators-to-reporting-services-mobile-reports.md)
-* [Visualizations in Reporting Services mobile reports](../../reporting-services/mobile-reports/add-visualizations-to-reporting-services-mobile-reports.md)
-* [Gauges in Reporting Services mobile reports](../../reporting-services/mobile-reports/add-gauges-to-mobile-reports-reporting-services.md)  
- 
-  
+## Related content
+
+- [Maps in Reporting Services mobile reports](../../reporting-services/mobile-reports/maps-in-reporting-services-mobile-reports.md)
+- [Navigators in Reporting Services mobile reports](../../reporting-services/mobile-reports/add-navigators-to-reporting-services-mobile-reports.md)
+- [Visualizations in Reporting Services mobile reports](../../reporting-services/mobile-reports/add-visualizations-to-reporting-services-mobile-reports.md)
+- [Gauges in Reporting Services mobile reports](../../reporting-services/mobile-reports/add-gauges-to-mobile-reports-reporting-services.md)

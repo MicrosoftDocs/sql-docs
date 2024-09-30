@@ -3,11 +3,12 @@ title: "Set and configure measurement units in a paginated report"
 description: Learn how to set and configure measurement units in a paginated report using expressions in Report Builder.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/01/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 # Set and configure measurement units in a paginated report (Report Builder)
 
@@ -66,7 +67,6 @@ ms.custom: updatefrequency5
   
 6.  Select **OK**.
   
-## See Also  
- [Indicators &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  
-  
-  
+## Related content
+
+- [Indicators &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)

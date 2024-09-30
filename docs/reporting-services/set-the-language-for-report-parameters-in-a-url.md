@@ -3,11 +3,12 @@ title: "Set the language for report parameters in a URL"
 description: "Learn how to set the language for report parameters in a URL by using the rs:ParameterLanguage URL access parameter."
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/01/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: reporting-services
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "overriding report language settings"
   - "report servers [Reporting Services], language settings"
@@ -35,7 +36,5 @@ https://myrshost/Reportserver?/SampleReports/Product+Line+Sales&rs:Command=Rende
   
 ## Related content
 
-- [URL access &#40;SSRS&#41;](../reporting-services/url-access-ssrs.md)   
-- [URL access parameter reference](../reporting-services/url-access-parameter-reference.md)  
-  
-  
+- [URL access &#40;SSRS&#41;](../reporting-services/url-access-ssrs.md)
+- [URL access parameter reference](../reporting-services/url-access-parameter-reference.md)

@@ -3,11 +3,12 @@ title: "Power BI Report Server Integration (Configuration Manager)"
 description: "Power BI Report Server Integration (Configuration Manager)"
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 09/17/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-server
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 
 # Power BI Report Server Integration (Configuration Manager)
@@ -150,10 +151,9 @@ The second time a user pins an item, the steps 1-4 are skipped and instead the A
 
 * Viral and government tenants are not supported.
 
-## Next steps
+## Related content
 
-[My Settings for Power BI Integration &#40;web portal&#41;](../my-settings-for-power-bi-integration-web-portal.md)  
-[Pin Reporting Services items to Power BI Dashboards](../../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md)
-[Dashboards in Power BI](https://powerbi.microsoft.com/documentation/powerbi-service-dashboards/)  
-
-More questions? [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)
+- [My Settings for Power BI Integration &#40;web portal&#41;](../my-settings-for-power-bi-integration-web-portal.md)
+- [Pin Reporting Services items to Power BI Dashboards](../../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md)
+- [Dashboards in Power BI](https://powerbi.microsoft.com/documentation/powerbi-service-dashboards/)
+- [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)

@@ -3,11 +3,12 @@ title: "Rectangles and lines in a paginated report"
 description: Discover how to create visual effects within a paginated report in Report Builder. Add features such as color or an image, a tooltip, or a bookmark.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/01/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 # Rectangles and lines in a paginated report (Report Builder)
 
@@ -40,7 +41,6 @@ ms.custom: updatefrequency5
   
  [Add and Modify a Line &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/add-and-modify-a-line-report-builder-and-ssrs.md)  
   
-## See Also  
- [Add a Rectangle or Container &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/add-a-rectangle-or-container-report-builder-and-ssrs.md)  
-  
-  
+## Related content
+
+- [Add a Rectangle or Container &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/add-a-rectangle-or-container-report-builder-and-ssrs.md)

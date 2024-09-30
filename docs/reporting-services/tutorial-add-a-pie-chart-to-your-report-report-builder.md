@@ -3,11 +3,12 @@ title: "Tutorial: Add a pie chart to your report (Report Builder)"
 description: Learn how to create a pie chart in a Reporting Services paginated report, add percentages, and combine small slices into a single slice.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 06/15/2016
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: reporting-services
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 # Tutorial: Add a pie chart to your report (Report Builder)
 In this tutorial, you create pie chart in a Reporting Services paginated report. You add percentages and combine small slices into a single slice.
@@ -205,12 +206,9 @@ Because the pie chart is the only visualization in the report, the chart doesn't
   
 Your report is saved on the report server.  
   
-## Next steps
-You successfully completed the Adding a Pie Chart to Your Report tutorial. For more information about charts, see [Charts in a paginated report (Report Builder)](../reporting-services/report-design/charts-report-builder-and-ssrs.md) and [Sparklines and data bars in a paginated report (Report Builder)](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).  
-  
 ## Related content
 
-- [Report Builder tutorials](../reporting-services/report-builder-tutorials.md)  
-- [Report Builder in SQL Server](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
-  
-
+- [Report Builder tutorials](../reporting-services/report-builder-tutorials.md)
+- [Report Builder in SQL Server](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)
+- [Charts in a paginated report (Report Builder)](../reporting-services/report-design/charts-report-builder-and-ssrs.md)
+- [Sparklines and data bars in a paginated report (Report Builder)](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)

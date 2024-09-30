@@ -3,11 +3,12 @@ title: "Data Alert Designer"
 description: Learn about data alert definitions and how to create and edit data alert definitions in Data Alert Designer.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 07/02/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: reporting-services
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "editing, data alerts"
   - "updating, data alerts"
@@ -208,7 +209,6 @@ You create and edit data alert definitions in Data Alert Designer. An alert defi
 
 ## Related content
 
-- [Reporting Services data alerts](../reporting-services/reporting-services-data-alerts.md)   
-- [Data Alert Manager for alerting administrators](../reporting-services/data-alert-manager-for-alerting-administrators.md)  
-
-More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)
+- [Reporting Services data alerts](../reporting-services/reporting-services-data-alerts.md)
+- [Data Alert Manager for alerting administrators](../reporting-services/data-alert-manager-for-alerting-administrators.md)
+- [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

@@ -3,13 +3,13 @@ title: Troubleshoot server and database connection problems
 description: Learn how to diagnose and fix problems you experience when you're connecting to a report server and about 'Unexpected error' messages.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 09/04/2024
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: troubleshooting
 ms.topic: troubleshooting-general
-ms.custom: updatefrequency5
-
-#customer intent: As a Reporting Services user, I want to learn about different connection problems that I might experience so that I can diagnose and fix them.
+ms.custom:
+  - updatefrequency5
+# customer intent: As a Reporting Services user, I want to learn about different connection problems that I might experience so that I can diagnose and fix them.
 ---
 # Troubleshoot server and database connection problems with Reporting Services
 
@@ -140,4 +140,4 @@ When you create the report server databases, **ReportServer** and **ReportServer
 - [Troubleshoot data retrieval issues with Reporting Services reports](../../reporting-services/troubleshooting/troubleshoot-data-retrieval-issues-with-reporting-services-reports.md)
 - [Troubleshoot Reporting Services subscriptions and delivery](../../reporting-services/troubleshooting/troubleshoot-reporting-services-subscriptions-and-delivery.md)
 
-[!INCLUDE[feedback-qa-stackoverflow-md](../../includes/feedback-qa-stackoverflow-md.md)]
+[!INCLUDE [feedback-qa-stackoverflow-md](../../includes/feedback-qa-stackoverflow-md.md)]

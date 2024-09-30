@@ -3,11 +3,12 @@ title: "Use URL access in Windows applications"
 description: URL access to a report server is optimized for a Web environment, but you can also use URL access to embed Reporting Services reports in a Windows application.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/14/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: application-integration
 ms.topic: reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "Windows applications [Reporting Services]"
   - "Web Browser controls [Reporting Services]"
@@ -105,11 +106,10 @@ string url = "https://localhost/reportserver?/" +
 webBrowser1.Navigate(url);  
 ```  
   
-## Related content  
- [Integrating Reporting Services into Applications](../../reporting-services/application-integration/integrating-reporting-services-into-applications.md)   
- [Integrating Reporting Services by using URL access](../../reporting-services/application-integration/integrating-reporting-services-using-url-access.md)   
- [Integrating Reporting Services by using SOAP](../../reporting-services/application-integration/integrating-reporting-services-using-soap.md)   
- [Integrating Reporting Services by using the ReportViewer controls](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls.md)   
- [URL Access &#40;SSRS&#41;](../../reporting-services/url-access-ssrs.md)  
-  
-  
+## Related content
+
+- [Integrating Reporting Services into Applications](../../reporting-services/application-integration/integrating-reporting-services-into-applications.md)
+- [Integrating Reporting Services by using URL access](../../reporting-services/application-integration/integrating-reporting-services-using-url-access.md)
+- [Integrating Reporting Services by using SOAP](../../reporting-services/application-integration/integrating-reporting-services-using-soap.md)
+- [Integrating Reporting Services by using the ReportViewer controls](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls.md)
+- [URL Access &#40;SSRS&#41;](../../reporting-services/url-access-ssrs.md)

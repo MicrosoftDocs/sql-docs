@@ -3,11 +3,12 @@ title: "Subscription validation options dialog box (Transactional)"
 description: Describes the 'Subscription Validation Options' dialog box for Transactional Replication in SQL Server Management Studio (SSMS).
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/01/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: ui-reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 f1_keywords:
   - "sql13.rep.validate.options.f1"
 helpviewer_keywords:
@@ -30,8 +31,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016"
  **Stop the Distribution Agent after the validation has completed**  
  By default, the Distribution Agent runs continuously. Select this option to stop the agent after validation is performed. This allows you to check whether validation was successful before continuing to replicate data to the Subscriber.  
   
-## See Also  
- [Validate Data at the Subscriber](../../relational-databases/replication/validate-data-at-the-subscriber.md)   
- [Validate Replicated Data](../../relational-databases/replication/validate-data-at-the-subscriber.md)  
-  
-  
+## Related content
+
+- [Validate Data at the Subscriber](../../relational-databases/replication/validate-data-at-the-subscriber.md)
+- [Validate Replicated Data](../../relational-databases/replication/validate-data-at-the-subscriber.md)

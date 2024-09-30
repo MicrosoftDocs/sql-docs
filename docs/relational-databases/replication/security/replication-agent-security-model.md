@@ -3,11 +3,12 @@ title: "Replication Agent Security Model"
 description: In SQL Server, the replication agent security model allows for fine-grained control over the accounts under which replication agents run and make connections.
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "04/26/2018"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: how-to
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "Snapshot Agent, security"
   - "agents [SQL Server replication], security"
@@ -85,9 +86,8 @@ The replication agent security model is a little bit different for Azure SQL Man
 > [!NOTE]  
 >  This information is provided to help you understand what is involved in running agents with the appropriate security context. You should not have to interact directly with the credentials or proxies that have been created.  
   
-## See Also  
- [Replication Security Best Practices](../../../relational-databases/replication/security/replication-security-best-practices.md)   
- [View and modify replication security settings](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   
- [Secure the Snapshot Folder](../../../relational-databases/replication/security/secure-the-snapshot-folder.md)  
-  
-  
+## Related content
+
+- [Replication Security Best Practices](../../../relational-databases/replication/security/replication-security-best-practices.md)
+- [View and modify replication security settings](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)
+- [Secure the Snapshot Folder](../../../relational-databases/replication/security/secure-the-snapshot-folder.md)

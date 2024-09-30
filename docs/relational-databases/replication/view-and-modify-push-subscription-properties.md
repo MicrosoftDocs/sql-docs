@@ -3,11 +3,12 @@ title: "View and Modify Push Subscription Properties"
 description: "View and Modify Push Subscription Properties"
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/16/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: how-to
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "viewing replication properties"
   - "push subscriptions [SQL Server replication], properties"
@@ -126,9 +127,8 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016"
   
 7.  (Optional) To view the new settings, call the <xref:Microsoft.SqlServer.Replication.ReplicationObject.Refresh%2A> method to reload the properties for the subscription.  
   
-## See Also  
- [View information and perform tasks using Replication Monitor](../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)   
- [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md)   
- [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)  
-  
-  
+## Related content
+
+- [View information and perform tasks using Replication Monitor](../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)
+- [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md)
+- [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)

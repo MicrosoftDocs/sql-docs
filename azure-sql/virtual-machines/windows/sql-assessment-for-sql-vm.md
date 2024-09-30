@@ -4,7 +4,7 @@ description: "Identify performance issues and assess that your SQL Server VM is 
 author: ebruersan
 ms.author: ebrue
 ms.reviewer: mathoma
-ms.date: 07/14/2023
+ms.date: 09/27/2024
 ms.service: virtual-machines-sql
 ms.topic: how-to
 ms.custom: devx-track-azurecli
@@ -25,7 +25,7 @@ To learn more, watch this video on [SQL best practices assessment](/shows/Data-E
 Once the SQL best practices assessment feature is enabled, your SQL Server instance and databases are scanned to provide recommendations for things like indexes, deprecated features, enabled or missing trace flags, statistics, etc. Recommendations are surfaced to the [SQL VM management page](manage-sql-vm-portal.md) of the [Azure portal](https://portal.azure.com/#blade/HubsExtension/BrowseResource/resourceType/Microsoft.SqlVirtualMachine%2FSqlVirtualMachines). 
 
 
-Assessment results are uploaded to your [Log Analytics workspace](/azure/azure-monitor/logs/quick-create-workspace) using [Azure Monitor Agent (AMA)](/azure/azure-monitor/agents/agents-overview). The AMA extension is installed to the SQL Server VM, if it is not installed already, and AMA resources such as [DCE](/azure/azure-monitor/essentials/data-collection-endpoint-overview), [DCR](/azure/azure-monitor/essentials/data-collection-rule-overview) are created and connected to the specified Log Analytics workspace.
+Assessment results are uploaded to your [Log Analytics workspace](/azure/azure-monitor/logs/quick-create-workspace) using [Azure Monitor Agent (AMA)](/azure/azure-monitor/agents/agents-overview). The AMA extension is installed to the SQL Server VM, if it isn't installed already, and AMA resources such as [DCE](/azure/azure-monitor/essentials/data-collection-endpoint-overview), [DCR](/azure/azure-monitor/essentials/data-collection-rule-overview) are created and connected to the specified Log Analytics workspace.
 
 Assessment run time depends on your environment (number of databases, objects, and so on), with a duration from a few minutes, up to an hour. Similarly, the size of the assessment result also depends on your environment. Assessment runs against your instance and all databases on that instance. In our testing, we observed that an assessment run can have up to 5-10% CPU impact on the machine. In these tests, the assessment was done while a TPC-C like application was running against the SQL Server.
 
@@ -35,26 +35,34 @@ To use the SQL best practices assessment feature, you must have the following pr
 
 - Your SQL Server VM must be registered with the [SQL Server IaaS extension](sql-agent-extension-manually-register-single-vm.md#register-with-extension). 
 - A [Log Analytics workspace](/azure/azure-monitor/logs/quick-create-workspace) in the same subscription as your SQL Server VM to upload assessment results to. 
-- SQL Server needs to be 2012 or higher version.
+- SQL Server 2012 or later. 
+
+## Permissions
+
+To enable SQL best practices assessments, you need the following permissions:
+
+- [Virtual machine contributor](/azure/role-based-access-control/built-in-roles/compute#virtual-machine-contributor) on the underlying virtual machine resource.
+- [Virtual machine contributor](/azure/role-based-access-control/built-in-roles/compute#virtual-machine-contributor) on the SQL virtual machines resource. 
+- [Log Analytics Contributor](/azure/role-based-access-control/built-in-roles/analytics#log-analytics-contributor) on the resource group that contains the Log Analytics workspace.
+- [Reader](/azure/role-based-access-control/built-in-roles/general#reader) on the resource group where the Azure Monitor Agent resources are created. Check the configuration option for the resource group when you enable the SQL best practices assessment feature.
 
 
 ## Enable
 
 You can enable SQL best practices assessments using the Azure portal or the Azure CLI. 
 
-
 # [Azure portal](#tab/azure-portal)
 
 To enable SQL best practices assessments using the Azure portal, follow these steps: 
 
-1. Sign into the [Azure portal](https://portal.azure.com) and go to your [SQL Server VM resource](https://portal.azure.com/#blade/HubsExtension/BrowseResource/resourceType/Microsoft.SqlVirtualMachine%2FSqlVirtualMachines). 
+1. Sign into the [Azure portal](https://portal.azure.com) and go to your [SQL virtual machines](https://portal.azure.com/#blade/HubsExtension/BrowseResource/resourceType/Microsoft.SqlVirtualMachine%2FSqlVirtualMachines) resource. 
 1. Select **SQL best practices assessments** under **Settings**. 
 1. Select **Enable SQL best practices assessments** or **Configuration** to navigate to the **Configuration** page. 
 1. Check the **Enable SQL best practices assessments** box and provide the following:
     1. The [Log Analytics workspace](/azure/azure-monitor/logs/quick-create-workspace) that assessments will be uploaded to. Choose an existing workspace in the subscription from the drop-down. 
     1. Choose a resource group where the Azure Monitor Agent resources [DCE](/azure/azure-monitor/essentials/data-collection-endpoint-overview) and [DCR](/azure/azure-monitor/essentials/data-collection-rule-overview) will be created. If you specify the same resource group across multiple SQL Server VMs, these resources are reused. 
     1. The **Run schedule**. You can choose to run assessments on demand, or automatically on a schedule. If you choose a schedule, then provide the frequency (weekly or monthly), day of week, recurrence (every 1-6 weeks), and the time of day your assessments should start (local to VM time). 
-1. Select **Apply** to save your changes and deploy the Azure Monitor Agent to your SQL Server VM if it's not deployed already. An Azure portal notification will tell you once the SQL best practices assessment feature is ready for your SQL Server VM. 
+1. Select **Apply** to save your changes and deploy the Azure Monitor Agent to your SQL Server VM if it's not deployed already. An Azure portal notification tells you once the SQL best practices assessment feature is ready for your SQL Server VM. 
     
 # [Azure CLI](#tab/azure-cli)
 
@@ -70,7 +78,6 @@ To disable the feature, use the following command:
 # This will disable the feature including any set schedules
 az sql vm update --enable-assessment false -g "myRg" -n "myVM"
 ```
-
 
 ---
 
@@ -120,7 +127,7 @@ After the SQL best practices assessment feature is enabled for your SQL Server V
 
 # [Azure portal](#tab/azure-portal)
 
-To run an on-demand assessment by using the Azure portal, select **Run assessment** from the SQL best practices assessment pane of the [Azure portal SQL Server VM resource](https://portal.azure.com/#blade/HubsExtension/BrowseResource/resourceType/Microsoft.SqlVirtualMachine%2FSqlVirtualMachines) page.
+To run an on-demand assessment by using the Azure portal, select **Run assessment** from the SQL best practices assessment pane of the [SQL virtual machines](https://portal.azure.com/#blade/HubsExtension/BrowseResource/resourceType/Microsoft.SqlVirtualMachine%2FSqlVirtualMachines) resource page in the Azure portal.
 
 # [Azure CLI](#tab/azure-cli)
 
@@ -147,11 +154,15 @@ Once you have the workbook open, you can use the drop-down to select previous ru
 
 ### Results page
 
-The **Results** page organizes the recommendations using tabs for *All, new, resolved*. Use these tabs to view all recommendations from the current run, all the new recommendations (the delta from previous runs), or resolved recommendations from previous runs. Tabs help you track progress between runs. The *Insights* tab identifies the most recurring issues and the databases with the most issues. Use these to decide where to concentrate your efforts. 
+The **Results** page organizes the recommendations using tabs for: 
+- *All*: All recommendations from the current run
+- *New*: New recommendations (the delta from previous runs)
+- *Resolved*: Resolved recommendations from previous runs
+- *Insights*: Identifies the most recurring issues and the databases with the most issues.
 
 The graph groups assessment results in different categories of severity - high, medium, low, and information. Select each category to see the list of recommendations, or search for key phrases in the search box. It's best to start with the most severe recommendations and go down the list.
 
-The first grid shows you each recommendation and the number of instances your environment hit that issue. When you select a row in the first grid, the second grid lists all the instances for that particular recommendation. If there is no selection in the first grid, the second grid shows all recommendations. Potentially this could be a big list. You can use the drop downs above the grid (**Name, Severity, Tags, Check Id**) to filter the results. You can also use **Export to Excel** and **Open the last run query in the Logs view** options by selecting the small icons on the top right corner of each grid.
+The first grid shows you each recommendation and the number of instances in your environment that encountered that issue. When you select a row in the first grid, the second grid lists all the instances for that particular recommendation. If there's no selection in the first grid, the second grid shows all recommendations, which could potentially be a long list.  You can use the drop downs above the grid (**Name, Severity, Tags, Check Id**) to filter the results. You can also use **Export to Excel** and **Open the last run query in the Logs view** options by selecting the small icons on the top right corner of each grid.
 
 The **passed** section of the graph identifies recommendations your system already follows. 
 
@@ -200,28 +211,55 @@ foreach ($sqlvm in $sqlvms)
 
 ```
 
-## Known Issues
+## Known issues
 
 You may encounter some of the following known issues when using SQL best practices assessments. 
 
-### Migrating from Microsoft Monitoring Agent (MMA) to Azure Monitor Agent (AMA)
+### Migrating to Azure Monitor Agent (AMA)
 
-Previously, SQL best practices assessment feature used MMA to upload assessments to Log Analytics workspace. MMA is being [retired](/azure/azure-monitor/agents/azure-monitor-agent-migration). This feature now uses AMA to upload assessments. If you have enabled SQL best practices assessment using MMA in the past, you can easily migrate to AMA by first disabling, then re-enabling the feature. Your existing results will still be available after the disable/enable operation as long as you specify the same Log Analytics workspace. If it isn't being used by other services, you can at this point remove the Microsoft Monitoring Agent by following [these instructions](/azure/azure-monitor/agents/agent-manage). Before you migrate, please make sure Azure Monitor Log Analytics is supported in the region where your SQL Server VM lives using the [table linked here](/azure/azure-monitor/agents/agents-overview#supported-regions). 
+Previously, SQL best practices assessment feature used Microsoft Monitoring Agent (MMA) to upload assessments to Log Analytics workspace. The Microsoft Monitoring Agent has been [replaced with the Azure Monitor Agent (AMA)](/azure/azure-monitor/agents/azure-monitor-agent-migration). To migrate existing SQL best practices assessments from MMA to AMA, you must [delete](sql-agent-extension-manually-register-single-vm.md#delete-the-extension) and then [register](sql-agent-extension-manually-register-single-vm.md#register-with-extension) your SQL Server VM with the extension again. Your existing results will still be available after assessments are enabled. If the MMA isn't being used by other services, you can [remove it](/azure/azure-monitor/agents/agent-manage). Before you migrate, make sure Azure Monitor Log Analytics is [supported in the region](/azure/azure-monitor/agents/agents-overview#supported-regions) where your SQL Server VM is deployed. 
 
-### Deployment failure for Enable or Run Assessment 
+### Failed to enable assessments  
 
 Refer to the [deployment history](/azure/azure-resource-manager/templates/deployment-history) of the resource group containing the SQL VM to view the error message associated with the failed action. 
- 
-### Failed assessments 
 
-If the assessment or uploading the results failed for some reason, the status of that run will indicate the failure. Clicking on the status will open a context pane where you can see the details about the failure and possible ways to remediate the issue.
+## Failed to run an assessment
 
->[!TIP]
->If you have enforced TLS 1.0 or higher in Windows and disabled older SSL protocols as described [here](/troubleshoot/windows-server/windows-security/restrict-cryptographic-algorithms-protocols-schannel#schannel-specific-registry-keys), then you must also ensure that .NET Framework is [configured](/azure/azure-monitor/agents/agent-windows#configure-agent-to-use-tls-12) to use strong cryptography. 
+Check the status of the assessment run in the Azure portal. If the status is failed, select the status to view the error message. You can also sign into the VM and review detailed error messages for failed assessments in the extension log at `C:\WindowsAzure\Logs\Plugins\Microsoft.SqlServer.Management.SqlIaaSAgent\2.0.X.Y`, where 2.0.X.Y is the  version of the extension.
 
+If you're having issues running an assessment:  
 
+- Make sure your environment meets all the [prerequisites](#prerequisites). 
+- Make sure the SQL IaaS Agent service is running on the VM and the SQL IaaS Agent extension is in a healthy state. If the SQL IaaS Agent extension is unhealthy, [repair the extension](sql-agent-extension-troubleshoot-known-issues.md#repair-extension) to address any issues, and upgrade it to the latest version without any SQL Server downtime. 
+- If you see login failures for `NT SERVICE\SqlIaaSExtensionQuery`, make sure that account exists in SQL Server with the `Server permission - CONTROL SERVER` permission.
 
-## Next steps
+### Uploading result to Log Analytics workspace failed
 
-- To register your SQL Server VM with the SQL Server IaaS extension to SQL Server on Azure VMs, see the articles for [Automatic installation](sql-agent-extension-automatic-registration-all-vms.md), [Single VMs](sql-agent-extension-manually-register-single-vm.md), or [VMs in bulk](sql-agent-extension-manually-register-vms-bulk.md).
-- To learn about more capabilities available by the SQL Server IaaS extension to SQL Server on Azure VMs, see [Manage SQL Server VMs by using the Azure portal](manage-sql-vm-portal.md)
+This error indicates that the Microsoft Monitoring Agent (MMA) was unable to upload the results within the expected time frame. 
+
+If your results are failing to upload to the Log Analytics workspace, try the following:
+
+- Enable the [system-assigned managed identity](/entra/identity/managed-identities-azure-resources/qs-configure-portal-windows-vm#enable-system-assigned-managed-identity-on-an-existing-vm) for the virtual machine and then to [enable](#enable) the best practices assessment feature once more. 
+- If the issue persists, try the following: 
+   - Validate the MMA extension is [provisioned correctly](/azure/azure-monitor/visualize/vmext-troubleshoot). Review the [MMA troubleshooting guide](/azure/azure-monitor/agents/agent-windows-troubleshoot) for *Custom logs*. 
+   - Add an outbound rule for port 443 in your Windows Firewall and Network Security Group (NSG).
+
+### Errors with incorrect TLS configuration using Log Analytics
+
+The most common TLS error occurs when the Microsoft Monitoring Agent (MMA) extension can't establish an SSL handshake when connecting to the Log Analytics endpoint, which typically happens when TLS 1.0 is enforced by the registry or GPO at the OS level, but not updated for the .NET framework. If you've enforced TLS 1.0 or higher in Windows and disabled older SSL protocols, as described in [Schannel-specific registry keys](/troubleshoot/windows-server/windows-security/restrict-cryptographic-algorithms-protocols-schannel#schannel-specific-registry-keys), you also need to make sure the .NET Framework is [configured to use strong cryptography](/azure/azure-monitor/agents/agent-windows#configure-agent-to-use-tls-12).
+
+### Unable to change the Log Analytics workspace after configuring SQL Assessment
+
+After a VM is associated with a Log Analytics workspace, it can't be changed from the SQL virtual machine resource. This is to prevent Log Analytics from being used for other use cases. You can disconnect the VM by using the Log Analytics resource blade on the Virtual Machines page in the Azure portal.
+
+### Result expired due to Log Analytics workspace data retention
+
+This indicates that results are no longer retained in the Log Analytics workspace, based on its retention policy. You can [change the retention period](/azure/azure-monitor/logs/manage-cost-storage#change-the-data-retention-period) for the workspace.
+
+## Related content
+
+- To register your SQL Server on Azure VM with the SQL IaaS Agent extension: 
+    - [Automatic registration](sql-agent-extension-automatic-registration-all-vms.md)
+    - [Register single VMs](sql-agent-extension-manually-register-single-vm.md)
+    - [Register VMs in bulk](sql-agent-extension-manually-register-vms-bulk.md)
+- [Manage SQL Server VMs by using the Azure portal](manage-sql-vm-portal.md)

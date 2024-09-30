@@ -3,11 +3,12 @@ title: Reporting Services developer documentation
 description: Use the documentation to understand Reporting Services features and capabilities to build custom reporting and management tools into Web sites and Windows applications.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/17/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: reporting-services
 ms.topic: reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "developer's guide [Reporting Services]"
   - "Reporting Services, programming"
@@ -49,9 +50,7 @@ helpviewer_keywords:
   
 ## Related content
 
-- [Reporting Services &#40;SSRS&#41;](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)   
-- [Report definition language &#40;SSRS&#41;](../reporting-services/reports/report-definition-language-ssrs.md)   
-- [Technical reference &#40;SSRS&#41;](../reporting-services/technical-reference-ssrs.md)   
-- [Secure development &#40;Reporting Services&#41;](../reporting-services/extensions/secure-development/secure-development-reporting-services.md)  
-  
-  
+- [Reporting Services &#40;SSRS&#41;](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)
+- [Report definition language &#40;SSRS&#41;](../reporting-services/reports/report-definition-language-ssrs.md)
+- [Technical reference &#40;SSRS&#41;](../reporting-services/technical-reference-ssrs.md)
+- [Secure development &#40;Reporting Services&#41;](../reporting-services/extensions/secure-development/secure-development-reporting-services.md)

@@ -3,18 +3,18 @@ title: Set time-out values for report and shared dataset processing in Reporting
 description: See how you can specify time-out values to set limits on how system resources are used in your report server.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 09/04/2024
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-server
 ms.topic: how-to
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "time-outs [Reporting Services]"
   - "query time-outs [Reporting Services]"
   - "report processing [Reporting Services], time-outs"
   - "report execution time-outs [Reporting Services]"
-
-#customer intent: As a Reporting Services user, I want to see how to time-out values on my report server so that I can set limits on how much system resources are used.
+# customer intent: As a Reporting Services user, I want to see how to time-out values on my report server so that I can set limits on how much system resources are used.
 ---
 # Set time-out values for report and shared dataset processing in Reporting Services
 
@@ -83,4 +83,3 @@ If you specify a time-out value smaller than 60 seconds, the report might still 
 - [Set processing options &#40;Reporting Services in SharePoint integrated mode&#41;](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)
 - [Reporting Services report server &#40;native mode&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)
 - [Manage a running process](../../reporting-services/subscriptions/manage-a-running-process.md)
-  

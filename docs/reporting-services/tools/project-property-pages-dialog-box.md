@@ -3,11 +3,12 @@ title: "Project Property Pages dialog Box"
 description: Learn about the options in the Project Property Pages dialog box that allow you to configure deployment properties for a Report Server project.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 05/30/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: tools
 ms.topic: reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 f1_keywords:
   - "sql13.rpt.rptdesigner.projectpropertypages.general.f1"
 helpviewer_keywords:
@@ -78,9 +79,8 @@ helpviewer_keywords:
 
 ## Related content
 
-[Publish reports](/previous-versions/sql/sql-server-2016/ms159615(v=sql.130))   
-[Publish a report to a SharePoint library](../../reporting-services/reports/publish-a-report-to-a-sharepoint-library.md)   
-[Set deployment properties &#40;Reporting Services&#41;](../../reporting-services/tools/set-deployment-properties-reporting-services.md)   
-[Report Designer F1 help](../../reporting-services/tools/report-designer-f1-help.md)  
-
-More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)
+- [Publish reports](/previous-versions/sql/sql-server-2016/ms159615(v=sql.130))
+- [Publish a report to a SharePoint library](../../reporting-services/reports/publish-a-report-to-a-sharepoint-library.md)
+- [Set deployment properties &#40;Reporting Services&#41;](../../reporting-services/tools/set-deployment-properties-reporting-services.md)
+- [Report Designer F1 help](../../reporting-services/tools/report-designer-f1-help.md)
+- [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

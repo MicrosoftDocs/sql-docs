@@ -3,11 +3,12 @@ title: "Best Practices for Time-Based Row Filters"
 description: "Best Practices for Time-Based Row Filters"
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/14/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "best practices"
 ---
@@ -83,9 +84,8 @@ GO
   
  The events for the next week are now flagged as being ready to replicate. The next time the Merge Agent runs for the subscription that event coordinator 112 uses, rows 2, 3, and 4 will be downloaded to the Subscriber and row 1 will be removed from the Subscriber.  
   
-## See Also  
- [GETDATE &#40;Transact-SQL&#41;](../../../t-sql/functions/getdate-transact-sql.md)   
- [Implement Jobs](../../../ssms/agent/implement-jobs.md)   
- [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)  
-  
-  
+## Related content
+
+- [GETDATE &#40;Transact-SQL&#41;](../../../t-sql/functions/getdate-transact-sql.md)
+- [Implement Jobs](../../../ssms/agent/implement-jobs.md)
+- [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)

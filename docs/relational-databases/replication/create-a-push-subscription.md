@@ -3,11 +3,12 @@ title: "Create a push subscription"
 description: Learn how to create a push subscription in SQL Server by using SQL Server Management Studio, Transact-SQL, or Replication Management Objects.
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "08/25/2016"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: how-to
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "push subscriptions [SQL Server replication], creating"
   - "merge replication subscribing [SQL Server replication], push subscriptions"
@@ -250,11 +251,12 @@ You can create push subscriptions programmatically by using replication stored p
   
  [!code-vb[HowTo#rmo_vb_CreateMergePushSub](../../relational-databases/replication/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_createmergepushsub)]  
   
-## See also  
- [View and modify push subscription properties](../../relational-databases/replication/view-and-modify-push-subscription-properties.md)   
- [Replication security best practices](../../relational-databases/replication/security/replication-security-best-practices.md)   
- [Create a publication](../../relational-databases/replication/publish/create-a-publication.md)   
- [Replication management objects concepts](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)   
- [Synchronize a push subscription](../../relational-databases/replication/synchronize-a-push-subscription.md)   
- [Subscribe to publications](../../relational-databases/replication/subscribe-to-publications.md)   
- [Use sqlcmd with scripting variables](../../tools/sqlcmd/sqlcmd-use-scripting-variables.md)
+## Related content
+
+- [View and modify push subscription properties](../../relational-databases/replication/view-and-modify-push-subscription-properties.md)
+- [Replication security best practices](../../relational-databases/replication/security/replication-security-best-practices.md)
+- [Create a publication](../../relational-databases/replication/publish/create-a-publication.md)
+- [Replication management objects concepts](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)
+- [Synchronize a push subscription](../../relational-databases/replication/synchronize-a-push-subscription.md)
+- [Subscribe to publications](../../relational-databases/replication/subscribe-to-publications.md)
+- [Use sqlcmd with scripting variables](../../tools/sqlcmd/sqlcmd-use-scripting-variables.md)

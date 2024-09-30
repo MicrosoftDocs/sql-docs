@@ -3,11 +3,12 @@ title: "Add a hyperlink to a URL in a paginated report"
 description: Discover how to add hyperlink actions to text boxes, images, charts, and gauges in paginated reports in Report Builder.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 09/07/2016
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 # Add a hyperlink to a URL in a paginated report (Report Builder)
 
@@ -82,8 +83,7 @@ You can link to bookmarks to a location in the current report. To link to a book
   
 1.  To test the link, select **Run** to preview the report, and then choose the report item that you set this link on.  
   
-## Related content 
- [Interactive sort, document maps, and links &#40;Report Builder&#41;](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
- [Create a document map &#40;Report Builder&#41;](../../reporting-services/report-design/create-a-document-map-report-builder-and-ssrs.md)  
-  
-  
+## Related content
+
+- [Interactive sort, document maps, and links &#40;Report Builder&#41;](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)
+- [Create a document map &#40;Report Builder&#41;](../../reporting-services/report-design/create-a-document-map-report-builder-and-ssrs.md)

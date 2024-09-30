@@ -3,11 +3,12 @@ title: "Parameters collection references in a paginated report"
 description: Discover how to use parameters in an expression to customize paginated report data and appearance based on user choices in Report Builder.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/07/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 # Parameters collection references in a paginated report (Report Builder)
 
@@ -52,11 +53,10 @@ ms.custom: updatefrequency5
  For more information about using parameters in a filter, see [Report parameters &#40;Report Builder and Report Designer&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
   
 ## Related content
- [Expressions &#40;Report Builder&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
- [Commonly used filters &#40;Report Builder&#41;](../../reporting-services/report-design/commonly-used-filters-report-builder-and-ssrs.md)   
- [Add, change, or delete a report parameter &#40;Report Builder&#41;](../../reporting-services/report-design/add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)   
- [Tutorial: Add a parameter to your report &#40;Report Builder&#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)   
- [Report Builder tutorials](../../reporting-services/report-builder-tutorials.md)   
- [Built-in collections in expressions &#40;Report Builder&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)  
-  
-  
+
+- [Expressions &#40;Report Builder&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)
+- [Commonly used filters &#40;Report Builder&#41;](../../reporting-services/report-design/commonly-used-filters-report-builder-and-ssrs.md)
+- [Add, change, or delete a report parameter &#40;Report Builder&#41;](../../reporting-services/report-design/add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)
+- [Tutorial: Add a parameter to your report &#40;Report Builder&#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)
+- [Report Builder tutorials](../../reporting-services/report-builder-tutorials.md)
+- [Built-in collections in expressions &#40;Report Builder&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)

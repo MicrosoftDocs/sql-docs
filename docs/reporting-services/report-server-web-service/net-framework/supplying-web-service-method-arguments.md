@@ -3,11 +3,12 @@ title: "Supplying Web Service Method Arguments"
 description: Learn about arguments for Web Service methods in Reporting Services, including optional parameters and complex data types.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/14/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-server-web-service
 ms.topic: reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "Report Server Web service, methods"
   - "Web service [Reporting Services], methods"
@@ -32,9 +33,8 @@ rs.CreateFolder("Product Sales", "/Sales", null);
   
  When you generate a proxy class, the complex data types that are defined in the WSDL file are represented by the classes of the proxy, which include properties that correspond to the various SOAP elements of the complex data types. Sequences of these data types become arrays of objects that you can enumerate through in your code. This eliminates the need to work directly with the XML structures sent in SOAP messages. The [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] handles that translation for you.  
   
-## See Also  
- [Building Applications Using the Web Service and the .NET Framework](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
- [Report Server Web Service](../../../reporting-services/report-server-web-service/report-server-web-service.md)   
- [Technical Reference &#40;SSRS&#41;](../../../reporting-services/technical-reference-ssrs.md)  
-  
-  
+## Related content
+
+- [Building Applications Using the Web Service and the .NET Framework](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)
+- [Report Server Web Service](../../../reporting-services/report-server-web-service/report-server-web-service.md)
+- [Technical Reference &#40;SSRS&#41;](../../../reporting-services/technical-reference-ssrs.md)

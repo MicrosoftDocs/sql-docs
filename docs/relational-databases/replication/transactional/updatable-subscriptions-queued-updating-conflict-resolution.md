@@ -3,11 +3,12 @@ title: "Queued Updating Conflict Detection and Resolution"
 description: "Updatable Subscriptions - Queued Updating Conflict Resolution"
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/01/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "conflict resolution [SQL Server replication], queued updating subscriptions"
   - "viewing queued updating conflicts"
@@ -70,7 +71,6 @@ helpviewer_keywords:
 ### Subscriber Wins  
  Conflict detection under the Subscriber wins policy means the last Subscriber transaction to update the Publisher wins. In this case, when a conflict is detected, the transaction sent by the Subscriber is still used and the Publisher is updated. This policy is suitable for applications where such changes do not compromise data integrity.  
   
-## See Also  
- [Updatable Subscriptions for Transactional Replication](../../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)  
-  
-  
+## Related content
+
+- [Updatable Subscriptions for Transactional Replication](../../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)

@@ -3,11 +3,12 @@ title: "Configure Topology (Peer-to-Peer Replication)"
 description: "Configure Topology (Peer-to-Peer Replication)"
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/14/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: how-to
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 f1_keywords:
   - "sql13.rep.p2pwizard.peers.f1"
 ---
@@ -73,9 +74,8 @@ f1_keywords:
  **Remove Peer Connection**  
  Remove a connection between two nodes. For example, if you remove a connection between Node A and Node B, replication drops two subscriptions: the one that enables Node A to receive changes from the publication at Node B, and the one that enables Node B to receive changes from the publication at Node A.  
   
-## See Also  
- [Configure Publishing and Distribution](../../relational-databases/replication/configure-publishing-and-distribution.md)   
- [Administer a Peer-to-Peer Topology &#40;Replication Transact-SQL Programming&#41;](../../relational-databases/replication/administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   
- [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)  
-  
-  
+## Related content
+
+- [Configure Publishing and Distribution](../../relational-databases/replication/configure-publishing-and-distribution.md)
+- [Administer a Peer-to-Peer Topology &#40;Replication Transact-SQL Programming&#41;](../../relational-databases/replication/administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)
+- [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)

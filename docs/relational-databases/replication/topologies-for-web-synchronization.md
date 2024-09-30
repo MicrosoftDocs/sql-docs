@@ -3,11 +3,12 @@ title: "Topologies for Web Synchronization"
 description: "Topologies for Web Synchronization"
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/14/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "Web synchronization, topologies"
   - "IIS server configuration [SQL Server replication]"
@@ -49,8 +50,7 @@ helpviewer_keywords:
   
  ![Web synchronization with republishing](../../relational-databases/replication/media/web-sync05.gif "Web synchronization with republishing")  
   
-## See Also  
- [Configure Web Synchronization](../../relational-databases/replication/configure-web-synchronization.md)   
- [Web Synchronization for Merge Replication](../../relational-databases/replication/web-synchronization-for-merge-replication.md)  
-  
-  
+## Related content
+
+- [Configure Web Synchronization](../../relational-databases/replication/configure-web-synchronization.md)
+- [Web Synchronization for Merge Replication](../../relational-databases/replication/web-synchronization-for-merge-replication.md)

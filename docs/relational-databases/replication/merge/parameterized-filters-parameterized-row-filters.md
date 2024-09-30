@@ -3,11 +3,12 @@ title: "Parameterized Row Filters"
 description: "Parameterized Filters - Parameterized Row Filters"
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/14/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: how-to
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "publications [SQL Server replication], dynamic filters"
   - "merge replication [SQL Server replication], dynamic filters"
@@ -177,9 +178,8 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
   
 -   If two tables at the Publisher have a join filter relationship and the child table has rows that have no corresponding row in the parent table, an insert of the missing parent row will not result in the related rows being downloaded to the Subscriber (the rows would be downloaded with overlapping partitions). For example, if the **SalesOrderDetail** table has rows with no corresponding row in the **SalesOrderHeader** table, and you insert the missing row in **SalesOrderHeader**, the row is downloaded to the Subscriber, but the corresponding rows in **SalesOrderDetail** are not.  
   
-## See Also  
- [Best Practices for Time-Based Row Filters](../../../relational-databases/replication/merge/best-practices-for-time-based-row-filters.md)   
- [Filter Published Data](../../../relational-databases/replication/publish/filter-published-data.md)   
- [Filter Published Data for Merge Replication](../../../relational-databases/replication/merge/filter-published-data-for-merge-replication.md)  
-  
-  
+## Related content
+
+- [Best Practices for Time-Based Row Filters](../../../relational-databases/replication/merge/best-practices-for-time-based-row-filters.md)
+- [Filter Published Data](../../../relational-databases/replication/publish/filter-published-data.md)
+- [Filter Published Data for Merge Replication](../../../relational-databases/replication/merge/filter-published-data-for-merge-replication.md)

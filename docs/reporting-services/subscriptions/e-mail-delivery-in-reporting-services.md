@@ -3,11 +3,12 @@ title: "Email delivery in Reporting Services"
 description: In this article, learn to use the email delivery extension, which provides a way to email a report to individual users or groups.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 09/15/2023
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: subscriptions
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "subscriptions [Reporting Services], email"
   - "email [Reporting Services]"
@@ -84,10 +85,9 @@ For information on how to configure a native mode report server, see [Email sett
  
 For information on how to configure a SharePoint mode report server, see [Create and manage subscriptions for SharePoint mode report servers](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md). 
   
-## Related content  
- [Tasks and permissions](../../reporting-services/security/tasks-and-permissions.md)   
- [Subscriptions and delivery &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
- [Data-driven subscriptions](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
- [Role assignments](../../reporting-services/security/role-assignments.md)  
-  
-  
+## Related content
+
+- [Tasks and permissions](../../reporting-services/security/tasks-and-permissions.md)
+- [Subscriptions and delivery &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)
+- [Data-driven subscriptions](../../reporting-services/subscriptions/data-driven-subscriptions.md)
+- [Role assignments](../../reporting-services/security/role-assignments.md)

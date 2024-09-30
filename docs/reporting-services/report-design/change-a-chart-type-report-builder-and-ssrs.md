@@ -3,11 +3,12 @@ title: "Change a chart type in a paginated report"
 description: Learn how to change your paginated report chart type at any point in report design. Improve interpretation with characteristics appropriate for your data in Report Builder.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/03/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 # Change a chart type in a paginated report (Report Builder)
 
@@ -31,9 +32,8 @@ When you first insert a chart into a paginated report, the **Select Chart Type**
   
 1.  In the **SelectChart Type** dialog, select a chart type from the list.  
   
-## Related content  
- [Charts &#40;Report Builder&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [Gauges &#40;Report Builder&#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)   
- [Add a chart to a report &#40;Report Builder&#41;](../../reporting-services/report-design/add-a-chart-to-a-report-report-builder-and-ssrs.md)  
-  
-  
+## Related content
+
+- [Charts &#40;Report Builder&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)
+- [Gauges &#40;Report Builder&#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)
+- [Add a chart to a report &#40;Report Builder&#41;](../../reporting-services/report-design/add-a-chart-to-a-report-report-builder-and-ssrs.md)

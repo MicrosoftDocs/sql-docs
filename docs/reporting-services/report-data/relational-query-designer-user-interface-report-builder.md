@@ -3,11 +3,12 @@ title: "Relational Query Designer User Interface (Report Builder)"
 description: Learn to use the graphical query designer to explore the metadata, interactively build a query, and view the results for your query.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/14/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-data
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 f1_keywords:
   - "10012"
 helpviewer_keywords:
@@ -189,6 +190,6 @@ helpviewer_keywords:
 ## Text-Based Query Designer  
  For the most control over your query, use the text-based query designer. To switch to the text-based query designer, in the toolbar, click **Edit As Text**. After you edit a query in the text-based query designer, you can no longer use the relational query designer. The query will then always open in the text-based query designer. For more information, see [Text-based Query Designer User Interface &#40;Report Builder&#41;](../../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md).  
   
-## See Also  
- [Query Design Tools &#40;SSRS&#41;](query-design-tools-ssrs.md)  
-  
+## Related content
+
+- [Query Design Tools &#40;SSRS&#41;](query-design-tools-ssrs.md)

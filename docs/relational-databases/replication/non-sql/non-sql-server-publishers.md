@@ -3,11 +3,12 @@ title: "Non-SQL Server Publishers"
 description: "Non-SQL Server Publishers"
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "08/29/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "heterogeneous database replication, non-SQL Server Publishers"
   - "non-SQL Server Publishers"
@@ -45,7 +46,6 @@ Publishing data from non- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-m
 |Data warehousing staging servers|Keep [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] staging databases synchronized with a non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] database.|  
 |Migration to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|Test your application in real time against [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] while replicating the source system's changes. Switch to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] when satisfied with the migration.|  
   
-## See Also  
- [Heterogeneous Database Replication](../../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)  
-  
-  
+## Related content
+
+- [Heterogeneous Database Replication](../../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)

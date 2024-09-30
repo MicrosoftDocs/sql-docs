@@ -3,17 +3,17 @@ title: Predefined roles in Reporting Services
 description: Learn how to use predefined roles in Reporting Services to quickly assign permissions for the people you want to use your report server.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 07/02/2024
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: security
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "security [Reporting Services], defaults"
   - "default security"
   - "role-based security [Reporting Services], defaults"
- 
-#customer intent: As a Reporting Services administrator, I want to learn the differences between the predefined roles so that I can quickly use them to set up access in my report server.
+# customer intent: As a Reporting Services administrator, I want to learn the differences between the predefined roles so that I can quickly use them to set up access in my report server.
 ---
 # Predefined roles in Reporting Services
 
@@ -241,6 +241,6 @@ The **System User** role can be used to supplement default security. You can inc
   
 ## Related content
 
-- [Create, delete, or modify a role &#40;Management Studio&#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)  
-- [Grant user access to a report server](../../reporting-services/security/grant-user-access-to-a-report-server.md)  
+- [Create, delete, or modify a role &#40;Management Studio&#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)
+- [Grant user access to a report server](../../reporting-services/security/grant-user-access-to-a-report-server.md)
 - [Tasks and permissions](../../reporting-services/security/tasks-and-permissions.md)

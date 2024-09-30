@@ -3,11 +3,12 @@ title: "Power Pivot Connection Type"
 description: Use the information in this article about the Power Pivot connection type to learn how to build a data source.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/01/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-data
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 # Power Pivot Connection Type (SSRS)
   You can use SQL Server Analysis Services data processing extension to retrieve data from a [!INCLUDE[power-pivot-md](../../includes/power-pivot-md.md)] workbook that is published in a SharePoint [!INCLUDE[power-pivot-md](../../includes/power-pivot-md.md)] Gallery.  
@@ -54,7 +55,7 @@ ms.custom: updatefrequency5
   
 -   The report contains only [!INCLUDE[power-pivot-md](../../includes/power-pivot-md.md)] data from a [!INCLUDE[power-pivot-md](../../includes/power-pivot-md.md)] data source.  
   
-## See Also  
- [Analysis Services MDX Query Designer User Interface &#40;Report Builder&#41;](/previous-versions/sql/)   
- [Expressions &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
-  
+## Related content
+
+- [Analysis Services MDX Query Designer User Interface &#40;Report Builder&#41;](/previous-versions/sql/)
+- [Expressions &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)

@@ -3,11 +3,12 @@ title: "Cache reports"
 description: Learn about caching reports in Report Manager, which speeds up viewing for a processed report while it remains cached.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 05/14/2019
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-server
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "report execution properties [Reporting Services]"
   - "cache [Reporting Services]"
@@ -62,11 +63,10 @@ If a schedule expires, or if the scheduling engine is unavailable at a cache exp
 If a report can't be rendered from a cached instance for any reason, the report server reruns the report. This action ensures that the report is generated with the correct and updated parameter values.  
   
 ## Related content
- [Set processing options &#40;Reporting Services in SharePoint integrated mode&#41;](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
- [Set report processing properties](../../reporting-services/report-server/set-report-processing-properties.md)   
- [Reporting Services concepts &#40;SSRS&#41;](../../reporting-services/reporting-services-concepts-ssrs.md)   
- [Preload the cache](../../reporting-services/report-server/preload-the-cache-report-manager.md)   
- [Schedules](../../reporting-services/subscriptions/schedules.md)   
- [Cache shared datasets &#40;SSRS&#41;](../../reporting-services/report-server/cache-shared-datasets-ssrs.md)   
-  
-  
+
+- [Set processing options &#40;Reporting Services in SharePoint integrated mode&#41;](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)
+- [Set report processing properties](../../reporting-services/report-server/set-report-processing-properties.md)
+- [Reporting Services concepts &#40;SSRS&#41;](../../reporting-services/reporting-services-concepts-ssrs.md)
+- [Preload the cache](../../reporting-services/report-server/preload-the-cache-report-manager.md)
+- [Schedules](../../reporting-services/subscriptions/schedules.md)
+- [Cache shared datasets &#40;SSRS&#41;](../../reporting-services/report-server/cache-shared-datasets-ssrs.md)

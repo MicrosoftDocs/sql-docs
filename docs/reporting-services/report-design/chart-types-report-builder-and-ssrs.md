@@ -3,11 +3,12 @@ title: "Chart types in a paginated report"
 description: Choose from unique chart characteristics to help you visualize your dataset and assist you in choosing an appropriate chart type in a paginated report in Report Builder.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 05/30/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 f1_keywords:
   - "10423"
 ---
@@ -43,10 +44,9 @@ It is important to choose an appropriate chart type for the type of data that yo
 |[Sparklines](../../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)|![Available](../../reporting-services/report-data/media/greencheck.gif "Available")|![Available](../../reporting-services/report-data/media/greencheck.gif "Available")|![Available](../../reporting-services/report-data/media/greencheck.gif "Available")|![Available](../../reporting-services/report-data/media/greencheck.gif "Available")|  
 |[Stock Charts &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/stock-charts-report-builder-and-ssrs.md)||![Available](../../reporting-services/report-data/media/greencheck.gif "Available")||![Available](../../reporting-services/report-data/media/greencheck.gif "Available")|  
 
-## Next steps
+## Related content
 
-[Charts](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
-[Empty and Null Data Points in Charts](../../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
-[Add a Chart to a Report](../../reporting-services/report-design/add-a-chart-to-a-report-report-builder-and-ssrs.md)  
-
-More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)
+- [Charts](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)
+- [Empty and Null Data Points in Charts](../../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)
+- [Add a Chart to a Report](../../reporting-services/report-design/add-a-chart-to-a-report-report-builder-and-ssrs.md)
+- [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

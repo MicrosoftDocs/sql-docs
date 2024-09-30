@@ -3,11 +3,12 @@ title: "Set processing options (Reporting Services in SharePoint integrated mode
 description: In SQL Server Reporting Services in SharePoint integrated mode, specify when data processing occurs, a time-out value, and other options.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 10/05/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-server-sharepoint
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 monikerRange: ">=sql-server-2016 <=sql-server-2016"
 ---
 # Set processing options (Reporting Services in SharePoint integrated mode)
@@ -87,8 +88,7 @@ monikerRange: ">=sql-server-2016 <=sql-server-2016"
   
 ## Related content
 
- [Set Report Processing properties](../../reporting-services/report-server/set-report-processing-properties.md)   
- [Caching reports](../../reporting-services/report-server/caching-reports-ssrs.md)   
- [Setting time-out values for report and shared dataset processing](../../reporting-services/report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md)  
-
-More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)
+- [Set Report Processing properties](../../reporting-services/report-server/set-report-processing-properties.md)
+- [Caching reports](../../reporting-services/report-server/caching-reports-ssrs.md)
+- [Setting time-out values for report and shared dataset processing](../../reporting-services/report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md)
+- [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

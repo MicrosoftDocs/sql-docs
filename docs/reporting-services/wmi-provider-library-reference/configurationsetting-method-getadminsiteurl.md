@@ -3,11 +3,12 @@ title: "GetAdminSiteUrl method (WMI)"
 description: "ConfigurationSetting method - GetAdminSiteUrl"
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/01/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: wmi-provider-library-reference
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "GetAdminSiteUrl method"
 ---
@@ -38,7 +39,6 @@ public void GetAdminSiteUrl(out string AdminSiteUrl, out Int32 HRESULT);
 ## Requirements  
  **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## Related content  
- [MSReportServer_ConfigurationSetting methods](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-methods.md)  
-  
-  
+## Related content
+
+- [MSReportServer_ConfigurationSetting methods](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-methods.md)

@@ -4,15 +4,19 @@ description: Azure PowerShell example script to update the sync schema for SQL D
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: wiassaf, mathoma
-ms.date: 03/12/2019
+ms.date: 09/23/2024
 ms.service: azure-sql-database
 ms.subservice: sql-data-sync
 ms.topic: sample
-ms.custom: sqldbrb=1, devx-track-azurepowershell
+ms.custom:
+  - sqldbrb=1
+  - devx-track-azurepowershell
 ms.devlang: powershell
 ---
 # Use PowerShell to update the sync schema in an existing sync group
-[!INCLUDE[appliesto-sqldb](../../includes/appliesto-sqldb.md)]
+[!INCLUDE [appliesto-sqldb](../../includes/appliesto-sqldb.md)]
+
+[!INCLUDE [sql-data-sync-retirement](../../includes/sql-data-sync-retirement.md)]
 
 This Azure PowerShell example updates the sync schema in an existing SQL Data Sync sync group. When you're syncing multiple tables, this script helps you to update the sync schema efficiently. This example demonstrates the use of the **UpdateSyncSchema** script, which is available on GitHub as [UpdateSyncSchema.ps1](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-data-sync/UpdateSyncSchema.ps1).
 
@@ -22,10 +26,9 @@ This Azure PowerShell example updates the sync schema in an existing SQL Data Sy
 
 If you choose to install and use PowerShell locally, this tutorial requires Az PowerShell 1.4.0 or later. If you need to upgrade, see [Install Azure PowerShell module](/powershell/azure/install-az-ps). If you are running PowerShell locally, you also need to run `Connect-AzAccount` to create a connection with Azure.
 
-For an overview of SQL Data Sync, see [Sync data across multiple cloud and on-premises databases with Azure SQL Data Sync](../sql-data-sync-data-sql-server-sql-database.md).
+For an overview of SQL Data Sync, see [What is SQL Data Sync for Azure?](../sql-data-sync-data-sql-server-sql-database.md)
 
-> [!IMPORTANT]
-> SQL Data Sync does not support Azure SQL Managed Instance at this time.
+SQL Data Sync does **not** support Azure SQL Managed Instance or Azure Synapse Analytics.
 
 ## Examples
 
@@ -77,7 +80,7 @@ The **UpdateSyncSchema** script uses the following commands. Each command in the
 | [Get-AzSqlSyncSchema](/powershell/module/az.sql/get-azsqlsyncschema) | Returns information about a sync schema. |
 | [Update-AzSqlSyncSchema](/powershell/module/az.sql/update-azsqlsyncschema) | Updates a sync schema. |
 
-## Next steps
+## Related content
 
 For more information about Azure PowerShell, see [Azure PowerShell documentation](/powershell/azure/).
 

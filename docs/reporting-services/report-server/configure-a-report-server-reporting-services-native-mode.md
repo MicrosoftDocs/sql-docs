@@ -3,11 +3,12 @@ title: "Configure a report server (Reporting Services native mode)"
 description: Learn about another configuration for SQL Server Report Server, which depends on options you chose during installation.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 06/18/2019
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-server
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "report server configuration"
   - "report servers [Reporting Services], configuring"
@@ -52,9 +53,9 @@ You should configure web portal so that you can grant user access to the report 
  Verify your installation by creating folders, uploading items, and running reports. Follow the instructions in [Verify a Reporting Services installation](../../reporting-services/install-windows/verify-a-reporting-services-installation.md) to verify your installation.  
   
 ## Related content
- [Manage a Reporting Services native mode report server](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)   
- [Configure a firewall for report server access](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)   
- [Configure a native mode report server for local administration &#40;SSRS&#41;](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)   
- [Configure a report server for remote administration](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md)   
- [Report Server Configuration Manager &#40;native mode&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
-  
+
+- [Manage a Reporting Services native mode report server](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)
+- [Configure a firewall for report server access](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)
+- [Configure a native mode report server for local administration &#40;SSRS&#41;](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)
+- [Configure a report server for remote administration](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md)
+- [Report Server Configuration Manager &#40;native mode&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)

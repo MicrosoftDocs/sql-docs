@@ -3,11 +3,12 @@ title: "Tutorial: How to locate and start Reporting Services tools"
 description: Learn tools used to configure a report server, manage report server content & operations, and create and publish paginated & mobile Reporting Services reports.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 12/09/2019
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: tools
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "Reporting Services, tutorials"
   - "Reporting Services, tools"
@@ -177,12 +178,11 @@ You can install it from the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md
 
 ## Related content
 
-[Download SQL Server Mobile Report Publisher](https://go.microsoft.com/fwlink/?LinkID=733527)  
-[Download Report Builder](https://go.microsoft.com/fwlink/?LinkID=219138)  
-[Download SQL Server Data Tools](../../ssdt/download-sql-server-data-tools-ssdt.md)  
-[Install Reporting Services SharePoint mode](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)  
-[Reporting Services report server](../../reporting-services/report-server-sharepoint/reporting-services-report-server.md)  
-[Query design tools](../../reporting-services/report-data/query-design-tools-ssrs.md)  
-[Reporting Services tutorials](../../reporting-services/reporting-services-tutorials-ssrs.md)  
-
-More questions? [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)
+- [Download SQL Server Mobile Report Publisher](https://go.microsoft.com/fwlink/?LinkID=733527)
+- [Download Report Builder](https://go.microsoft.com/fwlink/?LinkID=219138)
+- [Download SQL Server Data Tools](../../ssdt/download-sql-server-data-tools-ssdt.md)
+- [Install Reporting Services SharePoint mode](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)
+- [Reporting Services report server](../../reporting-services/report-server-sharepoint/reporting-services-report-server.md)
+- [Query design tools](../../reporting-services/report-data/query-design-tools-ssrs.md)
+- [Reporting Services tutorials](../../reporting-services/reporting-services-tutorials-ssrs.md)
+- [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)

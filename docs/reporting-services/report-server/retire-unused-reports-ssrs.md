@@ -3,11 +3,12 @@ title: "Find and retire unused reports"
 description: You don't want to migrate unused reports to the Power BI service. As you plan for a migration to the cloud, we suggest doing some housekeeping to get rid of unused SSRS reports.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 11/21/2022
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-server
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 
 # Find and retire unused reports (SSRS)
@@ -55,5 +56,5 @@ From here, you can decide whether to delete the unused reports right away or rep
 
 ## Related content
 
-[Publish .rdl files to Power BI from Reporting Services](/power-bi/guidance/publish-reporting-services-power-bi-service)   
-[Migrate SQL Server Reporting Services reports to Power BI](/power-bi/guidance/migrate-ssrs-reports-to-power-bi)
+- [Publish .rdl files to Power BI from Reporting Services](/power-bi/guidance/publish-reporting-services-power-bi-service)
+- [Migrate SQL Server Reporting Services reports to Power BI](/power-bi/guidance/migrate-ssrs-reports-to-power-bi)

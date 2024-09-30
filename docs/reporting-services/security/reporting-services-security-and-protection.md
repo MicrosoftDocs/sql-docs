@@ -3,11 +3,12 @@ title: "Reporting Services security and protection"
 description: "Reporting Services security and protection"
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 08/26/2016
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: security
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "security [Reporting Services]"
   - "Reporting Services, security"
@@ -23,10 +24,6 @@ helpviewer_keywords:
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] also employs roles and permissions to control user access to content in the report server catalog. The roles and permissions define who can access what and how they can access it. For more information, see [Roles and permissions &#40;Reporting Services&#41;](../../reporting-services/security/roles-and-permissions-reporting-services.md).  
   
-## Related content  
-  
-|Task Descriptions|Links|  
-|-----------------------|-----------|  
-|Configure the Transport Layer Security (TLS), previously known as Secure Sockets Layer (SSL), to secure client connections to the report server.|[Configure TLS connections on a native mode report server](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)|  
-  
-  
+## Related content
+
+- [Configure TLS connections on a native mode report server](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)

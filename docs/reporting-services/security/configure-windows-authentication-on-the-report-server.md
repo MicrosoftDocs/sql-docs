@@ -4,11 +4,12 @@ description: "Configure Windows Authentication on the Report Server"
 author: maggiesMSFT
 ms.author: maggies
 ms.reviewer: randolphwest
-ms.date: 08/21/2023
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: security
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "Windows authentication [Reporting Services]"
   - "Reporting Services, configuration"

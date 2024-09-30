@@ -3,11 +3,12 @@ title: "Reporting Services concepts"
 description: Learn about SQL Server Reporting Services (SSRS) concepts, including scheduling reports, roles and permissions, and report subscriptions and delivery.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 10/25/2016
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: reporting-services
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 # Reporting Services concepts (SSRS)
   This article provides a brief summary of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] concepts.  
@@ -205,7 +206,6 @@ You create Reporting Services mobile reports (.rsmobile files) in SQL Server Mob
   
 ## Related content
 
-- [Reporting Services features and tasks &#40;SSRS&#41;](../reporting-services/reporting-services-features-and-tasks-ssrs.md)   
-- [Technical reference &#40;SSRS&#41;](../reporting-services/technical-reference-ssrs.md)   
-- [Reporting Services &#40;SSRS&#41;](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)  
-  
+- [Reporting Services features and tasks &#40;SSRS&#41;](../reporting-services/reporting-services-features-and-tasks-ssrs.md)
+- [Technical reference &#40;SSRS&#41;](../reporting-services/technical-reference-ssrs.md)
+- [Reporting Services &#40;SSRS&#41;](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)

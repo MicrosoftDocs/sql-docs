@@ -3,11 +3,12 @@ title: "Identity and Access Control (Replication)"
 description: "Identity and Access Control (Replication)"
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "11/20/2018"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: how-to
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "access controls [SQL Server replication]"
   - "security [SQL Server replication], identity and access control"

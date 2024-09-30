@@ -3,11 +3,12 @@ title: "Native to SharePoint Migration"
 description: "Native to SharePoint Migration (SSRS)"
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 08/17/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-server-sharepoint
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 monikerRange: "= sql-server-2016"
 ---
 # Native to SharePoint Migration (SSRS)

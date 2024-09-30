@@ -3,12 +3,13 @@ title: "Tutorial: Create a report server project"
 description: "In this article, you learn how to use Report Designer to create a report server project and a report definition (.rdl) file."
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 05/31/2024
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: reporting-services
 ms.topic: tutorial
-ms.custom: updatefrequency5
-#customer intent: As a SQL server user, I want to create a sample report project and report so that I can continue with the other lessons in this tutorial.
+ms.custom:
+  - updatefrequency5
+# customer intent: As a SQL server user, I want to create a sample report project and report so that I can continue with the other lessons in this tutorial.
 ---
 
 # Tutorial: Create a report server project
@@ -78,4 +79,3 @@ Next, you create a report definition file (RDL). This process involves setting u
 
 > [!div class="nextstepaction"]
 > [Step 2: Specify connection information &#40;Reporting Services&#41;](../reporting-services/tutorial-step-02-specify-connection-information-reporting-services.md)
-

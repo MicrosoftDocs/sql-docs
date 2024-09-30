@@ -3,8 +3,8 @@ title: Generate Scripts Wizard
 description: Learn how to use the Generate Scripts Wizard to create scripts to transfer a database between database instances. The instances can be instances of the SQL Server Database Engine or Azure SQL Database.
 author: markingmyname
 ms.author: maghan
-ms.reviewer: randolphwest
-ms.date: 07/08/2024
+ms.reviewer: randolphwest, mathoma
+ms.date: 09/27/2024
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
@@ -41,7 +41,9 @@ monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >
 
 [!INCLUDE [SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-You can use the **Generate Scripts Wizard** to create scripts for transferring a database between instances of the [!INCLUDE [ssDEnoversion](../../includes/ssdenoversion-md.md)], [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], or [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)]. You can generate scripts for a database on an instance of the Database Engine in your local network, or from Azure SQL. The generated scripts can be run on another instance of the Database Engine or on Azure SQL. You can create scripts for an entire database, or limit it to specific objects.
+This article teaches you to use the **Generate Scripts Wizard** to create scripts to transfer a database between instances of SQL Server, [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], or [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)]. 
+
+You can generate scripts for a SQL Server database in your local network, or from Azure SQL. The generated scripts can be run on another instance of SQL Server or on Azure SQL. You can create scripts for an entire database, or limit it to specific objects.
 
 For a more detailed tutorial on using the Generate Scripts wizard, see [Tutorial: Generate Scripts Wizard](../tutorials/scripting-ssms.md#script-databases).
 
@@ -49,7 +51,7 @@ For a more detailed tutorial on using the Generate Scripts wizard, see [Tutorial
 
 The source and target database can be on [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] or [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)], or an instance of the [!INCLUDE [ssDE](../../includes/ssde-md.md)] running [!INCLUDE [ssVersion2005](../../includes/ssversion2005-md.md)] or later versions.
 
-### Permissions
+## Permissions
 
 The minimum permission to generate scripts is membership in the **db_ddladmin** fixed database role on the origin database.
 
@@ -152,7 +154,7 @@ Use this page to specify how you want this wizard to generate scripts. Many diff
 
 - **Script collation** - Includes collation information in the script. The default is **False**. For more information, see [Collation and Unicode support](../../relational-databases/collations/collation-and-unicode-support.md).
 
-- **Script defaults** - Includes default objects used to set default values in table columns. The default is **True**. For more information, see [CREATE DEFAULT (Transact-SQL)](../../t-sql/statements/create-default-transact-sql.md).
+- **Script defaults** - Includes default objects used to set default values in table columns. The default is **True**. For more information, see [Specify default values for columns](../../relational-databases/tables/specify-default-values-for-columns.md).
 
 - **Script drop and create** - When **Script CREATE**, [!INCLUDE [tsql](../../includes/tsql-md.md)] statements are included to create objects. When **Script DROP**, [!INCLUDE [tsql](../../includes/tsql-md.md)] statements are included to drop objects. When **Script DROP and CREATE**, the [!INCLUDE [tsql](../../includes/tsql-md.md)] drop statement is included in the script, followed by the create statement, for each scripted object. The default is **Script CREATE**.
 
@@ -250,4 +252,4 @@ The options set in Step 4 aren't remembered. If you prefer for these options to 
 ## Related content
 
 - [Installing SMO](../../relational-databases/server-management-objects-smo/installing-smo.md)
-- [Copy Databases to Other Servers](../../relational-databases/databases/copy-databases-to-other-servers.md)
+- [Copy databases to other servers](../../relational-databases/databases/copy-databases-to-other-servers.md)

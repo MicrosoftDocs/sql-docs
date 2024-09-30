@@ -90,5 +90,3 @@ landingContent:
             url: /sql/relational-databases/import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server
           - text: Azure Data Factory
             url: /azure/data-factory/connector-azure-sql-database
-          - text: SQL Data Sync
-            url: ../database/sql-data-sync-data-sql-server-sql-database.md

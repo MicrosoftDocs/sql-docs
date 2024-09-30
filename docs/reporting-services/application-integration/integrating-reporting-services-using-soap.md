@@ -3,11 +3,12 @@ title: "Integrate using SOAP"
 description: The Reporting Services SOAP API provides several Web service endpoints for developing custom reporting solutions.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/14/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: application-integration
 ms.topic: reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "Report Server Web service, application integration"
   - "SOAP [Reporting Services]"
@@ -30,9 +31,8 @@ helpviewer_keywords:
  [Using the SOAP API in a Web Application](../../reporting-services/application-integration/integrating-reporting-services-using-soap-web-application.md)  
  Describes how to use the SOAP API to integrate [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] into a Web environment.  
   
-## Related content  
- [Integrating Reporting Services into Applications](../../reporting-services/application-integration/integrating-reporting-services-into-applications.md)   
- [Report Server Web Service](../../reporting-services/report-server-web-service/report-server-web-service.md)   
- [Building Applications Using the Web Service and the .NET Framework](../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)  
-  
-  
+## Related content
+
+- [Integrating Reporting Services into Applications](../../reporting-services/application-integration/integrating-reporting-services-into-applications.md)
+- [Report Server Web Service](../../reporting-services/report-server-web-service/report-server-web-service.md)
+- [Building Applications Using the Web Service and the .NET Framework](../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)

@@ -3,11 +3,12 @@ title: "Secure reports and resources"
 description: "Secure reports and resources"
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/01/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: security
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "security [Reporting Services], reports"
   - "security [Reporting Services], resources"
@@ -71,9 +72,8 @@ helpviewer_keywords:
  Reports that contain confidential information should be secured at the data-access level, by requiring users to provide credentials to access sensitive data. For more information, see [Specify credential and connection information for report data sources](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md). You can also secure a folder to make it inaccessible to unauthorized users. For more information, see [Secure folders](../../reporting-services/security/secure-folders.md).  
   
 ## Related content
- [Create and manage role assignments](../../reporting-services/security/create-and-manage-role-assignments.md)   
- [Grant permissions on a native mode report server](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
- [Secure shared data source items](../../reporting-services/security/secure-shared-data-source-items.md)   
- [Store credentials in a Reporting Services data source](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md)  
-  
-  
+
+- [Create and manage role assignments](../../reporting-services/security/create-and-manage-role-assignments.md)
+- [Grant permissions on a native mode report server](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)
+- [Secure shared data source items](../../reporting-services/security/secure-shared-data-source-items.md)
+- [Store credentials in a Reporting Services data source](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md)

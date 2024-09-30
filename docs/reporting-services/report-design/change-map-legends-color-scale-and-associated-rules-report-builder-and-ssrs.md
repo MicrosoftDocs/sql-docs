@@ -3,11 +3,12 @@ title: "Change map legends-color scale-associated rules in a paginated report"
 description: Learn how to change map legends in a paginated report to help users interpret the data visualization on maps in Report Builder.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/07/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 f1_keywords:
   - "sql13.rtp.rptdesigner.mapcolorscaleproperties.labels.f1"
   - "sql13.rtp.rptdesigner.mappointlayerproperties.typerules.f1"
@@ -281,10 +282,9 @@ f1_keywords:
 1.  Select **OK**.
   
 ## Related content
- [Maps &#40;Report Builder&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
- [Add, change, or delete a map or map layer &#40;Report Builder&#41;](../../reporting-services/report-design/add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)   
- [Customize the data and display of a map or map layer &#40;Report Builder&#41;](../../reporting-services/report-design/customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)   
- [Troubleshoot reports: Map reports &#40;Report Builder&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)   
- [Map wizard and Map Layer wizard &#40;Report Builder&#41;](../../reporting-services/report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)  
-  
-  
+
+- [Maps &#40;Report Builder&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)
+- [Add, change, or delete a map or map layer &#40;Report Builder&#41;](../../reporting-services/report-design/add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)
+- [Customize the data and display of a map or map layer &#40;Report Builder&#41;](../../reporting-services/report-design/customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)
+- [Troubleshoot reports: Map reports &#40;Report Builder&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)
+- [Map wizard and Map Layer wizard &#40;Report Builder&#41;](../../reporting-services/report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)

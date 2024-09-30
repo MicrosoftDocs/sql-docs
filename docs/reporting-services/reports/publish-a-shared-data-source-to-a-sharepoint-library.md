@@ -3,11 +3,12 @@ title: "Publish a Shared Data Source to a SharePoint Library"
 description: Learn how to publish a shared data source to a report server that is running in SharePoint integrated mode.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/07/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: reports
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "data sources [Reporting Services], publishing to a SharePoint library"
   - "SharePoint integration [Reporting Services], publishing to a library"
@@ -43,11 +44,11 @@ helpviewer_keywords:
     > [!NOTE]  
     >  After you publish a shared data source to a SharePoint site, the file name extension is changed to .rsds. You can edit and manage a shared data source directly on the SharePoint site. For more information, see [Create and Manage Shared Data Sources &#40;Reporting Services in SharePoint Integrated Mode&#41;](/previous-versions/sql/).  
   
-## See Also  
- [Publish a Report to a SharePoint Library](../../reporting-services/reports/publish-a-report-to-a-sharepoint-library.md)   
- [URL Examples for Published Report Items on a Report Server in SharePoint Mode &#40;SSRS&#41;](../../reporting-services/tools/url-examples-for-items-on-a-report-server-sharepoint-mode.md)   
- [Project Property Pages Dialog Box](../../reporting-services/tools/project-property-pages-dialog-box.md)   
- [Set Deployment Properties &#40;Reporting Services&#41;](../../reporting-services/tools/set-deployment-properties-reporting-services.md)   
- [Publishing Reports to a Report Server](../../reporting-services/reports/publishing-reports-to-a-report-server.md)   
- [Use an Office Data Connection &#40;.odc&#41; with Reports &#40;Reporting Services in SharePoint Integrated Mode&#41;](../../reporting-services/report-data/use-an-office-data-connection-odc-with-reports.md)  
-  
+## Related content
+
+- [Publish a Report to a SharePoint Library](../../reporting-services/reports/publish-a-report-to-a-sharepoint-library.md)
+- [URL Examples for Published Report Items on a Report Server in SharePoint Mode &#40;SSRS&#41;](../../reporting-services/tools/url-examples-for-items-on-a-report-server-sharepoint-mode.md)
+- [Project Property Pages Dialog Box](../../reporting-services/tools/project-property-pages-dialog-box.md)
+- [Set Deployment Properties &#40;Reporting Services&#41;](../../reporting-services/tools/set-deployment-properties-reporting-services.md)
+- [Publishing Reports to a Report Server](../../reporting-services/reports/publishing-reports-to-a-report-server.md)
+- [Use an Office Data Connection &#40;.odc&#41; with Reports &#40;Reporting Services in SharePoint Integrated Mode&#41;](../../reporting-services/report-data/use-an-office-data-connection-odc-with-reports.md)

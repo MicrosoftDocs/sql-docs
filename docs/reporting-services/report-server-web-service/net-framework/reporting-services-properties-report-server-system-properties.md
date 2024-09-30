@@ -3,11 +3,12 @@ title: "Report Server System Properties"
 description: System properties are global for the report server database. You can read or modify many of these properties using the Web service methods.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/06/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-server-web-service
 ms.topic: reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "report servers [Reporting Services], properties"
   - "system-specific properties [Reporting Services]"
@@ -33,11 +34,8 @@ helpviewer_keywords:
 |EnableIntegratedSecurity|Determines whether integrated security is supported for report data source connections. The default is **True**. The valid values are as follows:<br /><br /> **True** = Integrated security is enabled.<br /><br /> **False** = Integrated security is not enabled. Report data sources that are configured to use integrated security will not run.|  
 |EnableRemoteErrors|Includes external error information (for example, error information about report data sources) with the error messages that are returned for users who request reports from remote computers. Valid values are **true** and **false**. The default value is **false**. For more information, see [Enable Remote Errors &#40;Reporting Services&#41;](../../../reporting-services/report-server/enable-remote-errors-reporting-services.md).|  
   
-## See Also  
- <xref:ReportService2010.ReportingService2010.GetSystemProperties%2A>   
- <xref:ReportService2010.ReportingService2010.SetSystemProperties%2A>   
- [Building Applications Using the Web Service and the .NET Framework](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
- [Report Server Web Service](../../../reporting-services/report-server-web-service/report-server-web-service.md)   
- [Technical Reference &#40;SSRS&#41;](../../../reporting-services/technical-reference-ssrs.md)  
-  
-  
+## Related content
+
+- [Building Applications Using the Web Service and the .NET Framework](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)
+- [Report Server Web Service](../../../reporting-services/report-server-web-service/report-server-web-service.md)
+- [Technical Reference &#40;SSRS&#41;](../../../reporting-services/technical-reference-ssrs.md)

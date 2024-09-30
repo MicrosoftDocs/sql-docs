@@ -3,11 +3,12 @@ title: "Add an expression to a paginated report"
 description: Find out about how to use expressions to define report item properties, filters, and parameter values in Report Builder.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/14/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 # Add an expression to a paginated report (Report Builder)
 
@@ -31,12 +32,12 @@ ms.custom: updatefrequency5
          The expression appears on the design surface as `<<Expr>>`.  
   
 ## Related content
- [Format text and placeholders &#40;Report Builder&#41;](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)   
- [Text boxes &#40;Report Builder&#41;](../../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md)   
- [Expression uses in reports &#40;Report Builder&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
- [Filter equation examples &#40;Report Builder&#41;](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md)   
- [Group expression examples &#40;Report Builder&#41;](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md)   
- [Expression dialog &#40;Report Builder&#41;](./expressions-report-builder-and-ssrs.md)   
- [Expression examples &#40;Report Builder&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
- [Add code to a report](../../reporting-services/report-design/add-code-to-a-report-ssrs.md)  
-  
+
+- [Format text and placeholders &#40;Report Builder&#41;](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)
+- [Text boxes &#40;Report Builder&#41;](../../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md)
+- [Expression uses in reports &#40;Report Builder&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)
+- [Filter equation examples &#40;Report Builder&#41;](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md)
+- [Group expression examples &#40;Report Builder&#41;](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md)
+- [Expression dialog &#40;Report Builder&#41;](./expressions-report-builder-and-ssrs.md)
+- [Expression examples &#40;Report Builder&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)
+- [Add code to a report](../../reporting-services/report-design/add-code-to-a-report-ssrs.md)

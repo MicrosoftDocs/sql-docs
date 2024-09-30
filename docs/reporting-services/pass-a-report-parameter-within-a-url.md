@@ -3,15 +3,16 @@ title: "Pass a report parameter within a URL"
 description: Learn about how you can pass report parameters directly to the SQL Server Reporting Services (SSRS) report server in a URL.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 07/19/2024
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: reporting-services
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "URL access [Reporting Services], passing parameters"
   - "passing parameters [Reporting Services]"
-#customer intent: As a SQL Server report user or administrator, I want to pass parameters within a URL so that I can customize report output and streamline report generation in SSRS.
+# customer intent: As a SQL Server report user or administrator, I want to pass parameters within a URL so that I can customize report output and streamline report generation in SSRS.
 ---
 # Pass a report parameter within a URL
 
@@ -49,7 +50,5 @@ You can pass report parameters to a SQL Server Reporting Services (SSRS) report 
  
 ## Related content
 
-- [URL access &#40;SSRS&#41;](../reporting-services/url-access-ssrs.md)   
-- [URL access parameter reference](../reporting-services/url-access-parameter-reference.md)  
-  
-  
+- [URL access &#40;SSRS&#41;](../reporting-services/url-access-ssrs.md)
+- [URL access parameter reference](../reporting-services/url-access-parameter-reference.md)

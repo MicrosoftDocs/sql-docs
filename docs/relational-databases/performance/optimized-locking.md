@@ -81,7 +81,7 @@ In the Database Engine, locking is a mechanism that prevents multiple transactio
 
 When a transaction needs to modify data, it requests a lock on the data. The lock is granted if no other conflicting locks are held on the data, and the transaction can proceed with the modification. If another conflicting lock is held on the data, the transaction must wait for the lock to be released before it can proceed.
 
-When multiple transactions attempt to access the same data concurrently, the Database Engine must resolve potentially complex conflicts with concurrent reads and writes. Locking is one of the mechanisms by which the engine can provide the semantics for the ANSI SQL transaction [isolation levels](../sql-server-transaction-locking-and-row-versioning-guide.md#isolation-levels-in-the-). Although locking in databases is essential, reduced concurrency, deadlocks, complexity, and lock overhead can impact performance and scalability.
+When multiple transactions attempt to access the same data concurrently, the Database Engine must resolve potentially complex conflicts with concurrent reads and writes. Locking is one of the mechanisms by which the engine can provide the semantics for the ANSI SQL transaction [isolation levels](../sql-server-transaction-locking-and-row-versioning-guide.md#isolation-levels-in-the-database-engine). Although locking in databases is essential, reduced concurrency, deadlocks, complexity, and lock overhead can impact performance and scalability.
 
 ### Optimized locking and transaction ID (TID) locking
 

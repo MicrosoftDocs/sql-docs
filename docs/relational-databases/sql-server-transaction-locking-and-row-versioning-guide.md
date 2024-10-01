@@ -79,32 +79,35 @@ By default, transactions are managed at the connection level. When a transaction
 Using API functions and [!INCLUDE [tsql](../includes/tsql-md.md)] statements, you can start transactions as explicit, autocommit, or implicit transactions.
 
 **Explicit transactions**
-An explicit transaction is one in which you explicitly define both the start and end of the transaction through an API function or by issuing the [!INCLUDE [tsql](../includes/tsql-md.md)] BEGIN TRANSACTION, COMMIT TRANSACTION, COMMIT WORK, ROLLBACK TRANSACTION, or ROLLBACK WORK [!INCLUDE [tsql](../includes/tsql-md.md)] statements. When the transaction ends, the connection returns to the transaction mode it was in before the explicit transaction was started, which might be the implicit or autocommit mode.
+
+An explicit transaction is one in which you explicitly define both the start and end of the transaction through an API function or by issuing the [!INCLUDE [tsql](../includes/tsql-md.md)] `BEGIN TRANSACTION`, `COMMIT TRANSACTION`, `COMMIT WORK`, `ROLLBACK TRANSACTION`, or `ROLLBACK WORK` [!INCLUDE [tsql](../includes/tsql-md.md)] statements. When the transaction ends, the connection returns to the transaction mode it was in before the explicit transaction was started, which might be the implicit or autocommit mode.
 
 You can use all [!INCLUDE [tsql](../includes/tsql-md.md)] statements in an explicit transaction, except for the following statements:
 
-- CREATE DATABASE
-- ALTER DATABASE
-- DROP DATABASE
-- CREATE FULLTEXT CATALOG
-- ALTER FULLTEXT CATALOG
-- DROP FULLTEXT CATALOG
-- DROP FULLTEXT INDEX
-- ALTER FULLTEXT INDEX
-- CREATE FULLTEXT INDEX
-- BACKUP
-- RESTORE
-- RECONFIGURE
+- `CREATE DATABASE`
+- `ALTER DATABASE`
+- `DROP DATABASE`
+- `CREATE FULLTEXT CATALOG`
+- `ALTER FULLTEXT CATALOG`
+- `DROP FULLTEXT CATALOG`
+- `DROP FULLTEXT INDEX`
+- `ALTER FULLTEXT INDEX`
+- `CREATE FULLTEXT INDEX`
+- `BACKUP`
+- `RESTORE`
+- `RECONFIGURE`
 - Full-text system stored procedures
 - `sp_dboption` to set database options or any system procedure that modifies the `master` database inside explicit or implicit transactions.
 
 > [!NOTE]  
-> UPDATE STATISTICS can be used inside an explicit transaction. However, UPDATE STATISTICS commits independently of the enclosing transaction and cannot be rolled back.
+> `UPDATE STATISTICS` can be used inside an explicit transaction. However, `UPDATE STATISTICS` commits independently of the enclosing transaction and cannot be rolled back.
 
 **Autocommit Transactions**
+
 Autocommit mode is the default transaction management mode of the [!INCLUDE [Database Engine](../includes/ssde-md.md)]. Every [!INCLUDE [tsql](../includes/tsql-md.md)] statement is committed or rolled back when it completes. If a statement completes successfully, it is committed; if it encounters any error, it is rolled back. A connection to an instance of the [!INCLUDE [Database Engine](../includes/ssde-md.md)] operates in autocommit mode whenever this default mode hasn't been overridden by either explicit or implicit transactions. Autocommit mode is also the default mode for SqlClient, ADO, OLE DB, and ODBC.
 
 **Implicit Transactions**
+
 When a connection is operating in implicit transaction mode, the instance of the [!INCLUDE [Database Engine](../includes/ssde-md.md)] automatically starts a new transaction after the current transaction is committed or rolled back. You do nothing to delineate the start of a transaction; you only commit or roll back each transaction. Implicit transaction mode generates a continuous chain of transactions. Set implicit transaction mode on through either an API function or the [!INCLUDE [tsql](../includes/tsql-md.md)] `SET IMPLICIT_TRANSACTIONS ON` statement. This mode is also known as Autocommit OFF, see [setAutoCommit Method (SQLServerConnection)](../connect/jdbc/reference/setautocommit-method-sqlserverconnection.md).
 
 After implicit transaction mode has been set on for a connection, the instance of the [!INCLUDE [Database Engine](../includes/ssde-md.md)] automatically starts a transaction when it first executes any of these statements:
@@ -124,9 +127,11 @@ After implicit transaction mode has been set on for a connection, the instance o
 - `UPDATE`
 
 **Batch-scoped Transactions**
+
 Applicable only to multiple active result sets (MARS), a [!INCLUDE [tsql](../includes/tsql-md.md)] explicit or implicit transaction that starts under a MARS session becomes a batch-scoped transaction. A batch-scoped transaction that isn't committed or rolled back when a batch completes is automatically rolled back by the [!INCLUDE [Database Engine](../includes/ssde-md.md)].
 
 **Distributed transactions**
+
 Distributed transactions span two or more servers known as resource managers. The management of the transaction must be coordinated between the resource managers by a server component called a transaction manager. Each instance of the [!INCLUDE [Database Engine](../includes/ssde-md.md)] can operate as a resource manager in distributed transactions coordinated by transaction managers, such as [!INCLUDE [msCoName](../includes/msconame-md.md)] Distributed Transaction Coordinator (MS DTC), or other transaction managers that support the Open Group XA specification for distributed transaction processing. For more information, see the MS DTC documentation.
 
 A transaction within a single instance of the [!INCLUDE [Database Engine](../includes/ssde-md.md)] that spans two or more databases is a distributed transaction. The instance manages the distributed transaction internally; to the user, it operates as a local transaction.
@@ -184,7 +189,7 @@ GO
 In the following example, the third `INSERT` statement generates a run-time duplicate primary key error. The first two `INSERT` statements are successful and committed, so they remain after the run-time error.
 
 ```sql
-CREATE TABLE TestBatch (Cola INT PRIMARY KEY, Colb CHAR(3));
+CREATE TABLE TestBatch (ColA INT PRIMARY KEY, ColB CHAR(3));
 GO
 INSERT INTO TestBatch VALUES (1, 'aaa');
 INSERT INTO TestBatch VALUES (2, 'bbb');
@@ -329,27 +334,27 @@ The ISO standard defines the following isolation levels, all of which are suppor
 
 | Isolation Level | Definition |
 | --- | --- |
-| **Read uncommitted** | The lowest isolation level where transactions are isolated only enough to ensure that physically inconsistent data isn't read. In this level, dirty reads are allowed, so one transaction may see not-yet-committed changes made by other transactions. |
-| **Read committed** | Allows a transaction to read data previously read (not modified) by another transaction without waiting for the first transaction to complete. The [!INCLUDE [Database Engine](../includes/ssde-md.md)] keeps write locks (acquired on selected data) until the end of the transaction, but read locks are released as soon as the read operation is performed. This is the [!INCLUDE [Database Engine](../includes/ssde-md.md)] default level. |
-| **Repeatable read** | The [!INCLUDE [Database Engine](../includes/ssde-md.md)] keeps read and write locks that are acquired on selected data until the end of the transaction. However, because range-locks are not managed, phantom reads can occur. |
-| **Serializable** | The highest level where transactions are completely isolated from one another. The [!INCLUDE [Database Engine](../includes/ssde-md.md)] keeps read and write locks acquired on selected data until the end of the transaction. Range-locks are acquired when a SELECT operation uses a range WHERE clause to avoid phantom reads.<br /><br />**Note:** DDL operations and transactions on replicated tables may fail when the `SERIALIZABLE` isolation level is requested. This is because replication queries use hints that may be incompatible with the `SERIALIZABLE` isolation level. |
+| `READ UNCOMMITTED` | The lowest isolation level where transactions are isolated only enough to ensure that physically inconsistent data isn't read. In this level, dirty reads are allowed, so one transaction may see not-yet-committed changes made by other transactions. |
+| `READ COMMITTED` | Allows a transaction to read data previously read (not modified) by another transaction without waiting for the first transaction to complete. The [!INCLUDE [Database Engine](../includes/ssde-md.md)] keeps write locks (acquired on selected data) until the end of the transaction, but read locks are released as soon as the read operation is performed. This is the [!INCLUDE [Database Engine](../includes/ssde-md.md)] default level. |
+| `REPEATABLE READ` | The [!INCLUDE [Database Engine](../includes/ssde-md.md)] keeps read and write locks that are acquired on selected data until the end of the transaction. However, because range-locks are not managed, phantom reads can occur. |
+| `SERIALIZABLE` | The highest level where transactions are completely isolated from one another. The [!INCLUDE [Database Engine](../includes/ssde-md.md)] keeps read and write locks acquired on selected data until the end of the transaction. Range-locks are acquired when a SELECT operation uses a range WHERE clause to avoid phantom reads.<br /><br />**Note:** DDL operations and transactions on replicated tables may fail when the `SERIALIZABLE` isolation level is requested. This is because replication queries use hints that may be incompatible with the `SERIALIZABLE` isolation level. |
 
 The [!INCLUDE [Database Engine](../includes/ssde-md.md)] also supports two additional transaction isolation levels that use row versioning. One is an implementation of `READ COMMITTED` isolation level, and one is the `SNAPSHOT` transaction isolation level.
 
 | Row Versioning Isolation Level | Definition |
 | --- | --- |
-| **Read Committed Snapshot (RCSI)** | When the `READ_COMMITTED_SNAPSHOT` database option is set `ON`, which is the default setting in [!INCLUDE [Azure SQL Database](../includes/ssazure-sqldb.md)], the `READ COMMITTED` isolation level uses row versioning to provide statement-level read consistency. Read operations require only the schema stability (`Sch-S`) table level locks and no page or row locks. That is, the [!INCLUDE [Database Engine](../includes/ssde-md.md)] uses row versioning to present each statement with a transactionally consistent snapshot of the data as it existed at the start of the statement. Locks are not used to protect the data from updates by other transactions. A user-defined function can return data that was committed after the time the statement containing the UDF began.<br /><br />When the `READ_COMMITTED_SNAPSHOT` database option is set `OFF`, which is the default setting in [!INCLUDE [SQL Server](../includes/ssnoversion-md.md)] and [!INCLUDE [Azure SQL Managed Instance](../includes/ssazuremi-md.md)], `READ COMMITTED` isolation uses shared locks to prevent other transactions from modifying rows while the current transaction is running a read operation. The shared locks also block the statement from reading rows modified by other transactions until the other transaction is completed. Both implementations meet the ISO definition of `READ COMMITTED` isolation. |
-| **Snapshot** | The snapshot isolation level uses row versioning to provide transaction-level read consistency. Read operations acquire no page or row locks; only the schema stability (`Sch-S`) table locks are acquired. When reading rows modified by another transaction, read operations retrieve the version of the row that existed when the transaction started. You can only use `SNAPSHOT` isolation when the `ALLOW_SNAPSHOT_ISOLATION` database option is set to `ON`. By default, this option is set to `OFF` for user databases in [!INCLUDE [SQL Server](../includes/ssnoversion-md.md)] and [!INCLUDE [Azure SQL Managed Instance](../includes/ssazuremi-md.md)], and set to `ON` for databases in [!INCLUDE [Azure SQL Database](../includes/ssazure-sqldb.md)].<br /><br />**Note:** The [!INCLUDE [Database Engine](../includes/ssde-md.md)] doesn't support versioning of metadata. For this reason, there are restrictions on what DDL operations can be performed in an explicit transaction that is running under snapshot isolation. The following DDL statements are not permitted under snapshot isolation after a `BEGIN TRANSACTION` statement: `ALTER TABLE`, `CREATE INDEX`, `CREATE XML INDEX`, `ALTER INDEX`, `DROP INDEX`, `DBCC REINDEX`, `ALTER PARTITION FUNCTION`, `ALTER PARTITION SCHEME`, or any common language runtime (CLR) DDL statement. These statements are permitted when you are using snapshot isolation within implicit transactions. An implicit transaction, by definition, is a single statement that makes it possible to enforce the semantics of snapshot isolation, even with DDL statements. Violations of this principle can cause error 3961: `Snapshot isolation transaction failed in database '%.*ls' because the object accessed by the statement has been modified by a DDL statement in another concurrent transaction since the start of this transaction. It is not allowed because the metadata is not versioned. A concurrent update to metadata could lead to inconsistency if mixed with snapshot isolation.` |
+| `Read Committed Snapshot (RCSI)` | When the `READ_COMMITTED_SNAPSHOT` database option is set `ON`, which is the default setting in [!INCLUDE [Azure SQL Database](../includes/ssazure-sqldb.md)], the `READ COMMITTED` isolation level uses row versioning to provide statement-level read consistency. Read operations require only the schema stability (`Sch-S`) table level locks and no page or row locks. That is, the [!INCLUDE [Database Engine](../includes/ssde-md.md)] uses row versioning to present each statement with a transactionally consistent snapshot of the data as it existed at the start of the statement. Locks are not used to protect the data from updates by other transactions. A user-defined function can return data that was committed after the time the statement containing the UDF began.<br /><br />When the `READ_COMMITTED_SNAPSHOT` database option is set `OFF`, which is the default setting in [!INCLUDE [SQL Server](../includes/ssnoversion-md.md)] and [!INCLUDE [Azure SQL Managed Instance](../includes/ssazuremi-md.md)], `READ COMMITTED` isolation uses shared locks to prevent other transactions from modifying rows while the current transaction is running a read operation. The shared locks also block the statement from reading rows modified by other transactions until the other transaction is completed. Both implementations meet the ISO definition of `READ COMMITTED` isolation. |
+| `SNAPSHOT` | The snapshot isolation level uses row versioning to provide transaction-level read consistency. Read operations acquire no page or row locks; only the schema stability (`Sch-S`) table locks are acquired. When reading rows modified by another transaction, read operations retrieve the version of the row that existed when the transaction started. You can only use `SNAPSHOT` isolation when the `ALLOW_SNAPSHOT_ISOLATION` database option is set to `ON`. By default, this option is set to `OFF` for user databases in [!INCLUDE [SQL Server](../includes/ssnoversion-md.md)] and [!INCLUDE [Azure SQL Managed Instance](../includes/ssazuremi-md.md)], and set to `ON` for databases in [!INCLUDE [Azure SQL Database](../includes/ssazure-sqldb.md)].<br /><br />**Note:** The [!INCLUDE [Database Engine](../includes/ssde-md.md)] doesn't support versioning of metadata. For this reason, there are restrictions on what DDL operations can be performed in an explicit transaction that is running under snapshot isolation. The following DDL statements are not permitted under snapshot isolation after a `BEGIN TRANSACTION` statement: `ALTER TABLE`, `CREATE INDEX`, `CREATE XML INDEX`, `ALTER INDEX`, `DROP INDEX`, `DBCC REINDEX`, `ALTER PARTITION FUNCTION`, `ALTER PARTITION SCHEME`, or any common language runtime (CLR) DDL statement. These statements are permitted when you are using snapshot isolation within implicit transactions. An implicit transaction, by definition, is a single statement that makes it possible to enforce the semantics of snapshot isolation, even with DDL statements. Violations of this principle can cause error 3961: `Snapshot isolation transaction failed in database '%.*ls' because the object accessed by the statement has been modified by a DDL statement in another concurrent transaction since the start of this transaction. It is not allowed because the metadata is not versioned. A concurrent update to metadata could lead to inconsistency if mixed with snapshot isolation.` |
 
 The following table shows the concurrency side effects enabled by the different isolation levels.
 
 | Isolation level | Dirty read | Nonrepeatable read | Phantom |
 | --- | --- | --- | --- |
-| **Read uncommitted** | Yes | Yes | Yes |
-| **Read committed** | No | Yes | Yes |
-| **Repeatable read** | No | No | Yes |
-| **Snapshot** | No | No | No |
-| **Serializable** | No | No | No |
+| `READ UNCOMMITTED` | Yes | Yes | Yes |
+| `READ COMMITTED` | No | Yes | Yes |
+| `REPEATABLE READ` | No | No | Yes |
+| `SNAPSHOT` | No | No | No |
+| `SERIALIZABLE` | No | No | No |
 
 For more information about the specific types of locking or row versioning controlled by each transaction isolation level, see [SET TRANSACTION ISOLATION LEVEL (Transact-SQL)](../t-sql/statements/set-transaction-isolation-level-transact-sql.md).
 
@@ -425,12 +430,12 @@ The following table shows the resource lock modes that the [!INCLUDE [Database E
 
 | Lock mode | Description |
 | --- | --- |
-| **Shared (S)** | Used for read operations that do not change or update data, such as a `SELECT` statement. |
-| **Update (U)** | Used on resources that can be updated. Prevents a common form of deadlock that occurs when multiple sessions are reading, locking, and potentially updating resources later. |
-| **Exclusive (X)** | Used for data-modification operations, such as `INSERT`, `UPDATE`, or `DELETE`. Ensures that multiple updates cannot be made to the same resource at the same time. |
+| **Shared (`S`)** | Used for read operations that do not change or update data, such as a `SELECT` statement. |
+| **Update (`U`)** | Used on resources that can be updated. Prevents a common form of deadlock that occurs when multiple sessions are reading, locking, and potentially updating resources later. |
+| **Exclusive (`X`)** | Used for data-modification operations, such as `INSERT`, `UPDATE`, or `DELETE`. Ensures that multiple updates cannot be made to the same resource at the same time. |
 | **Intent** | Used to establish a lock hierarchy. The types of intent locks are: intent shared (`IS`), intent exclusive (`IX`), and shared with intent exclusive (`SIX`). |
 | **Schema** | Used when an operation dependent on the schema of a table is executing. The types of schema locks are: schema modification (`Sch-M`) and schema stability (`Sch-S`). |
-| **Bulk Update (BU)** | Used when bulk copying data into a table with the `TABLOCK` hint. |
+| **Bulk Update (`BU`)** | Used when bulk copying data into a table with the `TABLOCK` hint. |
 | **Key-range** | Protects the range of rows read by a query when using the `SERIALIZABLE` transaction isolation level. Ensures that other transactions cannot insert rows that would qualify for the queries of the `SERIALIZABLE` transaction if the queries were run again. |
 
 ### <a id="shared"></a> Shared locks
@@ -690,7 +695,7 @@ As the [!INCLUDE [Database Engine](../includes/ssde-md.md)] acquires low-level l
 
 The [!INCLUDE [Database Engine](../includes/ssde-md.md)] might do both row and page locking for the same statement to minimize the number of locks and reduce the likelihood that lock escalation will be necessary. For example, the [!INCLUDE [Database Engine](../includes/ssde-md.md)] could place page locks on a nonclustered index (if enough contiguous keys in the index node are selected to satisfy the query) and row locks on the clustered index or heap.
 
-To escalate locks, the [!INCLUDE [Database Engine](../includes/ssde-md.md)] attempts to change the intent lock on the table to the corresponding full lock, for example, changing an intent exclusive (`IX`) lock to an exclusive (`X`) lock, or an intent shared (`IS`) lock to a shared (`S`) lock. If the lock escalation attempt succeeds and the full table lock is acquired, then all HoBT, page (`PAGE`), or row-level (`RID`,`KEY`) locks held by the transaction on the heap or index are released. If the full lock cannot be acquired, no lock escalation happens at that time and the [!INCLUDE [Database Engine](../includes/ssde-md.md)] will continue to acquire row, key, or page locks.
+To escalate locks, the [!INCLUDE [Database Engine](../includes/ssde-md.md)] attempts to change the intent lock on the table to the corresponding full lock, for example, changing an intent exclusive (`IX`) lock to an exclusive (`X`) lock, or an intent shared (`IS`) lock to a shared (`S`) lock. If the lock escalation attempt succeeds and the full table lock is acquired, then all HoBT, page (`PAGE`), or row-level (`RID`, `KEY`) locks held by the transaction on the heap or index are released. If the full lock cannot be acquired, no lock escalation happens at that time and the [!INCLUDE [Database Engine](../includes/ssde-md.md)] will continue to acquire row, key, or page locks.
 
 The [!INCLUDE [Database Engine](../includes/ssde-md.md)] doesn't escalate row or key-range locks to page locks, but escalates them directly to table locks. Similarly, page locks are always escalated to table locks. Locking of partitioned tables can escalate to the HoBT level for the associated partition instead of to the table lock. A HoBT-level lock doesn't necessarily lock the aligned HoBTs for the partition.
 
@@ -745,7 +750,7 @@ Whenever the number of locks is greater than the memory threshold for lock escal
 
 The [!INCLUDE [Database Engine](../includes/ssde-md.md)] can choose any active statement from any session for escalation, and for every 1,250 new locks it will choose statements for escalation as long as the lock memory used in the instance remains above the threshold.
 
-### <a id="escalating-mixed-lock-types"></a> Escalate mixed lock types
+### <a id="escalating-mixed-lock-types"></a> Lock escalation with mixed lock types
 
 When lock escalation occurs, the lock selected for the heap or index is strong enough to meet the requirements of the most restrictive lower level lock.
 
@@ -769,7 +774,7 @@ The `SELECT` statement acquires these locks:
 
 If the `SELECT` statement acquires enough locks to trigger lock escalation and the escalation succeeds, the `IX` lock on the table is converted to an `X` lock, and all the row, page, and index locks are released. Both the updates and reads are protected by the `X` lock on the table.
 
-### <a id="reducing-locking-and-escalation"></a> Reduce locking and escalation
+### <a id="reducing-locking-and-escalation"></a> Reduce locking and lock escalation
 
 In most cases, the [!INCLUDE [Database Engine](../includes/ssde-md.md)] delivers the best performance when operating with its default settings for locking and lock escalation.
 
@@ -827,7 +832,7 @@ If an instance of the [!INCLUDE [Database Engine](../includes/ssde-md.md)] gener
 
     SELECT *
     FROM mytable WITH (UPDLOCK, HOLDLOCK)
-    WHERE 1=0;
+    WHERE 1 = 0;
     
     WAITFOR DELAY '1:00:00';
 
@@ -872,8 +877,6 @@ Using low-level locks, such as row locks, increases concurrency by decreasing th
 :::image type="content" source="media/sql-server-transaction-locking-and-row-versioning-guide/sql-server-locking-cost-vs-concurrency-cost.png" alt-text="A graph of locking cost vs. concurrency cost." lightbox="media/sql-server-transaction-locking-and-row-versioning-guide/sql-server-locking-cost-vs-concurrency-cost.png":::
 
 The [!INCLUDE [Database Engine](../includes/ssde-md.md)] uses a dynamic locking strategy to determine the most effective locks. The [!INCLUDE [Database Engine](../includes/ssde-md.md)] automatically determines what locks are most appropriate when the query is executed, based on the characteristics of the schema and query. For example, to reduce the overhead of locking, the optimizer may choose page locks in an index when performing an index scan.
-
-Starting with [!INCLUDE [sql2008-md](../includes/sql2008-md.md)], the behavior of lock escalation has changed with the introduction of the `LOCK_ESCALATION` table option. For more information, see the `LOCK_ESCALATION` option of [ALTER TABLE](../t-sql/statements/alter-table-transact-sql.md).
 
 ## <a id="lock_partitioning"></a> Lock partitioning
 
@@ -1076,9 +1079,9 @@ Transactions running under `SNAPSHOT` isolation take an optimistic approach to d
 > [!NOTE]  
 > Update operations running under `SNAPSHOT` isolation internally execute under `READ COMMITTED` isolation when the `SNAPSHOT` transaction accesses any of the following:
 >
-> A table with a FOREIGN KEY constraint.
+> A table with a foreign key constraint.
 >
-> A table that is referenced in the FOREIGN KEY constraint of another table.
+> A table that is referenced in the foreign key constraint of another table.
 >
 > An indexed view referencing more than one table.
 >
@@ -1351,8 +1354,8 @@ WHERE BusinessEntityID = 4;
 -- will generate a 3960 error and the transaction will
 -- terminate.
 UPDATE HumanResources.Employee
-    SET SickLeaveHours = SickLeaveHours - 8
-    WHERE BusinessEntityID = 4;
+SET SickLeaveHours = SickLeaveHours - 8
+WHERE BusinessEntityID = 4;
 
 -- Undo the changes to the database from session 1.
 -- This will not undo the change from session 2.
@@ -1407,13 +1410,13 @@ BEGIN TRANSACTION;
 -- under read-committed using row versioning shared locks are
 -- not requested.
 UPDATE HumanResources.Employee
-    SET VacationHours = VacationHours - 8
-    WHERE BusinessEntityID = 4;
+SET VacationHours = VacationHours - 8
+WHERE BusinessEntityID = 4;
 
 -- Verify that the employee now has 40 vacation hours.
 SELECT VacationHours
-    FROM HumanResources.Employee
-    WHERE BusinessEntityID = 4;
+FROM HumanResources.Employee
+WHERE BusinessEntityID = 4;
 ```
 
 On session 1:
@@ -1483,7 +1486,7 @@ ALTER DATABASE AdventureWorks2022 SET ALLOW_SNAPSHOT_ISOLATION ON;
 
 The following table lists and describes the states of the `ALLOW_SNAPSHOT_ISOLATION` option. Using `ALTER DATABASE` with the `ALLOW_SNAPSHOT_ISOLATION` option doesn't block users who are currently accessing the database data.
 
-| State of SNAPSHOT isolation for current database | Description |
+| State of `SNAPSHOT` isolation for current database | Description |
 | --- | --- |
 | `OFF` | The support for `SNAPSHOT` isolation transactions isn't activated. No `SNAPSHOT` isolation transactions are allowed. |
 | `PENDING_ON` | The support for `SNAPSHOT` isolation transactions is in transition state (from `OFF` to `ON`). Open transactions must complete.<br /><br />No `SNAPSHOT` isolation transactions are allowed. |
@@ -1763,11 +1766,13 @@ GO
 EXECUTE TransProc 3,'bbb';
 GO
 
-/* The following SELECT statement shows only rows 3 and 4 are
-   still in the table. This indicates that the commit
-   of the inner transaction from the first EXECUTE statement of
-   TransProc was overridden by the subsequent roll back of the
-   outer transaction. */
+/*
+The following SELECT statement shows only rows 3 and 4 are
+still in the table. This indicates that the commit
+of the inner transaction from the first EXECUTE statement of
+TransProc was overridden by the subsequent roll back of the
+outer transaction.
+*/
 SELECT *
 FROM TestTrans;
 GO

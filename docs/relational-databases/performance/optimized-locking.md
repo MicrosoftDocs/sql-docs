@@ -334,7 +334,7 @@ For customers using RCSI, to force blocking between two queries when optimized l
 
 No, because DML statements cannot run on read-only replicas, and the corresponding row and page locks are not taken.
 
-### Is optimized locking used when modifying data in tempdb, including in temporary tables?
+### Is optimized locking used when modifying data in tempdb and in temporary tables?
 
 Not at this time.
 

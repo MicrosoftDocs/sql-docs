@@ -112,7 +112,7 @@ The following table lists the resources that are represented in the `resource_as
 | OIB | Represents online index (re)build. | HoBt ID. This value corresponds to `sys.partitions.hobt_id`. |
 | ALLOCATION_UNIT | Represents a set of related pages, such as an index partition. Each allocation unit covers a single Index Allocation Map (IAM) chain. | Allocation Unit ID. This value corresponds to `sys.allocation_units.allocation_unit_id`. |
 | ROW_GROUP | Represents a columnstore row group. | |
-| XACT | Represents an XACT (transaction) resource. Occurs when [optimized locking](../performance/optimized-locking.md) is enabled. | There are two scenarios:<br /><br />***Scenario 1* (Owner)**<br />- **Resource type**: `XACT`.<br />- **Resource description**: When a TID lock is held, the `resource_description` is the `XACT` resource.<br />- **Resource associated entity ID**: `resource_associated_entity_id` is 0.<br /><br />***Scenario 2* (Waiter)**<br />- **Resource type**: `XACT`.<br />- **Resource description**: When a request waits for a TID lock, the `resource_description` is the `XACT` resource followed by the underlying `KEY` or `RID` resource.<br />- **Resource associated entity ID**: `resource_associated_entity_id` is the underlying HoBt ID. |
+| XACT | Represents a transaction. Occurs when [optimized locking](../performance/optimized-locking.md) is enabled. | There are two scenarios:<br /><br />***Scenario 1* (Owner)**<br />- **Resource type**: `XACT`.<br />- **Resource description**: When a TID lock is held, the `resource_description` is the `XACT` resource.<br />- **Resource associated entity ID**: `resource_associated_entity_id` is 0.<br /><br />***Scenario 2* (Waiter)**<br />- **Resource type**: `XACT`.<br />- **Resource description**: When a request waits for a TID lock, the `resource_description` is the `XACT` resource followed by the underlying `KEY` or `RID` resource.<br />- **Resource associated entity ID**: `resource_associated_entity_id` is the underlying HoBt ID. |
 
 [!INCLUDE [sql-b-tree](../../includes/sql-b-tree.md)]
 
@@ -218,7 +218,7 @@ The following table provides the format of the `resource_description` column for
 | ALLOCATION_UNIT | Not applicable | Allocation Unit ID is included as the `resource_associated_entity_id`. |
 | XACT | `<dbid>:<XdesId low>:<XdesId high>` | The TID (transaction ID) resource. Occurs when [optimized locking](../performance/optimized-locking.md) is enabled. |
 | XACT KEY | `[XACT <dbid>:<XdesId low>:<XdesId High>] KEY (<hash_value>)` | The underlying resource the transaction is waiting on, with an index KEY object. Occurs when [optimized locking](../performance/optimized-locking.md) is enabled. |
-| XACT RID | `[XACT <dbid>:<XdesId low>:<XdesId High>] RID (<file_id>:<page_in_file>:<row_on_page>)` | The underlying resource the transaction is waiting on, with a heap RID object. Occurs whe [optimized locking](../performance/optimized-locking.md) is enabled. |
+| XACT RID | `[XACT <dbid>:<XdesId low>:<XdesId High>] RID (<file_id>:<page_in_file>:<row_on_page>)` | The underlying resource the transaction is waiting on, with a heap RID object. Occurs when [optimized locking](../performance/optimized-locking.md) is enabled. |
 | METADATA.ASSEMBLY | `assembly_id = A` | [!INCLUDE [ssInternalOnly](../../includes/ssinternalonly-md.md)] |
 | METADATA.ASSEMBLY_CLR_NAME | `$qname_id = Q` | [!INCLUDE [ssInternalOnly](../../includes/ssinternalonly-md.md)] |
 | METADATA.ASSEMBLY_TOKEN | `assembly_id = A`, `$token_id` | [!INCLUDE [ssInternalOnly](../../includes/ssinternalonly-md.md)] |

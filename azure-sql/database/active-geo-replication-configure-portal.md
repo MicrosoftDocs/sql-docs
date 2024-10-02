@@ -235,8 +235,9 @@ Remove-AzSqlDatabaseSecondary @parameters
 
 ## Cross-subscription geo-replication
 
-- To create a geo-secondary replica in a subscription *different* from the subscription of the primary in the *same* Microsoft Entra ID tenant, you can use the Azure portal or the steps in this section.
-- To create a geo-secondary replica in a subscription *different* from the subscription of the primary in a different Microsoft Entra ID tenant, you must use T-SQL, with the steps in this section.
+- To create a geo-secondary replica in a subscription *different* from the subscription of the primary in the *same* Microsoft Entra tenant, you can use the Azure portal or the steps in this section.
+- To create a geo-secondary replica in a subscription *different* from the subscription of the primary in a different Microsoft Entra tenant, you must use SQL authentication and T-SQL as described in the steps in this section. [Microsoft Entra authentication](authentication-aad-overview.md) for cross-subscription geo-replication is not supported when a logical server is in a different Azure tenant
+
 
 1. Add the IP address of the client machine executing the T-SQL commands in this example, to the server firewalls of **both** the primary and secondary servers. You can confirm that IP address by executing the following query while connected to the primary server from the same client machine.
   

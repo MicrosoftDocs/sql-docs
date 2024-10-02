@@ -4,7 +4,7 @@ description: This article describes the new serverless compute tier and compares
 author: oslake
 ms.author: moslake
 ms.reviewer: wiassaf, mathoma
-ms.date: 09/30/2024
+ms.date: 10/1/2024
 ms.service: azure-sql-database
 ms.subservice: service-overview
 ms.topic: conceptual
@@ -638,6 +638,8 @@ Currently, 80 maximum vCores in serverless for General Purpose and Hyperscale ti
  - Italy North
  - Japan East
  - Japan West
+ - Jio India Central
+ - Jio India West
  - Korea Central
  - Korea South
  - Maylaysia South

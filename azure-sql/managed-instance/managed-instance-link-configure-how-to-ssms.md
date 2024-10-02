@@ -134,6 +134,12 @@ Expand **Always On High Availability** and **Availability Groups** to view the d
 
 Regardless of which instance is primary, you can also right-click the linked distributed availability group on SQL Server and select **Show Dashboard** to view the dashboard for the distributed availability group, which shows the status of the linked database in the distributed availability group.
 
+## Take first transaction log backup
+
+If SQL Server is your initial primary, it's important to take the first [transaction log backup](/sql/relational-databases/backup-restore/back-up-a-transaction-log-sql-server) on SQL Server *after* initial seeding completes, when the database is no longer in the **Restoring...** state on Azure SQL Managed Instance. Then take [SQL Server transaction log backups regularly](managed-instance-link-best-practices.md#take-log-backups-regularly) to minimize excessive log growth while SQL Server is in the primary role.
+
+If SQL Managed Instance is your primary, you don't need to take any action as Azure SQL Managed Instance takes log backups automatically.
+
 ## Drop a link 
 
 If you want to drop the link, either because it's no longer needed, or because it's in an irreparable state and needs to be recreated, you can do so with SQL Server Management Studio (SSMS). 

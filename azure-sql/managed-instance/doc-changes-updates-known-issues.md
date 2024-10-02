@@ -24,6 +24,7 @@ This article lists the currently known issues with [Azure SQL Managed Instance](
 
 | Issue | Date discovered | Status | Date resolved |
 | --- | --- | --- | --- |
+| [Differential backups aren't taken when an instance is linked to SQL Server](#differential-backups-arent-taken-when-an-instance-is-linked-to-sql-server) | Sept 2024 | By design | |
 | [List of long-term backups in Azure portal shows backup files for active and deleted databases with the same name](#list-of-long-term-backups-in-azure-portal-shows-backup-files-for-active-and-deleted-databases-with-the-same-name) | Mar 2024 | Has Workaround | |
 | [Temporary instance inaccessibility using the failover group listener during scaling operation](#temporary-instance-inaccessibility-using-the-failover-group-listener-during-scaling-operation) | Jan 2024 | No resolution | |
 | [The event_file target of the system_health event session is not accessible](#the-event_file-target-of-the-system_health-event-session-is-not-accessible) | Dec 2023 | Has Workaround | |
@@ -82,7 +83,7 @@ This change in behavior is an unintended consequence of a recent required securi
 
 ### <a id="procedure-sp_send_dbmail-may-fail-when-query-parameter-is-used-on-nov22fw-enabled-managed-instances"></a> Procedure sp_send_dbmail might fail when @query parameter
 
-Procedure `sp_send_dbmail` might fail when `@query` parameter is used.. Failures happen when the stored procedure is executed under sysadmin account.
+Procedure `sp_send_dbmail` might fail when `@query` parameter is used. Failures happen when the stored procedure is executed under sysadmin account.
 
 This problem is caused by a known bug related to how `sp_send_dbmail` is using impersonation.
 
@@ -288,6 +289,10 @@ using (var scope = new TransactionScope())
 **Workaround (not needed since March 2020)**: Use [SqlConnection.ChangeDatabase(String)](/dotnet/api/system.data.sqlclient.sqlconnection.changedatabase) to use another database in a connection context instead of using two connections.
 
 ## No resolution
+
+### Differential backups aren't taken when an instance is linked to SQL Server
+
+When you configure a [link](managed-instance-link-feature-overview.md) between SQL Server and Azure SQL Managed Instance, automated full and transaction log backups are taken on the managed instance, whether or not it's in the primary role. However, differential backups aren't currently taken, when can lead to longer than expected restore times.
 
 ### Increased number of system logins used for transactional replication
 

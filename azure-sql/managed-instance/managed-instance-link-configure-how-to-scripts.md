@@ -24,7 +24,6 @@ After the link is created, you can then fail over to your secondary replica for 
 > - It's also possible to configure the link with [SQL Server Management Studio (SSMS)](managed-instance-link-configure-how-to-ssms.md). 
 > - Configuring Azure SQL Managed Instance as your initial primary is currently in preview and only supported starting with [SQL Server 2022 CU10](/troubleshoot/sql/releases/sqlserver-2022/cumulativeupdate10). 
 
-
 ## Overview
 
 Use the link feature to replicate databases from your initial primary to your secondary replica. For SQL Server 2022, the initial primary can be either SQL Server or Azure SQL Managed Instance. For SQL Server 2019 and earlier versions, the initial primary must be SQL Server. After the link is configured, the database from the initial primary is replicated to the secondary replica. 
@@ -36,7 +35,7 @@ If you plan to use your secondary managed instance for only disaster recovery, y
 Use the instructions in this article to manually set up the link between SQL Server and Azure SQL Managed Instance. After the link is created, your source database gets a read-only copy on your target secondary replica. 
 
 > [!TIP]
-> - To simplify using T-SQL scripts with the correct parameters for your environment, we strongly recommend using the Managed Instance link wizard in [SQL Server Management Studio (SSMS)](managed-instance-link-configure-how-to-ssms.md#create-link-to-replicate-database) to generate a script to create the link. On the **Summary** page of the **New Managed Instance link** window, select **Script** instead of **Finish**. 
+> To simplify using T-SQL scripts with the correct parameters for your environment, we strongly recommend using the Managed Instance link wizard in [SQL Server Management Studio (SSMS)](managed-instance-link-configure-how-to-ssms.md#create-link-to-replicate-database) to generate a script to create the link. On the **Summary** page of the **New Managed Instance link** window, select **Script** instead of **Finish**. 
 
 ## Prerequisites 
 
@@ -97,7 +96,7 @@ As you run scripts from this user guide, it's important not to mistake SQL Serve
 
 ## Set up database recovery and backup
 
-If SQL Server is your initial primary, then databases that will be replicated via the link must be in the full recovery model and have at least one backup.  Since Azure SQL Managed Instance takes backups automatically, skip this step if SQL Managed Instance is your initial primary. primary
+If SQL Server is your initial primary, then databases that will be replicated via the link must be in the full recovery model and have at least one backup.  Since Azure SQL Managed Instance takes backups automatically, skip this step if SQL Managed Instance is your initial primary. 
 
 Run the following code on SQL Server for all databases you wish to replicate. Replace `<DatabaseName>` with your actual database name.
 
@@ -244,7 +243,6 @@ Fill out necessary user information, copy it, paste it, and then run the script.
 - `<SQLServerCertName>` with the SQL Server certificate name you've recorded in the previous step.
 - `<ManagedInstanceName>` with the short name of your managed instance. 
 
-
 ```powershell-interactive
 # Run in Azure Cloud Shell (select PowerShell console)
 # ===============================================================================
@@ -307,7 +305,7 @@ Copy the entire PublicKey output (starts with `0x`) as you'll require it in the 
 
 Alternatively, if you encounter issues in copy-pasting the PublicKey, you could also run the T-SQL command `EXEC sp_get_endpoint_certificate 4` on the managed instance to obtain its public key for the link endpoint.
 
-Next, import the obtained public key of the managed instance security certificate to SQL Server. Run the following query on SQL Server. Replace:
+Next, import the obtained public key of the managed instance security certificate to SQL Server. Run the following query on SQL Server to create the MI endpoint certificate. Replace:
 - `<ManagedInstanceFQDN>` with the fully qualified domain name of managed instance.
 - `<PublicKey>` with the PublicKey value obtained in the previous step (from Azure Cloud Shell, starting with `0x`). You don't need to use quotation marks.
 
@@ -373,6 +371,51 @@ Finally, verify all created certificates by using the following dynamic manageme
 ```sql
 -- Run on SQL Server
 SELECT * FROM sys.certificates
+```
+
+### Validate the certificate 
+
+After you've created the certificates, validate the MI endpoint certificate is configured correctly. 
+
+First, determine the `certificate_id` of the exported MI certificate by replacing the value of `<ManagedInstanceFQDN>` and then running the following query on SQL Server:
+
+```sql
+-- Run on SQL Server 
+USE MASTER 
+GO 
+
+SELECT name, subject, certificate_id, start_date, expiry_date 
+FROM sys.certificates 
+WHERE issuer_name LIKE '%Microsoft Corporation%' AND name = '<ManagedInstanceFQDN>' 
+GO 
+```
+
+Next, validate the certificate by replacing the value of `<certificate_id>` from the result of the previous query and then running the following query on SQL Server:
+
+```sql
+-- Run on SQL Server 
+
+USE MASTER 
+GO 
+
+EXEC sp_validate_certificate_ca_chain <certificate_id> 
+GO 
+```
+
+A response of `Commands completed successfully. Completion time: …` indicates the MI endpoint certificate has been successfully validated. 
+
+If you encounter an error, then drop the certificate and follow the steps in the [Get the certificate public key from SQL Managed Instance and import it to SQL Server](#get-the-certificate-public-key-from-sql-managed-instance-and-import-it-to-sql-server) section to re-import the certificate.
+
+To drop the certificate, run the following query on SQL Server:
+
+```sql
+-- Run on SQL Server 
+
+USE MASTER 
+GO 
+
+DROP CERTIFICATE [<ManagedInstanceFQDN>] 
+GO 
 ```
 
 ## Secure the database mirroring endpoint
@@ -872,6 +915,12 @@ After the connection is established, **Object Explorer** in SSMS might initially
 > [!IMPORTANT]
 > - The link won't work unless network connectivity exists between SQL Server and SQL Managed Instance. To troubleshoot network connectivity, follow the steps in [Test network connectivity](managed-instance-link-preparation.md#test-network-connectivity).
 > - Take regular backups of the log file on SQL Server. If the used log space reaches 100 percent, replication to SQL Managed Instance stops until space use is reduced. We highly recommend that you automate log backups by setting up a daily job. For details, see [Back up log files on SQL Server](managed-instance-link-best-practices.md#take-log-backups-regularly).
+
+## Take first transaction log backup
+
+If SQL Server is your initial primary, it's important to take the first [transaction log backup](/sql/relational-databases/backup-restore/back-up-a-transaction-log-sql-server) on SQL Server *after* initial seeding completes, when the database is no longer in the **Restoring...** state on Azure SQL Managed Instance. Then take [SQL Server transaction log backups regularly](managed-instance-link-best-practices.md#take-log-backups-regularly) to minimize excessive log growth while SQL Server is in the primary role.
+
+If SQL Managed Instance is your primary, you don't need to take any action as Azure SQL Managed Instance takes log backups automatically.
 
 
 ## Drop a link 

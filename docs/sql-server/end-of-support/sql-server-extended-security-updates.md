@@ -76,7 +76,7 @@ The following table shows the differences between the two options:
 
 | Option | How to purchase | Key features |
 | --- | --- | --- |
-| **ESU plan** | Volume licensing center | - Supports [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instances both connected and not connected to Azure Arc<br />- Each year of coverage must be purchased separately, must be paid in full, and is differently priced<br />- Requires registration on Azure portal<br />- Supports manual installation of patches |
+| **ESU plan** | Volume licensing center | - Supports [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instances not connected to Azure Arc<br />- Each year of coverage must be purchased separately, must be paid in full, and is differently priced<br />- Requires registration on Azure portal<br />- Supports manual installation of patches |
 | **ESU subscription** | Microsoft Azure | - The covered [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instances must be connected to Azure Arc<br />- Continuous coverage until canceled<br />- Billed by Azure on an hourly basis<br />- Can be manually canceled at any time<br />- Automatic cancellation when migrated to Azure or upgraded to a supported version<br />- Supports automatic and manual installation of patches |
 
 > [!NOTE]  

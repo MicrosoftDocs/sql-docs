@@ -4,7 +4,7 @@ description: This article describes the new serverless compute tier and compares
 author: oslake
 ms.author: moslake
 ms.reviewer: wiassaf, mathoma
-ms.date: 10/1/2024
+ms.date: 10/2/2024
 ms.service: azure-sql-database
 ms.subservice: service-overview
 ms.topic: conceptual
@@ -235,7 +235,7 @@ Creating a new database or moving an existing database into a serverless compute
    |Parameter|Value choices|Default value|
    |---|---|---|---|
    |Minimum vCores|Depends on maximum vCores configured - see [resource limits](resource-limits-vcore-single-databases.md#general-purpose---serverless-compute---gen5).|0.5 vCores|
-   |Auto-pause delay|Minimum: 60 minutes (1 hour)<br>Maximum: 10,080 minutes (7 days)<br>Increments: 10 minutes<br>Disable auto-pause: -1|60 minutes|
+   |Auto-pause delay|Minimum: 15 minutes<br>Maximum: 10,080 minutes (7 days)<br>Increments: 1 minute<br>Disable auto-pause: -1|60 minutes|
 
 The following examples create a new database in the serverless compute tier.
 

@@ -2,10 +2,10 @@
 title: Managed Instance link best practices
 titleSuffix: Azure SQL Managed Instance
 description: Learn about best practices when using the link feature for Azure SQL Managed Instance.
-author: danimir
-ms.author: danil
+author: djordje-jeremic
+ms.author: djjeremi
 ms.reviewer: mathoma, danil
-ms.date: 10/03/2024
+ms.date: 10/09/2024
 ms.service: azure-sql-managed-instance
 ms.subservice: data-movement
 ms.custom: ignite-2023
@@ -14,10 +14,7 @@ ms.topic: how-to
 # Managed Instance link best practices - Azure SQL Managed Instance
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
 
-This article outlines best practices when using the link feature for Azure SQL Managed Instance. The link feature for Azure SQL Managed Instance connects your SQL Servers hosted anywhere to SQL Managed Instance, providing near real-time data replication to the cloud. 
-
-> [!NOTE]
-> Some functionality of the link is generally available, while some is currently in preview. Review the [prerequisites](managed-instance-link-feature-overview.md#prerequisites) to learn more. 
+This article outlines best practices when using the [Managed Instance link](managed-instance-link-feature-overview.md) to replicate data between [Azure SQL Managed Instance](sql-managed-instance-paas-overview.md) and your SQL Server instances hosted anywhere, providing near real-time data replication between the linked replicas.
 
 ## Take log backups regularly
 
@@ -92,8 +89,18 @@ In SQL Server, there are two trace flags (`-T1800` and `-T9567`) that, when adde
 
 ## Related content
 
-- [Managed Instance link overview](managed-instance-link-feature-overview.md)
+To use the link: 
+- [Prepare environment for the Managed Instance link](./managed-instance-link-preparation.md)
 - [Configure link between SQL Server and SQL Managed instance with SSMS](managed-instance-link-configure-how-to-ssms.md)
 - [Configure link between SQL Server and SQL Managed instance with scripts](managed-instance-link-configure-how-to-scripts.md)
+- [Fail over the link](managed-instance-link-failover-how-to.md)
+- [Migrate with the link](managed-instance-link-migrate.md)
+
+To learn more about the link: 
+- [Managed Instance link overview](managed-instance-link-feature-overview.md)
 - [Disaster recovery with Managed Instance link](managed-instance-link-disaster-recovery.md)
-- [Best practices for maintaining the link](managed-instance-link-best-practices.md)
+
+For other replication and migration scenarios, consider:
+
+- [Transactional replication with SQL Managed Instance](replication-transactional-overview.md)
+- [Log Replay Service (LRS)](log-replay-service-overview.md)

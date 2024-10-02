@@ -5,7 +5,7 @@ description: Learn how to fail over a link between SQL Server and Azure SQL Mana
 author: djordje-jeremic
 ms.author: djjeremi
 ms.reviewer: mathoma, danil
-ms.date: 09/10/2024
+ms.date: 10/09/2024
 ms.service: azure-sql-managed-instance
 ms.subservice: data-movement
 ms.custom: ignite-2023
@@ -25,7 +25,7 @@ To fail over your databases to your secondary replica through the link, you need
 - An active Azure subscription. If you don't have one, [create a free account](https://azure.microsoft.com/free/).
 - [Supported version of SQL Server](managed-instance-link-feature-overview.md#prerequisites) with required service update installed.
 - [Link](managed-instance-link-configure-how-to-ssms.md) configured between your primary and secondary replica. 
-- You can fail over the link by using Transact-SQL (currently in preview) starting with [SQL Server 2022 CU13 (KB5036432)](/troubleshoot/sql/releases/sqlserver-2022/cumulativeupdate13).
+- You can fail over the link by using Transact-SQL starting with [SQL Server 2022 CU13 (KB5036432)](/troubleshoot/sql/releases/sqlserver-2022/cumulativeupdate13).
 
 ## Stop workload
 
@@ -37,7 +37,7 @@ You can fail over a linked database by using Transact-SQL (T-SQL),  SQL Server M
 
 ### [Transact-SQL](#tab/tsql)
 
-You can fail over the link by using Transact-SQL (currently in preview) starting with [SQL Server 2022 CU13 (KB5036432)](/troubleshoot/sql/releases/sqlserver-2022/cumulativeupdate13).
+You can fail over the link by using Transact-SQL starting with [SQL Server 2022 CU13 (KB5036432)](/troubleshoot/sql/releases/sqlserver-2022/cumulativeupdate13).
 
 To perform a planned failover for a link, use the following T-SQL command on the primary replica:
 
@@ -60,7 +60,6 @@ You can perform a planned failover from either the primary or the secondary repl
 > [!CAUTION]
 > - Before failing over, stop the workload on the source database to allow the replicated database to completely catch up and fail over without data loss. If you're performing a forced failover, you could lose data. 
 > - Failing over a database in SQL Server 2019 and earlier versions breaks and removes the link between the two replicas. You can't fail back to the initial primary.
-> - Failing over a database while maintaining the link with SQL Server 2022 is currently in preview. 
 
 To fail over your database, follow these steps: 
 
@@ -219,7 +218,6 @@ To break the link and stop replication when you fail over or migrate your databa
 > [!CAUTION]
 > - Before failing over, stop the workload on the source database to allow the replicated database to completely catch up and failover without data loss. If you perform a forced failover, or if you break the link before LSNs match, you might lose data.
 > - Failing over a database in SQL Server 2019 and earlier versions breaks and removes the link between the two replicas. You can't fail back to the initial primary.
-> - Failing over a database while maintaining the link with SQL Server 2022 is currently in preview. 
 
 The following sample script breaks the link and ends replication between your replicas, making the database read/write on both instances. Replace:
 - `<ManagedInstanceName>` with the name of your managed instance. 
@@ -348,10 +346,18 @@ GO
 
 ## Related content
 
-For more information on the link feature, review the following resources:
-
-- [Managed Instance link overview](managed-instance-link-feature-overview.md)
-- [Prepare your environment for Managed Instance link](./managed-instance-link-preparation.md)
+To use the link: 
+- [Prepare environment for the Managed Instance link](./managed-instance-link-preparation.md)
+- [Configure link between SQL Server and SQL Managed instance with SSMS](managed-instance-link-configure-how-to-ssms.md)
 - [Configure link between SQL Server and SQL Managed instance with scripts](managed-instance-link-configure-how-to-scripts.md)
-- [Disaster recovery with Managed Instance link](managed-instance-link-disaster-recovery.md)
+- [Migrate with the link](managed-instance-link-migrate.md)
 - [Best practices for maintaining the link](managed-instance-link-best-practices.md)
+
+To learn more about the link: 
+- [Managed Instance link overview](managed-instance-link-feature-overview.md)
+- [Disaster recovery with Managed Instance link](managed-instance-link-disaster-recovery.md)
+
+For other replication and migration scenarios, consider:
+
+- [Transactional replication with SQL Managed Instance](replication-transactional-overview.md)
+- [Log Replay Service (LRS)](log-replay-service-overview.md)

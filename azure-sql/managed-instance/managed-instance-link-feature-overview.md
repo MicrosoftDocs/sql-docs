@@ -144,7 +144,9 @@ With SQL Server 2022, you can establish your link from SQL Managed Instance to S
 
 ## Automated backups
 
-After your databases are replicated to your Azure SQL Managed Instance, they're automatically backed up to Azure storage. You can reduce your on-premises management and operation costs while enjoying the reliability of Azure backups for your replicated databases. You can then perform a [point-in-time restore](point-in-time-restore.md) of your replicated database to any SQL Managed Instance deployment in the same region, as with any other [automated backup](automated-backups-overview.md). 
+After you configure a link with Azure SQL Managed Instance, databases on the managed instance are automatically backed up to Azure storage whether or not SQL Managed Instance is primary. Automated backups with the link take full and transaction log backups, but not differential backups, which can lead to longer restore times. 
+
+You can reduce your on-premises management and operation costs while enjoying the reliability of Azure backups for your replicated databases. You can then perform a [point-in-time restore](point-in-time-restore.md) of your replicated database to any SQL Managed Instance deployment in the same region, as with any other [automated backup](automated-backups-overview.md). 
 
 
 ## License-free passive DR replica
@@ -177,7 +179,7 @@ Version supportability limitations include:
 - Data replication and failover *from* SQL Managed Instance to SQL Server 2022 is not supported by instances configured with the **Always-up-to-date** update policy.  Your instance must be configured with the [SQL Server 2022 update policy](update-policy.md#sql-server-2022-update-policy) to do the following: 
     - Establish a link _from_ SQL Managed Instance _to_ SQL Server. 
     - Fail over from SQL Managed Instance to SQL Server 2022. 
-- While you can establish a link from SQL Server 2022 to a SQL managed instance configured with the [Always-up-to-date update policy](update-policy.md#always-up-to-date-update-policy), after fail over to SQL Managed Instance, you will no longer be able to replicate data or fail back to SQL Server 2022. 
+- While you can establish a link from SQL Server 2022 to a SQL managed instance configured with the [Always-up-to-date update policy](update-policy.md#always-up-to-date-update-policy), after failover to SQL Managed Instance, you will no longer be able to replicate data or fail back to SQL Server 2022. 
 
 
 

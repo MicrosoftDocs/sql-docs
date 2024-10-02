@@ -5,7 +5,7 @@ author: diberry
 ms.author: diberry
 ms.reviewer: mathoma
 ms.custom: passwordless-js
-ms.date: 05/08/2023
+ms.date: 10/02/2024
 ms.service: azure-sql-database
 ms.subservice: security
 ms.topic: quickstart
@@ -631,7 +631,9 @@ The person you created locally should display in the browser. Congratulations! Y
 
 ## Sample code
 
-The sample code for this application is available on [GitHub](https://github.com/Azure-Samples/azure-typescript-e2e-apps/tree/main/api-expressjs-openapi-azuresql-js).
+The sample code for this application is available:
+* [JavaScript](https://github.com/Azure-Samples/azure-typescript-e2e-apps/tree/main/quickstarts/azure-sql/connect-and-query/js)
+* [TypeScript](https://github.com/Azure-Samples/azure-typescript-e2e-apps/tree/main/quickstarts/azure-sql/connect-and-query/ts)
 
 ## Next steps
 

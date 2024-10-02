@@ -140,13 +140,15 @@ Review [license-free standby replica](standby-replica-how-to-configure.md) to le
 
 ## Cross-subscription geo-replication
 
-- You can use the Azure portal to set up Active geo replication across subscriptions as long as both the subscriptions are in the same Microsoft Entra ID tenant.
-    - To create a geo-secondary replica in a subscription *different* from the subscription of the primary in a different Microsoft Entra ID tenant, use [the geo-secondary across subscriptions and Microsoft Entra ID tenant T-SQL tutorial](active-geo-replication-configure-portal.md#cross-subscription-geo-replication).
+- You can use the Azure portal to set up Active geo replication across subscriptions as long as both the subscriptions are in the same Microsoft Entra tenant.
+    - To create a geo-secondary replica in a subscription *different* from the subscription of the primary in a different Microsoft Entra tenant, use [SQL authentication and T-SQL](active-geo-replication-configure-portal.md#cross-subscription-geo-replication). [Microsoft Entra authentication](authentication-aad-overview.md) for cross-subscription geo-replication is not supported when a logical server is in a different Azure tenant
     - Cross-subscription geo-replication operations including setup and geo-failover are also supported using [Databases Create or Update REST API](/rest/api/sql/databases/create-or-update).
 
 - Creating a cross-subscription geo-secondary on a logical server in the same or different Microsoft Entra tenant is not supported when [Microsoft Entra-only authentication](authentication-azure-ad-only-authentication.md) is enabled on either primary or secondary logical server and the creation is attempted using an Microsoft Entra ID user.
 
 For methods and step-by-step instructions, see [Tutorial: Configure active geo-replication and failover (Azure SQL Database)](active-geo-replication-configure-portal.md).
+
+
 
 ## Private endpoints
 

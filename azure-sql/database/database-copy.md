@@ -191,8 +191,8 @@ AS COPY OF source_server_name.source_database_name;
 ```
 
 > [!TIP]  
-> Database copy using T-SQL supports copying a database from a subscription in a different Azure tenant. This is only supported when using a SQL authentication login to log in to the target server.
-> Creating a database copy on a logical server in a different Azure tenant is not supported when [Microsoft Entra](https://techcommunity.microsoft.com/t5/azure-sql-blog/support-for-azure-ad-user-creation-on-behalf-of-azure-ad/ba-p/2346849) authentication is active (enabled) on either source or target logical server.
+> Copying a database from a subscription in a different Azure tenant is only supported when using T-SQL and a SQL authentication login to log in to the target server. Creating a database copy on a logical server in a different Azure tenant is not supported with [Microsoft Entra authentication](authentication-aad-overview.md).
+
 
 ---
 

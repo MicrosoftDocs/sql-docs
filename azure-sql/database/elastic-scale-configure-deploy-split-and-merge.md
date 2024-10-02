@@ -115,6 +115,7 @@ Repeat the following steps for both `worker` and `UI` web apps.
     | MetadataExpirationPeriodInMinutes    | 20160  |
     | MaxRetryCount    | 5  |
     | WEBSITE_LOAD_CERTIFICATES    | *  |
+    | WEBSITE_PULL_IMAGE_OVER_VNET    | 0 |
 
 1. Select **Apply** and restart the application. 
 

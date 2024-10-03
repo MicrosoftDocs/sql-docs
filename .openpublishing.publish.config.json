@@ -163,7 +163,7 @@
       "url": "https://github.com/Azure-Samples/azure-typescript-e2e-apps",
       "branch": "main",
       "branch_mapping": {}
-    },
+    }
   ],
   "branch_target_mapping": {
     "live": [

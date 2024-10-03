@@ -114,48 +114,40 @@ The **mssql** package implements the connection to Azure SQL Database by providi
 
     :::code language="javascript" source="~/../azure-typescript-e2e-apps/quickstarts/azure-sql/connect-and-query/js/config.js":::
 
+## Create a local environment variable file
 
-2. Create a **.env.development** file for your local environment variables
+Create a **.env.development** file for your local environment variables
 
 ## [Passwordless (recommended)](#tab/passwordless)
 
-    Add the following text and update with your values for `<YOURSERVERNAME>` and `<YOURDATABASENAME>`.
+  Add the following text and update with your values for `<YOURSERVERNAME>` and `<YOURDATABASENAME>`.
 
-    ```text
-    AZURE_SQL_SERVER=<YOURSERVERNAME>.database.windows.net
-    AZURE_SQL_DATABASE=<YOURDATABASENAME>
-    AZURE_SQL_PORT=1433
-    AZURE_SQL_AUTHENTICATIONTYPE=azure-active-directory-default
-    ```
+  ```text
+  AZURE_SQL_SERVER=<YOURSERVERNAME>.database.windows.net
+  AZURE_SQL_DATABASE=<YOURDATABASENAME>
+  AZURE_SQL_PORT=1433
+  AZURE_SQL_AUTHENTICATIONTYPE=azure-active-directory-default
+  ```
 
 > [!NOTE]
 > Passwordless configuration objects are safe to commit to source control, since they do not contain any secrets such as usernames, passwords, or access keys.
 
 ## [SQL authentication](#tab/sql-auth)
 
-   Add the following text and update with your values for `<YOURSERVERNAME>`, `<YOURDATABASENAME>`, `<YOURUSERNAME>`, and `<YOURPASSWORD>`.
+  Add the following text and update with your values for `<YOURSERVERNAME>`, `<YOURDATABASENAME>`, `<YOURUSERNAME>`, and `<YOURPASSWORD>`.
 
-    ```text
-    AZURE_SQL_SERVER=<YOURSERVERNAME>.database.windows.net
-    AZURE_SQL_DATABASE=<YOURDATABASENAME>
-    AZURE_SQL_PORT=1433
-    AZURE_SQL_USER=<YOURUSERNAME>
-    AZURE_SQL_PASSWORD=<YOURPASSWORD>
-    ```
+  ```text
+  AZURE_SQL_SERVER=<YOURSERVERNAME>.database.windows.net
+  AZURE_SQL_DATABASE=<YOURDATABASENAME>
+  AZURE_SQL_PORT=1433
+  AZURE_SQL_USER=<YOURUSERNAME>
+  AZURE_SQL_PASSWORD=<YOURPASSWORD>
+  ```
 
-  > [!WARNING]
-  > Use caution when managing connection objects that contain secrets such as usernames, passwords, or access keys. These secrets shouldn't be committed to source control or placed in unsecure locations where they might be accessed by unintended users.
-  
+> [!WARNING]
+> Use caution when managing connection objects that contain secrets such as usernames, passwords, or access keys. These secrets shouldn't be committed to source control or placed in unsecure locations where they might be accessed by unintended users.
+
 ---
-
-3. Create a `.vscode` folder and create a **settings.json** file in the folder.
-4. Add the following to ignore environment variables and dependencies during the zip deployment.
-
-    ```json
-    {
-        "appService.zipIgnorePattern": ["./.env*","node_modules{,/**}"]
-    }
-    ```
 
 ## Add the code to connect to Azure SQL Database
 
@@ -183,6 +175,17 @@ The app is ready to be tested locally. Make sure you're signed in to the Azure C
 
 1. Select **Execute** to add a new record to the database. The API returns a successful response.
 1. Expand the **GET** method on the Swagger UI page and select **Try it**. Select **Execute**, and the person you just created is returned.
+
+## Configure project for zip deployment
+
+1. Create a `.vscode` folder and create a **settings.json** file in the folder.
+2. Add the following to ignore environment variables and dependencies during the zip deployment.
+
+    ```json
+    {
+        "appService.zipIgnorePattern": ["./.env*","node_modules{,/**}"]
+    }
+    ```
 
 ## Deploy to Azure App Service
 

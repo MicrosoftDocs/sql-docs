@@ -95,7 +95,7 @@ To create the Express.js OpenAPI application, you'll create several files:
 
     :::code language="javascript" source="~/../azure-typescript-e2e-apps/quickstarts/azure-sql/connect-and-query/js/person.js" :::
 
-    For passwordless authentication, change the param passed into `createDatabaseConnection` to `PasswordlessConfig`.
+    For passwordless authentication, change the param passed into `createDatabaseConnection`  from `SQLAuthentication` to `PasswordlessConfig`.
 
     ```javascript
     const database = await createDatabaseConnection(PasswordlessConfig);

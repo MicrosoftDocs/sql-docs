@@ -13,7 +13,7 @@ The following table identifies the features that are enabled for each license ty
 | Feature | License only <sup>1</sup> | License with Software Assurance<br />or SQL Server subscription | Pay-as-you-go |
 | --- | --- | --- | --- |
 | [Connect your SQL Server to Azure Arc](../connect.md) | Yes | Yes | Yes |
-| [SQL Server Extended Security Updates enabled by Azure Arc](../extended-security-updates.md) | Yes | Yes | Yes |
+| [ESU Subscription](../extended-security-updates.md) | No | Yes | Yes |
 | [SQL Server inventory](../overview.md#manage-your-sql-server-instances-at-scale-from-a-single-point-of-control) | Yes | Yes | Yes |
 | [Best practices assessment](../assess.md) | No | Yes | Yes |
 | [Migration readiness (preview)](../migration-assessment.md) | Yes | Yes | Yes |

@@ -110,13 +110,16 @@ To create the Express.js OpenAPI application, you'll create several files:
 
 The **mssql** package implements the connection to Azure SQL Database by providing a configuration setting for an authentication type. 
 
-## [Passwordless (recommended)](#tab/passwordless)
-
 1. In Visual Studio Code, create a **config.js** file and add the following mssql configuration code to authenticate to Azure SQL Database.
 
     :::code language="javascript" source="~/../azure-typescript-e2e-apps/quickstarts/azure-sql/connect-and-query/js/config.js":::
 
-2. Create a **.env.development** file for your local environment variables and add the following text and update with your values for `<YOURSERVERNAME>` and `<YOURDATABASENAME>`.
+
+2. Create a **.env.development** file for your local environment variables
+
+## [Passwordless (recommended)](#tab/passwordless)
+
+    Add the following text and update with your values for `<YOURSERVERNAME>` and `<YOURDATABASENAME>`.
 
     ```text
     AZURE_SQL_SERVER=<YOURSERVERNAME>.database.windows.net
@@ -130,12 +133,7 @@ The **mssql** package implements the connection to Azure SQL Database by providi
 
 ## [SQL authentication](#tab/sql-auth)
 
-
-1. In Visual Studio Code, create a **config.js** file and add the following mssql configuration code to authenticate to Azure SQL Database.
-    
-    :::code language="javascript" source="~/../azure-typescript-e2e-apps/quickstarts/azure-sql/connect-and-query/js/config.js":::
-
-2. Create a **.env.development** file for your local environment variables and add the following text and update with your values for `<YOURSERVERNAME>`, `<YOURDATABASENAME>`, `<YOURUSERNAME>`, and `<YOURPASSWORD>`.
+   Add the following text and update with your values for `<YOURSERVERNAME>`, `<YOURDATABASENAME>`, `<YOURUSERNAME>`, and `<YOURPASSWORD>`.
 
     ```text
     AZURE_SQL_SERVER=<YOURSERVERNAME>.database.windows.net
@@ -145,9 +143,9 @@ The **mssql** package implements the connection to Azure SQL Database by providi
     AZURE_SQL_PASSWORD=<YOURPASSWORD>
     ```
 
-> [!WARNING]
-> Use caution when managing connection objects that contain secrets such as usernames, passwords, or access keys. These secrets shouldn't be committed to source control or placed in unsecure locations where they might be accessed by unintended users.
-
+  > [!WARNING]
+  > Use caution when managing connection objects that contain secrets such as usernames, passwords, or access keys. These secrets shouldn't be committed to source control or placed in unsecure locations where they might be accessed by unintended users.
+  
 ---
 
 3. Create a `.vscode` folder and create a **settings.json** file in the folder.

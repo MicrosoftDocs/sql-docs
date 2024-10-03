@@ -4,7 +4,7 @@ description: "A data-tier application (DAC) is a logical database entity that de
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: dzsquared
-ms.date: 09/27/2023
+ms.date: 07/19/2024
 ms.service: sql
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,15 +16,18 @@ helpviewer_keywords:
 # Data-tier applications (DAC)
 
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
-A data-tier application (DAC) is a logical database entity that defines all of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objects - such as tables, views, and instance objects, including logins - associated with a user's database. A DAC is a self-contained unit of the entire database model and is portable in an artifact known as a DAC package, or *.dacpac*. [Tooling support](#dac-tools) for data-tier applications enables developers and database administrators to deploy dacpacs to new or existing databases. Deployments to an existing database updates the database model from the existing state to match the contents of the dacpac. Developers build DACs from SQL database projects, a declarative development concept for building SQL objects that enables source control on the database schema.
+
+A data-tier application (DAC) is a logical database entity that defines all of the [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] objects - such as tables, views, and instance objects, including logins - associated with a user's database. A DAC is a self-contained unit of the entire database model and is portable in an artifact known as a DAC package, or *.dacpac*. Data-tier applications are the build artifact from [SQL database projects](../../tools/sql-database-projects/sql-database-projects.md) and can be used as part of a comprehensive database lifecycle management and DevOps strategy.
+
+[Tooling support](#dac-tools) for data-tier applications enables developers and database administrators to deploy a *.dacpac* to new or existing databases. Deployments to an existing database updates the database model from the existing state to match the contents of the *.dacpac*. Developers build DACs from SQL database projects, a declarative development concept for building SQL objects that enables source control on the database schema.
 
 A *.bacpac* is a related artifact that by default encapsulates the database schema and the data stored in the database. The primary use case for a BACPAC is to move a database from one server to another - or to [migrate a database from a local server to the cloud](/azure/azure-sql/database/migrate-to-database-from-sql-server) - and archiving an existing database in an open format.
 
 ## Benefits of data-tier applications
 
-The lifecycle of a database application may involve developers and DBAs exchanging scripts and sharing single use integration notes for application update activities. While this process is acceptable in some circumstances, it can be difficult to integrate with DevOps pipelines and general development processes.
+The lifecycle of a database application can involve developers and DBAs exchanging scripts and sharing single use integration notes for application update activities. While this process is acceptable in some circumstances, it can be difficult to integrate with Azure Pipelines and general development processes.
 
-Data-tier applications enable declarative database development, simplifying the development process and providing a more consistent and predictable development experience. A developer can author a database with SQL database projects in their choice of integrated development environment (IDE). A SQL database project can be compiled to a DAC package locally or in a DevOps pipeline. The DAC package is in turn deployed to a test, staging, or production database through an automated process or manually with a CLI or GUI tool. The *.dacpac* can be used to update a database with new or modified objects, to revert to a previous version of the database, or to provision an entirely new database. Conversely, a *.dacpac* can be generated from an existing database and used to establish a SQL database project based on the current database schema.
+Data-tier applications enable declarative database development, simplifying the development process and providing a more consistent and predictable development experience. A developer can author a database with SQL database projects in their choice of integrated development environment (IDE). A SQL database project can be compiled to a DAC package locally or in an Azure pipeline. The DAC package is in turn deployed to a test, staging, or production database through an automated process or manually with a CLI or GUI tool. The *.dacpac* can be used to update a database with new or modified objects, to revert to a previous version of the database, or to provision an entirely new database. Conversely, a *.dacpac* can be generated from an existing database and used to establish a SQL database project based on the current database schema.
 
 The advantage of a DAC-driven deployment over a migration-driven process is that the process enables the identification and validation of behaviors from different source and target databases. Tooling used during database deployment/upgrades has options to flag risky actions such as column size changes that might cause data loss and the ability to directly script the upgrade plan. This plan can be evaluated manually before proceeding with the update.
 
@@ -74,7 +77,7 @@ The following tools support the DAC package and BAC package format:
 
 - [SqlPackage CLI](../../tools/sqlpackage/sqlpackage.md)
 - [SQL Server Management Studio](../../ssms/sql-server-management-studio-ssms.md)
-- [Azure Data Studio](../../azure-data-studio/what-is-azure-data-studio.md)
+- [Azure Data Studio](/azure-data-studio/what-is-azure-data-studio)
 
 In these tools, a database can be extracted to a *.dacpac* or exported to a *.bacpac*. Conversely, a *.bacpac* can be imported into a new database or a *.dacpac* can be published to a new or existing database.
 
@@ -83,8 +86,8 @@ In these tools, a database can be extracted to a *.dacpac* or exported to a *.ba
 The following tools support the DAC package format in addition to providing editing of SQL database projects:
 
 - [SQL Server Data Tools in Visual Studio](../../ssdt/sql-server-data-tools.md)
-- [Azure Data Studio](../../azure-data-studio/extensions/sql-database-project-extension.md)
-- [Visual Studio Code (VS Code)](../../azure-data-studio/extensions/sql-database-project-extension.md)
+- [Azure Data Studio](/azure-data-studio/extensions/sql-database-project-extension)
+- [Visual Studio Code (VS Code)](/azure-data-studio/extensions/sql-database-project-extension)
 
 In these tools, developers can design a database in an unconnected, client-side development environment. The tools can be used to create a DAC package, deploy a DAC package to a database, and import a database package into a SQL project.
 
@@ -92,7 +95,7 @@ In these tools, developers can design a database in an unconnected, client-side 
 
 ### Version support
 
-In general, DAC tools are capable of reading *.dacpac* files generated by DAC tools from previous [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] versions, and can also deploy DAC packages to previous versions of [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. However, DAC tools from earlier versions can't read *.dacpac* files generated by DAC tools from later versions. At a minimum, DAC tools support the in-support versions of [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] at the time of their release.
+In general, DAC tools are capable of reading *.dacpac* files generated by DAC tools from previous [!INCLUDE [ssnoversion](../../includes/ssnoversion-md.md)] versions, and can also deploy DAC packages to previous versions of [!INCLUDE [ssnoversion](../../includes/ssnoversion-md.md)]. However, DAC tools from earlier versions can't read *.dacpac* files generated by DAC tools from later versions. At a minimum, DAC tools support the in-support versions of [!INCLUDE [ssnoversion](../../includes/ssnoversion-md.md)] at the time of their release.
 
 ### File format
 
@@ -117,7 +120,7 @@ For more information about these actions, see the below tasks.
 |Describes how to promote an existing database to be a DAC instance. A DAC definition is built and stored in the system databases.|[Register a Database As a DAC](../../relational-databases/data-tier-applications/register-a-database-as-a-dac.md)|
 |Describes how to review the contents of a DAC package and the actions a DAC upgrade will perform before using the package in a production system.|[Validate a DAC Package](../../relational-databases/data-tier-applications/validate-a-dac-package.md)|
 
-## Next steps
+## Related content
 
 - [SqlPackage CLI](../../tools/sqlpackage/sqlpackage.md)
 - [DAC Support For SQL Server Objects and Versions](/previous-versions/sql/sql-server-2012/ee210549(v=sql.110))

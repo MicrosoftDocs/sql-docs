@@ -4,8 +4,8 @@ description: This page describes common vCore resource limits for a single datab
 author: dimitri-furman
 ms.author: dfurman
 ms.reviewer: wiassaf, mathoma
-ms.date: 08/11/2023
-ms.service: sql-database
+ms.date: 07/02/2024
+ms.service: azure-sql-database
 ms.subservice: service-overview
 ms.topic: reference
 ms.custom:
@@ -29,7 +29,8 @@ This article provides the detailed resource limits for single databases in Azure
 * For more information regarding the different purchasing models, see [Purchasing models and service tiers](purchasing-models.md).
 
 > [!IMPORTANT]
-> - Under some circumstances, you may need to shrink a database to reclaim unused space. For more information, see [Manage file space in Azure SQL Database](file-space-manage.md).
+> Shrink operations should not be considered a regular maintenance operation. Data and log files that grow due to regular, recurring business operations do not require shrink operations.
+> - Under some circumstances, you might need to shrink a database to reclaim unused space. For more information, see [Manage file space in Azure SQL Database](file-space-manage.md).
 > - For scaling guidance and considerations, see [Scale a single database](single-database-scale.md).
 
 Each read-only replica of a database has its own resources, such as vCores, memory, data IOPS, `tempdb`, workers, and sessions. Each read-only replica is subject to the resource limits detailed later in this article.
@@ -90,7 +91,7 @@ The following table covers these SLOs: `GP_S_Gen5_1`, `GP_S_Gen5_2`, `GP_S_Gen5_
 | Read Scale-out | N/A | N/A | N/A | N/A | N/A |
 | Included backup storage | 1X DB size | 1X DB size | 1X DB size | 1X DB size | 1X DB size |
 
-<sup>1</sup> Service objectives with smaller max vCore configurations may have insufficient memory for creating and using columnstore indexes.  If encountering performance problems with columnstore, increase the max vCore configuration to increase the max memory available.  
+<sup>1</sup> Service objectives with smaller max vCore configurations can have insufficient memory for creating and using columnstore indexes.  If encountering performance problems with columnstore, increase the max vCore configuration to increase the max memory available.  
 
 <sup>2</sup> For documented max data size values. Reducing max data size reduces max log size proportionally.
 
@@ -192,7 +193,7 @@ The following table covers these SLOs: `HS_S_Gen5_2`, `HS_S_Gen5_4`, `HS_S_Gen5_
 | Max log size (TB) | Unlimited | Unlimited | Unlimited | Unlimited | Unlimited | Unlimited | Unlimited |
 | Tempdb max data size (GB) | 64 | 128 | 192 | 256 | 320 | 384 | 448 |
 | Storage type | Multi-tiered <sup>1</sup>| Multi-tiered <sup>1</sup>| Multi-tiered <sup>1</sup>| Multi-tiered <sup>1</sup>| Multi-tiered <sup>1</sup>| Multi-tiered <sup>1</sup>| Multi-tiered <sup>1</sup>|
-| Max local SSD IOPS <sup>2</sup> | 8000 | 16000 | 24000 | 32000 | 40000 | 48000 | 56000 |
+| Max local SSD IOPS <sup>2</sup> | 8000 | 16000 | 24000 | 32000 | 40000 | 48000 | 56000 |
 | Max log rate (MBps) | 100 | 100 | 100 | 100 | 100 | 100 | 100 |
 | IO latency (approximate) | Variable <sup>3</sup> | Variable <sup>3</sup> | Variable <sup>3</sup> | Variable <sup>3</sup>| Variable <sup>3</sup> | Variable <sup>3</sup> | Variable <sup>3</sup> |
 | Max concurrent workers | 150 | 300 | 450 | 600 | 750 | 900 | 1050 |
@@ -225,7 +226,7 @@ The following table covers these SLOs: `HS_S_Gen5_16`, `HS_S_Gen5_18`, `HS_S_Gen
 | Max log size (TB) | Unlimited | Unlimited | Unlimited | Unlimited | Unlimited | Unlimited | Unlimited |
 | Tempdb max data size (GB) | 512 | 576 | 640 | 768 | 1024 | 1280 | 2560 |
 | Storage type | Multi-tiered <sup>1</sup> | Multi-tiered <sup>1</sup> | Multi-tiered <sup>1</sup> | Multi-tiered <sup>1</sup> | Multi-tiered <sup>1</sup> | Multi-tiered <sup>1</sup> | Multi-tiered <sup>1</sup> |
-| Max local SSD IOPS <sup>2</sup> | 64000 | 72000 | 80000 | 96000 | 128000 | 160000 | 204800 |
+| Max local SSD IOPS <sup>2</sup> | 64000 | 72000 | 80000 | 96000 | 128000 | 160000 | 204800 |
 | Max log rate (MBps) | 100 | 100 | 100 | 100 | 100 | 100 | 100 |
 | IO latency (approximate) | Variable <sup>3</sup> | Variable <sup>3</sup> | Variable <sup>3</sup> | Variable <sup>3</sup> | Variable <sup>3</sup> | Variable <sup>3</sup> | Variable <sup>3</sup> |
 | Max concurrent workers | 1200 | 1350 | 1500 | 1800 | 2400 | 3000 | 6000 |
@@ -401,7 +402,7 @@ The following table covers these SLOs: `HS_DC_14`, `HS_DC_16`, `HS_DC_18`, `HS_D
 
 ## Hyperscale - provisioned compute - premium-series
 
-Although the published Hyperscale resource limits for standard-series and premium-series are the same, premium-series offers faster CPU performance compared to standard-series, and scales up to 128 vCores, compared to 80 vCores for standard-series. Resources using premium-series are guaranteed to run on hardware with newer CPUs. Standard-series does not provide this guarantee and, depending on availability, resources may be placed on older hardware. There is no price difference between the two, but premium-series may not be available in all regions.
+Although the published Hyperscale resource limits for standard-series and premium-series are the same, premium-series offers faster CPU performance compared to standard-series, and scales up to 128 vCores, compared to 80 vCores for standard-series. Resources using premium-series are guaranteed to run on hardware with newer CPUs. Standard-series does not provide this guarantee and, depending on availability, resources can be placed on older hardware. There is no price difference between the two, but premium-series might not be available in all regions.
 
 ### Hyperscale premium-series (part 1 of 3)
 

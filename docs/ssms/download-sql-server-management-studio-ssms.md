@@ -4,10 +4,10 @@ description: Download the latest version of SQL Server Management Studio (SSMS) 
 author: erinstellato-ms
 ms.author: erinstellato
 ms.reviewer: maghan, randolphwest
-ms.date: 04/09/2024
+ms.date: 09/26/2024
 ms.service: sql
 ms.subservice: ssms
-ms.topic: conceptual
+ms.topic: overview
 keywords:
   - "install ssms, download ssms, latest ssms"
   - "SQL Server Management Studio"
@@ -33,23 +33,23 @@ Use SSMS to query, design, and manage your databases and data warehouses, wherev
 
 For customers needing a cross-platform companion to SSMS for managing SQL and other Azure databases, use [Azure Data Studio](/azure-data-studio/download-azure-data-studio).
 
-For details and more information about what's new in this release, *including important security changes*, see [Release notes for SQL Server Management Studio (SSMS) 20.1](release-notes-ssms.md).
+For details and more information about what's new in this release, see [Release notes for SQL Server Management Studio (SSMS) 20.2](release-notes-ssms.md).
 
 ## Download SSMS
 
-:::image type="icon" source="../includes/media/download.svg" border="false"::: **[Download SQL Server Management Studio (SSMS) 20.1](https://aka.ms/ssmsfullsetup)**
+:::image type="icon" source="../includes/media/download.svg" border="false"::: **[Download SQL Server Management Studio (SSMS) 20.2](https://aka.ms/ssmsfullsetup)**
 
-SSMS 20.1 is the latest generally available (GA) version. If you have a *preview* version of SSMS 20 installed, uninstall it before installing SSMS 20.1. Installing SSMS 20.1 doesn't upgrade or replace SSMS 19.x and earlier versions.
+SSMS 20.2 is the latest generally available (GA) version. If you have a *preview* version of SSMS 20 installed, uninstall it before installing SSMS 20.2. Installing SSMS 20.2 doesn't upgrade or replace SSMS 19.x and earlier versions.
 
-- Release number: 20.1
-- Build number: 20.1.10.0
-- Release date: April 9, 2024
+- Release number: 20.2
+- Build number: 20.2.30.0
+- Release date: July 9, 2024
 
 By using SQL Server Management Studio, you agree to its [license terms](/Legal/sql/sql-server-management-studio-license-terms) and [privacy statement](https://privacy.microsoft.com/privacystatement). If you have comments or suggestions or want to report issues, the best way to contact the SSMS team is at [SQL user feedback](https://aka.ms/ssms-feedback).
 
 The SSMS 20.x installation doesn't upgrade or replace SSMS 19.x and earlier versions. SSMS 20.x installs alongside previous versions, so both versions are available. However, if you have an earlier *preview* version of SSMS 20 installed, you must uninstall it before installing the latest release of SSMS 20. You can see if you have a preview version by going to the **Help > About** window.
 
-If a computer contains side-by-side installations of SSMS, verify you start the correct version for your specific needs. The latest version is labeled **Microsoft SQL Server Management Studio v20.1**.
+If a computer contains side-by-side installations of SSMS, verify you start the correct version for your specific needs. The latest version is labeled **Microsoft SQL Server Management Studio v20.2**.
 
 [!INCLUDE [ssms-ads-install](../includes/ssms-azure-data-studio-install.md)]
 
@@ -57,7 +57,7 @@ If a computer contains side-by-side installations of SSMS, verify you start the 
 
 This release of SSMS can be installed in the following languages:
 
-SQL Server Management Studio 20.1:
+SQL Server Management Studio 20.2:
 
 - [Chinese (Simplified)](https://aka.ms/ssmsfullsetup?clcid=0x804)
 - [Chinese (Traditional)](https://aka.ms/ssmsfullsetup?clcid=0x404)
@@ -74,7 +74,7 @@ SQL Server Management Studio 20.1:
 If you access this page from a non-English language version and want to see the most up-to-date content, select **Read in English** at the top of this page. To download different languages, select [available languages](#available-languages).
 
 > [!NOTE]  
-> The SQL Server PowerShell module is a separate install through the PowerShell Gallery. For more information, see [Install the SQL Server PowerShell module](../powershell/download-sql-server-ps-module.md).
+> The SQL Server PowerShell module is a separate install through the PowerShell Gallery. For more information, see [Install the SQL Server PowerShell module](/powershell/sql-server/download-sql-server-ps-module).
 
 ## What's new
 
@@ -126,7 +126,6 @@ The shared components are:
 
 - Microsoft OLE DB Driver 18 for SQL Server
 - Microsoft ODBC Driver 17 for SQL Server
-- Microsoft Visual C++ 2013 Redistributable (x86)
 - Microsoft Visual C++ 2017 Redistributable (x86)
 - Microsoft Visual C++ 2017 Redistributable (x64)
 - Microsoft Visual Studio Tools for Applications 2019
@@ -135,7 +134,7 @@ These components aren't uninstalled because they can be shared with other produc
 
 ## Installation with Azure Data Studio
 
-- SSMS installs Azure Data Studio by default for versions 18.7 through 19.3.
+- SSMS installs Azure Data Studio by default for versions 18.7 through 19.3.  SSMS does not install Azure Data Studio with SSMS 20.0 and higher.
   - The installation of Azure Data Studio by SSMS is skipped if an equal or higher version of Azure Data Studio is already installed.
   - The Azure Data Studio version can be found in the [release notes](release-notes-ssms.md).
 - The Azure Data Studio system installer requires the same security rights as the SSMS installer.
@@ -166,6 +165,13 @@ Supported operating systems:
 - Windows Server 2016 (x64) <sup>1</sup>
 
 <sup>1</sup> SSMS requires .NET Framework 4.7.2.
+
+Additional requirements:
+
+- Administrator rights are required to install or update SSMS.
+- Running in a virtual machine environment requires a full Windows operating system.
+- Windows containers are not supported.
+- SSMS is not supported in application virtualization solutions such as Microsoft App-V or MSIX for Windows, or third-party app virtualization technologies.
 
 > [!NOTE]  
 > To install SSMS on Windows Server Core, you must install the [Server Core App Compatibility Feature on Demand](/windows-server/get-started/server-core-app-compatibility-feature-on-demand).

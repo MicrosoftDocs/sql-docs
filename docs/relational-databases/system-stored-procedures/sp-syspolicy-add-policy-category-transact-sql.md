@@ -4,7 +4,7 @@ description: "Adds a policy category that can be used with Policy-Based Manageme
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: randolphwest
-ms.date: 06/26/2023
+ms.date: 08/21/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -38,7 +38,7 @@ sp_syspolicy_add_policy_category
 
 #### [ @name = ] N'*name*'
 
-The name of the policy category. *@name* is **sysname**, and is required. *@name* can't be NULL or an empty string.
+The name of the policy category. *@name* is **sysname**, and is required. *@name* can't be `NULL` or an empty string.
 
 #### [ @mandate_database_subscriptions = ] *mandate_database_subscriptions*
 

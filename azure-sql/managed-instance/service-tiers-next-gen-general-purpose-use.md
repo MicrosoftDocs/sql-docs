@@ -1,15 +1,15 @@
 ---
-title: Use Next-gen General Purpose service tier
-description: Learn about the differences between the service tiers available to Azure SQL Managed Instance. 
+title: Use Next-gen General Purpose service tier (preview)
+description: Learn how to use the Next-gen General Purpose service tier (preview) in Azure SQL Managed Instance, which is an architectural upgrade to the existing General Purpose service tier that can be used for new and existing instances. 
 author: urosmil
 ms.author: urmilano
 ms.reviewer: wiassaf, mathoma
 ms.date: 05/27/2024
-ms.service: sql-managed-instance
+ms.service: azure-sql-managed-instance
 ms.subservice: service-overview
 ms.topic: conceptual
 ---
-# Use Next-gen General Purpose service tier - Azure SQL Managed Instance
+# Use Next-gen General Purpose service tier (preview) - Azure SQL Managed Instance
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
 
 This article teaches you how to use the Next-gen General Purpose service tier upgrade for [Azure SQL Managed Instance](sql-managed-instance-paas-overview.md). The Next-gen General Purpose service tier is an architectural upgrade to the existing General Purpose service tier that can be used for new and existing instances. 
@@ -20,12 +20,6 @@ This article teaches you how to use the Next-gen General Purpose service tier up
 ## Overview
 
 [!INCLUDE [azure-sql-managed-instance-compare-service-tiers](../includes/sql-managed-instance/azure-sql-managed-instance-next-gen-general-purpose-upgrade.md)]
-
-## Prerequisites 
-
-To use the Next-gen General Purpose service tier for your instance: 
-- Your subscription has to be enrolled in the [November 2022 feature wave](november-2022-feature-wave-enroll.md). 
-- Your new or existing instance has to qualify for the November 2022 feature way by using a supported subnet in a supported region.  
 
 ## Upgrade existing instances 
 

@@ -5,7 +5,7 @@ author: zoran-rilak-msft
 ms.author: zoranrilak
 ms.reviewer: vanto, mathoma
 ms.date: 07/14/2023
-ms.service: sql-managed-instance
+ms.service: azure-sql-managed-instance
 ms.subservice: security
 ms.topic: how-to
 ms.custom: sqldbrb=1, devx-track-azurepowershell, devx-track-azurecli

@@ -3,11 +3,12 @@ title: "Plan for Reporting Services"
 description: Learn how to install and configure the SQL Server Reporting Services (SSRS) environment to best fit your needs.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 09/12/2016
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: reporting-services
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 # Plan for Reporting Services
   Use these articles to better understand [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Learn how to install and configure the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] environment to best fit your needs.  

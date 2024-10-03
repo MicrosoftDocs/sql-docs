@@ -32,8 +32,6 @@ This function returns the rank of each row within a result set partition, with n
 DENSE_RANK ( ) OVER ( [ <partition_by_clause> ] < order_by_clause > )  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
  \<partition_by_clause>  
 First divides the result set produced by the [FROM](../../t-sql/queries/from-transact-sql.md) clause into partitions, and then the `DENSE_RANK` function is applied to each partition. See [OVER Clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md) for the `PARTITION BY` syntax.  

@@ -3,11 +3,12 @@ title: "Create subscription for non-SQL Subscriber"
 description: Describes how to create a subscription for a non-SQL Server Subscriber in SQL Server using SQL Server Management Studio (SSMS) or Transact-SQL (T-SQL).
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/17/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: how-to
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "subscriptions [SQL Server replication], non-SQL Server Subscribers"
   - "Subscribers [SQL Server replication], non-SQL Server Subscribers"
@@ -28,7 +29,7 @@ helpviewer_keywords:
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
  To create a subscription for a non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Subscriber:  
   
-1.  Install and configure the appropriate client software and OLE DB provider(s) on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributor. For more information, see [Oracle Subscribers](../../relational-databases/replication/non-sql/oracle-subscribers.md) and [IBM DB2 Subscribers](../../relational-databases/replication/non-sql/ibm-db2-subscribers.md).  
+1.  Install and configure the appropriate client software and OLE DB provider(s) on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributor. For more information, see [Oracle Subscribers](../../relational-databases/replication/non-sql/oracle-subscribers.md) and [IBM Db2 Subscribers](../../relational-databases/replication/non-sql/ibm-db2-subscribers.md).  
   
 2.  Create a publication using the New Publication Wizard. For more information about creating publications, see [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md) and [Create a Publication from an Oracle Database](../../relational-databases/replication/publish/create-a-publication-from-an-oracle-database.md). Specify the following options in the New Publication Wizard:  
   
@@ -81,13 +82,13 @@ helpviewer_keywords:
   
     -   For IBM, this can be any name. It is typical to specify the network address of the Subscriber.  
   
-     The data source name entered in this step and the credentials specified in step 9 are not validated by this wizard. They are not used by replication until the Distribution Agent runs for the subscription. Ensure that all values have been tested by connecting to the Subscriber using a client tool (such as **sqlplus** for Oracle). For more information, see [Oracle Subscribers](../../relational-databases/replication/non-sql/oracle-subscribers.md) and [IBM DB2 Subscribers](../../relational-databases/replication/non-sql/ibm-db2-subscribers.md).  
+     The data source name entered in this step and the credentials specified in step 9 are not validated by this wizard. They are not used by replication until the Distribution Agent runs for the subscription. Ensure that all values have been tested by connecting to the Subscriber using a client tool (such as **sqlplus** for Oracle). For more information, see [Oracle Subscribers](../../relational-databases/replication/non-sql/oracle-subscribers.md) and [IBM Db2 Subscribers](../../relational-databases/replication/non-sql/ibm-db2-subscribers.md).  
   
 7.  Select **OK**. On the **Subscribers** page of the wizard, the Subscriber is now displayed in the **Subscriber** column with a read-only **(default destination)** in the **Subscription Database** column:  
   
     -   For Oracle, a server has at most one database, so it is not necessary to specify the database.  
   
-    -   For IBM DB2, the database is specified in the **Initial Catalog** property of the DB2 connection string, which can be entered in the **Additional connection options** field described later in this process.  
+    -   For IBM Db2, the database is specified in the **Initial Catalog** property of the DB2 connection string, which can be entered in the **Additional connection options** field described later in this process.  
   
 8.  On the **Distribution Agent Security** page, click the properties button (**…**) next to the Subscriber to access the **Distribution Agent Security** dialog box.  
   
@@ -142,7 +143,7 @@ helpviewer_keywords:
   
 #### To create a push subscription for a transactional or snapshot publication to a non-SQL Server Subscriber  
   
-1.  Install the most recent OLE DB provider for the non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Subscriber at both the Publisher and Distributor. For the replication requirements for an OLE DB provider, see [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md), [Oracle Subscribers](../../relational-databases/replication/non-sql/oracle-subscribers.md), [IBM DB2 Subscribers](../../relational-databases/replication/non-sql/ibm-db2-subscribers.md).  
+1.  Install the most recent OLE DB provider for the non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Subscriber at both the Publisher and Distributor. For the replication requirements for an OLE DB provider, see [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md), [Oracle Subscribers](../../relational-databases/replication/non-sql/oracle-subscribers.md), [IBM Db2 Subscribers](../../relational-databases/replication/non-sql/ibm-db2-subscribers.md).  
   
 2.  At the Publisher on the publication database, verify that the publication supports non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Subscribers by executing [sp_helppublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md).  
   
@@ -175,9 +176,10 @@ helpviewer_keywords:
     > [!IMPORTANT]  
     >  When creating a push subscription at a Publisher with a remote Distributor, the values supplied for all parameters, including *job_login* and *job_password*, are sent to the Distributor as plain text. You should encrypt the connection between the Publisher and its remote Distributor before executing this stored procedure. For more information, see [Enable Encrypted Connections to the Database Engine &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure-windows/configure-sql-server-encryption.md).  
   
-## See Also  
- [IBM DB2 Subscribers](../../relational-databases/replication/non-sql/ibm-db2-subscribers.md)   
- [Oracle Subscribers](../../relational-databases/replication/non-sql/oracle-subscribers.md)   
- [Other Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/other-non-sql-server-subscribers.md)   
- [Replication System Stored Procedures Concepts](../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
- [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md)  
+## Related content
+
+- [IBM Db2 Subscribers](../../relational-databases/replication/non-sql/ibm-db2-subscribers.md)
+- [Oracle Subscribers](../../relational-databases/replication/non-sql/oracle-subscribers.md)
+- [Other Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/other-non-sql-server-subscribers.md)
+- [Replication System Stored Procedures Concepts](../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)
+- [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md)

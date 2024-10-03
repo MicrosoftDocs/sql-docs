@@ -40,7 +40,7 @@ This article provides a brief explanation of the various downloads and stand-alo
 | [SQL Server Semantic Language Statistics](../relational-databases/search/install-and-configure-semantic-search.md) | The Semantic Language Statistics Database is a required component for the Statistical Semantic Search feature in Microsoft SQL Server. |
 | [SQL Server Management Objects](../relational-databases/server-management-objects-smo/installing-smo.md) | SQL Server Management Objects (SMO) is a .NET Framework object model that enables software developers to create client-side applications to manage and administer SQL Server objects and services. |
 | [System CLR Types](https://go.microsoft.com/fwlink/?linkid=2108808) | The SQL Server System CLR Types package contains the components implementing the geometry, geography, and hierarchy ID types in SQL Server. **Note: This component also requires [Windows Installer 4.5](https://go.microsoft.com/fwlink/?LinkId=123373)**. |
-| [Windows PowerShell Extensions for Microsoft SQL Server](../database-engine/install-windows/install-sql-server-powershell.md) | The Microsoft Windows PowerShell Extensions for SQL Server include a provider and a set of cmdlets that enable administrators and developers to build PowerShell scripts for managing instances of SQL Server. |
+| [Windows PowerShell Extensions for Microsoft SQL Server](/powershell/sql-server/download-sql-server-ps-module) | The Microsoft Windows PowerShell Extensions for SQL Server include a provider and a set of cmdlets that enable administrators and developers to build PowerShell scripts for managing instances of SQL Server. |
 
 ## Database engine
 
@@ -73,7 +73,7 @@ This article provides a brief explanation of the various downloads and stand-alo
 | Feature | Description |
 |----|-----|
 | [ODBC Drivers for Microsoft SQL Server](../connect/odbc/download-odbc-driver-for-sql-server.md) | The Microsoft ODBC Drivers for SQL Server provide native connectivity from Windows and Unix to Microsoft SQL Server and Microsoft Azure SQL Database. |
-| [OLEDB Provider for DB2 for Microsoft SQL Server](/host-integration-server/db2oledbv/installing-data-provider-version-6-0) | The Microsoft OLE DB Provider for DB2 v5.0 offers a set of technologies and tools for integrating vital data stored in IBM DB2 databases with new solutions. SQL Server developers and administrators can use the data provider with integration Services, Analysis Services, Replication, Reporting Services, and Distributed Query Processor. Read the Installing Data Provider section of the product documentation, which is available on-line or as a download. |
+| [OLEDB Provider for DB2 for Microsoft SQL Server](/host-integration-server/db2oledbv/installing-data-provider-version-6-0) | The Microsoft OLE DB Provider for DB2 v5.0 offers a set of technologies and tools for integrating vital data stored in IBM Db2 databases with new solutions. SQL Server developers and administrators can use the data provider with integration Services, Analysis Services, Replication, Reporting Services, and Distributed Query Processor. Read the Installing Data Provider section of the product documentation, which is available on-line or as a download. |
 
 ## Reporting Services
 
@@ -93,7 +93,7 @@ This article provides a brief explanation of the various downloads and stand-alo
 ## See also
 
 - [SQL Server Management Studio documentation](../ssms/download-sql-server-management-studio-ssms.md)
-- [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md)
+- [Azure Data Studio](/azure-data-studio/download-azure-data-studio)
 - [Additional updates and service packs](/troubleshoot/sql/releases/download-and-install-latest-updates?bc=%2fsql%2fbreadcrumb%2ftoc.json&toc=%2fsql%2ftoc.json)
 - [Download SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)
 

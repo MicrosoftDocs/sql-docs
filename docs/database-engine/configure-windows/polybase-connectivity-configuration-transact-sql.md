@@ -1,8 +1,9 @@
 ---
 title: "PolyBase Connectivity Configuration (Transact-SQL)"
 description: Find out how to use sp_configure to display or change global configuration settings for PolyBase Hadoop and Azure Blob Storage connectivity.
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: hudequei
 ms.date: "09/18/2022"
 ms.service: sql
 ms.subservice: polybase
@@ -77,7 +78,7 @@ RECONFIGURE
 
    \* Option 8 introduced with SQL Server 2019 CU11.
 
- ​By default, the Hadoop connectivity is set to 0 (disabled). You should configure the PolyBase hadoop connectivity value after installing then enabling PolyBase. For more information, see [Install PolyBase on Windows](../../relational-databases/polybase/polybase-installation.md) and [Configure PolyBase to access external data in Hadoop](../../relational-databases/polybase/polybase-configure-hadoop.md).
+ ​By default, the Hadoop connectivity is set to 0 (disabled). You should configure the PolyBase hadoop connectivity value after installing then enabling PolyBase. For more information, see [Install PolyBase on Windows](../../relational-databases/polybase/polybase-installation.md) and [Configure PolyBase to access external data in Hadoop](../../relational-databases/polybase/polybase-configure-hadoop.md).
 
  **RECONFIGURE**  
  Updates the run value (`run_value`) to match the configuration value (`config_value`). See [Result Sets](#ResultSets) for definitions of `run_value` and `config_value`. The new configuration value that is set by `sp_configure` does not become effective until the run value is set by the `RECONFIGURE` statement. Then, after running `RECONFIGURE`, you must stop and restart the SQL Server service. 

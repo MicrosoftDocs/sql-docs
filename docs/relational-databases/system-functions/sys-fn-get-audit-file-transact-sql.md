@@ -27,7 +27,7 @@ monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-20
 Returns information from an audit file created by a server audit in [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see [SQL Server Audit (Database Engine)](../security/auditing/sql-server-audit-database-engine.md).
 
 > [!NOTE]  
-> For [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], consider using [sys.fn_get_audit_file_v2](sys-fn-get-audit-file-transact-sql.md) instead. `sys.fn_get_audit_file_v2` introduces time-based filtering at both the file and record levels, providing significant performance improvements, particularly for queries targeting specific time ranges.
+> For [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], consider using [sys.fn_get_audit_file_v2](sys-fn-get-audit-file-v2-transact-sql.md) instead. `sys.fn_get_audit_file_v2` introduces time-based filtering at both the file and record levels, providing significant performance improvements, particularly for queries targeting specific time ranges.
 
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 

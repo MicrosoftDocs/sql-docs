@@ -87,13 +87,13 @@ helpviewer_keywords:
     ```  
   
     > [!NOTE]  
-    >  To view the syntax of a cmdlet, use the **Get-Help** cmdlet in the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell environment. For more information, see [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
+    >  To view the syntax of a cmdlet, use the **Get-Help** cmdlet in the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell environment. For more information, see [Get Help SQL Server PowerShell](/powershell/sql-server/sql-server-powershell).  
   
 3.  After you add a database to an availability group, you need to configure the corresponding secondary database on each server instance that hosts a secondary replica. For more information, see [Start Data Movement on an Always On Secondary Database &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md).  
   
  **To set up and use the SQL Server PowerShell provider**  
   
--   [SQL Server PowerShell Provider](../../../powershell/sql-server-powershell-provider.md)  
+-   [SQL Server PowerShell Provider](/powershell/sql-server/sql-server-powershell-provider)  
   
  For a complete example, see [Example (PowerShell)](#PSExample), below.  
   

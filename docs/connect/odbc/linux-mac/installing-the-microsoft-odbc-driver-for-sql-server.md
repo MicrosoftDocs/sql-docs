@@ -3,8 +3,8 @@ title: Install the Microsoft ODBC driver for SQL Server (Linux)
 description: Learn how to install the Microsoft ODBC Driver for SQL Server on Linux clients to enable database connectivity.
 author: David-Engel
 ms.author: davidengel
-ms.reviewer: randolphwest
-ms.date: 06/28/2024
+ms.reviewer: v-chojas
+ms.date: 07/31/2024
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: conceptual
@@ -23,7 +23,7 @@ This article provides commands for installing the ODBC driver from the bash shel
 
 ## <a id="18"></a> Microsoft ODBC 18
 
-The following sections explain how to install the Microsoft ODBC driver 18 from the bash shell for different Linux distributions. Supported distributions are Alpine Linux, Debian, Red Hat Enterprise Linux (RHEL), Oracle Linux, SUSE Linux Enterprise Server (SLES), and Ubuntu.
+The following sections explain how to install the Microsoft ODBC driver 18 from the bash shell for different Linux distributions. Supported distributions are Alpine Linux, Debian, Red Hat Enterprise Linux (RHEL), Oracle Linux, SUSE Linux Enterprise Server (SLES), and Ubuntu. Starting with version 18.4, to accept the EULA automatically when installing the non-Alpine Linux (.deb or .rpm) driver, you can create the file '/opt/microsoft/msodbcsql18/ACCEPT_EULA'.
 
 ### [Alpine](#tab/alpine18-install)
 
@@ -40,20 +40,20 @@ then
 fi
 
 #Download the desired package(s)
-curl -O https://download.microsoft.com/download/3/5/5/355d7943-a338-41a7-858d-53b259ea33f5/msodbcsql18_18.3.3.1-1_$architecture.apk
-curl -O https://download.microsoft.com/download/3/5/5/355d7943-a338-41a7-858d-53b259ea33f5/mssql-tools18_18.3.1.1-1_$architecture.apk
+curl -O https://download.microsoft.com/download/7/6/d/76de322a-d860-4894-9945-f0cc5d6a45f8/msodbcsql18_18.4.1.1-1_$architecture.apk
+curl -O https://download.microsoft.com/download/7/6/d/76de322a-d860-4894-9945-f0cc5d6a45f8/mssql-tools18_18.4.1.1-1_$architecture.apk
 
 #(Optional) Verify signature, if 'gpg' is missing install it using 'apk add gnupg':
-curl -O https://download.microsoft.com/download/3/5/5/355d7943-a338-41a7-858d-53b259ea33f5/msodbcsql18_18.3.3.1-1_$architecture.sig
-curl -O https://download.microsoft.com/download/3/5/5/355d7943-a338-41a7-858d-53b259ea33f5/mssql-tools18_18.3.1.1-1_$architecture.sig
+curl -O https://download.microsoft.com/download/7/6/d/76de322a-d860-4894-9945-f0cc5d6a45f8/msodbcsql18_18.4.1.1-1_$architecture.sig
+curl -O https://download.microsoft.com/download/7/6/d/76de322a-d860-4894-9945-f0cc5d6a45f8/mssql-tools18_18.4.1.1-1_$architecture.sig
 
 curl https://packages.microsoft.com/keys/microsoft.asc  | gpg --import -
-gpg --verify msodbcsql18_18.3.3.1-1_$architecture.sig msodbcsql18_18.3.3.1-1_$architecture.apk
-gpg --verify mssql-tools18_18.3.1.1-1_$architecture.sig mssql-tools18_18.3.1.1-1_$architecture.apk
+gpg --verify msodbcsql18_18.4.1.1-1_$architecture.sig msodbcsql18_18.4.1.1-1_$architecture.apk
+gpg --verify mssql-tools18_18.4.1.1-1_$architecture.sig mssql-tools18_18.4.1.1-1_$architecture.apk
 
 #Install the package(s)
-sudo apk add --allow-untrusted msodbcsql18_18.3.3.1-1_$architecture.apk
-sudo apk add --allow-untrusted mssql-tools18_18.3.1.1-1_$architecture.apk
+sudo apk add --allow-untrusted msodbcsql18_18.4.1.1-1_$architecture.apk
+sudo apk add --allow-untrusted mssql-tools18_18.4.1.1-1_$architecture.apk
 ```
 
 > [!NOTE]  
@@ -175,16 +175,22 @@ sudo zypper install -y unixODBC-devel
 ### [Ubuntu](#tab/ubuntu18-install)
 
 ```bash
-if ! [[ "18.04 20.04 22.04 23.04" == *"$(lsb_release -rs)"* ]];
+if ! [[ "18.04 20.04 22.04 23.04 24.04" == *"$(lsb_release -rs)"* ]];
 then
     echo "Ubuntu $(lsb_release -rs) is not currently supported.";
     exit;
 fi
 
+# Add the signature to trust the Microsoft repo
+# For Ubuntu versions < 24.04 
 curl https://packages.microsoft.com/keys/microsoft.asc | sudo tee /etc/apt/trusted.gpg.d/microsoft.asc
+# For Ubuntu versions >= 24.04
+curl https://packages.microsoft.com/keys/microsoft.asc | sudo gpg --dearmor -o /usr/share/keyrings/microsoft-prod.gpg
 
+# Add repo to apt sources
 curl https://packages.microsoft.com/config/ubuntu/$(lsb_release -rs)/prod.list | sudo tee /etc/apt/sources.list.d/mssql-release.list
 
+# Install the driver
 sudo apt-get update
 sudo ACCEPT_EULA=Y apt-get install -y msodbcsql18
 # optional: for bcp and sqlcmd
@@ -243,6 +249,9 @@ sudo apk add --allow-untrusted mssql-tools_17.10.1.1-1_amd64.apk
 
 ```bash
 curl https://packages.microsoft.com/keys/microsoft.asc | sudo tee /etc/apt/trusted.gpg.d/microsoft.asc
+
+# Debian 12
+curl -fsSL https://packages.microsoft.com/keys/microsoft.asc | sudo gpg --dearmor -o /usr/share/keyrings/microsoft-prod.gpg
 
 #Download appropriate package for the OS version
 #Choose only ONE of the following, corresponding to your OS version

@@ -141,6 +141,12 @@
       "branch_mapping": {}
     },
     {
+      "path_to_root": "azure-compute-docs-pr",
+      "url": "https://github.com/MicrosoftDocs/azure-compute-docs-pr",
+      "branch": "main",
+      "branch_mapping": {}
+    },
+    {
       "path_to_root": "azure-reference-other-repo",
       "url": "https://github.com/MicrosoftDocs/azure-reference-other-pr",
       "branch": "main",
@@ -149,6 +155,12 @@
     {
       "path_to_root": "azure-sql/reusable-content",
       "url": "https://github.com/MicrosoftDocs/reusable-content",
+      "branch": "main",
+      "branch_mapping": {}
+    },
+    {
+      "path_to_root": "azure-typescript-e2e-apps",
+      "url": "https://github.com/Azure-Samples/azure-typescript-e2e-apps",
       "branch": "main",
       "branch_mapping": {}
     }
@@ -181,6 +193,9 @@
   "enable_pull_request_custom_validation": true,
   "redirection_files": [
     ".openpublishing.redirection.azure-sql.json",
-    ".openpublishing.redirection.azure-data-studio.json"
+    ".openpublishing.redirection.azure-data-studio.json",
+    ".openpublishing.redirection.powershell.json",
+    ".openpublishing.redirection.ssms.json",
+    ".openpublishing.redirection.stretch-database.json"
   ]
 }

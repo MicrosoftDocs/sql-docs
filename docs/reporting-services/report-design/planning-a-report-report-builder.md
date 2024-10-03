@@ -3,11 +3,12 @@ title: "Planning a paginated report"
 description: Plan and create paginated reports with richly formatted text that shows sales data, marketing trends, operational reports, or dashboards in Report Builder.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/03/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "getting started"
   - "report design"
@@ -47,9 +48,8 @@ helpviewer_keywords:
   
      You can save your report to your local computer and continue to work on it, or run it locally for your own information. However, to share your report with others, you need to save the report to a report server that is configured in native mode or a report server in SharePoint integrated mode. Saving it to a server lets others run it whenever they want to. Alternatively, the report server administrator can set up a subscription to the report or set up e-mail delivery of the report to other individuals. You can have the report delivered in a specific export format if you prefer. For more information, see [Finding, Viewing, and Managing Reports &#40;Report Builder and SSRS &#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md).  
   
-## See Also  
- [Report Builder in SQL Server](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
- [Reporting Services Concepts (SSRS)](../reporting-services-concepts-ssrs.md)
- [Report Builder Tutorials](../../reporting-services/report-builder-tutorials.md)  
-  
-  
+## Related content
+
+- [Report Builder in SQL Server](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)
+- [Reporting Services Concepts (SSRS)](../reporting-services-concepts-ssrs.md)
+- [Report Builder Tutorials](../../reporting-services/report-builder-tutorials.md)

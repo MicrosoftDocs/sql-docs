@@ -3,11 +3,12 @@ title: "Strategies for backup & restore (Merge)"
 description: Strategies for backing up and restoring data used in Merge Replication.
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/14/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: how-to
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "recovery [SQL Server replication], merge replication"
   - "backups [SQL Server replication], merge replication"
@@ -84,8 +85,7 @@ helpviewer_keywords:
 ## Backing Up and Restoring a Republishing Database  
  When a database subscribes to data from a Publisher and in turn publishes that same data to other subscription databases, it is referred to as a republishing database. When restoring a republishing database, follow the guidelines described in "Backing Up and Restoring a Publication Database" and "Backing Up and Restoring a Subscription Database" in this topic.  
   
-## See Also  
- [Back Up and Restore of SQL Server Databases](../../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
- [Back Up and Restore Replicated Databases](../../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)  
-  
-  
+## Related content
+
+- [Back Up and Restore of SQL Server Databases](../../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)
+- [Back Up and Restore Replicated Databases](../../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)

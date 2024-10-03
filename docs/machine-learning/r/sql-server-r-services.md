@@ -1,8 +1,8 @@
 ---
 title: What is SQL Server 2016 R Services?
 description: R Services is a feature in SQL Server 2016 that gives the ability to run R scripts with relational data. You can use open-source packages and frameworks, and the Microsoft R packages for predictive analytics and machine learning. The scripts are executed in-database without moving data outside SQL Server or over the network. This article explains the basics of SQL Server R Services.
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: VanMSFT
+ms.author: vanto
 ms.date: 08/01/2023
 ms.service: sql
 ms.subservice: machine-learning-services
@@ -86,7 +86,7 @@ You can use open-source packages and frameworks, in addition to Microsoft's ente
 
 1. Configure your development tools. You can use:
 
-    + [Azure Data Studio](../../azure-data-studio/what-is-azure-data-studio.md) or [SQL Server Management Studio (SSMS)](../../ssms/sql-server-management-studio-ssms.md) to use T-SQL and the stored procedure [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) to execute your R script.
+    + [Azure Data Studio](/azure-data-studio/what-is-azure-data-studio) or [SQL Server Management Studio (SSMS)](../../ssms/sql-server-management-studio-ssms.md) to use T-SQL and the stored procedure [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) to execute your R script.
     + R on your own development laptop or workstation to execute scripts. You can either pull data down locally or push the execution remotely to SQL Server with [RevoScaleR](../r/ref-r-revoscaler.md). See how to [set up a data science client R development](../r/set-up-data-science-client.md) for more information.
 
 1. Write your first R script

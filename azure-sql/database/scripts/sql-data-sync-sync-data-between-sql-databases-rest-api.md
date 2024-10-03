@@ -4,30 +4,32 @@ description: Use a REST API example script to sync between multiple databases.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma, hudequei
-ms.date: 03/26/2024
-ms.service: sql-database
+ms.date: 09/23/2024
+ms.service: azure-sql-database
 ms.subservice: sql-data-sync
 ms.topic: sample
-ms.custom: sqldbrb=1
+ms.custom:
+  - sqldbrb=1
 ms.devlang: rest-api
 ---
 
-# Use REST API to sync data between multiple databases 
+# Use REST API to sync data between multiple databases
 
-[!INCLUDE[appliesto-sqldb](../../includes/appliesto-sqldb.md)]
+[!INCLUDE [appliesto-sqldb](../../includes/appliesto-sqldb.md)]
+
+[!INCLUDE [sql-data-sync-retirement](../../includes/sql-data-sync-retirement.md)]
 
 This REST API example configures SQL Data Sync to sync data between multiple databases.
 
-For an overview of SQL Data Sync, see [Sync data across multiple cloud and on-premises databases with SQL Data Sync in Azure](../sql-data-sync-data-sql-server-sql-database.md).
+For an overview of SQL Data Sync, see [What is SQL Data Sync for Azure?](../sql-data-sync-data-sql-server-sql-database.md)
 
-> [!IMPORTANT]
-> SQL Data Sync does not support Azure SQL Managed Instance or Azure Synapse Analytics at this time.
+SQL Data Sync does **not** support Azure SQL Managed Instance or Azure Synapse Analytics.
 
 ## Create sync group
 
 Use the [create or update](/rest/api/sql/sync-groups/create-or-update) template to create a sync group.
- 
-When creating a sync group, do not pass in the sync schema (table\column) and do not pass in `masterSyncMemberName`, because at this time sync group does not have table\column information yet.
+
+When creating a sync group, do not pass in the sync schema (table\column) and do not pass in `masterSyncMemberName`, because sync group does not have table\column information.
 
 Sync group names cannot contain special characters, but can contain letters, numbers, underscore (`_`), dash (`-`).
 
@@ -171,7 +173,7 @@ Use the [list member schema](/rest/api/sql/sync-members/list-member-schemas) tem
 
 Only proceed to the next step once your schema refreshes successfully. 
 
-## Update sync group 
+## Update sync group
 
 Use the [create or update](/rest/api/sql/sync-groups/create-or-update) template to update your sync group.
 
@@ -301,7 +303,7 @@ Sample response for triggering sync operation:
 
 Status code: 200
 
-## Next steps
+## Related content
 
 For more information about Azure PowerShell, see [Azure PowerShell documentation](/powershell/azure/).
 

@@ -111,6 +111,11 @@
       "redirect_document_id": true
     },
     {
+      "source_path_from_root": "/azure-sql/managed-instance/november-2022-feature-wave-enroll.md",
+      "redirect_url": "/azure/azure-sql/managed-instance/doc-changes-updates-release-notes-whats-new#november-2022-feature-wave",
+      "redirect_document_id": false
+    },
+    {
       "source_path_from_root": "/azure-sql/managed-instance/azure-app-sync-network-configuration.md",
       "redirect_url": "/azure/azure-sql/managed-instance/",
       "redirect_document_id": false
@@ -696,6 +701,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path_from_root": "/azure-sql/database/authentication-mfa-ssms-overview.md",
+      "redirect_url": "/azure/azure-sql/database/authentication-aad-overview#multifactor-authentication-mfa",
+      "redirect_document_id": false
+    },
+    {
       "source_path_from_root": "/azure-sql/database/elastic-jobs-migrate.md",
       "redirect_url": "/azure/azure-sql/database/job-automation-overview",
       "redirect_document_id": false
@@ -823,7 +833,32 @@
     {
       "source_path_from_root": "/azure-sql/database/alerts-insights-configure-portal.md",
       "redirect_url": "/azure/azure-sql/database/alerts-create",
-      "redirect_document_id": false      
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/azure-sql/database/local-dev-experience-quickstart.md",
+      "redirect_url": "/previous-versions/sql/azure-sql/database/local-dev-experience-quickstart",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/azure-sql/database/local-dev-experience-publish-emulator.md",
+      "redirect_url": "/previous-versions/sql/azure-sql/database/local-dev-experience-publish-emulator",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/azure-sql/database/local-dev-experience-set-up-dev-environment.md",
+      "redirect_url": "/previous-versions/sql/azure-sql/database/local-dev-experience-set-up-dev-environment",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/azure-sql/database/local-dev-experience-sql-database-emulator.md",
+      "redirect_url": "/previous-versions/sql/azure-sql/database/local-dev-experience-sql-database-emulator",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/azure-sql/database/migrate-sqlite-db-to-azure-sql-serverless-offline-tutorial.md",
+      "redirect_url": "/azure/data-factory/introduction",
+      "redirect_document_id": false
     }
   ]
 }

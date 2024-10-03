@@ -126,8 +126,6 @@ SET { column_name = { expression | NULL } } [ ,...n ]
 [;]  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
  WITH \<common_table_expression>  
  Specifies the temporary named result set or view, also known as common table expression (CTE), defined within the scope of the UPDATE statement. The CTE result set is derived from a simple query and is referenced by UPDATE statement.  

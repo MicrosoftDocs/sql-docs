@@ -3,11 +3,12 @@ title: "Expression reference in a paginated report"
 description: Learn about the syntax required in expressions, before processing or publishing a paginated report, to support references to built-in functions and collections in Report Builder.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/01/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 # Expression reference in a paginated report (Report Builder)
 
@@ -43,7 +44,6 @@ ms.custom: updatefrequency5
   
  [ReportItems Collection References &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/built-in-collections-reportitems-collection-references-report-builder.md)  
   
-## See Also  
- [Expressions &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
-  
-  
+## Related content
+
+- [Expressions &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)

@@ -3,11 +3,12 @@ title: "Security (Report Builder)"
 description: Report Builder security features relate to publishing locations, published reports, external data sources with models based on them, and interactive features.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/14/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-builder
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 # Security (Report Builder)
 

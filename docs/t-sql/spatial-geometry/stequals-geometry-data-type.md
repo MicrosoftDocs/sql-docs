@@ -14,10 +14,10 @@ helpviewer_keywords:
   - "STEquals (geometry Data Type)"
 dev_langs:
   - "TSQL"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=fabric"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # STEquals (geometry Data Type)
-[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance FabricSE FabricDW](../../includes/applies-to-version/sql-asdb-asdbmi-fabricse-fabricdw.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 Returns 1 if a **geometry** instance represents the same point set as another **geometry** instance. Returns 0 if it does not.
   
@@ -28,8 +28,6 @@ Returns 1 if a **geometry** instance represents the same point set as another **
 .STEquals ( other_geometry )  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
  *other_geometry*  
  Is another **geometry** instance to compare against the instance on which `STEquals()` is invoked.  

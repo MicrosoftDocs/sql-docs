@@ -4,7 +4,7 @@ description: "sp_update_jobschedule changes the schedule settings for the specif
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest, wiassaf
-ms.date: 08/28/2023
+ms.date: 08/21/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "sp_update_jobschedule"
 dev_langs:
   - "TSQL"
-monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 # sp_update_jobschedule (Transact-SQL)
 
@@ -25,7 +25,7 @@ Changes the schedule settings for the specified job in the [!INCLUDE [ssnoversio
 
 `sp_update_jobschedule` is provided for backward compatibility only.
 
-Job schedules can now be managed independently of jobs. To update a schedule, use [sp_update_schedule (Transact-SQL)](sp-update-schedule-transact-sql.md).
+Job schedules can now be managed independently of jobs. To update a schedule, use [sp_update_schedule](sp-update-schedule-transact-sql.md).
 
 ## Permissions
 

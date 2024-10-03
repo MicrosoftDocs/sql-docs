@@ -3,11 +3,12 @@ title: "Implement custom conflict resolver (Merge)"
 description: Learn how to implement a custom conflict resolver for a Merge Publication in SQL Server.
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/14/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: how-to
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "merge replication conflict resolution [SQL Server replication], stored procedure-based resolvers"
   - "articles [SQL Server replication], conflict resolution"
@@ -114,9 +115,8 @@ dev_langs:
 2.  Execute [sp_changemergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md), specifying **\@publication**, **\@article**, a value of **article_resolver** for **\@property**, and the friendly name of the article resolver from step 1 for **\@value**.  
   
 
-## See also  
- [Advanced Merge replication conflict detection and resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
- [COM-based custom resolvers](../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-custom-resolvers.md)   
- [Replication security best practices](../../relational-databases/replication/security/replication-security-best-practices.md)  
-  
-  
+## Related content
+
+- [Advanced Merge replication conflict detection and resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)
+- [COM-based custom resolvers](../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-custom-resolvers.md)
+- [Replication security best practices](../../relational-databases/replication/security/replication-security-best-practices.md)

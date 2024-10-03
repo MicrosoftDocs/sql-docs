@@ -4,8 +4,8 @@ description: Azure SQL Database provides recommendations for databases that can 
 author: NikaKinska
 ms.author: nnikolic
 ms.reviewer: wiassaf, mathoma
-ms.date: 06/04/2023
-ms.service: sql-database
+ms.date: 08/16/2024
+ms.service: azure-sql-database
 ms.subservice: performance
 ms.topic: conceptual
 ms.custom:
@@ -92,7 +92,7 @@ After you apply this recommendation, it enables forced parameterization within m
 ## Fix schema issues recommendations (preview)
 
 > [!IMPORTANT]
-> Microsoft is currently deprecating "Fix schema issue" recommendations. We recommend that you use [Intelligent Insights](intelligent-insights-overview.md) to monitor  your database performance issues, including schema issues that the "Fix schema issue" recommendations previously covered.
+> Microsoft is currently deprecating "Fix schema issue" recommendations.
 
 **Fix schema issues** recommendations appear when Azure SQL Database notices an anomaly in the number of schema-related SQL errors that are happening on your database. This recommendation typically appears when your database encounters multiple schema-related errors (invalid column name, invalid object name, and so on) within an hour.
 
@@ -116,5 +116,5 @@ Developers might consider developing custom applications using performance recom
 ## Next steps
 
 - For more information about automatic tuning of database indexes and query execution plans, see [Azure SQL Database automatic tuning](automatic-tuning-overview.md).
-- For more information about automatically monitoring database performance with automated diagnostics and root cause analysis of performance issues, see [Azure SQL Intelligent Insights](intelligent-insights-overview.md).
+- For more information about monitoring database performance, see [database watcher](../database-watcher-overview.md).
 - See [Query Performance Insights](query-performance-insight-use.md) to learn about and view the performance impact of your top queries.

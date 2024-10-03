@@ -26,7 +26,7 @@ The following sample demonstrates how to use the ODBC APIs to connect to and acc
 
 ## Download
 
-- :::image type="icon" source="../../includes/media/download.svg" border="false"::: [Download ODBC driver](download-odbc-driver-for-sql-server.md)
+- :::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download ODBC driver](download-odbc-driver-for-sql-server.md)**
 
 ## Documentation
 

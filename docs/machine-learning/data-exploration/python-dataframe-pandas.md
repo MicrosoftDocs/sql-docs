@@ -2,8 +2,8 @@
 title: Insert data from a SQL table into a Python pandas dataframe
 titleSuffix: SQL machine learning
 description: Learn how to read data from a SQL table and insert into a pandas dataframe using Python.
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: VanMSFT
+ms.author: vanto
 ms.date: 07/23/2020
 ms.service: sql
 ms.subservice: machine-learning
@@ -31,7 +31,7 @@ This article describes how to insert SQL data into a [pandas](https://pandas.pyd
 * [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) for restoring the sample database to Azure SQL Managed Instance.
 ::: moniker-end
 
-* Azure Data Studio. To install, see [Azure Data Studio](../../azure-data-studio/what-is-azure-data-studio.md).
+* Azure Data Studio. To install, see [Azure Data Studio](/azure-data-studio/what-is-azure-data-studio).
 
 * [Restore sample database](../../samples/adventureworks-install-configure.md) to get sample data used in this article.
 
@@ -46,7 +46,7 @@ SELECT * FROM Person.CountryRegion;
 
 ## Install Python packages
 
-[Download and Install Azure Data Studio](../../azure-data-studio/download-azure-data-studio.md).
+[Download and Install Azure Data Studio](/azure-data-studio/download-azure-data-studio).
 
 Install the following Python packages:
   * pyodbc

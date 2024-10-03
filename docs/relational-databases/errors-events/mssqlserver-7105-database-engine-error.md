@@ -27,7 +27,7 @@ helpviewer_keywords:
 
 ## Explanation
 
-A query may encounter Msg 7105 when Large Object (LOB) data referenced by a database page row cannot be accessed.
+A query may encounter Msg 7105 when Large Object (LOB) data referenced by a database page row cannot be accessed.
 
 Because this error is Severity Level 22, the connection is terminated by the server. This error message is also written into the SQL ERRORLOG file and Windows Application Event Log with EventID=7105.
 
@@ -60,9 +60,9 @@ See the Resolution and [More information](#more-information) sections to determi
 
 ## More information
 
-If database corruption is the cause for this problem, then `DBCC CHECKDB` and/or `DBCC CHECKTABLE` should report errors. However, these commands will not report Msg 7105. The errors you encounter from CHECKDB will depend on what is damaged within the reference to LOB structures or the LOB structures themselves.
+If database corruption is the cause for this problem, then `DBCC CHECKDB` and/or `DBCC CHECKTABLE` should report errors. However, these commands will not report Msg 7105. The errors you encounter from CHECKDB will depend on what is damaged within the reference to LOB structures or the LOB structures themselves.
 
-- If the database page row does not correctly reference a valid LOB page, you may see errors like these:
+- If the database page row does not correctly reference a valid LOB page, you may see errors like these:
 
     > Msg 8929, Level 16, State 1, Line 1  
     Object ID 2137058649, index ID 0, partition ID 72057594038910976, alloc unit ID 72057594039828480 (type In-row data): Errors found in off-row data with ID 131203072 owned by data record identified by RID = (1:179:1)  
@@ -71,11 +71,11 @@ If database corruption is the cause for this problem, then `DBCC CHECKDB` and/o
     Msg 8965, Level 16, State 1, Line 1  
     Table error: Object ID 2137058649, index ID 0, partition ID 72057594038910976, alloc unit ID 72057594039894016 (type LOB data). The off-row data node at page (255:177), slot 1, text ID 131203072 is referenced by page (1:179), slot 1, but was not seen in the scan  
 
-- Different scenarios for the problem can result in different combination of errors. In this example:  
+- Different scenarios for the problem can result in different combination of errors. In this example:  
 
-    > Database Page 1:179, Slot 1 is referencing a LOB page that is not a valid page in the database (page 255:177). Page (1:177) is a valid LOB page but was never referenced by any database page. So in this situation, the problem is that the row in Slot 1 of Page 1:179 references page 255:177 instead of 1:177.
+    > Database Page 1:179, Slot 1 is referencing a LOB page that is not a valid page in the database (page 255:177). Page (1:177) is a valid LOB page but was never referenced by any database page. So in this situation, the problem is that the row in Slot 1 of Page 1:179 references page 255:177 instead of 1:177.
 
-- The key to determining whether `DBCC CHECKDB` errors are related to LOB page problems by looking for the phrases 'off-row data' and 'type LOB data'.
+- The key to determining whether `DBCC CHECKDB` errors are related to LOB page problems by looking for the phrases 'off-row data' and 'type LOB data'.
 
     > Msg 8929 is an error related to the database page referencing the LOB pages.  
 Msg 8964 is an error indicating a LOB page was not referenced by any database pages.  
@@ -85,16 +85,16 @@ Msg 8965 is an error indicating a LOB pages was referenced by a database page bu
 
 - In the example shown here, the messages returned by a CHECKTABLE using `REPAIR_ALLOW_DATA_LOSS` look like:
 
-    > Repair: Deleted record for object ID 2137058649, index ID 0, partition ID 72057594038910976, alloc unit ID 72057594039828480 (type In-row data), on page (1:179),  slot 1. Indexes will be rebuilt.  
+    > Repair: Deleted record for object ID 2137058649, index ID 0, partition ID 72057594038910976, alloc unit ID 72057594039828480 (type In-row data), on page (1:179),  slot 1. Indexes will be rebuilt.  
     Repair: Deleted off-row data column with ID 131203072, for object ID 2137058649, index ID 0, partition ID 72057594038910976, alloc unit ID 72057594039894016 (type LOB data) on page (1:177), slot 1.  
     Msg 8929, Level 16, State 1, Line 1  
     Object ID 2137058649, index ID 0, partition ID 72057594038910976, alloc unit ID 72057594039828480 (type In-row data): Errors found in off-row data with ID 131203072 owned by data record identified by RID = (1:179:1)  
-            The error has been repaired.  
+            The error has been repaired.  
     Msg 8964, Level 16, State 1, Line 1  
     Table error: Object ID 2137058649, index ID 0, partition ID 72057594038910976, alloc unit ID 72057594039894016 (type LOB data). The off-row data node at page (1:177), slot 1, text ID 131203072 is not referenced.  
-            The error has been repaired.  
+            The error has been repaired.  
     Msg 8965, Level 16, State 1, Line 1  
     Table error: Object ID 2137058649, index ID 0, partition ID 72057594038910976, alloc unit ID 72057594039894016 (type LOB data). The off-row data node at page (255:177), slot 1, text ID 131203072 is referenced by page (1:179), slot 1, but was not seen in the scan.  
-            Could not repair this error
+            Could not repair this error
 
-    The last message that says `Could not repair this error` is misleading. The error was repaired because the database page row that pointed to the invalid page (255:177) was deleted.
+    The last message that says `Could not repair this error` is misleading. The error was repaired because the database page row that pointed to the invalid page (255:177) was deleted.

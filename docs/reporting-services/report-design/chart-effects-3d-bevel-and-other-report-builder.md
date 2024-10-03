@@ -3,11 +3,12 @@ title: "3D, bevel, and other effects in a paginated report chart"
 description: Discover how 3D effects in paginated reports can be used to provide depth and add visual impact to charts in Report Builder.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/01/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 f1_keywords:
   - "10156"
 ---
@@ -55,9 +56,8 @@ f1_keywords:
 ## Highlight 3D effects  
  You can add highlighting styles to a 3D chart via the **Shading** property, which appears under **Area3DStyle** in the **Properties** pane when the chart area is selected. A simple lighting style applies the same hue to the chart area elements. A realistic style changes the hues of the chart area elements depending on a specified lighting angle.  
   
-## Related content  
- [Format axis labels on a chart &#40;Report Builder&#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
- [Format a chart &#40;Report Builder&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
- [Add 3D effects to a chart &#40;Report Builder&#41;](../../reporting-services/report-design/chart-effects-add-3d-effects-report-builder.md)  
-  
-  
+## Related content
+
+- [Format axis labels on a chart &#40;Report Builder&#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)
+- [Format a chart &#40;Report Builder&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)
+- [Add 3D effects to a chart &#40;Report Builder&#41;](../../reporting-services/report-design/chart-effects-add-3d-effects-report-builder.md)

@@ -4,7 +4,7 @@ description: sp_attachsubscription attaches an existing subscription database to
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 03/04/2024
+ms.date: 08/22/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: "reference"
@@ -69,14 +69,14 @@ The security mode of the Subscriber to use when connecting to a Subscriber when 
 
 The Subscriber login name to use when connecting to a Subscriber when synchronizing. *@subscriber_login* is **sysname**, with a default of `NULL`.
 
-> [!NOTE]
+> [!NOTE]  
 > [!INCLUDE [deprecated-parameter](../includes/deprecated-parameter.md)] If *@subscriber_security_mode* isn't `1` and *@subscriber_login* is specified, you receive an error.
 
 #### [ @subscriber_password = ] N'*subscriber_password*'
 
 The Subscriber password. *@subscriber_password* is **sysname**, with a default of `NULL`.
 
-> [!NOTE]
+> [!NOTE]  
 > [!INCLUDE [deprecated-parameter](../includes/deprecated-parameter.md)] If *@subscriber_security_mode* isn't `1` and *@subscriber_password* is specified, you receive an error.
 
 #### [ @distributor_security_mode = ] *distributor_security_mode*

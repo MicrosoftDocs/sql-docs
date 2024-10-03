@@ -5,13 +5,14 @@ author: danimir
 ms.author: danil
 ms.reviewer: mathoma
 ms.date: 11/16/2022
-ms.service: sql-managed-instance
+ms.service: azure-sql-managed-instance
 ms.subservice: migration
 ms.topic: how-to
+ms.collection:
+  - sql-migration-content
 ms.custom:
   - devx-track-azurepowershell
   - devx-track-azurecli
-  - sql-migration-content
 ---
 
 # Migrate databases from SQL Server by using Log Replay Service - Azure SQL Managed Instance 
@@ -543,7 +544,7 @@ az sql midb log-replay start <required parameters> &
 
 [Az.SQL 4.0.0 and later](https://www.powershellgallery.com/packages/Az.Sql/4.0.0) provides a detailed progress report. Review [Managed Database Restore Details - Get](/rest/api/sql/managed-database-restore-details/get) for a sample output.  
 
-To monitor migration progress through PowerShell, use the following command:
+To monitor ongoing migration progress through PowerShell, use the following command:
 
 ```PowerShell
 Get-AzSqlInstanceDatabaseLogReplay -ResourceGroupName "ResourceGroup01" `
@@ -551,11 +552,13 @@ Get-AzSqlInstanceDatabaseLogReplay -ResourceGroupName "ResourceGroup01" `
     -Name "ManagedDatabaseName"
 ```
 
-To monitor migration progress through the Azure CLI, use the following command:
+To monitor ongoing migration progress through the Azure CLI, use the following command:
 
 ```CLI
 az sql midb log-replay show -g mygroup --mi myinstance -n mymanageddb
 ```
+
+To track additional details on a failed request, use the PowerShell command [Get-AzSqlInstanceOperation](/powershell/module/az.sql/get-azsqlinstanceoperation) or use Azure CLI command [az sql mi op show](/cli/azure/sql/mi/op?view=azure-cli-latest#az-sql-mi-op-show).
 
 ## Stop the migration (optional)
 
@@ -599,16 +602,21 @@ az sql midb log-replay complete -g mygroup --mi myinstance -n mymanageddb --last
 
 ## Troubleshoot LRS issues
 
-After you start LRS, use either of the following monitoring cmdlets to see the status of the operation:
+After you start LRS, use either of the following monitoring cmdlets to see the status of the ongoing operation:
 
 * For PowerShell: `get-azsqlinstancedatabaselogreplay`
 * For the Azure CLI: `az_sql_midb_log_replay_show`
 
+To review details about a failed operation:
+
+* For PowerShell: [Get-AzSqlInstanceOperation](/powershell/module/az.sql/get-azsqlinstanceoperation)
+* For Azure CLI: [az sql mi op show](/cli/azure/sql/mi/op?view=azure-cli-latest#az-sql-mi-op-show)
+
 If LRS fails to start after some time and you get an error, check for the most common issues:
 
 - Does an existing database on your managed instance have the same name as the one you're trying to migrate from your SQL Server instance? Resolve this conflict by renaming one of the databases.
-- Are the permissions granted for the SAS token Read and List _only_?
-- Did you copy the SAS token for LRS after the question mark (`?`), with content that looks like `sv=2020-02-10...`? 
+- Are the permissions granted for the SAS token Read and List _only_?
+- Did you copy the SAS token for LRS after the question mark (`?`), with content that looks like `sv=2020-02-10...`? 
 - Is the SAS token validity time appropriate for the time window of starting and completing the migration? There might be mismatches because of the different time zones used for your SQL Managed Instance deployment and the SAS token. Try regenerating the SAS token and extending the token validity of the time window before and after the current date.
 - When starting multiple Log Replay restores in parallel targeting the same storage container, ensure that the same valid SAS token is provided for every restore operation. 
 - Are the database name, resource group name, and managed instance name spelled correctly?

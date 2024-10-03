@@ -5,10 +5,10 @@ author: croblesm
 ms.author: roblescarlos
 ms.reviewer: mathoma
 ms.date: 05/14/2021
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.subservice: migration-guide
 ms.topic: how-to
-ms.custom:
+ms.collection:
   - sql-migration-content
 ---
 # Migration guide: IBM Db2 to Azure SQL Database

@@ -32,8 +32,6 @@ You can retrieve multiple values from the rowset. For example, you can apply the
 nodes (XQuery) as Table(Column)  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 
 *XQuery*  

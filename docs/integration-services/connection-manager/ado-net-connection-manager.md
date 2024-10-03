@@ -3,7 +3,7 @@ title: "ADO.NET connection manager"
 description: An ADO.NET connection manager enables a package to access data sources by using a .NET provider.
 author: chugugrace
 ms.author: chugu
-ms.date: "10/13/2023"
+ms.date: "08/19/2024"
 ms.service: sql
 ms.subservice: integration-services
 ms.topic: conceptual
@@ -22,12 +22,14 @@ helpviewer_keywords:
 An [!INCLUDE[vstecado](../../includes/vstecado-md.md)] connection manager enables a package to access data sources by using a .NET provider. Typically, you use this connection manager to access data sources such as [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. You can also access data sources exposed through OLE DB and XML in custom tasks that are written in managed code, by using a language such as C#.  
   
 When you add an [!INCLUDE[vstecado](../../includes/vstecado-md.md)] connection manager to a package, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] creates a connection manager that is resolved as an [!INCLUDE[vstecado](../../includes/vstecado-md.md)] connection at runtime. It sets the connection manager properties, and adds the connection manager to the **Connections** collection on the package.  
-  
+
 The `ConnectionManagerType` property of the connection manager is set to `ADO.NET`. The value of `ConnectionManagerType` is qualified to include the name of the .NET provider that the connection manager uses.  
 
 [!INCLUDE [entra-id](../../includes/entra-id.md)]
   
 ## ADO.NET connection manager troubleshooting  
+Microsoft.Data.SqlClient driver is not supported in SQL 2022 and below. If you need msi or Microsoft Entra ID-based authentication method, please use Oledb Connection Manager instead.
+
 You can log the calls that the [!INCLUDE[vstecado](../../includes/vstecado-md.md)] connection manager makes to external data providers. You can then troubleshoot the connections that the [!INCLUDE[vstecado](../../includes/vstecado-md.md)] connection manager makes to external data sources. To log the calls that the [!INCLUDE[vstecado](../../includes/vstecado-md.md)] connection manager makes to external data providers, enable package logging, and select the **Diagnostic** event at the package level. For more information, see [Troubleshooting Tools for Package Execution](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md).  
   
 When being read by an [!INCLUDE[vstecado](../../includes/vstecado-md.md)] connection manager, data of certain [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] date data types generates the results shown in the following table.  
@@ -80,9 +82,8 @@ Select a connection, and then delete it by selecting **Delete**.
 When running SSIS packages on [Azure-SSIS integration runtime (IR) in Azure Data Factory (ADF)](/azure/data-factory/concepts-integration-runtime#azure-ssis-integration-runtime), you can use Microsoft Entra authentication with [the managed identity for your ADF](/azure/data-factory/connector-azure-sql-database#managed-identity) to access Azure SQL Database or SQL Managed Instance. Your Azure-SSIS IR can access and copy data from or to your database using this managed identity.
 
 > [!NOTE]
-> - When you authenticate with a user-assigned managed identity, the SSIS integration runtime needs to be enabled with the same identity. For more information, see [Enable Microsoft Entra authentication for Azure-SSIS integration runtime](/azure/data-factory/enable-aad-authentication-azure-ssis-ir).
->
->  - When you use Microsoft Entra authentication to access Azure SQL Database or Azure SQL Managed Instance, you might encounter a problem related to package execution failure or unexpected behavior changes. For more information, see [Microsoft Entra features and limitations](/azure/sql-database/sql-database-aad-authentication#azure-ad-features-and-limitations).
+> When you authenticate with a user-assigned managed identity, the SSIS integration runtime needs to be enabled with the same identity. For more information, see [Enable Microsoft Entra authentication for Azure-SSIS integration runtime](/azure/data-factory/enable-aad-authentication-azure-ssis-ir).
+
 
 To enable your ADF to access Azure SQL Database using its managed identity, follow these steps:
 

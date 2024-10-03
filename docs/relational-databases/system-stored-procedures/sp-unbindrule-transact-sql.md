@@ -4,7 +4,7 @@ description: Unbinds a rule from a column or an alias data type in the current d
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 08/28/2023
+ms.date: 08/21/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -43,7 +43,7 @@ sp_unbindrule
 The name of the table and column or the alias data type from which the rule is unbound. *@objname* is **nvarchar(776)**, with no default. [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] attempts to resolve two-part identifiers to column names first, then to alias data types. When unbinding a rule from an alias data type, any columns of the data type that have the same rule are also unbound. Columns of that data type with rules bound directly to them are unaffected.
 
 > [!NOTE]  
-> *@objname* can contain brackets `[]` as delimited identifier characters. For more information, see [Database Identifiers](../databases/database-identifiers.md).
+> *@objname* can contain brackets `[]` as delimited identifier characters. For more information, see [Database identifiers](../databases/database-identifiers.md).
 
 #### [ @futureonly = ] 'futureonly'
 
@@ -59,7 +59,7 @@ To display the text of a rule, execute `sp_helptext` with the rule name as the p
 
 When a rule is unbound, the information about the binding is removed from the `sys.columns` table if the rule was bound to a column, and from the `sys.types` table if the rule was bound to an alias data type.
 
-When a rule is unbound from an alias data type, it's also unbound from any columns having that alias data type. The rule may also still be bound to columns whose data types were later changed by the ALTER COLUMN clause of an ALTER TABLE statement, you must specifically unbind the rule from these columns by using `sp_unbindrule` and specifying the column name.
+When a rule is unbound from an alias data type, it's also unbound from any columns having that alias data type. The rule might also still be bound to columns whose data types were later changed by the ALTER COLUMN clause of an ALTER TABLE statement, you must specifically unbind the rule from these columns by using `sp_unbindrule` and specifying the column name.
 
 ## Permissions
 

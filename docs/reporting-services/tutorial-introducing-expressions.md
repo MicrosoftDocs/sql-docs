@@ -3,11 +3,12 @@ title: "Tutorial: Introduce expressions"
 description: Learn to use expressions with common functions and operators to create powerful and flexible Reporting Services paginated reports.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 09/16/2016
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: reporting-services
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 # Tutorial: Introduce expressions
 In this [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] tutorial, you use expressions with common functions and operators to create powerful and flexible [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] paginated reports. 
@@ -651,13 +652,9 @@ Now your report readers can view your report in the [!INCLUDE[ssRSnoversion_md](
    
 ## Related content
 
-- [Expressions in a paginated report (Report Builder)](../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
-- [Expression examples in paginated reports (Report Builder)](../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
-- [Indicators in a paginated report (Report Builder)](../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  
-- [Images, text boxes, rectangles, and lines in a paginated report (Report Builder)](../reporting-services/report-design/images-text-boxes-rectangles-and-lines-report-builder-and-ssrs.md)  
-- [Tables in paginated reports (Report Builder)](../reporting-services/report-design/tables-report-builder-and-ssrs.md)  
-- [Report datasets &#40;SSRS&#41;](../reporting-services/report-data/report-datasets-ssrs.md)  
-  
-  
-  
-
+- [Expressions in a paginated report (Report Builder)](../reporting-services/report-design/expressions-report-builder-and-ssrs.md)
+- [Expression examples in paginated reports (Report Builder)](../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)
+- [Indicators in a paginated report (Report Builder)](../reporting-services/report-design/indicators-report-builder-and-ssrs.md)
+- [Images, text boxes, rectangles, and lines in a paginated report (Report Builder)](../reporting-services/report-design/images-text-boxes-rectangles-and-lines-report-builder-and-ssrs.md)
+- [Tables in paginated reports (Report Builder)](../reporting-services/report-design/tables-report-builder-and-ssrs.md)
+- [Report datasets &#40;SSRS&#41;](../reporting-services/report-data/report-datasets-ssrs.md)

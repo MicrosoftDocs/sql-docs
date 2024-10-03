@@ -1,8 +1,8 @@
 ---
 title: "Create & manage storage - memory-optimized objects"
 description: Learn about attributes of memory-optimized tables and disk-based tables. Use these resources to create and manage storage for memory-optimized objects.
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "03/15/2017"
 ms.service: sql
 ms.subservice: in-memory-oltp

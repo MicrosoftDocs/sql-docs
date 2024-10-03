@@ -33,8 +33,6 @@ DecryptByPassPhrase ( { 'passphrase' | @passphrase }
     , { authenticator | @authenticator } ] )  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
  *passphrase*  
 The passphrase used to generate the decryption key.  

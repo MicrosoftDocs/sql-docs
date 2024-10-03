@@ -14,10 +14,10 @@ helpviewer_keywords:
   - "STBuffer (geometry Data Type)"
 dev_langs:
   - "TSQL"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=fabric"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # STBuffer (geometry Data Type)
-[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance FabricSE FabricDW](../../includes/applies-to-version/sql-asdb-asdbmi-fabricse-fabricdw.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 Returns a geometric object that represents the union of all points whose distance from a **geometry** instance is less than or equal to a specified value.
   
@@ -28,8 +28,6 @@ Returns a geometric object that represents the union of all points whose distanc
 .STBuffer ( distance )  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
  *distance*  
  Is a value of type **float** (**double** in the .NET Framework) specifying the distance from the geometry instance around which to calculate the buffer.  

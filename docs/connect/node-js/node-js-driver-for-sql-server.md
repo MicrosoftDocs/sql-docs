@@ -10,7 +10,7 @@ ms.topic: conceptual
 ---
 # Node.js Driver for SQL Server
 
-:::image type="icon" source="../../includes/media/download.svg" border="false"::: [Download Node.js SQL driver](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Node.js SQL driver](../sql-connection-libraries.md#anchor-20-drivers-relational-access)**
 
 The `tedious` module is a JavaScript implementation of the TDS protocol, which is supported by all modern versions of SQL Server. The driver is an open-source project, available on GitHub.  
   

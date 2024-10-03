@@ -1,8 +1,8 @@
 ---
 title: "Memory-optimized table and a natively compiled stored procedure"
 description: This sample introduces you to the syntax for In-Memory OLTP to create a memory-optimized table and a natively compiled stored procedure.
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "03/16/2017"
 ms.service: sql
 ms.subservice: in-memory-oltp

@@ -3,11 +3,12 @@ title: "Create and manage subscriptions for native mode report servers"
 description: Learn to create and manage a standard subscription as an individual user who wants a report delivered through email or to a shared folder.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 05/28/2019
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: subscriptions
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "standard subscriptions [Reporting Services]"
   - "subscriptions [Reporting Services], standard"
@@ -157,10 +158,11 @@ To cancel a subscription that is currently processing on the report server, see 
   
  A subscription is deleted automatically if the underlying report is deleted. If you delete a subscription while it's being processed, the subscription stops if the delete operation occurs before the delivery extension receives subscription data. Otherwise, the subscription continues to be processed.  
   
-## Related content 
- [Create and manage subscriptions for SharePoint mode report servers](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)  
- [Use PowerShell to change and list Reporting Services subscription owners and run a subscription](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)  
- [Data-driven subscriptions](../../reporting-services/subscriptions/data-driven-subscriptions.md)  
- [Subscriptions and delivery &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)  
- [The web portal of a report server (SSRS native mode)](../../reporting-services/web-portal-ssrs-native-mode.md)  
- [Use my subscriptions &#40;native mode report server&#41;](../../reporting-services/subscriptions/use-my-subscriptions-native-mode-report-server.md)  
+## Related content
+
+- [Create and manage subscriptions for SharePoint mode report servers](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)
+- [Use PowerShell to change and list Reporting Services subscription owners and run a subscription](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)
+- [Data-driven subscriptions](../../reporting-services/subscriptions/data-driven-subscriptions.md)
+- [Subscriptions and delivery &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)
+- [The web portal of a report server (SSRS native mode)](../../reporting-services/web-portal-ssrs-native-mode.md)
+- [Use my subscriptions &#40;native mode report server&#41;](../../reporting-services/subscriptions/use-my-subscriptions-native-mode-report-server.md)

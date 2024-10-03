@@ -3,11 +3,12 @@ title: "Lesson 6: Add a ReportViewer control to the application"
 description: Learn how to add a ReportViewer control to the website application after you design the child report by using the Report Wizard.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 05/18/2016
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: reporting-services
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 # Lesson 6: Add a ReportViewer control to the application
 After you design the child report by using the Report Wizard, your next step is to add a ReportViewer control to the website application. If you're using the ASP.NET Reports Web Site, it adds the ReportViewer control to the default.aspx page.   
@@ -32,4 +33,5 @@ After you design the child report by using the Report Wizard, your next step is 
   
 ## Next step
 
-You successfully added a ReportViewer control to the website application. Next, you add a drillthrough action on the parent report. See [Lesson 7: Add drillthrough action on the parent report](../reporting-services/lesson-7-add-drillthrough-action-on-parent-report.md).  
+> [!div class="nextstepaction"]
+> [Lesson 7: Add drillthrough action on the parent report](../reporting-services/lesson-7-add-drillthrough-action-on-parent-report.md)

@@ -6,7 +6,7 @@ author: dzsquared
 ms.author: drskwier
 ms.reviewer: wiassaf, mathoma, v-masebo
 ms.date: 12/19/2022
-ms.service: sql-db-mi
+ms.service: azure-sql
 ms.subservice: connect
 ms.topic: quickstart
 ms.custom: sqldbrb=2, devx-track-js, mode-api

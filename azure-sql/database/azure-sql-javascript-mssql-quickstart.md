@@ -5,8 +5,8 @@ author: diberry
 ms.author: diberry
 ms.reviewer: mathoma
 ms.custom: passwordless-js
-ms.date: 05/08/2023
-ms.service: sql-database
+ms.date: 10/03/2024
+ms.service: azure-sql-database
 ms.subservice: security
 ms.topic: quickstart
 monikerRange: "= azuresql || = azuresql-db"
@@ -57,15 +57,9 @@ The steps in this section create a Node.js REST API.
 1. Install the required packages used in the sample code in this article:
 
     ```bash
-    npm install mssql swagger-ui-express yamljs
+    npm install mssql express swagger-ui-express yamljs dotenv
     ```
 
-1. Install the development package used in the sample code in this article:
-
-    ```bash
-    npm install --save-dev dotenv 
-    ```
-    
 1. Open the project in Visual Studio Code.
 
     ```bash
@@ -95,464 +89,71 @@ To create the Express.js OpenAPI application, you'll create several files:
 
 1. Create an **index.js** file and add the following code:
 
-    ```javascript
-    import express from 'express';
-    import { config } from './config.js';
-    import Database from './database.js';
-    
-    // Import App routes
-    import person from './person.js';
-    import openapi from './openapi.js';
-    
-    const port = process.env.PORT || 3000;
-    
-    const app = express();
-    
-    // Development only - don't do in production
-    // Run this to create the table in the database
-    if (process.env.NODE_ENV === 'development') {
-      const database = new Database(config);
-      database
-        .executeQuery(
-          `CREATE TABLE Person (id int NOT NULL IDENTITY, firstName varchar(255), lastName varchar(255));`
-        )
-        .then(() => {
-          console.log('Table created');
-        })
-        .catch((err) => {
-          // Table may already exist
-          console.error(`Error creating table: ${err}`);
-        });
-    }
-    
-    // Connect App routes
-    app.use('/api-docs', openapi);
-    app.use('/persons', person);
-    app.use('*', (_, res) => {
-      res.redirect('/api-docs');
-    });
-    
-    // Start the server
-    app.listen(port, () => {
-      console.log(`Server started on port ${port}`);
-    });
-    ```
+    :::code language="javascript" source="~/../azure-typescript-e2e-apps/quickstarts/azure-sql/connect-and-query/js/index.js":::
 
 1. Create a **person.js** route file and add the following code:
 
+    :::code language="javascript" source="~/../azure-typescript-e2e-apps/quickstarts/azure-sql/connect-and-query/js/person.js" :::
+
+    For passwordless authentication, change the param passed into `createDatabaseConnection`  from `SQLAuthentication` to `PasswordlessConfig`.
+
     ```javascript
-    import express from 'express';
-    import { config } from './config.js';
-    import Database from './database.js';
-    
-    const router = express.Router();
-    router.use(express.json());
-    
-    // Development only - don't do in production
-    console.log(config);
-    
-    // Create database object
-    const database = new Database(config);
-    
-    router.get('/', async (_, res) => {
-      try {
-        // Return a list of persons
-        const persons = await database.readAll();
-        console.log(`persons: ${JSON.stringify(persons)}`);
-        res.status(200).json(persons);
-      } catch (err) {
-        res.status(500).json({ error: err?.message });
-      }
-    });
-    
-    router.post('/', async (req, res) => {
-      try {
-        // Create a person
-        const person = req.body;
-        console.log(`person: ${JSON.stringify(person)}`);
-        const rowsAffected = await database.create(person);
-        res.status(201).json({ rowsAffected });
-      } catch (err) {
-        res.status(500).json({ error: err?.message });
-      }
-    });
-    
-    router.get('/:id', async (req, res) => {
-      try {
-        // Get the person with the specified ID
-        const personId = req.params.id;
-        console.log(`personId: ${personId}`);
-        if (personId) {
-          const result = await database.read(personId);
-          console.log(`persons: ${JSON.stringify(result)}`);
-          res.status(200).json(result);
-        } else {
-          res.status(404);
-        }
-      } catch (err) {
-        res.status(500).json({ error: err?.message });
-      }
-    });
-    
-    router.put('/:id', async (req, res) => {
-      try {
-        // Update the person with the specified ID
-        const personId = req.params.id;
-        console.log(`personId: ${personId}`);
-        const person = req.body;
-    
-        if (personId && person) {
-          delete person.id;
-          console.log(`person: ${JSON.stringify(person)}`);
-          const rowsAffected = await database.update(personId, person);
-          res.status(200).json({ rowsAffected });
-        } else {
-          res.status(404);
-        }
-      } catch (err) {
-        res.status(500).json({ error: err?.message });
-      }
-    });
-    
-    router.delete('/:id', async (req, res) => {
-      try {
-        // Delete the person with the specified ID
-        const personId = req.params.id;
-        console.log(`personId: ${personId}`);
-    
-        if (!personId) {
-          res.status(404);
-        } else {
-          const rowsAffected = await database.delete(personId);
-          res.status(204).json({ rowsAffected });
-        }
-      } catch (err) {
-        res.status(500).json({ error: err?.message });
-      }
-    });
-    
-    export default router;
-    
+    const database = await createDatabaseConnection(PasswordlessConfig);
     ```
+    
 
 1. Create an **openapi.js** route file and add the following code for the OpenAPI UI explorer:
 
-    ```javascript
-    import express from 'express';
-    import { join, dirname } from 'path';
-    import swaggerUi from 'swagger-ui-express';
-    import yaml from 'yamljs';
-    import { fileURLToPath } from 'url';
-    
-    const __dirname = dirname(fileURLToPath(import.meta.url));
-    
-    const router = express.Router();
-    router.use(express.json());
-    
-    const pathToSpec = join(__dirname, './openApiSchema.yml');
-    const openApiSpec = yaml.load(pathToSpec);
-    
-    router.use('/', swaggerUi.serve, swaggerUi.setup(openApiSpec));
-    
-    export default router;
-    ```
-
-1. Create a **openApiSchema.yml** schema file and add the following YAML:
-
-    ```yml
-    openapi: 3.0.0
-    info:
-      version: 1.0.0
-      title: Persons API
-    paths:
-      /persons:
-        get:
-          summary: Get all persons
-          responses:
-            '200':
-              description: OK
-              content:
-                application/json:
-                  schema:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/Person'
-        post:
-          summary: Create a new person
-          requestBody:
-            required: true
-            content:
-              application/json:
-                schema:
-                  $ref: '#/components/schemas/Person'
-          responses:
-            '201':
-              description: Created
-              content:
-                application/json:
-                  schema:
-                    $ref: '#/components/schemas/Person'
-      /persons/{id}:
-        parameters:
-          - name: id
-            in: path
-            required: true
-            schema:
-              type: integer
-        get:
-          summary: Get a person by ID
-          responses:
-            '200':
-              description: OK
-              content:
-                application/json:
-                  schema:
-                    $ref: '#/components/schemas/Person'
-            '404':
-              description: Person not found
-        put:
-          summary: Update a person by ID
-          requestBody:
-            required: true
-            content:
-              application/json:
-                schema:
-                  $ref: '#/components/schemas/Person'
-          responses:
-            '200':
-              description: OK
-              content:
-                application/json:
-                  schema:
-                    $ref: '#/components/schemas/Person'
-            '404':
-              description: Person not found
-        delete:
-          summary: Delete a person by ID
-          responses:
-            '204':
-              description: No Content
-            '404':
-              description: Person not found
-    components:
-      schemas:
-        Person:
-          type: object
-          properties:
-            id:
-              type: integer
-              readOnly: true
-            firstName:
-              type: string
-            lastName:
-              type: string
-    ```
+    :::code language="javascript" source="~/../azure-typescript-e2e-apps/quickstarts/azure-sql/connect-and-query/js/openapi.js":::
 
 ## Configure the mssql connection object
 
 The **mssql** package implements the connection to Azure SQL Database by providing a configuration setting for an authentication type. 
 
-## [Passwordless (recommended)](#tab/passwordless)
-
 1. In Visual Studio Code, create a **config.js** file and add the following mssql configuration code to authenticate to Azure SQL Database.
 
-    ```javascript
-    import * as dotenv from 'dotenv';
-    dotenv.config({ path: `.env.${process.env.NODE_ENV}`, debug: true });
+    :::code language="javascript" source="~/../azure-typescript-e2e-apps/quickstarts/azure-sql/connect-and-query/js/config.js":::
 
-    const server = process.env.AZURE_SQL_SERVER;
-    const database = process.env.AZURE_SQL_DATABASE;
-    const port = parseInt(process.env.AZURE_SQL_PORT);
-    const type = process.env.AZURE_SQL_AUTHENTICATIONTYPE;
-    
-    export const config = {
-        server,
-        port,
-        database,
-        authentication: {
-            type
-        },
-        options: {
-            encrypt: true
-        }
-    };
-    ```
+## Create a local environment variable file
 
-2. Create a **.env.development** file for your local environment variables and add the following text and update with your values for `<YOURSERVERNAME>` and `<YOURDATABASENAME>`.
+Create a **.env.development** file for your local environment variables
 
-    ```text
-    AZURE_SQL_SERVER=<YOURSERVERNAME>.database.windows.net
-    AZURE_SQL_DATABASE=<YOURDATABASENAME>
-    AZURE_SQL_PORT=1433
-    AZURE_SQL_AUTHENTICATIONTYPE=azure-active-directory-default
-    ```
+## [Passwordless (recommended)](#tab/passwordless)
+
+  Add the following text and update with your values for `<YOURSERVERNAME>` and `<YOURDATABASENAME>`.
+
+  ```text
+  AZURE_SQL_SERVER=<YOURSERVERNAME>.database.windows.net
+  AZURE_SQL_DATABASE=<YOURDATABASENAME>
+  AZURE_SQL_PORT=1433
+  AZURE_SQL_AUTHENTICATIONTYPE=azure-active-directory-default
+  ```
 
 > [!NOTE]
 > Passwordless configuration objects are safe to commit to source control, since they do not contain any secrets such as usernames, passwords, or access keys.
 
 ## [SQL authentication](#tab/sql-auth)
 
+  Add the following text and update with your values for `<YOURSERVERNAME>`, `<YOURDATABASENAME>`, `<YOURUSERNAME>`, and `<YOURPASSWORD>`.
 
-1. In Visual Studio Code, create a **config.js** file and add the following mssql configuration code to authenticate to Azure SQL Database.
-    
-    ```javascript
-    import * as dotenv from 'dotenv';
-    dotenv.config({ path: `.env.${process.env.NODE_ENV}`, debug: true });
-    
-    const server = process.env.AZURE_SQL_SERVER;
-    const database = process.env.AZURE_SQL_DATABASE;
-    const port = parseInt(process.env.AZURE_SQL_PORT);
-    const user = process.env.AZURE_SQL_USER;
-    const password = process.env.AZURE_SQL_PASSWORD;
-    
-    export const config = {
-        server,
-        port,
-        database,
-        user,
-        password,
-        options: {
-            encrypt: true
-        }
-    };
-    ```
-
-2. Create a **.env.development** file for your local environment variables and add the following text and update with your values for `<YOURSERVERNAME>`, `<YOURDATABASENAME>`, `<YOURUSERNAME>`, and `<YOURPASSWORD>`.
-
-    ```text
-    AZURE_SQL_SERVER=<YOURSERVERNAME>.database.windows.net
-    AZURE_SQL_DATABASE=<YOURDATABASENAME>
-    AZURE_SQL_PORT=1433
-    AZURE_SQL_USER=<YOURUSERNAME>
-    AZURE_SQL_PASSWORD=<YOURPASSWORD>
-    ```
+  ```text
+  AZURE_SQL_SERVER=<YOURSERVERNAME>.database.windows.net
+  AZURE_SQL_DATABASE=<YOURDATABASENAME>
+  AZURE_SQL_PORT=1433
+  AZURE_SQL_USER=<YOURUSERNAME>
+  AZURE_SQL_PASSWORD=<YOURPASSWORD>
+  ```
 
 > [!WARNING]
 > Use caution when managing connection objects that contain secrets such as usernames, passwords, or access keys. These secrets shouldn't be committed to source control or placed in unsecure locations where they might be accessed by unintended users.
 
 ---
 
-3. Create a `.vscode` folder and create a **settings.json** file in the folder.
-4. Add the following to ignore environment variables and dependencies during the zip deployment.
-
-    ```json
-    {
-        "appService.zipIgnorePattern": ["./.env*","node_modules{,/**}"]
-    }
-    ```
-
 ## Add the code to connect to Azure SQL Database
 
 1. Create a **database.js** file and add the following code:
 
-    ```javascript
-    import sql from 'mssql';
-    
-    export default class Database {
-      config = {};
-      poolconnection = null;
-      connected = false;
-    
-      constructor(config) {
-        this.config = config;
-        console.log(`Database: config: ${JSON.stringify(config)}`);
-      }
-    
-      async connect() {
-        try {
-          console.log(`Database connecting...${this.connected}`);
-          if (this.connected === false) {
-            this.poolconnection = await sql.connect(this.config);
-            this.connected = true;
-            console.log('Database connection successful');
-          } else {
-            console.log('Database already connected');
-          }
-        } catch (error) {
-          console.error(`Error connecting to database: ${JSON.stringify(error)}`);
-        }
-      }
-    
-      async disconnect() {
-        try {
-          this.poolconnection.close();
-          console.log('Database connection closed');
-        } catch (error) {
-          console.error(`Error closing database connection: ${error}`);
-        }
-      }
-    
-      async executeQuery(query) {
-        await this.connect();
-        const request = this.poolconnection.request();
-        const result = await request.query(query);
-    
-        return result.rowsAffected[0];
-      }
-    
-      async create(data) {
-        await this.connect();
-        const request = this.poolconnection.request();
-    
-        request.input('firstName', sql.NVarChar(255), data.firstName);
-        request.input('lastName', sql.NVarChar(255), data.lastName);
-    
-        const result = await request.query(
-          `INSERT INTO Person (firstName, lastName) VALUES (@firstName, @lastName)`
-        );
-    
-        return result.rowsAffected[0];
-      }
-    
-      async readAll() {
-        await this.connect();
-        const request = this.poolconnection.request();
-        const result = await request.query(`SELECT * FROM Person`);
-    
-        return result.recordsets[0];
-      }
-    
-      async read(id) {
-        await this.connect();
-    
-        const request = this.poolconnection.request();
-        const result = await request
-          .input('id', sql.Int, +id)
-          .query(`SELECT * FROM Person WHERE id = @id`);
-    
-        return result.recordset[0];
-      }
-    
-      async update(id, data) {
-        await this.connect();
-    
-        const request = this.poolconnection.request();
-    
-        request.input('id', sql.Int, +id);
-        request.input('firstName', sql.NVarChar(255), data.firstName);
-        request.input('lastName', sql.NVarChar(255), data.lastName);
-    
-        const result = await request.query(
-          `UPDATE Person SET firstName=@firstName, lastName=@lastName WHERE id = @id`
-        );
-    
-        return result.rowsAffected[0];
-      }
-    
-      async delete(id) {
-        await this.connect();
-    
-        const idAsNumber = Number(id);
-    
-        const request = this.poolconnection.request();
-        const result = await request
-          .input('id', sql.Int, idAsNumber)
-          .query(`DELETE FROM Person WHERE id = @id`);
-    
-        return result.rowsAffected[0];
-      }
-    }
-    ```
+    :::code language="javascript" source="~/../azure-typescript-e2e-apps/quickstarts/azure-sql/connect-and-query/js/database.js":::
 
 ## Test the app locally
 
@@ -574,6 +175,17 @@ The app is ready to be tested locally. Make sure you're signed in to the Azure C
 
 1. Select **Execute** to add a new record to the database. The API returns a successful response.
 1. Expand the **GET** method on the Swagger UI page and select **Try it**. Select **Execute**, and the person you just created is returned.
+
+## Configure project for zip deployment
+
+1. Create a `.vscode` folder and create a **settings.json** file in the folder.
+2. Add the following to ignore environment variables and dependencies during the zip deployment.
+
+    ```json
+    {
+        "appService.zipIgnorePattern": ["./.env*","node_modules{,/**}"]
+    }
+    ```
 
 ## Deploy to Azure App Service
 
@@ -631,7 +243,9 @@ The person you created locally should display in the browser. Congratulations! Y
 
 ## Sample code
 
-The sample code for this application is available on [GitHub](https://github.com/Azure-Samples/azure-typescript-e2e-apps/tree/main/api-expressjs-openapi-azuresql-js).
+The sample code for this application is available:
+* [JavaScript](https://github.com/Azure-Samples/azure-typescript-e2e-apps/tree/main/quickstarts/azure-sql/connect-and-query/js)
+* [TypeScript](https://github.com/Azure-Samples/azure-typescript-e2e-apps/tree/main/quickstarts/azure-sql/connect-and-query/ts)
 
 ## Next steps
 

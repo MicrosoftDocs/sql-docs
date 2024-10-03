@@ -6,9 +6,9 @@ author: abhims14
 ms.author: abhishekum
 ms.reviewer: cawrites, randolphwest
 ms.date: 06/26/2024
-ms.service: dms
+ms.service: azure-database-migration-service
 ms.topic: tutorial
-ms.custom:
+ms.collection:
   - sql-migration-content
 ---
 
@@ -449,13 +449,13 @@ During the cutover process, the migration status changes from *in progress* to *
 
 ## Limitations
 
-If migrating a single database, the database backups must be placed in a flat-file structure inside a database folder (including container root folder), and the folders can't be nested, as it isn't supported.
+-If migrating a single database, the database backups must be placed in a flat-file structure inside a database folder (including container root folder), and the folders can't be nested, as it isn't supported.
 
-If migrating multiple databases using the same Azure Blob Storage container, you must place backup files for different databases in separate folders inside the container.
+-If migrating multiple databases using the same Azure Blob Storage container, you must place backup files for different databases in separate folders inside the container.
 
-Overwriting existing databases using DMS in your target SQL Server on Azure Virtual Machine isn't supported.
+-Overwriting existing databases using DMS in your target SQL Server on Azure Virtual Machine isn't supported.
 
-Configuring high availability and disaster recovery on your target to match source topology isn't supported by DMS.
+-Configuring high availability and disaster recovery on your target to match source topology isn't supported by DMS.
 
 The following server objects aren't supported:
 
@@ -464,21 +464,22 @@ The following server objects aren't supported:
 - SSIS packages
 - Server audit
 
-You can't use an existing self-hosted integration runtime created from Azure Data Factory for database migrations with DMS. Initially, the self-hosted integration runtime should be created using the Azure SQL migration extension in Azure Data Studio and can be reused for further database migrations.
+-You can't use an existing self-hosted integration runtime created from Azure Data Factory for database migrations with DMS. Initially, the self-hosted integration runtime should be created using the Azure SQL migration extension in Azure Data Studio and can be reused for further database migrations.
 
-VM with SQL Server 2008 and below as target versions aren't supported when migrating to SQL Server on Azure Virtual Machines.
+-VM with SQL Server 2008 and below as target versions aren't supported when migrating to SQL Server on Azure Virtual Machines.
 
-If you're using a VM with SQL Server 2012 or SQL Server 2014, you need to store your source database backup files on an Azure Storage Blob Container instead of using the network share option. Store the backup files as page blobs since block blobs are only supported in SQL 2016 and after.
+-If you're using a VM with SQL Server 2012 or SQL Server 2014, you need to store your source database backup files on an Azure Storage Blob Container instead of using the network share option. Store the backup files as page blobs since block blobs are only supported in SQL 2016 and after.
 
-You must make sure the SQL IaaS Agent Extension in the target Azure Virtual Machine is in **Full mode** instead of Lightweight mode.
+-You must make sure the SQL IaaS Agent Extension in the target Azure Virtual Machine is in **Full mode** instead of Lightweight mode.
 
-SQL IaaS Agent Extension only supports management of Default Server Instance or Single Named Instance.
+-Migration to Azure SQL VM using DMS uses SQL IaaS agent internally. And SQL IaaS Agent Extension only supports management of Default Server Instance or Single Named Instance.
 
-The number of databases you can migrate to a SQL server Azure Virtual Machine depends on the hardware specification and workload, but there's no enforced limit. However, every migration operation (start migration, cutover) for each database takes a few minutes sequentially. For example, to migrate 100 databases, it might take approx. 200 (2 x 100) minutes to create the migration queues and approximately 100 (1 x 100) minutes to cutover all 100 databases (excluding backup and restore timing). Therefore, the migration becomes slower as the number of databases increases. You should either schedule a longer migration window in advance based on rigorous migration testing, or partitioning large number of databases into batches when migrating them to a SQL server Azure VM.
+<!--The number of databases you can migrate to a SQL server Azure Virtual Machine depends on the hardware specification and workload, but there's no enforced limit.-->
+-You can migrate a maximum of 100 databases to the same Azure SQL Server Virtual Machine as the target using one or more migrations simultaneously. Moreover, once a migration(s) with 100 databases finishes, wait for at least 30 minutes before starting a new migration to the same Azure SQL Server Virtual Machine as the Target. Also, every migration operation (start migration, cutover) for each database takes a few minutes sequentially. For example, to migrate 100 databases, it might take approx. 200 (2 x 100) minutes to create the migration queues and approximately 100 (1 x 100) minutes to cutover all 100 databases (excluding backup and restore timing). Therefore, the migration becomes slower as the number of databases increases. You should either schedule a longer migration window in advance based on rigorous migration testing, or partitioning large number of databases into batches when migrating them to a SQL server Azure VM.
 
-Apart from configuring the Networking/Firewall of your Azure Storage Account to allow your VM to access backup files. You also need to configure the Networking/Firewall of your SQL Server on Azure VM to allow outbound connection to your storage account.
+-Apart from configuring the Networking/Firewall of your Azure Storage Account to allow your VM to access backup files. You also need to configure the Networking/Firewall of your SQL Server on Azure VM to allow outbound connection to your storage account.
 
-You need to keep the target SQL Server on Azure VM power **ON** while the SQL Migration is in progress. Also, when creating a new migration, failover or cancel the migration.
+-You need to keep the target SQL Server on Azure VM power **ON** while the SQL Migration is in progress. Also, when creating a new migration, failover or cancel the migration.
 
 ### Possible error messages
 

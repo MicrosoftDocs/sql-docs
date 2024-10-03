@@ -1,19 +1,20 @@
 ---
-title: Monitor in Azure portal
-description: Describes the monitoring capabilities of SQL Server enabled by Azure Arc.
+title: Monitor SQL Server
+description: Learn about the monitoring capabilities of SQL Server enabled by Azure Arc.
 author: lcwright
 ms.author: lancewright
-ms.reviewer: mikeray
-ms.date: 11/26/2023
+ms.reviewer: mikeray, randolphwest
+ms.date: 09/09/2024
 ms.topic: conceptual
-ms.custom: ignite-2023
+ms.custom:
+  - ignite-2023
 ---
 
 # Monitor SQL Server enabled by Azure Arc (preview)
 
 [!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
-Monitor [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] with performance dashboard in the Azure portal. Performance metrics are automatically collected from DMV datasets on eligible instances of [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] and sent to the Azure telemetry pipeline for near real-time processing.
+You can monitor [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] by using the performance dashboard in the Azure portal. Performance metrics are automatically collected from dynamic management view (DMV) datasets on eligible instances of [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)]. The metrics are then sent to the Azure telemetry pipeline for near real-time processing.
 
 [!INCLUDE [azure-arc-sql-preview](includes/azure-arc-sql-preview.md)]
 
@@ -21,71 +22,65 @@ During the feature preview, monitoring is available for free. Fees for this feat
 
 To view metrics in the portal:
 
-1. Select an instance of [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)]
-1. Select **Monitoring** > **Performance Dashboard**
+1. Select an instance of [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)].
+1. Select **Monitoring** > **Performance Dashboard**.
 
-Monitoring is automatic, assuming all prerequisites are met.
+Monitoring is automatic, assuming that you meet all prerequisites.
 
-:::image type="content" source="media/overview/performance-dashboard.png" alt-text="Screenshot of performance dashboard for SQL Server enabled by Azure Arc." lightbox="media/overview/performance-dashboard.png":::
+:::image type="content" source="media/overview/performance-dashboard.png" alt-text="Screenshot of the performance dashboard for SQL Server enabled by Azure Arc." lightbox="media/overview/performance-dashboard.png":::
 
 ## Prerequisites
 
-In order for monitoring data to be collected on a [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] and view the performance metrics in Azure, the following conditions must be met:
+To collect monitoring data for [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] and view the performance metrics in Azure, you must meet the following conditions:
 
-* The version of Azure Extension for SQL Server (WindowsAgent.SqlServer) is v1.1.2504.99 or later
-* [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] is running on Windows operating system
-   - [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] running on [!INCLUDE [winserver2012-md](../../includes/winserver2012-md.md)] and older versions aren't supported
-* [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] is a Standard or Enterprise Edition
-* SQL Server version must be 2016 or later
-* The server has connectivity to `*.<region>.arcdataservices.com` (for more information, see [Network Requirements ](/azure/azure-arc/servers/network-requirements?tabs=azure-cloud))
-* The license type on the [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] is set to "License with Software Assurance" or "Pay-as-you-go"
-* To view the performance dashboard in the Azure portal, you must be assigned an Azure role with the action `Microsoft.AzureArcData/sqlServerInstances/getTelemetry/` assigned. For convenience, you can use the built-in role "Azure Hybrid Database Administrator - Read Only Service Role", which includes this action. (For more information, see [Learn more about Azure built-in roles](/azure/role-based-access-control/built-in-roles))
+- The version of Azure Extension for SQL Server (`WindowsAgent.SqlServer`) is v1.1.2504.99 or later.
+- [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] is running on the Windows operating system.
 
-### Current Limitations
+[!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] running on [!INCLUDE [winserver2012-md](../../includes/winserver2012-md.md)] R2 and older versions aren't supported.
 
-Failover cluster instances (FCI) aren't supported at this time.
+- [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] is a Standard or Enterprise edition.
+- The SQL Server version is 2016 or later.
+- The server has connectivity to `*.<region>.arcdataservices.com`. For more information, see the [network requirements](/azure/azure-arc/servers/network-requirements?tabs=azure-cloud).
+- The license type on [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] is Software Assurance or pay-as-you-go.
+- You have an Azure role with the action `Microsoft.AzureArcData/sqlServerInstances/getTelemetry/`. You can use the following built-in role, which includes this action: *Azure Hybrid Database Administrator - Read Only Service Role*. For more information, see [Azure built-in roles](/azure/role-based-access-control/built-in-roles).
+
+### Current limitations
+
+Failover cluster instances aren't supported at this time.
 
 ## Disable or enable collection
 
-> [!IMPORTANT]
-> In order to disable or enable data collection, the `sqlServer` extension must be on v1.1.2504.99 or later.
+### Azure portal
 
-### Using the Azure portal
+- On the resource page for [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)], select **Performance Dashboard (preview)**.
+- At the top of the **Performance Dashboard** pane, select **Configure**.
+- On the **Configure monitoring settings** pane, use the toggle to turn off or turn on the collection of monitoring data.
+- Select **Apply settings**.
 
-* On the resource page for a [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)], select the **Performance Dashboard (preview)** section.
-* At the top of the **Performance Dashboard** page, select **Configure**. The portal opens **Configure monitoring settings** on the right-hand side.
-* In **Configure monitoring settings**, toggle the option for monitoring data collection on or off.
-* Select **Apply settings**.
+### Azure CLI
 
-### Using the Azure CLI
-
-#### Disable monitoring data collection
-
-To disable monitoring data collection for your [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)], run the following command in the Azure CLI . Replace the placeholders for subscription ID, resource group, and resource name:
+To disable the collection of monitoring data for [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)], run the following command in the Azure CLI. Replace the placeholders for subscription ID, resource group, and resource name.
 
 ```azurecli
 az resource update --ids "/subscriptions/<sub_id>/resourceGroups/<resource_group>/providers/Microsoft.AzureArcData/SqlServerInstances/<resource_name>" --set 'properties.monitoring.enabled=false' --api-version 2023-09-01-preview
 ```
 
-#### Enable monitoring data collection
-
-To enable the monitoring data collection for a [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)], run the following command in the Azure CLI. Replace the placeholders for subscription ID, resource group, and resource name:
+To enable the collection of monitoring data for [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)], run the following command. Replace the placeholders for subscription ID, resource group, and resource name.
 
 ```azurecli
 az resource update --ids "/subscriptions/<sub_id>/resourceGroups/<resource_group>/providers/Microsoft.AzureArcData/SqlServerInstances/<resource_name>" --set 'properties.monitoring.enabled=true' --api-version 2023-09-01-preview
 ```
 
-This command might run successfully, but all [prerequisites]](#prerequisites) must be met for monitoring data to be collected and shown in the Azure portal.
+The command to enable collection might run successfully, but the Azure portal will collect and show monitoring data only if you meet all the [prerequisites](#prerequisites) listed earlier.
 
 ## Collected data
 
-The following lists reflect the monitoring data that is collected from DMV datasets on [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] when the monitoring feature is enabled. No personally identifiable information (PII), end-user identifiable information (EUII), or customer content is collected.
+The following lists reflect the monitoring data that the Azure portal collects from DMV datasets on [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] when you enable the monitoring feature. The portal doesn't collect any personal data or customer content.
 
 [!INCLUDE [azure-arc-data-regions](includes/dmv-collection.md)]
 
-## Next steps
-  
-* [[!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] and Databases activity logs](activity-logs.md)
-* [[!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] data collection and reporting](data-collection.md)
-* [Dynamic management views (DMVs)](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)
+## Related content
 
+- [Use activity logs with SQL Server enabled by Azure Arc](activity-logs.md)
+- [Data collection and reporting for SQL Server enabled by Azure Arc](data-collection.md)
+- [System dynamic management views](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)

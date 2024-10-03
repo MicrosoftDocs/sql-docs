@@ -17,18 +17,18 @@ helpviewer_keywords:
   - "sp_change_feed_enable_tables_after_reseed"
 dev_langs:
   - "TSQL"
-monikerRange: ">=sql-server-ver16||=azuresqldb-current||=fabric"
+monikerRange: "=azuresqldb-current || =fabric"
 ---
 # sys.sp_change_feed_enable_tables_after_reseed (Transact-SQL)
 
-[!INCLUDE [sqlserver2022-asdb-fabric](../../includes/applies-to-version/sqlserver2022-asdb-fabric.md)]
+[!INCLUDE [sqlserver2022-asdb-fabric](../../includes/applies-to-version/asdb-fabric.md)]
 
 Internal procedure that enables tables after reseed within the current database context.
 
-> [!NOTE]
-> This system stored procedure is used internally and is not recommended for direct administrative use. Use the Fabric portal instead. Using this procedure could introduce inconsistency.
+> [!NOTE]  
+> This system stored procedure is used internally and isn't recommended for direct administrative use. Use the Fabric portal instead. Using this procedure could introduce inconsistency.
 
-This system stored procedure is used for the Fabric Mirrored Database feature for Azure SQL Database. For more information, see [Microsoft Fabric mirrored databases (Preview)](/fabric/database/mirrored-database/overview).
+This system stored procedure is used for the Fabric Mirrored Database feature for Azure SQL Database. For more information, see [What is Mirroring in Fabric?](/fabric/database/mirrored-database/overview)
 
 ## Syntax
 
@@ -61,6 +61,6 @@ A user with [CONTROL database permissions](../security/permissions-database-engi
 - [sys.sp_change_feed_configure_parameters (Transact-SQL)](sp-change-feed-configure-parameters.md)
 - [sys.dm_change_feed_log_scan_sessions (Transact-SQL)](../system-dynamic-management-views/sys-dm-change-feed-log-scan-sessions.md)
 - [sys.dm_change_feed_errors (Transact-SQL)](../system-dynamic-management-views/sys-dm-change-feed-errors.md)
-- [Microsoft Fabric mirrored databases (Preview)](/fabric/database/mirrored-database/overview)
-- [Microsoft Fabric mirrored databases monitoring](/fabric/database/mirrored-database/monitor)
-- [Explore data in your Mirrored database using Microsoft Fabric](/fabric/database/mirrored-database/explore)
+- [What is Mirroring in Fabric?](/fabric/database/mirrored-database/overview)
+- [Monitor Fabric mirrored database replication](/fabric/database/mirrored-database/monitor)
+- [Explore data in your mirrored database using Microsoft Fabric](/fabric/database/mirrored-database/explore)

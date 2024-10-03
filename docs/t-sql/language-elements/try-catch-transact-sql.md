@@ -1,9 +1,9 @@
 ---
 title: "TRY...CATCH (Transact-SQL)"
-description: "TRY...CATCH (Transact-SQL)"
+description: "Implements error handling for Transact-SQL similar to the exception handling in C# and C++ languages."
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "03/16/2017"
+ms.date: 07/26/2024
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -25,316 +25,323 @@ helpviewer_keywords:
   - "CATCH block"
 dev_langs:
   - "TSQL"
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current||=fabric"
+monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric"
 ---
 # TRY...CATCH (Transact-SQL)
+
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw.md)]
 
+Implements error handling for [!INCLUDE [tsql](../../includes/tsql-md.md)] that is similar to the exception handling in the [!INCLUDE [c-sharp-md](../../includes/c-sharp-md.md)] and [!INCLUDE [vcprvc-md](../../includes/vcprvc-md.md)] languages. A group of [!INCLUDE [tsql](../../includes/tsql-md.md)] statements can be enclosed in a `TRY` block. If an error occurs in the `TRY` block, control is usually passed to another group of statements that is enclosed in a `CATCH` block.
 
-  Implements error handling for [!INCLUDE[tsql](../../includes/tsql-md.md)] that is similar to the exception handling in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C# and [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C++ languages. A group of [!INCLUDE[tsql](../../includes/tsql-md.md)] statements can be enclosed in a TRY block. If an error occurs in the TRY block, control is usually passed to another group of statements that is enclosed in a CATCH block.  
-  
- :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
-  
-## Syntax  
-  
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+
+## Syntax
+
 ```syntaxsql
-BEGIN TRY  
-     { sql_statement | statement_block }  
-END TRY  
-BEGIN CATCH  
-     [ { sql_statement | statement_block } ]  
-END CATCH  
-[ ; ]  
-```  
-  
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+BEGIN TRY
+    { sql_statement | statement_block }
+END TRY
+BEGIN CATCH
+    [ { sql_statement | statement_block } ]
+END CATCH
+[ ; ]
+```
 
 ## Arguments
- *sql_statement*  
- Is any [!INCLUDE[tsql](../../includes/tsql-md.md)] statement.  
-  
- *statement_block*  
- Any group of [!INCLUDE[tsql](../../includes/tsql-md.md)] statements in a batch or enclosed in a BEGIN...END block.  
-  
-## Remarks  
- A TRY...CATCH construct catches all execution errors that have a severity higher than 10 that do not close the database connection.  
-  
- A TRY block must be immediately followed by an associated CATCH block. Including any other statements between the END TRY and BEGIN CATCH statements generates a syntax error.  
-  
- A TRY...CATCH construct cannot span multiple batches. A TRY...CATCH construct cannot span multiple blocks of [!INCLUDE[tsql](../../includes/tsql-md.md)] statements. For example, a TRY...CATCH construct cannot span two BEGIN...END blocks of [!INCLUDE[tsql](../../includes/tsql-md.md)] statements and cannot span an IF...ELSE construct.  
-  
- If there are no errors in the code that is enclosed in a TRY block, when the last statement in the TRY block has finished running, control passes to the statement immediately after the associated END CATCH statement.
- 
- If there is an error in the code that is enclosed in a TRY block, control passes to the first statement in the associated CATCH block. When the code in the CATCH block finishes, control passes to the statement immediately after the END CATCH statement. 
- 
- > [!NOTE] 
- > If the END CATCH statement is the last statement in a stored procedure or trigger, control is passed back to the statement that called the stored procedure or fired the trigger. 
- 
- Errors trapped by a CATCH block are not returned to the calling application. If any part of the error information must be returned to the application, the code in the CATCH block must do so by using mechanisms such as SELECT result sets or the RAISERROR and PRINT statements.  
-  
- TRY...CATCH constructs can be nested. Either a TRY block or a CATCH block can contain nested TRY...CATCH constructs. For example, a CATCH block can contain an embedded TRY...CATCH construct to handle errors encountered by the CATCH code.  
-  
- Errors encountered in a CATCH block are treated like errors generated anywhere else. If the CATCH block contains a nested TRY...CATCH construct, any error in the nested TRY block will pass control to the nested CATCH block. If there is no nested TRY...CATCH construct, the error is passed back to the caller.  
-  
- TRY...CATCH constructs catch unhandled errors from stored procedures or triggers executed by the code in the TRY block. Alternatively, the stored procedures or triggers can contain their own TRY...CATCH constructs to handle errors generated by their code. For example, when a TRY block executes a stored procedure and an error occurs in the stored procedure, the error can be handled in the following ways:  
-  
--   If the stored procedure does not contain its own TRY...CATCH construct, the error returns control to the CATCH block associated with the TRY block that contains the EXECUTE statement.  
-  
--   If the stored procedure contains a TRY...CATCH construct, the error transfers control to the CATCH block in the stored procedure. When the CATCH block code finishes, control is passed back to the statement immediately after the EXECUTE statement that called the stored procedure.  
-  
- GOTO statements cannot be used to enter a TRY or CATCH block. GOTO statements can be used to jump to a label inside the same TRY or CATCH block or to leave a TRY or CATCH block.  
-  
- The TRY...CATCH construct cannot be used in a user-defined function.  
-  
-## Retrieving Error Information  
- In the scope of a CATCH block, the following system functions can be used to obtain information about the error that caused the CATCH block to be executed:  
-  
--   [ERROR_NUMBER()](../../t-sql/functions/error-number-transact-sql.md) returns the number of the error.  
-  
--   [ERROR_SEVERITY()](../../t-sql/functions/error-severity-transact-sql.md) returns the severity.  
-  
--   [ERROR_STATE()](../../t-sql/functions/error-state-transact-sql.md) returns the error state number.  
-  
--   [ERROR_PROCEDURE()](../../t-sql/functions/error-procedure-transact-sql.md) returns the name of the stored procedure or trigger where the error occurred.  
-  
--   [ERROR_LINE()](../../t-sql/functions/error-line-transact-sql.md) returns the line number inside the routine that caused the error.  
-  
--   [ERROR_MESSAGE()](../../t-sql/functions/error-message-transact-sql.md) returns the complete text of the error message. The text includes the values supplied for any substitutable parameters, such as lengths, object names, or times.  
-  
-These functions return NULL if they are called outside the scope of the CATCH block. Error information can be retrieved by using these functions from anywhere within the scope of the CATCH block. For example, the following script shows a stored procedure that contains error-handling functions. In the `CATCH` block of a `TRY...CATCH` construct, the stored procedure is called and information about the error is returned.  
-  
-```sql  
--- Verify that the stored procedure does not already exist.  
-IF OBJECT_ID ( 'usp_GetErrorInfo', 'P' ) IS NOT NULL   
-    DROP PROCEDURE usp_GetErrorInfo;  
-GO  
-  
--- Create procedure to retrieve error information.  
-CREATE PROCEDURE usp_GetErrorInfo  
-AS  
-SELECT  
-    ERROR_NUMBER() AS ErrorNumber  
-    ,ERROR_SEVERITY() AS ErrorSeverity  
-    ,ERROR_STATE() AS ErrorState  
-    ,ERROR_PROCEDURE() AS ErrorProcedure  
-    ,ERROR_LINE() AS ErrorLine  
-    ,ERROR_MESSAGE() AS ErrorMessage;  
-GO  
-  
-BEGIN TRY  
-    -- Generate divide-by-zero error.  
-    SELECT 1/0;  
-END TRY  
-BEGIN CATCH  
-    -- Execute error retrieval routine.  
-    EXECUTE usp_GetErrorInfo;  
-END CATCH;   
-```  
-  
- The ERROR\_\* functions also work in a `CATCH` block inside a [natively compiled stored procedure](../../relational-databases/in-memory-oltp/a-guide-to-query-processing-for-memory-optimized-tables.md).  
-  
-## Errors Unaffected by a TRY...CATCH Construct  
- TRY...CATCH constructs do not trap the following conditions:  
-  
--   Warnings or informational messages that have a severity of 10 or lower.  
-  
--   Errors that have a severity of 20 or higher that stop the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] task processing for the session. If an error occurs that has severity of 20 or higher and the database connection is not disrupted, TRY...CATCH will handle the error.  
-  
--   Attentions, such as client-interrupt requests or broken client connections.  
-  
--   When the session is ended by a system administrator by using the KILL statement.  
-  
-The following types of errors are not handled by a CATCH block when they occur at the same level of execution as the TRY...CATCH construct:  
-  
--   Compile errors, such as syntax errors, that prevent a batch from running.  
-  
--   Errors that occur during statement-level recompilation, such as object name resolution errors that occur after compilation because of deferred name resolution.  
--   Object name resolution errors   
 
-  
-These errors are returned to the level that ran the batch, stored procedure, or trigger.  
-  
-If an error occurs during compilation or statement-level recompilation at a lower execution level (for example, when executing sp_executesql or a user-defined stored procedure) inside the TRY block, the error occurs at a lower level than the TRY...CATCH construct and will be handled by the associated CATCH block.  
-  
-The following example shows how an object name resolution error generated by a `SELECT` statement is not caught by the `TRY...CATCH` construct, but is caught by the `CATCH` block when the same `SELECT` statement is executed inside a stored procedure.  
-  
-```sql  
-BEGIN TRY  
-    -- Table does not exist; object name resolution  
-    -- error not caught.  
-    SELECT * FROM NonexistentTable;  
-END TRY  
-BEGIN CATCH  
-    SELECT   
-        ERROR_NUMBER() AS ErrorNumber  
-       ,ERROR_MESSAGE() AS ErrorMessage;  
-END CATCH  
-```  
-  
- The error is not caught and control passes out of the `TRY...CATCH` construct to the next higher level.  
-  
- Running the `SELECT` statement inside a stored procedure will cause the error to occur at a level lower than the `TRY` block. The error will be handled by the `TRY...CATCH` construct.  
-  
-```sql  
--- Verify that the stored procedure does not exist.  
-IF OBJECT_ID ( N'usp_ExampleProc', N'P' ) IS NOT NULL   
-    DROP PROCEDURE usp_ExampleProc;  
-GO  
-  
--- Create a stored procedure that will cause an   
--- object resolution error.  
-CREATE PROCEDURE usp_ExampleProc  
-AS  
-    SELECT * FROM NonexistentTable;  
-GO  
-  
-BEGIN TRY  
-    EXECUTE usp_ExampleProc;  
-END TRY  
-BEGIN CATCH  
-    SELECT   
-        ERROR_NUMBER() AS ErrorNumber  
-        ,ERROR_MESSAGE() AS ErrorMessage;  
-END CATCH;  
-```  
-  
-## Uncommittable Transactions and XACT_STATE  
- If an error generated in a TRY block causes the state of the current transaction to be invalidated, the transaction is classified as an uncommittable transaction. An error that ordinarily ends a transaction outside a TRY block causes a transaction to enter an uncommittable state when the error occurs inside a TRY block. An uncommittable transaction can only perform read operations or a ROLLBACK TRANSACTION. The transaction cannot execute any [!INCLUDE[tsql](../../includes/tsql-md.md)] statements that would generate a write operation or a COMMIT TRANSACTION. The XACT_STATE function returns a value of -1 if a transaction has been classified as an uncommittable transaction. When a batch finishes, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] rolls back any active uncommittable transactions. If no error message was sent when the transaction entered an uncommittable state, when the batch finishes, an error message will be sent to the client application. This indicates that an uncommittable transaction was detected and rolled back.  
-  
- For more information about uncommittable transactions and the XACT_STATE function, see [XACT_STATE &#40;Transact-SQL&#41;](../../t-sql/functions/xact-state-transact-sql.md).  
-  
-## Examples  
-  
-### A. Using TRY...CATCH  
- The following example shows a `SELECT` statement that will generate a divide-by-zero error. The error causes execution to jump to the associated `CATCH` block.  
-  
-```sql  
-BEGIN TRY  
-    -- Generate a divide-by-zero error.  
-    SELECT 1/0;  
-END TRY  
-BEGIN CATCH  
-    SELECT  
-        ERROR_NUMBER() AS ErrorNumber  
-        ,ERROR_SEVERITY() AS ErrorSeverity  
-        ,ERROR_STATE() AS ErrorState  
-        ,ERROR_PROCEDURE() AS ErrorProcedure  
-        ,ERROR_LINE() AS ErrorLine  
-        ,ERROR_MESSAGE() AS ErrorMessage;  
-END CATCH;  
-GO  
-```  
-  
-### B. Using TRY...CATCH in a transaction  
- The following example shows how a `TRY...CATCH` block works inside a transaction. The statement inside the `TRY` block generates a constraint violation error.  
-  
-```sql  
-BEGIN TRANSACTION;  
-  
-BEGIN TRY  
-    -- Generate a constraint violation error.  
-    DELETE FROM Production.Product  
-    WHERE ProductID = 980;  
-END TRY  
-BEGIN CATCH  
-    SELECT   
-        ERROR_NUMBER() AS ErrorNumber  
-        ,ERROR_SEVERITY() AS ErrorSeverity  
-        ,ERROR_STATE() AS ErrorState  
-        ,ERROR_PROCEDURE() AS ErrorProcedure  
-        ,ERROR_LINE() AS ErrorLine  
-        ,ERROR_MESSAGE() AS ErrorMessage;  
-  
-    IF @@TRANCOUNT > 0  
-        ROLLBACK TRANSACTION;  
-END CATCH;  
-  
-IF @@TRANCOUNT > 0  
-    COMMIT TRANSACTION;  
-GO  
-```  
-  
-### C. Using TRY...CATCH with XACT_STATE  
- The following example shows how to use the `TRY...CATCH` construct to handle errors that occur inside a transaction. The `XACT_STATE` function determines whether the transaction should be committed or rolled back. In this example, `SET XACT_ABORT` is `ON`. This makes the transaction uncommittable when the constraint violation error occurs.  
-  
-```sql  
--- Check to see whether this stored procedure exists.  
-IF OBJECT_ID (N'usp_GetErrorInfo', N'P') IS NOT NULL  
-    DROP PROCEDURE usp_GetErrorInfo;  
-GO  
-  
--- Create procedure to retrieve error information.  
-CREATE PROCEDURE usp_GetErrorInfo  
-AS  
-    SELECT   
-         ERROR_NUMBER() AS ErrorNumber  
-        ,ERROR_SEVERITY() AS ErrorSeverity  
-        ,ERROR_STATE() AS ErrorState  
-        ,ERROR_LINE () AS ErrorLine  
-        ,ERROR_PROCEDURE() AS ErrorProcedure  
-        ,ERROR_MESSAGE() AS ErrorMessage;  
-GO  
-  
--- SET XACT_ABORT ON will cause the transaction to be uncommittable  
--- when the constraint violation occurs.   
-SET XACT_ABORT ON;  
-  
-BEGIN TRY  
-    BEGIN TRANSACTION;  
-        -- A FOREIGN KEY constraint exists on this table. This   
-        -- statement will generate a constraint violation error.  
-        DELETE FROM Production.Product  
-            WHERE ProductID = 980;  
-  
-    -- If the DELETE statement succeeds, commit the transaction.  
-    COMMIT TRANSACTION;  
-END TRY  
-BEGIN CATCH  
-    -- Execute error retrieval routine.  
-    EXECUTE usp_GetErrorInfo;  
-  
-    -- Test XACT_STATE:  
-        -- If 1, the transaction is committable.  
-        -- If -1, the transaction is uncommittable and should   
-        --     be rolled back.  
-        -- XACT_STATE = 0 means that there is no transaction and  
-        --     a commit or rollback operation would generate an error.  
-  
-    -- Test whether the transaction is uncommittable.  
-    IF (XACT_STATE()) = -1  
-    BEGIN  
-        PRINT  
-            N'The transaction is in an uncommittable state.' +  
-            'Rolling back transaction.'  
-        ROLLBACK TRANSACTION;  
-    END;  
-  
+#### *sql_statement*
+
+Any [!INCLUDE [tsql](../../includes/tsql-md.md)] statement.
+
+#### *statement_block*
+
+Any group of [!INCLUDE [tsql](../../includes/tsql-md.md)] statements in a batch or enclosed in a `BEGIN...END` block.
+
+## Remarks
+
+A `TRY...CATCH` construct catches all execution errors that have a severity higher than 10 that don't close the database connection.
+
+A `TRY` block must be immediately followed by an associated `CATCH` block. Including any other statements between the `END TRY` and `BEGIN CATCH` statements generates a syntax error.
+
+A `TRY...CATCH` construct can't span multiple batches. A `TRY...CATCH` construct can't span multiple blocks of [!INCLUDE [tsql](../../includes/tsql-md.md)] statements. For example, a `TRY...CATCH` construct can't span two `BEGIN...END` blocks of [!INCLUDE [tsql](../../includes/tsql-md.md)] statements, and can't span an `IF...ELSE` construct.
+
+If there are no errors in the code that is enclosed in a `TRY` block, when the last statement in the `TRY` block finishes, control passes to the statement immediately after the associated `END CATCH` statement.
+
+If there's an error in the code that is enclosed in a `TRY` block, control passes to the first statement in the associated `CATCH` block. When the code in the `CATCH` block finishes, control passes to the statement immediately after the `END CATCH` statement.
+
+> [!NOTE]  
+> If the `END CATCH` statement is the last statement in a stored procedure or trigger, control is passed back to the statement that called the stored procedure or fired the trigger.
+
+Errors trapped by a `CATCH` block aren't returned to the calling application. If any part of the error information must be returned to the application, the code in the `CATCH` block must do so by using mechanisms such as `SELECT` result sets or the `RAISERROR` and `PRINT` statements.
+
+`TRY...CATCH` constructs can be nested. Either a `TRY` block or a `CATCH` block can contain nested `TRY...CATCH` constructs. For example, a `CATCH` block can contain an embedded `TRY...CATCH` construct to handle errors encountered by the `CATCH` code.
+
+Errors encountered in a `CATCH` block are treated like errors generated anywhere else. If the `CATCH` block contains a nested `TRY...CATCH` construct, any error in the nested `TRY` block passes control to the nested `CATCH` block. If there's no nested `TRY...CATCH` construct, the error is passed back to the caller.
+
+`TRY...CATCH` constructs catch unhandled errors from stored procedures or triggers executed by the code in the `TRY` block. Alternatively, the stored procedures or triggers can contain their own `TRY...CATCH` constructs to handle errors generated by their code. For example, when a `TRY` block executes a stored procedure and an error occurs in the stored procedure, the error can be handled in the following ways:
+
+- If the stored procedure doesn't contain its own `TRY...CATCH` construct, the error returns control to the `CATCH` block associated with the `TRY` block that contains the `EXECUTE` statement.
+
+- If the stored procedure contains a `TRY...CATCH` construct, the error transfers control to the `CATCH` block in the stored procedure. When the `CATCH` block code finishes, control is passed back to the statement immediately after the `EXECUTE` statement that called the stored procedure.
+
+`GOTO` statements can't be used to enter a `TRY` or `CATCH` block. `GOTO` statements can be used to jump to a label inside the same `TRY` or `CATCH` block or to leave a `TRY` or `CATCH` block.
+
+The `TRY...CATCH` construct can't be used in a user-defined function.
+
+## Retrieve error information
+
+In the scope of a `CATCH` block, the following system functions can be used to obtain information about the error that caused the `CATCH` block to be executed:
+
+| Function | Description |
+| --- | --- |
+| [ERROR_NUMBER](../functions/error-number-transact-sql.md) | Returns the number of the error. |
+| [ERROR_SEVERITY](../functions/error-severity-transact-sql.md) | Returns the severity. |
+| [ERROR_STATE](../functions/error-state-transact-sql.md) | Returns the error state number. |
+| [ERROR_PROCEDURE](../functions/error-procedure-transact-sql.md) | Returns the name of the stored procedure or trigger where the error occurred. |
+| [ERROR_LINE](../functions/error-line-transact-sql.md) | Returns the line number inside the routine that caused the error. |
+| [ERROR_MESSAGE](../functions/error-message-transact-sql.md) | Returns the complete text of the error message. The text includes the values supplied for any substitutable parameters, such as lengths, object names, or times. |
+
+These functions return `NULL` if they're called outside the scope of the `CATCH` block. Error information can be retrieved by using these functions from anywhere within the scope of the `CATCH` block. For example, the following script shows a stored procedure that contains error-handling functions. In the `CATCH` block of a `TRY...CATCH` construct, the stored procedure is called and information about the error is returned.
+
+```sql
+-- Verify that the stored procedure does not already exist.
+IF OBJECT_ID('usp_GetErrorInfo', 'P') IS NOT NULL
+    DROP PROCEDURE usp_GetErrorInfo;
+GO
+
+-- Create procedure to retrieve error information.
+CREATE PROCEDURE usp_GetErrorInfo
+AS
+SELECT ERROR_NUMBER() AS ErrorNumber,
+    ERROR_SEVERITY() AS ErrorSeverity,
+    ERROR_STATE() AS ErrorState,
+    ERROR_PROCEDURE() AS ErrorProcedure,
+    ERROR_LINE() AS ErrorLine,
+    ERROR_MESSAGE() AS ErrorMessage;
+GO
+
+BEGIN TRY
+    -- Generate divide-by-zero error.
+    SELECT 1 / 0;
+END TRY
+
+BEGIN CATCH
+    -- Execute error retrieval routine.
+    EXECUTE usp_GetErrorInfo;
+END CATCH;
+```
+
+The `ERROR_*` functions also work in a `CATCH` block inside a [natively compiled stored procedure](../../relational-databases/in-memory-oltp/a-guide-to-query-processing-for-memory-optimized-tables.md).
+
+## Errors unaffected by a TRY...CATCH construct
+
+`TRY...CATCH` constructs don't trap the following conditions:
+
+- Warnings or informational messages that have a severity of 10 or lower.
+
+- Errors that have a severity of 20 or higher that stop the [!INCLUDE [ssDEnoversion](../../includes/ssdenoversion-md.md)] task processing for the session. If an error occurs that has severity of 20 or higher and the database connection isn't disrupted, `TRY...CATCH` handles the error.
+
+- Attentions, such as client-interrupt requests or broken client connections.
+
+- When a system administrator uses the `KILL` statement to end the session.
+
+The following types of errors aren't handled by a `CATCH` block when they occur at the same level of execution as the `TRY...CATCH` construct:
+
+- Compile errors, such as syntax errors, that prevent a batch from running.
+
+- Errors that occur during statement-level recompilation, such as object name resolution errors that occur after compilation because of deferred name resolution.
+
+- Object name resolution errors
+
+These errors are returned to the level that ran the batch, stored procedure, or trigger.
+
+If an error occurs during compilation or statement-level recompilation at a lower execution level (for example, when executing `sp_executesql` or a user-defined stored procedure) inside the `TRY` block, the error occurs at a lower level than the `TRY...CATCH` construct and will be handled by the associated `CATCH` block.
+
+The following example shows how an object name resolution error generated by a `SELECT` statement isn't caught by the `TRY...CATCH` construct, but is caught by the `CATCH` block when the same `SELECT` statement is executed inside a stored procedure.
+
+```sql
+BEGIN TRY
+    -- Table does not exist; object name resolution
+    -- error not caught.
+    SELECT *
+    FROM NonexistentTable;
+END TRY
+
+BEGIN CATCH
+    SELECT ERROR_NUMBER() AS ErrorNumber,
+        ERROR_MESSAGE() AS ErrorMessage;
+END CATCH
+```
+
+The error isn't caught and control passes out of the `TRY...CATCH` construct to the next higher level.
+
+Running the `SELECT` statement inside a stored procedure causes the error to occur at a level lower than the `TRY` block. The error is handled by the `TRY...CATCH` construct.
+
+```sql
+-- Verify that the stored procedure does not exist.
+IF OBJECT_ID(N'usp_ExampleProc', N'P') IS NOT NULL
+    DROP PROCEDURE usp_ExampleProc;
+GO
+
+-- Create a stored procedure that will cause an
+-- object resolution error.
+CREATE PROCEDURE usp_ExampleProc
+AS
+SELECT *
+FROM NonexistentTable;
+GO
+
+BEGIN TRY
+    EXECUTE usp_ExampleProc;
+END TRY
+
+BEGIN CATCH
+    SELECT ERROR_NUMBER() AS ErrorNumber,
+        ERROR_MESSAGE() AS ErrorMessage;
+END CATCH;
+```
+
+## Uncommittable transactions and XACT_STATE
+
+If an error generated in a `TRY` block causes the state of the current transaction to be invalidated, the transaction is classified as an uncommittable transaction. An error that ordinarily ends a transaction outside a `TRY` block causes a transaction to enter an uncommittable state when the error occurs inside a `TRY` block. An uncommittable transaction can only perform read operations or a `ROLLBACK TRANSACTION`. The transaction can't execute any [!INCLUDE [tsql](../../includes/tsql-md.md)] statements that would generate a write operation or a `COMMIT TRANSACTION`. The `XACT_STATE` function returns a value of `-1` if a transaction has been classified as an uncommittable transaction. When a batch finishes, the [!INCLUDE [ssDE](../../includes/ssde-md.md)] rolls back any active uncommittable transactions. If no error message was sent when the transaction entered an uncommittable state, when the batch finishes, an error message is sent to the client application. This indicates that an uncommittable transaction was detected and rolled back.
+
+For more information about uncommittable transactions and the `XACT_STATE` function, see [XACT_STATE](../functions/xact-state-transact-sql.md).
+
+## Examples
+
+### A. Use TRY...CATCH
+
+The following example shows a `SELECT` statement that generates a divide-by-zero error. The error causes execution to jump to the associated `CATCH` block.
+
+```sql
+BEGIN TRY
+    -- Generate a divide-by-zero error.
+    SELECT 1 / 0;
+END TRY
+
+BEGIN CATCH
+    SELECT ERROR_NUMBER() AS ErrorNumber,
+        ERROR_SEVERITY() AS ErrorSeverity,
+        ERROR_STATE() AS ErrorState,
+        ERROR_PROCEDURE() AS ErrorProcedure,
+        ERROR_LINE() AS ErrorLine,
+        ERROR_MESSAGE() AS ErrorMessage;
+END CATCH;
+GO
+```
+
+### B. Use TRY...CATCH in a transaction
+
+The following example shows how a `TRY...CATCH` block works inside a transaction. The statement inside the `TRY` block generates a constraint violation error.
+
+```sql
+BEGIN TRANSACTION;
+
+BEGIN TRY
+    -- Generate a constraint violation error.
+    DELETE
+    FROM Production.Product
+    WHERE ProductID = 980;
+END TRY
+
+BEGIN CATCH
+    SELECT ERROR_NUMBER() AS ErrorNumber,
+        ERROR_SEVERITY() AS ErrorSeverity,
+        ERROR_STATE() AS ErrorState,
+        ERROR_PROCEDURE() AS ErrorProcedure,
+        ERROR_LINE() AS ErrorLine,
+        ERROR_MESSAGE() AS ErrorMessage;
+
+    IF @@TRANCOUNT > 0
+        ROLLBACK TRANSACTION;
+END CATCH;
+
+IF @@TRANCOUNT > 0
+    COMMIT TRANSACTION;
+GO
+```
+
+### C. Use TRY...CATCH with XACT_STATE
+
+The following example shows how to use the `TRY...CATCH` construct to handle errors that occur inside a transaction. The `XACT_STATE` function determines whether the transaction should be committed or rolled back. In this example, `SET XACT_ABORT` is `ON`. This makes the transaction uncommittable when the constraint violation error occurs.
+
+```sql
+-- Check to see whether this stored procedure exists.
+IF OBJECT_ID(N'usp_GetErrorInfo', N'P') IS NOT NULL
+    DROP PROCEDURE usp_GetErrorInfo;
+GO
+
+-- Create procedure to retrieve error information.
+CREATE PROCEDURE usp_GetErrorInfo
+AS
+SELECT ERROR_NUMBER() AS ErrorNumber,
+    ERROR_SEVERITY() AS ErrorSeverity,
+    ERROR_STATE() AS ErrorState,
+    ERROR_LINE() AS ErrorLine,
+    ERROR_PROCEDURE() AS ErrorProcedure,
+    ERROR_MESSAGE() AS ErrorMessage;
+GO
+
+-- SET XACT_ABORT ON will cause the transaction to be uncommittable
+-- when the constraint violation occurs.
+SET XACT_ABORT ON;
+
+BEGIN TRY
+    BEGIN TRANSACTION;
+
+    -- A FOREIGN KEY constraint exists on this table. This
+    -- statement will generate a constraint violation error.
+    DELETE
+    FROM Production.Product
+    WHERE ProductID = 980;
+
+    -- If the DELETE statement succeeds, commit the transaction.
+    COMMIT TRANSACTION;
+END TRY
+
+BEGIN CATCH
+    -- Execute error retrieval routine.
+    EXECUTE usp_GetErrorInfo;
+
+    -- Test XACT_STATE:
+    -- If 1, the transaction is committable.
+    -- If -1, the transaction is uncommittable and should
+    --     be rolled back.
+    -- XACT_STATE = 0 means that there is no transaction and
+    --     a commit or rollback operation would generate an error.
+    -- Test whether the transaction is uncommittable.
+    IF (XACT_STATE()) = -1
+    BEGIN
+        PRINT N'The transaction is in an uncommittable state. Rolling back transaction.'
+
+        ROLLBACK TRANSACTION;
+    END;
+
     -- Test whether the transaction is committable.
     -- You may want to commit a transaction in a catch block if you want to commit changes to statements that ran prior to the error.
-    IF (XACT_STATE()) = 1  
-    BEGIN  
-        PRINT  
-            N'The transaction is committable.' +  
-            'Committing transaction.'  
-        COMMIT TRANSACTION;     
-    END;  
-END CATCH;  
-GO  
-```  
+    IF (XACT_STATE()) = 1
+    BEGIN
+        PRINT N'The transaction is committable. Committing transaction.'
 
-## See Also  
- [THROW &#40;Transact-SQL&#41;](../../t-sql/language-elements/throw-transact-sql.md)   
- [Database Engine Error Severities](../../relational-databases/errors-events/database-engine-error-severities.md)   
- [ERROR_LINE &#40;Transact-SQL&#41;](../../t-sql/functions/error-line-transact-sql.md)   
- [ERROR_MESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/error-message-transact-sql.md)   
- [ERROR_NUMBER &#40;Transact-SQL&#41;](../../t-sql/functions/error-number-transact-sql.md)   
- [ERROR_PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/functions/error-procedure-transact-sql.md)   
- [ERROR_SEVERITY &#40;Transact-SQL&#41;](../../t-sql/functions/error-severity-transact-sql.md)   
- [ERROR_STATE &#40;Transact-SQL&#41;](../../t-sql/functions/error-state-transact-sql.md)   
- [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)   
- [@@ERROR &#40;Transact-SQL&#41;](../../t-sql/functions/error-transact-sql.md)   
- [GOTO &#40;Transact-SQL&#41;](../../t-sql/language-elements/goto-transact-sql.md)   
- [BEGIN...END &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-end-transact-sql.md)   
- [XACT_STATE &#40;Transact-SQL&#41;](../../t-sql/functions/xact-state-transact-sql.md)   
- [SET XACT_ABORT &#40;Transact-SQL&#41;](../../t-sql/statements/set-xact-abort-transact-sql.md)  
-  
+        COMMIT TRANSACTION;
+    END;
+END CATCH;
+GO
+```
+
+## Related content
+
+- [THROW (Transact-SQL)](throw-transact-sql.md)
+- [Database Engine error severities](../../relational-databases/errors-events/database-engine-error-severities.md)
+- [ERROR_LINE (Transact-SQL)](../functions/error-line-transact-sql.md)
+- [ERROR_MESSAGE (Transact-SQL)](../functions/error-message-transact-sql.md)
+- [ERROR_NUMBER (Transact-SQL)](../functions/error-number-transact-sql.md)
+- [ERROR_PROCEDURE (Transact-SQL)](../functions/error-procedure-transact-sql.md)
+- [ERROR_SEVERITY (Transact-SQL)](../functions/error-severity-transact-sql.md)
+- [ERROR_STATE (Transact-SQL)](../functions/error-state-transact-sql.md)
+- [RAISERROR (Transact-SQL)](raiserror-transact-sql.md)
+- [&#x40;&#x40;ERROR (Transact-SQL)](../functions/error-transact-sql.md)
+- [GOTO (Transact-SQL)](goto-transact-sql.md)
+- [BEGIN...END (Transact-SQL)](begin-end-transact-sql.md)
+- [XACT_STATE (Transact-SQL)](../functions/xact-state-transact-sql.md)
+- [SET XACT_ABORT (Transact-SQL)](../statements/set-xact-abort-transact-sql.md)

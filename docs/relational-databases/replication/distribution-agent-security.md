@@ -3,11 +3,12 @@ title: "Distribution Agent Security"
 description: "Distribution Agent Security"
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/14/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: ui-reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 f1_keywords:
   - "sql13.rep.security.DA.f1"
 helpviewer_keywords:
@@ -77,7 +78,7 @@ The **Distribution Agent Security** dialog box allows you to specify the Windows
 -   For non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Subscribers, specify the database login at the Subscriber that should be used when the Distribution Agent connects to the Subscriber. The login should have sufficient permissions to create objects in the subscription database. For more information about configuring non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Subscribers, see [Create a Subscription for a Non-SQL Server Subscriber](../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md).  
   
  **Additional connection options**  
- Non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Subscribers only. Specify any connection options for the Subscriber in the form of a connection string (Oracle does not require additional options). Each option should be separated by a semi-colon. The following is an example of an IBM DB2 connection string (line breaks are for readability):  
+ Non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Subscribers only. Specify any connection options for the Subscriber in the form of a connection string (Oracle does not require additional options). Each option should be separated by a semi-colon. The following is an example of an IBM Db2 connection string (line breaks are for readability):  
   
 ```  
 Provider=DB2OLEDB;Initial Catalog=MY_SUBSCRIBER_DB;Network Transport Library=TCP;Host CCSID=1252;  
@@ -86,14 +87,14 @@ Default Schema=MY_SCHEMA;Process Binary as Character=False;Units of Work=RUW;DBM
 Persist Security Info=False;Connection Pooling=True;  
 ```  
   
- Most of the options in the string are specific to the DB2 server you are configuring, but the **Process Binary as Character** option should always be set to **False**. A value is required for the **Initial Catalog** option to identify the subscription database. For more information, see [IBM DB2 Subscribers](../../relational-databases/replication/non-sql/ibm-db2-subscribers.md).  
+ Most of the options in the string are specific to the DB2 server you are configuring, but the **Process Binary as Character** option should always be set to **False**. A value is required for the **Initial Catalog** option to identify the subscription database. For more information, see [IBM Db2 Subscribers](../../relational-databases/replication/non-sql/ibm-db2-subscribers.md).  
   
 ## See Also  
- [Identity and access control for replication](../../relational-databases/replication/security/identity-and-access-control-replication.md)   
- [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md)   
- [Replication Agents Overview](../../relational-databases/replication/agents/replication-agents-overview.md)   
- [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md)   
- [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)  
+-  [Identity and access control for replication](../../relational-databases/replication/security/identity-and-access-control-replication.md)   
+-  [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md)   
+-  [Replication Agents Overview](../../relational-databases/replication/agents/replication-agents-overview.md)   
+-  [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md)   
+-  [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)  
 ::: moniker-end
   
 ::: moniker range="azuresqldb-mi-current"
@@ -141,7 +142,7 @@ For pull subscriptions, select whether the Distribution Agent should make connec
 -   For non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Subscribers, specify the database login at the Subscriber that should be used when the Distribution Agent connects to the Subscriber. The login should have sufficient permissions to create objects in the subscription database. For more information about configuring non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Subscribers, see [Create a Subscription for a Non-SQL Server Subscriber](../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md).  
   
  **Additional connection options**  
- Non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Subscribers only. Specify any connection options for the Subscriber in the form of a connection string (Oracle does not require additional options). Each option should be separated by a semi-colon. The following is an example of an IBM DB2 connection string (line breaks are for readability):  
+ Non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Subscribers only. Specify any connection options for the Subscriber in the form of a connection string (Oracle does not require additional options). Each option should be separated by a semi-colon. The following is an example of an IBM Db2 connection string (line breaks are for readability):  
   
 ```  
 Provider=DB2OLEDB;Initial Catalog=MY_SUBSCRIBER_DB;Network Transport Library=TCP;Host CCSID=1252;  
@@ -150,11 +151,11 @@ Default Schema=MY_SCHEMA;Process Binary as Character=False;Units of Work=RUW;DBM
 Persist Security Info=False;Connection Pooling=True;  
 ```  
   
- Most of the options in the string are specific to the DB2 server you are configuring, but the **Process Binary as Character** option should always be set to **False**. A value is required for the **Initial Catalog** option to identify the subscription database. For more information, see [IBM DB2 Subscribers](../../relational-databases/replication/non-sql/ibm-db2-subscribers.md).  
+ Most of the options in the string are specific to the DB2 server you are configuring, but the **Process Binary as Character** option should always be set to **False**. A value is required for the **Initial Catalog** option to identify the subscription database. For more information, see [IBM Db2 Subscribers](../../relational-databases/replication/non-sql/ibm-db2-subscribers.md).  
   
 ## See Also  
- [Transactional replication with Azure SQL Database](/azure/sql-database/sql-database-managed-instance-transactional-replication)
- [Configure replication for Azure SQL Managed Instance](/azure/sql-database/replication-with-sql-database-managed-instance)
+-  [Transactional replication with Azure SQL Database](/azure/sql-database/sql-database-managed-instance-transactional-replication)
+-  [Configure replication for Azure SQL Managed Instance](/azure/sql-database/replication-with-sql-database-managed-instance)
 ::: moniker-end
 
 

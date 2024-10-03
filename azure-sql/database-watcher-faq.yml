@@ -5,9 +5,9 @@ metadata:
   description: Frequently asked questions about database watcher for Azure SQL
   author: dimitri-furman
   ms.author: dfurman
-  ms.date: 04/30/2024
+  ms.date: 09/19/2024
   ms.reviewer: wiassaf
-  ms.service: sql-db-mi
+  ms.service: azure-sql
   ms.subservice: monitoring
   ms.topic: faq
   ms.custom: subject-monitoring
@@ -18,7 +18,7 @@ summary: |
 
   This article provides answers to frequently asked questions about database watcher for Azure SQL. It is intended for readers who have a general understanding of Azure SQL, and are looking for answers to specific, commonly asked questions about database watcher.
 
-  For an overview of database watcher, see [Monitor Azure SQL workloads with database watcher](database-watcher-overview.md).
+  For an overview of database watcher, see [Monitor Azure SQL workloads with database watcher (preview)](database-watcher-overview.md).
 
 sections:
   - name: General
@@ -37,11 +37,6 @@ sections:
           Does database watcher support other SQL offerings in Azure or on-premises, or other database services?
         answer: |
           Not at this time. For planned improvements to database watcher, see the roadmap section in the database watcher [preview announcement](https://aka.ms/dbwatcher-preview-announcement). For more information about performance monitoring for Arc-enabled SQL Server, see [Monitor SQL Server enabled by Azure Arc (preview)](/sql/sql-server/azure-arc/sql-monitoring).
-
-      - question: |
-          Microsoft provides two other monitoring solutions for Azure SQL: Azure SQL Analytics (preview) and SQL Insights (preview). Which solution should I use?
-        answer: |
-          We recommend using database watcher as a managed monitoring solution that provides low data ingestion latency, estate-level monitoring, comprehensive monitoring data including query-level details, and support for advanced analytics on collected monitoring data. For more information about the older monitoring solutions, see the [preview announcement](https://aka.ms/dbwatcher-preview-announcement).
 
       - question: |
           What kind of data visualization solutions can I use with database watcher?
@@ -69,7 +64,7 @@ sections:
 
       - question: |
           Does it support cross-subscription and cross-tenant monitoring?
-        answer: The watcher and the SQL targets it monitors can be in different subscriptions within the same Microsoft Entra ID tenant. The watcher and its data store can be in different subscriptions in the same Microsoft Entra ID tenant, or in different tenants.
+        answer: The watcher and the SQL targets it monitors can be in different subscriptions within the same Microsoft Entra ID tenant. Similarly, if the watcher is using a database on an Azure Data Explorer cluster as its data store, the cluster must be in any subscription within the same tenant as the watcher. If you want to monitor SQL targets in multiple tenants using a single data store, create a watcher in each tenant, and use a database in either [Real-Time Analytics](/fabric/real-time-analytics/overview) or on a [free Azure Data Explorer cluster](/azure/data-explorer/start-for-free) as the data store for all watchers. For more information, see [Monitor large estates](database-watcher-manage.md#monitor-large-estates).
 
   - name: Watcher
     questions:
@@ -101,7 +96,7 @@ sections:
     questions:
       - question: |
           Which data services are supported as the data store for the SQL monitoring data?
-        answer: You can use a database on an [Azure Data Explorer cluster](/azure/data-explorer/data-explorer-overview), on a [free Azure Data Explorer cluster](/azure/data-explorer/start-for-free), or in [Real-Time Analytics](/fabric/real-time-analytics/overview) in Microsoft Fabric. To compare between these options, see [What is the difference between Real-Time Analytics and Azure Data Explorer?](/fabric/real-time-analytics/realtime-analytics-compare).
+        answer: You can use a database on an [Azure Data Explorer cluster](/azure/data-explorer/data-explorer-overview), on a [free Azure Data Explorer cluster](/azure/data-explorer/start-for-free), or in [Real-Time Analytics](/fabric/real-time-analytics/overview) in Microsoft Fabric. To compare between these options, see [What is the difference between Real-Time Analytics and Azure Data Explorer?](/fabric/real-time-analytics/realtime-analytics-compare)
 
       - question: |
           I already have an Azure Data Explorer cluster. Can I use it for my database watcher data store?
@@ -110,6 +105,10 @@ sections:
       - question: |
           How can I query and analyze SQL monitoring data?
         answer: You can use Kusto Query Language (KQL) to query this data. See [Use KQL to analyze monitoring data](database-watcher-analyze.md#use-kql-to-analyze-monitoring-data). KQL [provides](/azure/data-explorer/kusto/query/) many advantages for analyzing telemetry data. However, you do not need to learn KQL to use database watcher. You can connect to the data store using SQL Server Management Studio, Azure Data Studio, or any other SQL client tool, and [use T-SQL](database-watcher-analyze.md#use-t-sql-to-analyze-monitoring-data) to query your SQL monitoring data.
+
+      - question: |
+          Can I query SQL monitoring data in Azure Data Explorer from a Log Analytics workspace?
+        answer: Yes. You can execute a KQL query in a Log Analytics workspace that references tables in Azure Data Explorer. For more information, see [Correlate data in Azure Data Explorer with data in a Log Analytics workspace](/azure/azure-monitor/logs/azure-monitor-data-explorer-proxy).
 
       - question: |
           Can I export SQL monitoring data from Azure Data Explorer?

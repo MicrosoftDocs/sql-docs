@@ -25,7 +25,7 @@ You can use PowerShell to manage Always Encrypted keys both with and without rol
 
 ## Prerequisites
 
-Install the [SqlServer PowerShell module version 22.0.50 or later](/powershell/sqlserver/sqlserver/vlatest/sqlserver) on a secure computer that is NOT a computer hosting your SQL Server instance. The module can be installed directly from the PowerShell gallery.  See the [download](../../../powershell/download-sql-server-ps-module.md) instructions for more details.
+Install the [SqlServer PowerShell module version 22.0.50 or later](/powershell/sqlserver/sqlserver/vlatest/sqlserver) on a secure computer that is NOT a computer hosting your SQL Server instance. The module can be installed directly from the PowerShell gallery.  See the [download](/powershell/sql-server/download-sql-server-ps-module) instructions for more details.
 
 
 ## <a name="importsqlservermodule"></a> Importing the SqlServer module 
@@ -76,7 +76,7 @@ $database | Get-SqlColumnMasterKey
 ```
 
 ### Using SQL Server PowerShell Provider
-The [SQL Server PowerShell Provider](../../../powershell/sql-server-powershell-provider.md) exposes the hierarchy of SQL Server objects in paths similar to file system paths. With SQL Server PowerShell, you can navigate the paths using Windows PowerShell aliases similar to the commands you typically use to navigate file system paths. Once you navigate to the target instance and the database, the subsequent cmdlets target that database, as shown in the following example. 
+The [SQL Server PowerShell Provider](/powershell/sql-server/sql-server-powershell-provider) exposes the hierarchy of SQL Server objects in paths similar to file system paths. With SQL Server PowerShell, you can navigate the paths using Windows PowerShell aliases similar to the commands you typically use to navigate file system paths. Once you navigate to the target instance and the database, the subsequent cmdlets target that database, as shown in the following example. 
 
 > [!NOTE]
 > This method of connecting to a database works only for SQL Server (it is not supported in Azure SQL Database).

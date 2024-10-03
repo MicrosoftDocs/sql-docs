@@ -39,8 +39,6 @@ ROW_NUMBER ( )
     OVER ( [ PARTITION BY value_expression , ... [ n ] ] order_by_clause )  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
  PARTITION BY *value_expression*  
  Divides the result set produced by the [FROM](../../t-sql/queries/from-transact-sql.md) clause into partitions to which the ROW_NUMBER function is applied. *value_expression* specifies the column by which the result set is partitioned. If `PARTITION BY` is not specified, the function treats all rows of the query result set as a single group. For more information, see [OVER Clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
@@ -54,14 +52,16 @@ ROW_NUMBER ( )
 ## General Remarks  
  There is no guarantee that the rows returned by a query using `ROW_NUMBER()` will be ordered exactly the same with each execution unless the following conditions are true.  
   
-1.  Values of the partitioned column are unique.  
-  
-2.  Values of the `ORDER BY` columns are unique.  
-  
-3.  Combinations of values of the partition column and `ORDER BY` columns are unique.  
-  
- `ROW_NUMBER()` is nondeterministic. For more information, see [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).  
-  
+- Values of the partitioned column are unique. 
+
+- Values of the `ORDER BY` columns are unique.
+
+- Combinations of values of the partition column and `ORDER BY` columns are unique.  
+
+If the `ORDER BY` columns are not unique within the results, consider using `RANK()` or `DENSE_RANK()`.
+
+`ROW_NUMBER()` is nondeterministic. For more information, see [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).  
+
 ## Examples  
   
 ### A. Simple examples 
@@ -104,7 +104,7 @@ WHERE database_id < 5;
 |3 |msdb |SIMPLE |
 |4 |tempdb |SIMPLE |
 
-Adding a `PARTITION BY` clause on the `recovery_model_desc` column, will restart the numbering when the `recovery_model_desc` value changes. 
+The `PARTITION BY` clause on the `recovery_model_desc` column, restarts the numbering when the `recovery_model_desc` value changes. 
  
 ```sql
 SELECT 

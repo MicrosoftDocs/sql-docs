@@ -31,8 +31,6 @@ This function returns the status of the last cursor FETCH statement issued again
 @@FETCH_STATUS  
 ```  
 
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Return Type  
  **integer**  
   

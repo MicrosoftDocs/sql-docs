@@ -2,8 +2,8 @@
 title: "Quickstart: Python functions"
 titleSuffix: SQL machine learning
 description: In this quickstart, you'll learn how to use Python mathematical and utility functions with SQL machine learning.
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: VanMSFT
+ms.author: vanto
 ms.date: 09/28/2020
 ms.service: sql
 ms.subservice: machine-learning
@@ -26,7 +26,7 @@ You need the following prerequisites to run this quickstart.
   - SQL Server Big Data Clusters. See how to [enable Machine Learning Services on SQL Server Big Data Clusters](../../big-data-cluster/machine-learning-services.md).
   - Azure SQL Managed Instance Machine Learning Services. For information, see the [Azure SQL Managed Instance Machine Learning Services overview](/azure/azure-sql/managed-instance/machine-learning-services-overview).
 
-- A tool for running SQL queries that contain Python scripts. This quickstart uses [Azure Data Studio](../../azure-data-studio/what-is-azure-data-studio.md).
+- A tool for running SQL queries that contain Python scripts. This quickstart uses [Azure Data Studio](/azure-data-studio/what-is-azure-data-studio).
 
 ## Create a stored procedure to generate random numbers
 

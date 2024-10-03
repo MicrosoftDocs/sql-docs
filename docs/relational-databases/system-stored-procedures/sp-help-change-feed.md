@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "sp_help_change_feed"
 dev_langs:
   - "TSQL"
-monikerRange: ">=sql-server-ver16||=azuresqldb-current||=fabric||=azure-sqldw-latest"
+monikerRange: ">=sql-server-ver16 || =azuresqldb-current || =fabric || =azure-sqldw-latest"
 ---
 # sys.sp_help_change_feed (Transact-SQL)
 
@@ -28,7 +28,7 @@ Monitors the current configuration of the change feed.
 This system stored procedure is used for:
 
 - The Azure Synapse Link feature for SQL Server instances and Azure SQL Database. For more information, see [Manage Azure Synapse Link for SQL Server and Azure SQL Database](../../sql-server/synapse-link/synapse-link-sql-server-change-feed-manage.md).
-- The Fabric Mirrored Database feature for Azure SQL Database. For more information, see [Microsoft Fabric mirrored databases (Preview)](/fabric/database/mirrored-database/overview).
+- The Fabric Mirrored Database feature for Azure SQL Database. For more information, see [What is Mirroring in Fabric?](/fabric/database/mirrored-database/overview)
 
 ## Syntax
 
@@ -60,7 +60,7 @@ EXECUTE sys.sp_help_change_feed;
 | `snapshot_start_time` | **datetime** | Start time of snapshot phase |
 | `snapshot_end_time` | **datetime** | End time of snapshot phase |
 | `snapshot_row_count` | **int** | The number of rows of data being exported during the snapshot operation of the change feed table |
-| `destination_type` | **int**| `0` = Azure Synapse Link. `2` = Fabric mirroring. |
+| `destination_type` | **int** | `0` = Azure Synapse Link. `2` = Fabric mirroring. |
 
 ## Permissions
 
@@ -68,7 +68,7 @@ Currently, only a member of the **sysadmin** server role or **db_owner** role, o
 
 ## Examples
 
- To check the status of tables and metadata:
+To check the status of tables and metadata:
 
 ```sql
 EXEC sp_help_change_feed;
@@ -85,8 +85,8 @@ EXEC sp_help_change_feed;
 
 **For Microsoft Fabric mirrored databases**:
 
-- [Microsoft Fabric mirrored databases (Preview)](/fabric/database/mirrored-database/overview)
-- [Microsoft Fabric mirrored databases monitoring](/fabric/database/mirrored-database/monitor)
+- [What is Mirroring in Fabric?](/fabric/database/mirrored-database/overview)
+- [Monitor Fabric mirrored database replication](/fabric/database/mirrored-database/monitor)
 - [Explore data in your Mirrored database using Microsoft Fabric](/fabric/database/mirrored-database/explore)
 
 **For Azure Synapse Link**:

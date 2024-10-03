@@ -4,11 +4,13 @@ description: The vCore purchasing model lets you independently scale compute and
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: sashan, moslake, mathoma, dfurman, srinia
-ms.date: 06/11/2024
-ms.service: sql-database
+ms.date: 09/12/2024
+ms.service: azure-sql-database
 ms.subservice: performance
 ms.topic: conceptual
-ms.custom: references_regions, azure-sql-split, ignite-2023
+ms.custom:
+  - references_regions
+  - azure-sql-split
 ---
 # vCore purchasing model - Azure SQL Database
 
@@ -18,7 +20,7 @@ ms.custom: references_regions, azure-sql-split, ignite-2023
 > * [Azure SQL Database](service-tiers-sql-database-vcore.md?view=azuresql-db&preserve-view=true)
 > * [Azure SQL Managed Instance](../managed-instance/service-tiers-managed-instance-vcore.md?view=azuresql-mi&preserve-view=true)
 
-This article reviews the [vCore purchasing model](service-tiers-vcore.md) for [Azure SQL Database](sql-database-paas-overview.md). 
+This article reviews the [vCore purchasing model](service-tiers-sql-database-vcore.md) for [Azure SQL Database](sql-database-paas-overview.md). 
 
 ## Overview
 
@@ -110,12 +112,12 @@ Service tier options in the vCore purchasing model include General Purpose, Busi
 | **Backups** | A choice of geo-redundant, zone-redundant, or locally redundant backup storage, 1-35 day retention (default 7 days) <br/> Long term retention available up to 10 years | A choice of geo-redundant, zone-redundant, or locally redundant backup storage, 1-35 day retention (default 7 days) <br/> Long term retention available up to 10 years  | A choice of locally redundant (LRS), zone-redundant (ZRS), or geo-redundant (GRS) storage <br/> 1-35 days (7 days by default) retention, with up to 10 years of long-term retention available |
 |**Availability**|One replica, no read-scale replicas, <br/>zone-redundant high availability (HA) |Three replicas, one [read-scale replica](read-scale-out.md),<br/>zone-redundant high availability (HA)|zone-redundant high availability (HA)|
 |**Pricing/billing**  | [vCore, reserved storage, and backup storage](https://azure.microsoft.com/pricing/details/sql-database/single/) are charged. <br/>IOPS aren't charged. |[vCore, reserved storage, and backup storage](https://azure.microsoft.com/pricing/details/sql-database/single/) are charged. <br/>IOPS aren't charged. |  [vCore for each replica and used storage](https://azure.microsoft.com/pricing/details/sql-database/single/) are charged. <br/>IOPS aren't charged. |
-|**Discount models**| [Reserved instances](reserved-capacity-overview.md)<br/>[Azure Hybrid Benefit](../azure-hybrid-benefit.md) (not available on dev/test subscriptions)<br/>[Enterprise](https://azure.microsoft.com/offers/ms-azr-0148p/) and [Pay-As-You-Go](https://azure.microsoft.com/offers/ms-azr-0023p/) Dev/Test subscriptions|[Reserved instances](reserved-capacity-overview.md)<br/>[Azure Hybrid Benefit](../azure-hybrid-benefit.md) (not available on dev/test subscriptions)<br/>[Enterprise](https://azure.microsoft.com/offers/ms-azr-0148p/) and [Pay-As-You-Go](https://azure.microsoft.com/offers/ms-azr-0023p/) Dev/Test subscriptions  | [Azure Hybrid Benefit](../azure-hybrid-benefit.md) (not available on dev/test subscriptions) <sup>1</sup><br/>[Enterprise](https://azure.microsoft.com/offers/ms-azr-0148p/) and [Pay-As-You-Go](https://azure.microsoft.com/offers/ms-azr-0023p/) Dev/Test subscriptions|
+|**Discount models**| [Reserved instances](reserved-capacity-overview.md)<br/>[Azure Hybrid Benefit](../azure-hybrid-benefit.md) (not available on dev/test subscriptions)<br/>[Enterprise](https://azure.microsoft.com/offers/ms-azr-0148p/) and [Pay-As-You-Go Dev/Test offer](https://azure.microsoft.com/offers/ms-azr-0023p/) subscriptions|[Reserved instances](reserved-capacity-overview.md)<br/>[Azure Hybrid Benefit](../azure-hybrid-benefit.md) (not available on dev/test subscriptions)<br/>[Enterprise](https://azure.microsoft.com/offers/ms-azr-0148p/) and [Pay-As-You-Go Dev/Test offer](https://azure.microsoft.com/offers/ms-azr-0023p/) subscriptions  | [Azure Hybrid Benefit](../azure-hybrid-benefit.md) (not available on dev/test subscriptions) <sup>1</sup><br/>[Enterprise](https://azure.microsoft.com/offers/ms-azr-0148p/) and [Pay-As-You-Go Dev/Test offer](https://azure.microsoft.com/offers/ms-azr-0023p/) subscriptions|
+|**In-memory OLTP tables**| No | Yes | [No](service-tier-hyperscale.md#known-limitations) |
 
 <sup>1</sup> Simplified pricing for SQL Database Hyperscale coming soon. Review the [Hyperscale pricing blog](https://aka.ms/hsignite2023) for details.
 
 For greater details, review resource limits for [logical server](resource-limits-logical-server.md), [single databases](resource-limits-vcore-single-databases.md), and [pooled databases](resource-limits-vcore-elastic-pools.md). 
-
 
 > [!NOTE]
 > For more information on the Service Level Agreement (SLA), see [SLA for Azure SQL Database](https://azure.microsoft.com/support/legal/sla/azure-sql-database/) 
@@ -126,7 +128,7 @@ The architectural model for the General Purpose service tier is based on a separ
 
 The following figure shows four nodes in standard architectural model with the separated compute and storage layers.
 
-:::image type="content" source="media/service-tier-general-purpose/general-purpose-service-tier.png" alt-text="Diagram illustrating the separation of compute and storage.":::
+:::image type="content" source="media/service-tiers-sql-database-vcore/general-purpose-service-tier.png" alt-text="Diagram illustrating the separation of compute and storage.":::
 
 In the architectural model for the General Purpose service tier, there are two layers:
 
@@ -145,7 +147,7 @@ The Business Critical service tier model is based on a cluster of database engin
 
 In the Business Critical model, compute and storage is integrated on each node. Replication of data between database engine processes on each node of a four-node cluster achieves high availability, with each node using locally attached SSD as data storage. The following diagram shows how the Business Critical service tier organizes a cluster of database engine nodes in availability group replicas.
 
-:::image type="content" source="media/service-tier-business-critical/business-critical-service-tier.png" alt-text="Diagram showing how the Business Critical service tier organizes a cluster of database engine nodes in availability group replicas." lightbox="media/service-tier-business-critical/business-critical-service-tier.png":::
+:::image type="content" source="media/service-tiers-sql-database-vcore/business-critical-service-tier.png" alt-text="Diagram showing how the Business Critical service tier organizes a cluster of database engine nodes in availability group replicas." lightbox="media/service-tiers-sql-database-vcore/business-critical-service-tier.png":::
 
 Both the database engine process and underlying .mdf/.ldf files are placed on the same node with locally attached SSD storage, providing low latency to your workload. High availability is implemented using technology similar to SQL Server [Always On availability groups](/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server). Every database is a cluster of database nodes with one primary replica that is accessible for customer workloads, and three secondary replicas containing copies of data. The primary replica constantly pushes changes to the secondary replicas in order to ensure the data is available on secondary replicas if the primary fails for any reason. Failover is handled by the Service Fabric and the database engine – one secondary replica becomes the primary, and a new secondary replica is created to ensure there are enough nodes in the cluster. The workload is automatically redirected to the new primary replica.
 
@@ -228,7 +230,7 @@ Standard-series (Gen5) hardware is available in all public regions worldwide.
 - Premium-series hardware options use the latest CPU and memory technology from Intel and AMD. Premium-series provides a boost to compute performance relative to standard-series hardware.
 - Premium-series option offers faster CPU performance compared to Standard-series and a higher number of maximum vCores.
 - Premium-series memory optimized option offers double the amount of memory relative to Standard-series.
-- Standard-series, premium-series, and premium-series memory optimized are available for [Hyperscale elastic pools (preview)](hyperscale-elastic-pool-overview.md).
+- Standard-series, premium-series, and premium-series memory optimized are available for [Hyperscale elastic pools](hyperscale-elastic-pool-overview.md).
 
 For more information, see the [Hyperscale premium series blog announcement](https://aka.ms/AAiq28n).
  
@@ -267,17 +269,17 @@ For detailed information, see [Create a SQL Database](single-database-create-qui
 
 On the **Basics** tab, select the **Configure database** link in the **Compute + storage** section, and then select the **Change configuration** link:
 
-:::image type="content" source="media/service-tiers-vcore/configure-sql-database.png" alt-text="Screenshot of the Azure portal Create SQL Database deployment, on the Configure page. The Change configuration button is highlighted." lightbox="media/service-tiers-vcore/configure-sql-database.png":::
+:::image type="content" source="media/service-tiers-sql-database-vcore/configure-sql-database.png" alt-text="Screenshot of the Azure portal Create SQL Database deployment, on the Configure page. The Change configuration button is highlighted." lightbox="media/service-tiers-sql-database-vcore/configure-sql-database.png":::
 
 Select the desired hardware configuration:
 
-:::image type="content" source="media/service-tiers-vcore/select-hardware.png" alt-text="Screenshot of the Azure portal on the SQL hardware configuration page for an Azure SQL database." lightbox="media/service-tiers-vcore/select-hardware.png":::
+:::image type="content" source="media/service-tiers-sql-database-vcore/select-hardware.png" alt-text="Screenshot of the Azure portal on the SQL hardware configuration page for an Azure SQL database." lightbox="media/service-tiers-sql-database-vcore/select-hardware.png":::
 
 **To change hardware configuration of an existing SQL Database or pool**
 
 For a database, on the Overview page, select the **Pricing tier** link:
 
-:::image type="content" source="media/service-tiers-vcore/change-hardware.png" alt-text="Screenshot of the Azure portal on the overview page of Azure SQL Database. The pricing tier 'General Purpose: Standard-series (Gen5), 2 vCores' is highlighted." lightbox="media/service-tiers-vcore/change-hardware.png":::
+:::image type="content" source="media/service-tiers-sql-database-vcore/change-hardware.png" alt-text="Screenshot of the Azure portal on the overview page of Azure SQL Database. The pricing tier 'General Purpose: Standard-series (Gen5), 2 vCores' is highlighted." lightbox="media/service-tiers-sql-database-vcore/change-hardware.png":::
 
 For a pool, on the **Overview** page, select **Configure**.
 
@@ -309,10 +311,11 @@ Hyperscale service tier premium-series and premium-series memory optimized hardw
 - Germany West Central
 - India Central
 - India South
-- Japan East
+- Japan East \*\*
 - Japan West
-- Southeast Asia
+- Southeast Asia \*\*
 - Switzerland North
+- Sweden Central \*\*,\*
 - UK South \*\*
 - UK West \*
 - US Central \*\*
@@ -375,7 +378,7 @@ If you need DC-series in a currently unsupported region, [submit a support reque
 1. For **Problem type**, select **Security, Private and Compliance**.
 1. For **Problem subtype**, select **Always Encrypted**.
 
-:::image type="content" source="media/service-tiers-vcore/request-dc-series.png" alt-text="Screenshot of the Azure portal form to request DC-series in a new region." lightbox="media/service-tiers-vcore/request-dc-series.png":::
+:::image type="content" source="media/service-tiers-sql-database-vcore/request-dc-series.png" alt-text="Screenshot of the Azure portal form to request DC-series in a new region." lightbox="media/service-tiers-sql-database-vcore/request-dc-series.png":::
 
 ## Previous generation hardware
 

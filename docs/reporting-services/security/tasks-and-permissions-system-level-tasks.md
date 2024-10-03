@@ -3,11 +3,12 @@ title: "System-level tasks"
 description: "Tasks and Permissions - System-Level Tasks"
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/01/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: security
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "system-level tasks [Reporting Services]"
 ---
@@ -33,6 +34,5 @@ helpviewer_keywords:
 |View shared schedules|Read Schedules|  
   
 ## Related content
- [Grant permissions on a native mode report server](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
-  
-  
+
+- [Grant permissions on a native mode report server](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)

@@ -196,8 +196,6 @@ Specifies the language of the package. The value can be **R** or **Python** in A
 Specifies the language of the package. The value can be **R**, **Python**, or the name of an external language (see [CREATE EXTERNAL LANGUAGE](create-external-language-transact-sql.md)).
 ::: moniker-end
 
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Remarks
 
 ::: moniker range=">=sql-server-2017 <=sql-server-2017"

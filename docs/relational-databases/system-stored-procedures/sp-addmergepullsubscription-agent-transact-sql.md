@@ -4,7 +4,7 @@ description: Adds a new agent job used to schedule synchronization of a pull sub
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 11/23/2023
+ms.date: 08/21/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: "reference"
@@ -296,19 +296,19 @@ Specifies if the subscription can be synchronized through Windows Synchronizatio
 
 #### [ @ftp_address = ] N'*ftp_address*'
 
-For backward compatibility only.
+[!INCLUDE [deprecated-parameter](../includes/deprecated-parameter.md)]
 
 #### [ @ftp_port = ] *ftp_port*
 
-For backward compatibility only.
+[!INCLUDE [deprecated-parameter](../includes/deprecated-parameter.md)]
 
 #### [ @ftp_login = ] N'*ftp_login*'
 
-For backward compatibility only.
+[!INCLUDE [deprecated-parameter](../includes/deprecated-parameter.md)]
 
 #### [ @ftp_password = ] N'*ftp_password*'
 
-For backward compatibility only.
+[!INCLUDE [deprecated-parameter](../includes/deprecated-parameter.md)]
 
 #### [ @alt_snapshot_folder = ] N'*alt_snapshot_folder*'
 

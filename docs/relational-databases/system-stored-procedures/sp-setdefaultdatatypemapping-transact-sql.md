@@ -111,7 +111,7 @@ The name of the destination DBMS. *@destination_dbms* is **sysname**, and can be
 | --- | --- |
 | `MSSQLSERVER` | The destination is a [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] database. |
 | `ORACLE` | The destination is an Oracle database. |
-| `DB2` | The destination is an IBM DB2 database. |
+| `DB2` | The destination is an IBM Db2 database. |
 | `SYBASE` | The destination is a Sybase database. |
 | `NULL` (default) | |
 

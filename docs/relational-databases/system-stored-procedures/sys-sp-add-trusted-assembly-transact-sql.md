@@ -4,7 +4,7 @@ description: Adds an assembly to the list of trusted assemblies for the server.
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: randolphwest
-ms.date: 07/06/2023
+ms.date: 08/21/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -44,7 +44,7 @@ This procedure adds an assembly to [sys.trusted_assemblies](../system-catalog-vi
 
 #### [ @hash = ] '*value*'
 
-The SHA2_512 hash value of the assembly to add to the list of trusted assemblies for the server. Trusted assemblies may load when [CLR strict security](../../database-engine/configure-windows/clr-strict-security.md) is enabled, even if the assembly is unsigned or the database isn't marked as trustworthy.
+The SHA2_512 hash value of the assembly to add to the list of trusted assemblies for the server. Trusted assemblies might load when [Server configuration: clr strict security](../../database-engine/configure-windows/clr-strict-security.md) is enabled, even if the assembly is unsigned or the database isn't marked as trustworthy.
 
 #### [ @description = ] '*description*'
 
@@ -66,9 +66,9 @@ EXEC sp_add_trusted_assembly
 
 ## Related content
 
-- [sys.sp_drop_trusted_assembly](sys-sp-drop-trusted-assembly-transact-sql.md)
-- [sys.trusted_assemblies](../system-catalog-views/sys-trusted-assemblies-transact-sql.md)
+- [sys.sp_drop_trusted_assembly (Transact-SQL)](sys-sp-drop-trusted-assembly-transact-sql.md)
+- [sys.trusted_assemblies (Transact-SQL)](../system-catalog-views/sys-trusted-assemblies-transact-sql.md)
 - [CREATE ASSEMBLY (Transact-SQL)](../../t-sql/statements/create-assembly-transact-sql.md)
-- [CLR strict security](../../database-engine/configure-windows/clr-strict-security.md)
-- [sys.assemblies](../system-catalog-views/sys-assemblies-transact-sql.md)
-- [sys.dm_clr_loaded_assemblies](../system-dynamic-management-views/sys-dm-clr-loaded-assemblies-transact-sql.md)
+- [Server configuration: clr strict security](../../database-engine/configure-windows/clr-strict-security.md)
+- [sys.assemblies (Transact-SQL)](../system-catalog-views/sys-assemblies-transact-sql.md)
+- [sys.dm_clr_loaded_assemblies (Transact-SQL)](../system-dynamic-management-views/sys-dm-clr-loaded-assemblies-transact-sql.md)

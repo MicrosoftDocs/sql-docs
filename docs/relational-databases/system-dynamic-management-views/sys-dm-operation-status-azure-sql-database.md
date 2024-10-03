@@ -5,7 +5,7 @@ author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: wiassaf
 ms.date: 02/13/2023
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.topic: "reference"
 f1_keywords:
   - "dm_operation_status_TSQL"

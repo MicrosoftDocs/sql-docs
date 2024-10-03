@@ -31,8 +31,6 @@ DecryptByCert ( certificate_ID , { 'ciphertext' | @ciphertext }
     [ , { 'cert_password' | @cert_password } ] )  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
  *certificate_ID*  
 The ID of a certificate in the database. *certificate_ID* has an **int** data type.  

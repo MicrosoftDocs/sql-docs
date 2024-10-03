@@ -175,6 +175,6 @@ In this example, the named instance is called `MyInstance`. Make sure the [!INCL
 ## Related content
 
 - [What is SQL Server Management Studio (SSMS)?](../ssms/sql-server-management-studio-ssms.md)
-- [What is Azure Data Studio?](../azure-data-studio/what-is-azure-data-studio.md)
+- [What is Azure Data Studio?](/azure-data-studio/what-is-azure-data-studio)
 - [Configure Database Engine Instances (SQL Server)](../database-engine/configure-windows/configure-database-engine-instances-sql-server.md)
 - [sqlcmd utility](../tools/sqlcmd/sqlcmd-utility.md)

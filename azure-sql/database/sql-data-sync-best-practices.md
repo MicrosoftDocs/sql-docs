@@ -3,22 +3,27 @@ title: Best practices for Azure SQL Data Sync
 description: Learn about best practices for configuring and running Azure SQL Data Sync.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: mathoma, hudequei 
-ms.date: 07/10/2023
-ms.service: sql-database
+ms.reviewer: mathoma, hudequei
+ms.date: 09/23/2024
+ms.service: azure-sql-database
 ms.subservice: sql-data-sync
 ms.topic: conceptual
-ms.custom: sqldbrb=1
+ms.custom:
+  - sqldbrb=1
 ---
-# Best practices for Azure SQL Data Sync 
+# Best practices for Azure SQL Data Sync
 
-[!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
+[!INCLUDE [appliesto-sqldb](../includes/appliesto-sqldb.md)]
+
+[!INCLUDE [sql-data-sync-retirement](../includes/sql-data-sync-retirement.md)]
 
 This article describes best practices for Azure SQL Data Sync.
 
-For an overview of SQL Data Sync, see [Sync data across multiple cloud and on-premises databases with Azure SQL Data Sync](sql-data-sync-data-sql-server-sql-database.md).
+For an overview of SQL Data Sync, see [What is SQL Data Sync for Azure?](sql-data-sync-data-sql-server-sql-database.md)
 
-## <a name="security-and-reliability"></a> Security and reliability
+<a id="security-and-reliability"></a>
+
+## Security and reliability
 
 ### Client agent
 
@@ -55,11 +60,13 @@ Azure SQL Database supports only a single set of credentials. To accomplish thes
 
 ### Auditing
 
-It is recommended to enable auditing at the level of the databases in the sync groups. Learn how to [enable auditing on your Azure SQL database](./auditing-overview.md) or [enable auditing on your SQL Server database](/sql/relational-databases/security/auditing/sql-server-audit-database-engine).
+It is recommended to enable auditing at the level of the databases in the sync groups. Learn how to [enable auditing on your Azure SQL database](auditing-overview.md) or [enable auditing on your SQL Server database](/sql/relational-databases/security/auditing/sql-server-audit-database-engine).
 
 ## Setup
 
-### <a name="database-considerations-and-constraints"></a> Database considerations and constraints
+<a id="database-considerations-and-constraints"></a>
+
+### Database considerations and constraints
 
 #### Database size
 
@@ -68,9 +75,13 @@ When you create a new database, set the maximum size so that it's always larger 
 > [!IMPORTANT]
 > SQL Data Sync stores additional metadata with each database. Ensure that you account for this metadata when you calculate space needed. The amount of added overhead is related to the width of the tables (for example, narrow tables require more overhead) and the amount of traffic.
 
-### <a name="table-considerations-and-constraints"></a> Table considerations and constraints
+<a id="table-considerations-and-constraints"></a>
 
-#### Selecting tables
+### Table considerations and constraints
+
+<a id="selecting-tables"></a>
+
+#### Select tables
 
 You don't have to include all the tables that are in a database in a sync group. The tables that you include in a sync group affect efficiency and costs. Include tables, and the tables they are dependent on, in a sync group only if business needs require it.
 
@@ -84,7 +95,9 @@ Before using SQL Data Sync in production, test initial and ongoing sync performa
 
 Empty tables provide the best performance at initialization time. If the target table is empty, Data Sync uses bulk insert to load the data. Otherwise, Data Sync does a row-by-row comparison and insertion to check for conflicts. If performance is not a concern, however, you can set up sync between tables that already contain data.
 
-### <a name="provisioning-destination-databases"></a> Provisioning destination databases
+<a id="provisioning-destination-databases"></a>
+
+### Provision destination databases
 
 SQL Data Sync provides basic database autoprovisioning.
 
@@ -102,14 +115,16 @@ SQL Data Sync has the following limitations for autoprovisioning:
 -   Existing triggers on the source tables aren't provisioned.  
 -   Views and stored procedures aren't created on the destination database.
 -   ON UPDATE CASCADE and ON DELETE CASCADE actions on foreign key constraints aren't recreated in the destination tables.
--   If you have decimal or numeric columns with a precision greater than 28, SQL Data Sync may encounter a conversion overflow issue during sync. We recommend that you limit the precision of decimal or numeric columns to 28 or less.
+-   If you have decimal or numeric columns with a precision greater than 28, SQL Data Sync might encounter a conversion overflow issue during sync. We recommend that you limit the precision of decimal or numeric columns to 28 or less.
 
 #### Recommendations
 
 -   Use the SQL Data Sync autoprovisioning capability only when you are trying out the service.  
 -   For production, provision the database schema.
 
-### <a name="locate-hub"></a> Where to locate the hub database
+<a id="locate-hub"></a>
+
+### Where to locate the hub database
 
 #### Enterprise-to-cloud scenario
 
@@ -126,7 +141,9 @@ Apply the preceding guidelines to complex sync group configurations, such as tho
 
 ## Sync
 
-### <a name="avoid-a-slow-and-costly-initial-synchronization"></a> Avoid slow and costly initial sync
+<a id="avoid-a-slow-and-costly-initial-synchronization"></a>
+
+### Avoid slow and costly initial sync
 
 In this section, we discuss the initial sync of a sync group. Learn how to help prevent an initial sync from taking longer and being more costly than necessary.
 
@@ -140,13 +157,17 @@ If the databases are in different datacenters, each row must travel between the 
 
 If possible, start with data in only one of the sync group's databases.
 
-### <a name="design-to-avoid-synchronization-loops"></a> Design to avoid sync loops
+<a id="design-to-avoid-synchronization-loops"></a>
 
-A sync loop occurs when there are circular references within a sync group. In that scenario, each change in one database is endlessly and circularly replicated through the databases in the sync group.   
+### Design to avoid sync loops
+
+A sync loop occurs when there are circular references within a sync group. In that scenario, each change in one database is endlessly and circularly replicated through the databases in the sync group.
 
 Ensure that you avoid sync loops, because they cause performance degradation and might significantly increase costs.
 
-### <a name="handling-changes-that-fail-to-propagate"></a> Changes that fail to propagate
+<a id="handling-changes-that-fail-to-propagate"></a>
+
+### Changes that fail to propagate
 
 #### Reasons that changes fail to propagate
 
@@ -169,10 +190,11 @@ Changes might fail to propagate for one of the following reasons:
 
 Monitor the sync group and database health regularly through the portal and log interface.
 
-
 ## Maintenance
 
-### <a name="avoid-out-of-date-databases-and-sync-groups"></a> Avoid out-of-date databases and sync groups
+<a id="avoid-out-of-date-databases-and-sync-groups"></a>
+
+### Avoid out-of-date databases and sync groups
 
 A sync group or a database in a sync group can become out of date. When a sync group's status is **Out-of-date**, it stops functioning. When a database's status is **Out-of-date**, data might be lost. It's best to avoid this scenario instead of trying to recover from it.
 
@@ -197,16 +219,18 @@ To prevent out-of-date sync groups:
 -   Update the foreign key values to include the values that are contained in the failed rows.
 -   Update the data values in the failed row so they are compatible with the schema or foreign keys in the target database.
 
-### <a name="avoid-deprovisioning-issues"></a> Avoid deprovisioning issues
+<a id="avoid-deprovisioning-issues"></a>
+
+### Avoid deprovisioning issues
 
 In some circumstances, unregistering a database with a client agent might cause sync to fail.
 
 #### Scenario
 
 1. Sync group A was created by using a SQL Database instance and a SQL Server database, which is associated with local agent 1.
-2. The same on-premises database is registered with local agent 2 (this agent is not associated with any sync group).
-3. Unregistering the on-premises database from local agent 2 removes the tracking and meta tables for sync group A for the on-premises database.
-4. Sync group A operations fail, with this error: "The current operation could not be completed because the database is not provisioned for sync or you do not have permissions to the sync configuration tables."
+1. The same on-premises database is registered with local agent 2 (this agent is not associated with any sync group).
+1. Unregistering the on-premises database from local agent 2 removes the tracking and meta tables for sync group A for the on-premises database.
+1. Sync group A operations fail, with this error: "The current operation could not be completed because the database is not provisioned for sync or you do not have permissions to the sync configuration tables."
 
 #### Solution
 
@@ -215,10 +239,14 @@ To avoid this scenario, don't register a database with more than one agent.
 To recover from this scenario:
 
 1. Remove the database from each sync group that it belongs to.  
-2. Add the database back into each sync group that you removed it from.  
-3. Deploy each affected sync group (this action provisions the database).  
+1. Add the database back into each sync group that you removed it from.  
+1. Deploy each affected sync group (this action provisions the database).  
 
-### <a name="modifying-your-sync-group"></a> Modifying a sync group
+<a id="modifying-your-sync-group"></a>
+
+<a id="modifying-a-sync-group"></a>
+
+### Modify a sync group
 
 Don't attempt to remove a database from a sync group and then edit the sync group without first deploying one of the changes.
 
@@ -228,13 +256,14 @@ If you attempt to remove a database and then edit a sync group without first dep
 
 ### Avoid schema refresh timeout
 
-If you have a complex schema to sync, you may encounter an "operation timeout" during a schema refresh if the sync metadata database has a lower SKU (example: basic). 
+If you have a complex schema to sync, you might encounter an "operation timeout" during a schema refresh if the sync metadata database has a lower SKU (example: basic). 
 
 #### Solution
 
 To mitigate this issue, consider scaling up your sync metadata database resources. 
 
-## Next steps
+## Related content
+
 For more information about SQL Data Sync, see:
 
 -   Overview - [Sync data across multiple cloud and on-premises databases with Azure SQL Data Sync](sql-data-sync-data-sql-server-sql-database.md)

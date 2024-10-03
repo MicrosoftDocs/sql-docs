@@ -3,11 +3,12 @@ title: "Upgrade a Report Server Database"
 description: "Upgrade a Report Server Database"
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 08/17/2018
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-server
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "upgrading databases"
   - "report server database"
@@ -63,11 +64,10 @@ The report server database provides storage for one or more report server instan
 #### To upgrade a Native Mode database With Scripts  
  You can use WMI scripts to upgrade a report server database. For more information, see [GenerateDatabaseUpgradeScript Method &#40;WMI MSReportServer_ConfigurationSetting&#41;](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-generatedatabaseupgradescript.md)  
   
-## Next steps
+## Related content
 
-[Report Server Configuration Manager](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
-[Create a Report Server Database](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)  
-[Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
-[Migrate a Reporting Services Installation](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md)  
-
-More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)
+- [Report Server Configuration Manager](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)
+- [Create a Report Server Database](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)
+- [Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)
+- [Migrate a Reporting Services Installation](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md)
+- [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

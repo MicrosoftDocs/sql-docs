@@ -4,7 +4,7 @@ description: "Changes the name of a user-created object in the current database.
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest, maghan
-ms.date: 12/13/2023
+ms.date: 08/21/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -18,7 +18,7 @@ helpviewer_keywords:
   - "renaming tables"
 dev_langs:
   - "TSQL"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest||=fabric"
+monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =azure-sqldw-latest || =fabric"
 ---
 # sp_rename (Transact-SQL)
 
@@ -83,12 +83,12 @@ The type of object being renamed. *object_type* is **varchar(13)**, with a defau
 
 | Value | Description |
 | --- | --- |
-| COLUMN | A column to be renamed. |
-| DATABASE | A user-defined database. This object type is required when renaming a database. |
-| INDEX | A user-defined index. Renaming an index with statistics, also automatically renames the statistics. |
-| OBJECT | An item of a type tracked in [sys.objects](../system-catalog-views/sys-objects-transact-sql.md). For example, OBJECT could be used to rename objects including constraints (CHECK, FOREIGN KEY, PRIMARY/UNIQUE KEY), user tables, and rules. |
-| STATISTICS | **Applies to**: [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)] and later and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].<br /><br />Statistics created explicitly by a user or created implicitly with an index. Renaming the statistics of an index automatically renames the index as well. |
-| USERDATATYPE | A [CLR user-defined type](../clr-integration-database-objects-user-defined-types/clr-user-defined-types.md) added by executing [CREATE TYPE](../../t-sql/statements/create-type-transact-sql.md) or [sp_addtype](sp-addtype-transact-sql.md). |
+| `COLUMN` | A column to be renamed. |
+| `DATABASE` | A user-defined database. This object type is required when renaming a database. |
+| `INDEX` | A user-defined index. Renaming an index with statistics, also automatically renames the statistics. |
+| `OBJECT` | An item of a type tracked in [sys.objects](../system-catalog-views/sys-objects-transact-sql.md). For example, OBJECT could be used to rename objects including constraints (CHECK, FOREIGN KEY, PRIMARY/UNIQUE KEY), user tables, and rules. |
+| `STATISTICS` | **Applies to**: [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)] and later and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].<br /><br />Statistics created explicitly by a user or created implicitly with an index. Renaming the statistics of an index automatically renames the index as well. |
+| `USERDATATYPE` | A [CLR user-defined type](../clr-integration-database-objects-user-defined-types/clr-user-defined-types.md) added by executing [CREATE TYPE](../../t-sql/statements/create-type-transact-sql.md) or [sp_addtype](sp-addtype-transact-sql.md). |
 
 **Applies to**: Azure Synapse Analytics
 
@@ -97,11 +97,11 @@ The type of object being renamed. *object_type* is **varchar(13)**, with a defau
 **Applies to**: [!INCLUDE [fabric](../../includes/fabric.md)]
 
 - In `sp_rename` for the [!INCLUDE [fabricdw](../../includes/fabric-dw.md)] in [!INCLUDE [fabric](../../includes/fabric.md)], `OBJECT` is the only supported value for *@objtype*.
-- In `sp_rename` for the [!INCLUDE [fabricse](../../includes/fabric-se.md)] in [!INCLUDE [fabric](../../includes/fabric.md)], `OBJECT` is the only supported value for *@objtype*. Tables cannot be renamed.
+- In `sp_rename` for the [!INCLUDE [fabricse](../../includes/fabric-se.md)] in [!INCLUDE [fabric](../../includes/fabric.md)], `OBJECT` is the only supported value for *@objtype*. Tables can't be renamed.
 
 ## Return code values
 
-0 (success) or a nonzero number (failure)
+`0` (success) or a nonzero number (failure).
 
 ## Remarks
 

@@ -5,7 +5,7 @@ author: VanMSFT
 ms.author: vanto
 ms.reviewer: wiassaf, mathoma
 ms.date: 01/26/2024
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.subservice: security
 ms.topic: tutorial
 ---
@@ -69,14 +69,14 @@ To set up a server-level firewall rule:
 
 1. In the Azure portal, select **SQL databases** from the left-hand menu, and select your database on the **SQL databases** page.
 
-    :::image type="content" source="media\secure-database-tutorial\server-name.png" alt-text="Screenshot of the Azure portal page for a logical SQL database, highlighting the server name." lightbox="media\secure-database-tutorial\server-name.png":::
+    :::image type="content" source="media\design-first-database-tutorial\server-name.png" alt-text="Screenshot of the Azure portal page for a logical SQL database, highlighting the server name." lightbox="media\design-first-database-tutorial\server-name.png":::
 
     > [!NOTE]
     > Be sure to copy your fully qualified server name (such as *yourserver.database.windows.net*) for use later in the tutorial.
 
 1. Select **Networking** under **Settings**. Choose the **Public Access** tab, and then select **Selected networks** under **Public network access** to display the **Firewall rules** section. 
 
-   :::image type="content" source="media\secure-database-tutorial\server-firewall-rule.png" alt-text="Screenshot of the Azure portal Networking page for a logical SQL Server, showing the server-level IP firewall rule." lightbox="media\secure-database-tutorial\server-firewall-rule.png":::
+   :::image type="content" source="media\design-first-database-tutorial\server-firewall-rule.png" alt-text="Screenshot of the Azure portal Networking page for a logical SQL Server, showing the server-level IP firewall rule." lightbox="media\design-first-database-tutorial\server-firewall-rule.png":::
 
 1. Select **Add client IP** on the toolbar to add your current IP address to a new IP firewall rule. An IP firewall rule can open port 1433 for a single IP address or a range of IP addresses.
 1. Select **OK** to save your firewall settings. 
@@ -114,14 +114,14 @@ Make sure you're using the appropriate Microsoft Entra ID ([formerly Azure Activ
 
 To set the Microsoft Entra administrator:
 
-1. In the Azure portal, on the **SQL server** page, select **Microsoft Entra ID** from the resource menu, then select **Set admin** to open the **Microsoft Entra ID** pane..
+1. In the Azure portal, on the **SQL server** page, select **Microsoft Entra ID** from the resource menu, then select **Set admin** to open the **Microsoft Entra ID** pane.
 
     :::image type="content" source="media\secure-database-tutorial\admin-settings.png" alt-text="Screenshot of the Azure portal Microsoft Entra ID page for a logical server." lightbox="media\secure-database-tutorial\admin-settings.png":::
 
     > [!IMPORTANT]
     > You need to be a "Global Administrator" to perform this task.
 
-1. On the **Microsoft Entra ID** pane, search and select the Microsoft Entra user or group and choose **Select**. All members and groups of your Microsoft Entra organization are listed, and entries grayed out are not supported as Microsoft Entra administrators. See [Microsoft Entra features and limitations](authentication-aad-overview.md#azure-ad-features-and-limitations).
+1. On the **Microsoft Entra ID** pane, search and select the Microsoft Entra user or group and choose **Select**. All members and groups of your Microsoft Entra organization are listed, and entries grayed out are [not supported as Microsoft Entra administrators](authentication-aad-overview.md#microsoft-entra-administrator). 
 
     :::image type="content" source="media\secure-database-tutorial\admin-select.png" alt-text="Screenshot of the Azure portal page to add a Microsoft Entra admin.":::
 

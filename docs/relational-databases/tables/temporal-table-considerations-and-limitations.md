@@ -1,9 +1,9 @@
 ---
-title: "Temporal table considerations and limitations"
-description: "Considerations and limitations to be aware of when working with temporal tables."
+title: Temporal table considerations and limitations
+description: Considerations and limitations to be aware of when working with temporal tables.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 08/21/2023
+ms.date: 07/29/2024
 ms.service: sql
 ms.subservice: table-view-index
 ms.topic: conceptual
@@ -15,7 +15,7 @@ monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-20
 
 There are some considerations and limitations to be aware of when working with temporal tables, due to the nature of system-versioning:
 
-- A temporal table must have a primary key defined, in order to correlate records between the current table and the history table, and the history table can't have a primary key defined.
+- A temporal table must have a primary key defined, in order to correlate records between the current table and the history table. The history table can't have a primary key defined.
 
 - The `SYSTEM_TIME` period columns used to record the `ValidFrom` and `ValidTo` values must be defined with a data type of **datetime2**.
 
@@ -27,19 +27,19 @@ There are some considerations and limitations to be aware of when working with t
 
 - If current table is partitioned, the history table is created on default file group because partitioning configuration isn't replicated automatically from the current table to the history table.
 
-- Temporal and history tables can't use FileTable or FILESTREAM, since FileTable and FILESTREAM allow data manipulation outside of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] and thus system versioning can't be guaranteed.
+- Temporal and history tables can't use FileTable or FILESTREAM. FileTable and FILESTREAM allow data manipulation outside of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)], so system versioning can't be guaranteed.
 
 - A node or edge table can't be created as or altered to a temporal table.
 
 - While temporal tables support blob data types, such as **(n)varchar(max)**, **varbinary(max)**, **(n)text**, and **image**, they incur significant storage costs and have performance implications due to their size. As such, when designing your system, care should be taken when using these data types.
 
-- History table must be created in the same database as the current table. Temporal querying over linked servers isn't supported.
+- The history table must be created in the same database as the current table. Temporal querying over linked servers isn't supported.
 
-- History table can't have constraints (primary key, foreign key, table or column constraints).
+- The history table can't have constraints (primary key, foreign key, table, or column constraints).
 
 - Indexed views aren't supported on top of temporal queries (queries that use `FOR SYSTEM_TIME` clause).
 
-- Online option (`WITH (ONLINE = ON`) has no effect on `ALTER TABLE ALTER COLUMN` in a system-versioned temporal table. `ALTER` column isn't performed as an online operation, regardless of which value was specified for the ONLINE option.
+- Online option (`WITH (ONLINE = ON`) has no effect on `ALTER TABLE ALTER COLUMN` in a system-versioned temporal table. `ALTER` column isn't performed as an online operation, regardless of which value was specified for the `ONLINE` option.
 
 - `INSERT` and `UPDATE` statements can't reference the `SYSTEM_TIME` period columns. Attempts to insert values directly into these columns are blocked.
 
@@ -53,22 +53,24 @@ There are some considerations and limitations to be aware of when working with t
 
 ::: moniker-end
 
-- `INSTEAD OF` triggers aren't permitted on either the current or the history table to avoid invalidating the DML logic. `AFTER` triggers are permitted only on the current table. They're blocked on the history table to avoid invalidating the DML logic.
+- `INSTEAD OF` triggers aren't permitted on either the current or the history table to avoid invalidating the DML logic. `AFTER` triggers are permitted only on the current table. These triggers are blocked on the history table to avoid invalidating the DML logic.
+
 - Usage of replication technologies is limited:
 
   - **Availability groups:** Fully supported
 
   - **Change data capture and change tracking:** Supported only on the current table
 
-  - **Snapshot and transactional replication**: Only supported for a single publisher without temporal being enabled, and *one* subscriber with temporal enabled. Use of multiple subscribers isn't supported as this may lead to inconsistent temporal data due to dependency on the local system clock. In this case, the publisher is used for an OLTP workload while subscriber serves for offloading reporting (including `AS OF` querying). When the distribution agent starts, it opens a transaction that is held open until distribution agent stops. `ValidFrom` and `ValidTo` are populated to the begin time of the first transaction that distribution agent starts. It may be preferable to run the distribution agent on a schedule rather than the default behavior of running it continuously, if having `ValidFrom` and `ValidTo` populated with a time that is close to the current system time is important to your application or organization. For more information, see [Temporal table usage scenarios](temporal-table-usage-scenarios.md).
+  - **Snapshot and transactional replication**: Only supported for a single publisher without temporal being enabled, and *one* subscriber with temporal enabled. Use of multiple subscribers isn't supported due to a dependency on the local system clock, which can lead to inconsistent temporal data. In this case, the publisher is used for an OLTP workload while subscriber serves for offloading reporting (including `AS OF` querying). When the distribution agent starts, it opens a transaction that is held open until distribution agent stops. `ValidFrom` and `ValidTo` are populated to the begin time of the first transaction that distribution agent starts. It might be preferable to run the distribution agent on a schedule rather than the default behavior of running it continuously, if having `ValidFrom` and `ValidTo` populated with a time that is close to the current system time is important to your application or organization. For more information, see [Temporal table usage scenarios](temporal-table-usage-scenarios.md).
 
   - **Merge replication:** Not supported for temporal tables
 
-- Regular queries only affect data in the current table. To query data in the history table, you must use temporal queries. For more information, see [Querying data in a system-versioned temporal table](querying-data-in-a-system-versioned-temporal-table.md).
+- Regular queries only affect data in the current table. To query data in the history table, you must use temporal queries. For more information, see [Query data in a system-versioned temporal table](querying-data-in-a-system-versioned-temporal-table.md).
 
-- An optimal indexing strategy includes a clustered columns store index and/or a B-tree rowstore index on the current table and a clustered columnstore index on the history table for optimal storage size and performance. If you create/use your own history table, we strongly recommend that you create this type of index consisting of period columns starting with the end of period column, to speed up temporal querying and speed up the queries that are part of the data consistency check. The default history table has a clustered rowstore index created for you based on the period columns (end, start). At a minimum, a nonclustered rowstore index is recommended.
+- An optimal indexing strategy includes a clustered columns store index and/or a B-tree rowstore index on the current table, and a clustered columnstore index on the history table, for optimal storage size and performance. If you create/use your own history table, we strongly recommend that you create this type of index consisting of period columns starting with the end of period column. This index speeds up temporal querying, and speeds up the queries that are part of the data consistency check. The default history table has a clustered rowstore index created for you based on the period columns (end, start). At a minimum, a nonclustered rowstore index is recommended.
 
 - The following objects/properties aren't replicated from the current to the history table when the history table is created:
+
   - Period definition
   - Identity definition
   - Indexes
@@ -83,13 +85,13 @@ There are some considerations and limitations to be aware of when working with t
 
 [!INCLUDE [sql-b-tree](../../includes/sql-b-tree.md)]
 
-## Next steps
+## Related content
 
-- [Temporal Tables](temporal-tables.md)
-- [Getting Started with System-Versioned Temporal Tables](getting-started-with-system-versioned-temporal-tables.md)
-- [Temporal Table System Consistency Checks](temporal-table-system-consistency-checks.md)
-- [Partitioning with Temporal Tables](partitioning-with-temporal-tables.md)
-- [Temporal Table Security](temporal-table-security.md)
-- [Manage Retention of Historical Data in System-Versioned Temporal Tables](manage-retention-of-historical-data-in-system-versioned-temporal-tables.md)
-- [System-Versioned Temporal Tables with Memory-Optimized Tables](system-versioned-temporal-tables-with-memory-optimized-tables.md)
-- [Temporal Table Metadata Views and Functions](temporal-table-metadata-views-and-functions.md)
+- [Temporal tables](temporal-tables.md)
+- [Get started with system-versioned temporal tables](getting-started-with-system-versioned-temporal-tables.md)
+- [Temporal table system consistency checks](temporal-table-system-consistency-checks.md)
+- [Partition with temporal tables](partitioning-with-temporal-tables.md)
+- [Temporal table security](temporal-table-security.md)
+- [Manage retention of historical data in system-versioned temporal tables](manage-retention-of-historical-data-in-system-versioned-temporal-tables.md)
+- [System-versioned temporal tables with memory-optimized tables](system-versioned-temporal-tables-with-memory-optimized-tables.md)
+- [Temporal table metadata views and functions](temporal-table-metadata-views-and-functions.md)

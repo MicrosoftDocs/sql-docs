@@ -5,8 +5,8 @@ description: Bring Your Own Key (BYOK) support for transparent data encryption (
 author: GithubMirek
 ms.author: mireks
 ms.reviewer: wiassaf, vanto, mathoma, randolphwest
-ms.date: 05/28/2024
-ms.service: sql-db-mi
+ms.date: 09/23/2024
+ms.service: azure-sql
 ms.subservice: security
 ms.topic: conceptual
 ms.custom:
@@ -81,9 +81,9 @@ Auditors can use Azure Monitor to review key vault AuditEvent logs, if logging i
 
 - [Soft-delete](/azure/key-vault/general/soft-delete-overview) and [purge protection](/azure/key-vault/general/soft-delete-overview#purge-protection) features must be enabled on the key vault to protect from data loss due to accidental key (or key vault) deletion.
 - Grant the server or managed instance access to the key vault (*get*, *wrapKey*, *unwrapKey*) using its Microsoft Entra identity. The server identity can be a system-assigned managed identity or a user-assigned managed identity assigned to the server. When using the Azure portal, the Microsoft Entra identity gets automatically created when the server is created. When using PowerShell or Azure CLI, the Microsoft Entra identity must be explicitly created and should be verified. See [Configure TDE with BYOK](transparent-data-encryption-byok-configure.md) and [Configure TDE with BYOK for SQL Managed Instance](../managed-instance/scripts/transparent-data-encryption-byok-powershell.md) for detailed step-by-step instructions when using PowerShell.
-    - Depending on the permission model of the key vault (access policy or Azure RBAC), key vault access can be granted either by creating an access policy on the key vault, or by creating a new Azure RBAC role assignment with the role [Key Vault Crypto Service Encryption User](/azure/key-vault/general/rbac-guide#azure-built-in-roles-for-key-vault-data-plane-operations).
+  - Depending on the permission model of the key vault (access policy or Azure RBAC), key vault access can be granted either by creating an access policy on the key vault, or by creating a new Azure RBAC role assignment with the role [Key Vault Crypto Service Encryption User](/azure/key-vault/general/rbac-guide#azure-built-in-roles-for-key-vault-data-plane-operations).
 
-- When using a firewall with AKV, you must enable the option **Allow trusted Microsoft services to bypass the firewall**. For more information, see [Configure Azure Key Vault firewalls and virtual networks](/azure/key-vault/general/network-security).
+- When using a firewall with AKV, you must enable the option **Allow trusted Microsoft services to bypass the firewall**, unless you are using [private endpoints for the AKV](/azure/key-vault/general/private-link-service). For more information, see [Configure Azure Key Vault firewalls and virtual networks](/azure/key-vault/general/network-security).
 
 ### Enable soft-delete and purge protection for AKV
 
@@ -111,10 +111,8 @@ Auditors can use Azure Monitor to review key vault AuditEvent logs, if logging i
 - If you're importing existing key into the key vault, make sure to provide it in the supported file formats (`.pfx`, `.byok`, or `.backup`).
 
 > [!NOTE]  
-> Azure SQL now supports using a RSA key stored in a Managed HSM as TDE protector.  
-Azure Key Vault Managed HSM is a fully managed, highly available, single-tenant, standards-compliant cloud service that enables you to safeguard cryptographic keys for your cloud applications, using FIPS 140-2 Level 3 validated HSMs. Learn more about [Managed HSMs](/azure/key-vault/managed-hsm/index).
-
-> [!NOTE]  
+> Azure SQL and SQL Server on Azure VM support using an RSA key stored in a Managed HSM as TDE protector. Azure Key Vault Managed HSM is a fully managed, highly available, single-tenant, standards-compliant cloud service that enables you to safeguard cryptographic keys for your cloud applications, using FIPS 140-2 Level 3 validated HSMs. Learn more about [Managed HSMs](/azure/key-vault/managed-hsm/index) and the configuration or RBAC permissions needed for SQL Server through the article, [Set up SQL Server TDE Extensible Key Management by using Azure Key Vault](/sql/relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault).
+>
 > An issue with Thales CipherTrust Manager versions prior to v2.8.0 prevents keys newly imported into Azure Key Vault from being used with Azure SQL Database or Azure SQL Managed Instance for customer-managed TDE scenarios. More details about this issue can be found [here](https://thalesdocs.com/ctp/cm/2.6/release_notes/index.html#ciphertrust-cloud-key-manager_1). For such cases, please wait 24 hours after importing the key into key vault to begin using it as TDE protector for the server or managed instance. This issue has been resolved in Thales CipherTrust Manager [v2.8.0](https://thalesdocs.com/ctp/cm/2.8/release_notes/index.html#resolved-issues).
 
 ## Recommendations when configuring customer-managed TDE

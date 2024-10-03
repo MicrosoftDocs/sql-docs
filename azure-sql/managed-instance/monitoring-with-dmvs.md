@@ -5,8 +5,8 @@ description: Learn how to detect and diagnose common performance problems by usi
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: wiassaf, mathoma
-ms.date: 08/03/2022
-ms.service: sql-managed-instance
+ms.date: 08/16/2024
+ms.service: azure-sql-managed-instance
 ms.subservice: monitoring
 ms.topic: how-to
 ms.custom:
@@ -652,9 +652,18 @@ ORDER BY highest_cpu_queries.total_worker_time DESC;
 
 ## Other monitoring options
 
-### Monitor with SQL Insights (preview)
+### Monitor with database watcher (preview)
 
-[Azure Monitor SQL Insights (preview)](/azure/azure-monitor/insights/sql-insights-overview) is a tool for monitoring instances of Azure SQL Managed Instance, databases in Azure SQL Database, and SQL Server on Azure SQL VMs. This service uses a remote agent to capture data from dynamic management views (DMVs) and routes the data to Azure Log Analytics, where it can be monitored and analyzed. You can view this data from [Azure Monitor](/azure/azure-monitor/overview) in provided views, or access the Log data directly to run queries and analyze trends. To start using Azure Monitor SQL Insights (preview), see [Enable SQL Insights (preview)](/azure/azure-monitor/insights/sql-insights-enable).
+Database watcher collects in-depth workload monitoring data to give you a detailed view of database performance, configuration, and health. Dashboards in the Azure portal provide a single-pane-of-glass view of your Azure SQL estate and a detailed view of each monitored resource. Data is collected into a central data store in your Azure subscription. You can query, analyze, export, visualize collected data and integrate it with downstream systems.
+
+For more information about database watcher, see the following articles:
+
+- [Monitor Azure SQL workloads with database watcher (preview)](../database-watcher-overview.md)
+- [Quickstart: Create a database watcher to monitor Azure SQL (preview)](../database-watcher-quickstart.md)
+- [Create and configure a database watcher (preview)](../database-watcher-manage.md)
+- [Database watcher data collection and datasets (preview)](../database-watcher-data.md)
+- [Analyze database watcher monitoring data (preview)](../database-watcher-analyze.md)
+- [Database watcher FAQ](../database-watcher-faq.yml)
 
 ### Monitor with Azure Monitor
 

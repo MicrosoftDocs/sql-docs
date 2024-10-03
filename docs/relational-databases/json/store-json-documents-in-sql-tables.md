@@ -1,17 +1,17 @@
 ---
-title: "Store JSON documents in SQL Server or SQL Database"
-description: "This article describes why and how to store and index JSON documents in SQL Server or SQL Database, and how to optimize queries over the JSON documents."
+title: "Store JSON documents"
+description: "Learn why and how to store and index JSON documents, and how to optimize queries over the JSON documents."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: jroth, jovanpop
-ms.date: 05/21/2024
+ms.reviewer: umajay 
+ms.date: 08/20/2024
 ms.service: sql
 ms.custom:
   - build-2024
 ms.topic: conceptual
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# Store JSON documents in SQL Server or SQL Database
+# Store JSON documents
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
 The SQL Database Engine provides native JSON functions that enable you to parse JSON documents using standard SQL language. You can store JSON documents in SQL Server or SQL Database and query JSON data as in a NoSQL database. This article describes the options for storing JSON documents.
@@ -22,8 +22,8 @@ The first storage design decision is how to store JSON documents in the tables. 
 - **LOB storage** - JSON documents can be stored as-is in columns with the data type **json** or **nvarchar**. This is the best way for quick data load and ingestion because the loading speed matches the loading speed of string columns. This approach might introduce an additional performance penalty on query/analysis time if indexing on JSON values is not performed, because the raw JSON documents must be parsed while the queries are running. 
 - **Relational storage** - JSON documents can be parsed while they are inserted in the table using `OPENJSON`, `JSON_VALUE` or `JSON_QUERY` functions. Fragments from the input JSON documents can be stored in the columns containing JSON sub-elements with data types **json** or **nvarchar**. This approach increases the load time because JSON parsing is done during load; however, queries match the performance of classic queries on the relational data.
 
+- The [JSON data type](../../t-sql/data-types/json-data-type.md) is currently in preview for Azure SQL Database and Azure SQL Managed Instance (configured with the [**Always-up-to-date** update policy](/azure/azure-sql/managed-instance/update-policy#always-up-to-date-update-policy)). 
 - Currently in SQL Server, JSON is not a built-in data type.
-- Currently, the [JSON data type](../../t-sql/data-types/json-data-type.md) is available in Azure SQL Database.
 
 ## Classic tables
 
@@ -109,7 +109,7 @@ create sequence WebSite.LogID as bigint;
 go
 create table WebSite.Logs (
     [_id] bigint default(next value for WebSite.LogID),
-    [log] json,
+    [log] nvarchar(max),
     INDEX cci CLUSTERED COLUMNSTORE
 );
 ```
@@ -127,7 +127,7 @@ The only thing that you have to do convert a classic collection to a memory-opti
 ```sql
 CREATE TABLE WebSite.Logs (
   [_id] bigint IDENTITY PRIMARY KEY NONCLUSTERED,
-  [log] json
+  [log] nvarchar(max)
 ) WITH (MEMORY_OPTIMIZED=ON)
 ```
 
@@ -139,7 +139,7 @@ As with classic tables, you can add indexes on the fields that you are exposing 
 CREATE TABLE WebSite.Logs (
 
   [_id] bigint IDENTITY PRIMARY KEY NONCLUSTERED,
-  [log] json,
+  [log] nvarchar(max),
 
   [severity] AS cast(JSON_VALUE([log], '$.severity') as tinyint) persisted,
   INDEX ix_severity (severity)

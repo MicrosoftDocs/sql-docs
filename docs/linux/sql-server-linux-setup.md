@@ -3,7 +3,7 @@ title: Installation guidance for SQL Server on Linux
 description: Install, update, and uninstall SQL Server on Linux. This article covers online, offline, and unattended scenarios.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 06/12/2024
+ms.date: 07/15/2024
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
@@ -25,12 +25,14 @@ For other deployment scenarios, see:
 
 This guide covers several deployment scenarios. If you only need step-by-step installation instructions, jump to one of the quickstarts:
 
-> - [Quickstart: Install SQL Server and create a database on Red Hat](quickstart-install-connect-red-hat.md)
-> - [Quickstart: Install SQL Server and create a database on SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
-> - [Quickstart: Install SQL Server and create a database on Ubuntu](quickstart-install-connect-ubuntu.md)
-> - [Quickstart: Run SQL Server Linux container images with Docker](quickstart-install-connect-docker.md)
+- [Quickstart: Install SQL Server and create a database on Red Hat](quickstart-install-connect-red-hat.md)
+- [Quickstart: Install SQL Server and create a database on SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
+- [Quickstart: Install SQL Server and create a database on Ubuntu](quickstart-install-connect-ubuntu.md)
+- [Quickstart: Run SQL Server Linux container images with Docker](quickstart-install-connect-docker.md)
 
 For answers to frequently asked questions, see the [SQL Server on Linux FAQ](sql-server-linux-faq.yml).
+
+[!INCLUDE [support-policy](includes/support-policy.md)]
 
 ## <a id="supportedplatforms"></a> Supported platforms
 
@@ -99,7 +101,7 @@ You can install [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on Li
 
 You can also run [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on Linux in an Azure virtual machine. For more information, see [Provision a SQL VM in Azure](/azure/azure-sql/virtual-machines/linux/sql-vm-create-portal-quickstart?toc=/sql/toc/toc.json).
 
-After installing, consider making additional configuration changes for optimal performance. For more information, see [Performance best practices and configuration guidelines for SQL Server on Linux](sql-server-linux-performance-best-practices.md).
+After installing, consider making extra configuration changes for optimal performance. For more information, see [Performance best practices and configuration guidelines for SQL Server on Linux](sql-server-linux-performance-best-practices.md).
 
 ## <a id="upgrade"></a> Update or upgrade SQL Server
 
@@ -113,7 +115,7 @@ To update the `mssql-server` package to the latest release, use one of the follo
 
 These commands download the newest package and replace the binaries located under `/opt/mssql/`. The user generated databases and system databases aren't affected by this operation.
 
-To upgrade [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)], first [change your configured repository](sql-server-linux-change-repo.md) to the desired version of [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)]. Then use the same `update` command to upgrade your version of [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)]. This is only possible if the upgrade path is supported between the two repositories.
+To upgrade [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)], first [change your configured repository](sql-server-linux-change-repo.md) to the desired version of [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)]. Then use the same `update` command to upgrade your version of [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)]. This step is only possible if the upgrade path is supported between the two repositories.
 
 ## <a id="rollback"></a> Roll back SQL Server
 

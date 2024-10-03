@@ -3,11 +3,12 @@ title: "Report Server Windows Service (MSSQLServer) 107"
 description: "In this error reference page, learn about event ID 107: Report Server Windows Service (SQL Server) can't connect to the report server database."
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/14/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: troubleshooting
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "MSSQLServer 107 error"
 ---
@@ -41,11 +42,8 @@ helpviewer_keywords:
   
 ## Internal-only  
   
-## Related content 
+## Related content
 
- [Configure the report server service account &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
- [Report Server Configuration Manager &#40;native mode&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
-
- [Start and stop the report server service](../../reporting-services/report-server/start-and-stop-the-report-server-service.md)  
-  
-  
+- [Configure the report server service account &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)
+- [Report Server Configuration Manager &#40;native mode&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)
+- [Start and stop the report server service](../../reporting-services/report-server/start-and-stop-the-report-server-service.md)

@@ -3,11 +3,12 @@ title: "Publication Properties - Dialog box"
 description: Describes the pages found within the 'Publication Properties Dialog Box in SQL Server Management Studio (SSMS).
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/01/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: ui-reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 f1_keywords:
   - "sql13.rep.newpubwizard.pubproperties.agentsecurity.f1"
   - "sql13.rep.newpubwizard.pubproperties.filterrows.f1"
@@ -206,10 +207,8 @@ Snapshot
 -   Enter a path in the **Before applying the snapshot, execute this script** text box or click **Browse** to specify a location for the script.    
 -   Enter a path in the **After applying the snapshot, execute this script** text box or click **Browse** to specify a location for the script. 
   
-## See Also  
- [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
- [View and Modify Publication Properties](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
- [Publish Data and Database Objects](../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
+## Related content
 
-  
-  
+- [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)
+- [View and Modify Publication Properties](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)
+- [Publish Data and Database Objects](../../relational-databases/replication/publish/publish-data-and-database-objects.md)

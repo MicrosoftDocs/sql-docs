@@ -4,7 +4,7 @@ description: Adds metadata about the sensitivity classification to one or more d
 author: Madhumitatripathy
 ms.author: matripathy
 ms.reviewer: vanto, randolphwest
-ms.date: 05/28/2024
+ms.date: 08/06/2024
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -22,7 +22,7 @@ helpviewer_keywords:
   - "rank"
 dev_langs:
   - "TSQL"
-monikerRange: ">=sql-server-linux-ver15 || >=sql-server-ver15 || =azuresqldb-current || =azure-sqldw-latest"
+monikerRange: ">=sql-server-linux-ver15||>=sql-server-ver15||=azuresqldb-current||=azure-sqldw-latest||=azuresqldb-mi-current"
 ---
 
 # ADD SENSITIVITY CLASSIFICATION (Transact-SQL)
@@ -54,8 +54,6 @@ Classifying sensitive data in your database environment helps achieve extended v
     RANK = NONE | LOW | MEDIUM | HIGH | CRITICAL
 }
 ```
-
-[!INCLUDE [sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## Arguments
 

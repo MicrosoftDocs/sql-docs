@@ -4,7 +4,7 @@ description: Release notes for SQL Server Management Studio (SSMS).
 author: erinstellato-ms
 ms.author: erinstellato
 ms.reviewer: maghan, randolphwest
-ms.date: 04/09/2024
+ms.date: 07/09/2024
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
@@ -20,13 +20,107 @@ This article details updates, improvements, and bug fixes for the current and pr
 
 ## Current SSMS release
 
-:::image type="icon" source="../includes/media/download.svg" border="false"::: **[Download SQL Server Management Studio (SSMS) 20.1](https://aka.ms/ssmsfullsetup)**
+:::image type="icon" source="../includes/media/download.svg" border="false"::: **[Download SQL Server Management Studio (SSMS) 20.2](https://aka.ms/ssmsfullsetup)**
 
-SSMS 20.1 is the latest general availability (GA) release of SSMS. If you need a previous version of SSMS, see [previous SSMS releases](release-notes-ssms.md#previous-ssms-releases).
+SSMS 20.2 is the latest general availability (GA) release of SSMS. If you need a previous version of SSMS, see [previous SSMS releases](release-notes-ssms.md#previous-ssms-releases).
+
+### 20.2
+
+:::image type="icon" source="../includes/media/download.svg" border="false"::: **[Download SSMS 20.2](https://go.microsoft.com/fwlink/?linkid=2278035&clcid=0x409)**
+
+- Release number: 20.2
+- Build number: 20.2.30.0
+- Release date: July 9, 2024
+
+Available languages:
+
+- [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2278035&clcid=0x804)
+- [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2278035&clcid=0x404)
+- [English (United States)](https://go.microsoft.com/fwlink/?linkid=2278035&clcid=0x409)
+- [French](https://go.microsoft.com/fwlink/?linkid=2278035&clcid=0x40c)
+- [German](https://go.microsoft.com/fwlink/?linkid=2278035&clcid=0x407)
+- [Italian](https://go.microsoft.com/fwlink/?linkid=2278035&clcid=0x410)
+- [Japanese](https://go.microsoft.com/fwlink/?linkid=2278035&clcid=0x411)
+- [Korean](https://go.microsoft.com/fwlink/?linkid=2278035&clcid=0x412)
+- [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2278035&clcid=0x416)
+- [Russian](https://go.microsoft.com/fwlink/?linkid=2278035&clcid=0x419)
+- [Spanish](https://go.microsoft.com/fwlink/?linkid=2278035&clcid=0x40a)
+
+#### What's new in 20.2
+
+| Feature | Details |
+| --- | --- |
+| Always Encrypted | Introduced support for temporal tables. |
+| Always Encrypted | Introduced logging for the Always Encrypted wizard to facilitate troubleshooting. |
+| Drivers | Updated SSMS to use the latest driver version for MSOLEDBSQL (18.7.4). The inclusion of this new version could require users who also have older versions of the driver to reboot after installing SSMS 20.2. For more information, review the release notes for the [Microsoft OLE DB driver](../connect/oledb/release-notes-for-oledb-driver-for-sql-server.md). |
+| Integration Services | Removed HADOOP files from SQL Server Integration Services (SSIS) installation files, this addresses [CVE-2022-25168](https://nvd.nist.gov/vuln/detail/CVE-2022-25168). |
+| Libraries | Updated DacFx to version 162.3.566. |
+| Libraries | Updated Server Management Objects (SMO) to version 171.36.0. |
+| Libraries | Removed the Microsoft Visual C++ 2013 Redistributable (x86) from the SSMS installation. Upgrading from a previous version of 20.x does not remove the files. |
+| Link feature for Azure SQL Managed Instance | Introduced support for a simplified link failover experience. |
+
+#### Bug fixes in 20.2
+
+| Feature | Details |
+| --- | --- |
+| Accessibility | Added accessibility support for Expand/Collapse in Database Properties. |
+| Accessibility | Improved accessibility of radio buttons in the Restore Database dialog using arrow or tab keys. |
+| Accessibility | Fixed labels for radio button controls in the Files page of Database Properties. |
+| Accessibility | Fixed an issue with focus control in the Data Classification page. |
+| Accessibility | Addressed issues with incomplete or unnecessary screen reader announcements in the Data Classification page. |
+| Always Encrypted | Fixed error "Object reference not set to an instance of an object", which occurred when trying to create a Column Master Key after signing out of Azure. |
+| Connection | Addressed an issue with truncated authentication methods in the Connection dialog when using Russian locale. |
+| Connection | Fixed incorrect length of dropdown lists after changing the engine type. |
+| Integration Services | Resolved error "The certificate chain was issued by an authority that is not trusted" when creating or modifying an Integration Services job step in SQL Agent. See [SSMS 20 - certificate error when viewing or editing Agent jobs that run SSIS packages](https://feedback.azure.com/d365community/idea/235c6a29-0bf8-ee11-a1fe-6045bdfe7c85). |
+| Link feature for Azure SQL Managed Instance | Resolved a problem where SQL Server endpoint certificates were not loaded for the Managed Instance. |
+| Object Explorer | Updated the script generated for external file formats to include the FIRST ROW property. |
+| Object Explorer | Added Table-Valued Functions node within the Programmability > Functions node for Synapse. |
+| Query Editor | Updated lock icons in the query editor toolbar to be color-aware. |
+| Query Editor | Addressed error "Unable to query transaction count. The SQL text editor window will close without committing any open transactions" when closing an unsaved editor with either SHOWPLAN_ALL or SHOWPLAN_XML enabled, and the option **Check for open transactions before closing T-SQL query windows** enabled. |
+| Query Plans | Reduced the number of characters in the Description of an execution plan to 1000. The full query is available using the ellipses. |
+| Query Store | Addressed an issue where the **Queries With Forced Plans** report generated the error "Couldn't connect to database", see [Query Store report 'Queries with Forced Plans' fails trying to sort by last execution time](https://feedback.azure.com/d365community/idea/6e0360ee-f5f7-ee11-a73c-6045bd77de95). |
+| Query Store | Fixed Tracked Queries report to correctly display the metric selected in the Configure dialog. |
+| Query Store | Removed unnecessary border around options within the Configure dialog. |
+| Query Store | Fixed an issue where no metric was selected in the Configure dialog for the Tracked Queries report. |
+| Query Store | Addressed behavior where drop down menus in the report for Metric and Statistic were not updated after they were changed in the Configure dialog. |
+| Replication | Fixed an issue where Replication Conflict Viewer was inaccessible when using Mandatory or Optional encryption, see [SSMS 20.0 (Replication - View Conflicts) bug](https://feedback.azure.com/d365community/idea/55c6a655-3aec-ee11-a73d-000d3adc65a4). |
+
+#### Known issues 20.2
+
+| Feature | Details | Workaround |
+| --- | --- | --- |
+| Analysis Services | When you connect to Analysis Services with Microsoft Entra MFA, if you add a new role or open properties for a role, the message "the identity of the user being added to the role isn't fetched properly" appears. | This error is benign and can be ignored. The error is addressed within the Azure infrastructure, and no updates to SSMS are required. |
+| Analysis Services | After adding a new role, or when opening properties for an existing role, you can't use **Search by name or email address** to add a user. | A user can be added with the **Manual Entry** option. |
+| Database Designer | Selecting the Design option for a view referencing a table using spatial data causes SSMS to crash. | Use T-SQL to make changes to the view. |
+| Database Mirroring | If you launch the Database Mirroring Monitor from the mirrored node, the primary node isn't listed. | Register the mirrored node from Database Mirroring Monitoring, or use SSMS 18.12.1 to monitor from the mirrored node. |
+| General SSMS | Import settings from SSMS 17 option not available. | Settings can be imported from SSMS 18. |
+| Linked servers | Creating a linked server to Azure SQL Database with [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] selected as Server type connects to the `master` database. | To create a linked server to Azure SQL Database, select **Other data source** for the **Server type**, and select **Microsoft OLE DB Provider for SQL Server** or **Microsoft OLE DB Driver for SQL Server** as the **Provider**. Enter the logical server name in the Data source field and the database name in the Catalog field. |
+| Maintenance Plan | Selecting "Contents" after adding a backup file within the Destination pane of the Backup Database Task, causes the dialog to disappear. | Use SSMS 20.1 or SSMS 19.3 to access the Contents dialog. |
+| PolyBase | PolyBase node isn't visible in Object Explorer when you connect to [!INCLUDE [sssql22-md](../includes/sssql22-md.md)]. | Use SSMS 18.12.1. |
+| Profiler | The Profiler menu isn't localized. | No current alternative. |
+| Replication | If Azure SQL Managed Instance is the publisher and SSMS is running on a machine that isn't in the same virtual network as the publisher, you aren't able to insert a tracer token via Replication Monitor. | To insert tracer tokens, use Replication Monitor in SSMS on a machine that is in the same virtual network as the Azure SQL Managed Instance publisher. |
+| Stretch Database | Removed Stretch Database Wizard. | Use T-SQL to configure Stretch Database or use SSMS 18.9.1 or earlier to use the Stretch Database Wizard. |
+
+See [Known issues using Strict Encryption in 20.0](#known-issues-using-strict-encryption-in-200) for known issues using SSMS 20.x and Strict Encryption.
+
+You can reference [SQL user feedback](https://aka.ms/ssms-feedback) for other known issues (filter on **Tooling** under **Groups**) and to provide feedback to the product team.
+
+## Previous SSMS releases
+
+Download previous SSMS versions by selecting the download link in the related section.
+
+| SSMS version | Build number | Release date |
+| --- | --- | --- |
+| [20.1](#201) | 20.1.10.0 | April 9, 2024 |
+| [20.0](#200) | 20.0.70.0 | March 19, 2024 |
+| [19.3](#193) | 19.3.4.0 | January 10, 2024 |
+| [18.12.1](#18121) | 15.0.18420.0 | June 21, 2022 |
+| [17.9.1](#1791) | 14.0.17289.0 | November 21, 2018 |
+| [16.5.3](#1653) | 13.0.16106.4 | January 30, 2017 |
 
 ### 20.1
 
-:::image type="icon" source="../includes/media/download.svg" border="false"::: [Download SSMS 20.1](https://go.microsoft.com/fwlink/?linkid=2267019&clcid=0x409)
+:::image type="icon" source="../includes/media/download.svg" border="false"::: **[Download SSMS 20.1](https://go.microsoft.com/fwlink/?linkid=2267019&clcid=0x409)**
 
 - Release number: 20.1
 - Build number: 20.1.10.0
@@ -82,25 +176,9 @@ Available languages:
 | SSIS | When creating or modifying an SSIS job step in a SQL Agent job, you receive the error "A connection was successfully established with the server, but then an error occurred during the login process. (provider: SSL Provider, error: 0 - The certificate chain was issued by an authority that is not trusted.) (Framework Microsoft SqlClient Data Provider)" regardless of whether Optional or Mandatory is selected for the Encryption property. | Use SSMS 19.3 to create or modify SSIS job steps. |
 | Stretch Database | Removed Stretch Database Wizard. | Use T-SQL to configure Stretch Database or use SSMS 18.9.1 or earlier to use the Stretch Database Wizard. |
 
-See [Known issues using Strict Encryption in 20.0](#known-issues-using-strict-encryption-in-200) for known issues using SSMS 20.x and Strict Encryption.
-
-You can reference [SQL user feedback](https://aka.ms/ssms-feedback) for other known issues (filter on **Tooling** under **Groups**) and to provide feedback to the product team.
-
-## Previous SSMS releases
-
-Download previous SSMS versions by selecting the download link in the related section.
-
-| SSMS version | Build number | Release date |
-| --- | --- | --- |
-| [20.0](#200) | 20.0.70.0 | March 19, 2024 |
-| [19.3](#193) | 19.3.4.0 | January 10, 2024 |
-| [18.12.1](#18121) | 15.0.18420.0 | June 21, 2022 |
-| [17.9.1](#1791) | 14.0.17289.0 | November 21, 2018 |
-| [16.5.3](#1653) | 13.0.16106.4 | January 30, 2017 |
-
 ### 20.0
 
-:::image type="icon" source="../includes/media/download.svg" border="false"::: [Download SSMS 20.0](https://go.microsoft.com/fwlink/?linkid=2264204&clcid=0x409)
+:::image type="icon" source="../includes/media/download.svg" border="false"::: **[Download SSMS 20.0](https://go.microsoft.com/fwlink/?linkid=2264204&clcid=0x409)**
 
 - Release number: 20.0
 - Build number: 20.0.70.0
@@ -176,10 +254,9 @@ Available languages:
 | PowerShell | When you connect to a server with *Strict (SQL Server 2022 and Azure SQL)* encryption, selecting **Start Powershell** from a node in Object Explorer generates the error "SQL Server PowerShell provider error: Could not connect to SERVERNAME. [Failed to connect to server SERVERNAME. --> A connection was successfully established with the server, but then an error occurred during the pre-login handshake. (provider: TCP Provider, error: 0 - An existing connection was forcibly closed by the remote host.) --> An existing connection was forcibly closed by the remote host]". | No current alternative. |
 | SQL Server Logs | When SQL Server is configured with **Force Strict Encryption**, you can't view the SQL Server ERRORLOG files via Object Explorer, or executing `master.dbo.sp_enumerrorlogs` or `sys.xp_enumerrorlogs` via the Query Editor. | View the ERRORLOG files in the Log folder using File Explorer. |
 
-
 ### 19.3
 
-:::image type="icon" source="../includes/media/download.svg" border="false"::: [Download SSMS 19.3](https://go.microsoft.com/fwlink/?linkid=2257624&clcid=0x409)
+:::image type="icon" source="../includes/media/download.svg" border="false"::: **[Download SSMS 19.3](https://go.microsoft.com/fwlink/?linkid=2257624&clcid=0x409)**
 
 - Release number: 19.3
 - Build number: 19.3.4.0
@@ -236,7 +313,7 @@ Available languages:
 
 ### 18.12.1
 
-:::image type="icon" source="../includes/media/download.svg" border="false"::: [Download SSMS 18.12.1](https://go.microsoft.com/fwlink/?linkid=2199013&clcid=0x409)
+:::image type="icon" source="../includes/media/download.svg" border="false"::: **[Download SSMS 18.12.1](https://go.microsoft.com/fwlink/?linkid=2199013&clcid=0x409)**
 
 - Release number: 18.12.1
 - Build number: 15.0.18424.0
@@ -272,7 +349,7 @@ Available languages:
 
 ### 17.9.1
 
-:::image type="icon" source="../includes/media/download.svg" border="false"::: [Download SSMS 17.9.1](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x409)
+:::image type="icon" source="../includes/media/download.svg" border="false"::: **[Download SSMS 17.9.1](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x409)**
 
 - Release number: 17.9.1
 - Build number: 14.0.17289.0
@@ -333,7 +410,7 @@ If your SSMS installation is having problems, and a standard uninstall and reins
 
 ### 16.5.3
 
-:::image type="icon" source="../includes/media/download.svg" border="false"::: [Download SSMS 16.5.3](https://go.microsoft.com/fwlink/?LinkID=840946)
+:::image type="icon" source="../includes/media/download.svg" border="false"::: **[Download SSMS 16.5.3](https://go.microsoft.com/fwlink/?LinkID=840946)**
 
 - Release number: 16.5.3
 - Build number: 13.0.16106.4
@@ -388,5 +465,5 @@ For the latest release of SQL Server Management Studio, see [Download SQL Server
 ## Related content
 
 - [Download SQL Server Management Studio (SSMS)](download-sql-server-management-studio-ssms.md)
-- [Download Azure Data Studio](../azure-data-studio/download-azure-data-studio.md)
-- [Azure Data Studio release notes](../azure-data-studio/release-notes-azure-data-studio.md)
+- [Download Azure Data Studio](/azure-data-studio/download-azure-data-studio)
+- [Azure Data Studio release notes](/azure-data-studio/release-notes-azure-data-studio)

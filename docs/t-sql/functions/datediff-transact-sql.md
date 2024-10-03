@@ -45,8 +45,6 @@ See [DATEDIFF_BIG &#40;Transact-SQL&#41;](../../t-sql/functions/datediff-big-tra
 DATEDIFF ( datepart , startdate , enddate )  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 
 *datepart*  

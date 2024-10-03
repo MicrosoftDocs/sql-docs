@@ -2,8 +2,8 @@
 title: "Python tutorial: Ski rentals"
 titleSuffix: SQL machine learning
 description: In this four-part tutorial series, you build a linear regression model in Python to predict ski rentals with SQL machine learning.
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: VanMSFT
+ms.author: vanto
 ms.reviewer: monamaki
 ms.date: 05/31/2024
 ms.service: sql
@@ -15,13 +15,13 @@ monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-curre
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
-In this four-part tutorial series, you will use Python and linear regression in [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) or on [SQL Server 2019 Big Data Clusters](../../big-data-cluster/machine-learning-services.md) to predict the number of ski rentals. The tutorial uses a [Python notebook in Azure Data Studio](../../azure-data-studio/notebooks/notebooks-guidance.md).
+In this four-part tutorial series, you will use Python and linear regression in [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) or on [SQL Server 2019 Big Data Clusters](../../big-data-cluster/machine-learning-services.md) to predict the number of ski rentals. The tutorial uses a [Python notebook in Azure Data Studio](/azure-data-studio/notebooks/notebooks-guidance).
 ::: moniker-end
 ::: moniker range="=sql-server-2017"
-In this four-part tutorial series, you will use Python and linear regression in [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) to predict the number of ski rentals. The tutorial uses a [Python notebook in Azure Data Studio](../../azure-data-studio/notebooks/notebooks-guidance.md).
+In this four-part tutorial series, you will use Python and linear regression in [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) to predict the number of ski rentals. The tutorial uses a [Python notebook in Azure Data Studio](/azure-data-studio/notebooks/notebooks-guidance).
 ::: moniker-end
 ::: moniker range="=azuresqldb-mi-current"
-In this four-part tutorial series, you will use Python and linear regression in [Azure SQL Managed Instance Machine Learning Services](/azure/azure-sql/managed-instance/machine-learning-services-overview) to predict the number of ski rentals. The tutorial uses a [Python notebook in Azure Data Studio](../../azure-data-studio/notebooks/notebooks-guidance.md).
+In this four-part tutorial series, you will use Python and linear regression in [Azure SQL Managed Instance Machine Learning Services](/azure/azure-sql/managed-instance/machine-learning-services-overview) to predict the number of ski rentals. The tutorial uses a [Python notebook in Azure Data Studio](/azure-data-studio/notebooks/notebooks-guidance).
 ::: moniker-end
 
 Imagine that you own a ski rental business and you want to predict the number of rentals that you'll have on a future date. This information helps you get your stock, staff, and facilities ready.
@@ -53,9 +53,9 @@ In [part four](python-ski-rental-linear-regression-deploy-model.md), you'll lear
 - **SQL Server Management Studio (SSMS)** - Use SSMS to restore the sample database to Azure SQL Managed Instance. To download, see [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md).
 ::: moniker-end
 
-- **Python IDE** - This tutorial uses a Python notebook in [Azure Data Studio](../../azure-data-studio/what-is-azure-data-studio.md). For more information, see [How to use notebooks in Azure Data Studio](../../azure-data-studio/notebooks/notebooks-guidance.md).
+- **Python IDE** - This tutorial uses a Python notebook in [Azure Data Studio](/azure-data-studio/what-is-azure-data-studio). For more information, see [How to use notebooks in Azure Data Studio](/azure-data-studio/notebooks/notebooks-guidance).
 
-- **SQL query tool** - This tutorial assumes you're using [Azure Data Studio](../../azure-data-studio/what-is-azure-data-studio.md).
+- **SQL query tool** - This tutorial assumes you're using [Azure Data Studio](/azure-data-studio/what-is-azure-data-studio).
 
 - Additional Python packages - The examples in this tutorial series use the following Python packages that might not be installed by default:
 
@@ -82,7 +82,7 @@ The sample database used in this tutorial has been saved to a `.bak` database ba
 ::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15"
 1. Download the file [TutorialDB.bak](https://aka.ms/TutorialDB_bak).
 
-1. Follow the directions in [Restore a database from a backup file](../../azure-data-studio/tutorial-backup-restore-sql-server.md#restore-a-database-from-a-backup-file) in Azure Data Studio, using these details:
+1. Follow the directions in [Restore a database from a backup file](/azure-data-studio/tutorial-backup-restore-sql-server#restore-a-database-from-a-backup-file) in Azure Data Studio, using these details:
 
    * Import from the `TutorialDB.bak` file you downloaded.
    * Name the target database `TutorialDB`.

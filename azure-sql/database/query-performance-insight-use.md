@@ -4,8 +4,8 @@ description: Query performance monitoring identifies the most CPU-consuming and 
 author: NikaKinska
 ms.author: nnikolic
 ms.reviewer: wiassaf, mathoma, randolphwest
-ms.date: 06/03/2024
-ms.service: sql-database
+ms.date: 08/16/2024
+ms.service: azure-sql-database
 ms.subservice: performance
 ms.topic: how-to
 ms.custom:
@@ -118,7 +118,7 @@ By default, Query Performance Insight shows the top five CPU-consuming queries w
    >  
    > For example, a query might have consumed a substantial amount of DTU for a while, although its total consumption in the observed period is less than the other top-consuming queries. In such a case, resource utilization of this query would not appear on the chart.
    >  
-   > If you need to understand top query executions beyond the limitations of Query Performance Insight, consider using [Azure SQL Insights](/azure/azure-monitor/insights/sql-insights-overview) for advanced database performance monitoring and troubleshooting.
+   > If you need to understand top query executions beyond the limitations of Query Performance Insight, consider using [database watcher](../database-watcher-overview.md) for advanced database performance monitoring and troubleshooting.
    >
 
 ## View individual query details
@@ -275,4 +275,4 @@ Applying these settings will eventually make Query Store collect telemetry for n
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Azure SQL Analytics](/azure/azure-monitor/insights/azure-sql)
+> [Database watcher](../database-watcher-overview.md)

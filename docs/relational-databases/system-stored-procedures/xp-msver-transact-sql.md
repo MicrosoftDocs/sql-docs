@@ -4,7 +4,7 @@ description: "Returns version information about SQL Server."
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 05/26/2023
+ms.date: 08/21/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -52,7 +52,7 @@ The name of an option, and can be one of the following values.
 | **OriginalFilename** | File name executed at [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] startup; for example, Sqlservr.exe. |
 | **PrivateBuild** | [!INCLUDE [ssInternalOnly](../../includes/ssinternalonly-md.md)] |
 | **SpecialBuild** | [!INCLUDE [ssInternalOnly](../../includes/ssinternalonly-md.md)] |
-| **WindowsVersion** | Version of [!INCLUDE [msCoName](../../includes/msconame-md.md)] Windows that is installed on the computer that is running [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]. |
+| **WindowsVersion** | Version of Windows that is installed on the computer that is running [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]. |
 | **ProcessorCount** | The number of processors in the computer that is running [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]. |
 | **ProcessorActiveMask** | Indicates the processors installed in the computer that is running [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] that are started and usable by [!INCLUDE [msCoName](../../includes/msconame-md.md)] Windows. |
 | **ProcessorType** | Processor type. Similar to **Platform**. |
@@ -73,7 +73,7 @@ Requires membership in the **public** role.
 
 ## Related content
 
-- [System Functions (Transact-SQL)](../system-functions/system-functions-category-transact-sql.md)
+- [System Functions by category for Transact-SQL](../system-functions/system-functions-category-transact-sql.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)
 - [General extended stored procedures (Transact-SQL)](general-extended-stored-procedures-transact-sql.md)
-- [@@VERSION (Transact-SQL)](../../t-sql/functions/version-transact-sql-configuration-functions.md)
+- [@@VERSION - Transact SQL Configuration Functions](../../t-sql/functions/version-transact-sql-configuration-functions.md)

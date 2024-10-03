@@ -38,8 +38,6 @@ EncryptByKey ( key_GUID , { 'cleartext' | @cleartext }
      , { authenticator | @authenticator } ] )  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
  *key_GUID*  
  Is the GUID of the key to be used to encrypt the *cleartext*. **uniqueidentifier**.  

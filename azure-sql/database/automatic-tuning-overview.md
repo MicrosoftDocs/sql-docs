@@ -2,11 +2,11 @@
 title: Automatic tuning overview
 titleSuffix: Azure SQL Database & Azure SQL Managed Instance
 description: Azure SQL Database and Azure SQL Managed Instance analyzes SQL query and automatically adapts to user workload.
-author: NikaKinska
-ms.author: nnikolic
-ms.reviewer: wiassaf, mathoma
-ms.date: 6/6/2022
-ms.service: sql-db-mi
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: nnikolic, mathoma
+ms.date: 9/13/2024
+ms.service: azure-sql
 ms.subservice: performance
 ms.topic: conceptual
 ms.custom: sqldbrb=2
@@ -75,11 +75,27 @@ To learn about building email notifications for automatic tuning recommendations
 
 Automatic tuning for SQL Managed Instance only supports **FORCE LAST GOOD PLAN**. For more information about configuring automatic tuning options through T-SQL, see [Automatic tuning introduces automatic plan correction](https://azure.microsoft.com/blog/automatic-tuning-introduces-automatic-plan-correction-and-t-sql-management/) and [Automatic plan correction](/sql/relational-databases/automatic-tuning/automatic-tuning#automatic-plan-correction).
 
+### Samples to enable
+
+For more information, see [ALTER DATABASE SET options](/sql/t-sql/statements/alter-database-transact-sql-set-options?view=azuresqldb-current&preserve-view=true).
+
+To inherit the default configuration from the parent logical server, use the following T-SQL. In the Azure portal, this reflects the option to "Inherit from: Server". 
+
+```sql
+ALTER DATABASE CURRENT SET AUTOMATIC_TUNING = INHERIT;
+```
+
+To enable the **CREATE INDEX** and **DROP INDEX** automatic tuning options, use the following T-SQL.
+
+```sql
+ALTER DATABASE CURRENT SET AUTOMATIC_TUNING (CREATE_INDEX = ON, DROP_INDEX = ON);
+```
+
 ## Automatic tuning history
 
 For Azure SQL Database, the history of changes made by automatic tuning is retained for 21 days. It can be viewed in Azure portal on the Performance recommendations page for a database, or using PowerShell with the [Get-AzSqlDatabaseRecommendedAction](/powershell/module/az.sql/get-azsqldatabaserecommendedaction) cmdlet. For longer retention, history data can also be streamed to several types of destinations by enabling the **AutomaticTuning** [diagnostic setting](metrics-diagnostic-telemetry-logging-streaming-export-configure.md).
 
-## Next steps
+## Related content
 
 - Read the blog post [Artificial Intelligence tunes Azure SQL Database](https://azure.microsoft.com/blog/artificial-intelligence-tunes-azure-sql-databases/).
 - Learn how automatic tuning works under the hood in [Automatically indexing millions of databases in Microsoft Azure SQL Database](https://www.microsoft.com/research/uploads/prod/2019/02/autoindexing_azuredb.pdf).

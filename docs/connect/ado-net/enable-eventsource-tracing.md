@@ -3,8 +3,8 @@ title: Enable event tracing in SqlClient
 description: Describes how to enable event tracing or logging in SqlClient by implementing an event listener and how to access the event data.
 author: David-Engel
 ms.author: davidengel
-ms.reviewer: v-davidengel
-ms.date: 03/15/2023
+ms.reviewer: davidengel
+ms.date: 09/27/2024
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: conceptual
@@ -23,7 +23,7 @@ dev_langs:
 Microsoft.Data.SqlClient.EventSource
 ```
 
-The current implementation supports the following Event Keywords:
+<a id="keywords"></a>The current implementation supports the following Event Keywords:
 
 | Keyword name | Value | Description |
 | ------------ | ----- | ----------- |
@@ -103,11 +103,11 @@ class Program
 }
 ```
 
-### Use Xperf to collect trace log
+## Use Xperf to collect traces
 
 1. Start tracing using the following command.
 
-   ```
+   ```powershell
    xperf -start trace -f myTrace.etl -on *Microsoft.Data.SqlClient.EventSource
    ```
 
@@ -115,21 +115,21 @@ class Program
 
 3. Stop tracing using the following command line.
 
-   ```
+   ```powershell
    xperf -stop trace
    ```
 
-4. Use PerfView to open the myTrace.etl file specified in Step 1. The SNI tracing log can be found with `Microsoft.Data.SqlClient.EventSource/SNIScope` and `Microsoft.Data.SqlClient.EventSource/SNITrace` event names.
+4. Use [PerfView](https://github.com/microsoft/perfview) to open the myTrace.etl file specified in Step 1. The SNI tracing log can be found with `Microsoft.Data.SqlClient.EventSource/SNIScope` and `Microsoft.Data.SqlClient.EventSource/SNITrace` event names.
 
    ![Use PerfView to view SNI trace file](media/view-event-trace-native-sni.png)
 
-### Use PerfView to collect trace log
+## Use PerfView to collect traces
 
-1. Start PerfView and run `Collect > Collect` from the menu bar.
+1. Start [PerfView](https://github.com/microsoft/perfview) and run `Collect > Collect` from the menu bar.
 
 2. Configure the trace file name, output path, and provider name.
 
-   ![Configure Prefview before collection](media/collect-event-trace-native-sni.png)
+   ![Configure Perfview before collection](media/collect-event-trace-native-sni.png)
 
 3. Start collection.
 
@@ -138,6 +138,65 @@ class Program
 5. Stop collection from PerfView. It takes a while to generate the PerfViewData.etl file according to the configuration in Step 2.
 
 6. Open the `etl` file in PerfView. The SNI tracing log can be found with `Microsoft.Data.SqlClient.EventSource/SNIScope` and `Microsoft.Data.SqlClient.EventSource/SNITrace` event names.
+
+## Use dotnet-trace to collect traces
+
+On Linux, macOS, or Windows, dotnet-trace can be used to capture traces. The donet-trace tool is used to collect traces for .NET applications. For more information about dotnet-trace, see the [dotnet-trace performance analysis utility](/dotnet/core/diagnostics/dotnet-trace) The traces created by dotnet-trace can be viewed in [PerfView](https://github.com/microsoft/perfview).
+
+1. If not already installed, [install the .NET SDK](/dotnet/core/install/) on the client machine.
+
+1. [Install dotnet-trace](/dotnet/core/diagnostics/dotnet-trace#install).
+
+1. Run dotnet-trace. The `--providers` parameter requires the provider name and keywords to be specified for traces from Microsoft.Data.SqlClient. The keywords option is a sum of the keyword values in the [event keywords table](#keywords) converted to hexadecimal. To collect all events at the verbose level of `MyApplication` from the start of the application, the sum of keywords is 8191 and `1FFF` in hexadecimal. The verbose level is specified in this command by `5`.
+
+   ```bash
+   dotnet-trace collect --providers Microsoft.Data.SqlClient.EventSource:1FFF:5 -- dotnet MyApplication.dll
+   ```
+
+   The output is:
+
+   ```bash
+
+   Provider Name                           Keywords            Level               Enabled By
+   Microsoft.Data.SqlClient.EventSource    0x0000000000001FFF  Verbose(5)          --providers
+
+   Launching: dotnet MyApplication.dll
+   Process        : /usr/lib/dotnet/dotnet
+   Output File    : /home/appuser/dotnet_20240927_102506.nettrace
+
+   [00:00:00:00]   Recording trace 0.00     (B)
+   Press <Enter> or <Ctrl+C> to exit...
+
+   Trace completed.
+   Process exited with code '1'.
+   ```
+
+   To collect all events at the information level on a running application, first find the process ID of the application. Then run dotnet-trace on the process. The information level is specified by `4`.
+
+   ```bash
+   dotnet-trace ps
+   8734  MyApplication  /home/appuser/MyApplication/MyApplication
+
+   dotnet-trace collect -–process-id 8734 --providers Microsoft.Data.SqlClient.EventSource:1FFF:4
+   ```
+
+   Run the application separately and let it run as long as needed to reproduce the issue. If it's a high CPU issue, 5-10 seconds is usually enough.
+
+   ```bash
+   Provider Name                           Keywords            Level               Enabled By
+   Microsoft.Data.SqlClient.EventSource    0x0000000000001FFF  LogAlways(0)        --providers
+
+   Process        : /usr/lib/dotnet/dotnet
+   Output File    : /home/appuser/dotnet_20240927_104154.nettrace
+
+   [00:00:00:10]   Recording trace 4.096    (KB)
+   Press <Enter> or <Ctrl+C> to exit...
+   Stopping the trace. This may take several minutes depending on the application being traced.
+
+   Trace completed.
+   ```
+
+   The trace file name ends in `.nettrace`. If not tracing on Windows, copy the file to a Windows system. View the trace file in [PerfView](https://github.com/microsoft/perfview).
 
 ## External resources
 

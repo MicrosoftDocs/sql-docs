@@ -48,8 +48,6 @@ WITH IDENTITY = 'identity_name'
         [ FOR CRYPTOGRAPHIC PROVIDER cryptographic_provider_name ]
 ```
 
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 
 #### *credential_name*
@@ -132,20 +130,20 @@ The following example creates a [!INCLUDE[ssNoVersion](../../includes/ssnoversio
 > [!IMPORTANT]
 > The **IDENTITY** argument of **CREATE CREDENTIAL** requires the key vault name. The **SECRET** argument of **CREATE CREDENTIAL** requires the *\<Client ID>* (without hyphens) and *\<Secret>* to be passed together without a space between them.
 
- In the following example, the **Client ID** (`EF5C8E09-4D2A-4A76-9998-D93440D8115D`) is stripped of the hyphens and entered as the string `EF5C8E094D2A4A769998D93440D8115D` and the **Secret** is represented by the string *SECRET_DBEngine*.
+In the following example, the **Client ID** (`11111111-2222-3333-4444-555555555555`) is stripped of the hyphens and entered as the string `11111111222233334444555555555555` and the **Secret** is represented by the string `SECRET_DBEngine`.
 
 ```sql
 USE master;
 CREATE CREDENTIAL Azure_EKM_TDE_cred
     WITH IDENTITY = 'ContosoKeyVault',
-    SECRET = 'EF5C8E094D2A4A769998D93440D8115DSECRET_DBEngine'
+    SECRET = '11111111222233334444555555555555SECRET_DBEngine'
     FOR CRYPTOGRAPHIC PROVIDER AzureKeyVault_EKM_Prov ;
 ```
 
 The following example creates the same credential by using variables for the **Client ID** and **Secret** strings, which are then concatenated together to form the **SECRET** argument. The **REPLACE** function is used to remove the hyphens from the Client ID.
 
 ```sql
-DECLARE @AuthClientId uniqueidentifier = 'EF5C8E09-4D2A-4A76-9998-D93440D8115D';
+DECLARE @AuthClientId uniqueidentifier = '11111111-AAAA-BBBB-2222-CCCCCCCCCCCC';
 DECLARE @AuthClientSecret varchar(200) = 'SECRET_DBEngine';
 DECLARE @pwd varchar(max) = REPLACE(CONVERT(varchar(36), @AuthClientId) , '-', '') + @AuthClientSecret;
 

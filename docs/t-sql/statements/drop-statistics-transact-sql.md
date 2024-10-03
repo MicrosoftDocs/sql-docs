@@ -53,8 +53,6 @@ DROP STATISTICS [ schema_name . ] table_name.statistics_name
 [;]  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
  *table* | *view*  
  Is the name of the target table or indexed view for which statistics should be dropped. Table and view names must comply with the rules for [Database Identifiers](../../relational-databases/databases/database-identifiers.md). Specifying the table or view owner name is optional.  

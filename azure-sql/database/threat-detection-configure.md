@@ -5,7 +5,7 @@ author: rmatchoro
 ms.author: ronmat
 ms.reviewer: wiassaf, vanto, mathoma
 ms.date: 02/16/2022
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.subservice: security
 ms.topic: how-to
 ms.custom: sqldbrb=1

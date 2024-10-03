@@ -1,8 +1,8 @@
 ---
 title: "In-memory OLTP for faster T-SQL Performance"
 description: Learn the basics of the In-Memory OLTP performance features of SQL Server and Azure SQL Database with quick explanations and core code samples for developers.
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: 09/27/2019
 ms.service: sql
 ms.subservice: in-memory-oltp

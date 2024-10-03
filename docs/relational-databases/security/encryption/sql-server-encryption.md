@@ -4,7 +4,7 @@ description: Use these resources to understand how SQL Server uses encryption to
 author: jaszymas
 ms.author: jaszymas
 ms.reviewer: vanto, randolphwest
-ms.date: 09/22/2023
+ms.date: 09/16/2024
 ms.service: sql
 ms.subservice: security
 ms.topic: conceptual
@@ -23,7 +23,7 @@ Encryption is the process of obfuscating data by the use of a key or password. T
 Although encryption is a valuable tool to help ensure security, it shouldn't be considered for all data or connections. When you're deciding whether to implement encryption, consider how users access data. If users access data over a public network, data encryption might be required to increase security. However, if all access involves a secure intranet configuration, encryption might not be required. Any use of encryption should also include a maintenance strategy for passwords, keys, and certificates.
 
 > [!NOTE]  
-> The latest information about Transport Level Security (TLS 1.2) is available at [TLS 1.2 support for Microsoft SQL Server](https://support.microsoft.com/kb/3135244).
+> The latest information about Transport Level Security (TLS 1.2) is available at [TLS 1.2 support for Microsoft SQL Server](/troubleshoot/sql/database-engine/connect/tls-1-2-support-microsoft-sql-server). For more information about TLS 1.3, see [TLS 1.3 support](../networking/tls-1-3.md).
 
 ## In this section
 
@@ -33,25 +33,25 @@ You can use encryption in [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-
 
   Information about the encryption hierarchy in [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)].
 
-- [Choose an Encryption Algorithm](choose-an-encryption-algorithm.md)
+- [Choose an encryption algorithm](choose-an-encryption-algorithm.md)
 
   Information about how to select an effective encrypting algorithm.
 
-- [Transparent Data Encryption (TDE)](transparent-data-encryption.md)
+- [Transparent data encryption (TDE)](transparent-data-encryption.md)
 
-  General information about how to encrypt data transparently.
+  General information about how to encrypt data at rest.
 
 - [SQL Server and Database Encryption Keys (Database Engine)](sql-server-and-database-encryption-keys-database-engine.md)
 
   In [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)], encryption keys include a combination of public, private, and symmetric keys that are used to protect sensitive data. This section explains how to implement and manage encryption keys.
 
-- [Always Encrypted (Database Engine)](always-encrypted-database-engine.md)
+- [Always Encrypted](always-encrypted-database-engine.md)
 
-  Ensure on-premises database administrators, cloud database operators, or other high-privileged, but unauthorized users, can't access the encrypted data.
+  Ensure on-premises database administrators, cloud database operators, or other high-privileged, but unauthorized users, can't access the encrypted data. Expand Always Encrypted with [Always Encrypted with secure enclaves](always-encrypted-enclaves.md) to enable in-place encryption and richer confidential queries.
 
 - [Dynamic data masking](../dynamic-data-masking.md)
 
-  Limit sensitive data exposure by masking it to non-privileged users.
+  Limit sensitive data exposure by masking it to nonprivileged users.
 
 - [SQL Server Certificates and Asymmetric Keys](../sql-server-certificates-and-asymmetric-keys.md)
 
@@ -61,13 +61,13 @@ You can use encryption in [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-
 
 - [Securing SQL Server](../securing-sql-server.md)
 - [An overview of Azure SQL Database security capabilities](/azure/sql-database/sql-database-security-overview)
-- [Cryptographic Functions (Transact-SQL)](../../../t-sql/functions/cryptographic-functions-transact-sql.md)
+- [Cryptographic functions (Transact-SQL)](../../../t-sql/functions/cryptographic-functions-transact-sql.md)
 - [ENCRYPTBYPASSPHRASE (Transact-SQL)](../../../t-sql/functions/encryptbypassphrase-transact-sql.md)
 - [ENCRYPTBYKEY (Transact-SQL)](../../../t-sql/functions/encryptbykey-transact-sql.md)
 - [ENCRYPTBYASYMKEY (Transact-SQL)](../../../t-sql/functions/encryptbyasymkey-transact-sql.md)
 - [ENCRYPTBYCERT (Transact-SQL)](../../../t-sql/functions/encryptbycert-transact-sql.md)
-- [sys.key_encryptions (Transact-SQL)](../../../relational-databases/system-catalog-views/sys-key-encryptions-transact-sql.md)
+- [sys.key_encryptions (Transact-SQL)](../../system-catalog-views/sys-key-encryptions-transact-sql.md)
 - [SQL Server and Database Encryption Keys (Database Engine)](sql-server-and-database-encryption-keys-database-engine.md)
-- [Back Up and Restore Reporting Services Encryption Keys](../../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)
-- [Enable Encrypted Connections to the Database Engine](../../../database-engine/configure-windows/configure-sql-server-encryption.md)
+- [Back up and restore SQL Server Reporting Services (SSRS) encryption keys](../../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)
+- [Configure SQL Server Database Engine for encrypting connections](../../../database-engine/configure-windows/configure-sql-server-encryption.md)
 - [Microsoft TechNet: SQL Server TechCenter: SQL Server 2012 Security and Protection](https://download.microsoft.com/download/8/F/A/8FABACD7-803E-40FC-ADF8-355E7D218F4C/SQL_Server_2012_Security_Best_Practice_Whitepaper_Apr2012.docx)

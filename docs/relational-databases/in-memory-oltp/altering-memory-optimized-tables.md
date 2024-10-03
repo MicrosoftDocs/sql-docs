@@ -1,8 +1,8 @@
 ---
 title: "Altering Memory-Optimized Tables"
 description: Learn how the ALTER TABLE statement performs schema and index changes on memory-optimized tables. Combine ADD, DROP, and ALTER operations in a single statement.
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "10/22/2018"
 ms.service: sql
 ms.subservice: in-memory-oltp

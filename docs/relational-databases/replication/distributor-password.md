@@ -3,11 +3,12 @@ title: "Distributor Password"
 description: "Distributor Password"
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/01/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: ui-reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 f1_keywords:
   - "sql13.rep.configuredistributionwizard.distributorpassword.f1"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
@@ -23,8 +24,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
  **Confirm Password**  
  Re-enter the password to confirm it was entered correctly.  
   
-## See Also  
- [Configure Distribution](../../relational-databases/replication/configure-distribution.md)   
- [Configure Publishing and Distribution](../../relational-databases/replication/configure-publishing-and-distribution.md)  
-  
-  
+## Related content
+
+- [Configure Distribution](../../relational-databases/replication/configure-distribution.md)
+- [Configure Publishing and Distribution](../../relational-databases/replication/configure-publishing-and-distribution.md)

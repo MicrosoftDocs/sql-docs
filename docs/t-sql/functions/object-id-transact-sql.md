@@ -42,8 +42,6 @@ OBJECT_ID ( ' [ database_name . [ schema_name ] . | schema_name . ]
   object_name' [ , 'object_type' ] )
 ```
 
-[!INCLUDE [sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 
 #### N'*object_name*'

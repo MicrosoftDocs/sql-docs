@@ -1,8 +1,8 @@
 ---
 title: Azure Data Studio notebooks (Python, R)
 description: Learn how to run Python and R scripts in a notebook in Azure Data Studio with SQL Server Machine Learning Services.
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: VanMSFT
+ms.author: vanto
 ms.date: 03/09/2020
 ms.service: sql
 ms.subservice: machine-learning-services
@@ -12,11 +12,11 @@ monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15"
 # Run Python and R scripts in Azure Data Studio notebooks with SQL Server Machine Learning Services
 [!INCLUDE [SQL Server 2017 and later](../../includes/applies-to-version/sqlserver2017.md)]
 
-Learn how to run Python and R scripts in [Azure Data Studio](../../azure-data-studio/what-is-azure-data-studio.md) notebooks with [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md). Azure Data Studio is a cross-platform database tool.
+Learn how to run Python and R scripts in [Azure Data Studio](/azure-data-studio/what-is-azure-data-studio) notebooks with [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md). Azure Data Studio is a cross-platform database tool.
 
 ## Prerequisites
 
-- [Download and install Azure Data Studio](../../azure-data-studio/download-azure-data-studio.md) on your workstation computer. Azure Data Studio is cross-platform, and runs on Windows, macOS, and Linux.
+- [Download and install Azure Data Studio](/azure-data-studio/download-azure-data-studio) on your workstation computer. Azure Data Studio is cross-platform, and runs on Windows, macOS, and Linux.
 
 - A server with SQL Server Machine Learning Services installed and enabled. You can use Machine Learning Services on Windows, Linux, or Big Data Clusters:
 
@@ -117,7 +117,7 @@ Follow these steps to run an R script:
 
 ## Next steps
 
-- [How to use notebooks in Azure Data Studio](../../azure-data-studio/notebooks/notebooks-guidance.md)
-- [Create and run a SQL Server notebook](../../azure-data-studio/notebooks/notebooks-sql-kernel.md)
+- [How to use notebooks in Azure Data Studio](/azure-data-studio/notebooks/notebooks-guidance)
+- [Create and run a SQL Server notebook](/azure-data-studio/notebooks/notebooks-sql-kernel)
 - [Quickstart: Run simple Python scripts with SQL Server Machine Learning Services](../tutorials/quickstart-python-create-script.md)
 - [Quickstart: Run simple R scripts with SQL Server Machine Learning Services](../tutorials/quickstart-r-create-script.md)

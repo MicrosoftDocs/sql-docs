@@ -1,13 +1,13 @@
 ### YamlMime:Landing
 
-title: Azure SQL Database and Azure SQL Managed Instance monitoring and performance tuning  
-summary: Azure SQL Database  and Azure SQL Managed Instance provide tools to help you collect metrics and diagnostic information to monitor your database and improve its performance. # < 160 chars
+title: Azure SQL monitoring and performance tuning  
+summary: Azure SQL Database and Azure SQL Managed Instance provide tools to help you collect metrics and diagnostic information to monitor your database and improve its performance. # < 160 chars
 
 metadata:
-  title: Azure SQL Database  and Azure SQL Managed Instance monitoring and tuning documentation 
+  title: Monitoring and tuning documentation 
   titleSuffix: Azure SQL Database & Azure SQL Managed Instance
   description: Learn about Azure SQL Database monitoring and performance tuning tools that help you collect metrics and diagnostics and improve database performance.
-  ms.service: sql-database 
+  ms.service: azure-sql-database
   ms.subservice: monitoring
   ms.custom: sqldbrb=2
   ms.topic: landing-page 
@@ -104,7 +104,7 @@ landingContent:
     linkLists:
       - linkListType: overview
         links: 
-          - text: Intelligent Insights using AI
+          - text: Intelligent Insights
             url: intelligent-insights-overview.md
       - linkListType: concept
         links:

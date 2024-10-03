@@ -3,8 +3,8 @@ title: "Deploy availability group with HPE Serviceguard"
 description: Use HPE Serviceguard as the cluster manager to achieve high availability with an availability group on SQL Server on Linux
 author: amitkh-msft
 ms.author: amitkh
-ms.reviewer: vanto, randolphwest
-ms.date: 03/05/2024
+ms.reviewer: vanto, randolphwest, maghan
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: linux
 ms.topic: tutorial
@@ -12,6 +12,7 @@ ms.custom:
   - intro-deployment
   - linux-related-content
 ---
+
 # Tutorial: Set up a three node Always On availability group with HPE Serviceguard for Linux
 
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
@@ -20,8 +21,7 @@ This tutorial explains how to configure SQL Server availability groups with HPE 
 
 Refer to [HPE Serviceguard Clusters](https://h20195.www2.hpe.com/v2/GetPDF.aspx/c04154488.pdf) for an overview of the HPE Serviceguard clusters.
 
-> [!NOTE]  
->  
+> [!NOTE]
 > Microsoft supports data movement, the availability group, and the SQL Server components. Contact HPE for support related to the documentation of HPE Serviceguard cluster and quorum management.
 
 This tutorial consists of the following tasks:
@@ -81,7 +81,7 @@ To install Serviceguard, use the `cminstaller` method. Specific instructions are
 - [Install Serviceguard for Linux on two nodes](https://support.hpe.com/hpesc/public/docDisplay?docId=a00112895en_us&page=GUID-1E75E8C6-C674-48D1-B30D-DED738431FDD.html). Refer to the section **Install_serviceguard_using_cminstaller**.
 - [Install Serviceguard quorum server on the third node](https://support.hpe.com/hpesc/public/docDisplay?docId=a00112895en_us&page=GUID-5C321932-E5F7-4D05-8A55-33E56BE7AFB0.html). Refer to the section **Install_QS_from_the_ISO**.
 
-After you complete the installation of the HPE Serviceguard cluster, you can enable cluster management portal on TCP port 5522 on the primary replica node. The following steps add a rule to the firewall to allow 5522. The following command is for a Red Hat Enterprise Linux (RHEL). you need to run similar commands for other distributions:
+After you complete the installation of the HPE Serviceguard cluster, you can enable cluster management portal on TCP port 5522 on the primary replica node. The following steps add a rule to the firewall to allow 5522. The following command is for a Red Hat Enterprise Linux (RHEL). You need to run similar commands for other distributions:
 
 ```bash
 sudo firewall-cmd --zone=public --add-port=5522/tcp --permanent
@@ -90,7 +90,7 @@ sudo firewall-cmd --reload
 
 ## Create HPE Serviceguard cluster
 
-Follow theses instructions to configure and create the HPE Serviceguard cluster. In this step, you will also configure the quorum server.
+Follow these instructions to configure and create the HPE Serviceguard cluster. In this step, you'll also configure the quorum server.
 
 1. [Configure the Serviceguard quorum server on the third node](https://support.hpe.com/hpesc/public/docDisplay?docId=a00112895en_us&page=GUID-C371758D-AF60-4FA9-B541-E1198650162A.html). Refer to the **Configure_QS** section.
 1. [Configure and create Serviceguard cluster on the other two nodes](https://support.hpe.com/hpesc/public/docDisplay?docId=a00112895en_us&page=GUID-43419A91-E430-42F3-BFE4-29CC7FAA64D0.html). Refer to the **Configure_and_create_Cluster** section.
@@ -98,13 +98,11 @@ Follow theses instructions to configure and create the HPE Serviceguard cluster.
 > [!NOTE]  
 > You can bypass manual installation of your HPE Serviceguard cluster and quorum, by adding the [HPE Serviceguard for Linux (SGLX) extension](https://techcommunity.microsoft.com/t5/sql-server-blog/hpe-sglx-the-new-azure-vm-extension-for-sql-server-on-linux/ba-p/3723764) from the Azure VM marketplace, when you create your VM.
 
-
-
 ## Create the availability group and add a sample database
 
 In this step, create an availability group with two (or more) synchronous replicas and a configuration only replica, which provides data protection and might also provide high availability. The following diagram represents this architecture:
 
-:::image type="content" source="media/sql-server-linux-availability-group-ha/2-configuration-only.png" alt-text="Screenshot showing how the primary replica synchronizes user data and configuration data with the secondary replica. The primary replica only synchronizes configuration data with the configuration only replica. The configuration only replica doesn't have user data replicas.":::
+:::image type="content" source="media/sql-server-availability-group-ha-hpe/2-configuration-only.png" alt-text="Diagram showing primary replica synchronizing user data and configuration data with secondary replica. Configuration only replica synchronizes only configuration data.":::
 
 1. Synchronous replication of user data to the secondary replica. It also includes availability group configuration metadata.
 
@@ -125,7 +123,7 @@ To create the availability group, follow these steps:
 
 ### Enable availability groups and restart mssql-server
 
-Enable availability groups on all the nodes that host a SQL Server instance. Then restart mssql-server. Run the following script on all three nodes:
+Enable availability groups on all the nodes that host a SQL Server instance. Then restart mssql-server. Run the following script on all three nodes:
 
 ```bash
 sudo /opt/mssql/bin/mssql-conf
@@ -156,9 +154,9 @@ WITH PRIVATE KEY
       ENCRYPTION BY PASSWORD = '<Private_Key_Password>' );
 ```
 
-At this point, the primary SQL Server replica has a certificate at `/var/opt/mssql/data/dbm_certificate.cer` and a private key at `var/opt/mssql/data/dbm_certificate.pvk`. Copy these two files to the same location on all servers that will host availability replicas. Use the `mssql` user, or give permission to the `mssql` user to access these files.
+At this point, the primary SQL Server replica has a certificate at `/var/opt/mssql/data/dbm_certificate.cer` and a private key at `var/opt/mssql/data/dbm_certificate.pvk`. Copy these two files to the same location on all servers that host availability replicas. Use the `mssql` user, or give permission to the `mssql` user to access these files.
 
-For example, on the source server, the following command copies the files to the target machine. Replace the `node2` values with the name of the host running the secondary SQL Server instance. Copy the certificate on the configuration only replica as well and run the below commands on that node as well.
+For example, on the source server, the following command copies the files to the target machine. Replace the `node2` values with the name of the host running the secondary SQL Server instance. Copy the certificate on the configuration only replica as well and run the below commands on that node as well.
 
 ```bash
 cd /var/opt/mssql/data
@@ -205,7 +203,7 @@ ALTER ENDPOINT [hadr_endpoint] STATE = STARTED;
 > [!NOTE]  
 > 5022 is the standard port used for the database mirroring endpoint, but you can change it to any available port.
 
-On the configuration-only replica create the database mirroring endpoint using the below command, note for the value for the Role here is set to `WITNESS`, which is what it needs to be for the configuration-only replica.
+On the configuration-only replica create the database mirroring endpoint using the below command, note for the value for the Role here's set to `WITNESS`, which is what it needs to be for the configuration-only replica.
 
 ```sql
 CREATE ENDPOINT [hadr_endpoint] AS TCP (LISTENER_PORT = 5022)
@@ -241,12 +239,12 @@ CREATE AVAILABILITY GROUP [ag1]
         FAILOVER_MODE = EXTERNAL,
         SEEDING_MODE = AUTOMATIC
         ),
-    
+
     N'<node3>' WITH (
         ENDPOINT_URL = N'tcp://<node3>:<5022>',
         AVAILABILITY_MODE = CONFIGURATION_ONLY
         );
-          
+
 ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE;
 ```
 
@@ -277,7 +275,7 @@ CREATE DATABASE [db1];
 GO
 
 -- set the database in full recovery model
-ALTER DATABASE [db1] SET RECOVERY FULL; 
+ALTER DATABASE [db1] SET RECOVERY FULL;
 GO
 
 -- backs up the database to disk
@@ -313,7 +311,7 @@ For Deployments in Azure Cloud, HPE Serviceguard for Linux requires a load balan
    | **Name** | The load balancer name. For example, `SQLAvailabilityGroupLB`. |
    | **Type** | Internal |
    | **SKU** | Basic or Standard |
-   | **Virtual network** | VNet used for the VM replicas |
+   | **Virtual network** | Virtual network used for the VM replicas |
    | **Subnet** | Subnet in which SQL Server instances are hosted |
    | **IP Address Assignment** | Static |
    | **Private IP address** | Create a private IP within subnet |
@@ -393,7 +391,7 @@ At this point, the resource group has a load balancer that connects to all Servi
 For the automatic failover test, you can bring down the primary replica (power off), which replicates the sudden unavailability of the primary node. The expected behavior is:
 
 1. The cluster manager promotes one of the secondary replicas in the availability group to primary.
-1. The failed primary replica automatically joins the cluster after it is back up. The cluster manager promotes it to secondary replica.
+1. The failed primary replica automatically joins the cluster after it's backup. The cluster manager promotes it to secondary replica.
 
 For HPE Serviceguard, refer to the section [**Testing the setup for failover readiness**](https://support.hpe.com/hpesc/public/docDisplay?docId=a00112895en_us&page=GUID-1119C5B1-3DEE-473D-8684-A7816BE12B7D.html)
 

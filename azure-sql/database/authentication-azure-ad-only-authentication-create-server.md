@@ -5,17 +5,19 @@ description: This article guides you through creating an Azure SQL logical serve
 author: nofield
 ms.author: nofield
 ms.reviewer: wiassaf, vanto, mathoma
-ms.date: 01/18/2024
-ms.service: sql-db-mi
+ms.date: 09/17/2024
+ms.service: azure-sql
 ms.subservice: security
-ms.custom: devx-track-azurepowershell, devx-track-azurecli
 ms.topic: how-to
-monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
+ms.custom:
+  - devx-track-azurepowershell
+  - devx-track-azurecli
+monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
 ---
 
 # Create server with Microsoft Entra-only authentication enabled in Azure SQL
 
-[!INCLUDE[appliesto-sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi.md)]
+[!INCLUDE [appliesto-sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi.md)]
 
 This how-to guide outlines the steps to create a [logical server](logical-servers.md) for Azure SQL Database or an [Azure SQL Managed Instance](../managed-instance/sql-managed-instance-paas-overview.md) with [Microsoft Entra-only authentication](authentication-azure-ad-only-authentication.md) enabled during provisioning. The Microsoft Entra-only authentication feature prevents users from connecting to the server or managed instance using SQL authentication, and only allows connections authenticated with Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)).
 
@@ -27,7 +29,7 @@ This how-to guide outlines the steps to create a [logical server](logical-server
 - [Az 6.1.0](https://www.powershellgallery.com/packages/Az/6.1.0) module or higher is needed when using PowerShell.
 - If you're provisioning a managed instance using the Azure CLI, PowerShell, or REST API, a virtual network and subnet needs to be created before you begin. For more information, see [Create a virtual network for Azure SQL Managed Instance](../managed-instance/virtual-network-subnet-create-arm-template.md).
 
-## Permissions
+### Permissions
 
 To provision a logical server or managed instance, you'll need to have the appropriate permissions to create these resources. Azure users with higher permissions, such as subscription [Owners](/azure/role-based-access-control/built-in-roles#owner), [Contributors](/azure/role-based-access-control/built-in-roles#contributor), [Service Administrators](/azure/role-based-access-control/rbac-and-directory-admin-roles#classic-subscription-administrator-roles), and [Co-Administrators](/azure/role-based-access-control/rbac-and-directory-admin-roles#classic-subscription-administrator-roles) have the privilege to create a SQL server or managed instance. To create these resources with the least privileged Azure RBAC role, use the [SQL Server Contributor](/azure/role-based-access-control/built-in-roles#sql-server-contributor) role for SQL Database and [SQL Managed Instance Contributor](/azure/role-based-access-control/built-in-roles#sql-managed-instance-contributor) role for SQL Managed Instance.
 
@@ -37,7 +39,7 @@ The [SQL Security Manager](/azure/role-based-access-control/built-in-roles#sql-s
 
 ## Provision with Microsoft Entra-only authentication enabled
 
-The following section provides you with examples and scripts on how to create a logical server or managed instance with a Microsoft Entra admin set for the server or instance, and have Microsoft Entra-only authentication enabled during server creation. For more information on the feature, see [Microsoft Entra-only authentication](authentication-azure-ad-only-authentication.md).
+The following section provides you with examples and scripts on how to create a logical server or managed instance with a Microsoft Entra admin set for the server or instance, and have Microsoft Entra-only authentication enabled during server creation. For more information on the feature, see [Microsoft Entra-only authentication with Azure SQL](authentication-azure-ad-only-authentication.md).
 
 In our examples, we're enabling Microsoft Entra-only authentication during server or managed instance creation, with a system assigned server admin and password. This will prevent server admin access when Microsoft Entra-only authentication is enabled, and only allows the Microsoft Entra admin to access the resource. It's optional to add parameters to the APIs to include your own server admin and password during server creation. However, the password can't be reset until you disable Microsoft Entra-only authentication. An example of how to use these optional parameters to specify the server admin login name is presented in the [PowerShell](?tabs=azure-powershell#azure-sql-database) tab on this page.
 
@@ -69,7 +71,7 @@ In our examples, we're enabling Microsoft Entra-only authentication during serve
    - **Authentication method**: Select **Use Microsoft Entra-only authentication**.
    - Select **Set admin**, to open the **Microsoft Entra ID** pane and select a Microsoft Entra principal as your logical server Microsoft Entra administrator. When you're finished, use the **Select** button to set your admin.
 
-   :::image type="content" source="media/authentication-azure-ad-only-authentication/azure-ad-portal-create-server.png" alt-text="screenshot of creating a server with Use Microsoft Entra-only authentication enabled.":::
+   :::image type="content" source="media/authentication-azure-ad-only-authentication-create-server/azure-ad-portal-create-server.png" alt-text="Screenshot of creating a server with Use Microsoft Entra-only authentication enabled." lightbox="media/authentication-azure-ad-only-authentication-create-server/azure-ad-portal-create-server.png":::
 
 1. Select **Next: Networking** at the bottom of the page.
 
@@ -235,7 +237,7 @@ $responce.content
 
 # [ARM Template](#tab/arm-template)
 
-For more information and ARM templates, see [Azure Resource Manager templates for Azure SQL Database & SQL Managed Instance](arm-templates-content-guide.md).
+For more information and ARM templates, see [Azure Resource Manager templates for Azure SQL Database](arm-templates-content-guide.md).
 
 To provision a logical server with a Microsoft Entra admin set for the server and Microsoft Entra-only authentication enabled using an ARM Template, see our [Azure SQL logical server with Microsoft Entra-only authentication](https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/microsoft.sql/sql-logical-server-aad-only-auth) quickstart template.
 
@@ -327,17 +329,17 @@ You can also use the following template. Use a [Custom deployment in the Azure p
 
 1. Fill out the mandatory information required on the **Basics** tab for **Project details** and **Managed Instance details**. This is a minimum set of information required to provision a SQL Managed Instance.
 
-   :::image type="content" source="media/authentication-azure-ad-only-authentication/azure-ad-only-managed-instance-create-basic.png" alt-text="Azure portal screenshot of the create SQL Managed Instance basic tab ":::
+   :::image type="content" source="media/authentication-azure-ad-only-authentication-create-server/azure-ad-only-managed-instance-create-basic.png" alt-text="Azure portal screenshot of the create SQL Managed Instance basic tab." lightbox="media/authentication-azure-ad-only-authentication-create-server/azure-ad-only-managed-instance-create-basic.png":::
 
-   For more information on the configuration options, see [Quickstart: Create an Azure SQL Managed Instance](../managed-instance/instance-create-quickstart.md).
+   For more information on the configuration options, see [Quickstart: Create Azure SQL Managed Instance](../managed-instance/instance-create-quickstart.md).
 
 1. Under **Authentication**, select **Use Microsoft Entra-only authentication** for the **Authentication method**.
 
 1. Select **Set admin** to open the **Microsoft Entra ID** pane and select a Microsoft Entra principal as your managed instance Microsoft Entra administrator. When you're finished, use the **Select** button to set your admin.
 
-   :::image type="content" source="media/authentication-azure-ad-only-authentication/azure-ad-only-managed-instance-create-basic-choose-authentication.png" alt-text="Azure portal screenshot of the create SQL Managed Instance basic tab with user Microsoft Entra-only authentication selected.":::
+   :::image type="content" source="media/authentication-azure-ad-only-authentication-create-server/azure-ad-only-managed-instance-create-basic-choose-authentication.png" alt-text="Azure portal screenshot of the create SQL Managed Instance basic tab with user Microsoft Entra-only authentication selected." lightbox="media/authentication-azure-ad-only-authentication-create-server/azure-ad-only-managed-instance-create-basic-choose-authentication.png":::
 
-1. You can leave the rest of the settings default. For more information on the **Networking**, **Security**, or other tabs and settings, follow the guide in the article [Quickstart: Create an Azure SQL Managed Instance](../managed-instance/instance-create-quickstart.md).
+1. You can leave the rest of the settings default. For more information on the **Networking**, **Security**, or other tabs and settings, follow the guide in the article [Quickstart: Create Azure SQL Managed Instance](../managed-instance/instance-create-quickstart.md).
 
 1. Once you're done with configuring your settings, select **Review + create** to proceed. Select **Create** to start provisioning the managed instance.
 
@@ -764,9 +766,9 @@ Use a [Custom deployment in the Azure portal](https://portal.azure.com/#create/M
 
 ### Grant Directory Readers permissions
 
-Once the deployment is complete for your managed instance, you might notice that the SQL Managed Instance needs **Read** permissions to access Microsoft Entra ID. Read permissions can be granted by clicking on the displayed message in the Azure portal by a person with enough privileges. For more information, see [Directory Readers role in Microsoft Entra for Azure SQL](authentication-aad-directory-readers-role.md).
+Once the deployment is complete for your managed instance, you might notice that the SQL Managed Instance needs **Read** permissions to access Microsoft Entra ID. Read permissions can be granted by selecting on the displayed message in the Azure portal by a person with enough privileges. For more information, see [Directory Readers role in Microsoft Entra ID for Azure SQL](authentication-aad-directory-readers-role.md).
 
-:::image type="content" source="media/authentication-azure-ad-only-authentication/azure-ad-portal-read-permissions.png" alt-text="Screenshot of the Microsoft Entra admin menu in Azure portal showing Read permissions needed.":::
+:::image type="content" source="media/authentication-azure-ad-only-authentication-create-server/azure-ad-portal-read-permissions.png" alt-text="Screenshot of the Microsoft Entra admin menu in Azure portal showing Read permissions needed." lightbox="media/authentication-azure-ad-only-authentication-create-server/azure-ad-portal-read-permissions.png":::
 
 ## Limitations
 

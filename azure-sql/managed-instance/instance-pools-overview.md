@@ -6,7 +6,7 @@ author: MariDjo
 ms.author: dmarinkovic
 ms.reviewer: mathoma
 ms.date: 01/31/2024
-ms.service: sql-managed-instance
+ms.service: azure-sql-managed-instance
 ms.subservice: service-overview
 ms.topic: conceptual
 ---
@@ -46,7 +46,7 @@ The 2024 preview refresh of instance pools brings the following new capabilities
 
 ## Architecture
 
-Instance pools have a similar architecture to single managed instances. To support [deployments within Azure virtual networks](/azure/virtual-network/virtual-network-for-azure-services) and provide isolation and security for customers, instance pools also rely on [virtual clusters](virtual-cluster-architecture.md). Virtual clusters represent a dedicated set of isolated virtual machines deployed inside the customer's virtual network subnet. All single instances and instance pools belong to the same virtual cluster. Instances within a pool and single instances deployed to the same subnet don't share compute resources allocated to SQL Server processes and gateway components, which ensures performance predictability. After initial pool deployment, management operations on instances in a pool are faster as the virtual cluster has already been extended when the pool was provisioned. 
+Instance pools have a similar architecture to single managed instances. To support [deployments within Azure virtual networks](/azure/virtual-network/virtual-network-for-azure-services) and provide isolation and security for customers, instance pools also rely on [virtual clusters](virtual-cluster-architecture.md). Virtual clusters represent a dedicated set of isolated virtual machines deployed inside the customer's virtual network subnet. All single instances and instance pools belong to the same virtual cluster. Instances within a pool and single instances deployed to the same subnet don't share compute resources allocated to SQL Server processes and gateway components, which ensures performance predictability. After initial pool deployment, management operations on instances in a pool are faster as the virtual cluster has already been extended when the pool was provisioned. 
 
 The compute size of the virtual machine is based on the total number of vCores allocated to the pool, which are distributed between instances in the pool. This architecture allows *partitioning* of the virtual machine into multiple instances that can be any supported size, including 2 vCores (exclusive to instance pools). For example, when you deploy an 8-vCore instance pool you can deploy two 2-vCore and one 4-vCore instance. You can then migrate your SQL Server databases to the instances within the pool. And since instance pools support native virtual network integration, you can deploy multiple instance pools, as well as multiple single instances, to the same subnet.
 

@@ -3,11 +3,12 @@ title: "Add, move, or delete a table, matrix, or list in a paginated report"
 description: Arrange your table or matrix data regions in a paginated report by using the New Table Wizard or New Matrix Wizard in Report Builder.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/01/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 # Add, move, or delete a table, matrix, or list in a paginated report (Report Builder)
 
@@ -55,8 +56,7 @@ ms.custom: updatefrequency5
   
 -   Select the data region, right-click in the data region, and then select **Delete**.  
   
-## Related content 
- [Tablix data region &#40;Report Builder&#41;](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)   
- [Tables, matrices, and lists &#40;Report Builder&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
-  
-  
+## Related content
+
+- [Tablix data region &#40;Report Builder&#41;](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)
+- [Tables, matrices, and lists &#40;Report Builder&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)

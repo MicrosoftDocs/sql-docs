@@ -3,11 +3,12 @@ title: "Create a data processing extension library"
 description: Learn how to create a Reporting Services data processing extension. View sample code, and see which namespace and library file requirements you need to meet.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/14/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: extensions
 ms.topic: reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "data processing extensions [Reporting Services], namespace assignments"
   - "library [Reporting Services]"
@@ -54,8 +55,6 @@ vbc /t:library /out:CompanyName.ExtensionName.dll *.vb /r:System.dll /r:Microsof
   
 ## Related content
 
-- [Reporting Services extensions](../../../reporting-services/extensions/reporting-services-extensions.md)   
-- [Implement a data processing extension](../../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)   
-- [Reporting Services extension library](../../../reporting-services/extensions/reporting-services-extension-library.md)  
-  
-  
+- [Reporting Services extensions](../../../reporting-services/extensions/reporting-services-extensions.md)
+- [Implement a data processing extension](../../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)
+- [Reporting Services extension library](../../../reporting-services/extensions/reporting-services-extension-library.md)

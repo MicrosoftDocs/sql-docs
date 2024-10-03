@@ -4,7 +4,7 @@ description: Connect to and query an Azure SQL Database or Azure SQL Managed Ins
 author: erinstellato-ms
 ms.author: erinstellato
 ms.reviewer: mikeray, randolphwest, maghan
-ms.date: 02/29/2024
+ms.date: 08/14/2024
 ms.service: sql
 ms.subservice: ssms
 ms.topic: quickstart
@@ -23,6 +23,7 @@ Get started using SQL Server Management Studio (SSMS) to connect to your Azure S
 The article demonstrates the following steps:
 
 > [!div class="checklist"]
+>
 > - Connect to an Azure SQL database
 > - Create a database
 > - Create a table in your new database
@@ -81,6 +82,8 @@ The article demonstrates the following steps:
    :::image type="content" source="media/ssms-connect-query-azure-sql/connect-azure-sql.png" alt-text="Screenshot of connecting to an Azure SQL database.":::
 
 ## Troubleshoot connectivity issues
+
+If your browser fails to connect to SQL Database when using **Microsoft Entra with MFA**, you can navigate to **Tools** > **Options** > **Azure Cloud**, and change the value for either **Use system default web browser** or **Use Web Account Manager**. For more information, see [Options (Azure Services)](../menu-help/options-azure-services.md).
 
 You can experience connection problems with Azure SQL Database. For more information on troubleshooting connection problems, visit [Troubleshooting connectivity issues](/azure/azure-sql/database/troubleshoot-common-errors-issues).
 
@@ -206,7 +209,7 @@ You can find information about the connection properties under the results of yo
 
 ## Additional tools
 
-You can also use [Azure Data Studio](../../azure-data-studio/download-azure-data-studio.md) to connect and query [SQL Server](../../azure-data-studio/quickstart-sql-server.md), [Azure SQL Database](../../azure-data-studio/quickstart-sql-database.md), and [Azure Synapse Analytics](../../azure-data-studio/quickstart-sql-dw.md).
+You can also use [Azure Data Studio](/azure-data-studio/download-azure-data-studio) to connect and query [SQL Server](/azure-data-studio/quickstart-sql-server), [Azure SQL Database](/azure-data-studio/quickstart-sql-database), and [Azure Synapse Analytics](/azure-data-studio/quickstart-sql-dw).
 
 ## Related content
 

@@ -2,8 +2,8 @@
 title: "Quickstart: Train a model in R"
 titleSuffix: SQL machine learning
 description: In this quickstart, you'll create and train a predictive model using T. You'll save the model to a table, and then use the model to predict values from new data with SQL machine learning.
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: VanMSFT
+ms.author: vanto
 ms.date: 04/23/2020
 ms.service: sql
 ms.subservice: machine-learning
@@ -57,7 +57,7 @@ You need the following prerequisites to run this quickstart.
 - Azure SQL Managed Instance Machine Learning Services. For information, see the [Azure SQL Managed Instance Machine Learning Services overview](/azure/azure-sql/managed-instance/machine-learning-services-overview).
 ::: moniker-end
 
-- A tool for running SQL queries that contain R scripts. This quickstart uses [Azure Data Studio](../../azure-data-studio/what-is-azure-data-studio.md).
+- A tool for running SQL queries that contain R scripts. This quickstart uses [Azure Data Studio](/azure-data-studio/what-is-azure-data-studio).
 
 ## Create the model
 

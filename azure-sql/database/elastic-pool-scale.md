@@ -5,7 +5,7 @@ author: arvindshmicrosoft
 ms.author: arvindsh
 ms.reviewer: wiassaf, mathoma
 ms.date: 12/27/2023
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.subservice: elastic-pools
 ms.topic: conceptual
 ms.custom:
@@ -177,7 +177,7 @@ else {
 
 ## Permissions
 
-To scale an elastic pool via the Azure portal, PowerShell, Azure CLI, or REST API, Azure RBAC permissions are needed, specifically the Contributor, SQL DB Contributor role, or SQL Server Contributor Azure RBAC roles. For more information, visit [Azure RBAC built-in roles](/azure/role-based-access-control/built-in-roles).
+To scale an elastic pool via the Azure portal, PowerShell, Azure CLI, or REST API, Azure RBAC permissions are needed, specifically the Contributor, SQL DB Contributor role, or SQL Server Contributor Azure RBAC roles. For more information, see [Azure RBAC built-in roles](/azure/role-based-access-control/built-in-roles).
 
 ## Related content
 

@@ -3,11 +3,12 @@ title: "Add and remove encryption keys for scale-out deployment"
 description: "Add and Remove Encryption Keys for Scale-Out Deployment"
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 05/31/2016
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-server
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "encryption keys [Reporting Services]"
   - "deleting encryption keys"
@@ -57,7 +58,5 @@ helpviewer_keywords:
   
 ## Related content
 
-- [Configure and manage encryption keys &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   
-- [Initialize a report server &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)  
-  
-  
+- [Configure and manage encryption keys &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)
+- [Initialize a report server &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)

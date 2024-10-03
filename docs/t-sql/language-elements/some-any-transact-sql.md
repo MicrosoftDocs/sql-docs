@@ -34,8 +34,6 @@ scalar_expression { = | <> | != | > | >= | !> | < | <= | !< }
      { SOME | ANY } ( subquery )   
 ```
 
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 
 *scalar_expression*  

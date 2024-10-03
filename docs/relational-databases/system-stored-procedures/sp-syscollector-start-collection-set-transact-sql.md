@@ -4,7 +4,7 @@ description: Starts a collection set if the collector is already enabled and the
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 07/04/2023
+ms.date: 08/21/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -74,6 +74,6 @@ EXEC sp_syscollector_start_collection_set @collection_set_id = 1;
 
 ## Related content
 
-- [Data Collector stored procedures (Transact-SQL)](data-collector-stored-procedures-transact-sql.md)
+- [Data collector stored procedures (Transact-SQL)](data-collector-stored-procedures-transact-sql.md)
 - [Data collection](../data-collection/data-collection.md)
 - [syscollector_collection_sets (Transact-SQL)](../system-catalog-views/syscollector-collection-sets-transact-sql.md)

@@ -31,8 +31,6 @@ dev_langs:
 FULLTEXTSERVICEPROPERTY ('property')  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
  *property*  
  Is an expression containing the name of the full-text service-level property. The table lists the properties and provides descriptions of the information returned.  

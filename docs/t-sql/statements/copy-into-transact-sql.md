@@ -5,7 +5,7 @@ description: Use the COPY statement in Azure Synapse Analytics and Warehouse in 
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: procha, mikeray, stwynant
-ms.date: 05/31/2024
+ms.date: 08/15/2024
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -263,6 +263,8 @@ The COPY command autodetects the compression type based on the file extension wh
 - .gz  - **GZIP**
 - .snappy – **Snappy**
 - .deflate - **DefaultCodec**  (Parquet and ORC only)
+
+The COPY command requires that gzip files do not contain any trailing garbage to operate normally. The gzip format strictly requires that files be composed of valid members without any additional information before, between, or after them. Any deviation from this format, such as the presence of trailing non-gzip data, will result in the failure of the COPY command. Make sure to verify there's no trailing garbage at the end of gzip files to ensure COPY can successfully process these files.
 
 #### *FIELDQUOTE = 'field_quote'*
 
@@ -658,11 +660,12 @@ Multiple file locations can only be specified from the same storage account and 
 
 **External locations behind firewall**
 
-To access files on either an Azure Data Lake Storage (ADLS) Gen2 and Azure Blob Storage that is behind a firewall, the following prerequisites are required:
+To access files on Azure Data Lake Storage (ADLS) Gen2 and Azure Blob Storage locations that are behind a firewall, the following prerequisites are apply:
 
-1. A **workspace identity** for the workspace hosting your warehouse must be provisioned. For more information on how to set up a workspace identity, see [Workspace identity](/fabric/security/workspace-identity).
-1. Your Fabric workspace hosting the warehouse must be added as a **resource instance rule**. More information on how to add your fabric workspace with a resource instance rule, see [Resource instance rule](/fabric/security/security-trusted-workspace-access).
-1. Your Entra ID account must have access to the underlying files through [Azure role-based access control (RBAC)](/azure/storage/blobs/assign-azure-role-data-access?tabs=portal)) or [data lake ACLs](/azure/storage/blobs/data-lake-storage-access-control)).
+- A **workspace identity** for the workspace hosting your warehouse must be provisioned. For more information on how to set up a workspace identity, see [Workspace identity](/fabric/security/workspace-identity).
+- Your Entra ID account must be able to use the workspace identity.
+- Your Entra ID account must have access to the underlying files through [Azure role-based access control (RBAC)](/azure/storage/blobs/assign-azure-role-data-access?tabs=portal) or [data lake ACLs](/azure/storage/blobs/data-lake-storage-access-control).
+- Your Fabric workspace hosting the warehouse must be added as a **resource instance rule**. For more information on how to add your Fabric workspace with a resource instance rule, see [Resource instance rule](/fabric/security/security-trusted-workspace-access).
 
 #### *FILE_TYPE = { 'CSV' | 'PARQUET' }*
 
@@ -729,6 +732,8 @@ The COPY command autodetects the compression type based on the file extension wh
 - .gz  - **GZIP**
 
 Loading compressed files is currently only supported with *PARSER_VERSION* 1.0. 
+
+The COPY command requires that gzip files do not contain any trailing garbage to operate normally. The gzip format strictly requires that files be composed of valid members without any additional information before, between, or after them. Any deviation from this format, such as the presence of trailing non-gzip data, will result in the failure of the COPY command. Make sure to verify there's no trailing garbage at the end of gzip files to ensure COPY can successfully process these files.
 
 #### *FIELDQUOTE = 'field_quote'*
 

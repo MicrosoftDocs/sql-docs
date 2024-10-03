@@ -1,19 +1,20 @@
 ---
 title: "Get started with Report Viewer controls"
-description: The Report Viewer controls can be used to integrate Reporting Services RDL reports into WebForms and WinForms apps.
+description: Learn how the Report Viewer controls can be used to integrate Reporting Services RDL reports into WebForms and WinForms apps.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 06/18/2024
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: application-integration
-ms.topic: conceptual
+ms.topic: get-started
 ms.custom:
   - intro-get-started
   - updatefrequency5
+# customer intent: As a SQL Server user, I want to learn how the Report Viewer controls can be used so that I can integrate Reporting Services RDL reports into WebForms and WinForms apps.
 ---
-# Integrate Reporting Services by using the Report Viewer controls - get started
+# Get started with Report Viewer controls
 
-The Report Viewer controls can be used to integrate Reporting Services RDL reports into WebForms and WinForms apps. For detailed information about recent updates, see the [Release notes for Report Viewer controls for WebForms and WinForms of SSRS](./release-notes-ssrs-application-integration.md).
+The Report Viewer controls can be used to integrate Reporting Services report definition language (RDL) reports into WebForms and WinForms apps. For detailed information about recent updates, see the [Release notes for Report Viewer controls for WebForms and WinForms of SSRS](./release-notes-ssrs-application-integration.md).
 
 ## Add the Report Viewer control to a new web project
 
@@ -172,7 +173,7 @@ Make sure to update any assembly references to version *15.0.0.0*, including the
 
 ## How to set 100% height on the Report Viewer control
 
-If setting the height of the viewer control to 100% the parent element is required to have a defined height, or all ancestors are required to have percentage heights.
+When you set the height of the viewer control to 100%, the parent element must have a defined height, or all ancestors must have percentage heights.
 
 ### Set the height of all the ancestors to 100%
 
@@ -231,7 +232,7 @@ The Report Viewer Control is now shipped as a NuGet package and no longer shows 
 
     :::image type="content" source="media/reporting-services-remove-old-report-viewer-control-toolbox.png" alt-text="Screenshot of the Visual Studio toolbox, highlighting Delete on the ReportViewer control.":::
 
-1. Right-click in anywhere in the toolbox and then select **Choose Items...**.
+1. Right-click in anywhere in the toolbox and select **Choose Items...**.
 
     :::image type="content" source="media/reporting-services-toolbox-choose-item.png" alt-text="Screenshot of the Visual Studio toolbox, highlighting the Choose Items option.":::
 
@@ -244,13 +245,13 @@ The Report Viewer Control is now shipped as a NuGet package and no longer shows 
     > [!NOTE]
     > The NuGet package will be installed in the solution directory of your project. The path to the dll will be similar to the following: `{Solution Directory}\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.{version}\lib\net40` or `{Solution Directory}\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.{version}\lib\net40`.
 
-1. The new control should display within the toolbox. You can then move it to another tab within the toolbox if you wish.
+1. The new control should display within the toolbox. If you want, you can then move it to another tab within the toolbox.
 
     :::image type="content" source="media/reporting-services-toolbox-report-viewer-control.png" alt-text="Screenshot of the new ReportViewer control in the Visual Studio toolbox.":::
 
 ## Common issues
 
-The viewer control is designed for modern browsers. The control might not work as expected if the browser renders the page using IE compatibility mode. Intranet sites might require a meta tag to override default browser behavior.
+The viewer control is designed for modern browsers. The control might not work as expected if the browser renders the page by using IE compatibility mode. Intranet sites might require a meta tag to override default browser behavior.
 
 ```html
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />

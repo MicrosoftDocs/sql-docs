@@ -5,8 +5,8 @@ description: Learn how to configure a link between SQL Server and Azure SQL Mana
 author: djordje-jeremic
 ms.author: djjeremi
 ms.reviewer: mathoma, danil
-ms.date: 06/21/2024
-ms.service: sql-managed-instance
+ms.date: 09/10/2024
+ms.service: azure-sql-managed-instance
 ms.subservice: data-movement
 ms.custom: devx-track-azurepowershell, devx-track-azurecli, ignite-2023, build-2024
 ms.topic: how-to
@@ -24,7 +24,6 @@ After the link is created, you can then fail over to your secondary replica for 
 > - It's also possible to configure the link with [SQL Server Management Studio (SSMS)](managed-instance-link-configure-how-to-ssms.md). 
 > - Configuring Azure SQL Managed Instance as your initial primary is currently in preview and only supported starting with [SQL Server 2022 CU10](/troubleshoot/sql/releases/sqlserver-2022/cumulativeupdate10). 
 
-
 ## Overview
 
 Use the link feature to replicate databases from your initial primary to your secondary replica. For SQL Server 2022, the initial primary can be either SQL Server or Azure SQL Managed Instance. For SQL Server 2019 and earlier versions, the initial primary must be SQL Server. After the link is configured, the database from the initial primary is replicated to the secondary replica. 
@@ -36,7 +35,7 @@ If you plan to use your secondary managed instance for only disaster recovery, y
 Use the instructions in this article to manually set up the link between SQL Server and Azure SQL Managed Instance. After the link is created, your source database gets a read-only copy on your target secondary replica. 
 
 > [!TIP]
-> - To simplify using T-SQL scripts with the correct parameters for your environment, we strongly recommend using the Managed Instance link wizard in [SQL Server Management Studio (SSMS)](managed-instance-link-configure-how-to-ssms.md#create-link-to-replicate-database) to generate a script to create the link. On the **Summary** page of the **New Managed Instance link** window, select **Script** instead of **Finish**. 
+> To simplify using T-SQL scripts with the correct parameters for your environment, we strongly recommend using the Managed Instance link wizard in [SQL Server Management Studio (SSMS)](managed-instance-link-configure-how-to-ssms.md#create-link-to-replicate-database) to generate a script to create the link. On the **Summary** page of the **New Managed Instance link** window, select **Script** instead of **Finish**. 
 
 ## Prerequisites 
 
@@ -97,7 +96,7 @@ As you run scripts from this user guide, it's important not to mistake SQL Serve
 
 ## Set up database recovery and backup
 
-If SQL Server is your initial primary, then databases that will be replicated via the link must be in the full recovery model and have at least one backup.  Since Azure SQL Managed Instance takes backups automatically, skip this step if SQL Managed Instance is your initial primary. primary
+If SQL Server is your initial primary, then databases that will be replicated via the link must be in the full recovery model and have at least one backup.  Since Azure SQL Managed Instance takes backups automatically, skip this step if SQL Managed Instance is your initial primary. 
 
 Run the following code on SQL Server for all databases you wish to replicate. Replace `<DatabaseName>` with your actual database name.
 
@@ -244,7 +243,6 @@ Fill out necessary user information, copy it, paste it, and then run the script.
 - `<SQLServerCertName>` with the SQL Server certificate name you've recorded in the previous step.
 - `<ManagedInstanceName>` with the short name of your managed instance. 
 
-
 ```powershell-interactive
 # Run in Azure Cloud Shell (select PowerShell console)
 # ===============================================================================
@@ -307,7 +305,7 @@ Copy the entire PublicKey output (starts with `0x`) as you'll require it in the 
 
 Alternatively, if you encounter issues in copy-pasting the PublicKey, you could also run the T-SQL command `EXEC sp_get_endpoint_certificate 4` on the managed instance to obtain its public key for the link endpoint.
 
-Next, import the obtained public key of the managed instance security certificate to SQL Server. Run the following query on SQL Server. Replace:
+Next, import the obtained public key of the managed instance security certificate to SQL Server. Run the following query on SQL Server to create the MI endpoint certificate. Replace:
 - `<ManagedInstanceFQDN>` with the fully qualified domain name of managed instance.
 - `<PublicKey>` with the PublicKey value obtained in the previous step (from Azure Cloud Shell, starting with `0x`). You don't need to use quotation marks.
 
@@ -373,6 +371,51 @@ Finally, verify all created certificates by using the following dynamic manageme
 ```sql
 -- Run on SQL Server
 SELECT * FROM sys.certificates
+```
+
+### Validate the certificate 
+
+After you've created the certificates, validate the MI endpoint certificate is configured correctly. 
+
+First, determine the `certificate_id` of the exported MI certificate by replacing the value of `<ManagedInstanceFQDN>` and then running the following query on SQL Server:
+
+```sql
+-- Run on SQL Server 
+USE MASTER 
+GO 
+
+SELECT name, subject, certificate_id, start_date, expiry_date 
+FROM sys.certificates 
+WHERE issuer_name LIKE '%Microsoft Corporation%' AND name = '<ManagedInstanceFQDN>' 
+GO 
+```
+
+Next, validate the certificate by replacing the value of `<certificate_id>` from the result of the previous query and then running the following query on SQL Server:
+
+```sql
+-- Run on SQL Server 
+
+USE MASTER 
+GO 
+
+EXEC sp_validate_certificate_ca_chain <certificate_id> 
+GO 
+```
+
+A response of `Commands completed successfully. Completion time: …` indicates the MI endpoint certificate has been successfully validated. 
+
+If you encounter an error, then drop the certificate and follow the steps in the [Get the certificate public key from SQL Managed Instance and import it to SQL Server](#get-the-certificate-public-key-from-sql-managed-instance-and-import-it-to-sql-server) section to re-import the certificate.
+
+To drop the certificate, run the following query on SQL Server:
+
+```sql
+-- Run on SQL Server 
+
+USE MASTER 
+GO 
+
+DROP CERTIFICATE [<ManagedInstanceFQDN>] 
+GO 
 ```
 
 ## Secure the database mirroring endpoint
@@ -505,10 +548,14 @@ You've successfully modified your database mirroring endpoint for a SQL Managed 
 
 ## Create an availability group on SQL Server
 
-If you don't have an existing availability group, the next step is to create one on SQL Server, regardless of which will be the initial primary. Commands to create the availability group are different if your SQL Managed Instance is the initial primary, which is only supported starting with [SQL Server 2022 CU10](/troubleshoot/sql/releases/sqlserver-2022/cumulativeupdate10).
+If you don't have an existing availability group, the next step is to create one on SQL Server, regardless of which will be the initial primary. 
+
+> [!NOTE]
+> Skip this section if you already have an existing availability group. 
+
+Commands to create the availability group are different if your SQL Managed Instance is the initial primary, which is only supported starting with [SQL Server 2022 CU10](/troubleshoot/sql/releases/sqlserver-2022/cumulativeupdate10).
 
 While it's possible to establish multiple links for the same database, the link only supports replication of one database per link. If you want to create multiple links for the same database, use the same availability group for all the links, but then create a new distributed availability group for each database link between SQL Server and SQL Managed Instance. 
-
 
 
 ### [SQL Server initial primary](#tab/sql-server)
@@ -531,7 +578,7 @@ SELECT @@SERVERNAME AS SQLServerName
 
 Then, use the following script to create the availability group on SQL Server. Replace:
 
-- `<AGName>` with the name of your availability group. A Managed Instance link requires one database per availability group. For multiple databases, you'll need to create multiple availability groups. Consider naming each availability group so that its name reflects the corresponding database - for example, `AG_<db_name>`. 
+- `<AGNameOnSQLServer>` with the name of your availability group on SQL Server. A Managed Instance link requires one database per availability group. For multiple databases, you'll need to create multiple availability groups. Consider naming each availability group so that its name reflects the corresponding database - for example, `AG_<db_name>`. 
 - `<DatabaseName>` with the name of database that you want to replicate.
 - `<SQLServerName>` with the name of your SQL Server instance obtained in the previous step. 
 - `<SQLServerIP>` with the SQL Server IP address. You can use a resolvable SQL Server host machine name as an alternative, but you need to make sure that the name is resolvable from the SQL Managed Instance virtual network.
@@ -540,7 +587,7 @@ Then, use the following script to create the availability group on SQL Server. R
 -- Run on SQL Server
 -- Create the primary availability group on SQL Server
 USE MASTER
-CREATE AVAILABILITY GROUP [<AGName>]
+CREATE AVAILABILITY GROUP [<AGNameOnSQLServer>]
 WITH (CLUSTER_TYPE = NONE) -- <- Delete this line for SQL Server 2016 only. Leave as-is for all higher versions.
     FOR database [<DatabaseName>]  
     REPLICA ON   
@@ -562,7 +609,8 @@ Next, create the distributed availability group on SQL Server. If you plan to cr
 Replace the following values and then run the T-SQL script to create your distributed availability group. 
 
 - `<DAGName>` with the name of your distributed availability group. Since you can configure multiple links for the same database by creating a distributed availability group for each link, consider naming each distributed availability group accordingly - for example, `DAG1_<db_name>`, `DAG2_<db_name>`. 
-- `<AGName>` with the name of the availability group that you created in the previous step. 
+- `<AGNameOnSQLServer>` with the name of the availability group that you created in the previous step.
+- `<AGNameOnSQLMI>` with the name of your availability group on SQL Managed Instance. The name needs to be unique on SQL MI. Consider naming each availability group so that its name reflects the corresponding database - for example, `AG_<db_name>_MI`.
 - `<SQLServerIP>` with the IP address of SQL Server from the previous step. You can use a resolvable SQL Server host machine name as an alternative, but make sure the name is resolvable from the SQL Managed Instance virtual network (which requires configuring custom Azure DNS for the subnet of the managed instance). 
 - `<ManagedInstanceName>` with the short name of your managed instance. 
 - `<ManagedInstanceFQDN>` with the fully qualified domain name of your managed instance.
@@ -576,7 +624,7 @@ USE MASTER
 CREATE AVAILABILITY GROUP [<DAGName>]
 WITH (DISTRIBUTED) 
     AVAILABILITY GROUP ON  
-    N'<AGName>' WITH 
+    N'<AGNameOnSQLServer>' WITH 
     (
       LISTENER_URL = 'TCP://<SQLServerIP>:5022',
       AVAILABILITY_MODE = ASYNCHRONOUS_COMMIT,
@@ -584,7 +632,7 @@ WITH (DISTRIBUTED)
       SEEDING_MODE = AUTOMATIC,
       SESSION_TIMEOUT = 20
     ),
-    N'<ManagedInstanceName>' WITH
+    N'<AGNameOnSQLMI>' WITH
     (
       LISTENER_URL = 'tcp://<ManagedInstanceFQDN>:5022;Server=[<ManagedInstanceName>]',
       AVAILABILITY_MODE = ASYNCHRONOUS_COMMIT,
@@ -612,7 +660,7 @@ SELECT @@SERVERNAME AS SQLServerName
 
 Then, use the following script to create the availability group on SQL Server. Replace:
 
-- `<AGName>` with the name of your availability group. A Managed Instance link requires one database per availability group. For multiple databases, you'll need to create multiple availability groups. Consider naming each availability group so that its name reflects the corresponding database - for example, `AG_<db_name>`. 
+- `<AGNameOnSQLServer>` with the name of your availability group on SQL Server. A Managed Instance link requires one database per availability group. For multiple databases, you'll need to create multiple availability groups. Consider naming each availability group so that its name reflects the corresponding database - for example, `AG_<db_name>`. 
 - `<DatabaseName>` with the name of database that you want to replicate.
 - `<SQLServerName>` with the name of your SQL Server instance obtained in the previous step. 
 - `<SQLServerIP>` with the SQL Server IP address. You can use a resolvable SQL Server host machine name as an alternative, but you need to make sure that the name is resolvable from the SQL Managed Instance virtual network.
@@ -622,7 +670,7 @@ Then, use the following script to create the availability group on SQL Server. R
 -- Run on SQL Server 
 -- Create the availability group on SQL Server 
 
-CREATE AVAILABILITY GROUP [<AGName>] 
+CREATE AVAILABILITY GROUP [<AGNameOnSQLServer>] 
 WITH (CLUSTER_TYPE = NONE) 
 FOR  
 REPLICA ON N'<SQLServerName>' 
@@ -641,7 +689,7 @@ Since SQL Managed Instance is the initial primary, the database will be replicat
 -- Run on SQL Server 
 -- Grant permission to the availability group to create databases 
 
-ALTER AVAILABILITY GROUP [<AGName>] GRANT CREATE ANY DATABASE; 
+ALTER AVAILABILITY GROUP [<AGNameOnSQLServer>] GRANT CREATE ANY DATABASE; 
 ```
 
 Next, create the distributed availability group _on SQL Server_. If you plan to create multiple links, then you need to create a distributed availability group for each link, even if you're establishing multiple links for the same database. 
@@ -649,7 +697,8 @@ Next, create the distributed availability group _on SQL Server_. If you plan to 
 Replace the following values and then run the T-SQL script to create your distributed availability group. 
 
 - `<DAGName>` with the name of your distributed availability group. Since you can configure multiple links for the same database by creating a distributed availability group for each link, consider naming each distributed availability group accordingly - for example, `DAG1_<db_name>`, `DAG2_<db_name>`. 
-- `<AGName>` with the name of the availability group that you created in the previous step. 
+- `<AGNameOnSQLServer>` with the name of the availability group that you created in the previous step.
+- `<AGNameOnSQLMI>` with the name of your availability group on SQL Managed Instance. The name needs to be unique on SQL MI. Consider naming each availability group so that its name reflects the corresponding database - for example, `AG_<db_name>_MI`.
 - `<SQLServerIP>` with the IP address of SQL Server from the previous step. You can use a resolvable SQL Server host machine name as an alternative, but make sure the name is resolvable from the SQL Managed Instance virtual network (which requires configuring custom Azure DNS for the subnet of the managed instance). 
 - `<ManagedInstanceName>` with the short name of your managed instance. 
 - `<ManagedInstanceFQDN>` with the fully qualified domain name of your managed instance.
@@ -664,7 +713,7 @@ USE MASTER
 CREATE AVAILABILITY GROUP [<DAGName>] 
 WITH (DISTRIBUTED)  
     AVAILABILITY GROUP ON   
-    N'<AGName>' WITH  
+    N'<AGNameOnSQLServer>' WITH  
     ( 
       LISTENER_URL = 'TCP://<SQLServerIP>:5022', 
       AVAILABILITY_MODE = ASYNCHRONOUS_COMMIT, 
@@ -672,7 +721,7 @@ WITH (DISTRIBUTED)
       SEEDING_MODE = AUTOMATIC, 
       SESSION_TIMEOUT = 20 
     ), 
-    N'<ManagedInstanceName>' WITH 
+    N'<AGNameOnSQLMI>' WITH 
     ( 
       LISTENER_URL = 'tcp://<ManagedInstanceFQDN>:5022;Server=[<ManagedInstanceName>];Database=[<DatabaseName>]', 
       AVAILABILITY_MODE = ASYNCHRONOUS_COMMIT, 
@@ -708,11 +757,15 @@ If you need to see all links on a managed instance, use the [Get-AzSqlInstanceLi
 
 To simplify the process, sign in to the Azure portal and run the following script from the Azure Cloud Shell. Replace:
 - `<ManagedInstanceName>` with the short name of your managed instance. 
-- `<AGName>` with the name of the availability group created on SQL Server. 
+- `<AGNameOnSQLServer>` with the name of the availability group created on SQL Server.
+- `<AGNameOnSQLMI>` with the name of the availability group created on SQL Managed Instance. 
 - `<DAGName>` with the name of the distributed availability group created on SQL Server. 
 - `<DatabaseName>` with the database replicated in the availability group on SQL Server. 
 - `<SQLServerIP>` with the IP address of your SQL Server. The provided IP address must be accessible by managed instance.
  
+> [!NOTE]
+> If you want establish a link to an availability group that already exists, then provide the IP address of the listener when supplying the `<SQLServerIP>` parameter.
+
 
 ```powershell-interactive
 #  Run in Azure Cloud Shell (select PowerShell console)
@@ -725,7 +778,10 @@ To simplify the process, sign in to the Azure portal and run the following scrip
 $ManagedInstanceName = "<ManagedInstanceName>"
 
 # Enter the availability group name that was created on SQL Server
-$AGName = "<AGName>"
+$AGNameOnSQLServer = "<AGNameOnSQLServer>"
+
+# Enter the availability group name that was created on SQL Managed Instance
+$AGNameOnSQLMI = "<AGNameOnSQLMI>"
 
 # Enter the distributed availability group name that was created on SQL Server
 $DAGName = "<DAGName>"
@@ -746,7 +802,7 @@ $SourceIP = "TCP://" + $SQLServerIP + ":5022"
 
 # Create link on managed instance. Join distributed availability group on SQL Server.
 New-AzSqlInstanceLink -ResourceGroupName $ResourceGroup -InstanceName $ManagedInstanceName -Name $DAGName |
--PrimaryAvailabilityGroupName $AGName -SecondaryAvailabilityGroupName $ManagedInstanceName |
+-PrimaryAvailabilityGroupName $AGNameOnSQLServer -SecondaryAvailabilityGroupName $AGNameOnSQLMI |
 -TargetDatabase $DatabaseName -SourceEndpoint $SourceIP
 ```
 
@@ -755,7 +811,8 @@ New-AzSqlInstanceLink -ResourceGroupName $ResourceGroup -InstanceName $ManagedIn
 
 To simplify the process, sign in to the Azure portal and run the following script from the Azure Cloud Shell. Replace:
 - `<ManagedInstanceName>` with the short name of your managed instance. 
-- `<AGName>` with the name of the availability group created on SQL Server. 
+- `<AGNameOnSQLServer>` with the name of the availability group created on SQL Server.
+- `<AGNameOnSQLMI>` with the name of the availability group created on SQL Managed Instance.
 - `<DAGName>` with the name of the distributed availability group created on SQL Server. 
 - `<DatabaseName>` with the database replicated in the availability group on SQL Server. 
 - `<SQLServerIP>` with the IP address of your SQL Server. The provided IP address must be accessible by managed instance.
@@ -771,8 +828,11 @@ To simplify the process, sign in to the Azure portal and run the following scrip
 # Enter your managed instance name – for example, "sqlmi1" 
 $ManagedInstanceName = "<ManagedInstanceName>" 
 
-# Enter the availability group name that was created on SQL Server 
-$AGName = "<AGName>" 
+# Enter the availability group name that was created on SQL Server
+$AGNameOnSQLServer = "<AGNameOnSQLServer>"
+
+# Enter the availability group name that was created on SQL Managed Instance
+$AGNameOnSQLMI = "<AGNameOnSQLMI>"
 
 # Enter the distributed availability group name that was created on SQL Server 
 $DAGName = "<DAGName>"  
@@ -814,8 +874,8 @@ $body = "{
         } 
     ], 
     'PartnerEndpoint': '$DestinationIP', 
-    'InstanceAvailabilityGroupName': '$ManagedInstanceName', 
-    'PartnerAvailabilityGroupName': '$AGName', 
+    'InstanceAvailabilityGroupName': '$AGNameOnSQLMI', 
+    'PartnerAvailabilityGroupName': '$AGNameOnSQLServer', 
     'FailoverMode': 'Manual', 
     'SeedingMode': 'Automatic', 
     'InstanceLinkRole': 'Primary' 
@@ -824,7 +884,7 @@ $body = "{
 
  
 # Send link creation request to Azure REST API 
-Invoke-RestMethod -Method POST -Headers $headers -Uri $uri -ContentType 'application/json' -Body $body 
+Invoke-RestMethod -Method PUT -Headers $headers -Uri $uri -ContentType 'application/json' -Body $body 
 ```
 
 ---
@@ -856,21 +916,44 @@ After the connection is established, **Object Explorer** in SSMS might initially
 > - The link won't work unless network connectivity exists between SQL Server and SQL Managed Instance. To troubleshoot network connectivity, follow the steps in [Test network connectivity](managed-instance-link-preparation.md#test-network-connectivity).
 > - Take regular backups of the log file on SQL Server. If the used log space reaches 100 percent, replication to SQL Managed Instance stops until space use is reduced. We highly recommend that you automate log backups by setting up a daily job. For details, see [Back up log files on SQL Server](managed-instance-link-best-practices.md#take-log-backups-regularly).
 
+## Take first transaction log backup
+
+If SQL Server is your initial primary, it's important to take the first [transaction log backup](/sql/relational-databases/backup-restore/back-up-a-transaction-log-sql-server) on SQL Server *after* initial seeding completes, when the database is no longer in the **Restoring...** state on Azure SQL Managed Instance. Then take [SQL Server transaction log backups regularly](managed-instance-link-best-practices.md#take-log-backups-regularly) to minimize excessive log growth while SQL Server is in the primary role.
+
+If SQL Managed Instance is your primary, you don't need to take any action as Azure SQL Managed Instance takes log backups automatically.
+
+
+## Drop a link 
+
+If you want to drop the link, either because it's no longer needed, or because it's in an irreparable state and needs to be recreated, you can do so with PowerShell and T-SQL. 
+
+First, use the [Remove-AzSqlInstanceLink](/powershell/module/az.sql/remove-azsqlinstancelink) PowerShell command to drop the link, such as the following example: 
+
+```powershell
+Remove-AzSqlInstanceLink -ResourceGroupName $ResourceGroup -InstanceName $managedInstanceName -Name $DAGName -Force 
+```
+
+Then, run the following T-SQL script on SQL Server to drop the distributed availability group. Replace `<DAGName>` with the name of the distributed availability group used to create the link: 
+
+```sql
+USE MASTER 
+GO 
+
+DROP AVAILABILITY GROUP <DAGName>  
+GO 
+```
+
+Finally, optionally, you can remove the availability group if you no longer have a use for it. To do so, replace the `<AGName>` with the name of the availability group and then run it on the respective instance: 
+
+```sql
+DROP AVAILABILITY GROUP <AGName>  
+GO 
+```
+
 
 ## Troubleshoot 
 
-The section provides guidance to address issues with configuring and using the link. 
-
-### Errors 
-
-If you encounter an error message when you create the link or fail over a database, review the error message in the query output window for more information.
-
-If you encounter an error when working with the link, the query stops executing at the failed step. After the error condition is resolved, rerun the command again to proceed with your action.
-
-### Inconsistent state after forced failover 
-
-Using forced failover can result in an inconsistent state between the primary and secondary replicas, causing a split brain scenario from both replicas being in the same role. Data replication fails in this state until the user resolves the situation by manually designating one replica as primary and the other replica as secondary.
-
+If you encounter an error message when you create the link, review the error message in the query output window for more information.
 
 ## Related content
 

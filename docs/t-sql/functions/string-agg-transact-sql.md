@@ -33,8 +33,6 @@ STRING_AGG ( expression, separator ) [ <order_clause> ]
     WITHIN GROUP ( ORDER BY <order_by_expression_list> [ ASC | DESC ] )   
 ```
 
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 
 *expression*  

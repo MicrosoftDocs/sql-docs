@@ -32,4 +32,4 @@ To access Solution Explorer, click **Solution Explorer** on the **View** menu.
   
 ## See Also  
 [Solution Explorer](../../ssms/solution/solution-explorer.md)  
-[Open Solutions from Source Control](../../azure-data-studio/source-control.md)  
+[Open Solutions from Source Control](/azure-data-studio/source-control)  

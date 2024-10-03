@@ -4,7 +4,7 @@ description: Registers the name of a new extended stored procedure to SQL Server
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 08/30/2023
+ms.date: 08/21/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -23,7 +23,7 @@ dev_langs:
 Registers the name of a new extended stored procedure to [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)].
 
 > [!NOTE]  
-> [!INCLUDE [ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use [CLR Integration](../clr-integration/common-language-runtime-integration-overview.md) instead.
+> [!INCLUDE [ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use [Common language runtime (CLR) integration](../clr-integration/common-language-runtime-integration-overview.md) instead.
 
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 

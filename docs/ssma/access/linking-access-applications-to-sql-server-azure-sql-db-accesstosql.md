@@ -7,7 +7,7 @@ ms.date: "08/17/2017"
 ms.service: sql
 ms.subservice: ssma
 ms.topic: conceptual
-ms.custom:
+ms.collection:
   - sql-migration-content
 helpviewer_keywords:
   - "Access databases, linking to SQL Azure"

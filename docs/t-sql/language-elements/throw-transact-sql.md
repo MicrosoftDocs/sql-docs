@@ -3,7 +3,7 @@ title: "THROW (Transact-SQL)"
 description: THROW raises an exception and transfers execution to a CATCH block of a TRY...CATCH construct.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 05/09/2024
+ms.date: 07/26/2024
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -33,8 +33,6 @@ THROW [ { error_number | @local_variable }
 [ ; ]
 ```
 
-[!INCLUDE [sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 
 #### *error_number*
@@ -50,6 +48,8 @@ A string or variable that describes the exception. The *message* argument is **n
 A constant or variable between 0 and 255 that indicates the state to associate with the message. The *state* argument is **tinyint**.
 
 ## Remarks
+
+Use *state* to help you identify the source of an error in your stored procedure, trigger, or statement batch. For example, if you use the same message in multiple places, a unique *state* value can help you locate where the error occurred.
 
 The statement before the `THROW` statement must be followed by the semicolon (`;`) statement terminator.
 
@@ -121,7 +121,7 @@ The statement has been terminated.
 
 ### C. Use FORMATMESSAGE with THROW
 
-The following example shows how to use the [FORMATMESSAGE](../functions/formatmessage-transact-sql.md) function with `THROW` to throw a customized error message. The example first creates a user-defined error message by using `sp_addmessage`. Because the `THROW` statement doesn't allow for substitution parameters in the *message* parameter in the way that `RAISERROR` does, the `FORMATMESSAGE` function is used to pass the three parameter values expected by error message 60000.
+The following example shows how to use the [FORMATMESSAGE](../functions/formatmessage-transact-sql.md) function with `THROW` to throw a customized error message. The example first creates a user-defined error message by using `sp_addmessage`. Because the `THROW` statement doesn't allow for substitution parameters in the *message* parameter in the way that `RAISERROR` does, the `FORMATMESSAGE` function is used to pass the three parameter values expected by error message `60000`.
 
 ```sql
 EXEC sys.sp_addmessage

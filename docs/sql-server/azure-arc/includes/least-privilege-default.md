@@ -2,8 +2,10 @@
 author: MikeRayMSFT
 ms.service: azure-arc
 ms.topic: include
-ms.date: 04/24/2024
+ms.date: 08/22/2024
 ms.author: mikeray
 ---
 
-If the Azure Extension is version `1.1.2594.118` (February 2024 release) or later, least privilege mode will be automatically enabled in the coming months.
+Existing servers with extension `1.1.2717.190` (June 2024) or later will have least privileged configuration automatically applied. This application will happen gradually.
+
+To prevent automatic application of least privilege, block extension upgrades to version `1.1.2717.190` or later.

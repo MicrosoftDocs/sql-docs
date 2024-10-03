@@ -2,9 +2,9 @@
 title: How to tell if PolyBase external pushdown occurred
 titleSuffix: SQL Server
 description: If a PolyBase query is performing slowly, you should determine if pushdown of your PolyBase query is occurring. Queries benefit from PolyBase external pushdown.
-author: WilliamDassafMSFT
-ms.author: wiassaf
-ms.reviewer: nathansc
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: nathansc, hudequei
 ms.date: 07/26/2023
 ms.service: sql
 ms.topic: conceptual
@@ -133,7 +133,7 @@ The estimated execution plan from Azure Data Studio:
 
 :::image type="content" source="./media/polybase-how-to-tell-pushdown-computation/10-exec-plan-with-t6408-no-join-pushdown-azure-data-studio.png" alt-text="A screenshot of an execution plan without join pushdown from Azure Data Studio.":::
 
-### Pushdown of aggregation (view with execution plan)
+### Pushdown of aggregation (view with execution plan)
 
 Consider the following query, which uses an aggregate function:
 
@@ -237,7 +237,7 @@ If the JOIN is pushed down to the external data source, you will see something l
 SELECT [T1_1].[BusinessEntityID] AS [BusinessEntityID], [T1_1].[AddressID] AS [AddressID] 
 FROM (SELECT [T2_2].[BusinessEntityID] AS [BusinessEntityID], [T2_1].[AddressID] AS [AddressID] 
 FROM [AdventureWorks2022].[Person].[BusinessEntityAddress] AS T2_1 
-INNER JOIN  [AdventureWorks2022].[Person].[BusinessEntity] AS T2_2  
+INNER JOIN  [AdventureWorks2022].[Person].[BusinessEntity] AS T2_2  
 ON ([T2_1].[BusinessEntityID] = [T2_2].[BusinessEntityID])) AS T1_1;
 ```
 
@@ -265,7 +265,7 @@ SELECT SUM([Quantity]) as Quant
 FROM [AdventureWorks2022].[Production].[ProductInventory];
 ```
 
-#### With Pushdown of aggregation (view with DMV)
+#### With Pushdown of aggregation (view with DMV)
 
 If pushdown of the aggregation is occurring, you see the aggregation function in the `read_command`. For example:
 

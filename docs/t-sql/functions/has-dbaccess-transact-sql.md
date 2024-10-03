@@ -36,8 +36,6 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || 
 HAS_DBACCESS ( 'database_name' )  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
  '*database_name*'  
  The name of the database for which the user wants access information. *database_name* is **sysname**.  

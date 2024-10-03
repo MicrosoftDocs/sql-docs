@@ -4,8 +4,8 @@ description: Create a single database in Azure SQL Database with ledger enabled 
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: wiassaf, mathoma
-ms.date: 04/26/2023
-ms.service: sql-database
+ms.date: 09/17/2024
+ms.service: azure-sql-database
 ms.subservice: security
 ms.topic: quickstart
 ms.custom:
@@ -16,7 +16,7 @@ ms.custom:
 
 # Quickstart: Create a database in Azure SQL Database with ledger enabled
 
-[!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
+[!INCLUDE [appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
 In this quickstart, you create a [ledger database](/sql/relational-databases/security/ledger/ledger-overview#ledger-database) in Azure SQL Database and configure [automatic digest storage](/sql/relational-databases/security/ledger/ledger-digest-management) by using the Azure portal.
 
@@ -24,15 +24,21 @@ In this quickstart, you create a [ledger database](/sql/relational-databases/sec
 
 You need an active Azure subscription. If you don't have one, [create a free account](https://azure.microsoft.com/free/).
 
+### Permissions
+
+**To create databases via Transact-SQL**: `CREATE DATABASE` permissions are necessary. To create a database a login must be either the server admin login (created when the Azure SQL Database logical server was provisioned), the Microsoft Entra admin of the server, a member of the dbmanager database role in `master`. For more information, see [CREATE DATABASE](/sql/t-sql/statements/create-database-transact-sql?view=azuresqldb-current&preserve-view=true).
+
+**To create databases via the Azure portal, PowerShell, Azure CLI, or REST API**: Azure RBAC permissions are needed, specifically the Contributor, SQL DB Contributor, or SQL Server Contributor Azure RBAC role. For more information, see [Azure RBAC built-in roles](/azure/role-based-access-control/built-in-roles).
+
 ## Create a ledger database and configure digest storage
 
 Create a single ledger database in the [serverless compute tier](serverless-tier-overview.md), and configure uploading ledger digests to an Azure Storage account.
 
 # [Portal](#tab/azure-portal)
 
-To create a single database in the Azure portal, this quickstart starts at the Azure SQL page.
+To create a single database in the Azure portal:
 
-1. Browse to the [Select SQL Deployment option](https://portal.azure.com/#create/Microsoft.AzureSQL) page.
+1. Browse to the [Select SQL deployment option](https://portal.azure.com/#create/Microsoft.AzureSQL) page.
 
 1. Under **SQL databases**, leave **Resource type** set to **Single database**, and select **Create**.
 
@@ -60,11 +66,11 @@ To create a single database in the Azure portal, this quickstart starts at the A
 1. For **Firewall rules**, set **Add current client IP address** to **Yes**. Leave **Allow Azure services and resources to access this server** set to **No**.
 1. Select **Next: Security** at the bottom of the page.
 
-   :::image type="content" source="media/ledger/ledger-create-database-networking-tab.png" alt-text="Screenshot that shows the Networking tab of the Create SQL Database screen in the Azure portal.":::
+   :::image type="content" source="media/ledger-create-a-single-database-with-ledger-enabled/ledger-create-database-networking-tab.png" alt-text="Screenshot that shows the Networking tab of the Create SQL Database screen in the Azure portal." lightbox="media/ledger-create-a-single-database-with-ledger-enabled/ledger-create-database-networking-tab.png":::
 
 1. On the **Security** tab, in the **Ledger** section, select the **Configure ledger** option.
 
-    :::image type="content" source="media/ledger/ledger-configure-ledger-security-tab.png" alt-text="Screenshot that shows configuring a ledger on the Security tab of the Azure portal.":::
+    :::image type="content" source="media/ledger-create-a-single-database-with-ledger-enabled/ledger-configure-ledger-security-tab.png" alt-text="Screenshot that shows configuring a ledger on the Security tab of the Azure portal." lightbox="media/ledger-create-a-single-database-with-ledger-enabled/ledger-configure-ledger-security-tab.png":::
 
 1. On the **Configure ledger** pane, in the **Ledger** section, select the **Enable for all future tables in this database** checkbox. This setting ensures that all future tables in the database will be ledger tables. For this reason, all data in the database will show any evidence of tampering. By default, new tables will be created as updatable ledger tables, even if you don't specify `LEDGER = ON` in [CREATE TABLE](/sql/t-sql/statements/create-table-transact-sql). You can also leave this option unselected. You're then required to enable ledger functionality on a per-table basis when you create new tables by using Transact-SQL.
 
@@ -72,11 +78,11 @@ To create a single database in the Azure portal, this quickstart starts at the A
 
 1. Select **Apply**.
 
-    :::image type="content" source="media/ledger/ledger-configure-ledger-pane.png" alt-text="Screenshot that shows the Configure ledger pane in the Azure portal.":::
+    :::image type="content" source="media/ledger-create-a-single-database-with-ledger-enabled/ledger-configure-ledger-pane.png" alt-text="Screenshot that shows the Configure ledger pane in the Azure portal." lightbox="media/ledger-create-a-single-database-with-ledger-enabled/ledger-configure-ledger-pane.png":::
 
 1. Select **Review + create** at the bottom of the page.
 
-    :::image type="content" source="media/ledger/ledger-review-security-tab.png" alt-text="Screenshot that shows reviewing and creating a ledger database on the Security tab of the Azure portal.":::
+    :::image type="content" source="media/ledger-create-a-single-database-with-ledger-enabled/ledger-review-security-tab.png" alt-text="Screenshot that shows reviewing and creating a ledger database on the Security tab of the Azure portal." lightbox="media/ledger-create-a-single-database-with-ledger-enabled/ledger-review-security-tab.png":::
 
 1. On the **Review + create** page, after you review, select **Create**.
 
@@ -88,7 +94,7 @@ You'll create a resource group, a logical database server, a single ledger datab
 
 The Azure Cloud Shell is a free interactive shell that you can use to run the steps in this article. It has common Azure tools preinstalled and configured to use with your account. 
 
-To open the Cloud Shell, select **Try it** from the upper right corner of a code block. You can also launch Cloud Shell in a separate browser tab by going to [https://shell.azure.com](https://shell.azure.com). Select **Copy** to copy the blocks of code, paste it into the Cloud Shell, and press **Enter** to run it.
+To open the Cloud Shell, select **Try it** from the upper right corner of a code block. You can also launch Cloud Shell in a separate browser tab by going to [https://shell.azure.com](https://portal.azure.com/#cloudshell). Select **Copy** to copy the blocks of code, paste it into the Cloud Shell, and press **Enter** to run it.
 
 ### Set parameter values
 
@@ -275,7 +281,7 @@ You'll create a resource group, a logical database server, a single ledger datab
 
 The Azure Cloud Shell is a free interactive shell that you can use to run the steps in this article. It has common Azure tools preinstalled and configured to use with your account.
 
-To open the Cloud Shell, select **Try it** from the upper right corner of a code block. You can also launch Cloud Shell in a separate browser tab by going to [https://shell.azure.com](https://shell.azure.com). Select **Copy** to copy the blocks of code, paste it into the Cloud Shell, and press **Enter** to run it.
+To open the Cloud Shell, select **Try it** from the upper right corner of a code block. You can also launch Cloud Shell in a separate browser tab by going to [https://shell.azure.com](https://portal.azure.com/#cloudshell). Select **Copy** to copy the blocks of code, paste it into the Cloud Shell, and press **Enter** to run it.
 
 ### Set parameter values
 
@@ -479,9 +485,7 @@ Remove-AzResourceGroup -Name $resourceGroupName
 
 ---
 
-## Next steps
-
-Connect and query your database by using different tools and languages:
+## Related content
 
 - [Create and use updatable ledger tables](/sql/relational-databases/security/ledger/ledger-how-to-updatable-ledger-tables)
 - [Create and use append-only ledger tables](/sql/relational-databases/security/ledger/ledger-how-to-append-only-ledger-tables)

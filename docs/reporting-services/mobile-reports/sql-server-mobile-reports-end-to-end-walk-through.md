@@ -3,11 +3,12 @@ title: "SQL Server mobile reports: End-to-end walk-through"
 description: Learn to create mobile reports on SQL Server Mobile Report Publisher, save reports on the Reporting Services web portal, & view reports in Power BI mobile apps.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 07/21/2022
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: mobile-reports
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 # SQL Server mobile reports: End-to-end walk-through
 
@@ -310,8 +311,7 @@ Tap the **KPIs** or **Mobile Reports** tab.
   
 The KPIs and mobile reports are displayed in the same folders they're in on the Reporting Services web portal.   
   
-## Related content 
- 
--  View [on-premises report server mobile reports and KPIs in the Power BI mobile app](/power-bi/consumer/mobile/mobile-app-ssrs-kpis-mobile-on-premises-reports) for iOS and Android devices.
--  View [on-premises report server mobile reports and KPIs in the Power BI mobile app for Windows devices](https://powerbi.microsoft.com/documentation/powerbi-mobile-win10-kpis-mobile-reports/).    
-  
+## Related content
+
+- [on-premises report server mobile reports and KPIs in the Power BI mobile app](/power-bi/consumer/mobile/mobile-app-ssrs-kpis-mobile-on-premises-reports)
+- [on-premises report server mobile reports and KPIs in the Power BI mobile app for Windows devices](https://powerbi.microsoft.com/documentation/powerbi-mobile-win10-kpis-mobile-reports/)

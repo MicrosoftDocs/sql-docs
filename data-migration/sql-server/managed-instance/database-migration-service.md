@@ -6,11 +6,12 @@ author: abhims14
 ms.author: abhishekum
 ms.reviewer: randolphwest
 ms.date: 06/26/2024
-ms.service: dms
+ms.service: azure-database-migration-service
 ms.topic: tutorial
+ms.collection:
+  - sql-migration-content
 ms.custom:
   - seo-lt-2019
-  - sql-migration-content
 ---
 
 # Tutorial: Migrate SQL Server to Azure SQL Managed Instance with DMS

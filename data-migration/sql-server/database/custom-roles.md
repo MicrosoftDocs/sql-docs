@@ -6,9 +6,9 @@ author: abhims14
 ms.author: abhishekum
 ms.reviewer: randolphwest
 ms.date: 06/26/2024
-ms.service: dms
+ms.service: azure-database-migration-service
 ms.topic: conceptual
-ms.custom:
+ms.collection:
   - sql-migration-content
 ---
 

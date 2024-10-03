@@ -5,8 +5,8 @@ description: Use the update policy setting in Azure SQL Managed Instance to cont
 author: MladjoA
 ms.author: mlandzic
 ms.reviewer: mathoma
-ms.date: 05/22/2024
-ms.service: sql-managed-instance
+ms.date: 08/20/2024
+ms.service: azure-sql-managed-instance
 ms.subservice: deployment-configuration
 ms.topic: how-to
 ms.custom:
@@ -49,7 +49,6 @@ The **Always-up-to-date** update policy configures your instance to receive all 
 When using the **Always-up-to-date** update policy, consider the following:
 
 - You're able to use all the new features and benefits available to Azure SQL Managed Instance. 
-- The **Always-up-to-date** update policy is only available to instances within subnets that have enabled the [November 2022 feature wave](november-2022-feature-wave-enroll.md). 
 - Once the **Always-up-to-date** policy is enabled, you can't go back to the **SQL Server 2022** update policy.
 - You lose some of the benefits provided by database format alignment with SQL Server 2022, such as the ability to restore your database to SQL Server 2022, and bidirectional failover between your instance and SQL Server 2022 with the [link](managed-instance-link-disaster-recovery.md) feature. 
 
@@ -58,9 +57,9 @@ When using the **Always-up-to-date** update policy, consider the following:
 The following table lists all the features that are only available to instances with the designated update policy:
 
 
-|**SQL Server 2022** update policy  |**Always-up-to-date** update policy  |
+|SQL Server 2022 update policy  |Always-up-to-date update policy  |
 |---------|---------|
-|[Restore database to SQL Server 2022](restore-database-to-sql-server.md)  <br /> [Link with bidirectional failover and disaster recovery](managed-instance-link-disaster-recovery.md)   | While currently, there aren't any features that are only available to instances with the **Always-up-to-date** update policy, check back soon. |
+|- [Restore database to SQL Server 2022](restore-database-to-sql-server.md)  <br /> - [Link with bidirectional failover and disaster recovery](managed-instance-link-disaster-recovery.md)   | [JSON data type](/sql/t-sql/data-types/json-data-type) |
 
 
 The following features are impacted by the configured update policy: 

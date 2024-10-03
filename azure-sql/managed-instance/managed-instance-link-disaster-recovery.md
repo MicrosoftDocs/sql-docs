@@ -6,7 +6,7 @@ author: djordje-jeremic
 ms.author: djjeremi
 ms.reviewer: mathoma
 ms.date: 11/14/2023
-ms.service: sql-managed-instance
+ms.service: azure-sql-managed-instance
 ms.subservice: data-movement
 ms.custom: ignite-2023, build-2024
 ms.topic: how-to
@@ -72,7 +72,7 @@ With SQL Server 2022, you can choose to perform a one-way failover, such as for 
 
 To fail over, review [Fail over the link](managed-instance-link-failover-how-to.md). 
 
-## Online fail back (SQL Server 2022)
+## Two-way failover (SQL Server 2022)
 
 SQL Server 2022 introduces online failover with fail back, which allows you to seamlessly failover to Azure SQL Managed Instance and then fail back online to SQL Server by using the Managed Instance link, with minimal down time. 
 

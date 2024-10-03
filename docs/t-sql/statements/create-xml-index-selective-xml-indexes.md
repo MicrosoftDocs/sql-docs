@@ -80,8 +80,6 @@ xmlnamespace_uri AS xmlnamespace_prefix
  WITH \<index_options> 
  For information about the index options, see [CREATE XML INDEX](../../t-sql/statements/create-xml-index-selective-xml-indexes.md).  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Remarks
  There can be multiple secondary selective XML indexes on every XML column in the base table.  
   

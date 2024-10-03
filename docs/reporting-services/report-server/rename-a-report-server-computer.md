@@ -3,11 +3,12 @@ title: "Rename a report server computer"
 description: Learn how to reconfigure a report server after a computer name change. SQL Server Reporting Services might not be accessible after a computer name change.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 06/19/2019
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-server
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "renaming report servers"
 ---
@@ -37,10 +38,10 @@ helpviewer_keywords:
     > [!NOTE]  
     >  If you are using Windows Internet Naming Service (WINS) on your corporate network, the report server and web portal might continue to be available under the previous name for a period of time. WINS maps an IP address to each computer it services. After WINS refreshes the IP address for the renamed computer, the old computer name can no longer be used to access the report server or web portal.  
   
-## Related content 
- [RsReportServer.config configuration file](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
- [Report Server Configuration Manager &#40;native mode&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
- [Reporting Services report server &#40;native mode&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
- [Start and stop the report server service](../../reporting-services/report-server/start-and-stop-the-report-server-service.md)   
- [rsconfig utility &#40;SSRS&#41;](../../reporting-services/tools/rsconfig-utility-ssrs.md)  
-  
+## Related content
+
+- [RsReportServer.config configuration file](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)
+- [Report Server Configuration Manager &#40;native mode&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)
+- [Reporting Services report server &#40;native mode&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)
+- [Start and stop the report server service](../../reporting-services/report-server/start-and-stop-the-report-server-service.md)
+- [rsconfig utility &#40;SSRS&#41;](../../reporting-services/tools/rsconfig-utility-ssrs.md)

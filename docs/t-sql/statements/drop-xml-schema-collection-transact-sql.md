@@ -33,8 +33,6 @@ Deletes the whole XML schema collection and all of its components.
 DROP XML SCHEMA COLLECTION [ relational_schema. ]sql_identifier  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 *relational_schema*  
 Identifies the relational schema name. If not specified, the default relational schema is assumed.  

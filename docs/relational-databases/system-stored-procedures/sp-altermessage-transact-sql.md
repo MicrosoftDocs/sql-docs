@@ -4,7 +4,7 @@ description: Alters the state of user-defined or system messages in an instance 
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 03/04/2024
+ms.date: 08/21/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -42,7 +42,7 @@ The error number of the message to alter from `sys.messages`. *@message_id* is *
 
 #### [ @parameter = ] N'*parameter*'
 
-Used with *@parameter_value* to indicate that the message is to be written to the [!INCLUDE [msCoName](../../includes/msconame-md.md)] Windows application log. *@parameter* is **sysname**, with no default.
+Used with *@parameter_value* to indicate that the message is to be written to the Windows application log. *@parameter* is **sysname**, with no default.
 
 *@parameter* must be set to `WITH_LOG` or `NULL`. If *@parameter* is set to `WITH_LOG` or `NULL`, and the value for *@parameter_value* is `true`, the message is written to the Windows application log. If *@parameter* is set to `WITH_LOG` or `NULL` and the value for *@parameter_value* is `false`, the message isn't always written to the Windows application log, but might be written depending upon how the error was raised.
 
@@ -52,7 +52,7 @@ If *@parameter* is specified, *@parameter_value* must also be specified.
 
 #### [ @parameter_value = ] '*parameter_value*'
 
-Used with *@parameter* to indicate that the error is to be written to the [!INCLUDE [msCoName](../../includes/msconame-md.md)] Windows application log. *@parameter_value* is **varchar(5)**, with no default.
+Used with *@parameter* to indicate that the error is to be written to the Windows application log. *@parameter_value* is **varchar(5)**, with no default.
 
 - If `true`, the error is always written to the Windows application log.
 - If `false`, the error isn't always written to the Windows application log, but might be written depending upon how the error was raised.

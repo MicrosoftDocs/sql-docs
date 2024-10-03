@@ -2,7 +2,7 @@
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: 07/05/2023
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.topic: include
 ---
 The following table describes the editions of [!INCLUDE [ssnoversion-md](../ssnoversion-md.md)].

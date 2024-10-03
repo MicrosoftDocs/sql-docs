@@ -27,7 +27,7 @@ Almost everything you can do in a client tool can also be accomplished with Tran
 
 ## Azure Data Studio
 
-The new Azure Data Studio is a cross-platform tool for managing [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)]. For more information, see [Azure Data Studio](../azure-data-studio/what-is-azure-data-studio.md).
+The new Azure Data Studio is a cross-platform tool for managing [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)]. For more information, see [Azure Data Studio](/azure-data-studio/what-is-azure-data-studio).
 
 ## Named Pipes
 

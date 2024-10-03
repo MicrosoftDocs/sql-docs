@@ -4,12 +4,11 @@ description: This article provides an overview of resource management in Azure S
 author: dimitri-furman
 ms.author: dfurman
 ms.reviewer: wiassaf, mathoma, randolphwest
-ms.date: 03/28/2024
-ms.service: sql-database
+ms.date: 09/12/2024
+ms.service: azure-sql-database
 ms.subservice: service-overview
 ms.topic: reference
 ---
-
 # Resource management in Azure SQL Database
 
 [!INCLUDE [appliesto-sqldb](../includes/appliesto-sqldb.md)]
@@ -19,15 +18,39 @@ ms.topic: reference
 > * [Azure SQL Database single database](resource-limits-vcore-single-databases.md?view=azuresql-db&preserve-view=true)
 > * [Azure SQL Managed Instance](../managed-instance/resource-limits.md?view=azuresql-mi&preserve-view=true)
 
-This article provides an overview of resource management in Azure SQL Database. It provides information on what happens when resource limits are reached, and describes  resource governance mechanisms that are used to enforce these limits.
+This article provides an overview of resource management in Azure SQL Database. It provides information on what happens when resource limits are reached, and describes resource governance mechanisms that are used to enforce these limits.
 
-For specific resource limits per pricing tier (also known as service objective) for single databases, refer to either [DTU-based single database resource limits](resource-limits-dtu-single-databases.md) or [vCore-based single database resource limits](resource-limits-vcore-single-databases.md). For elastic pool resource limits, refer to either [DTU-based elastic pool resource limits](resource-limits-dtu-elastic-pools.md) or [vCore-based elastic pool resource limits](resource-limits-vcore-elastic-pools.md). For Azure Synapse Analytics dedicated SQL pool limits, see [capacity limits](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-service-capacity-limits) and [memory and concurrency limits](/azure/synapse-analytics/sql-data-warehouse/memory-concurrency-limits).
+For specific resource limits per pricing tier for single databases, refer to either
+- [DTU-based single database resource limits](resource-limits-dtu-single-databases.md)
+- [vCore-based single database resource limits](resource-limits-vcore-single-databases.md) 
 
-> [!NOTE]
-> The Gen5 hardware in the vCore purchasing model has been renamed to **standard-series (Gen5)**.
+For elastic pool resource limits, refer to either: 
+- [DTU-based elastic pool resource limits](resource-limits-dtu-elastic-pools.md)
+- [vCore-based elastic pool resource limits](resource-limits-vcore-elastic-pools.md)
 
-> [!TIP]  
-> For Azure Synapse Analytics dedicated SQL pool limits, see [capacity limits](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-service-capacity-limits) and [memory and concurrency limits](/azure/synapse-analytics/sql-data-warehouse/memory-concurrency-limits).
+For Azure Synapse Analytics dedicated SQL pool limits, refer to: 
+- [Capacity limits](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-service-capacity-limits)
+- [Memory and concurrency limits](/azure/synapse-analytics/sql-data-warehouse/memory-concurrency-limits).
+
+## Subscription vCore limits per region 
+
+Starting March 2024, subscriptions have the following vCore limits per region per subscription: 
+
+| Subscription type                                     | Default vCore limits |
+|-------------------------------------------------------|----------------------|
+| Enterprise Agreement (EA)                             | 2000                 |
+| Free trials                                           | 10                   |
+| Microsoft for startups                                | 100                  |
+| MSDN / MPN / Imagine / AzurePass / Azure for Students | 40                   |
+| Pay-as-you-go (PAYG)                                  | 150                  |
+
+Consider the following: 
+
+- These limits are applicable to new and existing subscriptions. 
+- Databases and elastic pools provisioned with the [DTU purchasing model](service-tiers-dtu.md) are counted against the vCore quota, and vice-versa. Each vCore consumed is considered equivalent to 100 DTUs consumed for the server-level quota.
+- Default limits includes both the vCores configured for provisioned compute databases / elastic pools, and the **max vCores** configured for [serverless](serverless-tier-overview.md#create-serverless-db) databases. 
+- You can use the [Subscription Usages - Get](/rest/api/sql/subscription-usages/get) REST API call to determine your current vCore usage for your subscription. 
+- To request a higher vCore quota than the default, submit a new support request in the Azure portal. For more information, see [Request quota increases for Azure SQL Database](quota-increase-request.md).
 
 ## Logical server limits
 
@@ -36,8 +59,6 @@ vCore resource limits are listed in the following articles, please be sure to up
 /database/resource-limits-vcore-single-databases.md
 /database/resource-limits-vcore-elastic-pools.md
 /database/resource-limits-logical-server.md
-/database/service-tier-general-purpose.md
-/database/service-tier-business-critical.md
 /database/service-tier-hyperscale.md
 /managed-instance/resource-limits.md
 --->
@@ -45,15 +66,10 @@ vCore resource limits are listed in the following articles, please be sure to up
 | Resource | Limit |
 | :--- | :--- |
 | Databases per [logical server](logical-servers.md) | 5000 |
-| Default number of logical servers per subscription in a region | 20 |
+| Default number of logical servers per subscription in a region | 250 |
 | Max number of logical servers per subscription in a region | 250 |
-| DTU / eDTU quota <sup>1</sup> per logical server | 54,000 |
-| vCore quota <sup>1</sup> per logical server <sup>2</sup> | 540 |
 | Max elastic pools per logical server | Limited by number of DTUs or vCores. For example, if each pool is 1000 DTUs, then a server can support 54 pools.|
 
-<sup>1</sup> Databases and elastic pools provisioned with the [DTU purchase model](service-tiers-dtu.md) are also counted against the vCore quota, and vice-versa. Each vCore consumed is considered equivalent to 100 DTUs consumed for the server-level quota.
-
-<sup>2</sup> This includes both the vCores configured for provisioned compute databases / elastic pools, and the "max vCores" configured for [serverless](serverless-tier-overview.md#create-serverless-db) databases.
 
 > [!IMPORTANT]  
 > As the number of databases approaches the limit per logical server, the following can occur:
@@ -61,8 +77,7 @@ vCore resource limits are listed in the following articles, please be sure to up
 > - Increasing latency in running queries against the `master` database. This includes views of resource utilization statistics such as `sys.resource_stats`.
 > - Increasing latency in management operations and rendering portal viewpoints that involve enumerating databases in the server.
 
-> [!NOTE]  
-> To obtain more DTU/eDTU quota, vCore quota, or more logical servers than the default number, submit a new support request in the Azure portal. For more information, see [Request quota increases for Azure SQL Database](quota-increase-request.md).
+
 
 ## What happens when resource limits are reached
 
@@ -85,7 +100,8 @@ If you observe high storage space utilization, mitigation options include:
 
 - Increase maximum data size of the database or elastic pool, or scale up to a service objective with a higher maximum data size limit. See [Scale single database resources](single-database-scale.md) and [Scale elastic pool resources](elastic-pool-scale.md).
 - If the database is in an elastic pool, then alternatively the database can be moved outside of the pool, so that its storage space isn't shared with other databases.
-- Shrink a database to reclaim unused space. In elastic pools, shrinking a database provides more storage for other databases in the pool. For more information, see [Manage file space in Azure SQL Database](file-space-manage.md).
+- Shrink a database to reclaim unused space. For more information, see [Manage file space in Azure SQL Database](file-space-manage.md).
+    - In elastic pools, shrinking a database provides more storage for other databases in the pool.
 - Check if high space utilization is due to a spike in the size of Persistent Version Store (PVS). PVS is a part of each database, and is used to implement  [Accelerated Database Recovery](../accelerated-database-recovery.md). To determine current PVS size, see [PVS troubleshooting](/sql/relational-databases/accelerated-database-recovery-management#troubleshooting). A common reason for large PVS size is a transaction that is open for a long time (hours), preventing cleanup of row older versions in PVS.
 - For databases and elastic pools in Premium and Business Critical service tiers that consume large amounts of storage, you might receive an out-of-space error even though used space in the database or elastic pool is below its maximum data size limit. This can happen if `tempdb` or transaction log files consume a large amount of storage toward the maximum local storage limit. [Fail over](high-availability-sla-local-zone-redundancy.md#testing-application-fault-resiliency) the database or elastic pool to reset `tempdb` to its initial smaller size, or [shrink](file-space-manage.md#shrink-transaction-log-file) transaction log to reduce local storage consumption.
 
@@ -162,7 +178,7 @@ Total CPU and memory consumption by user workloads and internal processes is rep
 > [!NOTE]
 > The `sql_instance_cpu_percent` and `sql_instance_memory_percent` Azure Monitor metrics are available since July 2023. They are fully equivalent to the previously available `sqlserver_process_core_percent` and `sqlserver_process_memory_percent` metrics, respectively. The latter two metrics remain available, but will be removed in the future. To avoid an interruption in database monitoring, do not use the older metrics.
 > 
-> These metrics are not available for databases using Basic, S1, and S2 service objectives. The same data is available in the dynamic management views referenced below.
+> These metrics are not available for databases using Basic, S1, and S2 service objectives. The same data is available in the following dynamic management views.
 
 CPU and memory consumption by user workloads in each database is reported in the [sys.dm_db_resource_stats](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database) and [sys.resource_stats](/sql/relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database) views, in `avg_cpu_percent` and `avg_memory_usage_percent` columns. For elastic pools, pool-level resource consumption is reported in the [sys.elastic_pool_resource_stats](/sql/relational-databases/system-catalog-views/sys-elastic-pool-resource-stats-azure-sql-database) view (for historical reporting scenarios) and in [sys.dm_elastic_pool_resource_stats](/sql/relational-databases/system-dynamic-management-views/sys-dm-elastic-pool-resource-stats-azure-sql-database) for real-time monitoring. User workload CPU consumption is also reported via the `cpu_percent` Azure Monitor metric, for [single databases](/azure/azure-monitor/essentials/metrics-supported#microsoftsqlserversdatabases) and [elastic pools](/azure/azure-monitor/essentials/metrics-supported#microsoftsqlserverselasticpools) at the pool level.
 
@@ -194,7 +210,7 @@ Azure SQL Database resource governance is hierarchical in nature. From top to bo
 
 ### Data I/O governance
 
-Data I/O governance is a process in Azure SQL Database used to limit both read and write physical I/O against data files of a database. IOPS limits are set for each service level to minimize the "noisy neighbor" effect, to provide resource allocation fairness in a multi-tenant service, and to stay within the capabilities of the underlying hardware and storage.
+Data I/O governance is a process in Azure SQL Database used to limit both read and write physical I/O against data files of a database. IOPS limits are set for each service level to minimize the "noisy neighbor" effect, to provide resource allocation fairness in a multitenant service, and to stay within the capabilities of the underlying hardware and storage.
 
 For single databases, workload group limits are applied to all storage I/O against the database. For elastic pools, workload group limits apply to each database in the pool. Additionally, the resource pool limit additionally applies to the cumulative I/O of the elastic pool. In `tempdb`, I/O is subject to workload group limits, except for Basic, Standard, and General Purpose service tier, where higher `tempdb` I/O limits apply. In general, resource pool limits might not be achievable by the workload against a database (either single or pooled), because workload group limits are lower than resource pool limits and limit IOPS/throughput sooner. However, pool limits can be reached by the combined workload against multiple databases in the same pool.
 
@@ -216,7 +232,7 @@ Log rates are set such that they can be achieved and sustained in various scenar
 
 The actual physical IOs to transaction log files aren't governed or limited. As log records are generated, each operation is evaluated and assessed for whether it should be delayed in order to maintain a maximum desired log rate (MB/s per second). The delays aren't added when the log records are flushed to storage, rather log rate governance is applied during log rate generation itself.
 
-The actual log generation rates imposed at run time is also influenced by feedback mechanisms, temporarily reducing the allowable log rates so the system can stabilize. Log file space management, avoiding running into out of log space conditions and data replication mechanisms can temporarily decrease the overall system limits.
+The actual log generation rates imposed at run time are also influenced by feedback mechanisms, temporarily reducing the allowable log rates so the system can stabilize. Log file space management, avoiding running into out of log space conditions and data replication mechanisms can temporarily decrease the overall system limits.
 
 Log rate governor traffic shaping is surfaced via the following wait types (exposed in the [sys.dm_exec_requests](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql) and [sys.dm_os_wait_stats](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql) views):
 
@@ -232,10 +248,6 @@ Log rate governor traffic shaping is surfaced via the following wait types (expo
 When encountering a log rate limit that is hampering desired scalability, consider the following options:
 
 - Scale up to a higher service level in order to get the maximum log rate of a service tier, or switch to a different service tier. The [Hyperscale](service-tier-hyperscale.md) service tier provides 100 MB/s log rate per database and 125 MB/s per elastic pool, regardless of chosen service level.
-
-    > [!NOTE]
-    > [Elastic pools for Hyperscale](./hyperscale-elastic-pool-overview.md) are currently in preview.
-
 - If data being loaded is transient, such as staging data in an ETL process, it can be loaded into `tempdb` (which is minimally logged).
 - For analytic scenarios, load into a clustered [columnstore](/sql/relational-databases/indexes/columnstore-indexes-overview) table, or a table with indexes that use [data compression](/sql/relational-databases/data-compression/data-compression). This reduces the required log rate. This technique does increase CPU utilization and is only applicable to data sets that benefit from clustered columnstore indexes or data compression.
 

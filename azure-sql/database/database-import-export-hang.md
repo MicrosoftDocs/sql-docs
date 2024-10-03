@@ -6,7 +6,7 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma, hudequei, sureshka
 ms.date: 09/27/2019
-ms.service: sql-db-mi
+ms.service: azure-sql
 ms.subservice: data-movement
 ms.topic: troubleshooting
 ms.custom: sqldbrb=1

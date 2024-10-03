@@ -4,7 +4,7 @@ description: "Adds the specified SQL Server Agent proxy."
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 06/02/2023
+ms.date: 08/21/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -42,7 +42,7 @@ sp_add_proxy
 
 #### [ @proxy_name = ] '*proxy_name*'
 
-The name of the proxy to create. The *@proxy_name* is **sysname**, with a default of `NULL`. When the *@proxy_name* is NULL or an empty string, the name of the proxy defaults to the *@credential_name* or *@credential_id* supplied.
+The name of the proxy to create. The *@proxy_name* is **sysname**, with a default of `NULL`. When the *@proxy_name* is `NULL` or an empty string, the name of the proxy defaults to the *@credential_name* or *@credential_id* supplied.
 
 #### [ @enabled = ] *is_enabled*
 
@@ -76,17 +76,17 @@ None.
 
 This stored procedure must be run in the `msdb` database.
 
-A [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Agent proxy manages security for job steps that involve subsystems other than the [!INCLUDE [tsql](../../includes/tsql-md.md)] subsystem. Each proxy corresponds to a security credential. A proxy may have access to any number of subsystems.
+A [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Agent proxy manages security for job steps that involve subsystems other than the [!INCLUDE [tsql](../../includes/tsql-md.md)] subsystem. Each proxy corresponds to a security credential. A proxy might have access to any number of subsystems.
 
 ## Permissions
 
 [!INCLUDE [msdb-execute-permissions](../../includes/msdb-execute-permissions.md)]
 
-Members of the **sysadmin** fixed security role can create job steps that use any proxy. Use the stored procedure [sp_grant_login_to_proxy (Transact-SQL)](sp-grant-login-to-proxy-transact-sql.md) to grant other logins access to the proxy.
+Members of the **sysadmin** fixed security role can create job steps that use any proxy. Use the stored procedure [sp_grant_login_to_proxy](sp-grant-login-to-proxy-transact-sql.md) to grant other logins access to the proxy.
 
 ## Examples
 
-This example creates a proxy for the credential `CatalogApplicationCredential`. The code assumes that the credential already exists. For more information about credentials, see [CREATE CREDENTIAL (Transact-SQL)](../../t-sql/statements/create-credential-transact-sql.md).
+This example creates a proxy for the credential `CatalogApplicationCredential`. The code assumes that the credential already exists. For more information about credentials, see [CREATE CREDENTIAL](../../t-sql/statements/create-credential-transact-sql.md).
 
 ```sql
 USE msdb;

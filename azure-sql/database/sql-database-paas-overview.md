@@ -4,19 +4,19 @@ description: "Get an introduction to SQL Database: technical details and capabil
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma
-ms.date: 02/12/2024
-ms.service: sql-database
+ms.date: 09/12/2024
+ms.service: azure-sql-database
 ms.subservice: service-overview
 ms.topic: overview
-ms.custom: sqldbrb=3, build-2023, build-2023-dataai
+ms.custom:
+  - sqldbrb=3
 keywords:
   - "introduction to sql"
   - "intro to sql"
   - "what is sql database"
 ---
-
 # What is Azure SQL Database?
-[!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
+[!INCLUDE [appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
 This article provides an overview of Azure SQL Database, a fully managed platform as a service (PaaS) database engine that handles most of the database management functions such as upgrading, patching, backups, and monitoring without user involvement. 
 
@@ -52,13 +52,12 @@ The [DTU-based purchasing model](service-tiers-dtu.md) offers two service tiers:
 - The [Standard](service-tier-general-purpose.md) service tier is designed for common workloads. It offers budget-oriented balanced compute and storage options.
 - The [Premium](service-tier-business-critical.md) service tier is designed for OLTP applications with high transaction rates and low latency I/O requirements. It offers the highest resilience to failures by using several isolated replicas.
 
-## Compute tiers 
+## Compute tiers
 
 The [vCore-based purchasing model](service-tiers-vcore.md) provides two different compute tiers for Azure SQL Database - the provisioned compute tier, and the serverless compute tier. The [DTU-based purchasing model](service-tiers-dtu.md) provides just the provisioned compute tier. 
 
 - **Provisioned compute tier**: provides a specific amount of compute resource that is continuously provisioned independent of workload activity, and bills for the amount of compute provisioned at a fixed price per hour. 
 - **[Serverless compute tier](serverless-tier-overview.md)**: automatically scales compute resources based on workload activity and bills for the amount of compute used, per second. The serverless compute tier is generally available in the General Purpose service tier and in the Hyperscale service tier. 
-
 
 ## Deployment models
 
@@ -75,15 +74,14 @@ SQL Database delivers predictable performance with multiple resource types, serv
 ### Scalable performance and pools
 
 You can define the amount of resources assigned. 
+
 - With single databases, each database is isolated from others and is portable. Each has its own guaranteed amount of compute, memory, and storage resources. The amount of the resources assigned to the database is dedicated to that database, and isn't shared with other databases in Azure. You can dynamically [scale single database resources](single-database-scale.md) up and down. The single database option provides different compute, memory, and storage resources for different needs. For example, you can get 1 to 128 vCores, or 32 GB to 4 TB. The [Hyperscale service tier](service-tier-hyperscale.md) enables you to scale to 100 TB, with fast backup and restore capabilities.
 - With elastic pools, you can assign resources that are shared by all databases in the pool. You can create a new database, or move the existing single databases into a resource pool to maximize the use of resources and save money. This option also gives you the ability to dynamically [scale elastic pool resources](elastic-pool-scale.md) up and down.
-
-> [!NOTE]
-> [Elastic pools for Hyperscale](./hyperscale-elastic-pool-overview.md) are currently in preview.
 
 You can build your first app on a small, single database at a low cost per month in the [General Purpose](service-tier-general-purpose.md) service tier. You can then change its service tier manually or programmatically at any time to the [Business Critical](service-tier-business-critical.md) or [Hyperscale](service-tier-hyperscale.md) service tier, to meet the needs of your solution. You can adjust performance without downtime to your app or to your customers. Dynamic scaling enables your database to transparently respond to rapidly changing resource requirements. You pay for only the resources that you need when you need them.
 
 *Dynamic scaling* is different from *autoscaling*. Autoscaling is when a service scales automatically based on criteria, whereas dynamic scaling allows for manual scaling without downtime. The single database option supports manual dynamic scaling, but not autoscale. For a more automatic experience, consider these alternatives: 
+
 - Use the [serverless tier](serverless-tier-overview.md), which does provide autoscaling.
 - Use scripts to schedule or automate scalability for a single database. For an example, see [Use PowerShell to monitor and scale a single database](scripts/monitor-and-scale-database-powershell.md).
 - Use [elastic pools](#elastic-pools-to-maximize-resource-utilization), which allow databases to share resources in a pool based on individual database needs. [Elastic pools can also be scaled with custom scripts](scripts/monitor-and-scale-pool-powershell.md), allowing you to schedule or automate scalability.
@@ -96,7 +94,7 @@ Watch this video in the [Azure SQL Database essentials series](/shows/azure-sql-
 
 For many businesses and applications, being able to create single databases and dial performance up or down on demand is enough, especially if usage patterns are relatively predictable. Unpredictable usage patterns can make it hard to manage costs and your business model. [Elastic pools](elastic-pool-overview.md) are designed to solve this problem. You allocate performance resources to a pool rather than an individual database. You pay for the collective performance resources of the pool rather than for single database performance.
 
-   ![Graphic that shows elastic pools in basic, standard, and premium editions](./media/sql-database-paas-overview/sqldb_elastic_pools.png)
+   :::image type="content" source="media/sql-database-paas-overview/sqldb_elastic_pools.png" alt-text="Diagram that shows elastic pools in basic, standard, and premium editions.":::
 
 With elastic pools, you don't need to focus on dialing database performance up and down as demand for resources fluctuates. The pooled databases consume the performance resources of the elastic pool as needed. Pooled databases consume but don't exceed the limits of the pool, so your cost remains predictable even if individual database usage doesn't.
 
@@ -114,6 +112,7 @@ You can blend single databases with elastic pools, and change the service tiers 
 Azure SQL Database provides advanced monitoring and troubleshooting features that help you get deeper insights into workload characteristics. These features and tools include:
  - The built-in monitoring capabilities provided by the latest version of the SQL Server database engine. They enable you to find real-time performance insights. 
  - PaaS monitoring capabilities provided by Azure that enable you to monitor and troubleshoot a large number of database instances.
+ - [Database watcher (preview)](../database-watcher-overview.md) enables in-depth, low-latency current and historical monitoring and provides a single-pane-of-glass view of your Azure SQL estate.
 
 [Query Store](/sql/relational-databases/performance/best-practice-with-the-query-store), a built-in SQL Server monitoring feature, records the performance of your queries in real time, and enables you to identify the potential performance issues and the top resource consumers. [Automatic tuning and recommendations](automatic-tuning-overview.md) provide advice regarding the queries with the regressed performance and missing or duplicated indexes. Automatic tuning in SQL Database enables you to either manually apply the scripts that can fix the issues, or let SQL Database apply the fix. SQL Database can also test and verify that the fix provides some benefit, and retain or revert the change depending on the outcome. In addition to Query Store and automatic tuning capabilities, you can use standard [DMVs and XEvents](monitoring-with-dmvs.md) to monitor the workload performance.
 
@@ -123,7 +122,7 @@ You can efficiently monitor the status of thousands of databases by using the [b
 - **Azure Event Hubs**: For integrating SQL Database telemetry with your custom monitoring solution or hot pipelines.
 - **Azure Monitor logs**: For a built-in monitoring solution with reporting, alerting, and mitigating capabilities.
 
-![Diagram of Azure monitoring architecture](./media/sql-database-paas-overview/architecture.png)
+:::image type="content" source="media/sql-database-paas-overview/architecture.png" alt-text="Diagram of Azure monitoring architecture." lightbox="media/sql-database-paas-overview/architecture.png":::
 
 ## Availability capabilities
 
@@ -165,8 +164,6 @@ With SQL Database, you get built-in intelligence that helps you dramatically red
 
 SQL Database provides detailed insight into the queries that you need to monitor. SQL Database learns about your database patterns, and enables you to adapt your database schema to your workload. SQL Database provides [performance tuning recommendations](database-advisor-implement-performance-recommendations.md), where you can review tuning actions and apply them.
 
-However, constantly monitoring a database is a hard and tedious task, especially when you're dealing with many databases. [Intelligent Insights](intelligent-insights-overview.md) does this job for you by automatically monitoring SQL Database performance at scale. It informs you of performance degradation issues, it identifies the root cause of each issue, and it provides performance improvement recommendations when possible.
-
 Managing a huge number of databases might be impossible to do efficiently even with all available tools and reports that SQL Database and Azure provide. Instead of monitoring and tuning your database manually, you might consider delegating some of the monitoring and tuning actions to SQL Database by using [automatic tuning](automatic-tuning-overview.md). SQL Database automatically applies recommendations, tests, and verifies each of its tuning actions to ensure the performance keeps improving. This way, SQL Database automatically adapts to your workload in a controlled and safe way. Automatic tuning means that the performance of your database is carefully monitored and compared before and after every tuning action. If the performance doesn't improve, the tuning action is reverted.
 
 Many of our partners that run [SaaS multitenant apps](saas-tenancy-app-design-patterns.md) on top of SQL Database are relying on automatic performance tuning to make sure their applications always have stable and predictable performance. For them, this feature tremendously reduces the risk of having a performance incident in the middle of the night. In addition, because part of their customer base also uses SQL Server, they're using the same indexing recommendations provided by SQL Database to help their SQL Server customers.
@@ -187,7 +184,7 @@ SQL Database provides a range of [built-in security and compliance features](/az
 > [!IMPORTANT]
 > Microsoft has certified Azure SQL Database (all deployment options) against a number of compliance standards. For more information, see the [Microsoft Azure Trust Center](https://microsoft.com/trust-center/product-overview), where you can find the most current list of SQL Database compliance certifications.
 
-### <a name="advance-threat-protection"></a> Advanced threat protection
+### <a id="advance-threat-protection"></a> Advanced threat protection
 
 Microsoft Defender for SQL is a unified package for advanced SQL security capabilities. It includes functionality for managing your database vulnerabilities, and detecting anomalous activities that might indicate a threat to your database. It provides a single location for enabling and managing these capabilities.
 
@@ -250,7 +247,7 @@ Patching is generally not noticeable if you [employ retry logic](develop-overvie
 - [Feedback](https://aka.ms/sqlfeedback): Report bugs and request features.
 - [Reddit](https://www.reddit.com/r/SQLServer/): Discuss SQL Server.
 
-## Next steps
+## Related content
 
 - See the [pricing page](https://azure.microsoft.com/pricing/details/sql-database/) for cost comparisons and calculators regarding single databases and elastic pools.
 - See these quickstarts to get started:

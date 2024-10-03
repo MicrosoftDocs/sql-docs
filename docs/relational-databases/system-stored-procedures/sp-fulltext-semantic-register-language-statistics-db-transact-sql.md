@@ -4,7 +4,7 @@ description: Registers a pre-populated Semantic Language Statistics database in 
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 07/07/2023
+ms.date: 08/22/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -71,7 +71,7 @@ For more information, see [Install and Configure Semantic Search](../search/inst
 
 ## Metadata
 
-For information about the Semantic Language Statistics database installed on an instance of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)], query the catalog view [sys.fulltext_semantic_language_statistics_database (Transact-SQL)](../system-catalog-views/sys-fulltext-semantic-language-statistics-database-transact-sql.md).
+For information about the Semantic Language Statistics database installed on an instance of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)], query the catalog view [sys.fulltext_semantic_language_statistics_database](../system-catalog-views/sys-fulltext-semantic-language-statistics-database-transact-sql.md).
 
 ## Permissions
 

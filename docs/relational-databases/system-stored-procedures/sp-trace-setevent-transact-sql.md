@@ -4,7 +4,7 @@ description: Adds or removes an event or event column to a trace.
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 09/07/2023
+ms.date: 08/21/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -20,7 +20,7 @@ dev_langs:
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-Adds or removes an event or event column to a trace. `sp_trace_setevent` may be executed only on existing traces that are stopped (*@status* is `0`). An error is returned if this stored procedure is executed on a trace that doesn't exist or whose *@status* isn't `0`.
+Adds or removes an event or event column to a trace. `sp_trace_setevent` can be executed only on existing traces that are stopped (*@status* is `0`). An error is returned if this stored procedure is executed on a trace that doesn't exist or whose *@status* isn't `0`.
 
 > [!IMPORTANT]  
 > [!INCLUDE [ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use Extended Events instead.
@@ -232,7 +232,7 @@ This table lists the events that can be added to or removed from a trace.
 | `215` | `PreConnect:Starting` | Indicates when a LOGON trigger or Resource Governor classifier function starts execution. |
 | `216` | `PreConnect:Completed` | Indicates when a LOGON trigger or Resource Governor classifier function completes execution. |
 | `217` | `Plan Guide Successful` | Indicates that the [!INCLUDE [ssde-md](../../includes/ssde-md.md)] successfully produced an execution plan for a query or batch that contained a plan guide. |
-| `218` | `Plan Guide Unsuccessful` | Indicates that the [!INCLUDE [ssde-md](../../includes/ssde-md.md)] couldn't produce an execution plan for a query or batch that contained a plan guide. The [!INCLUDE [ssde-md](../../includes/ssde-md.md)] attempted to generate an execution plan for this query or batch without applying the plan guide. An invalid plan guide may be the cause of this problem. You can validate the plan guide by using the `sys.fn_validate_plan_guide` system function. |
+| `218` | `Plan Guide Unsuccessful` | Indicates that the [!INCLUDE [ssde-md](../../includes/ssde-md.md)] couldn't produce an execution plan for a query or batch that contained a plan guide. The [!INCLUDE [ssde-md](../../includes/ssde-md.md)] attempted to generate an execution plan for this query or batch without applying the plan guide. An invalid plan guide might be the cause of this problem. You can validate the plan guide by using the `sys.fn_validate_plan_guide` system function. |
 | `235` | `Audit Fulltext` | |
 
 #### [ @columnid = ] *columnid*
@@ -248,7 +248,7 @@ The following table lists the columns that can be added for an event.
 | `3` | `DatabaseID` | ID of the database specified by the USE *database* statement, or the default database if no USE *database* statement is issued for a given connection.<br /><br />The value for a database can be determined by using the DB_ID function. |
 | `4` | `TransactionID` | System-assigned ID of the transaction. |
 | `5` | `LineNumber` | Contains the number of the line that contains the error. For events that involve [!INCLUDE [tsql](../../includes/tsql-md.md)] statements, like `SP:StmtStarting`, the `LineNumber` contains the line number of the statement in the stored procedure or batch. |
-| `6` | `NTUserName` | [!INCLUDE [msCoName](../../includes/msconame-md.md)] Windows user name. |
+| `6` | `NTUserName` | Windows user name. |
 | `7` | `NTDomainName` | Windows domain to which the user belongs. |
 | `8` | `HostName` | Name of the client computer that originated the request. |
 | `9` | `ClientProcessID` | ID assigned by the client computer to the process in which the client application is running. |
@@ -271,7 +271,7 @@ The following table lists the columns that can be added for an event.
 | `26` | `ServerName` | Name of the instance of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)], either *servername* or *servername\instancename*, being traced. |
 | `27` | `EventClass` | Type of event class being recorded. |
 | `28` | `ObjectType` | Type of object, such as: table, function, or stored procedure. |
-| `29` | `NestLevel` | The nesting level at which this stored procedure is executing. See [@@NESTLEVEL (Transact-SQL)](../../t-sql/functions/nestlevel-transact-sql.md). |
+| `29` | `NestLevel` | The nesting level at which this stored procedure is executing. See [&#x40;&#x40;NESTLEVEL](../../t-sql/functions/nestlevel-transact-sql.md). |
 | `30` | `State` | Server state, in case of an error. |
 | `31` | `Error` | Error number. |
 | `32` | `Mode` | Lock mode of the lock acquired. This column isn't populated by the `Lock:Released` event. |
@@ -327,14 +327,14 @@ This table illustrates the interaction between *@on* and *@columnid*.
 
 ## Return code values
 
-The following table describes the code values that users may get following completion of the stored procedure.
+The following table describes the code values that you could get, following completion of the stored procedure.
 
 | Return code | Description |
 | --- | --- |
 | `0` | No error. |
 | `1` | Unknown error. |
 | `2` | The trace is currently running. Changing the trace at this time results in an error. |
-| `3` | The specified event isn't valid. The event may not exist or it isn't an appropriate one for the store procedure. |
+| `3` | The specified event isn't valid. The event might not exist or it isn't an appropriate one for the store procedure. |
 | `4` | The specified column isn't valid. |
 | `9` | The specified trace handle isn't valid. |
 | `11` | The specified column is used internally and can't be removed. |
@@ -353,7 +353,7 @@ Users must execute `sp_trace_setevent` for each column added for each event. Dur
 
 Parameters of all SQL Trace stored procedures (`sp_trace_*`) are strictly typed. If these parameters aren't called with the correct input parameter data types, as specified in the argument description, the stored procedure returns an error.
 
-For an example of using trace stored procedures, see [Create a Trace (Transact-SQL)](../sql-trace/create-a-trace-transact-sql.md).
+For an example of using trace stored procedures, see [Create a Trace](../sql-trace/create-a-trace-transact-sql.md).
 
 ## Permissions
 

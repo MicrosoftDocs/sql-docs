@@ -4,7 +4,7 @@ description: "Sends an e-mail message to the specified recipients."
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 11/02/2023
+ms.date: 08/21/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -209,7 +209,7 @@ When *@profile* isn't specified, `sp_send_dbmail` uses a default profile. If the
 
 `sp_send_dbmail` doesn't support e-mail messages with no content. To send an e-mail message, you must specify at least one of *@body*, *@query*, *@file_attachments*, or *@subject*. Otherwise, `sp_send_dbmail` returns an error.
 
-Database Mail uses the [!INCLUDE [msCoName](../../includes/msconame-md.md)] Windows security context of the current user to control access to files. Therefore, users who are authenticated with [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Authentication can't attach files using *@file_attachments*. Windows doesn't allow [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] to provide credentials from a remote computer to another remote computer. Therefore, Database Mail may not be able to attach files from a network share in cases where the command is run from a computer other than the computer that [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] runs on.
+Database Mail uses the Windows security context of the current user to control access to files. Therefore, users who are authenticated with [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Authentication can't attach files using *@file_attachments*. Windows doesn't allow [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] to provide credentials from a remote computer to another remote computer. Therefore, Database Mail might not be able to attach files from a network share in cases where the command is run from a computer other than the computer that [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] runs on.
 
 If both *@query* and *@file_attachments* are specified and the file can't be found, the query is still executed but the e-mail isn't sent.
 

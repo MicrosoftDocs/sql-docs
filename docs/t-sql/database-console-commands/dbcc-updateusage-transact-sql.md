@@ -50,8 +50,6 @@ DBCC UPDATEUSAGE
 ) [ WITH [ NO_INFOMSGS ] [ , ] [ COUNT_ROWS ] ]
 ```
 
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 
 #### *database_name* | *database_id* | 0

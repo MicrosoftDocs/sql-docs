@@ -42,8 +42,6 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
 IS_MEMBER ( { 'group' | 'role' } )  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
  **'** *group* **'**  
 **Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later

@@ -3,11 +3,12 @@ title: "Change the default Reporting Services delivery extension"
 description: "Learn to configure Reporting Services settings to reorder the delivery extensions shown in the Delivered by list, and to set the default delivery extension."
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/20/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: subscriptions
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "Report Manager [Reporting Services], default delivery extension"
 ---
@@ -103,8 +104,8 @@ helpviewer_keywords:
   
     ```
   
-## Related content  
- [RsReportServer.config configuration file](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
- [RsReportServer.config configuration file](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
- [File share delivery in Reporting Services](../../reporting-services/subscriptions/file-share-delivery-in-reporting-services.md)   
- [E-Mail delivery in Reporting Services](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md)   
+## Related content
+
+- [RsReportServer.config configuration file](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)
+- [File share delivery in Reporting Services](../../reporting-services/subscriptions/file-share-delivery-in-reporting-services.md)
+- [E-Mail delivery in Reporting Services](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md)

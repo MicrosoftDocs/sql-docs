@@ -3,8 +3,8 @@ title: "jobs.sp_add_target_group_member (Azure Elastic Jobs) (Transact-SQL)"
 description: "jobs.sp_add_target_group_member adds a new member to a target group for the Azure Elastic Jobs service for Azure SQL Database."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: 10/30/2023
-ms.service: sql-database
+ms.date: 08/21/2024
+ms.service: azure-sql-database
 ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
@@ -76,23 +76,23 @@ The name of the database that should be added to the specified target group. *da
 
 The name of the Azure SQL Database elastic pool that should be added to the specified target group. *elastic_pool_name* should be specified when target_type is `SqlElasticPool`. *elastic_pool_name* is nvarchar(128), with no default.
 
-#### @target_id  OUTPUT
+#### @target_id OUTPUT
 
 The target identification number assigned to the target group member if created added to the target group. *target_id* is an output variable of type uniqueidentifier, with a default of `NULL`.
 
-## Return Code Values
+## Return code values
 
-0 (success) or 1 (failure)
+`0` (success) or `1` (failure).
 
 ## Remarks
 
 A job executes on all single databases within a server or in an elastic pool at time of execution, when a server or elastic pool is included in the target group.
 
-Choose one method for all targets for an elastic job. For example, for a single elastic job, you cannot configure one target server to use database-scoped credentials and another to use Microsoft Entra ID authentication. For more information, see [Authentication](/azure/azure-sql/database/elastic-jobs-overview?view=azuresql-db&preserve-view=true#authentication).
+Choose one method for all targets for an elastic job. For example, for a single elastic job, you can't configure one target server to use database-scoped credentials and another to use Microsoft Entra ID authentication. For more information, see [Authentication](/azure/azure-sql/database/elastic-jobs-overview?view=azuresql-db&preserve-view=true#authentication).
 
 ## Permissions
 
-By default, members of the sysadmin fixed server role can execute this stored procedure. Only members of sysadmin can use this stored procedure to edit the attributes of jobs that are owned by other users.
+By default, members of the **sysadmin** fixed server role can execute this stored procedure. Only members of sysadmin can use this stored procedure to edit the attributes of jobs that are owned by other users.
 
 ## Examples
 
@@ -116,10 +116,10 @@ EXEC jobs.sp_add_target_group_member
 @database_name = 'master';
 
 --View the recently created target group and target group members
-SELECT * FROM jobs.target_groups 
+SELECT * FROM jobs.target_groups
 WHERE target_group_name='ServerGroup1';
 GO
-SELECT * FROM jobs.target_group_members 
+SELECT * FROM jobs.target_group_members
 WHERE target_group_name='ServerGroup1';
 GO
 ```
@@ -156,7 +156,7 @@ EXEC jobs.sp_add_target_group_member
 GO
 
 --View the recently added members to the target group
-SELECT * FROM [jobs].target_group_members 
+SELECT * FROM [jobs].target_group_members
 WHERE target_group_name= N'Servers Maintaining Customer Information';
 GO
 ```
@@ -200,7 +200,7 @@ EXEC [jobs].sp_add_target_group_member
 GO
 
 --View the recently created target group and target group members
-SELECT * FROM [jobs].target_groups 
+SELECT * FROM [jobs].target_groups
 WHERE target_group_name = N'ServerGroup';
 GO
 SELECT * FROM [jobs].target_group_members
@@ -228,10 +228,10 @@ EXEC jobs.sp_add_target_group_member
 @elastic_pool_name = 'ElasticPool1';
 
 -- View the recently created target group and target group members
-SELECT * FROM jobs.target_groups 
+SELECT * FROM jobs.target_groups
 WHERE target_group_name = N'PoolGroup';
 GO
-SELECT * FROM jobs.target_group_members 
+SELECT * FROM jobs.target_group_members
 WHERE target_group_name = N'PoolGroup';
 GO
 ```

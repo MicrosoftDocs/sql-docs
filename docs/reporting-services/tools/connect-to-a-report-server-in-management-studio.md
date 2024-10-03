@@ -3,11 +3,12 @@ title: "Connect to a report server in Management Studio"
 description: Learn how to connect to any server in the SQL Server family and graphically browse its contents by using the Object Explorer in SQL Server Management Studio.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 06/12/2024
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: tools
 ms.topic: how-to
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 f1_keywords:
   - "sql13.swb.connecttors.connectionproperties.f1"
   - "sql13.swb.connecttors.login.f1"
@@ -18,8 +19,7 @@ helpviewer_keywords:
   - "registering report servers"
   - "report servers [Reporting Services], registering"
   - "Connect to Server dialog box, Reporting Services"
-
-#customer intent: As a SQL server user, I want to learn how to connect and graphically browse my SQL databases so that I can access and use my data.
+# customer intent: As a SQL server user, I want to learn how to connect and graphically browse my SQL databases so that I can access and use my data.
 ---
 
 # Connect to a report server in Management Studio
@@ -36,8 +36,8 @@ helpviewer_keywords:
 
 ## Prerequisites
 
-- [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]](/sql/ssms/download-sql-server-management-studio-ssms).
-- A configured report server in native or Sharepoint mode. For instructions on how to configure your report server, see [Configure a report server (Reporting Services native mode)](/sql/reporting-services/report-server/configure-a-report-server-reporting-services-native-mode).
+- [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]](../../ssms/download-sql-server-management-studio-ssms.md).
+- A configured report server in native or Sharepoint mode. For instructions on how to configure your report server, see [Configure a report server (Reporting Services native mode)](../report-server/configure-a-report-server-reporting-services-native-mode.md).
 - Sufficient permissions to manage your Report Server. For more information about permissions, see [Connection syntax and permissions](#connection-syntax-and-permissions).
 - The server must be registered before you can connect to a report server instance in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. For instructions to register a report server, see [Register a report server](#register-a-report-server).
 
@@ -107,5 +107,5 @@ When you specify [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] a
 
 ## Related content
 
-- [Configure a report server database connection &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)  
+- [Configure a report server database connection &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)
 - [Reporting Services in SQL Server Management Studio &#40;SSRS&#41;](../../reporting-services/tools/reporting-services-in-sql-server-management-studio-ssrs.md)

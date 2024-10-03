@@ -35,8 +35,6 @@ FOR SERVER AUDIT audit_name
 [ ; ]  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
  *audit_specification_name*  
  Name of the server audit specification.  

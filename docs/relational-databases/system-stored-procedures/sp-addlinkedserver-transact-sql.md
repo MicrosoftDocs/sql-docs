@@ -4,7 +4,7 @@ description: "sp_addlinkedserver (Transact-SQL)"
 author: markingmyname
 ms.author: maghan
 ms.reviewer: wiassaf, randolphwest
-ms.date: 11/02/2023
+ms.date: 08/21/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -132,7 +132,7 @@ The following table shows the ways that a linked server can be set up for data s
 | ODBC data source | [!INCLUDE [msCoName](../../includes/msconame-md.md)] OLE DB Provider for ODBC | Any | `MSDASQL` | | | ODBC connection string | |
 | File system | [!INCLUDE [msCoName](../../includes/msconame-md.md)] OLE DB Provider for Indexing Service | Any | `MSIDXS` | Indexing Service catalog name | | | |
 | [!INCLUDE [msCoName](../../includes/msconame-md.md)] Excel Spreadsheet | [!INCLUDE [msCoName](../../includes/msconame-md.md)] OLE DB Provider for Jet | Any | `Microsoft.Jet.OLEDB.4.0` | Full path of Excel file | | Excel 5.0 | |
-| IBM DB2 Database | [!INCLUDE [msCoName](../../includes/msconame-md.md)] OLE DB Provider for DB2 | Any | `DB2OLEDB` | | | See [!INCLUDE [msCoName](../../includes/msconame-md.md)] OLE DB Provider for DB2 documentation. | Catalog name of DB2 database |
+| IBM Db2 Database | [!INCLUDE [msCoName](../../includes/msconame-md.md)] OLE DB Provider for DB2 | Any | `DB2OLEDB` | | | See [!INCLUDE [msCoName](../../includes/msconame-md.md)] OLE DB Provider for DB2 documentation. | Catalog name of DB2 database |
 
 <sup>1</sup> This way of setting up a linked server forces the name of the linked server to be the same as the network name of the remote instance of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]. Use *@datasrc* to specify the server.
 
@@ -150,7 +150,7 @@ The stored procedure `sp_addlinkedserver` can't be executed within a user-define
 > Azure SQL Managed Instance currently supports only SQL Server, SQL Database, and other SQL managed instances as remote data sources.
 
 > [!IMPORTANT]  
-> When a linked server is created by using `sp_addlinkedserver`, a default self-mapping is added for all local logins. For non-[!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] providers, [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Authenticated logins may be able to gain access to the provider under the [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] service account. Administrators should consider using `sp_droplinkedsrvlogin <linkedserver_name>, NULL` to remove the global mapping.
+> When a linked server is created by using `sp_addlinkedserver`, a default self-mapping is added for all local logins. For non-[!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] providers, [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Authenticated logins might be able to gain access to the provider under the [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] service account. Administrators should consider using `sp_droplinkedsrvlogin <linkedserver_name>, NULL` to remove the global mapping.
 
 ## Permissions
 
@@ -404,7 +404,7 @@ EXEC master.dbo.sp_addlinkedserver
     @datasrc = N'<mi_name>.<dns_zone>.database.windows.net,1433';
 ```
 
-With pass-through authentication, the security context of the local login is carried over to the remote instance. Pass-through authentication requires the Microsoft Entra principal to be added as a login on both the local and remote Azure SQL Managed Instance. Both managed instances need to be in a [Server Trust Group](/azure/azure-sql/managed-instance/server-trust-group-overview). When the requirements are met, user can sign in to a local instance and query the remote instance via the linked server object.
+With pass-through authentication, the security context of the local login is carried over to the remote instance. Pass-through authentication requires the Microsoft Entra principal to be added as a login on both the local and remote Azure SQL Managed Instance. Both managed instances need to be in a [server trust group](/azure/azure-sql/managed-instance/server-trust-group-overview). When the requirements are met, user can sign in to a local instance and query the remote instance via the linked server object.
 
 ## Related content
 

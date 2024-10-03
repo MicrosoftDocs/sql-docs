@@ -3,11 +3,12 @@ title: "Subscription Properties dialog box"
 description: Describes the 'Subscription Properties' dialog box within SQL Server Management Studio (SSMS).
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "11/20/2018"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: ui-reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 f1_keywords:
   - "sql13.rep.newsubwizard.subproperties.publisher.f1"
   - "sql13.rep.newsubwizard.subproperties.subscriber.f1"
@@ -127,10 +128,8 @@ The **Subscription Properties** dialog box at the Subscriber allows you to view 
  
 For more information about configuration, see [Configure Web Synchronization](../../relational-databases/replication/configure-web-synchronization.md). 
   
-## See Also  
- [View and Modify Pull Subscription Properties](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)   
- [View and Modify Push Subscription Properties](../../relational-databases/replication/view-and-modify-push-subscription-properties.md)   
- [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)   
+## Related content
 
-  
-  
+- [View and Modify Pull Subscription Properties](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)
+- [View and Modify Push Subscription Properties](../../relational-databases/replication/view-and-modify-push-subscription-properties.md)
+- [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)

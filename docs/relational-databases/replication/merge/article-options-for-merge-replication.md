@@ -3,11 +3,12 @@ title: "Article Options for Merge Replication"
 description: "Article Options for Merge Replication"
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/01/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "merge replication [SQL Server replication], article options"
   - "articles [SQL Server replication], merge replication options"
@@ -32,7 +33,6 @@ helpviewer_keywords:
   
 -   Use a business logic handler to respond to many conditions during synchronization. These include data changes, conflicts, and errors. For more information, see [Execute Business Logic During Merge Synchronization](../../../relational-databases/replication/merge/execute-business-logic-during-merge-synchronization.md).  
   
-## See Also  
- [Publish Data and Database Objects](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)  
-  
-  
+## Related content
+
+- [Publish Data and Database Objects](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)

@@ -5,8 +5,8 @@ description: Learn about tuning database applications and databases for performa
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: wiassaf, mathoma
-ms.date: 01/16/2024
-ms.service: sql-database
+ms.date: 09/12/2024
+ms.service: azure-sql-database
 ms.subservice: performance
 ms.topic: conceptual
 ms.custom:
@@ -248,12 +248,12 @@ If a workload has a set of repeating queries, often it makes sense to capture an
 
 ## Best practices for very large database architectures in Azure SQL Database
 
-Before the release of [Hyperscale](service-tier-hyperscale.md) service tier for single databases in Azure SQL Database, customers could run into [capacity limits for individual databases](service-tiers-sql-database-vcore.md?view=azuresql-db&preserve-view=true#resource-limits). While [Hyperscale elastic pools (preview)](./hyperscale-elastic-pool-overview.md) offer significantly higher storage limits, elastic pools and pooled databases in other service tiers might still be constrained by those storage capacity limits in the non-Hyperscale service tiers.
+Before the release of [Hyperscale](service-tier-hyperscale.md) service tier for single databases in Azure SQL Database, customers could run into [capacity limits for individual databases](service-tiers-sql-database-vcore.md?view=azuresql-db&preserve-view=true#resource-limits). While [Hyperscale elastic pools](./hyperscale-elastic-pool-overview.md) offer significantly higher storage limits, elastic pools and pooled databases in other service tiers might still be constrained by those storage capacity limits in the non-Hyperscale service tiers.
 
 The following two sections discuss two options for solving problems with very large databases in Azure SQL Database when you can't use the Hyperscale service tier.
 
 > [!NOTE]
-> Hyperscale elastic pools are in preview for Azure SQL Database. Elastic pools are not available for Azure SQL Managed Instance, SQL Server instances on-premises, SQL Server on Azure VMs, or Azure Synapse Analytics.
+> Elastic pools are not available for Azure SQL Managed Instance, SQL Server instances on-premises, SQL Server on Azure VMs, or Azure Synapse Analytics.
 
 ### Cross-database sharding
 
@@ -287,6 +287,8 @@ Some database applications have read-heavy workloads. Caching layers might reduc
 If you use Azure SQL Database, you can execute an open-source T-SQL [script for improving database configuration and design in Azure SQL Database](https://aka.ms/sqldbtips). The script analyzes your database on demand and provide tips to improve database performance and health. Some tips suggest configuration and operational changes based on best practices, while other tips recommend design changes suitable for your workload, such as enabling advanced database engine features.
 
 To learn more about the script and get started, visit the [Azure SQL Tips wiki](https://aka.ms/sqldbtipswiki) page.
+
+To keep up to date with the latest features and updates to Azure SQL Database, see [What's new in Azure SQL Database?](doc-changes-updates-release-notes-whats-new.md)
 
 ## Related content
 

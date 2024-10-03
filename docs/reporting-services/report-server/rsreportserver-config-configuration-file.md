@@ -3,11 +3,12 @@ title: "RsReportServer.config configuration file"
 description: Learn about the configuration file that stores settings that are used by the Report Server web service and background processing.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 05/01/2020
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-server
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 # RsReportServer.config configuration file
 The [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] `RsReportServer.config` file stores settings that are used by the Report Server web service and background processing. All [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] applications run within a single process that reads configuration settings stored in the `RSReportServer.config` file. Both native mode and SharePoint mode report servers use the `RSReportServer.config`, however the two modes don't use all of the same settings in the configuration file. The SharePoint mode version of the file is smaller as many of the settings for SharePoint mode are stored in SharePoint configuration databases rather than the file. This article describes the default configuration file that is installed for native mode and SharePoint mode. The article also describes some of the important settings and behaviors that the configuration file controls.  
@@ -844,13 +845,12 @@ x6K1NTC/u8hl9v0MgK+xMQKaiV7BuNYbgGgkaViABcNH0xVzcc5rMTHUkrABbGDFGKyAFniGQ1qu
 </Configuration>  
 ```  
   
-## Related content 
- [Modify a Reporting Services configuration file &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
- [Configure available memory for report server applications](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)   
- [Reporting Services configuration files](../../reporting-services/report-server/reporting-services-configuration-files.md)   
- [Initialize a report server &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)   
- [Store encrypted report server Data &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
- [Report Server Configuration Manager &#40;native mode&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
+## Related content
 
- More questions? [Try the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)
-  
+- [Modify a Reporting Services configuration file &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)
+- [Configure available memory for report server applications](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)
+- [Reporting Services configuration files](../../reporting-services/report-server/reporting-services-configuration-files.md)
+- [Initialize a report server &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)
+- [Store encrypted report server Data &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)
+- [Report Server Configuration Manager &#40;native mode&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)
+- [Try the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

@@ -3,11 +3,12 @@ title: "Specify Connections for Custom Data Processing Extensions"
 description: Use this information to learn how to specify connections for third-party custom data processing extensions.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 05/24/2018
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-data
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "custom data processing extensions [Reporting Services]"
   - "IDbConnection interface, connection strings"
@@ -68,11 +69,10 @@ helpviewer_keywords:
 |Database credentials|You can use database authentication to configure connections for custom data processing extensions that use **IDbConnectionExtension**.|  
 |No credentials|If the unattended execution account is specified, the connection string determines the credentials that are used.<br /><br /> If the unattended execution account is not defined, the report server will fail the connection.|  
   
-## See Also  
- [Configure the Unattended Execution Account &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)   
- [Specify Credential and Connection Information for Report Data Sources](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
- [Create data connection strings - Report Builder & SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
- [Implementing a Data Processing Extension](../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)   
- [Configure Data Source Properties for a Report](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)  
-  
-  
+## Related content
+
+- [Configure the Unattended Execution Account &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)
+- [Specify Credential and Connection Information for Report Data Sources](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)
+- [Create data connection strings - Report Builder & SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)
+- [Implementing a Data Processing Extension](../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)
+- [Configure Data Source Properties for a Report](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)

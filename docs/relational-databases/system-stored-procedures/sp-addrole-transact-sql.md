@@ -4,7 +4,7 @@ description: sp_addrole creates a new database role in the current database.
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: randolphwest
-ms.date: 01/23/2024
+ms.date: 08/22/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -54,7 +54,7 @@ The owner of the new database role. *@ownername* is **sysname**, with a default 
 
 The names of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] database roles can contain from 1 through 128 characters, including letters, symbols, and numbers. The names of database roles can't contain a backslash character (`\`), be `NULL`, or an empty string (`''`).
 
-After you add a database role, use [sp_addrolemember (Transact-SQL)](sp-addrolemember-transact-sql.md) to add principals to the role. When `GRANT`, `DENY`, or `REVOKE` statements are used to apply permissions to the database role, members of the database role inherit those permissions as if the permissions were applied directly to their accounts.
+After you add a database role, use [sp_addrolemember](sp-addrolemember-transact-sql.md) to add principals to the role. When `GRANT`, `DENY`, or `REVOKE` statements are used to apply permissions to the database role, members of the database role inherit those permissions as if the permissions were applied directly to their accounts.
 
 > [!NOTE]  
 > New server roles can't be created. Roles can only be created at the database level.

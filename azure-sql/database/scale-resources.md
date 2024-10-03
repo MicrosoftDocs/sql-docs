@@ -6,7 +6,7 @@ author: dimitri-furman
 ms.author: dfurman
 ms.reviewer: wiassaf, mathoma, urmilano
 ms.date: 06/19/2023
-ms.service: sql-db-mi
+ms.service: azure-sql
 ms.subservice: performance
 ms.topic: conceptual
 ms.custom: sqldbrb=1

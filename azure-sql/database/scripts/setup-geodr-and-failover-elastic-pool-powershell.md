@@ -5,7 +5,7 @@ author: AbdullahMSFT
 ms.author: amamun
 ms.reviewer: wiassaf, mathoma
 ms.date: 03/12/2019
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.subservice: high-availability
 ms.topic: sample
 ms.custom:

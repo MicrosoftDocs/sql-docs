@@ -2,8 +2,8 @@
 title: "Save Showplan XML events separately"
 titleSuffix: SQL Server Profiler
 description: Learn how to save Showplan XML events captured in traces to separate files by using SQL Server Profiler. Open the files in SQL Server Management Studio.
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "03/01/2017"
 ms.service: sql
 ms.subservice: performance

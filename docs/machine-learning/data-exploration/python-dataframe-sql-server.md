@@ -2,8 +2,8 @@
 title: Insert Python dataframe into SQL table
 titleSuffix: SQL machine learning
 description: How to insert data from a dataframe into SQL table.
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: VanMSFT
+ms.author: vanto
 ms.date: 09/16/2021
 ms.service: sql
 ms.subservice: machine-learning
@@ -31,7 +31,7 @@ This article describes how to insert a [pandas](https://pandas.pydata.org/) data
 * [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) for restoring the sample database to Azure SQL Managed Instance.
 ::: moniker-end
 
-* Azure Data Studio. To install, see [Download and install Azure Data Studio](../../azure-data-studio/download-azure-data-studio.md).
+* Azure Data Studio. To install, see [Download and install Azure Data Studio](/azure-data-studio/download-azure-data-studio).
 
 * Follow the steps in [AdventureWorks sample databases](../../samples/adventureworks-install-configure.md) to restore the OLTP version of the AdventureWorks sample database for your version of SQL Server.
 

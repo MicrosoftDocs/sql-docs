@@ -4,7 +4,7 @@ description: sp_helppullsubscription displays information about one or more subs
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 05/15/2024
+ms.date: 08/21/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: "reference"
@@ -80,10 +80,10 @@ Specifies whether all push subscriptions are to be returned. *@show_push* is **n
 | `distributor_login` | **sysname** | Login ID used at the Distributor for [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Authentication. |
 | `distributor_password` | **nvarchar(524)** | Password (encrypted) used at the Distributor for [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Authentication. |
 | `distributor_security_mode` | **int** | Security mode implemented at the Distributor:<br /><br />`0` = [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Authentication<br />`1` = Windows Authentication |
-| `ftp_address` | **sysname** | For backward compatibility only. |
-| `ftp_port` | **int** | For backward compatibility only. |
-| `ftp_login` | **sysname** | For backward compatibility only. |
-| `ftp_password` | **nvarchar(524)** | For backward compatibility only. |
+| `ftp_address` | **sysname** | [!INCLUDE [deprecated-parameter](../includes/deprecated-parameter.md)] |
+| `ftp_port` | **int** | [!INCLUDE [deprecated-parameter](../includes/deprecated-parameter.md)] |
+| `ftp_login` | **sysname** | [!INCLUDE [deprecated-parameter](../includes/deprecated-parameter.md)] |
+| `ftp_password` | **nvarchar(524)** | [!INCLUDE [deprecated-parameter](../includes/deprecated-parameter.md)] |
 | `alt_snapshot_folder` | **nvarchar(255)** | Location where snapshot folder is stored if the location is other than or in addition to the default location. |
 | `working_directory` | **nvarchar(255)** | Fully qualified path to the directory where snapshot files are transferred using File Transfer Protocol (FTP) when that option is specified. |
 | `use_ftp` | **bit** | Subscription is subscribing to Publication over the Internet and FTP addressing properties are configured. If `0`, Subscription isn't using FTP. If `1`, subscription is using FTP. |

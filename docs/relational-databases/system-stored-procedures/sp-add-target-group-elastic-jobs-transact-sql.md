@@ -3,8 +3,8 @@ title: "jobs.sp_add_target_group (Azure Elastic Jobs) (Transact-SQL)"
 description: "jobs.sp_add_target_group creates a target group for jobs in the Azure Elastic Jobs service for Azure SQL Database."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: 10/30/2023
-ms.service: sql-database
+ms.date: 08/21/2024
+ms.service: azure-sql-database
 ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
@@ -32,7 +32,7 @@ Target groups provide an easy way to target a job at a collection of servers and
 ## Syntax
 
 ```syntaxsql
-[jobs].sp_add_target_group 
+[jobs].sp_add_target_group
  @target_group_name = 'target_group_name'
 [ , [ @target_group_id = ] target_group_id OUTPUT ]
 ```
@@ -45,11 +45,11 @@ The name of the target group to create. *target_group_name* is nvarchar(128), wi
 
 #### @target_group_id OUTPUT
 
- The target group identification number assigned to the job if created successfully. *target_group_id* is an output variable of type uniqueidentifier, with a default of `NULL`.
+The target group identification number assigned to the job if created successfully. *target_group_id* is an output variable of type uniqueidentifier, with a default of `NULL`.
 
-## Return Code Values
+## Return code values
 
-0 (success) or 1 (failure)
+`0` (success) or `1` (failure).
 
 ## Remarks
 
@@ -57,7 +57,7 @@ Use [jobs.sp_add_target_group_member](sp-add-target-group-member-elastic-jobs-tr
 
 ## Permissions
 
-By default, members of the sysadmin fixed server role can execute this stored procedure.  Only members of sysadmin can use this stored procedure to edit the attributes of jobs that are owned by other users.
+By default, members of the **sysadmin** fixed server role can execute this stored procedure. Only members of sysadmin can use this stored procedure to edit the attributes of jobs that are owned by other users.
 
 ## Examples
 

@@ -36,8 +36,6 @@ CERTPRIVATEKEY
     )  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 *certificate_ID*  
 The **certificate_id** of the certificate. Obtain this value from sys.certificates or from the [CERT_ID &#40;Transact-SQL&#41;](../../t-sql/functions/cert-id-transact-sql.md) function. *cert_id* has data type **int**.

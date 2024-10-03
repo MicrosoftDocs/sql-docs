@@ -1,8 +1,8 @@
 ---
 title: What is SQL Server Machine Learning Services (Python and R)?
 description: Machine Learning Services is a feature in SQL Server that gives the ability to run Python and R scripts with relational data. This article explains the basics of SQL Server Machine Learning Services and how to get started.
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: VanMSFT
+ms.author: vanto
 ms.date: 08/01/2023
 ms.service: sql
 ms.subservice: machine-learning-services
@@ -47,7 +47,7 @@ Machine Learning Services uses an extensibility framework to run Python and R sc
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current"
 1. [Install SQL Server Machine Learning Services on Windows](install/sql-machine-learning-services-windows-install.md) or [on Linux](../linux/sql-server-linux-setup-machine-learning.md?toc=/sql/machine-learning/toc.json). You can also use [Machine Learning Services on Big Data Clusters](../big-data-cluster/machine-learning-services.md) and [Machine Learning Services in Azure SQL Managed Instance](/azure/azure-sql/managed-instance/machine-learning-services-overview).
 
-1. Configure your development tools. You can use [run Python and R scripts in Azure Data Studio notebooks](install/sql-machine-learning-azure-data-studio.md). You can also run T-SQL in [Azure Data Studio](../azure-data-studio/what-is-azure-data-studio.md).
+1. Configure your development tools. You can use [run Python and R scripts in Azure Data Studio notebooks](install/sql-machine-learning-azure-data-studio.md). You can also run T-SQL in [Azure Data Studio](/azure-data-studio/what-is-azure-data-studio).
 
 1. Write your first Python or R script.
 
@@ -58,7 +58,7 @@ Machine Learning Services uses an extensibility framework to run Python and R sc
 ::: moniker range="=sql-server-2017"
 1. [Install SQL Server Machine Learning Services on Windows](install/sql-machine-learning-services-windows-install.md).
 
-1. Configure your development tools. You can use [run Python and R scripts in Azure Data Studio notebooks](install/sql-machine-learning-azure-data-studio.md). You can also use T-SQL in [Azure Data Studio](../azure-data-studio/what-is-azure-data-studio.md).
+1. Configure your development tools. You can use [run Python and R scripts in Azure Data Studio notebooks](install/sql-machine-learning-azure-data-studio.md). You can also use T-SQL in [Azure Data Studio](/azure-data-studio/what-is-azure-data-studio).
 
 1. Write your first Python or R script.
 

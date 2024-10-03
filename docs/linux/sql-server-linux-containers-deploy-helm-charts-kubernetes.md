@@ -4,7 +4,7 @@ description: Learn how to deploy a SQL Server on Linux container to Azure Kubern
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: amitkh
-ms.date: 08/17/2022
+ms.date: 07/15/2024
 ms.service: sql
 ms.subservice: linux
 ms.topic: quickstart
@@ -30,16 +30,16 @@ AKS is a managed Kubernetes service for deploying and managing container cluster
 
 ## Install client tools
 
-On your Windows client machine, you'll need the following tools.
+On your Windows client machine, you need the following tools.
 
 - [Azure CLI](/cli/azure/install-azure-cli) for Windows.
 - [Helm](https://github.com/helm/helm/releases) for Windows.
 
-If you prefer to use a different client operating system, you'll need to select the appropriate packages for that platform.
+If you prefer to use a different client operating system, you need to select the appropriate packages for that platform.
 
 ### Install kubectl using the Az PowerShell module
 
-You'll use **kubectl** to interact with the Kubernetes cluster. For more information, see [az aks install-cli](/cli/azure/aks#az-aks-install-cli).
+You use **kubectl** to interact with the Kubernetes cluster. For more information, see [az aks install-cli](/cli/azure/aks#az-aks-install-cli).
 
 To install **kubectl**, run the following command from your Windows command prompt:
 
@@ -84,19 +84,19 @@ If you want to deploy SQL Server in StatefulSet mode, which is the recommended m
 
 1. Download the sample [Helm chart](https://github.com/microsoft/mssql-docker/tree/master/linux/sample-helm-chart).
 
-1. Switch to the directory where you've downloaded the sample chart, and modify the `values.yaml` file if needed.
+1. Switch to the directory where you downloaded the sample chart, and modify the `values.yaml` file if needed.
 
 ## Deploy SQL Server to the AKS cluster
 
-Deploy SQL Server using the command below. The deployment name is customizable, so you can change `mssql-latest-deploy` to anything that you'd like.
+Deploy SQL Server using the following command. The deployment name is customizable, so you can change `mssql-latest-deploy` to anything that you'd like.
 
 ```cmd
 helm install mssql-latest-deploy . --set ACCEPT_EULA.value=Y --set MSSQL_PID.value=Developer
 ```
 
-In the above example, the chart and its files are in the current directory, represented by the period (`.`). You can specify the path of the chart if you prefer.
+In the previous example, the chart and its files are in the current directory, represented by the period (`.`). You can specify the path of the chart if you prefer.
 
-If successful, you'll see similar output:
+If successful, you see similar output:
 
 ```output
 NAME: mssql-latest-deploy
@@ -114,7 +114,7 @@ Deploying to a Kubernetes cluster can take a few minutes. To verify that your de
 kubectl get all
 ```
 
-If successful, you'll see similar output:
+If successful, you see similar output:
 
 ```output
 NAME                                      READY   STATUS    RESTARTS   AGE
@@ -138,11 +138,11 @@ You can connect to the SQL Server instance using any familiar SQL Server client 
 For example, if you connect to the SQL Server instance using SSMS, you can use the following settings:
 
 - **Server name:** Use the `External-IP` address for the `mssql-latest-deploy` service. In this example, it's `20.40.0.145`.
-- **Authentication:** Select **SQL Server Authentication** from the dropdown.
+- **Authentication:** Select **SQL Server Authentication** from the dropdown list.
 - **Login:** Use **sa**, which is the system administrator account.
 - **Password:** The **sa** password matches the value you provided in the `sa_password` configuration option, in the `values.yaml` file of the Helm chart.
 
-Once you've connected, you'll be able to expand the SQL Server instance in **Object Explorer**.
+Once you connect, you can expand the SQL Server instance in **Object Explorer**.
 
 :::image type="content" source="media/sql-server-linux-containers-deploy-helm-charts-kubernetes/expand-object-explorer.png" alt-text="Screenshot showing the Object Explorer connected to the database instance.":::
 
@@ -153,6 +153,6 @@ If you're not going to continue using your AKS cluster, remember to [delete your
 ## Related content
 
 - [Quickstart: Deploy SQL Server on Linux using an Ansible playbook](sql-server-linux-deploy-ansible.md)
-- [Configure Active Directory authentication with SQL Server on Linux-based containers using adutil](sql-server-linux-containers-ad-auth-adutil-tutorial.md)
-- [Secure SQL Server Docker containers](sql-server-linux-docker-container-security.md)
-- [Troubleshooting SQL Server Docker containers](sql-server-linux-docker-container-troubleshooting.md)
+- [Tutorial: Configure Active Directory authentication with SQL Server on Linux containers](sql-server-linux-containers-ad-auth-adutil-tutorial.md)
+- [Secure SQL Server Linux containers](sql-server-linux-docker-container-security.md)
+- [Troubleshoot SQL Server Docker containers](sql-server-linux-docker-container-troubleshooting.md)

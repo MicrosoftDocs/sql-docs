@@ -3,11 +3,12 @@ title: "Clean up Merge metadata (Replication SP)"
 description: Progrommatically clean up data in the Merge replication tables using replication stored procedures
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/03/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: how-to
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "metadata [SQL Server replication]"
   - "sp_mergemetadataretentioncleanup"
@@ -26,7 +27,6 @@ dev_langs:
   
 3.  Repeat steps 1 and 2 at the Subscriber to clean up metadata on the subscription database.  
   
-## See Also  
- [Subscription Expiration and Deactivation](../../../relational-databases/replication/subscription-expiration-and-deactivation.md)  
-  
-  
+## Related content
+
+- [Subscription Expiration and Deactivation](../../../relational-databases/replication/subscription-expiration-and-deactivation.md)

@@ -34,8 +34,6 @@ Divides one number by another and sets a value to the result of the operation. F
 expression %= expression
 ```
 
-[!INCLUDE [sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 
 #### *expression*

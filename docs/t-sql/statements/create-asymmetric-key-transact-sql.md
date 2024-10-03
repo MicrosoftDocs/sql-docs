@@ -64,8 +64,6 @@ CREATE ASYMMETRIC KEY asym_key_name
     PASSWORD = 'password'   
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
  *asym_key_name*  
  Is the name for the asymmetric key in the database. Asymmetric key names must comply with the rules for [identifiers](../../relational-databases/databases/database-identifiers.md) and must be unique within the database.  

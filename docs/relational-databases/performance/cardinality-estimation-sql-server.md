@@ -1,8 +1,8 @@
 ---
 title: "Cardinality Estimation (SQL Server)"
 description: The SQL Server Query Optimizer selects query plans that have the lowest estimated processing cost, which it determines based on rows processed and a cost model.
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: MikeRayMSFT
+ms.author: mikeray
 ms.reviewer: derekw
 ms.date: 01/08/2024
 ms.service: sql
@@ -240,7 +240,7 @@ GO
 SELECT CustomerId, OrderAddedDate  
 FROM OrderTable  
 WHERE OrderAddedDate >= '2016-05-01'
-OPTION (USE HINT ('FORCE_LEGACY_CARDINALITY_ESTIMATION'));  
+OPTION (USE HINT ('FORCE_LEGACY_CARDINALITY_ESTIMATION'));  
 ```
 
 ### Set a Query Store hint

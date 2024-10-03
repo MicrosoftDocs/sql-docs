@@ -5,7 +5,7 @@ author: VanMSFT
 ms.author: vanto
 ms.reviewer: mathoma
 ms.date: 05/23/2023
-ms.service: sql-database
+ms.service: sql
 ms.subservice: security
 ms.topic: conceptual
 monikerRange: "= azuresqldb-current||>= sql-server-ver16||>= sql-server-linux-ver16||=azuresqldb-mi-current"
@@ -51,7 +51,7 @@ The data for transactions and blocks is physically stored as rows in two system 
 - [sys.database_ledger_transactions](../../system-catalog-views/sys-database-ledger-transactions-transact-sql.md): Maintains a row with the information of each transaction in the database ledger. The information includes the ID of the block where this transaction belongs and the ordinal of the transaction within the block. 
 - [sys.database_ledger_blocks](../../system-catalog-views/sys-database-ledger-blocks-transact-sql.md): Maintains a row for every block in the ledger, including the root of the Merkle tree over the transactions within the block and the hash of the previous block to form a blockchain.
 
-To view the database ledger, run the following T-SQL statements in [SQL Server Management Studio](../../../ssms/download-sql-server-management-studio-ssms.md), [Azure Data Studio](../../../azure-data-studio/download-azure-data-studio.md) or [SQL Server Developer Tools](../../../ssdt/download-sql-server-data-tools-ssdt.md).
+To view the database ledger, run the following T-SQL statements in [SQL Server Management Studio](../../../ssms/download-sql-server-management-studio-ssms.md), [Azure Data Studio](/azure-data-studio/download-azure-data-studio) or [SQL Server Developer Tools](../../../ssdt/download-sql-server-data-tools-ssdt.md).
 
 ```sql
 SELECT * FROM sys.database_ledger_transactions;

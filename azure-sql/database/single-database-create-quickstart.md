@@ -4,8 +4,8 @@ description: Create a single database in Azure SQL Database using the Azure port
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma, randolphwest
-ms.date: 03/08/2024
-ms.service: sql-database
+ms.date: 09/17/2024
+ms.service: azure-sql-database
 ms.subservice: deployment-configuration
 ms.topic: quickstart
 ms.custom:
@@ -27,6 +27,12 @@ Watch this video in the [Azure SQL Database essentials series](/shows/azure-sql-
 
 - An active Azure subscription. If you don't have one, [create a free account](https://azure.microsoft.com/free/).
 - Much of this article can be accomplished with the Azure portal alone. Optionally, use the latest version of [Azure PowerShell](/powershell/azure/install-az-ps) or [Azure CLI](/cli/azure/install-azure-cli-windows).
+
+### Permissions
+
+**To create databases via Transact-SQL**: `CREATE DATABASE` permissions are necessary. To create a database a login must be either the server admin login (created when the Azure SQL Database logical server was provisioned), the Microsoft Entra admin of the server, a member of the dbmanager database role in `master`. For more information, see [CREATE DATABASE](/sql/t-sql/statements/create-database-transact-sql?view=azuresqldb-current&preserve-view=true).
+
+**To create databases via the Azure portal, PowerShell, Azure CLI, or REST API**: Azure RBAC permissions are needed, specifically the Contributor, SQL DB Contributor, or SQL Server Contributor Azure RBAC role. For more information, see [Azure RBAC built-in roles](/azure/role-based-access-control/built-in-roles).
 
 ## Create a single database
 
@@ -78,14 +84,14 @@ To create a single database in the Azure portal, this quickstart starts at the A
 1. On the **Networking** tab, for **Connectivity method**, select **Public endpoint**.
 1. For **Firewall rules**, set **Add current client IP address** to **Yes**. Leave **Allow Azure services and resources to access this server** set to **No**.
 
-   :::image type="content" source="media/single-database-create-quickstart/networking.png" alt-text="Screenshot of the Azure portal showing the networking tab for firewall rules.":::
+   :::image type="content" source="media/single-database-create-quickstart/networking.png" alt-text="Screenshot of the Azure portal showing the networking tab for firewall rules." lightbox="media/single-database-create-quickstart/networking.png":::
 
 1. Under **Connection policy**, choose the **Default** [connection policy](connectivity-architecture.md#connection-policy), and leave the **Minimum TLS version** at the default of TLS 1.2.
 1. Select **Next: Security** at the bottom of the page.
 
-   :::image type="content" source="media/single-database-create-quickstart/networking-connections.png" alt-text="Screenshot that shows the networking tab for policy and encryption.":::
+   :::image type="content" source="media/single-database-create-quickstart/networking-connections.png" alt-text="Screenshot that shows the networking tab for policy and encryption." lightbox="media/single-database-create-quickstart/networking-connections.png":::
 
-1. On the **Security** page, you can choose to start a free trial of [Microsoft Defender for SQL](../database/azure-defender-for-sql.md), as well as configure [Ledger](/sql/relational-databases/security/ledger/ledger-overview), [Managed identities](/azure/active-directory/managed-identities-azure-resources/overview) and [Transparent data encryption (TDE)](transparent-data-encryption-byok-overview.md) if you desire.  Select **Next: Additional settings** at the bottom of the page.
+1. On the **Security** page, you can choose to start a free trial of [Microsoft Defender for SQL](azure-defender-for-sql.md), as well as configure [Ledger](/sql/relational-databases/security/ledger/ledger-overview), [Managed identities](/azure/active-directory/managed-identities-azure-resources/overview) and [Azure SQL transparent data encryption with customer-managed key](transparent-data-encryption-byok-overview.md) if you desire.  Select **Next: Additional settings** at the bottom of the page.
 1. On the **Additional settings** tab, in the **Data source** section, for **Use existing data**, select **Sample**. This creates an `AdventureWorksLT` sample database so there's some tables and data to query and experiment with, as opposed to an empty blank database. You can also configure [database collation](/sql/t-sql/statements/collations) and a [maintenance window](maintenance-window.md).
 
 1. Select **Review + create** at the bottom of the page:
@@ -162,7 +168,7 @@ First, install the latest [Azure PowerShell](/powershell/azure/install-az-ps).
 
 The Azure Cloud Shell is a free interactive shell that you can use to run the steps in this article. It has common Azure tools preinstalled and configured to use with your account.
 
-To open the Cloud Shell, select **Try it** from the upper right corner of a code block. You can also launch Cloud Shell in a separate browser tab by going to [https://shell.azure.com](https://shell.azure.com).
+To open the Cloud Shell, select **Try it** from the upper right corner of a code block. You can also launch Cloud Shell in a separate browser tab by going to [https://shell.azure.com](https://portal.azure.com/#cloudshell).
 
 When Cloud Shell opens, verify that **PowerShell** is selected for your environment. Subsequent sessions use Azure CLI in a PowerShell environment. Select **Copy** to copy the blocks of code, paste it into the Cloud Shell, and press **Enter** to run it.
 
@@ -251,7 +257,7 @@ Create a single database with the [New-AzSqlDatabase](/powershell/module/az.sql/
 
 ## Query the database
 
-Once your database is created, you can use the **Query editor (preview)** in the Azure portal to connect to the database and query data. For more information, see [Azure portal Query editor for Azure SQL Database](query-editor.md).
+Once your database is created, you can use the **Query editor (preview)** in the Azure portal to connect to the database and query data. For more information, see [Azure portal query editor for Azure SQL Database](query-editor.md).
 
 1. In the portal, search for and select **SQL databases**, and then select your database from the list.
 1. On the page for your database, select **Query editor (preview)** in the left menu.

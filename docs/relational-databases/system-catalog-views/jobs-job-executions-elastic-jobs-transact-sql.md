@@ -4,7 +4,7 @@ description: "The jobs.job_executions system view contains information about Azu
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: 04/03/2024
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:

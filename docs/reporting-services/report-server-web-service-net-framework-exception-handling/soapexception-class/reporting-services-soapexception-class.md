@@ -3,11 +3,12 @@ title: "Reporting Services SoapException class"
 description: Learn how to address specific Reporting Services SoapException class errors that you know might happen.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/16/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-server-web-service
 ms.topic: reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "exceptions [Reporting Services], SoapException class"
   - "SoapException class"
@@ -27,7 +28,6 @@ helpviewer_keywords:
 |**Message**|A descriptive, localized message that describes the error. This text might appear in the application UI.|  
   
 ## Related content
- [Introduction to exception management in Reporting Services](../../../reporting-services/report-server-web-service-net-framework-exception-handling/introducing-exception-handling-in-reporting-services.md)   
- [SoapException Errors table](../../../reporting-services/report-server-web-service-net-framework-exception-handling/soapexception-class/soapexception-errors-table.md)  
-  
-  
+
+- [Introduction to exception management in Reporting Services](../../../reporting-services/report-server-web-service-net-framework-exception-handling/introducing-exception-handling-in-reporting-services.md)
+- [SoapException Errors table](../../../reporting-services/report-server-web-service-net-framework-exception-handling/soapexception-class/soapexception-errors-table.md)

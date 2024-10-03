@@ -3,11 +3,12 @@ title: "Set deployment properties (Reporting Services)"
 description: Learn how to set the deployment properties that are used by SQL Server Data Tools (SSDT) or Visual Studio to build, preview, and deploy reports.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 05/15/2019
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: tools
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "reports [Reporting Services], deploying"
   - "publishing reports [Reporting Services]"
@@ -74,7 +75,7 @@ helpviewer_keywords:
     > [!NOTE]  
     > If **Build** is selected, Report Designer builds the report project and checks for errors before previewing or publishing to a report server. If **Deploy** is selected, Report Designer publishes the reports to the report server as defined in deployment properties. If **Deploy** is not selected, Report Designer displays the report specified in the **StartItem** property in a local preview window.  
   
-## Related content 
+## Related content
 
 - [Publish data sources and reports](../../reporting-services/reports/publishing-data-sources-and-reports.md)
 - [Preview reports](../../reporting-services/reports/previewing-reports.md)

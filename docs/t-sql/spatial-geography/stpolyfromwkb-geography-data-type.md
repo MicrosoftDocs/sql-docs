@@ -27,8 +27,6 @@ Returns a **geographyPolygon** instance from an Open Geospatial Consortium (OGC)
 STPolyFromWKB ( 'WKB_polygon' , SRID )  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
  *WKB_polygon*  
  Is the WKB representation of the **geographyPolygon** instance you wish to return. *WKB_polygon* is a **varbinary(max)** expression.  

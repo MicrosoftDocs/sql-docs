@@ -32,8 +32,6 @@ dev_langs:
 OPEN { { [ GLOBAL ] cursor_name } | cursor_variable_name }  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
  GLOBAL  
  Specifies that *cursor_name* refers to a global cursor.  

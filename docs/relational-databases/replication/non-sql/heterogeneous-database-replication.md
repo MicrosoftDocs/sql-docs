@@ -3,11 +3,12 @@ title: "Heterogeneous Database Replication"
 description: "Heterogeneous Database Replication"
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "08/28/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "heterogeneous database replication, about heterogeneous database replication"
   - "replication [SQL Server], heterogeneous database replication"
@@ -49,7 +50,7 @@ helpviewer_keywords:
   
 -   Oracle for all platforms that Oracle supports.  
   
--   IBM DB2 for AS400, MVS, Unix, Linux, and Windows.  
+-   IBM Db2 for AS400, MVS, Unix, Linux, and Windows.  
   
  For more information, see [Non-SQL Server Subscribers](../../../relational-databases/replication/non-sql/non-sql-server-subscribers.md).  
   

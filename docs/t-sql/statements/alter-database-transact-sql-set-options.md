@@ -4,7 +4,7 @@ description: Learn how to set database options such as Automatic tuning, encrypt
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 05/21/2023
+ms.date: 08/06/2024
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -27,7 +27,7 @@ helpviewer_keywords:
   - "Query Store options"
 dev_langs:
   - "TSQL"
-monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azure-sqldw-latest || =azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azure-sqldw-latest || =azuresqldb-mi-current || =fabric"
 ---
 # ALTER DATABASE SET options (Transact-SQL)
 
@@ -56,6 +56,9 @@ In the following row, select whichever product name you're interested in. Doing 
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest&preserve-view=true)
+    :::column-end:::
+    :::column:::
+        [Microsoft Fabric](alter-database-transact-sql-set-options.md?view=fabric&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -1112,7 +1115,7 @@ The current setting of this option can be determined by examining the `page_veri
 
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)])
 
-Enables or disables Stretch Database for the database. For more info, see [Stretch Database](../../sql-server/stretch-database/stretch-database.md).
+Enables or disables Stretch Database for the database. For more info, see [Stretch Database](/previous-versions/sql/sql-server/stretch-database/stretch-database).
 
 > [!IMPORTANT]  
 > [!INCLUDE [stretch-database-deprecation](../../includes/stretch-database-deprecation.md)]
@@ -1121,7 +1124,7 @@ Enables or disables Stretch Database for the database. For more info, see [Stret
 
 - ON
 
-  Enables Stretch Database for the database. For more info, including additional prerequisites, see [Enable Stretch Database for a database](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md).
+  Enables Stretch Database for the database. For more info, including additional prerequisites, see [Enable Stretch Database for a database](/previous-versions/sql/sql-server/stretch-database/enable-stretch-database-for-a-database).
 
   Requires `db_owner` permission to enable Stretch Database for a table. Requires `db_owner` and `CONTROL DATABASE` permissions to enable Stretch Database for a database.
 
@@ -1146,7 +1149,7 @@ Enables or disables Stretch Database for the database. For more info, see [Stret
 
 - OFF
 
-  Disables Stretch Database for the database. For more info, see [Disable Stretch Database and bring back remote data](../../sql-server/stretch-database/disable-stretch-database-and-bring-back-remote-data.md).
+  Disables Stretch Database for the database. For more info, see [Disable Stretch Database and bring back remote data](/previous-versions/sql/sql-server/stretch-database/disable-stretch-database-and-bring-back-remote-data).
 
   You can only disable Stretch Database for a database after the database no longer contains any tables that are enabled for Stretch Database. After you disable Stretch Database, data migration stops. Also, query results no longer include results from remote tables.
 
@@ -1395,7 +1398,7 @@ You can determine the status of this option in the `is_numeric_roundabort_on` co
 
   Double quotation marks can be used to enclose delimited identifiers.
 
-  All strings delimited by double quotation marks are interpreted as object identifiers. Quoted identifiers don't have to follow the [!INCLUDE[tsql](../../includes/tsql-md.md)] rules for identifiers. They can be keywords and can include characters that aren't allowed in [!INCLUDE[tsql](../../includes/tsql-md.md)] identifiers. If a single quotation mark (') is part of the literal string, it can be represented by double quotation marks (").
+  All strings delimited by double quotation marks are interpreted as object identifiers. Quoted identifiers don't have to follow the [!INCLUDE[tsql](../../includes/tsql-md.md)] rules for identifiers. They can be keywords and can include characters that aren't allowed in [!INCLUDE[tsql](../../includes/tsql-md.md)] identifiers. If a double quotation mark (`"`) is part of the identifier, it can be represented by two double quotation marks (`""`).
 
 - OFF
 
@@ -1746,6 +1749,9 @@ SET QUERY_STORE = ON
     :::column:::
         [Azure Synapse<br />Analytics](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest&preserve-view=true)
     :::column-end:::
+    :::column:::
+        [Microsoft Fabric](alter-database-transact-sql-set-options.md?view=fabric&preserve-view=true)
+    :::column-end:::    
 :::row-end:::
 
 &nbsp;
@@ -2520,13 +2526,13 @@ You can determine the status for this option in the `is_numeric_roundabort_on` c
 
   Double quotation marks can be used to enclose delimited identifiers.
 
-All strings delimited by double quotation marks are interpreted as object identifiers. Quoted identifiers don't have to follow the [!INCLUDE[tsql](../../includes/tsql-md.md)] rules for identifiers. They can be keywords and can include characters not allowed in [!INCLUDE[tsql](../../includes/tsql-md.md)] identifiers. If a single quotation mark (') is part of the literal string, it can be represented by double quotation marks (").
+  All strings delimited by double quotation marks are interpreted as object identifiers. Quoted identifiers don't have to follow the [!INCLUDE[tsql](../../includes/tsql-md.md)] rules for identifiers. They can be keywords and can include characters that aren't allowed in [!INCLUDE[tsql](../../includes/tsql-md.md)] identifiers. If a double quotation mark (`"`) is part of the identifier, it can be represented by two double quotation marks (`""`).
 
 - OFF
 
   Identifiers can't be in quotation marks and must follow all [!INCLUDE[tsql](../../includes/tsql-md.md)] rules for identifiers. Literals can be delimited by either single or double quotation marks.
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] also allows for identifiers to be delimited by square brackets ([ ]). Bracketed identifiers can always be used, whatever the QUOTED_IDENTIFIER setting is. For more information, see [Database Identifiers](../../relational-databases/databases/database-identifiers.md).
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] also allows for identifiers to be delimited by square brackets (`[` and `]`). Bracketed identifiers can always be used, whatever the QUOTED_IDENTIFIER setting is. For more information, see [Database Identifiers](../../relational-databases/databases/database-identifiers.md).
 
 When a table is created, the QUOTED IDENTIFIER option is always stored as ON in the metadata of the table. The option is stored even if the option is set to OFF when the table is created.
 
@@ -2822,6 +2828,9 @@ SET QUERY_STORE = ON
     :::column:::
         [Azure Synapse<br />Analytics](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest&preserve-view=true)
     :::column-end:::
+    :::column:::
+        [Microsoft Fabric](alter-database-transact-sql-set-options.md?view=fabric&preserve-view=true)
+    :::column-end:::    
 :::row-end:::
 
 &nbsp;
@@ -3484,15 +3493,15 @@ You can determine the status of this option in the `is_numeric_roundabort_on` co
 
   Double quotation marks can be used to enclose delimited identifiers.
 
-  All strings delimited by double quotation marks are interpreted as object identifiers. Quoted identifiers don't have to follow the [!INCLUDE[tsql](../../includes/tsql-md.md)] rules for identifiers. They can be keywords and can include characters not allowed in [!INCLUDE[tsql](../../includes/tsql-md.md)] identifiers. If a single quotation mark (') is part of the literal string, it can be represented by double quotation marks (").
+  All strings delimited by double quotation marks are interpreted as object identifiers. Quoted identifiers don't have to follow the [!INCLUDE[tsql](../../includes/tsql-md.md)] rules for identifiers. They can be keywords and can include characters that aren't allowed in [!INCLUDE[tsql](../../includes/tsql-md.md)] identifiers. If a double quotation mark (`"`) is part of the identifier, it can be represented by two double quotation marks (`""`).
 
 - OFF
 
   Identifiers can't be in quotation marks and must follow all [!INCLUDE[tsql](../../includes/tsql-md.md)] rules for identifiers. Literals can be delimited by either single or double quotation marks.
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] also allows for identifiers to be delimited by square brackets ([ ]). Bracketed identifiers can always be used, whatever the QUOTED_IDENTIFIER setting is. For more information, see [Database Identifiers](../../relational-databases/databases/database-identifiers.md).
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] also allows for identifiers to be delimited by square brackets (`[` and `]`). Bracketed identifiers can always be used, whatever the QUOTED_IDENTIFIER setting is. For more information, see [Database Identifiers](../../relational-databases/databases/database-identifiers.md).
 
-  When a table is created, the QUOTED IDENTIFIER option is always stored as ON in the metadata of the table. The option is stored even if the option is set to OFF when the table is created.
+When a table is created, the QUOTED IDENTIFIER option is always stored as ON in the metadata of the table. The option is stored even if the option is set to OFF when the table is created.
 
 Connection-level settings that are set by using the SET statement override the default database setting for QUOTED_IDENTIFIER. ODBC and OLE DB clients issue a connection-level SET statement setting QUOTED_IDENTIFIER to ON, by default. The clients run the statement when you connect to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see [SET QUOTED_IDENTIFIER](../../t-sql/statements/set-quoted-identifier-transact-sql.md).
 
@@ -3706,6 +3715,9 @@ SET QUERY_STORE = ON
     :::column-end:::
     :::column:::
         ***\* Azure Synapse<br />Analytics \**** &nbsp;
+    :::column-end:::
+    :::column:::
+        [Microsoft Fabric](alter-database-transact-sql-set-options.md?view=fabric&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -3946,5 +3958,92 @@ SET READ_COMMITTED_SNAPSHOT ON;
 - [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md)
 - [Best practices for Azure Synapse Analytics](/azure/sql-data-warehouse/sql-data-warehouse-best-practices#maintain-statistics)
 - [Designing tables in Azure Synapse Analytics](/azure/sql-data-warehouse/sql-data-warehouse-tables-overview#statistics)
+
+::: moniker-end
+::: moniker range="=fabric"
+
+:::row:::
+    :::column:::
+        [SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-ver15&preserve-view=true)
+    :::column-end:::
+    :::column:::
+        [SQL Database](alter-database-transact-sql-set-options.md?view=azuresqldb-current&preserve-view=true)
+    :::column-end:::
+    :::column:::
+        [SQL Managed Instance](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current&preserve-view=true)
+    :::column-end:::
+    :::column:::
+        [Azure Synapse<br />Analytics](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest&preserve-view=true)
+    :::column-end:::
+    :::column:::
+        ***Microsoft Fabric***
+    :::column-end:::
+:::row-end:::
+
+&nbsp;
+
+## Microsoft Fabric
+
+Use `ALTER DATABASE ... SET` to manage a [!INCLUDE [fabric](../../includes/fabric.md)] [!INCLUDE [fabric-dw](../../includes/fabric-dw.md)].
+
+## Syntax
+
+```syntaxsql
+-- Microsoft Fabric
+
+ALTER DATABASE { warehouse_name | CURRENT }
+SET
+{
+    <option_spec> [ ,...n ] 
+}
+
+<option_spec> ::=
+{
+    <data_lake_log_publishing>
+  | <vorder>
+}
+;
+
+<data_lake_log_publishing> ::=
+{
+    DATA_LAKE_LOG_PUBLISHING { PAUSED | AUTO }
+}
+
+<vorder> ::=
+{
+    VORDER = OFF
+}
+
+```
+
+## Remarks
+
+Currently, [pausing Delta Lake log publishing](/fabric/data-warehouse/query-delta-lake-logs#pausing-delta-lake-log-publishing) and [disabling V-Order behavior](/fabric/data-warehouse/disable-v-order) in a warehouse are the only uses for `ALTER DATABASE ... SET` in [!INCLUDE [fabric](../../includes/fabric.md)].
+
+## Permissions
+
+The user needs to be a member of the Admin, Member, or Contributor roles in the Fabric workspace.
+
+## Examples
+
+### A. Pausing the publishing of Delta Lake Logs
+
+The following T-SQL command pauses Delta Lake Log publishing in the current warehouse context.
+
+```sql
+ALTER DATABASE CURRENT SET DATA_LAKE_LOG_PUBLISHING = PAUSED;
+```
+
+To check the current status of Delta Lake Log publishing on all warehouses, of your workspace, use the following T-SQL code to query [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md?view=fabric&preserve-view=true) in a new query window:
+
+```sql
+SELECT [name], [DATA_LAKE_LOG_PUBLISHING_DESC] FROM sys.databases;
+```
+
+## Related content
+
+- [What is data warehousing in Microsoft Fabric?](/fabric/data-warehouse/data-warehousing)
+- [Query Delta Lake logs in Microsoft Fabric](/fabric/data-warehouse/query-delta-lake-logs)
+- [Understand V-Order for Microsoft Fabric Warehouse](/fabric/data-warehouse/v-order)
 
 ::: moniker-end

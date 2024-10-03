@@ -3,11 +3,12 @@ title: "Create and Apply the Initial Snapshot"
 description: Learn how to create and apply the initial snapshot in SQL Server by using SQL Server Management Studio, Transact-SQL, or Replication Management Objects.
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "11/20/2018"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: how-to
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "snapshots [SQL Server replication], creating"
   - "snapshot replication [SQL Server], initial snapshots"
@@ -253,26 +254,27 @@ If you have multiple publications, that publish data into one database at the su
 You may see a wait resource similar to the following when reviewing SQL activity:
 
 *APP: 18:16384:[snapshot_delivery_in_progress_Tr]:(9bcdaf92)  
-APP: 5:16384:[snapshot_delivery_in_progress_Er]:(3c3b7db9*)  
+APP: 5:16384:[snapshot_delivery_in_progress_Er]:(3c3b7db9*)  
 
-Querying for locking behavior may show resources similar to the following:
+Querying for locking behavior may show resources similar to the following:
 
 *APP 16384:[appname]:(fbe42d68)  XAPP 16384:[snapshot_del]:(9bcdaf92)  X*
 
 
-This behavior is by design.  It occurs because an application lock is used to prevent multiple replication agents from concurrently applying snapshots of different publications to the same subscriber database.  Because the application lock contains the name of the subscriber database, any publications that publish into the same subscriber database will be impacted.  The result is that only one snapshot can be inserted into the subscriber database at a given time.
+This behavior is by design.  It occurs because an application lock is used to prevent multiple replication agents from concurrently applying snapshots of different publications to the same subscriber database.  Because the application lock contains the name of the subscriber database, any publications that publish into the same subscriber database will be impacted.  The result is that only one snapshot can be inserted into the subscriber database at a given time.
 
 Exclusive locks are used in this situation to help avoid the possibility of replication agents becoming deadlocked with each other. 
 
 To work around this issue, specify a different subscriber database for each publication.
 
-## See Also  
- [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
- [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
- [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)   
- [Specify Synchronization Schedules](../../relational-databases/replication/specify-synchronization-schedules.md)   
- [Initialize a Subscription with a Snapshot](../../relational-databases/replication/initialize-a-subscription-with-a-snapshot.md)   
- [Replication Management Objects Concepts](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)   
- [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md)   
- [Replication System Stored Procedures Concepts](../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
- [Use sqlcmd with Scripting Variables](../../tools/sqlcmd/sqlcmd-use-scripting-variables.md)
+## Related content
+
+- [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)
+- [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)
+- [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)
+- [Specify Synchronization Schedules](../../relational-databases/replication/specify-synchronization-schedules.md)
+- [Initialize a Subscription with a Snapshot](../../relational-databases/replication/initialize-a-subscription-with-a-snapshot.md)
+- [Replication Management Objects Concepts](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)
+- [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md)
+- [Replication System Stored Procedures Concepts](../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)
+- [Use sqlcmd with Scripting Variables](../../tools/sqlcmd/sqlcmd-use-scripting-variables.md)

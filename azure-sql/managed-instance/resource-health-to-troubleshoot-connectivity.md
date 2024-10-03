@@ -5,7 +5,7 @@ author: dimitri-furman
 ms.author: dfurman
 ms.reviewer: wiassaf, mathoma
 ms.date: 08/28/2023
-ms.service: sql-managed-instance
+ms.service: azure-sql-managed-instance
 ms.subservice: performance
 ms.topic: conceptual
 ms.custom: sqldbrb=2

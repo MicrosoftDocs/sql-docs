@@ -28,8 +28,6 @@ This function returns the properties of an asymmetric key.
 ASYMKEYPROPERTY (Key_ID , 'algorithm_desc' | 'string_sid' | 'sid')  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 *Key_ID*  
 The Key_ID of an asymmetric key in the database. If you only know the key name, use ASYMKEY_ID to find the Key_ID. *Key_ID* has data type **int**.

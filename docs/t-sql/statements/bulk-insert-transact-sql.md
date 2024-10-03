@@ -41,37 +41,43 @@ BULK INSERT
       FROM 'data_file'
      [ WITH
     (
-   [ [ , ] BATCHSIZE = batch_size ]
-   [ [ , ] CHECK_CONSTRAINTS ]
-   [ [ , ] CODEPAGE = { 'ACP' | 'OEM' | 'RAW' | 'code_page' } ]
-   [ [ , ] DATAFILETYPE =
-      { 'char' | 'native' | 'widechar' | 'widenative' } ]
    [ [ , ] DATA_SOURCE = 'data_source_name' ]
-   [ [ , ] ERRORFILE = 'file_name' ]
-   [ [ , ] ERRORFILE_DATA_SOURCE = 'errorfile_data_source_name' ]
-   [ [ , ] FIRSTROW = first_row ]
-   [ [ , ] FIRE_TRIGGERS ]
-   [ [ , ] FORMATFILE_DATA_SOURCE = 'data_source_name' ]
-   [ [ , ] KEEPIDENTITY ]
-   [ [ , ] KEEPNULLS ]
-   [ [ , ] KILOBYTES_PER_BATCH = kilobytes_per_batch ]
-   [ [ , ] LASTROW = last_row ]
-   [ [ , ] MAXERRORS = max_errors ]
-   [ [ , ] ORDER ( { column [ ASC | DESC ] } [ ,...n ] ) ]
-   [ [ , ] ROWS_PER_BATCH = rows_per_batch ]
-   [ [ , ] ROWTERMINATOR = 'row_terminator' ]
-   [ [ , ] TABLOCK ]
 
-   -- input file format options
+   -- text formatting options
+   [ [ , ] CODEPAGE = { 'RAW' | 'code_page' | 'ACP' | 'OEM' } ]
+   [ [ , ] DATAFILETYPE = { 'char' | 'native' | 'widechar' | 'widenative' } ]
+   [ [ , ] ROWTERMINATOR = 'row_terminator' ]
+   [ [ , ] FIELDTERMINATOR = 'field_terminator' ]
    [ [ , ] FORMAT = 'CSV' ]
    [ [ , ] FIELDQUOTE = 'quote_characters']
+
+   [ [ , ] FIRSTROW = first_row ]
+   [ [ , ] LASTROW = last_row ]
+
+   -- input file format options
    [ [ , ] FORMATFILE = 'format_file_path' ]
-   [ [ , ] FIELDTERMINATOR = 'field_terminator' ]
-   [ [ , ] ROWTERMINATOR = 'row_terminator' ]
+   [ [ , ] FORMATFILE_DATA_SOURCE = 'data_source_name' ]
+
+   -- error handling options
+   [ [ , ] MAXERRORS = max_errors ]
+   [ [ , ] ERRORFILE = 'file_name' ]
+   [ [ , ] ERRORFILE_DATA_SOURCE = 'errorfile_data_source_name' ]
+
+   -- database options
+   [ [ , ] KEEPIDENTITY ]
+   [ [ , ] KEEPNULLS ]
+   [ [ , ] FIRE_TRIGGERS ]
+   [ [ , ] CHECK_CONSTRAINTS ]
+   [ [ , ] TABLOCK ]
+
+   -- source options
+   [ [ , ] ORDER ( { column [ ASC | DESC ] } [ ,...n ] ) ]
+   [ [ , ] ROWS_PER_BATCH = rows_per_batch ]
+   [ [ , ] KILOBYTES_PER_BATCH = kilobytes_per_batch 
+   [ [ , ] BATCHSIZE = batch_size ]
+
     )]
 ```
-
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## Arguments
 

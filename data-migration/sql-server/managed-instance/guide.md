@@ -5,10 +5,10 @@ author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: mathoma, danil
 ms.date: 06/26/2024
-ms.service: sql-managed-instance
+ms.service: azure-sql-managed-instance
 ms.subservice: migration-guide
 ms.topic: how-to
-ms.custom:
+ms.collection:
   - sql-migration-content
 ---
 # Migration guide: SQL Server to Azure SQL Managed Instance
@@ -17,7 +17,7 @@ ms.custom:
 
 In this guide, you learn [how to migrate](https://azure.microsoft.com/migration/migration-journey) your user databases from SQL Server to Azure SQL Managed Instance.
 
-Review the [Prerequisites](../pre-migration.md#prerequisites), and complete the [Pre-migration](../pre-migration.md) steps, before continuing.
+Complete [pre-migration](../pre-migration.md) steps, before continuing.
 
 ## Migrate
 
@@ -25,7 +25,7 @@ After you complete the steps for the [pre-migration stage](../pre-migration.md
 
 Migrate your data using your chosen [migration method](overview.md#compare-migration-options).
 
-This section provides general migration steps for the following recommended migration options:
+*This section provides general migration steps for the following recommended migration options*:
 
 - Managed instance link
 - Log Replay Service (LRS)

@@ -3,11 +3,12 @@ title: "Subscribe to Publications"
 description: Learn about the types of subscriptions in SQL Server replication, how to choose the type you need, and how to create a subscription.
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/03/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: how-to
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 f1_keywords:
   - "sql13.rep.conc.subtopubs.f1"
 helpviewer_keywords:
@@ -39,7 +40,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016"
  All replication types allow push and pull subscriptions. Merge replication uses two additional terms to distinguish subscriptions: client subscriptions and server subscriptions. Both client and server subscription types can be used with push and pull subscriptions. Client subscriptions are appropriate for most Subscribers, whereas server subscriptions are typically used for Subscribers that republish data to other Subscribers. Subscription choice also affects conflict resolution.  
   
 ## Non-SQL Server Subscribers  
- Oracle and IBM DB2 can subscribe to snapshot and transactional publications using push subscriptions. For more information, see [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md).  
+ Oracle and IBM Db2 can subscribe to snapshot and transactional publications using push subscriptions. For more information, see [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md).  
   
 ## Creating Subscriptions  
  To create a subscription, you supply the following information:  
@@ -85,8 +86,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016"
   
  [Delete a Pull Subscription](../../relational-databases/replication/delete-a-pull-subscription.md)  
   
-## See Also  
- [Secure the Subscriber](../../relational-databases/replication/security/secure-the-subscriber.md)   
- [Subscription Expiration and Deactivation](../../relational-databases/replication/subscription-expiration-and-deactivation.md)  
-  
-  
+## Related content
+
+- [Secure the Subscriber](../../relational-databases/replication/security/secure-the-subscriber.md)
+- [Subscription Expiration and Deactivation](../../relational-databases/replication/subscription-expiration-and-deactivation.md)

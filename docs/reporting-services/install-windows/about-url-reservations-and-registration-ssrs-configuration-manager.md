@@ -3,11 +3,12 @@ title: "URL reservations & registration (Report Server Configuration Manager)"
 description: "URLs for Reporting Services applications are defined as URL reservations in HTTP.SYS."
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 01/16/2020
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-server
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "URL reservations"
   - "URL registration"
@@ -99,6 +100,5 @@ helpviewer_keywords:
   
 ## Related content
 
-- [Configure a URL &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
-- [URL Reservation Syntax &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/url-reservation-syntax-ssrs-configuration-manager.md)  
-
+- [Configure a URL &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)
+- [URL Reservation Syntax &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/url-reservation-syntax-ssrs-configuration-manager.md)

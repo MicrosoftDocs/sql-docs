@@ -6,7 +6,7 @@ author: nofield
 ms.author: nofield
 ms.reviewer: wiassaf, vanto, mathoma, randolphwest
 ms.date: 12/21/2023
-ms.service: sql-db-mi
+ms.service: azure-sql
 ms.subservice: security
 ms.topic: how-to
 ms.custom:
@@ -103,7 +103,7 @@ To set up a Microsoft Entra admin for a logical server or a managed instance usi
 1. In the **Microsoft Entra ID** pane, type the guest user account name.
 1. Select this new user, and then save the operation.
 
-For more information, see [Setting Microsoft Entra admin](authentication-aad-configure.md#azure-ad-admin-with-a-server-in-sql-database).
+For more information, see [Setting Microsoft Entra admin](authentication-aad-configure.md#provision-azure-ad-admin-sql-database).
 
 ### Azure PowerShell (SQL Database and Azure Synapse)
 

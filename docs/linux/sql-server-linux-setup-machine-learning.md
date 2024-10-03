@@ -2,8 +2,8 @@
 title: Install on Linux
 titleSuffix: SQL Server 2019 Machine Learning Services
 description: "Learn how to install SQL Server 2019 Machine Learning Services on Linux: Red Hat, Ubuntu, and SUSE."
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: VanMSFT
+ms.author: vanto
 ms.date: 01/27/2023
 ms.service: sql
 ms.subservice: machine-learning-services
@@ -41,7 +41,7 @@ You can install Machine Learning Services on Red Hat Enterprise Linux (RHEL), SU
 
 * You should have a tool for running T-SQL commands. 
 
-  * You can use [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md), a free database tool that runs on Linux, Windows, and macOS.
+  * You can use [Azure Data Studio](/azure-data-studio/download-azure-data-studio), a free database tool that runs on Linux, Windows, and macOS.
 
 ## Package list
 

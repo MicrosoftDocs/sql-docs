@@ -3,11 +3,12 @@ title: "Add a border to a paginated report"
 description: Define areas of a paginated report by adding borders to the headers, footers, and report body in Report Builder.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/01/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 # Add a border to a paginated report (Report Builder)
 
@@ -28,7 +29,6 @@ You can add a border to a paginated report by adding borders to the headers, foo
     
 1.  Right-click in the footer outside any items in the footer, and select **Footer Properties**. On the **Border** tab, add a left, bottom, and right border with the style you want.    
     
-## Related content   
- [Rectangles and lines &#40;Report Builder&#41;](../../reporting-services/report-design/rectangles-and-lines-report-builder-and-ssrs.md)    
-    
-  
+## Related content
+
+- [Rectangles and lines &#40;Report Builder&#41;](../../reporting-services/report-design/rectangles-and-lines-report-builder-and-ssrs.md)

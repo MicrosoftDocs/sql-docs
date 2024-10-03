@@ -34,8 +34,6 @@ A mathematical function that returns the absolute (positive) value of the specif
 ABS ( numeric_expression )  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 
 *numeric_expression*  

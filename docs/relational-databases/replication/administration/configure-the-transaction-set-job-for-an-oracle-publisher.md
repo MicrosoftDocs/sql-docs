@@ -3,11 +3,12 @@ title: "Configure transaction set job (Oracle Publisher)"
 description: Learn how to configure the transaction set job for an Oracle Publisher publishing to a SQL Server Subscriber.
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/07/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: how-to
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "sp_publisherproperty"
   - "Oracle publishing [SQL Server replication], configuring"
@@ -49,8 +50,7 @@ dev_langs:
   
  :::code language="sql" source="../codesnippet/tsql/configure-the-transactio_1.sql":::
   
-## See Also  
- [Performance Tuning for Oracle Publishers](../../../relational-databases/replication/non-sql/performance-tuning-for-oracle-publishers.md)   
- [Replication System Stored Procedures Concepts](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)  
-  
-  
+## Related content
+
+- [Performance Tuning for Oracle Publishers](../../../relational-databases/replication/non-sql/performance-tuning-for-oracle-publishers.md)
+- [Replication System Stored Procedures Concepts](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)

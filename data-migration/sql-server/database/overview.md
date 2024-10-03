@@ -4,12 +4,11 @@ description: Learn about the tools and options available to migrate your SQL Ser
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: mathoma
-ms.date: 06/26/2024
-ms.service: sql-database
+ms.date: 09/23/2024
+ms.service: azure-sql-database
 ms.subservice: migration-guide
 ms.topic: how-to
-ms.custom:
-  - sql-migration-content
+ms.collection: sql-migration-content
 ---
 # Migration overview: SQL Server to Azure SQL Database
 
@@ -103,7 +102,6 @@ The following table lists alternative migration tools:
 | [Import Export Service/BACPAC](/azure/azure-sql/database/database-import) | [BACPAC](/sql/relational-databases/data-tier-applications/data-tier-applications#bacpac) is a Windows file with a .bacpac extension that encapsulates a database's schema and data. You can use BACPAC to both export data from a SQL Server source and import the data into Azure SQL Database. A BACPAC file can be imported to a new SQL database through the Azure portal.<br /><br />For scale and performance with large databases sizes or a large number of databases, consider using the [SqlPackage](/azure/azure-sql/database/database-import#use-sqlpackage) command-line tool to export and import databases. |
 | [Bulk copy](/sql/relational-databases/import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server) | The [bulk copy program (bcp) tool](/sql/tools/bcp-utility) copies data from an instance of SQL Server into a data file. Use the tool to export the data from your source and import the data file into the target SQL database.<br /><br />For high-speed bulk copy operations to move data to Azure SQL Database, you can use the [Smart Bulk Copy tool](/samples/azure-samples/smartbulkcopy/smart-bulk-copy/) to maximize transfer speed by taking advantage of parallel copy tasks. |
 | [Azure Data Factory](/azure/data-factory/connector-azure-sql-database) | The [Copy activity](/azure/data-factory/copy-activity-overview) in Azure Data Factory migrates data from source SQL Server databases to Azure SQL Database by using built-in connectors and an [integration runtime](/azure/data-factory/concepts-integration-runtime).<br /><br />Data Factory supports a wide range of [connectors](/azure/data-factory/connector-overview) to move data from SQL Server sources to Azure SQL Database. |
-| [SQL Data Sync](/azure/azure-sql/database/sql-data-sync-data-sql-server-sql-database) | SQL Data Sync is a service built on Azure SQL Database that lets you synchronize selected data bidirectionally across multiple databases, both on-premises and in the cloud.<br />Data Sync is useful in cases where data needs to be kept updated across several databases in Azure SQL Database or SQL Server. |
 
 ## Compare migration options
 
@@ -124,7 +122,6 @@ The following table compares the alternative migration options:
 | [Import Export Service/BACPAC](/azure/azure-sql/database/database-import) | - Migrate individual line-of-business application databases.<br />- Suited for smaller databases.<br />- Doesn't require a separate migration service or tool.<br /><br />Supported sources:<br />- SQL Server (2005 to 2019) on-premises or Azure VM<br />- AWS EC2<br />- AWS RDS<br />- GCP Compute SQL Server VM | - Requires downtime because data needs to be exported at the source and imported at the destination.<br />- The file formats and data types used in the export or import need to be consistent with table schemas to avoid truncation or data-type mismatch errors.<br />- Time taken to export a database with a large number of objects can be significantly higher. |
 | [Bulk copy](/sql/relational-databases/import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server) | - Do full or partial data migrations.<br />- Can accommodate downtime.<br /><br />Supported sources:<br />- SQL Server (2005 to 2019) on-premises or Azure VM<br />- AWS EC2<br />- AWS RDS<br />- GCP Compute SQL Server VM | - Requires downtime for exporting data from the source and importing into the target.<br />- The file formats and data types used in the export or import need to be consistent with table schemas. |
 | [Azure Data Factory](/azure/data-factory/connector-azure-sql-database) | - Migrate and/or transform data from source SQL Server databases.<br />- Merging data from multiple sources of data to Azure SQL Database is typically for business intelligence (BI) workloads. | - Requires creating data movement pipelines in Data Factory to move data from source to destination.<br />- [Cost](https://azure.microsoft.com/pricing/details/data-factory/data-pipeline/) is an important consideration and is based on factors like pipeline triggers, activity runs, and duration of data movement. |
-| [SQL Data Sync](/azure/azure-sql/database/sql-data-sync-data-sql-server-sql-database) | - Synchronize data between source and target databases.<br />- Suitable to run continuous sync between Azure SQL Database and on-premises SQL Server in a bidirectional flow. | - Azure SQL Database must be the hub database for sync with an on-premises SQL Server database as a member database.<br />- Compared to transactional replication, SQL Data Sync supports bidirectional data sync between on-premises and Azure SQL Database.<br />- Can have a higher performance impact, depending on the workload. |
 
 ## Feature interoperability
 

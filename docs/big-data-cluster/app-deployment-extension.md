@@ -80,8 +80,6 @@ azdata bdc endpoint list
 
 Another way to retrieve this information is to navigate to the server in *Azure Data Studio* and right-click **Manage**. The endpoints for services are listed.
 
-![ADS End Point](media/vs-extension/ads_end_point.png)
-
 Find the endpoint you want to use, then connect to the cluster.
 
 ![New Connection](media/vs-extension/connect_to_cluster.png)

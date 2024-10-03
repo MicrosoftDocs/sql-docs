@@ -3,11 +3,12 @@ title: "Create and manage role assignments"
 description: "Create and manage role assignments"
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 05/07/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: security
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "removing role assignments"
   - "roles [Reporting Services], assignments"
@@ -65,8 +66,8 @@ You can delete role assignments by selecting the checkbox by each assignment you
 
 ## Related content
 
-[Grant user access to a report server](../../reporting-services/security/grant-user-access-to-a-report-server.md)  
-[Role assignments](../../reporting-services/security/role-assignments.md)  
-[Role definitions](../../reporting-services/security/role-definitions.md)  
-[Predefined roles](../../reporting-services/security/role-definitions-predefined-roles.md)  
-[Grant permissions on a native mode report server](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)
+- [Grant user access to a report server](../../reporting-services/security/grant-user-access-to-a-report-server.md)
+- [Role assignments](../../reporting-services/security/role-assignments.md)
+- [Role definitions](../../reporting-services/security/role-definitions.md)
+- [Predefined roles](../../reporting-services/security/role-definitions-predefined-roles.md)
+- [Grant permissions on a native mode report server](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)

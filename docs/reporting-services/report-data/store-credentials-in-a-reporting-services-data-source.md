@@ -3,11 +3,12 @@ title: "Store Credentials in a Reporting Services Data Source"
 description: Learn how to configure stored credentials for both Native mode and SharePoint mode report servers.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 05/24/2018
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-data
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 
 # Store Credentials in a Reporting Services Data Source
@@ -145,5 +146,6 @@ You can configure stored credentials that a [!INCLUDE[ssRSnoversion](../../inclu
   
      ![Arrow icon used with Back to Top link](/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Security policy requirements for stored credentials](#bkmk_top)  
   
-## See Also  
- [Specify Credential and Connection Information for Report Data Sources](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
+## Related content
+
+- [Specify Credential and Connection Information for Report Data Sources](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)

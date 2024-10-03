@@ -3,12 +3,13 @@ title: "Tutorial: Add grouping and totals (Reporting Services)"
 description: Learn how to add grouping and totals to your Reporting Services report by using SQL Server Data Tools (SSDT) to organize and summarize your data.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 06/19/2024
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: reporting-services
 ms.topic: tutorial
-ms.custom: updatefrequency5
-#customer intent: As a SQL Server user, I want to add grouping and totals to my report by using SQL Server Data Tools (SSDT) so that I can organize and summarize my data effectively.
+ms.custom:
+  - updatefrequency5
+# customer intent: As a SQL Server user, I want to add grouping and totals to my report by using SQL Server Data Tools (SSDT) so that I can organize and summarize my data effectively.
 ---
 
 # Tutorial: Add grouping and totals (Reporting Services)

@@ -6,7 +6,7 @@ author: SudhirRaparla
 ms.author: nvraparl
 ms.reviewer: wiassaf, mathoma, danil
 ms.date: 07/20/2022
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.subservice: backup-restore
 ms.topic: conceptual
 ms.custom:

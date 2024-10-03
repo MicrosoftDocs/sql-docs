@@ -34,8 +34,6 @@ In cases where an index is not available, or is not used, the method will return
 .Filter ( other_geometry )  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
  *other_geometry*  
  Is another **geometry** instance to compare against the instance on which Filter() is invoked.  

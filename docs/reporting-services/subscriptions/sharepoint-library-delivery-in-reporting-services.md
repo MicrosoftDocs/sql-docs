@@ -3,11 +3,12 @@ title: "SharePoint library delivery in Reporting Services"
 description: Learn how to use the SharePoint library delivery extension in Reporting Services by using a subscription from an application page on a SharePoint site.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/14/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: subscriptions
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "SharePoint integration [Reporting Services], report delivery"
   - "delivering reports [Reporting Services]"
@@ -76,9 +77,8 @@ helpviewer_keywords:
  Autocopy  
  If you use the Autocopy feature to automatically copy the latest version of a file to multiple locations, the file is copied if **Overwrite** is enabled. If you used **Autoincrement** or **None**, the delivery fails and the **rsDeliveryError** error occurs.  
   
-## Related content  
- [Create and manage subscriptions for SharePoint mode report servers](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)   
- [Subscriptions and delivery &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
- [Specify credential and connection information for report data sources](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
-  
-  
+## Related content
+
+- [Create and manage subscriptions for SharePoint mode report servers](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)
+- [Subscriptions and delivery &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)
+- [Specify credential and connection information for report data sources](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)

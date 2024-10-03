@@ -3,11 +3,12 @@ title: "Troubleshoot publishing or viewing a report on a native mode report serv
 description: In this article, you diagnose and fix issues that occur when you publish or upload a report to a report server configured in native mode.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 02/28/2016
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: troubleshooting
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 # Troubleshoot publishing or viewing a report on a native mode report server
   
@@ -44,13 +45,11 @@ In some circumstances, when you use Report Manager to view published reports tha
   
 Verify that you have permission to access the folders that contain the cached files.   
     
-## Related content 
-[Browser support for Reporting Services](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)  
-[Errors and events (Reporting Services)](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
-[Troubleshoot data retrieval issues with Reporting Services reports](../../reporting-services/troubleshooting/troubleshoot-data-retrieval-issues-with-reporting-services-reports.md)  
-[Troubleshoot Reporting Services subscriptions and delivery](../../reporting-services/troubleshooting/troubleshoot-reporting-services-subscriptions-and-delivery.md)  
-  
-  
+## Related content
 
-[!INCLUDE[feedback-qa-stackoverflow-md](../../includes/feedback-qa-stackoverflow-md.md)]
+- [Browser support for Reporting Services](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)
+- [Errors and events (Reporting Services)](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)
+- [Troubleshoot data retrieval issues with Reporting Services reports](../../reporting-services/troubleshooting/troubleshoot-data-retrieval-issues-with-reporting-services-reports.md)
+- [Troubleshoot Reporting Services subscriptions and delivery](../../reporting-services/troubleshooting/troubleshoot-reporting-services-subscriptions-and-delivery.md)
 
+[!INCLUDE [feedback-qa-stackoverflow-md](../../includes/feedback-qa-stackoverflow-md.md)]

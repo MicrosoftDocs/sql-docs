@@ -37,8 +37,6 @@ dev_langs:
 SET OFFSETS keyword_list { ON | OFF }  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
  *keyword_list*  
  Is a comma-separated list of [!INCLUDE[tsql](../../includes/tsql-md.md)] constructs including SELECT, FROM, ORDER, TABLE, PROCEDURE, STATEMENT, PARAM, and EXECUTE.  

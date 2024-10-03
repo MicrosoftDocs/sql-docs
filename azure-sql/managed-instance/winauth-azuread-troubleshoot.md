@@ -6,7 +6,7 @@ author: sravanisaluru
 ms.author: srsaluru
 ms.reviewer: mathoma, bonova, urmilano, wiassaf, randolphwest
 ms.date: 09/27/2023
-ms.service: sql-managed-instance
+ms.service: azure-sql-managed-instance
 ms.subservice: deployment-configuration
 ms.topic: how-to
 ---
@@ -38,8 +38,8 @@ The following are some well-known error codes:
 
 - **0x51f** - This error is likely related to a conflict with the Fiddler tool. To mitigate the issue, follow these steps:
 
-  1. Run `netsh winhttp reset autoproxy`
-  2. Run `netsh winhttp reset proxy`
+  1. Run `netsh winhttp reset autoproxy`
+  2. Run `netsh winhttp reset proxy`
   3. In the Windows registry, find `Computer\HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\iphlpsvc\Parameters\ProxyMgr` and delete any subentry that has a configuration with a port `:8888`
   4. Restart the machine and try again using Windows Authentication
 

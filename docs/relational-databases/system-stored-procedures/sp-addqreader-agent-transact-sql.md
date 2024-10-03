@@ -4,7 +4,7 @@ description: sp_addqreader_agent adds a Queue Reader agent for a given Distribut
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 01/23/2024
+ms.date: 08/21/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: "reference"
@@ -39,7 +39,7 @@ sp_addqreader_agent
 
 #### [ @job_login = ] N'*job_login*'
 
-The login for the [!INCLUDE [msCoName](../../includes/msconame-md.md)] Windows account under which the agent runs. *@job_login* is **nvarchar(257)**, with a default of `NULL`. This Windows account is always used for agent connections to the Distributor.
+The login for the Windows account under which the agent runs. *@job_login* is **nvarchar(257)**, with a default of `NULL`. This Windows account is always used for agent connections to the Distributor.
 
 #### [ @job_password = ] N'*job_password*'
 

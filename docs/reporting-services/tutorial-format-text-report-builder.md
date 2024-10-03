@@ -3,11 +3,12 @@ title: "Tutorial: Format text (Report Builder)"
 description: Learn how to format text in various ways in a Reporting Services paginated report. For example, you can experiment with different formats.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 05/30/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: reporting-services
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 
 # Tutorial: Format text (Report Builder)
@@ -348,14 +349,14 @@ The report is saved to the report server. The name of the report server that you
   
 4.  Select **Save**.  
 
-## Next step
-
-There are many ways to format text in Report Builder. [Tutorial: Create a free form report (Report Builder)](../reporting-services/tutorial-creating-a-free-form-report-report-builder.md) contains more examples.
-
 ## Related content
 
 - [Report Builder tutorials](../reporting-services/report-builder-tutorials.md)
-- [Format paginated report items (Report Builder)](../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)  
-- [Microsoft Report Builder in SQL Server](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
+- [Format paginated report items (Report Builder)](../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)
+- [Microsoft Report Builder in SQL Server](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)
+- [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)
 
-More questions? [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user).
+## Next step
+
+> [!div class="nextstepaction"]
+> [Tutorial: Create a free form report (Report Builder)](../reporting-services/tutorial-creating-a-free-form-report-report-builder.md)

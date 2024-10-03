@@ -3,11 +3,12 @@ title: "Hide page header or footer on first or last page of a paginated report"
 description: Do you want a header or footer on the first or last page of your report? If not, find out how to turn off display of the header or footer in Report Builder.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/01/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 # Hide page header or footer on first or last page of a paginated report (Report Builder)
 
@@ -42,9 +43,8 @@ ms.custom: updatefrequency5
   
 5.  Select **OK**.
   
-## See Also  
- [Page Headers and Footers &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
- [Pagination in Reporting Services &#40;Report Builder  and SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [Add or Remove a Page Header or Footer &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/add-or-remove-a-page-header-or-footer-report-builder-and-ssrs.md)  
-  
-  
+## Related content
+
+- [Page Headers and Footers &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)
+- [Pagination in Reporting Services &#40;Report Builder  and SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)
+- [Add or Remove a Page Header or Footer &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/add-or-remove-a-page-header-or-footer-report-builder-and-ssrs.md)

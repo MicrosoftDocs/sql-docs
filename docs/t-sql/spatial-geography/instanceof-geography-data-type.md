@@ -27,8 +27,6 @@ Tests if the **geography** instance is the same as the specified type.
 .InstanceOf ( 'geography_type')  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 *geography_type*  
 The **nvarchar(4000)** string specifying one of 16 types exposed in the **geography** type hierarchy.  

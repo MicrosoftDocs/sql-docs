@@ -5,13 +5,14 @@ author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: mathoma, danil
 ms.date: 06/26/2024
-ms.service: sql-managed-instance
+ms.service: azure-sql-managed-instance
 ms.subservice: migration-guide
 ms.topic: how-to
+ms.collection:
+  - sql-migration-content
 ms.custom:
   - build-2023
   - build-2023-dataai
-  - sql-migration-content
 ---
 # Migration overview: SQL Server to Azure SQL Managed Instance
 

@@ -4,8 +4,8 @@ description: Find a reference of content that teaches you to configure and manag
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma
-ms.date: 01/14/2020
-ms.service: sql-database
+ms.date: 09/23/2024
+ms.service: azure-sql-database
 ms.subservice: deployment-configuration
 ms.topic: conceptual
 ms.custom: sqldbrb=1
@@ -20,8 +20,8 @@ In this article you can find a content reference of various guides, scripts, and
 - [Migrate to SQL Database](migrate-to-database-from-sql-server.md)
 - Learn how to [manage SQL Database after migration](manage-data-after-migrating-to-database.md).
 - [Copy a database](database-copy.md)
-- [Import a DB from a BACPAC](database-import.md)
-- [Export a DB to BACPAC](database-export.md)
+- [Import a database from a BACPAC](database-import.md)
+- [Export a database to BACPAC](database-export.md)
 - [Load data with BCP](../load-from-csv-with-bcp.md)
 - [Load data with ADF](/azure/data-factory/connector-azure-sql-database?toc=/azure/sql-database/toc.json)
 
@@ -30,7 +30,7 @@ In this article you can find a content reference of various guides, scripts, and
 - [Configure Microsoft Entra auth](authentication-aad-configure.md)
 - [Configure Conditional Access](conditional-access-configure.md)
 - [Microsoft Entra multifactor authentication](authentication-mfa-ssms-overview.md)
-- [Configure backup retention](long-term-backup-retention-configure.md) for a database to keep your backups on Azure Blob Storage. 
+- [Configure backup retention](long-term-backup-retention-configure.md) for a database to keep your backups on Azure Blob Storage.
 - [Configure geo-replication](active-geo-replication-overview.md) to keep a replica of your database in another region.
 - [Configure failover group](failover-group-configure-sql-db.md) to fail over a group of single or pooled databases to a secondary server in another region in the event of a disaster. 
 - [Configure temporal retention policy](temporal-tables-retention-policy.md)
@@ -46,6 +46,7 @@ In this article you can find a content reference of various guides, scripts, and
 
 ## Monitor and tune your database
 
+- [Database watcher](../database-watcher-overview.md)
 - [Manual tuning](performance-guidance.md)
 - [Use DMVs to monitor performance](monitoring-with-dmvs.md)
 - [Use Query store to monitor performance](/sql/relational-databases/performance/best-practice-with-the-query-store#Insight)
@@ -54,9 +55,7 @@ In this article you can find a content reference of various guides, scripts, and
 - [Apply performance recommendations](database-advisor-find-recommendations-portal.md) and optimize your database.
 - [Create alerts](alerts-create.md) to get notifications from Azure SQL Database.
 - [Troubleshoot connectivity](troubleshoot-common-errors-issues.md) if you notice some connectivity issues between the applications and the database. You can also use [Resource Health for connectivity issues](resource-health-to-troubleshoot-connectivity.md?view=azuresql-db&preserve-view=true).
-- [Troubleshoot performance with Intelligent Insights](intelligent-insights-troubleshoot-performance.md)
 - [Manage file space](file-space-manage.md) to monitor storage usage in your database.
-- [Use Intelligent Insights diagnostics log](intelligent-insights-use-diagnostics-log.md)
 - [Monitor In-memory OLTP space](in-memory-oltp-monitor-space.md)
 
 ### Extended events
@@ -70,15 +69,6 @@ In this article you can find a content reference of various guides, scripts, and
 - [Query vertically partitioned data](elastic-query-getting-started-vertical.md) across multiple databases.
 - [Report across scaled-out data tier](elastic-query-horizontal-partitioning.md).
 - [Query across tables with different schemas](elastic-query-vertical-partitioning.md).
-
-### Data sync
-
-- [SQL Data Sync](sql-data-sync-data-sql-server-sql-database.md)
-- [Data Sync Agent](sql-data-sync-agent-overview.md)
-- [Replicate schema changes](sql-data-sync-update-sync-schema.md)
-- [Monitor with OMS](./monitor-tune-overview.md)
-- [Best practices for Data Sync](sql-data-sync-best-practices.md)
-- [Troubleshoot Data Sync](sql-data-sync-troubleshoot.md)
 
 ## Elastic Database jobs
 

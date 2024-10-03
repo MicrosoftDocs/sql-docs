@@ -3,7 +3,7 @@ title: "sys.dm_os_wait_stats (Transact-SQL)"
 description: Returns information about all the waits encountered by threads that executed.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 07/02/2024
+ms.date: 10/03/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -447,9 +447,9 @@ The following table lists the wait types encountered by tasks.
 | <a id="lck_m_rs_s_low_priority"></a> `LCK_M_RS_S_LOW_PRIORITY` | Occurs when a task is waiting to acquire a Shared lock with Low Priority on the current key value, and a Shared Range lock with Low Priority between the current and previous key. (Related to the low priority wait option of `ALTER TABLE` and `ALTER INDEX`.)<br /><br />**Applies to**: [!INCLUDE [ssSQL14-md](../../includes/sssql14-md.md)] and later versions. |
 | <a id="lck_m_rs_u"></a> `LCK_M_RS_U` | Occurs when a task is waiting to acquire an Update lock on the current key value, and an Update Range lock between the current and previous key. |
 | <a id="lck_m_rs_u_abort_blockers"></a> `LCK_M_RS_U_ABORT_BLOCKERS` | Occurs when a task is waiting to acquire an Update lock with Abort Blockers on the current key value, and an Update Range lock with Abort Blockers between the current and previous key. (Related to the low priority wait option of `ALTER TABLE` and `ALTER INDEX`.)<br /><br />**Applies to**: [!INCLUDE [ssSQL14-md](../../includes/sssql14-md.md)] and later versions. |
-| <a id="lck_m_s_xact"></a> `LCK_M_S_XACT` | Occurs when a task is waiting for a shared lock on an XACT `wait_resource` type, where the intent can't be inferred. Rare. Related to [optimized locking](../performance/optimized-locking.md). |
-| <a id="lck_m_s_xact_read"></a> `LCK_M_S_XACT_READ` | Occurs when a task is waiting for a shared lock on an XACT `wait_resource` type, with an intent to read. Related to [optimized locking](../performance/optimized-locking.md). |
-| <a id="lck_m_s_xact_modify"></a> `LCK_M_S_XACT_MODIFY` | Occurs when a task is waiting for a shared lock on an XACT `wait_resource` type, with an intent to modify. Related to [optimized locking](../performance/optimized-locking.md). |
+| <a id="lck_m_s_xact"></a> `LCK_M_S_XACT` | Occurs when [optimized locking](../performance/optimized-locking.md) is enabled and a task is waiting for a shared lock on an XACT (transaction) `wait_resource` type, where the read or modify intent can't be inferred.|
+| <a id="lck_m_s_xact_read"></a> `LCK_M_S_XACT_READ` | Occurs when [optimized locking](../performance/optimized-locking.md) is enabled and a task is waiting for a shared lock on an XACT (transaction)`wait_resource` type, with an intent to read.|
+| <a id="lck_m_s_xact_modify"></a> `LCK_M_S_XACT_MODIFY` | Occurs when [optimized locking](../performance/optimized-locking.md) is enabled and a task is waiting for a shared lock on an XACT (transaction) `wait_resource` type, with an intent to modify.|
 | <a id="lck_m_rs_u_low_priority"></a> `LCK_M_RS_U_LOW_PRIORITY` | Occurs when a task is waiting to acquire an Update lock with Low Priority on the current key value, and an Update Range lock with Low Priority between the current and previous key. (Related to the low priority wait option of `ALTER TABLE` and `ALTER INDEX`.)<br /><br />**Applies to**: [!INCLUDE [ssSQL14-md](../../includes/sssql14-md.md)] and later versions. |
 | <a id="lck_m_rx_s"></a> `LCK_M_RX_S` | Occurs when a task is waiting to acquire a Shared lock on the current key value, and an Exclusive Range lock between the current and previous key. |
 | <a id="lck_m_rx_s_abort_blockers"></a> `LCK_M_RX_S_ABORT_BLOCKERS` | Occurs when a task is waiting to acquire a Shared lock with Abort Blockers on the current key value, and an Exclusive Range with Abort Blockers lock between the current and previous key. (Related to the low priority wait option of `ALTER TABLE` and `ALTER INDEX`.)<br /><br />**Applies to**: [!INCLUDE [ssSQL14-md](../../includes/sssql14-md.md)] and later versions. |

@@ -3,11 +3,12 @@ title: "Add a moving average to a chart in a paginated report"
 description: Learn how the Moving Average formula price indicator can be shown on a chart to identify trends in Report Builder.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/03/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 # Add a moving average to a chart in a paginated report (Report Builder)
 
@@ -40,10 +41,9 @@ A moving average is an average of the data in your series, calculated over a def
     > [!NOTE]  
     >  The period is the number of days used to calculate a moving average. If date/time values are not specified on the x-axis, the period is represented by the number of data points used to calculate a moving average. If there is only one data point, the moving average formula does not calculate. The moving average is calculated starting at the second point. If you specify the **Start from first point** option, the chart will start the moving average at the first point. If there is only one data point, the point in the calculated moving average is identical to the first point in your original series.  
   
-## Related content 
-* [Tutorial: Add a column chart to your report (Report Builder)](../tutorial-add-a-column-chart-to-your-report-report-builder.md)
-*  [Format a chart &#40;Report Builder&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
-*  [Charts &#40;Report Builder&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
-*  [Add empty points to a chart &#40;Report Builder&#41;](../../reporting-services/report-design/add-empty-points-to-a-chart-report-builder-and-ssrs.md)  
-  
-  
+## Related content
+
+- [Tutorial: Add a column chart to your report (Report Builder)](../tutorial-add-a-column-chart-to-your-report-report-builder.md)
+- [Format a chart &#40;Report Builder&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)
+- [Charts &#40;Report Builder&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)
+- [Add empty points to a chart &#40;Report Builder&#41;](../../reporting-services/report-design/add-empty-points-to-a-chart-report-builder-and-ssrs.md)

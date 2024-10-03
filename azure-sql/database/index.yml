@@ -7,13 +7,13 @@ metadata:
   title: Azure SQL Database documentation
   description: Find documentation about Azure SQL Database, a platform-as-a-service (PaaS) based on the latest stable version of Microsoft SQL Server.
   services: sql-database
-  ms.service: sql-database
+  ms.service: azure-sql-database
   ms.subservice: service-overview
   ms.topic: landing-page
   author: MashaMSFT
   ms.author: mathoma
   ms.reviewer: mathoma
-  ms.date: 01/25/2021
+  ms.date: 09/27/2024
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
@@ -34,28 +34,27 @@ landingContent:
             url: single-database-create-quickstart.md
           - text: Configure firewall
             url: firewall-create-server-level-portal-quickstart.md
-      - linkListType: video
-        links:
-          - text: Azure SQL for beginners 
-            url: /shows/Azure-SQL-for-Beginners/
-          - text: Azure SQL Database essentials
-            url: /shows/azure-sql-database-essentials/
+          - text: Try for free 
+            url: free-offer.md
       - linkListType: concept
         links:
           - text: What is SQL Database?
             url: sql-database-paas-overview.md
-          - text: Purchasing options
+          - text: What is an elastic pool? 
+            url: elastic-pool-overview.md
+          - text: Purchasing models
             url: purchasing-models.md
-          - text: Serverless compute
-            url: serverless-tier-overview.md
           - text: Hyperscale service tier
             url: service-tier-hyperscale.md
           - text: Migrate from SQL Server
             url: migrate-to-database-from-sql-server.md
           - text: T-SQL differences with SQL Server
             url: transact-sql-tsql-differences-sql-server.md
-          - text: Reserved capacity
-            url: reserved-capacity-overview.md
+          - text: Dynamically scale up or down
+            url: scale-resources.md
+          - text: Plan for Azure maintenance events
+            url: planned-maintenance.md
+
 
   # Card 
   - title: Learn Azure SQL 
@@ -72,12 +71,21 @@ landingContent:
           url: /users/marisabrasile/collections/8oq1i8p0z2qygw
         - text: Educational SQL resources
           url: /sql/sql-server/educational-sql-resources
+      - linkListType: video
+        links:
+          - text: Azure SQL for beginners 
+            url: /shows/Azure-SQL-for-Beginners/
+          - text: Azure SQL Database essentials
+            url: /shows/azure-sql-database-essentials/
+
 
   # Card
   - title: Artificial Intelligence
     linkLists:
       - linkListType: concept
         links:
+        - text: Copilot in Azure SQL Database 
+          url: ../copilot/copilot-azure-sql-overview.md
         - text: Intelligent Applications
           url: ai-artificial-intelligence-intelligent-applications.md
 
@@ -92,6 +100,8 @@ landingContent:
             url: security-best-practice.md
           - text: Logins, user accounts, roles, and permissions
             url: logins-create-manage.md
+          - text: Microsoft Defender for SQL 
+            url: azure-defender-for-sql.md
           - text: Microsoft Entra ID (formerly Azure Active Directory)
             url: authentication-aad-overview.md
           - text: Auditing
@@ -101,19 +111,6 @@ landingContent:
           - text: Dynamic Data Masking
             url: dynamic-data-masking-overview.md 
 
-  # Card 
-  - title: Elastic pools
-    linkLists:
-      - linkListType: concept
-        links:
-          - text: What is an elastic pool? 
-            url: elastic-pool-overview.md
-          - text: Manage
-            url: elastic-pool-manage.md
-          - text: Scale
-            url: elastic-pool-scale.md
-          - text: Resource management 
-            url: elastic-pool-resource-management.md
 
   # Card 
   - title: Business continuity  
@@ -122,18 +119,71 @@ landingContent:
         links:
           - text: Business continuity 
             url: business-continuity-high-availability-disaster-recover-hadr-overview.md
+          - text: Automated backups
+            url: automated-backups-overview.md
           - text: High availability
             url: high-availability-sla-local-zone-redundancy.md
           - text: Active-geo replication
             url: active-geo-replication-overview.md 
           - text: Failover groups
             url: failover-group-sql-db.md 
-          - text: Automated backups
-            url: automated-backups-overview.md
           - text: Recover with backup 
             url: recovery-using-backups.md 
           - text: Long-term backup retention  
             url: long-term-retention-overview.md
+
+ 
+  # Card 
+  - title: Scalability
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Read Scale-Out
+            url: read-scale-out.md
+          - text: Cross database jobs
+            url: elastic-jobs-overview.md
+          - text: Elastic scale
+            url: elastic-scale-introduction.md 
+          - text: Elastic query 
+            url: elastic-query-overview.md
+
+  # Card
+  - title: Development
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: Application development 
+            url:  develop-overview.md
+          - text: Connect apps to Azure SQL 
+            url: develop-overview.md#client-connections
+          - text: Disaster recovery app design
+            url: designing-cloud-solutions-for-disaster-recovery.md
+          - text: Managing rolling upgrades
+            url: manage-application-rolling-upgrade.md
+          - text: SaaS database tenancy patterns
+            url: saas-tenancy-app-design-patterns.md
+      - linkListType: how-to-guide
+        links:
+          - text: Design first database (SSMS)
+            url: design-first-database-tutorial.md
+          - text: Design first database (C#)
+            url: design-first-database-csharp-tutorial.md
+
+
+  # Card 
+  - title: Monitor Azure SQL Database
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: Database watcher (Preview)
+            url: ../database-watcher-overview.md
+          - text: Metrics and alerts
+            url: monitoring-metrics-alerts.md
+          - text: Azure Monitor
+            url: monitoring-sql-database-azure-monitor.md
+          - text: Dynamic management views (DMVs)
+            url: monitoring-with-dmvs.md
+
 
   # Card 
   - title: Reference 
@@ -168,74 +218,3 @@ landingContent:
             url: /powershell/module/az.sql
           - text: REST API
             url: /rest/api/sql/
- 
-  # Card 
-  - title: Scalability
-    linkLists:
-      - linkListType: how-to-guide
-        links:
-          - text: Dynamically scale up or down
-            url: scale-resources.md
-          - text: Read Scale-Out
-            url: read-scale-out.md
-          - text: Cross database jobs
-            url: elastic-jobs-overview.md
-          - text: Elastic scale
-            url: elastic-scale-introduction.md 
-          - text: Elastic query 
-            url: elastic-query-overview.md
-
-  # Card
-  - title: Development
-    linkLists:
-      - linkListType: overview
-        links:
-          - text: Application development 
-            url:  develop-overview.md
-          - text: Connect apps to Azure SQL 
-            url: develop-overview.md#client-connections
-          - text: Disaster recovery app design
-            url: designing-cloud-solutions-for-disaster-recovery.md
-          - text: Managing rolling upgrades
-            url: manage-application-rolling-upgrade.md
-          - text: SaaS database tenancy patterns
-            url: saas-tenancy-app-design-patterns.md
-      - linkListType: how-to-guide
-        links:
-          - text: Design first database (SSMS)
-            url: design-first-database-tutorial.md
-          - text: Design first database (C#)
-            url: design-first-database-csharp-tutorial.md
-
-  # Card 
-  - title: Planned maintenance
-    linkLists:
-      - linkListType: concept
-        links:
-          - text: Plan for Azure maintenance events
-            url: planned-maintenance.md
-          - text: Maintenance window
-            url: maintenance-window.md
-          - text: Resource health
-            url: resource-health-to-troubleshoot-connectivity.md
-
-      - linkListType: how-to-guide
-        links:
-          - text: Configure maintenance window
-            url: maintenance-window-configure.md
-          - text: Maintenance window notifications
-            url: advance-notifications.md
-
-  # Card 
-  - title: Monitor
-    linkLists:
-      - linkListType: concept
-        links:
-          - text: Monitor Azure SQL Database with metrics and alerts
-            url: monitoring-metrics-alerts.md
-          - text: Monitor Azure SQL workloads with database watcher
-            url: ../database-watcher-overview.md
-          - text: Monitor Azure SQL Database with Azure Monitor
-            url: monitoring-sql-database-azure-monitor.md
-          - text: Monitor Microsoft Azure SQL Database performance using dynamic management views
-            url: monitoring-with-dmvs.md

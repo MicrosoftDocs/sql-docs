@@ -40,8 +40,6 @@ Returns the single-byte character with the specified integer code, as defined by
 CHAR ( integer_expression )
 ```
 
-[!INCLUDE [sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 
 #### *integer_expression*

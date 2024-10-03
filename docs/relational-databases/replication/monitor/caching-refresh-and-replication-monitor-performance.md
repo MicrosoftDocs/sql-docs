@@ -3,11 +3,12 @@ title: "Caching, Refresh, & Replication Monitor performance"
 description: Learn about caching, refreshing, and optimizing Replication Monitor performance in SQL Server Management Studio (SSMS).
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/14/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: how-to
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "monitoring performance [SQL Server replication], Replication Monitor"
   - "cache [SQL Server], replication"
@@ -46,8 +47,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
   
 -   Avoid registering a large number of Distributors and setting Replication Monitor to automatically connect to all of them.  
   
-## See Also  
- [Run Replication Maintenance Jobs &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/administration/run-replication-maintenance-jobs-sql-server-management-studio.md)   
- [Monitoring Replication](../../../relational-databases/replication/monitor/monitoring-replication.md)  
-  
-  
+## Related content
+
+- [Run Replication Maintenance Jobs &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/administration/run-replication-maintenance-jobs-sql-server-management-studio.md)
+- [Monitoring Replication](../../../relational-databases/replication/monitor/monitoring-replication.md)

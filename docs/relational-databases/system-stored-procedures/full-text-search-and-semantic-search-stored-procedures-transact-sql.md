@@ -4,7 +4,7 @@ description: "Full-Text Search and Semantic Search stored procedures (Transact-S
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 05/24/2023
+ms.date: 08/21/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -120,6 +120,6 @@ dev_langs:
 ## Related content
 
 - [Full-Text Search and Semantic Search Catalog Views (Transact-SQL)](../system-catalog-views/full-text-search-and-semantic-search-catalog-views-transact-sql.md)
-- [Full-Text Search and Semantic Search Dynamic Management Views and Functions (Transact-SQL)](../system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)
+- [Full-Text and Semantic Search Dynamic Management Views - Functions](../system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)
 - [Full-Text Search](../search/full-text-search.md)

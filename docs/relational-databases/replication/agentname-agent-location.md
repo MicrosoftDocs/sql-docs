@@ -3,11 +3,12 @@ title: "&lt;AgentName&gt; Agent Location"
 description: "&lt;AgentName&gt; Agent Location"
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/01/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: ui-reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 f1_keywords:
   - "sql13.rep.newsubwizard.agentlocation.f1"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
@@ -19,9 +20,8 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 > [!NOTE]  
 >  Subscription type cannot be changed after a subscription is created.  
   
-## See Also  
- [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
- [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)   
- [Replication Agents Overview](../../relational-databases/replication/agents/replication-agents-overview.md)  
-  
-  
+## Related content
+
+- [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)
+- [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)
+- [Replication Agents Overview](../../relational-databases/replication/agents/replication-agents-overview.md)

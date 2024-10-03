@@ -1,8 +1,8 @@
 ---
 title: Install SQL Server 2016 R Services
 description: Learn how to install SQL Server 2016 R Services on Windows. You can use R Services to execute R scripts in-database.
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: VanMSFT
+ms.author: vanto
 ms.date: 08/06/2020
 ms.service: sql
 ms.subservice: machine-learning-services
@@ -103,7 +103,7 @@ This step requires a server restart. You can hold off on the restart until all o
 
 ##  Enable script execution
 
-1. Open [SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md) or [Azure Data Studio](../../azure-data-studio/what-is-azure-data-studio.md).
+1. Open [SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md) or [Azure Data Studio](/azure-data-studio/what-is-azure-data-studio).
 
 1. Connect to the instance where you installed R Services, click **New Query** to open a query window, and run the following command:
 

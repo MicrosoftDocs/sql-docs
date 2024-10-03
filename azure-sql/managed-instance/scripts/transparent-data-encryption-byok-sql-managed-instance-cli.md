@@ -5,7 +5,7 @@ author: MladjoA
 ms.author: mlandzic
 ms.reviewer: vanto
 ms.date: 05/18/2022
-ms.service: sql-managed-instance
+ms.service: azure-sql-managed-instance
 ms.subservice: security
 ms.topic: conceptual
 ms.custom: kr2b-contr-experiment, devx-track-azurecli

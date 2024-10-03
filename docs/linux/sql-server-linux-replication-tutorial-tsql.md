@@ -5,7 +5,7 @@ description: Configure SQL Server snapshot replication on Linux with two instanc
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: vanto
-ms.date: 11/16/2023
+ms.date: 07/15/2024
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
@@ -17,10 +17,9 @@ monikerRange: ">=sql-server-2017 || >=sql-server-linux-2017"
 
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
-In this tutorial, configure SQL Server snapshot replication on Linux with two instances of SQL Server using Transact-SQL (T-SQL). The publisher and distributor will be the same instance, and the subscriber will be on a separate instance.
+In this tutorial, configure SQL Server snapshot replication on Linux with two instances of SQL Server using Transact-SQL (T-SQL). The publisher and distributor are on the same instance, and the subscriber is on a separate instance.
 
 > [!div class="checklist"]
->  
 > - Enable SQL Server replication agents on Linux
 > - Create a sample database
 > - Configure snapshot folder for SQL Server agents access
@@ -34,15 +33,15 @@ All replication configurations can be configured with [replication stored proced
 
 ## Prerequisites
 
-To complete this tutorial, you'll need:
+To complete this tutorial, you need:
 
 - Two instances of SQL Server with the latest version of SQL Server on Linux
-- A tool to issue T-SQL queries to set up replication such as SQLCMD or SSMS
+- A tool to issue T-SQL queries to set up replication, such as [sqlcmd](../tools/sqlcmd/sqlcmd-utility.md) or [SQL Server Management Studio](../ssms/sql-server-management-studio-ssms.md)
 
-   See [Use SQL Server Management Studio on Windows to manage SQL Server on Linux](sql-server-linux-manage-ssms.md).
+  See [Use SQL Server Management Studio on Windows to manage SQL Server on Linux](sql-server-linux-manage-ssms.md).
 
-   > [!NOTE]  
-   > [!INCLUDE [SQL Server 2017](../includes/sssql17-md.md)] ([CU18](https://support.microsoft.com/help/4527377)) and later support SQL Server Replication for instances of SQL Server on Linux.
+  > [!NOTE]  
+  > SQL Server Replication is supported on Linux in [!INCLUDE [SQL Server 2017](../includes/sssql17-md.md)] ([CU18](https://support.microsoft.com/help/4527377)) and later versions.
 
 ## Detailed steps
 
@@ -53,7 +52,7 @@ To complete this tutorial, you'll need:
    sudo systemctl restart mssql-server
    ```
 
-1. Create the sample database and table. On the publisher create a sample database and table that will act as the articles for a publication.
+1. Create the sample database and table. On the publisher, create a sample database and table that will act as the articles for a publication.
 
    ```sql
    CREATE DATABASE Sales;
@@ -63,11 +62,13 @@ To complete this tutorial, you'll need:
    GO
 
    CREATE TABLE Customer (
-       [CustomerID] [int] NOT NULL,
-       [SalesAmount] [decimal] NOT NULL
+       [CustomerID] INT NOT NULL,
+       [SalesAmount] DECIMAL NOT NULL
    );
    GO
-   INSERT INTO Customer (CustomerID, SalesAmount) VALUES (1, 100), (2, 200), (3, 300);
+
+   INSERT INTO Customer (CustomerID, SalesAmount)
+   VALUES (1, 100), (2, 200), (3, 300);
    GO
    ```
 
@@ -86,7 +87,7 @@ To complete this tutorial, you'll need:
    sudo chgrp mssql /var/opt/mssql/data/ReplData/
    ```
 
-1. Configure distributor. In this example, the publisher will also be the distributor. Run the following commands on the publisher to configure the instance for distribution as well.
+1. Configure distributor. In this example, the publisher is also the distributor. Run the following commands on the publisher to configure the instance for distribution as well.
 
    ```sql
    DECLARE @distributor AS SYSNAME;
@@ -316,7 +317,6 @@ To complete this tutorial, you'll need:
 In this tutorial, you configured SQL Server snapshot replication on Linux with two instances of SQL Server using T-SQL.
 
 > [!div class="checklist"]
->  
 > - Enable SQL Server replication agents on Linux
 > - Create a sample database
 > - Configure snapshot folder for SQL Server agents access

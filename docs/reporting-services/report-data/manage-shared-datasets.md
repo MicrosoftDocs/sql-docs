@@ -3,11 +3,12 @@ title: "Manage Shared Datasets"
 description: Learn how to manage shared datasets in Reporting Services so you can share a query to help provide a consistent set of data for multiple reports.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/01/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-data
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 # Manage Shared Datasets
   In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], shared datasets retrieve data from shared data sources that connect to external data sources. A shared dataset provides a way to share a query to help provide a consistent set of data for multiple reports. The dataset query can include dataset parameters. You can configure a shared dataset to cache query results for specific parameter combinations on first use or by specifying a schedule. You can use shared dataset caching in combination with report caching and report data feeds to help manage access to a data source.  
@@ -108,7 +109,7 @@ ms.custom: updatefrequency5
   
 -   Shared datasets follow the same rules for specifying parameter values as subscriptions do.  
   
-## See also  
- [Report Server Content Management &#40;SSRS Native Mode&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
- [Granting Permissions on a Native Mode Report Server](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
-  
+## Related content
+
+- [Report Server Content Management &#40;SSRS Native Mode&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)
+- [Granting Permissions on a Native Mode Report Server](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)

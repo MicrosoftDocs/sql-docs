@@ -36,8 +36,6 @@ DROP QUEUE <object>
 { database_name.schema_name.queue_name | schema_name.queue_name | queue_name }
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
  *database_name*  
  The name of the database that contains the queue to drop. When no *database_name* is provided, defaults to the current database.  

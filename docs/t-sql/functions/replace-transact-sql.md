@@ -33,8 +33,6 @@ Replaces all occurrences of a specified string value with another string value.
 REPLACE ( string_expression , string_pattern , string_replacement )  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
  *string_expression*  
  Is the string [expression](../../t-sql/language-elements/expressions-transact-sql.md) to be searched. *string_expression* can be of a character or binary data type.  

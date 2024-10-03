@@ -1,7 +1,7 @@
 ---
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 03/14/2024
+ms.date: 09/12/2024
 ms.topic: include
 ---
 > [!NOTE]
@@ -1241,7 +1241,17 @@ ms.topic: include
 | 37543 | 10 | No | The trust of the certificate imported could not be verified with the Certificate Authority (CA) or verified through the Internet. Most likely the host operating system where SQL Server is hosted is missing the latest root certificate updates, or access to the Internet. In case this certificate is used for authentication when partner server rotates the certificate, the authentication will fail unless the issue has been resolved on the host OS. Please ensure that the host OS has the latest root certificate updates, or access to the Internet to reach out to remote CA. Error code: 0x%lx. |
 | 37545 | 16 | No | '%ls' is not a valid object id for '%ls' or you do not have permission. |
 | 37546 | 16 | No | Can only specify object_id when creating user from external provider. |
+| 37549 | 16 | No | Cannot open session for %S_MSG '%.\*ls'. Provider error code: %d. (%.\*ls). For more information, see https://aka.ms/sql-ekm-connector-troubleshooting |
+| 37550 | 16 | No | Cannot initialize cryptographic provider. Provider error code: %d. (%.\*ls). For more information, see https://aka.ms/sql-ekm-connector-troubleshooting |
+| 37551 | 16 | No | Cannot create key '%.\*ls' in the provider. Provider error code: %d. (%.\*ls). For more information, see https://aka.ms/sql-ekm-connector-troubleshooting |
+| 37552 | 16 | No | Cannot export %S_MSG from the provider. Provider error code: %d. (%.\*ls). For more information, see https://aka.ms/sql-ekm-connector-troubleshooting |
+| 37553 | 16 | No | Invalid algorithm '%.\*ls'. Provider error code: %d. (%.\*ls). For more information, see https://aka.ms/sql-ekm-connector-troubleshooting |
+| 37554 | 16 | No | Key with %S_MSG '%.\*ls' does not exist in the provider or access is denied. Provider error code: %d. (%.\*ls). For more information, see https://aka.ms/sql-ekm-connector-troubleshooting |
+| 37555 | 16 | No | Invalid algorithm id: %d. Provider error code: %d. (%.\*ls). For more information, see https://aka.ms/sql-ekm-connector-troubleshooting |
+| 37556 | 16 | No | Key validation failed since an attempt to get algorithm info for that key failed. Provider error code: %d. (%.\*ls). For more information, see https://aka.ms/sql-ekm-connector-troubleshooting |
 | 37559 | 16 | No | Object_id is not a valid option |
+| 37563 | 16 | Yes | The primary managed identity is not selected for this server. Enable the primary managed identity for Microsoft Entra authentication for this server. For more information see (https://aka.ms/sql-server-managed-identity-doc). |
+| 37564 | 10 | Yes | The managed identity with Client_ID/Application_ID '%ls', is the primary identity assigned for this server. |
 | 38001 | 16 | No | Cannot find the file id %d in the database '%s'. |
 | 38002 | 16 | No | Only users having %s permission can execute this stored procedure. |
 | 39001 | 16 | No | Only SELECT statement is supported for input data query to 'sp_execute_external_script' stored procedure. |

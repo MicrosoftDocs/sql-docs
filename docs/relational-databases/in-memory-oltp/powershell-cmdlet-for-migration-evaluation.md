@@ -1,8 +1,8 @@
 ---
 title: "PowerShell Cmdlet for Migration Evaluation"
 description: Learn about Save-SqlMigrationReport, which evaluates the migration fitness of objects in a SQL Server database for In-Memory OLTP.
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "07/30/2019"
 ms.service: sql
 ms.subservice: in-memory-oltp
@@ -69,7 +69,7 @@ Before you can run this cmdlet, you must first install the module named **SqlSer
 > [!NOTE]
 > The old `SQLPS` module is no longer being maintained. Use the newer `SqlServer` module.
 
-For more information, see [Install SQL Server PowerShell module](../../powershell/download-sql-server-ps-module.md).
+For more information, see [Install SQL Server PowerShell module](/powershell/sql-server/download-sql-server-ps-module).
 
 ## Example cmdlet line
 

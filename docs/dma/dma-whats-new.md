@@ -8,9 +8,10 @@ ms.date: 06/28/2024
 ms.service: sql
 ms.subservice: dma
 ms.topic: conceptual
+ms.collection:
+  - sql-migration-content
 ms.custom:
   - intro-whats-new
-  - sql-migration-content
 helpviewer_keywords:
   - "Data Migration Assistant, new features"
 ---
@@ -216,7 +217,7 @@ The v3.2 release of Data Migration Assistant includes the following additions:
 The v3.1 release of Data Migration Assistant includes the following additions:
 
 - Improved assessment recommendations for Azure SQL Database in terms of database collations, use of unsupported system stored procedures, and CLR objects.
-- Assessment guidance for compatibility levels 130, 120, 110, and 100 when migrating to Azure SQL Database.
+- Assessment guidance for compatibility levels 130, 120, 110, and 100 when migrating to Azure SQL Database.
 
 ## Data Migration Assistant v3.0
 

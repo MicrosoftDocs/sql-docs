@@ -3,11 +3,12 @@ title: "Replication Publishing Model Overview"
 description: Learn about the replication publishing model in SQL Server, including Publisher, Distributor, Subscribers, publications, articles, and subscriptions.
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "09/01/2016"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: how-to
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "replication [SQL Server], publishing model"
   - "subscriptions [SQL Server replication], about subscriptions"
@@ -58,10 +59,9 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ## Subscription  
  A subscription is a request for a copy of a publication to be delivered to a Subscriber. The subscription defines what publication will be received, where, and when. There are two types of subscriptions: push and pull. For more information about push and pull subscriptions, see [Subscribe to Publications](../../../relational-databases/replication/subscribe-to-publications.md).  
   
-## See Also  
- [Replication Agents Overview](../../../relational-databases/replication/agents/replication-agents-overview.md)   
- [Types of Replication](../../../relational-databases/replication/types-of-replication.md)   
- [Configure Replication for Always On Availability Groups (SQL Server)](../../../database-engine/availability-groups/windows/configure-replication-for-always-on-availability-groups-sql-server.md)   
- [Maintaining an Always On Publication Database (SQL Server)](../../../database-engine/availability-groups/windows/maintaining-an-always-on-publication-database-sql-server.md)  
-  
-  
+## Related content
+
+- [Replication Agents Overview](../../../relational-databases/replication/agents/replication-agents-overview.md)
+- [Types of Replication](../../../relational-databases/replication/types-of-replication.md)
+- [Configure Replication for Always On Availability Groups (SQL Server)](../../../database-engine/availability-groups/windows/configure-replication-for-always-on-availability-groups-sql-server.md)
+- [Maintaining an Always On Publication Database (SQL Server)](../../../database-engine/availability-groups/windows/maintaining-an-always-on-publication-database-sql-server.md)

@@ -38,7 +38,7 @@ You can do data cleaning, fast data querying, or any other processing in C# that
 
    - Use the IDE you prefer for developing C# code.
    - Install the [Microsoft Extensibility SDK for C# for SQL Server](how-to/extensibility-sdk-c-sharp-sql-server.md) to execute C# code on SQL Server.
-   - Use [SQL Server Management Studio (SSMS)](../ssms/sql-server-management-studio-ssms.md) or [Azure Data Studio](../azure-data-studio/what-is-azure-data-studio.md) for executing external code on SQL Server.
+   - Use [SQL Server Management Studio (SSMS)](../ssms/sql-server-management-studio-ssms.md) or [Azure Data Studio](/azure-data-studio/what-is-azure-data-studio) for executing external code on SQL Server.
    - Use the system stored procedure [sp_execute_external_script](../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) to execute your C# code on SQL Server.
 
 1. Write your first C# code. Use the following tutorial as a starting point. [Tutorial: Search for a string using regular expressions (regex) in C#](tutorials/search-for-string-using-regular-expressions-in-c-sharp.md).

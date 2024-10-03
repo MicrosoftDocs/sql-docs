@@ -3,11 +3,12 @@ title: "URL examples for items on a report server - SharePoint mode"
 description: View examples of how to use URLs that specify locations in a SharePoint site Web hierarchy on a report server.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/14/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: tools
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 # URL examples for items on a report server - SharePoint mode
   To publish reports and related items to a SharePoint library, you can publish the content by using the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] authoring tools such as Report Designer. You can also upload the content by using SharePoint site actions.  
@@ -126,9 +127,8 @@ ms.custom: updatefrequency5
   
  When a report server runs in SharePoint integrated mode, the concept of a resource has a narrower definition. The report server retains the concept of a resource for storing reports that reference an external image. This concept applies if the report is a snapshot or a copy that is kept for internal use.  
   
-## Related content 
- [Publish a report to a SharePoint library](../../reporting-services/reports/publish-a-report-to-a-sharepoint-library.md)   
- [Publish a shared data source to a SharePoint library](../../reporting-services/reports/publish-a-shared-data-source-to-a-sharepoint-library.md)   
- [Project Property Pages dialog box](../../reporting-services/tools/project-property-pages-dialog-box.md)  
-  
-  
+## Related content
+
+- [Publish a report to a SharePoint library](../../reporting-services/reports/publish-a-report-to-a-sharepoint-library.md)
+- [Publish a shared data source to a SharePoint library](../../reporting-services/reports/publish-a-shared-data-source-to-a-sharepoint-library.md)
+- [Project Property Pages dialog box](../../reporting-services/tools/project-property-pages-dialog-box.md)

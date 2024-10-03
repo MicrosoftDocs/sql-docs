@@ -3,7 +3,8 @@ title: "SQL Server Browser service"
 description: Learn how to use SQL Server Browser, a service that listens for requests for SQL Server resources and provides information about installed SQL Server instances.
 author: markingmyname
 ms.author: maghan
-ms.date: 09/08/2023
+ms.reviewer: vanto
+ms.date: 09/11/2024
 ms.service: sql
 ms.subservice: tools-other
 ms.topic: conceptual
@@ -22,7 +23,7 @@ monikerRange: ">=sql-server-2016"
 
 [!INCLUDE [SQL Server Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
-The SQL Server Browser program runs as a Windows service. SQL Server Browser listens for incoming requests for [!INCLUDE [msCoName](../../includes/msconame-md.md)] SQL Server resources and provide information about SQL Server instances installed on the computer. SQL Server Browser contributes to the following actions:
+The SQL Server Browser program runs as a Windows service. SQL Server Browser listens for incoming requests for SQL Server resources and provides information about SQL Server instances installed on the computer. SQL Server Browser contributes to the following actions:
 
 - Browsing a list of available servers.
 - Connecting to the correct server instance.
@@ -39,17 +40,17 @@ SQL Server Browser can be configured during setup or using [SQL Server Configura
 
 ## Background
 
-Before [!INCLUDE [ssVersion2000](../../includes/ssversion2000-md.md)], only one instance of SQL Server could be installed on a computer. SQL Server listened for incoming requests on port 1433, assigned to SQL Server by the official Internet Assigned Numbers Authority (IANA). Only one instance of SQL Server can use a port, so when [!INCLUDE [ssVersion2000](../../includes/ssversion2000-md.md)] introduced support for multiple instances of SQL Server, SQL Server Resolution Protocol (SSRP) was developed to listen on UDP port 1434. This listener service responds to client requests with the names of the installed instances and the ports or named pipes used by the instance.
+Before [!INCLUDE [ssVersion2000](../../includes/ssversion2000-md.md)], only one instance of SQL Server could be installed on a computer. SQL Server listened for incoming requests on port 1433, assigned to SQL Server by the official Internet Assigned Numbers Authority (IANA). Only one instance of SQL Server can use a port, so when [!INCLUDE [ssVersion2000](../../includes/ssversion2000-md.md)] introduced support for multiple instances of SQL Server, SQL Server Resolution Protocol (SSRP) was developed to listen on User Datagram Protocol (UDP) port 1434. This listener service responds to client requests with the names of the installed instances and the ports or named pipes used by the instance.
 
 To resolve limitations of the SSRP system, [!INCLUDE [ssVersion2005](../../includes/ssversion2005-md.md)] introduced the SQL Server Browser service as a replacement for SSRP.
 
 ## How SQL Server Browser works
 
-When an instance of SQL Server starts, if the [TCP/IP protocol is enabled for SQL Server][def], the server is assigned a TCP/IP port. SQL Server listens on a specific named pipe if the named pipes protocol is enabled. This port, or "pipe," is used by that specific instance to exchange data with client applications. TCP port 1433 and pipe `\sql\query` are assigned to the default instance during installation. Still, those can be changed later by the server administrator using [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md).
+When an instance of SQL Server starts and the TCP/IP protocol is enabled for SQL Server, the server is assigned a TCP/IP port. SQL Server listens on a specific named pipe if the named pipes protocol is enabled. This port or named pipe is used by that specific instance to exchange data with client applications. TCP/IP port 1433 and pipe `\sql\query` are assigned to the default instance during installation. The server administrator can change the port or named pipe using [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md).
 
 Because only one instance of SQL Server can use a port or pipe, different port numbers and pipe names are assigned for named instances, including SQL Server Express. When enabled, named instances and SQL Server Express are configured to use dynamic ports by default. That is, an available port is assigned when SQL Server starts.
 
-If you want, a specific port can be assigned to an instance of SQL Server. When connecting, clients can specify a specific port. However, if the port is dynamically assigned, the port number can change anytime the SQL Server is restarted, so the correct port number is unknown to the client.
+If you want, a specific port can be assigned to an instance of SQL Server. Clients can specify a specific port when connecting to SQL Server. However, if the port is dynamically assigned, the port number can change anytime the SQL Server is restarted, so the correct port number is unknown to the client.
 
 Upon startup, the SQL Server Browser starts and claims UDP port 1434. SQL Server Browser reads the registry, identifies all instances of SQL Server on the computer, and notes the ports and named pipes they use. When a server has two or more network cards, SQL Server Browser returns the first enabled port it encounters for SQL Server. SQL Server Browser supports ipv6 and ipv4.
 
@@ -67,17 +68,17 @@ However, if the SQL Server Browser service isn't running, the following connecti
 - Any component that generates or passes server\instance information that other components could later use to reconnect.
 - Connecting to a named instance without providing the port number or pipe.
 - [DAC](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md) to a named instance or the default instance if not using TCP/IP port 1433.
-- The OLAP redirector service.
-- Enumerating servers in [SQL Server Management Studio](../../ssms/menu-help/about-sql-server-management-studio.md) or [Azure Data Studio](../../azure-data-studio/download-azure-data-studio.md).
+- The Online Analytical Processing (OLAP) redirector service.
+- Enumerating servers in [SQL Server Management Studio](../../ssms/menu-help/about-sql-server-management-studio.md) or [Azure Data Studio](/azure-data-studio/download-azure-data-studio).
 
 Suppose you're using SQL Server in a client-server scenario (for example, when your application is accessing SQL Server across a network). If you stop or disable the SQL Server Browser service, you must assign a specific port number to each instance and write your client application code to use that port number. This approach has the following problems:
 
 - You must update and maintain client application code to ensure it's connecting to the proper port.
-- The port you choose for each instance may be used by another service or application on the server, causing the instance of SQL Server to be unavailable.
+- The port you choose for each instance might be used by another service or application on the server, causing the instance of SQL Server to be unavailable.
 
 ## Clusters and SQL Server Browser
 
-SQL Server Browser isn't a clustered resource and doesn't support failover from one cluster node to the other. Therefore, in the case of a cluster, SQL Server Browser should be installed and turned on for each cluster node. On clusters, the SQL Server Browser listens on IP_ANY.
+SQL Server Browser isn't a clustered resource and doesn't support failover from one cluster node to the other. Therefore, if there's a cluster, SQL Server Browser should be installed and turned on for each cluster node. On clusters, the SQL Server Browser listens on `IP_ANY`.
 
 > [!NOTE]  
 > When listening on IP_ANY, when you enable listening on specific IPs, the user must configure the same TCP port on each IP because SQL Server Browser returns the first IP/port pair it encounters.
@@ -132,11 +133,9 @@ Hidden instances are instances of SQL Server that support only shared memory con
 
 ### Use a firewall
 
-To communicate with the SQL Server Browser service on a server behind a firewall, open UDP port 1434 and the TCP port used by SQL Server (for example, 1433). For information about working with a firewall, see [Configure the Windows Firewall to Allow SQL Server Access](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).
+To communicate with the SQL Server Browser service on a server behind a firewall, open UDP port 1434 and the TCP/IP port used by SQL Server (for example, 1433). For information about working with a firewall, see [Configure the Windows Firewall to Allow SQL Server Access](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).
 
-## See also
-
-Learn more about related concepts in the following articles:
+## Related content
 
 - [Network Protocols and Network Libraries](../../sql-server/install/network-protocols-and-network-libraries.md)
 - [Connecting Using IPv6](connecting-using-ipv6.md)

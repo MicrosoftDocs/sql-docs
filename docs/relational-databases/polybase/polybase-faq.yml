@@ -6,9 +6,9 @@ metadata:
   ms.service: sql
   ms.subservice: polybase
   ms.topic: conceptual
-  author: WilliamDAssafMSFT
-  ms.author: wiassaf
-  ms.reviewer: 
+  author: MikeRayMSFT
+  ms.author: mikeray
+  ms.reviewer: hudequei
   monikerRange: ">= sql-server-linux-ver15 || >= sql-server-2016"
 
 title: Frequently asked questions in PolyBase

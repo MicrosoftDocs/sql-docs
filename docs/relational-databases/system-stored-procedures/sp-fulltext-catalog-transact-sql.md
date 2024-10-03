@@ -4,7 +4,7 @@ description: Creates and drops a full-text catalog, and starts and stops the ind
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 07/07/2023
+ms.date: 08/22/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -66,7 +66,7 @@ The root directory (not the complete physical path) for a **create** action. *@p
 
 This is the `FTData` subdirectory in the `MSSQL` directory; for example, `C:\Program Files\Microsoft SQL Server\MSSQL16.MSSQLSERVER\MSSQL\FTData`. The specified root directory must reside on a drive on the same computer, consist of more than just the drive letter, and can't be a relative path. Network drives, removable drives, floppy disks, and UNC paths aren't supported. Full-text catalogs must be created on a local hard drive associated with an instance of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)].
 
-*@path* is valid only when *@action* is **create**. For actions other than **create** (**stop**, **rebuild**, and so on), *@path* must be NULL or omitted.
+*@path* is valid only when *@action* is **create**. For actions other than **create** (**stop**, **rebuild**, and so on), *@path* must be `NULL` or omitted.
 
 If the instance of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] is a virtual server in a cluster, the catalog directory specified needs to be on a shared disk drive on which the [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] resource depends. If *@path* isn't specified, the location of default catalog directory is on the shared disk drive, in the directory that was specified when the virtual server was installed.
 

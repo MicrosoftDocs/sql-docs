@@ -35,8 +35,6 @@ CAST ( input AS hierarchyid )
 static SqlHierarchyId Parse ( SqlString input )   
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 *input*  
 [!INCLUDE[tsql](../../includes/tsql-md.md)]: The character data type value that is being converted.

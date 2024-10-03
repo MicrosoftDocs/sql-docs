@@ -84,8 +84,6 @@ OPTION ( <query_option> [ , ...n ] )
     LABEL = label_name
 ```
 
-[!INCLUDE [sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 
 #### *query_hint*

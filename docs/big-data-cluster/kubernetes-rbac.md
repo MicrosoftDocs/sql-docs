@@ -30,13 +30,13 @@ SQL Server 2019 Big Data Clusters uses service accounts (such as `sa-mssql-contr
 1. Creates a `<namespaced>-admin` role with full permissions on the namespace or project but not cluster level permissions.
 1. Creates a role assignment of that service account to the role.
 
-Once these steps complete, the control plane pods are provisioned and the service account deploys the rest of big data cluster.  
+Once these steps complete, the control plane pods are provisioned and the service account deploys the rest of big data cluster.  
 
 Consequentially, the deploying user must have permissions to:
 
 - List the namespaces in the cluster (1).
 - Patch the new or existing namespace with the label (2).
-- Create the service account `sa-mssql-controller`, the `<namespaced>-admin` role and the role binding (3-5).
+- Create the service account `sa-mssql-controller`, the `<namespaced>-admin` role and the role binding (3-5).
 
 The default `admin` role does not have these permissions, so the user deploying the big data cluster must have at least namespace level admin permissions.
 
@@ -91,11 +91,11 @@ The service account, cluster role and the cluster role binding can be created ei
 You can customize these settings in the security section in the `control.json` deployment configuration file:
 
 ```json
-  "security": {
-    ...
-    "allowNodeMetricsCollection": false,
-    "allowPodMetricsCollection": false
-  }
+  "security": {
+    ...
+    "allowNodeMetricsCollection": false,
+    "allowPodMetricsCollection": false
+  }
 ```
 
 If these settings are set to `false`, BDC deployment workflow will not attempt to create the service account, cluster role, and the binding for Telegraf.

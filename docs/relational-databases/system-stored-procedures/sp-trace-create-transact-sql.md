@@ -4,7 +4,7 @@ description: "Creates a trace definition. The new trace is in a stopped state."
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 09/07/2023
+ms.date: 08/21/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -48,7 +48,7 @@ The number assigned by [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)
 
 #### [ @options = ] *options*
 
-Specifies the options set for the trace. *@options* is **int**, with no default. Users may choose a combination of these options by specifying the sum value of options picked. For example, to turn on both the options `TRACE_FILE_ROLLOVER` and `SHUTDOWN_ON_ERROR`, specify `6` for *@options*.
+Specifies the options set for the trace. *@options* is **int**, with no default. You can choose a combination of these options by specifying the sum value of options picked. For example, to turn on both the options `TRACE_FILE_ROLLOVER` and `SHUTDOWN_ON_ERROR`, specify `6` for *@options*.
 
 The following table lists the options, descriptions, and their values.
 
@@ -93,11 +93,11 @@ Specifies the maximum number or trace files to be maintained with the same base 
 
 For example, when the *@tracefile* parameter is specified as `C:\mytrace`, a file with the name `C:\mytrace_123.trc` is older than a file with the name `C:\mytrace_124.trc`. If *@filecount* is set to `2`, then [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] deletes the file `C:\mytrace_123.trc` before creating the trace file `C:\mytrace_125.trc`.
 
-[!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] only tries to delete each file once, and can't delete a file that is in use by another process. Therefore, if another application is working with trace files while the trace is running, [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] may leave these trace files in the file system.
+[!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] only tries to delete each file once, and can't delete a file that is in use by another process. Therefore, if another application is working with trace files while the trace is running, [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] might leave these trace files in the file system.
 
 ## Return code values
 
-The following table describes the code values that users may get following completion of the stored procedure.
+The following table describes the code values that you could get, following completion of the stored procedure.
 
 | Return code | Description |
 | --- | --- |
@@ -126,7 +126,7 @@ For `sp_trace_create`, the [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md
 > [!NOTE]  
 > You can automatically load the trace file created with `sp_trace_create` into a table by using the `fn_trace_gettable` system function. For more information, see [sys.fn_trace_gettable](../system-functions/sys-fn-trace-gettable-transact-sql.md).
 
-For an example of using trace stored procedures, see [Create a Trace (Transact-SQL)](../sql-trace/create-a-trace-transact-sql.md).
+For an example of using trace stored procedures, see [Create a Trace](../sql-trace/create-a-trace-transact-sql.md).
 
 `TRACE_PRODUCE_BLACKBOX` has the following characteristics:
 

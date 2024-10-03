@@ -1,9 +1,9 @@
 ---
 title: "Monitor performance by using the Query Store"
 description: Query Store provides insight on query plan choice and performance for SQL Server, Azure SQL Database, Azure SQL Managed Instance, and Azure Synapse Analytics. Query Store captures history of queries, plans, and runtime statistics.
-author: WilliamDAssafMSFT
-ms.author: wiassaf
-ms.date: 09/09/2023
+author: MikeRayMSFT
+ms.author: mikeray
+ms.date: 07/19/2024
 ms.service: sql
 ms.subservice: performance
 ms.topic: conceptual
@@ -74,10 +74,10 @@ Execution plans for any specific query in [!INCLUDE [ssNoVersion](../../includes
 Since the Query Store retains multiple execution plans per query, it can enforce policies to direct the Query Processor to use a specific execution plan for a query. This is referred to as plan forcing. Plan forcing in Query Store is provided by using a mechanism similar to the [USE PLAN](../../t-sql/queries/hints-transact-sql-query.md) query hint, but it does not require any change in user applications. Plan forcing can resolve a query performance regression caused by a plan change in a very short period of time.
 
 > [!NOTE]  
-> Query Store collects plans for DML Statements such as SELECT, INSERT, UPDATE, DELETE, MERGE, and BULK INSERT.
->  
-> By design, Query Store does not collect plans for DDL statements such as CREATE INDEX, etc. Query Store captures cumulative resource consumption by collecting plans for the underlying DML statements. For example, Query Store may display the SELECT and INSERT statements executed internally to populate a new index.
->  
+> Query Store collects plans for DML Statements such as `SELECT`, `INSERT`, `UPDATE`, `DELETE`, `MERGE`, and `BULK INSERT`.
+> 
+> By design, Query Store does not collect plans for DDL statements such as `CREATE INDEX`, etc. Query Store captures cumulative resource consumption by collecting plans for the underlying DML statements. For example, Query Store might display the `SELECT` and `INSERT` statements executed internally to populate a new index.
+>
 > Query Store does not collect data for natively compiled stored procedures by default. Use [sys.sp_xtp_control_query_exec_stats](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md) to enable data collection for natively compiled stored procedures.
 
 **Wait stats** are another source of information that helps to troubleshoot performance in the [!INCLUDE [ssDE-md](../../includes/ssde-md.md)]. For a long time, wait statistics were available only on instance level, which made it hard to backtrack waits to a specific query. Starting with [!INCLUDE [ssSQL17](../../includes/sssql17-md.md)] and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], Query Store includes a dimension that tracks wait stats. The following example enables the Query Store to collect wait stats.
@@ -105,15 +105,17 @@ The Query Store contains three stores:
 
 The number of unique plans that can be stored for a query in the plan store is limited by the **max_plans_per_query** configuration option. To enhance performance, the information is written to the stores asynchronously. To minimize space usage, the runtime execution statistics in the runtime stats store are aggregated over a fixed time window. The information in these stores is visible by querying the Query Store catalog views.
 
-The following query returns information about queries and plans in the Query Store.
+The following query returns information about queries, their plans, compile time and run-time statistics from the Query Store.
 
 ```sql
-SELECT Txt.query_text_id, Txt.query_sql_text, Pl.plan_id, Qry.*
-FROM sys.query_store_plan AS Pl
+SELECT Txt.query_text_id, Txt.query_sql_text, Pln.plan_id, Qry.*, RtSt.*
+FROM sys.query_store_plan AS Pln
 INNER JOIN sys.query_store_query AS Qry
-    ON Pl.query_id = Qry.query_id
+    ON Pln.query_id = Qry.query_id
 INNER JOIN sys.query_store_query_text AS Txt
-    ON Qry.query_text_id = Txt.query_text_id;
+    ON Qry.query_text_id = Txt.query_text_id
+INNER JOIN sys.query_store_runtime_stats RtSt
+ON Pln.plan_id = RtSt.plan_id;
 ```
 
 ## Query Store for secondary replicas
@@ -128,16 +130,16 @@ For complete information on Query Store for secondary replicas, see [Query Store
 
 After enabling the Query Store, refresh the database portion of the Object Explorer pane to add the **Query Store** section.
 
-:::image type="content" source="media/monitoring-performance-by-using-the-query-store/objectexplorerquerystore_sql17.PNG" alt-text="Screenshot of the Query Store reporting tree in SSMS Object Explorer.":::
+:::image type="content" source="media/monitoring-performance-by-using-the-query-store/object-explorer-query-store.png" alt-text="Screenshot of the Query Store reporting tree in SSMS Object Explorer.":::
 
-> [!NOTE]  
+> [!NOTE]
 > For Azure Synapse Analytics, Query Store views are available under **System Views** in the database portion of the Object Explorer pane.
 
-Select **Regressed Queries** to open the **Regressed Queries** pane in [!INCLUDE [ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. The Regressed Queries pane shows you the queries and plans in the query store. Use the dropdown list boxes at the top to filter queries based on various criteria: **Duration (ms)** (Default), CPU Time (ms), Logical Reads (KB), Logical Writes (KB), Physical Reads (KB), CLR Time (ms), DOP, Memory Consumption (KB), Row Count, Log Memory Used (KB), Temp DB Memory Used (KB), and Wait Time (ms).
+Select **Regressed Queries** to open the **Regressed Queries** pane in [!INCLUDE [ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. The Regressed Queries pane shows you the queries and plans in the query store. Use the dropdown list boxes at the top to filter queries based on various criteria: Duration (ms) (Default), CPU Time (ms), Logical Reads (KB), Logical Writes (KB), Physical Reads (KB), CLR Time (ms), DOP, Memory Consumption (KB), Row Count, Log Memory Used (KB), Temp DB Memory Used (KB), and Wait Time (ms).
 
 Select a plan to see the graphical query plan. Buttons are available to view the source query, force and unforce a query plan, toggle between grid and chart formats, compare selected plans (if more than one is selected), and refresh the display.
 
-:::image type="content" source="media/monitoring-performance-by-using-the-query-store/objectexplorerregressedqueries.PNG" alt-text="Screenshot of the SQL Server Regressed Queries report in SSMS Object Explorer.":::
+:::image type="content" source="media/monitoring-performance-by-using-the-query-store/object-explorer-regressed-queries.png" alt-text="Screenshot of the SQL Server Regressed Queries report in SSMS Object Explorer.":::
 
 To force a plan, select a query and plan, then select **Force Plan**. You can only force plans that were saved by the query plan feature and are still retained in the query plan cache.
 
@@ -147,7 +149,7 @@ Starting with [!INCLUDE [ssSQL17](../../includes/sssql17-md.md)] and [!INCLUDE [
 
 In Query Store, wait types are combined into **wait categories**. The mapping of wait categories to wait types is available in [sys.query_store_wait_stats (Transact-SQL)](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md#wait-categories-mapping-table).
 
-Select **Query Wait Statistics** to open the **Query Wait Statistics** pane in [!INCLUDE [ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v18 or higher. The Query Wait Statistics pane shows you a bar chart containing the top wait categories in the Query Store. Use the dropdown list at the top to select an aggregate criteria for the wait time: avg, max, min, std dev, and **total** (default).
+Select **Query Wait Statistics** to open the **Query Wait Statistics** pane in [!INCLUDE [ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 18.0 or higher versions. The Query Wait Statistics pane shows you a bar chart containing the top wait categories in the Query Store. Use the dropdown list at the top to select an aggregate criteria for the wait time: avg, max, min, std dev, and **total** (default).
 
 :::image type="content" source="media/monitoring-performance-by-using-the-query-store/query-store-waits.PNG" alt-text="Screenshot of the SQL Server Query Wait Statistics report in SSMS Object Explorer.":::
 
@@ -276,7 +278,9 @@ Stored procedures configure the Query Store.
 
 <sup>1</sup> In extreme scenarios Query Store can enter an ERROR state because of internal errors. Starting with [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)], if this happens, Query Store can be recovered by executing the `sp_query_store_consistency_check` stored procedure in the affected database. See [sys.database_query_store_options](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md) for more details described in the `actual_state_desc` column description.
 
-## <a id="Scenarios"></a> <a name="OptionMgmt"> Query Store maintenance
+<a id="Scenarios"></a> 
+<a name="OptionMgmt"></a>
+## Query Store maintenance
 
 Best practices and recommendations for maintenance and management of the Query Store have been expanded in this article: [Best practices for managing the Query Store](manage-the-query-store.md).
 
@@ -287,7 +291,7 @@ For more information about diving into performance tuning with Query Store, see 
 Other performance topics:
 - [Query Store Usage Scenarios](../../relational-databases/performance/query-store-usage-scenarios.md)
 
-## See also
+## Related content
 
 - [Query Store Stored Procedures (Transact-SQL)](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)
 - [Query Store Catalog Views (Transact-SQL)](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)
@@ -298,9 +302,6 @@ Other performance topics:
 - [Monitor and Tune for Performance](../../relational-databases/performance/monitor-and-tune-for-performance.md)
 - [Performance Monitoring and Tuning Tools](../../relational-databases/performance/performance-monitoring-and-tuning-tools.md)
 - [Using the Query Store with In-Memory OLTP](../../relational-databases/performance/using-the-query-store-with-in-memory-oltp.md)
-
-## Next steps
-
 - [Best Practices with the Query Store](../../relational-databases/performance/best-practice-with-the-query-store.md)
 - [Best practices for managing the Query Store](manage-the-query-store.md)
 - [Tune performance with the Query Store](tune-performance-with-the-query-store.md)

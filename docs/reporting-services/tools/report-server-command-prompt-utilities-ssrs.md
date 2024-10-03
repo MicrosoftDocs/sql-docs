@@ -3,11 +3,12 @@ title: "Report Server command prompt utilities"
 description: Learn about the SQL Server Reporting Services command line utilities that are used to administer a report server.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/14/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: tools
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "rsconfig utility"
   - "components [Reporting Services], command line utilities"
@@ -28,9 +29,8 @@ helpviewer_keywords:
 > [!NOTE]  
 >  If you prefer to use a tool that has a graphical user interface, you can use the Report Server Configuration Manager instead of **rsconfig** and **rskeymgmt**.  
   
-## Related content 
- [Report Server Configuration Manager &#40;native mode&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
- [Reporting Services tools](../../reporting-services/tools/reporting-services-tools.md)   
- [Reporting Services report server &#40;native mode&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)  
-  
-  
+## Related content
+
+- [Report Server Configuration Manager &#40;native mode&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)
+- [Reporting Services tools](../../reporting-services/tools/reporting-services-tools.md)
+- [Reporting Services report server &#40;native mode&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)

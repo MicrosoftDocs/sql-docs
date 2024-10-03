@@ -4,7 +4,7 @@ description: "Creates a new Database Mail account holding information about an S
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 11/02/2023
+ms.date: 08/21/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -103,7 +103,7 @@ Returns the account ID for the new account. *@account_id* is **int**, with a def
 
 ## Remarks
 
-Database Mail provides separate parameters for *@email_address*, *@display_name*, and *@replyto_address*. The *@email_address* parameter is the address from which the message is sent. The *@display_name* parameter is the name shown in the `From:` field of the e-mail message. The *@replyto_address* parameter is the address where replies to the e-mail message will be sent. For example, an account used for [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Agent may send e-mail messages from an e-mail address that is only used for [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Messages from that address should display a friendly name, so recipients can easily determine that [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Agent sent the message. If a recipient replies to the message, the reply should go to the database administrator rather than the address used by [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Agent. For this scenario, the account uses `SqlAgent@adventure-works.com` as the e-mail address. The display name is set to `SQL Server Agent Automated Mailer`. The account uses `danw@adventure-works.com` as the reply to address, so replies to messages sent from this account go to the database administrator rather than the e-mail address for [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Agent. By providing independent settings for these three parameters, Database Mail allows you to configure messages to suit your needs.
+Database Mail provides separate parameters for *@email_address*, *@display_name*, and *@replyto_address*. The *@email_address* parameter is the address from which the message is sent. The *@display_name* parameter is the name shown in the `From:` field of the e-mail message. The *@replyto_address* parameter is the address where replies to the e-mail message will be sent. For example, an account used for [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Agent might send e-mail messages from an e-mail address that is only used for [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Messages from that address should display a friendly name, so recipients can easily determine that [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Agent sent the message. If a recipient replies to the message, the reply should go to the database administrator rather than the address used by [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Agent. For this scenario, the account uses `SqlAgent@adventure-works.com` as the e-mail address. The display name is set to `SQL Server Agent Automated Mailer`. The account uses `danw@adventure-works.com` as the reply to address, so replies to messages sent from this account go to the database administrator rather than the e-mail address for [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Agent. By providing independent settings for these three parameters, Database Mail allows you to configure messages to suit your needs.
 
 The *@mailserver_type* parameter supports the value `SMTP`.
 

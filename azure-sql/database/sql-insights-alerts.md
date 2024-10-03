@@ -5,31 +5,27 @@ description: Create alerts with SQL Insights (preview) in Azure Monitor
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma
-ms.date: 07/29/2022
-ms.service: sql-db-mi
+ms.date: 09/19/2024
+ms.service: azure-sql
 ms.subservice: monitoring
 ms.topic: conceptual
 ms.custom: subject-monitoring
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
-
 # Create alerts with SQL Insights (preview)
+
 [!INCLUDE [sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi.md)]
+
+[!INCLUDE [sql-insights-retirement](../includes/sql-insights-retirement.md)]
 
 SQL Insights (preview) includes a set of alert rule templates you can use to create [alert rules in Azure Monitor](/azure/azure-monitor/alerts/alerts-overview) for common SQL issues. The alert rules in SQL Insights (preview) are log alert rules based on performance data stored in the *InsightsMetrics* table in Azure Monitor Logs.  
 
-> [!NOTE]
-> To create an alert for SQL Insights (preview) using a resource manager template, see [Resource Manager template samples for SQL Insights (preview)](/azure/azure-monitor/insights/resource-manager-sql-insights#create-an-alert-rule-for-sql-insights).
-
-
-> [!NOTE]
-> If you have requests for more SQL Insights (preview) alert rule templates, please send feedback using the link at the bottom of this page or using the SQL Insights (preview) feedback link in the Azure portal.
+To create an alert for SQL Insights (preview) using a resource manager template, see [Resource Manager template samples for SQL Insights (preview)](/azure/azure-monitor/insights/resource-manager-sql-insights#create-an-alert-rule-for-sql-insights).
 
 ## Enable alert rules 
 Use the following steps to enable the alerts in Azure Monitor from the Azure portal. The alert rules that are created will be scoped to all of the SQL resources monitored under the selected monitoring profile.  When an alert rule is triggered, it will trigger on the specific SQL instance or database.
 
-> [!NOTE]
-> You can also create custom [log alert rules](/azure/azure-monitor/alerts/alerts-log) by running queries on the data sets in the *InsightsMetrics* table and then saving those queries as an alert rule. 
+You can also create custom [log alert rules](/azure/azure-monitor/alerts/alerts-log) by running queries on the data sets in the *InsightsMetrics* table and then saving those queries as an alert rule. 
 
 Select **SQL (preview)** from the **Insights** section of the Azure Monitor menu in the Azure portal. Select **Alerts**.
 
@@ -52,8 +48,6 @@ If you choose to view the templates, select **Deploy** from the template page to
 
 :::image type="content" source="media/sql-insights-alerts/view-template-deploy.png" alt-text="Screenshot of the Deploy from view template page for Azure Monitor in the Azure portal, displaying the json of the alert. The Deploy menu button is highlighted. ":::
 
-
-## Next steps
+## Related content
 
 Learn more about [alerts in Azure Monitor](/azure/azure-monitor/alerts/alerts-overview).
-

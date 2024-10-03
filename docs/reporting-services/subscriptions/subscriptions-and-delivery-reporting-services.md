@@ -3,11 +3,12 @@ title: "Subscriptions and delivery (Reporting Services)"
 description: In this article, learn about Reporting Services subscriptions, which delivers a report at a specific time or in response to an event.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 05/25/2023
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: subscriptions
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "subscriptions [Reporting Services], report distribution"
   - "reports [Reporting Services], distributing"
@@ -172,9 +173,9 @@ helpviewer_keywords:
   
 -   For an example PowerShell script to list all [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] subscriptions that are configured to use the **File share account** see [Subscription settings and a file share account &#40;Configuration Manager&#41;](../../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md).  
   
-## Related content 
- [Create a data-driven subscription &#40;SSRS tutorial&#41;](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)   
- [Schedules](../../reporting-services/subscriptions/schedules.md)   
- [Reporting Services report server &#40;native mode&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
- [Monitor Reporting Services subscriptions](../../reporting-services/subscriptions/monitor-reporting-services-subscriptions.md)  
-  
+## Related content
+
+- [Create a data-driven subscription &#40;SSRS tutorial&#41;](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)
+- [Schedules](../../reporting-services/subscriptions/schedules.md)
+- [Reporting Services report server &#40;native mode&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)
+- [Monitor Reporting Services subscriptions](../../reporting-services/subscriptions/monitor-reporting-services-subscriptions.md)

@@ -1,14 +1,15 @@
 ---
-title: Install Extensions in SQL Server Management Studio (SSMS)
-description: "Install Extensions in SQL Server Management Studio (SSMS)"
+title: Install extensions in SQL Server Management Studio (SSMS)
+description: Learn how to install extensions in SQL Server Management Studio (SSMS).
 author: dzsquared
 ms.author: drskwier
-ms.reviewer: maghan
-ms.date: 07/29/2020
+ms.reviewer: maghan, randolphwest
+ms.date: 08/19/2024
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-ms.custom: intro-installation
+ms.custom:
+  - intro-installation
 keywords:
   - "extensions"
   - "vsix"
@@ -16,32 +17,23 @@ keywords:
   - "install vsix"
 ---
 
-# Install Extensions in SQL Server Management Studio (SSMS)
+# Install extensions in SQL Server Management Studio (SSMS)
 
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW](../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
-SQL Server Management Studio (SSMS) extensions are created with C# through the "Visual Studio extension development" workload in Visual Studio. SSMS 18.x is built on the Visual Studio 2017 shell and is subject to the limitations of that environment.
+SQL Server Management Studio (SSMS) extensions are created using the Visual Studio Software Development Kit (SDK). SSMS 18.x and later versions are built on the Visual Studio 2017 Isolated Shell (IsoShell), and are subject to the limitations of that environment.
 
-Extension installation in SSMS 18.x can be achieved by deploying the VSIX through Visual Studio or an independent managed package installer.  The Visual Studio deployment is outlined below.
+Extension installation for SSMS is managed by an independent managed package installer.
 
-> [!NOTE]
-> SQL Server Management Studio extensions cannot be installed via VSIXInstaller under SSMS 18.x.
-  
-## Visual Studio deployment of an extension for SSMS 18.x
+> [!NOTE]  
+> SQL Server Management Studio extensions can't be installed via VSIXInstaller for SSMS 18.x and later versions.
 
-Manual extension installation is accomplished by copying the associated extension files (VSIX) into the default SSMS extensions folder.  SSMS automatically checks this folder for extensions at launch.  The VSIX deployment can be completed by Visual Studio at project build time. 
+## Manual installation of an extension for SSMS
 
-  
-1.  Locate your SSMS installation and default extensions folder.  With default SSMS installation settings, the folder location is ```C:\Program Files (x86)\Microsoft SQL Server Management Studio 18\Common7\IDE\Extensions\```.  
+To install an extension manually, you must copy the associated extension files (`.vsix`) into the default SSMS extensions folder. SSMS automatically checks this folder for extensions at launch.
 
+1. Locate your SSMS installation and extensions folder. With default SSMS installation settings, the folder location for SSMS 20 is `C:\Program Files (x86)\Microsoft SQL Server Management Studio 20\Common7\IDE\Extensions\`.
 
-2. Launch Visual Studio as administrator.
+1. Copy entire extension folder structure to the Extensions folder.
 
-3.  The file copy process can be completed by Visual Studio at build time by checking the "Copy VSIX content to the following location" checkbox in the VSIX tab of the project's properties window. In the textbox below the checkbox, enter the folder location above with a folder for this extension appended.  For example: ```C:\Program Files (x86)\Microsoft SQL Server Management Studio 18\Common7\IDE\Extensions\SampleExtension```
-  
-![Project properties window VSIX settings with 3 checkboxes and a text box](./media/install-extensions/vsix_ssms.png)
-
-4. Build the extension project, a successful build will transfer the extension files to the SSMS extension folder.
-
-5.  Launch SSMS and test the extension's functionality.
-  
+1. Close SSMS and restart to use the extension.

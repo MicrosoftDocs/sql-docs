@@ -4,7 +4,7 @@ description: Flushes the in memory syscommittab to disk to help with Change Trac
 author: JetterMcTedder
 ms.author: bspendolini
 ms.reviewer: randolphwest
-ms.date: 07/06/2023
+ms.date: 08/21/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -40,7 +40,7 @@ sp_flush_commit_table
 
 #### [ @flush_ts = ] *flush_ts*
 
-Specifies the current change tracking version. *@flush_ts* is **bigint**, and can't be NULL.
+Specifies the current change tracking version. *@flush_ts* is **bigint**, and can't be `NULL`.
 
 #### [ @cleanup_version = ] *cleanup_version*
 

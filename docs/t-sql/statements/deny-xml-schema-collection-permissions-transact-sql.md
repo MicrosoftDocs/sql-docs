@@ -45,8 +45,6 @@ DENY permission  [ ,...n ] ON
     | Database_user_with_no_login  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
  *permission*  
  Specifies a permission that can be denied on an XML schema collection. For a list of the permissions, see the Remarks section later in this topic.  

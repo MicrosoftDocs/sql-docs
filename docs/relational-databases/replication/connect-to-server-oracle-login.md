@@ -3,11 +3,12 @@ title: "Connect to Server (Oracle), Login"
 description: "Connect to Server (Oracle), Login"
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/14/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: ui-reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 f1_keywords:
   - "sql13.rep.oracleconnection.login.f1"
 helpviewer_keywords:
@@ -31,7 +32,6 @@ helpviewer_keywords:
  **Login** and **Password**  
  If you selected **Oracle Standard Authentication** for the **Authentication** option, specify the login and password to use, which must be the same as those specified for the replication administrative user schema.  
   
-## See Also  
- [Glossary of Terms for Oracle Publishing](../../relational-databases/replication/non-sql/glossary-of-terms-for-oracle-publishing.md)  
-  
-  
+## Related content
+
+- [Glossary of Terms for Oracle Publishing](../../relational-databases/replication/non-sql/glossary-of-terms-for-oracle-publishing.md)

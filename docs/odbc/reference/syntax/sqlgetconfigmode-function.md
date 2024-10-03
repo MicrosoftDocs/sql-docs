@@ -27,7 +27,7 @@ apitype: "dllExport"
 ```cpp  
   
 BOOL SQLGetConfigMode(  
-     UWORD *   pwConfigMode);  
+     UWORD *   pwConfigMode);  
 ```  
   
 ## Arguments  

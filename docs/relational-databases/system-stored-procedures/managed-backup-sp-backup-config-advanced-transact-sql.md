@@ -4,7 +4,7 @@ description: Configures advanced settings for SQL Server Managed Backup to Azure
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 05/31/2023
+ms.date: 08/21/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -45,11 +45,11 @@ EXEC managed_backup.sp_backup_config_advanced
 
 The database name for enabling managed backup on a specific database.
 
-If *@database_name* is set to NULL, the settings are applied at instance level (applies to all new databases created on the instance).
+If *@database_name* is set to `NULL`, the settings are applied at instance level (applies to all new databases created on the instance).
 
 #### [ @encryption_algorithm ] = '*name of the encryption algorithm*'
 
-The name of the encryption algorithm used during the backup to encrypt the backup file. *@encryption_algorithm* is **sysname**. It is a required parameter when configuring [!INCLUDE [ss-managed-backup](../../includes/ss-managed-backup-md.md)] for the first time for the database. Specify `NO_ENCRYPTION` if you don't wish to encrypt the backup file. When you change the [!INCLUDE [ss-managed-backup](../../includes/ss-managed-backup-md.md)] configuration settings, this parameter is optional. If the parameter isn't specified, the existing configuration values are retained. The allowed values for this parameter are:
+The name of the encryption algorithm used during the backup to encrypt the backup file. *@encryption_algorithm* is **sysname**. It's a required parameter when configuring [!INCLUDE [ss-managed-backup](../../includes/ss-managed-backup-md.md)] for the first time for the database. Specify `NO_ENCRYPTION` if you don't wish to encrypt the backup file. When you change the [!INCLUDE [ss-managed-backup](../../includes/ss-managed-backup-md.md)] configuration settings, this parameter is optional. If the parameter isn't specified, the existing configuration values are retained. The allowed values for this parameter are:
 
 - AES_128
 - AES_192
@@ -57,7 +57,7 @@ The name of the encryption algorithm used during the backup to encrypt the backu
 - TRIPLE_DES_3KEY
 - NO_ENCRYPTION
 
-For more information on encryption algorithms, see [Choose an Encryption Algorithm](../security/encryption/choose-an-encryption-algorithm.md).
+For more information on encryption algorithms, see [Choose an encryption algorithm](../security/encryption/choose-an-encryption-algorithm.md).
 
 #### [ @encryptor_type = ] { 'CERTIFICATE' | 'ASYMMETRIC_KEY' }
 

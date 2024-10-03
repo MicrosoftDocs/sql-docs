@@ -4,8 +4,8 @@ description: Create a transactionally consistent copy of an existing database in
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma, randolphwest, hudequei
-ms.date: 09/28/2023
-ms.service: sql-database
+ms.date: 09/27/2024
+ms.service: azure-sql-database
 ms.subservice: data-movement
 ms.topic: how-to
 ms.custom:
@@ -14,7 +14,6 @@ ms.custom:
   - devx-track-azurecli
 ---
 # Copy a transactionally consistent copy of a database in Azure SQL Database
-
 [!INCLUDE [appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
 Azure SQL Database provides several methods for creating a copy of an existing [database](single-database-overview.md) on either the same server or a different server. You can copy a database by using Azure portal, PowerShell, Azure CLI, or Transact-SQL.
@@ -23,14 +22,16 @@ Azure SQL Database provides several methods for creating a copy of an existing [
 
 ## Overview
 
-A database copy is a transactionally consistent snapshot of the source database as of a point in time after the copy request is initiated. You can select the same server or a different server for the copy. Also you can choose to keep the backup redundancy and compute size of the source database, or use a different backup storage redundancy and/or compute size within the same service tier. There are couple of exceptions where a database in Standard service tier can be copied to either Standard or General Purpose tier and a database in Premium service tier can be copied to either Premium or Business Critical tier. After the copy is complete, it becomes a fully functional, independent database. The logins, users, and permissions in the copied database are managed independently from the source database. The copy is created using the geo-replication technology. Once replica seeding is complete, the geo-replication link is automatically terminated. All the requirements for using geo-replication apply to the database copy operation. See [Active geo-replication overview](active-geo-replication-overview.md) for details.
+A database copy is a transactionally consistent snapshot of the source database at the point in time when the copy request is initiated. You can select the same server or a different server for the copy. Also you can choose to keep the backup redundancy and compute size of the source database, or use a different backup storage redundancy and/or compute size within the same service tier. It's also possible to copy a database in the Standard service tier to either the Standard or General Purpose tier and a database in the Premium service tier to either the Premium or Business Critical tier. 
+
+After the copy is complete, the new database is a fully functional and independent database to the source database. The logins, users, and permissions in the copied database are managed independently from the source database. The copy is created using geo-replication technology. Once replica seeding is complete, the geo-replication link is automatically terminated. All the requirements for using geo-replication apply to the database copy operation. See [Active geo-replication overview](active-geo-replication-overview.md) for details.
 
 > [!NOTE]  
 > The [Azure portal](https://portal.azure.com), PowerShell, and the Azure CLI don't support database copy to a different subscription.
 
-## Database copy for Azure SQL Hyperscale
+## Database copy for Hyperscale databases
 
-For Azure SQL Hyperscale, the target database determines whether the copy is a fast copy, or a size-of-data copy.
+For databases in the [Hyperscale service tier](service-tier-hyperscale.md), the target database determines whether the copy is a fast copy, or a size-of-data copy: 
 
 - **Fast copy**: When the copy is done in the same region as the source, the copy is created from the snapshots of blobs, this copy is a fast operation regardless of the database size.
 
@@ -50,13 +51,13 @@ If you use server level logins for data access and copy the database to a differ
 
 To copy a database by using the Azure portal, open the page for your database, and then choose **Copy** to open the **Create SQL Database - Copy database** page. Fill in the values for the target server where you want to copy your database to.
 
-:::image type="content" source="media/database-copy/database-copy.png" alt-text="Screenshot of Azure portal, showing Database copy option highlighted on the database overview page.":::
+:::image type="content" source="media/database-copy/database-copy.png" alt-text="Screenshot of Azure portal, showing Database copy option highlighted on the database overview page." lightbox="media/database-copy/database-copy.png":::
 
-## Copy using PowerShell or the Azure CLI
+## Copy a database 
 
-To copy a database, use the following examples.
+You can copy a database by using PowerShell, the Azure CLI, and Transact-SQL (T-SQL). 
 
-# [PowerShell](#tab/azure-powershell)
+### [PowerShell](#tab/azure-powershell)
 
 For PowerShell, use the [New-AzSqlDatabaseCopy](/powershell/module/az.sql/new-azsqldatabasecopy) cmdlet.
 
@@ -72,7 +73,7 @@ The database copy is an asynchronous operation but the target database is create
 
 For a complete sample PowerShell script, see [Copy a database to a new server](scripts/copy-database-to-new-server-powershell.md).
 
-# [Azure CLI](#tab/azure-cli)
+### [Azure CLI](#tab/azure-cli)
 
 ```azurecli
 az sql db copy --dest-name "CopyOfMySampleDatabase" --dest-resource-group "myResourceGroup" --dest-server $targetserver `
@@ -81,9 +82,7 @@ az sql db copy --dest-name "CopyOfMySampleDatabase" --dest-resource-group "myRes
 
 The database copy is an asynchronous operation but the target database is created immediately after the request is accepted. If you need to cancel the copy operation while still in progress, drop the target database using the [az sql db delete](/cli/azure/sql/db#az-sql-db-delete) command.
 
----
-
-## Copy using Transact-SQL
+### [Transact-SQL](#tab/tsql)
 
 Log in to the `master` database with the server administrator login or the login that created the database you want to copy. For database copy to succeed, logins that aren't the server administrator must be members of the **dbmanager** role. For more information about logins and connecting to the server, see [Manage logins](logins-create-manage.md).
 
@@ -192,11 +191,13 @@ AS COPY OF source_server_name.source_database_name;
 ```
 
 > [!TIP]  
-> Database copy using T-SQL supports copying a database from a subscription in a different Azure tenant. This is only supported when using a SQL authentication login to log in to the target server.
-> Creating a database copy on a logical server in a different Azure tenant is not supported when [Microsoft Entra](https://techcommunity.microsoft.com/t5/azure-sql/support-for-azure-ad-user-creation-on-behalf-of-azure-ad/ba-p/2346849) authentication is active (enabled) on either source or target logical server.
+> Copying a database from a subscription in a different Azure tenant is only supported when using T-SQL and a SQL authentication login to log in to the target server. Creating a database copy on a logical server in a different Azure tenant is not supported with [Microsoft Entra authentication](authentication-aad-overview.md).
 
 
-## Monitor the progress of the copying operation
+---
+
+
+## Monitor progress of the copy operation
 
 Monitor the copying process by querying the [sys.databases](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql), [sys.dm_database_copies](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-copies-azure-sql-database), and [sys.dm_operation_status](/sql/relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database) views. While the copying is in progress, the `state_desc` column of the `sys.databases` view for the new database is set to `COPYING`.
 
@@ -207,9 +208,9 @@ Monitor the copying process by querying the [sys.databases](/sql/relational-data
 > If you decide to cancel the copying while it's in progress, execute the [DROP DATABASE](/sql/t-sql/statements/drop-database-transact-sql) statement on the new database.
 
 > [!IMPORTANT]  
-> If you need to create a copy with a substantially smaller service objective than the source, the target database may not have sufficient resources to complete the seeding process and it can cause the copy operation to fail. In this scenario use a geo-restore request to create a copy in a different server and/or a different region. For more information, see [Recover an Azure SQL Database using database backups](recovery-using-backups.md#geo-restore).
+> If you need to create a copy with a substantially smaller service objective than the source, the target database might not have sufficient resources to complete the seeding process and it can cause the copy operation to fail. In this scenario use a geo-restore request to create a copy in a different server and/or a different region. For more information, see [Recover an Azure SQL Database using database backups](recovery-using-backups.md#geo-restore).
 
-## Azure RBAC roles and permissions to manage database copy
+## Permissions
 
 To create a database copy, you need to be in the following roles:
 

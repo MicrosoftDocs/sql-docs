@@ -5,7 +5,7 @@ author: urosmil
 ms.author: urmilano
 ms.reviewer: mathoma, randolphwest
 ms.date: 05/21/2024
-ms.service: sql-managed-instance
+ms.service: azure-sql-managed-instance
 ms.subservice: deployment-configuration
 ms.custom: ignite-2023, devx-track-azurecli, devx-track-azurepowershell
 ms.topic: conceptual
@@ -15,10 +15,10 @@ ms.topic: conceptual
 
 [!INCLUDE [appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
 
-This article describes how to stop and start an instance to save on billing costs when you're using Azure SQL Managed Instance. You can stop and start your instance by using the Azure portal, Azure PowerShell, Azure CLI, or REST API.
+This article describes how to stop and start an instance to save on billing costs when you're using [Azure SQL Managed Instance](sql-managed-instance-paas-overview.md)  in the General Purpose service tier. You can stop and start your instance by using the Azure portal, Azure PowerShell, Azure CLI, or REST API.
 
 > [!NOTE]  
-> The stop and start feature for managed instances is available only for SQL managed instances in the General Purpose service tier.
+> The stop and start feature controls billing and should not be used to [restart the instance](user-initiated-failover.md) as a troubleshooting step. 
 
 ## Overview
 
@@ -89,6 +89,7 @@ Reservation discounts are offered on a ["use it or lose it"](/azure/cost-managem
 
 Consider the following limitations:
 
+- Stop and start of an instance is currently only possible for instances in the General Purpose service tier.
 - You can't stop instances that:
   - Have an ongoing [management operation](management-operations-overview.md) (such as an ongoing restore, vCore scaling, and so on)
   - Are part of a [failover group](failover-group-sql-mi.md)
@@ -106,12 +107,9 @@ Consider the following limitations:
 
 ## Prerequisites
 
-To use the instance stop and start feature, your instance must meet the following prerequisites: 
+To use the instance stop and start feature, your instance must be in the General Purpose service tier. 
 
-- Your instance has to be part of a subnet with the November 2022 feature wave enabled. 
-- Your instance has to be in the General Purpose service tier. 
-
-Instances that don't meet the prerequisites won't see the stop and start controls on the **Overview** page for the SQL managed instance resource. 
+Instances that don't meet the prerequisite have the stop and start controls disabled on the **Overview** page for the SQL managed instance resource in the Azure portal. Hovering over the control explains why the feature can't be used by the instance. 
 
 ## Prepare command line environment
 

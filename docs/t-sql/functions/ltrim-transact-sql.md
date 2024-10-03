@@ -31,7 +31,7 @@ Returns a character string after truncating all leading spaces.
 ::: moniker-end
 
 ::: moniker range=">=sql-server-ver16 || >=sql-server-linux-ver16 || = azure-sqldw-latest || = azuresqldb-current || = azuresqldb-mi-current ||=fabric"
-Removes space character `char(32)` or other specified characters from the start of a string.
+Removes space character `char(32)` or other specified characters from the start of a string.
 ::: moniker-end
 
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
@@ -52,8 +52,6 @@ Syntax for [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later, [!IN
 ```syntaxsql
 LTRIM ( character_expression , [ characters ] )
 ```
-
-[!INCLUDE [sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## Arguments
 

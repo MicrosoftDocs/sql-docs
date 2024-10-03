@@ -4,8 +4,8 @@ description: This article describes the new serverless compute tier and compares
 author: oslake
 ms.author: moslake
 ms.reviewer: wiassaf, mathoma
-ms.date: 02/12/2024
-ms.service: sql-database
+ms.date: 10/2/2024
+ms.service: azure-sql-database
 ms.subservice: service-overview
 ms.topic: conceptual
 ms.custom:
@@ -31,7 +31,7 @@ A compute autoscaling range and an auto-pause delay are important parameters for
 ### Performance configuration
 
 - The **minimum vCores** and **maximum vCores** are configurable parameters that define the range of compute capacity available for the database. Memory and IO limits are proportional to the vCore range specified.  
-- The **auto-pause delay** is a configurable parameter that defines the period of time the database must be inactive before it is automatically paused. The database is automatically resumed when the next sign-in or other activity occurs. Alternatively, automatic pausing can be disabled.
+- The **auto-pause delay** is a configurable parameter that defines the period of time the database must be inactive before it is automatically paused. The database is automatically resumed when the next login or other activity occurs. Alternatively, automatic pausing can be disabled.
 
 ### Cost
 
@@ -184,7 +184,7 @@ Auto-resuming is triggered if any of the following conditions are true at any ti
 
 |Feature|Auto-resume trigger|
 |---|---|
-|Authentication and authorization|Sign-in|
+|Authentication and authorization|Login|
 |Threat detection|Enabling/disabling threat detection settings at the database or server level.<br>Modifying threat detection settings at the database or server level.|
 |Data discovery and classification|Adding, modifying, deleting, or viewing sensitivity labels|
 |Auditing|Viewing auditing records.<br>Updating or viewing auditing policy.|
@@ -197,19 +197,18 @@ Auto-resuming is triggered if any of the following conditions are true at any ti
 |Database copying|Create database as copy.<br>Export to a BACPAC file.|
 |SQL data sync|Synchronization between hub and member databases that run on a configurable schedule or are performed manually|
 |Modifying certain database metadata|Adding new database tags.<br>Changing maximum vCores, minimum vCores, or auto-pause delay.|
-|SQL Server Management Studio (SSMS)|When you use SSMS versions earlier than 18.1, and opening a new query window for any database in the server, any auto-paused database in the same server is resumed. This behavior does not occur if using SSMS version 18.1 or later.|
+|SQL Server Management Studio (SSMS)|When using SSMS versions earlier than 18.1 and opening a new query window for any database in the server, any auto-paused database in the same server is resumed. This behavior does not occur if using SSMS version 18.1 or later.|
 
-- Monitoring, management, or other solutions performing any of these operations listed triggers auto-resuming.
-- Auto-resuming is also triggered during the deployment of some service updates that require the database be online.
+Monitoring, management, or other solutions performing any of the operations listed above will trigger auto-resuming.  Auto-resuming is also triggered during the deployment of some service updates that require the database be online.
 
 ### Connectivity
 
-If a serverless database is paused, the first sign-in activity resumes the database and returns an error stating that the database is unavailable with error code 40613. Once the database is resumed, sign-in can be retried to establish connectivity. Database clients with a [recommended connection retry logic](/azure/architecture/patterns/retry) should not need to be modified. For recommended patterns for connection retry logic, review:
+If a serverless database is paused, the first connection attempt resumes the database and returns an error stating that the database is unavailable with error code 40613. Once the database is resumed, the login can be retried to establish connectivity. Database clients following [connection retry logic recommendations](/azure/architecture/patterns/retry) should not need to be modified. For connection retry logic options and recommendations, see:
 
-- [Retry logic in SqlClient](/sql/connect/ado-net/configurable-retry-logic)
-- [Retry logic in SQL Database using Entity Framework Core](/azure/architecture/best-practices/retry-service-specific#sql-database-using-entity-framework-core)
-- [Retry logic in SQL Database using Entity Framework 6](/azure/architecture/best-practices/retry-service-specific#sql-database-using-entity-framework-6)
-- [Retry logic in SQL Database using ADO.NET](/azure/architecture/best-practices/retry-service-specific#sql-database-using-adonet)
+- [Connection retry logic in SqlClient](/sql/connect/ado-net/configurable-retry-logic)
+- [Connection retry logic in SQL Database using Entity Framework Core](/azure/architecture/best-practices/retry-service-specific#sql-database-using-entity-framework-core)
+- [Connection retry logic in SQL Database using Entity Framework 6](/azure/architecture/best-practices/retry-service-specific#sql-database-using-entity-framework-6)
+- [Connection retry logic in SQL Database using ADO.NET](/azure/architecture/best-practices/retry-service-specific#sql-database-using-adonet)
 
 ### Latency
 
@@ -219,11 +218,11 @@ The latency to auto-resume and auto-pause a serverless database is generally ord
 
 #### Key deletion or revocation
 
-If using [customer managed transparent data encryption](transparent-data-encryption-byok-overview.md) (BYOK) and the serverless database is auto-paused when key deletion or revocation occurs, then the database remains in the auto-paused state. In this case, after the database is next resumed, the database becomes inaccessible within approximately 10 minutes. Once the database becomes inaccessible, the recovery process is the same as for provisioned compute databases. If the serverless database is online when key deletion or revocation occurs, then the database also becomes inaccessible within approximately 10 minutes in the same way as with provisioned compute databases.
+If using [customer managed transparent data encryption](transparent-data-encryption-byok-overview.md) (BYOK) and the serverless database is auto-paused when key deletion or revocation occurs, then the database remains in the auto-paused state.  In this case, after the database is next resumed, the database becomes inaccessible within approximately 10 minutes.  Once the database becomes inaccessible, the recovery process is the same as for provisioned compute databases.  If the serverless database is online when key deletion or revocation occurs, then the database also becomes inaccessible within approximately 10 minutes in the same way as with provisioned compute databases.
 
 #### Key rotation
 
-If using [customer-managed transparent data encryption](transparent-data-encryption-byok-overview.md) (BYOK), and the serverless database is auto-paused, automated key rotation is deferred until the database is auto-resumed.
+If using [customer-managed transparent data encryption](transparent-data-encryption-byok-overview.md) (BYOK), and serverless auto-pausing is enabled, then the database is auto-resumed whenever keys are rotated and subsequently auto-paused when auto-pausing conditions are satisfied.
 
 ## <a id="create-serverless-db"></a> Create a new serverless database
 
@@ -236,7 +235,7 @@ Creating a new database or moving an existing database into a serverless compute
    |Parameter|Value choices|Default value|
    |---|---|---|---|
    |Minimum vCores|Depends on maximum vCores configured - see [resource limits](resource-limits-vcore-single-databases.md#general-purpose---serverless-compute---gen5).|0.5 vCores|
-   |Auto-pause delay|Minimum: 60 minutes (1 hour)<br>Maximum: 10,080 minutes (7 days)<br>Increments: 10 minutes<br>Disable auto-pause: -1|60 minutes|
+   |Auto-pause delay|Minimum: 15 minutes<br>Maximum: 10,080 minutes (7 days)<br>Increments: 1 minute<br>Disable auto-pause: -1|60 minutes|
 
 The following examples create a new database in the serverless compute tier.
 
@@ -314,7 +313,7 @@ az sql db create -g $resourceGroupName -s $serverName -n $databaseName `
 
 #### Use Transact-SQL (T-SQL)
 
-When you use T-SQL to create a new serverless database, default values are applied for the minimum vCores and auto-pause delay. They can later be changed from the Azure portal or via other management APIs (PowerShell, Azure CLI, REST API).
+When using T-SQL to create a new serverless database, default values are applied for the minimum vCores and auto-pause delay. Their values can subsequently be changed from the Azure portal or via API including PowerShell, Azure CLI, and REST.
 
 For details, see [CREATE DATABASE](/sql/t-sql/statements/create-database-transact-sql?view=azuresqldb-current&preserve-view=true).  
 
@@ -340,16 +339,15 @@ MODIFY ( SERVICE_OBJECTIVE = 'HS_S_Gen5_2') ;
 
 
 
-## Move a database between compute tiers
+## Move a database between compute tiers or service tiers
 
-It's possible to move your database from the provisioned compute tier to the serverless compute tier, and back again. 
+A database can be moved between the provisioned compute tier and serverless compute tier.
 
-> [!NOTE]
-> It's also possible to upgrade your database in the General Purpose tier to the Hyperscale tier. Review [Manage Hyperscale databases](manage-hyperscale-database.md#migrate-an-existing-database-to-hyperscale) to learn more. 
+A serverless database can also be moved from the General Purpose service tier to the Hyperscale service tier.  Review [Manage Hyperscale databases](manage-hyperscale-database.md#migrate-an-existing-database-to-hyperscale) to learn more. 
 
-When moving your database between compute tiers, provide the **Compute model** parameter as either `Serverless` or `Provisioned` when using PowerShell and the Azure CLI, and the compute size for the  **SERVICE_OBJECTIVE** when using T-SQL. Review [resource limits](resource-limits-vcore-single-databases.md) to identify your appropriate compute size. 
+When moving a database between compute tiers, specify the **compute model** parameter as either `Serverless` or `Provisioned` when using PowerShell or Azure CLI, or the **SERVICE_OBJECTIVE** when using T-SQL. Review [resource limits](resource-limits-vcore-single-databases.md) to identify the appropriate service objective. 
 
-The examples in this section show you how to move your provisioned database to serverless. Modify the service objective as needed, as these examples set the maximum vCores to 4. 
+The following examples move an existing database from provisioned compute to serverless.  
 
 #### Use PowerShell
 
@@ -401,7 +399,7 @@ az sql db update -g $resourceGroupName -s $serverName -n $databaseName `
 
 #### Use Transact-SQL (T-SQL)
 
-When you use T-SQL to move a database between compute tiers, default values are applied for the minimum vCores and auto-pause delay. They can later be changed from the Azure portal or via other management APIs (PowerShell, Azure CLI, REST API). For more information, see [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql?view=azuresqldb-current&preserve-view=true).
+When using T-SQL to move a database between compute tiers, default values are applied for the minimum vCores and auto-pause delay. Their values can subsequently be changed from the Azure portal or via API including PowerShell, Azure CLI, and REST. For more information, see [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql?view=azuresqldb-current&preserve-view=true).
 
 # [General Purpose](#tab/general-purpose)
 
@@ -455,7 +453,7 @@ The following table includes metrics for monitoring the resource usage of the ap
 |---|---|---|---|
 |App package|app_cpu_percent|Percentage of vCores used by the app relative to maximum vCores allowed for the app. For serverless Hyperscale, this metric is exposed for all primary replicas, named replicas, and geo-replicas. |Percentage|
 |App package|app_cpu_billed|The amount of compute billed for the app during the reporting period. The amount paid during this period is the product of this metric and the vCore unit price. <br><br>Values of this metric are determined by aggregating the maximum of CPU used and memory used each second. If the amount used is less than the minimum amount provisioned as set by the minimum vCores and minimum memory, then the minimum amount provisioned is billed. In order to compare CPU with memory for billing purposes, memory is normalized into units of vCores by rescaling the amount of memory in GB by 3 GB per vCore. For serverless Hyperscale, this metric is exposed for the primary replica and any named replicas. |vCore seconds|
-|App package| app_cpu_billed_HA_replicas| Only applicable to serverless Hyperscale.  Sum of the compute billed across all apps for HA replicas during the reporting period. This sum is scoped either to the HA replicas belonging to the primary replica or the HA replicas belonging to a given named replica. Before you calculate this sum across HA replicas, the amount of compute billed for an individual HA replica is determined in the same way as for the primary replica or a named replica. For serverless Hyperscale, this metric is exposed for all primary replicas, named replicas, and geo-replicas.  The amount paid during the reporting period is the product of this metric and the vCore unit price.  |vCore seconds| 
+|App package| app_cpu_billed_HA_replicas| Only applicable to serverless Hyperscale.  Sum of the compute billed across all apps for HA replicas during the reporting period. This sum is scoped either to the HA replicas belonging to the primary replica or the HA replicas belonging to a given named replica. Before calculating this sum across HA replicas, the amount of compute billed for an individual HA replica is determined in the same way as for the primary replica or a named replica. For serverless Hyperscale, this metric is exposed for all primary replicas, named replicas, and geo-replicas.  The amount paid during the reporting period is the product of this metric and the vCore unit price.  |vCore seconds| 
 |App package|app_memory_percent|Percentage of memory used by the app relative to maximum memory allowed for the app. For serverless Hyperscale, this metric is exposed for all primary replicas, named replicas, and geo-replicas. |Percentage|
 |User resource pool|cpu_percent|Percentage of vCores used by user workload relative to maximum vCores allowed for user workload. |Percentage|
 |User resource pool|data_IO_percent|Percentage of data IOPS used by user workload relative to maximum data IOPS allowed for user workload.|Percentage|
@@ -465,11 +463,22 @@ The following table includes metrics for monitoring the resource usage of the ap
 
 ### Pause and resume status
 
-In the Azure portal, the database status is displayed in the overview pane of the server that lists the databases it contains. The database status is also displayed in the overview pane for the database.
+In the case of a serverless database with auto-pausing enabled, the status it reports includes the following values:
 
-Using the following commands to query the pause and resume status of a database:
+|Status|Description|
+|---|---|
+|Online|The database is online.|
+|Pausing|The database is transitioning from online to paused.|
+|Paused|The database is paused.|
+|Resuming|The database is transitioning from paused to online.|
+
+#### Use Azure portal
+
+In the Azure portal, the database status is displayed in the overview page of the database and in the overview page of its server.  Also in the Azure portal, the history of pause and resume events of a serverless database can be viewed in the [Activity log](/azure/azure-monitor/essentials/activity-log-insights).
 
 #### Use PowerShell
+
+View the current database status using the following PowerShell example:
 
 ```powershell
 Get-AzSqlDatabase -ResourceGroupName $resourcegroupname -ServerName $servername -DatabaseName $databasename `
@@ -477,6 +486,8 @@ Get-AzSqlDatabase -ResourceGroupName $resourcegroupname -ServerName $servername 
 ```
 
 #### Use Azure CLI
+
+View the current database status using the following Azure CLI example:
 
 ```azurecli
 az sql db show --name $databasename --resource-group $resourcegroupname --server $servername --query 'status' -o json
@@ -494,7 +505,7 @@ The amount of compute billed for a serverless database is the maximum of CPU use
 - **Amount billed**: vCore unit price * maximum (minimum vCores, vCores used, minimum memory GB * 1/3, memory GB used * 1/3) 
 - **Billing frequency**: Per second
 
-The vCore unit price is the cost per vCore per second. For Hyperscale, the vCore unit price for an HA replica or named replica is lower than for the primary replica. 
+The vCore unit price is the cost per vCore per second. 
 
 Refer to the [Azure SQL Database pricing page](https://azure.microsoft.com/pricing/details/sql-database/single/) for specific unit prices in a given region.
 
@@ -601,8 +612,73 @@ Serverless for General Purpose and Hyperscale tiers with support up to 40 maximu
 
 Currently, 80 maximum vCores in serverless for General Purpose and Hyperscale tiers is currently supported in the following regions:
 
+ - Australia Central 1
+ - Australia Central 2
  - Australia East
  - Australia Southeast
+ - Brazil South
+ - Brazil Southeast
+ - Canada Central
+ - Canada East
+ - Central US
+ - China East 2
+ - China East 3
+ - China North 2
+ - China North 3
+ - East Asia
+ - East US
+ - East US 2
+ - France Central
+ - France South
+ - Germany North
+ - Germany West Central
+ - India Central
+ - India South
+ - Israel Central
+ - Italy North
+ - Japan East
+ - Japan West
+ - Jio India Central
+ - Jio India West
+ - Korea Central
+ - Korea South
+ - Maylaysia South
+ - Mexico Central
+ - North Central US
+ - North Europe
+ - Norway East
+ - Norway West
+ - Poland Central
+ - Qatar Central
+ - South Africa North
+ - South Africa West
+ - South Central US
+ - Southeast Asia
+ - Spain Central
+ - Sweden Central
+ - Sweden South
+ - Switzerland North
+ - Switzerland West
+ - Taiwan North
+ - Taiwan Northwest
+ - UAE Central
+ - UAE North
+ - UK South
+ - UK West
+ - US Gov East
+ - US Gov Southcentral
+ - US Gov Southwest
+ - West Europe
+ - West Central US
+ - West US
+ - West US 2
+ - West US 3
+
+### Regions supporting 80 maximum vCores with availability zones for General Purpose and Hyperscale
+
+Currently, 80 maximum vCores with availability zone support in serverless for the General Purpose and Hyperscale tiers is provided in the following regions with more regions planned:
+
+ - Australia East
  - Brazil South
  - Canada Central
  - Central US
@@ -610,43 +686,18 @@ Currently, 80 maximum vCores in serverless for General Purpose and Hyperscale ti
  - East US
  - East US 2
  - France Central
- - France South
  - Germany West Central
  - India Central
- - India South
  - Japan East
- - Japan West
- - North Central US
+ - Korea Central
  - North Europe
- - Norway East
- - Qatar Central
  - South Africa North
  - South Central US
- - Switzerland North
+ - Southeast Asia
+ - Sweden Central
+ - UAE North
  - UK South
- - UK West
- - West Europe
- - West Central US
- - West US
- - West US 2
- - West US 3
-
-### Regions supporting 80 maximum vCores with availability zones for General Purpose
-
-Currently, 80 maximum vCores with availability zone support in serverless for the General Purpose tier is provided in the following regions with more regions planned:
-
- - East US
- - North Europe
- - West Europe
- - West US 2
-
-### Regions supporting 80 maximum vCores with availability zones for Hyperscale
-
-Currently, 80 maximum vCores with availability zone support in serverless for the Hyperscale tier is provided in the following regions with more regions planned:
-
- - Central US
- - East US
- - North Europe
+ - US Gov East
  - West Europe
  - West US 2
  - West US 3

@@ -6,7 +6,7 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma
 ms.date: 04/30/2024
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.subservice: data-movement
 ms.topic: how-to
 ms.custom: azure-sql-split

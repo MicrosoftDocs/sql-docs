@@ -29,8 +29,6 @@ This function returns a **datetime2** value for the specified date and time argu
 DATETIME2FROMPARTS ( year, month, day, hour, minute, seconds, fractions, precision )  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 *year*  
 An integer expression that specifies a year.

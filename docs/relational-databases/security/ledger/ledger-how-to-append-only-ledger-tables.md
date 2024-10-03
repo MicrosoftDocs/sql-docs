@@ -5,7 +5,7 @@ author: VanMSFT
 ms.author: vanto
 ms.reviewer: mathoma
 ms.date: 05/23/2023
-ms.service: sql-database
+ms.service: sql
 ms.subservice: security
 ms.topic: how-to
 monikerRange: "= azuresqldb-current||>= sql-server-ver16||>= sql-server-linux-ver16||=azuresqldb-mi-current"
@@ -21,7 +21,7 @@ For more information, see [Append-only ledger tables](ledger-append-only-ledger-
 
 ## Prerequisites
 
-- [SQL Server Management Studio](../../../ssms/download-sql-server-management-studio-ssms.md) or [Azure Data Studio](../../../azure-data-studio/download-azure-data-studio.md).
+- [SQL Server Management Studio](../../../ssms/download-sql-server-management-studio-ssms.md) or [Azure Data Studio](/azure-data-studio/download-azure-data-studio).
 
 ## Create an append-only ledger table
 
@@ -33,7 +33,7 @@ We'll create a `KeyCardEvents` table with the following schema.
 | AccessOperationDescription | nvarchar (MAX) | The access operation of the employee |
 | Timestamp | datetime2 | The date and time the employee accessed the building |
 
-1. Use [SQL Server Management Studio](../../../ssms/download-sql-server-management-studio-ssms.md) or [Azure Data Studio](../../../azure-data-studio/download-azure-data-studio.md) to create a new schema and table called `[AccessControl].[KeyCardEvents]`.
+1. Use [SQL Server Management Studio](../../../ssms/download-sql-server-management-studio-ssms.md) or [Azure Data Studio](/azure-data-studio/download-azure-data-studio) to create a new schema and table called `[AccessControl].[KeyCardEvents]`.
 
    ```sql
    CREATE SCHEMA [AccessControl];

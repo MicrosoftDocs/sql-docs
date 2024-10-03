@@ -4,7 +4,7 @@ description: "Deletes a policy category in Policy-Based Management."
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: randolphwest
-ms.date: 06/26/2023
+ms.date: 08/21/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -36,11 +36,11 @@ sp_syspolicy_delete_policy_category
 
 #### [ @name = ] N'*name*'
 
-The name of the policy category. *@name* is **sysname**, and must be specified if *@policy_category_id* is NULL.
+The name of the policy category. *@name* is **sysname**, and must be specified if *@policy_category_id* is `NULL`.
 
 #### [ @policy_category_id = ] *policy_category_id*
 
-The identifier for the policy category. *@policy_category_id* is **int**, and must be specified if *@name* is NULL.
+The identifier for the policy category. *@policy_category_id* is **int**, and must be specified if *@name* is `NULL`.
 
 ## Return code values
 
@@ -50,7 +50,7 @@ The identifier for the policy category. *@policy_category_id* is **int**, and mu
 
 You must run `sp_syspolicy_delete_policy_category` in the context of the `msdb` system database.
 
-You must specify a value for *@name* or for *@policy_category_id*. Both can't be NULL. To obtain these values, query the `msdb.dbo.syspolicy_policy_categories` system view.
+You must specify a value for *@name* or for *@policy_category_id*. Both can't be `NULL`. To obtain these values, query the `msdb.dbo.syspolicy_policy_categories` system view.
 
 To delete a policy category, the category can't be referenced by any policies.
 

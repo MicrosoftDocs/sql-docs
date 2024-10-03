@@ -3,11 +3,12 @@ title: "Modify a Reporting Services configuration file (RSreportserver.config)"
 description: Learn how to modify configuration files in Reporting Services to add or configure advanced settings. Some settings are for internal use. Proceed with caution.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/15/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-server
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 # Modify a Reporting Services configuration file (RSreportserver.config)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] stores application settings in a set of configuration files. Setup creates the configuration files for each report server instance you install. Within each file, values are either set during installation or when you use tools and applications to configure a server for operation. In some cases, you must modify a file directly to add or configure advanced settings. Configuration settings are specified as either XML elements or attributes. If you understand XML and configuration files, you can use a text or code editor to modify user-definable settings.  
@@ -92,12 +93,11 @@ ms.custom: updatefrequency5
 1.  Check the trace log files to verify that errors didn't occur. If you see error conditions, a setting or its value is specified incorrectly. Review the [RsReportServer.config configuration file](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) for valid values for any setting that is causing an error. For more information about how to view the trace log, see [Report server service trace log](../../reporting-services/report-server/report-server-service-trace-log.md).  
   
 ## Related content
- [RsReportServer.config configuration file](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
- [ReportingServicesService configuration file](../../reporting-services/report-server/reportingservicesservice-configuration-file.md)   
- [RSReportDesigner configuration file](../../reporting-services/report-server/rsreportdesigner-configuration-file.md)   
- [Deploy a data processing extension](../../reporting-services/extensions/data-processing/deploying-a-data-processing-extension.md)   
- [Deploy a delivery extension](../../reporting-services/extensions/delivery-extension/deploying-a-delivery-extension.md)   
- [Deploy a rendering extension](../../reporting-services/extensions/rendering-extension/deploying-a-rendering-extension.md)   
- [Reporting Services configuration files](../../reporting-services/report-server/reporting-services-configuration-files.md)  
-  
-  
+
+- [RsReportServer.config configuration file](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)
+- [ReportingServicesService configuration file](../../reporting-services/report-server/reportingservicesservice-configuration-file.md)
+- [RSReportDesigner configuration file](../../reporting-services/report-server/rsreportdesigner-configuration-file.md)
+- [Deploy a data processing extension](../../reporting-services/extensions/data-processing/deploying-a-data-processing-extension.md)
+- [Deploy a delivery extension](../../reporting-services/extensions/delivery-extension/deploying-a-delivery-extension.md)
+- [Deploy a rendering extension](../../reporting-services/extensions/rendering-extension/deploying-a-rendering-extension.md)
+- [Reporting Services configuration files](../../reporting-services/report-server/reporting-services-configuration-files.md)

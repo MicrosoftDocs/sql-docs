@@ -3,11 +3,12 @@ title: "Sort Columns"
 description: "Sort Columns"
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/04/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: ui-reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 f1_keywords:
   - "sql13.rep.monitor.sortcolumns.f1"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
@@ -30,7 +31,6 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
  **Clear All**  
  Remove all rows from the sorting grid. To remove a single row, select the row and press the Delete key.  
   
-## See Also  
- [Monitoring Replication](../../relational-databases/replication/monitor/monitoring-replication.md)  
-  
-  
+## Related content
+
+- [Monitoring Replication](../../relational-databases/replication/monitor/monitoring-replication.md)

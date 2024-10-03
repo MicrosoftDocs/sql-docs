@@ -66,7 +66,7 @@ For detailed information, see [Implement SQL Server Agent Security](../../ssms/a
     1. [SQL Server Analysis Services Query](create-an-analysis-services-job-step.md#to-create-an-analysis-services-query-job-step)
     1. [SQL Server Analysis Services Command](create-an-analysis-services-job-step.md#to-create-an-analysis-services-command-job-step-1)
     1. [SQL Server Integration Services Package](../../integration-services/packages/run-integration-services-ssis-packages.md)
-    1. [PowerShell](../../powershell/run-windows-powershell-steps-in-sql-server-agent.md)
+    1. [PowerShell](/powershell/sql-server/run-windows-powershell-steps-in-sql-server-agent)
   
 6.  On the **Principals** page, add or remove logins or roles to grant or remove access to the proxy account.  
 

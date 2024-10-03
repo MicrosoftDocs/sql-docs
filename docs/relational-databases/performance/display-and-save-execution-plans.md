@@ -1,8 +1,8 @@
 ---
 title: "Display and save execution plans"
 description: Learn how to display execution plans and how to save execution plans to a file in XML format by using SQL Server Management Studio.
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: MikeRayMSFT
+ms.author: mikeray
 ms.reviewer: randolphwest
 ms.date: 06/01/2023
 ms.service: sql
@@ -24,7 +24,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 This section explains how to display execution plans and how to save execution plans to a file in XML format by using [!INCLUDE [ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS).
 
 > [!NOTE]  
-> For more information about viewing and saving plans in Azure Data Studio, see [Query Plan Viewer in Azure Data Studio](../../azure-data-studio/query-plan-viewer.md).
+> For more information about viewing and saving plans in Azure Data Studio, see [Query Plan Viewer in Azure Data Studio](/azure-data-studio/query-plan-viewer).
 
 Execution plans graphically display the data retrieval methods chosen by the [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Query Optimizer. Execution plans represent the execution cost of specific statements and queries in [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] using icons rather than the tabular representation produced by the [SET SHOWPLAN_ALL](../../t-sql/statements/set-showplan-all-transact-sql.md) or [SET SHOWPLAN_TEXT](../../t-sql/statements/set-showplan-text-transact-sql.md) statements. This graphical approach is useful for understanding the performance characteristics of a query.
 

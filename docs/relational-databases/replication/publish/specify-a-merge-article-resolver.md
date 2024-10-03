@@ -3,11 +3,12 @@ title: "Specify a Merge Article Resolver"
 description: "Specify a Merge Article Resolver"
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/14/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: how-to
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "articles [SQL Server replication], conflict resolution"
   - "conflict resolution [SQL Server replication], merge replication"
@@ -123,8 +124,7 @@ helpviewer_keywords:
   
  :::code language="sql" source="../codesnippet/tsql/specify-a-merge-article-_2.sql":::
   
-## See Also  
- [Advanced Merge Replication Conflict Detection and Resolution](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
- [Implement a Business Logic Handler for a Merge Article](../../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)  
-  
-  
+## Related content
+
+- [Advanced Merge Replication Conflict Detection and Resolution](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)
+- [Implement a Business Logic Handler for a Merge Article](../../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)

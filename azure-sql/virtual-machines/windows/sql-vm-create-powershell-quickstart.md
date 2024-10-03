@@ -1,10 +1,10 @@
 ---
-title: Create SQL Server on a Windows virtual machine with Azure PowerShell
-description: This tutorial shows how to use Azure PowerShell to create a Windows virtual machine running SQL Server 2017.
+title: "Quickstart: Create SQL Server VM with PowerShell"
+description: This tutorial shows how to use Azure PowerShell to create a Windows virtual machine running SQL Server 2022.
 author: bluefooted
 ms.author: pamela
 ms.reviewer: mathoma
-ms.date: 05/08/2024
+ms.date: 05/29/2024
 ms.service: virtual-machines-sql
 ms.subservice: deployment
 ms.topic: quickstart
@@ -14,7 +14,7 @@ ms.custom:
 tags: azure-resource-manager
 ---
 
-# Quickstart: Create SQL Server on a Windows virtual machine with Azure PowerShell
+# Quickstart: Create SQL Server on Azure VM with PowerShell
 
 [!INCLUDE[appliesto-sqlvm](../../includes/appliesto-sqlvm.md)]
 
@@ -24,48 +24,46 @@ This quickstart steps through creating a Windows SQL Server on Azure Virtual Mac
 > - This quickstart provides a path to quickly provision and connect to a SQL Server VM. For more information about other Azure PowerShell options to create SQL Server VMs, see the [Provisioning guide for SQL Server VMs with Azure PowerShell](create-sql-vm-powershell.md).
 > - If you have questions about SQL Server virtual machines, see the [Frequently Asked Questions](frequently-asked-questions-faq.yml).
 
-## <a id="subscription"></a> Get an Azure subscription
+## Prerequisites 
 
-If you don't have an Azure subscription, create a [free account](https://azure.microsoft.com/free/?WT.mc_id=A261C142F) before you begin.
+To complete this quickstart, you should have the following: 
 
-
-## <a id="powershell"></a> Get Azure PowerShell
+- An Azure subscription. If you don't have an Azure subscription, create a [free account](https://azure.microsoft.com/free/?WT.mc_id=A261C142F) before you begin.
+- The latest version of Azure PowerShell
 
 [!INCLUDE [updated-for-az.md](../../includes/updated-for-az.md)]
 
-## Configure PowerShell
 
-1. Open PowerShell and establish access to your Azure account by running the **Connect-AzAccount** command.
+## Connect to Azure
+
+1. Open PowerShell and establish access to your Azure account by running the [Connect-AzAccount](/powershell/module/az.accounts/connect-azaccount) command, and set your subscription context with [Set-AzContext](/powershell/module/az.accounts/set-azcontext).
 
    ```powershell
    Connect-AzAccount
+   Set-AzContext -subscription <Subscription ID>
    ```
 
 1. When you see the sign-in window, enter your credentials. Use the same email and password that you use to sign in to the Azure portal.
 
 ## Create a resource group
 
-1. Define a variable with a unique resource group name. To simplify the rest of the quickstart, the remaining commands use this name as a basis for other resource names.
+
+Define variables for a unique resource group name and provide a location of a target Azure region for all VM resources. Then use [New-AzResourceGroup](/powershell/module/az.resources/new-azresourcegroup) to create your resource group. To simplify the rest of the quickstart, the remaining commands use this name as a basis for other resource names.
 
    ```powershell
    $ResourceGroupName = "sqlvm1"
-   ```
-
-1. Define a location of a target Azure region for all VM resources.
-
-   ```powershell
    $Location = "East US"
-   ```
-
-1. Create the resource group.
-
-   ```powershell
-   New-AzResourceGroup -Name $ResourceGroupName -Location $Location
+   $ResourceGroupParams = @{
+      Name = $ResourceGroupName
+      Location = $Location
+      Tag = @{Owner="SQLDocs-Samples"}
+   }
+   New-AzResourceGroup @ResourceGroupParams
    ```
 
 ## Configure network settings
 
-1. Create a virtual network, subnet, and a public IP address. These resources are used to provide network connectivity to the virtual machine and connect it to the internet.
+1. Use [New-AzVirtualNetworkSubnetConfig](/powershell/module/az.network/new-azvirtualnetworksubnetconfig),  [New-AzVirtualNetwork](/powershell/module/az.network/new-azvirtualnetwork), and [New-AzPublicIpAddress](/powershell/module/az.network/new-azpublicipaddress) to create a virtual network, subnet, and a public IP address. These resources are used to provide network connectivity to the virtual machine and connect it to the internet.
 
    ``` PowerShell
    $SubnetName = $ResourceGroupName + "subnet"
@@ -84,7 +82,7 @@ If you don't have an Azure subscription, create a [free account](https://azure.m
       -AllocationMethod Static -IdleTimeoutInMinutes 4 -Name $PipName
    ```
 
-1. Create a network security group. Configure rules to allow remote desktop (RDP) and SQL Server connections.
+1. Use [New-AzNetworkSecurityGroup](/powershell/module/az.network/new-aznetworksecuritygroup) to create a network security group after you've configured rules to allow remote desktop (RDP) and SQL Server connections with [New-AzNetworkSecurityRuleConfig](/powershell/module/az.network/new-aznetworksecurityruleconfig).
 
    ```powershell
    # Rule to allow remote desktop (RDP)
@@ -104,7 +102,7 @@ If you don't have an Azure subscription, create a [free account](https://azure.m
       -SecurityRules $NsgRuleRDP,$NsgRuleSQL
    ```
 
-1. Create the network interface.
+1. Create the network interface with [New-AzNetworkInterface](/powershell/module/az.network/new-aznetworkinterface).
 
    ```powershell
    $InterfaceName = $ResourceGroupName + "int"
@@ -120,19 +118,20 @@ If you don't have an Azure subscription, create a [free account](https://azure.m
 
    ``` PowerShell
    # Define a credential object
-   $SecurePassword = ConvertTo-SecureString '<password>' `
-      -AsPlainText -Force
-   $Cred = New-Object System.Management.Automation.PSCredential ("azureadmin", $securePassword)
+    $userName = "azureadmin"
+    $SecurePassword = ConvertTo-SecureString '<strong password>' `
+       -AsPlainText -Force
+    $Cred = New-Object System.Management.Automation.PSCredential ($userName, $securePassword)
    ```
 
-1. Create a virtual machine configuration object and then create the VM. The following command creates a SQL Server 2017 Developer Edition VM on Windows Server 2016.
+1. Create a virtual machine configuration object with [New-AzVMConfig](/powershell/module/az.compute/new-azvmconfig) and then create the VM with [New-AzVM](/powershell/module/az.compute/new-azvm). The following command creates a SQL Server 2022 Developer Edition VM on Windows Server 2022.
 
    ```powershell
    # Create a virtual machine configuration
    $VMName = $ResourceGroupName + "VM"
    $VMConfig = New-AzVMConfig -VMName $VMName -VMSize Standard_DS13_V2 |
       Set-AzVMOperatingSystem -Windows -ComputerName $VMName -Credential $Cred -ProvisionVMAgent -EnableAutoUpdate |
-      Set-AzVMSourceImage -PublisherName "MicrosoftSQLServer" -Offer "SQL2022-WS2022" -Skus "SQLDEV" -Version "latest" |
+      Set-AzVMSourceImage -PublisherName "MicrosoftSQLServer" -Offer "sql2022-ws2022" -Skus "sqldev-gen2" -Version "latest" |
       Add-AzVMNetworkInterface -Id $Interface.Id
    
    # Create the VM
@@ -146,9 +145,26 @@ If you don't have an Azure subscription, create a [free account](https://azure.m
 
 To get portal integration and SQL VM features, you must [register](sql-agent-extension-manually-register-single-vm.md#register-with-extension) with the [SQL IaaS Agent extension](sql-agent-extension-manually-register-single-vm.md).
 
+To do so, first register your subscription with the resource provider by using [Register-AzResourceProvider](/powershell/module/az.resources/register-azresourceprovider):
+
+```powershell-interactive
+# Register the SQL IaaS Agent extension to your subscription
+Register-AzResourceProvider -ProviderNamespace Microsoft.SqlVirtualMachine
+```
+
+Next, register your SQL Server VM with the SQL IaaS Agent extension by using [New-AzSqlVM](/powershell/module/az.sqlvirtualmachine/new-azsqlvm): 
+
+```powershell-interactive
+$License = 'PAYG'
+
+# Register SQL Server VM with the extension
+New-AzSqlVM -Name $VMName -ResourceGroupName $ResourceGroupName -Location $Location `
+-LicenseType $License
+```
+
 ## Remote desktop into the VM
 
-1. Use the following command to retrieve the public IP address for the new VM.
+1. Use [Get-AzPublicIpAddress](/powershell/module/az.network/get-azpublicipaddress) to retrieve the public IP address for the new VM.
 
    ```powershell
    Get-AzPublicIpAddress -ResourceGroupName $ResourceGroupName | Select IpAddress
@@ -178,11 +194,11 @@ If you don't need the VM to run continuously, you can avoid unnecessary charges 
 Stop-AzVM -Name $VMName -ResourceGroupName $ResourceGroupName
 ```
 
-You can also permanently delete all resources associated with the virtual machine with the **Remove-AzResourceGroup** command. Doing so permanently deletes the virtual machine as well, so use this command with care.
+You can also permanently delete all resources associated with the virtual machine with the [Remove-AzResourceGroup](/powershell/module/az.resources/remove-azresourcegroup) command. Doing so permanently deletes the virtual machine as well, so use this command with care.
 
 ## Next steps
 
-In this quickstart, you created a SQL Server 2017 virtual machine using Azure PowerShell. To learn more about how to migrate your data to the new SQL Server, see the following article.
+In this quickstart, you created a SQL Server 2022 virtual machine using Azure PowerShell. To learn more about how to migrate your data to the new SQL Server, see the following article.
 
 > [!div class="nextstepaction"]
 > [Migration guide: SQL Server to SQL Server on Azure Virtual Machines](../../migration-guides/virtual-machines/sql-server-to-sql-on-azure-vm-individual-databases-guide.md)

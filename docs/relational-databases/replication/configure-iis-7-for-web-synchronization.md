@@ -3,11 +3,12 @@ title: "Configure IIS 7 for Web Synchronization"
 description: "Configure IIS 7 for Web Synchronization"
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "09/12/2016"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: how-to
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "IIS 7 server configuration [SQL Server replication]"
   - "Web synchronization, IIS 7 servers"
@@ -310,8 +311,7 @@ Web synchronization is supported on IIS, beginning with version 5.0. The Configu
   
     2.  Connect to the server in diagnostic mode. If the certificate is installed properly, the **Security Alert** dialog box will not appear. If the dialog box appears, the Merge Agent will fail when it tries to connect to the computer that is running IIS. You must make sure that the certificate for the server that you are accessing has been added to the certificate store at the Subscriber as a trusted certificate. For more information about exporting certificates, see the IIS documentation.  
   
-## See Also  
- [Web Synchronization for Merge Replication](../../relational-databases/replication/web-synchronization-for-merge-replication.md)   
- [Configure Web Synchronization](../../relational-databases/replication/configure-web-synchronization.md)  
-  
-  
+## Related content
+
+- [Web Synchronization for Merge Replication](../../relational-databases/replication/web-synchronization-for-merge-replication.md)
+- [Configure Web Synchronization](../../relational-databases/replication/configure-web-synchronization.md)

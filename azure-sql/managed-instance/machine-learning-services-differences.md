@@ -5,7 +5,7 @@ author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: mathoma, wiassaf
 ms.date: 11/30/2023
-ms.service: sql-managed-instance
+ms.service: azure-sql-managed-instance
 ms.subservice: machine-learning
 ms.topic: conceptual
 ---

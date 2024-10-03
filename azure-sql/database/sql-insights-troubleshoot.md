@@ -5,8 +5,8 @@ description: Learn how to troubleshoot SQL Insights (preview) in Azure Monitor.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma
-ms.date: 04/22/2024
-ms.service: sql-db-mi
+ms.date: 09/19/2024
+ms.service: azure-sql
 ms.subservice: monitoring
 ms.topic: conceptual
 ms.custom: subject-monitoring
@@ -14,7 +14,10 @@ monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 
 # Troubleshoot SQL Insights (preview)
+
 [!INCLUDE [sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi.md)]
+
+[!INCLUDE [sql-insights-retirement](../includes/sql-insights-retirement.md)]
 
 To troubleshoot data collection issues in SQL Insights (preview), check the status of the monitoring machine on the **Manage profile** tab. The statuses are:
 
@@ -29,19 +32,18 @@ Select the status to see logs and more details that might help you resolve the p
 ## Status: Not collecting 
 The monitoring machine has a status of **Not collecting** if there's no data in *InsightsMetrics* for SQL in the last 10 minutes. 
 
-> [!NOTE]
-> Make sure that you're trying to collect data from a [supported version of SQL](sql-insights-overview.md#supported-versions). For example, trying to collect data with a valid profile and connection string but from an unsupported version of Azure SQL Database will result in a **Not collecting** status.
+Make sure that you're trying to collect data from a [supported version of SQL](sql-insights-overview.md#supported-versions). For example, trying to collect data with a valid profile and connection string but from an unsupported version of Azure SQL Database will result in a **Not collecting** status.
 
 SQL Insights (preview) uses the following query to retrieve this information:
 
 ```kusto
-InsightsMetrics 
+InsightsMetrics
     | extend Tags = todynamic(Tags) 
     | extend SqlInstance = tostring(Tags.sql_instance) 
     | where TimeGenerated > ago(10m) and isnotempty(SqlInstance) and Namespace == 'sqlserver_server_properties' and Name == 'uptime' 
 ```
 
-Check if any logs from Telegraf help identify the root cause the problem. If there are log entries, you can select **Not collecting** and check the logs and troubleshooting info for common problems. 
+Check if any logs from Telegraf help identify the root cause the problem. If there are log entries, you can select **Not collecting** and check the logs and troubleshooting info for common problems.
 
 If there are no log entries, check the logs on the monitoring virtual machine for the following services installed by two virtual machine extensions:
 
@@ -214,6 +216,6 @@ During preview of SQL Insights, you may encounter the following known issues.
 
 * **Save previous configurations**. If you want to make changes to either monitoring profile or monitoring VM configuration, we recommend saving a working copy of your configuration data first. From the SQL Insights page in Azure portal, select **Manage profile** > **Edit profile**, and copy the text from **Current Monitoring Profile Config** to a file. Similarly, select **Manage profile** > **Configure** for the monitoring VM, and copy the text from **Current monitoring configuration** to a file. If data collection errors occur after configuration changes, you can compare the new configuration to the known working configuration using a text diff tool to help you find any changes that might have impacted collection.
 
-## Next steps
+## Related content
 
 - Get details on [enabling SQL Insights (preview)](sql-insights-enable.md).

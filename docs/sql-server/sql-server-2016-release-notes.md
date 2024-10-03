@@ -18,15 +18,15 @@ monikerRange: ">= sql-server-2016"
 [!INCLUDE [SQL Server 2016](../includes/applies-to-version/sqlserver2016.md)]  
   This article describes limitations and issues with [!INCLUDE[sssql16-md](../includes/sssql16-md.md)] releases, including service packs. For information on what's new, see [What's New in SQL Server 2016](./what-s-new-in-sql-server-2016.md).
 
-- :::image type="icon" source="../includes/media/download.svg"::: Download [!INCLUDE[sssql16-md](../includes/sssql16-md.md)]  from the **[Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)**
-- :::image type="icon" source="../includes/media/azure-vm.svg"::: Have an Azure account?  Then **[spin up a Virtual Machine](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2017-ws2019?tab=Overview)**  with [!INCLUDE[sssql16-md](../includes/sssql16-md.md)] SP1 already installed.
-- :::image type="icon" source="../includes/media/download.svg"::: To get the latest version of SQL Server Management Studio, see **[Download SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)**.
+- :::image type="icon" source="../includes/media/download.svg"::: **[Download SQL Server from the Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)**
+- :::image type="icon" source="../includes/media/azure-vm.svg"::: **[Spin up a Virtual Machine with SQL Server already installed](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2022-ws2022?tab=Overview)**
+- :::image type="icon" source="../includes/media/download.svg"::: **[Download SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)**
 
 ## <a name="bkmk_2016sp3"></a>SQL Server 2016 Service Pack 3 (SP3)
 
 [!INCLUDE[sssql16-md](../includes/sssql16-md.md)] SP3 includes all cumulative updates released after [!INCLUDE[sssql16-md](../includes/sssql16-md.md)] SP2, up to and including CU17.
 
-- :::image type="icon" source="../includes/media/download.svg"::: [Download SQL Server 2016 Service Pack 3 (SP3)](https://www.microsoft.com/download/details.aspx?id=103440)
+- :::image type="icon" source="../includes/media/download.svg"::: **[Download SQL Server 2016 Service Pack 3 (SP3)](https://www.microsoft.com/download/details.aspx?id=103440)**
 - For a complete list of updates, see [SQL Server 2016 Service Pack 3 release information](https://support.microsoft.com/help/5003279/sql-server-2016-service-pack-3-release-information)
 
 The [!INCLUDE[sssql16-md](../includes/sssql16-md.md)] SP3 installation may require restart after installation. As a best practice, we recommend to plan and perform a restart following the installation of [!INCLUDE[sssql16-md](../includes/sssql16-md.md)] SP3.
@@ -126,7 +126,7 @@ For more information, refer to [KB5007039](https://support.microsoft.com/topic/k
 
 [!INCLUDE[sssql16-md](../includes/sssql16-md.md)] SP2 includes all cumulative updates released after [!INCLUDE[sssql16-md](../includes/sssql16-md.md)] SP1, up to and including CU8.
 
-- :::image type="icon" source="../includes/media/download.svg"::: [Download SQL Server 2016 Service Pack 2 (SP2)](https://www.microsoft.com/download/details.aspx?id=56836)
+- :::image type="icon" source="../includes/media/download.svg"::: **[Download SQL Server 2016 Service Pack 2 (SP2)](https://www.microsoft.com/download/details.aspx?id=56836)**
 - For a complete list of updates, see [SQL Server 2016 Service Pack 2 release information](https://support.microsoft.com/help/4052908/sql-server-2016-service-pack-2-release-information)
 
 The [!INCLUDE[sssql16-md](../includes/sssql16-md.md)] SP2 installation may require restart after installation. As a best practice, we recommend to plan and perform a restart following the installation of [!INCLUDE[sssql16-md](../includes/sssql16-md.md)] SP2.
@@ -152,7 +152,7 @@ Supportability and diagnostics related improvements included in [!INCLUDE[sssql1
 |---|---|---|
 |Full DTC support for databases in an Availability Group   |   Cross-databases transactions for databases which are part of an Availability Group are currently not supported for [!INCLUDE[sssql16-md](../includes/sssql16-md.md)]. With [!INCLUDE[sssql16-md](../includes/sssql16-md.md)] SP2, we are introducing full support for distributed transactions with Availability Group Databases.   |      |
 |Update to sys.databases is_encrypted column to accurately reflect encryption status for TempDB   |   The value of is_encryptedcolumn column in sys.databases is 1 for TempDB, even after you turn off encryption for all user databases and restart SQL Server. The expected behavior would be that the value for this is 0, since TempDB is no longer encrypted in this situation. Starting with [!INCLUDE[sssql16-md](../includes/sssql16-md.md)] SP2, sys.databases.is_encrypted now accurately reflects encryption status for TempDB.   |      |
-|New DBCC CLONEDATABASE options to generate verified clone and backup   |   With [!INCLUDE[sssql16-md](../includes/sssql16-md.md)] SP2, DBCC CLONEDATABASE allows two new options:  produce a verified clone, or produce a backup clone. When a clone database is created using WITH VERIFY_CLONEDB option, a consistent database clone is created and verified which will be supported by Microsoft for production use. A new property is introduced to validate if the clone is verified SELECT DATABASEPROPERTYEX('clone_database_name', 'IsVerifiedClone'). When a clone is created with BACKUP_CLONEDB option, a backup is generated in the same folder as the data file to make it easy for customers to move the clone to different server or to send it to Microsoft Customer Support (CSS) for troubleshooting.   |      |
+|New DBCC CLONEDATABASE options to generate verified clone and backup   |   With [!INCLUDE[sssql16-md](../includes/sssql16-md.md)] SP2, DBCC CLONEDATABASE allows two new options:  produce a verified clone, or produce a backup clone. When a clone database is created using WITH VERIFY_CLONEDB option, a consistent database clone is created and verified which will be supported by Microsoft for production use. A new property is introduced to validate if the clone is verified SELECT DATABASEPROPERTYEX('clone_database_name', 'IsVerifiedClone'). When a clone is created with BACKUP_CLONEDB option, a backup is generated in the same folder as the data file to make it easy for customers to move the clone to different server or to send it to Microsoft Customer Support (CSS) for troubleshooting.   |      |
 |Service Broker (SSB) support for DBCC CLONEDATABASE   |   Enhanced DBCC CLONEDATABASE command to allow scripting of SSB objects.   |      |
 |New DMV to monitor TempDB version store space usage   |   A new sys.dm_tran_version_store_space_usage DMV is introduced in [!INCLUDE[sssql16-md](../includes/sssql16-md.md)] SP2 to allow monitoring TempDB for version store usage. DBAs can now proactively plan TempDB sizing based on the version store usage requirement per database, without any performance overhead when running it on production servers.   |      |
 |Full Dumps support for Replication Agents | Today if replication agents encounter a unhandled exception, the default is to create a mini dump of the exception symptoms. This makes troubleshooting unhandled exception issues very difficult. Through this change we are introducing a new Registry key, which would allow to create a full dump for Replication Agents.   |      |

@@ -1,7 +1,7 @@
 ---
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 09/15/2022
+ms.date: 07/15/2024
 ms.service: sql
 ms.subservice: linux
 ms.topic: include
@@ -15,10 +15,10 @@ ms.custom:
    sudo firewall-cmd --reload
    ```
 
-   > If the firewall doesn't have a built-in high-availability configuration, open the following ports for Pacemaker.
-   >
-   > * TCP: Ports 2224, 3121, 21064
-   > * UDP: Port 5405
+   If the firewall doesn't have a built-in high-availability configuration, open the following ports for Pacemaker.
+
+   - TCP: Ports 2224, 3121, 21064
+   - UDP: Port 5405
 
 1. Install Pacemaker packages on all nodes.
 
@@ -51,9 +51,9 @@ ms.custom:
    sudo pcs cluster enable --all
    ```
 
-   **RHEL8**
+   **RHEL 8**
 
-   For RHEL 8, you will need to authenticate the nodes separately. Manually enter in the Username and Password for hacluster when prompted.
+   For RHEL 8, you need to authenticate the nodes separately. Manually enter in the Username and Password for hacluster when prompted.
 
    ```bash
    sudo pcs host auth <node1> <node2> <node3>
@@ -65,7 +65,7 @@ ms.custom:
    > [!NOTE]  
    > If you previously configured a cluster on the same nodes, you need to use `--force` option when running `pcs cluster setup`. This option is equivalent to running `pcs cluster destroy`. To re-enable Pacemaker, run `sudo systemctl enable pacemaker`.
 
-1. Install SQL Server resource agent for SQL Server. Run the following commands on all nodes.
+1. Install [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] resource agent for [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)]. Run the following commands on all nodes.
 
    ```bash
    sudo yum install mssql-server-ha

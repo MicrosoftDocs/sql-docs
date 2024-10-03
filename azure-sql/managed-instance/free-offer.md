@@ -5,7 +5,7 @@ author: Urosran
 ms.author: urandjelovic
 ms.reviewer: mathoma, randolphwest
 ms.date: 01/02/2024
-ms.service: sql-managed-instance
+ms.service: azure-sql-managed-instance
 ms.subservice: service-overview
 ms.topic: how-to
 ms.custom:

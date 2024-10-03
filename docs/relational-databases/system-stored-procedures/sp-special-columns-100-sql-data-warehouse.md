@@ -21,7 +21,7 @@ Returns the optimal set of columns that uniquely identify a row in the table. Al
 
 ## Syntax
 
-Syntax for Azure Synapse Analytics and Parallel Data Warehouse.
+Syntax for Azure Synapse Analytics and Analytics Platform System (PDW).
 
 ```syntaxsql
 sp_special_columns_100

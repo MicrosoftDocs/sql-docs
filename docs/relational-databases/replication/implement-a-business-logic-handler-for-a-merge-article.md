@@ -3,11 +3,12 @@ title: "Set up a business logic handler for Merge article"
 description: Use replication programming or Replication Management Objects to configure a business logic handler for merge replication synchronization.
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/14/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: how-to
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "merge replication conflict resolution [SQL Server replication], business logic handlers"
   - "merge replication business logic handlers [SQL Server replication]"
@@ -230,10 +231,9 @@ dev_langs:
   
  [!code-vb[HowTo#rmo_vb_ChangeMergeArticle_BLH](../../relational-databases/replication/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_changemergearticle_blh)]  
   
-## See Also  
- [Implement a Custom Conflict Resolver for a Merge Article](../../relational-databases/replication/implement-a-custom-conflict-resolver-for-a-merge-article.md)   
- [Debug a Business Logic Handler &#40;Replication Programming&#41;](../../relational-databases/replication/debug-a-business-logic-handler-replication-programming.md)   
- [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md)   
- [Replication Management Objects Concepts](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)  
-  
-  
+## Related content
+
+- [Implement a Custom Conflict Resolver for a Merge Article](../../relational-databases/replication/implement-a-custom-conflict-resolver-for-a-merge-article.md)
+- [Debug a Business Logic Handler &#40;Replication Programming&#41;](../../relational-databases/replication/debug-a-business-logic-handler-replication-programming.md)
+- [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md)
+- [Replication Management Objects Concepts](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)

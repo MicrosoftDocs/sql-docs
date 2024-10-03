@@ -3,18 +3,22 @@ title: Troubleshoot SQL Server on Linux
 description: Troubleshoot SQL Server running on Linux or in a Linux container. Learn where to find information about supported features and known limitations.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 10/29/2023
+ms.date: 07/15/2024
 ms.service: sql
 ms.subservice: linux
 ms.topic: troubleshooting
 ms.custom:
   - linux-related-content
 ---
-# Troubleshoot [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] on Linux
+# Troubleshoot SQL Server on Linux
 
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
-This article describes how to troubleshoot [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] running on Linux or in a Linux container. When troubleshooting [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] on Linux, remember to review the supported features and known limitations in the [Release notes for SQL Server 2017 on Linux](sql-server-linux-release-notes-2017.md).
+This article describes how to troubleshoot [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] running on Linux or in a Linux container. When troubleshooting [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] on Linux, remember to review the supported features and known limitations:
+
+- [Release notes for SQL Server 2022 on Linux](sql-server-linux-release-notes-2022.md)
+- [Release notes for SQL Server 2019 on Linux](sql-server-linux-release-notes-2019.md)
+- [Release notes for SQL Server 2017 on Linux](sql-server-linux-release-notes-2017.md)
 
 For answers to frequently asked questions, see the [SQL Server on Linux FAQ](sql-server-linux-faq.yml).
 
@@ -26,20 +30,20 @@ If you have difficulty connecting to your Linux [!INCLUDE [ssNoVersion](../inclu
 
 - Verify that the server name or IP address is reachable from your client machine.
 
-   > [!TIP]  
-   > To find the IP address of your Ubuntu machine, you can run the `ifconfig` command as in the following example:
-   >  
-   > ```bash
-   > sudo ifconfig eth0 | grep 'inet addr'
-   > ```
-   >  
-   > For Red Hat, you can use the `ip addr` command as in the following example:
-   >  
-   > ```bash
-   > sudo ip addr show eth0 | grep "inet"
-   > ```
-   >  
-   > One exception to this technique relates to Azure VMs. For Azure VMs, [find the public IP for the VM in the Azure portal](/azure/azure-sql/virtual-machines/linux/sql-vm-create-portal-quickstart#connect).
+  To find the IP address of your Ubuntu machine, you can run the `ifconfig` command as in the following example:
+
+  ```bash
+  sudo ifconfig eth0 | grep 'inet addr'
+  ```
+
+  For Red Hat, you can use the `ip addr` command as in the following example:
+
+  ```bash
+  sudo ip addr show eth0 | grep "inet"
+  ```
+
+  > [!TIP]  
+  > One exception to this technique relates to Azure VMs. For Azure VMs, [find the public IP for the VM in the Azure portal](/azure/azure-sql/virtual-machines/linux/sql-vm-create-portal-quickstart#connect).
 
 - If applicable, check that you opened the [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] port (default 1433) on the firewall.
 
@@ -51,13 +55,13 @@ If you have difficulty connecting to your Linux [!INCLUDE [ssNoVersion](../inclu
 
 - Network connectivity issues can also cause connection errors and timeouts. After verifying your connection information and network connectivity, try the connection again.
 
-## Manage the [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] service
+## Manage the SQL Server service
 
-The following section shows how to manage the execution of [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] Docker containers. To manage services for Linux, see [Start, stop, and restart SQL Server services on Linux](sql-server-linux-start-stop-restart-sql-server-services.md).
+The following section shows how to manage the execution of [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] Linux containers. To manage services for Linux, see [Start, stop, and restart SQL Server services on Linux](sql-server-linux-start-stop-restart-sql-server-services.md).
 
-### Manage the execution of the [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] Docker container
+### Manage the execution of the SQL Server Linux container
 
-You can get the status and container ID of the latest created [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] Docker container by running the following command (The ID is under the `CONTAINER ID` column):
+You can get the status and container ID of the latest created [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] Linux container by running the following command (The ID is under the `CONTAINER ID` column):
 
    ```bash
    sudo docker ps -l
@@ -71,14 +75,14 @@ You can stop or restart the [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.m
    ```
 
 > [!TIP]  
-> For more troubleshooting tips for Docker, see [Troubleshoot SQL Server Docker containers](sql-server-linux-docker-container-troubleshooting.md).
+> For more troubleshooting tips for Linux containers, see [Troubleshoot SQL Server Docker containers](sql-server-linux-docker-container-troubleshooting.md).
 
 ## Access the log files
 
 The [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE [ssDE](../includes/ssde-md.md)] logs to the `/var/opt/mssql/log/errorlog` file in both the Linux and container installations. You need to be in **superuser** mode to browse this directory.
 
 The installer logs here: `/var/opt/mssql/setup-<time stamp representing time of install>`
-You can browse the errorlog files with any UTF-16 compatible tool like **vim** or **cat** like this:
+You can browse the `errorlog` files with any UTF-16 compatible tool like **vim** or **cat** like this:
 
    ```bash
    sudo cat errorlog
@@ -114,7 +118,7 @@ For SQL dumps, use this script:
 
 ### Start [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] in minimal configuration mode
 
-This mode is useful if the setting of a configuration value (for example, over-committing memory) has prevented the server from starting.
+This mode is useful if the setting of a configuration value (for example, over-committing memory) prevents the server from starting.
 
    ```bash
    sudo -u mssql /opt/mssql/bin/sqlservr -f
@@ -138,7 +142,7 @@ This script starts [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] in si
 
 You should always start [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] on Linux with the `mssql` user to prevent future startup issues. For example: `sudo -u mssql /opt/mssql/bin/sqlservr [STARTUP OPTIONS]`
 
-If you have accidentally started [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] with another user, you must change ownership of [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] database files back to the `mssql` user before you start [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] with **systemd**. For example, to change ownership of all database files under `/var/opt/mssql` to the `mssql` user, run the following command:
+If you accidentally start [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] with another user, you must change ownership of [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] database files back to the `mssql` user before you start [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] with **systemd**. For example, to change ownership of all database files under `/var/opt/mssql` to the `mssql` user, run the following command:
 
    ```bash
    chown -R mssql:mssql /var/opt/mssql/
@@ -153,7 +157,7 @@ As a last resort, you can choose to rebuild the `master` and `model` databases b
 
 You need to attach the user databases to the instance afterwards. It also deletes other information stored in the system databases, including:
 
-- Database Master Key information
+- database master key (DMK) information
 - any certificates loaded in `master`
 - the password for the SA login
 - job-related information from `msdb`
@@ -242,4 +246,4 @@ Many factors affect performance, including database design, hardware, and worklo
 - [Special characters](https://tldp.org/LDP/abs/html/special-chars.html)
 - [Escaping](https://tldp.org/LDP/abs/html/escapingsection.html)
 
-[!INCLUDE [Get Help Options](../includes/paragraph-content/get-help-options.md)]
+[!INCLUDE [get-help-options](../includes/paragraph-content/get-help-options.md)]

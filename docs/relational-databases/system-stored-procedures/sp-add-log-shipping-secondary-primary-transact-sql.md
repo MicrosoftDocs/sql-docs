@@ -4,7 +4,7 @@ description: "Sets up the primary information, adds local and remote monitor lin
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest
-ms.date: 06/02/2023
+ms.date: 08/21/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -49,7 +49,7 @@ sp_add_log_shipping_secondary_primary
 
 #### [ @primary_server = ] '*primary_server*'
 
-The name of the primary instance of the [!INCLUDE [ssDEnoversion](../../includes/ssdenoversion-md.md)] in the log shipping configuration. *@primary_server* is **sysname** and can't be NULL.
+The name of the primary instance of the [!INCLUDE [ssDEnoversion](../../includes/ssdenoversion-md.md)] in the log shipping configuration. *@primary_server* is **sysname** and can't be `NULL`.
 
 #### [ @primary_database = ] '*primary_database*'
 
@@ -57,19 +57,19 @@ The name of the database on the primary server. *@primary_database* is **sysname
 
 #### [ @backup_source_directory = ] N'*backup_source_directory*'
 
-The directory where transaction log backup files from the primary server are stored. *@backup_source_directory* is **nvarchar(500)** and can't be NULL.
+The directory where transaction log backup files from the primary server are stored. *@backup_source_directory* is **nvarchar(500)** and can't be `NULL`.
 
 #### [ @backup_destination_directory = ] N'*backup_destination_directory*'
 
-The directory on the secondary server where backup files are copied to. *@backup_destination_directory* is **nvarchar(500)** and can't be NULL.
+The directory on the secondary server where backup files are copied to. *@backup_destination_directory* is **nvarchar(500)** and can't be `NULL`.
 
 #### [ @copy_job_name = ] '*copy_job_name*'
 
-The name to use for the [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Agent job being created to copy transaction log backups to the secondary server. *copy_job_name* is **sysname** and can't be NULL.
+The name to use for the [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Agent job being created to copy transaction log backups to the secondary server. *copy_job_name* is **sysname** and can't be `NULL`.
 
 #### [ @restore_job_name = ] '*restore_job_name*'
 
-The name of the [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Agent job on the secondary server that restores the backups to the secondary database. *restore_job_name* is **sysname** and can't be NULL.
+The name of the [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Agent job on the secondary server that restores the backups to the secondary database. *restore_job_name* is **sysname** and can't be `NULL`.
 
 #### [ @file_retention_period = ] '*file_retention_period*'
 
@@ -77,7 +77,7 @@ The length of time, in minutes, that a backup file is retained on the secondary 
 
 #### [ @monitor_server = ] '*monitor_server*'
 
-The name of the monitor server. *@monitor_server* is **sysname**, with no default, and can't be NULL.
+The name of the monitor server. *@monitor_server* is **sysname**, with no default, and can't be `NULL`.
 
 #### [ @monitor_server_security_mode = ] '*monitor_server_security_mode*'
 
@@ -86,7 +86,7 @@ The security mode used to connect to the monitor server.
 - `1`: Windows Authentication
 - `0`: [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] authentication
 
-*@monitor_server_security_mode* is **bit**, with a default of `1`, and can't be NULL.
+*@monitor_server_security_mode* is **bit**, with a default of `1`, and can't be `NULL`.
 
 #### [ @monitor_server_login = ] '*monitor_server_login*'
 
@@ -98,15 +98,15 @@ The password of the account used to access the monitor server.
 
 #### [ @copy_job_id = ] '*copy_job_id*' OUTPUT
 
-The ID associated with the copy job on the secondary server. *@copy_job_id* is **uniqueidentifier** and can't be NULL.
+The ID associated with the copy job on the secondary server. *@copy_job_id* is **uniqueidentifier** and can't be `NULL`.
 
 #### [ @restore_job_id = ] '*restore_job_id*' OUTPUT
 
-The ID associated with the restore job on the secondary server. *@restore_job_id* is **uniqueidentifier** and can't be NULL.
+The ID associated with the restore job on the secondary server. *@restore_job_id* is **uniqueidentifier** and can't be `NULL`.
 
 #### [ @secondary_id = ] '*secondary_id*' OUTPUT
 
-The ID for the secondary server in the log shipping configuration. *@secondary_id* is **uniqueidentifier** and can't be NULL.
+The ID for the secondary server in the log shipping configuration. *@secondary_id* is **uniqueidentifier** and can't be `NULL`.
 
 ## Return code values
 
@@ -156,5 +156,5 @@ GO
 
 ## Related content
 
-- [About Log Shipping (SQL Server)](../../database-engine/log-shipping/about-log-shipping-sql-server.md)
+- [About log shipping (SQL Server)](../../database-engine/log-shipping/about-log-shipping-sql-server.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)

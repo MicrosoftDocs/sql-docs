@@ -1,8 +1,8 @@
 ---
 title: "Server Performance and Activity Monitoring"
 description: Use these resources to learn how to use SQL Server and Windows performance and activity monitoring tools to assess how a server is performing.
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "11/27/2018"
 ms.service: sql
 ms.subservice: performance

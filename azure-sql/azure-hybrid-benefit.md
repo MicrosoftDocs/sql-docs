@@ -6,7 +6,7 @@ author: rothja
 ms.author: jroth
 ms.reviewer: sashan, moslake, mathoma
 ms.date: 11/09/2021
-ms.service: sql-db-mi
+ms.service: azure-sql
 ms.subservice: service-overview
 ms.topic: conceptual
 ms.custom: sqldbrb=4

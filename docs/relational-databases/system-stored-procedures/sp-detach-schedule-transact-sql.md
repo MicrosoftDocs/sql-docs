@@ -1,10 +1,10 @@
 ---
 title: "sp_detach_schedule (Transact-SQL)"
-description: "sp_detach_schedule (Transact-SQL)"
+description: sp_detach_schedule removes an association between a schedule and a job.
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 11/02/2023
+ms.date: 07/04/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -43,30 +43,29 @@ sp_detach_schedule
 
 The job identification number of the job to remove the schedule from. *@job_id* is **uniqueidentifier**, with a default of `NULL`.
 
+Either *@job_id* or *@job_name* must be specified, but both can't be specified.
+
 #### [ @job_name = ] N'*job_name*'
 
 The name of the job to remove the schedule from. *@job_name* is **sysname**, with a default of `NULL`.
 
-> [!NOTE]  
-> Either *@job_id* or *@job_name* must be specified, but both can't be specified.
+Either *@job_id* or *@job_name* must be specified, but both can't be specified.
 
 #### [ @schedule_id = ] *schedule_id*
 
 The schedule identification number of the schedule to remove from the job. *@schedule_id* is **int**, with a default of `NULL`.
 
+Either *@schedule_id* or *@schedule_name* must be specified, but both can't be specified.
+
 #### [ @schedule_name = ] N'*schedule_name*'
 
 The name of the schedule to remove from the job. *@schedule_name* is **sysname**, with a default of `NULL`.
 
-> [!NOTE]  
-> Either *@schedule_id* or *@schedule_name* must be specified, but both can't be specified.
+Either *@schedule_id* or *@schedule_name* must be specified, but both can't be specified.
 
 #### [ @delete_unused_schedule = ] *delete_unused_schedule*
 
-Specifies whether to delete unused job schedules. *@delete_unused_schedule* is **bit**, with a default of `0`.
-
-- If set to `0`, all schedules are kept, even if no jobs reference them.
-- If set to `1`, unused job schedules are deleted if no jobs reference them.
+Specifies whether to delete unused job schedules. *@delete_unused_schedule* is **bit**, with a default of `0`, which means that all schedules are kept, even if no jobs reference them. If set to `1`, unused job schedules are deleted if no jobs reference them.
 
 #### [ @automatic_post = ] *automatic_post*
 
@@ -90,11 +89,9 @@ Other users must be granted one of the following [!INCLUDE [ssNoVersion](../../i
 - **SQLAgentReaderRole**
 - **SQLAgentOperatorRole**
 
-For details about the permissions of these roles, see [SQL Server Agent Fixed Database Roles](../../ssms/agent/sql-server-agent-fixed-database-roles.md).
-
 The job owner can attach a job to a schedule and detach a job from a schedule without also having to be the schedule owner. However, a schedule can't be deleted if the detach would leave it with no jobs unless the caller is the schedule owner.
 
-Only members of **sysadmin** can use this stored procedure to edit the attributes of jobs that are owned by other users.
+For details about the permissions of these roles, see [SQL Server Agent Fixed Database Roles](../../ssms/agent/sql-server-agent-fixed-database-roles.md).
 
 [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] checks to determine whether the user owns the schedule. Only members of the **sysadmin** fixed server role can detach schedules from jobs owned by another user.
 

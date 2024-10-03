@@ -186,11 +186,7 @@ On the domain controller:
 
     4. Add a principal from the realm.
 
-        ![Screenshot of Security Identity Mapping dialog box](media/hadoop-connection-manager/map-security-identity.png)
-
-On the gateway computer:
-
-Run the following **Ksetup** commands to add a realm entry.
+5. On the gateway computer, run the following **Ksetup** commands to add a realm entry.
 
 ```console
 C:> Ksetup /addkdc REALM.COM <your_kdc_server_address>

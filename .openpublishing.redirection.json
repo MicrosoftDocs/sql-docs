@@ -20221,6 +20221,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "docs/relational-databases/databases/publish-a-database-sql-server-management-studio.md",
+      "redirect_url": "/previous-versions/sql/2014/relational-databases/databases/publish-a-database-sql-server-management-studio",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "docs/2014/relational-databases/databases/rebuild-system-databases.md",
       "redirect_url": "/previous-versions/sql/2014/relational-databases/databases/rebuild-system-databases",
       "redirect_document_id": false
@@ -23563,6 +23568,11 @@
     {
       "source_path": "docs/2014/relational-databases/in-memory-oltp/implementing-an-outer-join.md",
       "redirect_url": "/previous-versions/sql/2014/relational-databases/in-memory-oltp/implementing-an-outer-join",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/relational-databases/in-memory-oltp/implementing-an-outer-join.md",
+      "redirect_url": "/sql/relational-databases/performance/joins",
       "redirect_document_id": false
     },
     {
@@ -39611,1901 +39621,6 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "docs/2014/ssms/about-dialog-box.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/about-dialog-box",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/add-an-external-tool-to-the-tools-menu-sql-server-management-studio.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/add-an-external-tool-to-the-tools-menu-sql-server-management-studio",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/administer-servers-with-sql-server-management-studio.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/administer-servers-with-sql-server-management-studio",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/arguments-dialog-box.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/arguments-dialog-box",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/build-database-projects-by-using-sql-server-management-studio.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/build-database-projects-by-using-sql-server-management-studio",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/configure-login-auditing-sql-server-management-studio.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/configure-login-auditing-sql-server-management-studio",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/configure-wmi-to-show-server-status-in-sql-server-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/configure-wmi-to-show-server-status-in-sql-server-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/customize-menus-and-shortcut-keys.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/customize-menus-and-shortcut-keys",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/external-tools-dialog-box.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/external-tools-dialog-box",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/general-user-interface-elements.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/general-user-interface-elements",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/introduction-to-sql-server-management-studio-for-business-intelligence.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/introduction-to-sql-server-management-studio-for-business-intelligence",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/properties-window-management-studio.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/properties-window-management-studio",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/property-pages-in-sql-server-management-studio.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/property-pages-in-sql-server-management-studio",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/sql-server-management-studio-keyboard-shortcuts.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/sql-server-management-studio-keyboard-shortcuts",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/sql-server-management-studio-ssms.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/sql-server-management-studio-ssms",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/sql-server-management-studio-web-browser.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/sql-server-management-studio-web-browser",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/ssms-utility.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/ssms-utility",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/the-sql-server-management-studio-environment.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/the-sql-server-management-studio-environment",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/tool-windows-in-sql-server-management-studio.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/tool-windows-in-sql-server-management-studio",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/understand-sql-server-management-studio-windows-management.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/understand-sql-server-management-studio-windows-management",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/use-of-sql-server-features-and-capabilities-wwi-oltp.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/use-of-sql-server-features-and-capabilities-wwi-oltp",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/use-the-toolbox.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/use-the-toolbox",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/user-assistance-in-sql-server-management-studio.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/user-assistance-in-sql-server-management-studio",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/alert-properties-history-page.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/alert-properties-history-page",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/alert-properties-new-alert-general-page.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/alert-properties-new-alert-general-page",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/alert-properties-new-alert-options-page.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/alert-properties-new-alert-options-page",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/alert-properties-new-alert-response-page.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/alert-properties-new-alert-response-page",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/alerts-node-sql-server-agent-f1-help.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/alerts-node-sql-server-agent-f1-help",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/alerts.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/alerts",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/assign-a-job-to-a-job-category.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/assign-a-job-to-a-job-category",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/assign-alerts-to-an-operator.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/assign-alerts-to-an-operator",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/automated-administration-across-an-enterprise.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/automated-administration-across-an-enterprise",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/automated-administration-tasks-sql-server-agent.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/automated-administration-tasks-sql-server-agent",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/automatically-delete-a-job.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/automatically-delete-a-job",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/autostart-sql-server-agent-sql-server-management-studio.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/autostart-sql-server-agent-sql-server-management-studio",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/change-an-operator-s-availability.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/change-an-operator-s-availability",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/change-steps-of-a-sql-server-agent-master-job.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/change-steps-of-a-sql-server-agent-master-job",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/change-the-membership-of-a-job-category.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/change-the-membership-of-a-job-category",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/change-the-scheduling-details-for-a-sql-server-agent-master-job.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/change-the-scheduling-details-for-a-sql-server-agent-master-job",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/choose-the-right-sql-server-agent-service-account-for-multiserver-environments.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/choose-the-right-sql-server-agent-service-account-for-multiserver-environments",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/clear-the-job-history-log.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/clear-the-job-history-log",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/configure-a-user-to-create-and-manage-sql-server-agent-jobs.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/configure-a-user-to-create-and-manage-sql-server-agent-jobs",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/configure-sql-server-agent-error-logs-general-page.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/configure-sql-server-agent-error-logs-general-page",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/configure-sql-server-agent.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/configure-sql-server-agent",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/create-a-cmdexec-job-step.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/create-a-cmdexec-job-step",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/create-a-job-category.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/create-a-job-category",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/create-a-job.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/create-a-job",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/create-a-multiserver-environment.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/create-a-multiserver-environment",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/create-a-powershell-script-job-step.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/create-a-powershell-script-job-step",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/create-a-schedule.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/create-a-schedule",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/create-a-sql-server-agent-master-job.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/create-a-sql-server-agent-master-job",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/create-a-sql-server-agent-proxy.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/create-a-sql-server-agent-proxy",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/create-a-transact-sql-job-step.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/create-a-transact-sql-job-step",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/create-a-user-defined-event.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/create-a-user-defined-event",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/create-a-wmi-event-alert.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/create-a-wmi-event-alert",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/create-an-activex-script-job-step.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/create-an-activex-script-job-step",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/create-an-alert-using-an-error-number.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/create-an-alert-using-an-error-number",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/create-an-alert-using-severity-level.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/create-an-alert-using-severity-level",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/create-an-analysis-services-job-step.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/create-an-analysis-services-job-step",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/create-an-operator.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/create-an-operator",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/create-and-attach-schedules-to-jobs.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/create-and-attach-schedules-to-jobs",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/create-jobs.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/create-jobs",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/defect-a-target-server-from-a-master-server.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/defect-a-target-server-from-a-master-server",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/defect-multiple-target-servers-from-a-master-server.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/defect-multiple-target-servers-from-a-master-server",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/define-the-response-to-an-alert-sql-server-management-studio.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/define-the-response-to-an-alert-sql-server-management-studio",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/define-transact-sql-job-step-options.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/define-transact-sql-job-step-options",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/delete-a-job-category.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/delete-a-job-category",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/delete-a-job-step-log.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/delete-a-job-step-log",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/delete-a-sql-server-agent-proxy.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/delete-a-sql-server-agent-proxy",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/delete-an-alert.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/delete-an-alert",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/delete-an-operator.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/delete-an-operator",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/delete-jobs.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/delete-jobs",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/delete-one-or-more-jobs.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/delete-one-or-more-jobs",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/delete-operator.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/delete-operator",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/designate-a-fail-safe-operator.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/designate-a-fail-safe-operator",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/designate-an-events-forwarding-server-sql-server-management-studio.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/designate-an-events-forwarding-server-sql-server-management-studio",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/disable-or-enable-a-job.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/disable-or-enable-a-job",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/disable-or-reactivate-an-alert.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/disable-or-reactivate-an-alert",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/edit-an-alert.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/edit-an-alert",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/edit-an-operator.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/edit-an-operator",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/enlist-a-target-server-to-a-master-server.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/enlist-a-target-server-to-a-master-server",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/force-a-target-server-to-poll-the-master-server.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/force-a-target-server-to-poll-the-master-server",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/format-pager-addresses-for-alerts.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/format-pager-addresses-for-alerts",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/give-others-ownership-of-a-job.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/give-others-ownership-of-a-job",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/handle-multiple-job-steps.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/handle-multiple-job-steps",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/implement-jobs.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/implement-jobs",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/implement-sql-server-agent-security.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/implement-sql-server-agent-security",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/job-activity-monitor.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/job-activity-monitor",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/job-categories-manage-job-categories.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/job-categories-manage-job-categories",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/job-categories-properties-new-job-category.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/job-categories-properties-new-job-category",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/job-properties-new-job-alerts-page.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/job-properties-new-job-alerts-page",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/job-properties-new-job-general-page.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/job-properties-new-job-general-page",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/job-properties-new-job-notifications-page.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/job-properties-new-job-notifications-page",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/job-properties-new-job-schedules-page.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/job-properties-new-job-schedules-page",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/job-properties-new-job-steps-page.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/job-properties-new-job-steps-page",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/job-properties-new-job-targets-page.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/job-properties-new-job-targets-page",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/job-step-properties-new-job-step-advanced-page.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/job-step-properties-new-job-step-advanced-page",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/job-step-properties-new-job-step-general-page.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/job-step-properties-new-job-step-general-page",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/jobs-node-sql-server-agent-f1-help.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/jobs-node-sql-server-agent-f1-help",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/jobs-that-reference-a-schedule.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/jobs-that-reference-a-schedule",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/list-job-category-information.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/list-job-category-information",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/make-a-master-server.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/make-a-master-server",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/make-a-target-server.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/make-a-target-server",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/manage-events.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/manage-events",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/manage-job-steps.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/manage-job-steps",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/manage-jobs-across-an-enterprise.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/manage-jobs-across-an-enterprise",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/manage-schedules.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/manage-schedules",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/modify-a-job.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/modify-a-job",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/modify-a-sql-server-agent-master-job.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/modify-a-sql-server-agent-master-job",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/modify-a-sql-server-agent-proxy.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/modify-a-sql-server-agent-proxy",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/modify-the-target-server-s-associated-with-a-sql-server-agent-master-job.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/modify-the-target-server-s-associated-with-a-sql-server-agent-master-job",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/modify-the-target-servers-for-a-job.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/modify-the-target-servers-for-a-job",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/monitor-and-respond-to-events.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/monitor-and-respond-to-events",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/monitor-job-activity.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/monitor-job-activity",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/new-job-schedule-job-schedule-properties.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/new-job-schedule-job-schedule-properties",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/notify-an-operator-of-job-status.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/notify-an-operator-of-job-status",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/operator-properties-history-page.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/operator-properties-history-page",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/operator-properties-new-operator-general-page.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/operator-properties-new-operator-general-page",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/operator-properties-new-operator-notifications-page.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/operator-properties-new-operator-notifications-page",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/operators-node-sql-server-agent-f1-help.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/operators-node-sql-server-agent-f1-help",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/operators.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/operators",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/organize-jobs.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/organize-jobs",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/pick-schedule-for-job.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/pick-schedule-for-job",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/poll-servers.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/poll-servers",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/post-download-instructions.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/post-download-instructions",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/proxies-node-sql-server-agent-f1-help.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/proxies-node-sql-server-agent-f1-help",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/proxy-account-properties-new-proxy-account-general-page.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/proxy-account-properties-new-proxy-account-general-page",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/proxy-account-properties-new-proxy-account-principals-tab.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/proxy-account-properties-new-proxy-account-principals-tab",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/proxy-account-properties-references-tab.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/proxy-account-properties-references-tab",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/proxy-editor-add-principal.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/proxy-editor-add-principal",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/recycle-sql-server-agent-error-logs.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/recycle-sql-server-agent-error-logs",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/remove-steps-from-a-sql-server-agent-master-job.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/remove-steps-from-a-sql-server-agent-master-job",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/rename-a-sql-server-agent-error-log-sql-server-management-studio.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/rename-a-sql-server-agent-error-log-sql-server-management-studio",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/resize-the-job-history-log.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/resize-the-job-history-log",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/run-jobs.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/run-jobs",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/schedule-a-job.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/schedule-a-job",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/select-an-account-for-the-sql-server-agent-service.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/select-an-account-for-the-sql-server-agent-service",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/send-sql-server-agent-error-messages.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/send-sql-server-agent-error-messages",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/set-cpu-idle-time-and-duration-sql-server-management-studio.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/set-cpu-idle-time-and-duration-sql-server-management-studio",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/set-encryption-options-on-target-servers.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/set-encryption-options-on-target-servers",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/set-job-execution-shutdown-sql-server-management-studio.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/set-job-execution-shutdown-sql-server-management-studio",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/set-job-step-success-or-failure-flow.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/set-job-step-success-or-failure-flow",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/set-service-startup-account-sql-server-agent-sql-server-configuration-manager.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/set-service-startup-account-sql-server-agent-sql-server-configuration-manager",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/set-sql-server-alias-for-sql-server-agent-service-ssms.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/set-sql-server-alias-for-sql-server-agent-service-ssms",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/set-sql-server-connection-for-sql-server-agent-service-ssms.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/set-sql-server-connection-for-sql-server-agent-service-ssms",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/set-the-polling-interval-for-target-servers.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/set-the-polling-interval-for-target-servers",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/set-up-the-job-history-log.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/set-up-the-job-history-log",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/specify-a-target-server-s-location-sql-server-management-studio.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/specify-a-target-server-s-location-sql-server-management-studio",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/specify-job-responses.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/specify-job-responses",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/sql-server-agent-error-log.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/sql-server-agent-error-log",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/sql-server-agent-f1-help.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/sql-server-agent-f1-help",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/sql-server-agent-fixed-database-roles.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/sql-server-agent-fixed-database-roles",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/sql-server-agent-properties-advanced-page.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/sql-server-agent-properties-advanced-page",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/sql-server-agent-properties-alert-system-page.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/sql-server-agent-properties-alert-system-page",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/sql-server-agent-properties-connection-page.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/sql-server-agent-properties-connection-page",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/sql-server-agent-properties-general-page.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/sql-server-agent-properties-general-page",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/sql-server-agent-properties-history-page.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/sql-server-agent-properties-history-page",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/sql-server-agent-properties-job-system-page.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/sql-server-agent-properties-job-system-page",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/sql-server-agent.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/sql-server-agent",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/start-a-job.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/start-a-job",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/start-stop-or-pause-the-sql-server-agent-service.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/start-stop-or-pause-the-sql-server-agent-service",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/stop-a-job.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/stop-a-job",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/synchronize-target-server-clocks-sql-server-management-studio.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/synchronize-target-server-clocks-sql-server-management-studio",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/target-servers-download-instructions-tab.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/target-servers-download-instructions-tab",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/target-servers-target-server-status-tab.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/target-servers-target-server-status-tab",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/troubleshoot-multiserver-jobs-that-use-proxies.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/troubleshoot-multiserver-jobs-that-use-proxies",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/tune-automated-administration-across-an-enterprise.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/tune-automated-administration-across-an-enterprise",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/use-performance-objects.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/use-performance-objects",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/use-tokens-in-job-steps.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/use-tokens-in-job-steps",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/view-a-job.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/view-a-job",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/view-information-about-an-alert.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/view-information-about-an-alert",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/view-information-about-an-operator.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/view-information-about-an-operator",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/view-job-activity.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/view-job-activity",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/view-job-step-information.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/view-job-step-information",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/view-or-modify-jobs.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/view-or-modify-jobs",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/view-sql-server-agent-error-log-sql-server-management-studio.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/view-sql-server-agent-error-log-sql-server-management-studio",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/view-the-job-history.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/view-the-job-history",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/write-execution-trace-messages-to-sql-server-agent-log-ssms.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/write-execution-trace-messages-to-sql-server-agent-log-ssms",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/write-the-job-status-to-the-windows-application-log.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/agent/write-the-job-status-to-the-windows-application-log",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/f1-help/connect-to-any-sql-server-component-from-sql-server-management-studio.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/f1-help/connect-to-any-sql-server-component-from-sql-server-management-studio",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/f1-help/connect-to-server-connection-properties-page-database-engine.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/f1-help/connect-to-server-connection-properties-page-database-engine",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/f1-help/connect-to-server-database-engine.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/f1-help/connect-to-server-database-engine",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/f1-help/connect-to-server-login-page-database-engine.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/f1-help/connect-to-server-login-page-database-engine",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/f1-help/f1-help-for-server-connections-sql-server-management-studio.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/f1-help/f1-help-for-server-connections-sql-server-management-studio",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/menu-help/about-sql-server-management-studio.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/menu-help/about-sql-server-management-studio",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/menu-help/advanced-save-options.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/menu-help/advanced-save-options",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/menu-help/choose-search-folders-dialog-box-visual-studio.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/menu-help/choose-search-folders-dialog-box-visual-studio",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/menu-help/choose-toolbox-items-maintenance-tasks-page.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/menu-help/choose-toolbox-items-maintenance-tasks-page",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/menu-help/customize-commands-page.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/menu-help/customize-commands-page",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/menu-help/customize-toolbars-page.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/menu-help/customize-toolbars-page",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/menu-help/external-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/menu-help/external-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/menu-help/open-with-new-file.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/menu-help/open-with-new-file",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/menu-help/options-designers-analysis-services-designers-general.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/menu-help/options-designers-analysis-services-designers-general",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/menu-help/options-designers-maintenance-plans-page.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/menu-help/options-designers-maintenance-plans-page",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/menu-help/options-designers-table-and-database-designers-page.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/menu-help/options-designers-table-and-database-designers-page",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/menu-help/options-dialog-boxes-f1-help.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/menu-help/options-dialog-boxes-f1-help",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/menu-help/options-environment-fonts-and-colors-page.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/menu-help/options-environment-fonts-and-colors-page",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/menu-help/options-environment-general-page.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/menu-help/options-environment-general-page",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/menu-help/options-environment-help-general-page.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/menu-help/options-environment-help-general-page",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/menu-help/options-environment-help-online-page.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/menu-help/options-environment-help-online-page",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/menu-help/options-environment-keyboard-page.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/menu-help/options-environment-keyboard-page",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/menu-help/properties-window-f1-help-management-studio.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/menu-help/properties-window-f1-help-management-studio",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/menu-help/save-as.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/menu-help/save-as",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/menu-help/save-changes.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/menu-help/save-changes",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/menu-help/sql-server-management-studio-menu-help.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/menu-help/sql-server-management-studio-menu-help",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/menu-help/windows-dialog-box-microsoft-document-explorer-help.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/menu-help/windows-dialog-box-microsoft-document-explorer-help",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/object/add-a-custom-report-to-management-studio.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/object/add-a-custom-report-to-management-studio",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/object/add-objects.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/object/add-objects",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/object/add-steps-to-a-sql-server-agent-master-job.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/object/add-steps-to-a-sql-server-agent-master-job",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/object/browse-for-objects-object-explorer.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/object/browse-for-objects-object-explorer",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/object/connect-to-an-instance-from-object-explorer.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/object/connect-to-an-instance-from-object-explorer",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/object/custom-reports-in-management-studio.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/object/custom-reports-in-management-studio",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/object/delete-objects.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/object/delete-objects",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/object/filter-settings-object-explorer-and-utility-explorer.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/object/filter-settings-object-explorer-and-utility-explorer",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/object/hide-system-objects-in-object-explorer.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/object/hide-system-objects-in-object-explorer",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/object/manage-objects-by-using-object-explorer.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/object/manage-objects-by-using-object-explorer",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/object/name-not-found-dialog-box.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/object/name-not-found-dialog-box",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/object/object-dependencies.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/object/object-dependencies",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/object/object-explorer-details-pane.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/object/object-explorer-details-pane",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/object/object-explorer.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/object/object-explorer",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/object/open-and-configure-object-explorer.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/object/open-and-configure-object-explorer",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/object/options-sql-server-object-explorer-commands.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/object/options-sql-server-object-explorer-commands",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/object/options-sql-server-object-explorer-scripting-page.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/object/options-sql-server-object-explorer-scripting-page",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/object/select-object-types-object-explorer.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/object/select-object-types-object-explorer",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/object/select-objects-object-explorer.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/object/select-objects-object-explorer",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/object/unsuppress-run-custom-report-warnings.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/object/unsuppress-run-custom-report-warnings",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/object/use-custom-reports-with-object-explorer-node-properties.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/object/use-custom-reports-with-object-explorer-node-properties",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/register-servers/change-a-server-s-registration-sql-server-management-studio.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/register-servers/change-a-server-s-registration-sql-server-management-studio",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/register-servers/change-the-name-of-registered-server-or-registered-server-group.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/register-servers/change-the-name-of-registered-server-or-registered-server-group",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/register-servers/connect-to-a-registered-server-sql-server-management-studio.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/register-servers/connect-to-a-registered-server-sql-server-management-studio",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/register-servers/create-a-central-management-server-and-server-group.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/register-servers/create-a-central-management-server-and-server-group",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/register-servers/create-a-new-registered-server-sql-server-management-studio.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/register-servers/create-a-new-registered-server-sql-server-management-studio",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/register-servers/create-or-edit-a-server-group-sql-server-management-studio.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/register-servers/create-or-edit-a-server-group-sql-server-management-studio",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/register-servers/disconnect-from-a-registered-server-sql-server-management-studio.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/register-servers/disconnect-from-a-registered-server-sql-server-management-studio",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/register-servers/execute-statements-against-multiple-servers-simultaneously.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/register-servers/execute-statements-against-multiple-servers-simultaneously",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/register-servers/export-registered-server-information-sql-server-management-studio.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/register-servers/export-registered-server-information-sql-server-management-studio",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/register-servers/import-registered-server-information-sql-server-management-studio.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/register-servers/import-registered-server-information-sql-server-management-studio",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/register-servers/move-a-registered-server-or-registered-server-group.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/register-servers/move-a-registered-server-or-registered-server-group",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/register-servers/register-a-connected-server-sql-server-management-studio.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/register-servers/register-a-connected-server-sql-server-management-studio",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/register-servers/register-servers.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/register-servers/register-servers",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/register-servers/registered-servers-f1-help.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/register-servers/registered-servers-f1-help",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/register-servers/remove-a-registered-server-sql-server-management-studio.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/register-servers/remove-a-registered-server-sql-server-management-studio",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/register-servers/remove-a-server-group-sql-server-management-studio.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/register-servers/remove-a-server-group-sql-server-management-studio",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/register-servers/view-registered-servers-in-sql-server-management-studio.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/register-servers/view-registered-servers-in-sql-server-management-studio",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/solution/add-an-existing-project-to-a-solution.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/solution/add-an-existing-project-to-a-solution",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/solution/add-existing-items-to-a-project.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/solution/add-existing-items-to-a-project",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/solution/add-new-items-to-a-project.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/solution/add-new-items-to-a-project",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/solution/associate-a-query-with-a-connection-in-a-project.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/solution/associate-a-query-with-a-connection-in-a-project",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/solution/change-the-connection-associated-with-a-query.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/solution/change-the-connection-associated-with-a-query",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/solution/change-the-default-location-for-projects.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/solution/change-the-default-location-for-projects",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/solution/close-a-solution.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/solution/close-a-solution",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/solution/copy-items-in-a-solution.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/solution/copy-items-in-a-solution",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/solution/create-a-new-solution.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/solution/create-a-new-solution",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/solution/create-a-project.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/solution/create-a-project",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/solution/delete-a-solution.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/solution/delete-a-solution",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/solution/files-that-manage-solutions-and-projects.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/solution/files-that-manage-solutions-and-projects",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/solution/manage-files-with-encoding.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/solution/manage-files-with-encoding",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/solution/miscellaneous-files.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/solution/miscellaneous-files",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/solution/move-items-in-a-solution.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/solution/move-items-in-a-solution",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/solution/open-an-existing-solution.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/solution/open-an-existing-solution",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/solution/projects-sql-server-management-studio.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/solution/projects-sql-server-management-studio",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/solution/remove-or-delete-an-item-or-project.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/solution/remove-or-delete-an-item-or-project",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/solution/rename-solutions-and-project-items.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/solution/rename-solutions-and-project-items",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/solution/solution-explorer.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/solution/solution-explorer",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/solution/solutions-sql-server-management-studio.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/solution/solutions-sql-server-management-studio",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/solution/view-or-change-the-properties-of-a-connection-in-a-project.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/solution/view-or-change-the-properties-of-a-connection-in-a-project",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/solution/view-project-properties.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/solution/view-project-properties",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/template/open-a-template.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/template/open-a-template",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/template/replace-template-parameters.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/template/replace-template-parameters",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/template/template-explorer.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/template/template-explorer",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/tutorials/lesson-1-1-start-sql-server-management-studio.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/tutorials/lesson-1-1-start-sql-server-management-studio",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/tutorials/lesson-1-2-connect-with-registered-servers-and-object-explorer.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/tutorials/lesson-1-2-connect-with-registered-servers-and-object-explorer",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/tutorials/lesson-1-3-change-the-environment-layout.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/tutorials/lesson-1-3-change-the-environment-layout",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/tutorials/lesson-1-4-display-the-query-window.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/tutorials/lesson-1-4-display-the-query-window",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/tutorials/lesson-1-5-show-the-object-explorer-details-page.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/tutorials/lesson-1-5-show-the-object-explorer-details-page",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/tutorials/lesson-1-6-select-the-keyboard-shortcut-scheme.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/tutorials/lesson-1-6-select-the-keyboard-shortcut-scheme",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/tutorials/lesson-1-7-set-the-startup-options.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/tutorials/lesson-1-7-set-the-startup-options",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/tutorials/lesson-1-8-restore-the-default-sql-server-management-studio-configuration.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/tutorials/lesson-1-8-restore-the-default-sql-server-management-studio-configuration",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/tutorials/lesson-1-9-summary-basic-navigation.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/tutorials/lesson-1-9-summary-basic-navigation",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/tutorials/lesson-1-basic-navigation-in-sql-server-management-studio.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/tutorials/lesson-1-basic-navigation-in-sql-server-management-studio",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/tutorials/lesson-2-1-connecting-with-query-editor.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/tutorials/lesson-2-1-connecting-with-query-editor",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/tutorials/lesson-2-2-adding-indentation.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/tutorials/lesson-2-2-adding-indentation",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/tutorials/lesson-2-3-maximizing-query-editor.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/tutorials/lesson-2-3-maximizing-query-editor",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/tutorials/lesson-2-4-using-comments.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/tutorials/lesson-2-4-using-comments",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/tutorials/lesson-2-5-other-ways-of-viewing-the-code-window.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/tutorials/lesson-2-5-other-ways-of-viewing-the-code-window",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/tutorials/lesson-2-6-script-a-table.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/tutorials/lesson-2-6-script-a-table",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/tutorials/lesson-2-writing-transact-sql.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/tutorials/lesson-2-writing-transact-sql",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/tutorials/lesson-3-1-create-scripts-using-templates.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/tutorials/lesson-3-1-create-scripts-using-templates",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/tutorials/lesson-3-2-create-custom-templates.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/tutorials/lesson-3-2-create-custom-templates",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/tutorials/lesson-3-3-save-scripts-as-projects-or-solutions.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/tutorials/lesson-3-3-save-scripts-as-projects-or-solutions",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/tutorials/lesson-3-4-summary-solutions-and-script-projects.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/tutorials/lesson-3-4-summary-solutions-and-script-projects",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/tutorials/lesson-3-working-with-templates-solutions-and-script-projects.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/tutorials/lesson-3-working-with-templates-solutions-and-script-projects",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/tutorials/tutorial-sql-server-management-studio.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/tutorials/tutorial-sql-server-management-studio",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/add-columns-to-queries-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/add-columns-to-queries-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/add-derived-tables-to-queries-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/add-derived-tables-to-queries-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/add-new-rows-in-the-results-pane-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/add-new-rows-in-the-results-pane-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/add-related-tables-to-diagrams-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/add-related-tables-to-diagrams-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/add-table-dialog-box-database-designer-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/add-table-dialog-box-database-designer-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/add-table-dialog-box-query-and-view-designers-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/add-table-dialog-box-query-and-view-designers-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/add-tables-to-diagrams-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/add-tables-to-diagrams-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/add-tables-to-queries-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/add-tables-to-queries-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/add-text-annotations-to-diagrams-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/add-text-annotations-to-diagrams-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/arrange-tables-in-diagrams-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/arrange-tables-in-diagrams-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/autosize-selected-tables-in-diagrams-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/autosize-selected-tables-in-diagrams-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/change-the-font-color-size-and-style-in-diagrams-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/change-the-font-color-size-and-style-in-diagrams-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/check-constraint-dialog-box-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/check-constraint-dialog-box-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/check-constraint-expression-dialog-box-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/check-constraint-expression-dialog-box-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/choose-name-dialog-box-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/choose-name-dialog-box-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/choose-target-table-for-insert-results-dialog-box-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/choose-target-table-for-insert-results-dialog-box-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/choose-target-table-for-insert-values-dialog-box-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/choose-target-table-for-insert-values-dialog-box-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/clear-query-results-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/clear-query-results-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/collapse-groups-of-rows-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/collapse-groups-of-rows-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/collation-dialog-box-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/collation-dialog-box-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/color-dialog-box-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/color-dialog-box-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/column-list-dialog-box-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/column-list-dialog-box-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/column-properties-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/column-properties-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/column-selection-dialog-box-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/column-selection-dialog-box-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/combine-conditions-when-and-has-precedence-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/combine-conditions-when-and-has-precedence-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/combine-conditions-when-or-has-precedence-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/combine-conditions-when-or-has-precedence-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/conventions-combine-search-conditions-in-criteria-pane-visual-db-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/conventions-combine-search-conditions-in-criteria-pane-visual-db-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/copy-an-image-of-a-database-diagram-to-the-clipboard-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/copy-an-image-of-a-database-diagram-to-the-clipboard-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/copy-queries-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/copy-queries-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/copy-query-results-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/copy-query-results-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/copy-tables-from-one-database-diagrams-to-another-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/copy-tables-from-one-database-diagrams-to-another-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/count-rows-in-a-table-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/count-rows-in-a-table-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/create-a-new-database-diagram-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/create-a-new-database-diagram-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/create-column-aliases-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/create-column-aliases-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/create-delete-queries-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/create-delete-queries-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/create-full-text-search-queries-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/create-full-text-search-queries-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/create-insert-results-queries-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/create-insert-results-queries-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/create-insert-values-queries-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/create-insert-values-queries-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/create-make-table-queries-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/create-make-table-queries-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/create-outer-joins-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/create-outer-joins-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/create-queries-using-something-besides-a-table-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/create-queries-using-something-besides-a-table-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/create-queries-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/create-queries-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/create-queries-with-unnamed-parameters-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/create-queries-with-unnamed-parameters-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/create-relationships-between-tables-on-a-diagram-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/create-relationships-between-tables-on-a-diagram-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/create-self-joins-automatically-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/create-self-joins-automatically-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/create-self-joins-manually-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/create-self-joins-manually-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/create-subqueries-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/create-subqueries-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/create-table-aliases-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/create-table-aliases-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/create-union-queries-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/create-union-queries-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/create-update-queries-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/create-update-queries-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/criteria-pane-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/criteria-pane-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/customize-the-amount-of-information-displayed-in-diagrams-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/customize-the-amount-of-information-displayed-in-diagrams-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/data-type-change-required-dialog-box-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/data-type-change-required-dialog-box-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/database-changes-detected-dialog-box-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/database-changes-detected-dialog-box-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/delete-a-database-diagram-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/delete-a-database-diagram-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/delete-queries-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/delete-queries-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/delete-rows-in-the-results-pane-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/delete-rows-in-the-results-pane-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/delete-table-dialog-box-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/delete-table-dialog-box-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/description-property-dialog-box-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/description-property-dialog-box-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/design-database-diagrams-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/design-database-diagrams-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/design-tables-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/design-tables-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/development-test-and-production-databases-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/development-test-and-production-databases-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/diagram-pane-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/diagram-pane-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/discard-changes-made-to-diagrams-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/discard-changes-made-to-diagrams-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/discard-changes-made-to-queries-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/discard-changes-made-to-queries-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/display-query-and-view-designer-panes-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/display-query-and-view-designer-panes-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/draw-reflexive-relationships-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/draw-reflexive-relationships-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/edit-rows-in-the-results-pane-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/edit-rows-in-the-results-pane-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/exclude-duplicate-rows-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/exclude-duplicate-rows-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/full-text-index-columns-dialog-box-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/full-text-index-columns-dialog-box-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/full-text-index-dialog-box-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/full-text-index-dialog-box-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/go-to-line-dialog-box.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/go-to-line-dialog-box",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/group-rows-in-query-results-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/group-rows-in-query-results-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/how-the-query-and-view-designer-represents-joins-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/how-the-query-and-view-designer-represents-joins-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/include-or-exclude-rows-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/include-or-exclude-rows-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/index-columns-dialog-box-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/index-columns-dialog-box-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/indexes-keys-dialog-box-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/indexes-keys-dialog-box-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/issues-of-database-evolution-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/issues-of-database-evolution-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/join-dialog-box-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/join-dialog-box-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/join-tables-automatically-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/join-tables-automatically-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/join-tables-manually-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/join-tables-manually-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/join-tables-on-multiple-columns-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/join-tables-on-multiple-columns-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/location-dialog-box-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/location-dialog-box-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/make-table-dialog-box-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/make-table-dialog-box-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/map-many-to-many-relationships-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/map-many-to-many-relationships-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
       "source_path": "docs/ssdt/check-for-updates-dialog-box.md",
       "redirect_url": "/sql/ssdt/sql-server-data-tools",
       "redirect_document_id": false
@@ -41521,713 +39636,8 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "docs/ssms/about-dialog-box.md",
-      "redirect_url": "/sql/ssms/download-sql-server-management-studio-ssms",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/ssms/arguments-dialog-box.md",
-      "redirect_url": "/sql/ssms/use-of-sql-server-features-and-capabilities-wwi-oltp",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/ssms/external-tools-dialog-box.md",
-      "redirect_url": "/sql/ssms/use-of-sql-server-features-and-capabilities-wwi-oltp",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/ssms/menu-help/choose-search-folders-dialog-box-visual-studio.md",
-      "redirect_url": "/sql/ssms/download-sql-server-management-studio-ssms",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/ssms/menu-help/options-dialog-boxes-f1-help.md",
-      "redirect_url": "/sql/ssms/download-sql-server-management-studio-ssms",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/ssms/menu-help/windows-dialog-box-microsoft-document-explorer-help.md",
-      "redirect_url": "/sql/ssms/download-sql-server-management-studio-ssms",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/ssms/object/name-not-found-dialog-box.md",
-      "redirect_url": "/sql/ssms/download-sql-server-management-studio-ssms",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/ssms/visual-db-tools/add-table-dialog-box-query-and-view-designers-visual-database-tools.md",
-      "redirect_url": "/sql/ssms/visual-db-tools/visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/ssms/visual-db-tools/add-table-dialog-box-database-designer-visual-database-tools.md",
-      "redirect_url": "/sql/ssms/visual-db-tools/visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/ssms/visual-db-tools/check-constraint-dialog-box-visual-database-tools.md",
-      "redirect_url": "/sql/ssms/visual-db-tools/visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/ssms/visual-db-tools/check-constraint-expression-dialog-box-visual-database-tools.md",
-      "redirect_url": "/sql/ssms/visual-db-tools/visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/ssms/visual-db-tools/choose-name-dialog-box-visual-database-tools.md",
-      "redirect_url": "/sql/ssms/visual-db-tools/visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/ssms/visual-db-tools/choose-target-table-for-insert-results-dialog-box-visual-database-tools.md",
-      "redirect_url": "/sql/ssms/visual-db-tools/visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/ssms/visual-db-tools/choose-target-table-for-insert-values-dialog-box-visual-database-tools.md",
-      "redirect_url": "/sql/ssms/visual-db-tools/visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/ssms/visual-db-tools/collation-dialog-box-visual-database-tools.md",
-      "redirect_url": "/sql/ssms/visual-db-tools/visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/ssms/visual-db-tools/color-dialog-box-visual-database-tools.md",
-      "redirect_url": "/sql/ssms/visual-db-tools/visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/ssms/visual-db-tools/column-list-dialog-box-visual-database-tools.md",
-      "redirect_url": "/sql/ssms/visual-db-tools/visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/ssms/visual-db-tools/column-selection-dialog-box-visual-database-tools.md",
-      "redirect_url": "/sql/ssms/visual-db-tools/visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/ssms/visual-db-tools/data-type-change-required-dialog-box-visual-database-tools.md",
-      "redirect_url": "/sql/ssms/visual-db-tools/visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/ssms/visual-db-tools/database-changes-detected-dialog-box-visual-database-tools.md",
-      "redirect_url": "/sql/ssms/visual-db-tools/visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/ssms/visual-db-tools/delete-table-dialog-box-visual-database-tools.md",
-      "redirect_url": "/sql/ssms/visual-db-tools/visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/ssms/visual-db-tools/description-property-dialog-box-visual-database-tools.md",
-      "redirect_url": "/sql/ssms/visual-db-tools/visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/ssms/visual-db-tools/full-text-index-columns-dialog-box-visual-database-tools.md",
-      "redirect_url": "/sql/ssms/visual-db-tools/visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/ssms/visual-db-tools/full-text-index-dialog-box-visual-database-tools.md",
-      "redirect_url": "/sql/ssms/visual-db-tools/visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/ssms/visual-db-tools/go-to-line-dialog-box.md",
-      "redirect_url": "/sql/ssms/visual-db-tools/visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/ssms/visual-db-tools/index-columns-dialog-box-visual-database-tools.md",
-      "redirect_url": "/sql/ssms/visual-db-tools/visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/ssms/visual-db-tools/indexes-keys-dialog-box-visual-database-tools.md",
-      "redirect_url": "/sql/ssms/visual-db-tools/visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/ssms/visual-db-tools/join-dialog-box-visual-database-tools.md",
-      "redirect_url": "/sql/ssms/visual-db-tools/visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/ssms/visual-db-tools/location-dialog-box-visual-database-tools.md",
-      "redirect_url": "/sql/ssms/visual-db-tools/visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/ssms/visual-db-tools/make-table-dialog-box-visual-database-tools.md",
-      "redirect_url": "/sql/ssms/visual-db-tools/visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/ssms/visual-db-tools/open-file-dialog-box.md",
-      "redirect_url": "/sql/ssms/visual-db-tools/visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/ssms/visual-db-tools/page-setup-dialog-box.md",
-      "redirect_url": "/sql/ssms/visual-db-tools/visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/ssms/visual-db-tools/partition-column-list-dialog-box-visual-database-tools.md",
-      "redirect_url": "/sql/ssms/visual-db-tools/visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/ssms/visual-db-tools/post-save-notifications-dialog-box-visual-database-tools.md",
-      "redirect_url": "/sql/ssms/visual-db-tools/visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/ssms/visual-db-tools/print-dialog-box.md",
-      "redirect_url": "/sql/ssms/visual-db-tools/visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/ssms/visual-db-tools/query-definitions-differ-dialog-box-visual-database-tools.md",
-      "redirect_url": "/sql/ssms/visual-db-tools/visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/ssms/visual-db-tools/query-parameters-dialog-box-visual-database-tools.md",
-      "redirect_url": "/sql/ssms/visual-db-tools/visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/ssms/visual-db-tools/save-change-script-dialog-box-visual-database-tools.md",
-      "redirect_url": "/sql/ssms/visual-db-tools/visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/ssms/visual-db-tools/save-dialog-box-visual-database-tools.md",
-      "redirect_url": "/sql/ssms/visual-db-tools/visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/ssms/visual-db-tools/save-not-permitted-dialog-box.md",
-      "redirect_url": "/sql/ssms/visual-db-tools/visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/ssms/visual-db-tools/spatial-indexes-dialog-box-visual-database-tools.md",
-      "redirect_url": "/sql/ssms/visual-db-tools/visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/ssms/visual-db-tools/sql-comment-dialog-box-visual-database-tools.md",
-      "redirect_url": "/sql/ssms/visual-db-tools/visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/ssms/visual-db-tools/sql-syntax-errors-encountered-dialog-box-visual-database-tools.md",
-      "redirect_url": "/sql/ssms/visual-db-tools/visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/ssms/visual-db-tools/tables-and-columns-dialog-box-visual-database-tools.md",
-      "redirect_url": "/sql/ssms/visual-db-tools/visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/ssms/visual-db-tools/update-table-dialog-box-visual-database-tools.md",
-      "redirect_url": "/sql/ssms/visual-db-tools/visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/ssms/visual-db-tools/validation-warnings-dialog-box-visual-database-tools.md",
-      "redirect_url": "/sql/ssms/visual-db-tools/visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/ssms/visual-db-tools/xml-indexes-dialog-box-visual-database-tools.md",
-      "redirect_url": "/sql/ssms/visual-db-tools/visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
       "source_path": "docs/tools/sql-server-profiler/sql-server-profiler-f1-help.md",
       "redirect_url": "/sql/tools/sql-server-profiler/sql-server-profiler",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/modify-join-operators-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/modify-join-operators-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/modify-queries-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/modify-queries-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/multiuser-environments-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/multiuser-environments-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/navigate-in-database-diagram-designer-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/navigate-in-database-diagram-designer-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/navigate-in-the-query-and-view-designer-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/navigate-in-the-query-and-view-designer-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/object-already-exists.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/object-already-exists",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/open-database-diagram-designer-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/open-database-diagram-designer-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/open-database-diagrams-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/open-database-diagrams-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/open-file-dialog-box.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/open-file-dialog-box",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/open-queries-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/open-queries-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/open-the-query-and-view-designer-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/open-the-query-and-view-designer-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/page-setup-dialog-box.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/page-setup-dialog-box",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/parameter-queries-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/parameter-queries-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/partition-column-list-dialog-box-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/partition-column-list-dialog-box-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/permissions-and-visual-database-tools-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/permissions-and-visual-database-tools-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/post-save-notifications-dialog-box-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/post-save-notifications-dialog-box-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/print-dialog-box.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/print-dialog-box",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/print-query-results-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/print-query-results-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/query-definitions-differ-dialog-box-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/query-definitions-differ-dialog-box-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/query-parameters-dialog-box-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/query-parameters-dialog-box-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/query-properties-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/query-properties-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/query-with-joins-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/query-with-joins-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/query-with-parameters-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/query-with-parameters-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/reconcile-a-database-diagram-with-a-modified-database-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/reconcile-a-database-diagram-with-a-modified-database-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/reconcile-changes-made-by-multiple-users-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/reconcile-changes-made-by-multiple-users-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/remove-columns-from-queries-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/remove-columns-from-queries-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/remove-columns-from-query-results-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/remove-columns-from-query-results-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/remove-joins-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/remove-joins-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/remove-tables-from-database-diagrams-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/remove-tables-from-database-diagrams-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/remove-tables-from-queries-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/remove-tables-from-queries-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/rename-a-database-diagram-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/rename-a-database-diagram-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/rename-queries-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/rename-queries-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/reorder-output-columns-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/reorder-output-columns-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/results-pane-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/results-pane-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/rules-for-entering-search-values-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/rules-for-entering-search-values-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/rules-for-updating-results-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/rules-for-updating-results-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/run-queries-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/run-queries-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/save-change-script-dialog-box-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/save-change-script-dialog-box-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/save-database-diagrams-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/save-database-diagrams-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/save-dialog-box-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/save-dialog-box-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/save-not-permitted-dialog-box.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/save-not-permitted-dialog-box",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/save-queries-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/save-queries-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/save-selected-tables-on-a-diagram-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/save-selected-tables-on-a-diagram-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/select-rows-that-do-not-match-a-value-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/select-rows-that-do-not-match-a-value-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/set-up-database-diagram-designer-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/set-up-database-diagram-designer-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/show-column-names-in-the-diagram-pane-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/show-column-names-in-the-diagram-pane-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/show-diagram-properties-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/show-diagram-properties-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/show-query-properties-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/show-query-properties-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/sort-and-group-query-results-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/sort-and-group-query-results-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/sort-in-ascending-or-descending-order-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/sort-in-ascending-or-descending-order-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/sort-multiple-columns-in-queries-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/sort-multiple-columns-in-queries-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/sort-rows-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/sort-rows-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/sort-with-order-by-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/sort-with-order-by-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/spatial-indexes-dialog-box-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/spatial-indexes-dialog-box-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/specify-conditions-for-groups-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/specify-conditions-for-groups-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/specify-multiple-search-conditions-for-multiple-columns-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/specify-multiple-search-conditions-for-multiple-columns-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/specify-multiple-search-conditions-for-one-column-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/specify-multiple-search-conditions-for-one-column-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/specify-search-conditions-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/specify-search-conditions-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/specify-search-criteria-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/specify-the-top-clause-in-queries-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/specify-the-top-clause-in-queries-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/sql-comment-dialog-box-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/sql-comment-dialog-box-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/sql-editor-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/sql-editor-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/sql-pane-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/sql-pane-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/sql-syntax-errors-encountered-dialog-box-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/sql-syntax-errors-encountered-dialog-box-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/stop-a-query-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/stop-a-query-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/summarize-or-aggregate-values-for-all-rows-in-a-table-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/summarize-or-aggregate-values-for-all-rows-in-a-table-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/summarize-or-aggregate-values-using-custom-expressions-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/summarize-or-aggregate-values-using-custom-expressions-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/summarize-query-results-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/summarize-query-results-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/supported-query-types-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/supported-query-types-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/table-properties-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/table-properties-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/table-valued-object-column-properties-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/table-valued-object-column-properties-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/table-valued-object-properties-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/table-valued-object-properties-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/tables-and-columns-dialog-box-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/tables-and-columns-dialog-box-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/types-of-queries-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/types-of-queries-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/understand-database-diagram-ownership-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/understand-database-diagram-ownership-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/update-table-dialog-box-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/update-table-dialog-box-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/upgrade-database-diagrams-from-previous-editions-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/upgrade-database-diagrams-from-previous-editions-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/use-having-and-where-clauses-in-the-same-query-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/use-having-and-where-clauses-in-the-same-query-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/use-the-query-and-view-designer-with-international-data-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/use-the-query-and-view-designer-with-international-data-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/validation-warnings-dialog-box-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/validation-warnings-dialog-box-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/verify-queries-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/verify-queries-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/view-join-properties-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/view-join-properties-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/visual-database-tool-designers.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/visual-database-tool-designers",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/visual-database-tools-f1-help.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/visual-database-tools-f1-help",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/walkthrough-adding-and-changing-a-database-diagram.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/walkthrough-adding-and-changing-a-database-diagram",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/work-with-columns-in-aggregate-queries-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/work-with-columns-in-aggregate-queries-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/work-with-data-in-the-results-pane-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/work-with-data-in-the-results-pane-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/work-with-diagram-layout-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/work-with-diagram-layout-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/work-with-tables-in-database-diagram-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/work-with-tables-in-database-diagram-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/xml-indexes-dialog-box-visual-database-tools.md",
-      "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/xml-indexes-dialog-box-visual-database-tools",
       "redirect_document_id": false
     },
     {
@@ -42868,6 +40278,31 @@
     {
       "source_path": "docs/2014/tools/dta/keepexisting-element-dta.md",
       "redirect_url": "/previous-versions/sql/2014/tools/dta/keepexisting-element-dta",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/tools/configuration-manager/new-alias-alias-tab.md",
+      "redirect_url": "/sql/tools/configuration-manager/aliases-sql-server-configuration-manager",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/tools/configuration-manager/alias-properties-alias-tab.md",
+      "redirect_url": "/sql/tools/configuration-manager/aliases-sql-server-configuration-manager",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/tools/configuration-manager/creating-a-valid-connection-string-using-shared-memory-protocol.md",
+      "redirect_url": "/sql/tools/configuration-manager/aliases-sql-server-configuration-manager",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip.md",
+      "redirect_url": "/sql/tools/configuration-manager/aliases-sql-server-configuration-manager",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/database-engine/configure-windows/check-the-odbc-sql-server-driver-version-windows.md",
+      "redirect_url": "/sql/database-engine/configure-windows/open-the-odbc-data-source-administrator",
       "redirect_document_id": false
     },
     {
@@ -44281,6 +41716,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "docs/sql-server/azure-arc/secure-best-practices.md",
+      "redirect_url": "/sql/sql-server/azure-arc/security-overview#best-practices",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "docs/sql-server/azure-arc/billing.md",
       "redirect_url": "/sql/sql-server/azure-arc/manage-configuration",
       "redirect_document_id": false
@@ -44388,16 +41828,6 @@
     {
       "source_path": "docs/azdata/reference/reference-azdata-arc-sql-mi.md",
       "redirect_url": "/azure/azure-arc/data/reference/reference-az-sql-mi-arc",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/ssms/download-sql-server-management-studio-ssms-19.md",
-      "redirect_url": "/sql/ssms/download-sql-server-management-studio-ssms",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/ssms/release-notes-ssms-19.md",
-      "redirect_url": "/sql/ssms/release-notes-ssms",
       "redirect_document_id": false
     },
     {
@@ -48886,11 +46316,6 @@
       "redirect_document_id": true
     },
     {
-      "source_path": "docs/ssms/sql-server-management-studio-ssms-release-candidate.md",
-      "redirect_url": "/sql/ssms/download-sql-server-management-studio-ssms",
-      "redirect_document_id": false
-    },
-    {
       "source_path": "docs/integration-services/security/threat-and-vulnerability-mitigation-integration-services.md",
       "redirect_url": "/sql/integration-services/security/security-overview-integration-services",
       "redirect_document_id": false
@@ -49101,216 +46526,6 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "docs/tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md",
-      "redirect_url": "/sql/ssms/sql-server-management-studio-keyboard-shortcuts",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/tools/sql-server-management-studio/ssms-utility.md",
-      "redirect_url": "/sql/ssms/ssms-utility",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/tools/sql-server-management-studio/change-a-server-s-registration-sql-server-management-studio.md",
-      "redirect_url": "/sql/ssms/register-servers/change-a-server-s-registration-sql-server-management-studio",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/tools/sql-server-management-studio/change-the-name-of-registered-server-or-registered-server-group.md",
-      "redirect_url": "/sql/ssms/register-servers/change-the-name-of-registered-server-or-registered-server-group",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/tools/sql-server-management-studio/connect-to-a-registered-server-sql-server-management-studio.md",
-      "redirect_url": "/sql/ssms/register-servers/connect-to-a-registered-server-sql-server-management-studio",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/tools/sql-server-management-studio/create-a-central-management-server-and-server-group.md",
-      "redirect_url": "/sql/ssms/register-servers/create-a-central-management-server-and-server-group",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/tools/sql-server-management-studio/create-a-new-registered-server-sql-server-management-studio.md",
-      "redirect_url": "/sql/ssms/register-servers/create-a-new-registered-server-sql-server-management-studio",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/tools/sql-server-management-studio/create-or-edit-a-server-group-sql-server-management-studio.md",
-      "redirect_url": "/sql/ssms/register-servers/create-or-edit-a-server-group-sql-server-management-studio",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/tools/sql-server-management-studio/disconnect-from-a-registered-server-sql-server-management-studio.md",
-      "redirect_url": "/sql/ssms/register-servers/disconnect-from-a-registered-server-sql-server-management-studio",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/tools/sql-server-management-studio/execute-statements-against-multiple-servers-simultaneously.md",
-      "redirect_url": "/sql/ssms/register-servers/execute-statements-against-multiple-servers-simultaneously",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/tools/sql-server-management-studio/export-registered-server-information-sql-server-management-studio.md",
-      "redirect_url": "/sql/ssms/register-servers/export-registered-server-information-sql-server-management-studio",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/tools/sql-server-management-studio/import-registered-server-information-sql-server-management-studio.md",
-      "redirect_url": "/sql/ssms/register-servers/import-registered-server-information-sql-server-management-studio",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/tools/sql-server-management-studio/move-a-registered-server-or-registered-server-group.md",
-      "redirect_url": "/sql/ssms/register-servers/move-a-registered-server-or-registered-server-group",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/tools/sql-server-management-studio/register-a-connected-server-sql-server-management-studio.md",
-      "redirect_url": "/sql/ssms/register-servers/register-a-connected-server-sql-server-management-studio",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/tools/sql-server-management-studio/registered-servers-f1-help.md",
-      "redirect_url": "/sql/ssms/register-servers/registered-servers-f1-help",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/tools/sql-server-management-studio/register-servers.md",
-      "redirect_url": "/sql/ssms/register-servers/register-servers",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/tools/sql-server-management-studio/remove-a-registered-server-sql-server-management-studio.md",
-      "redirect_url": "/sql/ssms/register-servers/remove-a-registered-server-sql-server-management-studio",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/tools/sql-server-management-studio/remove-a-server-group-sql-server-management-studio.md",
-      "redirect_url": "/sql/ssms/register-servers/remove-a-server-group-sql-server-management-studio",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/tools/sql-server-management-studio/view-registered-servers-in-sql-server-management-studio.md",
-      "redirect_url": "/sql/ssms/register-servers/view-registered-servers-in-sql-server-management-studio",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/tools/sql-server-management-studio/lesson-1-1-start-sql-server-management-studio.md",
-      "redirect_url": "/sql/ssms/tutorials/lesson-1-1-start-sql-server-management-studio",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/tools/sql-server-management-studio/lesson-1-2-connect-with-registered-servers-and-object-explorer.md",
-      "redirect_url": "/sql/ssms/tutorials/lesson-1-2-connect-with-registered-servers-and-object-explorer",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/tools/sql-server-management-studio/lesson-1-3-change-the-environment-layout.md",
-      "redirect_url": "/sql/ssms/tutorials/lesson-1-3-change-the-environment-layout",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/tools/sql-server-management-studio/lesson-1-4-display-the-query-window.md",
-      "redirect_url": "/sql/ssms/tutorials/lesson-1-4-display-the-query-window",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/tools/sql-server-management-studio/lesson-1-5-show-the-object-explorer-details-page.md",
-      "redirect_url": "/sql/ssms/tutorials/lesson-1-5-show-the-object-explorer-details-page",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/tools/sql-server-management-studio/lesson-1-6-select-the-keyboard-shortcut-scheme.md",
-      "redirect_url": "/sql/ssms/tutorials/lesson-1-6-select-the-keyboard-shortcut-scheme",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/tools/sql-server-management-studio/lesson-1-7-set-the-startup-options.md",
-      "redirect_url": "/sql/ssms/tutorials/lesson-1-7-set-the-startup-options",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/tools/sql-server-management-studio/lesson-1-8-restore-the-default-sql-server-management-studio-configuration.md",
-      "redirect_url": "/sql/ssms/tutorials/lesson-1-8-restore-the-default-sql-server-management-studio-configuration",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/tools/sql-server-management-studio/lesson-1-9-summary-basic-navigation.md",
-      "redirect_url": "/sql/ssms/tutorials/lesson-1-9-summary-basic-navigation",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/tools/sql-server-management-studio/lesson-1-basic-navigation-in-sql-server-management-studio.md",
-      "redirect_url": "/sql/ssms/tutorials/lesson-1-basic-navigation-in-sql-server-management-studio",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/tools/sql-server-management-studio/lesson-2-1-connecting-with-query-editor.md",
-      "redirect_url": "/sql/ssms/tutorials/lesson-2-1-connecting-with-query-editor",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/tools/sql-server-management-studio/lesson-2-2-adding-indentation.md",
-      "redirect_url": "/sql/ssms/tutorials/lesson-2-2-adding-indentation",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/tools/sql-server-management-studio/lesson-2-3-maximizing-query-editor.md",
-      "redirect_url": "/sql/ssms/tutorials/lesson-2-3-maximizing-query-editor",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/tools/sql-server-management-studio/lesson-2-4-using-comments.md",
-      "redirect_url": "/sql/ssms/tutorials/lesson-2-4-using-comments",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/tools/sql-server-management-studio/lesson-2-5-other-ways-of-viewing-the-code-window.md",
-      "redirect_url": "/sql/ssms/tutorials/lesson-2-5-other-ways-of-viewing-the-code-window",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/tools/sql-server-management-studio/lesson-2-6-script-a-table.md",
-      "redirect_url": "/sql/ssms/tutorials/lesson-2-6-script-a-table",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/tools/sql-server-management-studio/lesson-2-writing-transact-sql.md",
-      "redirect_url": "/sql/ssms/tutorials/lesson-2-writing-transact-sql",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/tools/sql-server-management-studio/lesson-3-1-create-scripts-using-templates.md",
-      "redirect_url": "/sql/ssms/tutorials/lesson-3-1-create-scripts-using-templates",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/tools/sql-server-management-studio/lesson-3-2-create-custom-templates.md",
-      "redirect_url": "/sql/ssms/tutorials/lesson-3-2-create-custom-templates",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/tools/sql-server-management-studio/lesson-3-3-save-scripts-as-projects-or-solutions.md",
-      "redirect_url": "/sql/ssms/tutorials/lesson-3-3-save-scripts-as-projects-or-solutions",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/tools/sql-server-management-studio/lesson-3-4-summary-solutions-and-script-projects.md",
-      "redirect_url": "/sql/ssms/tutorials/lesson-3-4-summary-solutions-and-script-projects",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/tools/sql-server-management-studio/lesson-3-working-with-templates-solutions-and-script-projects.md",
-      "redirect_url": "/sql/ssms/tutorials/lesson-3-working-with-templates-solutions-and-script-projects",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/tools/sql-server-management-studio/tutorial-sql-server-management-studio.md",
-      "redirect_url": "/sql/ssms/tutorials/tutorial-sql-server-management-studio",
-      "redirect_document_id": false
-    },
-    {
       "source_path": "docs/ssms/f1-help/browse-for-servers-local-servers.md",
       "redirect_url": "/sql/tools/configuration-manager/sql-server-browser-service",
       "redirect_document_id": false
@@ -49368,11 +46583,6 @@
     {
       "source_path": "docs/ssms/f1-help/connect-to-server-reporting-services.md",
       "redirect_url": "/sql/reporting-services/tools/connect-to-a-report-server-in-management-studio",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/ssms/f1-help/connection-properties-dialog-box.md",
-      "redirect_url": "/sql/ssms/f1-help/connect-to-server-connection-properties-page-database-engine",
       "redirect_document_id": false
     },
     {
@@ -49561,33 +46771,8 @@
       "redirect_document_id": true
     },
     {
-      "source_path": "docs/ssms/use-sql-server-management-studio.md",
-      "redirect_url": "/sql/ssms/sql-server-management-studio-ssms",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/ssms/features-in-sql-server-management-studio.md",
-      "redirect_url": "/sql/ssms/sql-server-management-studio-ssms",
-      "redirect_document_id": false
-    },
-    {
       "source_path": "docs/sql-server/sql-server-resources.md",
       "redirect_url": "/sql/sql-server/sql-server-technical-documentation",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/ssms/previous-sql-server-management-studio-releases.md",
-      "redirect_url": "/sql/ssms/release-notes-ssms",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/ssms/sql-server-management-studio-changelog-ssms.md",
-      "redirect_url": "/sql/ssms/release-notes-ssms",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/ssms/sql-server-management-studio-release-notes.md",
-      "redirect_url": "/sql/ssms/download-sql-server-management-studio-ssms#release-notes",
       "redirect_document_id": false
     },
     {
@@ -50476,16 +47661,6 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "docs/ssms/visual-database-tools/open-table-designer-visual-database-tools.md",
-      "redirect_url": "/sql/ssms/visual-db-tools/design-tables-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/ssms/visual-database-tools/save-your-work-in-table-designer-visual-database-tools.md",
-      "redirect_url": "/sql/ssms/visual-db-tools/design-tables-visual-database-tools",
-      "redirect_document_id": false
-    },
-    {
       "source_path": "docs/release-notes/sql-server-2008-r2-sp2-release-notes.md",
       "redirect_url": "/sql/sql-server/sql-server-2008-r2-sp2-release-notes",
       "redirect_document_id": false
@@ -50758,111 +47933,6 @@
     {
       "source_path": "docs/sql-server/sql-server-2012-sp1-release-notes.md",
       "redirect_url": "/sql/sql-server/sql-server-2012-sp4-release-notes",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/ssms/tutorials/lesson-1-basic-navigation-in-sql-server-management-studio.md",
-      "redirect_url": "/sql/ssms/quickstarts/ssms-connect-query-sql-server",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/ssms/tutorials/lesson-1-1-start-sql-server-management-studio.md",
-      "redirect_url": "/sql/ssms/quickstarts/ssms-connect-query-sql-server",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/ssms/tutorials/lesson-1-2-connect-with-registered-servers-and-object-explorer.md",
-      "redirect_url": "/sql/ssms/quickstarts/ssms-connect-query-sql-server",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/ssms/tutorials/lesson-1-3-change-the-environment-layout.md",
-      "redirect_url": "/sql/ssms/tutorials/ssms-configuration",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/ssms/tutorials/lesson-1-4-display-the-query-window.md",
-      "redirect_url": "/sql/ssms/tutorials/ssms-configuration",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/ssms/tutorials/lesson-1-5-show-the-object-explorer-details-page.md",
-      "redirect_url": "/sql/ssms/tutorials/ssms-configuration",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/ssms/tutorials/lesson-1-6-select-the-keyboard-shortcut-scheme.md",
-      "redirect_url": "/sql/ssms/tutorials/ssms-configuration",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/ssms/tutorials/lesson-1-7-set-the-startup-options.md",
-      "redirect_url": "/sql/ssms/tutorials/ssms-configuration",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/ssms/tutorials/lesson-1-8-restore-the-default-sql-server-management-studio-configuration.md",
-      "redirect_url": "/sql/ssms/tutorials/ssms-configuration",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/ssms/tutorials/lesson-1-9-summary-basic-navigation.md",
-      "redirect_url": "/sql/docs/ssms/tutorials/ssms-configuration",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/ssms/tutorials/lesson-2-writing-transact-sql.md",
-      "redirect_url": "/sql/ssms/quickstarts/ssms-connect-query-sql-server",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/ssms/tutorials/lesson-2-1-connecting-with-query-editor.md",
-      "redirect_url": "/sql/ssms/quickstarts/ssms-connect-query-sql-server",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/ssms/tutorials/lesson-2-3-maximizing-query-editor.md",
-      "redirect_url": "/sql/ssms/tutorials/ssms-configuration",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/ssms/tutorials/lesson-2-4-using-comments.md",
-      "redirect_url": "/sql/ssms/tutorials/ssms-tricks",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/ssms/tutorials/lesson-2-5-other-ways-of-viewing-the-code-window.md",
-      "redirect_url": "/sql/ssms/tutorials/ssms-configuration",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/ssms/tutorials/lesson-2-6-script-a-table.md",
-      "redirect_url": "/sql/ssms/tutorials/scripting-ssms",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/ssms/tutorials/lesson-3-working-with-templates-solutions-and-script-projects.md",
-      "redirect_url": "/sql/ssms/tutorials/templates-ssms",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/ssms/tutorials/lesson-3-1-create-scripts-using-templates.md",
-      "redirect_url": "/sql/ssms/tutorials/templates-ssms",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/ssms/tutorials/lesson-3-2-create-custom-templates.md",
-      "redirect_url": "/sql/ssms/tutorials/templates-ssms",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/ssms/tutorials/lesson-3-3-save-scripts-as-projects-or-solutions.md",
-      "redirect_url": "/sql/ssms/tutorials/scripting-ssms",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/ssms/tutorials/lesson-3-4-summary-solutions-and-script-projects.md",
-      "redirect_url": "/sql/ssms/tutorials/scripting-ssms",
       "redirect_document_id": false
     },
     {
@@ -52943,11 +50013,6 @@
     {
       "source_path": "docs/2014/analysis-services/scripting/datasourceimpersonationinfo-element-assl.md",
       "redirect_url": "/bi-reference/assl/properties/datasourceimpersonationinfo-element-assl",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/ssms/scripting/search-text-with-wildcards.md",
-      "redirect_url": "/sql/ssms/scripting/search-text-with-regular-expressions",
       "redirect_document_id": false
     },
     {
@@ -55051,383 +52116,18 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "docs/relational-databases/scripting/add-transact-sql-snippets.md",
-      "redirect_url": "/sql/ssms/scripting/add-transact-sql-snippets",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "docs/relational-databases/scripting/associate-file-extensions-to-a-code-editor.md",
-      "redirect_url": "/sql/ssms/scripting/associate-file-extensions-to-a-code-editor",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "docs/relational-databases/scripting/automatic-matching-of-syntax-pairs.md",
-      "redirect_url": "/sql/ssms/scripting/automatic-matching-of-syntax-pairs",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "docs/relational-databases/scripting/bookmarks-f1-help.md",
-      "redirect_url": "/sql/ssms/scripting/bookmarks-f1-help",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "docs/relational-databases/scripting/change-font-color-size-and-style.md",
-      "redirect_url": "/sql/ssms/scripting/change-font-color-size-and-style",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "docs/relational-databases/scripting/code-outlining.md",
-      "redirect_url": "/sql/ssms/scripting/code-outlining",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "docs/relational-databases/scripting/color-coding-in-query-editors.md",
-      "redirect_url": "/sql/ssms/scripting/color-coding-in-query-editors",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "docs/relational-databases/scripting/complete-transact-sql-snippets.md",
-      "redirect_url": "/sql/ssms/scripting/complete-transact-sql-snippets",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "docs/relational-databases/scripting/complete-word-intellisense.md",
-      "redirect_url": "/sql/ssms/scripting/complete-word-intellisense",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "docs/relational-databases/scripting/configure-editors-sql-server-management-studio.md",
-      "redirect_url": "/sql/ssms/scripting/configure-editors-sql-server-management-studio",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "docs/relational-databases/scripting/configure-firewall-rules-before-running-the-tsql-debugger.md",
-      "redirect_url": "/sql/ssms/scripting/configure-firewall-rules-before-running-the-tsql-debugger",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "docs/relational-databases/scripting/configure-intellisense-sql-server-management-studio.md",
-      "redirect_url": "/sql/ssms/scripting/configure-intellisense-sql-server-management-studio",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/relational-databases/scripting/database-engine-query-editor-sql-server-management-studio.md",
-      "redirect_url": "/sql/ssms/scripting/database-engine-query-editor-sql-server-management-studio",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/relational-databases/scripting/database-engine-scripting.md",
-      "redirect_url": "/sql/ssms/scripting/database-engine-scripting",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/relational-databases/scripting/drag-and-drop-text.md",
-      "redirect_url": "/sql/ssms/scripting/drag-and-drop-text",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/relational-databases/scripting/edit-a-breakpoint-location.md",
-      "redirect_url": "/sql/ssms/scripting/edit-a-breakpoint-location",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/relational-databases/scripting/edit-sqlcmd-scripts-with-query-editor.md",
-      "redirect_url": "/sql/ssms/scripting/edit-sqlcmd-scripts-with-query-editor",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/relational-databases/scripting/enable-disable-and-delete-breakpoints.md",
-      "redirect_url": "/sql/ssms/scripting/enable-disable-and-delete-breakpoints",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/relational-databases/scripting/find-and-replace.md",
-      "redirect_url": "/sql/ssms/scripting/find-and-replace",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/relational-databases/scripting/find-in-files.md",
-      "redirect_url": "/sql/ssms/scripting/find-in-files",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "docs/relational-databases/scripting/find-results-windows.md",
-      "redirect_url": "/sql/ssms/scripting/find-results-windows",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "docs/relational-databases/scripting/generate-and-publish-scripts-wizard.md",
-      "redirect_url": "/sql/ssms/scripting/generate-and-publish-scripts-wizard",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "docs/relational-databases/scripting/generate-scripts-sql-server-management-studio.md",
-      "redirect_url": "/sql/ssms/scripting/generate-scripts-sql-server-management-studio",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "docs/relational-databases/scripting/index.md",
-      "redirect_url": "/sql/ssms/scripting/index",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "docs/relational-databases/scripting/insert-surround-with-transact-sql-snippets.md",
-      "redirect_url": "/sql/ssms/scripting/insert-surround-with-transact-sql-snippets",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "docs/relational-databases/scripting/insert-transact-sql-snippets.md",
-      "redirect_url": "/sql/ssms/scripting/insert-transact-sql-snippets",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "docs/relational-databases/scripting/intellisense-sql-server-management-studio.md",
-      "redirect_url": "/sql/ssms/scripting/intellisense-sql-server-management-studio",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "docs/relational-databases/scripting/manage-bookmarks.md",
-      "redirect_url": "/sql/ssms/scripting/manage-bookmarks",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "docs/relational-databases/scripting/manage-code-formatting.md",
-      "redirect_url": "/sql/ssms/scripting/manage-code-formatting",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "docs/relational-databases/scripting/manage-the-editor-and-view-mode.md",
-      "redirect_url": "/sql/ssms/scripting/manage-the-editor-and-view-mode",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "docs/relational-databases/scripting/navigate-code-and-text.md",
-      "redirect_url": "/sql/ssms/scripting/navigate-code-and-text",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "docs/relational-databases/scripting/Xobjects-supported-by-the-generate-scripts-wizardX.md",
-      "redirect_url": "/sql/ssms/scripting/objects-supported-by-the-generate-scripts-wizard",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "docs/relational-databases/scripting/open-an-editor-sql-server-management-studio.md",
-      "redirect_url": "/sql/ssms/scripting/open-an-editor-sql-server-management-studio",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "docs/relational-databases/scripting/parameter-info-intellisense.md",
-      "redirect_url": "/sql/ssms/scripting/parameter-info-intellisense",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "docs/relational-databases/scripting/print-code-and-results.md",
-      "redirect_url": "/sql/ssms/scripting/print-code-and-results",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "docs/relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md",
-      "redirect_url": "/sql/ssms/scripting/query-and-text-editors-sql-server-management-studio",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "docs/relational-databases/scripting/quick-info-intellisense.md",
-      "redirect_url": "/sql/ssms/scripting/quick-info-intellisense",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "docs/relational-databases/scripting/replace-in-files.md",
-      "redirect_url": "/sql/ssms/scripting/replace-in-files",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "docs/relational-databases/scripting/run-the-transact-sql-debugger.md",
-      "redirect_url": "/sql/ssms/scripting/run-the-transact-sql-debugger",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "docs/relational-databases/scripting/search-an-active-document-incrementally.md",
-      "redirect_url": "/sql/ssms/scripting/search-an-active-document-incrementally",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "docs/relational-databases/scripting/search-and-replace.md",
-      "redirect_url": "/sql/ssms/scripting/search-and-replace",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "docs/relational-databases/scripting/search-documents-interactively.md",
-      "redirect_url": "/sql/ssms/scripting/search-documents-interactively",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "docs/relational-databases/scripting/search-documents-using-results-lists.md",
-      "redirect_url": "/sql/ssms/scripting/search-documents-using-results-lists",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "docs/relational-databases/scripting/search-text-with-regular-expressions.md",
-      "redirect_url": "/sql/ssms/scripting/search-text-with-regular-expressions",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "docs/relational-databases/scripting/search-text-with-wildcards.md",
-      "redirect_url": "/sql/ssms/scripting/search-text-with-regular-expressions",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/relational-databases/scripting/spatial-results-window.md",
-      "redirect_url": "/sql/ssms/scripting/spatial-results-window",
-      "redirect_document_id": true
-    },
-    {
       "source_path": "docs/relational-databases/scripting/specify-a-breakpoint-action.md",
-      "redirect_url": "/sql/ssms/scripting/specify-a-breakpoint-action",
+      "redirect_url": "/sql/ssdt/debugger/specify-breakpoint-action",
       "redirect_document_id": true
     },
     {
       "source_path": "docs/relational-databases/scripting/specify-a-breakpoint-condition.md",
-      "redirect_url": "/sql/ssms/scripting/specify-a-breakpoint-condition",
+      "redirect_url": "/sql/ssdt/debugger/specify-breakpoint-condition",
       "redirect_document_id": true
     },
     {
       "source_path": "docs/relational-databases/scripting/specify-a-breakpoint-filter.md",
-      "redirect_url": "/sql/ssms/scripting/specify-a-breakpoint-filter",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "docs/relational-databases/scripting/specify-a-hit-count.md",
-      "redirect_url": "/sql/ssms/scripting/specify-a-hit-count",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "docs/relational-databases/scripting/sqlcmd-connect-to-the-database-engine.md",
-      "redirect_url": "/sql/ssms/scripting/sqlcmd-connect-to-the-database-engine",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "docs/relational-databases/scripting/sqlcmd-run-transact-sql-script-files.md",
-      "redirect_url": "/sql/ssms/scripting/sqlcmd-run-transact-sql-script-files",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "docs/relational-databases/scripting/sqlcmd-start-the-utility.md",
-      "redirect_url": "/sql/ssms/scripting/sqlcmd-start-the-utility",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "docs/relational-databases/scripting/sqlcmd-use-the-utility.md",
-      "redirect_url": "/sql/ssms/scripting/sqlcmd-use-the-utility",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "docs/relational-databases/scripting/sqlcmd-use-with-scripting-variables.md",
-      "redirect_url": "/sql/ssms/scripting/sqlcmd-use-with-scripting-variables",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "docs/relational-databases/scripting/status-bar-database-engine-query-editor.md",
-      "redirect_url": "/sql/ssms/scripting/status-bar-database-engine-query-editor",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "docs/relational-databases/scripting/step-through-transact-sql-code.md",
-      "redirect_url": "/sql/ssms/scripting/step-through-transact-sql-code",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "docs/relational-databases/scripting/toggle-a-breakpoint.md",
-      "redirect_url": "/sql/ssms/scripting/toggle-a-breakpoint",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "docs/relational-databases/scripting/transact-sql-breakpoints.md",
-      "redirect_url": "/sql/ssms/scripting/transact-sql-breakpoints",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "docs/relational-databases/scripting/transact-sql-code-snippets.md",
-      "redirect_url": "/sql/ssms/scripting/transact-sql-code-snippets",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "docs/relational-databases/scripting/transact-sql-debugger.md",
-      "redirect_url": "/sql/ssms/scripting/transact-sql-debugger",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "docs/relational-databases/scripting/transact-sql-debugger-breakpoints-window.md",
-      "redirect_url": "/sql/ssms/scripting/transact-sql-debugger-breakpoints-window",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "docs/relational-databases/scripting/transact-sql-debugger-call-stack-window.md",
-      "redirect_url": "/sql/ssms/scripting/transact-sql-debugger-call-stack-window",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "docs/relational-databases/scripting/transact-sql-debugger-command-window.md",
-      "redirect_url": "/sql/ssms/scripting/transact-sql-debugger-command-window",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "docs/relational-databases/scripting/transact-sql-debugger-error-list-windowXX.md",
-      "redirect_url": "/sql/ssms/scripting/transact-sql-debugger-error-list-window",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "docs/relational-databases/scripting/transact-sql-debugger-information.md",
-      "redirect_url": "/sql/ssms/scripting/transact-sql-debugger-information",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "docs/relational-databases/scripting/transact-sql-debugger-locals-window.md",
-      "redirect_url": "/sql/ssms/scripting/transact-sql-debugger-locals-window",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "docs/relational-databases/scripting/transact-sql-debugger-output-window.md",
-      "redirect_url": "/sql/ssms/scripting/transact-sql-debugger-output-window",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "docs/relational-databases/scripting/transact-sql-debugger-quickwatch-dialog-box.md",
-      "redirect_url": "/sql/ssms/scripting/transact-sql-debugger-quickwatch-dialog-box",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "docs/relational-databases/scripting/transact-sql-debugger-threads-window.md",
-      "redirect_url": "/sql/ssms/scripting/transact-sql-debugger-threads-window",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "docs/relational-databases/scripting/transact-sql-debugger-watch-window.md",
-      "redirect_url": "/sql/ssms/scripting/transact-sql-debugger-watch-window",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "docs/relational-databases/scripting/transact-sql-syntax-supported-by-intellisense.md",
-      "redirect_url": "/sql/ssms/scripting/transact-sql-syntax-supported-by-intellisense",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "docs/relational-databases/scripting/troubleshooting-intellisense.md",
-      "redirect_url": "/sql/ssms/scripting/troubleshooting-intellisense",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "docs/relational-databases/scripting/use-the-properties-window-in-management-studio.md",
-      "redirect_url": "/sql/ssms/scripting/use-the-properties-window-in-management-studio",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "docs/relational-databases/scripting/view-spatial-data-in-object-explorer.md",
-      "redirect_url": "/sql/ssms/scripting/view-spatial-data-in-object-explorer",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "docs/relational-databases/scripting/xml-editor-sql-server-management-studio.md",
-      "redirect_url": "/sql/ssms/scripting/xml-editor-sql-server-management-studio",
+      "redirect_url": "/sql/ssdt/debugger/specify-breakpoint-filter",
       "redirect_document_id": true
     },
     {
@@ -55561,16 +52261,6 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "docs/ssms/introduction-to-sql-server-management-studio-for-business-intelligence.md",
-      "redirect_url": "/sql/ssms/sql-server-management-studio-ssms",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "docs/ssms/tutorials/templates-ssms.md",
-      "redirect_url": "/sql/ssms/template/templates-ssms",
-      "redirect_document_id": true
-    },
-    {
       "source_path": "docs/relational-databases/security/encryption/service-master-key.md",
       "redirect_url": "/sql/relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine",
       "redirect_document_id": true
@@ -55578,11 +52268,6 @@
     {
       "source_path": "docs/mdx/analysis-services-language-reference.md",
       "redirect_url": "/sql/mdx/multidimensional-expressions-mdx-reference",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/ssms/tutorials/tutorial-sql-server-management-studio.md",
-      "redirect_url": "/sql/ssms/quickstarts/ssms-connect-query-sql-server",
       "redirect_document_id": false
     },
     {
@@ -59572,8 +56257,28 @@
     },
     {
       "source_path": "docs/ssma/oracle/legal-notice-ssma-for-oracle.md",
-      "redirect_url": "/sql/ssma/sql-server-migration-assistant#legal-notice-ssma",
-      "redirect_document_id": true
+      "redirect_url": "/sql/ssma/sql-server-migration-assistant",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssma/access/legal-notice-ssma-for-access.md",
+      "redirect_url": "/sql/ssma/sql-server-migration-assistant",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssma/db2/legal-notice-db2tosql.md",
+      "redirect_url": "/sql/ssma/sql-server-migration-assistant",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssma/mysql/legal-notice-mysqltosql.md",
+      "redirect_url": "/sql/ssma/sql-server-migration-assistant",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssma/sybase/legal-notice-ssma-for-sybase.md",
+      "redirect_url": "/sql/ssma/sql-server-migration-assistant",
+      "redirect_document_id": false
     },
     {
       "source_path": "docs/ssma/oracle/shortcut-keys-oracle-to-sql.md",
@@ -60168,31 +56873,6 @@
     {
       "source_path": "docs/2014/sql-server/install/index.md",
       "redirect_url": "/sql/sql-server/install/sql-server-2014-upgrade-advisor?view=sql-server-2014",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/agent/index.md",
-      "redirect_url": "/sql/ssms/agent/sql-server-agent?view=sql-server-2014",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/index.md",
-      "redirect_url": "/sql/ssms/sql-server-management-studio-ssms?view=sql-server-2014",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/menu-help/index.md",
-      "redirect_url": "/sql/ssms/menu-help/sql-server-management-studio-menu-help?view=sql-server-2014",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/register-servers/index.md",
-      "redirect_url": "/sql/ssms/register-servers/register-servers?view=sql-server-2014",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/2014/ssms/visual-db-tools/index.md",
-      "redirect_url": "/sql/ssms/visual-db-tools/visual-database-tools?view=sql-server-2014",
       "redirect_document_id": false
     },
     {
@@ -61016,6 +57696,46 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "docs/relational-databases/extended-stored-procedures-programming/adding-an-extended-stored-procedure-to-sql-server.md",
+      "redirect_url": "/sql/relational-databases/extended-stored-procedures-programming/database-engine-extended-stored-procedures-programming",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/relational-databases/extended-stored-procedures-programming/creating-extended-stored-procedures.md",
+      "redirect_url": "/sql/relational-databases/extended-stored-procedures-programming/database-engine-extended-stored-procedures-programming",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/relational-databases/extended-stored-procedures-programming/execution-characteristics-of-extended-stored-procedures.md",
+      "redirect_url": "/sql/relational-databases/extended-stored-procedures-programming/database-engine-extended-stored-procedures-programming",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/relational-databases/extended-stored-procedures-programming/how-extended-stored-procedures-work.md",
+      "redirect_url": "/sql/relational-databases/extended-stored-procedures-programming/database-engine-extended-stored-procedures-programming",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/relational-databases/extended-stored-procedures-programming/querying-extended-stored-procedures-installed-in-sql-server.md",
+      "redirect_url": "/sql/relational-databases/extended-stored-procedures-programming/database-engine-extended-stored-procedures-programming",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/relational-databases/extended-stored-procedures-programming/removing-an-extended-stored-procedure-from-sql-server.md",
+      "redirect_url": "/sql/relational-databases/extended-stored-procedures-programming/database-engine-extended-stored-procedures-programming",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/relational-databases/extended-stored-procedures-programming/sending-result-sets-to-the-server-extended-stored-procedure-api.md",
+      "redirect_url": "/sql/relational-databases/extended-stored-procedures-programming/database-engine-extended-stored-procedures-programming",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/relational-databases/extended-stored-procedures-programming/unloading-an-extended-stored-procedure-dll.md",
+      "redirect_url": "/sql/relational-databases/extended-stored-procedures-programming/database-engine-extended-stored-procedures-programming",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "docs/relational-databases/graphs/index.md",
       "redirect_url": "/sql/relational-databases/graphs/sql-graph-overview",
       "redirect_document_id": false
@@ -61388,6 +58108,11 @@
     {
       "source_path": "docs/relational-databases/service-broker/index.md",
       "redirect_url": "/sql/relational-databases/service-broker/event-notifications",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/database-engine/service-broker/overview.md",
+      "redirect_url": "/sql/database-engine/configure-windows/sql-server-service-broker",
       "redirect_document_id": false
     },
     {
@@ -61811,16 +58536,6 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "docs/sql-server/stretch-database/stretch-database-databases-and-tables-stretch-database-advisor.md",
-      "redirect_url": "/sql/sql-server/stretch-database/stretch-database",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/sql-server/stretch-database/index.md",
-      "redirect_url": "/sql/sql-server/stretch-database/stretch-database",
-      "redirect_document_id": false
-    },
-    {
       "source_path": "docs/ssdt/index.md",
       "redirect_url": "/sql/ssdt/download-sql-server-data-tools-ssdt",
       "redirect_document_id": false
@@ -61853,71 +58568,6 @@
     {
       "source_path": "docs/ssma/sybase/index.md",
       "redirect_url": "/sql/ssma/sybase/installing-ssma-for-sybase-sybasetosql",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/ssms/agent/index.md",
-      "redirect_url": "/sql/ssms/agent/sql-server-agent",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/ssms/agent/autostart-sql-server-agent-sql-server-management-studio.md",
-      "redirect_url": "/sql/ssms/agent/autorestart-sql-server-agent-sql-server-management-studio",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "docs/ssms/f1-help/index.md",
-      "redirect_url": "/sql/ssms/f1-help/f1-help-for-server-connections-sql-server-management-studio",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/ssms/index.md",
-      "redirect_url": "/sql/ssms/download-sql-server-management-studio-ssms",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/ssms/menu-help/index.md",
-      "redirect_url": "/sql/ssms/menu-help/sql-server-management-studio-menu-help",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/ssms/output-window.md",
-      "redirect_url": "/sql/ssms/menu-help/options-output-window-page",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "docs/ssms/object/index.md",
-      "redirect_url": "/sql/ssms/object/object-explorer",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/ssms/register-servers/index.md",
-      "redirect_url": "/sql/ssms/register-servers/register-servers",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/ssms/scripting/index.md",
-      "redirect_url": "/sql/ssms/scripting/database-engine-scripting",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/ssms/solution/index.md",
-      "redirect_url": "/sql/ssms/solution/solution-explorer",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/ssms/template/index.md",
-      "redirect_url": "/sql/ssms/template/template-explorer",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/ssms/tutorials/index.md",
-      "redirect_url": "/sql/ssms/tutorials/tutorial-sql-server-management-studio",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/ssms/visual-db-tools/index.md",
-      "redirect_url": "/sql/ssms/visual-db-tools/visual-database-tools",
       "redirect_document_id": false
     },
     {
@@ -62021,11 +58671,6 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "docs/ssms/scripting/database-engine-query-editor-sql-server-management-studio.md",
-      "redirect_url": "/sql/ssms/f1-help/database-engine-query-editor-sql-server-management-studio",
-      "redirect_document_id": true
-    },
-    {
       "source_path": "docs/kb-support/end-support-sql-server-2008.md",
       "redirect_url": "/sql/sql-server/end-of-support/sql-server-end-of-support-overview",
       "redirect_document_id": false
@@ -62106,19 +58751,9 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "docs/ssms/scripting/query-and-text-editors-sql-server-management-studio.md",
-      "redirect_url": "/sql/ssms/f1-help/database-engine-query-editor-sql-server-management-studio",
-      "redirect_document_id": false
-    },
-    {
       "source_path": "docs/linux/sql-server-linux-configure-docker.md",
       "redirect_url": "/sql/linux/sql-server-linux-docker-container-deployment",
       "redirect_document_id": true
-    },
-    {
-      "source_path": "docs/ssms/tutorials/connect-query-sql-server.md",
-      "redirect_url": "/sql/ssms/quickstarts/ssms-connect-query-sql-server",
-      "redirect_document_id": false
     },
     {
       "source_path": "docs/ssma/db2/connecting-to-sql-server-db2etosql.md",
@@ -62144,11 +58779,6 @@
       "source_path": "docs/tools/release-notes-sqlpackage.md",
       "redirect_url": "/sql/tools/sqlpackage/release-notes-sqlpackage",
       "redirect_document_id": true
-    },
-    {
-      "source_path": "docs/ssms/quickstarts/connect-query-sql-server.md",
-      "redirect_url": "/sql/ssms/quickstarts/ssms-connect-query-sql-server",
-      "redirect_document_id": false
     },
     {
       "source_path": "docs/relational-databases/security/encryption/always-encrypted-enclaves-query-columns-ssms.md",
@@ -62326,11 +58956,6 @@
       "redirect_document_id": true
     },
     {
-      "source_path": "docs/ssms/scripting/transact-sql-debugger-quickwatch-dialog-box.md",
-      "redirect_url": "/sql/ssms/scripting/transact-sql-debugger-information",
-      "redirect_document_id": false
-    },
-    {
       "source_path": "docs/tools/sqlpackage/troubleshooting-import-export-sqlpackage.md",
       "redirect_url": "/sql/tools/sqlpackage/troubleshooting-issues-and-performance-with-sqlpackage",
       "redirect_document_id": false
@@ -62486,119 +59111,9 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "docs/ssms/object/filter-settings-object-explorer-and-utility-explorer.md",
-      "redirect_url": "/sql/ssms/release-notes-ssms",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/relational-databases/manage/use-utility-explorer-to-manage-the-sql-server-utility.md",
-      "redirect_url": "/sql/ssms/release-notes-ssms",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/relational-databases/manage/utility-explorer-f1-help.md",
-      "redirect_url": "/sql/ssms/release-notes-ssms",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/relational-databases/data-tier-applications/monitor-data-tier-applications.md",
-      "redirect_url": "/sql/ssms/release-notes-ssms",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/relational-databases/manage/change-proxy-account-for-utility-collection-on-managed-sql-server.md",
-      "redirect_url": "/sql/ssms/release-notes-ssms",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/relational-databases/manage/run-utility-and-non-utility-collection-sets-on-same-sql-instance.md",
-      "redirect_url": "/sql/ssms/release-notes-ssms",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/relational-databases/manage/create-a-sql-server-utility-control-point-sql-server-utility.md",
-      "redirect_url": "/sql/ssms/release-notes-ssms",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/relational-databases/manage/connect-to-a-sql-server-utility.md",
-      "redirect_url": "/sql/ssms/release-notes-ssms",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/relational-databases/manage/enroll-an-instance-of-sql-server-sql-server-utility.md",
-      "redirect_url": "/sql/ssms/release-notes-ssms",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/relational-databases/manage/monitor-instances-of-sql-server-in-the-sql-server-utility.md",
-      "redirect_url": "/sql/ssms/release-notes-ssms",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/relational-databases/manage/view-resource-health-policy-results-sql-server-utility.md",
-      "redirect_url": "/sql/ssms/release-notes-ssms",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/relational-databases/manage/troubleshoot-sql-server-resource-health-sql-server-utility.md",
-      "redirect_url": "/sql/ssms/release-notes-ssms",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/relational-databases/manage/modify-a-resource-health-policy-definition-sql-server-utility.md",
-      "redirect_url": "/sql/ssms/release-notes-ssms",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/relational-databases/manage/remove-a-utility-control-point-sql-server-utility.md",
-      "redirect_url": "/sql/ssms/release-notes-ssms",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/relational-databases/manage/configure-your-utility-control-point-data-warehouse-sql-server-utility.md",
-      "redirect_url": "/sql/ssms/release-notes-ssms",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/relational-databases/manage/configure-health-policies-sql-server-utility.md",
-      "redirect_url": "/sql/ssms/release-notes-ssms",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md",
-      "redirect_url": "/sql/ssms/release-notes-ssms",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/relational-databases/manage/remove-an-instance-of-sql-server-from-the-sql-server-utility.md",
-      "redirect_url": "/sql/ssms/release-notes-ssms",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/relational-databases/manage/move-a-ucp-from-one-instance-of-sql-server-to-another-sql-server-utility.md",
-      "redirect_url": "/sql/ssms/release-notes-ssms",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/relational-databases/manage/sql-server-utility-features-and-tasks.md",
-      "redirect_url": "/sql/ssms/release-notes-ssms",
-      "redirect_document_id": false
-    },
-    {
       "source_path": "docs/relational-databases/system-stored-procedures/sp-query-store-remove-plan-transct-sql.md",
       "redirect_url": "/sql/relational-databases/system-stored-procedures/sp-query-store-remove-plan-transact-sql",
       "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/ssms/object/options-sql-server-object-explorer-commands.md",
-      "redirect_url": "/sql/ssms/menu-help/options-sql-server-object-explorer-commands",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "docs/ssms/object/options-sql-server-object-explorer-scripting-page.md",
-      "redirect_url": "/sql/ssms/menu-help/options-sql-server-object-explorer-scripting",
-      "redirect_document_id": true
     },
     {
       "source_path": "docs/tools/sqlcmd/go-sqlcmd-utility.md",
@@ -62736,33 +59251,108 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "docs/ssms/f1-help/connect-to-server-database-engine.md",
-      "redirect_url": "/sql/ssms/f1-help/connect-to-server-login-page-database-engine",
-      "redirect_document_id": false
-    },
-    {
       "source_path": "docs/relational-databases/performance/intelligent-query-processing-feedback.md",
       "redirect_url": "/sql/relational-databases/performance/intelligent-query-processing-memory-grant-feedback",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/ssms/download-sql-server-management-studio-ssms-20.md",
-      "redirect_url": "/sql/ssms/download-sql-server-management-studio-ssms",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/ssms/release-notes-ssms-20.md",
-      "redirect_url": "/sql/ssms/release-notes-ssms",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/t-sql/language-elements/continue-transact-sql.md",
       "redirect_url": "/sql/t-sql/language-elements/while-transact-sql",
       "redirect_document_id": false
-	},
+    },
     {
       "source_path": "docs/connect/php/configuring-iis-for-php-sql-driver.md",
       "redirect_url": "/sql/connect/php/download-drivers-php-sql-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssdt/how-to-clone-an-existing-database.md",
+      "redirect_url": "/sql/t-sql/statements/create-table-as-clone-of-transact-sql",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssdt/how-to-debug-stored-procedures.md",
+      "redirect_url": "/sql/ssdt/debugger/debug-stored-procedures",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md",
+      "redirect_url": "/sql/tools/sql-database-projects/concepts/schema-comparison",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssdt/how-to-change-target-platform-and-publish-a-database-project.md",
+      "redirect_url": "/sql/tools/sql-database-projects/concepts/target-platform",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssdt/how-to-specify-predeployment-or-postdeployment-scripts.md",
+      "redirect_url": "/sql/tools/sql-database-projects/concepts/pre-post-deployment-scripts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssdt/dac-framework-compatibility.md",
+      "redirect_url": "/sql/ssdt/alter-dacfx-used-by-ssdt",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssdt/using-msdeploy-with-dbsqlpackage-provider.md",
+      "redirect_url": "/sql/tools/sqlpackage/sqlpackage-publish",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssdt/project-oriented-database-development-using-command-line-tools.md",
+      "redirect_url": "/sql/tools/sql-database-projects/sql-database-projects",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssdt/walkthrough-author-custom-static-code-analysis-rule-assembly.md",
+      "redirect_url": "/sql/tools/sql-database-projects/howto/author-custom-code-analysis-rules",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssdt/overview-of-extensibility-for-database-code-analysis-rules.md",
+      "redirect_url": "/sql/tools/sql-database-projects/concepts/code-analysis-extensibility",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssdt/how-to-convert-visual-studio-2010-database-projects-to-ssql-server-projects.md",
+      "redirect_url": "/sql/tools/sql-database-projects/howto/convert-original-sql-project",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssdt/project-oriented-offline-database-development.md",
+      "redirect_url": "/sql/tools/sql-database-projects/sql-database-projects",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssdt/import-into-a-database-project.md",
+      "redirect_url": "/sql/tools/sql-database-projects/howto/add-existing-files-to-sql-project",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssdt/add-database-reference-dialog-box.md",
+      "redirect_url": "/sql/tools/sql-database-projects/concepts/database-references",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssdt/how-to-build-and-deploy-to-a-local-database.md",
+      "redirect_url": "/sql/tools/sql-database-projects/get-started",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssdt/data-tools-operations-window.md",
+      "redirect_url": "/sql/ssdt/sql-server-data-tools",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssdt/how-to-use-microsoft-sql-server-2012-objects-in-your-project.md",
+      "redirect_url": "/sql/tools/sql-database-projects/concepts/target-platform",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssdt/how-to-create-a-new-database-project.md",
+      "redirect_url": "/sql/tools/sql-database-projects/get-started",
       "redirect_document_id": false
     }
   ]

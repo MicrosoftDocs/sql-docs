@@ -14,10 +14,10 @@ helpviewer_keywords:
   - "STDistance (geometry Data Type)"
 dev_langs:
   - "TSQL"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=fabric"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # STDistance (geometry Data Type)
-[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance FabricSE FabricDW](../../includes/applies-to-version/sql-asdb-asdbmi-fabricse-fabricdw.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Returns the shortest distance between a point in a **geometry** instance and a point in another **geometry** instance.  
   
@@ -28,8 +28,6 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 .STDistance ( other_geometry )  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
  *other_geometry*  
  Is another **geometry** instance from which to measure the distance between the instance on which `STDistance()` is invoked. If *other_geometry* is an empty set, `STDistance()` returns null.  

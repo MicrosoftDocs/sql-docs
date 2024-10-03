@@ -3,11 +3,12 @@ title: "Configure a Native mode report server scale-out deployment"
 description: "Configure a Native Mode Report Server Scale-Out Deployment"
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 01/09/2024
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-server
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "report servers [Reporting Services], deployments"
   - "deploying [Reporting Services], scale-out deployment model"
@@ -148,11 +149,10 @@ The issue intermittenly occurs, because only the server that creates the SQL Age
 ## Related content
 
 - [Configure a service account](configure-the-report-server-service-account-ssrs-configuration-manager.md)
-- [Configure a URL](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
-- [Create a Native mode report server database](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
-- [Configure report server URLs](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
-- [Configure a report server database connection](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
-- [Add and remove encryption keys for scale-out deployment](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md)   
-- [Manage a Reporting Services Native mode report server](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)  
-
-More questions? [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user).
+- [Configure a URL](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)
+- [Create a Native mode report server database](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)
+- [Configure report server URLs](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)
+- [Configure a report server database connection](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)
+- [Add and remove encryption keys for scale-out deployment](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md)
+- [Manage a Reporting Services Native mode report server](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)
+- [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)

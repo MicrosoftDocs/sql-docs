@@ -5,7 +5,7 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: wiassaf, mathoma
 ms.date: 09/29/2022
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.subservice: deployment-configuration
 ms.topic: sample
 ms.custom:

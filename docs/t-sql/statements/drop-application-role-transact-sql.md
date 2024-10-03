@@ -32,8 +32,6 @@ dev_langs:
 DROP APPLICATION ROLE rolename  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
  *rolename*  
  Specifies the name of the application role to be dropped.  

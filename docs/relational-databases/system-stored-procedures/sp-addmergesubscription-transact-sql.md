@@ -4,7 +4,7 @@ description: Creates a push or pull merge subscription, executed at the Publishe
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 11/23/2023
+ms.date: 08/21/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: "reference"
@@ -247,7 +247,7 @@ Only members of the **sysadmin** fixed server role or **db_owner** fixed databas
 ## Related content
 
 - [Create a push subscription](../replication/create-a-push-subscription.md)
-- [Create a pull Subscription](../replication/create-a-pull-subscription.md)
+- [Create a Pull Subscription](../replication/create-a-pull-subscription.md)
 - [Advanced Merge Replication Conflict - Interactive Resolution](../replication/merge/advanced-merge-replication-conflict-interactive-resolution.md)
 - [Subscribe to Publications](../replication/subscribe-to-publications.md)
 - [sp_changemergesubscription (Transact-SQL)](sp-changemergesubscription-transact-sql.md)

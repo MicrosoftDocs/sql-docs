@@ -3,11 +3,12 @@ title: "How to: Debug custom assemblies"
 description: Learn how to use Microsoft .NET Framework debugging tools to help you analyze your custom assembly code and locate errors in it.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/14/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: custom-assemblies
 ms.topic: reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "custom assemblies [Reporting Services], debugging"
   - "debugging custom assemblies [Reporting Services]"
@@ -77,7 +78,6 @@ helpviewer_keywords:
   
 9. Step through your code using the F11 key. For more information about debugging using [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], see the [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] documentation.  
   
-## Related content  
- [Using Custom Assemblies with Reports](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)  
-  
-  
+## Related content
+
+- [Using Custom Assemblies with Reports](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)

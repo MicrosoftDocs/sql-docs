@@ -3,11 +3,12 @@ title: "Add & drop articles (existing Publication)"
 description: Learn how to add articles to and drop articles from existing publications for SQL Server.
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/07/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: how-to
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "articles [SQL Server replication], dropping"
   - "deleting articles"
@@ -78,9 +79,8 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
  > **[!INCLUDE[sssql14-md](../../../includes/sssql14-md.md)] Service Pack 2** or above and **[!INCLUDE[sssql16-md](../../../includes/sssql16-md.md)] Service Pack 1** or above support dropping a table using **DROP TABLE** DDL command for articles participating in Transactional Replication. If a DROP TABLE DDL is supported by the publication(s), then the DROP TABLE operation will drop the table from the publication and the database. The log reader agent will post a cleanup command for the distribution database of the dropped table and do the cleanup of the publisher metadata. If the log reader hasn't processed all the log records that refer to the dropped table, then it will ignore new commands that are associated with the dropped table. Already processed records will be delivered to distribution database. They may be applied on Subscriber database if the Distribution Agent processes them before Log Reader cleans up the obsolete (dropped) article(s). The **default** setting for all transactional replication publications is to not support DROP TABLE DDL. [KB 3170123](https://support.microsoft.com/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactional-replication-in-sql-server-2014-or-in-sql-server-2016-sp1) has more details about this improvement.
 
   
-## See Also  
- [Publish Data and Database Objects](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
- [Reinitialize Subscriptions](../../../relational-databases/replication/reinitialize-subscriptions.md)   
- [Make Schema Changes on Publication Databases](../../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)  
-  
-  
+## Related content
+
+- [Publish Data and Database Objects](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)
+- [Reinitialize Subscriptions](../../../relational-databases/replication/reinitialize-subscriptions.md)
+- [Make Schema Changes on Publication Databases](../../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)

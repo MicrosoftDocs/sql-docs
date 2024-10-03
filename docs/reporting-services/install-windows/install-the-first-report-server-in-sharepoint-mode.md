@@ -3,7 +3,7 @@ title: "Install the first Report Server in SharePoint mode"
 description: "Install the first Report Server in SharePoint mode"
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 10/05/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-server-sharepoint
 ms.topic: conceptual
@@ -434,5 +434,4 @@ Also, the application pool security account used by the Reporting Services servi
 - [Upgrade and Migrate Reporting Services](upgrade-and-migrate-reporting-services.md)
 - [Editions and supported features of SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md)
 - [Reporting Services SharePoint service and service applications](../report-server-sharepoint/reporting-services-sharepoint-service-and-service-applications.md)
-
-More questions? [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)
+- [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)

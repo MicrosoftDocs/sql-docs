@@ -33,8 +33,6 @@ dev_langs:
 RECONFIGURE [ WITH OVERRIDE ]    
 ```    
     
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
  RECONFIGURE    
  Specifies that if the configuration setting does not require a server stop and restart, the currently running value should be updated. RECONFIGURE also checks the new configuration values for either values that are not valid (for example, a sort order value that does not exist in **syscharsets**) or nonrecommended values. With those configuration options not requiring a server stop and restart, the currently running value and the currently configured values for the configuration option should be the same value after RECONFIGURE is specified.    

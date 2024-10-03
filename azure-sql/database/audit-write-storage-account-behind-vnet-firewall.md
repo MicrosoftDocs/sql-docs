@@ -6,7 +6,7 @@ author: sravanisaluru
 ms.author: srsaluru
 ms.reviewer: wiassaf, vanto, mathoma
 ms.date: "03/23/2022"
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.subservice: security
 ms.topic: how-to
 ms.custom: azure-synapse, subject-rbac-steps, devx-track-arm-template, devx-track-azurepowershell

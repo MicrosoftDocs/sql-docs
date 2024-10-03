@@ -3,11 +3,12 @@ title: Data collection in ReportViewer control
 description: ReportViewer collects anonymous usage data to understand how customers use the product and focus development on improvements most relevant to customers.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 06/03/2020
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: application-integration
 ms.topic: reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 # Integrate Reporting Services by using ReportViewer controls - data collection
 
@@ -34,5 +35,5 @@ protected void Page_Load(object sender, EventArgs e)
 ```
 ## Related content
 
-[Using the WebForms Report Viewer Control](../../reporting-services/application-integration/using-the-webforms-reportviewer-control.md)  
-[Integrating Reporting Services Using the Report Viewer Controls](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls.md)
+- [Using the WebForms Report Viewer Control](../../reporting-services/application-integration/using-the-webforms-reportviewer-control.md)
+- [Integrating Reporting Services Using the Report Viewer Controls](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls.md)

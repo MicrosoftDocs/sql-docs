@@ -4,7 +4,7 @@ description: "Inserts a row in the management data warehouse core.snapshots view
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 05/31/2023
+ms.date: 08/21/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -104,5 +104,5 @@ EXEC core.sp_create_snapshot
 ## Related content
 
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)
-- [Data Collector stored procedures (Transact-SQL)](data-collector-stored-procedures-transact-sql.md)
-- [Management Data Warehouse](../data-collection/management-data-warehouse.md)
+- [Data collector stored procedures (Transact-SQL)](data-collector-stored-procedures-transact-sql.md)
+- [Management data warehouse](../data-collection/management-data-warehouse.md)

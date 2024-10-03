@@ -1,8 +1,8 @@
 ---
 title: "Best practices for managing the Query Store"
 description: Learn best practices for managing the SQL Server Query Store, including version specific details, managing custom capture policies, and other performance features.
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: 01/08/2024
 ms.service: sql
 ms.subservice: performance
@@ -89,7 +89,7 @@ Tuning an appropriate custom capture policy for your environment should be consi
 
 ### [SSMS](#tab/ssms)
 
-:::image type="icon" source="../../includes/media/download.svg" border="false":::**[Use the latest version of SQL Server Management Studio (SSMS)](https://aka.ms/ssms)**
+:::image type="icon" source="../../includes/media/download.svg" border="false":::**[Download the latest version of SQL Server Management Studio (SSMS)](https://aka.ms/ssms)**
 
 To view current settings in [!INCLUDE [ssManStudio](../../includes/ssmanstudio-md.md)]:
 
@@ -179,7 +179,7 @@ View the current Query Store settings in [!INCLUDE [ssManStudioFull](../../inclu
 
 ### [SSMS](#tab/ssms)
 
-:::image type="icon" source="../../includes/media/download.svg" border="false":::**[Use the latest version of SQL Server Management Studio (SSMS)](https://aka.ms/ssms)**
+:::image type="icon" source="../../includes/media/download.svg" border="false":::**[Download the latest version of SQL Server Management Studio (SSMS)](https://aka.ms/ssms)**
 
 To view current settings in [!INCLUDE [ssManStudio](../../includes/ssmanstudio-md.md)]:
 

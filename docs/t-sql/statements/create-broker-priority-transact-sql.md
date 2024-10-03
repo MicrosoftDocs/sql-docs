@@ -45,8 +45,6 @@ FOR CONVERSATION
   
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
  *ConversationPriorityName*  
  Specifies the name for this conversation priority. The name must be unique in the current database, and must conform to the rules for [!INCLUDE[ssDE](../../includes/ssde-md.md)] [identifiers](../../relational-databases/databases/database-identifiers.md).  

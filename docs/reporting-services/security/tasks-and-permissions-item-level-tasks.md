@@ -3,11 +3,12 @@ title: "Item-level tasks"
 description: "Tasks and Permissions - Item-Level Tasks"
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 02/04/2021
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: security
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "item-level tasks [Reporting Services]"
 ---
@@ -57,7 +58,6 @@ helpviewer_keywords:
 
 [!INCLUDE [ssrs-report-parts-deprecated](../../includes/ssrs-report-parts-deprecated.md)]
   
-## Related content 
- [Grant permissions on a native mode report server](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
-  
-  
+## Related content
+
+- [Grant permissions on a native mode report server](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)

@@ -5,7 +5,7 @@ author: zoran-rilak-msft
 ms.author: zoranrilak
 ms.reviewer: mathoma
 ms.date: 10/21/2022
-ms.service: sql-managed-instance
+ms.service: azure-sql-managed-instance
 ms.subservice: security
 ms.topic: how-to
 ms.custom: devx-track-azurecli

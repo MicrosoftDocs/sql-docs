@@ -3,11 +3,12 @@ title: "Show row and column headers on multiple pages in a report"
 description: Learn how to control repeating row and column headers on every page of a paginated report for a tablix data region that spans multiple pages in Report Builder.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 06/18/2024
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 
 # Show row and column headers on multiple pages in a paginated report (Report Builder)
@@ -18,13 +19,13 @@ You can control whether to repeat row and column headers on every page of a pagi
 
 How you control the rows and columns depends on whether the tablix data region has group headers. When you select a tablix data region that has group headers, a dotted line shows the tablix areas, as shown in the following figure:
 
-![Tablix data region areas](../../reporting-services/report-design/media/rs-tablixareas.gif "Tablix data region areas")
+:::image type="content" source="../../reporting-services/report-design/media/rs-tablix-areas.png" alt-text="Screenshot of a tablix data region that highlights the different areas and groups.":::
 
 Row and column group headers are created automatically when you add groups by using the New Table or Matrix wizard, or the New Chart wizard, by adding fields to the Grouping pane, or by using context menus. If the tablix data region has only a tablix body area and no group headers, the rows and columns are tablix members.
 
 For static members, you can display the top adjacent rows or the side adjacent columns on multiple pages.
 
-## To display row headers on multiple pages
+## Display row headers on multiple pages
 
 1. Right-click the row, column, or corner handle of a tablix data region, and then select **Tablix Properties**.
 
@@ -32,7 +33,7 @@ For static members, you can display the top adjacent rows or the side adjacent c
 
 1. Select **OK**.
 
-## To display column headers on multiple pages
+## Display column headers on multiple pages
 
 1. Right-click the row, column, or corner handle of a tablix data region, and then select **Tablix Properties**.
 
@@ -40,7 +41,7 @@ For static members, you can display the top adjacent rows or the side adjacent c
 
 1. Select **OK**.
 
-## To display a static row or column on multiple pages
+## Display a static row or column on multiple pages
 
 1. On the design surface, select the row or column handle of the tablix data region. The Grouping pane displays the row and column groups.
 

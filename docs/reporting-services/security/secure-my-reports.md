@@ -3,11 +3,12 @@ title: "Secure My Reports"
 description: "Secure My Reports"
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/14/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: security
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "denying My Reports folder access"
   - "private folders [Reporting Services]"
@@ -46,9 +47,8 @@ helpviewer_keywords:
   
  When you disable My Reports, the link to a My Reports folder is removed from Report Manager. The underlying folder structure that supports My Reports (that is, the Users Folders folder and subfolders) is still available and can be accessed if a user knows the folder path. Removing tasks from **My Reports** role ensures that access is prevented.  
   
-## Related content  
- [Secure reports and resources](../../reporting-services/security/secure-reports-and-resources.md)   
- [Secure folders](../../reporting-services/security/secure-folders.md)   
- [Grant permissions on a native mode report server](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
-  
-  
+## Related content
+
+- [Secure reports and resources](../../reporting-services/security/secure-reports-and-resources.md)
+- [Secure folders](../../reporting-services/security/secure-folders.md)
+- [Grant permissions on a native mode report server](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)

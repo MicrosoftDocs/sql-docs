@@ -3,11 +3,12 @@ title: "Server properties Advanced page"
 description: Use the Advanced Server Properties page to set system properties on the report server. This tool provides a graphical user interface so that you can set properties without writing code.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 3/21/2024
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: tools
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 monikerRange: ">=sql-server-2016"
 ---
 
@@ -344,7 +345,7 @@ Specifies the maximum number of parameter values that the report server can stor
 
 *Power BI Report Server, Reporting Services 2019 and later only* 
 
-Sets a comma separated list of the URI schemes allowed to be defined on Hyperlink actions can be rendered or "&ast;" to enable all hyperlink schemes. For example, setting "http, https" would allow hyperlinks to `https://www. contoso.com`, but would remove hyperlinks to `mailto:bill@contoso.com` or `javascript:window.open('www.contoso.com', '_blank')`. Default is `&ast;`.
+Sets a comma separated list of the URI schemes allowed to be defined on Hyperlink actions can be rendered or "&ast;" to enable all hyperlink schemes. For example, setting "http, https" would allow hyperlinks to `https://www. contoso.com`, but would remove hyperlinks to `mailto:bill@contoso.com` or `javascript:window.open('www.contoso.com', '_blank')`. Default is `http,https,mailto`.
 
 ### SystemReportTimeout
 The default report processing timeout value, in seconds, for all reports managed in the report server namespace. This value can be overridden at the report level. If this property is set, the report server attempts to stop the processing of a report when the specified time expires. Valid values are **-1** through **2**,**147**,**483**,**647**. If the value is **-1**, reports in the namespace don't time out during processing. The default value is **1800**.  
@@ -368,19 +369,18 @@ Set for how long you want the initial time to be delayed in seconds. *Default is
 
 *Power BI Report Server, Reporting Services 2017 and later only* 
 
-Set all the external file formats that open within the browser under the Reporting Services portal site. External file formats not listed prompts to download the option in the browser. The default values are jpg, jpeg, jpe, wav, bmp, pdf, img, gif, json, mp4, web, png.
+Set all the external file formats that open within the browser under the Reporting Services portal site. External file formats not listed prompts to download the option in the browser. The default values are jpg, jpeg, jpe, wav, bmp, img, gif, json, mp4, web, png.
 
 ### UseSessionCookies
 Indicates whether the report server should use session cookies when communicating with client browsers. The default value is **true**.  
 
 ## Related content
 
-[Set report server properties &#40;Management Studio&#41;](../../reporting-services/tools/set-report-server-properties-management-studio.md)    
-[Connect to a report server in Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)    
-[Reporting Services properties](../../reporting-services/report-server-web-service/net-framework/reporting-services-properties.md)    
-[Report server in Management Studio F1 Help](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)    
-[Report server system properties](../../reporting-services/report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md)   
-[Script deployment and administrative tasks](../../reporting-services/tools/script-deployment-and-administrative-tasks.md)   
-[Enable and disable My Reports](../../reporting-services/report-server/enable-and-disable-my-reports.md)  
-
-More questions? [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)
+- [Set report server properties &#40;Management Studio&#41;](../../reporting-services/tools/set-report-server-properties-management-studio.md)
+- [Connect to a report server in Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)
+- [Reporting Services properties](../../reporting-services/report-server-web-service/net-framework/reporting-services-properties.md)
+- [Report server in Management Studio F1 Help](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)
+- [Report server system properties](../../reporting-services/report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md)
+- [Script deployment and administrative tasks](../../reporting-services/tools/script-deployment-and-administrative-tasks.md)
+- [Enable and disable My Reports](../../reporting-services/report-server/enable-and-disable-my-reports.md)
+- [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)

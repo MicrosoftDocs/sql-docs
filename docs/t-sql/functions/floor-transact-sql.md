@@ -31,8 +31,6 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || 
 FLOOR ( numeric_expression )  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
  *numeric_expression*  
  Is an expression of the exact numeric or approximate numeric data type category.  

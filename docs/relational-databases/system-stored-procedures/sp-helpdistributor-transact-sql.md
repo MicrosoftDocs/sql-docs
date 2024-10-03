@@ -4,7 +4,7 @@ description: "Lists information about the Distributor, distribution database, wo
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 05/31/2023
+ms.date: 08/21/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: "reference"
@@ -59,7 +59,7 @@ The working directory. *@directory* is **nvarchar(255)**, with a default of `%`,
 
 #### [ @account = ] '*account*' OUTPUT
 
-The [!INCLUDE [msCoName](../../includes/msconame-md.md)] Windows user account. *@account* is **nvarchar(255)**, with a default of `%`, which is the only value that returns a result set.
+The Windows user account. *@account* is **nvarchar(255)**, with a default of `%`, which is the only value that returns a result set.
 
 #### [ @min_distretention = ] *min_distretention* OUTPUT
 
@@ -122,7 +122,7 @@ The publisher type of the Publisher. *@publisher_type* is **sysname**, with a de
 
 `sp_helpdistributor` is used in all types of replication.
 
-If one or more output parameters are specified when executing `sp_helpdistributor`, all output parameters set to NULL are assigned values on exit and no result set is returned. If no output parameters are specified, a result set is returned.
+If one or more output parameters are specified when executing `sp_helpdistributor`, all output parameters set to `NULL` are assigned values on exit and no result set is returned. If no output parameters are specified, a result set is returned.
 
 ## Permissions
 

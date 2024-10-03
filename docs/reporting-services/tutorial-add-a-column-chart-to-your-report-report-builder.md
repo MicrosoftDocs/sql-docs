@@ -3,11 +3,12 @@ title: "Tutorial: Add a column chart to your report (Report Builder)"
 description: Learn how to create a Reporting Services paginated report with a column chart displaying a series as a set of vertical bars grouped by category.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 09/02/2016
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: reporting-services
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 # Tutorial: Add a column chart to your report (Report Builder)
 In this tutorial, you create a [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] paginated report with a column chart displaying a series as a set of vertical bars grouped by category. 
@@ -290,12 +291,9 @@ The chart displays a line that shows the moving average for total sales by date,
   
 4.  Select **Save**.  
   
-## Next steps  
-You successfully completed the Adding a Column Chart to Your Report tutorial. For more information about charts, see [Charts in a paginated report (Report Builder)](../reporting-services/report-design/charts-report-builder-and-ssrs.md) and [Sparklines and data bars in a paginated report (Report Builder)](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).  
-  
 ## Related content
 
-- [Report Builder tutorials](../reporting-services/report-builder-tutorials.md) 
-- [Report Builder in SQL Server](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
-  
-
+- [Report Builder tutorials](../reporting-services/report-builder-tutorials.md)
+- [Report Builder in SQL Server](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)
+- [Charts in a paginated report (Report Builder)](../reporting-services/report-design/charts-report-builder-and-ssrs.md)
+- [Sparklines and data bars in a paginated report (Report Builder)](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)

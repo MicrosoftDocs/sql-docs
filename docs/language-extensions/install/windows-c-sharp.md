@@ -84,7 +84,7 @@ For local installations, you must run Setup as an administrator. If you install 
 
    1. Download the `dotnet-core-CSharp-lang-extension-windows-release.zip` file from [the .NET language extension for SQL Server GitHub repo](https://github.com/microsoft/sql-server-language-extensions/releases). Download the latest Windows `dotnet-core-CSharp-lang-extension-windows-release.zip` file. If you prefer to use a newer .NET runtime, you need to compile `dotnet-core-CSharp-lang-extension` from GitHub source code.
 
-   1. Use [SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md) or [Azure Data Studio](../../azure-data-studio/what-is-azure-data-studio.md) to connect to your SQL Server instance and run the following Transact-SQL (T-SQL) command to register the .NET language extension with [CREATE EXTERNAL LANGUAGE](../../t-sql/statements/create-external-language-transact-sql.md).
+   1. Use [SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md) or [Azure Data Studio](/azure-data-studio/what-is-azure-data-studio) to connect to your SQL Server instance and run the following Transact-SQL (T-SQL) command to register the .NET language extension with [CREATE EXTERNAL LANGUAGE](../../t-sql/statements/create-external-language-transact-sql.md).
 
    1. Modify the path in this statement to reflect the location of the downloaded language extension zip file (`dotnet-core-CSharp-lang-extension-windows-release.zip`).
 

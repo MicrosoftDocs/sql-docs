@@ -33,8 +33,6 @@ Returns the ID of an asymmetric key.
 ASYMKEY_ID ( 'Asym_Key_Name' )  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 *Asym_Key_Name*  
 The name of an asymmetric key in the database.

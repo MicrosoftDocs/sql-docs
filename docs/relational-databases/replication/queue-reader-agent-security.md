@@ -3,11 +3,12 @@ title: "Queue Reader Agent Security"
 description: "Queue Reader Agent Security"
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/14/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: ui-reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 f1_keywords:
   - "sql13.rep.security.QRA.f1"
 helpviewer_keywords:
@@ -26,10 +27,9 @@ helpviewer_keywords:
  **Password** and **Confirm password**  
  Enter the password for the Windows account.  
   
-## See Also  
- [Identity and access control for replication](../../relational-databases/replication/security/identity-and-access-control-replication.md)   
- [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md)   
- [Replication Agents Overview](../../relational-databases/replication/agents/replication-agents-overview.md)   
- [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md)  
-  
-  
+## Related content
+
+- [Identity and access control for replication](../../relational-databases/replication/security/identity-and-access-control-replication.md)
+- [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md)
+- [Replication Agents Overview](../../relational-databases/replication/agents/replication-agents-overview.md)
+- [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md)

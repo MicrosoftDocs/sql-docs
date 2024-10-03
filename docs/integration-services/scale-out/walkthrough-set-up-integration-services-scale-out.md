@@ -61,9 +61,7 @@ To install the Scale Out Master feature, use the [!INCLUDE[ssNoVersion_md](../..
 
 4.  Specify the TLS/SSL certificate used to protect the communication between Scale Out Master and Scale Out Worker by doing one of the following.
     * Let the setup process create a default, self-signed TLS/SSL certificate by clicking **Create a new SSL certificate**.  The default certificate is installed under Trusted Root Certification Authorities, Local Computer. You can specify the CNs in this certificate. The host name of master endpoint should be included in CNs. By default, the machine name and ip of Master Node are included.
-    * Select an existing TLS/SSL Certificate on the local computer by clicking **Use an existing SSL certificate** and then clicking **Browse** to select a certificate. The thumbprint of the certificate appears in the text box. Clicking **Browse** displays certificates that are stored in Trusted Root Certification Authorities, Local Computer. The certificate you select must be stored here.       
-
-    ![Master Config 2](media/master-config-2.PNG "Master Config 2")
+    * Select an existing TLS/SSL Certificate on the local computer by clicking **Use an existing SSL certificate** and then clicking **Browse** to select a certificate. The thumbprint of the certificate appears in the text box. Clicking **Browse** displays certificates that are stored in Trusted Root Certification Authorities, Local Computer. The certificate you select must be stored in this location.
   
 5.  Finish the [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] installation wizard.
 

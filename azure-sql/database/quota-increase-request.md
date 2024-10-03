@@ -5,8 +5,8 @@ description: This page describes how to create a support request to increase the
 author: sachinpMSFT
 ms.author: sachinp
 ms.reviewer: wiassaf, mathoma, randolphwest
-ms.date: 10/23/2023
-ms.service: sql-db-mi
+ms.date: 08/26/2024
+ms.service: azure-sql
 ms.subservice: deployment-configuration
 ms.topic: how-to
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
@@ -16,108 +16,110 @@ monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 
 [!INCLUDE [appliesto-sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi.md)]
 
-This article explains how to request a quota increase for Azure SQL Database and Azure SQL Managed Instance. It also explains how to enable subscription access to a region and how to request enabling specific hardware in a region.
+This article explains how to request a quota increase for Azure SQL Database and Azure SQL Managed Instance, as well as request subscription access and zone redundancy for Azure SQL Database. 
 
-## <a id="newquota"></a> Create a new support request
+## <a id="newquota"></a> Create quota increase request
 
-Use the following steps to create a new support request from the Azure portal for SQL Database.
+To request an increase to your quota, follow these steps: 
 
-1. On  the [Azure portal](https://portal.azure.com) menu, select **Help + support**.
-
-   :::image type="content" source="media/quota-increase-request/help-plus-support.png" alt-text="Screenshot of the Azure portal left side navigation menu that highlights the Help + support menu option." lightbox="media/quota-increase-request/help-plus-support.png":::
-
-1. In **Help + support**, select **New support request**.
-
-    :::image type="content" source="./media/quota-increase-request/new-support-request.png" alt-text="Screenshot of the Azure portal, Create a new support request.":::
-
-1. For **Issue type**, select **Service and subscription limits (quotas)**.
-
-   :::image type="content" source="./media/quota-increase-request/select-quota-issue-type.png" alt-text="Screenshot of the Azure portal, Select an issue type.":::
-
-1. For **Subscription**, select the subscription whose quota you want to increase.
-
-   :::image type="content" source="./media/quota-increase-request/select-subscription-support-request.png" alt-text="Screenshot of the Azure portal, select a subscription for an increased quota.":::
-
-1. For **Quota type**, select one of the following quota types:
+1. Go to the **New support request** page in the Azure portal by following the steps to [Open a support request](/azure/azure-portal/supportability/how-to-create-azure-support-request). 
+1. On the **Problem description** tab of the **New support request** page, choose *Service and subscription limits (quotas)* for the **Issue type**, and your subscription from the drop-down. For **Quota type**, type in `sql` and choose the appropriate product:
 
    - **SQL Database** for single database and elastic pool quotas.
    - **SQL Database Managed Instance** for managed instances.
 
-   Then select **Next: Solutions >>**.
+   :::image type="content" source="./media/quota-increase-request/select-quota-issue-type.png" alt-text="Screenshot of the Azure portal, Select an issue type.":::
 
-   :::image type="content" source="./media/quota-increase-request/select-quota-type.png" alt-text="Screenshot of the Azure portal, select a quota type.":::
+1. Select **Next: Solutions >>** to go to the **Additional details** tab.
 
-1. In the **Details** window, select **Enter details** to enter additional information.
+1. On the **Additional details** tab, under **Problem details**, select **Enter details** to enter additional information.
 
    :::image type="content" source="./media/quota-increase-request/provide-details-link.png" alt-text="Screenshot of the Azure portal, Enter details link.":::
 
 Selecting **Enter details** displays the **Quota details** window that allows you to add additional information. The following sections describe the different options for **SQL Database** and **SQL Managed Instance** quota types.
 
-## <a id="sqldbquota"></a> SQL Database quota types
+## <a id="sqldbquota"></a> SQL Database quota request types
 
 The following sections describe the quota increase options for the **SQL Database** quota types:
 
-- Database transaction units (DTUs) per server
-- Servers per subscription
-- Region access for subscriptions or specific hardware
+- vCores per subscription
+- Region access
+- Zone Redundant Access (Availability Zones)
 
-### Database transaction units (DTUs) per server
+Regardless of what [purchasing model](purchasing-models.md) you use for your Azure SQL Database, quota requests are made by using vCores. 
 
-Use the following steps to request an increase in the DTUs per server.
+If your SQL database uses the DTU purchasing model, then use the following calculation to determine how many vCores correlate to the DTU quota increase you're requesting: 
 
-1. Select the **Database transaction units (DTUs) per server** quota type.
+`1 vCore ~ 100-125 DTU`. 
 
-1. In the **Resource** list, select the resource to target.
+For example, a subscription that uses 1000 DTUs consumes about 10 vCores. 
 
-1. In the **New quota** field, enter the new DTU limit that you're requesting. Then select **Save and continue** to save your changes. 
 
+### vCores per subscription 
+
+Use *vCores per subscription* to request increases to your compute quotas. For databases that use the DTU-purchasing model, use the `1 vCore ~ 100-125 DTU` formula to determine your new limits in vCores. For example, if your subscription is currently limited to 100 DTUs, and you want to increase your DTU capacity to 1000 DTUs, then request a quota increase of 10 vCores. 
+
+To increase your compute quota, follow these steps: 
+
+1. For **SQL database quota type**, choose *vCores per subscription*. 
+1. Provide a location. 
+1. Provide the new quota, in vCores. Then select **Save and continue** to save your changes and navigate back to the **New support request** page. 
+ 
    :::image type="content" source="./media/quota-increase-request/quota-details-dtus.png" alt-text="Screenshot of the Azure portal, DTU quota details.":::
+
 
 For more information, see [Resource limits for single databases using the DTU purchasing model](resource-limits-dtu-single-databases.md) and [Resources limits for elastic pools using the DTU purchasing model](resource-limits-dtu-elastic-pools.md).
 
-### Servers per subscription
-
-Use the following steps to request an increase in the number of servers per subscription.
-
-1. Select the **Servers per subscription** quota type.
-
-1. In the **Location** list, select the Azure region to use. The quota is per subscription in each region.
-
-1. In the **New quota** field, enter your request for the maximum number of servers in that region. Then select **Save and continue** to save your changes. 
-
-   :::image type="content" source="./media/quota-increase-request/quota-details-servers.png" alt-text="Screenshot of the Azure portal, Servers quota details.":::
-
-For more information, see [SQL Database resource limits and resource governance](resource-limits-logical-server.md).
 
 ### <a id="region"></a> Enable subscription access to a region
 
-Some offer types aren't available in every region. You might see an error such as the following:
+Use *Region access* to request creating a resource in a selected region since some subscriptions have limits to where they can create resources. You might see an error such as: 
 
-`Your subscription does not have access to create a server in the selected region. For the latest information about region availability for your subscription, go to aka.ms/sqlcapacity. Please try another region or create a support ticket to request access.`
+`Your subscription does not have access to create a server in the selected region.`
 
-If your subscription needs access in a particular region, select the **Region access** option. In your request, specify the offering and SKU details that you want to enable for the region. To explore the offering and SKU options, see [Azure SQL Database pricing](https://azure.microsoft.com/pricing/details/sql-database/single/).
+Consumption is calculated in vCores, regardless of your [purchasing model](purchasing-models.md), so if you're using the DTU-based purchasing model, use the following formula to convert your expected DTU consumption to vCores: 
 
-1. Select the **Region access** quota type.
+`1 vCore ~ 100-125 DTU`. 
 
-1. In the **Select a location** list, select the Azure region to use. The quota is per subscription in each region.
+To request region access, follow these steps: 
 
-1. Enter the **Expected Consumption** details. Then select **Save and continue** to save your changes. 
+1. Select the **Region access** quota type on the **Quota details** window.
+1. Use the **Location** dropdown to select the Azure region where you want access. The quota is per subscription in each region.
+1. Enter the **Expected Consumption** in vCores. Then select **Save and continue** to save your changes and navigate back to the **New support request** page. 
 
-   :::image type="content" source="./media/quota-increase-request/quota-request.png" alt-text="Screenshot of the Azure portal, Request region access.":::
 
-### Request enabling specific hardware in a region
+> [!NOTE]
+> Not all service tiers are available in all regions. Use the [Azure SQL Database pricing](https://azure.microsoft.com/pricing/details/sql-database/single/) page to determine region and service tier availability. 
 
-If the hardware you want to use isn't available in your region, you might request it using the following steps. For more information on hardware regional availability, see [Hardware configurations for SQL Database](./service-tiers-sql-database-vcore.md#hardware-configuration) or [Hardware configurations for SQL Managed Instance](../managed-instance/service-tiers-managed-instance-vcore.md#hardware-configurations).
+### Zone Redundant Access
 
-1. Select the **Other quota request** quota type.
+Use *Zone Redundant Access (Availability Zones)* to request [zone redundant storage](high-availability-sla.md) support in a specific region, since not every region in every subscription supports availability zones. You might see an error such as: 
 
-1. In the **Description** field, state your request, including the name of the hardware and the name of the region you need it in.
+`Provisioning of zone redundant database/pool is not supported for your current request`. 
 
-   :::image type="content" source="./media/quota-increase-request/hardware-in-new-region.png" alt-text="Screenshot of the Azure portal, Request hardware in a new region.":::
+To request zone redundant access, follow these steps: 
+
+1. Select the **Zone Redundant Access (Availability Zones)** quota type on the **Quota details** window. 
+1. Use the **Location** dropdown to select the Azure region where you want to use availability zones. 
+1. Enter the **Expected Consumption** in vCores. Then select **Save and continue** to save your changes and navigate back to the **New support request** page. 
+
+> [!NOTE]
+> Not all regions support availability zones. Review [Availability zones](/azure/reliability/cross-region-replication-azure#azure-paired-regions) for more information. 
+
+## SQL Managed Instance quota request types 
+
+With Azure SQL Managed Instance, use the **Quota details** window to request increase limits for:
+
+- The number of available subnets in a region 
+- Compute capacity in a region, calculated by vCores
+
+
+Specify your new limits on the **Quota details** window, and then use **Save and continue** to apply your new limits and navigate back to the **New support request** page. 
+
 
 ## Submit your request
 
-The final step is to fill in the remaining details of your SQL Database quota request. Then select **Next: Review + create>>**, and after reviewing the request details, select **Create** to submit the request.
+The final step is to fill in the remaining details of your quota request. Then select **Next: Review + create>>**, and after reviewing the request details, select **Create** to submit the request.
 
 ## Next step
 

@@ -4,7 +4,7 @@ description: Used by replication agents to query a distributor to determine whet
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 11/14/2023
+ms.date: 08/22/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: "reference"
@@ -72,7 +72,7 @@ Used to pass information for the creation of the dynamic linked server. If `0`, 
 
 If validation isn't requested or if no entry exists for the publisher and the publishing database, `error_number` and `error_severity` return `0` and `error_message` returns `NULL`.
 
-If validation is requested, the validation stored procedure [sp_validate_redirected_publisher (Transact-SQL)](sp-validate-redirected-publisher-transact-sql.md) is called to verify that the target of the redirection is a suitable host for the publishing database. If the validation succeeds, `sp_get_redirected_publisher` returns the redirected publisher name, `0` for the `error_number` and `error_severity` columns, and `NULL` in the `error_message` column.
+If validation is requested, the validation stored procedure [sp_validate_redirected_publisher](sp-validate-redirected-publisher-transact-sql.md) is called to verify that the target of the redirection is a suitable host for the publishing database. If the validation succeeds, `sp_get_redirected_publisher` returns the redirected publisher name, `0` for the `error_number` and `error_severity` columns, and `NULL` in the `error_message` column.
 
 If validation is requested and fails, the redirected publisher name is returned along with error information.
 

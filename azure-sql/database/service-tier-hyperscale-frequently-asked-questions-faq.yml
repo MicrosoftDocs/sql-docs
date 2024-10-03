@@ -3,7 +3,7 @@ metadata:
   title: Azure SQL Database Hyperscale FAQ
   description: Answers to common questions customers ask about a database in SQL Database in the Hyperscale service tier - commonly called a Hyperscale database.
   services: sql-database
-  ms.service: sql-database
+  ms.service: azure-sql-database
   ms.subservice: service-overview
   ms.custom: sqldbrb=1
   ms.devlang: 
@@ -11,7 +11,7 @@ metadata:
   author: dimitri-furman
   ms.author: dfurman
   ms.reviewer: wiassaf, mathoma
-  ms.date: 05/08/2024
+  ms.date: 09/12/2024
 title: Azure SQL Database Hyperscale FAQ
 summary: |
   [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
@@ -165,7 +165,7 @@ sections:
           In Hyperscale, the transaction log is practically infinite, with a restriction that the active portion of the log cannot exceed 1 TB. The active portion of the log can grow because of long-running transactions, or because of [Change Data Capture](change-data-capture-overview.md?view=azuresql-db&preserve-view=true) processing not keeping up with the rate of data change. Avoid unnecessarily long and large transactions to stay below this limit. Other than this restriction, you don't need to worry about running out of log space on a system that has high log throughput. However, log generation rate might be throttled for continuous aggressively writing workloads. The peak sustained log generation rate is 100 MB/s.
 
       - question: |
-          Does my `tempdb` scale as my database grows?
+          Does my tempdb scale as my database grows?
         answer: |
           Your `tempdb` database is located on local SSD storage and is sized proportionally to the compute size (the number of cores) that you provision. The size of `tempdb` is not configurable and is managed for you. To determine maximum `tempdb` size for your database, see [Hyperscale storage and compute sizes](resource-limits-vcore-single-databases.md#hyperscale---provisioned-compute---gen5).
 
@@ -201,7 +201,7 @@ sections:
       - question: |
           Is database shrink supported?
         answer: |
-          Not at this time.
+          Yes, [database and file shrink operations](file-space-manage.md) are currently in preview. For more information on the preview, see [Shrink for Azure SQL Database Hyperscale](https://aka.ms/hs-shrink-preview).
 
       - question: |
           Is data compression supported?
@@ -290,10 +290,11 @@ sections:
           Does Hyperscale support Availability Zones?
         answer: |
           Yes, Hyperscale supports [zone redundant configuration](high-availability-sla-local-zone-redundancy.md#hyperscale-service-tier-zone-redundant-availability). At least one HA secondary replica and the use of zone-redundant or geo-zone-redundant storage is required for enabling the zone redundant configuration for Hyperscale.
+
       - question: |
           Does Hyperscale support elastic pools?
         answer: |
-          Yes. [Hyperscale elastic pools](hyperscale-elastic-pool-overview.md) are currently in preview. Zone redundant Hyperscale elastic pools are also currently in preview. 
+          Yes. For more information, see [Hyperscale elastic pools](hyperscale-elastic-pool-overview.md) and [Blog: Hyperscale Elastic Pools are now generally available](https://aka.ms/hsep-ga).
 
       - question: |
           How often are database backups taken?
@@ -417,7 +418,7 @@ sections:
           Scaling in provisioned compute is performed by the end user. Automatic scaling in serverless compute is performed by the service.
 
       - question: |
-          Does the size of my `tempdb` database and RBPEX cache also grow as the compute is scaled up?
+          Does the size of my tempdb database and RBPEX cache also grow as the compute is scaled up?
         answer: |
           Yes. The `tempdb` database and [RBPEX cache](service-tier-hyperscale.md#distributed-functions-architecture) size on compute nodes scale up automatically as the number of cores is increased. For details, see [Hyperscale storage and compute sizes](resource-limits-vcore-single-databases.md#hyperscale---provisioned-compute---gen5).
           
@@ -464,7 +465,7 @@ sections:
           Not in the provisioned compute tier. HA secondary replicas are used as high availability failover targets, so they need to have the same configuration as the primary to provide expected performance after failover. In serverless, the compute is scaled automatically for each HA replica based on its individual workload demand. Each HA secondary can still autoscale to the configured max cores to accommodate its post-failover role. [Named replicas](service-tier-hyperscale-replicas.md#named-replica) provide the ability to scale each replica independently.
 
       - question: |
-          Do I get different `tempdb` sizing for my primary compute and my HA secondary replicas?
+          Do I get different tempdb sizing for my primary compute and my HA secondary replicas?
         answer: |
           No. Your `tempdb` database is configured based on the provisioned compute size; your HA secondary replicas are the same size, including `tempdb`, as the primary compute. On [named replicas](service-tier-hyperscale-replicas.md#named-replica), `tempdb` is sized according to the compute size of the replica, thus it can be smaller or larger than `tempdb` on the primary.
 
@@ -496,7 +497,7 @@ sections:
       - question: |
           Can a named replica impact availability or performance of the primary replica?
         answer: |
-          A named replica cannot impact the availability of the primary replica. Named replicas, under normal circumstances, are unlikely to impact the primary's performance, but it can happen if there are intensive workloads running. Just like an HA replica, a named replica is kept in sync with the primary via the transaction log service. If a named replica, for any reason, is not able to consume the transaction log fast enough, it will start asking the primary replica to slow down (throttle) its log generation, so that it can catch up. While this behavior won't impact the primary's availability, it can impact performance of write workloads on the primary. To avoid this situation, make sure that your named replicas have enough resource headroom – mainly CPU – to process transaction log without delay. For example, if the primary is processing numerous data changes, it is recommended to have named replicas with at least the same Service Level Objective as the primary to avoid saturating CPU on the replicas, and thus forcing the primary to slow down.
+          A named replica cannot impact the availability of the primary replica. Named replicas, under normal circumstances, are unlikely to impact the primary's performance, but it can happen if there are intensive workloads running. Just like an HA replica, a named replica is kept in sync with the primary via the transaction log service. If a named replica, for any reason, is not able to consume the transaction logs fast enough, it will start asking the primary replica to slow down (throttle) its log generation, so that it can catch up. While this behavior won't impact the primary's availability, it can impact performance of write workloads on the primary. To avoid this situation, make sure that your named replicas have enough resource headroom – mainly CPU – to process transaction log without delay. For example, if the primary is processing numerous data changes, it is recommended to have named replicas with at least the same Service Level Objective as the primary to avoid saturating CPU on the replicas, and thus forcing the primary to slow down.
 
       - question: |
           What happens to named replicas if the primary replica is unavailable, for example, because of planned maintenance?

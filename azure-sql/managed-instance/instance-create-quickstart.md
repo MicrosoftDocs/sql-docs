@@ -4,8 +4,8 @@ description: Create Azure SQL Managed Instance by using the Azure portal, PowerS
 author: urosran
 ms.author: urandjelovic
 ms.reviewer: mathoma
-ms.date: 02/26/2024
-ms.service: sql-managed-instance
+ms.date: 08/16/2024
+ms.service: azure-sql-managed-instance
 ms.subservice: deployment-configuration
 ms.topic: quickstart
 ms.custom: mode-ui, devx-track-azurecli
@@ -81,7 +81,7 @@ The following table provides recommendations for the compute and storage for you
 | Setting| Suggested value | Description |
 | ------ | --------------- | ----------- |
 | **Service Tier** | General Purpose | The **General Purpose** tier is suitable for most production workloads, and is the default option. The improved [Next-gen General Purpose](service-tiers-next-gen-general-purpose-use.md) service tier is also a great choice for most workloads. For more information, review [resource limits](resource-limits.md).|
-| **Hardware generation** | Standard-series (Gen5) | Standard-series (gen5) is the default [hardware generation](resource-limits.md#hardware-configuration-characteristics), which defines compute and memory limits. **Standard-series (Gen5)** is the default.|
+| **Hardware generation** | Standard-series (Gen5) | Standard-series (Gen5) is the default [hardware generation](resource-limits.md#hardware-configuration-characteristics), which defines compute and memory limits. **Standard-series (Gen5)** is the default.|
 | **vCores** | Designate a value. | vCores represent the exact amount of compute resources that are always provisioned for your workload. **Eight vCores** is the default.|
 | **Storage in GB** | Designate a value. | Storage size in GB, select based on expected data size. |
 | **SQL Server License** | Select applicable licensing model. | Either pay as you go, use an existing SQL license with the [Azure Hybrid Benefit](../azure-hybrid-benefit.md), or enable the [Hybrid failover rights](managed-instance-link-feature-overview.md#license-free-passive-dr-replica) |
@@ -195,9 +195,7 @@ And finally, create your instance:
 
 ## Review network settings 
 
-Select the **Route table** resource in your resource group to review the default [user-defined route table object and entries to route traffic](connectivity-architecture-overview.md#mandatory-routes-with-service-aided-subnet-configuration) from, and within, the SQL Managed Instance virtual network. To change or add routes, open the **Routes** in the Route table settings. 
-
-:::image type="content" source="./media/instance-create-quickstart/azure-sql-managed-instance-route-table-user-defined-route.png" alt-text="Screenshot of the Entry for a SQL Managed Instance subnet to local in the Azure portal. ":::
+Select the **Route table** resource in your resource group to review the default [user-defined route table object and entries to route traffic](subnet-service-aided-configuration-enable.md#mandatory-security-rules-and-routes) from, and within, the SQL Managed Instance virtual network. To change or add routes, open the **Routes** in the Route table settings.
 
 Select the **Network security group** object to review the inbound and outbound security rules. To change or add rules, open the **Inbound Security Rules** and **Outbound security rules** in the Network security group settings.
 
@@ -259,7 +257,7 @@ Review the following related content:
 - [Configure an Azure virtual machine connection](connect-vm-instance-configure.md)
 - [Migration overview: SQL Server to SQL Managed Instance](../migration-guides/managed-instance/sql-server-to-managed-instance-overview.md)
 - [Configure a point-to-site connection](point-to-site-p2s-configure.md)
-- [Monitor Azure SQL Managed Instance by using Azure SQL Analytics](/azure/azure-monitor/insights/azure-sql)
+- [Monitor Azure SQL Managed Instance using database watcher](../database-watcher-overview.md)
 
 To restore an existing SQL Server database from on-premises to SQL Managed Instance: 
 - Use the [Azure Database Migration Service](/azure/dms/tutorial-sql-server-managed-instance-online-ads) to restore from a database backup file.

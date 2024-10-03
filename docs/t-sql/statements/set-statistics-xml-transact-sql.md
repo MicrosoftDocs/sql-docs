@@ -33,8 +33,6 @@ dev_langs:
 SET STATISTICS XML { ON | OFF }  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Remarks
  The setting of SET STATISTICS XML is set at execute or run time and not at parse time.  
   

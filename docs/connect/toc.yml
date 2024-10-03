@@ -42,58 +42,58 @@
       href: ../connect/ado-net/sqlclient-troubleshooting-guide.md
     - name: Finding additional information
       href: ../connect/ado-net/find-additional-sqlclient-driver-information.md
-  - name: Data Type Mappings In ADO.NET
+  - name: Data Type Mappings In ADO.NET
     href: ../connect/ado-net/data-type-mappings-ado-net.md
     items:
-    - name: SQL Server Data Type Mappings
+    - name: SQL Server Data Type Mappings
       href: ../connect/ado-net/sql-server-data-type-mappings.md
     - name: Floating-Point Numbers
       href: ../connect/ado-net/floating-point-numbers.md
-  - name: Retrieving and Modifying Data In ADO.NET
+  - name: Retrieving and Modifying Data In ADO.NET
     href: ../connect/ado-net/retrieving-modifying-data.md
     items:
-    - name: Connecting To Data Source
+    - name: Connecting To Data Source
       href: ../connect/ado-net/connecting-to-data-source.md
       items:
-      - name: Establishing Connection
+      - name: Establishing Connection
         href: ../connect/ado-net/establishing-connection.md
-      - name: Connection Events
+      - name: Connection Events
         href: ../connect/ado-net/connection-events.md
-    - name: Connection Strings
+    - name: Connection Strings
       href: ../connect/ado-net/connection-strings.md
       items:
-      - name: Connection String Builders
+      - name: Connection String Builders
         href: ../connect/ado-net/connection-string-builders.md
-      - name: Connection Strings And Configuration Files
+      - name: Connection Strings And Configuration Files
         href: ../connect/ado-net/connection-strings-and-configuration-files.md
-      - name: Connection String Syntax
+      - name: Connection String Syntax
         href: ../connect/ado-net/connection-string-syntax.md
       - name: Encryption and certificate validation
         href: ../connect/ado-net/encryption-and-certificate-validation.md
-      - name: Protecting Connection Information
+      - name: Protecting Connection Information
         href: ../connect/ado-net/protecting-connection-information.md
     - name: Connection Pooling
       href: ../connect/ado-net/connection-pooling.md
       items:
-      - name: SQL Server Connection Pooling (ADO.NET)
+      - name: SQL Server Connection Pooling (ADO.NET)
         href: ../connect/ado-net/sql-server-connection-pooling.md
     - name: Commands and Parameters
       href: ../connect/ado-net/commands-parameters.md
       items:
-      - name: Executing a Command
+      - name: Executing a Command
         href: ../connect/ado-net/execute-command.md
-      - name: Configuring Parameters
+      - name: Configuring Parameters
         href: ../connect/ado-net/configure-parameters.md
-      - name: Generating Commands with CommandBuilders
+      - name: Generating Commands with CommandBuilders
         href: ../connect/ado-net/generate-commands-with-commandbuilders.md
-      - name: Obtaining a Single Value from a Database
+      - name: Obtaining a Single Value from a Database
         href: ../connect/ado-net/obtain-single-value-from-database.md
-      - name: Using Commands to Modify Data
+      - name: Using Commands to Modify Data
         href: ../connect/ado-net/use-commands-to-modify-data.md
         items:
-        - name: Updating Data in a Data Source
+        - name: Updating Data in a Data Source
           href: ../connect/ado-net/update-data-inside-data-source.md
-        - name: Performing Catalog Operations
+        - name: Performing Catalog Operations
           href: ../connect/ado-net/perform-catalog-operations.md
     - name: DataAdapters and DataReaders
       href: ../connect/ado-net/dataadapters-datareaders.md

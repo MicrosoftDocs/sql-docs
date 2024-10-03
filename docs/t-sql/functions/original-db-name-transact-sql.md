@@ -30,8 +30,6 @@ dev_langs:
 ORIGINAL_DB_NAME ()  
 ```
 
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Remarks  
  If the initial database isn't specified, the function returns an empty string.  
   

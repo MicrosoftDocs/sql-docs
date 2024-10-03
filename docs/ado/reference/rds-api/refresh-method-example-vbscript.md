@@ -94,7 +94,7 @@ SQL: <Input Size=70 Name="txtSQL" Value="Select * from Employees">
    <TD>Asynchronously: <BR>  
       <Input Type="Radio" Name="optExecuteOptions"  OnClick="SetExO('adcExecAsync')">  
    </TD>  
-   <TD> </TD>  
+   <TD> </TD>  
 </TR>  
 <TR>  
    <TD COLSPAN=3 BGCOLOR=silver>  

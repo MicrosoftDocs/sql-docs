@@ -1,11 +1,11 @@
 ---
-title: Migrate a Python application to use passwordless connections with Azure SQL Database
+title: Migrate a Python application to use passwordless connections
 description: Learn how to migrate a Python application to use passwordless connections with Azure SQL Database.
 author: bobtabor-msft
 ms.author: rotabor
 ms.reviewer: mathoma
 ms.date: 10/11/2023
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.subservice: security
 monikerRange: "= azuresql || = azuresql-db"
 ms.topic: how-to

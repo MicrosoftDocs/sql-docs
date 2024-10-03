@@ -4,8 +4,8 @@ description: Create a Hyperscale database in Azure SQL Database using the Azure 
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma
-ms.date: 02/22/2024
-ms.service: sql-database
+ms.date: 09/17/2024
+ms.service: azure-sql-database
 ms.subservice: deployment-configuration
 ms.topic: quickstart
 ms.custom:
@@ -24,6 +24,12 @@ In this quickstart, you create a [logical server in Azure](logical-servers.md) a
 - An active Azure subscription. If you don't have one, [create a free account](https://azure.microsoft.com/free/).
 - The latest version of either [Azure PowerShell](/powershell/azure/install-az-ps) or [Azure CLI](/cli/azure/install-azure-cli-windows), if you would like to follow the quickstart programmatically. Alternately, you can complete the quickstart in the Azure portal.
 - An existing [logical server](logical-servers.md) in Azure is required if you would like to create a Hyperscale database with Transact-SQL. For this approach, you will need to run Transact-SQL via [the Azure portal query editor](query-editor.md), [SQL Server Management Studio (SSMS)](/sql/ssms/download-sql-server-management-studio-ssms), [Azure Data Studio](/azure-data-studio/download-azure-data-studio), [sqlcmd](/sql/tools/sqlcmd-utility), or the client of your choice.
+
+### Permissions
+
+**To create databases via Transact-SQL**: `CREATE DATABASE` permissions are necessary. To create a database a login must be either the server admin login (created when the Azure SQL Database logical server was provisioned), the Microsoft Entra admin of the server, a member of the dbmanager database role in `master`. For more information, see [CREATE DATABASE](/sql/t-sql/statements/create-database-transact-sql?view=azuresqldb-current&preserve-view=true).
+
+**To create databases via the Azure portal, PowerShell, Azure CLI, or REST API**: Azure RBAC permissions are needed, specifically the Contributor, SQL DB Contributor, or SQL Server Contributor Azure RBAC role. For more information, see [Azure RBAC built-in roles](/azure/role-based-access-control/built-in-roles).
 
 ## Create a Hyperscale database
 
@@ -69,14 +75,14 @@ To create a single database in the Azure portal, this quickstart starts at the A
 1. For **Firewall rules**, set **Add current client IP address** to **Yes**. Leave **Allow Azure services and resources to access this server** set to **No**.
 1. Select **Next: Security** at the bottom of the page.
 
-    :::image type="content" source="media/hyperscale-database-create-quickstart/azure-sql-database-configure-network.png" alt-text="Screenshot of the networking configuration page for a new database that enables you to configure endpoints and optionally add a firewall rule for your client IP address.":::
+    :::image type="content" source="media/hyperscale-database-create-quickstart/azure-sql-database-configure-network.png" alt-text="Screenshot of the networking configuration page for a new database that enables you to configure endpoints and optionally add a firewall rule for your client IP address." lightbox="media/hyperscale-database-create-quickstart/azure-sql-database-configure-network.png":::
 
-1. Optionally, enable [Microsoft Defender for SQL](../database/azure-defender-for-sql.md).
+1. Optionally, enable [Microsoft Defender for SQL](azure-defender-for-sql.md).
 1. Select **Next: Additional settings** at the bottom of the page.
 1. On the **Additional settings** tab, in the **Data source** section, for **Use existing data**, select **Sample**. This creates an AdventureWorksLT sample database so there's some tables and data to query and experiment with, as opposed to an empty blank database.
 1. Select **Review + create** at the bottom of the page:
 
-    :::image type="content" source="media/hyperscale-database-create-quickstart/azure-sql-create-database-sample-data.png" alt-text="Screenshot of the 'Additional Settings' screen to create a database in Azure SQL Database allows you to select sample data.":::
+    :::image type="content" source="media/hyperscale-database-create-quickstart/azure-sql-create-database-sample-data.png" alt-text="Screenshot of the 'Additional Settings' screen to create a database in Azure SQL Database allows you to select sample data." lightbox="media/hyperscale-database-create-quickstart/azure-sql-create-database-sample-data.png":::
 
 1. On the **Review + create** page, after reviewing, select **Create**.
 
@@ -178,7 +184,7 @@ You can create a resource group, server, and single database using Azure PowerSh
 
 The Azure Cloud Shell is a free interactive shell that you can use to run the steps in this article. It has common Azure tools preinstalled and configured to use with your account.
 
-To open the Cloud Shell, select **Try it** from the upper right corner of a code block. You can also launch Cloud Shell in a separate browser tab by going to [https://shell.azure.com](https://shell.azure.com).
+To open the Cloud Shell, select **Try it** from the upper right corner of a code block. You can also launch Cloud Shell in a separate browser tab by going to [https://shell.azure.com](https://portal.azure.com/#cloudshell).
 
 When Cloud Shell opens, verify that **PowerShell** is selected for your environment. Subsequent sessions will use Azure CLI in a PowerShell environment. Select **Copy** to copy the blocks of code, paste it into the Cloud Shell, and press **Enter** to run it.
 
@@ -280,7 +286,7 @@ Connect to the `master` database using [SQL Server Management Studio (SSMS)](/sq
 
 When creating a Hyperscale database, carefully consider the setting for `BACKUP_STORAGE_REDUNDANCY`. Storage redundancy can only be specified during the database creation process for Hyperscale databases. You can choose locally redundant, zone-redundant, or geo-redundant storage. The selected storage redundancy option will be used for the lifetime of the database for both [data storage redundancy](hyperscale-architecture.md#azure-storage) and [backup storage redundancy](automated-backups-overview.md#backup-storage-redundancy). Existing databases can migrate to different storage redundancy using [database copy](database-copy.md) or point in time restore. Allowed values for the `BackupStorageRedundancy` parameter are: `LOCAL`, `ZONE`, `GEO`.  Unless explicitly specified, databases will be configured to use geo-redundant backup storage.
 
-Run the following Transact-SQL command to create a new Hyperscale database with Gen 5 hardware, 2 vCores, and geo-redundant backup storage. You must specify both the edition and service objective in the `CREATE DATABASE` statement. Refer to the [resource limits](./resource-limits-vcore-single-databases.md) for a list of valid service objectives, such as `HS_Gen5_2`.
+Run the following Transact-SQL command to create a new Hyperscale database with Gen 5 hardware, 2 vCores, and geo-redundant backup storage. You must specify both the edition and service objective in the `CREATE DATABASE` statement. Refer to the [resource limits](resource-limits-vcore-single-databases.md) for a list of valid service objectives, such as `HS_Gen5_2`.
 
 This example code creates an empty database. If you would like to create a database with sample data, use the Azure portal, Azure CLI, or PowerShell examples in this quickstart.
 

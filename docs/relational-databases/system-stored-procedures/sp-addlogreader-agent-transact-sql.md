@@ -4,7 +4,7 @@ description: Adds a Log Reader agent for a given database.
 author: mashamsft
 ms.author: mathoma
 ms.reviewer: randolphwest
-ms.date: 01/23/2024
+ms.date: 08/21/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: "reference"
@@ -45,10 +45,10 @@ sp_addlogreader_agent
 
 #### [ @job_login = ] N'*job_login*'
 
-The login for the [!INCLUDE [msCoName](../../includes/msconame-md.md)] Windows account under which the agent runs. *@job_login* is **nvarchar(257)**, with a default of `NULL`. This Windows account is always used for agent connections to the Distributor. On Azure SQL Managed Instance, use a SQL Server account.
+The login for the Windows account under which the agent runs. *@job_login* is **nvarchar(257)**, with a default of `NULL`. This Windows account is always used for agent connections to the Distributor. On Azure SQL Managed Instance, use a SQL Server account.
 
 > [!NOTE]  
-> For non-[!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Publishers, this must be the same login specified in [sp_adddistpublisher (Transact-SQL)](sp-adddistpublisher-transact-sql.md).
+> For non-[!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Publishers, this must be the same login specified in [sp_adddistpublisher](sp-adddistpublisher-transact-sql.md).
 
 #### [ @job_password = ] N'*job_password*'
 

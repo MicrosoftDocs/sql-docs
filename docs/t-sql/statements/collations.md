@@ -33,8 +33,6 @@ COLLATE { <collation_name> | database_default }
     { Windows_collation_name } | { SQL_collation_name }
 ```
 
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 
 *collation_name*

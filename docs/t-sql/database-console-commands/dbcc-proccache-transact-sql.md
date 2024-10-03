@@ -34,8 +34,6 @@ Displays information in a table format about the procedure cache.
 DBCC PROCCACHE [ WITH NO_INFOMSGS ]
 ```
 
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 
 #### WITH

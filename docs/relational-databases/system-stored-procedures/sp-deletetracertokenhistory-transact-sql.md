@@ -4,7 +4,7 @@ description: Removes tracer token records from the MStracer_tokens and MStracer_
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 01/23/2024
+ms.date: 08/22/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: "reference"
@@ -20,7 +20,7 @@ dev_langs:
 
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
-Removes tracer token records from the [MStracer_tokens (Transact-SQL)](../system-tables/mstracer-tokens-transact-sql.md) and [MStracer_history (Transact-SQL)](../system-tables/mstracer-history-transact-sql.md) system tables. This stored procedure is executed at the Publisher on the publication database or at the Distributor on the distribution database.
+Removes tracer token records from the [MStracer_tokens](../system-tables/mstracer-tokens-transact-sql.md) and [MStracer_history](../system-tables/mstracer-history-transact-sql.md) system tables. This stored procedure is executed at the Publisher on the publication database or at the Distributor on the distribution database.
 
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
@@ -76,7 +76,7 @@ An error occurs if you specify both parameters *@tracer_id* and *@cutoff_date*.
 
 If you don't execute `sp_deletetracertokenhistory` to delete tracer token metadata, the information is deleted when the regularly scheduled history cleanup occurs.
 
-Tracer token IDs can be determined by executing [sp_helptracertokens (Transact-SQL)](sp-helptracertokens-transact-sql.md) or by querying the [MStracer_tokens (Transact-SQL)](../system-tables/mstracer-tokens-transact-sql.md) system table.
+Tracer token IDs can be determined by executing [sp_helptracertokens](sp-helptracertokens-transact-sql.md) or by querying the [MStracer_tokens](../system-tables/mstracer-tokens-transact-sql.md) system table.
 
 ## Permissions
 

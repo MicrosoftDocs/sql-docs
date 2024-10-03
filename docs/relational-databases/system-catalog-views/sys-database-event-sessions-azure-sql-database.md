@@ -5,7 +5,7 @@ description: sys.database_event_sessions (Azure SQL Database and Azure SQL Manag
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "5/15/2024"
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.topic: "reference"
 dev_langs:
   - "TSQL"

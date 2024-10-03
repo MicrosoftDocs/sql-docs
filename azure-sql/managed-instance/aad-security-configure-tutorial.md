@@ -5,7 +5,7 @@ author: nofield
 ms.author: nofield
 ms.reviewer: vanto, mathoma
 ms.date: 09/27/2023
-ms.service: sql-managed-instance
+ms.service: azure-sql-managed-instance
 ms.subservice: security
 ms.topic: tutorial
 ms.custom: sqldbrb=1
@@ -315,7 +315,7 @@ For the user to see data in the database, we can provide [database-level roles](
 1. Create a new connection to the managed instance with the user that has been added to the `db_datareader` role.
 1. Expand the database in **Object Explorer** to see the table.
 
-    ![Screenshot from Object Explorer in S S M S showing the folder structure for Tables in MyMITestDB. The dbo.TestTable folder is highlighted.](./media/aad-security-configure-tutorial/ssms-test-table.png)
+    ![Screenshot from Object Explorer in S S M S showing the folder structure for Tables in MyMITestDB. The dbo.TestTable folder is highlighted.](./media/aad-security-configure-tutorial/ssms-test-table.png)
 
 1. Open a new query window and execute the following SELECT statement:
 

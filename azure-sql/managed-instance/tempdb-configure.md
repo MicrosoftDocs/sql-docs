@@ -4,8 +4,8 @@ titleSuffix: Azure SQL Managed Instance
 description: Learn how to configure `tempdb` settings for Azure SQL Managed Instance, such as the number of `tempdb` files, the growth increment, and the maximum size of `tempdb`. 
 author: MashaMSFT
 ms.author: mathoma
-ms.date: 06/25/2023
-ms.service: sql-managed-instance
+ms.date: 08/16/2024
+ms.service: azure-sql-managed-instance
 ms.subservice: service-overview
 ms.topic: how-to
 ---
@@ -266,5 +266,5 @@ The following table defines limits for various `tempdb` configuration settings:
 - For more information about VNet configuration, see [SQL Managed Instance VNet configuration](connectivity-architecture-overview.md).
 - For a quickstart that creates a managed instance and restores a database from a backup file, see [Create a managed instance](instance-create-quickstart.md).
 - For a tutorial about using Azure Database Migration Service for migration, see [SQL Managed Instance migration using Database Migration Service](/azure/dms/tutorial-sql-server-to-managed-instance).
-- For advanced monitoring of SQL Managed Instance database performance with built-in troubleshooting intelligence, see [Monitor Azure SQL Managed Instance using Azure SQL Analytics](/azure/azure-monitor/insights/azure-sql).
+- For advanced monitoring of SQL Managed Instance, see [database watcher](../database-watcher-overview.md).
 - For pricing information, see [SQL Database pricing](https://azure.microsoft.com/pricing/details/sql-database/managed/).

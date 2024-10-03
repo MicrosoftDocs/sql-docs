@@ -102,8 +102,6 @@ This provides a possibility to give a set of environment variables to the extern
 
 This parameter is needed for hybrid OS scenarios. In a hybrid architecture, the language needs to be registered once per platform. Platform and language name will be the unique key per external language. If no platform is specified, the current OS is assumed.
 
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Remarks
 
 Currently, **PARAMETERS** and **ENVIRONMENT_VARIABLES** are not supported.

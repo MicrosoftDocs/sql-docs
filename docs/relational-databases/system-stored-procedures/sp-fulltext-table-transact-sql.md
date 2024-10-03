@@ -4,7 +4,7 @@ description: Marks or unmarks a table for full-text indexing.
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 07/07/2023
+ms.date: 08/22/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -86,7 +86,7 @@ After a full-text index is deactivated for a particular table, the existing full
 
 If the table is reactivated and the index isn't repopulated, the old index is still available for queries against any remaining, but not new, full-text enabled columns. Data from deleted columns are matched in queries that specify an all-full-text column search.
 
-After a table has been defined for full-text indexing, switching the full-text unique key column from one data type to another, either by changing the data type of that column or changing the full-text unique key from one column to another, without a full repopulation may cause a failure to occur during a subsequent query and returning the error message:
+After a table has been defined for full-text indexing, switching the full-text unique key column from one data type to another, either by changing the data type of that column or changing the full-text unique key from one column to another, without a full repopulation might cause a failure to occur during a subsequent query and returning the error message:
 
 > Conversion to type *data_type* failed for full-text search key value *key_value*.
 

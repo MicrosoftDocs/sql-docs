@@ -7,9 +7,10 @@ ms.date: 11/30/2023
 ms.service: sql
 ms.subservice: ssma
 ms.topic: conceptual
+ms.collection:
+  - sql-migration-content
 ms.custom:
   - intro-whats-new
-  - sql-migration-content
 ---
 # What's New in SSMA for Access (AccessToSQL)
 
@@ -371,7 +372,7 @@ The July 2011 release of SSMA for Access adds improved error reporting during da
 
 The April 2011 release of SSMA for Access contains the following changes:
 
-* Added a single installable of "SSMA for Access", which supports [!INCLUDE [ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE [ssSQL10](../../includes/sssql10-md.md)], [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)] and Azure SQL.
+* Added a single installable of "SSMA for Access", which supports [!INCLUDE [ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE [sql2008-md](../../includes/sql2008-md.md)], [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)] and Azure SQL.
 * Added the ability to connect to [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)].
 * Added SSMA for Access Console version support for backward compatibility. You can open the projects created by versions earlier to SSMA v5.0.
 * Added the ability to install SSMA v5.0 product side by side (SxS) with older versions of SSMA Product.

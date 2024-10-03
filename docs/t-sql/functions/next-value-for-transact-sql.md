@@ -36,8 +36,6 @@ NEXT VALUE FOR [ database_name . ] [ schema_name . ]  sequence_name
    [ OVER (<over_order_by_clause>) ]  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
  *database_name*  
  The name of the database that contains the sequence object.  

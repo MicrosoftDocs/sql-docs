@@ -4,9 +4,9 @@ titleSuffix: Azure SQL Managed Instance
 description: Learn how to perform an online move or copy operation of your database across instances for Azure SQL Managed Instance.
 author: sasapopo
 ms.author: sasapopo
-ms.reviewer: mathoma, danil, randolphwest
-ms.date: 11/20/2023
-ms.service: sql-managed-instance
+ms.reviewer: mathoma, danil, randolphwest, wiassaf
+ms.date: 8/19/2024
+ms.service: azure-sql-managed-instance
 ms.subservice: data-movement
 ms.custom: devx-track-azurecli, devx-track-azurepowershell, ignite-2023, build-2024
 ms.topic: how-to
@@ -71,7 +71,7 @@ The **database copy** operation is similar to database move. The only important 
 Before you can copy or move a database, you must meet the following requirements:
 
 - You must have *read* permissions for the resource group that contains the source managed instance, and you must have *write* permissions at the database level for both the source and destination instances.
-- If the source and destination instances are in different virtual networks, there must be network connectivity between the virtual networks of the two instances, such as with Azure virtual network peering. Also, you need to allow inbound and outbound traffic on port 5022 and port range 11000-11999 for the TCP protocol. This applies to both subnets that host the source and the destination instance. To learn more, review [how to establish network connectivity between instances in different Azure VNets](failover-group-configure-sql-mi.md#enabling-connectivity-between-the-instances).
+- If the source and destination instances are in different virtual networks, there must be network connectivity between the virtual networks of the two instances, such as with Azure virtual network peering. Also, you need to allow inbound and outbound traffic on port 5022 and port range 11000-11999 for the TCP protocol. This applies to both subnets that host the source and the destination instance. To learn more, review [how to establish network connectivity between instances in different Azure VNets](failover-group-configure-sql-mi.md#establish-connectivity-between-the-instances).
 
 ## Copy or move database
 
@@ -108,6 +108,9 @@ You can copy or move a database to another managed instance by using the Azure p
 
 ### [PowerShell](#tab/azure-powershell)
 
+> [!NOTE]  
+> For cross-subscription database copy and move operations, use Az.Sql PowerShell module version 5.1 or newer. In `Copy-AzSqlInstanceDatabase`, the parameter `-TargetSubscriptionId` is optional and is needed only for cross-subscription copy or move operations.
+
 Use Azure PowerShell commandlets to start, get, complete, or cancel [database copy](/powershell/module/az.sql/copy-azsqlinstancedatabase) or [database move](/powershell/module/az.sql/move-azsqlinstancedatabase) operation.
 
 Here's an example of how you can copy a database.
@@ -119,14 +122,17 @@ $rgName = "<source_resource_group_name>"
 $tmiName = "<target_managed_instance_name>"
 $trgName = "<target_resource_group_name>"
 
+## Parameter TargetSubscriptionId is optional and is needed only for cross-subscription copy or move operations.
+$trgSubId = "<target_subscription_id>"
+
 ## Start database copy operation. 
-Copy-AzSqlInstanceDatabase -DatabaseName $dbName -InstanceName $miName -ResourceGroupName $rgName -TargetInstanceName $tmiName -TargetResourceGroupName $trgName
+Copy-AzSqlInstanceDatabase -DatabaseName $dbName -InstanceName $miName -ResourceGroupName $rgName -TargetInstanceName $tmiName -TargetResourceGroupName $trgName -TargetSubscriptionId $trgSubId
 
 ## Verify the operation status is succeeded. 
 Get-AzSqlInstanceDatabaseCopyOperation -DatabaseName $dbName -InstanceName $miName -ResourceGroupName $rgName -TargetInstanceName $tmiName -TargetResourceGroupName $trgName
 
 ## Complete database copy operation. 
-Complete-AzSqlInstanceDatabaseCopy -DatabaseName $dbName -InstanceName $miName -ResourceGroupName $rgName -TargetInstanceName $tmiName -TargetResourceGroupName $trgName
+Complete-AzSqlInstanceDatabaseCopy -DatabaseName $dbName -InstanceName $miName -ResourceGroupName $rgName -TargetInstanceName $tmiName -TargetResourceGroupName $trgName -TargetSubscriptionId $trgSubId
 
 ## Verify the operation status is succeeded. 
 Get-AzSqlInstanceDatabaseCopyOperation -DatabaseName $dbName -InstanceName $miName -ResourceGroupName $rgName -TargetInstanceName $tmiName -TargetResourceGroupName $trgName
@@ -141,14 +147,17 @@ $rgName = "<source_resource_group_name>"
 $tmiName = "<target_managed_instance_name>"
 $trgName = "<target_resource_group_name>"
 
+## Parameter TargetSubscriptionId is optional and is needed only for cross-subscription copy or move operations.
+$trgSubId = "<target_subscription_id>"
+
 ## Start database move operation. 
-Move-AzSqlInstanceDatabase -DatabaseName $dbName -InstanceName $miName -ResourceGroupName $rgName -TargetInstanceName $tmiName -TargetResourceGroupName $trgName
+Move-AzSqlInstanceDatabase -DatabaseName $dbName -InstanceName $miName -ResourceGroupName $rgName -TargetInstanceName $tmiName -TargetResourceGroupName $trgName -TargetSubscriptionId $trgSubId
 
 ## Verify the operation status is succeeded. 
 Get-AzSqlInstanceDatabaseMoveOperation -DatabaseName $dbName -InstanceName $miName -ResourceGroupName $rgName -TargetInstanceName $tmiName -TargetResourceGroupName $trgName
 
 ## Complete database copy operation. 
-Stop-AzSqlInstanceDatabaseMove -DatabaseName $dbName -InstanceName $miName -ResourceGroupName $rgName -TargetInstanceName $tmiName -TargetResourceGroupName $trgName
+Stop-AzSqlInstanceDatabaseMove -DatabaseName $dbName -InstanceName $miName -ResourceGroupName $rgName -TargetInstanceName $tmiName -TargetResourceGroupName $trgName -TargetSubscriptionId $trgSubId
 
 ## Verify the operation status is succeeded. 
 Get-AzSqlInstanceDatabaseMoveOperation -DatabaseName $dbName -InstanceName $miName -ResourceGroupName $rgName -TargetInstanceName $tmiName -TargetResourceGroupName $trgName
@@ -156,22 +165,31 @@ Get-AzSqlInstanceDatabaseMoveOperation -DatabaseName $dbName -InstanceName $miNa
 
 ### [CLI](#tab/azure-cli)
 
+> [!NOTE]  
+> For cross-subscription database copy and move operations, use Azure CLI version 2.63.0 or newer. In `az sql midb copy start`, the parameter `--dest-sub-id` is optional and is needed only for cross-subscription copy or move operations.
+
 Use Azure CLI commandlets to start, get, complete, or cancel [database copy](/cli/azure/sql/midb/copy) or [database move](/cli/azure/sql/midb/move) operation.
 
 Here's an example of how you can copy a database.
 
 ```CLI
 dbName="<database_name>"
+
 miName="<source_managed_instance_name>"
 rgName="<source_resource_group_name>"
-tmiName="<target_managed_instance_name>"
-trgName="<target_resource_group_name>"
+subId="<source_subscription_id>"
 
-az sql midb copy start --name $dbName --resource-group $rgName --managed-instance $miName --dest-rg $trgName --dest-mi $tmiName 
+destMiName="<target_managed_instance_name>"
+destRgName="<target_resource_group_name>"
+destSubId="<destination_subscription_id>"
+
+az account set --subscription $subId
+
+az sql midb copy start --name $dbName --resource-group $rgName --managed-instance $miName --dest-rg $destRgName --dest-mi $destMiName --dest-sub-id $destSubId
 
 az sql midb copy list --name $dbName --resource-group $rgName --managed-instance $miName
 
-az sql midb copy complete --name $dbName --resource-group $rgName --managed-instance $miName --dest-rg $trgName --dest-mi $tmiName 
+az sql midb copy complete --name $dbName --resource-group $rgName --managed-instance $miName --dest-rg $destRgName --dest-mi $destMiName --dest-sub-id $destSubId
 
 az sql midb copy list --name $dbName --resource-group $rgName --managed-instance $miName
 ```
@@ -180,16 +198,22 @@ Here's another example of how you can start database move and cancel it.
 
 ```CLI
 dbName="<database_name>"
+
 miName="<source_managed_instance_name>"
 rgName="<source_resource_group_name>"
-tmiName="<target_managed_instance_name>"
-trgName="<target_resource_group_name>"
+subId="<source_subscription_id>"
 
-az sql midb move start --name $dbName --resource-group $rgName --managed-instance $miName --dest-rg $trgName --dest-mi $tmiName 
+destMiName="<target_managed_instance_name>"
+destRgName="<target_resource_group_name>"
+destSubId="<destination_subscription_id>"
+
+az account set --subscription $subId
+
+az sql midb move start --name $dbName --resource-group $rgName --managed-instance $miName --dest-rg $destRgName --dest-mi $destMiName --dest-sub-id $destSubId
 
 az sql midb move list --name $dbName --resource-group $rgName --managed-instance $miName
 
-az sql midb move cancel --name $dbName --resource-group $rgName --managed-instance $miName --dest-rg $trgName --dest-mi $tmiName 
+az sql midb move cancel --name $dbName --resource-group $rgName --managed-instance $miName --dest-rg $destRgName --dest-mi $destMiName --dest-sub-id $destSubId
 
 az sql midb move list --name $dbName --resource-group $rgName --managed-instance $miName
 ```
@@ -229,6 +253,7 @@ Consider the following limitations of the copy and move feature:
 - You can't copy or move a database that's part of a [failover group](failover-group-sql-mi.md), or that's using the [Managed Instance link](managed-instance-link-feature-overview.md).
 - The source or destination managed instance shouldn't be configured with a failover group (geo-disaster recovery) setup.
 - You'll need to reconfigure transactional replication, change data capture (CDC), or distributed transactions after you move a database that relies on these features.
+- When the source database uses a customer-managed key (CMK) as the TDE protector, to copy or move the database to the target SQL Managed Instance, the target instance must have access to the same key used to encrypt the source database in Azure Key Vault.
 - A database from an instance configured with the [Always-up-to-date update policy](update-policy.md#always-up-to-date-update-policy) can't be copied or moved to an instance configured with the [SQL Server 2022 update policy](update-policy.md#sql-server-2022-update-policy). Once a database from an instance configured with the SQL Server 2022 update policy is copied or moved to an instance with the Always-up-to-date update policy, it can't be copied or moved to an instance configured with the SQL Server 2022 update policy. 
 
 
@@ -237,7 +262,7 @@ Consider the following limitations of the copy and move feature:
 More documentation related to database copy and move.
 - Azure PowerShell documentation for [database copy](/powershell/module/az.sql/copy-azsqlinstancedatabase) and [database move](/powershell/module/az.sql/move-azsqlinstancedatabase).
 - Azure CLI documentation for [database copy](/cli/azure/sql/midb/copy) and [database move](/cli/azure/sql/midb/move).
-- [Enabling connectivity between SQL Managed Instances](failover-group-configure-sql-mi.md#enabling-connectivity-between-the-instances).
+- [Enabling connectivity between SQL Managed Instances](failover-group-configure-sql-mi.md#establish-connectivity-between-the-instances).
 
 For other data movement options, review:
 - [Managed Instance link](managed-instance-link-feature-overview.md)

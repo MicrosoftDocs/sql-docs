@@ -3,11 +3,12 @@ title: "Tablix data region areas in a paginated report"
 description: "Learn about tablix data region areas in a paginated report."
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/01/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 # Tablix data region areas in a paginated report (Report Builder)
 
@@ -23,7 +24,7 @@ Cells in each area have a distinct function. You add cells to the tablix body ar
   
 On the design surface, dotted lines denote the four areas of a selected tablix data region. The following figure shows the areas for a tablix region with nested row groups based on category and subcategory, nested column groups based on geography and country/region, and an adjacent column group based on year.  
   
- ![Tablix data region areas](../../reporting-services/report-design/media/rs-tablixareas.gif "Tablix data region areas")  
+:::image type="content" source="../../reporting-services/report-design/media/rs-tablix-areas.png" alt-text="Screenshot of a tablix data region that highlights the different areas and groups.":::
   
  The following list describes each area:  
   
@@ -41,14 +42,13 @@ On the design surface, dotted lines denote the four areas of a selected tablix d
   
  ![Preview, Tablix corner, row & column groups, body](../../reporting-services/report-design/media/rs-tablixareaspreview.gif "Preview, Tablix corner, row & column groups, body")  
   
- The row group area displays two category group instances for Clothing and Components. The column group are displays a geography group instance for North America, with two nested country/region group instances for Canada (CA) and the United States (US). In addition, the adjacent column displays two year group instances for 2003 and 2004. The Total column row displays the row totals; the totals row that repeats with the category group shows subcategory totals, and the grand total row displays the category totals once for the data region.  
+ The row group area displays two category group instances for Clothing and Components. The column group area displays a geography group instance for North America, with two nested country/region group instances for Canada (CA) and the United States (US). In addition, the adjacent column displays two year group instances for 2003 and 2004. The Total column row displays the row totals; the totals row that repeats with the category group shows subcategory totals, and the grand total row displays the category totals once for the data region.  
   
-## See Also  
- [Tables, Matrices, and Lists &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [Report Builder Tutorials](../../reporting-services/report-builder-tutorials.md)   
- [Tables &#40;Report Builder  and SSRS&#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   
- [Create a Matrix](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)   
- [Create Invoices and Forms with Lists](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
- [Tablix Data Region &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)  
-  
-  
+## Related content
+
+- [Tables, Matrices, and Lists &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)
+- [Report Builder Tutorials](../../reporting-services/report-builder-tutorials.md)
+- [Tables &#40;Report Builder  and SSRS&#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)
+- [Create a Matrix](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)
+- [Create Invoices and Forms with Lists](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)
+- [Tablix Data Region &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)

@@ -4,19 +4,18 @@ description: The native JSON data type provides advantages for storing JSON data
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: randolphwest, jovanpop
-ms.date: 05/21/2024
+ms.date: 09/12/2024
 ms.service: sql
-ms.topic: quickstart
+ms.topic: reference
 ms.custom:
-  - intro-quickstart
   - build-2024
 helpviewer_keywords:
   - "JSON data type"
-monikerRange: "=azuresqldb-current"
+monikerRange: "=azuresqldb-current||=azuresqldb-mi-current"
 ---
 # JSON data type (preview)
 
-[!INCLUDE [asdb](../../includes/applies-to-version/asdb.md)]
+[!INCLUDE [asdb](../../includes/applies-to-version/asdb-asdbmi.md)]
 
 The new native **json** data type that stores JSON documents in a native binary format.
 
@@ -29,7 +28,7 @@ The **json** type provides a high-fidelity storage of JSON documents optimized f
 
 The **json** type internally stores data using UTF-8 encoding, `Latin1_General_100_BIN2_UTF8`. This behavior matches the JSON specification.
 
-For more information on querying JSON data, see [Work with JSON data in SQL Server](../../relational-databases/json/json-data-sql-server.md).
+For more information on querying JSON data, see [JSON data in SQL Server](../../relational-databases/json/json-data-sql-server.md).
 
 ## Sample syntax
 
@@ -60,7 +59,7 @@ JSON support was first introduced in [!INCLUDE [sssql16-md](../../includes/sssql
 **json** is available under all database compatibility levels.
 
 > [!NOTE]  
-> Currently, the **json** type is available in preview on Azure SQL Database.
+> The [JSON data type](../../t-sql/data-types/json-data-type.md) is currently in preview for Azure SQL Database and Azure SQL Managed Instance (configured with the [**Always-up-to-date** update policy](/azure/azure-sql/managed-instance/update-policy#always-up-to-date-update-policy)). 
 
 ## Function support
 
@@ -102,5 +101,5 @@ Using `SELECT ... INTO` with the JSON type will create a table with the JSON typ
 
 ## Related content
 
-- [Store JSON documents in SQL Server or SQL Database](../../relational-databases/json/store-json-documents-in-sql-tables.md)
+- [Store JSON documents](../../relational-databases/json/store-json-documents-in-sql-tables.md)
 - [JSON data in SQL Server](../../relational-databases/json/json-data-sql-server.md)

@@ -35,8 +35,6 @@ dev_langs:
 SETUSER [ 'username' [ WITH NORESET ] ]   
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
  **'** *username* **'**  
  Is the name of a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or Windows user in the current database that is impersonated. When *username* is not specified, the original identity of the system administrator or database owner impersonating the user is reset.  

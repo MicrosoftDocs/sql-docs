@@ -1,9 +1,9 @@
 ---
 title: "Intelligent query processing"
 description: "Intelligent query processing features to improve query performance in SQL Server, Azure SQL Managed Instance, and Azure SQL Database."
-author: WilliamDAssafMSFT
-ms.author: wiassaf
-ms.reviewer: derekw, mikeray
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: derekw
 ms.date: 01/19/2024
 ms.service: sql
 ms.subservice: performance
@@ -72,7 +72,7 @@ The following table details all intelligent query processing features, along wit
 | [Memory Grant, CE, and DOP feedback persistence](intelligent-query-processing-memory-grant-feedback.md#percentile-and-persistence-mode-memory-grant-feedback) | Yes, starting with database compatibility level 160 | Provides new functionality to persist memory grant feedback. CE and DOP feedback is always persisted. Requires Query Store to be enabled for the database and in READ_WRITE mode. |
 | [Optimized plan forcing](optimized-plan-forcing-query-store.md) | No <!--Yes, starting with database compatibility level 160--> | Reduces compilation overhead for repeating forced queries. For more information, see [Optimized plan forcing with Query Store](optimized-plan-forcing-query-store.md). |
 | [Scalar UDF Inlining](intelligent-query-processing-details.md#scalar-udf-inlining) | Yes, starting with database compatibility level 150 | Scalar UDFs are transformed into equivalent relational expressions that are "inlined" into the calling query, often resulting in significant performance gains.|
-| [Parameter Sensitivity Plan Optimization](./parameter-sensitive-plan-optimization.md) | No <!--Yes, starting with database compatibility level 160-->| Parameter Sensitivity Plan Optimization addresses the scenario where a single cached plan for a parameterized query is not optimal for all possible incoming parameter values, for example non-uniform data distributions. |
+| [Parameter Sensitivity Plan Optimization](./parameter-sensitive-plan-optimization.md) | Yes, starting with database compatibility level 160 | Parameter Sensitivity Plan Optimization addresses the scenario where a single cached plan for a parameterized query is not optimal for all possible incoming parameter values, for example non-uniform data distributions. |
 | [Table Variable Deferred Compilation](intelligent-query-processing-details.md#table-variable-deferred-compilation) | Yes, starting with database compatibility level 150 | Uses the actual cardinality of the table variable encountered on first compilation instead of a fixed guess.|
 
 ## <a id="sql2019"></a> IQP features for [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)]

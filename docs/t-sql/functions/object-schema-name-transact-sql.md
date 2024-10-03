@@ -37,8 +37,6 @@ monikerRange: "= azuresqldb-current || = azuresqldb-mi-current || >= sql-server-
 OBJECT_SCHEMA_NAME ( object_id [, database_id ] )  
 ```  
 
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 
 #### *object_id*  

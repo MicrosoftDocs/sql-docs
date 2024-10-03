@@ -4,11 +4,12 @@ description: Learn details about the changes in SQL Server Reporting Services (S
 author: casualoak
 ms.author: petebro
 ms.reviewer: maggies
-ms.date: 05/01/2024
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: reporting-services
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 monikerRange: ">=sql-server-2017"
 ---
 
@@ -49,6 +50,17 @@ GeneMi, DevOps = 1467988 (MsEng > TechnicalContent) , 2019/03/19
 
 ::: moniker range="=sql-server-ver16"
 ## SQL Server 2022 Reporting Services
+
+## 16.0.8969.32906, 2024/07/23
+*(Product Version: 16.0.1116.12)*
+
+- Fixed error faced when editing data driven subscriptions
+- Fixed verbose log causing RDL reports to not render
+- Fixed repeated messages in RsPortal log file
+- Fixed error when overwriting RDL reports
+- Fixed error editing monthly schedules
+- Fixed error with "Show Hidden Items" checkbox disappearing
+- Fixed error with font "Lao UI" when exporting to PDF
 
 ## 16.0.8898.18912, 2024/05/20
 *(Product Version: 16.0.1115.96)*
@@ -124,10 +136,20 @@ Release Candidate 0 (RC0)
 
 ## SQL Server 2019 Reporting Services
 
+## 15.0.8969.33375, 2024/07/23
+*(Product Version: 15.0.1103.12 )*
+
+- Fixed error faced when editing data driven subscriptions
+- Fixed verbose log causing RDL reports to not render
+- Fixed repeated messages in RsPortal log file
+- Fixed error when overwriting RDL reports
+- Fixed error editing monthly schedules
+- Fixed error with font "Lao UI" when exporting to PDF
+
 ## 15.0.8863.19101, 2024/04/10
 *(Product Version: 15.0.1102.1167)*
 - Fixed issue where some reports will fail to render after enable the verbose log
-- Fixed an error some users expereienced when editing subscriptions 
+- Fixed an error some users experienced when editing subscriptions 
 - Fixed and issue where some links were missing when exporting to PDF
 - Added support for server property 'RestrictedResourceMimeTypeForUpload'
 
@@ -392,6 +414,4 @@ Initial release.
 ## Related content
 
 - [What's new in Reporting Services (SSRS)?](what-s-new-in-sql-server-reporting-services-ssrs.md)
-
-More questions? [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user).
-
+- [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)

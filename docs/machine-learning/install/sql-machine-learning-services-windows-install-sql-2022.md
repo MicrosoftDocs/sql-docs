@@ -1,8 +1,8 @@
 ---
 title: Install SQL Server 2022 Machine Learning Services on Windows
 description: Learn how to install SQL Server 2022 Machine Learning Services on Windows to run Python, R, or Java scripts in-database.
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: VanMSFT
+ms.author: vanto
 ms.reviewer: arunguru-msft
 ms.date: 03/08/2024
 ms.service: sql
@@ -115,7 +115,7 @@ Beginning with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], runtimes f
    .\RegisterRext.exe /configure /rhome:"%ProgramFiles%\R\R-4.2.3" /instance:"SQLEXPRESS"
    ```
 
-1. By using [SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md) or [Azure Data Studio](../../azure-data-studio/what-is-azure-data-studio.md), connect to the instance where you installed SQL Server Machine Learning Services. Select **New Query** to open a query window, and then run the following command to enable the external scripting feature:
+1. By using [SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md) or [Azure Data Studio](/azure-data-studio/what-is-azure-data-studio), connect to the instance where you installed SQL Server Machine Learning Services. Select **New Query** to open a query window, and then run the following command to enable the external scripting feature:
 
     ```sql
     EXEC sp_configure  'external scripts enabled', 1;
@@ -192,7 +192,7 @@ Beginning with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], runtimes f
     .\RegisterRext.exe /configure /pythonhome:"C:\Program Files\Python310" /instance:"SQLEXPRESS"
     ```
 
-1. Use [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) or [Azure Data Studio](../../azure-data-studio/what-is-azure-data-studio.md) to connect to the instance where you installed SQL Server Machine Learning Services. Select **New Query** to open a query window, and then run the following command to enable the external scripting feature:
+1. Use [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) or [Azure Data Studio](/azure-data-studio/what-is-azure-data-studio) to connect to the instance where you installed SQL Server Machine Learning Services. Select **New Query** to open a query window, and then run the following command to enable the external scripting feature:
 
     ```sql
     EXEC sp_configure  'external scripts enabled', 1;

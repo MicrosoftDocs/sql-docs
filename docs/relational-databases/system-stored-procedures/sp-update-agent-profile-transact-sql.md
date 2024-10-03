@@ -4,7 +4,7 @@ description: Updates the profile used by a replication agent.
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 08/28/2023
+ms.date: 08/22/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: "reference"
@@ -56,7 +56,7 @@ The ID of the agent. *@agent_id* is **int**, with no default.
 
 #### [ @profile_id = ] *profile_id*
 
-The ID of the profile that the agent should use. *@profile_id* is **int**, with no default. To view a list of profiles defined for each agent, use [sp_help_agent_profile (Transact-SQL)](sp-help-agent-profile-transact-sql.md). For more information about system profiles, see [Replication Agent Profiles](../replication/agents/replication-agent-profiles.md).
+The ID of the profile that the agent should use. *@profile_id* is **int**, with no default. To view a list of profiles defined for each agent, use [sp_help_agent_profile](sp-help-agent-profile-transact-sql.md). For more information about system profiles, see [Replication Agent Profiles](../replication/agents/replication-agent-profiles.md).
 
 ## Return code values
 

@@ -4,7 +4,7 @@ description: "Azure Synapse Analytics stored procedures"
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: randolphwest
-ms.date: 05/24/2023
+ms.date: 08/21/2024
 ms.service: sql
 ms.topic: "reference"
 dev_langs:
@@ -31,7 +31,7 @@ monikerRange: "=azure-sqldw-latest || =fabric"
 - [sp_special_columns_100 (Azure Synapse Analytics)](sp-special-columns-100-sql-data-warehouse.md)
 
 > [!NOTE]  
-> Some additional system stored procedures are used only within an instance of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] or through client APIs and aren't intended for general customer use. These procedures are listed at [System stored procedures (Transact-SQL)](./system-stored-procedures-transact-sql.md). These procedures are subject to change and compatibility isn't guaranteed. All procedures on the list aren't available in [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)].
+> Some additional system stored procedures are used only within an instance of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] or through client APIs and aren't intended for general customer use. These procedures are listed at [System stored procedures](system-stored-procedures-transact-sql.md). These procedures are subject to change and compatibility isn't guaranteed. All procedures on the list aren't available in [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)].
 
 ## Related content
 

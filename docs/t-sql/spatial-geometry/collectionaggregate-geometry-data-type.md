@@ -24,8 +24,6 @@ Creates a **GeometryCollection** instance from a set of **geometry** types.
 CollectionAggregate ( geometry_operand )  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
  *geometry_operand*  
  Is a **geometry** type table column that represents a set of **geometry** objects to be listed in the **GeometryCollection** instance.  

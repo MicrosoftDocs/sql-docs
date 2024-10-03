@@ -3,11 +3,12 @@ title: "MSSQL_REPL027183"
 description: "MSSQL_REPL027183"
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/07/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "MSSQL_REPL027183 error"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
@@ -62,7 +63,6 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
   
 -   Make a smaller number of changes on filtered tables between synchronizations, or run the Merge Agent more frequently. For more information about setting synchronization schedules, see [Specify Synchronization Schedules](../../relational-databases/replication/specify-synchronization-schedules.md).  
   
-## See Also  
- [Errors and Events Reference &#40;Replication&#41;](../../relational-databases/replication/errors-and-events-reference-replication.md)  
-  
-  
+## Related content
+
+- [Errors and Events Reference &#40;Replication&#41;](../../relational-databases/replication/errors-and-events-reference-replication.md)

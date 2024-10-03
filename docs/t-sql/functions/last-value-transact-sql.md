@@ -33,8 +33,6 @@ LAST_VALUE ( [ scalar_expression ] ) [ IGNORE NULLS | RESPECT NULLS ]
     OVER ( [ partition_by_clause ] order_by_clause [ rows_range_clause ] )
 ```
 
-[!INCLUDE [sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 
 #### *scalar_expression*

@@ -4,7 +4,7 @@ description: "Updates whether a policy category is set to mandate database subsc
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: randolphwest
-ms.date: 06/26/2023
+ms.date: 08/21/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -37,11 +37,11 @@ sp_syspolicy_update_policy_category
 
 #### [ @name = ] N'*name*'
 
-The name of the policy category. *@name* is **sysname**, and must be specified if *@policy_category_id* is NULL.
+The name of the policy category. *@name* is **sysname**, and must be specified if *@policy_category_id* is `NULL`.
 
 #### [ @policy_category_id = ] *policy_category_id*
 
-The identifier for the policy category. *@policy_category_id* is **int**, and must be specified if *@name* is NULL.
+The identifier for the policy category. *@policy_category_id* is **int**, and must be specified if *@name* is `NULL`.
 
 #### [ @mandate_database_subscriptions = ] *mandate_database_subscriptions*
 
@@ -58,7 +58,7 @@ Determines whether database subscription is mandated for the policy category. *@
 
 You must run `sp_syspolicy_update_policy_category` in the context of the `msdb` system database.
 
-You must specify a value for either *@name* or for *@policy_category_id*. Both can't be NULL. To obtain these values, query the `msdb.dbo.syspolicy_policy_categories` system view.
+You must specify a value for either *@name* or for *@policy_category_id*. Both can't be `NULL`. To obtain these values, query the `msdb.dbo.syspolicy_policy_categories` system view.
 
 ## Permissions
 

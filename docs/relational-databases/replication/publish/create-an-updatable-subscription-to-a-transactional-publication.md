@@ -3,11 +3,12 @@ title: "Create an Updatable Subscription (Transactional)"
 description: Learn how to create an Updatable Subscription to a Transactional Publication for SQL Server.
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "11/20/2018"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: how-to
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "updatable transactional subscriptions"
   - "updateable transactional subscriptions, SSMS"
@@ -301,8 +302,8 @@ GO
 ``` 
 
 
-## See Also
+## Related content
 
-[Updatable Subscriptions for Transactional Replication](../../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)   
-[Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)   
-[Use sqlcmd with Scripting Variables](../../../tools/sqlcmd/sqlcmd-use-scripting-variables.md)
+- [Updatable Subscriptions for Transactional Replication](../../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)
+- [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)
+- [Use sqlcmd with Scripting Variables](../../../tools/sqlcmd/sqlcmd-use-scripting-variables.md)

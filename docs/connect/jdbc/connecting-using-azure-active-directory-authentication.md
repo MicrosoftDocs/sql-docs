@@ -3,7 +3,7 @@ title: Connect using Microsoft Entra authentication
 description: Learn how to develop Java applications that use the Microsoft Entra authentication feature with the Microsoft JDBC Driver for SQL Server.
 author: David-Engel
 ms.author: davidengel
-ms.date: 01/31/2024
+ms.date: 08/29/2024
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: conceptual
@@ -27,10 +27,10 @@ Connection properties to support Microsoft Entra authentication in the Microsoft
     - Since driver version 12.2, `authentication=ActiveDirectoryDefault` can be used to connect to Azure SQL/Synapse Analytics via the **DefaultAzureCredential** from the Azure Identity client library. For more information, see [Connect using ActiveDirectoryDefault authentication mode](#connect-using-activedirectorydefault-authentication-mode).
 
   - **ActiveDirectoryIntegrated**
-    - Since driver version 6.0, `authentication=ActiveDirectoryIntegrated` can be used to connect to Azure SQL/Synapse Analytics via integrated authentication. To use this authentication mode, you must [federate](/azure/active-directory/hybrid/connect/whatis-fed) the on-premises Active Directory Federation Services (ADFS) with Microsoft Entra ID in the cloud. Once it's set up, you can connect by either adding the native library `mssql-jdbc_auth-<version>-<arch>.dll` to the application class path on Windows, or by setting up a Kerberos ticket for cross-platform authentication support. You're able to access Azure SQL/Azure Synapse Analytics without being prompted for credentials when you're logged in to a domain-joined machine. For more information, see [Connect using ActiveDirectoryIntegrated authentication mode](#connect-using-activedirectoryintegrated-authentication-mode).
+    - Since driver version 6.0, `authentication=ActiveDirectoryIntegrated` can be used to connect to Azure SQL/Synapse Analytics via integrated authentication. To use this authentication mode, you must [federate](/azure/active-directory/hybrid/connect/whatis-fed) the on-premises Active Directory Federation Services (ADFS) with Microsoft Entra ID in the cloud. Once you set it up, you can connect by either adding the native library `mssql-jdbc_auth-<version>-<arch>.dll` to the application class path on Windows, or by setting up a Kerberos ticket for cross-platform authentication support. You're able to access Azure SQL/Azure Synapse Analytics without being prompted for credentials when you're logged in to a domain-joined machine. For more information, see [Connect using ActiveDirectoryIntegrated authentication mode](#connect-using-activedirectoryintegrated-authentication-mode).
 
   - **ActiveDirectoryPassword**
-    - Since driver version 6.0, `authentication=ActiveDirectoryPassword` can be used to connect to Azure SQL/Synapse Analytics with Microsoft Entra user name and password. For more information, see [Connect using ActiveDirectoryPassword authentication mode](#connect-using-activedirectorypassword-authentication-mode).
+    - Since driver version 6.0, `authentication=ActiveDirectoryPassword` can be used to connect to Azure SQL/Synapse Analytics with Microsoft Entra username and password. For more information, see [Connect using ActiveDirectoryPassword authentication mode](#connect-using-activedirectorypassword-authentication-mode).
 
   - **ActiveDirectoryInteractive**
     - Since driver version 9.2, `authentication=ActiveDirectoryInteractive` can be used to connect to an Azure SQL/Synapse Analytics via interactive authentication flow (multifactor authentication). For more information, see [Connect using ActiveDirectoryInteractive authentication mode](#connect-using-activedirectoryinteractive-authentication-mode).
@@ -54,6 +54,9 @@ In addition to the basic driver [System requirements](system-requirements-for-th
 
 The following table lists required library dependencies for each authentication mode and driver version. Dependencies of dependencies are also required.
 
+> [!NOTE]
+> In cases where the hotfix for a major release has a different dependency version than its major release, the hotfix is also listed.
+
 | Authentication option | Driver versions | Library dependencies |
 |-----------------------|-----------------|----------------------|
 | `ActiveDirectoryPassword`<br/>`ActiveDirectoryIntegrated` | 6.0 | `Adal4j` 1.3.0 |
@@ -66,12 +69,19 @@ The following table lists required library dependencies for each authentication 
 | `ActiveDirectoryPassword`<br/>`ActiveDirectoryIntegrated`<br/>`ActiveDirectoryInteractive`<br/>`ActiveDirectoryServicePrincipal` | 9.4 | `msal4j` 1.10.1 |
 | `ActiveDirectoryPassword`<br/>`ActiveDirectoryIntegrated`<br/>`ActiveDirectoryInteractive`<br/>`ActiveDirectoryServicePrincipal` | 10.2 | `msal4j` 1.11.0 |
 | `ActiveDirectoryPassword`<br/>`ActiveDirectoryIntegrated`<br/>`ActiveDirectoryInteractive`<br/>`ActiveDirectoryServicePrincipal` | 11.2 | `msal4j` 1.11.3 |
+| `ActiveDirectoryPassword`<br/>`ActiveDirectoryIntegrated`<br/>`ActiveDirectoryInteractive`<br/>`ActiveDirectoryServicePrincipal` | 11.2.3 | `msal4j` 1.13.0 |
 | `ActiveDirectoryPassword`<br/>`ActiveDirectoryIntegrated`<br/>`ActiveDirectoryInteractive`<br/>`ActiveDirectoryServicePrincipal` | 12.2 | `msal4j` 1.13.3 |
 | `ActiveDirectoryManagedIdentity`<br/>`ActiveDirectoryMSI`<br/>`ActiveDirectoryDefault` | 12.2 | `azure-identity` 1.7.0 |
 | `ActiveDirectoryPassword`<br/>`ActiveDirectoryIntegrated`<br/>`ActiveDirectoryInteractive`<br/>`ActiveDirectoryServicePrincipal`<br/>`ActiveDirectoryServicePrincipalCertificate` | 12.4 | `msal4j` 1.13.8 |
 | `ActiveDirectoryManagedIdentity`<br/>`ActiveDirectoryMSI`<br/>`ActiveDirectoryDefault` | 12.4 | `azure-identity` 1.9.0 |
 | `ActiveDirectoryPassword`<br/>`ActiveDirectoryIntegrated`<br/>`ActiveDirectoryInteractive`<br/>`ActiveDirectoryServicePrincipal`<br/>`ActiveDirectoryServicePrincipalCertificate` | 12.6 | `msal4j` 1.14.1 |
 | `ActiveDirectoryManagedIdentity`<br/>`ActiveDirectoryMSI`<br/>`ActiveDirectoryDefault` | 12.6 | `azure-identity` 1.11.1 |
+| `ActiveDirectoryPassword`<br/>`ActiveDirectoryIntegrated`<br/>`ActiveDirectoryInteractive`<br/>`ActiveDirectoryServicePrincipal`<br/>`ActiveDirectoryServicePrincipalCertificate` | 12.6.3 | `msal4j` 1.15.1 |
+| `ActiveDirectoryManagedIdentity`<br/>`ActiveDirectoryMSI`<br/>`ActiveDirectoryDefault` | 12.6.3 | `azure-identity` 1.12.2 |
+| `ActiveDirectoryPassword`<br/>`ActiveDirectoryIntegrated`<br/>`ActiveDirectoryInteractive`<br/>`ActiveDirectoryServicePrincipal`<br/>`ActiveDirectoryServicePrincipalCertificate` | 12.6.4 | `msal4j` 1.15.1 |
+| `ActiveDirectoryManagedIdentity`<br/>`ActiveDirectoryMSI`<br/>`ActiveDirectoryDefault` | 12.6.4 | `azure-identity` 1.12.2 |
+| `ActiveDirectoryPassword`<br/>`ActiveDirectoryIntegrated`<br/>`ActiveDirectoryInteractive`<br/>`ActiveDirectoryServicePrincipal`<br/>`ActiveDirectoryServicePrincipalCertificate` | 12.8 | `msal4j` 1.15.1 |
+| `ActiveDirectoryManagedIdentity`<br/>`ActiveDirectoryMSI`<br/>`ActiveDirectoryDefault` | 12.8 | `azure-identity` 1.12.2 |
 
 ## Connect using ActiveDirectoryManagedIdentity authentication mode
 
@@ -82,20 +92,20 @@ In addition to the library dependency requirements listed in [Client setup requi
 - The target database must have a contained database user, with CONNECT permission. The contained user must represent your Azure Resource's System Assigned Managed Identity or User Assigned Managed Identity, or one of the groups your Managed Identity belongs to.
 - The client environment must be an Azure Resource and must have "Identity" feature support enabled. The following table lists Azure services supported by each JDBC driver version:
 
-    | Driver version | Required dependencies | Azure services supported |
-    |----------------|------------------------|--------------|
-    | 7.2 - 11.2 | None | [Azure App Service and Azure Functions](/azure/app-service/overview-managed-identity)<br/>[Azure Virtual Machines](/azure/active-directory/managed-identities-azure-resources/how-to-use-vm-token) |
-    | 12.2<br/>12.4<br/>12.6 | [azure-identity 1.7.0](https://azuresdkdocs.blob.core.windows.net/$web/java/azure-identity/1.7.0/index.html#managed-identity-support)<br/>[azure-identity 1.9.0](https://azuresdkdocs.blob.core.windows.net/$web/java/azure-identity/1.9.0/index.html#managed-identity-support)<br/>[azure-identity 1.11.1](https://azuresdkdocs.blob.core.windows.net/$web/java/azure-identity/1.11.1/index.html#managed-identity-support) | [Azure App Service and Azure Functions](/azure/app-service/overview-managed-identity)<br/>[Azure Arc](/azure/azure-arc/servers/managed-identity-authentication)<br/>[Azure Cloud Shell](/azure/cloud-shell/msi-authorization)<br/>[Azure Kubernetes Service](/azure/aks/use-managed-identity)<br/>[Azure Service Fabric](/azure/service-fabric/concepts-managed-identity)<br/>[Azure Virtual Machines](/azure/active-directory/managed-identities-azure-resources/how-to-use-vm-token)<br/>[Azure Virtual Machines Scale Sets](/azure/active-directory/managed-identities-azure-resources/qs-configure-powershell-windows-vmss) |
+  | Driver version | Required dependencies | Azure services supported |
+  |----------------|------------------------|--------------|
+  | 7.2 - 11.2 | None | [Azure App Service and Azure Functions](/azure/app-service/overview-managed-identity)<br/>[Azure Virtual Machines](/azure/active-directory/managed-identities-azure-resources/how-to-use-vm-token) |
+  | 12.2<br/>12.4<br/>12.6<br/>12.8 | [azure-identity 1.7.0](https://azuresdkdocs.blob.core.windows.net/$web/java/azure-identity/1.7.0/index.html#managed-identity-support)<br/>[azure-identity 1.9.0](https://azuresdkdocs.blob.core.windows.net/$web/java/azure-identity/1.9.0/index.html#managed-identity-support)<br/>[azure-identity 1.11.1](https://azuresdkdocs.blob.core.windows.net/$web/java/azure-identity/1.11.1/index.html#managed-identity-support)<br/>[azure-identity 1.12.2](https://azuresdkdocs.blob.core.windows.net/$web/java/azure-identity/1.12.2/index.html#managed-identity-support) | [Azure App Service and Azure Functions](/azure/app-service/overview-managed-identity)<br/>[Azure Arc](/azure/azure-arc/servers/managed-identity-authentication)<br/>[Azure Cloud Shell](/azure/cloud-shell/msi-authorization)<br/>[Azure Kubernetes Service](/azure/aks/use-managed-identity)<br/>[Azure Service Fabric](/azure/service-fabric/concepts-managed-identity)<br/>[Azure Virtual Machines](/azure/active-directory/managed-identities-azure-resources/how-to-use-vm-token)<br/>[Azure Virtual Machines Scale Sets](/azure/active-directory/managed-identities-azure-resources/qs-configure-powershell-windows-vmss) |
 
 The following example shows how to use `authentication=ActiveDirectoryManagedIdentity` mode. Run this example from inside an Azure Resource that is configured for Managed Identity.
 
-Replace the server/database name with your server/database name in the following lines to run the example:
+To run the example, replace the server/database name with your server/database name on the following lines:
 
 ```java
 ds.setServerName("msentra-managed-demo.database.windows.net"); // replace 'msentra-managed-demo' with your server name
 ds.setDatabaseName("demo"); // replace with your database name
 //Optional
-ds.setMSIClientId("94de34e9-8e8c-470a-96df-08110924b814"); // Replace with Client ID of user-assigned managed identity to be used
+ds.setMSIClientId("<managed_identity_client>"); // Replace with Client ID of user-assigned managed identity to be used
 ```
 
 The example to use `ActiveDirectoryMSI` authentication mode:
@@ -115,7 +125,7 @@ public class MsEntraMSI {
         ds.setDatabaseName("demo"); // Replace with your database name
         ds.setAuthentication("ActiveDirectoryMSI");
         // Optional
-        ds.setMSIClientId("94de34e9-8e8c-470a-96df-08110924b814"); // Replace with Client ID of user-assigned managed identity to be used
+        ds.setMSIClientId("<managed_identity_client_guid>"); // Replace with Client ID of user-assigned managed identity to be used
 
         try (Connection connection = ds.getConnection();
                 Statement stmt = connection.createStatement();
@@ -145,7 +155,7 @@ public class MSEntraManagedIdentity {
         ds.setDatabaseName("demo"); // Replace with your database name
         ds.setAuthentication("ActiveDirectoryManagedIdentity"); // ActiveDirectoryManagedIdentity for JDBC driver version v12.2.0+
         // Optional
-        ds.setUser("94de34e9-8e8c-470a-96df-08110924b814"); // Replace with Client ID of User-Assigned Managed Identity to be used
+        ds.setUser("<managed_identity_client>"); // Replace with Client ID of User-Assigned Managed Identity to be used
 
         try (Connection connection = ds.getConnection();
                 Statement stmt = connection.createStatement();
@@ -177,6 +187,7 @@ The following table lists the `DefaultAzureCredential` credential chain for each
 | 12.2 | [azure-identity 1.7.0](https://azuresdkdocs.blob.core.windows.net/$web/java/azure-identity/1.7.0/index.html#defaultazurecredential) | Environment<br/>Managed Identity<br/>IntelliJ<br/>Azure CLI<br/>Azure PowerShell |
 | 12.4 | [azure-identity 1.9.0](https://azuresdkdocs.blob.core.windows.net/$web/java/azure-identity/1.9.0/index.html#defaultazurecredential) | Environment<br/>Workload Identity<br/>Managed Identity<br/>Azure Developer CLI<br/>IntelliJ<br/>Azure CLI<br/>Azure PowerShell |
 | 12.6 | [azure-identity 1.11.1](https://azuresdkdocs.blob.core.windows.net/$web/java/azure-identity/1.11.1/index.html#defaultazurecredential) | Environment<br/>Workload Identity<br/>Managed Identity<br/>Azure Developer CLI<br/>IntelliJ<br/>Azure CLI<br/>Azure PowerShell |
+| 12.8 | [azure-identity 1.12.2](https://azuresdkdocs.blob.core.windows.net/$web/java/azure-identity/1.12.2/index.html#defaultazurecredential) | Environment<br/>Workload Identity<br/>Managed Identity<br/>Azure Developer CLI<br/>IntelliJ<br/>Azure CLI<br/>Azure PowerShell |
 
 There are many variables that can be set to configure the `Environment` credential. For details on configuring the `DefaulAzureCredential` chain, including the `Environment` credential, see the relevant version of the azure-identity docs linked in the previous table.
 
@@ -227,7 +238,7 @@ There are two ways to use `ActiveDirectoryIntegrated` authentication in the Micr
 - On Windows, `mssql-jdbc_auth-<version>-<arch>.dll` from the [downloaded package](download-microsoft-jdbc-driver-for-sql-server.md) can be copied to a location in the system path.
 - If you can't use the DLL, starting with version 6.4, you can configure a Kerberos ticket. This method is supported across platforms (Windows, Linux, and macOS). For more information, see [Set Kerberos ticket on Windows, Linux And macOS](#set-kerberos-ticket-on-windows-linux-and-macos).
 
-Ensure you have required dependent libraries from the [Client setup requirements](#client-setup-requirements).
+Ensure you have the required dependent libraries from the [Client setup requirements](#client-setup-requirements).
 
 The following example shows how to use `authentication=ActiveDirectoryIntegrated` mode. This example runs on a domain-joined machine that is federated with Microsoft Entra ID. A database user that represents your Windows user must exist in the database and must have the CONNECT permission.
 
@@ -349,7 +360,7 @@ The following example shows how to use `authentication=ActiveDirectoryPassword` 
 
 To build and run the example:
 
-1. Ensure you have required dependent libraries from the [Client setup requirements](#client-setup-requirements).
+1. Ensure you have the required dependent libraries from the [Client setup requirements](#client-setup-requirements).
 1. Locate the following lines of code and replace the server/database name with your server/database name.
 
     ```java
@@ -360,7 +371,7 @@ To build and run the example:
 1. Locate the following lines of code. Replace user name with the name of the Microsoft Entra user that you want to connect as.
 
     ```java
-    ds.setUser("bob@example.com"); // replace with your user name
+    ds.setUser("bob@example.com"); // replace with your username
     ds.setPassword("password");     // replace with your password
     ```
 
@@ -380,7 +391,7 @@ public class MSEntraUserPassword {
         SQLServerDataSource ds = new SQLServerDataSource();
         ds.setServerName("msentra-managed-demo.database.windows.net"); // Replace with your server name
         ds.setDatabaseName("demo"); // Replace with your database
-        ds.setUser("bob@example.com"); // Replace with your user name
+        ds.setUser("bob@example.com"); // Replace with your username
         ds.setPassword("password"); // Replace with your password
         ds.setAuthentication("ActiveDirectoryPassword");
 
@@ -408,7 +419,7 @@ The following example shows how to use `authentication=ActiveDirectoryInteractiv
 
 To build and run the example:
 
-1. Ensure you have required dependent libraries from the [Client setup requirements](#client-setup-requirements).
+1. Ensure you have the required dependent libraries from the [Client setup requirements](#client-setup-requirements).
 1. Locate the following lines of code and replace the server/database name with your server/database name.
 
     ```java
@@ -416,10 +427,10 @@ To build and run the example:
     ds.setDatabaseName("demo"); // replace with your database name
     ```
 
-1. Locate the following lines of code. Replace user name with the name of the Microsoft Entra user that you want to connect as.
+1. Locate the following lines of code. Replace username with the name of the Microsoft Entra user that you want to connect as.
 
     ```java
-    ds.setUser("bob@example.com"); // replace with your user name
+    ds.setUser("bob@example.com"); // replace with your username
     ```
 
 The example to use `ActiveDirectoryInteractive` authentication mode:
@@ -453,7 +464,7 @@ public class MSEntraInteractive {
 }
 ```
 
-When you run the program, a browser is displayed to authenticate the user. Exactly what you see depends on how your Microsoft Entra ID has been configured. It might or might not include multifactor authentication prompts for username, password, PIN, or second device authentication via a phone. If multiple interactive authentication requests are done in the same program, later requests might not even prompt you if the authentication library can reuse a previously cached authentication token.
+When you run the program, a browser is displayed to authenticate the user. Exactly what you see depends on how you configure your Microsoft Entra ID. It might or might not include multifactor authentication prompts for username, password, PIN, or second device authentication via a phone. If multiple interactive authentication requests are done in the same program, later requests might not even prompt you if the authentication library can reuse a previously cached authentication token.
 
 For information about how to configure Microsoft Entra ID to require multifactor authentication, see [Getting started with Microsoft Entra multifactor authentication in the cloud](/azure/active-directory/authentication/howto-mfa-getstarted).
 
@@ -477,7 +488,7 @@ The following example shows how to use `authentication=ActiveDirectoryServicePri
 
 To build and run the example:
 
-1. Ensure you have required dependent libraries from the [Client setup requirements](#client-setup-requirements).
+1. Ensure you have the required dependent libraries from the [Client setup requirements](#client-setup-requirements).
 
 1. Locate the following lines of code and replace the server/database name with your server/database name.
 
@@ -489,7 +500,7 @@ To build and run the example:
 1. Locate the following lines of code. Replace the value of `principalId` with the Application ID / Client ID of the Microsoft Entra service principal that you want to connect as. Replace the value of `principalSecret` with the secret.
 
     ```java
-    String principalId = "1846943b-ad04-4808-aa13-4702d908b5c1"; // Replace with your Microsoft Entra service principal ID.
+    String principalId = "<service_principal_guid>"; // Replace with your Microsoft Entra service principal ID.
     String principalSecret = "..."; // Replace with your Microsoft Entra principal secret.
     ```
 
@@ -506,7 +517,7 @@ import com.microsoft.sqlserver.jdbc.SQLServerDataSource;
 
 public class MSEntraServicePrincipal {
     public static void main(String[] args) throws Exception{
-        String principalId = "1846943b-ad04-4808-aa13-4702d908b5c1"; // Replace with your Microsoft Entra service principal ID.
+        String principalId = "<service_principal_guid>"; // Replace with your Microsoft Entra service principal ID.
         String principalSecret = "..."; // Replace with your Microsoft Entra principal secret.
 
         SQLServerDataSource ds = new SQLServerDataSource();
@@ -539,7 +550,7 @@ The following example shows how to use `authentication=ActiveDirectoryServicePri
 
 To build and run the example:
 
-1. Ensure you have required dependent libraries from the [Client setup requirements](#client-setup-requirements).
+1. Ensure you have the required dependent libraries from the [Client setup requirements](#client-setup-requirements).
 
 1. Locate the following lines of code and replace the server/database name with your server/database name.
 
@@ -551,14 +562,14 @@ To build and run the example:
 1. Locate the following lines of code. Replace the value of `principalId` with the Application ID / Client ID of the Microsoft Entra service principal that you want to connect as. Replace the value of `clientCertificate` with the location of the service principal certificate.
 
     ```java
-    String principalId = "1846943b-ad04-4808-aa13-4702d908b5c1"; // Replace with your Microsoft Entra service principal ID.
+    String principalId = "<service_principal_guid>"; // Replace with your Microsoft Entra service principal ID.
 
     String clientCertificate = "..."; // Replace with the location for your Microsoft Entra service principal certificate.
     ```
 
-1. If the above certificate needs a password, set the principal Secret using `setPassword` in version 10.2 and up or `setAADSecurePrincipalSecret` in version 9.4 and below.
+1. If the previously mentioned certificate needs a password, set the principal Secret using `setPassword` in version 10.2 and up or `setAADSecurePrincipalSecret` in version 9.4 and below.
 
-1. If the above certificate has an associated private key, set the private key using `setClientKey`. If this key requires a password, set the password for the private key using `setClientKeyPassword`.
+1. If the certificate has an associated private key, set the private key using `setClientKey`. If this key requires a password, set the password for the private key using `setClientKeyPassword`.
 
 The example to use `ActiveDirectoryServicePrincipalCertificate` authentication mode:
 
@@ -571,7 +582,7 @@ import com.microsoft.sqlserver.jdbc.SQLServerDataSource;
 
 public class MSEntraServicePrincipalCertificate {
     public static void main(String[] args) throws Exception{
-        String principalId = "1846943b-ad04-4808-aa13-4702d908b5c1"; // Replace with your Microsoft Entra service principal ID.
+        String principalId = "<service_principal_guid>"; // Replace with your Microsoft Entra service principal ID.
         String clientCertificate = "..."; // Replace with the location of your service principal certificate.
 
         SQLServerDataSource ds = new SQLServerDataSource();
@@ -617,14 +628,14 @@ To build and run the example:
     3. Select **App registrations**.
     4. Select **New registration**.
     5. Enter `mytokentest` as a friendly name for the application.
-    6. Leave the default selection for supported account types which can use the application.
+    6. Leave the default selection for supported account types, which can use the application.
     7. Select **Register** at the bottom.
-    6. Don't need SIGN-ON URL, provide anything: `https://mytokentest`.
+    6. Don't need SIGN-ON URL. Provide anything: `https://mytokentest`.
     7. Select `Create` at the bottom.
-    8. Upon selecting **Register** the app is immediately created and you are taken to its resource page.
+    8. Upon selecting **Register**, the app is immediately created, and you're taken to its resource page.
     9. In the **Essentials** box, find the **Application (client) ID** and copy it. You need this value later to configure your application.
-    10. Select **Certificates & secrets** from the navigation pane. On the **Client secrets (0)** tab, select **New client secret**. Enter a description for the secret and select an expiration (the default is fine). Select **Add** at the bottom. **Important** before leaving this page, copy the generated **Value** for your client secret- this cannot be viewed after leaving the page. This value is the client secret.
-    11. Return to the [App registrations](https://ms.portal.azure.com/#view/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/~/RegisteredApps) pane for Microsoft Entra ID and find the **Endpoints** tab. Copy the URL under `OAuth 2.0 token endpoint`, this is your STS URL.
+    10. Select **Certificates & secrets** from the navigation pane. On the **Client secrets (0)** tab, select **New client secret**. Enter a description for the secret and select an expiration (the default is fine). Select **Add** at the bottom. **Important** before leaving this page, copy the generated **Value** for your client secret. This value can't be viewed after leaving the page. This value is the client secret.
+    11. Return to the [App registrations](https://ms.portal.azure.com/#view/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/~/RegisteredApps) pane for Microsoft Entra ID and find the **Endpoints** tab. Copy the URL under `OAuth 2.0 token endpoint`. This URL is your STS URL.
 
     ![Azure Portal App Registration End Point - STS URL](media/jdbc_aad_token.png)
 
@@ -661,7 +672,7 @@ public class MSEntraTokenBased {
         // Retrieve the access token from Microsoft Entra ID.
         String spn = "https://database.windows.net/";
         String stsurl = "https://login.microsoftonline.com/..."; // Replace with your STS URL.
-        String clientId = "1846943b-ad04-4808-aa13-4702d908b5c1"; // Replace with your client ID.
+        String clientId = "<service_principal_guid>"; // Replace with your client ID.
         String clientSecret = "..."; // Replace with your client secret.
 
         String scope = spn +  "/.default";
@@ -733,7 +744,7 @@ public class MSEntraAccessTokenCallback {
             public SqlAuthenticationToken getAccessToken(String spn, String stsurl) {
 
                 String clientSecret = "..."; // Replace with your client secret.
-                String clientId = "1846943b-ad04-4808-aa13-4702d908b5c1"; // Replace with your client ID.
+                String clientId = "<service_principal_guid>"; // Replace with your client ID.
 
                 String scope = spn + "/.default";
                 Set<String> scopes = new HashSet<>();
@@ -802,7 +813,7 @@ public class MSEntraAccessTokenCallbackClass {
         @Override
         public SqlAuthenticationToken getAccessToken(String spn, String stsurl) {
             String clientSecret = "..."; // Replace with your client secret.
-            String clientId = "1846943b-ad04-4808-aa13-4702d908b5c1"; // Replace with your client ID.
+            String clientId = "<service_principal_guid>"; // Replace with your client ID.
             
             String scope = spn + "/.default";
             Set<String> scopes = new HashSet<>();

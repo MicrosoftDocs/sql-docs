@@ -5,7 +5,7 @@ author: Stralle
 ms.author: strrodic
 ms.reviewer: mathoma
 ms.date: 12/15/2023
-ms.service: sql-managed-instance
+ms.service: azure-sql-managed-instance
 ms.subservice: high-availability
 ms.custom: ignite-2023
 ms.topic: how-to

@@ -30,7 +30,7 @@ helpviewer_keywords:
 ## Create Central Management Server and server groups 
  To create a Central Management Server and server groups, use the **Registered Servers** window in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Note that the Central Management Server should not be a member of a group that it maintains, to prevent accidental audit policy application that could interfere with the CMS itself. SSMS enforces this by preventing a server of the same name as the Central Management Server from being added to a group.
 
- Central Management Servers are [also available in Azure Data Studio](../azure-data-studio/extensions/sql-server-cms-extension.md).
+ Central Management Servers are [also available in Azure Data Studio](/azure-data-studio/extensions/sql-server-cms-extension).
  
  For how to create Central Management Servers and server groups, see [Create a Central Management Server and Server Group &#40;SQL Server Management Studio&#41;](../ssms/register-servers/create-a-central-management-server-and-server-group.md).  
   
@@ -38,4 +38,4 @@ helpviewer_keywords:
 
 - [Administer Servers by Using Policy-Based Management](../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
 - [Create a Central Management Server and Server Group](../ssms/register-servers/create-a-central-management-server-and-server-group.md)
-- [SQL Server Central Management Servers extension for Azure Data Studio](../azure-data-studio/extensions/sql-server-cms-extension.md)
+- [SQL Server Central Management Servers extension for Azure Data Studio](/azure-data-studio/extensions/sql-server-cms-extension)

@@ -1,10 +1,10 @@
 ---
 title: "bit (Transact-SQL)"
-description: The bit data type is an integer data type that can take a value of 1, 0, or `NULL`, representing Boolean values.
+description: The bit data type is an integer data type that can take a value of 1, 0, or NULL, representing Boolean values.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: randolphwest
-ms.date: 05/21/2024
+ms.date: 08/12/2024
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: "reference"
@@ -30,7 +30,9 @@ The [!INCLUDE [ssDEnoversion](../../includes/ssdenoversion-md.md)] optimizes sto
 
 The **bit** data type can be used to store Boolean values. The string values `TRUE` and `FALSE` can be converted to **bit** values: `TRUE` is converted to `1`, and `FALSE` is converted to `0`.
 
-Converting to bit promotes any nonzero value to `1`.
+Converting to **bit** promotes any nonzero value to `1`.
+
+The **bit** data type supports the [COUNT](../functions/count-transact-sql.md) function. However, other standard aggregate functions, like `SUM`, `AVG`, `MIN`, and `MAX`, don't directly support the **bit** data type.
 
 ## Related content
 

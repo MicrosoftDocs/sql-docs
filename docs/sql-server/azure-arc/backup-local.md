@@ -1,34 +1,30 @@
 ---
 title: Manage automated backups 
-description: Describes how to configure automated backups
+description: Describes how to configure automated backups to local storage for SQL Server enabled by Azure Arc
 author: AbdullahMSFT
 ms.author: amamun 
 ms.reviewer: mikeray, randolphwest
-ms.date: 3/12/2024
+ms.date: 07/30/2024
 ms.topic: conceptual
 ms.custom: ignite-2023, devx-track-azurecli
 ---
 
-# Manage automated backups - SQL Server enabled by Azure Arc (preview)
+# Manage automated backups (preview) | SQL Server enabled by Azure Arc
 
 [!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
-The Azure extension for [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] can perform backups automatically for the system and user databases of the instance of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] enabled by Azure Arc.
+The Azure extension for [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] can perform backups automatically to local storage or network shares. Backups are written to the [default backup location](../../relational-databases/backup-restore/backup-devices-sql-server.md#BackupFileDiskPath) for the  [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] enabled by Azure Arc instance.
 
 This article explains how you can:
 
-- Enable these built-in automated backups
+- Enable automated backups
 - Configure backup schedule
 
 [!INCLUDE [azure-arc-sql-preview](includes/azure-arc-sql-preview.md)]
 
-Backup files are stored in the default backup location of the SQL instance.
-
 You can enable automated backups through Azure portal or via `az` CLI.
 
 To enable automated backups, set the retention days to a nonzero value.
-
-### Supported license types
 
 Automated backups are only available for licenses with Software Assurance, SQL subscription, or pay-as-you-go. For details, see [Feature availability depending on license type](overview.md#feature-differentiation).
 
@@ -316,6 +312,7 @@ When the built-in automated backups are enabled on an instance of [!INCLUDE [ssn
 
 ## Limitations
 
+- Automatic backup to URL is not currently available.
 - The user databases need to be in full recovery model for the backups to be performed. Databases that aren't in full recovery model aren't automatically backed up.
 - Automated backups are currently not supported for Always On failover cluster instances (FCI).
 - Automated backups aren't supported on any instance that hosts an availability group (AG) replica.

@@ -363,7 +363,7 @@ Use the **Backup-SqlDatabase** cmdlet. To explicitly indicate a full database ba
 > [!NOTE]
 > These examples require the SqlServer module. To determine if it is installed, run `Get-Module -Name SqlServer`. To install, run `Install-Module -Name SqlServer` in an administrator session of PowerShell.
 >
-> For more information, see [SQL Server PowerShell Provider](../../powershell/sql-server-powershell-provider.md).
+> For more information, see [SQL Server PowerShell Provider](/powershell/sql-server/sql-server-powershell-provider).
 
 > [!IMPORTANT]
 > If you are opening a PowerShell window from within SQL Server Management Studio to connect to an installation of SQL Server, you can omit the credential portion as your credential in SSMS is automatically used to establish the connection between PowerShell and your SQL Server instance.

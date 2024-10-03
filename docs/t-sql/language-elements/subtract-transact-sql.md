@@ -35,8 +35,6 @@ Subtracts two numbers (an arithmetic subtraction operator). Can also subtract a 
 expression - expression  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
  *expression*  
  Is any valid [expression](../../t-sql/language-elements/expressions-transact-sql.md) of any one of the data types of the numeric data type category, except the **bit** data type. Cannot be used with **date**, **time**, **datetime2**, or **datetimeoffset** data types.  

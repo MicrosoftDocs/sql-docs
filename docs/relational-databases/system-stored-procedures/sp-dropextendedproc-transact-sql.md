@@ -4,7 +4,7 @@ description: sp_dropextendedproc drops an extended stored procedure.
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 11/28/2023
+ms.date: 08/22/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -23,7 +23,7 @@ dev_langs:
 Drops an extended stored procedure.
 
 > [!NOTE]  
-> [!INCLUDE [ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use [Common Language Runtime Integration](../clr-integration/common-language-runtime-integration-overview.md) instead.
+> [!INCLUDE [ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use [Common language runtime (CLR) integration](../clr-integration/common-language-runtime-integration-overview.md) instead.
 
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 

@@ -47,8 +47,6 @@ table_type_definition ::=
      }
 ```
 
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 
 #### *table_type_definition*

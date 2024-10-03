@@ -32,8 +32,6 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
 TYPE_ID ( [ schema_name ] type_name )   
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
  *type_name*  
  Is the name of the data type. *type_name* is of type **nvarchar**. *type_name* can be a system or user-defined data type.  

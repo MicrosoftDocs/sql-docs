@@ -5,7 +5,7 @@ author: VanMSFT
 ms.author: vanto
 ms.reviewer: wiassaf, mathoma
 ms.date: 09/27/2023
-ms.service: sql-database
+ms.service: azure-sql-database
 ms.subservice: development
 ms.topic: how-to
 ms.custom:
@@ -21,7 +21,7 @@ To create and manage an Azure SQL Database from code, you must register your app
 
 ## Create a service principal to access resources from an application
 
-The following examples create the Active Directory (AD) application and the service principal that we need to authenticate our C# app. The script outputs values we need for the preceding C# sample. For detailed information, see [Use Azure PowerShell to create a service principal to access resources](/azure/active-directory/develop/howto-authenticate-service-principal-powershell).
+The following examples create the Microsoft Entra application and the service principal that we need to authenticate our C# app. The script outputs values we need for the preceding C# sample. For detailed information, see [Use Azure PowerShell to create a service principal to access resources](/azure/active-directory/develop/howto-authenticate-service-principal-powershell).
 
 # [PowerShell](#tab/azure-powershell)
 

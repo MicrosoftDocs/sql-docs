@@ -4,7 +4,7 @@ description: Reports information about a database object (any object listed in t
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 05/14/2024
+ms.date: 08/21/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -93,7 +93,7 @@ The result sets that are returned depend on whether *@name* is specified, when i
      | `Scale` | **char(5)** | Column scale. |
      | `Nullable` | **varchar(35)** | Indicates whether `NULL` values are allowed in the column: `Yes` or `No`. |
      | `TrimTrailingBlanks` | **varchar(35)** | Trim the trailing blanks. Returns `Yes` or `No`. |
-     | `FixedLenNullInSource` | **varchar(35)** | For backward compatibility only. |
+     | `FixedLenNullInSource` | **varchar(35)** | [!INCLUDE [deprecated-parameter](../includes/deprecated-parameter.md)] |
      | `Collation` | **sysname** | Collation of the column. `NULL` for noncharacter data types. |
 
    - The following result set is also returned on identity columns:

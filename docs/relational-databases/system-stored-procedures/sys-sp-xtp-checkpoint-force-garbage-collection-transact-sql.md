@@ -4,7 +4,7 @@ description: "Marks source files used in the merge operation with the log sequen
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 06/14/2023
+ms.date: 08/21/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -58,7 +58,7 @@ A returned row contains the following information:
 
 You can manually trigger garbage collection with another system stored procedure, `sys.sp_xtp_force_gc`. You can observe the reduction in memory cleanup in [sys.dm_xtp_system_memory_consumers](../system-dynamic-management-views/sys-dm-xtp-system-memory-consumers-transact-sql.md).
 
-In [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], the [sys.dm_xtp_system_memory_consumers](../system-dynamic-management-views/sys-dm-xtp-system-memory-consumers-transact-sql.md) dynamic management view has improved insights specific to [memory-optimized tempdb metadata](../databases/tempdb-database.md#memory-optimized-tempdb-metadata).
+In [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], the [sys.dm_xtp_system_memory_consumers](../system-dynamic-management-views/sys-dm-xtp-system-memory-consumers-transact-sql.md) dynamic management view has improved insights specific to [Memory-optimized TempDB metadata](../databases/tempdb-database.md#memory-optimized-tempdb-metadata).
 
 ## Permissions
 
@@ -76,5 +76,5 @@ EXEC sys.sp_xtp_checkpoint_force_garbage_collection N'tempdb';
 
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)
 - [sys.sp_xtp_force_gc (Transact-SQL)](sys-sp-xtp-force-gc-transact-sql.md)
-- [In-Memory OLTP (In-Memory Optimization)](../in-memory-oltp/overview-and-usage-scenarios.md)
-- [sys.dm_xtp_system_memory_consumers](../system-dynamic-management-views/sys-dm-xtp-system-memory-consumers-transact-sql.md)
+- [In-Memory OLTP overview and usage scenarios](../in-memory-oltp/overview-and-usage-scenarios.md)
+- [sys.dm_xtp_system_memory_consumers (Transact-SQL)](../system-dynamic-management-views/sys-dm-xtp-system-memory-consumers-transact-sql.md)

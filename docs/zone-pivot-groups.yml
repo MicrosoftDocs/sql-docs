@@ -31,4 +31,15 @@ groups:
     title: Azure SQL Managed Instance
   - id: as1-sql-server
     title: SQL Server
-  
+- id: sq1-sql-projects-tools
+  title: Tools for SQL database projects
+  prompt: Choose a development environment
+  pivots:
+  - id: sq1-visual-studio
+    title: Visual Studio
+  - id: sq1-visual-studio-sdk
+    title: Visual Studio, SDK-style (preview)
+  - id: sq1-visual-studio-code
+    title: Visual Studio Code/Azure Data Studio
+  - id: sq1-command-line
+    title: Command-line interface

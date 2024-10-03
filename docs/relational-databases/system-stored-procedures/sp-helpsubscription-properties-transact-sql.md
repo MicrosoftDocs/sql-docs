@@ -4,7 +4,7 @@ description: sp_helpsubscription_properties Retrieves security information from 
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 05/15/2024
+ms.date: 08/21/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: "reference"
@@ -74,10 +74,10 @@ The type of publication. *@publication_type* is **int**, with a default of `NULL
 | `distributor_login` | **sysname** | Distributor login. |
 | `distributor_password` | **nvarchar(524)** | Distributor password (encrypted). |
 | `distributor_security_mode` | **int** | Security mode used at the Distributor:<br /><br />`0` = [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Authentication<br />`1` = Windows Authentication |
-| `ftp_address` | **sysname** | For backward compatibility only. Network address of the file transfer protocol (FTP) service for the Distributor. |
-| `ftp_port` | **int** | For backward compatibility only. Port number of the FTP service for the Distributor. |
-| `ftp_login` | **sysname** | For backward compatibility only. User name used to connect to the FTP service. |
-| `ftp_password` | **nvarchar(524)** | For backward compatibility only. User password used to connect to the FTP service. |
+| `ftp_address` | **sysname** | [!INCLUDE [deprecated-parameter](../includes/deprecated-parameter.md)] |
+| `ftp_port` | **int** | [!INCLUDE [deprecated-parameter](../includes/deprecated-parameter.md)] |
+| `ftp_login` | **sysname** | [!INCLUDE [deprecated-parameter](../includes/deprecated-parameter.md)] |
+| `ftp_password` | **nvarchar(524)** | [!INCLUDE [deprecated-parameter](../includes/deprecated-parameter.md)] |
 | `alt_snapshot_folder` | **nvarchar(255)** | Specifies the location of the alternate folder for the snapshot. |
 | `working_directory` | **nvarchar(255)** | Name of the working directory used to store data and schema files. |
 | `use_ftp` | **bit** | Specifies the use of FTP instead of the regular protocol to retrieve snapshots. If `1`, FTP is used. |

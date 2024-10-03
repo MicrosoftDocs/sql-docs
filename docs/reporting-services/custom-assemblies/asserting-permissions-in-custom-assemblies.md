@@ -3,11 +3,12 @@ title: "Asserting permissions in custom assemblies"
 description: Learn how to assert permissions so you can implement a custom assembly that makes secured calls to protected resources within your security system.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/14/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: custom-assemblies
 ms.topic: reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "secure calls [Reporting Services]"
   - "custom assemblies [Reporting Services], permissions"
@@ -81,7 +82,6 @@ try
   
  For more information, see ".NET Framework Security" in the .NET Framework Developer's Guide.  
   
-## Related content  
- [Using Custom Assemblies with Reports](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)  
-  
-  
+## Related content
+
+- [Using Custom Assemblies with Reports](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)

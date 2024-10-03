@@ -3,11 +3,12 @@ title: "Display page numbers or other paginated report properties"
 description: Add properties of your paginated report including page numbers, filenames, and titles, for display in page headers or footers.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 01/18/2022
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 # Display page numbers or other paginated report properties (Report Builder)
 
@@ -69,8 +70,7 @@ ms.custom: updatefrequency5
 4.  Select **OK**.
 
 
-## See also  
- [Page Headers and Footers &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
- [Format Text in a Text Box &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md)  
-  
-  
+## Related content
+
+- [Page Headers and Footers &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)
+- [Format Text in a Text Box &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md)

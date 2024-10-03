@@ -3,11 +3,12 @@ title: "View & resolve data conflicts (Merge)"
 description: Learn how to view and resolve data conflicts for a Merge Publication for SQL Server.
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "11/20/2018"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: how-to
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "merge replication conflict resolution [SQL Server replication], viewing conflicts"
   - "viewing conflict information"
@@ -112,8 +113,7 @@ When a conflict is resolved in merge replication, the data from the losing row i
   
     -   At the Subscriber on the subscription database, execute [sp_helpmergedeleteconflictrows](../../relational-databases/system-stored-procedures/sp-helpmergedeleteconflictrows-transact-sql.md). Specify the name of the source table (from step 1) on which the conflict occurred for `@source_object`. (Optional) Specify a value of `@publication` to restrict returned conflict information to a specific publication. This returns delete conflict information stored at the Subscriber.  
   
-## See Also  
- [Advanced Merge Replication Conflict Detection and Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
- [Specify a Merge Article Resolver](../../relational-databases/replication/publish/specify-a-merge-article-resolver.md)  
-  
-  
+## Related content
+
+- [Advanced Merge Replication Conflict Detection and Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)
+- [Specify a Merge Article Resolver](../../relational-databases/replication/publish/specify-a-merge-article-resolver.md)

@@ -3,11 +3,12 @@ title: "Schedule properties (Reports page)"
 description: Learn about the Reporting Services schedule properties page in SQL Server Management Studio that lists all reports for a specific shared schedule.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 06/30/2016
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: tools
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 f1_keywords:
   - "sql13.swb.reportserver.scheduleproperties.reports.f1"
 ---
@@ -35,10 +36,10 @@ f1_keywords:
  **Report**  
  Specifies the name of the report that uses the schedule.  
   
-## Related content  
- [Create, modify, and delete schedules](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md)   
- [Schedules](../../reporting-services/subscriptions/schedules.md)   
- [Report server in Management Studio F1 Help](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
- [Connect to a report server in Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
- [Configure general properties for a report (Report Manager)](../reports/configure-execution-properties-for-a-report-report-manager.md)  
-  
+## Related content
+
+- [Create, modify, and delete schedules](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md)
+- [Schedules](../../reporting-services/subscriptions/schedules.md)
+- [Report server in Management Studio F1 Help](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)
+- [Connect to a report server in Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)
+- [Configure general properties for a report (Report Manager)](../reports/configure-execution-properties-for-a-report-report-manager.md)

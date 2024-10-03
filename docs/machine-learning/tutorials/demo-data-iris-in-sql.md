@@ -2,8 +2,8 @@
 title: Iris demo data set for tutorials
 titleSuffix: SQL machine learning
 description: "Iris demo data for Python and R tutorials with SQL machine learning"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: VanMSFT
+ms.author: vanto
 ms.date: 05/26/2020
 ms.service: sql
 ms.subservice: machine-learning-services

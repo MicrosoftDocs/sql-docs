@@ -4,7 +4,7 @@ description: "sp_data_source_objects returns list of table objects that are avai
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: wiassaf
-ms.date: 06/13/2023
+ms.date: 08/21/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: conceptual
@@ -66,7 +66,7 @@ A *@max_search_depth* of `NULL` returns information about *@object_root_name* if
 
 The `search_options` parameter is nvarchar(max) with a default of `NULL`.
 
-This parameter isn't used but may be implemented in the future.
+This parameter isn't used but might be implemented in the future.
 
 ## Result set
 
@@ -95,15 +95,15 @@ This stored procedure supports connectors for:
 
 The stored procedure doesn't support generic ODBC data source or Hadoop connectors.
 
-The notion of empty vs. non-empty relates to the behavior of the ODBC driver and the [`SQLTables` function](../native-client-odbc-api/sqltables.md). Non-empty indicates an object contains tables, not rows. For example, an empty schema contains no tables in SQL Server. An empty database contains with no tables inside Teradata.
+The notion of empty vs. non-empty relates to the behavior of the ODBC driver and the [SQLTables](../native-client-odbc-api/sqltables.md) function. Non-empty indicates an object contains tables, not rows. For example, an empty schema contains no tables in SQL Server. An empty database contains with no tables inside Teradata.
 
-Object types are determined by the external data source's ODBC driver. Each external data source determines what qualifies as a table. This can include database objects like functions in Teradata, or synonyms in Oracle. PolyBase can't connect to some ODBC objects as external tables and will therefore not have a value in the `TABLE_LOCATION` column. Despite the absence of values in `TABLE_LOCATION`, the presence of one of these ODBC objects may make a database or schema non-empty.
+Object types are determined by the external data source's ODBC driver. Each external data source determines what qualifies as a table. This can include database objects like functions in Teradata, or synonyms in Oracle. PolyBase can't connect to some ODBC objects as external tables and will therefore not have a value in the `TABLE_LOCATION` column. Despite the absence of values in `TABLE_LOCATION`, the presence of one of these ODBC objects might make a database or schema non-empty.
 
-Use `sp_data_source_objects` and [sp_data_source_table_columns](sp-data-source-table-columns.md) to discover external objects. These system stored procedures return the schema of tables that are available to be virtualized. Azure Data Studio uses these two stored procedures to support [data virtualization](../../azure-data-studio/extensions/data-virtualization-extension.md). Use [sp_data_source_table_columns](sp-data-source-table-columns.md) to discover external table schemas represented in SQL Server data types.
+Use `sp_data_source_objects` and [sp_data_source_table_columns](sp-data-source-table-columns.md) to discover external objects. These system stored procedures return the schema of tables that are available to be virtualized. Azure Data Studio uses these two stored procedures to support [data virtualization](/azure-data-studio/extensions/data-virtualization-extension). Use [sp_data_source_table_columns](sp-data-source-table-columns.md) to discover external table schemas represented in SQL Server data types.
 
 ### External tables to MongoDB collections that contain arrays
 
-To create external tables to MongoDB collections that contain arrays, you should use the [Data Virtualization extension for Azure Data Studio](../../azure-data-studio/extensions/data-virtualization-extension.md) to produce a CREATE EXTERNAL TABLE statement, based on the schema detected by the PolyBase ODBC Driver for MongoDB. The flattening actions are automatically performed by the driver. Alternatively, you can use [sp_data_source_objects (Transact-SQL)](sp-data-source-objects.md) to detect the collection schema (columns) and manually create the external table. The `sp_data_source_table_columns` stored procedure also automatically performs the flattening via the PolyBase ODBC Driver for MongoDB driver. The Data Virtualization extension for Azure Data Studio and `sp_data_source_table_columns` use the same internal stored procedures to query the external schema.
+To create external tables to MongoDB collections that contain arrays, you should use the [Data Virtualization extension for Azure Data Studio](/azure-data-studio/extensions/data-virtualization-extension) to produce a CREATE EXTERNAL TABLE statement, based on the schema detected by the PolyBase ODBC Driver for MongoDB. The flattening actions are automatically performed by the driver. Alternatively, you can use [sp_data_source_objects](sp-data-source-objects.md) to detect the collection schema (columns) and manually create the external table. The `sp_data_source_table_columns` stored procedure also automatically performs the flattening via the PolyBase ODBC Driver for MongoDB driver. The Data Virtualization extension for Azure Data Studio and `sp_data_source_table_columns` use the same internal stored procedures to query the external schema.
 
 ### Data source type specific remarks
 
@@ -113,7 +113,7 @@ To create external tables to MongoDB collections that contain arrays, you should
 
 - **MongoDB**
 
-  Some earlier versions of MongoDB restrict the ability to list all databases to admin-like users. Users without this permission may get auth errors trying to execute this procedure with a null *@object_root_name*.
+  Some earlier versions of MongoDB restrict the ability to list all databases to admin-like users. Users without this permission might get auth errors trying to execute this procedure with a null *@object_root_name*.
 
 - **Oracle**
 
@@ -255,8 +255,8 @@ EXEC sp_data_source_objects @data_source, @object_root_name, @max_search_depth;
 ## Related content
 
 - [sp_data_source_columns](sp-data-source-table-columns.md)
-- [CREATE EXTERNAL TABLE AS SELECT (Transact-SQL)](../../t-sql/statements/create-external-table-as-select-transact-sql.md)
+- [CREATE EXTERNAL TABLE AS SELECT (CETAS) (Transact-SQL)](../../t-sql/statements/create-external-table-as-select-transact-sql.md)
 - [CREATE EXTERNAL TABLE (Transact-SQL)](../../t-sql/statements/create-external-table-transact-sql.md)
-- [Data Virtualization extension for Azure Data Studio](../../azure-data-studio/extensions/data-virtualization-extension.md)
-- [Get started with PolyBase](../polybase/polybase-guide.md)
+- [Data Virtualization extension for Azure Data Studio](/azure-data-studio/extensions/data-virtualization-extension)
+- [Data virtualization with PolyBase in SQL Server](../polybase/polybase-guide.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)

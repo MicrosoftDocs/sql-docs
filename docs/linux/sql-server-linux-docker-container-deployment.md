@@ -55,7 +55,7 @@ You can connect and query SQL Server in a container from either outside the cont
 You can connect to the SQL Server instance on your container host from any external Linux, Windows, or macOS tool that supports SQL connections. Some common tools include:
 
 - [sqlcmd](sql-server-linux-setup-tools.md)
-- [Azure Data Studio](../azure-data-studio/quickstart-sql-server.md)
+- [Azure Data Studio](/azure-data-studio/quickstart-sql-server)
 - [Visual Studio Code](../tools/visual-studio-code/sql-server-develop-use-vscode.md)
 - [SQL Server Management Studio (SSMS) on Windows](sql-server-linux-manage-ssms.md)
 
@@ -147,7 +147,7 @@ If you want to know the version of SQL Server in a running container, run the fo
 ::: zone pivot="cs1-bash"
 
 ```bash
-sudo docker exec -it <Container ID or name> /opt/mssql-tools/bin/sqlcmd \
+docker exec -it <Container ID or name> /opt/mssql-tools/bin/sqlcmd \
 -S localhost -U SA -P '<YourStrong!Passw0rd>' \
 -Q 'SELECT @@VERSION'
 ```
@@ -188,9 +188,9 @@ You can also identify the SQL Server version and build number for a target conta
 ::: zone pivot="cs1-bash"
 
 ```bash
-sudo docker run -e PAL_PROGRAM_INFO=1 --name sqlver \
+docker run -e PAL_PROGRAM_INFO=1 --name sqlver \
 -ti mcr.microsoft.com/mssql/server:2022-latest && \
-sudo docker rm sqlver
+docker rm sqlver
 ```
 
 ::: zone-end
@@ -304,7 +304,7 @@ For example, the following command pulls the Cumulative Update 18 for [!INCLUDE 
 ::: zone pivot="cs1-bash"
 
 ```bash
-sudo docker pull mcr.microsoft.com/mssql/rhel/server:2019-CU18-rhel-8.4
+docker pull mcr.microsoft.com/mssql/rhel/server:2019-CU18-rhel-8.4
 ```
 
 ::: zone-end

@@ -18,7 +18,7 @@ ms.custom:
 
 This article is intended to provide a learning path through an introduction of Linux concepts. Use the sections in the article as a guided learning path to familiarize yourself with the Linux environment.
 
-This is not intended to be a comprehensive list but instead provides the bare minimum you need to help you administer and navigate your SQL Server on Linux environment. See the [full list of tutorials](https://www.linux.org/forums/linux-beginner-tutorials.123/) to learn more.
+This is not intended to be a comprehensive list but instead provides the bare minimum you need to help you administer and navigate your [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on Linux environment. See the [full list of tutorials](https://www.linux.org/forums/linux-beginner-tutorials.123/) to learn more.
 
 ## What is Linux?
 

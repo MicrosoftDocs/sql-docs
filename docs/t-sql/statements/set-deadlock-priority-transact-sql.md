@@ -1,8 +1,8 @@
 ---
 title: "SET DEADLOCK_PRIORITY (Transact-SQL)"
 description: SET DEADLOCK_PRIORITY (Transact-SQL)
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: 09/15/2022
 ms.service: sql
 ms.subservice: t-sql
@@ -37,8 +37,6 @@ SET DEADLOCK_PRIORITY { LOW | NORMAL | HIGH | <numeric-priority> | @deadlock_var
   
 <numeric-priority> ::= { -10 | -9 | -8 | ... | 0 | ... | 8 | 9 | 10 }
 ```
-
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## Arguments
 

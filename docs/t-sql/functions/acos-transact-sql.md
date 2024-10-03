@@ -32,8 +32,6 @@ A function that returns the angle, in radians, whose cosine is the specified flo
 ACOS ( float_expression )  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 
 *float_expression*  

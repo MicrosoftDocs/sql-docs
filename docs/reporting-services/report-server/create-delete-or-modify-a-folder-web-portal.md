@@ -3,11 +3,12 @@ title: "Create, delete, or modify a folder - Reporting Services"
 description: Learn how to create, modify, and delete folders so that you can organize and manage the items that you publish to a Reporting Services report server.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 06/26/2019
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-server
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 # Create, delete, or modify a folder - Reporting Services
   You can create folders to organize and manage the items you publish to a report server. Creating folders can help users find reports of interest to them. For content managers, folders provide a framework for applying permissions. You can create role assignments on specific folders to restrict access to reports that are in development or that shouldn't be widely distributed.  
@@ -103,8 +104,8 @@ ms.custom: updatefrequency5
 1. Optionally, you can move or delete the folder by selecting **Move** or **Delete** at the top of the **Properties** page. For more information, see the [Move or delete an item (web portal)](../../reporting-services/report-server/move-or-delete-an-item-report-manager.md).  
   
 ## Related content 
- [Create, delete, or modify a folder (web portal)](../../reporting-services/report-server/create-delete-or-modify-a-folder-web-portal.md)   
- [Report server content management (SSRS native mode)](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
- [Find, view, and manage reports &#40;Report Builder and SSRS &#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)    
+-  [Create, delete, or modify a folder (web portal)](../../reporting-services/report-server/create-delete-or-modify-a-folder-web-portal.md)   
+-  [Report server content management (SSRS native mode)](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
+-  [Find, view, and manage reports &#40;Report Builder and SSRS &#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)    
   
 ::: moniker-end

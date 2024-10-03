@@ -4,7 +4,7 @@ description: "Only for use in replication topologies with servers running versio
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 11/23/2023
+ms.date: 08/22/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: "reference"
@@ -64,7 +64,7 @@ Regardless of the value of *@reinitialize_subscriber*, `sp_mergecleanupmetadata`
 
 ### Execute sp_mergecleanupmetadata with @reinitialize_subscriber = N'true'
 
-1. It is recommended, but not required, that you stop all updates to the publication and subscription databases. If updates continue, any updates made at a Subscriber since the last merge are lost when the publication is reinitialized, but data convergence is maintained.
+1. It's recommended, but not required, that you stop all updates to the publication and subscription databases. If updates continue, any updates made at a Subscriber since the last merge are lost when the publication is reinitialized, but data convergence is maintained.
 
 1. Execute a merge by running the Merge Agent. We recommend that you use the **-Validate** agent command line option at each Subscriber when you run the Merge Agent. If you're running continuous mode merges, see *Special Considerations for Continuous Mode Merges* later in this section.
 

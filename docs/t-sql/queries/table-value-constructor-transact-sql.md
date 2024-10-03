@@ -34,8 +34,6 @@ VALUES ( <row value expression list> ) [ ,...n ]
     { DEFAULT | NULL | expression }  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
  VALUES  
  Introduces the row value expression lists. Each list must be enclosed in parentheses and separated by a comma.  

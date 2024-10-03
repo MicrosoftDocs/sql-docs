@@ -4,7 +4,7 @@ description: sp_articlefilter filters data that are published based on a table a
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 03/04/2024
+ms.date: 08/22/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: "reference"
@@ -86,9 +86,9 @@ Specifies a non-[!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Publi
 
 Executing `sp_articlefilter` for an article with existing subscriptions requires that those subscriptions to be reinitialized.
 
-`sp_articlefilter` creates the filter, inserts the ID of the filter stored procedure in the `filter` column of the [sysarticles (Transact-SQL)](../system-tables/sysarticles-transact-sql.md) table, and then inserts the text of the restriction clause in the `filter_clause` column.
+`sp_articlefilter` creates the filter, inserts the ID of the filter stored procedure in the `filter` column of the [sysarticles](../system-tables/sysarticles-transact-sql.md) table, and then inserts the text of the restriction clause in the `filter_clause` column.
 
-To create an article with a horizontal filter, execute [sp_addarticle (Transact-SQL)](sp-addarticle-transact-sql.md) with no *@filter_name* parameter. Execute `sp_articlefilter`, providing all parameters including *@filter_clause*, and then execute [sp_articleview (Transact-SQL)](sp-articleview-transact-sql.md), providing all parameters including the identical *@filter_clause*. If the filter already exists and if the `type` in `sysarticles` is `1` (log-based article), the previous filter is deleted and a new filter is created.
+To create an article with a horizontal filter, execute [sp_addarticle](sp-addarticle-transact-sql.md) with no *@filter_name* parameter. Execute `sp_articlefilter`, providing all parameters including *@filter_clause*, and then execute [sp_articleview](sp-articleview-transact-sql.md), providing all parameters including the identical *@filter_clause*. If the filter already exists and if the `type` in `sysarticles` is `1` (log-based article), the previous filter is deleted and a new filter is created.
 
 If *@filter_name* and *@filter_clause* aren't provided, the previous filter is deleted and the filter ID is set to `0`.
 

@@ -9,7 +9,7 @@ ms.date: 06/26/2024
 ms.service: virtual-machines-sql
 ms.subservice: migration-guide
 ms.topic: how-to
-ms.custom:
+ms.collection:
   - sql-migration-content
 ---
 # Migration guide: SQL Server to SQL Server on Azure Virtual Machines
@@ -18,7 +18,7 @@ ms.custom:
 
 In this guide, you learn [how to migrate](https://azure.microsoft.com/migration/migration-journey) your user databases from SQL Server to an instance of SQL Server on Azure Virtual Machines by tools and techniques based on your requirements.
 
-Review the [Prerequisites](../pre-migration.md#prerequisites), and complete the [Pre-migration](../pre-migration.md) steps, before continuing.
+Complete [pre-migration](../pre-migration.md) steps before continuing.
 
 ## Migrate
 

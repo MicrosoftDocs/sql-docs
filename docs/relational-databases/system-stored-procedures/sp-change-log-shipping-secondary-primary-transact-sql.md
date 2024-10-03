@@ -4,7 +4,7 @@ description: "Changes secondary database settings."
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest
-ms.date: 06/06/2023
+ms.date: 08/21/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -43,7 +43,7 @@ sp_change_log_shipping_secondary_primary
 
 #### [ @primary_server = ] '*primary_server*'
 
-The name of the primary instance of the [!INCLUDE [ssDEnoversion](../../includes/ssdenoversion-md.md)] in the log shipping configuration. *@primary_server* is **sysname** and can't be NULL.
+The name of the primary instance of the [!INCLUDE [ssDEnoversion](../../includes/ssdenoversion-md.md)] in the log shipping configuration. *@primary_server* is **sysname** and can't be `NULL`.
 
 #### [ @primary_database = ] '*primary_database*'
 
@@ -51,11 +51,11 @@ The name of the database on the primary server. *@primary_database* is **sysname
 
 #### [ @backup_source_directory = ] N'*backup_source_directory*'
 
-The directory where transaction log backup files from the primary server are stored. *@backup_source_directory* is **nvarchar(500)** and can't be NULL.
+The directory where transaction log backup files from the primary server are stored. *@backup_source_directory* is **nvarchar(500)** and can't be `NULL`.
 
 #### [ @backup_destination_directory = ] N'*backup_destination_directory*'
 
-The directory on the secondary server where backup files are copied to. *@backup_destination_directory* is **nvarchar(500)** and can't be NULL.
+The directory on the secondary server where backup files are copied to. *@backup_destination_directory* is **nvarchar(500)** and can't be `NULL`.
 
 #### [ @file_retention_period = ] '*file_retention_period*'
 
@@ -68,7 +68,7 @@ The security mode used to connect to the monitor server.
 - `1`: Windows Authentication;
 - `0`: [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Authentication.
 
-*@monitor_server_security_mode* is **bit** and defaults to NULL.
+*@monitor_server_security_mode* is **bit** and defaults to `NULL`.
 
 #### [ @monitor_server_login = ] '*monitor_server_login*'
 
@@ -100,5 +100,5 @@ Only members of the **sysadmin** fixed server role can run this procedure.
 
 ## Related content
 
-- [About Log Shipping (SQL Server)](../../database-engine/log-shipping/about-log-shipping-sql-server.md)
+- [About log shipping (SQL Server)](../../database-engine/log-shipping/about-log-shipping-sql-server.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)

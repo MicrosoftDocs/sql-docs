@@ -32,8 +32,6 @@ This function returns the ID number of a principal in the current database. See 
 DATABASE_PRINCIPAL_ID ( 'principal_name' )  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 *principal_name*  
 An expression of type **sysname**, that represents the principal. When *principal_name* is omitted, `DATABASE_PRINCIPAL_ID` returns the ID of the current user. `DATABASE_PRINCIPAL_ID` requires the parentheses.

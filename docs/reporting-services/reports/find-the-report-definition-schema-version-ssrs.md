@@ -3,11 +3,12 @@ title: "Find the Report Definition Schema Version"
 description: Learn how to identify the Report Definition Language (RDL) schema version of your report definition file.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 06/06/2019
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: reports
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "XML schemas [Reporting Services]"
   - "Report Definition Language, XML schema"
@@ -68,8 +69,8 @@ A report definition file specifies the RDL namespace for the version of the repo
   
      The report definition namespace is specified by the following URL: `https://schemas.microsoft.com/sqlserver/reporting/*year*/01/reportdefinition`  
 
-## Next steps
-[Upgrade Reports](../../reporting-services/install-windows/upgrade-reports.md)   
-[Report Definition Language](../../reporting-services/reports/report-definition-language-ssrs.md)   
+## Related content
 
-More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)
+- [Upgrade Reports](../../reporting-services/install-windows/upgrade-reports.md)
+- [Report Definition Language](../../reporting-services/reports/report-definition-language-ssrs.md)
+- [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

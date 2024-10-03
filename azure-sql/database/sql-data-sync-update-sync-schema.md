@@ -4,16 +4,19 @@ description: Learn how to automate the replication of schema changes in Azure SQ
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma, hudequei
-ms.date: 11/14/2018
-ms.service: sql-database
+ms.date: 09/23/2024
+ms.service: azure-sql-database
 ms.subservice: sql-data-sync
 ms.topic: how-to
-ms.custom: data sync
+ms.custom:
+  - data sync
 ---
 # Automate the replication of schema changes in Azure SQL Data Sync
-[!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
+[!INCLUDE [appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
-SQL Data Sync lets users synchronize data between databases in Azure SQL Database and SQL Server instances in one direction or in both directions. One of the current limitations of SQL Data Sync is a lack of support for the replication of schema changes. Every time you change the table schema, you need to apply the changes manually on all endpoints, including the hub and all members, and then update the sync schema.
+[!INCLUDE [sql-data-sync-retirement](../includes/sql-data-sync-retirement.md)]
+
+[SQL Data Sync](sql-data-sync-data-sql-server-sql-database.md) lets users synchronize data between databases in Azure SQL Database and SQL Server instances in one direction or in both directions. One of the current limitations of SQL Data Sync is a lack of support for the replication of schema changes. Every time you change the table schema, you need to apply the changes manually on all endpoints, including the hub and all members, and then update the sync schema.
 
 This article introduces a solution to automatically replicate schema changes to all SQL Data Sync endpoints.
 
@@ -22,12 +25,11 @@ This article introduces a solution to automatically replicate schema changes to 
 1. This tracking table is synced to all endpoints using the Data Sync service.
 1. DML triggers after insertion are used to apply the schema changes on the other endpoints.
 
-This article uses ALTER TABLE as an example of a schema change, but this solution also works for other types of schema changes.
+This article uses `ALTER TABLE `as an example of a schema change, but this solution also works for other types of schema changes.
 
-> [!IMPORTANT]
-> We recommend that you read this article carefully, especially the sections about [Troubleshooting](#troubleshoot) and [Other considerations](#other), before you start to implement automated schema change replication in your sync environment. We also recommend that you read [Sync data across multiple cloud and on-premises databases with SQL Data Sync](sql-data-sync-data-sql-server-sql-database.md). Some database operations may break the solution described in this article. Additional domain knowledge of SQL Server and Transact-SQL may be required to troubleshoot those issues.
+Read this article carefully, especially the sections about [Troubleshooting](#troubleshoot) and [Other considerations](#other), before you start to implement automated schema change replication in your sync environment. Some database operations might break the solution described in this article. Additional domain knowledge of SQL Server and Transact-SQL might be required to troubleshoot those issues.
 
-![Automating the replication of schema changes](./media/sql-data-sync-update-sync-schema/automate-schema-changes.png)
+:::image type="content" source="media/sql-data-sync-update-sync-schema/automate-schema-changes.png" alt-text="Diagram of replication of schema changes.":::
 
 ## Set up automated schema change replication
 
@@ -129,33 +131,33 @@ After the schema changes are replicated to all endpoints, you also need to take 
 
 #### Add new columns
 
-1.  Make the schema change.
+1. Make the schema change.
 
-1.  Avoid any data change where the new columns are involved until you've completed the step that creates the trigger.
+1. Avoid any data change where the new columns are involved until you've completed the step that creates the trigger.
 
-1.  Wait until the schema changes are applied to all endpoints.
+1. Wait until the schema changes are applied to all endpoints.
 
-1.  Refresh the database schema and add the new column to the sync schema.
+1. Refresh the database schema and add the new column to the sync schema.
 
-1.  Data in the new column is synced during next sync operation.
+1. Data in the new column is synced during next sync operation.
 
 #### Remove columns
 
-1.  Remove the columns from the sync schema. Data Sync stops syncing data in these columns.
+1. Remove the columns from the sync schema. Data Sync stops syncing data in these columns.
 
-1.  Make the schema change.
+1. Make the schema change.
 
-1.  Refresh the database schema.
+1. Refresh the database schema.
 
 #### Update data types
 
-1.  Make the schema change.
+1. Make the schema change.
 
-1.  Wait until the schema changes are applied to all endpoints.
+1. Wait until the schema changes are applied to all endpoints.
 
-1.  Refresh the database schema.
+1. Refresh the database schema.
 
-1.  If the new and old data types are not fully compatible - for example, if you change from `int` to `bigint` - sync may fail before the steps that create the triggers are completed. Sync succeeds after a retry.
+1. If the new and old data types are not fully compatible - for example, if you change from `int` to `bigint` - sync might fail before the steps that create the triggers are completed. Sync succeeds after a retry.
 
 #### Rename columns or tables
 
@@ -165,35 +167,39 @@ Renaming columns or tables makes Data Sync stop working. Create a new table or c
 
 For other types of schema changes - for example, creating stored procedures or dropping an index- updating the sync schema is not required.
 
-## <a name="troubleshoot"></a> Troubleshoot automated schema change replication
+<a id="troubleshoot"></a>
+
+## Troubleshoot automated schema change replication
 
 The replication logic described in this article stops working in some situations- for example, if you made a schema change in an on-premises database which is not supported in Azure SQL Database. In that case, syncing the schema change tracking table fails. You need fix this problem manually:
 
-1.  Disable the DDL trigger and avoid any further schema changes until the issue is fixed.
+1. Disable the DDL trigger and avoid any further schema changes until the issue is fixed.
 
-1.  In the endpoint database where the issue is happening, disable the AFTER INSERT trigger on the endpoint where the schema change can't be made. This action allows the schema change command to be synced.
+1. In the endpoint database where the issue is happening, disable the AFTER INSERT trigger on the endpoint where the schema change can't be made. This action allows the schema change command to be synced.
 
-1.  Trigger sync to sync the schema change tracking table.
+1. Trigger sync to sync the schema change tracking table.
 
-1.  In the endpoint database where the issue is happening, query the schema change history table to get the ID of last applied schema change command.
+1. In the endpoint database where the issue is happening, query the schema change history table to get the ID of last applied schema change command.
 
-1.  Query the schema change tracking table to list all the commands with an ID greater than the ID value you retrieved in the previous step.
+1. Query the schema change tracking table to list all the commands with an ID greater than the ID value you retrieved in the previous step.
 
     a.  Ignore those commands that can't be executed in the endpoint database. You need to deal with the schema inconsistency. Revert the original schema changes if the inconsistency impacts your application.
 
     b.  Manually apply those commands that should be applied.
 
-1.  Update the schema change history table and set the last applied ID to the correct value.
+1. Update the schema change history table and set the last applied ID to the correct value.
 
-1.  Double-check whether the schema is up-to-date.
+1. Double-check whether the schema is up-to-date.
 
-1.  Re-enable the AFTER INSERT trigger disabled in the second step.
+1. Re-enable the AFTER INSERT trigger disabled in the second step.
 
-1.  Re-enable the DDL trigger disabled in the first step.
+1. Re-enable the DDL trigger disabled in the first step.
 
 If you want to clean up the records in the schema change tracking table, use DELETE instead of TRUNCATE. Never reseed the identity column in schema change tracking table by using DBCC CHECKIDENT. You can create new schema change tracking tables and update the table name in the DDL trigger if reseeding is required.
 
-## <a name="other"></a> Other Considerations
+<a id="other"></a>
+
+## Other Considerations
 
 -   Database users who configure the hub and member databases need to have enough permission to execute the schema change commands.
 
@@ -211,19 +217,14 @@ If you want to clean up the records in the schema change tracking table, use DEL
 
 -   Don't use TRUNCATE to clean up data in the schema change tracking table.
 
-## Next steps
+## Related content
 
-For more info about SQL Data Sync, see:
-
--   Overview - [Sync data across multiple cloud and on-premises databases with Azure SQL Data Sync](sql-data-sync-data-sql-server-sql-database.md)
--   Set up Data Sync
-    - In the portal - [Tutorial: Set up SQL Data Sync to sync data between Azure SQL Database and SQL Server](sql-data-sync-sql-server-configure.md)
-    - With PowerShell
-        -  [Use PowerShell to sync between multiple databases in Azure SQL Database](scripts/sql-data-sync-sync-data-between-sql-databases.md)
-        -  [Use PowerShell to sync between a database in Azure SQL Database and a database in a SQL Server instance](scripts/sql-data-sync-sync-data-between-azure-onprem.md)
--   Data Sync Agent - [Data Sync Agent for Azure SQL Data Sync](sql-data-sync-agent-overview.md)
--   Best practices - [Best practices for Azure SQL Data Sync](sql-data-sync-best-practices.md)
--   Monitor - [Monitor SQL Data Sync with Azure Monitor logs](./monitor-tune-overview.md)
--   Troubleshoot - [Troubleshoot issues with Azure SQL Data Sync](sql-data-sync-troubleshoot.md)
--   Update the sync schema
-    -   With PowerShell - [Use PowerShell to update the sync schema in an existing sync group](scripts/update-sync-schema-in-sync-group.md)
+- [What is SQL Data Sync for Azure?](sql-data-sync-data-sql-server-sql-database.md)
+- [Tutorial: Set up SQL Data Sync between databases in Azure SQL Database and SQL Server](sql-data-sync-sql-server-configure.md)
+- [Use PowerShell to sync data between multiple databases in Azure SQL Database](scripts/sql-data-sync-sync-data-between-sql-databases.md)
+- [Use PowerShell to sync data between SQL Database and SQL Server](scripts/sql-data-sync-sync-data-between-azure-onprem.md)
+- [Data Sync Agent for SQL Data Sync](sql-data-sync-agent-overview.md)
+- [Best practices for Azure SQL Data Sync](sql-data-sync-best-practices.md)
+- [Monitor and performance tuning in Azure SQL Database and Azure SQL Managed Instance](monitor-tune-overview.md)
+- [Troubleshoot issues with SQL Data Sync](sql-data-sync-troubleshoot.md)
+- [Use PowerShell to update the sync schema in an existing sync group](scripts/update-sync-schema-in-sync-group.md)

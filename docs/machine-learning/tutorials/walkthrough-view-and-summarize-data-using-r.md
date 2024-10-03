@@ -1,8 +1,8 @@
 ---
 title: "R tutorial: Explore data"
 description: Tutorial showing how to visualize and generate statistical summaries using R functions for in-database analytics on SQL Server.
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: VanMSFT
+ms.author: vanto
 ms.date: 11/26/2018
 ms.service: sql
 ms.subservice: machine-learning-services

@@ -32,8 +32,6 @@ dev_langs:
 SET FIPS_FLAGGER ( 'level' |  OFF )  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
  **'** *level* **'**  
  Is the level of compliance against the FIPS 127-2 standard for which all database operations are checked. If a database operation conflicts with the level of ISO standards chosen, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] generates a warning.  

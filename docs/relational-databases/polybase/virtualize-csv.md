@@ -1,9 +1,9 @@
 ---
 title: Virtualize a CSV file with PolyBase
 description: "Virtualize a CSV file with PolyBase starting with SQL Server 2022."
-author: HugoMSFT
-ms.author: hudequei
-ms.reviewer: wiassaf, randolphwest
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: hudequei, randolphwest
 ms.date: 12/11/2023
 ms.service: sql
 ms.subservice: polybase

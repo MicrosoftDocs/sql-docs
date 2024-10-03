@@ -36,8 +36,6 @@ MOVE CONVERSATION conversation_handle
 [ ; ]  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
  *conversation_handle*  
  Is a variable or constant containing the conversation handle of the conversation to be moved. *conversation_handle* must be of type **uniqueidentifier**.  

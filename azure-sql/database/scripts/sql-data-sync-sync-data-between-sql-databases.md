@@ -1,11 +1,11 @@
 ---
-title: "PowerShell: Sync between multiple databases in Azure SQL Database"
+title: "PowerShell: Sync between multiple databases"
 description: Use an Azure PowerShell example script to sync between multiple databases in Azure SQL Database.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: wiassaf, mathoma
-ms.date: 03/12/2019
-ms.service: sql-database
+ms.date: 09/23/2024
+ms.service: azure-sql-database
 ms.subservice: sql-data-sync
 ms.topic: sample
 ms.custom:
@@ -16,7 +16,9 @@ ms.devlang: powershell
 
 # Use PowerShell to sync data between multiple databases in Azure SQL Database
 
-[!INCLUDE[appliesto-sqldb](../../includes/appliesto-sqldb.md)]
+[!INCLUDE [appliesto-sqldb](../../includes/appliesto-sqldb.md)]
+
+[!INCLUDE [sql-data-sync-retirement](../../includes/sql-data-sync-retirement.md)]
 
 This Azure PowerShell example configures SQL Data Sync to sync data between multiple databases in Azure SQL Database.
 
@@ -26,10 +28,9 @@ This Azure PowerShell example configures SQL Data Sync to sync data between mult
 
 If you choose to install and use PowerShell locally, this tutorial requires Az PowerShell 1.4.0 or later. If you need to upgrade, see [Install Azure PowerShell module](/powershell/azure/install-az-ps). If you are running PowerShell locally, you also need to run `Connect-AzAccount` to create a connection with Azure.
 
-For an overview of SQL Data Sync, see [Sync data across multiple cloud and on-premises databases with SQL Data Sync in Azure](../sql-data-sync-data-sql-server-sql-database.md).
+For an overview of SQL Data Sync, see [What is SQL Data Sync for Azure?](../sql-data-sync-data-sql-server-sql-database.md)
 
-> [!IMPORTANT]
-> SQL Data Sync does not support Azure SQL Managed Instance at this time.
+SQL Data Sync does **not** support Azure SQL Managed Instance or Azure Synapse Analytics.
 
 ## Prerequisites
 
@@ -37,7 +38,7 @@ For an overview of SQL Data Sync, see [Sync data across multiple cloud and on-pr
 - Create a database in Azure SQL Database in the same region as the sync database.
 - Update the parameter placeholders before running the example.
 
-## Example
+## Examples
 
 ```powershell-interactive
 using namespace Microsoft.Azure.Commands.Sql.DataSync.Model
@@ -306,7 +307,7 @@ This script uses the following commands. Each command in the table links to comm
 | [Get-AzSqlSyncGroupLog](/powershell/module/az.sql/Get-azSqlSyncGroupLog) |  Checks the Sync Log. |
 
 
-## Next steps
+## Related content
 
 For more information about Azure PowerShell, see [Azure PowerShell documentation](/powershell/azure/).
 

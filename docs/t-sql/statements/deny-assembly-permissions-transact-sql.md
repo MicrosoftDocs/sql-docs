@@ -33,8 +33,6 @@ DENY { permission [ ,...n ] } ON ASSEMBLY :: assembly_name
         [ AS denying_principal ]  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
  *permission*  
  Specifies a permission that can be denied on an assembly. Listed below.  

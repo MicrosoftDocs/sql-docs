@@ -19,4 +19,4 @@ ms.topic: include
 >
 > Install the **SqlServer** module from the [PowerShell Gallery](https://www.powershellgallery.com/packages/SqlServer).
 >
-> For more information, see [SQL Server PowerShell](../powershell/sql-server-powershell.md).
+> For more information, see [SQL Server PowerShell](/powershell/sql-server/sql-server-powershell).

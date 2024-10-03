@@ -3,11 +3,12 @@ title: "Reporting Services Login dialog box"
 description: Learn how to use the Reporting Services Login dialog box to provide credentials to publish reports to the report server.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/01/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: tools
 ms.topic: reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 f1_keywords:
   - "sql13.rtp.rptdesigner.reportservicelogin.f1"
 ---
@@ -27,9 +28,8 @@ f1_keywords:
  **Password**  
  Type the password to sign in to the Web service.  
   
-## Related content 
- [Create data connection strings - Report Builder & SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
- [Specify credential and connection information for report data sources](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
- [Report Designer F1 Help](../../reporting-services/tools/report-designer-f1-help.md)  
-  
-  
+## Related content
+
+- [Create data connection strings - Report Builder & SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)
+- [Specify credential and connection information for report data sources](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)
+- [Report Designer F1 Help](../../reporting-services/tools/report-designer-f1-help.md)

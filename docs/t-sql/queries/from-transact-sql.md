@@ -4,7 +4,7 @@ description: FROM clause plus JOIN, APPLY, PIVOT (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: randolphwest
-ms.date: 03/13/2023
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -38,7 +38,6 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 # FROM clause plus JOIN, APPLY, PIVOT (Transact-SQL)
 
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw-fabricse-fabricdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw-fabricse-fabricdw.md)]
-
 
 In Transact-SQL, the FROM clause is available on the following statements:
 
@@ -131,7 +130,7 @@ Syntax for SQL Server and Azure SQL Database:
         <date_time_literal> | @date_time_variable
 ```
 
-Syntax for Azure Synapse Analytics and Parallel Data Warehouse:
+Syntax for Parallel Data Warehouse, Azure Synapse Analytics:
 
 ```syntaxsql
 FROM { <table_source> [ , ...n ] }
@@ -167,7 +166,38 @@ FROM { <table_source> [ , ...n ] }
     | REDISTRIBUTE
 ```
 
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+Syntax for Microsoft Fabric:
+
+
+```syntaxsql
+FROM { <table_source> [ , ...n ] }
+
+<table_source> ::=
+{
+    [ database_name . [ schema_name ] . | schema_name . ] table_or_view_name [ AS ] table_or_view_alias
+    | derived_table [ AS ] table_alias [ ( column_alias [ , ...n ] ) ]
+    | <joined_table>
+}
+
+<joined_table> ::=
+{
+    <table_source> <join_type> <table_source> ON search_condition
+    | <table_source> CROSS JOIN <table_source>
+    | left_table_source { CROSS | OUTER } APPLY right_table_source
+    | [ ( ] <joined_table> [ ) ]
+}
+
+<join_type> ::=
+    [ INNER ] [ <join hint> ] JOIN
+    | LEFT  [ OUTER ] JOIN
+    | RIGHT [ OUTER ] JOIN
+    | FULL  [ OUTER ] JOIN
+
+<join_hint> ::=
+    REDUCE
+    | REPLICATE
+    | REDISTRIBUTE
+```
 
 ## Arguments
 
@@ -243,7 +273,7 @@ Specifies that a specific version of data is returned from the specified tempora
 
 #### TABLESAMPLE clause
 
-**Applies to**: [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)], [!INCLUDE[sssds](../../includes/sssds-md.md)], and [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)].
+**Applies to**: [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)], [!INCLUDE[sssds](../../includes/sssds-md.md)], and [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] dedicated SQL pools
 
 Specifies that a sample of data from the table is returned. The sample may be approximate. This clause can be used on any primary or joined table in a SELECT or UPDATE statement. TABLESAMPLE can't be specified with views.
 
@@ -310,7 +340,7 @@ Reduces the number of rows to be moved for the table on the right side of the jo
 
 #### REPLICATE
 
-Causes the values in the joining column from the table on the left side of the join to be replicated to all nodes. The table on the right is joined to the replicated version of those columns.
+Causes the values in the joining column from the table on the right side of the join to be replicated to all nodes. The table on the left is joined to the replicated version of those columns.
 
 #### REDISTRIBUTE
 
@@ -990,7 +1020,7 @@ SELECT *
 FROM Sales.Customer TABLESAMPLE SYSTEM(10 PERCENT);
 ```
 
-## See also
+## Related conent
 
 - [CONTAINSTABLE (Transact-SQL)](../../relational-databases/system-functions/containstable-transact-sql.md)
 - [FREETEXTTABLE (Transact-SQL)](../../relational-databases/system-functions/freetexttable-transact-sql.md)

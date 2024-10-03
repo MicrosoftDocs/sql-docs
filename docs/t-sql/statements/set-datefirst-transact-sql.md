@@ -46,7 +46,6 @@ SET DATEFIRST { number | @number_var }
 SET DATEFIRST 7 ;  
 ```  
   
-[!INCLUDE [sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## Arguments
 

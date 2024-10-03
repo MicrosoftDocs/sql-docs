@@ -44,8 +44,6 @@ monikerRange: "= azuresqldb-current || = azuresqldb-mi-current || >= sql-server-
 LOGINPROPERTY ( 'login_name' , 'property_name' )  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
  *login_name*  
  Is the name of a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login for which login property status will be returned.  

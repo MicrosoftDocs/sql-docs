@@ -99,8 +99,6 @@ DROP INDEX index_name ON { database_name.schema_name.table_name | schema_name.ta
 [ ; ]
 ```
 
-[!INCLUDE [sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 
 #### *IF EXISTS*

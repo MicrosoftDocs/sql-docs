@@ -1,8 +1,8 @@
 ---
 title: "rx_fast_trees: Fast Tree"
 description: "Machine Learning Fast Tree"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: VanMSFT
+ms.author: vanto
 ms.date: 07/15/2019
 ms.service: sql
 ms.subservice: "machine-learning-services"

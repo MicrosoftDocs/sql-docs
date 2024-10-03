@@ -3,11 +3,12 @@ title: "Application domains for report server applications"
 description: Learn about events that cause an application domain to recycle for Reporting Services applications for troubleshooting.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/20/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-server
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "application domains [Reporting Services]"
   - "recycling application domains"
@@ -73,8 +74,7 @@ If the jobs currently in process can't be completed within the allotted time, th
 >  Although the Report Server Web service and Report Manager are [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] applications, neither application responds to scheduled application domain recycling that might be specified in machine.config for [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] applications hosted in IIS.  
   
 ## Related content
- [RsReportServer.config configuration file](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
- [Modify a Reporting Services configuration file &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
- [Configure available memory for report server applications](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)  
-  
-  
+
+- [RsReportServer.config configuration file](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)
+- [Modify a Reporting Services configuration file &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)
+- [Configure available memory for report server applications](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)

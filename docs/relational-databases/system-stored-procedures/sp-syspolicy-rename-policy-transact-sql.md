@@ -4,7 +4,7 @@ description: "Renames an existing policy in Policy-Based Management."
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: randolphwest
-ms.date: 06/26/2023
+ms.date: 08/21/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -37,15 +37,15 @@ sp_syspolicy_rename_policy
 
 #### [ @name = ] N'*name*'
 
-The name of the policy that you want to rename. *@name* is **sysname**, and must be specified if *@policy_id* is NULL.
+The name of the policy that you want to rename. *@name* is **sysname**, and must be specified if *@policy_id* is `NULL`.
 
 #### [ @policy_id = ] *policy_id*
 
-The identifier for the policy that you want to rename. *@policy_id* is **int**, and must be specified if *@name* is NULL.
+The identifier for the policy that you want to rename. *@policy_id* is **int**, and must be specified if *@name* is `NULL`.
 
 #### [ @new_name = ] N'*new_name*'
 
-The new name for the policy. *@new_name* is **sysname**, and is required. Can't be NULL or an empty string.
+The new name for the policy. *@new_name* is **sysname**, and is required. Can't be `NULL` or an empty string.
 
 ## Return code values
 
@@ -55,7 +55,7 @@ The new name for the policy. *@new_name* is **sysname**, and is required. Can't 
 
 You must run `sp_syspolicy_rename_policy` in the context of the `msdb` system database.
 
-You must specify a value for either *@name* or *@policy_id*. Both can't be NULL. To obtain these values, query the `msdb.dbo.syspolicy_policies` system view.
+You must specify a value for either *@name* or *@policy_id*. Both can't be `NULL`. To obtain these values, query the `msdb.dbo.syspolicy_policies` system view.
 
 ## Permissions
 

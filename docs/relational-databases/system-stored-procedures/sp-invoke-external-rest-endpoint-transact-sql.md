@@ -4,7 +4,7 @@ description: The sp_invoke_external_rest_endpoint stored procedure invokes an HT
 author: jettermctedder
 ms.author: bspendolini
 ms.reviewer: randolphwest
-ms.date: 08/28/2023
+ms.date: 09/10/2024
 ms.service: sql
 ms.topic: "reference"
 f1_keywords:
@@ -71,7 +71,7 @@ Indicate which DATABASE SCOPED CREDENTIAL object is used to inject authenticatio
 
 Allow the response received from the called endpoint to be passed into the specified variable. *@response* is **nvarchar(max)**.
 
-## Return values
+## Return value
 
 Execution will return `0` if the HTTPS call was done and the HTTP status code received is a 2xx status code (`Success`). If the HTTP status code received isn't in the 2xx range, the return value will be the HTTP status code received. If the HTTPS call can't be done at all, an exception will be thrown.
 
@@ -87,7 +87,7 @@ GRANT EXECUTE ANY EXTERNAL ENDPOINT TO [<PRINCIPAL>];
 
 ## Response format
 
-Response of the HTTP call and the resulting data sent back by the invoked endpoint is available through the *@response* output parameter. *@response* may contain a JSON document with the following schema:
+Response of the HTTP call and the resulting data sent back by the invoked endpoint is available through the *@response* output parameter. *@response* might contain a JSON document with the following schema:
 
 ```json
 {
@@ -109,7 +109,7 @@ Specifically:
 - *response*: a JSON object that contains the HTTP result and other response metadata.
 - *result*: the JSON payload returned by the HTTP call. Omitted if the received HTTP result is a 204 (`No Content`).
 
-Or the *@response* may contain an XML document with the following schema:
+Or the *@response* might contain an XML document with the following schema:
 
 ```xml
 <output>
@@ -204,11 +204,13 @@ Only calls to endpoints in the following services are allowed:
 | Bing Search | api.bing.microsoft.com |
 | Azure Key Vault | *.vault.azure.net |
 | Azure AI Search | *.search.windows.net |
+| Azure Maps | *.atlas.microsoft.com |
+| Azure AI Translator | api.cognitive.microsofttranslator.com |
 
-[Outbound Firewall Rules](/azure/azure-sql/database/outbound-firewall-rule-overview) control mechanism can be used to further restrict outbound access to external endpoints.
+[Outbound firewall rules for Azure SQL Database and Azure Synapse Analytics](/azure/azure-sql/database/outbound-firewall-rule-overview) control mechanism can be used to further restrict outbound access to external endpoints.
 
 > [!NOTE]  
-> If you want to invoke a REST service that is not within the allowed list, you can use API Management to securely expose the desired service and make it available to `sp_invoke_external_rest_endpoint`.
+> If you want to invoke a REST service that isn't within the allowed list, you can use API Management to securely expose the desired service and make it available to `sp_invoke_external_rest_endpoint`.
 
 ## Limits
 
@@ -255,11 +257,12 @@ See 'https://docs.microsoft.com/azure/azure-sql/database/resource-limits-logical
 
 Some REST endpoints require authentication in order to be properly invoked. Authentication can usually be done by passing some specific key-value pairs in the query string or in the HTTP headers set with the request.
 
-It's possible to use DATABASE SCOPED CREDENTIALS to securely store authentication data (like a Bearer token for example) to be used by `sp_invoke_external_rest_endpoint` to call a protected endpoint. When creating the DATABASE SCOPED CREDENTIAL, use the IDENTITY parameter to specify what authentication data will be passed to the invoked endpoint and how. IDENTITY supports three options:
+It's possible to use DATABASE SCOPED CREDENTIALS to securely store authentication data (like a Bearer token for example) to be used by `sp_invoke_external_rest_endpoint` to call a protected endpoint. When creating the DATABASE SCOPED CREDENTIAL, use the IDENTITY parameter to specify what authentication data will be passed to the invoked endpoint and how. IDENTITY supports four options:
 
 - `HTTPEndpointHeaders`: send specified authentication data using the **Request Headers**
 - `HTTPEndpointQueryString`: send specified authentication data using the **Query String**
 - `Managed Identity`: send the System Assigned **Managed Identity** using the request headers
+- `Shared Access Signature`: provide limited delegated access to resources via a **signed URL** (Also referred to as SAS)
 
 the created DATABASE SCOPED CREDENTIAL can be used via the *@credential* parameter:
 
@@ -291,7 +294,7 @@ WITH IDENTITY = 'HTTPEndpointQueryString', SECRET = '{"code":"<your-function-key
 
 [!INCLUDE [entra-authentication-options](../../includes/entra-authentication-options.md)]
 
-With this IDENTITY value, the authentication information for the DATABASE SCOPED CREDENTIAL is taken from the system-assigned managed identity of the logical server in which the database resides, and is passed in the request headers. The SECRET must be set to the APP_ID (or CLIENT_ID) used to configure Microsoft Entra authentication of the called endpoint. (For example: [Configure your App Service or Azure Functions app to use Microsoft Entra login](/azure/app-service/configure-authentication-provider-aad))
+With this IDENTITY value, the authentication information for the DATABASE SCOPED CREDENTIAL is taken from the system-assigned managed identity of the logical server in which the database resides, and is passed in the request headers. The SECRET must be set to the APP_ID (or CLIENT_ID) used to configure Microsoft Entra authentication of the called endpoint. (For example: [Configure your App Service or Azure Functions app to use Microsoft Entra sign-in](/azure/app-service/configure-authentication-provider-aad))
 
 ```sql
 CREATE DATABASE SCOPED CREDENTIAL [https://<APP_NAME>.azurewebsites.net/api/<FUNCTION_NAME>]
@@ -300,13 +303,13 @@ WITH IDENTITY = 'Managed Identity', SECRET = '{"resourceid":"<APP_ID>"}';
 
 Both system-assigned and user-assigned managed identities are supported:
 
-- If there is at least one user-assigned managed identity, the defined primary identity is used for authentication when using a managed identity-based database scoped credential.
+- If there's at least one user-assigned managed identity, the defined primary identity is used for authentication when using a managed identity-based database scoped credential.
 
-- If there is no user-assigned managed identity assigned then the system-assigned managed identity is used, if it's enabled, for authentication when using a managed identity-based database scoped credential.
+- If there's no user-assigned managed identity assigned then the system-assigned managed identity is used, if it's enabled, for authentication when using a managed identity-based database scoped credential.
 
 - If both user-assigned and system-assigned managed identities are defined, the user-assigned managed identity is used.
 
-- If there is more than one user-assigned managed identity assigned, only the primary identity is used.
+- If there's more than one user-assigned managed identity assigned, only the primary identity is used.
 
 ---
 
@@ -364,7 +367,7 @@ Only endpoints that are configured to use HTTPS with at least TLS 1.2 encryption
 - *accept*: set to `application/json`
 - *user-agent*: set `<EDITION>/<PRODUCT VERSION>` for example: `SQL Azure/12.0.2000.8`
 
-While *user-agent* will always be overwritten by the stored procedure, the *content-type* and *accept* header values can be user defined via the *@headers* parameter. Only the media type directive is allowed to be specified in the content-type and specifying the charset or boundary directives is not possible.
+While *user-agent* will always be overwritten by the stored procedure, the *content-type* and *accept* header values can be user defined via the *@headers* parameter. Only the media type directive is allowed to be specified in the content-type and specifying the charset or boundary directives isn't possible.
 
 #### Request and response payload supported [media types](https://developer.mozilla.org/en-US/docs/Glossary/MIME_type)
 
@@ -384,16 +387,16 @@ For the *accept* header, the following are the accepted values.
 - application/xml
 - text/*
 
-For more information on text header types, please refer to the [text type registry at IANA](https://www.iana.org/assignments/media-types/media-types.xhtml#text).
+For more information on text header types, refer to the [text type registry at IANA](https://www.iana.org/assignments/media-types/media-types.xhtml#text).
 
 > [!NOTE]  
-> If you are testing invocation of the REST endpoint with other tools, like [cURL](https://curl.se/) or any modern REST client like [Insomnia](https://insomnia.rest/), make sure to include the same headers that are automatically injected by `sp_invoke_external_rest_endpoint` to have the same behavior and results.
+> If you're testing invocation of the REST endpoint with other tools, like [cURL](https://curl.se/) or any modern REST client like [Insomnia](https://insomnia.rest/), make sure to include the same headers that are automatically injected by `sp_invoke_external_rest_endpoint` to have the same behavior and results.
 
 ## Best practices
 
 ### Use a batching technique
 
-If you have to send a set of rows to a REST endpoint, for example to an Azure Function or to an event hub, it is recommended to batch the rows into a single JSON document, to avoid the HTTPS call overhead for each row sent. This can be done using the `FOR JSON` statement, for example:
+If you have to send a set of rows to a REST endpoint, for example to an Azure Function or to an event hub, it's recommended to batch the rows into a single JSON document, to avoid the HTTPS call overhead for each row sent. This can be done using the `FOR JSON` statement, for example:
 
 ```sql
 -- create the payload
@@ -593,7 +596,7 @@ go
 - [sys.dm_resource_governor_resource_pools_history_ex](../system-dynamic-management-views/sys-dm-resource-governor-resource-pools-history-ex-azure-sql-database.md)
 - [sys.dm_resource_governor_workload_groups_history_ex](../system-dynamic-management-views/sys-dm-resource-governor-workload-groups-history-ex-azure-sql-database.md)
 - [sys.dm_user_db_resource_governance](../system-dynamic-management-views/sys-dm-user-db-resource-governor-azure-sql-database.md)
-- [GRANT Database Permissions](../../t-sql/statements/grant-database-permissions-transact-sql.md)
+- [GRANT Database Permissions (Transact-SQL)](../../t-sql/statements/grant-database-permissions-transact-sql.md)
 - [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)
 - [API Management](/azure/api-management/)
 - [sp_invoke_external_rest_endpoint usage samples](https://github.com/Azure-Samples/azure-sql-db-invoke-external-rest-endpoints)

@@ -4,7 +4,7 @@ description: Facilitates the keying of grid parameters for a spatial index.
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 05/14/2024
+ms.date: 08/22/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -53,7 +53,7 @@ The resolution of the bounding box. Valid values are from 10 to 5000. *@resoluti
 
 The percentage of the table that is used. Valid values are from 0 to 100. *@sample* is **float**, with a default of `100`.
 
-## Return values
+## Return value
 
 A table value is returned. The following grid describes the column contents of the table.
 

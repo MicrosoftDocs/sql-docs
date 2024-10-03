@@ -32,8 +32,6 @@ PWDCOMPARE ( 'clear_text_password'
    [ , version ] )  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
  **'** *clear_text_password* **'**  
  Is the unencrypted password. *clear_text_password* is **sysname** (**nvarchar(128)**).  

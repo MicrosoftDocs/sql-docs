@@ -27,8 +27,6 @@ A method that tests if the **geometry** instance is the same as the specified ty
 .InstanceOf (geometry_type )  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 *geometry_type*  
 **nvarchar(4000)** string specifying one of 15 types exposed in the **geometry** type hierarchy.  

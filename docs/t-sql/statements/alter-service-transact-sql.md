@@ -39,8 +39,6 @@ ALTER SERVICE service_name
    ADD CONTRACT contract_name | DROP CONTRACT contract_name  
 ```  
 
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 
 *service_name*  

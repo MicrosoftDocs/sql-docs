@@ -1,8 +1,8 @@
 ---
 title: "SQL Server Agent, Alerts object"
 description: Learn about the SQL Server Agent Alerts performance object, which contains performance counters that report information about SQL Server Agent alerts.
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: 12/04/2023
 ms.service: sql
 ms.subservice: performance

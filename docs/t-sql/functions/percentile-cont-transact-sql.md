@@ -34,8 +34,6 @@ PERCENTILE_CONT ( numeric_literal )
     OVER ( [ <partition_by_clause> ] )
 ```
 
-[!INCLUDE [sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 
 #### *numeric_literal*

@@ -4,7 +4,7 @@ description: Specifies the instance name for the connection string used to conne
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 07/04/2023
+ms.date: 08/21/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -67,5 +67,5 @@ GO
 
 ## Related content
 
-- [Data Collector stored procedures (Transact-SQL)](data-collector-stored-procedures-transact-sql.md)
+- [Data collector stored procedures (Transact-SQL)](data-collector-stored-procedures-transact-sql.md)
 - [syscollector_config_store (Transact-SQL)](../system-catalog-views/syscollector-config-store-transact-sql.md)

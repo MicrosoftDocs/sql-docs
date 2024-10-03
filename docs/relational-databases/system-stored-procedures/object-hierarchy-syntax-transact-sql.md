@@ -4,7 +4,7 @@ description: "Object hierarchy syntax (Transact-SQL)"
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 05/24/2023
+ms.date: 08/22/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -63,7 +63,7 @@ If any item in the *TraversedObject* list doesn't return an OLE object, an error
 
 For more information about [!INCLUDE [visual-basic](../../includes/visual-basic-md.md)] OLE object syntax, see the [!INCLUDE [visual-basic](../../includes/visual-basic-md.md)] documentation.
 
-For more information about `HRESULT` return codes, see [sp_OACreate (Transact-SQL)](sp-oacreate-transact-sql.md).
+For more information about `HRESULT` return codes, see [sp_OACreate](sp-oacreate-transact-sql.md).
 
 ## Examples
 

@@ -1,6 +1,6 @@
 ---
-title: "General Extended stored procedures (Transact-SQL)"
-description: "General Extended stored procedures (Transact-SQL)"
+title: "General extended stored procedures (Transact-SQL)"
+description: "General extended stored procedures (Transact-SQL)"
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
@@ -18,7 +18,7 @@ helpviewer_keywords:
 dev_langs:
   - "TSQL"
 ---
-# General Extended stored procedures (Transact-SQL)
+# General extended stored procedures (Transact-SQL)
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 

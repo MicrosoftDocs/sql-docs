@@ -29,8 +29,6 @@ DROP SERVER AUDIT audit_name
     [ ; ]  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Remarks
  You must set the State of an audit to the OFF option in order to make any changes to an Audit. If DROP AUDIT is run while an audit is enabled with any options other than STATE=OFF, you will receive a MSG_NEED_AUDIT_DISABLED error message.  
   

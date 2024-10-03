@@ -33,8 +33,6 @@ KILL QUERY NOTIFICATION SUBSCRIPTION
    { ALL | subscription_id }  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
  ALL  
  Removes all subscriptions in the instance.  

@@ -1,8 +1,9 @@
 ---
 title: "CREATE EXTERNAL TABLE (Transact-SQL)"
 description: CREATE EXTERNAL TABLE (Transact-SQL) creates an external table.
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: hudequei
 ms.date: 07/11/2023
 ms.service: sql
 ms.subservice: t-sql
@@ -272,7 +273,7 @@ Oracle synonyms are not supported for usage with PolyBase.
 
 #### External tables to MongoDB collections that contain arrays
 
-To create external tables to MongoDB collections that contain arrays, you should use the [Data Virtualization extension for Azure Data Studio](../../azure-data-studio/extensions/data-virtualization-extension.md) to produce a CREATE EXTERNAL TABLE statement based on the schema detected by the PolyBase ODBC Driver for MongoDB. The flattening actions are performed automatically by the driver. Alternatively, you can use [sp_data_source_objects (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-data-source-objects.md) to detect the collection schema (columns) and manually create the external table. The `sp_data_source_table_columns` stored procedure also automatically performs the flattening via the PolyBase ODBC Driver for MongoDB driver. The Data Virtualization extension for Azure Data Studio and `sp_data_source_table_columns` use the same internal stored procedures to query the external schema.
+To create external tables to MongoDB collections that contain arrays, you should use the [Data Virtualization extension for Azure Data Studio](/azure-data-studio/extensions/data-virtualization-extension) to produce a CREATE EXTERNAL TABLE statement based on the schema detected by the PolyBase ODBC Driver for MongoDB. The flattening actions are performed automatically by the driver. Alternatively, you can use [sp_data_source_objects (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-data-source-objects.md) to detect the collection schema (columns) and manually create the external table. The `sp_data_source_table_columns` stored procedure also automatically performs the flattening via the PolyBase ODBC Driver for MongoDB driver. The Data Virtualization extension for Azure Data Studio and `sp_data_source_table_columns` use the same internal stored procedures to query the external schema.
 
 ## Locking
 
@@ -636,7 +637,7 @@ Learn more about related concepts in the following articles:
 - [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md)
 - [CREATE EXTERNAL FILE FORMAT](../../t-sql/statements/create-external-file-format-transact-sql.md)
 - [sp_data_source_objects (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-data-source-objects.md)
-- [Data Virtualization extension for Azure Data Studio](../../azure-data-studio/extensions/data-virtualization-extension.md)
+- [Data Virtualization extension for Azure Data Studio](/azure-data-studio/extensions/data-virtualization-extension)
 
 ::: moniker-end
 ::: moniker range="=azuresqldb-current"

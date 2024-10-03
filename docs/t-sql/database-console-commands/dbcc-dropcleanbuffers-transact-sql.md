@@ -46,8 +46,6 @@ Syntax for [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] an
 DBCC DROPCLEANBUFFERS ( COMPUTE | ALL ) [ WITH NO_INFOMSGS ]
 ```
 
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 
 #### WITH NO_INFOMSGS

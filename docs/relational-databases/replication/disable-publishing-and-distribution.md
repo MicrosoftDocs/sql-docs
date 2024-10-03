@@ -3,11 +3,12 @@ title: "Disable Publishing and Distribution"
 description: Learn how to disable publishing and distribution in SQL Server by using SQL Server Management Studio, Transact-SQL, or Replication Management Objects.
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/14/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: how-to
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "disabling publishing"
   - "publishing [SQL Server replication], disabling"
@@ -125,8 +126,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
   
  [!code-vb[HowTo#rmo_vb_DropDistPubForce](../../relational-databases/replication/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_dropdistpubforce)]  
   
-## See Also  
- [Replication Management Objects Concepts](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)   
- [Replication System Stored Procedures Concepts](../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)  
-  
-  
+## Related content
+
+- [Replication Management Objects Concepts](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)
+- [Replication System Stored Procedures Concepts](../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)

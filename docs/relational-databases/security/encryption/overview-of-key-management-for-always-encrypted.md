@@ -59,7 +59,7 @@ When Always Encrypted keys are managed without role separation, a single person 
 
 ## Tools for Managing Always Encrypted Keys
 
-Always Encrypted keys can be managed using [SQL Server Management Studio (SSMS)](../../../ssms/sql-server-management-studio-ssms.md) and [PowerShell](../../../powershell/sql-server-powershell.md):
+Always Encrypted keys can be managed using [SQL Server Management Studio (SSMS)](../../../ssms/sql-server-management-studio-ssms.md) and [PowerShell](/powershell/sql-server/sql-server-powershell):
 
 - **SQL Server Management Studio (SSMS)** - provides dialogs and wizards that combine tasks involving key store access and database access, so SSMS doesn't support role separation, but it makes configuring your keys easy. For more information about managing keys using SSMS, see:
   - [Provision Always Encrypted keys using SQL Server Management Studio](configure-always-encrypted-keys-using-ssms.md)

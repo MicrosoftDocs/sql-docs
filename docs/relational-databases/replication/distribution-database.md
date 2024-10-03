@@ -3,11 +3,12 @@ title: "Distribution Database"
 description: In SQL Server, the distribution database stores metadata and history data for all types of replication, and transactions for transactional replication.
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/14/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: ui-reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 f1_keywords:
   - "sql13.rep.configuredistributionwizard.distributiondatabase.f1"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
@@ -28,9 +29,8 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 > [!NOTE]  
 >  You can decrease the time it takes to write transactions and improve the performance of replication by placing the distribution database log on a separate disk drive from the distribution database.  
   
-## See Also  
- [Configure Distribution](../../relational-databases/replication/configure-distribution.md)   
- [Configure Publishing and Distribution](../../relational-databases/replication/configure-publishing-and-distribution.md)   
- [View and Modify Distributor and Publisher Properties](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)  
-  
-  
+## Related content
+
+- [Configure Distribution](../../relational-databases/replication/configure-distribution.md)
+- [Configure Publishing and Distribution](../../relational-databases/replication/configure-publishing-and-distribution.md)
+- [View and Modify Distributor and Publisher Properties](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)

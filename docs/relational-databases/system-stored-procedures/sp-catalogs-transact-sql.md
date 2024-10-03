@@ -1,9 +1,10 @@
 ---
 title: "sp_catalogs (Transact-SQL)"
-description: "sp_catalogs (Transact-SQL)"
+description: sp_catalogs returns the list of catalogs in the specified linked server.
 author: markingmyname
 ms.author: maghan
-ms.date: "03/14/2017"
+ms.reviewer: randolphwest
+ms.date: 07/05/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -16,55 +17,59 @@ dev_langs:
   - "TSQL"
 ---
 # sp_catalogs (Transact-SQL)
+
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  Returns the list of catalogs in the specified linked server. This is equivalent to databases in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
-  
- :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
-  
-## Syntax  
-  
-```  
-  
-sp_catalogs [ @server_name = ] 'linked_svr'  
-```  
-  
-## Arguments  
-`[ @server_name = ] 'linked_svr'`
- Is the name of a linked server. *linked_svr* is **sysname**, with no default.  
-  
-## Result Sets  
-  
-|Column name|Data type|Description|  
-|-----------------|---------------|-----------------|  
-|**Catalog_name**|**nvarchar(**128**)**|Name of the catalog|  
-|**Description**|**nvarchar(**4000**)**|Description of the catalog|  
-  
-## Permissions  
- Requires SELECT permission on the schema.  
-  
-## Examples  
- The following example returns catalog information for the linked server named `OLE DB ODBC Linked Server #3`.  
-  
+Returns the list of catalogs in the specified linked server. This is equivalent to databases in [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)].
+
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+
+## Syntax
+
+```syntaxsql
+sp_catalogs [ @server_name = ] N'server_name'
+[ ; ]
+```
+
+## Arguments
+
+#### [ @server_name = ] N'*server_name*'
+
+The name of a linked server. *@server_name* is **sysname**, with no default.
+
+## Result set
+
+| Column name | Data type | Description |
+| --- | --- | --- |
+| `CATALOG_NAME` | **nvarchar(128)** | Name of the catalog |
+| `DESCRIPTION` | **nvarchar(4000)** | Description of the catalog |
+
+## Permissions
+
+Requires `SELECT` permission on the schema.
+
+## Examples
+
+The following example returns catalog information for the linked server named `OLE DB ODBC Linked Server #3`.
+
 > [!NOTE]  
->  For **sp_catalogs** to provide useful information, the `OLE DB ODBC Linked Server #3` must already exist.  
-  
-```  
-USE master;  
-GO  
-EXEC sp_catalogs 'OLE DB ODBC Linked Server #3';  
-```  
-  
-## See Also  
- [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
- [sp_columns_ex &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-columns-ex-transact-sql.md)   
- [sp_column_privileges &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-column-privileges-transact-sql.md)   
- [sp_foreignkeys &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-foreignkeys-transact-sql.md)   
- [sp_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-indexes-transact-sql.md)   
- [sp_linkedservers &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-linkedservers-transact-sql.md)   
- [sp_primarykeys &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-primarykeys-transact-sql.md)   
- [sp_tables_ex &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tables-ex-transact-sql.md)   
- [sp_table_privileges &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-table-privileges-transact-sql.md)   
- [System Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
-  
-  
+> For `sp_catalogs` to provide useful information, the `OLE DB ODBC Linked Server #3` must already exist.
+
+```sql
+USE master;
+GO
+EXEC sp_catalogs 'OLE DB ODBC Linked Server #3';
+```
+
+## Related content
+
+- [sp_addlinkedserver (Transact-SQL)](sp-addlinkedserver-transact-sql.md)
+- [sp_columns_ex (Transact-SQL)](sp-columns-ex-transact-sql.md)
+- [sp_column_privileges (Transact-SQL)](sp-column-privileges-transact-sql.md)
+- [sp_foreignkeys (Transact-SQL)](sp-foreignkeys-transact-sql.md)
+- [sp_indexes (Transact-SQL)](sp-indexes-transact-sql.md)
+- [sp_linkedservers (Transact-SQL)](sp-linkedservers-transact-sql.md)
+- [sp_primarykeys (Transact-SQL)](sp-primarykeys-transact-sql.md)
+- [sp_tables_ex (Transact-SQL)](sp-tables-ex-transact-sql.md)
+- [sp_table_privileges (Transact-SQL)](sp-table-privileges-transact-sql.md)
+- [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)

@@ -4,7 +4,7 @@ description: sys.dm_tran_locks returns information about currently active lock m
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: wiassaf
-ms.date: 10/04/2023
+ms.date: 09/29/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -32,11 +32,11 @@ The columns in the result set are divided into two main groups: resource and req
 
 | Column name | Data type | Description |
 | --- | --- | --- |
-| `resource_type` | **nvarchar(60)** | Represents the resource type. The value can be: DATABASE, FILE, OBJECT, PAGE, KEY, EXTENT, RID, APPLICATION, METADATA, HOBT, ALLOCATION_UNIT, or XACT. |
+| `resource_type` | **nvarchar(60)** | Represents the resource type. The value can be: <br/><br/>DATABASE<br/><br/>FILE<br/><br/>OBJECT<br/><br/>PAGE<br/><br/>KEY<br/><br/>EXTENT<br/><br/>RID (Row ID)<br/><br/>APPLICATION<br/><br/>METADATA<br/><br/>HOBT (Heap or B-tree)<br/><br/>ALLOCATION_UNIT<br/><br/>XACT (Transaction)<br/><br/>OIB (Online index build)<br/><br/>ROW_GROUP|
 | `resource_subtype` | **nvarchar(60)** | Represents a subtype of `resource_type`. Acquiring a subtype lock without holding a non-subtyped lock of the parent type is technically valid. Different subtypes do not conflict with each other or with the non-subtyped parent type. Not all resource types have subtypes. |
 | `resource_database_id` | **int** | ID of the database under which this resource is scoped. All resources handled by the lock manager are scoped by the database ID. |
 | `resource_description` | **nvarchar(256)** | Description of the resource that contains only information that is not available from other resource columns. |
-| `resource_associated_entity_id` | **bigint** | ID of the entity in a database with which a resource is associated. This can be an object ID, Hobt ID, or an Allocation Unit ID, depending on the resource type. |
+| `resource_associated_entity_id` | **bigint** | ID of the entity in a database with which a resource is associated. This can be an object ID, HOBT ID, or an Allocation Unit ID, depending on the resource type. |
 | `resource_lock_partition` | **Int** | ID of the lock partition for a partitioned lock resource. The value for nonpartitioned lock resources is `0`. |
 | `request_mode` | **nvarchar(60)** | Mode of the request. For granted requests, this is the granted mode; for waiting requests, this is the mode being requested.<br /><br />NULL = No access is granted to the resource. Serves as a placeholder.<br /><br />Sch-S (Schema stability) = Ensures that a schema element, such as a table or index, is not dropped while any session holds a schema stability lock on the schema element.<br /><br />Sch-M (Schema modification) = Must be held by any session that wants to change the schema of the specified resource. Ensures that no other sessions are referencing the indicated object.<br /><br />S (Shared) = The holding session is granted shared access to the resource.<br /><br />U (Update) = Indicates an update lock acquired on resources that may eventually be updated. It is used to prevent a common form of deadlock that occurs when multiple sessions lock resources for potential update in the future.<br /><br />X (Exclusive) = The holding session is granted exclusive access to the resource.<br /><br />IS (Intent Shared) = Indicates the intention to place S locks on some subordinate resource in the lock hierarchy.<br /><br />IU (Intent Update) = Indicates the intention to place U locks on some subordinate resource in the lock hierarchy.<br /><br />IX (Intent Exclusive) = Indicates the intention to place X locks on some subordinate resource in the lock hierarchy.<br /><br />SIU (Shared Intent Update) = Indicates shared access to a resource with the intent of acquiring update locks on subordinate resources in the lock hierarchy.<br /><br />SIX (Shared Intent Exclusive) = Indicates shared access to a resource with the intent of acquiring exclusive locks on subordinate resources in the lock hierarchy.<br /><br />UIX (Update Intent Exclusive) = Indicates an update lock hold on a resource with the intent of acquiring exclusive locks on subordinate resources in the lock hierarchy.<br /><br />BU = Used by bulk operations.<br /><br />RangeS_S (Shared Key-Range and Shared Resource lock) = Indicates serializable range scan.<br /><br />RangeS_U (Shared Key-Range and Update Resource lock) = Indicates serializable update scan.<br /><br />RangeI_N (Insert Key-Range and Null Resource lock) = Used to test ranges before inserting a new key into an index.<br /><br />RangeI_S = Key-Range Conversion lock, created by an overlap of RangeI_N and S locks.<br /><br />RangeI_U = Key-Range Conversion lock, created by an overlap of RangeI_N and U locks.<br /><br />RangeI_X = Key-Range Conversion lock, created by an overlap of RangeI_N and X locks.<br /><br />RangeX_S = Key-Range Conversion lock, created by an overlap of RangeI_N and RangeS_S. locks.<br /><br />RangeX_U = Key-Range Conversion lock, created by an overlap of RangeI_N and RangeS_U locks.<br /><br />RangeX_X (Exclusive Key-Range and Exclusive Resource lock) = This is a conversion lock used when updating a key in a range. |
 | `request_type` | **nvarchar(60)** | Request type. The value is LOCK. |
@@ -101,7 +101,7 @@ The following table lists the resources that are represented in the `resource_as
 | --- | --- | --- |
 | DATABASE | Represents a database. | Not applicable |
 | FILE | Represents a database file. This file can be either a data or a log file. | Not applicable |
-| OBJECT | Represents a database object. This object can be a data table, view, stored procedure, extended stored procedure, or any object that has an object ID. | Object ID |
+| OBJECT | Represents an object in a database. This object can be a data table, view, stored procedure, extended stored procedure, or any object that has an object ID. | Object ID |
 | PAGE | Represents a single page in a data file. | HoBt ID. This value corresponds to `sys.partitions.hobt_id`. The HoBt ID is not always available for PAGE resources because the HoBt ID is extra information that can be provided by the caller, and not all callers can provide this information. |
 | KEY | Represents a row in an index. | HoBt ID. This value corresponds to `sys.partitions.hobt_id`. |
 | EXTENT | Represents a data file extent. An extent is a group of eight contiguous pages. | Not applicable |
@@ -109,8 +109,10 @@ The following table lists the resources that are represented in the `resource_as
 | APPLICATION | Represents an application specified resource. | Not applicable |
 | METADATA | Represents metadata information. | Not applicable |
 | HOBT | Represents a heap or a B-tree. These are the basic access path structures. | HoBt ID. This value corresponds to `sys.partitions.hobt_id`. |
+| OIB | Represents online index (re)build. | HoBt ID. This value corresponds to `sys.partitions.hobt_id`. |
 | ALLOCATION_UNIT | Represents a set of related pages, such as an index partition. Each allocation unit covers a single Index Allocation Map (IAM) chain. | Allocation Unit ID. This value corresponds to `sys.allocation_units.allocation_unit_id`. |
-| XACT | The XACT resource. Related to [Optimized locking](../performance/optimized-locking.md). | There are two scenarios:<br /><br />***Scenario 1* (Owner)**<br />- **Resource type**: `XACT`.<br />- **Resource description**: When a TID lock is held, the `resource_description` is the `XACT` resource.<br />- **Resource associated entity ID**: `resource_associated_entity_id` is 0.<br /><br />***Scenario 2* (Waiter)**<br />- **Resource type**: `XACT`.<br />- **Resource description**: When we wait for a TID lock, the `resource_description` is the `XACT` resource followed by the underlying `KEY` or `RID` resource.<br />- **Resource associated entity ID**: `resource_associated_entity_id` is the underlying HoBt ID. |
+| ROW_GROUP | Represents a columnstore row group. | |
+| XACT | Represents a transaction. Occurs when [optimized locking](../performance/optimized-locking.md) is enabled. | There are two scenarios:<br /><br />***Scenario 1* (Owner)**<br />- **Resource type**: `XACT`.<br />- **Resource description**: When a TID lock is held, the `resource_description` is the `XACT` resource.<br />- **Resource associated entity ID**: `resource_associated_entity_id` is 0.<br /><br />***Scenario 2* (Waiter)**<br />- **Resource type**: `XACT`.<br />- **Resource description**: When a request waits for a TID lock, the `resource_description` is the `XACT` resource followed by the underlying `KEY` or `RID` resource.<br />- **Resource associated entity ID**: `resource_associated_entity_id` is the underlying HoBt ID. |
 
 [!INCLUDE [sql-b-tree](../../includes/sql-b-tree.md)]
 
@@ -214,9 +216,9 @@ The following table provides the format of the `resource_description` column for
 | APPLICATION | `<DbPrincipalId>:<up to 32 characters>:(<hash_value>)` | Represents the ID of the database principal that is used for scoping this application lock resource. Also included are up to 32 characters from the resource string that corresponds to this application lock resource. In certain cases, only two characters can be displayed due to the full string no longer being available. This behavior occurs only at database recovery time for application locks that are reacquired as part of the recovery process. The hash value represents a hash of the full resource string that corresponds to this application lock resource. |
 | HOBT | Not applicable | HoBt ID is included as the `resource_associated_entity_id`. |
 | ALLOCATION_UNIT | Not applicable | Allocation Unit ID is included as the `resource_associated_entity_id`. |
-| XACT | `<dbid>:<XdesId low>:<XdesId high>` | The TID resource. Related to [Optimized locking](../performance/optimized-locking.md). |
-| XACT KEY | `[XACT <dbid>:<XdesId low>:<XdesId High>] KEY (<hash_value>)` | The underlying resource the transaction is waiting on, with a clustered index KEY object. Related to [Optimized locking](../performance/optimized-locking.md). |
-| XACT RID | `[XACT <dbid>:<XdesId low>:<XdesId High>] RID (<file_id>:<page_in_file>:<row_on_page>)` | The underlying resource the transaction is waiting on, with a heap RID object. Related to [Optimized locking](../performance/optimized-locking.md). |
+| XACT | `<dbid>:<XdesId low>:<XdesId high>` | The TID (transaction ID) resource. Occurs when [optimized locking](../performance/optimized-locking.md) is enabled. |
+| XACT KEY | `[XACT <dbid>:<XdesId low>:<XdesId High>] KEY (<hash_value>)` | The underlying resource the transaction is waiting on, with an index KEY object. Occurs when [optimized locking](../performance/optimized-locking.md) is enabled. |
+| XACT RID | `[XACT <dbid>:<XdesId low>:<XdesId High>] RID (<file_id>:<page_in_file>:<row_on_page>)` | The underlying resource the transaction is waiting on, with a heap RID object. Occurs when [optimized locking](../performance/optimized-locking.md) is enabled. |
 | METADATA.ASSEMBLY | `assembly_id = A` | [!INCLUDE [ssInternalOnly](../../includes/ssinternalonly-md.md)] |
 | METADATA.ASSEMBLY_CLR_NAME | `$qname_id = Q` | [!INCLUDE [ssInternalOnly](../../includes/ssinternalonly-md.md)] |
 | METADATA.ASSEMBLY_TOKEN | `assembly_id = A`, `$token_id` | [!INCLUDE [ssInternalOnly](../../includes/ssinternalonly-md.md)] |

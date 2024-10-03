@@ -31,7 +31,7 @@ Refer to the [Microsoft Privacy Statement](https://go.microsoft.com/fwlink/?Link
 The data classification in this article only applies to versions of the SQL Server on-premises product.
 
 It doesn't apply to the items listed below:
-- [Azure Data Studio](../azure-data-studio/usage-data-collection.md)
+- [Azure Data Studio](/azure-data-studio/usage-data-collection)
 - [SQL Server Management Studio (SSMS)](../ssms/sql-server-management-studio-telemetry-ssms.md)
 - [SQL Server Data Tools (SSDT)](../ssdt/anonymous-usage-data.md)
 - [Database Migration Assistant (DMA)](../dma/dma-diagnostic-data-collection.md)

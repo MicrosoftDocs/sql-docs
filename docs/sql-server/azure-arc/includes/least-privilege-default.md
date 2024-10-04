@@ -6,6 +6,6 @@ ms.date: 08/22/2024
 ms.author: mikeray
 ---
 
-Existing servers with extension `1.1.2717.190` (June 2024) or later will have least privileged configuration automatically applied. This application will happen gradually.
+Existing servers with the extension from the November 2024 release or later will automatically have least privileged configuration applied. This application will happen gradually.
 
-To prevent automatic application of least privilege, block extension upgrades to version `1.1.2717.190` or later.
+To prevent automatic application of least privilege, block extension upgrades to the November 2024 release.

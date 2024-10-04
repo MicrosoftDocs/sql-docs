@@ -3,11 +3,12 @@ title: "Set history retention period (SSMS)"
 description: Learn how to set the distribution database history retention period in SQL Server Management Studio (SSMS).
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/01/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: ui-reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "history retention periods [SQL Server replication]"
   - "retention periods [SQL Server replication]"
@@ -25,7 +26,6 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
   
 3.  Select **OK**.
   
-## See Also  
- [Configure Distribution](../../relational-databases/replication/configure-distribution.md)  
-  
-  
+## Related content
+
+- [Configure Distribution](../../relational-databases/replication/configure-distribution.md)

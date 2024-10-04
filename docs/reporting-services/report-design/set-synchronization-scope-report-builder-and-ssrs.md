@@ -3,11 +3,12 @@ title: "Set synchronization scope in a paginated report"
 description: Set synchronization scope in a paginated report with indicators to convey data values by synchronizing across the range of indicator values in Report Builder.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/07/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 # Set synchronization scope in a paginated report (Report Builder)
 
@@ -35,7 +36,6 @@ ms.custom: updatefrequency5
   
 4.  Select **OK**.
   
-## See Also  
- [Indicators &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  
-  
-  
+## Related content
+
+- [Indicators &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)

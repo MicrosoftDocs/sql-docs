@@ -3,11 +3,12 @@ title: "Images in paginated reports"
 description: Find out about images as items in paginated reports in Report Builder. These items contain a reference to an image embedded in a report or stored in a database.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 11/4/2022
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 # Images in paginated reports (Report Builder)
 
@@ -82,8 +83,7 @@ SVG files aren't supported.
  [Add a Data-Bound Image &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/add-a-data-bound-image-report-builder-and-ssrs.md)  
   
   
-## See Also  
- [Exporting to an Image File &#40;Report Builder and SSRS&#41;](../../reporting-services/report-builder/exporting-to-an-image-file-report-builder-and-ssrs.md)   
- [Rendering Behaviors &#40;Report Builder  and SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)  
-  
-  
+## Related content
+
+- [Exporting to an Image File &#40;Report Builder and SSRS&#41;](../../reporting-services/report-builder/exporting-to-an-image-file-report-builder-and-ssrs.md)
+- [Rendering Behaviors &#40;Report Builder  and SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)

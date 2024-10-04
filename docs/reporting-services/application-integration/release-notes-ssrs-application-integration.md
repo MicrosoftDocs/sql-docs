@@ -4,11 +4,12 @@ description: The release notes for the Report Viewer controls of WebForms and Wi
 author: RhysSchmidtke
 ms.author: petebro
 ms.reviewer: maggies
-ms.date: 08/30/2022
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: application-integration
 ms.topic: reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 
 # Release notes for Report Viewer controls for WebForms and WinForms of SSRS
@@ -78,9 +79,7 @@ For the release notes for SSRS, see [Release notes for SQL Server Reporting Serv
 | The WebForms Report Viewer Control. | Supports embedding in RTL pages (pages that change the text flow by using the *direction: rtl;* css property).<br/><br/>Supports customizing print dialog text via the *IReportViewerMessages5* localization interface.<br/><br/>Improved accessibility support.<br/><br/>&bull; &nbsp; &nbsp; [NuGet package for the Report Viewer control of WebForms](https://www.nuget.org/packages/Microsoft.ReportingServices.ReportViewerControl.Webforms/150.900.148). |
 | The WinForms Report Viewer Control. | Fix for printing when an app is running in a High DPI mode.<br/><br/>&bull; &nbsp; &nbsp; [NuGet package for the Report Viewer control of WinForms](https://www.nuget.org/packages/Microsoft.ReportingServices.ReportViewerControl.Winforms/150.900.148). |
 
-## Next steps
+## Related content
 
-[Getting started](integrating-reporting-services-using-reportviewer-controls-get-started.md) with the Report Viewer controls.
-
-More questions? [Try the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231).
-
+- [Getting started](integrating-reporting-services-using-reportviewer-controls-get-started.md)
+- [Try the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

@@ -3,11 +3,12 @@ title: "Reporting Services Delivery Extension Settings"
 description: Reporting Services offers e-mail delivery to send reports to users and file share delivery to send reports to a share. Learn about delivery extension settings.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/03/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-server-web-service
 ms.topic: reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "XML Web service [Reporting Services], delivery extension settings"
   - "Report Server Web service, delivery extension settings"
@@ -56,8 +57,7 @@ helpviewer_keywords:
 |**PASSWORD**|The password required to access the network resource or disk.|  
 |**WRITEMODE**|The write mode to use when accessing the disk. Valid values are **None**, **Overwrite**, and **AutoIncrement**.|  
   
-## See Also  
- [Technical Reference &#40;SSRS&#41;](../../../reporting-services/technical-reference-ssrs.md)   
- [Building Applications Using the Web Service and the .NET Framework](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)  
-  
-  
+## Related content
+
+- [Technical Reference &#40;SSRS&#41;](../../../reporting-services/technical-reference-ssrs.md)
+- [Building Applications Using the Web Service and the .NET Framework](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)

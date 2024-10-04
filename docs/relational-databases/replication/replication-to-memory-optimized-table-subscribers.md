@@ -3,11 +3,12 @@ title: "Replication to Memory-Optimized Table Subscribers"
 description: "Replication to Memory-Optimized Table Subscribers"
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "11/21/2016"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: how-to
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Replication to Memory-Optimized Table Subscribers

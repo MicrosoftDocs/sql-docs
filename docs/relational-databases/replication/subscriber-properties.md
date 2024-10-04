@@ -3,11 +3,12 @@ title: "Subscriber Properties"
 description: "Subscriber Properties"
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/14/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: ui-reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 f1_keywords:
   - "sql13.rep.configdistwizard.subscribers.f1"
 helpviewer_keywords:
@@ -35,8 +36,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016"
  **Miscellaneous**  
  Includes information on the Subscriber and Subscriber type.  
   
-## See Also  
- [View and Modify Distributor and Publisher Properties](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
- [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)  
-  
-  
+## Related content
+
+- [View and Modify Distributor and Publisher Properties](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)
+- [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)

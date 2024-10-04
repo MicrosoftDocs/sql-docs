@@ -3,11 +3,12 @@ title: "Using the RSClientPrint Control in Custom Applications"
 description: RSPrintClient provides client-side printing for reports viewed in HTML Viewer. The report server renders the report in the Image (EMF) rendering extension.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/14/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-server-web-service
 ms.topic: reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "RSPrintClient control"
   - "print controls [Reporting Services]"
@@ -132,9 +133,8 @@ helpviewer_keywords:
   
  `</BODY>`  
   
-## See Also  
- [Print Reports from a Browser with the Print Control &#40;Report Builder and SSRS&#41;](../../../reporting-services/report-builder/print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs.md)   
- [Print Reports &#40;Report Builder and SSRS&#41;](../../../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md)   
- [Image Device Information Settings](../../../reporting-services/image-device-information-settings.md)  
-  
-  
+## Related content
+
+- [Print Reports from a Browser with the Print Control &#40;Report Builder and SSRS&#41;](../../../reporting-services/report-builder/print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs.md)
+- [Print Reports &#40;Report Builder and SSRS&#41;](../../../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md)
+- [Image Device Information Settings](../../../reporting-services/image-device-information-settings.md)

@@ -3,11 +3,12 @@ title: "SetSecureConnectionLevel method (WMI MSReportServer_ConfigurationSetting
 description: "SetSecureConnectionLevel method (WMI MSReportServer_ConfigurationSetting)"
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/01/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: wmi-provider-library-reference
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "SetSecureConnectionLevel method"
 apilocation: "reportingservices.mof"
@@ -49,7 +50,6 @@ public void SetSecureConnectionLevel(Int32 Level,
 ## Requirements  
  **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## Related content  
- [MSReportServer_ConfigurationSetting members](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
-  
-  
+## Related content
+
+- [MSReportServer_ConfigurationSetting members](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)

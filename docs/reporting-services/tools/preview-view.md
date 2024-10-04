@@ -3,11 +3,12 @@ title: "Preview view"
 description: Learn about the Preview view of the Reporting Services Report Designer where you view a display of your rendered report.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 05/30/2016
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: tools
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 f1_keywords:
   - "sql13.rtp.rptdesigner.previewview.f1"
 helpviewer_keywords:
@@ -78,8 +79,7 @@ In [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] Report Desig
  **(18) Find Next**  
  Choose this option to search for the next instance of the search text.  
   
-## Related content  
-+ [Preview reports](../../reporting-services/reports/previewing-reports.md)
-+ [Report designer F1 help](../../reporting-services/tools/report-designer-f1-help.md)  
-  
-  
+## Related content
+
+- [Preview reports](../../reporting-services/reports/previewing-reports.md)
+- [Report designer F1 help](../../reporting-services/tools/report-designer-f1-help.md)

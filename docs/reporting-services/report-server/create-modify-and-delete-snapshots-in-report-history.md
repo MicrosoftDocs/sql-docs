@@ -3,11 +3,12 @@ title: "Create, modify, and delete snapshots in report history"
 description: Learn how to maintain report history in Reporting Services by adding and deleting snapshots, or by modifying properties that affect report history storage.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/01/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-server
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "snapshots [Reporting Services]"
   - "report snapshots [Reporting Services]"
@@ -51,10 +52,10 @@ helpviewer_keywords:
   
  Report history is also deleted when you delete a report. For example, if you delete a monthly sales report because you're replacing it with a newer version, all report history that is associated with the report is also deleted. However, if you move a report, all report history moves with it.  
   
-## Related content  
- [Create report history &#40;Reporting Services in SharePoint integrated mode&#41;](../../reporting-services/report-server/create-report-history-reporting-services-in-sharepoint-integrated-mode.md)   
- [Report manager &#40;SSRS native mode&#41;](../web-portal-ssrs-native-mode.md)   
- [Report server content management &#40;SSRS native mode&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
- [Add a snapshot to report history &#40;report manager&#41;](../../reporting-services/report-server/add-a-snapshot-to-report-history-report-manager.md)   
- [Limit report history &#40;report manager&#41;](../../reporting-services/reports/limit-report-history-report-manager.md)  
-  
+## Related content
+
+- [Create report history &#40;Reporting Services in SharePoint integrated mode&#41;](../../reporting-services/report-server/create-report-history-reporting-services-in-sharepoint-integrated-mode.md)
+- [Report manager &#40;SSRS native mode&#41;](../web-portal-ssrs-native-mode.md)
+- [Report server content management &#40;SSRS native mode&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)
+- [Add a snapshot to report history &#40;report manager&#41;](../../reporting-services/report-server/add-a-snapshot-to-report-history-report-manager.md)
+- [Limit report history &#40;report manager&#41;](../../reporting-services/reports/limit-report-history-report-manager.md)

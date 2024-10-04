@@ -3,11 +3,12 @@ title: "MSSQL_ENG014121"
 description: "MSSQL_ENG014121"
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/14/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "MSSQL_ENG014121 error"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
@@ -34,8 +35,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
   
  Execute [sp_dropdistributiondb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdistributiondb-transact-sql.md) for any distribution databases associated with this Distributor. After all distribution database associations are removed, you can disable distribution.  
   
-## See Also  
- [Errors and Events Reference &#40;Replication&#41;](../../relational-databases/replication/errors-and-events-reference-replication.md)   
- [Configure Distribution](../../relational-databases/replication/configure-distribution.md)  
-  
-  
+## Related content
+
+- [Errors and Events Reference &#40;Replication&#41;](../../relational-databases/replication/errors-and-events-reference-replication.md)
+- [Configure Distribution](../../relational-databases/replication/configure-distribution.md)

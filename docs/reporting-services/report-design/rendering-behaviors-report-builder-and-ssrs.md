@@ -3,11 +3,12 @@ title: "Rendering behaviors in a paginated report"
 description: Learn about the rules that are applied to the paginated report body and its contents when rendering a report in Report Builder.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/07/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 # Rendering behaviors in a paginated report (Report Builder)
 
@@ -122,9 +123,8 @@ ms.custom: updatefrequency5
   
 -   Logical page breaks defined on items in table or matrix cells are not kept. This does not apply to items in lists.  
   
-## See Also  
- [Interactive Functionality for Different Report Rendering Extensions &#40;Report Builder and SSRS&#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
- [Rendering to HTML &#40;Report Builder and SSRS&#41;](../../reporting-services/report-builder/rendering-to-html-report-builder-and-ssrs.md)   
- [Page Layout and Rendering &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/page-layout-and-rendering-report-builder-and-ssrs.md)  
-  
-  
+## Related content
+
+- [Interactive Functionality for Different Report Rendering Extensions &#40;Report Builder and SSRS&#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)
+- [Rendering to HTML &#40;Report Builder and SSRS&#41;](../../reporting-services/report-builder/rendering-to-html-report-builder-and-ssrs.md)
+- [Page Layout and Rendering &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/page-layout-and-rendering-report-builder-and-ssrs.md)

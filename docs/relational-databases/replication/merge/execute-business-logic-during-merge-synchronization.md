@@ -3,11 +3,12 @@ title: "Business logic for Merge synchronization"
 description: Learn about writing managed assembly code tor the business logic used for synchronization for Merge Replication.
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/01/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: how-to
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "custom error resolution [SQL Server replication]"
   - "custom change handling [SQL Server replication]"
@@ -82,10 +83,9 @@ helpviewer_keywords:
   
 -   An Internet Information Services (IIS) server if Web synchronization is used. Use a pull subscription synchronized with Web synchronization, and the business logic handler will execute at the IIS Server.  
   
-## See Also  
- [Merge Replication](../../../relational-databases/replication/merge/merge-replication.md)   
- [Subscribe to Publications](../../../relational-databases/replication/subscribe-to-publications.md)   
- [Synchronize Data](../../../relational-databases/replication/synchronize-data.md)   
- [Web Synchronization for Merge Replication](../../../relational-databases/replication/web-synchronization-for-merge-replication.md)  
-  
-  
+## Related content
+
+- [Merge Replication](../../../relational-databases/replication/merge/merge-replication.md)
+- [Subscribe to Publications](../../../relational-databases/replication/subscribe-to-publications.md)
+- [Synchronize Data](../../../relational-databases/replication/synchronize-data.md)
+- [Web Synchronization for Merge Replication](../../../relational-databases/replication/web-synchronization-for-merge-replication.md)

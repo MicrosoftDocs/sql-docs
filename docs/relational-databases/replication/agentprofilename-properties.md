@@ -3,11 +3,12 @@ title: "&lt;AgentProfileName&gt; Properties"
 description: "&lt;AgentProfileName&gt; Properties"
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/01/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: ui-reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 f1_keywords:
   - "sql13.rep.profiles.perfprofileprops.f1"
 helpviewer_keywords:
@@ -47,9 +48,8 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
  **Show only parameters used in this profile**  
  Clear to show all valid parameters for a given agent.  
   
-## See Also  
- [Work with Replication Agent Profiles](../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)   
- [Replication Agents Overview](../../relational-databases/replication/agents/replication-agents-overview.md)   
- [Replication Agent Profiles](../../relational-databases/replication/agents/replication-agent-profiles.md)  
-  
-  
+## Related content
+
+- [Work with Replication Agent Profiles](../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)
+- [Replication Agents Overview](../../relational-databases/replication/agents/replication-agents-overview.md)
+- [Replication Agent Profiles](../../relational-databases/replication/agents/replication-agent-profiles.md)

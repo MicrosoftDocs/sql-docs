@@ -3,11 +3,12 @@ title: "New Peer Initialization (Peer-to-Peer)"
 description: Describes the 'New Peer Initialization' used for Peer to Peer Replication in SQL Server Management Studio (SSMS).
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/01/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: ui-reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 f1_keywords:
   - "sql13.rep.p2pwizard.init.f1"
 ---
@@ -37,8 +38,7 @@ f1_keywords:
     |[!INCLUDE[sql2008-md](../../includes/sql2008-md.md)]|[!INCLUDE[sql2008-md](../../includes/sql2008-md.md)]|[!INCLUDE[sql2008-md](../../includes/sql2008-md.md)]|Enabled|  
     |[!INCLUDE[sql2008-md](../../includes/sql2008-md.md)]|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|None|Enabled|  
   
-## See Also  
- [Administer a Peer-to-Peer Topology &#40;Replication Transact-SQL Programming&#41;](../../relational-databases/replication/administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   
- [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)  
-  
-  
+## Related content
+
+- [Administer a Peer-to-Peer Topology &#40;Replication Transact-SQL Programming&#41;](../../relational-databases/replication/administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)
+- [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)

@@ -3,11 +3,12 @@ title: "Security extensions overview"
 description: Find out about security extensions in Reporting Services. See the situations in which custom authentication and authorization is appropriate.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 05/24/2018
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: extensions
 ms.topic: reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "security [Reporting Services], extensions"
 ---
@@ -55,6 +56,4 @@ helpviewer_keywords:
   
 ## Related content
 
-- [Implement a security extension](../../../reporting-services/extensions/security-extension/implementing-a-security-extension.md)   
-  
-  
+- [Implement a security extension](../../../reporting-services/extensions/security-extension/implementing-a-security-extension.md)

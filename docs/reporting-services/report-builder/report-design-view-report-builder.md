@@ -3,11 +3,12 @@ title: "Report design view in Report Builder"
 description: Learn about the interface in the Report Builder window that you use to add, select, organize report resources, and change report item properties.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 09/04/2024
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-builder
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 f1_keywords:
   - "10440"
   - "10426"
@@ -19,7 +20,7 @@ helpviewer_keywords:
   - "reports, creating"
   - "user interface"
   - "overview of Report Builder"
-#customer-intent: As a SQL Server report designer, I want to understand the Report Builder interface so that I can effectively create and manage reports.
+# customer-intent: As a SQL Server report designer, I want to understand the Report Builder interface so that I can effectively create and manage reports.
 ---
 # Report design view in Report Builder
 

@@ -3,11 +3,12 @@ title: "Add HTML into a paginated report"
 description: Find out how to import HTML using a placeholder from a field in your dataset to use in your paginated report in Report Builder.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/01/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 # Add HTML into a paginated report (Report Builder)
 
@@ -37,7 +38,7 @@ ms.custom: updatefrequency5
 1.  Select **OK**.
   
 ## Related content
- [Format numbers and dates &#40;Report Builder&#41;](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   
- [Format lines, colors, and images &#40;Report Builder&#41;](../../reporting-services/report-design/formatting-lines-colors-and-images-report-builder-and-ssrs.md)   
- [Placeholder Properties dialog, general &#40;Report Builder&#41;](./text-boxes-report-builder-and-ssrs.md)  
-  
+
+- [Format numbers and dates &#40;Report Builder&#41;](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)
+- [Format lines, colors, and images &#40;Report Builder&#41;](../../reporting-services/report-design/formatting-lines-colors-and-images-report-builder-and-ssrs.md)
+- [Placeholder Properties dialog, general &#40;Report Builder&#41;](./text-boxes-report-builder-and-ssrs.md)

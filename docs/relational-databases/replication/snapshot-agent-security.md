@@ -3,11 +3,12 @@ title: "Snapshot Agent Security"
 description: "Snapshot Agent Security"
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/14/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: ui-reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 f1_keywords:
   - "sql13.rep.security.SSA.f1"
 helpviewer_keywords:
@@ -48,10 +49,9 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
   
  The Windows account or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account used for the connection must at minimum be a member of the **db_owner** fixed database role in the publication database.  
   
-## See Also  
- [Identity and access control for replication](../../relational-databases/replication/security/identity-and-access-control-replication.md)   
- [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md)   
- [Replication Agents Overview](../../relational-databases/replication/agents/replication-agents-overview.md)   
- [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md)  
-  
-  
+## Related content
+
+- [Identity and access control for replication](../../relational-databases/replication/security/identity-and-access-control-replication.md)
+- [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md)
+- [Replication Agents Overview](../../relational-databases/replication/agents/replication-agents-overview.md)
+- [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md)

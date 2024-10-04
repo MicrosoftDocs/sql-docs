@@ -3,11 +3,12 @@ title: "Change time zones and clock settings on a report server"
 description: Change time zones & clock settings for a report server. You can't set a report server time zone, so set the computer's time zone or SharePoint region settings.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 08/19/2023
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: subscriptions
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "time zones [Reporting Services]"
   - "clocks [Reporting Services]"
@@ -37,8 +38,7 @@ helpviewer_keywords:
 ## Change the clock settings  
  Changing the computer clock has no effect on existing timestamp values. For example, if you move the clock forward an hour, the timestamps of report history snapshots don't change. There might be a delay of 10 seconds before the Scheduling and Delivery Processor uses the new setting. The actual delay might vary if you modified polling interval settings in the configuration files.  
 
-## Related content 
- [Start and stop the report server service](../../reporting-services/report-server/start-and-stop-the-report-server-service.md)   
- [Schedules](../../reporting-services/subscriptions/schedules.md)  
-  
+## Related content
 
+- [Start and stop the report server service](../../reporting-services/report-server/start-and-stop-the-report-server-service.md)
+- [Schedules](../../reporting-services/subscriptions/schedules.md)

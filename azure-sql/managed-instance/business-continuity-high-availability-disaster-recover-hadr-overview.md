@@ -71,8 +71,8 @@ The following table compares RPO and RTO of each business continuity option:
 
 | **Business continuity option** | **RTO (downtime)** | **RPO (data loss)** |
 | --- | --- | --- |
-| High Availability </br>(Enabling zone redundancy) | Typically less than 30 seconds | 0 |
-| Disaster Recovery </br>(Enabling failover groups) | 1 hour| 5 seconds </br> (Depends on data changes before the disruptive event that haven't been replicated) |
+| High Availability </br>(Using zone redundancy) | Typically less than 30 seconds | 0 |
+| Disaster Recovery </br>(Using failover groups with [customer managed failover policy](failover-group-sql-mi.md#failover-policy)) | Typically less than 60 seconds | Equal to or greater than 0 </br> (Depends on data changes before the disruptive event that haven't been replicated) |
 | Disaster Recovery </br>(Using geo-restore) | 12 hours | 1 hour|
 
 ## Business continuity checklists

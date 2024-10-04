@@ -3,11 +3,12 @@ title: "Start pie chart values at the top of the pie in a paginated report"
 description: Learn how to start pie chart values a the top of the chart in a paginated report rather than the default 90 degrees from the top.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/01/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 # Start pie chart values at the top of the pie in a paginated report (Report Builder)
 
@@ -37,8 +38,7 @@ You might want the first value to start at the top instead.
   
  The first value now starts at the top of the pie chart.  
   
-## See Also  
- [Formatting a Chart &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
- [Pie Charts &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/pie-charts-report-builder-and-ssrs.md)  
-  
-  
+## Related content
+
+- [Formatting a Chart &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)
+- [Pie Charts &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/pie-charts-report-builder-and-ssrs.md)

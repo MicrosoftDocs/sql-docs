@@ -3,11 +3,12 @@ title: "Lesson 1: Create a new website"
 description: "Learn how to create a new website project by using the ASP.NET website template for Visual C#."
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 05/18/2016
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: reporting-services
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 # Lesson 1: Create a new website
 In this lesson, you learn how to create a new website project using the ASP.NET website template for Visual C#.  
@@ -26,4 +27,5 @@ The website project opens and launches the **Report Wizard**. **Cancel** out of 
   
 ## Next step
 
-You successfully created a new website project. Next, you create a data connection and a data table for the parent report. See [Lesson 2: Define a data connection and data table for the parent report](../reporting-services/lesson-2-define-a-data-connection-and-data-table-for-parent-report.md).
+> [!div class="nextstepaction"]
+> [Lesson 2: Define a data connection and data table for the parent report](../reporting-services/lesson-2-define-a-data-connection-and-data-table-for-parent-report.md)

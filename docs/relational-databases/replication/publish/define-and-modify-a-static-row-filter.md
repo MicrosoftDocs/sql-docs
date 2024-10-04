@@ -3,11 +3,12 @@ title: "Define and Modify a Static Row Filter"
 description: "Define and Modify a Static Row Filter"
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/14/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: how-to
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "modifying filters, static row"
   - "static row filters"
@@ -148,10 +149,9 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
   
  :::code language="sql" source="../codesnippet/tsql/define-and-modify-a-stat_2.sql":::
   
-## See Also  
- [Define and Modify a Parameterized Row Filter for a Merge Article](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)   
- [Change Publication and Article Properties](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
- [Filter Published Data](../../../relational-databases/replication/publish/filter-published-data.md)   
- [Filter Published Data for Merge Replication](../../../relational-databases/replication/merge/filter-published-data-for-merge-replication.md)  
-  
-  
+## Related content
+
+- [Define and Modify a Parameterized Row Filter for a Merge Article](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)
+- [Change Publication and Article Properties](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)
+- [Filter Published Data](../../../relational-databases/replication/publish/filter-published-data.md)
+- [Filter Published Data for Merge Replication](../../../relational-databases/replication/merge/filter-published-data-for-merge-replication.md)

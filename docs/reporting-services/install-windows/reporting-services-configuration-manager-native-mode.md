@@ -3,17 +3,18 @@ title: "What is Report Server Configuration Manager (Native mode)?"
 description: "Learn about the Report Server Configuration Manager so that you can configure a SQL Server Reporting Services (SSRS) Native mode installation."
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 07/01/2024
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-server
 ms.topic: overview
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "Reporting Services Configuration tool"
   - "configuration options [Reporting Services]"
   - "report servers [Reporting Services], configuring"
   - "components [Reporting Services], Reporting Services Configuration tool"
-#customer intent: As a SQL Server user, I want to use Report Server Configuration Manager so that I can efficiently manage and configure SQL Server Reporting Services (SSRS) Native mode.
+# customer intent: As a SQL Server user, I want to use Report Server Configuration Manager so that I can efficiently manage and configure SQL Server Reporting Services (SSRS) Native mode.
 ---
 
 # What is Report Server Configuration Manager (Native mode)?
@@ -63,8 +64,7 @@ The Report Server Configuration Manager is version-specific. The Report Server C
 
 ## Related content
 
-- [Reporting Services tools](../../reporting-services/tools/reporting-services-tools.md)   
-- [Configure a report server database connection](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
-- [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md)   
-
-More questions? [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user).
+- [Reporting Services tools](../../reporting-services/tools/reporting-services-tools.md)
+- [Configure a report server database connection](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)
+- [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md)
+- [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)

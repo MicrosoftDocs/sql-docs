@@ -4,7 +4,7 @@ description: sys.dm_tran_locks returns information about currently active lock m
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: wiassaf
-ms.date: 09/06/2024
+ms.date: 09/29/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -101,7 +101,7 @@ The following table lists the resources that are represented in the `resource_as
 | --- | --- | --- |
 | DATABASE | Represents a database. | Not applicable |
 | FILE | Represents a database file. This file can be either a data or a log file. | Not applicable |
-| OBJECT | Represents a database object. This object can be a data table, view, stored procedure, extended stored procedure, or any object that has an object ID. | Object ID |
+| OBJECT | Represents an object in a database. This object can be a data table, view, stored procedure, extended stored procedure, or any object that has an object ID. | Object ID |
 | PAGE | Represents a single page in a data file. | HoBt ID. This value corresponds to `sys.partitions.hobt_id`. The HoBt ID is not always available for PAGE resources because the HoBt ID is extra information that can be provided by the caller, and not all callers can provide this information. |
 | KEY | Represents a row in an index. | HoBt ID. This value corresponds to `sys.partitions.hobt_id`. |
 | EXTENT | Represents a data file extent. An extent is a group of eight contiguous pages. | Not applicable |
@@ -109,10 +109,10 @@ The following table lists the resources that are represented in the `resource_as
 | APPLICATION | Represents an application specified resource. | Not applicable |
 | METADATA | Represents metadata information. | Not applicable |
 | HOBT | Represents a heap or a B-tree. These are the basic access path structures. | HoBt ID. This value corresponds to `sys.partitions.hobt_id`. |
-| OIB | Represents Online index rebuild. | HoBt ID. This value corresponds to `sys.partitions.hobt_id`. |
+| OIB | Represents online index (re)build. | HoBt ID. This value corresponds to `sys.partitions.hobt_id`. |
 | ALLOCATION_UNIT | Represents a set of related pages, such as an index partition. Each allocation unit covers a single Index Allocation Map (IAM) chain. | Allocation Unit ID. This value corresponds to `sys.allocation_units.allocation_unit_id`. |
-| ROW_GROUP | Associated with columnstore. | |
-| XACT | The XACT resource. Related to [Optimized locking](../performance/optimized-locking.md). | There are two scenarios:<br /><br />***Scenario 1* (Owner)**<br />- **Resource type**: `XACT`.<br />- **Resource description**: When a TID lock is held, the `resource_description` is the `XACT` resource.<br />- **Resource associated entity ID**: `resource_associated_entity_id` is 0.<br /><br />***Scenario 2* (Waiter)**<br />- **Resource type**: `XACT`.<br />- **Resource description**: When we wait for a TID lock, the `resource_description` is the `XACT` resource followed by the underlying `KEY` or `RID` resource.<br />- **Resource associated entity ID**: `resource_associated_entity_id` is the underlying HoBt ID. |
+| ROW_GROUP | Represents a columnstore row group. | |
+| XACT | Represents a transaction. Occurs when [optimized locking](../performance/optimized-locking.md) is enabled. | There are two scenarios:<br /><br />***Scenario 1* (Owner)**<br />- **Resource type**: `XACT`.<br />- **Resource description**: When a TID lock is held, the `resource_description` is the `XACT` resource.<br />- **Resource associated entity ID**: `resource_associated_entity_id` is 0.<br /><br />***Scenario 2* (Waiter)**<br />- **Resource type**: `XACT`.<br />- **Resource description**: When a request waits for a TID lock, the `resource_description` is the `XACT` resource followed by the underlying `KEY` or `RID` resource.<br />- **Resource associated entity ID**: `resource_associated_entity_id` is the underlying HoBt ID. |
 
 [!INCLUDE [sql-b-tree](../../includes/sql-b-tree.md)]
 
@@ -216,9 +216,9 @@ The following table provides the format of the `resource_description` column for
 | APPLICATION | `<DbPrincipalId>:<up to 32 characters>:(<hash_value>)` | Represents the ID of the database principal that is used for scoping this application lock resource. Also included are up to 32 characters from the resource string that corresponds to this application lock resource. In certain cases, only two characters can be displayed due to the full string no longer being available. This behavior occurs only at database recovery time for application locks that are reacquired as part of the recovery process. The hash value represents a hash of the full resource string that corresponds to this application lock resource. |
 | HOBT | Not applicable | HoBt ID is included as the `resource_associated_entity_id`. |
 | ALLOCATION_UNIT | Not applicable | Allocation Unit ID is included as the `resource_associated_entity_id`. |
-| XACT | `<dbid>:<XdesId low>:<XdesId high>` | The TID resource. Related to [Optimized locking](../performance/optimized-locking.md). |
-| XACT KEY | `[XACT <dbid>:<XdesId low>:<XdesId High>] KEY (<hash_value>)` | The underlying resource the transaction is waiting on, with a clustered index KEY object. Related to [Optimized locking](../performance/optimized-locking.md). |
-| XACT RID | `[XACT <dbid>:<XdesId low>:<XdesId High>] RID (<file_id>:<page_in_file>:<row_on_page>)` | The underlying resource the transaction is waiting on, with a heap RID object. Related to [Optimized locking](../performance/optimized-locking.md). |
+| XACT | `<dbid>:<XdesId low>:<XdesId high>` | The TID (transaction ID) resource. Occurs when [optimized locking](../performance/optimized-locking.md) is enabled. |
+| XACT KEY | `[XACT <dbid>:<XdesId low>:<XdesId High>] KEY (<hash_value>)` | The underlying resource the transaction is waiting on, with an index KEY object. Occurs when [optimized locking](../performance/optimized-locking.md) is enabled. |
+| XACT RID | `[XACT <dbid>:<XdesId low>:<XdesId High>] RID (<file_id>:<page_in_file>:<row_on_page>)` | The underlying resource the transaction is waiting on, with a heap RID object. Occurs when [optimized locking](../performance/optimized-locking.md) is enabled. |
 | METADATA.ASSEMBLY | `assembly_id = A` | [!INCLUDE [ssInternalOnly](../../includes/ssinternalonly-md.md)] |
 | METADATA.ASSEMBLY_CLR_NAME | `$qname_id = Q` | [!INCLUDE [ssInternalOnly](../../includes/ssinternalonly-md.md)] |
 | METADATA.ASSEMBLY_TOKEN | `assembly_id = A`, `$token_id` | [!INCLUDE [ssInternalOnly](../../includes/ssinternalonly-md.md)] |

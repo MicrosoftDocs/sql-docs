@@ -3,11 +3,12 @@ title: "Manage subscription owners and run subscription - PowerShell"
 description: Learn how to programmatically transfer the ownership of a Reporting Services subscription from one user to another.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 01/16/2020
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: subscriptions
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 
 # Manage subscription owners and run subscription - PowerShell
@@ -376,8 +377,9 @@ $subscriptions | select Status, Path, report, Description, Owner, SubscriptionID
   
 ```  
 
-## Related content 
-[ReportingService2010.ListSubscriptions method](/dotnet/api/reportservice2010.reportingservice2010.listsubscriptions)    
-[ReportingService2010.ChangeSubscriptionOwner method](/dotnet/api/reportservice2010.reportingservice2010.changesubscriptionowner)   
-[ReportingService2010.ListChildren](/dotnet/api/reportservice2010.reportingservice2010.listchildren)    
-[ReportingService2010.FireEvent](/dotnet/api/reportservice2010.reportingservice2010.fireevent)    
+## Related content
+
+- [ReportingService2010.ListSubscriptions method](/dotnet/api/reportservice2010.reportingservice2010.listsubscriptions)
+- [ReportingService2010.ChangeSubscriptionOwner method](/dotnet/api/reportservice2010.reportingservice2010.changesubscriptionowner)
+- [ReportingService2010.ListChildren](/dotnet/api/reportservice2010.reportingservice2010.listchildren)
+- [ReportingService2010.FireEvent](/dotnet/api/reportservice2010.reportingservice2010.fireevent)

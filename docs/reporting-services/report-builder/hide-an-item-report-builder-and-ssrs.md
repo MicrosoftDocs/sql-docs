@@ -3,15 +3,16 @@ title: "Hide an item (Report Builder)"
 description: Learn how to hide or show a report item in Report Builder, specifically by using report parameters and expressions.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 09/04/2024
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-builder
 ms.topic: how-to
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 f1_keywords:
   - "sql13.rtp.rptdesigner.shared.visibility.f1"
   - "10503"
-#customer intent: As a SQL Server report designer, I want to hide or show report items to improve report readability and user experience.
+# customer intent: As a SQL Server report designer, I want to hide or show report items to improve report readability and user experience.
 ---
 # Hide an item (Report Builder)
 

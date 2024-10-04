@@ -3,11 +3,12 @@ title: "Add an assembly reference to a paginated report"
 description: Learn how to provide an assembly reference to a report so that the report processor can resolve names in Report Builder.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/14/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "code [Reporting Services]"
   - "custom assemblies [Reporting Services], referencing"
@@ -36,7 +37,7 @@ helpviewer_keywords:
   
 1.  Select **OK**.
   
-## Related content 
- [Use custom assemblies with reports](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)   
- [Report properties dialog, references](./custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)  
-  
+## Related content
+
+- [Use custom assemblies with reports](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)
+- [Report properties dialog, references](./custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)

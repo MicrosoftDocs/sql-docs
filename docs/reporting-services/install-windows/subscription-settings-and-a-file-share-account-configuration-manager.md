@@ -3,11 +3,12 @@ title: "Subscription Settings & File Share Account (Configuration Manager)"
 description: "Use the Subscription Settings page of the Report Server Configuration Manager to configure a file share account for Native mode report servers and file share subscriptions."
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 09/15/2022
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-server
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 f1_keywords:
   - "SQL13.rsconfigtool.subscriptionsettings.F1"
 ---
@@ -89,8 +90,7 @@ $subscriptions | extensionSettingFilter | select report, owner, status, lastexec
   
  `Aworks_sales_by_territory DOMAIN\UserName Disabled 10/5/2014 1:04:04 PM e843bc2b-023e-45a3-ba23-22f9dc9a0934`  
   
-## See Also  
- [File Share Delivery in Reporting Services](../../reporting-services/subscriptions/file-share-delivery-in-reporting-services.md)   
- [Create and Manage Subscriptions for Native Mode Report Servers](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)
-  
-  
+## Related content
+
+- [File Share Delivery in Reporting Services](../../reporting-services/subscriptions/file-share-delivery-in-reporting-services.md)
+- [Create and Manage Subscriptions for Native Mode Report Servers](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)

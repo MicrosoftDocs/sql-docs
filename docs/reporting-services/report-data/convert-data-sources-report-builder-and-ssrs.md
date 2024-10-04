@@ -3,11 +3,12 @@ title: "Convert Data Sources (Report Builder)"
 description: Learn how to convert your data sources in Report Builder and Report Designer by using options in the Report Data pane.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/01/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-data
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "data sources [Reporting Services], embedded"
   - "data sources [Reporting Services], shared"
@@ -53,7 +54,7 @@ helpviewer_keywords:
   
      In the Report Data pane, the data source icon changes to the shared data source icon.  
   
-## See Also  
- [Manage Report Data Sources](../../reporting-services/report-data/manage-report-data-sources.md)   
- [Create data connection strings - Report Builder & SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
-  
+## Related content
+
+- [Manage Report Data Sources](../../reporting-services/report-data/manage-report-data-sources.md)
+- [Create data connection strings - Report Builder & SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)

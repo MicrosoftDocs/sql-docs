@@ -3,11 +3,12 @@ title: "Omitting Values for Optional Web Service Objects"
 description: Some properties of Report Server Web service complex types support the Specified property, which allows you to omit a value for some writable properties.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/04/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-server-web-service
 ms.topic: reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "Web service [Reporting Services], omitted values"
   - "XML Web service [Reporting Services], omitted values"
@@ -24,8 +25,7 @@ helpviewer_keywords:
   
  For an example, see <xref:ReportService2010.ReportingService2010.CreateDataSource%2A> method.  
   
-## See Also  
- [Building Applications Using the Web Service and the .NET Framework](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
- [Technical Reference &#40;SSRS&#41;](../../../reporting-services/technical-reference-ssrs.md)  
-  
-  
+## Related content
+
+- [Building Applications Using the Web Service and the .NET Framework](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)
+- [Technical Reference &#40;SSRS&#41;](../../../reporting-services/technical-reference-ssrs.md)

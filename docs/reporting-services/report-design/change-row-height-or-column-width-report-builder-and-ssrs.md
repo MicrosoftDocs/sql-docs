@@ -3,13 +3,13 @@ title: Change row height or column width in a Report Builder paginated report
 description: Learn how to set the column width or fixed row height with text box properties for rendered paginated reports in Report Builder.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 07/16/2024
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: how-to
-ms.custom: updatefrequency5
-
-#customer intent: As a Report Builder user, I want to learn how to set the column width or row height so that I can adjust my reports to visually fit my data.
+ms.custom:
+  - updatefrequency5
+# customer intent: As a Report Builder user, I want to learn how to set the column width or row height so that I can adjust my reports to visually fit my data.
 ---
 # Change row height or column width in a Report Builder paginated report
 
@@ -69,9 +69,8 @@ If a cell in a row or column contains a rectangle or data region, the height and
   
 1. Select the edge of the column, and move it left or right to adjust the column width.  
   
-## Related content  
+## Related content
 
 - [Tablix data region in a paginated report (Report Builder)](tablix-data-region-report-builder-and-ssrs.md)
 - [Cells, rows, & columns in a tablix in a paginated report (Report Builder)](tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)
 - [Tables in paginated reports (Report Builder)](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)
-  

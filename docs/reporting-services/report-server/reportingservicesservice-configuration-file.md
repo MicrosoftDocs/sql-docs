@@ -3,11 +3,12 @@ title: "ReportingServicesService configuration file"
 description: Learn about the file location, editing guidelines, and configuration settings of ReportingServicesService.exe.config used for tracing in Reporting Services.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 05/30/2019
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-server
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "traces [Reporting Services]"
   - "Report Server Windows service, ReportingServicesService configuration file"
@@ -84,7 +85,7 @@ This file could be located in either of the following paths:
 |**Components**|Specifies the components for which trace logs are created. The default value is **all**. Other valid values for this setting include the names of internal components. Don't modify this value.|  
 |**Runtime**|Specifies configuration settings that support backward compatibility with the previous version. Runtime settings are used to redirect requests that target the previous version of `Microsoft.ReportingServices.Interfaces` to the new version.<br /><br /> All of the configuration settings in this section are described in the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] product documentation. For more information, search for "Runtime Schema Settings" on the MSDN Web site or in the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] documentation.|  
   
-## Related content 
-[Reporting Services configuration files](../../reporting-services/report-server/reporting-services-configuration-files.md)  
-[Report server service trace log](../../reporting-services/report-server/report-server-service-trace-log.md)  
-  
+## Related content
+
+- [Reporting Services configuration files](../../reporting-services/report-server/reporting-services-configuration-files.md)
+- [Report server service trace log](../../reporting-services/report-server/report-server-service-trace-log.md)

@@ -3,11 +3,12 @@ title: "Understand security policies"
 description: Learn about Reporting Services security policies, which specify permissions for assemblies, extensions, and report expressions based on code groups.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/14/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: extensions
 ms.topic: reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "code groups [Reporting Services]"
   - "code access security [Reporting Services], security policies"
@@ -69,7 +70,5 @@ helpviewer_keywords:
   
 ## Related content
 
-- [Code access security in Reporting Services](../../../reporting-services/extensions/secure-development/code-access-security-in-reporting-services.md)   
-- [Secure development &#40;Reporting Services&#41;](../../../reporting-services/extensions/secure-development/secure-development-reporting-services.md)  
-  
-  
+- [Code access security in Reporting Services](../../../reporting-services/extensions/secure-development/code-access-security-in-reporting-services.md)
+- [Secure development &#40;Reporting Services&#41;](../../../reporting-services/extensions/secure-development/secure-development-reporting-services.md)

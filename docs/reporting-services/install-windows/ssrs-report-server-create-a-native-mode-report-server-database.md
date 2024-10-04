@@ -3,11 +3,12 @@ title: "Create a Native Mode Report Server Database (Configuration Manager)"
 description: "Native mode Reporting Services uses a SQL Server database for internal storage. The database is required and it is used to store published reports, models, shared data sources, session data, resources, and server metadata."
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 12/04/2019
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-server
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "report servers [Reporting Services], databases"
   - "databases [Reporting Services], creating"
@@ -141,10 +142,9 @@ The [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration 
 
 6. After the changes are made select **Finish**.
 
-## Next steps
+## Related content
 
-[Configure a Report Server Database Connection](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
-[Manage a Reporting Services Native Mode Report Server](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)   
-[Report Server Configuration Manager](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
-
-More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)
+- [Configure a Report Server Database Connection](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)
+- [Manage a Reporting Services Native Mode Report Server](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)
+- [Report Server Configuration Manager](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)
+- [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

@@ -3,11 +3,12 @@ title: "Access report server items using URL access"
 description: "Learn how to access catalog items of different types in a report server database or in a SharePoint site using rs:Command=Value."
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 05/08/2019
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: reporting-services
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "referencing URL items for report server access"
   - "URL access [Reporting Services], report servers"
@@ -87,5 +88,5 @@ helpviewer_keywords:
   
 ## Related content
 
-- [URL access &#40;SSRS&#41;](../reporting-services/url-access-ssrs.md)   
-- [URL access parameter reference](../reporting-services/url-access-parameter-reference.md) 
+- [URL access &#40;SSRS&#41;](../reporting-services/url-access-ssrs.md)
+- [URL access parameter reference](../reporting-services/url-access-parameter-reference.md)

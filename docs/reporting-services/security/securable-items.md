@@ -3,11 +3,12 @@ title: "Securable items"
 description: "Securable items"
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/01/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: security
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "securable items [Reporting Services]"
   - "roles [Reporting Services], securable items"
@@ -47,9 +48,9 @@ helpviewer_keywords:
 |Shared data sources|Shared data sources can be secured to limit access to the item and its property pages. For more information, see [Secure shared data source items](../../reporting-services/security/secure-shared-data-source-items.md).|  
 |Shared datasets|Shared datasets can be secured to control the range of actions that users can perform, such as viewing or changing the definition, or changing the properties of a given shared dataset.<br /><br /> For more information, see [Secure shared dataset items](../../reporting-services/security/secure-shared-dataset-items.md).|  
   
-## Related content  
- [Grant permissions on a native mode report server](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)    
- [Create, delete, or modify a role &#40;Management Studio&#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)    
- [Grant user access to a report server &#40;Report Manager&#41;](./grant-user-access-to-a-report-server.md)   
- [Modify or delete a role assignment &#40;Report Manager&#41;](../../reporting-services/security/role-assignments-modify-or-delete.md)  
-  
+## Related content
+
+- [Grant permissions on a native mode report server](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)
+- [Create, delete, or modify a role &#40;Management Studio&#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)
+- [Grant user access to a report server &#40;Report Manager&#41;](./grant-user-access-to-a-report-server.md)
+- [Modify or delete a role assignment &#40;Report Manager&#41;](../../reporting-services/security/role-assignments-modify-or-delete.md)

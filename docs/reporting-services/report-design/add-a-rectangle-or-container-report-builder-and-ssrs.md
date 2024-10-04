@@ -3,11 +3,12 @@ title: "Add a rectangle or container to a paginated report"
 description: Separate or emphasize areas of a report or provide a background for one or more report items using a customized rectangle in Report Builder.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/01/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 f1_keywords:
   - "10061"
   - "sql13.rtp.rptdesigner.rectangleproperties.general.f1"
@@ -44,8 +45,7 @@ f1_keywords:
     > [!NOTE]    
     >  If you set the line style to **Double** and the line width is 1 1/2 pt or narrower, the line might not appear double when you run the report in Report Builder, Report Designer, or in the [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] web portal. It appears double when you export the report to other formats such as Microsoft Word and Acrobat PDF.    
     
-## Related content  
- [Rectangles and lines &#40;Report Builder&#41;](../../reporting-services/report-design/rectangles-and-lines-report-builder-and-ssrs.md)     
- [Renderer behaviors &#40;Report Builder&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)    
-    
-  
+## Related content
+
+- [Rectangles and lines &#40;Report Builder&#41;](../../reporting-services/report-design/rectangles-and-lines-report-builder-and-ssrs.md)
+- [Renderer behaviors &#40;Report Builder&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)

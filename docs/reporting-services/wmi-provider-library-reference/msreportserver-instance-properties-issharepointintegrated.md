@@ -3,11 +3,12 @@ title: "IsSharePointIntegrated property (WMI MSReportServer_Instance)"
 description: "IsSharePointIntegrated property (WMI MSReportServer_Instance)"
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/01/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: wmi-provider-library-reference
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "IsSharePointIntegrated property"
 ---
@@ -31,7 +32,6 @@ public Boolean IsSharePointIntegrated;
  **Namespace:** [!INCLUDE[ssRSWMInmspc](../../includes/ssrswminmspc-md.md)]  
   
 ## Related content
- [MSReportServer_Instance members](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-members.md)   
- [MSReportServer_ConfigurationSetting class](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-class.md)  
-  
-  
+
+- [MSReportServer_Instance members](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-members.md)
+- [MSReportServer_ConfigurationSetting class](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-class.md)

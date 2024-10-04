@@ -3,11 +3,12 @@ title: "RS.exe utility"
 description: Learn about the commands and syntax for the rs.exe utility that processes scripts used to automate report server deployment and administration tasks.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 08/17/2023
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: tools
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "automatic report server tasks"
   - "rs utility"
@@ -132,10 +133,9 @@ rs -i c:\scriptfiles\script_copycontent.rss -s https://localhost/reportserver
 > [!TIP]  
 >  For a detailed example, see [Sample Reporting Services rs.exe script to copy content between report servers](../../reporting-services/tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md).  
   
-## Related content 
-- [Run a Reporting Services script file](../../reporting-services/tools/run-a-reporting-services-script-file.md)   
-- [Script deployment and administrative tasks](../../reporting-services/tools/script-deployment-and-administrative-tasks.md)   
-- [Script with the rs.exe utility and the web service](../../reporting-services/tools/script-with-the-rs-exe-utility-and-the-web-service.md)   
-- [Report server command prompt utilities &#40;SSRS&#41;](../../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md)  
-  
-  
+## Related content
+
+- [Run a Reporting Services script file](../../reporting-services/tools/run-a-reporting-services-script-file.md)
+- [Script deployment and administrative tasks](../../reporting-services/tools/script-deployment-and-administrative-tasks.md)
+- [Script with the rs.exe utility and the web service](../../reporting-services/tools/script-with-the-rs-exe-utility-and-the-web-service.md)
+- [Report server command prompt utilities &#40;SSRS&#41;](../../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md)

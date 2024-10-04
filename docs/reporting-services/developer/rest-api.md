@@ -3,13 +3,13 @@ title: What are REST APIs for Reporting Services?
 description: Learn how REST APIs provide programmatic access to the objects in a SQL Server 2017 Reporting Services report server catalog.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 07/08/2024
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: developer
 ms.topic: overview
-ms.custom: updatefrequency5
-
-#customer intent: As a SQL server user, I want to use REST APIs to access resources within a report server so that I can manage objects in a report server catalog.
+ms.custom:
+  - updatefrequency5
+# customer intent: As a SQL server user, I want to use REST APIs to access resources within a report server so that I can manage objects in a report server catalog.
 ---
 
 # What are REST APIs for Reporting Services?
@@ -75,5 +75,4 @@ If you need a tool for testing HTTP request/response messages, [Fiddler](https:/
 
 - [Use the Power BI Report Server REST APIs](/rest/api/power-bi-report/)
 - [Reporting-Services samples](https://github.com/Microsoft/Reporting-Services)
-
-More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)
+- [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

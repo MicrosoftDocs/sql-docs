@@ -3,11 +3,12 @@ title: "Configure Distribution"
 description: The SQL Server Distributor hosts the distribution database, which stores metadata and history for replication and transactions for transactional replication.
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/07/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: how-to
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "replication [SQL Server], distribution"
   - "distribution configuration [SQL Server replication]"
@@ -61,8 +62,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
   
  To modify Publisher and Distributor properties, see [View and Modify Distributor and Publisher Properties](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md).  
   
-## See Also  
- [Publish Data and Database Objects](../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
- [Secure the Distributor](../../relational-databases/replication/security/secure-the-distributor.md)  
-  
-  
+## Related content
+
+- [Publish Data and Database Objects](../../relational-databases/replication/publish/publish-data-and-database-objects.md)
+- [Secure the Distributor](../../relational-databases/replication/security/secure-the-distributor.md)

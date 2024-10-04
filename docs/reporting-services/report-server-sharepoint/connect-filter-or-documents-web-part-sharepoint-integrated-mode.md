@@ -3,11 +3,12 @@ title: "Connect Filter or Documents web part with a Reporting Services Report Vi
 description: For a SharePoint product, learn to create a dashboard or web part Page that includes a Filter web part or Documents web part and a Report Viewer web part.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 11/26/2018
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-server-sharepoint
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 # Connect Filter or Documents web part with a Reporting Services Report Viewer web part
 
@@ -72,8 +73,7 @@ If you are using a SharePoint product, you can create a dashboard or web part Pa
   
 ## Related content
 
- [Add the Report Viewer web part to a web page](../../reporting-services/report-server-sharepoint/add-the-report-viewer-web-part-to-a-web-page.md)   
- [Report Viewer web part on a SharePoint Site](./report-viewer-web-part-sharepoint-site.md)   
- [Customize the Report Viewer web part](../../reporting-services/report-server-sharepoint/customize-the-report-viewer-web-part.md)  
-
-More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)
+- [Add the Report Viewer web part to a web page](../../reporting-services/report-server-sharepoint/add-the-report-viewer-web-part-to-a-web-page.md)
+- [Report Viewer web part on a SharePoint Site](./report-viewer-web-part-sharepoint-site.md)
+- [Customize the Report Viewer web part](../../reporting-services/report-server-sharepoint/customize-the-report-viewer-web-part.md)
+- [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

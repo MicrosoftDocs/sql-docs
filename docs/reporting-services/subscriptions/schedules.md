@@ -3,11 +3,12 @@ title: "Schedules in Reporting Services"
 description: In this overview, learn how you can use shared schedules and report-specific schedules in Reporting Services to control the processing and distribution of reports.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 06/18/2024
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: subscriptions
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "schedules [Reporting Services]"
   - "schedules [Reporting Services], about schedules"
@@ -15,8 +16,7 @@ helpviewer_keywords:
   - "reports [Reporting Services], scheduling"
   - "subscriptions [Reporting Services], scheduling"
   - "automatic report processing"
-
-#customer intent: As a SQL Server user, I want learn how to use the Reporting Services file share delivery extension so that I can control the processing and distribution of my reports.
+# customer intent: As a SQL Server user, I want learn how to use the Reporting Services file share delivery extension so that I can control the processing and distribution of my reports.
 ---
 # Schedules in Reporting Services
 
@@ -141,5 +141,4 @@ If you stop the Report Server service, SQL Server Agent continues to add report 
 - [Data-driven subscriptions](../../reporting-services/subscriptions/data-driven-subscriptions.md)
 - [Cache reports &#40;SSRS&#41;](../../reporting-services/report-server/caching-reports-ssrs.md)
 - [Report Server Content Management &#40;SSRS native mode&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)
-- [Cache shared datasets &#40;SSRS&#41;](../../reporting-services/report-server/cache-shared-datasets-ssrs.md)  
-  
+- [Cache shared datasets &#40;SSRS&#41;](../../reporting-services/report-server/cache-shared-datasets-ssrs.md)

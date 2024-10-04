@@ -3,15 +3,15 @@ title: "Configure TLS connections on a native mode report server"
 description: See how to configure TLS connections on a native mode report server so that you can encrypt connections to the report server.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 08/23/2024
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: security
 ms.topic: how-to
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "Secure Sockets Layer (SSL)"
-
-#customer intent: As a SQL Server user, I want to learn how to configure TLS connections on my native mode report server so that I can encrypt my connections to the server.
+# customer intent: As a SQL Server user, I want to learn how to configure TLS connections on my native mode report server so that I can encrypt my connections to the server.
 ---
 
 

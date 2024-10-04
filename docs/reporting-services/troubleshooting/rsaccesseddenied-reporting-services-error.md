@@ -3,14 +3,15 @@ title: "rsAccessDenied - Reporting Services error"
 description: Learn how to diagnose and fix the rsAccessDenied error when the permissions granted to user 'mydomain\\myAccount' are insufficient for performing this operation.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 09/04/2024
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: troubleshooting
 ms.topic: troubleshooting-problem-resolution
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "rsAccessDenied error"
-#customer intent: As a Reporting Services user, I want to learn about the rsAccessDenied error so that I can diagnose and fix it for my server.
+# customer intent: As a Reporting Services user, I want to learn about the rsAccessDenied error so that I can diagnose and fix it for my server.
 ---
 # rsAccessDenied - Reporting Services error
 

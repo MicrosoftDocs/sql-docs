@@ -86,8 +86,6 @@ Note the IP address (`10.1.1.3` in this example) and the port number (`30080`) i
 
 One of the other ways to get this information is doing right-click Manage on the server in Azure Data Studio where you'll find the endpoints of the services listed.
 
-![ADS End Point](media/big-data-cluster-consume-apps/ads_end_point.png)
-
 ## Generate a JWT access token
 
 To access the RESTful web service for the app you've deployed you first have to generate a JWT Access token. The URL for the access token depends on the version of Big Data Cluster. 

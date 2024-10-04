@@ -8,7 +8,7 @@ ms.date: 11/16/2022
 ms.service: azure-sql-managed-instance
 ms.subservice: migration
 ms.topic: conceptual
-ms.custom:
+ms.collection:
   - sql-migration-content
 ---
 

@@ -3,11 +3,12 @@ title: "Create drillthrough (RDLC) reports with parameters - ReportViewer"
 description: Learn about creating a drillthrough (RDLC) report with parameters and a query in local mode reporting.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 05/18/2016
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: reporting-services
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 # Create drillthrough (RDLC) reports with parameters - ReportViewer
 A [drillthrough](./report-design/drillthrough-reports-report-builder-and-ssrs.md) report is a report that a user opens by selecting a link within another report. Drillthrough reports commonly contain details about an item that is contained in an original summary report. This tutorial will walk you through the following lessons of creating a drillthrough report with parameters and a query, in [local mode reporting](report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md).  
@@ -33,5 +34,5 @@ Use Visual Studio 2015, and the ASP.NET Web Application, to create an ASP.NET we
   
 ## Related content
 
-- [Reporting Services tutorials &#40;SSRS&#41;](../reporting-services/reporting-services-tutorials-ssrs.md)  
-- [Design reports with Report Designer &#40;SSRS&#41;](../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md)  
+- [Reporting Services tutorials &#40;SSRS&#41;](../reporting-services/reporting-services-tutorials-ssrs.md)
+- [Design reports with Report Designer &#40;SSRS&#41;](../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md)

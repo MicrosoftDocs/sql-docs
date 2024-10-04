@@ -3,11 +3,12 @@ title: "Create a tabbed mobile report by using drillthrough | Reporting Services
 description: Learn how to create a Reporting Services mobile report that looks and acts like a tabbed report by using drillthrough and parameters.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 07/21/2022
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: mobile-reports
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 # Create a tabbed mobile report by using drillthrough
 

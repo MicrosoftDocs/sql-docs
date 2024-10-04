@@ -5,7 +5,7 @@ description: Learn how to configure a failover group for a single or pooled data
 author: rajeshsetlem
 ms.author: rsetlem
 ms.reviewer: wiassaf, mathoma, randolphwest
-ms.date: 08/10/2024
+ms.date: 09/27/2024
 ms.service: azure-sql-database
 ms.subservice: high-availability
 ms.topic: how-to
@@ -406,6 +406,11 @@ This sequence is recommended specifically to avoid the problem where the geo-sec
 > [!NOTE]  
 > If you created a geo-secondary as part of the failover group configuration, it's not recommended to scale down the geo-secondary. This is to ensure your data tier has sufficient capacity to process your regular workload after a geo-failover.
 You might not be able to scale a geo-secondary after an unplanned failover when the former geo-primary is unavailable due to outage. This is a known limitation.
+
+The primary database in a failover group can't scale to a higher service tier (edition) unless the secondary database is first scaled to the higher tier. For example, if you want to scale up the primary from General Purpose to Business Critical, you have to first scale the geo-secondary to Business Critical. If you try to scale the primary or geo-secondary in a way that violates this rule, you will receive the following error:  
+
+`The source database 'Primaryserver.DBName' cannot have higher edition than the target database 'Secondaryserver.DBName'. Upgrade the edition on the target before upgrading the source.`
+
 
 ## <a name="preventing-the-loss-of-critical-data"></a> Prevent loss of critical data
 

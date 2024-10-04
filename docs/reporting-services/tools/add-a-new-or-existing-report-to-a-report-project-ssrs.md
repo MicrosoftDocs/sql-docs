@@ -3,11 +3,12 @@ title: "Add a new or existing report to a report project"
 description: Learn how to add a new or existing report to a report project by using the Report Wizard in SQL Server Reporting Services.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 10/26/2023
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: tools
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "reports [Reporting Services], creating"
 ---
@@ -52,5 +53,6 @@ helpviewer_keywords:
      The report is added to the project under the **Reports** folder. When you close and reopen the project, reports are sorted alphabetically.  
   
 ## Related content
- [Reporting Services tutorials &#40;SSRS&#41;](../../reporting-services/reporting-services-tutorials-ssrs.md)  
- More questions? [Try the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)
+
+- [Reporting Services tutorials &#40;SSRS&#41;](../../reporting-services/reporting-services-tutorials-ssrs.md)
+- [Try the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)

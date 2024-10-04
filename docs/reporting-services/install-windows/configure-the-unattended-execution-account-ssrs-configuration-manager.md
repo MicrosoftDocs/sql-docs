@@ -3,11 +3,12 @@ title: "Configure the unattended execution account (Report Server Configuration 
 description: "Reporting Services provides a special account that is used for unattended report processing and for sending connection requests across the network."
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 12/04/2019
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-server
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "no credentials option [Reporting Services]"
   - "security [Reporting Services], unattended report processing"

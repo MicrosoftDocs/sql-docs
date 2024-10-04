@@ -3,11 +3,12 @@ title: "Secure the Distributor"
 description: "Secure the Distributor"
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/14/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: how-to
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "security [SQL Server replication], Distributors"
   - "Distributors [SQL Server replication], security"
@@ -52,8 +53,8 @@ As such, disabling the **distributor_admin** login at a remote Distributor is no
 ## Snapshot Folder Security  
  Ensure that the snapshot share has read access granted to the account under which the Merge Agent (for merge replication) or Distribution Agent (for snapshot or transactional replication) runs and write access granted to the account under which the Snapshot Agent runs. For more information about the snapshot folder, see [Secure the Snapshot Folder](../../../relational-databases/replication/security/secure-the-snapshot-folder.md).  
   
-## See Also  
- [View and Modify Replication Security Settings](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   
- [Enable Encrypted Connections to the Database Engine &#40;SQL Server Configuration Manager&#41;](../../../database-engine/configure-windows/configure-sql-server-encryption.md)   
- [Replication Security Best Practices](../../../relational-databases/replication/security/replication-security-best-practices.md)   
- [View and modify replication security settings](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)  
+## Related content
+
+- [View and Modify Replication Security Settings](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)
+- [Enable Encrypted Connections to the Database Engine &#40;SQL Server Configuration Manager&#41;](../../../database-engine/configure-windows/configure-sql-server-encryption.md)
+- [Replication Security Best Practices](../../../relational-databases/replication/security/replication-security-best-practices.md)

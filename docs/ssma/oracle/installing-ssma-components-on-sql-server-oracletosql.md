@@ -7,9 +7,10 @@ ms.date: "04/29/2021"
 ms.service: sql
 ms.subservice: ssma
 ms.topic: conceptual
+ms.collection:
+  - sql-migration-content
 ms.custom:
   - intro-installation
-  - sql-migration-content
 helpviewer_keywords:
   - "Installing the extension pack"
   - "SQL Server Database Objects"

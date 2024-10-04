@@ -4,7 +4,7 @@ description: Learn to configure a failover cluster instance (FCI) using NFS stor
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: vanto
-ms.date: 08/23/2023
+ms.date: 09/23/2024
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
@@ -124,7 +124,7 @@ Ensure that your security standards are enforced for accessing. When configuring
      - `<FolderOnNFSServer>` is the name of the NFS share. The following example syntax matches the NFS information from Step 2.
 
      ```bash
-     mount -t nfs4 200.201.202.63:/var/nfs/fci1 /var/opt/mssql/data -o nfsvers=4.2,timeo=14,intr
+     mount -t nfs4 10.201.202.63:/var/nfs/fci1 /var/opt/mssql/data -o nfsvers=4.2,timeo=14,intr
      ```
 
    - Check to see that the mount was successful by issuing mount with no switches.
@@ -133,7 +133,11 @@ Ensure that your security standards are enforced for accessing. When configuring
      mount
      ```
 
-     :::image type="content" source="media/sql-server-linux-shared-disk-cluster-configure-nfs/10-mountnoswitches.png" alt-text="Screenshot of the mount command and the response to the command showing no switches.":::
+     Here's the expected output.
+
+     ```output
+     10.201.202.63:/var/nfs/fcil on /var/opt/mssql/data type nfs4 (rw,relatime,vers=4.2,rsize=524288,wsize=524288,namlen=255,hard, proto=tcp,port=0,timeo=14, retrans=2,sec=sys,clientaddr=10.201.202.128,local lock=none, addr=10.201.202.63)
+     ```
 
    - Switch to the `mssql` user.
 
@@ -220,7 +224,7 @@ Ensure that your security standards are enforced for accessing. When configuring
      The following example mounts the NFS share.
 
      ```bash
-     mount -t nfs4 200.201.202.63:/var/nfs/fci2 /var/opt/mssql/userdata -o nfsvers=4.2,timeo=14,intr
+     mount -t nfs4 10.201.202.63:/var/nfs/fci2 /var/opt/mssql/userdata -o nfsvers=4.2,timeo=14,intr
      ```
 
    - Check to see that the mount was successful by issuing mount with no switches.
@@ -245,4 +249,4 @@ Ensure that your security standards are enforced for accessing. When configuring
 
 ## Related content
 
-- [Configure failover cluster instance - SQL Server on Linux](sql-server-linux-shared-disk-cluster-configure.md)
+- [Configure failover cluster instance - SQL Server on Linux (RHEL)](sql-server-linux-shared-disk-cluster-configure.md)

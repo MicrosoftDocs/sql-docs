@@ -3,11 +3,12 @@ title: "Errors and Events Reference (Replication)"
 description: "Errors and Events Reference (Replication)"
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/03/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "errors [SQL Server replication], troubleshooting"
   - "troubleshooting [SQL Server replication], errors"

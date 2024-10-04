@@ -4,7 +4,7 @@ description: Connect to a SQL Server instance in SSMS. Create and query a SQL Se
 author: erinstellato-ms
 ms.author: maghan
 ms.reviewer: mikeray, randolphwest
-ms.date: 02/29/2024
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: ssms
 ms.topic: quickstart

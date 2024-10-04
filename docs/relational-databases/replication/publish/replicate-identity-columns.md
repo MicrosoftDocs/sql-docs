@@ -3,11 +3,12 @@ title: "Replicate Identity Columns"
 description: In SQL Server, replication handles identity columns across all publication and subscription types. Manage columns manually or have replication manage them.
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "10/04/2016"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: how-to
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "identities [SQL Server replication]"
   - "identity values [SQL Server replication]"
@@ -116,11 +117,10 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
     > [!NOTE]  
     >  If the value in the identity column is set to decrement rather than increment, record the lowest value found, and then reseed with that value.  
   
-## See Also  
- [BACKUP &#40;Transact-SQL&#41;](../../../t-sql/statements/backup-transact-sql.md)   
- [DBCC CHECKIDENT &#40;Transact-SQL&#41;](../../../t-sql/database-console-commands/dbcc-checkident-transact-sql.md)   
- [IDENT_CURRENT &#40;Transact-SQL&#41;](../../../t-sql/functions/ident-current-transact-sql.md)   
- [IDENTITY &#40;Property&#41; &#40;Transact-SQL&#41;](../../../t-sql/statements/create-table-transact-sql-identity-property.md)   
- [sp_adjustpublisheridentityrange &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-adjustpublisheridentityrange-transact-sql.md)  
-  
-  
+## Related content
+
+- [BACKUP &#40;Transact-SQL&#41;](../../../t-sql/statements/backup-transact-sql.md)
+- [DBCC CHECKIDENT &#40;Transact-SQL&#41;](../../../t-sql/database-console-commands/dbcc-checkident-transact-sql.md)
+- [IDENT_CURRENT &#40;Transact-SQL&#41;](../../../t-sql/functions/ident-current-transact-sql.md)
+- [IDENTITY &#40;Property&#41; &#40;Transact-SQL&#41;](../../../t-sql/statements/create-table-transact-sql-identity-property.md)
+- [sp_adjustpublisheridentityrange &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-adjustpublisheridentityrange-transact-sql.md)

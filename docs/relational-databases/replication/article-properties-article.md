@@ -3,11 +3,12 @@ title: "Article Properties - &lt;Article&gt;"
 description: "Article Properties - &lt;Article&gt;"
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/14/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: ui-reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 f1_keywords:
   - "sql13.rep.newpubwizard.articleproperties.f1"
 helpviewer_keywords:
@@ -166,11 +167,10 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
   
 -   For some types, there is more than one type that you can select. [!INCLUDE[msCoName](../../includes/msconame-md.md)] recommends that you use the default mapping unless your application requires a different mapping. For more information, see [Data Type Mapping for Oracle Publishers](../../relational-databases/replication/non-sql/data-type-mapping-for-oracle-publishers.md).  
   
-## See Also  
- [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
- [View and Modify Publication Properties](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
- [Create and Apply the Initial Snapshot](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)   
- [Reinitialize a Subscription](../../relational-databases/replication/reinitialize-a-subscription.md)   
- [Publish Data and Database Objects](../../relational-databases/replication/publish/publish-data-and-database-objects.md)  
-  
-  
+## Related content
+
+- [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)
+- [View and Modify Publication Properties](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)
+- [Create and Apply the Initial Snapshot](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)
+- [Reinitialize a Subscription](../../relational-databases/replication/reinitialize-a-subscription.md)
+- [Publish Data and Database Objects](../../relational-databases/replication/publish/publish-data-and-database-objects.md)

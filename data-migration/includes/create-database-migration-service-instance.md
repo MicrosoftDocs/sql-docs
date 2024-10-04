@@ -4,7 +4,7 @@ ms.author: randolphwest
 ms.date: 06/26/2024
 ms.service: azure-database-migration-service
 ms.topic: include
-ms.custom:
+ms.collection:
   - sql-migration-content
 ---
 

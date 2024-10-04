@@ -3,11 +3,12 @@ title: "Replication Agents Overview"
 description: Learn about the agents that SQL Server replication uses to carry out tasks associated with tracking changes and distributing data.
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/14/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "Distribution Agent"
   - "agents [SQL Server replication]"
@@ -52,9 +53,9 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ## Replication Maintenance Jobs  
  Replication has a number of maintenance jobs that perform scheduled and on-demand maintenance. For more information, see [Replication Agent Administration](../../../relational-databases/replication/agents/replication-agent-administration.md).  
   
-## See Also  
- [Start and Stop a Replication Agent &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md)   
- [Run Replication Maintenance Jobs &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/administration/run-replication-maintenance-jobs-sql-server-management-studio.md)   
- [Replication Agent Executables Concepts](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)   
- [Replication Agent Administration](../../../relational-databases/replication/agents/replication-agent-administration.md)  
-  
+## Related content
+
+- [Start and Stop a Replication Agent &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md)
+- [Run Replication Maintenance Jobs &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/administration/run-replication-maintenance-jobs-sql-server-management-studio.md)
+- [Replication Agent Executables Concepts](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)
+- [Replication Agent Administration](../../../relational-databases/replication/agents/replication-agent-administration.md)

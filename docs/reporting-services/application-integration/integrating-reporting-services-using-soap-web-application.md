@@ -3,11 +3,12 @@ title: "Use SOAP API in Web Applications"
 description: You can access the functionality of the report server through the Reporting Services SOAP API, which can be accessed to provide enterprise reporting features.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 06/26/2019
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: application-integration
 ms.topic: reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "SOAP [Reporting Services], Web applications"
   - "impersonation [Reporting Services]"
@@ -85,10 +86,8 @@ private void Page_Load(object sender, System.EventArgs e)
 }  
 ```  
   
-## Related content  
+## Related content
 
- [Building Applications Using the Web Service and the .NET Framework](../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
- [Integrating Reporting Services into Applications](../../reporting-services/application-integration/integrating-reporting-services-into-applications.md)   
- [Using the SOAP API in a Windows Application](../../reporting-services/application-integration/integrating-reporting-services-using-soap-windows-application.md)  
-  
-  
+- [Building Applications Using the Web Service and the .NET Framework](../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)
+- [Integrating Reporting Services into Applications](../../reporting-services/application-integration/integrating-reporting-services-into-applications.md)
+- [Using the SOAP API in a Windows Application](../../reporting-services/application-integration/integrating-reporting-services-using-soap-windows-application.md)

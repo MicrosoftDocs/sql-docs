@@ -3,11 +3,12 @@ title: "Report Server Web service methods"
 description: Report Server Web services include methods based on component features provided through Web service endpoints, which are exposed through generated classes.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/14/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-server-web-service
 ms.topic: reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "Report Server Web service, methods"
   - "Web service [Reporting Services], methods"
@@ -36,10 +37,9 @@ helpviewer_keywords:
 |[Subscription and Delivery Methods](../../../reporting-services/report-server-web-service/methods/subscription-and-delivery-methods.md)|Describes methods that you can use to create and manage subscriptions and report delivery.|  
 |[Linked Reports Methods](../../../reporting-services/report-server-web-service/methods/linked-reports-methods.md)|Describes methods that you can use to create and manage linked reports.|  
   
-## Related content  
- [Accessing the SOAP API](../../../reporting-services/report-server-web-service/accessing-the-soap-api.md)   
- [Building Applications Using the Web Service and the .NET Framework](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
- [Report Server Web Service](../../../reporting-services/report-server-web-service/report-server-web-service.md)   
- [Technical Reference &#40;SSRS&#41;](../../../reporting-services/technical-reference-ssrs.md)  
-  
-  
+## Related content
+
+- [Accessing the SOAP API](../../../reporting-services/report-server-web-service/accessing-the-soap-api.md)
+- [Building Applications Using the Web Service and the .NET Framework](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)
+- [Report Server Web Service](../../../reporting-services/report-server-web-service/report-server-web-service.md)
+- [Technical Reference &#40;SSRS&#41;](../../../reporting-services/technical-reference-ssrs.md)

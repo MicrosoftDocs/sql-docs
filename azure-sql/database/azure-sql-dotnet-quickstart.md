@@ -3,27 +3,28 @@ title: Connect to and query Azure SQL Database using .NET and the Microsoft.Data
 description: Learn how to connect to a database in Azure SQL Database and query data using .NET
 author: alexwolfmsft
 ms.author: alexwolf
-ms.reviewer: mathoma
-ms.custom: passwordless-dotnet
-ms.date: 07/11/2023
+ms.reviewer: mathoma, vanto
+ms.date: 09/17/2024
 ms.service: azure-sql-database
 ms.subservice: security
 ms.topic: quickstart
-monikerRange: "= azuresql || = azuresql-db"
+ms.custom: passwordless-dotnet
+monikerRange: "=azuresql || =azuresql-db"
 ---
 
 # Connect to and query Azure SQL Database using .NET and the Microsoft.Data.SqlClient library
-[!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
+
+[!INCLUDE [appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
 This quickstart describes how to connect an application to a database in Azure SQL Database and perform queries using .NET and the [Microsoft.Data.SqlClient](https://www.nuget.org/packages/Microsoft.Data.SqlClient) library. This quickstart follows the recommended passwordless approach to connect to the database. You can learn more about passwordless connections on the [passwordless hub](/azure/developer/intro/passwordless-overview).
 
 ## Prerequisites
 
-* An [Azure subscription](https://azure.microsoft.com/free/dotnet/).
-* An Azure SQL database configured for authentication with Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)). You can create one using the [Create database quickstart](./single-database-create-quickstart.md).
-* The latest version of the [Azure CLI](/cli/azure/get-started-with-azure-cli).
-* [Visual Studio](https://visualstudio.microsoft.com/vs/) or later with the **ASP.NET and web development** workload.
-* [.NET 7.0](https://dotnet.microsoft.com/download) or later.
+- An [Azure subscription](https://azure.microsoft.com/free/dotnet/).
+- An Azure SQL database configured for authentication with Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)). You can create one using the [Create database quickstart](single-database-create-quickstart.md).
+- The latest version of the [Azure CLI](/cli/azure/get-started-with-azure-cli).
+- [Visual Studio](https://visualstudio.microsoft.com/vs/) or later with the **ASP.NET and web development** workload.
+- [.NET 7.0](https://dotnet.microsoft.com/download) or later.
 
 ## Configure the database
 
@@ -41,7 +42,7 @@ For the steps ahead, create a .NET Minimal Web API using either the .NET CLI or 
 
 1. For the **Project Name**, enter *DotNetSQL*. Leave the default values for the rest of the fields and select **Next**.
 
-1. For the **Framework**, select .NET 7.0 and uncheck **Use controllers (uncheck to use minimal APIs)**. This quickstart uses a Minimal API template to streamline endpoint creation and configuration. 
+1. For the **Framework**, select .NET 7.0 and uncheck **Use controllers (uncheck to use minimal APIs)**. This quickstart uses a Minimal API template to streamline endpoint creation and configuration.
 
 1. Choose **Create**. The new project opens inside the Visual Studio environment.
 
@@ -61,7 +62,7 @@ For the steps ahead, create a .NET Minimal Web API using either the .NET CLI or 
 
 To connect to Azure SQL Database by using .NET, install `Microsoft.Data.SqlClient`. This package acts as a data provider for connecting to databases, executing commands, and retrieving results.
 
-> [!NOTE]
+> [!NOTE]  
 > Make sure to install `Microsoft.Data.SqlClient` and not `System.Data.SqlClient`. `Microsoft.Data.SqlClient` is a newer version of the SQL client library that provides additional capabilities.
 
 ## [Visual Studio](#tab/visual-studio)
@@ -96,7 +97,7 @@ The passwordless connection string sets a configuration value of `Authentication
 
 For example, when the app runs locally, `DefaultAzureCredential` authenticates via the user you're signed into Visual Studio with, or other local tools like the Azure CLI. Once the app deploys to Azure, the same code discovers and applies the managed identity that is associated with the hosted app, which you'll configure later. The [Azure Identity library overview](/dotnet/api/overview/azure/Identity-readme#defaultazurecredential) explains the order and locations in which `DefaultAzureCredential` looks for credentials.
 
-> [!NOTE]
+> [!NOTE]  
 > Passwordless connection strings are safe to commit to source control, since they don't contain secrets such as usernames, passwords, or access keys.
 
 ## [SQL Authentication](#tab/sql-auth)
@@ -109,7 +110,7 @@ For local development with SQL Authentication to Azure SQL Database, add the fol
 }
 ```
 
-> [!WARNING]
+> [!WARNING]  
 > Use caution when managing connection strings that contain secrets such as usernames, passwords, or access keys. These secrets shouldn't be committed to source control or placed in unsecure locations where they might be accessed by unintended users. During local development, on a real app, you'll generally connect to a local database that doesn't require storing secrets or connecting directly to Azure.
 
 ---
@@ -118,10 +119,10 @@ For local development with SQL Authentication to Azure SQL Database, add the fol
 
 Replace the contents of the `Program.cs` file with the following code, which performs the following important steps:
 
-* Retrieves the passwordless connection string from `appsettings.json`
-* Creates a `Persons` table in the database during startup (for testing scenarios only)
-* Creates an HTTP GET endpoint to retrieve all records stored in the `Persons` table
-* Creates an HTTP POST endpoint to add new records to the `Persons` table
+- Retrieves the passwordless connection string from `appsettings.json`
+- Creates a `Persons` table in the database during startup (for testing scenarios only)
+- Creates an HTTP GET endpoint to retrieve all records stored in the `Persons` table
+- Creates an HTTP POST endpoint to add new records to the `Persons` table
 
 ```csharp
 using Microsoft.Data.SqlClient;
@@ -221,9 +222,9 @@ The app is ready to be tested locally. Make sure you're signed in to Visual Stud
 
 1) On the Swagger UI page, expand the POST method and select **Try it**.
 
-1) Modify the sample JSON to include values for the first and last name. Select **Execute** to add a new record to the database. The API returns a successful response.
+1) Modify the sample JSON to include values for the `first` and `last` name. Select **Execute** to add a new record to the database. The API returns a successful response.
 
-    :::image type="content" source="media/passwordless-connections/api-testing-small.png" lightbox="media/passwordless-connections/api-testing.png" alt-text="A screenshot showing how to test the API.":::
+    :::image type="content" source="media/passwordless-connections/api-testing-small.png" alt-text="Screenshot showing how to test the API." lightbox="media/passwordless-connections/api-testing.png":::
 
 1) Expand the **GET** method on the Swagger UI page and select **Try it**. Choose **Execute**, and the person you just created is returned.
 
@@ -243,11 +244,11 @@ The app is ready to be deployed to Azure. Visual Studio can create an Azure App 
     * **Hosting Plan**: Select **New** to open the hosting plan dialog. Leave the default values and select **OK**.
     * Select **Create** to close the original dialog. Visual Studio creates the App Service resource in Azure.
 
-        :::image type="content" source="media/passwordless-connections/create-app-service-small.png" lightbox="media/passwordless-connections/create-app-service.png" alt-text="A screenshot showing how to deploy with Visual Studio.":::
+        :::image type="content" source="media/passwordless-connections/create-app-service-small.png" alt-text="Screenshot showing how to deploy with Visual Studio." lightbox="media/passwordless-connections/create-app-service.png":::
 
 1. Once the resource is created, make sure it's selected in the list of app services, and then select **Next**.
 1. On the **API Management** step, select the **Skip this step** checkbox at the bottom and then choose **Finish**.
-1. On the Finish step, select **Close** if the dialog does not close automatically.
+1. On the Finish step, select **Close** if the dialog doesn't close automatically.
 
 1. Select **Publish** in the upper right of the publishing profile summary to deploy the app to Azure.
 
@@ -273,9 +274,13 @@ When the deployment finishes, Visual Studio launches the browser to display the 
 
 3) Execute test GET and POST requests to verify that the endpoints work as expected.
 
-> [!TIP]
-> If you receive a 500 Internal Server error while testing, it may be due to your database networking configurations. Verify that your logical server is configured with the settings outlined in the [Configure the database](/azure/azure-sql/database/azure-sql-dotnet-quickstart#configure-the-database) section.
+> [!TIP]  
+> If you receive a 500 Internal Server error while testing, it might be due to your database networking configurations. Verify that your logical server is configured with the settings outlined in the [Configure the database](/azure/azure-sql/database/azure-sql-dotnet-quickstart#configure-the-database) section.
 
-Congratulations! Your application is now connected to Azure SQL Database in both local and hosted environments.
+Your application is now connected to Azure SQL Database in both local and hosted environments.
 
 [!INCLUDE [passwordless-resource-cleanup](../includes/passwordless-resource-cleanup.md)]
+
+## Related content
+
+- [Quickstart: Create an Azure SQL Database single database](single-database-create-quickstart.md)

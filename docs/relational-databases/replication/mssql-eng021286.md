@@ -3,11 +3,12 @@ title: "MSSQL_ENG021286"
 description: "MSSQL_ENG021286"
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/04/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "MSSQL_ENG021286 error"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
@@ -34,7 +35,6 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
   
  If the conflict table is missing on a Subscriber, drop the subscription and recreate it. If the conflict table is missing on a Publisher, drop all subscriptions, drop the publication, and then recreate the publication and all subscriptions. For more information, see [Publish Data and Database Objects](../../relational-databases/replication/publish/publish-data-and-database-objects.md) and [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md).  
   
-## See Also  
- [Errors and Events Reference &#40;Replication&#41;](../../relational-databases/replication/errors-and-events-reference-replication.md)  
-  
-  
+## Related content
+
+- [Errors and Events Reference &#40;Replication&#41;](../../relational-databases/replication/errors-and-events-reference-replication.md)

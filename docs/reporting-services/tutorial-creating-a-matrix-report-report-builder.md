@@ -3,11 +3,12 @@ title: "Tutorial: Create a matrix report (Report Builder)"
 description: Learn how to create a Reporting Services paginated report with a matrix of sample sales data in nested row and column groups.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 06/23/2016
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: reporting-services
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 # Tutorial: Create a matrix report (Report Builder)
 This tutorial teaches you to create a [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] paginated report with a matrix of sample sales data in nested row and column groups. 
@@ -347,16 +348,11 @@ A text box can also display text as horizontal, vertical (top to bottom). For mo
   
 The territory name is written vertically, bottom to top. The height of the Territory row group varies by the length of the territory name.  
   
-## Next steps  
-You successfully completed the tutorial for how to create a matrix report. For more information about matrices, see: 
--    [Tables, matrices, and lists in paginated reports (Report Builder)](../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)
--    [Create a matrix in a paginated report (Report Builder)](../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)
--    [Tablix data region areas in a paginated report (Report Builder)](../reporting-services/report-design/tablix-data-region-areas-report-builder-and-ssrs.md) 
--    [Cells, rows, & columns in a tablix in a paginated report (Report Builder)](../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)  
-  
 ## Related content
 
-- [Report Builder tutorials](../reporting-services/report-builder-tutorials.md)  
-- [Report Builder in SQL Server](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
-  
-
+- [Report Builder tutorials](../reporting-services/report-builder-tutorials.md)
+- [Report Builder in SQL Server](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)
+- [Tables, matrices, and lists in paginated reports (Report Builder)](../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)
+- [Create a matrix in a paginated report (Report Builder)](../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)
+- [Tablix data region areas in a paginated report (Report Builder)](../reporting-services/report-design/tablix-data-region-areas-report-builder-and-ssrs.md)
+- [Cells, rows, & columns in a tablix in a paginated report (Report Builder)](../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)

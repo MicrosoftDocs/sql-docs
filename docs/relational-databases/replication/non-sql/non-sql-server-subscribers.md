@@ -3,11 +3,12 @@ title: "Non-SQL Server Subscribers"
 description: "Non-SQL Server Subscribers"
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "08/29/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "subscriptions [SQL Server replication], non-SQL Server Subscribers"
   - "heterogeneous data sources, non-SQL Server Subscribers"
@@ -104,8 +105,7 @@ For information about creating subscriptions to Oracle and IBM Db2, see [Oracle 
   
 -   Non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Subscribers cannot be automatically initialized from a backup.  
   
-## See Also  
- [Heterogeneous Database Replication](../../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
- [Subscribe to Publications](../../../relational-databases/replication/subscribe-to-publications.md)  
-  
-  
+## Related content
+
+- [Heterogeneous Database Replication](../../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)
+- [Subscribe to Publications](../../../relational-databases/replication/subscribe-to-publications.md)

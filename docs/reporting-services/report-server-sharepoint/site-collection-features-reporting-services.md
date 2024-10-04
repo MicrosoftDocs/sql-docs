@@ -3,11 +3,12 @@ title: "Reporting Services site collection features"
 description: Learn about the SharePoint site collection features that SQL Server Reporting Services SharePoint mode provides.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 09/25/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-server-sharepoint
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 monikerRange: ">=sql-server-2016 <=sql-server-2016"
 ---
 # Reporting Services site collection features
@@ -33,8 +34,7 @@ Reporting Services SharePoint mode provides three SharePoint site collection fea
 
 ## Related content
 
-[Activate the report server and Power View integration features in SharePoint](../../reporting-services/report-server-sharepoint/site-collection-features-report-server-and-power-view.md)   
-[Reporting Services site settings and site features&#40;SharePoint Mode&#41;](../../reporting-services/report-server-sharepoint/site-settings-and-features-reporting-services.md)   
-[Activate the report server file sync feature in SharePoint Central Administration](../../reporting-services/report-server-sharepoint/activate-the-report-server-file-sync-feature-in-sharepoint-ca.md)  
-
-More questions? [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)
+- [Activate the report server and Power View integration features in SharePoint](../../reporting-services/report-server-sharepoint/site-collection-features-report-server-and-power-view.md)
+- [Reporting Services site settings and site features&#40;SharePoint Mode&#41;](../../reporting-services/report-server-sharepoint/site-settings-and-features-reporting-services.md)
+- [Activate the report server file sync feature in SharePoint Central Administration](../../reporting-services/report-server-sharepoint/activate-the-report-server-file-sync-feature-in-sharepoint-ca.md)
+- [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)

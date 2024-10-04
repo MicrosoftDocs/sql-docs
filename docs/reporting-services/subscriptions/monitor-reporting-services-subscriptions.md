@@ -3,11 +3,12 @@ title: "Monitor Reporting Services subscriptions"
 description: Learn to use the UI, PowerShell, or log files to track Reporting Services subscriptions. Monitoring options depend on the report server mode you're running.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 06/12/2019
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: subscriptions
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "subscriptions [Reporting Services], inactive"
   - "subscriptions [Reporting Services], status"
@@ -121,8 +122,7 @@ helpviewer_keywords:
   
  When conditions cause the subscription to become inactive, the subscription reflects this fact when the report server runs the subscription. For example, a subscription is scheduled to deliver a report every Friday at 2:00 A.M. and the delivery extension it uses was uninstalled on Monday at 9:00 A.M.. In this case, the subscription doesn't reflect its inactive state until Friday at 2:00 A.M.  
   
-## Related content  
- [Create and manage subscriptions for native mode report servers](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)   
- [Subscriptions and delivery &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)  
-  
-  
+## Related content
+
+- [Create and manage subscriptions for native mode report servers](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)
+- [Subscriptions and delivery &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)

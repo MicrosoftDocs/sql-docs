@@ -3,11 +3,12 @@ title: "Monitor Replication Agents"
 description: SQL Server Replication Monitor provides a systemic view of replication activity and lets you find information on a specific agent.
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/14/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "monitoring performance [SQL Server replication], agents"
   - "Log Reader Agent, monitoring"
@@ -110,7 +111,6 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
   
 5.  Click **Close**.  
   
-## See Also  
- [Replication Agents Overview](../../../relational-databases/replication/agents/replication-agents-overview.md)  
-  
-  
+## Related content
+
+- [Replication Agents Overview](../../../relational-databases/replication/agents/replication-agents-overview.md)

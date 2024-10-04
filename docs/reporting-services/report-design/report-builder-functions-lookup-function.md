@@ -3,13 +3,13 @@ title: Report Builder functions - Lookup function in a paginated report (Report 
 description: Learn how to use the Lookup function to return the first matching value for the specified name from a dataset that contains name or value pairs.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 06/26/2024
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: concept-article
-ms.custom: updatefrequency5
-
-#customer intent: As a Report Builder user, I want to learn how to use the Lookup function so that I can programmatically find data in my datasets.
+ms.custom:
+  - updatefrequency5
+# customer intent: As a Report Builder user, I want to learn how to use the Lookup function so that I can programmatically find data in my datasets.
 ---
 # Report Builder functions - Lookup function in a paginated report (Report Builder)
 

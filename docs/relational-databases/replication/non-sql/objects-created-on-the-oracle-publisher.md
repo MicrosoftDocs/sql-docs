@@ -3,11 +3,12 @@ title: "Objects Created on the Oracle Publisher"
 description: "Objects Created on the Oracle Publisher"
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/14/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "Oracle publishing [SQL Server replication], objects created"
 ---
@@ -41,9 +42,8 @@ helpviewer_keywords:
 |HREPL_Article_I_J|View|View created for each published table, used to query the published table.|  
 |HREPL_Log_I_J_K|View|View created for each published table, used to query the change tracking table.|  
   
-## See Also  
- [Configure an Oracle Publisher](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)   
- [Glossary of Terms for Oracle Publishing](../../../relational-databases/replication/non-sql/glossary-of-terms-for-oracle-publishing.md)   
- [Oracle Publishing Overview](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)  
-  
-  
+## Related content
+
+- [Configure an Oracle Publisher](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)
+- [Glossary of Terms for Oracle Publishing](../../../relational-databases/replication/non-sql/glossary-of-terms-for-oracle-publishing.md)
+- [Oracle Publishing Overview](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)

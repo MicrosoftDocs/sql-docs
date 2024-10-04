@@ -3,11 +3,12 @@ title: "Implement a rendering extension"
 description: Find out how to transform Reporting Services report data and layout information into device-specific formats by implementing rendering extensions.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/16/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: extensions
 ms.topic: reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "rendering extensions [Reporting Services]"
   - "custom rendering extensions [Reporting Services]"
@@ -36,7 +37,5 @@ helpviewer_keywords:
   
 ## Related content
 
-- [Reporting Services extensions](../../../reporting-services/extensions/reporting-services-extensions.md)   
-- [Reporting Services extension library](../../../reporting-services/extensions/reporting-services-extension-library.md)  
-  
-  
+- [Reporting Services extensions](../../../reporting-services/extensions/reporting-services-extensions.md)
+- [Reporting Services extension library](../../../reporting-services/extensions/reporting-services-extension-library.md)

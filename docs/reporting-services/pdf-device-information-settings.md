@@ -3,11 +3,12 @@ title: "PDF device information settings"
 description: Learn about the device information settings that are available for rendering reports in PDF format.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/16/2018
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: reporting-services
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "device information settings [Reporting Services], PDF rendering"
   - "PDF [Reporting Services]"
@@ -34,8 +35,6 @@ helpviewer_keywords:
   
 ## Related content
 
-- [Pass device information settings to rendering extensions](../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
-- [Customize rendering extension parameters in RSReportServer.Config](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)   
-- [Technical reference &#40;SSRS&#41;](../reporting-services/technical-reference-ssrs.md)  
-  
-  
+- [Pass device information settings to rendering extensions](../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)
+- [Customize rendering extension parameters in RSReportServer.Config](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)
+- [Technical reference &#40;SSRS&#41;](../reporting-services/technical-reference-ssrs.md)

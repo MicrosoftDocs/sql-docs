@@ -3,11 +3,12 @@ title: "Article Issues"
 description: "Article Issues"
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/14/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: ui-reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 f1_keywords:
   - "sql13.rep.newpubwizard.articleissues.f1"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
@@ -24,8 +25,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 |Tables referenced by views are required.|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] requires that all tables referenced by views and indexed views that are published be available at the Subscriber. If the referenced tables are not published as articles in this publication, they must be created at the Subscriber manually.|Use the **Back** button to navigate to the **Articles** page. Add any required objects.|  
 |Objects referenced by stored procedures are required.|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] requires that all objects referenced by published stored procedures, such as tables and user-defined functions, be available at the Subscriber. If the referenced objects are not published as articles in this publication, they must be created at the Subscriber manually.|Use the **Back** button to navigate to the **Articles** page. Add any required objects.|  
   
-## See Also  
- [Publish Data and Database Objects](../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
- [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)  
-  
-  
+## Related content
+
+- [Publish Data and Database Objects](../../relational-databases/replication/publish/publish-data-and-database-objects.md)
+- [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)

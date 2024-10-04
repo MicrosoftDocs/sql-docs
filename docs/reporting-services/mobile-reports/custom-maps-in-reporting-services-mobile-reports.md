@@ -4,7 +4,7 @@ description: Learn about geographic maps in SQL Server Mobile Report Publisher, 
 author: maggiesMSFT
 ms.author: maggies
 ms.reviewer: maghan
-ms.date: 05/30/2024
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: mobile-reports
 ms.topic: conceptual

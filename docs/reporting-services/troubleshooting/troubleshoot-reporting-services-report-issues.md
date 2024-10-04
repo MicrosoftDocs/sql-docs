@@ -3,11 +3,12 @@ title: "Troubleshoot Reporting Services report issues"
 description: In this article, troubleshoot issues with report design, preview, export, and publishing to or viewing on a report server in native or SharePoint mode.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 02/27/2016
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: troubleshooting
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 # Troubleshoot  Reporting Services report issues
 This article helps you in troubleshooting problems with  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report design and previewing a report. It also provides guidance on resolving issues when publishing a report to a report server in native mode or SharePoint mode. Additionally, it covers troubleshooting for viewing a report on the report server or exporting a report to a different file format. 
@@ -50,8 +51,7 @@ To control whether [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull
 As long as the value is set to 1, only cached report data is used. Be sure to remove this section when you finish debugging the report.  
   
 ## Related content
-[Errors and events (Reporting Services)](errors-and-events-reference-reporting-services.md)  
-  
-  
 
-[!INCLUDE[feedback-qa-stackoverflow-md](../../includes/feedback-qa-stackoverflow-md.md)]
+- [Errors and events (Reporting Services)](errors-and-events-reference-reporting-services.md)
+
+[!INCLUDE [feedback-qa-stackoverflow-md](../../includes/feedback-qa-stackoverflow-md.md)]

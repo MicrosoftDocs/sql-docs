@@ -192,7 +192,7 @@ To add an additional node to the SQL Server FCI, follow these steps:
 1. Repeat these steps on any other nodes that you want to add to the SQL Server failover cluster instance. 
 
 
->[!NOTE]
+> [!NOTE]
 > Azure Marketplace gallery images come with SQL Server Management Studio installed. If you didn't use a marketplace image [Download SQL Server Management Studio (SSMS)](/sql/ssms/download-sql-server-management-studio-ssms).
 
 
@@ -200,7 +200,8 @@ To add an additional node to the SQL Server FCI, follow these steps:
 
 To manage your SQL Server VM from the portal, register it with the [SQL IaaS Agent extension](sql-agent-extension-manually-register-single-vm.md). Note that only [limited functionality](sql-server-iaas-agent-extension-automate-management.md#feature-benefits) will be available to SQL Server VMs that have failover clustered instances of SQL Server (FCIs).
 
-If your SQL Server VM has already been registered with the SQL IaaS Agent extension and you've enabled any features that require the agent, you'll need to [delete the extension](sql-agent-extension-manually-register-single-vm.md#delete-the-extension) from the SQL Server VM and register it again after your FCI is installed. 
+> [!NOTE]
+> At this time, SQL Server failover cluster instances on Azure virtual machines registered with the SQL IaaS Agent extension only support a [limited](failover-cluster-instance-overview.md#limited-extension-support) number of features available through basic registration, and not those that require the agent, such as automated backup, patching, Microsoft Entra authentication and advanced portal management. See the [table of benefits](sql-server-iaas-agent-extension-automate-management.md#feature-benefits) to learn more. 
 
 Register a SQL Server VM with PowerShell (-LicenseType can be `PAYG` or `AHUB`):
 
@@ -220,10 +221,14 @@ If you deployed your SQL Server VMs in multiple subnets, skip this step. If you 
 
 ## Limitations
 
-- Azure virtual machines support Microsoft Distributed Transaction Coordinator (MSDTC) on Windows Server 2019 with storage on CSVs and a [standard load balancer](/azure/load-balancer/load-balancer-overview). MSDTC is not supported on Windows Server 2016 and earlier. 
 - Disks that have been attached as NTFS-formatted disks can be used with Storage Spaces Direct only if the disk eligibility option is unchecked, or cleared, when storage is being added to the cluster. 
 - SQL Server FCIs registered with the SQL IaaS Agent extension don't support features that require the agent, such as automated backup, patching, Microsoft Entra authentication and advanced portal management. See the [table of benefits](sql-server-iaas-agent-extension-automate-management.md#feature-benefits) for more information.
 - Failover cluster instances using Storage Spaces Direct as the shared storage do not support using a disk witness for the quorum of the cluster. Use a cloud witness instead. 
+
+- Microsoft Distributed Transaction Coordinator (MSDTC) is not supported by SQL Server on Azure VM failover cluster instances deployed to Storage Spaces direct. Review [FCI limitations](failover-cluster-instance-overview.md#limitations) for more information.
+- Microsoft Distributed Transaction Coordinator (MSDTC) is supported on Azure virtual machines starting with Windows Server 2019 and later when deployed to dedicated Clustered Shared Volumes (CSVs) and using a [standard load balancer](/azure/load-balancer/load-balancer-overview). MSDTC is not supported on Windows Server 2016 and earlier.
+
+[!INCLUDE [virtual-machines-fci-limitations](../../includes/virtual-machines-fci-limitations.md)]
 
 ## Next steps
 

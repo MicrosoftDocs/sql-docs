@@ -3,11 +3,12 @@ title: "Delete a Pull Subscription"
 description: "Delete a Pull Subscription"
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/14/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: how-to
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "removing subscriptions"
   - "deleting subscriptions"
@@ -130,8 +131,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
   
  [!code-vb[HowTo#rmo_vb_DropMergePullSub](../../relational-databases/replication/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_dropmergepullsub)]  
   
-## See Also  
- [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)   
- [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md)  
-  
-  
+## Related content
+
+- [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)
+- [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md)

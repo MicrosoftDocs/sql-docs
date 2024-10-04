@@ -7,9 +7,10 @@ ms.date: "01/19/2017"
 ms.service: sql
 ms.subservice: ssma
 ms.topic: conceptual
+ms.collection:
+  - sql-migration-content
 ms.custom:
   - intro-migration
-  - sql-migration-content
 f1_keywords:
   - "ssma.sybase.migratedata.f1"
 helpviewer_keywords:

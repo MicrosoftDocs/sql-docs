@@ -3,11 +3,12 @@ title: "Secure the Snapshot Folder"
 description: "Secure the Snapshot Folder"
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/14/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: how-to
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "snapshots [SQL Server replication], security"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
@@ -44,11 +45,10 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
   
  For information about setting and changing the password for access to snapshots through FTP, see the section "FTP Snapshot Delivery" in the topic [Secure the Publisher](../../../relational-databases/replication/security/secure-the-publisher.md).  
   
-## See Also  
- [Modify snapshot options](../../../relational-databases/replication/snapshot-options.md)   
- [Initialize a Subscription with a Snapshot](../../../relational-databases/replication/initialize-a-subscription-with-a-snapshot.md)   
- [Replication Security Best Practices](../../../relational-databases/replication/security/replication-security-best-practices.md)   
- [View and modify replication security settings](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   
- [Transfer Snapshots Through FTP](../../../relational-databases/replication//publish/deliver-a-snapshot-through-ftp.md)  
-  
-  
+## Related content
+
+- [Modify snapshot options](../../../relational-databases/replication/snapshot-options.md)
+- [Initialize a Subscription with a Snapshot](../../../relational-databases/replication/initialize-a-subscription-with-a-snapshot.md)
+- [Replication Security Best Practices](../../../relational-databases/replication/security/replication-security-best-practices.md)
+- [View and modify replication security settings](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)
+- [Transfer Snapshots Through FTP](../../../relational-databases/replication//publish/deliver-a-snapshot-through-ftp.md)

@@ -3,11 +3,12 @@ title: "MSSQL_ENG002601"
 description: "MSSQL_ENG002601"
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/01/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "MSSQL_ENG002601 error"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
@@ -56,7 +57,6 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
   
      This error can occur because of an incorrect value for the join filter property **join_unique_key**. This property should be set to TRUE only if the joined column in the parent table is unique. If the property is set to TRUE, but the column is not unique, this error is raised. For more information on setting this property, see [Define and Modify a Join Filter Between Merge Articles](../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md).  
   
-## See Also  
- [Errors and Events Reference &#40;Replication&#41;](../../relational-databases/replication/errors-and-events-reference-replication.md)  
-  
-  
+## Related content
+
+- [Errors and Events Reference &#40;Replication&#41;](../../relational-databases/replication/errors-and-events-reference-replication.md)

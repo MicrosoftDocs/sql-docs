@@ -3,11 +3,12 @@ title: "View Publication & Subscription status (Replication Monitor)"
 description: Learn how to view Publication and Subscription status using the Replication Monitor in SQL Server Management Studio (SSMS).
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/14/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: how-to
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "Log Reader Agent, monitoring"
   - "Merge Agent, monitoring"
@@ -104,7 +105,6 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 |Synchronizing|![UI icon: replication agent running](../../../relational-databases/replication/monitor/media/repl-icon-running.gif "UI icon: replication agent running")|  
 |Not Synchronizing|![UI icon: replication agent stopped](../../../relational-databases/replication/monitor/media/repl-icon-stopped.gif "UI icon: replication agent stopped")|  
   
-## See Also  
- [Monitoring Replication](../../../relational-databases/replication/monitor/monitoring-replication.md)  
-  
-  
+## Related content
+
+- [Monitoring Replication](../../../relational-databases/replication/monitor/monitoring-replication.md)

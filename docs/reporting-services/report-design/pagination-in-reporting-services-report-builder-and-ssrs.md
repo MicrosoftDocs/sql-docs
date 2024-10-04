@@ -3,11 +3,12 @@ title: "Pagination in paginated reports"
 description: Learn about the number of pages within a paginated report and how report items are arranged on these pages in Microsoft Report Builder.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 10/09/2023
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 
 # Pagination in paginated reports (Microsoft Report Builder)
@@ -81,8 +82,6 @@ ms.custom: updatefrequency5
   
  For more information about how these properties work when reports are exported to Excel, see [Exporting to Microsoft Excel &#40;Report Builder and SSRS&#41;](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md).  
   
-## See Also  
- [Page Layout and Rendering &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/page-layout-and-rendering-report-builder-and-ssrs.md)  
-  
-  
+## Related content
 
+- [Page Layout and Rendering &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/page-layout-and-rendering-report-builder-and-ssrs.md)

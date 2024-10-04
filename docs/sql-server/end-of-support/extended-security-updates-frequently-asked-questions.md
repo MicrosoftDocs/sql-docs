@@ -3,7 +3,7 @@ title: "Extended Security Updates FAQ"
 description: Frequently asked questions about using Azure Arc to get extended security updates for your end-of-support and end-of-life SQL Server products, such as SQL Server 2012 and SQL Server 2014.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 07/10/2024
+ms.date: 10/02/2024
 ms.service: sql
 ms.subservice: install
 ms.topic: conceptual
@@ -34,6 +34,10 @@ Microsoft Lifecycle Policy offers 10 years of support (five years for Mainstream
 #### What editions of SQL Server are eligible for Extended Security Updates?
 
 Enterprise, Datacenter, Standard, Web, and Workgroup editions of [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)] and [!INCLUDE [sssql14-md](../../includes/sssql14-md.md)] are eligible for ESUs for both x86 and x64 versions.
+
+#### What happens when the edition is changed?
+
+When an instance edition is downgraded from Enterprise Edition  to Standard Edition on the same machine, the billing meter automatically switches from enterprise to standard both for IP and ESU. For ESU there won't be another bill-back. However, there will be no refund of the original EE bill-back.
 
 #### When is the Extended Security Updates offer available?
 

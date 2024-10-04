@@ -192,7 +192,7 @@ If a watcher is already running when a private endpoint is approved, it must be 
 
 > [!TIP]
 > 
-> You need to create an additional private endpoint for your Azure Data Explorer cluster if public connectivity to the cluster is disabled. For more information, see [Private connectivity to Azure Data Explorer clusters](#private-connectivity-to-the-data-store).
+> You need to create an additional private endpoint for your Azure Data Explorer cluster if public connectivity to the cluster is disabled. For more information, see [Private connectivity to the data store](#private-connectivity-to-the-data-store).
 
 ### Delete a managed private endpoint
 
@@ -545,15 +545,15 @@ If you want to use an existing Azure Data Explorer cluster, make sure to enable 
 
 ### Private connectivity to the data store
 
-If [public access](/azure/data-explorer/security-network-restrict-public-access) on an Azure Data Explorer cluster is disabled, you need to create a private endpoint to connect to the cluster from your browser and see the SQL monitoring data on dashboards, or to query the data directly. This private endpoint is *in addition to* the [managed private endpoint](#create-a-managed-private-endpoint) that you create to let the watcher ingest monitoring data into a database on the Azure Data Explorer cluster.
+If [public access](/azure/data-explorer/security-network-restrict-public-access) on an Azure Data Explorer cluster is disabled, you need to create a private endpoint to connect to the cluster from your browser and see the SQL monitoring data on dashboards, or to query the data directly. This private endpoint is *in addition to* the [managed private endpoint](#create-a-managed-private-endpoint) created to let the watcher ingest monitoring data into a database on the Azure Data Explorer cluster.
 
-If you are connecting to an Azure Data Explorer cluster from an Azure VM, [create](/azure/data-explorer/security-network-private-endpoint-create) a private endpoint for the Azure Data Explorer cluster in the Azure virtual network where your Azure VM is deployed.
+- If you are connecting to an Azure Data Explorer cluster from an Azure VM, [create](/azure/data-explorer/security-network-private-endpoint-create) a private endpoint for the Azure Data Explorer cluster in the Azure virtual network where your Azure VM is deployed.
 
-If you are connecting to an Azure Data Explorer cluster from a machine on premises, you can:
+- If you are connecting to an Azure Data Explorer cluster from a machine on premises, you can:
 
-  1. Use [Azure VPN Gateway](/azure/vpn-gateway/vpn-gateway-about-vpngateways) or [Azure ExpressRoute](/azure/expressroute/expressroute-introduction) to establish a private connection from your on-premises network to an Azure virtual network.
-  1. [Create](/azure/data-explorer/security-network-private-endpoint-create) a private endpoint for the Azure Data Explorer cluster in the Azure virtual network where the VPN or ExpressRoute connection terminates, or in another Azure virtual network reachable by traffic from your machine on-premises.
-  1. [Configure DNS](/azure/private-link/private-endpoint-dns) for that private endpoint.
+    1. Use [Azure VPN Gateway](/azure/vpn-gateway/vpn-gateway-about-vpngateways) or [Azure ExpressRoute](/azure/expressroute/expressroute-introduction) to establish a private connection from your on-premises network to an Azure virtual network.
+    1. [Create](/azure/data-explorer/security-network-private-endpoint-create) a private endpoint for the Azure Data Explorer cluster in the Azure virtual network where the VPN or ExpressRoute connection terminates, or in another Azure virtual network reachable by traffic from your machine on-premises.
+    1. [Configure DNS](/azure/private-link/private-endpoint-dns) for that private endpoint.
 
 Private connectivity is not available for free Azure Data Explorer clusters, or for Real-Time Analytics in Microsoft Fabric.
 

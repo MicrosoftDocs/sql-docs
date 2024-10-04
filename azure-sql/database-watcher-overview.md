@@ -257,7 +257,7 @@ If you select the **Dashboards** page of a watcher, but do not see a summary of 
 - You might not have access to the data store. For more information, see [Grant users and groups access to the data store](database-watcher-manage.md#grant-users-and-groups-access-to-the-data-store).
 - You might not have network connectivity to the data store. For example, this happens if connections from your browser to the Azure Data Explorer cluster use public connectivity, but you [disable public access](/azure/data-explorer/security-network-restrict-public-access) to the cluster. In that case, you also cannot connect to the cluster from [Kusto Explorer](/azure/data-explorer/kusto/tools/kusto-explorer) or the Azure Data Explorer [web UI](/azure/data-explorer/web-ui-query-overview).
 
-  To resolve this, establish private connectivity from your machine to the Azure Data Explorer cluster as described in [Private connectivity to Azure Data Explorer clusters](database-watcher-manage.md#private-connectivity-to-the-data-store).
+  To resolve this, establish private connectivity from your machine to the Azure Data Explorer cluster as described in [Private connectivity to the data store](database-watcher-manage.md#private-connectivity-to-the-data-store).
 
 - The Azure Data Explorer cluster might be stopped. For more information, see [Stopped Azure Data Explorer clusters](database-watcher-manage.md#stopped-azure-data-explorer-clusters).
 - The Azure Data Explorer cluster or database, or the Real-Time Analytics database might have been deleted after it was selected as the data store for your watcher. Navigate to the cluster and the database, and confirm that they exist.

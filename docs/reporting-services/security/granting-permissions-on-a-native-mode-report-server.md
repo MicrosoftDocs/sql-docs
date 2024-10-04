@@ -3,11 +3,12 @@ title: "Grant permissions on a native mode report server"
 description: "Grant permissions on a native mode report server"
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 05/14/2019
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: security
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "roles [Reporting Services], creating"
   - "authorization [Reporting Services]"
@@ -63,11 +64,10 @@ helpviewer_keywords:
 |The web portal: Used to assign users and groups to roles|[Grant user access to a report server](../../reporting-services/security/grant-user-access-to-a-report-server.md)<br /><br /> [Modify or delete a role assignment](../../reporting-services/security/role-assignments-modify-or-delete.md)|  
   
 ## Related content
- - [Predefined roles](../../reporting-services/security/role-definitions-predefined-roles.md)  
- - [Grant permissions on report server items on a SharePoint site](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)  
- - [Authentication with the report server](../../reporting-services/security/authentication-with-the-report-server.md)  
- - [Create and manage role assignments](../../reporting-services/security/create-and-manage-role-assignments.md)  
- - [Reporting Services security and protection](../../reporting-services/security/reporting-services-security-and-protection.md)  
- - [Report server content management &#40;SSRS native mode&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)  
-  
-  
+
+- [Predefined roles](../../reporting-services/security/role-definitions-predefined-roles.md)
+- [Grant permissions on report server items on a SharePoint site](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)
+- [Authentication with the report server](../../reporting-services/security/authentication-with-the-report-server.md)
+- [Create and manage role assignments](../../reporting-services/security/create-and-manage-role-assignments.md)
+- [Reporting Services security and protection](../../reporting-services/security/reporting-services-security-and-protection.md)
+- [Report server content management &#40;SSRS native mode&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)

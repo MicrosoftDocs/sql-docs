@@ -70,26 +70,8 @@
           displayName: Microsoft Entra authentication
         - name: Microsoft Entra authentication overview
           href: database/authentication-aad-overview.md
-        - name: Configure Microsoft Entra authentication
-          href: database/authentication-aad-configure.md
-        - name: Microsoft Entra multifactor authentication
-          href: database/authentication-mfa-ssms-overview.md
-        - name: Conditional Access
-          href: database/conditional-access-configure.md
-        - name: Server principals (logins)
-          href: database/authentication-azure-ad-logins.md
-        - name: Service principals (Applications)
-          href: database/authentication-aad-service-principal.md
         - name: Directory Readers role
           href: database/authentication-aad-directory-readers-role.md
-        - name: Microsoft Entra-only authentication
-          href: database/authentication-azure-ad-only-authentication.md
-        - name: Azure Policy for Microsoft Entra-only authentication
-          href: database/authentication-azure-ad-only-authentication-policy.md
-        - name: Managed identity
-          href: database/authentication-azure-ad-user-assigned-managed-identity.md
-        - name: Microsoft Entra nonunique display names
-          href: database/authentication-microsoft-entra-create-users-with-nonunique-names.md
       - name: Transparent data encryption (TDE)
         items:
         - name: Overview
@@ -163,6 +145,8 @@
       items:
       - name: Connect and query
         href: database/connect-query-content-reference-guide.md
+      - name: SSMS
+        href: database/connect-query-ssms.md
       - name: .NET with Visual Studio
         href: database/connect-query-dotnet-visual-studio.md
       - name: .NET with Windows, Linux, and macOS
@@ -189,18 +173,44 @@
       items:
       - name: Microsoft Entra authentication
         items:
-        - name: Create Microsoft Entra guest users and set as a Microsoft Entra admin
-          href: database/authentication-aad-guest-users.md
-        - name: Assign Directory Readers role to groups
-          href: database/authentication-aad-directory-readers-role-tutorial.md
-        - name: Enable Microsoft Entra-only authentication
-          href: database/authentication-azure-ad-only-authentication-tutorial.md
-        - name: Enforce Microsoft Entra-only authentication using Azure Policy
-          href: database/authentication-azure-ad-only-authentication-policy-how-to.md
-        - name: Create server with Microsoft Entra-only authentication enabled
-          href: database/authentication-azure-ad-only-authentication-create-server.md
-        - name: Create and utilize Microsoft Entra server logins
-          href: database/authentication-azure-ad-logins-tutorial.md
+        - name: Connect with Microsoft Entra authentication
+          href: database/authentication-microsoft-entra-connect-to-azure-sql.md
+        - name: Configure
+          items: 
+          - name: Microsoft Entra authentication
+            href: database/authentication-aad-configure.md
+          - name: Conditional Access
+          - name: Directory Readers role for groups
+            href: database/authentication-aad-directory-readers-role-tutorial.md
+        - name: Create
+          items: 
+          - name: Microsoft Entra guest users and set as a Microsoft Entra admin
+            href: database/authentication-aad-guest-users.md
+          - name: Server principals (logins)
+            href: database/authentication-azure-ad-logins.md
+          - name: Service principals (Applications)
+            href: database/authentication-aad-service-principal.md
+          - name: Managed identity
+            href: database/authentication-azure-ad-user-assigned-managed-identity.md
+          - name: Microsoft Entra nonunique display names
+            href: database/authentication-microsoft-entra-create-users-with-nonunique-names.md
+          - name: Microsoft Entra server logins
+            href: database/authentication-azure-ad-logins-tutorial.md
+        - name: Microsoft Entra-only authentication 
+          items: 
+          - name: Microsoft Entra-only authentication
+            href: database/authentication-azure-ad-only-authentication.md
+          - name: Azure Policy for Microsoft Entra-only authentication
+            href: database/authentication-azure-ad-only-authentication-policy.md
+          - name: Enable Microsoft Entra-only authentication
+            href: database/authentication-azure-ad-only-authentication-tutorial.md
+          - name: Create server with Microsoft Entra-only authentication enabled
+            href: database/authentication-azure-ad-only-authentication-create-server.md
+          - name: Enforce Microsoft Entra-only authentication using Azure Policy
+            href: database/authentication-azure-ad-only-authentication-policy-how-to.md
+
+
+
       - name: Configure TDE with BYOK
         href: database/transparent-data-encryption-byok-configure.md
       - name: Always Encrypted
@@ -359,8 +369,6 @@
       items:
       - name: Migrate using DMS
         href: /azure/dms/tutorial-sql-server-to-azure-sql?toc=/azure/azure-sql/toc.json
-      - name: Set up SQL Data Sync
-        href: database/sql-data-sync-sql-server-configure.md
     - name: Scale out
       items:
       - name: Configure Hyperscale named replicas
@@ -379,15 +387,15 @@
       href: database/serverless-tier-overview.md
     - name: T-SQL differences from SQL Server
       href: database/transact-sql-tsql-differences-sql-server.md
-    - name: In-memory OLTP in Azure SQL Database
+    - name: In-memory technologies in Azure SQL Database
       items:
-      - name: In-memory OLTP overview
+      - name: In-memory technology overview
         href: database/in-memory-oltp-overview.md
-      - name: Configure In-memory OLTP
+      - name: Configure In-Memory OLTP
         href: database/in-memory-oltp-configure.md
       - name: Try in-memory features
         href: database/in-memory-oltp-sample.md
-      - name: Monitor In-memory OLTP space
+      - name: Monitor In-Memory OLTP space
         href: database/in-memory-oltp-monitor-space.md
     - name: Hyperscale
       items:
@@ -537,14 +545,19 @@
     - name: SQL Data Sync
       items:
       - name: Overview
+        displayName: SQL Data Sync Overview
         href: database/sql-data-sync-data-sql-server-sql-database.md
+      - name: SQL Data Sync retirement
+        displayName: SQL Data Sync Retirement and migration guidance
+        href: database/sql-data-sync-retirement-migration.md
       - name: Data Sync Agent
         href: database/sql-data-sync-agent-overview.md
       - name: Best practices for Data Sync
         href: database/sql-data-sync-best-practices.md
       - name: Troubleshoot Data Sync
         href: database/sql-data-sync-troubleshoot.md
-
+      - name: Set up SQL Data Sync
+        href: database/sql-data-sync-sql-server-configure.md
     - name: Database sharding
       items:
       - name: Database sharding
@@ -629,8 +642,6 @@
         items:
         - name: Azure Data Studio
           href: /azure-data-studio/quickstart-sql-database
-        - name: SSMS
-          href: database/connect-query-ssms.md
         - name: Azure portal query editor
           href: database/query-editor.md
         - name: VS Code
@@ -1523,7 +1534,7 @@
         href: managed-instance/managed-instance-link-failover-how-to.md
       - name: Migrate with the link
         href: managed-instance/managed-instance-link-migrate.md
-      - name: Disaster recovery
+      - name: Disaster recovery with the link
         href: managed-instance/managed-instance-link-disaster-recovery.md
       - name: Best practices
         href: managed-instance/managed-instance-link-best-practices.md

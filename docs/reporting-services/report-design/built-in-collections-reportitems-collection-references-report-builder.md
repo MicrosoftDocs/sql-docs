@@ -3,11 +3,12 @@ title: "ReportItems collection references in a paginated report"
 description: Discover the ReportItems collection in a paginated report. These text boxes in Report Builder are in the current scope of a page header, page footer, or report body.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/01/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 # ReportItems collection references in a paginated report (Report Builder)
 
@@ -45,10 +46,9 @@ ms.custom: updatefrequency5
   
  For example, a text box in a row that is in a parent group must not contain an expression that refers to the name of a text box in a child group row. Such an expression doesn't resolve to a value in the report because the child row text box is out of scope. For more information, see [Aggregate functions reference &#40;Report Builder&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md).  
   
-## Related content  
- [Built-in collections in expressions &#40;Report Builder&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)   
- [Expression examples &#40;Report Builder&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
- [Pagination in Reporting Services &#40;Report Builder&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [Filter, group, and sort data &#40;Report Builder&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
-  
-  
+## Related content
+
+- [Built-in collections in expressions &#40;Report Builder&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)
+- [Expression examples &#40;Report Builder&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)
+- [Pagination in Reporting Services &#40;Report Builder&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)
+- [Filter, group, and sort data &#40;Report Builder&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)

@@ -5,7 +5,7 @@ description: Overview of SQL Insights (preview) in Azure Monitor.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma
-ms.date: 03/21/2024
+ms.date: 09/19/2024
 ms.service: azure-sql
 ms.subservice: monitoring
 ms.topic: conceptual
@@ -18,10 +18,7 @@ monikerRange: "=azuresql||=azuresql-db||=azuresql-mi||=azuresql-vm"
 
 [!INCLUDE [sqldb-sqlmi-sqlvm](../includes/appliesto-sqldb-sqlmi-sqlvm.md)]
 
-> [!TIP]
-> [Database watcher (preview)](../database-watcher-overview.md) is the recommended monitoring solution for scenarios that require low data collection latency, estate-level monitoring, comprehensive monitoring data including query-level details, and support for advanced analytics on collected monitoring data.
->
-> At this time, database watcher supports Azure SQL Database and Azure SQL Managed Instance.
+[!INCLUDE [sql-insights-retirement](../includes/sql-insights-retirement.md)]
 
 SQL Insights (preview) is a monitoring solution for products in the [Azure SQL family](../index.yml). SQL Insights uses [dynamic management views](./monitoring-with-dmvs.md) to expose the data that you need to monitor health, diagnose problems, and tune performance.
 

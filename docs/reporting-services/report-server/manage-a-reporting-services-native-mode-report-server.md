@@ -3,11 +3,12 @@ title: "Manage a Reporting Services native mode report server"
 description: Refer to these articles when configuring a native mode report server, or when configuring a report server to run in SharePoint integrated mode.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 05/14/2019
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-server
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "Reporting Services Configuration tool"
   - "configuration options [Reporting Services]"
@@ -57,8 +58,7 @@ helpviewer_keywords:
  [Enable remote errors &#40;Reporting Services&#41;](../../reporting-services/report-server/enable-remote-errors-reporting-services.md)  
  Explains how to set server properties on a report server to return additional information about error conditions that occur on remote servers.  
   
-## Related content  
- [Configure and administer a report server &#40;SSRS native mode&#41;](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)   
- [Configuration and administration of a report server &#40;Reporting Services SharePoint mode&#41;](../../reporting-services/report-server-sharepoint/configuration-and-administration-of-a-report-server.md)  
-  
-  
+## Related content
+
+- [Configure and administer a report server &#40;SSRS native mode&#41;](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)
+- [Configuration and administration of a report server &#40;Reporting Services SharePoint mode&#41;](../../reporting-services/report-server-sharepoint/configuration-and-administration-of-a-report-server.md)

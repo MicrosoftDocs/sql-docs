@@ -3,11 +3,12 @@ title: "Replication Monitor"
 description: "Replication Monitor"
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/20/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: ui-reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 f1_keywords:
   - "sql13.rep.monitor.beta2.f1"
 helpviewer_keywords:
@@ -77,8 +78,6 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
   
 -   [Sort Columns](../../relational-databases/replication/sort-columns.md)  
   
-## See Also  
- [Start the Replication Monitor](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
+## Related content
 
-  
-  
+- [Start the Replication Monitor](../../relational-databases/replication/monitor/start-the-replication-monitor.md)

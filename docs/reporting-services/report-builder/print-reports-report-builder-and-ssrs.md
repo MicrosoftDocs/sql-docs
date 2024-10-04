@@ -3,11 +3,12 @@ title: "Print reports"
 description: You can view and print a report from the web portal or an application that you use to view it. The client computer performs print processing on demand.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 05/24/2018
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-builder
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 # Print reports
 

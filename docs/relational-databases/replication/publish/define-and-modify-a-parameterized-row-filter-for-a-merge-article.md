@@ -3,11 +3,12 @@ title: "Define & modify a parameterized row filter (Merge)"
 description: Learn how to define and modify a parameterized row filter for a Merge Publication article for SQL Server.
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/14/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: how-to
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "parameterized filters [SQL Server replication], defining"
   - "parameterized filters [SQL Server replication], modifying"
@@ -128,10 +129,9 @@ helpviewer_keywords:
   
  :::code language="sql" source="../codesnippet/tsql/define-and-modify-a-para_1.sql":::
   
-## See Also  
- [Define and Modify a Join Filter Between Merge Articles](../../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)   
- [Change Publication and Article Properties](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
- [Join Filters](../../../relational-databases/replication/merge/join-filters.md)   
- [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)  
-  
-  
+## Related content
+
+- [Define and Modify a Join Filter Between Merge Articles](../../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)
+- [Change Publication and Article Properties](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)
+- [Join Filters](../../../relational-databases/replication/merge/join-filters.md)
+- [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)

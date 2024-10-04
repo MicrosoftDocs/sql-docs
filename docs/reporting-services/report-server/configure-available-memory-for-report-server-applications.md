@@ -3,11 +3,12 @@ title: "Configure available memory for report server applications"
 description: Learn about the configuration settings for memory usage in Reporting Services and how a server responds when memory pressure is a factor in processing requests.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 04/24/2023
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-server
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "memory [Reporting Services]"
   - "memory thresholds [Reporting Services]"
@@ -91,8 +92,8 @@ If you're hosting multiple applications on the same computer, this memory can be
 #### About ASP.NET memory configuration settings  
  Although the 2016 and later Report Server Web service and web portal are HTML5 applications, previous versions are [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] applications, neither application responds to memory configuration settings that you specify in the `processModel` section of machine.config for [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] applications that run in IIS 5.0 and higher compatibility mode. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] reads memory configuration settings from the `RSReportServer.config` file only.  
   
-## Related content 
- [RsReportServer.config configuration file](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
- [Modify a Reporting Services configuration file &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)  
- [Application domains for report server applications](../../reporting-services/report-server/application-domains-for-report-server-applications.md)  
-  
+## Related content
+
+- [RsReportServer.config configuration file](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)
+- [Modify a Reporting Services configuration file &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)
+- [Application domains for report server applications](../../reporting-services/report-server/application-domains-for-report-server-applications.md)

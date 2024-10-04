@@ -3,11 +3,12 @@ title: "Transactional Replication"
 description: Transactional replication uses a snapshot of the database, applying changes to the Subscriber as they occurred at the Publisher to ensure consistency.
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: 10/05/2021
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "transactional replication, about transactional replication"
   - "transactional replication"

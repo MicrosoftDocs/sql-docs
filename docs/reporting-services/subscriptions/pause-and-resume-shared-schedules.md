@@ -3,11 +3,12 @@ title: "Pause and resume shared schedules"
 description: In this article, learn how to pause and resume a shared schedule that's in use but not in progress. You can pause and resume in native mode or SharePoint mode.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/14/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: subscriptions
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "pausing schedules"
   - "report-specific schedules [Reporting Services]"
@@ -54,10 +55,9 @@ helpviewer_keywords:
   
 4.  Choose the schedule, and select **Pause Selected Schedules** or **Run Selected Schedules**. If a Schedule is currently paused, the **Status** column contains **Paused**.  
   
-## Related content 
- [Schedules](../../reporting-services/subscriptions/schedules.md)   
- [Create, modify, and delete schedules](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md)   
- [Change time zones and clock settings on a report server](../../reporting-services/subscriptions/change-time-zones-and-clock-settings-on-a-report-server.md)   
- [Manage a running process](../../reporting-services/subscriptions/manage-a-running-process.md)  
-  
-  
+## Related content
+
+- [Schedules](../../reporting-services/subscriptions/schedules.md)
+- [Create, modify, and delete schedules](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md)
+- [Change time zones and clock settings on a report server](../../reporting-services/subscriptions/change-time-zones-and-clock-settings-on-a-report-server.md)
+- [Manage a running process](../../reporting-services/subscriptions/manage-a-running-process.md)

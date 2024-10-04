@@ -3,11 +3,12 @@ title: "Cells, rows, & columns in a tablix in a paginated report"
 description: Understand how to specify rows and columns in a paginated report for data, labels, and totals, enabling you to control the display in a SQL Server report.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 12/16/2019
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 f1_keywords:
   - "10058"
   - "10057"
@@ -114,7 +115,6 @@ f1_keywords:
   
  You can split a cell that was previously merged. You can split cells horizontally across columns or vertically down rows. To split a cell into a block of cells, split the cell horizontally first, and then split vertically as many times as necessary.  
   
-## See Also  
- [Tablix Data Region &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)  
-  
-  
+## Related content
+
+- [Tablix Data Region &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)

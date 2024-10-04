@@ -4,7 +4,7 @@ description: Snapshot replication distributes data as it appears at a moment in 
 author: "MashaMSFT"
 ms.author: "mathoma"
 ms.reviewer: randolphwest
-ms.date: 09/04/2024
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: conceptual
@@ -13,7 +13,7 @@ ms.custom:
 helpviewer_keywords:
   - "snapshot replication [SQL Server], about snapshot replication"
   - "snapshot replication [SQL Server]"
-monikerRange: "=azuresqldb-mi-current || >=sql-server-2016"
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Snapshot replication
 

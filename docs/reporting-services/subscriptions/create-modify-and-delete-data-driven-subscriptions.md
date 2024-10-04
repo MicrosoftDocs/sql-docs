@@ -3,11 +3,12 @@ title: "Create, modify, and delete data-driven subscriptions"
 description: In this article, learn how to create, modify, and delete a data-driven subscription. Also learn tips on defining a query to retrieve subscription information.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 06/12/2019
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: subscriptions
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "query-based subscriptions [Reporting Services]"
   - "queries [Reporting Services], data-driven subscriptions"
@@ -92,11 +93,11 @@ helpviewer_keywords:
 ##  <a name="bkmk_run_subscription"></a> Run the subscription  
  You must specify conditions for processing the subscription. You can specify a schedule, or you can trigger the subscription to coincide with updates to a report execution snapshot. Processing for data-driven subscriptions is the same as processing for standard subscriptions.  
   
-## Related content  
- [Create and manage subscriptions for native mode report servers](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)   
- [Subscriptions and delivery &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
- [The web portal of a report server (SSRS native mode)](../../reporting-services/web-portal-ssrs-native-mode.md)   
- [Create and manage subscriptions for native mode report servers](create-and-manage-subscriptions-for-native-mode-report-servers.md)   
- [Work with subscriptions (web portal)](../../reporting-services/working-with-subscriptions-web-portal.md)
- [Use my subscriptions (native mode report server)](../../reporting-services/subscriptions/use-my-subscriptions-native-mode-report-server.md)  
- 
+## Related content
+
+- [Create and manage subscriptions for native mode report servers](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)
+- [Subscriptions and delivery &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)
+- [The web portal of a report server (SSRS native mode)](../../reporting-services/web-portal-ssrs-native-mode.md)
+- [Create and manage subscriptions for native mode report servers](create-and-manage-subscriptions-for-native-mode-report-servers.md)
+- [Work with subscriptions (web portal)](../../reporting-services/working-with-subscriptions-web-portal.md)
+- [Use my subscriptions (native mode report server)](../../reporting-services/subscriptions/use-my-subscriptions-native-mode-report-server.md)

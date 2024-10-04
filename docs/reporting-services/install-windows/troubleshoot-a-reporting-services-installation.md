@@ -3,11 +3,12 @@ title: "Troubleshoot a Reporting Services installation"
 description: "Troubleshoot a Reporting Services installation"
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 01/17/2018
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-server
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 
 # Troubleshoot a Reporting Services installation

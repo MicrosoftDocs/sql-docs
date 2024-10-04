@@ -4,7 +4,7 @@ description: "Learn about the supported cluster configurations when you configur
 author: AbdullahMSFT
 ms.author: amamun
 ms.reviewer: mathoma, randolphwest
-ms.date: 06/18/2024
+ms.date: 09/27/2024
 ms.service: virtual-machines-sql
 ms.subservice: hadr
 ms.topic: conceptual
@@ -42,7 +42,7 @@ To reduce the effect of downtime, consider the following VM best availability se
 
 Although a two-node cluster functions without a [quorum resource](/windows-server/storage/storage-spaces/understand-quorum), customers are strictly required to use a quorum resource to have production support. Cluster validation doesn't pass any cluster without a quorum resource.
 
-Technically, a three-node cluster can survive a single node loss (down to two nodes) without a quorum resource, but after the cluster is down to two nodes, if there is another node loss or communication failure, then there is a risk that the clustered resources will go offline to prevent a split-brain scenario. Configuring a quorum resource allows the cluster to continue online with only one node online.
+Technically, a three-node cluster can survive a single node loss (down to two nodes) without a quorum resource, but after the cluster is down to two nodes, if there's another node loss or communication failure, then there's a risk that the clustered resources will go offline to prevent a split-brain scenario. Configuring a quorum resource allows the cluster to continue online with only one node online.
 
 The disk witness is the most resilient quorum option, but to use a disk witness on a SQL Server on Azure VM, you must use an Azure Shared Disk, which imposes some limitations to the high availability solution. As such, use a disk witness when you're configuring your failover cluster instance with Azure Shared Disks, otherwise use a cloud witness whenever possible.
 
@@ -68,7 +68,7 @@ When modifying the node vote settings, follow these guidelines:
 | --- |
 | Start with each node having no vote by default. Each node should only have a vote with explicit justification. |
 | Enable votes for cluster nodes that host the primary replica of an availability group, or the preferred owners of a failover cluster instance. |
-| Enable votes for automatic failover owners. Each node that may host a primary replica or FCI as a result of an automatic failover should have a vote. |
+| Enable votes for automatic failover owners. Each node that might host a primary replica or FCI as a result of an automatic failover should have a vote. |
 | If an availability group has more than one secondary replica, only enable votes for the replicas that have automatic failover. |
 | Disable votes for nodes that are in secondary disaster recovery sites. Nodes in secondary sites shouldn't contribute to the decision of taking a cluster offline if there's nothing wrong with the primary site. |
 | Have an odd number of votes, with three quorum votes minimum. Add a [quorum witness](hadr-cluster-quorum-configure-how-to.md) for an additional vote if necessary in a two-node cluster. |
@@ -100,7 +100,7 @@ To configure connectivity, see the following articles:
 - Availability group: [Configure DNN](availability-group-distributed-network-name-dnn-listener-configure.md), [Configure VNN](availability-group-vnn-azure-load-balancer-configure.md)
 - Failover cluster instance: [Configure DNN](failover-cluster-instance-distributed-network-name-dnn-configure.md), [Configure VNN](failover-cluster-instance-vnn-azure-load-balancer-configure.md).
 
-Most SQL Server features work transparently with FCI and availability groups when using the DNN, but there are certain features that may require special consideration. See [FCI and DNN interoperability](failover-cluster-instance-dnn-interoperability.md) and [AG and DNN interoperability](availability-group-dnn-interoperability.md) to learn more.
+Most SQL Server features work transparently with FCI and availability groups when using the DNN, but there are certain features that might require special consideration. See [FCI and DNN interoperability](failover-cluster-instance-dnn-interoperability.md) and [AG and DNN interoperability](availability-group-dnn-interoperability.md) to learn more.
 
 > [!TIP]  
 > Set the MultiSubnetFailover parameter = true in the connection string even for HADR solutions that span a single subnet to support future spanning of subnets without needing to update connection strings.
@@ -170,10 +170,10 @@ To learn more, see [Tuning Failover Cluster Network Thresholds](/windows-server/
 
 ## Relaxed monitoring
 
-If tuning your cluster heartbeat and threshold settings as recommended is insufficient tolerance and you're still seeing failovers due to transient issues rather than true outages, you can configure your AG or FCI monitoring to be more relaxed. In some scenarios, it may be beneficial to temporarily relax the monitoring for a period of time given the level of activity. For example, you may want to relax the monitoring when you're doing IO intensive workloads such as database backups, index maintenance, DBCC CHECKDB, etc. Once the activity is complete, set your monitoring to less relaxed values.
+If tuning your cluster heartbeat and threshold settings as recommended is insufficient tolerance and you're still seeing failovers due to transient issues rather than true outages, you can configure your AG or FCI monitoring to be more relaxed. In some scenarios, it might be beneficial to temporarily relax the monitoring for a period of time given the level of activity. For example, you might want to relax the monitoring when you're doing IO intensive workloads such as database backups, index maintenance, DBCC CHECKDB, etc. Once the activity is complete, set your monitoring to less relaxed values.
 
 > [!WARNING]  
-> Changing these settings may mask an underlying problem, and should be used as a temporary solution to reduce, rather than eliminate, the likelihood of failure. Underlying issues should still be investigated and addressed.
+> Changing these settings might mask an underlying problem, and should be used as a temporary solution to reduce, rather than eliminate, the likelihood of failure. Underlying issues should still be investigated and addressed.
 
 Start by increasing the following parameters from their default values for relaxed monitoring, and adjust as necessary:
 
@@ -238,10 +238,12 @@ Use the Failover Cluster Manager to modify the **Max failures in specified perio
 
 VM or disk limits could result in a resource bottleneck that impacts the health of the cluster, and impedes the health check. If you're experiencing issues with resource limits, consider the following:
 
+- Use [I/O Analysis (Preview)](storage-performance-analysis.md) in the Azure portal to identify disk performance issues that can cause a failover. 
 - Ensure your OS, drivers, and SQL Server are at the latest builds.
 - Optimize SQL Server on Azure VM environment as described in the [performance guidelines](performance-guidelines-best-practices-checklist.md) for SQL Server on Azure Virtual Machines
+- Use 
 - Reduce or spread out the workload to reduce utilization without exceeding resource limits
-- Tune the SQL Server workload if there is any opportunity, such as
+- Tune the SQL Server workload if there's any opportunity, such as
   - Add/optimize indexes
   - Update statistics if needed and if possible, with Full scan
   - Use features like resource governor (starting with SQL Server 2014, enterprise only) to limit resource utilization during specific workloads, such as backups or index maintenance.
@@ -253,7 +255,7 @@ Deploy your SQL Server VMs to multiple subnets whenever possible to avoid the de
 
 Use a single NIC per server (cluster node). Azure networking has physical redundancy, which makes additional NICs unnecessary on an Azure virtual machine guest cluster. The cluster validation report warns you that the nodes are reachable only on a single network. You can ignore this warning on Azure virtual machine guest failover clusters.
 
-Bandwidth limits for a particular VM are shared across NICs and adding an additional NIC doesn't improve availability group performance for SQL Server on Azure VMs. As such, there is no need to add a second NIC.
+Bandwidth limits for a particular VM are shared across NICs and adding an additional NIC doesn't improve availability group performance for SQL Server on Azure VMs. As such, there's no need to add a second NIC.
 
 The non-RFC-compliant DHCP service in Azure can cause the creation of certain failover cluster configurations to fail. This failure happens because the cluster network name is assigned a duplicate IP address, such as the same IP address as one of the cluster nodes. This is an issue when you use availability groups, which depend on the Windows failover cluster feature.
 
@@ -272,7 +274,7 @@ If the SQL Server database engine, Always On availability group listener, failov
 
 `netsh int ipv4 add excludedportrange tcp startport=59999 numberofports=1 store=persistent`
 
-It is important to configure the port exclusion when the port isn't in use, otherwise the command fails with a message like "The process can't access the file because it is being used by another process."
+It's important to configure the port exclusion when the port isn't in use, otherwise the command fails with a message like "The process can't access the file because it's being used by another process."
 
 To confirm that the exclusions have been configured correctly, use the following command: `netsh int ipv4 show excludedportrange tcp`.
 
@@ -295,7 +297,15 @@ Review the resolutions for some commonly known issues and errors.
 
 ### Resource contention (IO in particular) causes failover
 
-Exhausting I/O or CPU capacity for the VM can cause your availability group to fail over. Identifying the contention that happens right before the failover is the most reliable way to identify what is causing automatic failover. [Monitor Azure Virtual Machines](/azure/virtual-machines/monitor-vm) to look at the [Storage IO Utilization metrics](/azure/virtual-machines/disks-metrics#storage-io-utilization-metrics) to understand VM or disk level latency.
+Exhausting I/O or CPU capacity for the VM can cause your availability group to fail over. Identifying the contention that happens right before the failover is the most reliable way to identify what is causing automatic failover. 
+
+### Use I/O Analysis
+
+Use [I/O Analysis (Preview)](storage-performance-analysis.md) in the Azure portal to identify disk performance issues that can cause a failover. 
+
+### Monitor with VM storage IO metrics 
+
+[Monitor Azure Virtual Machines](/azure/virtual-machines/monitor-vm) to look at the [Storage IO Utilization metrics](/azure/virtual-machines/disks-metrics#storage-io-utilization-metrics) to understand VM or disk level latency.
 
 Follow these steps to review the **Azure VM Overall IO Exhaustion event**:
 
@@ -325,7 +335,7 @@ To check the Azure Monitor activity log, follow these steps:
 
    :::image type="content" source="./media/hadr-cluster-best-practices/activity-log.png" alt-text="Screenshot of the Azure portal, showing the Activity log. ":::
 
-If Azure has further information about the root cause of a platform-initiated unavailability, that information may be posted on the [Azure VM - Resource Health overview](/azure/service-health/resource-health-overview#root-cause-information) page up to 72 hours after the initial unavailability. This information is only available for virtual machines at this time.
+If Azure has further information about the root cause of a platform-initiated unavailability, that information might be posted on the [Azure VM - Resource Health overview](/azure/service-health/resource-health-overview#root-cause-information) page up to 72 hours after the initial unavailability. This information is only available for virtual machines at this time.
 
 1. Navigate to your Virtual Machine in Azure portal
 1. Select **Resource Health** under the **Health** pane.
@@ -336,7 +346,7 @@ You can also configure alerts based on health events from this page.
 
 ### Cluster node removed from membership
 
-If the [Windows Cluster heartbeat and threshold settings](#heartbeat-and-threshold) are too aggressive for your environment, you may see following message in the system event log frequently.
+If the [Windows Cluster heartbeat and threshold settings](#heartbeat-and-threshold) are too aggressive for your environment, you might see following message in the system event log frequently.
 
 ```output
 Error 1135
@@ -352,7 +362,7 @@ For more information, review [Troubleshooting cluster issue with Event ID 1135](
 
 ### Lease has expired / Lease is no longer valid
 
-If [monitoring](#relaxed-monitoring) is too aggressive for your environment, you may see frequent availability group or FCI restarts, failures, or failovers. Additionally for availability groups, you may see the following messages in the SQL Server error log:
+If [monitoring](#relaxed-monitoring) is too aggressive for your environment, you might see frequent availability group or FCI restarts, failures, or failovers. Additionally for availability groups, you might see the following messages in the SQL Server error log:
 
 ```output
 Error 19407: The lease between availability group 'PRODAG' and the Windows Server Failover Cluster has expired.
@@ -368,7 +378,7 @@ failed because the existing lease is no longer valid.
 
 ### Connection timeout
 
-If the **session timeout** is too aggressive for your availability group environment, you may see following messages frequently:
+If the **session timeout** is too aggressive for your availability group environment, you might see following messages frequently:
 
 ```output
 Error 35201: A connection timeout has occurred while attempting to establish a connection to availability
@@ -407,7 +417,7 @@ The computer object associated with the resource couldn't be updated in the doma
 
 ### Windows Clustering errors
 
-You may encounter issues while setting up a Windows failover cluster or its connectivity if you don't have [Cluster Service Ports open for communication](/troubleshoot/windows-server/networking/service-overview-and-network-port-requirements#cluster-service).
+You might encounter issues while setting up a Windows failover cluster or its connectivity if you don't have [Cluster Service Ports open for communication](/troubleshoot/windows-server/networking/service-overview-and-network-port-requirements#cluster-service).
 
 If you are on Windows Server 2019, and you don't see a Windows Cluster IP, you have configured [Distributed Network Name](failover-cluster-instance-distributed-network-name-dnn-configure.md), which is only supported on SQL Server 2019. If you have previous versions of SQL Server, you can remove and [Recreate the Cluster using Network Name](availability-group-manually-configure-tutorial.md#create-the-cluster).
 

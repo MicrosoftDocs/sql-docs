@@ -3,11 +3,12 @@ title: Report Data pane
 description: Learn how to use the Report Data pane to view the currently defined parameters, data sources, datasets, field collections, and images in your report.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 12/14/2018
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-data
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 
 # Report Data pane in SQL Server Reporting Services (SSRS)
@@ -31,7 +32,7 @@ ms.custom: updatefrequency5
  **Dataset**  
  Represents a single dataset. A dataset is the parent node for the collection of fields specified by the query and including any calculated fields. Reporting Services supports query designers to help you specify a query. For more information, see [Report Datasets &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md) and [Query Design Tools &#40;SSRS&#41;](../../reporting-services/report-data/query-design-tools-ssrs.md).  
   
-## Next steps
+## Related content
 
- - [Dataset Fields Collection &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)
- - [Grouping Pane](../../reporting-services/tools/grouping-pane.md)
+- [Dataset Fields Collection &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)
+- [Grouping Pane](../../reporting-services/tools/grouping-pane.md)

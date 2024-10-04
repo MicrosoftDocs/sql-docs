@@ -7,9 +7,10 @@ ms.date: "01/19/2017"
 ms.service: sql
 ms.subservice: ssma
 ms.topic: conceptual
+ms.collection:
+  - sql-migration-content
 ms.custom:
   - intro-get-started
-  - sql-migration-content
 helpviewer_keywords:
   - "Getting started, MySQL metadata explorer"
   - "Getting started, SQL Server or SQL Azure metadata explorer"

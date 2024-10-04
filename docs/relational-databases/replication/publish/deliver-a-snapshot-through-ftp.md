@@ -3,11 +3,12 @@ title: "Deliver a Snapshot Through FTP"
 description: "Deliver a Snapshot Through FTP"
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "11/20/2018"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: how-to
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "snapshots [SQL Server replication], FTP snapshots"
   - "FTP snapshots [SQL Server replication]"
@@ -161,7 +162,8 @@ For more information about modifying the snapshot folder location properties, se
   
  :::code language="sql" source="../codesnippet/tsql/deliver-a-snapshot-throu_3.sql":::
   
-## See Also  
- [Replication System Stored Procedures Concepts](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
- [Change Publication and Article Properties](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
- [Initialize a Subscription with a Snapshot](../../../relational-databases/replication/initialize-a-subscription-with-a-snapshot.md)
+## Related content
+
+- [Replication System Stored Procedures Concepts](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)
+- [Change Publication and Article Properties](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)
+- [Initialize a Subscription with a Snapshot](../../../relational-databases/replication/initialize-a-subscription-with-a-snapshot.md)

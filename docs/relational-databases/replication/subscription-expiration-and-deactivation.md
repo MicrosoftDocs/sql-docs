@@ -3,11 +3,12 @@ title: "Subscription Expiration and Deactivation"
 description: "Subscription Expiration and Deactivation"
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/07/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "Distributors [SQL Server replication], distribution retention period"
   - "subscriptions [SQL Server replication], expiration"
@@ -61,9 +62,8 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
   
 -   If, after a clean up, the publication retention period is increased and a subscription tries to merge with the Publisher (which has already deleted the metadata), the subscription will not expire because of the increased retention value. However, the Publisher does not have enough metadata to download changes to the Subscriber, which leads to non-convergence.  
   
-## See Also  
- [Reinitialize Subscriptions](../../relational-databases/replication/reinitialize-subscriptions.md)   
- [Replication Agent Administration](../../relational-databases/replication/agents/replication-agent-administration.md)   
- [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)  
-  
-  
+## Related content
+
+- [Reinitialize Subscriptions](../../relational-databases/replication/reinitialize-subscriptions.md)
+- [Replication Agent Administration](../../relational-databases/replication/agents/replication-agent-administration.md)
+- [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)

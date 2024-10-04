@@ -3,11 +3,12 @@ title: "Types of Replication"
 description: Learn about the different types of replication that SQL Server provides for use in distributed applications.
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/14/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "replication [SQL Server], types"
 monikerRange: "=azuresqldb-current||>=sql-server-2016"
@@ -31,7 +32,6 @@ The type of replication you choose for an application depends on many factors, i
 Each type of replication typically begins with an initial synchronization of the published objects between the Publisher and Subscribers. This initial synchronization can be performed by replication with a *snapshot*, which is a copy of all of the objects and data specified by a publication. After the snapshot is created, it is delivered to the Subscribers. For some applications, snapshot replication is all that is required. For other types of applications, it is important that subsequent data changes flow to the Subscriber incrementally over time. Some applications also require that changes flow from the Subscriber back to the Publisher. Transactional replication and merge replication provide options for these types of applications.  
   
  
-## See Also  
- [Replication Agents Overview](../../relational-databases/replication/agents/replication-agents-overview.md)
-  
-  
+## Related content
+
+- [Replication Agents Overview](../../relational-databases/replication/agents/replication-agents-overview.md)

@@ -3,11 +3,12 @@ title: "System Role properties (Management Studio)"
 description: Learn about the options on the System Roles page where you can view the system role definitions that are currently defined for the report server.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/14/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: tools
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 f1_keywords:
   - "sql13.swb.reportserver.systemroleproperties.f1"
 ---
@@ -32,10 +33,9 @@ f1_keywords:
  **Description**  
  Provides information about each task. You can't modify task descriptions.  
   
-## Related content  
- [Report server in Management Studio F1 Help](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
- [System-level tasks](../../reporting-services/security/tasks-and-permissions-system-level-tasks.md)   
- [Tasks and permissions](../../reporting-services/security/tasks-and-permissions.md)   
- [Predefined roles](../../reporting-services/security/role-definitions-predefined-roles.md)  
-  
-  
+## Related content
+
+- [Report server in Management Studio F1 Help](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)
+- [System-level tasks](../../reporting-services/security/tasks-and-permissions-system-level-tasks.md)
+- [Tasks and permissions](../../reporting-services/security/tasks-and-permissions.md)
+- [Predefined roles](../../reporting-services/security/role-definitions-predefined-roles.md)

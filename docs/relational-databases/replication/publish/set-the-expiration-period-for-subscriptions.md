@@ -3,11 +3,12 @@ title: "Set the Expiration Period for Subscriptions"
 description: "Set the Expiration Period for Subscriptions"
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/17/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: how-to
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "subscriptions [SQL Server replication], expiration"
   - "expiration [SQL Server replication]"
@@ -91,8 +92,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
   
 3.  (Optional) At the Publisher, execute [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md). Specify **retention_period_unit** for **\@property** and a new unit for the subscription expiration period for **\@value**.  
   
-## See Also  
- [Replication System Stored Procedures Concepts](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
- [Subscription Expiration and Deactivation](../../../relational-databases/replication/subscription-expiration-and-deactivation.md)  
-  
-  
+## Related content
+
+- [Replication System Stored Procedures Concepts](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)
+- [Subscription Expiration and Deactivation](../../../relational-databases/replication/subscription-expiration-and-deactivation.md)

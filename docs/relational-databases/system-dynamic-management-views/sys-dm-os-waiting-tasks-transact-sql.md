@@ -4,7 +4,7 @@ description: sys.dm_os_waiting_tasks returns information about the wait queue of
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: wiassaf
-ms.date: 10/04/2023
+ms.date: 09/29/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -101,7 +101,7 @@ The resource_description column has the following possible values.
 - `<GUID>`
 - `<latch-class> (<latch-address>)`
 
-**XACT resource owner**, related to [Optimized locking](../performance/optimized-locking.md):
+**XACT (transaction) resource owner**, occurs when [optimized locking](../performance/optimized-locking.md) is enabled:
 
 - `xactlock`: `xactlock xdesIdLow=<xdesIdLow> xdesIdHigh=<xdesIdHigh> dbid=<dbid> id=<resource id> mode=<mode> UnderlyingResource (<keylock|ridlock>) hobtId=<hobtId> dbid=<dbid>`
 

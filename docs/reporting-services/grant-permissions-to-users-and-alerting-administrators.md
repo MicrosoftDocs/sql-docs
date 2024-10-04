@@ -3,11 +3,12 @@ title: "Grant permissions to users and alerting administrators"
 description: Learn how to grant permissions to users and alerting administrators in SQL Server Reporting Services (SSRS).
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 08/17/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: reporting-services
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 monikerRange: ">=sql-server-2016 <=sql-server-2016"
 ---
 # Grant permissions to users and alerting administrators
@@ -47,7 +48,6 @@ To learn more about SharePoint permissions, see [User permissions and permission
 
 ## Related content
 
-- [Set permissions for report server items on a SharePoint site &#40;Reporting Services in SharePoint Integrated Mode&#41;](../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)   
-- [Reporting Services data alerts](../reporting-services/reporting-services-data-alerts.md)  
-
-More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231).
+- [Set permissions for report server items on a SharePoint site &#40;Reporting Services in SharePoint Integrated Mode&#41;](../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)
+- [Reporting Services data alerts](../reporting-services/reporting-services-data-alerts.md)
+- [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

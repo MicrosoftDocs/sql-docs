@@ -3,11 +3,12 @@ title: "Enable remote Publisher at Distributor (SSMS)"
 description: Learn how to enable a remote Publisher at the Distributor using SQL Server Management Studio (SSMS).
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/01/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: ui-reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "remote Distributors [SQL Server replication]"
   - "Publishers [SQL Server replication]"
@@ -45,9 +46,8 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
   
 6.  Select **OK**.
   
-## See Also  
- [Configure Publishing and Distribution](../../relational-databases/replication/configure-publishing-and-distribution.md)   
- [Configure Distribution](../../relational-databases/replication/configure-distribution.md)   
- [Secure the Distributor](../../relational-databases/replication/security/secure-the-distributor.md)  
-  
-  
+## Related content
+
+- [Configure Publishing and Distribution](../../relational-databases/replication/configure-publishing-and-distribution.md)
+- [Configure Distribution](../../relational-databases/replication/configure-distribution.md)
+- [Secure the Distributor](../../relational-databases/replication/security/secure-the-distributor.md)

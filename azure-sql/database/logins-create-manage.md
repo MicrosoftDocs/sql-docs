@@ -49,7 +49,7 @@ When a user attempts to connect to a database, they provide a user account and a
 
 - [Microsoft Entra authentication](authentication-aad-overview.md)
 
-  With this authentication method, the user submits a user account name and requests that the service use the credential information stored in Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)).
+  With this authentication method, the user submits a user account name and requests that the service uses the credential information stored in Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)).
 
 **Logins and users**: A user account in a database can be associated with a login that is stored in the `master` database or can be a user name that is stored in an individual database.
 
@@ -129,7 +129,7 @@ You can create accounts for non-administrative users using one of two methods:
   Create a user account in the database to which a user needs access (also called a [contained user](/sql/relational-databases/security/contained-database-users-making-your-database-portable)).
 
   - With SQL Database, you can always create this type of user account.
-  - With SQL Managed Instance supporting [Microsoft Entra server principals](authentication-aad-configure.md#create-contained-users-mapped-to-azure-ad-identities), you can create user accounts to authenticate to the SQL Managed Instance without requiring database users to be created as a contained database user.
+  - With SQL Managed Instance supporting [Microsoft Entra server principals](authentication-aad-configure.md#create-microsoft-entra-principals-in-sql), you can create user accounts to authenticate to the SQL Managed Instance without requiring database users to be created as a contained database user.
 
   With this approach, the user authentication information is stored in each database, and replicated to geo-replicated databases automatically. However, if the same account exists in multiple databases and you are using SQL authentication, you must keep the passwords synchronized manually. Additionally, if a user has an account in different databases with different passwords, remembering those passwords can become a problem.
 
@@ -142,7 +142,7 @@ For examples showing how to create logins and users, see:
 - [Create login for Azure SQL Managed Instance](/sql/t-sql/statements/create-login-transact-sql?view=azuresqldb-mi-current&preserve-view=true#examples-2)
 - [Create login for Azure Synapse](/sql/t-sql/statements/create-login-transact-sql?view=azure-sqldw-latest&preserve-view=true#examples-3)
 - [Create user](/sql/t-sql/statements/create-user-transact-sql#examples)
-- [Creating Microsoft Entra contained users](authentication-aad-configure.md#create-contained-users-mapped-to-azure-ad-identities)
+- [Creating Microsoft Entra contained users](authentication-aad-configure.md#contained-database-users)
 
 > [!TIP]  
 > For a security tutorial that includes creating users in Azure SQL Database, see [Tutorial: Secure Azure SQL Database](secure-database-tutorial.md).
@@ -181,7 +181,7 @@ Efficient access management uses permissions assigned to Active Directory securi
 You should familiarize yourself with the following features that can be used to limit or elevate permissions:
 
 - [Impersonation](/dotnet/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server) and [module-signing](/dotnet/framework/data/adonet/sql/signing-stored-procedures-in-sql-server) can be used to securely elevate permissions temporarily.
-- [Row-Level Security](/sql/relational-databases/security/row-level-security) can be used limit which rows a user can access.
+- [Row-Level Security](/sql/relational-databases/security/row-level-security) can be used to limit which rows a user can access.
 - [Data Masking](dynamic-data-masking-overview.md) can be used to limit exposure of sensitive data.
 - [Stored procedures](/sql/relational-databases/stored-procedures/stored-procedures-database-engine) can be used to limit the actions that can be taken on the database.
 

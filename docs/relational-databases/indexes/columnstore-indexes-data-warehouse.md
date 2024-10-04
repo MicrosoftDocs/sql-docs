@@ -3,7 +3,7 @@ title: "Columnstore indexes - Data Warehouse"
 description: Columnstore indexes - Data Warehouse
 author: MikeRayMSFT
 ms.author: mikeray
-ms.date: 06/28/2022
+ms.date: 09/18/2024
 ms.service: sql
 ms.subservice: table-view-index
 ms.topic: conceptual
@@ -23,12 +23,12 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||>=sql-ser
 -   A new dynamic management view [sys.dm_db_column_store_row_group_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-physical-stats-transact-sql.md) provides performance troubleshooting information at the row group level.  
 -   Single-threaded queries on columnstore indexes can run in batch mode. Previously, only multi-threaded queries could run in batch mode.  
 -   The `SORT` operator runs in batch mode.  
--   Multiple `DISTINCT` operation runs in batch mode.  
+-   Multiple `DISTINCT` operations run in batch mode.  
 -   Window Aggregates now runs in batch mode for database compatibility level 130 and higher.  
 -   Aggregate Pushdown for efficient processing of aggregates. This is supported on all database compatibility levels.  
 -   String predicate pushdown for efficient processing of string predicates. This is supported on all database compatibility levels.  
 -   Snapshot isolation for database compatibility level 130 and higher.  
--   Ordered cluster columnstore indexes are available in [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)]. For more information, see [CREATE COLUMNSTORE INDEX](../../t-sql/statements/create-columnstore-index-transact-sql.md#order) and [Performance tuning with ordered clustered columnstore index](/azure/synapse-analytics/sql-data-warehouse/performance-tuning-ordered-cci). 
+-   Ordered cluster columnstore indexes are available in [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)]. For more information, see [CREATE COLUMNSTORE INDEX](../../t-sql/statements/create-columnstore-index-transact-sql.md#order-for-clustered-columnstore) and [Performance tuning with ordered clustered columnstore index](/azure/synapse-analytics/sql-data-warehouse/performance-tuning-ordered-cci). 
 
 For more information about new features in versions and platforms of SQL Server and Azure SQL, see [What's new in columnstore indexes](columnstore-indexes-what-s-new.md).
   
@@ -36,7 +36,7 @@ For more information about new features in versions and platforms of SQL Server 
  Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], you can define nonclustered indexes on a clustered columnstore index.   
   
 ### Example: Improve efficiency of table seeks with a nonclustered index  
- To improve efficiency of table seeks in a data warehouse, you can create a nonclustered index designed to run queries that perform best with table seeks. For example, queries that look for matching values or return a small range of values will perform better against a B-tree index rather than a columnstore index. They don't require a full table scan through the columnstore index and will return the correct result faster by doing a binary search through a B-tree index.  
+ To improve efficiency of table seeks in a data warehouse, you can create a nonclustered index designed to run queries that perform best with table seeks. For example, queries that look for matching values or return a small range of values perform better against a B-tree index rather than a columnstore index. They don't require a full table scan through the columnstore index and return the correct result faster by doing a binary search through a B-tree index.  
   
 ```sql  
 --BASIC EXAMPLE: Create a nonclustered index on a columnstore table.  
@@ -59,9 +59,9 @@ CREATE UNIQUE INDEX taccount_nc1 ON t_account (AccountKey);
 ```  
   
 ### Example: Use a nonclustered index to enforce a primary key constraint on a columnstore table  
- By design, a columnstore table does not allow a clustered primary key constraint. Now you can use a nonclustered index on a columnstore table to enforce a primary key constraint. A primary key is equivalent to a UNIQUE constraint on a non-NULL column, and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] implements a UNIQUE constraint as a nonclustered index. Combining these facts, the following example defines a UNIQUE constraint on the non-NULL column accountkey. The result is a nonclustered index that enforces a primary key constraint as a UNIQUE constraint on a non-NULL column.  
+ By design, a columnstore table doesn't allow a clustered primary key constraint. Now you can use a nonclustered index on a columnstore table to enforce a primary key constraint. A primary key is equivalent to a UNIQUE constraint on a non-NULL column, and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] implements a UNIQUE constraint as a nonclustered index. Combining these facts, the following example defines a UNIQUE constraint on the non-NULL column accountkey. The result is a nonclustered index that enforces a primary key constraint as a UNIQUE constraint on a non-NULL column.  
   
- Next, the table is converted to a clustered columnstore index. During the conversion, the nonclustered index persists. The result is a clustered columnstore index with a nonclustered index that enforces a primary key constraint. Since any update or insert on the columnstore table will also affect the nonclustered index, all operations that violate the unique constraint and the non-NULL will cause the entire operation to fail.  
+ Next, the table is converted to a clustered columnstore index. During the conversion, the nonclustered index persists. The result is a clustered columnstore index with a nonclustered index that enforces a primary key constraint. Since any update or insert on the columnstore table also affects the nonclustered index, all operations that violate the unique constraint and the non-NULL causes the entire operation to fail.  
   
  The result is a columnstore index with a nonclustered index that enforces a primary key constraint on both indexes.  
   

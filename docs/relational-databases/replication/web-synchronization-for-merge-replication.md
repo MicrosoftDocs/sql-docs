@@ -3,11 +3,12 @@ title: "Web Synchronization for Merge Replication"
 description: "Web Synchronization for Merge Replication"
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/14/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "merge replication synchronization [SQL Server replication]"
   - "Internet [SQL Server replication], synchronization"
@@ -73,7 +74,7 @@ helpviewer_keywords:
   
 3.  The Merge Agent at the Subscriber then accepts the HTTPS response and applies the download changes to the subscription database.  
   
-## See Also  
- [Configure Web Synchronization](../../relational-databases/replication/configure-web-synchronization.md)   
- [Topologies for Web Synchronization](../../relational-databases/replication/topologies-for-web-synchronization.md)  
-  
+## Related content
+
+- [Configure Web Synchronization](../../relational-databases/replication/configure-web-synchronization.md)
+- [Topologies for Web Synchronization](../../relational-databases/replication/topologies-for-web-synchronization.md)

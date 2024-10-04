@@ -3,11 +3,12 @@ title: "Charts in a paginated report"
 description: Use chart data regions to help readers of your paginated reports understand large volumes of aggregated data at a glance in Report Builder.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/07/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 f1_keywords:
   - "sql13.rtp.rptdesigner.seriesproperties.seriesdata.f1"
   - "10256"
@@ -134,12 +135,11 @@ The more time you spend carefully preparing and understanding your data before y
  [Troubleshoot Charts &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/troubleshoot-charts-report-builder-and-ssrs.md)  
  Describes tips for working with charts.  
   
-## See Also  
- [Images, Text Boxes, Rectangles, and Lines &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/images-text-boxes-rectangles-and-lines-report-builder-and-ssrs.md)   
- [Interactive Sort, Document Maps, and Links &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
- [Nested Data Regions &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md)   
- [Tutorial: Add a Column Chart to Your Report &#40;Report Builder&#41;](../../reporting-services/tutorial-add-a-column-chart-to-your-report-report-builder.md)   
- [Tutorial: Add a Pie Chart to Your Report &#40;Report Builder&#41;](../../reporting-services/tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
- [Tutorial: Add a Bar Chart to Your Report &#40;Report Builder&#41;](../../reporting-services/tutorial-add-a-bar-chart-to-your-report-report-builder.md)  
-  
-  
+## Related content
+
+- [Images, Text Boxes, Rectangles, and Lines &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/images-text-boxes-rectangles-and-lines-report-builder-and-ssrs.md)
+- [Interactive Sort, Document Maps, and Links &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)
+- [Nested Data Regions &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md)
+- [Tutorial: Add a Column Chart to Your Report &#40;Report Builder&#41;](../../reporting-services/tutorial-add-a-column-chart-to-your-report-report-builder.md)
+- [Tutorial: Add a Pie Chart to Your Report &#40;Report Builder&#41;](../../reporting-services/tutorial-add-a-pie-chart-to-your-report-report-builder.md)
+- [Tutorial: Add a Bar Chart to Your Report &#40;Report Builder&#41;](../../reporting-services/tutorial-add-a-bar-chart-to-your-report-report-builder.md)

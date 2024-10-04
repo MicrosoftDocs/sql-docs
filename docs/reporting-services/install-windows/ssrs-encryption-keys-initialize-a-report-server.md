@@ -3,11 +3,12 @@ title: "Initialize a Report Server (Configuration Manager)"
 description: "Initialize a Report Server (Configuration Manager)"
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 05/31/2016
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-server
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "report servers [Reporting Services], initializing"
   - "initialization process [Reporting Services]"
@@ -63,7 +64,6 @@ The initialization process creates and stores a symmetric key used for encryptio
 ## How to Confirm a Report Server Initialization  
  To confirm report server initialization, ping the Report Server Web service by typing **https://\<servername>/reportserver** in the command window. If the **RSReportServerNotActivated** error occurs, the initialization failed.  
   
-## See Also
-[Configure and Manage Encryption Keys (Report Server Configuration Manager)](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)
-  
-  
+## Related content
+
+- [Configure and Manage Encryption Keys (Report Server Configuration Manager)](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)

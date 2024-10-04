@@ -3,11 +3,12 @@ title: "Specify Synchronization Schedules"
 description: Learn how to specify synchronization schedules in SQL Server by using SQL Server Management Studio, Transact-SQL, or Replication Management Objects.
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/14/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: how-to
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "subscriptions [SQL Server replication], synchronizing"
   - "scheduling synchronization [SQL Server replication]"
@@ -318,11 +319,10 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
   
  [!code-vb[HowTo#rmo_vb_CreateMergePushSub](../../relational-databases/replication/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_createmergepushsub)]  
   
-## See Also  
- [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md)   
- [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)   
- [Synchronize a Push Subscription](../../relational-databases/replication/synchronize-a-push-subscription.md)   
- [Synchronize a Pull Subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md)   
- [Synchronize Data](../../relational-databases/replication/synchronize-data.md)  
-  
-  
+## Related content
+
+- [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md)
+- [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)
+- [Synchronize a Push Subscription](../../relational-databases/replication/synchronize-a-push-subscription.md)
+- [Synchronize a Pull Subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md)
+- [Synchronize Data](../../relational-databases/replication/synchronize-data.md)

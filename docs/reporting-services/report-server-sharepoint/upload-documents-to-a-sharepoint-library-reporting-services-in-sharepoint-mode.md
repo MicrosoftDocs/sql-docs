@@ -3,11 +3,12 @@ title: "Upload documents to a SharePoint library (Reporting Services in SharePoi
 description: In SQL Server Reporting Services in SharePoint mode, you can upload report definitions and report models to a SharePoint library.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 09/25/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-server-sharepoint
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 monikerRange: ">=sql-server-2016 <=sql-server-2016"
 ---
 # Upload documents to a SharePoint library (Reporting Services in SharePoint mode)
@@ -46,8 +47,7 @@ You can upload report definitions and report models to a SharePoint library. Whe
   
 ## Related content
 
- [Publish a report to a SharePoint library](../../reporting-services/reports/publish-a-report-to-a-sharepoint-library.md)   
- [Publish a shared data source to a SharePoint library](../../reporting-services/reports/publish-a-shared-data-source-to-a-sharepoint-library.md)   
- [Granting permissions on report server items on a SharePoint site](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)  
-
-More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)
+- [Publish a report to a SharePoint library](../../reporting-services/reports/publish-a-report-to-a-sharepoint-library.md)
+- [Publish a shared data source to a SharePoint library](../../reporting-services/reports/publish-a-shared-data-source-to-a-sharepoint-library.md)
+- [Granting permissions on report server items on a SharePoint site](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)
+- [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

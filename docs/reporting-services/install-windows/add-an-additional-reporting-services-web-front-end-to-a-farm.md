@@ -3,11 +3,12 @@ title: "Add another Reporting Services web front-end to a farm"
 description: "Add another Reporting Services web front-end to a Farm"
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 05/30/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-server
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 monikerRange: ">=sql-server-2016 <=sql-server-2016"
 ---
 # Add another Reporting Services web front-end to a farm
@@ -52,7 +53,6 @@ monikerRange: ">=sql-server-2016 <=sql-server-2016"
 
 ## Related content
 
-- [Add SharePoint server to a farm in SharePoint Server 2016](/SharePoint/install/add-a-server-to-a-sharepoint-server-2016-farm)  
+- [Add SharePoint server to a farm in SharePoint Server 2016](/SharePoint/install/add-a-server-to-a-sharepoint-server-2016-farm)
 - [Add SharePoint server to a farm in SharePoint Server 2013](/SharePoint/install/add-web-or-application-server-to-the-farm)
-
-More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231).
+- [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

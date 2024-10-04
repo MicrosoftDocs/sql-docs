@@ -3,11 +3,12 @@ title: "rsInternalError - Reporting Services error"
 description: "In this error reference page, learn about event ID 'rsInternalError': An internal error occurred on the report server. For more information, see the error log."
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/14/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: troubleshooting
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "rsInternalError"
 ---
@@ -37,7 +38,6 @@ helpviewer_keywords:
   
 ## Internal-only  
   
-## Related content  
- [Start and stop the report server service](../../reporting-services/report-server/start-and-stop-the-report-server-service.md)  
-  
-  
+## Related content
+
+- [Start and stop the report server service](../../reporting-services/report-server/start-and-stop-the-report-server-service.md)

@@ -3,11 +3,12 @@ title: "Create, delete, or modify a role (Management Studio)"
 description: "Create, delete, or modify a role (Management Studio)"
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 05/07/2019
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: security
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "roles [Reporting Services], creating"
   - "deleting roles"
@@ -68,6 +69,6 @@ To create, modify, or delete roles, you can use [!INCLUDE[SQL Server Management 
 
 ## Related content
 
- [Connect to a report server in Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)  
- [Create and manage role assignments](../../reporting-services/security/create-and-manage-role-assignments.md)  
- [Reporting Services in SQL Server Management Studio &#40;SSRS&#41;](../../reporting-services/tools/reporting-services-in-sql-server-management-studio-ssrs.md)
+- [Connect to a report server in Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)
+- [Create and manage role assignments](../../reporting-services/security/create-and-manage-role-assignments.md)
+- [Reporting Services in SQL Server Management Studio &#40;SSRS&#41;](../../reporting-services/tools/reporting-services-in-sql-server-management-studio-ssrs.md)

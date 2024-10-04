@@ -3,11 +3,12 @@ title: "Report Server HTTP log"
 description: Learn how to enable the Report Server HTTP log after you install Reporting Services. This feature logs every HTTP request and response a report server handles.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 06/12/2019
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-server
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "HTTP [Reporting Services]"
 ---
@@ -71,8 +72,8 @@ helpviewer_keywords:
 |CookieSent|The content of the cookie sent by the server.|No|  
 |Referrer|The previous site visited by the client.|No|  
   
-## Related content  
- [Report server service trace log](../../reporting-services/report-server/report-server-service-trace-log.md)   
- [Reporting Services log files and sources](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)   
- [Errors and events reference &#40;Reporting Services&#41;](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
-  
+## Related content
+
+- [Report server service trace log](../../reporting-services/report-server/report-server-service-trace-log.md)
+- [Reporting Services log files and sources](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)
+- [Errors and events reference &#40;Reporting Services&#41;](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)

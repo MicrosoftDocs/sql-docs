@@ -3,11 +3,12 @@ title: "Using custom assemblies with reports"
 description: Develop a custom code assembly using the Microsoft .NET Framework so you can reference the assembly from within your report definition files.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/14/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: custom-assemblies
 ms.topic: reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "custom assemblies [Reporting Services]"
   - "assemblies [Reporting Services], custom"
@@ -38,7 +39,6 @@ helpviewer_keywords:
  [How to: Debug Custom Assemblies](../../reporting-services/custom-assemblies/how-to-debug-custom-assemblies.md)  
  Describes how to debug your custom assembly code.  
   
-## Related content  
- [Report Definition Language &#40;SSRS&#41;](../../reporting-services/reports/report-definition-language-ssrs.md)  
-  
-  
+## Related content
+
+- [Report Definition Language &#40;SSRS&#41;](../../reporting-services/reports/report-definition-language-ssrs.md)

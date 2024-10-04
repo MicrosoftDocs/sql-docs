@@ -3,11 +3,12 @@ title: "Change an item within a cell in a paginated report"
 description: Replace a noncontainer item, such as a text box, line, or image, in paginated reports with a new report item in Report Builder.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/01/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 # Change an item within a cell in a paginated report (Report Builder)
 
@@ -29,8 +30,7 @@ In paginated reports, you can replace only a noncontainer item, such as a text b
 > [!NOTE]  
 >  The **Image Properties** dialog opens when you drag an image report item to a cell, where you can set properties such as the source of the image before the image is added to the cell.  
   
-## Related content 
- [Images, text boxes, rectangles, and lines &#40;Report Builder&#41;](../../reporting-services/report-design/images-text-boxes-rectangles-and-lines-report-builder-and-ssrs.md)   
- [Tables, matrices, and lists &#40;Report Builder&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
-  
-  
+## Related content
+
+- [Images, text boxes, rectangles, and lines &#40;Report Builder&#41;](../../reporting-services/report-design/images-text-boxes-rectangles-and-lines-report-builder-and-ssrs.md)
+- [Tables, matrices, and lists &#40;Report Builder&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)

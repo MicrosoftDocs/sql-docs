@@ -3,11 +3,12 @@ title: "Customize rendering extension parameters in RSReportServer.Config"
 description: Specify rendering extension parameters in the RSReportServer configuration file to override default report rendering behavior for Reporting Services reports.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/20/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: reporting-services
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "configuration options [Reporting Services]"
   - "DeviceInfo settings"
@@ -122,14 +123,12 @@ helpviewer_keywords:
   
 ## Related content
 
-- [RsReportServer.config configuration file](../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
-- [RSReportDesigner configuration file](../reporting-services/report-server/rsreportdesigner-configuration-file.md)   
-- [CSV device information settings](../reporting-services/csv-device-information-settings.md)   
-- [Excel device information settings](../reporting-services/excel-device-information-settings.md)   
-- [HTML device information settings](../reporting-services/html-device-information-settings.md)   
-- [Image device information settings](../reporting-services/image-device-information-settings.md)   
-- [MHTML Device information settings](../reporting-services/mhtml-device-information-settings.md)   
-- [PDF Device information settings](../reporting-services/pdf-device-information-settings.md)   
-- [XML Device information settings](../reporting-services/xml-device-information-settings.md)  
-  
-  
+- [RsReportServer.config configuration file](../reporting-services/report-server/rsreportserver-config-configuration-file.md)
+- [RSReportDesigner configuration file](../reporting-services/report-server/rsreportdesigner-configuration-file.md)
+- [CSV device information settings](../reporting-services/csv-device-information-settings.md)
+- [Excel device information settings](../reporting-services/excel-device-information-settings.md)
+- [HTML device information settings](../reporting-services/html-device-information-settings.md)
+- [Image device information settings](../reporting-services/image-device-information-settings.md)
+- [MHTML Device information settings](../reporting-services/mhtml-device-information-settings.md)
+- [PDF Device information settings](../reporting-services/pdf-device-information-settings.md)
+- [XML Device information settings](../reporting-services/xml-device-information-settings.md)

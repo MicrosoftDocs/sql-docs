@@ -7,7 +7,7 @@ ms.date: "12/01/2017"
 ms.service: sql
 ms.subservice: ssma
 ms.topic: conceptual
-ms.custom:
+ms.collection:
   - sql-migration-content
 f1_keywords:
   - "ssma.sybase.convert.f1"

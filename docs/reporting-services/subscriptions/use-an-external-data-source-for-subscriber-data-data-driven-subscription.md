@@ -3,11 +3,12 @@ title: "Use an external data source for subscriber data (data-driven subscriptio
 description: Learn to use an external data source for a dynamic data-driven subscription. Understand data processing, querying, delivery options, and parameter passing.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/14/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: subscriptions
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "subscriber data sources [Reporting Services]"
   - "subscriptions [Reporting Services], external data sources"
@@ -70,9 +71,8 @@ helpviewer_keywords:
   
  If you make any of these changes, you must update the subscription.  
   
-## Related content  
- [Create, modify, and delete data-driven subscriptions](../../reporting-services/subscriptions/create-modify-and-delete-data-driven-subscriptions.md)   
- [Data-driven subscriptions](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
- [Subscriptions and delivery &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)  
-  
-  
+## Related content
+
+- [Create, modify, and delete data-driven subscriptions](../../reporting-services/subscriptions/create-modify-and-delete-data-driven-subscriptions.md)
+- [Data-driven subscriptions](../../reporting-services/subscriptions/data-driven-subscriptions.md)
+- [Subscriptions and delivery &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)

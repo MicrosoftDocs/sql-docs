@@ -3,11 +3,12 @@ title: "Best Practices for Replication Administration"
 description: After you configure replication, use these best practices to administer your replication topology in SQL Server.
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/14/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "administering replication, best practices"
   - "replication [SQL Server], administering"
@@ -141,7 +142,6 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
   
  For more information, see [Make Schema Changes on Publication Databases](../../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md).  
   
-## See Also  
- [Replication Administration FAQ](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.yml)  
-  
-  
+## Related content
+
+- [Replication Administration FAQ](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.yml)

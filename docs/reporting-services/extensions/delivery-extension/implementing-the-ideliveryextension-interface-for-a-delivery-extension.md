@@ -3,11 +3,12 @@ title: "Implement the IDeliveryExtension interface for a delivery extension"
 description: Find out how to implement the IDeliveryExtension interface in a delivery extension so that clients can validate user data and retrieve delivery settings.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/14/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: extensions
 ms.topic: reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "delivery extensions [Reporting Services], attributes"
   - "delivery extensions [Reporting Services], class creation"
@@ -30,7 +31,5 @@ The IDeliveryExtension interface allows validation of user data and for clients 
   
 ## Related content
 
-- [Implement a delivery extension](../../../reporting-services/extensions/delivery-extension/implementing-a-delivery-extension.md)   
-- [Reporting Services extension library](../../../reporting-services/extensions/reporting-services-extension-library.md)  
-  
-  
+- [Implement a delivery extension](../../../reporting-services/extensions/delivery-extension/implementing-a-delivery-extension.md)
+- [Reporting Services extension library](../../../reporting-services/extensions/reporting-services-extension-library.md)

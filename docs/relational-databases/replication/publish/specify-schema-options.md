@@ -3,11 +3,12 @@ title: "Specify Schema Options for SQL Server replication"
 description: "Specify Schema Options for SQL Server replication"
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/14/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: how-to
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "schemas [SQL Server replication], options"
   - "articles [SQL Server replication], transactional replication options"
@@ -114,8 +115,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
   
 5.  Run the Snapshot Agent to generate a new snapshot. For more information, see [Create and Apply the Initial Snapshot](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md).  
   
-## See Also  
- [Publish Data and Database Objects](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
- [Article Options for Transactional Replication](../../../relational-databases/replication/transactional/article-options-for-transactional-replication.md)  
-  
-  
+## Related content
+
+- [Publish Data and Database Objects](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)
+- [Article Options for Transactional Replication](../../../relational-databases/replication/transactional/article-options-for-transactional-replication.md)

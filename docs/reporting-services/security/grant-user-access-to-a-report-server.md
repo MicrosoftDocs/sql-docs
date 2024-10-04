@@ -3,19 +3,19 @@ title: Grant users access to a report server
 description: See how to grant members of your organization access to your report server. Find out how to assign item-level and system-level roles to users and groups.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 08/23/2024
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: security
 ms.topic: how-to
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "removing role assignments"
   - "permissions [Reporting Services], granting report server access"
   - "roles [Reporting Services], assignments"
   - "modifying role assignments"
   - "deleting role assignments"
-
-#customer intent: As a SQL server administrator, I want to use role-based security so that I can control who has access to my report server.
+# customer intent: As a SQL server administrator, I want to use role-based security so that I can control who has access to my report server.
 ---
 # Grant users access to a report server
 
@@ -105,6 +105,6 @@ To delegate the task of assigning roles to other users, create role assignments 
 
 ## Related content
 
-- [Create and manage role assignments](../../reporting-services/security/create-and-manage-role-assignments.md)  
-- [Role assignments](../../reporting-services/security/role-assignments.md)  
+- [Create and manage role assignments](../../reporting-services/security/create-and-manage-role-assignments.md)
+- [Role assignments](../../reporting-services/security/role-assignments.md)
 - [SSRS forum](https://go.microsoft.com/fwlink/?LinkId=620231)

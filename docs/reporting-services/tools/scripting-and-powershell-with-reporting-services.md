@@ -3,11 +3,12 @@ title: "Scripting and PowerShell with Reporting Services"
 description: Learn about the support for scripting and PowerShell cmdlets for SharePoint mode report servers in Reporting Services.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 09/14/2015
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: tools
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "scripts [Reporting Services]"
   - "Reporting Services, scripting"
@@ -53,8 +54,8 @@ helpviewer_keywords:
   
 -   For more script, application, and extension examples, see [SQL Server Reporting Services product samples](https://go.microsoft.com/fwlink/?LinkId=177889).  
   
-## Related content  
- [RS.exe utility &#40;SSRS&#41;](../../reporting-services/tools/rs-exe-utility-ssrs.md)   
- [Script deployment and administrative tasks](../../reporting-services/tools/script-deployment-and-administrative-tasks.md)   
- [Script with the rs.exe utility and the web service](../../reporting-services/tools/script-with-the-rs-exe-utility-and-the-web-service.md)  
-  
+## Related content
+
+- [RS.exe utility &#40;SSRS&#41;](../../reporting-services/tools/rs-exe-utility-ssrs.md)
+- [Script deployment and administrative tasks](../../reporting-services/tools/script-deployment-and-administrative-tasks.md)
+- [Script with the rs.exe utility and the web service](../../reporting-services/tools/script-with-the-rs-exe-utility-and-the-web-service.md)

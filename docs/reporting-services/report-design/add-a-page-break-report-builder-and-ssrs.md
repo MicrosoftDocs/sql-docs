@@ -3,13 +3,13 @@ title: Add a page break to a Report Builder paginated report
 description: Learn how to add a page break to rectangles, data regions, or groups within data regions in Report Builder to control the information on each page.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 07/19/2024
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: how-to
-ms.custom: updatefrequency5
-
-#customer intent: As a Report Builder user, I want to learn how to add page break elements in my reports so that I can better control the information on the page.
+ms.custom:
+  - updatefrequency5
+# customer intent: As a Report Builder user, I want to learn how to add page break elements in my reports so that I can better control the information on the page.
 ---
 # Add a page break to a Report Builder paginated report
 
@@ -65,9 +65,8 @@ You can add a page break to rectangles, data regions, or groups within data regi
 
     :::image type="content" source="../../reporting-services/report-design/media/add-page-break-to-group.png" alt-text="Screenshot of the Group Properties dialog box on the Page Breaks tab highlighting the Page break options.":::
 
-## Related content  
+## Related content
 
 - [Pagination in paginated reports (Microsoft Report Builder)](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)
 - [Rendering behaviors in a paginated report (Report Builder)](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)
-- [Page headers and footers in a paginated report (Report Builder)](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)  
-  
+- [Page headers and footers in a paginated report (Report Builder)](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)

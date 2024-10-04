@@ -3,11 +3,12 @@ title: "Enhance Merge Replication Performance"
 description: "Enhance Merge Replication Performance"
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/14/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: how-to
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "publications [SQL Server replication], design and performance"
   - "designing databases [SQL Server], replication performance"

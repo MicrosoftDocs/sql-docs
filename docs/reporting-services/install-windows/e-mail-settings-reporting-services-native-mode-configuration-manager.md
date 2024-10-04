@@ -3,16 +3,17 @@ title: "Email settings in SSRS native mode (Report Server Configuration Manager)
 description: Learn about how you can distribute reports through email by using the email delivery extension in SQL Server Reporting Services.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 08/06/2024
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-server
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 f1_keywords:
   - "SQL13.rsconfigtool.emailsettings.F1"
 helpviewer_keywords:
   - "SQL11.rsconfigtool.emailsettings.F1"
-#customer intent: As a SQL Server administrator, I want to configure email settings in SSRS so that I can distribute reports by email.
+# customer intent: As a SQL Server administrator, I want to configure email settings in SSRS so that I can distribute reports by email.
 ---
 # Email settings in Reporting Services native mode (Report Server Configuration Manager)
 

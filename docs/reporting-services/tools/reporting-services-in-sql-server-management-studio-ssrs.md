@@ -3,11 +3,12 @@ title: "Reporting Services in SQL Server Management Studio"
 description: View information about how to perform reporting tasks and how to create and manage shared schedules in the web portal using SQL Server Management Studio.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 06/10/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: tools
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "report servers [Reporting Services], how-to topics"
 ---
@@ -30,7 +31,7 @@ helpviewer_keywords:
   
 -   [Cancel report server jobs &#40;Management Studio&#41;](../../reporting-services/tools/cancel-report-server-jobs-management-studio.md)  
   
-## Related content  
- [Report server in Management Studio F1 Help](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
- [SQL Server Management Studio (SSMS)](../../ssms/sql-server-management-studio-ssms.md)  
-  
+## Related content
+
+- [Report server in Management Studio F1 Help](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)
+- [SQL Server Management Studio (SSMS)](../../ssms/sql-server-management-studio-ssms.md)

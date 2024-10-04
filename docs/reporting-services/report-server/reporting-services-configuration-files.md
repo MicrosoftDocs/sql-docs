@@ -3,11 +3,12 @@ title: "Reporting Services configuration files"
 description: Learn about configuration files where Reporting Services stores component information. You might need to modify the files to add or configure advanced settings.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 05/30/2019
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-server
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "deploying [Reporting Services], configuration files"
   - "configuration options [Reporting Services]"
@@ -69,10 +70,9 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
 |Registry settings|Stores configuration state and other settings used to uninstall Reporting Services. Also stores information about each [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service application.<br /><br /> Don't modify these settings directly as this change can invalidate your installation.|`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft \Microsoft SQL Server\<InstanceID>\Setup`<br /><br /> Example instance ID: `MSSQL13.MSSQLSERVER`<br /><br /> **- And -**<br /><br /> `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\Reporting Services\Service Applications`|  
 |`RSReportDesigner.config`|Stores configuration settings for Report Designer. For more information, see [RSReportDesigner configuration file](../../reporting-services/report-server/rsreportdesigner-configuration-file.md).|`<drive>:\Program Files\Microsoft Visual Studio 10\Common7\IDE\PrivateAssemblies`.|  
   
-## Related content  
- [Reporting Services report server &#40;native mode&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
- [Reporting Services extensions](../../reporting-services/extensions/reporting-services-extensions.md)   
- [rsconfig utility &#40;SSRS&#41;](../../reporting-services/tools/rsconfig-utility-ssrs.md)   
- [Start and stop the Report Server service](../../reporting-services/report-server/start-and-stop-the-report-server-service.md)  
-  
-  
+## Related content
+
+- [Reporting Services report server &#40;native mode&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)
+- [Reporting Services extensions](../../reporting-services/extensions/reporting-services-extensions.md)
+- [rsconfig utility &#40;SSRS&#41;](../../reporting-services/tools/rsconfig-utility-ssrs.md)
+- [Start and stop the Report Server service](../../reporting-services/report-server/start-and-stop-the-report-server-service.md)

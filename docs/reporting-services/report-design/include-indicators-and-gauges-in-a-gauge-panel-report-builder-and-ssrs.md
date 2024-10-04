@@ -3,11 +3,12 @@ title: "Include indicators and gauges in a gauge panel in paginated report"
 description: Find out about using gauges and indicators in the gauge panel, a top-level container, in your paginated reports in Report Builder.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/01/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 # Include indicators and gauges in a gauge panel in paginated report (Report Builder)
 
@@ -94,7 +95,6 @@ ms.custom: updatefrequency5
   
 18. Select **OK**.
   
-## See Also  
- [Indicators &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  
-  
-  
+## Related content
+
+- [Indicators &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)

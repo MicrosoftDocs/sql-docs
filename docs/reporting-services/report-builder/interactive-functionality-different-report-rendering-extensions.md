@@ -3,11 +3,12 @@ title: "Interactive functionality - different report rendering extensions"
 description: Reporting Services allows you to interact with a paginated report at runtime. This article describes how the interactive features work in specific formats.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/07/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-builder
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 # Interactive functionality - different report rendering extensions
 
@@ -106,6 +107,5 @@ Reports that you view in the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversi
 
 - [Export reports (Report Builder)](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)
 - [Interactive sort, document maps, and links (Report Builder)](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)
-
 - [Tables, matrices, and lists (Report Builder)](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)
 - [Charts (Report Builder)](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)

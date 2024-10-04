@@ -3,11 +3,12 @@ title: "Create, Modify, and Delete Shared Data Sources"
 description: Learn to manage data sources that can be referenced by multiple reports, models, and data-driven subscriptions that run on a Reporting Services report server.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 05/24/2018
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-data
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "modifying data source properties"
   - "shared data sources [Reporting Services]"
@@ -207,9 +208,8 @@ Deleting a shared data source deactivates any report, model, or data-driven subs
   
      For report models, the list of dependent items shows the reports that were created in Report Builder. For shared data sources, the dependent items list can include both reports and report models.  
   
-## See Also  
- [Create data connection strings - Report Builder & SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
- [Manage Report Data Sources](../../reporting-services/report-data/manage-report-data-sources.md)   
- [Configure Data Source Properties for a Paginated Report](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)  
-  
-  
+## Related content
+
+- [Create data connection strings - Report Builder & SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)
+- [Manage Report Data Sources](../../reporting-services/report-data/manage-report-data-sources.md)
+- [Configure Data Source Properties for a Paginated Report](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)

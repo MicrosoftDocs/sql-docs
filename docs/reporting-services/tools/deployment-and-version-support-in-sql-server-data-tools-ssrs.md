@@ -3,7 +3,7 @@ title: "Deployment and version support in SQL Server Data Tools (SSDT)"
 description: Learn about the supported versions for authoring and publishing reports in SQL Server Data Tools. Also, discover how to set project configuration and deployment properties.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/15/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: tools
 ms.topic: conceptual
@@ -63,6 +63,6 @@ ms.custom:
   
  For more information about opening reports in a previous version of the report definition schema, see [Upgrade Reports](../../reporting-services/install-windows/upgrade-reports.md). For more information about specific report definition schemas, see [Report Definition Language Specification](/openspecs/sql_server_protocols/ms-rdl/53287204-7cd0-4bc9-a5cd-d42a5925dca1).  
   
-## Related content 
- [Publish data sources and reports](../../reporting-services/reports/publishing-data-sources-and-reports.md)  
-  
+## Related content
+
+- [Publish data sources and reports](../../reporting-services/reports/publishing-data-sources-and-reports.md)

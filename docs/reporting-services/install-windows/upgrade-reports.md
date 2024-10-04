@@ -3,11 +3,12 @@ title: "Upgrade Reports"
 description: "Upgrade Reports (SSRS)"
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 06/04/2018
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-server
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "reports [Reporting Services], upgrading"
   - "published reports [Reporting Services], upgrades"
@@ -129,13 +130,12 @@ Report definition (.rdl) files are automatically upgraded in the following ways:
   
  For reports that you upload instead of publish to a report server, the report processor determines whether the report can be upgraded on first use. Reports that cannot be upgraded are processed in backward-compatibility mode, and continue to display as they did in the earlier version of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
 
-## Next steps
+## Related content
 
-[Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
-[Breaking Changes in SQL Server Reporting Services in SQL Server 2016](../breaking-changes-in-sql-server-reporting-services-in-sql-server-2016.md)   
-[Behavior Changes to SQL Server Reporting Services  in SQL Server 2016](../behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)   
-[Discontinued Functionality to SQL Server Reporting Services in SQL Server 2016](../../reporting-services/behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)   
-[Custom Report Items](../../reporting-services/custom-report-items/custom-report-items.md)   
-[Upgrade a Report Server Database](../../reporting-services/install-windows/upgrade-a-report-server-database.md)  
-
-More questions? [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)
+- [Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)
+- [Breaking Changes in SQL Server Reporting Services in SQL Server 2016](../breaking-changes-in-sql-server-reporting-services-in-sql-server-2016.md)
+- [Behavior Changes to SQL Server Reporting Services  in SQL Server 2016](../behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)
+- [Discontinued Functionality to SQL Server Reporting Services in SQL Server 2016](../../reporting-services/behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)
+- [Custom Report Items](../../reporting-services/custom-report-items/custom-report-items.md)
+- [Upgrade a Report Server Database](../../reporting-services/install-windows/upgrade-a-report-server-database.md)
+- [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)

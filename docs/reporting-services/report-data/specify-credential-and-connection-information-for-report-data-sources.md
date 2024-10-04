@@ -3,11 +3,12 @@ title: Credentials and connections for report data sources
 description: See how report servers use credentials to connect to external data sources that provide content to reports or recipient information to a data-driven subscription.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 09/04/2024
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-data
 ms.topic: concept-article
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "no credentials option [Reporting Services]"
   - "impersonation [Reporting Services]"
@@ -26,8 +27,7 @@ helpviewer_keywords:
   - "stored credentials [Reporting Services]"
   - "security [Reporting Services], data sources"
   - "Windows integrated security [Reporting Services]"
-
-#customer intent: As a Reporting Services user, I want to see how a report server handles credentials so that I can securely manage my data.
+# customer intent: As a Reporting Services user, I want to see how a report server handles credentials so that I can securely manage my data.
 ---
 # Credentials and connections for report data sources
 

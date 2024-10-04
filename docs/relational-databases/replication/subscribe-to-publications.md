@@ -3,11 +3,12 @@ title: "Subscribe to Publications"
 description: Learn about the types of subscriptions in SQL Server replication, how to choose the type you need, and how to create a subscription.
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/03/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: how-to
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 f1_keywords:
   - "sql13.rep.conc.subtopubs.f1"
 helpviewer_keywords:
@@ -85,8 +86,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016"
   
  [Delete a Pull Subscription](../../relational-databases/replication/delete-a-pull-subscription.md)  
   
-## See Also  
- [Secure the Subscriber](../../relational-databases/replication/security/secure-the-subscriber.md)   
- [Subscription Expiration and Deactivation](../../relational-databases/replication/subscription-expiration-and-deactivation.md)  
-  
-  
+## Related content
+
+- [Secure the Subscriber](../../relational-databases/replication/security/secure-the-subscriber.md)
+- [Subscription Expiration and Deactivation](../../relational-databases/replication/subscription-expiration-and-deactivation.md)

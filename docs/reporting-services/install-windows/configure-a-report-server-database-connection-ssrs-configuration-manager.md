@@ -3,12 +3,13 @@ title: "Configure a report server database connection (Report Server Configurati
 description: "Learn about how each instance requires a connection to the report server database that stores reports, shared data sources, and metadata managed by the server."
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 08/02/2024
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-server
 ms.topic: conceptual
-ms.custom: updatefrequency5
-#customer-intent: As a SQL Server administrator, I want to understand how to configure and manage a SQL Server report server database connection so that I can ensure seamless report server operations.
+ms.custom:
+  - updatefrequency5
+# customer-intent: As a SQL Server administrator, I want to understand how to configure and manage a SQL Server report server database connection so that I can ensure seamless report server operations.
 ---
 
 # Configure a report server database connection (Report Server Configuration Manager)
@@ -134,5 +135,4 @@ You can configure multiple report servers to use the same report server database
 - [Create a report server database](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)
 - [Manage a Reporting Services Native mode report server](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)
 - [Configure the report server service account](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)
-
-More questions? Try asking the [Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231).
+- [Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

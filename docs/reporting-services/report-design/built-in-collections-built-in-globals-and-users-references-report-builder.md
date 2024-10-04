@@ -3,11 +3,12 @@ title: "Built-in Globals and User references in a paginated report"
 description: Find out about the values that can be used in expressions to filter results in a paginated report in Report Builder.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 08/17/2018
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 # Built-in Globals and User references in a paginated report (Report Builder)
 
@@ -82,9 +83,9 @@ ms.custom: updatefrequency5
  In some cases, reports that include the *User!UserID* variable fail to show report data that is specific to the current user who is viewing the report.  
   
 ## Related content
- [Expressions &#40;Report Builder&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
- [Expression dialog &#40;Report Builder&#41;](./expressions-report-builder-and-ssrs.md)   
- [Data types in expressions &#40;Report Builder&#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)   
- [Format numbers and dates &#40;Report Builder&#41;](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   
- [Expression examples &#40;Report Builder&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
-  
+
+- [Expressions &#40;Report Builder&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)
+- [Expression dialog &#40;Report Builder&#41;](./expressions-report-builder-and-ssrs.md)
+- [Data types in expressions &#40;Report Builder&#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)
+- [Format numbers and dates &#40;Report Builder&#41;](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)
+- [Expression examples &#40;Report Builder&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)

@@ -3,11 +3,12 @@ title: "Publication Properties, Subscription Options"
 description: "Publication Properties, Subscription Options"
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/14/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: ui-reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 f1_keywords:
   - "sql13.rep.newpubwizard.pubproperties.subscriptionoptions.f1"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
@@ -118,9 +119,8 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
  **Maximum concurrent processes**  
  The maximum number of Merge Agents that can run at the same time (requires **Limit concurrent processes**). If the number of agents synchronizing exceeds the maximum, agents are put in a queue until the number drops under the maximum.  
   
-## See Also  
- [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
- [View and Modify Publication Properties](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
- [Publish Data and Database Objects](../../relational-databases/replication/publish/publish-data-and-database-objects.md)  
-  
-  
+## Related content
+
+- [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)
+- [View and Modify Publication Properties](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)
+- [Publish Data and Database Objects](../../relational-databases/replication/publish/publish-data-and-database-objects.md)

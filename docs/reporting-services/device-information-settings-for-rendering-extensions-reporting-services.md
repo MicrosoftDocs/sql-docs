@@ -3,11 +3,12 @@ title: "Device information settings for rendering extensions (Reporting Services
 description: Learn how device information settings are used to pass rendering parameters to a rendering extension in Reporting Services.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 09/15/2015
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: reporting-services
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 # Device information settings for rendering extensions (Reporting Services)
   In [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], device information settings are used to pass rendering parameters to a rendering extension. Each rendering extension accepts a specific set of settings.  

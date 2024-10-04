@@ -3,11 +3,12 @@ title: "MSSQL_ENG020574"
 description: "MSSQL_ENG020574"
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/01/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "MSSQL_ENG02574 error"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
@@ -38,7 +39,6 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
   
 -   Bring the data into convergence by reinitializing the subscription or through another method.  
   
-## See Also  
- [Errors and Events Reference &#40;Replication&#41;](../../relational-databases/replication/errors-and-events-reference-replication.md)  
-  
-  
+## Related content
+
+- [Errors and Events Reference &#40;Replication&#41;](../../relational-databases/replication/errors-and-events-reference-replication.md)

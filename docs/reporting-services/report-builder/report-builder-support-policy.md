@@ -3,11 +3,12 @@ title: "Microsoft Report Builder support policy"
 description: Learn about the Microsoft Report Builder support policy.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 06/22/2022
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: tools
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 # Microsoft Report Builder support policy
 
@@ -33,4 +34,4 @@ When you're running the latest current branch version of Microsoft Report Builde
 
 ## Related content
 
-[Install Report Builder](../../reporting-services/install-windows/install-report-builder.md)
+- [Install Report Builder](../../reporting-services/install-windows/install-report-builder.md)

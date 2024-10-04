@@ -4,11 +4,12 @@ description: Learn how to create a publication in SQL Server by using SQL Server
 author: "MashaMSFT"
 ms.author: "mathoma"
 ms.reviewer: randolphwest
-ms.date: 01/30/2023
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: how-to
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "publications [SQL Server replication], creating"
   - "articles [SQL Server replication], defining"
@@ -233,7 +234,7 @@ This example enables the `AdventureWorks` database for merge publishing and crea
 
 [!code-vb[HowTo#rmo_vb_CreateMergePub](../../../relational-databases/replication/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_createmergepub)]
 
-## See also
+## Related content
 
 - [Use sqlcmd with Scripting Variables](../../../tools/sqlcmd/sqlcmd-use-scripting-variables.md)
 - [Publish Data and Database Objects](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)

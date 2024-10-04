@@ -3,11 +3,12 @@ title: "IBM Db2 Subscribers"
 description: "IBM Db2 Subscribers"
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/02/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "non-SQL Server Subscribers, IBM DB2"
   - "data types [SQL Server replication], non-SQL Server Subscribers"
@@ -159,8 +160,7 @@ helpviewer_keywords:
   
      In some DB2 environments, a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **char** data item is not restricted to single-byte characters; the length of a CHAR or VARCHAR item must take this into account. You must also take into account *shift in* and *shift out* characters if they are needed. If you are replicating tables with **nchar** and **nvarchar** columns, you might need to specify a larger maximum length for the data type in a custom creation script. For information about specifying a custom creation script, see step 5 in the section "Configuring an IBM Db2 Subscriber" in this topic.  
   
-## See Also  
- [Non-SQL Server Subscribers](../../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)   
- [Subscribe to Publications](../../../relational-databases/replication/subscribe-to-publications.md)  
-  
-  
+## Related content
+
+- [Non-SQL Server Subscribers](../../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)
+- [Subscribe to Publications](../../../relational-databases/replication/subscribe-to-publications.md)

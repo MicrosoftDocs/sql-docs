@@ -3,11 +3,12 @@ title: "Align the data in a paginated report chart in a table or matrix"
 description: Discover uses for paginated report sparklines and data bars in Report Builder. These small, simple charts convey information with the minimum amount of detail.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/03/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 # Align the data in a paginated report chart in a table or matrix (Report Builder)
 
@@ -30,8 +31,7 @@ ms.custom: updatefrequency5
   
 1.  Select **OK**.
   
-## Related content 
- [Charts &#40;Report Builder&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [Add sparklines and data bars &#40;Report Builder&#41;](../../reporting-services/report-design/add-sparklines-and-data-bars-report-builder-and-ssrs.md)  
-  
-  
+## Related content
+
+- [Charts &#40;Report Builder&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)
+- [Add sparklines and data bars &#40;Report Builder&#41;](../../reporting-services/report-design/add-sparklines-and-data-bars-report-builder-and-ssrs.md)

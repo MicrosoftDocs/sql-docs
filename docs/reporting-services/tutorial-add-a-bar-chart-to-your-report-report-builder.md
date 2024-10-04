@@ -3,11 +3,12 @@ title: "Tutorial: Add a bar chart to your report (Report Builder)"
 description: Learn how to use a wizard in Report Builder to create a bar chart in a Reporting Services paginated report.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 06/15/2016
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: reporting-services
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 # Tutorial: Add a bar chart to your report (Report Builder)
 In this tutorial, you use a wizard in [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] to create a bar chart in a [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] paginated report. Then you add a filter and enhance the chart. 
@@ -290,12 +291,9 @@ The chart shows the top five salesperson names from the 2015 sales data.
   
 4.  Select **Save**.   
   
-## Next steps  
-You successfully completed the Adding a Bar Chart to Your Report tutorial. For more information about charts, see [Charts in a paginated report (Report Builder)](../reporting-services/report-design/charts-report-builder-and-ssrs.md) and [Bar charts in a paginated report (Report Builder)](../reporting-services/report-design/bar-charts-report-builder-and-ssrs.md).  
-  
 ## Related content
 
-- [Report Builder tutorials](../reporting-services/report-builder-tutorials.md)  
-- [Report Builder in SQL Server](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
-  
-
+- [Report Builder tutorials](../reporting-services/report-builder-tutorials.md)
+- [Report Builder in SQL Server](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)
+- [Charts in a paginated report (Report Builder)](../reporting-services/report-design/charts-report-builder-and-ssrs.md)
+- [Bar charts in a paginated report (Report Builder)](../reporting-services/report-design/bar-charts-report-builder-and-ssrs.md)

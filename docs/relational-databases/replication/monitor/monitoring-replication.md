@@ -3,11 +3,12 @@ title: "Monitoring (Replication)"
 description: Learn about the monitoring tools used to track activity and status of replication in SQL Server replication topology.
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "11/20/2018"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: how-to
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "monitoring performance [SQL Server replication], about monitoring replication"
   - "transactional replication, monitoring"
@@ -42,8 +43,6 @@ The following tools can be used to monitor replication:
 -   **System Monitor** - can be useful for monitoring performance, providing a number of counters for replication. For more information, see [Monitoring Replication with System Monitor](../../../relational-databases/replication/monitor/monitoring-replication-with-system-monitor.md).  
   
 
-## See Also  
- [Best Practices for Replication Administration](../../../relational-databases/replication/administration/best-practices-for-replication-administration.md)   
+## Related content
 
-  
-  
+- [Best Practices for Replication Administration](../../../relational-databases/replication/administration/best-practices-for-replication-administration.md)

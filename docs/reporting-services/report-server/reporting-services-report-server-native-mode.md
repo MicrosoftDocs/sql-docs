@@ -3,11 +3,12 @@ title: "Reporting Services report server (native mode)"
 description: Learn about report server configured for native mode, including managing content, managing a resource, and referencing an image resource from a report.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 04/21/2020
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-server
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "administering Reporting Services"
   - "administering [Reporting Services]"
@@ -102,8 +103,7 @@ helpviewer_keywords:
   
  To use an image resource in a report, add the image file to the project and publish it along with the report. Once the image is published, you can update the image reference in the report. You update the reference so that it points to the resource on the report server, and then republish just the report to save your changes. You can now update the image independently of the report by republishing the resource. The report uses the most current version of the image available on the report server.  
   
-## Related content  
- [Configure and administer a report server &#40;SSRS native mode&#41;](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)   
- [Troubleshoot a Reporting Services installation](../../reporting-services/install-windows/troubleshoot-a-reporting-services-installation.md)  
-  
-  
+## Related content
+
+- [Configure and administer a report server &#40;SSRS native mode&#41;](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)
+- [Troubleshoot a Reporting Services installation](../../reporting-services/install-windows/troubleshoot-a-reporting-services-installation.md)

@@ -3,11 +3,12 @@ title: Intro to Report Data in SQL Server Reporting Services (SSRS)
 description: Learn introductory information about report data in SQL Server Reporting Services (SRRS), such as how to create data sources.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 11/18/2019
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-data
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 
 # Intro to Report Data in SQL Server Reporting Services (SSRS)

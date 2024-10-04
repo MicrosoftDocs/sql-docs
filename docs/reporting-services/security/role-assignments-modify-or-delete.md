@@ -3,11 +3,12 @@ title: "Modify or delete a role assignment (SSRS web portal)"
 description: "Modify or delete a role assignment (SSRS web portal)"
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 05/07/2019
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: security
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "removing role assignments"
   - "roles [Reporting Services], assignments"
@@ -56,5 +57,5 @@ Similarly, if you're a system or network administrator, it's probably easier for
 
 ## Related content
 
-[Create and manage role assignments](../../reporting-services/security/create-and-manage-role-assignments.md)  
-[Role assignments](../../reporting-services/security/role-assignments.md)  
+- [Create and manage role assignments](../../reporting-services/security/create-and-manage-role-assignments.md)
+- [Role assignments](../../reporting-services/security/role-assignments.md)

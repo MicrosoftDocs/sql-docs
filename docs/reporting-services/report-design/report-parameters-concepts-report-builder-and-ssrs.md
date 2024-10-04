@@ -3,11 +3,12 @@ title: "Report parameters concepts in paginated reports"
 description: Find out how to add parameters to link related paginated reports, to control a report appearance, to filter report data, or to narrow the scope in Report Builder.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/01/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 # Report parameters concepts in paginated reports (Report Builder)
 
@@ -38,9 +39,8 @@ ms.custom: updatefrequency5
   
  If you plan to create report snapshots, histories, or subscriptions to a published report, you must understand how report parameters affect the design requirements for the report.  
   
-## See Also  
- [Reporting Services Concepts (SSRS)](../reporting-services-concepts-ssrs.md)
- [Report Embedded Datasets and Shared Datasets &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
- [Tutorial: Add a Parameter to Your Report &#40;Report Builder&#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)  
-  
-  
+## Related content
+
+- [Reporting Services Concepts (SSRS)](../reporting-services-concepts-ssrs.md)
+- [Report Embedded Datasets and Shared Datasets &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)
+- [Tutorial: Add a Parameter to Your Report &#40;Report Builder&#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)

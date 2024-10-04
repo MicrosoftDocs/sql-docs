@@ -5,7 +5,7 @@ description: An overview of database watcher for Azure SQL, a managed monitoring
 author: dimitri-furman
 ms.author: dfurman
 ms.reviewer: wiassaf
-ms.date: 09/27/2024
+ms.date: 10/04/2024
 ms.service: azure-sql
 ms.subservice: monitoring
 ms.topic: conceptual
@@ -221,8 +221,8 @@ During preview, database watcher has the following known issues.
 
 | Issue | Mitigation or workaround |
 |:--|:--|
-| If data collection cannot start or continue because of an error (for example, insufficient access to a SQL target or to the data store), the error is not exposed in the Activity log. | To troubleshoot, see [Data is not collected](#data-is-not-collected). |
-| Disabling the system-assigned managed identity of a watcher is not supported. | To delete the system-assigned identity of a watcher from the directory, delete the watcher. </br></br>If the system-assigned identity of a watcher has been disabled, the watcher is no longer functional. Delete and recreate the watcher. |
+| If data collection cannot start or continue because of an error (for example, insufficient access to a SQL target or to the data store), the error is not exposed. | To troubleshoot, see [Data is not collected](#data-is-not-collected). |
+| Disabling the system-assigned managed identity of a watcher is not supported. | To delete the system-assigned identity of a watcher from the directory, delete the watcher.</br></br>If the system-assigned identity of a watcher has been disabled, the watcher is no longer functional. Delete and recreate the watcher. |
 | If a [serverless](./database/serverless-tier-overview.md) database has auto-pause enabled, and is added as a database watcher target, it might not auto-pause as expected. For a [free offer](./database/free-offer.md) database, this might exhaust the free monthly credit sooner than expected. | If retaining the auto-pause functionality is required, do not use database watcher to monitor serverless databases at this time. |
 | For Azure SQL Managed Instance, data is not collected from the readable high availability replica or from a geo-replica if you are using SQL authentication. | There are two workarounds: </br>1. Use the Microsoft Entra ID authentication (preferred). </br>2. Disable the password policy check. Execute `ALTER LOGIN [database-watcher-login-placeholder] WITH CHECK_POLICY = OFF;`, replacing `database-watcher-login-placeholder` with the name of the SQL authentication login of the watcher. Execute this command on the primary replica, and on the geo-replica, if any. |
 | If the watcher name is not unique within the Microsoft Entra ID tenant, granting access to targets using Microsoft Entra authentication fails. | Recreate the watcher with a name that is unique within your tenant. |
@@ -257,14 +257,7 @@ If you select the **Dashboards** page of a watcher, but do not see a summary of 
 - You might not have access to the data store. For more information, see [Grant users and groups access to the data store](database-watcher-manage.md#grant-users-and-groups-access-to-the-data-store).
 - You might not have network connectivity to the data store. For example, this happens if connections from your browser to the Azure Data Explorer cluster use public connectivity, but you [disable public access](/azure/data-explorer/security-network-restrict-public-access) to the cluster. In that case, you also cannot connect to the cluster from [Kusto Explorer](/azure/data-explorer/kusto/tools/kusto-explorer) or the Azure Data Explorer [web UI](/azure/data-explorer/web-ui-query-overview).
 
-  To resolve this, establish private connectivity from your machine to the Azure Data Explorer cluster.
-
-  If you are connecting to Azure Data Explorer from an Azure VM, [create](/azure/data-explorer/security-network-private-endpoint-create) a private endpoint for the Azure Data Explorer cluster in the Azure virtual network where your Azure VM is deployed.
-  
-  If you are connecting to Azure Data Explorer from a machine on premises, you can:
-    1. Use [Azure VPN Gateway](/azure/vpn-gateway/vpn-gateway-about-vpngateways) or [Azure ExpressRoute](/azure/expressroute/expressroute-introduction) to establish a private connection from your on-premises network to an Azure virtual network.
-    1. [Create](/azure/data-explorer/security-network-private-endpoint-create) a private endpoint for the Azure Data Explorer cluster in the Azure virtual network where the VPN or ExpressRoute connection terminates.
-    1. [Configure DNS](/azure/private-link/private-endpoint-dns) for that private endpoint.
+  To resolve this, establish private connectivity from your machine to the Azure Data Explorer cluster as described in [Private connectivity to the data store](database-watcher-manage.md#private-connectivity-to-the-data-store).
 
 - The Azure Data Explorer cluster might be stopped. For more information, see [Stopped Azure Data Explorer clusters](database-watcher-manage.md#stopped-azure-data-explorer-clusters).
 - The Azure Data Explorer cluster or database, or the Real-Time Analytics database might have been deleted after it was selected as the data store for your watcher. Navigate to the cluster and the database, and confirm that they exist.

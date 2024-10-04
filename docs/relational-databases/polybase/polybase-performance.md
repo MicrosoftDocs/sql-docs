@@ -4,7 +4,7 @@ description: Performance considerations for PolyBase in your SQL Server instance
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: hudequei
-ms.date: 01/17/2024
+ms.date: 10/04/2024
 ms.service: sql
 ms.subservice: polybase
 ms.custom: linux-related-content
@@ -66,11 +66,15 @@ WITH FULLSCAN, NORECOMPUTE;
 The `WITH` options are mandatory, and for the sample size, the allowed options are `FULLSCAN` and `SAMPLE n PERCENT`. 
 
 - To create single-column statistics for multiple columns, execute `CREATE STATISTICS` for each of the columns. 
-- Multi-column statistics are not supported. 
+- Multi-column statistics are not supported.
 
 ## Query partitioned data
 
-Data is often organized in subfolders also called partitions. You can instruct the SQL Server instance to query only particular folders and files. Doing so reduces the number of files and the amount of data the query needs to read and process, resulting in better performance. This type of query optimization is known as partition pruning or *partition elimination*. You can eliminate partitions from query execution by using metadata function `filepath()` in the `WHERE` clause of the query.
+***Applies to*** [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)] and [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)].
+
+When data is organized into folders or files (also called partitions), use *partition elimination* to query only specific folders and files. Partition elimination reduces the number of files and the amount of data the query needs to read and process, resulting in better performance. 
+
+To eliminate partitions from query execution, use the metadata function `filepath()` in the `WHERE` clause of the query.
 
 First, create an external data source:
 
@@ -111,7 +115,7 @@ ORDER BY filepath;
 
 If your stored data isn't partitioned, consider partitioning it to improve query performance.
 
-If you are using external tables, `filepath()` and `filename()` functions are supported but not in the `WHERE` clause. You can still filter by `filename` or `filepath` if you use them in computed columns. The following example demonstrates this: 
+If you are using external tables, `filepath()` and `filename()` functions are supported but not in the `WHERE` clause. You can still filter by `filename` or `filepath` if you use them in computed columns. The following example demonstrates this:
 
 ```sql
 CREATE EXTERNAL TABLE tbl_TaxiRides ( 

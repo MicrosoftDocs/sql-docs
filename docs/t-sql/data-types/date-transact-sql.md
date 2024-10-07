@@ -80,7 +80,7 @@ The following tables show the valid string literal formats for the **date** data
 
 **date** complies with the ANSI SQL standard definition for the Gregorian calendar:
 
-> NOTE 85 - Datetime data types will allow dates in the Gregorian format to be stored in the date range 0001-01-01 CE through 9999-12-31 CE.
+Datetime data types will allow dates in the Gregorian format to be stored in the date range 0001-01-01 CE through 9999-12-31 CE.
 
 The default string literal format, which is used for down-level clients, complies with the SQL standard form that is defined as `yyyy-MM-dd`. This format is the same as the ISO 8601 definition for `DATE`.
 

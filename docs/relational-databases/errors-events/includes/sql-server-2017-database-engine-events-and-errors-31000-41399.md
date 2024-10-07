@@ -1,7 +1,7 @@
 ---
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 01/11/2024
+ms.date: 10/10/2024
 ms.topic: include
 ---
 > [!NOTE]
@@ -1340,10 +1340,10 @@ ms.topic: include
 | 40825 | 16 | No | Unable to complete request now. Please try again later. |
 | 40827 | 16 | No | The operation is not supported for your subscription offer type. |
 | 40838 | 16 | No | Replication relationship limit reached. The database '%ls' cannot have more than one non-readable secondary. |
-| 40839 | 16 | No | Connection to a non-readable secondary database is not allowed. See 'http://go.microsoft.com/fwlink/?LinkID=402429&clcid=0x409' for more information. |
-| 40840 | 16 | No | Target region '%ls' is not a DR paired Azure region. See 'http://go.microsoft.com/fwlink/?LinkID=402430&clcid=0x409' for more information. |
+| 40839 | 16 | No | Connection to a non-readable secondary database is not allowed. See '[http://go.microsoft.com/fwlink/?LinkID=402429&clcid=0x409](https://go.microsoft.com/fwlink/?LinkID=402429&clcid=0x409)' for more information. |
+| 40840 | 16 | No | Target region '%ls' is not a DR paired Azure region. See '[http://go.microsoft.com/fwlink/?LinkID=402430&clcid=0x409](https://go.microsoft.com/fwlink/?LinkID=402430&clcid=0x409)' for more information. |
 | 40841 | 16 | No | Friendly termination of a non-readable replication relationship is not supported. |
-| 40842 | 16 | No | Termination of the non-readable replication relationship for database '%ls' is currently not allowed. See 'http://go.microsoft.com/fwlink/?LinkID=402431&clcid=0x409' for more information |
+| 40842 | 16 | No | Termination of the non-readable replication relationship for database '%ls' is currently not allowed. See '[http://go.microsoft.com/fwlink/?LinkID=402431&clcid=0x409](https://go.microsoft.com/fwlink/?LinkID=402431&clcid=0x409)' for more information |
 | 40843 | 16 | No | Non-readable secondary is not supported for database copy. |
 | 40844 | 16 | No | Database '%ls' on Server '%ls' is a '%ls' edition database in an elastic pool and cannot have a replication relationship. |
 | 40847 | 16 | No | Could not perform the operation because server would exceed the allowed Database Throughput Unit quota of %d. |
@@ -1726,7 +1726,7 @@ ms.topic: include
 | 41376 | 16 | No | Only members of the fixed sysadmin role can execute the stored procedure '%ls'. |
 | 41377 | 16 | No | The natively compiled module with database ID %ld and object ID %ld has not been executed. Query execution statistics collection can only be enabled if the module has been executed at least once since creation or last database restart. |
 | 41378 | 16 | No | Both @database_id and @xtp_object_id should be specified to enable or retrieve status of query level statistics collection for a procedure. |
-| 41379 | 16 | No | Restore operation failed for database '%.\*ls' due to insufficient memory in the resource pool '%ls'. Close other applications to increase the available memory, ensure that both SQL Server memory configuration and resource pool memory limits are correct and try again. See 'http://go.microsoft.com/fwlink/?LinkID=507574' for more information. |
+| 41379 | 16 | No | Restore operation failed for database '%.\*ls' due to insufficient memory in the resource pool '%ls'. Close other applications to increase the available memory, ensure that both SQL Server memory configuration and resource pool memory limits are correct and try again. See '[http://go.microsoft.com/fwlink/?LinkID=507574](https://go.microsoft.com/fwlink/?LinkID=507574)' for more information. |
 | 41380 | 21 | No | Databases with a MEMORY_OPTIMIZED_DATA filegroup are only supported in 64-bit editions of SQL Server. |
 | 41381 | 21 | No | The database cannot be started in this edition of SQL Server because it contains a MEMORY_OPTIMIZED_DATA filegroup. See Books Online for more details on feature support in different SQL Server editions. |
 | 41382 | 16 | No | Failure adding a container to a MEMORY_OPTIMIZED_DATA filegroup. Possible causes include the server being out of memory and the container path being too long. |
@@ -1734,7 +1734,7 @@ ms.topic: include
 | 41384 | 16 | No | Database '%.\*ls' has exceeded the maximum number of XTP checkpoint files, and can no longer support write operations in durable memory-optimized tables. For more information, contact Customer Support Services. |
 | 41385 | 16 | No | A memory-optimized table cannot be enabled for Change Data Capture (CDC). |
 | 41386 | 16 | No | Filegroups with MEMORY_OPTIMIZED_DATA, memory-optimized tables and natively compiled modules are not supported when lightweight pooling is enabled. Disable lightweight pooling in order to use memory-optimized features. |
-| 41387 | 10 | No | Disallowing page allocations for database '%.\*ls' due to insufficient memory in the resource pool '%ls'. See 'http://go.microsoft.com/fwlink/?LinkId=510837' for more information. |
+| 41387 | 10 | No | Disallowing page allocations for database '%.\*ls' due to insufficient memory in the resource pool '%ls'. See '[http://go.microsoft.com/fwlink/?LinkId=510837](https://go.microsoft.com/fwlink/?LinkId=510837)' for more information. |
 | 41388 | 16 | No | An upgrade operation failed for database '%.\*ls'. Check the error log for additional details. |
 | 41389 | 16 | No | Failed to create a backup file collection snapshot necessary for backup of database '%.\*ls'. Check the error log for additional details. |
 | 41390 | 16 | No | Failed to get checkpoint file information necessary for backup of database '%.\*ls'. Check the error log for additional details. |

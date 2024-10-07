@@ -1352,11 +1352,11 @@ Use the following practices to help maximize security and efficiency.
 
 Use the following practices to help maximize correctness:
 
-- Use `-V16` to log any [severity 16 level messages](../../relational-databases/errors-events/database-engine-error-severities.md#levels-of-severity).  Severity 16 messages indicate general errors that can be corrected by the user.
+- Use `-V 16` to log any [severity 16 level messages](../../relational-databases/errors-events/database-engine-error-severities.md#levels-of-severity).  Severity 16 messages indicate general errors that can be corrected by the user.
 
 - Check the exit code and `DOS ERRORLEVEL` variable after the process has exited.  **sqlcmd** returns `0` normally, otherwise it sets the `ERRORLEVEL` as configured by `-V`.  In other words, `ERRORLEVEL` shouldn't be expected to be the same value as the error number reported from [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)]. The error number is a [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)]-specific value corresponding to the system function [**@@ERROR**](../../t-sql/functions/error-transact-sql.md). `ERRORLEVEL` is a **sqlcmd**-specific value to indicate why **sqlcmd** terminated, and its value is influenced by specifying `-b` command line argument.
 
-Using `-V16` in combination with checking the exit code and `DOS ERRORLEVEL` can help catch errors in automated environments, particularly quality gates before a production release.
+Using `-V 16` in combination with checking the exit code and `DOS ERRORLEVEL` can help catch errors in automated environments, particularly quality gates before a production release.
 
 ## Related content
 

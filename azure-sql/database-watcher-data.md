@@ -126,7 +126,7 @@ Customers can choose to store collected SQL monitoring data in one of three data
 
 - A database on an [Azure Data Explorer](/azure/data-explorer/data-explorer-overview) cluster. By default, a new Azure Data Explorer cluster is created for each new watcher and is located in the same Azure region as the watcher.
 
-  Customers can choose the specific Azure region in an Azure geography as the location of their Azure Data Explorer cluster and the database. Azure Data Explorer does not natively support data replication to a different region or geography. For more information, see [Business continuity and disaster recovery overview](/azure/data-explorer/business-continuity-overview).
+  Customers can choose the specific Azure region in an Azure geography as the location of their Azure Data Explorer cluster and the database. For more information about data replication capabilities in Azure Data Explorer, see [Business continuity and disaster recovery overview](/azure/data-explorer/business-continuity-overview).
 
 - A database on a [free Azure Data Explorer cluster](/azure/data-explorer/start-for-free).
 
@@ -134,7 +134,7 @@ Customers can choose to store collected SQL monitoring data in one of three data
 
 - A database in [Real-Time Analytics in Microsoft Fabric](/fabric/real-time-analytics/overview).
 
-  Customers cannot choose the geographical location of the database. Data replication to a different region or geography is not supported.
+  Customers cannot choose the geographical location of the database.
 
 To fully control data residency for collected SQL monitoring data, customers must choose a database on an Azure Data Explorer cluster as the data store.
 

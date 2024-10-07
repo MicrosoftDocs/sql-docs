@@ -4,7 +4,7 @@ titleSuffix: Azure SQL Database & SQL Managed Instance
 description: A detailed description of SQL monitoring data collected by database watcher
 author: dimitri-furman
 ms.author: dfurman
-ms.date: 09/24/2024
+ms.date: 10/07/2024
 ms.service: azure-sql
 ms.subservice: monitoring
 ms.topic: conceptual
@@ -119,6 +119,24 @@ Compute resources available to database watcher queries in a dense elastic pool 
 > To monitor a dense elastic pool, enable monitoring at the pool level by adding the elastic pool as a target.
 >
 > It is not recommended to monitor more than a few individual databases in a dense elastic pool. You might see gaps in the collected data or larger than expected intervals between data samples due to insufficient compute resources available to database watcher queries.
+
+## Data residency
+
+Customers can choose to store collected SQL monitoring data in one of three data store types:
+
+- A database on an [Azure Data Explorer](/azure/data-explorer/data-explorer-overview) cluster.
+
+  Customers can choose the specific Azure region in an Azure geography as the location of their Azure Data Explorer cluster and the database. Azure Data Explorer does not natively support data replication to a different region or geography. For more information, see [Business continuity and disaster recovery overview](/azure/data-explorer/business-continuity-overview).
+
+- A database on a [free Azure Data Explorer cluster](/azure/data-explorer/start-for-free).
+
+  Customers can choose the specific Azure geography, but not the specific Azure region as the location of their free Azure Data Explorer cluster and the database. Data replication to a different region or geography is not supported.
+
+- A database in [Real-Time Analytics in Microsoft Fabric](/fabric/real-time-analytics/overview).
+
+  Customers cannot choose the geographical location of the database. Data replication to a different region or geography is not supported.
+
+To fully control data residency for collected SQL monitoring data, customers must choose a database on an Azure Data Explorer cluster as the data store. Customers can also align the geography and region of their Azure Data Explorer cluster to the geography and region of the Azure SQL resources being monitored. When the Azure SQL resources are located in multiple regions, customers might need to create multiple watchers and multiple Azure Data Explorer clusters to satisfy their data residency requirements.
 
 ## Datasets
 

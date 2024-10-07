@@ -124,7 +124,7 @@ Compute resources available to database watcher queries in a dense elastic pool 
 
 Customers can choose to store collected SQL monitoring data in one of three data store types:
 
-- A database on an [Azure Data Explorer](/azure/data-explorer/data-explorer-overview) cluster.
+- A database on an [Azure Data Explorer](/azure/data-explorer/data-explorer-overview) cluster. By default, a new Azure Data Explorer cluster is created for each new watcher and is located in the same Azure region as the watcher.
 
   Customers can choose the specific Azure region in an Azure geography as the location of their Azure Data Explorer cluster and the database. Azure Data Explorer does not natively support data replication to a different region or geography. For more information, see [Business continuity and disaster recovery overview](/azure/data-explorer/business-continuity-overview).
 
@@ -136,7 +136,9 @@ Customers can choose to store collected SQL monitoring data in one of three data
 
   Customers cannot choose the geographical location of the database. Data replication to a different region or geography is not supported.
 
-To fully control data residency for collected SQL monitoring data, customers must choose a database on an Azure Data Explorer cluster as the data store. Customers can also align the geography and region of their Azure Data Explorer cluster to the geography and region of the Azure SQL resources being monitored. When the Azure SQL resources are located in multiple regions, customers might need to create multiple watchers and multiple Azure Data Explorer clusters to satisfy their data residency requirements.
+To fully control data residency for collected SQL monitoring data, customers must choose a database on an Azure Data Explorer cluster as the data store.
+
+Customers can also align the geography and region of their Azure Data Explorer cluster to the geography and region of the Azure SQL resources being monitored. When the Azure SQL resources are located in multiple regions, customers might need to create multiple watchers and multiple Azure Data Explorer clusters to satisfy their data residency requirements.
 
 ## Datasets
 

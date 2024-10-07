@@ -79,7 +79,7 @@ The ADR recovery process has the same three phases as the current recovery proce
 
   The process remains the same as before with the addition of reconstructing SLOG and copying log records for non-versioned operations.
   
-- **Redo** phase
+- **Redo phase**
 
   Broken into two phases (P)
   - Phase 1
@@ -140,7 +140,7 @@ The following types of workloads benefit most from ADR:
 
    - Many DDLs are executed in one transaction. For example, in one transaction, rapidly creating and dropping temp tables. 
 
-   - A table has very large number of partitions/indexes that are modified. For example, a DROP TABLE operation on such table would require a large reservation of SLOG memory, which would delay truncation of the transaction log and delay undo/redo operations. The workaround can be drop the indexes individually and gradually, then drop the table. For more information on the SLOG, see [ADR recovery components](/sql/relational-databases/accelerated-database-recovery-concepts).
+   - A table has very large number of partitions/indexes that are modified. For example, a DROP TABLE operation on such table would require a large reservation of SLOG memory, which would delay truncation of the transaction log and delay undo/redo operations. As a workaround, drop the indexes individually and gradually, then drop the table. For more information on the SLOG, see [ADR recovery components](/sql/relational-databases/accelerated-database-recovery-concepts).
 
 - Prevent or reduce unnecessary aborted situations. A high abort rate will put pressure on the PVS cleaner and lower ADR performance. The aborts may come from a high rate of deadlocks, duplicate keys, or other constraint violations.  
 

@@ -15,7 +15,7 @@ f1_keywords:
 
 # SQL Server Data Tools
 
-**SQL Server Data Tools (SSDT)** is a set of development tools in Visual Studio with focused on building SQL Server databases and Azure SQL databases. SSDT can be extended to Analysis Services (AS) data models, Integration Services (IS) packages, and Reporting Services (RS) reports with their corresponding extensions. SSDT allows you to design and deploy SQL objects with the same project concept as other application development tools. The **SQL projects** capability extends to CI/CD pipelines, enabling you to automate the build and deployment of your database projects with the [SqlPackage CLI](../tools/sqlpackage/sqlpackage.md).
+**SQL Server Data Tools (SSDT)** is a set of development tools in Visual Studio with focus on building SQL Server databases and Azure SQL databases. SSDT can be extended to Analysis Services (AS) data models, Integration Services (IS) packages, and Reporting Services (RS) reports with their corresponding extensions. SSDT allows you to design and deploy SQL objects with the same project concept as other application development tools. The **SQL projects** capability extends to CI/CD pipelines, enabling you to automate the build and deployment of your database projects with the [SqlPackage CLI](../tools/sqlpackage/sqlpackage.md).
 
 :::image type="content" source="media/sql-server-data-tools/install-layout.png" alt-text="Screenshot of graphic with SQL Server Data Tools component and three extensions.":::
 

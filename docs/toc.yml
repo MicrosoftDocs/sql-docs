@@ -17490,6 +17490,8 @@ items:
           href: t-sql/queries/updatetext-transact-sql.md
         - name: WITH common_table_expression
           href: t-sql/queries/with-common-table-expression-transact-sql.md
+        - name: Nested common table expressions in Fabric Warehouse
+          href: t-sql/queries/nested-common-table-expression.md
         - name: WRITETEXT
           href: t-sql/queries/writetext-transact-sql.md
       - name: SELECT

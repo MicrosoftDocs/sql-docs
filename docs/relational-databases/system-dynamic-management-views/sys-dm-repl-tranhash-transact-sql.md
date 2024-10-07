@@ -26,7 +26,7 @@ dev_langs:
 |------------------|----------------|-----------------|  
 |**buckets**|**bigint**|Number of buckets in the hash table.|  
 |**hashed_trans**|**bigint**|Number of committed transactions replicated in the current batch.|  
-|**completed_trans**|**bigint**|Number of transactions competed so far.|  
+|**completed_trans**|**bigint**|Number of transactions completed so far.|  
 |**compensated_trans**|**bigint**|Number of transactions that contain partial rollbacks.|  
 |**first_begin_lsn**|**nvarchar(64)**|Earliest begin log sequence number (LSN) in the current batch.|  
 |**last_commit_lsn**|**nvarchar(64)**|Last commit LSN in the current batch.|  

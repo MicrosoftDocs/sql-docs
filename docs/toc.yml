@@ -11781,10 +11781,10 @@ items:
           href: relational-databases/errors-events/mssqlserver-41396-database-engine-error.md
         - name: 41399
           href: relational-databases/errors-events/mssqlserver-41399-database-engine-error.md
-      - name: Errors 41,400 to 42,999
+      - name: Errors 41,400 to 49,999
         items:
         - name: Overview
-          href: relational-databases/errors-events/database-engine-events-and-errors-41400-to-42999.md
+          href: relational-databases/errors-events/database-engine-events-and-errors-41400-to-49999.md
         - name: 42108
           href: relational-databases/errors-events/mssqlserver-42108-database-engine-error.md
         - name: 42109

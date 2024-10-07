@@ -20336,6 +20336,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "docs/relational-databases/errors-events/database-engine-events-and-errors-41400-to-42999.md",
+      "redirect_url": "/sql/relational-databases/errors-events/database-engine-events-and-errors-41400-to-49999",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "docs/2014/relational-databases/errors-events/errors-and-events-reference-database-engine.md",
       "redirect_url": "/previous-versions/sql/2014/relational-databases/errors-events/errors-and-events-reference-database-engine",
       "redirect_document_id": false

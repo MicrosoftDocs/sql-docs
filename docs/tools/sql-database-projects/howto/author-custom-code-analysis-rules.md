@@ -212,7 +212,7 @@ The first class that you must define is the `WaitForDelayVisitor` class, derived
     using System.Collections.Generic;
     using Microsoft.SqlServer.TransactSql.ScriptDom;
     namespace SampleRules {
-        class WaitForDelayVistor {}
+        class WaitForDelayVisitor {}
     }
     ```
 
@@ -250,143 +250,7 @@ The first class that you must define is the `WaitForDelayVisitor` class, derived
 
 8. On the **File** menu, select **Save**.
 
-### Step 2.2: Define the LocalizedExportCodeAnalysisRuleAttribute class
-
-The second class is `LocalizedExportCodeAnalysisRuleAttribute.cs`. This is an extension of the built-in `Microsoft.SqlServer.Dac.CodeAnalysis.ExportCodeAnalysisRuleAttribute` provided by the framework, and supports reading the `DisplayName` and `Description` used by your rule from a resources file. This is a useful class if you ever intend to have your rules used in multiple languages.
-
-::: zone pivot="sq1-visual-studio"
-
-1. In **Solution Explorer**, select the `SampleRules` project.
-
-2. On the **Project** menu, select **Add Class**. The **Add New Item** dialog box appears. In the **Name** text box, type `LocalizedExportCodeAnalysisRuleAttribute.cs` and then select the **Add** button. The file is added to the project in **Solution Explorer**.
-
-::: zone-end
-
-::: zone pivot="sq1-visual-studio-sdk"
-
-1. In **Solution Explorer**, select the `SampleRules` project.
-
-2. On the **Project** menu, select **Add Class**. The **Add New Item** dialog box appears. In the **Name** text box, type `LocalizedExportCodeAnalysisRuleAttribute.cs` and then select the **Add** button. The file is added to the project in **Solution Explorer**.
-
-::: zone-end
-
-::: zone pivot="sq1-visual-studio-code"
-
-1. Navigate to the `SampleRules` directory in the **Explorer** view in Visual Studio Code.
-2. Create a new file named `LocalizedExportCodeAnalysisRuleAttribute.cs`.
-
-::: zone-end
-
-::: zone pivot="sq1-command-line"
-
-1. Navigate to the `SampleRules` directory.
-2. Create a new file named `LocalizedExportCodeAnalysisRuleAttribute.cs`.
-
-::: zone-end
-
-3. Open the file and update the contents to match the following code:
-
-    ```csharp
-    using Microsoft.SqlServer.Dac.CodeAnalysis;
-    using System;
-    using System.Globalization;
-    using System.Reflection;
-    using System.Resources;
-
-    namespace SampleRules
-    {
-
-        internal class LocalizedExportCodeAnalysisRuleAttribute : ExportCodeAnalysisRuleAttribute
-        {
-            private readonly string _resourceBaseName;
-            private readonly string _displayNameResourceId;
-            private readonly string _descriptionResourceId;
-
-            private ResourceManager _resourceManager;
-            private string _displayName;
-            private string _descriptionValue;
-
-            /// <summary>
-            /// Creates the attribute, with the specified rule ID, the fully qualified
-            /// name of the resource file that will be used for looking up display name
-            /// and description, and the Ids of those resources inside the resource file.
-            /// </summary>
-            public LocalizedExportCodeAnalysisRuleAttribute(
-                string id,
-                string resourceBaseName,
-                string displayNameResourceId,
-                string descriptionResourceId)
-                : base(id, null)
-            {
-                _resourceBaseName = resourceBaseName;
-                _displayNameResourceId = displayNameResourceId;
-                _descriptionResourceId = descriptionResourceId;
-            }
-
-            /// <summary>
-            /// Rules in a different assembly would need to overwrite this
-            /// </summary>
-            /// <returns></returns>
-            protected virtual Assembly GetAssembly()
-            {
-                return GetType().Assembly;
-            }
-
-            private void EnsureResourceManagerInitialized()
-            {
-                var resourceAssembly = GetAssembly();
-
-                try
-                {
-                    _resourceManager = new ResourceManager(_resourceBaseName, resourceAssembly);
-                }
-                catch (Exception ex)
-                {
-                    var msg = String.Format(CultureInfo.CurrentCulture, RuleResources.CannotCreateResourceManager, _resourceBaseName, resourceAssembly);
-                    throw new RuleException(msg, ex);
-                }
-            }
-
-            private string GetResourceString(string resourceId)
-            {
-                EnsureResourceManagerInitialized();
-                return _resourceManager.GetString(resourceId, CultureInfo.CurrentUICulture);
-            }
-
-            /// <summary>
-            /// Overrides the standard DisplayName and looks up its value inside a resources file
-            /// </summary>
-            public override string DisplayName
-            {
-                get
-                {
-                    if (_displayName == null)
-                    {
-                        _displayName = GetResourceString(_displayNameResourceId);
-                    }
-                    return _displayName;
-                }
-            }
-
-            /// <summary>
-            /// Overrides the standard Description and looks up its value inside a resources file
-            /// </summary>
-            public override string Description
-            {
-                get
-                {
-                    if (_descriptionValue == null)
-                    {
-                        _descriptionValue = GetResourceString(_descriptionResourceId);
-                    }
-                    return _descriptionValue;
-                }
-            }
-        }
-    }
-    ```
-
-### Step 2.3: Add a resource file and three resource strings
+### Step 2.2: Add a resource file and three resource strings
 
 Next, add a resource file that defines the rule name, rule description, and the category in which the rule will appear in the rule configuration interface.
 
@@ -642,6 +506,144 @@ Next, add a resource file that defines the rule name, rule description, and the 
 
 ::: zone-end
 
+### Step 2.3: Define the LocalizedExportCodeAnalysisRuleAttribute class
+
+The second class is `LocalizedExportCodeAnalysisRuleAttribute.cs`. This is an extension of the built-in `Microsoft.SqlServer.Dac.CodeAnalysis.ExportCodeAnalysisRuleAttribute` provided by the framework, and supports reading the `DisplayName` and `Description` used by your rule from a resources file. This is a useful class if you ever intend to have your rules used in multiple languages.
+
+::: zone pivot="sq1-visual-studio"
+
+1. In **Solution Explorer**, select the `SampleRules` project.
+
+2. On the **Project** menu, select **Add Class**. The **Add New Item** dialog box appears. In the **Name** text box, type `LocalizedExportCodeAnalysisRuleAttribute.cs` and then select the **Add** button. The file is added to the project in **Solution Explorer**.
+
+::: zone-end
+
+::: zone pivot="sq1-visual-studio-sdk"
+
+1. In **Solution Explorer**, select the `SampleRules` project.
+
+2. On the **Project** menu, select **Add Class**. The **Add New Item** dialog box appears. In the **Name** text box, type `LocalizedExportCodeAnalysisRuleAttribute.cs` and then select the **Add** button. The file is added to the project in **Solution Explorer**.
+
+::: zone-end
+
+::: zone pivot="sq1-visual-studio-code"
+
+1. Navigate to the `SampleRules` directory in the **Explorer** view in Visual Studio Code.
+2. Create a new file named `LocalizedExportCodeAnalysisRuleAttribute.cs`.
+
+::: zone-end
+
+::: zone pivot="sq1-command-line"
+
+1. Navigate to the `SampleRules` directory.
+2. Create a new file named `LocalizedExportCodeAnalysisRuleAttribute.cs`.
+
+::: zone-end
+
+3. Open the file and update the contents to match the following code:
+
+    ```csharp
+    using Microsoft.SqlServer.Dac.CodeAnalysis;
+    using System;
+    using System.Globalization;
+    using System.Reflection;
+    using System.Resources;
+
+    namespace SampleRules
+    {
+
+        internal class LocalizedExportCodeAnalysisRuleAttribute : ExportCodeAnalysisRuleAttribute
+        {
+            private readonly string _resourceBaseName;
+            private readonly string _displayNameResourceId;
+            private readonly string _descriptionResourceId;
+
+            private ResourceManager _resourceManager;
+            private string _displayName;
+            private string _descriptionValue;
+
+            /// <summary>
+            /// Creates the attribute, with the specified rule ID, the fully qualified
+            /// name of the resource file that will be used for looking up display name
+            /// and description, and the Ids of those resources inside the resource file.
+            /// </summary>
+            public LocalizedExportCodeAnalysisRuleAttribute(
+                string id,
+                string resourceBaseName,
+                string displayNameResourceId,
+                string descriptionResourceId)
+                : base(id, null)
+            {
+                _resourceBaseName = resourceBaseName;
+                _displayNameResourceId = displayNameResourceId;
+                _descriptionResourceId = descriptionResourceId;
+            }
+
+            /// <summary>
+            /// Rules in a different assembly would need to overwrite this
+            /// </summary>
+            /// <returns></returns>
+            protected virtual Assembly GetAssembly()
+            {
+                return GetType().Assembly;
+            }
+
+            private void EnsureResourceManagerInitialized()
+            {
+                var resourceAssembly = GetAssembly();
+
+                try
+                {
+                    _resourceManager = new ResourceManager(_resourceBaseName, resourceAssembly);
+                }
+                catch (Exception ex)
+                {
+                    var msg = String.Format(CultureInfo.CurrentCulture, RuleResources.CannotCreateResourceManager, _resourceBaseName, resourceAssembly);
+                    throw new RuleException(msg, ex);
+                }
+            }
+
+            private string GetResourceString(string resourceId)
+            {
+                EnsureResourceManagerInitialized();
+                return _resourceManager.GetString(resourceId, CultureInfo.CurrentUICulture);
+            }
+
+            /// <summary>
+            /// Overrides the standard DisplayName and looks up its value inside a resources file
+            /// </summary>
+            public override string DisplayName
+            {
+                get
+                {
+                    if (_displayName == null)
+                    {
+                        _displayName = GetResourceString(_displayNameResourceId);
+                    }
+                    return _displayName;
+                }
+            }
+
+            /// <summary>
+            /// Overrides the standard Description and looks up its value inside a resources file
+            /// </summary>
+            public override string Description
+            {
+                get
+                {
+                    if (_descriptionValue == null)
+                    {
+                        _descriptionValue = GetResourceString(_descriptionResourceId);
+                    }
+                    return _descriptionValue;
+                }
+            }
+        }
+    }
+    ```
+
+
+
 ### Step 2.4: Define the SampleConstants class
 
 Next, define a class that references the resources in the resource file that are used by Visual Studio to display information about your rule in the user interface.
@@ -686,7 +688,7 @@ Next, define a class that references the resources in the resource file that are
             /// <summary>
             /// The name of the resources file to use when looking up rule resources
             /// </summary>
-            public const string ResourceBaseName = "Public.Dac.Samples.Rules.RuleResources";
+            public const string ResourceBaseName = "SampleRules.RuleResources";
 
             /// <summary>
             /// Lookup name inside the resources file for the select asterisk rule name

@@ -5,7 +5,7 @@ description: Setup and configuration details for database watcher
 author: dimitri-furman
 ms.author: dfurman
 ms.reviewer: wiassaf
-ms.date: 10/07/2024
+ms.date: 10/08/2024
 ms.service: azure-sql
 ms.subservice: monitoring
 ms.topic: how-to
@@ -225,21 +225,22 @@ To change the current data store, remove the existing data store, then add a new
 
 A watcher must have a managed identity to authenticate to SQL targets, key vaults, and the data store. Either a system assigned or a user assigned managed identity can be used. For more information about managed identities in Azure, see [What are managed identities for Azure resources?](/entra/identity/managed-identities-azure-resources/overview)
 
-The following considerations can help you choose the type of managed identity for a watcher:
+The following considerations help you choose the type of managed identity for a watcher:
 
 - **System assigned**
     - Enabled by default when you create a watcher.
     - Always associated with a single watcher.
     - Created and deleted with the watcher.
-    - If you disable a system assigned identity for a watcher, any access granted to that identity is lost. Re-enabling the system assigned identity for the same watcher creates a new object (principal) ID for the identity. You need to grant access to [SQL targets](#grant-access-to-sql-targets), [key vault](#additional-configuration-to-use-sql-authentication), and the [data store](#grant-access-to-data-store) to the new identity.
+    - If you disable a system assigned identity for a watcher, any access granted to that identity is lost. Re-enabling the system assigned identity for the same watcher creates a new identity with a different object (principal) ID. You need to grant access to [SQL targets](#grant-access-to-sql-targets), [key vault](#additional-configuration-to-use-sql-authentication), and the [data store](#grant-access-to-data-store) to this new identity.
 
 - **User assigned**
-    - Used only if the system assigned identity is disabled.
-    - The same user assigned identity can be assigned to multiple watchers to simplify access management when [monitoring large Azure SQL estates](#monitor-large-estates). Instead of granting access to multiple system assigned identities, it can be granted to a single user assigned identity.
-    - You can create a user assigned identity and grant it access before a watcher is created. Conversely, when a watcher is deleted, the user assigned identity and its access remain unchanged.
+    - Is in effect only if the system assigned identity is disabled for the watcher.
+    - The same user assigned identity can be assigned to multiple watchers to simplify access management when [monitoring large Azure SQL estates](#monitor-large-estates). Instead of granting access to multiple system assigned identities, access can be granted to a single user assigned identity.
+    - To support separation of duties, identity management can be separate from watcher management. A user assigned identity can be created and granted access by a different user, before or after the watcher is created.
+    - Conversely, when a watcher is deleted, the user assigned identity and its access remain unchanged. The same identity can be then used for a new watcher.
     - Specifying more than one user assigned identity for a watcher is not supported.
 
-To modify the managed identity for a watcher, open the **Identity** page.
+To modify the managed identity for a watcher, open the **Identity** page of a watcher.
 
 - To use a system assigned identity, enable the **System assigned identity** toggle.
 - To use a user assigned identity, disable the **System assigned identity** toggle. Select the **Add** button to find and add an existing user assigned identity.
@@ -248,12 +249,16 @@ To modify the managed identity for a watcher, open the **Identity** page.
 
 - To remove a user assigned identity from a watcher, select it in the list and select **Remove**. Once a user assigned identity is removed, you need to either add a different user assigned identity, or enable the system assigned identity.
 
+    The removed user assigned identity is not deleted from the Entra ID tenant.
+
 Select the **Save** button to save identity changes. You cannot save identity changes if that would result in the watcher having no identity. Watchers without a valid managed identity are not supported.
 
 > [!TIP]
-> We recommend that the display name of the watcher managed identity is unique within your Entra ID tenant. You can choose a unique name when creating a user assigned identity for watchers. The display name of the system assigned identity is the same as the watcher name. If you use the system assigned identity, make sure that the watcher name is unique within your Entra ID tenant.
+> We recommend that the display name of the watcher managed identity is unique within your Entra ID tenant. You can choose a unique name when creating a user assigned identity for watchers.
 >
-> If the managed identity display name is not unique, the [T-SQL script](#grant-access-to-microsoft-entra-authenticated-watchers) to grant the watcher access to SQL targets fails with a duplicate display name error. For more information and for a workaround, see [Microsoft Entra logins and users with nonunique display names](../database/authentication-microsoft-entra-create-users-with-nonunique-names).
+> The display name of the system assigned identity is the same as the watcher name. If you use the system assigned identity, make sure that the watcher name is unique within your Entra ID tenant.
+>
+> If the managed identity display name is not unique, the [T-SQL script](#grant-access-to-microsoft-entra-authenticated-watchers) to grant the watcher access to SQL targets fails with a duplicate display name error. For more information and for a workaround, see [Microsoft Entra logins and users with nonunique display names](./database/authentication-microsoft-entra-create-users-with-nonunique-names).
 
 Shortly after identity changes are saved, the watcher reconnects to SQL targets, key vaults (if used), and the data store using its current managed identity.
 
@@ -475,7 +480,7 @@ Instead of using Azure portal, you can also grant access to the database using a
     |:--|:--|
     | `adx-database-name-placeholder` | The name of a database on an Azure Data Explorer cluster or in Real-Time Analytics. |
     | `identity-principal-id-placeholder` | The **principal ID** value of a managed identity (a GUID), found on the **Identity** page of the watcher. If the system assigned identity is enabled, use its **principal ID** value. Otherwise, use the **principal ID** value of the user assigned identity.|
-    | `tenant-primary-domain-placeholder` | The domain name of the Microsoft Entra ID tenant of the watcher managed identity. Find this on the Microsoft Entra ID **Overview** page in the Azure portal. Instead of tenant primary domain, the **Tenant ID** GUID value can be used as well.</br></br>This part of the command is required if you use a database in Real-Time Analytics or on a free Azure Data Explorer cluster.The domain name or tenant ID value (and the preceding semicolon) can be omitted for a database on an Azure Data Explorer cluster because the cluster is always in the same Microsoft Entra ID tenant as the watcher managed identity. |
+    | `tenant-primary-domain-placeholder` | The domain name of the Microsoft Entra ID tenant of the watcher managed identity. Find this on the Microsoft Entra ID **Overview** page in the Azure portal. Instead of tenant primary domain, the **Tenant ID** GUID value can be used as well.</br></br>This part of the command is required if you use a database in Real-Time Analytics or on a free Azure Data Explorer cluster.</br></br>The domain name or tenant ID value (and the preceding semicolon) can be omitted for a database on an Azure Data Explorer cluster because the cluster is always in the same Microsoft Entra ID tenant as the watcher managed identity. |
 
     For example:
 

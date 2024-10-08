@@ -5,7 +5,7 @@ description: An overview of database watcher for Azure SQL, a managed monitoring
 author: dimitri-furman
 ms.author: dfurman
 ms.reviewer: wiassaf
-ms.date: 10/07/2024
+ms.date: 10/08/2024
 ms.service: azure-sql
 ms.subservice: monitoring
 ms.topic: conceptual
@@ -225,9 +225,9 @@ During preview, database watcher has the following known issues.
 | If data collection cannot start or continue because of an error (for example, insufficient access to a SQL target or to the data store), the error is not exposed. | To troubleshoot, see [Data is not collected](#data-is-not-collected). |
 | If a [serverless](./database/serverless-tier-overview.md) database has auto-pause enabled, and is added as a database watcher target, it might not auto-pause as expected. For a [free offer](./database/free-offer.md) database, this might exhaust the free monthly credit sooner than expected. | If retaining the auto-pause functionality is required, do not use database watcher to monitor serverless databases at this time. |
 | For Azure SQL Managed Instance, data is not collected from the readable high availability replica or from a geo-replica if you are using SQL authentication. | There are two workarounds: </br>1. Use the Microsoft Entra ID authentication (preferred). </br>2. Disable the password policy check. Execute `ALTER LOGIN [database-watcher-login-placeholder] WITH CHECK_POLICY = OFF;`, replacing `database-watcher-login-placeholder` with the name of the SQL authentication login of the watcher. Execute this command on the primary replica, and on the geo-replica, if any. |
-| Data is not collected if you use a database in Real-Time Analytics as the data store, and the **OneLake availability** option is enabled. | Disable the **OneLake availability** option and restart the watcher to resume data collection. |
 | In Azure SQL Managed Instance, data is not collected if the `EXECUTE` permission on the `sys.xp_msver` system stored procedure is revoked or denied to the `public` role. | Grant the `EXECUTE` permission on `sys.xp_msver` to the database watcher login.</br></br>On every SQL managed instance added as a database watcher target, execute `USE master; CREATE USER [database-watcher-login-placeholder] FOR LOGIN [database-watcher-login-placeholder]; GRANT EXECUTE ON sys.xp_msver TO [database-watcher-login-placeholder];`, replacing `database-watcher-login-placeholder` with the name of the watcher login. |
 | If you create a managed private endpoint for a watcher to connect to a SQL managed instance that is stopped, the provisioning state of the private endpoint is reported as **Failed**, and the watcher cannot connect to the instance. | Delete the managed private endpoint with the **Failed** provisioning state and [start](./managed-instance/instance-stop-start-how-to.md) the SQL managed instance. Once the failed private endpoint is deleted and the instance is running, [re-create](database-watcher-manage.md#create-a-managed-private-endpoint) the managed private endpoint. |
+| Data is not collected if you use a database in Real-Time Analytics as the data store, and the **OneLake availability** option is enabled. | Disable the **OneLake availability** option and restart the watcher to resume data collection. |
 | Database watcher deployments via Bicep or ARM templates aren't idempotent. If a watcher, SQL target, or a managed private endpoint already exists, deployment fails. | Use conditional deployment to skip deploying existing resources. For more information, see [Conditional deployments in Bicep with the if expression](/azure/azure-resource-manager/bicep/conditional-resource-deployment) and [Conditional deployment in ARM templates](/azure/azure-resource-manager/templates/conditional-resource-deployment). |
 
 ## Troubleshoot

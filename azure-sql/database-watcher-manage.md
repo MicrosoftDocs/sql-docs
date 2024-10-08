@@ -5,7 +5,7 @@ description: Setup and configuration details for database watcher
 author: dimitri-furman
 ms.author: dfurman
 ms.reviewer: wiassaf
-ms.date: 10/04/2024
+ms.date: 10/07/2024
 ms.service: azure-sql
 ms.subservice: monitoring
 ms.topic: how-to
@@ -67,7 +67,9 @@ To use database watcher, the following prerequisites are required.
     > [!TIP]
     > During preview, if database watcher is not yet available in your region, you can create it in a different region. For more information, see [Regional availability](database-watcher-overview.md#regional-availability).
 
-1. On the **Identity** tab, the system-assigned managed identity status is set to **On**. At this time, creating watchers without a system-assigned managed identity is not supported.
+1. On the **Identity** tab, the system assigned managed identity of the watcher is enabled by default. If you want the watcher to use a user assigned managed identity instead, select the **Add** button, find the identity you want to use, and select the **Add** button. To make the user assigned identity effective for the watcher, disable the system assigned managed identity.
+
+    For more information about managed identities in database watcher, see [Modify watcher identity](#modify-watcher-identity).
 
 1. Choose a data store for the watcher.
 
@@ -119,7 +121,7 @@ To restart a watcher, stop it and then start it again.
 
 ## Modify a watcher
 
-In the Azure portal, you can add or remove targets, create or delete private endpoints, or use a different data store for an existing watcher.
+In the Azure portal, you can add or remove targets, create or delete private endpoints, use a different data store for an existing watcher, or modify the managed identity of the watcher.
 
 > [!NOTE]
 > Unless noted differently, the changes you make to watcher configuration become effective after you stop and restart the watcher.
@@ -219,15 +221,51 @@ To change the current data store, remove the existing data store, then add a new
     - Once you add a data store, you must grant the watcher access to use it. For more information, see [Grant access to data store](#grant-access-to-data-store).
     - Once the watcher is restarted, it starts using the new data store.
 
+### Modify watcher identity
+
+A watcher must have a managed identity to authenticate to SQL targets, key vaults, and the data store. Either a system assigned or a user assigned managed identity can be used. For more information about managed identities in Azure, see [What are managed identities for Azure resources?](/entra/identity/managed-identities-azure-resources/overview)
+
+The following considerations can help you choose the type of managed identity for a watcher:
+
+- **System assigned**
+    - Enabled by default when you create a watcher.
+    - Always associated with a single watcher.
+    - Created and deleted with the watcher.
+    - If you disable a system assigned identity for a watcher, any access granted to that identity is lost. Re-enabling the system assigned identity for the same watcher creates a new object (principal) ID for the identity. You need to grant access to [SQL targets](#grant-access-to-sql-targets), [key vault](#additional-configuration-to-use-sql-authentication), and the [data store](#grant-access-to-data-store) to the new identity.
+
+- **User assigned**
+    - Used only if the system assigned identity is disabled.
+    - The same user assigned identity can be assigned to multiple watchers to simplify access management when [monitoring large Azure SQL estates](#monitor-large-estates). Instead of granting access to multiple system assigned identities, it can be granted to a single user assigned identity.
+    - You can create a user assigned identity and grant it access before a watcher is created. Conversely, when a watcher is deleted, the user assigned identity and its access remain unchanged.
+    - Specifying more than one user assigned identity for a watcher is not supported.
+
+To modify the managed identity for a watcher, open the **Identity** page.
+
+- To use a system assigned identity, enable the **System assigned identity** toggle.
+- To use a user assigned identity, disable the **System assigned identity** toggle. Select the **Add** button to find and add an existing user assigned identity.
+
+    To create a new user assigned identity, see [Create a user assigned managed identity](/entra/identity/managed-identities-azure-resources/how-manage-user-assigned-managed-identities#create-a-user-assigned-managed-identity).
+
+- To remove a user assigned identity from a watcher, select it in the list and select **Remove**. Once a user assigned identity is removed, you need to either add a different user assigned identity, or enable the system assigned identity.
+
+Select the **Save** button to save identity changes. You cannot save identity changes if that would result in the watcher having no identity. Watchers without a valid managed identity are not supported.
+
+> [!TIP]
+> We recommend that the display name of the watcher managed identity is unique within your Entra ID tenant. You can choose a unique name when creating a user assigned identity for watchers. The display name of the system assigned identity is the same as the watcher name. If you use the system assigned identity, make sure that the watcher name is unique within your Entra ID tenant.
+>
+> If the managed identity display name is not unique, the [T-SQL script](#grant-access-to-microsoft-entra-authenticated-watchers) to grant the watcher access to SQL targets fails with a duplicate display name error. For more information and for a workaround, see [Microsoft Entra logins and users with nonunique display names](../database/authentication-microsoft-entra-create-users-with-nonunique-names).
+
+Shortly after identity changes are saved, the watcher reconnects to SQL targets, key vaults (if used), and the data store using its current managed identity.
+
 ### Delete a watcher
 
 If there is a delete or a read-only [lock](/azure/azure-resource-manager/management/lock-resources) on the watcher, its resource group, or its subscription, remove the lock. You can add the lock again after the watcher is deleted successfully.
 
-When you delete a watcher, its system-assigned managed identity is also deleted. This removes any access you granted to this identity. If you recreate the watcher later, you need to grant access to the system-assigned managed identity of the new watcher to authenticate to each resource. This includes:
+When you delete a watcher that has its system assigned managed identity enabled, the identity is also deleted. This removes any access you granted to this identity. If you recreate the watcher later, you need to grant access to the system assigned managed identity of the new watcher to authenticate to each resource. This includes:
 
 - [Targets](#grant-access-to-sql-targets)
 - The [data store](#grant-access-to-data-store)
-- And the [key vault](#additional-configuration-to-use-sql-authentication) (if used) 
+- And the [key vault](#additional-configuration-to-use-sql-authentication) (if used)
 
 You must grant access to a recreated watcher, even if you use the same watcher name.
 
@@ -246,13 +284,15 @@ To allow a watcher to collect SQL monitoring data, you need to execute a T-SQL s
 1. Navigate to the watcher in Azure portal, select **SQL targets**, select one of the **Grant access** links to open the T-SQL script, and copy the script. Make sure to choose the correct link for your target type and the authentication type you want to use.
 
     > [!IMPORTANT]
-    > The Microsoft Entra authentication script in Azure portal is specific to a watcher because it includes the watcher name. For a generic version of this script that you can customize for each watcher, see [Grant access to SQL targets with T-SQL scripts](#grant-access-to-sql-targets-with-t-sql-scripts).
+    > The Microsoft Entra authentication script in Azure portal is specific to a watcher because it includes the name of the managed identity of the watcher. For a generic version of this script that you can customize for each watcher, see [Grant access to SQL targets with T-SQL scripts](#grant-access-to-sql-targets-with-t-sql-scripts).
 
 1. In SQL Server Management Studio, Azure Data Studio, or any other SQL client tool, open a new query window and connect it to the `master` database on an Azure SQL logical server containing the target, or to the `master` database on a SQL managed instance target.
 
 1. Paste and execute the T-SQL script to grant access to the watcher. The script creates a login that the watcher will use to connect, and grants specific, limited permissions to collect monitoring data.
 
-    1. If you use a Microsoft Entra authentication script, the watcher must be already created when you execute the script. Additionally, you must be connected with Microsoft Entra authentication.
+    1. If you use a Microsoft Entra authentication script, and the watcher uses the system assigned managed identity, the watcher must be already created when you execute the script. If the watcher will use a user assigned managed identity, you can execute the script before or after the watcher is created.
+    
+    You must be connected with Microsoft Entra authentication when executing the T-SQL access scripts that grant access to a managed identity.
 
 If you add new targets to a watcher later, you need to grant access to these targets in a similar fashion unless these targets are on a logical server where access has already been granted.
 
@@ -271,44 +311,48 @@ Before executing a script, replace all instances of placeholders that might be p
 
 This script creates a Microsoft Entra (formerly known as Azure Active Directory) authentication login on a logical server in Azure SQL Database. The login is created for the managed identity of a watcher. The script grants the watcher the necessary and sufficient permissions to collect monitoring data from all databases and elastic pools on the logical server.
 
-You must use the watcher name as the login name. The script must be executed in the `master` database on the logical server. You must be logged in using a Microsoft Entra authentication login that is a server administrator.
+If the watcher uses the system assigned managed identity, you must use the watcher name as the login name. If the watcher uses a user assigned managed identity, you must use the display name of the identity as the login name.
+
+The script must be executed in the `master` database on the logical server. You must be logged in using a Microsoft Entra authentication login that is a server administrator.
 
 ```sql
-CREATE LOGIN [watcher-name-placeholder] FROM EXTERNAL PROVIDER;
+CREATE LOGIN [identity-name-placeholder] FROM EXTERNAL PROVIDER;
 
-ALTER SERVER ROLE ##MS_ServerPerformanceStateReader## ADD MEMBER [watcher-name-placeholder];
-ALTER SERVER ROLE ##MS_DefinitionReader## ADD MEMBER [watcher-name-placeholder];
-ALTER SERVER ROLE ##MS_DatabaseConnector## ADD MEMBER [watcher-name-placeholder];
+ALTER SERVER ROLE ##MS_ServerPerformanceStateReader## ADD MEMBER [identity-name-placeholder];
+ALTER SERVER ROLE ##MS_DefinitionReader## ADD MEMBER [identity-name-placeholder];
+ALTER SERVER ROLE ##MS_DatabaseConnector## ADD MEMBER [identity-name-placeholder];
 ```
 
 # [SQL Managed Instance](#tab/sqlmi)
 
 This script creates a Microsoft Entra (formerly known as Azure Active Directory) authentication login on a SQL managed instance. The login is created for the managed identity of a watcher. The script grants the watcher the necessary and sufficient permissions to collect monitoring data from the instance.
 
-You must use the watcher name as the login name. The script must be executed in the `master` database on the managed instance. You must be logged in using a Microsoft Entra authentication login that is a member of either `sysadmin` or `securityadmin` server role, or has the `CONTROL` server permission.
+If the watcher uses the system assigned managed identity, you must use the watcher name as the login name. If the watcher uses a user assigned managed identity, you must use the display name of the identity as the login name.
+
+The script must be executed in the `master` database on the managed instance. You must be logged in using a Microsoft Entra authentication login that is a member of either `sysadmin` or `securityadmin` server role, or has the `CONTROL` server permission.
 
 ```sql
 USE master;
 
-CREATE LOGIN [watcher-name-placeholder] FROM EXTERNAL PROVIDER;
+CREATE LOGIN [identity-name-placeholder] FROM EXTERNAL PROVIDER;
 
-GRANT CONNECT SQL, CONNECT ANY DATABASE, VIEW ANY DATABASE, VIEW ANY DEFINITION, VIEW SERVER PERFORMANCE STATE TO [watcher-name-placeholder];
+GRANT CONNECT SQL, CONNECT ANY DATABASE, VIEW ANY DATABASE, VIEW ANY DEFINITION, VIEW SERVER PERFORMANCE STATE TO [identity-name-placeholder];
 
 USE msdb;
 
-CREATE USER [watcher-name-placeholder] FOR LOGIN [watcher-name-placeholder];
+CREATE USER [identity-name-placeholder] FOR LOGIN [identity-name-placeholder];
 
-GRANT SELECT ON dbo.sysjobactivity TO [watcher-name-placeholder];
-GRANT SELECT ON dbo.sysjobs TO [watcher-name-placeholder];
-GRANT SELECT ON dbo.syssessions TO [watcher-name-placeholder];
-GRANT SELECT ON dbo.sysjobhistory TO [watcher-name-placeholder];
-GRANT SELECT ON dbo.sysjobsteps TO [watcher-name-placeholder];
-GRANT SELECT ON dbo.syscategories TO [watcher-name-placeholder];
-GRANT SELECT ON dbo.sysoperators TO [watcher-name-placeholder];
-GRANT SELECT ON dbo.suspect_pages TO [watcher-name-placeholder];
-GRANT SELECT ON dbo.backupset TO [watcher-name-placeholder];
-GRANT SELECT ON dbo.backupmediaset TO [watcher-name-placeholder];
-GRANT SELECT ON dbo.backupmediafamily TO [watcher-name-placeholder];
+GRANT SELECT ON dbo.sysjobactivity TO [identity-name-placeholder];
+GRANT SELECT ON dbo.sysjobs TO [identity-name-placeholder];
+GRANT SELECT ON dbo.syssessions TO [identity-name-placeholder];
+GRANT SELECT ON dbo.sysjobhistory TO [identity-name-placeholder];
+GRANT SELECT ON dbo.sysjobsteps TO [identity-name-placeholder];
+GRANT SELECT ON dbo.syscategories TO [identity-name-placeholder];
+GRANT SELECT ON dbo.sysoperators TO [identity-name-placeholder];
+GRANT SELECT ON dbo.suspect_pages TO [identity-name-placeholder];
+GRANT SELECT ON dbo.backupset TO [identity-name-placeholder];
+GRANT SELECT ON dbo.backupmediaset TO [identity-name-placeholder];
+GRANT SELECT ON dbo.backupmediafamily TO [identity-name-placeholder];
 ```
 
 ---
@@ -385,11 +429,13 @@ To configure database watcher to connect to a target using SQL authentication, f
 
     To create secrets, you need to be a member of the **Key Vault Secrets Officer** RBAC role.
 
-1. From the **Access control (IAM)** page of each secret, add a role assignment for the managed identity of the watcher in the **Key Vault Secrets User** RBAC role. To follow the principle of least privilege, add this role assignment for each secret, rather than for the entire vault. The **Access control (IAM)** page appears only if the vault is configured to use the **RBAC** permission model.
-
 1. [Add a SQL target](#add-sql-targets-to-a-watcher) to a watcher. When adding the target, check the **Use SQL authentication** box, and select the vault where the login name and password secrets are stored. Enter the secret names for login name and password in the corresponding fields.
 
     When adding a SQL target, *do not* enter the actual login name and password. Using the earlier example, you would enter the `database-watcher-login-name` and `database-watcher-password` secret names.
+
+1. When you add a SQL target in the Azure portal, the managed identity of the watcher is granted the required access to the key vault secrets automatically if the current user is a member of the **Owners** role or the **User access administrator** role for the key vault. Otherwise, follow the next step to grant the required access manually.
+
+1. From the **Access control (IAM)** page of each secret, add a role assignment for the managed identity of the watcher in the **Key Vault Secrets User** RBAC role. To follow the principle of least privilege, add this role assignment for each secret, rather than for the entire vault. The **Access control (IAM)** page appears only if the vault is configured to use the **RBAC** permission model.
 
 If you want to use different SQL authentication credentials on different SQL targets, you need to create multiple pairs of secrets. You can use the same vault or different vaults to store the secrets for each SQL target.
 
@@ -400,9 +446,9 @@ If you want to use different SQL authentication credentials on different SQL tar
 
 To create and manage database schema in the data store, and to ingest monitoring data, database watcher requires membership in the **Admins** RBAC role in the data store database on an Azure Data Explorer cluster or in Real-Time Analytics. Database watcher does not require any cluster-level access to the Azure Data Explorer cluster, or any access to other databases that might exist on the same cluster.
 
-If you create a new Azure Data Explorer cluster and database, or select a database on an existing cluster while creating a watcher, this access is granted automatically if the user creating the watcher is a member of the **Owner** RBAC role for the cluster.
+If you use a database on an Azure Data Explorer cluster as the data store, this access is granted automatically if you are a member of the **Owner** RBAC role for the cluster. Otherwise, access must be granted as described in this section.
 
-If you change the data store for an existing watcher, or if you use a database in Real-Time Analytics or on a free Azure Data Explorer cluster, you need to grant access as described in this section.
+If you use a database in Real-Time Analytics or on a free Azure Data Explorer cluster, you need to [grant access using KQL](#grant-access-to-an-azure-data-explorer-database-using-kql).
 
 ### Grant access to an Azure Data Explorer database using the Azure portal
 
@@ -410,8 +456,8 @@ You can use the Azure portal to grant access to a database on the Azure Data Exp
 
 1. For a *database* on an Azure Data Explorer cluster, in the resource menu under **Security + networking**, select **Permissions**. Do not use the **Permissions** page of the cluster.
 1. Select **Add**, and select **Admin**.
-1. On the **New Principals** page, select **Enterprise applications**, and type the name of the watcher in the **Search** box.
-1. Select the enterprise application with the same name as the watcher.
+1. On the **New Principals** page, select **Enterprise applications**. If the watcher uses the system assigned managed identity, type the name of the watcher in the **Search** box. If the watcher uses a user assigned managed identity, type the display name of that identity in the **Search** box.
+1. Select the enterprise application for the managed identity of the watcher.
 
 ### Grant access to an Azure Data Explorer database using KQL
 
@@ -422,14 +468,14 @@ Instead of using Azure portal, you can also grant access to the database using a
 1. In the following sample KQL command, replace the three placeholders as noted in the table:
 
     ```kusto
-    .add database [adx-database-name-placeholder] admins ('aadapp=watcher-object-id-placeholder;tenant-primary-domain-placeholder');
+    .add database [adx-database-name-placeholder] admins ('aadapp=identity-principal-id-placeholder;tenant-primary-domain-placeholder');
     ```
 
     | Placeholder | Replacement |
     |:--|:--|
     | `adx-database-name-placeholder` | The name of a database on an Azure Data Explorer cluster or in Real-Time Analytics. |
-    | `watcher-object-id-placeholder` | **Object (principal) ID** value (a GUID), found on the **Identity** page of the watcher. |
-    | `tenant-primary-domain-placeholder` | The domain name of the Microsoft Entra ID tenant of the watcher. Find this on the Microsoft Entra ID **Overview** page in the Azure portal. Instead of tenant primary domain, the **Tenant ID** GUID value can be used as well.</br></br>This part of the command is required if you use a database in Real-Time Analytics or on a free Azure Data Explorer cluster.The domain name or tenant ID value (and the preceding semicolon) can be omitted for a database on an Azure Data Explorer cluster because the cluster is always in the same Microsoft Entra ID tenant as the watcher. |
+    | `identity-principal-id-placeholder` | The **principal ID** value of a managed identity (a GUID), found on the **Identity** page of the watcher. If the system assigned identity is enabled, use its **principal ID** value. Otherwise, use the **principal ID** value of the user assigned identity.|
+    | `tenant-primary-domain-placeholder` | The domain name of the Microsoft Entra ID tenant of the watcher managed identity. Find this on the Microsoft Entra ID **Overview** page in the Azure portal. Instead of tenant primary domain, the **Tenant ID** GUID value can be used as well.</br></br>This part of the command is required if you use a database in Real-Time Analytics or on a free Azure Data Explorer cluster.The domain name or tenant ID value (and the preceding semicolon) can be omitted for a database on an Azure Data Explorer cluster because the cluster is always in the same Microsoft Entra ID tenant as the watcher managed identity. |
 
     For example:
 

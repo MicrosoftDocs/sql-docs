@@ -144,7 +144,7 @@ helpviewer_keywords:
 ### Use the Database Engine Tuning Advisor graphical user interface  
  On the Database Engine Tuning Advisor GUI, you can tune a database by using the plan cache, workload files, or workload tables. You can use the Database Engine Tuning Advisor GUI to easily view the results of your current tuning session and results of previous tuning sessions. For information about user interface options, see [User Interface Descriptions](#UI) later in this article. For more information about working with the output after you tune a database, see [View and Work with the Output from the Database Engine Tuning Advisor](../../relational-databases/performance/view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md).  
 
-####  <a name="PlanCache"></a> To tune a database by using the query store
+####  <a name="PlanCache"></a> To tune a database by using the Query Store
 See [Tuning Database Using Workload from Query Store](../../relational-databases/performance/tuning-database-using-workload-from-query-store.md) for more information.
   
 ####  <a name="PlanCache"></a> To tune a database by using the plan cache  

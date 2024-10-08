@@ -153,7 +153,7 @@ Similarly, execution plans stored in the plan cache are cleared by events such a
 
 Missing index suggestions in execution plans can be persisted across these events by enabling [Query Store](../performance/monitoring-performance-by-using-the-query-store.md). 
 
-The following query retrieves the top 20 query plans containing missing index requests from query store based on a rough estimate of total logical reads for the query. The data is limited to query executions within the past 48 hours. 
+The following query retrieves the top 20 query plans containing missing index requests from Query Store based on a rough estimate of total logical reads for the query. The data is limited to query executions within the past 48 hours. 
 
 ```sql
 SELECT TOP 20

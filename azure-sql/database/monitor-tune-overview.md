@@ -29,7 +29,7 @@ The following table presents a summary of monitoring capabilities in Azure SQL D
 | [Metrics and alerts](monitoring-metrics-alerts.md) | **Yes** | **Yes** | **Yes** | **Yes** | No |
 | [Query Performance Insight](#query-performance-insight-in-azure-sql-database) | **Yes** | No | **Yes** | No | No |
 | [Monitor using DMVs](monitoring-with-dmvs.md) | **Yes** | **Yes** | No | **Yes** | **Yes** |
-| [Monitor using query store](/sql/relational-databases/performance/monitoring-performance-by-using-the-query-store)  | **Yes** | **Yes** | No | **Yes** | No |
+| [Monitor using Query Store](/sql/relational-databases/performance/monitoring-performance-by-using-the-query-store)  | **Yes** | **Yes** | No | **Yes** | No |
 | [Database watcher (preview)](../database-watcher-overview.md) | **Yes** | **Yes** | **Yes** | **Yes** | **Yes** |
 
 ## Database watcher (preview)
@@ -56,7 +56,7 @@ Additionally, the [Query Performance Insight](query-performance-insight-use.md) 
 
 Azure SQL Database and Azure SQL Managed Instance provide advanced monitoring and tuning capabilities to assist you in troubleshooting and maximizing the performance of your databases and solutions. You can choose to configure the [streaming export](metrics-diagnostic-telemetry-logging-streaming-export-configure.md#diagnostic-telemetry-for-export) of database resource logs and metrics to one of several destinations for consumption and analysis.
 
-Outside of the Azure portal, the database engine has its own monitoring and diagnostic capabilities that Azure SQL Database and SQL Managed Instance use, such as [query store](/sql/relational-databases/performance/monitoring-performance-by-using-the-query-store) and [dynamic management views (DMVs)](/sql/relational-databases/system-dynamic-management-views/system-dynamic-management-views). See [Monitoring using DMVs](monitoring-with-dmvs.md) for scripts to monitor for a variety of performance issues in Azure SQL Database and Azure SQL Managed Instance.
+Outside of the Azure portal, the database engine has its own monitoring and diagnostic capabilities that Azure SQL Database and SQL Managed Instance use, such as [Query Store](/sql/relational-databases/performance/monitoring-performance-by-using-the-query-store) and [dynamic management views (DMVs)](/sql/relational-databases/system-dynamic-management-views/system-dynamic-management-views). See [Monitoring using DMVs](monitoring-with-dmvs.md) for scripts to monitor for a variety of performance issues in Azure SQL Database and Azure SQL Managed Instance.
 
 ### <a id="monitoring-and-diagnostic-telemetry"></a> Monitor and diagnostic telemetry
 

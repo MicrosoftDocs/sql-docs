@@ -15913,8 +15913,9 @@ items:
     href: t-sql/language-reference.md
     items:
     - name: Date & time
-      href: t-sql/data-types/date-and-time-types.md
       items:
+      - name: Overview
+        href: t-sql/data-types/date-and-time-types.md
       - name: date
         href: t-sql/data-types/date-transact-sql.md
       - name: datetime

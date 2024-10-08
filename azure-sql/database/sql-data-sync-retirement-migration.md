@@ -83,6 +83,8 @@ This scenario synchronizes data across different regions for reading purposes. M
 
 ## Migration by platform
 
+Consider the following synchronization solutions by platform.
+
 | **Source**     | **Destination** | &nbsp; | &nbsp; |
 |:--|:--|:--|:--|
 |                | **SQL Server** | **Azure SQL Managed Instance**\* | **Azure SQL Database** |

@@ -31,7 +31,7 @@ A compute autoscaling range and an auto-pause delay are important parameters for
 ### Performance configuration
 
 - The **minimum vCores** and **maximum vCores** are configurable parameters that define the range of compute capacity available for the database. Memory and IO limits are proportional to the vCore range specified.  
-- The **auto-pause delay** is a configurable parameter that defines the period of time the database must be inactive before it is automatically paused. The database is automatically resumed when the next login or other activity occurs. Alternatively, automatic pausing can be disabled.
+- The **auto-pause delay** is a configurable parameter that defines the period of time the database must be inactive before it is automatically paused. The database is automatically resumed when the next sign in or other activity occurs. Alternatively, automatic pausing can be disabled.
 
 ### Cost
 
@@ -85,7 +85,7 @@ The following table describes serverless support based on purchasing model, serv
 
 ### Scaling responsiveness
 
-Serverless databases are run on a machine with sufficient capacity to satisfy resource demand without interruption for any amount of compute requested within limits set by the maximum vCores value. Occasionally, load balancing automatically occurs if the machine is unable to satisfy resource demand within a few minutes. For example, if the resource demand is 4 vCores, but only 2 vCores are available, then it can take up to a few minutes to load balance before 4 vCores are provided. The database remains online during load balancing except for a brief period at the end of the operation when connections are dropped.
+Serverless databases are run on a machine with sufficient capacity to satisfy resource demand without interruption for any amount of compute requested, within limits set by the maximum vCores value. Occasionally, load balancing automatically occurs if the machine is unable to satisfy resource demand within a few minutes. For example, if the resource demand is 4 vCores, but only 2 vCores are available, then it can take up to a few minutes to load balance before 4 vCores are provided. The database remains online during load balancing except for a brief period at the end of the operation when connections are dropped.
 
 ### Memory management
 
@@ -103,7 +103,7 @@ Unlike provisioned compute databases, memory from the SQL cache is reclaimed fro
 
 In both serverless and provisioned compute databases, cache entries can be evicted if all available memory is used.
 
-When CPU utilization is low, active cache utilization can remain high depending on the usage pattern and prevent memory reclamation.  Also, there can be other delays after user activity stops before memory reclamation occurs due to periodic background processes responding to prior user activity.  For example, delete operations and Query Store cleanup tasks generate ghost records that are marked for deletion, but are not physically deleted until the ghost cleanup process runs. Ghost cleanup might involve reading data pages into cache.
+When CPU utilization is low, active cache utilization can remain high depending on the usage pattern and prevent memory reclamation. Also, there can be other delays after user activity stops before memory reclamation occurs due to periodic background processes responding to prior user activity. For example, delete operations and Query Store cleanup tasks generate ghost records that are marked for deletion, but are not physically deleted until the ghost cleanup process runs. Ghost cleanup might involve reading data pages into cache.
 
 #### Cache hydration
 
@@ -144,7 +144,7 @@ Auto-pausing is temporarily prevented during the deployment of some service upda
 
 #### Auto-pause troubleshooting
 
-If auto-pausing is enabled and features that block auto-pausing are not used, but a database does not auto-pause after the delay period, then the application or user sessions might be preventing auto-pausing.
+If auto-pausing is enabled and features that block auto-pausing are not used, but a database does not auto-pause after the delay period, then application or user sessions might be preventing auto-pausing.
 
 To see if there are any application or user sessions currently connected to the database, connect to the database using any client tool, and execute the following query:
 
@@ -206,7 +206,7 @@ Auto-resuming is triggered if any of the following conditions are true at any ti
 |Modifying certain database metadata|Adding new database tags.<br>Changing maximum vCores, minimum vCores, or auto-pause delay.|
 |SQL Server Management Studio (SSMS)|When using SSMS versions earlier than 18.1 and opening a new query window for any database in the server, any auto-paused database in the same server is resumed. This behavior does not occur if using SSMS version 18.1 or later.|
 
-Monitoring, management, or other solutions performing any of the operations listed above will trigger auto-resuming.  Auto-resuming is also triggered during the deployment of some service updates that require the database be online.
+Monitoring, management, or other solutions performing any of these operations trigger auto-resuming. Auto-resuming is also triggered during the deployment of some service updates that require the database be online.
 
 ### Connectivity
 
@@ -225,11 +225,11 @@ The latency to auto-resume and auto-pause a serverless database is generally ord
 
 #### Key deletion or revocation
 
-If using [customer managed transparent data encryption](transparent-data-encryption-byok-overview.md) (BYOK) and the serverless database is auto-paused when key deletion or revocation occurs, then the database remains in the auto-paused state.  In this case, after the database is next resumed, the database becomes inaccessible within approximately 10 minutes.  Once the database becomes inaccessible, the recovery process is the same as for provisioned compute databases.  If the serverless database is online when key deletion or revocation occurs, then the database also becomes inaccessible within approximately 10 minutes in the same way as with provisioned compute databases.
+If using [customer managed transparent data encryption](transparent-data-encryption-byok-overview.md) (BYOK) and the serverless database is auto-paused when key deletion or revocation occurs, then the database remains in the auto-paused state. In this case, after the database is next resumed, the database becomes inaccessible within approximately 10 minutes. Once the database becomes inaccessible, the recovery process is the same as for provisioned compute databases. If the serverless database is online when key deletion or revocation occurs, then the database also becomes inaccessible within approximately 10 minutes in the same way as with provisioned compute databases.
 
 #### Key rotation
 
-If using [customer-managed transparent data encryption](transparent-data-encryption-byok-overview.md) (BYOK), and serverless auto-pausing is enabled, then the database is auto-resumed whenever keys are rotated and subsequently auto-paused when auto-pausing conditions are satisfied.
+If using [customer-managed transparent data encryption](transparent-data-encryption-byok-overview.md) (BYOK), and serverless auto-pausing is enabled, the database is auto-resumed whenever keys are rotated. The database will then be auto-paused when auto-pausing conditions are satisfied.
 
 <a id="create-serverless-db"></a>
 
@@ -244,7 +244,7 @@ Creating a new database or moving an existing database into a serverless compute
    |Parameter|Value choices|Default value|
    |---|---|---|---|
    |Minimum vCores|Depends on maximum vCores configured - see [resource limits](resource-limits-vcore-single-databases.md#general-purpose---serverless-compute---gen5).|0.5 vCores|
-   |Auto-pause delay|Minimum: 15 minutes<br>Maximum: 10,080 minutes (7 days)<br>Increments: 1 minute<br>Disable auto-pause: -1|60 minutes|
+   |Auto-pause delay|Minimum: 15 minutes<br>Maximum: 10,080 minutes (seven days)<br>Increments: 1 minute<br>Disable auto-pause: -1|60 minutes|
 
 The following examples create a new database in the serverless compute tier.
 
@@ -322,9 +322,9 @@ az sql db create -g $resourceGroupName -s $serverName -n $databaseName `
 
 #### Use Transact-SQL (T-SQL)
 
-When using T-SQL to create a new serverless database, default values are applied for the minimum vCores and auto-pause delay. Their values can subsequently be changed from the Azure portal or via API including PowerShell, Azure CLI, and REST.
+When using T-SQL to create a new serverless database, default values are applied for the minimum vCores and auto-pause delay. Their values can later be changed from the Azure portal or via API including PowerShell, Azure CLI, and REST.
 
-For details, see [CREATE DATABASE](/sql/t-sql/statements/create-database-transact-sql?view=azuresqldb-current&preserve-view=true).  
+For details, see [CREATE DATABASE](/sql/t-sql/statements/create-database-transact-sql?view=azuresqldb-current&preserve-view=true). 
 
 # [General Purpose](#tab/general-purpose)
 
@@ -352,11 +352,11 @@ MODIFY ( SERVICE_OBJECTIVE = 'HS_S_Gen5_2') ;
 
 A database can be moved between the provisioned compute tier and serverless compute tier.
 
-A serverless database can also be moved from the General Purpose service tier to the Hyperscale service tier.  Review [Manage Hyperscale databases](manage-hyperscale-database.md#migrate-an-existing-database-to-hyperscale) to learn more. 
+A serverless database can also be moved from the General Purpose service tier to the Hyperscale service tier. Review [Manage Hyperscale databases](manage-hyperscale-database.md#migrate-an-existing-database-to-hyperscale) to learn more. 
 
 When moving a database between compute tiers, specify the **compute model** parameter as either `Serverless` or `Provisioned` when using PowerShell or Azure CLI, or the **SERVICE_OBJECTIVE** when using T-SQL. Review [resource limits](resource-limits-vcore-single-databases.md) to identify the appropriate service objective. 
 
-The following examples move an existing database from provisioned compute to serverless.  
+The following examples move an existing database from provisioned compute to serverless. 
 
 #### Use PowerShell
 
@@ -464,7 +464,7 @@ The following table includes metrics for monitoring the resource usage of the ap
 |---|---|---|---|
 |App package|app_cpu_percent|Percentage of vCores used by the app relative to maximum vCores allowed for the app. For serverless Hyperscale, this metric is exposed for all primary replicas, named replicas, and geo-replicas. |Percentage|
 |App package|app_cpu_billed|The amount of compute billed for the app during the reporting period. The amount paid during this period is the product of this metric and the vCore unit price. <br><br>Values of this metric are determined by aggregating the maximum of CPU used and memory used each second. If the amount used is less than the minimum amount provisioned as set by the minimum vCores and minimum memory, then the minimum amount provisioned is billed. In order to compare CPU with memory for billing purposes, memory is normalized into units of vCores by rescaling the amount of memory in GB by 3 GB per vCore. For serverless Hyperscale, this metric is exposed for the primary replica and any named replicas. |vCore seconds|
-|App package| app_cpu_billed_HA_replicas| Only applicable to serverless Hyperscale.  Sum of the compute billed across all apps for HA replicas during the reporting period. This sum is scoped either to the HA replicas belonging to the primary replica or the HA replicas belonging to a given named replica. Before calculating this sum across HA replicas, the amount of compute billed for an individual HA replica is determined in the same way as for the primary replica or a named replica. For serverless Hyperscale, this metric is exposed for all primary replicas, named replicas, and geo-replicas.  The amount paid during the reporting period is the product of this metric and the vCore unit price.  |vCore seconds| 
+|App package| app_cpu_billed_HA_replicas| Only applicable to serverless Hyperscale. Sum of the compute billed across all apps for HA replicas during the reporting period. This sum is scoped either to the HA replicas belonging to the primary replica or the HA replicas belonging to a given named replica. Before calculating this sum across HA replicas, the amount of compute billed for an individual HA replica is determined in the same way as for the primary replica or a named replica. For serverless Hyperscale, this metric is exposed for all primary replicas, named replicas, and geo-replicas. The amount paid during the reporting period is the product of this metric and the vCore unit price. |vCore seconds| 
 |App package|app_memory_percent|Percentage of memory used by the app relative to maximum memory allowed for the app. For serverless Hyperscale, this metric is exposed for all primary replicas, named replicas, and geo-replicas. |Percentage|
 |User resource pool|cpu_percent|Percentage of vCores used by user workload relative to maximum vCores allowed for user workload. |Percentage|
 |User resource pool|data_IO_percent|Percentage of data IOPS used by user workload relative to maximum data IOPS allowed for user workload.|Percentage|
@@ -485,7 +485,7 @@ In the case of a serverless database with auto-pausing enabled, the status it re
 
 #### Use Azure portal
 
-In the Azure portal, the database status is displayed in the overview page of the database and in the overview page of its server.  Also in the Azure portal, the history of pause and resume events of a serverless database can be viewed in the [Activity log](/azure/azure-monitor/essentials/activity-log-insights).
+In the Azure portal, the database status is displayed in the overview page of the database and in the overview page of its server. Also in the Azure portal, the history of pause and resume events of a serverless database can be viewed in the [Activity log](/azure/azure-monitor/essentials/activity-log-insights).
 
 #### Use PowerShell
 
@@ -530,21 +530,21 @@ The amount of compute billed in serverless for Hyperscale HA replicas belonging 
 
 - **Metric**: app_cpu_billed_HA_replicas (vCore seconds) 
 - **Definition**: Sum of maximum (minimum vCores, vCores used, minimum memory GB * 1/3, memory GB used * 1/3) for any HA replicas belonging to their parent resource.
-- **Parent resource and metric endpoint**: The primary replica and any named replica each separately expose this metric, which measures the compute billed for any associated HA replicas.  
+- **Parent resource and metric endpoint**: The primary replica and any named replica each separately expose this metric, which measures the compute billed for any associated HA replicas. 
 - **Reporting frequency**: Per minute based on per second measurements aggregated over 1 minute. 
 
 
 ### Minimum compute bill
 
-If a serverless database is paused, then the compute bill is zero.  If a serverless database is not paused, then the minimum compute bill is no less than the amount of vCores based on maximum (minimum vCores, minimum memory GB * 1/3).
+If a serverless database is paused, then the compute bill is zero. If a serverless database is not paused, then the minimum compute bill is no less than the amount of vCores based on maximum (minimum vCores, minimum memory GB * 1/3).
 
 Examples:
 
-- Suppose a serverless database in the General Purpose tier is not paused and configured with 8 maximum vCores and 1 minimum vCore corresponding to 3.0 GB minimum memory.  Then the minimum compute bill is based on maximum (1 vCore, 3.0 GB * 1 vCore / 3 GB) = 1 vCore.
-- Suppose a serverless database in the General Purpose tier is not paused and configured with 4 maximum vCores and 0.5 minimum vCores corresponding to 2.1 GB minimum memory.  Then the minimum compute bill is based on maximum (0.5 vCores, 2.1 GB * 1 vCore / 3 GB) = 0.7 vCores.
-- Suppose a serverless database in the Hyperscale tier has a primary replica with one HA replica and one named replica with no HA replicas.  Suppose each replica is configured with 8 maximum vCores and 1 minimum vCore corresponding to 3 GB minimum memory. Then the minimum compute bill for the primary replica, HA replica, and named replica are each based on maximum (1 vCore, 3 GB * 1 vCore / 3 GB) = 1 vCore.
+- Suppose a serverless database in the General Purpose tier is not paused and configured with 8 maximum vCores and 1 minimum vCore corresponding to 3.0 GB minimum memory. Then the minimum compute bill is based on maximum (1 vCore, 3.0 GB * 1 vCore / 3 GB) = 1 vCore.
+- Suppose a serverless database in the General Purpose tier is not paused and configured with 4 maximum vCores and 0.5 minimum vCores corresponding to 2.1 GB minimum memory. Then the minimum compute bill is based on maximum (0.5 vCores, 2.1 GB * 1 vCore / 3 GB) = 0.7 vCores.
+- Suppose a serverless database in the Hyperscale tier has a primary replica with one HA replica and one named replica with no HA replicas. Suppose each replica is configured with 8 maximum vCores and 1 minimum vCore corresponding to 3 GB minimum memory. Then the minimum compute bill for the primary replica, HA replica, and named replica are each based on maximum (1 vCore, 3 GB * 1 vCore / 3 GB) = 1 vCore.
 
-The [Azure SQL Database pricing calculator](https://azure.microsoft.com/pricing/calculator/?service=sql-database) for serverless can be used to determine the minimum memory configurable based on the number of maximum and minimum vCores configured.  As a rule, if the minimum vCores configured is greater than 0.5 vCores, then the minimum compute bill is independent of the minimum memory configured and based only on the number of minimum vCores configured.
+The [Azure SQL Database pricing calculator](https://azure.microsoft.com/pricing/calculator/?service=sql-database) for serverless can be used to determine the minimum memory configurable based on the number of maximum and minimum vCores configured. As a rule, if the minimum vCores configured is greater than 0.5 vCores, then the minimum compute bill is independent of the minimum memory configured and based only on the number of minimum vCores configured.
 
 <a id="scenario-examples"></a>
 
@@ -552,9 +552,9 @@ The [Azure SQL Database pricing calculator](https://azure.microsoft.com/pricing/
 
 # [General Purpose](#tab/general-purpose)
 
-Consider a serverless database in the General Purpose tier configured with 1 minimum vCore and 4 maximum vCores.  This configuration corresponds to around 3 GB minimum memory and 12 GB maximum memory. Suppose the auto-pause delay is set to 6 hours and the database workload is active during the first 2 hours of a 24-hour period and otherwise inactive.
+Consider a serverless database in the General Purpose tier configured with 1 minimum vCore and 4 maximum vCores. This configuration corresponds to around 3 GB minimum memory and 12 GB maximum memory. Suppose the auto-pause delay is set to 6 hours and the database workload is active during the first 2 hours of a 24-hour period and otherwise inactive.
 
-In this case, the database is billed for compute and storage during the first 8 hours.  Even though the database is inactive starting after the second hour, it is still billed for compute in the subsequent 6 hours based on the minimum compute provisioned while the database is online.  Only storage is billed during the remainder of the 24-hour period while the database is paused.
+In this case, the database is billed for compute and storage during the first 8 hours. Even though the database is inactive starting after the second hour, it is still billed for compute in the subsequent 6 hours based on the minimum compute provisioned while the database is online. Only storage is billed during the remainder of the 24-hour period while the database is paused.
 
 More precisely, the compute bill in this example is calculated as follows:
 
@@ -566,11 +566,11 @@ More precisely, the compute bill in this example is calculated as follows:
 |8:00-24:00|0|0|No compute billed while paused|0 vCore seconds|
 |**Total vCore seconds billed over 24 hours**||||50,400 vCore seconds|
 
-Suppose the compute unit price is $0.000145/vCore/second.  Then the compute billed for this 24-hour period is the product of the compute unit price and vCore seconds billed: $0.000145/vCore/second * 50,400 vCore seconds ~ $7.31.
+Suppose the compute unit price is $0.000145/vCore/second. Then the compute billed for this 24-hour period is the product of the compute unit price and vCore seconds billed: $0.000145/vCore/second * 50,400 vCore seconds ~ $7.31.
 
 # [Hyperscale](#tab/hyperscale)
 
-Consider a serverless database in the Hyperscale tier configured with 1 minimum vCore and 8 maximum vCores.  Suppose that the primary replica has enabled one HA replica and that a named replica with 1 minimum vCore and 8 maximum vCores has also been provisioned.  For each replica, this configuration corresponds to 3 GB minimum memory and 24 GB maximum memory.  Further suppose that write workload occurs throughout a 24-hour period, but that read-only workload occurs just during the first 8 hours of this time period. 
+Consider a serverless database in the Hyperscale tier configured with 1 minimum vCore and 8 maximum vCores. Suppose that the primary replica has enabled one HA replica and that a named replica with 1 minimum vCore and 8 maximum vCores has also been provisioned. For each replica, this configuration corresponds to 3 GB minimum memory and 24 GB maximum memory. Further suppose that write workload occurs throughout a 24-hour period, but that read-only workload occurs just during the first 8 hours of this time period. 
 
 In this example, the compute billed for the database is summation of the compute billed for each replica and calculated as follows based on the usage pattern described in the following tables: 
 
@@ -655,7 +655,7 @@ Currently, 80 maximum vCores in serverless for General Purpose and Hyperscale ti
  - Jio India West
  - Korea Central
  - Korea South
- - Maylaysia South
+ - Malaysia South
  - Mexico Central
  - North Central US
  - North Europe
@@ -679,7 +679,7 @@ Currently, 80 maximum vCores in serverless for General Purpose and Hyperscale ti
  - UK South
  - UK West
  - US Gov East
- - US Gov Southcentral
+ - US Gov South central
  - US Gov Southwest
  - West Europe
  - West Central US

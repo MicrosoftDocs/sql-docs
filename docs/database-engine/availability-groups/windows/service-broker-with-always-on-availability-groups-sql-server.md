@@ -53,10 +53,10 @@ helpviewer_keywords:
   
      Grant CONNECT permission on the Service Broker endpoint either to PUBLIC or to a login.  
   
-     The following example grants the connection on a Service Broker endpoint named `broker_endpoint` to PUBLIC.  
+     The following example grants the connection on a Service Broker endpoint named `SSBEndpoint` to PUBLIC.  
   
     ```  
-    GRANT CONNECT ON ENDPOINT::[broker_endpoint] TO [PUBLIC]  
+    GRANT CONNECT ON ENDPOINT::[SSBEndpoint] TO [PUBLIC]  
     ```  
   
      For more information, see [GRANT &#40;Transact-SQL&#41;](../../../t-sql/statements/grant-transact-sql.md).  

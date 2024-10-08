@@ -71,7 +71,7 @@ The following table covers these SLOs: `GP_S_Gen5_1`, `GP_S_Gen5_2`, `GP_S_Gen5_
 |:-|-:|-:|-:|-:|-:|
 | Hardware | Gen5 | Gen5 | Gen5 | Gen5 | Gen5 |
 | Min-max memory (GB) | 2.02 - 3 | 2.05 - 6 | 2.10 - 12 | 2.25 - 18 | 3.00 - 24 |
-| Min-max auto-pause delay (minutes) | 60 - 10,080 | 60 - 10,080 | 60 - 10,080 | 60 - 10,080 | 60 - 10,080 |
+| Min-max auto-pause delay (minutes) | 15 - 10,080 | 15 - 10,080 | 15 - 10,080 | 15 - 10,080 | 15 - 10,080 |
 | Columnstore support | Yes <sup>1</sup> | Yes | Yes | Yes | Yes |
 | In-memory OLTP storage (GB) | N/A | N/A | N/A | N/A | N/A |
 | Max data size (GB) | 512 | 1024 | 1024 | 1024 | 2048 |
@@ -109,7 +109,7 @@ The following table covers these SLOs: `GP_S_Gen5_10`, `GP_S_Gen5_12`, `GP_S_Gen
 |:-|-:|-:|-:|-:|-:|
 | Hardware | Gen5 | Gen5 | Gen5 | Gen5 | Gen5 |
 | Min-max memory (GB) | 3.75-30 | 4.50-36 | 5.25-42 | 6.00-48 | 6.75-54 |
-| Min-max auto-pause delay (minutes) | 60-10,080 | 60-10,080 | 60-10,080 | 60-10,080 | 60-10,080 |
+| Min-max auto-pause delay (minutes) | 15-10,080 | 15-10,080 | 15-10,080 | 15-10,080 | 15-10,080 |
 | Columnstore support | Yes | Yes | Yes | Yes | Yes |
 | In-memory OLTP storage (GB) | N/A | N/A | N/A | N/A | N/A |
 | Max data size (GB) | 2048 | 3072 | 3072 | 3072 | 3072 |
@@ -145,7 +145,7 @@ The following table covers these SLOs: `GP_S_Gen5_20`, `GP_S_Gen5_24`, `GP_S_Gen
 |:-|-:|-:|-:|-:|-:|
 | Hardware | Gen5 | Gen5 | Gen5 | Gen5 | Gen5 |
 | Min-max memory (GB) | 7.5-60 | 9-72 | 12-96 | 15-120 | 30-240 |
-| Min-max auto-pause delay (minutes) | 60-10,080 | 60-10,080 | 60-10,080 | 60-10,080 | 60-10,080 |
+| Min-max auto-pause delay (minutes) | 15-10,080 | 15-10,080 | 15-10,080 | 15-10,080 | 15-10,080 |
 | Columnstore support | Yes | Yes | Yes | Yes | Yes |
 | In-memory OLTP storage (GB) | N/A | N/A | N/A | N/A | N/A |
 | Max data size (GB) | 3072 | 4096 | 4096 | 4096 | 4096 |

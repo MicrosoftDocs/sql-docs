@@ -34,7 +34,7 @@ You can use the `PIVOT` and `UNPIVOT` relational operators to change a table-val
 The syntax for `PIVOT` is easier and more readable than the syntax that might otherwise be specified in a complex series of `SELECT...CASE` statements. For a complete description of the syntax for `PIVOT`, see [FROM clause](from-transact-sql.md).
 
 > [!NOTE]
-> Repeated use of PIVOT/UNPIVOT within a single T-SQL statement may negatively impact query performance.
+> Repeated use of `PIVOT`/`UNPIVOT` within a single T-SQL statement can negatively impact query performance.
 
 [!INCLUDE [article-uses-adventureworks](../../includes/article-uses-adventureworks.md)]
 

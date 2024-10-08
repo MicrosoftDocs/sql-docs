@@ -1,7 +1,7 @@
 ---
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 01/11/2024
+ms.date: 10/10/2024
 ms.topic: include
 ---
 | Error | Severity | Event logged | Description |
@@ -403,6 +403,7 @@ ms.topic: include
 | 3759 | 16 | No | %.\*ls constraint '%.\*ls' cannot be dropped when WAIT_AT_LOW_PRIORITY clause is used. |
 | 3760 | 16 | No | Cannot drop index '%.\*ls' on view '%.\*ls' that has SNAPSHOT_MATERIALIZATION. |
 | 3761 | 16 | No | Could not delete SBS backed file '%ls'. See the SQL Server error log for more information. |
+| 3764 | 16 | No | Cannot %S_MSG the %S_MSG '%.\*ls' because it is being used for Change Data Capture. |
 | 3800 | 16 | No | Column name '%.\*ls' is not sufficiently different from the names of other columns in the table '%.\*ls'. |
 | 3801 | 10 | No | Warning: The index "%.\*ls" on "%.\*ls"."%.\*ls" may be impacted by the collation upgrade. Run DBCC CHECKTABLE. |
 | 3802 | 10 | No | Warning: The constraint "%.\*ls" on "%.\*ls"."%.\*ls" may be impacted by the collation upgrade. Disable and enable WITH CHECK. |

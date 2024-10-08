@@ -1,7 +1,7 @@
 ---
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 01/11/2024
+ms.date: 10/10/2024
 ms.topic: include
 ---
 | Error | Severity | Event logged | Description |
@@ -374,15 +374,15 @@ ms.topic: include
 | 10925 | 16 | No | A %S_MSG value was specified more than one time in the pool affinity range list. |
 | 10926 | 16 | No | The %S_MSG range that specifies %S_MSG %d includes at least one %S_MSG that is not available to the current instance. The maximum %S_MSG number that is available to this instance is %d. |
 | 10927 | 16 | No | The operation could not be completed. The specified '%.\*ls' value, %u, causes the sum of minimums on all workload groups using resource pool '%.\*ls' to exceed 100 percent. Reduce the value or modify other workload groups so that the sum is less than or equal to 100. |
-| 10928 | 16 | No | Resource ID : %d. The %ls limit for the database is %d and has been reached. See 'http://go.microsoft.com/fwlink/?LinkId=267637' for assistance. |
-| 10929 | 16 | No | Resource ID : %d. The %ls minimum guarantee is %d, maximum limit is %d and the current usage for the database is %d. However, the server is currently too busy to support %ls greater than %d for this database. See 'http://go.microsoft.com/fwlink/?LinkId=267637' for assistance. Otherwise, please try again later. |
+| 10928 | 16 | No | Resource ID : %d. The %ls limit for the database is %d and has been reached. See '[http://go.microsoft.com/fwlink/?LinkId=267637](https://go.microsoft.com/fwlink/?LinkId=267637)' for assistance. |
+| 10929 | 16 | No | Resource ID : %d. The %ls minimum guarantee is %d, maximum limit is %d and the current usage for the database is %d. However, the server is currently too busy to support %ls greater than %d for this database. See '[http://go.microsoft.com/fwlink/?LinkId=267637](https://go.microsoft.com/fwlink/?LinkId=267637)' for assistance. Otherwise, please try again later. |
 | 10930 | 16 | No | The service is currently too busy. Please try again later. |
 | 10931 | 16 | No | Cannot drop resource pool '%.\*ls' because it is bound to a database. Remove all bindings to this resource pool before dropping it. |
 | 10932 | 16 | No | Resource governor configuration failed, because there is an active database in the resource pool being dropped. Take the database offline and try again. |
 | 10933 | 16 | No | A %S_MSG with id %d does not exist on this system. Use sys.dm_os_schedulers to locate valid %S_MSGs for this system. |
 | 10934 | 16 | No | Requested operation cannot be performed because the external resource pool '%.\*ls' does not exist. |
 | 10935 | 16 | No | External resource pool does not allow more than one processor group. |
-| 10936 | 16 | No | Resource ID : %d. The %ls limit for the elastic pool is %d and has been reached. See 'http://go.microsoft.com/fwlink/?LinkId=267637' for assistance. |
+| 10936 | 16 | No | Resource ID : %d. The %ls limit for the elastic pool is %d and has been reached. See '[http://go.microsoft.com/fwlink/?LinkId=267637](https://go.microsoft.com/fwlink/?LinkId=267637)' for assistance. |
 | 10937 | 16 | No | Default workload group does not allow to alter attribute '%.\*ls'. |
 | 10961 | 16 | No | The request has been aborted because its CPU usage exceeds the maximum configured limit for the workload group. |
 | 10981 | 10 | No | Resource governor reconfiguration succeeded. |

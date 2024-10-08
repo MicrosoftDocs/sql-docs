@@ -4,7 +4,7 @@ description: This article describes the new serverless compute tier and compares
 author: oslake
 ms.author: moslake
 ms.reviewer: wiassaf, mathoma
-ms.date: 10/2/2024
+ms.date: 10/07/2024
 ms.service: azure-sql-database
 ms.subservice: service-overview
 ms.topic: conceptual
@@ -109,16 +109,21 @@ When CPU utilization is low, active cache utilization can remain high depending 
 
 The SQL memory cache grows as data is fetched from disk in the same way and with the same speed as for provisioned databases. When the database is busy, the cache is allowed to grow unconstrained while there is available memory.
 
+<a id="disk-cache-mgmt"></a>
 
-### <a id="disk-cache-mgmt"></a> Disk cache management
+### Disk cache management
 
 In the Hyperscale service tier for both serverless and provisioned compute tiers, each compute replica uses a Resilient Buffer Pool Extension (RBPEX) cache, which stores data pages on local SSD to improve IO performance. However, in the serverless compute tier for Hyperscale, the RBPEX cache for each compute replica automatically grows and shrinks in response to increasing and decreasing workload demand. The maximum size the RBPEX cache can grow to is three times the maximum memory configured for the database. For details on maximum memory and RBPEX auto-scaling limits in serverless, see [serverless Hyperscale resource limits](resource-limits-vcore-single-databases.md#hyperscale---serverless-compute---standard-series-gen5).
 
-## <a id="auto-pausing-and-auto-resuming"></a> Auto-pause and auto-resume
+<a id="auto-pausing-and-auto-resuming"></a>
+
+## Auto-pause and auto-resume
 
 Currently, serverless auto-pausing and auto-resuming are only supported in the General Purpose tier.
 
-### <a id="auto-pausing"></a> Auto-pause
+<a id="auto-pausing"></a>
+
+### Auto-pause
 
 Auto-pausing is triggered if all of the following conditions are true during the auto-pause delay:
 
@@ -173,12 +178,14 @@ WHERE s.session_id <> @@SPID
 > After running the query, make sure to disconnect from the database. Otherwise, the open session used by the query will prevent auto-pausing.
 
 - If the result set is nonempty, it indicates that there are sessions currently preventing auto-pausing.
-- If the result set is empty, it is still possible that sessions were open, possibly for a short time, at some point earlier during the auto-pause delay period. To check for activity during the delay period, you can use [Azure SQL Auditing](auditing-overview.md) and examine audit data for the relevant period.
+- If the result set is empty, it is still possible that sessions were open, possibly for a short time, at some point earlier during the auto-pause delay period. To check for activity during the delay period, you can use [Auditing for Azure SQL Database and Azure Synapse Analytics](auditing-overview.md) and examine audit data for the relevant period.
 
 > [!IMPORTANT]
 > The presence of open sessions, with or without concurrent CPU utilization in the user resource pool, is the most common reason for a serverless database to not auto-pause as expected.
 
-### <a id="auto-resuming"></a> Auto-resume
+<a id="auto-resuming"></a>
+
+### Auto-resume
 
 Auto-resuming is triggered if any of the following conditions are true at any time:
 
@@ -224,7 +231,9 @@ If using [customer managed transparent data encryption](transparent-data-encrypt
 
 If using [customer-managed transparent data encryption](transparent-data-encryption-byok-overview.md) (BYOK), and serverless auto-pausing is enabled, then the database is auto-resumed whenever keys are rotated and subsequently auto-paused when auto-pausing conditions are satisfied.
 
-## <a id="create-serverless-db"></a> Create a new serverless database
+<a id="create-serverless-db"></a>
+
+## Create a new serverless database
 
 Creating a new database or moving an existing database into a serverless compute tier follows the same pattern as creating a new database in provisioned compute tier and involves the following two steps:
 
@@ -431,7 +440,9 @@ Use [Set-AzSqlDatabase](/powershell/module/az.sql/set-azsqldatabase) to modify t
 
 Use [az sql db update](/cli/azure/sql/db#az-sql-db-update) to modify the maximum or minimum vCores, and auto-pause delay. Use the `capacity`, `min-capacity`, and `auto-pause-delay` arguments. Serverless auto-pausing is not currently supported in the Hyperscale tier, so the auto-pause delay argument is only applicable to the General Purpose tier. 
 
-## <a id="monitoring"></a> Monitor
+<a id="monitoring"></a>
+
+## Monitor
 
 ### Resources used and billed
 
@@ -535,11 +546,13 @@ Examples:
 
 The [Azure SQL Database pricing calculator](https://azure.microsoft.com/pricing/calculator/?service=sql-database) for serverless can be used to determine the minimum memory configurable based on the number of maximum and minimum vCores configured.  As a rule, if the minimum vCores configured is greater than 0.5 vCores, then the minimum compute bill is independent of the minimum memory configured and based only on the number of minimum vCores configured.
 
-### <a id="scenario-examples"></a> Scenario examples
+<a id="scenario-examples"></a>
+
+### Scenario examples
 
 # [General Purpose](#tab/general-purpose)
 
-Consider a serverless database in the General Purpose tier configured with 1 minimum vCore and 4 maximum vCores.  This configuration corresponds to around 3 GB minimum memory and 12 GB maximum memory.  Suppose the auto-pause delay is set to 6 hours and the database workload is active during the first 2 hours of a 24-hour period and otherwise inactive.    
+Consider a serverless database in the General Purpose tier configured with 1 minimum vCore and 4 maximum vCores.  This configuration corresponds to around 3 GB minimum memory and 12 GB maximum memory. Suppose the auto-pause delay is set to 6 hours and the database workload is active during the first 2 hours of a 24-hour period and otherwise inactive.
 
 In this case, the database is billed for compute and storage during the first 8 hours.  Even though the database is inactive starting after the second hour, it is still billed for compute in the subsequent 6 hours based on the minimum compute provisioned while the database is online.  Only storage is billed during the remainder of the 24-hour period while the database is paused.
 
@@ -547,13 +560,13 @@ More precisely, the compute bill in this example is calculated as follows:
 
 |Time Interval|vCores used each second|GB used each second|Compute dimension billed|vCore seconds billed over time interval|
 |---|---|---|---|---|
-|0:00-1:00|4|9|vCores used|4 vCores * 3600 seconds = 14400 vCore seconds|
-|1:00-2:00|1|12|Memory used|12 GB * 1/3 * 3600 seconds = 14400 vCore seconds|
-|2:00-8:00|0|0|Minimum memory provisioned|3 GB * 1/3 * 21600 seconds = 21600 vCore seconds|
+|0:00-1:00|4|9|vCores used|4 vCores * 3,600 seconds = 14,400 vCore seconds|
+|1:00-2:00|1|12|Memory used|12 GB * 1/3 * 3,600 seconds = 14,400 vCore seconds|
+|2:00-8:00|0|0|Minimum memory provisioned|3 GB * 1/3 * 21,600 seconds = 21,600 vCore seconds|
 |8:00-24:00|0|0|No compute billed while paused|0 vCore seconds|
-|Total vCore seconds billed over 24 hours||||50,400 vCore seconds|
+|**Total vCore seconds billed over 24 hours**||||50,400 vCore seconds|
 
-Suppose the compute unit price is $0.000145/vCore/second.  Then the compute billed for this 24-hour period is the product of the compute unit price and vCore seconds billed: $0.000145/vCore/second * 50400 vCore seconds ~ $7.31.
+Suppose the compute unit price is $0.000145/vCore/second.  Then the compute billed for this 24-hour period is the product of the compute unit price and vCore seconds billed: $0.000145/vCore/second * 50,400 vCore seconds ~ $7.31.
 
 # [Hyperscale](#tab/hyperscale)
 
@@ -579,7 +592,7 @@ Suppose the compute unit price for the primary replica is $0.000105/vCore/second
 |0:00-2:00 |    8 |    9    | vCores used    | 8 vCores * 7,200 seconds = 57,600 vCore seconds |
 | 2:00-8:00    | 1.5     | 3    | Memory used    | 3 GB * 1/3 * 43,200 seconds = 43,200 vCore seconds|
 |8:00-24:00|    0|    2    |Minimum memory provisioned    |3 GB * 1/3 * 36,000 seconds = 36,000 vCore seconds|
-|Total vCore seconds billed over 24 hours||||136,800 vCore seconds |
+|**Total vCore seconds billed over 24 hours**||||136,800 vCore seconds |
 
 Suppose the compute unit price for an HA replica is $0.000105/vCore/second. Then the compute billed for the HA replica over this 24-hour period is $0.000105/vCore/second * 136,800 vCore seconds ~ $14.36.
 
@@ -602,7 +615,7 @@ Azure Hybrid Benefit (AHB) and reserved capacity discounts do not apply to the s
 
 Serverless for General Purpose and Hyperscale tiers with support up to 40 maximum vCores is available worldwide except the following regions: 
 
-- China East
+ - China East
  - China North
  - Germany Central
  - Germany Northeast

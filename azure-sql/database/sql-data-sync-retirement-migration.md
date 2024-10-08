@@ -4,7 +4,7 @@ description: This tutorial explains options and alternatives to SQL Data Sync.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: hudequei
-ms.date: 09/27/2024
+ms.date: 10/08/2024
 ms.service: azure-sql-database
 ms.subservice: sql-data-sync
 ms.topic: conceptual
@@ -85,10 +85,12 @@ This scenario synchronizes data across different regions for reading purposes. M
 
 | **Source**     | **Destination** | &nbsp; | &nbsp; |
 |:--|:--|:--|:--|
-|                | **SQL Server** | **Azure SQL Managed Instance** | **Azure SQL Database** |
+|                | **SQL Server** | **Azure SQL Managed Instance**\* | **Azure SQL Database** |
 | **SQL Server** |  Always On availability groups<br /> Azure Data Factory<br /> Transactional replication<br /> Linked server |  Always On availability groups<br /> Azure Data Factory<br /> Transactional replication<br /> Linked server |  Azure Data Factory<br /> Azure Functions<br /> Transactional replication |
-| **Azure SQL Managed Instance** |  Always On availability groups<br /> Azure Data Factory<br /> Transactional replication<br /> Linked server | Always On availability groups<br /> Azure Data Factory<br /> Transactional replication<br /> Linked server<br /> Read replicas| Azure Data Factory<br /> Azure Functions<br /> Transactional replication |
+| **Azure SQL Managed Instance**\* |  Always On availability groups<br /> Azure Data Factory<br /> Transactional replication<br /> Linked server | Always On availability groups<br /> Azure Data Factory<br /> Transactional replication<br /> Linked server<br /> Read replicas| Azure Data Factory<br /> Azure Functions<br /> Transactional replication |
 | **Azure SQL Database**  | Azure Data Factory<br /> Transactional replication| Azure Data Factory<br /> Transactional replication<br /> Linked Server| Azure Data Factory<br /> Azure Functions<br /> Active geo-replication<br /> Copy Database |
+
+ \* SQL Data Sync does not support Azure SQL Managed Instance.
 
 ## Related content
 

@@ -97,7 +97,7 @@ The following XEs are available for degree of parallelism (DOP) feedback:
 **Applies to:** [!INCLUDE [sqlserver2022-and-later](../../includes/applies-to-version/sqlserver2022-and-later.md)], [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]
 <!---[!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)])  -->
 
-If the DOP feedback mechanism finds that the new degree of parallelism is good, this optimization is persisted inside the query store and will be applied appropriately to a query for future executions.
+If the DOP feedback mechanism finds that the new degree of parallelism is good, this optimization is persisted inside the Query Store and will be applied appropriately to a query for future executions.
 
 This feature was introduced in [!INCLUDE [ssSQL22](../../includes/sssql22-md.md)], and is available for queries that operate in the database compatibility level 160 or higher, or the `QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_n` hint of 160 and higher, and when Query Store is enabled for the database and is in a "read write" state.
 

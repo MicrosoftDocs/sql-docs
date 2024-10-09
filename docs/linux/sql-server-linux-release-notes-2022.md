@@ -38,7 +38,7 @@ This section lists the latest versions of each package per distribution, for [!I
 
 | Version | Release | Date | Build | KB article |
 | --- | --- | --- | --- | --- |
-| [!INCLUDE [ssSQL22](../includes/sssql22-md.md)] | CU 15 GDR | 2024-10-08 | 16.0.4145.4 | [KB 5046059](https://support.microsoft.com/help/5046059) |
+| [!INCLUDE [ssSQL22](../includes/sssql22-md.md)] | CU 15 GDR | 2024-10-08 | 16.0.4150.1 | [KB 5046059](https://support.microsoft.com/help/5046059) |
 
 - The **mssql-server-is** package isn't supported on SUSE in this release. For more information, see [SQL Server on Linux: Known issues](sql-server-linux-known-issues.md#sql-server-integration-services-ssis).
 
@@ -84,7 +84,7 @@ The following table lists the release history for [!INCLUDE [ssSQL22](../include
 
 | Release                                                                  | Version       | Release date |
 | ------------------------------------------------------------------------ | ------------- | ------------ |
-| [CU 15 GDR](/troubleshoot/sql/linux/release-history-2022#CU15-GDR)       | 16.0.4145.4   | 2024-10-08   |
+| [CU 15 GDR](/troubleshoot/sql/linux/release-history-2022#CU15-GDR)       | 16.0.4150.1   | 2024-10-08   |
 | [CU 15](/troubleshoot/sql/linux/release-history-2022#CU15)               | 16.0.4145.4   | 2024-09-25   |
 | [CU 14 GDR](/troubleshoot/sql/linux/release-history-2022#CU14-GDR)       | 16.0.4140.3   | 2024-09-10   |
 | [CU 14](/troubleshoot/sql/linux/release-history-2022#CU14)               | 16.0.4135.4   | 2024-07-23   |

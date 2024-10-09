@@ -171,7 +171,7 @@ Before [!INCLUDE [sssql22-md](../includes/sssql22-md.md)], Query Store isn't ena
 ALTER DATABASE AdventureWorks2022 SET QUERY_STORE = ON;
 ```
 
-Run the following query to return information about queries and plans in the query store:
+Run the following query to return information about queries and plans in the Query Store:
 
 ```sql
 SELECT Txt.query_text_id, Txt.query_sql_text, Pl.plan_id, Qry.*

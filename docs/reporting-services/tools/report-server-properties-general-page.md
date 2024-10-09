@@ -3,11 +3,12 @@ title: "Server properties (General page)"
 description: Learn about the options on the Report Server Properties page.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 06/08/2016
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: tools
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 f1_keywords:
   - "sql13.swb.reportserver.serverproperties.general.f1"
 ---
@@ -48,12 +49,10 @@ f1_keywords:
  Specify a role definition to use for My Reports security. The role definition identifies the set of tasks that are supported in each My Reports folder.  
 
   
-## Related content  
- [Set report server properties &#40;Management Studio&#41;](../../reporting-services/tools/set-report-server-properties-management-studio.md)   
- [Connect to a report server in Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
- [Enable and disable My Reports](../../reporting-services/report-server/enable-and-disable-my-reports.md)   
- [Report server in Management Studio F1 Help](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
- [Secure My Reports](../../reporting-services/security/secure-my-reports.md)  
-  
-  
+## Related content
 
+- [Set report server properties &#40;Management Studio&#41;](../../reporting-services/tools/set-report-server-properties-management-studio.md)
+- [Connect to a report server in Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)
+- [Enable and disable My Reports](../../reporting-services/report-server/enable-and-disable-my-reports.md)
+- [Report server in Management Studio F1 Help](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)
+- [Secure My Reports](../../reporting-services/security/secure-my-reports.md)

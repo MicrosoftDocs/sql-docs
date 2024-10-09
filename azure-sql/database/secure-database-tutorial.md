@@ -121,7 +121,7 @@ To set the Microsoft Entra administrator:
     > [!IMPORTANT]
     > You need to be a "Global Administrator" to perform this task.
 
-1. On the **Microsoft Entra ID** pane, search and select the Microsoft Entra user or group and choose **Select**. All members and groups of your Microsoft Entra organization are listed, and entries grayed out are not supported as Microsoft Entra administrators. See [Microsoft Entra features and limitations](authentication-aad-overview.md#azure-ad-features-and-limitations).
+1. On the **Microsoft Entra ID** pane, search and select the Microsoft Entra user or group and choose **Select**. All members and groups of your Microsoft Entra organization are listed, and entries grayed out are [not supported as Microsoft Entra administrators](authentication-aad-overview.md#microsoft-entra-administrator). 
 
     :::image type="content" source="media\secure-database-tutorial\admin-select.png" alt-text="Screenshot of the Azure portal page to add a Microsoft Entra admin.":::
 

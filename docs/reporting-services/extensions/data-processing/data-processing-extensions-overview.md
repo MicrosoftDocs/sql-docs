@@ -3,11 +3,12 @@ title: "Data processing extensions overview"
 description: See which data processing extensions are included with Reporting Services, and learn how to add custom data processing to your report server.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/14/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: extensions
 ms.topic: reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "data processing extensions [Reporting Services], about extensions"
 ---
@@ -71,7 +72,5 @@ Reporting Services data processing extension architecture
   
 ## Related content
 
-- [Reporting Services extensions](../../../reporting-services/extensions/reporting-services-extensions.md)   
-- [Reporting Services extension library](../../../reporting-services/extensions/reporting-services-extension-library.md)  
-  
-  
+- [Reporting Services extensions](../../../reporting-services/extensions/reporting-services-extensions.md)
+- [Reporting Services extension library](../../../reporting-services/extensions/reporting-services-extension-library.md)

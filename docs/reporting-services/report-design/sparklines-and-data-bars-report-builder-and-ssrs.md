@@ -3,11 +3,12 @@ title: "Sparklines and data bars in a paginated report"
 description: Discover the benefits of using sparklines and data bars in a paginated report in Report Builder. These compact charts convey much information in very little space.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/07/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 f1_keywords:
   - "sql13.rtp.rptdesigner.sparklines.f1"
   - "10544"
@@ -97,7 +98,7 @@ f1_keywords:
   
  [Specify Consistent Colors across Multiple Shape Charts &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/specify-consistent-colors-across-multiple-shape-charts-report-builder-and-ssrs.md)  
   
-## See Also  
- [Charts &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [Tutorial: Add a Sparkline to Your Report &#40;Report Builder&#41;](../../reporting-services/tutorial-add-a-sparkline-to-your-report-report-builder.md)   
-  
+## Related content
+
+- [Charts &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)
+- [Tutorial: Add a Sparkline to Your Report &#40;Report Builder&#41;](../../reporting-services/tutorial-add-a-sparkline-to-your-report-report-builder.md)

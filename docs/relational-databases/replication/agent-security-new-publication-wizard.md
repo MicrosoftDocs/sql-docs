@@ -3,11 +3,12 @@ title: "Agent Security (New Publication Wizard)"
 description: "Agent Security (New Publication Wizard)"
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/14/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: ui-reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 f1_keywords:
   - "sql13.rep.agentsecurity.articles.f1"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
@@ -46,13 +47,12 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 > [!NOTE]  
 >  There is one Queue Reader Agent for each distribution database (and all Publishers that it serves). If a transactional publication that allows queued updating subscriptions already exists on any of the Publishers that use a given distribution database, the security settings are read-only. You can change the account under which the Queue Reader Agent runs and makes connections in the **Distributor Properties** dialog box, but changes affect publications at all Publishers that use the distribution database.  
   
-## See Also  
- [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
- [Create an Updatable Subscription to a Transactional Publication](publish/create-an-updatable-subscription-to-a-transactional-publication.md)   
- [View and Modify Distributor and Publisher Properties](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
- [View and Modify Publication Properties](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
- [Identity access and control for Replication](../../relational-databases/replication/security/identity-and-access-control-replication.md)   
- [Publish Data and Database Objects](../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
- [Replication Agents Overview](../../relational-databases/replication/agents/replication-agents-overview.md)  
-  
-  
+## Related content
+
+- [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)
+- [Create an Updatable Subscription to a Transactional Publication](publish/create-an-updatable-subscription-to-a-transactional-publication.md)
+- [View and Modify Distributor and Publisher Properties](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)
+- [View and Modify Publication Properties](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)
+- [Identity access and control for Replication](../../relational-databases/replication/security/identity-and-access-control-replication.md)
+- [Publish Data and Database Objects](../../relational-databases/replication/publish/publish-data-and-database-objects.md)
+- [Replication Agents Overview](../../relational-databases/replication/agents/replication-agents-overview.md)

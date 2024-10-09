@@ -3,11 +3,12 @@ title: "Configure and administer a report server (native mode)"
 description: Learn about the approaches that you can use to configure Reporting Services and find articles about how to configure components, features, or server capabilities.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 09/19/2024
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-server
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "Reporting Services, components"
   - "deploying [Reporting Services], component options"

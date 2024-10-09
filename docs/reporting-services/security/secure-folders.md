@@ -3,11 +3,12 @@ title: "Secure folders"
 description: "Secure folders"
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/01/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: security
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "high-security folders [Reporting Services]"
   - "low-security folders"
@@ -34,9 +35,8 @@ helpviewer_keywords:
 |Manage data sources|Add new shared data source items to a folder and change existing shared data sources.|  
 |Set security on items|Create and modify role assignments that control access to the folder. This task must be used with either "View folders" or "Manage folders." If it isn't, it has no effect because the user isn't able to select the item.|  
   
-## Related content  
- [Secure reports and resources](../../reporting-services/security/secure-reports-and-resources.md)   
- [Secure shared data source items](../../reporting-services/security/secure-shared-data-source-items.md)   
- [Grant permissions on a native mode report server](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
-  
-  
+## Related content
+
+- [Secure reports and resources](../../reporting-services/security/secure-reports-and-resources.md)
+- [Secure shared data source items](../../reporting-services/security/secure-shared-data-source-items.md)
+- [Grant permissions on a native mode report server](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)

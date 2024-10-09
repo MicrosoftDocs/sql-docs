@@ -3,11 +3,12 @@ title: "MSSQL_ENG014010"
 description: "MSSQL_ENG014010"
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "08/26/2016"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "MSSQL_ENG014010 error"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
@@ -53,8 +54,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
   
      If the value of @@SERVERNAME is not correct for a clustered instance, you must change the name using Cluster Administrator. For more information, see [Always On Failover Cluster Instances &#40;SQL Server&#41;](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md).  
   
-## See Also  
- [@@SERVERNAME &#40;Transact-SQL&#41;](../../t-sql/functions/servername-transact-sql.md)   
- [Errors and Events Reference &#40;Replication&#41;](../../relational-databases/replication/errors-and-events-reference-replication.md)  
-  
-  
+## Related content
+
+- [@@SERVERNAME &#40;Transact-SQL&#41;](../../t-sql/functions/servername-transact-sql.md)
+- [Errors and Events Reference &#40;Replication&#41;](../../relational-databases/replication/errors-and-events-reference-replication.md)

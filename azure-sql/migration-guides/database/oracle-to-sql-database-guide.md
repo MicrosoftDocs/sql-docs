@@ -8,7 +8,7 @@ ms.date: 08/25/2020
 ms.service: azure-sql-database
 ms.subservice: migration-guide
 ms.topic: how-to
-ms.custom:
+ms.collection:
   - sql-migration-content
 ---
 

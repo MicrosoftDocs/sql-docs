@@ -3,11 +3,12 @@ title: "Register a Standard .NET Framework Data Provider"
 description: Register a standard .NET Framework data provider to use a third-party .NET Framework data provider to retrieve data for a Reporting Services report dataset.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 05/24/2018
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-data
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "reports [Reporting Services], data"
   - ".NET Framework data providers for Reporting Services"
@@ -192,9 +193,9 @@ helpviewer_keywords:
   
  The data processing extensions that are installed with [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] must be compiled natively for each platform and installed in the correct locations. If you register a custom data provider or a standard [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] data provider, it needs to be compiled natively for the appropriate platform and installed the appropriate locations. If you are running on a 32-bit platform, the data provider must be compiled for a 32-bit platform. If you are running on a 64-bit platform, the data provider must be compiled for the 64-bit platform. You cannot use a 32-bit data provider wrapped with 64-bit interfaces on a 64 bit platform. Check your third-party software for information about whether the data provider will work on the installed platform. For more information about data providers and platform support, see [Data Sources Supported by Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
   
-## See Also  
- [Configure and Administer a Report Server &#40;SSRS Native Mode&#41;](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)   
- [Implementing a Data Processing Extension](../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)   
- [Reporting Services Configuration Files](../../reporting-services/report-server/reporting-services-configuration-files.md)   
- [Code Access Security in Reporting Services](../../reporting-services/extensions/secure-development/code-access-security-in-reporting-services.md)  
-  
+## Related content
+
+- [Configure and Administer a Report Server &#40;SSRS Native Mode&#41;](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)
+- [Implementing a Data Processing Extension](../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)
+- [Reporting Services Configuration Files](../../reporting-services/report-server/reporting-services-configuration-files.md)
+- [Code Access Security in Reporting Services](../../reporting-services/extensions/secure-development/code-access-security-in-reporting-services.md)

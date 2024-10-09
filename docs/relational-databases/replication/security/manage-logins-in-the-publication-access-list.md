@@ -3,11 +3,12 @@ title: "Manage Logins in the Publication Access List"
 description: "Manage Logins in the Publication Access List"
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/14/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: how-to
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "logins [SQL Server replication], publication access list"
   - "publications [SQL Server replication], publication access lists"
@@ -64,10 +65,9 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
   
 1.  At the Publisher on the publication database, execute [sp_revoke_publication_access](../../../relational-databases/system-stored-procedures/sp-revoke-publication-access-transact-sql.md). For `@publication`, specify the publication name; and for `@login`, specify the name of the login or group that is being removed.  
   
-## See Also  
- [Manage Logins in the Publication Access List](../../../relational-databases/replication/security/manage-logins-in-the-publication-access-list.md)   
- [Replication Agent Security Model](../../../relational-databases/replication/security/replication-agent-security-model.md)   
- [Secure a Replication Topology](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   
- [Secure the Publisher](../../../relational-databases/replication/security/secure-the-publisher.md)  
-  
-  
+## Related content
+
+- [Manage Logins in the Publication Access List](../../../relational-databases/replication/security/manage-logins-in-the-publication-access-list.md)
+- [Replication Agent Security Model](../../../relational-databases/replication/security/replication-agent-security-model.md)
+- [Secure a Replication Topology](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)
+- [Secure the Publisher](../../../relational-databases/replication/security/secure-the-publisher.md)

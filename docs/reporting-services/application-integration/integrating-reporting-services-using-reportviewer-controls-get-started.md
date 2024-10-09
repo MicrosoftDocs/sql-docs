@@ -3,14 +3,14 @@ title: "Get started with Report Viewer controls"
 description: Learn how the Report Viewer controls can be used to integrate Reporting Services RDL reports into WebForms and WinForms apps.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 08/07/2024
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: application-integration
 ms.topic: get-started
 ms.custom:
   - intro-get-started
   - updatefrequency5
-#customer intent: As a SQL Server user, I want to learn how the Report Viewer controls can be used so that I can integrate Reporting Services RDL reports into WebForms and WinForms apps.
+# customer intent: As a SQL Server user, I want to learn how the Report Viewer controls can be used so that I can integrate Reporting Services RDL reports into WebForms and WinForms apps.
 ---
 # Get started with Report Viewer controls
 

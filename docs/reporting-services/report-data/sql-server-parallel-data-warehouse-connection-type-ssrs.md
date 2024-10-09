@@ -3,11 +3,12 @@ title: "SQL Server Parallel Data Warehouse Connection Type"
 description: Use the information in this article about the SQL Server Parallel Data Warehouse connection type to learn how to build a data source.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 05/30/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-data
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 
 # SQL Server Parallel Data Warehouse Connection Type (SSRS)
@@ -148,10 +149,9 @@ WHERE EmployeeID = (@EmpID)
  [Data Sources Supported by Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
  Provides in-depth information about platform and version support for each data extension.  
 
-## Next steps
+## Related content
 
-[Report Parameters](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
-[Filter, Group, and Sort Data](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
-[Expressions](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
-
-More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)
+- [Report Parameters](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)
+- [Filter, Group, and Sort Data](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)
+- [Expressions](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)
+- [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

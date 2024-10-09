@@ -5,7 +5,7 @@ description: Learn how to prepare your environment to create a link between SQL 
 author: sasapopo
 ms.author: sasapopo
 ms.reviewer: mathoma, danil, randolphwest
-ms.date: 08/13/2024
+ms.date: 10/03/2024
 ms.service: azure-sql-managed-instance
 ms.subservice: data-movement
 ms.custom: ignite-2023
@@ -16,7 +16,7 @@ ms.topic: how-to
 
 [!INCLUDE [appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
 
-This article teaches you how to prepare your environment for a [Managed Instance link](managed-instance-link-feature-overview.md) so that you can replicate between SQL Server and Azure SQL Managed Instance.
+This article teaches you how to prepare your environment for a [Managed Instance link](managed-instance-link-feature-overview.md) so that you can replicate between SQL Server installed to Windows or Linux and Azure SQL Managed Instance. 
 
 > [!NOTE]  
 > You can automate preparing your environment for the Managed Instance link by using a downloadable script. For more information, see the [Automating link setup blog](https://techcommunity.microsoft.com/t5/modernization-best-practices-and/automating-the-setup-of-azure-sql-managed-instance-link/ba-p/3696961).
@@ -75,8 +75,6 @@ GO
 SELECT @@VERSION as 'SQL Server version';
 ```
 
-
-
 ### Create a database master key in the `master` database
 
 Create database master key in the `master` database, if one isn't already present. Insert your password in place of `<strong_password>` in the following script, and keep it in a confidential and secure place. Run this T-SQL script on SQL Server:
@@ -102,6 +100,9 @@ SELECT * FROM sys.symmetric_keys WHERE name LIKE '%DatabaseMasterKey%';
 
 The link feature relies on the Always On availability groups feature, which is disabled by default. For more information, see [Enable the Always On availability groups feature](/sql/database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server).
 
+> [!NOTE]
+> For SQL Server on Linux, see [Enable Always On availability groups](/sql/linux/sql-server-linux-create-availability-group#enable-the-availability-groups-feature).
+
 To confirm the availability groups feature is enabled, run the following T-SQL script on SQL Server:
 
 ```sql
@@ -117,7 +118,6 @@ SELECT
     END
     as 'HADR status'
 ```
-
 
 > [!IMPORTANT]  
 > For [!INCLUDE [sssql16-md](../../docs/includes/sssql16-md.md)], if you need to enable the availability groups feature, you will need to complete extra steps documented in [Prepare SQL Server 2016 prerequisites - Azure SQL Managed Instance link](managed-instance-link-preparation-wsfc.md). These extra steps are not required for [!INCLUDE [sssql19-md](../../docs/includes/sssql19-md.md)] and later versions supported by the link.
@@ -146,6 +146,10 @@ To optimize the performance of your link, we recommend enabling the following tr
 
 - `-T1800`: This trace flag optimizes performance when the log files for the primary and secondary replicas in an availability group are hosted on disks with different sector sizes, such as 512 bytes and 4 KB. If both primary and secondary replicas have a disk sector size of 4 KB, this trace flag isn't required. For more information, see [KB3009974](https://support.microsoft.com/help/3009974).
 - `-T9567`: This trace flag enables compression of the data stream for availability groups during automatic seeding. The compression increases the load on the processor but can significantly reduce transfer time during seeding.
+
+
+> [!NOTE]
+> For SQL Server on Linux, see [Enable trace flags](/sql/linux/sql-server-linux-configure-mssql-conf#traceflags).
 
 To enable these trace flags at startup, use the following steps:
 
@@ -279,6 +283,15 @@ Follow the steps in the [Configure SSMS for government clouds](#configure-ssms-f
 
 Bidirectional network connectivity between SQL Server and SQL Managed Instance is necessary for the link to work. After you open ports on the SQL Server side and configure an NSG rule on the SQL Managed Instance side, test connectivity by using either SQL Server Management Studio (SSMS) or Transact-SQL. 
 
+Test the network by creating a temporary SQL Agent job on both SQL Server and SQL Managed Instance to check the connection between the two instances. When you use **Network Checker** in SSMS, the job is automatically created for you, and deleted after the test completes. You need to manually delete the SQL Agent job if you test your network by using T-SQL. 
+
+> [!NOTE]
+> Executing PowerShell scripts by the SQL Server Agent on SQL Server on Linux is not currently supported, so it's not currently possible to execute `Test-NetConnection` from the SQL Server Agent job on SQL Server on Linux.
+
+To use the SQL Agent to test network connectivity, you need the following requirements: 
+- The user doing the test must have [permissions to create a job](/sql/ssms/agent/configure-a-user-to-create-and-manage-sql-server-agent-jobs) (either as a **sysadmin** or belongs to the SQLAgentOperator role for `msdb`) for both SQL Server and SQL Managed Instance. 
+- The SQL Server Agent service must be [running](/sql/ssms/agent/start-stop-or-pause-the-sql-server-agent-service) on SQL Server. Since the Agent is on by default on SQL Managed Instance, no additional action is necessary.
+
 
 ### [SSMS](#tab/ssms)
 
@@ -296,13 +309,11 @@ To test network connectivity between SQL Server and SQL Managed Instance in SSMS
 1. On the **Summary** page, review the actions the wizard takes and then select **Finish** to test the connection between the two replicas. 
 1. Review the **Results** page to validate connectivity exists between the two replicas, and then select **Close** to finish. 
 
-
 ### [T-SQL](#tab/tsql)
 
 To use T-SQL to test connectivity, you have to check the connection in both directions. First, test the connection from SQL Server to SQL Managed Instance, and then test the connection from SQL Managed Instance to SQL Server.
 
 ### Test connection from SQL Server to SQL Managed Instance
-
 
 Use SQL Server Agent on SQL Server to run connectivity tests from SQL Server to SQL Managed Instance.
 
@@ -634,6 +645,9 @@ GO
 If you're linking a SQL Server database protected by Transparent Data Encryption (TDE) to a managed instance, you must migrate the corresponding encryption certificate from the on-premises or Azure VM SQL Server instance to the managed instance before using the link. For detailed steps, see [Migrate a certificate of a TDE-protected database to Azure SQL Managed Instance](tde-certificate-migrate.md).
 
 SQL Managed Instance databases that are encrypted with service-managed TDE keys can't be linked to SQL Server. You can link an encrypted database to SQL Server only if it was encrypted with a customer-managed key and the destination server has access to the same key that's used to encrypt the database. For more information, see [Set up SQL Server TDE with Azure Key Vault](/sql/relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault). 
+
+> [!NOTE]
+> Azure Key Vault is supported by SQL Server on Linux starting with [SQL Server 2022 CU 14](/troubleshoot/sql/releases/sqlserver-2022/cumulativeupdate14). 
 
 ## Install SSMS
 

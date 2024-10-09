@@ -3,11 +3,12 @@ title: "Implement a security extension"
 description: Accommodate custom security by using the Reporting Services API development platform to extend the Reporting Services security system.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 05/25/2022
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: extensions
 ms.topic: reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "security [Reporting Services], extensions"
   - "forms-based authentication [Reporting Services]"
@@ -31,8 +32,5 @@ helpviewer_keywords:
   
 ## Related content
 
-- <xref:Microsoft.ReportingServices.Interfaces>
-- [Reporting Services extensions](../../../reporting-services/extensions/reporting-services-extensions.md)   
-- [Reporting Services extension library](../../../reporting-services/extensions/reporting-services-extension-library.md)  
-  
-  
+- [Reporting Services extensions](../../../reporting-services/extensions/reporting-services-extensions.md)
+- [Reporting Services extension library](../../../reporting-services/extensions/reporting-services-extension-library.md)

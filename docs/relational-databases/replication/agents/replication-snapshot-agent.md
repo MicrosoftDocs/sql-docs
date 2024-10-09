@@ -3,11 +3,12 @@ title: "Replication Snapshot Agent"
 description: In SQL Server, the Replication Snapshot Agent prepares snapshot files, stores them in a folder, and records synchronization jobs in the distribution database.
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "10/29/2018"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "Snapshot Agent, executables"
   - "agents [SQL Server replication], Snapshot Agent"
@@ -257,7 +258,6 @@ snapshot [ -?]
   
  To start the Snapshot Agent, execute **snapshot.exe** from the command prompt. For information, see [Replication Agent Executables](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md).  
   
-## See Also  
- [Replication Agent Administration](../../../relational-databases/replication/agents/replication-agent-administration.md)  
-  
-  
+## Related content
+
+- [Replication Agent Administration](../../../relational-databases/replication/agents/replication-agent-administration.md)

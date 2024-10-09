@@ -811,7 +811,7 @@ Starting with [!INCLUDE [sql-server-2019](../../includes/sssql19-md.md)] CU5, se
 >
 > - When the database has multiple data files created, it uses `MAXTRANSFERSIZE` > 64K.
 > - When performing backup to URL to Azure Blob Storage, the default `MAXTRANSFERSIZE = 1048576` (1 MB).
-> - When perfomring backup to URL to S3-compatible object sotrage, the default `MAXTRANSFERSIZE = 10485760` (10 MB).
+> - When performing backup to URL to S3-compatible object storage, the default `MAXTRANSFERSIZE = 10485760` (10 MB).
 >
 > Even if one of these conditions applies, you must explicitly set `MAXTRANSFERSIZE` greater than 64K in your backup command in order to get the optimized backup compression algorithm, unless you are on [!INCLUDE [sql-server-2019](../../includes/sssql19-md.md)] CU5 or later.
 

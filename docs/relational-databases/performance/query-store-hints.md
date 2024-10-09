@@ -149,7 +149,7 @@ WHERE PostalCode = '98052' ORDER BY A.ModifiedDate DESC;
 
 Query Store doesn't immediately reflect query data to its system views.
 
-Identify the query in the query store system catalog views:
+Identify the query in the Query Store system catalog views:
 
 ```sql
 SELECT q.query_id, qt.query_sql_text

@@ -17,7 +17,7 @@ ms.custom:
 
 [!INCLUDE [horz-monitor-intro](~/../azure-sql/reusable-content/ce-skilling/azure/includes/azure-monitor/horizontals/horz-monitor-intro.md)]
 
-In addition to the features in this article, the SQL Server database engine has its own monitoring and diagnostic capabilities that Azure SQL Managed Instance uses, such as query store and dynamic management views (DMVs). For more information, see the following articles:
+In addition to the features in this article, the SQL Server database engine has its own monitoring and diagnostic capabilities that Azure SQL Managed Instance uses, such as Query Store and dynamic management views (DMVs). For more information, see the following articles:
 
 - [Monitor performance by using the Query Store](/sql/relational-databases/performance/monitoring-performance-by-using-the-query-store)
 - [Monitor Azure SQL Managed Instance performance using dynamic management views](monitoring-with-dmvs.md)

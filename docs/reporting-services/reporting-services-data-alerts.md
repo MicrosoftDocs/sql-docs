@@ -3,11 +3,12 @@ title: "Reporting Services data alerts"
 description: Learn how SQL Server Reporting Services data alerts help inform you about report data that is interesting or important to you.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 07/02/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: reporting-services
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 monikerRange: ">=sql-server-2016 <=sql-server-2016"
 ---
 # Reporting Services data alerts
@@ -297,24 +298,15 @@ The following list summarizes the key areas of [!INCLUDE[ssRSnoversion](../inclu
   
  Depending on which data alert user interface you use, the support for right-to-left varies. Data Alert Designer supports right-to-left script in text boxes, but the layout of the designer isn't right to left. Its layout is left to right like other tools. In an alert definition created with right-to-left text orientation and then edited in a left-to-right environment, the right-to-left text orientation is preserved when you save the alert definition. Data Alert Manager behaves the same as a SharePoint page. Its layout is right-to left, just like other SharePoint pages. Data alert messages that are based on right-to-left data alert definitions, display message text right to left and the message layout is left to right.  
   
-##  <a name="HowTo"></a> Next steps  
-  
--   [Save a report to a SharePoint library &#40;Report Builder&#41;](../reporting-services/report-builder/save-a-report-to-a-sharepoint-library-report-builder.md)  
-  
--   [Create a data alert in Data Alert Designer](../reporting-services/create-a-data-alert-in-data-alert-designer.md)  
-  
--   [Edit a data alert in Alert Designer](../reporting-services/edit-a-data-alert-in-alert-designer.md)  
-  
--   [Manage My Data Alerts in Data Alert Manager](../reporting-services/manage-my-data-alerts-in-data-alert-manager.md)  
-  
--   [Manage all data alerts on a SharePoint site in Data Alert Manager](../reporting-services/manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md)  
-  
--   [Grant permissions to users and alerting administrators](../reporting-services/grant-permissions-to-users-and-alerting-administrators.md)  
-  
 ## Related content
 
-- [Data Alert Designer](../reporting-services/data-alert-designer.md)   
-- [Data Alert Manager for alerting administrators](../reporting-services/data-alert-manager-for-alerting-administrators.md)   
-- [Data Alert Manager for SharePoint users](../reporting-services/data-alert-manager-for-sharepoint-users.md)  
-
-More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231).
+- [Data Alert Designer](../reporting-services/data-alert-designer.md)
+- [Data Alert Manager for alerting administrators](../reporting-services/data-alert-manager-for-alerting-administrators.md)
+- [Data Alert Manager for SharePoint users](../reporting-services/data-alert-manager-for-sharepoint-users.md)
+- [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)
+- [Save a report to a SharePoint library &#40;Report Builder&#41;](../reporting-services/report-builder/save-a-report-to-a-sharepoint-library-report-builder.md)
+- [Create a data alert in Data Alert Designer](../reporting-services/create-a-data-alert-in-data-alert-designer.md)
+- [Edit a data alert in Alert Designer](../reporting-services/edit-a-data-alert-in-alert-designer.md)
+- [Manage My Data Alerts in Data Alert Manager](../reporting-services/manage-my-data-alerts-in-data-alert-manager.md)
+- [Manage all data alerts on a SharePoint site in Data Alert Manager](../reporting-services/manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md)
+- [Grant permissions to users and alerting administrators](../reporting-services/grant-permissions-to-users-and-alerting-administrators.md)

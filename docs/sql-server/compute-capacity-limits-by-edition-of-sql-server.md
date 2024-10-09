@@ -84,7 +84,7 @@ You can reduce the logical core count per NUMA node in an [Azure Virtual Machine
 1. Check the number of logical cores. SMT is enabled if the ratio is 2:1 (the number of logical cores is twice the number of cores).
 
    ```powershell
-   Get-WmiObject -class win32_processor | Select-Object -Property "NumberOfCores", "NumberOfLogicalProcessors"
+   Get-CimInstance -ClassName Win32_Processor | Select-Object -Property "NumberOfCores", "NumberOfLogicalProcessors"
    ```
 
 1. Disable SMT with the following two registry changes, then reboot the VM.
@@ -97,7 +97,7 @@ You can reduce the logical core count per NUMA node in an [Azure Virtual Machine
 1. Check the number of logical cores once again. The number of logical cores should match the number of cores.
 
    ```powershell
-   Get-WmiObject -class win32_processor | Select-Object -Property "NumberOfCores", "NumberOfLogicalProcessors"
+   Get-CimInstance -ClassName Win32_Processor | Select-Object -Property "NumberOfCores", "NumberOfLogicalProcessors"
    ```
 
 ### Reduce logical core count on bare-metal instances

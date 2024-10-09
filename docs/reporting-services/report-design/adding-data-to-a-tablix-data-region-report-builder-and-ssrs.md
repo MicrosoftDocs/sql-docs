@@ -3,11 +3,12 @@ title: "Adding data to a tablix data region in a paginated report"
 description: Learn how to display detailed or grouped data, from a report dataset in a table or matrix, to a tablix data region in a paginated report.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/07/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 # Adding data to a tablix data region in a paginated report (Report Builder)
 
@@ -45,12 +46,11 @@ In paginated reports, to display data from a report dataset in a table or matrix
 ## Add an existing Tablix data region from another report  
  You can copy a data region from another report and paste it into-a new or existing report. After you paste the data region, you must ensure that the dataset the data region uses is defined. You must also ensure that the dataset fields have identical names and data types as in the original report. You can't copy datasets from one report to another, but if your reports use shared data sources, you can quickly duplicate the dataset in another report. Also you can import the query text for the queries that retrieve the data for the dataset, which makes it simple to duplicate the queries in reports. For more information, see [Report embedded datasets and shared datasets &#40;Report Builder&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).  
   
-## Related content 
- [Expressions &#40;Report Builder&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
- [Report parameters &#40;Report Builder and Report Designer&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
- [Interactive sort, document maps, and links &#40;Report Builder&#41;](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
- [Add dataset filters, data region filters, and group filters &#40;Report Builder&#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
- [Add, edit, refresh fields in the report data pane &#40;Report Builder&#41;](../../reporting-services/report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md)   
- [Add an expression &#40;Report Builder&#41;](../../reporting-services/report-design/add-an-expression-report-builder-and-ssrs.md)  
-  
-  
+## Related content
+
+- [Expressions &#40;Report Builder&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)
+- [Report parameters &#40;Report Builder and Report Designer&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)
+- [Interactive sort, document maps, and links &#40;Report Builder&#41;](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)
+- [Add dataset filters, data region filters, and group filters &#40;Report Builder&#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)
+- [Add, edit, refresh fields in the report data pane &#40;Report Builder&#41;](../../reporting-services/report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md)
+- [Add an expression &#40;Report Builder&#41;](../../reporting-services/report-design/add-an-expression-report-builder-and-ssrs.md)

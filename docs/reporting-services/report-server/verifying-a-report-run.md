@@ -3,11 +3,12 @@ title: "Verify a report run"
 description: Learn how to use log files or refer to status information that is displayed with a report to verify a report run in Report Manager.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/01/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-server
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "auditing [Reporting Services]"
   - "verifying report execution"
@@ -36,8 +37,8 @@ helpviewer_keywords:
 |A snapshot in report history.|On the **History Properties** page. For more information, see [Snapshot Options Properties Page &#40;Report Manager&#41;](/previous-versions/sql/sql-server-2016/ms189952(v=sql.130)).|1) Open the report.<br /><br /> 2) Select the **Properties** page.<br /><br /> 3) Select the **History** tab.<br /><br /> 4) Note the date and time in the **When Run** column.|  
 |A cached report.|In the schedule used to create and refresh the cached report.|1) Open the report.<br /><br /> 2) Select the **Properties** page.<br /><br /> 3) Select the **Execution** tab.<br /><br /> 4) Open the schedule.|  
   
-## Related content 
- [Reporting Services log files and sources](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)   
- [Set report processing properties](../../reporting-services/report-server/set-report-processing-properties.md)   
- [Report Manager  &#40;SSRS native mode&#41;](../web-portal-ssrs-native-mode.md)  
-  
+## Related content
+
+- [Reporting Services log files and sources](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)
+- [Set report processing properties](../../reporting-services/report-server/set-report-processing-properties.md)
+- [Report Manager  &#40;SSRS native mode&#41;](../web-portal-ssrs-native-mode.md)

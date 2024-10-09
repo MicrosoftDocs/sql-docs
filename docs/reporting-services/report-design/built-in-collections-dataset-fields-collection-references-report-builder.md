@@ -3,11 +3,12 @@ title: "Dataset Fields collection references in a paginated report"
 description: Create a dataset for display of individual or summarized values in the Report Data pane of Report Builder in a paginated report.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/01/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 # Dataset Fields collection references in a paginated report (Report Builder)
 
@@ -86,7 +87,6 @@ End Function
  If you specify a property that isn't supported for that field, the expression evaluates to **null** (**Nothing** in [!INCLUDE[visual-basic](../../includes/visual-basic-md.md)]). If a data provider doesn't support extended field properties, or if the field isn't found when the query is executed, the value for the property is **null** (**Nothing** in [!INCLUDE[visual-basic](../../includes/visual-basic-md.md)]) for properties of type **String** and **Object**, and zero (0) for properties of type **Integer**. A data processing extension might take advantage of predefined properties by optimizing queries that include this syntax.  
   
 ## Related content
- [Expression examples &#40;Report Builder&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
- [Report datasets](../../reporting-services/report-data/report-datasets-ssrs.md)  
-  
-  
+
+- [Expression examples &#40;Report Builder&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)
+- [Report datasets](../../reporting-services/report-data/report-datasets-ssrs.md)

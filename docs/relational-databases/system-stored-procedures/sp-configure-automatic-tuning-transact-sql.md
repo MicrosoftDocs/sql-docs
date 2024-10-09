@@ -78,7 +78,7 @@ The desired state of the configuration setting. *@option_value* is **varchar(60)
 
 ## Check the current configuration values
 
-You can also check to see which configuration options are set, by viewing the output of the `sys.database_automatic_tuning_configurations` catalog view. Changes to the catalog view are also written to the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] error log.
+You can also check to see which configuration options are set, by viewing the output of the [sys.database_automatic_tuning_configuration](../system-catalog-views/sys-database-automatic-tuning-configuration-transact-sql.md) catalog view. Changes to the catalog view are also written to the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] error log.
 
 ## Permissions
 

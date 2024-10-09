@@ -301,7 +301,7 @@ Hyperscale service tier premium-series and premium-series memory optimized hardw
 
 - Australia East \*\*
 - Australia Southeast
-- Brazil South
+- Brazil South \*\*,\*
 - Canada Central \*\*
 - Canada East
 - East Asia
@@ -311,9 +311,9 @@ Hyperscale service tier premium-series and premium-series memory optimized hardw
 - Germany West Central
 - India Central
 - India South
-- Japan East
+- Japan East \*\*
 - Japan West
-- Southeast Asia
+- Southeast Asia \*\*
 - Switzerland North
 - Sweden Central \*\*,\*
 - UK South \*\*

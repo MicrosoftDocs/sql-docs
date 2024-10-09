@@ -3,11 +3,12 @@ title: "Integrating into applications"
 description: Reporting Services is an open and extensible reporting platform designed to provide developers with a comprehensive set of APIs for developing solutions.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 05/14/2019
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: application-integration
 ms.topic: reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 monikerRange: "= sql-server-2016"
 ---
 # Integrating Reporting Services into applications
@@ -43,10 +44,8 @@ monikerRange: "= sql-server-2016"
  [Integrating Reporting Services by using URL access](../../reporting-services/application-integration/integrating-reporting-services-using-url-access.md)  
  Describes how to integrate [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report navigation into your existing business applications using URL access.  
   
-## Next steps
+## Related content
 
-For deciding on using URL access or the SOAP APIs, see [Choosing between URL access and SOAP in Reporting Services](choosing-between-url-access-and-soap.md).
-
-For information on the SQL Server 2017 Reporting Services REST API, see [Develop with the REST APIs for Reporting Services](../developer/rest-api.md).
-
-More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)
+- [Choosing between URL access and SOAP in Reporting Services](choosing-between-url-access-and-soap.md)
+- [Develop with the REST APIs for Reporting Services](../developer/rest-api.md)
+- [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

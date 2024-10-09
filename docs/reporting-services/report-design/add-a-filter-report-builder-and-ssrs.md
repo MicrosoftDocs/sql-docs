@@ -3,13 +3,13 @@ title: Add a filter to a Report Builder paginated report
 description: Learn how to add a filter to a dataset, data region, or group when you want to include or exclude specific values for calculations in a paginated report.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 07/19/2024
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: how-to
-ms.custom: updatefrequency5
-
-#customer intent: As a Report Builder user, I want to learn how to add filters to my reports so that I can interactively include and exclude values in my report calculations.
+ms.custom:
+  - updatefrequency5
+# customer intent: As a Report Builder user, I want to learn how to add filters to my reports so that I can interactively include and exclude values in my report calculations.
 ---
 # Add a filter to a Report Builder paginated report
 
@@ -133,9 +133,8 @@ To filter data points in a chart, you can set a filter on a category group or a 
   
 1. Select **OK**.
   
-## Related content  
+## Related content
 
 - [Add dataset filters, data region filters, and group filters to a paginated report (Report Builder)](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)
 - [Expression examples in paginated reports (Report Builder)](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)
-- [Gauges in a paginated report (Report Builder)](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)  
-  
+- [Gauges in a paginated report (Report Builder)](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)

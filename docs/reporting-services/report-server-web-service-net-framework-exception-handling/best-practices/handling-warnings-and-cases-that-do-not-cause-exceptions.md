@@ -3,11 +3,12 @@ title: "Handle warnings and cases that do not cause exceptions"
 description: Learn how to handle warnings and cases that don't cause exceptions so that appropriate action can be taken.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/06/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-server-web-service
 ms.topic: reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "exceptions [Reporting Services], warnings that don't cause"
   - "warnings [Reporting Services]"
@@ -57,9 +58,7 @@ catch (SoapException ex)
   
  Another way to handle errors is to evaluate the return values of certain methods. For example, the <xref:ReportService2010.ReportingService2010.FindItems%2A> method can be used to search for specific items in the report server database. If no items are found that match the search criteria, a null array of <xref:ReportService2010.CatalogItem> objects is returned. You should evaluate the array, check for **null**, and let the user know if no items were found.  
   
-## Related content  
- <xref:ReportService2010.CatalogItem>   
- [Introduction to exception management in Reporting Services](../../../reporting-services/report-server-web-service-net-framework-exception-handling/introducing-exception-handling-in-reporting-services.md)   
- [Reporting Services SoapException class](../../../reporting-services/report-server-web-service-net-framework-exception-handling/soapexception-class/reporting-services-soapexception-class.md)  
-  
-  
+## Related content
+
+- [Introduction to exception management in Reporting Services](../../../reporting-services/report-server-web-service-net-framework-exception-handling/introducing-exception-handling-in-reporting-services.md)
+- [Reporting Services SoapException class](../../../reporting-services/report-server-web-service-net-framework-exception-handling/soapexception-class/reporting-services-soapexception-class.md)

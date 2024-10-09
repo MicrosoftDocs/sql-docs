@@ -3,13 +3,13 @@ title: Paginated report parameters in Report Builder
 description: Learn how you can take advantage of common uses for Reporting Services paginated report parameters and their properties.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 07/3/2024
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: conceptual
-ms.custom: updatefrequency5
-
-#customer intent: As a Report Builder user, I want to learn how to use parameters so that I can control and manage my report data.
+ms.custom:
+  - updatefrequency5
+# customer intent: As a Report Builder user, I want to learn how to use parameters so that I can control and manage my report data.
 ---
 
 # Paginated report parameters in Report Builder
@@ -232,10 +232,8 @@ A secure alternative to setting parameters for employee or personal data is to s
 >
 > To mitigate the risk of inadvertently running malicious scripts, open rendered reports only from trusted sources. For more information about securing reports, see [Secure reports and resources](../../reporting-services/security/secure-reports-and-resources.md).  
 
-## <a name="bkmk_Related_Topics"></a> Related content
+## Related content
 
-- [Tutorial: Add a parameter to your report (Report Builder)](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)  
-  
-- [Report parameters concepts in paginated reports (Report Builder)](../../reporting-services/report-design/report-parameters-concepts-report-builder-and-ssrs.md)  
-  
+- [Tutorial: Add a parameter to your report (Report Builder)](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)
+- [Report parameters concepts in paginated reports (Report Builder)](../../reporting-services/report-design/report-parameters-concepts-report-builder-and-ssrs.md)
 - [Tools available in SQL Server Reporting Services](../../reporting-services/tools/reporting-services-tools.md)

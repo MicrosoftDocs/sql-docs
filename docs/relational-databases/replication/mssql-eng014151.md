@@ -3,11 +3,12 @@ title: "MSSQL_ENG014151"
 description: "MSSQL_ENG014151"
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/07/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "MSSQL_ENG014151 error"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
@@ -42,11 +43,12 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
   
 -   If the error continues to occur, increase the logging of the agent and specify an output file for the log. Depending on the context of the error, this could provide the steps leading up to the error and/or additional error messages.  
   
-## See Also  
- [Replication Agent Administration](../../relational-databases/replication/agents/replication-agent-administration.md)   
- [Errors and Events Reference &#40;Replication&#41;](../../relational-databases/replication/errors-and-events-reference-replication.md)   
- [Replication Distribution Agent](../../relational-databases/replication/agents/replication-distribution-agent.md)   
- [Replication Log Reader Agent](../../relational-databases/replication/agents/replication-log-reader-agent.md)   
- [Replication Merge Agent](../../relational-databases/replication/agents/replication-merge-agent.md)   
- [Replication Queue Reader Agent](../../relational-databases/replication/agents/replication-queue-reader-agent.md)   
- [Replication Snapshot Agent](../../relational-databases/replication/agents/replication-snapshot-agent.md)  
+## Related content
+
+- [Replication Agent Administration](../../relational-databases/replication/agents/replication-agent-administration.md)
+- [Errors and Events Reference &#40;Replication&#41;](../../relational-databases/replication/errors-and-events-reference-replication.md)
+- [Replication Distribution Agent](../../relational-databases/replication/agents/replication-distribution-agent.md)
+- [Replication Log Reader Agent](../../relational-databases/replication/agents/replication-log-reader-agent.md)
+- [Replication Merge Agent](../../relational-databases/replication/agents/replication-merge-agent.md)
+- [Replication Queue Reader Agent](../../relational-databases/replication/agents/replication-queue-reader-agent.md)
+- [Replication Snapshot Agent](../../relational-databases/replication/agents/replication-snapshot-agent.md)

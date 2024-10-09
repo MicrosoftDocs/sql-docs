@@ -3,11 +3,12 @@ title: "Distributor Information, Publications"
 description: "Distributor Information, Publications"
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "11/20/2018"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: ui-reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 f1_keywords:
   - "sql13.rep.monitor.Distributor.Publications.f1"
   - "sql13.rep.monitor.Distributor.commonjobs..f1"
@@ -152,8 +153,7 @@ The **Agents** tab displays information about the agents and maintenance jobs th
  The number of conflicts occurring at the Subscriber during the merge process.  
 
   
-## See Also  
- [Start the Replication Monitor](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
- [Monitoring Replication](../../relational-databases/replication/monitor/monitor-performance-with-replication-monitor.md)  
-  
-  
+## Related content
+
+- [Start the Replication Monitor](../../relational-databases/replication/monitor/start-the-replication-monitor.md)
+- [Monitoring Replication](../../relational-databases/replication/monitor/monitor-performance-with-replication-monitor.md)

@@ -3,11 +3,12 @@ title: "Replication Log Reader Agent"
 description: The Replication Log Reader Agent monitors SQL Server databases configured for transactional replication and copies transactions to the distribution database.
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "10/29/2018"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "Log Reader Agent, executables"
   - "Log Reader Agent, parameter reference"
@@ -211,7 +212,6 @@ logread [-?]
 |Added the **-ExtendedEventConfigFile** parameter.|  
 |Added the **-MultiSubnetFailover** parameter.|
   
-## See Also  
- [Replication Agent Administration](../../../relational-databases/replication/agents/replication-agent-administration.md)  
-  
-  
+## Related content
+
+- [Replication Agent Administration](../../../relational-databases/replication/agents/replication-agent-administration.md)

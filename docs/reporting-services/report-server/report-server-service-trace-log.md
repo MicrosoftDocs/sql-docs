@@ -3,11 +3,12 @@ title: "Report server service trace log"
 description: Learn about report server trace logs in Reporting Services, which contain detailed information for Report Server service operations.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 04/23/2019
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-server
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 
 # Report server service trace log
@@ -102,7 +103,6 @@ In previous releases of [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion
   
 ## Related content
 
-- [Reporting Services log files and sources](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)   
-- [Errors and events reference &#40;Reporting Services&#41;](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
-
-More questions? [Try the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)
+- [Reporting Services log files and sources](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)
+- [Errors and events reference &#40;Reporting Services&#41;](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)
+- [Try the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)

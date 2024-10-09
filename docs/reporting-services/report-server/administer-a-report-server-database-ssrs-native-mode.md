@@ -3,11 +3,12 @@ title: "Administer a report server database (native mode)"
 description: Learn about administering a Reporting Services deployment, including backup and restore of report server databases and managing encryption keys.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/14/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-server
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "report servers [Reporting Services], databases"
   - "renaming databases"
@@ -75,17 +76,15 @@ SET READ_COMMITTED_SNAPSHOT OFF
 ## About database versions  
  In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], explicit information about the database version isn't available. However, because database versions are always synchronized to product versions, you can use product version information to tell when the database version changed. Product version information for [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] is indicated through file version information that appears in the log files, in the headers of all SOAP calls, and when you connect to the report server URL (for example, when you open a browser to `https://localhost/reportserver`).  
   
-## Related content  
+## Related content
 
- [Create a native mode report server database  &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
- [Configure the report server service account &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
- [Configure a report server database connection  &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
- [Create a report server database  &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)   
- [Report Server Configuration Manager &#40;native mode&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
- [Backup and restore operations for Reporting Services](../../reporting-services/install-windows/backup-and-restore-operations-for-reporting-services.md)   
- [Report server database &#40;SSRS native mode&#41;](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)   
- [Reporting Services report server &#40;native mode&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
- [Store encrypted report server data &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
- [Configure and manage encryption keys &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
-  
-  
+- [Create a native mode report server database  &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)
+- [Configure the report server service account &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)
+- [Configure a report server database connection  &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)
+- [Create a report server database  &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)
+- [Report Server Configuration Manager &#40;native mode&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)
+- [Backup and restore operations for Reporting Services](../../reporting-services/install-windows/backup-and-restore-operations-for-reporting-services.md)
+- [Report server database &#40;SSRS native mode&#41;](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)
+- [Reporting Services report server &#40;native mode&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)
+- [Store encrypted report server data &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)
+- [Configure and manage encryption keys &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)

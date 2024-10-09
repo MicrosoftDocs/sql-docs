@@ -3,11 +3,12 @@ title: "Replication Agent Profiles"
 description: "Replication Agent Profiles"
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/07/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "Distribution Agent, profiles"
   - "replication [SQL Server], agents and profiles"
@@ -119,9 +120,8 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 |**-PollingInterval**|5|  
 |**-QueryTimeout**|1800|  
   
-## See Also  
- [Replication Agent Administration](../../../relational-databases/replication/agents/replication-agent-administration.md)   
- [View and Modify Replication Agent Command Prompt Parameters &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/agents/view-and-modify-replication-agent-command-prompt-parameters.md)   
- [Replication Agent Executables Concepts](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
-  
-  
+## Related content
+
+- [Replication Agent Administration](../../../relational-databases/replication/agents/replication-agent-administration.md)
+- [View and Modify Replication Agent Command Prompt Parameters &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/agents/view-and-modify-replication-agent-command-prompt-parameters.md)
+- [Replication Agent Executables Concepts](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)

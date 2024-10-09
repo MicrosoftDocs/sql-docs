@@ -257,8 +257,8 @@ SET @datetime2 = '2024-01-01 01:01:01.1111111';
 -------------------------------------------------------------------
 SELECT DATEADD(quarter, 4, @datetime2);     --2025-01-01 01:01:01.1111111
 SELECT DATEADD(month, 13, @datetime2);      --2025-02-01 01:01:01.1111111
-SELECT DATEADD(dayofyear, 365, @datetime2); --2025-01-01 01:01:01.1111111
-SELECT DATEADD(day, 365, @datetime2);       --2025-01-01 01:01:01.1111111
+SELECT DATEADD(dayofyear, 366, @datetime2); --2025-01-01 01:01:01.1111111
+SELECT DATEADD(day, 366, @datetime2);       --2025-01-01 01:01:01.1111111
 SELECT DATEADD(week, 5, @datetime2);        --2024-02-05 01:01:01.1111111
 SELECT DATEADD(weekday, 31, @datetime2);    --2024-02-01 01:01:01.1111111
 SELECT DATEADD(hour, 23, @datetime2);       --2024-01-02 00:01:01.1111111

@@ -3,11 +3,12 @@ title: "Find Text, Numbers, or Dates in a Report"
 description: Learn how to use Reporting Services to search for content in a report, such as text, numbers, and dates.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/07/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: reports
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "searching reports"
 ---
@@ -34,7 +35,6 @@ helpviewer_keywords:
   
 4.  To search for subsequent occurrences of the same value, click **Next**.  
   
-## See Also  
- [Add the Report Viewer Web Part to a Web Page &#40;Reporting Services in SharePoint Integrated Mode&#41;](../../reporting-services/report-server-sharepoint/add-the-report-viewer-web-part-to-a-web-page.md)  
-  
-  
+## Related content
+
+- [Add the Report Viewer Web Part to a Web Page &#40;Reporting Services in SharePoint Integrated Mode&#41;](../../reporting-services/report-server-sharepoint/add-the-report-viewer-web-part-to-a-web-page.md)

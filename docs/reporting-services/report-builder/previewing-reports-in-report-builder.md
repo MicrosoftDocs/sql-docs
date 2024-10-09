@@ -3,11 +3,12 @@ title: "Preview reports in Report Builder"
 description: While you create a Reporting Services paginated report, you can preview the report to verify that the report displays what you want.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 01/09/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-builder
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 # Preview reports in Report Builder
 
@@ -77,5 +78,4 @@ If a subreport used by your report is changed after your edit session was create
 - [Format report items (Report Builder)](../../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)
 - [Tables, matrices, and lists (Report Builder)](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)
 - [Charts (Report Builder)](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)
-- [Tables, matrices, and lists (Report Builder)](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)
 - [Save reports (Report Builder)](../../reporting-services/report-builder/saving-reports-report-builder.md)

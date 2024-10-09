@@ -3,11 +3,12 @@ title: "Report Parts (Report Builder)"
 description: Create tables, matrices, charts, and images to be published as separate report parts available so you can reuse them in other paginated reports in Report Builder.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/14/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 f1_keywords:
   - "10543"
 ---
@@ -133,6 +134,7 @@ Report items such as tables, matrices, charts, and images can be published as *r
   
  [Browse for Report Parts and Set a Default Folder &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md)  
   
-## See Also  
- [Report Parts and Datasets in Report Builder](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)   
- [Managing Report Parts](../../reporting-services/report-design/managing-report-parts.md) 
+## Related content
+
+- [Report Parts and Datasets in Report Builder](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)
+- [Managing Report Parts](../../reporting-services/report-design/managing-report-parts.md)

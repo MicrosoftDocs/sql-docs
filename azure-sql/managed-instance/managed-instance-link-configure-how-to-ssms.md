@@ -5,7 +5,7 @@ description: Learn how to configure a link between SQL Server and Azure SQL Mana
 author: djordje-jeremic
 ms.author: djjeremi
 ms.reviewer: mathoma, danil
-ms.date: 08/13/2024
+ms.date: 09/10/2024
 ms.service: azure-sql-managed-instance
 ms.subservice: data-movement
 ms.custom: ignite-2023, build-2024
@@ -108,6 +108,9 @@ After you create the link, your source database gets a read-only copy on your ta
    
    1. For a SQL Server initial primary, sign in to Azure, choose the subscription, resource group, and secondary SQL Server managed instance from the dropdown. Select **Login** to open the **Connect to Server** dialog box and then connect to the SQL Managed Instance you want to replicate your database to. When you see **Login successful** on the **Sign in** window, select **OK** to close window and go back to the **New Managed Instance link** wizard. 
    1. For a SQL Managed Instance initial primary, connect to the SQL Server instance you want to replicate your database to. 
+   
+   > [!NOTE]
+   > If you want establish a link to an availability group that already exists, then provide the IP address of the existing listener in the **Endpoint URL** field on the **Endpoints** tab of the **Specify Secondary Replica** page.
 
 1. After adding your secondary replica, use the tabs in the wizard to modify **Endpoint** settings if you need to, and review information about backups and the link endpoint in the remaining tabs. Select **Next** when you're ready to proceed. 
 1. If SQL Managed Instance is your initial primary, the next page in the wizard is the **Login to Azure** page. Sign in again if you need to, and then select **Next**. This page isn't available when SQL Server is your initial primary. 
@@ -131,21 +134,27 @@ Expand **Always On High Availability** and **Availability Groups** to view the d
 
 Regardless of which instance is primary, you can also right-click the linked distributed availability group on SQL Server and select **Show Dashboard** to view the dashboard for the distributed availability group, which shows the status of the linked database in the distributed availability group.
 
+## Take first transaction log backup
+
+If SQL Server is your initial primary, it's important to take the first [transaction log backup](/sql/relational-databases/backup-restore/back-up-a-transaction-log-sql-server) on SQL Server *after* initial seeding completes, when the database is no longer in the **Restoring...** state on Azure SQL Managed Instance. Then take [SQL Server transaction log backups regularly](managed-instance-link-best-practices.md#take-log-backups-regularly) to minimize excessive log growth while SQL Server is in the primary role.
+
+If SQL Managed Instance is your primary, you don't need to take any action as Azure SQL Managed Instance takes log backups automatically.
+
+## Drop a link 
+
+If you want to drop the link, either because it's no longer needed, or because it's in an irreparable state and needs to be recreated, you can do so with SQL Server Management Studio (SSMS). 
+
+You can delete the link from the following menu options in **Object Explorer** of SSMS, after connecting to your instance: 
+
+- **Always On Availability Groups** > **Availability Groups** > Right-click the distributed availability group name associated with the link > **Delete...**
+- **Databases** > Right-click the database associated with the link > **Azure SQL Managed Instance link** > **Delete...**
+
 
 ## Troubleshoot 
 
-The section provides guidance to address issues with configuring and using the link. 
-
-### Errors 
-
-If you encounter an error message when you create the link or fail over a database, select the error to open a window with additional details about the error. 
+If you encounter an error message when you create the link, select the error to open a window with additional details about the error. 
 
 If you encounter an error when working with the link, the SSMS wizard stops execution at the step that failed, and can't be restarted again. Address the issue, and, if necessary, clean up the environment to revert back to the original state by removing the distributed availability group and availability group if it was created while setting up the link. Then launch the wizard again to start over.
-
-### Inconsistent state after forced failover 
-
-Using forced failover can result in an inconsistent state between the primary and secondary replicas, causing a split brain scenario from both replicas being in the same role. Data replication fails in this state until the user resolves the situation by manually designating one replica as primary and the other replica as secondary. 
-
 
 
 ## Related content

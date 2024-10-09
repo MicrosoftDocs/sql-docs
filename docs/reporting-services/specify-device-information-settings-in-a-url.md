@@ -3,11 +3,12 @@ title: "Specify device information settings in a URL"
 description: Learn how to specify device information settings in a URL, specifically with the DeviceInfo XML element.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/16/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: reporting-services
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "device information settings [Reporting Services], URLs"
   - "URL access [Reporting Services], device information settings"
@@ -26,7 +27,5 @@ Command=Render&rs:Format=IMAGE&rc:OutputFormat=JPEG
   
 ## Related content
 
-- [URL access &#40;SSRS&#41;](../reporting-services/url-access-ssrs.md)   
-- [URL access parameter reference](../reporting-services/url-access-parameter-reference.md)  
-  
-  
+- [URL access &#40;SSRS&#41;](../reporting-services/url-access-ssrs.md)
+- [URL access parameter reference](../reporting-services/url-access-parameter-reference.md)

@@ -3,11 +3,12 @@ title: "Tutorial: Configure Transactional Replication"
 description: This tutorial teaches you how to configure Transactional Replication between two fully connected SQL Server instances.
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/14/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: tutorial
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "tutorials [SQL Server replication]"
   - "replication [SQL Server], tutorials"
@@ -228,10 +229,7 @@ For more information, see:
 - [Finding errors with the transactional replication agents](troubleshoot-tran-repl-errors.md)
 
 
-## Next steps
-You have successfully configured both your publisher and your subscriber for transactional replication. You can now insert, update, or delete data in the **Product**  table at the publisher. Then you can query the **Product** table at the subscriber to view the replicated changes. 
-
-The next article will teach you how to configure merge replication:  
+## Next step
 
 > [!div class="nextstepaction"]
 > [Tutorial: Configure replication between a server and mobile clients (merge)](tutorial-replicating-data-with-mobile-clients.md)

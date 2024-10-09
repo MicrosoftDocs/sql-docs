@@ -3,11 +3,12 @@ title: "Subscription Validation Options (Merge)"
 description: Describes the 'Subscription Validation Options' dialog box within SQL Server Management Studio (SSMS).
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/14/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: ui-reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 f1_keywords:
   - "sql13.rep.validate.mergeoptions.f1"
 helpviewer_keywords:
@@ -25,8 +26,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016"
  **Verify the row counts and compare checksums to verify the row data**  
  In addition to taking a count of rows at the Publisher and Subscriber, a checksum of all the data is calculated using the binary checksum algorithm. If the row count fails, the checksum is not performed. This option is not valid for [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEW](../../includes/ssew-md.md)].  
   
-## See Also  
- [Validate Data at the Subscriber](../../relational-databases/replication/validate-data-at-the-subscriber.md)   
- [Validate Replicated Data](../../relational-databases/replication/validate-data-at-the-subscriber.md)  
-  
-  
+## Related content
+
+- [Validate Data at the Subscriber](../../relational-databases/replication/validate-data-at-the-subscriber.md)
+- [Validate Replicated Data](../../relational-databases/replication/validate-data-at-the-subscriber.md)

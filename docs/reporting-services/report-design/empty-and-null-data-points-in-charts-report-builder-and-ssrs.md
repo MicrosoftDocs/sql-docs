@@ -3,11 +3,12 @@ title: "Empty and null data points in paginated report charts"
 description: Learn about paginated report chart processing for empty values, use of placeholders, and how empty and null data points display in Report Builder.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 05/30/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 
 # Empty and null data points in paginated report charts (Report Builder)
@@ -37,11 +38,10 @@ ms.custom: updatefrequency5
   
  This behavior differs from the case where there are zero rows of data in the returned dataset, which can occur when the report is parameterized and the selected value returns an empty result set. If your dataset query returns zero rows of data, a message is displayed at run time to indicate that no data can be shown. You can customize this message by modifying the NoDataMessage caption for the report in the **Properties** pane. For more information, see [Report Embedded Datasets and Shared Datasets &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).  
 
-## Next steps
+## Related content
 
-[Charts](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
-[Formatting a Chart](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
-[Add a Chart to a Report](../../reporting-services/report-design/add-a-chart-to-a-report-report-builder-and-ssrs.md)   
-[Troubleshoot Charts](../../reporting-services/report-design/troubleshoot-charts-report-builder-and-ssrs.md)  
-
-More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)
+- [Charts](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)
+- [Formatting a Chart](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)
+- [Add a Chart to a Report](../../reporting-services/report-design/add-a-chart-to-a-report-report-builder-and-ssrs.md)
+- [Troubleshoot Charts](../../reporting-services/report-design/troubleshoot-charts-report-builder-and-ssrs.md)
+- [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

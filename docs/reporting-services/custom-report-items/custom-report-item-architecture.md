@@ -3,11 +3,12 @@ title: "Custom report item architecture"
 description: Learn how the custom report item architecture is an extension that allows developers to add functionality that isn't natively supported in the RDL.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/04/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: custom-report-items
 ms.topic: reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "custom report items, architecture"
 ---
@@ -24,9 +25,8 @@ helpviewer_keywords:
   
 :::image type="content" source="../../reporting-services/custom-report-items/media/customreportitemdesign-timecomponentarchitecture.gif" alt-text="Diagram of a custom report item design-time component.":::
   
-## Related content  
- [Creating a custom report item run-time component](../../reporting-services/custom-report-items/creating-a-custom-report-item-run-time-component.md)   
- [Creating a custom report item design-time component](../../reporting-services/custom-report-items/creating-a-custom-report-item-design-time-component.md)   
- [How to: Deploy a custom report item](../../reporting-services/custom-report-items/how-to-deploy-a-custom-report-item.md)  
-  
-  
+## Related content
+
+- [Creating a custom report item run-time component](../../reporting-services/custom-report-items/creating-a-custom-report-item-run-time-component.md)
+- [Creating a custom report item design-time component](../../reporting-services/custom-report-items/creating-a-custom-report-item-design-time-component.md)
+- [How to: Deploy a custom report item](../../reporting-services/custom-report-items/how-to-deploy-a-custom-report-item.md)

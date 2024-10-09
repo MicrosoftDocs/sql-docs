@@ -3,11 +3,12 @@ title: "Replicate encrypted columns (SSMS)"
 description: Learn how to replicate data in encrypted columns using SQL Server Management Studio (SSMS).
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/06/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: how-to
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "encryption [SQL Server], replicating data"
   - "encryption [SQL Server replication]"
@@ -81,8 +82,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
   
  :::code language="sql" source="../codesnippet/tsql/replicate-data-in-encryp_3.sql":::
   
-## See Also  
- [View and modify replication security settings](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   
- [Create Identical Symmetric Keys on Two Servers](../../../relational-databases/security/encryption/create-identical-symmetric-keys-on-two-servers.md)  
-  
-  
+## Related content
+
+- [View and modify replication security settings](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)
+- [Create Identical Symmetric Keys on Two Servers](../../../relational-databases/security/encryption/create-identical-symmetric-keys-on-two-servers.md)

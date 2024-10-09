@@ -3,11 +3,12 @@ title: "Advanced conflict detection & resolution (Merge)"
 description: Learn advanced methods of conflict detection and resolution with Merge Replication.
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/14/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "merge replication conflict resolution [SQL Server replication], about conflict resolution"
   - "default conflict resolver"
@@ -141,6 +142,6 @@ Resolve Merge Replication Conflicts
   
 -   Replication [!INCLUDE[tsql](../../../includes/tsql-md.md)] Programming: [View Conflict Information for Merge Publications &#40;Replication Transact-SQL Programming&#41;](../view-and-resolve-data-conflicts-for-merge-publications.md)  
   
-## See Also  
- [Synchronize Data](../../../relational-databases/replication/synchronize-data.md)  
-  
+## Related content
+
+- [Synchronize Data](../../../relational-databases/replication/synchronize-data.md)

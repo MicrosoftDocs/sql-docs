@@ -3,11 +3,12 @@ title: "Execute scripts during synchronization (Replication SP)"
 description: Learn how to use Replication stored procedures to execute on-demand scripts during the synchronization process of a Transactional or Merge Publication.
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/14/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: how-to
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "synchronization [SQL Server replication], scripts"
   - "scripts [SQL Server replication], synchronization and"
@@ -34,7 +35,6 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
   
 4.  The specified script will be executed at each Subscriber when the agent next runs to synchronize the subscription.  
   
-## See Also  
- [Synchronize Data](../../relational-databases/replication/synchronize-data.md)  
-  
-  
+## Related content
+
+- [Synchronize Data](../../relational-databases/replication/synchronize-data.md)

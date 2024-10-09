@@ -3,11 +3,12 @@ title: "MSReportServer_ConfigurationSetting class"
 description: "MSReportServer_ConfigurationSetting class"
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/01/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: wmi-provider-library-reference
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "WMI provider [Reporting Services], MSReportServer_ConfigurationSetting class"
   - "MSReportServer_ConfigurationSetting class"
@@ -163,7 +164,6 @@ class Class1
   
  **Platform:** [!INCLUDE[ssRSWMIPlatform](../../includes/ssrswmiplatform-md.md)]  
   
-## Related content  
- [MSReportServer_ConfigurationSetting members](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
-  
-  
+## Related content
+
+- [MSReportServer_ConfigurationSetting members](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)

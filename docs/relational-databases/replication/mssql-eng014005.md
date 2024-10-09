@@ -3,11 +3,12 @@ title: "MSSQL_ENG014005"
 description: "MSSQL_ENG014005"
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/04/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "MSSQL_ENG014005 error"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
@@ -34,7 +35,6 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
   
  If no subscriptions appear to exist for the publication or if you see this error when you create a publication, you might have a previous subscription that was not completely cleaned up when it was removed. Execute [sp_removedbreplication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md) on the database to remove all objects and settings related to replication.  
   
-## See Also  
- [Errors and Events Reference &#40;Replication&#41;](../../relational-databases/replication/errors-and-events-reference-replication.md)  
-  
-  
+## Related content
+
+- [Errors and Events Reference &#40;Replication&#41;](../../relational-databases/replication/errors-and-events-reference-replication.md)

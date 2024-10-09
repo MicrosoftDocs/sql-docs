@@ -3,11 +3,12 @@ title: Expression examples in Report Builder paginated reports
 description: Learn how to control content and paginated report appearance using built-in functions, custom code, report and group variables, and user-defined variables in Report Builder.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 07/12/2024
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "page breaks [Reporting Services], expressions"
   - "green-bar reports [Reporting Services]"
@@ -23,8 +24,7 @@ helpviewer_keywords:
   - "page footers [Reporting Services]"
   - "dates [Reporting Services], expressions"
   - "expressions [Reporting Services], examples"
-
-#customer intent: As a Report Builder user, I want to learn how to use expressions so that I can use Visual Basic code to transform and control my reports.
+# customer intent: As a Report Builder user, I want to learn how to use expressions so that I can use Visual Basic code to transform and control my reports.
 ---
 # Expression examples in Report Builder paginated reports
 
@@ -549,7 +549,7 @@ To avoid this condition, use one of the following strategies:
   
     This code helps to avoid run-time exceptions. You can now use an expression like `=IIF(Me.Value < 0, "red", "black")` in the **Color** property of the text box to conditionally the display text based on whether the values are greater than or less than 0.  
   
-## Related content  
+## Related content
 
 - [Filter equation examples in a paginated report (Report Builder)](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md)
 - [Group expression examples in paginated reports (Report Builder)](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md)

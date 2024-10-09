@@ -3,11 +3,12 @@ title: "Bidirectional Transactional Replication"
 description: Bidirectional transactional replication lets two servers exchange changes. Each server publishes data and subscribes to a publication from the other server.
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/04/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "bidirectional replication"
   - "transactional replication, bidirectional replication"
@@ -23,7 +24,6 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 If you want to add a subscription to a bi-directional publication by using the  the fully-qualified domain name (FQDN), verify that the server name (`@@SERVERNAME`) of the subscriber returns the FQDN. If the subscriber server name does not return the FQDN, changes that originate from that subscriber may cause primary key violations. 
 
   
-## See Also  
- [Peer-to-Peer Transactional Replication](../../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)  
-  
-  
+## Related content
+
+- [Peer-to-Peer Transactional Replication](../../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)

@@ -3,11 +3,12 @@ title: "Bar charts in a paginated report"
 description: Display data horizontally with a bar chart to represent data in a paginated report with a finite start and end date in Report Builder.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/03/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 # Bar charts in a paginated report (Report Builder)
 
@@ -54,15 +55,15 @@ ms.custom: updatefrequency5
 -   If there are many data points in your dataset relative to the size of your chart, the size of the columns or bars and the spacing between them are reduced. To manually set the width of the columns in a chart, modify their width, in pixels, by modifying the **PointWidth** property. By default, this property has a value of 0.8. When you increase the width of the columns or bars in a chart, the space between each column or bar decreases.  
   
 ## Related content
- [Charts &#40;Report Builder&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [Chart types &#40;Report Builder&#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)   
- [Empty and null data points in charts &#40;Report Builder&#41;](../../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
- [Column charts &#40;Report Builder&#41;](../../reporting-services/report-design/column-charts-report-builder-and-ssrs.md)   
- [Range charts &#40;Report Builder&#41;](../../reporting-services/report-design/range-charts-report-builder-and-ssrs.md)   
- [Format series colors on a chart &#40;Report Builder&#41;](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
- [Format axis labels on a chart &#40;Report Builder&#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
- [Format the legend on a chart &#40;Report Builder&#41;](../../reporting-services/report-design/chart-legend-formatting-report-builder.md)   
- [Add bevel, emboss, and texture styles to a chart &#40;Report Builder&#41;](../../reporting-services/report-design/chart-effects-add-bevel-emboss-or-texture-report-builder.md)   
- [Tutorial: Add a bar chart to a report (Report Builder)](../tutorial-add-a-bar-chart-to-your-report-report-builder.md)   
- [Tutorial: Add a bar chart to a report](/previous-versions/sql/sql-server-2008-r2/cc281302(v=sql.105))  
-  
+
+- [Charts &#40;Report Builder&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)
+- [Chart types &#40;Report Builder&#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)
+- [Empty and null data points in charts &#40;Report Builder&#41;](../../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)
+- [Column charts &#40;Report Builder&#41;](../../reporting-services/report-design/column-charts-report-builder-and-ssrs.md)
+- [Range charts &#40;Report Builder&#41;](../../reporting-services/report-design/range-charts-report-builder-and-ssrs.md)
+- [Format series colors on a chart &#40;Report Builder&#41;](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)
+- [Format axis labels on a chart &#40;Report Builder&#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)
+- [Format the legend on a chart &#40;Report Builder&#41;](../../reporting-services/report-design/chart-legend-formatting-report-builder.md)
+- [Add bevel, emboss, and texture styles to a chart &#40;Report Builder&#41;](../../reporting-services/report-design/chart-effects-add-bevel-emboss-or-texture-report-builder.md)
+- [Tutorial: Add a bar chart to a report (Report Builder)](../tutorial-add-a-bar-chart-to-your-report-report-builder.md)
+- [Tutorial: Add a bar chart to a report](/previous-versions/sql/sql-server-2008-r2/cc281302(v=sql.105))

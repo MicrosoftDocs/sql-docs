@@ -3,11 +3,12 @@ title: "Reporting Services SharePoint service and service applications"
 description: Creating a service application in SQL Server Reporting Services SharePoint mode makes the service available and generates the service application database.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 09/25/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-server-sharepoint
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 monikerRange: ">=sql-server-2016 <=sql-server-2016"
 ---
 # Reporting Services SharePoint service and service applications
@@ -72,10 +73,7 @@ monikerRange: ">=sql-server-2016 <=sql-server-2016"
     ```  
   
 ## Related content
-  
-|Task|Link|  
-|----------|----------|  
-|Manage the settings of your service application.|[Manage a Reporting Services SharePoint service application](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md)|  
-|Backup and restore the service application and related components such as encryption keys and proxy.|[Backup and restore Reporting Services SharePoint service applications](../../reporting-services/report-server-sharepoint/backup-and-restore-reporting-services-sharepoint-service-applications.md)|  
 
-More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)
+- [Manage a Reporting Services SharePoint service application](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md)
+- [Backup and restore Reporting Services SharePoint service applications](../../reporting-services/report-server-sharepoint/backup-and-restore-reporting-services-sharepoint-service-applications.md)
+- [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

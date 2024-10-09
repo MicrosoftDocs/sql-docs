@@ -3,11 +3,12 @@ title: "View & modify Agent command prompt parameters"
 description: Learn how to view and modify the command prompt parameters used by the different Replication Agents in SQL Server.
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/14/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: how-to
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "agents [SQL Server replication], command prompt parameters"
 ---
@@ -86,9 +87,8 @@ helpviewer_keywords:
   
 6.  Click **OK** on both dialog boxes.  
   
-## See Also  
- [Replication Agent Administration](../../../relational-databases/replication/agents/replication-agent-administration.md)   
- [Replication Agent Executables Concepts](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)   
- [Replication Agents Overview](../../../relational-databases/replication/agents/replication-agents-overview.md)  
-  
-  
+## Related content
+
+- [Replication Agent Administration](../../../relational-databases/replication/agents/replication-agent-administration.md)
+- [Replication Agent Executables Concepts](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)
+- [Replication Agents Overview](../../../relational-databases/replication/agents/replication-agents-overview.md)

@@ -3,11 +3,12 @@ title: "Set the locale for a paginated report or text box"
 description: Use the Language property on a text box to provide the locale setting for formats in a paginated report that display data that differ by language and region in Report Builder.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/01/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "locales [Reporting Services]"
 ---
@@ -45,7 +46,7 @@ helpviewer_keywords:
   
     -   For the **UnicodeBiDi** property, select the level of bidirectional embedding to use in the text box.  
   
-## See Also  
- [Expression Uses in Reports &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
- [Solution Design Considerations for Multi-Lingual or Global Deployments (Reporting Services)](/previous-versions/sql/)  
-  
+## Related content
+
+- [Expression Uses in Reports &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)
+- [Solution Design Considerations for Multi-Lingual or Global Deployments (Reporting Services)](/previous-versions/sql/)

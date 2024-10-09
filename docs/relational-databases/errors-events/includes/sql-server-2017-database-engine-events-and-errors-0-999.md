@@ -1,7 +1,7 @@
 ---
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 01/11/2024
+ms.date: 10/10/2024
 ms.topic: include
 ---
 | Error | Severity | Event logged | Description |
@@ -560,7 +560,7 @@ ms.topic: include
 | 886 | 10 | Yes | Resilient buffer pool extension is already enabled. No action is necessary. |
 | 891 | 10 | Yes | Buffer pool extension is not supported on %ls platform. |
 | 893 | 10 | Yes | Failed to release latch. BUF address %p. Database ID %d. File ID %d. Page %S_PGID. |
-| [898](../mssqlserver-898-database-engine-error.md) | 10 | No | Buffer Pool scan took %I64d seconds: database ID %d, command '%ls', operation '%ls', scanned buffers %I64d, total iterated buffers %I64d, wait time %I64d ms. See 'https://go.microsoft.com/fwlink/?linkid=2132602' for more information. |
+| [898](../mssqlserver-898-database-engine-error.md) | 10 | No | Buffer Pool scan took %I64d seconds: database ID %d, command '%ls', operation '%ls', scanned buffers %I64d, total iterated buffers %I64d, wait time %I64d ms. See '[https://go.microsoft.com/fwlink/?linkid=2132602](https://go.microsoft.com/fwlink/?linkid=2132602)' for more information. |
 | 902 | 16 | No | To change the %ls, the database must be in state in which a checkpoint can be executed. |
 | 904 | 16 | No | Database %ld cannot be autostarted during server shutdown or startup. |
 | [905](../mssqlserver-905-database-engine-error.md) | 21 | Yes | Database '%.\*ls' cannot be started in this edition of SQL Server because it contains a partition function '%.\*ls'. Only Enterprise edition of SQL Server supports partitioning. |

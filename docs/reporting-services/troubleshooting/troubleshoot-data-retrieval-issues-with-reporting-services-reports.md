@@ -3,11 +3,12 @@ title: "Troubleshoot data retrieval issues with Reporting Services reports"
 description: In this article, diagnose and fix problems that occur when you retrieve report data by previewing a report locally or running a report on the report server.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 02/27/2016
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: troubleshooting
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 # Troubleshoot data retrieval issues with Reporting Services reports
 The first step during report processing is to retrieve the report data for each dataset by running the dataset query. When you preview a report locally, your data source connections and credentials must use sufficient permissions to retrieve the data to your computer. When you run a report on the report server, the data source connections and credentials must use sufficient permissions to retrieve the data on the report server. Use this article to help troubleshoot issues about report data retrieval.   
@@ -53,12 +54,8 @@ To populate the dataset field collection, do the following tasks:
 * Run the query in the query pane of the **Dataset Properties** dialog box. For more information, see [Report datasets (Report Builder 3.0 and SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md).  
 * Add fields manually. For more information, see [How to: Add, edit, refresh fields in the Report Data pane (Report Builder 3.0 and SSRS)](../../reporting-services/report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md).   
   
-## Related content  
-[Errors and events (Reporting Services)](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
-  
-  
+## Related content
 
-[!INCLUDE[feedback-qa-stackoverflow-md](../../includes/feedback-qa-stackoverflow-md.md)]
+- [Errors and events (Reporting Services)](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)
 
-
-
+[!INCLUDE [feedback-qa-stackoverflow-md](../../includes/feedback-qa-stackoverflow-md.md)]

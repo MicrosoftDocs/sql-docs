@@ -3,11 +3,12 @@ title: "Agent Profiles"
 description: "Agent Profiles"
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/01/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: ui-reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 f1_keywords:
   - "sql13.rep.profiles.perfprofiles.f1"
 helpviewer_keywords:
@@ -43,9 +44,8 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
  **Change Existing Agents**  
  Select a profile, and then click **Change Existing Agents** to specify that all existing jobs for an agent of a given type should use the selected profile. For example, if you have created a number of subscriptions to a merge publication, and you want to change the profile to specify that the Merge Agent job for each of these subscriptions should use the **Slow link agent profile**, select that profile, and then click **Change Existing Agents**.  
   
-## See Also  
- [Work with Replication Agent Profiles](../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)   
- [Replication Agents Overview](../../relational-databases/replication/agents/replication-agents-overview.md)   
- [Replication Agent Profiles](../../relational-databases/replication/agents/replication-agent-profiles.md)  
-  
-  
+## Related content
+
+- [Work with Replication Agent Profiles](../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)
+- [Replication Agents Overview](../../relational-databases/replication/agents/replication-agents-overview.md)
+- [Replication Agent Profiles](../../relational-databases/replication/agents/replication-agent-profiles.md)

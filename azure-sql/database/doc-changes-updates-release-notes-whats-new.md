@@ -6,7 +6,7 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma, randolphwest
 ms.service: azure-sql-database
-ms.date: 09/12/2024
+ms.date: 10/7/2024
 ms.subservice: service-overview
 ms.topic: whats-new
 ms.custom:
@@ -53,6 +53,7 @@ The following table lists the features of Azure SQL Database that are currently 
 | [JSON aggregate functions](/sql/relational-databases/json/json-data-sql-server?view=azuresqldb-current&preserve-view=true#json-data-from-aggregates) | Two new **json** aggregate functions `JSON_OBJECTAGG` and `JSON_ARRAYAGG` enable construction of JSON objects or arrays based on an aggregate from SQL data. For more information, see [JSON Type and aggregates preview](https://aka.ms/json-type-aggregates-public-preview). |
 | [License-free standby replica](standby-replica-how-to-configure.md) | Save on licensing costs by configuring your secondary database replica for disaster recovery standby. |
 | [Microsoft Entra nonunique name support](authentication-microsoft-entra-create-users-with-nonunique-names.md) | The [CREATE USER](/sql/t-sql/statements/create-user-transact-sql) Transact-SQL (T-SQL) syntax has been extended to include `WITH OBJECT_ID` to support creating Microsoft Entra logins and users in Azure SQL Database that have nonunique names. |
+| [Microsoft Entra server principals](authentication-azure-ad-logins.md) | Create server principals (logins) for Microsoft Entra identities to use for authentication with Azure SQL Database. |
 | [Query editor in the Azure portal](query-editor.md) | The query editor in the portal allows you to run queries against your Azure SQL Database directly from the [Azure portal](https://portal.azure.com). |
 | [SQL Analytics](/azure/azure-monitor/insights/azure-sql) | Azure SQL Analytics is an advanced cloud monitoring solution for monitoring performance of all of your Azure SQL databases at scale and across multiple subscriptions in a single view. Azure SQL Analytics collects and visualizes key performance metrics with built-in intelligence for performance troubleshooting. |
 | [UNISTR (Transact-SQL)](/sql/t-sql/functions/unistr-transact-sql) | Azure SQL Database now supports the `UNISTR` T-SQL syntax for Unicode string literals. For more information, see [UNISTR (Transact-SQL)](/sql/t-sql/functions/unistr-transact-sql).|
@@ -64,6 +65,7 @@ The following table lists features of Azure SQL Database that have been made gen
 
 | Feature | GA Month | Details |
 | --- | --- | --- |
+| [Lower auto-pause delay for serverless](serverless-tier-overview.md) |October 2024| Reduce costs by lowering the [auto-pause delay for serverless compute in Azure SQL Database](https://aka.ms/AAs7lpz). |
 | [Hyperscale elastic pools](hyperscale-elastic-pool-overview.md) | September 2024 | Manage and scale multiple Hyperscale databases in Azure SQL Database by using Hyperscale elastic pools. Hyperscale elastic pools also support Premium-series hardware and zone redundancy. For more information, see [Hyperscale Elastic Pools are now generally available](https://aka.ms/hsep-ga). |
 | [Hyperscale elastic pool maintenance window support](maintenance-window.md) | September 2024 |You can configure a non-default [maintenance window](maintenance-window.md) for a [Hyperscale elastic pool](hyperscale-elastic-pool-overview.md). For more information, read [Blog: Maintenance window support for Azure SQL Database Hyperscale elastic pools](https://aka.ms/hsep-fmw). |
 | [CURRENT_DATE Transact-SQL](/sql/t-sql/functions/current-date-transact-sql) | August 2024 |  A Transact-SQL (T-SQL) function that returns the current database system date as a date value, without the database time and time zone offset. |
@@ -85,10 +87,18 @@ The following table lists features of Azure SQL Database that have been made gen
 
 Learn about significant changes to the Azure SQL Database documentation. For previous years, see the [What's new archive](doc-changes-updates-release-notes-whats-new-archive.md).
 
+### October 2024
+
+| Changes | Details |
+| --- | --- |
+| [Lower auto-pause delay for serverless](serverless-tier-overview.md) | Reduce costs by lowering the [auto-pause delay for serverless compute in Azure SQL Database](https://aka.ms/AAs7lpz). |
+
 ### September 2024
 
 | Changes | Details |
 | --- | --- |
+| **Cross-subscription geo-replica support in the Azure portal** | You can now use Azure portal to set up active geo-replication across subscriptions, as long as both the subscriptions are in the same Microsoft Entra ID tenant. For more information, see [Tutorial: Configure active geo-replication and failover (Azure SQL Database)](active-geo-replication-configure-portal.md).|
+| **SQL Insights (preview) retirement**| [SQL Insights (preview) will be retired on 31 December 2024](https://azure.microsoft.com/updates/v2/sql-insights-retirement). We recommend that you transition to [database watcher for Azure SQL (preview)](../database-watcher-overview.md) or another database monitoring solution by that date. |
 | **Hyperscale elastic pools GA** | Manage and scale multiple Hyperscale databases in Azure SQL Database by using [Hyperscale elastic pools](hyperscale-elastic-pool-overview.md). Hyperscale elastic pools also support Premium-series hardware and zone redundancy. For more information, see [Hyperscale Elastic Pools are now generally available](https://aka.ms/hsep-ga). |
 | **Hyperscale elastic pool maintenance window support** |You can configure a non-default [maintenance window](maintenance-window.md) for a [Hyperscale elastic pool](hyperscale-elastic-pool-overview.md). For more information, read [Blog: Maintenance window support for Azure SQL Database Hyperscale elastic pools](https://aka.ms/hsep-fmw). |
 

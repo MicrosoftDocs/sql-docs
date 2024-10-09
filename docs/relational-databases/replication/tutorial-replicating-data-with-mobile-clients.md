@@ -3,7 +3,7 @@ title: "Tutorial: Configure Merge Replication"
 description: This tutorial teaches you how to configure Merge Replication between a SQL Server and a mobile client.
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "04/03/2018"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: tutorial
@@ -263,17 +263,8 @@ In this section, you start the Merge Agent to initialize the subscription by usi
     
   
   
-## Next steps  
-You have successfully configured both your publisher and your subscriber for your merge replication. You can also:
+## Related content
 
-1. Insert, update, or delete data in the **SalesOrderHeader** or **SalesOrderDetail** table at the publisher or subscriber.
-2. Repeat this procedure when network connectivity is available to synchronize data between the publisher and the subscriber.
-3. Query the **SalesOrderHeader** or **SalesOrderDetail** table at the other server to view the replicated changes.  
-  
-For more information, see:   
-- [Initialize a subscription with a snapshot](../../relational-databases/replication/initialize-a-subscription-with-a-snapshot.md)  
-- [Synchronize data](../../relational-databases/replication/synchronize-data.md)  
-- [Synchronize a pull subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md)  
-  
-  
-  
+- [Initialize a subscription with a snapshot](../../relational-databases/replication/initialize-a-subscription-with-a-snapshot.md)
+- [Synchronize data](../../relational-databases/replication/synchronize-data.md)
+- [Synchronize a pull subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md)

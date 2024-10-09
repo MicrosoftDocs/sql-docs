@@ -3,11 +3,12 @@ title: "&lt;AgentName&gt; Agent Security"
 description: "&lt;AgentName&gt; Agent Security"
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/14/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: ui-reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 f1_keywords:
   - "sql13.rep.newsubwizard.agentnameagentsecurity.f1"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
@@ -45,11 +46,10 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
   
 -   For push subscriptions, the connection can also be made under the context of a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login. The field displays one of the following: **Use login '\<Login>'**, **Impersonate '\<Domain>\\<Login\>'** or **Impersonate '\<Computer>\\<Login\>'**. [!INCLUDE[msCoName](../../includes/msconame-md.md)] recommends that all connections be made using the context of the Windows account.  
   
-## See Also  
- [View and Modify Pull Subscription Properties](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)   
- [View and Modify Push Subscription Properties](../../relational-databases/replication/view-and-modify-push-subscription-properties.md)   
- [Identity and access control for replication](../../relational-databases/replication/security/identity-and-access-control-replication.md)   
- [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md)   
- [View and modify replication security settings](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)  
-  
-  
+## Related content
+
+- [View and Modify Pull Subscription Properties](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)
+- [View and Modify Push Subscription Properties](../../relational-databases/replication/view-and-modify-push-subscription-properties.md)
+- [Identity and access control for replication](../../relational-databases/replication/security/identity-and-access-control-replication.md)
+- [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md)
+- [View and modify replication security settings](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)

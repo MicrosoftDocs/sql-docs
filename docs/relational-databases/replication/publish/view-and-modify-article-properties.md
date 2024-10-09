@@ -3,11 +3,12 @@ title: "View and Modify Article Properties"
 description: "View and Modify Article Properties"
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/14/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: how-to
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "sp_changearticle"
   - "sp_helparticle"
@@ -179,11 +180,10 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
   
  [!code-vb[HowTo#rmo_vb_ChangeMergeArticle_BLH](../../../relational-databases/replication/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_changemergearticle_blh)]  
   
-## See Also  
- [Implement a Business Logic Handler for a Merge Article](../../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)   
- [Publish Data and Database Objects](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
- [Change Publication and Article Properties](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
- [Replication System Stored Procedures Concepts](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
- [Advanced Merge Replication Conflict Detection and Resolution](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)  
-  
-  
+## Related content
+
+- [Implement a Business Logic Handler for a Merge Article](../../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)
+- [Publish Data and Database Objects](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)
+- [Change Publication and Article Properties](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)
+- [Replication System Stored Procedures Concepts](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)
+- [Advanced Merge Replication Conflict Detection and Resolution](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)

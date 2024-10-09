@@ -3,11 +3,12 @@ title: "Replication System Stored Procedures Concepts"
 description: "Replication System Stored Procedures Concepts"
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/14/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: "reference"
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "stored procedures [SQL Server replication], programming"
   - "programming [SQL Server replication], system stored procedures"
@@ -217,7 +218,8 @@ REM -- The following must be supplied on one line.
   
 -   Synchronizing a pull subscription  
   
-## See Also  
- [Replication Programming Concepts](../../../relational-databases/replication/concepts/replication-programming-concepts.md)   
- [Replication Stored Procedures &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
- [Scripting Replication](../../../relational-databases/replication/scripting-replication.md)
+## Related content
+
+- [Replication Programming Concepts](../../../relational-databases/replication/concepts/replication-programming-concepts.md)
+- [Replication Stored Procedures &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)
+- [Scripting Replication](../../../relational-databases/replication/scripting-replication.md)

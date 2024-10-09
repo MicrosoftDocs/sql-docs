@@ -3,16 +3,16 @@ title: "Data-driven subscriptions in Reporting Services"
 description: Learn how data-driven subscriptions, which provide a way to use dynamic subscription data that you retrieve from an external data source at run time.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 06/18/2024
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: subscriptions
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "subscriptions [Reporting Services], data-driven"
   - "data-driven subscriptions"
-
-#customer intent: As a SQL Server user, I want to learn how to use data-driven subscriptions so that I can manage constantly changing data from my data sources.
+# customer intent: As a SQL Server user, I want to learn how to use data-driven subscriptions so that I can manage constantly changing data from my data sources.
 ---
 # Data-driven subscriptions in Reporting Services
 
@@ -63,6 +63,5 @@ The following articles provide more information about data-driven subscriptions.
   
 ## Related content
 
-- [Subscriptions and delivery &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)  
-- [Preload the cache](../../reporting-services/report-server/preload-the-cache-report-manager.md)  
-  
+- [Subscriptions and delivery &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)
+- [Preload the cache](../../reporting-services/report-server/preload-the-cache-report-manager.md)

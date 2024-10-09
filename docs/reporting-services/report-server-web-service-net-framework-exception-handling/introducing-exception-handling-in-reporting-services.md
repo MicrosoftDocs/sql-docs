@@ -3,11 +3,12 @@ title: "Introduction to exception management in Reporting Services"
 description: Learn how to handle exceptions thrown by the Report Server Web service so you can return useful information to users when errors occur.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/14/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-server-web-service
 ms.topic: reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "Web service [Reporting Services], exception handling"
   - "errors [Reporting Services]"
@@ -28,7 +29,6 @@ helpviewer_keywords:
 |[Best practices for Reporting Services exception management](../../reporting-services/report-server-web-service-net-framework-exception-handling/best-practices/best-practices-for-reporting-services-exception-handling.md)|Provides recommendations on how to handle exceptions in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].|  
 |[Reporting Services SoapException class](../../reporting-services/report-server-web-service-net-framework-exception-handling/soapexception-class/reporting-services-soapexception-class.md)|Describes the **SoapException** class in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].|  
   
-## Related content 
- [Build application by using the Web service and the .NET framework](../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)  
-  
-  
+## Related content
+
+- [Build application by using the Web service and the .NET framework](../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)

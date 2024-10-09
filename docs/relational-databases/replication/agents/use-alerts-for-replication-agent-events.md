@@ -3,7 +3,7 @@ title: "Use Alerts for Replication Agent Events"
 description: "Use Alerts for Replication Agent Events"
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: 04/16/2024
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: how-to

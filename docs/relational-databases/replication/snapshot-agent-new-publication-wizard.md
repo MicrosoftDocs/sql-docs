@@ -3,11 +3,12 @@ title: "Snapshot Agent (New Publication Wizard)"
 description: "Snapshot Agent (New Publication Wizard)"
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/01/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: ui-reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 f1_keywords:
   - "sql13.rep.newpubwizard.configuresnapshotagent.f1"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
@@ -28,12 +29,11 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
  **Schedule the Snapshot Agent to run at the following times**  
  Accept the default schedule for running the Snapshot Agent, or click **Change** to specify a schedule.  
   
-## See Also  
- [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
- [Create and Apply the Initial Snapshot](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)   
- [View and Modify Publication Properties](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
- [Initialize a Subscription with a Snapshot](../../relational-databases/replication/initialize-a-subscription-with-a-snapshot.md)   
- [Publish Data and Database Objects](../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
- [Replication Agents Overview](../../relational-databases/replication/agents/replication-agents-overview.md)  
-  
-  
+## Related content
+
+- [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)
+- [Create and Apply the Initial Snapshot](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)
+- [View and Modify Publication Properties](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)
+- [Initialize a Subscription with a Snapshot](../../relational-databases/replication/initialize-a-subscription-with-a-snapshot.md)
+- [Publish Data and Database Objects](../../relational-databases/replication/publish/publish-data-and-database-objects.md)
+- [Replication Agents Overview](../../relational-databases/replication/agents/replication-agents-overview.md)

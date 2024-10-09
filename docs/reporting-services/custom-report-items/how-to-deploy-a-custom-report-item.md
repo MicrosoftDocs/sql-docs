@@ -3,11 +3,12 @@ title: "How to deploy a custom report item"
 description: Learn how to deploy a custom report item. Modify the report server configuration files and copy the component assemblies to the appropriate folders.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/18/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: custom-report-items
 ms.topic: reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "custom report items, deploying"
 ---
@@ -57,8 +58,7 @@ helpviewer_keywords:
   
 5.  Copy the custom report item design-time component DLL to the ```%ProgramFiles%\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies``` directory.  
   
-## Related content  
- [Reporting Services configuration files](../../reporting-services/report-server/reporting-services-configuration-files.md)   
- [Custom report item class libraries](../../reporting-services/custom-report-items/custom-report-item-class-libraries.md)  
-  
-  
+## Related content
+
+- [Reporting Services configuration files](../../reporting-services/report-server/reporting-services-configuration-files.md)
+- [Custom report item class libraries](../../reporting-services/custom-report-items/custom-report-item-class-libraries.md)

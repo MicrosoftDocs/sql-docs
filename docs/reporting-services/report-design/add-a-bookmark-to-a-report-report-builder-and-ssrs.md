@@ -3,11 +3,12 @@ title: "Add a bookmark to a paginated report"
 description: Find out how to add bookmarks to a paginated report to provide a customized table of contents or to provide customized internal navigation links in Report Builder.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/01/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 # Add a bookmark to a paginated report (Report Builder)
 
@@ -50,7 +51,7 @@ ms.custom: updatefrequency5
 1.  To test the link, select **Run** to preview the report, and then select the report item that you set this link on. 
   
 ## Related content
- [Interactive sort, document maps, and links &#40;Report Builder&#41;](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
- [Expressions &#40;Report Builder&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
- [Filter, group, and sort data &#40;Report Builder&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
-  
+
+- [Interactive sort, document maps, and links &#40;Report Builder&#41;](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)
+- [Expressions &#40;Report Builder&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)
+- [Filter, group, and sort data &#40;Report Builder&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)

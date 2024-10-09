@@ -3,11 +3,12 @@ title: "Implement the IRenderingExtension interface"
 description: Learn how to implement the IRenderingExtension interface, which transforms report data into output formats that viewers, printers, and other targets consume.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/16/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: extensions
 ms.topic: reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "IRenderingExtension interface"
   - "rendering extensions [Reporting Services], IRenderingExtension interface"
@@ -68,7 +69,5 @@ public void GetRenderingResource (CreateStream createStreamCallback, NameValueCo
   
 ## Related content
 
-- [Implement a rendering extension](../../../reporting-services/extensions/rendering-extension/implementing-a-rendering-extension.md)   
-- [Rendering extensions overview](../../../reporting-services/extensions/rendering-extension/rendering-extensions-overview.md)  
-  
-  
+- [Implement a rendering extension](../../../reporting-services/extensions/rendering-extension/implementing-a-rendering-extension.md)
+- [Rendering extensions overview](../../../reporting-services/extensions/rendering-extension/rendering-extensions-overview.md)

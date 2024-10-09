@@ -3,11 +3,12 @@ title: "HOST_NAME Values"
 description: "HOST_NAME Values"
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/06/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 f1_keywords:
   - "sql13.rep.newsubwizard.hostnamevalue.f1"
 ---
@@ -25,12 +26,11 @@ By default, the HOST_NAME() function returns the name of the computer connecting
  **Subscription properties**  
  Enter a value for each Subscriber in the **HOST_NAME Value** column or accept the default, which is the name of the Subscriber computer.  
   
-## See Also  
- [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
- [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)   
- [View and Modify Pull Subscription Properties](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)   
- [View and Modify Push Subscription Properties](../../relational-databases/replication/view-and-modify-push-subscription-properties.md)   
- [HOST_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/host-name-transact-sql.md)   
- [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)  
-  
-  
+## Related content
+
+- [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)
+- [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)
+- [View and Modify Pull Subscription Properties](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)
+- [View and Modify Push Subscription Properties](../../relational-databases/replication/view-and-modify-push-subscription-properties.md)
+- [HOST_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/host-name-transact-sql.md)
+- [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)

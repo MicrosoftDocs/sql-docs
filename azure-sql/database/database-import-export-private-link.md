@@ -4,13 +4,14 @@ description: Import or export an Azure SQL Database using Private Link without r
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma, hudequei
-ms.date: 07/29/2024
+ms.date: 09/11/2024
 ms.service: azure-sql-database
 ms.subservice: migration
 ms.topic: how-to
+ms.collection:
+  - sql-migration-content
 ms.custom:
   - sqldbrb=1
-  - sql-migration-content
 ---
 # Import or export an Azure SQL Database using private link
 
@@ -25,7 +26,9 @@ Running Import or Export requires you to set [Allow Access to Azure Services](ne
 
 ## What is import/export private link?
 
-The database import/export private link is a service managed private endpoint created by Microsoft and that is exclusively used for all communications by the database import/export process, the Azure SQL database, and related Azure Storage services. A service managed private endpoint is a private IP address within a specific virtual network and subnet. The private endpoint has to be manually approved by user in the Azure portal for both server and storage.
+The database import/export private link is a service managed private endpoint created by Microsoft and that is exclusively used for all communications by the database import/export process, the Azure SQL database, and related Azure Storage services. A service managed private endpoint is a private IP address within a specific virtual network and subnet.
+
+The private endpoint must be manually approved for both Azure SQL logical server and the Azure Blob storage, in separate steps, with details included in this tutorial.
 
 :::image type="content" source="media/database-import-export-private-link/import-export-private-link.png" alt-text="Diagram of Import Export Private link architecture." lightbox="media/database-import-export-private-link/import-export-private-link.png":::
 
@@ -49,15 +52,17 @@ Import/Export Private Link can be configured via Azure portal, PowerShell, or us
    :::image type="content" source="media/database-import-export-private-link/export-database-private-link.png" alt-text="Screenshot from the Azure portal that shows how to enable Export Private Link.":::
 1. Enter the storage account, authentication credentials, database details, and select **OK**.
 
-### 2. Approve private endpoints
+### 2. Approve private link for Azure SQL logical server
 
-#### Approve private endpoints in Private Link Center
+The new private endpoint must be approved by the user in the Private Link Center or in the Azure SQL Database.
+
+#### Option 1: Approve private endpoints in Private Link Center in Azure portal
 
 1. Go to Private Link Center in the Azure portal. In the Azure search box, search for "Private Link".
 1. Navigate to the **Private endpoints** page of the Private Link Center.
 1. Approve the private endpoints you created using the Import/Export service.
 
-#### Approve private endpoint connection on Azure SQL Database
+#### Option 2: Approve private endpoint connection on Azure SQL Database in Azure portal
 
 1. Go to the Azure SQL logical server that hosts the database.
 1. Navigate to the **Networking** page under **Security**
@@ -65,9 +70,11 @@ Import/Export Private Link can be configured via Azure portal, PowerShell, or us
 1. Select the private endpoint you want to approve.
 1. Select **Approve** to approve the connection.
 
-:::image type="content" source="media/database-import-export-private-link/approve-private-link.png" alt-text="Screenshot from the Azure portal that shows how to approve Azure SQL Database Private Link." lightbox="media/database-import-export-private-link/approve-private-link.png":::
+   :::image type="content" source="media/database-import-export-private-link/approve-private-link.png" alt-text="Screenshot from the Azure portal that shows how to approve Azure SQL Database Private Link." lightbox="media/database-import-export-private-link/approve-private-link.png":::
 
-#### Approve private endpoint connection on Azure Storage
+### 3. Approve private endpoint connection on Azure Storage
+
+Approve the new private endpoint connection for the database import BACPAC file in Azure Storage.
 
 1. Go to the storage account that hosts the blob container where the BACPAC (`.bacpac`) file exists.
 1. Open the **Private endpoint connections** page in the **Security** menu.
@@ -76,7 +83,7 @@ Import/Export Private Link can be configured via Azure portal, PowerShell, or us
 
 :::image type="content" source="media/database-import-export-private-link/approve-private-link-storage.png" alt-text="Screenshot from the Azure portal that shows how to approve Azure Storage Private Link in Azure Storage." lightbox="media/database-import-export-private-link/approve-private-link-storage.png":::
 
-### 3. Check import/export status
+### 4. Check import/export status
 
 1. After the private endpoints are approved, both in the Azure SQL server and the Azure Storage account, the database import or export job will be kicked off. Until then, the jobs will be on hold.
 1. You can check the status of database import or export jobs in **Import/Export History** page under **Data Management** section in Azure SQL server page.

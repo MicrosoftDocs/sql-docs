@@ -120,8 +120,6 @@ After link a SQL Server big data cluster, you can submit application to it.
     
 2. Click **SparkJobRun** to submit your project to the selected cluster. The **Remote Spark Job in Cluster** tab displays the job execution progress at the bottom. You can stop the application by clicking the red button.  
 
-    ![link Big Data cluster - run](./media/spark-submit-job-intellij-tool-plugin/link-ariscluster-run.png)
-
 ## Spark Console
 You can run Spark Local Console(Scala) or run Spark Livy Interactive Session Console(Scala).
 

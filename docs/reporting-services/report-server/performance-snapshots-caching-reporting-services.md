@@ -3,11 +3,12 @@ title: "Performance, snapshots, caching (Reporting Services)"
 description: Learn how to get baseline data and run tests to understand performance factors specific to your installation and to produce the results you want.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/01/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-server
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "performance [Reporting Services]"
   - "Reporting Services, performance"
@@ -53,7 +54,7 @@ helpviewer_keywords:
  [Set time-out values for report and shared dataset processing &#40;SSRS&#41;](../../reporting-services/report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md)  
  Explains how to set time outs on query and report processing.  
   
-## Related content  
- [Manage a running process](../../reporting-services/subscriptions/manage-a-running-process.md)   
- [Verify a report run](../../reporting-services/report-server/verifying-a-report-run.md)  
-  
+## Related content
+
+- [Manage a running process](../../reporting-services/subscriptions/manage-a-running-process.md)
+- [Verify a report run](../../reporting-services/report-server/verifying-a-report-run.md)

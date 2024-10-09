@@ -3,11 +3,12 @@ title: "Filter Settings"
 description: "Filter Settings"
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/04/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: ui-reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 f1_keywords:
   - "sql13.rep.monitor.filtersettings.f1"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
@@ -29,7 +30,6 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
  **Clear Filter**  
  Click this button to clear all filters that have been defined. To remove a single filter, select the filter row and press the Delete key.  
   
-## See Also  
- [Monitoring Replication](../../relational-databases/replication/monitor/monitoring-replication.md)  
-  
-  
+## Related content
+
+- [Monitoring Replication](../../relational-databases/replication/monitor/monitoring-replication.md)

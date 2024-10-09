@@ -3,11 +3,12 @@ title: "Server properties (Logging page)"
 description: Learn how to use the options on the Reporting Services page in SQL Server Management Studio. You can learn how to set limits on the report execution data that the report server collects.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 06/10/2016
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: tools
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 f1_keywords:
   - "sql13.swb.reportserver.serverproperties.logging.f1"
 ---
@@ -27,11 +28,10 @@ f1_keywords:
  **Remove log entries older than this number of days**  
  Specify the number of days after which log entries are trimmed from the report execution log. The default value is 60 days.  
   
-## Related content  
- [Set report server properties &#40;Management Studio&#41;](../../reporting-services/tools/set-report-server-properties-management-studio.md)   
- [Connect to a report server in Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
- [Reporting Services log files and sources](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)   
- [Report server in Management Studio F1 Help](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
- [Report server ExecutionLog and the ExecutionLog3 view](../../reporting-services/report-server/report-server-executionlog-and-the-executionlog3-view.md)  
-  
-  
+## Related content
+
+- [Set report server properties &#40;Management Studio&#41;](../../reporting-services/tools/set-report-server-properties-management-studio.md)
+- [Connect to a report server in Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)
+- [Reporting Services log files and sources](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)
+- [Report server in Management Studio F1 Help](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)
+- [Report server ExecutionLog and the ExecutionLog3 view](../../reporting-services/report-server/report-server-executionlog-and-the-executionlog3-view.md)

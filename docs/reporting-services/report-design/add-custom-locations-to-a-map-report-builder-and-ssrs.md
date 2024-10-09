@@ -3,11 +3,12 @@ title: "Add custom locations to a map in a paginated report"
 description: Learn how to add custom locations to a map you added to a paginated report in Report Builder.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/07/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 f1_keywords:
   - "MICROSOFT.REPORTDESIGNER.MAPPOINT.POINTTEMPLATE"
 ---
@@ -51,8 +52,7 @@ f1_keywords:
   
 1.  Select the pages and set the display properties that you want to apply to this point.  
   
-## Related content  
- [Maps &#40;Report Builder&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
- [Vary polygon, line, and point display by rules and analytical data &#40;Report Builder&#41;](../../reporting-services/report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md)  
-  
-  
+## Related content
+
+- [Maps &#40;Report Builder&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)
+- [Vary polygon, line, and point display by rules and analytical data &#40;Report Builder&#41;](../../reporting-services/report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md)

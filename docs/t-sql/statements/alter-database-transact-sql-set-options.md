@@ -999,7 +999,7 @@ Controls whether wait statistics will be captured per query.
 
 Controls the [Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md) capture policy options. Except for STALE_CAPTURE_POLICY_THRESHOLD, these options define the OR conditions that need to happen for queries to be captured in the defined Stale Capture Policy Threshold value.
 
-Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)], the `QUERY_CAPTURE_MODE = AUTO` setting captures query store details when any of the following thresholds are hit:
+Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)], the `QUERY_CAPTURE_MODE = AUTO` setting captures Query Store details when any of the following thresholds are hit:
 
 - EXECUTION_COUNT = 30 executions = execution count
 - TOTAL_COMPILE_CPU_TIME_MS = 1 second = compile time in milliseconds
@@ -3915,7 +3915,7 @@ To set the READ_COMMITTED_SNAPSHOT option, a user needs ALTER permission on the 
 SELECT name, is_auto_create_stats_on FROM sys.databases
 ```
 
-### Enable query store for a database
+### Enable Query Store for a database
 
 ```sql
 ALTER DATABASE [database_name]

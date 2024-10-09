@@ -3,11 +3,12 @@ title: "Extended Field Properties for an Analysis Services Database"
 description: Learn about extended field properties for an Analysis Services database and how to include extended field property values in your report.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/14/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-data
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 # Extended Field Properties for an Analysis Services Database (SSRS)
   The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] data processing extension supports extended field properties. Extended field properties are properties in addition to the field properties **Value** and **IsMissing** that are available on the data source and supported by the data processing extension. Extended properties do not appear in the Report Data pane as part of the field collection for a report dataset. You can include extended field property values in your report by writing expressions that specify them by name using the built-in **Fields** collection.  
@@ -140,8 +141,8 @@ CELL PROPERTIES
   
  This sorts the value of the field in its original integer data type from the data source.  
   
-## See Also  
- [Expressions &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
- [Built-in Collections in Expressions &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)   
- [Dataset Fields Collection &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
-  
+## Related content
+
+- [Expressions &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)
+- [Built-in Collections in Expressions &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)
+- [Dataset Fields Collection &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)

@@ -114,7 +114,7 @@ A query must be executed in order to allow interleaved execution to revise MSTVF
 If a plan is cleared or evicted from cache, upon query execution there is a fresh compilation that uses interleaved execution.
 A statement using `OPTION (RECOMPILE)` creates a new plan using interleaved execution and not cache it.
 
-### Interleaved execution and query store interoperability
+### Interleaved execution and Query Store interoperability
 
 Plans using interleaved execution can be forced. The plan is the version that has corrected cardinality estimates based on initial execution.
 
@@ -226,7 +226,7 @@ OPTION (USE HINT('DISABLE_DEFERRED_COMPILATION_TV'));
 
 ## Parameter Sensitivity Plan Optimization
 
-**Applies to:** [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE [sql-server-2022](../../includes/sssql22-md.md)])
+[!INCLUDE [SQL Server 2022 Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sqlserver2022-asdb-asmi.md)]
 
 Parameter Sensitivity Plan (PSP) optimization is part of the Intelligent query processing family of features. It addresses the scenario where a single cached plan for a parameterized query is not optimal for all possible incoming parameter values. This is the case with nonuniform data distributions.
 
@@ -364,7 +364,7 @@ OPTION(RECOMPILE, USE HINT('DISALLOW_BATCH_MODE'));
 
 The query processing feedback features are part of the Intelligent query processing family of features. 
 
-Query processing feedback is a process by which the query processor in SQL Server, Azure SQL Database, and Azure SQL Managed Instance uses historical data about a query's execution to decide if the query might receive help from one or more changes to the way it's compiled and executed. The performance data is collected in the [query store](tune-performance-with-the-query-store.md), with various suggestions to improve query execution. If successful, we persist these modifications to disk in memory and/or in the query store for future use. If the suggestions don't yield sufficient improvement, they're discarded, and the query continues to execute without that feedback.
+Query processing feedback is a process by which the query processor in SQL Server, Azure SQL Database, and Azure SQL Managed Instance uses historical data about a query's execution to decide if the query might receive help from one or more changes to the way it's compiled and executed. The performance data is collected in the [Query Store](tune-performance-with-the-query-store.md), with various suggestions to improve query execution. If successful, we persist these modifications to disk in memory and/or in the Query Store for future use. If the suggestions don't yield sufficient improvement, they're discarded, and the query continues to execute without that feedback.
 
 For information on which query processing feedback features are available in different releases of SQL Server, or in Azure SQL Database or Azure SQL Managed Instance, see [Intelligent query processing in SQL databases](intelligent-query-processing.md) or the following articles for each feedback feature. 
 

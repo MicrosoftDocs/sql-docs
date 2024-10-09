@@ -3,11 +3,12 @@ title: "Vary polygon, line, and point display in a paginated report by rules and
 description: Control display for polygons, lines, and points in a paginated report by setting options and rules, or by overriding options for embedded map elements in Report Builder.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/07/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 f1_keywords:
   - "10538"
   - "10537"
@@ -123,9 +124,8 @@ f1_keywords:
 |`#TOVALUE`|Displays the actual numeric value of the data field.|10000|  
 |`#FROMVALUE{N0} - #TOVALUE{N0}`|Displays the actual numeric values of the beginning of the range and end of the range.|10 - 790|  
   
-## See Also  
- [Change Map Legends, Color Scale, and Associated Rules &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)   
- [Maps &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
- [Map Wizard and Map Layer Wizard &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)  
-  
-  
+## Related content
+
+- [Change Map Legends, Color Scale, and Associated Rules &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)
+- [Maps &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)
+- [Map Wizard and Map Layer Wizard &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)

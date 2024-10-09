@@ -3,16 +3,16 @@ title: "File share delivery in Reporting Services"
 description: Learn how to set up the file share delivery extension in Reporting Services so that you can deliver a report to a folder.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 06/18/2024
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: subscriptions
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "subscriptions [Reporting Services], file share delivery"
   - "file share delivery [Reporting Services]"
-
-#customer intent: As a SQL Server user, I want learn how to use the file share delivery extension so that I can deliver my report to a folder.
+# customer intent: As a SQL Server user, I want learn how to use the file share delivery extension so that I can deliver my report to a folder.
 ---
 # File share delivery in Reporting Services
 
@@ -65,5 +65,4 @@ The following image is an example of the settings for a subscription configured 
 ## Related content
 
 - [Create and manage subscriptions for native mode report servers](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)
-- [Subscription Settings and a File Share Account (Report Server Configuration Manager)](../../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md)  
-  
+- [Subscription Settings and a File Share Account (Report Server Configuration Manager)](../../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md)

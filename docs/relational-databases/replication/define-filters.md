@@ -3,11 +3,12 @@ title: "Define Filters"
 description: "Define Filters"
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/01/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: ui-reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 f1_keywords:
   - "sql13.rep.replconflictviewer.definefilters.f1"
 helpviewer_keywords:
@@ -27,8 +28,7 @@ helpviewer_keywords:
  **Clear**  
  Click this button to clear all filters that have been previously defined.  
   
-## See Also  
- [Microsoft Replication Conflict Viewer &#40;Merge Replication&#41;](../../relational-databases/replication/microsoft-replication-conflict-viewer-merge-replication.md)   
- [Microsoft Replication Conflict Viewer &#40;Transactional Replication&#41;](../../relational-databases/replication/microsoft-replication-conflict-viewer-transactional-replication.md)  
-  
-  
+## Related content
+
+- [Microsoft Replication Conflict Viewer &#40;Merge Replication&#41;](../../relational-databases/replication/microsoft-replication-conflict-viewer-merge-replication.md)
+- [Microsoft Replication Conflict Viewer &#40;Transactional Replication&#41;](../../relational-databases/replication/microsoft-replication-conflict-viewer-transactional-replication.md)

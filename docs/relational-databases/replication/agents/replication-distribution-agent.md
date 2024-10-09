@@ -3,11 +3,12 @@ title: "Replication Distribution Agent"
 description: Move a snapshot and the transactions held in the distribution database tables to the Subscribers destination tables by using the Replication Distribution Agent.
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "10/29/2018"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "Distribution Agent, executables"
   - "agents [SQL Server replication], Distribution Agent"
@@ -305,7 +306,6 @@ distrib [-?]
 |Added the **-ExtendedEventConfigFile** parameter.|  
 |Added the **-MultiSubnetFailover** parameter.|  
   
-## See Also  
- [Replication Agent Administration](../../../relational-databases/replication/agents/replication-agent-administration.md)  
-  
-  
+## Related content
+
+- [Replication Agent Administration](../../../relational-databases/replication/agents/replication-agent-administration.md)

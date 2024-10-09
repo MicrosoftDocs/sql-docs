@@ -3,11 +3,12 @@ title: "Replicate Schema Changes"
 description: Learn how to replicate schema changes in SQL Server by using SQL Server Management Studio or Transact-SQL.
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "03/17/2017"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: how-to
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "replication [SQL Server], schema changes"
   - "schemas [SQL Server replication], replicating changes"
@@ -85,8 +86,6 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
   
 3.  (Optional) Re-enable replicating schema changes by executing [sp_changemergepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md), specifying a value of `replicate_ddl` for `@property` and a value of `1` for `@value`.  
   
-## See Also  
- [Make Schema Changes on Publication Databases](../../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)   
- [Make Schema Changes on Publication Databases](../../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)  
-  
-  
+## Related content
+
+- [Make Schema Changes on Publication Databases](../../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)

@@ -3,11 +3,12 @@ title: "rsProcessingError - Reporting Services error"
 description: "In this error reference page, learn about event ID 'rsProcessingError': Errors occurred in SQL Server Reporting Services report processing."
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/15/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: troubleshooting
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "rsProcessingError"
 ---
@@ -116,14 +117,13 @@ helpviewer_keywords:
 ### Default dataset scope for a top level text box  
  Don't use a default scope for a text box added to the report design surface when the report has more than one dataset. Use an expression that includes the name of the dataset as the scope, and an aggregate function. For example, `=First(Fields!FieldName.Value, "DataSet2")`.  
   
-## Related content  
- [Expressions &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
- [Aggregate functions reference &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)   
- [Expression examples &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
- [Report datasets &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
- [Commonly used filters &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/commonly-used-filters-report-builder-and-ssrs.md)   
- [Dataset fields collection &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
- [Custom code and assembly references in expressions in Report Designer &#40;SSRS&#41;](../../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)   
- [Parameters collection references &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/built-in-collections-parameters-collection-references-report-builder.md)  
-  
-  
+## Related content
+
+- [Expressions &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)
+- [Aggregate functions reference &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)
+- [Expression examples &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)
+- [Report datasets &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)
+- [Commonly used filters &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/commonly-used-filters-report-builder-and-ssrs.md)
+- [Dataset fields collection &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)
+- [Custom code and assembly references in expressions in Report Designer &#40;SSRS&#41;](../../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)
+- [Parameters collection references &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/built-in-collections-parameters-collection-references-report-builder.md)

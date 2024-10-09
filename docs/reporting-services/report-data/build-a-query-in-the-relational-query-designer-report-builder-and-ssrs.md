@@ -3,11 +3,12 @@ title: "Build a Query in the Relational Query Designer (Report Builder and SSRS"
 description: Learn how to build a query in the Relational Query Designer so that you can specify which data to retrieve from an external data source for a report dataset.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 04/25/2019
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-data
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 
 # Build a Query in the Relational Query Designer (Report Builder and SSRS)
@@ -84,12 +85,12 @@ A query designer helps you specify which data to retrieve from an external data 
   
  The query runs on the data source and returns example data in the Query results pane.  
   
-## See Also  
- [Report Datasets &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
- [Add Data from External Data Sources &#40;SSRS&#41;](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md)   
- [Query Design Tools &#40;SSRS&#41;](query-design-tools-ssrs.md)   
- [Create a Shared Dataset or Embedded Dataset &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
- [Report Design View &#40;Report Builder&#41;](../../reporting-services/report-builder/report-design-view-report-builder.md)   
- [Shared Dataset Design View &#40;Report Builder&#41;](../../reporting-services/report-builder/shared-dataset-design-view-report-builder.md)   
- [Reporting Services Query Designers](/previous-versions/sql/)  
-  
+## Related content
+
+- [Report Datasets &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)
+- [Add Data from External Data Sources &#40;SSRS&#41;](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md)
+- [Query Design Tools &#40;SSRS&#41;](query-design-tools-ssrs.md)
+- [Create a Shared Dataset or Embedded Dataset &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)
+- [Report Design View &#40;Report Builder&#41;](../../reporting-services/report-builder/report-design-view-report-builder.md)
+- [Shared Dataset Design View &#40;Report Builder&#41;](../../reporting-services/report-builder/shared-dataset-design-view-report-builder.md)
+- [Reporting Services Query Designers](/previous-versions/sql/)

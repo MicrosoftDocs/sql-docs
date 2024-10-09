@@ -3,11 +3,12 @@ title: "Replicate Partitioned Tables and Indexes"
 description: "Replicate Partitioned Tables and Indexes"
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "09/10/2015"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: how-to
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "partitioned indexes [SQL Server], replicating"
   - "partitioned tables [SQL Server], replicating"
@@ -95,7 +96,6 @@ SWITCH TO PartitionedTable PARTITION $PARTITION.pf_test(10);
   
  You can set these properties by using [sp_addpublication](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md) when the publication is created, or by using [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) after the publication is created. As noted earlier, merge replication does not support partition switching. To execute SWITCH PARTITION on a table that is enabled for merge replication, remove the table from the publication.  
   
-## See Also  
- [Publish Data and Database Objects](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)  
-  
-  
+## Related content
+
+- [Publish Data and Database Objects](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)

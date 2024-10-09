@@ -3,11 +3,12 @@ title: "Custom report item implementation requirements"
 description: Learn about the development and deployment requirements that you need for custom report item implementations.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/14/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: custom-report-items
 ms.topic: reference
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "custom report items"
 ---
@@ -34,10 +35,9 @@ helpviewer_keywords:
   
 -   Custom report item design-time components need to implement interfaces from the <xref:System.ComponentModel> namespace in the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. The <xref:System.ComponentModel> is documented in the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SDK documentation.  
 
-## Related content  
- [Creating a custom report item run-time component](../../reporting-services/custom-report-items/creating-a-custom-report-item-run-time-component.md)   
- [Creating a custom report item design-dime component](../../reporting-services/custom-report-items/creating-a-custom-report-item-design-time-component.md)   
- [How to: Deploy a custom report item](../../reporting-services/custom-report-items/how-to-deploy-a-custom-report-item.md)   
- [Custom report item class libraries](../../reporting-services/custom-report-items/custom-report-item-class-libraries.md)  
-  
-  
+## Related content
+
+- [Creating a custom report item run-time component](../../reporting-services/custom-report-items/creating-a-custom-report-item-run-time-component.md)
+- [Creating a custom report item design-dime component](../../reporting-services/custom-report-items/creating-a-custom-report-item-design-time-component.md)
+- [How to: Deploy a custom report item](../../reporting-services/custom-report-items/how-to-deploy-a-custom-report-item.md)
+- [Custom report item class libraries](../../reporting-services/custom-report-items/custom-report-item-class-libraries.md)

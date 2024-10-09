@@ -3,11 +3,12 @@ title: "Design first or data first when creating in Reporting Services mobile re
 description: Mobile Report Publisher supports data-first and design-first approaches to creating reports. Import all data first, or create a design, then import data.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 07/21/2022
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: mobile-reports
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 ---
 # Design first or data first when creating in Reporting Services mobile reports
 

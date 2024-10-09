@@ -3,11 +3,12 @@ title: "New shared schedule (Management Studio)"
 description: Learn how to create a new shared schedule to run published reports and subscriptions by using the options on the New Schedule page in SQL Server Management Studio.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/14/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: tools
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 f1_keywords:
   - "sql13.swb.reportserver.newschedule.f1"
 ---
@@ -53,10 +54,9 @@ f1_keywords:
  **Once**  
  Select this option to create a schedule that runs only once, on a specific date and time.  
   
-## Related content  
- [Report server in Management Studio F1 Help](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
- [Connect to a report server in Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
- [Create, modify, and delete schedules](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md)   
- [Schedules](../../reporting-services/subscriptions/schedules.md)   
- [Report server in Management Studio F1 Help](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)  
-  
+## Related content
+
+- [Report server in Management Studio F1 Help](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)
+- [Connect to a report server in Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)
+- [Create, modify, and delete schedules](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md)
+- [Schedules](../../reporting-services/subscriptions/schedules.md)

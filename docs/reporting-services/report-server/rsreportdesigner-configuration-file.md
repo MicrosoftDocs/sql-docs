@@ -3,11 +3,12 @@ title: "RSReportDesigner configuration file"
 description: Learn about the configuration file that stores settings about the rendering and data processing extensions available to Report Designer.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/20/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-server
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "Report Designer [Reporting Services], configuration file"
   - "RSReportDesigner configuration file"
@@ -63,8 +64,7 @@ helpviewer_keywords:
 |**Designer**|Enumerates the query builders that are available to Report Designer. Query builders provide a user interface for constructing queries that retrieve data used in reports. Query builders might vary for different data processing extensions. By default, Reporting Services provides one visual data tool user interface for all data processing extensions that are included in the product. However, if you're building or using non-Microsoft data processing extensions, other query builder interfaces might apply.|  
 |**PreviewProcessingServiceStartupTimeoutSeconds**|Specifies the period to wait for the preview processing service to start up before showing an error message. The default is 15 seconds.|  
   
-## Related content  
- [Reporting Services configuration files](../../reporting-services/report-server/reporting-services-configuration-files.md)   
- [Query design tools &#40;SSRS&#41;](../../reporting-services/report-data/query-design-tools-ssrs.md)  
-  
-  
+## Related content
+
+- [Reporting Services configuration files](../../reporting-services/report-server/reporting-services-configuration-files.md)
+- [Query design tools &#40;SSRS&#41;](../../reporting-services/report-data/query-design-tools-ssrs.md)

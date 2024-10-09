@@ -1,13 +1,14 @@
 ---
 title: "Tables, matrices, and lists in Report Builder paginated reports"
-description:  Learn about how tablix data regions, including tables, matrices, and lists, display paginated report data organized into rows and columns in Report Builder.
+description: Learn about how tablix data regions, including tables, matrices, and lists, display paginated report data organized into rows and columns in Report Builder.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 07/09/2024
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: conceptual
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 f1_keywords:
   - "sql13.rtp.rptdesigner.tablixgroup.f1"
   - "10045"
@@ -33,8 +34,7 @@ f1_keywords:
   - "10103"
   - "10043"
   - "sql13.rtp.rptdesigner.groupproperties.pagebreaks.f1"
-
-#customer intent: As a SQL Server user, I want to learn how to use tables, matrices, and lists in Report Builder so that I can organize my data neatly by rows and columns when I design reports.
+# customer intent: As a SQL Server user, I want to learn how to use tables, matrices, and lists in Report Builder so that I can organize my data neatly by rows and columns when I design reports.
 ---
 # Tables, matrices, and lists in Report Builder paginated reports
 
@@ -146,4 +146,3 @@ You can add totals for a group or grand totals for the data region. You can hide
 - [Add dataset filters, data region filters, and group filters to a paginated report (Report Builder)](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)
 - [Nested data regions in a paginated report (Report Builder)](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md)
 - [Link multiple data regions to the same dataset in a paginated report (Report Builder)](../../reporting-services/report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)
-  

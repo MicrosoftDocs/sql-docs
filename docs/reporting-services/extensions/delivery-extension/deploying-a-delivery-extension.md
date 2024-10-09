@@ -3,7 +3,7 @@ title: "Deploy a delivery extension"
 description: Learn how to deploy a delivery extension to a report server. See which entries to add to which configuration files so the report server locates the extension.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/16/2017
+ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: extensions
 ms.topic: reference
@@ -87,7 +87,5 @@ helpviewer_keywords:
   
 ## Related content
 
-- [Implement a delivery extension](../../../reporting-services/extensions/delivery-extension/implementing-a-delivery-extension.md)   
-- [Reporting Services extension library](../../../reporting-services/extensions/reporting-services-extension-library.md)  
-  
-  
+- [Implement a delivery extension](../../../reporting-services/extensions/delivery-extension/implementing-a-delivery-extension.md)
+- [Reporting Services extension library](../../../reporting-services/extensions/reporting-services-extension-library.md)

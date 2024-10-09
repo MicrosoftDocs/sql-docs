@@ -3,11 +3,12 @@ title: "Configure distribution database in availability group"
 description: Configure the distribution database for SQL Server replication with an Always On availability group.
 author: MikeRayMSFT
 ms.author: mikeray
-ms.date: "01/16/2019"
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: how-to
-ms.custom: updatefrequency5
+ms.custom:
+  - updatefrequency5
 helpviewer_keywords:
   - "replication [SQL Server], distribution"
   - "distribution configuration [SQL Server replication]"
@@ -423,8 +424,9 @@ EXEC master.dbo.sp_addlinkedsrvlogin @rmtsrvname = N'SQLNODE5', @useself = N'Tru
 ```
 
 ## Related content
- [Publish Data and Database Objects](../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
- [Secure the Distributor](../../relational-databases/replication/security/secure-the-distributor.md)  
- [View and Modify Distributor and Publisher Properties](view-and-modify-distributor-and-publisher-properties.md)  
- [Disable Publishing and Distribution](disable-publishing-and-distribution.md)  
- [Enable a Database for Replication (SQL Server Management Studio)](enable-a-database-for-replication-sql-server-management-studio.md) 
+
+- [Publish Data and Database Objects](../../relational-databases/replication/publish/publish-data-and-database-objects.md)
+- [Secure the Distributor](../../relational-databases/replication/security/secure-the-distributor.md)
+- [View and Modify Distributor and Publisher Properties](view-and-modify-distributor-and-publisher-properties.md)
+- [Disable Publishing and Distribution](disable-publishing-and-distribution.md)
+- [Enable a Database for Replication (SQL Server Management Studio)](enable-a-database-for-replication-sql-server-management-studio.md)

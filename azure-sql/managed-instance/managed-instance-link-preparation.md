@@ -2,8 +2,8 @@
 title: Prepare environment for link
 titleSuffix: Azure SQL Managed Instance
 description: Learn how to prepare your environment to create a link between SQL Server and Azure SQL Managed Instance
-author: sasapopo
-ms.author: sasapopo
+author: djordje-jeremic
+ms.author: djjeremi
 ms.reviewer: mathoma, danil, randolphwest
 ms.date: 10/03/2024
 ms.service: azure-sql-managed-instance
@@ -674,6 +674,18 @@ If you want to go back to the public cloud, choose **AzureCloud** from the dropd
 
 ## Related content 
 
-- [Overview of the Managed Instance link feature](managed-instance-link-feature-overview.md)
+To use the link: 
 - [Configure link between SQL Server and SQL Managed instance with SSMS](managed-instance-link-configure-how-to-ssms.md)
 - [Configure link between SQL Server and SQL Managed instance with scripts](managed-instance-link-configure-how-to-scripts.md)
+- [Fail over the link](managed-instance-link-failover-how-to.md)
+- [Migrate with the link](managed-instance-link-migrate.md)
+- [Best practices for maintaining the link](managed-instance-link-best-practices.md)
+
+To learn more about the link: 
+- [Managed Instance link overview](managed-instance-link-feature-overview.md)
+- [Disaster recovery with Managed Instance link](managed-instance-link-disaster-recovery.md)
+
+For other replication and migration scenarios, consider:
+
+- [Transactional replication with SQL Managed Instance](replication-transactional-overview.md)
+- [Log Replay Service (LRS)](log-replay-service-overview.md)

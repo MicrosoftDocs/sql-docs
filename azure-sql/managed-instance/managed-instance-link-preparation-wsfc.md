@@ -2,8 +2,8 @@
 title: Prepare environment for Managed Instance link with WSFC
 titleSuffix: Azure SQL Managed Instance
 description: Learn how to prepare your environment with WSFC for using a Managed Instance link to replicate and fail over your database to SQL Managed Instance.
-author: danimir
-ms.author: danil
+author: djordje-jeremic
+ms.author: djjeremi
 ms.reviewer: mathoma, danil
 ms.date: 06/09/2022
 ms.service: azure-sql-managed-instance
@@ -14,9 +14,9 @@ ms.topic: how-to
 # Prepare SQL Server 2016 prerequisites - Azure SQL Managed Instance link
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
 
-This article teaches you how to enable Always On with Windows Server Failover Cluster (WSFC) on your SQL Server 2016 as an extra step to [prepare your environment](managed-instance-link-preparation.md) for Managed Instance link.
+This article teaches you how to enable the Always On availability group feature with Windows Server Failover Cluster (WSFC) on your SQL Server 2016 as an extra step to [prepare your environment](managed-instance-link-preparation.md) for the Managed Instance link.
 
-Extra steps described in this guide are mandatory for SQL Server 2016 only, as this version of SQL Server can't enable availability groups without Windows Server Failover Cluster present on the host Windows OS machine. The minimum requirement to enable availability groups on SQL Server 2016 is to create a local single-node (single machine) cluster. No multiple nodes, and therefore no additional SQL Servers, are required. The link can however also support multiple-node cluster configurations as optional, in case you have this type of environment for any SQL Server version (2016-2022).
+The steps described in this article are only mandatory for SQL Server 2016, as this version of SQL Server can't enable availability groups without Windows Server Failover Cluster present on the host Windows OS machine. The minimum requirement to enable availability groups on SQL Server 2016 is to create a local single-node (single machine) cluster. No multiple nodes, and therefore no additional SQL Servers, are required. The link can however also support multiple-node cluster configurations as optional, in case you have this type of environment for any SQL Server version (2016-2022).
 
 ## Install WSFC module on Windows Server
 
@@ -140,5 +140,19 @@ GO
 
 ## Next steps
 
-- Continue environment preparation for the link by returning to [enable availability groups on your SQL Server](managed-instance-link-preparation.md#enable-availability-groups) section in prepare your environment for a link guide.
-- To learn more about configuring multiple-node WSFC (not mandatory, and only optional for the link), see [Create a failover cluster](/windows-server/failover-clustering/create-failover-cluster) guide for Windows Server.
+To use the link: 
+- [Prepare environment for the Managed Instance link](./managed-instance-link-preparation.md)
+- [Configure link between SQL Server and SQL Managed instance with SSMS](managed-instance-link-configure-how-to-ssms.md)
+- [Configure link between SQL Server and SQL Managed instance with scripts](managed-instance-link-configure-how-to-scripts.md)
+- [Fail over the link](managed-instance-link-failover-how-to.md)
+- [Migrate with the link](managed-instance-link-migrate.md)
+- [Best practices for maintaining the link](managed-instance-link-best-practices.md)
+
+To learn more about the link: 
+- [Managed Instance link overview](managed-instance-link-feature-overview.md)
+- [Disaster recovery with Managed Instance link](managed-instance-link-disaster-recovery.md)
+
+For other replication and migration scenarios, consider:
+
+- [Transactional replication with SQL Managed Instance](replication-transactional-overview.md)
+- [Log Replay Service (LRS)](log-replay-service-overview.md)

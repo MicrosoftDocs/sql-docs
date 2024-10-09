@@ -5,7 +5,7 @@ description: Learn how to configure a link between SQL Server and Azure SQL Mana
 author: djordje-jeremic
 ms.author: djjeremi
 ms.reviewer: mathoma, danil
-ms.date: 09/10/2024
+ms.date: 10/09/2024
 ms.service: azure-sql-managed-instance
 ms.subservice: data-movement
 ms.custom: devx-track-azurepowershell, devx-track-azurecli, ignite-2023, build-2024
@@ -22,13 +22,13 @@ After the link is created, you can then fail over to your secondary replica for 
 
 > [!NOTE]
 > - It's also possible to configure the link with [SQL Server Management Studio (SSMS)](managed-instance-link-configure-how-to-ssms.md). 
-> - Configuring Azure SQL Managed Instance as your initial primary is currently in preview and only supported starting with [SQL Server 2022 CU10](/troubleshoot/sql/releases/sqlserver-2022/cumulativeupdate10). 
+> - Configuring Azure SQL Managed Instance as your initial primary is supported starting with [SQL Server 2022 CU10](/troubleshoot/sql/releases/sqlserver-2022/cumulativeupdate10). 
 
 ## Overview
 
 Use the link feature to replicate databases from your initial primary to your secondary replica. For SQL Server 2022, the initial primary can be either SQL Server or Azure SQL Managed Instance. For SQL Server 2019 and earlier versions, the initial primary must be SQL Server. After the link is configured, the database from the initial primary is replicated to the secondary replica. 
 
-You can choose to leave the link in place for continuous data replication in a hybrid environment between the primary and secondary replica, or you can fail over the database to the secondary replica, to migrate to Azure, or for disaster recovery. For SQL Server 2019 and earlier versions, failing over to Azure SQL Managed Instance breaks the link and fail back is unsupported. With SQL Server 2022, you have the option to maintain the link and fail back and forth between the two replicas - this feature is currently in preview.
+You can choose to leave the link in place for continuous data replication in a hybrid environment between the primary and secondary replica, or you can fail over the database to the secondary replica, to migrate to Azure, or for disaster recovery. For SQL Server 2019 and earlier versions, failing over to Azure SQL Managed Instance breaks the link and fail back is unsupported. With SQL Server 2022, you have the option to maintain the link and fail back and forth between the two replicas. 
 
 If you plan to use your secondary managed instance for only disaster recovery, you can save on licensing costs by activating the [hybrid failover benefit](managed-instance-link-disaster-recovery.md#license-free-passive-dr-replica). 
 
@@ -38,9 +38,6 @@ Use the instructions in this article to manually set up the link between SQL Ser
 > To simplify using T-SQL scripts with the correct parameters for your environment, we strongly recommend using the Managed Instance link wizard in [SQL Server Management Studio (SSMS)](managed-instance-link-configure-how-to-ssms.md#create-link-to-replicate-database) to generate a script to create the link. On the **Summary** page of the **New Managed Instance link** window, select **Script** instead of **Finish**. 
 
 ## Prerequisites 
-
-> [!NOTE]
-> Some functionality of the link is generally available, while some is currently in preview. Review [version supportability](managed-instance-link-feature-overview.md#prerequisites) to learn more. 
 
 To replicate your databases, you need the following prerequisites: 
 
@@ -92,7 +89,7 @@ As you run scripts from this user guide, it's important not to mistake SQL Serve
 | Resolvable domain name | DNS name that can be resolved to an IP address. For example, running `nslookup sqlserver1.domain.com` should return an IP address such as 10.0.0.1. | Run `nslookup` command from the command prompt. |
 | SQL Server IP | IP address of your SQL Server. In case of multiple IPs on SQL Server, choose IP address that is accessible from Azure. | Run `ipconfig` command from the command prompt of host OS running the SQL Server. |
 
-<sup>1</sup> Configuring Azure SQL Managed Instance as your initial primary is currently in preview and only supported starting with [SQL Server 2022 CU10](/troubleshoot/sql/releases/sqlserver-2022/cumulativeupdate10).
+<sup>1</sup> Configuring Azure SQL Managed Instance as your initial primary is supported starting with [SQL Server 2022 CU10](/troubleshoot/sql/releases/sqlserver-2022/cumulativeupdate10).
 
 ## Set up database recovery and backup
 
@@ -957,9 +954,18 @@ If you encounter an error message when you create the link, review the error mes
 
 ## Related content
 
-For more information on the link feature, see the following resources:
-
-- [Fail over the link](managed-instance-link-failover-how-to.md)
-- [Managed Instance link overview](managed-instance-link-feature-overview.md)
+To use the link: 
+- [Prepare environment for the Managed Instance link](./managed-instance-link-preparation.md)
 - [Configure link between SQL Server and SQL Managed instance with SSMS](managed-instance-link-configure-how-to-ssms.md)
+- [Fail over the link](managed-instance-link-failover-how-to.md)
+- [Migrate with the link](managed-instance-link-migrate.md)
+- [Best practices for maintaining the link](managed-instance-link-best-practices.md)
+
+To learn more about the link: 
+- [Managed Instance link overview](managed-instance-link-feature-overview.md)
 - [Disaster recovery with Managed Instance link](managed-instance-link-disaster-recovery.md)
+
+For other replication and migration scenarios, consider:
+
+- [Transactional replication with SQL Managed Instance](replication-transactional-overview.md)
+- [Log Replay Service (LRS)](log-replay-service-overview.md)

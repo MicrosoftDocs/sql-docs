@@ -2,8 +2,8 @@
 title: Migrate with the link
 titleSuffix: Azure SQL Managed Instance
 description: Learn how to use the Managed Instance link to migrate your SQL Server data to Azure SQL Managed Instance.
-author: djordje-jeremic
-ms.author: djjeremi
+author: danimir
+ms.author: danil
 ms.reviewer: mathoma
 ms.date: 08/22/2024
 ms.service: azure-sql-managed-instance
@@ -95,8 +95,18 @@ To reverse a migration, follow the same steps to configure the link, but start t
 
 ## Related content
 
-For more information, see the following resources:
+To use the link: 
+- [Prepare environment for the Managed Instance link](./managed-instance-link-preparation.md)
+- [Configure link between SQL Server and SQL Managed instance with SSMS](managed-instance-link-configure-how-to-ssms.md)
+- [Configure link between SQL Server and SQL Managed instance with scripts](managed-instance-link-configure-how-to-scripts.md)
+- [Fail over the link](managed-instance-link-failover-how-to.md)
+- [Best practices for maintaining the link](managed-instance-link-best-practices.md)
 
-- [Migration overview](../migration-guides/managed-instance/sql-server-to-managed-instance-overview.md)
-- [Compare migration options](../migration-guides/managed-instance//sql-server-to-managed-instance-overview.md#compare-migration-options)
+To learn more about the link: 
 - [Managed Instance link overview](managed-instance-link-feature-overview.md)
+- [Disaster recovery with Managed Instance link](managed-instance-link-disaster-recovery.md)
+
+For other replication and migration scenarios, consider:
+
+- [Transactional replication with SQL Managed Instance](replication-transactional-overview.md)
+- [Log Replay Service (LRS)](log-replay-service-overview.md)

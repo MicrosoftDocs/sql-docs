@@ -78,7 +78,7 @@ Windows Server 2022 was released with VCRuntime version 14.28.29914.
 
 ### Known issues with Parameter Sensitive Plan optimization
 
-If you are using the [Parameter Sensitive Plan optimization](../relational-databases/performance/parameter-sensitive-plan-optimization.md) feature, please review the guidance and mitigation for known issues that  can results in exceptions during query store cleanup process. More information and details is available at [Access violation exception occurs in Query Store in SQL Server 2022 under certain conditions](../relational-databases/performance/parameter-sensitive-plan-optimization.md#access-violation-exception-occurs-in-query-store-in-sql-server-2022-under-certain-conditions).
+If you are using the [Parameter Sensitive Plan optimization](../relational-databases/performance/parameter-sensitive-plan-optimization.md) feature, please review the guidance and mitigation for known issues that  can results in exceptions during Query Store cleanup process. More information and details is available at [Access violation exception occurs in Query Store in SQL Server 2022 under certain conditions](../relational-databases/performance/parameter-sensitive-plan-optimization.md#access-violation-exception-occurs-in-query-store-in-sql-server-2022-under-certain-conditions).
 
 ### RPC calls fail with `Encrypt=Strict`
 

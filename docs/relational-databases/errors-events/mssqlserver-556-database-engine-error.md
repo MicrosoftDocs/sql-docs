@@ -28,15 +28,15 @@ helpviewer_keywords:
 
 Query store is on.
 
-The plan is removed after the query store fills up.
+The plan is removed after the Query Store fills up.
 
 ## User action
 
-Increase the size of the query store.
+Increase the size of the Query Store.
 
-Clear the procedure cache when query store comes back from READ WRITE state
+Clear the procedure cache when Query Store comes back from READ WRITE state
 
-Recompile just the INSERT EXEC statement to force it to go through the regular compile path and avoid hitting this exception due to unplanned recompilation caused by plan missing in query store.
+Recompile just the INSERT EXEC statement to force it to go through the regular compile path and avoid hitting this exception due to unplanned recompilation caused by plan missing in Query Store.
 
 For more information, see our [troubleshooting article on error 556](/troubleshoot/sql/database-design/error-556-insert-exec-failed).
   

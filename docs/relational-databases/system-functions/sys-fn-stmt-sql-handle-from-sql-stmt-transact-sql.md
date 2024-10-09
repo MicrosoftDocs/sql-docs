@@ -35,7 +35,7 @@ sys.fn_stmt_sql_handle_from_sql_stmt
 
 #### *query_sql_text*
 
-The text of the query in the query store that you want the handle of. *query_sql_text* is **nvarchar(max)** with no default.
+The text of the query in the Query Store that you want the handle of. *query_sql_text* is **nvarchar(max)** with no default.
 
 #### *query_param_type*
 
@@ -65,7 +65,7 @@ The following table lists the columns that `sys.fn_stmt_sql_handle_from_sql_stmt
 
 ## Permissions
 
-Requires `EXECUTE` permission on the database, and `DELETE` permission on the query store catalog views.
+Requires `EXECUTE` permission on the database, and `DELETE` permission on the Query Store catalog views.
 
 ## Examples
 

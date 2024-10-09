@@ -198,7 +198,7 @@ Auto-resuming is triggered if any of the following conditions are true at any ti
 |Data masking|Adding, modifying, deleting, or viewing data masking rules|
 |Transparent data encryption|Viewing state or status of transparent data encryption|
 |Vulnerability assessment|Ad hoc scans and periodic scans if enabled|
-|Query (performance) data store|Modifying or viewing query store settings|
+|Query (performance) data store|Modifying or viewing Query Store settings|
 |Performance recommendations|Viewing or applying performance recommendations|
 |Auto-tuning|Application and verification of auto-tuning recommendations such as auto-indexing|
 |Database copying|Create database as copy.<br>Export to a BACPAC file.|

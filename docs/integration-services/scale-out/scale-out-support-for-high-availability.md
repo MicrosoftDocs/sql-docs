@@ -47,8 +47,6 @@ Install SQL Server Database Engine Services, Integration Services, and Scale Out
 
 Use the same Scale Out Master certificate that you used on the primary node. Export the Scale Out Master TLS/SSL certificate on the primary node with a private key and install it to the Root certificate store of the local computer on the secondary node. Select this certificate when installing Scale Out Master on the secondary node.
 
-![HA master config 2](media/ha-master-config2.PNG)
-
 > [!NOTE]
 > You can set up multiple backup Scale Out Masters by repeating these operations for Scale Out Master on other secondary nodes.
 

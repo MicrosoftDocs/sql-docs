@@ -249,7 +249,7 @@ To modify the managed identity for a watcher, open the **Identity** page of a wa
 
 - To remove a user assigned identity from a watcher, select it in the list and select **Remove**. Once a user assigned identity is removed, you need to either add a different user assigned identity, or enable the system assigned identity.
 
-    The removed user assigned identity is not deleted from the Entra ID tenant.
+    The removed user assigned identity is not deleted from the Microsoft Entra ID tenant.
 
 Select the **Save** button to save identity changes. You cannot save identity changes if that would result in the watcher having no identity. Watchers without a valid managed identity are not supported.
 

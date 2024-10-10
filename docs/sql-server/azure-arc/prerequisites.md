@@ -171,3 +171,4 @@ For VMware clusters, review [Support on VMware](#support-on-vmware).
 ## Related content
 
 - [SQL Server enabled by Azure Arc](overview.md)
+- [Known issues: SQL Server enabled by Azure Arc](known-issues.md)

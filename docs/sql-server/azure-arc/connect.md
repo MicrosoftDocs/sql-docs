@@ -107,3 +107,4 @@ Go to **Azure Arc > SQL Server** and open the newly registered Arc-enabled SQL S
 
 - [Configure advanced data security for your SQL Server instance](configure-advanced-data-security.md)
 - [Configure best practices assessment on a [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] instance](assess.md)
+- [Known issues: SQL Server enabled by Azure Arc](known-issues.md)

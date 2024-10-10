@@ -10454,6 +10454,8 @@ items:
           href: sql-server/azure-arc/troubleshoot-telemetry-endpoint.md
         - name: Troubleshoot best practices assessment
           href: sql-server/azure-arc/troubleshoot-assessment.md
+        - name: Known issues
+          href: sql-server/azure-arc/known-issues.md
     - name: Azure Arc-enabled data services >
       href: /azure/azure-arc/data/overview
 

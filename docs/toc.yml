@@ -4425,8 +4425,6 @@ items:
       href: database-engine/install-windows/supported-version-and-edition-upgrades-2017.md
     - name: Supported Version & Edition Upgrades SQL Server 2016
       href: database-engine/install-windows/supported-version-and-edition-upgrades.md?view=sql-server-2016&preserve-view=true
-    - name: Prepare for upgrade by running Data Migration Assistant
-      href: database-engine/install-windows/prepare-for-upgrade-by-running-data-migration-assistant.md
     - name: Analysis Services
       href: database-engine/install-windows/upgrade-analysis-services.md
     - name: Data Quality Services

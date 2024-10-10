@@ -8,15 +8,14 @@ ms.date: 09/09/2024
 ms.topic: conceptual
 ---
 
-# Move SQL Server enabled by Azure Arc resources to a new resource group or subscription (preview)
+# Move SQL Server enabled by Azure Arc resources to a new resource group or subscription
 
-This article describes how you can move resources to a new resource group or subscription by using [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)]. The capability applies to both SQL Server instances and databases.
+This article describes how you can move resources to a new resource group or subscription with SQL Server enabled by Azure Arc. The capability applies to both:
 
-At this time, this feature is available for preview.
+- SQL Server instances
+- Databases
 
-[!INCLUDE [azure-arc-sql-preview](includes/azure-arc-sql-preview.md)]
-
-## Prerequsites
+## Requirements
 
 To complete this task, make sure that the *Machine - Azure Arc* resource and all SQL Server instances are in the same resource group.
 

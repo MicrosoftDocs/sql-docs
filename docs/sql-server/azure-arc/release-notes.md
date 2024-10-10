@@ -23,6 +23,22 @@ This article lists:
 
 Extension versions are cumulative. Higher extension versions include all of the updates from previous versions. A release might include internal features. If the version release notes don't describe features, then the updates were internal.
 
+## October 8, 2024
+
+**Extension version**: `1.1.2830.214`
+
+### Move resources
+
+- Move instances or databases to a different subscription or resource group - general availability. Review [Move SQL Server enabled by Azure Arc resources to a new resource group or subscription](move-resources.md).
+
+### Additional services inventory
+
+Inventory additional service resources in portal (preview):
+
+- [!INCLUDE [SQL Server](../../includes/ssnoversion-md.md)] [!INCLUDE [Analysis Services](../../includes/ssasnoversion-md.md)]
+- [!INCLUDE [SQL Server](../../includes/ssnoversion-md.md)] [!INCLUDE [Integration Services](../../includes/ssisnoversion-md.md)]
+- [!INCLUDE [SQL Server](../../includes/ssnoversion-md.md)] [!INCLUDE [Reporting Services](../../includes/ssrsnoversion-md.md)]
+
 ## September 9, 2024
 
 **Extension version**: `1.1.2803.208`

@@ -18,7 +18,7 @@ dev_langs:
 # MSagent_profiles (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  The **MSagent_profiles** table contains one row for each defined replication agent profile. This table is stored in the **msdb** database.  
+  The **MSagent_profiles** table contains one row for each defined replication agent profile. This table is stored in the **msdb** database on the distributor server.  
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  

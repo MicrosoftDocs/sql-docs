@@ -254,9 +254,9 @@ To modify the managed identity for a watcher, open the **Identity** page of a wa
 Select the **Save** button to save identity changes. You cannot save identity changes if that would result in the watcher having no identity. Watchers without a valid managed identity are not supported.
 
 > [!TIP]
-> We recommend that the display name of the watcher managed identity is unique within your Entra ID tenant. You can choose a unique name when creating a user assigned identity for watchers.
+> We recommend that the display name of the watcher managed identity is unique within your Microsoft Entra ID tenant. You can choose a unique name when creating a user assigned identity for watchers.
 >
-> The display name of the system assigned identity is the same as the watcher name. If you use the system assigned identity, make sure that the watcher name is unique within your Entra ID tenant.
+> The display name of the system assigned identity is the same as the watcher name. If you use the system assigned identity, make sure that the watcher name is unique within your Microsoft Entra ID tenant.
 >
 > If the managed identity display name is not unique, the [T-SQL script](#grant-access-to-microsoft-entra-authenticated-watchers) to grant the watcher access to SQL targets fails with a duplicate display name error. For more information and for a workaround, see [Microsoft Entra logins and users with nonunique display names](./database/authentication-microsoft-entra-create-users-with-nonunique-names.md).
 

@@ -4,7 +4,7 @@ description: This article contains the release notes and supported features for 
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: amitkh, vanto
-ms.date: 10/08/2024
+ms.date: 10/10/2024
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
@@ -81,6 +81,9 @@ If you update existing [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] p
 ## Release history
 
 The following table lists the release history for [!INCLUDE [ssSQL22](../includes/sssql22-md.md)].
+
+> [!NOTE]  
+> Any missing GDRs apply to the Windows version only.
 
 | Release                                                                  | Version       | Release date |
 | ------------------------------------------------------------------------ | ------------- | ------------ |

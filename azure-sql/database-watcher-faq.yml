@@ -5,7 +5,7 @@ metadata:
   description: Frequently asked questions about database watcher for Azure SQL
   author: dimitri-furman
   ms.author: dfurman
-  ms.date: 09/19/2024
+  ms.date: 10/07/2024
   ms.reviewer: wiassaf
   ms.service: azure-sql
   ms.subservice: monitoring
@@ -78,11 +78,7 @@ sections:
 
       - question: |
           Does a watcher have an identity I can use to grant it access to my Azure resources?
-        answer: Yes. A system-assigned managed identity is automatically assigned to a watcher when it is created, and is deleted when a watcher is deleted. Grant access to this managed identity to allow a watcher to [collect](database-watcher-manage.md#grant-access-to-sql-targets) and [ingest](database-watcher-manage.md#grant-access-to-data-store) data. Revoke access at any time to stop collection of monitoring data.
-
-      - question: |
-          Can a watcher have a user-assigned managed identity?
-        answer: Not at this time. For planned improvements to database watcher, see the roadmap section in the database watcher [preview announcement](https://aka.ms/dbwatcher-preview-announcement).
+        answer: Yes. You can use either a system assigned or a user assigned managed identity for a watcher. Grant access to this identity to allow a watcher to [collect](database-watcher-manage.md#grant-access-to-sql-targets) and [ingest](database-watcher-manage.md#grant-access-to-data-store) data. Revoke access at any time to stop collection of monitoring data.
 
       - question: |
           Are there any built-in RBAC roles or actions specific to database watcher?

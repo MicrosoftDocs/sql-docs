@@ -58576,6 +58576,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "docs/database-engine/install-windows/prepare-for-upgrade-by-running-data-migration-assistant.md",
+      "redirect_url": "/sql/ssma/sql-server-migration-assistant",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "docs/t-sql/data-types/index.md",
       "redirect_url": "/sql/t-sql/data-types/data-types-transact-sql",
       "redirect_document_id": false

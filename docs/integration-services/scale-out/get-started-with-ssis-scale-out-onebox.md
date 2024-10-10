@@ -32,9 +32,7 @@ In the SQL Server installation wizard, on the **Feature Selection** page, select
 
 On the **Server Configuration** page, click **Next** to accept the default service accounts and startup types.
 
-On the **Database Engine Configuration** page, select **Mixed Mode** and click **Add Current User**. 
-
-![Engine Configuration](media/engine-config.PNG)
+On the **Database Engine Configuration** page, select **Mixed Mode** and select **Add Current User**.
 
 On the **Integration Services Scale Out Configuration - Master Node** and **Integration Services Scale Out Configuration - Worker Node** pages, click **Next** to accept the default settings for the port and certificates.
 

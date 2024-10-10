@@ -76,8 +76,6 @@ If validation succeeds, Scale Out Manager tries to read the  worker server confi
 
 After gathering information, Scale Out Manager describes the actions to be performed. Typically, these actions include installing the certificate, updating the worker service configuration file, and restarting the worker service.
 
-![Portal Add Confirm 1](media/portal-add-confirm1-new.PNG)
-
 In case the worker setting is not accessible, you have to update it manually and restart the worker service.
 
 ![Portal Add Confirm 2](media/portal-add-confirm2-new.PNG)

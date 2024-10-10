@@ -103,8 +103,6 @@ To install the Scale Out Worker feature, use the [!INCLUDE[ssNoVersion_md](../..
     - For a **single-computer** environment, the endpoint is automatically generated when Scale Out Master and Scale Out Worker are installed at the same time. 
 
     - For a **multiple-computer** environment, the endpoint consists of the name or IP of the computer with Scale Out Master installed and the port number specified during the Scale Out Master installation.
-   
-    ![Worker Config 1](media/worker-config.PNG "Worker Config 1")    
 
     > [!NOTE]
     > You can also skip Worker configuration at this point and associate the Scale Out Worker with the Scale Out Master by using [Scale Out Manager](integration-services-ssis-scale-out-manager.md) after installation.

@@ -1,6 +1,6 @@
 ---
 title: "Known issues: SQL Server enabled by Azure Arc"
-description: "Describes current behavior that is not expected for SQL Server enabled by Azure Arc."
+description: "Describes current behavior that isn't expected for SQL Server enabled by Azure Arc."
 author: MikeRayMSFT
 ms.author: mikeray
 # ms.service: [the approved service name] Defined in the docfx.json
@@ -15,7 +15,7 @@ This article provides information about known issues associated with SQL Server 
 
 ## Databases
 
-If a database is not online and updatable, required permissions won't be assigned to that database. Features requiring permissions to that database will be impacted.
+If a database isn't online and updatable, required permissions won't be assigned to that database. Features requiring permissions to that database will be impacted.
 
 ### Resolution
 

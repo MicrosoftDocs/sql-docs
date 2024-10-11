@@ -76,6 +76,14 @@ conceptualContent:
         - text: Azure SQL Database
           url: /azure/azure-sql/migration-guides/database/access-to-sql-database-guide
           itemType: how-to-guide
+    - title: "SAP ASE to"
+      links:
+        - text: SQL Server
+          url: /sql/sql-server/migrate/guides/sap-ase-to-sql-server
+          itemType: how-to-guide
+        - text: Azure SQL Database
+          url: /azure/azure-sql/migration-guides/database/sap-ase-to-sql-database
+          itemType: how-to-guide
     - title: "MySQL to"
       links:
         - text: Azure Database for MySQL
@@ -104,14 +112,12 @@ conceptualContent:
         - text: AWS RDS PostgreSQL to Azure Database for PostgreSQL
           url: /azure/postgresql/migrate/migration-service/tutorial-migration-service-aws-offline
           itemType: tutorial
-    - title: "SAP ASE to"
-      links:
-        - text: SQL Server
-          url: /sql/sql-server/migrate/guides/sap-ase-to-sql-server
-          itemType: how-to-guide
-        - text: Azure SQL Database
-          url: /azure/azure-sql/migration-guides/database/sap-ase-to-sql-database
-          itemType: how-to-guide
+        - text: Amazon Aurora PostgreSQL to Azure Database for PostgreSQL
+          url: /azure/postgresql/migrate/migration-service/tutorial-migration-service-aurora-offline
+          itemType: tutorial
+        - text: Google Cloud SQL for PostgreSQL to Azure Database for PostgreSQL
+          url: /azure/postgresql/migrate/migration-service/tutorial-migration-service-cloud-sql-offline
+          itemType: tutorial
     - title: "NoSQL"
       links:
         - text: Relational to Azure Cosmos DB

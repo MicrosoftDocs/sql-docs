@@ -387,7 +387,7 @@ resources
             , Model = tostring(properties.detectedProperties.model)
             , Manufacturer = tostring(properties.detectedProperties.manufacturer)
             , License_Type = tostring(properties1.settings.LicenseType)
-            , ESU = iff(notnull(properties.settings.enableExtendedSecurityUpdates), iff(properties.settings.enableExtendedSecurityUpdates == true,"enabled","disabled"), "not configured")
+            , ESU = iff(notnull(properties1.settings.enableExtendedSecurityUpdates), iff(properties1.settings.enableExtendedSecurityUpdates == true,"enabled","not enabled"), "not enabled")
             , OS = tostring(properties.osName)
             , Uses_UV = tostring(properties1.settings.UsePhysicalCoreLicense.IsApplied)
             , Cores = tostring(billableCores)
@@ -395,7 +395,7 @@ resources
             | summarize by name, subscriptionId, resourceGroup, Model, Manufacturer, License_Type, ESU, OS, Cores, Status
             | project Name = name, Model, Manufacturer, OperatingSystem = OS, Status, HostLicenseType = License_Type, ESU, BillableCores = Cores, SubscriptionID = subscriptionId, ResourceGroup = resourceGroup
             | order by Name asc
-   ```
+```
 
 ## <a id="manage-pcore-license"></a> Manage the unlimited virtualization benefit for SQL Server
 

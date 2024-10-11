@@ -1,8 +1,8 @@
 ---
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 01/29/2024
+ms.date: 10/10/2024
 ms.service: sql
 ms.topic: include
 ---
- Here is the result set. 
+ Here's the result set. 

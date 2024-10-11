@@ -3,7 +3,7 @@ title: Configure SQL Server settings on Linux
 description: This article describes how to use the mssql-conf tool to configure SQL Server settings on Linux.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 07/10/2024
+ms.date: 10/11/2024
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
@@ -146,7 +146,9 @@ ms.custom:
 
   For more information, see [Create the config files to be used by the SQL Server container](sql-server-linux-containers-ad-auth-adutil-tutorial.md#create-the-config-files-to-be-used-by-the-sql-server-container).
 
-## <a id="agent"></a> Enable SQL Server Agent
+<a id="agent"></a>
+
+## Enable SQL Server Agent
 
 The `sqlagent.enabled` setting enables [SQL Server Agent](sql-server-linux-run-sql-server-agent-job.md). By default, [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] Agent is disabled. If `sqlagent.enabled` isn't present in the mssql.conf settings file, then [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] internally assumes that [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] Agent is disabled.
 
@@ -164,7 +166,9 @@ To change this setting, use the following steps:
    sudo systemctl restart mssql-server
    ```
 
-### <a id="dbmail"></a> Set the default Database Mail profile for SQL Server on Linux
+<a id="dbmail"></a>
+
+### Set the default Database Mail profile for SQL Server on Linux
 
 The `sqlagent.databasemailprofile` allows you to set the default DB Mail profile for email alerts.
 
@@ -172,7 +176,9 @@ The `sqlagent.databasemailprofile` allows you to set the default DB Mail profile
 sudo /opt/mssql/bin/mssql-conf set sqlagent.databasemailprofile <profile_name>
 ```
 
-### <a id="agenterrorlog"></a> SQL Agent error logs
+<a id="agenterrorlog"></a>
+
+### SQL Agent error logs
 
 The `sqlagent.errorlogfile` and `sqlagent.errorlogginglevel` settings allows you to set the SQL Agent log file path and logging level respectively.
 
@@ -192,7 +198,9 @@ If you want to capture all levels, use `7` as the value.
 sudo /opt/mssql/bin/mssql-conf set sqlagent.errorlogginglevel <level>
 ```
 
-## <a id="azure-ad"></a> Configure Microsoft Entra authentication
+<a id="azure-ad"></a>
+
+## Configure Microsoft Entra authentication
 
 Starting with [!INCLUDE [sssql22-md](../includes/sssql22-md.md)], you can configure Microsoft Entra ID for [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)]. To configure Microsoft Entra ID, you must install the Azure extension for [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] following the installation of [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)]. For information on how to configure Microsoft Entra ID, see [Tutorial: Set up Microsoft Entra authentication for SQL Server](../relational-databases/security/authentication-access/azure-ad-authentication-sql-server-setup-tutorial.md).
 
@@ -243,7 +251,9 @@ The following options are used by Microsoft Entra authentication for an instance
 | `network.aadserviceprincipalnamenoslash` | Microsoft Entra service principal name, with no slash |
 | `network.aadstsurl` | Microsoft Entra STS URL |
 
-## <a id="windows-active-directory"></a> Configure Windows Active Directory authentication
+<a id="windows-active-directory"></a>
+
+## Configure Windows Active Directory authentication
 
 The `setup-ad-keytab` option can be used to create a keytab, but the user and Service Principal Names (SPNs) must have been created to use this option. The Active Directory utility, [**adutil**](sql-server-linux-ad-auth-adutil-introduction.md) can be used to create users, SPNs, and keytabs.
 
@@ -255,7 +265,9 @@ sudo /opt/mssql/bin/mssql-conf setup-ad-keytab --help
 
 The `validate-ad-config` option validates the configuration for Active Directory authentication.
 
-## <a id="collation"></a> Change the SQL Server collation
+<a id="collation"></a>
+
+## Change the SQL Server collation
 
 The `set-collation` option changes the collation value to any of the supported collations. To make this change, the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] service needs to be stopped.
 
@@ -275,7 +287,9 @@ The `set-collation` option changes the collation value to any of the supported c
 
 For a list of supported collations, run the [sys.fn_helpcollations](../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md) function: `SELECT Name from sys.fn_helpcollations()`.
 
-## <a id="customerfeedback"></a> Configure customer feedback
+<a id="customerfeedback"></a>
+
+## Configure customer feedback
 
 The `telemetry.customerfeedback` setting changes whether [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] sends feedback to Microsoft or not. By default, this value is set to `true` for all editions. To change the value, run the following commands:
 
@@ -294,9 +308,11 @@ The `telemetry.customerfeedback` setting changes whether [!INCLUDE [ssnoversion-
    sudo systemctl restart mssql-server
    ```
 
-For more information, see [Configure usage & diagnostic data collection for SQL Server on Linux](usage-and-diagnostic-data-configuration-for-sql-server-linux.md) and the [SQL Server privacy supplement](../sql-server/sql-server-privacy.md).
+For more information, see [Configure usage and diagnostic data collection for SQL Server on Linux](usage-and-diagnostic-data-configuration-for-sql-server-linux.md) and the [SQL Server privacy supplement](../sql-server/sql-server-privacy.md).
 
-## <a id="datadir"></a> Change the default data or log directory location
+<a id="datadir"></a>
+
+## Change the default data or log directory location
 
 The `filelocation.defaultdatadir` and `filelocation.defaultlogdir` settings change the location where the new database and log files are created. By default, this location is `/var/opt/mssql/data`. To change these settings, use the following steps:
 
@@ -333,7 +349,9 @@ The `filelocation.defaultdatadir` and `filelocation.defaultlogdir` settings chan
 
 1. This command also assumes that a /tmp/log directory exists, and that it's under the user and group `mssql`.
 
-## <a id="masterdatabasedir"></a> Change the default `master` database file directory location
+<a id="masterdatabasedir"></a>
+
+## Change the default `master` database file directory location
 
 The `filelocation.masterdatafile` and `filelocation.masterlogfile` setting changes the location where the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] [!INCLUDE [ssde-md](../includes/ssde-md.md)] looks for the `master` database files. By default, this location is `/var/opt/mssql/data`.
 
@@ -384,7 +402,9 @@ To change these settings, use the following steps:
    > [!NOTE]  
    > If [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] can't find `master.mdf` and `mastlog.ldf` files in the specified directory, a templated copy of the system databases is automatically created in the specified directory, and [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] successfully starts up. However, metadata such as user databases, server logins, server certificates, encryption keys, SQL agent jobs, or old SA login password aren't updated in the new `master` database. You'll have to stop [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] and move your old `master.mdf` and `mastlog.ldf` to the new specified location and start [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] to continue using the existing metadata.
 
-## <a id="masterdatabasename"></a> Change the name of `master` database files
+<a id="masterdatabasename"></a>
+
+## Change the name of `master` database files
 
 The `filelocation.masterdatafile` and `filelocation.masterlogfile` setting changes the location where the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] [!INCLUDE [ssde-md](../includes/ssde-md.md)] looks for the `master` database files. You can also use this to change the name of the `master` database and log files.
 
@@ -419,7 +439,9 @@ To change these settings, use the following steps:
    sudo systemctl start mssql-server
    ```
 
-## <a id="dumpdir"></a> Change the default dump directory location
+<a id="dumpdir"></a>
+
+## Change the default dump directory location
 
 The `filelocation.defaultdumpdir` setting changes the default location where the memory and SQL dumps are generated whenever there's a crash. By default, these files are generated in `/var/opt/mssql/log`.
 
@@ -450,7 +472,9 @@ To set up this new location, use the following commands:
    sudo systemctl restart mssql-server
    ```
 
-## <a id="errorlogdir"></a> Change the default error log file directory location
+<a id="errorlogdir"></a>
+
+## Change the default error log file directory location
 
 The `filelocation.errorlogfile` setting changes the location where the new error log, default profiler trace, system health session XE, and Hekaton session XE files are created. By default, this location is `/var/opt/mssql/log`. The directory in which the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] error log file is set, becomes the default log directory for other logs.
 
@@ -483,7 +507,9 @@ To change these settings:
 
 The `errorlog.numerrorlogs` setting allows you to specify the number of error logs maintained before cycling the log.
 
-## <a id="backupdir"></a> Change the default backup directory location
+<a id="backupdir"></a>
+
+## Change the default backup directory location
 
 The `filelocation.defaultbackupdir` setting changes the default location where the backup files are generated. By default, these files are generated in `/var/opt/mssql/data`.
 
@@ -514,7 +540,9 @@ To set up this new location, use the following commands:
    sudo systemctl restart mssql-server
    ```
 
-## <a id="coredump"></a> Specify core dump settings
+<a id="coredump"></a>
+
+## Specify core dump settings
 
 If an exception or crash occurs in one of the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] processes, [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] creates a memory dump. Capturing a memory dump might take a long time and take up significant space. To save resources and avoid repeated memory dumps, you can disable automatic dump capture using the `coredump.disablecoredump` option.
 
@@ -557,7 +585,9 @@ The first phase capture is controlled by the `coredump.coredumptype` setting, wh
 
 The edition of [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] can be changed using the `set-edition` option. To change the edition of [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)], the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] service first needs to be stopped. For more information on available [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on Linux editions, see [SQL Server editions](sql-server-linux-editions-and-components-2019.md#sql-server-editions).
 
-## <a id="hadr"></a> High availability
+<a id="hadr"></a>
+
+## High availability
 
 The `hadr.hadrenabled` option enables availability groups on your [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] instance. The following command enables availability groups by setting `hadr.hadrenabled` to 1. You must restart [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] for the setting to take effect.
 
@@ -571,7 +601,9 @@ For information on how this is used with availability groups, see the following 
 - [Configure SQL Server Always On Availability Group for high availability on Linux](sql-server-linux-availability-group-configure-ha.md)
 - [Configure a SQL Server Availability Group for read-scale on Linux](sql-server-linux-availability-group-configure-rs.md)
 
-## <a id="localaudit"></a> Set local audit directory
+<a id="localaudit"></a>
+
+## Set local audit directory
 
 The `telemetry.userrequestedlocalauditdirectory` setting enables Local Audit and lets you set the directory where the Local Audit logs are created.
 
@@ -600,9 +632,11 @@ The `telemetry.userrequestedlocalauditdirectory` setting enables Local Audit and
    sudo systemctl restart mssql-server
    ```
 
-For more information, see [Configure usage & diagnostic data collection for SQL Server on Linux](usage-and-diagnostic-data-configuration-for-sql-server-linux.md).
+For more information, see [Configure usage and diagnostic data collection for SQL Server on Linux](usage-and-diagnostic-data-configuration-for-sql-server-linux.md).
 
-## <a id="lcid"></a> Change the SQL Server locale
+<a id="lcid"></a>
+
+## Change the SQL Server locale
 
 The `language.lcid` setting changes the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] locale to any supported language identifier (LCID).
 
@@ -618,7 +652,9 @@ The `language.lcid` setting changes the [!INCLUDE [ssnoversion-md](../includes/s
    sudo systemctl restart mssql-server
    ```
 
-## <a id="memorylimit"></a> Set the memory limit
+<a id="memorylimit"></a>
+
+## Set the memory limit
 
 The `memory.memorylimitmb` setting controls the amount of physical memory (in MB) available to [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)]. The default is 80% of the physical memory, to prevent out-of-memory (OOM) conditions.
 
@@ -647,7 +683,9 @@ The following options are available to the memory settings.
 | `memory.memory_optimized` | Enable or disable [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] memory optimized features - persistent memory file enlightenment, memory protection. Values can be `true` or `false`. |
 | `memory.enablecontainersharedmemory` | Applicable for [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] containers only. Use this setting to enable shared memory inside [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] containers. For more information, see ­[Enable VDI backup and restore in containers](sql-server-linux-docker-container-configure.md#enable-vdi-backup-and-restore-in-containers). Values can be `true` or `false` (default). |
 
-## <a id="msdtc"></a> Configure MSDTC
+<a id="msdtc"></a>
+
+## Configure MSDTC
 
 The `network.rpcport` and `distributedtransaction.servertcpport` settings are used to configure the Microsoft Distributed Transaction Coordinator (MSDTC). To change these settings, run the following commands:
 
@@ -689,7 +727,9 @@ There are several other settings for **mssql-conf** that you can use to monitor 
 
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15"
 
-## <a id="mlservices-eula"></a> Accept Machine Learning Services EULAs
+<a id="mlservices-eula"></a>
+
+## Accept Machine Learning Services EULAs
 
 Adding [machine learning R or Python packages](sql-server-linux-setup-machine-learning.md) to the [!INCLUDE [ssde-md](../includes/ssde-md.md)] requires that you accept the licensing terms for open-source distributions of R and Python. The following table enumerates all available commands or options related to `mlservices` EULAs. The same EULA parameter is used for R and Python, depending on what you installed.
 
@@ -720,7 +760,9 @@ accepteulaml = Y
 ::: moniker-end
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15"
 
-## <a id="mlservices-outbound-access"></a> Enable outbound network access
+<a id="mlservices-outbound-access"></a>
+
+## Enable outbound network access
 
 Outbound network access for R, Python, and Java extensions in the [SQL Server Machine Learning Services](sql-server-linux-setup-machine-learning.md) feature is disabled by default. To enable outbound requests, set the `outboundnetworkaccess` Boolean property using mssql-conf.
 
@@ -748,7 +790,9 @@ outboundnetworkaccess = 1
 
 ::: moniker-end
 
-## <a id="sqlconnector"></a> Change logging level for SQL Server Connector for Azure Key Vault
+<a id="sqlconnector"></a>
+
+## Change logging level for SQL Server Connector for Azure Key Vault
 
 In [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] CU 14 and later versions, [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on Linux supports TDE Extensible Key Management with Azure Key Vault. You can set the logging level to one of the following values:
 
@@ -766,7 +810,9 @@ sudo /opt/mssql/bin/mssql-conf set sqlconnector.logginglevel 1
 
 For more information, see [Use SQL Server Connector with SQL Encryption Features](../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md).
 
-## <a id="tcpport"></a> Change the TCP port
+<a id="tcpport"></a>
+
+## Change the TCP port
 
 The `network.tcpport` setting changes the TCP port where [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] listens for connections. By default, this port is set to 1433. To change the port, run the following commands:
 
@@ -788,7 +834,9 @@ The `network.tcpport` setting changes the TCP port where [!INCLUDE [ssnoversion-
    sqlcmd -S localhost,<new_tcp_port> -U test -P test
    ```
 
-## <a id="tls"></a> Specify TLS settings
+<a id="tls"></a>
+
+## Specify TLS settings
 
 The following options configure TLS for an instance of [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] running on Linux.
 
@@ -798,12 +846,14 @@ The following options configure TLS for an instance of [!INCLUDE [ssnoversion-md
 | `network.tlscert` | The absolute path to the certificate file that [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] uses for TLS. Example: `/etc/ssl/certs/mssql.pem` The certificate file must be accessible by the mssql account. Microsoft recommends restricting access to the file using `chown mssql:mssql <file>; chmod 400 <file>`. |
 | `network.tlskey` | The absolute path to the private key file that [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] uses for TLS. Example: `/etc/ssl/private/mssql.key` The certificate file must be accessible by the mssql account. Microsoft recommends restricting access to the file using `chown mssql:mssql <file>; chmod 400 <file>`. |
 | `network.tlsprotocols` | A comma-separated list of which TLS protocols are allowed by [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)]. [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] always attempts to negotiate the strongest allowed protocol. If a client doesn't support any allowed protocol, [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] rejects the connection attempt. For compatibility, all supported protocols are allowed by default (1.2, 1.1, 1.0). If your clients support TLS 1.2, Microsoft recommends allowing only TLS 1.2. |
-| `network.tlsciphers` | Specifies which ciphers are allowed by [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] for TLS. This string must be formatted per [OpenSSL's cipher list format](https://www.openssl.org/docs/manmaster/man1/ciphers.html). In general, you shouldn't need to change this option.<br />By default, the following ciphers are allowed:<br />`ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES128-SHA256:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA:ECDHE-ECDSA-AES128-SHA:ECDHE-RSA-AES256-SHA:ECDHE-RSA-AES128-SHA:AES256-GCM-SHA384:AES128-GCM-SHA256:AES256-SHA256:AES128-SHA256:AES256-SHA:AES128-SHA` |
+| `network.tlsciphers` | Specifies which ciphers are allowed by [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] for TLS. This string must be formatted per [OpenSSL's cipher list format](https://docs.openssl.org/master/man1/ciphers). In general, you shouldn't need to change this option.<br />By default, the following ciphers are allowed:<br />`ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES128-SHA256:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA:ECDHE-ECDSA-AES128-SHA:ECDHE-RSA-AES256-SHA:ECDHE-RSA-AES128-SHA:AES256-GCM-SHA384:AES128-GCM-SHA256:AES256-SHA256:AES128-SHA256:AES256-SHA:AES128-SHA` |
 | `network.kerberoskeytabfile` | Path to the Kerberos keytab file |
 
 For an example of using the TLS settings, see [Encrypt connections to SQL Server on Linux](sql-server-linux-encrypted-connections.md).
 
-## <a id="network"></a> Network settings
+<a id="network"></a>
+
+## Network settings
 
 See [Tutorial: Use Active Directory authentication with SQL Server on Linux](sql-server-linux-active-directory-authentication.md) for comprehensive information on using Active Directory authentication with [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on Linux.
 
@@ -820,7 +870,9 @@ The following options are additional network settings configurable using **mssql
 | `uncmapping` | Maps UNC path to a local path. For example, `sudo /opt/mssql/bin/mssql-conf set uncmapping //servername/sharename /tmp/folder`. |
 | `ldaphostcanon` | Set whether OpenLDAP should canonicalize hostnames during the bind step. Values can be `true` or `false`. |
 
-## <a id="traceflags"></a> Enable or disable trace flags
+<a id="traceflags"></a>
+
+## Enable or disable trace flags
 
 The `traceflag` option enables or disables trace flags for the startup of the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] service. To enable/disable a trace flag, use the following commands:
 
@@ -884,9 +936,11 @@ sudo /opt/mssql/bin/mssql-conf --help
 
 The results provide various configuration options and a short description for each of the settings.
 
-## <a id="mssql-conf-format"></a> mssql.conf format
+<a id="mssql-conf-format"></a>
 
-The following `/var/opt/mssql/mssql.conf` file provides an example for each setting. You can use this format to manually make changes to the `mssql.conf` file as needed. If you do manually change the file, you must restart [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] before the changes are applied. To use the `mssql.conf` file with Docker, you must have Docker [persist your data](sql-server-linux-docker-container-deployment.md). First add a complete `mssql.conf` file to your host directory and then run the container. There's an example of this in [Configure usage & diagnostic data collection for SQL Server on Linux](usage-and-diagnostic-data-configuration-for-sql-server-linux.md).
+## mssql.conf format
+
+The following `/var/opt/mssql/mssql.conf` file provides an example for each setting. You can use this format to manually make changes to the `mssql.conf` file as needed. If you do manually change the file, you must restart [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] before the changes are applied. To use the `mssql.conf` file with Docker, you must have Docker [persist your data](sql-server-linux-docker-container-deployment.md). First add a complete `mssql.conf` file to your host directory and then run the container. There's an example of this in [Configure usage and diagnostic data collection for SQL Server on Linux](usage-and-diagnostic-data-configuration-for-sql-server-linux.md).
 
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="=sql-server-linux-2017 || =sql-server-2017"

@@ -109,10 +109,8 @@ After you connected the SQL Server instances to Azure, go to the [Azure portal](
 
 :::image type="content" source="./media/join-at-scale/successful-onboard.png" alt-text="Screenshot showing a successful onboard.":::
 
-
-
 ## Next steps
 
 - Learn how to [Configure your SQL Server instance for periodic environment health check using best practices assessment](assess.md)
-
 - Learn how to [use Microsoft Defender for Cloud to protect [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)]](configure-advanced-data-security.md)
+- [Known issues: SQL Server enabled by Azure Arc](known-issues.md)

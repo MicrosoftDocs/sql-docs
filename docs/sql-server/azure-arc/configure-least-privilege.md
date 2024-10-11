@@ -43,10 +43,12 @@ The configuration with least privilege requires:
 
 - [!INCLUDE [winserver2012-md](../../includes/winserver2012-md.md)] or later
 - SQL Server 2012 or later
+- The SQL Server service account must be a member of the `sysadmin` fixed server role
+- All databases must be online and updateable
 
 The configuration with least privilege is not currently supported on Linux.
 
-Other requirements, as listed in [Prerequisites - SQL Server enabled by Azure Arc](prerequisites.md) still apply. Including the SQL Server service account must be a member of the sysadmin fixed server role on each SQL Server instance.
+Other requirements, as listed in [Prerequisites - SQL Server enabled by Azure Arc](prerequisites.md) still apply.
 
 ### Tools
 
@@ -139,3 +141,4 @@ To verify that your SQL Server enabled by Azure Arc is configured to run with le
 
 - [Configure advanced data security for your SQL Server instance](configure-advanced-data-security.md)
 - [Configure best practices assessment on a [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] instance](assess.md)
+- [Known issues: SQL Server enabled by Azure Arc](known-issues.md)

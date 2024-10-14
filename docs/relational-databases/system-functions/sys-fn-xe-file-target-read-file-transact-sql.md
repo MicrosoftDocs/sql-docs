@@ -117,7 +117,7 @@ In [!INCLUDE [sssql17](../../includes/sssql17-md.md)] and later versions, the fo
 ```sql
 SELECT *
 FROM sys.fn_xe_file_target_read_file('system_health*.xel', NULL, NULL, NULL)
-WHERE timestamp_utc > DATEADD(DAY, -1, GETUTCDATE());
+WHERE cast(timestamp_utc as datetime2(7)) > DATEADD(DAY, -1, GETUTCDATE());
 ```
 
 ## Related content

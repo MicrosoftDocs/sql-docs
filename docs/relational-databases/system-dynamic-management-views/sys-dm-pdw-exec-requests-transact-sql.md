@@ -4,7 +4,7 @@ description: sys.dm_pdw_exec_requests holds information about all requests curre
 author: jacinda-eng
 ms.author: jacindaeng
 ms.reviewer: wiassaf, randolphwest
-ms.date: 04/23/2024
+ms.date: 10/14/2024
 ms.service: sql
 ms.subservice: data-warehouse
 ms.topic: "reference"

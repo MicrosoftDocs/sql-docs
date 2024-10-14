@@ -4,7 +4,7 @@ description: sys.dm_pdw_exec_requests holds information about all requests curre
 author: jacinda-eng
 ms.author: jacindaeng
 ms.reviewer: wiassaf, randolphwest
-ms.date: 04/23/2024
+ms.date: 10/14/2024
 ms.service: sql
 ms.subservice: data-warehouse
 ms.topic: "reference"
@@ -66,14 +66,14 @@ The negative integer value in the `result_cache_hit` column is a bitmap value of
 
 ## Permissions
 
-Requires `VIEW SERVER STATE` permission.
+Requires `VIEW DATABASE STATE` permission.
 
 ## Security
 
-`sys.dm_pdw_exec_requests` doesn't filter query results according to database-specific permissions. Logins with `VIEW SERVER STATE` permission can obtain results query results for all databases.
+`sys.dm_pdw_exec_requests` doesn't filter query results according to database-specific permissions. Logins with `VIEW DATABASE STATE` permission can obtain results query results for all databases.
 
 > [!WARNING]  
-> An attacker can use `sys.dm_pdw_exec_requests` to retrieve information about specific database objects by simply having `VIEW SERVER STATE` permission and by not having database-specific permission.
+> An attacker can use `sys.dm_pdw_exec_requests` to retrieve information about specific database objects by simply having `VIEW DATABASE STATE` permission and by not having database-specific permission.
 
 ## Related content
 

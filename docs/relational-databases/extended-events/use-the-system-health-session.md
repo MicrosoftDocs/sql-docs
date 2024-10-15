@@ -4,7 +4,7 @@ description: The system_health Extended Events session is included with SQL Serv
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: randolphwest
-ms.date: 10/22/2023
+ms.date: 09/05/2024
 ms.service: sql
 ms.subservice: xevents
 ms.topic: tutorial
@@ -47,7 +47,7 @@ The session collects information that includes the following information:
 
 ## View the system_health session data
 
-The session uses both the ring buffer target and event file target to store the data. The event file target is configured with a maximum size of 5 MB and a file retention policy of 4 files.
+The session uses both the ring buffer target and event file target to store the data. The event file target is configured with a maximum size of 5 MB and a file retention policy of 4 files. In SQL Server Standard or Enterprise editions, the event file target has increased limits: a maximum size of 100 MB and a file retention policy of 10 files.
 
 To view the session data from the ring buffer target with the Extended Events user interface available in [!INCLUDE [ssManStudioFull](../../includes/ssmanstudiofull-md.md)], see [Advanced Viewing of Target Data from Extended Events in SQL Server - Watch live data](../../relational-databases/extended-events/advanced-viewing-of-target-data-from-extended-events-in-sql-server.md#watch-live-data).
 

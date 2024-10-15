@@ -156,7 +156,7 @@ USE ssawPDW;
 CREATE REMOTE TABLE OrderReporting.Orders.MyOrdersTable  
 AT ( 'Data Source = SQLA, 1433; User ID = David; Password = e4n8@3;' )  
     AS SELECT T1.* FROM OrderReporting.Orders.MyOrdersTable T1   
-    JOIN OrderReporting.Order.Customer T2  
+    JOIN OrderReporting.Orders.Customer T2  
     ON T1.CustomerID=T2.CustomerID OPTION (HASH JOIN);  
 ```  
 

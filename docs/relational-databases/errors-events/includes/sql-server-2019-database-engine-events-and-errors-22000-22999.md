@@ -1,7 +1,7 @@
 ---
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 02/15/2024
+ms.date: 10/10/2024
 ms.topic: include
 ---
 | Error | Severity | Event logged | Description |
@@ -295,6 +295,7 @@ ms.topic: include
 | 22930 | 16 | No | Could not locate '%s' as a column of source table '%s.%s'. Specify a valid column name. |
 | 22931 | 16 | No | Source table '%s.%s' does not exist in the current database. Ensure that the correct database context is set. Specify a valid schema and table name for the database. |
 | 22932 | 16 | No | Capture instance name '%s' is invalid. Specify a valid name. See the topic 'Identifiers' in SQL Server Books Online for object name rules. |
+| 22933 | 16 | No | Could not drop change table objects for capture instance '%s'. The failure occurred when executing the command '%s'. The error returned was %d: '%s'. Use the action and error to determine the cause of the failure and resubmit the request. |
 | 22938 | 16 | No | Role name '%s' is invalid. Specify a valid name. See the topic 'Identifiers' in SQL Server Books Online for object name rules. |
 | 22939 | 16 | No | The parameter @supports_net_changes is set to 1, but the source table does not have a primary key defined and no alternate unique index has been specified. |
 | 22940 | 16 | No | Could not remove DDL history entries in the Change Data Capture metadata for capture instance '%s' and source table '%s.%s'. Refer to previous errors in the current session to identify the cause and correct any associated problems. |

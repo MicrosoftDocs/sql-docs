@@ -1,7 +1,7 @@
 ---
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 01/11/2024
+ms.date: 10/10/2024
 ms.topic: include
 ---
 > [!NOTE]
@@ -501,7 +501,7 @@ ms.topic: include
 | 33533 | 16 | No | SHUTDOWN on failure option is not supported in this version of SQL Server. |
 | 33534 | 16 | Yes | Internal enclave error. Enclave loading failed: invalid path. For more information, contact Customer Support Services. |
 | 33535 | 16 | Yes | Internal enclave error: Enclave call failed for method '%s'. For more information, contact Customer Support Services. |
-| 33536 | 16 | No | VBS enclave attestation failed. Attestation status: '%ls', substatus: '%ls'. For more information, see 'https://go.microsoft.com/fwlink/?linkid=2099553'. |
+| 33536 | 16 | No | VBS enclave attestation failed. Attestation status: '%ls', substatus: '%ls'. For more information, see '[https://go.microsoft.com/fwlink/?linkid=2099553](https://go.microsoft.com/fwlink/?linkid=2099553)'. |
 | 33537 | 16 | Yes | Internal enclave error. Enclave attestation error: enclave platform returned unexpected output. For more information, contact Customer Support Services. |
 | 33538 | 16 | No | The credentials of blob storage container '%.\*ls' are invalid. |
 | 33539 | 16 | No | The blob storage '%.\*ls' was not found. Verify your storage account name. |
@@ -510,8 +510,8 @@ ms.topic: include
 | 33542 | 16 | No | Unsupported operation near line '%d'; operations on encrypted columns with string data types require a \*_BIN2 collation. However, the column or the variable uses the '%.\*ls' collation. |
 | 33543 | 16 | No | Cannot alter column '%.\*ls'. The statement attempts to encrypt, decrypt or re-encrypt the column in-place using a secure enclave, but the current and/or the target column encryption key for the column is not enclave-enabled. |
 | 33544 | 16 | No | Cannot alter column '%.\*ls'. The statement attempts to change the encryption scheme of the column and one or more of the following column properties: collation (to a different code page), data type. Such changes cannot be combined in a single statement. Try using multiple statements. |
-| 33545 | 16 | No | The statement requires a secure enclave, but the enclave has not been initialized in the SQL Server instance. Check the status of the enclave in sys.configurations and see https://go.microsoft.com/fwlink/?linkid=2005337 for more details. |
-| 33546 | 16 | No | The statement triggers enclave computations, but a column encryption key, needed for the computations, has not been found inside the enclave. Check that: (1) column encryption and enclave computations are enabled on connection, (2) driver is enclave-enabled. For additional reasons see: https://go.microsoft.com/fwlink/?linkid=2086681. |
+| 33545 | 16 | No | The statement requires a secure enclave, but the enclave has not been initialized in the SQL Server instance. Check the status of the enclave in sys.configurations and see [https://go.microsoft.com/fwlink/?linkid=2005337](https://go.microsoft.com/fwlink/?linkid=2005337) for more details. |
+| 33546 | 16 | No | The statement triggers enclave computations, but a column encryption key, needed for the computations, has not been found inside the enclave. Check that: (1) column encryption and enclave computations are enabled on connection, (2) driver is enclave-enabled. For additional reasons see: [https://go.microsoft.com/fwlink/?linkid=2086681](https://go.microsoft.com/fwlink/?linkid=2086681). |
 | 33548 | 16 | Yes | Internal enclave error: Enclave out of memory. For more information, contact Customer Support Services. |
 | 33549 | 16 | Yes | Internal enclave error: OSF Serialization error. For more information, contact Customer Support Services. |
 | 33550 | 16 | Yes | Internal enclave error: Invalid data format. For more information, contact Customer Support Services. |
@@ -1501,10 +1501,10 @@ ms.topic: include
 | 40825 | 16 | No | Unable to complete request now. Please try again later. |
 | 40827 | 16 | No | The operation is not supported for your subscription offer type. |
 | 40838 | 16 | No | Replication relationship limit reached. The database '%ls' cannot have more than one non-readable secondary. |
-| 40839 | 16 | No | Connection to a non-readable secondary database is not allowed. See 'http://go.microsoft.com/fwlink/?LinkID=402429&clcid=0x409' for more information. |
-| 40840 | 16 | No | Target region '%ls' is not a DR paired Azure region. See 'http://go.microsoft.com/fwlink/?LinkID=402430&clcid=0x409' for more information. |
+| 40839 | 16 | No | Connection to a non-readable secondary database is not allowed. See '[http://go.microsoft.com/fwlink/?LinkID=402429&clcid=0x409](https://go.microsoft.com/fwlink/?LinkID=402429&clcid=0x409)' for more information. |
+| 40840 | 16 | No | Target region '%ls' is not a DR paired Azure region. See '[http://go.microsoft.com/fwlink/?LinkID=402430&clcid=0x409](https://go.microsoft.com/fwlink/?LinkID=402430&clcid=0x409)' for more information. |
 | 40841 | 16 | No | Friendly termination of a non-readable replication relationship is not supported. |
-| 40842 | 16 | No | Termination of the non-readable replication relationship for database '%ls' is currently not allowed. See 'http://go.microsoft.com/fwlink/?LinkID=402431&clcid=0x409' for more information |
+| 40842 | 16 | No | Termination of the non-readable replication relationship for database '%ls' is currently not allowed. See '[http://go.microsoft.com/fwlink/?LinkID=402431&clcid=0x409](https://go.microsoft.com/fwlink/?LinkID=402431&clcid=0x409)' for more information |
 | 40843 | 16 | No | Non-readable secondary is not supported for database copy. |
 | 40844 | 16 | No | Database '%ls' on Server '%ls' is a '%ls' edition database in an elastic pool and cannot have a replication relationship. |
 | 40847 | 16 | No | Could not perform the operation because server would exceed the allowed Database Throughput Unit quota of %d. |
@@ -1614,7 +1614,7 @@ ms.topic: include
 | 40952 | 16 | No | A Server DNS Alias cannot be created because server '%.\*ls' would exceed the allowed Server DNS Aliases quota of %d. |
 | 40953 | 16 | No | A Failover Group cannot be created because server '%.\*ls' would exceed the allowed Failover Groups quota of %d. |
 | 40954 | 16 | No | The Table Auditing feature cannot be turned on for a server that contains Server Dns Aliases. Please try Blob Auditing instead. |
-| 40955 | 16 | No | The operation cannot be performed due to insufficient file space in the elastic pool. The operation requires (%d) MBs file space and there are (%d) MBs file space available. Unused file space must be reclaimed before retrying the operation. Please refer to the following article for details on reclaiming unused file space: https://go.microsoft.com/fwlink/?linkid=864775. |
+| 40955 | 16 | No | The operation cannot be performed due to insufficient file space in the elastic pool. The operation requires (%d) MBs file space and there are (%d) MBs file space available. Unused file space must be reclaimed before retrying the operation. Please refer to the following article for details on reclaiming unused file space: [https://go.microsoft.com/fwlink/?linkid=864775](https://go.microsoft.com/fwlink/?linkid=864775). |
 | 40956 | 16 | No | The Server Disaster Recovery Configuration feature is deprecated. Please use Failover Group instead. |
 | 40957 | 16 | No | The DTU min per database must be at least (%d) for service tier '%.\*ls'. |
 | 40958 | 16 | No | The VCore max per database must be at least (%d) for service tier '%.\*ls'. |
@@ -1945,7 +1945,7 @@ ms.topic: include
 | 41376 | 16 | No | Only members of the fixed sysadmin role can execute the stored procedure '%ls'. |
 | 41377 | 16 | No | The natively compiled module with database ID %ld and object ID %ld has not been executed. Query execution statistics collection can only be enabled if the module has been executed at least once since creation or last database restart. |
 | 41378 | 16 | No | Both @database_id and @xtp_object_id should be specified to enable or retrieve status of query level statistics collection for a procedure. |
-| 41379 | 16 | No | Restore operation failed for database '%.\*ls' due to insufficient memory in the resource pool '%ls'. Close other applications to increase the available memory, ensure that both SQL Server memory configuration and resource pool memory limits are correct and try again. See 'http://go.microsoft.com/fwlink/?LinkID=507574' for more information. |
+| 41379 | 16 | No | Restore operation failed for database '%.\*ls' due to insufficient memory in the resource pool '%ls'. Close other applications to increase the available memory, ensure that both SQL Server memory configuration and resource pool memory limits are correct and try again. See '[http://go.microsoft.com/fwlink/?LinkID=507574](https://go.microsoft.com/fwlink/?LinkID=507574)' for more information. |
 | 41380 | 21 | No | Databases with a MEMORY_OPTIMIZED_DATA filegroup are only supported in 64-bit editions of SQL Server. |
 | 41381 | 21 | No | The database cannot be started in this edition of SQL Server because it contains a MEMORY_OPTIMIZED_DATA filegroup. See Books Online for more details on feature support in different SQL Server editions. |
 | 41382 | 16 | No | Failure adding a container to a MEMORY_OPTIMIZED_DATA filegroup. Possible causes include the server being out of memory and the container path being too long. |
@@ -1953,7 +1953,7 @@ ms.topic: include
 | 41384 | 16 | No | Database '%.\*ls' has exceeded the maximum number of XTP checkpoint files, and can no longer support write operations in durable memory-optimized tables. For more information, contact Customer Support Services. |
 | 41385 | 16 | No | A memory-optimized table cannot be enabled for Change Data Capture (CDC). |
 | 41386 | 16 | No | Filegroups with MEMORY_OPTIMIZED_DATA, memory-optimized tables and natively compiled modules are not supported when lightweight pooling is enabled. Disable lightweight pooling in order to use memory-optimized features. |
-| 41387 | 10 | No | Disallowing page allocations for database '%.\*ls' due to insufficient memory in the resource pool '%ls'. See 'http://go.microsoft.com/fwlink/?LinkId=510837' for more information. |
+| 41387 | 10 | No | Disallowing page allocations for database '%.\*ls' due to insufficient memory in the resource pool '%ls'. See '[http://go.microsoft.com/fwlink/?LinkId=510837](https://go.microsoft.com/fwlink/?LinkId=510837)' for more information. |
 | 41388 | 16 | No | An upgrade operation failed for database '%.\*ls'. Check the error log for additional details. |
 | 41389 | 16 | No | Failed to create a backup file collection snapshot necessary for backup of database '%.\*ls'. Check the error log for additional details. |
 | 41390 | 16 | No | Failed to get checkpoint file information necessary for backup of database '%.\*ls'. Check the error log for additional details. |

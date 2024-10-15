@@ -4,7 +4,7 @@ description: This article contains the release notes and supported features for 
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: amitkh, vanto
-ms.date: 09/10/2024
+ms.date: 10/10/2024
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
@@ -34,11 +34,11 @@ Most existing client tools that target [!INCLUDE [ssNoVersion](../includes/ssnov
 
 ## Latest versions for all packages
 
-This section lists the latest versions of each package per distribution, for [!INCLUDE [ssSQL17](../includes/sssql17-md.md)]. The following table shows the most recent release, which is **CU 31 GDR 3**. For full release history, see [Release history for [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] 2017](/troubleshoot/sql/linux/release-history-2017).
+This section lists the latest versions of each package per distribution, for [!INCLUDE [ssSQL17](../includes/sssql17-md.md)]. The following table shows the most recent release, which is **CU 31 GDR 5**. For full release history, see [Release history for [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] 2017](/troubleshoot/sql/linux/release-history-2017).
 
 | Version | Release | Date | Build | KB article |
 | --- | --- | --- | --- | --- |
-| [!INCLUDE [ssSQL17](../includes/sssql17-md.md)] | CU 31 GDR 3 | 2024-09-10 | 14.0.3475.1 | [KB 5042215](https://support.microsoft.com/help/5042215) |
+| [!INCLUDE [ssSQL17](../includes/sssql17-md.md)] | CU 31 GDR 5 | 2024-10-08 | 14.0.3480.1 | [KB 5046061](https://support.microsoft.com/help/5046061) |
 
 > [!IMPORTANT]  
 > This is the final cumulative update for [!INCLUDE [ssSQL17](../includes/sssql17-md.md)].
@@ -49,18 +49,18 @@ This section lists the latest versions of each package per distribution, for [!I
 | Distribution | Package name | Package version | Download |
 | --- | --- | --- | --- |
 | **Red Hat Enterprise Linux** | | | |
-| RHEL 8 | Database Engine | 14.0.3475.1-4 | [Database Engine RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2017/Packages/m/mssql-server-14.0.3475.1-4.x86_64.rpm) |
-| RHEL 8 | Full-Text Search | 14.0.3475.1-4 | [Full-Text Search RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2017/Packages/m/mssql-server-fts-14.0.3475.1-4.x86_64.rpm) |
-| RHEL 8 | High Availability | 14.0.3475.1-4 | [High Availability RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2017/Packages/m/mssql-server-ha-14.0.3475.1-4.x86_64.rpm) |
+| RHEL 8 | Database Engine | 14.0.3480.1-1 | [Database Engine RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2017/Packages/m/mssql-server-14.0.3480.1-1.x86_64.rpm) |
+| RHEL 8 | Full-Text Search | 14.0.3480.1-1 | [Full-Text Search RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2017/Packages/m/mssql-server-fts-14.0.3480.1-1.x86_64.rpm) |
+| RHEL 8 | High Availability | 14.0.3480.1-1 | [High Availability RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2017/Packages/m/mssql-server-ha-14.0.3480.1-1.x86_64.rpm) |
 | RHEL 7 | SSIS | 14.0.3015.40-1 | [SSIS RPM package](https://packages.microsoft.com/rhel/7/mssql-server-2017/Packages/m/mssql-server-is-14.0.3015.40-1.x86_64.rpm) |
 | **SUSE Linux Enterprise Server** | | | |
-| SLES 12 | Database Engine | 14.0.3475.1-4 | [Database Engine RPM package](https://packages.microsoft.com/sles/12/mssql-server-2017/Packages/m/mssql-server-14.0.3475.1-4.x86_64.rpm) |
-| SLES 12 | Full-Text Search | 14.0.3475.1-4 | [Full-Text Search RPM package](https://packages.microsoft.com/sles/12/mssql-server-2017/Packages/m/mssql-server-fts-14.0.3475.1-4.x86_64.rpm) |
-| SLES 12 | High Availability | 14.0.3475.1-4 | [High Availability RPM package](https://packages.microsoft.com/sles/12/mssql-server-2017/Packages/m/mssql-server-ha-14.0.3475.1-4.x86_64.rpm) |
+| SLES 12 | Database Engine | 14.0.3480.1-1 | [Database Engine RPM package](https://packages.microsoft.com/sles/12/mssql-server-2017/Packages/m/mssql-server-14.0.3480.1-1.x86_64.rpm) |
+| SLES 12 | Full-Text Search | 14.0.3480.1-1 | [Full-Text Search RPM package](https://packages.microsoft.com/sles/12/mssql-server-2017/Packages/m/mssql-server-fts-14.0.3480.1-1.x86_64.rpm) |
+| SLES 12 | High Availability | 14.0.3480.1-1 | [High Availability RPM package](https://packages.microsoft.com/sles/12/mssql-server-2017/Packages/m/mssql-server-ha-14.0.3480.1-1.x86_64.rpm) |
 | **Ubuntu** | | | |
-| Ubuntu 18.04 | Database Engine | 14.0.3475.1-4 | [Database Engine Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3475.1-4_amd64.deb) |
-| Ubuntu 18.04 | Full-Text Search | 14.0.3475.1-4 | [Full-Text Search Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3475.1-4_amd64.deb) |
-| Ubuntu 18.04 | High Availability | 14.0.3475.1-4 | [High Availability Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3475.1-4_amd64.deb) |
+| Ubuntu 18.04 | Database Engine | 14.0.3480.1-1 | [Database Engine Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3480.1-1_amd64.deb) |
+| Ubuntu 18.04 | Full-Text Search | 14.0.3480.1-1 | [Full-Text Search Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3480.1-1_amd64.deb) |
+| Ubuntu 18.04 | High Availability | 14.0.3480.1-1 | [High Availability Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3480.1-1_amd64.deb) |
 | Ubuntu 16.04 | SSIS | 14.0.3015.40-1 | [SSIS Debian package](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.3015.40-1_amd64.deb) |
 
 ## <a id="cuinstall"></a> How to install updates
@@ -78,11 +78,15 @@ If you update existing [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] p
 
 The following table lists the release history for [!INCLUDE [ssSQL17](../includes/sssql17-md.md)].
 
+> [!NOTE]  
+> Any missing GDRs apply to the Windows version only.
+
 | Release                                                                  | Version       | Release date |
 | ------------------------------------------------------------------------ | ------------- | ------------ |
-| [CU 31 GDR 3](/troubleshoot/sql/linux/release-history-2017#CU31-GDR3)    | 14.0.3475.1   | 2024-09-10   |
+| [CU 31 GDR 5](/troubleshoot/sql/linux/release-history-2017#CU31-GDR5)    | 14.0.3480.1   | 2024-10-08   |
+| [CU 31 GDR 4](/troubleshoot/sql/linux/release-history-2017#CU31-GDR4)    | 14.0.3475.1   | 2024-09-10   |
 | [CU 31 GDR 2](/troubleshoot/sql/linux/release-history-2017#CU31-GDR2)    | 14.0.3465.1   | 2023-10-10   |
-| [CU 31 GDR](/troubleshoot/sql/linux/release-history-2017#CU31-GDR)       | 14.0.3460.9   | 2023-02-14   |
+| [CU 31 GDR 1](/troubleshoot/sql/linux/release-history-2017#CU31-GDR1)    | 14.0.3460.9   | 2023-02-14   |
 | [CU 31](/troubleshoot/sql/linux/release-history-2017#CU31)               | 14.0.3456.2   | 2022-09-20   |
 | [CU 30](/troubleshoot/sql/linux/release-history-2017#CU30)               | 14.0.3451.2   | 2022-07-13   |
 | [CU 29 GDR](/troubleshoot/sql/linux/release-history-2017#CU29-GDR)       | 14.0.3445.2   | 2022-06-14   |
@@ -94,7 +98,7 @@ The following table lists the release history for [!INCLUDE [ssSQL17](../include
 | [CU 24](/troubleshoot/sql/linux/release-history-2017#CU24)               | 14.0.3391.2   | 2021-05-10   |
 | [CU 23](/troubleshoot/sql/linux/release-history-2017#CU23)               | 14.0.3381.3   | 2021-02-24   |
 | [CU 22 GDR](/troubleshoot/sql/linux/release-history-2017#CU22)           | 14.0.3370.1   | 2021-01-12   |
-| [GDR 3](/troubleshoot/sql/linux/release-history-2017#GDR3)               | 14.0.2037.2   | 2021-01-12   |
+| [GDR 5](/troubleshoot/sql/linux/release-history-2017#GDR5)               | 14.0.2037.2   | 2021-01-12   |
 | [CU 22](/troubleshoot/sql/linux/release-history-2017#CU22)               | 14.0.3356.20  | 2020-09-10   |
 | [CU 21](/troubleshoot/sql/linux/release-history-2017#CU21)               | 14.0.3335.7   | 2020-07-01   |
 | [CU 20](/troubleshoot/sql/linux/release-history-2017#CU20)               | 14.0.3294.2   | 2020-04-10   |
@@ -103,6 +107,7 @@ The following table lists the release history for [!INCLUDE [ssSQL17](../include
 | [CU 17](/troubleshoot/sql/linux/release-history-2017#CU17)               | 14.0.3238.1   | 2019-10-08   |
 | [CU 16](/troubleshoot/sql/linux/release-history-2017#CU16)               | 14.0.3223.3   | 2019-08-01   |
 | [CU 15 GDR](/troubleshoot/sql/linux/release-history-2017#CU15-GDR)       | 14.0.3192.2   | 2019-07-09   |
+| [GDR 4](/troubleshoot/sql/linux/release-history-2017#GDR4)               | 14.0.2027.2   | 2019-07-09   |
 | [CU 15](/troubleshoot/sql/linux/release-history-2017#CU15)               | 14.0.3162.1   | 2019-05-23   |
 | [CU 14](/troubleshoot/sql/linux/release-history-2017#CU14)               | 14.0.3076.1   | 2019-03-25   |
 | [CU 13](/troubleshoot/sql/linux/release-history-2017#CU13)               | 14.0.3048.4   | 2018-12-18   |
@@ -118,6 +123,7 @@ The following table lists the release history for [!INCLUDE [ssSQL17](../include
 | [CU 5](/troubleshoot/sql/linux/release-history-2017#CU5)                 | 14.0.3023.8   | 2018-03-20   |
 | [CU 4](/troubleshoot/sql/linux/release-history-2017#CU4)                 | 14.0.3022.28  | 2018-02-20   |
 | [CU 3](/troubleshoot/sql/linux/release-history-2017#CU3)                 | 14.0.3015.40  | 2018-01-03   |
+| [CU 3 GDR](/troubleshoot/sql/linux/release-history-2017#CU3-GDR)         | 14.0.3015.40  | 2018-01-03   |
 | [GDR 1](/troubleshoot/sql/linux/release-history-2017#GDR1)               | 14.0.2000.63  | 2018-01-03   |
 | [CU 2](/troubleshoot/sql/linux/release-history-2017#CU2)                 | 14.0.3008.27  | 2017-11-28   |
 | [CU 1](/troubleshoot/sql/linux/release-history-2017#CU1)                 | 14.0.3006.16  | 2017-10-24   |

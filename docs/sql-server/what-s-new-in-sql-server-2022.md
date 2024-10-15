@@ -177,7 +177,7 @@ This section provides additional information for the features highlighted previo
 
 ### Query Store improvements
 
-Query Store helps you better track performance history, troubleshoot query plan related issues, and enable new capabilities in [!INCLUDE [ssazure-sqldb](../includes/ssazure-sqldb.md)], [!INCLUDE [ssazuremi-md](../includes/ssazuremi-md.md)], and [!INCLUDE [sssql22-md](../includes/sssql22-md.md)]. CTP 2.1 introduces Query Store enabled by default for new databases. If you need to enable the query store, see [Enable the Query Store](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md#Enabling).
+Query Store helps you better track performance history, troubleshoot query plan related issues, and enable new capabilities in [!INCLUDE [ssazure-sqldb](../includes/ssazure-sqldb.md)], [!INCLUDE [ssazuremi-md](../includes/ssazuremi-md.md)], and [!INCLUDE [sssql22-md](../includes/sssql22-md.md)]. CTP 2.1 introduces Query Store enabled by default for new databases. If you need to enable the Query Store, see [Enable the Query Store](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md#Enabling).
 
 - For databases that have been restored from other SQL Server instances and for those databases that are upgraded from an in-place upgrade to [!INCLUDE [sssql22-md](../includes/sssql22-md.md)], these databases retain the previous Query Store settings.
 

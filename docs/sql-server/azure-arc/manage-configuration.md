@@ -318,7 +318,7 @@ on $left.machineId == $right.machineIdHasSQLServerExtensionInstalled
 
 #### List Azure Arc-enabled servers that host a billable SQL Server instance
 
-This query identifies the machines (virtual or physical) that host SQL Server instances and that are billable or require a license for SQL Server software. It provides the details of the SQL Server configuration, including the license type, ESU setting, size in v-cores or p-cores, and other relevant parameters.
+This query identifies the connected machines (virtual or physical) that host SQL Server instances and that are billable or require a license for SQL Server software. It provides the details of the SQL Server configuration, including the license type, ESU setting, size in v-cores or p-cores, and other relevant parameters.
 
 ```kusto
 resources
@@ -374,7 +374,6 @@ resources
             | extend licenseType = tostring(properties.licenseType)
             | where sqlEdition in ('Enterprise', 'Standard')
             | where licenseType !~ 'HADR'
-            | where sqlStatus =~ "Connected"
             | extend ArcServer = tolower(tostring(properties.containerResourceId))
             | order by sqlEdition
             )
@@ -384,16 +383,19 @@ resources
             , name
             , resourceGroup
             , subscriptionId
+            , Status = tostring(properties.status)
             , Model = tostring(properties.detectedProperties.model)
             , Manufacturer = tostring(properties.detectedProperties.manufacturer)
             , License_Type = tostring(properties1.settings.LicenseType)
+            , ESU = iff(notnull(properties1.settings.enableExtendedSecurityUpdates), iff(properties1.settings.enableExtendedSecurityUpdates == true,"enabled","not enabled"), "not enabled")
             , OS = tostring(properties.osName)
             , Uses_UV = tostring(properties1.settings.UsePhysicalCoreLicense.IsApplied)
             , Cores = tostring(billableCores)
             , Version = sqlVersion
-            | project-away machineID
-            | order by Edition, name asc
-   ```
+            | summarize by name, subscriptionId, resourceGroup, Model, Manufacturer, License_Type, ESU, OS, Cores, Status
+            | project Name = name, Model, Manufacturer, OperatingSystem = OS, Status, HostLicenseType = License_Type, ESU, BillableCores = Cores, SubscriptionID = subscriptionId, ResourceGroup = resourceGroup
+            | order by Name asc
+```
 
 ## <a id="manage-pcore-license"></a> Manage the unlimited virtualization benefit for SQL Server
 

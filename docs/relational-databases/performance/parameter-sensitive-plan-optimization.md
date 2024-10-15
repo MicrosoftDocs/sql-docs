@@ -358,7 +358,7 @@ BEGIN
         WHILE @@FETCH_STATUS = 0
     BEGIN
 
- -- Deleting query variant(s) from the query store
+ -- Deleting query variant(s) from the Query Store
         EXEC sp_query_store_remove_query @query_id = @QueryID;
         FETCH NEXT FROM @QueryIDsCursor
         INTO @QueryID

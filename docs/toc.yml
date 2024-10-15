@@ -4425,8 +4425,6 @@ items:
       href: database-engine/install-windows/supported-version-and-edition-upgrades-2017.md
     - name: Supported Version & Edition Upgrades SQL Server 2016
       href: database-engine/install-windows/supported-version-and-edition-upgrades.md?view=sql-server-2016&preserve-view=true
-    - name: Prepare for upgrade by running Data Migration Assistant
-      href: database-engine/install-windows/prepare-for-upgrade-by-running-data-migration-assistant.md
     - name: Analysis Services
       href: database-engine/install-windows/upgrade-analysis-services.md
     - name: Data Quality Services
@@ -10456,6 +10454,8 @@ items:
           href: sql-server/azure-arc/troubleshoot-telemetry-endpoint.md
         - name: Troubleshoot best practices assessment
           href: sql-server/azure-arc/troubleshoot-assessment.md
+        - name: Known issues
+          href: sql-server/azure-arc/known-issues.md
     - name: Azure Arc-enabled data services >
       href: /azure/azure-arc/data/overview
 
@@ -11781,10 +11781,10 @@ items:
           href: relational-databases/errors-events/mssqlserver-41396-database-engine-error.md
         - name: 41399
           href: relational-databases/errors-events/mssqlserver-41399-database-engine-error.md
-      - name: Errors 41,400 to 42,999
+      - name: Errors 41,400 to 49,999
         items:
         - name: Overview
-          href: relational-databases/errors-events/database-engine-events-and-errors-41400-to-42999.md
+          href: relational-databases/errors-events/database-engine-events-and-errors-41400-to-49999.md
         - name: 42108
           href: relational-databases/errors-events/mssqlserver-42108-database-engine-error.md
         - name: 42109
@@ -15913,8 +15913,9 @@ items:
     href: t-sql/language-reference.md
     items:
     - name: Date & time
-      href: t-sql/data-types/date-and-time-types.md
       items:
+      - name: Overview
+        href: t-sql/data-types/date-and-time-types.md
       - name: date
         href: t-sql/data-types/date-transact-sql.md
       - name: datetime
@@ -17490,6 +17491,8 @@ items:
           href: t-sql/queries/updatetext-transact-sql.md
         - name: WITH common_table_expression
           href: t-sql/queries/with-common-table-expression-transact-sql.md
+        - name: Nested common table expressions in Fabric Warehouse
+          href: t-sql/queries/nested-common-table-expression.md
         - name: WRITETEXT
           href: t-sql/queries/writetext-transact-sql.md
       - name: SELECT

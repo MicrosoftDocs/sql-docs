@@ -4,7 +4,7 @@ description: Failover groups let you manage geo-replication and automatic / coor
 author: rajeshsetlem
 ms.author: rsetlem
 ms.reviewer: wiassaf, mathoma
-ms.date: 01/11/2024
+ms.date: 09/30/2024
 ms.service: azure-sql-database
 ms.subservice: high-availability
 ms.topic: conceptual
@@ -116,6 +116,13 @@ If you have [geo-replication](active-geo-replication-overview.md) or [failover g
 ## Initial seeding
 
 When adding databases or elastic pools to a failover group, there's an initial seeding phase before data replication starts. The initial seeding phase is the longest and most expensive operation. Once initial seeding completes, data is synchronized, and then only subsequent data changes are replicated. The time it takes for the initial seeding to complete depends on the size of your data, number of replicated databases, the load on the primary databases, and the speed of the network link between the primary and secondary database. Under normal circumstances, possible seeding speed is up to 500 GB an hour for SQL Database. Seeding is performed for all databases in parallel.
+
+## Number of databases in failover group
+
+The number of databases within a failover group directly impacts the duration of both Failover and Forced Failover operations. 
+
+- During a Failover (also known as Planned Failover), we ensure that all primary databases are fully synchronized with their secondary and reach a ready state. To avoid overwhelming the control plane, databases are prepared in batches. Therefore, it is highly recommended to limit the number of databases in a failover group.
+- In the case of a Forced Failover, the preparation phase is expedited as data synchronization is not initiated. To achieve quicker and predictable failover durations, it might be beneficial to keep the number of databases in the failover group to a smaller number. 
 
 ## <a id="using-one-or-several-failover-groups-to-manage-failover-of-multiple-databases"></a> Use multiple failover groups to fail over multiple databases
 

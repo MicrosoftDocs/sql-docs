@@ -17,7 +17,7 @@ monikerRange: "=azuresql||=azuresql-mi"
 # Azure SQL Managed Instance content reference
 [!INCLUDE [appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
 
-In this article, you can find a content reference to various guides, scripts, and explanations that help you manage and configure Azure SQL Managed Instance.
+In this article, you can find content references to various guides, scripts, and explanations that help you manage and configure [Azure SQL Managed Instance](sql-managed-instance-paas-overview.md).
 
 ## Load data
 
@@ -58,18 +58,25 @@ In this article, you can find a content reference to various guides, scripts, an
 - [Configure threat detection](threat-detection-configure.md) – [threat detection](../database/threat-detection-overview.md?view=azuresql-mi&preserve-view=true) is a built-in Azure SQL Managed Instance feature that detects various potential attacks such as SQL injection or access from suspicious locations. 
 - [Creating alerts](alerts-create.md) enables you to set up alerts on monitored metrics such as CPU utilization, storage space consumption, IOPS, and others for SQL Managed Instance. 
 
-### Transparent Data Encryption
+## Transparent Data Encryption
 
 - [Configure TDE with BYOK](../database/transparent-data-encryption-byok-configure.md?view=azuresql-mi&preserve-view=true)
 - [Rotate TDE BYOK keys](../database/transparent-data-encryption-byok-key-rotation.md?view=azuresql-mi&preserve-view=true)
 - [Remove a TDE protector](../database/transparent-data-encryption-byok-remove-tde-protector.md?view=azuresql-mi&preserve-view=true)
 
-### Managed Instance link feature
+## Managed Instance link feature
 
-- [Prepare environment for link feature](managed-instance-link-preparation.md)
+To learn more about the link: 
+- [Managed Instance link overview](managed-instance-link-feature-overview.md)
+- [Disaster recovery with Managed Instance link](managed-instance-link-disaster-recovery.md)
+
+To use the link: 
+- [Prepare environment for the Managed Instance link](./managed-instance-link-preparation.md)
 - [Configure link between SQL Server and SQL Managed instance with SSMS](managed-instance-link-configure-how-to-ssms.md)
 - [Configure link between SQL Server and SQL Managed instance with scripts](managed-instance-link-configure-how-to-scripts.md)
-- [Best practices with link feature for Azure SQL Managed Instance](managed-instance-link-best-practices.md)
+- [Fail over the link](managed-instance-link-failover-how-to.md)
+- [Migrate with the link](managed-instance-link-migrate.md)
+- [Best practices for maintaining the link](managed-instance-link-best-practices.md)
 
 
 ## Monitoring and tuning
@@ -81,13 +88,13 @@ In this article, you can find a content reference to various guides, scripts, an
 - [Use the Intelligent Insights diagnostics log](../database/intelligent-insights-use-diagnostics-log.md?view=azuresql-mi&preserve-view=true)
 - [Monitor In-Memory OLTP space](in-memory-oltp-monitor-space.md?view=azuresql-mi&preserve-view=true)
 
-### Extended events
+## Extended events
 
 - [Extended events](../database/xevent-db-diff-from-svr.md)
 - [Store extended events into an event file](../database/xevent-code-event-file.md)
 - [Store extended events into a ring buffer](../database/xevent-code-ring-buffer.md)
 
-### Alerting
+## Alerting
 
 - [Create alerts on managed instance](alerts-create.md)
 
@@ -114,7 +121,7 @@ In this article, you can find a content reference to various guides, scripts, an
 - [Design for elastic pools](../database/disaster-recovery-strategies-for-applications-with-elastic-pool.md)
 - [Design for app upgrades](../database/manage-application-rolling-upgrade.md)
 
-### Design multitenant SaaS applications
+## Design multitenant SaaS applications
 
 - [SaaS design patterns](../database/saas-tenancy-app-design-patterns.md)
 - [SaaS video indexer](../database/saas-tenancy-video-index-wingtip-brk3120-20171011.md)

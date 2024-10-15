@@ -136,7 +136,7 @@ For more information on how Microsoft implements responsible AI tools in [Micros
 
 ## <a id="troubleshooting"></a> Troubleshoot
 
-In order to answer some questions about your Azure SQL Database, Microsoft Copilot might need to connect to your database in the context of current Azure portal login context and execute queries on dynamic management views and query store system tables.
+In order to answer some questions about your Azure SQL Database, Microsoft Copilot might need to connect to your database in the context of current Azure portal login context and execute queries on dynamic management views and Query Store system tables.
 
 The following considerations and limitations apply when connecting to Azure SQL Database:
 

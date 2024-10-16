@@ -89,7 +89,7 @@ For details and specific instructions for installing the `pyodbc` driver on all 
 
 For local development and connecting to Azure SQL Database, add the following `AZURE_SQL_CONNECTIONSTRING` environment variable. Replace the `<database-server-name>` and `<database-name>` placeholders with your own values. Example environment variables are shown for the Bash shell.
 
-Interactive authentication provides a passwordless option when you're running locally.
+Interactive authentication provides a passwordless option when you're running locally. This option is recommended because you don't have to store or manage authentication secrets on your local system.
 
 ## [Interactive Authentication](#tab/sql-inter)
 

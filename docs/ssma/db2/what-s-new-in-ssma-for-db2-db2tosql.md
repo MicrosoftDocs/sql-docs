@@ -4,7 +4,7 @@ description: Find out about changes to SQL Server Migration Assistant (SSMA) for
 author: cpichuka
 ms.author: cpichuka
 ms.reviewer: randolphwest
-ms.date: 09/24/2024
+ms.date: 10/16/2024
 ms.service: sql
 ms.subservice: ssma
 ms.topic: conceptual
@@ -18,6 +18,15 @@ ms.custom:
 This article lists SQL Server Migration Assistant (SSMA) for Db2 changes in each release.
 
 [!INCLUDE [entra-id](../../includes/entra-id-hard-coded.md)]
+
+## SSMA v10.0
+
+The v10.0 release of SSMA for DB2 contains the following changes:
+
+- Improve conversion of FETCH FIRST ROW ONLY syntax
+- Improve conversion support of LOCATE_IN_STRING behavior
+- Support of range-partitioned tables in DB2-ZOS
+- Improve handling of INCLUDE clause in indexes
 
 ## SSMA v9.5
 
@@ -87,7 +96,7 @@ The v8.22 release of SSMA for Db2 contains the following changes:
 
 - Fix AM/PM handling in `ssma_db2.TIMESTAMP_FORMAT` emulation function
 - Improve day-of-week validation in `ssma_db2.TIMESTAMP_FORMAT` emulation function
-- Allow to specify additional connection string options for target database connection
+- Allow to specify extra connection string options for target database connection
 - Introduce summary charts in assessment reports
 - Improve messages navigation in assessment reports
 
@@ -312,7 +321,7 @@ The v8.0 release of SSMA for Db2 is enhanced to provide targeted fixes designed 
 
 The v7.10 release of SSMA for Db2 contains the following changes:
 
-- Targeted fixes designed to provide additional security and privacy protections to meet changes in global requirements.
+- Targeted fixes designed to provide more security and privacy protections to meet changes in global requirements.
 - A fix for conversion of `BEGIN-END` blocks.
 
 ## SSMA v7.9

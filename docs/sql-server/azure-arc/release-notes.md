@@ -38,6 +38,11 @@ Inventory additional service resources in portal (preview):
 - [!INCLUDE [SQL Server](../../includes/ssnoversion-md.md)] [!INCLUDE [Analysis Services](../../includes/ssasnoversion-md.md)]
 - [!INCLUDE [SQL Server](../../includes/ssnoversion-md.md)] [!INCLUDE [Integration Services](../../includes/ssisnoversion-md.md)]
 - [!INCLUDE [SQL Server](../../includes/ssnoversion-md.md)] [!INCLUDE [Reporting Services](../../includes/ssrsnoversion-md.md)]
+- Power BI Report Server
+
+### ESU update to bill back calculation
+
+ESU sets the bill back date to the beginning of the current ESU year based on the timestamp when ESU was enabled, or p-core ESU license got activated. For details, review [SQL Server Extended Security Updates enabled by Azure Arc](extended-security-updates.md).
 
 ## September 9, 2024
 

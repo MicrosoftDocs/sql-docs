@@ -46,7 +46,6 @@ The following table lists the features of Azure SQL Managed Instance that are cu
 |[Next-gen General Purpose](service-tiers-next-gen-general-purpose-use.md) | An architectural upgrade of the General Purpose service tier that uses managed disks for greater resource flexibility, and improved performance while maintaining the same baseline cost as the General Purpose service tier.  |
 |[SDK-style SQL project](/sql/azure-data-studio/extensions/sql-database-project-extension-sdk-style-projects) | Use [Microsoft.Build.Sql](https://www.nuget.org/packages/Microsoft.Build.Sql) for SDK-style SQL projects in the SQL Database Projects extension in Azure Data Studio or Visual Studio Code. SDK-style SQL projects are especially advantageous for applications shipped through pipelines or built in cross-platform environments.|
 |[Service Broker](/sql/database-engine/configure-windows/sql-server-service-broker) | Support for cross-instance message exchange using Service Broker between instances of Azure SQL Managed Instance, and between SQL Server and Azure SQL Managed Instance. |
-|[Two-way DR with SQL Server 2022](managed-instance-link-disaster-recovery.md) | In the event of a disaster, you can fail your SQL Server 2022 workloads to Azure SQL Managed Instance using the link, and then, once the disaster is mitigated, you can fail back to SQL Server. |
 |[Threat detection](threat-detection-configure.md) | Threat detection notifies you of security threats detected to your database. |
 |[Zone redundancy for General Purpose](high-availability-sla-local-zone-redundancy.md#zone-redundant-availability) |  Deploy your General Purpose SQL Managed Instance to multiple availability zones to improve the availability of your instance in the event of a disaster. | 
 
@@ -59,6 +58,7 @@ The following table lists features of Azure SQL Managed Instance that have been 
 | ---| --- |--- |
 |[Fail over a link with T-SQL](managed-instance-link-failover-how-to.md?tabs=tsql#fail-over-a-database) | October 2024 | You can now fail over a [Managed Instance link](managed-instance-link-feature-overview.md) by using Transact-SQL (T-SQL) commands. |
 |[Link from SQL MI to SQL Server](managed-instance-link-feature-overview.md) | October 2024 | Configure a link *from* Azure SQL Managed Instance to SQL Server 2022. |
+|[Two-way DR with SQL Server 2022](managed-instance-link-disaster-recovery.md) | October 2024 | In the event of a disaster, you can fail your SQL Server 2022 workloads to Azure SQL Managed Instance using the link, and then, once the disaster is mitigated, you can fail back to SQL Server. |
 |[CURRENT_DATE Transact-SQL](/sql/t-sql/functions/current-date-transact-sql) | August 2024 |  A Transact-SQL (T-SQL) function that returns the current database system date as a date value, without the database time and time zone offset. |
 |[Maintenance window advance notifications](advance-notifications.md)| June 2024 | Advance notifications for SQL managed instance [maintenance window](maintenance-window.md) are now generally available.  |
 |[Update policy](update-policy.md) | May 2024 | Use the update policy to control your internal database format alignment and access to the latest SQL Database Engine features. You can choose to either limit the feature set to features that are available in SQL Server 2022, or ensure your instance takes advantage of all the latest features of Azure SQL Managed Instance.| 
@@ -110,6 +110,7 @@ Learn about significant changes to the Azure SQL Managed Instance documentation.
 | --- | --- |
 |**Fail over a link with T-SQL GA** |  You can now fail over a [Managed Instance link](managed-instance-link-feature-overview.md) by using Transact-SQL (T-SQL) commands. This feature is now generally available. Review [Fail over a link with T-SQL](managed-instance-link-failover-how-to.md?tabs=tsql#fail-over-a-database) to learn more. |
 |**Link from SQL MI to SQL Server GA** |  Configure a link *from* Azure SQL Managed Instance to SQL Server 2022. This feature is now generally available. Review [Link from SQL MI to SQL Server](managed-instance-link-feature-overview.md)  to learn more.  |
+|**Two-way DR with SQL Server 2022 GA** | In the event of a disaster, you can fail your SQL Server 2022 workloads to Azure SQL Managed Instance using the link, and then, once the disaster is mitigated, you can fail back to SQL Server. This feature is now generally available. Review [Two-way DR with SQL Server 2022](managed-instance-link-disaster-recovery.md) to learn more.|
 
 ### August 2024
 

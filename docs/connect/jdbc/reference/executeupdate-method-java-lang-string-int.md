@@ -27,7 +27,7 @@ public final int executeUpdate(java.lang.String sql,
 #### Parameters  
  *sql*  
   
- A **String** that contains an SQL statement.  
+ A **String** that contains a SQL statement.  
   
  *flag*  
   

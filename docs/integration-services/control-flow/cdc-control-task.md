@@ -143,7 +143,7 @@ f1_keywords:
  **Table to use for storing state**  
  Type the name of the state table to be used for storing the CDC state. The table specified must have two columns called **name** and **state** and both columns must be of the data type **varchar (256)**.  
   
- You can optionally select **New** to get an SQL script that builds a new State table with the required columns. When **Automatic state persistence** is selected, the developer must create a state table according to the requirements listed above.  
+ You can optionally select **New** to get a SQL script that builds a new State table with the required columns. When **Automatic state persistence** is selected, the developer must create a state table according to the requirements listed above.  
   
  This is available only if **Automatic state persistence** is selected and it is a required parameter.  
   

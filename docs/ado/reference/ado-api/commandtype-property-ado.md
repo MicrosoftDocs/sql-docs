@@ -25,7 +25,7 @@ Indicates the type of a [Command](./command-object-ado.md) object.
 ## Remarks  
  Use the **CommandType** property to optimize evaluation of the [CommandText](./commandtext-property-ado.md) property.  
   
- If the **CommandType** property value is set to the default value, **adCmdUnknown**, you may experience diminished performance because ADO must make calls to the provider to determine if the **CommandText** property is an SQL statement, a stored procedure, or a table name. If you know what type of command you are using, setting the **CommandType** property instructs ADO to go directly to the relevant code. If the **CommandType** property does not match the type of command in the **CommandText** property, an error occurs when you call the [Execute](./execute-method-ado-command.md) method.  
+ If the **CommandType** property value is set to the default value, **adCmdUnknown**, you may experience diminished performance because ADO must make calls to the provider to determine if the **CommandText** property is a SQL statement, a stored procedure, or a table name. If you know what type of command you are using, setting the **CommandType** property instructs ADO to go directly to the relevant code. If the **CommandType** property does not match the type of command in the **CommandText** property, an error occurs when you call the [Execute](./execute-method-ado-command.md) method.  
   
 ## Applies To  
  [Command Object (ADO)](./command-object-ado.md)  

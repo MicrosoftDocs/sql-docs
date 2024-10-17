@@ -25,7 +25,7 @@ The topics in this section describe the different ways in which you can connect 
 
 | Topic                                             | Description                                                                                                                                                   |
 | ------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [Connection URL Sample](connection-url-sample.md) | Describes how to use a connection URL to connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and then use an SQL statement to retrieve data. |
+| [Connection URL Sample](connection-url-sample.md) | Describes how to use a connection URL to connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and then use a SQL statement to retrieve data. |
 | [Data Source Sample](data-source-sample.md)       | Describes how to use a data source to connect to SQL Server and then use a stored procedure to retrieve data.                                                 |
 
 ## See also

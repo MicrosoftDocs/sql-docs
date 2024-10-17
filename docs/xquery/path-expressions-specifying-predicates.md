@@ -31,7 +31,7 @@ dev_langs:
 ## Predicates  
  A predicate is used to filter a node sequence by applying a specified test. The predicate expression is enclosed in a square bracket and is bound to the last node in a path expression.  
   
- For example, assume that an SQL parameter value (x) of the **xml** data type is declared, as shown in the following:  
+ For example, assume that a SQL parameter value (x) of the **xml** data type is declared, as shown in the following:  
   
 ```  
 declare @x xml  

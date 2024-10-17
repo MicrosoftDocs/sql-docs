@@ -17,10 +17,10 @@ apitype: "COM"
 Indicates the text of a command to be issued against a provider.  
   
 ## Settings and Return Values  
- Gets or sets a **String** value that contains a provider command, such as an SQL statement, a table name, a relative URL, or a stored procedure call. The default is the empty string ("").  
+ Gets or sets a **String** value that contains a provider command, such as a SQL statement, a table name, a relative URL, or a stored procedure call. The default is the empty string ("").  
   
 ## Remarks  
- Use the **CommandText** property to set or return the text of a command represented by a [Command](./command-object-ado.md) object. Usually this will be an SQL statement, but can also be any other type of command statement recognized by the provider, such as a stored procedure call. An SQL statement must be of the particular dialect or version supported by the provider's query processor.  
+ Use the **CommandText** property to set or return the text of a command represented by a [Command](./command-object-ado.md) object. Usually this will be a SQL statement, but can also be any other type of command statement recognized by the provider, such as a stored procedure call. A SQL statement must be of the particular dialect or version supported by the provider's query processor.  
   
  If the [Prepared](./prepared-property-ado.md) property of the **Command** object is set to **True** and the **Command** object is bound to an open connection when you set the **CommandText** property, ADO prepares the query (that is, a compiled form of the query that is stored by the provider) when you call the [Execute](./execute-method-ado-command.md) or [Open](./open-method-ado-connection.md) methods.  
   

@@ -13,7 +13,7 @@ helpviewer_keywords:
 # Describing Parameters
 **SQLBindParameter** has arguments that describe the parameter: its SQL type, precision, and scale. The driver uses this information, or *metadata,* to convert the parameter value to the type needed by the data source. At first glance, it might seem that the driver is in a better position to know the parameter metadata than the application; after all, the driver can easily discover the metadata for a result set column. As it turns out, this is not the case. First, most data sources do not provide a way for the driver to discover parameter metadata. Second, most applications already know the metadata.  
   
- If an SQL statement is hard-coded in the application, the application writer already knows the type of each parameter. If an SQL statement is constructed by the application at run time, the application can determine the metadata as it builds the statement. For example, when the application constructs the clause  
+ If a SQL statement is hard-coded in the application, the application writer already knows the type of each parameter. If a SQL statement is constructed by the application at run time, the application can determine the metadata as it builds the statement. For example, when the application constructs the clause  
   
 ```  
 WHERE OrderID = ?  

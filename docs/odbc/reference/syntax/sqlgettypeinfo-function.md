@@ -20,7 +20,7 @@ apitype: "dllExport"
  Version Introduced: ODBC 1.0 Standards Compliance: ISO 92  
   
  **Summary**  
- **SQLGetTypeInfo** returns information about data types supported by the data source. The driver returns the information in the form of an SQL result set. The data types are intended for use in Data Definition Language (DDL) statements.  
+ **SQLGetTypeInfo** returns information about data types supported by the data source. The driver returns the information in the form of a SQL result set. The data types are intended for use in Data Definition Language (DDL) statements.  
   
 > [!IMPORTANT]  
 >  Applications must use the type names returned in the TYPE_NAME column of the **SQLGetTypeInfo** result set in **ALTER TABLE** and **CREATE TABLE** statements. **SQLGetTypeInfo** may return more than one row with the same value in the DATA_TYPE column.  

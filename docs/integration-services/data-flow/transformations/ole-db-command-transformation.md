@@ -18,7 +18,7 @@ helpviewer_keywords:
 [!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-  The OLE DB Command transformation runs an SQL statement for each row in a data flow. For example, you can run an SQL statement that inserts, updates, or deletes rows in a database table.  
+  The OLE DB Command transformation runs a SQL statement for each row in a data flow. For example, you can run a SQL statement that inserts, updates, or deletes rows in a database table.  
   
  You can configure the OLE DB Command Transformation in the following ways:  
   

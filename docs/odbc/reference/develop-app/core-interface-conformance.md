@@ -49,7 +49,7 @@ All ODBC drivers must exhibit at least Core-level interface conformance. Because
   
 -   Obtain diagnostic information, by calling **SQLGetDiagField** and **SQLGetDiagRec**.  
   
--   Detect driver capabilities, by calling **SQLGetFunctions** and **SQLGetInfo**. Also, detect the result of any text substitutions made to an SQL statement before it is sent to the data source, by calling **SQLNativeSql**.  
+-   Detect driver capabilities, by calling **SQLGetFunctions** and **SQLGetInfo**. Also, detect the result of any text substitutions made to a SQL statement before it is sent to the data source, by calling **SQLNativeSql**.  
   
 -   Use the syntax of **SQLEndTran** to commit a transaction. A Core-level driver need not support true transactions; therefore, the application cannot specify SQL_ROLLBACK nor SQL_AUTOCOMMIT_OFF for the SQL_ATTR_AUTOCOMMIT connection attribute. (For more information, see feature 109 in [Level 2 Interface Conformance](../../../odbc/reference/develop-app/level-2-interface-conformance.md).)  
   

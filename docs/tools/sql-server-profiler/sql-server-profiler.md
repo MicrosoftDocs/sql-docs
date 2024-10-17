@@ -70,7 +70,7 @@ An event is an action generated within an instance of [!INCLUDE [ssDEnoversion](
 - Remote procedure call (RPC) batch status.
 - The start or end of a stored procedure.
 - The start or end of statements within stored procedures.
-- The start or end of an SQL batch.
+- The start or end of a SQL batch.
 - An error written to the [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] error log.
 - A lock acquired or released on a database object.
 - An opened cursor.

@@ -148,7 +148,7 @@ Press any key to finish...
   
 This example demonstrates how to:  
   
-- Execute an SQL INSERT statement safely by passing parameters.  
+- Execute a SQL INSERT statement safely by passing parameters.  
   - Use of parameters protects against SQL injection attacks.  
 - Retrieve the auto-generated value.  
   

@@ -32,7 +32,7 @@ For documentation, see [Python documentation at Python.org](https://www.python.o
 
 ## Samples
 
-Explore samples that use Python to connect to an SQL database in the following articles:
+Explore samples that use Python to connect to a SQL database in the following articles:
 
 - [Create a Python app in Azure App Service on Linux](/azure/app-service/containers/quickstart-python?tabs=bash)
 

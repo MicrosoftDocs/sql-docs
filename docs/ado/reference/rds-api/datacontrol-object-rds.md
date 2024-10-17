@@ -80,7 +80,7 @@ Binds a data query [Recordset](../ado-api/recordset-object-ado.md) to one or mor
   
 -   Add two **RDS.DataControl** objects to your Web page.  
   
--   Write two queries, one for each **SQL** property of the two **RDS.DataControl** objects. One **RDS.DataControl** object will contain an SQL query requesting customer information; the second will contain a query requesting a list of merchandise the customer has purchased.  
+-   Write two queries, one for each **SQL** property of the two **RDS.DataControl** objects. One **RDS.DataControl** object will contain a SQL query requesting customer information; the second will contain a query requesting a list of merchandise the customer has purchased.  
   
 -   In the OBJECT tags of each bound control, specify the DATAFLD value to set the values for the data that you want to display in each visual control.  
   

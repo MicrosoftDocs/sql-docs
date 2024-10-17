@@ -18,7 +18,7 @@ If an application specifies SQL_C_DEFAULT in **SQLBindCol**, **SQLGetData**, or 
 > [!IMPORTANT]  
 >  Interoperable applications should not use SQL_C_DEFAULT. Instead, they should always specify the C type of the buffer they are using. This is because drivers cannot always correctly determine the default C type, for the following reasons:  
   
--   If the DBMS promotes an SQL data type of a column or parameter, the driver cannot determine the original SQL data type of a column or parameter. Therefore, it cannot determine the corresponding default C data type.  
+-   If the DBMS promotes a SQL data type of a column or parameter, the driver cannot determine the original SQL data type of a column or parameter. Therefore, it cannot determine the corresponding default C data type.  
   
 -   If the driver cannot determine whether a particular column or parameter is signed, as is often the case when this is handled by the DBMS, the driver cannot determine whether the corresponding default C data type should be signed or unsigned.  
   

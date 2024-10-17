@@ -38,8 +38,8 @@ SQL = " "
   
 |Part|Description|  
 |----------|-----------------|  
-|**SQL**|A literal string that indicates this is an SQL section entry.|  
-|***sqlString***|An SQL string that replaces the client string.|  
+|**SQL**|A literal string that indicates this is a SQL section entry.|  
+|***sqlString***|A SQL string that replaces the client string.|  
   
 ## See Also  
  [Customization File Connect Section](./customization-file-connect-section.md)   

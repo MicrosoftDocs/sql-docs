@@ -1,6 +1,6 @@
 ---
 title: "Tutorial: Geo-replication & failover in portal"
-description: Learn how to configure geo-replication for an SQL database using the Azure portal or Azure CLI, and initiate failover.
+description: Learn how to configure geo-replication for a SQL database using the Azure portal or Azure CLI, and initiate failover.
 author: rajeshsetlem
 ms.author: rsetlem
 ms.reviewer: wiassaf, mathoma, randolphwest

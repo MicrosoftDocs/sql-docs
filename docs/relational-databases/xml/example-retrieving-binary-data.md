@@ -1,6 +1,6 @@
 ---
 title: "Example: Retrieving Binary Data"
-description: View an example of an SQL query that retrieves binary data using the RAW and BINARY BASE64 options with the FOR XML clause.
+description: View an example of a SQL query that retrieves binary data using the RAW and BINARY BASE64 options with the FOR XML clause.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: randolphwest

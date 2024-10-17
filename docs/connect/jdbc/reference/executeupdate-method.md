@@ -14,7 +14,7 @@ apitype: "Assembly"
 # executeUpdate Method ()
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Runs the SQL statement in this [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) object, which must be an SQL INSERT, UPDATE, MERGE, or DELETE statement; or an SQL statement that returns nothing, such as a DDL statement.  
+  Runs the SQL statement in this [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) object, which must be a SQL INSERT, UPDATE, MERGE, or DELETE statement; or a SQL statement that returns nothing, such as a DDL statement.  
   
 ## Syntax  
   

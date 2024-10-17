@@ -115,7 +115,7 @@ Microsoft provides a Java Database Connectivity (JDBC) driver for use with SQL S
 | Example | Description |
 | :-- | :-- |
 | [Code examples](./jdbc/sample-jdbc-driver-applications.md) | Code examples that teach about data types, result sets, and large data. |
-| [Connection URL Sample](./jdbc/connection-url-sample.md) | Describes how to use a connection URL to connect to SQL Server. Then use it to use an SQL statement to retrieve data. |
+| [Connection URL Sample](./jdbc/connection-url-sample.md) | Describes how to use a connection URL to connect to SQL Server. Then use it to use a SQL statement to retrieve data. |
 | [Data Source Sample](./jdbc/data-source-sample.md) | Describes how to use a data source to connect to SQL Server. Then use a stored procedure to retrieve data. |
 | [Use Java to query an Azure SQL database](/azure/sql-database/sql-database-connect-query-java) | Azure SQL Database example. |
 

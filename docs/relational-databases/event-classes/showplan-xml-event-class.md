@@ -13,7 +13,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 ---
 # Showplan XML Event Class
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
-  The Showplan XML event class occurs when [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] executes an SQL statement. Include the Showplan XML event class to identify the Showplan operators. This event class stores each event as a well-defined XML document.  
+  The Showplan XML event class occurs when [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] executes a SQL statement. Include the Showplan XML event class to identify the Showplan operators. This event class stores each event as a well-defined XML document.  
   
  When the Showplan XML event class is included in a trace, the amount of overhead will significantly impede performance. Showplan XML stores a query plan that is created when the query is optimized. To minimize the overhead incurred, limit use of this event class to traces that monitor specific problems for brief periods of time.  
   

@@ -47,7 +47,7 @@ ms.topic: reference
 |[isDefinitelyWritable](../../../connect/jdbc/reference/isdefinitelywritable-method-sqlserverresultsetmetadata.md)|Indicates whether a write on the designated column will definitely succeed.|  
 |[isNullable](../../../connect/jdbc/reference/isnullable-method-sqlserverresultsetmetadata.md)|Indicates the nullability of values in the designated column.|  
 |[isReadOnly](../../../connect/jdbc/reference/isreadonly-method-sqlserverresultsetmetadata.md)|Indicates whether the designated column is definitely not writable.|  
-|[isSearchable](../../../connect/jdbc/reference/issearchable-method-sqlserverresultsetmetadata.md)|Indicates whether the designated column can be used in an SQL WHERE clause.|  
+|[isSearchable](../../../connect/jdbc/reference/issearchable-method-sqlserverresultsetmetadata.md)|Indicates whether the designated column can be used in a SQL WHERE clause.|  
 |[isSigned](../../../connect/jdbc/reference/issigned-method-sqlserverresultsetmetadata.md)|Indicates whether values in the designated column are signed numbers.|  
 |[isSparseColumnSet](../../../connect/jdbc/reference/issparsecolumnset-method-sqlserverresultsetmetadata.md)|Indicates if a column in a result set is a sparse column set.|  
 |[isWritable](../../../connect/jdbc/reference/iswritable-method-sqlserverresultsetmetadata.md)|Indicates whether it is possible for a write on the designated column to succeed.|  

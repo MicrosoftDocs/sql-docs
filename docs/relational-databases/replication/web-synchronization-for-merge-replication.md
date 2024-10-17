@@ -52,7 +52,7 @@ helpviewer_keywords:
   
 1.  The Merge Agent is started at the Subscriber. The agent does the following:  
   
-    1.  Makes an SQL connection to the subscription database.  
+    1.  Makes a SQL connection to the subscription database.  
   
     2.  Extracts any changes from the database.  
   
@@ -64,7 +64,7 @@ helpviewer_keywords:
   
     1.  Respond to the HTTPS request.  
   
-    2.  Make an SQL connection to the publication database.  
+    2.  Make a SQL connection to the publication database.  
   
     3.  Apply the upload changes to the publication database.  
   

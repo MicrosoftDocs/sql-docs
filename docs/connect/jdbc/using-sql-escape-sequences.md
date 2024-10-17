@@ -12,7 +12,7 @@ ms.topic: conceptual
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-The [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] supports the use of SQL escape sequences, as defined by the JDBC API. Escape sequences are used within an SQL statement to tell the driver that the escaped part of the SQL string should be handled differently. When the JDBC driver processes the escaped part of an SQL string, it translates that part of the string into SQL code that SQL Server understands.  
+The [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] supports the use of SQL escape sequences, as defined by the JDBC API. Escape sequences are used within a SQL statement to tell the driver that the escaped part of the SQL string should be handled differently. When the JDBC driver processes the escaped part of a SQL string, it translates that part of the string into SQL code that SQL Server understands.  
   
  There are five types of escape sequences that the JDBC API requires, and all are supported by the JDBC driver:  
   

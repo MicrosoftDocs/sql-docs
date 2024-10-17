@@ -69,7 +69,7 @@ The Azure SQL extension for SQL Server performs the assessment data collection b
 
 1. Open your SQL Server resource and select **Assessments (preview)** under **Migration** folder in the left pane.
 
-   :::image type="content" source="media/migration-assessment/assessment-main.png" alt-text="Screenshot showing how to get to the SQL Server migration assessment report an SQL Server resource.":::
+   :::image type="content" source="media/migration-assessment/assessment-main.png" alt-text="Screenshot showing how to get to the SQL Server migration assessment report a SQL Server resource.":::
 
 The *Last assessment time* indicates when the assessment was started. To trigger an assessment immediately, select **Run assessment**.
 

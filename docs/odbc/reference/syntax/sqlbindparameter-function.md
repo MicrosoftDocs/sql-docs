@@ -21,7 +21,7 @@ apitype: "dllExport"
  Version Introduced: ODBC 2.0 Standards Compliance: ODBC  
   
  **Summary**  
- **SQLBindParameter** binds a buffer to a parameter marker in an SQL statement. **SQLBindParameter** supports binding to a Unicode C data type, even if the underlying driver does not support Unicode data.  
+ **SQLBindParameter** binds a buffer to a parameter marker in a SQL statement. **SQLBindParameter** supports binding to a Unicode C data type, even if the underlying driver does not support Unicode data.  
   
 > [!NOTE]  
 >  This function replaces the ODBC 1.0 function **SQLSetParam**. For more information, see "Comments."  
@@ -110,7 +110,7 @@ SQLRETURN SQLBindParameter(
   
 ## Comments
 
- An application calls **SQLBindParameter** to bind each parameter marker in an SQL statement. Bindings remain in effect until the application calls **SQLBindParameter** again, calls **SQLFreeStmt** with the SQL_RESET_PARAMS option, or calls **SQLSetDescField** to set the SQL_DESC_COUNT header field of the APD to 0.  
+ An application calls **SQLBindParameter** to bind each parameter marker in a SQL statement. Bindings remain in effect until the application calls **SQLBindParameter** again, calls **SQLFreeStmt** with the SQL_RESET_PARAMS option, or calls **SQLSetDescField** to set the SQL_DESC_COUNT header field of the APD to 0.  
   
  For more information about parameters, see [Statement Parameters](../../../odbc/reference/develop-app/statement-parameters.md). For more information about parameter data types and parameter markers, see [Parameter Data Types](../../../odbc/reference/appendixes/parameter-data-types.md) and [Parameter Markers](../../../odbc/reference/appendixes/parameter-markers.md) in Appendix C: SQL Grammar.  
   
@@ -122,7 +122,7 @@ SQLRETURN SQLBindParameter(
   
  The *InputOutputType* argument is one of the following values:  
   
--   SQL_PARAM_INPUT. The parameter marks a parameter in an SQL statement that does not call a procedure, such as an **INSERT** statement, or it marks an input parameter in a procedure. For example, the parameters in **INSERT INTO Employee VALUES (?, ?, ?)** are input parameters, whereas the parameters in **{call AddEmp(?, ?, ?)}** can be, but are not necessarily, input parameters.  
+-   SQL_PARAM_INPUT. The parameter marks a parameter in a SQL statement that does not call a procedure, such as an **INSERT** statement, or it marks an input parameter in a procedure. For example, the parameters in **INSERT INTO Employee VALUES (?, ?, ?)** are input parameters, whereas the parameters in **{call AddEmp(?, ?, ?)}** can be, but are not necessarily, input parameters.  
   
      When the statement is executed, the driver sends data for the parameter to the data source; the \**ParameterValuePtr* buffer must contain a valid input value, or the **StrLen_or_IndPtr* buffer must contain SQL_NULL_DATA, SQL_DATA_AT_EXEC, or the result of the SQL_LEN_DATA_AT_EXEC macro.  
   
@@ -280,7 +280,7 @@ SQLRETURN SQLBindParameter(
 4.  Calls **SQLParamData** to retrieve the application-defined value specified in the *ParameterValuePtr* argument of **SQLBindParameter** for the first data-at-execution parameter to be processed. **SQLParamData** returns SQL_NEED_DATA.  
   
     > [!NOTE]  
-    >  Although data-at-execution parameters resemble data-at-execution columns, the value returned by **SQLParamData** is different for each. Data-at-execution parameters are parameters in an SQL statement for which data will be sent with **SQLPutData** when the statement is executed with **SQLExecDirect** or **SQLExecute**. They are bound with **SQLBindParameter**. The value returned by **SQLParamData** is a pointer value passed to **SQLBindParameter** in the *ParameterValuePtr* argument. Data-at-execution columns are columns in a rowset for which data will be sent with **SQLPutData** when a row is updated or added with **SQLBulkOperations** or updated with **SQLSetPos**. They are bound with **SQLBindCol**. The value returned by **SQLParamData** is the address of the row in the **TargetValuePtr* buffer (set by a call to **SQLBindCol**) that is being processed.  
+    >  Although data-at-execution parameters resemble data-at-execution columns, the value returned by **SQLParamData** is different for each. Data-at-execution parameters are parameters in a SQL statement for which data will be sent with **SQLPutData** when the statement is executed with **SQLExecDirect** or **SQLExecute**. They are bound with **SQLBindParameter**. The value returned by **SQLParamData** is a pointer value passed to **SQLBindParameter** in the *ParameterValuePtr* argument. Data-at-execution columns are columns in a rowset for which data will be sent with **SQLPutData** when a row is updated or added with **SQLBulkOperations** or updated with **SQLSetPos**. They are bound with **SQLBindCol**. The value returned by **SQLParamData** is the address of the row in the **TargetValuePtr* buffer (set by a call to **SQLBindCol**) that is being processed.  
   
 5.  Calls **SQLPutData** one or more times to send data for the parameter. More than one call is needed if the data value is larger than the \**ParameterValuePtr* buffer specified in **SQLPutData**; multiple calls to **SQLPutData** for the same parameter are allowed only when sending character C data to a column with a character, binary, or data source-specific data type or when sending binary C data to a column with a character, binary, or data source-specific data type.  
   
@@ -374,7 +374,7 @@ SQLRETURN SQLBindParameter(
   
 ## Error Information
 
- If a driver does not implement parameter arrays as batches (the SQL_PARAM_ARRAY_ROW_COUNTS option is equal to SQL_PARC_NO_BATCH), error situations are handled as if one statement were executed. If the driver does implement parameter arrays as batches, an application can use the SQL_DESC_ARRAY_STATUS_PTR header field of the IPD to determine which parameter of an SQL statement or which parameter in an array of parameters caused **SQLExecDirect** or **SQLExecute** to return an error. This field contains status information for each row of parameter values. If the field indicates that an error has occurred, fields in the diagnostic data structure will indicate the row and parameter number of the parameter that failed. The number of elements in the array will be defined by the SQL_DESC_ARRAY_SIZE header field in the APD, which can be set by the SQL_ATTR_PARAMSET_SIZE statement attribute.  
+ If a driver does not implement parameter arrays as batches (the SQL_PARAM_ARRAY_ROW_COUNTS option is equal to SQL_PARC_NO_BATCH), error situations are handled as if one statement were executed. If the driver does implement parameter arrays as batches, an application can use the SQL_DESC_ARRAY_STATUS_PTR header field of the IPD to determine which parameter of a SQL statement or which parameter in an array of parameters caused **SQLExecDirect** or **SQLExecute** to return an error. This field contains status information for each row of parameter values. If the field indicates that an error has occurred, fields in the diagnostic data structure will indicate the row and parameter number of the parameter that failed. The number of elements in the array will be defined by the SQL_DESC_ARRAY_SIZE header field in the APD, which can be set by the SQL_ATTR_PARAMSET_SIZE statement attribute.  
   
 > [!NOTE]  
 >  The SQL_DESC_ARRAY_STATUS_PTR header field in the APD is used to ignore parameters. For more information about ignoring parameters, see the next section, "Ignoring a Set of Parameters."  
@@ -396,7 +396,7 @@ SQLRETURN SQLBindParameter(
   
 ## Ignoring a Set of Parameters
 
- The SQL_DESC_ARRAY_STATUS_PTR field of the APD (as set by the SQL_ATTR_PARAM_STATUS_PTR statement attribute) can be used to indicate that a set of bound parameters in an SQL statement should be ignored. To direct the driver to ignore one or more sets of parameters during execution, an application should follow these steps:  
+ The SQL_DESC_ARRAY_STATUS_PTR field of the APD (as set by the SQL_ATTR_PARAM_STATUS_PTR statement attribute) can be used to indicate that a set of bound parameters in a SQL statement should be ignored. To direct the driver to ignore one or more sets of parameters during execution, an application should follow these steps:  
   
 1.  Call **SQLSetDescField** to set the SQL_DESC_ARRAY_STATUS_PTR header field of the APD to point to an array of SQLUSMALLINT values to contain status information. This field can also be set by calling **SQLSetStmtAttr** with an *Attribute* of SQL_ATTR_PARAM_OPERATION_PTR, which allows an application to set the field without obtaining a descriptor handle.  
   
@@ -418,7 +418,7 @@ SQLRETURN SQLBindParameter(
   
 -   SQL_PARAM_PROCEED is defined as 0 in the header file.  
   
- An application can set the SQL_DESC_ARRAY_STATUS_PTR field in the APD to point to the same array as that pointed to by the SQL_DESC_ARRAY_STATUS_PTR field in the IRD. This is useful when binding parameters to row data. Parameters can then be ignored according to the status of the row data. In addition to SQL_PARAM_IGNORE, the following codes cause a parameter in an SQL statement to be ignored: SQL_ROW_DELETED, SQL_ROW_UPDATED, and SQL_ROW_ERROR. In addition to SQL_PARAM_PROCEED, the following codes cause an SQL statement to proceed: SQL_ROW_SUCCESS, SQL_ROW_SUCCESS_WITH_INFO, and SQL_ROW_ADDED.  
+ An application can set the SQL_DESC_ARRAY_STATUS_PTR field in the APD to point to the same array as that pointed to by the SQL_DESC_ARRAY_STATUS_PTR field in the IRD. This is useful when binding parameters to row data. Parameters can then be ignored according to the status of the row data. In addition to SQL_PARAM_IGNORE, the following codes cause a parameter in a SQL statement to be ignored: SQL_ROW_DELETED, SQL_ROW_UPDATED, and SQL_ROW_ERROR. In addition to SQL_PARAM_PROCEED, the following codes cause a SQL statement to proceed: SQL_ROW_SUCCESS, SQL_ROW_SUCCESS_WITH_INFO, and SQL_ROW_ADDED.  
   
 ## Rebinding Parameters
 
@@ -489,7 +489,7 @@ SQLRETURN SQLBindParameter(
 
 ### A. Use SQLBindParameter Function
 
- In the following example, an application prepares an SQL statement to insert data into the ORDERS table. For each parameter in the statement, the application calls **SQLBindParameter** to specify the ODBC C data type and the SQL data type of the parameter, and to bind a buffer to each parameter. For each row of data, the application assigns data values to each parameter and calls **SQLExecute** to execute the statement.  
+ In the following example, an application prepares a SQL statement to insert data into the ORDERS table. For each parameter in the statement, the application calls **SQLBindParameter** to specify the ODBC C data type and the SQL data type of the parameter, and to bind a buffer to each parameter. For each row of data, the application assigns data values to each parameter and calls **SQLExecute** to execute the statement.  
   
  The following sample assumes that you have an ODBC data source on your computer called Northwind that is associated with the Northwind database.  
   
@@ -592,7 +592,7 @@ int main() {
 |For information about|See|  
 |---------------------------|---------|  
 |Returning information about a parameter in  a statement|[SQLDescribeParam Function](../../../odbc/reference/syntax/sqldescribeparam-function.md)|  
-|Executing an SQL statement|[SQLExecDirect Function](../../../odbc/reference/syntax/sqlexecdirect-function.md)|  
+|Executing a SQL statement|[SQLExecDirect Function](../../../odbc/reference/syntax/sqlexecdirect-function.md)|  
 |Executing a prepared SQL statement|[SQLExecute Function](../../../odbc/reference/syntax/sqlexecute-function.md)|  
 |Releasing parameter buffers on the statement|[SQLFreeStmt Function](../../../odbc/reference/syntax/sqlfreestmt-function.md)|  
 |Returning the number of statement  parameters|[SQLNumParams Function](../../../odbc/reference/syntax/sqlnumparams-function.md)|  

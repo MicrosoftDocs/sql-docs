@@ -12,7 +12,7 @@ ms.topic: how-to
 
 # Step 3: Proof of concept connecting to SQL using pyodbc
 
-This sample proof of concept uses `pyodbc` to connect to an SQL database. This sample assumes that you're using the [AdventureWorksLT sample database](https://github.com/microsoft/sql-server-samples/tree/master/samples/databases/adventure-works).
+This sample proof of concept uses `pyodbc` to connect to a SQL database. This sample assumes that you're using the [AdventureWorksLT sample database](https://github.com/microsoft/sql-server-samples/tree/master/samples/databases/adventure-works).
 
 > [!NOTE]
 > This example should be considered a proof of concept only.  The sample code is simplified for clarity, and does not necessarily represent best practices recommended by Microsoft.  
@@ -25,7 +25,7 @@ This sample proof of concept uses `pyodbc` to connect to an SQL database. This s
     - [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/github/codespaces-blank?quickstart=1).
 - `pyodbc` package from PyPI.
 - [Install the Microsoft ODBC Driver 18 for SQL Server](step-1-configure-development-environment-for-pyodbc-python-development.md#install-the-odbc-driver)
-- An SQL database and credentials.
+- A SQL database and credentials.
 
 ## Connect and query data
 
@@ -62,7 +62,7 @@ Connect to a database using your credentials.
     connectionString = f'DRIVER={{ODBC Driver 18 for SQL Server}};SERVER={SERVER};DATABASE={DATABASE};UID={USERNAME};PWD={PASSWORD}'
     ```
 
-1. Use the [`pyodbc.connect`](https://github.com/mkleehammer/pyodbc/wiki/The-pyodbc-Module#connect) function to connect to an SQL database.
+1. Use the [`pyodbc.connect`](https://github.com/mkleehammer/pyodbc/wiki/The-pyodbc-Module#connect) function to connect to a SQL database.
   
     ```python
     conn = pyodbc.connect(connectionString) 
@@ -70,7 +70,7 @@ Connect to a database using your credentials.
   
 ## Execute a query
 
-Use an SQL query string to execute a query and parse the results.
+Use a SQL query string to execute a query and parse the results.
 
 1. Create a variable for the SQL query string.
 

@@ -33,7 +33,7 @@ helpviewer_keywords:
   
 -   A table or view specified in a variable.  
   
--   The results of an SQL statement. The query can be a parameterized query.  
+-   The results of a SQL statement. The query can be a parameterized query.  
   
 ## Configure the Excel Destination  
  The Excel destination uses an Excel connection manager to connect to a data source, and the connection manager specifies the workbook file to use. For more information, see [Excel Connection Manager](../../integration-services/connection-manager/excel-connection-manager.md).  
@@ -70,7 +70,7 @@ helpviewer_keywords:
 |------------|-----------------|  
 |Table or view|Loads data into a worksheet or named range in the Excel data source.|  
 |Table name or view name variable|Specify the worksheet or range name in a variable.<br /><br /> **Related information**: [Use Variables in Packages](../integration-services-ssis-variables.md)|  
-|SQL command|Load data into the Excel destination by using an SQL query.|  
+|SQL command|Load data into the Excel destination by using a SQL query.|  
   
  **Name of the Excel sheet**  
  Select the excel destination from the drop-down list. If the list is empty, click **New**.  
@@ -93,7 +93,7 @@ helpviewer_keywords:
   
 #### Data access mode = SQL command  
  **SQL command text**  
- Enter the text of an SQL query, build the query by clicking **Build Query**, or locate the file that contains the query text by clicking **Browse**.  
+ Enter the text of a SQL query, build the query by clicking **Build Query**, or locate the file that contains the query text by clicking **Browse**.  
   
  **Build Query**  
  Use the **Query Builder** dialog box to construct the SQL query visually.  

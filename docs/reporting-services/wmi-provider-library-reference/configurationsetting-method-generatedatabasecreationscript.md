@@ -54,7 +54,7 @@ public void GenerateDatabaseCreationScript(string DatabaseName, Int32 Lcid,
  Returns an *HRESULT* indicating success or failure of the method call. A value of 0 indicates that the method call was successful. A nonzero value indicates that an error occurred.  
   
 ## Remarks  
- This method generates an SQL script that creates report server databases for the version of the report server currently connected to.  
+ This method generates a SQL script that creates report server databases for the version of the report server currently connected to.  
   
  The value supplied in the *DatabaseName* parameter must conform to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database naming conventions.  
   

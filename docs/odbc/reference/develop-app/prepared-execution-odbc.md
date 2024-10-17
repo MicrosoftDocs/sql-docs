@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "SQL statements [ODBC], executing"
 ---
 # Prepared Execution ODBC
-Prepared execution is an efficient way to execute a statement more than once. The statement is first compiled, or *prepared,* into an access plan. The access plan is then executed one or more times at a later time. For more information about access plans, see [Processing an SQL Statement](../../../odbc/reference/processing-a-sql-statement.md).  
+Prepared execution is an efficient way to execute a statement more than once. The statement is first compiled, or *prepared,* into an access plan. The access plan is then executed one or more times at a later time. For more information about access plans, see [Processing a SQL Statement](../../../odbc/reference/processing-a-sql-statement.md).  
   
  Prepared execution is commonly used by vertical and custom applications to repeatedly execute the same, parameterized SQL statement. For example, the following code prepares a statement to update the prices of different parts. It then executes the statement multiple times with different parameter values each time.  
   
@@ -59,7 +59,7 @@ while (GetPrice(&PartID, &Price)) {
   
 5.  When **SQLPrepare** is called, the driver:  
   
-    -   Modifies the SQL statement to use the data source's SQL grammar without parsing the statement. This includes replacing the escape sequences discussed in [Escape Sequences in ODBC](../../../odbc/reference/develop-app/escape-sequences-in-odbc.md). The application can retrieve the modified form of an SQL statement by calling **SQLNativeSql**. Escape sequences are not replaced if the SQL_ATTR_NOSCAN statement attribute is set.  
+    -   Modifies the SQL statement to use the data source's SQL grammar without parsing the statement. This includes replacing the escape sequences discussed in [Escape Sequences in ODBC](../../../odbc/reference/develop-app/escape-sequences-in-odbc.md). The application can retrieve the modified form of a SQL statement by calling **SQLNativeSql**. Escape sequences are not replaced if the SQL_ATTR_NOSCAN statement attribute is set.  
   
     -   Sends the statement to the data source for preparation.  
   

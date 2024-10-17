@@ -76,4 +76,4 @@ You can use the PyPI command-line tool to verify that your intended packages are
 
 ## Related content
 
-- [Step 2: Create an SQL database for pyodbc Python development](step-2-create-a-sql-database-for-pyodbc-python-development.md)
+- [Step 2: Create a SQL database for pyodbc Python development](step-2-create-a-sql-database-for-pyodbc-python-development.md)

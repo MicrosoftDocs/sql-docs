@@ -166,7 +166,7 @@ To learn more about the Transact-SQL query language, see [Transact-SQL Reference
  Locate a file that contains a SQL statement by using the **Open** dialog box. Select a file to copy the contents of the file as a SQL statement into the **SQLStatement** property.  
   
  **Build Query**  
- Create an SQL statement using the **Query Builder** dialog box, a graphical tool used to create queries. This option is available when the **SQLSourceType** option is set to **Direct input**.  
+ Create a SQL statement using the **Query Builder** dialog box, a graphical tool used to create queries. This option is available when the **SQLSourceType** option is set to **Direct input**.  
   
  **Parse Query**  
  Validate the syntax of the SQL statement.  
@@ -348,7 +348,7 @@ SQL statements and stored procedures frequently use **input** parameters, **outp
  If the data is not stored in the appropriate input or output parameter, the package fails.  
   
 ###  <a name="WHERE_clauses"></a> Use parameters in WHERE clauses  
- SELECT, INSERT, UPDATE, and DELETE commands frequently include WHERE clauses to specify filters that define the conditions each row in the source tables must meet to qualify for an SQL command. Parameters provide the filter values in the WHERE clauses.  
+ SELECT, INSERT, UPDATE, and DELETE commands frequently include WHERE clauses to specify filters that define the conditions each row in the source tables must meet to qualify for a SQL command. Parameters provide the filter values in the WHERE clauses.  
   
  You can use parameter markers to dynamically provide parameter values. The rules for which parameter markers and parameter names can be used in the SQL statement depend on the type of connection manager that the Execute SQL uses.  
   
@@ -401,7 +401,7 @@ This section describes how to use a parameterized SQL statement in the Execute S
   
     -   Use direct input and type the SQL command in the SQLStatement property.  
   
-    -   Use direct input, click **Build Query**, and then create an SQL command using the graphical tools that the Query Builder provides.  
+    -   Use direct input, click **Build Query**, and then create a SQL command using the graphical tools that the Query Builder provides.  
   
     -   Use a file connection and then reference the file that contains the SQL command.  
   
@@ -561,7 +561,7 @@ This section describes how to create a mapping between a result set and a variab
   
  Sometimes a SQL command or stored procedure returns multiple result sets. These result sets include not only rowsets that are the result of **SELECT** queries, but single values that are the result of errors of **RAISERROR** or **PRINT** statements. Whether the task ignores errors in result sets that occur after the first result set depends on the type of connection manager that is used:  
   
--   When you use OLE DB and ADO connection managers, the task ignores the result sets that occur after the first result set. Therefore, with these connection managers, the task ignores an error returned by an SQL command or a stored procedure when the error is not part of the first result set.  
+-   When you use OLE DB and ADO connection managers, the task ignores the result sets that occur after the first result set. Therefore, with these connection managers, the task ignores an error returned by a SQL command or a stored procedure when the error is not part of the first result set.  
   
 -   When you use ODBC and ADO.NET connection managers, the task does not ignore result sets that occur after the first result set. With these connection managers, the task will fail with an error when a result set other than the first result set contains an error.  
   

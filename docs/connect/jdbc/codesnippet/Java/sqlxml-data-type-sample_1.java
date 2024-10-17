@@ -58,7 +58,7 @@ public class SqlXmlDataType {
         // Create an instance of the custom content handler.
         ExampleContentHandler myHandler = new ExampleContentHandler();
 
-        // Create and execute an SQL statement that returns a
+        // Create and execute a SQL statement that returns a
         // set of data.
         String SQL = "SELECT * FROM TestTable1";
 
@@ -80,7 +80,7 @@ public class SqlXmlDataType {
 
     private static void showSetters(Connection con, Statement stmt) {
 
-        // Create and execute an SQL statement, retrieving an updatable result set.
+        // Create and execute a SQL statement, retrieving an updatable result set.
         String SQL = "SELECT * FROM TestTable1;";
         try (ResultSet rs = stmt.executeQuery(SQL)) {
 
@@ -121,7 +121,7 @@ public class SqlXmlDataType {
 
     private static void showTransformer(Connection con, Statement stmt) throws Exception {
 
-        // Create and execute an SQL statement that returns a
+        // Create and execute a SQL statement that returns a
         // set of data.
         String SQL = "SELECT * FROM TestTable1";
         try (ResultSet rs = stmt.executeQuery(SQL)) {

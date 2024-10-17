@@ -252,7 +252,7 @@ if (retcode == SQL_SUCCESS) {
 |Assigning storage for a column in a result set|[SQLBindCol](../../../odbc/reference/syntax/sqlbindcol-function.md)|  
 |Performing bulk operations that do not relate to the block cursor position|[SQLBulkOperations](../../../odbc/reference/syntax/sqlbulkoperations-function.md)|  
 |Canceling statement processing|[SQLCancel](../../../odbc/reference/syntax/sqlcancel-function.md)|  
-|Executing an SQL statement|[SQLExecDirect](../../../odbc/reference/syntax/sqlexecdirect-function.md)|  
+|Executing a SQL statement|[SQLExecDirect](../../../odbc/reference/syntax/sqlexecdirect-function.md)|  
 |Executing a prepared SQL statement|[SQLExecute](../../../odbc/reference/syntax/sqlexecute-function.md)|  
 |Fetching a block of data or scrolling through a result set|[SQLFetchScroll](../../../odbc/reference/syntax/sqlfetchscroll-function.md)|  
 |Fetching a single row of data or a block of data in a forward-only direction|[SQLFetch](../../../odbc/reference/syntax/sqlfetch-function.md)|  

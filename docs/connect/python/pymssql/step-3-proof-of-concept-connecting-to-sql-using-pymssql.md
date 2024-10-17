@@ -12,7 +12,7 @@ ms.topic: how-to
 
 # Step 3: Proof of concept connecting to SQL using pymssql
 
-This sample proof of concept uses `pymssql` to connect to an SQL database. This sample assumes that you're using the [AdventureWorksLT sample database](https://github.com/microsoft/sql-server-samples/tree/master/samples/databases/adventure-works).
+This sample proof of concept uses `pymssql` to connect to a SQL database. This sample assumes that you're using the [AdventureWorksLT sample database](https://github.com/microsoft/sql-server-samples/tree/master/samples/databases/adventure-works).
 
 > [!NOTE]
 > This example should be considered a proof of concept only.  The sample code is simplified for clarity, and does not necessarily represent best practices recommended by Microsoft.  
@@ -24,7 +24,7 @@ This sample proof of concept uses `pymssql` to connect to an SQL database. This 
   - Prefer to not use your own environment? Open as a devcontainer using [GitHub Codespaces](https://github.com/features/codespaces).
     - [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/github/codespaces-blank?quickstart=1).
 - `pymssql` package from PyPI.
-- An SQL database and credentials.
+- A SQL database and credentials.
 
 ## Connect and query data
 
@@ -46,7 +46,7 @@ Connect to a database using your credentials.
     import pymssql
     ```
 
-1. Use the [`pymssql.connect`](https://pymssql.readthedocs.io/en/latest/ref/pymssql.html#pymssql.connect) function to connect to an SQL database.
+1. Use the [`pymssql.connect`](https://pymssql.readthedocs.io/en/latest/ref/pymssql.html#pymssql.connect) function to connect to a SQL database.
   
     ```python
     conn = pymssql.connect(
@@ -60,7 +60,7 @@ Connect to a database using your credentials.
   
 ## Execute a query
 
-Use an SQL query string to execute a query and parse the results.
+Use a SQL query string to execute a query and parse the results.
 
 1. Create a variable for the SQL query string.
 

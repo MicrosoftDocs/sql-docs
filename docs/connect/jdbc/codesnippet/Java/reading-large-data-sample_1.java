@@ -31,7 +31,7 @@ public class ReadLargeData {
             // to avoid OutOfMemoryError when the SELECT statement produces very large
             // results.
 
-            // Create and execute an SQL statement that returns some data.
+            // Create and execute a SQL statement that returns some data.
             String SQL = "SELECT Title, DocumentSummary FROM Production.Document";
 
             // Display the response buffering mode.

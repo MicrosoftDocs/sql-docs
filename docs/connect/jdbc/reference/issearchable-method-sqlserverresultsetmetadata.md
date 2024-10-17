@@ -14,7 +14,7 @@ apitype: "Assembly"
 # isSearchable Method (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Indicates whether the designated column can be used in an SQL WHERE clause.  
+  Indicates whether the designated column can be used in a SQL WHERE clause.  
   
 ## Syntax  
   

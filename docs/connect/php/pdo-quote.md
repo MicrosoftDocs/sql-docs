@@ -34,7 +34,7 @@ New PDO constants were introduced in PHP 7.2 to add support for [binding Unicode
 Beginning with version 5.8.0, you can use these constants with PDO::quote.
   
 ## Return Value  
-A quoted string that can be passed to an SQL statement, or false if failure.  
+A quoted string that can be passed to a SQL statement, or false if failure.  
   
 ## Remarks  
 Support for PDO was added in version 2.0 of the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  

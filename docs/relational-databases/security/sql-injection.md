@@ -24,7 +24,7 @@ The primary form of SQL injection consists of direct insertion of code into user
 
 The injection process works by prematurely terminating a text string and appending a new command. Because the inserted command might have extra strings appended to it before it executes, the malefactor terminates the injected string with a comment mark `--`. Subsequent text is ignored at execution time.
 
-The following script shows a simple SQL injection. The script builds an SQL query by concatenating hard-coded strings together with a string entered by the user:
+The following script shows a simple SQL injection. The script builds a SQL query by concatenating hard-coded strings together with a string entered by the user:
 
 ```csharp
 var ShipCity;

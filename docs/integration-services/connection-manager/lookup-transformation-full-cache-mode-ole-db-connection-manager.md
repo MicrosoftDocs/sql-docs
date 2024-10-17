@@ -48,11 +48,11 @@ helpviewer_keywords:
   
          -or-  
   
-    -   Click **Use results of an SQL query**, and then build a query in the **SQL Command** window, or click **Build Query** to build a query by using the graphical tools that the **Query Builder** provides.  
+    -   Click **Use results of a SQL query**, and then build a query in the **SQL Command** window, or click **Build Query** to build a query by using the graphical tools that the **Query Builder** provides.  
   
          -or-  
   
-    -   Alternatively, click **Browse** to import an SQL statement from a file.  
+    -   Alternatively, click **Browse** to import a SQL statement from a file.  
   
      To validate the SQL query, click **Parse Query**.  
   

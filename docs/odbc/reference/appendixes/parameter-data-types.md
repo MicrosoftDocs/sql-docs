@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "ODBC drivers [ODBC], minimum SQL syntax supported"
 ---
 # Parameter Data Types
-Even though each parameter specified with **SQLBindParameter** is defined using an SQL data type, the parameters in an SQL statement have no intrinsic data type. Therefore, parameter markers can be included in an SQL statement only if their data types can be inferred from another operand in the statement. For example, in an arithmetic expression such as ? + COLUMN1, the data type of the parameter can be inferred from the data type of the named column represented by COLUMN1. An application cannot use a parameter marker if the data type cannot be determined.  
+Even though each parameter specified with **SQLBindParameter** is defined using a SQL data type, the parameters in a SQL statement have no intrinsic data type. Therefore, parameter markers can be included in a SQL statement only if their data types can be inferred from another operand in the statement. For example, in an arithmetic expression such as ? + COLUMN1, the data type of the parameter can be inferred from the data type of the named column represented by COLUMN1. An application cannot use a parameter marker if the data type cannot be determined.  
   
  The following table describes how a data type is determined for several types of parameters, in accordance with SQL-92. For a more comprehensive specification on inferring the parameter type when other SQL clauses are used, see the SQL-92 specification.  
   

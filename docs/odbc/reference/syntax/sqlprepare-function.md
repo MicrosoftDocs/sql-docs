@@ -20,7 +20,7 @@ apitype: "dllExport"
  Version Introduced: ODBC 1.0 Standards Compliance: ISO 92  
   
  **Summary**  
- **SQLPrepare** prepares an SQL string for execution.  
+ **SQLPrepare** prepares a SQL string for execution.  
   
 ## Syntax  
   
@@ -55,14 +55,14 @@ SQLRETURN SQLPrepare(
 |08S01|Communication link failure|The communication link between the driver and the data source to which the driver was connected failed before the function completed processing.|  
 |21S01|Insert value list does not match column list|\**StatementText* contained an **INSERT** statement, and the number of values to be inserted did not match the degree of the derived table.|  
 |21S02|Degree of derived table does not match column list|\**StatementText* contained a **CREATE VIEW** statement, and the number of names specified is not the same degree as the derived table defined by the query specification.|  
-|22018|Invalid character value for cast specification|**StatementText* contained an SQL statement that contained a literal or parameter, and the value was incompatible with the data type of the associated table column.|  
+|22018|Invalid character value for cast specification|**StatementText* contained a SQL statement that contained a literal or parameter, and the value was incompatible with the data type of the associated table column.|  
 |22019|Invalid escape character|The argument *StatementText* contained a **LIKE** predicate with an **ESCAPE** in the **WHERE** clause, and the length of the escape character following **ESCAPE** was not equal to 1.|  
 |22025|Invalid escape sequence|The argument *StatementText* contained "**LIKE** _pattern value_ **ESCAPE** _escape character_" in the **WHERE** clause, and the character following the escape character in the pattern value was neither "%" nor "_".|  
 |24000|Invalid cursor state|(DM) A cursor was open on the *StatementHandle*, and **SQLFetch** or **SQLFetchScroll** had been called.<br /><br /> A cursor was open on the *StatementHandle*, but **SQLFetch** or **SQLFetchScroll** had not been called.|  
 |34000|Invalid cursor name|\**StatementText* contained a positioned **DELETE** or a positioned **UPDATE**, and the cursor referenced by the statement being prepared was not open.|  
 |3D000|Invalid catalog name|The catalog name specified in *StatementText* was invalid.|  
 |3F000|Invalid schema name|The schema name specified in *StatementText* was invalid.|  
-|42000|Syntax error or access violation|\**StatementText* contained an SQL statement that was not preparable or contained a syntax error.<br /><br /> **StatementText* contained a statement for which the user did not have the required privileges.|  
+|42000|Syntax error or access violation|\**StatementText* contained a SQL statement that was not preparable or contained a syntax error.<br /><br /> **StatementText* contained a statement for which the user did not have the required privileges.|  
 |42S01|Base table or view already exists|\**StatementText* contained a **CREATE TABLE** or **CREATE VIEW** statement, and the table name or view name specified already exists.|  
 |42S02|Base table or view not found|\**StatementText* contained a **DROP TABLE** or a **DROP VIEW** statement, and the specified table name or view name did not exist.<br /><br /> \**StatementText* contained an **ALTER TABLE** statement, and the specified table name did not exist.<br /><br /> \**StatementText* contained a **CREATE VIEW** statement, and a table name or view name defined by the query specification did not exist.<br /><br /> \**StatementText* contained a **CREATE INDEX** statement, and the specified table name did not exist.<br /><br /> \**StatementText* contained a **GRANT** or **REVOKE** statement, and the specified table name or view name did not exist.<br /><br /> \**StatementText* contained a **SELECT** statement, and a specified table name or view name did not exist.<br /><br /> \**StatementText* contained a **DELETE**, **INSERT**, or **UPDATE** statement, and the specified table name did not exist.<br /><br /> \**StatementText* contained a **CREATE TABLE** statement, and a table specified in a constraint (referencing a table other than the one being created) did not exist.|  
 |42S11|Index already exists|\**StatementText* contained a **CREATE INDEX** statement, and the specified index name already existed.|  
@@ -85,7 +85,7 @@ SQLRETURN SQLPrepare(
 |IM018|**SQLCompleteAsync** has not been called to complete the previous asynchronous operation on this handle.|If the previous function call on the handle returns SQL_STILL_EXECUTING and if notification mode is enabled, **SQLCompleteAsync** must be called on the handle to do post-processing and complete the operation.|  
   
 ## Comments  
- The application calls **SQLPrepare** to send an SQL statement to the data source for preparation. For more information about prepared execution, see [Prepared Execution](../../../odbc/reference/develop-app/prepared-execution-odbc.md). The application can include one or more parameter markers in the SQL statement. To include a parameter marker, the application embeds a question mark (?) into the SQL string at the appropriate position. For information about parameters, see [Statement Parameters](../../../odbc/reference/develop-app/statement-parameters.md).  
+ The application calls **SQLPrepare** to send a SQL statement to the data source for preparation. For more information about prepared execution, see [Prepared Execution](../../../odbc/reference/develop-app/prepared-execution-odbc.md). The application can include one or more parameter markers in the SQL statement. To include a parameter marker, the application embeds a question mark (?) into the SQL string at the appropriate position. For information about parameters, see [Statement Parameters](../../../odbc/reference/develop-app/statement-parameters.md).  
   
 > [!NOTE]  
 >  If an application uses **SQLPrepare** to prepare and **SQLExecute** to submit a **COMMIT** or **ROLLBACK** statement, it will not be interoperable between DBMS products. To commit or roll back a transaction, call **SQLEndTran**.  
@@ -113,7 +113,7 @@ SQLRETURN SQLPrepare(
 |Binding a buffer to a parameter|[SQLBindParameter Function](../../../odbc/reference/syntax/sqlbindparameter-function.md)|  
 |Canceling statement processing|[SQLCancel Function](../../../odbc/reference/syntax/sqlcancel-function.md)|  
 |Executing a commit or rollback operation|[SQLEndTran Function](../../../odbc/reference/syntax/sqlendtran-function.md)|  
-|Executing an SQL statement|[SQLExecDirect Function](../../../odbc/reference/syntax/sqlexecdirect-function.md)|  
+|Executing a SQL statement|[SQLExecDirect Function](../../../odbc/reference/syntax/sqlexecdirect-function.md)|  
 |Executing a prepared SQL statement|[SQLExecute Function](../../../odbc/reference/syntax/sqlexecute-function.md)|  
 |Returning the number of rows affected by a statement|[SQLRowCount Function](../../../odbc/reference/syntax/sqlrowcount-function.md)|  
 |Setting a cursor name|[SQLSetCursorName Function](../../../odbc/reference/syntax/sqlsetcursorname-function.md)|  

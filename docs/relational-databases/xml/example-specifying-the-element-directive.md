@@ -1,6 +1,6 @@
 ---
 title: "Example: Specifying the ELEMENT Directive"
-description: View an example of how to specify the ELEMENT directive in an SQL query to generate element-centric XML.
+description: View an example of how to specify the ELEMENT directive in a SQL query to generate element-centric XML.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: randolphwest

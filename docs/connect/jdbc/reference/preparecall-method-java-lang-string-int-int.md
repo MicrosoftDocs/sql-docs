@@ -28,7 +28,7 @@ public java.sql.CallableStatement prepareCall(java.lang.String sql,
 #### Parameters  
  *sql*  
   
- A **String** containing an SQL statement.  
+ A **String** containing a SQL statement.  
   
  *resultSetType*  
   

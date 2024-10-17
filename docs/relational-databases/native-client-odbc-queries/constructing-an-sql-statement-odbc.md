@@ -1,5 +1,5 @@
 ---
-title: "Constructing an SQL Statement (ODBC)"
+title: "Constructing a SQL Statement (ODBC)"
 description: Learn how the SQL Server Client ODBC driver deals with SQL statements, parsing some into Transact-SQL statements and passing others to the database unchanged.
 author: markingmyname
 ms.author: maghan
@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "statements [ODBC], constructing"
   - "ODBC applications, statements"
 ---
-# Constructing an SQL Statement (ODBC)
+# Constructing a SQL Statement (ODBC)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   ODBC applications perform almost all of their database access by executing [!INCLUDE[tsql](../../includes/tsql-md.md)] statements. The form of these statements depends on the application requirements. SQL statements can be constructed in the following ways:  

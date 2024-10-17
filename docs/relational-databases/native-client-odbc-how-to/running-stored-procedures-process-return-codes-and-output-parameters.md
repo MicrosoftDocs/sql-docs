@@ -23,7 +23,7 @@ helpviewer_keywords:
   
 ### To process return codes and output parameters  
   
-1.  Construct an SQL statement that uses the ODBC CALL escape sequence. The statement should use parameter markers for each input, input/output, and output parameter, and for the procedure return value (if any).  
+1.  Construct a SQL statement that uses the ODBC CALL escape sequence. The statement should use parameter markers for each input, input/output, and output parameter, and for the procedure return value (if any).  
   
 2.  Call [SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md) for each input, input/output, and output parameter, and for the procedure return value (if any).  
   

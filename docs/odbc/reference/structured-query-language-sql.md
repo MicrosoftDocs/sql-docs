@@ -36,7 +36,7 @@ A typical DBMS allows users to store, access, and modify data in an organized, e
   
  This section contains the following topics.  
   
--   [Processing an SQL Statement](../../odbc/reference/processing-a-sql-statement.md)  
+-   [Processing a SQL Statement](../../odbc/reference/processing-a-sql-statement.md)  
   
 -   [Embedded SQL](../../odbc/reference/embedded-sql.md)  
   

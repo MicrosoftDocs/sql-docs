@@ -416,7 +416,7 @@ Further, [CREATE EXTERNAL TABLE AS SELECT (CETAS)](/sql/t-sql/statements/create-
 For more information about configuring transactional replication, see the following tutorials:
 
 - [Replication between a SQL MI publisher and SQL MI subscriber](replication-between-two-instances-configure-tutorial.md)
-- [Replication between an SQL MI publisher, SQL MI distributor, and SQL Server subscriber](replication-two-instances-and-sql-server-configure-tutorial.md)
+- [Replication between a SQL MI publisher, SQL MI distributor, and SQL Server subscriber](replication-two-instances-and-sql-server-configure-tutorial.md)
 
 ### RESTORE statement
 

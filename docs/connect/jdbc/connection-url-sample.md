@@ -13,7 +13,7 @@ ms.topic: conceptual
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-This [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] sample application demonstrates how to connect to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database by using a connection URL. It also demonstrates how to retrieve data from a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database by using an SQL statement.
+This [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] sample application demonstrates how to connect to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database by using a connection URL. It also demonstrates how to retrieve data from a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database by using a SQL statement.
 
 The code file for this sample is named ConnectURL.java, and it can be found in the following location:
 

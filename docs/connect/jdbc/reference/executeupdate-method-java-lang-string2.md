@@ -13,7 +13,7 @@ apitype: "Assembly"
 ---
 # executeUpdate Method (java.lang.String)
 
-Runs the given SQL statement, which can be an INSERT, UPDATE, MERGE, or DELETE statement; or an SQL statement that returns nothing, such as an SQL DDL statement.
+Runs the given SQL statement, which can be an INSERT, UPDATE, MERGE, or DELETE statement; or a SQL statement that returns nothing, such as a SQL DDL statement.
 
 ## Syntax
 

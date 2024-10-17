@@ -26,7 +26,7 @@ helpviewer_keywords:
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-  The OLE DB destination loads data into a variety of OLE DB-compliant databases using a database table or view or an SQL command. For example, the OLE DB source can load data into tables in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] databases.  
+  The OLE DB destination loads data into a variety of OLE DB-compliant databases using a database table or view or a SQL command. For example, the OLE DB source can load data into tables in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] databases.  
   
 > [!NOTE]  
 >  If the data source is [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Excel 2007, the data source requires a different connection manager than earlier versions of Excel. For more information, see [Connect to an Excel Workbook](../load-data-to-from-excel-with-ssis.md).  
@@ -41,7 +41,7 @@ helpviewer_keywords:
   
 -   A table or view specified in a variable using fast-load options.  
   
--   The results of an SQL statement.  
+-   The results of a SQL statement.  
   
 > [!NOTE]  
 >  The OLE DB destination does not support parameters. If you need to execute a parameterized INSERT statement, consider the OLE DB Command transformation. For more information, see [OLE DB Command Transformation](../../integration-services/data-flow/transformations/ole-db-command-transformation.md).  

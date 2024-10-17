@@ -43,7 +43,7 @@ helpviewer_keywords:
   
     -   **Table name or view name variable fast load** Select the user-defined variable that contains the name of a table or view in the database that contains the data, and then set the fast-load options.  
   
-    -   **SQL command** Type an SQL command or click **Build Query** to write an SQL command by using the **Query Builder**.  
+    -   **SQL command** Type a SQL command or click **Build Query** to write a SQL command by using the **Query Builder**.  
   
 8.  Click **Mappings** and then map columns from the **Available Input Columns** list to columns in the **Available Destination Columns** list by dragging columns from one list to another.  
   

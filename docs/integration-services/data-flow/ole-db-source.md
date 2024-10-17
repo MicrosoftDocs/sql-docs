@@ -21,7 +21,7 @@ helpviewer_keywords:
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-  The OLE DB source extracts data from a variety of OLE DB-compliant relational databases by using a database table, a view, or an SQL command. For example, the OLE DB source can extract data from tables in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] databases.  
+  The OLE DB source extracts data from a variety of OLE DB-compliant relational databases by using a database table, a view, or a SQL command. For example, the OLE DB source can extract data from tables in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] databases.  
   
 > [!NOTE]  
 >  If the data source is [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Excel 2007, the data source requires a different connection manager than earlier versions of Excel. For more information, see [Connect to an Excel Workbook](../load-data-to-from-excel-with-ssis.md).  
@@ -32,12 +32,12 @@ helpviewer_keywords:
   
 -   A table or view specified in a variable.  
   
--   The results of an SQL statement. The query can be a parameterized query.  
+-   The results of a SQL statement. The query can be a parameterized query.  
   
--   The results of an SQL statement stored in a variable.  
+-   The results of a SQL statement stored in a variable.  
   
 > [!NOTE]  
->  When you use an SQL statement to invoke a stored procedure that returns results from a temporary table, use the WITH RESULT SETS option to define metadata for the result set.  
+>  When you use a SQL statement to invoke a stored procedure that returns results from a temporary table, use the WITH RESULT SETS option to define metadata for the result set.  
   
  If you use a parameterized query, you can map variables to parameters to specify the values for individual parameters in the SQL statements.  
   
@@ -49,14 +49,14 @@ helpviewer_keywords:
   
 -   The [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB provider for Oracle does not support the Oracle data types BLOB, CLOB, NCLOB, BFILE, OR UROWID, and the OLE DB source cannot extract data from tables that contain columns with these data types.  
   
--   The IBM OLE DB DB2 provider and [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB DB2 provider do not support using an SQL command that calls a stored procedure. When this kind of command is used, the OLE DB source cannot create the column metadata and, as a result, the data flow components that follow the OLE DB source in the data flow have no column data available and the execution of the data flow fails.  
+-   The IBM OLE DB DB2 provider and [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB DB2 provider do not support using a SQL command that calls a stored procedure. When this kind of command is used, the OLE DB source cannot create the column metadata and, as a result, the data flow components that follow the OLE DB source in the data flow have no column data available and the execution of the data flow fails.  
   
  The OLE DB source has one regular output and one error output.  
   
 ## Using Parameterized SQL Statements  
- The OLE DB source can use an SQL statement to extract data. The statement can be a SELECT or an EXEC statement.  
+ The OLE DB source can use a SQL statement to extract data. The statement can be a SELECT or an EXEC statement.  
   
- The OLE DB source uses an OLE DB connection manager to connect to the data source from which it extracts data. Depending on the provider that the OLE DB connection manager uses and the Relational Database Management System (RDBMS) that the connection manager connects to, different rules apply to the naming and listing of parameters. If the parameter names are returned from the RDBMS, you can use parameter names to map parameters in a parameter list to parameters in an SQL statement; otherwise, the parameters are mapped to the parameter in the SQL statement by their ordinal position in the parameter list. The types of parameter names that are supported vary by provider. For example, some providers require that you use the variable or column names, whereas some providers require that you use symbolic names such as 0 or Param0. You should see the provider-specific documentation for information about the parameter names to use in SQL statements.  
+ The OLE DB source uses an OLE DB connection manager to connect to the data source from which it extracts data. Depending on the provider that the OLE DB connection manager uses and the Relational Database Management System (RDBMS) that the connection manager connects to, different rules apply to the naming and listing of parameters. If the parameter names are returned from the RDBMS, you can use parameter names to map parameters in a parameter list to parameters in a SQL statement; otherwise, the parameters are mapped to the parameter in the SQL statement by their ordinal position in the parameter list. The types of parameter names that are supported vary by provider. For example, some providers require that you use the variable or column names, whereas some providers require that you use symbolic names such as 0 or Param0. You should see the provider-specific documentation for information about the parameter names to use in SQL statements.  
   
  When you are use an OLE DB connection manager, you cannot use parameterized subqueries, because the OLE DB source cannot derive parameter information through the OLE DB provider. However, you can use an expression to concatenate the parameter values into the query string and to set the SqlCommand property of the source.In [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, you configure an OLE DB source by using the **OLE DB Source Editor** dialog box and map the parameters to variables in the **Set Query Parameter** dialog box.  
   

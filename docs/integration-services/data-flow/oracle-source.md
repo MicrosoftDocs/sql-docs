@@ -17,7 +17,7 @@ The Oracle source extracts data from Oracle Database with below modes:
 
 - A table or view.
 
-- The results of an SQL statement.
+- The results of a SQL statement.
 
 The source uses an Oracle Connection Manager to connect to Oracle source. For more information, see [Oracle Connection Manager](oracle-connection-manager.md).
 
@@ -99,7 +99,7 @@ Select the method for selecting data from the source. The options are shown in t
 |Option|Description|
 |:-|:-|
 |Table or view|Retrieve data from a table or view in the Oracle data source. When this option is selected, select an available table or view from the list for **Name of the table or the view**.|
-|SQL command|Retrieve data from the Oracle data source by using an SQL query. When this option is selected, enter a query in one of the following ways: <br>Enter the text of the SQL query in the **SQL command text** field. <br>Click **Browse** to load the SQL query from a text file. <br>Click **Parse query** to verify the syntax of the query text.|
+|SQL command|Retrieve data from the Oracle data source by using a SQL query. When this option is selected, enter a query in one of the following ways: <br>Enter the text of the SQL query in the **SQL command text** field. <br>Click **Browse** to load the SQL query from a text file. <br>Click **Parse query** to verify the syntax of the query text.|
 
 **Preview**
 

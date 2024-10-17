@@ -14,7 +14,7 @@ helpviewer_keywords:
 ---
 # String limitations
 
-The maximum length of an SQL statement string is 65,000 characters.
+The maximum length of a SQL statement string is 65,000 characters.
 
 When the Microsoft Access driver is used, only SQL-92 string constants (with single quotation marks, not double quotation marks) are supported.
 

@@ -1,6 +1,6 @@
 ---
 title: "OLE Automation Sample Script"
-description: Learn how to use an example of a Transact-SQL statement batch that uses the OLE Automation stored procedures to create and use an SQL-DMO SQLServer object.
+description: Learn how to use an example of a Transact-SQL statement batch that uses the OLE Automation stored procedures to create and use a SQL-DMO SQLServer object.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "03/10/2022"

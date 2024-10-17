@@ -1,6 +1,6 @@
 ---
 title: "FOR XML support for various SQL Server data types"
-description: View information about the various SQL Server data types that are supported by the FOR XML clause in an SQL query.
+description: View information about the various SQL Server data types that are supported by the FOR XML clause in a SQL query.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: randolphwest

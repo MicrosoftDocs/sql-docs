@@ -43,7 +43,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 |ServerName|**nvarchar**|Name of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] being traced.|26|No|  
 |SessionLoginName|**nvarchar**|Login name of the user who originated the session. For example, if you connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] using Login1 and execute a statement as Login2, SessionLoginName shows Login1 and LoginName shows Login2. This column displays both [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and Windows logins.|64|Yes|  
 |SPID|**int**|Server process ID of the connection.|12|Yes|  
-|SqlHandle|**varbinary**|64-bit hash based on the text of an ad hoc query or the database and object ID of an SQL object. This value can be passed to sys.dm_exec_sql_text to retrieve the associated SQL text.|63|No|  
+|SqlHandle|**varbinary**|64-bit hash based on the text of an ad hoc query or the database and object ID of a SQL object. This value can be passed to sys.dm_exec_sql_text to retrieve the associated SQL text.|63|No|  
 |StartTime|**datetime**|Time at which the event started, if available.|14|Yes|  
 |TextData|**ntext**|Text of the Transact-SQL statement that recompiled.|1|Yes|  
 |TransactionID|**bigint**|System-assigned ID of the transaction.|4|Yes|  

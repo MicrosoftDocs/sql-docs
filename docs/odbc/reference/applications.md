@@ -35,7 +35,7 @@ An *application* is a program that calls the ODBC API to access data. Although m
   
 -   Selecting a data source and connecting to it.  
   
--   Submitting an SQL statement for execution.  
+-   Submitting a SQL statement for execution.  
   
 -   Retrieving results (if any).  
   

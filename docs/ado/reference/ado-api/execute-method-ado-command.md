@@ -45,7 +45,7 @@ Set recordset = command.Execute( RecordsAffected, Parameters, Options )
   
  Results are returned in a **Recordset** (by default) or as a stream of binary information. To obtain a binary stream, specify **adExecuteStream** in *Options*, then supply a stream by setting **Command.Properties("Output Stream")**. An ADO **Stream** object can be specified to receive the results, or another stream object such as the IIS Response object can be specified. If no stream was specified before calling **Execute** with **adExecuteStream**, an error occurs. The position of the stream on return from **Execute** is provider specific.  
   
- If the command is not intended to return results (for example, an SQL UPDATE query) the provider returns **Nothing** as long as the option **adExecuteNoRecords** is specified; otherwise Execute returns a closed **Recordset**. Some application languages allow you to ignore this return value if no **Recordset** is desired.  
+ If the command is not intended to return results (for example, a SQL UPDATE query) the provider returns **Nothing** as long as the option **adExecuteNoRecords** is specified; otherwise Execute returns a closed **Recordset**. Some application languages allow you to ignore this return value if no **Recordset** is desired.  
   
  **Execute** raises an error if the user specifies a value for **CommandStream** when the **CommandType** is **adCmdStoredProc**, **adCmdTable**, or **adCmdTableDirect**.  
   

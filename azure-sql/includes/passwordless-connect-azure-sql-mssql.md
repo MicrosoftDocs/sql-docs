@@ -1,7 +1,7 @@
 The following steps are required to connect the App Service instance to Azure SQL Database:
 
 1. Create a managed identity for the App Service.
-1. Create an SQL database user and associate it with the App Service managed identity.
+1. Create a SQL database user and associate it with the App Service managed identity.
 1. Assign SQL roles to the database user that allow for read, write, and potentially other permissions.
 
 There are multiple tools available to implement these steps:
@@ -72,7 +72,7 @@ The Azure portal allows you to work with managed identities and run queries agai
 
     :::image type="content" source="../database/media/passwordless-connections/query-editor-small.png" lightbox="../database/media/passwordless-connections/query-editor.png" alt-text="A screenshot showing how to use the Azure Query editor.":::
 
-    This SQL script creates an SQL database user that maps back to the managed identity of your App Service instance. It also assigns the necessary SQL roles to the user to allow your app to read, write, and modify the data and schema of your database. After this step is completed, your services are connected.
+    This SQL script creates a SQL database user that maps back to the managed identity of your App Service instance. It also assigns the necessary SQL roles to the user to allow your app to read, write, and modify the data and schema of your database. After this step is completed, your services are connected.
 
 > [!IMPORTANT]
 > Although this solution provides a simple approach for getting started, it's not a best practice for production-grade environments. In those scenarios, the app shouldn't perform all operations using a single, elevated identity. You should try to implement the principle of least privilege by configuring multiple identities with specific permissions for specific tasks.

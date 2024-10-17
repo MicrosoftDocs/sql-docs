@@ -122,7 +122,7 @@ There are two workarounds for this issue.
 ### Manually grant database access
 
 1. Add the Report Server service account to the WSS_WPG Windows group on the Reporting Services computer.
-1. Connect to the database instance that hosts the SharePoint configuration and content databases, and create an SQL database sign-in for the Report Server service account.
+1. Connect to the database instance that hosts the SharePoint configuration and content databases, and create a SQL database sign-in for the Report Server service account.
 1. Add the SQL database sign-in to the following database roles:
 
     -db_owner role in the Windows SharePoint Services (WSS) Content database

@@ -90,7 +90,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
   
   
 ###  <a name="wkb"></a> Constructing a geometry Instance from Well-Known Binary Input  
- WKB is a binary format specified by the Open Geospatial Consortium (OGC) that permits **geometry** data to be exchanged between a client application and an SQL database. The following functions accept WKB input to construct geometries:  
+ WKB is a binary format specified by the Open Geospatial Consortium (OGC) that permits **geometry** data to be exchanged between a client application and a SQL database. The following functions accept WKB input to construct geometries:  
   
  **To construct any type of geometry instance from WKB input**  
  [STGeomFromWKB &#40;geometry Data Type&#41;](../../t-sql/spatial-geometry/stgeomfromwkb-geometry-data-type.md)  

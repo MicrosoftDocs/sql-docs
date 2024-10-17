@@ -876,9 +876,9 @@ Separating constants from the [!INCLUDE [tsql](../includes/tsql-md.md)] statemen
 
   This method is recommended for [!INCLUDE [tsql](../includes/tsql-md.md)]  scripts, stored procedures, or triggers that generate SQL statements dynamically.
 
-- ADO, OLE DB, and ODBC use parameter markers. Parameter markers are question marks (?) that replace a constant in an SQL statement and are bound to a program variable. For example, you would do the following in an ODBC application:
+- ADO, OLE DB, and ODBC use parameter markers. Parameter markers are question marks (?) that replace a constant in a SQL statement and are bound to a program variable. For example, you would do the following in an ODBC application:
 
-  - Use `SQLBindParameter` to bind an integer variable to the first parameter marker in an SQL statement.
+  - Use `SQLBindParameter` to bind an integer variable to the first parameter marker in a SQL statement.
   - Put the integer value in the variable.
   - Execute the statement, specifying the parameter marker (?):
 

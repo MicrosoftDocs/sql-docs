@@ -69,7 +69,7 @@ The **Recordset** object has built-in features that let you rearrange the order 
  The **Filter** property takes a variant argument. This value represents one of three methods for using the **Filter** property: a criteria string, a **FilterGroupEnum** constant, or an array of bookmarks. For more information, see Filtering with a Criteria String, Filtering with a Constant, and Filtering with Bookmarks later in this topic.  
   
 > [!NOTE]
->  When you know the data that you want to select, it is usually more efficient to open a **Recordset** with an SQL statement that effectively filters the result set, instead of relying on the **Filter** property.  
+>  When you know the data that you want to select, it is usually more efficient to open a **Recordset** with a SQL statement that effectively filters the result set, instead of relying on the **Filter** property.  
   
  To remove a filter from a **Recordset**, use the **adFilterNone** constant. Setting the **Filter** property to a zero-length string ("") has the same effect as using the **adFilterNone** constant.  
   

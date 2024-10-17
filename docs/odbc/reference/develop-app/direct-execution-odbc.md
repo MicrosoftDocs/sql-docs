@@ -15,12 +15,12 @@ helpviewer_keywords:
 # Direct Execution ODBC
 Direct execution is the simplest way to execute a statement. When the statement is submitted for execution, the data source compiles it into an access plan and then executes that access plan.  
   
- Direct execution is commonly used by generic applications that build and execute statements at run time. For example, the following code builds an SQL statement and executes it a single time:  
+ Direct execution is commonly used by generic applications that build and execute statements at run time. For example, the following code builds a SQL statement and executes it a single time:  
   
 ```  
 SQLCHAR *SQLStatement;  
   
-// Build an SQL statement.  
+// Build a SQL statement.  
 BuildStatement(SQLStatement);  
   
 // Execute the statement.  
@@ -37,7 +37,7 @@ SQLExecDirect(hstmt, SQLStatement, SQL_NTS);
   
 3.  When **SQLExecDirect** is called, the driver:  
   
-    -   Modifies the SQL statement to use the data source's SQL grammar without parsing the statement; this includes replacing the escape sequences discussed in [Escape Sequences in ODBC](../../../odbc/reference/develop-app/escape-sequences-in-odbc.md). The application can retrieve the modified form of an SQL statement by calling **SQLNativeSql**. Escape sequences are not replaced if the SQL_ATTR_NOSCAN statement attribute is set.  
+    -   Modifies the SQL statement to use the data source's SQL grammar without parsing the statement; this includes replacing the escape sequences discussed in [Escape Sequences in ODBC](../../../odbc/reference/develop-app/escape-sequences-in-odbc.md). The application can retrieve the modified form of a SQL statement by calling **SQLNativeSql**. Escape sequences are not replaced if the SQL_ATTR_NOSCAN statement attribute is set.  
   
     -   Retrieves the current parameter values and converts them as necessary. For more information, see [Statement Parameters](../../../odbc/reference/develop-app/statement-parameters.md), later in this section.  
   

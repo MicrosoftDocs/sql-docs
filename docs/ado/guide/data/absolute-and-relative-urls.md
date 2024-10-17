@@ -53,7 +53,7 @@ A URL specifies the location of a target stored on a local or networked computer
 ## Relative URLs as Command Text  
  You can specify a command to be executed on the data source by typing a string in the *CommandText* parameter of the **Connection** object's [Execute](../../reference/ado-api/execute-method-ado-connection.md) method, and in the *Source* parameter of the **Recordset** object's [Open](../../reference/ado-api/open-method-ado-recordset.md) method.  
   
- A relative URL can be specified in the *CommandText* or *Source* parameter. The relative URL does not actually represent a command, such as an SQL command; it merely specifies the parameters. The context of the active connection must be an absolute URL, and the *Option* parameter must be set to **adCmdTableDirect**.  
+ A relative URL can be specified in the *CommandText* or *Source* parameter. The relative URL does not actually represent a command, such as a SQL command; it merely specifies the parameters. The context of the active connection must be an absolute URL, and the *Option* parameter must be set to **adCmdTableDirect**.  
   
  For example, the following code sample shows how to open a **Recordset** on the Readme25.txt file of the Winnt/system32 directory:  
   

@@ -1,6 +1,6 @@
 ---
-title: "Choosing an SQL Grammar"
-description: "Choosing an SQL Grammar"
+title: "Choosing a SQL Grammar"
+description: "Choosing a SQL Grammar"
 author: David-Engel
 ms.author: davidengel
 ms.date: "01/19/2017"
@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "interoperability of SQL statements [ODBC], SQL grammar"
   - "SQL grammar [ODBC], selecting"
 ---
-# Choosing an SQL Grammar
+# Choosing a SQL Grammar
 The first decision to make when constructing SQL statements is which grammar to use. In addition to the grammars available from the various standards bodies, such as Open Group, ANSI, and ISO, virtually every DBMS vendor defines its own grammar, each of which varies slightly from the standard.  
   
  [Appendix C: SQL Grammar](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md), describes the minimum SQL grammar that all ODBC drivers must support. This grammar is a subset of the Entry level of SQL-92. Drivers may support additional grammar to conform to the Intermediate, Full, or FIPS 127-2 Transitional levels defined by SQL-92. For more information, see [SQL Minimum Grammar](../../../odbc/reference/appendixes/sql-minimum-grammar.md) in Appendix C: SQL Grammar, and SQL-92.  
@@ -23,4 +23,4 @@ The first decision to make when constructing SQL statements is which grammar to 
   
  Therefore, there are really two choices of grammar to use: the SQL-92 grammar (and the ODBC escape sequences) and a DBMS-specific grammar. Of the two, only the SQL-92 grammar is interoperable, so all interoperable applications should use it. Applications that are not interoperable can use the SQL-92 grammar or a DBMS-specific grammar. DBMS-specific grammars have two advantages: They can exploit any features not covered by SQL-92, and they are marginally faster because the driver does not have to modify them. The latter feature can be partially enforced by setting the SQL_ATTR_NOSCAN statement attribute, which stops the driver from searching for and replacing escape sequences.  
   
- If the SQL-92 grammar is used, the application can discover how it is modified by the driver by calling **SQLNativeSql**. This is often useful when debugging applications. **SQLNativeSql** accepts an SQL statement and returns it after the driver has modified it. Because this function is in the Core interface conformance level, it is supported by all drivers.
+ If the SQL-92 grammar is used, the application can discover how it is modified by the driver by calling **SQLNativeSql**. This is often useful when debugging applications. **SQLNativeSql** accepts a SQL statement and returns it after the driver has modified it. Because this function is in the Core interface conformance level, it is supported by all drivers.

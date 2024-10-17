@@ -14,7 +14,7 @@ ms.topic: reference
 
 The Teradata source extracts data from Teradata databases by using:
 - A table or a view.
-- The results of an SQL statement.
+- The results of a SQL statement.
 
 The source uses the Teradata connection manager to connect to the Teradata source. For more information, see [Use the Teradata connection manager](teradata-connection-manager.md).
 
@@ -99,7 +99,7 @@ Use the **Connection Manager** pane to select the Teradata connection manager in
     |Option|Description|
     |:-|:-|
     |Table name - TPT Export|Retrieve data from a table or a view in the Teradata data source. When this option is selected, select an available table or view from the list for **Name of the table or the view**.|
-    |SQL command - TPT Export|Retrieve data from the Teradata data source by using an SQL query. When this option is selected, enter a query in one of the following ways: <ul><li>Enter the text of the SQL query in the **SQL command text** field.</li><li>Select **Browse** to load the SQL query from a text file.</li><li>Select **Parse query** to verify the syntax of the query text.</li></ul>|
+    |SQL command - TPT Export|Retrieve data from the Teradata data source by using a SQL query. When this option is selected, enter a query in one of the following ways: <ul><li>Enter the text of the SQL query in the **SQL command text** field.</li><li>Select **Browse** to load the SQL query from a text file.</li><li>Select **Parse query** to verify the syntax of the query text.</li></ul>|
 
 **Preview**
 

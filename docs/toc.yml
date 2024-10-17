@@ -3364,7 +3364,7 @@ items:
         href: relational-databases/native-client-odbc-queries/executing-statements/procedures.md
       - name: Allocating a Statement Handle
         href: relational-databases/native-client-odbc-queries/allocating-a-statement-handle.md
-      - name: Constructing an SQL Statement
+      - name: Constructing a SQL Statement
         href: relational-databases/native-client-odbc-queries/constructing-an-sql-statement-odbc.md
       - name: Constructing SQL Statements for Cursors
         href: relational-databases/native-client-odbc-queries/constructing-sql-statements-for-cursors.md

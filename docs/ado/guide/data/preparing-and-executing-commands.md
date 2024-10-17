@@ -11,7 +11,7 @@ helpviewer_keywords:
   - "Command object [ADO], preparing and executing commands"
 ---
 # Preparing and Executing Commands
-Commands are instructions issued to a provider to perform some operations against the underlying data source. An SQL statement, for example, is a command to the Microsoft SQL Data Provider. In ADO, commands are typically represented by **Command** objects, although simple commands can also be issued through **Connection** or **Recordset** objects.  
+Commands are instructions issued to a provider to perform some operations against the underlying data source. A SQL statement, for example, is a command to the Microsoft SQL Data Provider. In ADO, commands are typically represented by **Command** objects, although simple commands can also be issued through **Connection** or **Recordset** objects.  
   
  You can use the **Command** object to request any supported type of operation from the provider, assuming that the provider can interpret the command string properly. A common operation for data providers is to query a database and return records in a **Recordset** object, which that can be thought of as a container to hold the result and a tool to view the result. As with many ADO objects, some **Command** object collections, methods, or properties might generate errors when referenced, depending on the functionality of the provider.  
   

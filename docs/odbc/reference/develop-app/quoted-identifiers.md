@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "quoted identifiers [ODBC]"
 ---
 # Quoted Identifiers
-In an SQL statement, identifiers containing special characters or match keywords must be enclosed in *identifier quote characters*; identifiers enclosed in such characters are known as *quoted identifiers* (also known as *delimited identifiers* in SQL-92). For example, the Accounts Payable identifier is quoted in the following **SELECT** statement:  
+In a SQL statement, identifiers containing special characters or match keywords must be enclosed in *identifier quote characters*; identifiers enclosed in such characters are known as *quoted identifiers* (also known as *delimited identifiers* in SQL-92). For example, the Accounts Payable identifier is quoted in the following **SELECT** statement:  
   
 ```  
 SELECT * FROM "Accounts Payable"  

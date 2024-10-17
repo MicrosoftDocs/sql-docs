@@ -30,11 +30,11 @@ To run this sample application, you must set the classpath to include the mssql-
 
 ## Example
 
-The sample code makes a connection to the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] sample database. Then, using an SQL statement with the [SQLServerStatement](reference/sqlserverstatement-class.md) object, it runs the SQL statement and places the data that it returns into an updatable SQLServerResultSet object.
+The sample code makes a connection to the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] sample database. Then, using a SQL statement with the [SQLServerStatement](reference/sqlserverstatement-class.md) object, it runs the SQL statement and places the data that it returns into an updatable SQLServerResultSet object.
 
 Next, the sample code uses the [moveToInsertRow](reference/movetoinsertrow-method-sqlserverresultset.md) method to move the result set cursor to the insert row. It then uses a series of [updateString](reference/updatestring-method-sqlserverresultset.md) methods to insert data into the new row. After that, it calls the [insertRow](reference/insertrow-method-sqlserverresultset.md) method to persist the new row of data back to the database.
 
-After inserting the new row of data, the sample code uses an SQL statement to retrieve the previously inserted row. From there, it uses the combination of `updateString` and [updateRow](reference/updaterow-method-sqlserverresultset.md) methods to update the row of data and again persist it back to the database.
+After inserting the new row of data, the sample code uses a SQL statement to retrieve the previously inserted row. From there, it uses the combination of `updateString` and [updateRow](reference/updaterow-method-sqlserverresultset.md) methods to update the row of data and again persist it back to the database.
 
 Finally, the sample code retrieves the previously updated row of data and then deletes it from the database using the [deleteRow](reference/deleterow-method-sqlserverresultset.md) method.
 
@@ -55,7 +55,7 @@ public class UpdateResultSet {
         try (Connection con = DriverManager.getConnection(connectionUrl);
                 Statement stmt = con.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE);) {
 
-            // Create and execute an SQL statement, retrieving an updateable result set.
+            // Create and execute a SQL statement, retrieving an updateable result set.
             String SQL = "SELECT * FROM HumanResources.Department;";
             ResultSet rs = stmt.executeQuery(SQL);
 

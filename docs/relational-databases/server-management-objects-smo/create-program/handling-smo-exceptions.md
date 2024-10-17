@@ -23,7 +23,7 @@ monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sq
  The exception handling statements are specific to the programming language. For example, in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic it is the **Catch** statement.  
   
 ## Inner Exceptions  
- Exceptions can either be general or specific. General exceptions contain a set of specific exceptions. Several **Catch** statements can be used to handle anticipated errors and let remaining errors fall through to general exception handling code. Exceptions often occur in a cascading sequence. Frequently, an SMO exception might have been caused by an SQL exception. The way to detect this is to use the **InnerException** property successively to determine the original exception that caused the final, top-level exception.  
+ Exceptions can either be general or specific. General exceptions contain a set of specific exceptions. Several **Catch** statements can be used to handle anticipated errors and let remaining errors fall through to general exception handling code. Exceptions often occur in a cascading sequence. Frequently, an SMO exception might have been caused by a SQL exception. The way to detect this is to use the **InnerException** property successively to determine the original exception that caused the final, top-level exception.  
   
 > [!NOTE]  
 >  The **SQLException** exception is declared in the **System.Data.SqlClient** namespace.  

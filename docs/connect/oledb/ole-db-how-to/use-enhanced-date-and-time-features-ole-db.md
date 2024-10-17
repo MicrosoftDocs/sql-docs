@@ -267,7 +267,7 @@ HRESULT myExecuteCommand(ISSCommandWithParameters * pUnkCommand, ULONG cPropSets
    // Set the text for this Command, using the default command text  
    // dialect. All providers that support commands must support this  
    // dialect and providers that support SQL must be able to recognize  
-   // an SQL command as SQL when this dialect is specified  
+   // a SQL command as SQL when this dialect is specified  
    hr = pUnkCommand->QueryInterface(IID_ICommandText, (void**)&pICommandText);  
    hr = pICommandText->SetCommandText(DBGUID_DEFAULT, pwszCommandText);  
   

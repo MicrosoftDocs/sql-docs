@@ -17,7 +17,7 @@ apitype: "COM"
 Represents a row from a [Recordset](./recordset-object-ado.md) or the data provider, or an object returned by a semi-structured data provider, such as a file or directory.  
   
 ## Remarks  
- A **Record** object represents one row of data, and has some conceptual similarities with a one-row **Recordset**. Depending on the capabilities of your provider, **Record** objects may be returned directly from your provider instead of a one-row **Recordset**, for example when an SQL query that selects only one row is executed. Or, a **Record** object can be obtained directly from a **Recordset** object. Or, a **Record** can be returned directly from a provider to semi-structured data, such as the Microsoft Exchange OLE DB provider.  
+ A **Record** object represents one row of data, and has some conceptual similarities with a one-row **Recordset**. Depending on the capabilities of your provider, **Record** objects may be returned directly from your provider instead of a one-row **Recordset**, for example when a SQL query that selects only one row is executed. Or, a **Record** object can be obtained directly from a **Recordset** object. Or, a **Record** can be returned directly from a provider to semi-structured data, such as the Microsoft Exchange OLE DB provider.  
   
  You can view the fields associated with the **Record** object by way of the [Fields](./fields-collection-ado.md) collection on the **Record** object. ADO allows object-valued columns including **Recordset**, **SafeArray**, and scalar values in the **Fields** collection of **Record** objects.  
   

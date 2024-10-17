@@ -17,6 +17,6 @@ Like the rest of an application, SQL statements can be interoperable or DBMS-spe
   
  This section contains the following topics.  
   
--   [Choosing an SQL Grammar](../../../odbc/reference/develop-app/choosing-an-sql-grammar.md)  
+-   [Choosing a SQL Grammar](../../../odbc/reference/develop-app/choosing-an-sql-grammar.md)  
   
 -   [Constructing Interoperable SQL Statements](../../../odbc/reference/develop-app/constructing-interoperable-sql-statements.md)

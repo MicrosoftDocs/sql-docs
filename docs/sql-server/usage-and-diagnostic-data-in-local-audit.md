@@ -320,7 +320,7 @@ DBAs will need to self-manage the clean-up of the files in the directory to avoi
 
 **Is there a client or tool that I can use to read this JSON output?**
 The output can be read with Notepad, Visual Studio, or any JSON reader of your choice.
-Alternatively, you can read the JSON file and analyze the data in an SQL Server instance as illustrated below. More details on how to read JSON file in SQL Server, please visit [Importing JSON files into SQL Server using OPENROWSET (BULK) and OPENJSON (Transact-SQL)](/archive/blogs/sqlserverstorageengine/bulk-importing-json-files-into-sql-server).
+Alternatively, you can read the JSON file and analyze the data in a SQL Server instance as illustrated below. More details on how to read JSON file in SQL Server, please visit [Importing JSON files into SQL Server using OPENROWSET (BULK) and OPENJSON (Transact-SQL)](/archive/blogs/sqlserverstorageengine/bulk-importing-json-files-into-sql-server).
 
 ```Transact-SQL
 DECLARE @JSONFile AS VARCHAR(MAX)

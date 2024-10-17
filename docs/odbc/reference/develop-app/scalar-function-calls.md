@@ -35,7 +35,7 @@ SELECT {fn SUBSTRING(Name, 1, CHARINDEX(',', Name) - 1)} FROM Customers
   
  **CONVERT(** _value_exp_ **,** _data_type_**)**  
   
- where *value_exp* is a column name, the result of another scalar function, or a literal value, and *data_type* is a keyword that matches the **#define** name that is used by an SQL data type identifier as defined in [Appendix D: Data Types](../../../odbc/reference/appendixes/appendix-d-data-types.md). For example, the following SQL statement uses the **CONVERT** function to make sure that the output of the **CURDATE** function is a date, instead of a timestamp or character data:  
+ where *value_exp* is a column name, the result of another scalar function, or a literal value, and *data_type* is a keyword that matches the **#define** name that is used by a SQL data type identifier as defined in [Appendix D: Data Types](../../../odbc/reference/appendixes/appendix-d-data-types.md). For example, the following SQL statement uses the **CONVERT** function to make sure that the output of the **CURDATE** function is a date, instead of a timestamp or character data:  
   
 ```  
 INSERT INTO Orders (OrderID, CustID, OpenDate, SalesPerson, Status)  

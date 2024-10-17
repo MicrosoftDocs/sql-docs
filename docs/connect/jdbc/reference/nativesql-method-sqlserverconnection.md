@@ -29,7 +29,7 @@ public java.lang.String nativeSQL(java.lang.String sql)
 #### Parameters  
  *sql*  
   
- A **String** containing an SQL statement.  
+ A **String** containing a SQL statement.  
   
 ## Return Value  
  A **String** containing the converted SQL statement.  

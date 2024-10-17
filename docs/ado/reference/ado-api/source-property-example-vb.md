@@ -58,7 +58,7 @@ Public Sub Main()
     Set rstPublishersDirect = New ADODB.Recordset  
     rstPublishersDirect.Open strSQL, strCnxn, , , adCmdTableDirect  
   
-    ' Open a recordset based on an SQL string.  
+    ' Open a recordset based on a SQL string.  
     Set rstTitlesPublishers = New ADODB.Recordset  
     strSQL = "SELECT title_ID AS TitleID, title AS Title, " & _  
         "publishers.pub_id AS PubID, pub_name AS PubName " & _  

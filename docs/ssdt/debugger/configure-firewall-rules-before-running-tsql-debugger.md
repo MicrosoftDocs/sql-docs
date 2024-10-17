@@ -1,6 +1,6 @@
 ---
 title: Configure firewall rules before running the T-SQL debugger
-description: Learn how to configure the Windows Firewall rules before running the Transact-SQL (T-SQL) debugger when connected to an SQL Server in SQL Server Management Studio.
+description: Learn how to configure the Windows Firewall rules before running the Transact-SQL (T-SQL) debugger when connected to a SQL Server in SQL Server Management Studio.
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest

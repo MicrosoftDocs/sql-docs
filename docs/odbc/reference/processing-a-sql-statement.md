@@ -16,11 +16,11 @@ helpviewer_keywords:
   - "ODBC [ODBC], SQL"
 ---
 # Processing a SQL Statement
-Before discussing the techniques for using SQL programmatically, it is necessary to discuss how an SQL statement is processed. The steps involved are common to all three techniques, although each technique performs them at different times. The following illustration shows the steps involved in processing an SQL statement, which are discussed throughout the rest of this section.  
+Before discussing the techniques for using SQL programmatically, it is necessary to discuss how a SQL statement is processed. The steps involved are common to all three techniques, although each technique performs them at different times. The following illustration shows the steps involved in processing a SQL statement, which are discussed throughout the rest of this section.  
   
- ![Steps for processing an SQL statement](../../odbc/reference/media/pr01.gif "pr01")  
+ ![Steps for processing a SQL statement](../../odbc/reference/media/pr01.gif "pr01")  
   
- To process an SQL statement, a DBMS performs the following five steps:  
+ To process a SQL statement, a DBMS performs the following five steps:  
   
 1.  The DBMS first parses the SQL statement. It breaks the statement up into individual words, called tokens, makes sure that the statement has a valid verb and valid clauses, and so on. Syntax errors and misspellings can be detected in this step.  
   
@@ -32,4 +32,4 @@ Before discussing the techniques for using SQL programmatically, it is necessary
   
 5.  The DBMS executes the statement by running the access plan.  
   
- The steps used to process an SQL statement vary in the amount of database access they require and the amount of time they take. Parsing an SQL statement does not require access to the database and can be done very quickly. Optimization, on the other hand, is a very CPU-intensive process and requires access to the system catalog. For a complex, multitable query, the optimizer may explore thousands of different ways of carrying out the same query. However, the cost of executing the query inefficiently is usually so high that the time spent in optimization is more than regained in increased query execution speed. This is even more significant if the same optimized access plan can be used over and over to perform repetitive queries.
+ The steps used to process a SQL statement vary in the amount of database access they require and the amount of time they take. Parsing a SQL statement does not require access to the database and can be done very quickly. Optimization, on the other hand, is a very CPU-intensive process and requires access to the system catalog. For a complex, multitable query, the optimizer may explore thousands of different ways of carrying out the same query. However, the cost of executing the query inefficiently is usually so high that the time spent in optimization is more than regained in increased query execution speed. This is even more significant if the same optimized access plan can be used over and over to perform repetitive queries.

@@ -26,7 +26,7 @@ Open Source, ActiveConnection, Mode, CreateOptions, Options, UserName, Password
   
 #### Parameters  
  *Source*  
- Optional. A **Variant** that may represent the URL of the entity to be represented by this **Record** object, a **Command**, an open [Recordset](./recordset-object-ado.md) or another **Record** object, a string that contains an SQL SELECT statement or a table name.  
+ Optional. A **Variant** that may represent the URL of the entity to be represented by this **Record** object, a **Command**, an open [Recordset](./recordset-object-ado.md) or another **Record** object, a string that contains a SQL SELECT statement or a table name.  
   
  *ActiveConnection*  
  Optional. A **Variant** that represents the connect string or open [Connection](./connection-object-ado.md) object.  
@@ -55,7 +55,7 @@ Open Source, ActiveConnection, Mode, CreateOptions, Options, UserName, Password
   
 -   A **Command** object. The opened **Record** object represents the single row returned by executing the **Command**. If the results contain more than a single row, the contents of the first row are placed in the record and an error may be added to the **Errors** collection.  
   
--   An SQL SELECT statement. The opened **Record** object represents the single row returned by executing the contents of the string. If the results contain more than a single row, the contents of the first row are placed in the record and an error may be added to the **Errors** collection.  
+-   A SQL SELECT statement. The opened **Record** object represents the single row returned by executing the contents of the string. If the results contain more than a single row, the contents of the first row are placed in the record and an error may be added to the **Errors** collection.  
   
 -   A table name.  
   

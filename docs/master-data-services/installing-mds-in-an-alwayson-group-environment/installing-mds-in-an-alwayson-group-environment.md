@@ -17,7 +17,7 @@ This article describes a solution for Master Data Service (MDS) hosted on Always
 
 ## Introduction
 
-This article describes a solution for Master Data Service (MDS) hosted on an Always On Availability Group configuration. The article describes how to install and configure SQL 2016 MDS on an SQL 2016 Always On Availability group (AG). The main purpose of this solution is to improve high availability and disaster recovery of MDS backend data hosted on a SQL Server database.
+This article describes a solution for Master Data Service (MDS) hosted on an Always On Availability Group configuration. The article describes how to install and configure SQL 2016 MDS on a SQL 2016 Always On Availability group (AG). The main purpose of this solution is to improve high availability and disaster recovery of MDS backend data hosted on a SQL Server database.
 
 To implement the solution, you need to complete the following tasks
 covered in this article.

@@ -23,7 +23,7 @@ helpviewer_keywords:
   
 |API function|Notes|  
 |------------------|-----------|  
-|**SQLBindParameter**|Associates a buffer with a parameter marker in an SQL statement.|  
+|**SQLBindParameter**|Associates a buffer with a parameter marker in a SQL statement.|  
 |**SQLBrowseConnect**|Returns successive levels of attributes and attribute values.|  
 |**SQLDataSources**|Lists data source names. Implemented by the Driver Manager.|  
 |**SQLDescribeParam**|Returns the description of a parameter marker associated with a prepared SQL statement.<br /><br /> Returns a best guess of what the parameter is, based on parsing the statement. If the parameter type cannot be determined, SQL_VARCHAR returns with length 2000.|  
@@ -32,7 +32,7 @@ helpviewer_keywords:
 |**SQLForeignKeys**|Returns a list of foreign keys in a single table, or a list of foreign keys in other tables that refer to a single table.|  
 |**SQLMoreResults**|Determines whether more results are pending on a statement handle, hstmt, containing SELECT, UPDATE, INSERT, or DELETE statements and if so, initializes processing for those results.<br /><br /> Oracle supports multiple result sets only from stored procedures, when using {resultset... } escape sequences.|  
 |**SQLNativeSql**|For information about usage, see [Returning Array Parameters from Stored Procedures](../../odbc/microsoft/returning-array-parameters-from-stored-procedures.md).|  
-|**SQLNumParams**|Returns the number of parameters in an SQL statement. The number of parameters should equal the number of question marks in the SQL statement passed to **SQLPrepare**.|  
+|**SQLNumParams**|Returns the number of parameters in a SQL statement. The number of parameters should equal the number of question marks in the SQL statement passed to **SQLPrepare**.|  
 |**SQLPrimaryKeys**|Returns the column names that comprise the primary key for a table.|  
 |**SQLProcedureColumns**|Returns a list of input and output parameters, the return value, the columns in the result set of a single procedure, and two additional columns, OVERLOAD and ORDINAL_POSITION. OVERLOAD is the OVERLOAD column from the ALL_ARGUMENTS table of the Oracle Data Dictionary View. ORDINAL_POSITION is the SEQUENCE column from the ALL_ARGUMENTS table of the Oracle Data Dictionary View. For packaged procedures, the PROCEDURE NAME column is in *packagename.procedurename* format. Does not return the procedure columns of a created synonym that refers to a procedure or function.|  
 |**SQLProcedures**|Returns a list of procedures in the data source. For packaged procedures, the PROCEDURE NAME column is in *packagename.procedurename* format.<br /><br /> Because Oracle does not provide a way to distinguish packaged procedures from packaged functions, the driver returns SQL_PT_UNKNOWN for the PROCEDURE_TYPE column.|  

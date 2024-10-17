@@ -20,13 +20,13 @@ helpviewer_keywords:
   - "data types [ODBC], transfer octet length"
 ---
 # Column Size, Decimal Digits, Transfer Octet Length, and Display Size - ODBC
-Data types are characterized by their column (or parameter) size, decimal digits, length, and display size. The following ODBC functions return these attributes for a parameter in an SQL statement or for an SQL data type on a data source. Each ODBC function returns a different set of these attributes, as follows:  
+Data types are characterized by their column (or parameter) size, decimal digits, length, and display size. The following ODBC functions return these attributes for a parameter in a SQL statement or for a SQL data type on a data source. Each ODBC function returns a different set of these attributes, as follows:  
   
 -   **SQLDescribeCol** returns the column size and decimal digits of the columns it describes.  
   
--   **SQLDescribeParam** returns the parameter size and decimal digits of the parameters it describes. **SQLBindParameter** sets the parameter size and decimal digits for a parameter in an SQL statement.  
+-   **SQLDescribeParam** returns the parameter size and decimal digits of the parameters it describes. **SQLBindParameter** sets the parameter size and decimal digits for a parameter in a SQL statement.  
   
--   The catalog functions **SQLColumns**, **SQLProcedureColumns**, and **SQLGetTypeInfo** return attributes for a column in a table, result set, or a procedure parameter and the catalog attributes of the data types in the data source. **SQLColumns** returns the column size, decimal digits, and length of a column in specified tables (such as the base table, view, or a system table). **SQLProcedureColumns** returns the column size, decimal digits, and length of a column in a procedure. **SQLGetTypeInfo** returns the maximum column size and the minimum and maximum decimal digits of an SQL data type on a data source.  
+-   The catalog functions **SQLColumns**, **SQLProcedureColumns**, and **SQLGetTypeInfo** return attributes for a column in a table, result set, or a procedure parameter and the catalog attributes of the data types in the data source. **SQLColumns** returns the column size, decimal digits, and length of a column in specified tables (such as the base table, view, or a system table). **SQLProcedureColumns** returns the column size, decimal digits, and length of a column in a procedure. **SQLGetTypeInfo** returns the maximum column size and the minimum and maximum decimal digits of a SQL data type on a data source.  
   
  The values returned by these functions for the column or parameter size correspond to "precision" as defined in ODBC 2.*x*. However, the values do not necessarily correspond to the values returned in SQL_DESC_PRECISION or any other one descriptor field. The same is true for decimal digits, which correspond to "scale" as defined in ODBC 2.*x*. It does not necessarily correspond to the values returned in SQL_DESC_SCALE or any other one descriptor field, but comes from different descriptor fields depending on the data type. For further information, see [Column Size](../../../odbc/reference/appendixes/column-size.md) and [Decimal Digits](../../../odbc/reference/appendixes/decimal-digits.md).  
   

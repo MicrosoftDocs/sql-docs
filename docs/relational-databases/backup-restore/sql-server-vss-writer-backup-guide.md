@@ -525,7 +525,7 @@ The backup application is only allowed to specify new targets for the physical p
 
 ### Database Rename
 
-A requestor may need to restore an SQL database with a new name, especially if the database is to be restored side by side with the original database.  This option can be specified by the requestor during the restore operation by setting a custom restore option as "New Component Name" = <"New Name"> using the VSS call `IVssBackupComponents::SetRestoreOptions()` (in the wszRestoreOptions parameter).
+A requestor may need to restore a SQL database with a new name, especially if the database is to be restored side by side with the original database.  This option can be specified by the requestor during the restore operation by setting a custom restore option as "New Component Name" = <"New Name"> using the VSS call `IVssBackupComponents::SetRestoreOptions()` (in the wszRestoreOptions parameter).
 
 The SQL writer will take the entire content of New Component Name's value and use it as the new name for the restored database. If no option is specified, SQL will restore the database with its original name (component name).
 

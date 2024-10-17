@@ -26,7 +26,7 @@ These properties allow you to maximize the performance of your ADO.NET applicati
 > [!IMPORTANT]
 > If you are using SQL Server stored procedures to edit or delete data using a `DataAdapter`, make sure that you do not use `SET NOCOUNT ON` in the stored procedure definition. This causes the rows affected count returned to be zero, which the `DataAdapter` interprets as a concurrency conflict. In this event, a <xref:System.Data.DBConcurrencyException> will be thrown.
 
-Command parameters can be used to specify input and output values for an SQL statement or stored procedure for each modified row in a `DataSet`. For more information, see [DataAdapter parameters](dataadapter-parameters.md).
+Command parameters can be used to specify input and output values for a SQL statement or stored procedure for each modified row in a `DataSet`. For more information, see [DataAdapter parameters](dataadapter-parameters.md).
 
 > [!NOTE]
 > It is important to understand the difference between deleting a row in a <xref:System.Data.DataTable> and removing the row. When you call the `Remove` or `RemoveAt` method, the row is removed immediately. Any corresponding rows in the back end data source **will not be affected** if you then pass the `DataTable` or `DataSet` to a `DataAdapter` and call `Update`. When you use the `Delete` method, the row remains in the `DataTable` and is marked for deletion. If you then pass the `DataTable` or `DataSet` to a `DataAdapter` and call `Update`, the corresponding row in the back end data source **is deleted**.

@@ -22,7 +22,7 @@ This section describes the general flow of ODBC applications. It is unlikely tha
   
 -   [Step 2: Initialize the Application](../../../odbc/reference/develop-app/step-2-initialize-the-application.md)  
   
--   [Step 3: Build and Execute an SQL Statement](../../../odbc/reference/develop-app/step-3-build-and-execute-an-sql-statement.md)  
+-   [Step 3: Build and Execute a SQL Statement](../../../odbc/reference/develop-app/step-3-build-and-execute-an-sql-statement.md)  
   
 -   [Step 4a: Fetch the Results](../../../odbc/reference/develop-app/step-4a-fetch-the-results.md)  
   

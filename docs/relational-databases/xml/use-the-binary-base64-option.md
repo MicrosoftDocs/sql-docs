@@ -1,6 +1,6 @@
 ---
 title: "Use the BINARY BASE64 Option"
-description: Learn how to use the BINARY BASE64 option in an SQL query to return binary data in the base64 encoding format.
+description: Learn how to use the BINARY BASE64 option in a SQL query to return binary data in the base64 encoding format.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: randolphwest

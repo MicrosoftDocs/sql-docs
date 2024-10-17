@@ -11,7 +11,7 @@ helpviewer_keywords:
   - "statement parameters [ODBC]"
 ---
 # Statement Parameters
-A *parameter* is a variable in an SQL statement. For example, suppose a Parts table has columns named PartID, Description, and Price. To add a part without parameters would require constructing an SQL statement such as:  
+A *parameter* is a variable in a SQL statement. For example, suppose a Parts table has columns named PartID, Description, and Price. To add a part without parameters would require constructing a SQL statement such as:  
   
 ```  
 INSERT INTO Parts (PartID, Description, Price) VALUES (2100, 'Drive shaft', 50.00)  
@@ -25,7 +25,7 @@ INSERT INTO Parts (PartID, Description, Price) VALUES (?, ?, ?)
   
  The parameter markers are then bound to application variables. To add a new row, the application has only to set the values of the variables and execute the statement. The driver then retrieves the current values of the variables and sends them to the data source. If the statement will be executed multiple times, the application can make the process even more efficient by preparing the statement.  
   
- The statement just shown might be hard-coded in an order entry application to insert a new row. However, parameter markers are not limited to vertical applications. For any application, they ease the difficulty of constructing SQL statements at run time by avoiding conversions to and from text. For example, the part ID just shown is most likely stored in the application as an integer. If the SQL statement is constructed without parameter markers, the application must convert the part ID to text and the data source must convert it back to an integer. By using a parameter marker, the application can send the part ID to the driver as an integer, which usually can send it to the data source as an integer. This saves two conversions. For long data values, this is very important, because the text forms of such values frequently exceed the allowed length of an SQL statement.  
+ The statement just shown might be hard-coded in an order entry application to insert a new row. However, parameter markers are not limited to vertical applications. For any application, they ease the difficulty of constructing SQL statements at run time by avoiding conversions to and from text. For example, the part ID just shown is most likely stored in the application as an integer. If the SQL statement is constructed without parameter markers, the application must convert the part ID to text and the data source must convert it back to an integer. By using a parameter marker, the application can send the part ID to the driver as an integer, which usually can send it to the data source as an integer. This saves two conversions. For long data values, this is very important, because the text forms of such values frequently exceed the allowed length of a SQL statement.  
   
  Parameters are valid only in certain places in SQL statements. For example, they are not allowed in the select list (the list of columns to be returned by a **SELECT** statement), nor are they allowed as both operands of a binary operator such as the equal sign (=), because it would be impossible to determine the parameter type. Generally, parameters are valid only in Data Manipulation Language (DML) statements, and not in Data Definition Language (DDL) statements. For more information, see [Parameter Markers](../../../odbc/reference/appendixes/parameter-markers.md) in Appendix C: SQL Grammar.  
   

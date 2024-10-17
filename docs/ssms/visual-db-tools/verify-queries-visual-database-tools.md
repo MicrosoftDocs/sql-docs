@@ -26,7 +26,7 @@ Some notes to keep in mind about verifying queries:
   
 -   Queries that contain parameters cannot be verified.  
   
-### To verify an SQL statement  
+### To verify a SQL statement  
   
 -   Right-click in the **SQL Pane**, and select **Verify SQL Syntax** from the shortcut menu.  
   

@@ -149,7 +149,7 @@ This table lists the events that can be added to or removed from a trace.
 | `119` | `OLEDB Call Event` | Occurs when OLE DB provider calls are made for distributed queries and remote stored procedures. |
 | `120` | `OLEDB QueryInterface Event` | Occurs when OLE DB `QueryInterface` calls are made for distributed queries and remote stored procedures. |
 | `121` | `OLEDB DataRead Event` | Occurs when a data request call is made to the OLE DB provider. |
-| `122` | `Showplan XML` | Occurs when an SQL statement executes. Include this event to identify Showplan operators. Each event is stored in a well-formed XML document. The `Binary` column for this event contains the encoded Showplan. Use [!INCLUDE [sssqlprofiler-md](../../includes/sssqlprofiler-md.md)] to open the trace and view the Showplan. |
+| `122` | `Showplan XML` | Occurs when a SQL statement executes. Include this event to identify Showplan operators. Each event is stored in a well-formed XML document. The `Binary` column for this event contains the encoded Showplan. Use [!INCLUDE [sssqlprofiler-md](../../includes/sssqlprofiler-md.md)] to open the trace and view the Showplan. |
 | `123` | `SQL:FullTextQuery` | Occurs when a full text query executes. |
 | `124` | `Broker:Conversation` | Reports the progress of a [!INCLUDE [ssSB](../../includes/sssb-md.md)] conversation. |
 | `125` | `Deprecation Announcement` | Occurs when you use a feature that will be removed from a future version of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]. |
@@ -172,7 +172,7 @@ This table lists the events that can be added to or removed from a trace.
 | `142` | `Broker:Transmission` | Indicates that errors have occurred in the [!INCLUDE [ssSB](../../includes/sssb-md.md)] transport layer. The error number and state values indicate the source of the error. |
 | `143` | `Broker:Queue Disabled` | Indicates a poison message was detected because there were five consecutive transaction rollbacks on a [!INCLUDE [ssSB](../../includes/sssb-md.md)] queue. The event contains the database ID and queue ID of the queue that contains the poison message. |
 | `144` to `145` | `Reserved` | |
-| `146` | `Showplan XML Statistics Profile` | Occurs when an SQL statement executes. Identifies the Showplan operators and displays complete, compile-time data. The `Binary` column for this event contains the encoded Showplan. Use [!INCLUDE [sssqlprofiler-md](../../includes/sssqlprofiler-md.md)] to open the trace and view the Showplan. |
+| `146` | `Showplan XML Statistics Profile` | Occurs when a SQL statement executes. Identifies the Showplan operators and displays complete, compile-time data. The `Binary` column for this event contains the encoded Showplan. Use [!INCLUDE [sssqlprofiler-md](../../includes/sssqlprofiler-md.md)] to open the trace and view the Showplan. |
 | `148` | `Deadlock Graph` | Occurs when an attempt to acquire a lock is canceled because the attempt was part of a deadlock and was chosen as the deadlock victim. Provides an XML description of a deadlock. |
 | `149` | `Broker:Remote Message Acknowledgement` | Occurs when [!INCLUDE [ssSB](../../includes/sssb-md.md)] sends or receives a message acknowledgment. |
 | `150` | `Trace File Close` | Occurs when a trace file closes during a trace file rollover. |
@@ -193,8 +193,8 @@ This table lists the events that can be added to or removed from a trace.
 | `165` | `Performance statistics` | Occurs when a compiled query plan has been cached for the first time, recompiled, or removed from the plan cache. |
 | `166` | `SQL:StmtRecompile` | Occurs when a statement-level recompilation occurs. |
 | `167` | `Database Mirroring State Change` | Occurs when the state of a mirrored database changes. |
-| `168` | `Showplan XML For Query Compile` | Occurs when an SQL statement compiles. Displays the complete, compile-time data. The `Binary` column for this event contains the encoded Showplan. Use [!INCLUDE [sssqlprofiler-md](../../includes/sssqlprofiler-md.md)] to open the trace and view the Showplan. |
-| `169` | `Showplan All For Query Compile` | Occurs when an SQL statement compiles. Displays complete, compile-time data. Use to identify Showplan operators. |
+| `168` | `Showplan XML For Query Compile` | Occurs when a SQL statement compiles. Displays the complete, compile-time data. The `Binary` column for this event contains the encoded Showplan. Use [!INCLUDE [sssqlprofiler-md](../../includes/sssqlprofiler-md.md)] to open the trace and view the Showplan. |
+| `169` | `Showplan All For Query Compile` | Occurs when a SQL statement compiles. Displays complete, compile-time data. Use to identify Showplan operators. |
 | `170` | `Audit Server Scope GDR Event` | Indicates that a grant, deny, or revoke event for permissions in server scope occurred, such as creating a login. |
 | `171` | `Audit Server Object GDR Event` | Indicates that a grant, deny, or revoke event for a schema object, such as a table or function, occurred. |
 | `172` | `Audit Database Object GDR Event` | Indicates that a grant, deny, or revoke event for database objects, such as assemblies and schemas, occurred. |
@@ -305,7 +305,7 @@ The following table lists the columns that can be added for an event.
 | `60` | `IsSystem` | Indicates whether the event occurred on a system process or a user process.<br /><br />`1` = system<br />`0` = user. |
 | `61` | `Offset` | Starting offset of the statement within the stored procedure or batch. |
 | `62` | `SourceDatabaseID` | ID of the database in which the source of the object exists. |
-| `63` | `SqlHandle` | 64-bit hash based on the text of an ad hoc query or the database and object ID of an SQL object. This value can be passed to `sys.dm_exec_sql_text()` to retrieve the associated SQL text. |
+| `63` | `SqlHandle` | 64-bit hash based on the text of an ad hoc query or the database and object ID of a SQL object. This value can be passed to `sys.dm_exec_sql_text()` to retrieve the associated SQL text. |
 | `64` | `SessionLoginName` | The login name of the user who originated the session. For example, if you connect to [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] using `Login1` and execute a statement as `Login2`, `SessionLoginName` displays `Login1`, while `LoginName` displays `Login2`. This data column displays both [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] and Windows logins. |
 
 #### [ @on = ] *on*

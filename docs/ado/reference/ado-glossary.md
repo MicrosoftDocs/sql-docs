@@ -27,7 +27,7 @@ This topic defines terms relevant to ADO.
  In a query, a function such as COUNT, AVG, or STDEV that calculates a value using all the rows in a column of a table. In writing expressions and in programming, you can use SQL aggregate functions (including the three listed above) and domain aggregate functions to determine various statistics.  
   
  alias  
- An alternate name you give to a column or expression in an SQL SELECT statement, often shorter or more meaningful. For example, BobSales is the alias in the following SELECT statement: "Select wr-Sales as BobSales from SalesDB". An alias can be used to dynamically assign columns to control bindings on the DataControl object.  
+ An alternate name you give to a column or expression in a SQL SELECT statement, often shorter or more meaningful. For example, BobSales is the alias in the following SELECT statement: "Select wr-Sales as BobSales from SalesDB". An alias can be used to dynamically assign columns to control bindings on the DataControl object.  
   
  apartment threading  
  A COM threading model where all calls to an object occur on one thread. In apartment threading, COM synchronizes and marshals calls. See also *COMmddefcom*.  
@@ -120,7 +120,7 @@ This topic defines terms relevant to ADO.
  A technique which makes use of a formalized syntax (called **Shape language**) to define a specialized **Recordset** object (called a *shaped Recordset*) that contains not just data, but also references to other **Recordset** objects and/or computed values based on those other **Recordset** objects.  
   
  data source tier  
- A logical layer of a distributed system that represents a computer running a DBMS, such as an SQL Server database. See also *client tier*, *middle tier*, *distributed application*.  
+ A logical layer of a distributed system that represents a computer running a DBMS, such as a SQL Server database. See also *client tier*, *middle tier*, *distributed application*.  
   
  DCOM  
  A wire protocol that enables COM components to communicate directly with each other across a network. See also *COM*, *component*.  

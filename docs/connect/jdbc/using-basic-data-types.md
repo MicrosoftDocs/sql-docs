@@ -95,7 +95,7 @@ If you update data in a data source by using a parameterized query, you can set 
   
 [!code[JDBC#UsingBasicDataTypes4](codesnippet/Java/using-basic-data-types_4.java)]  
   
-For more information about parameterized queries, see [Using an SQL statement with parameters](using-an-sql-statement-with-parameters.md).  
+For more information about parameterized queries, see [Using a SQL statement with parameters](using-an-sql-statement-with-parameters.md).  
 
 ## Passing parameters to a stored procedure
 

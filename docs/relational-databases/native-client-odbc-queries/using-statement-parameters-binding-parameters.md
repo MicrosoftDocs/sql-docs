@@ -1,6 +1,6 @@
 ---
 title: "Binding Parameters"
-description: Find out how to bind each parameter marker in an SQL statement to a variable in the application before the statement can run.
+description: Find out how to bind each parameter marker in a SQL statement to a variable in the application before the statement can run.
 author: markingmyname
 ms.author: maghan
 ms.date: "03/14/2017"
@@ -21,7 +21,7 @@ helpviewer_keywords:
 # Using Statement Parameters - Binding Parameters
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  Each parameter marker in an SQL statement must be associated, or bound, to a variable in the application before the statement can be executed. This is done by calling the [SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md) function. **SQLBindParameter** describes the program variable (address, C data type, and so on) to the driver. It also identifies the parameter marker by indicating its ordinal value and then describes the characteristics of the SQL object it represents (SQL data type, precision, and so on).  
+  Each parameter marker in a SQL statement must be associated, or bound, to a variable in the application before the statement can be executed. This is done by calling the [SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md) function. **SQLBindParameter** describes the program variable (address, C data type, and so on) to the driver. It also identifies the parameter marker by indicating its ordinal value and then describes the characteristics of the SQL object it represents (SQL data type, precision, and so on).  
   
  Parameter markers can be bound or rebound at any time before a statement is executed. A parameter binding remains in effect until one of the following occurs:  
   
@@ -29,7 +29,7 @@ helpviewer_keywords:
   
 -   A call to **SQLBindParameter** with *ParameterNumber* set to the ordinal of a bound parameter marker automatically releases the previous binding.  
   
- An application can also bind parameters to arrays of program variables to process an SQL statement in batches. There are two types of array binding:  
+ An application can also bind parameters to arrays of program variables to process a SQL statement in batches. There are two types of array binding:  
   
 -   Column-wise binding is done when each individual parameter is bound to its own array of variables.  
   

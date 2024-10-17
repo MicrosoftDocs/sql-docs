@@ -1,6 +1,6 @@
 ---
 title: Python SQL Driver - pymssql
-description: This guide describes installing Python, the ODBC Driver for SQL Server, and pymssql. The corresponding sample code shows how to connect to and interact with an SQL database.
+description: This guide describes installing Python, the ODBC Driver for SQL Server, and pymssql. The corresponding sample code shows how to connect to and interact with a SQL database.
 author: David-Engel
 ms.author: davidengel
 ms.date: 08/22/2023
@@ -11,12 +11,12 @@ ms.topic: conceptual
 
 # Python SQL Driver - pymssql
 
-Use the `pymssql` driver to connect to an SQL database from Python code. This series of articles provides step-by-step guidance for installing and using this Python SQL driver.
+Use the `pymssql` driver to connect to a SQL database from Python code. This series of articles provides step-by-step guidance for installing and using this Python SQL driver.
 
 ## Get started
 
 - [Step 1: Configure development environment for pymssql Python development](step-1-configure-development-environment-for-pymssql-python-development.md)  
-- [Step 2: Create an SQL database for pymssql Python development](step-2-create-a-sql-database-for-pymssql-python-development.md)  
+- [Step 2: Create a SQL database for pymssql Python development](step-2-create-a-sql-database-for-pymssql-python-development.md)  
 - [Step 3: Proof of concept connecting to SQL using pymssql](step-3-proof-of-concept-connecting-to-sql-using-pymssql.md)  
 
 ## Documentation

@@ -101,7 +101,7 @@ public SqlXmlCommand(string cnString)
   
 |Value|Description|  
 |-----------|-----------------|  
-|SqlXmlCommandType.Sql|Executes an SQL command (for example, `SELECT * FROM Employees FOR XML AUTO`).|  
+|SqlXmlCommandType.Sql|Executes a SQL command (for example, `SELECT * FROM Employees FOR XML AUTO`).|  
 |SqlXmlCommandType.XPath|Executes an XPath command (for example, `Employees[@EmployeeID=1]`).|  
 |SqlXmlCommandType.Template|Executes an XML template.|  
 |SqlXmlCommandType.TemplateFile|Executes a template file at the specified path.|  

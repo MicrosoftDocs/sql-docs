@@ -34,7 +34,7 @@ In the following example, the sample code makes a connection to the [!INCLUDE[ss
 
 In addition, the sample code demonstrates how to get the adaptive buffering mode by using the [getResponseBuffering](reference/getresponsebuffering-method-sqlserverstatement.md) method of the [SQLServerStatement](reference/sqlserverstatement-class.md) class. Note that starting with the JDBC driver version 2.0 release, the responseBuffering connection property is set to "adaptive" by default.
 
-Then, using an SQL statement with the [SQLServerStatement](reference/sqlserverstatement-class.md) object, the sample code runs the SQL statement and places the data that it returns into a [SQLServerResultSet](reference/sqlserverresultset-class.md) object.
+Then, using a SQL statement with the [SQLServerStatement](reference/sqlserverstatement-class.md) object, the sample code runs the SQL statement and places the data that it returns into a [SQLServerResultSet](reference/sqlserverresultset-class.md) object.
 
 Finally, the sample code iterates through the rows of data that are in the result set, and uses the [getCharacterStream](reference/getcharacterstream-method-sqlserverresultset.md) method to access some of the data.
 

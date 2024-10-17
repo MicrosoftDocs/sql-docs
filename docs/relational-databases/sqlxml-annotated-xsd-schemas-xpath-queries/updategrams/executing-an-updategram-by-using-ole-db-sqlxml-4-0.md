@@ -506,7 +506,7 @@ FOR XML AUTO</sql:query>
 </ROOT>  
 ```  
   
- The template includes an SQL query. The query requires a value for its parameter (@Title). If no parameter value is passed, the default value ("Mr.") is used.  
+ The template includes a SQL query. The query requires a value for its parameter (@Title). If no parameter value is passed, the default value ("Mr.") is used.  
   
  In passing parameter values to a template, the parameter name and value both must be specified.  
   

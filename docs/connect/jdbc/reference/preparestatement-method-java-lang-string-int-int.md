@@ -28,7 +28,7 @@ public java.sql.PreparedStatement prepareStatement(java.lang.String sSql,
 #### Parameters  
  *sSql*  
   
- A **String** containing an SQL statement.  
+ A **String** containing a SQL statement.  
   
  *resultSetType*  
   

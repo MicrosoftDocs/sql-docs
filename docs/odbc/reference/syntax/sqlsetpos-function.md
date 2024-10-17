@@ -228,7 +228,7 @@ SQLRETURN SQLSetPos(
     >  Although data-at-execution parameters are similar to data-at-execution columns, the value returned by **SQLParamData** is different for each.  
   
     > [!NOTE]  
-    >  Data-at-execution parameters are parameters in an SQL statement for which data will be sent with **SQLPutData** when the statement is executed with **SQLExecDirect** or **SQLExecute**. They are bound with **SQLBindParameter** or by setting descriptors with **SQLSetDescRec**. The value returned by **SQLParamData** is a 32-bit value passed to **SQLBindParameter** in the *ParameterValuePtr* argument.  
+    >  Data-at-execution parameters are parameters in a SQL statement for which data will be sent with **SQLPutData** when the statement is executed with **SQLExecDirect** or **SQLExecute**. They are bound with **SQLBindParameter** or by setting descriptors with **SQLSetDescRec**. The value returned by **SQLParamData** is a 32-bit value passed to **SQLBindParameter** in the *ParameterValuePtr* argument.  
   
     > [!NOTE]  
     >  Data-at-execution columns are columns in a rowset for which data will be sent with **SQLPutData** when a row is updated with **SQLSetPos**. They are bound with **SQLBindCol**. The value returned by **SQLParamData** is the address of the row in the **TargetValuePtr* buffer that is being processed.  

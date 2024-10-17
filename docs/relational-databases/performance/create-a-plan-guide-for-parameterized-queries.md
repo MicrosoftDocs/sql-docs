@@ -67,6 +67,6 @@ EXEC sp_create_plan_guide N'TemplateGuide1',
 > [!IMPORTANT]  
 >  The value of the constant literals in the `@stmt` parameter passed to `sp_get_query_template` might affect the data type that is chosen for the parameter that replaces the literal. This will affect plan guide matching. You may have to create more than one plan guide to handle different parameter value ranges.  
   
- You can also use TEMPLATE plan guides together with SQL plan guides. For example, you can create a TEMPLATE plan guide to make sure that a class of queries is parameterized. You can then create an SQL plan guide on the parameterized form of that query.  
+ You can also use TEMPLATE plan guides together with SQL plan guides. For example, you can create a TEMPLATE plan guide to make sure that a class of queries is parameterized. You can then create a SQL plan guide on the parameterized form of that query.  
   
   

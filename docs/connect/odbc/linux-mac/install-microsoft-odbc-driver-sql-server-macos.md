@@ -96,7 +96,7 @@ If brew is having trouble finding the formulas, make sure you didn't skip the in
 
 ## Related content
 
-- [C / C++ ODBC example application accesses an SQL database](../cpp-code-example-app-connect-access-sql-db.md)
+- [C / C++ ODBC example application accesses a SQL database](../cpp-code-example-app-connect-access-sql-db.md)
 - [Developing Applications](../../../odbc/reference/develop-app/developing-applications.md)
 - [release notes](release-notes-odbc-sql-server-linux-mac.md)
 - [system requirements](system-requirements.md)

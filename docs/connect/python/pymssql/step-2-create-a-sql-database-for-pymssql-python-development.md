@@ -1,5 +1,5 @@
 ---
-title: Step 2 - Create an SQL database for pymssql
+title: Step 2 - Create a SQL database for pymssql
 description: Step 2 of this getting started guide involves creating a database in SQL Server or Azure SQL Database for this pymssql sample.
 author: David-Engel
 ms.author: davidengel
@@ -10,9 +10,9 @@ ms.topic: how-to
 # CustomerIntent: As a developer, I want to create a SQL database so that I can connect to it with Python code.
 ---
 
-# Step 2: Create an SQL database for pymssql Python development
+# Step 2: Create a SQL database for pymssql Python development
 
-Create an SQL database using either Azure SQL or SQL Server.
+Create a SQL database using either Azure SQL or SQL Server.
 
 ## Prerequisites
 
@@ -22,13 +22,13 @@ Create an SQL database using either Azure SQL or SQL Server.
     - [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/github/codespaces-blank?quickstart=1).
 - `pymssql` package from PyPI.
 
-## Create an SQL database
+## Create a SQL database
 
 The samples in this next section only work with the AdventureWorks schema, on either Microsoft SQL Server or Azure SQL Database.
 
 ### [Azure SQL Database](#tab/azure-sql)
 
-[Create an SQL database in minutes using the Azure portal](/azure/azure-sql/database/single-database-create-quickstart)
+[Create a SQL database in minutes using the Azure portal](/azure/azure-sql/database/single-database-create-quickstart)
 
 ### [Microsoft SQL Server](#tab/sql-server)
 

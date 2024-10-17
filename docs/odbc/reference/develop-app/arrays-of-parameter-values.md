@@ -14,7 +14,7 @@ helpviewer_keywords:
 # Arrays of Parameter Values
 It is often useful for applications to pass arrays of parameters. For example, using arrays of parameters and a parameterized **INSERT** statement, an application can insert a number of rows at once. There are several advantages to using arrays. First, network traffic is reduced because the data for many statements is sent in a single packet (if the data source supports parameter arrays natively). Second, some data sources can execute SQL statements using arrays faster than executing the same number of separate SQL statements. Finally, when the data is stored in an array, as is often the case for screen data, the application can bind all of the rows in a particular column with a single call to **SQLBindParameter** and update them by executing a single statement.  
   
- Unfortunately, not many data sources support parameter arrays. However, a driver can emulate parameter arrays by executing an SQL statement once for each set of parameter values. This can lead to increases in speed because the driver can then prepare the statement that it plans to execute once for each parameter set. It might also lead to simpler application code.  
+ Unfortunately, not many data sources support parameter arrays. However, a driver can emulate parameter arrays by executing a SQL statement once for each set of parameter values. This can lead to increases in speed because the driver can then prepare the statement that it plans to execute once for each parameter set. It might also lead to simpler application code.  
   
  This section contains the following topics.  
   

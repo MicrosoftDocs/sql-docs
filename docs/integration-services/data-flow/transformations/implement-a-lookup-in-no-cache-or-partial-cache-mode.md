@@ -53,7 +53,7 @@ helpviewer_keywords:
   
     -   Click **Use a table or a view**, and then either select a table or view, or click **New** to create a table or view.  
   
-    -   Click **Use results of an SQL query**, and then build a query in the **SQL Command** window.  
+    -   Click **Use results of a SQL query**, and then build a query in the **SQL Command** window.  
   
          -or-  
   
@@ -61,7 +61,7 @@ helpviewer_keywords:
   
          -or-  
   
-         Click **Browse** to import an SQL statement from a file.  
+         Click **Browse** to import a SQL statement from a file.  
   
      To validate the SQL query, click **Parse Query**.  
   

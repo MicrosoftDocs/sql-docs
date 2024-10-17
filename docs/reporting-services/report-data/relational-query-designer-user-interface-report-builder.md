@@ -156,7 +156,7 @@ helpviewer_keywords:
 -   **Join Fields** Lists the pairs of joined fields, if a relationship has multiple join conditions the pairs of joined fields are separated by commas (,).  
   
 ###  <a name="AppliedFilters"></a> Applied Filters Pane  
- The Applied Filters pane displays the criteria that are used to limit the number of rows of data that are retrieved at run time. Criteria specified in this pane are used to generate an SQL WHERE clause. When you select the parameter option, a report parameter is automatically created. Report parameters that are based on query parameters enable a user to specify values for the query to control the data in the report.  
+ The Applied Filters pane displays the criteria that are used to limit the number of rows of data that are retrieved at run time. Criteria specified in this pane are used to generate a SQL WHERE clause. When you select the parameter option, a report parameter is automatically created. Report parameters that are based on query parameters enable a user to specify values for the query to control the data in the report.  
   
  The following columns are displayed:  
   

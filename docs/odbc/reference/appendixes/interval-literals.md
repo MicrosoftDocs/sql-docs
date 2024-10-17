@@ -18,7 +18,7 @@ ODBC requires that all drivers support conversion of the SQL_CHAR or SQL_VARCHAR
 > [!NOTE]  
 >  The complete BNF syntax for interval literals is shown in the section [Interval Literal Syntax](../../../odbc/reference/appendixes/interval-literal-syntax.md) in Appendix C: SQL Grammar.  
   
- To pass interval literals as part of an SQL statement, an escape clause syntax is defined for interval literals. For more information, see [Date, Time, and Timestamp Literals](../../../odbc/reference/develop-app/date-time-and-timestamp-literals.md).  
+ To pass interval literals as part of a SQL statement, an escape clause syntax is defined for interval literals. For more information, see [Date, Time, and Timestamp Literals](../../../odbc/reference/develop-app/date-time-and-timestamp-literals.md).  
   
  An interval literal is of the form:  
   

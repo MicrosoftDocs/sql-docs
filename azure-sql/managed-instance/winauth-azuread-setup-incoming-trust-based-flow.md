@@ -75,7 +75,8 @@ To set up the Trusted Domain Object, first install the Azure AD Hybrid Authentic
 Install-PackageProvider -Name NuGet -Force
 
 if (@(Get-PSRepository | ? {$_.Name -eq "PSGallery"}).Count -eq 0){
-    Register-PSRepository -DefaultSet-PSRepository -Name "PSGallery" -InstallationPolicy Trusted
+    Register-PSRepository -Default
+    Set-PSRepository -Name "PSGallery" -InstallationPolicy Trusted
 }
 
 Install-Module -Name PowerShellGet -Force

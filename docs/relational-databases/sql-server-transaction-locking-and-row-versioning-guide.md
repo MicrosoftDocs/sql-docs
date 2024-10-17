@@ -529,7 +529,35 @@ Lock compatibility controls whether multiple transactions can acquire locks on t
 
 <a name="lock_matrix"></a> Use the following table to determine the compatibility of all the lock modes available in the [!INCLUDE [Database Engine](../includes/ssde-md.md)].
 
-:::image type="content" source="media/sql-server-transaction-locking-and-row-versioning-guide/sql-server-lock-conflict-compatibility.png" alt-text="A table showing a matrix of lock conflicts and compatibility." lightbox="media/sql-server-transaction-locking-and-row-versioning-guide/sql-server-lock-conflict-compatibility.png":::
+:::image type="content" source="media/sql-server-transaction-locking-and-row-versioning-guide/sql-server-lock-conflict-compatibility.png" alt-text="Diagram showing a matrix of lock conflicts and compatibility." lightbox="media/sql-server-transaction-locking-and-row-versioning-guide/sql-server-lock-conflict-compatibility.png":::
+
+| Key | Description |
+| --- | --- |
+| N | No conflict |
+| I | Illegal |
+| C | Conflict |
+| NL | No lock |
+| SCH-S | Schema stability lock |
+| SCH-M | Schema modification lock |
+| S | Shared |
+| U | Update |
+| X | Exclusive |
+| IS | Intent shared |
+| IU | Intent update |
+| IX | Intent exclusive |
+| SIU | Share with intent update |
+| SIX | Share with intent exclusive |
+| UIX | Update with intent exclusive |
+| BU | Bulk update |
+| RS-S | Shared range-shared |
+| RS-U | Shared range-update |
+| RI-N | Insert range-null |
+| RI-S | Insert range-shared |
+| RI-U | Insert range-update |
+| RI-X | Insert range-exclusive |
+| RX-S | Exclusive range-shared |
+| RX-U | Exclusive range-update |
+| RX-X | Exclusive range-exclusive |
 
 ## Key-range locking
 

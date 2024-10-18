@@ -19,7 +19,7 @@ helpviewer_keywords:
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-This topic describes how to set the **user connections** server configuration option in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. The **user connections** option specifies the maximum number of simultaneous user connections that are allowed on an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The actual number of user connections allowed also depends on the version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that you are using, and also the limits of your application or applications and hardware. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] allows a maximum of 32,767 user connections. Because **user connections** is a dynamic (self-configuring) option, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] adjust the maximum number of user connections automatically as needed, up to the maximum value allowable. For example, if only 10 users are logged in, 10 user connection objects are allocated. In most cases, you do not have to change the value for this option. The default is 0, which means that the maximum (32,767) user connections are allowed.  
+This topic describes how to set the **user connections** server configuration option in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. The **user connections** option specifies the maximum number of simultaneous user connections that are allowed on an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The actual number of user connections allowed also depends on the version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that you are using, and also the limits of your application or applications and hardware. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] allows a maximum of 32,767 user connections. Because **user connections** is a dynamic (self-configuring) option, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] adjust the maximum number of user connections automatically as needed, up to the maximum value allowable. For example, if only 10 users are logged in, each with one connection, 10 user connection objects are allocated. The same would happen in the case of a single user establishing 10 connections. In most cases, you do not have to change the value for this option. The default is 0, which means that the maximum (32,767) user connections are allowed.  
   
 To determine the maximum number of user connections that your system allows, you can execute [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) or query the [sys.configuration](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md) catalog view.  
   
@@ -88,21 +88,27 @@ Execute permissions on **sp_configure** with no parameters or with only the firs
   
 2.  From the Standard bar, select **New Query**.  
   
-3.  Copy and paste the following example into the query window and select **Execute**. This example shows how to use [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) to configure the value of the `user connections` option to `325` users.  
+3.  Copy and paste the following example into the query window and select **Execute**. This example shows how to use [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) to configure the value of the `user connections` option to `325` connections.  
   
-```sql  
-USE AdventureWorks2022;  
-GO  
-EXEC sp_configure 'show advanced options', 1;  
-GO  
-RECONFIGURE ;  
-GO  
-EXEC sp_configure 'user connections', 325 ;  
-GO  
-RECONFIGURE;  
-GO  
-  
-```  
+    ```sql  
+    USE master;  
+    GO  
+    EXEC sp_configure 'show advanced options', 1;  
+    GO  
+    RECONFIGURE ;  
+    GO  
+    EXEC sp_configure 'user connections', 325 ;  
+    GO  
+    RECONFIGURE;  
+    GO
+    EXEC sp_configure 'show advanced options', 0;  
+    GO  
+    RECONFIGURE ;  
+    GO 
+    ```
+
+4. Restart the SQL Server instance for the new value to take effect.
+
   
 For more information, see [Server Configuration Options &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
   

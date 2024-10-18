@@ -3,8 +3,8 @@ title: CREATE TABLE
 description: "CREATE TABLE creates a new table in Azure Synapse Analytics, Analytics Platform System (PDW), and Microsoft Fabric."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: vanto, xiaoyul, mariyaali, maghan, kecona
-ms.date: 11/18/2024
+ms.reviewer: vanto, xiaoyul, mariyaali, maghan
+ms.date: 10/18/2024
 ms.service: sql
 ms.topic: reference
 dev_langs:

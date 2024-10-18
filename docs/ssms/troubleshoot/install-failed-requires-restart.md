@@ -31,6 +31,6 @@ Following these steps to uninstall the "Microsoft ODBC Driver 17 for SQL Server"
 
 [!INCLUDE[get-help-sql-tools](../../includes/paragraph-content/get-help-sql-tools.md)]
 
-## Related content
+## Next step
 
 - [Download SSMS](../download-sql-server-management-studio-ssms.md)

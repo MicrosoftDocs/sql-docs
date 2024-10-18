@@ -49,7 +49,7 @@ Like many [!INCLUDE[tsql](../includes/tsql-md.md)] statements, the [CREATE DATAB
 1. In a Query Editor window, type but don't execute the following code:
 
     ```sql
-    CREATE DATABASE TestData
+    CREATE DATABASE Marktest
     GO
     ```
 

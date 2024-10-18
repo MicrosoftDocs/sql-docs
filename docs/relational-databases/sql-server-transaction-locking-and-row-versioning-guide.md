@@ -529,7 +529,35 @@ Lock compatibility controls whether multiple transactions can acquire locks on t
 
 <a name="lock_matrix"></a> Use the following table to determine the compatibility of all the lock modes available in the [!INCLUDE [Database Engine](../includes/ssde-md.md)].
 
-:::image type="content" source="media/sql-server-transaction-locking-and-row-versioning-guide/sql-server-lock-conflict-compatibility.png" alt-text="A table showing a matrix of lock conflicts and compatibility." lightbox="media/sql-server-transaction-locking-and-row-versioning-guide/sql-server-lock-conflict-compatibility.png":::
+:::image type="content" source="media/sql-server-transaction-locking-and-row-versioning-guide/sql-server-lock-conflict-compatibility.png" alt-text="Diagram showing a matrix of lock conflicts and compatibility." lightbox="media/sql-server-transaction-locking-and-row-versioning-guide/sql-server-lock-conflict-compatibility.png":::
+
+| Key | Description |
+| --- | --- |
+| N | No conflict |
+| I | Illegal |
+| C | Conflict |
+| NL | No lock |
+| SCH-S | Schema stability lock |
+| SCH-M | Schema modification lock |
+| S | Shared |
+| U | Update |
+| X | Exclusive |
+| IS | Intent shared |
+| IU | Intent update |
+| IX | Intent exclusive |
+| SIU | Share with intent update |
+| SIX | Share with intent exclusive |
+| UIX | Update with intent exclusive |
+| BU | Bulk update |
+| RS-S | Shared range-shared |
+| RS-U | Shared range-update |
+| RI-N | Insert range-null |
+| RI-S | Insert range-shared |
+| RI-U | Insert range-update |
+| RI-X | Insert range-exclusive |
+| RX-S | Exclusive range-shared |
+| RX-U | Exclusive range-update |
+| RX-X | Exclusive range-exclusive |
 
 ## Key-range locking
 
@@ -1708,7 +1736,7 @@ There are a few cases where disallowing page or row locking can be beneficial, i
 
 Turning off page and row locking might or might not be acceptable because the weekly batch update will block the concurrent readers from accessing the table while the update runs. If the batch job only changes a few rows or pages, you can change the locking level to allow row or page level locking, which will enable other sessions to read from the table without blocking. If the batch job has a large number of updates, obtaining an exclusive lock on the table may be the best way to ensure the batch job runs efficiently.
 
-In some workloads, a type of deadlock might occurs when two concurrent operations acquire row locks on the same table and then block each other because they both need to lock the page. Disallowing row locks forces one of the operations to wait, avoiding the deadlock. For more about deadlocks, see the [Deadlocks guide](sql-server-deadlocks-guide.md).
+In some workloads, a type of deadlock might occur when two concurrent operations acquire row locks on the same table and then block each other because they both need to lock the page. Disallowing row locks forces one of the operations to wait, avoiding the deadlock. For more about deadlocks, see the [Deadlocks guide](sql-server-deadlocks-guide.md).
 
 The granularity of locking used on an index can be set using the `CREATE INDEX` and `ALTER INDEX` statements. In addition, the `CREATE TABLE` and `ALTER TABLE` statements can be used to set locking granularity on `PRIMARY KEY` and `UNIQUE` constraints. For backward compatibility, the `sp_indexoption` system stored procedure can also set the granularity. To display the current locking option for a given index, use the `INDEXPROPERTY` function. Page-level locks, row-level locks, or both page-level and row-level locks can be disallowed for a given index.
 

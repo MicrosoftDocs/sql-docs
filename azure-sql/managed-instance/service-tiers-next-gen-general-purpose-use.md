@@ -34,6 +34,10 @@ To upgrade an existing instance to the Next-gen General Purpose service tier in 
 1. After *Next-gen General Purpose (preview)* is enabled, you can use sliders to modify the IOPS for the instance, and review the *Cost per IOPS* in the **Estimated costs per month** box. 
 1. Select **Apply** to save your changes. 
 
+> [!NOTE]
+> For instances inside of a failover group, changing the service tier to, or from, the Next-gen General Purpose tier isn't supported. You must first delete the failover group before modifying either replica, and then re-create the failover group after the change takes effect.
+
+
 ## New instances 
 
 You can use the Next-gen General Purpose tier upgrade for new instances when you deploy them in the Azure portal.  To do so, follow these steps:

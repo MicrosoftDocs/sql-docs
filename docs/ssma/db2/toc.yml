@@ -7,44 +7,39 @@
   - name: New GUI features in SSMA
     href: new-gui-features-in-ssma-for-db2-db2tosql.md
 - name: Installing SSMA
-  href: installing-ssma-for-db2-db2tosql.md
   items:
-  - name: Installing SSMA for DB2 client
+  - name: Installing SSMA for Db2 client
     href: installing-ssma-for-db2-client-db2tosql.md
   - name: Explore SSMA interface
     href: getting-started-with-ssma-for-db2-db2tosql.md
-  - name: Installing SSMA components on SQL Server
-    href: installing-ssma-components-on-sql-server-db2tosql.md
-  - name: Removing SSMA for DB2 components
-    href: removing-ssma-for-db2-components-db2tosql.md
-- name: Migrating DB2 databases
+- name: Migrating Db2 databases
   items:
-  - name: Migrating DB2 databases to SQL Server
+  - name: Migrating Db2 databases to SQL Server
     href: migrating-db2-databases-to-sql-server-db2tosql.md
-  - name: Connect to DB2
+  - name: Connect to Db2
     href: connect-to-db2-db2tosql.md
-  - name: Mapping DB2 & SQL Server data types
+  - name: Mapping Db2 & SQL Server data types
     href: mapping-db2-and-sql-server-data-types-db2tosql.md
-  - name: Connecting to DB2 database
+  - name: Connecting to Db2 database
     href: connecting-to-db2-database-db2tosql.md
   - name: Connecting to SQL Server
     href: connecting-to-sql-server-db2tosql.md
-  - name: Mapping DB2 schemas to SQL Server schemas
+  - name: Mapping Db2 schemas to SQL Server schemas
     href: mapping-db2-schemas-to-sql-server-schemas-db2tosql.md
-  - name: Assessing DB2 schemas for conversion
+  - name: Assessing Db2 schemas for conversion
     href: assessing-db2-schemas-for-conversion-db2tosql.md
-  - name: Converting DB2 schemas
+  - name: Converting Db2 schemas
     href: converting-db2-schemas-db2tosql.md
   - name: Loading converted database objects into SQL Server
     href: loading-converted-database-objects-into-sql-server-db2tosql.md
-  - name: Migrating DB2 databases to SQL Server
+  - name: Migrating Db2 databases to SQL Server
     href: migrating-db2-databases-to-sql-server-db2tosql.md
   - name: Data migration settings
     href: data-migration-settings-db2tosql.md
-- name: Working with SSMA for DB2 console
+- name: Working with SSMA for Db2 console
   href: working-with-ssma-for-db2-console-db2tosql.md
   items:
-  - name: Getting Started with SSMA for DB2 console
+  - name: Getting Started with SSMA for Db2 console
     href: getting-started-with-ssma-for-db2-console-db2tosql.md
   - name: Command-line options in SSMA console
     href: command-line-options-in-ssma-console-db2tosql.md
@@ -62,8 +57,6 @@
     href: managing-passwords-db2tosql.md
   - name: Generating reports
     href: generating-reports-db2tosql.md
-  - name: Troubleshooting
-    href: troubleshooting-db2tosql.md
   - name: Appendix - 1
     href: appendix-1-db2tosql.md
 - name: Reference
@@ -83,8 +76,6 @@
       href: edit-type-mapping-db2tosql.md
     - name: Global settings
       items:
-      - name: Shortcut keys
-        href: shortcut-keys-db2tosql.md
       - name: Editor
         href: global-settings-editor-db2tosql.md
       - name: Logging
@@ -105,7 +96,7 @@
         href: project-settings-conversion-db2tosql.md
       - name: Loading system objects
         href: project-settings-loading-system-objects-db2tosql.md
-      - name: Migrating DB2 Data into SQL Server
+      - name: Migrating Db2 Data into SQL Server
         href: migrating-db2-data-into-sql-server-db2tosql.md
       - name: Synchronization
         href: project-settings-synchronization-db2tosql.md

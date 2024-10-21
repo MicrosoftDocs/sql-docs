@@ -4,7 +4,7 @@ description: Learn about usage and diagnostic data collection in SQL Server Migr
 author: cpichuka
 ms.author: cpichuka
 ms.reviewer: randolphwest
-ms.date: 07/10/2023
+ms.date: 09/24/2024
 ms.service: sql
 ms.subservice: ssma
 ms.topic: conceptual
@@ -17,7 +17,7 @@ SQL Server Migration Assistant (SSMA) contains Internet-enabled features that ca
 
 ## Collected data
 
-SSMA may collect standard computer information and information about use and performance that may be transmitted to Microsoft and analyzed for purposes of improving the quality, security, and reliability of SSMA. SSMA doesn't collect your name, address, or any other data related to an identified or identifiable individual. For details, see the [Microsoft Privacy Statement](https://privacy.microsoft.com/privacystatement), and [SQL Server Privacy supplement](../sql-server/sql-server-privacy.md).
+SSMA might collect standard computer information and information about use and performance that might be transmitted to Microsoft and analyzed for purposes of improving the quality, security, and reliability of SSMA. SSMA doesn't collect your name, address, or any other data related to an identified or identifiable individual. For details, see the [Microsoft Privacy Statement](https://www.microsoft.com/privacy/privacystatement), and [SQL Server privacy supplement](../sql-server/sql-server-privacy.md).
 
 ## Enable or disable usage and diagnostic data collection in SSMA
 
@@ -40,7 +40,7 @@ Depending on the migration source, the entry should be placed under one of the f
   Subkey = `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server Migration Assistant for Access`  
   Subkey (32-bit application installed on 64-bit OS) = `HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Microsoft SQL Server Migration Assistant for Access`
 
-- For SQL Server Migration Assistant for DB2:
+- For SQL Server Migration Assistant for Db2:
 
   Subkey = `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server Migration Assistant for DB2`  
   Subkey (32-bit application installed on 64-bit OS) = `HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Microsoft SQL Server Migration Assistant for DB2`

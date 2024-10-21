@@ -4,7 +4,7 @@
   href: ssma-diagnostic-data-collection.md
 - name: Access
   href: access/toc.yml
-- name: DB2
+- name: Db2
   href: db2/toc.yml
 - name: MySQL
   href: mysql/toc.yml

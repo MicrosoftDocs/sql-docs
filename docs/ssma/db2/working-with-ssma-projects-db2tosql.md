@@ -29,7 +29,7 @@ When you open a project, it's disconnected from Db2 and [!INCLUDE [ssNoVersion](
 
 SSMA contains several settings for converting and loading database objects, migrating data, and synchronizing SSMA with Db2 and [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]. The default settings are appropriate for many users. However, before you create a new SSMA project, you should review the settings. If you want to, you can change the default settings that are used for all your new projects.
 
-1. navigate to **Tools** > **Default Project Settings**.
+1. Navigate to **Tools** > **Default Project Settings**.
 
 1. Select the project type in **Migration Target Version** dropdown list for which settings are required to be viewed or changed and then Select **General** tab.
 

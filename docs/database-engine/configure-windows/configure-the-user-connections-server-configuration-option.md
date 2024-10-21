@@ -74,16 +74,22 @@ Execute permissions on `sp_configure` with no parameters or with only the first 
    ```sql
    USE master;
    GO
-   
+
    EXECUTE sp_configure 'show advanced options', 1;
+   GO
+
    RECONFIGURE;
    GO
-   
+
    EXECUTE sp_configure 'user connections', 325;
+   GO
+
    RECONFIGURE;
    GO
 
    EXECUTE sp_configure 'show advanced options', 0;
+   GO
+
    RECONFIGURE;
    GO
    ```

@@ -1337,7 +1337,7 @@
       href: ../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md
 - name: Reporting Services tools
   items:
-  - name: Reporting Services Tools Overview
+  - name: Reporting Services tools overview
     href: ../reporting-services/tools/reporting-services-tools.md
   - name: Reporting Services in SQL Server Data Tools
     href: ../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md
@@ -1443,8 +1443,6 @@
       href: ../reporting-services/tools/rsconfig-utility-ssrs.md
     - name: RS.exe Utility (SSRS)
       href: ../reporting-services/tools/rs-exe-utility-ssrs.md
-  - name: How to Locate and Start Reporting Services Tools
-    href: ../reporting-services/tools/tutorial-how-to-locate-and-start-reporting-services-tools-ssrs.md
 - name: Data Alerts (SharePoint)
   href: ../reporting-services/reporting-services-data-alerts.md
   items:

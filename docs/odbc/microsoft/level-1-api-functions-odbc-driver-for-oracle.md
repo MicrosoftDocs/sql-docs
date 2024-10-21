@@ -29,7 +29,7 @@ helpviewer_keywords:
 |**SQLGetFunctions**|Returns TRUE for all supported functions. Implemented by the Driver Manager.|  
 |**SQLGetInfo**|Returns information, including SQLHDBC, SQLUSMALLINT, SQLPOINTER, SQLSMALLINT, and SQLSMALLINT \*, about the ODBC Driver for Oracle and data source associated with a connection handle, *hdbc*.|  
 |**SQLGetStmtOption**|Returns the current setting of a statement option. For more information, see [Statement Options](../../odbc/microsoft/statement-options.md).|  
-|**SQLGetTypeInfo**|Returns information about the data types supported by a data source. The driver returns the information in an SQL result set.|  
+|**SQLGetTypeInfo**|Returns information about the data types supported by a data source. The driver returns the information in a SQL result set.|  
 |**SQLParamData**|Used in conjunction with **SQLPutData** to specify parameter data at statement execution time.|  
 |**SQLPutData**|Allows an application to send data for a parameter or column to the driver at statement execution time.|  
 |**SQLSetConnectOption**|Provides access to options that govern aspects of the connection. This function is partially supported: The driver supports all values for the *fOption* argument but does not support some *vParam* values for the *fOption* argument [SQL_TXN_ISOLATION](../../odbc/microsoft/connect-options.md). For more information, see [Connect Options](../../odbc/microsoft/connect-options.md).|  

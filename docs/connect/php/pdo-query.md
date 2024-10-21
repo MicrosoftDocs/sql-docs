@@ -11,7 +11,7 @@ ms.topic: reference
 # PDO::query
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Executes an SQL query and returns a result set as a PDOStatement object.  
+Executes a SQL query and returns a result set as a PDOStatement object.  
   
 ## Syntax  
   

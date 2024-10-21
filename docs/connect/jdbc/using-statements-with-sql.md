@@ -25,10 +25,10 @@ The following sections describe the different scenarios for working with data in
 
 | Topic                                                                                                                        | Description                                                       |
 | ---------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------- |
-| [Using an SQL statement with no parameters](../../connect/jdbc/using-an-sql-statement-with-no-parameters.md)                 | Describes how to use SQL statements that contain no parameters.   |
-| [Using an SQL statement with parameters](../../connect/jdbc/using-an-sql-statement-with-parameters.md)                       | Describes how to use SQL statements that contain parameters.      |
-| [Using an SQL statement to modify database objects](../../connect/jdbc/using-an-sql-statement-to-modify-database-objects.md) | Describes how to use SQL statements to modify database objects.   |
-| [Using an SQL statement to modify data](../../connect/jdbc/using-an-sql-statement-to-modify-data.md)                         | Describes how to use SQL statements to modify data in a database. |
+| [Using a SQL statement with no parameters](../../connect/jdbc/using-an-sql-statement-with-no-parameters.md)                 | Describes how to use SQL statements that contain no parameters.   |
+| [Using a SQL statement with parameters](../../connect/jdbc/using-an-sql-statement-with-parameters.md)                       | Describes how to use SQL statements that contain parameters.      |
+| [Using a SQL statement to modify database objects](../../connect/jdbc/using-an-sql-statement-to-modify-database-objects.md) | Describes how to use SQL statements to modify database objects.   |
+| [Using a SQL statement to modify data](../../connect/jdbc/using-an-sql-statement-to-modify-data.md)                         | Describes how to use SQL statements to modify data in a database. |
   
 ## See also
 

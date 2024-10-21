@@ -26,7 +26,7 @@ WillExecute Source, CursorType, LockType, Options, adStatus, pCommand, pRecordse
   
 #### Parameters  
  *Source*  
- A **String** that contains an SQL command or a stored procedure name.  
+ A **String** that contains a SQL command or a stored procedure name.  
   
  *CursorType*  
  A [CursorTypeEnum](./cursortypeenum.md) that contains the type of cursor for the **Recordset** that will be opened. With this parameter, you can change the cursor to any type during a **Recordset**[Open Method (ADO Recordset)](./open-method-ado-recordset.md) operation. *CursorType* will be ignored for any other operation.  

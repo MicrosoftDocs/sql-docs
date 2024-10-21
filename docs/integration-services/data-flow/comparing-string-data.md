@@ -46,7 +46,7 @@ helpviewer_keywords:
   
  String data that has the DT_STR data type is converted to Unicode using the code page of the column. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] supports code pages at the column level, and each column can be converted by using a different code page.  
   
- In most cases, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] can identify the correct code page from the data source. For example, in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] you can set a collation at the database and column levels. The code page is derived from a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] collation, which can be either a Windows or an SQL collation.  
+ In most cases, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] can identify the correct code page from the data source. For example, in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] you can set a collation at the database and column levels. The code page is derived from a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] collation, which can be either a Windows or a SQL collation.  
   
  If [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] provides an unexpected code page, or if the package accesses a data source by using a provider that does not supply sufficient information to determine the correct code page, you can specify a default code page in the OLE DB source and the OLE DB destination. The default code pages are used instead of the code pages that [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] provides.  
   

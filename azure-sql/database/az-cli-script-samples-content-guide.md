@@ -46,7 +46,7 @@ The following table includes links to Azure CLI script examples to manage single
 |Area|Description|
 |---|---|
 |**Create databases**||
-| [Create a single database](scripts/create-and-configure-database-cli.md) | Creates an SQL Database and configures a server-level firewall rule. |
+| [Create a single database](scripts/create-and-configure-database-cli.md) | Creates a SQL Database and configures a server-level firewall rule. |
 | [Create pooled databases](scripts/move-database-between-elastic-pools-cli.md) | Creates elastic pools, moves pooled databases, and changes compute sizes. |
 |**Scale databases**||
 | [Scale a single database](scripts/monitor-and-scale-database-cli.md) | Scales single database. |

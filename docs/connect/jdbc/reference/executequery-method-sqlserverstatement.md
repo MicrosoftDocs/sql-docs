@@ -26,7 +26,7 @@ public java.sql.ResultSet executeQuery(java.lang.String sql)
 #### Parameters  
  *sql*  
   
- A **String** that contains an SQL statement.  
+ A **String** that contains a SQL statement.  
   
 ## Return Value  
  A SQLServerResultSet object.  

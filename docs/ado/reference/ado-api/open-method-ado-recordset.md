@@ -26,7 +26,7 @@ recordset.Open Source, ActiveConnection, CursorType, LockType, Options
   
 #### Parameters  
  *Source*  
- Optional. A **Variant** that evaluates to a valid [Command](./command-object-ado.md) object, an SQL statement, a table name, a stored procedure call, a URL, or the name of a file or [Stream](./stream-object-ado.md) object containing a persistently stored [Recordset](./recordset-object-ado.md).  
+ Optional. A **Variant** that evaluates to a valid [Command](./command-object-ado.md) object, a SQL statement, a table name, a stored procedure call, a URL, or the name of a file or [Stream](./stream-object-ado.md) object containing a persistently stored [Recordset](./recordset-object-ado.md).  
   
  *ActiveConnection*  
  Optional. Either a **Variant** that evaluates to a valid [Connection](./connection-object-ado.md) object variable name, or a **String** that contains [ConnectionString](./connectionstring-property-ado.md) parameters.  
@@ -51,7 +51,7 @@ recordset.Open Source, ActiveConnection, CursorType, LockType, Options
   
  Using the **Open** method on a **Recordset** object opens a cursor that represents records from a base table, the results of a query, or a previously saved **Recordset**.  
   
- Use the optional *Source* argument to specify a data source using one of the following: a **Command** object variable, an SQL statement, a stored procedure, a table name, a URL, or a complete file path name. If *Source* is a file path name, it can be a full path ("c:\dir\file.rst"), a relative path ("..\file.rst"), or a URL (`https://files/file.rst`).  
+ Use the optional *Source* argument to specify a data source using one of the following: a **Command** object variable, a SQL statement, a stored procedure, a table name, a URL, or a complete file path name. If *Source* is a file path name, it can be a full path ("c:\dir\file.rst"), a relative path ("..\file.rst"), or a URL (`https://files/file.rst`).  
   
  It is not a good idea to use the *Source* argument of the **Open** method to perform an action query that does not return records because there is no easy way to determine whether the call succeeded. The **Recordset** returned by such a query will be closed. To perform a query that does not return records, such as a SQL INSERT statement, call the [Execute](./execute-method-ado-command.md) method of a **Command** object or the [Execute](./execute-method-ado-connection.md) method of a [Connection](./connection-object-ado.md) object instead.  
   
@@ -70,7 +70,7 @@ recordset.Open Source, ActiveConnection, CursorType, LockType, Options
   
  If you pass a **Command** object in the *Source* argument and also pass an *ActiveConnection* argument, an error occurs. The **ActiveConnection** property of the **Command** object must already be set to a valid **Connection** object or connection string.  
   
- If you pass something other than a **Command** object in the *Source* argument, you can use the *Options* argument to optimize evaluation of the *Source* argument. If the *Options* argument is not defined, you may experience diminished performance because ADO must make calls to the provider to determine if the argument is an SQL statement, a stored procedure, a URL, or a table name. If you know what *Source* type you are using, setting the *Options* argument instructs ADO to jump directly to the relevant code. If the *Options* argument does not match the *Source* type, an error occurs.  
+ If you pass something other than a **Command** object in the *Source* argument, you can use the *Options* argument to optimize evaluation of the *Source* argument. If the *Options* argument is not defined, you may experience diminished performance because ADO must make calls to the provider to determine if the argument is a SQL statement, a stored procedure, a URL, or a table name. If you know what *Source* type you are using, setting the *Options* argument instructs ADO to jump directly to the relevant code. If the *Options* argument does not match the *Source* type, an error occurs.  
   
  If you pass a **Stream** object in the *Source* argument, you should not pass information into the other arguments. Doing so will generate an error. The **ActiveConnection** information is not retained when a **Recordset** is opened from a **Stream**.  
   

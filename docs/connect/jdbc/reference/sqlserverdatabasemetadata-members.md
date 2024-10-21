@@ -79,7 +79,7 @@ ms.topic: reference
 |[getMaxProcedureNameLength](../../../connect/jdbc/reference/getmaxprocedurenamelength-method-sqlserverdatabasemetadata.md)|Retrieves the maximum number of characters that this database allows in a procedure name.|  
 |[getMaxRowSize](../../../connect/jdbc/reference/getmaxrowsize-method-sqlserverdatabasemetadata.md)|Retrieves the maximum number of bytes that this database allows in a single row.|  
 |[getMaxSchemaNameLength](../../../connect/jdbc/reference/getmaxschemanamelength-method-sqlserverdatabasemetadata.md)|Retrieves the maximum number of characters that this database allows in a schema name.|  
-|[getMaxStatementLength](../../../connect/jdbc/reference/getmaxstatementlength-method-sqlserverdatabasemetadata.md)|Retrieves the maximum number of characters that this database allows in an SQL statement.|  
+|[getMaxStatementLength](../../../connect/jdbc/reference/getmaxstatementlength-method-sqlserverdatabasemetadata.md)|Retrieves the maximum number of characters that this database allows in a SQL statement.|  
 |[getMaxStatements](../../../connect/jdbc/reference/getmaxstatements-method-sqlserverdatabasemetadata.md)|Retrieves the maximum number of active statements to this database that can be open at the same time.|  
 |[getMaxTableNameLength](../../../connect/jdbc/reference/getmaxtablenamelength-method-sqlserverdatabasemetadata.md)|Retrieves the maximum number of characters that this database allows in a table name.|  
 |[getMaxTablesInSelect](../../../connect/jdbc/reference/getmaxtablesinselect-method-sqlserverdatabasemetadata.md)|Retrieves the maximum number of tables that this database allows in a SELECT statement.|  

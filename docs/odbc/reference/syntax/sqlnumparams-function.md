@@ -20,7 +20,7 @@ apitype: "dllExport"
  Version Introduced: ODBC 1.0 Standards Compliance: ISO 92  
   
  **Summary**  
- **SQLNumParams** returns the number of parameters in an SQL statement.  
+ **SQLNumParams** returns the number of parameters in a SQL statement.  
   
 ## Syntax  
   

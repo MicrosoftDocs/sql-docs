@@ -1,6 +1,6 @@
 ---
 title: "Executing Queries (ODBC)"
-description: An ODBC application can run statements on an SQL Server instance by initializing a connection handle and connecting to a data source.
+description: An ODBC application can run statements on a SQL Server instance by initializing a connection handle and connecting to a data source.
 author: markingmyname
 ms.author: maghan
 ms.date: "03/14/2017"
@@ -17,7 +17,7 @@ helpviewer_keywords:
 # Executing Queries (ODBC)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  After an ODBC application initializes a connection handle and connects with a data source, it allocates one or more statement handles on the connection handle. The application can then execute [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] statements on the statement handle. The general sequence of events in executing an SQL statement is:  
+  After an ODBC application initializes a connection handle and connects with a data source, it allocates one or more statement handles on the connection handle. The application can then execute [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] statements on the statement handle. The general sequence of events in executing a SQL statement is:  
   
 1.  Set any required statement attributes.  
   
@@ -29,7 +29,7 @@ helpviewer_keywords:
   
  After an application retrieves all the rows in all of the result sets returned by the SQL statement, it can execute another query on the same statement handle. If an application determines that it is not required to retrieve all the rows in a particular result set, it can cancel the rest of the result set by calling either [SQLMoreResults](../../relational-databases/native-client-odbc-api/sqlmoreresults.md) or [SQLCloseCursor](../../relational-databases/native-client-odbc-api/sqlclosecursor.md).  
   
- If, in an ODBC application, you must execute the same SQL statement multiple times with different data, use a parameter marker denoted by a question mark (?) in the construction of an SQL statement:  
+ If, in an ODBC application, you must execute the same SQL statement multiple times with different data, use a parameter marker denoted by a question mark (?) in the construction of a SQL statement:  
   
 ```  
 INSERT INTO MyTable VALUES (?, ?, ?)  
@@ -45,7 +45,7 @@ INSERT INTO MyTable VALUES (?, ?, ?)
   
 -   [Allocating a Statement Handle](../../relational-databases/native-client-odbc-queries/allocating-a-statement-handle.md)  
   
--   [Constructing an SQL Statement &#40;ODBC&#41;](../../relational-databases/native-client-odbc-queries/constructing-an-sql-statement-odbc.md)  
+-   [Constructing a SQL Statement &#40;ODBC&#41;](../../relational-databases/native-client-odbc-queries/constructing-an-sql-statement-odbc.md)  
   
 -   [Constructing SQL Statements for Cursors](../../relational-databases/native-client-odbc-queries/constructing-sql-statements-for-cursors.md)  
   

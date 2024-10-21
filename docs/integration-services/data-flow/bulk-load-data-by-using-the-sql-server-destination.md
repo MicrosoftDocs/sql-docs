@@ -39,7 +39,7 @@ helpviewer_keywords:
   
     -   Select an existing table or view.  
   
-    -   Click **New**, and in the **Create Table** dialog boxwrite an SQL statement that creates a table or view.  
+    -   Click **New**, and in the **Create Table** dialog boxwrite a SQL statement that creates a table or view.  
   
         > [!NOTE]  
         >  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] generates a default CREATE TABLE statement based on the connected data source. This default CREATE TABLE statement will not include the FILESTREAM attribute even if the source table includes a column with the FILESTREAM attribute declared. To run an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] component with the FILESTREAM attribute, first implement FILESTREAM storage on the destination database. Then, add the FILESTREAM attribute to the CREATE TABLE statement in the **Create Table** dialog box. For more information, see [Binary Large Object &#40;Blob&#41; Data &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md).  

@@ -85,7 +85,7 @@ SQLRETURN SQLCancel(
 ## Canceling Functions Executing on Another Thread  
  In a multithread application, the application can cancel a function that is running on another thread. To cancel the function, the application calls **SQLCancel** with the same statement handle as that used by the target function, but on a different thread. How the function is canceled depends on the driver and the operating system. As in canceling a function running asynchronously, the return code of the **SQLCancel** indicates only whether the driver processed the request successfully. Only SQL_SUCCESS or SQL_ERROR can be returned; no diagnostic information is returned. If the original function is canceled, it returns SQL_ERROR and SQLSTATE HY008 (Operation canceled).  
   
- If an SQL statement is being executed when **SQLCancel** is called on another thread to cancel the statement execution, it is possible for the execution to succeed and return SQL_SUCCESS while the cancel is also successful. In this case, the Driver Manager assumes that the cursor opened by the statement execution is closed by the cancel, so the application will not be able to use the cursor.  
+ If a SQL statement is being executed when **SQLCancel** is called on another thread to cancel the statement execution, it is possible for the execution to succeed and return SQL_SUCCESS while the cancel is also successful. In this case, the Driver Manager assumes that the cursor opened by the statement execution is closed by the cancel, so the application will not be able to use the cursor.  
   
  For more information about threading, see [Multithreading](../../../odbc/reference/develop-app/multithreading.md).  
   
@@ -96,7 +96,7 @@ SQLRETURN SQLCancel(
 |Binding a buffer to a parameter|[SQLBindParameter Function](../../../odbc/reference/syntax/sqlbindparameter-function.md)|  
 |Performing bulk insert or update operations|[SQLBulkOperations Function](../../../odbc/reference/syntax/sqlbulkoperations-function.md)|  
 |Cancels a function running asynchronously on a connection handle, in addition to the functionality of **SQLCancel**.|[SQLCancelHandle Function](../../../odbc/reference/syntax/sqlcancelhandle-function.md)|  
-|Executing an SQL statement|[SQLExecDirect Function](../../../odbc/reference/syntax/sqlexecdirect-function.md)|  
+|Executing a SQL statement|[SQLExecDirect Function](../../../odbc/reference/syntax/sqlexecdirect-function.md)|  
 |Executing a prepared SQL statement|[SQLExecute Function](../../../odbc/reference/syntax/sqlexecute-function.md)|  
 |Freeing a statement handle|[SQLFreeStmt](../../../odbc/reference/syntax/sqlfreestmt-function.md)|  
 |Obtaining a field of a diagnostic record or a field of the diagnostic header|[SQLGetDiagField Function](../../../odbc/reference/syntax/sqlgetdiagfield-function.md)|  

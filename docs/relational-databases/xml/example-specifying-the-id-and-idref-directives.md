@@ -1,6 +1,6 @@
 ---
 title: "Example: Specifying the ID and IDREF Directives"
-description: View an example of how to specify the ID and IDREF directives in an SQL query.
+description: View an example of how to specify the ID and IDREF directives in a SQL query.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: randolphwest

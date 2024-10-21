@@ -33,9 +33,9 @@ helpviewer_keywords:
   
 -   A table or view specified in a variable.  
   
--   The results of an SQL statement. The query can be a parameterized query.  
+-   The results of a SQL statement. The query can be a parameterized query.  
   
--   The results of an SQL statement stored in a variable.  
+-   The results of a SQL statement stored in a variable.  
   
  The Excel source uses an Excel connection manager to connect to a data source, and the connection manager specifies the workbook file to use. For more information, see [Excel Connection Manager](../../integration-services/connection-manager/excel-connection-manager.md).  
   

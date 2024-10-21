@@ -54,7 +54,7 @@ DEFAULT <xml_namespace_uri>
   
 ## Arguments
  *xml_namespace_uri*  
- A Uniform Resource Identifier (URI) that identifies the XML namespace that is being declared. *xml_namespace_uri* is an SQL string.  
+ A Uniform Resource Identifier (URI) that identifies the XML namespace that is being declared. *xml_namespace_uri* is a SQL string.  
   
  *xml_namespace_prefix*  
  Specifies a prefix to be mapped and associated with the namespace URI value specified in *xml_namespace_uri*. *xml_namespace_prefix* must be a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identifier.  

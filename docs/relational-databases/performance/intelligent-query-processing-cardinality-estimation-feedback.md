@@ -15,7 +15,7 @@ helpviewer_keywords:
 ---
 # Cardinality estimation (CE) feedback
 
-**Applies to:** [!INCLUDE [sqlserver2022-and-later](../../includes/applies-to-version/sqlserver2022-and-later.md)], [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].
+**Applies to:** [!INCLUDE [sqlserver2022-and-later](../../includes/applies-to-version/sqlserver2022-and-later.md)], [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)].
 <!---
 Currently in preview for [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [ssazuremi](../../includes/ssazuremi-md.md)].
 -->
@@ -140,7 +140,7 @@ Starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], when Query 
 
 ## Persistence for cardinality estimation (CE) feedback
 
-**Applies to:** [!INCLUDE [sqlserver2022-and-later](../../includes/applies-to-version/sqlserver2022-and-later.md)], [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]
+**Applies to:** [!INCLUDE [sqlserver2022-and-later](../../includes/applies-to-version/sqlserver2022-and-later.md)], [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)].
 <!-- [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]) -->
 
 Cardinality estimation (CE) feedback can detect scenarios when the row goal optimization should be persisted, and keep this change by persisting it in the Query Store in the form of a Query Store hint. The new optimization is used for future executions of the query. CE feedback persists other scenarios outside of row goal optimization query patterns, as detailed in [feedback scenarios](#cardinality-estimation-ce-feedback-scenarios). CE feedback currently handles predicate selectivity scenarios that are used by the CE's correlation model, and join predicate scenarios that are handled by the CE's containment model.

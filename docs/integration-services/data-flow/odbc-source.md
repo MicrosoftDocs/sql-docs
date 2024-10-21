@@ -18,13 +18,13 @@ f1_keywords:
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-  The ODBC source extracts data from ODBC-supported database by using a database table, a view, or an SQL statement.  
+  The ODBC source extracts data from ODBC-supported database by using a database table, a view, or a SQL statement.  
   
  The ODBC source has the following data access modes for extracting data:  
   
 -   A table or view.  
   
--   The results of an SQL statement.  
+-   The results of a SQL statement.  
   
  The source uses an ODBC connection manager, which specifies the provider to use.  
   
@@ -106,7 +106,7 @@ f1_keywords:
 |Table Name|Retrieve data from a table or view in the ODBC data source. When you select this option, select a value from the list for the following:|  
 ||**Name of the table or the view**: Select an available table or view from the list or type a regular expression to identify the table.|  
 ||This list contains the first 1000 tables only. If your database contains more than 1000 tables, you can type the beginning of a table name or use the (*) wild card to enter any part of the name to display the table or tables you want to use.|  
-|SQL command|Retrieve data from the ODBC data source by using an SQL query. You should write the query in the syntax of the source database you are working with. When you select this option, enter a query in one of the following ways:|  
+|SQL command|Retrieve data from the ODBC data source by using a SQL query. You should write the query in the syntax of the source database you are working with. When you select this option, enter a query in one of the following ways:|  
 ||Enter the text of the SQL query in the **SQL command text** field.|  
 ||Click **Browse** to load the SQL query from a text file.|  
 ||Click **Parse query** to verify the syntax of the query text.|  

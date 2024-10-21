@@ -26,6 +26,6 @@ SELECT "Customer Name" FROM "Accounts Payable"
   
  For more information, see [Quoted Identifiers](../../../odbc/reference/develop-app/quoted-identifiers.md).  
   
- The catalog functions are based on an SQL-like authorization model in which a connection is made based on a user name and password, and only data for which the user has a privilege is returned. Password protection of individual files, which does not fit into this model, is driver-defined.  
+ The catalog functions are based on a SQL-like authorization model in which a connection is made based on a user name and password, and only data for which the user has a privilege is returned. Password protection of individual files, which does not fit into this model, is driver-defined.  
   
  The result sets returned by the catalog functions are almost never updatable, and applications should not expect to be able to change the structure of the database by changing the data in these result sets.

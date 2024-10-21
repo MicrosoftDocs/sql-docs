@@ -200,7 +200,7 @@ The initial deployment creates three sample tenants. Now you create another tena
 
 The new tenant database is:
 
-- Created in an SQL elastic pool.
+- Created in a SQL elastic pool.
 - Initialized.
 - Registered in the catalog.
 

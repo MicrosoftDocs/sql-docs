@@ -14,7 +14,7 @@ apitype: "Assembly"
 # getMaxStatementLength Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Retrieves the maximum number of characters this database allows in an SQL statement.  
+  Retrieves the maximum number of characters this database allows in a SQL statement.  
   
 ## Syntax  
   

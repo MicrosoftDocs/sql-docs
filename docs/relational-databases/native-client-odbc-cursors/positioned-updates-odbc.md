@@ -41,7 +41,7 @@ helpviewer_keywords:
   
  **SQLSetPos** can be used with any statement result set when the statement handle cursor attributes are set to use server cursors. The result set columns must be bound to program variables. As soon as the application has fetched a row it calls **SQLSetPos**(SQL_POSTION) to position the cursor on the row. The application could then call SQLSetPos(SQL_DELETE) to delete the current row, or it can move new data values into the bound program variables and call SQLSetPos(SQL_UPDATE) to update the current row.  
   
- Applications can update or delete any row in the rowset with **SQLSetPos**. Calling **SQLSetPos** is a convenient alternative to constructing and executing an SQL statement. **SQLSetPos** operates on the current rowset and can be used only after a call to [SQLFetchScroll](../../relational-databases/native-client-odbc-api/sqlfetchscroll.md).  
+ Applications can update or delete any row in the rowset with **SQLSetPos**. Calling **SQLSetPos** is a convenient alternative to constructing and executing a SQL statement. **SQLSetPos** operates on the current rowset and can be used only after a call to [SQLFetchScroll](../../relational-databases/native-client-odbc-api/sqlfetchscroll.md).  
   
  Rowset size is set by a call to [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) with an attribute argument of SQL_ATTR_ROW_ARRAY_SIZE. **SQLSetPos** uses a new rowset size, but only after a call to **SQLFetch** or **SQLFetchScroll**. For example, if the rowset size is changed, **SQLSetPos** is called and then **SQLFetch** or **SQLFetchScroll** is called. The call to **SQLSetPos** uses the old rowset size, but **SQLFetch** or **SQLFetchScroll** uses the new rowset size.  
   

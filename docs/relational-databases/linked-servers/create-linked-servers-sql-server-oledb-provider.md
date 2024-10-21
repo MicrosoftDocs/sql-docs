@@ -35,7 +35,7 @@ The following is a categorization of OLE DB providers based on their capabilitie
 
 #### SQL Command Providers
 
-Providers that support the `Command` object with an SQL standard dialect recognized by SQL Server belong to this category. The specific requirements for a given OLE DB provider to be treated as a SQL Command Provider by SQL Server are:
+Providers that support the `Command` object with a SQL standard dialect recognized by SQL Server belong to this category. The specific requirements for a given OLE DB provider to be treated as a SQL Command Provider by SQL Server are:
 
 - The provider must support the `Command` object and all of its mandatory OLE DB interfaces: `ICommand`, `ICommandText`, `IColumnsInfo`, `ICommandProperties`, and `IAccessor`.
 
@@ -68,7 +68,7 @@ Against such providers, SQL Server can only perform table scans during distribut
 
 #### Non-SQL Command Providers
 
-Providers that support the `Command` object and its mandatory interfaces, but do not support an SQL standard dialect recognized by SQL Server, fall into this category.
+Providers that support the `Command` object and its mandatory interfaces, but do not support a SQL standard dialect recognized by SQL Server, fall into this category.
 
 Two examples of Non-SQL Command Providers are the Microsoft OLE DB Provider for Indexing Service and the [Microsoft OLE DB Provider for Microsoft Active Directory Service](../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-active-directory-service.md).
 
@@ -203,7 +203,7 @@ Property| Default value| Use |
 |`SQLPROP_SUBQUERIES `|False|SQL Server property: This property is of interest in a provider that supports the SQL-Minimum level. This property indicates that the provider supports subqueries as specified by SQL-92 entry level. This includes subqueries in the `SELECT` list and in the `WHERE` clause with support for correlated subqueries, `IN`, `EXISTS`, `ALL` and `ANY` operators.
 |`SQLPROP_INNERJOIN`|False|SQL Server-specific property: This property is of interest to providers that support the SQL-Minimum level. This property indicates support for joins using multiple tables in the `FROM` clause. ------ ---
 
-The following three literals are retrieved from `IDBInfo::GetLiteralInfo`: `DBLITERAL_CATALOG_SEPARATOR`, `DBLITERAL_SCHEMA_SEPARATOR` (to construct a full object name given its catalog, schema, and object name parts), and `DBLITERAL_QUOTE` (to quote identifier names in an SQL query sent to the provider).
+The following three literals are retrieved from `IDBInfo::GetLiteralInfo`: `DBLITERAL_CATALOG_SEPARATOR`, `DBLITERAL_SCHEMA_SEPARATOR` (to construct a full object name given its catalog, schema, and object name parts), and `DBLITERAL_QUOTE` (to quote identifier names in a SQL query sent to the provider).
 
 If the provider does not support the separator literals, SQL Server uses a period (.) as the default separator character. If the provider supports only the catalog separator character but not the schema separator character, SQL Server uses the catalog separator character as the schema separator character also. If the provider does not support `DBLITERAL_QUOTE`, SQL Server uses a single quotation mark (`'`) as the quoting character.
 
@@ -448,7 +448,7 @@ For more information, see [`sp_addlinkedsrvlogin`](../../relational-databases/sy
 
 ### Remote Query
 
-SQL Server generates an SQL query that evaluates a portion of the original query that can be evaluated in its entirety by the provider. This scenario is possible only against SQL Command Providers. The extent to which SQL Server pushes operations to the provider by generating an SQL query depends on the SQL grammar that the provider supports. The provider should indicate its level of SQL support through the following:
+SQL Server generates a SQL query that evaluates a portion of the original query that can be evaluated in its entirety by the provider. This scenario is possible only against SQL Command Providers. The extent to which SQL Server pushes operations to the provider by generating a SQL query depends on the SQL grammar that the provider supports. The provider should indicate its level of SQL support through the following:
 
 1. By indicating SQL Minimum, ODBC Core or SQL-92 Entry level support through the `DBPROP_SQLSUPPORT` property. The SQL Minimum syntax level is a new level that is supported in SQL Server that allows SQL Server to send remote queries to simple providers that support a simple subset of SQL. This level encompasses a basic `SELECT` statement that does not include subqueries, multiple tables in the `FROM` clause (hence no joins) and GROUP BY. For the subset of the SQL grammar that is used by SQL Server for generating remote queries against providers of each of these syntax levels, see [SQL Subset Used for Generating Remote Queries](#appendixb).
 

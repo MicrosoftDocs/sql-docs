@@ -1,6 +1,6 @@
 ---
 title: "XML schema collections (SQL Server)"
-description: Learn how the XML schema collection stores imported XML schemas to validate XML instances and type the XML data as it is stored in an SQL Server database.
+description: Learn how the XML schema collection stores imported XML schemas to validate XML instances and type the XML data as it is stored in a SQL Server database.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: randolphwest

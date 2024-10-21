@@ -1,6 +1,6 @@
 ---
 title: "Example: Specifying the HIDE Directive"
-description: View an example of using the HIDE directive in an SQL query.
+description: View an example of using the HIDE directive in a SQL query.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: randolphwest

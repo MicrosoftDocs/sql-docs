@@ -21,7 +21,7 @@ Defines a specific command that you intend to execute against a data source.
   
  With the collections, methods, and properties of a **Command** object, you can do the following:  
   
--   Define the executable text of the command (for example, an SQL statement) with the [CommandText](./commandtext-property-ado.md) property. Alternatively, for command or query structures other than simple strings (for example, XML template queries) define the command with the [CommandStream](./commandstream-property-ado.md) property.  
+-   Define the executable text of the command (for example, a SQL statement) with the [CommandText](./commandtext-property-ado.md) property. Alternatively, for command or query structures other than simple strings (for example, XML template queries) define the command with the [CommandStream](./commandstream-property-ado.md) property.  
   
 -   Optionally, indicate the command dialect used in the **CommandText** or **CommandStream** with the [Dialect](./dialect-property.md) property.  
   

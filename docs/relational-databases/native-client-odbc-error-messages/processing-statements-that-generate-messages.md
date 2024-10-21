@@ -136,7 +136,7 @@ szErrorMsg= "[Microsoft] [SQL Server Native Client][SQL Server]
   
  In this case, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] returns a result set for every SELECT statement executed in a batch or stored procedure. If the batch or procedure contains PRINT or RAISERROR statements, the output for these is interleaved with the SELECT statement result sets. If the first statement in the batch or procedure is a PRINT or RAISERROR, the **SQLExecute** or **SQLExecDirect** returns SQL_SUCCESS_WITH_INFO or SQL_ERROR, and the application needs to call **SQLGetDiagRec** until it returns SQL_NO_DATA to retrieve the PRINT or RAISERROR information.  
   
- If the PRINT or RAISERROR statement comes after an SQL statement (such as a SELECT statement), then the PRINT or RAISERROR information is returned when [SQLMoreResults](../../relational-databases/native-client-odbc-api/sqlmoreresults.md) positions on the result set containing the error. **SQLMoreResults** returns SQL_SUCCESS_WITH_INFO or SQL_ERROR depending on the severity of the message. Messages are retrieved by calling **SQLGetDiagRec** until it returns SQL_NO_DATA.  
+ If the PRINT or RAISERROR statement comes after a SQL statement (such as a SELECT statement), then the PRINT or RAISERROR information is returned when [SQLMoreResults](../../relational-databases/native-client-odbc-api/sqlmoreresults.md) positions on the result set containing the error. **SQLMoreResults** returns SQL_SUCCESS_WITH_INFO or SQL_ERROR depending on the severity of the message. Messages are retrieved by calling **SQLGetDiagRec** until it returns SQL_NO_DATA.  
   
 ## See Also  
  [Handling Errors and Messages](../../relational-databases/native-client-odbc-error-messages/handling-errors-and-messages.md)  

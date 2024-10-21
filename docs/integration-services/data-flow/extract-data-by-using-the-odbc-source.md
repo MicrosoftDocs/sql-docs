@@ -31,7 +31,7 @@ ms.topic: how-to
   
          This list contains the first 1000 tables only. If your database contains more than 1000 tables, you can type the beginning of a table name or use the (*) wild card to enter any part of the name to display the table or tables you want to use.  
   
-    -   **SQL Command**: Type an SQL Command or click **Browse** to load the SQL query from a text file.  
+    -   **SQL Command**: Type a SQL Command or click **Browse** to load the SQL query from a text file.  
   
 6.  You can click **Preview** to view up to 200 rows of the data extracted by the ODBC source.  
   

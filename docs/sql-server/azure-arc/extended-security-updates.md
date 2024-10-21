@@ -180,7 +180,7 @@ If your out-of-service [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)
 
 To help you manage the failover benefits and remain compliant, Azure Extension for [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] automatically detects the passive instances and reflects the use of the [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] software by emitting special $0 meters for disaster recovery, as long as you properly configured the `LicenseType` property. For more information, see [Metering software usage](manage-license-billing.md#usage-metering).
 
-During the failovers, the extension is aware of the transition and automatically switches the ESU billing to the active replica without new billback charges.
+During the failovers, the extension is aware of the transition and automatically switches the ESU billing to the active replica without new bill-back charges.
 
 ## <a id="server-cal"></a> Manage SQL Server instances that use a Server+CAL license
 
@@ -199,15 +199,15 @@ To properly manage this transition, use the following sequence of best practices
 1. Terminate the p-core ESU license if it's no longer financially beneficial, but keep the ESU subscription active on the individual VMs.
 
 > [!IMPORTANT]  
-> If the VMs in scope are configured to use a ESU subscription *while the p-core ESU license is active* (as described in step 1), after the p-core license termination, they automatically switch to billing for ESU based on the installed [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] edition and the v-core count of each VM. There are no additional billback charges.  
+> If the VMs in scope are configured to use a ESU subscription *while the p-core ESU license is active* (as described in step 1), after the p-core license termination, they automatically switch to billing for ESU based on the installed [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] edition and the v-core count of each VM. There are no additional bill-back charges.  
 >  
-> If the VM is configured to use the ESU subscription *after the p-core ESU license is terminated*, it's treated as a new subscription and the appropriate billback charges apply.
+> If the VM is configured to use the ESU subscription *after the p-core ESU license is terminated*, it's treated as a new subscription and the appropriate bill-back charges apply.
 
 ## <a id="vl-sku-transition"></a> Manage the transition from an ESU license purchased through Volume Licensing to an ESU subscription
 
-The [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)] ESU subscription requires you to purchase a Year 1 Volume Licensing ESU offer before you can activate it. That is, the transition from a Year 1 Volume Licensing ESU offer to an ESU subscription is the default pattern, and the billback charges reflect it. For details about the billback charges, see [Billing for SQL Server 2012 ESUs](#2012-esu-billing) later in this article.
+The [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)] ESU subscription requires you to purchase a Year 1 Volume Licensing ESU offer before you can activate it. That is, the transition from a Year 1 Volume Licensing ESU offer to an ESU subscription is the default pattern, and the bill-back charges reflect it. For details about the bill-back charges, see [Billing for SQL Server 2012 ESUs](#2012-esu-billing) later in this article.
 
-If you purchase a Year 2 Volume Licensing ESU offer and then decide to switch to an ESU subscription, you must take additional steps to ensure that the billback is adjusted accordingly. Before you activate the ESU subscription on the machines that a Year 2 Volume Licensing ESU license covers, you must open a support ticket by using the subcategory `\<new subcategory>`.
+If you purchase a Year 2 Volume Licensing ESU offer and then decide to switch to an ESU subscription, you must take additional steps to ensure that the bill-back is adjusted accordingly. Before you activate the ESU subscription on the machines that a Year 2 Volume Licensing ESU license covers, you must open a support ticket by using the subcategory `\<new subcategory>`.
 
 ## <a id="esu-usage-metering"></a> Understand ESU usage meters
 
@@ -221,7 +221,7 @@ The usage of the [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] ESU 
 
 - If multiple out-of-support [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] instances of the same version are installed on the same OSE, the highest [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] edition defines the ESU subscription meter that's sent every hour.
 
-- If multiple out-of-support instances of both [!INCLUDE [sssql11-md](../../includes/sssql11-md.md)] and [!INCLUDE [sssql14-md](../../includes/sssql14-md.md)] are installed on the same OSE, with the same or different editions, one instance of the same version is billed separately because they have different prices and billback periods.
+- If multiple out-of-support instances of both [!INCLUDE [sssql11-md](../../includes/sssql11-md.md)] and [!INCLUDE [sssql14-md](../../includes/sssql14-md.md)] are installed on the same OSE, with the same or different editions, one instance of the same version is billed separately because they have different prices and bill-back periods.
 
 The following table shows the ESU subscription meters (also called *SKUs*) that are used for metering and billing for a [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] ESU subscription on a single OSE:
 
@@ -261,9 +261,9 @@ The ESU subscription extends support for critical updates for up to three years.
 
 Because the ESU subscription option was introduced in Year 2 of the [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)] extended support period, you must have purchased the Year 1 Volume Licensing ESU offer before signing up for the ESU subscription in Year 2. You can sign up for the ESU subscription at any time within Year 2, and your bill reflects the cost of continuous ESU coverage.
 
-After you sign up for the ESU subscription, your next monthly bill includes a one-time billback charge for each machine that hosted a [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)] instance or instances with an active ESU subscription from July 12, 2023, to the date of activation. From this point, you're billed for each machine on an hourly basis.
+After you sign up for the ESU subscription, your next monthly bill includes a one-time bill-back charge for each machine that hosted a [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)] instance or instances with an active ESU subscription from the beginning of the current ESU year, based on the timestamp when ESU was enabled, or when p-core ESU license got activated. From this point, you're billed for each machine on an hourly basis.
 
-Both billback and regular hourly charges use the hourly rate from this formula: *(core count) x (100% of Year 2 ESU license price) / 730*. So, the size of the billback charge depends on how much time passes from July 12, 2023, to the activation time.
+Both bill-back and regular hourly charges use the hourly rate from this formula: *(core count) x (100% of Year 2 ESU license price) / 730*. So, the size of the bill-back charge depends on how much time passes from July 12, 2023, to the activation time.
 
 The following billing rules apply:
 
@@ -275,7 +275,7 @@ For more information about [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)] ES
 
 ### <a id="2014-esu-billing"></a> Billing for SQL Server 2014 ESUs
 
-The ESU subscription for [!INCLUDE [ssSQL14](../../includes/sssql14-md.md)] is available from Year 1 of the extended support period, which started on July 10, 2024. If you signed up before that date, you see only the hourly ESU charges starting at midnight on July 10, 2024. If you signed up after July 10, 2024, your next month's bill includes a billback charge from July 10, 2024, to the date of activation.
+The ESU subscription for [!INCLUDE [ssSQL14](../../includes/sssql14-md.md)] is available from Year 1 of the extended support period, which started on July 10, 2024. If you signed up before that date, you see only the hourly ESU charges starting at midnight on July 10, 2024. If you signed up after July 10, 2024, your next month's bill includes a bill-back charge from the beginning of the current ESU year, based on the timestamp when ESU was enabled, or when p-core ESU license got activated.
 
 The following billing rules apply:
 
@@ -291,19 +291,19 @@ For more information about [!INCLUDE [ssSQL14](../../includes/sssql14-md.md)] ES
 
 If your [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instance loses connectivity, the billing stops, and the subscription is suspended.
 
-To make sure that intermittent disconnection doesn't negatively affect your ESU coverage, we automatically reactivate it without penalty if the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instance reconnects within 30 days. In that case, you see an additional billback charge for the days since the last day that your server was connected.
+To make sure that intermittent disconnection doesn't negatively affect your ESU coverage, we automatically reactivate it without penalty if the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instance reconnects within 30 days. In that case, you see an additional bill-back charge for the days since the last day that your server was connected.
 
-If you manually terminate the ESU subscription and then reactivate it within 30 days, there's also no penalty. Your bill includes an additional charge for the time since you canceled the subscription. If the server reconnects after 30 days of disconnection, the subscription is terminated. To resume the ESU coverage, you need to activate a new ESU subscription and pay all the associated billback charges.
+If you manually terminate the ESU subscription and then reactivate it within 30 days, there's also no penalty. Your bill includes an additional charge for the time since you canceled the subscription. If the server reconnects after 30 days of disconnection, the subscription is terminated. To resume the ESU coverage, you need to activate a new ESU subscription and pay all the associated bill-back charges.
 
 > [!IMPORTANT]  
-> The billback charges are recorded within the first hour of the ESU subscription and look like single hourly charges for the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instances that have the ESU subscriptions enabled. Because the amount reflects the accumulated costs since one of the following dates, it's much higher than the regular hourly ESU charges:
+> The bill-back charges are recorded within the first hour of the ESU subscription and look like single hourly charges for the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instances that have the ESU subscriptions enabled. Because the amount reflects the accumulated costs since one of the following dates, it's much higher than the regular hourly ESU charges:
 >  
 > - July 11, 2023, for [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)]
 > - July 10, 2024, for [!INCLUDE [ssSQL14](../../includes/sssql14-md.md)]
 >  
 > This difference is expected, and it should be a one-time charge.
 >  
-> During the following months, you should see only the regular hourly charges. Additional billback charges could be added in cases of connectivity disruptions, but they're typically much smaller amounts.
+> During the following months, you should see only the regular hourly charges. Additional bill-back charges could be added in cases of connectivity disruptions, but they're typically much smaller amounts.
 
 ## Related content
 

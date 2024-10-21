@@ -3,8 +3,8 @@ title: CREATE TABLE
 description: "CREATE TABLE creates a new table in Azure Synapse Analytics, Analytics Platform System (PDW), and Microsoft Fabric."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: vanto, xiaoyul, mariyaali, maghan, kecona
-ms.date: 08/02/2024
+ms.reviewer: vanto, xiaoyul, mariyaali, maghan
+ms.date: 10/18/2024
 ms.service: sql
 ms.topic: reference
 dev_langs:
@@ -781,7 +781,7 @@ The user needs to be a member of the Admin, Member, or Contributor roles in the 
 - Table names in [!INCLUDE [fabricdw](../../includes/fabric-dw.md)] in [!INCLUDE [fabric](../../includes/fabric.md)] cannot include the characters `/` or `\` or end with a `.`.
 - Column names can't be greater than 128 characters.
 - Tables have a maximum of 1,024 columns per table.
-- The default and only collation supported in [!INCLUDE [fabricdw](../../includes/fabric-dw.md)] is Latin1_General_100_BIN2_UTF8.
+- The default collation supported in [!INCLUDE [fabricdw](../../includes/fabric-dw.md)] is Latin1_General_100_BIN2_UTF8.  You can also [create warehouses with case-insensitive (CI) collation - Latin1_General_100_CI_AS_KS_WS_SC_UTF8](/fabric/data-warehouse/collation).
 
 ## Remarks
 
@@ -790,7 +790,7 @@ There is limited Transact-SQL functionality in [!INCLUDE [fabricdw](../../includ
 ## <a id="LockingBehavior"></a> Locking behavior
  Takes a Schema-Modification lock on the table, a shared lock on the DATABASE, and a Schema-Stability lock on the SCHEMA.  
 
-## Next steps
+## Related content
 
 - [Create tables on [!INCLUDE[fabric-data-warehouse](../../includes/fabric-dw.md)] in [!INCLUDE[microsoft-fabric](../../includes/fabric.md)]](/fabric/data-warehouse/create-table)
 - [What is data warehousing in [!INCLUDE [fabric](../../includes/fabric.md)]?](/fabric/data-warehouse/data-warehousing)

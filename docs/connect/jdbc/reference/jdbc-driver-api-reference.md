@@ -101,7 +101,7 @@ Documentation for JDBC driver version 6.0, and some later versions, is also here
 |[SQLServerDataSource](isqlserverdatasource-interface.md)|Represents a list of properties specific to connecting to a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] database by using a [SQLServerConnection](sqlserverconnection-class.md) object.|
 |[SQLServerDataSourceObjectFactory](sqlserverdatasourceobjectfactory-class.md)|Represents an object factory to materialize data sources from the Java Naming and Directory Interface (JNDI).|
 |[SQLServerDriver](sqlserverdriver-class.md)|Represents the JDBC driver. This class includes methods for connecting to a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] database, and for obtaining information about the JDBC driver.|
-|[SQLServerException](sqlserverexception-class.md)|Represents an unsuccessful or incomplete running of an SQL statement.|
+|[SQLServerException](sqlserverexception-class.md)|Represents an unsuccessful or incomplete running of a SQL statement.|
 |[SQLServerNClob Class](sqlservernclob-class.md)|Represents a character large binary object using the National Character Set.|
 |[SQLServerParameterMetaData](sqlserverparametermetadata-class.md)|Represents the metadata for prepared statement parameters.|
 |[SQLServerPooledConnection](sqlserverpooledconnection-class.md)|Represents a physical database connection in a connection pool.|

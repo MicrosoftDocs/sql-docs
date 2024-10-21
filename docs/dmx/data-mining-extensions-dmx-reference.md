@@ -28,7 +28,7 @@ ms.custom: dmx
   
 -   A language for creating and working with data mining models.  
   
- The specification defines the basis of data mining as the data mining model virtual object. The data mining model object encapsulates all that is known about a particular mining model. The data mining model object is structured like an SQL table, with columns, data types, and meta information that describe the model. This structure lets you use the DMX language, which is an extension of SQL, to create and work with models.  
+ The specification defines the basis of data mining as the data mining model virtual object. The data mining model object encapsulates all that is known about a particular mining model. The data mining model object is structured like a SQL table, with columns, data types, and meta information that describe the model. This structure lets you use the DMX language, which is an extension of SQL, to create and work with models.  
   
  **For More Information:** [Mining Structures &#40;Analysis Services - Data Mining&#41;](/analysis-services/data-mining/mining-structures-analysis-services-data-mining)  
   

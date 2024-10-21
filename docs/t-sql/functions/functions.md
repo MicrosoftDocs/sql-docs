@@ -47,7 +47,7 @@ Ranking functions return a ranking value for each row in a partition. Depending 
 
 ## Rowset functions
 
-Rowset functions Return an object that can be used like table references in an SQL statement.
+Rowset functions Return an object that can be used like table references in a SQL statement.
 
 ## Scalar functions
 

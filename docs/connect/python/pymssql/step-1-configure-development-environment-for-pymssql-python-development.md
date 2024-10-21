@@ -49,4 +49,4 @@ You can use the PyPI command-line tool to verify that your intended packages are
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Step 2: Create an SQL database for pymssql Python development](step-2-create-a-sql-database-for-pymssql-python-development.md)
+> [Step 2: Create a SQL database for pymssql Python development](step-2-create-a-sql-database-for-pymssql-python-development.md)

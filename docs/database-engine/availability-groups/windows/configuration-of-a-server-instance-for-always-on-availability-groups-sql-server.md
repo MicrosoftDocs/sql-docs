@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], about"
 ---
 
-# Enable the Always On availability group feature for an SQL Server instance
+# Enable the Always On availability group feature for a SQL Server instance
 
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
@@ -31,7 +31,7 @@ A high-availability and disaster-recovery solution that provides an enterprise-l
 An instantiation of an availability group hosted by a specific instance of [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)] and that maintains a local copy of each availability database that belongs to the availability group. Two availability replicas exist: a single *primary replica* and one to four *secondary replicas*. The server instances that host the availability replicas for a given availability group must reside on different nodes of a single Windows Server Failover Clustering (WSFC) cluster.
 
 [database mirroring endpoint](../../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)  
-An endpoint is an SQL Server object that enables SQL Server to communicate over the network. To participate in database mirroring and/or [!INCLUDE [ssHADR](../../../includes/sshadr-md.md)] a server instance requires a unique, dedicated endpoint. All mirroring and availability group connections on a server instance use the same database mirroring endpoint. This special-purpose endpoint is used exclusively to receive these connections from other server instances.
+An endpoint is a SQL Server object that enables SQL Server to communicate over the network. To participate in database mirroring and/or [!INCLUDE [ssHADR](../../../includes/sshadr-md.md)] a server instance requires a unique, dedicated endpoint. All mirroring and availability group connections on a server instance use the same database mirroring endpoint. This special-purpose endpoint is used exclusively to receive these connections from other server instances.
 
 ## <a id="ConfigSI"></a> To configure a server instance to support Always On availability groups
 

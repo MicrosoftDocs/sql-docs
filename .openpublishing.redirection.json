@@ -56356,6 +56356,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "docs/database-engine/install-windows/prepare-for-upgrade-by-running-data-migration-assistant.md",
+      "redirect_url": "/sql/ssma/sql-server-migration-assistant",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "docs/2014/analysis-services/data-mining/index.md",
       "redirect_url": "/sql/analysis-services/data-mining/data-mining-ssas?view=sql-server-2014",
       "redirect_document_id": false

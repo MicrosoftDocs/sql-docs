@@ -1,10 +1,10 @@
 ---
 title: "SQL Server Migration Assistant"
-description: Learn about SQL Server Migration Assistant, a tool that automates database migration to SQL Server from Microsoft Access, DB2, MySQL, Oracle, and SAP ASE.
+description: Learn about SQL Server Migration Assistant, a tool that automates database migration to SQL Server from Microsoft Access, Db2, MySQL, Oracle, and SAP ASE.
 author: cpichuka
 ms.author: cpichuka
 ms.reviewer: randolphwest
-ms.date: 07/22/2024
+ms.date: 09/24/2024
 ms.service: sql
 ms.subservice: ssma
 ms.topic: conceptual
@@ -13,15 +13,15 @@ ms.collection:
 ---
 # SQL Server Migration Assistant
 
-Microsoft SQL Server Migration Assistant (SSMA) is a tool designed to automate database migration to SQL Server, Azure SQL Database, Azure SQL Managed Instance and Azure Synapse Analytics from Microsoft Access, DB2, MySQL, Oracle, and SAP ASE.
+Microsoft SQL Server Migration Assistant (SSMA) is a tool designed to automate database migration to SQL Server, Azure SQL Database, Azure SQL Managed Instance and Azure Synapse Analytics from Microsoft Access, Db2, MySQL, Oracle, and SAP ASE.
 
 ## Migration sources
 
 - [SQL Server Migration Assistant for Access](access/sql-server-migration-assistant-for-access-accesstosql.md)
-- [SQL Server Migration Assistant for DB2](db2/sql-server-migration-assistant-for-db2-db2tosql.md)
+- [SQL Server Migration Assistant for Db2](db2/sql-server-migration-assistant-for-db2-db2tosql.md)
 - [SQL Server Migration Assistant for MySQL](mysql/sql-server-migration-assistant-for-mysql-mysqltosql.md)
 - [SQL Server Migration Assistant for Oracle](oracle/sql-server-migration-assistant-for-oracle-oracletosql.md)
-- [SQL Server Migration Assistant for SAP ASE](sybase/sql-server-migration-assistant-for-sybase-sybasetosql.md)
+- [SQL Server Migration Assistant for Sybase](sybase/sql-server-migration-assistant-for-sybase-sybasetosql.md)
 
 ## Supported sources and target versions
 
@@ -44,7 +44,7 @@ The following target versions are supported for SSMA.
 ## Downloads
 
 - [SSMA for Access](https://aka.ms/ssmaforaccess)
-- [SSMA for DB2](https://aka.ms/ssmafordb2)
+- [SSMA for Db2](https://aka.ms/ssmafordb2)
 - [SSMA for MySQL](https://aka.ms/ssmaformysql)
 - [SSMA for Oracle](https://aka.ms/ssmafororacle)
 - [SSMA for SAP ASE](https://aka.ms/ssmaforsybase)

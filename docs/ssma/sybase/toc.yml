@@ -38,6 +38,8 @@
     href: connect-to-sql-server-sybasetosql.md
   - name: Connecting to Azure SQL Database
     href: connecting-to-azure-sql-db-sybasetosql.md
+  - name: Connect to Azure SQL Database
+    href: connect-to-azure-sql-db-sybasetosql.md
   - name: Assessment report
     href: assessment-report-sybasetosql.md
   - name: Assessing Sybase ASE database objects for conversion

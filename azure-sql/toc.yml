@@ -718,7 +718,8 @@
         href: database/active-geo-replication-security-configure.md
       - name: Configure license-free standby replica
         href: database/standby-replica-how-to-configure.md
-
+      - name: Migrate to availability zone
+        href: /azure/reliability/migrate-sql-database?toc=/azure/azure-sql/toc.json&bc=/azure/bread/toc.json
     - name: Monitor & Tune
       items:
         - name: Monitor SQL Database
@@ -830,8 +831,6 @@
         href: database/migrate-dtu-to-vcore.md
       - name: Manage SQL Database after migration
         href: database/manage-data-after-migrating-to-database.md
-      - name: Migrate to availability zone
-        href: /azure/reliability/migrate-sql-database?toc=/azure/azure-sql/toc.json&bc=/azure/bread/toc.json
       - name: Migrate to passwordless
         items:
         - name: Migrate a .NET application

@@ -42,7 +42,7 @@ Use one of these methods to run an Integration Services package.
 ### Run from SQL Server 2008 R2 Business Intelligence Development Studio (BIDS)  
 To run the package from within BIDS, right-click on your package and choose **Execute Package**.  
   
-By default, BIDS runs packages using 64-bit binaries. This is determined by the **Run64BitRuntime** package property. To set this property, go to **Solution Explorer**, right-click on your project and choose **Properties**. On the **Integration Services Property Pages**, go to **Configuration Properties** and select **Debugging**. You will see the **Run64BitRuntime** property under the **Debug Options**. To use 32-bit runtimes, set this to **False**. To use 64-bit runtimes, set this to **True**.  
+By default, BIDS runs packages using 64-bit binaries. This is determined by the **Run64BitRuntime** package property. To set this property, go to **Solution Explorer**, right-click on your project and choose **Properties**. On the **Integration Services Property Pages**, go to **Configuration Properties** and select **Debugging**. You'll see the **Run64BitRuntime** property under the **Debug Options**. To use 32-bit runtimes, set this to **False**. To use 64-bit runtimes, set this to **True**.  
   
 ### Run from SQL Server 2012 SQL Server Data Tools  
 To run the package from within SQL Server Data Tools, right-click on your package and choose **Execute Package**.  
@@ -93,7 +93,7 @@ PDW generates a validation error if you map a DT_NUMERIC or DT_DECIMAL input col
   
 **Unsupported Data Types**  
   
-SQL Server PDW does not support the following Integration Services data types:  
+SQL Server PDW doesn't support the following Integration Services data types:  
   
 -   DT_DBTIMESTAMPOFFSET  
   
@@ -124,31 +124,31 @@ To run an Integration Services load package, you need:
 When an Integration Services package has multiple SQL Server PDW destinations running and one of the connections is terminated, Integration Services stops pushing data to all of the SQL Server PDW destinations.  
   
 ## <a name="Limits"></a>Limitations and restrictions  
-For an Integration Services package, the number of SQL Server PDW destinations for the same data source is limited by the maximum number of active loads. The maximum is pre-configured and is not user-configurable. 
+For an Integration Services package, the number of SQL Server PDW destinations for the same data source is limited by the maximum number of active loads. The maximum is pre-configured and isn't user-configurable. 
 
 <!-- MISSING LINKS
 For the maximum number of loads and queued loads per appliance, see [Minimum and maximum values](minimum-and-maximum-values.md).  
 -->
   
-Each Integration Services package destination for the same data source counts as one load when the package is running. For example, suppose the maximum active loads is 10. The package will not run if it attempts to open 11 or more destinations for the same data source.  
+Each Integration Services package destination for the same data source counts as one load when the package is running. For example, suppose the maximum active loads is 10. The package won't run if it attempts to open 11 or more destinations for the same data source.  
   
-Multiple packages can run concurrently as long as each package does not use more than the maximum active loads. For example, if the maximum active loads is 10, you can concurrently run two packages that each use 10 destinations. One package will run while the other one waits in the load queue.  
+Multiple packages can run concurrently as long as each package doesn't use more than the maximum active loads. For example, if the maximum active loads is 10, you can concurrently run two packages that each use 10 destinations. One package will run while the other one waits in the load queue.  
   
-If the number of loads in the load queue exceeds the maximum queued loads, the package will not run. For example, if the maximum number of loads is 10 per appliance and the maximum number of queued loads is 40 per appliance, you can concurrently run five Integration Services packages that each open 10 destinations. If you try to run a sixth package, it will not run.  
+If the number of loads in the load queue exceeds the maximum queued loads, the package won't run. For example, if the maximum number of loads is 10 per appliance and the maximum number of queued loads is 40 per appliance, you can concurrently run five Integration Services packages that each open 10 destinations. If you try to run a sixth package, it won't run.  
 
 > [!IMPORTANT]
 > Using an OLE DB data source in SSIS with the PDW destination adapter, can cause data corruption if the source table contains char and varchar columns with SQL collations. We recommend using an ADO.NET source if the source table contains char or varchar columns with SQL collations. 
 
   
 ## <a name="Locks"></a>Locking behavior  
-When loading data with Integration Services, Analytics Platform System (PDW) uses row-level locks to update data in the destination table. This means that each row is locked for read and write while it is being updated. The rows in the destination table are not locked while the data is loaded into the staging table.  
+When loading data with Integration Services, Analytics Platform System (PDW) uses row-level locks to update data in the destination table. This means that each row is locked for read and write while it's being updated. The rows in the destination table aren't locked while the data is loaded into the staging table.  
   
 ## <a name="Examples"></a>Examples  
   
 ### <a name="Walkthrough"></a>A. Simple load from flat file  
 The following walkthrough demonstrates a simple data load using Integration Services to load flat file data to a SQL Server PDW appliance.  This example assumes that Integration Services has already been installed on the client machine, and the SQL Server PDW destination has been installed, as described above.  
   
-In this example we will load into the `Orders` table, which has the following DDL. The `Orders` table is part of the `LoadExampleDB` database.  
+In this example we'll load into the `Orders` table, which has the following DDL. The `Orders` table is part of the `LoadExampleDB` database.  
   
 ```sql  
 CREATE TABLE LoadExampleDB.dbo.Orders (  

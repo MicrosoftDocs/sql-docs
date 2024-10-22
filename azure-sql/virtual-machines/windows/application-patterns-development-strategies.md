@@ -5,7 +5,7 @@ author: bluefooted
 ms.author: pamela
 ms.reviewer: mathoma
 ms.date: 05/31/2017
-ms.service: virtual-machines-sql
+ms.service: azure-vm-sql-server
 ms.subservice: management
 ms.topic: conceptual
 tags: azure-service-management, azure-resource-manager

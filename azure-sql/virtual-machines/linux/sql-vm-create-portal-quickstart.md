@@ -4,7 +4,7 @@ description: This tutorial shows how to create a Linux SQL Server 2017 virtual m
 author: MashaMSFT
 ms.author: mathoma
 ms.date: 10/22/2019
-ms.service: virtual-machines-sql
+ms.service: azure-vm-sql-server
 ms.subservice: deployment
 ms.topic: quickstart
 ms.custom: mode-ui, linux-related-content

@@ -5,7 +5,7 @@ author: AbdullahMSFT
 ms.author: amamun
 ms.reviewer: mathoma, randolphwest
 ms.date: 10/02/2023
-ms.service: virtual-machines-sql
+ms.service: azure-vm-sql-server
 ms.subservice: hadr
 ms.topic: how-to
 editor: monicar

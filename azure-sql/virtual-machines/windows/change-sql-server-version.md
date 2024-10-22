@@ -5,7 +5,7 @@ author: suresh-kandoth
 ms.author: sureshka
 ms.reviewer: sqlblt, daleche, mathoma, maghan
 ms.date: 02/01/2024
-ms.service: virtual-machines-sql
+ms.service: azure-vm-sql-server
 ms.subservice: management
 ms.topic: how-to
 tags: azure-resource-manager

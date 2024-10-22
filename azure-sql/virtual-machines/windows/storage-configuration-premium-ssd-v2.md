@@ -5,7 +5,7 @@ author: dplessMSFT
 ms.author: dpless
 ms.reviewer: mathoma
 ms.date: 03/01/2024
-ms.service: virtual-machines-sql
+ms.service: azure-vm-sql-server
 ms.subservice: management
 ms.topic: how-to
 ms.custom: devx-track-azurepowershell

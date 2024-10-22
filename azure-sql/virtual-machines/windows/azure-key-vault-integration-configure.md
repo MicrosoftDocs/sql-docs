@@ -5,7 +5,7 @@ author: adbadram
 ms.author: adbadram
 ms.reviewer: mathoma, vanto
 ms.date: 09/04/2024
-ms.service: virtual-machines-sql
+ms.service: azure-vm-sql-server
 ms.subservice: security
 ms.topic: how-to
 tags: azure-service-management

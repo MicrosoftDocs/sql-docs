@@ -5,7 +5,7 @@ description: Bring Your Own Key (BYOK) support for transparent data encryption (
 author: GithubMirek
 ms.author: mireks
 ms.reviewer: wiassaf, vanto, mathoma, randolphwest
-ms.date: 09/23/2024
+ms.date: 10/22/2024
 ms.service: azure-sql
 ms.subservice: security
 ms.topic: conceptual
@@ -253,11 +253,18 @@ Another consideration for log files: Backed up log files remain encrypted with t
 
 ## High availability with customer-managed TDE
 
-Even in cases when there's no configured geo-redundancy for server, it's highly recommended to configure the server to use two different key vaults in two different regions with the same key material. The key in the secondary key vault in the other region shouldn't be marked as TDE protector, and it's not even allowed. If there's an outage affecting the primary key vault, and only then, the system will automatically switch to the other linked key with the same thumbprint in the secondary key vault, if it exists. Note though that switch won't happen if TDE protector is inaccessible because of revoked access rights, or because key or key vault is deleted, as it might indicate that customer intentionally wanted to restrict server from accessing the key. Providing the same key material to two key vaults in different regions can be done by creating the key outside of the key vault, and importing them into both key vaults.
+With the AKV providing multiple layers of redundancy, TDEs using a customer managed key can take advantage of AKV availability and resilience, and rely fully on the AKV redundancy solution.
 
-Alternatively, it can be accomplished by generating key using the primary key vault in one region and cloning the key into a key vault in a different Azure region. Use the [Backup-AzKeyVaultKey](/powershell/module/az.keyvault/Backup-AzKeyVaultKey) cmdlet to retrieve the key in encrypted format from the primary key vault and then use the [Restore-AzKeyVaultKey](/powershell/module/az.keyvault/restore-azkeyvaultkey) cmdlet and specify a key vault in the second region to clone the key. Alternatively, use the Azure portal to back up and restore the key. Key backup/restore operation is only allowed between key vaults within the same Azure subscription and [Azure geography](https://azure.microsoft.com/global-infrastructure/geographies/).
+AKV's multiple redundancy layers ensure key access even if individual service components fail or Azure regions or availability zones are down. For more information, see [Azure Key Vault availability and redundancy](/azure/key-vault/general/disaster-recovery-guidance).
 
-:::image type="content" source="media/transparent-data-encryption-byok-overview/customer-managed-tde-with-ha.png" alt-text="Diagram showing Single-Server high availability." lightbox="media/transparent-data-encryption-byok-overview/customer-managed-tde-with-ha.png":::
+AKV offers the following components of availability and resilience that are provided automatically without user intervention:
+
+- [Data replication](/azure/key-vault/general/disaster-recovery-guidance#data-replication)
+- [Failover within a region](/azure/key-vault/general/disaster-recovery-guidance#failover-within-a-region)
+- [Failover across regions](/azure/key-vault/general/disaster-recovery-guidance#failover-within-a-region)
+
+> [!NOTE]
+> For all pair regions, AKV keys are replicated to both regions and there are Hardware Security Modules (HSM) in both regions that can operate on those keys. For more information, see [Data replication](/azure/key-vault/general/disaster-recovery-guidance#data-replication). This applies to both Standard and Premium Azure Key Vault service tiers, and software or hardware keys.
 
 ## Geo-DR and customer-managed TDE
 

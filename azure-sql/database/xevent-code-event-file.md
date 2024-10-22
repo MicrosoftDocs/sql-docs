@@ -66,100 +66,97 @@ To read and write event data, the [!INCLUDE [ssde-md](../../docs/includes/ssde-m
 
 1. Create a credential to instruct the [!INCLUDE [ssde-md](../../docs/includes/ssde-md.md)] to use managed identity to authenticate to Azure Storage.
 
-    - In Azure SQL Database, you use a database-scoped credential. In Azure SQL Managed Instance, you use a server-scoped credential.
+    # [SQL Database](#tab/sqldb)
 
-# [SQL Database](#tab/sqldb)
+    Create a database-scoped [credential](/sql/relational-databases/security/authentication-access/credentials-database-engine). Using a client tool such as SSMS or ADS, open a new query window, connect to the database where you create the event session, and paste the following T-SQL batch. Make sure you're connected to your user database, and not to the `master` database.
 
-Create a database-scoped [credential](/sql/relational-databases/security/authentication-access/credentials-database-engine). Using a client tool such as SSMS or ADS, open a new query window, connect to the database where you create the event session, and paste the following T-SQL batch. Make sure you're connected to your user database, and not to the `master` database.
+    > [!NOTE]  
+    > Executing the following T-SQL batch requires the `CONTROL` database permission, which is held by the database owner (`dbo`), by the members of the `db_owner` database role, and by the administrator of the logical server.
 
-> [!NOTE]  
-> Executing the following T-SQL batch requires the `CONTROL` database permission, which is held by the database owner (`dbo`), by the members of the `db_owner` database role, and by the administrator of the logical server.
+    ```sql
+    /*
+    Create a master key
+    */
+    IF NOT EXISTS (
+                  SELECT 1
+                  FROM sys.symmetric_keys
+                  WHERE name = '##MS_DatabaseMasterKey##'
+                  )
+    CREATE MASTER KEY;
 
-```sql
-/*
-Create a master key
-*/
-IF NOT EXISTS (
+    /*
+    (Re-)create a database scoped credential.
+    The name of the credential must match the URL of the blob container.
+    */
+    IF EXISTS (
               SELECT 1
-              FROM sys.symmetric_keys
-              WHERE name = '##MS_DatabaseMasterKey##'
+              FROM sys.database_credentials
+              WHERE name = 'https://exampleaccount4xe.blob.core.windows.net/xe-example-container'
               )
-CREATE MASTER KEY;
+        DROP DATABASE SCOPED CREDENTIAL [https://exampleaccount4xe.blob.core.windows.net/xe-example-container];
 
-/*
-(Re-)create a database scoped credential.
-The name of the credential must match the URL of the blob container.
-*/
-IF EXISTS (
-          SELECT 1
-          FROM sys.database_credentials
-          WHERE name = 'https://exampleaccount4xe.blob.core.windows.net/xe-example-container'
-          )
-    DROP DATABASE SCOPED CREDENTIAL [https://exampleaccount4xe.blob.core.windows.net/xe-example-container];
+    /*
+    When using managed identity, the credential does not contain a secret
+    */
+    CREATE DATABASE SCOPED CREDENTIAL [https://exampleaccount4xe.blob.core.windows.net/xe-example-container]
+    WITH IDENTITY = 'MANAGED IDENTITY';
+    ```
 
-/*
-When using managed identity, the credential does not contain a secret
-*/
-CREATE DATABASE SCOPED CREDENTIAL [https://exampleaccount4xe.blob.core.windows.net/xe-example-container]
-WITH IDENTITY = 'MANAGED IDENTITY';
-```
+    Before executing this batch, make the following changes:
 
-Before executing this batch, make the following changes:
+    - In all three occurrences of `https://exampleaccount4xe.blob.core.windows.net/xe-example-container`, replace `exampleaccount4xe` with the name of your storage account, and replace `xe-example-container` with the name of your container.
 
-- In all three occurrences of `https://exampleaccount4xe.blob.core.windows.net/xe-example-container`, replace `exampleaccount4xe` with the name of your storage account, and replace `xe-example-container` with the name of your container.
+    # [SQL Managed Instance](#tab/sqlmi)
 
-# [SQL Managed Instance](#tab/sqlmi)
+    Create a server-scoped [credential](/sql/relational-databases/security/authentication-access/credentials-database-engine). Using a client tool such as SSMS or ADS, open a new query window, connect it to the `master` database on the managed instance where you create the event session, and paste the following T-SQL batch.
 
-Create a server-scoped [credential](/sql/relational-databases/security/authentication-access/credentials-database-engine). Using a client tool such as SSMS or ADS, open a new query window, connect it to the `master` database on the managed instance where you create the event session, and paste the following T-SQL batch.
+    > [!NOTE]
+    > Executing the following T-SQL batch requires the `CONTROL` database permission in the `master` database, which is held by the members of the `db_owner` database role in `master`, and by the members of the `sysadmin` server role on the managed instance.
 
-> [!NOTE]
-> Executing the following T-SQL batch requires the `CONTROL` database permission in the `master` database, which is held by the members of the `db_owner` database role in `master`, and by the members of the `sysadmin` server role on the managed instance.
+    ```sql
+    /*
+    Create a master key
+    */
+    IF NOT EXISTS (
+                  SELECT 1
+                  FROM sys.symmetric_keys
+                  WHERE name = '##MS_DatabaseMasterKey##'
+                  )
+    CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'password-placeholder';
 
-```sql
-/*
-Create a master key
-*/
-IF NOT EXISTS (
+    /*
+    (Re-)create a credential.
+    The name of the credential must match the URL of the blob container.
+    */
+    IF EXISTS (
               SELECT 1
-              FROM sys.symmetric_keys
-              WHERE name = '##MS_DatabaseMasterKey##'
+              FROM sys.credentials
+              WHERE name = 'https://exampleaccount4xe.blob.core.windows.net/xe-example-container'
               )
-CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'password-placeholder';
+        DROP CREDENTIAL [https://exampleaccount4xe.blob.core.windows.net/xe-example-container];
 
-/*
-(Re-)create a credential.
-The name of the credential must match the URL of the blob container.
-*/
-IF EXISTS (
-          SELECT 1
-          FROM sys.credentials
-          WHERE name = 'https://exampleaccount4xe.blob.core.windows.net/xe-example-container'
-          )
-    DROP CREDENTIAL [https://exampleaccount4xe.blob.core.windows.net/xe-example-container];
+    /*
+    When using managed identity, the credential does not contain a secret
+    */
+    CREATE CREDENTIAL [https://exampleaccount4xe.blob.core.windows.net/xe-example-container]
+    WITH IDENTITY = 'MANAGED IDENTITY';
+    ```
 
-/*
-When using managed identity, the credential does not contain a secret
-*/
-CREATE CREDENTIAL [https://exampleaccount4xe.blob.core.windows.net/xe-example-container]
-WITH IDENTITY = 'MANAGED IDENTITY';
-```
+    Before executing this batch, make the following changes:
 
-Before executing this batch, make the following changes:
+    - In the `CREATE MASTER KEY` statement, replace `password-placeholder` with an actual password that will protect the master key. For more information, see [CREATE MASTER KEY](/sql/t-sql/statements/create-master-key-transact-sql).
+    - In all three occurrences of `https://exampleaccount4xe.blob.core.windows.net/xe-example-container`, replace `exampleaccount4xe` with the name of your storage account, and replace `xe-example-container` with the name of your container.
 
-- In the `CREATE MASTER KEY` statement, replace `password-placeholder` with an actual password that will protect the master key. For more information, see [CREATE MASTER KEY](/sql/t-sql/statements/create-master-key-transact-sql).
-- In all three occurrences of `https://exampleaccount4xe.blob.core.windows.net/xe-example-container`, replace `exampleaccount4xe` with the name of your storage account, and replace `xe-example-container` with the name of your container.
-
----
+    ---
 
 ### Grant access using a SAS token
 
-The SAS token must satisfy the following requirements:
+1. In Azure portal, find the storage account and container that you created. Select the container, and navigate to **Settings > Shared access tokens**. Set **Permissions** to `Read`, `Write`, `List` and set the **Start** and **Expiry** date and time. The SAS token you create only works within this time interval.
 
-- Have the `rwl` (`Read`, `Write`, `List`) permissions
-- Have the start time and expiry time that encompass the lifetime of the event session
-- Have no IP address restrictions
+    The SAS token must satisfy the following additional requirements:
 
-1. In Azure portal, find the storage account and container that you created. Select the container, and navigate to **Settings > Shared access tokens**. Set **Permissions** to `Read`, `Write`, `List`, and set the **Start** and **Expiry** date and time. The SAS token you create only works within this time interval.
+      - Have the start time and expiry time that encompass the lifetime of the event session
+      - Have no IP address restrictions
 
     Select the **Generate SAS token and URL** button. The SAS token is in the **Blob SAS token** box. You can copy it to use in the next step.
 
@@ -170,94 +167,92 @@ The SAS token must satisfy the following requirements:
 
 1. Create a credential to store the SAS token
 
-    - In Azure SQL Database, you use a database-scoped credential to store the SAS token. In Azure SQL Managed Instance, you use a server-scoped credential.
+    # [SQL Database](#tab/sqldb)
 
-# [SQL Database](#tab/sqldb)
+    Store the SAS token in a database-scoped [credential](/sql/relational-databases/security/authentication-access/credentials-database-engine). Using a client tool such as SSMS or ADS, open a new query window, connect to the database where you create the event session, and paste the following T-SQL batch. Make sure you're connected to your user database, and not to the `master` database.
 
-Store the SAS token in a database-scoped [credential](/sql/relational-databases/security/authentication-access/credentials-database-engine). Using a client tool such as SSMS or ADS, open a new query window, connect to the database where you create the event session, and paste the following T-SQL batch. Make sure you're connected to your user database, and not to the `master` database.
+    > [!NOTE]  
+    > Executing the following T-SQL batch requires the `CONTROL` database permission, which is held by the database owner (`dbo`), by the members of the `db_owner` database role, and by the administrator of the logical server.
 
-> [!NOTE]  
-> Executing the following T-SQL batch requires the `CONTROL` database permission, which is held by the database owner (`dbo`), by the members of the `db_owner` database role, and by the administrator of the logical server.
+    ```sql
+    /*
+    Create a master key to protect the secret of the credential
+    */
+    IF NOT EXISTS (
+                  SELECT 1
+                  FROM sys.symmetric_keys
+                  WHERE name = '##MS_DatabaseMasterKey##'
+                  )
+    CREATE MASTER KEY;
 
-```sql
-/*
-Create a master key to protect the secret of the credential
-*/
-IF NOT EXISTS (
+    /*
+    (Re-)create a database scoped credential.
+    The name of the credential must match the URL of the blob container.
+    */
+    IF EXISTS (
               SELECT 1
-              FROM sys.symmetric_keys
-              WHERE name = '##MS_DatabaseMasterKey##'
+              FROM sys.database_credentials
+              WHERE name = 'https://exampleaccount4xe.blob.core.windows.net/xe-example-container'
               )
-CREATE MASTER KEY;
+        DROP DATABASE SCOPED CREDENTIAL [https://exampleaccount4xe.blob.core.windows.net/xe-example-container];
 
-/*
-(Re-)create a database scoped credential.
-The name of the credential must match the URL of the blob container.
-*/
-IF EXISTS (
-          SELECT 1
-          FROM sys.database_credentials
-          WHERE name = 'https://exampleaccount4xe.blob.core.windows.net/xe-example-container'
-          )
-    DROP DATABASE SCOPED CREDENTIAL [https://exampleaccount4xe.blob.core.windows.net/xe-example-container];
+    /*
+    The secret is the SAS token for the container. The Read, Write, and List permissions are set.
+    */
+    CREATE DATABASE SCOPED CREDENTIAL [https://exampleaccount4xe.blob.core.windows.net/xe-example-container]
+    WITH IDENTITY = 'SHARED ACCESS SIGNATURE',
+        SECRET = 'sp=rwl&st=2023-10-17T23:28:32Z&se=2023-10-18T07:28:32Z&spr=https&sv=2022-11-02&sr=c&sig=REDACTED';
+    ```
 
-/*
-The secret is the SAS token for the container. The Read, Write, and List permissions are set.
-*/
-CREATE DATABASE SCOPED CREDENTIAL [https://exampleaccount4xe.blob.core.windows.net/xe-example-container]
-WITH IDENTITY = 'SHARED ACCESS SIGNATURE',
-     SECRET = 'sp=rwl&st=2023-10-17T23:28:32Z&se=2023-10-18T07:28:32Z&spr=https&sv=2022-11-02&sr=c&sig=REDACTED';
-```
+    Before executing this batch, make the following changes:
 
-Before executing this batch, make the following changes:
+    - In all three occurrences of `https://exampleaccount4xe.blob.core.windows.net/xe-example-container`, replace `exampleaccount4xe` with the name of your storage account, and replace `xe-example-container` with the name of your container.
+    - Replace the entire string between the single quotes in the `SECRET` clause with the SAS token you copied in the previous step.
 
-- In all three occurrences of `https://exampleaccount4xe.blob.core.windows.net/xe-example-container`, replace `exampleaccount4xe` with the name of your storage account, and replace `xe-example-container` with the name of your container.
-- Replace the entire string between the single quotes in the `SECRET` clause with the SAS token you copied in the previous step.
+    # [SQL Managed Instance](#tab/sqlmi)
 
-# [SQL Managed Instance](#tab/sqlmi)
+    Store the SAS token in a server-scoped [credential](/sql/relational-databases/security/authentication-access/credentials-database-engine). Using a client tool such as SSMS or ADS, open a new query window, connect it to the `master` database on the managed instance where you create the event session, and paste the following T-SQL batch.
 
-Store the SAS token in a server-scoped [credential](/sql/relational-databases/security/authentication-access/credentials-database-engine). Using a client tool such as SSMS or ADS, open a new query window, connect it to the `master` database on the managed instance where you create the event session, and paste the following T-SQL batch.
+    > [!NOTE]
+    > Executing the following T-SQL batch requires the `CONTROL` database permission in the `master` database, which is held by the members of the `db_owner` database role in `master`, and by the members of the `sysadmin` server role on the managed instance.
 
-> [!NOTE]
-> Executing the following T-SQL batch requires the `CONTROL` database permission in the `master` database, which is held by the members of the `db_owner` database role in `master`, and by the members of the `sysadmin` server role on the managed instance.
+    ```sql
+    /*
+    Create a master key to protect the secret of the credential
+    */
+    IF NOT EXISTS (
+                  SELECT 1
+                  FROM sys.symmetric_keys
+                  WHERE name = '##MS_DatabaseMasterKey##'
+                  )
+    CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'password-placeholder';
 
-```sql
-/*
-Create a master key to protect the secret of the credential
-*/
-IF NOT EXISTS (
+    /*
+    (Re-)create a credential.
+    The name of the credential must match the URL of the blob container.
+    */
+    IF EXISTS (
               SELECT 1
-              FROM sys.symmetric_keys
-              WHERE name = '##MS_DatabaseMasterKey##'
+              FROM sys.credentials
+              WHERE name = 'https://exampleaccount4xe.blob.core.windows.net/xe-example-container'
               )
-CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'password-placeholder';
+        DROP CREDENTIAL [https://exampleaccount4xe.blob.core.windows.net/xe-example-container];
 
-/*
-(Re-)create a credential.
-The name of the credential must match the URL of the blob container.
-*/
-IF EXISTS (
-          SELECT 1
-          FROM sys.credentials
-          WHERE name = 'https://exampleaccount4xe.blob.core.windows.net/xe-example-container'
-          )
-    DROP CREDENTIAL [https://exampleaccount4xe.blob.core.windows.net/xe-example-container];
+    /*
+    The secret is the SAS token for the container. The Read, Write, and List permissions are set.
+    */
+    CREATE CREDENTIAL [https://exampleaccount4xe.blob.core.windows.net/xe-example-container]
+    WITH IDENTITY = 'SHARED ACCESS SIGNATURE',
+        SECRET = 'sp=rwl&st=2023-10-17T23:28:32Z&se=2023-10-18T07:28:32Z&spr=https&sv=2022-11-02&sr=c&sig=REDACTED';
+    ```
 
-/*
-The secret is the SAS token for the container. The Read, Write, and List permissions are set.
-*/
-CREATE CREDENTIAL [https://exampleaccount4xe.blob.core.windows.net/xe-example-container]
-WITH IDENTITY = 'SHARED ACCESS SIGNATURE',
-     SECRET = 'sp=rwl&st=2023-10-17T23:28:32Z&se=2023-10-18T07:28:32Z&spr=https&sv=2022-11-02&sr=c&sig=REDACTED';
-```
+    Before executing this batch, make the following changes:
 
-Before executing this batch, make the following changes:
+    - In the `CREATE MASTER KEY` statement, replace `password-placeholder` with an actual password that will protect the master key. For more information, see [CREATE MASTER KEY](/sql/t-sql/statements/create-master-key-transact-sql).
+    - In all three occurrences of `https://exampleaccount4xe.blob.core.windows.net/xe-example-container`, replace `exampleaccount4xe` with the name of your storage account, and replace `xe-example-container` with the name of your container.
+    - Replace the entire string between the single quotes in the `SECRET` clause with the SAS token you copied in the previous step.
 
-- In the `CREATE MASTER KEY` statement, replace `password-placeholder` with an actual password that will protect the master key. For more information, see [CREATE MASTER KEY](/sql/t-sql/statements/create-master-key-transact-sql).
-- In all three occurrences of `https://exampleaccount4xe.blob.core.windows.net/xe-example-container`, replace `exampleaccount4xe` with the name of your storage account, and replace `xe-example-container` with the name of your container.
-- Replace the entire string between the single quotes in the `SECRET` clause with the SAS token you copied in the previous step.
-
----
+    ---
 
 ## Create, start, and stop an event session
 

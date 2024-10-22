@@ -60,11 +60,13 @@ To read and write event data, the [!INCLUDE [ssde-md](../../docs/includes/ssde-m
 
 1. In the Azure portal, navigate to the **Identity** page of your Azure SQL logical server or Azure SQL managed instance, and make sure that a managed identity is assigned. For more information, see [Managed identities in Microsoft Entra for Azure SQL](authentication-azure-ad-user-assigned-managed-identity.md).
 
-    Note the name of the managed identity of your logical server or SQL managed instance. If the system assigned identity is enabled, use the name of the logical server or SQL managed instance. If the system assigned identity is disabled and a user assigned identity is added and designated as the primary identity, use the name of that user assigned identity.
+1. In the Azure portal, navigate to the storage container where you want to store event data. On the **Access Control (IAM)** page, select **Add** to assign the **Storage Blob Data Contributor** RBAC role to the managed identity of the logical server or SQL managed instance.
 
-1. In the Azure portal, navigate to the storage container where you want to store event data. On the **Access Control (IAM)** page, select **Add** to assign the **Storage Blob Data Contributor** RBAC role to the managed identity of the logical server or SQL managed instance. For more information, see [Assign an Azure role for access to blob data](/azure/storage/blobs/assign-azure-role-data-access).
+    If the logical server or SQL managed instance has its system assigned managed identity enabled, assign the role to that identity. If the system assigned identity is disabled, but there is one or more user assigned identities, assign the role to the identity designated as the primary identity.
 
-1. Create a credential to instruct the [!INCLUDE [ssde-md](../../docs/includes/ssde-md.md)] to use managed identity to authenticate to Azure Storage.
+    For more information, see [Assign an Azure role for access to blob data](/azure/storage/blobs/assign-azure-role-data-access).
+
+1. Create a credential to instruct the [!INCLUDE [ssde-md](../../docs/includes/ssde-md.md)] to use managed identity to authenticate to Azure Storage for a specific container URL.
 
     # [SQL Database](#tab/sqldb)
 
@@ -74,16 +76,6 @@ To read and write event data, the [!INCLUDE [ssde-md](../../docs/includes/ssde-m
     > Executing the following T-SQL batch requires the `CONTROL` database permission, which is held by the database owner (`dbo`), by the members of the `db_owner` database role, and by the administrator of the logical server.
 
     ```sql
-    /*
-    Create a master key
-    */
-    IF NOT EXISTS (
-                  SELECT 1
-                  FROM sys.symmetric_keys
-                  WHERE name = '##MS_DatabaseMasterKey##'
-                  )
-    CREATE MASTER KEY;
-
     /*
     (Re-)create a database scoped credential.
     The name of the credential must match the URL of the blob container.
@@ -102,7 +94,7 @@ To read and write event data, the [!INCLUDE [ssde-md](../../docs/includes/ssde-m
     WITH IDENTITY = 'MANAGED IDENTITY';
     ```
 
-    Before executing this batch, make the following changes:
+    Before executing this batch, make the following change:
 
     - In all three occurrences of `https://exampleaccount4xe.blob.core.windows.net/xe-example-container`, replace `exampleaccount4xe` with the name of your storage account, and replace `xe-example-container` with the name of your container.
 
@@ -114,16 +106,6 @@ To read and write event data, the [!INCLUDE [ssde-md](../../docs/includes/ssde-m
     > Executing the following T-SQL batch requires the `CONTROL` database permission in the `master` database, which is held by the members of the `db_owner` database role in `master`, and by the members of the `sysadmin` server role on the managed instance.
 
     ```sql
-    /*
-    Create a master key
-    */
-    IF NOT EXISTS (
-                  SELECT 1
-                  FROM sys.symmetric_keys
-                  WHERE name = '##MS_DatabaseMasterKey##'
-                  )
-    CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'password-placeholder';
-
     /*
     (Re-)create a credential.
     The name of the credential must match the URL of the blob container.
@@ -142,21 +124,20 @@ To read and write event data, the [!INCLUDE [ssde-md](../../docs/includes/ssde-m
     WITH IDENTITY = 'MANAGED IDENTITY';
     ```
 
-    Before executing this batch, make the following changes:
+    Before executing this batch, make the following change:
 
-    - In the `CREATE MASTER KEY` statement, replace `password-placeholder` with an actual password that will protect the master key. For more information, see [CREATE MASTER KEY](/sql/t-sql/statements/create-master-key-transact-sql).
     - In all three occurrences of `https://exampleaccount4xe.blob.core.windows.net/xe-example-container`, replace `exampleaccount4xe` with the name of your storage account, and replace `xe-example-container` with the name of your container.
-
     ---
 
 ### Grant access using a SAS token
 
-1. In Azure portal, find the storage account and container that you created. Select the container, and navigate to **Settings > Shared access tokens**. Set **Permissions** to `Read`, `Write`, `List` and set the **Start** and **Expiry** date and time. The SAS token you create only works within this time interval.
+1. In Azure portal, find the storage account and container that you created. Select the container, and navigate to **Settings > Shared access tokens**.
 
-    The SAS token must satisfy the following additional requirements:
+    The SAS token must satisfy the following requirements:
 
-      - Have the start time and expiry time that encompass the lifetime of the event session
-      - Have no IP address restrictions
+      - **Permissions** set to `Read`, `Write`, `Delete`, `List`.
+      - The **Start** time and **Expiry** time must encompass the lifetime of the event session. The SAS token you create only works within this time interval.
+      - Have no IP address restrictions.
 
     Select the **Generate SAS token and URL** button. The SAS token is in the **Blob SAS token** box. You can copy it to use in the next step.
 
@@ -201,7 +182,7 @@ To read and write event data, the [!INCLUDE [ssde-md](../../docs/includes/ssde-m
     */
     CREATE DATABASE SCOPED CREDENTIAL [https://exampleaccount4xe.blob.core.windows.net/xe-example-container]
     WITH IDENTITY = 'SHARED ACCESS SIGNATURE',
-        SECRET = 'sp=rwl&st=2023-10-17T23:28:32Z&se=2023-10-18T07:28:32Z&spr=https&sv=2022-11-02&sr=c&sig=REDACTED';
+        SECRET = 'sp=rwdl&st=2024-10-22T01:43:29Z&se=2024-11-22T09:43:29Z&spr=https&sv=2022-11-02&sr=c&sig=REDACTED';
     ```
 
     Before executing this batch, make the following changes:
@@ -243,7 +224,7 @@ To read and write event data, the [!INCLUDE [ssde-md](../../docs/includes/ssde-m
     */
     CREATE CREDENTIAL [https://exampleaccount4xe.blob.core.windows.net/xe-example-container]
     WITH IDENTITY = 'SHARED ACCESS SIGNATURE',
-        SECRET = 'sp=rwl&st=2023-10-17T23:28:32Z&se=2023-10-18T07:28:32Z&spr=https&sv=2022-11-02&sr=c&sig=REDACTED';
+        SECRET = 'sp=rwdl&st=2024-10-22T01:43:29Z&se=2024-11-22T09:43:29Z&spr=https&sv=2022-11-02&sr=c&sig=REDACTED';
     ```
 
     Before executing this batch, make the following changes:
@@ -251,7 +232,6 @@ To read and write event data, the [!INCLUDE [ssde-md](../../docs/includes/ssde-m
     - In the `CREATE MASTER KEY` statement, replace `password-placeholder` with an actual password that will protect the master key. For more information, see [CREATE MASTER KEY](/sql/t-sql/statements/create-master-key-transact-sql).
     - In all three occurrences of `https://exampleaccount4xe.blob.core.windows.net/xe-example-container`, replace `exampleaccount4xe` with the name of your storage account, and replace `xe-example-container` with the name of your container.
     - Replace the entire string between the single quotes in the `SECRET` clause with the SAS token you copied in the previous step.
-
     ---
 
 ## Create, start, and stop an event session

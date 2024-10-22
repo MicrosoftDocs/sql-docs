@@ -83,14 +83,14 @@ To read and write event data, the [!INCLUDE [ssde-md](../../docs/includes/ssde-m
     IF EXISTS (
               SELECT 1
               FROM sys.database_credentials
-              WHERE name = 'https://exampleaccount4xe.blob.core.windows.net/xe-example-container'
+              WHERE name = 'https://<storage-account-name>.blob.core.windows.net/<container-name>'
               )
-        DROP DATABASE SCOPED CREDENTIAL [https://exampleaccount4xe.blob.core.windows.net/xe-example-container];
+        DROP DATABASE SCOPED CREDENTIAL [https://<storage-account-name>.blob.core.windows.net/<container-name>];
 
     /*
     When using managed identity, the credential does not contain a secret
     */
-    CREATE DATABASE SCOPED CREDENTIAL [https://exampleaccount4xe.blob.core.windows.net/xe-example-container]
+    CREATE DATABASE SCOPED CREDENTIAL [https://<storage-account-name>.blob.core.windows.net/<container-name>]
     WITH IDENTITY = 'MANAGED IDENTITY';
     ```
 
@@ -109,21 +109,21 @@ To read and write event data, the [!INCLUDE [ssde-md](../../docs/includes/ssde-m
     IF EXISTS (
               SELECT 1
               FROM sys.credentials
-              WHERE name = 'https://exampleaccount4xe.blob.core.windows.net/xe-example-container'
+              WHERE name = 'https://<storage-account-name>.blob.core.windows.net/<container-name>'
               )
-        DROP CREDENTIAL [https://exampleaccount4xe.blob.core.windows.net/xe-example-container];
+        DROP CREDENTIAL [https://<storage-account-name>.blob.core.windows.net/<container-name>];
 
     /*
     When using managed identity, the credential does not contain a secret
     */
-    CREATE CREDENTIAL [https://exampleaccount4xe.blob.core.windows.net/xe-example-container]
+    CREATE CREDENTIAL [https://<storage-account-name>.blob.core.windows.net/<container-name>]
     WITH IDENTITY = 'MANAGED IDENTITY';
     ```
     ---
 
     Before executing this batch, make the following change:
 
-    - In all three occurrences of `https://exampleaccount4xe.blob.core.windows.net/xe-example-container`, replace `exampleaccount4xe` with the name of your storage account, and replace `xe-example-container` with the name of your container.
+    - In all three occurrences of `https://<storage-account-name>.blob.core.windows.net/<container-name>`, replace `<storage-account-name>` with the name of your storage account, and replace `<container-name>` with the name of your container.
 
 ### Grant access using a SAS token
 
@@ -169,22 +169,22 @@ To read and write event data, the [!INCLUDE [ssde-md](../../docs/includes/ssde-m
     IF EXISTS (
               SELECT 1
               FROM sys.database_credentials
-              WHERE name = 'https://exampleaccount4xe.blob.core.windows.net/xe-example-container'
+              WHERE name = 'https://<storage-account-name>.blob.core.windows.net/<container-name>'
               )
-        DROP DATABASE SCOPED CREDENTIAL [https://exampleaccount4xe.blob.core.windows.net/xe-example-container];
+        DROP DATABASE SCOPED CREDENTIAL [https://<storage-account-name>.blob.core.windows.net/<container-name>];
 
     /*
     The secret is the SAS token for the container. The Read, Write, and List permissions are set.
     */
-    CREATE DATABASE SCOPED CREDENTIAL [https://exampleaccount4xe.blob.core.windows.net/xe-example-container]
+    CREATE DATABASE SCOPED CREDENTIAL [https://<storage-account-name>.blob.core.windows.net/<container-name>]
     WITH IDENTITY = 'SHARED ACCESS SIGNATURE',
-        SECRET = 'sp=rwdl&st=2024-10-22T01:43:29Z&se=2024-11-22T09:43:29Z&spr=https&sv=2022-11-02&sr=c&sig=REDACTED';
+        SECRET = '<sas-token>';
     ```
 
     Before executing this batch, make the following changes:
 
-    - In all three occurrences of `https://exampleaccount4xe.blob.core.windows.net/xe-example-container`, replace `exampleaccount4xe` with the name of your storage account, and replace `xe-example-container` with the name of your container.
-    - Replace the entire string between the single quotes in the `SECRET` clause with the SAS token you copied in the previous step.
+    - In all three occurrences of `https://<storage-account-name>.blob.core.windows.net/<container-name>`, replace `<storage-account-name>` with the name of your storage account, and replace `<container-name>` with the name of your container.
+    - In the `SECRET` clause, replace `<sas-token>` with the SAS token you copied in the previous step.
 
     # [SQL Managed Instance](#tab/sqlmi)
 
@@ -202,7 +202,7 @@ To read and write event data, the [!INCLUDE [ssde-md](../../docs/includes/ssde-m
                   FROM sys.symmetric_keys
                   WHERE name = '##MS_DatabaseMasterKey##'
                   )
-    CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'password-placeholder';
+    CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>';
 
     /*
     (Re-)create a credential.
@@ -211,23 +211,23 @@ To read and write event data, the [!INCLUDE [ssde-md](../../docs/includes/ssde-m
     IF EXISTS (
               SELECT 1
               FROM sys.credentials
-              WHERE name = 'https://exampleaccount4xe.blob.core.windows.net/xe-example-container'
+              WHERE name = 'https://<storage-account-name>.blob.core.windows.net/<container-name>'
               )
-        DROP CREDENTIAL [https://exampleaccount4xe.blob.core.windows.net/xe-example-container];
+        DROP CREDENTIAL [https://<storage-account-name>.blob.core.windows.net/<container-name>];
 
     /*
     The secret is the SAS token for the container. The Read, Write, and List permissions are set.
     */
-    CREATE CREDENTIAL [https://exampleaccount4xe.blob.core.windows.net/xe-example-container]
+    CREATE CREDENTIAL [https://<storage-account-name>.blob.core.windows.net/<container-name>]
     WITH IDENTITY = 'SHARED ACCESS SIGNATURE',
-        SECRET = 'sp=rwdl&st=2024-10-22T01:43:29Z&se=2024-11-22T09:43:29Z&spr=https&sv=2022-11-02&sr=c&sig=REDACTED';
+        SECRET = '<sas-token>';
     ```
 
     Before executing this batch, make the following changes:
 
-    - In the `CREATE MASTER KEY` statement, replace `password-placeholder` with an actual password that will protect the master key. For more information, see [CREATE MASTER KEY](/sql/t-sql/statements/create-master-key-transact-sql).
-    - In all three occurrences of `https://exampleaccount4xe.blob.core.windows.net/xe-example-container`, replace `exampleaccount4xe` with the name of your storage account, and replace `xe-example-container` with the name of your container.
-    - Replace the entire string between the single quotes in the `SECRET` clause with the SAS token you copied in the previous step.
+    - In the `CREATE MASTER KEY` statement, replace `<password>` with an actual password that will protect the master key. For more information, see [CREATE MASTER KEY](/sql/t-sql/statements/create-master-key-transact-sql).
+    - In all three occurrences of `https://<storage-account-name>.blob.core.windows.net/<container-name>`, replace `<storage-account-name>` with the name of your storage account, and replace `<container-name>` with the name of your container.
+    - In the `SECRET` clause, replace `<sas-token>` with the SAS token you copied in the previous step.
     ---
 
 ## Create, start, and stop an event session
@@ -238,7 +238,7 @@ To create a new event session in SSMS, expand the **Extended Events** node. This
 
 :::image type="content" source="media/xevents/create-event-session-events.png" alt-text="Screenshot of the New Session SSMS dialog showing the event selection page with the sql_batch_starting event selected.":::
 
-On the **Data Storage** page, select `event_file` as the target type, and paste the URL of the storage container in the **Storage URL** box. Type a forward slash (`/`) at the end of this URL, followed by the file (blob) name. In our example, the blob name is `example-session.xel`, and the entire URL is `https://exampleaccount4xe.blob.core.windows.net/xe-example-container/example-session.xel`.
+On the **Data Storage** page, select `event_file` as the target type, and paste the URL of the storage container in the **Storage URL** box. Type a forward slash (`/`) at the end of this URL, followed by the file (blob) name. In our example, the blob name is `example-session.xel`, and the entire URL is `https://<storage-account-name>.blob.core.windows.net/<container-name>/example-session.xel`.
 
 > [!NOTE]
 > For SQL Managed Instance, instead of pasting the storage container URL on the **Data storage** page, use the **Script** button to create a T-SQL script of the session. Specify the container URL as the value for the `filename` argument, similar to the SQL Managed Instance example below, and execute the script to create the session.
@@ -252,7 +252,7 @@ Now that the session is configured, you can select the **Script** button to crea
 ```sql
 CREATE EVENT SESSION [example-session] ON DATABASE
 ADD EVENT sqlserver.sql_batch_starting
-ADD TARGET package0.event_file(SET filename=N'https://exampleaccount4xe.blob.core.windows.net/xe-example-container/example-session.xel')
+ADD TARGET package0.event_file(SET filename=N'https://<storage-account-name>.blob.core.windows.net/<container-name>/example-session.xel')
 GO
 ```
 
@@ -261,7 +261,7 @@ GO
 ```sql
 CREATE EVENT SESSION [example-session] ON SERVER
 ADD EVENT sqlserver.sql_batch_starting
-ADD TARGET package0.event_file(SET filename=N'https://exampleaccount4xe.blob.core.windows.net/xe-example-container/example-session.xel')
+ADD TARGET package0.event_file(SET filename=N'https://<storage-account-name>.blob.core.windows.net/<container-name>/example-session.xel')
 GO
 ```
 
@@ -271,7 +271,7 @@ Select **OK** to create the session.
 
 In Object Explorer, expand the **Sessions** folder to see the event session you created. By default, the session isn't started when it's created. To start the session, right-click on the session name, and select **Start Session**. You can later stop it by similarly selecting **Stop Session**, once the session is running.
 
-As T-SQL batches are executed in this database or managed instance, the session writes events to the `example-session.xel` blob in the `xe-example-container` storage container.
+As T-SQL batches are executed in this database or managed instance, the session writes events to the `example-session.xel` blob in the storage container.
 
 To stop the session, right-click it in Object Explorer, and select **Stop Session**.
 

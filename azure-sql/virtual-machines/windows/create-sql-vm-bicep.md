@@ -5,7 +5,7 @@ author: adbadram
 ms.author: adbadram
 ms.reviewer: mathoma
 ms.date: 06/17/2022
-ms.service: virtual-machines-sql
+ms.service: azure-vm-sql-server
 ms.subservice: deployment
 ms.topic: quickstart
 ms.custom: subject-armqs, mode-arm, devx-track-bicep

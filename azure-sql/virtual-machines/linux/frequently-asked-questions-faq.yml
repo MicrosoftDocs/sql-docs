@@ -7,7 +7,7 @@ metadata:
   author: MashaMSFT
   tags: azure-service-management
   ms.custom: linux-related-content
-  ms.service: virtual-machines-sql
+  ms.service: azure-vm-sql-server
   ms.subservice: service-overview
   ms.topic: faq
   ms.workload: iaas-sql-server

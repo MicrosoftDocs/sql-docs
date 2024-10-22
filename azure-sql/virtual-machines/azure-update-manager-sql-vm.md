@@ -5,7 +5,7 @@ author: dplessMSFT
 ms.author: dpless
 ms.reviewer: mathoma, randolphwest
 ms.date: 04/09/2024
-ms.service: virtual-machines-sql
+ms.service: azure-vm-sql-server
 ms.subservice: management
 ms.topic: how-to
 tags: azure-resource-manager

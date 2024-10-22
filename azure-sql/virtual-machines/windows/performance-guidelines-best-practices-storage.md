@@ -5,7 +5,7 @@ author: bluefooted
 ms.author: pamela
 ms.reviewer: mathoma, randolphwest
 ms.date: 03/01/2024
-ms.service: virtual-machines-sql
+ms.service: azure-vm-sql-server
 ms.subservice: performance
 ms.topic: conceptual
 tags: azure-service-management

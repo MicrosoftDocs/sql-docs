@@ -195,7 +195,7 @@ All of these permissions are included in the `CONTROL` permission on the databas
 
 When you use the `event_file` target, event data is stored in blobs in an Azure Storage container. The [!INCLUDE [ssde-md](../../docs/includes/ssde-md.md)] running the event session must have specific access to this container. You can grant this access in one of the following ways:
 
-- Assign the **Storage Blob Data Contributor** RBAC role to the [managed identity](authentication-azure-ad-user-assigned-managed-identity.md) of the Azure SQL logical server or Azure SQL managed instance on the container.
+- Assign the **Storage Blob Data Contributor** RBAC role to the [managed identity](authentication-azure-ad-user-assigned-managed-identity.md) of the Azure SQL logical server or Azure SQL managed instance on the container, and create a credential to instruct the [!INCLUDE [ssde-md](../../docs/includes/ssde-md.md)] to use managed identity for authentication.
 
   > [!NOTE]
   >

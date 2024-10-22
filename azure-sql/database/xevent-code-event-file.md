@@ -24,7 +24,6 @@ The high-level steps in this walkthrough are:
 1. Create a container in this storage account.
 1. Grant the required access to the container using either an RBAC role assignment, or a SAS token.
 1. Create a credential in the database or managed instance where you create the event session.
-    - The credential either stores the SAS token, or instructs the database engine to use the managed identity of the logical server or SQL managed instance to access the container.
 1. Create, start, and use an event session.
 
 ## Create a storage account and container
@@ -45,27 +44,29 @@ Note the names of the *storage account* and *container* you use.
 
 ## Grant access to the container
 
-To read and write event data, the [!INCLUDE [ssde-md](../../docs/includes/ssde-md.md)] requires specific access to the container. You can grant this access in one of two ways, depending on your choice of authentication model:
+To read and write event data, the [!INCLUDE [ssde-md](../../docs/includes/ssde-md.md)] requires specific access to the container. You can grant this access in one of two ways, depending on your choice of authentication type:
 
-  - If using Microsoft Entra authentication, you assign the **Storage Blob Data Contributor** RBAC role to the [managed identity](authentication-azure-ad-user-assigned-managed-identity.md) of the Azure SQL logical server or Azure SQL managed instance on the container. For more information, see [Assign RBAC role](#assign-rbac-role).
+  - If using managed identity with Microsoft Entra authentication, you assign the **Storage Blob Data Contributor** RBAC role to the [managed identity](authentication-azure-ad-user-assigned-managed-identity.md) of the Azure SQL logical server or Azure SQL managed instance on the container.
 
     > [!NOTE]
-  >
-  > The use of managed identity with extended event sessions is in preview.
+    >
+    > The use of managed identity with extended event sessions is in preview.
 
-  - If using secret-based authentication, you create a [SAS token](/azure/storage/common/storage-sas-overview#sas-token) for the container. For more information, see [Create a SAS token](#create-a-sas-token).
+  - If using secret-based authentication, you create a [SAS token](/azure/storage/common/storage-sas-overview#sas-token) for the container.
+
+    To use this authentication type, the **Allow storage account key access** option must be enabled. For more information, see [Prevent Shared Key authorization for an Azure Storage account](/azure/storage/common/shared-key-authorization-prevent).
 
 ### Grant access using managed identity
 
 1. In the Azure portal, navigate to the **Identity** page of your Azure SQL logical server or Azure SQL managed instance, and make sure that a managed identity is assigned. For more information, see [Managed identities in Microsoft Entra for Azure SQL](authentication-azure-ad-user-assigned-managed-identity.md).
 
-  Note the name of the managed identity of your logical server or SQL managed instance. If the system assigned identity is enabled, use the name of the logical server or SQL managed instance. If the system assigned identity is disabled and a user assigned identity is added and designated as the primary identity, use the name of that user assigned identity.
+    Note the name of the managed identity of your logical server or SQL managed instance. If the system assigned identity is enabled, use the name of the logical server or SQL managed instance. If the system assigned identity is disabled and a user assigned identity is added and designated as the primary identity, use the name of that user assigned identity.
 
 1. In the Azure portal, navigate to the storage container where you want to store event data. On the **Access Control (IAM)** page, select **Add** to assign the **Storage Blob Data Contributor** RBAC role to the managed identity of the logical server or SQL managed instance. For more information, see [Assign an Azure role for access to blob data](/azure/storage/blobs/assign-azure-role-data-access).
 
 1. Create a credential to instruct the [!INCLUDE [ssde-md](../../docs/includes/ssde-md.md)] to use managed identity to authenticate to Azure Storage.
 
-  - In Azure SQL Database, you use a database-scoped credential. In Azure SQL Managed Instance, you use a server-scoped credential.
+    - In Azure SQL Database, you use a database-scoped credential. In Azure SQL Managed Instance, you use a server-scoped credential.
 
 # [SQL Database](#tab/sqldb)
 
@@ -160,16 +161,16 @@ The SAS token must satisfy the following requirements:
 
 1. In Azure portal, find the storage account and container that you created. Select the container, and navigate to **Settings > Shared access tokens**. Set **Permissions** to `Read`, `Write`, `List`, and set the **Start** and **Expiry** date and time. The SAS token you create only works within this time interval.
 
-  Select the **Generate SAS token and URL** button. The SAS token is in the **Blob SAS token** box. You can copy it to use in the next step.
+    Select the **Generate SAS token and URL** button. The SAS token is in the **Blob SAS token** box. You can copy it to use in the next step.
 
-  > [!IMPORTANT]  
-  > The SAS token provides read and write access to this container. Treat it as you would treat a password or any other secret.
+    > [!IMPORTANT]  
+    > The SAS token provides read and write access to this container. Treat it as you would treat a password or any other secret.
 
-  :::image type="content" source="media/xevents/create-sas-token.png" alt-text="Screenshot of the Shared Access Tokens screen for an Azure Storage container, with a generated SAS token for an example container.":::
+    :::image type="content" source="media/xevents/create-sas-token.png" alt-text="Screenshot of the Shared Access Tokens screen for an Azure Storage container, with a generated SAS token for an example container.":::
 
 1. Create a credential to store the SAS token
 
-  - In Azure SQL Database, you use a database-scoped credential to store the SAS token. In Azure SQL Managed Instance, you use a server-scoped credential.
+    - In Azure SQL Database, you use a database-scoped credential to store the SAS token. In Azure SQL Managed Instance, you use a server-scoped credential.
 
 # [SQL Database](#tab/sqldb)
 
@@ -320,7 +321,7 @@ Once the `xel` file is downloaded, open it in SSMS. On the SSMS main menu, go to
 
 ### View event data using T-SQL
 
-To read event session data using T-SQL, use the [sys.fn_xe_file_target_read_file()](/sql/relational-databases/extended-events/targets-for-extended-events-in-sql-server#sysfn_xe_file_target_read_file-function) function. To use this function in a database or managed instance different from the one where the event session is created, [create a credential](#create-a-credential-to-store-the-sas-token) to give the [!INCLUDE [ssde-md](../../docs/includes/ssde-md.md)] access to the storage container with the event blobs.
+To read event session data using T-SQL, use the [sys.fn_xe_file_target_read_file()](/sql/relational-databases/extended-events/targets-for-extended-events-in-sql-server#sysfn_xe_file_target_read_file-function) function. To use this function in a database or managed instance different from the one where the event session is created, [grant access](#grant-access-to-the-container) to the [!INCLUDE [ssde-md](../../docs/includes/ssde-md.md)] on the storage container with the event data blobs.
 
 For a more detailed walkthrough, see [Create an event session in SSMS](/sql/relational-databases/extended-events/quick-start-extended-events-in-sql-server#create-an-event-session-in-ssms).
 

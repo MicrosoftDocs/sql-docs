@@ -6,7 +6,7 @@ author: croblesm
 ms.author: roblescarlos
 ms.reviewer: mathoma, randolphwest
 ms.date: 05/24/2022
-ms.service: virtual-machines-sql
+ms.service: azure-vm-sql-server
 ms.subservice: migration-guide
 ms.topic: how-to
 ms.collection:

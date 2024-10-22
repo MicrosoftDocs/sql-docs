@@ -4,7 +4,7 @@ description: "Include file"
 author: rothja
 ms.author: jroth
 ms.date: 04/30/2018
-ms.service: virtual-machines-sql
+ms.service: azure-vm-sql-server
 ms.subservice: security
 ms.custom: include file
 ms.devlang: na

@@ -52,9 +52,9 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```syntaxsql
--- Syntax for SQL Server and Azure SQL Database  
+Syntax for SQL Server and Azure SQL Database.
   
+```syntaxsql
 CREATE [ OR ALTER ] VIEW [ schema_name . ] view_name [ (column [ ,...n ] ) ]
 [ WITH <view_attribute> [ ,...n ] ]
 AS select_statement
@@ -68,10 +68,10 @@ AS select_statement
     [ VIEW_METADATA ]
 }
 ```  
-  
-```syntaxsql
--- Syntax for Azure Synapse Analytics and Parallel Data Warehouse
-  
+
+Syntax for Azure Synapse Analytics and Parallel Data Warehouse.
+
+```syntaxsql  
 CREATE VIEW [ schema_name . ] view_name [  ( column_name [ ,...n ] ) ]   
 AS <select_statement>   
 [;]  
@@ -81,9 +81,10 @@ AS <select_statement>
     SELECT <select_criteria>  
 ```  
 
+Syntax for Microsoft Fabric Data warehouse and SQL analytics endpoint.
+
+
 ```syntaxsql
--- Syntax for Microsoft Fabric Data warehouse and SQL analytics endpoint
-  
 CREATE [ OR ALTER ] VIEW [ schema_name . ] view_name [  ( column_name [ ,...n ] ) ]   
 [ WITH <view_attribute> [ ,...n ] ] AS <select_statement>   
 [;]

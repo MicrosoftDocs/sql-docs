@@ -5,7 +5,7 @@ author: adbadram
 ms.author: adbadram
 ms.reviewer: mathoma, randolphwest
 ms.date: 07/31/2023
-ms.service: virtual-machines-sql
+ms.service: azure-vm-sql-server
 ms.subservice: management
 ms.topic: how-to
 ms.custom: devx-track-azurecli, devx-track-azurepowershell

@@ -5,7 +5,7 @@ description: Describes extended events (XEvents) in Azure SQL Database and Azure
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: wiassaf, mathoma, randolphwest
-ms.date: 05/15/2024
+ms.date: 10/21/2024
 ms.service: azure-sql
 ms.subservice: performance
 ms.topic: reference
@@ -193,15 +193,23 @@ All of these permissions are included in the `CONTROL` permission on the databas
 
 ## Storage container authorization and control
 
-When you use the `event_file` target, event data is stored in blobs in an Azure Storage container. The [!INCLUDE [ssde-md](../../docs/includes/ssde-md.md)] running the event session must have specific access to this container. You grant this access by creating a [SAS token](/azure/storage/common/storage-sas-overview#sas-token) for the container, and storing the token in a [credential](/sql/relational-databases/security/authentication-access/credentials-database-engine).
+When you use the `event_file` target, event data is stored in blobs in an Azure Storage container. The [!INCLUDE [ssde-md](../../docs/includes/ssde-md.md)] running the event session must have specific access to this container. You can grant this access in one of the following ways:
 
-In Azure SQL Database, you must use a database-scoped credential. In Azure SQL Managed Instance, use a server-scoped credential.
+- Assign the **Storage Blob Data Contributor** RBAC role to the [managed identity](authentication-azure-ad-user-assigned-managed-identity.md) of the Azure SQL logical server or Azure SQL managed instance on the container.
 
-The SAS token you create for your Azure Storage container must satisfy the following requirements:
+  > [!NOTE]
+  >
+  > The use of managed identity with extended event sessions is in preview.
 
-- Have the `rwl` (`Read`, `Write`, `List`) permissions.
-- Have the start time and expiry time that encompass the lifetime of the event session.
-- Have no IP address restrictions.
+- Create a [SAS token](/azure/storage/common/storage-sas-overview#sas-token) for the container, and store the token in a [credential](/sql/relational-databases/security/authentication-access/credentials-database-engine).
+
+  In Azure SQL Database, you must use a database-scoped credential. In Azure SQL Managed Instance, use a server-scoped credential.
+
+  The SAS token you create for your Azure Storage container must satisfy the following requirements:
+
+  - Have the `rwl` (`Read`, `Write`, `List`) permissions.
+  - Have the start time and expiry time that encompass the lifetime of the event session.
+  - Have no IP address restrictions.
 
 ## Resource governance
 

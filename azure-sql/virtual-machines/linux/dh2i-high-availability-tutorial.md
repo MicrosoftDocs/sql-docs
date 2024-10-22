@@ -5,7 +5,7 @@ author: amitkh-msft
 ms.author: amitkh
 ms.reviewer: vanto
 ms.date: 05/18/2022
-ms.service: virtual-machines-sql
+ms.service: azure-vm-sql-server
 ms.subservice: hadr
 ms.topic: tutorial
 ms.custom: kr2b-contr-experiment, linux-related-content

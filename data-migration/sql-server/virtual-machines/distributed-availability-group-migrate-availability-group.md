@@ -6,7 +6,7 @@ author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest
 ms.date: 06/26/2024
-ms.service: virtual-machines-sql
+ms.service: azure-vm-sql-server
 ms.subservice: migration-guide
 ms.topic: how-to
 ms.collection:

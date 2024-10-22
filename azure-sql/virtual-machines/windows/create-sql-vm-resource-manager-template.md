@@ -5,7 +5,7 @@ author: bluefooted
 ms.author: pamela
 ms.reviewer: mathoma
 ms.date: 06/29/2020
-ms.service: virtual-machines-sql
+ms.service: azure-vm-sql-server
 ms.subservice: deployment
 ms.topic: quickstart
 ms.custom: subject-armqs, mode-arm, devx-track-arm-template

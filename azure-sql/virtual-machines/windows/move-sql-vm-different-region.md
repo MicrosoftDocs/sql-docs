@@ -5,7 +5,7 @@ author: bluefooted
 ms.author: pamela
 ms.reviewer: mathoma
 ms.date: 07/30/2019
-ms.service: virtual-machines-sql
+ms.service: azure-vm-sql-server
 ms.subservice: migration
 ms.topic: how-to
 ms.collection:

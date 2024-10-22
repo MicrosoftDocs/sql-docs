@@ -22,7 +22,7 @@ The high-level steps in this walkthrough are:
 
 1. Create an Azure Storage account, or find an existing suitable account to use.
 1. Create a container in this storage account.
-1. Grant the required access to the container using either an RBAC role assignment, or a SAS token.
+1. Grant the [!INCLUDE [ssde-md](../../docs/includes/ssde-md.md)] required access to the container using either an RBAC role assignment, or a SAS token.
 1. Create a credential in the database or managed instance where you create the event session.
 1. Create, start, and use an event session.
 
@@ -40,13 +40,13 @@ We recommended you use an account that:
 
 Next, [create a container](/azure/storage/blobs/blob-containers-portal#create-a-container) in this storage account using Azure portal. You can also create a container [using PowerShell](/azure/storage/blobs/blob-containers-powershell#create-a-container), or [using Azure CLI](/azure/storage/blobs/blob-containers-cli#create-a-container).
 
-Note the names of the *storage account* and *container* you use.
+Note the names of the *storage account* and *container* you created. You will use them in the following steps.
 
 ## Grant access to the container
 
 To read and write event data, the [!INCLUDE [ssde-md](../../docs/includes/ssde-md.md)] requires specific access to the container. You can grant this access in one of two ways, depending on your choice of authentication type:
 
-  - If using managed identity with Microsoft Entra authentication, you assign the **Storage Blob Data Contributor** RBAC role to the [managed identity](authentication-azure-ad-user-assigned-managed-identity.md) of the Azure SQL logical server or Azure SQL managed instance on the container.
+  - If using managed identity with Microsoft Entra authentication, you assign the **Storage Blob Data Contributor** RBAC role for the container to the [managed identity](authentication-azure-ad-user-assigned-managed-identity.md) of the Azure SQL logical server or Azure SQL managed instance.
 
     > [!NOTE]
     >
@@ -62,11 +62,11 @@ To read and write event data, the [!INCLUDE [ssde-md](../../docs/includes/ssde-m
 
 1. In the Azure portal, navigate to the storage container where you want to store event data. On the **Access Control (IAM)** page, select **Add** to assign the **Storage Blob Data Contributor** RBAC role to the managed identity of the logical server or SQL managed instance.
 
-    If the logical server or SQL managed instance has its system assigned managed identity enabled, assign the role to that identity. If the system assigned identity is disabled, but there is one or more user assigned identities, assign the role to the identity designated as the primary identity.
+    If the logical server or SQL managed instance has its system assigned managed identity enabled, assign the role to that identity. If the system assigned identity is disabled, but there is one or more user assigned identities, assign the role to the user assigned identity designated as the primary identity.
 
     For more information, see [Assign an Azure role for access to blob data](/azure/storage/blobs/assign-azure-role-data-access).
 
-1. Create a credential to instruct the [!INCLUDE [ssde-md](../../docs/includes/ssde-md.md)] to use managed identity to authenticate to Azure Storage for a specific container URL.
+1. Create a credential to instruct the [!INCLUDE [ssde-md](../../docs/includes/ssde-md.md)] to authenticate to Azure Storage using managed identity for a specific container URL.
 
     # [SQL Database](#tab/sqldb)
 
@@ -94,10 +94,6 @@ To read and write event data, the [!INCLUDE [ssde-md](../../docs/includes/ssde-m
     WITH IDENTITY = 'MANAGED IDENTITY';
     ```
 
-    Before executing this batch, make the following change:
-
-    - In all three occurrences of `https://exampleaccount4xe.blob.core.windows.net/xe-example-container`, replace `exampleaccount4xe` with the name of your storage account, and replace `xe-example-container` with the name of your container.
-
     # [SQL Managed Instance](#tab/sqlmi)
 
     Create a server-scoped [credential](/sql/relational-databases/security/authentication-access/credentials-database-engine). Using a client tool such as SSMS or ADS, open a new query window, connect it to the `master` database on the managed instance where you create the event session, and paste the following T-SQL batch.
@@ -123,15 +119,15 @@ To read and write event data, the [!INCLUDE [ssde-md](../../docs/includes/ssde-m
     CREATE CREDENTIAL [https://exampleaccount4xe.blob.core.windows.net/xe-example-container]
     WITH IDENTITY = 'MANAGED IDENTITY';
     ```
+    ---
 
     Before executing this batch, make the following change:
 
     - In all three occurrences of `https://exampleaccount4xe.blob.core.windows.net/xe-example-container`, replace `exampleaccount4xe` with the name of your storage account, and replace `xe-example-container` with the name of your container.
-    ---
 
 ### Grant access using a SAS token
 
-1. In Azure portal, find the storage account and container that you created. Select the container, and navigate to **Settings > Shared access tokens**.
+1. In the Azure portal, navigate to the storage account and container that you created. Select the container, and navigate to **Settings > Shared access tokens**.
 
     The SAS token must satisfy the following requirements:
 
@@ -146,7 +142,7 @@ To read and write event data, the [!INCLUDE [ssde-md](../../docs/includes/ssde-m
 
     :::image type="content" source="media/xevents/create-sas-token.png" alt-text="Screenshot of the Shared Access Tokens screen for an Azure Storage container, with a generated SAS token for an example container.":::
 
-1. Create a credential to store the SAS token
+1. Create a credential to store the SAS token.
 
     # [SQL Database](#tab/sqldb)
 
@@ -236,7 +232,7 @@ To read and write event data, the [!INCLUDE [ssde-md](../../docs/includes/ssde-m
 
 ## Create, start, and stop an event session
 
-Once the credential is created, you can create the event session. Creating an event session doesn't require the `CONTROL` permission. Once the credential is created, you can create event sessions even if you have a more restricted set of permissions. See [permissions](xevent-db-diff-from-svr.md#permissions) for the specific permissions needed.
+Once the credential is created, you can create the event session. Unlike creating the credential, creating an event session doesn't require the `CONTROL` permission. Once the credential is created, you can create event sessions even if you have more restricted permissions. See [permissions](xevent-db-diff-from-svr.md#permissions) for the specific permissions needed.
 
 To create a new event session in SSMS, expand the **Extended Events** node. This node is under the database folder in Azure SQL Database, and under the **Management** folder in Azure SQL Managed Instance. Right-click on the **Sessions** folder, and select **New Session...**. On the **General** page, enter a name for the session, which is `example-session` in this example. On the **Events** page, select one or more events to add to the session. In this example, we selected the `sql_batch_starting` event.
 

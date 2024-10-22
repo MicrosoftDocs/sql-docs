@@ -197,6 +197,15 @@ When you use the `event_file` target, event data is stored in blobs in an Azure 
 
 - Assign the **Storage Blob Data Contributor** RBAC role to the [managed identity](authentication-azure-ad-user-assigned-managed-identity.md) of the Azure SQL logical server or Azure SQL managed instance on the container, and create a credential to instruct the [!INCLUDE [ssde-md](../../docs/includes/ssde-md.md)] to use managed identity for authentication.
 
+  As an alternative to assigning the **Storage Blob Data Contributor** RBAC role, you can assign the following RBAC actions: 
+  
+  | Namespace | Action |
+  |:--|:--|
+  |`Microsoft.Storage/storageAccounts/blobServices/containers/`|`read`|
+  |`Microsoft.Storage/storageAccounts/blobServices/containers/blobs/`|`delete`|
+  |`Microsoft.Storage/storageAccounts/blobServices/containers/blobs/`|`read`|
+  |`Microsoft.Storage/storageAccounts/blobServices/containers/blobs/`|`write`|
+
   > [!NOTE]
   >
   > The use of managed identity with extended event sessions is in preview.
@@ -207,7 +216,7 @@ When you use the `event_file` target, event data is stored in blobs in an Azure 
 
   The SAS token you create for your Azure Storage container must satisfy the following requirements:
 
-  - Have the `rwl` (`Read`, `Write`, `List`) permissions.
+  - Have the `rwdl` (`Read`, `Write`, `Delete`, `List`) permissions.
   - Have the start time and expiry time that encompass the lifetime of the event session.
   - Have no IP address restrictions.
 

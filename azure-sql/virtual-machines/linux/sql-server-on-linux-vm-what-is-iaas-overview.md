@@ -4,7 +4,7 @@ description: Learn about how to run full SQL Server editions on Azure Virtual Ma
 author: MashaMSFT
 ms.author: mathoma
 ms.date: 10/26/2021
-ms.service: virtual-machines-sql
+ms.service: azure-vm-sql-server
 ms.subservice: service-overview
 ms.topic: overview
 tags: azure-service-management

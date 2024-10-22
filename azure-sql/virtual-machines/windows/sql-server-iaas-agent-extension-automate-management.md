@@ -5,7 +5,7 @@ author: ebruersan
 ms.author: ebrue
 ms.reviewer: mathoma
 ms.date: 10/16/2023
-ms.service: virtual-machines-sql
+ms.service: azure-vm-sql-server
 ms.subservice: management
 ms.topic: conceptual
 tags: azure-resource-manager

@@ -6,7 +6,7 @@ author: markjones-msft
 ms.author: markjon
 ms.reviewer: chadam, mathoma
 ms.date: 05/14/2021
-ms.service: virtual-machines-sql
+ms.service: azure-vm-sql-server
 ms.subservice: migration-guide
 ms.topic: how-to
 ms.collection:

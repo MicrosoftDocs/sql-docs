@@ -557,8 +557,6 @@ However, if you run analytical queries spanning longer time ranges, they might b
 - You might find that even after you scale the cluster out horizontally, some queries still do not perform as expected. This might happen if query performance is bound by the resources available on an instance (node) of the cluster. In that case, scale up the cluster **vertically**.
     - Vertical cluster scaling takes several minutes. During that process, there is a period of downtime, which can stop data collection by the watcher. If that happens, [stop and restart](#start-and-stop-a-watcher) your watcher after the scaling operation is complete.
 
-You cannot scale a free Azure Data Explorer cluster. If you find that the [specifications](/azure/data-explorer/start-for-free#specifications) of the free cluster are insufficient for your requirements, [upgrade to a full Azure Data Explorer cluster](/azure/data-explorer/start-for-free-upgrade). The upgrade process retains all collected data. Because there might be a period of downtime during the upgrade, you might need to stop and restart your watcher to resume data collection once the upgrade is complete.
-
 #### Free Azure Data Explorer cluster
 
 The free Azure Data Explorer cluster has certain [capacity limits](/azure/data-explorer/start-for-free#specifications), including a storage capacity limit on the original uncompressed data. You cannot scale a free Azure Data Explorer cluster to increase its compute or storage capacity. When the cluster is close to reaching its storage capacity, or is at capacity, a warning message appears on the [free cluster page](https://dataexplorer.azure.com/freecluster).
@@ -567,7 +565,7 @@ If you reach storage capacity, new monitoring data isn't ingested, but existing 
 
 If you find that the specifications of the free cluster are insufficient for your requirements, you can [upgrade to a full Azure Data Explorer cluster](/azure/data-explorer/start-for-free-upgrade) and retain all collected data. Because there might be a period of downtime during the upgrade, you might need to stop and restart your watcher to resume data collection once the upgrade is complete.
 
-To continue using the free Azure Data Explorer cluster, [manage data retention](#manage-data-retention) to delete the older data automatically and free up space for new data.
+To continue using the free Azure Data Explorer cluster, [manage data retention](#manage-data-retention) to delete the older data automatically and free up space for new data. Once storage space is available, you might need to [stop and restart](#start-and-stop-a-watcher) your watcher to resume data collection.
 
 ### Manage data retention
 

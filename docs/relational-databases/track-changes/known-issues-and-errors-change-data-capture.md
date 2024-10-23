@@ -1,10 +1,10 @@
 ---
-title: "Known issues and errors with CDC"
+title: "Known issues, limitations and errors with CDC"
 description: "Known issues and errors with change data capture (CDC) in SQL Server and Azure SQL Managed Instance"
 author: croblesm
 ms.author: roblescarlos
 ms.reviewer: "mathoma"
-ms.date: "10/19/2023"
+ms.date: 10/23/2024
 ms.service: sql
 ms.topic: troubleshooting
 helpviewer_keywords:
@@ -13,10 +13,10 @@ helpviewer_keywords:
   - "Limitations"
 ---
 
-# Known issues and errors with CDC
+# Known limitations, issues and errors with CDC
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
-This article explains known issues and errors with change data capture (CDC) for **SQL Server** and **Azure SQL Managed Instance**. 
+This article explains known limitations, issues and errors with change data capture (CDC) for **SQL Server** and **Azure SQL Managed Instance**. 
 
 For Azure SQL Database, see [Known issues with CDC in Azure SQL Database](/azure/azure-sql/database/change-data-capture-overview#known-issues-and-limitations). 
 
@@ -62,11 +62,16 @@ CREATE TABLE T1(
      )
 ```
 
-## Accelerated Database Recovery (ADR) and Change Data Capure (CDC)
+## Accelerated Database Recovery (ADR) and change data capture (CDC)
 
 Currently, enabling both change data capture (CDC) and Accelerated Database Recovery (ADR) is not supported. When you enable change data capture (CDC) on SQL Server, the aggressive log truncation feature of ADR is disabled. This is because the CDC scan accesses the database transaction log. Active transactions continue to hold the transaction log truncation until the transaction commits and CDC scan catches up, or transaction aborts. This can cause various issues including the transaction log filling up more than usual or data operations recorded in the side table being abnormal.
 
 When enabling CDC, we recommend using the Resumable index option. Resumable index doesn't require to keep open a long-running transaction to create or rebuild an index, allowing log truncation during this operation and better log space management. For more information, see [Guidelines for online index operations - Resumable Index considerations](../../relational-databases/indexes/guidelines-for-online-index-operations.md#resumable-index-considerations). 
+
+## Online DDL statements are unsupported
+
+[Online DDL statements](../../t-sql/statements/alter-table-transact-sql.md#with--online--on--off-as-applies-to-altering-a-column) are unsupported when change change data capture is enabled on a database. 
+
 
 ## Enabling CDC fails if schema or user named `cdc` already exists
 

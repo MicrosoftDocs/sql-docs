@@ -53,7 +53,9 @@ To resolve the issue, follow these steps:
 
 1. Determine the version of Server B (Version B), by using the following query:
 
-   `SELECT @@VERSION`
+   ```sql
+   SELECT @@VERSION;
+   ```
 
 1. Run a query that resembles the following to determine the version of SQL Server that was running when the source backup was taken (Version A):
 
@@ -66,7 +68,7 @@ To resolve the issue, follow these steps:
    - SoftwareVersionBuild: 4236
 In this case, the source SQL Server version when the backup was taken is 15.0.4236.
 
-1. Use either the [SQL Server complete version list tables](/troubleshoot/sql/releases/download-and-install-latest-updates) or the [Excel builds spreadsheet](https://download.microsoft.com/download/d/3/e/d3e28f3d-6a4f-47ce-aaa5-9d74c5590ed6/SQLServerBuilds.xlsx) to determine the version of SQL Server that the build corresponds to. For example, 15.0.4236 maps to SQL Server 2019 CU16+GDR (Version A).
+1. Use either the [SQL Server complete version list tables](/troubleshoot/sql/releases/download-and-install-latest-updates) or the [Excel builds spreadsheet](https://aka.ms/sqlserverbuilds) to determine the version of SQL Server that the build corresponds to. For example, 15.0.4236 maps to SQL Server 2019 CU16+GDR (Version A).
 
 1. Use one of the following options:
 

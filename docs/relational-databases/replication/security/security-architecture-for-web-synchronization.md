@@ -67,7 +67,7 @@ helpviewer_keywords:
   
 -   Pick up the HTTPS request that is described in the section "D. Connection to IIS".  
   
--   Make an SQL connection to the publication database and apply the uploaded changes to the publication database.  
+-   Make a SQL connection to the publication database and apply the uploaded changes to the publication database.  
   
 -   Extract the downloaded changes and send an HTTPS response back to the Merge Agent.  
   

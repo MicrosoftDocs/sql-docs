@@ -62,10 +62,10 @@ helpviewer_keywords:
  You configure the ADO NET source by providing the SQL statement that defines the result set. For example, an ADO NET source that connects to the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database and uses the SQL statement `SELECT * FROM Production.Product` extracts all the rows from the **Production.Product** table and provides the dataset to a downstream component.  
   
 > [!NOTE]  
->  When you use an SQL statement to invoke a stored procedure that returns results from a temporary table, use the WITH RESULT SETS option to define metadata for the result set.  
+>  When you use a SQL statement to invoke a stored procedure that returns results from a temporary table, use the WITH RESULT SETS option to define metadata for the result set.  
   
 > [!NOTE]  
->  If you use an SQL statement to execute a stored procedure and the package fails with the following error, you may be able to resolve the error by adding the **SET FMTONLY OFF** statement before the exec statement.  
+>  If you use a SQL statement to execute a stored procedure and the package fails with the following error, you may be able to resolve the error by adding the **SET FMTONLY OFF** statement before the exec statement.  
 >   
 >  **Column <column_name> cannot be found at the datasource.**  
   

@@ -344,7 +344,7 @@ SQLFetchScroll(hstmt, SQL_FETCH_RELATIVE, 0);
 |Performing bulk insert, update, or delete operations|[SQLBulkOperations Function](../../../odbc/reference/syntax/sqlbulkoperations-function.md)|  
 |Canceling statement processing|[SQLCancel Function](../../../odbc/reference/syntax/sqlcancel-function.md)|  
 |Returning information about a column in a result set|[SQLDescribeCol Function](../../../odbc/reference/syntax/sqldescribecol-function.md)|  
-|Executing an SQL statement|[SQLExecDirect Function](../../../odbc/reference/syntax/sqlexecdirect-function.md)|  
+|Executing a SQL statement|[SQLExecDirect Function](../../../odbc/reference/syntax/sqlexecdirect-function.md)|  
 |Executing a prepared SQL statement|[SQLExecute Function](../../../odbc/reference/syntax/sqlexecute-function.md)|  
 |Fetching a single row or a block of data in a forward-only direction|[SQLFetch Function](../../../odbc/reference/syntax/sqlfetch-function.md)|  
 |Closing the cursor on the statement|[SQLFreeStmt Function](../../../odbc/reference/syntax/sqlfreestmt-function.md)|  

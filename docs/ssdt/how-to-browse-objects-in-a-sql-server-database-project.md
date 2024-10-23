@@ -11,7 +11,7 @@ ms.topic: conceptual
 
 # How to: Browse Objects in a SQL Server Database Project
 
-The SQL Server Object Explorer in Visual Studio now contains a dedicated Projects node, under which all SQL Server database projects in your solution are grouped in an SQL Server Management Studio-like hierarchy.  
+The SQL Server Object Explorer in Visual Studio now contains a dedicated Projects node, under which all SQL Server database projects in your solution are grouped in a SQL Server Management Studio-like hierarchy.  
   
 ## To browse objects in a project instance  
   

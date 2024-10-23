@@ -4,7 +4,7 @@ description: This article contains the release notes and supported features for 
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: amitkh, vanto
-ms.date: 10/08/2024
+ms.date: 10/10/2024
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
@@ -85,10 +85,13 @@ If you update existing [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] p
 
 The following table lists the release history for [!INCLUDE [ssSQL19](../includes/sssql19-md.md)].
 
+> [!NOTE]  
+> Any missing GDRs apply to the Windows version only.
+
 | Release                                                                  | Version       | Release date |
 | ------------------------------------------------------------------------ | ------------- | ------------ |
 | [CU 28 GDR 2](/troubleshoot/sql/linux/release-history-2019#CU28-GDR2)    | 15.0.4395.2   | 2024-10-08   |
-| [CU 28 GDR](/troubleshoot/sql/linux/release-history-2019#CU28-GDR)       | 15.0.4390.2   | 2024-09-10   |
+| [CU 28 GDR 1](/troubleshoot/sql/linux/release-history-2019#CU28-GDR1)    | 15.0.4390.2   | 2024-09-10   |
 | [CU 28](/troubleshoot/sql/linux/release-history-2019#CU28)               | 15.0.4385.2   | 2024-08-01   |
 | [CU 27](/troubleshoot/sql/linux/release-history-2019#CU27)               | 15.0.4375.4   | 2024-06-13   |
 | [CU 26](/troubleshoot/sql/linux/release-history-2019#CU26)               | 15.0.4365.2   | 2024-04-11   |
@@ -114,7 +117,7 @@ The following table lists the release history for [!INCLUDE [ssSQL19](../include
 | [CU 10](/troubleshoot/sql/linux/release-history-2019#CU10)               | 15.0.4123.1   | 2021-04-06   |
 | [CU 9](/troubleshoot/sql/linux/release-history-2019#CU9)                 | 15.0.4102.2   | 2021-02-10   |
 | [CU 8 GDR](/troubleshoot/sql/linux/release-history-2019#CU8-GDR)         | 15.0.4083.2   | 2021-01-12   |
-| [GDR 1](/troubleshoot/sql/linux/release-history-2019#GDR1)               | 15.0.2080.9   | 2021-01-12   |
+| [GDR 2](/troubleshoot/sql/linux/release-history-2019#GDR2)               | 15.0.2080.9   | 2021-01-12   |
 | [CU 8](/troubleshoot/sql/linux/release-history-2019#CU8)                 | 15.0.4073.23  | 2020-10-07   |
 | [CU 7 (Removed)](/troubleshoot/sql/releases/sqlserver-2019/cumulativeupdate7) | 15.0.4063.15  | 2020-09-02   |
 | [CU 6](/troubleshoot/sql/linux/release-history-2019#CU6)                 | 15.0.4053.23  | 2020-08-04   |
@@ -124,6 +127,7 @@ The following table lists the release history for [!INCLUDE [ssSQL19](../include
 | [CU 2](/troubleshoot/sql/linux/release-history-2019#CU2)                 | 15.0.4013.40  | 2020-02-13   |
 | [CU 1](/troubleshoot/sql/linux/release-history-2019#CU1)                 | 15.0.4003.23  | 2020-01-07   |
 | [GA](/troubleshoot/sql/linux/release-history-2019#GA)                    | 15.0.2000.5   | 2019-11-04   |
+| [GDR 1](/troubleshoot/sql/linux/release-history-2019#GDR1)               | 15.0.2070.41  | 2019-11-04   |
 
 ## Known issues
 

@@ -5,7 +5,7 @@ author: adbadram
 ms.author: adbadram
 ms.reviewer: mathoma
 ms.date: 06/17/2022
-ms.service: virtual-machines-sql
+ms.service: azure-vm-sql-server
 ms.subservice: deployment
 ms.topic: quickstart
 ms.custom: subject-armqs, mode-arm, devx-track-bicep
@@ -13,7 +13,7 @@ ms.custom: subject-armqs, mode-arm, devx-track-bicep
 
 # Quickstart: Create SQL Server VM using Bicep
 
-This quickstart shows you how to use Bicep to create an SQL Server on Azure Virtual Machine (VM).
+This quickstart shows you how to use Bicep to create a SQL Server on Azure Virtual Machine (VM).
 
 [Bicep](/azure/azure-resource-manager/bicep/overview) is a domain-specific language (DSL) that uses declarative syntax to deploy Azure resources. It provides concise syntax, reliable type safety, and support for code reuse. Bicep offers the best authoring experience for your infrastructure-as-code solutions in Azure. 
 

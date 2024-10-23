@@ -62,9 +62,9 @@ End Function
 |**NativeError**|The provider-specific error number.|  
 |**Number**|A Long Integer that represents the number (listed in the **ErrorValueEnum**) of the error that occurred.|  
 |**Source**|Indicates the name of the object or application that generated an error.|  
-|**SQLState**|A five-character error code that the provider returns during the process of an SQL statement.|  
+|**SQLState**|A five-character error code that the provider returns during the process of a SQL statement.|  
   
- The ADO **Error** object is very similar to the standard Visual Basic **Err** object. Its properties describe the error that occurred. In addition to the number of the error, you also receive two related pieces of information. The **NativeError** property contains an error number specific to the provider you are using. In the previous example, the provider is the Microsoft OLE DB Provider for SQL Server, so **NativeError** will contain errors specific to SQL Server. The **SQLState** property has a five-letter code that describes an error in an SQL statement.  
+ The ADO **Error** object is very similar to the standard Visual Basic **Err** object. Its properties describe the error that occurred. In addition to the number of the error, you also receive two related pieces of information. The **NativeError** property contains an error number specific to the provider you are using. In the previous example, the provider is the Microsoft OLE DB Provider for SQL Server, so **NativeError** will contain errors specific to SQL Server. The **SQLState** property has a five-letter code that describes an error in a SQL statement.  
   
 ## Event-Related Errors  
  The **Error** object is also used when event-related errors occur. You can determine whether an error occurred in the process that raised an ADO event by checking the **Error** object passed as an event parameter.  

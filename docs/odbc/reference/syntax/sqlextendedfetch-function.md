@@ -123,7 +123,7 @@ SQLRETURN SQLExtendedFetch(
 |Performing bulk insert, update, or delete operations|[SQLBulkOperations Function](../../../odbc/reference/syntax/sqlbulkoperations-function.md)|  
 |Canceling statement processing|[SQLCancel Function](../../../odbc/reference/syntax/sqlcancel-function.md)|  
 |Returning information about a column in a result set|[SQLDescribeCol Function](../../../odbc/reference/syntax/sqldescribecol-function.md)|  
-|Executing an SQL statement|[SQLExecDirect Function](../../../odbc/reference/syntax/sqlexecdirect-function.md)|  
+|Executing a SQL statement|[SQLExecDirect Function](../../../odbc/reference/syntax/sqlexecdirect-function.md)|  
 |Executing a prepared SQL statement|[SQLExecute Function](../../../odbc/reference/syntax/sqlexecute-function.md)|  
 |Returning the number of result set columns|[SQLNumResultCols Function](../../../odbc/reference/syntax/sqlnumresultcols-function.md)|  
 |Positioning the cursor, refreshing data in the rowset, or updating or deleting data in the result set|[SQLSetPos Function](../../../odbc/reference/syntax/sqlsetpos-function.md)|  

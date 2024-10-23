@@ -25,7 +25,7 @@ The final technique for sending SQL statements to the DBMS is through a call-lev
   
 1.  The application calls a CLI function to connect to the DBMS.  
   
-2.  The application builds an SQL statement and places it in a buffer. It then calls one or more CLI functions to send the statement to the DBMS for preparation and execution.  
+2.  The application builds a SQL statement and places it in a buffer. It then calls one or more CLI functions to send the statement to the DBMS for preparation and execution.  
   
 3.  If the statement is a SELECT statement, the application calls a CLI function to return the results in application buffers. Typically, this function returns one row or one column of data at a time.  
   

@@ -2846,13 +2846,13 @@
       - name: Using statements with SQL
         href: ../connect/jdbc/using-statements-with-sql.md
         items:
-        - name: Using an SQL statement with no parameters
+        - name: Using a SQL statement with no parameters
           href: ../connect/jdbc/using-an-sql-statement-with-no-parameters.md
-        - name: Using an SQL statement with parameters
+        - name: Using a SQL statement with parameters
           href: ../connect/jdbc/using-an-sql-statement-with-parameters.md
-        - name: Using an SQL statement to modify database objects
+        - name: Using a SQL statement to modify database objects
           href: ../connect/jdbc/using-an-sql-statement-to-modify-database-objects.md
-        - name: Using an SQL statement to modify data
+        - name: Using a SQL statement to modify data
           href: ../connect/jdbc/using-an-sql-statement-to-modify-data.md
       - name: Statements with stored procedures
         items:
@@ -3219,7 +3219,7 @@
               href: ../odbc/reference/develop-app/step-1-connect-to-the-data-source.md
             - name: 'Step 2: Initialize the Application'
               href: ../odbc/reference/develop-app/step-2-initialize-the-application.md
-            - name: 'Step 3: Build and Execute an SQL Statement'
+            - name: 'Step 3: Build and Execute a SQL Statement'
               href: ../odbc/reference/develop-app/step-3-build-and-execute-an-sql-statement.md
             - name: 'Step 4a: Fetch the Results'
               href: ../odbc/reference/develop-app/step-4a-fetch-the-results.md
@@ -3314,7 +3314,7 @@
             - name: Interoperability of SQL Statements
               href: ../odbc/reference/develop-app/interoperability-of-sql-statements.md
               items:
-              - name: Choosing an SQL Grammar
+              - name: Choosing a SQL Grammar
                 href: ../odbc/reference/develop-app/choosing-an-sql-grammar.md
               - name: Constructing Interoperable SQL Statements
                 href: ../odbc/reference/develop-app/constructing-interoperable-sql-statements.md

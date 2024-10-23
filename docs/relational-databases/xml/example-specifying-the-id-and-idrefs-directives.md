@@ -1,6 +1,6 @@
 ---
 title: "Example: Specifying the ID and IDREFS Directives"
-description: Learn how specifying the ID and IDREFS directives in an SQL query can enable intra-document links.
+description: Learn how specifying the ID and IDREFS directives in a SQL query can enable intra-document links.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: randolphwest

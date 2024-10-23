@@ -69,7 +69,7 @@ SQLRETURN SQLRowCount(
   
 |For information about|See|  
 |---------------------------|---------|  
-|Executing an SQL statement|[SQLExecDirect Function](../../../odbc/reference/syntax/sqlexecdirect-function.md)|  
+|Executing a SQL statement|[SQLExecDirect Function](../../../odbc/reference/syntax/sqlexecdirect-function.md)|  
 |Executing a prepared SQL statement|[SQLExecute Function](../../../odbc/reference/syntax/sqlexecute-function.md)|  
   
 ## See Also  

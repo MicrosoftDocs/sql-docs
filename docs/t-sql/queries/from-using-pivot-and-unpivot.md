@@ -4,7 +4,7 @@ description: Learn about the Transact-SQL PIVOT and UNPIVOT relational operators
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: wiassaf, randolphwest
-ms.date: 08/12/2024
+ms.date: 10/01/2024
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -23,15 +23,18 @@ helpviewer_keywords:
   - "rotating columns"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric"
 ---
 # FROM - Using PIVOT and UNPIVOT
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw.md)]
 
 You can use the `PIVOT` and `UNPIVOT` relational operators to change a table-valued expression into another table. `PIVOT` rotates a table-valued expression by turning the unique values from one column in the expression into multiple columns in the output. `PIVOT` also runs aggregations where they're required on any remaining column values that are wanted in the final output. `UNPIVOT` carries out the opposite operation to `PIVOT`, by rotating columns of a table-valued expression into column values.
 
 The syntax for `PIVOT` is easier and more readable than the syntax that might otherwise be specified in a complex series of `SELECT...CASE` statements. For a complete description of the syntax for `PIVOT`, see [FROM clause](from-transact-sql.md).
+
+> [!NOTE]
+> Repeated use of `PIVOT`/`UNPIVOT` within a single T-SQL statement can negatively impact query performance.
 
 [!INCLUDE [article-uses-adventureworks](../../includes/article-uses-adventureworks.md)]
 

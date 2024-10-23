@@ -92,12 +92,12 @@ SQLRETURN SQLDescribeParam(
 ## Comments  
  Parameter markers are numbered in increasing parameter order, starting with 1, in the order they appear in the SQL statement.  
   
- **SQLDescribeParam** does not return the type (input, input/output, or output) of a parameter in an SQL statement. Except in calls to procedures, all parameters in SQL statements are input parameters. To determine the type of each parameter in a call to a procedure, an application calls **SQLProcedureColumns**.  
+ **SQLDescribeParam** does not return the type (input, input/output, or output) of a parameter in a SQL statement. Except in calls to procedures, all parameters in SQL statements are input parameters. To determine the type of each parameter in a call to a procedure, an application calls **SQLProcedureColumns**.  
   
  For more information, see [Describing Parameters](../../../odbc/reference/develop-app/describing-parameters.md).  
   
 ## Code Example  
- The following example prompts the user for an SQL statement and then prepares that statement. Next, it calls **SQLNumParams** to determine whether the statement contains any parameters. If the statement contains parameters, it calls **SQLDescribeParam** to describe those parameters and **SQLBindParameter** to bind them. Finally, it prompts the user for the values of any parameters and then executes the statement.  
+ The following example prompts the user for a SQL statement and then prepares that statement. Next, it calls **SQLNumParams** to determine whether the statement contains any parameters. If the statement contains parameters, it calls **SQLDescribeParam** to describe those parameters and **SQLBindParameter** to bind them. Finally, it prompts the user for the values of any parameters and then executes the statement.  
   
 ```cpp  
 SQLCHAR       Statement[100];  
@@ -105,7 +105,7 @@ SQLSMALLINT   NumParams, i, DataType, DecimalDigits, Nullable;
 SQLUINTEGER   ParamSize;  
 SQLHSTMT      hstmt;  
   
-// Prompt the user for an SQL statement and prepare it.  
+// Prompt the user for a SQL statement and prepare it.  
 GetSQLStatement(Statement);  
 SQLPrepare(hstmt, Statement, SQL_NTS);  
   

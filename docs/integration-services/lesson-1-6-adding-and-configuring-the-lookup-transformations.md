@@ -14,7 +14,7 @@ ms.topic: tutorial
 
 
 
-After you have configured the Flat File source to extract data from the source file, you define the Lookup transformations needed to obtain the values for **CurrencyKey** and **DateKey**. A Lookup transformation performs a lookup by joining data in the specified input column to a column in a reference dataset. The reference dataset can be an existing table or view, a new table, or the result of an SQL statement. In this tutorial, the Lookup transformation uses an OLE DB connection manager to connect to the database that contains the source data of the reference dataset.  
+After you have configured the Flat File source to extract data from the source file, you define the Lookup transformations needed to obtain the values for **CurrencyKey** and **DateKey**. A Lookup transformation performs a lookup by joining data in the specified input column to a column in a reference dataset. The reference dataset can be an existing table or view, a new table, or the result of a SQL statement. In this tutorial, the Lookup transformation uses an OLE DB connection manager to connect to the database that contains the source data of the reference dataset.  
   
 > [!NOTE]  
 > You can also configure the Lookup transformation to connect to a cache that contains the reference dataset. For more information, see [Lookup transformation](../integration-services/data-flow/transformations/lookup-transformation.md).  
@@ -47,7 +47,7 @@ In both cases, the Lookup transformation uses the OLE DB connection manager you 
   
     1.  In the **OLE DB connection manager** dialog box, ensure that **localhost.AdventureWorksDW2022** is displayed.  
   
-    2.  Select **Use results of an SQL query**, and then enter or paste the following SQL statement:  
+    2.  Select **Use results of a SQL query**, and then enter or paste the following SQL statement:  
   
         ```sql
         SELECT * FROM [dbo].[DimCurrency]

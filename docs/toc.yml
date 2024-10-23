@@ -3364,7 +3364,7 @@ items:
         href: relational-databases/native-client-odbc-queries/executing-statements/procedures.md
       - name: Allocating a Statement Handle
         href: relational-databases/native-client-odbc-queries/allocating-a-statement-handle.md
-      - name: Constructing an SQL Statement
+      - name: Constructing a SQL Statement
         href: relational-databases/native-client-odbc-queries/constructing-an-sql-statement-odbc.md
       - name: Constructing SQL Statements for Cursors
         href: relational-databases/native-client-odbc-queries/constructing-sql-statements-for-cursors.md
@@ -4425,8 +4425,6 @@ items:
       href: database-engine/install-windows/supported-version-and-edition-upgrades-2017.md
     - name: Supported Version & Edition Upgrades SQL Server 2016
       href: database-engine/install-windows/supported-version-and-edition-upgrades.md?view=sql-server-2016&preserve-view=true
-    - name: Prepare for upgrade by running Data Migration Assistant
-      href: database-engine/install-windows/prepare-for-upgrade-by-running-data-migration-assistant.md
     - name: Analysis Services
       href: database-engine/install-windows/upgrade-analysis-services.md
     - name: Data Quality Services
@@ -10456,6 +10454,8 @@ items:
           href: sql-server/azure-arc/troubleshoot-telemetry-endpoint.md
         - name: Troubleshoot best practices assessment
           href: sql-server/azure-arc/troubleshoot-assessment.md
+        - name: Known issues
+          href: sql-server/azure-arc/known-issues.md
     - name: Azure Arc-enabled data services >
       href: /azure/azure-arc/data/overview
 

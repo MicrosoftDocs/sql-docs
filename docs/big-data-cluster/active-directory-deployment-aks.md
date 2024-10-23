@@ -28,11 +28,7 @@ There are a few ways to deploy a big data cluster in AD mode in AKS.  This artic
 
 * **Extend your on-premises Active Directory domain to Azure.** This method [enables your Active Directory environment](/azure/architecture/reference-architectures/identity/adds-extend-domain) to provide distributed authentication services using Active Directory Domain Services (AD DS) on Azure. You replicate your on-premises Active Directory Domain Services (AD DS) to reduce the latency caused by sending authentication requests from the cloud back to on-premises AD DS. A typical use-case for this solution is when your application is hosted partly on-premises and partly in Azure and your authentication requests need to travel back and forth.
 
-   See how to deploy this solution step by step [in this reference architecture](https://github.com/mspnp/identity-reference-architectures/tree/master/adds-extend-domain).
-
 * **Extend the Active Directory Domain Services (AD DS) resource forest to Azure.** In this architecture, you create a new domain in Azure that is trusted by your on-premises AD forest. This architecture shows a [one-way trust from the domain in Azure to the on-premises forest](/azure/architecture/reference-architectures/identity/adds-forest).
-
-   The trust allows on-premises users access resources in the domain in Azure. See how to deploy this solution step by step [in this reference architecture](https://github.com/mspnp/identity-reference-architectures/tree/master/adds-forest).
 
 The reference architectures described above allow you to create a landing zone, which has all resources to be deployed from scratch or any additional workaround based on existing architecture. In addition to those reference architectures, you should deploy the big data cluster in an AKS cluster on a separate subnet that stays in your target VNet or a peered VNet.
 

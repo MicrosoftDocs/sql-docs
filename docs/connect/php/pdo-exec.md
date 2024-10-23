@@ -11,7 +11,7 @@ ms.topic: reference
 # PDO::exec
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Prepares and executes an SQL statement in a single function call, returning the number of rows affected by the statement.  
+Prepares and executes a SQL statement in a single function call, returning the number of rows affected by the statement.  
   
 ## Syntax  
   

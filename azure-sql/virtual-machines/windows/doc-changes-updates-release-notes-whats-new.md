@@ -5,7 +5,7 @@ author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest, mathoma
 ms.date: 09/17/2024
-ms.service: virtual-machines-sql
+ms.service: azure-vm-sql-server
 ms.subservice: service-overview
 ms.topic: whats-new
 ms.custom: 

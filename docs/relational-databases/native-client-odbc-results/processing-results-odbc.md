@@ -1,6 +1,6 @@
 ---
 title: "Processing Results (ODBC)"
-description: Find out about processing data that SQL Server returns when an ODBC application submits an SQL statement.
+description: Find out about processing data that SQL Server returns when an ODBC application submits a SQL statement.
 author: markingmyname
 ms.author: maghan
 ms.date: "03/16/2017"
@@ -43,7 +43,7 @@ helpviewer_keywords:
   
  The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver returns SQL_ERROR on a RAISERROR with a severity of 11 or higher. If the severity of the RAISERROR is 19 or higher, the connection is also dropped.  
   
- To process the result sets from an SQL statement, the application:  
+ To process the result sets from a SQL statement, the application:  
   
 -   Determines the characteristics of the result set.  
   

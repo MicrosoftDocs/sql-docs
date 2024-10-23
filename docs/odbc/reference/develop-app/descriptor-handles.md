@@ -22,11 +22,11 @@ helpviewer_keywords:
   - "application row descriptor [ODBC]"
 ---
 # Descriptor Handles
-A *descriptor* is a collection of metadata that describes the parameters of an SQL statement or the columns of a result set, as seen by the application or driver (also known as the *implementation*). Thus, a descriptor can fill any of four roles:  
+A *descriptor* is a collection of metadata that describes the parameters of a SQL statement or the columns of a result set, as seen by the application or driver (also known as the *implementation*). Thus, a descriptor can fill any of four roles:  
   
--   **Application Parameter Descriptor (APD).** Contains information about the application buffers bound to the parameters in an SQL statement, such as their addresses, lengths, and C data types.  
+-   **Application Parameter Descriptor (APD).** Contains information about the application buffers bound to the parameters in a SQL statement, such as their addresses, lengths, and C data types.  
   
--   **Implementation Parameter Descriptor (IPD).** Contains information about the parameters in an SQL statement, such as their SQL data types, lengths, and nullability.  
+-   **Implementation Parameter Descriptor (IPD).** Contains information about the parameters in a SQL statement, such as their SQL data types, lengths, and nullability.  
   
 -   **Application Row Descriptor (ARD).** Contains information about the application buffers bound to the columns in a result set, such as their addresses, lengths, and C data types.  
   

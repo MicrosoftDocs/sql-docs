@@ -21,7 +21,7 @@ Applications call **SQLGetDiagRec** or **SQLGetDiagField** to retrieve diagnosti
   
  Applications retrieve the SQLSTATE, native error code, and diagnostic message in a single call by calling **SQLGetDiagRec**; **SQLGetDiagRec** cannot be used to retrieve information from the header record.  
   
- For example, the following code prompts the user for an SQL statement and executes it. If any diagnostic information was returned, it calls **SQLGetDiagField** to get the number of status records and **SQLGetDiagRec** to get the SQLSTATE, native error code, and diagnostic message from those records.  
+ For example, the following code prompts the user for a SQL statement and executes it. If any diagnostic information was returned, it calls **SQLGetDiagField** to get the number of status records and **SQLGetDiagRec** to get the SQLSTATE, native error code, and diagnostic message from those records.  
   
 ```  
 SQLCHAR       SqlState[6], SQLStmt[100], Msg[SQL_MAX_MESSAGE_LENGTH];  
@@ -30,7 +30,7 @@ SQLSMALLINT   i, MsgLen;
 SQLRETURN     rc1, rc2;  
 SQLHSTMT      hstmt;  
   
-// Prompt the user for an SQL statement.  
+// Prompt the user for a SQL statement.  
 GetSQLStmt(SQLStmt);  
   
 // Execute the SQL statement and return any errors or warnings.  

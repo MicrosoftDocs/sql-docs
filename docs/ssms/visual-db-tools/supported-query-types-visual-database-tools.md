@@ -24,20 +24,20 @@ helpviewer_keywords:
 [!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]
 You can create the following types of queries in the Diagram and Criteria panes (the graphical panes) of the [Query and View Designer](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md):  
   
--   **Select query** Retrieves data from one or more tables or views. This type of query creates an SQL SELECT statement.  
+-   **Select query** Retrieves data from one or more tables or views. This type of query creates a SQL SELECT statement.  
   
--   **Insert Results** Creates new rows by copying existing rows from one table into another, or into the same table as new rows. This type of query creates an SQL INSERT INTO...SELECT statement.  
+-   **Insert Results** Creates new rows by copying existing rows from one table into another, or into the same table as new rows. This type of query creates a SQL INSERT INTO...SELECT statement.  
   
--   **Insert Values** Creates a new row and inserts values into specified columns. This type of query creates an SQL INSERT INTO...VALUES statement.  
+-   **Insert Values** Creates a new row and inserts values into specified columns. This type of query creates a SQL INSERT INTO...VALUES statement.  
   
--   **Update query** Changes the values of individual columns in one or more existing rows in a table. This type of query creates an SQL UPDATE...SET statement.  
+-   **Update query** Changes the values of individual columns in one or more existing rows in a table. This type of query creates a SQL UPDATE...SET statement.  
   
--   **Delete query** Removes one or more rows from a table. This type of query creates an SQL DELETE statement.  
+-   **Delete query** Removes one or more rows from a table. This type of query creates a SQL DELETE statement.  
   
     > [!NOTE]  
     > A Delete query removes entire rows from the table. If you want to delete values from individual data columns, use an Update query.  
   
--   **Make Table query** Creates a new table and creates rows in it by copying the results of a query into it. This type of query creates an SQL SELECT...INTO statement.  
+-   **Make Table query** Creates a new table and creates rows in it by copying the results of a query into it. This type of query creates a SQL SELECT...INTO statement.  
   
 In addition to the queries you can create using the graphical panes, you can enter any SQL statement into the SQL pane, such as Union queries.  
   

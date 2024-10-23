@@ -11,7 +11,7 @@ ms.topic: reference
 # SQLServerException Class
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Represents an unsuccessful or incomplete running of an SQL statement.  
+  Represents an unsuccessful or incomplete running of a SQL statement.  
   
  **Package:** com.microsoft.sqlserver.jdbc  
   

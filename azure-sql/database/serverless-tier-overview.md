@@ -4,7 +4,7 @@ description: This article describes the new serverless compute tier and compares
 author: oslake
 ms.author: moslake
 ms.reviewer: wiassaf, mathoma
-ms.date: 10/07/2024
+ms.date: 10/11/2024
 ms.service: azure-sql-database
 ms.subservice: service-overview
 ms.topic: conceptual
@@ -340,8 +340,8 @@ CREATE DATABASE testdb
 Create a new Hyperscale serverless database with the following T-SQL example: 
 
 ```sql
-ALTER DATABASE testdb  
-MODIFY ( SERVICE_OBJECTIVE = 'HS_S_Gen5_2') ; 
+CREATE DATABASE testdb
+( EDITION = 'Hyperscale', SERVICE_OBJECTIVE = 'HS_S_Gen5_2') ; 
 ```
 
 ---

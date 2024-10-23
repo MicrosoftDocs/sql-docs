@@ -3,7 +3,7 @@ title: "sys.fn_xe_file_target_read_file (Transact-SQL)"
 description: "The sys.fn_xe_file_target_read_file system function reads files created by the Extended Events asynchronous file target."
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 02/22/2024
+ms.date: 10/10/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -46,7 +46,7 @@ The path to the files to read. *path* can contain wildcards and include the name
 
 The path to the metadata file that corresponds to the file or files specified by the *path* argument. *mdpath* is **nvarchar(260)** with no default.
 
-In [!INCLUDE [sssql11-md](../../includes/sssql11-md.md)] and later versions, you don't need this parameter. It was retained for backward compatibility, for log files generated in previous versions of SQL Server. Starting with [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)], this parameter can be given as `NULL`, as `.xem` files are no longer used.
+In [!INCLUDE [sssql11-md](../../includes/sssql11-md.md)] and later versions, you don't need this parameter. It was retained for backward compatibility, for log files generated in previous versions of SQL Server. In [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)] and later versions, this parameter can be given as `NULL`, as `.xem` files are no longer used.
 
 #### *initial_file_name*
 
@@ -73,13 +73,13 @@ Used to specify last offset read previously and skips all events up to the offse
 
 ## Remarks
 
-Reading large result sets by executing `sys.fn_xe_file_target_read_file` in [!INCLUDE [ssManStudio](../../includes/ssmanstudio-md.md)] might result in an error. Use the **Results to File** mode (in [!INCLUDE [ssmanstudiofull-md](../../includes/ssmanstudiofull-md.md)], **Ctrl+Shift+F**) to export large result sets to a human-readable file, to  read the file with another tool instead.
+Reading large result sets by executing `sys.fn_xe_file_target_read_file` in [!INCLUDE [ssManStudio](../../includes/ssmanstudio-md.md)] might result in an error. Use the **Results to File** mode (in [!INCLUDE [ssmanstudiofull-md](../../includes/ssmanstudiofull-md.md)], **Ctrl+Shift+F**) to export large result sets to a human-readable file, to read the file with another tool instead.
 
 [!INCLUDE [sql2008-md](../../includes/sql2008-md.md)] and [!INCLUDE [sql2008r2](../../includes/sql2008r2-md.md)] accept trace results generated in XEL and XEM format. [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)] Extended Events only support trace results in XEL format. We recommend that you use [!INCLUDE [ssManStudio](../../includes/ssmanstudio-md.md)] to read trace results in XEL format.
 
 ### Azure SQL
 
-In [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)] or [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], store `.xel` files in Azure Blob Storage. You can use `sys.fn_xe_file_target_read_file` to read from extended event sessions you create yourself and store in Azure Blob Storage. For example walkthrough, review [Event File target code for extended events in Azure SQL Database and Azure SQL Managed Instance](/azure/azure-sql/database/xevent-code-event-file).
+In [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)] or [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], store `.xel` files in Azure Blob Storage. You can use `sys.fn_xe_file_target_read_file` to read from extended event sessions you create yourself and store in Azure Blob Storage. For example walkthrough, review [Create an event session with an event_file target in Azure Storage](/azure/azure-sql/database/xevent-code-event-file).
 
 If you specify wildcard and/or a path for a local file system, you receive an error message similar to:
 
@@ -90,7 +90,9 @@ A valid URL beginning with 'https://' is required as value for any filepath spec
 
 ## Permissions
 
-Requires `VIEW SERVER STATE` permission on the server.
+In [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] and previous versions, requires `VIEW SERVER STATE` permission on the server.
+
+In [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later versions, requires `VIEW SERVER PERFORMANCE STATE` permission on the server.
 
 ## Examples
 
@@ -115,7 +117,7 @@ In [!INCLUDE [sssql17](../../includes/sssql17-md.md)] and later versions, the fo
 ```sql
 SELECT *
 FROM sys.fn_xe_file_target_read_file('system_health*.xel', NULL, NULL, NULL)
-WHERE timestamp_utc > DATEADD(DAY, -1, GETUTCDATE());
+WHERE CAST(timestamp_utc AS DATETIME2(7)) > DATEADD(DAY, -1, GETUTCDATE());
 ```
 
 ## Related content

@@ -34,13 +34,13 @@ The following table lists ODBC functions, grouped by type of task, and includes 
 ||[SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)|ISO 92|Sets a single descriptor field.|  
 ||[SQLSetDescRec](../../../odbc/reference/syntax/sqlsetdescrec-function.md)|ISO 92|Sets multiple descriptor fields.|  
 ||[SQLCopyDesc](../../../odbc/reference/syntax/sqlcopydesc-function.md)|ISO 92|Copies descriptor information from one descriptor handle to another.|  
-|Preparing SQL requests|[SQLPrepare](../../../odbc/reference/syntax/sqlprepare-function.md)|ISO 92|Prepares an SQL statement for later execution.|  
-||[SQLBindParameter](../../../odbc/reference/syntax/sqlbindparameter-function.md)|ODBC|Assigns storage for a parameter in an SQL statement.|  
+|Preparing SQL requests|[SQLPrepare](../../../odbc/reference/syntax/sqlprepare-function.md)|ISO 92|Prepares a SQL statement for later execution.|  
+||[SQLBindParameter](../../../odbc/reference/syntax/sqlbindparameter-function.md)|ODBC|Assigns storage for a parameter in a SQL statement.|  
 ||[SQLGetCursorName](../../../odbc/reference/syntax/sqlgetcursorname-function.md)|ISO 92|Returns the cursor name associated with a statement handle.|  
 ||[SQLSetCursorName](../../../odbc/reference/syntax/sqlsetcursorname-function.md)|ISO 92|Specifies a cursor name.|  
 ||[SQLSetScrollOptions](../../../odbc/reference/syntax/sqlsetscrolloptions-function.md)|ODBC|Sets options that control cursor behavior.|  
 |Submitting requests|[SQLExecute](../../../odbc/reference/syntax/sqlexecute-function.md)<br /><br /> [SQLExecDirect](../../../odbc/reference/syntax/sqlexecdirect-function.md)|ISO 92<br /><br /> ISO 92|Executes a prepared statement.<br /><br /> Executes a statement.|  
-||[SQLNativeSql](../../../odbc/reference/syntax/sqlnativesql-function.md)|ODBC|Returns the text of an SQL statement as translated by the driver.|  
+||[SQLNativeSql](../../../odbc/reference/syntax/sqlnativesql-function.md)|ODBC|Returns the text of a SQL statement as translated by the driver.|  
 ||[SQLDescribeParam](../../../odbc/reference/syntax/sqldescribeparam-function.md)|ODBC|Returns the description for a specific parameter in a statement.|  
 ||[SQLNumParams](../../../odbc/reference/syntax/sqlnumparams-function.md)|ISO 92|Returns the number of parameters in a statement.|  
 ||[SQLParamData](../../../odbc/reference/syntax/sqlparamdata-function.md)|ISO 92|Used in conjunction with **SQLPutData** to supply parameter data at execution time. (Useful for long data values.)|  

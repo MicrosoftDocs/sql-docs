@@ -76,7 +76,7 @@ You can start, disable, or cancel a job through the Azure portal. The Azure port
 
 ### Cost of the elastic job agent
 
-The job database is billed at the same rate as any database in Azure SQL Database. For the cost of the Elastic job agent, see [Azure Pricing Calculator](https://azure.microsoft.com/pricing/calculator/).
+The job database is billed at the same rate as any database in Azure SQL Database. For the cost of the Elastic job agent, it is based on fixed pricing of the service tier selected for the Job Agent. See [Azure SQL Database pricing page](https://azure.microsoft.com/pricing/calculator/](https://azure.microsoft.com/pricing/details/azure-sql-database/single/?msockid=362b64f9021960ca3005705703a3617f)).
 
 ## Elastic job database
 

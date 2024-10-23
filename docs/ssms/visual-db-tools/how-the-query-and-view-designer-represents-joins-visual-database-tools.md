@@ -46,7 +46,7 @@ The symbols on the ends of the join line indicate the type of join. The followin
 |:::image type="icon" source="../../ssms/visual-db-tools/media/dv3wbio.gif":::|Query and View Designer cannot determine the join type. This situation occurs most often when you have created a join manually.|  
   
 ## SQL Pane  
-A join can be expressed in a number of ways in an SQL statement. The exact syntax depends on the database you are using and on how you have defined the join.  
+A join can be expressed in a number of ways in a SQL statement. The exact syntax depends on the database you are using and on how you have defined the join.  
   
 Syntax options for joining tables include:  
   

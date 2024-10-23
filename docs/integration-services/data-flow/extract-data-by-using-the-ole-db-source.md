@@ -37,7 +37,7 @@ helpviewer_keywords:
   
     -   **Table name or view name variable** Select the user-defined variable that contains the name of a table or view in the database to which the OLE DB connection manager connects.  
   
-    -   **SQL command** Type an SQL command or click **Build Query** to write an SQL command using the **Query Builder**.  
+    -   **SQL command** Type a SQL command or click **Build Query** to write a SQL command using the **Query Builder**.  
   
         > [!NOTE]  
         >  The command can include parameters. For more information, see [Map Query Parameters to Variables in a Data Flow Component](../../integration-services/data-flow/map-query-parameters-to-variables-in-a-data-flow-component.md).  

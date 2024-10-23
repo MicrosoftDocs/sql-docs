@@ -93,7 +93,7 @@ Microsoft.Jet.OLEDB.4.0
 |Jet OLEDB:Partial Bulk Ops (DBPROP_JETOLEDB_BULKPARTIAL)|Indicates Jet's behavior when SQL DML operations fail.|
 |Jet OLEDB:Pass Through Query Bulk-Op (DBPROP_JETOLEDB_PASSTHROUGHBULKOP)|Indicates whether queries that do not return a **Recordset** are passed unaltered to the data source.|
 |Jet OLEDB:Pass Through Query Connect String (DBPROP_JETOLEDB_ODBCPASSTHROUGHCONNECTSTRING)|Indicates the Jet connect string used to connect to a remote data store. This value is ignored unless **Jet OLEDB:ODBC Pass-Through Statement** is True.|
-|Jet OLEDB:Stored Query (DBPROP_JETOLEDB_STOREDQUERY)|Indicates whether the command text should be interpreted as a stored query instead of an SQL command.|
+|Jet OLEDB:Stored Query (DBPROP_JETOLEDB_STOREDQUERY)|Indicates whether the command text should be interpreted as a stored query instead of a SQL command.|
 |Jet OLEDB:Validate Rules On Set (DBPROP_JETOLEDB_VALIDATEONSET)|Indicates whether the Jet validation rules are evaluated when column data is set or when the changes are committed to the database.|
 
  By default, the OLE DB Provider for Microsoft Jet opens Microsoft Jet databases in read/write mode. To open a database in read-only mode, set the [Mode](../../reference/ado-api/mode-property-ado.md) property on the ADO **Connection** object to **adModeRead**.

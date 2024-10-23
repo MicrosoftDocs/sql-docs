@@ -68,7 +68,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
  [STGeomCollFromText &#40;geography Data Type&#41;](../../t-sql/spatial-geography/stgeomcollfromtext-geography-data-type.md)  
   
 ###  <a name="wkb"></a> Constructing a geography Instance from Well-Known Binary Input  
- WKB is a binary format specified by the OGC that permits **Geography** data to be exchanged between a client application and an SQL database. The following functions accept WKB input to construct geography instances:  
+ WKB is a binary format specified by the OGC that permits **Geography** data to be exchanged between a client application and a SQL database. The following functions accept WKB input to construct geography instances:  
   
  **To construct any type of geography instance from WKB input**  
  [STGeomFromWKB &#40;geography Data Type&#41;](../../t-sql/spatial-geography/stgeomfromwkb-geography-data-type.md)  

@@ -304,7 +304,7 @@ The following table summarizes the major factors observed with this type of latc
 
 ### Latch contention on small tables with a non-clustered index and random inserts (queue table)
 
-This scenario is typically seen when an SQL table is used as a temporary queue (for example, in an asynchronous messaging system).
+This scenario is typically seen when a SQL table is used as a temporary queue (for example, in an asynchronous messaging system).
 
 In this scenario exclusive (EX) and shared (SH) latch contention can occur under the following conditions:
 

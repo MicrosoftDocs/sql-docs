@@ -46466,6 +46466,11 @@
       "redirect_document_id": true
     },
     {
+      "source_path": "docs/reporting-services/tools/tutorial-how-to-locate-and-start-reporting-services-tools-ssrs.md",
+      "redirect_url": "/sql/reporting-services/tools/reporting-services-tools",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "docs/release-notes/microsoft-sql-server.md",
       "redirect_url": "/sql/sql-server/sql-server-technical-documentation",
       "redirect_document_id": false
@@ -52136,11 +52141,6 @@
       "redirect_document_id": true
     },
     {
-      "source_path": "ssma/access/save-metadata-acesstosql.md",
-      "redirect_url": "/sql/ssma/access/save-metadata-accesstosql",
-      "redirect_document_id": true
-    },
-    {
       "source_path": "docs/big-data-cluster/data-ingestion-restore-databse.md",
       "redirect_url": "/sql/big-data-cluster/data-ingestion-restore-database",
       "redirect_document_id": true
@@ -56261,9 +56261,9 @@
       "redirect_document_id": true
     },
     {
-      "source_path": "docs/ssma/oracle/legal-notice-ssma-for-oracle.md",
-      "redirect_url": "/sql/ssma/sql-server-migration-assistant",
-      "redirect_document_id": false
+      "source_path": "ssma/access/save-metadata-acesstosql.md",
+      "redirect_url": "/sql/ssma/access/save-metadata-accesstosql",
+      "redirect_document_id": true
     },
     {
       "source_path": "docs/ssma/access/legal-notice-ssma-for-access.md",
@@ -56286,9 +56286,84 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "docs/ssma/oracle/legal-notice-ssma-for-oracle.md",
+      "redirect_url": "/sql/ssma/sql-server-migration-assistant",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "docs/ssma/oracle/shortcut-keys-oracle-to-sql.md",
       "redirect_url": "/sql/ssma/oracle/menu-commands-and-other-shortcut-keys-oracle-to-sql",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/ssma/access/index.md",
+      "redirect_url": "/sql/ssma/access/installing-sql-server-migration-assistant-for-access-accesstosql",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssma/db2/index.md",
+      "redirect_url": "/sql/ssma/db2/installing-ssma-for-db2-db2tosql",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssma/index.md",
+      "redirect_url": "/sql/ssma/sql-server-migration-assistant",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssma/mysql/index.md",
+      "redirect_url": "/sql/ssma/mysql/installing-ssma-for-mysql-mysqltosql",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssma/oracle/index.md",
+      "redirect_url": "/sql/ssma/oracle/installing-ssma-for-oracle-oracletosql",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssma/sybase/index.md",
+      "redirect_url": "/sql/ssma/sybase/installing-ssma-for-sybase-sybasetosql",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssma/db2/connecting-to-sql-server-db2etosql.md",
+      "redirect_url": "/sql/ssma/db2/connecting-to-sql-server-db2tosql",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/ssma/db2/working-with-ssma-for-oracle-console-db2tosql.md",
+      "redirect_url": "/sql/ssma/db2/working-with-ssma-for-db2-console-db2tosql",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssma/db2/shortcut-keys-db2tosql.md",
+      "redirect_url": "/sql/ssma/db2/menu-commands-and-other-shortcut-keys-db2tosql",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssma/db2/troubleshooting-db2tosql.md",
+      "redirect_url": "/sql/ssma/db2/sql-server-migration-assistant-for-db2-db2tosql",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssma/db2/installing-ssma-components-on-sql-server-db2tosql.md",
+      "redirect_url": "/sql/ssma/db2/installing-ssma-for-db2-client-db2tosql",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssma/db2/removing-ssma-for-db2-components-db2tosql.md",
+      "redirect_url": "/sql/ssma/db2/installing-ssma-for-db2-client-db2tosql",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssma/db2/installing-ssma-for-db2-db2tosql.md",
+      "redirect_url": "/sql/ssma/db2/installing-ssma-for-db2-client-db2tosql",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/database-engine/install-windows/prepare-for-upgrade-by-running-data-migration-assistant.md",
+      "redirect_url": "/sql/ssma/sql-server-migration-assistant",
+      "redirect_document_id": false
     },
     {
       "source_path": "docs/2014/analysis-services/data-mining/index.md",
@@ -58546,36 +58621,6 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "docs/ssma/access/index.md",
-      "redirect_url": "/sql/ssma/access/installing-sql-server-migration-assistant-for-access-accesstosql",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/ssma/db2/index.md",
-      "redirect_url": "/sql/ssma/db2/installing-ssma-for-db2-db2tosql",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/ssma/index.md",
-      "redirect_url": "/sql/ssma/sql-server-migration-assistant",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/ssma/mysql/index.md",
-      "redirect_url": "/sql/ssma/mysql/installing-ssma-for-mysql-mysqltosql",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/ssma/oracle/index.md",
-      "redirect_url": "/sql/ssma/oracle/installing-ssma-for-oracle-oracletosql",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/ssma/sybase/index.md",
-      "redirect_url": "/sql/ssma/sybase/installing-ssma-for-sybase-sybasetosql",
-      "redirect_document_id": false
-    },
-    {
       "source_path": "docs/t-sql/data-types/index.md",
       "redirect_url": "/sql/t-sql/data-types/data-types-transact-sql",
       "redirect_document_id": false
@@ -58758,11 +58803,6 @@
     {
       "source_path": "docs/linux/sql-server-linux-configure-docker.md",
       "redirect_url": "/sql/linux/sql-server-linux-docker-container-deployment",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "docs/ssma/db2/connecting-to-sql-server-db2etosql.md",
-      "redirect_url": "/sql/ssma/db2/connecting-to-sql-server-db2tosql",
       "redirect_document_id": true
     },
     {
@@ -59063,11 +59103,6 @@
     {
       "source_path": "docs/relational-databases/performance/parameter-sensitivity-plan-optimization.md",
       "redirect_url": "/sql/relational-databases/performance/parameter-sensitive-plan-optimization",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/ssma/db2/working-with-ssma-for-oracle-console-db2tosql.md",
-      "redirect_url": "/sql/ssma/db2/working-with-ssma-for-db2-console-db2tosql",
       "redirect_document_id": false
     },
     {

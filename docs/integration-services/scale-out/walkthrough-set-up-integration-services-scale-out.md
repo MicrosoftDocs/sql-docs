@@ -57,8 +57,6 @@ To install the Scale Out Master feature, use the [!INCLUDE[ssNoVersion_md](../..
 
 3.  On the **Integration Services Scale Out Master Configuration** page, specify the port number that Scale Out Master uses to communicate with Scale Out Worker. The default port number is 8391.  
 
-    ![Master Config](media/master-config.PNG "Master Config")
-
 4.  Specify the TLS/SSL certificate used to protect the communication between Scale Out Master and Scale Out Worker by doing one of the following.
     * Let the setup process create a default, self-signed TLS/SSL certificate by clicking **Create a new SSL certificate**.  The default certificate is installed under Trusted Root Certification Authorities, Local Computer. You can specify the CNs in this certificate. The host name of master endpoint should be included in CNs. By default, the machine name and ip of Master Node are included.
     * Select an existing TLS/SSL Certificate on the local computer by clicking **Use an existing SSL certificate** and then clicking **Browse** to select a certificate. The thumbprint of the certificate appears in the text box. Clicking **Browse** displays certificates that are stored in Trusted Root Certification Authorities, Local Computer. The certificate you select must be stored in this location.
@@ -103,8 +101,6 @@ To install the Scale Out Worker feature, use the [!INCLUDE[ssNoVersion_md](../..
     - For a **single-computer** environment, the endpoint is automatically generated when Scale Out Master and Scale Out Worker are installed at the same time. 
 
     - For a **multiple-computer** environment, the endpoint consists of the name or IP of the computer with Scale Out Master installed and the port number specified during the Scale Out Master installation.
-   
-    ![Worker Config 1](media/worker-config.PNG "Worker Config 1")    
 
     > [!NOTE]
     > You can also skip Worker configuration at this point and associate the Scale Out Worker with the Scale Out Master by using [Scale Out Manager](integration-services-ssis-scale-out-manager.md) after installation.

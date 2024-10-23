@@ -4,7 +4,7 @@ description: The scalar UDF inlining feature improves performance of queries tha
 author: s-r-k
 ms.author: karam
 ms.reviewer: randolphwest
-ms.date: 09/21/2024
+ms.date: 10/15/2024
 ms.service: sql
 ms.topic: conceptual
 monikerRange: "=azuresqldb-current || >=sql-server-ver15 || >=sql-server-linux-ver15"
@@ -35,7 +35,7 @@ Scalar UDFs typically end up performing poorly due to the following reasons:
 
 The goal of the scalar UDF inlining feature is to improve performance of queries that invoke T-SQL scalar UDFs, where UDF execution is the main bottleneck.
 
-With this new feature, scalar UDFs are automatically transformed into scalar expressions or scalar subqueries that are substituted in the calling query in place of the UDF operator. These expressions and subqueries are then optimized. As a result, the query plan no longer has a user-defined function operator, but its effects are observed in the plan, like views or inline TVFs.
+With this new feature, scalar UDFs are automatically transformed into scalar expressions or scalar subqueries that are substituted in the calling query in place of the UDF operator. These expressions and subqueries are then optimized. As a result, the query plan no longer has a user-defined function operator, but its effects are observed in the plan, like views or inline table-valued functions (TVFs).
 
 ## Examples
 
@@ -137,7 +137,7 @@ For the same query, the plan with the UDF inlined looks as follows.
 
 As mentioned earlier, the query plan no longer has a user-defined function operator, but its effects are now observable in the plan, like views or inline TVFs. Here are some key observations from the previous plan:
 
-- [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] infers the implicit join between `CUSTOMER` and `ORDERS` and makes that explicit via a join operator.
+- [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] infers the implicit join between `CUSTOMER` and `ORDERS` and makes it explicit via a join operator.
 
 - [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] also infers the implicit `GROUP BY O_CUSTKEY on ORDERS` and uses the IndexSpool + StreamAggregate to implement it.
 
@@ -149,7 +149,9 @@ Depending upon the complexity of the logic in the UDF, the resulting query plan 
 
 ## Inlineable scalar UDF requirements
 
-A scalar T-SQL UDF can be inlined if all of the following conditions are true:
+A scalar T-SQL UDF can be inlined if the function definition uses allowed constructs, and the function is used in a context that enables inlining:
+
+All of the following conditions of the *UDF definition* must be true:
 
 - The UDF is written using the following constructs:
   - `DECLARE`, `SET`: Variable declaration and assignments.
@@ -157,17 +159,13 @@ A scalar T-SQL UDF can be inlined if all of the following conditions are true:
   - `IF`/`ELSE`: Branching with arbitrary levels of nesting.
   - `RETURN`: Single or multiple return statements. Starting with [!INCLUDE [sql-server-2019](../../includes/sssql19-md.md)] CU5, the UDF can only contain a single RETURN statement to be considered for inlining <sup>6</sup>.
   - `UDF`: Nested/recursive function calls <sup>2</sup>.
-  - Others: Relational operations such as `EXISTS`, `IS `NULL``.
+  - Others: Relational operations such as `EXISTS`, `IS NULL`.
 - The UDF doesn't invoke any intrinsic function that is either time-dependent (such as `GETDATE()`) or has side effects <sup>3</sup> (such as `NEWSEQUENTIALID()`).
 - The UDF uses the `EXECUTE AS CALLER` clause (default behavior if the `EXECUTE AS` clause isn't specified).
 - The UDF doesn't reference table variables or table-valued parameters.
-- The query invoking a scalar UDF doesn't reference a scalar UDF call in its `GROUP BY` clause.
-- The query invoking a scalar UDF in its select list with `DISTINCT` clause doesn't have an `ORDER BY` clause.
-- The UDF isn't used in `ORDER BY` clause.
 - The UDF isn't natively compiled (interop is supported).
-- The UDF isn't used in a computed column or a check constraint definition.
 - The UDF doesn't reference user-defined types.
-- There are no signatures added to the UDF.
+- There are no signatures added to the UDF <sup>9</sup>.
 - The UDF isn't a partition function.
 - The UDF doesn't contain references to Common Table Expressions (CTEs).
 - The UDF doesn't contain references to intrinsic functions that might alter the results when inlined (such as `@@ROWCOUNT`) <sup>4</sup>.
@@ -177,14 +175,11 @@ A scalar T-SQL UDF can be inlined if all of the following conditions are true:
 - The UDF doesn't contain a SELECT with `ORDER BY` without a `TOP 1` clause <sup>5</sup>.
 - The UDF doesn't contain a SELECT query that performs an assignment with the `ORDER BY` clause (such as `SELECT @x = @x + 1 FROM table1 ORDER BY col1`) <sup>5</sup>.
 - The UDF doesn't contain multiple RETURN statements <sup>6</sup>.
-- The UDF isn't called from a RETURN statement <sup>6</sup>.
 - The UDF doesn't reference the `STRING_AGG` function <sup>6</sup>.
 - The UDF doesn't reference remote tables <sup>7</sup>.
-- The UDF-calling query doesn't use `GROUPING SETS`, `CUBE`, or `ROLLUP` <sup>7</sup>.
-- The UDF-calling query doesn't contain a variable that is used as a UDF parameter for assignment (for example, `SELECT @y = 2`, `@x = UDF(@y)`) <sup>7</sup>.
 - The UDF doesn't reference encrypted columns <sup>8</sup>.
 - The UDF doesn't contain references to `WITH XMLNAMESPACES` <sup>8</sup>.
-- The query invoking the UDF doesn't have Common Table Expressions (CTEs) <sup>8</sup>.
+- If the UDF definition runs into thousands of lines of code, [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] might choose not to inline it.
 
 <sup>1</sup> `SELECT` with variable accumulation/aggregation isn't supported for inlining (such as `SELECT @val += col1 FROM table1`).
 
@@ -202,21 +197,36 @@ A scalar T-SQL UDF can be inlined if all of the following conditions are true:
 
 <sup>8</sup> Restriction added in [!INCLUDE [sql-server-2019](../../includes/sssql19-md.md)] CU 11
 
+<sup>9</sup> Because signatures could be added and dropped after a UDF is created, the decision whether to inline is done when the query referencing a scalar UDF is compiled. For example, system functions are typically signed with a certificate. You can use [sys.crypt_properties](../system-catalog-views/sys-crypt-properties-transact-sql.md) to find which objects are signed.
+
+All of the following requirement of the *execution context* must be true:
+
+- The UDF isn't used in `ORDER BY` clause.
+- The query invoking a scalar UDF doesn't reference a scalar UDF call in its `GROUP BY` clause.
+- The query invoking a scalar UDF in its select list with `DISTINCT` clause doesn't have an `ORDER BY` clause.
+- The UDF isn't called from a RETURN statement <sup>1</sup>.
+- The query invoking the UDF doesn't have common table expressions (CTEs) <sup>3</sup>.
+- The UDF-calling query doesn't use `GROUPING SETS`, `CUBE`, or `ROLLUP` <sup>2</sup>.
+- The UDF-calling query doesn't contain a variable that is used as a UDF parameter for assignment (for example, `SELECT @y = 2`, `@x = UDF(@y)`) <sup>2</sup>.
+- The UDF isn't used in a computed column or a check constraint definition.
+
+<sup>1</sup> Restriction added in [!INCLUDE [sql-server-2019](../../includes/sssql19-md.md)] CU 5
+
+<sup>2</sup> Restriction added in [!INCLUDE [sql-server-2019](../../includes/sssql19-md.md)] CU 6
+
+<sup>3</sup> Restriction added in [!INCLUDE [sql-server-2019](../../includes/sssql19-md.md)] CU 11
+
 For information on the latest T-SQL scalar UDF inlining fixes and changes to inlining eligibility scenarios, see the Knowledge Base article: [FIX: scalar UDF inlining issues in SQL Server 2019](https://support.microsoft.com/help/4538581).
 
-### Check whether or not a UDF can be inlined
+### Check whether a UDF can be inlined
 
-For every T-SQL scalar UDF, the [sys.sql_modules](../system-catalog-views/sys-sql-modules-transact-sql.md) catalog view includes a property called `is_inlineable`, which indicates whether a UDF is inlineable or not.
+For every T-SQL scalar UDF, the [sys.sql_modules](../system-catalog-views/sys-sql-modules-transact-sql.md) catalog view includes a property called `is_inlineable`, which indicates whether a UDF is inlineable.
 
 The `is_inlineable` property is derived from the constructs found inside the UDF definition. It doesn't check whether the UDF is in fact inlineable at compile time. For more information, see the [conditions for inlining](#requirements).
 
-A value of `1` indicates that it's inlineable, and `0` indicates otherwise. This property has a value of `1` for all inline TVFs as well. For all other modules, the value is `0`.
+A value of `1` indicates that the UDF is inlineable, and `0` indicates otherwise. This property has a value of `1` for all inline TVFs as well. For all other modules, the value is `0`.
 
-If a scalar UDF is inlineable, it doesn't imply that it's always inlined. [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] decides (on a per-query, per-UDF basis) whether to inline a UDF or not. A few examples of when a UDF might not be inlined include:
-
-- If the UDF definition runs into thousands of lines of code, [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] might choose not to inline it.
-- A UDF invocation in a `GROUP BY` clause isn't inlined. This decision is made when the query referencing a scalar UDF is compiled.
-- If the UDF is signed with a certificate. Because signatures could be added and dropped after a UDF is created, the decision whether to inline or not is done when the query referencing a scalar UDF is compiled. For example, system functions are typically signed with a certificate. You can use [sys.crypt_properties](../system-catalog-views/sys-crypt-properties-transact-sql.md) to find which objects are signed.
+If a scalar UDF is inlineable, it doesn't imply that it's always inlined. [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] decides (on a per-query, per-UDF basis) whether to inline a UDF. Refer to the lists of requirements earlier in this article.
 
   ```sql
   SELECT *
@@ -225,12 +235,12 @@ If a scalar UDF is inlineable, it doesn't imply that it's always inlined. [!INCL
            ON cp.major_id = o.object_id;
   ```
 
-### Check whether inlining has happened or not
+### Check whether inlining has happened
 
-If all the preconditions are satisfied and [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] decides to perform inlining, it transforms the UDF into a relational expression. From the query plan, it's easy to figure out whether inlining has occurred:
+If all the preconditions are satisfied and [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] decides to perform inlining, it transforms the UDF into a relational expression. From the query plan, you can figure out whether inlining occurred:
 
 - The plan XML doesn't have a `<UserDefinedFunction>` XML node for a UDF that is inlined successfully.
-- Certain XEvents are emitted.
+- Certain Extended Events are emitted.
 
 ## Enable scalar UDF inlining
 
@@ -330,7 +340,7 @@ As described in this article, scalar UDF inlining transforms a query with scalar
 
 - If a UDF references built-in functions such as `SCOPE_IDENTITY()`, `@@ROWCOUNT`, or `@@ERROR`, the value returned by the built-in function changes with inlining. This change in behavior is because inlining changes the scope of statements inside the UDF. Starting with [!INCLUDE [sql-server-2019](../../includes/sssql19-md.md)] CU2, inlining is blocked if the UDF references certain intrinsic functions (for example `@@ROWCOUNT`).
 
-- If a variable is assigned with the result of an inlined UDF and it also used as index_column_name in FORCESEEK [Query hints](../../t-sql/queries/hints-transact-sql-query.md), it results in error Msg 8622 indicating that the Query processor couldn't produce a query plan because of the hints defined in the query.
+- If a variable is assigned with the result of an inlined UDF and it also used as `index_column_name` in `FORCESEEK` [Query hints](../../t-sql/queries/hints-transact-sql-query.md), it results in error 8622, indicating that the query processor couldn't produce a query plan because of the hints defined in the query.
 
 ## Related content
 

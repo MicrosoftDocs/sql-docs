@@ -5,7 +5,7 @@ author: adbadram
 ms.author: adbadram
 ms.reviewer: mathoma
 ms.date: 09/25/2023
-ms.service: virtual-machines-sql
+ms.service: azure-vm-sql-server
 ms.subservice: security
 ms.custom: has-azure-ad-ps-ref, devx-track-azurecli
 ms.topic: how-to

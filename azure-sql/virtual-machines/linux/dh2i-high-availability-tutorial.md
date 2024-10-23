@@ -5,7 +5,7 @@ author: amitkh-msft
 ms.author: amitkh
 ms.reviewer: vanto
 ms.date: 05/18/2022
-ms.service: virtual-machines-sql
+ms.service: azure-vm-sql-server
 ms.subservice: hadr
 ms.topic: tutorial
 ms.custom: kr2b-contr-experiment, linux-related-content
@@ -15,7 +15,7 @@ ms.custom: kr2b-contr-experiment, linux-related-content
 
 [!INCLUDE[appliesto-sqlvm](../../includes/appliesto-sqlvm.md)]
 
-This tutorial explains how to configure an SQL Server Always On availability group with DH2i DxEnterprise running on Linux-based Azure Virtual Machines (VMs).
+This tutorial explains how to configure a SQL Server Always On availability group with DH2i DxEnterprise running on Linux-based Azure Virtual Machines (VMs).
 
 For more information about DxEnterprise, see [DH2i DxEnterprise](https://dh2i.com/dxenterprise-high-availability/).
 

@@ -171,7 +171,7 @@ void DumpErrorInfo (IUnknown* pObjectWithError, REFIID IID_InterfaceWithError) {
 }  
   
 // DumpErrorInfo queries SQLOLEDB error interfaces, retrieving available status   
-// or error information. This version is called when an SQL Server error could occur.  
+// or error information. This version is called when a SQL Server error could occur.  
 void DumpErrorInfo (IUnknown* pObjectWithError, REFIID IID_InterfaceWithError, BOOL &has_sql_errors ) {  
    // Interfaces used in the example.  
    IErrorInfo * pIErrorInfoAll = NULL;  

@@ -1,10 +1,10 @@
 ---
-title: "What's New in SSMA for MySQL (MySQLToSQL)"
+title: "What's new in SSMA for MySQL (MySQLToSQL)"
 description: Find out about changes to SQL Server Migration Assistant (SSMA) for MySQL (MySQLToSQL) for each release.
 author: cpichuka
 ms.author: cpichuka
 ms.reviewer: randolphwest
-ms.date: 08/03/2023
+ms.date: 10/16/2024
 ms.service: sql
 ms.subservice: ssma
 ms.topic: conceptual
@@ -13,11 +13,15 @@ ms.collection:
 ms.custom:
   - intro-whats-new
 ---
-# What's New in SSMA for MySQL (MySQLToSQL)
+# What's new in SSMA for MySQL (MySQLToSQL)
 
 This article lists SQL Server Migration Assistant (SSMA) for MySQL changes in each release.
 
 [!INCLUDE [entra-id](../../includes/entra-id-hard-coded.md)]
+
+## SSMA v10.0
+
+The v10.0 release of SSMA for MySQL contains minor performance improvements, bug fixes, and online help viewer support.
 
 ## SSMA v9.5
 
@@ -55,7 +59,7 @@ The v9.1 release of SSMA for MySQL contains the following changes:
 
 ## SSMA v9.0
 
-The v9.0 release of SSMA for MySQL contains minor performance improvements, bug fixes and online help viewer support.
+The v9.0 release of SSMA for MySQL contains minor performance improvements, bug fixes, and online help viewer support.
 
 ## SSMA v8.24
 
@@ -79,7 +83,7 @@ The v8.23 release of SSMA for MySQL contains the following changes:
 
 The v8.22 release of SSMA for MySQL contains the following changes:
 
-- Allow to specify additional connection string options for target database connection
+- Allow to specify extra connection string options for target database connection
 - Introduce summary charts in assessment reports
 - Improve messages navigation in assessment reports
 
@@ -187,7 +191,7 @@ In addition to a targeted set of fixes designed to improve usability and perform
 
 To use this setting, in SSMA for MySQL, navigate to **Tools** > **Project Settings** > **General** > **Conversion**, and then under **Misc**, update the value of the **Omit Extended Properties** setting to **Yes**.
 
-:::image type="content" source="../mysql/media/ssma-omit-extended-properties.png" alt-text="Screenshot of Omit Extended Properties setting.":::
+:::image type="content" source="media/ssma-omit-extended-properties.png" alt-text="Screenshot of Omit Extended Properties setting." lightbox="media/ssma-omit-extended-properties.png":::
 
 > [!IMPORTANT]  
 > With SSMA v8.5 and later, .NET 4.7.2 is an installation prerequisite. If you need to install this version, you can [download the runtime file](https://dotnet.microsoft.com/download/dotnet-framework/net472).
@@ -222,14 +226,14 @@ The v8.2 release of SSMA for MySQL is enhanced with a targeted set of fixes desi
 - An intermittent crash that occurs when a new version is downloaded.
 
 > [!NOTE]  
-> A known issue with auto-update may cause the failure of an update from SSMA v8.1 to v8.2. If you encounter this error, please download the new version and install it manually.
+> A known issue with auto-update might cause the failure of an update from SSMA v8.1 to v8.2. If you encounter this error, please download the new version and install it manually.
 
 ## SSMA v8.1
 
 The v8.1 release of SSMA for MySQL is enhanced with targeted fixes that are designed to improve quality and conversion metrics.
 
 > [!NOTE]  
-> A known issue with auto-update may cause the failure of an update from SSMA v8.0 to v8.1. If you encounter this error, please download the new version and install it manually.
+> A known issue with auto-update might cause the failure of an update from SSMA v8.0 to v8.1. If you encounter this error, please download the new version and install it manually.
 
 ## SSMA v8.0
 
@@ -243,7 +247,7 @@ The v8.0 release of SSMA for MySQL is enhanced with targeted fixes designed to i
 
 - Preliminary database/schema selection.
 
-  When connecting to the source, the user can now select databases/schemas of interest. Selecting only the schemas that you plan to migrate saves time during initial connection and improve overall SSMA performance.
+  When you connect to the source, you can now select databases/schemas of interest. Selecting only the schemas that you plan to migrate saves time during initial connection and improve overall SSMA performance.
 
   :::image type="content" source="../media/ssma-filter-objects.png" alt-text="Screenshot of SSMA filter objects.":::
 
@@ -251,7 +255,7 @@ The v8.0 release of SSMA for MySQL is enhanced with targeted fixes designed to i
 
 The v7.10 release of SSMA for MySQL contains the following changes:
 
-- Targeted fixes designed to provide additional security and privacy protections to meet changes in global requirements.
+- Targeted fixes designed to provide more security and privacy protections to meet changes in global requirements.
 - A fix for conversion of spaces between function name and arguments list.
 
 ## SSMA v7.9
@@ -339,7 +343,7 @@ The v7.1 release of SSMA for MySQL contains the following changes:
 
 ## May 2016
 
-The May 2016 release of SSMA for MySQL contains  the following changes:
+The May 2016 release of SSMA for MySQL contains the following changes:
 
 - Added support for [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)].
 - Improved parser and resolver.
@@ -396,7 +400,7 @@ The July 2011 release of SSMA for MySQL contains the following changes:
 
 The April 2011 release of SSMA for MySQL contains the following changes:
 
-- Single installable of SSMA for MySQL, which supports [!INCLUDE [ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE [sql2008-md](../../includes/sql2008-md.md)], [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)] and Azure SQL.
+- Single installable of SSMA for MySQL, which supports [!INCLUDE [ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE [sql2008-md](../../includes/sql2008-md.md)], [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)], and Azure SQL.
 - The ability to connect [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)].
 - Enhanced client-side data migration engine, supporting parallel migration of data.
 - Improved data migration performance with Simple and Bulk logged recovery models.

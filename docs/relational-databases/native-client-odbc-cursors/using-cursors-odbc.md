@@ -27,7 +27,7 @@ helpviewer_keywords:
   
 -   Positioned updates.  
   
- ODBC applications rarely declare and open cursors or use any cursor-related [!INCLUDE[tsql](../../includes/tsql-md.md)] statements. ODBC automatically opens a cursor for every result set returned from an SQL statement. The characteristics of the cursors are controlled by statement attributes set with [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) before the SQL statement is executed. The ODBC API functions for processing result sets support the full range of cursor functionality, including fetching, scrolling, and positioned updates.  
+ ODBC applications rarely declare and open cursors or use any cursor-related [!INCLUDE[tsql](../../includes/tsql-md.md)] statements. ODBC automatically opens a cursor for every result set returned from a SQL statement. The characteristics of the cursors are controlled by statement attributes set with [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) before the SQL statement is executed. The ODBC API functions for processing result sets support the full range of cursor functionality, including fetching, scrolling, and positioned updates.  
   
  This is a comparison of how [!INCLUDE[tsql](../../includes/tsql-md.md)] scripts and ODBC applications work with cursors.  
   

@@ -4,14 +4,19 @@ description: This article describes how to configure a SQL Server instance to en
 author: sevend2
 ms.author: v-sidong
 ms.reviewer: sureshka, randolphwest
-ms.date: 04/18/2024
+ms.date: 10/11/2024
 ms.service: sql
 ms.subservice: configuration
 ms.topic: conceptual
 ---
 # Configure SQL Server Database Engine for encrypting connections
 
-You can encrypt all incoming connections to [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] or enable encryption for just a specific set of clients. For either of these scenarios, you first have to configure [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] to use a certificate that meets [Certificate requirements for SQL Server](certificate-requirements.md) before taking additional steps on the server computer or client computers to encrypt data.
+[!INCLUDE [sql-windows-only](../../includes/applies-to-version/sql-windows-only.md)]
+
+You can encrypt all incoming connections to [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] or enable encryption for just a specific set of clients. For either of these scenarios, you first have to configure [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] to use a certificate that meets [Certificate requirements for SQL Server](certificate-requirements.md) before taking extra steps on the server computer or client computers to encrypt data.
+
+> [!NOTE]  
+> This article applies to [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] on Windows. To configure [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] on Linux for encrypting connections, see [Specify TLS settings](../../linux/sql-server-linux-configure-mssql-conf.md#specify-tls-settings).
 
 This article describes how to configure [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] for certificates ([Step 1](#step-1-configure-sql-server-to-use-certificates)) and change encryption settings of the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instance ([Step 2](#step-2-configure-encryption-settings-in-sql-server)). Both steps are required to encrypt all incoming connections to [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] when using a certificate from a public commercial authority. For other scenarios, see [Special cases for encrypting connections to SQL Server](special-cases-for-encrypting-connections-sql-server.md).
 
@@ -49,7 +54,7 @@ If you use [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] or an earlier v
 1. If you require all the connections to [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] to be encrypted, see [Step 2: Configure encryption settings in SQL Server](#step-2-configure-encryption-settings-in-sql-server). If you only want to enable encryption for specific clients, restart the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] service and see [Special cases for encrypting connections to SQL Server](special-cases-for-encrypting-connections-sql-server.md).
 
 > [!NOTE]  
-> To install certificates in the availability group configuration, repeat the above procedure on each node in your availability group, starting with the primary node.
+> To install certificates in the availability group configuration, repeat the previous procedure on each node in your availability group, starting with the primary node.
 
 > [!IMPORTANT]  
 > The [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] service account must have read permissions on the certificate used to force encryption on the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instance. For a non-privileged service account, read permissions must be added to the certificate. Failure to do so can cause the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] service restart to fail.
@@ -82,7 +87,7 @@ Wildcard certificate can't be selected by using [!INCLUDE [ssnoversion-md](../..
 > [!NOTE]  
 > To use encryption with a failover cluster, you must install the server certificate with the fully qualified DNS name of the virtual server on all nodes in the failover cluster. You can set the value of the **ForceEncryption** option on the **Protocols for virtsql** property box of **SQL Server Network Configuration** to **Yes**.
 
-When creating encrypted connections for an Azure Search indexer to [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] on an Azure VM, see [Indexer connections to a SQL Server instance on an Azure virtual machine](/azure/search/search-howto-connecting-azure-sql-iaas-to-azure-search-using-indexers).
+When creating encrypted connections for an Azure Search indexer to [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] on an Azure Virtual Machine, see [Indexer connections to a SQL Server instance on an Azure virtual machine](/azure/search/search-howto-connecting-azure-sql-iaas-to-azure-search-using-indexers).
 
 ## Step 2: Configure encryption settings in SQL Server
 
@@ -109,7 +114,7 @@ When you use a self-signed certificate, [!INCLUDE [ssnoversion-md](../../include
 
 > A self-generated certificate was successfully loaded for encryption.
 
-[!INCLUDE [sssql16-md](../../includes/sssql16-md.md)] and earlier versions use the SHA1 algorithm. However, the SHA1 algorithm and many older algorithms are deprecated beginning with [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)]. For more information, see [Deprecated Database Engine features in SQL Server 2016](../deprecated-database-engine-features-in-sql-server-2016.md).
+[!INCLUDE [sssql16-md](../../includes/sssql16-md.md)] and earlier versions use the SHA1 algorithm. However, the SHA1 algorithm and many older algorithms are deprecated beginning with [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)]. For more information, see [Deprecated Database Engine features in SQL Server 2016 (13.x)](../deprecated-database-engine-features-in-sql-server-2016.md).
 
 In these environments, if you're using the automatically generated self-signed certificate generated by [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)], either just for the prelogin handshake or for encrypting all server-client communications, your vulnerability detection software or security software or company policies might flag this use as a security issue. You have the following options for these scenarios:
 

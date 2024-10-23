@@ -22,7 +22,7 @@ If the execute method returns **false**, the statement that was run has returned
 > [!NOTE]  
 > For more information about update counts, see [Using a stored procedure with an update count](../../connect/jdbc/using-a-stored-procedure-with-an-update-count.md).
 
-In the following example, an open connection to the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] sample database is passed in to the function, and an SQL statement is constructed that, when run, returns two result sets:
+In the following example, an open connection to the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] sample database is passed in to the function, and a SQL statement is constructed that, when run, returns two result sets:
 
 [!code[JDBC#UsingMultipleResultSets1](../../connect/jdbc/codesnippet/Java/using-multiple-result-sets_1.java)]
 

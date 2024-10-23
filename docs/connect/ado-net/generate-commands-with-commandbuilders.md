@@ -66,7 +66,7 @@ The automatic command generation logic generates INSERT, UPDATE, or DELETE state
 
 Automatic command generation logic may fail if column names or table names contain any special characters, such as spaces, periods, quotation marks, or other nonalphanumeric characters, even if delimited by brackets. Depending on the provider, setting the QuotePrefix and QuoteSuffix parameters may allow the generation logic to process spaces, but it cannot escape special characters. Fully qualified table names in the form of *catalog.schema.table* are supported.
 
-## Use the CommandBuilder to automatically generate an SQL statement
+## Use the CommandBuilder to automatically generate a SQL statement
 
 To automatically generate SQL statements for a `DataAdapter`, first set the `SelectCommand` property of the `DataAdapter`, then create a `CommandBuilder` object, and specify as an argument the `DataAdapter` for which the `CommandBuilder` will automatically generate SQL statements.
 

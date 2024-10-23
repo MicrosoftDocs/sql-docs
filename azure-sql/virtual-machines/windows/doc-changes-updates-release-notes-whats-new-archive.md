@@ -5,7 +5,7 @@ author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: wiassaf, mathoma
 ms.date: 03/01/2024
-ms.service: virtual-machines-sql
+ms.service: azure-vm-sql-server
 ms.subservice: service-overview
 ms.topic: whats-new
 ms.custom: references_regions

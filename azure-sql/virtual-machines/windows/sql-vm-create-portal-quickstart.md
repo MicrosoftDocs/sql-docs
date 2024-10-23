@@ -5,7 +5,7 @@ author: bluefooted
 ms.author: pamela
 ms.reviewer: mathoma
 ms.date: 10/14/2022
-ms.service: virtual-machines-sql
+ms.service: azure-vm-sql-server
 ms.subservice: deployment
 ms.topic: quickstart
 ms.custom: mode-ui

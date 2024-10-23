@@ -1,6 +1,6 @@
 ---
 title: "Columns with the Name of an XPath Node Test"
-description: Learn how XML content is mapped when an SQL query contains columns with the name of an XPath node test, such as text() or comment().
+description: Learn how XML content is mapped when a SQL query contains columns with the name of an XPath node test, such as text() or comment().
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: randolphwest

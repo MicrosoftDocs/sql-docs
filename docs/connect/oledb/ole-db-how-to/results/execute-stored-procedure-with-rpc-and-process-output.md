@@ -23,7 +23,7 @@ helpviewer_keywords:
   
 ### To process return codes and output parameters  
   
-1.  Construct an SQL statement that uses the RPC escape sequence.  
+1.  Construct a SQL statement that uses the RPC escape sequence.  
   
 2.  Call the **ICommandWithParameters::SetParameterInfo** method to describe parameters to the provider. Fill in the parameter information in an array of PARAMBINDINFO structures.  
   

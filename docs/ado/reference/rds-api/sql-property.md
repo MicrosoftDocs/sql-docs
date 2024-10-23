@@ -35,7 +35,7 @@ Run time: DataControl.SQL = "QueryString"
  An object variable that represents an **RDS.DataControl** object.  
   
 ## Remarks  
- In general, this is an SQL statement (using the dialect of the database server), such as `"Select * from NewTitles"`. To ensure that records are matched and updated accurately, an updatable query must contain a field other than a Long Binary field or a computed field.  
+ In general, this is a SQL statement (using the dialect of the database server), such as `"Select * from NewTitles"`. To ensure that records are matched and updated accurately, an updatable query must contain a field other than a Long Binary field or a computed field.  
   
  The **SQL** property is optional if a custom server-side business object retrieves the data for the client.  
   

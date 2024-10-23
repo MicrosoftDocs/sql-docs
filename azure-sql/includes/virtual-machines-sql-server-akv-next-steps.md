@@ -2,7 +2,7 @@
 author: rothja
 ms.author: jroth
 ms.date: 10/26/2018
-ms.service: virtual-machines-sql
+ms.service: azure-vm-sql-server
 ms.topic: include
 ---
 After enabling Azure Key Vault Integration, you can enable SQL Server encryption on your SQL VM. First, you will need to create an asymmetric key inside your key vault and a symmetric key within SQL Server on your VM. Then, you will be able to execute T-SQL statements to enable encryption for your databases and backups.

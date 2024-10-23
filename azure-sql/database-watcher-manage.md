@@ -5,7 +5,7 @@ description: Setup and configuration details for database watcher
 author: dimitri-furman
 ms.author: dfurman
 ms.reviewer: wiassaf
-ms.date: 10/08/2024
+ms.date: 10/23/2024
 ms.service: azure-sql
 ms.subservice: monitoring
 ms.topic: how-to
@@ -567,6 +567,18 @@ If you do not require older data, you can configure data retention policies to p
 - You can also increase retention if you need to store monitoring data for more than one year. There is no upper limit on the data retention period.
 - If you configure different data retention periods for different tables, [dashboards](database-watcher-overview.md#dashboards) might not work as expected for the older time ranges. This can happen if data is still present in some tables, but is already purged in other tables for the same time interval.
 
+The amount of SQL monitoring data that is ingested in the data store depends on your SQL workloads and the size of your Azure SQL estate. You can view the average amount of data ingested per day using the following KQL query.
+
+```kusto
+.show database extents
+| summarize OriginalSize = sum(OriginalSize),
+            CompressedSize = sum(CompressedSize)
+            by bin(MinCreatedOn, 1d)
+| summarize DailyAverageOriginal = format_bytes(avg(OriginalSize)),
+            DailyAverageCompressed = format_bytes(avg(CompressedSize))
+;
+```
+
 ### Schema and access changes in the database watcher data store
 
 Over time, Microsoft might introduce new database watcher [datasets](database-watcher-data.md#datasets), or expand existing datasets. This means that new tables in the data store, or new columns in existing tables might be added automatically.
@@ -607,6 +619,12 @@ If [public access](/azure/data-explorer/security-network-restrict-public-access)
     1. [Configure DNS](/azure/private-link/private-endpoint-dns) for that private endpoint.
 
 Private connectivity is not available for free Azure Data Explorer clusters, or for Real-Time Analytics in Microsoft Fabric.
+
+### Free Azure Data Explorer cluster
+
+The free Azure Data Explorer cluster has certain [capacity limits](/azure/data-explorer/start-for-free#specifications), including a storage capacity limit on the original uncompressed data. When the cluster is close to reaching its storage capacity, or is at capacity, a warning message appears on the [free cluster page](https://dataexplorer.azure.com/freecluster).
+
+If you reach storage capacity, new monitoring data isn't ingested, but existing data remains accessible on database watcher [dashboards](database-watcher-overview.md#dashboards) and can be [analyzed](database-watcher-analyze.md) using KQL or SQL queries. You can [upgrade to a full Azure Data Explorer cluster](/azure/data-explorer/start-for-free-upgrade) and retain all collected data, or you can [manage data retention](#manage-data-retention) to delete the older data automatically and free up space for new data.
 
 ## Monitor large estates
 

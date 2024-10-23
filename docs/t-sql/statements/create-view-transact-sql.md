@@ -81,7 +81,8 @@ AS <select_statement>
     SELECT <select_criteria>  
 ```  
 
-Syntax for Microsoft Fabric Data warehouse and SQL analytics endpoint.
+Syntax for Microsoft Fabric warehouse and SQL analytics endpoint.
+
 
 
 ```syntaxsql

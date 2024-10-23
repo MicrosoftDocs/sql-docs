@@ -5,7 +5,7 @@ description: Setup and configuration details for database watcher
 author: dimitri-furman
 ms.author: dfurman
 ms.reviewer: wiassaf
-ms.date: 10/08/2024
+ms.date: 10/23/2024
 ms.service: azure-sql
 ms.subservice: monitoring
 ms.topic: how-to
@@ -254,9 +254,9 @@ To modify the managed identity for a watcher, open the **Identity** page of a wa
 Select the **Save** button to save identity changes. You cannot save identity changes if that would result in the watcher having no identity. Watchers without a valid managed identity are not supported.
 
 > [!TIP]
-> We recommend that the display name of the watcher managed identity is unique within your Entra ID tenant. You can choose a unique name when creating a user assigned identity for watchers.
+> We recommend that the display name of the watcher managed identity is unique within your Microsoft Entra ID tenant. You can choose a unique name when creating a user assigned identity for watchers.
 >
-> The display name of the system assigned identity is the same as the watcher name. If you use the system assigned identity, make sure that the watcher name is unique within your Entra ID tenant.
+> The display name of the system assigned identity is the same as the watcher name. If you use the system assigned identity, make sure that the watcher name is unique within your Microsoft Entra ID tenant.
 >
 > If the managed identity display name is not unique, the [T-SQL script](#grant-access-to-microsoft-entra-authenticated-watchers) to grant the watcher access to SQL targets fails with a duplicate display name error. For more information and for a workaround, see [Microsoft Entra logins and users with nonunique display names](./database/authentication-microsoft-entra-create-users-with-nonunique-names.md).
 
@@ -557,7 +557,15 @@ However, if you run analytical queries spanning longer time ranges, they might b
 - You might find that even after you scale the cluster out horizontally, some queries still do not perform as expected. This might happen if query performance is bound by the resources available on an instance (node) of the cluster. In that case, scale up the cluster **vertically**.
     - Vertical cluster scaling takes several minutes. During that process, there is a period of downtime, which can stop data collection by the watcher. If that happens, [stop and restart](#start-and-stop-a-watcher) your watcher after the scaling operation is complete.
 
-You cannot scale a free Azure Data Explorer cluster. If you find that the [specifications](/azure/data-explorer/start-for-free#specifications) of the free cluster are insufficient for your requirements, [upgrade to a full Azure Data Explorer cluster](/azure/data-explorer/start-for-free-upgrade). The upgrade process retains all collected data. Because there might be a period of downtime during the upgrade, you might need to stop and restart your watcher to resume data collection once the upgrade is complete.
+#### Free Azure Data Explorer cluster
+
+The free Azure Data Explorer cluster has certain [capacity limits](/azure/data-explorer/start-for-free#specifications), including a storage capacity limit on the original uncompressed data. You cannot scale a free Azure Data Explorer cluster to increase its compute or storage capacity. When the cluster is close to reaching its storage capacity, or is at capacity, a warning message appears on the [free cluster page](https://dataexplorer.azure.com/freecluster).
+
+If you reach storage capacity, new monitoring data isn't ingested, but existing data remains accessible on database watcher [dashboards](database-watcher-overview.md#dashboards) and can be [analyzed](database-watcher-analyze.md) using KQL or SQL queries.
+
+If you find that the specifications of the free cluster are insufficient for your requirements, you can [upgrade to a full Azure Data Explorer cluster](/azure/data-explorer/start-for-free-upgrade) and retain all collected data. Because there might be a period of downtime during the upgrade, you might need to stop and restart your watcher to resume data collection once the upgrade is complete.
+
+To continue using the free Azure Data Explorer cluster, [manage data retention](#manage-data-retention) to delete the older data automatically and free up space for new data. Once storage space is available, you might need to [stop and restart](#start-and-stop-a-watcher) your watcher to resume data collection.
 
 ### Manage data retention
 
@@ -566,6 +574,17 @@ If you do not require older data, you can configure data retention policies to p
 - You can reduce data retention period at the database level, or for individual [tables](/azure/data-explorer/table-retention-policy-wizard) in the database.
 - You can also increase retention if you need to store monitoring data for more than one year. There is no upper limit on the data retention period.
 - If you configure different data retention periods for different tables, [dashboards](database-watcher-overview.md#dashboards) might not work as expected for the older time ranges. This can happen if data is still present in some tables, but is already purged in other tables for the same time interval.
+
+The amount of SQL monitoring data that is ingested in the data store depends on your SQL workloads and the size of your Azure SQL estate. You can use the following KQL query to view the average amount of data ingested per day, estimate storage consumption over time, and manage data retention policies.
+
+```kusto
+.show database extents
+| summarize OriginalSize = sum(OriginalSize),
+            CompressedSize = sum(CompressedSize)
+            by bin(MinCreatedOn, 1d)
+| summarize DailyAverageOriginal = format_bytes(avg(OriginalSize)),
+            DailyAverageCompressed = format_bytes(avg(CompressedSize));
+```
 
 ### Schema and access changes in the database watcher data store
 

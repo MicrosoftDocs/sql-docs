@@ -5,7 +5,7 @@ description: An overview of database watcher for Azure SQL, a managed monitoring
 author: dimitri-furman
 ms.author: dfurman
 ms.reviewer: wiassaf
-ms.date: 10/08/2024
+ms.date: 10/23/2024
 ms.service: azure-sql
 ms.subservice: monitoring
 ms.topic: conceptual
@@ -245,7 +245,7 @@ If you create a new watcher and do not see monitoring data on dashboards and in 
 - If you want the watcher to use Microsoft Entra authentication to connect to SQL targets, make sure that [Microsoft Entra authentication is enabled](database/authentication-aad-configure.md) on the logical servers hosting the database and elastic pool targets, and on the managed instance targets.
 - If you created any private endpoints for the watcher, make sure that they are approved by the resource owner.
 - If you are using public connectivity, make sure that the [requirements](database-watcher-overview.md#public-connectivity) to allow the watcher to connect to targets, data store, and key vault are met.
-- If you are using the free Azure Data Explorer cluster, make sure that you haven't reached the [storage capacity](/azure/data-explorer/start-for-free#specifications) of the cluster. When the cluster is close to reaching its capacity, or is at capacity, a warning message appears on the [free cluster page](https://dataexplorer.azure.com/freecluster). If storage capacity is reached, new monitoring data cannot be ingested. You can [upgrade to a full Azure Data Explorer cluster](/azure/data-explorer/start-for-free-upgrade), or you can reduce data retention to delete older data and free up space for new data. For more information, see [Retention policy](/azure/data-explorer/kusto/management/retention-policy).
+- If you are using the free Azure Data Explorer cluster, make sure that you haven't reached the [storage capacity](/azure/data-explorer/start-for-free#specifications) of the cluster. For more information, see [Free Azure Data Explorer cluster](database-watcher-manage.md#free-azure-data-explorer-cluster).
 
 If you make changes to watcher access or connectivity as part of troubleshooting, you might need to stop and restart the watcher for the changes to take effect.
 

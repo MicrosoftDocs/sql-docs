@@ -3,7 +3,7 @@ title: CREATE VIEW (Transact-SQL)
 description: CREATE VIEW (Transact-SQL)
 author: markingmyname
 ms.author: maghan
-ms.date: 09/08/2021
+ms.date: 10/23/2024
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference

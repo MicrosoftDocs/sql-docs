@@ -575,7 +575,7 @@ If you do not require older data, you can configure data retention policies to p
 - You can also increase retention if you need to store monitoring data for more than one year. There is no upper limit on the data retention period.
 - If you configure different data retention periods for different tables, [dashboards](database-watcher-overview.md#dashboards) might not work as expected for the older time ranges. This can happen if data is still present in some tables, but is already purged in other tables for the same time interval.
 
-The amount of SQL monitoring data that is ingested in the data store depends on your SQL workloads and the size of your Azure SQL estate. You can view the average amount of data ingested per day using the following KQL query.
+The amount of SQL monitoring data that is ingested in the data store depends on your SQL workloads and the size of your Azure SQL estate. You can use the following KQL query to view the average amount of data ingested per day, estimate storage consumption over time, and manage data retention policies.
 
 ```kusto
 .show database extents
@@ -583,8 +583,7 @@ The amount of SQL monitoring data that is ingested in the data store depends on 
             CompressedSize = sum(CompressedSize)
             by bin(MinCreatedOn, 1d)
 | summarize DailyAverageOriginal = format_bytes(avg(OriginalSize)),
-            DailyAverageCompressed = format_bytes(avg(CompressedSize))
-;
+            DailyAverageCompressed = format_bytes(avg(CompressedSize));
 ```
 
 ### Schema and access changes in the database watcher data store

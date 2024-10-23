@@ -3,7 +3,7 @@ title: CREATE VIEW (Transact-SQL)
 description: CREATE VIEW (Transact-SQL)
 author: markingmyname
 ms.author: maghan
-ms.date: 09/08/2021
+ms.date: 10/23/2024
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -52,9 +52,9 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```syntaxsql
--- Syntax for SQL Server and Azure SQL Database  
+Syntax for SQL Server and Azure SQL Database.
   
+```syntaxsql
 CREATE [ OR ALTER ] VIEW [ schema_name . ] view_name [ (column [ ,...n ] ) ]
 [ WITH <view_attribute> [ ,...n ] ]
 AS select_statement
@@ -68,10 +68,10 @@ AS select_statement
     [ VIEW_METADATA ]
 }
 ```  
-  
-```syntaxsql
--- Syntax for Azure Synapse Analytics and Parallel Data Warehouse
-  
+
+Syntax for Azure Synapse Analytics and Parallel Data Warehouse.
+
+```syntaxsql  
 CREATE VIEW [ schema_name . ] view_name [  ( column_name [ ,...n ] ) ]   
 AS <select_statement>   
 [;]  
@@ -81,12 +81,19 @@ AS <select_statement>
     SELECT <select_criteria>  
 ```  
 
+Syntax for Microsoft Fabric warehouse and SQL analytics endpoint.
+
+
+
 ```syntaxsql
--- Syntax for [!INCLUDE [fabric](../../includes/fabric.md)]
-  
 CREATE [ OR ALTER ] VIEW [ schema_name . ] view_name [  ( column_name [ ,...n ] ) ]   
-AS <select_statement>   
-[;]  
+[ WITH <view_attribute> [ ,...n ] ] AS <select_statement>   
+[;]
+
+<view_attribute> ::=
+{  
+    [ SCHEMABINDING ]  
+}
   
 <select_statement> ::=  
     [ WITH <common_table_expression> [ ,...n ] ]  

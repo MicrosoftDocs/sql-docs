@@ -78,6 +78,26 @@ Returns a row for each column of an object that has columns, such as views or ta
 
 [!INCLUDE [ssCatViewPerm](../../includes/sscatviewperm-md.md)] For more information, see [Metadata Visibility Configuration](../security/metadata-visibility-configuration.md).
 
+## Usage Examples
+
+### Get column details for a table
+
+To get metadata for columns in a table you can use the following code:
+
+```sql
+create table dbo.[sample]
+(
+    id int not null,
+    col1 varbinary(10) null
+)
+go
+
+select c.[name] as column_name, t.[name] as [type_name], c.[max_length], c.[precision], c.[scale]
+from sys.columns c 
+inner join sys.types t on c.user_type_id = t.user_type_id
+where object_id = object_id('dbo.sample')
+```
+
 ## Related content
 
 - [System Views (Transact-SQL)](../../t-sql/language-reference.md)

@@ -39,7 +39,8 @@ To collect monitoring data for [!INCLUDE [ssazurearc](../../includes/ssazurearc.
 [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] running on [!INCLUDE [winserver2012-md](../../includes/winserver2012-md.md)] R2 and older versions aren't supported.
 
 - [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] is a Standard or Enterprise edition.
-- The SQL Server version is 2016 or later.
+- The SQL Server version is 2016 SP1 or later.
+
 - The server has connectivity to `*.<region>.arcdataservices.com`. For more information, see the [network requirements](/azure/azure-arc/servers/network-requirements?tabs=azure-cloud).
 - The license type on [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] is Software Assurance or pay-as-you-go.
 - You have an Azure role with the action `Microsoft.AzureArcData/sqlServerInstances/getTelemetry/`. You can use the following built-in role, which includes this action: *Azure Hybrid Database Administrator - Read Only Service Role*. For more information, see [Azure built-in roles](/azure/role-based-access-control/built-in-roles).

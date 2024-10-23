@@ -2,7 +2,7 @@
 author: MashaMSFT
 ms.author: mathoma
 ms.date: 04/27/2023
-ms.service: virtual-machines-sql
+ms.service: azure-vm-sql-server
 ms.topic: include
 ---
 > [!TIP]

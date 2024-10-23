@@ -2,7 +2,7 @@
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: 11/25/2018
-ms.service: virtual-machines-sql
+ms.service: azure-vm-sql-server
 ms.topic: include
 ms.custom:
 ---

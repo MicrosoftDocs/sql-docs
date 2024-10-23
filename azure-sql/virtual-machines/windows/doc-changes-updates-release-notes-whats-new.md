@@ -4,7 +4,7 @@ description: Learn about the new features for and improvements to SQL Server on 
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest, mathoma
-ms.date: 09/17/2024
+ms.date: 10/23/2024
 ms.service: azure-vm-sql-server
 ms.subservice: service-overview
 ms.topic: whats-new
@@ -57,6 +57,12 @@ The following table lists features of SQL Server on Azure VMs that have been mad
 ## Documentation changes 
 
 Learn about significant changes to the SQL Server on Azure VMs documentation. For previous years, see the [What's new archive](doc-changes-updates-release-notes-whats-new-archive.md).
+
+### October 2024
+
+| Changes | Details |
+| --- | --- |
+| **Microsoft Entra authentication in any cloud**| It's now possible to configure Microsoft Entra authentication for your SQL Server on Azure VMs in any cloud. Review [Microsoft Entra authentication](configure-azure-ad-authentication-for-sql-vm.md) to learn more. |
 
 ### September 2024
 

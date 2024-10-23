@@ -4,7 +4,7 @@ description: This article teaches you to configure Microsoft Entra authenticatio
 author: adbadram
 ms.author: adbadram
 ms.reviewer: mathoma
-ms.date: 09/25/2023
+ms.date: 10/24/2024
 ms.service: azure-vm-sql-server
 ms.subservice: security
 ms.custom: has-azure-ad-ps-ref, devx-track-azurecli
@@ -38,7 +38,7 @@ To get started with managed identities, review [Configure managed identities usi
 To enable Microsoft Entra authentication on your SQL Server, you need the following prerequisites: 
 
 - Use SQL Server 2022. 
-- Register SQL Server VM with the [SQL Server Iaas Agent extension](sql-agent-extension-manually-register-single-vm.md). 
+- Register SQL Server VM with the [SQL Server Iaas Agent extension](sql-agent-extension-manually-register-single-vm.md) in any cloud. 
 - Have an existing **system-assigned** or **user-assigned** managed identity in the same Microsoft Entra tenant as your SQL Server VM. [Configure managed identities using the Azure portal](/azure/active-directory/managed-identities-azure-resources/qs-configure-portal-windows-vm) to learn more. 
 - [Azure CLI 2.48.0 or later](/cli/azure/install-azure-cli) if you intend to use the Azure CLI to configure Microsoft Entra authentication for your SQL Server VM. 
 
@@ -268,7 +268,7 @@ The following output indicates Microsoft Entra authentication has been enabled w
 
 Consider the following limitations: 
 
-- Microsoft Entra authentication is only supported with SQL Server 2022 running on Windows VMs registered with the [SQL IaaS Agent extension](sql-server-iaas-agent-extension-automate-management.md) and deployed to the public cloud. Only supported scenarios of the SQL IaaS Agent extension are supported, such as a default instance, or a single named instance. Failover cluster instances are not supported. 
+- Microsoft Entra authentication is only supported with SQL Server 2022 running on Windows VMs registered with the [SQL IaaS Agent extension](sql-server-iaas-agent-extension-automate-management.md), deployed to any cloud. Only supported scenarios of the SQL IaaS Agent extension are supported, such as a default instance, or a single named instance. Failover cluster instances are not supported. 
 - The identity you choose to authenticate to SQL Server has to have either the **Directory Readers** role in Microsoft Entra ID or the following three Microsoft Graph application permissions (app roles): `User.Read.All`, `GroupMember.Read.All`, and `Application.Read.All`. 
 - Once Microsoft Entra authentication is enabled, there's no way to disable it. 
 - Currently, authenticating to SQL Server on Azure VMs through Microsoft Entra authentication using the [FIDO2 method](/azure/active-directory/authentication/howto-authentication-passwordless-faqs) isn't supported. 

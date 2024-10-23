@@ -3,7 +3,7 @@ title: "sys.columns (Transact-SQL)"
 description: sys.columns (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 06/20/2024
+ms.date: 10/23/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "sys.columns catalog view"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=fabric"
 ---
 
 # sys.columns (Transact-SQL)
@@ -38,7 +38,7 @@ Returns a row for each column of an object that has columns, such as views or ta
 | `column_id` | **int** | ID of the column. Is unique within the object. Column IDs might not be sequential. |
 | `system_type_id` | **tinyint** | ID of the system type of the column. |
 | `user_type_id` | **int** | ID of the type of the column as defined by the user. To return the name of the type, join to the [sys.types](sys-types-transact-sql.md) catalog view on this column. |
-| `max_length` | **smallint** | Maximum length (in bytes) of the column.<br /><br />`-1` = Column data type is **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, or **xml**.<br /><br />For **text**, **ntext**, and **image** columns, the max_length value is `16` (representing the 16-byte pointer only) or the value set by `sp_tableoption 'text in row'`. |
+| `max_length` | **smallint** | Maximum length (in bytes) of the column.<br /><br />`-1` = Column data type is **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, or **xml**.<br /><br />For **text**, **ntext**, and **image** columns, the `max_length` value is `16` (representing the 16-byte pointer only) or the value set by `sp_tableoption 'text in row'`. |
 | `precision` | **tinyint** | Precision of the column if numeric-based; otherwise, `0`. |
 | `scale` | **tinyint** | Scale of column if numeric-based; otherwise, `0`. |
 | `collation_name` | **sysname** | Name of the collation of the column if character-based; otherwise `NULL`. |
@@ -78,11 +78,34 @@ Returns a row for each column of an object that has columns, such as views or ta
 
 [!INCLUDE [ssCatViewPerm](../../includes/sscatviewperm-md.md)] For more information, see [Metadata Visibility Configuration](../security/metadata-visibility-configuration.md).
 
+## Usage examples
+
+### Get column details for a table
+
+To get metadata for columns in a table you can use the following code:
+
+```sql
+CREATE TABLE dbo.[sample] (
+    id INT NOT NULL
+    ,col1 VARBINARY(10) NULL
+    )
+GO
+
+SELECT c.[name] AS column_name
+    ,t.[name] AS [type_name]
+    ,c.[max_length]
+    ,c.[precision]
+    ,c.[scale]
+FROM sys.columns c
+INNER JOIN sys.types t ON c.user_type_id = t.user_type_id
+WHERE object_id = object_id('dbo.sample');
+```
+
 ## Related content
 
-- [System Views (Transact-SQL)](../../t-sql/language-reference.md)
 - [Object Catalog Views (Transact-SQL)](object-catalog-views-transact-sql.md)
 - [System catalog views (Transact-SQL)](catalog-views-transact-sql.md)
 - [Querying the SQL Server System Catalog FAQ](querying-the-sql-server-system-catalog-faq.yml)
 - [sys.all_columns (Transact-SQL)](sys-all-columns-transact-sql.md)
 - [sys.system_columns (Transact-SQL)](sys-system-columns-transact-sql.md)
+- [sys.types (Transact-SQL)](sys-types-transact-sql.md)

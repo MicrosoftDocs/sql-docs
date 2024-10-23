@@ -2,7 +2,7 @@
 author: rothja
 ms.author: jroth
 ms.date: 10/26/2018
-ms.service: virtual-machines-sql
+ms.service: azure-vm-sql-server
 ms.topic: include
 ---
 ### Configure a DNS Label for the public IP address

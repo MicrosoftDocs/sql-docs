@@ -4,7 +4,7 @@ description: "Learn about change data capture (CDC) in Azure SQL Database, which
 author: croblesm
 ms.author: roblescarlos
 ms.reviewer: mathoma, randolphwest
-ms.date: 01/04/2024
+ms.date: 10/23/2024
 ms.service: azure-sql-database
 ms.subservice: replication
 ms.topic: conceptual
@@ -244,7 +244,7 @@ Consider the following best practices when you use CDC with Azure SQL Database:
 
 - **No Service Level Agreement (SLA)** is provided for when changes are populated to the change tables. Subsecond latency is also not supported.
 
-## Known issues and limitations
+### Known issues and limitations
 
 ### Aggressive log truncation
 
@@ -264,6 +264,10 @@ To prevent scalability and space management issues, closely monitoring your Azur
 
 > [!TIP]  
 > If your workload demands higher overall performance due to higher transaction log throughput and faster transaction commit times, use the [Hyperscale service tier](service-tier-hyperscale.md).
+
+## Online DDL statements are unsupported
+
+[Online DDL statements](/sql/t-sql/statements/alter-table-transact-sql#with--online--on--off-as-applies-to-altering-a-column) are unsupported when change change data capture is enabled on a database. 
 
 ### Capture and cleanup customization
 

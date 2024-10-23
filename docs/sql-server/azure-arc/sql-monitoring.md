@@ -35,8 +35,7 @@ To collect monitoring data for [!INCLUDE [ssazurearc](../../includes/ssazurearc.
 
 - The version of Azure Extension for SQL Server (`WindowsAgent.SqlServer`) is v1.1.2504.99 or later.
 - [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] is running on the Windows operating system.
-
-[!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] running on [!INCLUDE [winserver2012-md](../../includes/winserver2012-md.md)] R2 and older versions aren't supported.
+  - [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] running on [!INCLUDE [winserver2012-md](../../includes/winserver2012-md.md)] R2 and older versions aren't supported.
 
 - [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] is a Standard or Enterprise edition.
 - The SQL Server version is 2016 SP1 or later.

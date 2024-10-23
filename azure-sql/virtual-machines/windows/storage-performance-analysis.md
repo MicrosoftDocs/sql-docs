@@ -5,7 +5,7 @@ author: ebruersan
 ms.author: ebrue
 ms.reviewer: mathoma
 ms.date: 05/22/2024
-ms.service: virtual-machines-sql
+ms.service: azure-vm-sql-server
 ms.topic: how-to
 ---
 # I/O Performance Analysis (Preview) -  SQL Server on Azure VMs 

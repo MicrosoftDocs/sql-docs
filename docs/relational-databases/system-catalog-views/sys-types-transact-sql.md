@@ -47,7 +47,7 @@ Contains a row for each system and user-defined type.
 
 [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] For more information, see [Metadata Visibility Configuration](../security/metadata-visibility-configuration.md).
 
-## Usage Examples
+## Usage examples
 
 ### Get column details for a table
 

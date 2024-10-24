@@ -29,7 +29,7 @@ Contains a row for each system and user-defined type.
 |-----------------|---------------|-----------------|
 | `name` |**sysname**|Name of the type. Is unique within the schema.|
 | `system_type_id` |**tinyint**|ID of the internal system type.|
-| `user_type_id` |**int**|ID of the type. Is unique within the database. For system data types, `user_type_id` = `system_type_id`.<br /><br />CLR assembly types such as **hierarchyid**, **geometry** and **geography**, will have a different `system_type_id`, and can be identified using `is_assembly_type`. The **sysname** data type is an internal data type based on **nvarchar**.|
+| `user_type_id` |**int**|ID of the type. Is unique within the database.<br /><br />CLR assembly types such as **hierarchyid**, **geometry** and **geography**, will have a different `system_type_id`, and can be identified using `is_assembly_type`. The **sysname** data type is an internal data type based on **nvarchar**.|
 | `schema_id` |**int**|ID of the schema to which the type belongs.|
 | `principal_id` |**int**|ID of the individual owner if different from schema owner. By default, schema-contained objects are owned by the schema owner. However, an alternate owner can be specified by using the ALTER AUTHORIZATION statement to change ownership.<br /><br /> `NULL` if there is no alternate individual owner.|
 | `max_length` |**smallint**|Maximum length (in bytes) of the type.<br /><br /> -`1` = Column data type is **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, or **xml**.<br /> For **text** columns, the `max_length` value will be 16.|

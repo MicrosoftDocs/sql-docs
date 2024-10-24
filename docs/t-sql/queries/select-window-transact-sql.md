@@ -123,9 +123,11 @@ INNER JOIN Person.Person AS p
 INNER JOIN Person.Address AS a
     ON a.AddressID = p.BusinessEntityID
 WHERE TerritoryID IS NOT NULL
-    AND SalesYTD <> 0 WINDOW win AS (
+    AND SalesYTD <> 0
+WINDOW win AS
+    (
         PARTITION BY PostalCode ORDER BY SalesYTD DESC
-        )
+    )
 ORDER BY PostalCode;
 GO
 ```
@@ -193,7 +195,8 @@ SELECT SalesOrderID,
     MIN(OrderQty) OVER win AS [Min],
     MAX(OrderQty) OVER win AS [Max]
 FROM Sales.SalesOrderDetail
-WHERE SalesOrderID IN (43659, 43664) WINDOW win AS (PARTITION BY SalesOrderID);
+WHERE SalesOrderID IN (43659, 43664)
+WINDOW win AS (PARTITION BY SalesOrderID);
 GO
 ```
 
@@ -264,7 +267,8 @@ SELECT SalesOrderID AS OrderNumber,
         ) AS Count
 FROM Sales.SalesOrderDetail
 WHERE SalesOrderID IN (43659, 43664)
-    AND ProductID LIKE '71%' WINDOW win AS
+    AND ProductID LIKE '71%'
+WINDOW win AS
     (
         ORDER BY SalesOrderID, ProductID
     );

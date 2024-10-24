@@ -39,6 +39,9 @@ Before you begin, review the following important information:
 > [!NOTE]  
 > Mixing versions of SQL Server instances in the same AG is not supported outside of a rolling upgrade and should not exist in that state for extended periods of time as the upgrade should take place quickly. The other option for upgrading [!INCLUDE [sssql16-md](../../../includes/sssql16-md.md)] and later versions is through the use of a distributed availability group.
 
+> [!NOTE]  
+> Using the [Cluster-Aware Updating (CAU)](/windows-server/failover-clustering/cluster-aware-updating) Windows feature to update Always On availability groups is not supported.
+
 ## <a id="rolling-upgrade-basics-for-always-on-ags"></a> Rolling upgrade basics for availability groups
 
 Observe the following guidelines when performing server upgrades or updates in order to minimize downtime and data loss for your AGs:

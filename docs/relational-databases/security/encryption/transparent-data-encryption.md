@@ -288,6 +288,8 @@ ALTER DATABASE <db_name> SET ENCRYPTION OFF;
 
 To view the state of the database, use the [sys.dm_database_encryption_keys](../../system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md) dynamic management view.
 
+Note that while the encryption process is in progress, `ALTER DATABASE` statements are disallowed on the database. This means that until the encryption process is finished, you cannot pause and decrypt the database.
+
 Wait for decryption to finish before removing the DEK by using [DROP DATABASE ENCRYPTION KEY](../../../t-sql/statements/drop-database-encryption-key-transact-sql.md).
 
 > [!IMPORTANT]  

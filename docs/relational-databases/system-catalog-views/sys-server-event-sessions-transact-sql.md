@@ -25,6 +25,7 @@ Lists all the server-scoped event session definitions that exist in SQL Server o
 
 > [!NOTE]
 >  Azure SQL Database supports only database-scoped event sessions. See the related view, [sys.database_event_sessions](sys-database-event-sessions-azure-sql-database.md).
+
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
@@ -42,7 +43,8 @@ Lists all the server-scoped event session definitions that exist in SQL Server o
   
 ## Permissions
 
-Requires VIEW SERVER STATE permission on the server.  
+For SQL Server 2019 (15.x) and previous versions, requires VIEW SERVER STATE permission on the server.
+For SQL Server 2022 (16.x) and later versions, requires VIEW SERVER PERFORMANCE STATE permission on the server.
   
 ## Next steps
 

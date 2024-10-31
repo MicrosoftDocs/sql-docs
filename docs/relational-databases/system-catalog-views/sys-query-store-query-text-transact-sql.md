@@ -32,8 +32,11 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=azure-sqldw-latest||>=sq
 |**is_part_of_encrypted_module**|**bit**|Query text is a part of an encrypted module.<br/>**Note:** Azure Synapse Analytics will always return zero (0).|
 |**has_restricted_text**|**bit**|Query text contains a password or other unmentionable words.<br/>**Note:** Azure Synapse Analytics will always return zero (0).|
   
-## Permissions  
- Requires the **VIEW DATABASE STATE** permission.  
+## Permissions
+
+In [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] and previous versions, requires `VIEW SERVER STATE` permission on the server.
+
+In [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later versions, requires `VIEW SERVER PERFORMANCE STATE` permission on the server.
   
 ## See Also  
  [sys.database_query_store_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   

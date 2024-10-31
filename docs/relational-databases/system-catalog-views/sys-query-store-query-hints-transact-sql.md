@@ -40,8 +40,11 @@ monikerRange: "=azuresqldb-current||=azuresqldb-mi-current||>=sql-server-ver16||
 ## Remarks
  Query Store hints are created by [sys.sp_query_store_set_hints (Transact-SQL)](../system-stored-procedures/sys-sp-query-store-set-hints-transact-sql.md) and removed by [sys.sp_query_store_clear_hints](../system-stored-procedures/sys-sp-query-store-clear-hints-transact-sql.md).
 
-## Permissions  
- Requires the **VIEW DATABASE STATE** permission.  
+## Permissions
+
+In [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] and previous versions, requires `VIEW SERVER STATE` permission on the server.
+
+In [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later versions, requires `VIEW SERVER PERFORMANCE STATE` permission on the server.
 
 ## Examples
 

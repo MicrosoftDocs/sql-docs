@@ -41,15 +41,25 @@ Expression of a supported data type to format. For a list of valid types, see th
 
 **nvarchar** format pattern.
 
-The *format* argument must contain a valid .NET Framework format string, either as a standard format string (for example, `"C"` or `"D"`), or as a pattern of custom characters for dates and numeric values (for example, `"MMMM DD, yyyy (dddd)"`). Composite formatting isn't supported.
+The *format* argument must contain a valid .NET Framework format string,
+either as a standard format string (for example, `"C"` or `"D"`),
+or as a pattern of custom characters for dates and numeric values (for example, `"MMMM DD, yyyy (dddd)"`).
+Composite formatting isn't supported.
 
-For a full explanation of these formatting patterns, consult the .NET Framework documentation on string formatting in general, custom date and time formats, and custom number formats. For more information, see [Formatting Types](/dotnet/standard/base-types/formatting-types).
+For a full explanation of these formatting patterns,
+consult the .NET Framework documentation on string formatting in general,
+custom date and time formats, and custom number formats.
+For more information, see [Formatting Types](/dotnet/standard/base-types/formatting-types).
 
 #### *culture*
 
 Optional **nvarchar** argument specifying a culture.
 
-If the *culture* argument isn't provided, the language of the current session is used. This language is set either implicitly, or explicitly by using the `SET LANGUAGE` statement. *culture* accepts any culture supported by the .NET Framework as an argument; it isn't limited to the languages explicitly supported by [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]. If the *culture* argument isn't valid, `FORMAT` raises an error.
+If the *culture* argument isn't provided, the language of the current session is used.
+This language is set either implicitly, or explicitly by using the `SET LANGUAGE` statement.
+*culture* accepts any culture supported by the .NET Framework as an argument;
+it isn't limited to the languages explicitly supported by [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)].
+If the *culture* argument isn't valid, `FORMAT` raises an error.
 
 ## Return types
 
@@ -97,17 +107,17 @@ The following table lists the acceptable data types for the *value* argument tog
 The following example returns a simple date formatted for different cultures.
 
 ```sql
-DECLARE @d DATE = '11/22/2020';
-
-SELECT FORMAT(@d, 'd', 'en-US') 'US English',
-    FORMAT(@d, 'd', 'en-gb') 'British English',
-    FORMAT(@d, 'd', 'de-de') 'German',
-    FORMAT(@d, 'd', 'zh-cn') 'Chinese Simplified (PRC)';
-
-SELECT FORMAT(@d, 'D', 'en-US') 'US English',
-    FORMAT(@d, 'D', 'en-gb') 'British English',
-    FORMAT(@d, 'D', 'de-de') 'German',
-    FORMAT(@d, 'D', 'zh-cn') 'Chinese Simplified (PRC)';
+DECLARE @d DATE = '11/22/2020'
+;
+SELECT FORMAT(@d, 'd', 'en-US') 'US English'
+      ,FORMAT(@d, 'd', 'en-gb') 'British English'
+      ,FORMAT(@d, 'd', 'de-de') 'German'
+      ,FORMAT(@d, 'd', 'zh-cn') 'Chinese Simplified (PRC)'
+;
+SELECT FORMAT(@d, 'D', 'en-US') 'US English'
+      ,FORMAT(@d, 'D', 'en-gb') 'British English'
+      ,FORMAT(@d, 'D', 'de-de') 'German'
+      ,FORMAT(@d, 'D', 'zh-cn') 'Chinese Simplified (PRC)'
 ```
 
 [!INCLUDE [ssResult](../../includes/ssresult-md.md)]
@@ -124,35 +134,42 @@ Friday, August 9, 2024  09 August 2024   Freitag, 9. August 2024   2024年8月9�
 
 ### B. FORMAT with custom formatting strings
 
-The following example shows formatting numeric values by specifying a custom format. The example assumes that the current date is August 9, 2024. For more information about these and other custom formats, see [Custom Numeric Format Strings](/dotnet/standard/base-types/custom-numeric-format-strings).
+The following example shows formatting numeric values by specifying a custom format.
+The example assumes that the current date is August 9, 2024.
+For more information about these and other custom formats, see [Custom Numeric Format Strings](/dotnet/standard/base-types/custom-numeric-format-strings).
 
 ```sql
-DECLARE @d DATE = GETDATE();
-
-SELECT FORMAT(@d, 'dd/MM/yyyy', 'en-US') AS 'Date',
-    FORMAT(123456789, '###-##-####') AS 'Custom Number';
+DECLARE @d DATE = GETDATE()
+;
+SELECT FORMAT(@d, 'dd/MM/yyyy', 'en-US') AS 'Date'
+      ,FORMAT(123456789, '###-##-####') AS 'Custom Number'
 ```
 
 [!INCLUDE [ssResult](../../includes/ssresult-md.md)]
 
 ```output
-Date         Custom Number
------------  --------------
-09/08/2024   123-45-6789
+Date        Custom Number
+----------  -------------
+09/08/2024  123-45-6789
 ```
 
 ### C. FORMAT with numeric types
 
-The following example returns five rows from the `Sales.CurrencyRate` table in the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database. The column `EndOfDateRate` is stored as type **money** in the table. In this example, the column is returned unformatted and then formatted by specifying the .NET Number format, General format, and Currency format types. For more information about these and other numeric formats, see [Standard Numeric Format Strings](/dotnet/standard/base-types/standard-numeric-format-strings).
+The following example returns five rows from the `Sales.CurrencyRate` table
+in the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database.
+The column `EndOfDateRate` is stored as type **money** in the table.
+In this example, the column is returned unformatted and then formatted by specifying the .NET Number format, General format, and Currency format types.
+For more information about these and other numeric formats, see [Standard Numeric Format Strings](/dotnet/standard/base-types/standard-numeric-format-strings).
 
 ```sql
-SELECT TOP (5) CurrencyRateID,
-    EndOfDayRate,
-    FORMAT(EndOfDayRate, 'N', 'en-us') AS 'Numeric Format',
-    FORMAT(EndOfDayRate, 'G', 'en-us') AS 'General Format',
-    FORMAT(EndOfDayRate, 'C', 'en-us') AS 'Currency Format'
+SELECT TOP (5)
+       CurrencyRateID
+      ,EndOfDayRate
+      ,FORMAT(EndOfDayRate, 'N', 'en-us') AS 'Numeric Format'
+      ,FORMAT(EndOfDayRate, 'G', 'en-us') AS 'General Format'
+      ,FORMAT(EndOfDayRate, 'C', 'en-us') AS 'Currency Format'
 FROM Sales.CurrencyRate
-ORDER BY CurrencyRateID;
+ORDER BY CurrencyRateID
 ```
 
 [!INCLUDE [ssResult](../../includes/ssresult-md.md)]
@@ -170,13 +187,14 @@ CurrencyRateID EndOfDayRate  Numeric Format  General Format  Currency Format
 This example specifies the German culture (`de-de`).
 
 ```sql
-SELECT TOP (5) CurrencyRateID,
-    EndOfDayRate,
-    FORMAT(EndOfDayRate, 'N', 'de-de') AS 'Numeric Format',
-    FORMAT(EndOfDayRate, 'G', 'de-de') AS 'General Format',
-    FORMAT(EndOfDayRate, 'C', 'de-de') AS 'Currency Format'
+SELECT TOP (5)
+       CurrencyRateID
+      ,EndOfDayRate
+      ,FORMAT(EndOfDayRate, 'N', 'de-de') AS 'Numeric Format'
+      ,FORMAT(EndOfDayRate, 'G', 'de-de') AS 'General Format'
+      ,FORMAT(EndOfDayRate, 'C', 'de-de') AS 'Currency Format'
 FROM Sales.CurrencyRate
-ORDER BY CurrencyRateID;
+ORDER BY CurrencyRateID
 ```
 
 ```output

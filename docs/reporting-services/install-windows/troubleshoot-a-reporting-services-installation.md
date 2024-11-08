@@ -57,7 +57,7 @@ ms.custom:
   
 -   [You see an error message indicating the URL is not configured](#bkmk_URL_not_configured)  
   
--   [Setup fails on a computer with SharePoint installed but it is not configured](#bkmk_sharepoint_not_confiugred)  
+-   [Setup fails on a computer with SharePoint installed but it is not configured](#bkmk_sharepoint_not_configured)  
   
 -   [SharePoint Central Administration Page is blank](#bkmk_central_admin_blank)  
   

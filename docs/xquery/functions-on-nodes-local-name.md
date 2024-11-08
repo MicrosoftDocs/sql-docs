@@ -62,7 +62,7 @@ WHERE ProductModelID=7
 ```  
   
 ### B. Using local-name without argument in a predicate  
- The following query is specified against the Instructions column, typed **xml** column, of the ProductModel table. The expression returns all the element children of the <`root`> element whose local name part of the QName is "Location". The **local-name()** function is specifed in the predicate and it has no arguments The context node is used by the function.  
+ The following query is specified against the Instructions column, typed **xml** column, of the ProductModel table. The expression returns all the element children of the <`root`> element whose local name part of the QName is "Location". The **local-name()** function is specified in the predicate and it has no arguments The context node is used by the function.  
   
 ```  
 SELECT Instructions.query('  

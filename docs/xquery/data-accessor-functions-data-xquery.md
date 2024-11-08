@@ -136,7 +136,7 @@ WHERE ProductModelID = 19
   
 ```  
 <Root>  
-  <Material>Almuminum Alloy</Material>Almuminum Alloy  
+  <Material>Aluminum Alloy</Material>Aluminum Alloy  
 </Root>  
 ```  
   

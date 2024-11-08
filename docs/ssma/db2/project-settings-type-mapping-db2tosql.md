@@ -195,7 +195,7 @@ The following table contains the default type mapping for local variables.
 | Bfile | **varbinary(max)** |
 | binary_double | **float(53)** |
 | binary_float | **float(53)** |
-| binary_interger | **int** |
+| binary_integer | **int** |
 | Blob | **varbinary(max)** |
 | Boolean | **bit** |
 | Char | **char** |

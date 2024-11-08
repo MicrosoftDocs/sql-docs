@@ -214,7 +214,7 @@ WHERE ProductModelID=19
 ```  
   
 ### E. Retrieve product model feature descriptions  
- The following query constructs XML that includes a <`Product`> element that has **ProducModelID**, **ProductModelName** attributes, and the first two product features. Specifically, the first two product features are the first two child elements of the <`Features`> element. If there are more features, it returns an empty <`There-is-more/`> element.  
+ The following query constructs XML that includes a <`Product`> element that has **ProductModelID**, **ProductModelName** attributes, and the first two product features. Specifically, the first two product features are the first two child elements of the <`Features`> element. If there are more features, it returns an empty <`There-is-more/`> element.  
   
 ```  
 SELECT CatalogDescription.query('  

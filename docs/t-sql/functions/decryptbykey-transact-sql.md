@@ -128,16 +128,16 @@ GO
 
 -- Create the key, and certificate
 USE TestingDecryptByKey;
-CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'ItIsreallyLong1AndSecured!Passsword#';
+CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'ItIsreallyLong1AndSecured!Password#';
 CREATE CERTIFICATE TestEncryptionCertificate WITH SUBJECT = 'TestEncryption';
-CREATE SYMMETRIC KEY TestEncryptSymmmetricKey WITH ALGORITHM = AES_256, IDENTITY_VALUE = 'It is place for test',
+CREATE SYMMETRIC KEY TestEncryptSymmetricKey WITH ALGORITHM = AES_256, IDENTITY_VALUE = 'It is place for test',
 KEY_SOURCE = 'It is source for test' ENCRYPTION BY CERTIFICATE TestEncryptionCertificate;
 
 -- Insert rows into the table
 DECLARE @var VARBINARY(8000), @Val VARCHAR(30);
 SELECT @Val = '000-123-4567';
-OPEN SYMMETRIC KEY TestEncryptSymmmetricKey DECRYPTION BY CERTIFICATE TestEncryptionCertificate;
-SELECT @var = EncryptByKey(Key_GUID('TestEncryptSymmmetricKey'), @Val);
+OPEN SYMMETRIC KEY TestEncryptSymmetricKey DECRYPTION BY CERTIFICATE TestEncryptionCertificate;
+SELECT @var = EncryptByKey(Key_GUID('TestEncryptSymmetricKey'), @Val);
 SELECT CAST(DecryptByKey(@var) AS VARCHAR(30)), @Val;
 INSERT INTO dbo.Test VALUES(@var);
 GO
@@ -156,7 +156,7 @@ GO
 -- Clean up resources
 USE TestingDecryptByKey;
 
-DROP SYMMETRIC KEY TestEncryptSymmmetricKey REMOVE PROVIDER KEY;
+DROP SYMMETRIC KEY TestEncryptSymmetricKey REMOVE PROVIDER KEY;
 DROP CERTIFICATE TestEncryptionCertificate;
 
 Use [Master]

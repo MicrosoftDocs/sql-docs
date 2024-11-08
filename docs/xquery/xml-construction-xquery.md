@@ -488,7 +488,7 @@ This is the result:
  The following example illustrates white-space handling in XML construction:  
   
 ```sql
--- line feed is repaced by space.  
+-- line feed is replaced by space.  
 declare @x xml  
 set @x=''  
 select @x.query('  

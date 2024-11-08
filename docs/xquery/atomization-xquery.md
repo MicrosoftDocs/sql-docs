@@ -38,7 +38,7 @@ SELECT @x.query('sum(data(ROOT/Location/@LaborHours))')
   
  Another example of implicit atomization is when you use arithmetic operators. The **+** operator requires atomic values, and **data()** is implicitly applied to retrieve the atomic value of the LaborHours attribute. The query is specified against the Instructions column of the **xml** type in the ProductModel table. The following query returns the LaborHours attribute three times. In the query, note the following:  
   
--   In constructing the OrignialLaborHours attribute, atomization is implicitly applied to the singleton sequence returned by (`$WC/@LaborHours`). The typed value of the LaborHours attribute is assigned to OrignialLaborHours.  
+-   In constructing the OriginalLaborHours attribute, atomization is implicitly applied to the singleton sequence returned by (`$WC/@LaborHours`). The typed value of the LaborHours attribute is assigned to OriginalLaborHours.  
   
 -   In constructing the UpdatedLaborHoursV1 attribute, the arithmetic operator requires atomic values. Therefore, **data()** is implicitly applied to the LaborHours attribute that is returned by (`$WC/@LaborHours`). The atomic value 1 is then added to it. The construction of attribute UpdatedLaborHoursV2 shows the explicit application of **data()**, but is not required.  
   

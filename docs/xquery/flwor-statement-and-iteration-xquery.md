@@ -449,7 +449,7 @@ where ProductModelID=19;
   
 ```xml
 <Color>Available in most colors</Color>  
-<Material>Almuminum Alloy</Material>  
+<Material>Aluminum Alloy</Material>  
 <ProductLine>Mountain bike</ProductLine>  
 <RiderExperience>Advanced to Professional riders</RiderExperience>  
 <Style>Unisex</Style>    

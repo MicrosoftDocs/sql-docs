@@ -95,7 +95,7 @@ The command **synchronize-target** has **report-errors-to** parameter, which spe
   
 />  
 ```  
-**object-name:** Specifies the object(s) considered for synchronization (It can also have indivdual object names or a group object name).  
+**object-name:** Specifies the object(s) considered for synchronization (It can also have individual object names or a group object name).  
   
 **on-error:** Specifies whether to specify synchronization errors as warnings or error. Available options for on-error:  
   
@@ -125,7 +125,7 @@ The command **refresh-from-database** has **report-errors-to** parameter, which 
   
 />  
 ```  
-**object-name:** Specifies the object(s) considered for refresh (It can also have indivdual object names or a group object name).  
+**object-name:** Specifies the object(s) considered for refresh (It can also have individual object names or a group object name).  
   
 **on-error:** Specifies whether to specify refresh errors as warnings or error. Available options for on-error:  
   

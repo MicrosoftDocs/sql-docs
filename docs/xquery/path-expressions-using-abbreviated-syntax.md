@@ -28,7 +28,7 @@ child::ProductDescription[attribute::ProductModelID=19]
   
 -   The **child** axis is the default axis. Therefore, the **child::** axis can be omitted from a step in an expression. For example, `/child::ProductDescription/child::Summary` can be written as `/ProductDescription/Summary`.  
   
--   An **attribute** axis can be abbreviated as @. For example, `/child::ProductDescription[attribute::ProductModelID=10]` can be written as `/ProudctDescription[@ProductModelID=10]`.  
+-   An **attribute** axis can be abbreviated as @. For example, `/child::ProductDescription[attribute::ProductModelID=10]` can be written as `/ProductDescription[@ProductModelID=10]`.  
   
 -   A **/descendant-or-self::node()/** can be abbreviated as //. For example, `/descendant-or-self::node()/child::act:telephoneNumber` can be written as `//act:telephoneNumber`.  
   

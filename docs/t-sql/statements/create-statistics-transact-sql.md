@@ -88,7 +88,7 @@ ON { table_or_indexed_view_name } ( column [ , ...n ] )
 <update_stats_stream_option> ::=
     [ STATS_STREAM = stats_stream ]
     [ ROWCOUNT = numeric_constant ]
-    [ PAGECOUNT = numeric_contant ]
+    [ PAGECOUNT = numeric_constant ]
 ```
 
 Syntax for Azure Synapse Analytics and Analytics Platform System (PDW).

@@ -196,7 +196,7 @@ For an example, see [Create a partitioned table](#PartitionedTable).
 
 ### Ordered clustered columnstore index option
 
-Clustered columnstore index (CCI) is the default for creating tables in [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]. Data in a CCI is not sorted before being compressed into columnstore segments. When creating a CCI with ORDER, data is sorted before being added to index segments and query performance can be improved. For more infomration on ordered clustered columnstore indexes in Azure Synapse Analytics, see [Performance Tuning with Ordered Clustered Columnstore Index](/azure/sql-data-warehouse/performance-tuning-ordered-cci?view=azure-sqldw-latest&preserve-view=true).  
+Clustered columnstore index (CCI) is the default for creating tables in [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]. Data in a CCI is not sorted before being compressed into columnstore segments. When creating a CCI with ORDER, data is sorted before being added to index segments and query performance can be improved. For more information on ordered clustered columnstore indexes in Azure Synapse Analytics, see [Performance Tuning with Ordered Clustered Columnstore Index](/azure/sql-data-warehouse/performance-tuning-ordered-cci?view=azure-sqldw-latest&preserve-view=true).  
 
 An ordered CCI can be created on columns of any data types supported in [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] except for string columns.  
 

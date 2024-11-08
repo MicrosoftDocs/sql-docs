@@ -237,7 +237,7 @@ SELECT * FROM sys.sequences WHERE name = 'TestSequence' ;
 |-|-|  
 |`start_value`|`-9223372036854775808`|  
 |`increment`|`1`|  
-|`mimimum_value`|`-9223372036854775808`|  
+|`minimum_value`|`-9223372036854775808`|  
 |`maximum_value`|`9223372036854775807`|  
 |`is_cycling`|`0`|  
 |`is_cached`|`1`|  

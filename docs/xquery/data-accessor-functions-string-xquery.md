@@ -40,7 +40,7 @@ fn:string($arg as item()?) as xs:string
   
 -   If the type of *$arg* is **xs:anyURI**, the URI is converted to a string without escaping special characters.  
   
--   Inthis implementation, **fn:string()** without an argument can only be used in the context of a context-dependent predicate. Specifically, it can only be used inside brackets ([ ]).  
+-   In this implementation, **fn:string()** without an argument can only be used in the context of a context-dependent predicate. Specifically, it can only be used inside brackets ([ ]).  
   
 ## Examples  
  This topic provides XQuery examples against XML instances that are stored in various **xml** type columns in the AdventureWorks database.  

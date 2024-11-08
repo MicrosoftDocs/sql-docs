@@ -36,7 +36,7 @@ DacFx is published to [NuGet](https://www.nuget.org/packages/Microsoft.SqlServer
    - Microsoft.SqlServer.Dac.dll
    - Microsoft.SqlServer.Dac.Extensions.dll
    - Microsoft.SqlServer.Dac.Extensions.xml
-   - Micrososft.SqlServer.Dac.xml
+   - Microsoft.SqlServer.Dac.xml
    - Microsoft.SqlServer.TransactSql.ScriptDom.dll
    - Microsoft.SqlServer.Types.dll
 

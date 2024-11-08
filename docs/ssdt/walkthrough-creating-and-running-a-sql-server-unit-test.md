@@ -262,7 +262,7 @@ By default, when you press F5, you deploy (or publish) the database to a LocalDB
   
 #### To create a SQL Server unit test for the stored procedures  
   
-1.  In **SQL Server Object Explorer**, expand the projects node for **SimpleUnitTestDB** and then expand **Progammability** and then the **Stored Procedures** node.  
+1.  In **SQL Server Object Explorer**, expand the projects node for **SimpleUnitTestDB** and then expand **Programmability** and then the **Stored Procedures** node.  
   
 2.  Right-click one of the stored procedures, and click **Create Unit Tests** to display the **Create Unit Tests** dialog box.  
   
@@ -824,7 +824,7 @@ To create and verify a negative test, you must perform the following tasks:
                 -- Use RAISERROR inside the CATCH block to return  
                 -- error information about the original error that  
                 -- caused execution to jump to the CATCH block.  
-                RAISERROR (@ErrorMessage, -- Mesasge text  
+                RAISERROR (@ErrorMessage, -- Message text  
                            @ErrorSeverity, -- Severity  
                            @ErrorState -- State  
                           );  

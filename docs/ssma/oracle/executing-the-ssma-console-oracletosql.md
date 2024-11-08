@@ -227,7 +227,7 @@ generate-assessment-report
   
 -   `conversion-report-folder:` Specifies folder where the assessment report can to be stored.(optional attribute)  
   
--   `object-name:` Specifies the object(s) considered for assessment report generation (It can have indivdual object names or a group object name).  
+-   `object-name:` Specifies the object(s) considered for assessment report generation (It can have individual object names or a group object name).  
   
 -   `object-type:` specifies the type of the object specified in the object-name attribute (if object category is specified then object type will be "category").  
   
@@ -301,7 +301,7 @@ convert-schema
   
 -   `conversion-report-folder:` Specifies folder where the assessment report can to be stored.(optional attribute)  
   
--   `object-name:` Specifies the source object(s) considered for converting schema (It can have indivdual object names or a group object name).  
+-   `object-name:` Specifies the source object(s) considered for converting schema (It can have individual object names or a group object name).  
   
 -   `object-type:` specifies the type of the object specified in the object-name attribute (if object category is specified then object type will be "category").  
   
@@ -365,7 +365,7 @@ Migrates the source data to the target.
   
 -   `conversion-report-folder:` Specifies folder where the assessment report can to be stored.(optional attribute)  
   
--   `object-name:` Specifies the source object(s) considered for migrating data (It can have indivdual object names or a group object name).  
+-   `object-name:` Specifies the source object(s) considered for migrating data (It can have individual object names or a group object name).  
   
 -   `object-type:` specifies the type of the object specified in the object-name attribute (if object category is specified then object type will be "category").  
   
@@ -466,7 +466,7 @@ synchronize-target
   
 **Script**  
   
--   `object-name:` Specifies the target object(s) considered for synchronizing with target database (It can have indivdual object names or a group object name).  
+-   `object-name:` Specifies the target object(s) considered for synchronizing with target database (It can have individual object names or a group object name).  
   
 -   `object-type:` specifies the type of the object specified in the object-name attribute (if object category is specified then object type will be "category").  
   
@@ -598,7 +598,7 @@ Requires one or several metabase nodes as command line parameter.
   
 -   `object-type:` specifies the type of the object specified in the object-name attribute (if object category is specified then object type will be "category").  
   
--   `metabase:` Specifies whether it ithe source or target metabase.  
+-   `metabase:` Specifies whether it is the source or target metabase.  
   
 -   `destination:` Specifies the path or the folder where the script has to be saved, if the file name is not given then a file name in the format (object_name   attribute value).out  
   

@@ -53,9 +53,9 @@ namespace ConsoleApplication
     /// <summary>  
     /// This class is a wrapper that contains methods for:  
     ///   
-    ///     GetTransactionContect() - Returns the current transaction context.  
+    ///     GetTransactionContext() - Returns the current transaction context.  
     ///     BeginTransaction() - Begins a transaction.  
-    ///     CommmitTransaction() - Commits the current transaction.  
+    ///     CommitTransaction() - Commits the current transaction.  
     ///   
     /// </summary>  
   
@@ -165,9 +165,9 @@ Namespace ConsoleApplication
     ''' <summary>   
     ''' This class is a wrapper that contains methods for:   
     '''   
-    ''' GetTransactionContect() - Returns the current transaction context.   
+    ''' GetTransactionContext() - Returns the current transaction context.   
     ''' BeginTransaction() - Begins a transaction.   
-    ''' CommmitTransaction() - Commits the current transaction.   
+    ''' CommitTransaction() - Commits the current transaction.   
     '''   
     ''' </summary>   
   

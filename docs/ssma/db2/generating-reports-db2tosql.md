@@ -64,7 +64,7 @@ Use the following procedure to generate reports:
    object-name="<object-name>"
    object-type="<object-type>"
    verbose="<true/false>"
-   report-erors="<true/false>"
+   report-errors="<true/false>"
    write-summary-report-to="<file-name/folder-name>"
    assessment-report-folder="<folder-name>"
    assessment-report-overwrite="<true/false>"/>

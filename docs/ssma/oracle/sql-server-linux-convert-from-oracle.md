@@ -123,7 +123,7 @@ The final step is to migrate your data.
 
 ## Next steps
 
-For a more complex Orcale schema, the conversion process would involve more time, testing, and possible changes to client applications. The purpose of this tutorial is to show how you can use SSMA for Oracle as a part of your overall migration process.
+For a more complex Oracle schema, the conversion process would involve more time, testing, and possible changes to client applications. The purpose of this tutorial is to show how you can use SSMA for Oracle as a part of your overall migration process.
 
 In this tutorial, you learned how to:
 > [!div class="checklist"]

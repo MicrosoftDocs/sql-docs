@@ -51,7 +51,7 @@ az sql db-arc restore --dest-name <name for new database> --resource-group <reso
 Example:
 
 ```azurecli
-az sql db-arc restore --dest-name "new_db" --resouce-group "my-rg" --name "mysourcedb" --server "ArcSQL1" --time "2020-08-16T12:12:12Z"
+az sql db-arc restore --dest-name "new_db" --resource-group "my-rg" --name "mysourcedb" --server "ArcSQL1" --time "2020-08-16T12:12:12Z"
 ```
 ---
 

@@ -367,7 +367,7 @@ $rsServiceProxy = New-SPRSServiceApplicationProxy -Name "Reporting Services Appl
   
 Write-Host -ForegroundColor Green "Associate service application proxy to default web site and grant web applications rights to SSRS application pool"  
 Write-Host -ForegroundColor Green ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"     
-# Associate the Reporting Services Service Applicatoin Proxy to the default web site...  
+# Associate the Reporting Services Service Application Proxy to the default web site...  
 Get-SPServiceApplicationProxyGroup -default | Add-SPServiceApplicationProxyGroupMember -Member $rsServiceProxy  
   
 $time=Get-Date  

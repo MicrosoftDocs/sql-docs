@@ -143,7 +143,7 @@ Beginning with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], runtimes f
 
 #### Install Python runtime
 
-1. Download the most recent version of [Python 3.10 for Windows](https://www.python.org/downloads/). Install it by using the following options:
+1. Download the most recent version of [Python 3.10 for Windows](https://www.python.org/downloads/release/python-31011/). Install it by using the following options:
     
     1. Open the Python Setup application and select **Customize installation**. 
     1. Verify that the **Install launcher for all users (recommended)** checkbox is selected.

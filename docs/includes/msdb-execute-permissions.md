@@ -6,4 +6,4 @@ ms.service: sql
 ms.topic: include
 ms.custom: include file
 ---
-You can grant the `EXECUTE` permissions on this procedure, but these permissions may be overridden during a SQL Server upgrade.
+You can grant `EXECUTE` permissions on this procedure, but these permissions can be overridden during a SQL Server upgrade.

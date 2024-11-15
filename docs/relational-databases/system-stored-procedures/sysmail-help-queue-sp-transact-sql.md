@@ -57,7 +57,9 @@ When troubleshooting Database Mail, use `sysmail_help_queue_sp` to see how many 
 
 ## Permissions
 
-By default, only members of the **sysadmin** fixed server role can access this procedure.
+For [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] and earlier versions, requires CONTROL SERVER permission on the server.
+
+For [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later versions, requires VIEW SERVER PERFORMANCE STATE permission on the server.
 
 ## Examples
 

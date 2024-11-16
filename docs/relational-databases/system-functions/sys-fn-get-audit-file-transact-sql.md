@@ -145,7 +145,9 @@ The following table describes the audit file content that can be returned by thi
 
 ## [SQL Server](#tab/sqlserver)
 
-Requires the `CONTROL SERVER` permission.
+For [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] and earlier versions, requires `CONTROL SERVER` permission on the server.
+
+For [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later versions, requires `VIEW SERVER SECURITY AUDIT` permission on the server.
 
 ## [Azure SQL Database](#tab/sqldb)
 

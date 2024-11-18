@@ -67,7 +67,9 @@ Every time [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] is started
 
 ## Permissions
 
-Execute permissions for `sp_readerrorlog` are restricted to members of the **sysadmin** fixed server role.
+For [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] and earlier versions, requires VIEW SERVER STATE permission on the server.
+
+For [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later versions, requires VIEW ANY ERROR LOG permission on the server.
 
 ## Examples
 

@@ -135,5 +135,3 @@ For an availability group (AG) configuration, complete these steps from the node
 ## Related content
 
 - [Certificate requirements for SQL Server](certificate-requirements.md)
-- [GRANT Certificate Permissions (Transact-SQL)](../../t-sql/statements/grant-certificate-permissions-transact-sql.md)
-- [REVOKE Certificate Permissions (Transact-SQL)](../../t-sql/statements/revoke-certificate-permissions-transact-sql.md)

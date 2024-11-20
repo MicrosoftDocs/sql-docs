@@ -67,8 +67,7 @@ To complete this tutorial, you need to:
 - Install the [Azure SQL migration extension for Azure Data Studio](/azure-data-studio/extensions/azure-sql-migration-extension) from the Azure Data Studio marketplace
 - Have an Azure account that's assigned to one of the following built-in roles:
 
-  - Contributor for the target instance of Azure SQL Managed Instance and for the storage account where you upload your database backup files from a Server Message Block (SMB) network share
-  - Reader role for the Azure resource groups that contain the target instance of Azure SQL Managed Instance or your Azure storage account
+  - Contributor for the target instance of Azure SQL Managed Instance and for the storage account where you upload your database backup files from a Server Message Block (SMB) network share, and Reader role for the Azure resource groups that contain the target instance of Azure SQL Managed Instance or your Azure storage account.
   - Owner or Contributor role for the Azure subscription (required if you create a new Database Migration Service instance)
 
   As an alternative to using one of these built-in roles, you can [assign custom roles](custom-roles.md).

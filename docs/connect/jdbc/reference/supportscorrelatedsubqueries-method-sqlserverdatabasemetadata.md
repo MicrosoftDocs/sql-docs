@@ -30,7 +30,7 @@ public boolean supportsCorrelatedSubqueries()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## Remarks  
- This supportsCorrelatedSubqueries method is specified by the supportsCorrelatedSubqueries method in the java.sql.DatabaseMetaData interface.
+ This supportsCorrelatedSubqueries method is specified by the supportsCorrelatedSubqueries method in the java.sql.DatabaseMetaData interface.    
   
 ## See Also  
  [SQLServerDatabaseMetaData Methods](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

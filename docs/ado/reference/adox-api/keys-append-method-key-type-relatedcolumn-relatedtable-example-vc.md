@@ -57,7 +57,7 @@ int main() {
       m_pKeyForeign->Columns->GetItem("CustomerId")->RelatedColumn = "CustomerId";  
       m_pKeyForeign->UpdateRule = adRICascade;  
   
-      // To pass as column parameter to Key's Apppend method  
+      // To pass as column parameter to Key's Append method  
       _variant_t vOptional;  
       vOptional.vt = VT_ERROR;  
       vOptional.scode = DISP_E_PARAMNOTFOUND;  

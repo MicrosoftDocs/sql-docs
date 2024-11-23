@@ -28,7 +28,7 @@ public void updateBinaryStream(java.lang.String columnLabel,
 #### Parameters  
  *columnLabel*  
   
- AStringthat contains the column label.  
+ A **String** that contains the column label.  
   
  *x*  
   

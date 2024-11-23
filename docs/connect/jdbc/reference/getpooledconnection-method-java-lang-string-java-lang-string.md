@@ -29,7 +29,7 @@ public javax.sql.PooledConnection getPooledConnection(java.lang.String user,
   
  A **String** that contains the user name.  
   
- *passwword*  
+ *password*  
   
  A **String** that contains the password.  
   

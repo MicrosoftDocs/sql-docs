@@ -267,7 +267,7 @@ Installing or upgrading to APS AU6 is faster and requires less downtime than pre
 <!--
 Link references to other articles in this same GitHub repo.
 
-The link format that starts with '/sql/what-ever/my-artlcle' is not appropriate for common links within the same repo (as most of these link are).  The first couple links have been edited to show the proper syntax, but all other links in this article need to be similarly edited.
+The link format that starts with '/sql/what-ever/my-article' is not appropriate for common links within the same repo (as most of these link are).  The first couple links have been edited to show the proper syntax, but all other links in this article need to be similarly edited.
 The proper formats have at least two big advantages.  One big advantage is that the proper formats enable the OPS Build system to detect broken links at Pull Request build time, instead of only later during run time.
 -->
 [database compatibility level 130]: ../t-sql/statements/alter-database-transact-sql-compatibility-level.md

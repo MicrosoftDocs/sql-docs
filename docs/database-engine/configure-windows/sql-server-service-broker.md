@@ -64,7 +64,7 @@ TO SERVICE 'ExpensesService';
   
 SEND ON CONVERSATION @dialog_handle (@Message) ;  
 ```
-   The message will be sent to the `ExpenssesService` and placed in `dbo.ExpenseQueue`. Because there is no activation procedure associated to this queue, the message will remain in the queue until someone reads it.
+   The message will be sent to the `ExpensesService` and placed in `dbo.ExpenseQueue`. Because there is no activation procedure associated to this queue, the message will remain in the queue until someone reads it.
 
 ### Processing messages
 

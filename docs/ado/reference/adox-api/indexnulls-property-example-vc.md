@@ -16,7 +16,7 @@ dev_langs:
 This example demonstrates the [IndexNulls](./indexnulls-property-adox.md) property of an [Index](./index-object-adox.md). The code creates a new index and sets the value of **IndexNulls** based on user input. Then, the **Index** is appended to the **Employees** [Table](./table-object-adox.md) in the *Northwind* [Catalog](./catalog-object-adox.md). The new **Index** is applied to a [Recordset](../ado-api/recordset-object-ado.md) based on the **Employees** table, and the **Recordset** is opened. A new record is added to the **Employees** table, with a **Null** value in the indexed field. Whether this new record is displayed depends on the setting of the **IndexNulls** property.  
   
 ```  
-// BeignIndexNullCpp.cpp  
+// BeginIndexNullCpp.cpp  
 // compile with: /EHsc  
 #import "msado15.dll" rename("EOF", "EndOfFile")  
 #import "msadox.dll" no_namespace  
@@ -73,7 +73,7 @@ int main() {
 void IndexNullsX(_bstr_t strSel) {  
    HRESULT hr = S_OK;  
   
-   // Define and initialie ADOX object pointers. These are in the ADODB namespace.  
+   // Define and initialize ADOX object pointers. These are in the ADODB namespace.  
    _CatalogPtr m_pCatalog = NULL;  
    _IndexPtr m_pIndexNew = NULL;  
   

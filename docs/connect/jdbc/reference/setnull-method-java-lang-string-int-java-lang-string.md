@@ -28,7 +28,7 @@ public void setNull(java.lang.String sCol,
 #### Parameters  
  *sCol*  
   
- A **String** contthat contains aining the parameter name.  
+ A **String** that contains the parameter name.  
   
  *nType*  
   

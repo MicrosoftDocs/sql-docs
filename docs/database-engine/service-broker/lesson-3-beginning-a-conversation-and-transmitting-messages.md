@@ -58,7 +58,7 @@ In this lesson, you will learn to complete a simple request-reply message cycle 
              [//AWDB/InternalAct/RequestMessage]
              (@RequestMsg);
 
-        -- Diplay sent request.
+        -- Display sent request.
         SELECT @RequestMsg AS SentRequestMsg;
 
         COMMIT TRANSACTION;
@@ -88,7 +88,7 @@ In this lesson, you will learn to complete a simple request-reply message cycle 
 
         END CONVERSATION @RecvReplyDlgHandle;
 
-        -- Display recieved request.
+        -- Display received request.
         SELECT @RecvReplyMsg AS ReceivedReplyMsg;
 
         COMMIT TRANSACTION;

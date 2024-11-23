@@ -135,7 +135,7 @@ CREATE USER HOST_A_user FOR LOGIN HOST_A_login
 GO  
 --Obtain HOST_A certificate. (See the note   
 --   preceding this example.)  
---Asscociate this certificate with the user, HOST_A_user.  
+--Associate this certificate with the user, HOST_A_user.  
 CREATE CERTIFICATE HOST_A_cert  
    AUTHORIZATION HOST_A_user  
    FROM FILE = 'C:\HOST_A_cert.cer';  

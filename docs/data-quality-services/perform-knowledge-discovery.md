@@ -250,7 +250,7 @@ f1_keywords:
   
 -   **New**: The number of new values and the percent of new values compared to existing values in the field  
   
--   **Unique**: The number of unique records in the field and their percentaqe of the total  
+-   **Unique**: The number of unique records in the field and their percentage of the total  
   
 -   **Valid in Domain**: The number of domain values that are valid and their percentage of the total  
   

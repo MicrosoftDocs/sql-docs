@@ -118,7 +118,7 @@ In this lesson, you will learn to create the initiator database and all the init
 
 ### Create references to target objects
 
-- Copy and paste the following code into a Query Editor window. Change the FROM FILE clause to reference the folder to which you copied the **InstTargetCertficate.cer** file from step 3 in Lesson 1. Then, run the code to create a target user and pull in the target certificate.
+- Copy and paste the following code into a Query Editor window. Change the FROM FILE clause to reference the folder to which you copied the **InstTargetCertificate.cer** file from step 3 in Lesson 1. Then, run the code to create a target user and pull in the target certificate.
 
     ```sql
         CREATE USER TargetUser WITHOUT LOGIN;

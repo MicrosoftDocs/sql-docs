@@ -134,7 +134,7 @@ For certain operations like setting server level configurations or manually addi
 > The endpoint exposed for SQL Server instance connections only supports SQL authentication, even in clusters where Active Directory is enabled. By default, during a big data cluster deployment, `sa` login is disabled and a new `sysadmin` login is provisioned based in the values provided at deployment time for `AZDATA_USERNAME` and `AZDATA_PASSWORD` environment variables.
 
 > [!IMPORTANT]
-> The contained availability group DDL is exclusively self managed in BDC. Any (external user) attempt to drop the contained avaialbility or the database mirroring endpoint is not supported and can result in unrecoverable BDC state.
+> The contained availability group DDL is exclusively self managed in BDC. Any (external user) attempt to drop the contained availability or the database mirroring endpoint is not supported and can result in unrecoverable BDC state.
 
 Here is an example that shows how to expose this endpoint and then add the database that was created with a restore workflow to the availability group. Similar instructions for setting up a connection to the SQL Server master instance apply when you want to change server configurations with `sp_configure`.
 

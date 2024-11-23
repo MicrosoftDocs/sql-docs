@@ -10,7 +10,7 @@ ms.topic: how-to
 f1_keywords:
   - "sql13.swb.configdbmsecurwiz.mirrorsrvr.f1"
 ---
-# Configure Database Mirrroing Security Wizard: Mirror Server Instance
+# Configure Database Mirroring Security Wizard: Mirror Server Instance
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Use this page to specify information about the server instance with the mirror database.  
   

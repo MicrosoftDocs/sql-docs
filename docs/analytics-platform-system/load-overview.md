@@ -48,6 +48,6 @@ For more information, see [Prepared statements](prepared-statements.md).
 <!-- MISSING LINKS
 ## See Also  
 [Grant permissions to load data](grant-permissions-to-load-data.md)  
-[Common metadata query examles](metadata-query-examples.md)  
+[Common metadata query examples](metadata-query-examples.md)  
   
 -->

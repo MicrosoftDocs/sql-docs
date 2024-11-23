@@ -187,7 +187,7 @@ f1_keywords:
   
 -   **New**: The number of new matches found and their percentage of the total  
   
--   **Unique**: The number of unique records in the field and their percentaqe of the total  
+-   **Unique**: The number of unique records in the field and their percentage of the total  
   
 -   **Completeness**: The percentage that the rule run is complete.  
   

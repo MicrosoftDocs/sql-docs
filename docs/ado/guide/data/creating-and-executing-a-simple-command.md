@@ -109,7 +109,7 @@ Const DP = "SQLOLEDB"
   
 Dim objRs As New ADODB.Recordset  
 Dim CommandText As String  
-Dim ConnctionString As String  
+Dim ConnectionString As String  
   
 CommandText = "SELECT OrderID, OrderDate, " & _  
                      "RequiredDate, ShippedDate " & _  

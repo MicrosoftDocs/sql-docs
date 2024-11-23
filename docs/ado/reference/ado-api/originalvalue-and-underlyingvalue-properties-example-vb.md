@@ -57,7 +57,7 @@ Public Sub Main()
         rstTitles.MoveNext  
     Loop  
   
-    ' Similate a change by another user by updating  
+    ' Simulate a change by another user by updating  
     ' data using a command string  
     Cnxn.Execute "UPDATE Titles SET type = 'sociology' " & _  
        "WHERE type = 'psychology'"  

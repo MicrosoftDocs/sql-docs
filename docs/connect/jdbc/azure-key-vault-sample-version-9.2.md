@@ -219,7 +219,7 @@ public class AKV {
     }
 
     /**
-     * Rerieves the table
+     * Retrieves the table
      *
      * @throws SQLException
      */

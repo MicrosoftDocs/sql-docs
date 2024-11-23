@@ -83,7 +83,7 @@ NATURAL PREDICTION JOIN
   
  The first argument to the TopCount function is the name of a table column. In this example, the nested table is returned by calling the Predict function and using the INCLUDE_STATISTICS argument.  
   
- The second argument to the TopCount function is the column in the nested table that you use to order the results. In this example, the INCLUDE_STATISTICS option returns the columns $SUPPORT, $PROBABILTY, and $ADJUSTED PROBABILITY. This example uses $SUPPORT to rank the results.  
+ The second argument to the TopCount function is the column in the nested table that you use to order the results. In this example, the INCLUDE_STATISTICS option returns the columns $SUPPORT, $PROBABILITY, and $ADJUSTED PROBABILITY. This example uses $SUPPORT to rank the results.  
   
  The third argument to the TopCount function specifies the number of rows to return, as an integer. To get the top three products, as ordered by $SUPPORT, you type 3.  
   

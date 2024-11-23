@@ -197,7 +197,7 @@ else
      1) $product is an instance of the Product class.  
      2) The $ctorParams parameter is required in the call to  
         sqlsrv_fetch_object, because the Product class constructor is  
-        explicity defined and requires parameter values.  
+        explicitly defined and requires parameter values.  
      3) The "Name" property is added to the $product instance because  
         the existing "name" property does not match.  
      4) The "Color" property is added to the $product instance  

@@ -129,7 +129,7 @@ USE master;
 --Create the database Master Key, if needed.  
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<Strong_Password_#2>';  
 GO  
--- Make a certifcate on HOST_B server instance.  
+-- Make a certificate on HOST_B server instance.  
 CREATE CERTIFICATE HOST_B_cert   
    WITH SUBJECT = 'HOST_B certificate for database mirroring',   
    EXPIRY_DATE = '11/30/2013';  

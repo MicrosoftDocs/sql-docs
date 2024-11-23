@@ -414,7 +414,7 @@ Add-ClusterResource $DTCnetnm -ResourceType "Network Name" -Group $AGgrp;
 # Set the value for the Network Name resource
 Get-ClusterResource $DTCnetnm | Set-ClusterParameter DnsName $DTCresnm;
 
-# Add the IP address as a depenency of the Network Name resource
+# Add the IP address as a dependency of the Network Name resource
 Add-ClusterResourceDependency $DTCnetnm $DTCipresnm;
 
 # Create the Distributed Transaction Coordinator resource

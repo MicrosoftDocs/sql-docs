@@ -50,7 +50,7 @@ In this lesson, you will learn to drop the objects that enabled a database to su
                    WHERE name = N'TargetQueueIntAct')
              DROP QUEUE TargetQueueIntAct;
 
-        -- Drop the intitator queue and service if they already exist.
+        -- Drop the initiator queue and service if they already exist.
         IF EXISTS (SELECT * FROM sys.services
                    WHERE name =
                    N'//AWDB/InternalAct/InitiatorService')

@@ -133,7 +133,7 @@ if( $stmt3 === false)
   
 /* Consume the first result (rows affected by INSERT query in the  
 stored procedure) without calling sqlsrv_next_result. */  
-echo "Rows affectd: ".sqlsrv_rows_affected($stmt3)."-----\n";  
+echo "Rows affected: ".sqlsrv_rows_affected($stmt3)."-----\n";  
   
 /* Move to the next result and display results. */  
 $next_result = sqlsrv_next_result($stmt3);  

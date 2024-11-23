@@ -28,7 +28,7 @@ FetchComplete pError, adStatus, pRecordset
  An [Error](../../../ado/reference/ado-api/error-object.md) object. It describes the error that occurred if the value of **adStatus** is **adStatusErrorsOccurred**; otherwise it is not set.  
   
  *adStatus*  
- An [EventStatusEnum](../../../ado/reference/ado-api/eventstatusenum.md) status value. When this event is called, this parameter is set to **adStatusOK** if the operation that caused the event was successfull, or to **adStatusErrorsOccurred** if the operation failed.  
+ An [EventStatusEnum](../../../ado/reference/ado-api/eventstatusenum.md) status value. When this event is called, this parameter is set to **adStatusOK** if the operation that caused the event was successful, or to **adStatusErrorsOccurred** if the operation failed.  
   
  Before this event returns, set this parameter to **adStatusUnwantedEvent** to prevent subsequent notifications.  
   

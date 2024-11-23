@@ -44,7 +44,7 @@ The following articles describe how to monitor Big Data Clusters:
 - [Monitor Big Data Clusters status by using Azure Data Studio](cluster-monitor-ads.md)
 - [Monitor Big Data Clusters by using azdata and kubectl](cluster-monitor-cmdlet.md)
 - [Monitor Big Data Clusters by using azdata and Grafana Dashboard](cluster-monitor-grafana.md)
-- [Monitor Big Data Clusters by using Juypter Notebooks and Azure Data Studio](cluster-monitor-notebooks.md)
+- [Monitor Big Data Clusters by using Jupyter Notebooks and Azure Data Studio](cluster-monitor-notebooks.md)
 
 > [!IMPORTANT]
 > The Internet Explorer browser and older Microsoft Edge browsers aren't compatible with Grafana or Kibana. Consider the [Chromium-based Microsoft Edge](https://microsoftedgewelcome.microsoft.com/), or see [supported browsers for Grafana](https://grafana.com/docs/grafana/latest/installation/requirements/#supported-web-browsers) or [supported browsers for Kibana](https://www.elastic.co/support/matrix#matrix_browsers).
@@ -83,10 +83,10 @@ The following articles list many of the Jupyter Notebooks that are available in 
 
 To learn how to use the notebooks, see these articles:
 
-- [Monitor Big Data Clusters by using Juypter notebooks and Azure Data Studio](cluster-monitor-notebooks.md)
+- [Monitor Big Data Clusters by using Jupyter notebooks and Azure Data Studio](cluster-monitor-notebooks.md)
 - [Gathering and analyzing logs in a big data cluster by using notebooks](cluster-logging-notebooks.md)
 - [Troubleshoot a pyspark notebook](troubleshoot-pyspark-notebook.md)
-- [Troubleshoot Big Data Clusters by using Juypter Notebooks and Azure Data Studio](cluster-troubleshooter-notebooks.md)
+- [Troubleshoot Big Data Clusters by using Jupyter Notebooks and Azure Data Studio](cluster-troubleshooter-notebooks.md)
 
 ## Big Data Clusters troubleshooting resources
 
@@ -94,7 +94,7 @@ The following articles describe how to troubleshoot Big Data Clusters:
 
 - [Troubleshoot Big Data Clusters by using the kubectl utility](cluster-troubleshooting-commands.md) 
 - [Troubleshoot a pyspark notebook](troubleshoot-pyspark-notebook.md)
-- [Troubleshoot Big Data Clusters by using Juypter Notebooks and Azure Data Studio](cluster-troubleshooter-notebooks.md)
+- [Troubleshoot Big Data Clusters by using Jupyter Notebooks and Azure Data Studio](cluster-troubleshooter-notebooks.md)
 - [Restore HDFS permissions](troubleshoot-hdfs-restore-admin.md)
 - [Troubleshoot HDFS in SQL Server Big Data Clusters](troubleshoot-hdfs.md)
 

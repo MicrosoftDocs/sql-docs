@@ -108,7 +108,7 @@ EndProductsTable();
 }  
 else  
 {  
-DisplayNoProdutsMsg();  
+DisplayNoProductsMsg();  
 }  
 GetSearchTerms( !null );  
   
@@ -297,7 +297,7 @@ $headings = array("Product ID", "Product Name",
     echo "</tr>";  
 }  
   
-function DisplayNoProdutsMsg()  
+function DisplayNoProductsMsg()  
 {  
     echo "<h4 align='center'>No products found.</h4>";  
 }  

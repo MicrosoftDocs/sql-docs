@@ -81,7 +81,7 @@ $tsql1 = "INSERT INTO Sales.SalesOrderDetail
 $params1 = array( $orderId, $qty, $productId, $offerId, $price);  
 $stmt1 = sqlsrv_query( $conn, $tsql1, $params1 );  
   
-/* Set up and executee the second query. */  
+/* Set up and execute the second query. */  
 $tsql2 = "UPDATE Production.ProductInventory   
           SET Quantity = (Quantity - ?)   
           WHERE ProductID = ?";  

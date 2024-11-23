@@ -134,7 +134,7 @@ Configuring Active Directory authentication for [!INCLUDE [ssnoversion-md](../in
    The previous commands allow both AES and RC4 encryption ciphers for Active Directory authentication. RC4 is an older encryption cipher and if a higher degree of security is required, you can choose to create the keytab entries with only the AES encryption cipher.
 
    > [!NOTE]  
-   > The last two `UserName` entries must be in lowercase, or the permssion authentication can fail.
+   > The last two `UserName` entries must be in lowercase, or the permission authentication can fail.
 
 1. After executing the previous commands, you should have a keytab file named `mssql.keytab`. Copy the file over to the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] machine under the folder `/var/opt/mssql/secrets`.
 

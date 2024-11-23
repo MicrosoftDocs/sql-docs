@@ -68,7 +68,7 @@ Complete the following steps to build the docker image:
    ```
 
    > [!NOTE]  
-   > Any of the following values can be used for MSSQL_PID: Developer (free), Express (free), Enteprise (paid), Standard (paid). If you are using a paid edition, please ensure that you have purchased a license. Replace (password) with your actual password. Volume mounting using -v is optional. Replace (directory on the host OS) with an actual directory where you want to mount the database data and log files.
+   > Any of the following values can be used for MSSQL_PID: Developer (free), Express (free), Enterprise (paid), Standard (paid). If you are using a paid edition, please ensure that you have purchased a license. Replace (password) with your actual password. Volume mounting using -v is optional. Replace (directory on the host OS) with an actual directory where you want to mount the database data and log files.
 
 1. Confirm by running the following command:
 

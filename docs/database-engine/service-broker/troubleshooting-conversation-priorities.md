@@ -32,7 +32,7 @@ Use the **sys.databasesis_broker_priority_honored** column to determine the stat
 
 ## Symptom: Messages Are Not Sent in Priority Sequence
 
-Open a SQL Server Profiler trace and review the Broker Remote Message Ack events. A value of 1 in the **StarvationElevation** column indicates the priority of messages was elevated to prevent starvation. A value of 0 in the **HonorBokerPriority** column indicates the HONOR_BROKER_PRIORITY option was not enabled in the sending database.
+Open a SQL Server Profiler trace and review the Broker Remote Message Ack events. A value of 1 in the **StarvationElevation** column indicates the priority of messages was elevated to prevent starvation. A value of 0 in the **HonorBrokerPriority** column indicates the HONOR_BROKER_PRIORITY option was not enabled in the sending database.
 
 Also review the Broker/DBM Transport System Monitor counter to see the transmission rates for messages of different priority levels.
 
@@ -46,7 +46,7 @@ A RECEIVE statement that has a WHERE clause that specifies a conversation group 
 
 ## Symptom: Messages Are Not Assigned the Expected Priority Level
 
-View **sys.conversation_endpoint** to see whether the conversation endpoint was assigned the expected priority level. If it was not, use **sys.conversation_priorites** to review the properties specified for the conversation priorities in the database against the contract, local service, and remote service that is used for the conversation endpoint.
+View **sys.conversation_endpoint** to see whether the conversation endpoint was assigned the expected priority level. If it was not, use **sys.conversation_priorities** to review the properties specified for the conversation priorities in the database against the contract, local service, and remote service that is used for the conversation endpoint.
 
 ## See also
 

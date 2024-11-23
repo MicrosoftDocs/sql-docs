@@ -23,7 +23,7 @@ public static DateTimeOffset valueOf(java.sql.Timestamp timestamp, java.util.Cal
 #### Parameters  
  *timestamp*  
   
- Ajava.sql.Timestamp value.  
+ A java.sql.Timestamp value.  
   
  *calendar*  
   

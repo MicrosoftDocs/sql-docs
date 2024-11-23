@@ -115,7 +115,7 @@ If your scenario requires the usage of an oracle proxy user, __replace the previ
 
 ## Create an external table
 
-Next, create an external table named **iventory_ora** over the `INVENTORY` table on the Oracle server.
+Next, create an external table named **inventory_ora** over the `INVENTORY` table on the Oracle server.
 
 ```sql
 CREATE EXTERNAL TABLE [inventory_ora]
@@ -130,7 +130,7 @@ WITH (DATA_SOURCE=[OracleSalesSrvr],
 
 ## Query the data
 
-Run the following query to join the data in the `iventory_ora` external table with the tables in the local `Sales` database.
+Run the following query to join the data in the `inventory_ora` external table with the tables in the local `Sales` database.
 
 ```sql
 SELECT TOP(100) w.w_warehouse_name, i.inv_item, SUM(i.inv_quantity_on_hand) as total_quantity

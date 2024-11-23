@@ -137,7 +137,7 @@ void ActiveCommandX() {
 }  
   
 void ActiveCommandXprint(_RecordsetPtr pRst = NULL) {  
-   // Varible Declaraion & initialization  
+   // Varible Declaration & initialization  
    IADORecordBinding *picRs = NULL;   // Interface Pointer declared.   
    CAuthorsRs autrs;   // C++ class object  
    _bstr_t strName;  

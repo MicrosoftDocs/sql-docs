@@ -20,7 +20,7 @@ apitype: "Assembly"
   
 ```  
   
-public boolean getEncypt()  
+public boolean getEncrypt()  
 ```  
   
 ## Return Value  

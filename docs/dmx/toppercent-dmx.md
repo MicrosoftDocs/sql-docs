@@ -79,7 +79,7 @@ NATURAL PREDICTION JOIN
   
  The first argument to the TopPercent function is the name of a table column. In this example, the nested table is returned by calling the Predict function and using the INCLUDE_STATISTICS argument.  
   
- The second argument to the TopPercent function is the column in the nested table that you use to order the results. In this example, the INCLUDE_STATISTICS option returns the columns $SUPPORT, $PROBABILTY, and $ADJUSTED PROBABILITY. This example uses $SUPPORT because support values are not fractional and therefore are easier to verify.  
+ The second argument to the TopPercent function is the column in the nested table that you use to order the results. In this example, the INCLUDE_STATISTICS option returns the columns $SUPPORT, $PROBABILITY, and $ADJUSTED PROBABILITY. This example uses $SUPPORT because support values are not fractional and therefore are easier to verify.  
   
  The third argument to the TopPercent function specifies the percentage, as a double. To get the rows for the top products that sum to 50 percent of the total support, you type 50.  
   

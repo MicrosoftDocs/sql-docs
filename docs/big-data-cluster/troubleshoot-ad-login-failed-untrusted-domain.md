@@ -171,7 +171,7 @@ $BdcEndpointsDns = New-Object System.Collections.ArrayList
 [void]$BdcEndpointsDns.Add($Gateway_DNS_name)
 [void]$BdcEndpointsDns.Add($AppProxy_DNS_name)
 
-#Build arrary for results 
+#Build array for results 
 $BdcEndpointsDns_Result = New-Object System.Collections.ArrayList
 
 foreach ($DnsName in $BdcEndpointsDns) {

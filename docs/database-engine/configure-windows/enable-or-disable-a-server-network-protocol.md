@@ -59,7 +59,7 @@ All network protocols are installed during installation, by [!INCLUDE[ssNoVersio
 
    To disable protocols, set the `IsEnabled` properties to `$false`.
 
-   You can run this script from any machine, with or withour SQL Server installed. Make sure you have the **SqlServer** module installed.
+   You can run this script from any machine, with or without SQL Server installed. Make sure you have the **SqlServer** module installed.
 
    ```powershell
    #requires the SqlServer module

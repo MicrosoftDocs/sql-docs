@@ -105,7 +105,7 @@ EndProductsTable();
 }  
 else  
 {  
-DisplayNoProdutsMsg();  
+DisplayNoProductsMsg();  
 }  
 }  
 catch(Exception $e)  
@@ -274,7 +274,7 @@ echo "<td>$heading</td>";
 echo "</tr>";  
 }  
   
-function DisplayNoProdutsMsg()  
+function DisplayNoProductsMsg()  
 {  
     echo "<h4 align='center'>No products found.</h4>";  
 }  

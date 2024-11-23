@@ -46,7 +46,7 @@ In this lesson, you will learn to receive the reply message from the target serv
 
         END CONVERSATION @RecvReplyDlgHandle;
 
-        -- Display recieved request.
+        -- Display received request.
         SELECT @RecvReplyMsg AS ReceivedReplyMsg;
 
         COMMIT TRANSACTION;

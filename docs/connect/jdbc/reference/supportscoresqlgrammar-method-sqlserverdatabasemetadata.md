@@ -30,7 +30,7 @@ public boolean supportsCoreSQLGrammar()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## Remarks  
- This supportsCoreSQLGrammer method is specified by the supportsCoreSQLGrammer method in the java.sql.DatabaseMetaData interface.  
+ This supportsCoreSQLGrammar method is specified by the supportsCoreSQLGrammar method in the java.sql.DatabaseMetaData interface.  
   
 ## See Also  
  [SQLServerDatabaseMetaData Methods](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

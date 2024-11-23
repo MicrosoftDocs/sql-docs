@@ -56,7 +56,7 @@ helpviewer_keywords:
     |[sp_dbmmonitordropalert &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitordropalert-transact-sql.md)|Drops the warning for a specified performance metric.|  
   
 ## Performance-Threshold Events Sent to the Windows Event Log  
- If warning thresholdis defined for a performance metric, when the status table is updated, the latest value is evaluated against the threshold. If the threshold has been reached, the update procedure, **sp_dbmmonitorupdate**, generates an informational event-a *performance-threshold event*- for the metric and writes the event to the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows event log. The following table lists the event IDs of the performance-threshold events.  
+ If warning threshold is defined for a performance metric, when the status table is updated, the latest value is evaluated against the threshold. If the threshold has been reached, the update procedure, **sp_dbmmonitorupdate**, generates an informational event-a *performance-threshold event*- for the metric and writes the event to the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows event log. The following table lists the event IDs of the performance-threshold events.  
   
 |Performance metric|Event ID|  
 |------------------------|--------------|  
@@ -71,7 +71,7 @@ helpviewer_keywords:
 >  topic.  
   
 ##  <a name="UseAlerts"></a> Using Alerts for a Mirrored Database  
- An important part of monitoring a mirrored database is configuring alerts on significant database mirro events. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] generates the following types of database mirroring events:  
+ An important part of monitoring a mirrored database is configuring alerts on significant database mirror events. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] generates the following types of database mirroring events:  
   
 -   Performance threshold events  
   

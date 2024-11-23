@@ -222,7 +222,7 @@ bool TestXaRunner(HDBC hdbc, const char* connString, TestType testType, int time
         if (isTimeoutTest)
         {
             result = xaStatus == XAER_NOTA;
-            std::cout << "TestXaRunner::TimeoutTest" " xaStatus=" << xaStatus << " test " << (result ? "Succeded" : "Failed") << std::endl;
+            std::cout << "TestXaRunner::TimeoutTest" " xaStatus=" << xaStatus << " test " << (result ? "Succeeded" : "Failed") << std::endl;
         }
         else
         {
@@ -231,7 +231,7 @@ bool TestXaRunner(HDBC hdbc, const char* connString, TestType testType, int time
             rc = GetRowCount(hstmt, tableName, rowCount);
             result = (rowCount == (isCommit ? ROWS_TO_TEST : 0)) && SQL_SUCCEEDED(xaStatus);
 
-            std::cout << "TestXaRunner::" << (isCommit ? "Commit" : "Rollback") << " rowCount=" << rowCount << " xaStatus=" << xaStatus << " test " << (result ? "Succeded" : "Failed") << std::endl;
+            std::cout << "TestXaRunner::" << (isCommit ? "Commit" : "Rollback") << " rowCount=" << rowCount << " xaStatus=" << xaStatus << " test " << (result ? "Succeeded" : "Failed") << std::endl;
         }
        
         if (isTableCreated)

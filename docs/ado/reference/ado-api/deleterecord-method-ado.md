@@ -29,7 +29,7 @@ Record.DeleteRecord Source, Async
  Optional. A **String** value that contains a URL identifying the entity (for example, the file or directory) to be deleted. If *Source* is omitted or specifies an empty string, the entity represented by the current [Record](../../../ado/reference/ado-api/record-object-ado.md) is deleted. If the Record is a collection record ([RecordType](../../../ado/reference/ado-api/recordtype-property-ado.md) of **adCollectionRecord**, such as a directory) all children (for example, subdirectories) will also be deleted.  
   
  *Async*  
- Optional. A **Boolean** value that, when **True**, specifies that the delete operation is asychronous.  
+ Optional. A **Boolean** value that, when **True**, specifies that the delete operation is asynchronous.  
   
 ## Remarks  
  Operations on the object represented by this **Record** may fail after this method completes. After calling **DeleteRecord**, the **Record** should be closed because the behavior of the **Record** may become unpredictable depending upon when the provider updates the **Record** with the data source.  

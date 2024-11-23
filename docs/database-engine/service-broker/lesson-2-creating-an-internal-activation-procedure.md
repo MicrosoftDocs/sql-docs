@@ -34,7 +34,7 @@ In this lesson, you will learn to create a stored procedure to process messages 
 - Copy and paste the following code into a Query Editor window. Then, run it to create a stored procedure. When it is run, the stored procedure keeps receiving messages as long as there are messages in the queue. If the receive times out without returning a message, the stored procedure ends. If the received message was a request message, the stored procedure returns a reply message. If the received message is an **EndDialog** message, the stored procedure ends the target side of the conversation. If the received message is and **Error** message, it rolls back the transaction.
 
   ```sql
-      CREATE PROCEDURE TargetActivProc
+      CREATE PROCEDURE TargetActiveProc
       AS
         DECLARE @RecvReqDlgHandle UNIQUEIDENTIFIER;
         DECLARE @RecvReqMsg NVARCHAR(100);
@@ -96,7 +96,7 @@ In this lesson, you will learn to create a stored procedure to process messages 
       ALTER QUEUE TargetQueueIntAct
           WITH ACTIVATION
           ( STATUS = ON,
-            PROCEDURE_NAME = TargetActivProc,
+            PROCEDURE_NAME = TargetActiveProc,
             MAX_QUEUE_READERS = 10,
             EXECUTE AS SELF
           );

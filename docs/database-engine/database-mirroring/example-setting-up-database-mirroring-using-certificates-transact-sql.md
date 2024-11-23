@@ -246,7 +246,7 @@ helpviewer_keywords:
 3.  This example assumes that the session will be running in high-performance mode. To configure this session for high-performance mode, on the principal server instance (on HOST_A), set transaction safety to OFF.  
   
     ```  
-    --Change to high-performance mode by turning off transacton safety.  
+    --Change to high-performance mode by turning off transaction safety.  
     ALTER DATABASE AdventureWorks   
         SET PARTNER SAFETY OFF  
     GO  

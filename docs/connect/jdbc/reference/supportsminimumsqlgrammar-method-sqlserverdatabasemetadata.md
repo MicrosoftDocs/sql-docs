@@ -30,7 +30,7 @@ public boolean supportsMinimumSQLGrammar()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## Remarks  
- This supportsMinimumSQLGrammer method is specified by the supportsMinimumSQLGrammer method in the java.sql.DatabaseMetaData interface.  
+ This supportsMinimumSQLGrammar method is specified by the supportsMinimumSQLGrammar method in the java.sql.DatabaseMetaData interface.  
   
 ## See Also  
  [SQLServerDatabaseMetaData Methods](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

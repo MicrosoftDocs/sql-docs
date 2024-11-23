@@ -36,7 +36,7 @@ The `SqlServer` module is maintained in the [PowerShell Gallery](https://www.pow
 
 To install the SqlServer module, open a PowerShell Core session and run the following code:
 
-```powerhsell
+```powershell
 Install-Module -Name SqlServer
 ```
 

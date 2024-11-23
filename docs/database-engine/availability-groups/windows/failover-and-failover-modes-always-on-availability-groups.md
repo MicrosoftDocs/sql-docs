@@ -175,7 +175,7 @@ helpviewer_keywords:
   
 3.  The failover target (on `Node02`) becomes the new primary replica. Because this is a planned failover, the former primary replica switches to the secondary role during the failover and brings its databases online as secondary databases immediately.  
   
- ![Illustation of a planned manual failover](../../../database-engine/availability-groups/windows/media/aoag-plannedmanualfailover.gif "Illustation of a planned manual failover")  
+ ![Illustration of a planned manual failover](../../../database-engine/availability-groups/windows/media/aoag-plannedmanualfailover.gif "Illustation of a planned manual failover")  
   
  **In This Section:**  
   

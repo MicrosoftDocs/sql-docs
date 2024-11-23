@@ -29,7 +29,7 @@ IsDescendant(<NodeID>)
  **IsDescendant** is only used in [SELECT FROM &#60;model&#62;.CONTENT &#40;DMX&#41;](../dmx/select-from-model-content-dmx.md) and [SELECT FROM &#60;model&#62;.DIMENSION_CONTENT &#40;DMX&#41;](../dmx/select-from-model-dimension-content-dmx.md) queries.  
   
 ## Examples  
- The following example returns all the cases that are descendents of the node that is specified in the IsDescendant function.  
+ The following example returns all the cases that are descendants of the node that is specified in the IsDescendant function.  
   
 ```  
 SELECT * FROM [TM Decision Tree].CONTENT  

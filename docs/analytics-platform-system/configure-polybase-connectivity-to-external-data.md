@@ -24,7 +24,7 @@ PolyBase on APS supports reading and writing to Hadoop (HDFS) file system and Az
 See [features and limitation](../relational-databases/polybase/polybase-versioned-feature-summary.md) for a summary of PolyBase features available and known limitations on APS and other SQL Server products.
 
 > [!NOTE] 
-> The rest of the PolyBase related articles descibe how to configure PolyBase on APS 2016 (AU6) and later.
+> The rest of the PolyBase related articles describe how to configure PolyBase on APS 2016 (AU6) and later.
 
 ## See Also
 - [Hadoop](polybase-configure-hadoop.md)

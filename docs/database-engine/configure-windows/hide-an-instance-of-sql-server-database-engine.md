@@ -30,7 +30,7 @@ helpviewer_keywords:
 ### Clustering  
  If you hide a clustered instance or availability group name, cluster service may not be able to connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. This will cause the cluster instance **IsAlive** check to fail and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will go offline. 
  
-To avoid this, create an alias in all the nodes of the clustered instance or all instances that host availability group replicas to reflect the static port that you configured for the instance.  For example, on an availability group with two replicas, on node-one, create an alias for the node-two instance, like `node-two\instancename`. On node-two, create an alias called `node-one\instancename`. The aliases are required for succesfull failover. 
+To avoid this, create an alias in all the nodes of the clustered instance or all instances that host availability group replicas to reflect the static port that you configured for the instance.  For example, on an availability group with two replicas, on node-one, create an alias for the node-two instance, like `node-two\instancename`. On node-two, create an alias called `node-one\instancename`. The aliases are required for successful failover. 
  
  For more information, see [Create or Delete a Server Alias for Use by a Client &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure-windows/create-or-delete-a-server-alias-for-use-by-a-client.md).  
   

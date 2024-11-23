@@ -20,7 +20,7 @@ In this lesson, you will learn to create the linked server and routes from the t
 
 ### Create references to initiator objects
 
-- Copy and paste the following code into a Query Editor window. Change the FROM FILE clause to reference the folder to which you copied the **InstInitiatorCertficate.cer** file from step 4 in Lesson 2. Then, run the code to create an initiator user and pull in the initiator certificate.
+- Copy and paste the following code into a Query Editor window. Change the FROM FILE clause to reference the folder to which you copied the **InstInitiatorCertificate.cer** file from step 4 in Lesson 2. Then, run the code to create an initiator user and pull in the initiator certificate.
 
     ```sql  
         USE InstTargetDB

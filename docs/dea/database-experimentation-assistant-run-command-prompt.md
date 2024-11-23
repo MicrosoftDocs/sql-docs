@@ -30,7 +30,7 @@ This article describes how to capture a trace in Database Experimentation Assist
 To start a new workload capture, at a command prompt, run the following command:
 
 ```cmd
-Deacmd.exe -o StartCapture -n <Trace FileName> -x <Trace Format> -h <SQLServerInstance> -f <database name> -e <Encrypt Connection> -m <Authetication Mode> -u <user name> -p <password> -l <Location of Output Folder> -d <duration>
+Deacmd.exe -o StartCapture -n <Trace FileName> -x <Trace Format> -h <SQLServerInstance> -f <database name> -e <Encrypt Connection> -m <Authentication Mode> -u <user name> -p <password> -l <Location of Output Folder> -d <duration>
 ```
 
 For example:

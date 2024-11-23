@@ -20,7 +20,7 @@ apitype: "Assembly"
   
 |Name|Description|  
 |----------|-----------------|  
-|[setString (long, java.lang.String)](../../../connect/jdbc/reference/setstring-method-long-java-lang-string.md)|Writes the given stringto the CLOB starting at the given position.|  
+|[setString (long, java.lang.String)](../../../connect/jdbc/reference/setstring-method-long-java-lang-string.md)|Writes the given string to the CLOB starting at the given position.|  
 |[setString (long, java.lang.String, int, int)](../../../connect/jdbc/reference/setstring-method-long-java-lang-string-int-int.md)|Writes the given string to the CLOB starting at the given position, based on the given offset and length.|  
   
 ## See Also  

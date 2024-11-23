@@ -135,7 +135,7 @@ In this lesson, you will learn to start a conversation that spans two databases 
 
         END CONVERSATION @RecvReplyDlgHandle;
 
-        -- Display recieved request.
+        -- Display received request.
         SELECT @RecvReplyMsg AS ReceivedReplyMsg;
 
         COMMIT TRANSACTION;

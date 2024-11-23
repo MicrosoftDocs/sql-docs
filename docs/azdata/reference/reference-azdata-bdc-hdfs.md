@@ -91,7 +91,7 @@ azdata bdc hdfs exists --path -p
                        
 ```
 ### Examples
-Check for file or directory existance.
+Check for file or directory existence.
 ```bash
 azdata bdc hdfs exists --path "tmp/"
 ```

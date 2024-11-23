@@ -78,7 +78,7 @@ Do you accept the license terms? [yes/no]. If you do not want to use this arg, y
 #### `--node-label -l`
 Big data cluster node label, used to designate what nodes to deploy to.
 #### `--force -f`
-Force create, the user will not be prompted for any values and all issues will be printed as partof stderr.
+Force create, the user will not be prompted for any values and all issues will be printed as part of stderr.
 ### Global Arguments
 #### `--debug`
 Increase logging verbosity to show all debug logs.

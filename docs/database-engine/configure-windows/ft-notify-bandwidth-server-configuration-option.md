@@ -8,7 +8,7 @@ ms.service: sql
 ms.subservice: configuration
 ms.topic: conceptual
 helpviewer_keywords:
-  - "ft notify bandwidth opion"
+  - "ft notify bandwidth option"
   - "small memory buffers"
   - "memory [SQL Server], buffers"
 dev_langs:

@@ -54,9 +54,9 @@ monikerRange: ">=sql-server-ver16"
   
 -   The following new SQL Server Agent jobs do index and log maintenance.  
   
-    -   MDS_MDM_Sample_Index_Maintenace  
+    -   MDS_MDM_Sample_Index_maintenance  
   
-    -   MDS_MDM_Sample_Log_Maintenace  
+    -   MDS_MDM_Sample_Log_maintenance  
   
  By default the MDS_MDM_Sample_Index_Maintenance job runs weekly. You can modify the schedule. You can also manually run the job at any time by using the udpDefragmentation stored procedure. When you insert or update a large volume of master data, or after you create a new version from the existing version, it is recommended that you run the store procure.
   
@@ -98,7 +98,7 @@ monikerRange: ">=sql-server-ver16"
   
  You can configure the frequency that data is removed from the transaction logs, using the System settings and at the model level. For more information, see [System Settings &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md) and [Create a Model &#40;Master Data Services&#41;](../master-data-services/create-a-model-master-data-services.md). For more information about transactions, see [Transactions &#40;Master Data Services&#41;](../master-data-services/transactions-master-data-services.md).  
   
- The SQL Server Agent job, MDS_MDM_Sample_Log_Maintenace, triggers cleanup of the transaction logs and runs every night. You can use SQL Server Agent to modify the schedule for this job.  
+ The SQL Server Agent job, MDS_MDM_Sample_Log_maintenance, triggers cleanup of the transaction logs and runs every night. You can use SQL Server Agent to modify the schedule for this job.  
   
  You can also call stored procedures to clean the transaction logs. For more information, see [Transactions &#40;Master Data Services&#41;](../master-data-services/transactions-master-data-services.md).  
   

@@ -30,7 +30,7 @@ public boolean supportsExtendedSQLGrammar()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## Remarks  
- This supportsExtendedSQLGrammer method is specified by the supportsExtendedSQLGrammer method in the java.sql.DatabaseMetaData interface.  
+ This supportsExtendedSQLGrammar method is specified by the supportsExtendedSQLGrammar method in the java.sql.DatabaseMetaData interface.  
   
 ## See Also  
  [SQLServerDatabaseMetaData Methods](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

@@ -181,7 +181,7 @@ CREATE USER KimAbercrombie;
 GRANT ALTER ANY USER TO KimAbercrombie;  
 ```  
   
-### Grant Permisson to Manage Database Roles  
+### Grant Permission to Manage Database Roles  
 Create and dropping user-defined database roles requires the **ALTER ANY ROLE** permission. The following example uses the `KimAbercrombie` login and use created earlier.  
   
 ```sql  

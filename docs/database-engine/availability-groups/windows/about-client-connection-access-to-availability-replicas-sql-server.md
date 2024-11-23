@@ -79,7 +79,7 @@ helpviewer_keywords:
 |-------------|-----------------|------------------|------------------------------------------|----------------------------------------|  
 |Replica1|Synchronous|Primary|None|Read-write|  
 |Replica2|Synchronous|Secondary|None|Read-write|  
-|Replica3|Asynchronous|Secondary|Read-intentonly|Read-write|  
+|Replica3|Asynchronous|Secondary|Read-intent only|Read-write|  
 |Replica4|Asynchronous|Secondary|Read-intent only|Read-write|  
   
  Typically, in this example scenario, failovers occur only between the synchronous-commit replicas, and  immediately after the failover, read-intent applications are able to reconnect to one of the asynchronous-commit secondary replicas. However, when a disaster occurs at the main computing center both synchronous-commit replicas are lost. The database administrator at the satellite site responds by performing a forced manual failover to an asynchronous-commit secondary replica. The secondary databases on the remaining secondary replica are suspended by the forced failover, making them unavailable for read-only workloads. The new primary replica, which is configured for read-write connections, prevents the read-intent workload from competing with the read-write workload. This means that until the database administrator resumes the secondary databases on the remaining asynchronous-commit secondary replica, read-intent clients cannot connect to any availability replica.  

@@ -63,7 +63,7 @@ This article provides step-by-step instructions for migrating SQL Server on-prem
 1. Select the **Authentication type** supported by the target Azure SQL Database instance.
 
    > [!NOTE]  
-   > It's recommended that you encrypt the connection by selecting the **Encrypt connection** check box under **Connection poperties**.
+   > It's recommended that you encrypt the connection by selecting the **Encrypt connection** check box under **Connection properties**.
 
      :::image type="content" source="media/select-target-server.png" alt-text="Screenshot of Select target server." lightbox="media/select-target-server.png":::
 

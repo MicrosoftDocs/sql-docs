@@ -20,7 +20,7 @@ apitype: "Assembly"
   
 ```  
   
-public void setEncypt(boolean encrypt)  
+public void setEncrypt(boolean encrypt)  
 ```  
   
 #### Parameters  

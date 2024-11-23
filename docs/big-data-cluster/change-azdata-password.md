@@ -175,7 +175,7 @@ Follow these options for manually updating the password for [Grafana](app-monito
      Remove the `mgmtproxy` pod:
 
     ```bash
-    kubectl delete pod mgmtproxy-xxxxx -n mssql-clutser
+    kubectl delete pod mgmtproxy-xxxxx -n mssql-cluster
     ```
 
 7. Wait for the `mgmtproxy` pod to come online and Grafana Dashboard to start.  

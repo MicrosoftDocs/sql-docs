@@ -23,7 +23,7 @@ public static DateTimeOffset valueOf(java.sql.Timestamp timestamp, int minutesOf
 #### Parameters  
  *timestamp*  
   
- Ajava.sql.Timestamp value.  
+ A java.sql.Timestamp value.  
   
  *minutesOffset*  
   

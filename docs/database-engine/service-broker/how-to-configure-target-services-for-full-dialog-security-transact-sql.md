@@ -127,7 +127,7 @@ To make sure that a target service uses dialog security, create a user for the i
     GO
 
     -- Grant send on the target service to the user for the
-    -- initating service.
+    -- initiating service.
 
     GRANT SEND ON SERVICE::[SupplierOrders]
         TO [OrderPartsUser];

@@ -189,7 +189,7 @@ The following table lists the `DefaultAzureCredential` credential chain for each
 | 12.6 | [azure-identity 1.11.1](https://azuresdkdocs.blob.core.windows.net/$web/java/azure-identity/1.11.1/index.html#defaultazurecredential) | Environment<br/>Workload Identity<br/>Managed Identity<br/>Azure Developer CLI<br/>IntelliJ<br/>Azure CLI<br/>Azure PowerShell |
 | 12.8 | [azure-identity 1.12.2](https://azuresdkdocs.blob.core.windows.net/$web/java/azure-identity/1.12.2/index.html#defaultazurecredential) | Environment<br/>Workload Identity<br/>Managed Identity<br/>Azure Developer CLI<br/>IntelliJ<br/>Azure CLI<br/>Azure PowerShell |
 
-There are many variables that can be set to configure the `Environment` credential. For details on configuring the `DefaulAzureCredential` chain, including the `Environment` credential, see the relevant version of the azure-identity docs linked in the previous table.
+There are many variables that can be set to configure the `Environment` credential. For details on configuring the `DefaultAzureCredential` chain, including the `Environment` credential, see the relevant version of the azure-identity docs linked in the previous table.
 
 To use the `IntellijCredential` on Windows, set the environment variable `INTELLIJ_KEEPASS_PATH` to the location of your `keepass` file. For example, `INTELLIJ_KEEPASS_PATH=C:\user\your\path\to\the\keepass\file`.
 

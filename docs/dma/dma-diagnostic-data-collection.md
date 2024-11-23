@@ -26,7 +26,7 @@ DMA might collect standard computer information and information about use and pe
 
 ## Data Migration Assistant GUI
 
-To disable telemetry collection when using DMA GUI, you need to comment out the `AppInsightsInstrumentionKey` line in the Dma.exe.config.
+To disable telemetry collection when using DMA GUI, you need to comment out the `AppInsightsInstrumentationKey` line in the Dma.exe.config.
 
 To do so follow these steps:
 
@@ -34,7 +34,7 @@ To do so follow these steps:
 
 1. Locate the Dma.exe.config file and open it in a text editor.
 
-1. Find the `AppInsightsInstrumentionKey` line and surround the line in a comment bracket ( `<!-- -->` ) to disable telemetry collection such as the following screenshot:
+1. Find the `AppInsightsInstrumentationKey` line and surround the line in a comment bracket ( `<!-- -->` ) to disable telemetry collection such as the following screenshot:
 
    :::image type="content" source="media/dma-diagnostic-data-collection/dmacmd-disable-telemetry.png" alt-text="Screenshot of dma.exe.config file you modify to disable telemetry." lightbox="media/dma-diagnostic-data-collection/dmacmd-disable-telemetry.png":::
 
@@ -44,7 +44,7 @@ To re-enable telemetry, remove the comment around the line.
 
 ## Data Migration Assistant command line
 
-In order to disable telemetry collection when using the DMA command-line tool you need to comment out the `AppInsightsInstrumentionKey` line in the `dmacmd.exe.config`.
+In order to disable telemetry collection when using the DMA command-line tool you need to comment out the `AppInsightsInstrumentationKey` line in the `dmacmd.exe.config`.
 
 To do so follow these steps:
 
@@ -52,7 +52,7 @@ To do so follow these steps:
 
 1. Locate the `dmacmd.exe.config` file and open it in a text editor.
 
-1. Find the `AppInsightsInstrumentionKey` line and surround the line in a comment bracket ( `<!-- -->` ) to disable telemetry collection such as the following screenshot:
+1. Find the `AppInsightsInstrumentationKey` line and surround the line in a comment bracket ( `<!-- -->` ) to disable telemetry collection such as the following screenshot:
 
    :::image type="content" source="media/dma-diagnostic-data-collection/dmacmd-disable-telemetry.png" alt-text="Screenshot of dmacmd.exe.config file you modify to disable telemetry." lightbox="media/dma-diagnostic-data-collection/dmacmd-disable-telemetry.png":::
 

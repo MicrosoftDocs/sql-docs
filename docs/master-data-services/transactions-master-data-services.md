@@ -41,7 +41,7 @@ helpviewer_keywords:
   
  You can configure how long transaction log data is retained by setting the **Log retention in Days** property in system settings for the [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database, and by setting **Log Retention Days** when you create or edit a model. For more information, see [System Settings &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md) and [Create a Model &#40;Master Data Services&#41;](../master-data-services/create-a-model-master-data-services.md).  
   
- The SQL Server Agent job, MDS_MDM_Sample_Log_Maintenace, triggers cleanup of the transaction logs and runs every night. You can use SQL Server Agent to modify the schedule for this job.  
+ The SQL Server Agent job, MDS_MDM_Sample_Log_maintenance, triggers cleanup of the transaction logs and runs every night. You can use SQL Server Agent to modify the schedule for this job.  
   
  You can also call the following stored procedures to clean the transaction logs.  
   

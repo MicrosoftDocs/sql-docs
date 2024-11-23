@@ -10,7 +10,7 @@ ms.topic: conceptual
 helpviewer_keywords:
   - "dqs administration"
   - "administration"
-  - "dqs,adminstration"
+  - "dqs,administration"
 ---
 # DQS Administration
 
@@ -34,7 +34,7 @@ helpviewer_keywords:
   
 -   Configure logging based on the severity level of the events.  
   
-##  <a name="AdminUsingClent"></a> Administration Activities by Using Data Quality Client  
+##  <a name="AdminUsingClient"></a> Administration Activities by Using Data Quality Client  
  These activities are performed by using the **Administration** feature in [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)].  
   
 ### Activity Monitoring  

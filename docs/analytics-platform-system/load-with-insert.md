@@ -20,7 +20,7 @@ The following table defines the accepted literal types, format, and conversion r
   
 |Literal type|Format|Conversion rules|  
 |----------------|----------|--------------------|  
-|Binary literal|0x*hexidecimal_string*<br /><br />Example: 0x12Ef|Binary literals must be prefixed with 0x.<br /><br />The data source length cannot exceed the number of bytes specified for the data type.<br /><br />If the data source length is less than size of the **binary** data type, the data is padded to the right with zeros to reach the data type size.|  
+|Binary literal|0x*hexadecimal_string*<br /><br />Example: 0x12Ef|Binary literals must be prefixed with 0x.<br /><br />The data source length cannot exceed the number of bytes specified for the data type.<br /><br />If the data source length is less than size of the **binary** data type, the data is padded to the right with zeros to reach the data type size.|  
   
 ## <a name="InsertingLiteralsDateTime"></a>Insert literals into date and time types  
 Date and time literals are represented by using character values in specific formats, enclosed in single quotation marks. The following tables define the allowed literal types, format, and conversion rules for inserting a date or time literal into a SQL Server PDW distribution column of type **datetime**, **smalldatetime**, **date**, **time**, **datetimeoffset**, or **datetime2**.  

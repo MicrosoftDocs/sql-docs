@@ -30,7 +30,7 @@ public boolean supportsDataDefinitionAndDataManipulationTransactions()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## Remarks  
- This suportsDataDefinitionAndDataManipulationTransactions method is specified by the suportsDataDefinitionAndDataManipulationTransactions method in the java.sql.DatabaseMetaData interface.  
+ This supportsDataDefinitionAndDataManipulationTransactions method is specified by the supportsDataDefinitionAndDataManipulationTransactions method in the java.sql.DatabaseMetaData interface.  
   
 ## See Also  
  [SQLServerDatabaseMetaData Methods](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

@@ -292,4 +292,4 @@ To prove the code handles persistent errors correctly, rerun the preceding test 
   
 ## Next steps  
   
-To explore other best practicies and design guidelines, visit [Connecting to SQL Database: Links, Best Practices and Design Guidelines](/azure/azure-sql/database/develop-overview)
+To explore other best practices and design guidelines, visit [Connecting to SQL Database: Links, Best Practices and Design Guidelines](/azure/azure-sql/database/develop-overview)

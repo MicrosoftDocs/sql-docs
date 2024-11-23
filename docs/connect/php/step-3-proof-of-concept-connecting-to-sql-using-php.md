@@ -129,7 +129,7 @@ This code example demonstrates the use of transactions in which you:
             if($stmt1 && $stmt2)
             {
                    sqlsrv_commit($conn);
-                   echo("Transaction was commited");
+                   echo("Transaction was committed");
             }
             else
             {

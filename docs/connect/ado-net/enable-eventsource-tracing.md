@@ -141,7 +141,7 @@ class Program
 
 ## Use dotnet-trace to collect traces
 
-On Linux, macOS, or Windows, dotnet-trace can be used to capture traces. The donet-trace tool is used to collect traces for .NET applications. For more information about dotnet-trace, see the [dotnet-trace performance analysis utility](/dotnet/core/diagnostics/dotnet-trace) The traces created by dotnet-trace can be viewed in [PerfView](https://github.com/microsoft/perfview).
+On Linux, macOS, or Windows, dotnet-trace can be used to capture traces. The dotnet-trace tool is used to collect traces for .NET applications. For more information about dotnet-trace, see the [dotnet-trace performance analysis utility](/dotnet/core/diagnostics/dotnet-trace) The traces created by dotnet-trace can be viewed in [PerfView](https://github.com/microsoft/perfview).
 
 1. If not already installed, [install the .NET SDK](/dotnet/core/install/) on the client machine.
 

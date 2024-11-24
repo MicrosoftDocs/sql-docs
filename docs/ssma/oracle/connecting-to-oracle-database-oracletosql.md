@@ -1,10 +1,10 @@
 ---
-title: "Connecting to Oracle database (OracleToSQL)"
+title: "Connecting to Oracle Database (OracleToSQL)"
 description: Learn how to connect to the Oracle database to migrate that Oracle database to SQL Server. SSMA obtains and displays metadata about all Oracle schemas.
-author: cpichuka
-ms.author: cpichuka
+author: nilabjaball
+ms.author: niball
 ms.reviewer: randolphwest
-ms.date: 07/10/2023
+ms.date: 11/19/2024
 ms.service: sql
 ms.subservice: ssma
 ms.topic: conceptual
@@ -17,7 +17,7 @@ helpviewer_keywords:
 ---
 # Connecting to Oracle Database (OracleToSQL)
 
-To migrate Oracle databases to [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)], you must connect to the Oracle database that you want to migrate. When you connect, SSMA obtains metadata about all Oracle schemas, and then displays it in the Oracle Metadata Explorer pane. SSMA stores information about the database server, but doesn't store passwords.
+To migrate Oracle databases to [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)], you must connect to the Oracle database that you want to migrate. When you connect, SQL Server Migration Assistant (SSMA) obtains metadata about all Oracle schemas, and then displays it in the Oracle Metadata Explorer pane. SSMA stores information about the database server, but doesn't store passwords.
 
 Your connection to the database stays active until you close the project. When you reopen the project, you must reconnect if you want an active connection to the database.
 
@@ -32,17 +32,17 @@ At minimum, the account that is used to connect to the Oracle database must have
 | `CONNECT` | Required to connect (create a session) to the database. |
 | `SELECT ANY DICTIONARY` | Required to query system dictionary tables (for example, `SYS.MLOG$`) in order to discover all objects. |
 
-This allows SSMA to load all objects in the schema owned by the connecting user. In most real-world scenarios, there are cross-schema references between stored procedures, and SSMA needs to be able to discover all referenced objects for a successful conversion. To obtain metadata for objects defined in other schemas, the account must have the following additional permissions:
+This allows SSMA to load all objects in the schema owned by the connecting user. In most real-world scenarios, there are cross-schema references between stored procedures, and SSMA needs to be able to discover all referenced objects for a successful conversion. To obtain metadata for objects defined in other schemas, the account must have the following extra permissions:
 
 | Permission | Description |
 | --- | --- |
 | `SELECT ANY TABLE` | Required to discover tables, views, materialized views and synonyms in other schemas. |
 | `SELECT ANY SEQUENCE` | Required to discover sequences in other schemas. |
-| `CREATE ANY PROCEDURE` | Required to discover PL/SQL for procedures, functions and packages in other schemas. |
+| `CREATE ANY PROCEDURE` | Required to discover PL/SQL for procedures, functions, and packages in other schemas. |
 | `CREATE ANY TRIGGER` | Required to discover trigger definitions in other schemas. |
 | `CREATE ANY TYPE` | Required to discover types defined in other schemas. |
 
-Some of the SSMA features require additional permissions. For instance, if you want to use [Tester](testing-migrated-database-objects-oracletosql.md) and [Backup Management](managing-backups-oracletosql.md) functionality, you need to grant your connecting user the following permissions:
+Some of the SSMA features require extra permissions. For instance, if you want to use [Testing Migrated Database Objects (OracleToSQL)](testing-migrated-database-objects-oracletosql.md) and [Managing Backups (OracleToSQL)](managing-backups-oracletosql.md) functionality, you need to grant your connecting user the following permissions:
 
 | Permission | Description |
 | --- | --- |
@@ -55,7 +55,7 @@ Some of the SSMA features require additional permissions. For instance, if you w
 | `CREATE ANY TRIGGER` and `ALTER ANY TRIGGER` | Required to create and modify temporary triggers used for change tracking. |
 | `DROP ANY TRIGGER` | Required to drop temporary triggers used for change tracking. |
 
-This is a generic set of permissions required for SSMA to operate properly. If you want to narrow down the scope of your migration to a subset of schemas you can do so by granting above permissions to the limited set of objects, instead of `ALL`. While possible, it might be very hard to correctly identify all dependencies, thus preventing SSMA from functioning properly. It is highly recommended to stick to the generic set as defined previously, to eliminate any potential permission issues during migration process.
+This is a generic set of permissions required for SSMA to operate properly. If you want to narrow down the scope of your migration to a subset of schemas you can do so by granting above permissions to the limited set of objects, instead of `ALL`. While possible, it can be difficult to correctly identify all dependencies, thus preventing SSMA from functioning properly. We highly recommended that you to stick to the generic set as defined previously, to eliminate any potential permission issues during migration process.
 
 ## Establish a connection to Oracle
 
@@ -64,7 +64,7 @@ When you connect to a database, SSMA reads the database metadata, and then adds 
 > [!IMPORTANT]  
 > Before you try to connect, make sure that the database server is running and can accept connections.
 
-#### Connect to Oracle
+### Connect to Oracle
 
 1. On the **File** menu, select **Connect to Oracle**.
 
@@ -104,7 +104,7 @@ When you connect to a database, SSMA reads the database metadata, and then adds 
 
    `Data Source=MyOracleDB;Integrated Security=yes;`
 
-   For more information, see [Connect To Oracle (OracleToSQL)](connect-to-oracle-oracletosql.md).
+   For more information, see [Connect to Oracle (OracleToSQL)](connect-to-oracle-oracletosql.md).
 
 ## Reconnect to Oracle
 
@@ -114,14 +114,11 @@ Your connection to the database server stays active until you close the project.
 
 Metadata about the Oracle database isn't automatically refreshed. The metadata in Oracle Metadata Explorer is a snapshot of the metadata when you first connected, or the last time that you manually refreshed metadata. You can manually update metadata for all schemas, a single schema, or individual database objects.
 
-**To refresh metadata**
-
-1. Make sure that you are connected to the database.
+1. Make sure that you're connected to the database.
 
 1. In Oracle Metadata Explorer, select the check box next to each schema or database object that you want to update.
 
-1. Right-click **Schemas**, or the individual schema or database object, and then select **Refresh from Database**.
-   If you don't have an active connection, SSMA displays the **Connect to Oracle** dialog box so that you can connect.
+1. Right-click **Schemas**, or the individual schema or database object, and then select **Refresh from Database**. If you don't have an active connection, SSMA displays the **Connect to Oracle** dialog box so that you can connect.
 
 1. In the Refresh from Database dialog box, specify which objects to refresh.
 
@@ -133,10 +130,7 @@ Metadata about the Oracle database isn't automatically refreshed. The metadata i
 
 1. Select **OK**.
 
-## Next steps
+## Related content
 
-- The next step in the migration process is to [Connect to an instance of SQL Server](connecting-to-sql-server-oracletosql.md).
-
-## See also
-
-- [Migrating Oracle Databases to SQL Server (OracleToSQL)](migrating-oracle-databases-to-sql-server-oracletosql.md)
+- [Migrate Oracle Databases to SQL Server (OracleToSQL)](migrating-oracle-databases-to-sql-server-oracletosql.md)
+- [Connecting to SQL Server (OracleToSQL)](connecting-to-sql-server-oracletosql.md)

@@ -1,10 +1,10 @@
 ---
 title: "SQL Server Migration Assistant for Access (AccessToSQL)"
 description: Learn about SSMA for Access and follow step-by-step instructions for migrating Access databases to SQL Server or Azure SQL Database.
-author: cpichuka
-ms.author: cpichuka
+author: nilabjaball
+ms.author: niball
 ms.reviewer: randolphwest
-ms.date: 07/10/2023
+ms.date: 11/19/2024
 ms.service: sql
 ms.subservice: ssma
 ms.topic: conceptual
@@ -21,14 +21,14 @@ This documentation introduces you to SSMA for Access and provides step-by-step i
 
 ## Contents
 
-| Section | Description |
+| Article | Description |
 | --- | --- |
-| [What's New in SSMA for Access](what-s-new-in-ssma-for-access-accesstosql.md) | Lists the changes to SSMA releases. |
-| [Installing SQL Server Migration Assistant for Access](installing-sql-server-migration-assistant-for-access-accesstosql.md) | Lists the prerequisites for installing SSMA, the procedure for installing and licensing SSMA, and a link to the latest version. |
-| [Getting Started with SQL Server Migration Assistant for Access (AccessToSQL)](../../ssma/access/getting-started-with-sql-server-migration-assistant-for-access-accesstosql.md) | Introduces SSMA and its user interface. |
-| [Preparing Access Databases for Migration](preparing-access-databases-for-migration-accesstosql.md) | Describes how to prepare your Access databases for conversion to [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] or [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]. |
-| [Migrating Access Databases to SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md) | Provides an overview of the conversion process and detailed information about each step in the process. |
-| [Linking Access Applications to SQL Server](linking-access-applications-to-sql-server-azure-sql-db-accesstosql.md) | Describes how to use your existing Access applications with [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]. |
-| [User Interface Reference](user-interface-reference-accesstosql.md) | Contains documentation for SSMA dialog boxes. |
-| [Working with SSMA for Access Console](working-with-ssma-for-access-console-accesstosql.md) | Contains documentation on the SSMA console application. |
-| [Getting SSMA Assistance for Access](../sql-server-migration-assistant.md) | Provides information about getting additional assistance. |
+| [What's new in SSMA for Access (AccessToSQL)](what-s-new-in-ssma-for-access-accesstosql.md) | Lists the changes to SSMA releases. |
+| [Install SQL Server Migration Assistant for Access (AccessToSQL)](installing-sql-server-migration-assistant-for-access-accesstosql.md) | Lists the prerequisites for installing SSMA, the procedure for installing and licensing SSMA, and a link to the latest version. |
+| [Getting started with SQL Server Migration Assistant for Access (AccessToSQL)](getting-started-with-sql-server-migration-assistant-for-access-accesstosql.md) | Introduces SSMA and its user interface. |
+| [Preparing Access databases for migration (AccessToSQL)](preparing-access-databases-for-migration-accesstosql.md) | Describes how to prepare your Access databases for conversion to [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] or [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]. |
+| [Migrating Access databases to SQL Server - Azure SQL Database (AccessToSQL)](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md) | Provides an overview of the conversion process and detailed information about each step in the process. |
+| [Linking Access applications to SQL Server - Azure SQL Database (AccessToSQL)](linking-access-applications-to-sql-server-azure-sql-db-accesstosql.md) | Describes how to use your existing Access applications with [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]. |
+| [User Interface Reference (AccessToSQL)](user-interface-reference-accesstosql.md) | Contains documentation for SSMA dialog boxes. |
+| [Working with SSMA for Access Console (AccessToSQL)](working-with-ssma-for-access-console-accesstosql.md) | Contains documentation on the SSMA console application. |
+| [SQL Server Migration Assistant](../sql-server-migration-assistant.md) | Provides information about getting more assistance. |

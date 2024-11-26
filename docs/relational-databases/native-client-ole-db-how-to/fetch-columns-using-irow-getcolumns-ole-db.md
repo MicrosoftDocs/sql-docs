@@ -293,7 +293,7 @@ HRESULT GetColumns(IRow* pUnkRow, ULONG iStart, ULONG iEnd) {
   
    printf("In GetColumns(), Columns= %d\n", cColumns);  
   
-   // Determine no. of columns to retrieve. Since iEnd and iStart is same, this is redundent step.    
+   // Determine no. of columns to retrieve. Since iEnd and iStart is same, this is redundant step.    
    // cUserCols will always be 1.  
    cUserCols = iEnd - iStart + 1;   
   

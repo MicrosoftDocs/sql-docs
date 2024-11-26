@@ -130,7 +130,7 @@ SQLServer Stored Procedure Object
     mm <- rxSerializeModel(mm)
     return(list("mm" = mm))
   }
-  # create InpuData Object for an input parameter that is a data frame
+  # create tData Object for an input parameter that is a data frame
   # note: if the input parameter is not a data frame use InputParameter object
   id <- InputData(name = "in_df",
                  defaultQuery = paste0("select top 10000 ArrDelay,CRSDepTime,",

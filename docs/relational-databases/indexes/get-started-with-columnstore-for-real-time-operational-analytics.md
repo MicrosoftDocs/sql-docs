@@ -150,7 +150,7 @@ CREATE TABLE  orders (
 -- 0 => 'Order Started'  
 -- 1 => 'Order Closed'  
 -- 2 => 'Order Paid'  
--- 3 => 'Order Fullfillment Wait'  
+-- 3 => 'Order Fulfillment Wait'  
 -- 4 => 'Order Shipped'  
 -- 5 => 'Order Received'  
   

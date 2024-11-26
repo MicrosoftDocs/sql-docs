@@ -432,7 +432,7 @@ HRESULT GetColumns(IRow* pUnkRow, ULONG iStart, ULONG iEnd) {
       goto CLEANUP;  
   
    // Determine no. of columns to retrieve.  Since iEnd and iStart is same,   
-   // this is redundent step.  cUserCols will always be 1.  
+   // this is redundant step.  cUserCols will always be 1.  
    cUserCols = iEnd - iStart + 1;   
   
    // Walk list of columns and setup a DBCOLUMNACCESS structure  

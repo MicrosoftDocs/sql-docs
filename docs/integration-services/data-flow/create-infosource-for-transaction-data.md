@@ -63,7 +63,7 @@ ms.topic: ui-reference
  After you select an existing InfoObject, the component populates the **InfoObject** and **Type** columns with the selected values.  
   
  **Iobject - New**  
- Create a new InfoObject and associate this new InfoObect to the data flow column in the current row. To create the new InfoObject, click **New**, and then use the **Create New InfoObject** dialog box to create the InfoObject. For more information about this dialog box, see [Create New InfoObject](../../integration-services/data-flow/create-new-infoobject.md).  
+ Create a new InfoObject and associate this new InfoObject to the data flow column in the current row. To create the new InfoObject, click **New**, and then use the **Create New InfoObject** dialog box to create the InfoObject. For more information about this dialog box, see [Create New InfoObject](../../integration-services/data-flow/create-new-infoobject.md).  
   
  After you create a new InfoObject, the component populates the **InfoObject** and **Type** columns with the new values.  
   

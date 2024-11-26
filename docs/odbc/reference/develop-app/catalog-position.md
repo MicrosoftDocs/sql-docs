@@ -15,15 +15,15 @@ helpviewer_keywords:
 # Catalog Position
 The position of a catalog name in an identifier and how it is separated from the rest of the identifier varies from data source to data source. For example, in an Xbase data source, the catalog name is a directory and, in Microsoft Windows, is separated from the table name (which is a file name) by a backslash (\\). The following illustration demonstrates this condition.  
   
- ![Catalog postion: Xbase](../../../odbc/reference/develop-app/media/ch0801.gif "ch0801")  
+ ![Catalog position: Xbase](../../../odbc/reference/develop-app/media/ch0801.gif "ch0801")  
   
  In a SQL Server data source, the catalog is a database and is separated from the schema and table names by a period (.).  
   
- ![Catalog postion: SQL Server](../../../odbc/reference/develop-app/media/ch0802.gif "ch0802")  
+ ![Catalog position: SQL Server](../../../odbc/reference/develop-app/media/ch0802.gif "ch0802")  
   
  In an Oracle data source, the catalog is also the database but follows the table name and is separated from the schema and table names by an at sign (@).  
   
- ![Catalog postion: Oracle](../../../odbc/reference/develop-app/media/ch0803.gif "ch0803")  
+ ![Catalog position: Oracle](../../../odbc/reference/develop-app/media/ch0803.gif "ch0803")  
   
  To determine the catalog separator and the location of the catalog name, an application calls **SQLGetInfo** with the SQL_CATALOG_NAME_SEPARATOR and SQL_CATALOG_LOCATION options. Interoperable applications should construct identifiers according to these values.  
   

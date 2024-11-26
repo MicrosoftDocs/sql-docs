@@ -76,7 +76,7 @@ helpviewer_keywords:
   
  If the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service is stopped, you can continue to run packages using the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import and Export Wizard, the [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, the Execute Package Utility, and the **dtexec** command prompt utility (dtexec.exe). However, you cannot monitor the running packages.  
   
- By default, the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service runs in the context of the NETWORK SERVICE account. It is recommended to run the SQL Server Integration Services service under an account that has limited permissions such as the NETWORK SERVICE account. Running the SQL Server Integration Services service under a highly-priveleged account represents a potential security risk. 
+ By default, the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service runs in the context of the NETWORK SERVICE account. It is recommended to run the SQL Server Integration Services service under an account that has limited permissions such as the NETWORK SERVICE account. Running the SQL Server Integration Services service under a highly-privileged account represents a potential security risk. 
   
  The [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service writes to the Windows event log. You can view service events in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. You can also view service events by using the Windows Event Viewer.  
   

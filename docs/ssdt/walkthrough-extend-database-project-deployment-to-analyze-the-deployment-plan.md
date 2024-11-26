@@ -364,7 +364,7 @@ To create a deployment contributor, you must perform the following tasks:
                         else if (currentStep is SqlMoveSchemaStep)  
                         {  
                             SqlMoveSchemaStep moveStep = (SqlMoveSchemaStep)currentStep;  
-                            xmlw.WriteAttributeString("OrignalName", moveStep.PreviousName);  
+                            xmlw.WriteAttributeString("OriginalName", moveStep.PreviousName);  
                             xmlw.WriteAttributeString("NewSchema", moveStep.NewSchema);  
                             xmlw.WriteAttributeString("Category", GetElementCategory(moveStep.MovedElement));  
                         }  

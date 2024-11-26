@@ -29,6 +29,6 @@ The identifier for the GUID ODBC C data type is:
 |SQL_WLONGVARCHAR|Data value is not a valid GUID|22018|  
 |SQL_GUID|None[a]|n/a|  
   
- [a]   All hexidecimal values are valid as a GUID.  
+ [a]   All hexadecimal values are valid as a GUID.  
   
  The driver ignores the length/indicator value when converting data from the GUID C data type and assumes that the size of the data buffer is the size of the GUID C data type. The length/indicator value is passed in the *StrLen_or_Ind* argument in **SQLPutData** and in the buffer specified with the *StrLen_or_IndPtr* argument in **SQLBindParameter**. The data buffer is specified with the *DataPtr* argument in **SQLPutData** and the *ParameterValuePtr* argument in **SQLBindParameter**.

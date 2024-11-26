@@ -132,7 +132,7 @@ Specifies how often to reschedule during the defined period. *@frequency_subday*
 
 #### [ @frequency_subday_interval = ] *frequency_subday_interval*
 
-The interval for *@frequence_subday*. *@frequency_subday_interval* is **int**, with a default of `NULL`.
+The interval for *@frequency_subday*. *@frequency_subday_interval* is **int**, with a default of `NULL`.
 
 #### [ @active_start_time_of_day = ] *active_start_time_of_day*
 

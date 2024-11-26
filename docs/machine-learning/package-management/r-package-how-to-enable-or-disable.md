@@ -24,7 +24,7 @@ To enable or disable package management on SQL Server, use the command-line util
 
 [Enabling](#bkmk_enable) this feature is a two-step process, requiring a database administrator: you enable package management on the SQL Server instance (once per SQL Server instance), and then enable package management on the SQL database (once per SQL Server database).
 
-[Disabling](#bkmk_disable) the package management feature also requires multipel steps: you remove database-level packages and permissions (once per database), and then remove the roles from the server (once per instance).
+[Disabling](#bkmk_disable) the package management feature also requires multiple steps: you remove database-level packages and permissions (once per database), and then remove the roles from the server (once per instance).
 
 ## <a name="bkmk_enable"></a> Enable package management
 

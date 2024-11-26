@@ -17,7 +17,7 @@ helpviewer_keywords:
   
  Additionally, using the context connection typically results in better performance and less resource usage. The context connection is an in-process-only connection, so it can contact the server "directly" by bypassing the network protocol and transport layers to send Transact-SQL statements and receive results. The authentication process is bypassed, as well. The following figure shows the primary components of the **SqlClient** managed provider, as well as how the different components interact with each other when using a regular connection, and when using the context connection.  
   
- ![Code paths of a context and a regular connnection.](../../../relational-databases/clr-integration/data-access/media/clrintdataaccess.gif "Code paths of a context and a regular connnection.")  
+ ![Code paths of a context and a regular connection.](../../../relational-databases/clr-integration/data-access/media/clrintdataaccess.gif "Code paths of a context and a regular connection.")  
   
  The context connection follows a shorter code path and involves fewer components, so you can expect requests and results to get to and from the server faster than in a regular connection. Query execution time on the server is the same for context and regular connections.  
   

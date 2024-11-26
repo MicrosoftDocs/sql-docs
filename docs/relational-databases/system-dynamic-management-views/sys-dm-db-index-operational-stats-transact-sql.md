@@ -67,7 +67,7 @@ sys.dm_db_index_operational_stats (
 
 *partition_number* | NULL | 0 | DEFAULT
 
- Partition number in the object. *partition_number* is **int**. Valid inputs are the *partion_number* of an index or heap, NULL, 0, or DEFAULT. The default is 0. NULL, 0, and DEFAULT are equivalent values in this context.    
+ Partition number in the object. *partition_number* is **int**. Valid inputs are the *partition_number* of an index or heap, NULL, 0, or DEFAULT. The default is 0. NULL, 0, and DEFAULT are equivalent values in this context.    
     
  Specify NULL to return cached information for all partitions of the index or heap.    
     

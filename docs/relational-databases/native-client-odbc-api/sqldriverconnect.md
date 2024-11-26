@@ -40,7 +40,7 @@ apitype: "DLLExport"
  For more information about using **SQLDriverConnect** to connect to a [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] cluster, see [SQL Server Native Client Support for High Availability, Disaster Recovery](../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md).  
   
 ## SQLDriverConnect Support for Service Principal Names (SPNs)  
- SQLDDriverConnect will use the ODBC Login dialog boxwhen prompting is enabled. This allows SPNs to be entered for both the principal server and its failover partner.  
+ SQLDDriverConnect will use the ODBC Login dialog box when prompting is enabled. This allows SPNs to be entered for both the principal server and its failover partner.  
   
  SQLDriverConnect will accept the new connection string keywords **ServerSPN** and **FailoverPartnerSPN**, and will recognize the new connection attributes SQL_COPT_SS_SERVER_SPN and SQL_COPT_SS_FAILOVER_PARTNER_SPN.  
   

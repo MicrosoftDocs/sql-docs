@@ -26,7 +26,7 @@ ms.custom:
   
 -   [Delete configuration settings](#bkmk_delete_config_settings)  
   
--   [Edit a Reporting Services configuration file](#bkmk_edit_configuation_file)  
+-   [Edit a Reporting Services configuration file](#bkmk_edit_configuration_file)  
   
 ##  <a name="bkmk_read_values"></a> Read and use configuration values  
  A report server reads the configuration files when the service starts and whenever the configuration file is saved. New and revised values take effect in a new application domain after the current application domain expires. Whenever possible, requests that are still processing in the current application domain are allowed to complete. However, a few settings require an immediate application domain recycle operation. In this case, all requests that are in process are restarted in a new application domain.  
@@ -45,7 +45,7 @@ ms.custom:
 ##  <a name="bkmk_delete_config_settings"></a> Delete configuration settings  
  For configuration settings that have default values, removing the setting from the configuration file has no effect. Most configuration settings are defined and configured internally. If you delete an item from the configuration file, the internal copy is still available and uses the default value that is defined for it.  
   
-##  <a name="bkmk_edit_configuation_file"></a> Edit a Reporting Services configuration file  
+##  <a name="bkmk_edit_configuration_file"></a> Edit a Reporting Services configuration file  
   
 1.  Find the configuration file you want to edit:  
   

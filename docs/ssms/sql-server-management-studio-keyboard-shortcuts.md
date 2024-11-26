@@ -85,7 +85,7 @@ SQL Server Management Studio (SSMS) offers keyboard shortcuts. By default, it us
 | Display the Bookmarks Window | CTRL+K, CTRL+W |
 | Display the Browser Window | CTRL+ALT+R |
 | Display a smart tag menu of common commands for Web server controls in the HTML designer | SHIFT+ALT+F10 |
-| Display the Error List Window ([!INCLUDE [tsql](../includes/tsql-md.md)] Editor only) | CRTL+\\, CTRL+E<br /><br />or<br />CTRL+\\, E |
+| Display the Error List Window ([!INCLUDE [tsql](../includes/tsql-md.md)] Editor only) | CTRL+\\, CTRL+E<br /><br />or<br />CTRL+\\, E |
 | Move to the next entry in the Error List window ([!INCLUDE [tsql](../includes/tsql-md.md)] Editor only) | CTRL+SHIFT+F12 |
 | Display the previous page in the viewing history. Available only in the Web browser window | ALT+LEFT ARROW |
 | Display the next page in the viewing history. Available only in the Web browser window | ALT+RIGHT ARROW |

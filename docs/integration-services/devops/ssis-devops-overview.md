@@ -91,7 +91,7 @@ Password of the SSIS project and its packages. This argument is only valid when 
 
 #### Strip Sensitive Data
 
-Convert the protection level of the SSIS project to DontSaveSensitve if this value is true. When protection level is EncryptSensitiveWithPassword or EncryptAllWithPassword, the argument Project Password must be correctly set. This option is only valid for project deployment model.
+Convert the protection level of the SSIS project to DontSaveSensitive if this value is true. When protection level is EncryptSensitiveWithPassword or EncryptAllWithPassword, the argument Project Password must be correctly set. This option is only valid for project deployment model.
 
 ## SSIS Deploy task
 

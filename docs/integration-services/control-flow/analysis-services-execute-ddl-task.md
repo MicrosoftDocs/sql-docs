@@ -227,7 +227,7 @@ helpviewer_keywords:
 -   <xref:Microsoft.DataTransformationServices.Tasks.DTSProcessingTask.ASExecuteDDLTask>  
   
 ## Analysis Services Execute DDL Task Editor (General Page)
-  Use the **General** pageof the **Analysis Services Execute DDL Task Editor** dialog box to name and describe the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Execute DDL task.  
+  Use the **General** page of the **Analysis Services Execute DDL Task Editor** dialog box to name and describe the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Execute DDL task.  
   
 ### Options  
  **Name**  

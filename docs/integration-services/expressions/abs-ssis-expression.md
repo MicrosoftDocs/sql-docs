@@ -43,7 +43,7 @@ ABS(-1.23)
 ABS(1.23)  
 ```  
   
- This example applies the ABS function to an expression that subtracts values in the variables **HighTemperature** and **LowTempature**.  
+ This example applies the ABS function to an expression that subtracts values in the variables **HighTemperature** and **LowTemperature**.  
   
 ```  
 ABS(@HighTemperature - @LowTemperature)  

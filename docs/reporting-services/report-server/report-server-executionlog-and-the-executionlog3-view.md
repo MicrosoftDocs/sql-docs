@@ -126,9 +126,9 @@ The following table describes the data that's captured in the report execution l
 
 The **AdditionalInfo** field is an XML property bag or structure containing additional information about the execution. The contents can be different for each row in the log.  
   
-The following are examples of the contents of the **AddtionalInfo** field for both standard and verbose logging:  
+The following are examples of the contents of the **AdditionalInfo** field for both standard and verbose logging:  
   
-### Standard logging example of AddtionalInfo  
+### Standard logging example of AdditionalInfo  
   
 ``` xml
 <AdditionalInfo>  

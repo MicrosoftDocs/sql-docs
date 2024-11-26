@@ -19,7 +19,7 @@ ms.custom: mdx
   
 ```  
   
-CREATE [ SESSION ] [HIDDDEN] [ CALCULATED ] MEMBER CURRENTCUBE | Cube_Name.Member_Name   
+CREATE [ SESSION ] [HIDDEN] [ CALCULATED ] MEMBER CURRENTCUBE | Cube_Name.Member_Name   
    AS MDX_Expression  
       [,Property_Name = Property_Value, ...n]  
 ......[,SCOPE_ISOLATION = CUBE]  

@@ -26,7 +26,7 @@ ms.custom: mdx
 |^ (Power)|Raises one number by another number.|  
   
 > [!NOTE]  
->  MDX does not include a function to obtain the square root of a number. To obtain the square root of a number, raise it to the power of 0.5 using the ^ operatior.  
+>  MDX does not include a function to obtain the square root of a number. To obtain the square root of a number, raise it to the power of 0.5 using the ^ operator.  
   
 ## Order of Precedence  
  The following rules determine the order of precedence for arithmetic operators in an MDX expression:  

@@ -8,7 +8,7 @@ ms.service: sql
 ms.subservice: performance
 ms.topic: reference
 helpviewer_keywords:
-  - "Reosurce Pool Stats object"
+  - "Resource Pool Stats object"
   - "SQLServer: Resource Pool Stats object"
 ---
 # SQL Server, Resource Pool Stats object

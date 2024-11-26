@@ -90,7 +90,7 @@ helpviewer_keywords:
  Variables that are used in containers include the container-level system variables that [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] provides and the user-defined variables that the container uses. For more information, see [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md).  
   
 ## Break Points  
- When you set a breakpoint on a container and the break condition is **Break when the container recevies the OnVariableValueChanged event**, define the variable in the container scope.  
+ When you set a breakpoint on a container and the break condition is **Break when the container receives the OnVariableValueChanged event**, define the variable in the container scope.    
   
 ## See Also  
  [Control Flow](../../integration-services/control-flow/control-flow.md)  

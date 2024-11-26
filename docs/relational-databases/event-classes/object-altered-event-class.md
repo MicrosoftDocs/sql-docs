@@ -42,7 +42,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 |ObjectID|**int**|System-assigned ID of the object.|22|Yes|  
 |ObjectID2|**bigint**|Partition function ID when the partition schema is altered, the queue ID when service is altered or the collection schema ID when XML schema is altered.|56|Yes|  
 |ObjectName|**nvarchar**|Name of the object being referenced.|34|Yes|  
-|ObjectType|**int**|Value representing the type of the object involved in the event. This value corresponds to the type column in the sy.sobjects catalog view. For values, see [ObjectType Trace Event Column](../../relational-databases/event-classes/objecttype-trace-event-column.md).|28|Yes|  
+|ObjectType|**int**|Value representing the type of the object involved in the event. This value corresponds to the type column in the sys.objects catalog view. For values, see [ObjectType Trace Event Column](../../relational-databases/event-classes/objecttype-trace-event-column.md).|28|Yes|  
 |RequestID|**int**|ID of the batch request containing the statement.|49|Yes|  
 |ServerName|**nvarchar**|Name of the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] being traced.|26|No|  
 |SessionLoginName|**nvarchar**|Login name of the user who originated the session. For example, if you connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] using Login1 and execute a statement as Login2, SessionLoginName shows Login1 and LoginName shows Login2. This column displays both [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and Windows logins.|64|Yes|  

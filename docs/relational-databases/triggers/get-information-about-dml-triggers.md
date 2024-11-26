@@ -118,7 +118,7 @@ GO
 USE AdventureWorks2022;   
 GO  
 SELECT OBJECT_NAME(referencing_id) AS referencing_entity_name,   
-    o.type_desc AS referencing_desciption,   
+    o.type_desc AS referencing_description,   
     COALESCE(COL_NAME(referencing_id, referencing_minor_id), '(n/a)') AS referencing_minor_id,   
     referencing_class_desc, referenced_class_desc,   
     referenced_server_name, referenced_database_name, referenced_schema_name,   

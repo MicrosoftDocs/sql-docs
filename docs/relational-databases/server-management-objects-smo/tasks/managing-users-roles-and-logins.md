@@ -67,7 +67,7 @@ foreach ($db in Get-ChildItem)
   "====="
   "Login Mappings for the database: "+ $db.Name
 
-  #get the datatable containing the mapping from the smo database oject
+  #get the datatable containing the mapping from the smo database object
   $dt = $db.EnumLoginMappings()
 
   #display the results

@@ -28,7 +28,7 @@ dev_langs:
 |name|**sysname**|Name of the audit.|  
 |audit_guid|**uniqueidentifier**|GUID of the audit.|  
 |create_date|**datetime**|UTC date when the file audit was created.|  
-|modify_date|**datatime**|UTC date when the file audit was last modified.|  
+|modify_date|**datetime**|UTC date when the file audit was last modified.|  
 |principal_id|**int**|ID of the owner of the audit as registered on the server.|  
 |type|**char(2)**|Audit type:<br /><br /> SL = NT Security event log<br /><br /> AL = NT Application event log<br /><br /> FL = File on file system|  
 |type_desc|**nvarchar(60)**|Audit type description.|  

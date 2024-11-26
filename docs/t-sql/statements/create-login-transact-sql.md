@@ -293,7 +293,7 @@ The following example shows how to create SQL Logins with the same password as e
 ```sql
 -- run this to retrieve the password hash for an individual Login:
 SELECT LOGINPROPERTY('Andreas','PASSWORDHASH') AS password_hash;
--- as an alternative, the catalog view sys.sql_logins can be used to retrieve the password hashes for multiple accounts at once. (This could be used to create a dynamic sql statemnt from the result set)
+-- as an alternative, the catalog view sys.sql_logins can be used to retrieve the password hashes for multiple accounts at once. (This could be used to create a dynamic sql statementt from the result set
 SELECT name, password_hash
 FROM sys.sql_logins
   WHERE

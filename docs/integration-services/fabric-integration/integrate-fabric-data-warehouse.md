@@ -42,7 +42,7 @@ If you're using SQL Authentication or Windows Authentication, reconfigure it to 
 :::image type="content" source="media/ado-net-connection.png" alt-text="Screenshot of ado connection manager part 1." lightbox="media/ado-net-connection.png":::
  
 ### File ingestion 
-The ****Fabric Data Warehous****e recommends utilizing the native T-SQL command ‘COPY INTO’ for efficient data insertion into the warehouse. So, any DFT operations that currently rely on ****Fast Insert Mode**** or ****BCP IN**** scripts should be replaced with the ****COPY INTO**** statement by utilizing [Execute SQL Task](../control-flow/execute-sql-task.md). 
+The ****Fabric Data Warehouse**** recommends utilizing the native T-SQL command ‘COPY INTO’ for efficient data insertion into the warehouse. So, any DFT operations that currently rely on ****Fast Insert Mode**** or ****BCP IN**** scripts should be replaced with the ****COPY INTO**** statement by utilizing [Execute SQL Task](../control-flow/execute-sql-task.md). 
 
 ### SSIS writing data into Data Warehouse in Fabric
 

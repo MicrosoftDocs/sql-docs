@@ -8,7 +8,7 @@ ms.service: sql
 ms.subservice: integration-services
 ms.topic: conceptual
 ---
-# Dimension Processing Destination Custom Properies
+# Dimension Processing Destination Custom Properties
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 

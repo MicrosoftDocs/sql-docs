@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "data files [SQL Server], moving"
   - "editions [SQL Server], moving databases between"
   - "moving full-text catalogs"
-  - "scheduled disk maintenace [SQL Server]"
+  - "scheduled disk maintenance [SQL Server]"
   - "moving databases"
   - "full-text catalogs [SQL Server], moving"
   - "moving database files"

@@ -88,7 +88,7 @@ SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid();
   
 <a id="a-instantiating-a-geometry-instance-with-an-empty-compooundcurve"></a>
 
-### A. Instantiate a geometry instance with an empty CompooundCurve
+### A. Instantiate a geometry instance with an empty CompoundCurve
  The following example shows how to create an empty `CompoundCurve` instance:  
   
 ```sql  

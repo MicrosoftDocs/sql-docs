@@ -79,7 +79,7 @@ InputParameter Object
   # connections string
   conStr <- paste0("Driver={ODBC Driver 13 for SQL Server};Server=.;Database=RevoTestDB;",
                    "Trusted_Connection=Yes;")
-  # create InpuData Object for an input parameter that is a data frame
+  # create InputData Object for an input parameter that is a data frame
   id <- InputData(name = "indata", defaultQuery = "SELECT * from cleanData")
   # InputParameter for the model_param input variable
   model <- InputParameter("model_param", "raw",
@@ -91,7 +91,7 @@ InputParameter Object
                           filePath = ".")
   # register the stored procedure with a database
   registerStoredProcedure(sp_df_df, conStr)
-  # assign a different query to the InputData so that it only uses the firt 10 rows
+  # assign a different query to the InputData so that it only uses the first 10 rows
   id <- setInputDataQuery(id, "SELECT top 10 * from cleanData")
   # assign a value to the name parameter
   name <- setInputParameterValue(name, "ArrDelayEstimate")

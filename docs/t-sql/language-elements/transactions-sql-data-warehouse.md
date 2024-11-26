@@ -80,7 +80,7 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF } [;]
   
  If a BEGIN TRANSACTION is run while a transaction is already in progress, an error is raised. This can occur if a BEGIN TRANSACTION occurs after a successful BEGIN TRANSACTION statement or when the session is under SET AUTOCOMMIT OFF.  
   
- If an error other than a run-time statement error prevents the successful completion of an explicit transaction, the daabase engine automatically rolls back the transaction and frees all resources held by the transaction. For example, if the client's network connection is broken or the client logs off the application, any uncommitted transactions for the connection are rolled back when the network notifies the instance of the break.  
+ If an error other than a run-time statement error prevents the successful completion of an explicit transaction, the database engine automatically rolls back the transaction and frees all resources held by the transaction. For example, if the client's network connection is broken or the client logs off the application, any uncommitted transactions for the connection are rolled back when the network notifies the instance of the break.  
   
  If a run-time statement error occurs in a batch, [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE [fabric](../../includes/fabric.md)] behave consistent with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**XACT_ABORT** set to **ON** and the entire transaction is rolled back. For more information about the **XACT_ABORT** setting, see [SET XACT_ABORT (Transact-SQL)](../statements/set-xact-abort-transact-sql.md).  
   

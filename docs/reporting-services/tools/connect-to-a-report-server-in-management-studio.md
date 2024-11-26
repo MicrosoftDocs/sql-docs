@@ -10,8 +10,8 @@ ms.topic: how-to
 ms.custom:
   - updatefrequency5
 f1_keywords:
-  - "sql13.swb.connecttors.connectionproperties.f1"
-  - "sql13.swb.connecttors.login.f1"
+  - "sql13.swb.connectors.connectionproperties.f1"
+  - "sql13.swb.connectors.login.f1"
   - "sql13.swb.connection.login.reportserver.f1"
 helpviewer_keywords:
   - "report servers [Reporting Services], connections"

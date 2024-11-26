@@ -10,7 +10,7 @@ ms.topic: conceptual
 ---
 # Open and Configure Object Explorer
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-Open Object Explorer by using the **View** menu in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Configure Obect Explorer options by using **Options** on the **Tools** menu.  
+Open Object Explorer by using the **View** menu in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Configure Object Explorer options by using **Options** on the **Tools** menu.  
   
 ## Viewing Object Explorer  
 Object Explorer is visible in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] by default. If you cannot see Object Explorer, on the **View** menu, click **Object Explorer**.  

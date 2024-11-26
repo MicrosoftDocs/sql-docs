@@ -95,7 +95,7 @@ END;
 GO  
 ```  
   
- To allow callers to view metadata, you can grant the callers VIEW DEFINITION permission or starting with SQL Server 2022 either VIEW SECUIRITY DEFINITION or VIEW PERFORMANCE DEFINITION at an appropriate scope: object level, database level, or server level. Therefore, in the previous example, if the caller has VIEW DEFINITION  permission on `myTable`, the stored procedure returns a row. For more information, see [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md) and [GRANT Database Permissions &#40;Transact-SQL&#41;](../../t-sql/statements/grant-database-permissions-transact-sql.md).  
+ To allow callers to view metadata, you can grant the callers VIEW DEFINITION permission or starting with SQL Server 2022 either VIEW SECURITY DEFINITION or VIEW PERFORMANCE DEFINITION at an appropriate scope: object level, database level, or server level. Therefore, in the previous example, if the caller has VIEW DEFINITION  permission on `myTable`, the stored procedure returns a row. For more information, see [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md) and [GRANT Database Permissions &#40;Transact-SQL&#41;](../../t-sql/statements/grant-database-permissions-transact-sql.md).  
   
  You can also modify the stored procedure so that it executes under the credentials of the owner. When the procedure owner and the table owner are the same owner, ownership chaining applies, and the security context of the procedure owner enables access to the metadata for `myTable`. Under this scenario, the following code returns a row of metadata to the caller.  
   
@@ -220,7 +220,7 @@ GO
 EXECUTE AS USER='testUser';
 SELECT OBJECT_SCHEMA_NAME(object_id), OBJECT_NAME(object_id), name FROM sys.columns;
 SELECT * FROM sys.tables
--- this returns metadata for all columns of the table and thge table itself
+-- this returns metadata for all columns of the table and the table itself
 REVERT;
 GO
 

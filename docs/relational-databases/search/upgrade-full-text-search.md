@@ -57,7 +57,7 @@ When upgrading a [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] insta
  **Reset**  
  Full-text catalogs are reset. When upgrading from [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], full-text catalog files are removed, but the metadata for full-text catalogs and full-text indexes is retained. After being upgraded, all full-text indexes are disabled for change tracking and crawls are not started automatically. The catalog will remain empty until you manually issue a full population, after the upgrade completes.  
   
-##  <a name="Choosing_Upgade_Option"></a> Considerations for choosing a full-text upgrade option  
+##  <a name="Choosing_Upgrade_Option"></a> Considerations for choosing a full-text upgrade option  
 
 When choosing the upgrade option for your upgrade, consider the following:  
   

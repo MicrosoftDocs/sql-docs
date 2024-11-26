@@ -43,7 +43,7 @@ helpviewer_keywords:
 -   To call an instance member of a custom assembly, you must reference the **Code** keyword followed by the instance name and the method. The following example calls an instance method **ToEUR** which converts the **StandardCost** field value from dollars to euros and displays it in a report:  
   
     ```  
-    =Code.m_myDollarCoversion.ToEUR(Fields!StandardCost.Value)  
+    =Code.m_myDollarConversion.ToEUR(Fields!StandardCost.Value)  
     ```  
   
 ## Related content

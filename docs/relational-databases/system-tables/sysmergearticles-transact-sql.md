@@ -32,7 +32,7 @@ dev_langs:
 |**pre_creation_command**|**tinyint**|The default action to take when the article is created in the subscription database:<br /><br /> **0 =** None - if the table already exists at the Subscriber, no action is taken.<br /><br /> **1** = Drop - drops the table before re-creating it.<br /><br /> **2** = Delete -issues a delete based on the WHERE clause in the subset filter.<br /><br /> **3** = Truncate -same as **2**, but deletes pages instead of rows. However, does not take a WHERE clause.|  
 |**pubid**|**uniqueidentifier**|The ID of the publication to which the current article belongs.|  
 |**nickname**|**int**|The nickname mapping for article identification.|  
-|**column_tracking**|**int**|Iindicates whether column tracking is implemented for the article.|  
+|**column_tracking**|**int**|Indicates whether column tracking is implemented for the article.|  
 |**status**|**tinyint**|Indicates the status of the article, which can be one of the following:<br /><br /> **1** = Unsynced - the initial processing script to publish the table will run the next time the Snapshot Agent runs.<br /><br /> **2** = Active - the initial processing script to publish the table has been run.<br /><br /> **5** = New_inactive - to be added.<br /><br /> **6** = New_active - to be added.|  
 |**conflict_table**|**sysname**|The name of the local table that contains the conflicting records for the current article. This table is supplied for information only, and its contents may be modified or deleted by custom conflict resolution routines or directly by the administrator.|  
 |**creation_script**|**nvarchar(255)**|The creation script for this article.|  

@@ -451,7 +451,7 @@ dev_langs:
   
 |Property|Data type|Description|  
 |--------------|---------------|-----------------|  
-|**PassThroughUnmatchedPivotKeyts**|Boolean|Set to **True** to configure the Pivot transformation to ignore rows containing unrecognized values in the Pivot Key column and to output all of the pivot key values to a log message, when the package is run.|  
+|**PassThroughUnmatchedPivotKeys**|Boolean|Set to **True** to configure the Pivot transformation to ignore rows containing unrecognized values in the Pivot Key column and to output all of the pivot key values to a log message, when the package is run.|  
   
  The following table describes the custom properties of the input columns of the Pivot transformation. All properties are read/write.  
   

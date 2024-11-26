@@ -619,11 +619,11 @@ These remarks apply to authenticating as Windows users that have been federated 
 - A new syntax extension, **FROM EXTERNAL PROVIDER** is available for altering Windows users and groups from SQL on-premises to Microsoft Entra users and groups. The Windows domain must be federated with Microsoft Entra ID and all Windows domain members must exist in Microsoft Entra ID when using this extension. The **FROM EXTERNAL PROVIDER** syntax applies to Azure SQL Managed Instance and should be used in case Windows users do not have logins on the original SQL instance and need to be mapped to standalone Microsoft Entra database users.
 - In this case, the allowable userName can be:
 - A Widows user (_domain\user_).
-- A Windows group (_MyWidnowsGroup_).
+- A Windows group (_MyWindowsGroup_).
 - A Windows alias (_MyWindowsAlias_).
 - The outcome of the ALTER command replaces the old userName with the corresponding name that is found in Microsoft Entra ID based on the original SID of the old userName. The altered name is replaced and stored in the metadata of the database:
 - (_domain\user_) will be replaced with Microsoft Entra user@domain.com.
-- (_domain\\MyWidnowsGroup_) will be replaced with Microsoft Entra group.
+- (_domain\\MyWindowsGroup_) will be replaced with Microsoft Entra group.
 - (_MyWindowsAlias_) will remain unchanged but the SID of this user will be checked in Microsoft Entra ID.
 
 > [!NOTE]

@@ -36,10 +36,10 @@ Member_Expression.DataMember
  The following example uses the **DataMember** function in a calculated measure to show the sales quota for each individual employee:  
   
 ```  
-WITH MEMBER measures.InvidualQuota AS   
+WITH MEMBER measures.IndividualQuota AS   
 ([Employee].[Employees].currentmember.datamember, [Measures].[Sales Amount Quota])  
 ,FORMAT_STRING='Currency'  
-SELECT {[Measures].[Sales Amount Quota],[Measures].InvidualQuota} ON COLUMNS,  
+SELECT {[Measures].[Sales Amount Quota],[Measures].IndividualQuota} ON COLUMNS,  
 [Employee].[Employees].MEMBERS ON ROWS  
 FROM [Adventure Works]  
 ```  

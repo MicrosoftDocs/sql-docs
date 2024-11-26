@@ -73,7 +73,7 @@ helpviewer_keywords:
 ### Configure the Package for Parallel Execution  
  Parallel execution improves performance on computers that have multiple physical or logical processors. To support parallel execution of different tasks in the package, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] uses two properties: **MaxConcurrentExecutables** and **EngineThreads**.  
   
-#### The MaxConcurrentExcecutables Property  
+#### The MaxConcurrentExecutables Property  
  The **MaxConcurrentExecutables** property is a property of the package itself. This property defines how many tasks can run simultaneously. The default value is -1, which means the number of physical or logical processors plus 2.  
   
  To understand how this property works, consider a sample package that has three Data Flow tasks. If you set **MaxConcurrentExecutables** to 3, all three Data Flow tasks can run simultaneously. However, assume that each Data Flow task has 10 source-to-destination execution trees. Setting **MaxConcurrentExecutables** to 3 does not ensure that the execution trees inside each Data Flow task run in parallel.  

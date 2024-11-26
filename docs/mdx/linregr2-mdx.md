@@ -37,7 +37,7 @@ LinRegR2(Set_Expression, Numeric_Expression_y [ ,Numeric_Expression_x ] )
   
  y = ax+b  
   
- The **LinRegR2** function evaluates the specified setagainst the first numeric expressionto obtain the values for the y-axis. The function then evaluates the specified set against the second numeric expression, if specified, to obtain the values for the x-axis. If the second numeric expressionis not specified, the function uses the current context of the cells in the specified set as the values for the x-axis. Not specifying the x-axisargument is frequently used with the Time dimension.  
+ The **LinRegR2** function evaluates the specified set against the first numeric expression to obtain the values for the y-axis. The function then evaluates the specified set against the second numeric expression, if specified, to obtain the values for the x-axis. If the second numeric expression is not specified, the function uses the current context of the cells in the specified set as the values for the x-axis. Not specifying the x-axis argument is frequently used with the Time dimension.  
   
  After obtaining the set of points, the **LinRegR2** function returns the statistical R<sup>2</sup> that describes the fit of the linear equation to the points.  
   

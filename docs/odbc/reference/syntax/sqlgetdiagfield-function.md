@@ -183,7 +183,7 @@ SQLRETURN SQLGetDiagField(
 |*assertion-definition*|"CREATE ASSERTION"|SQL_DIAG_CREATE_ASSERTION|  
 |*character-set-definition*|"CREATE CHARACTER SET"|SQL_DIAG_CREATE_CHARACTER_SET|  
 |*collation-definition*|"CREATE COLLATION"|SQL_DIAG_CREATE_COLLATION|  
-|*domainn-definition*|"CREATE DOMAIN"|SQL_DIAG_CREATE_DOMAIN|
+|*domain-definition*|"CREATE DOMAIN"|SQL_DIAG_CREATE_DOMAIN|
 |*create-index-statement*|"CREATE INDEX"|SQL_DIAG_CREATE_INDEX|  
 |*create-table-statement*|"CREATE TABLE"|SQL_DIAG_CREATE_TABLE|  
 |*create-view-statement*|"CREATE VIEW"|SQL_DIAG_CREATE_VIEW|  

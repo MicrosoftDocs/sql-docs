@@ -21,7 +21,7 @@ monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-ser
 # sys.sql_expression_dependencies (Transact-SQL)
 [!INCLUDE [sql-asdbmi-asa-pdw-fabricse-fabricdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw-fabricse-fabricdw.md)]
 
-  Contains one row for each by-name dependency on a user-defined entity in the current database. This includes dependences between natively compiled, scalar user-defined functions and other [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] modules. A dependency between two entities is created when one entity, called the *referenced entity*, appears by name in a persisted SQL expression of another entity, called the *referencing entity*. For example, when a table is referenced in the definition of a view, the view, as the referencing entity, depends on the table, the referenced entity. If the table is dropped, the view is unusable.  
+  Contains one row for each by-name dependency on a user-defined entity in the current database. This includes dependencies between natively compiled, scalar user-defined functions and other [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] modules. A dependency between two entities is created when one entity, called the *referenced entity*, appears by name in a persisted SQL expression of another entity, called the *referencing entity*. For example, when a table is referenced in the definition of a view, the view, as the referencing entity, depends on the table, the referenced entity. If the table is dropped, the view is unusable.  
   
  For more information, see [Scalar User-Defined Functions for In-Memory OLTP](../../relational-databases/in-memory-oltp/scalar-user-defined-functions-for-in-memory-oltp.md).  
   

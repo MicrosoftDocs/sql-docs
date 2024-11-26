@@ -77,7 +77,7 @@ TO SERVICE 'NotifyService', '8140a771-3c4b-4479-8ac0-81008ab17984' ;
 >   
 >  `CREATE TABLE t1 (col1 int)`  
 >   
->  In this case, the event notification is raised two times: Onne time when the CREATE_SCHEMA event occurs, and again when the CREATE_TABLE event occurs. We recommend that you either avoid creating event notifications on both the CREATE_SCHEMA events and the <schema_element> texts of any corresponding CREATE SCHEMA definitions, or build logic into your application to avoid capturing unwanted event data.  
+>  In this case, the event notification is raised two times: One time when the CREATE_SCHEMA event occurs, and again when the CREATE_TABLE event occurs. We recommend that you either avoid creating event notifications on both the CREATE_SCHEMA events and the <schema_element> texts of any corresponding CREATE SCHEMA definitions, or build logic into your application to avoid capturing unwanted event data.  
   
  **To create an event notification**  
   

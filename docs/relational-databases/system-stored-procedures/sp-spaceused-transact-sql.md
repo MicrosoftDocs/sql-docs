@@ -262,7 +262,7 @@ The following example summarizes space usage for a `MEMORY_OPTIMIZED` table obje
 USE WideWorldImporters
 GO
 
-EXEC sp_spaceused @objname = N'VehicleTemparatures',
+EXEC sp_spaceused @objname = N'VehicleTemperatures',
     @updateusage = 'FALSE',
     @mode = 'ALL',
     @oneresultset = '0',

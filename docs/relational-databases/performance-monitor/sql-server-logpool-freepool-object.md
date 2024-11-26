@@ -1,6 +1,6 @@
 ---
 title: "SQL Server, LogPool FreePool object"
-description: "Learn about the SQLServer:LogPool FreePool performance object, wich provides counters for statistics for the free pool inside the Log Pool."
+description: "Learn about the SQLServer:LogPool FreePool performance object, which provides counters for statistics for the free pool inside the Log Pool."
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: 12/04/2023

@@ -146,7 +146,7 @@ For the status of signatures used to sign packages, the **BlockedSignatureStates
   
 5.  In the **Select a Certificate** dialog box, select a certificate.  
   
-6.  (Optional) Click **View Certificat**e to view certificate information.  
+6.  (Optional) Click **View Certificate** to view certificate information.  
   
 7.  Click **OK** to close the **Select a Certificate** dialog box.  
   

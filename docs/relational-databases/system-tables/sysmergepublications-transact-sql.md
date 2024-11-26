@@ -62,7 +62,7 @@ dev_langs:
 |**use_partition_groups**|**smallint**|Specifies whether the publication uses precomputed partitions.|  
 |**dynamic_filters_function_list**|**nvarchar(500)**|A semi-colon delimited list of functions used in the publication's parameterized row filters.|  
 |**partition_id_eval_proc**|**sysname**|Specifies the name of the procedure run by the Merge Agent of a Subscriber to determine its assigned partition ID.|  
-|**publication_number**|**smallint**|Specifies the identity column that provides a 2-byte mapping to **pubid**. **pubid** is a globally unique identifier for a publication, whereas publication number is unique only in a specififed database.|  
+|**publication_number**|**smallint**|Specifies the identity column that provides a 2-byte mapping to **pubid**. **pubid** is a globally unique identifier for a publication, whereas publication number is unique only in a specified database.|  
 |**replicate_ddl**|**int**|Indicates whether schema replication is supported for the publication.<br /><br /> **0** = DDL statements are not replicated.<br /><br /> **1** = DDL statements executed at the publisher are replicated.<br /><br /> For more information, see [Make Schema Changes on Publication Databases](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md).|  
 |**allow_subscriber_initiated_snapshot**|**bit**|Indicates that Subscribers can initiate the process that generates the snapshot for a publication using parameterized filters. **1** indicates that Subscribers can initiate the snapshot process.|  
 |**dynamic_snapshot_queue_timeout**|**int**|Specifies how many minutes a Subscriber must wait in the queue for the snapshot generation process to begin when using parameterized filters.|  

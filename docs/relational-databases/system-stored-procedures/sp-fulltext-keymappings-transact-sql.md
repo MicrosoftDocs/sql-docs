@@ -115,7 +115,7 @@ This example returns all the DocIds and full-text keys from the table, as follow
 The following example uses a DECLARE statement to create a local variable, `@table_id`, and to assign the ID of the `ProductReview` table as its value. The example executes `sp_fulltext_keymappings` specifying `@table_id` for the *table_id* parameter, `NULL` for the *docId* parameter, and 4 for the *key* parameter.
 
 > [!NOTE]  
-> Using `sp_fulltext_keymappings` with only the *table_id* parameteris suitable for small tables.
+> Using `sp_fulltext_keymappings` with only the *table_id* parameter is suitable for small tables.
 
 ```sql
 USE AdventureWorks2022;

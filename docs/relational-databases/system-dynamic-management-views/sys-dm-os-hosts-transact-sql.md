@@ -67,7 +67,7 @@ Requires VIEW SERVER PERFORMANCE STATE permission on the server.
 |**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later.|  
   
 ```  
-SELECT h.type, SUM(mc.pages_kb) AS commited_memory  
+SELECT h.type, SUM(mc.pages_kb) AS committed_memory  
 FROM sys.dm_os_memory_clerks AS mc   
 INNER JOIN sys.dm_os_hosts AS h   
     ON mc.memory_clerk_address = h.default_memory_clerk_address  

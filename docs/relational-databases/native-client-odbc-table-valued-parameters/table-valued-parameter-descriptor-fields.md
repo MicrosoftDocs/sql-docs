@@ -37,7 +37,7 @@ helpviewer_keywords:
   
  SQL_CA_SS_TYPE_NAME is optional for stored procedure calls. It must be specified for SQL statements that are not procedure calls to enable the server to determine the type of the table-valued parameter.  
   
- If the type name is reqired and the table type for the table-valued parameter is defined in a different schema than the stored procedure, SQL_CA_SS_TYPE_SCHEMA_NAME must be specified in the implementation parameter descriptor (IPD). If not, the server will not be able to determine the type of the table-valued parameter. This will result in an error when you call SQLExecute or SQLExecDirect. The error will have SQLSTATE= 07006 and the message "Restricted data type attribute violation".  
+ If the type name is required and the table type for the table-valued parameter is defined in a different schema than the stored procedure, SQL_CA_SS_TYPE_SCHEMA_NAME must be specified in the implementation parameter descriptor (IPD). If not, the server will not be able to determine the type of the table-valued parameter. This will result in an error when you call SQLExecute or SQLExecDirect. The error will have SQLSTATE= 07006 and the message "Restricted data type attribute violation".  
   
  Table-valued parameter columns can use either row-wise or column-wise binding. The default is column-wise binding. Row-wise binding can be specified by setting SQL_ATTR_PARAM_BIND_TYPE and SQL_ATTR_ PARAM_BIND_OFFSET_PTR. This is analogous to row-wise binding of columns and parameters.  
   

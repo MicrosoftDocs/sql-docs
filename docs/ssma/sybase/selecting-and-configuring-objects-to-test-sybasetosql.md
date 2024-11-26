@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.collection:
   - sql-migration-content
 helpviewer_keywords:
-  - "Tester Component,Parameter Comparision Setting"
+  - "Tester Component,Parameter Comparison Setting"
   - "Tester Component,Selecting Objects"
 ---
 # Selecting and Configuring Objects to Test (SybaseToSQL)
@@ -21,7 +21,7 @@ In the Sybase object tree located on the left side of the window, check the obje
   
 If SSMA Tester does not support any of the objects selected for testing, you will see the link labeled **Some selected objects contain errors** under the objects tree. Click this link to view the reasons why these objects cannot be tested and to clear the selection of wrong objects.  
   
-On the right side you can view several pages The **SQL** page shows the current object's definition. In the **Pre SQL** and **Post SQL** pages can specify scripts that run before and after the invocation of test object starts. This is may be useful when the object requires additional object such temporary tables or cursors. The **Parameters** page lists the parameters if the object is a stored procedure or a function. The **Properties** page shows additional characteristics of the object. See the description of **Parameters Comparsions** and **Call Values** pages below.  
+On the right side you can view several pages The **SQL** page shows the current object's definition. In the **Pre SQL** and **Post SQL** pages can specify scripts that run before and after the invocation of test object starts. This is may be useful when the object requires additional object such temporary tables or cursors. The **Parameters** page lists the parameters if the object is a stored procedure or a function. The **Properties** page shows additional characteristics of the object. See the description of **Parameters Comparisons** and **Call Values** pages below.  
   
 ## Parameter Comparison Settings  
 Establish the comparison rules for output parameters and return values in the **Parameters Comparing** page. You can make the following settings.  

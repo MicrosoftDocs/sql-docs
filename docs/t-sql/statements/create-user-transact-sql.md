@@ -271,7 +271,7 @@ CREATE USER user_name
   
  In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later, applies only to users with passwords ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] authentication) in a contained database. Specifies the SID of the new database user. If this option isn't selected, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] automatically assigns a SID. Use the SID parameter to create users in multiple databases that have the same identity (SID). This is useful when creating users in multiple databases to prepare for Always On failover. To determine the SID of a user, query sys.database_principals.  
 
-In SQL database in Microsoft Fabric, `sid` should be a valid ID of the specified Microsoft Entra principal. If the principal is a user or a group, the ID should be a Microsoft Entra object ID of the user/group. If the Microsoft Entra principal is a service principal (an application or a managed identity), the ID should be an application ID (or a client ID). The specified ID must be a `binary(16)` value. The [!INCLUDE[ssDE](../../includes/ssde-md.md)] doesn't validate the specified ID in Microsoft Entra. The `SID` arguemnt must be used together with `TYPE`.
+In SQL database in Microsoft Fabric, `sid` should be a valid ID of the specified Microsoft Entra principal. If the principal is a user or a group, the ID should be a Microsoft Entra object ID of the user/group. If the Microsoft Entra principal is a service principal (an application or a managed identity), the ID should be an application ID (or a client ID). The specified ID must be a `binary(16)` value. The [!INCLUDE[ssDE](../../includes/ssde-md.md)] doesn't validate the specified ID in Microsoft Entra. The `SID` argument must be used together with `TYPE`.
 
 #### TYPE = [ E | X ]
  **Applies to**: SQL database in Microsoft Fabric. 
@@ -295,7 +295,7 @@ If the principal issuing the `CREATE USER` statement is a Microsoft Entra user p
 
 In [!INCLUDE[sssds](../../includes/sssds-md.md)] and Azure SQL Managed Instance, if the principal issuing the `CREATE USER` statement is a service principal, the identity of the database server or the managed instance must be in the  [Directory Readers role](/entra/identity/role-based-access-control/permissions-reference#directory-readers) in Microsoft Entra.
 
-In [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], `FROM EXTERNAL PROVIDER` is not allowed if a principal issuing `CREATE USER` is a service principal in Microsoft Entra. Service principals must use `TYPE` and `SID` arugments to create users for Microsoft Entra principals.
+In [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], `FROM EXTERNAL PROVIDER` is not allowed if a principal issuing `CREATE USER` is a service principal in Microsoft Entra. Service principals must use `TYPE` and `SID` arguments to create users for Microsoft Entra principals.
 
 #### WITH OBJECT_ID = *'objectid'*
  **Applies to**: [!INCLUDE[sssds](../../includes/sssds-md.md)], Azure SQL Managed Instance, [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)]

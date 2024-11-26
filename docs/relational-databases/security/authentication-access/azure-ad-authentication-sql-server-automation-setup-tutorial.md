@@ -636,7 +636,7 @@ $cert = ConvertFrom-StringArray (az keyvault certificate show --name $certSubjec
 
 if (!$cert)
 {
-  Write-Error "Supplied certificate $certSubjectName was not found for this key vault. Please specify an existing certficate"
+  Write-Error "Supplied certificate $certSubjectName was not found for this key vault. Please specify an existing certificate"
     exit 1    
 }
 

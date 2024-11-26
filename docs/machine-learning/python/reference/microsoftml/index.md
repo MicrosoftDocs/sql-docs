@@ -45,7 +45,7 @@ monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15"
 
   * [optimizers](rx-neural-network.md) 
 
-    * [*microsoftml.adadelta_optimizer*: Adaptive learing rate method](adadelta-optimizer.md) 
+    * [*microsoftml.adadelta_optimizer*: Adaptive learning rate method](adadelta-optimizer.md) 
 
     * [*microsoftml.sgd_optimizer*: Stochastic gradient descent](sgd-optimizer.md) 
 

@@ -30,7 +30,7 @@ helpviewer_keywords:
  If you call SQLFetch on a bound column, you will receive a "data truncated" warning if the buffer is not large enough to hold the entire value. Ignore this warning and update the data in this bound column with SQLParamData and SQLPutData calls. You can update FILESTREAM data by using SQLSetPos if it is bound with SQLBindCol.  
   
 ## Example  
- FILESTREAM columns behave exactly like **varbinary(max)** columns, but without a size limit. They are bound as SQL_VARBINARY. (SQL_LONGVARBINARY is used with image columns, and there are restrictions on this type. For example, SQL_LONGVARBINARY connot be used as an output parameter.) The following examples show direct NTFS access for FILESTREAM columns. These examples assume that the following [!INCLUDE[tsql](../../../includes/tsql-md.md)] code has been executed in the database:  
+ FILESTREAM columns behave exactly like **varbinary(max)** columns, but without a size limit. They are bound as SQL_VARBINARY. (SQL_LONGVARBINARY is used with image columns, and there are restrictions on this type. For example, SQL_LONGVARBINARY cannot be used as an output parameter.) The following examples show direct NTFS access for FILESTREAM columns. These examples assume that the following [!INCLUDE[tsql](../../../includes/tsql-md.md)] code has been executed in the database:  
   
 ```  
 CREATE TABLE fileStreamDocs(  

@@ -70,7 +70,7 @@ dev_langs:
 |**se_bitpos**|**tinyint**|Bit position of the column, in the byte vector.|  
 |**se_fNullable**|**tinyint**|Specifies whether the column supports NULL values.|  
 |**se_fAnsiTrim**|**tinyint**|Specifies whether ANSI trim is used on the column.|  
-|**se_computed**|**smallint**|Specifies whether the columnis a computed column.|  
+|**se_computed**|**smallint**|Specifies whether the column is a computed column.|  
 |**se_nullBitInLeafRows**|**int**|Specifies whether the column value is NULL.|  
   
 ## Permissions  

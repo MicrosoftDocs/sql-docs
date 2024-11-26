@@ -223,7 +223,7 @@ In this section, learn how to use a stored procedure to persist the model and ma
     conn <- odbcDriverConnect(connStr);
     ```
 
-3. Call the PersistModel stored procedure on SQL Server to transmite the serialized object to the database and store the binary representation of the model in a column. 
+3. Call the PersistModel stored procedure on SQL Server to transmit the serialized object to the database and store the binary representation of the model in a column. 
 
     ```R
     q <- paste("EXEC PersistModel @m='", modelbinstr,"'", sep="");

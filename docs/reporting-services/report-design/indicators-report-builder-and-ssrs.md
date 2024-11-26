@@ -101,7 +101,7 @@ f1_keywords:
   
  Indicators use only a single value. If you have to show multiple data values, use a sparkline or data bar instead of an indicator. They can represent multiple data values but are also simple, easy to understand at small sizes, and work well in tables and matrices. For more information, see [Sparklines and Data Bars &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).  
   
-##  <a name="SizingIndicatators"></a> Sizing Indicators to Maximize Visual Impact  
+##  <a name="SizingIndicators"></a> Sizing Indicators to Maximize Visual Impact  
  In addition to color, direction, and shape you can use size to maximize the visual impact of indicators. Imagine a report that uses indicators to show customer satisfaction with different types of bicycles. The icon that the indicator uses can be configured to be different sizes depending on customer satisfaction. The greater the satisfaction, the larger the icon that appears in the report. The following picture shows a report of bicycle sales, and the sizes of the icon reflect the sales amount.  
   
  You use expressions to dynamically set the size of the stars based on values of field used by the indicator. For more information, see [Specify the Size of an Indicator Using an Expression &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/specify-the-size-of-an-indicator-using-an-expression-report-builder-and-ssrs.md).  

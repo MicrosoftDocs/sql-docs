@@ -30,7 +30,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 |HostName|**nvarchar**|Name of the computer on which the client is running. This data column is populated if the host name is provided by the client. To determine the host name, use the HOST_NAME function.|8|Yes|  
 |IsSystem|**int**|Indicates whether the event occurred on a system process or a user process. 1 = system, 0 = user.|60|Yes|  
 |LoginName|**nvarchar**|Name of the login of the user (either the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] security login or the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows login credentials in the form of DOMAIN\username).|11|Yes|  
-|LoginSid|**image**|Security identification number (SID) of the logged-in user. You can find this information in the sys.server_princiapls catalog. Each SID is unique for each login in the server.|41|Yes|  
+|LoginSid|**image**|Security identification number (SID) of the logged-in user. You can find this information in the sys.server_principals catalog. Each SID is unique for each login in the server.|41|Yes|  
 |NTDomainName|**nvarchar**|Windows domain to which the user belongs.|7|Yes|  
 |NTUserName|**nvarchar**|Windows user name.|6|Yes|  
 |RequestID|**int**|ID of the request containing the statement.|49|Yes|  

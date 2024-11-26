@@ -26,7 +26,7 @@ dev_langs:
   
  The general process for implementing a business logic handler is:  
   
-1.  Create the business logic hander assembly.  
+1.  Create the business logic handler assembly.  
   
 2.  Register the assembly at the Distributor.  
   

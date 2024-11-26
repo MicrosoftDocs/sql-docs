@@ -46,7 +46,7 @@ dev_langs:
   
  When you specify a node name as a node test, the step returns the following types of nodes:  
   
--   Nodes that areof the principal node kind of the axis.  
+-   Nodes that are of the principal node kind of the axis.  
   
 -   Nodes that have the same name as specified in the node test.  
   

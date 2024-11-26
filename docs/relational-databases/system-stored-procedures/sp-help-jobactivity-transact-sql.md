@@ -71,7 +71,7 @@ Returns the following result set:
 | `queued_date` | **datetime** | Specifies when the request was queued. `NULL` if the job was run directly. |
 | `start_execution_date` | **datetime** | When the job was assigned to a runnable thread. |
 | `last_executed_step_id` | **int** | The step ID of the most recently run job step. |
-| `last_exectued_step_date` | **datetime** | The time that the most recently run job step started to run. |
+| `last_executed_step_date` | **datetime** | The time that the most recently run job step started to run. |
 | `stop_execution_date` | **datetime** | The time that the job stopped running. |
 | `next_scheduled_run_date` | **datetime** | When the job is next scheduled to run. |
 | `job_history_id` | **int** | Identifier for the job history in the job history table. |

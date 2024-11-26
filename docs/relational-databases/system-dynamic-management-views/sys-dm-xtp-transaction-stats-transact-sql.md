@@ -39,7 +39,7 @@ dev_langs:
 |log_bytes_written|**bigint**|Total number of bytes written to the In-Memory OLTP log records.|  
 |log_IO_count|**bigint**|Total number of transactions that require log IO. Only considers transactions on durable tables.|  
 |phantom_scans_started|**bigint**|Internal use only.|  
-|phatom_scans_retries|**bigint**|Internal use only.|  
+|phantom_scans_retries|**bigint**|Internal use only.|  
 |phantom_rows_touched|**bigint**|Internal use only.|  
 |phantom_rows_expiring|**bigint**|Internal use only.|  
 |phantom_rows_expired|**bigint**|Internal use only.|  

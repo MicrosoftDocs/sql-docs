@@ -36,7 +36,7 @@ Expression2
  Identifies one or more nodes to insert. This can be a constant XML instance; a reference to a typed XML data type instance of the same XML Schema collection on which the modify method is being applied; an untyped XML data type instance using a stand-alone **sql:column()**/**sql:variable()** function; or an XQuery expression. The expression can result in a node, and also a text node, or in an ordered sequence of nodes. It cannot resolve to the root (/) node. If the expression results in a value or a sequence of values, the values are inserted as a single text node with a space separating each value in the sequence. If you specify multiple nodes as constant, the nodes are included in parentheses and are separated by commas. You cannot insert heterogeneous sequences such as a sequence of elements, attributes, or values. If *Expression1* resolves to an empty sequence, no insertion occurs and no errors are returned.  
   
  into  
- Nodes identified by *Expression1* are inserted as direct descendents (child nodes) of the node identified by *Expression2*. If the node in *Expression2* already has one or more child nodes, you must use either **as first** or **as last** to specify where you want the new node added. For example, at the start or at the end of the child list, respectively. The **as first** and **as last** keywords are ignored when attributes are inserted.  
+ Nodes identified by *Expression1* are inserted as direct descendants (child nodes) of the node identified by *Expression2*. If the node in *Expression2* already has one or more child nodes, you must use either **as first** or **as last** to specify where you want the new node added. For example, at the start or at the end of the child list, respectively. The **as first** and **as last** keywords are ignored when attributes are inserted.  
   
  after  
  Nodes identified by *Expression1* are inserted as siblings directly after the node identified by *Expression2*. The **after** keyword cannot be used to insert attributes. For example, it cannot be used to insert an attribute constructor or to return an attribute from an XQuery.  
@@ -78,7 +78,7 @@ SELECT @myDoc  ;
 -- insert third feature child. This one is the last child of <Features> so use 'as last'         
 SELECT @myDoc         
 SET @myDoc.modify('         
-insert <Material>Aluminium</Material>          
+insert <Material>Aluminum</Material>          
 as last         
 into (/Root/ProductDescription/Features)[1]         
 ')         
@@ -274,7 +274,7 @@ INSERT INTO T VALUES(1,'<Root>
 GO  
 -- insert a new element  
 UPDATE T  
-SET x.modify('insert <Material>Aluminium</Material> as first  
+SET x.modify('insert <Material>Aluminum</Material> as first  
   into   (/Root/ProductDescription/Features)[1]  
 ');  
 GO  

@@ -9,7 +9,7 @@ ms.service: sql
 ms.subservice: security
 ms.topic: conceptual
 helpviewer_keywords:
-  - "troublshooting, tde akv"
+  - "troubleshooting, tde akv"
   - "tde akv configuration, troubleshooting"
   - "tde troubleshooting"
 monikerRange: "=azuresqldb-current || =azure-sqldw-latest"

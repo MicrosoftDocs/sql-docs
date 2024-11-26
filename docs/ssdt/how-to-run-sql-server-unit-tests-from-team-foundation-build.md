@@ -23,7 +23,7 @@ Before you use these procedures, you must first configure your working environme
   
 -   Install Team Foundation Build and Team Foundation version control. You probably have to install Team Foundation Build and Team Foundation version control on different computers.  
   
--   Install Microsoft SQL Server Data Tools Build Utilities on the same computer as Team Foundation Build. To install the SQL Server Data Tools Build Utilities, first perform an administrative installation point. For more information about an administrative installation point, see [Install SQL Server Data Tools](./download-sql-server-data-tools-ssdt.md). Then install SSDTBuildUtilties.msi onto the build server from the location (/location) used for the administrative installation point.  
+-   Install Microsoft SQL Server Data Tools Build Utilities on the same computer as Team Foundation Build. To install the SQL Server Data Tools Build Utilities, first perform an administrative installation point. For more information about an administrative installation point, see [Install SQL Server Data Tools](./download-sql-server-data-tools-ssdt.md). Then install SSDTBuildUtilities.msi onto the build server from the location (/location) used for the administrative installation point.  
   
 -   Connect to an instance of Visual Studio Team Foundation Server.  
   

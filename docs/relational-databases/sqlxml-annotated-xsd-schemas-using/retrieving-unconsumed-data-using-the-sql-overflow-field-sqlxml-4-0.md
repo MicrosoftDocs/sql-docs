@@ -23,7 +23,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
   
 -   Attributes stored in the overflow column are added to the element that contains the **sql:overflow-field** annotation.  
   
--   The child elements and their descendents, stored in the overflow column in the database, are added as child elements following the content that is explicitly specified in the schema. (No order is preserved.)  
+-   The child elements and their descendants, stored in the overflow column in the database, are added as child elements following the content that is explicitly specified in the schema. (No order is preserved.)  
   
 ## Examples  
  To create working samples using the following examples, you must meet certain requirements. For more information, see [Requirements for Running SQLXML Examples](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  

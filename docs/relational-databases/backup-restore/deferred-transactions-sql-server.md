@@ -42,7 +42,7 @@ helpviewer_keywords:
 
  - The database must use the FULL or BULK-LOGGED recovery model.
  - At least one database and log backup must have been completed for the database
- - Deffered transactions do not apply to errors encountered during a rollback of a transaction after the database is online. (e.g. a runtime error)
+ - deferred transactions do not apply to errors encountered during a rollback of a transaction after the database is online. (e.g. a runtime error)
  - Transactions cannot be deferred for recovery failures during a database attach
  - Some transactions such as system transactions (Ex. page allocation) cannot be deferred
 

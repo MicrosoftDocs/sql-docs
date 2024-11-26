@@ -89,7 +89,7 @@ helpviewer_keywords:
   
 -   [Expressions Page](../../integration-services/expressions/expressions-page.md)  
   
- For more information about how to setthese properties in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, click the following topic:  
+ For more information about how to set these properties in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, click the following topic:  
   
 -   [Set the Properties of a Task or Container](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   

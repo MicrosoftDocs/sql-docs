@@ -208,7 +208,7 @@ Enables or disables Service Broker.
 **Honor Broker Priority**  
 Read-only Service Broker property.  
 
-**Serice Broker Identifier**  
+**Service Broker Identifier**  
 Read-only identifier.  
 
 ## State  

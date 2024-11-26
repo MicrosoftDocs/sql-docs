@@ -46,7 +46,7 @@ apitype: "DLLExport"
 |REMARKS|NULL|  
 |COLUMN_DEF|NULL. Table types might not have default values.|  
 |SQL_DATA_TYPE|SQL_SS_TABLE|  
-|SQL_DATEIME_SUB|NULL|  
+|SQL_DATETIME_SUB|NULL|  
 |CHAR_OCTET_LENGTH|NULL|  
 |IS_NULLABLE|"YES"|  
 |SS_TYPE_CATALOG_NAME|Returns the name of the catalog that contains the table or CLR user-defined type.|  

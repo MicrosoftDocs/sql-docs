@@ -354,12 +354,12 @@ The below example, illustrates generating a column encryption key and using [Sql
 using System.Security.Cryptography;
 static void Main(string[] args)
 {
-    byte[] EncryptedColumnEncryptionKey = GetEncryptedColumnEncryptonKey(); 
+    byte[] EncryptedColumnEncryptionKey = GetEncryptedColumnEncryptionKey(); 
     Console.WriteLine("0x" + BitConverter.ToString(EncryptedColumnEncryptionKey).Replace("-", "")); 
     Console.ReadKey();
 }
 
-static byte[]  GetEncryptedColumnEncryptonKey()
+static byte[]  GetEncryptedColumnEncryptionKey()
 {
     int cekLength = 32;
     String certificateStoreLocation = "CurrentUser";

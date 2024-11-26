@@ -27,7 +27,7 @@ Qtd( [ Member_Expression ] )
  A valid Multidimensional Expressions (MDX) expression that returns a member.  
   
 ## Remarks  
- If a member expressionis not specified, the default is the current member of the first hierarchy with a level of type *Quarters* in the first dimension of type *Time* in the measure group.  
+ If a member expression is not specified, the default is the current member of the first hierarchy with a level of type *Quarters* in the first dimension of type *Time* in the measure group.  
   
  The **Qtd** function is a shortcut function for the [PeriodsToDate &#40;MDX&#41;](../mdx/periodstodate-mdx.md) function whose level expression argument is set to *Quarter*. That is, `Qtd(Member_Expression)` is functionally equivalent to `PeriodsToDate(Quarter_Level_Expression, Member_Expression)`.  
   

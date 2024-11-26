@@ -196,7 +196,7 @@ INSERT Audit.ProcessEvents (EventCode, Description)
 VALUES                    (2735, 'Clean room temperature 18 degrees C.');
 
 INSERT Audit.ProcessEvents (EventCode, Description)
-VALUES                    (18, 'Spin rate threashold exceeded.');
+VALUES                    (18, 'Spin rate threshold exceeded.');
 
 INSERT Audit.ErrorEvents (EquipmentID, ErrorNumber, EventDesc)
 VALUES                  (248, 82, 'Feeder jam');

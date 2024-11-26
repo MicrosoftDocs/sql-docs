@@ -26,7 +26,7 @@ Contains one row for each object that is an edge constraint.
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
 |**\<Columns inherited from sys.objects>**||For a list of columns that this view inherits, see [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).|  
-|**is_disabled**|**bit**|1 = Edge constraint is disbled.<br /><br /> 0 = Edge constraint is enabled.|  
+|**is_disabled**|**bit**|1 = Edge constraint is disabled.<br /><br /> 0 = Edge constraint is enabled.|  
 |**is_not_trusted**|**bit**|1 = Edge constraint has not been verified by the system.<br /><br /> 0 = Edge constraint has been verified by the system.|  
 |**delete_referential_action**|**tinyint**|Referential action that was defined on this edge constraint.<br /><br />0 = No Action.|  
 |**delete_referential_action_desc**|**nvarchar(60)**|Description of the referential action that was defined on this edge constraint.<br /><br />NO_ACTION|  

@@ -67,7 +67,7 @@ helpviewer_keywords:
   
  The XML source supports multiple regular outputs and multiple error outputs.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] includes the **XML Source Edito**r dialog box for configuring the XML source. This dialog box is available in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] includes the **XML Source Editor** dialog box for configuring the XML source. This dialog box is available in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer.  
   
  You can set properties through [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer or programmatically.  
   

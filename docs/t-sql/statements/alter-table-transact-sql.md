@@ -1170,7 +1170,7 @@ Changes you specify in ALTER TABLE implement immediately. If the changes require
 
 **Applies to** [!INCLUDE [fabricdw](../../includes/fabric-dw.md)] in [!INCLUDE [fabric](../../includes/fabric.md)].
 
-ALTER TABLE cannot be part of an explict transaction.
+ALTER TABLE cannot be part of an explicit transaction.
 
 ### XEvents for partition switch
 

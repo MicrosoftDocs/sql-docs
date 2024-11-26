@@ -167,7 +167,7 @@ End Function
  Instance-based methods are available through a globally defined **Code** member. You access these by referring to the **Code** member, followed by the instance and method name. The following example calls the instance method **ToEUR**, which converts the value of **StandardCost** from dollar to euro:  
   
 ```  
-=Code.m_myDollarCoversion.ToEUR(Fields!StandardCost.Value)  
+=Code.m_myDollarConversion.ToEUR(Fields!StandardCost.Value)  
 ```  
   
 > [!NOTE]  

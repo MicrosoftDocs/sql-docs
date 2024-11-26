@@ -31,7 +31,7 @@ dev_langs:
 |**modify_date**|**datetime**|UTC date the audit was last modified.|  
 |**principal_id**|**int**|ID of the owner of the audit, as registered to the server.|  
 |**type**|**char(2)**|Audit type:<br /><br /> SL - NT Security event log<br /><br /> AL - NT Application event log<br /><br /> FL - File on file system|  
-|**type_desc**|**nvarchar(60)**|SECURITY LOG<br /><br /> APPICATION LOG<br /><br /> FILE|  
+|**type_desc**|**nvarchar(60)**|SECURITY LOG<br /><br /> APPLICATION LOG<br /><br /> FILE|  
 |**on_failure**|**tinyint**|On Failure to write an action entry:<br /><br /> 0 - Continue<br /><br /> 1 - Shutdown server instance<br /><br /> 2 - Fail operation|  
 |**on_failure_desc**|**nvarchar(60)**|On Failure to write an action entry:<br /><br /> CONTINUE<br /><br /> SHUTDOWN SERVER INSTANCE<br /><br /> FAIL_OPERATION|  
 |**is_state_enabled**|**tinyint**|0 - Disabled<br /><br /> 1 - Enabled|  

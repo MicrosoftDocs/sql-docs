@@ -345,7 +345,7 @@ Use the **General** page of the **Foreach Loop Editor** dialog box to name and d
 |**Variable**|Set the source to a variable that contains the XML document.|  
   
  **DocumentSource**  
- If **DocumentSourceType** is set to **Direct input**, provide the XML code, or click the ellipsis (...) button to provide XML by using the **Document Source Edito**r dialog box.  
+ If **DocumentSourceType** is set to **Direct input**, provide the XML code, or click the ellipsis (...) button to provide XML by using the **Document Source Editor** dialog box.  
   
  If **DocumentSourceType** is set to **File connection**, select a File connection manager, or click \<**New connection...**> to create a new connection manager.  
   

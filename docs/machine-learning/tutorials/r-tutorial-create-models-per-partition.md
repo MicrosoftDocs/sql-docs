@@ -166,7 +166,7 @@ Notice that the [sp_execute_external_script](../../relational-databases/system-s
 By default, the query optimizer tends to operate under `@parallel=1` on tables having more than 256 rows, but if you can handle this explicitly by setting `@parallel=1` as shown in this script.
 
 > [!TIP]  
-> For training workoads, you can use `@parallel` with any arbitrary training script, even those using non-Microsoft-rx algorithms. Typically, only RevoScaleR algorithms (with the rx prefix) offer parallelism in training scenarios in SQL Server. But with the new parameter, you can parallelize a script that calls functions, including open-source R functions, not specifically engineered with that capability. This works because partitions have affinity to specific threads, so all operations called in a script execute on a per-partition basis, on the given thread.
+> For training workloads, you can use `@parallel` with any arbitrary training script, even those using non-Microsoft-rx algorithms. Typically, only RevoScaleR algorithms (with the rx prefix) offer parallelism in training scenarios in SQL Server. But with the new parameter, you can parallelize a script that calls functions, including open-source R functions, not specifically engineered with that capability. This works because partitions have affinity to specific threads, so all operations called in a script execute on a per-partition basis, on the given thread.
 
 <a name="training-step"></a>
 

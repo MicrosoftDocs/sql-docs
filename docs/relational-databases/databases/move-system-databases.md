@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "data files [SQL Server], moving"
   - "tempdb database [SQL Server], moving"
   - "system databases [SQL Server], moving"
-  - "scheduled disk maintenace [SQL Server]"
+  - "scheduled disk maintenance [SQL Server]"
   - "moving databases"
   - "msdb database [SQL Server], moving"
   - "moving database files"

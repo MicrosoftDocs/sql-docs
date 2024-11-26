@@ -39,7 +39,7 @@ apitype: "DLLExport"
   
 -   A value of 0 indicates that there are no more rows to be sent.  
   
--   Any value less than 0 is an error and results in a diagnostic record being logged with SQLState HY090 and the messaage "Invalid string or buffer length".  
+-   Any value less than 0 is an error and results in a diagnostic record being logged with SQLState HY090 and the message "Invalid string or buffer length".  
   
  The *DataPtr* parameter is ignored, but must be set to a non-NULL value. For more information, see the section on Variable TVP row binding in [Binding and Data Transfer of Table-Valued Parameters and Column Values](../../relational-databases/native-client-odbc-table-valued-parameters/binding-and-data-transfer-of-table-valued-parameters-and-column-values.md).  
   

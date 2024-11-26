@@ -144,7 +144,7 @@ helpviewer_keywords:
  Type the password again.  
 
 ## <a name="password_dialog"></a> Package Password Dialog Box
-  Use the **Package Password** dialog box to provide the package password for a package that is encrypted with a password. You must provide a password if the package uses the **Encrypt sensitive with passwor**d or **Encrypt all with password** protection level.  
+  Use the **Package Password** dialog box to provide the package password for a package that is encrypted with a password. You must provide a password if the package uses the **Encrypt sensitive with password** or **Encrypt all with password** protection level.  
   
 ### Options  
  **Password**  

@@ -9,7 +9,7 @@ ms.subservice: "machine-learning-services"
 ms.topic: "reference"
 keywords:
   - transform
-  - catagory
+  - category
   - hash
 ms.devlang: python
 monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15"

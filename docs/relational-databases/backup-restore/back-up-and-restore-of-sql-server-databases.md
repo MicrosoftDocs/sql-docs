@@ -177,7 +177,7 @@ Backup and restore operations can take a considerable amount of time due to the 
 
 
 ```sql
--- Create the backup_restore_progress_trace extended event esssion
+-- Create the backup_restore_progress_trace extended event session
 CREATE EVENT SESSION [BackupRestoreTrace] ON SERVER 
 ADD EVENT sqlserver.backup_restore_progress_trace
 ADD TARGET package0.event_file(SET filename=N'BackupRestoreTrace')

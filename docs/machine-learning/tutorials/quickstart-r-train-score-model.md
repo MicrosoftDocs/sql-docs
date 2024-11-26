@@ -231,7 +231,7 @@ The script above performs the following steps:
 
 **Results**
 
-![Result set for predicting properbility of manual transmission](./media/r-predict-am-resultset.png)
+![Result set for predicting probability of manual transmission](./media/r-predict-am-resultset.png)
 
 It's also possible to use the [PREDICT (Transact-SQL)](../../t-sql/queries/predict-transact-sql.md) statement to generate a predicted value or score based on a stored model.
 

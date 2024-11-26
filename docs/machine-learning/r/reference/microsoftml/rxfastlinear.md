@@ -277,7 +277,7 @@ Microsoft Corporation [`Microsoft Technical Support`](https://go.microsoft.com/f
 
  ```
 
-  # Train a binary classiication model with rxFastLinear
+  # Train a binary classification model with rxFastLinear
   res1 <- rxFastLinear(isCase ~ age + parity + education + spontaneous + induced,
                     transforms = list(isCase = case == 1),
                     data = infert,

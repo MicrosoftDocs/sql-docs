@@ -59,7 +59,7 @@ FirstName + ' ' + LastName
  This example concatenates the variables **ZIPCode** and **ZIPCode+4**. Both variables have a string data type. **ZIPCode+4** must be enclosed in brackets because the variable name includes the + character.  
   
 ```  
-@ZIPCcode + "-" + @[ZipCode+4]  
+@ZIPCode + "-" + @[ZipCode+4]  
 ```  
   
 ## See Also  

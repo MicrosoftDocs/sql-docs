@@ -166,7 +166,7 @@ int main() {
 |For information about|See|  
 |---------------------------|---------|  
 |Allocating a handle|[SQLAllocHandle Function](../../../odbc/reference/syntax/sqlallochandle-function.md)|  
-|Canceling statement processing|[SQLCance Functionl](../../../odbc/reference/syntax/sqlcancel-function.md)|  
+|Canceling statement processing|[SQLCancel Function](../../../odbc/reference/syntax/sqlcancel-function.md)|  
 |Setting a cursor name|[SQLSetCursorName Function](../../../odbc/reference/syntax/sqlsetcursorname-function.md)|  
   
 ## See Also  

@@ -26,7 +26,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 **Stoplists**. Stopwords are managed in databases using objects called stoplists. A *stoplist* is a list of stopwords that, when associated with a full-text index, is applied to full-text queries on that index.
    
 ## Use an existing stoplist  
- You can use an existsing stoplist in the following ways:  
+ You can use an existing stoplist in the following ways:  
   
 -   Use the system-supplied stoplist in the database. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ships with a system stoplist that contains the most commonly used stopwords for each supported language, that is for every language associated with given word breakers by default. You can copy the system stoplist and customize your copy by adding and removing stopwords.  
   

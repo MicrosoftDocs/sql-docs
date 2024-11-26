@@ -105,7 +105,7 @@ The general process for creating and using an audit is as follows.
 
 1. Enable the audit.
 
-1. Read the audit events by using the Windows **Event Viewer**, **Log File Viewe**r, or the fn_get_audit_file function.
+1. Read the audit events by using the Windows **Event Viewer**, **Log File Viewer**, or the fn_get_audit_file function.
 
 For more information, see [Create a Server Audit and Server Audit Specification](../../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md) and [Create a Server Audit and Database Audit Specification](../../../relational-databases/security/auditing/create-a-server-audit-and-database-audit-specification.md).
 

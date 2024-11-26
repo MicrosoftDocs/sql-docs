@@ -74,7 +74,7 @@ CREATE XML SCHEMA COLLECTION SC AS N'
 go  
 -- Create table.  
 CREATE TABLE T( XmlCol xml(SC) )  
--- Insert sample XML instnace  
+-- Insert sample XML instance  
 INSERT INTO T VALUES ('  
 <Root xmlns="QNameXSD" xmlns:ns="https://myURI">  
       <ElemQN>ns:someName</ElemQN>  

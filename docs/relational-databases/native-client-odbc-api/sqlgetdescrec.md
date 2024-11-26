@@ -25,7 +25,7 @@ helpviewer_keywords:
 |Parameter|Table-valued parameter|Table-valued parameter columns and other parameters|  
 |---------------|-----------------------------|----------------------------------------------------------|  
 |*Name*|The formal parameter name for a stored procedure call; otherwise, a 0 length string.|The table-valued parameter column name.|  
-|*TypePtr*|SQL_DESC_TYPE. For table-vaued parameters, this is SQL_SS_TABLE.|SQL_DESC_TYPE|  
+|*TypePtr*|SQL_DESC_TYPE. For table-valued parameters, this is SQL_SS_TABLE.|SQL_DESC_TYPE|  
 |*SubTypePtr*|Undefined|SQL_DESC_DATETIME_INTERVAL_CODE (For records of type SQL_DATETIME or SQL_INTERVAL.)|  
 |*LengthPtr*|0|SQL_DESC_OCTET_LENGTH|  
 |*PrecisionPtr*|0|SQL_DESC_PRECISION|  

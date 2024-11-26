@@ -28,7 +28,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSSQLServer\Client\SQLXML4\TemplateCacheSi
   
  The template size should be set on the basis of the available memory and the number of templates you are using. The default of **TemplateCacheSize** size is 31. You can increase the cache size if template access seems slow, or decrease the cache size if memory is low.  
   
- For better performance, it is recommended that you set **TemplateCacheSize** higher than the number of templates you usually use. If **TemlateCacheSize** is less than the number of templates you have, performance degrades as the number of templates increase. The **TemplateCacheSize** can be set to a maximum of 128.  
+ For better performance, it is recommended that you set **TemplateCacheSize** higher than the number of templates you usually use. If **TemplateCacheSize** is less than the number of templates you have, performance degrades as the number of templates increase. The **TemplateCacheSize** can be set to a maximum of 128.  
   
  Every time a cached template is used, the modification time of the template file is checked to see whether it needs to be refreshed. This is because the disk copy is newer than the cache copy.  
   

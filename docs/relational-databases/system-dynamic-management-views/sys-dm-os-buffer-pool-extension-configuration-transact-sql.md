@@ -43,7 +43,7 @@ Requires VIEW SERVER PERFORMANCE STATE permission on the server.
 ## Examples  
   
 ### A. Returning configuration buffer pool extension information  
- The following example returns all columns from the sys.dm_os_buffer_pool_extension_configruation DMV.  
+ The following example returns all columns from the sys.dm_os_buffer_pool_extension_configuration DMV.  
   
 ```sql  
 SELECT path, file_id, state, state_description, current_size_in_kb  

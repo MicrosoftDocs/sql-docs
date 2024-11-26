@@ -76,7 +76,7 @@ Transactional and merge replication allow you to validate that data at the Subsc
   
     -   Data can be updated using the [tablediff utility](../../tools/tablediff-utility.md). For more information about using this utility, see [Compare Replicated Tables for Differences &#40;Replication Programming&#41;](../../relational-databases/replication/administration/compare-replicated-tables-for-differences-replication-programming.md).  
   
-    -   For more information about reinitializaton, see [Reinitialize Subscriptions](../../relational-databases/replication/reinitialize-subscriptions.md).  
+    -   For more information about reinitialization, see [Reinitialize Subscriptions](../../relational-databases/replication/reinitialize-subscriptions.md).  
 
   
   

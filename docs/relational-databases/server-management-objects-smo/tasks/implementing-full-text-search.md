@@ -60,7 +60,7 @@ Public Class A
       ' Create the Full-Text Search catalog on the instance of SQL Server.  
       ftc.Create()  
   
-      ' Define a FullTextIndex object varaible by supplying the parent table argument in the constructor.  
+      ' Define a FullTextIndex object variable by supplying the parent table argument in the constructor.  
       Dim fti As FullTextIndex = Nothing  
       fti = New FullTextIndex(tb)  
   
@@ -120,7 +120,7 @@ public class A {
       // Create the Full-Text Search catalog on the instance of SQL Server.  
       ftc.Create();  
   
-      // Define a FullTextIndex object varaible by supplying the parent table argument in the constructor.  
+      // Define a FullTextIndex object variable by supplying the parent table argument in the constructor.  
       FullTextIndex fti = default(FullTextIndex);  
       fti = new FullTextIndex(tb);  
   

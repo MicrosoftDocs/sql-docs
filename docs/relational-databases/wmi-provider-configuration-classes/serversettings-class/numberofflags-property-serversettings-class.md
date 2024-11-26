@@ -8,7 +8,7 @@ ms.service: sql
 ms.subservice: wmi
 ms.topic: "reference"
 helpviewer_keywords:
-  - "NumerOfFlags property"
+  - "NumberOfFlags property"
 apilocation: "sqlmgmproviderxpsp2up.mof"
 apiname: "NumberOfFlags Property (ServerSettings Class)"
 apitype: "MOFDef"

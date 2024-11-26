@@ -165,7 +165,7 @@ helpviewer_keywords:
     --- Get the classifier function Id and state (enabled).  
     SELECT * FROM sys.resource_governor_configuration;  
     GO  
-    --- Get the classifer function name and the name of the schema  
+    --- Get the classifier function name and the name of the schema  
     --- that it is bound to.  
     SELECT   
           object_schema_name(classifier_function_id) AS [schema_name],  

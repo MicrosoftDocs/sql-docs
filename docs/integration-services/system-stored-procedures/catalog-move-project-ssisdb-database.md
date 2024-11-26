@@ -33,7 +33,7 @@ catalog.move_project [ @source_folder = ] source_folder
  The name of the project that is to be moved. The *project_name* is **nvarchar(128)**.  
   
  [ @destination_folder = ] *destination_folder*  
- The name of the destionation folder, where the project resides after the move. The *destination_folder* is **nvarchar(128)**.  
+ The name of the destination folder, where the project resides after the move. The *destination_folder* is **nvarchar(128)**.  
   
 ## Return Code Value  
  0 (success)  

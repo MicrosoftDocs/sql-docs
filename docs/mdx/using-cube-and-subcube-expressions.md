@@ -30,7 +30,7 @@ ms.custom: mdx
   
  `CREATE MEMBER [Adventure Works].[Measures].[Test] AS 1`  
   
- When you use the CREATE MEMBER statement inside an MDX Script, the name of the cube can be replaced with the CURRENTCUBE keyword, since the cube where the calculated member is to be created must be the same cube that the MDX Script belongs to, as shown in the followingexample:  
+ When you use the CREATE MEMBER statement inside an MDX Script, the name of the cube can be replaced with the CURRENTCUBE keyword, since the cube where the calculated member is to be created must be the same cube that the MDX Script belongs to, as shown in the following example:  
   
  `CREATE MEMBER CURRENTCUBE.[Measures].[Test] AS 1;`  
   

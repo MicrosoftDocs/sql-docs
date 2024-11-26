@@ -13,7 +13,7 @@ f1_keywords:
   - "BufferWithTolerance_TSQL"
   - "BufferWithTolerance"
 helpviewer_keywords:
-  - "BefferWithTolerance method"
+  - "BufferWithTolerance method"
 dev_langs:
   - "TSQL"
 monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric"

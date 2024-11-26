@@ -12,7 +12,7 @@ f1_keywords:
   - "sp_syscollector_delete_collection_item"
   - "sp_syscollector_delete_collection_item_TSQL"
 helpviewer_keywords:
-  - "sp_syscollector_delete_collecton_item"
+  - "sp_syscollector_delete_collection_item"
   - "data collector [SQL Server], stored procedures"
 dev_langs:
   - "TSQL"

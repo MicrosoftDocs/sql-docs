@@ -777,7 +777,7 @@ try
   
         // Specify that an agent job not be created for this subscription. The  
         // subscription can only be synchronized by running the Merge Agent directly.  
-        // Subscripition metadata stored in MSsubscription_properties will not  
+        // Subscription metadata stored in MSsubscription_properties will not  
         // be available and must be specified at run time.  
         subscription.CreateSyncAgentByDefault = false;  
   
@@ -870,7 +870,7 @@ Try
   
         ' Specify that an agent job not be created for this subscription. The  
         ' subscription can only be synchronized by running the Merge Agent directly.  
-        ' Subscripition metadata stored in MSsubscription_properties will not  
+        ' Subscription metadata stored in MSsubscription_properties will not  
         ' be available and must be specified at run time.  
         subscription.CreateSyncAgentByDefault = False  
   

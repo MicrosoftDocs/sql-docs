@@ -116,7 +116,7 @@ For more information on editing the file, see [Modify a Reporting Services confi
 ##  <a name="bkmk_Authentication"></a> Authentication (RSReportServer.config file)  
  **Authentication** specifies one or more authentication types accepted by the report server. The default settings and values are a subset of the settings and values that are possible for this section. Only the default settings are added automatically. To add other settings, you must use a text editor to add the element structure to the `RSReportServer.config` file and set the values.  
   
- Default values include **RSWindowsNegotiate** and **RSWindowsNTLM** with **EnableAuthPersistance** set to **True**:  
+ Default values include **RSWindowsNegotiate** and **RSWindowsNTLM** with **EnableAuthPersistence** set to **True**:  
   
 ```  
    <Authentication>  

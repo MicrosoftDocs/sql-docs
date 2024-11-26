@@ -116,7 +116,7 @@ The prefix isn't applied to the local elements and attributes because the value 
    The directory path specified for the mapping schema (`targetNamespace.xml`) is relative to the directory where the template is saved. An absolute path also can be specified, for example:
 
    ```xml
-   mapping-schema="C:\MyDir\targetNamepsace.xml"
+   mapping-schema="C:\MyDir\targetNamespace.xml"
    ```
 
 1. Create and use the SQLXML 4.0 Test Script (Sqlxml4test.vbs) to execute the template.

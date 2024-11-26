@@ -130,7 +130,7 @@ struct tagSQLGUID {
   
  For more information about **SQL_NUMERIC_STRUCT**, see [HOWTO: Retrieving Numeric Data with SQL_NUMERIC_STRUCT](retrieve-numeric-data-sql-numeric-struct-kb222831.md).  
   
- [f]   The precision and scale fields of the SQL_C_NUMERIC data type areused for input from an application and for output from the driver to the application. When the driver writes a numeric value into the SQL_NUMERIC_STRUCT, it will use its own driver-specific default as the value for the *precision* field, and it will use the value in the SQL_DESC_SCALE field of the application descriptor (which defaults to 0) for the *scale* field. An application can provide its own values for precision and scale by setting the SQL_DESC_PRECISION and SQL_DESC_SCALE fields of the application descriptor.  
+ [f]   The precision and scale fields of the SQL_C_NUMERIC data type are used for input from an application and for output from the driver to the application. When the driver writes a numeric value into the SQL_NUMERIC_STRUCT, it will use its own driver-specific default as the value for the *precision* field, and it will use the value in the SQL_DESC_SCALE field of the application descriptor (which defaults to 0) for the *scale* field. An application can provide its own values for precision and scale by setting the SQL_DESC_PRECISION and SQL_DESC_SCALE fields of the application descriptor.  
   
  [g]   The sign field is 1 if positive, 0 if negative.  
   

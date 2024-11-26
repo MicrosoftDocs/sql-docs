@@ -137,7 +137,7 @@ SELECT
         WHEN log_reuse_wait = 1 THEN 'No checkpoint has occurred since the last log truncation, or the head of the log has not yet moved beyond'
         WHEN log_reuse_wait = 2 THEN 'A log backup is required before the transaction log can be truncated.'
         WHEN log_reuse_wait = 3 THEN 'A data backup or a restore is in progress (all recovery models). Please wait or cancel backup'
-        WHEN log_reuse_wait = 4 THEN 'A long-running active transaction or a defferred transaction is keeping log from being truncated. You can attempt a log backup to free space or complete/rollback long transaction'
+        WHEN log_reuse_wait = 4 THEN 'A long-running active transaction or a deferred transaction is keeping log from being truncated. You can attempt a log backup to free space or complete/rollback long transaction'
         WHEN log_reuse_wait = 5 THEN 'Database mirroring is paused, or under high-performance mode, the mirror database is significantly behind the principal database. (Full recovery model only)'
         WHEN log_reuse_wait = 6 THEN 'During transactional replication, transactions relevant to the publications are still undelivered to the distribution database. Investigate the status of agents involved in replication or Changed Data Capture (CDC). (Full recovery model only.)'
         WHEN log_reuse_wait = 7 THEN 'A database snapshot is being created. This is a routine, and typically brief, cause of delayed log truncation.'
@@ -205,7 +205,7 @@ BEGIN
 
     else if (@log_reuse_wait = 6)
     BEGIN
-        select 'Replication transactions still undelivered from publisher database ''' +@dbname+ ''' to Distribution database. Check the oldest non-distributed replication transaction. Also check if the Log Reader Agent is running and if it has encoutered any errors' as Recommendation
+        select 'Replication transactions still undelivered from publisher database ''' +@dbname+ ''' to Distribution database. Check the oldest non-distributed replication transaction. Also check if the Log Reader Agent is running and if it has encountered any errors' as Recommendation
         select 'DBCC OPENTRAN  (''' + @dbname + ''')' as CheckOldestNonDistributedTran
         select 'select top 5 * from distribution..MSlogreader_history where runstatus in (6, 5) or error_id <> 0 and agent_id = find_in_mslogreader_agents_table  order by time desc ' as LogReaderAgentState
     END

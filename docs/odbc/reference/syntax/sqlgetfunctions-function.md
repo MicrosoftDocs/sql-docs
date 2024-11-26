@@ -166,7 +166,7 @@ SQLUSMALLINT fExists[SQL_API_ODBC3_ALL_FUNCTIONS_SIZE];
 retcode = SQLGetFunctions(hdbc, SQL_API_ODBC3_ALL_FUNCTIONS, fExists);  
   
 // SQLGetFunctions is completed successfully and SQLTables, SQLColumns, and SQLStatistics are supported by the driver.  
-if (reccode == SQL_SUCCESS &&   
+if (retcode == SQL_SUCCESS &&   
 SQL_FUNC_EXISTS(fExists, SQL_API_SQLTABLES) == SQL_TRUE &&  
    SQL_FUNC_EXISTS(fExists, SQL_API_SQLCOLUMNS) == SQL_TRUE &&  
    SQL_FUNC_EXISTS(fExists, SQL_API_SQLSTATISTICS) == SQL_TRUE)   

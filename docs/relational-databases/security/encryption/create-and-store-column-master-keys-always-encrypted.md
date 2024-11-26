@@ -40,7 +40,7 @@ SQL Server Management Studio, Azure Data Studio and the SqlServer PowerShell mod
 
 - Key vaults and [managed HSMs](/azure/key-vault/managed-hsm/overview) in Azure Key Vault.
   > [!NOTE]
-  > Managed HSMs require SSMS 18.9 or later and the SqlServer PowerShell module verion 21.1.18235 or later. Azure Data Studio currently does not support managed HSMs.
+  > Managed HSMs require SSMS 18.9 or later and the SqlServer PowerShell module version 21.1.18235 or later. Azure Data Studio currently does not support managed HSMs.
 
 - Windows Certificate Store.
 - Key stores, such as hardware security module, that provide Cryptography Next Generation (CNG) API or Cryptography API (CAPI).
@@ -169,7 +169,7 @@ A user managing keys for Always Encrypted needs to be a member or roles that per
 - Microsoft.KeyVault/managedHsm/keys/decrypt/action
 - Microsoft.KeyVault/managedHsm/keys/encrypt/action
 - Microsoft.KeyVault/managedHsm/keys/read
-- icrosoft.KeyVault/managedHsm/keys/sign/action
+- Microsoft.KeyVault/managedHsm/keys/sign/action
 - Microsoft.KeyVault/managedHsm/keys/verify/action
 
 The easiest way to grant the user the above permissions is to add the user to the Managed HSM Crypto User role. You can also create a custom role with the required permissions.

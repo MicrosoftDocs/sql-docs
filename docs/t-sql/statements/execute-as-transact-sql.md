@@ -120,7 +120,7 @@ If the user is orphaned (the associated login no longer exists), and the user wa
 ## Using WITH NO REVERT  
  When the EXECUTE AS statement includes the optional WITH NO REVERT clause, the execution context of a session cannot be reset using REVERT or by executing another EXECUTE AS statement. The context set by the statement remains in effect until the session is dropped.  
   
- When the WITH NO REVERT COOKIE = @*varbinary_variabl*e clause is specified, the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] passes the cookie value to @*varbinary_variabl*e. The execution context set by that statement can only be reverted to the previous context if the calling REVERT WITH COOKIE = @*varbinary_variable* statement contains the same *\@varbinary_variable* value.  
+ When the WITH NO REVERT COOKIE = @*varbinary_variable* clause is specified, the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] passes the cookie value to @*varbinary_variable*. The execution context set by that statement can only be reverted to the previous context if the calling REVERT WITH COOKIE = @*varbinary_variable* statement contains the same *\@varbinary_variable* value.  
   
  This option is useful in an environment in which connection pooling is used. Connection pooling is the maintenance of a group of database connections for reuse by applications on an application server. Because the value passed to *\@varbinary_variable* is known only to the caller of the EXECUTE AS statement, the caller can guarantee that the execution context they establish cannot be changed by anyone else.  
   

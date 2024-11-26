@@ -25,7 +25,7 @@ dev_langs:
 >  If you want to create a task that you can more easily reuse across multiple packages, consider using the code in this Script task sample as the starting point for a custom task. For more information, see [Developing a Custom Task](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md).  
   
 ## Description  
- The following example uses the **System.Net.Mail** namespace to configure and send an HTML mail message. The script obtains the To, From, Subject, and body of the e-mail from package variables, uses them to create a new **MailMessag**e, and sets its **IsBodyHtml** property to **True**. Then it obtains the SMTP server name from another package variable, initializes an instance of **System.Net.Mail.SmtpClient**, and calls its **Send** method to send the HTML message. The sample encapsulates the message sending functionality in a subroutine that could be reused in other scripts.  
+ The following example uses the **System.Net.Mail** namespace to configure and send an HTML mail message. The script obtains the To, From, Subject, and body of the e-mail from package variables, uses them to create a new **MailMessage**, and sets its **IsBodyHtml** property to **True**. Then it obtains the SMTP server name from another package variable, initializes an instance of **System.Net.Mail.SmtpClient**, and calls its **Send** method to send the HTML message. The sample encapsulates the message sending functionality in a subroutine that could be reused in other scripts.  
   
 #### To configure this Script Task example without an SMTP Connection Manager  
   

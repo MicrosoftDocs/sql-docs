@@ -89,7 +89,7 @@ If your environment uses Kerberos constrained delegation, then the SharePoint Se
 
 3. Configure C2WTS *AllowedCallers*.
 
-    C2WTS requires the 'callers' identities explicitly listed in the configuration file, **C2WTShost.exe.config**. C2WTS doesn't accept requests from all authenticated users in the system unless you configure it to do so. In this case, the 'caller' is the WSS_WPG Windows group. The C2WTShost.exe.confi file is saved in the following location:
+    C2WTS requires the 'callers' identities explicitly listed in the configuration file, **C2WTShost.exe.config**. C2WTS doesn't accept requests from all authenticated users in the system unless you configure it to do so. In this case, the 'caller' is the WSS_WPG Windows group. The C2WTShost.exe.config file is saved in the following location:
 
     When you change the service account within SharePoint Central Admin, for the C2WTS service, you add that account to the WSS_WPG group.
 

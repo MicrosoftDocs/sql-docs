@@ -135,7 +135,7 @@ helpviewer_keywords:
 ## Security Best Practices for Web Synchronization  
  There are many choices for security-related settings in Web synchronization. We recommend the following approach:  
   
--   The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributor and Publisher can be on the same computer (a typical setup for merge replication). However, IIS should be installedon a separate computer.  
+-   The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributor and Publisher can be on the same computer (a typical setup for merge replication). However, IIS should be installed on a separate computer.  
   
 -   Use Transport Layer Security (TLS), previously known as Secure Sockets Layer (SSL), to encrypt the connection between the Subscriber and the computer running IIS. This is required for Web synchronization.  
   

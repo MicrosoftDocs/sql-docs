@@ -77,7 +77,7 @@ helpviewer_keywords:
  Create a new connection manager by using the **Flat File Connection Manager Editor** dialog box.  
   
  **Retain null values from the source as null values in the data flow**  
- Specify whether to keep null values when data is extracted. The default value of this property is **false**. When this value is f**alse**, the Flat File source replaces null values from the source data with appropriate default values for each column, such as empty strings for string columns and zero for numeric columns.  
+ Specify whether to keep null values when data is extracted. The default value of this property is **false**. When this value is **false**, the Flat File source replaces null values from the source data with appropriate default values for each column, such as empty strings for string columns and zero for numeric columns.  
   
  **Preview**  
  Preview results by using the **Data View** dialog box. Preview can display up to 200 rows.  

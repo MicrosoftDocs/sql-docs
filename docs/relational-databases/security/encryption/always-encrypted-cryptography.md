@@ -47,7 +47,7 @@ Always Encrypted internally uses FIPS 140-2 validated cryptographic modules.
  For randomized encryption, the IV is randomly generated. As a result, each time the same plaintext is encrypted, a different ciphertext is generated, which prevents any information disclosure.  
   
 ```  
-When using randomized encryption: IV = Generate cryptographicaly random 128bits  
+When using randomized encryption: IV = Generate cryptographically random 128bits  
 ```  
   
  If there's deterministic encryption, the IV isn't randomly generated, but instead it's derived from the plaintext value using the following algorithm:  

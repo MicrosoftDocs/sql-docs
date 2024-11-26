@@ -59,7 +59,7 @@ SELECT * FROM Win32_NTLogEvent WHERE LogFile = 'Application' AND (SourceName='SQ
  The following WQL query returns logical disk information.  
   
 ```  
-SELECT FreeSpace, DeviceId, Size, SystemName, Description FROM Win32_LlogicalDisk  
+SELECT FreeSpace, DeviceId, Size, SystemName, Description FROM Win32_LogicalDisk  
 ```  
   
  The following WQL query returns a list of the quick fix engineering (QFE) updates to the operating system.  

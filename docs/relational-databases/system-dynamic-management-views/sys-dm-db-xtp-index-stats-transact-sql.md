@@ -39,7 +39,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-curren
 |rows_expired|**bigint**|Internal use only.|  
 |rows_expired_removed|**bigint**|Internal use only.|  
 |phantom_scans_started|**bigint**|Internal use only.|  
-|phatom_scans_retries|**bigint**|Internal use only.|  
+|phantom_scans_retries|**bigint**|Internal use only.|  
 |phantom_rows_touched|**bigint**|Internal use only.|  
 |phantom_expiring_rows_encountered|**bigint**|Internal use only.|  
 |phantom_expired_rows_encountered|**bigint**|Internal use only.|  

@@ -43,7 +43,7 @@ The following table lists string manipulation functions. An application can dete
 |**OCTET_LENGTH(** _string_exp_ **)** (ODBC 3.0)|Returns the length in bytes of the string expression. The result is the smallest integer not less than the number of bits divided by 8.<br /><br /> Does not work only for string data types, therefore will not implicitly convert *string_exp* to string but instead will return the (internal) size of whatever datatype it is given.|  
 |**POSITION(** _character_exp_ **IN** _character_exp_**)** (ODBC 3.0)|Returns the position of the first character expression in the second character expression. The result is an exact numeric with an implementation-defined precision and a scale of 0.|  
 |**REPEAT(** _string_exp,_ _count_**)** (ODBC 1.0)|Returns a character string composed of *string_exp* repeated *count* times.|  
-|**REPLACE(** _string_exp1_, *string_exp2*, _string_exp3_**)** (ODBC 1.0)|Search *string_exp1* foroccurrences of *string_exp2*, and replace with *string_exp3*.|  
+|**REPLACE(** _string_exp1_, *string_exp2*, _string_exp3_**)** (ODBC 1.0)|Search *string_exp1* for occurrences of *string_exp2*, and replace with *string_exp3*.|  
 |**RIGHT(** _string_exp_, _count_**)** (ODBC 1.0)|Returns the rightmost *count* characters of *string_exp*.|  
 |**RTRIM(** _string_exp_ **)** (ODBC 1.0)|Returns the characters of *string_exp* with trailing blanks removed.|  
 |**SOUNDEX(** _string_exp_ **)** (ODBC 2.0)|Returns a data source-dependent character string representing the sound of the words in *string_exp*. For example, SQL Server returns a 4-digit SOUNDEX code; Oracle returns a phonetic representation of each word.|  

@@ -23,4 +23,4 @@ Support for block cursors is built into ODBC 3.*x*. **SQLFetch** can be used onl
   
 -   [Number of Rows Fetched and Status](../../../odbc/reference/develop-app/number-of-rows-fetched-and-status.md)  
   
--   [SQLGetData and Block Cursors; block curso](../../../odbc/reference/develop-app/sqlgetdata-and-block-cursors.md)
+-   [SQLGetData and Block Cursors; block cursor](../../../odbc/reference/develop-app/sqlgetdata-and-block-cursors.md)

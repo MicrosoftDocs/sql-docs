@@ -72,7 +72,7 @@ GO
 
 [!INCLUDE [editions-supported-features-linux](../../includes/editions-supported-features-linux.md)]
 
-## Related contet
+## Related content
 
 - [System Dynamic Management Views](system-dynamic-management-views.md)
 - [Database Related Dynamic Management Views (Transact-SQL)](database-related-dynamic-management-views-transact-sql.md)

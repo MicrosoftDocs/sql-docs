@@ -64,7 +64,7 @@ The Database Engine Tuning Advisor can be used to find the best physical databas
 
    ![Find the script that was saved previously](media/dta-tutorials/dta-script.png)
   
-5.  Select [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] in the **Database for workload analysis** list, select [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] in the **Select databases and tables to tune** grid, and selecet  **Save tuning log**. **Database for workload analysis** specifies the first database to which Database Engine Tuning Advisor connects when tuning a workload. After tuning begins, Database Engine Tuning Advisor connects to the databases specified by the `USE DATABASE` statements contained in the workload.  
+5.  Select [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] in the **Database for workload analysis** list, select [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] in the **Select databases and tables to tune** grid, and select **Save tuning log**. **Database for workload analysis** specifies the first database to which Database Engine Tuning Advisor connects when tuning a workload. After tuning begins, Database Engine Tuning Advisor connects to the databases specified by the `USE DATABASE` statements contained in the workload.  
 
   ![DTA options for db](media/dta-tutorials/dta-select-db.png)
   

@@ -35,7 +35,7 @@ When there's an active workload, extra memory is needed to account for row versi
   
 - [Memory for the table](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md#bkmk_MemoryForTable)  
   
-- [Memory for indexes](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md#bkmk_IndexMeemory)  
+- [Memory for indexes](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md#bkmk_IndexMemory)  
   
 - [Memory for row versioning](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md#bkmk_MemoryForRowVersions)  
   
@@ -93,7 +93,7 @@ The following is a size computation for 5,000,000 (5 million) rows in a memory-o
   
 From the above calculations, the size of each row in the memory-optimized table is 24 + 32 + 200, or 256 bytes.  Since we have 5 million rows, the table will consume 5,000,000 * 256 bytes, or 1,280,000,000 bytes - approximately 1.28 GB.  
   
-###  <a name="bkmk_IndexMeemory"></a> Memory for indexes  
+###  <a name="bkmk_IndexMemory"></a> Memory for indexes  
 
 #### Memory for each hash index  
   

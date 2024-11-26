@@ -55,7 +55,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
   
 3.  View and modify properties in the **Distributor Properties - \<Distributor>** dialog box.  
   
-    -   To view and modify properties for a distribution database, click the properties button (**...**) for the database on the **General** page of thedialog box.  
+    -   To view and modify properties for a distribution database, click the properties button (**...**) for the database on the **General** page of the dialog box.  
   
     -   To view and modify Publisher properties associated with the Distributor, click the properties button (**...**) for the Publisher on the **Publishers** page of the dialog box.  
   

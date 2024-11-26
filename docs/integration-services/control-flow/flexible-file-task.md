@@ -48,7 +48,7 @@ For **Delete** operation, following properties are available.
 - **Connection:** Specifies the connection manager.
 - **FolderPath:** Specifies the folder path.
 - **FileName:** Specifies the file name. If left blank, the folder will be deleted. For Azure Blob Storage, delete folder is not supported. Following wildcards are allowed in file name: `*` (matches zero or more characters), `?` (matches zero or single character) and `^` (escape character).
-- **DeleteRecursively:** Specifies whether to recusively delete files.
+- **DeleteRecursively:** Specifies whether to recursively delete files.
 
 ***Notes on Service Principal Permission Configuration***
 

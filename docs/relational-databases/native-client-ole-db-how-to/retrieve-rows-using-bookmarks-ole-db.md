@@ -273,7 +273,7 @@ int ProcessResultSet() {
       return -1;  
    }  
   
-   // Using the ColumnInfo strucuture, fill out the pBindings array.  
+   // Using the ColumnInfo structure, fill out the pBindings array.  
    for ( j = 0 ; j < lNumCols ; j++ ) {  
       pBindings[j].iOrdinal  = j;  
       pBindings[j].obValue   = ConsumerBufferColOffset;  

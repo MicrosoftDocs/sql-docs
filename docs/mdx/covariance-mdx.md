@@ -33,7 +33,7 @@ Covariance(Set_Expression,Numeric_Expression_y [ ,Numeric_Expression_x ] )
  A valid numeric expression that is typically a Multidimensional Expressions (MDX) expression of cell coordinates that return a number that represents values for the x-axis.  
   
 ## Remarks  
- The **Covariance** function evaluates the specified set against the first numeric expression, to get the values for the y-axis. The function then evaluates the specified set against the second numeric expression, if specified, to get the set of values for the x-axis. If the second numeric expressionis not specified, the function uses the current context of the cells in the specified set as values for the x-axis.  
+ The **Covariance** function evaluates the specified set against the first numeric expression, to get the values for the y-axis. The function then evaluates the specified set against the second numeric expression, if specified, to get the set of values for the x-axis. If the second numeric expression is not specified, the function uses the current context of the cells in the specified set as values for the x-axis.  
   
  The **Covariance** function uses the biased population formula. This is in contrast to the [CovarianceN](../mdx/covariancen-mdx.md) function that uses the unbiased population formula (dividing the number of x-y pairs, then subtracting 1).  
   

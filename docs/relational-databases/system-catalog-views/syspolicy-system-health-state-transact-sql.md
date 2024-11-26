@@ -26,7 +26,7 @@ dev_langs:
 |policy_id|**int**|Identifier of the policy.|  
 |last_run_date|**datetime**|Date and time the policy was last run.|  
 |target_query_expression_with_id|**nvarchar(400)**|The target expression, with values assigned to identity variables, that defines the target against which the policy is evaluated.|  
-|target_query_expression|**nvarchar(max)**|The epxression that defines the target against which the policy is evaluated.|  
+|target_query_expression|**nvarchar(max)**|The expression that defines the target against which the policy is evaluated.|  
 |result|**bit**|Health state of this target with regard to the policy:<br /><br /> 0 = Failure<br /><br /> 1 = Success|  
   
 ## Remarks  

@@ -109,7 +109,7 @@ FROM source_cube_name (<param list>)
  Valid specification for derived dimension definition only.  
   
 ## Remarks  
- A local cube is definedin terms of the measures and definitions that define it. There are two types of dimensions.  
+ A local cube is defined in terms of the measures and definitions that define it. There are two types of dimensions.  
   
 -   Source dimensions - These are dimensions that were part of one of more source cubes  
   
@@ -132,7 +132,7 @@ FROM source_cube_name (<param list>)
   
 -   A global cube that is created from an existing global cube in a local cube file cannot be saved in the same local cube file. For example, you create a global cube named SalesLocal1 and save this cube to the C:\SalesLocal.cub file. You then connect to the C:\SalesLocal.cub file and create a second global cube named SalesLocal2. If you now try to save the SalesLocal2 global cube to the C:\SalesLocal.cub file, you will receive an error. However, you can save the SalesLocal2 global cube to a different local cube file.  
   
--   Global cubes do not support distinct count measures. Because cubes that include distinct count measures are nonadditive, the CREATE GLOBAL CUBE statement cannot support the creation or use of distinct count measures.  
+-   Global cubes do not support distinct count measures. Because cubes that include distinct count measures are non additive, the CREATE GLOBAL CUBE statement cannot support the creation or use of distinct count measures.  
   
 -   When adding a measure to a local cube, you must also include at least one dimension that is related to the measure being added.  
   

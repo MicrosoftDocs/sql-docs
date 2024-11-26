@@ -116,7 +116,7 @@ Indicates that the grantee will also be given the ability to grant the specified
 
 #### AS *principal*
 
-Use the `AS <principal>` clause to indicate that the principal recorded as the grantor of the permission should be a principal other than the person executing the statement. For example, presume that user `Mary` has a `principal_id` of `12`, and user `Raul` is principal `15`. Mary executes `GRANT SELECT ON OBJECT::X TO Steven WITH GRANT OPTION AS Raul;` Now the `sys.database_permissions` table indicates that the `grantor_prinicpal_id` was `15` (`Raul`) even though the statement was actually executed by user `12` (`Mary`).
+Use the `AS <principal>` clause to indicate that the principal recorded as the grantor of the permission should be a principal other than the person executing the statement. For example, presume that user `Mary` has a `principal_id` of `12`, and user `Raul` is principal `15`. Mary executes `GRANT SELECT ON OBJECT::X TO Steven WITH GRANT OPTION AS Raul;` Now the `sys.database_permissions` table indicates that the `grantor_principal_id` was `15` (`Raul`) even though the statement was actually executed by user `12` (`Mary`).
 
 Using the `AS` clause is typically not recommended unless you need to explicitly define the permission chain. For more information, see [Summary of the Permission Check Algorithm](../../relational-databases/security/permissions-database-engine.md#summary-of-the-permission-check-algorithm).
 

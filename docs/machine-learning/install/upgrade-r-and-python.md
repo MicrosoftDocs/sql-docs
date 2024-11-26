@@ -102,7 +102,7 @@ Binding applies to Python and R features only. Open-source packages for Python a
 
 The binding doesn't change the support model for the database engine instance or the version of SQL Server.
 
-Binding is reversible. You can revert to SQL Server servicing by [unbinding the instance](#bkmk_Unbind) and reparing your SQL Server database engine instance.
+Binding is reversible. You can revert to SQL Server servicing by [unbinding the instance](#bkmk_Unbind) and repairing your SQL Server database engine instance.
 
 <a name="bkmk_BindWizard"></a>
 

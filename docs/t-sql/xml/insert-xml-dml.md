@@ -78,7 +78,7 @@ SELECT @myDoc  ;
 -- insert third feature child. This one is the last child of <Features> so use 'as last'         
 SELECT @myDoc         
 SET @myDoc.modify('         
-insert <Material>Aluminium</Material>          
+insert <Material>Aluminum</Material>          
 as last         
 into (/Root/ProductDescription/Features)[1]         
 ')         
@@ -274,7 +274,7 @@ INSERT INTO T VALUES(1,'<Root>
 GO  
 -- insert a new element  
 UPDATE T  
-SET x.modify('insert <Material>Aluminium</Material> as first  
+SET x.modify('insert <Material>Aluminum</Material> as first  
   into   (/Root/ProductDescription/Features)[1]  
 ');  
 GO  

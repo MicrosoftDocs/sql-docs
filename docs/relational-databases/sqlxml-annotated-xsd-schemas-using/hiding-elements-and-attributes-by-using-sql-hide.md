@@ -25,7 +25,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 ### A. Specifying sql:hide on an attribute  
  The XSD schema in this example consists of an **\<Person.Contact>** element with **ContactID**, **FirstName**, and **LastName** attributes.  
   
- The **\<Person.Contact>** element is of complex type and, therefore, maps to the table of the same name (default mapping). All the attributes of **\<Person.Contact>** element are of simple type and map to columns with the same names in the Person.Contacttable in the AdventureWorks database. In the schema, the **sql:hide** annotation is specified on the **ContactID** attribute. When an XPath query is specified against this schema, the **ContactID** is not returned in the XML document.  
+ The **\<Person.Contact>** element is of complex type and, therefore, maps to the table of the same name (default mapping). All the attributes of **\<Person.Contact>** element are of simple type and map to columns with the same names in the Person.Contactable in the AdventureWorks database. In the schema, the **sql:hide** annotation is specified on the **ContactID** attribute. When an XPath query is specified against this schema, the **ContactID** is not returned in the XML document.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   

@@ -124,7 +124,7 @@ helpviewer_keywords:
 |-----------|-----------------|  
 |**None**|Does not specify a threshold. The key strength is reported regardless of its value.|  
 |**Specified**|Use the threshold that is specified in **InclusionStrengthThreshold**. The inclusion strength is reported only if it is greater than the threshold.|  
-|**Exact**|Does not specify a threshold. The inclusion strength is reported only if the subset values are completedly included in the upserset values.|  
+|**Exact**|Does not specify a threshold. The inclusion strength is reported only if the subset values are completely included in the upserset values.|  
   
  **InclusionStrengthThreshold**  
  Specify the threshold (by using a value between 0 and 1) above which the inclusion strength should be reported. The default value of this property is 0.95. This option is enabled only when **Specified** is selected as the **InclusionThresholdSetting**.  

@@ -39,7 +39,7 @@ helpviewer_keywords:
  SQL_DELETE  
  Deletes the current row in the cursor.  
   
- **SQLSetPos** can be used with any statement result set when the statement handle cursor attributes are set to use server cursors. The result set columns must be bound to program variables. As soon as the application has fetched a row it calls **SQLSetPos**(SQL_POSTION) to position the cursor on the row. The application could then call SQLSetPos(SQL_DELETE) to delete the current row, or it can move new data values into the bound program variables and call SQLSetPos(SQL_UPDATE) to update the current row.  
+ **SQLSetPos** can be used with any statement result set when the statement handle cursor attributes are set to use server cursors. The result set columns must be bound to program variables. As soon as the application has fetched a row it calls **SQLSetPos**(SQL_POSITION) to position the cursor on the row. The application could then call SQLSetPos(SQL_DELETE) to delete the current row, or it can move new data values into the bound program variables and call SQLSetPos(SQL_UPDATE) to update the current row.  
   
  Applications can update or delete any row in the rowset with **SQLSetPos**. Calling **SQLSetPos** is a convenient alternative to constructing and executing a SQL statement. **SQLSetPos** operates on the current rowset and can be used only after a call to [SQLFetchScroll](../../relational-databases/native-client-odbc-api/sqlfetchscroll.md).  
   

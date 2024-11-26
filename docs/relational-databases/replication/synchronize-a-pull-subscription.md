@@ -368,7 +368,7 @@ try
         }  
         else  
         {  
-            throw new ApplicationException("There is insufficent metadata to " +  
+            throw new ApplicationException("There is insufficient metadata to " +  
                 "synchronize the subscription. Recreate the subscription with " +  
                 "the agent job or supply the required agent properties at run time.");  
         }  
@@ -431,7 +431,7 @@ Try
             ' Synchronously start the Distribution Agent for the subscription.  
             subscription.SynchronizationAgent.Synchronize()  
         Else  
-            Throw New ApplicationException("There is insufficent metadata to " + _  
+            Throw New ApplicationException("There is insufficient metadata to " + _  
              "synchronize the subscription. Recreate the subscription with " + _  
              "the agent job or supply the required agent properties at run time.")  
         End If  
@@ -584,7 +584,7 @@ try
         }  
         else  
         {  
-            throw new ApplicationException("There is insufficent metadata to " +  
+            throw new ApplicationException("There is insufficient metadata to " +  
                 "synchronize the subscription. Recreate the subscription with " +  
                 "the agent job or supply the required agent properties at run time.");  
         }  
@@ -647,7 +647,7 @@ Try
             ' Synchronously start the Merge Agent for the subscription.  
             subscription.SynchronizationAgent.Synchronize()  
         Else  
-            Throw New ApplicationException("There is insufficent metadata to " + _  
+            Throw New ApplicationException("There is insufficient metadata to " + _  
              "synchronize the subscription. Recreate the subscription with " + _  
              "the agent job or supply the required agent properties at run time.")  
         End If  

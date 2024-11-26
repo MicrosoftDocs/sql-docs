@@ -70,7 +70,7 @@ When you create an Insert Results query, the Criteria pane changes to reflect op
   
 4.  In the rectangle representing the table or table-valued object, choose the names of the columns whose contents you want to copy. To copy entire rows, choose **&#42; (All Columns)**.  
   
-    The Query and View Designer adds the columns you choose to the **Column** column of the Criteriapane.  
+    The Query and View Designer adds the columns you choose to the **Column** column of the Criteria pane.  
   
 5.  In the **Append** column of the Criteria pane, select a target column in the destination table for each column you are copying. Choose *tablename.&#42;* if you are copying entire rows. The columns in the destination table must have the same (or compatible) data types as the columns in the source table.  
   

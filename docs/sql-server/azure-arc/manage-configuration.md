@@ -95,7 +95,7 @@ Select the **Use physical core license** checkbox if you're configuring a virtua
 
 You can subscribe to Extended Security Updates (ESUs) for the individual host. To qualify for an ESU subscription, the host must have **License type** set to **Pay-as-you-go** or **License with Software Assurance**. This option allows you to subscribe by using vCPUs (v-cores) when the host is a virtual machine, or by using physical cores when the host is a physical server that runs without using virtual machines.
 
-Select **Subscribe to Extended Security Updates**. It sets the host configuration property `EnabelExtendedSecurityUpdates` to `True`. The subscription is activated after you select **Save**.
+Select **Subscribe to Extended Security Updates**. It sets the host configuration property `EnableExtendedSecurityUpdates` to `True`. The subscription is activated after you select **Save**.
 
 For more information about ESU licensing options, see [Subscribe to Extended Security Updates in a production environment](extended-security-updates.md#subscribe-to-extended-security-updates-in-a-production-environment).
 

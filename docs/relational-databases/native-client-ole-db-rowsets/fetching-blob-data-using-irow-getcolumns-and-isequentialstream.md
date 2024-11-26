@@ -55,12 +55,12 @@ HRESULT GetSequentialColumn(IRow* pUnkRow, ULONG iCol)
     IUnknown* pUnkStream = NULL;  
     ZeroMemory(&column, sizeof(column));  
     column.columnid = prgInfo[iCol].columnid;  
-    // Ask for Iunknown interface pointer.  
+    // Ask for IUnknown interface pointer.  
     column.wType = DBTYPE_IUNKNOWN;  
     column.pData = (LPVOID*) &pUnkStream;  
   
     hr = pUnkRow->GetColumns(1, &column);  
-    // Get ISequentialStream from Iunknown pointer retrieved from  
+    // Get ISequentialStream from IUnknown pointer retrieved from  
     // GetColumns().  
     hr = pUnkStream->QueryInterface(IID_ISequentialStream,   
                                    (LPVOID*) &pIStream);  

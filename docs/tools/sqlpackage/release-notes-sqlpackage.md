@@ -265,7 +265,7 @@ dotnet tool install -g microsoft.sqlpackage --version 162.1.172
 | Azure Synapse Analytics | Fixes an issue where a publish operation fails to parse a statement containing the `filepath()` or `filename()` [functions](/azure/synapse-analytics/sql/query-specific-files). |
 | Import | AUTO_DROP option is excluded from statistics when importing a bacpac to a version of SQL Server that doesn't support AUTO_DROP. |
 | Import | Fixes an issue where imports of databases containing ALTER or CREATE of availability groups would fail to import. |
-| Export | Fixes an issue where dropped ledger columns were inclued in a bacpac export, resulting in an error message during import. |
+| Export | Fixes an issue where dropped ledger columns were included in a bacpac export, resulting in an error message during import. |
 | Export | Fixes an issue where /p:CompressionOption wasn't honored when exporting to a bacpac file. |
 | Extract | Fixes an issue where /p:ExtractTarget options for non-dacpac options still required the target file to have a .dacpac extension. [GitHub issue](https://github.com/microsoft/DacFx/issues/128) |
 | Ledger | Fixes an issue where import or publish of a database containing a dropped ledger table fails due to attempting to create permissions for the dropped table. |

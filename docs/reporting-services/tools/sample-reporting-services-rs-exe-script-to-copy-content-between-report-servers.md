@@ -235,7 +235,7 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://SourceServer/ReportServer -u
 ###  <a name="bkmk_native_2_sharepoint_root"></a> Native mode to SharePoint mode - root site  
  The following example migrates content from a native mode **SourceServer** to the "root site " on a SharePoint mode server **TargetServer**. The "Reports" and "Data Sources" folders on the native mode server are migrated as new libraries on the SharePoint deployment.  
    
- :::image type="content" source="../../reporting-services/tools/media/ssrs-rss-migrate-root-site.gif" alt-text="Screenshoh that shows the highlighted Data Sources and Reports menu options.":::
+ :::image type="content" source="../../reporting-services/tools/media/ssrs-rss-migrate-root-site.gif" alt-text="Screenshot that shows the highlighted Data Sources and Reports menu options.":::
  
   
 ```  

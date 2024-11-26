@@ -42,7 +42,7 @@ helpviewer_keywords:
   
  While this practice improves the overall security of your system, it prevents you from using the predefined, built-in role assignments that Reporting Services creates for local administrators.  
   
--   [Overview of configuration changes](#bkmk_configuraiton_overview)  
+-   [Overview of configuration changes](#bkmk_configuration_overview)  
   
 -   [Configure local report server and the web portal administration](#bkmk_configure_local_server)  
   
@@ -50,9 +50,9 @@ helpviewer_keywords:
   
 -   [Configure SQL Server Data Tools (SSDT) to publish to a local report server](#bkmk_configure_ssdt)  
   
--   [Additional information](#bkmk_addiitonal_informaiton)  
+-   [Additional information](#bkmk_additional_information)  
   
-##  <a name="bkmk_configuraiton_overview"></a> Overview of configuration changes  
+##  <a name="bkmk_configuration_overview"></a> Overview of configuration changes  
  The following configuration changes configure the server so that you can use standard user permissions to manage report server content and operations:  
   
 -   Add [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] URLs to trusted sites. By default, Internet Explorer running on the listed operating systems runs in **Protected Mode**. This feature that blocks browser requests from reaching high-level processes that run on the same computer. You can disable protected mode for the report server applications by adding them as Trusted Sites.  
@@ -167,7 +167,7 @@ Now you can deploy reports and other items to a local report server.
 
 Follow the steps in the [Web portal folder settings](#bkmk_configure_folder_settings) and [Web portal Site Settings](#bkmk_configure_site_settings) sections earlier in this article.  
   
-##  <a name="bkmk_addiitonal_informaiton"></a> Additional information  
+##  <a name="bkmk_additional_information"></a> Additional information  
  Another and common configuration step related to [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] administration is to open port 80 in Windows Firewall to allow access to the report server computer. For instructions, see [Configure a firewall for report server access](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md).  
   
 ## Related content

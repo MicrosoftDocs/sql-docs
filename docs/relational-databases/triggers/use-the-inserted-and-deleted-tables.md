@@ -97,7 +97,7 @@ ON e.BusinessEntityID = p.BusinessEntityID;
   
 ## Performance considerations
 
-Because the inserted and deleted tables are virtual, memory-resident tables, properties such as statistics or indexes are not available. Though some cardinality information is exposed from these tables, you should exercise care when considering the number of rows to be temporarily stored there. Inserting a large number of rows in these tables and querying or joining them with other tables may result in sub-optimial query plans and slow query executions. Be sure to carefully design and test your application to meet your query performance needs.
+Because the inserted and deleted tables are virtual, memory-resident tables, properties such as statistics or indexes are not available. Though some cardinality information is exposed from these tables, you should exercise care when considering the number of rows to be temporarily stored there. Inserting a large number of rows in these tables and querying or joining them with other tables may result in sub-optimal query plans and slow query executions. Be sure to carefully design and test your application to meet your query performance needs.
 
 ## Next steps
 

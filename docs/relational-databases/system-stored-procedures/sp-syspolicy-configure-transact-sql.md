@@ -56,7 +56,7 @@ The value that is associated with the specified value for *@name*. *@value* is *
   - `0` - Disables Policy-Based Management.
   - `1` - Enables Policy-Based Management.
 
-- If you specify `HistoryRententionInDays` for *@name*, specify the number of days as an integer value.
+- If you specify `HistoryRetentionInDays` for *@name*, specify the number of days as an integer value.
 
 - If you specify `LogOnSuccess` for *@name*, you can use either of the following values:
 

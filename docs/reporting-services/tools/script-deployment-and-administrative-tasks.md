@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "duplicating report server environment"
   - "migrating reports [Reporting Services]"
   - "scripts [Reporting Services], deployments"
-  - "transferrng reports"
+  - "transferring reports"
   - "reports [Reporting Services], migrating"
 ---
 

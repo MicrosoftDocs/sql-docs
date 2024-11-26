@@ -9,7 +9,7 @@ ms.subservice: xml
 ms.topic: "reference"
 helpviewer_keywords:
   - "annotated XSD schemas, XML Bulk Load"
-  - "XML Bulk Load [SQLXML], annotation intepretations"
+  - "XML Bulk Load [SQLXML], annotation interpretations"
   - "annotations [SQLXML]"
   - "bulk load [SQLXML], annotation interpretations"
   - "annotated XDR schemas, XML Bulk Load"

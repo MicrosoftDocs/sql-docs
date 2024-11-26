@@ -13,7 +13,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 ---
 # Showplan XML Statistics Profile Event Class
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
-  The Showplan XML Statistics Profile event class occurs when [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] executes a SQL statement. Include the Showplan XML Statististics Profile event class to identify the Showplan operators on [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  The Showplan XML Statistics Profile event class occurs when [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] executes a SQL statement. Include the Showplan XML Statistics Profile event class to identify the Showplan operators on [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  The Showplan XML Statistics Profile event class displays complete, compile-time data, and so traces that contain this event class may incur significant performance overhead. To minimize overhead incurred, limit use of this event class to traces that monitor specific problems for brief periods of time.  
   

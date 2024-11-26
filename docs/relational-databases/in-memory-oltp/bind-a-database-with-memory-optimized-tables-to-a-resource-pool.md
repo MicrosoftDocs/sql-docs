@@ -63,7 +63,7 @@ For this example we will assume that from your calculations you determined that 
   
  At first glance it could seem that you need to set MIN_MEMORY_PERCENT and MAX_MEMORY_PERCENT to 50 (16 is 50% of 32).  However, that would not give your memory-optimized tables sufficient memory. Looking at the table below ([Percent of memory available for memory-optimized tables and indexes](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#bkmk_PercentAvailable)) we see that if there is 32 GB of committed memory, only 80% of that is available for memory-optimized tables and indexes.  Therefore, we calculate the min and max percentages based upon the available memory, not the committed memory.  
   
- `memoryNeedeed = 16`   
+ `memoryNeeded = 16`   
  `memoryCommitted = 32`   
  `availablePercent = 0.8`   
  `memoryAvailable = memoryCommitted * availablePercent`   
@@ -103,7 +103,7 @@ EXEC sp_xtp_bind_db_resource_pool 'IMOLTP_DB', 'Pool_IMOLTP'
 GO  
 ```  
   
- The system function sp_xtp_bind_db_resourece_pool takes two string parameters: database_name and pool_name.  
+ The system function sp_xtp_bind_db_resource_pool takes two string parameters: database_name and pool_name.  
   
 ##  <a name="bkmk_ConfirmBinding"></a> Confirm the binding  
  Confirm the binding, noting the resource pool id for IMOLTP_DB. It should not be NULL.  

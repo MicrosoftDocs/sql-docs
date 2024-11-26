@@ -102,7 +102,7 @@ f1_keywords:
   
      If you select **Mark Initial Load Start** when working on [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] CDC (that is, not Oracle) the user specified in the connection manager must be either  **db_owner** or **sysadmin**.  
   
--   **Mark initial load end**: This operation is used when executing an initial load from an active database without a snapshot. It is invoked at the end of an initial-load package to record the current LSN in the source database after the initial-load package finished reading the source tables. This LSN is determined by recording nthe current time when this operation occurred and then querying the `cdc.lsn_time_`mapping table in the CDC database looking for a change that occurred after that time  
+-   **Mark initial load end**: This operation is used when executing an initial load from an active database without a snapshot. It is invoked at the end of an initial-load package to record the current LSN in the source database after the initial-load package finished reading the source tables. This LSN is determined by recording the current time when this operation occurred and then querying the `cdc.lsn_time_`mapping table in the CDC database looking for a change that occurred after that time  
   
      If you select **Mark Initial Load End** when working on [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] CDC (that is, not Oracle) the user specified in the connection manager must be either  **db_owner** or **sysadmin**.  
   

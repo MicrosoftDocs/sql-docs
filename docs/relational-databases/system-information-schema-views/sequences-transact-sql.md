@@ -42,7 +42,7 @@ To retrieve information from these views, specify the fully qualified name of `I
 | `CYCLE_OPTION` | **int** | Property that specifies whether the sequence object should restart from the minimum value (or maximum for descending sequence objects), or throw an exception when its minimum or maximum value is exceeded. The default cycle option for new sequence objects is `NO CYCLE`. |
 | `DECLARED_DATA_TYPE` | **int** | The data type for user-defined data type. |
 | `DECLARED_DATA_PRECISION` | **int** | The precision for user-defined data type. |
-| `DECLARED_NUJMERIC_SCALE` | **int** | The numeric scale for user-defined data type. |
+| `DECLARED_NUMERIC_SCALE` | **int** | The numeric scale for user-defined data type. |
 
 ## Examples
 

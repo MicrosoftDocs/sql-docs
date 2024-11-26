@@ -33,7 +33,7 @@ dev_langs:
 |type_stream|**varbinary(max)**|A bit stream that contains an encoded representation of the logical objects, such as tables and views, contained in the DAC.|  
 |date_created|**datetime**|Date and time the DAC instance was created.|  
 |created_by|**sysname**|Login that created the DAC instance.|  
-|database_name|**sysname**|Name of the database created for the DAC isntance.|  
+|database_name|**sysname**|Name of the database created for the DAC instance.|  
   
 ## Remarks  
  A DAC includes a DAC type, which is a definition of the logical data-tier objects used by an application, such as tables and views. A DAC package is a file used to deploy a DAC. The DAC package contains a representation of all the logical objects contained in the DAC type. The DAC package can be used to deploy one or more copies, or instances, of the DAC to an instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Each DAC instance deployed from the same DAC package shares the same type, but is assigned a unique instance name and identifier.  

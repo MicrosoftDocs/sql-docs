@@ -44,7 +44,7 @@ ODBC connections have the following states.
   
  [4]   This row shows transitions when *HandleType* was SQL_HANDLE_DESC.  
   
- [5]   Calling **SQLAllocHandle** with *OutputHandlePtr* pointing to a valid handle overwrites that handle without regard for the previous contents ofthat handle, and might cause problems for ODBC drivers. It is incorrect ODBC application programming to call **SQLAllocHandle** twice with the same application variable defined for *\*OutputHandlePtr* without calling **SQLFreeHandle** to free the handle before reallocating it. Overwriting ODBC handles in such a manner can lead to inconsistent behavior or errors on the part of ODBC drivers.  
+ [5]   Calling **SQLAllocHandle** with *OutputHandlePtr* pointing to a valid handle overwrites that handle without regard for the previous contents of that handle, and might cause problems for ODBC drivers. It is incorrect ODBC application programming to call **SQLAllocHandle** twice with the same application variable defined for *\*OutputHandlePtr* without calling **SQLFreeHandle** to free the handle before reallocating it. Overwriting ODBC handles in such a manner can lead to inconsistent behavior or errors on the part of ODBC drivers.  
   
 ## SQLBrowseConnect  
   

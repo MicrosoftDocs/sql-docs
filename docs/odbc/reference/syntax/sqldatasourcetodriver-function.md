@@ -16,7 +16,7 @@ apiname: "SQLDataSourceToDriver"
 apitype: "dllExport"
 ---
 # SQLDataSourceToDriver Function
-**SQLDataSourceToDriver** supportstranslations for ODBC drivers. This function is not called by ODBC-enabled applications; applications request translation through **SQLSetConnectAttr**. The driver associated with the *ConnectionHandle* specified in **SQLSetConnectAttr** calls the specified DLL to perform translations of all data flowing from the data source to the driver. A default translation DLL can be specified in the ODBC initialization file.  
+**SQLDataSourceToDriver** supports translations for ODBC drivers. This function is not called by ODBC-enabled applications; applications request translation through **SQLSetConnectAttr**. The driver associated with the *ConnectionHandle* specified in **SQLSetConnectAttr** calls the specified DLL to perform translations of all data flowing from the data source to the driver. A default translation DLL can be specified in the ODBC initialization file.  
   
 ## Syntax  
   

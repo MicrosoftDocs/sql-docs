@@ -61,7 +61,7 @@ while( (SQL_SUCCESS or SQL_SUCCESS_WITH_INFO) == SQLFetch(...) ) {
    for(int iCol = 1; iCol < iTotalCols; iCol++) {  
       WCHAR* pBufOrig, pBuffer = new WCHAR[100];  
       SQLGetData(.... iCol ... pBuffer, 100, &iSize);   // Get original chunk  
-      while(NOT ALL DATA RETREIVED (SQL_NO_TOTAL, ...) ) {  
+      while(NOT ALL DATA RETRIEVED (SQL_NO_TOTAL, ...) ) {  
          pBuffer += 50;   // Advance buffer for data retrieved  
          // May need to realloc the buffer when you reach current size  
          SQLGetData(.... iCol ... pBuffer, 100, &iSize);   // Get next chunk  

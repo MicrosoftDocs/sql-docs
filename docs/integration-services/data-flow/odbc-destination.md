@@ -53,7 +53,7 @@ f1_keywords:
  You can log the calls that the ODBC source makes to external data providers. You can use this logging capability to troubleshoot the saving of data to external data sources that the ODBC destination performs. To log the calls that the ODBC destination makes to external data providers, enable the ODBC driver manager trace. For more information, see the Microsoft documentation on *How To Generate an ODBC Trace with ODBC the Data Source Administrator*.  
   
 ## Configuring the ODBC Destination  
- You can configure the ODBC destination programatically or through the SSIS Designer  
+ You can configure the ODBC destination programmatically or through the SSIS Designer  
   
  For more information, see one of the following topics:  
   

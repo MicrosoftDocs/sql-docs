@@ -27,19 +27,19 @@ dev_langs:
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
 |pool_id|**int**|The ID of the resource pool. Is not nullable.|  
-|volume_name|**sysname**|The name of the disk volue. Is not nullable.|  
-|read_io_queued_total|**int**|The total read IOs enqueued since the Resource Govenor is reset. Is not nullable.|  
-|read_io_issued_total|**int**|The total read IOs issued since the Resource Govenor statistics were reset. Is not nullable.|  
-|read_ios_completed_total|**int**|The total read IOs completed since the Resource Govenor statistics were reset. Is not nullable.|  
-|read_ios_throttled_total|**int**|The total read IOs throttled since the Resource Govenor statistics were reset. Is not nullable.|  
-|read_bytes_total|**bigint**|The total number of bytes read since the Resource Govenor statistics were reset. Is not nullable.|  
+|volume_name|**sysname**|The name of the disk volume. Is not nullable.|  
+|read_io_queued_total|**int**|The total read IOs enqueued since the Resource Governor is reset. Is not nullable.|  
+|read_io_issued_total|**int**|The total read IOs issued since the Resource Governor statistics were reset. Is not nullable.|  
+|read_ios_completed_total|**int**|The total read IOs completed since the Resource Governor statistics were reset. Is not nullable.|  
+|read_ios_throttled_total|**int**|The total read IOs throttled since the Resource Governor statistics were reset. Is not nullable.|  
+|read_bytes_total|**bigint**|The total number of bytes read since the Resource Governor statistics were reset. Is not nullable.|  
 |read_io_stall_total_ms|**bigint**|Total time (in milliseconds) between read IO arrival and completion. Is not nullable.|  
 |read_io_stall_queued_ms|**bigint**|Total time (in milliseconds) between read IO arrival and issue. This is the delay introduced by IO Resource Governance. Is not nullable.|  
-|write_io_queued_total|**int**|The total write IOs enqueued since the Resource Govenor statistics were reset. Is not nullable.|  
-|write_io_issued_total|**int**|The total write IOs issued since the Resource Govenor statistics were reset. Is not nullable.|  
-|write_io_completed_total|**int**|The total write IOs completed since the Resource Govenor statistics were reset. Is not nullable|  
-|write_io_throttled_total|**int**|The total write IOs throttled since the Resource Govenor statistics were reset. Is not nullable|  
-|write_bytes_total|**bigint**|The total number of bytes written since the Resource Govenor statistics were reset. Is not nullable.|  
+|write_io_queued_total|**int**|The total write IOs enqueued since the Resource Governor statistics were reset. Is not nullable.|  
+|write_io_issued_total|**int**|The total write IOs issued since the Resource Governor statistics were reset. Is not nullable.|  
+|write_io_completed_total|**int**|The total write IOs completed since the Resource Governor statistics were reset. Is not nullable|  
+|write_io_throttled_total|**int**|The total write IOs throttled since the Resource Governor statistics were reset. Is not nullable|  
+|write_bytes_total|**bigint**|The total number of bytes written since the Resource Governor statistics were reset. Is not nullable.|  
 |write_io_stall_total_ms|**bigint**|Total time (in milliseconds) between write IO issue and completion. Is not nullable.|  
 |write_io_stall_queued_ms|**bigint**|Total time (in milliseconds) between write IO arrival and issue. This is the delay introduced by IO Resource Governance. Is not nullable.|  
 |io_issue_violations_total|**int**|Total IO issue violations. That is, the number of times when the rate of IO issue was lower than the reserved rate. Is not nullable.|  

@@ -58,7 +58,7 @@ After you design the parent report, your next step is to create a data connectio
     > [!WARNING]  
     > Be sure to uncheck **Create methods to send updates directly to the database (GenerateDBDirectMethods)**  
   
-    You configured the ADO.NET [DataTable](/dotnet/api/system.data.datatable) as a data source for your report. On the DataSet Designer page in Visual Studio, you should see the **DataTable** you added, listing the columns specified in the query. DataSet2 contains the data from the PurhcaseOrderDetail table, based on the query.  
+    You configured the ADO.NET [DataTable](/dotnet/api/system.data.datatable) as a data source for your report. On the DataSet Designer page in Visual Studio, you should see the **DataTable** you added, listing the columns specified in the query. DataSet2 contains the data from the PurchaseOrderDetail table, based on the query.  
   
 11. Save the file.  
   

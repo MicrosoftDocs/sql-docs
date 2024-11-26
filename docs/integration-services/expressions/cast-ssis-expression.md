@@ -131,7 +131,7 @@ helpviewer_keywords:
 (DT_DBTIMESTAMP2, 4) "1999-10-11 16:34:52.1234"  
 ```  
   
- This example casts a string literal to the DT_DBTIMESTAMPOFFSET data type that uses 7 digits for fractional seconds. (The DT_DBTIMESTAMPOFFSET data typecan have between 0 and 7 digits specified for fractional seconds.)  
+ This example casts a string literal to the DT_DBTIMESTAMPOFFSET data type that uses 7 digits for fractional seconds. (The DT_DBTIMESTAMPOFFSET data type can have between 0 and 7 digits specified for fractional seconds.)  
   
 ```  
 (DT_DBTIMESTAMPOFFSET, 7) "1999-10-11 16:34:52.1234567 + 5:35"  

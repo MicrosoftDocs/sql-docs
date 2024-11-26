@@ -69,7 +69,7 @@ When two execution plans are compared, regions of the plan that **do essentially
     1.  In the **Statement Options** tab, the default selection is *Highlight similar operations* and the same highlighted operator or node in compared plans share the same color and line pattern. Navigate between similar areas in compared plans by clicking on a lime pattern. You can also choose to highlight differences in plans rather similarities, by selecting *Highlight operations not matching similar segments*. 
     
        > [!NOTE]
-       > By default, database names are ignored when comparing plans to allow comparison of plans captured for databases that have differenty names, but share the same schema. For example when comparing plans from databases *ProdDB* and *TestDB*. This behavior can be changed with the *Ignore database name when comparing operators* option.
+       > By default, database names are ignored when comparing plans to allow comparison of plans captured for databases that have different names, but share the same schema. For example when comparing plans from databases *ProdDB* and *TestDB*. This behavior can be changed with the *Ignore database name when comparing operators* option.
 
        ![Showplan Analysis window](../../relational-databases/performance/media/plancomparison-analysis.png "Showplan Analysis window") 
 

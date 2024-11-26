@@ -104,7 +104,7 @@ Console.WriteLine(ep.EndpointState)
 CD \sql\localhost\  
 $srv = get-item default  
   
-#Get a new endpoint to congure and add  
+#Get a new endpoint to configure and add  
 $ep = New-Object -TypeName Microsoft.SqlServer.Management.SMO.Endpoint -argumentlist $srv,"Mirroring_Endpoint"  
   
 #Set some properties  

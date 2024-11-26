@@ -19,11 +19,11 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 
 `OutputParameter`: generates an OutputParameter Object that captures the
 information about the output parameters of the function that is
-to be embedded into a SQL Server Stored Procesure. Those will become
+to be embedded into a SQL Server Stored Procedure. Those will become
 the output parameters of the stored procedure. Supported R types of the output
 parameters are POSIXct, numeric, character, integer, logical, and raw.
 This object must be created if the R function is returning a named
-list for non-data frame memebers of the list
+list for non-data frame members of the list
 
 
  ## Usage
@@ -71,7 +71,7 @@ OutputParameter Object
     mm <- rxSerializeModel(mm)
     return(list(mm = mm, in_df = in_df))
   }
-  # create InpuData Object for an input parameter that is a data frame
+  # create InputData Object for an input parameter that is a data frame
   # note: if the input parameter is not a data frame use InputParameter object
   id <- InputData(name = "in_df",
                   defaultQuery = paste0("select top 10000 ArrDelay,CRSDepTime,",

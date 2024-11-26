@@ -109,7 +109,7 @@ helpviewer_keywords:
 **IncludeInDebugDump**  
  Indicate whether the variable value is included in the debug dump files.  
   
- For user-defined variables and system variables, the default value for the **InclueInDebugDump** option is **true**.  
+ For user-defined variables and system variables, the default value for the **IncludeInDebugDump** option is **true**.  
   
  However, for user-defined variables, the system resets the **IncludeInDebugDump** option to **false** when the following conditions are met:  
   

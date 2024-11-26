@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "administering Reporting Services"
   - "components [Reporting Services], configuring"
   - "configuring servers [Reporting Services]"
-#customer-intent: As a Reporting Services user, I want to see what resources are availble to me so that I can effectively configure Reporting Services.
+#customer-intent: As a Reporting Services user, I want to see what resources are available to me so that I can effectively configure Reporting Services.
 ---
 # Configure and administer a report server (SSRS native mode)
 

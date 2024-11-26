@@ -19,7 +19,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 
 `InputParameter`: generates an InputParameter Object, that captures the
 information about the input parameters of the R function that is
-to be embedded into a SQL Server Stored Procesure. Those will become
+to be embedded into a SQL Server Stored Procedure. Those will become
 the input parameters of the stored procedure. Supported R types of the input
 parameters are POSIXct, numeric, character, integer, logical, and raw.
 
@@ -102,7 +102,7 @@ InputParameter Object
 # connections string
 conStr <- paste0("Driver={ODBC Driver 13 for SQL Server};Server=.;Database=RevoTestDB;",
                  "Trusted_Connection=Yes;")
-# create InpuData Object for an input parameter that is a data frame
+# create InputData Object for an input parameter that is a data frame
 id <- InputData(name = "indata", defaultQuery = "SELECT * from cleanData")
 # InputParameter for the model_param input variable
 model <- InputParameter("model_param", "raw",

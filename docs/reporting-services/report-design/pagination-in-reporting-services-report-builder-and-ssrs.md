@@ -69,7 +69,7 @@ ms.custom:
   
 -   Disabled indicates whether a page break is applied to the report element. If this property evaluates to True, the page break is ignored. This property is used to dynamically disable page breaks based on expressions when the report is run.  
   
--   ResetPageNumberindicates whether the page number should be reset to 1 when a page break occurs. If this property evaluates to True, the page number is reset.  
+-   ResetPageNumber indicates whether the page number should be reset to 1 when a page break occurs. If this property evaluates to True, the page number is reset.  
   
  You can set the BreakLocation property in the **Tablix Properties**, **Rectangle Properties**, or **Group Properties** dialog boxes, but you must set the Disabled, ResetPageNumber, and PageName properties in the Report Builder Properties pane. If the properties in the Properties pane are organized by category, you will find the properties in the **PageBreak** category. For groups, the **PageBreak** category is inside the **Group** category.  
   

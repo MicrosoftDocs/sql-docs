@@ -16,7 +16,7 @@ The following table describes numeric functions that are included in the ODBC sc
   
  All numeric functions return values of data type SQL_FLOAT except for ABS, ROUND, TRUNCATE, SIGN, FLOOR, and CEILING, which return values of the same data type as the input parameters.  
   
- Arguments denoted as *numeric_exp* can be the name of a column, the result of another scalar function, or a *numeric-litera*l, where the underlying data type could be represented as SQL_NUMERIC, SQL_DECIMAL, SQL_TINYINT, SQL_SMALLINT, SQL_INTEGER, SQL_BIGINT, SQL_FLOAT, SQL_REAL, or SQL_DOUBLE.  
+ Arguments denoted as *numeric_exp* can be the name of a column, the result of another scalar function, or a *numeric-literal*, where the underlying data type could be represented as SQL_NUMERIC, SQL_DECIMAL, SQL_TINYINT, SQL_SMALLINT, SQL_INTEGER, SQL_BIGINT, SQL_FLOAT, SQL_REAL, or SQL_DOUBLE.  
   
  Arguments denoted as *float_exp* can be the name of a column, the result of another scalar function, or a *numeric-literal*, where the underlying data type can be represented as SQL_FLOAT.  
   

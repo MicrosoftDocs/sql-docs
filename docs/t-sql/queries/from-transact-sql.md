@@ -1022,7 +1022,7 @@ SELECT *
 FROM Sales.Customer TABLESAMPLE SYSTEM(10 PERCENT);
 ```
 
-## Related conent
+## Related content
 
 - [CONTAINSTABLE (Transact-SQL)](../../relational-databases/system-functions/containstable-transact-sql.md)
 - [FREETEXTTABLE (Transact-SQL)](../../relational-databases/system-functions/freetexttable-transact-sql.md)

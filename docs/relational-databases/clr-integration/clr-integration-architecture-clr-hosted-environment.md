@@ -105,7 +105,7 @@ helpviewer_keywords:
  - If enough memory is allocated to trigger garbage collection
  - If the code enters preemptive mode by calling OS functions
 
- Code that doesn't do any of the above, for example tight loops that contain computation only, will not automatically yield the scheduler, which can lead to long waits for other workloads in the system. In these situations, it is up to the developer to explicitly yield by calling the System.Thread.Sleep() function of the .NET Framework, or by explicitly entering preemtive mode with System.Thread.BeginThreadAffinity(), in any sections of code that are anticipated to be long-running. The following code examples show how to manually yield using each of these methods.
+ Code that doesn't do any of the above, for example tight loops that contain computation only, will not automatically yield the scheduler, which can lead to long waits for other workloads in the system. In these situations, it is up to the developer to explicitly yield by calling the System.Thread.Sleep() function of the .NET Framework, or by explicitly entering preemptive mode with System.Thread.BeginThreadAffinity(), in any sections of code that are anticipated to be long-running. The following code examples show how to manually yield using each of these methods.
 
  ```c#
 // Example 1: Manually yield to SOS scheduler.

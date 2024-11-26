@@ -121,7 +121,7 @@ For more information, see [sys.sql_modules &#40;Transact-SQL&#41;](../../relatio
    GO
    -- Get all of the dependency information
    SELECT OBJECT_NAME(sed.referencing_id) AS referencing_entity_name,
-       o.type_desc AS referencing_desciption,
+       o.type_desc AS referencing_description,
        COALESCE(COL_NAME(sed.referencing_id, sed.referencing_minor_id), '(n/a)') AS referencing_minor_id,
        sed.referencing_class_desc, sed.referenced_class_desc,
        sed.referenced_server_name, sed.referenced_database_name, sed.referenced_schema_name,

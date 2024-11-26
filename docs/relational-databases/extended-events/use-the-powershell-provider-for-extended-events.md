@@ -19,7 +19,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 
   You can manage [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Extended Events by using the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell provider. The XEvent subfolder is available under the SQLSERVER drive. You can access the folder by using either of the following methods:  
   
--   At a command prompt, type **sqlps**, and then press ENTER. Type **cd xevent**, and then press ENTER. From there, you can use the **cd** and **dir** commands (or **Set-Location** and **Get-Childitem** cmdlets) to navigate to the server name and instance name.  
+-   At a command prompt, type **sqlps**, and then press ENTER. Type **cd xevent**, and then press ENTER. From there, you can use the **cd** and **dir** commands (or **Set-Location** and **Get-ChildItem** cmdlets) to navigate to the server name and instance name.  
   
 -   In Object Explorer, expand the instance name, expand **Management**, right-click **Extended Events**, and then click **Start PowerShell**. This starts PowerShell in the following path:  
   

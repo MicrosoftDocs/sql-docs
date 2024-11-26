@@ -23,7 +23,7 @@ FROM [Adventure Works]
   
 ```  
   
- However, if there are several members with the same name on different hierarchies, there is no method to determine which member the query will return. For example, the following query requests data for a member with the name [CY 2004]. The queryexecutes successfully, but there are at least six members with that name in the Adventure Works cube:  
+ However, if there are several members with the same name on different hierarchies, there is no method to determine which member the query will return. For example, the following query requests data for a member with the name [CY 2004]. The query executes successfully, but there are at least six members with that name in the Adventure Works cube:  
   
 ```  
 SELECT [CY 2004] ON 0  

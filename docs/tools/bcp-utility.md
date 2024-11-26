@@ -64,7 +64,7 @@ See [Install the SQL Server command-line tools sqlcmd and bcp on Linux](../linux
 - Build number: 15.0.4298.1
 - Release date: April 7, 2023
 
-**bcp** supports Microsoft Entra authentication, including multifactor authentication (MFA) support for Azure SQL Databas, [!INCLUDE [fabric-sqldb](../includes/fabric-sqldb.md)], and Azure Synapse Analytics.
+**bcp** supports Microsoft Entra authentication, including multifactor authentication (MFA) support for Azure SQL Database, [!INCLUDE [fabric-sqldb](../includes/fabric-sqldb.md)], and Azure Synapse Analytics.
 
 [!INCLUDE [entra-id](../includes/entra-id.md)]
 

@@ -58,7 +58,7 @@ helpviewer_keywords:
 ## Character Data Files  
  In character data files, date and time values are represented as described in the "Data Formats: Strings and Literals" section of [Data Type Support for ODBC Date and Time Improvements](../../relational-databases/native-client-odbc-date-time/data-type-support-for-odbc-date-and-time-improvements.md) for ODBC, or of [Data Type Support for OLE DB Date and Time Improvements](../../relational-databases/native-client-ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md) for OLE DB.  
   
- In native data fles, date and time values for the four new types are represented as their TDS representations with a scale of 7 (because this is the maximum supported by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and bcp data files do not store the scale of these columns). There is no change to the storage of the existing **datetime** and **smalldatetime** type or their tabular data stream (TDS) representations.  
+ In native data files, date and time values for the four new types are represented as their TDS representations with a scale of 7 (because this is the maximum supported by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and bcp data files do not store the scale of these columns). There is no change to the storage of the existing **datetime** and **smalldatetime** type or their tabular data stream (TDS) representations.  
   
  The storage sizes for the different storage types are as follows for OLE DB:  
   

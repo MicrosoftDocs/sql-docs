@@ -105,7 +105,7 @@ apitype: "DLLExport"
 |SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES2|SQL_CA2_LOCK_CONCURRENCY SQL_CA2_MAX_ROWS_CATALOG SQL_CA2_MAX_ROWS_DELETE SQL_CA2_MAX_ROWS_INSERT SQL_CA2_MAX_ROWS_SELECT SQL_CA2_MAX_ROWS_UPDATE SQL_CA2_OPT_ROWVER_CONCURRENCY SQL_CA2_OPT_VALUES_CONCURRENCY SQL_CA2_READ_ONLY_CONCURRENCY|  
 |SQL_GETDATA_EXTENSIONS|SQL_GD_BLOCK|  
 |SQL_GROUP_BY|SQL_GB_GROUP_BY_CONTAINS_SELECT|  
-|SQL_IDENTIFIER_CASE|SQL_IC_MIXED if connected to a server running a case-insenstive sort order.<br /><br /> SQL_IC_SENSITIVE if connected to a server running case-sensitive sort order.|  
+|SQL_IDENTIFIER_CASE|SQL_IC_MIXED if connected to a server running a case-insensitive sort order.<br /><br /> SQL_IC_SENSITIVE if connected to a server running case-sensitive sort order.|  
 |SQL_IDENTIFIER_QUOTE_CHAR|" (the double quote character)|  
 |SQL_INDEX_KEYWORDS|SQL_IK_ASC SQL_IK_DESC|  
 |SQL_INFO_SCHEMA_VIEWS|Request not supported by driver.|  

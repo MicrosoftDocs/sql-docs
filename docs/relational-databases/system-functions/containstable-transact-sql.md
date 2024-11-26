@@ -269,7 +269,7 @@ GO
 ```  
   
 > [!NOTE]  
->  The LANGUAGE *language_term* argumentis not required for using *top_n_by_rank.*  
+>  The LANGUAGE *language_term* argument is not required for using *top_n_by_rank.*  
   
 ## See Also  
  [Limit Search Results with RANK](../../relational-databases/search/limit-search-results-with-rank.md)   

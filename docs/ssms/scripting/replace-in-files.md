@@ -134,7 +134,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 >  You can use **Undo** only on files that remain open for editing. If this option is not selected, files that were not already open for editing will remain closed, and no **Undo** option will be available in those files.  
   
 ## Find and Replace Views  
- The tabs at the top of the Findand Replace window include **View** menus. These menus enable you to choose a set of fields to display in the active pane. You can leave the Find and Replace window docked in a convenient location, and then change from tab to tab and view to view to perform any type of find or replace operation.  
+ The tabs at the top of the Find and Replace window include **View** menus. These menus enable you to choose a set of fields to display in the active pane. You can leave the Find and Replace window docked in a convenient location, and then change from tab to tab and view to view to perform any type of find or replace operation.  
   
  **Switch to Quick Find**  
  This toolbar tab changes the dialog box to a **Quick Find** dialog box.  

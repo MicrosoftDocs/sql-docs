@@ -23,7 +23,7 @@ helpviewer_keywords:
   
  SPNs are used by the authentication protocol to determine the account in which a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance runs. If the instance account is known, Kerberos authentication can be used to provide mutual authentication by the client and server. If the instance account is not known, NTLM authentication, which only provides authentication of the client by the server, is used. Currently, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client performs the authentication lookup, deriving the SPN from the instance name and network connection properties. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instances will attempt to register SPNs on startup, or they can be registered manually. However, registration will fail if there are insufficient access rights for the account that attempts to register the SPNs.  
   
- Domain and computer accounts are registered automatically in Active Directory. These can be used as SPNs, or administators can define their own SPNs. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] makes secure authentication more manageable and reliable by allowing clients to directly specify the SPN to use.  
+ Domain and computer accounts are registered automatically in Active Directory. These can be used as SPNs, or administrators can define their own SPNs. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] makes secure authentication more manageable and reliable by allowing clients to directly specify the SPN to use.  
   
 > [!NOTE]  
 >  An SPN specified by a client application is only used when a connection is made with Windows integrated security.  
@@ -70,7 +70,7 @@ helpviewer_keywords:
  Delegation with linked servers requires Kerberos authentication.  
   
 ## Management Aspects of SPNs Specified by Applications  
- When choosing whether to specify SPNs in an application (through connection strings) or programmatically through connection properties (rather than relying on the defalt provider generated SPNs), consider the following factors:  
+ When choosing whether to specify SPNs in an application (through connection strings) or programmatically through connection properties (rather than relying on the default provider generated SPNs), consider the following factors:  
   
 -   Security: Does the specified SPN disclose information that is protected?  
   

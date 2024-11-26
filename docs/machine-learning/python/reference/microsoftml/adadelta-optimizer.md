@@ -13,7 +13,7 @@ keywords:
 ms.devlang: python
 monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15"
 ---
-# *microsoftml.adadelta_optimizer*: Adaptive learing rate method
+# *microsoftml.adadelta_optimizer*: Adaptive learning rate method
 
 
 

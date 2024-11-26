@@ -43,7 +43,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
  Describes the planning steps to develop an application that uses replication.  
   
  [Replication System Stored Procedures Concepts](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)  
- Describes how system stored procedures can be used to proivide programmatic access in a replication topology.  
+ Describes how system stored procedures can be used to provide programmatic access in a replication topology.  
   
  [Replication Management Objects Concepts](../../../relational-databases/replication/concepts/replication-management-objects-concepts.md)  
  Explains the concepts for using Replication Management Objects (RMO). This is a managed code assembly that encapsulates replication functionalities for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  

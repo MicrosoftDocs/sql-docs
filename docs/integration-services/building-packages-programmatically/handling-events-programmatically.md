@@ -34,7 +34,7 @@ dev_langs:
   
  The <xref:Microsoft.SqlServer.Dts.Runtime.DefaultEvents> class is a class that already implements the <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> interface; therefore, another alternative to implementing <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> directly is to derive from <xref:Microsoft.SqlServer.Dts.Runtime.DefaultEvents> and override the specific events that you want to respond to. You then provide your class as a parameter to the **Validate** and **Execute** methods of the <xref:Microsoft.SqlServer.Dts.Runtime.Package> to receive event callbacks.  
   
- The following code sample demonstrates a class that derives from <xref:Microsoft.SqlServer.Dts.Runtime.DefaultEvents>, and overrides the <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents.OnPreExecute%2A> method. The class is then provided as aparameter to the **Validate** and **Execute** methods of the package.  
+ The following code sample demonstrates a class that derives from <xref:Microsoft.SqlServer.Dts.Runtime.DefaultEvents>, and overrides the <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents.OnPreExecute%2A> method. The class is then provided as a parameter to the **Validate** and **Execute** methods of the package.  
   
 ```csharp  
 using System;  

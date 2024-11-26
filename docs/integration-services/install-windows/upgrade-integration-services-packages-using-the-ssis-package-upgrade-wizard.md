@@ -67,7 +67,7 @@ helpviewer_keywords:
   
 3.  On the **Select Source Location** page of the wizard, set the **Package source** property to **File System**.  
   
-4.  On the **Select Destination Location** page of the wizard, select **Save to source location** tosave the upgraded packages to the same location as the original packages.  
+4.  On the **Select Destination Location** page of the wizard, select **Save to source location** to save the upgraded packages to the same location as the original packages.  
   
     > [!NOTE]  
     >  The backup option in the wizard is available only when the upgraded packages are stored in the same folder as the original packages.  

@@ -108,7 +108,7 @@ helpviewer_keywords:
     </Extension>  
     <Extension Name="IMAGE (EMF Portrait)" Type="Microsoft.ReportingServices.Rendering.ImageRenderer.ImageRenderer,Microsoft.ReportingServices.ImageRendering">  
         <OverrideNames>  
-            <Name Language="en-US">EMF in Portait Mode</Name>  
+            <Name Language="en-US">EMF in Portrait Mode</Name>  
         </OverrideNames>  
         <Configuration>  
             <DeviceInfo>  

@@ -32,7 +32,7 @@ SQLRETURN SQLCancelHandle(
   
 ## Arguments  
  *HandleType*  
- [Input] The type of the handle on which to cacel processing. Valid values are SQL_HANDLE_DBC or SQL_HANDLE_STMT.  
+ [Input] The type of the handle on which to cancel processing. Valid values are SQL_HANDLE_DBC or SQL_HANDLE_STMT.  
   
  *Handle*  
  [Input] The handle on which to cancel processing.  

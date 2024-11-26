@@ -115,7 +115,7 @@ FROM   @Items;
 4.  Initialize the parameters. This example sets the size of the table-valued parameter to SQL_DATA_AT_EXEC, rather than to a row count.  
   
     ```cpp
-    // Initialze the TVP for row streaming.  
+    // Initialize the TVP for row streaming.  
     cbTVP = SQL_DATA_AT_EXEC;  
   
     // Populate non-data-at-exec parameters.  

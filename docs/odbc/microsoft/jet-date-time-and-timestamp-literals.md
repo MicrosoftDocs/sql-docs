@@ -17,8 +17,8 @@ helpviewer_keywords:
 # Jet: Date, Time, and Timestamp Literals
 For maximum interoperability, applications should pass date literals in the ODBC canonical format using escape-clause syntax:  
   
--   For date literals, {d '*value*'}, where *valu*e is in the form "yyyy-mm-dd"  
+-   For date literals, {d '*value*'}, where *value* is in the form "yyyy-mm-dd"  
   
--   For time literals, {t '*value*'}, where *valu*e is in the form "hh:mm:ss"  
+-   For time literals, {t '*value*'}, where *value* is in the form "hh:mm:ss"  
   
- For timestamp literals {ts '*value*'}, where *valu*e is in the form "yyyy-mm-dd hh:mm:ss[.f...]".
+ For timestamp literals {ts '*value*'}, where *value* is in the form "yyyy-mm-dd hh:mm:ss[.f...]".

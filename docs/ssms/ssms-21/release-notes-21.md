@@ -61,7 +61,7 @@ This article details updates, improvements, and bug fixes for the current and pr
 | --- | --- |
 | Azure SQL Database | Addressed issue of SSMS hanging when trying to connect to an Azure SQL Database that has been deleted. |
 | Azure SQL Database | Resolved the problem of SSMS becoming inaccessible when a user doesn't have permissions to access all the databases on a logical server. |
-| Azure SQL Database | Fxied the behavior of SSMS hanging and generating the error "An error occurred while changing the current database" when an invalid database name is entered in the database name dropdown list for the editor window. |
+| Azure SQL Database | Fixed the behavior of SSMS hanging and generating the error "An error occurred while changing the current database" when an invalid database name is entered in the database name dropdown list for the editor window. |
 | Azure SQL Managed Instance | Removed the ability to select an alternate option for **Login auditing** within the **Server Properties** dialog. |
 | Azure SQL Managed Instance | Removed the ability to configure the number of error log files in the **Configure SQL Server Error Logs** dialog. |
 | Central Management Server | Added ability to save the **Trust Server Certificate** connection option. |

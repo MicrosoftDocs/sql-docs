@@ -29,7 +29,7 @@ helpviewer_keywords:
   
 1.  Open the ODBC Data Source Administrator.  
   
-2.  In the ODBC Data Source Administrator dialog box, click Add. The Creat New Data Source dialog box appears.  
+2.  In the ODBC Data Source Administrator dialog box, click Add. The Create New Data Source dialog box appears.  
   
 3.  Select Microsoft ODBC for Oracle and then click Finish. The Microsoft ODBC for Oracle Setup dialog box appears.  
   

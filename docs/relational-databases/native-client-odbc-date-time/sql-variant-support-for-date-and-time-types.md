@@ -26,7 +26,7 @@ helpviewer_keywords:
 |C type|Server type|Comments|  
 |------------|-----------------|--------------|  
 |SQL_C_CHAR|varchar|SQL_CA_SS_VARIANT_SQL_TYPE is ignored.|  
-|SQL_C_WCHAR|nvarcar|SQL_CA_SS_VARIANT_SQL_TYPE is ignored.|  
+|SQL_C_WCHAR|nvarchar|SQL_CA_SS_VARIANT_SQL_TYPE is ignored.|  
 |SQL_C_TINYINT|smallint|SQL_CA_SS_VARIANT_SQL_TYPE is ignored.|  
 |SQL_C_STINYINT|smallint|SQL_CA_SS_VARIANT_SQL_TYPE is ignored.|  
 |SQL_C_SHORT|smallint|SQL_CA_SS_VARIANT_SQL_TYPE is ignored.|  

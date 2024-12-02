@@ -122,7 +122,7 @@ The following limitations apply to queries on encrypted columns:
   - [FILESTREAM](../../../t-sql/statements/create-table-transact-sql.md#filestream) columns
   - Columns with the [IDENTITY](../../../t-sql/statements/create-table-transact-sql.md#identity) property.
   - Columns with [ROWGUIDCOL](../../../t-sql/statements/create-table-transact-sql.md#rowguidcol) property.
-  - String (**varchar**, **char**, etc.) columns with collations other than [binary-code point (_BIN2) collations](../../collations/collation-and-unicode-support.md) when using deterministic encryption.
+  - String (**varchar**, **char**, etc.) columns with collations other than [binary-code point (_BIN2) collations](../../collations/collation-and-unicode-support.md).
   - Columns that are keys for clustered and nonclustered indices when using randomized encryption (indices on columns using deterministic encryption are supported).
   - Columns included in full-text indexes (Always Encrypted doesn't support [Full-Text Search](../../search/full-text-search.md)).
   - [Specify computed columns in a table](../../tables/specify-computed-columns-in-a-table.md).
@@ -138,6 +138,7 @@ The following limitations apply to queries on encrypted columns:
   - Columns captured/tracked using [change data capture](../../track-changes/about-change-data-capture-sql-server.md).
   - Primary key columns on tables that have [change tracking](../../track-changes/about-change-tracking-sql-server.md).
   - Columns that are masked (using [Dynamic data masking](../dynamic-data-masking.md)).
+  - Columns that are used in [Natively Compiled Stored Procedures](../../in-memory-oltp/creating-natively-compiled-stored-procedures.md)
   - Columns in [stretch database tables](/previous-versions/sql/sql-server/stretch-database/stretch-database). (Tables with columns encrypted with Always Encrypted can be enabled for Stretch.)
 
   > [!IMPORTANT]  

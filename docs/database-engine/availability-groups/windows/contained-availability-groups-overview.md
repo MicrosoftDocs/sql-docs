@@ -54,7 +54,7 @@ The system databases in a newly created contained AG aren't copies from the inst
 If you create local users or configurations in your instance, they don't automatically appear when you create your contained system databases, and they aren't visible when you connect to the contained AG. Once the user database has been joined to a contained AG, it will immediately become inaccessible to these users. You need to manually re-create them in the contained system databases within the context of the contained AG, by connecting directly to the database or by using the listener endpoint. The exception to this is that all of the logins in the sysadmin role in the parent instance are copied into the new AG specific `master` database.
 
 > [!NOTE]  
-> Because the master database is separate for each contained availability group, server-scope activities that is done in the context of the contained AG is only persisted in the contained system database. This includes auditing: If you are auditing server level activity with SQL Server Auditing, you need to ensure to create the same server audits within each contained AG.
+> Because the `master` database is separate for each contained availability group, server-scope activities performed in the context of the contained AG are only persisted in the contained system database. This includes auditing. If you audit server level activity with SQL Server Auditing, you must create the same server audits within each contained AG.
 
 #### Restore a contained system database
 

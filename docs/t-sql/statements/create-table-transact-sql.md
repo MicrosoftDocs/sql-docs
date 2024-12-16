@@ -59,7 +59,6 @@ Creates a new table in the database.
 > For reference to [!INCLUDE [fabricdw](../../includes/fabric-dw.md)] in [!INCLUDE [fabric](../../includes/fabric.md)], visit [CREATE TABLE (Fabric Data Warehouse)](create-table-azure-sql-data-warehouse.md?view=fabric&preserve-view=true).
 > For reference to [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], visit [CREATE TABLE (Azure Synapse Analytics)](create-table-azure-sql-data-warehouse.md?view=azure-sqldw-latest&preserve-view=true).
 
-
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## Syntax options
@@ -102,7 +101,6 @@ CREATE TABLE
     [ WITH ( <table_option> [ ,... n ] ) ]
 [ ; ]
 
-
 <column_definition> ::=
 column_name <data_type>
     [ FILESTREAM ]
@@ -123,12 +121,10 @@ column_name <data_type>
     [ <column_constraint> [ ,... n ] ]
     [ <column_index> ]
 
-
 <data_type> ::=
 [ type_schema_name. ] type_name
     [ ( precision [ , scale ] | max |
         [ { CONTENT | DOCUMENT } ] xml_schema_collection ) ]
-
 
 <column_constraint> ::=
 [ CONSTRAINT constraint_name ]
@@ -143,17 +139,14 @@ column_name <data_type>
         [ ON { partition_scheme_name ( partition_column_name )
             | filegroup | "default" } ]
 
-
   | [ FOREIGN KEY ]
         REFERENCES [ schema_name. ] referenced_table_name [ ( ref_column ) ]
         [ ON DELETE { NO ACTION | CASCADE | SET NULL | SET DEFAULT } ]
         [ ON UPDATE { NO ACTION | CASCADE | SET NULL | SET DEFAULT } ]
         [ NOT FOR REPLICATION ]
 
-
   | CHECK [ NOT FOR REPLICATION ] ( logical_expression )
 }
-
 
 <column_index> ::=
  INDEX index_name [ CLUSTERED | NONCLUSTERED ]
@@ -164,7 +157,6 @@ column_name <data_type>
          }
     ]
     [ FILESTREAM_ON { filestream_filegroup_name | partition_scheme_name | "NULL" } ]
-
 
 <computed_column_definition> ::=
 column_name AS computed_column_expression
@@ -180,21 +172,17 @@ column_name AS computed_column_expression
         [ ON { partition_scheme_name ( partition_column_name )
         | filegroup | "default" } ]
 
-
     | [ FOREIGN KEY ]
         REFERENCES referenced_table_name [ ( ref_column ) ]
         [ ON DELETE { NO ACTION | CASCADE } ]
         [ ON UPDATE { NO ACTION } ]
         [ NOT FOR REPLICATION ]
 
-
     | CHECK [ NOT FOR REPLICATION ] ( logical_expression )
 ]
 
-
 <column_set_definition> ::=
 column_set_name XML COLUMN_SET FOR ALL_SPARSE_COLUMNS
-
 
 <table_constraint> ::=
 [ CONSTRAINT constraint_name ]
@@ -217,7 +205,6 @@ column_set_name XML COLUMN_SET FOR ALL_SPARSE_COLUMNS
     | CHECK [ NOT FOR REPLICATION ] ( logical_expression )
 }
 
-
 <table_index> ::=
 {
     {
@@ -236,7 +223,6 @@ column_set_name XML COLUMN_SET FOR ALL_SPARSE_COLUMNS
     ]
     [ FILESTREAM_ON { filestream_filegroup_name | partition_scheme_name | "NULL" } ]
 }
-
 
 <table_option> ::=
 {
@@ -274,13 +260,11 @@ column_set_name XML COLUMN_SET FOR ALL_SPARSE_COLUMNS
     ]
 }
 
-
 <ledger_option>::=
 {
     [ LEDGER_VIEW = schema_name.ledger_view_name [ ( <ledger_view_option> [ ,... n ] ) ] ]
     [ APPEND_ONLY = ON | OFF ]
 }
-
 
 <ledger_view_option>::=
 {
@@ -290,13 +274,11 @@ column_set_name XML COLUMN_SET FOR ALL_SPARSE_COLUMNS
     [ OPERATION_TYPE_DESC_COLUMN_NAME = operation_type_desc_column_name ]
 }
 
-
 <table_stretch_options> ::=
 {
     [ FILTER_PREDICATE = { NULL | table_predicate_function } , ]
       MIGRATION_STATE = { OUTBOUND | INBOUND | PAUSED }
  }
-
 
 <index_option> ::=
 {
@@ -316,7 +298,6 @@ column_set_name XML COLUMN_SET FOR ALL_SPARSE_COLUMNS
       [ ON PARTITIONS ( { <partition_number_expression> | <range> }
       [ ,... n ] ) ]
 }
-
 
 <range> ::=
 <partition_number_expression> TO <partition_number_expression>

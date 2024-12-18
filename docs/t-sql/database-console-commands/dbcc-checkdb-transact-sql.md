@@ -280,7 +280,7 @@ After the `DBCC CHECKDB` command finishes, a message is written to the [!INCLUDE
 
 ## Error reporting
 
-A dump file (`SQLDUMP<nnnn>.txt`) is created in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `LOG` directory whenever `DBCC CHECKDB` detects a corruption error. When the *Feature Usage* data collection and *Error Reporting* features are enabled for the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the file is automatically forwarded to [!INCLUDE[msCoName](../../includes/msconame-md.md)]. The collected data is used to improve [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] functionality.
+A stack dump (`SQLDump<nnnn>.txt`, `SQLDump<nnnn>.log`, `SQLDump<nnnn>.mdmp`) is created in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `LOG` directory whenever `DBCC CHECKDB` detects a corruption error. When the *Feature Usage* data collection and *Error Reporting* features are enabled for the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the file is automatically forwarded to [!INCLUDE[msCoName](../../includes/msconame-md.md)]. The collected data is used to improve [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] functionality.
 The dump file contains the results of the `DBCC CHECKDB` command and additional diagnostic output. Access is limited to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service account and members of the sysadmin role. By default, the sysadmin role contains all members of the Windows `BUILTIN\Administrators` group and the local administrator's group. The DBCC command doesn't fail if the data collection process fails.
 
 ## Resolve errors

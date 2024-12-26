@@ -72,7 +72,7 @@ This example shows how to use `$PARTITION` to return the number of rows in each 
 The example:
 - Creates a partition scheme, `RangePS1`, for the partition function `RangePF1`. 
 - Creates a table, `dbo.PartitionTable`, on the `RangePS1` partition scheme with `col1` as the partitioning column.
-- Inserts four rows into the `dbo.PartitionTable` table. Based on the partition function definition, these rows will be inserted into partitions 2 and 3. Partitions 1 and 4 will remain empty.
+- Inserts four rows into the `dbo.PartitionTable` table. These rows will be inserted into partitions based on the partition function RangePF1 definition - 1 to partition 1, 100 to 2, 500 and 1000 to 3.
 - Queries the `dbo.PartitionTable` and uses `$PARTITION.RangePF1(col1)` in the GROUP BY clause to query the number of rows in each partition that contains data.
   
 > [!NOTE]
@@ -84,12 +84,12 @@ CREATE PARTITION SCHEME RangePS1
     ALL TO ('PRIMARY') ;  
 GO  
 
-CREATE TABLE dbo.PartitionTable (col1 int PRIMARY KEY, col2 char(10))  
+CREATE TABLE dbo.PartitionTable (col1 int PRIMARY KEY, col2 char(20))  
     ON RangePS1 (col1) ;  
 GO
 
 INSERT dbo.PartitionTable (col1, col2)
-VALUES ((1,'a row'),(100,'another row'),(500,'another row'),(1000,'another row'))
+VALUES (1,'a row'),(10,'another row'),(500,'another row'),(1000,'another row')
 
 
 SELECT 
@@ -105,10 +105,10 @@ The `SELECT` query should return the following results:
 
 | Partition | COUNT |
 |-----------|-------|
-| 2         | 1     |
-| 3         | 3     |
+| 1         | 2     |
+| 3         | 2     |
 
-Rows are not returned for partitions number 1 and 4, which exist but do not contain data.
+Rows are not returned for partition number 2, which exists but does not contain data.
 
 ### C. Return all rows from one partition of a partitioned table or index  
 

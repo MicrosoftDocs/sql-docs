@@ -72,7 +72,7 @@ This example shows how to use `$PARTITION` to return the number of rows in each 
 The example:
 - Creates a partition scheme, `RangePS1`, for the partition function `RangePF1`. 
 - Creates a table, `dbo.PartitionTable`, on the `RangePS1` partition scheme with `col1` as the partitioning column.
-- Inserts four rows into the `dbo.PartitionTable` table. These rows will be inserted into partitions based on the partition function RangePF1 definition - 1 to partition 1, 100 to 2, 500 and 1000 to 3.
+- Inserts four rows into the `dbo.PartitionTable` table. These rows will be inserted into partitions based on the partition function RangePF1 definition: 1 and 10 go to partition 1, 500 and 1000 to 3.
 - Queries the `dbo.PartitionTable` and uses `$PARTITION.RangePF1(col1)` in the GROUP BY clause to query the number of rows in each partition that contains data.
   
 > [!NOTE]
@@ -124,9 +124,8 @@ The query should return the following results:
 
 | col1 | col2         |
 |------|--------------|
-| 101  | another row  |
-| 500  | a third row  |
-| 501  | a fourth row |
+| 500  | another row  |
+| 1000  | another row |
   
 ## Next steps
 

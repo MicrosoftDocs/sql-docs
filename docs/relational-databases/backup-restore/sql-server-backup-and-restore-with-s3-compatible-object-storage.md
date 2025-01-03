@@ -39,7 +39,7 @@ The following table provides a nonexhaustive summary of object storage providers
 
 | **Vendor (alphabetical)**       | **Offering**                             |
 |---------------------------------|------------------------------------------|
-| [AWS][aws_webs]                 | AWS Simple Cloud Storage (S3)            |
+| [AWS][aws_webs]                 | Amazon Simple Storage Service (S3)       |
 | [Ceph][ceph_webs]               | Ceph                                     |
 | [Cloudian][cloudian_webs]       | HyperStore                               |
 | [Dell Technologies][dell_webs]  | ECS Enterprise Object Storage            |
@@ -57,7 +57,7 @@ The following table provides a nonexhaustive summary of object storage providers
 
 The S3 endpoint must be configured as follows:
 
-- TLS must be configured. It's assumed that all connections will be securely transmitted over HTTPS not HTTP. SQL Server requires the certificate for this scenario.
+- TLS must be configured. It's assumed that all connections will be securely transmitted over HTTPS not HTTP. The S3 endpoint must use a TLS certificate trusted by SQL Server (Linux) or its host operating system environment (Windows).
 - A user (Access Key ID) must be configured and the secret (Secret Key ID) for that user is known to you. You need both to authenticate against the S3 endpoint.
 - At least one bucket must be configured. Buckets can't be created or configured inside [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)].
 

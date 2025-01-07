@@ -61,7 +61,6 @@ You have the option of using [role-based access control (RBAC)][rbac-what-is-813
 > [!NOTE]  
 > In some cases, the database in SQL Database and the virtual network subnet are in different subscriptions. In these cases, you must ensure the following configurations:
 >
-> - Both subscriptions must be in the same Microsoft Entra tenant.
 > - The user has the required permissions to initiate operations, such as enabling service endpoints and adding a virtual network subnet to the given server.
 > - Both subscriptions must have the Microsoft.Sql provider registered.
 
@@ -78,6 +77,7 @@ For SQL Database, the virtual network rules feature has the following limitation
 - On the firewall, IP address ranges do apply to the following networking items, but virtual network rules don't:
   - [Site-to-site (S2S) virtual private network (VPN)][vpn-gateway-indexmd-608y]
   - On-premises via [Azure ExpressRoute](/azure/expressroute/index)
+- Both subscriptions must be in the same Microsoft Entra tenant.
 
 ### Considerations when you use service endpoints
 

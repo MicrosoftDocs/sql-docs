@@ -492,7 +492,7 @@ sections:
       - question: |
           Can a named replica be used as a failover target?
         answer: |
-          No, named replicas cannot be used as failover targets for the primary replica. Add HA replicas for the primrary replica for that purpose.
+          No, named replicas cannot be used as failover targets for the primary replica. Add HA replicas for the primary replica for that purpose.
 
       - question: |
           How can I distribute a read-only workload across my named replicas?

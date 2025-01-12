@@ -77,9 +77,9 @@ Module Module1
   
     Select Case jobResult  
       Case 0  
-        Console.WriteLine("SQL Server Agent job, RunSISSPackage, started successfully.")  
+        Console.WriteLine("SQL Server Agent job, RunSSISPackage, started successfully.")  
       Case Else  
-        Console.WriteLine("SQL Server Agent job, RunSISSPackage, failed to start.")  
+        Console.WriteLine("SQL Server Agent job, RunSSISPackage, failed to start.")  
     End Select  
     Console.Read()  
   
@@ -126,10 +126,10 @@ namespace LaunchSSISPackageAgent_CS
       switch (jobResult)  
       {  
         case 0:  
-          Console.WriteLine("SQL Server Agent job, RunSISSPackage, started successfully.");  
+          Console.WriteLine("SQL Server Agent job, RunSSISPackage, started successfully.");  
           break;  
         default:  
-          Console.WriteLine("SQL Server Agent job, RunSISSPackage, failed to start.");  
+          Console.WriteLine("SQL Server Agent job, RunSSISPackage, failed to start.");  
           break;  
       }  
       Console.Read();  

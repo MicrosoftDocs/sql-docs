@@ -41,7 +41,7 @@ WHERE SERVICE_NAME = 'Microsoft_Linear_Regression'
 ## Specifying Modeling Flags on a Mining Model  
  For examples of the syntax that [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] supports for specifying a flag on a mining structure column, see [CREATE MINING STRUCTURE &#40;DMX&#41;](../dmx/create-mining-structure-dmx.md).  
   
- For an example of the syntax for specifying a modeling flga on a mining model column, see [ALTER MINING STRUCTURE &#40;DMX&#41;](../dmx/alter-mining-structure-dmx.md).  
+ For an example of the syntax for specifying a modeling flag on a mining model column, see [ALTER MINING STRUCTURE &#40;DMX&#41;](../dmx/alter-mining-structure-dmx.md).  
   
  For more information about working with mining model columns, see [Mining Model Columns](/analysis-services/data-mining/mining-model-columns).  
   

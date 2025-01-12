@@ -109,7 +109,7 @@ This following table describes the SQL Server **Deprecated Features** performanc
 |GROUP BY ALL|Total number of times the GROUP BY ALL syntax was encountered. Modify the syntax to group by specific tables.|  
 |Hindi|Event occurs once per database start and once per collation use. Plan to modify applications that use this collation. Use Indic_General_90 instead.|  
 |HOLDLOCK table hint without parentheses|Use HOLDLOCK with parenthesis. Rewrite the statement to use the current syntax.|  
-|IDENTITYCOL|The INDENTITYCOL syntax was encountered. Rewrite statements to use the $identity syntax. Occurs once per compilation.|  
+|IDENTITYCOL|The IDENTITYCOL syntax was encountered. Rewrite statements to use the $identity syntax. Occurs once per compilation.|  
 |IN PATH|A CREATE FULLTEXT CATALOG statement with the IN PATH clause was encountered. This clause has no effect in this version of SQL Server. Occurs once per use.|
 |Index view select list without COUNT_BIG(\*)|The select list of an aggregate indexed view must contain COUNT_BIG (*) .|  
 |INDEX_OPTION|Encountered CREATE TABLE, ALTER TABLE, or CREATE INDEX syntax without parentheses around the options. Rewrite the statement to use the current syntax. Occurs once per query.|  
@@ -130,7 +130,7 @@ This following table describes the SQL Server **Deprecated Features** performanc
 |numbered_procedure_parameters|References to the deprecated `sys.numbered_procedure_parameters` were encountered. Do not use. Occurs once per compilation.|  
 |numbered_procedures|References to the deprecated `sys.numbered_procedures` were encountered. Do not use. Occurs once per compilation.|  
 |objidupdate||
-|Oldstyle RAISEERROR|The deprecated RAISERROR (Format: RAISERROR integer string) syntax was encountered. Rewrite the statement using the current RAISERROR syntax. Occurs once per compilation.|  
+|Oldstyle RAISERROR|The deprecated RAISERROR (Format: RAISERROR integer string) syntax was encountered. Rewrite the statement using the current RAISERROR syntax. Occurs once per compilation.|  
 |Old NEAR Syntax|Use the new NEAR syntax. See [NEAR](../search/search-for-words-close-to-another-word-with-near.md)|
 |OLEDB for ad hoc connections|SQLOLEDB is not a supported provider. Use [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Native Client for ad hoc connections.|  
 |PERMISSIONS|References to the PERMISSIONS intrinsic function were encountered. Query `sys.fn_my_permissions` instead. Occurs once per query.|  

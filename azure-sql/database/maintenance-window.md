@@ -62,7 +62,7 @@ Once the maintenance window selection is made and service configuration complete
 > - In situations where your database is enabled for [geo-replication](active-geo-replication-overview.md) or [failover groups](failover-group-sql-db.md), and the geo-replication does not align with the [Azure region pairing](/azure/reliability/cross-region-replication-azure#azure-cross-region-replication-pairings-for-all-geographies), you should different maintenance window schedules for your primary and secondary database. For example, you can select **Weekday** maintenance window for your geo-secondary database and **Weekend** maintenance window for your geo-primary database.
 
 > [!Important]
-> In very rare circumstances where any postponement of action could cause serious impact, like applying critical security patch, configured maintenance window might be temporarily overriden.
+> In very rare circumstances where any postponement of action could cause serious impact, like applying critical security patch, configured maintenance window might be temporarily overridden.
 
 ## Advance notifications
 

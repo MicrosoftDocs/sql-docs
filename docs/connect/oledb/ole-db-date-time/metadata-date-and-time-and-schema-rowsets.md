@@ -20,7 +20,7 @@ helpviewer_keywords:
 ## COLUMNS Rowset  
  The following column values are returned for date/time types:  
   
-|Column Type|DATA_TYPE|COLUMN_FLAGS, DBCOLUMFLAGS_SS_ISVARIABLESCALE|DATETIME_PRECISION|  
+|Column Type|DATA_TYPE|COLUMN_FLAGS, DBCOLUMNFLAGS_SS_ISVARIABLESCALE|DATETIME_PRECISION|  
 |-----------------|----------------|------------------------------------------------------|-------------------------|  
 |date|DBTYPE_DBDATE|Clear|0|  
 |time|DBTYPE_DBTIME2|Set|0..7|  

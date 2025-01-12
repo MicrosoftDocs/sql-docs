@@ -229,7 +229,7 @@ go
   
 -   Creates a typed **xml** variable and assigns a sample XML instance to it.  
   
--   Specifies a query against the variable. The query expression retrieves the first order ID value from the OrderList IDRERS type attribute of the first <`Customer`>. The value retrieved is IDREF type. Therefore, `instance of` returns True.  
+-   Specifies a query against the variable. The query expression retrieves the first order ID value from the OrderList IDREFS type attribute of the first <`Customer`>. The value retrieved is IDREF type. Therefore, `instance of` returns True.  
   
 ```  
 create xml schema collection SC as  

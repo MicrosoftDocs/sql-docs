@@ -226,7 +226,7 @@ If `IDBSchemaRowset` is supported, `TABLES`, `COLUMNS`, `INDEXES`, and `TABLES_I
 
 - The provider must either support restriction on the `TABLE_SCHEMA` column in both `TABLES` and `COLUMNS` or support them on neither. The provider must either support catalog name restriction on both `TABLES` and `COLUMNS` rowsets or support them on neither.
 
-- If any restrictions are supported on INDEXES, the provider must support schema restriction on both `TABLES` and INDE`XES or support them on neither. The provider must either support catalog name restriction on both `TABLES` and `INDEXES` rowsets or support them on neither.
+- If any restrictions are supported on INDEXES, the provider must support schema restriction on both `TABLES` and INDEXES` or support them on neither. The provider must either support catalog name restriction on both `TABLES` and `INDEXES` rowsets or support them on neither.
 
 From the `TABLES` schema rowset, SQL Server retrieves the `TABLE_CATALOG`, `TABLE_SCHEMA`, `TABLE_NAME`, `TABLE_TYPE`, `TABLE_GUID` columns by setting restrictions according to the above rules.
 

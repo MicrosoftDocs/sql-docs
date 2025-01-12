@@ -77,7 +77,7 @@ Once **ReplicationState** is `CATCH_UP`, connect to the geo-secondary using the 
 
 1. Connect to the target managed instance by using the secondary endpoint `<fog-name>.secondary.<zone_id>.database.windows.net`.
 1. Use [Switch-AzSqlDatabaseInstanceFailoverGroup](/powershell/module/az.sql/switch-azsqldatabaseinstancefailovergroup) to switch the secondary managed instance to be the primary with full synchronization. This operation succeeds, or rolls back.
-1. Verify that the command has completed successfully by using `nslook up <fog-name>.secondary.<zone_id>.database.windows.net` to ascertain that the DNS CNAME entry points to the target region IP address. If the switch command fails, the CNAME isn't updated.
+1. Verify that the command has completed successfully by using `nslookup <fog-name>.secondary.<zone_id>.database.windows.net` to ascertain that the DNS CNAME entry points to the target region IP address. If the switch command fails, the CNAME isn't updated.
 
 ## Remove the source managed instances
 

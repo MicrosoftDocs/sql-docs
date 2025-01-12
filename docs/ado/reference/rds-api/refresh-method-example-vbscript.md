@@ -138,10 +138,10 @@ Sub Run_OnClick
    RDC.Connect = txtConnect.Value  
    If EO = "adcExecSync" Then   'Determine which ExecuteOption chosen  
       RDC.ExecuteOptions = adcExecSync  
-      MsgBox "Recordset brought in on current calling thread Syncronously"  
+      MsgBox "Recordset brought in on current calling thread Synchronously"  
    Else  
       RDC.ExecuteOptions = adcExecAsync  
-      MsgBox "Recordset brought in on another thread Asyncronously"  
+      MsgBox "Recordset brought in on another thread Asynchronously"  
    End If  
   
    If FO = "adcFetchBackground" Then      'Determine                 which FetchOption chosen  

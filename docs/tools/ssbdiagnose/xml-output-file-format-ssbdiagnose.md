@@ -18,7 +18,7 @@ helpviewer_keywords:
 
 The **ssbdiagnose** utility delivers its output as an XML file when you run it with the **-XML** switch. The XML output file lists header information and the errors that it found in the [!INCLUDE[ssSB](../../includes/sssb-md.md)] configuration or conversation that was analyzed. You can write an application to analyze or report on the errors listed in the file. Or, you can view the XML file in a general XML editor, such as XML Notepad.  
   
- An **ssbdiangose** output file contains a DiagnosticInformation root element with two child types:  
+ An **ssbdiagnose** output file contains a DiagnosticInformation root element with two child types:  
   
 -   A Banner element with header information.  
   

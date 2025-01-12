@@ -138,7 +138,7 @@ DECLARE @aDayAgo datetime2 = DATEADD(DAY, -1, SYSUTCDATETIME());
 
 SELECT UserID, SUM (PagesVisited) as TotalVisitedPages, AVG (PagesVisited) as AverageVisitedPages,
 MAX (PagesVisited) AS MaxVisitedPages, MIN (PagesVisited) AS MinVisitedPages,
-STDEV (PagesVisited) as StDevViistedPages
+STDEV (PagesVisited) as StDevVisitedPages
 FROM dbo.WebsiteUserInfo
 FOR SYSTEM_TIME BETWEEN @twoDaysAgo AND @aDayAgo
 GROUP BY UserId

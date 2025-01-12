@@ -17,7 +17,7 @@ helpviewer_keywords:
   
  The conversions described in the following table apply to conversions made on the client. In cases where the client specifies fractional second precision for a parameter that differs from that defined on the server, the client conversion might succeed but the server will return an error when **SQLExecute** or **SQLExecuteDirect** is called. In particular, ODBC treats any truncation of fractional seconds as an error, whereas the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] behavior is to round; for example, rounding occurs when you go from **datetime2(6)** to **datetime2(2)**. Datetime column values are rounded to 1/300th of a second and smalldatetime columns have seconds set to zero by the server.  
   
-|   | SQL_TYPE_DATE | SQL_TYPE_TIME | SQL_SS_TIME2 | SQL_TYPE_TIMESTAMP | SQL_SS_TIMSTAMPOFFSET | SQL_CHAR | SQL_WCHAR |
+|   | SQL_TYPE_DATE | SQL_TYPE_TIME | SQL_SS_TIME2 | SQL_TYPE_TIMESTAMP | SQL_SS_TIMESTAMPOFFSET | SQL_CHAR | SQL_WCHAR |
 | - | ------------- | ------------- | ------------ | ------------------ | --------------------- | -------- | --------- |
 | **SQL_C_DATE** |1|-|-|1,6|1,5,6|1,13|1,13|  
 | **SQL_C_TIME** |-|1|1|1,7|1,5,7|1,13|1,13|  

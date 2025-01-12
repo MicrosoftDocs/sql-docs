@@ -269,7 +269,7 @@ Once again, the team tests the `http://localhost:5000/products` link to ensure t
 
 The Container is now working, but is only available on the developer's machine. The Development team would like to make this application Image available to the rest of the company, and then on to Kubernetes for production deployment.
 
-The storage area for Container Images is called a *repository*, and there can be both public and private repositories for Container Images. In fact, AdvenureWorks used a public Image for the Python environment in their Dockerfile.
+The storage area for Container Images is called a *repository*, and there can be both public and private repositories for Container Images. In fact, AdventureWorks used a public Image for the Python environment in their Dockerfile.
 
 The team would like to control access to the Image, and rather than putting it on the web they decide they would like to host it themselves, but in Microsoft Azure where they have full control over security and access. [You can read more about Microsoft Azure Container Registry here.](/azure/aks/tutorial-kubernetes-prepare-acr?tabs=azure-cli)
 
@@ -379,7 +379,7 @@ spec:
       containers:
       - name: flask2sql
         image:  bwoodyflask2sqlacr.azurecr.io/azure-flask2sql:v1
-# Recall that the Flask application uses (by default) TCIP/IP port 5000 for access. This line tells Kubernetes that this "pod" uses that address.
+# Recall that the Flask application uses (by default) TCP/IP port 5000 for access. This line tells Kubernetes that this "pod" uses that address.
         ports:
         - containerPort: 5000
 ---

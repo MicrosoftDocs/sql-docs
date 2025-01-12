@@ -243,7 +243,7 @@ More information: [Streaming Blobs To and From SQL Azure blog](https://azure.mic
 Distributed transaction started by Transact SQL BEGIN DISTRIBUTED TRANSACTION and managed by Microsoft Distributed Transaction Coordinator (MS DTC) isn't supported in Azure SQL Managed Instance if the remote server isn't SQL Server.
 
 **Recommendation**  
-Review affected objects section in Azure Migrate to see all objects using BEGIN DISTRUBUTED TRANSACTION. Consider migrating the participant databases to Azure SQL Managed Instance where distributed transactions across multiple instances are supported. For more information, see [Transactions across multiple servers for Azure SQL Managed Instance](/azure/azure-sql/database/elastic-transactions-overview#transactions-for-sql-managed-instance).
+Review affected objects section in Azure Migrate to see all objects using BEGIN DISTRIBUTED TRANSACTION. Consider migrating the participant databases to Azure SQL Managed Instance where distributed transactions across multiple instances are supported. For more information, see [Transactions across multiple servers for Azure SQL Managed Instance](/azure/azure-sql/database/elastic-transactions-overview#transactions-for-sql-managed-instance).
 
 Alternatively, migrate to SQL Server on Azure VMs.
 
@@ -256,7 +256,7 @@ Alternatively, migrate to SQL Server on Azure VMs.
 Distributed transaction started by Transact SQL BEGIN DISTRIBUTED TRANSACTION and managed by Microsoft Distributed Transaction Coordinator (MS DTC) is supported across multiple servers for Azure SQL Managed Instance.
 
 **Recommendation**  
-Review affected objects section in Azure Migrate to see all objects using BEGIN DISTRUBUTED TRANSACTION. Consider migrating the participant databases to Azure SQL Managed Instance where distributed transactions across multiple instances are supported. For more information, see [Transactions across multiple servers for Azure SQL Managed Instance](/azure/azure-sql/database/elastic-transactions-overview#transactions-for-sql-managed-instance).
+Review affected objects section in Azure Migrate to see all objects using BEGIN DISTRIBUTED TRANSACTION. Consider migrating the participant databases to Azure SQL Managed Instance where distributed transactions across multiple instances are supported. For more information, see [Transactions across multiple servers for Azure SQL Managed Instance](/azure/azure-sql/database/elastic-transactions-overview#transactions-for-sql-managed-instance).
 
 Alternatively, migrate to SQL Server on Azure VMs.
 

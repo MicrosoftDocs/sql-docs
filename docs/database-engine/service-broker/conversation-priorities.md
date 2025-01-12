@@ -256,7 +256,7 @@ This script specifies the priority level for the initiator conversation endpoint
     CREATE BROKER PRIORITY InitiatorToTargetPriority
         FOR CONVERSATION
         SET (CONTRACT_NAME = SimpleContract,
-             LOCAL_SERVICE_NAME = InitiatorSerivce,
+             LOCAL_SERVICE_NAME = InitiatorService,
              REMOTE_SERVICE_NAME = N'TargetService',
              PRIORITY_LEVEL = 3);
     GO

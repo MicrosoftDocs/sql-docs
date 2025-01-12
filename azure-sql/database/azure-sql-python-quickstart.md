@@ -302,7 +302,7 @@ To run these commands you can use any tool or IDE that can connect to Azure SQL 
     Driver={ODBC Driver 18 for SQL Server};Server=tcp:<database-server-name>.database.windows.net,1433;Database=<database-name>;Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30
     ```
 
-    Fill in the `<dabaser-server-name>` and `<database-name>` with your values.
+    Fill in the `<database-server-name>` and `<database-name>` with your values.
 
     The passwordless connection string doesn't contain a user name or password. Instead, when the app runs in Azure, the code uses `DefaultAzureCredential` from the [Azure Identity library](/python/api/overview/azure/Identity-readme) to get a token to use with `pyodbc`.
 

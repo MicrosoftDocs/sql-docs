@@ -307,7 +307,7 @@ HRESULT myExecuteCommand(ISSCommandWithParameters * pUnkCommand, ULONG cPropSets
    hr = pUnkCommand->SetParameterInfo(sc_cParams, rgParamOrdinals, rgParamBindInfo);     
   
    // Execute the Command. User could enter a non-row returning command, so we check for  
-   // that and return failure to prevent the display of the non-existant rowset by the caller  
+   // that and return failure to prevent the display of the non-existent rowset by the caller  
    hr = pICommandText->Execute(NULL, IID_IRowset, &myDBPARAMS, NULL, ppUnkRowset);     
   
    if (FAILED(hr) || !*ppUnkRowset) {  

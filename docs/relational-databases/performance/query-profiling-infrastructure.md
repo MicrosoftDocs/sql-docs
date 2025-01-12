@@ -1,5 +1,5 @@
 ---
-title: "Query Profling Infrastructure"
+title: "Query Profiling Infrastructure"
 description: Learn how the SQL Server Database Engine accesses runtime information on query execution plans to understand the workload and how resource usage is driven.
 author: rwestMSFT
 ms.author: randolphwest

@@ -82,7 +82,7 @@ If you're using Distributed Replay, perform the following steps.
 4. To replay the IRF file against the target SQL Server instance, run the following command:
 
     ```cmd
-    DReplay replay -m "dreplaycontroller" -d "<Folder Path on Dreplay Controller>\IrfFolder" -o -s "SQL2016Target" -w "dreplaychild1,dreplaychild2,dreplaycild3,dreplaychild4"
+    DReplay replay -m "dreplaycontroller" -d "<Folder Path on Dreplay Controller>\IrfFolder" -o -s "SQL2016Target" -w "dreplaychild1,dreplaychild2,dreplaychild3,dreplaychild4"
     ```
 
     a.  To monitor the status, run the following command:

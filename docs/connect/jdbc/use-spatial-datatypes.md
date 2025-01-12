@@ -87,9 +87,9 @@ These methods are the new public APIs that have been introduced with this additi
 
 |Method|Description|
 |:------|:----------|
-|Geometry getGeometry(int colunIndex)| Returns the value of the designated column in the current row of this ResultSet object as a com.microsoft.sqlserver.jdbc.Geometry object in the Java programming language.
+|Geometry getGeometry(int columnIndex)| Returns the value of the designated column in the current row of this ResultSet object as a com.microsoft.sqlserver.jdbc.Geometry object in the Java programming language.
 |Geometry getGeometry(String columnName)| Returns the value of the designated column in the current row of this ResultSet object as a com.microsoft.sqlserver.jdbc.Geometry object in the Java programming language.
-|Geography getGeography(int colunIndex)| Returns the value of the designated column in the current row of this ResultSet object as a com.microsoft.sqlserver.jdbc.Geography object in the Java programming language.
+|Geography getGeography(int columnIndex)| Returns the value of the designated column in the current row of this ResultSet object as a com.microsoft.sqlserver.jdbc.Geography object in the Java programming language.
 |Geography getGeography(String columnName)| Returns the value of the designated column in the current row of this ResultSet object as a com.microsoft.sqlserver.jdbc.Geography object in the Java programming language.
 
 ### Geometry

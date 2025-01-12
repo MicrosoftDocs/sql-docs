@@ -58,7 +58,7 @@ This article covers monitoring your [!INCLUDE [inmemory](../../includes/inmemory
     USE IMOLTP_DB  
     GO  
 
-    -- create the resoure pool  
+    -- create the resource pool  
     CREATE RESOURCE POOL PoolIMOLTP WITH (MAX_MEMORY_PERCENT = 60);  
     ALTER RESOURCE GOVERNOR RECONFIGURE;  
     GO  

@@ -8,7 +8,7 @@ ms.service: sql
 ms.topic: conceptual
 helpviewer_keywords:
   - "archiving mail messages and attachments [SQL Server]"
-  - "removing mail messages and attachements"
+  - "removing mail messages and attachments"
   - "Database Mail [SQL Server], archiving"
   - "saving mail messages and attachments"
 ---

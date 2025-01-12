@@ -96,7 +96,7 @@ Different sets of data are available for Azure SQL Database, Azure SQL Managed I
 The tables have the following columns:
 - **Friendly name**: Name of the query as shown in the Azure portal when you're creating a monitoring profile.
 - **Configuration name**: Name of the query as shown in the Azure portal when you're editing a monitoring profile.
-- **Namespace**: Name of the query as found in a Log Analytics workspace. This identifier appears in the **InsighstMetrics** table on the `Namespace` property in the `Tags` column.
+- **Namespace**: Name of the query as found in a Log Analytics workspace. This identifier appears in the **InsightsMetrics** table on the `Namespace` property in the `Tags` column.
 - **DMVs**: Dynamic managed views that are used to produce the dataset.
 - **Enabled by default**: Whether the data is collected by default.
 - **Default collection frequency**: How often the data is collected by default.

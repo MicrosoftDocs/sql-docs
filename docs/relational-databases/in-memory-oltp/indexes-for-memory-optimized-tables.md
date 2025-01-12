@@ -32,7 +32,7 @@ The index must be one of the following:
 
 ## Syntax for memory-optimized indexes  
   
-Each CREATE TABLE statement for a memory-optimized table must include an index, either explicitly through an INDEX or implicitly through a PRIMAY KEY or UNIQUE constraint.
+Each CREATE TABLE statement for a memory-optimized table must include an index, either explicitly through an INDEX or implicitly through a PRIMARY KEY or UNIQUE constraint.
   
 To be declared with the default DURABILITY = SCHEMA\_AND_DATA, the memory-optimized table must have a primary key. The PRIMARY KEY NONCLUSTERED clause in the following CREATE TABLE statement satisfies two requirements:  
   

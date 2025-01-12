@@ -13,7 +13,7 @@ ms.topic: conceptual
 [!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 > [!NOTE]
-> Atunity Connectors for Oracle and Teradata support SQL Server 2017 and below.
+> Attunity Connectors for Oracle and Teradata support SQL Server 2017 and below.
 >
 > From SQL Server 2019, get latest connectors for Oracle and Teradata here:
 > - [Microsoft connector for Oracle](data-flow/oracle-connector.md)

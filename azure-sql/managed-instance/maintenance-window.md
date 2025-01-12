@@ -59,7 +59,7 @@ Once the maintenance window selection is made and service configuration complete
 >
 > - In situations where your SQL managed instance has [failover groups](failover-group-sql-mi.md), and the groups are not aligned with the [Azure region pairing](/azure/reliability/cross-region-replication-azure#azure-cross-region-replication-pairings-for-all-geographies), **you should choose different maintenance window schedules for your primary and secondary SQL managed instance**. For example, you can select **Weekday** maintenance window for your geo-secondary and **Weekend** maintenance window for your geo-primary SQL managed instance.
 >
-> - In very rare circumstances where any postponement of action could cause serious impact, like applying critical security patch, configured maintenance window might be temporarily overriden.
+> - In very rare circumstances where any postponement of action could cause serious impact, like applying critical security patch, configured maintenance window might be temporarily overridden.
 
 ## Advance notifications
 

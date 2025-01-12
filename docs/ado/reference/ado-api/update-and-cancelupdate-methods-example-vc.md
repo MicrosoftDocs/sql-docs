@@ -74,7 +74,7 @@ public:
    ULONG   le_fnameStatus;     
 };  
   
-// Function Declartion.  
+// Function Declaration.  
 inline void TESTHR(HRESULT x) { if FAILED(x) _com_issue_error(x); };  
 void UpdateX();  
 void UpdateX2();  

@@ -240,7 +240,7 @@ For more information, see [Azure SQL Database elastic query overview (preview)](
 Distributed transaction started by Transact SQL BEGIN DISTRIBUTED TRANSACTION and managed by Microsoft Distributed Transaction Coordinator (MS DTC) isn't supported in Azure SQL Database.
 
 **Recommendation**  
-Review affected objects section in Azure Migrate to see all objects using BEGIN DISTRUBUTED TRANSACTION. Consider migrating the participant databases to Azure SQL Managed Instance where distributed transactions across multiple instances are supported.
+Review affected objects section in Azure Migrate to see all objects using BEGIN DISTRIBUTED TRANSACTION. Consider migrating the participant databases to Azure SQL Managed Instance where distributed transactions across multiple instances are supported.
 
 For more information, see [Transactions across multiple servers for Azure SQL Managed Instance](/azure/azure-sql/database/elastic-transactions-overview#transactions-for-sql-managed-instance).
 

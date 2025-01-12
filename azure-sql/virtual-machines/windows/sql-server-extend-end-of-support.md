@@ -77,7 +77,7 @@ Extended security updates for SQL Server VMs are delivered through the Microsoft
 For improved patching management, which also includes Cumulative Updates, try the integrated [Azure Update Manager](../azure-update-manager-sql-vm.md) experience. 
 
 > [!NOTE]
-> Registration with the [SQL IaaS Agent extension](sql-agent-extension-manually-register-single-vm.md) is not required for _manual_ installation of extended security updates on Azure virtual machines. Microsoft Update automaticallys detect the VM is running in Azure and presents relevant updates for download even if the extension is not isntalled.
+> Registration with the [SQL IaaS Agent extension](sql-agent-extension-manually-register-single-vm.md) is not required for _manual_ installation of extended security updates on Azure virtual machines. Microsoft Update automatically detect the VM is running in Azure and presents relevant updates for download even if the extension is not installed.
 
 
 

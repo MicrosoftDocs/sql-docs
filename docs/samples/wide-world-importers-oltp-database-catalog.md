@@ -189,7 +189,7 @@ These procedures are used to configure the sample. They are used to apply enterp
 
 |Procedure|Purpose|
 |-----------------------------|---------------------|
-|AddRoleMemberIfNonexistant|Adds a member to a role if the member isn't already in the role|
+|AddRoleMemberIfNonexistent|Adds a member to a role if the member isn't already in the role|
 |Configuration_ApplyAuditing|Adds auditing. Server auditing is applied for standard edition databases; additional database auditing is added for enterprise edition.|
 |Configuration_ApplyColumnstoreIndexing|Applies columnstore indexing to `Sales.OrderLines` and `Sales.InvoiceLines` and reindexes appropriately.|
 |Configuration_ApplyFullTextIndexing|Applies fulltext indexes to `Application.People`, `Sales.Customers`, `Purchasing.Suppliers`, and `Warehouse.StockItems`. Replaces `Website.SearchForPeople`, `Website.SearchForSuppliers`, `Website.SearchForCustomers`, `Website.SearchForStockItems`, `Website.SearchForStockItemsByTags` with replacement procedures that use fulltext indexing.|
@@ -199,7 +199,7 @@ These procedures are used to configure the sample. They are used to apply enterp
 |Configuration_EnableInMemory|Adds a memory-optimized filegroup (when not working in Azure), replaces `Warehouse.ColdRoomTemperatures`, `Warehouse.VehicleTemperatures` with in-memory equivalents, and migrates the data, recreates the `Website.OrderIDList`, `Website.OrderList`, `Website.OrderLineList`, `Website.SensorDataList` table types with memory-optimized equivalents, drops and recreates the procedures `Website.InvoiceCustomerOrders`, `Website.InsertCustomerOrders`, and `Website.RecordColdRoomTemperatures` that uses these table types.|
 |Configuration_RemoveAuditing|Removes the auditing configuration.|
 |Configuration_RemoveRowLevelSecurity|Removes the row level security configuration (this is needed for changes to the associated tables).|
-|CreateRoleIfNonExistant|Creates a database role if it doesn't already exist.|
+|CreateRoleIfNonExistent|Creates a database role if it doesn't already exist.|
 
 
 ### Sequences Schema

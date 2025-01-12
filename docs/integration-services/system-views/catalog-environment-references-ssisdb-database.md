@@ -22,7 +22,7 @@ ms.topic: "language-reference"
 |environment_folder_name|**sysname**|The name of the folder if the environment is located by using an absolute reference.|  
 |environment_name|**sysname**|The name of the environment that is referenced by the project.|  
 |validation_status|**char(1)**|The status of the validation.|  
-|last_validation_time|**datatimeoffset(7)**|The time of the last validation.|  
+|last_validation_time|**datetimeoffset(7)**|The time of the last validation.|  
   
 ## Remarks  
 - This view displays a row for each environment reference in the catalog.  

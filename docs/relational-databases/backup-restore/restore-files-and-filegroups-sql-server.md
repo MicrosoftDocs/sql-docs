@@ -177,7 +177,7 @@ helpviewer_keywords:
 ```sql  
 USE master;  
 GO  
--- Restore the files and filesgroups for MyDatabase.  
+-- Restore the files and filegroups for MyDatabase.  
 RESTORE DATABASE MyDatabase  
    FILE = 'MyDatabase_data_1',  
    FILEGROUP = 'new_customers',  

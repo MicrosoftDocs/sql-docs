@@ -11,7 +11,7 @@ ms.custom:
   - ignite-2024
 helpviewer_keywords:
   - "full-text search [SQL Server], permissions"
-  - "denying permissions [SQL Server], fulll-text"
+  - "denying permissions [SQL Server], full-text"
   - "full-text catalogs [SQL Server], permissions"
   - "full-text stoplist [SQL Server], permissions"
   - "DENY statement, full-text permissions"

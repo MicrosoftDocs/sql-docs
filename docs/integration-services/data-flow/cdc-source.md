@@ -161,7 +161,7 @@ use <cdc-enabled-database-name>
 -   **Net with merge**: This mode is similar to the regular Net mode but with Insert and Update operations merged into a single Merge operation (UPSERT).  
   
 > [!NOTE]  
->  For all Net change options, the source table must have a primary key or unique index. For tables without a primary key or unique indes, you must yse the **All** option.  
+>  For all Net change options, the source table must have a primary key or unique index. For tables without a primary key or unique indexes, you must use the **All** option.  
   
  **Variable containing the CDC state**  
  Select the SSIS string package variable that maintains the CDC state for the current CDC context. For more information about the CDC state variable, see [Define a State Variable](../../integration-services/data-flow/define-a-state-variable.md).  

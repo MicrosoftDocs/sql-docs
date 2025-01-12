@@ -183,7 +183,7 @@ Switch to [SQL Server Management Studio](../../ssms/download-sql-server-manageme
     ```
   
     > [!TIP]
-    > This query has been modified to get a smaller sample of data, to make this walkthrough faster. You can remove the TABLESAMPLE clause if you want to get all the data; however, depending on your environment, it might not be possible to load the full datset into R, resulting in an error.
+    > This query has been modified to get a smaller sample of data, to make this walkthrough faster. You can remove the TABLESAMPLE clause if you want to get all the data; however, depending on your environment, it might not be possible to load the full dataset into R, resulting in an error.
   
 5. Use the following lines of code to call the [!INCLUDE[tsql](../../includes/tsql-md.md)] function from your R environment and apply it to the data defined in *featureEngineeringQuery*.
   

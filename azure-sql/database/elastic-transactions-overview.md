@@ -172,7 +172,7 @@ The following sample Transact-SQL code uses [BEGIN DISTRIBUTED TRANSACTION](/sql
 
 ## Combining .NET and Transact-SQL development experience
 
-.NET applications that use System.Transaction classes can combine TransactionScope class with Transact-SQL statement BEGIN DISTRIBUTED TRANSACTION. Within TransactionScope, inner transaction that executes BEGIN DISTRIBUTED TRANSACTION will explicitly be promoted to distributed transaction. Also, when second SqlConnecton is opened within the TransactionScope it will be implicitly promoted to distributed transaction. Once distributed transaction is started, all subsequent transactions requests, whether they are coming from .NET or Transact-SQL, will join the parent distributed transaction. As consequence all nested transaction scopes initiated by BEGIN statement will end up in same transaction and COMMIT/ROLLBACK statements will have following effect on overall outcome:
+.NET applications that use System.Transaction classes can combine TransactionScope class with Transact-SQL statement BEGIN DISTRIBUTED TRANSACTION. Within TransactionScope, inner transaction that executes BEGIN DISTRIBUTED TRANSACTION will explicitly be promoted to distributed transaction. Also, when second SqlConnection is opened within the TransactionScope it will be implicitly promoted to distributed transaction. Once distributed transaction is started, all subsequent transactions requests, whether they are coming from .NET or Transact-SQL, will join the parent distributed transaction. As consequence all nested transaction scopes initiated by BEGIN statement will end up in same transaction and COMMIT/ROLLBACK statements will have following effect on overall outcome:
  * COMMIT statement will not have any effect on transaction scope initiated by BEGIN statement, that is, no results will be committed before Complete() method is invoked on TransactionScope object. If TransactionScope object is destroyed before being completed, all changes done within the scope are rolled back.
  * ROLLBACK statement will cause entire TransactionScope to roll back. Any attempts to enlist new transactions within TransactionScope will fail afterwards, as well as attempt to invoke Complete() on TransactionScope object.
 
@@ -201,7 +201,7 @@ using (TransactionScope s = new TransactionScope())
 }
 ```
 
-Following example shows a transaction that is implicitly promoted to distributed transaction once the second SqlConnecton was started within the TransactionScope.
+Following example shows a transaction that is implicitly promoted to distributed transaction once the second SqlConnection was started within the TransactionScope.
 
 ```csharp
 using (TransactionScope s = new TransactionScope())

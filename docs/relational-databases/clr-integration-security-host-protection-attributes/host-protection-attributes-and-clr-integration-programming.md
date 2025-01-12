@@ -39,7 +39,7 @@ HPAs identify types or members that don't fit the host programming model and rep
 - Could lead to destabilization of server-managed user code.
 - Could lead to destabilization of the server process itself.
 
-[!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] disallows the use of a type or member that has a `HostProtectionAttribute` that specifies a `System.Security.Permissions.HostProtectionResource` enumeration with a value of `ExternalProcessMgmt`, `ExternalThreading`, `MayLeakOnAbort`, `SecurityInfrastructure`, `SelfAffectingProcessMgmnt`, `SelfAffectingThreading`, `SharedState`, `Synchronization`, or `UI`. This prevents the assemblies from calling members that enable sharing state, perform synchronization, might cause a resource leak on termination, or affect the integrity of the [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] process.
+[!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] disallows the use of a type or member that has a `HostProtectionAttribute` that specifies a `System.Security.Permissions.HostProtectionResource` enumeration with a value of `ExternalProcessMgmt`, `ExternalThreading`, `MayLeakOnAbort`, `SecurityInfrastructure`, `SelfAffectingProcessMgmt`, `SelfAffectingThreading`, `SharedState`, `Synchronization`, or `UI`. This prevents the assemblies from calling members that enable sharing state, perform synchronization, might cause a resource leak on termination, or affect the integrity of the [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] process.
 
 ### Disallowed types and members
 

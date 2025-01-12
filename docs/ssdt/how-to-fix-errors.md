@@ -17,7 +17,7 @@ The Error List pane displays any deployment or build errors. Syntax and semantic
   
 1.  Right-click the **Product** table (Product.sql) in **Solution Explorer** and select **View Designer**.  
   
-2.  In the Columns Grid of the designer, right-click the **ShelflLife** column and select **Delete** to delete this column from the table.  
+2.  In the Columns Grid of the designer, right-click the **ShelfLife** column and select **Delete** to delete this column from the table.  
   
 3.  Notice that in the **Error List** pane at the bottom of the screen, a warning, and an error similar to the followings pop up immediately.  
   

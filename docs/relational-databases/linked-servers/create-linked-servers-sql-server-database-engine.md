@@ -26,7 +26,7 @@ Linked servers are typically configured to enable the database engine to execute
 
 After a linked server is created, distributed queries can be run against this server, and queries can join tables from more than one data source. If the linked server is defined as an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or an Azure SQL Managed Instance, remote stored procedures can be executed.  
   
-The capabilities and required arguments of the linked server can vary significantly. The examples in this article provide a typical example but all options aren't described. For more information, see [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md).  
+The capabilities and required arguments of the linked server can vary significantly. The examples in this article provide a typical example but all options aren't described. For more information, see [sp_addlinkedserver &#40;Transact-SQL&#41;](../system-stored-procedures/sp-addlinkedserver-transact-sql.md).  
   
 ## Permissions
 
@@ -70,7 +70,7 @@ Specify the **Server type** and related information if needed:
         Type the name of the data source as interpreted by the OLE DB provider. If you're connecting to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], provide the instance name.  
 
   - **Provider string**  
-        Type the unique programmatic identifier (PROGID) of the OLE DB provider that corresponds to the data source. For examples of valid provider strings, see [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md).  
+        Type the unique programmatic identifier (PROGID) of the OLE DB provider that corresponds to the data source. For examples of valid provider strings, see [sp_addlinkedserver &#40;Transact-SQL&#41;](../system-stored-procedures/sp-addlinkedserver-transact-sql.md).  
 
   - **Location**  
         Type the location of the database as interpreted by the OLE DB provider.  
@@ -179,7 +179,7 @@ To view or specify server options, select the **Server Options** page. You can e
      If 0, use the `sp_configure` default [remote query timeout](../../database-engine/configure-windows/configure-the-remote-query-timeout-server-configuration-option.md) option value.  
   
 - **Enable Promotion of Distributed Transactions**  
-     Use this option to protect the actions of a server-to-server procedure through a [!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator (MS DTC) transaction. When this option is TRUE, calling a remote stored procedure starts a distributed transaction and enlists the transaction with MS DTC. For more information, see [sp_serveroption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md).  
+     Use this option to protect the actions of a server-to-server procedure through a [!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator (MS DTC) transaction. When this option is TRUE, calling a remote stored procedure starts a distributed transaction and enlists the transaction with MS DTC. For more information, see [sp_serveroption &#40;Transact-SQL&#41;](../system-stored-procedures/sp-serveroption-transact-sql.md).  
   
 ### Save the linked server
 
@@ -225,7 +225,7 @@ Provider options are defined as follows:
   
 ## <a name="TsqlProcedure"></a> Create a linked server with Transact-SQL  
 
- To create a linked server by using [!INCLUDE[tsql](../../includes/tsql-md.md)], use the [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md), [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md), and [sp_addlinkedsrvlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md) statements.  
+ To create a linked server by using [!INCLUDE[tsql](../../includes/tsql-md.md)], use the [sp_addlinkedserver &#40;Transact-SQL&#41;](../system-stored-procedures/sp-addlinkedserver-transact-sql.md), [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md), and [sp_addlinkedsrvlogin &#40;Transact-SQL&#41;](../system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md) statements.  
   
 This example creates a linked server to another instance of SQL Server using Transact-SQL:
   
@@ -294,6 +294,6 @@ If you're using Azure SQL Managed Instance, see the following examples from [sp_
 
 Learn more about managing linked servers in these articles:
 
-- [Linked servers &#40;Database Engine&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md)
-- [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)
-- [sp_serveroption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)
+- [Linked servers &#40;Database Engine&#41;](linked-servers-database-engine.md)
+- [sp_addlinkedserver &#40;Transact-SQL&#41;](../system-stored-procedures/sp-addlinkedserver-transact-sql.md)
+- [sp_serveroption &#40;Transact-SQL&#41;](../system-stored-procedures/sp-serveroption-transact-sql.md)

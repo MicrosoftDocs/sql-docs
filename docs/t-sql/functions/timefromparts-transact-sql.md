@@ -49,7 +49,7 @@ TIMEFROMPARTS ( hour, minute, seconds, fractions, precision )
  **time(** *precision* **)**  
   
 ## Remarks  
- TIMEROMPARTS returns a fully initialized time value. If the arguments are invalid, then an error is raised. If any of the parameters are null, null is returned. However, if the *precision* argument is null, then an error is raised.  
+ TIMEFROMPARTS returns a fully initialized time value. If the arguments are invalid, then an error is raised. If any of the parameters are null, null is returned. However, if the *precision* argument is null, then an error is raised.  
   
  The *fractions* argument depends on the *precision* argument. For example, if *precision* is 7, then each fraction represents 100 nanoseconds; if *precision* is 3, then each fraction represents a millisecond. If the value of *precision* is zero, then the value of *fractions* must also be zero; otherwise, an error is raised.  
   

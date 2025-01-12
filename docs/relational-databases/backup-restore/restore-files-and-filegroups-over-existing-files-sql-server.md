@@ -135,7 +135,7 @@ helpviewer_keywords:
 ```sql  
 USE master;  
 GO  
--- Restore the files and filesgroups for MyNwind.  
+-- Restore the files and filegroups for MyNwind.  
 RESTORE DATABASE MyNwind  
    FILE = 'MyNwind_data_1',  
    FILEGROUP = 'new_customers',  

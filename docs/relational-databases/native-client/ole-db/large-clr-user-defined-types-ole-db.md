@@ -91,7 +91,7 @@ helpviewer_keywords:
 ## COLUMNS Rowset (Schema Rowsets)  
  The following column values are returned for UDT types:  
   
-|Column type|DATA_TYPE|COLUMN_FLAGS, DBCOLUMFLAGS_ISLONG|CHARACTER_OCTET_LENGTH|  
+|Column type|DATA_TYPE|COLUMN_FLAGS, DBCOLUMNFLAGS_ISLONG|CHARACTER_OCTET_LENGTH|  
 |-----------------|----------------|-----------------------------------------|------------------------------|  
 |DBTYPE_UDT<br /><br /> (length less than or equal to 8,000 bytes)|DBTYPE_UDT|Clear|*n*|  
 |DBTYPE_UDT<br /><br /> (length greater than 8,000 bytes)|DBTYPE_UDT|Set|0|  

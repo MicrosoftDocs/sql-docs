@@ -226,7 +226,7 @@ helpviewer_keywords:
 |DTSMQMessageType_String|0|  
 |DTSMQMessageType_DataFile|1|  
 |DTSMQMessageType_Variables|2|  
-|DTSMQMessagType_StringMessageToVariable|3|  
+|DTSMQMessageType_StringMessageToVariable|3|  
   
  **StringCompareType** property-Set by using values from the **MQStringMessageCompare** enumeration.  
   

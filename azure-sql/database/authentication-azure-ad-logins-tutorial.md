@@ -45,7 +45,7 @@ In this tutorial, you learn how to:
    > The first Microsoft Entra login must be created by the Microsoft Entra admin. The Microsoft Entra admin can be a Microsoft Entra user or group. A SQL login cannot create Microsoft Entra logins.
 
 1. Using [SQL Server Management Studio (SSMS)](/sql/ssms/download-sql-server-management-studio-ssms), log into your SQL Database with the Microsoft Entra admin account set up for the server.
-1. Expand **Databases** > **System Databases**. Right-click the `master` database and selct **New Query** to open a new query window in the context of the `master` database. 
+1. Expand **Databases** > **System Databases**. Right-click the `master` database and select **New Query** to open a new query window in the context of the `master` database. 
 1. Run the following query:
 
    ```sql

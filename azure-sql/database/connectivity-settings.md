@@ -209,7 +209,7 @@ You can use the Azure portal and SQL audit logs to identify clients that are con
 
 In the Azure portal, go to **Metrics** under **Monitoring** for your database resource, and then filter by *Successful connections*, and *TLS versions* = `1.0` and `1.1`:
 
-:::image type="content" source="media/connectivity-settings/connections-in-portal.png" alt-text="Screenshot of the montoring page for the database resource in the Azure portal with successful tls 1.0 and 1.1 connections filtered. "::: 
+:::image type="content" source="media/connectivity-settings/connections-in-portal.png" alt-text="Screenshot of the monitoring page for the database resource in the Azure portal with successful tls 1.0 and 1.1 connections filtered. "::: 
  
 You can also query [sys.fn_get_audit_file](/sql/relational-databases/system-functions/sys-fn-get-audit-file-transact-sql) directly within your database to view the `client_tls_version_name` in the audit file: 
 

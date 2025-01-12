@@ -12,7 +12,7 @@ ms.custom:
 f1_keywords:
   - "RAISERROR"
   - "RAISERROR_TSQL"
-  - "RAISEERROR_TSQL"
+  - "RAISERROR_TSQL"
 helpviewer_keywords:
   - "sysmessages system table"
   - "errors [SQL Server], RAISERROR statement"

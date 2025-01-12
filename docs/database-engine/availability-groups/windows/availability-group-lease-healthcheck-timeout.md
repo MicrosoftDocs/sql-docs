@@ -71,7 +71,7 @@ The failure condition level of the AG changes the failure conditions for the hea
 | 2: OnServerUnresponsive | If no data is received from `sp_server_diagnostics` for the HealthCheckTimeout
 | 3: OnCriticalServerError | (Default) If the system component reports an error
 | 4: OnModerateServerError | If the resource component reports an error  
-| 5: OnAnyQualifiedFailureConitions | If the query processing component reports an error
+| 5: OnAnyQualifiedFailureConditions | If the query processing component reports an error
 
 ## Updating cluster and Always On timeout values
 

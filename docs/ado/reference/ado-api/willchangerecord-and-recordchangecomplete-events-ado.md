@@ -24,7 +24,7 @@ The **WillChangeRecord** event is called before one or more records (rows) in th
 ```  
   
 WillChangeRecord adReason, cRecords, adStatus, pRecordset  
-RecordChangeCompleteadReason, cRecords, pError, adStatus, pRecordset  
+RecordChangeCompletedReason, cRecords, pError, adStatus, pRecordset  
 ```  
   
 #### Parameters  

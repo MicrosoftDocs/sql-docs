@@ -217,7 +217,7 @@ helpviewer_keywords:
   
 -   When the witness is connected to a partner, the witness is in the CONNECTED state relative to that partner and has quorum with that partner. In this case, the database can be made available, even if one of the partners is unavailable.  
   
--   When the witness exists but is not connected to a partner, the witness is in the UNKOWN or DISCONNECTED state relative to that partner. In this case, the witness lacks quorum with that partner, and if the partners are not connected to each other, the database becomes unavailable.  
+-   When the witness exists but is not connected to a partner, the witness is in the UNKNOWN or DISCONNECTED state relative to that partner. In this case, the witness lacks quorum with that partner, and if the partners are not connected to each other, the database becomes unavailable.  
   
  For information about quorum, see [Quorum: How a Witness Affects Database Availability &#40;Database Mirroring&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
   

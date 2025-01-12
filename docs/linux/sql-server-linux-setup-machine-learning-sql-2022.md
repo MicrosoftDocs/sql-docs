@@ -172,7 +172,7 @@ Available installation packages for [!INCLUDE [sssql22-md](../includes/sssql22-m
 
 ### Configure Python runtime with SQL Server
 
-1. Configure the installed Python runtime with SQL Server, where `pythonbinbath` is set to the path of the installed python binary, and `datadirectories` includes the path where the packages are installed for the desired version of python, for example, `/usr/lib/python3.10/dist-packages`. Use the following script with your actual installation path:
+1. Configure the installed Python runtime with SQL Server, where `pythonbinpath` is set to the path of the installed python binary, and `datadirectories` includes the path where the packages are installed for the desired version of python, for example, `/usr/lib/python3.10/dist-packages`. Use the following script with your actual installation path:
 
     ```bash
     sudo /opt/mssql/bin/mssql-conf set extensibility pythonbinpath /usr/bin/python3.10

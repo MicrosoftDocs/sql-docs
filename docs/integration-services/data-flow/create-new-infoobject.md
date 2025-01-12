@@ -37,7 +37,7 @@ ms.topic: ui-reference
         > [!NOTE]  
         >  Each row in the table represents a column in the data flow of the package.  
   
-    3.  To create an InfoObject while creating an InfoSouce for transactional data, select **InfoSource**, and then click **Create**. In the **Create InfoSource** dialog box, select **Transaction Data**, and then click **OK**. In the **Create InfoSource for Transaction Data** dialog box, in the **IObject** column for one of the rows in the list, select **Create** to open the **Create New InfoObject** dialog box.  
+    3.  To create an InfoObject while creating an InfoSource for transactional data, select **InfoSource**, and then click **Create**. In the **Create InfoSource** dialog box, select **Transaction Data**, and then click **OK**. In the **Create InfoSource for Transaction Data** dialog box, in the **IObject** column for one of the rows in the list, select **Create** to open the **Create New InfoObject** dialog box.  
   
         > [!NOTE]  
         >  Each row in the table represents a column in the data flow of the package.  

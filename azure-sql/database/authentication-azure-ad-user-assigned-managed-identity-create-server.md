@@ -265,11 +265,11 @@ To check the server status, you can use the following script:
 ```rest
 $uri = 'https://management.azure.com/subscriptions/'+$subscriptionId+'/resourceGroups/'+$resourceGroupName+'/providers/Microsoft.Sql/servers/'+$serverName+'?api-version=2020-11-01-preview&$expand=administrators/activedirectory'
 
-$responce=Invoke-WebRequest -Uri $uri -Method PUT -Headers $authHeader -Body $body -ContentType "application/json"
+$response=Invoke-WebRequest -Uri $uri -Method PUT -Headers $authHeader -Body $body -ContentType "application/json"
 
-$responce.statuscode
+$response.statuscode
 
-$responce.content
+$response.content
 ```
 
 # [ARM Template](#tab/arm-template)

@@ -161,7 +161,7 @@ $parameters = @{
     subnetName = $destinationSubnetName
 }
 
-#Initiating subnet prepartion script
+#Initiating subnet preparation script
 Invoke-Command -ScriptBlock ([Scriptblock]::Create((iwr ($scriptUrlBase+'/delegateSubnet.ps1?t='+ [DateTime]::Now.Ticks)).Content)) -ArgumentList $parameters
 ```
 

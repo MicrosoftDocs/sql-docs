@@ -432,14 +432,14 @@ For more information about time-based retention policy for containers, see [Conf
 
 ```azurepowershell-interactive
 Write-host "Configuring a time-based retention policy..." 
-$immutabilityPerdiod = 1
+$immutabilityPeriod = 1
 $containerName = "sqldbledgerdigests"
 $policy = Set-AzRmStorageContainerImmutabilityPolicy `
    -ResourceGroupName $resourceGroupName `
     -StorageAccountName $storageAccountName `
     -ContainerName $containerName `
     -AllowProtectedAppendWrite $true `
-    -ImmutabilityPeriod $immutabilityPerdiod
+    -ImmutabilityPeriod $immutabilityPeriod
 
 Lock-AzRmStorageContainerImmutabilityPolicy `
    -ResourceGroupName $resourceGroupName `

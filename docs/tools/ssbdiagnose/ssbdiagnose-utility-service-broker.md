@@ -117,7 +117,7 @@ Specifies that errors or messages that have the specified *error_id* not be incl
 
 #### \<baseconnectionoptions>
 
-Specifies the base connection information that is used by **ssbdiagnose** when connection options aren't included in a specific clause. The connection information that is given in a specific clause overrides the `baseconnectionoption` information. This is performed separately for each parameter. For example, if both `-S` and `-d` are specified in `baseconnetionoptions`, and only `-d` is specified in `toconnetionoptions`, **ssbdiagnose** uses `-S` from `baseconnetionoptions` and `-d` from `toconnetionoptions`.
+Specifies the base connection information that is used by **ssbdiagnose** when connection options aren't included in a specific clause. The connection information that is given in a specific clause overrides the `baseconnectionoption` information. This is performed separately for each parameter. For example, if both `-S` and `-d` are specified in `baseconnectionoptions`, and only `-d` is specified in `toconnectionoptions`, **ssbdiagnose** uses `-S` from `baseconnectionoptions` and `-d` from `toconnectionoptions`.
 
 #### CONFIGURATION
 
@@ -345,7 +345,7 @@ By default, **ssbdiagnose** doesn't report error events. It only reports the und
 
 ## SQLCMD environment variables
 
-The **ssbdiagnose** utility supports the `SQLCMDSERVER`, `SQLCMDUSER`, `SQLCMDPASSWORD`, and `SQLCMDLOGINTIMOUT` environment variables that are also used by the **sqlcmd** utility. You can set the environment variables either by using the command prompt `SET` command, or by using the `setvar` command in [!INCLUDE [tsql](../../includes/tsql-md.md)] scripts that you run by using **sqlcmd**. For more information about how to use `setvar` in **sqlcmd**, see [sqlcmd - Use with scripting variables](../sqlcmd/sqlcmd-use-scripting-variables.md).
+The **ssbdiagnose** utility supports the `SQLCMDSERVER`, `SQLCMDUSER`, `SQLCMDPASSWORD`, and `SQLCMDLOGINTIMEOUT` environment variables that are also used by the **sqlcmd** utility. You can set the environment variables either by using the command prompt `SET` command, or by using the `setvar` command in [!INCLUDE [tsql](../../includes/tsql-md.md)] scripts that you run by using **sqlcmd**. For more information about how to use `setvar` in **sqlcmd**, see [sqlcmd - Use with scripting variables](../sqlcmd/sqlcmd-use-scripting-variables.md).
 
 ## Permissions
 

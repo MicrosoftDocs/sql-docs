@@ -23,7 +23,7 @@ helpviewer_keywords:
 - **Facet**: Availability group  
   
 ## Description  
- This policy rolls up the data synchronization state of all availability replicas in the availability group and checks if the synchronization of any availability replica is not operational. The policy is in an unhealthy state if any of the data synchronization states of the availability replica is NOT SYNCRONIZING.  
+ This policy rolls up the data synchronization state of all availability replicas in the availability group and checks if the synchronization of any availability replica is not operational. The policy is in an unhealthy state if any of the data synchronization states of the availability replica is NOT SYNCHRONIZING.  
   
  This policy is in a healthy state if none of the data synchronization states of the availability replica is NOT SYNCHRONIZING.  
  
@@ -31,7 +31,7 @@ helpviewer_keywords:
  In this availability group, at least one secondary replica has a NOT SYNCHRONIZING synchronization state and is not receiving data from the primary replica.  
   
 ## Possible Solution  
- Use the availability replica policy state to find the availability replica with a NOT SYNCHROINIZING state, and then resolve the issue at the availability replica.  
+ Use the availability replica policy state to find the availability replica with a NOT SYNCHRONIZING state, and then resolve the issue at the availability replica.  
   
 ## See Also  
  [Overview of Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   

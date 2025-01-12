@@ -70,7 +70,7 @@ In paginated reports, you can format any part of the text in a text box independ
  
 1. Set heading elements. For example, on the **Accessibility** tab:
 
-    - **Accessibility options** Overwrite the structural type to give the Texbox a different semantic meaning output format, like HTML and Accessible PDF.
+    - **Accessibility options** Overwrite the structural type to give the Textbox a different semantic meaning output format, like HTML and Accessible PDF.
     - **Overwrite structure type** allows you to choose HTML heading elements H1-H6.
 
 1. Make a selection. 

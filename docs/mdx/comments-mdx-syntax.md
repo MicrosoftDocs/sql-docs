@@ -38,7 +38,7 @@ ms.custom: mdx
 ```mdx
 //An example of a comment using the double-forward slash
 
---An example of a comment using the double-hypen  
+--An example of a comment using the double-hyphen  
 
 /*An example of a  
 multi-line  

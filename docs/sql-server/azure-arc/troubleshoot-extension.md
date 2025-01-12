@@ -31,10 +31,10 @@ resources
 | join kind=leftouter (
     resources
     | where type == "microsoft.hybridcompute/machines"
-    | project machineId = id, MachineName = name, subscriptionId, LowerMachineName = tolower(name), resourceGroup , MachineStatus= properties.status , MachineProvisioningStatus= properties.provisioningState, MachineErrors = properties.errorDetails //Project relvant machine health information.
+    | project machineId = id, MachineName = name, subscriptionId, LowerMachineName = tolower(name), resourceGroup , MachineStatus= properties.status , MachineProvisioningStatus= properties.provisioningState, MachineErrors = properties.errorDetails //Project relevant machine health information.
 ) on $left.targetMachineName == $right.LowerMachineName and $left.resourceGroup == $right.resourceGroup and $left.subscriptionId == $right.subscriptionId // Join Based on MachineName in the id and the machine's name, the resource group, and the subscription. This join allows us to present the data of the machine as well as the extension in the final output.
 | extend statusExpirationLengthRange = 3d // Change this value to change the acceptable range for the last time an extension should have reported its status.
-| extend startDate = startofday(now() - statusExpirationLengthRange), endDate = startofday(now()) // Get the start and end positon for the given range.
+| extend startDate = startofday(now() - statusExpirationLengthRange), endDate = startofday(now()) // Get the start and end position for the given range.
 | extend extractedDateString = extract("timestampUTC : (\\d{4}\\W\\d{2}\\W\\d{2})", 1, tostring(properties.instanceView.status.message)) // Extracting the date string for the LastUploadTimestamp. Is empty if none is found.
 | extend extractedDateStringYear = split(extractedDateString, '/')[0], extractedDateStringMonth = split(extractedDateString, '/')[1], extractedDateStringDay = split(extractedDateString, '/')[2] // Identifying each of the parts of the date that was extracted from the message.
 | extend extractedDate = todatetime(strcat(extractedDateStringYear,"-",extractedDateStringMonth,"-",extractedDateStringDay,"T00:00:00Z")) // Converting to a datetime object and rewriting string into ISO format because todatetime() does not work using the previous format.
@@ -59,9 +59,9 @@ resources
                 iif(MachineProvisioningStatus != "Succeeded", strcat("Machine provisioning status is ", MachineProvisioningStatus, ". Investigate and resolve machine provisioning status"),
                     iff(MachineErrors != "[]", "Machine is reporting errors. Investigate and resolve machine errors",
                         iif(properties.provisioningState != "Succeeded", strcat("Extension provisioning status is ", properties.provisioningState,". Investigate and resolve extension provisioning state."),
-                            iff(properties.instanceView.status.message !contains "SQL Server Extension Agent:" and properties.instanceView.status.message contains "SQL Server Extension Agent Deployer", "SQL Server extension eeployer ran. However, SQL Server extension seems to not be running. Verify that the extension is currently running.",
+                            iff(properties.instanceView.status.message !contains "SQL Server Extension Agent:" and properties.instanceView.status.message contains "SQL Server Extension Agent Deployer", "SQL Server extension employer ran. However, SQL Server extension seems to not be running. Verify that the extension is currently running.",
                                 iff(properties.instanceView.status.message !contains "uploadStatus : OK" or isNotInDateRange or properties.instanceView.status.message !contains "SQL Server Extension Agent: Healthy", "Extension reported as unhealthy. View FailureReasons and LastExtensionStatusMessage for more information as to the cause of the failure.",
-                                    "Unable to reccommend actions. Please view FailureReasons."
+                                    "Unable to recommend actions. Please view FailureReasons."
                                 )
                             )
                         )
@@ -81,7 +81,7 @@ resources
     LastExtensionStatusMessage = properties.instanceView.status.message
 ```
 
-To identify possible problems, review the value in the **RecommendedAction** or the **FailureReasons** column. The ReccommendedAction column provides possible first steps to solve the issue or clues for what to check first. The FailureReasons column lists the reasons the resource was deemed unhealthy. Finally, check **LastExtensionStatusMessage** to see the last reported message by the agent.
+To identify possible problems, review the value in the **RecommendedAction** or the **FailureReasons** column. The RecommendedAction column provides possible first steps to solve the issue or clues for what to check first. The FailureReasons column lists the reasons the resource was deemed unhealthy. Finally, check **LastExtensionStatusMessage** to see the last reported message by the agent.
 
 ## Identify unhealthy extension (PowerShell)
 
@@ -105,10 +105,10 @@ resources
 | join kind=leftouter (
     resources
     | where type == "microsoft.hybridcompute/machines"
-    | project machineId = id, MachineName = name, subscriptionId, LowerMachineName = tolower(name), resourceGroup , MachineStatus= properties.status , MachineProvisioningStatus= properties.provisioningState, MachineErrors = properties.errorDetails //Project relvant machine health information.
+    | project machineId = id, MachineName = name, subscriptionId, LowerMachineName = tolower(name), resourceGroup , MachineStatus= properties.status , MachineProvisioningStatus= properties.provisioningState, MachineErrors = properties.errorDetails //Project relevant machine health information.
 ) on $left.targetMachineName == $right.LowerMachineName and $left.resourceGroup == $right.resourceGroup and $left.subscriptionId == $right.subscriptionId // Join Based on MachineName in the id and the machine's name, the resource group, and the subscription. This join allows us to present the data of the machine as well as the extension in the final output.
 | extend statusExpirationLengthRange = 3d // Change this value to change the acceptable range for the last time an extension should have reported its status.
-| extend startDate = startofday(now() - statusExpirationLengthRange), endDate = startofday(now()) // Get the start and end positon for the given range.
+| extend startDate = startofday(now() - statusExpirationLengthRange), endDate = startofday(now()) // Get the start and end position for the given range.
 | extend extractedDateString = extract("timestampUTC : (\\d{4}\\W\\d{2}\\W\\d{2})", 1, tostring(properties.instanceView.status.message)) // Extracting the date string for the LastUploadTimestamp. Is empty if none is found.
 | extend extractedDateStringYear = split(extractedDateString, '/')[0], extractedDateStringMonth = split(extractedDateString, '/')[1], extractedDateStringDay = split(extractedDateString, '/')[2] // Identifying each of the parts of the date that was extracted from the message.
 | extend extractedDate = todatetime(strcat(extractedDateStringYear,"-",extractedDateStringMonth,"-",extractedDateStringDay,"T00:00:00Z")) // Converting to a datetime object and rewriting string into ISO format because todatetime() does not work using the previous format.
@@ -133,9 +133,9 @@ resources
                 iif(MachineProvisioningStatus != "Succeeded", strcat("Machine provisioning status is ", MachineProvisioningStatus, ". Investigate and resolve machine provisioning status"),
                     iff(MachineErrors != "[]", "Machine is reporting errors. Investigate and resolve machine errors",
                         iif(properties.provisioningState != "Succeeded", strcat("Extension provisioning status is ", properties.provisioningState,". Investigate and resolve extension provisioning state."),
-                            iff(properties.instanceView.status.message !contains "SQL Server Extension Agent:" and properties.instanceView.status.message contains "SQL Server Extension Agent Deployer", "SQL Server extension eeployer ran. However, SQL Server extension seems to not be running. Verify that the extension is currently running.",
+                            iff(properties.instanceView.status.message !contains "SQL Server Extension Agent:" and properties.instanceView.status.message contains "SQL Server Extension Agent Deployer", "SQL Server extension employer ran. However, SQL Server extension seems to not be running. Verify that the extension is currently running.",
                                 iff(properties.instanceView.status.message !contains "uploadStatus : OK" or isNotInDateRange or properties.instanceView.status.message !contains "SQL Server Extension Agent: Healthy", "Extension reported as unhealthy. View FailureReasons and LastExtensionStatusMessage for more information as to the cause of the failure.",
-                                    "Unable to reccommend actions. Please view FailureReasons."
+                                    "Unable to recommend actions. Please view FailureReasons."
                                 )
                             )
                         )
@@ -162,7 +162,7 @@ $result = Search-AzGraph -Query $query
 $result | Format-Table -Property ExtensionHealth, LastUploadTimestamp, LastUploadStatus, Message
 ```
 
-To identify possible problems, review the value in the **RecommendedAction** or the **FailureReasons** column. The ReccommendedAction column provides possible first steps to solve the issue or clues for what to check first. The FailureReasons column lists the reasons the resource was deemed unhealthy. Finally, check **LastExtensionStatusMessage** to see the last reported message by the agent.
+To identify possible problems, review the value in the **RecommendedAction** or the **FailureReasons** column. The RecommendedAction column provides possible first steps to solve the issue or clues for what to check first. The FailureReasons column lists the reasons the resource was deemed unhealthy. Finally, check **LastExtensionStatusMessage** to see the last reported message by the agent.
 
 ## Identify extensions missing updates
 

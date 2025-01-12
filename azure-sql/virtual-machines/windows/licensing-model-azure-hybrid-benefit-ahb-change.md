@@ -111,7 +111,7 @@ Once CMB-AHB is enabled for a subscription, the **License type** on the **Overvi
 
 With CMB-AHB, making license type changes to individual VMs is no longer possible, and you see the following message on the **Configure** pane of your *SQL virtual machines* resource: 
 
-`Your organization manages licenses assigned to Azure at a scope level such as Azure subscription instead of each individual resource. Billing administrators can manage licenses centrally under Cost Manamagent + Billing. `
+`Your organization manages licenses assigned to Azure at a scope level such as Azure subscription instead of each individual resource. Billing administrators can manage licenses centrally under Cost Management + Billing. `
 
 
 > [!IMPORTANT]

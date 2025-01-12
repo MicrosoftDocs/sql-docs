@@ -128,7 +128,7 @@ If you define a query by using the MDX builder in SQL Server Management Studio a
 SELECT {[Measures].[Internet Sales Count], [Measures].[Internet Sales-Sales Amount]} ON AXIS(0), 
    {[Product].[Product Line].[Product Line].MEMBERS} ON AXIS(1) 
    FROM [Analysis Services Tutorial] 
-   WHERE [Sales Territory].[Sales Territory Countr,y].[Australia]
+   WHERE [Sales Territory].[Sales Territory Country].[Australia]
 ```
 
 You can still run this query as a predefined MDX string. However, to build the same query using R using the `axis()` function, you must renumber the axes starting at 1.

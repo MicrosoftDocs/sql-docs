@@ -108,7 +108,7 @@ public class Program
     public static void Main(string[] args)
     {
         // Use your own server, database, and user ID.
-        // Connetion string - user ID is not provided and is asked interactively.
+        // Connection string - user ID is not provided and is asked interactively.
         string ConnectionString = @"Server=<your server>.database.windows.net; Authentication=Active Directory Interactive; Database=<your database>";
 
 

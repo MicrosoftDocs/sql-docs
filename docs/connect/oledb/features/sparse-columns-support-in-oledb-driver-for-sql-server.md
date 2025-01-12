@@ -38,7 +38,7 @@ helpviewer_keywords:
 |**queryout** behavior for BCP.|No change in the handling of explicitly named columns from previous versions of OLE DB Driver for SQL Server.<br /><br /> Scenarios involving import and export between tables with different schemas may require special handling.<br /><br /> For more information about BCP, see Bulk Copy (BCP) Support for Sparse Columns, later in this topic.|  
   
 ## Down-Level Client Behavior  
- Down-level clients will return metadata only for columns that are not members of the sparse **column_set** for SQLColumns and DBSCHMA_COLUMNS.
+ Down-level clients will return metadata only for columns that are not members of the sparse **column_set** for SQLColumns and DBSCHEMA_COLUMNS.
   
  Down-level clients can access columns that are members of the sparse **column_set** by name, and the **column_set** column will be accessible as an XML column to [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] clients.  
   

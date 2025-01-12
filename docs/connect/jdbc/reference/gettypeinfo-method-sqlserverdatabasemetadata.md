@@ -44,7 +44,7 @@ public java.sql.ResultSet getTypeInfo()
 |CREATE_PARAMS|**String**|The description of the creation parameters for the data type.|  
 |NULLABLE|**short**|Indicates if the column can contain a null value. It can be one of the following values:<br /><br /> typeNoNulls (0)<br /><br /> typeNullable (1)<br /><br /> typeNullableUnknown (2)|  
 |CASE_SENSITIVE|**boolean**|Indicates if the data type is case sensitive. "**true**" if the type is case sensitive; otherwise, "**false**".|  
-|SEARCHABLE|**short**|Indicates if the column can be used in a SQL WHERE clause. It can be one of the following values:<br /><br /> typePredNone (0)<br /><br /> typePredChar (1)<br /><br /> typePredBasic (2)<br /><br /> typeSeachable (3)|  
+|SEARCHABLE|**short**|Indicates if the column can be used in a SQL WHERE clause. It can be one of the following values:<br /><br /> typePredNone (0)<br /><br /> typePredChar (1)<br /><br /> typePredBasic (2)<br /><br /> typeSearchable (3)|  
 |UNSIGNED_ATTRIBUTE|**boolean**|Indicates the sign of the data type. "**true**" if the type is unsigned; otherwise, "**false**".|  
 |FIXED_PREC_SCALE|**boolean**|Indicates that the data type can be a money value. "**true**" if the data type is money type; otherwise, "**false**".|  
 |AUTO_INCREMENT|**boolean**|Indicates that the data type can be automatically incremented. "**true**" if the type can be auto incremented; otherwise, "**false**".|  

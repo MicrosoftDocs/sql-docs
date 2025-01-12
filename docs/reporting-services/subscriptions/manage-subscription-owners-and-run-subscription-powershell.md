@@ -365,7 +365,7 @@ Param(
   )  
   
 $rs2010 = New-WebServiceProxy -Uri "https://$server/ReportService2010.asmx" -Namespace SSRS.ReportingService2010 -UseDefaultCredential ;  
-#event type is case sensative to what is in the rsreportserver.config  
+#event type is case sensitive to what is in the rsreportserver.config  
 $rs2010.FireEvent("TimedSubscription",$subscriptionid,$site)  
   
 Write-Host " "  

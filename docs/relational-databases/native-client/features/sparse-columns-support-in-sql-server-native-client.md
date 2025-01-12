@@ -40,7 +40,7 @@ helpviewer_keywords:
 |**queryout** behavior for BCP.|No change in the handling of explicitly named columns from previous versions of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.<br /><br /> Scenarios involving import and export between tables with different schemas may require special handling.<br /><br /> For more information about BCP, see Bulk Copy (BCP) Support for Sparse Columns, later in this topic.|  
   
 ## Down-Level Client Behavior  
- Down-level clients will return metadata only for columns that are not members of the sparse **column_set** for SQLColumns and DBSCHMA_COLUMNS. The additional OLE DB schema rowsets introduced in [!INCLUDE[sql2008-md](../../../includes/sql2008-md.md)] Native Client will not be available, nor will the modifications to SQLColumns in ODBC via SQL_SOPT_SS_NAME_SCOPE.  
+ Down-level clients will return metadata only for columns that are not members of the sparse **column_set** for SQLColumns and DBSCHEMA_COLUMNS. The additional OLE DB schema rowsets introduced in [!INCLUDE[sql2008-md](../../../includes/sql2008-md.md)] Native Client will not be available, nor will the modifications to SQLColumns in ODBC via SQL_SOPT_SS_NAME_SCOPE.  
   
  Down-level clients can access columns that are members of the sparse **column_set** by name, and the **column_set** column will be accessible as an XML column to [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] clients.  
   

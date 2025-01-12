@@ -29,7 +29,7 @@ ms.topic: "language-reference"
 |object_type|**smallint**|The type of object. The object may be a project (`20`) or a package (`30`).|  
 |object_id|**bigint**|The ID of the object affected by the operation.|  
 |start_time|**datetimeoffset(7)**|The time when the operation started.|  
-|end_time|**datetimeoffsset(7)**|The time when the operation ended.|  
+|end_time|**datetimeoffset(7)**|The time when the operation ended.|  
 |status|**int**|The status of the operation. The possible values are created (`1`), running (`2`), canceled (`3`), failed (`4`), pending (`5`), ended unexpectedly (`6`), succeeded (`7`), stopping (`8`), and completed (`9`).|  
 |caller_sid|**varbinary(85)**|The security ID (SID) of the user if Windows Authentication was used to log on.|  
 |caller_name|**nvarchar(128)**|The name of the account that performed the operation.|  

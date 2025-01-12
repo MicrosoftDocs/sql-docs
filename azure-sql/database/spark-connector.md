@@ -106,7 +106,7 @@ collection.show()
 import com.microsoft.azure.sqldb.spark.config.Config
 import com.microsoft.azure.sqldb.spark.connect._
 
-// Aquire a DataFrame collection (val collection)
+// Acquire a DataFrame collection (val collection)
 
 val config = Config(Map(
   "url"          -> "mysqlserver.database.windows.net",

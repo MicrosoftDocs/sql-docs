@@ -66,7 +66,7 @@ void MoveFirstX() {
   
       // Show current record information and get user's method choice.  
       while (true) {   // Continuous loop.  
-         // Convert variant string to convertable string type.  
+         // Convert variant string to convertible string type.  
          bstrFName = pRstAuthors->Fields->Item["au_fName"]->Value;  
          bstrLName = pRstAuthors->Fields->Item["au_lName"]->Value;  
   

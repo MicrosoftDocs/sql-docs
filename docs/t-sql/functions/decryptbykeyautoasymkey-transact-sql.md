@@ -11,7 +11,7 @@ f1_keywords:
   - "DECRYPTBYKEYAUTOASYMKEY_TSQL"
   - "DECRYPTBYKEYAUTOASYMKEY"
 helpviewer_keywords:
-  - "DECRYPTBYKEYAUTOASYMSKEY function"
+  - "DECRYPTBYKEYAUTOASYMKEY function"
 dev_langs:
   - "TSQL"
 ---

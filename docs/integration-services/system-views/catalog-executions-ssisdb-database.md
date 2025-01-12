@@ -37,7 +37,7 @@ helpviewer_keywords:
 |object_id|**bigint**|The ID of the object affected by the operation.|  
 |status|**int**|The status of the operation. The possible values are created (`1`), running (`2`), canceled (`3`), failed (`4`), pending (`5`), ended unexpectedly (`6`), succeeded (`7`), stopping (`8`), and completed (`9`).|  
 |start_time|**datetimeoffset**|The time when the instance of execution was started.|  
-|end_time|**datetimeoffsset**|The time when the instance of execution ended.|  
+|end_time|**datetimeoffset**|The time when the instance of execution ended.|  
 |caller_sid|**varbinary(85)**|The security ID (SID) of the user if Windows Authentication was used to log on.|  
 |caller_name|**nvarchar(128)**|The name of the account that performed the operation.|  
 |process_id|**int**|The process ID of the external process, if applicable.|  

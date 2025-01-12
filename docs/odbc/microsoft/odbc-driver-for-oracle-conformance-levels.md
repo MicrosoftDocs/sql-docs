@@ -21,8 +21,8 @@ helpviewer_keywords:
   
  This section contains the following topics.  
   
--   [API Conformance Level (ODCB Driver for Oracle)](../../odbc/microsoft/api-conformance-level-odbc-driver-for-oracle.md)  
+-   [API Conformance Level (ODBC Driver for Oracle)](../../odbc/microsoft/api-conformance-level-odbc-driver-for-oracle.md)  
   
--   [Supported Options (ODCB Driver for Oracle)](../../odbc/microsoft/supported-options-odbc-driver-for-oracle.md)  
+-   [Supported Options (ODBC Driver for Oracle)](../../odbc/microsoft/supported-options-odbc-driver-for-oracle.md)  
   
--   [SQL Conformance Levels (ODCB Driver for Oracle)](../../odbc/microsoft/sql-conformance-levels-odbc-driver-for-oracle.md)
+-   [SQL Conformance Levels (ODBC Driver for Oracle)](../../odbc/microsoft/sql-conformance-levels-odbc-driver-for-oracle.md)

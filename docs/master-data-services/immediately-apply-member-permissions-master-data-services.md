@@ -1,6 +1,6 @@
 ---
 title: Immediately apply member permissions
-description: "Explaines how to apply member permissions immediately for Master Data Services"
+description: "Explains how to apply member permissions immediately for Master Data Services"
 author: CordeliaGrey
 ms.author: jiwang6
 ms.date: "03/01/2017"

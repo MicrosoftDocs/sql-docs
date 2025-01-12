@@ -228,11 +228,11 @@ using Microsoft.SqlServer.Server;
 public partial class UserDefinedFunctions {
    private class EmailResult {
       public SqlInt32 CustomerId;
-      public SqlString EmailAdress;
+      public SqlString EmailAddress;
 
-      public EmailResult(SqlInt32 customerId, SqlString emailAdress) {
+      public EmailResult(SqlInt32 customerId, SqlString emailAddress) {
          CustomerId = customerId;
-         EmailAdress = emailAdress;
+         EmailAddress = emailAddress;
       }
    }
 
@@ -287,11 +287,11 @@ public partial class UserDefinedFunctions {
    public static void FindInvalidEmails_FillRow(
        object emailResultObj,
        out SqlInt32 customerId,
-       out SqlString emailAdress) {
+       out SqlString emailAddress) {
       EmailResult emailResult = (EmailResult)emailResultObj;
 
       customerId = emailResult.CustomerId;
-      emailAdress = emailResult.EmailAdress;
+      emailAddress = emailResult.EmailAddress;
    }
 };
 ```
@@ -308,11 +308,11 @@ Imports Microsoft.SqlServer.Server
 Public Partial Class UserDefinedFunctions
    Private Class EmailResult
       Public CustomerId As SqlInt32
-      Public EmailAdress As SqlString
+      Public EmailAddress As SqlString
 
-      Public Sub New(customerId__1 As SqlInt32, emailAdress__2 As SqlString)
+      Public Sub New(customerId__1 As SqlInt32, emailAddress__2 As SqlString)
          CustomerId = customerId__1
-         EmailAdress = emailAdress__2
+         EmailAddress = emailAddress__2
       End Sub
    End Class
 
@@ -354,11 +354,11 @@ Public Partial Class UserDefinedFunctions
       Return resultCollection
    End Function
 
-   Public Shared Sub FindInvalidEmails_FillRow(emailResultObj As Object, ByRef customerId As SqlInt32, ByRef emailAdress As SqlString)
+   Public Shared Sub FindInvalidEmails_FillRow(emailResultObj As Object, ByRef customerId As SqlInt32, ByRef emailAddress As SqlString)
       Dim emailResult As EmailResult = DirectCast(emailResultObj, EmailResult)
 
       customerId = emailResult.CustomerId
-      emailAdress = emailResult.EmailAdress
+      emailAddress = emailResult.EmailAddress
    End Sub
 End Class
 
@@ -371,11 +371,11 @@ Imports Microsoft.SqlServer.Server
 Public Partial Class UserDefinedFunctions
    Private Class EmailResult
       Public CustomerId As SqlInt32
-      Public EmailAdress As SqlString
+      Public EmailAddress As SqlString
 
-      Public Sub New(customerId__1 As SqlInt32, emailAdress__2 As SqlString)
+      Public Sub New(customerId__1 As SqlInt32, emailAddress__2 As SqlString)
          CustomerId = customerId__1
-         EmailAdress = emailAdress__2
+         EmailAddress = emailAddress__2
       End Sub
    End Class
 
@@ -417,11 +417,11 @@ Public Partial Class UserDefinedFunctions
       Return resultCollection
    End Function
 
-   Public Shared Sub FindInvalidEmails_FillRow(emailResultObj As Object, customerId As SqlInt32, emailAdress As SqlString)
+   Public Shared Sub FindInvalidEmails_FillRow(emailResultObj As Object, customerId As SqlInt32, emailAddress As SqlString)
       Dim emailResult As EmailResult = DirectCast(emailResultObj, EmailResult)
 
       customerId = emailResult.CustomerId
-      emailAdress = emailResult.EmailAdress
+      emailAddress = emailResult.EmailAddress
    End Sub
 End Class
 ```

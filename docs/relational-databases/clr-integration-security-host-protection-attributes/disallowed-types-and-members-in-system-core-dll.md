@@ -12,7 +12,7 @@ ms.topic: "reference"
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-[!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] common language integration (CLR) programming disallows the use of a type or member that has a `HostProtectionAttribute` that specifies a `System.Security.Permissions.HostProtectionResource` enumeration with a value of `ExternalProcessMgmt`, `ExternalThreading`, `MayLeakOnAbort`, `SecurityInfrastructure`, `SelfAffectingProcessMgmnt`, `SelfAffectingThreading`, `SharedState`, `Synchronization`, or `UI`. The following table lists the members and types of the System.Core.dll assemblies whose Host Protection Attribute (HPA) values are disallowed.
+[!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] common language integration (CLR) programming disallows the use of a type or member that has a `HostProtectionAttribute` that specifies a `System.Security.Permissions.HostProtectionResource` enumeration with a value of `ExternalProcessMgmt`, `ExternalThreading`, `MayLeakOnAbort`, `SecurityInfrastructure`, `SelfAffectingProcessMgmt`, `SelfAffectingThreading`, `SharedState`, `Synchronization`, or `UI`. The following table lists the members and types of the System.Core.dll assemblies whose Host Protection Attribute (HPA) values are disallowed.
 
 > [!NOTE]  
 > This list was generated from the supported assemblies. For more information, see [Supported .NET Framework libraries](../clr-integration/database-objects/supported-net-framework-libraries.md).

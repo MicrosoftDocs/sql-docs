@@ -180,7 +180,7 @@ PDO_SQLSRV:
 
 ```php
 // since SSN is an encrypted column, need to pass the value in the WHERE clause through bind parameter
-$query = "SELET [SSN], [FirstName], [LastName], [BirthDate] FROM [dbo].[Patients] WHERE [SSN] = ?";
+$query = "SELECT [SSN], [FirstName], [LastName], [BirthDate] FROM [dbo].[Patients] WHERE [SSN] = ?";
 $ssn = "795-73-9838";
 $stmt = $conn->prepare($query);
 $stmt->bindParam(1, $ssn);
@@ -202,7 +202,7 @@ The following examples illustrate retrieving binary encrypted data from encrypte
 SQLSRV:
 
 ```php
-$query = "SELET [SSN], [FirstName], [LastName], [BirthDate] FROM [dbo].[Patients] WHERE [LastName] = ?";
+$query = "SELECT [SSN], [FirstName], [LastName], [BirthDate] FROM [dbo].[Patients] WHERE [LastName] = ?";
 $lastName = "Abel";
 $stmt = sqlsrv_prepare($conn, $query, array(&$lastName));
 sqlsrv_execute($stmt);
@@ -212,7 +212,7 @@ $row = sqlsrv_fetch_array($stmt);
 PDO_SQLSRV:
 
 ```php
-$query = "SELET [SSN], [FirstName], [LastName], [BirthDate] FROM [dbo].[Patients] WHERE [LastName] = ?";
+$query = "SELECT [SSN], [FirstName], [LastName], [BirthDate] FROM [dbo].[Patients] WHERE [LastName] = ?";
 $lastName = "Abel";
 $stmt = $conn->prepare($query);
 $stmt->bindParam(1, $lastName);
@@ -244,7 +244,7 @@ Any value that targets an encrypted column needs to be encrypted before being se
 - You use bind parameter to send data targeting encrypted columns. The following example shows a query that incorrectly filters by a literal/constant on an encrypted column (SSN):
 
 ```php
-$query = "SELET [SSN], [FirstName], [LastName], [BirthDate] FROM [dbo].[Patients] WHERE SSN='795-73-9838'";
+$query = "SELECT [SSN], [FirstName], [LastName], [BirthDate] FROM [dbo].[Patients] WHERE SSN='795-73-9838'";
 ```
 
 ## Controlling performance impact of Always Encrypted

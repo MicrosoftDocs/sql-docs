@@ -184,7 +184,7 @@ It's possible to change the quorum vote of a node participating in a Windows Ser
 
 When modifying the node vote settings, follow these guidelines: 
 
-| Qurom voting guidelines |
+| Quorum voting guidelines |
 |-|
 | Start with each node having no vote by default. Each node should only have a vote with explicit justification.|
 | Enable votes for cluster nodes that host the primary replica of an availability group, or the preferred owners of a failover cluster instance. |

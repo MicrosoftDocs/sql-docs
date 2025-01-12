@@ -8,7 +8,7 @@ ms.service: sql
 ms.subservice: failover-cluster-instance
 ms.topic: how-to
 helpviewer_keywords:
-  - "troublshooting, failover clustering"
+  - "troubleshooting, failover clustering"
   - "failover clustering, troubleshooting"
   - "cluster troubleshooting"
 ---

@@ -81,7 +81,7 @@ After **ReplicationState** is `2`, connect to each database or subset of databas
 
 1. Connect to the target server using the secondary endpoint `<fog-name>.secondary.database.windows.net`.
 1. Use [Switch-AzSqlDatabaseFailoverGroup](/powershell/module/az.sql/switch-azsqldatabasefailovergroup) to switch the secondary server to be the primary with full synchronization. This operation succeeds or it rolls back.
-1. Verify that the command has completed successfully by using `nslook up <fog-name>.secondary.database.windows.net` to ascertain that the DNS CNAME entry points to the target region IP address. If the switch command fails, the CNAME won't be updated.
+1. Verify that the command has completed successfully by using `nslookup <fog-name>.secondary.database.windows.net` to ascertain that the DNS CNAME entry points to the target region IP address. If the switch command fails, the CNAME won't be updated.
 
 ## Remove the source databases
 
@@ -136,7 +136,7 @@ Once **ReplicationState** is `2`, connect to each database or subset of database
 
 1. Connect to the target server using the secondary endpoint `<fog-name>.secondary.database.windows.net`.
 1. Use [Switch-AzSqlDatabaseFailoverGroup](/powershell/module/az.sql/switch-azsqldatabasefailovergroup) to switch the secondary server to be the primary with full synchronization. This operation either succeeds, or it rolls back.
-1. Verify that the command has completed successfully by using `nslook up <fog-name>.secondary.database.windows.net` to ascertain that the DNS CNAME entry points to the target region IP address. If the switch command fails, the CNAME isn't updated.
+1. Verify that the command has completed successfully by using `nslookup <fog-name>.secondary.database.windows.net` to ascertain that the DNS CNAME entry points to the target region IP address. If the switch command fails, the CNAME isn't updated.
 
 ## Remove the source elastic pools
 

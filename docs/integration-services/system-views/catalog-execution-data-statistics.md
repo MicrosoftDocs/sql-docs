@@ -25,7 +25,7 @@ ms.topic: "language-reference"
 |source_component_name|**nvarchar(4000)**|The name of the data flow component that sent the data.|  
 |destination_component_name|**nvarchar(4000)**|The name of the data flow component that received the data.|  
 |rows_sent|**bigint**|The number of rows sent from the source component.|  
-|created_time|**datatimeoffset(7)**|The time when the values were obtained.|  
+|created_time|**datetimeoffset(7)**|The time when the values were obtained.|  
 |execution_path|**nvarchar(max)**|The execution path of the component.|  
   
 ## Remarks  

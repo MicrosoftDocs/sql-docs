@@ -61,7 +61,8 @@ test_expression [ NOT ] BETWEEN begin_expression AND end_expression
  NOT BETWEEN returns **TRUE** if the value of *test_expression* is less than the value of *begin_expression* or greater than the value of *end_expression*.  
   
 ## Remarks  
- To specify an exclusive range, use the greater than (>) and less than operators (<). If any input to the BETWEEN or NOT BETWEEN predicate is NULL, the result is UNKNOWN.  
+ To specify an exclusive range, use the greater than (>) and less than operators (<). If any input to the BETWEEN or NOT BETWEEN predicate is NULL, the result depends on the results of the constituent parts.  
+`test_expression >= begin_expression AND test_expression  <= end_expression`. If either part is FALSE then the overall BETWEEN expression evaluates to FALSE. Otherwise the expression will evaluate to UNKNOWN.
   
 ## Examples  
   

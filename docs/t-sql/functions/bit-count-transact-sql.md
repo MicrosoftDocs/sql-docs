@@ -36,7 +36,7 @@ BIT_COUNT ( expression_value )
 
 #### *expression_value*
 
-Any integer or binary expression that isn't a large object (LOB).
+Any integer or binary expression that isn't a large object (LOB). Binary expressions > 8000 bytes are considered large objects.
 
 ## Return type
 

@@ -105,7 +105,7 @@ The following graphic shows the permissions assigned to the legacy server roles 
 :::image type="content" source="media/server-level-roles/permissions-of-server-roles.png" alt-text="Diagram showing fixed server role permissions.":::
 
 > [!IMPORTANT]  
-> The **CONTROL SERVER** permission is similar but not identical to the **sysadmin** fixed server role. Permissions do not imply role memberships and role memberships do not grant permissions. (E.g. **CONTROL SERVER** does not imply membership in the **sysadmin** fixed server role.) However, it is sometimes possible to impersonate between roles and equivalent permissions. Most **DBCC** commands and many system procedures require membership in the **sysadmin** fixed server role.
+> The **CONTROL SERVER** permission is similar but not identical to the **sysadmin** fixed server role. Permissions do not imply role memberships. (E.g. **CONTROL SERVER** does not imply membership in the **sysadmin** fixed server role.) However, it is sometimes possible to impersonate between roles and equivalent permissions. Many **DBCC** commands and system procedures require membership in the **sysadmin** fixed server role.
 
 ## Server-level permissions
 

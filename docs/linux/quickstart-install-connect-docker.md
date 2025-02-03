@@ -27,7 +27,7 @@ In this quickstart, you use Docker to pull and run the [!INCLUDE [sssql17-md](..
 For more information on supported platforms, see [Release notes for SQL Server 2017 on Linux](sql-server-linux-release-notes-2017.md).
 
 > [!WARNING]  
-> When you stop and remove a container, your [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] data in the container is permanently deleted. For more information on preserving your data, [create and copy a backup file out of the container](tutorial-restore-backup-in-sql-server-container.md) or use a [container data persistence technique](sql-server-linux-docker-container-configure.md#persist).
+> When you stop or restart a container, your [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] data in the container is permanently deleted. For more information on preserving your data, [create and copy a backup file out of the container](tutorial-restore-backup-in-sql-server-container.md) or use a [container data persistence technique](sql-server-linux-docker-container-configure.md#persist).
 
 This quickstart creates [!INCLUDE [sssql17-md](../includes/sssql17-md.md)] containers. If you prefer to create Linux containers for different versions of [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)], see the versions of this article for [[!INCLUDE [sssql19-md](../includes/sssql19-md.md)]](quickstart-install-connect-docker.md?view=sql-server-linux-ver15&preserve-view=true#pullandrun2019) or [[!INCLUDE [sssql22-md](../includes/sssql22-md.md)]](quickstart-install-connect-docker.md?view=sql-server-linux-ver16&preserve-view=true#pullandrun2022) versions of this article.
 

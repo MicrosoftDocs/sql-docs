@@ -45,7 +45,7 @@ The following table shows the fixed server-level roles and their capabilities.
 
 | Fixed server-level role | Description |
 | --- | --- |
-| **sysadmin** | Members of the **sysadmin** fixed server role can perform any activity in the server. |
+| **sysadmin** | Members of the **sysadmin** fixed server role can perform any activity in the server. Important: permissions cannot be denied to mmbers of this role. |
 | **serveradmin** | Members of the **serveradmin** fixed server role can change server-wide configuration options and shut down the server. |
 | **securityadmin** | Members of the **securityadmin** fixed server role manage logins and their properties. They can `GRANT`, `DENY`, and `REVOKE` server-level permissions. **securityadmin** can also `GRANT`, `DENY`, and `REVOKE` database-level permissions if they have access to a database. Additionally, **securityadmin** can reset passwords for [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)] logins.<br /><br />**IMPORTANT:** The ability to grant access to the [!INCLUDE [ssDE](../../../includes/ssde-md.md)] and to configure user permissions allows the security admin to assign most server permissions. The **securityadmin** role should be treated as equivalent to the **sysadmin** role. As an alternative, starting with [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)], consider using the new fixed server role **##MS_LoginManager##**. |
 | **processadmin** | Members of the **processadmin** fixed server role can end processes that are running in an instance of [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)]. |
@@ -105,7 +105,7 @@ The following graphic shows the permissions assigned to the legacy server roles 
 :::image type="content" source="media/server-level-roles/permissions-of-server-roles.png" alt-text="Diagram showing fixed server role permissions.":::
 
 > [!IMPORTANT]  
-> The **CONTROL SERVER** permission is similar but not identical to the **sysadmin** fixed server role. Permissions do not imply role memberships and role memberships do not grant permissions. (E.g. **CONTROL SERVER** does not imply membership in the **sysadmin** fixed server role.) However, it is sometimes possible to impersonate between roles and equivalent permissions. Most **DBCC** commands and many system procedures require membership in the **sysadmin** fixed server role.
+> The **CONTROL SERVER** permission is similar but not identical to the **sysadmin** fixed server role. Principals with te CONTROL SERVER permission can be denied specific permissions. From security perspective one should consider principals with CONTROL SERVER as idential to sysadmin-members, because of several possible ways to elevate permissions from CONTROL SERVER to full sysadmin. Several **DBCC** commands and many system procedures require membership in the **sysadmin** fixed server role. For a full list, read here: [When sysadmin is still required in Microsoft SQL Server](https://andreas-wolter.com/en/least-privilege-sysadmin-required-sql-server/))
 
 ## Server-level permissions
 

@@ -106,12 +106,16 @@ You can reduce the logical core count per NUMA node in an [Azure Virtual Machine
 
 The following tables describe how to reduce the logical core count on bare-metal instances of [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)].
 
-On **Intel CPUs**, you can enable sub-NUMA clustering (SNC), formerly called Cluster-on-Die (CoD), resulting in two NUMA domains within a single physical socket.
+On **Intel CPUs** 
+For 3rd Generation Intel® Xeon®, 4th Generation Intel® Xeon® and 5th Generation Intel® Xeon® processor, you can enable sub-NUMA clustering (SNC).
+For Intel® Xeon® 6  (6700/6900 series) processors, come with Sub-NUMA Clustering (SNC2 or SNC3) enabled by default aiming to reduce memory latency for NUMA-aware applications. However, in high core count CPU models of this series, the default SNC configurations may result in more than 64 logical processors per NUMA node. To mitigate this and further enhance performance, it is advisable to activate the [Intel VirtualNuma](https://www.intel.com/content/www/us/en/content-details/845720/intel-xeon-6-processor-bios-numa-tuning-guide-enhancing-microsoft-sql-server-2016-2022-performance-technical-whitepaper.html?DocID=845720) feature alongside SNC2 or SNC3 in the BIOS/Firmware settings, particularly for those CPU models with an elevated number of logical processors (>64 per numa).
 
 | Configuration&nbsp;setting | Description |
 | --- | --- |
-| SNC disabled (default) | Disables sub-NUMA clustering. |
-| SNC enabled | Enables sub-NUMA clustering. |
+| SNC disabled | This configuration presents one NUMA node per socket, providing a unified memory architecture that simplifies memory access patterns. |
+| SNC2 enabled | This configuration presents two NUMA nodes per socket. In this setup, each cluster contains an equal number of cores, Last Level Cache (LLC) slices near the cores, an equal amount of socket address space, and is bound to a subset of the memory controllers within the cluster. |
+| SNC3 enabled | This configuration presents three NUMA nodes per socket. Similar to SNC2, each cluster in this configuration contains an equal number of cores, LLC slices near the cores, an equal amount of socket address space, and is bound to a subset of the memory controllers within the cluster. |
+| Intel VirtualNuma enabled | Intel VirtualNUMA is a BIOS mode that creates multiple VirtualNUMA domains within a single physical NUMA node. It does not alter memory interleaving and LLC grouping of the original UMA or NUMA clustering. In conjunction with SNC, enable VirtualNUMA, particularly for high core count Intel® Xeon® 6 (6700/6900 series) CPU SKUs model where the number of logical processors per NUMA node exceeds 64 with default SNC configuration. |
 
 On **AMD CPUs**, you can enable various Nodes per Socket (NPS) options.
 

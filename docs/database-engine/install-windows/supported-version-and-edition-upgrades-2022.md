@@ -38,9 +38,11 @@ For older versions of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.m
 
 - Before upgrading [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)], enable Windows Authentication for [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Agent and verify the default configuration, that the [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Agent service account is a member of the [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] sysadmin group.
 
-- Upgrade is blocked if there's a pending restart.
+- Upgrade is blocked if there's a pending windows operating system restart.
 
 - Upgrade is blocked if the Windows Installer service isn't running.
+
+- Upgrade can ptentially be blocked if third party security agents such as (EDR) End point Detection and Responce, or anit-virus software is not allowing/whitelisting SQL Server executable binaries.
 
 ## Unsupported scenarios
 

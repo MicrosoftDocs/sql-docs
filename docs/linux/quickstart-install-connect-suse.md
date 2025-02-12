@@ -26,7 +26,7 @@ For more information on supported platforms, see [Release notes for SQL Server 2
 <!--SQL Server 2019+ on Linux-->
 ::: moniker range=">=sql-server-linux-ver15 || >=sql-server-ver15"
 
-In this quickstart, you install [!INCLUDE [sssql19-md](../includes/sssql19-md.md)] on SUSE Linux Enterprise Server (SLES) v15 (SP3). Then you can connect with **sqlcmd** to create your first database and run queries.
+In this quickstart, you install [!INCLUDE [sssql19-md](../includes/sssql19-md.md)] on SUSE Linux Enterprise Server (SLES) 15. Then you can connect with **sqlcmd** to create your first database and run queries.
 
 For more information on supported platforms, see [Release notes for SQL Server 2019 on Linux](sql-server-linux-release-notes-2019.md).
 
@@ -34,7 +34,7 @@ For more information on supported platforms, see [Release notes for SQL Server 2
 <!--SQL Server 2022 on Linux-->
 ::: moniker range=">= sql-server-linux-ver16 || >= sql-server-ver16"
 
-In this quickstart, you install [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] on SUSE Linux Enterprise Server (SLES) v15 (SP3). Then you can connect with **sqlcmd** to create your first database and run queries.
+In this quickstart, you install [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] on SUSE Linux Enterprise Server (SLES) 15. Then you can connect with **sqlcmd** to create your first database and run queries.
 
 For more information on supported platforms, see [Release notes for SQL Server 2022 on Linux](sql-server-linux-release-notes-2022.md).
 
@@ -55,18 +55,20 @@ You must have a SLES v12 SP5 machine with **at least 2 GB** of memory. The file 
 <!--SQL Server 2019 on Linux-->
 ::: moniker range="=sql-server-linux-ver15 || =sql-server-ver15"
 
-You must have a SLES v15 (SP1 - SP4) machine with **at least 2 GB** of memory. The file system must be **XFS** or **EXT4**. Other file systems, such as **BTRFS**, are unsupported.
+You must have a SLES 15 (SP6) machine with **at least 2 GB** of memory. The file system must be **XFS** or **EXT4**. Other file systems, such as **BTRFS**, are unsupported.
 
 ::: moniker-end
 
 <!--SQL Server 2022 on Linux-->
 ::: moniker range=">= sql-server-linux-ver16 || >= sql-server-ver16"
 
-You must have a SLES v15 (SP1 - SP4) machine with **at least 2 GB** of memory. The file system must be **XFS** or **EXT4**. Other file systems, such as **BTRFS**, are unsupported.
+You must have a SLES 15 (SP6) machine with **at least 2 GB** of memory. The file system must be **XFS** or **EXT4**. Other file systems, such as **BTRFS**, are unsupported.
 
 ::: moniker-end
 
-To install SUSE Linux Enterprise Server on your own machine, go to [https://www.suse.com/products/server](https://www.suse.com/products/server). You can also create SLES virtual machines in Azure. See [Create and Manage Linux VMs with the Azure CLI](/azure/virtual-machines/linux/tutorial-manage-vm), and use `--image SLES` in the call to `az vm create`.
+To install SUSE Linux Enterprise Server on your own machine, go to [https://www.suse.com/products/server](https://www.suse.com/products/server). You can also use ready-made SUSE images from the Azure Marketplace. For how to use these in Azure, check out [Create and Manage Linux VMs with the Azure CLI](/azure/virtual-machines/linux/tutorial-manage-vm) and use `--image SLES` in the call to `az vm create`. 
+
+To understand how long different SUSE versions are supported, visit [https://www.suse.com/lifecycle](https://www.suse.com/lifecycle).
 
 If you've previously installed a community technology preview (CTP) or release candidate (RC) of [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)], you must first remove the old repository before following these steps. For more information, see [Configure repositories for installing and upgrading SQL Server on Linux](sql-server-linux-change-repo.md).
 
@@ -105,7 +107,7 @@ To configure [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on SLES,
    sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
    ```
 
-1. Before you install [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)], and after you have registered and activated your SUSE Linux Enterprise Server with SUSE Customer Center, you must activate both the [Desktop Applications module and Development Tools module](https://documentation.suse.com/sles/15-SP3/html/SLES-all/cha-register-sle.html). These modules are required for some of the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] package dependencies.
+1. Before you install [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)], and after you have registered and activated your SUSE Linux Enterprise Server with SUSE Customer Center, you must activate both the [Desktop Applications module and Development Tools module](https://documentation.suse.com/sles/15-SP6/html/SLES-all/cha-register-sle.html). These modules are required for some of the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] package dependencies.
 
 1. Now, you're ready to install [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)]. Run the following commands to install [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)]:
 
@@ -216,7 +218,7 @@ At this point, [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] is run
    sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
    ```
 
-1. Before you install [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)], and after you have registered and activated your SUSE Linux Enterprise Server with SUSE Customer Center, you must activate both the [Desktop Applications module and Development Tools module](https://documentation.suse.com/sles/15-SP3/html/SLES-all/cha-register-sle.html). These modules are required for some of the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] package dependencies.
+1. Before you install [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)], and after you have registered and activated your SUSE Linux Enterprise Server with SUSE Customer Center, you must activate both the [Desktop Applications module and Development Tools module](https://documentation.suse.com/sles/15-SP6/html/SLES-all/cha-register-sle.html). These modules are required for some of the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] package dependencies.
 
 1. Now, you're ready to install [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)]. Run the following commands to install [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)]:
 

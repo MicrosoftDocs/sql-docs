@@ -91,7 +91,7 @@ The following table shows the permissions assigned to the server-level roles. It
 | --- | --- | --- |
 | `##MS_DatabaseConnector##` | - `CONNECT ANY DATABASE` | - `CONNECT` |
 | `##MS_LoginManager##` | - `CREATE LOGIN`<br />- `ALTER ANY LOGIN` | N/A |
-| `##MS_DatabaseManager##` | - `CREATE ANY DATABASE`<br />- `ALTER ANY DATABASE` | - `ALTER` |
+| `##MS_DatabaseManager##` | - `CREATE ANY DATABASE`<br />- `ALTER ANY DATABASE` |  `DROP ANY DATABASE` - `ALTER` |
 | `##MS_ServerStateManager##` | - `ALTER SERVER STATE`<br />- `VIEW SERVER STATE`<br />- `VIEW SERVER PERFORMANCE STATE`<br />- `VIEW SERVER SECURITY STATE` | - `VIEW DATABASE STATE`<br />- `VIEW DATABASE PERFORMANCE STATE`<br />- `VIEW DATABASE SECURITY STATE` |
 | `##MS_ServerStateReader##` | - `VIEW SERVER STATE`<br />- `VIEW SERVER PERFORMANCE STATE`<br />- `VIEW SERVER SECURITY STATE` | - `VIEW DATABASE STATE`<br />- `VIEW DATABASE PERFORMANCE STATE`<br />- `VIEW DATABASE SECURITY STATE` |
 | `##MS_ServerPerformanceStateReader##` | - `VIEW SERVER PERFORMANCE STATE` | - `VIEW DATABASE PERFORMANCE STATE` |

@@ -85,7 +85,7 @@ The following table describes the audit file content that can be returned by thi
 
 | Column name | Type | Description |
 | --- | --- | --- |
-| `event_time` | **datetime2** | Date and time when the auditable action is fired, at UTC timezone. Not nullable. |
+| `event_time` | **datetime2** | UTC date and time when the auditable action is fired. Not nullable. |
 | `sequence_number` | **int** | Tracks the sequence of records within a single audit record that was too large to fit in the write buffer for audits. Not nullable. |
 | `action_id` | **varchar(4)** | ID of the action. Not nullable. |
 | `succeeded` | **bit** | Indicates whether the action that triggered the event succeeded. Not nullable. For all events other than login events, this only reports whether the permission check succeeded or failed, not the operation.<br /><br />`1` = success<br />`0` = fail |

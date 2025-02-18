@@ -14,6 +14,10 @@ ms.custom: sqldbrb=1, devx-track-azurepowershell
 # Migrate a certificate of a TDE-protected database to Azure SQL Managed Instance
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
 
+> [!IMPORTANT]
+> This instruction applies only to customer-managed keys
+> For Database using service-managed keys it is NOT possible to export certificates 
+
 When you're migrating a database protected by [Transparent Data Encryption (TDE)](/sql/relational-databases/security/encryption/transparent-data-encryption) to Azure SQL Managed Instance using the native restore option, the corresponding certificate from the SQL Server instance needs to be migrated before database restore. This article walks you through the process of manual migration of the certificate to Azure SQL Managed Instance:
 
 > [!div class="checklist"]
@@ -60,6 +64,10 @@ Update-Module -Name Az.Sql
 The certificate can be exported directly from the source SQL Server instance, or from the certificate store if it's being kept there.
 
 ### Export the certificate from the source SQL Server instance
+
+> [!IMPORTANT]
+> This instruction applies only to customer-managed keys
+> For Database using service-managed keys it is NOT possible to export certificates 
 
 Use the following steps to export the certificate with SQL Server Management Studio and convert it into .pfx format. The generic names *TDE_Cert* and *full_path* are being used for certificate and file names and paths through the steps. They should be replaced with the actual names.
 

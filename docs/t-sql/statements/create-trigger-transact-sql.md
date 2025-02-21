@@ -405,7 +405,7 @@ To disable nested triggers, set the nested triggers option of sp_configure to 0 
 The first AFTER trigger nested inside an INSTEAD OF trigger fires even if the **nested triggers** server configuration option is 0. But, under this setting, the later AFTER triggers don't fire. Review your applications for nested triggers to determine if the applications follow your business rules when the **nested triggers** server configuration option is set to 0. If not, make the appropriate modifications.  
   
 ### Deferred Name Resolution  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] allows for [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedures, triggers, and batches to refer to tables that don't exist at compile time. This ability is called deferred name resolution.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] allows for [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedures, triggers, and functions to refer to tables that don't exist at compile time. This ability is called deferred name resolution.  
   
 ## Permissions  
 To create a DML trigger, it requires ALTER permission on the table or view on which the trigger is being created.  

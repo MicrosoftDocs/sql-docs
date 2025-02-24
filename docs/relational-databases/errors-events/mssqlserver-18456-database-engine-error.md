@@ -174,6 +174,7 @@ To increase security, the error message that is returned to the client deliberat
 | 18 | Password must be changed. |
 | 38, 46 | Couldn't find database requested by user. |
 | 58 | When SQL Server is set to use Windows Authentication only, and a client attempts to log in using SQL authentication. Another cause is when SIDs don't match. |
+| 62 | Occurs when a Windows Authentication account tries to access a contained database, and the contained database exists, but the SIDs do not match. |
 | 102 - 111 | Azure AD failure. |
 | 122 - 124 | Failure due to empty user name or password. |
 | 126 | Database requested by user doesn't exist. |

@@ -184,6 +184,7 @@ Because of a potential impact to database performance, Azure SQL Database does n
 
 > [!TIP]
 > Don't waste time shrinking data files if the regular application workload will cause the files to grow to the same allocated size again. File growth events can negatively impact application performance.
+> You may consider shrinking the database incrementally and follow the script provided in this document [Incremental Shrink for data file - SQL Server, Azure SQL, Azure Managed Instance](https://github.com/yochananrachamim/AzureSQL/blob/master/Incremental%20Shrink.txt)
 
 In Azure SQL Database, to shrink files you can use either `DBCC SHRINKDATABASE` or `DBCC SHRINKFILE` commands:
 

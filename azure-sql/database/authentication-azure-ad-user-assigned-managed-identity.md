@@ -57,9 +57,12 @@ These permissions should be granted before you provision a logical server or man
 > [!IMPORTANT]
 > Only a [Privileged Role Administrator](/entra/identity/role-based-access-control/permissions-reference#privileged-role-administrator) or higher role can grant these permissions.
 
-- [User.Read.All](/graph/permissions-reference#user-permissions): Allows access to Microsoft Entra user information.
-- [GroupMember.Read.All](/graph/permissions-reference#group-permissions): Allows access to Microsoft Entra group information.
-- [Application.Read.ALL](/graph/permissions-reference#application-resource-permissions): Allows access to Microsoft Entra service principal (application) information.
+- [User.Read.All](/graph/permissions-reference#userreadall): Allows access to Microsoft Entra user information.
+- [GroupMember.Read.All](/graph/permissions-reference#groupmemberreadall): Allows access to Microsoft Entra group information.
+- [Application.Read.All](/graph/permissions-reference#applicationreadalls): Allows access to Microsoft Entra service principal (application) information.
+
+> [!NOTE]
+> For creation of a contained database userr for a Microsoft Entra group, `Group.Read.All` permission is required additionally to the ones listed above.
 
 ### Grant permissions
 

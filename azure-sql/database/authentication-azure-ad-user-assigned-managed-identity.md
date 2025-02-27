@@ -61,8 +61,7 @@ These permissions should be granted before you provision a logical server or man
 - [GroupMember.Read.All](/graph/permissions-reference#groupmemberreadall): Allows access to Microsoft Entra group information.
 - [Application.Read.All](/graph/permissions-reference#applicationreadalls): Allows access to Microsoft Entra service principal (application) information.
 
-> [!NOTE]
-> For creation of a contained database userr for a Microsoft Entra group, `Group.Read.All` permission is required additionally to the ones listed above.
+To create a contained database user for a Microsoft Entra group, the `Group.Read.All` permission is required additionally to the ones listed above.
 
 ### Grant permissions
 

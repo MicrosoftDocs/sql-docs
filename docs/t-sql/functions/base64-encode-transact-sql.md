@@ -45,9 +45,9 @@ Optional integer literal or expression, which specifies whether the output of th
 
 ## Return types
 
-- **Varchar(8000)**
+- **Varchar(8000)** if the input is varbinary(n) where n <= 6000
+- **Varchar(max)** if the input is varbinary(n) where n > 6000
 - **Varchar(max)** if the input is varbinary(max)
-- **Varchar(max)** if the input is varchar(n) where n > 6000
 - If the input expression is `null`, the output is `null`.
 
 ## Remarks

@@ -41,7 +41,7 @@ An expression of type varchar (n | max).
 
 ## Return types
 
-- **Varbinary(8000)**.
+- **Varbinary(8000)** if the input is varchar(n).
 - **Varbinary(max)** if the input is varchar(max).
 - If the input expression is null, the output is null.
 

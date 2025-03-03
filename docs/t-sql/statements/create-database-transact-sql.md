@@ -104,6 +104,7 @@ CREATE DATABASE database_name
     | TRUSTWORTHY { OFF | ON }
     | PERSISTENT_LOG_BUFFER=ON ( DIRECTORY_NAME='path-to-directory-on-a-DAX-volume' )
     | LEDGER = {ON | OFF }
+    | CATALOG_COLLATION = { DATABASE_DEFAULT | SQL_Latin1_General_CP1_CI_AS }
 }
 
 <filestream_option> ::=
@@ -210,6 +211,26 @@ For more information about the Windows and SQL collation names, see [COLLATE](~/
 > [!NOTE]
 > Contained databases are collated differently than non-contained databases. For more information, see [Contained Database Collations](../../relational-databases/databases/contained-database-collations.md).
 
+#### CATALOG_COLLATION
+
+Specifies the default collation for the metadata catalog. The `CATALOG_COLLATION` argument is only available during database creation and cannot be changed after creation.
+
+By default, the metadata catalog for system object names is collated to *SQL_Latin1_General_CP1_CI_AS* collation. This is the default setting on Azure SQL Database if CATALOG_COLLATION is unspecified.
+
+*DATABASE_DEFAULT* specifies that the metadata catalog used for system views and system tables be collated to match the collation for the database. If you desire that object identifiers in system metadata follow the same collation as data, you should create the database `WITH CATALOG_COLLATION = DATABASE_DEFAULT`.
+
+- You might desire different collations for data and object identifiers. The following example creates the database with a case-sensitive collation for row data, but will use the default SQL_Latin1_General_CP1_CI_AS case-insensitive collation for object identifiers.
+
+   ```sql
+   CREATE DATABASE [different-collations] COLLATE SQL_Latin1_General_CP1_CS_AS
+   ```
+
+- If you desire that both data and system metadata use the same collation, specify `WITH CATALOG_COLLATION = DATABASE_DEFAULT`. The following example creates the database with a case-sensitive collation, which will be used for object identifiers.
+
+   ```sql
+   CREATE DATABASE [same-collations] COLLATE SQL_Latin1_General_CP1_CS_AS
+   WITH CATALOG_COLLATION = DATABASE_DEFAULT
+   
 #### WITH \<option>
 
 #### <filestream_option>

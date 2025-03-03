@@ -9192,7 +9192,7 @@ items:
         items:
         - name: Overview
           href: linux/sql-server-linux-container-ha-overview.md
-        - name: Configure a container cluster in Azure
+        - name: Configure a container cluster
           href: linux/quickstart-sql-server-containers-azure.md
         - name: Deploy AGs with DH2i DxEnterprise
           href: linux/tutorial-sql-server-containers-kubernetes-dh2i.md

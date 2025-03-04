@@ -25,4 +25,4 @@ Invalid flag provided. '<invalid character>' are not valid flags. Only {c,i,s,m}
 | i    | Case-insensitive (default false) |
 | m    | Multi-line mode: `^` and `$` match begin/end line in addition to begin/end text (default false) |
 | s    | Let `.` match `\n` (default false) |
-| c    | Case-insensitive (default true) |
+| c    | Case-sensitive (default true) |

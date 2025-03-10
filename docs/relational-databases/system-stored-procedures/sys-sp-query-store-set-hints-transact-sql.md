@@ -59,8 +59,8 @@ By default, the scope of a new Query Store hint is the local replica only. *@que
 
 Hints are specified in a valid T-SQL string format `N'OPTION (..)'`.
 
-- If no Query Store hints exist for a specific `query_id`, a new Query Store hint is created.
-- If a Query Store hint already exists for a specific `query_id`, the value specified for `@query_hints` overrides previously specified hints for the associated query.
+- If no Query Store hints exist for a specific *@query_id*, a new Query Store hint is created.
+- If a Query Store hint already exists for a specific *@query_id*, the value specified for *@query_hints* overrides previously specified hints for the associated query.
 - If a *query_id* doesn't exist, an error will be raised.
 
 In the case where one of the hints would prevent a query plan being produced, all the hints are ignored. For more information about failure details, see [sys.query_store_query_hints](../system-catalog-views/sys-query-store-query-hints-transact-sql.md).

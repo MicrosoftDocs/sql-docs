@@ -239,6 +239,7 @@ sudo systemctl restart mssql-server
 
 ```bash
 sudo zypper install mssql-server-ha mssql-server-agent
+[//]: # (mssql-server-agent package is not available in the repo: https://packages.microsoft.com/rhel/9/mssql-server-2022/Packages/m/. How can you install this package?)
 sudo systemctl restart mssql-server
 ```
 

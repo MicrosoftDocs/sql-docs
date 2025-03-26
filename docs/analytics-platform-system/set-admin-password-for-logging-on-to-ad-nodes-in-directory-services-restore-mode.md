@@ -21,7 +21,7 @@ Directory Services Restore Mode (DSRM) is a boot mode for repairing or recoverin
   
 3.  At the **ntdsutil** prompt, type `set dsrm password`.  
   
-4.  At the **Reset Administrator Password:** prompt, type `reset password on server null`.  
+4.  At the **Reset DSRM Administrator Password:** prompt, type `reset password on server null`.  
   
 5.  At the prompt, type the new password.  
   

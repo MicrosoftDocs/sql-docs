@@ -152,7 +152,7 @@ Some project properties are associated with database options that apply to only 
 | ServiceBrokerOption | `SERVICE_BROKER` | Database settings, Service broker options | DisableBroker | {DisableBroker&#124;EnableBroker&#124;NewBroker&#124;ErrorBrokerConversations} |
 | SuppressTSqlWarnings | | Build settings, Suppress T-SQL warnings (comma-separated list of T-SQL warning codes) | | {string} |
 | TargetRecoveryTimePeriod | Database settings, Operational, target recovery time (seconds) | Specifies the frequency of indirect checkpoints on a per-database basis. | 60 | {integer} |
-| TargetRecoveryTimeUnit | | Database settings, Operational, target recorder time | SECONDS | {MINUTES&#124;SECONDS} |
+| TargetRecoveryTimeUnit | | Database settings, Operational, target recovery time | SECONDS | {MINUTES&#124;SECONDS} |
 | TreatTSqlWarningsAsErrors | | Build settings, Treat T-SQL warnings as errors | False | {True&#124;False} |
 | Trustworthy | `TRUSTWORTHY` | Database settings, Trustworthy | False | {True&#124;False} |
 | TwoDigitYearCutoff | `TWO_DIGIT_YEAR_CUTOFF` | Database settings, Two digit year cutoff | 2049 | {integer} |

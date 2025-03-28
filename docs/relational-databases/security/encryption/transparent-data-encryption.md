@@ -258,7 +258,7 @@ If you change a DEK twice, you must do a log backup before you can change the DE
 
 ## TDE and the tempdb system database
 
-The `tempdb` system database is encrypted if any other database on the [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)] instance is encrypted by using TDE. This encryption might have a performance effect for unencrypted databases on the same [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)] instance. For more information about the `tempdb` system database, see [tempdb Database](../../databases/tempdb-database.md).
+The `tempdb` system database is entirely encrypted if any other database on the [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)] instance is encrypted by using TDE. This encryption might have a performance effect for unencrypted databases on the same [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)] instance. Its worth stating that TEMPDB encryption will be in disabled state if all user-level databases encryption setting is turned off , but it will require database engine service restart to take effect. For more information about the `tempdb` system database, see [tempdb Database](../../databases/tempdb-database.md).
 
 ## TDE and replication
 

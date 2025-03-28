@@ -69,7 +69,7 @@ ROUND ( numeric_expression , length [ ,function ] )
 |ROUND(748.58, -3)|Results in an arithmetic overflow, because 748.58 defaults to decimal(5,2), which cannot return 1000.00.|  
 |To round up to 4 digits, change the data type of the input. For example:<br /><br /> `SELECT ROUND(CAST (748.58 AS decimal (6,2)),-3);`|1000.00|  
 
-ROUND rounds away from zero.
+ROUND breaks ties by rounding half away away from zero (also known as commercial rounding).
 
 |Examples|Result|  
 |--------------|------------|  

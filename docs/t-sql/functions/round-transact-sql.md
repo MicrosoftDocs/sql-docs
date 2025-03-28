@@ -3,7 +3,7 @@ title: "ROUND (Transact-SQL)"
 description: "ROUND (Transact-SQL)"
 author: MikeRayMSFT
 ms.author: mikeray
-ms.date: "03/38/2025"
+ms.date: "03/28/2025"
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference

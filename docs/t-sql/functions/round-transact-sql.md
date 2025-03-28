@@ -3,7 +3,7 @@ title: "ROUND (Transact-SQL)"
 description: "ROUND (Transact-SQL)"
 author: MikeRayMSFT
 ms.author: mikeray
-ms.date: "12/14/2017"
+ms.date: "03/38/2025"
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -20,7 +20,7 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
 # ROUND (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw.md)]
 
-Returns a numeric value, rounded to the specified length or precision.  
+Returns a numeric value, rounded to the specified length or precision.
   
  :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -68,6 +68,13 @@ ROUND ( numeric_expression , length [ ,function ] )
 |ROUND(748.58, -2)|700.00|  
 |ROUND(748.58, -3)|Results in an arithmetic overflow, because 748.58 defaults to decimal(5,2), which cannot return 1000.00.|  
 |To round up to 4 digits, change the data type of the input. For example:<br /><br /> `SELECT ROUND(CAST (748.58 AS decimal (6,2)),-3);`|1000.00|  
+
+ROUND rounds away from zero.
+
+|Examples|Result|  
+|--------------|------------|  
+|ROUND(1.15, 1)|1.2|  
+|ROUND(-1.15, 1)|-1.2|  
   
 ## Examples  
   

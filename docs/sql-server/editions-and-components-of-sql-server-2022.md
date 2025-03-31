@@ -275,11 +275,10 @@ SQL Server 2022 includes features for connecting to [Azure Synapse Analytics](/a
 | SQL Profiler | Yes | Yes | No <sup>1</sup> | No <sup>1</sup> | No <sup>1</sup> |
 | [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] Agent | Yes | Yes | Yes | No | No |
 | Microsoft System Center Operations Manager Management Pack | Yes | Yes | Yes | No | No |
-| Database Tuning Advisor (DTA) | Yes | Yes <sup>2</sup> | Yes <sup>2</sup> | No | No |
+| Database Tuning Advisor (DTA) | Yes | Yes  | Yes  | No | No |
 
 <sup>1</sup> [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] Web, [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] Express, [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] Express with Tools, and [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] Express with Advanced Services can be profiled using [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] Standard and [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] Enterprise editions.
 
-<sup>2</sup> Tuning enabled only on Standard edition features.
 
 > [!NOTE]  
 > Distributed Replay has been deprecated in [!INCLUDE [sssql22-md](../includes/sssql22-md.md)].

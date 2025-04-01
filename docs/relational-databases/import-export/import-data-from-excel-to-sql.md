@@ -74,7 +74,7 @@ To start learning how to build SSIS packages, see the tutorial [How to Create an
 > [!IMPORTANT]  
 > In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], you can't import directly from Excel. You must first [export the data to a text (CSV) file](import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md).
 
-The following examples use the JET provider, because the ACE provider included with Office that connects to Excel data sources is intended for interactive client-side use.
+The following examples use the JET provider, because the ACE provider included with Office that connects to Excel data sources is intended for interactive client-side use and can cause unexpected results when used non-interactivley.
 
 ### Distributed queries
 

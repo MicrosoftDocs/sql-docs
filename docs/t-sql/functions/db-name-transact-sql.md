@@ -36,7 +36,7 @@ DB_NAME ( [ database_id ] )
 ## Arguments
 *database_id*  
 
-The identification number (ID) of the database whose name `DB_NAME` will return. If the call to `DB_NAME` omits *database_id*, `DB_NAME` returns the name of the current database.
+The identification number (ID) of the database whose name `DB_NAME` will return. If the call to `DB_NAME` omits *database_id* or when the *database_id* is 0, `DB_NAME` returns the name of the current database.
   
 ## Return types
 **nvarchar(128)**

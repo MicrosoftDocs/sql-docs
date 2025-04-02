@@ -27,7 +27,8 @@ helpviewer_keywords:
  
 ##  <a name="SupportedBuTypes"></a> Backup Types Supported on Secondary Replicas  
   
--   **BACKUP DATABASE** supports only copy-only full backups of databases, files, or filegroups when it's executed on secondary replicas. Copy-only backups don't impact the log chain or clear the differential bitmap.  
+-   **BACKUP DATABASE** supports only copy-only full backups of databases, files, or filegroups when it's executed on secondary replicas. Copy-only backups don't impact the log chain or clear the differential bitmap.
+-   Copy-only full backup on a secondary replica will not stop other replicas from truncating their log, but when the copy-only full backup is running but not finished, the transaction log of the secondary replica which run the copy-only full backup cannot be truncated, if in the mean time the primary replica transaction log is truncated to a LSN which between the first LSN and last LSN of the transaction log of the secondary replica that run copy-only fullbackup, the secondary may encounter error with code 9019 and message like "The virtual log file sequence 0x%08x at offset 0x%016I64x bytes in file '%ls' is active and cannot be overwritten with sequence 0x%08x for database '%ls'." in the secondary replica's errorlog. The workaround of this issue is to run the full backup on the primary replica.   
   
 -   Differential backups aren't supported on secondary replicas.
 

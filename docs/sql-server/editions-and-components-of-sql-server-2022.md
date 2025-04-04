@@ -279,7 +279,7 @@ SQL Server 2022 includes features for connecting to [Azure Synapse Analytics](/a
 
 <sup>1</sup> [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] Web, [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] Express, [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] Express with Tools, and [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] Express with Advanced Services can be profiled using [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] Standard and [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] Enterprise editions.
 
-<sup>2</sup> Tuning enabled only on Standard edition features.
+<sup>2</sup> Tuning in Standard Edition can only be applied to features available in Standard Edition.
 
 > [!NOTE]  
 > Distributed Replay has been deprecated in [!INCLUDE [sssql22-md](../includes/sssql22-md.md)].

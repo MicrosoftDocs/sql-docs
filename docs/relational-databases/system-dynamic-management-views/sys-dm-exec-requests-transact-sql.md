@@ -111,20 +111,31 @@ For [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later versions, `s
 
 ## Examples
 
-### A. Find the query text for a running batch
+### A. Show Active Requests
 
-The following example queries `sys.dm_exec_requests` to find the interesting query and copy its `sql_handle` from the output.
+This following example shows all currently running queries in your SQL Data Warehouse, excluding your own session (@@SPID). It uses CROSS APPLY with `sys.dm_exec_sql_text` to retrieve the full query text for each request, and joins with `sys.dm_exec_sessions` to include user and host info. The session_id <> @@SPID filter ensures you don’t see your own query in the results.
 
-```sql
-SELECT * FROM sys.dm_exec_requests;
-GO
 ```
-
-Then, to obtain the statement text, use the copied `sql_handle` with system function `sys.dm_exec_sql_text(sql_handle)`.
-
-```sql
-SELECT * FROM sys.dm_exec_sql_text(< copied sql_handle >);
-GO
+SELECT
+    r.session_id,
+    r.status,
+    r.command,
+    r.start_time,
+    r.total_elapsed_time / 1000.00 AS elapsed_seconds,
+    r.cpu_time / 1000.00 AS cpu_seconds,
+    r.reads,
+    r.writes,
+    r.logical_reads,
+    r.row_count,
+    s.login_name,
+    s.host_name,
+    t.text AS query_text
+FROM sys.dm_exec_requests r
+JOIN sys.dm_exec_sessions s
+    ON r.session_id = s.session_id
+CROSS APPLY sys.dm_exec_sql_text(r.sql_handle) t
+WHERE r.session_id <> @@SPID
+ORDER BY r.start_time DESC;
 ```
 
 ### B. Find all locks that a running batch is holding

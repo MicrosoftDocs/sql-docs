@@ -18,7 +18,7 @@ monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-20
 
 > For content related to the Import and Export Wizard, see [Import and Export Data with the SQL Server Import and Export Wizard](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md).
 
-Import Flat File Wizard is a simple way to copy data from a flat file (.csv, .txt) to a new table in your database. The Import Flat File Wizard supports both comma-separated and fixed width format files. This overview describes the reasons for using this wizard, how to find this wizard, and a simple example to follow.
+Import Flat File Wizard is a simple way to copy data from a flat file (.csv, .txt, psv, etc.) to a new table in your database. The Import Flat File Wizard supports both comma-separated, other delimeters, and fixed width format files. This overview describes the reasons for using this wizard, how to find this wizard, and a simple example to follow.
 
 ## Why would I use this wizard?
 

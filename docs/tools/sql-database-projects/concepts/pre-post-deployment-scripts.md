@@ -54,8 +54,8 @@ Those files should be excluded from the database model build by setting the `Bui
 ```xml
 ...
   <ItemGroup>
-    <Build Remove="scripts\script1.sql" />
-    <Build Remove="scripts\script2.sql" />
+    <Build None="scripts\script1.sql" />
+    <Build None="scripts\script2.sql" />
   </ItemGroup>
 </Project>
 ```

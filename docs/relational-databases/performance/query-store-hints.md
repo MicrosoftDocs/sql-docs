@@ -197,6 +197,10 @@ Finally, remove the hint from `query_id` 39, using [sp_query_store_clear_hints](
 ```sql
 EXEC sys.sp_query_store_clear_hints @query_id = 39;
 ```
+Important
+
+Please note all Query Store data will be removed including "hints" information if Query Store data is reset through "Purge Query Data" option.
+
 
 ## Related content
 

@@ -79,6 +79,8 @@ To achieve full business continuity, adding database regional redundancy is only
   - Perform DR drills in production when the data loss isn't acceptable
   - Relocate the database to a different region
   - Return the database to the primary region after the outage has been mitigated (known as failback).
+  
+  Data loss is fully mitigated during a planned or graceful failover scenario, where the Azure platform ensures complete synchronization between the primary and geo-secondary replicas before initiating the failover. In this process, all transaction logs generated on the primary are continuously shipped and applied to the secondary. The failover is executed only after the secondary replica has caught up with the primary by reaching the same Log Sequence Number (LSN), guaranteeing data consistency and ensuring zero data loss.
 
 - **Forced failover (potential data loss)**
 

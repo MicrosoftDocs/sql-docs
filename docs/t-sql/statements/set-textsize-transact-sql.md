@@ -50,6 +50,40 @@ SET TEXTSIZE { number }
  Setting SET TEXTSIZE affects the @@TEXTSIZE function.  
   
  The setting of set TEXTSIZE is set at execute or run time and not at parse time.  
+
+ ### Impacts on `sp_executesql` and `EXECUTE` Statements
+ The `TEXTSIZE` setting affects the result of dynamic statements executed by [sp_executesql (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-executesql-transact-sql.md)  or [EXECUTE (Transact-SQL)](../../t-sql/language-elements/execute-transact-sql.md), especially when the result is inserted into a table.  
+ 
+ Consider the following example:
+ 
+ ```sql
+  SET TEXTSIZE -1;
+  
+  DROP TABLE IF EXISTS #TestTextSize;
+  CREATE TABLE #TestTextSize(txt varchar(5))
+  
+  SET TEXTSIZE 2;
+  
+  INSERT INTO #TestTextSize
+  SELECT CONVERT(text,'12345')
+  
+  INSERT INTO #TestTextSize
+  EXEC('SELECT CONVERT(text,''12345'')')
+  
+  SELECT * FROM #TestTextSize
+ ```
+
+ [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+
+ ```
+ txt    
+ -------
+ 12345  
+ 12      
+ ```
+
+ Note that regardless of the target table's correct data type, SQL truncates the text before insertion due to the `TEXTSIZE` setting. When using SQL Server Agent Jobs that runs  `EXEC` or `sp_executesql`, you must be cautious. SQL Server Agent modifies the default value of `TEXTSIZE`, which could lead to unexpected behavior. For example, queries may work fine in SQL Server Management Studio but fail when executed through SQL Agent, especially when working with certain text columns that exceed the size. To prevent this issue, ensure you add `SET TEXTSIZE` to the query that the job runs, explicitly defining the desired text size to avoid truncation
+ 
   
 ## Permissions  
  Requires membership in the **public** role.  

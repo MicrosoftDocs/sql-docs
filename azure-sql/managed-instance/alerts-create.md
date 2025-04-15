@@ -217,7 +217,7 @@ For more information, see:
      |**Event status**| Select the statuses of Resource Health events. Values are **Active**, **In Progress**, **Resolved**, and **Updated**.|
      |**Current resource status**|Select the current resource status. Values are **Available**, **Degraded**, and **Unavailable**.|
      |**Previous resource status**|Select the previous resource status. Values are **Available**, **Degraded**, **Unavailable**, and **Unknown**.|
-     |**Reason type**|Select the causes of the Resource Health events. Values are **Platform Initiated**, **Unknown**, and **User Initiated**.|
+     |**Resource type**|<to be completed>|
   1. Select **Next: Actions >**.
   
   ### [Activity log](#tab/activity-log)

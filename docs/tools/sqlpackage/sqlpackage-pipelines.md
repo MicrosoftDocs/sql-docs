@@ -26,7 +26,7 @@ On Windows, the standalone install of SqlPackage is available on the path `C:\Pr
 
 ### Managed virtual environments
 
-The virtual environments used for GitHub Actions hosted runners and Azure Pipelines virtual machine images are managed in the [runner-images](https://github.com/actions/runner-images) GitHub repository. SqlPackage is included in several environments including `windows-latest` and `ubuntu-latest`. Updates to the images in [runner-images](https://github.com/actions/runner-images) are made within a few weeks of each SqlPackage release.
+The virtual environments used for GitHub Actions hosted runners and Azure Pipelines virtual machine images are managed in the [runner-images](https://github.com/actions/runner-images) GitHub repository. SqlPackage is included in several environments including `windows-latest` and `ubuntu-22.04` but is no longer included by default in `ubuntu-24.04` and `ubuntu-latest`. Updates to the images in [runner-images](https://github.com/actions/runner-images) are made within a few weeks of each SqlPackage release.
 
 ### Self-hosted virtual environments
 

@@ -78,7 +78,8 @@ Requires `ALTER ANY SERVER ROLE` permission on the server to change the name of 
 To add a member to a fixed server role, you must be a member of that fixed server role, or be a member of the `sysadmin` fixed server role.  
   
 > [!NOTE]  
->  The `CONTROL SERVER` and `ALTER ANY SERVER ROLE` permissions are not sufficient to execute `ALTER SERVER ROLE` for a fixed server role, and `ALTER` permission cannot be granted on a fixed server role.  
+
+> The `CONTROL SERVER` and `ALTER ANY SERVER ROLE` permissions are not sufficient to execute ALTER SERVER ROLE directly for a fixed server role, and `ALTER` permission cannot be granted on a fixed server role. However, `CONTROL SERVER` enables the login to impersonate "sa" account to execute ALTER statements. 
   
 **User-defined server roles**  
   

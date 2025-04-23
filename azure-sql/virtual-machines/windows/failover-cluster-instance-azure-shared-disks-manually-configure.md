@@ -38,7 +38,7 @@ Before you complete the instructions in this article, you should already have:
 
 ## Add Azure shared disk
 
-[Deploy a managed with the shared disk feature enabled](/azure/virtual-machines/disks-shared-enable#deploy-shared-disks). Set `maxShares` to **align with the number of cluster nodes** to make the disk shareable across all FCI nodes.
+[Deploy a managed disk with the shared disk feature enabled](/azure/virtual-machines/disks-shared-enable#deploy-shared-disks). Set `maxShares` to **align with the number of cluster nodes** to make the disk shareable across all FCI nodes.
 Premium SSD, Premium SSDv2 and Ultra Disk are supported disk types to use with a SQL Server failover cluster instance. 
 
 Use zone-redundant storage (ZRS) whenever possible. 

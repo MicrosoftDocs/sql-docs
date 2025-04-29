@@ -50,6 +50,8 @@ The frequency of transaction log backups depends on the compute size and the amo
 
 A tail log backup is taken every time before a database or SQL managed instance is deleted.
 
+- Azure SQL Managed Instance does not back up system databases (master, model and msdb).
+
 ### Backup storage redundancy
 
 By default, Azure SQL Managed Instance stores backups in geo-redundant [storage blobs](/azure/storage/common/storage-redundancy) that are replicated to a [paired region](/azure/reliability/cross-region-replication-azure). Geo-redundancy helps protect against outages that affect backup storage in the primary region. It also allows you to restore your instance to a different region in the event of a disaster.

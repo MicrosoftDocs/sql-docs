@@ -98,30 +98,30 @@ For this scenario, assume you've created an Azure Virtual Machine (VM) running a
 
 1. You can then do some basic connectivity checks to ensure that the VM is connecting to SQL Database via the private endpoint using the following tools:
 
-   - Telnet
+   - Test-NetConnection
    - PsPing
    - Nmap
    - [SQL Server Management Studio (SSMS)](https://aka.ms/ssms)
 
-### Check connectivity using Telnet
+### Check connectivity using PowerShell with Test-NetConnect
 
-[Telnet Client](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754293%28v%3dws.10%29) is a Windows feature that can be used to test connectivity. Depending on the version of the Windows OS, you might need to enable this feature explicitly.
+[Test-NetConnection]([/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754293%28v%3dws.10%29](https://learn.microsoft.com/en-us/powershell/module/nettcpip/test-netconnection?view=windowsserver2025-ps)) is a Windows PowerShell cmdlet that can be used to test connectivity.
 
-Open a Command Prompt window after you have installed Telnet. Run the **Telnet** command and specify the IP address and private endpoint of the database in SQL Database.
+Open a PowerShell window and type: Test-NetConnection <SQL FQDN or IP> -Port 1433
+Specify the Fully Qualified Domain Name (FQDN) (e.g. servername.database.windows.net) or the private IP address of the SQL Database Server.
 
+FQDN example
 ```console
-telnet 10.9.0.4 1433
+Test-NetConnection myserver.database.windows.net -Port 1433
+```
+Private IP example
+```console
+Test-NetConnection 10.9.0.4 -Port 1433
 ```
 
-When Telnet connects successfully, it outputs a blank screen at the command window, as shown in the following image:
+A successful connection is indicated by the TcpTestSucceeded: True
+If TcPTestSucceeded is False, then the connection to the SQL Server over the specified port failed.
 
-:::image type="content" source="media/private-endpoint/telnet-result.png" alt-text="Diagram of the Telnet window with blank screen." lightbox="media/private-endpoint/telnet-result.png":::
-
-Use PowerShell command to check the connectivity:
-
-```powershell
-Test-NetConnection -computer myserver.database.windows.net -port 1433
-```
 
 ### Check Connectivity using PsPing
 

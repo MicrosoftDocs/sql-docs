@@ -259,6 +259,28 @@ az synapse workspace firewall-rule create --name AllowAllWindowsAzureIps --works
 | [Delete firewall rules](/rest/api/sql/firewall-rules/delete) |Server |Removes server-level IP firewall rules |
 | [Get firewall rules](/rest/api/sql/firewall-rules/get) | Server | Gets server-level IP firewall rules |
 
+## Understanding the latency of firewall updates
+
+The following table enumerates the configuration options as well as how and where update latency is observed.
+
+
+| Authentication model  | Failover configured | Latency for security settings changes | Latent instances |
+|-----------------------|---------------------|--------------------------------------|------------------|
+| Server authentication | Yes                 | 5 minutes                            | all DB instances |
+| Server authentication | No                  | 5 minutes                            | all DB instances |
+| Contained DB          | Yes                 | 5 minutes                            | secondary DB instance |
+| Contained DB          | No                  | none                            | none             |
+
+
+The server authentication model has a latency of 5 minutes for all changes to security settings unless the database is contained and not configured with a failover partner.  However, the DB instances that are affected differ.  In the case of contained DBs, each security update is instantaneous on the primary instance, but the secondary instance may take up to 5 minutes to reflect the changes.  In the case of the server authentication model, all instances are latent for up to 5 minutes.
+
+## Manually refreshing firewall rules
+
+If you need to see firewall rules updated more quickly than the 5 minute latency, you can manually refresh the firewall rules. Log into the database instance that needs its rules updated, and run DBCC FLUSHAUTHCACHE.  This will cause the database instance to flush its local cache and refresh firewall rules.
+```syntaxsql
+DBCC FLUSHAUTHCACHE[;]
+```
+
 ## Troubleshoot the database firewall
 
 Consider the following points when access to Azure SQL Database doesn't behave as you expect.

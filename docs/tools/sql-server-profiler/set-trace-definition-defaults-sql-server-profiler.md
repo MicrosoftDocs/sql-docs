@@ -22,13 +22,13 @@ The trace definition default is the default trace template that is used for each
   
 1.  On the **File** menu, select **Templates**, and then click **Edit Template.**  
   
-2.  In the **Trace Template Properties** dialog box, on the **General**tab, select a server type from the **Select server type**list.  
+2.  In the **Trace Template Properties** dialog box, on the **General** tab, select a server type from the **Select server type** list.  
   
-3.  In the **Select template name**list, select the name of the template that you want to use as the trace definition default.  
+3.  In the **Select template name** list, select the name of the template that you want to use as the trace definition default.  
   
 4.  Select **Use as a default template for selected server type**.  
   
-5.  If necessary, click the **Events Selection**tab to modify the template.  
+5.  If necessary, click the **Events Selection** tab to modify the template.  
   
 6.  Click **Save**.  
   

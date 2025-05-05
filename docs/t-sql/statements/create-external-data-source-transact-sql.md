@@ -1707,7 +1707,7 @@ GO
 CREATE EXTERNAL DATA SOURCE MyAzureStorage
 WITH (
     LOCATION = 'abs://<container>@<storage_account_name>.blob.core.windows.net/',
-    CREDENTIAL = AzureStorageCredentialv2,
+    CREDENTIAL = AzureStorageCredentialv2
 );
 ```
 

@@ -161,7 +161,7 @@ FROM table AS FT_TBL INNER JOIN
 ## Examples  
   
 ### A. Simple Example  
- The following example creates and populates a simple table of two columns, listing 3 counties and the colors in their flags. The it creates and populates a full-text catalog and index on the table. Then the **CONTAINSTABLE** syntax is demonstrated. This example demonstrates how the rank value grows higher when the search value is met multiple times. In the last query, Tanzania which contains both green and black has a higher rank than Italy which contain only one of the queried colors.  
+ The following example creates and populates a simple table of two columns, listing 3 counties and the colors in their flags. Then, it creates and populates a full-text catalog and index on the table. Then, the **CONTAINSTABLE** syntax is demonstrated. This example demonstrates how the rank value grows higher when the search value is met multiple times. In the last query, Tanzania which contains both green and black has a higher rank than Italy which contain only one of the queried colors.  
   
 ```  
 CREATE TABLE Flags (Country nvarchar(30) NOT NULL, FlagColors varchar(200));  

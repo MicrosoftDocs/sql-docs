@@ -1092,13 +1092,18 @@ PolyBase can push some of the query computation to Hadoop to improve query perfo
 
 You can create many external tables that reference the same or different external data sources.
 
-Pay attention to source data using the UTF-8 collation. For any source data using the UTF-8 collation, you must manually provide a non-UTF-8 collation each UTF-8 column in the `CREATE EXTERNAL TABLE` statement. This is because UTF-8 support does not extend to external tables. When you attempt to create an external table with a UTF-8 collation, you will receive an `Unsupported collation` error message. If the external table's database collation is a UTF-8 collation, external table creation will fail unless you provide an explicit non-UTF-8 column collation, for example, `[UTF8_column] varchar(128) COLLATE LATIN1_GENERAL_100_CI_AS_KS_WS NOT NULL,`.
-
 Serverless and dedicated SQL pools in Azure Synapse Analytics use different code bases for data virtualization. Serverless SQL pools support a native data virtualization technology. Dedicated SQL pools support both native and PolyBase data virtualization. PolyBase data virtualization is used when the EXTERNAL DATA SOURCE is created with `TYPE=HADOOP`.
 
 ## Limitations and restrictions
 
 Since the data for an external table is not under the direct management control of Azure Synapse, it can be changed or removed at any time by an external process. As a result, query results against an external table aren't guaranteed to be deterministic. The same query can return different results each time it runs against an external table. Similarly, a query might fail if the external data is moved or removed.
+
+External tables do not support source data with UTF-8 collations. If your source data uses UTF-8 collation, you must explicitly assign a non-UTF-8 collation to each UTF-8 column in the CREATE EXTERNAL TABLE statement. Failing to do so will result in an error message similar to the following: 
+
+    > Msg 105105, Level 16, State 1, Line 22
+    105105;No column collation was specified in external table definition and the collation of current database 'Latin1_General_100_CI_AS_SC_UTF8' is not supported for external tables of type 'HADOOP'. Please specify a supported collation in the column definition.
+
+Additionally, if the external table’s database collation is UTF-8, the table creation will fail unless each column is explicitly defined with a non-UTF-8 collation (e.g., [UTF8_column] varchar(128) COLLATE LATIN1_GENERAL_100_CI_AS_KS_WS NOT NULL).
 
 You can create multiple external tables that each reference different external data sources.
 

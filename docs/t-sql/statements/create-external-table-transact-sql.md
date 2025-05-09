@@ -1100,8 +1100,8 @@ Since the data for an external table is not under the direct management control 
 
 External tables do not support source data with UTF-8 collations. If your source data uses UTF-8 collation, you must explicitly assign a non-UTF-8 collation to each UTF-8 column in the CREATE EXTERNAL TABLE statement. Failing to do so will result in an error message similar to the following: 
 
-    > Msg 105105, Level 16, State 1, Line 22
-    105105;No column collation was specified in external table definition and the collation of current database 'Latin1_General_100_CI_AS_SC_UTF8' is not supported for external tables of type 'HADOOP'. Please specify a supported collation in the column definition.
+> Msg 105105, Level 16, State 1, Line 22
+105105;No column collation was specified in external table definition and the collation of current database 'Latin1_General_100_CI_AS_SC_UTF8' is not supported for external tables of type 'HADOOP'. Please specify a supported collation in the column definition.
 
 Additionally, if the external table’s database collation is UTF-8, the table creation will fail unless each column is explicitly defined with a non-UTF-8 collation (e.g., [UTF8_column] varchar(128) COLLATE LATIN1_GENERAL_100_CI_AS_KS_WS NOT NULL).
 

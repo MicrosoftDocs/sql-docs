@@ -120,6 +120,11 @@ To change the cluster IP address, follow these steps:
 
 1. In the **Cluster Core Resources** section, right-click cluster name and select **Bring Online**. Wait until the name and one of the IP address resources are online.
 
+1. **Set the connection for multiple subnets.**<br>
+The replica in the remote datacenter is part of the availability group, but it's in a different subnet. If this replica becomes the primary replica, application connection time-outs might occur. This behavior is the same as an on-premises availability group in a multiple-subnet deployment. To allow connections from client applications, either update the client connection or configure name resolution caching on the cluster network name resource.
+Preferably, update the cluster configuration to set `RegisterAllProvidersIP=1` and the client connection strings to set `MultiSubnetFailover=Yes`. See [Connecting with MultiSubnetFailover](/sql/relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery#Anchor_0).
+If you can't modify the connection strings, you can configure name resolution caching. See [Timeout occurs when you connect to an Always On listener in a multi-subnet environment](https://support.microsoft.com/help/2792139/time-out-error-and-you-cannot-connect-to-a-sql-server-2012-alwayson-av).
+
 Since the SQL Server VMs are in different subnets the cluster will have an OR dependency on the two dedicated windows cluster IP addresses. When the cluster name resource comes online, it updates the domain controller (DC) server with a new Active Directory (AD) computer account. If the cluster core resources move nodes, one IP address goes offline, while the other comes online, updating the DC server with the new IP address association.  
 
 >[!TIP]

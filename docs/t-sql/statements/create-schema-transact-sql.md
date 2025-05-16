@@ -37,7 +37,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ```  
 -- Syntax for SQL Server and Azure SQL Database  
   
-CREATE SCHEMA schema_name_clause [ <schema_element> [ ...n ] ]  
+CREATE SCHEMA <schema_name_clause> [ <schema_element> [ ...n ] ]  
   
 <schema_name_clause> ::=  
     {  

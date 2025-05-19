@@ -30,4 +30,4 @@ The following table identifies features available by SQL Server version:
 
 <sup>1</sup> Requires subscription to [Extended Security Updates (ESU) enabled by Azure Arc](../../end-of-support/sql-server-extended-security-updates.md#subscribe-instances-for-esus).
 
-<sup>2</sup> Monitoring requires SQL Server 2016 SP1 or later versions. For more information, see [prerequisites](../../azure-arc/sql-monitoring.md#prerequisites). 
+<sup>2</sup> Requires SQL Server 2016 SP1 or later versions. For more information, see prerequisites. 

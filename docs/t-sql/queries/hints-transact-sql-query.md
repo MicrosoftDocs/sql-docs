@@ -367,7 +367,7 @@ The list of all supported `USE HINT` names can be queried using the dynamic mana
 
 #### <a id="use-plan"></a> USE PLAN N'*xml_plan*'
 
-Forces the Query Optimizer to use an existing query plan for a query specified by *xml_plan*. `USE PLAN` can't be specified with `INSERT`, `UPDATE`, `MERGE`, or `DELETE` statements.
+Forces the Query Optimizer to use an existing query plan for a query specified by *xml_plan*.
 
 The resulting execution plan forced by this feature is the same or similar to the plan being forced. Because the resulting plan might not be identical to the plan specified by `USE PLAN`, the performance of the plans can vary. In rare cases, the performance difference can be significant and negative; in that case, the administrator must remove the forced plan.
 

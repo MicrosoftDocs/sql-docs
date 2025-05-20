@@ -161,7 +161,7 @@ To deploy containers in WSL, you first need to install a Linux container engine,
 ```bash
 docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<password>" \
 -e "MSSQL_PID=Developer" -e "MSSQL_AGENT_ENABLED=true" \
--p 14333:1433 --name sqlcontainerwsl --hostname sqlcontainerwsl \
+-p 1433:1433 --name sqlcontainerwsl --hostname sqlcontainerwsl \
 -d mcr.microsoft.com/mssql/server:2022-latest
 ```
 
@@ -177,7 +177,7 @@ For example, run the following command to set up a volume called `sql_volume` lo
 ```bash
 docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<password>" \
 -e "MSSQL_PID=Developer" -e "MSSQL_AGENT_ENABLED=true" \
--p 14333:1433 --name sqlcontainerwsl --hostname sqlcontainerwsl \
+-p 1433:1433 --name sqlcontainerwsl --hostname sqlcontainerwsl \
 -v sql_volume:/var/opt/mssql/ \
 -d mcr.microsoft.com/mssql/server:2022-latest
 ```

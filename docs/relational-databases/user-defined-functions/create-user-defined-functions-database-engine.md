@@ -37,7 +37,7 @@ This article describes how to create a user-defined function (UDF) in [!INCLUDE 
 
 - User-defined functions can't make use of dynamic SQL or temp tables. Table variables are allowed.
 
-- `SET` statements aren't allowed in a user-defined function.
+- `SET` statements aren't allowed in a user-defined function, e.g. `SET NOCOUNT ON;`. Variable value assignment can use `SET`.
 
 - The `FOR XML` clause isn't allowed.
 

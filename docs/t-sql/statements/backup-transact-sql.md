@@ -455,8 +455,8 @@ Sample behaviors:
 
 | BACKUP STATEMENT                                                                 | OUTCOME                                                                                     |
 |---------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------|
-| `BACKUP DATABASE <database_name> TO {DISK\|TAPE\|URL}`                            | Backup without any compression                                         |
-| `BACKUP DATABASE <database_name> TO {DISK\|TAPE\|URL} WITH COMPRESSION`          | Backup with compression using MS_XPRESS algorithm                           |
+| `BACKUP DATABASE <database_name> TO {DISK\|TAPE\|URL} WITH NO_COMPRESSION`        | Backup without any compression |
+| `BACKUP DATABASE <database_name> TO {DISK\|TAPE\|URL} WITH COMPRESSION`          | Backup with compression using the algorithm specified by the server option `backup compression algorithm` (default MS_XPRESS)    |
 | `BACKUP DATABASE <database_name> TO {DISK\|TAPE\|URL} WITH COMPRESSION (ALGORITHM = MS_XPRESS)` | Backup with compression using MS_XPRESS algorithm  |
 | `BACKUP DATABASE <database_name> TO {DISK\|TAPE\|URL} WITH COMPRESSION (ALGORITHM = ZSTD)`     | Backup with compression using ZSTD algorithm. |
 | `BACKUP DATABASE <database_name> TO {DISK\|TAPE\|URL} WITH COMPRESSION (ALGORITHM = ZSTD, LEVEL = HIGH)` | Backup with compression using ZSTD algorithm with compression level HIGH.                  |

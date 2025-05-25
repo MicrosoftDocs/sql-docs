@@ -204,7 +204,7 @@ Searching operations on JSON documents contained in a **json** column in a table
 The following examples use the Sales.SalesOrderHeader table in AdventureWorks database with a **json** column called Info. The Info column is created as a **json** type. A JSON index is also created on the Info column with default settings. The following code sample shows the `CREATE JSON INDEX` statement:
 
 ```sql
-CREATE JSON INDEX sales_info_idx ON Saales.SalesOrderHeader(Info);
+CREATE JSON INDEX sales_info_idx ON Sales.SalesOrderHeader(Info);
 ```
 
 For the sample search expressions, use the following JSON documents as data:

@@ -155,7 +155,7 @@ CROSS APPLY
     VECTOR_SEARCH(
         TABLE = [dbo].[wikipedia_articles_embeddings] as t, 
         COLUMN = [content_vector], 
-        SIMILAR_TO = @qv, 
+        SIMILAR_TO = t.v, 
         METRIC = 'cosine', 
         TOP_N = 10
     ) AS s

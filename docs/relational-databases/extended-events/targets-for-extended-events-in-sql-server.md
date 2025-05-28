@@ -112,6 +112,8 @@ The `event_file` target writes event session output from buffer to a disk file o
 
 - You specify the `filename` parameter in the `ADD TARGET` clause. The file extension must be `xel`.
 - The file name you choose is used by the system as a prefix to which a date-time based long integer is appended, followed by the `xel` extension.
+- You can optionally specify the `max_file_size` parameter. It defines the maximum size to which the file can grow. 
+- You also have the option to use the `max_rollover_files` option to specify the maximum number of files to retain in the file system in addition to the current file. The default value is UNLIMITED. When MAX_ROLLOVER_FILES is evaluated, if the number of files exceeds the MAX_ROLLOVER_FILES setting, the oldest file is deleted. For more information, see [MAX_ROLLOVER_FILES](/sql/t-sql/statements/create-server-audit-transact-sql?#max_rollover_files---integer--unlimited-)
 
 ::: moniker range="= azuresqldb-current || = azuresqldb-mi-current "
 

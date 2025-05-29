@@ -42,13 +42,12 @@ This statement performs the following resource governor actions:
 ```syntaxsql
 ALTER RESOURCE GOVERNOR
     { RECONFIGURE
-          [ WITH
-                ( [ CLASSIFIER_FUNCTION = { schema_name.function_name | NULL } ]
-                  [ [ , ] MAX_OUTSTANDING_IO_PER_VOLUME = value ]
-                )
-          ]
       | DISABLE
       | RESET STATISTICS
+      | WITH
+              ( [ CLASSIFIER_FUNCTION = { schema_name.function_name | NULL } ]
+                [ [ , ] MAX_OUTSTANDING_IO_PER_VOLUME = value ]
+              )
     }
 [ ; ]
 ```

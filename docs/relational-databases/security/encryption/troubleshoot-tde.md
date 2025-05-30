@@ -185,6 +185,22 @@ Confirm that the server has permissions to the key vault and the correct permiss
 - If the server identity is present, ensure that it has the following key permissions: Get, WrapKey, and UnwrapKey.
 - If the server identity isn't present, add it by using the **Add New** button.
 
+### Wrong key format
+
+**Error message**
+
+_500 InternalServerError - An unexpected error occured while processing the request._
+
+**Detection**
+
+To identify the unsupported key in the key vault:
+
+- Use the Azure portal, go to the **Key vault** service menu > **Objects** > **Keys**, and check the key type and length.
+
+**Mitigation**
+
+Make sure that the key uses a [supported key length](/azure/azure-sql/database/transparent-data-encryption-byok-overview#requirements-for-configuring-tde-protector).
+
 ## Getting TDE status from the Activity log
 
 To allow for monitoring of the database status due to Azure Key Vault key access issues, the following events will be logged to the [Activity Log](/azure/service-health/alerts-activity-log-service-notifications) for the resource ID based on the Azure Resource Manager URL.

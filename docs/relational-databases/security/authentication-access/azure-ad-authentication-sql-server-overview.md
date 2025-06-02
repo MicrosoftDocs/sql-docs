@@ -101,7 +101,7 @@ Some non-GUI clients such as [Invoke-sqlcmd](/powershell/module/sqlserver/invoke
   - Member of the *Azure Connected Machine Onboarding* group or *Contributor* role in the resource group.
   - Member of the *Azure Connected Machine Resource Administrator* role in the resource group.
   - Member of the *Reader* role in the resource group.
-- Microsoft Entra authentication is not supported for SQL Server failover cluster instances and maintenance plan
+- Microsoft Entra authentication is not supported for SQL Server failover cluster instances and maintenance plans.
 
 ## Related content
 

@@ -92,6 +92,7 @@ You may see the following error when you run the DBCC CHECKDB command on a SQL S
 _Msg 8992, Level 16, State 1, Line <Line_Number>an
 Check Catalog Msg 3853, State 1: Attribute (%ls) of row (%ls) in sys.sysrowsetrefs does not have a matching row (%ls) in sys.indexes._
 ```
+This metadata corruption may cause stack dumps and crashes of the SQL Server service.
 
 To work around the issue, first drop the index, or the table with the index, from the source database in Azure SQL Managed Instance, and then restore, or link, the database to SQL Server 2022 again. If recreating the database from the source Azure SQL Managed Instance isn't possible, please contact Microsoft support to help resolve this issue. 
 

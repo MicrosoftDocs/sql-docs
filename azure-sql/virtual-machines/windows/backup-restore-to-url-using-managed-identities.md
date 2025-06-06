@@ -103,6 +103,26 @@ Msg 3013, Level 16, State 1, Line 31
 RESTORE DATABASE is terminating abnormally. 
 ```
 
+### Network or Firewall Issues
+
+If valid network access to the Azure Blob storage and Windows Firewall permissions on the host to allow the outbound connection, and valid storage account service endpoints are not configured, the **BACKUP** operation will fail with an error message indicating that access is denied.
+
+```sql
+Msg 3201, Level 16, State 1, Line 31
+Cannot open backup device 'https://<storage-account-name>.blob.core.windows.net/<container-name>/AdventureWorks.bak'. Operating system error 5(Access is denied.).
+Msg 3013, Level 16, State 1, Line 31
+BACKUP DATABASE is terminating abnormally. 
+```
+
+If valid network access to the Azure Blob storage and Windows Firewall permissions on the host to allow the outbound connection, and valid storage account service endpoints are not configured,  the **RESTORE** operation will fail with an error message indicating that access is denied.
+
+```sql
+Msg 3201, Level 16, State 1, Line 31
+Cannot open backup device 'https://<storage-account-name>.blob.core.windows.net/<container-name>/AdventureWorks.bak'. Operating system error 5(Access is denied.).
+Msg 3013, Level 16, State 1, Line 31
+RESTORE DATABASE is terminating abnormally.
+```
+
 ### Duplicate database name
 
 When the original database with the same name exists in the storage, the backup of a new database to the same storage path will fail with the following error:

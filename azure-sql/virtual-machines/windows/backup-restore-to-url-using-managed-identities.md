@@ -105,7 +105,7 @@ RESTORE DATABASE is terminating abnormally.
 
 ### Network or Firewall Issues
 
-If valid network access to the Azure Blob storage and Windows Firewall permissions on the host to allow the outbound connection, and valid storage account service endpoints are not configured, the **BACKUP** operation will fail with an error message indicating that access is denied.
+If valid network access to the Azure Blob storage and Windows Firewall permissions on the host to allow the outbound connection, and valid storage account service endpoints aren't configured, the **BACKUP** operation fails with an error message indicating that access is denied.
 
 ```sql
 Msg 3201, Level 16, State 1, Line 31
@@ -114,7 +114,7 @@ Msg 3013, Level 16, State 1, Line 31
 BACKUP DATABASE is terminating abnormally. 
 ```
 
-If valid network access to the Azure Blob storage and Windows Firewall permissions on the host to allow the outbound connection, and valid storage account service endpoints are not configured,  the **RESTORE** operation will fail with an error message indicating that access is denied.
+If valid network access to the Azure Blob storage and Windows Firewall permissions on the host to allow the outbound connection and valid storage account service endpoints aren't configured,  the **RESTORE** operation fails with an error message indicating that access is denied.
 
 ```sql
 Msg 3201, Level 16, State 1, Line 31

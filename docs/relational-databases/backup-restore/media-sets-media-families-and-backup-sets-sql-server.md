@@ -247,7 +247,7 @@ Appending, which is the default behavior of the BACKUP, can be explicitly specif
   
 -   For restore:  
   
-     For any restore from disk backups and for any online restore, all the all media families must be concurrently mounted. For an offline restore from tape backups, you can process the media families from fewer backup devices. Each media family must be processed completely before starting to process another media family. Media families are always processed in parallel, unless they are being restored with a single device.  
+     For any restore from disk backups and for any online restore, all the media families must be concurrently mounted. For an offline restore from tape backups, you can process the media families from fewer backup devices. Each media family must be processed completely before starting to process another media family. Media families are always processed in parallel, unless they are being restored with a single device.  
   
 ##  <a name="RelatedTasks"></a> Related Tasks  
  **Create a new media set**  

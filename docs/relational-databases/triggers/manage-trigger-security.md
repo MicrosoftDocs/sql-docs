@@ -78,8 +78,9 @@ You can take the following measures to prevent trigger code from executing under
     ```sql
     DISABLE TRIGGER ALL ON ALL SERVER;
     ```
-
-     This statement disables all DML triggers in the current database:
+   > [!NOTE]  
+   > Only logins with sysadmin role, and control server permission can create,drop,disable, and enable server level triggers.
+   
 
     ```sql
     DECLARE @schema_name sysname, @trigger_name sysname, @object_name sysname;

@@ -410,7 +410,7 @@ The first AFTER trigger nested inside an INSTEAD OF trigger fires even if the **
 ## Permissions  
 To create a DML trigger, it requires ALTER permission on the table or view on which the trigger is being created.  
   
-To create a DDL trigger with server scope (ON ALL SERVER) or a logon trigger, requires CONTROL SERVER permission on the server. To create a DDL trigger with database scope (ON DATABASE), requires ALTER ANY DATABASE DDL TRIGGER permission in the current database.  
+To create a DDL trigger with server scope (ON ALL SERVER) or a logon trigger, requires CONTROL SERVER permission on the server or sysadmin role. To create a DDL trigger with database scope (ON DATABASE), requires ALTER ANY DATABASE DDL TRIGGER permission in the current database.  
   
 ## Examples  
   

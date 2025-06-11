@@ -173,7 +173,9 @@ SSIS Deploy task currently doesn't support the following scenarios:
   1. Connect to the on-premises SQL Server instance and select the database **Gallery_Configuration**.
   1. Run the query `INSERT INTO dbo.tbl_RegistryItems VALUES (1,'#\Configuration\Service\Gallery\LargeExtensionUpload\SSIS\','MaxPackageSizeMB\',50)`. Change `50` to a higher number if the extension is larger than 50 MBs.
   1. After you run the query, restart Internet Information Services. Try again to upload the extension.
-  1. If the error persists, please contact the SQL Server support team. 
+  1. If the error persists, please contact the SQL Server support team.
+- It will not create a new Project on the database server in SSISDB
+  - `SSISDeploy.exe -s:Example.ispac -d:"catalog;/SSISDB/ExampleA;databaseAddress" -at:win` will create this
 
 
 ## SSIS Deploy task version 1.* 

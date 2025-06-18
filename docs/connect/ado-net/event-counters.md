@@ -71,13 +71,13 @@ dotnet-trace collect --process-id <pid> --providers Microsoft.Data.SqlClient.Eve
 The following command monitors SqlClient event counters values once every three seconds.
 
 ```Console
-dotnet-counters monitor Microsoft.Data.SqlClient.EventSource -p <process-id> --refresh-interval 3
+dotnet-counters monitor --counters Microsoft.Data.SqlClient.EventSource -p <process-id> --refresh-interval 3
 ```
 
 The following command monitors selected SqlClient event counters values once every second.
 
 ```Console
-dotnet-counters monitor Microsoft.Data.SqlClient.EventSource[hard-connects,hard-disconnects] -p <process-id>
+dotnet-counters monitor --counters Microsoft.Data.SqlClient.EventSource[hard-connects,hard-disconnects] -p <process-id>
 ```
 
 ### Consume in-proc

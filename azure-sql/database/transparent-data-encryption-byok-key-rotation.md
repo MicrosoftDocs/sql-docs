@@ -36,7 +36,7 @@ This article discusses both automated and manual methods to rotate the TDE prote
 > This article applies to Azure SQL Database, Azure SQL Managed Instance, and Azure Synapse Analytics dedicated SQL pools (formerly SQL DW). For documentation on transparent data encryption (TDE) for dedicated SQL pools inside Synapse workspaces, see [Azure Synapse Analytics encryption](/azure/synapse-analytics/security/workspaces-encryption).
 
 > [!IMPORTANT]
-> Do not delete previous versions of the key after a rollover. When keys are rolled over, some data is still encrypted with the previous keys, such as older database backups, backed-up log files and transaction log files.
+> Do not delete or disable previous versions of the key after a rollover. When keys are rolled over, some data is still encrypted with the previous keys, such as older database backups, backed-up log files and transaction log files, and the previous key is still needed to access this data.
 
 ## Prerequisites
 

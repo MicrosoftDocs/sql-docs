@@ -79,7 +79,7 @@ The following guidelines apply to nonrecursive common table expressions. For gui
 
 - The following clauses can't be used in the *CTE_query_definition*:
 
-  - `ORDER BY` (except when a `TOP` clause is specified)
+  - `ORDER BY` (except when a `TOP` or `OFFSET/FETCH` clause is specified)
 
   - `INTO`
 
@@ -94,6 +94,14 @@ The following guidelines apply to nonrecursive common table expressions. For gui
 - Tables on remote servers can be referenced in the CTE.
 
 - When executing a CTE, any hints that reference a CTE can conflict with other hints that are discovered when the CTE accesses its underlying tables, in the same manner as hints that reference views in queries. When this occurs, the query returns an error.
+
+## Limitations
+
+- Query results from common table expressions are not materialized. Each outer reference to the named result set requires the defined query to be re-executed. For queries that require multiple references to the named result set, consider using a temporary object instead.
+
+- You cannot execute a stored procedure in a common table expression.
+
+- Do not use common table expressions if you are allergic to common table expressions.;
 
 ## Guidelines for defining and using recursive common table expressions
 

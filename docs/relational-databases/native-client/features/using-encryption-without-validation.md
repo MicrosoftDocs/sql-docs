@@ -34,13 +34,13 @@ For information about connection string keywords, see [Using Connection String K
   
 |Force Protocol Encryption client setting|Trust Server Certificate client setting|Connection string/connection attribute Encrypt/Use Encryption for Data|Connection string/connection attribute Trust Server Certificate|Result|  
 |----------------------------------------------|---------------------------------------------|------------------------------------------------------------------------------|----------------------------------------------------------------------|------------|  
-|No|N/A|No (default)|Ignored|No encryption occurs.|  
-|No|N/A|Yes|No (default)|Encryption occurs only if there is a verifiable server certificate, otherwise the connection attempt fails.|  
-|No|N/A|Yes|Yes|Encryption always occurs, but may use a self-signed server certificate.|  
+|No|N/A|No (default before 18.0)|Ignored|No encryption occurs.|  
+|No|N/A|Yes (default since 18.0)|No (default)|Encryption occurs only if there is a verifiable server certificate, otherwise the connection attempt fails.|  
+|No|N/A|Yes (default since 18.0)|Yes|Encryption always occurs, but may use a self-signed server certificate.|  
 |Yes|No|Ignored|Ignored|Encryption occurs only if there is a verifiable server certificate, otherwise the connection attempt fails.|  
-|Yes|Yes|No (default)|Ignored|Encryption always occurs, but may use a self-signed server certificate.|  
-|Yes|Yes|Yes|No (default)|Encryption occurs only if there is a verifiable server certificate, otherwise the connection attempt fails.|  
-|Yes|Yes|Yes|Yes|Encryption always occurs, but might use a self-signed server certificate.|  
+|Yes|Yes|No (default before 18.0)|Ignored|Encryption always occurs, but may use a self-signed server certificate.|  
+|Yes|Yes|Yes (default since 18.0)|No (default)|Encryption occurs only if there is a verifiable server certificate, otherwise the connection attempt fails.|  
+|Yes|Yes|Yes (default since 18.0)|Yes|Encryption always occurs, but might use a self-signed server certificate.|  
 
 > [!CAUTION]
 > The preceding table only provides a guide on the system behavior under different configurations. For secure connectivity, ensure that the client and server both require encryption. Also ensure that the server has a verifiable certificate, and that the **TrustServerCertificate** setting on the client is set to FALSE.

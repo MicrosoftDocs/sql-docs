@@ -206,12 +206,14 @@ For the purposes of this example, the fixed limit on the `tempdb` space consumpt
 
 1. Open a new session that is classified into the `limited_tempdb_space_group` workload group.
 
-    1. In [!INCLUDE [ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS), select **File** on the main menu, **New**, **Database Engine Query**.
+    1. In [!INCLUDE [ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) older than 21 release, select **File** on the main menu, **New**, **Database Engine Query**.
     1. In the **Connect to Database Engine** dialog, specify the same [!INCLUDE [ssde-md](../../includes/ssde-md.md)] instance where you created the workload group and the classifier function in the previous steps.
 
        Select the **Additional Connection Parameters** tab, and enter `App=limited_tempdb_application`. This makes SSMS use `limited_tempdb_application` as the application name when connecting to the instance. The `APP_NAME()` function in the classifier returns this value as well.
 
     1. Select **Connect** to open a new session.
+
+       If you are using SSMS 21 and newer, then click "Advanced...", then under "Context" update "Application Name" field.
 
 1. Execute the following statement in the query window opened in the previous step. The output should show that your session is classified into the `limited_tempdb_space_group` workload group.
 

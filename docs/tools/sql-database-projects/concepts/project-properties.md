@@ -56,7 +56,7 @@ The `TreatTSqlWarningsAsErrors` property treats T-SQL warnings as errors, causin
 
 ## Example usage of project properties
 
-The following example shows how to set the `CompatibilityMode`, `IsChangeTrackingOn`, and `TreatTSqlWarningsAsErrors` properties in a SQL project file. The `CompatibilityMode` property is set to `130`, the `IsChangeTrackingOn` property is set to `True`, and the `TreatTSqlWarningsAsErrors` property is set to `True`. The `TreatSqlWarningsAsErrors` property is only set to `True` on the `Release` build configuration.
+The following example shows how to set the `CompatibilityLevel`, `IsChangeTrackingOn`, and `TreatTSqlWarningsAsErrors` properties in a SQL project file. The `CompatibilityLevel` property is set to `130`, the `IsChangeTrackingOn` property is set to `True`, and the `TreatTSqlWarningsAsErrors` property is set to `True`. The `TreatSqlWarningsAsErrors` property is only set to `True` on the `Release` build configuration.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -68,7 +68,7 @@ The following example shows how to set the `CompatibilityMode`, `IsChangeTrackin
     <ModelCollation>1033, CI</ModelCollation>
     <ProjectGuid>{00000000-0000-0000-0000-000000000000}</ProjectGuid>
     <RunSqlCodeAnalysis>true</RunSqlCodeAnalysis>
-    <CompatibilityMode>130</CompatibilityMode>
+    <CompatibilityLevel>130</CompatibilityLevel>
     <IsChangeTrackingOn>True</IsChangeTrackingOn>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)'=='Release'">
@@ -97,7 +97,7 @@ Some project properties are associated with database options that apply to only 
 | ChangeTrackingRetentionPeriod | `CHANGE_RETENTION` | Database settings, Operational, Change tracking retention period | 2 | {integer} |
 | ChangeTrackingRetentionUnit | `CHANGE_RETENTION` | Database settings, Operational, Change tracking retention period | MINUTES | {DAYS&#124;HOURS&#124;MINUTES} |
 | CloseCursorOnCommitEnabled | `CURSOR_CLOSE_ON_COMMIT` | Database settings, Operational, Close cursor on commit enabled | False | {True&#124;False} |
-| CompatibilityMode | `COMPATIBILITY_LEVEL` | Database settings, Compatibility level | | {100&#124;110&#124;120&#124;130&#124;140&#124;150&#124;160&#124;170}<sup>1</sup> |
+| CompatibilityLevel | `COMPATIBILITY_LEVEL` | Database settings, Compatibility level | | {100&#124;110&#124;120&#124;130&#124;140&#124;150&#124;160&#124;170}<sup>1</sup> |
 | ConcatNullYieldsNull | `CONCAT_NULL_YIELDS_NULL` | Database settings, SET CONCAT_NULL_YIELDS_NULL | True | {True&#124;False} |
 | Containment | `CONTAINMENT` | Database settings, Containment | NONE | {NONE&#124;PARTIAL} |
 | DacApplicationName | | Data-tier application (`.dacpac`) properties, name | The project name | {string} |

@@ -4,7 +4,7 @@ description: Learn how to use a managed identity with SQL Server 2025.
 author: PratimDasgupta
 ms.author: prdasgu
 ms.reviewer: mikeray, randolphwest, mathoma, vanto
-ms.date: 06/09/2025
+ms.date: 07/06/2025
 ms.service: sql
 ms.topic: how-to
 ms.custom:
@@ -35,7 +35,7 @@ When using managed identity with SQL Server enabled by Azure Arc, consider the f
 - Only system-assigned managed identities are supported.
 - SQL Server uses this Azure Arc server level managed identity as the **primary managed identity**.
 - SQL Server can use this primary managed identity in either `inbound` and/or `outbound` connections.
-  - `Inbound connections` are logins and users connecting to SQL Server. Inbound connections can also be achieved by using [App Registration available from SQL Server 2022](entra-authentication-setup-tutorial.md).
+  - `Inbound connections` are logins and users connecting to SQL Server. Inbound connections can also be achieved by using [App registration](entra-authentication-setup-tutorial.md), starting in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)].
   - `Outbound connections` are SQL Server connections to Azure resources, like backup to URL, or connecting to Azure Key Vault.
 - App Registration **can't** enable a SQL Server to make outbound connections. Outbound connections need a primary managed identity assigned to the SQL Server.
 
@@ -43,7 +43,7 @@ When using managed identity with SQL Server enabled by Azure Arc, consider the f
 
 Before you can use a managed identity with SQL Server enabled by Azure Arc, ensure that you meet the following prerequisites:
 
-- [Connect the SQL Server instance to Azure Arc](connect.md).
+- [Connect your SQL Server to Azure Arc](connect.md).
 - The latest version of the [Azure Extension for SQL Server](release-notes.md).
 
 ## Enable the primary managed identity
@@ -52,18 +52,17 @@ If you've installed the Azure Extension for SQL Server to your server, you can e
 
 ### [Azure portal](#tab/portal)
 
-To enable the primary managed identity in the Azure portal, follow these steps: 
+To enable the primary managed identity in the Azure portal, follow these steps:
 
 1. Go to your [SQL Server enabled by Azure Arc](https://portal.azure.com/#view/Microsoft_Azure_ArcCenterUX/ArcCenterMenuBlade/~/sqlServerInstances) resource in the Azure portal.
 1. Under **Settings**, select **Microsoft Entra ID and Purview** to open the **Microsoft Entra ID and Purview** page.
 
    > [!NOTE]  
-   > If you don't see the **Enable Microsoft Entra ID authentication** option, ensure that your SQL Server instance is connected to Azure Arc and that you have the latest SQL extension installed. 
+   > If you don't see the **Enable Microsoft Entra ID authentication** option, ensure that your SQL Server instance is connected to Azure Arc and that you have the latest SQL extension installed.
 
 1. On the **Microsoft Entra ID and Purview** page, check the box next to **Use a primary managed identity** and then use **Save** to apply your configuration:
 
    :::image type="content" source="media/managed-identity/entra-portal.png" alt-text="Screenshot of the Microsoft Entra option in the Azure portal." lightbox="media/managed-identity/entra-portal.png":::
-
 
 ### [Manually](#tab/manual)
 
@@ -75,7 +74,7 @@ Grant **Read & execute** operating system permissions on the folder `C:\ProgramD
 
 :::image type="content" source="media/managed-identity/tokens-folder-permissions.png" alt-text="Screenshot of Tokens folder Security properties tab.":::
 
-You might need to grant admin permissions for the SQL Server service account on the `AzureConnectedMachineAgent` folder prior to the `Tokens` folder:
+You might need to grant admin permissions for the SQL Server service account on the `AzureConnectedMachineAgent` folder before the `Tokens` folder:
 
 :::image type="content" source="media/managed-identity/azure-connected-machine-agent-folder-permissions.png" alt-text="Screenshot of AzureConnectedMachineAgent folder Security properties tab.":::
 
@@ -153,7 +152,7 @@ This step backs up the registry before you make any changes. You can import this
 
 #### Add entries
 
-In this step, you'll add entries to the registry with Registry Editor.
+In this step, you add entries to the registry with Registry Editor.
 
 1. Navigate this subkey: **\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL17.MSSQLSERVER\MSSQLServer\FederatedAuthentication**.
 
@@ -171,7 +170,7 @@ In this step, you'll add entries to the registry with Registry Editor.
 
 If you need to restore to previous registry settings, follow these steps.
 
-1. Open the Registry Editor as described above.
+1. Open the Registry Editor as described previously.
 1. Select **File** from the menu.
 1. Select **Import**.
 1. Navigate to the location of your saved backup file.
@@ -187,35 +186,33 @@ The system-assigned managed identity, which uses the Arc-enabled machine name, m
 
 You can use PowerShell to grant required permissions to the managed identity. Alternatively, you can [create a role-assignable group](/entra/identity/role-based-access-control/groups-create-eligible). After the group is created, assign the **Directory readers** role to the group, and add all system-assigned managed identities for your Arc-enabled machines to the group.
 
-The following PowerShell script grants the required permissions to the managed identity:
+The following PowerShell script grants the required permissions to the managed identity. Make sure this script is run on PowerShell 7.5 or a later version, and has the `Microsoft.Graph` module 2.28 or later installed.
 
 ```powershell
-# Update these variables to match your Azure & Arc machine setup
+# Set your Azure tenant and managed identity name
 $tenantID = '<Enter-Your-Azure-Tenant-Id>'
 $managedIdentityName = '<Enter-Your-Arc-HostMachine-Name>'
 
-# Install and connect to AzureAD
+# Connect to Microsoft Graph
 try {
-    Install-Module -Name AzureAD -Force -Scope CurrentUser -ErrorAction Stop
-    Import-Module AzureAD
-    Connect-AzureAD -TenantId $tenantID
-    Write-Output "Connected to AzureAD successfully."
-} catch {
-    Write-Error "Failed to install or connect to AzureAD: $_"
+    Connect-MgGraph -TenantId $tenantID -ErrorAction Stop
+    Write-Output "Connected to Microsoft Graph successfully."
+}
+catch {
+    Write-Error "Failed to connect to Microsoft Graph: $_"
     return
 }
 
-# Get Microsoft Graph API service principal
+# Get Microsoft Graph service principal
 $graphAppId = '00000003-0000-0000-c000-000000000000'
-$graphSP = Get-AzureADServicePrincipal -Filter "appId eq '$graphAppId'"
+$graphSP = Get-MgServicePrincipal -Filter "appId eq '$graphAppId'"
 if (-not $graphSP) {
     Write-Error "Microsoft Graph service principal not found."
     return
 }
 
-# Get the managed identity
-$managedIdentity = Get-AzureADServicePrincipal -SearchString $managedIdentityName | Where-Object { $_.DisplayName -eq $managedIdentityName }
-
+# Get the managed identity service principal
+$managedIdentity = Get-MgServicePrincipal -Filter "displayName eq '$managedIdentityName'"
 if (-not $managedIdentity) {
     Write-Error "Managed identity '$managedIdentityName' not found."
     return
@@ -228,21 +225,27 @@ $requiredRoles = @(
     "Application.Read.All"
 )
 
-# Assign roles
+# Assign roles using scoped syntax
 foreach ($roleValue in $requiredRoles) {
-    $appRole = $graphSP.AppRoles | Where-Object { $_.Value -eq $roleValue -and $_.AllowedMemberTypes -contains "Application" }
+    $appRole = $graphSP.AppRoles | Where-Object {
+        $_.Value -eq $roleValue -and $_.AllowedMemberTypes -contains "Application"
+    }
+
     if ($appRole) {
         try {
-            New-AzureADServiceAppRoleAssignment `
-                -ObjectId $managedIdentity.ObjectId `
-                -PrincipalId $managedIdentity.ObjectId `
-                -ResourceId $graphSP.ObjectId `
-                -Id $appRole.Id
+            New-MgServicePrincipalAppRoleAssignment   -ServicePrincipalId $managedIdentity.Id `
+                -PrincipalId $managedIdentity.Id `
+                -ResourceId $graphSP.Id `
+                -AppRoleId $appRole.Id `
+                -ErrorAction Stop
+
             Write-Output "Successfully assigned role '$roleValue' to '$managedIdentityName'."
-        } catch {
+        }
+        catch {
             Write-Warning "Failed to assign role '$roleValue': $_"
         }
-    } else {
+    }
+    else {
         Write-Warning "Role '$roleValue' not found in Microsoft Graph AppRoles."
     }
 }
@@ -261,6 +264,7 @@ Consider the following limitations when using a managed identity with SQL Server
 - The identity you choose to authenticate to SQL Server has to have either the **Directory Readers** role in Microsoft Entra ID or the following three Microsoft Graph application permissions (app roles): `User.Read.All`, `GroupMember.Read.All`, and `Application.Read.All`.
 - Once Microsoft Entra authentication is enabled, disabling isn't advisable. Disabling Microsoft Entra authentication forcefully by deleting registry entries can result in unpredictable behavior with SQL Server 2025.
 - Authenticating to SQL Server on Arc machines through Microsoft Entra authentication using the [FIDO2 method](/azure/active-directory/authentication/howto-authentication-passwordless-faqs) isn't currently supported.
+- [OPENROWSET BULK](../../t-sql/functions/openrowset-bulk-transact-sql.md) operations can also read the tokens folder `C:\ProgramData\AzureConnectedMachineAgent\Tokens\`. The `BULK` option requires either `ADMINISTER BULK OPERATIONS` or `ADMINISTER DATABASE BULK OPERATIONS` permissions. These permissions should be treated as equivalent to **[sysadmin](../../relational-databases/security/authentication-access/server-level-roles.md)**.
 
 ## Related content
 

@@ -519,7 +519,7 @@ There's no need to split Parquet and ORC files because the COPY command automati
 
 ### Are there any limitations on the number or size of files?
 
-There are no limitations on the number or size of files; however, for best performance, we recommend files that are at least 4 MB.
+There are no limitations on the number or size of files; however, for best performance, we recommend files that are at least 4 MB. Also, limit the count of source files to a maximum of 5000 files for better performance.
 
 ### Are there any known issues with the COPY statement?
 

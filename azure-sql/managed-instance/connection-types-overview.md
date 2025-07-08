@@ -50,7 +50,8 @@ In the proxy connection type, the TCP session is established using the gateway a
 ## Changing Connection Type
 
 - **Using the Portal:**
-To change the Connection Type using the Azure portal, open the Virtual Network page and use the **Connection type** setting to change the connection type and save the changes.
+To change the connection type using the Azure portal, go to your SQL Managed Instance resource, under **Security**, select **Networking**. In the **Networking** page, select the drop-down under **Connection type (VNet-local endpoint)** to change between the Proxy/Redirect types. Save the changes once you are done.
+
 
 - **Script to change connection type settings using PowerShell:**
 

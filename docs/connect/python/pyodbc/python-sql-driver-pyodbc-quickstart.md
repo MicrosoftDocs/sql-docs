@@ -4,7 +4,7 @@ description: This quickstart describes installing Python, and pyodbc then shows 
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: vanto, randolphwest
-ms.date: 06/18/2025
+ms.date: 07/08/2025
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: quickstart-sdk
@@ -51,6 +51,16 @@ Get the [`pyodbc` package](https://pypi.org/project/pyodbc/) from PyPI.
     pip install pyodbc
     ```
 
+### Install python-dotenv package
+
+Get the [`python-dotenv`](https://pypi.org/project/python-dotenv/) from PyPI.
+
+1. In the same directory that you ran the command above, install the `python-dotenv` package.
+
+    ```bash
+    pip install python-dotenv
+    ```
+
 ### Check installed packages
 
 You can use the PyPI command-line tool to verify that your intended packages are installed.
@@ -69,9 +79,13 @@ This quickstart requires the *[!INCLUDE [sssampledbnormal-md](../../../includes/
 
 [Create a SQL database in minutes using the Azure portal](/azure/azure-sql/database/single-database-create-quickstart)
 
+Copy the `ODBC` connection string from the _Connnection strings_ tab to use here.
+
 ### [SQL database in Fabric](#tab/fabric-sql)
 
 [Load AdventureWorks sample data in your SQL database in Microsoft Fabric](/fabric/database/sql/load-AdventureWorks-sample-data)
+
+Copy the `ODBC` connection string from the _Settings_ tab to use here.
 
 ### [Microsoft SQL Server](#tab/sql-server)
 

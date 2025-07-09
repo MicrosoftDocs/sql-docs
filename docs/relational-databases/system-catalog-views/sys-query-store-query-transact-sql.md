@@ -36,8 +36,8 @@ Contains information about the query and its associated overall aggregated runti
 | `is_internal_query` <sup>2</sup> | **bit** | The query was generated internally. |
 | `query_parameterization_type` <sup>2</sup> | **tinyint** | Type of parameterization:<br /><br />`0` - None<br />`1` - User<br />`2` - Simple<br />`3` - Forced |
 | `query_parameterization_type_desc` <sup>4</sup> | **nvarchar(60)** | Textual description for the parameterization type. |
-| `initial_compile_start_time` | **datetimeoffset** | Initial Compile start time. |
-| `last_compile_start_time` | **datetimeoffset** | Most Recent Compile start time. |
+| `initial_compile_start_time` | **datetimeoffset** | Initial compile start time. |
+| `last_compile_start_time` | **datetimeoffset** | Most recent compile start time. |
 | `last_execution_time` | **datetimeoffset** | Last execution time refers to the last end time of the query/plan. |
 | `last_compile_batch_sql_handle` | **varbinary(64)** | Handle of the last SQL batch in which query was used last time. It can be provided as input to [sys.dm_exec_sql_text (Transact-SQL)](../system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md) to get the full text of the batch. |
 | `last_compile_batch_offset_start` <sup>2</sup> | **bigint** | Information that can be provided to `sys.dm_exec_sql_text` along with `last_compile_batch_sql_handle`. |

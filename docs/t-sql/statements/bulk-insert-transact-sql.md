@@ -471,7 +471,9 @@ Alternatively, create a [DATABASE SCOPED CREDENTIAL](../../t-sql/statements/crea
 
 ### Permissions
 
-Requires INSERT and ADMINISTER BULK OPERATIONS permissions. In Azure SQL Database, INSERT and ADMINISTER DATABASE BULK OPERATIONS permissions are required. ADMINISTER BULK OPERATIONS permissions or the **bulkadmin** role isn't supported for SQL Server on Linux. Only the **sysadmin** can perform bulk inserts for SQL Server on Linux.
+Requires both INSERT and ADMINISTER BULK OPERATIONS permissions. In Azure SQL Database, the required permissions are INSERT and ADMINISTER DATABASE BULK OPERATIONS.  
+Note that ADMINISTER BULK OPERATIONS or the **bulkadmin** role is not supported on SQL Server on Linux or when using Azure Active Directory (AAD) authentication on Box (on-premises or in a Azure VM).  
+In those environments, only members of the **sysadmin** role or with CONTROL SERVER access can perform bulk inserts.
 
 Additionally, ALTER TABLE permission is required if one or more of the following conditions is true:
 

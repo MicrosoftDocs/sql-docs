@@ -67,15 +67,11 @@ The following steps explain how to assign a managed identity to the server and a
     > [!NOTE]  
     > The server identity can be assigned using REST API and CLI commands as well. For more information, see [az sql server create](/cli/azure/sql/server#az-sql-server-create), [az sql server update](/cli/azure/sql/server#az-sql-server-update), and [Servers - REST API](/rest/api/sql/servers).
 
-1. Grant the server identity permissions to query Microsoft Graph. This can be done multiple ways: by adding the identity to the Microsoft Entra [**Directory Readers**](/entra/identity/role-based-access-control/permissions-reference#directory-readers) role, by assigning the identity the individual Microsoft Graph permissions, or by adding the identity to a role-assignable group that has the **Directory Readers** role:
+1. Grant the server identity permissions to query Microsoft Graph. This can be done multiple ways: by adding the identity to the Microsoft Entra [**Directory Readers**](/entra/identity/role-based-access-control/permissions-reference#directory-readers) role, or by adding the identity to a role-assignable group that has the **Directory Readers** role:
 
     - Add server identity to a role-assignable group
 
         In production environments, it's recommended that a tenant administrator creates a [role-assignable group](/entra/identity/role-based-access-control/groups-concept) and assigns the **Directory Readers** role to it. Group owners can then add server identities to the group, inheriting those permissions. This removes the requirement for a **Privileged Roles Administrator** to grant permissions to each individual server identity, allowing administrators to delegate permission assignment to owners of the group for this scenario. For more information, see [Directory Readers role in Microsoft Entra ID for Azure SQL](authentication-aad-directory-readers-role.md).
-
-    - Assign Microsoft Graph permissions to server identity
-
-        To assign the individual Microsoft Graph permissions to the server identity, you must have the Microsoft Entra **Privileged Roles Administrator** role. This is recommended over assigning the **Directory Readers** role, because there are permissions included in the role that the server identity doesn't need. Assigning only the individual Microsoft Graph read permissions limits the server identity's permissions within your tenant and maintains the principle of least privilege. For instructions, see [Managed identities in Microsoft Entra for Azure SQL](authentication-azure-ad-user-assigned-managed-identity.md).
 
     - Add server identity to Directory Readers role
 

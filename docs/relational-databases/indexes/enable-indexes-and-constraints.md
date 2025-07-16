@@ -51,7 +51,7 @@ monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-20
     |----------------------------|-----------------------------------|  
     |ALTER INDEX REBUILD.|Remains disabled.|  
     |ALTER INDEX ALL REBUILD.|Is rebuilt and enabled.|  
-    |DROP INDEX.|Remains disabled.|  
+    |DROP INDEX.|Is enabled.|  
     |CREATE INDEX WITH DROP_EXISTING.|Remains disabled.|  
   
      Creating a new clustered index, behaves the same as ALTER INDEX ALL REBUILD.  

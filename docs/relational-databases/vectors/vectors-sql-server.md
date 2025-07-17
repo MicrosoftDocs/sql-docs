@@ -22,11 +22,12 @@ monikerRange: "=sql-server-ver17 || =sql-server-linux-ver17 || =azuresqldb-curre
 
 [!INCLUDE [sqlserver2025-asdb-asmi-fabricsqldb](../../includes/applies-to-version/sqlserver2025-asdb-asmi-fabricsqldb.md)]
 
-Vectors are ordered arrays of numbers (typically floats) that can represent information about some data. For example, an image can be represented as a vector of pixel values, or a string of text can be represented as a vector of ASCII values. The process to turn data into a vector is called vectorization.
-
 > [!NOTE]
-> - Vector support in preview and is subject to change. Make sure to read preview usage terms in [Service Level Agreements (SLA) for Online Services](https://www.microsoft.com/licensing/docs/view/Service-Level-Agreements-SLA-for-Online-Services). 
 > - Vector features are available in Azure SQL Managed Instance configured with the [Always-up-to-date](/azure/azure-sql/managed-instance/update-policy#always-up-to-date-update-policy) policy. 
+
+## Vectors
+
+Vectors are ordered arrays of numbers (typically floats) that can represent information about some data. For example, an image can be represented as a vector of pixel values, or a string of text can be represented as a vector of ASCII values. The process to turn data into a vector is called vectorization. The [`VECTOR` data type](../../t-sql/data-types/vector-data-type.md) in SQL Server is designed to store these arrays of numbers efficiently.
 
 ## Embeddings
 

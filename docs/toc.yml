@@ -2218,7 +2218,12 @@ items:
       - name: Use the value() & nodes() Methods with OPENXML
         href: relational-databases/xml/use-the-value-and-nodes-methods-with-openxml.md
   - name: Vectors and Embeddings
-    href: relational-databases/vectors/vectors-sql-server.md    
+    items:
+      - name: Vectors and Embeddings
+      - href: relational-databases/vectors/vectors-sql-server.md    
+      - name: Vectors and Embeddings FAQ
+      - href: relational-databases/vectors/vectors-faq.md    
+
 - name: Development
   items:
   - name: Code a client program >

@@ -3,8 +3,8 @@ title: Use the system_health session
 description: The system_health Extended Events session is included with SQL Server. This session collects system data to troubleshoot database engine performance.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: randolphwest
-ms.date: 09/05/2024
+ms.reviewer: randolphwest, dimitri-furman
+ms.date: 07/16/2025
 ms.service: sql
 ms.subservice: xevents
 ms.topic: tutorial

@@ -73,6 +73,69 @@ Scaling resources is the easiest and the most effective way to improve performan
 - [Read scale-out](read-scale-out.md) is an available feature where you are getting one read-only replica of your data where you can execute demanding read-only queries such as reports. A read-only replica will handle your read-only workload without affecting resource usage on your primary database.
 - [Database sharding](elastic-scale-introduction.md) is a set of techniques that enables you to split your data into several databases and scale them independently.
 
+## Progressive strategies to scale read-heavy workloads
+
+Azure SQL Database and Azure SQL Managed Instance offer multiple strategies for improving performance and scalability of read-intensive workloads. Each approach is suited to different application patterns, workloads, and architecture constraints.
+
+The following progression outlines techniques to improve read scalability. Note that each step involves different levels of complexity and cost, so it’s important to align the solution with your workload and budget.
+
+### 1. Query and index optimization
+
+Start by analyzing and optimizing queries. Add missing indexes, eliminate unnecessary columns from `SELECT` statements, and tune long-running queries. Common techniques include:
+
+- Creating covering indexes for frequently queried columns  
+- Avoiding `SELECT *` to reduce unnecessary data retrieval  
+- Rewriting suboptimal joins or filters
+
+Use tools such as Query Performance Insight or Azure SQL Analytics to identify expensive queries and plan improvements.
+
+### 2. Caching frequently accessed data
+
+Use Azure Cache for Redis to store and serve frequently accessed or slow-changing data. This reduces the number of read operations against the database and improves response times for read-heavy applications.
+
+Caching is especially effective for:
+
+- Reference data (e.g., country codes, product catalogs)
+- Session data
+- Computed or aggregated values
+
+### 3. Scale up compute and storage
+
+Adjust the service tier or increase the compute size to provide additional CPU, memory, and IOPS. In Azure SQL Database, scaling up is available through the DTU or vCore purchasing models. In Managed Instance, you can scale up by increasing the number of vCores or selecting higher hardware generations.
+
+This approach generally has direct cost implications but can deliver immediate performance benefits with minimal architectural changes.
+
+### 4. Read-scale replicas
+
+For read-heavy workloads such as reporting or background processing, configure read-scale replicas (in Premium or Business Critical tiers) or geo-replicas to offload read operations.
+
+Azure SQL Managed Instance supports similar capabilities through auto-failover groups and read-only replicas.
+
+Consider read replicas when:
+
+- Analytics workloads impact OLTP performance  
+- You need global read availability  
+- You want to separate reporting from transactional queries
+
+> [!NOTE]  
+> Read replicas are asynchronously updated. As a result, they may not reflect real-time changes from the primary database. Consider this limitation when consistency is critical.
+
+### 5. Table partitioning
+
+Use table partitioning when a single large table becomes a bottleneck. Partitioning can improve query performance by limiting the amount of data scanned during operations on range or time-based data.
+
+Partitioning is most effective when:
+
+- Table size exceeds millions of rows  
+- Clear partition boundaries exist (e.g., time intervals or regions)  
+- Queries frequently filter on the partitioning column
+
+### 6. Sharding across multiple databases
+
+If other options are insufficient, consider sharding (horizontal partitioning) by distributing data across multiple databases. This approach supports massive scale but introduces additional complexity in query routing, data distribution, and application logic.
+
+You can manage sharded architectures using custom implementations or frameworks such as Elastic Database tools.
+
 ## Related content
 
 - For information about improving database performance by changing database code, see [Find and apply performance recommendations](database-advisor-find-recommendations-portal.md).

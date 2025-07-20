@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "sp_invoke_external_rest_endpoint"
 dev_langs:
   - "TSQL"
-monikerRange: "=fabric"
+monikerRange: '=fabric'  # Likely too narrow — this causes redirects for SQL MI and SQL Server views
 ---
 # sp_invoke_external_rest_endpoint (Transact-SQL)
 

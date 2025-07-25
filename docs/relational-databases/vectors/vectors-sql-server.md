@@ -94,6 +94,9 @@ Using an exact search is recommended when you don't have many vectors to search 
 
 ### Approximate Vector Index and Vector Search (Approximate Nearest Neighbors)
 
+> [!NOTE]
+> Approximate Vector Index and Vector Search is in preview and is currently available only in SQL Server 2025 preview.
+
 Identifying all vectors close to a given query vector requires substantial resources to calculate the distance between the query vector and the vectors stored in the table. Searching for all vectors close to a given query vector involves a complete scan of the table and significant CPU usage. This is called a "K-Nearest Neighbors" or "KNN" query and returns the "k" closest vectors.
 
 Vectors are used to find similar data for AI models to answer user queries. This involves querying the database for the "k" vectors nearest to the query vector using distance metrics like dot (inner) product, cosine similarity, or Euclidean distance.

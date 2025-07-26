@@ -12,6 +12,53 @@ ms.topic: conceptual
 
 This article lists the releases of the _Microsoft JDBC Driver for SQL Server_. For each release version, the changes are named and described.
 
+
+## <a id="131"></a> 13.2
+Release number: 13.2.1  
+Released: Aug 7, 2025
+  
+### 13.2 Compliance
+
+| Compliance change | Details |
+| :---------------- | :------ |
+| Compatible with Java Development Kit (JDK) version 22.0, 21.0, 17.0, 11.0, and 1.8. | Microsoft JDBC Driver 13.2 for SQL Server is now compatible with Java Development Kit (JDK) version 22.0 in addition to JDK 21.0, 17.0, 11.0 and 1.8. |
+
+### 13.2 Releases
+
+Release number: 13.2.1
+Released: Aug 7, 2025
+
+### New features in 13.2
+
+| Feature | Details |
+| :---------- | :----------- |
+| JSON datatype support | Native support for SQL Server’s new JSON data type with APIs for inserts, selects, stored procedures, and bulk copy. |
+| Vector datatype support | Native support for SQL Server’s new VECTOR data type with APIs for inserts, selects, stored procedures, and bulk copy. |
+| New connection options, quotedIdentifier and concatNullYieldsNull | New connection options, quotedIdentifier and concatNullYieldsNull, to control QUOTED_IDENTIFIER and CONCAT_NULL_YIELDS_NULL session settings for both new and pooled connections. |
+| Support for temporal and money datatypes when using bulk copy for batch insert operations | Support for batch inserts of DATETIME, DATE, MONEY, etc., when using the useBulkCopyForBatchInsert option. |
+| Mockito integration into JDBC driver tests | Mockito added as a test dependency. |
+
+### Changes in 13.2
+
+| Change | Details |
+| :---------- | :----------- |
+| releaseSavepoint exception type standardized to SQLFeatureNotSupported | SQLServerException replaced with SQLFeatureNotSupportedException to comply with JDBC specification. |
+| ActiveDirectoryPassword authentication deprecated | Added deprecation warning for Microsoft Entra ID password authentication method. |
+| Include Columnstore indexes in getIndexInfo() | Replaced sp_statistics with a custom query to support all index types. |
+| Corrected schema filtering in getSchemas() | What changed: Ensured schemas are properly filtered when a catalog name is provided. |
+| Increased redirection limit | Raised maximum redirection hops from 1 to 10. |
+
+### Fixes in 13.2
+
+| Fix | Details |
+| :---------- | :----------- |
+| Session recovery with Entra ID authentication and redirect mode | Redirect information is now followed during session recovery when using Entra ID authentication. [GitHub Issue #2606](https://github.com/microsoft/mssql-jdbc/issues/2668). |
+| Javadoc build warnings | Cleaned up invalid Javadoc syntax. [GitHub Issue #2608](https://github.com/microsoft/mssql-jdbc/issues/2640). |
+| OffsetDateTime formatting in SQLServerDataTable | The OffsetDateTime toString() method was omitting seconds when seconds are zero, which resulted in the server rejecting those records. Used DateTimeFormatter to avoid this invalid format. [GitHub Issue #2608](https://github.com/microsoft/mssql-jdbc/issues/2652). |
+| String comparison in SQLServerDataTable.equals() |Replaced == with .equals() for strings. [GitHub Issue #2608](https://github.com/microsoft/mssql-jdbc/issues/2653). |
+
+## Previous releases
+
 ## <a id="130"></a> 12.10
 
 :::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft JDBC Driver 12.10.1 for SQL Server (zip)](https://go.microsoft.com/fwlink/?linkid=2325115)**  

@@ -37,6 +37,9 @@ Released: Aug 7, 2025
 | New connection options, quotedIdentifier and concatNullYieldsNull | New connection options, quotedIdentifier and concatNullYieldsNull, to control QUOTED_IDENTIFIER and CONCAT_NULL_YIELDS_NULL session settings for both new and pooled connections. |
 | Support for temporal and money datatypes when using bulk copy for batch insert operations | Support for batch inserts of DATETIME, DATE, MONEY, etc., when using the useBulkCopyForBatchInsert option. |
 | Mockito integration into JDBC driver tests | Mockito added as a test dependency. |
+| Add order hints for Bulk Copy operations | Support for specifying order hints during Bulk Copy. |
+| Coding best practices and review process | Introduced contributor guidelines, coding best practices, and review processes. |
+| Add new trusted AKV URLs for FR and DE | Registered four new Azure Key Vault and Managed HSM endpoints for France and Germany. |
 
 ### Changes in 13.2
 
@@ -62,6 +65,8 @@ Released: Aug 7, 2025
 | File path error handling in ConfigurableRetryLogic | Robust error handling for missing/unreadable retry config files.. [GitHub Issue #2650](https://github.com/microsoft/mssql-jdbc/issues/2650). |
 | Suppressed CodeQL warnings for crypto usages | Suppressed CodeQL security warnings for cryptographic use cases. [GitHub Issue #2677](https://github.com/microsoft/mssql-jdbc/issues/2677). |
 | Batch insert fix for case-sensitive column name mismatch | executeBatch() now respects case sensitivity of collations when matching column names. [GitHub Issue #2695](https://github.com/microsoft/mssql-jdbc/issues/2695). |
+| Fix for null handling in temporal types with bulk copy | Properly handle null values for temporal types when sendTemporalDataTypesAsStringForBulkCopy=false. [GitHub Issue #2702](https://github.com/microsoft/mssql-jdbc/issues/2702). |
+| Fix string insertion with bulk copy API when sendStringParametersAsUnicode=false | Resolved issue where strings were inserted as byte arrays in batch bulk copy mode when sendStringParametersAsUnicode is set to false. [GitHub Issue #2704](https://github.com/microsoft/mssql-jdbc/issues/2704). |
 
 ## Previous releases
 

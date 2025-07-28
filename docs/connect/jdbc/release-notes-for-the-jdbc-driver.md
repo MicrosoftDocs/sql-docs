@@ -52,10 +52,16 @@ Released: Aug 7, 2025
 
 | Fix | Details |
 | :---------- | :----------- |
-| Session recovery with Entra ID authentication and redirect mode | Redirect information is now followed during session recovery when using Entra ID authentication. [GitHub Issue #2606](https://github.com/microsoft/mssql-jdbc/issues/2668). |
-| Javadoc build warnings | Cleaned up invalid Javadoc syntax. [GitHub Issue #2608](https://github.com/microsoft/mssql-jdbc/issues/2640). |
-| OffsetDateTime formatting in SQLServerDataTable | The OffsetDateTime toString() method was omitting seconds when seconds are zero, which resulted in the server rejecting those records. Used DateTimeFormatter to avoid this invalid format. [GitHub Issue #2608](https://github.com/microsoft/mssql-jdbc/issues/2652). |
-| String comparison in SQLServerDataTable.equals() |Replaced == with .equals() for strings. [GitHub Issue #2608](https://github.com/microsoft/mssql-jdbc/issues/2653). |
+| Session recovery with Entra ID authentication and redirect mode | Redirect information is now followed during session recovery when using Entra ID authentication. [GitHub Issue #2668](https://github.com/microsoft/mssql-jdbc/issues/2668). |
+| Javadoc build warnings | Cleaned up invalid Javadoc syntax. [GitHub Issue #2640](https://github.com/microsoft/mssql-jdbc/issues/2640). |
+| OffsetDateTime formatting in SQLServerDataTable | The OffsetDateTime toString() method was omitting seconds when seconds are zero, which resulted in the server rejecting those records. Used DateTimeFormatter to avoid this invalid format. [GitHub Issue #2652](https://github.com/microsoft/mssql-jdbc/issues/2652). |
+| String comparison in SQLServerDataTable.equals() | Replaced == with .equals() for strings. [GitHub Issue #2653](https://github.com/microsoft/mssql-jdbc/issues/2653). |
+| PreparedStatement metadata caching for encrypted columns | Fixed loss of type metadata across PreparedStatement reuse. [GitHub Issue #2663](https://github.com/microsoft/mssql-jdbc/issues/2663). |
+| Make IBM security module optional | IBM security dependency is now optional. [GitHub Issue #2636](https://github.com/microsoft/mssql-jdbc/issues/2636). |
+| Invalidate enclave session on reconnect | Enclave session cache no longer reused across reconnects. [GitHub Issue #2638](https://github.com/microsoft/mssql-jdbc/issues/2638). |
+| File path error handling in ConfigurableRetryLogic | Robust error handling for missing/unreadable retry config files.. [GitHub Issue #2650](https://github.com/microsoft/mssql-jdbc/issues/2650). |
+| Suppressed CodeQL warnings for crypto usages | Suppressed CodeQL security warnings for cryptographic use cases. [GitHub Issue #2677](https://github.com/microsoft/mssql-jdbc/issues/2677). |
+| Batch insert fix for case-sensitive column name mismatch | executeBatch() now respects case sensitivity of collations when matching column names. [GitHub Issue #2695](https://github.com/microsoft/mssql-jdbc/issues/2695). |
 
 ## Previous releases
 

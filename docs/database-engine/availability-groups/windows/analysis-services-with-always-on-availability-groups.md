@@ -202,7 +202,7 @@ monikerRange: ">=sql-server-2016"
 ##  <a name="bkmk_writeback"></a> Writeback when using an Always On availability database  
  Writeback is an Analysis Services feature that supports What If analysis in Excel. It is also commonly used for budgeting and forecasting tasks in custom applications.  
   
- Support for writeback requires a READWRITE client connection. In Excel, if you attempt to write back on a read-only connection, the following error will occur: "Data could not be retrieved from the external data source." "Data could not be retrieved from the external data source."  
+ Support for writeback requires a READWRITE client connection. In Excel, if you attempt to write back on a read-only connection, the following error will occur: "Data could not be retrieved from the external data source."  
   
  If you configured a connection to always access a readable secondary replica, you must now configure a new connection that uses a READWRITE connection to the primary replica.  
   

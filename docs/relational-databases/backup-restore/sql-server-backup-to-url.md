@@ -120,7 +120,7 @@ To use immutable storage with [!INCLUDE [sssql25-md](../../includes/sssql25-md.m
 1. Enable trace flag 3012 for your [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] instance by running the following DBCC command:   
    `DBCC TRACEON(3012,-1)`.
 1. Issue the [BACKUP](../../t-sql/statements/backup-transact-sql.md) to back up your database to the Azure storage container:   
-   `BACKP DATABASE [<Database>] TO URL = '<url>' WITH FORMAT`.
+   `BACKUP DATABASE [<Database>] TO URL = '<url>'`.
 
 ## Security for Azure Blob Storage
 

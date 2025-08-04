@@ -120,6 +120,9 @@ CREATE SCHEMA schema_name [ AUTHORIZATION owner_name ] [;]
 > [!NOTE]
 > The implicit creation of a Microsoft Entra user is not possible on [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]. Since creating a Microsoft Entra user from external provider must check the user's status in Microsoft Entra ID, creating the user will fail with error 2760: **The specified schema name "\<user_name@domain>" either does not exist or you do not have permission to use it.** And then error 2759: **CREATE SCHEMA failed due to previous errors.** Attempts to create or alter schemas will result in the error 15151: **Cannot find the user '', because it does not exist or you do not have permission.**, also followed by error 2759. To work around these errors, either create the Microsoft Entra user from an external provider, or alter the Microsoft Entra group to assign a default schema. Then rerun the statement creating the object.
 
+> [!NOTE]
+> In Microsoft Fabric Data Warehouse, a **owner_name** must have the **CONNECT Permission** on the database to successfully execute the **CREATE SCHEMA** statement using the syntax: CREATE SCHEMA schema_name [ AUTHORIZATION owner_name ]; If **GRANT CONNECT** has not been issued, the following error may be raised: **Msg 15151, Level 16, State 1, Line 1  Cannot find the user 'user@domain.com', because it does not exist or you do not have permission.  Msg 2759, Level 16, State 0, Line 1  CREATE SCHEMA failed due to previous errors**. To resolve this, ensure the user has been granted CONNECT permission using: GRANT CONNECT TO [user@domain.com];
+
 In [!INCLUDE [fabricse](../../includes/fabric-se.md)] and [!INCLUDE [fabricdw](../../includes/fabric-dw.md)] in [!INCLUDE [fabric](../../includes/fabric.md)], schema names can't contain `/` or `\` or end with a `.`.
 
 ## Deprecation Notice  

@@ -17,6 +17,24 @@ See what's new in the latest Appliance Updates for Microsoft Analytics Platform 
 
 ::: moniker range=">= aps-pdw-2016-au7 "
 
+<a name="h2-aps-cu7.9"></a>
+## APS CU7.9
+Release date - September 2025
+
+All updates for this release are focused on target security vulnerabilities. These updates do not add new functionality or features to the APS software.
+
+### SQL Server updates
+This release includes a series of General Distribution Releases (GDRs) and security hotfixes, updating to SQL Server build 13.0.6455.2. These updates focus on security, stability, and compliance rather than introducing new features.
+
+### Update to PDW Admin Console 
+Updated the PDW admin console health file to elevate the severity of external HDD issues, ensuring aging hardware failures are now flagged as critical for prompt resolution.
+
+### Firmware updates
+Support for newer firmware version, based on each appliance manufacturer. 
+
+### Updates to PDW validator
+Small changes to the PDW Appliance validator to validate the SQL Server version to the new expected version (13.0.6455.2). 
+
 <a name="h2-aps-cu7.8"></a>
 ## APS CU7.8
 Release date - November 2021

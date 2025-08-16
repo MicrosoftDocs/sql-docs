@@ -41,7 +41,7 @@ To change the compatibility level of a database, refer to [View or change the co
 
 ```syntaxsql
 AI_GENERATE_CHUNKS (source = text_expression
-                    , chunk_type = FIXED
+                    , chunk_type = 'FIXED'
                    [ , chunk_size = numeric_expression ]
                    [ , overlap = numeric_expression ]
                    [ , enable_chunk_set_id = numeric_expression ]
@@ -125,7 +125,7 @@ GO
 SELECT c.*
 FROM textchunk t
 CROSS APPLY
-   AI_GENERATE_CHUNKS(source = text_to_chunk, chunk_type = FIXED, chunk_size = 50, enable_chunk_set_id = 1) c
+   AI_GENERATE_CHUNKS(source = text_to_chunk, chunk_type = 'FIXED', chunk_size = 50, enable_chunk_set_id = 1) c
 ```
 
 | chunk | chunk_order | chunk_offset | chunk_length |  chunk_set_id |
@@ -158,7 +158,7 @@ SELECT
 FROM
    docs_table t
 CROSS APPLY
-   AI_GENERATE_CHUNKS(source = text_column, chunk_type = FIXED, chunk_size = 100) c
+   AI_GENERATE_CHUNKS(source = text_column, chunk_type = 'FIXED', chunk_size = 100) c
 ```
 
 ### B. Chunk a text column with overlap
@@ -171,7 +171,7 @@ SELECT
 FROM
    docs_table t
 CROSS APPLY
-   AI_GENERATE_CHUNKS(source = text_column, chunk_type = FIXED, chunk_size = 100, overlap = 10) c
+   AI_GENERATE_CHUNKS(source = text_column, chunk_type = 'FIXED', chunk_size = 100, overlap = 10) c
 ```
 
 ### C. Use AI_GENERATE_EMBEDDINGS with AI_GENERATE_CHUNKS
@@ -187,7 +187,7 @@ SELECT
 FROM
     table_with_text t
 CROSS APPLY
-    AI_GENERATE_CHUNKS(source = t.text_to_chunk, chunk_type = FIXED, chunk_size = 100) c
+    AI_GENERATE_CHUNKS(source = t.text_to_chunk, chunk_type = 'FIXED', chunk_size = 100) c
 ```
 
 ## Related content

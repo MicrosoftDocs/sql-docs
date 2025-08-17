@@ -56,6 +56,7 @@ ON object ( vector_column )
     [,] METRIC = { 'cosine' | 'dot' | 'euclidean' }
     [ [,] TYPE = 'DiskANN' ]
     [ [,] MAXDOP = max_degree_of_parallelism ]
+    [ [,] DROP_EXISTING = { ON | OFF } ]
 ) ]
 [ ON { filegroup_name | "default" } ]
 [;]

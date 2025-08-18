@@ -4,7 +4,7 @@ description: This guide describes installing Python, the ODBC Driver for SQL Ser
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: vanto, randolphwest
-ms.date: 06/18/2025
+ms.date: 08/18/2025
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: conceptual
@@ -24,7 +24,7 @@ Use the `pyodbc` driver to connect to a SQL database from Python code. This seri
 
 ## Support
 
-`pyodbc` is community-supported software. Microsoft contributes to the `pyodbc` open-source community and is an active participant in the repository at [https://github.com/mkleehammer/pyodbc/](https://github.com/mkleehammer/pyodbc/). However, this software doesn't come with Microsoft support.
+`pyodbc` is community-supported software. This software doesn't come with Microsoft support.
 
 > [!TIP]  
 > To get help, file an [issue in the pyodbc GitHub repository](https://github.com/mkleehammer/pyodbc/issues) or visit other Python community resources.

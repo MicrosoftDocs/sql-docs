@@ -118,7 +118,7 @@ The following sections identify features that are improved or introduced in [!IN
 | [Copilot in SQL Server Management Studio](/ssms/copilot/copilot-in-ssms-overview) | Ask questions. Get answers from your data. |
 | [Vector data type](../t-sql/data-types/vector-data-type.md) | Store vector data optimized for operations such as similarity search and machine learning applications. Vectors are stored in an optimized binary format but are exposed as JSON arrays for convenience. Each element of the vector is stored as a single-precision (4-byte) floating-point value. |
 | [Vector functions](../t-sql/functions/vector-functions-transact-sql.md) | New scalar functions perform operations on vectors in binary format, allowing applications to store and manipulate vectors in the SQL Database Engine. |
-| [Vector index](../relational-databases/vectors/vectors-sql-server.md#vector-search) | Create and manage approximate vector index to quickly and efficiently find similar vectors to a given reference vector.<br /><br />Query vector indexes from [sys.vector_indexes](../relational-databases/system-catalog-views/sys-vector-indexes-transact-sql.md). |
+| [Vector index](../relational-databases/vectors/vectors-sql-server.md#vector-search) | Create and manage approximate vector indexes to quickly and efficiently find similar vectors to a given reference vector.<br /><br />Query vector indexes from [sys.vector_indexes](../relational-databases/system-catalog-views/sys-vector-indexes-transact-sql.md). |
 | [Manage external AI models](../t-sql/statements/create-external-model-transact-sql.md) | Manage external AI model objects for embedding tasks (creating vector arrays) accessing REST AI inference endpoints. |
 
 ## Developer

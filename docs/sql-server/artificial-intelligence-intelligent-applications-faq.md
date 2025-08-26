@@ -35,7 +35,7 @@ For samples and examples, visit the [SQL AI Samples repository](https://aka.ms/s
 
 ## Can I create a retrieval-augmented generation (RAG) solution completely in T-SQL?
 
-Yes, you can create a Retrieval-Augmented Generation (RAG) solution using T-SQL. This type of solution leverages the SQL Database Engine's capabilities to manage and query your data effectively. You can use T-SQL to implement the necessary data retrieval and processing logic, while also integrating with external AI services for the generation aspect. Vector can be stored natively in SQL engine and connection to LLM to provide the natural language understand capabilities are possible via `sp_invoke_external_rest_endpoint`.
+Yes, you can create a Retrieval-Augmented Generation (RAG) solution using T-SQL. This type of solution leverages the SQL Database Engine's capabilities to manage and query your data effectively. You can use T-SQL to implement the necessary data retrieval and processing logic, while also integrating with external AI services for the generation aspect. Vectors can be stored natively in SQL engine and connections to LLMs to provide natural language understanding capabilities are possible via `sp_invoke_external_rest_endpoint`.
 
 - [Implement a RAG solution and call OpenAI right from Azure SQL DB to ask questions about your data](https://github.com/Azure-Samples/azure-sql-db-chatbot)
 - [Predictable LLM results with Structured Output and sp_invoke_external_rest_endpoint](https://devblogs.microsoft.com/azure-sql/predictable-llm-output-with-sp_invoke_external_rest_endpoint/)

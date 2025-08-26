@@ -119,7 +119,7 @@ A named instance has a dynamically assigned TCP port. If you want to connect to 
 1. If you're connecting to a custom TCP port, such as `51433`, use one of the following options:
 
    - `tcp:localhost,51433`
-   - `127.0.0.1,1433`
+   - `127.0.0.1,51433`
 
 #### Connect to a SQL Server named instance on the same machine
 

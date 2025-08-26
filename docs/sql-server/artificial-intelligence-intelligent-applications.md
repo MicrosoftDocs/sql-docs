@@ -196,7 +196,7 @@ End-to-end examples:
 
 - [Microsoft.SemanticKernel.Connectors.SqlServer](/dotnet/api/microsoft.semantickernel.connectors.sqlserver)
 
-An example of how easily Semantic Kernel helps to build AI-enabled solution is here:
+An example of how easily Semantic Kernel helps to build AI-enabled solutions is here:
 
 - [The ultimate chatbot?](https://devblogs.microsoft.com/azure-sql/the-ultimate-chatbot/): Build a chatbot on your own data using both NL2SQL and RAG patterns for the ultimate user experience. 
 

@@ -74,7 +74,7 @@ INSERT INTO player (
 VALUES (
     N'Ovidiu',
     N'Cracium',
-    COMPRESS(N'{"sport":"Tennis","age": 28,"rank":1,"points":15258, turn":17}')
+    COMPRESS(N'{"sport":"Tennis","age": 28,"rank":1,"points":15258, "turn":17}')
     );
 
 INSERT INTO player (

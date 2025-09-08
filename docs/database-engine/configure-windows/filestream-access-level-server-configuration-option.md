@@ -24,6 +24,7 @@ Before this option has any effect, the Windows administration settings for FILES
 | `0` | Disables FILESTREAM support for this instance. |
 | `1` | Enables FILESTREAM for [!INCLUDE [tsql](../../includes/tsql-md.md)] access. |
 | `2` | Enables FILESTREAM for [!INCLUDE [tsql](../../includes/tsql-md.md)] and Win32 streaming access. |
+| `3` | Enables FILESTREAM for [!INCLUDE [tsql](../../includes/tsql-md.md)], Win32 streaming access, and remote clients. |
 
 ## Related content
 

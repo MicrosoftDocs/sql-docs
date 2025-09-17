@@ -748,6 +748,7 @@ Symbolic links in `/usr/share/zoneinfo` and `/usr/lib/zoneinfo` are considered. 
 | Asia/Beirut | Middle East Standard Time |
 | Asia/Bishkek | Central Asia Standard Time |
 | Asia/Brunei | Singapore Standard Time |
+| Asia/Kolkata | India Standard Time |
 | Asia/Chita | Transbaikal Standard Time |
 | Asia/Choibalsan | Ulaanbaatar Standard Time |
 | Asia/Colombo | Sri Lanka Standard Time |

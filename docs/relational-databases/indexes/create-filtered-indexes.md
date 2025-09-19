@@ -84,7 +84,7 @@ For example, consider a filtered index in the following data scenarios. In each 
 
 - Filters can't be applied to primary key or unique constraints, but can be applied to indexes with the `UNIQUE` property.
 
-- You can create a filtered index and reference a computed column in the key or includes, but you cannot reference a computed column in the filter definition.
+- You can create a filtered index and reference a computed column in the key or includes, but you can't reference a computed column in the filter definition.
 
 ## Permissions
 

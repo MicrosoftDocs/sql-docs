@@ -16,7 +16,7 @@ ms.custom:
 
 [!INCLUDE [appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
-This article provides and overview of the active geo-replication feature for [Azure SQL Database](sql-database-paas-overview.md), which lets you continuously replicate data from a primary database to a readable secondary database. The readable secondary database might be in the same Azure region as the primary, or, more commonly, in a different region. This kind of readable secondary database is also known as a geo-secondary or geo-replica.
+This article provides an overview of the active geo-replication feature for [Azure SQL Database](sql-database-paas-overview.md), which lets you continuously replicate data from a primary database to a readable secondary database. The readable secondary database might be in the same Azure region as the primary, or, more commonly, in a different region. This kind of readable secondary database is also known as a geo-secondary or geo-replica.
 
 Active geo-replication is configured per database. To fail over a group of databases, or if your application requires a stable connection endpoint, consider [Failover groups](failover-group-sql-db.md) instead.
 

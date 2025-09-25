@@ -151,9 +151,8 @@ The `RECOMPILE` hint isn't compatible with forced parameterization set at the da
 
 For information on which query hints can be applied, see [Supported query hints](../system-stored-procedures/sys-sp-query-store-set-hints-transact-sql.md#supported-query-hints).
 
-Caution
-
-Purging Query Store data will lead to the deletion of all query hints configured, ensure taking backup before purging data.
+> [!CAUTION]  
+> Purging Query Store data leads to the deletion of all configured query hints. Make sure you have a backup before purging data.
 
 ## Related content
 

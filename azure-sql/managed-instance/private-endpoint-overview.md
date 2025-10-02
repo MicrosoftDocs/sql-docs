@@ -146,7 +146,9 @@ After you complete these steps, SQL clients connecting to `<instance-name>.<dns-
 
 Follow these steps if the private endpoint and Azure SQL Managed Instance are in the same virtual network.
 
-After you complete these steps, SQL clients inside the endpoint virtual network whose connection string includes `Encrypt=false` and `TrustServerCertificate=true` can connect to the private endpoint at, for example, `<instance-name>.privatelink.site`. As before, clients can still connect to the VNet-local endpoint at `<instance-name>.<dns-zone>.database.windows.net`.
+After you complete these steps, SQL clients inside the endpoint virtual network whose connection string includes `Encrypt=false` and `TrustServerCertificate=true` (not recommended) or `HostNameInCertificate` (recommended) can connect to the private endpoint at, for example, `<instance-name>.privatelink.site`. As before, clients can still connect to the VNet-local endpoint at `<instance-name>.<dns-zone>.database.windows.net`.
+
+
 
 > [!NOTE]  
 > When the private endpoint and Azure SQL Managed Instance are in the same virtual network, you don't have the ability to establish trusted encrypted connections nor to transparently re-route SQL clients to the private endpoint.

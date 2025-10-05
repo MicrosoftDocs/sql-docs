@@ -38,3 +38,4 @@ If this error is the result of a lack of a full trust relationship between the [
   
 -   Use a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account.  
   
+-   If use a domain account for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ensure that domain account is not locked out from Active Directory.

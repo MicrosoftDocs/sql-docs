@@ -116,6 +116,8 @@ Selecting **Configure** opens the **Extend Data drive** page, allowing you to ch
 
 If you've already reached the maximum disks supported for a particular VM size, you might need to [Resize the VM](/azure/virtual-machines/sizes/resize-vm).
 
+When extending a storage pool for a SQL Server virtual machine via the Azure portal, the SQL IaaS Agent extension enforces a minimum disk addition requirement based on the number of columns configured in the original storage pool. This column count corresponds to the number of data disks provisioned during initial deployment. For example, if the storage pool was created with four premium SSD disks, any subsequent expansion must include at least four additional disks to maintain the integrity and performance characteristics of the striped storage configuration.
+
 <a id="modifying-tempdb"></a>
 
 ### Modify tempdb

@@ -64,7 +64,6 @@ ALTER DATABASE [Database_Name]
     FOR SECONDARY
     SET QUERY_STORE = ON
     (OPERATION_MODE = READ_WRITE);
-GO
 ```
 
 ### Enable automatic plan correction for secondary replicas
@@ -78,7 +77,6 @@ To enable automatic plan correction for secondary replicas, connect to the prima
 ALTER DATABASE [Database_Name]
 FOR SECONDARY
 SET AUTOMATIC_TUNING (FORCE_LAST_GOOD_PLAN = ON);
-GO
 ```
 
 This setting works in conjunction with Query Store for readable secondaries and allows the system to automatically revert to the last known good execution plan when performance regressions are detected on secondary replicas.
@@ -103,7 +101,6 @@ SELECT desired_state_desc,
        actual_state_desc,
        readonly_reason
 FROM sys.database_query_store_options;
-GO
 ```
 
 The results from querying the [sys.database_query_store_options](../system-catalog-views/sys-database-query-store-options-transact-sql.md) catalog view should indicate that the Query Store's actual state is `READ_CAPTURE_SECONDARY` with a `readonly_reason` of `8`.

@@ -4,7 +4,7 @@ description: "The queryinsights.exec_sessions_history in Microsoft Fabric provid
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mariyaali
-ms.date: 07/24/2024
+ms.date: 10/06/2025
 ms.service: sql
 ms.topic: "reference"
 f1_keywords:
@@ -32,7 +32,7 @@ monikerRange: "=fabric"
 | `session_end_time` | **datetime2** | Time when the session was disconnected. Sessions that have not completed at the time this view is queried are shown with a value of `1900-01-01`.|
 | `program_name` | **varchar(128)** | Name of client program that initiated the session. The value is `NULL` for internal sessions. Is nullable. |
 | `login_name` | **varchar(128)** | Login name under which the session is currently executing. It is not nullable. |
-| `status` | **varchar(30)** | Status of the session. Values:<br />**Running** - Currently running one or more requests<br />**Sleeping** - Currently running no requests<br />**Dormant** - Session reset because of connection pooling and is now in prelogin state.<br />**Preconnect** - Session is in the Resource Governor classifier.<br />Is not nullable. |
+| `status` | **varchar(30)** | Status of the session. Values:<br />**Succeeded** - Session has completed successfully<br />**Killed** - Session was killed by a user<br />**Failed** - Session failed due to exceptions.<br />Is not nullable. |
 | `context_info` | **varbinary(128)** | `CONTEXT_INFO` value for the session. The context information is set by the user with [SET CONTEXT_INFO](/sql/t-sql/statements/set-context-info-transact-sql?view=azure-sqldw-latest&preserve-view=true). Is nullable. |
 | `total_query_elapsed_time_ms` | **int** | Total time, in milliseconds, for which the session (requests within) was scheduled/executed for execution. It is not nullable. |
 | `last_request_start_time` | **datetime2** | Time at which the last request on the session began, including the currently executing request. It is not nullable. |

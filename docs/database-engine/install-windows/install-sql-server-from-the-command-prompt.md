@@ -1,6 +1,6 @@
 ---
-title: "Install and Configure SQL Server on Windows from the Command Prompt"
-description: This article describes command prompt parameters for SQL Server installation on Windows. You can specify features to install and configure.
+title: "Install, Configure or Uninstall SQL Server on Windows from the Command Prompt"
+description: This article describes command prompt parameters for SQL Server installation on Windows. You can specify features to install, configure or uninstall.
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: 08/21/2025
@@ -90,7 +90,7 @@ ms.custom:
   - sfi-ropc-blocked
 ---
 
-# Install and configure SQL Server on Windows from the command prompt
+# Install, Configure or Uninstall SQL Server on Windows from the Command Prompt
 
 <a id="install-sql-server-from-the-command-prompt"></a>
 
@@ -565,7 +565,7 @@ Use the parameters in the following table to develop command-line scripts for un
 
 ###### Sample syntax
 
-To uninstall an existing instance of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)].
+To uninstall an existing instance of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] from command prompt.
 
 ```console
 setup.exe /Action=Uninstall /FEATURES=SQL,AS,RS,IS,Tools /INSTANCENAME=MSSQLSERVER
@@ -573,6 +573,15 @@ setup.exe /Action=Uninstall /FEATURES=SQL,AS,RS,IS,Tools /INSTANCENAME=MSSQLSERV
 
 To remove a named instance, specify the name of the instance instead of "MSSQLSERVER" in the example that was mentioned earlier in this article.
 
+To uninstall an existing SQL Update from command prompt, Registry Key string "UninstallString" will provide the complete uninstall command for a specific component as example a specific KB update.
+
+Registry Key Path Example:
+Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\KB5014356
+
+Unintall command from "UninstallString":
+```console
+C:\Program Files\Microsoft SQL Server\150\Setup Bootstrap\Update Cache\KB5014356\GDR\setup.exe" /Action=RemovePatch /AllInstances
+```
 <a id="ClusterInstall"></a>
 
 ## Failover cluster parameters

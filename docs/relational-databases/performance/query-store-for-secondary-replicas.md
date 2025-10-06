@@ -31,21 +31,22 @@ Beginning with [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)] and [!INCLU
 
 ## Enable Query Store for readable secondaries
 
-- Before you use Query Store for readable secondaries on a [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)] instance, an [Always On availability group](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md) must be configured.
+Before you use Query Store for readable secondaries on a [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)] instance, an [Always On availability group](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md) must be configured.
 
-- For Azure SQL Database, Query Store for readable secondaries supports the following service tiers:
+For Azure SQL Database, Query Store for readable secondaries supports the following service tiers:
 
-  - General purpose with [active geo-replication](/azure/azure-sql/database/active-geo-replication-overview)
-  - Premium
-  - Business critical
-  - Hyperscale with at least one [high Availability replica](/azure/azure-sql/database/service-tier-hyperscale-replicas#high-availability-replica) and/or [named replica](/azure/azure-sql/database/service-tier-hyperscale-replicas#named-replica)
-
-<!-- - Azure SQL Managed Instance
+  - General purpose with [active geo-replication](/azure/azure-sql/database/active-geo-replication-overview) (no built-in high availability replicas; requires geo-replication configuration for secondary support)
+  - Premium (includes built-in high availability replicas; active geo-replication also supported)
+  - Business critical (includes built-in high availability replicas; active geo-replication also supported)
+<!--
+  - Hyperscale with at least one [high Availability replica](/azure/azure-sql/database/service-tier-hyperscale-replicas#high-availability-replica) and/or [named replica](/azure/azure-sql/database/service-tier-hyperscale-replicas#named-replica) (requires explicit replica configuration; active geo-replication also supported)
+  - Azure SQL Managed Instance
     - General purpose with a failover group [failover group](../../../azure-sql/managed-instance/failover-group-sql-mi.md)
-    - Business critical
+    - Business critical (includes built-in high availability replicas)
 -->
 
-[!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] databases are automatically enrolled to support the feature.
+>[NOTE]
+>[!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] existing and newly created databases are automatically enrolled and enabled to support the Query Store for readable secondaries feature on supported service tiers.
 
 **Applies to**: [!INCLUDE [ssSQL22](../../includes/sssql22-md.md)] and later versions.
 
@@ -66,7 +67,23 @@ ALTER DATABASE [Database_Name]
 GO
 ```
 
+### Enable automatic plan correction for secondary replicas
 **Applies to**: [!INCLUDE [ssSQL22](../../includes/sssql22-md.md)] and later versions, [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].
+
+After enabling Query Store for secondary replicas, you can optionally enable automatic tuning to allow the automatic plan correction feature to force plans on secondary replicas. This enables the query optimizer to automatically identify and fix query performance issues caused by execution plan regressions on secondary replicas. 
+
+To enable automatic plan correction for secondary replicas, connect to the primary replica and execute the following script for each desired database:
+
+```sql
+ALTER DATABASE [Database_Name]
+FOR SECONDARY
+SET AUTOMATIC_TUNING (FORCE_LAST_GOOD_PLAN = ON);
+GO
+```
+
+This setting works in conjunction with Query Store for readable secondaries and allows the system to automatically revert to the last known good execution plan when performance regressions are detected on secondary replicas.
+
+## Disable Query Store for secondary replicas
 
 To disable the Query Store for secondary replicas feature on all secondary replicas, connect to the `master` database on the `primary` replica and execute the following script for each desired database:
 
@@ -76,6 +93,8 @@ ALTER DATABASE [Database_Name]
     SET QUERY_STORE = ON
     (OPERATION_MODE = READ_ONLY);
 ```
+
+### Validate Query Store is enabled on secondary replicas
 
 You can validate that Query Store is enabled on a `secondary` replica by connecting to the database on the secondary replica and execute the following t-sql statement:
 

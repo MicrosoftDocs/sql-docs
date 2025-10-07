@@ -558,7 +558,7 @@ sections:
           | --- | --- |
           | Maximum password age | 42 days |
           | Minimum password age | One day |
-          | Minimum password length | 10 characters |
+          | Minimum password length | 14 characters |
           | Password must meet complexity requirements | Enabled |
 
       - question: Is it possible to disable password complexity and expiration in SQL Managed Instance at the login level?

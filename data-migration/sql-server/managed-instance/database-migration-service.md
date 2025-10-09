@@ -87,10 +87,14 @@ To complete this tutorial, you need to:
 
     1. In the Azure portal, go to **Storage account** (used for the migration for keeping backup files), and navigate to **IAM roles** > **Assign role**, and assign Storage Blob Data Reader to the associated managed identity.
 
-       > [!NOTE]  
-       > When migrating to SQL Managed Instance via **Azure portal** using **Managed Identity**, make sure the signed in user has **Storage Blob Data Reader** access on the storage account. This permission is needed to list folders and files in the blob container during migration setup via Azure portal. For more information, see [DMS - Support for Managed Identity for Azure SQL Managed Instance migration](https://techcommunity.microsoft.com/blog/microsoftdatamigration/dms---support-for-managed-identity-for-azure-sql-managed-instance-migration/4411274).
+      For more information, see [DMS - Support for Managed Identity for Azure SQL Managed Instance migration](https://techcommunity.microsoft.com/blog/microsoftdatamigration/dms---support-for-managed-identity-for-azure-sql-managed-instance-migration/4411274).
 
-  As an alternative to using one of these built-in roles, you can [assign custom roles](custom-roles.md).
+  - As an alternative to using one of these built-in roles, you can [assign custom roles](custom-roles.md).
+
+> [!NOTE]  
+> When migrating to Azure SQL Managed Instance or Azure SQL Virtual Machine via **Azure portal**, make sure the signed in user has **Storage Blob Data Reader** access on the storage account. This permission is needed to list folders and files in the blob container during migration setup via Azure portal only.  
+
+  
 
   > [!IMPORTANT]  
   > An Azure account is required only when you configure the migration steps. An Azure account isn't required for the assessment or to view Azure recommendations in the migration wizard in Azure Data Studio.

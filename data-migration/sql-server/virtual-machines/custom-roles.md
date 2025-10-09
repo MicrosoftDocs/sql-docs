@@ -4,7 +4,7 @@ titleSuffix: Azure Database Migration Service
 description: Learn to use the custom roles for SQL Server to Azure VM's migrations.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 06/11/2025
+ms.date: 10/09/2025
 ms.service: azure-database-migration-service
 ms.topic: conceptual
 ms.collection:
@@ -59,7 +59,9 @@ Use the `AssignableScopes` section of the role definition JSON string to control
                     "Microsoft.DataMigration/SqlMigrationServices/tasks/delete"
                 ],
                 "notActions": [],
-                "dataActions": [],
+                "dataActions": [
+                    "Microsoft.Storage/storageAccounts/blobServices/containers/blobs/read"
+                ],
                 "notDataActions": []
             }
         ]
@@ -70,6 +72,9 @@ Use the `AssignableScopes` section of the role definition JSON string to control
 You can use either the Azure portal, Azure PowerShell, Azure CLI, or Azure REST API to create the roles.
 
 For more information, see [Create or update Azure custom roles using the Azure portal](/azure/role-based-access-control/custom-roles-portal) and [Azure custom roles](/azure/role-based-access-control/custom-roles).
+
+> [!NOTE]  
+> When migrating to Azure SQL Managed Instance or Azure SQL Virtual Machine via **Azure portal**, make sure the signed in user has **Storage Blob Data Reader** access on the storage account. This permission is needed to list folders and files in the blob container during migration setup via Azure portal only.
 
 ## Description of permissions needed to migrate to a virtual machine
 

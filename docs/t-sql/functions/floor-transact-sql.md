@@ -41,7 +41,7 @@ The return type depends on the input type of *numeric_expression*:
 |Input type|Return type|  
 |----------|-----------|  
 |**float**, **real**|**float**|
-|**decimal(*p*, *s*)**|**decimal(38, *s*)**|
+|**decimal(*p*, *s*)**|**decimal(*p*, 0)**|
 |**int**, **smallint**, **tinyint**|**int**|
 |**bigint**|**bigint**|
 |**money**, **smallmoney**|**money**|

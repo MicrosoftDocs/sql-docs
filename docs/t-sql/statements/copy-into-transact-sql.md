@@ -347,6 +347,10 @@ The COPY statement accepts only UTF-8 and UTF-16 valid characters for row data a
 
 The MAXDOP query hint is not supported with COPY INTO.
 
+To ensure reliable execution, the source files and folders must remain unchanged throughout the duration of the COPY INTO operation.
+- Modifying, deleting, or replacing any referenced files or folders while the command is running may cause the operation to fail or result in inconsistent data ingestion.
+- Before executing COPY INTO, verify that all source data is stable and will not be altered during the process.
+
 ## Examples
 
 ### A. Load from a public storage account

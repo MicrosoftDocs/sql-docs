@@ -854,6 +854,10 @@ When using OneLake as the source, the user must have **Contributor** or higher p
 
 The COPY statement accepts only UTF-8 and UTF-16 valid characters for row data and command parameters. Source files or parameters (such as `ROW TERMINATOR` or `FIELD TERMINATOR`) that use invalid characters might be interpreted incorrectly by the COPY statement and cause unexpected results such as data corruption, or other failures. Make sure your source files and parameters are UTF-8 or UTF-16 compliant before you invoke the COPY statement.  
 
+To ensure reliable execution, the source files and folders must remain unchanged throughout the duration of the COPY INTO operation.
+- Modifying, deleting, or replacing any referenced files or folders while the command is running may cause the operation to fail or result in inconsistent data ingestion.
+- Before executing COPY INTO, verify that all source data is stable and will not be altered during the process.
+
 <a id="limitations-for-onelake-as-source-public-preview"></a>
 
 ## Limitations for OneLake as source

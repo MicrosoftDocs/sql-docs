@@ -39,7 +39,7 @@ INDEXPROPERTY ( object_ID , index_or_statistics_name , property )
  Is an expression that contains the name of the index or statistics for which to return property information. *index_or_statistics_name* is **nvarchar(128)**.  
   
  *property*  
- Is an expression that contains the name of the database property to return. *property* is **varchar(128)**, and can be one of these values.  
+ Is an expression that contains the name of the index or statistics property to return. *property* is **varchar(128)**, and can be one of these values.  
   
 > [!NOTE]  
 >  Unless noted otherwise, NULL is returned when *property* is not a valid property name, *object_ID* is not a valid object ID, *object_ID* is an unsupported object type for the specified property, or the caller does not have permission to view the object's metadata.  

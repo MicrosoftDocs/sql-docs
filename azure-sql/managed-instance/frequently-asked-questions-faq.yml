@@ -556,7 +556,7 @@ sections:
 
           | **Policy** | **Security Setting** |
           | --- | --- |
-          | Maximum password age | 42 days |
+          | Maximum password age | 60 days |
           | Minimum password age | One day |
           | Minimum password length | 14 characters |
           | Password must meet complexity requirements | Enabled |

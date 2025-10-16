@@ -5,7 +5,7 @@ description: Use the COPY statement in Azure Synapse Analytics and Warehouse in 
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: procha, mikeray, fresantos
-ms.date: 07/29/2025
+ms.date: 10/15/2025
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -347,9 +347,9 @@ The COPY statement accepts only UTF-8 and UTF-16 valid characters for row data a
 
 The MAXDOP query hint is not supported with COPY INTO.
 
-To ensure reliable execution, the source files and folders must remain unchanged throughout the duration of the COPY INTO operation.
-- Modifying, deleting, or replacing any referenced files or folders while the command is running may cause the operation to fail or result in inconsistent data ingestion.
-- Before executing COPY INTO, verify that all source data is stable and will not be altered during the process.
+To ensure reliable execution, the source files and folders must remain unchanged throughout the duration of the `COPY INTO` operation.
+- Modifying, deleting, or replacing any referenced files or folders while the command is running can cause the operation to fail or result in inconsistent data ingestion.
+- Before executing `COPY INTO`, verify that all source data is stable and will not be altered during the process.
 
 ## Examples
 

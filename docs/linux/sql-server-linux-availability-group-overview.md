@@ -93,7 +93,7 @@ If these conditions are met and the server hosting the primary replica fails, th
 
 ## Configuration-only replica and quorum
 
-Also new in [!INCLUDE [sssql17-md](../includes/sssql17-md.md)] as of CU 1 is a configuration-only replica. Because Pacemaker is different than a WSFC, especially when it comes to quorum and requiring fencing a failed node, having just a two-node configuration doesn't work when it comes to an AG. For an FCI, the quorum mechanisms provided by Pacemaker can be fine, because all FCI failover arbitration happens at the cluster layer. For an AG, arbitration under Linux happens in [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)], where all the metadata is stored. This is where the configuration-only replica comes into play.
+A configuration-only replica was introduced to address limitations in quorum handling with Pacemaker, especially when fencing a failed node. Having just a two-node configuration doesn't work for an AG. For an FCI, the quorum mechanisms provided by Pacemaker can be fine because all FCI failover arbitration happens at the cluster layer. For an AG, arbitration under Linux happens in [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)], where all the metadata is stored. This is where the configuration-only replica comes into play.
 
 Without anything else, a third node and at least one synchronized replica would be required. The configuration-only replica stores the AG configuration in the `master` database, same as the other replicas in the AG configuration. The configuration-only replica doesn't have the user databases participating in the AG. The configuration data is sent synchronously from the primary. This configuration data is then used during failovers, whether they're automatic or manual.
 
@@ -117,8 +117,6 @@ When a configuration-only replica is used, it has the following behavior:
 - If the configuration-only replica fails, the AG functions normally, but no automatic failover is possible.
 
 - If the synchronous secondary replica and the configuration-only replica both fail, the primary can't accept transactions, and there's nowhere for the primary to fail over to.
-
-In CU 1 there's a known bug in the logging in the `corosync.log` file that is generated via `mssql-server-ha`. If a secondary replica isn't able to become the primary due to the number of required replicas available, the current message says `Expected to receive 1 sequence numbers but only received 2. Not enough replicas are online to safely promote the local replica`. The numbers should be reversed, and it should say `Expected to receive 2 sequence numbers but only received 1. Not enough replicas are online to safely promote the local replica`.
 
 ## Multiple availability groups
 

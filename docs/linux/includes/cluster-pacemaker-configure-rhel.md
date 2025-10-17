@@ -40,7 +40,7 @@ ms.custom:
    sudo systemctl enable pacemaker
    ```
 
-1. Create the Cluster. To create the cluster, run the following command:
+1. Create the Cluster. To create the cluster, run the following command on a single node:
 
    **RHEL 7**
 
@@ -51,9 +51,9 @@ ms.custom:
    sudo pcs cluster enable --all
    ```
 
-   **RHEL 8**
+   **RHEL 8 and above**
 
-   For RHEL 8, you need to authenticate the nodes separately. Manually enter in the username and password for `hacluster` when prompted.
+   For RHEL 8 and above, you need to authenticate the nodes separately. Manually enter in the username and password for `hacluster` when prompted.
 
    ```bash
    sudo pcs host auth <node1> <node2> <node3>

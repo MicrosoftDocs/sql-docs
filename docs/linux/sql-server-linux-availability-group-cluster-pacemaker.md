@@ -28,7 +28,7 @@ The following sections walk through the steps to set up a Pacemaker cluster and 
 
 # [Red Hat Enterprise Linux](#tab/rhel)
 
-The clustering layer is based on Red Hat Enterprise Linux (RHEL) [HA add-on](https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/10/html/configuring_and_managing_high_availability_clusters/index) built on top of [Pacemaker](https://clusterlabs.org/).
+The clustering layer is based on Red Hat Enterprise Linux (RHEL) [HA add-on](https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/9/html/configuring_and_managing_high_availability_clusters/index) built on top of [Pacemaker](https://clusterlabs.org/).
 
 > [!NOTE]  
 > Access to Red Hat full documentation requires a valid subscription.
@@ -184,9 +184,9 @@ To create the availability group resource, use `pcs resource create` command and
 sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 meta failure-timeout=60s master notify=true
 ```
 
-#### RHEL 8 and above
+#### RHEL 8, RHEL 9 and RHEL 10
 
-With the availability of **RHEL 8** and above, the create syntax has changed. If you use **RHEL 8** and above, the terminology `master` has changed to `promotable`. Use the following create command instead of the above command:
+With the availability of **RHEL 8, RHEL 9 and RHEL 10**, the create syntax has changed. If you use **RHEL 8, RHEL 9 and RHEL 10**, the terminology `master` has changed to `promotable`. Use the following create command instead of the above command:
 
 ```bash
 sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 meta failure-timeout=60s promotable notify=true

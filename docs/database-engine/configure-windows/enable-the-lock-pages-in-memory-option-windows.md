@@ -19,7 +19,7 @@ This Windows policy determines which accounts can use a process to keep data in 
 > [!NOTE]  
 > Locking pages in memory might boost performance when paging memory to disk is expected. For more information, see [Lock pages in memory (LPIM)](server-memory-server-configuration-options.md#lock-pages-in-memory-lpim).
 
-Use the Windows Group Policy tool (`gpedit.msc`) to enable this policy for the account used by [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]. You must be a system administrator to change this policy.
+Use the Windows Group Policy tool (`gpedit.msc`) or SQL Server Configuration Manager(since SQL Server 2019) to enable this policy for the account used by [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]. You must be a system administrator to change this policy.
 
 ### Enable the Lock pages in memory option
 

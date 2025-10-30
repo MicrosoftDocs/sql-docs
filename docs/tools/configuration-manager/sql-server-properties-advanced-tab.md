@@ -42,7 +42,10 @@ monikerRange: ">=sql-server-2016"
   
  **Language**  
  Displays the default language for server messages.  
-  
+
+ **Lock Pages In Memory**  
+ Grant Lock Pages In Memory privilege to SQL Server Database Engine Service Account (Newer than SQL Server 2019).  
+
  **Registry Root**  
  Displays the location of the registry keys used by this application.  
   

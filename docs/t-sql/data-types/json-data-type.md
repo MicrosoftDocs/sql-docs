@@ -1,4 +1,4 @@
----
+<img width="100" height="19" alt="image" src="https://github.com/user-attachments/assets/97427a9d-b373-460a-a4d7-1bd32ca6fb42" />---
 title: "JSON Data Type"
 description: The native JSON data type provides advantages for storing JSON data over varchar or nvarchar. Learn more about the JSON data type.
 author: WilliamDAssafMSFT
@@ -147,6 +147,15 @@ The behavior of `CAST ( ... AS JSON)` returns a **json** data type, but the [sp_
 Currently, the `OPENJSON()` function doesn't accept the **json** data type in some platforms. Currently, it's an implicit conversion. Explicitly convert to **nvarchar(max)** first.
 
 - In [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)], the `OPENJSON()` function does support **json**. For more information, see [Key JSON capabilities in SQL Server 2025](../../relational-databases/json/json-data-sql-server.md#key-json-capabilities).
+
+### Size limit for Items in one object/array
+The **JSON type** has a size limit of **65,535 items** per object or array — this corresponds to the maximum value of a 16-bit unsigned integer.
+If you attempt to cast text into the JSON type and it contains more than 65,535 elements, the following error will be thrown:
+`Msg 13647, Level 16, State 1, Line 10
+Number of items in one object/array exceeds limit 65535 in JSON type.`
+
+The `TRY_CAST` function also throws the same error when this limit is exceeded.
+
 
 ## Related content
 

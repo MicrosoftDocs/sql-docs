@@ -133,8 +133,8 @@ Create a PowerShell script that:
 Copy and paste the following script, modify it as needed, and save it as a PowerShell file on the OS drive, such as `C:\Scripts\SQLStartup.ps1`:
 
 ```powershell
-$SQLService = "SQL Server (MSSQLSERVER)"
-$SQLAgentService = "SQL Server Agent (MSSQLSERVER)"
+$SQLService = "MSSQLSERVER"
+$SQLAgentService = "SQLSERVERAGENT"
 $tempfolder = "D:\SQLTEMP"
 if (!(test-path -path $tempfolder)) {
     New-Item -ItemType directory -Path $tempfolder
@@ -170,19 +170,6 @@ Create a scheduled task to run the PowerShell script at startup. To do this, fol
 
 Restart the VM to test the script. After the VM restarts, check that the `tempdb` data files are located on the ephemeral disk and that the SQL Server and SQL Agent services are running.
 
-## Configure buffer pool extension
-
-You can further enhance SQL Server performance by configuring the [buffer pool extension](/sql/database-engine/configure-windows/buffer-pool-extension) to use the local SSD drive on Azure VMs. This feature extends the in-memory buffer pool by using a file on disk to boost I/O throughput for memory-intensive workloads that exceed available RAM. Since the local SSD (ephemeral storage) offers low latency and high performance, it's an ideal location for this extension.
-
-When configuring the buffer pool extension, specify the size of the file in kilobytes (KB), megabytes (MB), or gigabytes (GB). The recommended size is typically 4 to 8 times the [max server memory (MB)](/sql/database-engine/configure-windows/server-memory-server-configuration-options) setting configured for SQL Server, though for Standard edition, the maximum is capped at 4 times this value (Enterprise edition allows up to 32 times). For example, if `max server memory (MB)` is set to 16 GB, aim for a buffer pool extension size of 64-128 GB, adjusted to your SQL Server edition and workload needs.
-
-Assuming the specified path exists on the ephemeral drive (such as `D:\SQLTEMP\`), to enable the buffer pool extension, execute the following T-SQL command in SQL Server Management Studio (SSMS) after connecting to your instance:
-
-```syntaxsql
-ALTER SERVER CONFIGURATION
-SET BUFFER POOL EXTENSION ON
-( FILENAME = 'D:\SQLTEMP\ExtensionFile.BPE' , SIZE = <size> [ KB | MB | GB ] )
-```
 
 ## Related content
 

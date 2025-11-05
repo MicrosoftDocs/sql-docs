@@ -21,7 +21,7 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
 # MAX (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw.md)]
 
-  Returns the maximum of all values of the specified expression in a group. May be followed by the [OVER clause]../../t-sql/queries/select-over-clause-transact-sql?view=sql-server-ver17.
+  Returns the maximum of all values of the specified expression in a group. May be followed by the [OVER clause](../../t-sql/queries/select-over-clause-transact-sql)
   If you want the maximum of all values of multiple expressions inline then look at [GREATEST](logical-functions-greatest-transact-sql.md)
   
  :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  

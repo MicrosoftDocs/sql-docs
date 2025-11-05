@@ -21,7 +21,7 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
 # MIN (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw.md)]
 
-  Returns the minimum of all values of the specified expression in a group. May be followed by the [OVER clause](../../t-sql/queries/select-over-clause-transact-sql)
+  Returns the minimum of all values of the specified expression in a group. May be followed by the [OVER clause](../../t-sql/queries/select-over-clause-transact-sql.md)
   If you want the minimum of all values of multiple expressions inline then look at [LEAST](logical-functions-least-transact-sql.md)
   
  :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  

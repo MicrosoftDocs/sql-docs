@@ -63,7 +63,7 @@ MAX ([ ALL ] expression) OVER ( <partition_by_clause> [ <order_by_clause> ] )
   
  MAX is a deterministic function when used without the OVER and ORDER BY clauses. It is nondeterministic when specified with the OVER and ORDER BY clauses. For more information, see [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).  
 
- Operates of a set of rows, to obtain the MAX value of a set of values inline, then look at ```[GREATEST](logical-functions-greatest-transact-sql.md)
+ Operates of a set of rows, to obtain the MAX value of a set of values inline, then look at [GREATEST](logical-functions-greatest-transact-sql.md)
   
 ## Examples  
   
@@ -138,6 +138,7 @@ The last system database is `tempdb`.
   
 ## See Also  
  [Aggregate Functions &#40;Transact-SQL&#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)   
+ [GREATEST](logical-functions-greatest-transact-sql.md)
  [OVER Clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)  
   
   

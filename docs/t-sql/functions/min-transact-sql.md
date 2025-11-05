@@ -21,7 +21,8 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
 # MIN (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw.md)]
 
-  Returns the minimum value in the expression. May be followed by the [OVER clause](../../t-sql/queries/select-over-clause-transact-sql.md).  
+  Returns the minimum of all values of the specified expression in a group. May be followed by the [OVER clause](../../t-sql/queries/select-over-clause-transact-sql)
+  If you want the minimum of all values of multiple expressions inline then look at [LEAST](logical-functions-least-transact-sql.md)
   
  :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -59,6 +60,8 @@ MIN ( [ ALL ] expression ) OVER ( [ <partition_by_clause> ] [ <order_by_clause> 
  With character data columns, MIN finds the value that is lowest in the sort sequence.  
   
  MIN is a deterministic function when used without the OVER and ORDER BY clauses. It is nondeterministic when specified with the OVER and ORDER BY clauses. For more information, see [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).  
+
+ Operates on a set of rows. To obtain the MIN value for a set of values inline, then look at [LEAST](logical-functions-least-transact-sql.md)
   
 ## Examples  
   
@@ -170,6 +173,7 @@ LeastExpensiveProduct SalesOrderID
 ## See Also  
  [Aggregate Functions &#40;Transact-SQL&#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)   
  [MAX &#40;Transact-SQL&#41;](../../t-sql/functions/max-transact-sql.md)   
+ [LEAST](logical-functions-least-transact-sql.md)
  [OVER Clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)  
   
   
